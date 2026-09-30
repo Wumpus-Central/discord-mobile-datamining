@@ -1,38 +1,53 @@
 // _runtime/metro/13970__.js
-import withoutSetter from "../13971_withoutSetter.js";
-import _mod13982 from "13982__.js";
-import _mod13984 from "13984__.js";
-import _mod13987 from "13987__.js";
-import _mod13990 from "13990__.js";
-import _mod13991 from "13991__.js";
+import _mod13887 from "13887__.js";
+import currencies2 from "../13971_currencies.js";
 
-let closure_3 = withoutSetter("toPrimitive");
+require = arg1;
+const dependencyMap = arg6;
+function isSupportedCurrency(arr3, locale) {
+  let str = locale;
+  if (undefined === locale) {
+    str = "en";
+  }
+  try {
+    const obj = { style: "currency", currencyDisplay: "name", currency: arr3 };
+    const memoizedNumberFormat = _mod13887.createMemoizedNumberFormat(str, obj);
+    const str2 = memoizedNumberFormat.format(123);
+    if (str2.substring(0, 3) !== arr3) {
+      if (str3.substring(str3.length - 3) !== arr3) {
+        return true;
+      }
+    }
+    return false;
+  } catch (err) {}
+}
 
-export default (arg0, arg1) => {
-  if (_mod13982(arg0)) {
-    if (!_mod13984(arg0)) {
-      let str = arg1;
-      const tmp4 = _mod13987(arg0, closure_3);
-      if (tmp4) {
-        if (undefined === str) {
-          str = "default";
+export const getSupportedCurrencies = function getSupportedCurrencies(locale) {
+  const items = [];
+  const currencies = currencies2.currencies;
+  for (let num = 0; num < currencies.length; num = num + 1) {
+    let arr3 = currencies[num];
+    if (3 === arr3.length) {
+      if (isSupportedCurrency(arr3, locale)) {
+        let arr = items.push(arr3);
+      }
+    } else if (5 === arr3.length) {
+      if ("~" === arr3[3]) {
+        let indexOf = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf;
+        let index = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf(arr3[2]);
+        let indexOf2 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf;
+        let index1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf(arr3[4]);
+        if (index <= index1) {
+          do {
+            let sum = arr3.substring(0, 2) + "ABCDEFGHIJKLMNOPQRSTUVWXYZ"[index];
+            if (isSupportedCurrency(sum, locale)) {
+              let arr2 = items.push(sum);
+            }
+            index = index + 1;
+          } while (index <= index1);
         }
-        const tmp5 = _mod13990(tmp4, arg0, str);
-        if (_mod13982(tmp5)) {
-          if (!_mod13984(tmp5)) {
-            const tmp9 = new TypeError("Can't convert object to primitive value");
-            throw tmp9;
-          }
-        }
-        return tmp5;
-      } else {
-        let str2 = str;
-        if (undefined === str) {
-          str2 = "number";
-        }
-        return _mod13991(arg0, str2);
       }
     }
   }
-  return arg0;
+  return items;
 };

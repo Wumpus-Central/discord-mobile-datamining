@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/instant_invite/native/images",
-  width: 60,
-  height: 60,
+  httpServerLocation: "/assets/images/native/empties",
+  width: 251,
+  height: 147,
   scales: [2, 3],
-  hash: "19a79c674ca352a1b9c59552160bbdc6",
-  name: "telegram",
+  hash: "c013c533d835389917bf422e9978d1be",
+  name: "img_app_crash_light",
   type: "png",
 });

@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  httpServerLocation: "/assets/images/native/icons",
   width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "43b86c9ce273868bacca6aeb06ae392b",
-  name: "StarIcon",
+  height: 32,
+  scales: [1, 2, 3],
+  hash: "a706a0d368e318c310cbc99fe4471213",
+  name: "ic_file_small_image",
   type: "png",
 });

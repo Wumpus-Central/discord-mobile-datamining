@@ -243,6 +243,6 @@ defineProperty.defineProperty(MessageFormat, "__addLocaleData", {
 let defineProperty = defineProperty_mod;
 defineProperty.defineProperty(MessageFormat, "__parse", { value: SyntaxError.default.parse });
 let defineProperty = defineProperty_mod;
-defineProperty.defineProperty(MessageFormat, "defaultLocale", { enumerable: true, writable: true, value: "channel" });
+defineProperty.defineProperty(MessageFormat, "defaultLocale", { enumerable: true, writable: true, value: "disabled" });
 
 export default MessageFormat;

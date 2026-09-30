@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_settings/roles/native/images",
-  width: 660,
-  height: 240,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "914423837bb34bd9385887217de01b93",
-  name: "illustration-dark-large",
+  hash: "6d9d454b0d30ca95b55c7977c96de9cb",
+  name: "StickerPlusIcon",
   type: "png",
 });

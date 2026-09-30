@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/tiered_tenure_badging/native/images",
-  width: 93.33333333333333,
-  height: 65,
-  scales: [3],
-  hash: "c4946770ab3c50ce3672b0e2087496ae",
-  name: "asset_ruby_badge_small",
+  httpServerLocation: "/assets/images/native/wumpus",
+  width: 84,
+  height: 66,
+  scales: [1],
+  hash: "6220c6fc32c3a2a05a977c59f0c7790d",
+  name: "wumpus-ash",
   type: "png",
 });

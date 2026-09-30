@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "5d5d74ab73f83ee9470274845a372119",
-  name: "ExperimentalMythicIcon",
+  httpServerLocation: "/assets/modules/premium/tiered_tenure_badging/native/images",
+  width: 99.66666666666667,
+  height: 66.66666666666667,
+  scales: [3],
+  hash: "0fef0a9d83d27dc691bf77b0bdae0680",
+  name: "asset_opal_badge_small",
   type: "png",
 });

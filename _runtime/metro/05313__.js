@@ -1,44 +1,28 @@
 // _runtime/metro/05313__.js
-import _mod5314 from "05314__.js";
-import DefinePropertyOrThrow from "../05315_DefinePropertyOrThrow.js";
+import callBoundIntrinsic from "../01315_callBoundIntrinsic.js";
+import _mod1446 from "01446__.js";
 
-const tmp = _mod5314("%Reflect.construct%", true);
-let closure_0 = tmp;
-try {
-  const obj = {
-    () => {
+let closure_0 = callBoundIntrinsic("Date.prototype.getDay");
+let closure_1 = callBoundIntrinsic("Object.prototype.toString");
+let closure_2 = _mod1446();
 
-      }
-  };
-  DefinePropertyOrThrow({}, "", obj);
-  let tmp4 = DefinePropertyOrThrow;
-  if (tmp4) {
-    if (tmp) {
-      let closure_1 = {};
-      const obj3 = {
-        () => {
-                throw closure_1;
-              },
-        "[[Enumerable]]": true
-      };
-      tmp4({}, "length", obj3);
-      module.exports = function IsConstructor(arg0) {
-        try {
-          closure_0(arg0, obj2);
-        } catch (tmp5) {
-          return tmp5 === closure_1;
-        }
-      };
-      const obj2 = {};
-    }
+export default function isDateObject(obj) {
+  let tmp = typeof obj === "object";
+  if (typeof obj === "object") {
+    tmp = null !== obj;
   }
-  module.exports = function IsConstructor(fn) {
-    let prototype = typeof fn === "function";
-    if (typeof fn === "function") {
-      prototype = fn.prototype;
-    }
-    return prototype;
-  };
-} catch (err) {
-  tmp4 = null;
+  if (!tmp) {
+    return tmp;
+  } else if (closure_2) {
+    let tmp4 = (function tryDateGetDayCall(arg0) {
+      try {
+        closure_1_0(arg0);
+        return true;
+      } catch (err) {
+        return false;
+      }
+    })(obj);
+  } else {
+    tmp4 = "[object Date]" === closure_1(obj);
+  }
 }

@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/audit_logs",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "6cae386612a05fa05fa9c172e944297a",
-  name: "ic_audit_create_24px",
+  hash: "0110722316a0218f2757526a82d0fe2d",
+  name: "ChannelListPlusIcon",
   type: "png",
 });

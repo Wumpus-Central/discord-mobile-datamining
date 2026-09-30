@@ -1,203 +1,112 @@
 // _runtime/metro/10124__.js
-import repeatedTimeunitPattern from "../10062_repeatedTimeunitPattern.js";
+import _mod10095 from "10095__.js";
+import repeatedTimeunitPattern from "../10096_repeatedTimeunitPattern.js";
+import AbstractParserWithWordBoundaryChecking from "../10103_AbstractParserWithWordBoundaryChecking.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
 
-const combined =
-  "(" +
-  exports.NUMBER_PATTERN +
-  ")\\s{0,5}(" +
-  repeatedTimeunitPattern.matchAnyPattern(exports.TIME_UNIT_DICTIONARY) +
-  ")\\s{0,5}";
-const regExp = new RegExp(combined, "i");
-
-export const parseNumberPattern = function parseNumberPattern(str) {
-  str = str.toLowerCase();
-  if (undefined !== exports.INTEGER_WORD_DICTIONARY[str]) {
-    let num2 = exports.INTEGER_WORD_DICTIONARY[str];
-  } else {
-    num2 = 1;
-    if ("une" !== str) {
-      num2 = 1;
-      if ("un" !== str) {
-        let num3 = 3;
-        if (!str.match(/quelques?/)) {
-          let num4 = 0.5;
-          if (!str.match(/demi-?/)) {
-            const _parseFloat = parseFloat;
-            num4 = parseFloat(str);
-          }
-          num3 = num4;
-        }
-        num2 = num3;
-      }
-    }
-  }
-  return num2;
-};
-export const parseOrdinalNumberPattern = function parseOrdinalNumberPattern(str) {
-  str = str.toLowerCase();
-  return parseInt(str.replace(/(?:er)$/i, ""));
-};
-export const parseYear = function parseYear(match) {
-  if (obj.test(match)) {
-    const _parseInt3 = parseInt;
-    return -parseInt(match.replace(/BC/i, ""));
-  } else {
-    if (!obj2.test(match)) {
-      if (!obj3.test(match)) {
-        const _parseInt = parseInt;
-        const parsed = parseInt(match);
-        let sum = parsed;
-        if (parsed < 100) {
-          let num3 = 2000;
-          if (parsed > 50) {
-            num3 = 1900;
-          }
-          sum = parsed + num3;
-        }
-        return sum;
-      }
-      obj3 = /C/i;
-    }
-    const _parseInt2 = parseInt;
-    return parseInt(match.replace(/[^\d]+/i, ""));
-  }
-  obj = /AC/i;
-};
-export const parseDuration = function parseDuration(arg0) {
-  let str = arg0;
-  const obj = {};
-  let match = regExp.exec(arg0);
-  while (match) {
-    let str2 = match[1];
-    let str3 = str2.toLowerCase();
-    if (undefined !== exports.INTEGER_WORD_DICTIONARY[str3]) {
-      let num = exports.INTEGER_WORD_DICTIONARY[str3];
+const ENRelativeDateFormatParser = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
     } else {
-      num = 1;
-      if ("une" !== str3) {
-        num = 1;
-        if ("un" !== str3) {
-          let num2 = 3;
-          if (!str3.match(/quelques?/)) {
-            let num3 = 0.5;
-            if (!str3.match(/demi-?/)) {
-              let _parseFloat = parseFloat;
-              num3 = parseFloat(str3);
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+const regExp = new RegExp(
+  "(this|last|past|next|after\\s*this)\\s*(" +
+    repeatedTimeunitPattern.matchAnyPattern(_mod10095.TIME_UNIT_DICTIONARY) +
+    ")(?=\\s*)(?=\\W|$)",
+  "i",
+);
+class ENRelativeDateFormatParser {
+  constructor() {
+    self = this;
+    tmp = c2(this, ENRelativeDateFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(ENRelativeDateFormatParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(ENRelativeDateFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+const entry = {
+  key: "innerPattern",
+  value: function innerPattern() {
+    return regExp;
+  },
+};
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(createParsingComponents, arg1) {
+      const formatted = arg1[1].toLowerCase();
+      const str3 = arg1[2].toLowerCase();
+      const tmp3 = ENRelativeDateFormatParser(10095).TIME_UNIT_DICTIONARY[str3];
+      if ("next" != formatted) {
+        if (!formatted.startsWith("after")) {
+          if ("last" != formatted) {
+            if ("past" != formatted) {
+              const parsingComponents = createParsingComponents.createParsingComponents();
+              const _Date = Date;
+              const instant = createParsingComponents.reference.instant;
+              const date = new Date(instant.getTime());
+              if (str3.match(/week/i)) {
+                date.setDate(date.getDate() - date.getDay());
+                parsingComponents.imply("day", date.getDate());
+                parsingComponents.imply("month", date.getMonth() + 1);
+                parsingComponents.imply("year", date.getFullYear());
+                const date1 = date.getDate();
+              } else if (str3.match(/month/i)) {
+                date.setDate(1);
+                parsingComponents.imply("day", date.getDate());
+                parsingComponents.assign("year", date.getFullYear());
+                parsingComponents.assign("month", date.getMonth() + 1);
+              } else if (str3.match(/year/i)) {
+                date.setDate(1);
+                date.setMonth(0);
+                parsingComponents.imply("day", date.getDate());
+                parsingComponents.imply("month", date.getMonth() + 1);
+                parsingComponents.assign("year", date.getFullYear());
+              }
+              return parsingComponents;
             }
-            num2 = num3;
           }
-          num = num2;
+          const obj4 = {};
+          obj4[tmp3] = -1;
+          const ParsingComponents = ENRelativeDateFormatParser(10099).ParsingComponents;
+          return ParsingComponents.createRelativeFromReference(createParsingComponents.reference, obj4);
         }
       }
-    }
-    let str4 = match[2];
-    obj[exports.TIME_UNIT_DICTIONARY[str4.toLowerCase(str4)]] = num;
-    let substr = str.substring(match[0].length);
-    match = regExp.exec(substr);
-    str = substr;
-  }
-  return obj;
-};
-export const WEEKDAY_DICTIONARY = {
-  dimanche: 0,
-  dim: 0,
-  lundi: 1,
-  lun: 1,
-  mardi: 2,
-  mar: 2,
-  mercredi: 3,
-  mer: 3,
-  jeudi: 4,
-  jeu: 4,
-  vendredi: 5,
-  ven: 5,
-  samedi: 6,
-  sam: 6,
-};
-export const MONTH_DICTIONARY = {
-  janvier: 1,
-  jan: 1,
-  "jan.": 1,
-  février: 2,
-  fév: 2,
-  "fév.": 2,
-  fevrier: 2,
-  fev: 2,
-  "fev.": 2,
-  mars: 3,
-  mar: 3,
-  "mar.": 3,
-  avril: 4,
-  avr: 4,
-  "avr.": 4,
-  mai: 5,
-  juin: 6,
-  jun: 6,
-  juillet: 7,
-  juil: 7,
-  jul: 7,
-  "jul.": 7,
-  août: 8,
-  aout: 8,
-  septembre: 9,
-  sep: 9,
-  "sep.": 9,
-  sept: 9,
-  "sept.": 9,
-  octobre: 10,
-  oct: 10,
-  "oct.": 10,
-  novembre: 11,
-  nov: 11,
-  "nov.": 11,
-  décembre: 12,
-  decembre: 12,
-  dec: 12,
-  "dec.": 12,
-};
-export const INTEGER_WORD_DICTIONARY = {
-  un: 1,
-  deux: 2,
-  trois: 3,
-  quatre: 4,
-  cinq: 5,
-  six: 6,
-  sept: 7,
-  huit: 8,
-  neuf: 9,
-  dix: 10,
-  onze: 11,
-  douze: 12,
-  treize: 13,
-};
-export const TIME_UNIT_DICTIONARY = {
-  sec: "second",
-  seconde: "second",
-  secondes: "second",
-  min: "minute",
-  mins: "minute",
-  minute: "minute",
-  minutes: "minute",
-  h: "hour",
-  hr: "hour",
-  hrs: "hour",
-  heure: "hour",
-  heures: "hour",
-  jour: "day",
-  jours: "day",
-  semaine: "week",
-  semaines: "week",
-  mois: "month",
-  trimestre: "quarter",
-  trimestres: "quarter",
-  ans: "year",
-  année: "year",
-  années: "year",
-};
-export const NUMBER_PATTERN =
-  "(?:" +
-  repeatedTimeunitPattern.matchAnyPattern(exports.INTEGER_WORD_DICTIONARY) +
-  "|[0-9]+|[0-9]+\\.[0-9]+|une?\\b|quelques?|demi-?)";
-export const ORDINAL_NUMBER_PATTERN = "(?:[0-9]{1,2}(?:er)?)";
-export const YEAR_PATTERN = "(?:[1-9][0-9]{0,3}\\s*(?:AC|AD|p\\.\\s*C(?:hr?)?\\.\\s*n\\.)|[1-2][0-9]{3}|[5-9][0-9])";
-export const TIME_UNITS_PATTERN = repeatedTimeunitPattern.repeatedTimeunitPattern("", combined);
+      const ParsingComponents2 = ENRelativeDateFormatParser(10099).ParsingComponents;
+      return ParsingComponents2.createRelativeFromReference(createParsingComponents.reference, { [tmp3]: 1 });
+    },
+  },
+];
+
+export default _createClass(ENRelativeDateFormatParser, items);

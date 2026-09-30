@@ -1,31 +1,12 @@
 // _runtime/metro/13762__.js
-import _mod13728 from "13728__.js";
+import _mod13754 from "13754__.js";
 
-const require = globalThis.__r;
-
-export default (arr, arg1, arg2) => {
-  _require = arg2;
-  dependencyMap = null;
-  closure_2 = null;
-  let regex = null;
-  try {
-    let tmp9 = new require("13757__.js")(arg1, arg2);
-    regex = tmp9;
-    const item = arr.forEach((item) => {
-      if (regex.test(item)) {
-        let tmp = closure_1;
-        if (closure_1) {
-          tmp = 1 !== closure_2.compare(item);
-        }
-        if (!tmp) {
-          closure_1 = item;
-          const tmp9 = new _mod13728(closure_1, closure_0);
-          closure_2 = tmp9;
-        }
-      }
-    });
-    return dependencyMap;
-  } catch (err) {
-    return tmp;
+export default (str, arg1) => {
+  str = str.trim();
+  const tmpResult = _mod13754(str.replace(/^[=v]+/, ""), arg1);
+  let version = null;
+  if (tmpResult) {
+    version = tmpResult.version;
   }
+  return version;
 };

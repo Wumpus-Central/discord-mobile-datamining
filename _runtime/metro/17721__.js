@@ -1,13 +1,28 @@
 // _runtime/metro/17721__.js
-import registerAsset from "01121__.js";
+import _mod626 from "00626__.js";
+import _mod17722 from "17722__.js";
+import stringToArray from "../17723_stringToArray.js";
+import castSlice from "../17726_castSlice.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/guild_settings/welcome/images",
-  width: 138,
-  height: 92.5,
-  scales: [2, 3],
-  hash: "b5e600063095a5da796a5f2ddbe5b3f0",
-  name: "role_subscription_social",
-  type: "png",
-});
+export default function createCaseFirst(arg0) {
+  closure_0 = arg0;
+  return (arg0) => {
+    const str = _mod626(arg0);
+    let tmp3;
+    if (_mod17722(str)) {
+      tmp3 = stringToArray(str);
+    }
+    if (tmp3) {
+      let first = tmp3[0];
+    } else {
+      first = str.charAt(0);
+    }
+    if (tmp3) {
+      let joined = castSlice(tmp3, 1).join("");
+      const obj = castSlice(tmp3, 1);
+    } else {
+      joined = str.slice(1);
+    }
+    return first[closure_0]() + joined;
+  };
+}

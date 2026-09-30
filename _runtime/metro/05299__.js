@@ -1,11 +1,22 @@
 // _runtime/metro/05299__.js
-import _mod1307 from "01307__.js";
+import callBoundIntrinsic from "../01315_callBoundIntrinsic.js";
+import properlyBoxed from "../05300_properlyBoxed.js";
+import _mod5302 from "05302__.js";
+import RequireObjectCoercible from "../05304_RequireObjectCoercible.js";
+import shimArrayPrototypeMap from "../05365_shimArrayPrototypeMap.js";
+import callBind from "../01456_callBind.js";
+import defineProperty from "05319__.js";
 
-export default function mod(arg0, arg1) {
-  const result = arg0 % arg1;
-  let sum = result;
-  if (result < 0) {
-    sum = result + arg1;
-  }
-  return _mod1307(sum);
+let closure_2 = callBind.apply(properlyBoxed());
+let closure_3 = callBoundIntrinsic("Array.prototype.slice");
+function map(arg0, arg1) {
+  RequireObjectCoercible(arg0);
+  return closure_2(arg0, closure_3(arguments, 1));
 }
+const obj = { getPolyfill: null, implementation: null, shim: null };
+obj.getPolyfill = properlyBoxed;
+obj.implementation = _mod5302;
+obj.shim = shimArrayPrototypeMap;
+defineProperty(map, obj);
+
+export default map;

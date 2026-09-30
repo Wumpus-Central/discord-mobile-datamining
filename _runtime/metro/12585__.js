@@ -1,136 +1,69 @@
 // _runtime/metro/12585__.js
-import _mod12490 from "12490__.js";
-import _slicedToArray from "00032__.js";
+import errorCallback from "../12510_errorCallback.js";
+import _mod12514 from "12514__.js";
+import spanTimeInputToSeconds from "../12519_spanTimeInputToSeconds.js";
+import _mod12526 from "12526__.js";
+import BAGGAGE_HEADER_NAME from "../12527_BAGGAGE_HEADER_NAME.js";
+import _mod12532 from "12532__.js";
+import _mod12533 from "12533__.js";
+import _mod12541 from "12541__.js";
+import _mod12550 from "12550__.js";
+import "module_12513";
+import __SENTRY_DEBUG__ from "12542__.js";
+import dateTimestampInSeconds from "12528__.js";
 
-let items = [
-  ["\n", "\\n"],
-  ["\r", "\\r"],
-  ["\t", "\\t"],
-  ["\\", "\\\\"],
-  ["|", "\\u{7c}"],
-  [",", "\\u{2c}"],
-];
+errorCallback;
 
-export const getBucketKey = function getBucketKey(
-  metricType,
-  sanitizeMetricKeyResult,
-  sanitizeUnitResult,
-  sanitizeTagsResult,
-) {
-  const entries = Object.entries(_mod12490.dropUndefinedKeys(sanitizeTagsResult));
-  return (
-    "" +
-    metricType +
-    sanitizeMetricKeyResult +
-    sanitizeUnitResult +
-    entries.sort((arg0, arg1) => {
-      const first = arg0[0];
-      return first.localeCompare(arg1[0]);
-    })
-  );
-};
-export const sanitizeMetricKey = function sanitizeMetricKey(str) {
-  return str.replace(/[^\w\-.]+/gi, "_");
-};
-export const sanitizeTags = function sanitizeTags(tags) {
-  let obj = {};
-  for (const key10007 in arg0) {
-    let _Object = Object;
-    hasOwnProperty = Object.prototype.hasOwnProperty;
-    let call = hasOwnProperty.call;
-    if (typeof call === "unknown") {
-      let hasOwnPropertyResult = hasOwnProperty(key10007);
-    } else {
-      hasOwnPropertyResult = call(arg0, key10007);
-    }
-    if (!hasOwnPropertyResult) {
-      continue;
-    } else {
-      let _String = String;
-      let replaced = key10007.replace(/[^\w\-./]+/gi, "");
-      items = [];
-      let arraySpreadResult = HermesBuiltin.arraySpread(String(arg0[key10007]), 0);
-      obj[replaced] = items.reduce(
-        (acc, item) =>
-          acc +
-          (function getCharOrReplacement(item) {
-            const obj = dependencyMap[Symbol.iterator]();
-            while (obj !== undefined) {
-              let tmp4 = closure_1_2(tmp2, 2);
-              if (item === tmp4[0]) {
-                obj.return();
-                return tmp5;
-              }
-            }
-            return item;
-          })(item),
-        "",
-      );
-      continue;
-    }
-    continue;
+export const getTraceData = function getTraceData(arg0) {
+  let obj = arg0;
+  if (arg0 === undefined) {
+    obj = {};
   }
-  return obj;
-};
-export const sanitizeUnit = function sanitizeUnit(none) {
-  return none.replace(/[^\w]+/gi, "_");
-};
-export const serializeMetricBuckets = function serializeMetricBuckets(arg0) {
-  let str = "";
-  const iter = arg0[Symbol.iterator]();
-  const nextResult = iter.next();
-  while (iter !== undefined) {
-    let tmp2 = nextResult;
-    let _Object = Object;
-    let entries = Object.entries(nextResult.tags);
-    let arr2 = entries;
-    let str2 = "";
-    if (entries.length > 0) {
-      let mapped = arr2.map((item) => {
-        [tmp, tmp2] = item;
-        return "" + tmp + ":" + tmp2;
-      });
-      let _HermesInternal = HermesInternal;
-      str2 = "|#" + mapped.join(",");
+  const client = _mod12541.getClient();
+  if (obj3.isEnabled()) {
+    if (client) {
+      const mainCarrier = _mod12532.getMainCarrier();
+      const tmpResult = _mod12532;
+      const asyncContextStrategy = _mod12533.getAsyncContextStrategy(mainCarrier);
+      if (asyncContextStrategy.getTraceData) {
+        return asyncContextStrategy.getTraceData(obj);
+      } else {
+        const currentScope = _mod12541.getCurrentScope();
+        let span = obj.span;
+        if (!span) {
+          span = spanTimeInputToSeconds.getActiveSpan();
+          const tmpResult10 = spanTimeInputToSeconds;
+        }
+        if (span) {
+          let spanToTraceHeaderResult = spanTimeInputToSeconds.spanToTraceHeader(span);
+          const tmpResult11 = spanTimeInputToSeconds;
+        } else {
+          const propagationContext = currentScope.getPropagationContext();
+          ({ traceId, sampled, spanId } = propagationContext);
+          spanToTraceHeaderResult = _mod12526.generateSentryTraceHeader(traceId, spanId, sampled);
+          const tmpResult12 = _mod12526;
+        }
+        const tmpResult13 = _mod12550;
+        if (span) {
+          let dynamicSamplingContextFromSpan = tmpResult13.getDynamicSamplingContextFromSpan(span);
+        } else {
+          dynamicSamplingContextFromSpan = tmpResult13.getDynamicSamplingContextFromScope(client, currentScope);
+        }
+        const tmpResult9 = _mod12541;
+        const result = BAGGAGE_HEADER_NAME.dynamicSamplingContextToSentryBaggageHeader(dynamicSamplingContextFromSpan);
+        const TRACEPARENT_REGEXP = _mod12526.TRACEPARENT_REGEXP;
+        if (TRACEPARENT_REGEXP.test(spanToTraceHeaderResult)) {
+          const obj4 = { "sentry-trace": spanToTraceHeaderResult, baggage: result };
+          let obj5 = obj4;
+        } else {
+          const logger = _mod12514.logger;
+          logger.warn("Invalid sentry-trace data. Cannot generate trace data");
+          obj5 = {};
+        }
+        return obj5;
+      }
+      const tmpResult8 = _mod12533;
     }
-    let _HermesInternal2 = HermesInternal;
-    let str3 = "";
-    let str4 = "@";
-    let str5 = ":";
-    let str6 = "|";
-    let str7 = "|T";
-    let str8 = "\n";
-    str =
-      str +
-      "" +
-      tmp2.name +
-      "@" +
-      tmp2.unit +
-      ":" +
-      tmp2.metric +
-      "|" +
-      tmp2.metricType +
-      str2 +
-      "|T" +
-      tmp2.timestamp +
-      "\n";
-    continue;
   }
-  return str;
-};
-export const simpleHash = function simpleHash(item) {
-  let length;
-  let num = 0;
-  let num2 = 0;
-  let num3 = 0;
-  if (0 < item.length) {
-    do {
-      let sum = (num2 << 5) - num2 + item.charCodeAt(num);
-      num2 = sum & sum;
-      num = num + 1;
-      num3 = num2;
-      length = item.length;
-    } while (num < length);
-  }
-  return num3 >>> 0;
+  return {};
 };

@@ -1,30 +1,38 @@
 // _runtime/metro/14028__.js
-import _mod17 from "00017__.js";
-import replaceByteInByteSequence from "../14029_replaceByteInByteSequence.js";
+import _mod13989 from "13989__.js";
+import _mod13991 from "13991__.js";
+import _mod14007 from "14007__.js";
+import _mod14029 from "14029__.js";
+import _mod14030 from "14030__.js";
 
-let closure_0 = null;
-const BlobModule = _mod17.NativeModules.BlobModule;
-let tmp2 = BlobModule;
-if (BlobModule) {
-  tmp2 = typeof BlobModule.BLOB_URI_SCHEME === "string";
-}
-if (tmp2) {
-  closure_0 = `${BlobModule.BLOB_URI_SCHEME}:`;
-  if (typeof BlobModule.BLOB_URI_HOST === "string") {
-    let _HermesInternal = HermesInternal;
-    closure_0 = `${BlobModule.BLOB_URI_SCHEME}:` + "//" + BlobModule.BLOB_URI_HOST + "/";
+let closure_2 = _mod13991([].push);
+
+export default (arg0, arg1) => {
+  const tmp = _mod13989(arg0);
+  const items = [];
+  for (const key10010 in tmp) {
+    let tmp14 = _mod14007;
+    let tmp14Result = tmp14(_mod14029, key10010);
+    let tmp2 = !tmp14Result;
+    if (!tmp14Result) {
+      tmp2 = _mod14007(tmp, key10010);
+    }
+    if (!tmp2) {
+      continue;
+    } else {
+      let tmp4 = closure_2(items, key10010);
+      continue;
+    }
+    continue;
   }
-}
-replaceByteInByteSequence.URL.createObjectURL = function createObjectURL(data) {
-  if (null === closure_0) {
-    const _Error = Error;
-    const error = new Error("Cannot create URL for blob!");
-    throw error;
-  } else {
-    const _HermesInternal = HermesInternal;
-    return "" + closure_0 + data.data.blobId + "?offset=" + data.data.offset + "&size=" + data.size;
+  for (let num = 0; arg1.length > num; num = num + 1) {
+    let tmp7 = arg1[num];
+    if (_mod14007(tmp, tmp7)) {
+      let tmp5Result = _mod14030;
+      if (!~tmp5Result.indexOf(items, tmp7)) {
+        let tmp10 = closure_2(items, tmp7);
+      }
+    }
   }
+  return items;
 };
-replaceByteInByteSequence.URL.revokeObjectURL = function revokeObjectURL(arg0) {};
-
-export const URL = replaceByteInByteSequence.URL;

@@ -1,11 +1,9 @@
 // _runtime/metro/06431__.js
-import cancelAnimation from "../01638_cancelAnimation.js";
+import _mod17 from "00017__.js";
 
-const animatedComponent = cancelAnimation.createAnimatedComponent(fn(17).SectionList);
-const module_6424 = fn(6424);
-const memoResult = fn(19).memo(
-  module_6424.createBottomSheetScrollableComponent(fn(6212).SCROLLABLE_TYPE.SECTIONLIST, animatedComponent),
-);
-memoResult.displayName = "BottomSheetSectionList";
+const StyleSheet = _mod17.StyleSheet;
 
-export default memoResult;
+export const styles = StyleSheet.create({
+  container: StyleSheet.absoluteFillObject,
+  background: { backgroundColor: "white", borderRadius: 15 },
+});

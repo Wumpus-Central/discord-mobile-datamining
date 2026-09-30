@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 271,
-  height: 163,
+  httpServerLocation: "/assets/images/native/premium/upsell",
+  width: 240,
+  height: 152,
   scales: [2, 3],
-  hash: "37b687db1cd86ac8059d1a0342f2319c",
-  name: "img_tier_2_clouds_bigger",
+  hash: "99a0c83db7ec93ecc4f9138bd68cba05",
+  name: "img_guild_cap_upsell_dark",
   type: "png",
 });

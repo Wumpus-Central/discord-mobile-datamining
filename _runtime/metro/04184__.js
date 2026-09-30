@@ -1,7 +1,8 @@
 // _runtime/metro/04184__.js
-import _typeof_mod from "03918__.js";
-import module_4185_mod from "04185__.js";
-import requiredArgs_mod from "../03919_requiredArgs.js";
+import _typeof_mod from "03948__.js";
+import startOfUTCISOWeek_mod from "../04185_startOfUTCISOWeek.js";
+import startOfUTCISOWeekYear_mod from "../04186_startOfUTCISOWeekYear.js";
+import requiredArgs_mod from "../03949_requiredArgs.js";
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -11,35 +12,37 @@ if (!_typeof) {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
-let module_4185 = module_4185_mod;
-if (!module_4185) {
-  const obj2 = { default: module_4185 };
+let startOfUTCISOWeek = startOfUTCISOWeek_mod;
+if (!startOfUTCISOWeek) {
+  const obj2 = { default: startOfUTCISOWeek };
   let tmp5 = obj2;
 } else {
-  tmp5 = module_4185;
+  tmp5 = startOfUTCISOWeek;
 }
-module_4185 = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
+startOfUTCISOWeek = tmp5;
+let startOfUTCISOWeekYear = startOfUTCISOWeekYear_mod;
+if (!startOfUTCISOWeekYear) {
+  const obj3 = { default: startOfUTCISOWeekYear };
   let tmp7 = obj3;
 } else {
-  tmp7 = requiredArgs;
+  tmp7 = startOfUTCISOWeekYear;
 }
-requiredArgs = tmp7;
+startOfUTCISOWeekYear = tmp7;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
+} else {
+  tmp9 = requiredArgs;
+}
+requiredArgs = tmp9;
+let c4 = 604800000;
 
-export default function getDaysInYear(arg0) {
+export default function getUTCISOWeek(arg0) {
   requiredArgs.default(1, arguments);
   const defaultResult1 = _typeof.default(arg0);
-  if ("Invalid Date" === String(date)) {
-    return NaN;
-  } else {
-    let num = 365;
-    if (module_4185.default(defaultResult1)) {
-      num = 366;
-    }
-    return num;
-  }
-  date = new Date(defaultResult1);
+  const time = startOfUTCISOWeek.default(defaultResult1).getTime();
+  const defaultResult2 = startOfUTCISOWeek.default(defaultResult1);
+  return Math.round((time - startOfUTCISOWeekYear.default(defaultResult1).getTime()) / c4) + 1;
 };
 export default exports.default;

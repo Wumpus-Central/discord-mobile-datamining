@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "2a4178fd61be5173c63df5a107198d76",
-  name: "InstagramNeutralIcon",
+  hash: "6547bb7b75af42cdcf6f655476c57657",
+  name: "UserCheckIcon",
   type: "png",
 });

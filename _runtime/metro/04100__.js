@@ -1,36 +1,26 @@
 // _runtime/metro/04100__.js
-import _typeof_mod from "04101__.js";
-import _typeof_mod from "03918__.js";
-import requiredArgs_mod from "../03919_requiredArgs.js";
+import _typeof_mod from "03948__.js";
+import requiredArgs_mod from "../03949_requiredArgs.js";
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
   const obj = { default: _typeof };
-}
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj2 = { default: _typeof };
-  let tmp5 = obj2;
+  let tmp3 = obj;
 } else {
-  tmp5 = _typeof;
+  tmp3 = _typeof;
 }
-_typeof = tmp5;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp7 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp7;
+requiredArgs = tmp5;
 
-export default function isValid(num) {
+export default function isSunday(arg0) {
   requiredArgs.default(1, arguments);
-  if (!_typeof.default(num)) {
-    if (typeof num !== "number") {
-      return false;
-    }
-  }
-  return !isNaN(Number(_typeof.default(num)));
+  return 0 === _typeof.default(arg0).getDay();
 };
 export default exports.default;

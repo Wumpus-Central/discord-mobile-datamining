@@ -1,11 +1,11 @@
 // _runtime/metro/14005__.js
-import _mod14006 from "14006__.js";
+import _mod13984 from "13984__.js";
 
-export default (arg0) => {
-  const tmp = _mod14006(arg0);
-  let num = 0;
-  if (tmp > 0) {
-    num = min(tmp, 9007199254740991);
-  }
-  return num;
-};
+const tmp = _mod13984.navigator && _mod13984.navigator.userAgent;
+let str = "";
+if (tmp) {
+  const _String = String;
+  str = String(tmp);
+}
+
+export default str;

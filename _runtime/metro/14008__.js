@@ -1,12 +1,4 @@
 // _runtime/metro/14008__.js
-import _mod14006 from "14006__.js";
+import _mod13994 from "13994__.js";
 
-export default (arg0, arg1) => {
-  const tmp = _mod14006(arg0);
-  if (tmp < 0) {
-    let tmp3 = max(tmp + arg1, 0);
-  } else {
-    tmp3 = min(tmp, arg1);
-  }
-  return tmp3;
-};
+export default (arg0) => Object(_mod13994(arg0));

@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/video_calls/native/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "72af9903f630d67fa106808d11ca96fb",
-  name: "speaker",
+  httpServerLocation: "/assets/modules/stage_channels/native/images",
+  width: 251,
+  height: 120,
+  scales: [1, 2, 3],
+  hash: "ded9c31a2e9dd512048ecebbadd9fab8",
+  name: "audience_welcome",
   type: "png",
 });

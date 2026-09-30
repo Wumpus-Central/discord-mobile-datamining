@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/logos",
-  width: 106,
-  height: 26,
+  httpServerLocation: "/assets/images/native/premium/guild_boosting/tier_icons/colored",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "cb40a06625eace58731dea1b5da68381",
-  name: "img_logo_nitro_dark",
+  hash: "81c4c8246b195a90d6f5bb90212bbc6a",
+  name: "tier_3_32px",
   type: "png",
 });

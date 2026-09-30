@@ -6,8 +6,8 @@ export default registerAsset.registerAsset({
   httpServerLocation: "/assets/images/native/icons",
   width: 24,
   height: 24,
-  scales: [2, 3],
-  hash: "dcfca3dda846f0acd5adc9867fb467b3",
-  name: "ic_group_dm",
+  scales: [1, 2, 3],
+  hash: "4ae27cd370cebdaa94f014645ce27672",
+  name: "ic_feedback",
   type: "png",
 });

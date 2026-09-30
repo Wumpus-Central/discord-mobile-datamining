@@ -1,338 +1,190 @@
 // _runtime/metro/14064__.js
-import emptyPromise2 from "../14075_emptyPromise.js";
-import _mod14094 from "14094__.js";
-import asyncGeneratorStep from "../00005_asyncGeneratorStep.js";
-import get_ActivityIndicator_mod from "00017__.js";
-import get_mod from "00082__.js";
-import get_ActivityIndicator_mod from "14065__.js";
-import get_ActivityIndicator_mod from "14067__.js";
-import sendToReactotron from "../14069_sendToReactotron.js";
-import OverlayCreator from "../14070_OverlayCreator.js";
-import 14073__ from "14073__.js";
-import objectifyError from "../14074_objectifyError.js";
-import 14087__ from "14087__.js";
-import 14089__ from "14089__.js";
-import get_ActivityIndicator_mod from "14091__.js";
-import emptyPromise from "14092__.js";
-import get_ActivityIndicator_mod from "14093__.js";
+import Buffer from "../01252_Buffer.js";
+import _mod14063 from "14063__.js";
+import _slicedToArray from "00032__.js";
 
-let get_ActivityIndicator = get_ActivityIndicator_mod;
-let get = get_mod;
-if (!get) {
-  const obj9 = { default: get };
-  let tmp13 = obj9;
-} else {
-  tmp13 = get;
+function replaceByteInByteSequence(arr, arg1, arg2) {
+  let index = arr.indexOf(43);
+  if (index >= 0) {
+    do {
+      arr[index] = 32;
+      index = arr.indexOf(43, index + 1);
+    } while (index >= 0);
+  }
+  return arr;
 }
-get = tmp13;
-let get_ActivityIndicator = get_ActivityIndicator_mod;
-if (!get_ActivityIndicator) {
-  const obj11 = { default: get_ActivityIndicator };
-  let obj10 = obj11;
-} else {
-  obj10 = get_ActivityIndicator;
+function percentEncode(arr) {
+  const formatted = arr.toString(16).toUpperCase();
+  let text = formatted;
+  if (1 === formatted.length) {
+    text = `0${arr}`;
+  }
+  return "%" + text;
 }
-let get_ActivityIndicator = get_ActivityIndicator_mod;
-if (!get_ActivityIndicator) {
-  const obj13 = { default: get_ActivityIndicator };
-  let obj12 = obj13;
-} else {
-  obj12 = get_ActivityIndicator;
-}
-if (!sendToReactotron) {
-  const obj15 = { default: sendToReactotron };
-  let obj14 = obj15;
-} else {
-  obj14 = sendToReactotron;
-}
-if (!OverlayCreator) {
-  const obj17 = { default: OverlayCreator };
-  let obj16 = obj17;
-} else {
-  obj16 = OverlayCreator;
-}
-if (!module_14073) {
-  const obj19 = { default: module_14073 };
-  let obj18 = obj19;
-} else {
-  obj18 = module_14073;
-}
-if (!objectifyError) {
-  const obj21 = { default: objectifyError };
-  let obj20 = obj21;
-} else {
-  obj20 = objectifyError;
-}
-if (!module_14087) {
-  const obj23 = { default: module_14087 };
-  let obj22 = obj23;
-} else {
-  obj22 = module_14087;
-}
-if (!module_14089) {
-  const obj25 = { default: module_14089 };
-  let obj24 = obj25;
-} else {
-  obj24 = module_14089;
-}
-let get_ActivityIndicator = get_ActivityIndicator_mod;
-if (!get_ActivityIndicator) {
-  const obj27 = { default: get_ActivityIndicator };
-  let obj26 = obj27;
-} else {
-  obj26 = get_ActivityIndicator;
-}
-if (!emptyPromise) {
-  const obj29 = { default: emptyPromise };
-  let obj28 = obj29;
-} else {
-  obj28 = emptyPromise;
-}
-let get_ActivityIndicator = get_ActivityIndicator_mod;
-if (!get_ActivityIndicator) {
-  const obj31 = { default: get_ActivityIndicator };
-  let obj30 = obj31;
-} else {
-  obj30 = get_ActivityIndicator;
-}
-let c15 = "@REACTOTRON/clientId";
-const defaultResult = obj30.default();
-const model = defaultResult.model;
-const systemName = defaultResult.systemName;
-const url = {
-  createSocket(dependencyMap) {
-    const webSocket = new WebSocket(dependencyMap);
-    return webSocket;
-  },
-  host: (() => {
-    try {
-      const scriptURL = get.default.getConstants().scriptURL;
-      if (typeof scriptURL !== "string") {
-        const _Error = Error;
-        const error = new Error("Invalid non-string URL");
-        throw error;
-      } else {
-        return _mod14094.getHostFromUrl(scriptURL);
-      }
-      const _default = get.default;
-    } catch (tmp8) {
-      const _console = console;
-      const _HermesInternal = HermesInternal;
-      console.warn("getHost: \"" + tmp8.message + "\" for scriptURL - Falling back to " + "localhost");
-      return "localhost";
-    }
-  })("localhost"),
-  port: 9090,
-  name: "React Native App",
-  environment: "production",
-  client: null,
-  getClientId: null,
-  setClientId: null,
-  proxyHack: true
-};
-({ osRelease, serverHost, forceTouch, interfaceIdiom, uiMode, serial } = defaultResult);
-const merged = Object.assign(obj12.default());
-url.client = { reactotronLibraryName: "reactotron-react-native", reactotronLibraryVersion: "REACTOTRON_REACT_NATIVE_VERSION", platform: get_ActivityIndicator.Platform.OS, platformVersion: get_ActivityIndicator.Platform.Version, osRelease, model, serverHost, forceTouch, interfaceIdiom, systemName, uiMode, serial, reactNativeVersion: obj10.default() };
-let closure_14 = asyncGeneratorStep(async () => {
-  if (c4 === 2) {
-    c4 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj = { value, done: true };
-      return obj;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c4 = 2;
-      if (0 === c3) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj2 = { value, done: true };
-          return obj2;
-        } else {
-          closure_2 = tmp5;
-          closure_1 = tmp2;
-          closure_129_0 = undefined;
-          let str2 = closure_0;
-          if (closure_0 === undefined) {
-            str2 = "";
+function percentDecode(_Buffer) {
+  _Buffer = Buffer.Buffer;
+  const allocResult = _Buffer.alloc(_Buffer.byteLength);
+  let num = 0;
+  let num2 = 0;
+  let num3 = 0;
+  if (0 < _Buffer.length) {
+    while (true) {
+      if (37 === _Buffer[num]) {
+        let obj = _mod14063;
+        let sum = num + 1;
+        if (obj.isASCIIHex(_Buffer[sum])) {
+          let tmp3Result = _mod14063;
+          let sum1 = num + 2;
+          if (tmp3Result.isASCIIHex(_Buffer[sum1])) {
+            let sum2 = num2 + 1;
+            let _parseInt = parseInt;
+            let str = _Buffer.slice(sum, num + 3);
+            allocResult[num2] = parseInt(str.toString(), 16);
+            let tmp8 = sum1;
+            num = tmp8 + 1;
+            num2 = sum2;
+            num3 = sum2;
+            if (num >= _Buffer.length) {
+              break;
+            }
           }
-          closure_129_0 = str2;
-          closure_129_1 = undefined;
-          let screenWidth;
-          let screenHeight;
-          let screenScale;
-          closure_129_5 = undefined;
-          closure_129_6 = undefined;
-          c3 = 1;
-          c4 = 1;
-          return { value: "flex", done: true };
         }
-      } else if (arg0 === 1) {
-        c4 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c4 = 3;
-        const obj3 = { value, done: true };
-        return obj3;
-      } else if (closure_130_18.asyncStorageHandler) {
-        c4 = 3;
-        const obj4 = { value: closure_130_18.asyncStorageHandler.getItem(closure_130_15), done: true };
-        return obj4;
-      } else {
-        closure_129_1 = closure_130_4.default();
-        screenWidth = closure_129_1.screenWidth;
-        screenHeight = closure_129_1.screenHeight;
-        screenScale = closure_129_1.screenScale;
-        const items = [screenWidth, screenHeight];
-        const sorted = items.sort();
-        closure_129_5 = sorted.join("-");
-        const Platform = closure_130_2.Platform;
-        const obj5 = { ios: closure_130_17, android: closure_130_16, default: "" };
-        closure_129_6 = Platform.select(obj5);
-        const items1 = [closure_129_0, closure_130_2.Platform.OS, closure_130_2.Platform.Version, closure_129_6, closure_129_5, screenScale];
-        const _Boolean = Boolean;
-        const found = items1.filter(Boolean);
-        c4 = 3;
-        const obj6 = { value: found.join("-"), done: true };
-        return obj6;
       }
-    } catch (tmp25) {
-      c4 = tmp;
-      throw tmp25;
+      sum2 = num2 + 1;
+      allocResult[num2] = _Buffer[num];
+      tmp8 = num;
     }
   }
-});
-url.getClientId = function getClientId() {
-  const self = this;
-  const apply = closure_14.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-};
-let closure_13 = asyncGeneratorStep(async (arg0) => {
-  if (c1 === 2) {
-    c1 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp3 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
+  return allocResult.slice(0, num3);
+}
+function serializeUrlencodedByte(_Buffer) {
+  let str = "";
+  const iter = _Buffer[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let tmp2 = nextResult;
+    let str2 = "+";
+    if (32 === nextResult) {
+      str = `+`;
+      continue;
     } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c1 = 2;
-      if (arg0 === 1) {
-        c1 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c1 = 3;
-        const obj3 = { value, done: true };
-        return obj3;
-      } else if (client.asyncStorageHandler) {
-        c1 = 3;
-        const obj = { value: client.asyncStorageHandler.setItem(c15, tmp4), done: true };
-        return obj;
-      } else {
-        c1 = 3;
-        return { value: "HermesInternal", done: null };
+      if (42 !== tmp2) {
+        if (45 !== tmp2) {
+          if (46 !== tmp2) {
+            if (tmp2 < 48) {
+              if (tmp2 < 65) {
+                if (95 !== tmp2) {
+                  if (tmp2 < 97) {
+                    let fromCodePointResult = percentEncode(tmp2);
+                  }
+                }
+              }
+            }
+          }
+        }
       }
-    } catch (tmp6) {
-      c1 = tmp;
-      throw tmp6;
+      let _String = String;
+      fromCodePointResult = String.fromCodePoint(tmp2);
     }
   }
-});
-url.setClientId = function setClientId(payload) {
-  const self = this;
-  const apply = closure_13.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-};
-let items = [obj14.default(), obj20.default(), obj28.default(), obj18.default(), obj16.default(), obj22.default(), obj24.default(), obj26.default()];
-const client = emptyPromise2.createClient(url);
-client.useReactNative = () => {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
-  }
-  if (false !== obj.errors) {
-    const errors = obj.errors;
-    let tmp3 = null;
-    if (typeof errors === "object") {
-      tmp3 = errors;
-    }
-    client.use(obj20.default(tmp3));
-  }
-  if (false !== obj.log) {
-    client.use(obj28.default());
-  }
-  if (false !== obj.editor) {
-    const editor = obj.editor;
-    let tmp10 = null;
-    if (typeof editor === "object") {
-      tmp10 = editor;
-    }
-    client.use(obj18.default(tmp10));
-  }
-  if (false !== obj.overlay) {
-    client.use(obj16.default());
-  }
-  if (false !== obj.asyncStorage) {
-    const asyncStorage = obj.asyncStorage;
-    let tmp17 = null;
-    if (typeof asyncStorage === "object") {
-      tmp17 = asyncStorage;
-    }
-    client.use(obj14.default(tmp17));
-  }
-  if (false !== obj.networking) {
-    const networking = obj.networking;
-    let tmp21 = null;
-    if (typeof networking === "object") {
-      tmp21 = networking;
-    }
-    client.use(obj22.default(tmp21));
-  }
-  if (false !== obj.storybook) {
-    client.use(obj24.default());
-  }
-  if (false !== obj.devTools) {
-    client.use(obj26.default());
-  }
-  return client;
-};
-client.setAsyncStorageHandler = (asyncStorageHandler) => {
-  client.asyncStorageHandler = asyncStorageHandler;
-  return client;
-};
+  return str;
+}
 
-export const asyncStorage = obj14.default;
-export const devTools = obj26.default;
-export const networking = obj22.default;
-export const openInEditor = obj18.default;
-export const overlay = obj16.default;
-export const storybook = obj24.default;
-export const trackGlobalErrors = obj20.default;
-export const trackGlobalLogs = obj28.default;
-export const reactNativeCorePlugins = items;
-export default client;
+export default {
+  percentEncode,
+  percentDecode,
+  parseUrlencoded(arg0) {
+    let _Buffer = Buffer.Buffer;
+    return (function parseUrlencoded(_Buffer) {
+      let items = [];
+      const iter = (function strictlySplitByteSequence(arr, arg1) {
+        const items = [];
+        const index = arr.indexOf(38);
+        let index1 = index;
+        let num = 0;
+        let num2 = 0;
+        if (index >= 0) {
+          do {
+            arr = items.push(arr.slice(num, index1));
+            let sum = index1 + 1;
+            index1 = arr.indexOf(38, sum);
+            num = sum;
+            num2 = sum;
+          } while (index1 >= 0);
+        }
+        if (num2 !== arr.length) {
+          items.push(arr.slice(num2));
+        }
+        return items;
+      })(_Buffer, 38)[Symbol.iterator]();
+      const nextResult = iter.next();
+      while (iter !== undefined) {
+        let arr3 = nextResult;
+        if (0 === nextResult.length) {
+          continue;
+        } else {
+          let index = arr3.indexOf(61);
+          let tmp23 = index;
+          if (index >= 0) {
+            let substr = arr3.slice(0, tmp23);
+            let substr1 = arr3.slice(tmp23 + 1);
+          } else {
+            substr = nextResult;
+            _Buffer = Buffer.Buffer;
+            substr1 = _Buffer.alloc(0);
+          }
+          let _Buffer2 = Buffer.Buffer;
+          let fromResult = _Buffer2.from(substr);
+          let tmp13 = replaceByteInByteSequence(fromResult, 43, 32);
+          let _Buffer3 = Buffer.Buffer;
+          let fromResult1 = _Buffer3.from(substr1);
+          let tmp17 = replaceByteInByteSequence(fromResult1, 43, 32);
+          let str = percentDecode(fromResult);
+          let items1 = [str.toString()];
+          let str2 = percentDecode(fromResult1);
+          items1[1] = str2.toString();
+          let arr = items.push(items1);
+        }
+      }
+      return items;
+    })(_Buffer.from(arg0));
+  },
+  serializeUrlencoded(_list) {
+    let str = "utf-8";
+    if (undefined !== arg1) {
+      str = tmp;
+    }
+    let str2 = "";
+    const entries = _list.entries();
+    while (tmp3 !== undefined) {
+      let tmp6 = _slicedToArray(tmp4, 2);
+      [tmp7, arr] = tmp6;
+      let _Buffer = Buffer.Buffer;
+      let tmp12 = serializeUrlencodedByte(_Buffer.from(arr[0]));
+      let name = arr[1];
+      let tmp13 = arr.length > 2;
+      if (tmp13) {
+        tmp13 = undefined !== arr[2];
+      }
+      if (tmp13) {
+        if ("hidden" === arr[2]) {
+          if ("_charset_" === tmp12) {
+            name = str;
+          }
+        }
+        if ("file" === arr[2]) {
+          name = name.name;
+        }
+      }
+      if (0 !== tmp7) {
+        str2 = `${str2}&`;
+      }
+      let _Buffer2 = Buffer.Buffer;
+      let tmp9Result = serializeUrlencodedByte(_Buffer2.from(name));
+      let _HermesInternal = HermesInternal;
+      str2 = str2 + "" + tmp12 + "=" + tmp9Result;
+      continue;
+    }
+    return str2;
+  },
+};

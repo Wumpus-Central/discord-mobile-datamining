@@ -1,11 +1,16 @@
 // _runtime/metro/14121__.js
-import registerAsset from "01121__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties",
-  scales: [1],
-  hash: "76c09ebc2fd9700ae36ec8729cee1e9d",
-  name: "NotificationsTab",
-  type: "lottie",
-});
+export const getHostFromUrl = function getHostFromUrl(scriptURL) {
+  const match = scriptURL.match(/^(?:https?:\/\/)?(\[[^\]]+\]|[^/:\s]+)(?::\d+)?(?:[/?#]|$)/);
+  let tmp2;
+  if (match != null) {
+    tmp2 = match[1];
+  }
+  if (typeof tmp2 !== "string") {
+    const _Error = Error;
+    const error = new Error("Invalid URL - host not found");
+    throw error;
+  } else {
+    return tmp2;
+  }
+};

@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/icymi/native/images",
-  width: 24.5,
-  height: 24,
-  scales: [2, 3],
-  hash: "1c9607c514ba0cca490ff85ef6b52d0d",
-  name: "emoji-negative",
+  httpServerLocation: "/assets/images/native/icons",
+  width: 40,
+  height: 23,
+  scales: [1, 2],
+  hash: "f508ffa8fec7b43f0c7e1765658cd955",
+  name: "ic_message",
   type: "png",
 });

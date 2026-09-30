@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
-  width: 160,
-  height: 160,
+  httpServerLocation: "/assets/modules/guild_scheduled_events/native/images",
+  width: 216,
+  height: 80,
   scales: [2, 3],
-  hash: "85840ade8b69557ffa30f1445cbffe12",
-  name: "img_no_results_alt_darker",
+  hash: "0e2ac412c416f1e5e277ac37a8dd593a",
+  name: "stage-channel-upsell",
   type: "png",
 });

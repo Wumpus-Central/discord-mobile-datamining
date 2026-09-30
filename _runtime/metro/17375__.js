@@ -1,24 +1,11 @@
 // _runtime/metro/17375__.js
+import registerAsset from "01121__.js";
 
-export default (promise, arg1) => {
-  let fn = arg1;
-  if (!arg1) {
-    fn = () => {};
-  }
-  return promise.then(
-    (result) => {
-      closure_0 = result;
-      return new Promise((fn) => {
-        fn(closure_0());
-      }).then(() => closure_0);
-    },
-    (arg0) => {
-      closure_0 = arg0;
-      return new Promise((fn) => {
-        fn(closure_0());
-      }).then(() => {
-        throw closure_0;
-      });
-    },
-  );
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/modules/holidays/assets",
+  scales: [1],
+  hash: "28cac85f0af67c534e11b773b5017c66",
+  name: "halloween_loading_light",
+  type: "webm",
+});

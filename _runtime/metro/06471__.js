@@ -1,21 +1,9 @@
 // _runtime/metro/06471__.js
-function _getPrototypeOf(arg0) {
-  if (Object.setPrototypeOf) {
-    let _Object = Object;
-    exports = getPrototypeOf.bind();
-  } else {
-    exports = (arg0) => {
-      let __proto__ = arg0.__proto__;
-      if (!__proto__) {
-        const _Object = Object;
-        __proto__ = Object.getPrototypeOf(arg0);
-      }
-      return __proto__;
-    };
-  }
-  module.exports = exports;
-  return exports(arg0);
-}
-let exports = _getPrototypeOf;
+import _mod6472 from "06472__.js";
+import _mod6473 from "06473__.js";
+import _mod6474 from "06474__.js";
+import _mod6476 from "06476__.js";
 
-export default _getPrototypeOf;
+export default function _slicedToArray(arg0, arg1) {
+  return _mod6472(arg0) || _mod6473(arg0, arg1) || _mod6474(arg0, arg1) || _mod6476();
+}

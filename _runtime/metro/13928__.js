@@ -1,409 +1,234 @@
 // _runtime/metro/13928__.js
 import e from "../01161_e.js";
+import data from "../13929_data.js";
+import regions from "../13930_regions.js";
 
 require = arg1;
-const exports = arg5;
 const dependencyMap = arg6;
-function parseUnicodeLanguageId(locale) {
-  let parts = locale;
-  if (typeof locale === "string") {
-    parts = locale.split(exports.SEPARATOR);
-  }
-  const arr = parts.shift();
+function isMatched(region, str, arg2) {
+  const parts = str.split("-");
+  [tmp2, tmp3, arr] = parts;
   if (arr) {
-    if ("root" === arr) {
-      const obj2 = { lang: "root", variants: [] };
-      return obj2;
-    } else if (re12.test(arr)) {
-      let length = parts.length;
-      if (length) {
-        length = re8.test(parts[0]);
-      }
-      let arr5;
-      if (length) {
-        arr5 = parts.shift();
-      }
-      let length2 = parts.length;
-      if (length2) {
-        length2 = re10.test(parts[0]);
-      }
-      let arr6;
-      if (length2) {
-        arr6 = parts.shift();
-      }
-      const obj = {};
-      if (parts.length) {
-        if (re11.test(parts[0])) {
-          const arr7 = parts.shift();
-          while (!(arr7 in obj)) {
-            obj[arr7] = 1;
-          }
-          const _RangeError3 = RangeError;
-          const concat = 'Duplicate variant "'.concat;
-          const rangeError = new RangeError('Duplicate variant "'.concat(arr7, '"'));
-          throw rangeError;
-        }
-      }
-      const obj3 = { lang: arr, script: arr5, region: arr6, variants: null };
-      const _Object = Object;
-      obj3.variants = Object.keys(obj);
-      return obj3;
-    } else {
-      const _RangeError2 = RangeError;
-      const rangeError1 = new RangeError("Malformed unicode_language_subtag");
-      throw rangeError1;
-    }
-  } else {
-    const _RangeError = RangeError;
-    const rangeError2 = new RangeError("Missing unicode_language_subtag");
-    throw rangeError2;
-  }
-}
-function parseTransformedExtension(parts) {
-  let arr;
-  try {
-    const items = [];
-    if (parts.length) {
-      if (re13.test(parts[0])) {
-        while (true) {
-          arr = parts.shift();
-          let items1 = [];
-          if (parts.length) {
-            if (re5.test(parts[0])) {
-              let arr2 = items1.push(parts.shift());
-              while (parts.length) {
-                if (!re5.test(parts[0])) {
-                  break;
-                }
-              }
-            }
-          }
-          if (!items1.length) {
-            break;
-          } else {
-            let items2 = [arr, items1.join(exports.SEPARATOR)];
-            let arr3 = items.push(items2);
-          }
-        }
-        const _RangeError = RangeError;
-        const concat = 'Missing tvalue for tkey "'.concat;
-        const rangeError = new RangeError('Missing tvalue for tkey "'.concat(arr, '"'));
-        throw rangeError;
-      }
-    }
-    if (items.length) {
-      const obj = { type: "t", fields: items, lang: tmp2 };
-      return obj;
-    } else {
-      const _RangeError2 = RangeError;
-      const rangeError1 = new RangeError("Malformed transformed_extension");
-      throw rangeError1;
-    }
-    tmp2 = parseUnicodeLanguageId(parts);
-  } catch (err) {}
-}
-const re3 = /^[a-z0-9]{1,8}$/i;
-const re4 = /^[a-z0-9]{2,8}$/i;
-const re5 = /^[a-z0-9]{3,8}$/i;
-const re6 = /^[a-z0-9][a-z]$/i;
-const re7 = /^[a-z0-9]{3,8}$/i;
-const re8 = /^[a-z]{4}$/i;
-const re9 = /^[0-9a-svwyz]$/i;
-const re10 = /^([a-z]{2}|[0-9]{3})$/i;
-const re11 = /^([a-z0-9]{5,8}|[0-9][a-z0-9]{3})$/i;
-const re12 = /^([a-z]{2,3}|[a-z]{5,8})$/i;
-const re13 = /^[a-z][0-9]$/i;
-
-export const isUnicodeLanguageSubtag = function isUnicodeLanguageSubtag(GetOptionResult) {
-  return re12.test(GetOptionResult);
-};
-export const isStructurallyValidLanguageTag = function isStructurallyValidLanguageTag(locale) {
-  try {
-    parseUnicodeLanguageId(locale.split(exports.SEPARATOR));
-    return true;
-  } catch (err) {
-    return false;
-  }
-};
-export const isUnicodeRegionSubtag = function isUnicodeRegionSubtag(GetOptionResult2) {
-  return re10.test(GetOptionResult2);
-};
-export const isUnicodeScriptSubtag = function isUnicodeScriptSubtag(GetOptionResult1) {
-  return re8.test(GetOptionResult1);
-};
-export const isUnicodeVariantSubtag = function isUnicodeVariantSubtag(arg0) {
-  return re11.test(arg0);
-};
-export { parseUnicodeLanguageId };
-export const parseUnicodeLocaleId = function parseUnicodeLocaleId(arr3) {
-  const parts = arr3.split(exports.SEPARATOR);
-  const lang = parseUnicodeLanguageId(parts);
-  const items = [];
-  if (parts.length) {
-    const obj2 = {};
-    let tmp2;
-    let tmp3;
-    let tmp4;
-    const arr = parts.shift();
-    while ("u" !== arr) {
-      if ("U" === arr) {
-        break;
+    if ("$" === arr[0]) {
+      const slice = arr.slice;
+      if ("!" !== arr[1]) {
+        let arr2 = arg2[slice(arr, 1)];
       } else {
-        if ("t" !== arr) {
-          if ("T" !== arr) {
-            if ("x" !== arr) {
-              if ("X" !== arr) {
-                if (re9.test(arr)) {
-                  if (arr in obj2) {
-                    let tmp22 = globalThis;
-                    let _RangeError2 = RangeError;
-                    let str10 = "There can only be 1 -";
-                    let concat = "There can only be 1 -".concat;
-                    let str11 = "- extension";
-                    let tmp23 = new.target;
-                    let tmp24 = new.target;
-                    let rangeError = new RangeError("There can only be 1 -".concat(arr, "- extension"));
-                    throw rangeError;
-                  } else {
-                    let obj3 = { type: arr, value: null };
-                    let items1 = [];
-                    if (parts.length) {
-                      if (re4.test(parts[0])) {
-                        let arr2 = items1.push(parts.shift());
-                        while (parts.length) {
-                          if (!re4.test(parts[0])) {
-                            break;
-                          }
-                        }
-                      }
-                    }
-                    let str9 = "";
-                    if (items1.length) {
-                      str9 = items1.join(exports.SEPARATOR);
-                    }
-                    obj3.value = str9;
-                    obj2[obj3.type] = obj3;
-                    arr3 = items.push(obj3);
-                    let tmp19 = tmp2;
-                    let tmp20 = tmp3;
-                    let tmp21 = tmp4;
-                  }
-                } else {
-                  let tmp9 = globalThis;
-                  let _RangeError = RangeError;
-                  let tmp10 = new.target;
-                  let str8 = "Malformed extension type";
-                  let tmp11 = new.target;
-                  let rangeError1 = new RangeError("Malformed extension type");
-                  throw rangeError1;
-                }
-              }
-            }
-            if (tmp2) {
-              let tmp37 = globalThis;
-              let _RangeError4 = RangeError;
-              let tmp38 = new.target;
-              let str13 = "There can only be 1 -x- extension";
-              let tmp39 = new.target;
-              let rangeError2 = new RangeError("There can only be 1 -x- extension");
-              throw rangeError2;
-            } else {
-              let items2 = [];
-              if (parts.length) {
-                if (re3.test(parts[0])) {
-                  let arr4 = items2.push(parts.shift());
-                  while (parts.length) {
-                    if (!re3.test(parts[0])) {
-                      break;
-                    }
-                  }
-                }
-              }
-              if (items2.length) {
-                let obj4 = { type: "x", value: items2.join(exports.SEPARATOR) };
-                let arr5 = items.push(obj4);
-                tmp19 = obj4;
-                tmp20 = tmp3;
-                tmp21 = tmp4;
-              } else {
-                let tmp30 = globalThis;
-                let _RangeError3 = RangeError;
-                let tmp31 = new.target;
-                let str12 = "Malformed private_use_extension";
-                let tmp32 = new.target;
-                let rangeError3 = new RangeError("Malformed private_use_extension");
-                throw rangeError3;
-              }
-            }
-          }
-          tmp2 = tmp19;
-          tmp3 = tmp20;
-          tmp4 = tmp21;
-          if (parts.length) {
-            continue;
-          } else {
-            let obj5 = { extensions: items };
-            let obj8 = obj5;
-          }
-        }
-        if (tmp3) {
-          let tmp45 = globalThis;
-          let _RangeError5 = RangeError;
-          let tmp46 = new.target;
-          let str14 = "There can only be 1 -t- extension";
-          let tmp47 = new.target;
-          let rangeError4 = new RangeError("There can only be 1 -t- extension");
-          throw rangeError4;
-        } else {
-          let tmp43 = parseTransformedExtension(parts);
-          let arr6 = items.push(tmp43);
-          tmp19 = tmp2;
-          tmp20 = tmp43;
-          tmp21 = tmp4;
-        }
+        arr2 = arg2[slice(arr, 2)];
       }
+      const mapped = arr2.map((item) => {
+        let tmp = regions.regions[item];
+        if (!tmp) {
+          const items = [item];
+          tmp = items;
+        }
+        return tmp;
+      });
+      const reduced = mapped.reduce((acc, item) => {
+        const obj = e;
+        return obj.__spreadArray(e.__spreadArray([], acc, true), item, true);
+      }, []);
+      let str4 = region.region;
+      if (!str4) {
+        str4 = "";
+      }
+      let tmp4 = reduced.indexOf(str4) > -1 === tmp7;
     }
     if (tmp4) {
-      const _RangeError7 = RangeError;
-      const rangeError5 = new RangeError("There can only be 1 -u- extension");
-      throw rangeError5;
-    } else {
-      const items3 = [];
-      if (parts.length) {
-        let tmp51;
-        if (re6.test(parts[0])) {
-          const items4 = [];
-          if (parts.length) {
-            if (re7.test(parts[0])) {
-              items4.push(parts.shift());
-              while (parts.length) {
-                if (!re7.test(parts[0])) {
-                  break;
-                }
-              }
-            }
-          }
-          let str15 = "";
-          if (items4.length) {
-            str15 = items4.join(exports.SEPARATOR);
-          }
-          const items5 = [parts.shift(), str15];
-          tmp51 = items5;
-          const arr7 = parts.shift();
-        }
-        if (tmp51) {
-          items3.push(tmp51);
-          while (parts.length) {
-            let tmp59;
-            if (re6.test(parts[0])) {
-              let items6 = [];
-              let arr10 = parts.shift();
-              if (parts.length) {
-                if (re7.test(parts[0])) {
-                  let arr11 = items6.push(parts.shift());
-                  while (parts.length) {
-                    if (!re7.test(parts[0])) {
-                      break;
-                    }
-                  }
-                }
-              }
-              let str16 = "";
-              if (items6.length) {
-                str16 = items6.join(exports.SEPARATOR);
-              }
-              let items7 = [arr10, str16];
-              tmp59 = items7;
-            }
-            tmp51 = tmp59;
-            if (!tmp59) {
-              break;
-            }
-          }
-        }
+      const script = region.script;
+      let tmp8 = !script;
+      if (script) {
+        tmp8 = "*" === tmp3 || tmp3 === region.script;
+        const tmp9 = "*" === tmp3 || tmp3 === region.script;
       }
-      const items8 = [];
-      if (items3.length) {
-        const obj6 = { type: "u", keywords: items3, attributes: items8 };
-        let obj7 = obj6;
-      } else {
-        if (parts.length) {
-          if (re5.test(parts[0])) {
-            items8.push(parts.shift());
-            while (parts.length) {
-              if (!re5.test(parts[0])) {
-                break;
-              }
-            }
-          }
-        }
-        if (parts.length) {
-          let tmp69;
-          if (re6.test(parts[0])) {
-            const items9 = [];
-            if (parts.length) {
-              if (re7.test(parts[0])) {
-                items9.push(parts.shift());
-                while (parts.length) {
-                  if (!re7.test(parts[0])) {
-                    break;
-                  }
-                }
-              }
-            }
-            let str17 = "";
-            if (items9.length) {
-              str17 = items9.join(exports.SEPARATOR);
-            }
-            const items10 = [parts.shift(), str17];
-            tmp69 = items10;
-            const arr13 = parts.shift();
-          }
-          if (tmp69) {
-            items3.push(tmp69);
-            while (parts.length) {
-              let tmp77;
-              if (re6.test(parts[0])) {
-                let items11 = [];
-                let arr33 = parts.shift();
-                if (parts.length) {
-                  if (re7.test(parts[0])) {
-                    let arr34 = items11.push(parts.shift());
-                    while (parts.length) {
-                      if (!re7.test(parts[0])) {
-                        break;
-                      }
-                    }
-                  }
-                }
-                let str18 = "";
-                if (items11.length) {
-                  str18 = items11.join(exports.SEPARATOR);
-                }
-                let items12 = [arr33, str18];
-                tmp77 = items12;
-              }
-              tmp69 = tmp77;
-              if (!tmp77) {
-                break;
-              }
-            }
-          }
-        }
-        if (!items3.length) {
-          if (!items8.length) {
-            const _RangeError6 = RangeError;
-            const rangeError6 = new RangeError("Malformed unicode_extension");
-            throw rangeError6;
-          }
-        }
-        obj7 = { type: "u", attributes: items8, keywords: items3 };
-      }
-      items.push(obj7);
+      tmp4 = tmp8;
     }
-  } else {
-    obj8 = { extensions: items };
+    if (tmp4) {
+      const language = region.language;
+      let tmp10 = !language;
+      if (language) {
+        tmp10 = "*" === tmp2 || tmp2 === region.language;
+        const tmp11 = "*" === tmp2 || tmp2 === region.language;
+      }
+      tmp4 = tmp10;
+    }
+    return tmp4;
   }
-  return e.__assign({ lang }, obj8);
+  region = region.region;
+  tmp4 = !region;
+  if (region) {
+    tmp4 = "*" === arr || arr === region.region;
+    const tmp5 = "*" === arr || arr === region.region;
+  }
+}
+function findMatchingDistanceForLSR(arg0, arg1, matches) {
+  let tmp;
+  matches = matches.matches;
+  let num = 0;
+  if (0 < matches.length) {
+    while (true) {
+      tmp = matches[num];
+      let tmp2Result = isMatched(arg0, tmp.desired, matches.matchVariables);
+      if (tmp2Result) {
+        tmp2Result = isMatched(arg1, tmp.supported, matches.matchVariables);
+      }
+      let tmp5 = tmp.oneway || tmp2Result;
+      if (!tmp5) {
+        let tmp6 =
+          isMatched(arg0, tmp.supported, matches.matchVariables) &&
+          isMatched(arg1, tmp.desired, matches.matchVariables);
+        tmp2Result = tmp6;
+      }
+      if (tmp2Result) {
+        break;
+      } else {
+        num = num + 1;
+      }
+    }
+    const result = 10 * tmp.distance;
+    const paradigmLocales = matches.paradigmLocales;
+    const items = [, ,];
+    ({ language: arr3[0], script: arr3[1], region: arr3[2] } = arg0);
+    const _Boolean = Boolean;
+    const found = items.filter(Boolean);
+    const paradigmLocales1 = matches.paradigmLocales;
+    const items1 = [, ,];
+    ({ language: arr5[0], script: arr5[1], region: arr5[2] } = arg1);
+    const _Boolean2 = Boolean;
+    const found1 = items1.filter(Boolean);
+    let diff = result;
+    if (tmp10 !== paradigmLocales1.indexOf(found1.join("-")) > -1) {
+      diff = result - 1;
+    }
+    return diff;
+  }
+  const error = new Error("No matching distance found");
+  throw error;
+}
+function findMatchingDistance(matchedDesiredLocale, matchedSupportedLocale) {
+  locale = new Intl.Locale(matchedDesiredLocale);
+  const maximizeResult = locale.maximize();
+  const locale1 = new Intl.Locale(matchedSupportedLocale);
+  const maximizeResult1 = locale1.maximize();
+  const obj = {
+    language: maximizeResult.language,
+    script: maximizeResult.script || "",
+    region: maximizeResult.region || "",
+  };
+  const obj2 = {
+    language: maximizeResult1.language,
+    script: maximizeResult1.script || "",
+    region: maximizeResult1.region || "",
+  };
+  let tmp3 = obj3;
+  if (!obj3) {
+    let first = data.data.supplemental.languageMatching["written-new"][0];
+    let paradigmLocales;
+    if (null !== first) {
+      if (undefined !== first) {
+        paradigmLocales = first.paradigmLocales;
+      }
+    }
+    let parts;
+    if (null !== paradigmLocales) {
+      if (undefined !== paradigmLocales) {
+        parts = paradigmLocales._locales.split(" ");
+      }
+    }
+    const prop = data.data.supplemental.languageMatching["written-new"];
+    let substr = prop.slice(1, 5);
+    const prop1 = data.data.supplemental.languageMatching["written-new"];
+    const substr1 = prop1.slice(5);
+    obj3 = {
+      matches: substr1.map((item) => {
+        const first = Object.keys(item)[0];
+        return {
+          supported: first,
+          desired: item[first]._desired,
+          distance: +item[first]._distance,
+          oneway: "true" === item[first].oneway,
+        };
+      }, {}),
+      matchVariables: substr.reduce((acc, item) => {
+        const first = Object.keys(item)[0];
+        const substr = first.slice(1);
+        acc[substr] = item[first]._value.split("+");
+        return acc;
+      }, {}),
+      paradigmLocales: null,
+    };
+    const tmp4Result = e;
+    const tmp4Result2 = e;
+    obj3.paradigmLocales = tmp4Result.__spreadArray(
+      e.__spreadArray([], parts, true),
+      parts.map((item) => {
+        locale = new Intl.Locale(item.replace(/_/g, "-"));
+        return locale.maximize().toString();
+      }),
+      true,
+    );
+    tmp3 = obj3;
+    const __spreadArrayResult = e.__spreadArray([], parts, true);
+  }
+  let num3 = 0;
+  if (obj.language !== obj2.language) {
+    const obj4 = { language: maximizeResult.language, script: "", region: "" };
+    const obj5 = { language: maximizeResult1.language, script: "", region: "" };
+    num3 = findMatchingDistanceForLSR(obj4, obj5, tmp3);
+  }
+  let sum = num3;
+  if (obj.script !== obj2.script) {
+    const obj6 = { language: maximizeResult.language, script: obj.script, region: "" };
+    const obj7 = { language: maximizeResult1.language, script: obj2.script, region: "" };
+    sum = num3 + findMatchingDistanceForLSR(obj6, obj7, tmp3);
+  }
+  let sum1 = sum;
+  if (obj.region !== obj2.region) {
+    sum1 = sum + findMatchingDistanceForLSR(obj, obj2, tmp3);
+  }
+  return sum1;
+}
+let c3 = 838;
+
+export const invariant = function invariant(arg0, arg1, arg2) {
+  let _Error = arg2;
+  if (undefined === arg2) {
+    _Error = Error;
+  }
+  if (!arg0) {
+    const _Error1 = new _Error(arg1);
+    throw _Error1;
+  }
 };
-export const SEPARATOR = "-";
+export { findMatchingDistance };
+export const findBestMatch = function findBestMatch(arr, arg1, arg2) {
+  closure_0 = arg1;
+  let tmp = arg2;
+  if (undefined === arg2) {
+    tmp = c3;
+  }
+  let Infinity = Infinity;
+  const obj = { matchedDesiredLocale: "", distances: {} };
+  let item = arr.forEach((item, index) => {
+    const matchedDesiredLocale = item;
+    closure_1 = index;
+    if (!obj.distances[item]) {
+      obj.distances[item] = {};
+    }
+    item = matchedDesiredLocale.forEach((matchedSupportedLocale) => {
+      const sum = findMatchingDistance(matchedDesiredLocale, matchedSupportedLocale) + 40 * closure_1;
+      obj.distances[matchedDesiredLocale][matchedSupportedLocale] = sum;
+      if (sum < Infinity) {
+        Infinity = sum;
+        obj.matchedDesiredLocale = matchedDesiredLocale;
+        obj.matchedSupportedLocale = matchedSupportedLocale;
+      }
+    });
+  });
+  if (Infinity >= tmp) {
+    obj.matchedDesiredLocale = undefined;
+    obj.matchedSupportedLocale = undefined;
+  }
+  return obj;
+};
+export const UNICODE_EXTENSION_SEQUENCE_REGEX = /-u(?:-[0-9a-z]{2,8})+/gi;

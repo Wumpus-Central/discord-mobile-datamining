@@ -92,8 +92,8 @@ fn = function n(userConfig, fn) {
       initialVelocity: 0,
       current: "sa",
       lastTimestamp: null,
-      startTimestamp: "safety-tools-button",
-      reduceMotion: "fortnite",
+      startTimestamp: "ProfileBadgeRows",
+      reduceMotion: "BadgeDetailsSheet",
     };
     let num = obj.velocity;
     if (num == null) {

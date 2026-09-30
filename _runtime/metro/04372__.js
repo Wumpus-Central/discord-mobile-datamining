@@ -1,12 +1,37 @@
 // _runtime/metro/04372__.js
-import 02117__ from "02117__.js";
+import module_3952_mod from "03952__.js";
+import _typeof_mod from "03948__.js";
+import requiredArgs_mod from "../03949_requiredArgs.js";
 
-if (!module_2117) {
-  const obj2 = { default: module_2117 };
-  let obj = obj2;
+let module_3952 = module_3952_mod;
+if (!module_3952) {
+  const obj = { default: module_3952 };
+  let tmp3 = obj;
 } else {
-  obj = module_2117;
+  tmp3 = module_3952;
 }
+module_3952 = tmp3;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj2 = { default: _typeof };
+  let tmp5 = obj2;
+} else {
+  tmp5 = _typeof;
+}
+_typeof = tmp5;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
 
-export default { date: obj.default({ formats: { full: "y'\u5E74'M'\u6708'd'\u65E5' EEEE", long: "y'\u5E74'M'\u6708'd'\u65E5'", medium: "yyyy-MM-dd", short: "yy-MM-dd" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "zzzz a h:mm:ss", long: "z a h:mm:ss", medium: "a h:mm:ss", short: "a h:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} {{time}}", long: "{{date}} {{time}}", medium: "{{date}} {{time}}", short: "{{date}} {{time}}" }, defaultWidth: "full" }) };
+export default function setSeconds(module_3952, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(module_3952);
+  defaultResult1.setSeconds(module_3952.default(arg1));
+  return defaultResult1;
+};
 export default exports.default;

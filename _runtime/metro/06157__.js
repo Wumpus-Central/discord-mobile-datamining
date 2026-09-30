@@ -1,104 +1,205 @@
 // _runtime/metro/06157__.js
-import _mod6130 from "06130__.js";
 import _slicedToArray from "00032__.js";
 import noop from "00019__.js";
 
-require = fn;
+const require = fn;
 get_ActivityIndicator = fn(17);
-({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
+const Animated = get_ActivityIndicator.Animated;
+({ Easing: hasOwnProperty, Platform, Pressable } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const container = StyleSheet.create({
-  container: { flex: 1 },
-  content: { flex: 1 },
-  header: { zIndex: 1 },
-  absolute: { position: "absolute", top: 0, start: 0, end: 0 },
-});
-
-export const Screen = function Screen(aria_hidden) {
-  const safeAreaInsets = modal(headerStatusBarHeight[4]).useSafeAreaInsets();
-  const context = noop.useContext(modal(headerStatusBarHeight[5]).HeaderShownContext);
-  let num = noop.useContext(modal(headerStatusBarHeight[6]).HeaderHeightContext);
-  modal = aria_hidden.modal;
-  let tmp5 = undefined !== modal;
-  if (tmp5) {
-    tmp5 = modal;
+({ jsx: metroRequire, jsxs: closure_7, Fragment } = jsxProd);
+let closure_8 = Animated.createAnimatedComponent(Pressable);
+let closure_9 = Platform.Version >= 21;
+const forwardRefResult = noop.forwardRef(function PlatformPressableInternal(disabled, arg1) {
+  disabled = disabled.disabled;
+  ({
+    onPress: dependencyMap,
+    onPressIn: _slicedToArray,
+    onPressOut: noop,
+    android_ripple,
+    pressColor,
+    pressOpacity,
+  } = disabled);
+  if (pressOpacity === undefined) {
+    pressOpacity = 0.3;
   }
-  modal = tmp5;
-  const headerShown = aria_hidden.headerShown;
-  let tmp6 = undefined === headerShown;
-  if (!tmp6) {
-    tmp6 = headerShown;
-  }
-  ({ headerStatusBarHeight, headerTransparent } = aria_hidden);
-  if (undefined === headerStatusBarHeight) {
-    let num2 = 0;
-    if (!context) {
-      num2 = safeAreaInsets.top;
-    }
-    headerStatusBarHeight = num2;
-  }
-  ({ route, navigation, children, style } = aria_hidden);
-  const obj = modal(headerStatusBarHeight[4]);
-  const frameSize = modal(headerStatusBarHeight[7]).useFrameSize((layout) =>
-    _mod6130.getDefaultHeaderHeight(layout, modal, headerStatusBarHeight),
+  const hoverEffect = disabled.hoverEffect;
+  ({ style, children } = disabled);
+  const merged = Object.assign(
+    disabled,
+    Object.assign({
+      disabled: 0,
+      onPress: 0,
+      onPressIn: 0,
+      onPressOut: 0,
+      android_ripple: 0,
+      pressColor: 0,
+      pressOpacity: 0,
+      hoverEffect: 0,
+      style: 0,
+      children: 0,
+    }),
   );
+  closure_6 = arg1;
+  const first = _slicedToArray(
+    noop.useState(() => {
+      value = new pressOpacity.Value(1);
+      return value;
+    }),
+    1,
+  )[0];
+  function animateTo(arg0, arg1) {}
   const ref = noop.useRef(null);
-  const tmpResult = modal(headerStatusBarHeight[7]);
-  [tmp10, noop] = ref(noop.useState(frameSize), 2);
-  const items = [route.name];
-  const layoutEffect = noop.useLayoutEffect(() => {
-    const current = ref.current;
-    if (current != null) {
-      current.measure((arg0, arg1, arg2, arg3) => {
-        closure_1_3(arg3);
-      });
+  const items = [arg1];
+  const items1 = [disabled, merged.href];
+  const callback = noop.useCallback((current) => {
+    closure_9.current = null;
+    if (typeof closure_6 === "function") {
+      return closure_6(current);
+    } else if (null != closure_6) {
+      closure_6.current = current;
     }
   }, items);
-  const obj3 = { "aria-hidden": !aria_hidden.focused, style: null, collapsable: false, children: null };
-  const items1 = [container.container, style];
-  obj3.style = items1;
-  let tmp15Result = null;
-  if (tmp6) {
-    const obj4 = { route, navigation, children: null };
-    const items2 = [container.header];
-    let tmp17 = null;
-    if (headerTransparent) {
-      const items3 = [container.absolute];
-      const obj5 = { minHeight: tmp10 };
-      items3[1] = obj5;
-      tmp17 = items3;
+  const effect = noop.useEffect(() => {
+    const current = ref.current;
+    if (null != merged.href) {
+      if (null != current) {
+        if (disabled) {
+          function preventNavigation(event) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          const listener = current.addEventListener("click", preventNavigation, true);
+          const listener1 = current.addEventListener("auxclick", preventNavigation, true);
+          return () => {
+            const removed = current.removeEventListener("click", preventNavigation, true);
+            const removed1 = current.removeEventListener("auxclick", preventNavigation, true);
+          };
+        }
+      }
     }
-    const obj6 = { style: null, children: null };
-    items2[1] = tmp17;
-    obj6.style = items2;
-    const obj7 = {
-      ref,
-      pointerEvents: "box-none",
-      onLayout(nativeEvent) {
-        noop(nativeEvent.nativeEvent.layout.height);
-      },
-      children: aria_hidden.header,
+  }, items1);
+  const obj2 = {
+    ref: callback,
+    accessible: true,
+    role: "button",
+    onPress: null,
+    onPressIn: null,
+    onPressOut: null,
+    android_ripple: null,
+    style: null,
+  };
+  let fn;
+  if (!disabled) {
+    fn = (arg0) => {
+      if (dependencyMap != null) {
+        tmp(arg0);
+      }
     };
-    obj6.children = closure_5(closure_4, obj7);
-    obj4.children = closure_5(closure_4, obj6);
-    tmp15Result = closure_5(tmp(tmp2[10]).NavigationProvider, obj4);
   }
-  const items4 = [tmp15Result];
-  const obj8 = { style: container.content, children: null };
-  let tmp20 = context;
-  if (!context) {
-    tmp20 = false !== tmp6;
+  obj2.onPress = fn;
+  let fn2;
+  if (!disabled) {
+    fn2 = (arg0) => {
+      if (typeof animateTo === "function") {
+        if (!closure_9) {
+          const obj = {
+            toValue: tmp,
+            duration: 0,
+            easing: hasOwnProperty.inOut(hasOwnProperty.quad),
+            useNativeDriver: true,
+          };
+          Animated.timing(first, obj).start();
+          const timingResult = Animated.timing(first, obj);
+        }
+        if (_slicedToArray != null) {
+          tmp7(arg0);
+        }
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    };
   }
-  const obj9 = { value: tmp20, children: null };
-  if (!tmp6) {
-    if (num == null) {
-      num = 0;
+  obj2.onPressIn = fn2;
+  let fn3;
+  if (!disabled) {
+    fn3 = (arg0) => {
+      if (typeof animateTo === "function") {
+        if (!closure_9) {
+          const obj = {
+            toValue: 1,
+            duration: 200,
+            easing: hasOwnProperty.inOut(hasOwnProperty.quad),
+            useNativeDriver: true,
+          };
+          Animated.timing(first, obj).start();
+          const timingResult = Animated.timing(first, obj);
+        }
+        if (noop != null) {
+          tmp6(arg0);
+        }
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    };
+  }
+  obj2.onPressOut = fn3;
+  let tmp8;
+  if (ref) {
+    if (!disabled) {
+      if (undefined === pressColor) {
+        let str = "rgba(0, 0, 0, .32)";
+        if (obj.useTheme().dark) {
+          str = "rgba(255, 255, 255, .32)";
+        }
+        pressColor = str;
+      }
+      const obj3 = { color: pressColor };
+      const merged1 = Object.assign(android_ripple);
+      tmp8 = obj3;
     }
   }
-  obj9.children = closure_5(modal(headerStatusBarHeight[6]).HeaderHeightContext.Provider, { value: tmp10, children });
-  obj8.children = closure_5(modal(headerStatusBarHeight[5]).HeaderShownContext.Provider, obj9);
-  items4[1] = closure_5(closure_4, obj8);
-  obj3.children = items4;
-  return closure_6(modal(headerStatusBarHeight[9]).Background, obj3);
+  obj2.android_ripple = tmp8;
+  let num = 1;
+  if (!ref) {
+    num = 1;
+    if (!disabled) {
+      num = first;
+    }
+  }
+  const items2 = [{ cursor: "auto", opacity: num }, style];
+  obj2.style = items2;
+  const merged2 = Object.assign(merged);
+  let tmp13 = null;
+  if (!disabled) {
+    const obj4 = {};
+    const merged3 = Object.assign(hoverEffect);
+    tmp13 = closure_6(f37570, obj4);
+  }
+  const items3 = [tmp13, children];
+  obj2.children = items3;
+  return first(animateTo, obj2);
+});
+forwardRefResult.displayName = "PlatformPressable";
+String.raw(
+  HermesBuiltin.getTemplateObject(
+    true,
+    "\n  .",
+    " {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    border-radius: inherit;\n    background-color: var(--overlay-color);\n    opacity: 0;\n    transition: opacity 0.15s;\n    pointer-events: none;\n  }\n\n  a:hover > .",
+    ", button:hover > .",
+    " {\n    opacity: var(--overlay-hover-opacity);\n  }\n\n  a:active > .",
+    ", button:active > .",
+    " {\n    opacity: var(--overlay-active-opacity);\n  }\n",
+  ),
+  "__react-navigation_elements_Pressable_hover",
+  "__react-navigation_elements_Pressable_hover",
+  "__react-navigation_elements_Pressable_hover",
+  "__react-navigation_elements_Pressable_hover",
+  "__react-navigation_elements_Pressable_hover",
+);
+const f37570 = (arg0) => {
+  ({ color, hoverOpacity, activeOpacity } = arg0);
+  return null;
 };
+
+export const PlatformPressable = forwardRefResult;

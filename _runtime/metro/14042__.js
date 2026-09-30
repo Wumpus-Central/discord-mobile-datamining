@@ -1,45 +1,105 @@
 // _runtime/metro/14042__.js
-import _typeof from "14043__.js";
+import _mod13987 from "13987__.js";
+import _mod13988 from "13988__.js";
+import _mod13991 from "13991__.js";
+import _mod14007 from "14007__.js";
+import _mod14010 from "14010__.js";
+import _mod14044 from "14044__.js";
+import state from "../14045_state.js";
+import prop from "14043__.js";
 
-if (_typeof) {
-  if (typeof _typeof === "object") {
-    let _default = _typeof;
+let closure_5 = _mod13991("".slice);
+let closure_6 = _mod13991("".replace);
+let closure_7 = _mod13991([].join);
+let closure_8 = _mod13987 && !_mod13988(() => 8 !== defineProperty(() => {}, "length", { value: 8 }).length);
+const tmp = _mod13987 && !_mod13988(() => 8 !== defineProperty(() => {}, "length", { value: 8 }).length);
+let closure_9 = String(String).split("String");
+const fn = (toString, toString2, arg2) => {
+  let text = toString2;
+  if ("Symbol(" === closure_5(String(toString2), 0, 7)) {
+    text = `${"[" + closure_6(tmp(toString2), /^Symbol\(([^)]*)\).*$/, "$1")}]`;
   }
-  let obj = globalThis;
-  const _Intl = Intl;
-  if (typeof Intl === "undefined") {
-    if (undefined !== global) {
-      obj = { PluralRules: _default.default };
-      global.Intl = obj;
-      _default = _default.default;
-      _default.polyfill = true;
+  let getter = arg2;
+  if (arg2) {
+    getter = arg2.getter;
+  }
+  let text1 = text;
+  if (getter) {
+    text1 = `get ${tmp2}`;
+  }
+  let setter = arg2;
+  if (arg2) {
+    setter = arg2.setter;
+  }
+  let text2 = text1;
+  if (setter) {
+    text2 = `set ${tmp4}`;
+  }
+  const tmp8 = _mod14007(toString, "name");
+  let tmp9 = !tmp8;
+  if (tmp8) {
+    tmp9 = _mod14044.CONFIGURABLE && toString.name !== text2;
+    const tmp10 = _mod14044.CONFIGURABLE && toString.name !== text2;
+  }
+  if (tmp9) {
+    if (_mod13987) {
+      const obj = { value: text2, configurable: true };
+      defineProperty(toString, "name", obj);
     } else {
-      const _window = window;
-      if (typeof window === "undefined") {
-        const self = this;
-        const obj2 = { PluralRules: _default.default };
-        this.Intl = obj2;
-      }
+      toString.name = text2;
     }
-    obj = { PluralRules: _default.default };
-    obj.window.Intl = obj;
-  } else {
-    const _Intl5 = Intl;
-    if (Intl.PluralRules) {
-      const _Intl2 = Intl;
-      if (Intl.PluralRules.prototype.selectRange) {
-        const items = ["en", "es", "ru", "zh"];
-        const _Intl4 = Intl;
-        if (PluralRules.supportedLocalesOf(items).length < items.length) {
-          const _Intl6 = Intl;
-          Intl.PluralRules = _default.default;
-          _default.default.polyfill = true;
-        }
-      }
-    }
-    const _Intl3 = Intl;
-    Intl.PluralRules = _default.default;
-    _default.default.polyfill = true;
   }
+  let tmp13 = closure_8;
+  if (closure_8) {
+    tmp13 = arg2;
+  }
+  if (tmp13) {
+    tmp13 = _mod14007(arg2, "arity");
+  }
+  if (tmp13) {
+    tmp13 = toString.length !== arg2.arity;
+  }
+  if (tmp13) {
+    const obj2 = { value: arg2.arity };
+    defineProperty(toString, "length", obj2);
+  }
+  try {
+    if (arg2) {
+      if (_mod14007(arg2, "constructor")) {
+        if (arg2.constructor) {
+          if (_mod13987) {
+            defineProperty(toString, "prototype", { writable: false });
+          }
+        }
+        const enforceResult = state.enforce(toString);
+        if (!_mod14007(enforceResult, "source")) {
+          let str11 = "";
+          if (typeof text2 === "string") {
+            str11 = text2;
+          }
+          enforceResult.source = closure_7(closure_9, str11);
+        }
+        return toString;
+      }
+    }
+    if (toString.prototype) {
+      toString.prototype = undefined;
+    }
+  } catch (err) {}
+};
+function toString() {
+  const self = this;
+  let source = _mod14010(this);
+  if (source) {
+    source = state.get(self).source;
+    const tmpResult = state;
+  }
+  if (!source) {
+    source = prop(self);
+  }
+  return source;
 }
-_default = { default: _typeof };
+fn(toString, "toString");
+Function.prototype.toString = toString;
+
+export default fn;

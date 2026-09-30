@@ -1,11 +1,7 @@
 // _runtime/metro/13982__.js
-import _mod13983 from "13983__.js";
+import _mod14048 from "14048__.js";
+import 13983__ from "13983__.js";
 
-export default (obj) => {
-  if (typeof obj === "object") {
-    let tmp2 = null !== obj;
-  } else {
-    tmp2 = _mod13983(obj);
-  }
-  return tmp2;
-};
+const obj = { target: "Object", stat: true, arity: 2, forced: null };
+obj.forced = Object.assign !== _mod14048;
+module_13983(obj, { assign: _mod14048 });
