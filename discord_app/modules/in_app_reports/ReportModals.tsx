@@ -95,6 +95,7 @@ export const showReportModalForMessage = function showReportModalForMessage(
   message,
   mobile_media_message_preview_action_sheet,
   onSubmit,
+  onClose,
 ) {
   const obj = { message_id: message.id, channel_id: message.channel_id };
   const obj2 = AppAnalyticsUtilsDefault;
@@ -102,7 +103,7 @@ export const showReportModalForMessage = function showReportModalForMessage(
   obj2.trackWithMetadata(AnalyticEvents.IAR_MODAL_OPEN, { report_type: MenuTypes.ReportNames.MESSAGE });
   const obj3 = { report_type: MenuTypes.ReportNames.MESSAGE };
   const obj4 = showReportModal;
-  obj4.showReportModal({ name: MenuTypes.ReportNames.MESSAGE, record: message }, {}, { onSubmit });
+  obj4.showReportModal({ name: MenuTypes.ReportNames.MESSAGE, record: message }, {}, { onSubmit, onClose });
 };
 export const showStaffTestReportModalForMessage = function showStaffTestReportModalForMessage(id, arg1, onSubmit) {
   const obj = { message_id: id.id, channel_id: id.channel_id };
@@ -270,7 +271,7 @@ export const showUnauthenticatedReportModalForMessage = function showUnauthentic
 ) {
   const tmp = new MessageRecord({});
   const obj = AppAnalyticsUtilsDefault;
-  const merged = Object.assign({ message_id: "current", channel_id: "channel" });
+  const merged = Object.assign({ message_id: "Array", channel_id: "add" });
   obj.trackWithMetadata(AnalyticEvents.IAR_MODAL_OPEN, { report_type: MenuTypes.UnauthenticatedReportNames.MESSAGE });
   const obj2 = { report_type: MenuTypes.UnauthenticatedReportNames.MESSAGE };
   const obj3 = showReportModal;

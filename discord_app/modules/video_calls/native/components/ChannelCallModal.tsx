@@ -50,7 +50,7 @@ class ChannelCallModal {
     return jsx(closure_30, obj);
   }
 }
-const ChannelCallStore = fn(8994);
+const ChannelCallStore = fn(9028);
 ({
   useChannelCallOrientationHandlers: closure_7,
   resetChannelCallStore: closure_8,
@@ -58,8 +58,8 @@ const ChannelCallStore = fn(8994);
   setVoiceChatDrawerState: c10,
   useIsVoiceChatFocused: closure_11,
 } = ChannelCallStore);
-let VoiceChatDrawerState = fn(8995).VoiceChatDrawerState;
-const Constants = fn(9001);
+let VoiceChatDrawerState = fn(9029).VoiceChatDrawerState;
+const Constants = fn(9035);
 ({ PAN_GESTURE_FAIL_OFFSET_Y: map1, SWIPE_TO_CHAT_ACTIVE_OFFSET: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
@@ -71,14 +71,14 @@ let closure_18 = noop.memo((arg0) => {
     if (null != first) {
       ChannelCallModalManagerDefault.initialize(tmp);
       return () => {
-        closure_1_1(9102).terminate();
-        const obj = closure_1_1(9102);
-        closure_1_1(9004).setHidden(false);
-        const obj2 = closure_1_1(9004);
+        closure_1_1(9136).terminate();
+        const obj = closure_1_1(9136);
+        closure_1_1(9038).setHidden(false);
+        const obj2 = closure_1_1(9038);
         if (!obj3.isModalOpen(closure_1_31)) {
           closure_1_8();
         }
-        obj3 = channel(4692);
+        obj3 = channel(4722);
       };
     }
   }, items);

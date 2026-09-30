@@ -1,4 +1,5 @@
 // discord_app/modules/vibegrations/lib/VibegrationsRemix.tsx
+import VibegrationsTypes from "../VibegrationsTypes.tsx";
 import VibegrationsActionCreators from "../actions/VibegrationsActionCreators.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
@@ -39,15 +40,18 @@ let closure_9 = async function _remixVibegrationsProjectInto(arg0) {
             let ekrwGo;
             closure_130_1 = null;
             c5 = 1;
-            const obj4 = { name: null, guild_id: null, install_scope: null };
+            const obj4 = { name: null, guild_id: null, install_scope: null, flags: null };
             const name = closure_0.name;
             const _HermesInternal = HermesInternal;
             obj4.name = "" + name.slice(0, 120) + closure_2_8;
             obj4.guild_id = guild_id;
             obj4.install_scope = closure_0.install_scope;
+            const obj13 = VibegrationsActionCreators;
+            const obj15 = VibegrationsTypes;
+            obj4.flags = obj15.vibegrationsCreateFlags(VibegrationsTypes.projectUsesNativeAppChannels(closure_0));
             c6 = 2;
             c7 = 1;
-            const obj5 = { value: VibegrationsActionCreators.createProject(obj4), done: false };
+            const obj5 = { value: obj13.createProject(obj4), done: false };
             return obj5;
           }
         } else {
@@ -94,8 +98,8 @@ let closure_9 = async function _remixVibegrationsProjectInto(arg0) {
             } else {
               c5 = 0;
               closure_131_5(closure_130_1);
-              const intl2 = closure_131_0(closure_131_2[4]).intl;
-              closure_131_7(closure_130_1, intl2.string(closure_131_1(closure_131_2[3]).so1WC7), undefined, { remix: true });
+              const intl2 = closure_131_0(closure_131_2[5]).intl;
+              closure_131_7(closure_130_1, intl2.string(closure_131_1(closure_131_2[4]).so1WC7), undefined, { remix: true });
               const obj11 = { ok: true, projectId: closure_130_1 };
               c7 = 3;
               const obj12 = { value: obj11, done: true };
@@ -110,13 +114,13 @@ let closure_9 = async function _remixVibegrationsProjectInto(arg0) {
             return obj;
           }
           if (!(closure_130_3 instanceof closure_131_4)) {
-            ekrwGo = closure_131_1(closure_131_2[3]).ekrwGo;
-            const intl = closure_131_0(closure_131_2[4]).intl;
+            ekrwGo = closure_131_1(closure_131_2[4]).ekrwGo;
+            const intl = closure_131_0(closure_131_2[5]).intl;
             { ok: false, message: null }.message = intl.string(ekrwGo);
             c7 = 3;
             const obj14 = { ok: false, message: null };
           }
-          const bTAItn = closure_131_1(closure_131_2[3]).bTAItn;
+          const bTAItn = closure_131_1(closure_131_2[4]).bTAItn;
         }
       } catch (tmp39) {
         closure_4 = tmp39;
@@ -130,7 +134,7 @@ let closure_9 = async function _remixVibegrationsProjectInto(arg0) {
     }
   })();
 };
-const VibegrationsConnectionStore = fn(12812);
+const VibegrationsConnectionStore = fn(12842);
 ({ VibegrationsRemixError: closure_4, ensureConnection: hasOwnProperty, remixProjectWorkspace: metroRequire, sendUserMessage: closure_7 } = VibegrationsConnectionStore);
 let c8 = " (Remix)";
 const size = fn(2);

@@ -1031,7 +1031,7 @@ function handleRecentMentionsSuccess(messages) {
 const ChannelRecord = fn(2049);
 ({ getBasicAccessPermissions: closure_7, isGuildVocalChannelType: closure_8, isThread: closure_9 } = ChannelRecord);
 const ChannelFlags = fn(2052).ChannelFlags;
-const ReadStateConstants = fn(5018);
+const ReadStateConstants = fn(5048);
 ({ ReadStateTypes: closure_19, UnreadSetting: closure_20 } = ReadStateConstants);
 const NULL_STRING_GUILD_ID = fn(1074).NULL_STRING_GUILD_ID;
 let guilds = {};

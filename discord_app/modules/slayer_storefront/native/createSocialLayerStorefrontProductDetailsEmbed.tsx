@@ -13,7 +13,7 @@ import SKUStore from "../../../stores/game_store/SKUStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const InviteTypes = fn(7320).InviteTypes;
+const InviteTypes = fn(7350).InviteTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx",
@@ -146,5 +146,5 @@ export const useFetchSocialLayerStorefrontProductDetailsEmbedApplications =
       },
       items2,
     );
-    memo(6755)(stateFromStoresArray);
+    memo(6785)(stateFromStoresArray);
   };

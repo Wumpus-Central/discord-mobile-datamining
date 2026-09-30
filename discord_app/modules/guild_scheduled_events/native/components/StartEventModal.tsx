@@ -5,7 +5,7 @@ import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef6676 from "../../../../../_runtime/metro/06676__.js";
+import _modDef6706 from "../../../../../_runtime/metro/06706__.js";
 import GuildEventCardDefault from "GuildEventCard.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -23,7 +23,7 @@ function NavigationBar(onClose) {
   obj2.onPress = function onPress() {
     return onClose();
   };
-  obj2.children = closure_1_12(native.Icon, { source: _modDef6676 });
+  obj2.children = closure_1_12(native.Icon, { source: _modDef6706 });
   obj.children = closure_1_12(Pressables.PressableOpacity, obj2);
   return closure_1_12(View, obj);
 }
@@ -61,10 +61,10 @@ const View = fn(17).View;
 const GuildScheduledEventsConstants = fn(2051);
 ({ AGE_VERIFICATION_STAGE_CHANNEL_TYPES: closure_9, GuildScheduledEventEntityTypes: c10 } =
   GuildScheduledEventsConstants);
-const START_EVENT_MODAL_KEY = fn(9142).START_EVENT_MODAL_KEY;
+const START_EVENT_MODAL_KEY = fn(9176).START_EVENT_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj2 = {
   mainContainer: {
     flex: 1,

@@ -12,19 +12,19 @@ import ManaContext from "../../discord_common/js/packages/design/components/Mana
 import NavigationRouteUtils from "../modules/main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import RootNavigationRef from "../modules/main_tabs_v2/RootNavigationRef.native.tsx";
 import getInitialNavigationStateDefault from "../modules/main_tabs_v2/native/getInitialNavigationState.tsx";
-import Portal from "../../_runtime/04708_Portal.js";
+import Portal from "../../_runtime/04738_Portal.js";
 import useThemeDefault from "../hooks/useTheme.tsx";
 import ModalDispatchQueueDefault from "../modules/main_tabs_v2/native/modal/ModalDispatchQueue.tsx";
 import useIsScreenLandscape from "../modules/screen/useIsScreenLandscape.native.tsx";
 import useNavigationTheme from "../design/components/Navigator/native/useNavigationTheme.native.tsx";
 import WebViewContext from "../modules/activities/native/WebViewContext.tsx";
 import StartupProfiler from "../modules/app_startup/StartupProfiler.tsx";
-import MemoryRouter from "../../_runtime/12470_MemoryRouter.js";
+import MemoryRouter from "../../_runtime/12500_MemoryRouter.js";
 import RouteManagerDefault from "../modules/routing/RouteManager.tsx";
 import DiscordGestureHandlerRootViewDefault from "../modules/gesture_handler/native/DiscordGestureHandlerRootView.android.tsx";
 import getChannelDetailsFromRouteDefault from "../modules/main_tabs_v2/native/getChannelDetailsFromRoute.tsx";
 import MainNavigationLoggerDefault from "../modules/main_tabs_v2/helpers/MainNavigationLogger.tsx";
-import ReanimatedScreenProvider from "../../_runtime/14294_ReanimatedScreenProvider.js";
+import ReanimatedScreenProvider from "../../_runtime/14323_ReanimatedScreenProvider.js";
 import RootThemeContextProvider from "../modules/themes/RootThemeContextProvider.native.tsx";
 import AccessibilityPreferencesContextProviderDefault from "../modules/a11y/native/AccessibilityPreferencesContextProvider.native.tsx";
 import ErrorBoundaryDefault from "ErrorBoundary.tsx";
@@ -32,7 +32,6 @@ import AnimatedKeyboardProviderDefault from "../modules/keyboard/native/Animated
 import ThemedStatusBarDefault from "../modules/status_bar/native/components/ThemedStatusBar.tsx";
 import SafeAreaProvider from "../modules/safe_area/SafeAreaProvider.native.tsx";
 import DevToolsLazyDefault from "../modules/devtools/native/components/DevToolsLazy.tsx";
-import ScreenRecordingPipDefault from "../modules/screen_recording/native/ScreenRecordingPip.tsx";
 import _slicedToArray from "../../_runtime/metro/00032__.js";
 import noop from "../../_runtime/metro/00019__.js";
 import ChannelStore from "../stores/ChannelStore.tsx";
@@ -173,35 +172,35 @@ function AppNavigationContainerOrEmpty(arg0) {
   }
 }
 const NativeModules = fn(17).NativeModules;
-let closure_7 = fn(6912).handleHistoryStoreNavigationChange;
+let closure_7 = fn(6942).handleHistoryStoreNavigationChange;
 const Constants = fn(1074);
 ({ AnalyticEvents: c10, ComponentActions: closure_11, Routes: closure_12 } = Constants);
 const isStaticChannelRoute = fn(2052).isStaticChannelRoute;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj2 = {
   flex: { flex: 1 },
   rootBackgroundColor: { backgroundColor: nativeDefault.colors.ANDROID_NAVIGATION_BAR_BACKGROUND },
 };
 let closure_16 = createStyles.createStyles(obj2);
-const ReanimatedRexport = fn(4566);
+const ReanimatedRexport = fn(4596);
 let obj3 = { backgroundColor: nativeDefault.colors.ANDROID_NAVIGATION_BAR_BACKGROUND };
-let result = ReanimatedRexport.configureReanimatedLogger({ level: fn(4566).ReanimatedLogLevel.error, strict: false });
+let result = ReanimatedRexport.configureReanimatedLogger({ level: fn(4596).ReanimatedLogLevel.error, strict: false });
 try {
-  fn(5377).enableFreeze();
-  let obj6 = fn(5377);
-  let obj8 = { useTrackNavigatorScreenImpression: fn(14290).useTrackNavigatorScreenImpression };
-  fn(6623).setDesignConfig(obj8);
+  fn(5407).enableFreeze();
+  let obj6 = fn(5407);
+  let obj8 = { useTrackNavigatorScreenImpression: fn(14319).useTrackNavigatorScreenImpression };
+  fn(6653).setDesignConfig(obj8);
   let c22 = false;
   let closure_23 = {
     code: "function AppContainerTsx1(){const{RNScreensTurboModule}=this.__closure;global.RNScreensTurboModule=RNScreensTurboModule;}",
   };
-  let obj7 = fn(6623);
+  let obj7 = fn(6653);
   const result1 = SentryUtilsDefault.profiledRootComponent(function AppContainer(children) {
     children = children.children;
     const appEntryKey = children.appEntryKey;
-    const requestGatewaySocket = appEntryKey(14293).useRequestGatewaySocket("AppContainer:" + appEntryKey);
+    const requestGatewaySocket = appEntryKey(14322).useRequestGatewaySocket("AppContainer:" + appEntryKey);
     const effect = noop.useEffect(() => {
       if (!c22) {
         RNScreensTurboModule = RNScreensTurboModule.RNScreensTurboModule;
@@ -212,9 +211,9 @@ try {
         fn.__closure = obj2;
         fn.__workletHash = 8891274578898;
         fn.__initData = __initData;
-        appEntryKey(4566).runOnUI(fn)();
+        appEntryKey(4596).runOnUI(fn)();
         c22 = true;
-        const obj = appEntryKey(4566);
+        const obj = appEntryKey(4596);
       }
     }, []);
     const effect1 = noop.useEffect(() => {
@@ -228,8 +227,8 @@ try {
       }
       const obj = appEntryKey(1364);
     }, []);
-    let obj = appEntryKey(14293);
-    const riveAppStatePlaybackExperiment = appEntryKey(15738).useRiveAppStatePlaybackExperiment("AppContainer");
+    let obj = appEntryKey(14322);
+    const riveAppStatePlaybackExperiment = appEntryKey(15763).useRiveAppStatePlaybackExperiment("AppContainer");
     closure_129_0 = riveAppStatePlaybackExperiment;
     let items = [riveAppStatePlaybackExperiment];
     const memo = noop.useMemo(() => {
@@ -245,7 +244,7 @@ try {
       const obj = {
         experiments: { enabledExperiments: appEntryKey },
         captureException(arg0, tags) {
-          return memo1(dependencyMap[50]).captureException(arg0, { tags });
+          return memo1(dependencyMap[49]).captureException(arg0, { tags });
         },
       };
       return obj;
@@ -274,7 +273,6 @@ try {
         children,
         closure_2_14(SafeAreaProvider.SafeAreaReporter, {}),
         closure_2_14(DevToolsLazyDefault, {}),
-        closure_2_14(ScreenRecordingPipDefault, {}),
       ];
       obj15.children = items1;
       items[1] = __initData(SafeAreaProvider.SafeAreaProvider, obj15);

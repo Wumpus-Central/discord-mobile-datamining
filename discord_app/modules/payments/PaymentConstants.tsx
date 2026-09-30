@@ -42,3 +42,7 @@ export const ItemPurchaseType = {
   SUBSCRIPTION: 2,
   [2]: "SUBSCRIPTION",
 };
+export const OrderClientErrorCode = {
+  SMITE_TOKEN_AUTHORIZATION_REQUIRED: 1003,
+  [1003]: "SMITE_TOKEN_AUTHORIZATION_REQUIRED",
+};

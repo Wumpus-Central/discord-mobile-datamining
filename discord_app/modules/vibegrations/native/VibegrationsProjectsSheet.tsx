@@ -7,7 +7,7 @@ import RootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import useMountEffectDefault from "../../../hooks/useMountEffect.tsx";
 import TableRowGroup from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import BottomSheetModal from "../../../../_runtime/06211_BottomSheetModal.js";
+import BottomSheetModal from "../../../../_runtime/06241_BottomSheetModal.js";
 import BottomSheetTitleHeader from "../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import ActionSheet from "../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import openVibegrationsProject from "../lib/openVibegrationsProject.tsx";
@@ -28,7 +28,7 @@ function ProjectRow(entry) {
   if (application_id == null) {
     application_id = entry.project.application_id;
   }
-  const data = entry(6750).useApplication(application_id).data;
+  const data = entry(6780).useApplication(application_id).data;
   let guildName = entry.guildName;
   if (guildName == null) {
     const intl = tmp(1115).intl;
@@ -60,12 +60,12 @@ function ProjectRow(entry) {
   };
   const obj9 = { id: application_id, icon: null };
   let icon;
-  let obj = entry(6750);
+  let obj = entry(6780);
   if (data != null) {
     icon = data.icon;
   }
   obj9.icon = icon;
-  obj5.icon = closure_6(tmp6(9188), { application: obj9 });
+  obj5.icon = closure_6(tmp6(9222), { application: obj9 });
   let tmp8Result;
   if ("building" === entry.activity) {
     tmp8Result = closure_6(ActivityIndicator, {});
@@ -100,7 +100,7 @@ function ProjectRow(entry) {
       const result = openVibegrationsProject.openVibegrationsProject(tmp, entry.projectId);
     }
   };
-  return closure_6(entry(6083).TableRow, obj5);
+  return closure_6(entry(6113).TableRow, obj5);
 }
 function ProjectGroup(arg0) {
   ({ entries, fallbackGuildId: require } = arg0);
@@ -125,8 +125,8 @@ function GuildGroup(guilds) {
       hasIcons: true,
       children: guilds.map((guild) => {
         let obj = { label: guild.name, icon: null, arrow: true, onPress: null };
-        let obj2 = { guild, size: guild(6062).GuildIconSizes.SMALL_32 };
-        obj.icon = closure_6(closure_1(6062), obj2);
+        let obj2 = { guild, size: guild(6092).GuildIconSizes.SMALL_32 };
+        obj.icon = closure_6(closure_1(6092), obj2);
         obj.onPress = function onPress() {
           ActionSheetActionCreatorsDefault.hideAllActionSheets();
           const rootNavigationRef = require("RootNavigationRef").getRootNavigationRef();
@@ -154,7 +154,7 @@ function GuildGroup(guilds) {
           const obj2 = require("RootNavigationRef");
           const result = require("openVibegrationsProject").openVibegrationsProject(guild.id, undefined);
         };
-        return closure_6(guild(6083).TableRow, obj, guild.id);
+        return closure_6(guild(6113).TableRow, obj, guild.id);
       }),
     };
     tmp3 = timestampProducer(TableRowGroup.TableRowGroup, obj);
@@ -183,23 +183,23 @@ function SheetBody() {
           const obj6 = { variant: "text-sm/normal", color: "text-muted", children: null };
           const intl6 = tmp2(1115).intl;
           obj6.children = intl6.string(_modDef3715["IN/HRP"]);
-          const items2 = [closure_6(tmp2(4832).Text, obj6)];
+          const items2 = [closure_6(tmp2(4862).Text, obj6)];
           const obj7 = { variant: "secondary", size: "sm", text: null, onPress: null };
           const intl7 = tmp2(1115).intl;
           obj7.text = intl7.string(_modDef3715["42EdIV"]);
           obj7.onPress = function onPress() {
             return closure_0(dependencyMap[23]).listProjects();
           };
-          items2[1] = closure_6(tmp2(5447).Button, obj7);
+          items2[1] = closure_6(tmp2(5477).Button, obj7);
           obj5.children = items2;
-          let tmp28Result = closure_7(tmp2(5445).Stack, obj5);
+          let tmp28Result = closure_7(tmp2(5475).Stack, obj5);
         } else {
           const obj8 = { spacing: nativeDefault.space.PX_16, children: null };
           const obj9 = { spacing: nativeDefault.space.PX_4, children: null };
           const obj10 = { variant: "text-md/semibold", color: "text-strong", children: null };
           const intl9 = tmp2(1115).intl;
           obj10.children = intl9.string(_modDef3715.qSQH7H);
-          const items3 = [closure_6(tmp2(4832).Text, obj10)];
+          const items3 = [closure_6(tmp2(4862).Text, obj10)];
           if (0 === vibegrationsEligibleGuilds.length) {
             const intl5 = tmp2(1115).intl;
             let stringResult = intl5.string(_modDef3715.I92Gjf);
@@ -209,13 +209,13 @@ function SheetBody() {
             stringResult = intl4.formatToPlainString(_modDef3715["8NmOZ5"], obj11);
           }
           const obj12 = { variant: "text-sm/normal", color: "text-muted", children: stringResult };
-          items3[1] = closure_6(tmp2(4832).Text, obj12);
+          items3[1] = closure_6(tmp2(4862).Text, obj12);
           obj9.children = items3;
-          const items4 = [closure_7(tmp2(5445).Stack, obj9)];
+          const items4 = [closure_7(tmp2(5475).Stack, obj9)];
           const obj13 = { guilds: vibegrationsEligibleGuilds };
           items4[1] = closure_6(GuildGroup, obj13);
           obj8.children = items4;
-          tmp28Result = closure_7(tmp2(5445).Stack, obj8);
+          tmp28Result = closure_7(tmp2(5475).Stack, obj8);
         }
       }
       return tmp28Result;
@@ -225,9 +225,9 @@ function SheetBody() {
     const obj15 = { variant: "text-sm/normal", color: "text-muted", children: null };
     const intl8 = tmp2(1115).intl;
     obj15.children = intl8.string(_modDef3715["/aUeR9"]);
-    items5[1] = closure_6(tmp2(4832).Text, obj15);
+    items5[1] = closure_6(tmp2(4862).Text, obj15);
     obj14.children = items5;
-    tmp28Result = closure_7(tmp2(5445).Stack, obj14);
+    tmp28Result = closure_7(tmp2(5475).Stack, obj14);
   } else {
     const found = vibegrationsEligibleGuilds.find((id) => id.id === closure_0);
     let id;
@@ -266,16 +266,16 @@ function SheetBody() {
     obj19.guilds = vibegrationsEligibleGuilds;
     items6[2] = closure_6(GuildGroup, obj19);
     obj16.children = items6;
-    return closure_7(tmp2(5445).Stack, obj16);
+    return closure_7(tmp2(5475).Stack, obj16);
   }
   const obj4 = require("initialize");
 }
 const ActivityIndicator = fn(17).ActivityIndicator;
-const VibegrationsBuilderRouteStore = fn(16415);
+const VibegrationsBuilderRouteStore = fn(16444);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const VibegrationsProjectsSheet = "VibegrationsProjectsSheet";
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { scrollContent: { paddingBottom: nativeDefault.space.PX_16 + arg0 }, state: null };
   const obj2 = { paddingBottom: nativeDefault.space.PX_16 + arg0 };

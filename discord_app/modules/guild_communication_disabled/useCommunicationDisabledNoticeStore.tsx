@@ -1,6 +1,6 @@
 // discord_app/modules/guild_communication_disabled/useCommunicationDisabledNoticeStore.tsx
 import _mod1243 from "../../../_runtime/metro/01243__.js";
-import _mod4452 from "../../../_runtime/metro/04452__.js";
+import _mod4482 from "../../../_runtime/metro/04482__.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
 require = fn;
@@ -67,7 +67,7 @@ export const useCommunicationDisabledNoticeStore = function useCommunicationDisa
         ({ notificationDismissedInGuilds: arr[0], dismissNotification: arr[1] } = arg0);
         return items;
       },
-      _mod4452.shallow,
+      _mod4482.shallow,
     ),
     2,
   );

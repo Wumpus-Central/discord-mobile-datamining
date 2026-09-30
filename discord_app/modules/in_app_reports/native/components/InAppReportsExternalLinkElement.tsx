@@ -14,12 +14,12 @@ function ExternalLinkItem(data) {
   let tmp3 = null;
   if (data.is_localized) {
     const obj = { label: tmp, subLabel: tmp2, trailing: null, onPress: null, arrow: false, accessibilityRole: "link" };
-    const obj2 = { IconComponent: url(12648).LinkExternalMediumIcon };
-    obj.trailing = closure_4(url(6089).TableRowIcon, obj2);
+    const obj2 = { IconComponent: url(12678).LinkExternalMediumIcon };
+    obj.trailing = closure_4(url(6119).TableRowIcon, obj2);
     obj.onPress = function onPress() {
       LinkingDefault.openURL(url);
     };
-    tmp3 = closure_4(url(8220).RowButton, obj);
+    tmp3 = closure_4(url(8251).RowButton, obj);
   }
   return tmp3;
 }

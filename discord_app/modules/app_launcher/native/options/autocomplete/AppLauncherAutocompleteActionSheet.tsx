@@ -5,10 +5,10 @@ import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
-import _mod5021 from "module_5021" /* 5021 */;
+import _mod5051 from "module_5051" /* 5051 */;
 import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import executeCommandDefault from "../../../../application_commands/executeCommand.tsx";
-import _modDef11819 from "../../../../../../_runtime/metro/11819__.js";
+import _modDef11853 from "../../../../../../_runtime/metro/11853__.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import ApplicationCommandAutocompleteStore from "../../../../application_commands/ApplicationCommandAutocompleteStore.tsx";
@@ -39,7 +39,7 @@ function Item(arg0) {
   _modDef38(tmp4, "Invalid autocomplete result type");
   closure_3 = closure_12();
   noop = noop.useMemo(() => 100 * Math.random() + 50, []);
-  const match = _mod5021.match(item);
+  const match = _mod5051.match(item);
   let obj = { type: AutoCompleteResultTypes.CHOICE };
   let obj2 = { type: AutoCompleteResultTypes.LABEL };
   const withResult = match.with({ type: AutoCompleteResultTypes.CHOICE }, (children) => {
@@ -150,7 +150,7 @@ function Item(arg0) {
     .exhaustive();
 }
 function AutocompleteFailedEmptyState() {
-  const obj = { style: closure_12().emptyState, lightSource: _modDef11819, darkSource: _modDef11819, title: null };
+  const obj = { style: closure_12().emptyState, lightSource: _modDef11853, darkSource: _modDef11853, title: null };
   const intl = util.intl;
   obj.title = intl.string(util.t.rTAbPn);
   return React7(native.EmptyState, obj);
@@ -159,11 +159,11 @@ const View = fn(17).View;
 fn(1074).AutoCompleteResultTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const executeCommand = apply.debounce(executeCommandDefault, fn(5471).AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, {
+const executeCommand = apply.debounce(executeCommandDefault, fn(5501).AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, {
   leading: true,
   trailing: true,
 });
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj = {
   commandChoiceLoadingContainer: { flex: 1, justifyContent: "center" },
   commandChoiceLoadingItem: {

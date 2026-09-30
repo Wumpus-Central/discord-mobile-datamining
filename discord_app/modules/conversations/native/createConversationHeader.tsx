@@ -2,7 +2,7 @@
 import util from "../../../intl/index.native.tsx";
 import _modDef3617 from "../Conversations.messages.js";
 import renderer_EmbedUtils from "../../messages/native/renderer/EmbedUtils.tsx";
-import _modDef11602 from "../../../../_runtime/metro/11602__.js";
+import _modDef11636 from "../../../../_runtime/metro/11636__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/conversations/native/createConversationHeader.tsx");
@@ -19,7 +19,7 @@ export default function createConversationHeader(startMessageId, arg1) {
     if (tmp) {
       const obj = { conversationId: null, title: null, expandIconUrl: null, expandAccessibilityLabel: null };
       ({ id: obj.conversationId, title: obj.title } = startMessageId);
-      obj.expandIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef11602);
+      obj.expandIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef11636);
       const intl = util.intl;
       obj.expandAccessibilityLabel = intl.string(_modDef3617.pU5Dut);
       return obj;

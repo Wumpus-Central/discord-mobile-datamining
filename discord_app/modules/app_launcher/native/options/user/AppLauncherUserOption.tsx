@@ -13,7 +13,7 @@ import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
 let jsx = fn(21).jsx;
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj2 = { iconWrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -78,7 +78,7 @@ export default function AppLauncherUserOption(option) {
     const result = KeyboardManagerUtils.dismissGlobalKeyboard();
     const obj2 = ActionSheetActionCreatorsDefault;
     obj2.openLazy(
-      asyncRequireImpl(11836, dependencyMap.paths),
+      asyncRequireImpl(11870, dependencyMap.paths),
       AppLauncherUserListActionSheet.APP_LAUNCHER_USER_LIST_ACTION_SHEET_KEY,
       {
         option,
@@ -107,7 +107,7 @@ export default function AppLauncherUserOption(option) {
     let tmp9Result = tmp9(tmp2(1177).Avatar, obj3);
   } else {
     const obj4 = {
-      icon: tmp9(tmp2(10547).UserCircleIcon, { size: "sm", color: "interactive-text-default" }),
+      icon: tmp9(tmp2(10581).UserCircleIcon, { size: "sm", color: "interactive-text-default" }),
       wrapperStyle: tmp.iconWrapper,
     };
     tmp9Result = tmp9(AppLauncherOptionIconDefault, obj4);
@@ -121,7 +121,7 @@ export default function AppLauncherUserOption(option) {
     tmp9Result2 = null;
     if (null != tmp6) {
       const obj6 = { variant: "text-md/medium", color: "text-default", children: tmp6 };
-      tmp9Result2 = tmp9(tmp2(4832).Text, obj6);
+      tmp9Result2 = tmp9(tmp2(4862).Text, obj6);
     }
   }
   obj2.selectedItemName = tmp9Result2;

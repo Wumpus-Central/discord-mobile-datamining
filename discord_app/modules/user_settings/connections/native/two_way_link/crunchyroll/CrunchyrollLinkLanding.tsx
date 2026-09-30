@@ -1,14 +1,14 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkLanding.tsx
 import HelpdeskUtilsDefault from "../../../../../../utils/HelpdeskUtils.tsx";
-import _modDef8740 from "../../../../../../../_runtime/metro/08740__.js";
+import _modDef8774 from "../../../../../../../_runtime/metro/08774__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-let closure_4 = fn(8738).CrunchyrollLinkModalScenes;
+let closure_4 = fn(8772).CrunchyrollLinkModalScenes;
 const Constants = fn(1074);
 ({ HelpdeskArticles: hasOwnProperty, PlatformTypes: metroRequire } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let closure_8 = createStyles.createStyles({ image: { width: 234, height: 147 } });
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -23,7 +23,7 @@ export default function CrunchyrollLinkLanding() {
     const obj = { label: null, icon: null };
     const intl = navigation(1115).intl;
     obj.label = intl.string(navigation(1115).t["2TXHQd"]);
-    obj.icon = navigation(7887).PlayIcon;
+    obj.icon = navigation(7917).PlayIcon;
     const items = [obj];
     return items;
   }, []);
@@ -32,7 +32,7 @@ export default function CrunchyrollLinkLanding() {
   }, items);
   const obj2 = {
     platformType: constants2.CRUNCHYROLL,
-    img: _modDef8740,
+    img: _modDef8774,
     imgStyle: tmp.image,
     headerConnect: null,
     body: null,
@@ -48,9 +48,9 @@ export default function CrunchyrollLinkLanding() {
   obj2.learnMoreLink = HelpdeskUtilsDefault.getArticleURL(constants.CRUNCHYROLL_CONNECTION);
   obj2.onNext = callback;
   obj2.valueProps = memo;
-  return jsx(navigation(8702).TwoWayLinkLanding, {
+  return jsx(navigation(8736).TwoWayLinkLanding, {
     platformType: constants2.CRUNCHYROLL,
-    img: _modDef8740,
+    img: _modDef8774,
     imgStyle: tmp.image,
     headerConnect: null,
     body: null,

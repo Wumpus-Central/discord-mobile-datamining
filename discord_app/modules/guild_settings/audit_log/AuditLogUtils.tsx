@@ -6,7 +6,7 @@ import BigFlagUtilsAll from "../../../../discord_common/js/shared/utils/BigFlagU
 import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import util from "../../../intl/index.native.tsx";
 import FlagUtilsAll from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import _modDef4421 from "../../../../_runtime/metro/04421__.js";
+import _modDef4451 from "../../../../_runtime/metro/04451__.js";
 import DateUtils from "../../../utils/DateUtils.tsx";
 import UserUtilsDefault from "../../../utils/UserUtils.tsx";
 import TimeUtils from "../../../../discord_common/js/packages/time-utils/TimeUtils.tsx";
@@ -242,7 +242,7 @@ function transformAvailableForumTagChange(newValue) {
   }
   return newValue;
 }
-const AuditLogChange = fn(17532).AuditLogChange;
+const AuditLogChange = fn(17567).AuditLogChange;
 const Constants = fn(1074);
 ({ AuditLogActions: closure_15, AuditLogChangeKeys } = Constants);
 const AuditLogTargetTypes = Constants.AuditLogTargetTypes;
@@ -261,8 +261,8 @@ const AuditLogTargetTypes = Constants.AuditLogTargetTypes;
   AuditLogActionTypes: closure_29,
 } = Constants);
 const ChannelFlags = fn(2052).ChannelFlags;
-const AutomodTriggerType = fn(11510).AutomodTriggerType;
-const GuildOnboardingMode = fn(6688).GuildOnboardingMode;
+const AutomodTriggerType = fn(11546).AutomodTriggerType;
+const GuildOnboardingMode = fn(6718).GuildOnboardingMode;
 const GuildScheduledEventsConstants = fn(2051);
 ({
   GuildScheduledEventEntityTypes: closure_33,
@@ -270,7 +270,7 @@ const GuildScheduledEventsConstants = fn(2051);
   GuildScheduledEventPrivacyLevel: closure_35,
 } = GuildScheduledEventsConstants);
 let closure_36 = new LoggerDefault("AuditLogUtils");
-let items = [fn(4865).TimeUnits.DAYS, fn(4865).TimeUnits.HOURS, fn(4865).TimeUnits.MINUTES, fn(4865).TimeUnits.SECONDS];
+let items = [fn(4895).TimeUnits.DAYS, fn(4895).TimeUnits.HOURS, fn(4895).TimeUnits.MINUTES, fn(4895).TimeUnits.SECONDS];
 let closure_38 = {
   [AuditLogTargetTypes.CHANNEL]: { [AuditLogChangeKeys.ID]: true, [AuditLogChangeKeys.PERMISSION_OVERWRITES]: true },
   [AuditLogTargetTypes.CHANNEL_OVERWRITE]: {
@@ -368,289 +368,299 @@ class ACTION_FILTER_ITEMS {
       ,
       ,
       ,
+      ,
+      ,
     ];
     items[0] = obj;
     obj1 = { value: AuditLogActions.GUILD_UPDATE, label: null };
     intl3 = closure_0(closure_3[18]).intl;
     obj1.label = intl3.string(closure_0(closure_3[18]).t["5INZa3"]);
     items[1] = obj1;
-    obj68 = { value: AuditLogActions.CHANNEL_CREATE, label: null };
+    obj70 = { value: AuditLogActions.CHANNEL_CREATE, label: null };
     intl4 = closure_0(closure_3[18]).intl;
-    obj68.label = intl4.string(closure_0(closure_3[18]).t["2uh4vJ"]);
-    items[2] = obj68;
-    obj69 = { value: AuditLogActions.CHANNEL_UPDATE, label: null };
+    obj70.label = intl4.string(closure_0(closure_3[18]).t["2uh4vJ"]);
+    items[2] = obj70;
+    obj71 = { value: AuditLogActions.CHANNEL_UPDATE, label: null };
     intl5 = closure_0(closure_3[18]).intl;
-    obj69.label = intl5.string(closure_0(closure_3[18]).t.mGsBLV);
-    items[3] = obj69;
-    obj70 = { value: AuditLogActions.CHANNEL_DELETE, label: null };
+    obj71.label = intl5.string(closure_0(closure_3[18]).t.mGsBLV);
+    items[3] = obj71;
+    obj72 = { value: AuditLogActions.CHANNEL_DELETE, label: null };
     intl6 = closure_0(closure_3[18]).intl;
-    obj70.label = intl6.string(closure_0(closure_3[18]).t.hCHzAr);
-    items[4] = obj70;
-    obj71 = { value: AuditLogActions.CHANNEL_OVERWRITE_CREATE, label: null };
+    obj72.label = intl6.string(closure_0(closure_3[18]).t.hCHzAr);
+    items[4] = obj72;
+    obj73 = { value: AuditLogActions.CHANNEL_OVERWRITE_CREATE, label: null };
     intl7 = closure_0(closure_3[18]).intl;
-    obj71.label = intl7.string(closure_0(closure_3[18]).t["8TnAMP"]);
-    items[5] = obj71;
-    obj72 = { value: AuditLogActions.CHANNEL_OVERWRITE_UPDATE, label: null };
+    obj73.label = intl7.string(closure_0(closure_3[18]).t["8TnAMP"]);
+    items[5] = obj73;
+    obj74 = { value: AuditLogActions.CHANNEL_OVERWRITE_UPDATE, label: null };
     intl8 = closure_0(closure_3[18]).intl;
-    obj72.label = intl8.string(closure_0(closure_3[18]).t.Jqx0Bi);
-    items[6] = obj72;
-    obj73 = { value: AuditLogActions.CHANNEL_OVERWRITE_DELETE, label: null };
+    obj74.label = intl8.string(closure_0(closure_3[18]).t.Jqx0Bi);
+    items[6] = obj74;
+    obj75 = { value: AuditLogActions.CHANNEL_OVERWRITE_DELETE, label: null };
     intl9 = closure_0(closure_3[18]).intl;
-    obj73.label = intl9.string(closure_0(closure_3[18]).t.gBXOr4);
-    items[7] = obj73;
-    obj74 = { value: AuditLogActions.MEMBER_KICK, label: null };
+    obj75.label = intl9.string(closure_0(closure_3[18]).t.gBXOr4);
+    items[7] = obj75;
+    obj76 = { value: AuditLogActions.CHANNEL_POSITION_UPDATE, label: null };
     intl10 = closure_0(closure_3[18]).intl;
-    obj74.label = intl10.string(closure_0(closure_3[18]).t["Q1/hN8"]);
-    items[8] = obj74;
-    obj75 = { value: AuditLogActions.MEMBER_PRUNE, label: null };
+    obj76.label = intl10.string(closure_0(closure_3[18]).t.hKfSwp);
+    items[8] = obj76;
+    obj77 = { value: AuditLogActions.MEMBER_KICK, label: null };
     intl11 = closure_0(closure_3[18]).intl;
-    obj75.label = intl11.string(closure_0(closure_3[18]).t.tOTTja);
-    items[9] = obj75;
-    obj76 = { value: AuditLogActions.MEMBER_BAN_ADD, label: null };
+    obj77.label = intl11.string(closure_0(closure_3[18]).t["Q1/hN8"]);
+    items[9] = obj77;
+    obj78 = { value: AuditLogActions.MEMBER_PRUNE, label: null };
     intl12 = closure_0(closure_3[18]).intl;
-    obj76.label = intl12.string(closure_0(closure_3[18]).t["NfPn+e"]);
-    items[10] = obj76;
-    obj77 = { value: AuditLogActions.MEMBER_BAN_REMOVE, label: null };
+    obj78.label = intl12.string(closure_0(closure_3[18]).t.tOTTja);
+    items[10] = obj78;
+    obj79 = { value: AuditLogActions.MEMBER_BAN_ADD, label: null };
     intl13 = closure_0(closure_3[18]).intl;
-    obj77.label = intl13.string(closure_0(closure_3[18]).t.XCsGfI);
-    items[11] = obj77;
-    obj78 = { value: AuditLogActions.MEMBER_UPDATE, label: null };
+    obj79.label = intl13.string(closure_0(closure_3[18]).t["NfPn+e"]);
+    items[11] = obj79;
+    obj80 = { value: AuditLogActions.MEMBER_BAN_REMOVE, label: null };
     intl14 = closure_0(closure_3[18]).intl;
-    obj78.label = intl14.string(closure_0(closure_3[18]).t["F/jmNJ"]);
-    items[12] = obj78;
-    obj79 = { value: AuditLogActions.MEMBER_ROLE_UPDATE, label: null };
+    obj80.label = intl14.string(closure_0(closure_3[18]).t.XCsGfI);
+    items[12] = obj80;
+    obj81 = { value: AuditLogActions.MEMBER_UPDATE, label: null };
     intl15 = closure_0(closure_3[18]).intl;
-    obj79.label = intl15.string(closure_0(closure_3[18]).t.zAveSI);
-    items[13] = obj79;
-    obj80 = { value: AuditLogActions.MEMBER_MOVE, label: null };
+    obj81.label = intl15.string(closure_0(closure_3[18]).t["F/jmNJ"]);
+    items[13] = obj81;
+    obj82 = { value: AuditLogActions.MEMBER_ROLE_UPDATE, label: null };
     intl16 = closure_0(closure_3[18]).intl;
-    obj80.label = intl16.string(closure_0(closure_3[18]).t.QshteR);
-    items[14] = obj80;
-    obj81 = { value: AuditLogActions.MEMBER_DISCONNECT, label: null };
+    obj82.label = intl16.string(closure_0(closure_3[18]).t.zAveSI);
+    items[14] = obj82;
+    obj83 = { value: AuditLogActions.MEMBER_MOVE, label: null };
     intl17 = closure_0(closure_3[18]).intl;
-    obj81.label = intl17.string(closure_0(closure_3[18]).t.Z45os7);
-    items[15] = obj81;
-    obj82 = { value: AuditLogActions.BOT_ADD, label: null };
+    obj83.label = intl17.string(closure_0(closure_3[18]).t.QshteR);
+    items[15] = obj83;
+    obj84 = { value: AuditLogActions.MEMBER_DISCONNECT, label: null };
     intl18 = closure_0(closure_3[18]).intl;
-    obj82.label = intl18.string(closure_0(closure_3[18]).t.vuH24Z);
-    items[16] = obj82;
-    obj83 = { value: AuditLogActions.THREAD_CREATE, label: null };
+    obj84.label = intl18.string(closure_0(closure_3[18]).t.Z45os7);
+    items[16] = obj84;
+    obj85 = { value: AuditLogActions.BOT_ADD, label: null };
     intl19 = closure_0(closure_3[18]).intl;
-    obj83.label = intl19.string(closure_0(closure_3[18]).t["+zl0DG"]);
-    items[17] = obj83;
-    obj84 = { value: AuditLogActions.THREAD_UPDATE, label: null };
+    obj85.label = intl19.string(closure_0(closure_3[18]).t.vuH24Z);
+    items[17] = obj85;
+    obj86 = { value: AuditLogActions.THREAD_CREATE, label: null };
     intl20 = closure_0(closure_3[18]).intl;
-    obj84.label = intl20.string(closure_0(closure_3[18]).t.rbIry3);
-    items[18] = obj84;
-    obj85 = { value: AuditLogActions.THREAD_DELETE, label: null };
+    obj86.label = intl20.string(closure_0(closure_3[18]).t["+zl0DG"]);
+    items[18] = obj86;
+    obj87 = { value: AuditLogActions.THREAD_UPDATE, label: null };
     intl21 = closure_0(closure_3[18]).intl;
-    obj85.label = intl21.string(closure_0(closure_3[18]).t.hFjNEA);
-    items[19] = obj85;
-    obj86 = { value: AuditLogActions.ROLE_CREATE, label: null };
+    obj87.label = intl21.string(closure_0(closure_3[18]).t.rbIry3);
+    items[19] = obj87;
+    obj88 = { value: AuditLogActions.THREAD_DELETE, label: null };
     intl22 = closure_0(closure_3[18]).intl;
-    obj86.label = intl22.string(closure_0(closure_3[18]).t.AbxKtv);
-    items[20] = obj86;
-    obj87 = { value: AuditLogActions.ROLE_UPDATE, label: null };
+    obj88.label = intl22.string(closure_0(closure_3[18]).t.hFjNEA);
+    items[20] = obj88;
+    obj89 = { value: AuditLogActions.ROLE_CREATE, label: null };
     intl23 = closure_0(closure_3[18]).intl;
-    obj87.label = intl23.string(closure_0(closure_3[18]).t.t3Z6sU);
-    items[21] = obj87;
-    obj88 = { value: AuditLogActions.ROLE_DELETE, label: null };
+    obj89.label = intl23.string(closure_0(closure_3[18]).t.AbxKtv);
+    items[21] = obj89;
+    obj90 = { value: AuditLogActions.ROLE_UPDATE, label: null };
     intl24 = closure_0(closure_3[18]).intl;
-    obj88.label = intl24.string(closure_0(closure_3[18]).t.YsFpa4);
-    items[22] = obj88;
-    obj89 = { value: AuditLogActions.ONBOARDING_PROMPT_CREATE, label: null };
+    obj90.label = intl24.string(closure_0(closure_3[18]).t.t3Z6sU);
+    items[22] = obj90;
+    obj91 = { value: AuditLogActions.ROLE_DELETE, label: null };
     intl25 = closure_0(closure_3[18]).intl;
-    obj89.label = intl25.string(closure_0(closure_3[18]).t.ZV9tqc);
-    items[23] = obj89;
-    obj90 = { value: AuditLogActions.ONBOARDING_PROMPT_UPDATE, label: null };
+    obj91.label = intl25.string(closure_0(closure_3[18]).t.YsFpa4);
+    items[23] = obj91;
+    obj92 = { value: AuditLogActions.ROLE_POSITION_UPDATE, label: null };
     intl26 = closure_0(closure_3[18]).intl;
-    obj90.label = intl26.string(closure_0(closure_3[18]).t.PcOdvX);
-    items[24] = obj90;
-    obj91 = { value: AuditLogActions.ONBOARDING_PROMPT_DELETE, label: null };
+    obj92.label = intl26.string(closure_0(closure_3[18]).t["g+lLUV"]);
+    items[24] = obj92;
+    obj93 = { value: AuditLogActions.ONBOARDING_PROMPT_CREATE, label: null };
     intl27 = closure_0(closure_3[18]).intl;
-    obj91.label = intl27.string(closure_0(closure_3[18]).t["+r33Na"]);
-    items[25] = obj91;
-    obj92 = { value: AuditLogActions.ONBOARDING_CREATE, label: null };
+    obj93.label = intl27.string(closure_0(closure_3[18]).t.ZV9tqc);
+    items[25] = obj93;
+    obj94 = { value: AuditLogActions.ONBOARDING_PROMPT_UPDATE, label: null };
     intl28 = closure_0(closure_3[18]).intl;
-    obj92.label = intl28.string(closure_0(closure_3[18]).t.uDADde);
-    items[26] = obj92;
-    obj93 = { value: AuditLogActions.ONBOARDING_UPDATE, label: null };
+    obj94.label = intl28.string(closure_0(closure_3[18]).t.PcOdvX);
+    items[26] = obj94;
+    obj95 = { value: AuditLogActions.ONBOARDING_PROMPT_DELETE, label: null };
     intl29 = closure_0(closure_3[18]).intl;
-    obj93.label = intl29.string(closure_0(closure_3[18]).t.J1H1wg);
-    items[27] = obj93;
-    obj94 = { value: AuditLogActions.HOME_SETTINGS_CREATE, label: null };
+    obj95.label = intl29.string(closure_0(closure_3[18]).t["+r33Na"]);
+    items[27] = obj95;
+    obj96 = { value: AuditLogActions.ONBOARDING_CREATE, label: null };
     intl30 = closure_0(closure_3[18]).intl;
-    obj94.label = intl30.string(closure_0(closure_3[18]).t.Di4cvI);
-    items[28] = obj94;
-    obj95 = { value: AuditLogActions.HOME_SETTINGS_UPDATE, label: null };
+    obj96.label = intl30.string(closure_0(closure_3[18]).t.uDADde);
+    items[28] = obj96;
+    obj97 = { value: AuditLogActions.ONBOARDING_UPDATE, label: null };
     intl31 = closure_0(closure_3[18]).intl;
-    obj95.label = intl31.string(closure_0(closure_3[18]).t.tzyrJH);
-    items[29] = obj95;
-    obj96 = { value: AuditLogActions.INVITE_CREATE, label: null };
+    obj97.label = intl31.string(closure_0(closure_3[18]).t.J1H1wg);
+    items[29] = obj97;
+    obj98 = { value: AuditLogActions.HOME_SETTINGS_CREATE, label: null };
     intl32 = closure_0(closure_3[18]).intl;
-    obj96.label = intl32.string(closure_0(closure_3[18]).t["0BNJdX"]);
-    items[30] = obj96;
-    obj97 = { value: AuditLogActions.INVITE_UPDATE, label: null };
+    obj98.label = intl32.string(closure_0(closure_3[18]).t.Di4cvI);
+    items[30] = obj98;
+    obj99 = { value: AuditLogActions.HOME_SETTINGS_UPDATE, label: null };
     intl33 = closure_0(closure_3[18]).intl;
-    obj97.label = intl33.string(closure_0(closure_3[18]).t["o++obV"]);
-    items[31] = obj97;
-    obj98 = { value: AuditLogActions.INVITE_DELETE, label: null };
+    obj99.label = intl33.string(closure_0(closure_3[18]).t.tzyrJH);
+    items[31] = obj99;
+    obj100 = { value: AuditLogActions.INVITE_CREATE, label: null };
     intl34 = closure_0(closure_3[18]).intl;
-    obj98.label = intl34.string(closure_0(closure_3[18]).t.iP40Az);
-    items[32] = obj98;
-    obj99 = { value: AuditLogActions.WEBHOOK_CREATE, label: null };
+    obj100.label = intl34.string(closure_0(closure_3[18]).t["0BNJdX"]);
+    items[32] = obj100;
+    obj101 = { value: AuditLogActions.INVITE_UPDATE, label: null };
     intl35 = closure_0(closure_3[18]).intl;
-    obj99.label = intl35.string(closure_0(closure_3[18]).t["tBF4+S"]);
-    items[33] = obj99;
-    obj100 = { value: AuditLogActions.WEBHOOK_UPDATE, label: null };
+    obj101.label = intl35.string(closure_0(closure_3[18]).t["o++obV"]);
+    items[33] = obj101;
+    obj102 = { value: AuditLogActions.INVITE_DELETE, label: null };
     intl36 = closure_0(closure_3[18]).intl;
-    obj100.label = intl36.string(closure_0(closure_3[18]).t.eV3McO);
-    items[34] = obj100;
-    obj101 = { value: AuditLogActions.WEBHOOK_DELETE, label: null };
+    obj102.label = intl36.string(closure_0(closure_3[18]).t.iP40Az);
+    items[34] = obj102;
+    obj103 = { value: AuditLogActions.WEBHOOK_CREATE, label: null };
     intl37 = closure_0(closure_3[18]).intl;
-    obj101.label = intl37.string(closure_0(closure_3[18]).t.AAL3K1);
-    items[35] = obj101;
-    obj102 = { value: AuditLogActions.EMOJI_CREATE, label: null };
+    obj103.label = intl37.string(closure_0(closure_3[18]).t["tBF4+S"]);
+    items[35] = obj103;
+    obj104 = { value: AuditLogActions.WEBHOOK_UPDATE, label: null };
     intl38 = closure_0(closure_3[18]).intl;
-    obj102.label = intl38.string(closure_0(closure_3[18]).t.RuWm0V);
-    items[36] = obj102;
-    obj103 = { value: AuditLogActions.EMOJI_UPDATE, label: null };
+    obj104.label = intl38.string(closure_0(closure_3[18]).t.eV3McO);
+    items[36] = obj104;
+    obj105 = { value: AuditLogActions.WEBHOOK_DELETE, label: null };
     intl39 = closure_0(closure_3[18]).intl;
-    obj103.label = intl39.string(closure_0(closure_3[18]).t.WzdUY7);
-    items[37] = obj103;
-    obj104 = { value: AuditLogActions.EMOJI_DELETE, label: null };
+    obj105.label = intl39.string(closure_0(closure_3[18]).t.AAL3K1);
+    items[37] = obj105;
+    obj106 = { value: AuditLogActions.EMOJI_CREATE, label: null };
     intl40 = closure_0(closure_3[18]).intl;
-    obj104.label = intl40.string(closure_0(closure_3[18]).t.c3dK2L);
-    items[38] = obj104;
-    obj105 = { value: AuditLogActions.MESSAGE_DELETE, label: null };
+    obj106.label = intl40.string(closure_0(closure_3[18]).t.RuWm0V);
+    items[38] = obj106;
+    obj107 = { value: AuditLogActions.EMOJI_UPDATE, label: null };
     intl41 = closure_0(closure_3[18]).intl;
-    obj105.label = intl41.string(closure_0(closure_3[18]).t.daTfXh);
-    items[39] = obj105;
-    obj106 = { value: AuditLogActions.MESSAGE_BULK_DELETE, label: null };
+    obj107.label = intl41.string(closure_0(closure_3[18]).t.WzdUY7);
+    items[39] = obj107;
+    obj108 = { value: AuditLogActions.EMOJI_DELETE, label: null };
     intl42 = closure_0(closure_3[18]).intl;
-    obj106.label = intl42.string(closure_0(closure_3[18]).t.nrBxeh);
-    items[40] = obj106;
-    obj107 = { value: AuditLogActions.MESSAGE_PIN, label: null };
+    obj108.label = intl42.string(closure_0(closure_3[18]).t.c3dK2L);
+    items[40] = obj108;
+    obj109 = { value: AuditLogActions.MESSAGE_DELETE, label: null };
     intl43 = closure_0(closure_3[18]).intl;
-    obj107.label = intl43.string(closure_0(closure_3[18]).t.MUldyN);
-    items[41] = obj107;
-    obj108 = { value: AuditLogActions.MESSAGE_UNPIN, label: null };
+    obj109.label = intl43.string(closure_0(closure_3[18]).t.daTfXh);
+    items[41] = obj109;
+    obj110 = { value: AuditLogActions.MESSAGE_BULK_DELETE, label: null };
     intl44 = closure_0(closure_3[18]).intl;
-    obj108.label = intl44.string(closure_0(closure_3[18]).t.n4zKhA);
-    items[42] = obj108;
-    obj109 = { value: AuditLogActions.INTEGRATION_CREATE, label: null };
+    obj110.label = intl44.string(closure_0(closure_3[18]).t.nrBxeh);
+    items[42] = obj110;
+    obj111 = { value: AuditLogActions.MESSAGE_PIN, label: null };
     intl45 = closure_0(closure_3[18]).intl;
-    obj109.label = intl45.string(closure_0(closure_3[18]).t.deNm8x);
-    items[43] = obj109;
-    obj110 = { value: AuditLogActions.INTEGRATION_UPDATE, label: null };
+    obj111.label = intl45.string(closure_0(closure_3[18]).t.MUldyN);
+    items[43] = obj111;
+    obj112 = { value: AuditLogActions.MESSAGE_UNPIN, label: null };
     intl46 = closure_0(closure_3[18]).intl;
-    obj110.label = intl46.string(closure_0(closure_3[18]).t.HT7Sfg);
-    items[44] = obj110;
-    obj111 = { value: AuditLogActions.INTEGRATION_DELETE, label: null };
+    obj112.label = intl46.string(closure_0(closure_3[18]).t.n4zKhA);
+    items[44] = obj112;
+    obj113 = { value: AuditLogActions.INTEGRATION_CREATE, label: null };
     intl47 = closure_0(closure_3[18]).intl;
-    obj111.label = intl47.string(closure_0(closure_3[18]).t["+kJ09q"]);
-    items[45] = obj111;
-    obj112 = { value: AuditLogActions.STICKER_CREATE, label: null };
+    obj113.label = intl47.string(closure_0(closure_3[18]).t.deNm8x);
+    items[45] = obj113;
+    obj114 = { value: AuditLogActions.INTEGRATION_UPDATE, label: null };
     intl48 = closure_0(closure_3[18]).intl;
-    obj112.label = intl48.string(closure_0(closure_3[18]).t["3DzNjU"]);
-    items[46] = obj112;
-    obj113 = { value: AuditLogActions.STICKER_UPDATE, label: null };
+    obj114.label = intl48.string(closure_0(closure_3[18]).t.HT7Sfg);
+    items[46] = obj114;
+    obj115 = { value: AuditLogActions.INTEGRATION_DELETE, label: null };
     intl49 = closure_0(closure_3[18]).intl;
-    obj113.label = intl49.string(closure_0(closure_3[18]).t.tdhW5b);
-    items[47] = obj113;
-    obj114 = { value: AuditLogActions.STICKER_DELETE, label: null };
+    obj115.label = intl49.string(closure_0(closure_3[18]).t["+kJ09q"]);
+    items[47] = obj115;
+    obj116 = { value: AuditLogActions.STICKER_CREATE, label: null };
     intl50 = closure_0(closure_3[18]).intl;
-    obj114.label = intl50.string(closure_0(closure_3[18]).t["+ZhGOk"]);
-    items[48] = obj114;
-    obj115 = { value: AuditLogActions.STAGE_INSTANCE_CREATE, label: null };
+    obj116.label = intl50.string(closure_0(closure_3[18]).t["3DzNjU"]);
+    items[48] = obj116;
+    obj117 = { value: AuditLogActions.STICKER_UPDATE, label: null };
     intl51 = closure_0(closure_3[18]).intl;
-    obj115.label = intl51.string(closure_0(closure_3[18]).t.sPbjA6);
-    items[49] = obj115;
-    obj116 = { value: AuditLogActions.STAGE_INSTANCE_UPDATE, label: null };
+    obj117.label = intl51.string(closure_0(closure_3[18]).t.tdhW5b);
+    items[49] = obj117;
+    obj118 = { value: AuditLogActions.STICKER_DELETE, label: null };
     intl52 = closure_0(closure_3[18]).intl;
-    obj116.label = intl52.string(closure_0(closure_3[18]).t.cW9LfJ);
-    items[50] = obj116;
-    obj117 = { value: AuditLogActions.STAGE_INSTANCE_DELETE, label: null };
+    obj118.label = intl52.string(closure_0(closure_3[18]).t["+ZhGOk"]);
+    items[50] = obj118;
+    obj119 = { value: AuditLogActions.STAGE_INSTANCE_CREATE, label: null };
     intl53 = closure_0(closure_3[18]).intl;
-    obj117.label = intl53.string(closure_0(closure_3[18]).t["U1r+yD"]);
-    items[51] = obj117;
-    obj118 = { value: AuditLogActions.GUILD_SCHEDULED_EVENT_CREATE, label: null };
+    obj119.label = intl53.string(closure_0(closure_3[18]).t.sPbjA6);
+    items[51] = obj119;
+    obj120 = { value: AuditLogActions.STAGE_INSTANCE_UPDATE, label: null };
     intl54 = closure_0(closure_3[18]).intl;
-    obj118.label = intl54.string(closure_0(closure_3[18]).t.H81Zyy);
-    items[52] = obj118;
-    obj119 = { value: AuditLogActions.GUILD_SCHEDULED_EVENT_UPDATE, label: null };
+    obj120.label = intl54.string(closure_0(closure_3[18]).t.cW9LfJ);
+    items[52] = obj120;
+    obj121 = { value: AuditLogActions.STAGE_INSTANCE_DELETE, label: null };
     intl55 = closure_0(closure_3[18]).intl;
-    obj119.label = intl55.string(closure_0(closure_3[18]).t["FM69l+"]);
-    items[53] = obj119;
-    obj120 = { value: AuditLogActions.GUILD_SCHEDULED_EVENT_DELETE, label: null };
+    obj121.label = intl55.string(closure_0(closure_3[18]).t["U1r+yD"]);
+    items[53] = obj121;
+    obj122 = { value: AuditLogActions.GUILD_SCHEDULED_EVENT_CREATE, label: null };
     intl56 = closure_0(closure_3[18]).intl;
-    obj120.label = intl56.string(closure_0(closure_3[18]).t.Rq28Bh);
-    items[54] = obj120;
-    obj121 = { value: AuditLogActions.APPLICATION_COMMAND_PERMISSION_UPDATE, label: null };
+    obj122.label = intl56.string(closure_0(closure_3[18]).t.H81Zyy);
+    items[54] = obj122;
+    obj123 = { value: AuditLogActions.GUILD_SCHEDULED_EVENT_UPDATE, label: null };
     intl57 = closure_0(closure_3[18]).intl;
-    obj121.label = intl57.string(closure_0(closure_3[18]).t.iPdFOt);
-    items[55] = obj121;
-    obj122 = { value: AuditLogActions.AUTO_MODERATION_BLOCK_MESSAGE, label: null };
+    obj123.label = intl57.string(closure_0(closure_3[18]).t["FM69l+"]);
+    items[55] = obj123;
+    obj124 = { value: AuditLogActions.GUILD_SCHEDULED_EVENT_DELETE, label: null };
     intl58 = closure_0(closure_3[18]).intl;
-    obj122.label = intl58.string(closure_0(closure_3[18]).t.gNq5z6);
-    items[56] = obj122;
-    obj123 = { value: AuditLogActions.AUTO_MODERATION_RULE_CREATE, label: null };
+    obj124.label = intl58.string(closure_0(closure_3[18]).t.Rq28Bh);
+    items[56] = obj124;
+    obj125 = { value: AuditLogActions.APPLICATION_COMMAND_PERMISSION_UPDATE, label: null };
     intl59 = closure_0(closure_3[18]).intl;
-    obj123.label = intl59.string(closure_0(closure_3[18]).t.f72Zqb);
-    items[57] = obj123;
-    obj124 = { value: AuditLogActions.AUTO_MODERATION_RULE_UPDATE, label: null };
+    obj125.label = intl59.string(closure_0(closure_3[18]).t.iPdFOt);
+    items[57] = obj125;
+    obj126 = { value: AuditLogActions.AUTO_MODERATION_BLOCK_MESSAGE, label: null };
     intl60 = closure_0(closure_3[18]).intl;
-    obj124.label = intl60.string(closure_0(closure_3[18]).t.XeqIiv);
-    items[58] = obj124;
-    obj125 = { value: AuditLogActions.AUTO_MODERATION_RULE_DELETE, label: null };
+    obj126.label = intl60.string(closure_0(closure_3[18]).t.gNq5z6);
+    items[58] = obj126;
+    obj127 = { value: AuditLogActions.AUTO_MODERATION_RULE_CREATE, label: null };
     intl61 = closure_0(closure_3[18]).intl;
-    obj125.label = intl61.string(closure_0(closure_3[18]).t.syAApU);
-    items[59] = obj125;
-    obj126 = { value: AuditLogActions.GUILD_HOME_FEATURE_ITEM, label: null };
+    obj127.label = intl61.string(closure_0(closure_3[18]).t.f72Zqb);
+    items[59] = obj127;
+    obj128 = { value: AuditLogActions.AUTO_MODERATION_RULE_UPDATE, label: null };
     intl62 = closure_0(closure_3[18]).intl;
-    obj126.label = intl62.string(closure_0(closure_3[18]).t.lhG5KN);
-    items[60] = obj126;
-    obj127 = { value: AuditLogActions.GUILD_HOME_REMOVE_ITEM, label: null };
+    obj128.label = intl62.string(closure_0(closure_3[18]).t.XeqIiv);
+    items[60] = obj128;
+    obj129 = { value: AuditLogActions.AUTO_MODERATION_RULE_DELETE, label: null };
     intl63 = closure_0(closure_3[18]).intl;
-    obj127.label = intl63.string(closure_0(closure_3[18]).t.lRPRwS);
-    items[61] = obj127;
-    obj128 = { value: AuditLogActions.SOUNDBOARD_SOUND_CREATE, label: null };
+    obj129.label = intl63.string(closure_0(closure_3[18]).t.syAApU);
+    items[61] = obj129;
+    obj130 = { value: AuditLogActions.GUILD_HOME_FEATURE_ITEM, label: null };
     intl64 = closure_0(closure_3[18]).intl;
-    obj128.label = intl64.string(closure_0(closure_3[18]).t.yoRi5r);
-    items[62] = obj128;
-    obj129 = { value: AuditLogActions.SOUNDBOARD_SOUND_UPDATE, label: null };
+    obj130.label = intl64.string(closure_0(closure_3[18]).t.lhG5KN);
+    items[62] = obj130;
+    obj131 = { value: AuditLogActions.GUILD_HOME_REMOVE_ITEM, label: null };
     intl65 = closure_0(closure_3[18]).intl;
-    obj129.label = intl65.string(closure_0(closure_3[18]).t.uKlG0Z);
-    items[63] = obj129;
-    obj130 = { value: AuditLogActions.SOUNDBOARD_SOUND_DELETE, label: null };
+    obj131.label = intl65.string(closure_0(closure_3[18]).t.lRPRwS);
+    items[63] = obj131;
+    obj132 = { value: AuditLogActions.SOUNDBOARD_SOUND_CREATE, label: null };
     intl66 = closure_0(closure_3[18]).intl;
-    obj130.label = intl66.string(closure_0(closure_3[18]).t.gq0iCT);
-    items[64] = obj130;
-    obj131 = { value: AuditLogActions.VOICE_CHANNEL_STATUS_CREATE, label: null };
+    obj132.label = intl66.string(closure_0(closure_3[18]).t.yoRi5r);
+    items[64] = obj132;
+    obj133 = { value: AuditLogActions.SOUNDBOARD_SOUND_UPDATE, label: null };
     intl67 = closure_0(closure_3[18]).intl;
-    obj131.label = intl67.string(closure_0(closure_3[18]).t.rGr0YM);
-    items[65] = obj131;
-    obj132 = { value: AuditLogActions.VOICE_CHANNEL_STATUS_DELETE, label: null };
+    obj133.label = intl67.string(closure_0(closure_3[18]).t.uKlG0Z);
+    items[65] = obj133;
+    obj134 = { value: AuditLogActions.SOUNDBOARD_SOUND_DELETE, label: null };
     intl68 = closure_0(closure_3[18]).intl;
-    obj132.label = intl68.string(closure_0(closure_3[18]).t.V9PEQ4);
-    items[66] = obj132;
+    obj134.label = intl68.string(closure_0(closure_3[18]).t.gq0iCT);
+    items[66] = obj134;
+    obj135 = { value: AuditLogActions.VOICE_CHANNEL_STATUS_CREATE, label: null };
+    intl69 = closure_0(closure_3[18]).intl;
+    obj135.label = intl69.string(closure_0(closure_3[18]).t.rGr0YM);
+    items[67] = obj135;
+    obj136 = { value: AuditLogActions.VOICE_CHANNEL_STATUS_DELETE, label: null };
+    intl70 = closure_0(closure_3[18]).intl;
+    obj136.label = intl70.string(closure_0(closure_3[18]).t.V9PEQ4);
+    items[68] = obj136;
     return items;
   }
 }
 let obj = {
-  [fn(4865).TimeUnits.SECONDS]: (seconds) => {
+  [fn(4895).TimeUnits.SECONDS]: (seconds) => {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.geSp4K, { seconds });
   },
-  [fn(4865).TimeUnits.MINUTES]: (minutes) => {
+  [fn(4895).TimeUnits.MINUTES]: (minutes) => {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.iXLF9W, { minutes });
   },
-  [fn(4865).TimeUnits.HOURS]: (hours) => {
+  [fn(4895).TimeUnits.HOURS]: (hours) => {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.xCjYxK, { hours });
   },
-  [fn(4865).TimeUnits.DAYS]: (days) => {
+  [fn(4895).TimeUnits.DAYS]: (days) => {
     const intl = util.intl;
     return intl.formatToPlainString(util.t["k2UNz+"], { days });
   },
@@ -901,7 +911,7 @@ export const getChangeStrings = function getChangeStrings(targetType) {
           __3TkD = __3TkD(1115).t.MWp6H7;
           obj20[AuditLogChangeKeys.TEMPORARY] = (newValue) => (newValue.newValue ? __3TkD : _5kDYS3);
           const obj23 = {};
-          obj23[__3TkD(8005).GuildInviteFlags.IS_GUEST_INVITE] = __3TkD(1115).t.XYZMbL;
+          obj23[__3TkD(8035).GuildInviteFlags.IS_GUEST_INVITE] = __3TkD(1115).t.XYZMbL;
           __3TkD = obj23;
           obj20[AuditLogChangeKeys.FLAGS] = (arg0) => __3TkD[arg0.newValue];
           obj20[AuditLogChangeKeys.ROLE_IDS] = () => __3TkD(1115).t.gb1Owj;
@@ -1545,6 +1555,8 @@ export const getChangeTitle = function getChangeTitle(log) {
     return util.t.uhtbNU;
   } else if (constants.CHANNEL_OVERWRITE_DELETE === action) {
     return util.t["HASt/3"];
+  } else if (constants.CHANNEL_POSITION_UPDATE === action) {
+    return util.t.d3aX5b;
   } else if (constants.MEMBER_KICK === action) {
     return util.t.B5hDZX;
   } else if (constants.MEMBER_PRUNE === action) {
@@ -1569,6 +1581,8 @@ export const getChangeTitle = function getChangeTitle(log) {
     return util.t.NRbN18;
   } else if (constants.ROLE_DELETE === action) {
     return util.t["4s63tb"];
+  } else if (constants.ROLE_POSITION_UPDATE === action) {
+    return util.t.jZeaoW;
   } else if (constants.INVITE_CREATE === action) {
     return util.t.YHOXWy;
   } else if (constants.INVITE_UPDATE === action) {
@@ -1643,7 +1657,7 @@ export const getChangeTitle = function getChangeTitle(log) {
             const newValue2 = found1.newValue;
             if (constants6.PRIVATE_THREAD === newValue2) {
               return util.t.Br0y5w;
-            } else if (tmp200.ANNOUNCEMENT_THREAD === newValue2) {
+            } else if (tmp204.ANNOUNCEMENT_THREAD === newValue2) {
               return util.t["6uaMmO"];
             } else {
               return util.t["2cxQ7G"];
@@ -2555,7 +2569,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
                             let tmp10 = null;
                             if (tmp9) {
                               tmp10 = ((channel) =>
-                                result3(4989).computeChannelName(channel, user, closure_1_12, true))(tmp7);
+                                result3(5019).computeChannelName(channel, user, closure_1_12, true))(tmp7);
                             }
                             let tmp11 = tmp10;
                             if (null == tmp10) {
@@ -2641,7 +2655,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
           const tmp205 = ((targetId16) => closure_1_10.getChannel(targetId16))(targetId16);
           let tmp208 = null;
           if (tmp207) {
-            tmp208 = ((channel) => result3(4989).computeChannelName(channel, user, closure_1_12, true))(tmp205);
+            tmp208 = ((channel) => result3(5019).computeChannelName(channel, user, closure_1_12, true))(tmp205);
           }
           let tmp209 = tmp208;
           if (null == tmp208) {
@@ -2686,8 +2700,8 @@ export const transformLogs = function transformLogs(arr, arg1) {
           let id = result1.options.id;
           user = user.getUser(id);
           if (tmp224) {
-            id = items(4678).getUserTag(user);
-            let obj4 = items(4678);
+            id = items(4708).getUserTag(user);
+            let obj4 = items(4708);
           }
           obj.subtarget = id;
           tmp224 = null != user && true;
@@ -2759,8 +2773,8 @@ export const transformLogs = function transformLogs(arr, arg1) {
               (event_exception_id) => event_exception_id.event_exception_id === result3.options.event_exception_id,
             );
           }
-          let obj5 = closure_0(4512);
-          const tmp244 = items(4421);
+          let obj5 = closure_0(4542);
+          const tmp244 = items(4451);
           let str5;
           if (found20 != null) {
             str5 = found20.event_exception_id;
@@ -3362,14 +3376,14 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                               const _Date = Date;
                                               obj = DateUtils;
                                               const date = new Date(newValue2);
-                                              newValue = obj.dateFormat(_modDef4421(date), "LLLL");
+                                              newValue = obj.dateFormat(_modDef4451(date), "LLLL");
                                             }
                                             if (null != newValue.oldValue) {
                                               const oldValue2 = newValue.oldValue;
                                               const _Date2 = Date;
                                               const obj2 = DateUtils;
                                               const date1 = new Date(oldValue2);
-                                              oldValue = obj2.dateFormat(_modDef4421(date1), "LLLL");
+                                              oldValue = obj2.dateFormat(_modDef4451(date1), "LLLL");
                                             }
                                             if (!oldValue) {
                                               oldValue = newValue.oldValue;
@@ -3483,13 +3497,15 @@ export const transformLogs = function transformLogs(arr, arg1) {
       }
       items.push(tmp247);
     } else {
-      let items1 = [, , , ,];
+      let items1 = [, , , , , ,];
       ({
         MEMBER_PRUNE: arr19[0],
         MEMBER_DISCONNECT: arr19[1],
         MEMBER_MOVE: arr19[2],
-        CREATOR_MONETIZATION_REQUEST_CREATED: arr19[3],
-        CREATOR_MONETIZATION_TERMS_ACCEPTED: arr19[4],
+        CHANNEL_POSITION_UPDATE: arr19[3],
+        ROLE_POSITION_UPDATE: arr19[4],
+        CREATOR_MONETIZATION_REQUEST_CREATED: arr19[5],
+        CREATOR_MONETIZATION_TERMS_ACCEPTED: arr19[6],
       } = closure_1_15);
     }
   });

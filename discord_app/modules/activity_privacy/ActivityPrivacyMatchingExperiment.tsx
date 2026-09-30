@@ -1,9 +1,8 @@
 // discord_app/modules/activity_privacy/ActivityPrivacyMatchingExperiment.tsx
-import PrivateProfilesExperiment from "../user_profile/PrivateProfilesExperiment.tsx";
 import ApexExperiment from "../experiments/apex/index.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let closure_2 = ApexExperiment.createApexExperiment({
+let closure_0 = ApexExperiment.createApexExperiment({
   name: "2026-02-activity-privacy-matching",
   kind: "user",
   defaultConfig: { copyChanges: false, upsell: false },
@@ -18,19 +17,12 @@ const result = size.fileFinishedImporting("modules/activity_privacy/ActivityPriv
 export const useIsInActivityPrivacyCopyExperiment = function useIsInActivityPrivacyCopyExperiment(
   ActivityPrivacyDefaultSharingSetting,
 ) {
-  let copyChanges = PrivateProfilesExperiment.useIsInPrivateProfilesExperiment(ActivityPrivacyDefaultSharingSetting);
-  if (!copyChanges) {
-    copyChanges = closure_2.useConfig(obj2).copyChanges;
-  }
-  return copyChanges;
+  const config = closure_0.useConfig({ location: ActivityPrivacyDefaultSharingSetting });
+  return true;
 };
 export const getIsInActivityPrivacyUpsellExperiment = function getIsInActivityPrivacyUpsellExperiment(
   ActivityPrivacyDefaultSharingSetting,
 ) {
-  let upsell = PrivateProfilesExperiment.getIsInPrivateProfilesExperiment(ActivityPrivacyDefaultSharingSetting);
-  if (!upsell) {
-    const obj2 = { location: ActivityPrivacyDefaultSharingSetting };
-    upsell = closure_2.getConfig(obj2).upsell;
-  }
-  return upsell;
+  const config = closure_0.getConfig({ location: ActivityPrivacyDefaultSharingSetting });
+  return true;
 };

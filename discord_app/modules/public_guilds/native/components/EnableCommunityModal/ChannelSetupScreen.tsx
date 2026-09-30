@@ -12,8 +12,8 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let closure_9 = fn(4467).GUILD_SELECTABLE_CHANNELS_KEY;
-const CREATE_NEW_CHANNEL_VALUE = fn(7644).CREATE_NEW_CHANNEL_VALUE;
+let closure_9 = fn(4497).GUILD_SELECTABLE_CHANNELS_KEY;
+const CREATE_NEW_CHANNEL_VALUE = fn(7674).CREATE_NEW_CHANNEL_VALUE;
 const ChannelTypes = fn(1074).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
@@ -98,10 +98,10 @@ export default function ChannelSetupScreen() {
     obj2.title = intl.string(util.t.Yr6nGx);
     obj2.items = callback();
     obj2.onItemSelect = function onItemSelect(rulesChannelId) {
-      rulesChannel(9213).updateGuild({ rulesChannelId });
-      const obj = rulesChannel(9213);
+      rulesChannel(9247).updateGuild({ rulesChannelId });
+      const obj = rulesChannel(9247);
       const obj2 = { rulesChannelId };
-      rulesChannel(4800).hideActionSheet();
+      rulesChannel(4830).hideActionSheet();
     };
     let id;
     if (rulesChannel != null) {
@@ -111,7 +111,7 @@ export default function ChannelSetupScreen() {
       id = CREATE_NEW_CHANNEL_VALUE;
     }
     obj2.selectedItem = id;
-    obj.openLazy(asyncRequireImpl(8894, dependencyMap.paths), "SelectRulesChannel", obj2);
+    obj.openLazy(asyncRequireImpl(8928, dependencyMap.paths), "SelectRulesChannel", obj2);
   }, items3);
   const callback2 = obj.useCallback(() => {
     let obj2 = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
@@ -120,10 +120,10 @@ export default function ChannelSetupScreen() {
     obj2.title = intl.string(util.t.VqhxxN);
     obj2.items = callback();
     obj2.onItemSelect = function onItemSelect(publicUpdatesChannelId) {
-      rulesChannel(9213).updateGuild({ publicUpdatesChannelId });
-      const obj = rulesChannel(9213);
+      rulesChannel(9247).updateGuild({ publicUpdatesChannelId });
+      const obj = rulesChannel(9247);
       const obj2 = { publicUpdatesChannelId };
-      rulesChannel(4800).hideActionSheet();
+      rulesChannel(4830).hideActionSheet();
     };
     let id;
     if (publicUpdatesChannel != null) {
@@ -133,7 +133,7 @@ export default function ChannelSetupScreen() {
       id = CREATE_NEW_CHANNEL_VALUE;
     }
     obj2.selectedItem = id;
-    obj.openLazy(asyncRequireImpl(8894, dependencyMap.paths), "SelectUpdatesChannel", obj2);
+    obj.openLazy(asyncRequireImpl(8928, dependencyMap.paths), "SelectUpdatesChannel", obj2);
   }, items4);
   const obj6 = {
     headerRef: ref,

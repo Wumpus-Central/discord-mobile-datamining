@@ -4,7 +4,7 @@ import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import NotificationPermissionUtil from "../../NotificationPermissionUtil.tsx";
 import PushNotificationActionCreators from "../../../../../actions/native/PushNotificationActionCreators.tsx";
 import NewUserPermissionsOnboardingDefault from "../NewUserPermissionsOnboarding.android.tsx";
-import _modDef15800 from "../../../../../../_runtime/metro/15800__.js";
+import _modDef15825 from "../../../../../../_runtime/metro/15825__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -55,12 +55,12 @@ class RedesignNotificationModal {
 }
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const PermissionStateType = fn(12073).PermissionStateType;
-const NotificationPermissionConstants = fn(12074);
+const PermissionStateType = fn(12107).PermissionStateType;
+const NotificationPermissionConstants = fn(12108);
 ({ EventActionLocation: closure_7, EventActionType: closure_8 } = NotificationPermissionConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsx = fn(21).jsx;
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj2 = {
   container: {
     flex: 1,

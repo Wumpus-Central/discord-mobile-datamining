@@ -12,7 +12,7 @@ function Slot(index) {
   const stagger = index.stagger;
   const tmp = closure_16(size);
   const glyph = tmp;
-  const sharedValue = index(4566).useSharedValue(0);
+  const sharedValue = index(4596).useSharedValue(0);
   let items = [cycle, index, sharedValue, stagger];
   const effect = cycle.useEffect(() => {
     const result = sharedValue.set(0);
@@ -31,7 +31,7 @@ function Slot(index) {
     );
     return () => index(color[5]).cancelAnimation(sharedValue);
   }, items);
-  let obj = index(4566);
+  let obj = index(4596);
   class T {
     constructor() {
       value = closure_6.get();
@@ -73,10 +73,10 @@ function Slot(index) {
   T.__workletHash = 16632594382704;
   T.__initData = __initData;
   const obj4 = { style: tmp.slot, children: null };
-  const animatedStyle = index(4566).useAnimatedStyle(T);
-  let obj2 = index(4566);
+  const animatedStyle = index(4596).useAnimatedStyle(T);
+  let obj2 = index(4596);
   let obj3 = { trackStepAt, progress: sharedValue, size };
-  obj4.children = jsx(size(4566).View, {
+  obj4.children = jsx(size(4596).View, {
     style: animatedStyle,
     children: closure_7.map((children) =>
       jsx(AIGlyphText.AIGlyphText, { size, color, allowFontScaling: false, style: glyph.glyph, children }, children),
@@ -85,7 +85,7 @@ function Slot(index) {
   return <stagger style={tmp.slot}>{null}</stagger>;
 }
 const View = fn(17).View;
-const AILoaderConstants = fn(14105);
+const AILoaderConstants = fn(14132);
 ({
   AI_LOADER_CYCLE_MS: hasOwnProperty,
   AI_LOADER_GAP_EM: metroRequire,
@@ -112,7 +112,7 @@ trackStepAt.__workletHash = 2403964493846;
 trackStepAt.__initData = {
   code: "function trackStepAt_AILoaderNativeTsx1(progress){const{AI_LOADER_REST_FRACTION,AI_LOADER_TRACK_STEPS,AI_LOADER_STEP_FRACTION}=this.__closure;if(progress<AI_LOADER_REST_FRACTION)return AI_LOADER_TRACK_STEPS[0];const step=Math.floor((progress-AI_LOADER_REST_FRACTION)/AI_LOADER_STEP_FRACTION)+1;return AI_LOADER_TRACK_STEPS[Math.min(step,AI_LOADER_TRACK_STEPS.length-1)];}",
 };
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let closure_16 = createStyles.createStyles((width) => {
   const obj = {
     loader: { flexDirection: "row", gap: width * timestampProducer },
@@ -138,7 +138,7 @@ export const AILoader = noop.memo((size) => {
   }
   const accessibilityLabel = size.accessibilityLabel;
   let num2;
-  const reducedMotion = num2.useContext(num(4540).AccessibilityPreferencesContext).reducedMotion;
+  const reducedMotion = num2.useContext(num(4570).AccessibilityPreferencesContext).reducedMotion;
   dependencyMap = reducedMotion.enabled ? closure_8 : closure_5;
   num2 = 0;
   if (!reducedMotion.enabled) {

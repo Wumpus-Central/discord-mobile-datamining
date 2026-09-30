@@ -65,21 +65,21 @@ function UsernameStatusMessage(arg0) {
   return tmp6;
 }
 let closure_3 = ["username"];
-const RegistrationUIStore = fn(15745);
+const RegistrationUIStore = fn(15770);
 ({ setRegistrationErrors: closure_7, useRegistrationUIStore: closure_8 } = RegistrationUIStore);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let closure_12 = createStyles.createStyles({ status: { width: "90%" }, inputHint: { width: "100%" } });
 let obj2 = { entering: null, exiting: null };
-const FadeIn = fn(4566).FadeIn;
+const FadeIn = fn(4596).FadeIn;
 obj2.entering = FadeIn.duration(300);
-const FadeOut = fn(4566).FadeOut;
+const FadeOut = fn(4596).FadeOut;
 obj2.exiting = FadeOut.duration(300);
 let obj3 = { layout: null };
-const LinearTransition = fn(4566).LinearTransition;
-const Easing = fn(4566).Easing;
-obj3.layout = LinearTransition.easing(Easing.inOut(fn(4566).Easing.quad)).duration(300);
+const LinearTransition = fn(4596).LinearTransition;
+const Easing = fn(4596).Easing;
+obj3.layout = LinearTransition.easing(Easing.inOut(fn(4596).Easing.quad)).duration(300);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/RegisterUsernameInput.tsx");
 
@@ -158,14 +158,14 @@ export const RegisterUsernameInput = function RegisterUsernameInput(setUsername)
     type = usernameStatus.type;
   }
   let str2;
-  if (type === tmp14(14440).NameValidationState.ERROR) {
+  if (type === tmp14(14471).NameValidationState.ERROR) {
     str2 = "error";
   }
   const obj6 = { children: null };
   obj3.status = str2;
   obj3.submitBehavior = submitBehavior;
   const items3 = [
-    closure_9(setUsername(6190).TextInput, obj3),
+    closure_9(setUsername(6220).TextInput, obj3),
     closure_9(UsernameStatusMessage, { usernameStatus, isUsernameFocused: tmp5[0] }),
   ];
   obj6.children = items3;

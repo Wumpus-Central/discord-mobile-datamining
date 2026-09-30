@@ -65,8 +65,8 @@ export const createEmptyEditInfo = function createEmptyEditInfo() {
     errorCallbacks: [],
     loaded: false,
     loading: "channel",
-    triggeredMigrations: "Array",
-    offlineEditDataVersion: "channel",
+    triggeredMigrations: "<string:3243311464>",
+    offlineEditDataVersion: "<string:108138996>",
   };
   return obj;
 };

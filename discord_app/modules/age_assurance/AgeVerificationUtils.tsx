@@ -213,7 +213,7 @@ function useShouldCallReactiveCheck() {
   _require = tmp5;
   obj = require("initialize");
   const isFeatureAgeGated = require("RegionalFeatureConfigUtils").useIsFeatureAgeGated(
-    tmp(5903).AgeGatedFeature.REACTIVE_CHECK,
+    tmp(5933).AgeGatedFeature.REACTIVE_CHECK,
   );
   const tmpResult = require("RegionalFeatureConfigUtils");
   const items1 = [AgeVerificationStore];
@@ -313,16 +313,16 @@ let closure_24 = async function _maybePerformReactiveCheck() {
     }
   }
 };
-fn(8025).FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS;
+fn(8055).FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS;
 const Constants = fn(1074);
 ({ AbortCodes: map1, MessageEmbedTypes: closure_14 } = Constants);
 const AgeGateConstants = fn(1099);
 ({ AgeGateSource, REACTIVE_CHECK_AGE_GATE_SOURCES: closure_15 } = AgeGateConstants);
-const SafetyToastType = fn(8012).SafetyToastType;
+const SafetyToastType = fn(8042).SafetyToastType;
 let items = [
-  fn(8026).AgeVerificationModalEntryPoint.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT,
-  fn(8026).AgeVerificationModalEntryPoint.START_STAGE_PROMPT,
-  fn(8026).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND,
+  fn(8056).AgeVerificationModalEntryPoint.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT,
+  fn(8056).AgeVerificationModalEntryPoint.START_STAGE_PROMPT,
+  fn(8056).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND,
 ];
 const set = new Set(items);
 let items1 = [, , , , ,];

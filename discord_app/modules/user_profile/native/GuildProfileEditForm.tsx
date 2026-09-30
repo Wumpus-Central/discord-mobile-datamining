@@ -50,7 +50,7 @@ function EditGuildProfileBanner(user) {
     if (c4) {
       const obj = { user, analyticsLocations, showRemoveBanner: null, removeText: null, onBannerChange: null };
       const tmpResult = ActionSheetActionCreatorsDefault;
-      const tmp13 = asyncRequireImpl(14321, dependencyMap.paths);
+      const tmp13 = asyncRequireImpl(14350, dependencyMap.paths);
       banner = undefined;
       if (banner != null) {
         banner = banner.banner;
@@ -85,7 +85,7 @@ function EditGuildProfileBanner(user) {
   obj3.editButtonAccessibilityLabel = intl.string(user(1115).t["95hPAe"]);
   obj3.editDisabled = disabled;
   obj2.children = closure_16(UserProfileEditBannerButtonDefault, obj3);
-  return closure_16(user(6749).AnalyticsLocationProvider, obj2);
+  return closure_16(user(6779).AnalyticsLocationProvider, obj2);
 }
 function GuildProfileTryItOutUpsellExperimentWrapper(onButtonPress) {
   onButtonPress = onButtonPress.onButtonPress;

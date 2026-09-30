@@ -123,11 +123,11 @@ function takeVibegrationsAttachmentRefs(projectId, chat) {
     });
   }
 }
-const VibegrationsConnectionStore = fn(12812);
+const VibegrationsConnectionStore = fn(12842);
 ({ deleteStagedAttachment: closure_4, sendUserMessage: hasOwnProperty } = VibegrationsConnectionStore);
 let closure_7 = [];
 let c8 = 1;
-const zustandStore = fn(4705).createZustandStore(() => ({ draftsByProject: {} }));
+const zustandStore = fn(4735).createZustandStore(() => ({ draftsByProject: {} }));
 let Dispatcher = Dispatcher_mod;
 const subscription = Dispatcher.subscribe("LOGOUT", () => {
   const keys = Object.keys(zustandStore.getState().draftsByProject);

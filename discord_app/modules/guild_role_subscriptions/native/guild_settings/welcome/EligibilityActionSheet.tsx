@@ -9,7 +9,7 @@ const UserSettingsSections = fn(1074).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const EligibilityActionSheet = "EligibilityActionSheet";
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let closure_8 = createStyles.createStyles({
   container: { flex: 1, paddingHorizontal: 0 },
   title: { marginHorizontal: 24, marginTop: 16 },
@@ -27,11 +27,11 @@ export default function EligibilityActionSheet(onRequireModeratorMFAClick) {
     () => ({
       actions: {
         onEnableMFAClick() {
-          closure_1_1(4800).hideActionSheet(closure_1_7);
-          const obj = closure_1_1(4800);
-          closure_1_1(9213).close();
-          const obj2 = closure_1_1(9213);
-          onRequireModeratorMFAClick(6966).openUserSettings({ screen: constants.ACCOUNT });
+          closure_1_1(4830).hideActionSheet(closure_1_7);
+          const obj = closure_1_1(4830);
+          closure_1_1(9247).close();
+          const obj2 = closure_1_1(9247);
+          onRequireModeratorMFAClick(6996).openUserSettings({ screen: constants.ACCOUNT });
         },
         onRequireModeratorMFAClick() {
           ActionSheetActionCreatorsDefault.hideActionSheet(EligibilityActionSheet);
@@ -46,13 +46,13 @@ export default function EligibilityActionSheet(onRequireModeratorMFAClick) {
   let obj2 = { style: tmp.title, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = onRequireModeratorMFAClick(1115).intl;
   obj2.children = intl.string(onRequireModeratorMFAClick(1115).t["3s47iN"]);
-  const items1 = [closure_5(onRequireModeratorMFAClick(4832).Heading, obj2)];
+  const items1 = [closure_5(onRequireModeratorMFAClick(4862).Heading, obj2)];
   const tmp3 = useCreatorMonetizationEligibilityItemsDefault(onRequireModeratorMFAClick.eligibility, memo);
   items1[1] = closure_5(EligibilityChecklistDefault, {
     style: tmp.container,
     items: useCreatorMonetizationEligibilityItemsDefault(onRequireModeratorMFAClick.eligibility, memo),
   });
   obj.children = items1;
-  return closure_6(onRequireModeratorMFAClick(6737).BottomSheet, obj);
+  return closure_6(onRequireModeratorMFAClick(6767).BottomSheet, obj);
 }
 export const ELIGIBILITY_ACTION_SHEET_KEY = "EligibilityActionSheet";

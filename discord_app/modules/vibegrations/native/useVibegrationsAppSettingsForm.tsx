@@ -102,7 +102,7 @@ function VibegrationsChannelSettingRow(projectId) {
   return fallback;
 }
 const View = fn(17).View;
-let VibegrationsConnectionStore = fn(12812);
+let VibegrationsConnectionStore = fn(12842);
 ({
   requestProjectRebuild: closure_12,
   sendUserMessage: map1,
@@ -111,7 +111,7 @@ let VibegrationsConnectionStore = fn(12812);
 let VibegrationsConnectionStore = VibegrationsConnectionStore_mod;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj2 = { section: { gap: nativeDefault.space.PX_16 }, secretRow: null, secretRowInfo: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.secretRow = {
@@ -667,9 +667,9 @@ export default function useVibegrationsAppSettingsForm(projectId) {
                   if (application_id == null) {
                     _null = null;
                   }
-                  _null2(12621)(_null);
+                  _null2(12651)(_null);
                   let prop;
-                  const tmp19 = _null2(12621);
+                  const tmp19 = _null2(12651);
                   if (project2 != null) {
                     prop = project2.preview_application_id;
                   }
@@ -677,8 +677,8 @@ export default function useVibegrationsAppSettingsForm(projectId) {
                   if (prop == null) {
                     _null2 = null;
                   }
-                  _null2(12621)(_null2);
-                  const tmp27 = _null2(12621);
+                  _null2(12651)(_null2);
+                  const tmp27 = _null2(12651);
                 }
                 c5 = 0;
                 closure_131_12(false);

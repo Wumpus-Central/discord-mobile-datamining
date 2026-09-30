@@ -34,6 +34,9 @@ const obj2 = {
       str
     );
   },
+  IMAGE(arg0) {
+    return "https://i.scdn.co/image/" + encodeURIComponent(arg0);
+  },
   EMBED(arg0) {
     let str = arg1;
     if (arg1 === undefined) {
@@ -58,6 +61,7 @@ const obj2 = {
     }
     return "" + spotify + ":" + encodeURIComponentResult + ":" + encodeURIComponent(sync_id) + str2;
   },
+  WEB_HOME: "https://open.spotify.com/" + "?utm_source=discord&utm_medium=" + "desktop",
   PREMIUM_SITE: "https://www.spotify.com/premium/" + "?utm_source=discord&utm_medium=" + "desktop",
   INSTALL_ATTRIBUTION(Identifier) {
     return "https://app.adjust.com/bdyga9?campaign=" + Identifier;

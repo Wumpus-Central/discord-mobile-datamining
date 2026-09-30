@@ -10,12 +10,12 @@ import TableRow from "../../../design/components/TableRow/native/TableRow.native
 import XSmallIcon from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
 import TableRowGroup from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import SettingsIcon from "../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
+import CreditCardIcon from "../../../design/components/Icon/native/redesign/generated/CreditCardIcon.tsx";
 import FlagIcon from "../../../design/components/Icon/native/redesign/generated/FlagIcon.tsx";
 import ServerIcon from "../../../design/components/Icon/native/redesign/generated/ServerIcon.tsx";
 import GiftIcon from "../../../design/components/Icon/native/redesign/generated/GiftIcon.tsx";
 import useAgeSpecificText from "../hooks/useAgeSpecificText.tsx";
 import PhoneIcon from "../../../design/components/Icon/native/redesign/generated/PhoneIcon.tsx";
-import CreditCardIcon from "../../../design/components/Icon/native/redesign/generated/CreditCardIcon.tsx";
 import PiggyBankIcon from "../../../design/components/Icon/native/redesign/generated/PiggyBankIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 

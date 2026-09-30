@@ -23,7 +23,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 function ViewDebugLogsActionSheetRow(icon) {
   const title = icon.title;
   ({ screenKey: importDefault, render: dependencyMap } = icon);
-  return closure_5(title(6786).ActionSheetRow, {
+  return closure_5(title(6816).ActionSheetRow, {
     icon: icon.icon,
     label: title,
     onPress() {

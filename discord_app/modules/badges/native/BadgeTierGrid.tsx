@@ -3,15 +3,15 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import LockIcon from "../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
-import BadgeUtils from "../BadgeUtils.tsx";
 import BadgeArtImageDefault from "BadgeArtImage.tsx";
+import BadgeUtils from "../BadgeUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj2 = {
   section: { gap: nativeDefault.space.PX_16 },
   grid: null,
@@ -72,7 +72,7 @@ export default function BadgeTierGrid(badge) {
     let intl = badge(1115).intl;
     let obj3 = { username: targetUsername };
     obj2.children = intl.formatToPlainString(badge(1115).t.KyTwIh, obj3);
-    isViewingOtherUser = closure_4(badge(4832).Text, obj2);
+    isViewingOtherUser = closure_4(badge(4862).Text, obj2);
   }
   let items = [isViewingOtherUser];
   let obj4 = { style: tmp.grid, accessibilityRole: "list", children: null };

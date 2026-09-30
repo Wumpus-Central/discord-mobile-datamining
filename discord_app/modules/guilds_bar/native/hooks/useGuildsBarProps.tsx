@@ -73,8 +73,8 @@ function isAnchorIdEqual(arg0, arg1, arg2) {
   }
   return tmp;
 }
-const GuildsNodeType = fn(5917).GuildsNodeType;
-const GuildsBarConstants = fn(16094);
+const GuildsNodeType = fn(5947).GuildsNodeType;
+const GuildsBarConstants = fn(16123);
 ({ FastListRenderSections: closure_17, useGuildWrapperSize: closure_18 } = GuildsBarConstants);
 const jsx = fn(21).jsx;
 let closure_21 = {
@@ -498,27 +498,27 @@ export default function useGuildsBarProps(arg0) {
         const obj = {
           children: items1.map((item) => {
             if ("unavailable-guilds" === item) {
-              return closure_1_19(closure_1_1(16162), {}, item);
+              return closure_1_19(closure_1_1(16191), {}, item);
             } else if ("empty-nux" === item) {
-              return closure_1_19(closure_1_1(16163), {}, item);
+              return closure_1_19(closure_1_1(16192), {}, item);
             } else if ("create-join-guild" === item) {
-              return closure_1_19(closure_1_1(16165), {}, item);
+              return closure_1_19(closure_1_1(16194), {}, item);
             }
           }),
         };
         return jsx(GuildsBarFooterWrapperDefault, {
           children: items1.map((item) => {
             if ("unavailable-guilds" === item) {
-              return closure_1_19(closure_1_1(16162), {}, item);
+              return closure_1_19(closure_1_1(16191), {}, item);
             } else if ("empty-nux" === item) {
-              return closure_1_19(closure_1_1(16163), {}, item);
+              return closure_1_19(closure_1_1(16192), {}, item);
             } else if ("create-join-guild" === item) {
-              return closure_1_19(closure_1_1(16165), {}, item);
+              return closure_1_19(closure_1_1(16194), {}, item);
             }
           }),
         });
       };
-      obj.getRecyclerKey = function getRecyclerKey(ITEM, section, item1) {
+      obj.getRecyclerKey = function getRecyclerKey(SECTION, section, item1) {
         if (section >= stateFromStores3.GUILDS) {
           const element = guildsNFolders[section - tmp3.GUILDS];
           if (null != element) {
@@ -535,8 +535,8 @@ export default function useGuildsBarProps(arg0) {
           }
         }
       };
-      obj.renderAccessory = function renderAccessory(self) {
-        return memo(closure_1_1(token[28]), { fastList: self });
+      obj.renderAccessory = function renderAccessory(memo1) {
+        return memo(closure_1_1(token[28]), { fastList: memo1 });
       };
       obj.getAnchorIdFromIndex = function getAnchorIdFromIndex(section, item) {
         if (null == pendingFolderNode.getState().dropSpecs) {

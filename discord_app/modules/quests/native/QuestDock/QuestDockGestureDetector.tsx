@@ -1,7 +1,7 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockGestureDetector.tsx
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06239_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06269_LegacyBaseButton.js";
 import QuestDockUtils from "QuestDockUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -517,8 +517,8 @@ function useQuestDockSwipeGesture() {
   const animatedReaction = obj9.useAnimatedReaction(W, X);
   return memo;
 }
-const QuestDockMode = fn(5923).QuestDockMode;
-const QuestDockConstants = fn(14799);
+const QuestDockMode = fn(5953).QuestDockMode;
+const QuestDockConstants = fn(14830);
 ({
   QUEST_DOCK_COLLAPSED_HEIGHT: hasOwnProperty,
   QUEST_DOCK_CLOSED_HEIGHT: metroRequire,

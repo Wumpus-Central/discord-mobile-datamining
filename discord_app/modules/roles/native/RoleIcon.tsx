@@ -15,6 +15,14 @@ export default function RoleIcon(arg0) {
     size = 20;
   }
   const size1 = { height: size, width: size };
+  const obj = {
+    fontFamily: "System",
+    fontSize: size * num,
+    lineHeight: "channel",
+    textAlign: "accessibilityLabel",
+    width: size,
+    marginBottom: "disabled",
+  };
   if (null != src) {
     const obj2 = { resizeMode: "contain", source: null, style: null };
     const obj3 = { uri: src };

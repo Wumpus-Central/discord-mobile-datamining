@@ -109,7 +109,7 @@ function TraceOverview(arg0) {
   let reduced;
   let tmp = closure_9();
   closure_1 = tmp;
-  dependencyMap = entries(16601).useTraceCategoryFillStyles();
+  dependencyMap = entries(16636).useTraceCategoryFillStyles();
   let items = [entries];
   const memo = reduced.useMemo(() => VibegrationsTraceUtils.traceCategoryTotals(entries), items);
   reduced = memo.reduce((acc, ms) => acc + ms.ms, 0);
@@ -139,7 +139,7 @@ function TraceOverview(arg0) {
   obj3.children = mapped;
   let items1 = [closure_7(View, obj3)];
   let obj4 = { style: tmp.legend, children: null };
-  const TRACE_CATEGORIES = entries(16603).TRACE_CATEGORIES;
+  const TRACE_CATEGORIES = entries(16638).TRACE_CATEGORIES;
   obj4.children = TRACE_CATEGORIES.map((item) => {
     closure_0 = item;
     const found = memo.find((category) => category.category === closure_0);
@@ -210,7 +210,7 @@ function itemType(kind) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj2 = {
   list: { paddingHorizontal: nativeDefault.space.PX_16 },
   header: null,

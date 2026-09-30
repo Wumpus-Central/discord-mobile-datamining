@@ -2,7 +2,7 @@
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import CommunicationDisabledUtils from "../guild_communication_disabled/CommunicationDisabledUtils.tsx";
 import AutomodPermissionUtils from "../guild_automod/AutomodPermissionUtils.tsx";
-import _modDef4955 from "../../../_runtime/metro/04955__.js";
+import _modDef4985 from "../../../_runtime/metro/04985__.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
 require = fn;
@@ -24,7 +24,7 @@ let obj = {
   selectedJoinDateOption: { optionId: 0, afterDate: null, beforeDate: null },
   selectedAccountAgeOption: { optionId: 0, afterDate: null, beforeDate: null },
   selectedJoinSourceType: "paddingHorizontal",
-  selectedSourceInviteCode: "hash",
+  selectedSourceInviteCode: "opacity",
   selectedSort: "children",
 };
 let closure_4 = Object.freeze(obj);
@@ -44,7 +44,7 @@ class GuildMemberSafetySearch {
       selectedJoinDateOption: null,
       selectedAccountAgeOption: null,
       selectedJoinSourceType: "paddingHorizontal",
-      selectedSourceInviteCode: "hash",
+      selectedSourceInviteCode: "opacity",
       selectedSort: "children",
     };
     set = new Set();
@@ -74,7 +74,7 @@ prototype["reset"] = function reset() {
     selectedJoinDateOption: { optionId: 0, afterDate: null, beforeDate: null },
     selectedAccountAgeOption: { optionId: 0, afterDate: null, beforeDate: null },
     selectedJoinSourceType: "paddingHorizontal",
-    selectedSourceInviteCode: "hash",
+    selectedSourceInviteCode: "opacity",
     selectedSort: "children",
   };
   this._searchState = obj;
@@ -84,7 +84,7 @@ prototype["updateSearchState"] = function updateSearchState(arg0) {
   const merged = Object.assign(this._searchState);
   const merged1 = Object.assign(arg0);
   this._searchState = {};
-  this.hasDefaultQuery = _modDef4955(this._searchState, closure_4);
+  this.hasDefaultQuery = _modDef4985(this._searchState, closure_4);
   return true;
 };
 prototype["resetSearchState"] = function resetSearchState() {
@@ -102,7 +102,7 @@ prototype["resetSearchState"] = function resetSearchState() {
       selectedJoinDateOption: null,
       selectedAccountAgeOption: null,
       selectedJoinSourceType: "paddingHorizontal",
-      selectedSourceInviteCode: "hash",
+      selectedSourceInviteCode: "opacity",
       selectedSort: "children",
     };
     const _Set = Set;
@@ -300,7 +300,7 @@ export const getDefaultSearchState = function getDefaultSearchState() {
     selectedJoinDateOption: { optionId: 0, afterDate: null, beforeDate: null },
     selectedAccountAgeOption: { optionId: 0, afterDate: null, beforeDate: null },
     selectedJoinSourceType: "paddingHorizontal",
-    selectedSourceInviteCode: "hash",
+    selectedSourceInviteCode: "opacity",
     selectedSort: "children",
   };
   return obj;

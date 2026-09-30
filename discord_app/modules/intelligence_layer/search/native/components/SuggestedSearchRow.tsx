@@ -7,10 +7,10 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const SmartSearchConstants = fn(12016);
+const SmartSearchConstants = fn(12050);
 ({ SUGGESTED_SEARCHES_WINDOW_SIZE: hasOwnProperty, SUGGESTED_SEARCH_COMPACT_LABEL_HEIGHT } = SmartSearchConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj = { iconCircle: null, text: null, compactLabel: null };
 let size = {
   width: 48,
@@ -58,7 +58,7 @@ export default noop.memo((suggestedSearch) => {
   }
   obj2.label = (
     <View style={compactLabel}>
-      {jsx(suggestedSearch(4832).Text, {
+      {jsx(suggestedSearch(4862).Text, {
         lineClamp: 2,
         variant: str2,
         color: "redesign-channel-name-muted-text",
@@ -78,7 +78,7 @@ export default noop.memo((suggestedSearch) => {
     style: tmp.text,
     children: suggestedSearch.suggestedSearchText,
   };
-  const tmp3Result = jsx(suggestedSearch(4832).Text, {
+  const tmp3Result = jsx(suggestedSearch(4862).Text, {
     lineClamp: 2,
     variant: str2,
     color: "redesign-channel-name-muted-text",
@@ -87,10 +87,10 @@ export default noop.memo((suggestedSearch) => {
   });
   obj2.icon = (
     <View style={iconCircle}>
-      {jsx(suggestedSearch(6638).MagnifyingGlassIcon, { size: "sm", color: "icon-muted" })}
+      {jsx(suggestedSearch(6668).MagnifyingGlassIcon, { size: "sm", color: "icon-muted" })}
     </View>
   );
-  return jsx(suggestedSearch(16642).SearchListRow, {
+  return jsx(suggestedSearch(16677).SearchListRow, {
     onPress: callback,
     accessibilityLabel: suggestedSearch.suggestedSearchText,
     label: null,

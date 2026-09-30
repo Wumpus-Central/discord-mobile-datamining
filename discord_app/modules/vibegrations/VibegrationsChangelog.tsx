@@ -109,6 +109,13 @@ const items = [
       "Ask Conjure to undo a change, or open a reply\u2019s menu and pick Restore this version, to put your app back the way it was.",
   },
   {
+    date: "2026-09-29",
+    time: "16:38",
+    platforms: ["mobile"],
+    summary:
+      "Attachments waiting in the mobile chat box show as thumbnails you can scroll through, like in any Discord chat.",
+  },
+  {
     date: "2026-09-28",
     time: "01:26",
     platforms: ["desktop", "mobile"],
@@ -279,6 +286,12 @@ const items = [
     summary: "GPT-6 Astra joins the model picker and now powers the Big Brain effort stop.",
   },
   {
+    date: "2026-09-29",
+    time: "17:55",
+    platforms: ["desktop", "mobile"],
+    summary: "GPT-6.1 Sol replaces GPT-6 Sol in the model picker and on the Balanced tier of GPT projects.",
+  },
+  {
     date: "2026-08-26",
     time: "00:00",
     platforms: ["desktop", "mobile"],
@@ -319,6 +332,13 @@ const items = [
       "Importing a big project is faster and narrates its progress, and a zip that still has node_modules or .git inside now imports cleanly, telling you what was left out.",
   },
   {
+    date: "2026-09-29",
+    time: "20:41",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "Inspire me is back under a build that just shipped: one click asks Conjure for a few ideas of what to add next.",
+  },
+  {
     date: "2026-09-26",
     time: "02:14",
     platforms: ["desktop", "mobile"],
@@ -339,10 +359,24 @@ const items = [
     summary: "Messages sent mid-task route faster: questions, follow-ups, and interrupts respond right away.",
   },
   {
+    date: "2026-09-29",
+    time: "04:10",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "Messages you send while Conjure is just getting started stay above its reply instead of landing below it.",
+  },
+  {
     date: "2026-09-21",
     time: "00:01",
     platforms: ["desktop", "mobile"],
     summary: "Moderation Bot now starts with a short wizard, builds straight away, then tells you how to test it.",
+  },
+  {
+    date: "2026-09-25",
+    time: "17:34",
+    platforms: ["desktop"],
+    summary:
+      "New server apps can ship into Discord's own app channels, and the Feature Showcase shows one app living in two of them.",
   },
   {
     date: "2026-09-22",
@@ -472,6 +506,13 @@ const items = [
     summary: "On phones, opening the chat in an app\u2019s channel now marks its messages read.",
   },
   {
+    date: "2026-09-28",
+    time: "21:49",
+    platforms: ["mobile"],
+    summary:
+      "On phones, opening the keyboard in the builder chat keeps the messages you were reading in view above it.",
+  },
+  {
     date: "2026-09-18",
     time: "00:04",
     platforms: ["mobile"],
@@ -549,11 +590,25 @@ const items = [
       "On phones, your own profile offers Custom card: describe a public source and Conjure builds a profile card from it.",
   },
   {
+    date: "2026-09-29",
+    time: "22:14",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "Once your app is live, a small tip under Conjure's latest reply says when the live version is out of date, with a link to update it.",
+  },
+  {
     date: "2026-09-02",
     time: "00:04",
     platforms: ["desktop", "mobile"],
     summary:
       "One Effort scale, from Speedrun to Big Brain, sets how much thinking goes into a run, instead of choosing models and thinking levels separately.",
+  },
+  {
+    date: "2026-09-29",
+    time: "16:45",
+    platforms: ["mobile"],
+    summary:
+      "Opening a project on your phone now lands on its newest message instead of stopping partway up the conversation.",
   },
   {
     date: "2026-09-28",
@@ -648,6 +703,12 @@ const items = [
     platforms: ["desktop", "mobile"],
     summary:
       "Reopening an app shows what Conjure is recalling while your conversation loads, and a brand new app greets you straight away.",
+  },
+  {
+    date: "2026-09-29",
+    time: "20:30",
+    platforms: ["desktop"],
+    summary: "Restore this version is in the More menu when you hover a Conjure reply, as well as on right-click.",
   },
   {
     date: "2026-09-25",
@@ -762,6 +823,18 @@ const items = [
     time: "00:00",
     platforms: ["desktop", "mobile"],
     summary: "The model picker now offers Grok 4.7 alongside Claude and GPT.",
+  },
+  {
+    date: "2026-09-26",
+    time: "01:47",
+    platforms: ["desktop", "mobile"],
+    summary: "The project menu now calls its MCP item just MCP, matching the items beside it.",
+  },
+  {
+    date: "2026-09-29",
+    time: "03:18",
+    platforms: ["desktop", "mobile"],
+    summary: "The publish card is now just a button, with the server's icon and name beside it.",
   },
   {
     date: "2026-09-05",

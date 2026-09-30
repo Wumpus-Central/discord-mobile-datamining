@@ -62,10 +62,10 @@ export const getAlwaysVisibleCopy = function getAlwaysVisibleCopy(badge_id) {
   }
   return nPQVxb;
 };
-export const getDirectoryBadges = function getDirectoryBadges(stateFromStoresArray) {
+export const getDirectoryBadges = function getDirectoryBadges(badges) {
   const earnable = [];
   const owned = [];
-  const iter = stateFromStoresArray[Symbol.iterator]();
+  const iter = badges[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp2 = nextResult;

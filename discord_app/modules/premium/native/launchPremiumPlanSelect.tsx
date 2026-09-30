@@ -69,9 +69,9 @@ export const launchPremiumPlanSelect = function launchPremiumPlanSelect(isBoostP
       onPaymentSuccess,
       onPaymentDismiss,
     };
-    const obj3 = flag2(5039);
-    obj3.pushLazy(asyncRequireImpl(6998, dependencyMap.paths), obj4, PremiumModal.PREMIUM_KEY);
-    const tmp7 = asyncRequireImpl(6998, dependencyMap.paths);
+    const obj3 = flag2(5069);
+    obj3.pushLazy(asyncRequireImpl(7028, dependencyMap.paths), obj4, PremiumModal.PREMIUM_KEY);
+    const tmp7 = asyncRequireImpl(7028, dependencyMap.paths);
   }
   let result = UserSettingsUtils.trackUserSettingsPaneViewed({ destinationPane: PREMIUM_PLAN_SELECT });
 };

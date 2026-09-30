@@ -13,7 +13,7 @@ export const SoundButtonOverlay = {
   SOUNDMOJI: 3,
   [3]: "SOUNDMOJI",
 };
-export const AnalyticsSoundType = { ENTRY: "entry_sound", EXIT: "exit_sound", DEFAULT: "default" };
+export const AnalyticsSoundType = { ENTRY: "entry_sound", EXIT: "exit_sound", DEFAULT: "default", ECHO: "echo" };
 export const AnalyticsChangeType = { ADDED: "added", UPDATED: "updated", REMOVED: "removed" };
 export const AnalyticsSoundSource = { DEFAULT: "default", CUSTOM: "custom" };
 export const soundboardSoundFromAPI = function soundboardSoundFromAPI(body, guild_id) {

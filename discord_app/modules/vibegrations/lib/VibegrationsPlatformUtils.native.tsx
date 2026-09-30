@@ -276,7 +276,7 @@ let closure_18 = async function _relayPreviewCapture(arg0) {
             const obj8 = { value: { status: "unavailable" }, done: true };
             return obj8;
           } else if (null == closure_132_2) {
-            let obj9 = { uploadToken: "r" };
+            let obj9 = { uploadToken: "Array" };
           } else {
             c8 = 2;
             c9 = 1;
@@ -612,13 +612,13 @@ let closure_21 = async function _relayPreviewControl(arg0) {
     }
   }
 };
-const FramesConstants = fn(8665);
+const FramesConstants = fn(8699);
 ({ isLaunched: closure_8, MAIN_SURFACE: closure_9, makeFrameId: c10 } = FramesConstants);
-const LocalNotificationTypes = fn(8669).LocalNotificationTypes;
-let items = [fn(7952).OAuth2Scopes.BOT, fn(7952).OAuth2Scopes.APPLICATIONS_COMMANDS];
+const LocalNotificationTypes = fn(8703).LocalNotificationTypes;
+let items = [fn(7982).OAuth2Scopes.BOT, fn(7982).OAuth2Scopes.APPLICATIONS_COMMANDS];
 let c19 = 0;
 let c22 = 0;
-const vibegrationsPreviewControlLease = fn(12617);
+const vibegrationsPreviewControlLease = fn(12647);
 let result = vibegrationsPreviewControlLease.subscribeVibegrationsControlReleased((arg0) => {
   const project = VibegrationsProjectStore.getProject(arg0);
   let prop;
@@ -721,7 +721,7 @@ let result = vibegrationsPreviewControlLease.subscribeVibegrationsControlRelease
     const obj6 = require("WebView");
   }
 });
-const vibegrationsPreviewOperationSurfaces = fn(12620);
+const vibegrationsPreviewOperationSurfaces = fn(12650);
 let closure_23 = vibegrationsPreviewOperationSurfaces.createPreviewOperationSurfaces((arg0) => {
   const project = VibegrationsProjectStore.getProject(arg0);
   let prop;

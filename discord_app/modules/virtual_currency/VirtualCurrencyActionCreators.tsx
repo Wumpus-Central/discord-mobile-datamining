@@ -99,7 +99,90 @@ let closure_8 = async function _fetchVirtualCurrencyBalance() {
     }
   }
 };
-let closure_9 = async function _redeemVirtualCurrencyForSKU(arg0) {
+let closure_9 = async function _fetchVirtualCurrencyTotalRedeemed() {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c4) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_1 = tmp3;
+          closure_0 = tmp7;
+          closure_128_0 = undefined;
+          let total_redeemed;
+          closure_128_2 = undefined;
+          DispatcherDefault.wait(() => {
+            closure_1_1(closure_1_2[4]).dispatch({ type: "VIRTUAL_CURRENCY_TOTAL_REDEEMED_FETCH" });
+          });
+          c3 = 1;
+          const HTTP = HTTPUtils.HTTP;
+          const obj4 = { url: constants.VIRTUAL_CURRENCY_USER_TOTAL_REDEEMED, rejectWithError: false };
+          c4 = 2;
+          c5 = 1;
+          const obj6 = { value: HTTP.get(obj4), done: false };
+          return obj6;
+        }
+      } else if (1 === tmp7) {
+        c3 = 0;
+        closure_128_3 = closure_2;
+        if (closure_128_3 instanceof closure_129_0(closure_129_2[6]).BillingError) {
+          let billingError = closure_128_3;
+        } else {
+          billingError = new closure_129_0(closure_129_2[6]).BillingError(closure_128_3);
+        }
+        closure_128_2 = billingError;
+        const obj7 = { type: "VIRTUAL_CURRENCY_TOTAL_REDEEMED_FETCH_FAIL", error: closure_128_2 };
+        closure_129_1(closure_129_2[4]).dispatch(obj7);
+        c5 = 3;
+        const obj5 = closure_129_1(closure_129_2[4]);
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c3 = 0;
+        c5 = 3;
+        const obj8 = { value, done: true };
+        return obj8;
+      } else {
+        closure_128_0 = value;
+        total_redeemed = closure_128_0.body.total_redeemed;
+        const obj9 = { type: "VIRTUAL_CURRENCY_TOTAL_REDEEMED_FETCH_SUCCESS", totalRedeemed: total_redeemed };
+        closure_129_1(closure_129_2[4]).dispatch(obj9);
+        c3 = 0;
+        c5 = 3;
+        const obj11 = { value: closure_128_0.body, done: true };
+        return obj11;
+      }
+    } catch (tmp37) {
+      closure_2 = tmp37;
+      if (tmp4 === c3) {
+        c5 = tmp2;
+        throw tmp37;
+      } else {
+        c4 = tmp;
+      }
+    }
+  }
+};
+let closure_10 = async function _redeemVirtualCurrencyForSKU(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -272,9 +355,19 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/virtual_currency/VirtualCurrencyActionCreators.tsx");
 
 export { fetchVirtualCurrencyBalance };
-export const redeemVirtualCurrencyForSKU = function redeemVirtualCurrencyForSKU() {
+export const fetchVirtualCurrencyTotalRedeemed = function fetchVirtualCurrencyTotalRedeemed() {
   const self = this;
   const apply = closure_9.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+export const redeemVirtualCurrencyForSKU = function redeemVirtualCurrencyForSKU() {
+  const self = this;
+  const apply = closure_10.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

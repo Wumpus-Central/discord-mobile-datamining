@@ -128,7 +128,7 @@ const ChannelRecord = fn(2049);
   isGuildSelectableChannelType: metroRequire,
   isGuildVocalChannelType: closure_7,
 } = ChannelRecord);
-let GuildChannelStore = fn(4467);
+let GuildChannelStore = fn(4497);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: closure_8, GUILD_VOCAL_CHANNELS_KEY: closure_9 } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1074);

@@ -3,7 +3,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import _modDef3715 from "../intl/VibegrationsUntranslated.messages.js";
-import _modDef4421 from "../../../../_runtime/metro/04421__.js";
+import _modDef4451 from "../../../../_runtime/metro/04451__.js";
 import DateUtils from "../../../utils/DateUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj2 = { entries: { gap: nativeDefault.space.PX_12 }, entry: null };
 let obj3 = { gap: nativeDefault.space.PX_12 };
 obj2.entry = { gap: nativeDefault.space.PX_4 };
@@ -40,7 +40,7 @@ export default function VibegrationsChangelogSheet() {
   obj4.scrollIndicatorInsets = { bottom };
   obj4.children = result.map((children) => {
     const obj = { style: entry.entry, children: null };
-    const items = [DateUtils.dateFormat(_modDef4421(children.date, "YYYY-MM-DD"), "LL")];
+    const items = [DateUtils.dateFormat(_modDef4451(children.date, "YYYY-MM-DD"), "LL")];
     let combined = null;
     if (obj3.isVibegrationsChangelogEntryExclusive(children)) {
       const intl = util.intl;

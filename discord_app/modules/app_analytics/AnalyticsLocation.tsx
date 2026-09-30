@@ -122,7 +122,6 @@ export default {
   GUILD_POWERUPS_COACHMARK_NEW_PERK_AVAILABLE: "guild powerups - coachmark - new perk available",
   GUILD_POWERUPS_COACHMARK_GAME_SERVER_HOSTING_AVAILABLE: "guild powerups - coachmark - game server hosting available",
   GUILD_POWERUPS_COACHMARK_GAME_SERVER_NEW_GAMES: "guild powerups - coachmark - game server new games",
-  GUILD_POWERUPS_COACHMARK_GAME_SERVER_PRICING_CHANGE: "guild powerups - coachmark - game server pricing change",
   GUILD_POWERUPS_COACHMARK_BOOST_TO_UNLOCK: "guild powerups - coachmark - boost to unlock",
   GUILD_POWERUPS_COACHMARK_EXPIRING_PERK: "guild powerups - coachmark - expiring perk",
   GUILD_POWERUPS_COACHMARK_GUILD_THEME_MEMBER: "guild powerups - coachmark - guild theme member",
@@ -646,4 +645,5 @@ export default {
   XBOX_PERKS_CONNECTION_FOOTER: "xbox perks connection footer",
   XBOX_PERKS_MODAL: "xbox perks modal",
   YOUTUBE_NITRO_TAB_POPOVER: "youtube nitro tab popover",
+  YOUTUBE_3PP_NAGBAR: "youtube 3pp nagbar",
 };

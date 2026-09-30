@@ -5,13 +5,13 @@ import ParentalControlledUserSettings from "../../family_center/ParentalControll
 import FamilyCenterStore from "../../../parent_tools/FamilyCenterStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(11175);
+const SettingBuilders = fn(11211);
 const toggle = SettingBuilders.createToggle({
   useTitle: function useDataForQuestsSettingTitle() {
     const intl = util.intl;
     return intl.string(_modDef2487.ZhaNu8);
   },
-  parent: fn(7582).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(7612).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: function useDataToSupportQuestsSettingValue() {
     const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
     const ParentalControlledDropsOptedOut = ParentalControlledUserSettings.ParentalControlledDropsOptedOut;

@@ -1,5 +1,5 @@
 // discord_app/utils/ClipboardUtils.native.tsx
-import _modDef6777 from "../../_runtime/metro/06777__.js";
+import _modDef6807 from "../../_runtime/metro/06807__.js";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 
 let closure_3 = async function _copy(arg0) {
@@ -27,7 +27,7 @@ let closure_3 = async function _copy(arg0) {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          _modDef6777.setString(closure_0);
+          _modDef6807.setString(closure_0);
           if (dependencyMap != null) {
             dependencyMap();
           }
@@ -68,5 +68,5 @@ export const copy = function copy() {
   return applyArgumentsResult;
 };
 export const getString = function getString() {
-  return _modDef6777.getString();
+  return _modDef6807.getString();
 };

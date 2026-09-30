@@ -9,7 +9,7 @@ import BigFlagUtils from "../../../../discord_common/js/shared/utils/BigFlagUtil
 
 const require = globalThis.__r;
 
-const AuditLogChange = fn(17532).AuditLogChange;
+const AuditLogChange = fn(17567).AuditLogChange;
 let closure_4 = fn(2049).isGuildSelectableChannelType;
 const hasAnyPermission = fn(2103).hasAnyPermission;
 const Constants = fn(1074);
@@ -306,6 +306,12 @@ const guildSettingsAuditLogStore = new GuildSettingsAuditLogStore(DispatcherDefa
             isEqualResult = action2.action !== constants.MEMBER_DISCONNECT;
           }
           if (isEqualResult) {
+            isEqualResult = action2.action !== constants.CHANNEL_POSITION_UPDATE;
+          }
+          if (isEqualResult) {
+            isEqualResult = action2.action !== constants.ROLE_POSITION_UPDATE;
+          }
+          if (isEqualResult) {
             isEqualResult = action2.action !== constants.BOT_ADD;
           }
           if (isEqualResult) {
@@ -532,6 +538,12 @@ const guildSettingsAuditLogStore = new GuildSettingsAuditLogStore(DispatcherDefa
             }
             if (isEqualResult) {
               isEqualResult = action2.action !== constants.MEMBER_DISCONNECT;
+            }
+            if (isEqualResult) {
+              isEqualResult = action2.action !== constants.CHANNEL_POSITION_UPDATE;
+            }
+            if (isEqualResult) {
+              isEqualResult = action2.action !== constants.ROLE_POSITION_UPDATE;
             }
             if (isEqualResult) {
               isEqualResult = action2.action !== constants.BOT_ADD;

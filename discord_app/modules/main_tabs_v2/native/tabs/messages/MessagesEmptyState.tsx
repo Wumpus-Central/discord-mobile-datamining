@@ -8,7 +8,7 @@ import components_Button_Button from "../../../../../design/components/Button/na
 import useIsScreenLandscape from "../../../../screen/useIsScreenLandscape.native.tsx";
 import useTrackImpressionDefault from "../../../../app_analytics/useTrackImpression.tsx";
 import useYouBarTotalHeight from "../../you_bar/hooks/useYouBarTotalHeight.tsx";
-import _modDef15862 from "../../../../../../_runtime/metro/15862__.js";
+import _modDef15887 from "../../../../../../_runtime/metro/15887__.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let closure_10 = createStyles.createStyles({
   container: { flex: 1, justifyContent: "center" },
   scrollViewContentContainer: { flexGrow: 2 },
@@ -70,7 +70,7 @@ export default function MessagesEmptyState() {
   const obj5 = { style: tmp.container, onLayout: callback, children: null };
   const obj6 = { style: tmp.innerContainer, children: null };
   const obj7 = { style: tmp.imageContainer, children: null };
-  const obj8 = { resizeMode: "contain", source: _modDef15862, style: null };
+  const obj8 = { resizeMode: "contain", source: _modDef15887, style: null };
   let num = 350;
   if (result < 622) {
     num = (result / 622) * 350;

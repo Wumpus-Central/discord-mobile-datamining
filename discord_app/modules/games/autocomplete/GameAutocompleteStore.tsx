@@ -50,9 +50,9 @@ prototype["getClosestResults"] = function getClosestResults(result) {
 prototype["shouldSuppressFetch"] = function shouldSuppressFetch(query, arg1) {
   let DEFAULT = arg1;
   if (arg1 === undefined) {
-    DEFAULT = DEFAULT(5587).GameAutocompleteProfile.DEFAULT;
+    DEFAULT = DEFAULT(5617).GameAutocompleteProfile.DEFAULT;
   }
-  const result = DEFAULT(5588).normalizeGameAutocompleteQuery(query);
+  const result = DEFAULT(5618).normalizeGameAutocompleteQuery(query);
   if (null == result) {
     return false;
   } else {
@@ -64,12 +64,12 @@ prototype["shouldSuppressFetch"] = function shouldSuppressFetch(query, arg1) {
       result1 = !set.has(combined);
     }
     if (result1) {
-      result1 = tmp3(5588).shouldSuppressAutocompleteFetch(result, (arg0) => closure_3.peek("" + DEFAULT + ":" + arg0));
-      const tmp3Result = tmp3(5588);
+      result1 = tmp3(5618).shouldSuppressAutocompleteFetch(result, (arg0) => closure_3.peek("" + DEFAULT + ":" + arg0));
+      const tmp3Result = tmp3(5618);
     }
     return result1;
   }
-  const obj = DEFAULT(5588);
+  const obj = DEFAULT(5618);
   tmp3 = DEFAULT;
 };
 prototype["isFetching"] = function isFetching(query) {

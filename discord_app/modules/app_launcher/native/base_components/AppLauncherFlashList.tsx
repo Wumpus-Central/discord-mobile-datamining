@@ -23,7 +23,7 @@ const forwardRefResult = noop.forwardRef((simultaneousHandlers, ref) => {
   );
   if (
     obj.useAppLauncherContext().entrypoint ===
-    simultaneousHandlers.simultaneousHandlers(8877).AppLauncherEntrypoint.VOICE
+    simultaneousHandlers.simultaneousHandlers(8911).AppLauncherEntrypoint.VOICE
   ) {
     const obj5 = {
       renderScrollComponent: memo,
@@ -61,7 +61,7 @@ const forwardRefResult = noop.forwardRef((simultaneousHandlers, ref) => {
       animatedProps: obj2.animatedProps,
     } = simultaneousHandlers);
     obj5.ref = ref;
-    let tmp5 = jsx(tmp(8344).AnimatedFlashList, {
+    let tmp5 = jsx(tmp(8375).AnimatedFlashList, {
       renderScrollComponent: memo,
       ListHeaderComponent: null,
       onScroll: null,
@@ -119,7 +119,7 @@ const forwardRefResult = noop.forwardRef((simultaneousHandlers, ref) => {
       viewabilityConfigCallbackPairs: obj3.viewabilityConfigCallbackPairs,
     } = simultaneousHandlers);
     obj6.ref = ref;
-    tmp5 = jsx(tmp(8344).BottomSheetFlashList, {
+    tmp5 = jsx(tmp(8375).BottomSheetFlashList, {
       ListHeaderComponent: null,
       onScroll: null,
       contentContainerStyle: null,

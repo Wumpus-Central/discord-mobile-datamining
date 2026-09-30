@@ -39,11 +39,11 @@ const NativeChatUtilsDefault = NativeChatUtils;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const RowGeneratorConstants = fn(7540);
+const RowGeneratorConstants = fn(7570);
 ({ Changeset: c10, RowType: closure_11, SeparatorType: closure_12 } = RowGeneratorConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj2 = {
   chat: { flex: 1, overflow: "hidden" },
   containerInner: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
@@ -284,9 +284,9 @@ class ChatPreviewBase extends PureComponent {
           jumpTargetId,
           jumpType: "flexDirection",
           shouldInitialScroll: "Array",
-          animated: "2025-12-windows-audio-effects",
-          scrollPosition: "user",
-          focusTargetId: null,
+          animated: "4.8.0",
+          scrollPosition: null,
+          focusTargetId: 60,
         };
         applyArgumentsResult.scrollData = computeScrollDataDefault(obj3);
         if (!tmp7) {
@@ -318,11 +318,11 @@ class ChatPreviewBase extends PureComponent {
       if (null != jumpTargetId) {
         const resolved = Promise.resolve();
         resolved.then(() => {
-          const result = applyArgumentsResult(7498).setSelectedConversation(closure_1_0, roleStyle, {
+          const result = applyArgumentsResult(7528).setSelectedConversation(closure_1_0, roleStyle, {
             shouldJump: false,
           });
-          const obj = applyArgumentsResult(7498);
-          applyArgumentsResult(4847).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
+          const obj = applyArgumentsResult(7528);
+          applyArgumentsResult(4877).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
         });
       }
     };
@@ -355,15 +355,14 @@ class ChatPreviewBase extends PureComponent {
           channel = channel.getChannel(arg1);
           if (null != channel) {
             const obj2 = { source, navigationReplace: true };
-            applyArgumentsResult(4847).transitionToThread(channel, obj2);
-            const obj = applyArgumentsResult(4847);
+            applyArgumentsResult(4877).transitionToThread(channel, obj2);
+            const obj = applyArgumentsResult(4877);
           }
         },
         message: applyArgumentsResult.getMessage(data.messageId),
-        messageChannel: null,
-        selectedChannelId: "Directory Channel Header",
-        tapLinkData:
-          "M4 1H3v1h1V1ZM3 2H2v1h1V2ZM2 3H1v1h1V3ZM4 12H3v2h1v-2ZM3 11H2v1h1v-1ZM5 14H4v1h1v-1ZM2 10H1v1h1v-1Z",
+        messageChannel: "scalar",
+        selectedChannelId: null,
+        tapLinkData: 2,
       };
       channel = applyArgumentsResult.props.channel;
       obj2.messageChannel = channel;
@@ -634,7 +633,7 @@ prototype["render"] = function render() {
   tmp14 = tmp6Result;
   tmp6Result2 = map1(common_SafeAreaView.SafeAreaPaddingView, obj9);
 };
-ChatPreviewBase.contextType = fn(4540).ThemeContext;
+ChatPreviewBase.contextType = fn(4570).ThemeContext;
 ChatPreviewBase.defaultProps = { withSafeArea: true };
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/ChatPreview.tsx");
@@ -653,10 +652,10 @@ export const ChatPreview = function ChatPreview(channelId) {
   const items1 = [ChannelStore];
   const stateFromStores1 = channelId(504).useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
   const obj2 = channelId(504);
-  const isChannelSpoilerGated = channelId(6913).useIsChannelSpoilerGated(stateFromStores1);
-  const obj3 = channelId(6913);
-  const isChannelContentGated = channelId(5046).useIsChannelContentGated(stateFromStores1);
-  const obj4 = channelId(5046);
+  const isChannelSpoilerGated = channelId(6943).useIsChannelSpoilerGated(stateFromStores1);
+  const obj3 = channelId(6943);
+  const isChannelContentGated = channelId(5076).useIsChannelContentGated(stateFromStores1);
+  const obj4 = channelId(5076);
   const items2 = [ActionSheetStore];
   const obj6 = {};
   const stateFromStores2 = channelId(504).useStateFromStores(items2, () => null != content.getContent());

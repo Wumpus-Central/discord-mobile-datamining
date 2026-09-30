@@ -239,7 +239,7 @@ const ChannelRecord = fn(2049);
   isThread: closure_16,
   THREADED_CHANNEL_TYPES: closure_17,
 } = ChannelRecord);
-const ChannelListGuildActionRow = fn(7120).ChannelListGuildActionRow;
+const ChannelListGuildActionRow = fn(7150).ChannelListGuildActionRow;
 const Constants = fn(1074);
 ({ ChannelTypes: closure_30, GuildFeatures: items } = Constants);
 const ChannelFlags = fn(2052).ChannelFlags;
@@ -285,7 +285,7 @@ class ChannelListImpl {
       rows: null,
       firstVoiceChannel: "Array",
       allChannelsById: 0,
-      version: 19479,
+      version: "scalar",
     });
     merged.id = global;
     obj = closure_25;

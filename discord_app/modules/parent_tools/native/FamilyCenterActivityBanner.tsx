@@ -34,9 +34,9 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let createStyles = fn(4836);
+let createStyles = fn(4866);
 let closure_7 = createStyles.createStyles({ container: { width: "100%" } });
-createStyles = fn(4836);
+createStyles = fn(4866);
 let obj3 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -84,7 +84,7 @@ export default function FamilyCenterActivityBanner() {
     intl3.format(_modDef2487.MXjDSv, { articleLink: "https://support.discord.com/hc/articles/14155060633623" }),
     intl4.format(_modDef2487.EMCf6j, { articleLink: "https://support.discord.com/hc/articles/14155043715735" }),
   );
-  obj5.source = importDefault(tmp3 ? 14594 : 14595);
+  obj5.source = importDefault(tmp3 ? 14625 : 14626);
   obj5.style = tmp4.art;
   const items = [
     hasOwnProperty(React4, obj5),

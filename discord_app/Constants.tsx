@@ -1687,6 +1687,9 @@ const frozen2 = Object.freeze({
   SEND_SOUNDBOARD_SOUND(id) {
     return "/channels/" + id + "/send-soundboard-sound";
   },
+  SEND_SOUNDBOARD_ECHO(id) {
+    return "/channels/" + id + "/send-soundboard-echo";
+  },
   SEND_CLIPS_REMOTE_TRIGGER(arg0) {
     return "/channels/" + arg0 + "/clips-remote-trigger";
   },
@@ -1992,6 +1995,7 @@ const frozen2 = Object.freeze({
     return "/virtual-currency/skus/" + arg0 + "/redeem";
   },
   VIRTUAL_CURRENCY_USER_BALANCE: "/users/@me/virtual-currency/balance",
+  VIRTUAL_CURRENCY_USER_TOTAL_REDEEMED: "/users/@me/virtual-currency/total-redeemed",
   ORB_USER_CHALLENGES_LIST: "/users/@me/achievements/list?reward_type=orbs",
   ORB_USER_CHALLENGE_CLAIM(arg0) {
     return "/users/@me/achievements/" + arg0 + "/claim";
@@ -3730,6 +3734,9 @@ const obj2 = {
   SEND_SOUNDBOARD_SOUND(id) {
     return "/channels/" + id + "/send-soundboard-sound";
   },
+  SEND_SOUNDBOARD_ECHO(id) {
+    return "/channels/" + id + "/send-soundboard-echo";
+  },
   SEND_CLIPS_REMOTE_TRIGGER(arg0) {
     return "/channels/" + arg0 + "/clips-remote-trigger";
   },
@@ -4035,6 +4042,7 @@ const obj2 = {
     return "/virtual-currency/skus/" + arg0 + "/redeem";
   },
   VIRTUAL_CURRENCY_USER_BALANCE: "/users/@me/virtual-currency/balance",
+  VIRTUAL_CURRENCY_USER_TOTAL_REDEEMED: "/users/@me/virtual-currency/total-redeemed",
   ORB_USER_CHALLENGES_LIST: "/users/@me/achievements/list?reward_type=orbs",
   ORB_USER_CHALLENGE_CLAIM(arg0) {
     return "/users/@me/achievements/" + arg0 + "/claim";
@@ -5250,6 +5258,10 @@ const frozen10 = Object.freeze({
   ZOOM_MIN: 50,
   ZOOM_MAX: 200,
   ZOOM_SCALES: [50, 67, 75, 80, 90, 100, 110, 125, 150, 175, 200],
+  TOAST_DURATION_DEFAULT_MS: 3000,
+  TOAST_DURATION_MIN_SECONDS: 3,
+  TOAST_DURATION_MAX_SECONDS: 20,
+  TOAST_DURATION_SECOND_INCREMENTS: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
 });
 const powResult = Math.pow(2, 50);
 obj17.COLLABORATOR = powResult;
@@ -5389,6 +5401,7 @@ const frozen13 = Object.freeze({
   CHANNEL_OVERWRITE_CREATE: 13,
   CHANNEL_OVERWRITE_UPDATE: 14,
   CHANNEL_OVERWRITE_DELETE: 15,
+  CHANNEL_POSITION_UPDATE: 16,
   MEMBER_KICK: 20,
   MEMBER_PRUNE: 21,
   MEMBER_BAN_ADD: 22,
@@ -5401,6 +5414,7 @@ const frozen13 = Object.freeze({
   ROLE_CREATE: 30,
   ROLE_UPDATE: 31,
   ROLE_DELETE: 32,
+  ROLE_POSITION_UPDATE: 33,
   INVITE_CREATE: 40,
   INVITE_UPDATE: 41,
   INVITE_DELETE: 42,
@@ -6008,6 +6022,7 @@ export const NoticeTypes = {
   BATTLENET_MIGRATION: "BATTLENET_MIGRATION",
   BATTLENET_LINKED_ROLE_DEPRECATION: "BATTLENET_LINKED_ROLE_DEPRECATION",
   COD_3PP_NAGBAR: "COD_3PP_NAGBAR",
+  YOUTUBE_3P_NAGBAR: "YOUTUBE_3P_NAGBAR",
 };
 export const InviteStates = {
   RESOLVING: "RESOLVING",
@@ -6727,6 +6742,14 @@ export const AbortCodes = {
   [50098]: "INVALID_SIGNATURE_MISMATCH",
   BILLING_NON_REFUNDABLE_PAYMENT_SOURCE: 100060,
   [100060]: "BILLING_NON_REFUNDABLE_PAYMENT_SOURCE",
+  BILLING_STOREFRONT_PROMOTION_NOTHING_TO_CLAIM: 100158,
+  [100158]: "BILLING_STOREFRONT_PROMOTION_NOTHING_TO_CLAIM",
+  BILLING_STOREFRONT_PROMOTION_CLAIM_WINDOW_ENDED: 100159,
+  [100159]: "BILLING_STOREFRONT_PROMOTION_CLAIM_WINDOW_ENDED",
+  BILLING_STOREFRONT_PROMOTION_CLAIM_FAILED: 100160,
+  [100160]: "BILLING_STOREFRONT_PROMOTION_CLAIM_FAILED",
+  BILLING_STOREFRONT_PROMOTION_REWARD_UNAVAILABLE: 100161,
+  [100161]: "BILLING_STOREFRONT_PROMOTION_REWARD_UNAVAILABLE",
   NEW_OWNER_INELIGIBLE_FOR_SERVER_SUBSCRIPTION: 50164,
   [50164]: "NEW_OWNER_INELIGIBLE_FOR_SERVER_SUBSCRIPTION",
   INVALID_ACTIVITY_LAUNCH_NO_ACCESS: 50106,
@@ -8861,6 +8884,7 @@ export const AnalyticEvents = {
   SHOP_CARD_HOVERED: "shop_card_hovered",
   SHOP_PRODUCT_DETAIL_PAGE_CLICKED: "shop_product_detail_page_clicked",
   SHOP_CARD_CLICKED: "shop_card_clicked",
+  SHOP_COLLECT_AND_CLAIM_TAKEOVER_PROMOTION_ACTION: "shop_collect_and_claim_takeover_promotion_action",
   SLIDE_CAROUSEL_ITEM_VIEWED: "slide_carousel_item_viewed",
   SLIDE_CAROUSEL_PAGINATION_CLICKED: "slide_carousel_pagination_clicked",
   SHOP_HEADER_CAROUSEL_CTA_CLICKED: "shop_header_carousel_cta_clicked",
@@ -8932,6 +8956,11 @@ export const AnalyticEvents = {
   SLAYER_STOREFRONT_ORBS_PURCHASE_GATE_VIEWED: "slayer_storefront_orbs_purchase_gate_viewed",
   SLAYER_STOREFRONT_PAGE_ELEMENT_CLICKED: "slayer_storefront_page_element_clicked",
   SLAYER_STOREFRONT_FORWARD_MODAL_ELEMENT_CLICKED: "slayer_storefront_forward_modal_element_clicked",
+  SLAYER_STOREFRONT_EMBED_BUILDER_STARTED: "slayer_storefront_embed_builder_started",
+  SLAYER_STOREFRONT_EMBED_SHARE_CLICKED: "slayer_storefront_embed_share_clicked",
+  SLAYER_STOREFRONT_EMBED_SENT: "slayer_storefront_embed_sent",
+  SLAYER_STOREFRONT_EMBED_COPY_LINK_CLICKED: "slayer_storefront_embed_copy_link_clicked",
+  SLAYER_STOREFRONT_EMBED_SHOP_ALL_CLICKED: "slayer_storefront_embed_shop_all_clicked",
   SLAYER_STOREFRONT_PURCHASE_ELIGIBILITY_STARTED: "slayer_storefront_purchase_eligibility_started",
   SLAYER_STOREFRONT_PURCHASE_ELIGIBILITY_SKIPPED: "slayer_storefront_purchase_eligibility_skipped",
   SLAYER_STOREFRONT_PURCHASE_ELIGIBILITY_COMPLETED: "slayer_storefront_purchase_eligibility_completed",
@@ -9714,7 +9743,7 @@ export const HelpdeskArticles = {
   WINDOWS_MEDIA_PACK: "37976093740695",
   FAVORITES_GUILD: "38810584460439",
   NITRO_2_POINT_0: "39188406147479",
-  RIOT_CREDIT_CAMPAIGN: "39188406147479",
+  RIOT_CREDIT_CAMPAIGN: "43761617103767",
   ANDROID_SCREENSHARE_AUDIO_BUG: "40397083647511",
   XBOX_GAME_PASS_PERKS: "40387273783831",
   SHOP_FRAMES_EARLY_ACCESS: "40775065582615",

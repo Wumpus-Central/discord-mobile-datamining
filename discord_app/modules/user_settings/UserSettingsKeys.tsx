@@ -284,6 +284,7 @@ export const WebUserSettings = {
   MOTION_CATEGORY: "motion",
   REDUCED_MOTION: "reduced_motion",
   SYNC_REDUCED_MOTION: "sync_reduced_motion",
+  TOAST_DURATION: "toast_duration",
   ANIMATE_GIFS: "animate_gifs",
   ANIMATE_EMOJIS: "animate_emojis",
   ANIMATE_STICKERS: "animate_stickers",

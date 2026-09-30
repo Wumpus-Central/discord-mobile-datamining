@@ -117,7 +117,7 @@ let closure_6 = async function _safeTransitionTo(arg0) {
       }
       closure_2 = closure_131_2;
       if (closure_131_2 == null) {
-        closure_2 = { guildId: "r" };
+        closure_2 = { guildId: "Array" };
       }
       c5 = 2;
       c6 = 1;

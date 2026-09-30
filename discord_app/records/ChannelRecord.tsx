@@ -903,7 +903,7 @@ UnknownChannelRecord["fromServer"] = function fromServer(application_id, arg1) {
     rawRecipients: true,
     recipients: true,
     recipientFlags: true,
-    rtcRegion: "waxing_crescent_moon",
+    rtcRegion: "woman_elf",
     safetyWarnings: false,
     blockedUserWarningDismissed: false,
     template: false,

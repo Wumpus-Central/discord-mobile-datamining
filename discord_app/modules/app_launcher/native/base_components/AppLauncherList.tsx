@@ -3,7 +3,7 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import mergeProps from "../../../../design/utils/native/mergeProps.native.tsx";
 import SearchField from "../../../../design/components/TextField/native/SearchField.native.tsx";
-import _modDef11819 from "../../../../../_runtime/metro/11819__.js";
+import _modDef11853 from "../../../../../_runtime/metro/11853__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -11,7 +11,7 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let closure_6 = createStyles.createStyles({
   searchBarContainer: { marginBottom: 16 },
   emptyState: { backgroundColor: "transparent", justifyContent: "flex-start" },
@@ -36,7 +36,7 @@ export const AppLauncherList = noop.forwardRef((contentContainerStyle, arg1) => 
     gestureRef: obj2.simultaneousHandlers,
     animatedProps: obj2.animatedProps,
   } = appLauncherFlashListProps);
-  return jsx(appLauncherFlashListProps(11753), {
+  return jsx(appLauncherFlashListProps(11787), {
     contentContainerStyle: null,
     scrollIndicatorInsets: { bottom },
     ref: memo,
@@ -47,8 +47,8 @@ export const AppLauncherListEmptyState = function AppLauncherListEmptyState() {
   const obj = {
     style: tmp.emptyState,
     imageStyle: tmp.emptyStateImage,
-    lightSource: _modDef11819,
-    darkSource: _modDef11819,
+    lightSource: _modDef11853,
+    darkSource: _modDef11853,
     title: null,
     body: null,
   };
@@ -59,8 +59,8 @@ export const AppLauncherListEmptyState = function AppLauncherListEmptyState() {
   return jsx(native.EmptyState, {
     style: tmp.emptyState,
     imageStyle: tmp.emptyStateImage,
-    lightSource: _modDef11819,
-    darkSource: _modDef11819,
+    lightSource: _modDef11853,
+    darkSource: _modDef11853,
     title: null,
     body: null,
   });

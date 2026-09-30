@@ -10,7 +10,6 @@ import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import XSmallIcon from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
 import useSelectedDismissibleContent from "../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
 import useUserIsTeen from "../../self_mod/hooks/useUserIsTeen.tsx";
-import PrivateProfilesExperiment from "../PrivateProfilesExperiment.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -22,7 +21,7 @@ const UserSettingsSections = fn(1074).UserSettingsSections;
 const ContentDismissActionType = fn(2042).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO,
@@ -44,26 +43,21 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 
 export default function UserProfilePrivacyNotice() {
   const tmp = closure_9();
-  const isInPrivateProfilesExperiment =
-    PrivateProfilesExperiment.useIsInPrivateProfilesExperiment("UserProfilePrivacyNotice");
-  closure_129_0 = isInPrivateProfilesExperiment;
   const userIsTeen = useUserIsTeen.useUserIsTeen();
-  closure_129_1 = userIsTeen;
+  closure_129_0 = userIsTeen;
   const ProfileVisibility = UserSettings.ProfileVisibility;
   const setting = ProfileVisibility.useSetting();
-  closure_129_2 = setting;
-  const items = [isInPrivateProfilesExperiment, userIsTeen, setting];
+  closure_129_1 = setting;
+  const items = [userIsTeen, setting];
   const memo = noop.useMemo(() => {
-    if (isInPrivateProfilesExperiment) {
-      if (userIsTeen) {
-        if (setting !== preloaded_user_settings.ProfileVisibility.FRIENDS_AND_ALL_GUILDS) {
-          const items = [dismissible_content.DismissibleContent.PRIVATE_PROFILE_INLINE_NOTICE];
-        }
-        return [];
+    if (userIsTeen) {
+      if (setting !== preloaded_user_settings.ProfileVisibility.FRIENDS_AND_ALL_GUILDS) {
+        const items = [dismissible_content.DismissibleContent.PRIVATE_PROFILE_INLINE_NOTICE];
       }
+      return [];
     }
   }, items);
-  [tmp9, require] = useSelectedDismissibleContent.useSelectedDismissibleContent(memo);
+  [tmp8, require] = useSelectedDismissibleContent.useSelectedDismissibleContent(memo);
   const ProfileVisibility2 = UserSettings.ProfileVisibility;
   const setting1 = ProfileVisibility2.useSetting();
   const callback = noop.useCallback(
@@ -74,7 +68,7 @@ export default function UserProfilePrivacyNotice() {
           variant: "text-sm/normal",
           color: "text-link",
           onPress() {
-            return closure_1_0(closure_1_1[16]).openUserSettings({ screen: constants.DATA_AND_PRIVACY });
+            return closure_1_0(closure_1_1[15]).openUserSettings({ screen: constants.DATA_AND_PRIVACY });
           },
           children,
         },
@@ -82,7 +76,7 @@ export default function UserProfilePrivacyNotice() {
       ),
     [],
   );
-  if (tmp9 !== dismissible_content.DismissibleContent.PRIVATE_PROFILE_INLINE_NOTICE) {
+  if (tmp8 !== dismissible_content.DismissibleContent.PRIVATE_PROFILE_INLINE_NOTICE) {
     return null;
   } else {
     if (preloaded_user_settings.ProfileVisibility.FRIENDS_ONLY === setting1) {
@@ -93,53 +87,47 @@ export default function UserProfilePrivacyNotice() {
       const FRIENDS_AND_ALL_GUILDS = preloaded_user_settings.ProfileVisibility.FRIENDS_AND_ALL_GUILDS;
       dqQ7AN = util.t.dqQ7AN;
     }
-    const obj4 = { style: tmp.container, children: null };
-    const obj5 = {
+    const obj3 = { style: tmp.container, children: null };
+    const obj4 = {
       style: tmp.icon,
       children: closure_7(CircleInformationIcon.CircleInformationIcon, { size: "xs", color: "icon-feedback-info" }),
     };
-    const items1 = [closure_7(View, obj5), ,];
-    const obj6 = { style: tmp.text, variant: "text-sm/normal", color: "text-default", children: null };
+    const items1 = [closure_7(View, obj4), ,];
+    const obj5 = { style: tmp.text, variant: "text-sm/normal", color: "text-default", children: null };
     const intl = util.intl;
-    const obj7 = { privacySettingsLink: callback };
-    obj6.children = intl.format(dqQ7AN, obj7);
-    items1[1] = closure_7(Text_Text.Text, obj6);
-    const obj8 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
+    const obj6 = { privacySettingsLink: callback };
+    obj5.children = intl.format(dqQ7AN, obj6);
+    items1[1] = closure_7(Text_Text.Text, obj5);
+    const obj7 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
     const intl2 = util.intl;
-    obj8.accessibilityLabel = intl2.string(util.t.WAI6xu);
-    obj8.onPress = function onPress() {
+    obj7.accessibilityLabel = intl2.string(util.t.WAI6xu);
+    obj7.onPress = function onPress() {
       return require(ContentDismissActionType.USER_DISMISS);
     };
-    obj8.style = tmp.closeButton;
-    obj8.children = closure_7(XSmallIcon.XSmallIcon, { size: "xs", color: "icon-feedback-info" });
-    items1[2] = closure_7(Pressables.PressableOpacity, obj8);
-    obj4.children = items1;
-    return closure_8(View, obj4);
+    obj7.style = tmp.closeButton;
+    obj7.children = closure_7(XSmallIcon.XSmallIcon, { size: "xs", color: "icon-feedback-info" });
+    items1[2] = closure_7(Pressables.PressableOpacity, obj7);
+    obj3.children = items1;
+    return closure_8(View, obj3);
   }
-  const tmp8 = _slicedToArray(useSelectedDismissibleContent.useSelectedDismissibleContent(memo), 2);
+  const tmp7 = _slicedToArray(useSelectedDismissibleContent.useSelectedDismissibleContent(memo), 2);
 }
 export const useIsPrivacyNoticeVisible = function useIsPrivacyNoticeVisible() {
-  isInPrivateProfilesExperiment = isInPrivateProfilesExperiment(userIsTeen[10]).useIsInPrivateProfilesExperiment(
-    "UserProfilePrivacyNotice",
-  );
-  const obj = isInPrivateProfilesExperiment(userIsTeen[10]);
-  userIsTeen = isInPrivateProfilesExperiment(userIsTeen[11]).useUserIsTeen();
-  const ProfileVisibility = isInPrivateProfilesExperiment(userIsTeen[12]).ProfileVisibility;
-  const setting = ProfileVisibility.useSetting();
-  let items = [isInPrivateProfilesExperiment, userIsTeen, setting];
+  userIsTeen = userIsTeen(setting[10]).useUserIsTeen();
+  const ProfileVisibility = userIsTeen(setting[11]).ProfileVisibility;
+  setting = ProfileVisibility.useSetting();
+  let items = [userIsTeen, setting];
   const memo = noop.useMemo(() => {
-    if (isInPrivateProfilesExperiment) {
-      if (userIsTeen) {
-        if (setting !== preloaded_user_settings.ProfileVisibility.FRIENDS_AND_ALL_GUILDS) {
-          const items = [dismissible_content.DismissibleContent.PRIVATE_PROFILE_INLINE_NOTICE];
-        }
-        return [];
+    if (userIsTeen) {
+      if (setting !== preloaded_user_settings.ProfileVisibility.FRIENDS_AND_ALL_GUILDS) {
+        const items = [dismissible_content.DismissibleContent.PRIVATE_PROFILE_INLINE_NOTICE];
       }
+      return [];
     }
   }, items);
-  const obj2 = isInPrivateProfilesExperiment(userIsTeen[11]);
+  const obj = userIsTeen(setting[10]);
   return (
-    setting(isInPrivateProfilesExperiment(userIsTeen[14]).useSelectedDismissibleContent(memo), 1)[0] ===
-    isInPrivateProfilesExperiment(userIsTeen[13]).DismissibleContent.PRIVATE_PROFILE_INLINE_NOTICE
+    _slicedToArray(userIsTeen(setting[13]).useSelectedDismissibleContent(memo), 1)[0] ===
+    userIsTeen(setting[12]).DismissibleContent.PRIVATE_PROFILE_INLINE_NOTICE
   );
 };

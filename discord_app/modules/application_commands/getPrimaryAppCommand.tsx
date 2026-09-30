@@ -102,7 +102,7 @@ function queryForPrimaryAppCommand(withAffinitySuggestions, id) {
     allowApplicationState: true,
   }).commands[0];
 }
-let ApplicationCommandIndexStore = fn(8756);
+let ApplicationCommandIndexStore = fn(8790);
 ({ getOrFetchApplicationCommandIndexForTarget: hasOwnProperty, useQueryState: metroRequire } =
   ApplicationCommandIndexStore);
 let ApplicationCommandIndexStore = ApplicationCommandIndexStore_mod;

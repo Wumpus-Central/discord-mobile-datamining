@@ -1,6 +1,6 @@
 // discord_common/js/packages/time-utils/TimeUtils.tsx
 import u from "../performance-utils/index.js";
-import findLastIndexDefault from "../../../../_runtime/04867_findLastIndex.js";
+import findLastIndexDefault from "../../../../_runtime/04897_findLastIndex.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
@@ -15,7 +15,7 @@ function sleep(asMilliseconds) {
     const timerId = setTimeout(() => closure_0(), asMillisecondsResult);
   });
 }
-const tryCatch = fn(4866);
+const tryCatch = fn(4896);
 let c4 = 3600000;
 function now() {
   const _performance = u.performance;
@@ -249,7 +249,7 @@ class StopWatch {
     if (global === undefined) {
       tmp = closure_6;
     }
-    merged = Object.assign({ startTime: "disabled", timePassed: null });
+    merged = Object.assign({ startTime: "disabled", timePassed: false });
     merged.timestampProducer = tmp;
     return merged;
   }
@@ -314,7 +314,7 @@ prototype2["isRunning"] = function isRunning() {
 };
 StopWatch["startNew"] = function startNew() {
   if (typeof StopWatch === "function") {
-    const merged = Object.assign({ startTime: "disabled", timePassed: null });
+    const merged = Object.assign({ startTime: "disabled", timePassed: false });
     merged.timestampProducer = obj2;
     merged.start();
     return merged;
@@ -329,7 +329,7 @@ class TimeOut {
       tmp3 = global;
       merged = Object.assign({ watch: null });
       tmp5 = closure_6;
-      merged1 = Object.assign({ startTime: "disabled", timePassed: null });
+      merged1 = Object.assign({ startTime: "disabled", timePassed: false });
       merged1.timestampProducer = closure_6;
       merged[0] = merged1;
       merged.timeout = global;
@@ -361,7 +361,7 @@ TimeOut["startNew"] = function startNew(timeout) {
   if (typeof TimeOut === "function") {
     if (typeof StopWatch === "function") {
       const merged = Object.assign({ watch: null });
-      const merged1 = Object.assign({ startTime: "disabled", timePassed: null });
+      const merged1 = Object.assign({ startTime: "disabled", timePassed: false });
       merged1.timestampProducer = obj2;
       merged[0] = merged1;
       merged.timeout = timeout;
@@ -509,7 +509,7 @@ class DurationEnabled {
       }
       tmp4 = global;
       obj = Object.create(tmp2);
-      merged = Object.assign({ startTime: "disabled", timePassed: null });
+      merged = Object.assign({ startTime: "disabled", timePassed: false });
       merged.timestampProducer = tmp;
       obj.stopwatch = merged;
       obj.state = global;
@@ -591,7 +591,7 @@ export const getTimeUnit = function getTimeUnit(arg0, arg1) {
   importDefault = arg1;
   const tmp2 = findLastIndexDefault(
     items,
-    (unit) => f79925(unit.unit),
+    (unit) => f80054(unit.unit),
     items.findIndex((max) => {
       max = max.max;
       let tmp = max.unit === obj.NONE;
@@ -607,7 +607,7 @@ export const getTimeUnit = function getTimeUnit(arg0, arg1) {
   if (null != tmp2) {
     return tmp2.unit;
   } else {
-    const found = items.find((unit) => f79925(unit.unit));
+    const found = items.find((unit) => f80054(unit.unit));
     let unit = null;
     if (null != found) {
       unit = found.unit;
@@ -633,10 +633,10 @@ export const getTimeAndUnit = function getTimeAndUnit(rounded, items) {
     return obj2;
   } else {
     closure_0 = rounded;
-    const f79925 = (dependencyMap) => closure_0.includes(dependencyMap);
-    const tmp12 = f79925(4867)(
+    const f80054 = (dependencyMap) => closure_0.includes(dependencyMap);
+    const tmp12 = f80054(4897)(
       items,
-      (unit) => f79925(unit.unit),
+      (unit) => f80054(unit.unit),
       items.findIndex((max) => {
         max = max.max;
         let tmp = max.unit === obj.NONE;
@@ -652,7 +652,7 @@ export const getTimeAndUnit = function getTimeAndUnit(rounded, items) {
     if (null != tmp12) {
       let unit = tmp12.unit;
     } else {
-      const found = items.find((unit) => f79925(unit.unit));
+      const found = items.find((unit) => f80054(unit.unit));
       unit = null;
       if (null != found) {
         unit = found.unit;

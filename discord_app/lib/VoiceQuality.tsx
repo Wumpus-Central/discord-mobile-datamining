@@ -32,36 +32,36 @@ function explodePlayoutMetrics(obj) {
       obj[`${key10012}_max`] = Math.round(report.max);
       continue;
     } else {
-      let num = 0;
+      let mean = null;
       let text5 = `${key10012}_mean`;
       if (null != obj2) {
-        num = obj2.mean;
+        mean = obj2.mean;
       }
-      obj[text5] = num;
-      let num2 = 0;
+      obj[text5] = mean;
+      let p75 = null;
       let text6 = `${key10012}_p75`;
       if (null != obj2) {
-        num2 = obj2.p75;
+        p75 = obj2.p75;
       }
-      obj[text6] = num2;
-      let num3 = 0;
+      obj[text6] = p75;
+      let p95 = null;
       let text7 = `${key10012}_p95`;
       if (null != obj2) {
-        num3 = obj2.p95;
+        p95 = obj2.p95;
       }
-      obj[text7] = num3;
-      let num4 = 0;
+      obj[text7] = p95;
+      let p99 = null;
       let text8 = `${key10012}_p99`;
       if (null != obj2) {
-        num4 = obj2.p99;
+        p99 = obj2.p99;
       }
-      obj[text8] = num4;
-      let num5 = 0;
+      obj[text8] = p99;
+      let max = null;
       let text9 = `${key10012}_max`;
       if (null != obj2) {
-        num5 = obj2.max;
+        max = obj2.max;
       }
-      obj[text9] = num5;
+      obj[text9] = max;
       continue;
     }
     continue;
@@ -163,11 +163,11 @@ class VoiceQuality extends tmp2 {
     tmp3.sampleStats = function sampleStats(rtp) {
       if (null != rtp) {
         const networkQuality = num.networkQuality;
-        const result = networkQuality.incrementNetworkStats(num(4865).now());
+        const result = networkQuality.incrementNetworkStats(num(4895).now());
         const systemResources = num.systemResources;
         systemResources.takeSample();
         num = 0;
-        const obj2 = num(4865);
+        const obj2 = num(4895);
         let item = _modDef12.forEach(rtp.rtp.outbound, (type) => {
           if ("audio" === type.type) {
             num = type.bitrateTarget;
@@ -256,7 +256,7 @@ class VoiceQuality extends tmp2 {
                 prop = tmp33.bufferStats.audioJitterBufferHistogram;
               }
               if (prop == null) {
-                prop = new closure_0(7326).Histogram();
+                prop = new closure_0(7356).Histogram();
               }
               bufferStats.audioJitterBufferHistogram = prop;
               bufferStats.audioJitterTarget = type.audioJitterTarget;
@@ -265,7 +265,7 @@ class VoiceQuality extends tmp2 {
                 prop1 = tmp33.bufferStats.audioJitterTargetHistogram;
               }
               if (prop1 == null) {
-                prop1 = new closure_0(7326).Histogram();
+                prop1 = new closure_0(7356).Histogram();
               }
               bufferStats.audioJitterTargetHistogram = prop1;
               bufferStats.audioJitterDelay = type.audioJitterDelay;
@@ -274,7 +274,7 @@ class VoiceQuality extends tmp2 {
                 prop2 = tmp33.bufferStats.audioJitterDelayHistogram;
               }
               if (prop2 == null) {
-                prop2 = new closure_0(7326).Histogram();
+                prop2 = new closure_0(7356).Histogram();
               }
               bufferStats.audioJitterDelayHistogram = prop2;
               ({ relativeReceptionDelay: obj.relativeReceptionDelay, relativePlayoutDelay: obj.relativePlayoutDelay } =

@@ -76,7 +76,7 @@ function createAndAppendChannel(item10022, set, items) {
   }
 }
 const View = fn(17).View;
-let NavigationHistoryStore = fn(6912);
+let NavigationHistoryStore = fn(6942);
 ({ CHANNEL_PREFIX: closure_8, getIdFromHistoryItem: closure_9, GUILD_PREFIX: c10 } = NavigationHistoryStore);
 let NavigationHistoryStore = NavigationHistoryStore_mod;
 const ChannelRecord = fn(2049);
@@ -86,7 +86,7 @@ const Constants = fn(1074);
 const jsxProd = fn(21);
 ({ jsx: closure_27, jsxs: closure_28 } = jsxProd);
 const md = nativeDefault.radii.md;
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj = {
   wrapper: {
     flexGrow: 0,
@@ -370,11 +370,11 @@ let closure_35 = noop.memo((tab) => {
 });
 const results = [];
 let items = [
-  fn(9457).AutocompleterResultTypes.GUILD,
-  fn(9457).AutocompleterResultTypes.TEXT_CHANNEL,
-  fn(9457).AutocompleterResultTypes.GROUP_DM,
-  fn(9457).AutocompleterResultTypes.VOICE_CHANNEL,
-  fn(9457).AutocompleterResultTypes.USER,
+  fn(9491).AutocompleterResultTypes.GUILD,
+  fn(9491).AutocompleterResultTypes.TEXT_CHANNEL,
+  fn(9491).AutocompleterResultTypes.GROUP_DM,
+  fn(9491).AutocompleterResultTypes.VOICE_CHANNEL,
+  fn(9491).AutocompleterResultTypes.USER,
 ];
 const __initData3 = {
   code: "function LaunchPadTsx3(){const{sharedState}=this.__closure;return sharedState.get()===0;}",

@@ -7,7 +7,7 @@ const result = size.fileFinishedImporting("modules/threads/native/threadActionSh
 
 export const showThreadNotificationsBottomSheet = function showThreadNotificationsBottomSheet(channel) {
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(11024, dependencyMap.paths),
+    asyncRequireImpl(11060, dependencyMap.paths),
     "ThreadNotificationsBottomSheet",
     { channel },
   );

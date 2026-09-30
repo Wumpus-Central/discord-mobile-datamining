@@ -10,13 +10,13 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 const obj2 = {
   row: {
     flexDirection: "row",
     alignItems: "center",
     paddingHorizontal: nativeDefault.space.PX_16,
-    paddingVertical: fn(7468).SEARCH_ROW_TAP_STATE_PADDING,
+    paddingVertical: fn(7499).SEARCH_ROW_TAP_STATE_PADDING,
   },
   icon: null,
   labels: null,
@@ -30,7 +30,7 @@ let size = {
   marginRight: nativeDefault.space.PX_12,
 };
 obj2.icon = size;
-obj2.labels = { flex: 1, height: fn(12016).SUGGESTED_SEARCH_COMPACT_LABEL_HEIGHT, justifyContent: "center" };
+obj2.labels = { flex: 1, height: fn(12050).SUGGESTED_SEARCH_COMPACT_LABEL_HEIGHT, justifyContent: "center" };
 const size1 = {
   height: 16,
   width: "72%",
@@ -49,20 +49,20 @@ let result = size.fileFinishedImporting(
 
 export default function SuggestedSearchSkeleton() {
   const tmp = closure_7();
-  sharedValue = sharedValue(4566).useSharedValue(0.4);
+  sharedValue = sharedValue(4596).useSharedValue(0.4);
   const items = [sharedValue];
   const effect = noop.useEffect(() => {
     const obj = ReanimatedRexport;
     const result = sharedValue.set(obj.withRepeat(timing.withTiming(1, { duration: 700 }), -1, true));
   }, items);
-  let obj = sharedValue(4566);
+  let obj = sharedValue(4596);
   const fn = function l() {
     return { opacity: sharedValue.get() };
   };
   fn.__closure = { opacity: sharedValue };
   fn.__workletHash = 9760194902231;
   fn.__initData = __initData;
-  const animatedStyle = sharedValue(4566).useAnimatedStyle(fn);
+  const animatedStyle = sharedValue(4596).useAnimatedStyle(fn);
   const obj3 = { style: null, "aria-hidden": true, children: null };
   const items1 = [tmp.row, animatedStyle];
   obj3.style = items1;

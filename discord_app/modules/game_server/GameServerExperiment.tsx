@@ -15,9 +15,12 @@ const experiment = createExperiment.createExperiment(obj);
 const result = size.fileFinishedImporting("modules/game_server/GameServerExperiment.tsx");
 
 export const GameServerExperiment = experiment;
-export const getGameServerEnabled = function getGameServerEnabled(id, maybeGetGameServerHostingGuildEligiblePopoutDCF) {
+export const getGameServerEnabled = function getGameServerEnabled(
+  guildId,
+  maybeGetGameServerHostingGuildEligiblePopoutDCF,
+) {
   return experiment.getCurrentConfig(
-    { guildId: id, location: maybeGetGameServerHostingGuildEligiblePopoutDCF },
+    { guildId, location: maybeGetGameServerHostingGuildEligiblePopoutDCF },
     { autoTrackExposure: false },
   ).enabled;
 };

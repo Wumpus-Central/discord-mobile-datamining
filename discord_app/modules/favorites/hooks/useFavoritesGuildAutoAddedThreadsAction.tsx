@@ -9,8 +9,8 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildAutoAddedThreadsAction.tsx");
 
 export default function useFavoritesGuildAutoAddedThreadsAction() {
-  hasAccess = hasAccess(9852).useFavoritesAccess("useFavoritesGuildAutoAddedThreadsAction").hasAccess;
-  let obj = hasAccess(9852);
+  hasAccess = hasAccess(9886).useFavoritesAccess("useFavoritesGuildAutoAddedThreadsAction").hasAccess;
+  let obj = hasAccess(9886);
   const items = [UserStore];
   if (hasAccess) {
     hasAccess = obj2.useStateFromStores(items, () => {

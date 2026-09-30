@@ -13,8 +13,8 @@ function QuestDockBackgroundSmokeArt() {
   const stateFromStores = width(563).useStateFromStores(items, () => QuestDockStore.prevRestingQuestDockMode);
   const obj = width(563);
   const tmp5 = height;
-  const tmp7 = height(14907)(QuestDockMode.EXPANDED);
-  let size = width(14908).useSmokeArtSize();
+  const tmp7 = height(14938)(QuestDockMode.EXPANDED);
+  let size = width(14939).useSmokeArtSize();
   width = size.width;
   height = size.height;
   const items1 = [width, height];
@@ -24,23 +24,23 @@ function QuestDockBackgroundSmokeArt() {
     const items2 = [tmp.smokeArtWrapper, tmp8];
     obj3.style = items2;
     const obj4 = {
-      surface: tmp2(14908).QuestDockBountySmokeSurface.EXPANDED,
+      surface: tmp2(14939).QuestDockBountySmokeSurface.EXPANDED,
       paused: stateFromStores !== QuestDockMode.EXPANDED,
     };
-    obj3.children = jsx(tmp5(14908), {
-      surface: tmp2(14908).QuestDockBountySmokeSurface.EXPANDED,
+    obj3.children = jsx(tmp5(14939), {
+      surface: tmp2(14939).QuestDockBountySmokeSurface.EXPANDED,
       paused: stateFromStores !== QuestDockMode.EXPANDED,
     });
     tmp9 = <View style={null}>{null}</View>;
-    const tmp5Result = tmp5(14908);
+    const tmp5Result = tmp5(14939);
   }
   return tmp9;
 }
 const View = fn(17).View;
-const QuestDockMode = fn(5923).QuestDockMode;
-const expandedHeight = fn(14799).QUEST_DOCK_PORTRAIT_MEDIA_EXPANDED_HEIGHT;
+const QuestDockMode = fn(5953).QuestDockMode;
+const expandedHeight = fn(14830).QUEST_DOCK_PORTRAIT_MEDIA_EXPANDED_HEIGHT;
 const jsx = fn(21).jsx;
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let closure_9 = createStyles.createStyles({ smokeArtWrapper: { position: "absolute", left: 0, bottom: 0 } });
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockBountyBackground.tsx");
@@ -48,11 +48,11 @@ const result = size.fileFinishedImporting("modules/quests/native/QuestDock/Quest
 export default noop.memo(function QuestDockBountyBackground(imageUrl) {
   let questDockBounty;
   let token;
-  questDockBounty = questDockBounty(14806).useQuestDockBounty();
+  questDockBounty = questDockBounty(14837).useQuestDockBounty();
   const items = [questDockBounty.videoPreview];
   const memo = noop.useMemo(() => AssetUtils.getMimetype(questDockBounty.videoPreview), items);
-  let obj = questDockBounty(14806);
-  token = questDockBounty(4531).useToken(token(576).colors.BACKGROUND_BRAND);
+  let obj = questDockBounty(14837);
+  token = questDockBounty(4561).useToken(token(576).colors.BACKGROUND_BRAND);
   const items1 = [token];
   const memo1 = noop.useMemo(
     () => _modDef672.mix(token, nativeDefault.unsafe_rawColors.BLACK, 0.77, "rgb").hex(),
@@ -68,13 +68,13 @@ export default noop.memo(function QuestDockBountyBackground(imageUrl) {
     expandedHeight: null,
     foregroundContent: null,
   };
-  const obj2 = questDockBounty(4531);
-  obj3.collapsedMediaMode = questDockBounty(14906).QuestDockBackgroundCollapsedMediaMode.HIDDEN;
+  const obj2 = questDockBounty(4561);
+  obj3.collapsedMediaMode = questDockBounty(14937).QuestDockBackgroundCollapsedMediaMode.HIDDEN;
   obj3.gradientBaseColor = memo1;
   obj3.backdropColor = memo1;
   obj3.expandedHeight = expandedHeight;
   obj3.foregroundContent = <QuestDockBackgroundSmokeArt />;
-  return jsx(token(14906), {
+  return jsx(token(14937), {
     imageUrl: imageUrl.previewImageUrl,
     videoUrl: questDockBounty.videoPreview,
     videoMimetype: memo,

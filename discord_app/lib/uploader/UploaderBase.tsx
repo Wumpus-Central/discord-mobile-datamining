@@ -2,11 +2,12 @@
 import LoggerDefault from "../../modules/debug/Logger.tsx";
 import _modDef12 from "../../../_runtime/metro/00012__.js";
 import uploader_UploadUtils from "UploadUtils.tsx";
+import UploadTargets from "UploadTargets.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
 const AbortCodes = fn(1074).AbortCodes;
-const FileUploadErrorTypes = fn(4829).FileUploadErrorTypes;
+const FileUploadErrorTypes = fn(4859).FileUploadErrorTypes;
 const logger = new LoggerDefault("UploaderBase.tsx");
 const EventEmitter = fn(568).EventEmitter;
 class UploaderBase extends EventEmitter {
@@ -48,8 +49,11 @@ class UploaderBase extends EventEmitter {
       closure_0._file = obj3;
       closure_0.emit("progress", closure_0._file);
     };
-    tmp3._handleException = function _handleException(arg0) {
-      const obj = { reason: { type: FileUploadErrorTypes.ERROR_SOURCE_UNKNOWN, msg: arg0.toString() } };
+    tmp3._handleException = function _handleException(arg0, INVALID_FILE_ASSET) {
+      const obj = {
+        code: INVALID_FILE_ASSET,
+        reason: { type: FileUploadErrorTypes.ERROR_SOURCE_UNKNOWN, msg: arg0.toString() },
+      };
       closure_0._handleError(obj);
     };
     tmp3._handleAborted = function _handleAborted() {
@@ -102,12 +106,20 @@ prototype["_fileSize"] = function _fileSize() {
   }, 0);
 };
 prototype["compressAndCheckFileSize"] = function compressAndCheckFileSize() {
+  let obj = arg0;
+  if (arg0 === undefined) {
+    obj = {};
+  }
+  let flag = obj.deferTotalSizeCheckUntilAfterCompression;
+  if (flag === undefined) {
+    flag = false;
+  }
   const self = this;
   return (async () => {
     if (c9 === 2) {
       c9 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
+    } else if (tmp7 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -117,158 +129,215 @@ prototype["compressAndCheckFileSize"] = function compressAndCheckFileSize() {
         return { value: "HermesInternal", done: null };
       }
     } else {
-      while (true) {
+      try {
         c9 = 2;
-        let tmp4 = c8;
         if (0 === c8) {
           if (arg0 === 1) {
             c9 = 3;
             throw value;
           } else if (arg0 === 2) {
             c9 = 3;
-            let obj3 = { value, done: true };
+            const obj3 = { value, done: true };
             return obj3;
           } else {
-            constants = tmp4;
+            constants = tmp8;
             closure_132_0 = undefined;
             closure_132_1 = undefined;
             let maxFileSize;
-            let obj13 = _self(c2[6]);
-            let first = self.files[0];
+            const first = self.files[0];
             let target;
             if (first != null) {
-              let item = first.item;
+              const item = first.item;
               if (item != null) {
                 target = item.target;
               }
             }
-            let uploadTarget = obj13.getUploadTarget(target);
+            const uploadTarget = closure_0(dependencyMap[6]).getUploadTarget(target);
             closure_132_0 = uploadTarget;
             if (self.files.length > uploadTarget.getMaxAttachmentsCount()) {
-              let _HermesInternal2 = HermesInternal;
-              let logResult = logger.log("Too many attachments for " + self.id);
-              let obj4 = { code: null };
-              obj4.code = constants.TOO_MANY_ATTACHMENTS;
-              let _handleErrorResult = self._handleError(obj4);
+              const _HermesInternal2 = HermesInternal;
+              tmp65.log("Too many attachments for " + self.id);
+              const obj4 = { code: constants.TOO_MANY_ATTACHMENTS };
+              self._handleError(obj4);
               c9 = 3;
               return { value: false, done: true };
             } else {
-              let _HermesInternal3 = HermesInternal;
-              let logResult1 = logger.log("compressing files for " + self.id);
-              let files = self.files;
-              _self = files[Symbol.iterator]();
+              const _HermesInternal3 = HermesInternal;
+              tmp65.log("compressing files for " + self.id);
+              const files2 = self.files;
+              closure_0 = files2[Symbol.iterator]();
             }
+            const obj12 = closure_0(dependencyMap[6]);
           }
-        } else if (1 === tmp4) {
+        } else if (1 === tmp8) {
           c7 = 0;
-          _self.return();
-          throw logger;
-        } else if (2 === tmp4) {
-          closure_132_3 = logger;
-          let _handleExceptionResult = closure_133_0._handleException(closure_132_3);
-          c7 = 0;
-          _self.return();
-          c9 = 3;
-          return { value: false, done: true };
+          closure_0.return();
+          throw tmp65;
+        } else if (2 === tmp8) {
+          c7 = 1;
+          closure_132_3 = tmp65;
+          if (closure_132_1.isCancelled()) {
+            c7 = 0;
+          } else {
+            closure_133_1._handleException(closure_132_3, constants.INVALID_FILE_ASSET);
+            c7 = 0;
+            closure_0.return();
+            c9 = 3;
+            return { value: false, done: true };
+          }
         } else if (arg0 === 1) {
           c9 = 3;
           throw value;
         } else if (arg0 === 2) {
           c7 = 0;
-          _self.return();
+          closure_0.return();
           c9 = 3;
-          let obj5 = { value, done: true };
+          const obj5 = { value, done: true };
           return obj5;
-        } else if (closure_132_1.isCancelled()) {
-          let _HermesInternal = HermesInternal;
-          let logResult2 = logger.log(
-            "compressAndCheckFileSize() file has been cancelled for compression - " + closure_132_1.id,
-          );
-          c7 = 0;
         } else {
-          let currentSize = closure_132_1.currentSize;
-          c2 = currentSize;
-          if (currentSize == null) {
-            c2 = 0;
-          }
-          if (0 === c2) {
-            let obj6 = { code: null };
-            obj6.code = constants.ENTITY_EMPTY;
-            let _handleErrorResult1 = closure_133_0._handleError(obj6);
+          if (closure_132_1.isCancelled()) {
+            const _HermesInternal = HermesInternal;
+            tmp65.log("compressAndCheckFileSize() file has been cancelled for compression - " + closure_132_1.id);
             c7 = 0;
-            _self.return();
-            c9 = 3;
-            return { value: false, done: true };
           } else {
-            maxFileSize = closure_132_0.getMaxFileSize(closure_132_1.channelId);
-            let currentSize2 = closure_132_1.currentSize;
-            c3 = currentSize2;
-            if (currentSize2 == null) {
-              c3 = 0;
+            const currentSize = closure_132_1.currentSize;
+            dependencyMap = currentSize;
+            if (currentSize == null) {
+              dependencyMap = 0;
             }
-            if (c3 > maxFileSize) {
-              let obj = { code: null, reason: null };
-              obj.code = constants.ENTITY_TOO_LARGE;
-              let obj7 = { type: tmp.POSTCOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE };
-              obj.reason = obj7;
-              let _handleErrorResult2 = closure_133_0._handleError(obj);
+            if (0 === dependencyMap) {
+              const obj6 = { code: constants.ENTITY_EMPTY };
+              closure_133_1._handleError(obj6);
               c7 = 0;
-              _self.return();
+              closure_0.return();
               c9 = 3;
               return { value: false, done: true };
             } else {
-              c7 = 0;
+              maxFileSize = closure_132_0.getMaxFileSize(closure_132_1.channelId);
+              const currentSize2 = closure_132_1.currentSize;
+              c3 = currentSize2;
+              if (currentSize2 == null) {
+                c3 = 0;
+              }
+              if (c3 > maxFileSize) {
+                const obj = { isCompressionComplete: null };
+                ({ files, setUploadingTextForUI } = closure_133_1);
+                obj.isCompressionComplete = files.every(
+                  (reactNativeFilePrepped) => reactNativeFilePrepped.reactNativeFilePrepped,
+                );
+                const result = setUploadingTextForUI(obj);
+                const obj7 = { code: constants.ENTITY_TOO_LARGE, reason: null };
+                const obj8 = { type: tmp4.POSTCOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE };
+                obj7.reason = obj8;
+                closure_133_1._handleError(obj7);
+                c7 = 0;
+                closure_0.return();
+                c9 = 3;
+                return { value: false, done: true };
+              } else {
+                c7 = 1;
+              }
             }
           }
+          c7 = 0;
         }
-        if (_self === undefined) {
-          let _fileSizeResult = closure_133_0._fileSize();
-          let flag = _fileSizeResult <= closure_132_0.getMaxTotalAttachmentSize();
-          if (!flag) {
-            let obj8 = { code: null, reason: null };
-            obj8.code = constants.ENTITY_TOO_LARGE;
-            let obj9 = { type: tmp.POSTCOMPRESSION_SUM_TOO_LARGE };
-            obj8.reason = obj9;
-            let _handleErrorResult3 = closure_133_0._handleError(obj8);
-            flag = false;
+        if (closure_0 === undefined) {
+          let result1 = closure_133_0;
+          if (!closure_133_0) {
+            result1 = closure_133_1.checkTotalAttachmentSize();
           }
           c9 = 3;
-          let obj10 = { value: flag, done: true };
-          return obj10;
+          const obj9 = { value: result1, done: true };
+          return obj9;
         } else {
-          closure_132_1 = tmp41;
-          c7 = 2;
-          c8 = 3;
-          c9 = 1;
-          let obj11 = { value: closure_132_1.reactNativeCompressAndExtractData(), done: false };
-          return obj11;
+          c7 = 1;
+          closure_132_1 = tmp51;
+          if (!closure_132_1.isCancelled()) {
+            c7 = 2;
+            c8 = 3;
+            c9 = 1;
+            const obj10 = { value: closure_132_1.reactNativeCompressAndExtractData(), done: false };
+            return obj10;
+          }
+        }
+      } catch (tmp65) {
+        if (tmp5 === c7) {
+          c9 = tmp3;
+          throw tmp65;
+        } else if (tmp2 === tmp67) {
+          c8 = tmp2;
+        } else {
+          c8 = tmp;
         }
       }
     }
   })();
 };
-prototype["setUploadingTextForUI"] = function setUploadingTextForUI() {
-  const files = this.files;
-  const files2 = this.files;
+prototype["checkTotalAttachmentSize"] = function checkTotalAttachmentSize() {
+  const self = this;
+  const first = this.files[0];
+  let target;
+  if (first != null) {
+    const item = first.item;
+    if (item != null) {
+      target = item.target;
+    }
+  }
+  const uploadTarget = UploadTargets.getUploadTarget(target);
+  let flag = self._fileSize() <= uploadTarget.getMaxTotalAttachmentSize();
+  if (!flag) {
+    const result = self.setUploadingTextForUI();
+    const obj2 = { code: AbortCodes.ENTITY_TOO_LARGE, reason: null };
+    const obj3 = { type: FileUploadErrorTypes.POSTCOMPRESSION_SUM_TOO_LARGE };
+    obj2.reason = obj3;
+    self._handleError(obj2);
+    flag = false;
+  }
+  return flag;
+};
+prototype["setUploadingTextForUI"] = function setUploadingTextForUI(arg0) {
+  let obj = arg0;
+  if (arg0 === undefined) {
+    obj = {};
+  }
+  let flag = obj.isCompressionComplete;
+  if (flag === undefined) {
+    flag = true;
+  }
+  const self = this;
+  ({ files, files: files2 } = this);
   const someResult = files.some((isImage) => isImage.isImage);
-  const _fileSizeResult = this._fileSize();
+  if (flag) {
+    let _fileSizeResult = self._fileSize();
+  } else {
+    _fileSizeResult = _modDef12.sumBy(self.files, (reactNativeFilePrepped) =>
+      reactNativeFilePrepped.reactNativeFilePrepped
+        ? reactNativeFilePrepped.currentSize
+        : reactNativeFilePrepped.preCompressionSize,
+    );
+  }
   logger.log(
     "setUploadingTextForUI - total content: " +
       _fileSizeResult +
       " bytes and " +
-      this.files.length +
+      self.files.length +
       " attachments for " +
-      this.id,
+      self.id,
   );
-  const obj = {};
-  const merged = Object.assign(this._file);
-  obj.totalPostCompressionSize = _fileSizeResult;
-  obj.currentSize = _fileSizeResult;
-  obj.hasVideo = files2.some((isVideo) => isVideo.isVideo);
-  obj.hasImage = someResult;
-  obj.attachmentsCount = this.files.length;
-  obj.items = this.files;
-  this._file = obj;
+  const obj3 = {};
+  const merged = Object.assign(self._file);
+  let tmp8;
+  if (flag) {
+    tmp8 = _fileSizeResult;
+  }
+  obj3.totalPostCompressionSize = tmp8;
+  obj3.currentSize = _fileSizeResult;
+  obj3.hasVideo = files2.some((isVideo) => isVideo.isVideo);
+  obj3.hasImage = someResult;
+  obj3.attachmentsCount = self.files.length;
+  obj3.items = self.files;
+  self._file = obj3;
+  const someResult1 = files2.some((isVideo) => isVideo.isVideo);
 };
 prototype["_recomputeProgress"] = function _recomputeProgress() {
   const result = this._recomputeProgressTotal();
@@ -327,10 +396,10 @@ prototype["cancel"] = function cancel() {
 prototype["cancelItem"] = function cancelItem(itemId) {
   const self = this;
   return (async () => {
-    if (c4 === 2) {
-      c4 = 3;
+    if (c3 === 2) {
+      c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp5 === 3) {
+    } else if (tmp4 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
@@ -341,23 +410,21 @@ prototype["cancelItem"] = function cancelItem(itemId) {
       }
     } else {
       try {
-        c4 = 2;
-        if (0 === c3) {
+        c3 = 2;
+        if (0 === c2) {
           if (arg0 === 1) {
-            c4 = 3;
+            c3 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c4 = 3;
+            c3 = 3;
             const obj4 = { value, done: true };
             return obj4;
           } else {
             closure_1 = tmp2;
-            closure_129_0 = undefined;
             const _HermesInternal = HermesInternal;
             logger.log("Cancel called for " + self.id + " for item " + itemId);
             const files = self.files;
             const found = files.find((id) => id.id === closure_1_0);
-            closure_129_0 = found;
             if (null != found) {
               if (!found.isCancelled()) {
                 const files1 = self.files;
@@ -373,30 +440,30 @@ prototype["cancelItem"] = function cancelItem(itemId) {
                 const merged = Object.assign(self._file);
                 obj5.items = self.files;
                 self._file = obj5;
+                found.cancel();
+                c2 = 1;
                 c3 = 1;
-                c4 = 1;
-                const obj6 = { value: itemId(tmp3[8]).cancelGetAttachmentFile(found), done: false };
+                const obj6 = { value: itemId(c2[8]).cancelGetAttachmentFile(found), done: false };
                 return obj6;
               }
             }
-            c4 = 3;
+            c3 = 3;
           }
         } else if (arg0 === 1) {
-          c4 = 3;
+          c3 = 3;
           throw value;
         } else if (arg0 !== 2) {
-          closure_129_0.cancel();
-          closure_130_1.emit("cancel-upload-item", closure_130_1._file);
-          if (0 === closure_130_1.files.length) {
-            closure_130_1.cancel();
+          closure_129_1.emit("cancel-upload-item", closure_129_1._file);
+          if (0 === closure_129_1.files.length) {
+            closure_129_1.cancel();
           }
         }
-        c4 = 3;
+        c3 = 3;
         const obj = { value, done: true };
         return obj;
-      } catch (tmp31) {
-        c4 = tmp;
-        throw tmp31;
+      } catch (tmp28) {
+        c3 = tmp;
+        throw tmp28;
       }
     }
   })();

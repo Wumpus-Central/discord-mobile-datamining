@@ -1,7 +1,7 @@
 // discord_common/js/packages/storage/native/Storage.tsx
 import AppStartPerformanceDefault from "../../app-start-performance/AppStartPerformance.tsx";
+import NativeCacheModuleDefault from "../../rtn-codegen/js/NativeCacheModule.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
-import NativeCacheModule from "../../rtn-codegen/js/NativeCacheModule.tsx";
 
 function parseValue(arg0) {
   let parsed = arg0;
@@ -14,8 +14,7 @@ function parseValue(arg0) {
   return parsed;
 }
 get_ActivityIndicator = fn(17);
-({ Platform, NativeModules } = get_ActivityIndicator);
-const DCDStrongboxManager = NativeModules.DCDStrongboxManager;
+const DCDStrongboxManager = get_ActivityIndicator.NativeModules.DCDStrongboxManager;
 class ProxyAsyncStorage {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -43,7 +42,8 @@ prototype["refresh"] = function refresh() {
     new Set();
   }
   self.secureKeys = new Set();
-  const items1 = [NativeCacheModule.refresh(items)];
+  const set1 = new Set();
+  const items1 = [self(512).refresh(items)];
   let refreshResult;
   if (DCDStrongboxManager != null) {
     const items2 = [];
@@ -51,7 +51,7 @@ prototype["refresh"] = function refresh() {
     refreshResult = DCDStrongboxManager.refresh(items2);
   }
   items1[1] = refreshResult;
-  const set1 = new Set();
+  let obj = self(512);
   return Promise.all(items1).then((result) => {
     [tmp2, tmp3] = result;
     AppStartPerformanceDefault.mark("\u{1F4BE}", "Storage.refresh() Promise Resolved");
@@ -95,7 +95,8 @@ prototype["parse"] = function parse(arg0) {
       const result = DCDStrongboxManager.setItem(arg1, rawData);
       result.then((result) => {
         if (result) {
-          NativeCacheModule.removeItem(closure_0);
+          self(dependencyMap[2]).removeItem(closure_0);
+          const obj = self(dependencyMap[2]);
         }
       });
     }
@@ -128,12 +129,12 @@ prototype["getAfterRefresh"] = function getAfterRefresh(arg0) {
 };
 prototype["asyncGet"] = function asyncGet(ContactSyncDMListCTADismissed, arg1, arg2) {
   const self = this;
-  closure_1 = ContactSyncDMListCTADismissed;
+  dependencyMap = ContactSyncDMListCTADismissed;
   closure_2 = arg1;
-  closure_0 = arg2;
+  importDefault = arg2;
   const secureKeys = this.secureKeys;
   if (secureKeys.has(ContactSyncDMListCTADismissed)) {
-    value = DCDStrongboxManager.getItem(ContactSyncDMListCTADismissed);
+    value = self.getItem(ContactSyncDMListCTADismissed);
     value.then((result) => {
       if (null != result) {
         const _Date = Date;
@@ -151,7 +152,7 @@ prototype["asyncGet"] = function asyncGet(ContactSyncDMListCTADismissed, arg1, a
       }
     });
   } else {
-    value2 = self.getItem(ContactSyncDMListCTADismissed);
+    value2 = NativeCacheModuleDefault.getItem(ContactSyncDMListCTADismissed);
     value2.then((result) => {
       if (null != result) {
         const _Date = Date;
@@ -206,9 +207,10 @@ prototype["asyncGetRaw"] = function asyncGetRaw(arg0, arg1) {
             }
             const secureKeys = self.secureKeys;
             if (secureKeys.has(tmp5)) {
-              value = item2.getItem(tmp5);
+              value = item.getItem(tmp5);
             } else {
-              value2 = item.getItem(tmp5);
+              value2 = tmp5(tmp2[2]).getItem(tmp5);
+              const obj5 = tmp5(tmp2[2]);
             }
             c2 = 1;
             item = 1;
@@ -218,8 +220,8 @@ prototype["asyncGetRaw"] = function asyncGetRaw(arg0, arg1) {
           throw value;
         } else if (arg0 === 2) {
           item = 3;
-          const obj5 = { value, done: true };
-          return obj5;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
           closure_128_0 = value;
           let tmp14 = null;
@@ -231,12 +233,12 @@ prototype["asyncGetRaw"] = function asyncGetRaw(arg0, arg1) {
             tmp14 = closure_128_0;
           }
           item = 3;
-          const obj6 = { value: tmp14, done: true };
-          return obj6;
+          const obj7 = { value: tmp14, done: true };
+          return obj7;
         }
-      } catch (tmp25) {
+      } catch (tmp26) {
         item = tmp;
-        throw tmp25;
+        throw tmp26;
       }
     }
   })();
@@ -272,13 +274,13 @@ prototype["setRaw"] = function setRaw(str, rawData) {
     throw error1;
   } else {
     const self = this;
-    const obj = { parsed: false, rawData };
-    this.storage[str] = obj;
+    const obj2 = { parsed: false, rawData };
+    this.storage[str] = obj2;
     const secureKeys = this.secureKeys;
     if (secureKeys.has(str)) {
       const result = DCDStrongboxManager.setItem(str, rawData);
     } else {
-      const result1 = NativeCacheModule.setItem(str, rawData);
+      const result1 = NativeCacheModuleDefault.setItem(str, rawData);
     }
   }
 };
@@ -288,12 +290,12 @@ prototype["remove"] = function remove(arg0) {
   if (secureKeys.has(arg0)) {
     DCDStrongboxManager.removeItem(arg0);
   } else {
-    NativeCacheModule.removeItem(arg0);
+    NativeCacheModuleDefault.removeItem(arg0);
   }
 };
 prototype["clear"] = function clear() {
   this.storage = {};
-  NativeCacheModule.clear();
+  NativeCacheModuleDefault.clear();
   if (DCDStrongboxManager != null) {
     const items = [];
     HermesBuiltin.arraySpread(this.secureKeys, 0);

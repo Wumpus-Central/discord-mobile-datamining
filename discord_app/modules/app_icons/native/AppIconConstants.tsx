@@ -1,48 +1,48 @@
 // discord_app/modules/app_icons/native/AppIconConstants.tsx
 import util from "../../../intl/index.native.tsx";
 import AppIconTypes from "../AppIconTypes.tsx";
-import _modDef8791 from "../../../../_runtime/metro/08791__.js";
-import _modDef8792 from "../../../../_runtime/metro/08792__.js";
-import _modDef8793 from "../../../../_runtime/metro/08793__.js";
-import _modDef8794 from "../../../../_runtime/metro/08794__.js";
-import _modDef8795 from "../../../../_runtime/metro/08795__.js";
-import _modDef8796 from "../../../../_runtime/metro/08796__.js";
-import _modDef8797 from "../../../../_runtime/metro/08797__.js";
-import _modDef8798 from "../../../../_runtime/metro/08798__.js";
-import _modDef8799 from "../../../../_runtime/metro/08799__.js";
-import _modDef8800 from "../../../../_runtime/metro/08800__.js";
-import _modDef8801 from "../../../../_runtime/metro/08801__.js";
-import _modDef8802 from "../../../../_runtime/metro/08802__.js";
-import _modDef8803 from "../../../../_runtime/metro/08803__.js";
-import _modDef8804 from "../../../../_runtime/metro/08804__.js";
-import _modDef8805 from "../../../../_runtime/metro/08805__.js";
-import _modDef8806 from "../../../../_runtime/metro/08806__.js";
-import _modDef8807 from "../../../../_runtime/metro/08807__.js";
-import _modDef8808 from "../../../../_runtime/metro/08808__.js";
-import _modDef8809 from "../../../../_runtime/metro/08809__.js";
-import _modDef8810 from "../../../../_runtime/metro/08810__.js";
-import _modDef8811 from "../../../../_runtime/metro/08811__.js";
-import _modDef8812 from "../../../../_runtime/metro/08812__.js";
-import _modDef8813 from "../../../../_runtime/metro/08813__.js";
-import _modDef8814 from "../../../../_runtime/metro/08814__.js";
-import _modDef8815 from "../../../../_runtime/metro/08815__.js";
+import _modDef8825 from "../../../../_runtime/metro/08825__.js";
+import _modDef8826 from "../../../../_runtime/metro/08826__.js";
+import _modDef8827 from "../../../../_runtime/metro/08827__.js";
+import _modDef8828 from "../../../../_runtime/metro/08828__.js";
+import _modDef8829 from "../../../../_runtime/metro/08829__.js";
+import _modDef8830 from "../../../../_runtime/metro/08830__.js";
+import _modDef8831 from "../../../../_runtime/metro/08831__.js";
+import _modDef8832 from "../../../../_runtime/metro/08832__.js";
+import _modDef8833 from "../../../../_runtime/metro/08833__.js";
+import _modDef8834 from "../../../../_runtime/metro/08834__.js";
+import _modDef8835 from "../../../../_runtime/metro/08835__.js";
+import _modDef8836 from "../../../../_runtime/metro/08836__.js";
+import _modDef8837 from "../../../../_runtime/metro/08837__.js";
+import _modDef8838 from "../../../../_runtime/metro/08838__.js";
+import _modDef8839 from "../../../../_runtime/metro/08839__.js";
+import _modDef8840 from "../../../../_runtime/metro/08840__.js";
+import _modDef8841 from "../../../../_runtime/metro/08841__.js";
+import _modDef8842 from "../../../../_runtime/metro/08842__.js";
+import _modDef8843 from "../../../../_runtime/metro/08843__.js";
+import _modDef8844 from "../../../../_runtime/metro/08844__.js";
+import _modDef8845 from "../../../../_runtime/metro/08845__.js";
+import _modDef8846 from "../../../../_runtime/metro/08846__.js";
+import _modDef8847 from "../../../../_runtime/metro/08847__.js";
+import _modDef8848 from "../../../../_runtime/metro/08848__.js";
+import _modDef8849 from "../../../../_runtime/metro/08849__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
-let obj = { id: AppIconTypes.PremiumAppIconIds.IN_RAINBOWS, iconSource: _modDef8792, isPremium: true, name: null };
+let obj = { id: AppIconTypes.PremiumAppIconIds.IN_RAINBOWS, iconSource: _modDef8826, isPremium: true, name: null };
 let intl = util.intl;
 obj.name = intl.string(util.t.yxJB9E);
 let items = [obj, , , , , , , , , , , , , , , , , , , , , , ,];
-let obj2 = { id: AppIconTypes.PremiumAppIconIds.MIDNIGHT_PRISM, iconSource: _modDef8793, isPremium: true, name: null };
+let obj2 = { id: AppIconTypes.PremiumAppIconIds.MIDNIGHT_PRISM, iconSource: _modDef8827, isPremium: true, name: null };
 let intl2 = util.intl;
 obj2.name = intl2.string(util.t.nshUZZ);
 items[1] = obj2;
-const obj3 = { id: AppIconTypes.PremiumAppIconIds.COLOR_WAVE, iconSource: _modDef8794, isPremium: true, name: null };
+const obj3 = { id: AppIconTypes.PremiumAppIconIds.COLOR_WAVE, iconSource: _modDef8828, isPremium: true, name: null };
 const intl3 = util.intl;
 obj3.name = intl3.string(util.t.MWRYqh);
 items[2] = obj3;
 const obj4 = {
   id: AppIconTypes.PremiumAppIconIds.BLURPLE_TWILIGHT,
-  iconSource: _modDef8795,
+  iconSource: _modDef8829,
   isPremium: true,
   name: null,
 };
@@ -51,91 +51,91 @@ obj4.name = intl4.string(util.t.Mfoe3p);
 items[3] = obj4;
 const obj5 = {
   id: AppIconTypes.PremiumAppIconIds.BRAND_INVERTED,
-  iconSource: _modDef8796,
+  iconSource: _modDef8830,
   isPremium: true,
   name: null,
 };
 const intl5 = util.intl;
 obj5.name = intl5.string(util.t.h6UXSt);
 items[4] = obj5;
-const obj6 = { id: AppIconTypes.PremiumAppIconIds.BRAND_DARK, iconSource: _modDef8797, name: null, isPremium: true };
+const obj6 = { id: AppIconTypes.PremiumAppIconIds.BRAND_DARK, iconSource: _modDef8831, name: null, isPremium: true };
 const intl6 = util.intl;
 obj6.name = intl6.string(util.t.gZEUBl);
 items[5] = obj6;
-const obj7 = { id: AppIconTypes.PremiumAppIconIds.MATTE_DARK, iconSource: _modDef8798, isPremium: true, name: null };
+const obj7 = { id: AppIconTypes.PremiumAppIconIds.MATTE_DARK, iconSource: _modDef8832, isPremium: true, name: null };
 const intl7 = util.intl;
 obj7.name = intl7.string(util.t.NkshQt);
 items[6] = obj7;
-const obj8 = { id: AppIconTypes.PremiumAppIconIds.MATTE_LIGHT, iconSource: _modDef8799, name: null, isPremium: true };
+const obj8 = { id: AppIconTypes.PremiumAppIconIds.MATTE_LIGHT, iconSource: _modDef8833, name: null, isPremium: true };
 const intl8 = util.intl;
 obj8.name = intl8.string(util.t.G2W302);
 items[7] = obj8;
-const obj9 = { id: AppIconTypes.PremiumAppIconIds.PASTEL, iconSource: _modDef8800, isPremium: true, name: null };
+const obj9 = { id: AppIconTypes.PremiumAppIconIds.PASTEL, iconSource: _modDef8834, isPremium: true, name: null };
 const intl9 = util.intl;
 obj9.name = intl9.string(util.t.mTSkLT);
 items[8] = obj9;
-const obj10 = { id: AppIconTypes.PremiumAppIconIds.PIRATE, iconSource: _modDef8801, isPremium: true, name: null };
+const obj10 = { id: AppIconTypes.PremiumAppIconIds.PIRATE, iconSource: _modDef8835, isPremium: true, name: null };
 const intl10 = util.intl;
 obj10.name = intl10.string(util.t["EgWTY+"]);
 items[9] = obj10;
-const obj11 = { id: AppIconTypes.PremiumAppIconIds.CAMO, iconSource: _modDef8802, isPremium: true, name: null };
+const obj11 = { id: AppIconTypes.PremiumAppIconIds.CAMO, iconSource: _modDef8836, isPremium: true, name: null };
 const intl11 = util.intl;
 obj11.name = intl11.string(util.t.RSKXOK);
 items[10] = obj11;
-const obj12 = { id: AppIconTypes.PremiumAppIconIds.SUNSET, iconSource: _modDef8803, isPremium: true, name: null };
+const obj12 = { id: AppIconTypes.PremiumAppIconIds.SUNSET, iconSource: _modDef8837, isPremium: true, name: null };
 const intl12 = util.intl;
 obj12.name = intl12.string(util.t.ixdjPB);
 items[11] = obj12;
-const obj13 = { id: AppIconTypes.PremiumAppIconIds.GALAXY, iconSource: _modDef8804, isPremium: true, name: null };
+const obj13 = { id: AppIconTypes.PremiumAppIconIds.GALAXY, iconSource: _modDef8838, isPremium: true, name: null };
 const intl13 = util.intl;
 obj13.name = intl13.string(util.t.cb78Ls);
 items[12] = obj13;
-const obj14 = { id: AppIconTypes.PremiumAppIconIds.Y2K, iconSource: _modDef8805, isPremium: true, name: null };
+const obj14 = { id: AppIconTypes.PremiumAppIconIds.Y2K, iconSource: _modDef8839, isPremium: true, name: null };
 const intl14 = util.intl;
 obj14.name = intl14.string(util.t["s+KoXO"]);
 items[13] = obj14;
 const obj15 = {
   id: AppIconTypes.PremiumAppIconIds.CHERRY_BLOSSOM,
-  iconSource: _modDef8806,
+  iconSource: _modDef8840,
   isPremium: true,
   name: null,
 };
 const intl15 = util.intl;
 obj15.name = intl15.string(util.t["ta/5RB"]);
 items[14] = obj15;
-const obj16 = { id: AppIconTypes.PremiumAppIconIds.BEANIE, iconSource: _modDef8807, isPremium: true, name: null };
+const obj16 = { id: AppIconTypes.PremiumAppIconIds.BEANIE, iconSource: _modDef8841, isPremium: true, name: null };
 const intl16 = util.intl;
 obj16.name = intl16.string(util.t.IoLViw);
 items[15] = obj16;
-const obj17 = { id: AppIconTypes.PremiumAppIconIds.GAMING, iconSource: _modDef8808, isPremium: true, name: null };
+const obj17 = { id: AppIconTypes.PremiumAppIconIds.GAMING, iconSource: _modDef8842, isPremium: true, name: null };
 const intl17 = util.intl;
 obj17.name = intl17.string(util.t["2Tf+c4"]);
 items[16] = obj17;
-const obj18 = { id: AppIconTypes.PremiumAppIconIds.CIRCUIT, iconSource: _modDef8809, isPremium: true, name: null };
+const obj18 = { id: AppIconTypes.PremiumAppIconIds.CIRCUIT, iconSource: _modDef8843, isPremium: true, name: null };
 const intl18 = util.intl;
 obj18.name = intl18.string(util.t.dUpxKb);
 items[17] = obj18;
-const obj19 = { id: AppIconTypes.PremiumAppIconIds.HOLO_WAVES, iconSource: _modDef8810, isPremium: true, name: null };
+const obj19 = { id: AppIconTypes.PremiumAppIconIds.HOLO_WAVES, iconSource: _modDef8844, isPremium: true, name: null };
 const intl19 = util.intl;
 obj19.name = intl19.string(util.t["9mg7g1"]);
 items[18] = obj19;
-const obj20 = { id: AppIconTypes.PremiumAppIconIds.BLUSH, iconSource: _modDef8811, isPremium: true, name: null };
+const obj20 = { id: AppIconTypes.PremiumAppIconIds.BLUSH, iconSource: _modDef8845, isPremium: true, name: null };
 const intl20 = util.intl;
 obj20.name = intl20.string(util.t.nmd90m);
 items[19] = obj20;
-const obj21 = { id: AppIconTypes.PremiumAppIconIds.ANGRY, iconSource: _modDef8812, isPremium: true, name: null };
+const obj21 = { id: AppIconTypes.PremiumAppIconIds.ANGRY, iconSource: _modDef8846, isPremium: true, name: null };
 const intl21 = util.intl;
 obj21.name = intl21.string(util.t["9PUXpM"]);
 items[20] = obj21;
-const obj22 = { id: AppIconTypes.PremiumAppIconIds.MANGA, iconSource: _modDef8813, isPremium: true, name: null };
+const obj22 = { id: AppIconTypes.PremiumAppIconIds.MANGA, iconSource: _modDef8847, isPremium: true, name: null };
 const intl22 = util.intl;
 obj22.name = intl22.string(util.t.hGBbF8);
 items[21] = obj22;
-const obj23 = { id: AppIconTypes.PremiumAppIconIds.CONTROLLER, iconSource: _modDef8814, isPremium: true, name: null };
+const obj23 = { id: AppIconTypes.PremiumAppIconIds.CONTROLLER, iconSource: _modDef8848, isPremium: true, name: null };
 const intl23 = util.intl;
 obj23.name = intl23.string(util.t["4QM2U1"]);
 items[22] = obj23;
-const obj24 = { id: AppIconTypes.PremiumAppIconIds.MUSHROOM, iconSource: _modDef8815, isPremium: true, name: null };
+const obj24 = { id: AppIconTypes.PremiumAppIconIds.MUSHROOM, iconSource: _modDef8849, isPremium: true, name: null };
 const intl24 = util.intl;
 obj24.name = intl24.string(util.t.gnLLSK);
 items[23] = obj24;
@@ -143,7 +143,7 @@ let closure_4 = [];
 const result = size.fileFinishedImporting("modules/app_icons/native/AppIconConstants.tsx");
 
 export const getDefaultIcon = function getDefaultIcon() {
-  const obj = { id: AppIconTypes.FreemiumAppIconIds.DEFAULT, iconSource: _modDef8791, name: null, isPremium: false };
+  const obj = { id: AppIconTypes.FreemiumAppIconIds.DEFAULT, iconSource: _modDef8825, name: null, isPremium: false };
   const intl = util.intl;
   obj.name = intl.string(util.t.ANxkLy);
   return obj;
@@ -177,7 +177,7 @@ export const getLimitedAlternateIcons = function getLimitedAlternateIcons() {
   });
 };
 export const getIcons = function getIcons() {
-  const obj = { id: AppIconTypes.FreemiumAppIconIds.DEFAULT, iconSource: _modDef8791, name: null, isPremium: false };
+  const obj = { id: AppIconTypes.FreemiumAppIconIds.DEFAULT, iconSource: _modDef8825, name: null, isPremium: false };
   const intl = util.intl;
   obj.name = intl.string(util.t.ANxkLy);
   items = [
@@ -203,7 +203,7 @@ export const getIcons = function getIcons() {
 };
 export const getIconById = function getIconById(currentAppIcon) {
   closure_0 = currentAppIcon;
-  const obj = { id: AppIconTypes.FreemiumAppIconIds.DEFAULT, iconSource: _modDef8791, name: null, isPremium: false };
+  const obj = { id: AppIconTypes.FreemiumAppIconIds.DEFAULT, iconSource: _modDef8825, name: null, isPremium: false };
   const intl = util.intl;
   obj.name = intl.string(util.t.ANxkLy);
   items = [
@@ -227,7 +227,7 @@ export const getIconById = function getIconById(currentAppIcon) {
   ];
   let found = items.find((id) => id.id === closure_0);
   if (null == found) {
-    const obj2 = { id: AppIconTypes.FreemiumAppIconIds.DEFAULT, iconSource: _modDef8791, name: null, isPremium: false };
+    const obj2 = { id: AppIconTypes.FreemiumAppIconIds.DEFAULT, iconSource: _modDef8825, name: null, isPremium: false };
     const intl2 = util.intl;
     obj2.name = intl2.string(util.t.ANxkLy);
     found = obj2;

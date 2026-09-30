@@ -14,11 +14,11 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_7 = fn(7802).getSingleRequirementThreshold;
+let closure_7 = fn(7832).getSingleRequirementThreshold;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj2 = {
   container: {
     alignItems: "center",
@@ -57,7 +57,7 @@ export default function GiftingBadgeInfoActionSheet() {
   _require = tmp;
   let items = [BadgeDirectoryStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () =>
-    badgeById.getBadgeById(closure_0(7794).BadgeId.GIFTING),
+    badgeById.getBadgeById(closure_0(7824).BadgeId.GIFTING),
   );
   let obj = require("initialize");
   const items1 = [AccessibilityStore];

@@ -217,16 +217,16 @@ prototype["getGuildRecentsDismissedAt"] = function getGuildRecentsDismissedAt(_g
     return num;
   }
 };
-prototype["getDismissedGuildContent"] = function getDismissedGuildContent(id) {
+prototype["getDismissedGuildContent"] = function getDismissedGuildContent(guildId) {
   let tmp = null;
-  if (null != id) {
+  if (null != guildId) {
     const self = this;
     const guilds = this.settings.guilds;
     let prop;
     if (guilds != null) {
       const guilds2 = guilds.guilds;
       if (guilds2 != null) {
-        if (guilds2[id] != null) {
+        if (guilds2[guildId] != null) {
           prop = tmp3.dismissedGuildContent;
         }
       }

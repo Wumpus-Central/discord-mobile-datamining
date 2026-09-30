@@ -143,13 +143,13 @@ const Constants = fn(1074);
   AnalyticsPages: closure_11,
   AnalyticsSections: closure_12,
 } = Constants);
-let closure_13 = fn(6738).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
+let closure_13 = fn(6768).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
 const PremiumUpsellTypes = fn(1374).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 let c17 = 80;
 let c18 = 16.666666666666668;
-let createStyles = fn(4836);
+let createStyles = fn(4866);
 let obj = {
   gridInset: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 },
   grid: null,
@@ -181,11 +181,11 @@ obj.message = {
 };
 obj.messageText = { textAlign: "center" };
 let closure_19 = createStyles.createStyles(obj);
-createStyles = fn(4836);
+createStyles = fn(4866);
 let obj10 = {
   position: { position: "absolute" },
   fill: { flex: 1 },
-  card: { flex: 1, alignItems: "center", padding: 0 },
+  card: { flex: 1, alignItems: "center", justifyContent: "center", padding: 0 },
   icon: null,
   name: null,
   indicator: null,
@@ -198,14 +198,14 @@ let obj9 = {
   paddingHorizontal: nativeDefault.space.PX_16,
   paddingVertical: nativeDefault.space.PX_32,
 };
-obj10.icon = { marginTop: nativeDefault.space.PX_24 };
-let obj12 = { marginTop: nativeDefault.space.PX_24 };
+obj10.icon = { marginBottom: nativeDefault.space.PX_12 };
+let obj12 = { marginBottom: nativeDefault.space.PX_12 };
 obj10.name = {
   position: "absolute",
   start: 0,
   end: 0,
   bottom: nativeDefault.space.PX_8,
-  paddingHorizontal: nativeDefault.space.PX_4,
+  paddingHorizontal: nativeDefault.space.PX_12,
   textAlign: "center",
 };
 let size = {
@@ -242,12 +242,12 @@ let obj13 = {
   start: 0,
   end: 0,
   bottom: nativeDefault.space.PX_8,
-  paddingHorizontal: nativeDefault.space.PX_4,
+  paddingHorizontal: nativeDefault.space.PX_12,
   textAlign: "center",
 };
 getSlotOffset.__closure = {
-  BADGE_GRID_COLUMNS: fn(14353).BADGE_GRID_COLUMNS,
-  BADGE_GRID_GAP: fn(14353).BADGE_GRID_GAP,
+  BADGE_GRID_COLUMNS: fn(14382).BADGE_GRID_COLUMNS,
+  BADGE_GRID_GAP: fn(14382).BADGE_GRID_GAP,
 };
 getSlotOffset.__workletHash = 8647997879684;
 getSlotOffset.__initData = {

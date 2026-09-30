@@ -2,15 +2,15 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import BadgeDetailsUtils from "../BadgeDetailsUtils.tsx";
 import BadgeArtImageDefault from "BadgeArtImage.tsx";
+import BadgeDetailsUtils from "../BadgeDetailsUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj2 = { section: { gap: nativeDefault.space.PX_12 }, row: null, content: null, track: null, fill: null };
 let obj3 = { gap: nativeDefault.space.PX_12 };
 obj2.row = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_16 };
@@ -43,19 +43,30 @@ export default function BadgeProgressSection(arg0) {
   const tmp = closure_6();
   const badgeProgressDisplay = BadgeDetailsUtils.getBadgeProgressDisplay(badge, viewerBadge);
   ({ progress, threshold, currentArtUrl, nextArtUrl, helperText } = badgeProgressDisplay);
-  let num;
-  if (progress != null) {
-    num = progress.current;
-  }
-  if (num == null) {
-    num = 0;
-  }
-  let num2;
-  if (progress != null) {
-    num2 = progress.floor;
-  }
-  if (num2 == null) {
-    num2 = 0;
+  let num = 0;
+  if (null != threshold) {
+    let num2;
+    if (progress != null) {
+      num2 = progress.current;
+    }
+    if (num2 == null) {
+      num2 = 0;
+    }
+    let num3;
+    if (progress != null) {
+      num3 = progress.floor;
+    }
+    if (num3 == null) {
+      num3 = 0;
+    }
+    const diff = threshold - num3;
+    let num5 = 1;
+    if (diff > 0) {
+      const _Math = Math;
+      const _Math2 = Math;
+      num5 = Math.min(Math.max((num2 - num3) / diff, 0), 1);
+    }
+    num = num5;
   }
   const obj2 = { style: tmp.section, children: null };
   const obj3 = { variant: "text-sm/medium", color: "text-default", children: null };
@@ -63,21 +74,21 @@ export default function BadgeProgressSection(arg0) {
   obj3.children = intl.string(util.t["2m/g2c"]);
   const items = [React4(Text_Text.Text, obj3)];
   const obj4 = { style: tmp.row, children: null };
-  let tmp7Result = null != currentArtUrl;
-  if (tmp7Result) {
+  let tmp9Result = null != currentArtUrl;
+  if (tmp9Result) {
     const obj5 = { url: currentArtUrl, height: 48 };
-    tmp7Result = React4(BadgeArtImageDefault, obj5);
+    tmp9Result = React4(BadgeArtImageDefault, obj5);
   }
-  const items1 = [tmp7Result, ,];
+  const items1 = [tmp9Result, ,];
   const obj6 = { style: tmp.content, children: null };
-  let tmp7Result4 = null != helperText;
-  if (tmp7Result4) {
+  let tmp9Result4 = null != helperText;
+  if (tmp9Result4) {
     const obj7 = { variant: "text-sm/medium", "aria-hidden": null != threshold, children: helperText };
-    tmp7Result4 = React4(Text_Text.Text, obj7);
+    tmp9Result4 = React4(Text_Text.Text, obj7);
   }
-  const items2 = [tmp7Result4];
-  let tmp7Result5 = null != threshold;
-  if (tmp7Result5) {
+  const items2 = [tmp9Result4];
+  let tmp9Result5 = null != threshold;
+  if (tmp9Result5) {
     const obj8 = {
       style: tmp.track,
       accessible: true,
@@ -91,34 +102,28 @@ export default function BadgeProgressSection(arg0) {
       helperText = intl2.string(util.t.Uwhb1l);
     }
     obj8.accessibilityLabel = helperText;
-    const range = { min: num2, max: threshold, now: null };
-    const _Math = Math;
-    range.now = Math.min(num, threshold);
-    obj8.accessibilityValue = range;
+    const obj9 = { text: null };
+    const _Intl = Intl;
+    const numberFormat = new Intl.NumberFormat(util.intl.currentLocale, { style: "percent" });
+    obj9.text = numberFormat.format(num);
+    obj8.accessibilityValue = obj9;
+    const obj10 = { style: null };
     const items3 = [tmp.fill];
-    const diff = threshold - num2;
-    let num5 = 1;
-    if (diff > 0) {
-      const _Math2 = Math;
-      const _Math3 = Math;
-      num5 = Math.min(Math.max((num - num2) / diff, 0), 1);
-    }
-    const obj9 = { style: null };
-    const obj10 = { width: `${100 * num5}%` };
-    items3[1] = obj10;
-    obj9.style = items3;
-    obj8.children = React4(View, obj9);
-    tmp7Result5 = React4(View, obj8);
+    const obj11 = { width: `${100 * num}%` };
+    items3[1] = obj11;
+    obj10.style = items3;
+    obj8.children = React4(View, obj10);
+    tmp9Result5 = React4(View, obj8);
   }
-  items2[1] = tmp7Result5;
+  items2[1] = tmp9Result5;
   obj6.children = items2;
   items1[1] = hasOwnProperty(View, obj6);
-  let tmp7Result6 = null != nextArtUrl;
-  if (tmp7Result6) {
-    const obj11 = { url: nextArtUrl, height: 48 };
-    tmp7Result6 = React4(BadgeArtImageDefault, obj11);
+  let tmp9Result6 = null != nextArtUrl;
+  if (tmp9Result6) {
+    const obj12 = { url: nextArtUrl, height: 48 };
+    tmp9Result6 = React4(BadgeArtImageDefault, obj12);
   }
-  items1[2] = tmp7Result6;
+  items1[2] = tmp9Result6;
   obj4.children = items1;
   items[1] = hasOwnProperty(View, obj4);
   obj2.children = items;

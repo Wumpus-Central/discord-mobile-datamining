@@ -7,7 +7,7 @@ const result = size.fileFinishedImporting("modules/quests/native/openQuestOrbMul
 
 export default function openQuestOrbMultiplierPerkInfoActionSheet(multiplier, orbMultiplierEligibility) {
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(14871, dependencyMap.paths),
+    asyncRequireImpl(14902, dependencyMap.paths),
     "QuestOrbMultiplierPerkInfoActionSheet",
     { multiplier, orbMultiplierEligibility },
   );

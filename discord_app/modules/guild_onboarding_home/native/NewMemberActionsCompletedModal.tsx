@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj2 = {
   screen: {
     flex: 1,
@@ -49,22 +49,22 @@ export default function NewMemberActionsCompleted(arg0) {
   let sharedValue;
   ({ initialPercent, numActions } = arg0);
   const tmp = closure_7();
-  sharedValue = sharedValue(4566).useSharedValue(initialPercent);
+  sharedValue = sharedValue(4596).useSharedValue(initialPercent);
   const items = [sharedValue];
   const effect = noop.useEffect(() => {
     const result = sharedValue.set(1);
   }, items);
-  let obj = sharedValue(4566);
+  let obj = sharedValue(4596);
   const fn = function b() {
     const obj = { width: null };
     const obj2 = ReanimatedRexport;
     obj.width = obj2.withDelay(500, timing.withTiming(`${100 * sharedValue.get()}%`, { duration: 700 }));
     return obj;
   };
-  let obj2 = sharedValue(4566);
+  let obj2 = sharedValue(4596);
   fn.__closure = {
-    withDelay: sharedValue(4566).withDelay,
-    withTiming: sharedValue(4837).withTiming,
+    withDelay: sharedValue(4596).withDelay,
+    withTiming: sharedValue(4867).withTiming,
     barWidth: sharedValue,
   };
   fn.__workletHash = 7643178959760;
@@ -72,7 +72,7 @@ export default function NewMemberActionsCompleted(arg0) {
   const animatedStyle = obj2.useAnimatedStyle(fn);
   const effect1 = noop.useEffect(() => {
     const timerId = setTimeout(
-      () => closure_1_1(5039).popWithKey(sharedValue(11937).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
+      () => closure_1_1(5069).popWithKey(sharedValue(11971).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY),
       2500,
     );
   }, []);
@@ -80,7 +80,7 @@ export default function NewMemberActionsCompleted(arg0) {
   const obj5 = { style: tmp.text, variant: "heading-xl/semibold", color: "text-overlay-light", children: null };
   const intl = sharedValue(1115).intl;
   obj5.children = intl.format(sharedValue(1115).t.pGj5u2, { count: numActions });
-  const items1 = [closure_5(sharedValue(4832).Text, obj5)];
+  const items1 = [closure_5(sharedValue(4862).Text, obj5)];
   const obj6 = { style: tmp.progressBackground, children: null };
   const obj7 = { style: null };
   const items2 = [tmp.progressForeground, animatedStyle];

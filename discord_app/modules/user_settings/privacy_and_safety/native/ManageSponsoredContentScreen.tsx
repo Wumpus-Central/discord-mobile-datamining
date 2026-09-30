@@ -32,7 +32,7 @@ function AdTopicRow(adTopic) {
     const items = [...set];
     AdTopicOptOuts2.updateSetting(items);
   };
-  return closure_5(adTopic(6787).TableSwitchRow, obj);
+  return closure_5(adTopic(6817).TableSwitchRow, obj);
 }
 const View = fn(17).View;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
@@ -42,7 +42,7 @@ let obj = {};
 obj[fn(1186).AdTopic.REAL_MONEY_GAMING] = _modDef2157.pmIitA;
 const keys = Object.keys(obj);
 let closure_8 = keys.map(Number);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj3 = {
   content: {
     paddingHorizontal: nativeDefault.space.PX_16,

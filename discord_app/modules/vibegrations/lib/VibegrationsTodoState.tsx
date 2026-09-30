@@ -95,8 +95,8 @@ export const supersededChecklists = function supersededChecklists(memo) {
   }
   return set;
 };
-export const checklistExpanded = function checklistExpanded(c10, render_id, set) {
-  value = c10.get(render_id);
+export const checklistExpanded = function checklistExpanded(c13, render_id, set) {
+  value = c13.get(render_id);
   if (value == null) {
     value = !set;
   }

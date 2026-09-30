@@ -29,6 +29,4 @@ export const GuildPowerupNotificationPopoutType = {
   [8]: "GAME_SERVER_HOSTING_ENABLED",
   GAME_SERVER_NEW_GAMES: 9,
   [9]: "GAME_SERVER_NEW_GAMES",
-  GAME_SERVER_PRICING_CHANGE: 10,
-  [10]: "GAME_SERVER_PRICING_CHANGE",
 };

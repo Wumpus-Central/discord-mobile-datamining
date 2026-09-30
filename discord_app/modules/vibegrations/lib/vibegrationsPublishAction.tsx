@@ -45,6 +45,7 @@ export const resolveVibegrationsPublishAction = function resolveVibegrationsPubl
                 destination: null,
                 navigatesOnPublish: false,
                 upToDate: true,
+                isUpdate: false,
                 disabledReason: null,
               };
             }
@@ -82,11 +83,11 @@ export const resolveVibegrationsPublishAction = function resolveVibegrationsPubl
         }
         obj4.botPermissionsChanged = true === prop1;
         const result = vibegrationsPreviewModes.requiresPermissionReview(obj4);
-        let str11 = "publish";
+        let str12 = "publish";
         if (result) {
-          str11 = "consent_then_publish";
+          str12 = "consent_then_publish";
         }
-        const obj5 = { intent: str11, destination: null, upToDate: false, disabledReason: null };
+        const obj5 = { intent: str12, destination: null, upToDate: false, isUpdate: null, disabledReason: null };
         let destination;
         if (null != null) {
           destination = null.destination;
@@ -95,6 +96,7 @@ export const resolveVibegrationsPublishAction = function resolveVibegrationsPubl
           destination = null;
         }
         obj5.destination = destination;
+        obj5.isUpdate = "changes" === status.state && !tmp22;
         obj5.disabledReason = formatToPlainStringResult;
         if (null == null) {
           if (result) {
@@ -122,7 +124,7 @@ export const resolveVibegrationsPublishAction = function resolveVibegrationsPubl
           }
           const obj7 = {};
           const merged1 = Object.assign(obj5);
-          if (!tmp37) {
+          if (!tmp36) {
             const intl15 = util.intl;
             update = intl15.string(_modDef3715["5gU57O"]);
           }

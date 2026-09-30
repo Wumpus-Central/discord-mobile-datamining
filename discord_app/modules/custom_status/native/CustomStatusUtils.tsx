@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/custom_status/native/CustomSt
 export const openEditCustomStatusModal = function openEditCustomStatusModal(arg0) {
   ({ analyticsLocations, prompt: _prompt } = arg0);
   ModalActionCreatorsDefault.pushLazy(
-    asyncRequireImpl(10745, dependencyMap.paths),
+    asyncRequireImpl(10779, dependencyMap.paths),
     { analyticsLocations, prompt: _prompt },
     undefined,
     { presentation: "modal" },

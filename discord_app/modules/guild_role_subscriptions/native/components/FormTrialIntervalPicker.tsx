@@ -22,8 +22,8 @@ export default function FormTrialIntervalPicker(disabled) {
     let intl = interval(1115).intl;
     let stringResult = intl.string(interval(1115).t.WZG1BU);
   } else {
-    stringResult = interval(14951).formatPlanIntervalDuration(interval);
-    let obj = interval(14951);
+    stringResult = interval(14982).formatPlanIntervalDuration(interval);
+    let obj = interval(14982);
   }
   return jsx(FormDropdownDefault, {
     label: stringResult,
@@ -44,8 +44,8 @@ export default function FormTrialIntervalPicker(disabled) {
         tmp3 = null;
       }
       obj2.selectedItem = tmp3;
-      obj.openLazy(asyncRequireImpl(8894, dependencyMap.paths), GuildRoleSubscriptionTrialIntervalSelect, obj2);
-      const tmp = asyncRequireImpl(8894, dependencyMap.paths);
+      obj.openLazy(asyncRequireImpl(8928, dependencyMap.paths), GuildRoleSubscriptionTrialIntervalSelect, obj2);
+      const tmp = asyncRequireImpl(8928, dependencyMap.paths);
     },
     disabled: disabled.disabled,
   });

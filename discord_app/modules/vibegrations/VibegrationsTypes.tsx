@@ -1,7 +1,7 @@
 // discord_app/modules/vibegrations/VibegrationsTypes.tsx
 import size from "../../../_runtime/metro/00002__.js";
 
-const frozen = Object.freeze({ PUBLIC: 1, SHAREABLE: 2 });
+const frozen = Object.freeze({ PUBLIC: 1, SHAREABLE: 2, NATIVE_APP_CHANNELS: 4 });
 const set = new Set(["image/png", "image/jpeg", "image/gif", "image/webp"]);
 let c2 = 5242880;
 let c3 = 52428800;
@@ -11,7 +11,7 @@ const items = [
   { id: "claude-sonnet-5-5", label: "Claude Sonnet 5.5", provider: "anthropic" },
   { id: "claude-haiku-4-5", label: "Claude Haiku 4.5", provider: "anthropic" },
   { id: "gpt-6-astra", label: "GPT-6 Astra", provider: "openai", supports_fast: true },
-  { id: "gpt-6-sol", label: "GPT-6 Sol", provider: "openai", supports_fast: true },
+  { id: "gpt-6.1-sol", label: "GPT-6.1 Sol", provider: "openai", supports_fast: true },
   { id: "gpt-6-luna", label: "GPT-6 Luna", provider: "openai", supports_fast: true },
   { id: "xai/grok-4.7", label: "Grok 4.7", provider: "xai" },
 ];
@@ -38,6 +38,20 @@ export const isProjectShared = function isProjectShared(flags) {
     num = 0;
   }
   return num & frozen.SHAREABLE;
+};
+export const projectUsesNativeAppChannels = function projectUsesNativeAppChannels(flags) {
+  let num = flags.flags;
+  if (num == null) {
+    num = 0;
+  }
+  return num & frozen.NATIVE_APP_CHANNELS;
+};
+export const vibegrationsCreateFlags = function vibegrationsCreateFlags(c5) {
+  let num = 0;
+  if (c5) {
+    num = frozen.NATIVE_APP_CHANNELS;
+  }
+  return frozen.PUBLIC | num;
 };
 export const projectSupportsVisibility = function projectSupportsVisibility(stateFromStores) {
   return null != stateFromStores.flags;
@@ -100,6 +114,6 @@ export const VIBEGRATIONS_DEV_FALLBACK_MODEL_CHOICES = { main: items1, subagent:
 export const VIBEGRATIONS_DEFAULT_TIER_SETTINGS = { tier: "balanced", provider: "openai" };
 export const VIBEGRATIONS_LANDING_TIER_SEATS = {
   simple: { model: "gpt-6-luna", thinking: "high" },
-  balanced: { model: "gpt-6-sol", thinking: "high" },
+  balanced: { model: "gpt-6.1-sol", thinking: "high" },
   complex: { model: "claude-opus-5-5", thinking: "high" },
 };

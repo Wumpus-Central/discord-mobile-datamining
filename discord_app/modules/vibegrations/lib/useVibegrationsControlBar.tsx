@@ -6,7 +6,7 @@ import VibegrationsChatStore from "../stores/VibegrationsChatStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const interruptTurn = fn(12812).interruptTurn;
+const interruptTurn = fn(12842).interruptTurn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/vibegrations/lib/useVibegrationsControlBar.tsx");
 

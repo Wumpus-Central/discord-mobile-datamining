@@ -75,7 +75,7 @@ export const getSurpriseMeEmojiPool = function getSurpriseMeEmojiPool() {
           channel: null,
           guildId: "Array",
           intention: constants.TYPING_INDICATOR,
-          bypassPremiumEmojiEntitlement: "/assets/.cache/intl/bW9kdWxlcy9jbGlwcw==",
+          bypassPremiumEmojiEntitlement: null,
         };
         return null == closure_1_1(closure_1_3[10]).getEmojiUnavailableReason(obj2);
       });

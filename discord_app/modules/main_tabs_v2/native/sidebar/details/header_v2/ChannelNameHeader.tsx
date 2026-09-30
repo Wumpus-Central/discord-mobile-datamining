@@ -120,7 +120,7 @@ function ChannelSubtitle(channel) {
       tmp8 = null;
       if ("" !== stateFromStores) {
         const obj2 = { variant: "text-sm/medium", color: "text-muted", lineClamp: 1, children: stateFromStores };
-        tmp8 = closure_12(tmp(4832).Text, obj2);
+        tmp8 = closure_12(tmp(4862).Text, obj2);
       }
     }
     return tmp8;
@@ -128,8 +128,8 @@ function ChannelSubtitle(channel) {
     const intl = tmp(1115).intl;
     let stringResult = intl.string(_modDef3651["D+2/QP"]);
   } else {
-    stringResult = tmp(4981).channelTypeString(channel);
-    const tmpResult = tmp(4981);
+    stringResult = tmp(5011).channelTypeString(channel);
+    const tmpResult = tmp(5011);
   }
   let obj = channel(504);
 }
@@ -258,7 +258,7 @@ function ChannelNameHeaderContent(channel) {
 function DMChannelNameHeader(channel) {
   channel = channel.channel;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(6749)().analyticsLocations;
+  analyticsLocations = analyticsLocations(6779)().analyticsLocations;
   const items = [channel, analyticsLocations];
   const callback = noop.useCallback(() => {
     const recipientId = channel.getRecipientId();
@@ -270,7 +270,7 @@ function DMChannelNameHeader(channel) {
   let obj = { style: null, onPress: callback, children: closure_12(ChannelNameHeaderContent, { channel }) };
   const items1 = [closure_15().container, channel.containerStyle];
   obj.style = items1;
-  return closure_12(channel(5602).PressableOpacity, obj);
+  return closure_12(channel(5632).PressableOpacity, obj);
 }
 function DefaultChannelNameHeader(arg0) {
   ({ channel, containerStyle } = arg0);
@@ -285,7 +285,7 @@ const Constants = fn(1074);
 ({ Permissions: c10, StatusTypes: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj = {
   container: { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" },
   channelIcon: { height: 40, width: 40, justifyContent: "center", alignItems: "center" },

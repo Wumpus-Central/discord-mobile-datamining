@@ -14,9 +14,9 @@ let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarPend
 export default noop.memo(function GuildsBarPendingGuildFolder(id) {
   id = id.id;
   ({ expanded, childNodes } = id);
-  let obj = id(16106);
+  let obj = id(16135);
   importDefault = usePendingFolderGuildIdsDefault();
-  const guildsBarAnimatedWrapperStyles = id(16106).useGuildsBarAnimatedWrapperStyles({
+  const guildsBarAnimatedWrapperStyles = id(16135).useGuildsBarAnimatedWrapperStyles({
     disableSelectedColor: true,
     disableBGColor: false,
   });
@@ -48,13 +48,13 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
   ({ accessibilityActions, onAccessibilityAction } = memo);
   const obj2 = id(504);
   const items2 = [id];
-  const sharedValue = id(4566).useSharedValue("" + id);
+  const sharedValue = id(4596).useSharedValue("" + id);
   const memo1 = noop.useMemo(
     () => ({
       onPress() {
-        const result = id(4801).triggerHapticFeedback(id(4801).HapticFeedbackTypes.IMPACT_LIGHT);
-        const obj = id(4801);
-        const result1 = closure_1(5999).toggleGuildFolderExpand(closure_1_0);
+        const result = id(4831).triggerHapticFeedback(id(4831).HapticFeedbackTypes.IMPACT_LIGHT);
+        const obj = id(4831);
+        const result1 = closure_1(6029).toggleGuildFolderExpand(closure_1_0);
       },
     }),
     items2,
@@ -70,12 +70,13 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
     label: null,
     sharedId: null,
     cutouts: "a",
-    overState: "channel",
-    config: null,
-    externalChildren: null,
-    children: null,
+    overState: "paddingHorizontal",
+    config: 2023149920215654700000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+    externalChildren:
+      -0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002633967606947972,
+    children: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004778309734594905,
   };
-  const obj3 = id(4566);
+  const obj3 = id(4596);
   obj4.id = "" + id;
   obj4.accessibilityActions = accessibilityActions;
   obj4.onAccessibilityAction = onAccessibilityAction;
@@ -88,10 +89,10 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
   let tmp8Result = null;
   if (expanded) {
     const obj5 = { folderId: id, totalItems: childNodes.length };
-    tmp8Result = jsx(tmp(16105).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
+    tmp8Result = jsx(tmp(16134).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
   }
   obj4.externalChildren = tmp8Result;
-  obj4.children = jsx(id(12627).HourglassIcon, {});
+  obj4.children = jsx(id(12657).HourglassIcon, {});
   return jsx(GuildsBarAnimatedItemWrapperDefault, {
     id: null,
     accessibilityActions: null,
@@ -103,9 +104,10 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
     label: null,
     sharedId: null,
     cutouts: "a",
-    overState: "channel",
-    config: null,
-    externalChildren: null,
-    children: null,
+    overState: "paddingHorizontal",
+    config: 2023149920215654700000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+    externalChildren:
+      -0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002633967606947972,
+    children: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004778309734594905,
   });
 });

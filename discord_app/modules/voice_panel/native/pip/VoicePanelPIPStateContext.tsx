@@ -6,11 +6,11 @@ let size = {
   mode: "isArray",
   width: false,
   height: null,
-  containerHeight: "\u{1F9D1}\u{1F3FB}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F9D1}\u{1F3FD}",
+  containerHeight: "\u{1F468}\u{1F3FD}\u200D\u2764\uFE0F\u200D\u{1F468}\u{1F3FB}",
   showSecondaryPIP: true,
   scale: null,
 };
-const ReanimatedHelperTypes = fn(6661);
+const ReanimatedHelperTypes = fn(6691);
 size.scale = ReanimatedHelperTypes.createFakeSharedValue(1);
 const context = noop.createContext(size);
 size = fn(2);

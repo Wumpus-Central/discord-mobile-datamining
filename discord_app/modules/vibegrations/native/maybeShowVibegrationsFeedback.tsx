@@ -12,12 +12,12 @@ let result = size.fileFinishedImporting("modules/vibegrations/native/maybeShowVi
 export default function maybeShowVibegrationsFeedback(arg0) {
   _require = arg0;
   if (!obj.consumeFeedbackSkipForProject(arg0)) {
-    const countSettledTurnsResult = tmp(16483).countSettledTurns(arg0);
+    const countSettledTurnsResult = tmp(16513).countSettledTurns(arg0);
     importDefault = countSettledTurnsResult;
-    let result = countSettledTurnsResult < tmp(16483).MINIMUM_SETTLED_TURNS_FOR_FEEDBACK;
+    let result = countSettledTurnsResult < tmp(16513).MINIMUM_SETTLED_TURNS_FOR_FEEDBACK;
     if (!result) {
-      result = tmp(16483).hasShownFeedbackForProject(arg0);
-      const tmpResult2 = tmp(16483);
+      result = tmp(16513).hasShownFeedbackForProject(arg0);
+      const tmpResult2 = tmp(16513);
     }
     if (!result) {
       const result1 = FeedbackManagerDefault.possiblyShowFeedbackModal(FeedbackType.VIBEGRATIONS, () => {
@@ -32,7 +32,7 @@ export default function maybeShowVibegrationsFeedback(arg0) {
         });
       });
     }
-    const tmpResult = tmp(16483);
+    const tmpResult = tmp(16513);
   }
   obj = require("vibegrationsFeedback");
 }

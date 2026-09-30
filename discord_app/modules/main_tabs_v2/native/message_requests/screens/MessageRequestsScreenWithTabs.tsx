@@ -3,8 +3,8 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import util from "../../../../../intl/index.native.tsx";
 import SegmentedControlState from "../../../../../design/components/SegmentedControl/native/SegmentedControlState.native.tsx";
 import SegmentedControl from "../../../../../design/components/SegmentedControl/native/SegmentedControl.native.tsx";
-import TTIFirstContentfulPaint from "../../../../tti_analytics/native/TTIFirstContentfulPaint.tsx";
 import SegmentedControlPages from "../../../../../design/components/SegmentedControl/native/SegmentedControlPages.native.tsx";
+import TTIFirstContentfulPaint from "../../../../tti_analytics/native/TTIFirstContentfulPaint.tsx";
 import MessageRequestListDefault from "../../../../message_request/native/MessageRequestList.tsx";
 import SpamMessageListDefault from "../../../../message_request/native/spam/SpamMessageList.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
@@ -15,7 +15,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const constants = { REQUEST: "REQUEST", SPAM: "SPAM" };
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   messageRequestContent: { flex: 1 },

@@ -9,6 +9,7 @@ const context = noop.createContext({
   highContrastModeEnabled: false,
   keyboardModeEnabled: true,
   switchIconsEnabled: false,
+  minToastDurationMs: 0,
 });
 const size = fn(2);
 const result = size.fileFinishedImporting(

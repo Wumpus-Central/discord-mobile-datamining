@@ -111,6 +111,7 @@ import ShowLinkDecorationsSettingDefault from "../../defs/native/ShowLinkDecorat
 import EnableSwitchIconsSettingDefault from "../../defs/native/EnableSwitchIconsSetting.tsx";
 import ContrastModeSettingDefault from "../../defs/native/ContrastModeSetting.tsx";
 import ReduceSaturationSettingDefault from "../../defs/native/ReduceSaturationSetting.tsx";
+import ToastDurationSettingDefault from "../../defs/native/ToastDurationSetting.tsx";
 import SyncProfileColorsSettingDefault from "../../defs/native/SyncProfileColorsSetting.tsx";
 import EnableReducedMotionSettingDefault from "../../defs/native/EnableReducedMotionSetting.tsx";
 import SyncReducedMotionWithDeviceSettingDefault from "../../defs/native/SyncReducedMotionWithDeviceSetting.tsx";
@@ -387,6 +388,7 @@ const MobileUserSettings = SettingsConstants.MobileUserSettings;
   SHOW_ON_OFF_INDICATORS,
   CONTRAST_MODE,
   REDUCE_SATURATION,
+  TOAST_DURATION,
   SYNC_PROFILE_COLORS,
   ENABLE_REDUCED_MOTION,
   SYNC_REDUCED_MOTION_WITH_DEVICE,
@@ -540,7 +542,6 @@ const MobileUserSettings = SettingsConstants.MobileUserSettings;
   PARENTAL_CONTROLS_DATA_USAGE_STATISTICS,
   PARENTAL_CONTROLS_DATA_USAGE_PERSONALIZATION,
   PARENTAL_CONTROLS_DATA_USAGE_QUESTS,
-  PARENTAL_CONTROLS_DATA_USAGE_QUESTS_3P,
 } = MobileUserSettings);
 const merged = Object.assign(MobileNotifSettingsRendererConfig.MOBILE_NOTIF_SETTINGS_RENDERER_CONFIG);
 const frozen = Object.freeze({
@@ -655,6 +656,7 @@ const frozen = Object.freeze({
   [SHOW_ON_OFF_INDICATORS]: EnableSwitchIconsSettingDefault,
   [CONTRAST_MODE]: ContrastModeSettingDefault,
   [REDUCE_SATURATION]: ReduceSaturationSettingDefault,
+  [TOAST_DURATION]: ToastDurationSettingDefault,
   [SYNC_PROFILE_COLORS]: SyncProfileColorsSettingDefault,
   [ENABLE_REDUCED_MOTION]: EnableReducedMotionSettingDefault,
   [SYNC_REDUCED_MOTION_WITH_DEVICE]: SyncReducedMotionWithDeviceSettingDefault,
@@ -811,7 +813,7 @@ const frozen = Object.freeze({
   [PARENTAL_CONTROLS_DATA_USAGE_STATISTICS]: ParentalControlsUseDataToImproveDiscordSettingDefault,
   [PARENTAL_CONTROLS_DATA_USAGE_PERSONALIZATION]: ParentalControlsUseDataToCustomizeDiscordSettingDefault,
   [PARENTAL_CONTROLS_DATA_USAGE_QUESTS]: ParentalControlsUseDataForQuestsSettingDefault,
-  [PARENTAL_CONTROLS_DATA_USAGE_QUESTS_3P]: ParentalControlsUseDataForQuests3PSettingDefault,
+  [MobileUserSettings.PARENTAL_CONTROLS_DATA_USAGE_QUESTS_3P]: ParentalControlsUseDataForQuests3PSettingDefault,
   [MobileUserSettings.ACTIVITY_PRIVACY_SHARE_MY_ACTIVITY]: ActivityPrivacyShareMyActivitySettingDefault,
   [MobileUserSettings.ACTIVITY_PRIVACY_DEFAULT_SHARING]: ActivityPrivacyDefaultSharingSettingDefault,
   [MobileUserSettings.FRIEND_REQUEST_NOTES]: FriendRequestsNotesSettingDefault,

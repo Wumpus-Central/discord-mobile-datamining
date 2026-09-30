@@ -41,6 +41,6 @@ export default function VibegrationsConjureTipCoachmark(visible) {
     obj.onDismiss = onDismiss;
     return obj;
   }, items);
-  const coachmark = visible(10758).useCoachmark(visible.targetRef, memo);
+  const coachmark = visible(10792).useCoachmark(visible.targetRef, memo);
   return null;
 }

@@ -14,10 +14,10 @@ import VibegrationsDebugStore from "../stores/VibegrationsDebugStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const requestDebugStatus = fn(12812).requestDebugStatus;
+const requestDebugStatus = fn(12842).requestDebugStatus;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj2 = {
   scene: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   tabs: null,

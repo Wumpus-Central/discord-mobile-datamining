@@ -2778,9 +2778,19 @@ const obj2 = {
     },
   },
   toast: {
+    ANIMATION_DURATION_MS: {
+      resolve() {
+        return 300;
+      },
+    },
     MAX_WIDTH: {
       resolve() {
         return 280;
+      },
+    },
+    QUEUE_ENTER_DELAY_MS: {
+      resolve() {
+        return 400;
       },
     },
     TEXT_LINE_COUNT: {

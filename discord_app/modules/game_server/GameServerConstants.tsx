@@ -19,48 +19,44 @@ if ("production" !== window.GLOBAL_ENV.PROJECT_ENV) {
   }
   str = str2;
 }
-let str4 = "1486428380437020672";
-if ("production" === window.GLOBAL_ENV.PROJECT_ENV) {
-  str4 = "1361763069696675961";
-}
-let str5 = "1402418491272986635";
+let str4 = "1402418491272986635";
 if ("production" !== window.GLOBAL_ENV.PROJECT_ENV) {
   const _window2 = window;
-  let str6 = "1";
+  let str5 = "1";
   if ("staging" === window.GLOBAL_ENV.PROJECT_ENV) {
-    str6 = "356875570916753438";
+    str5 = "356875570916753438";
   }
-  str5 = str6;
+  str4 = str5;
 }
-let str8 = "1458530944955973852";
+let str7 = "1458530944955973852";
 if ("production" !== window.GLOBAL_ENV.PROJECT_ENV) {
   const _window3 = window;
-  let str9 = "2";
+  let str8 = "2";
   if ("staging" === window.GLOBAL_ENV.PROJECT_ENV) {
-    str9 = "1458563423670501376";
+    str8 = "1458563423670501376";
   }
-  str8 = str9;
+  str7 = str8;
 }
 class NewGamesCoachmarkContent {}
-let str11 = "1497097140001046528";
+let str10 = "1497097140001046528";
 if ("production" === window.GLOBAL_ENV.PROJECT_ENV) {
-  str11 = "1497100850261131334";
+  str10 = "1497100850261131334";
 }
-NewGamesCoachmarkContent.FEATURED_PRODUCT_ID = str11;
-let str12 = "1497095960202051584";
+NewGamesCoachmarkContent.FEATURED_PRODUCT_ID = str10;
+let str11 = "1497095960202051584";
 if ("production" === window.GLOBAL_ENV.PROJECT_ENV) {
-  str12 = "1440133627899023452";
+  str11 = "1440133627899023452";
 }
-NewGamesCoachmarkContent.FEATURED_GAME_ID = str12;
+NewGamesCoachmarkContent.FEATURED_GAME_ID = str11;
 NewGamesCoachmarkContent.FEATURED_GAME_NAME = "Windrose";
 NewGamesCoachmarkContent.SECOND_GAME_NAME = "Factorio";
 NewGamesCoachmarkContent.THIRD_GAME_NAME = "V Rising";
-let str13 = "https://discord.shockbyte.com/support";
+let str12 = "https://discord.shockbyte.com/support";
 if (window.GLOBAL_ENV.RELEASE_CHANNEL === UserStoreConstants.Environments.STAGING) {
-  str13 = "https://purple-prod.shockbyte.dev/support";
+  str12 = "https://purple-prod.shockbyte.dev/support";
 }
 const obj5 = {};
-obj5[GameServerProviderType.GameServerProviderType.SHOCKBYTE] = str13;
+obj5[GameServerProviderType.GameServerProviderType.SHOCKBYTE] = str12;
 const result = size.fileFinishedImporting("modules/game_server/GameServerConstants.tsx");
 
 export const GameServerSetupStep = obj;
@@ -73,9 +69,8 @@ export const GAME_SERVER_SHOP_MAX_INSTANCES = 5;
 export const GAME_SERVER_MAX_NAME_LENGTH = 32;
 export const GAME_SERVER_MIN_DELAY_TIME_MS = 1000;
 export const GAME_SERVER_COLLECTION_ID = str;
-export const RUNESCAPE_GAME_ID = str4;
-export const MINECRAFT_GAME_ID = str5;
-export const HYTALE_GAME_ID = str8;
+export const MINECRAFT_GAME_ID = str4;
+export const HYTALE_GAME_ID = str7;
 export { NewGamesCoachmarkContent };
 export const GameServerGameProvider = { SHOCKBYTE: 0, [0]: "SHOCKBYTE" };
 export const GAME_SERVER_SUPPORT_URLS = obj5;

@@ -63,7 +63,7 @@ export default function CheckpointNavigationControls(onNext) {
             variant: "text-sm/medium",
             style: link.link,
             onPress() {
-              const obj = closure_1_1(4525);
+              const obj = closure_1_1(4555);
               return obj.openURL(closure_1_1(2111).getArticleURL(constants.CHECKPOINT));
             },
             accessibilityRole: "link",

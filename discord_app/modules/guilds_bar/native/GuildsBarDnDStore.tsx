@@ -1,7 +1,7 @@
 // discord_app/modules/guilds_bar/native/GuildsBarDnDStore.tsx
 import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
 import ReactBatchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import _mod4452 from "../../../../_runtime/metro/04452__.js";
+import _mod4482 from "../../../../_runtime/metro/04482__.js";
 import SortedGuildStore from "../../../stores/SortedGuildStore.tsx";
 import identity from "../../../../_runtime/metro/01243__.js";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -68,7 +68,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       );
       throw error;
     } else {
-      dropSpecs(1248).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "channel" }));
+      dropSpecs(1248).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "isArray" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
       const _setTimeout = setTimeout;
@@ -93,7 +93,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     obj2.data = { gestureState: gestureState.get(), dropSpecs, dragSpecs };
     obj.addBreadcrumb(obj2);
     if (null != dropSpecs) {
-      ReactBatchUpdates.batchUpdates(() => closure_1_0({ dropSpecs: "r" }));
+      ReactBatchUpdates.batchUpdates(() => closure_1_0({ dropSpecs: "Array" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(c5);
       if (null == dragSpecs) {
@@ -217,7 +217,7 @@ export const useItemDragState = function useItemDragState(arg0, arg1) {
     obj.itemSize = num;
     obj.dragDropInProgress = dragDropInProgress;
     return obj;
-  }, _mod4452.shallow);
+  }, _mod4482.shallow);
 };
 export const useFolderBGHeightOffset = function useFolderBGHeightOffset(arg0) {
   closure_0 = arg0;

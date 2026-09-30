@@ -13,11 +13,11 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const VEVOOStore = fn(5436);
+const VEVOOStore = fn(5466);
 ({ getVisualEffectViewOverrides: metroRequire, setVisualEffectViewOverides: closure_7 } = VEVOOStore);
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj = { tintColor: null };
 let size = {
   width: nativeDefault.space.PX_32,
@@ -130,7 +130,7 @@ export default noop.memo(function VEVOOPropTintColor() {
     },
   };
   const ref = noop.useRef(first1);
-  obj7.subLabel = closure_8(backgroundColor(15727), {
+  obj7.subLabel = closure_8(backgroundColor(15760), {
     disabled: !tmp7,
     initialValue: noop.useRef(first1),
     onValueChange(arg0) {

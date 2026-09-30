@@ -35,8 +35,8 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 
 require = fn;
 let closure_4 = ["code", "state"];
-fn(6036).addPostConnectionCallback;
-let closure_9 = fn(7007).handleMobileWebCheckoutStatus;
+fn(6066).addPostConnectionCallback;
+let closure_9 = fn(7037).handleMobileWebCheckoutStatus;
 const Constants = fn(1074);
 ({
   AnalyticEvents: closure_12,
@@ -47,13 +47,13 @@ const Constants = fn(1074);
   ME: closure_17,
 } = Constants);
 const StaticChannelRoute = fn(2052).StaticChannelRoute;
-const StreamTypes = fn(4878).StreamTypes;
-const NativePermissionTypes = fn(5045).NativePermissionTypes;
-let closure_21 = fn(8672).OAUTH2_AUTHORIZE_MODAL_KEY;
-let closure_22 = fn(7124).FAMILY_CENTER_LINK_REQUEST_REGEX;
-let closure_23 = fn(4815).MobileWebRedirectCheckoutDeepLinkActions;
-const SHARE_SCREEN_MODAL_KEY = fn(13565).SHARE_SCREEN_MODAL_KEY;
-const MobileUserSettings = fn(7582).MobileUserSettings;
+const StreamTypes = fn(4908).StreamTypes;
+const NativePermissionTypes = fn(5075).NativePermissionTypes;
+let closure_21 = fn(8706).OAUTH2_AUTHORIZE_MODAL_KEY;
+let closure_22 = fn(7154).FAMILY_CENTER_LINK_REQUEST_REGEX;
+let closure_23 = fn(4845).MobileWebRedirectCheckoutDeepLinkActions;
+const SHARE_SCREEN_MODAL_KEY = fn(13592).SHARE_SCREEN_MODAL_KEY;
+const MobileUserSettings = fn(7612).MobileUserSettings;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/links/native/handleSupportedURL.tsx");
 
@@ -200,7 +200,12 @@ export default function handleSupportedURL(payload) {
     }
     if (flag2) {
       payload(inviteCode[28]).startDiceRoll(channelId2, diceCount, diceSides);
-      const obj22 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: true };
+      const obj22 = {
+        guildId: guildId2,
+        channelId: channelId2,
+        messageId: "Array",
+        navigationSettings: "<string:1048576001>",
+      };
       const obj23 = { safe, navigationReplace, waitForConnection, skipMessageFetch };
       obj22.navigationSettings = obj23;
       rootNavigationRef1(inviteCode[29])(obj22);
@@ -291,7 +296,7 @@ export default function handleSupportedURL(payload) {
             null != remoteAuthFingerprint
               ? () => {
                   ModalActionCreatorsDefault.pushLazy(
-                    asyncRequireImpl(13577, dependencyMap.paths),
+                    asyncRequireImpl(13604, dependencyMap.paths),
                     { remoteAuthFingerprint },
                     "REMOTE_AUTH_MODAL",
                   );
@@ -662,15 +667,15 @@ export default function handleSupportedURL(payload) {
                         if (null != tmp19) {
                           obj7.openid_params = tmp19;
                         }
-                        closure_1(5039).popAll();
-                        const obj5 = closure_1(5039);
+                        closure_1(5069).popAll();
+                        const obj5 = closure_1(5069);
                         tmp10 = tmp50;
                         const obj10 = { screen: constants.CONNECTIONS };
-                        dependencyMap(6966).openUserSettings(obj10);
-                        const obj6 = dependencyMap(6966);
+                        dependencyMap(6996).openUserSettings(obj10);
+                        const obj6 = dependencyMap(6996);
                         c7 = 1;
                         c8 = 1;
-                        const obj11 = { value: closure_1(5885).callback(payload.provider, obj7), done: false };
+                        const obj11 = { value: closure_1(5915).callback(payload.provider, obj7), done: false };
                         return obj11;
                       } else {
                         c8 = 3;
@@ -688,8 +693,8 @@ export default function handleSupportedURL(payload) {
                     }
                     closure_133_1 = closure_1(1366).toURLSafe(redirect);
                     if (null != closure_133_1) {
-                      closure_1(4525).openURL(closure_133_1.toString());
-                      const obj13 = closure_1(4525);
+                      closure_1(4555).openURL(closure_133_1.toString());
+                      const obj13 = closure_1(4555);
                     }
                     const obj12 = closure_1(1366);
                   }

@@ -1,11 +1,11 @@
 // discord_app/modules/create_guild/native/CreateGuildIcons.tsx
-import _modDef11978 from "../../../../_runtime/metro/11978__.js";
-import _modDef11979 from "../../../../_runtime/metro/11979__.js";
-import _modDef11980 from "../../../../_runtime/metro/11980__.js";
-import _modDef11981 from "../../../../_runtime/metro/11981__.js";
-import _modDef11982 from "../../../../_runtime/metro/11982__.js";
-import _modDef11983 from "../../../../_runtime/metro/11983__.js";
-import _modDef11984 from "../../../../_runtime/metro/11984__.js";
+import _modDef12012 from "../../../../_runtime/metro/12012__.js";
+import _modDef12013 from "../../../../_runtime/metro/12013__.js";
+import _modDef12014 from "../../../../_runtime/metro/12014__.js";
+import _modDef12015 from "../../../../_runtime/metro/12015__.js";
+import _modDef12016 from "../../../../_runtime/metro/12016__.js";
+import _modDef12017 from "../../../../_runtime/metro/12017__.js";
+import _modDef12018 from "../../../../_runtime/metro/12018__.js";
 import PencilIllocon from "../../../design/components/mana-assets/native/generated/PencilIllocon.native.tsx";
 import ControllerIllocon from "../../../design/components/mana-assets/native/generated/ControllerIllocon.native.tsx";
 import HeartIllocon from "../../../design/components/mana-assets/native/generated/HeartIllocon.native.tsx";
@@ -16,14 +16,14 @@ import LeafIllocon from "../../../design/components/mana-assets/native/generated
 import size from "../../../../_runtime/metro/00002__.js";
 
 const obj = {
-  CREATE: _modDef11978,
-  GAMING: _modDef11982,
-  FRIENDS: _modDef11980,
-  STUDY: _modDef11981,
-  CLUBS: _modDef11983,
-  CREATORS: _modDef11984,
-  LOCAL_COMMUNITY: _modDef11979,
-  SCHOOL_CLUB: _modDef11983,
+  CREATE: _modDef12012,
+  GAMING: _modDef12016,
+  FRIENDS: _modDef12014,
+  STUDY: _modDef12015,
+  CLUBS: _modDef12017,
+  CREATORS: _modDef12018,
+  LOCAL_COMMUNITY: _modDef12013,
+  SCHOOL_CLUB: _modDef12017,
 };
 const result = size.fileFinishedImporting("modules/create_guild/native/CreateGuildIcons.tsx");
 

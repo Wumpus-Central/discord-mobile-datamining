@@ -7,7 +7,14 @@ let BaseInvoiceRecord;
 class BaseInvoiceRecord extends tmp2 {
   constructor(arg0) {
     tmp = new BaseInvoiceRecord(new.target, new.target, global);
-    ({ total: tmp.total, subtotal: tmp.subtotal, tax: tmp.tax, currency: tmp.currency, invoiceItems } = global);
+    ({
+      id: tmp.id,
+      total: tmp.total,
+      subtotal: tmp.subtotal,
+      tax: tmp.tax,
+      currency: tmp.currency,
+      invoiceItems,
+    } = global);
     if (invoiceItems == null) {
       invoiceItems = [];
     }
@@ -17,14 +24,15 @@ class BaseInvoiceRecord extends tmp2 {
 }
 const prototype = BaseInvoiceRecord.prototype;
 BaseInvoiceRecord["createFromServer"] = function createFromServer(currency) {
-  ({ total, subtotal, tax, invoice_items } = currency);
+  ({ id, total, subtotal, tax, invoice_items } = currency);
   let mapped = invoice_items.map((skuId) => ({
     skuId: skuId.sku_id,
     quantity: skuId.quantity,
     description: skuId.description,
   }));
   if (typeof BaseInvoiceRecord === "function") {
-    const tmp6 = new BaseInvoiceRecord(tmp, invoice_items, BaseInvoiceRecord, new.target, total, subtotal, tax);
+    const tmp6 = new BaseInvoiceRecord(tmp, invoice_items, BaseInvoiceRecord, new.target, id, total, subtotal, tax);
+    tmp6.id = id;
     tmp6.total = total;
     tmp6.subtotal = subtotal;
     tmp6.tax = tax;
@@ -62,18 +70,26 @@ BaseInvoiceRecord["createInvoiceFromOrder"] = function createInvoiceFromOrder(bi
       }
       return tmp2;
     });
-    let found = mapped.filter((item) => null != item);
-    ({ total, subtotal, tax, currency } = invoice_preview);
+    let obj = { total: null, subtotal: null, tax: null, currency: null, invoiceItems: null };
+    ({ total: obj.total, subtotal: obj.subtotal, tax } = invoice_preview);
+    obj.tax = tax;
+    const currency = invoice_preview.currency;
+    obj.currency = currency;
+    obj.invoiceItems = mapped.filter((item) => null != item);
     if (typeof BaseInvoiceRecord === "function") {
-      const tmp6 = new BaseInvoiceRecord(tmp, tmp8, new.target, total, subtotal, tax, currency, found);
-      tmp6.total = total;
-      tmp6.subtotal = subtotal;
-      tmp6.tax = tax;
-      tmp6.currency = currency;
-      if (found == null) {
-        found = [];
+      const tmp6 = new BaseInvoiceRecord(tmp, tax, currency, tmp8);
+      ({
+        id: tmp6.id,
+        total: tmp6.total,
+        subtotal: tmp6.subtotal,
+        tax: tmp6.tax,
+        currency: tmp6.currency,
+        invoiceItems,
+      } = obj);
+      if (invoiceItems == null) {
+        invoiceItems = [];
       }
-      tmp6.invoiceItems = found;
+      tmp6.invoiceItems = invoiceItems;
       return tmp6;
     } else {
       throw new TypeError("Trying to call a non-function");
@@ -116,6 +132,7 @@ class InvoiceRecord extends BaseInvoiceRecord {
       status: tmp.status,
       orbsReward: tmp.orbsReward,
       checkoutContext: tmp.checkoutContext,
+      applyWalletBalance: tmp.applyWalletBalance,
     } = global);
     return tmp;
   }
@@ -168,6 +185,7 @@ InvoiceRecord["createInvoiceFromServer"] = function createInvoiceFromServer(body
       status: tmp12.status,
       orbsReward: tmp12.orbsReward,
       checkoutContext: tmp12.checkoutContext,
+      applyWalletBalance: tmp12.applyWalletBalance,
     } = obj);
     return tmp12;
   } else {
@@ -289,6 +307,7 @@ InvoiceRecord["createFromOrder"] = function createFromOrder(billing_facet) {
         status: tmp9.status,
         orbsReward: tmp9.orbsReward,
         checkoutContext: tmp9.checkoutContext,
+        applyWalletBalance: tmp9.applyWalletBalance,
       } = obj);
       return tmp9;
     } else {
@@ -316,16 +335,17 @@ InvoiceRecord["createFromOTPPreview"] = function createFromOTPPreview(invoice_it
     subscriptionPeriodEnd: null,
     orbsReward: null,
     checkoutContext: null,
+    applyWalletBalance: null,
   };
   const date = new Date(0);
   const tmp5 = new.target;
   const tmp7 = new.target;
   obj.subscriptionPeriodEnd = new Date(0);
-  const orbs_reward = invoice_items.orbs_reward;
-  obj.orbsReward = orbs_reward;
-  obj.checkoutContext = invoice_items.checkout_context;
+  ({ orbs_reward: obj.orbsReward, checkout_context } = invoice_items);
+  obj.checkoutContext = checkout_context;
+  obj.applyWalletBalance = invoice_items.apply_wallet_balance;
   if (typeof InvoiceRecord === "function") {
-    const tmp13 = new InvoiceRecord(obj, require, tmp5, tmp7, orbs_reward, InvoiceRecord);
+    const tmp13 = new InvoiceRecord(obj, require, tmp5, tmp7, checkout_context, InvoiceRecord);
     ({ id: tmp13.id, invoiceItems } = obj);
     if (invoiceItems == null) {
       invoiceItems = [];
@@ -338,6 +358,7 @@ InvoiceRecord["createFromOTPPreview"] = function createFromOTPPreview(invoice_it
       status: tmp13.status,
       orbsReward: tmp13.orbsReward,
       checkoutContext: tmp13.checkoutContext,
+      applyWalletBalance: tmp13.applyWalletBalance,
     } = obj);
     return tmp13;
   } else {

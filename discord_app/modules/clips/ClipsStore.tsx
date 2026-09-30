@@ -239,7 +239,7 @@ function trackClipMessage(message) {
   }
   obj = DistributedClipsExperimentDefault;
 }
-const ClipsConstants = fn(5611);
+const ClipsConstants = fn(5641);
 ({
   CLIPS_HARDWARE_CLASSIFICATION_VERSION: metroRequire,
   ClipSaveTypes: closure_7,
@@ -253,7 +253,7 @@ const ClipsConstants = fn(5611);
 } = ClipsConstants);
 const Constants = fn(1074);
 ({ MessageAttachmentFlags: map1, MessageReferenceTypes: closure_14, VoiceFlags: closure_15 } = Constants);
-const StreamSettingsConstants = fn(4883);
+const StreamSettingsConstants = fn(4913);
 let c16 = "default";
 let c17 = "Discord Clips";
 const dependencyMap = {};

@@ -214,7 +214,7 @@ obj.getPasskeyAuthenticator = function getPasskeyAuthenticator() {
   });
 };
 obj.registerAndroidCredentialManagerPasskey = function registerAndroidCredentialManagerPasskey(setError) {
-  setRegistering(6183).registerPasskey;
+  setRegistering(6213).registerPasskey;
   setError = undefined;
   setError = setError.setError;
   setRegistering = setError.setRegistering;
@@ -270,7 +270,7 @@ obj.registerAndroidCredentialManagerPasskey = function registerAndroidCredential
     .finally(() => setRegistering(false));
 };
 obj.registerAndroidDevicePasskey = function registerAndroidDevicePasskey(setError) {
-  setRegistering(6183).register;
+  setRegistering(6213).register;
   setError = undefined;
   setError = setError.setError;
   setRegistering = setError.setRegistering;
@@ -327,7 +327,7 @@ obj.registerAndroidDevicePasskey = function registerAndroidDevicePasskey(setErro
 };
 obj.registerPasskey = function registerPasskey(setError) {
   const obj = setError(1364);
-  const tmp2 = setRegistering(6183);
+  const tmp2 = setRegistering(6213);
   if (isAndroidResult) {
     setError = undefined;
     const setError2 = setError.setError;
@@ -479,7 +479,7 @@ obj.registerPasskey = function registerPasskey(setError) {
 obj.registerSecurityKey = function registerSecurityKey(setError) {
   let register = fn;
   if (fn === undefined) {
-    register = setRegistering(6183).register;
+    register = setRegistering(6213).register;
   }
   setError = undefined;
   setError = setError.setError;

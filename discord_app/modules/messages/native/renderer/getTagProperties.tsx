@@ -4,7 +4,7 @@ import util from "../../../../intl/index.native.tsx";
 import MessageConstants from "../../MessageConstants.tsx";
 import PublicGuildsUtils from "../../../public_guilds/PublicGuildsUtils.tsx";
 import isCrosspostDefault from "../../isCrosspost.tsx";
-import _modDef7647 from "../../../../../_runtime/metro/07647__.js";
+import _modDef7677 from "../../../../../_runtime/metro/07677__.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const Image = _mod17.Image;
@@ -33,7 +33,7 @@ export default function getTagProperties(arg0) {
           const intl = util.intl;
           let uri;
           if (isVerifiedBotResult) {
-            uri = Image.resolveAssetSource(_modDef7647).uri;
+            uri = Image.resolveAssetSource(_modDef7677).uri;
           }
           flag = isVerifiedBotResult;
           stringResult = intl.string(util.t["9RNkeF"]);
@@ -65,12 +65,13 @@ export default function getTagProperties(arg0) {
         tagAccessibilityLabel: null,
         tagVerified: flag,
         tagTextColor: "Boolean",
-        tagBackgroundColor: "ix",
+        tagBackgroundColor: "paddingHorizontal",
         tagType: SYSTEM_DM_TAG_SYSTEM_TYPE,
         tagIconUrl: tmp5,
         opTagText: stringResult2,
-        opTagTextColor: "cursor",
-        opTagBackgroundColor: "url",
+        opTagTextColor: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000565244049786497,
+        opTagBackgroundColor:
+          -0.0000000000000000000000000000000000000000000000000000000000000000000000011324019909002114,
       };
       ({ opTagTextColor: obj3.opTagTextColor, opTagBackgroundColor: obj3.opTagBackgroundColor } = colors);
       return obj2;

@@ -3,15 +3,15 @@ import util from "../../../../intl/index.native.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _modDef13178 from "../../../../../_runtime/metro/13178__.js";
-import _modDef13179 from "../../../../../_runtime/metro/13179__.js";
+import _modDef13205 from "../../../../../_runtime/metro/13205__.js";
+import _modDef13206 from "../../../../../_runtime/metro/13206__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let closure_6 = createStyles.createStyles({
   container: { flexDirection: "column", alignItems: "center" },
   headerText: { marginTop: 16, marginBottom: 24 },
@@ -30,9 +30,9 @@ export default function Header(style) {
   obj2.accessibilityLabel = intl.string(util.t.lpNrPu);
   const tmp8 = FastImageDefault;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = _modDef13178;
+    let tmp2Result = _modDef13205;
   } else {
-    tmp2Result = _modDef13179;
+    tmp2Result = _modDef13206;
   }
   obj2.source = tmp2Result;
   const items1 = [React4(tmp8, obj2)];

@@ -12,8 +12,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 const ClipViewDefault = ClipView;
 
-const inlineStyles = Circle(8074);
-const inlineStylesDefault = tmp9(8074);
+const inlineStyles = Circle(8106);
+const inlineStylesDefault = tmp9(8106);
 require = fn;
 function StaticNativeCutoutAvatarImage(cutout) {
   cutout = cutout.cutout;
@@ -73,18 +73,18 @@ function AnimatedNativeCutoutAvatarImage(cutout) {
     obj.cutouts = items;
     return obj;
   };
-  obj2 = { cutout, CutoutShape: cutout(8441).CutoutShape, withSpring: cutout(5446).withSpring, CHANNEL_SPRING_CONFIG };
+  obj2 = { cutout, CutoutShape: cutout(8472).CutoutShape, withSpring: cutout(5476).withSpring, CHANNEL_SPRING_CONFIG };
   fn.__closure = obj2;
   fn.__workletHash = 12529564164821;
   fn.__initData = __initData;
-  const animatedProps = cutout(4566).useAnimatedProps(fn);
-  let obj = cutout(4566);
+  const animatedProps = cutout(4596).useAnimatedProps(fn);
+  let obj = cutout(4596);
   const obj3 = { style, animatedProps, children: null };
   const obj4 = { style: null, source: getReactNativeSVGImageSourceDefault(source), usesSmallCache: true };
   let items = [obj2.image, imageStyle];
   obj4.style = items;
   obj3.children = closure_7(FastImageDefault, obj4);
-  return closure_7(cutout(8441).ClipViewAnimated, obj3);
+  return closure_7(cutout(8472).ClipViewAnimated, obj3);
 }
 function NativeCutoutAvatarImage(animate) {
   if (true === animate.animate) {
@@ -206,7 +206,7 @@ function CutoutAvatarImage(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const CHANNEL_SPRING_CONFIG = fn(12773).CHANNEL_SPRING_CONFIG;
+const CHANNEL_SPRING_CONFIG = fn(12803).CHANNEL_SPRING_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const logger = new LoggerDefault("UIKit - AvatarImage");

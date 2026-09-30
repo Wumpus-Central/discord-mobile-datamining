@@ -1,5 +1,5 @@
 // discord_common/js/packages/secondary-index-map/SecondaryIndexMap.tsx
-import sortedIndexByDefault from "../../../../_runtime/04465_sortedIndexBy.js";
+import sortedIndexByDefault from "../../../../_runtime/04495_sortedIndexBy.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 
 let closure_3 = [];
@@ -195,11 +195,11 @@ prototype["set"] = function set(arg0, value) {
 prototype["delete"] = function delete(arg0) {
   return this.set(arg0, null);
 };
-prototype["getIndex"] = function getIndex(item) {
-  let tmp2 = this.valueIndexes[item];
+prototype["getIndex"] = function getIndex(arg0) {
+  let tmp2 = this.valueIndexes[arg0];
   if (null == tmp2) {
     const items = [];
-    tmp.valueIndexes[item] = items;
+    tmp.valueIndexes[arg0] = items;
     tmp2 = items;
   }
   return tmp2;

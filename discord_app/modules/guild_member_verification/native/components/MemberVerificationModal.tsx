@@ -12,12 +12,12 @@ const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
 const View = fn(17).View;
-const MemberVerificationFormConstants = fn(6051);
+const MemberVerificationFormConstants = fn(6081);
 ({ SCROLL_EVENT_TIMER_MS: closure_7, useBannerHeight: closure_8 } = MemberVerificationFormConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let closure_11 = ReanimatedRexport.createAnimatedComponent(fn(1177).Icon);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj = {
   flex: { flex: 1 },
   flexLoading: {

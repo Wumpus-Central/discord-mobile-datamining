@@ -16,13 +16,13 @@ const result = size.fileFinishedImporting(
 );
 
 export const useBottomSheetFlashListBottomViewabilityInset = function useBottomSheetFlashListBottomViewabilityInset() {
-  const context = bottomVisibilityInsetRef.useContext(bottomSheetPosition(10954).AppLauncherContext);
+  const context = bottomVisibilityInsetRef.useContext(bottomSheetPosition(10990).AppLauncherContext);
   bottomSheetPosition = undefined;
   if (context != null) {
     bottomSheetPosition = context.bottomSheetPosition;
   }
   const flashListRef = obj.useRef(null);
-  const diff = flashListRef(1479)().height - flashListRef(11067)().maximum;
+  const diff = flashListRef(1479)().height - flashListRef(11103)().maximum;
   dependencyMap = diff;
   bottomVisibilityInsetRef = obj.useRef(9999);
   const memo = obj.useMemo(
@@ -53,10 +53,10 @@ export const useBottomSheetFlashListBottomViewabilityInset = function useBottomS
   const fn2 = function s(arg0) {
     ReanimatedRexport.runOnJS(memo)(arg0 - diff);
   };
-  const tmp4Result = bottomSheetPosition(4566);
+  const tmp4Result = bottomSheetPosition(4596);
   fn2.__closure = {
     distanceBetweenExpandedScreenTopAndSheetTop: diff,
-    runOnJS: bottomSheetPosition(4566).runOnJS,
+    runOnJS: bottomSheetPosition(4596).runOnJS,
     handleBottomViewabilityInsetDebounced: memo,
   };
   fn2.__workletHash = 6025307858098;

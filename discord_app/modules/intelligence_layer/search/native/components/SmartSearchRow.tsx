@@ -168,11 +168,11 @@ function SmartSearchContent(entry) {
 }
 const View = fn(17).View;
 SmartSearchResultsStoreDefault;
-const MAX_PRESENTED_CITATIONS = fn(12016).MAX_PRESENTED_CITATIONS;
-let closure_10 = fn(7468).SEARCH_MESSAGES_DEFAULT_LINE_CLAMP;
+const MAX_PRESENTED_CITATIONS = fn(12050).MAX_PRESENTED_CITATIONS;
+let closure_10 = fn(7499).SEARCH_MESSAGES_DEFAULT_LINE_CLAMP;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj = {
   collapsedFrame: { height: 217, overflow: "hidden" },
   expandedContent: { paddingBottom: nativeDefault.space.PX_40 },

@@ -6,13 +6,13 @@ import FastImageDefault from "../../../../components_native/common/FastImage.tsx
 import guild_GuildUtils from "../../../guild/GuildUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const GuildBadgeDefault = tmp8(6068);
+const GuildBadgeDefault = tmp8(6098);
 require = fn;
 const View = fn(17).View;
-const React4 = fn(6063).ExpressionSourceGuildRecord;
+const React4 = fn(6093).ExpressionSourceGuildRecord;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj2 = {
   guildDetailsContainer: { flexDirection: "column" },
   guildDetailsContent: { flexDirection: "row", marginTop: 8, alignItems: "center" },

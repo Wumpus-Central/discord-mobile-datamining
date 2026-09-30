@@ -98,8 +98,8 @@ let obj5 = {
 };
 let obj6 = {
   boostPrice: 3,
-  isEnabled(id) {
-    return GameServerExperiment.getGameServerEnabled(id, "GuildPowerupsConstants");
+  isEnabled(guildId) {
+    return GameServerExperiment.getGameServerEnabled(guildId, "GuildPowerupsConstants");
   },
 };
 const set3 = new Set(items11);

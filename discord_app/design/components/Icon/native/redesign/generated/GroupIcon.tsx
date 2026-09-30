@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/GroupIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod5507 from "../../../../../../../_runtime/metro/05507__.js";
+import _mod5537 from "../../../../../../../_runtime/metro/05537__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export const GroupIcon = function GroupIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod5507, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5537, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

@@ -25,14 +25,14 @@ function UserRow(userActivity) {
     const obj2 = { label: null, subLabel: null, icon: null };
     obj2.label = UserUtilsDefault.getName(user);
     obj2.subLabel = topUserOrGuildDescription;
-    const obj4 = { size: native.AvatarSizes.SMALL, user, guildId: "r" };
+    const obj4 = { size: native.AvatarSizes.SMALL, user, guildId: "Array" };
     obj2.icon = React4(native.Avatar, obj4);
     return React4(TableRow.TableRow, obj2);
   }
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let closure_6 = createStyles.createStyles({ header: { textAlign: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterTopUsersBottomSheet.tsx");

@@ -3,16 +3,16 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import ConstantsIOS from "../../../ConstantsIOS.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
-import LinearGradientDefault from "../../../../_runtime/05459_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05489_LinearGradient.js";
 import NitroWheelIcon from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const Gradients = fn(7018).Gradients;
+const Gradients = fn(7048).Gradients;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj2 = { outer: { borderRadius: nativeDefault.radii.lg, padding: 1 }, inner: null, text: null, textCenter: null };
 let obj3 = { borderRadius: nativeDefault.radii.lg, padding: 1 };
 obj2.inner = {
@@ -44,8 +44,11 @@ export default function UserProfileUpsellCardV2(children) {
   if (flag === undefined) {
     flag = false;
   }
-  const loading = children.loading;
-  ({ style, onLayout } = children);
+  let flag2 = children.loading;
+  if (flag2 === undefined) {
+    flag2 = false;
+  }
+  ({ children, style, onLayout } = children);
   const tmp = closure_7();
   const obj = {
     start: ConstantsIOS.HorizontalGradient.START,
@@ -72,6 +75,7 @@ export default function UserProfileUpsellCardV2(children) {
       maxFontSizeMultiplier: 2.5,
       children: children.text,
     }),
+    ,
   ];
   const obj3 = { icon: null, text: null, onPress: null, variant: null, loading: null, disabled: null, grow: true };
   const tmp5 = LinearGradientDefault;
@@ -79,12 +83,13 @@ export default function UserProfileUpsellCardV2(children) {
   obj3.text = buttonText;
   obj3.onPress = onButtonPress;
   obj3.variant = buttonVariant;
-  obj3.loading = loading;
+  obj3.loading = flag2;
   if (!flag) {
-    flag = loading;
+    flag = flag2;
   }
   obj3.disabled = flag;
   items2[1] = hasOwnProperty(components_Button_Button.Button, obj3);
+  items2[2] = children;
   obj2.children = items2;
   obj.children = timestampProducer(View, obj2);
   return hasOwnProperty(tmp5, obj);

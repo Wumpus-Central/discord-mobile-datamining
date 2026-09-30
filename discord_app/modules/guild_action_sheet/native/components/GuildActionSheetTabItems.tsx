@@ -27,13 +27,13 @@ let result = size.fileFinishedImporting("modules/guild_action_sheet/native/compo
 export default function GuildActionSheetTabItems(guild) {
   guild = guild.guild;
   let stateFromStores;
-  let canAccessSettings = guild(13675).useGuildActionSheetPermissions(guild).canAccessSettings;
-  const total = stateFromStores(4743)(guild.id).total;
-  let obj = guild(13675);
+  let canAccessSettings = guild(13702).useGuildActionSheetPermissions(guild).canAccessSettings;
+  const total = stateFromStores(4773)(guild.id).total;
+  let obj = guild(13702);
   const items = [GuildChannelStore];
   stateFromStores = guild(504).useStateFromStores(items, () => GuildChannelStore.getChannels(guild.id));
   let obj2 = guild(504);
-  let shouldRenderInviteResult = guild(9445).shouldRenderInvite(stateFromStores, guild);
+  let shouldRenderInviteResult = guild(9479).shouldRenderInvite(stateFromStores, guild);
   const items1 = [stateFromStores, guild];
   closure_2 = noop.useCallback(() => {
     const channelId = SelectedChannelStore.getChannelId(guild.id);
@@ -61,8 +61,8 @@ export default function GuildActionSheetTabItems(guild) {
     formatToPlainStringResult = intl.string(tmp(1115).t.Uj0md3);
   }
   const obj6 = { variant: "secondary", label: formatToPlainStringResult, icon: null, grow: true, onPress: null };
-  let obj3 = guild(9445);
-  obj6.icon = closure_12(guild(8843).BoostGemIcon, {
+  let obj3 = guild(9479);
+  obj6.icon = closure_12(guild(8877).BoostGemIcon, {
     color: stateFromStores(576).unsafe_rawColors.GUILD_BOOSTING_PINK,
   });
   obj6.onPress = function onPress() {
@@ -72,40 +72,40 @@ export default function GuildActionSheetTabItems(guild) {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     actions_BoostingActionCreatorsAll.openApplyBoostModal(guild.id);
   };
-  const items2 = [closure_12(guild(7528).IconButton, obj6), , ,];
+  const items2 = [closure_12(guild(7558).IconButton, obj6), , ,];
   if (shouldRenderInviteResult) {
     const obj8 = { variant: "secondary", label: null, icon: null, grow: true, onPress: null };
     const intl3 = tmp(1115).intl;
     obj8.label = intl3.string(tmp(1115).t.VINpSK);
-    obj8.icon = tmp3(9658);
+    obj8.icon = tmp3(9692);
     obj8.onPress = function onPress() {
       ActionSheetActionCreatorsDefault.hideActionSheet();
       closure_2();
     };
-    shouldRenderInviteResult = closure_12(tmp(7528).IconButton, obj8);
+    shouldRenderInviteResult = closure_12(tmp(7558).IconButton, obj8);
   }
   items2[1] = shouldRenderInviteResult;
   const obj9 = { variant: "secondary", label: null, icon: null, grow: true, onPress: null };
   const intl4 = tmp(1115).intl;
   obj9.label = intl4.string(guild(1115).t.HcoRu0);
-  obj9.icon = stateFromStores(7556);
+  obj9.icon = stateFromStores(7586);
   obj9.onPress = function onPress() {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     NotificationSettingsModalActionCreatorsDefault.open(guild.id);
   };
-  items2[2] = closure_12(guild(7528).IconButton, obj9);
+  items2[2] = closure_12(guild(7558).IconButton, obj9);
   if (canAccessSettings) {
     const obj10 = { variant: "secondary", label: null, icon: null, grow: true, onPress: null };
     const intl5 = tmp(1115).intl;
     obj10.label = intl5.string(tmp(1115).t["3D5yo/"]);
-    obj10.icon = tmp3(6965);
+    obj10.icon = tmp3(6995);
     obj10.onPress = function onPress() {
       ActionSheetActionCreatorsDefault.hideActionSheet();
       GuildSettingsActionCreatorsDefault.open(guild.id);
     };
-    canAccessSettings = closure_12(tmp(7528).IconButton, obj10);
+    canAccessSettings = closure_12(tmp(7558).IconButton, obj10);
   }
   items2[3] = canAccessSettings;
   obj4.children = items2;
-  return closure_13(guild(5912).ButtonGroup, obj4);
+  return closure_13(guild(5942).ButtonGroup, obj4);
 }

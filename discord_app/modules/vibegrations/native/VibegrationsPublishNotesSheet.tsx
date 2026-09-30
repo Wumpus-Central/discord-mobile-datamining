@@ -17,12 +17,12 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-let closure_9 = fn(4467).GUILD_SELECTABLE_CHANNELS_KEY;
-const MessageSendLocation = fn(4829).MessageSendLocation;
+let closure_9 = fn(4497).GUILD_SELECTABLE_CHANNELS_KEY;
+const MessageSendLocation = fn(4859).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const VibegrationsPublishNotesSheet = "VibegrationsPublishNotesSheet";
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let closure_17 = createStyles.createStyles((paddingBottom) => {
   const obj = {
     container: { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom },
@@ -50,17 +50,17 @@ export default function VibegrationsPublishNotesSheet(guildId) {
   ({ projectName, publish } = guildId);
   const initialDraft = guildId.initialDraft;
   c7 = undefined;
-  let first;
-  c10 = undefined;
-  c12 = undefined;
+  c8 = undefined;
+  c11 = undefined;
   c13 = undefined;
   c14 = undefined;
-  let found;
+  c15 = undefined;
+  let ref;
   let trimmed;
-  c19 = undefined;
+  c20 = undefined;
   let callback2;
-  const tmp3 = found(applicationId(publish[12])({ includeKeyboardHeight: true }).insets.bottom);
-  const items = [first];
+  const tmp3 = ref(applicationId(publish[12])({ includeKeyboardHeight: true }).insets.bottom);
+  const items = [c8];
   const stateFromStores = guildId(publish[13]).useStateFromStores(items, () => {
     found = GuildChannelStore.getChannels(guildId)[closure_9].filter((channel) => {
       channel = channel.channel;
@@ -77,7 +77,7 @@ export default function VibegrationsPublishNotesSheet(guildId) {
     return found.map((channel) => channel.channel);
   });
   let obj = guildId(publish[13]);
-  const items1 = [first];
+  const items1 = [c8];
   const items2 = [guildId, applicationId];
   const stateFromStores1 = guildId(publish[13]).useStateFromStores(
     items1,
@@ -87,11 +87,13 @@ export default function VibegrationsPublishNotesSheet(guildId) {
   let obj2 = guildId(publish[13]);
   const tmp6 = applicationId(publish[15])();
   const diff = tmp6 - guildId(publish[16]).formatPlaySuffix(guildId(publish[16]).PLAY_LINE_CHANNEL_PLACEHOLDER).length;
-  let ref = stateFromStores1.useRef(diff);
+  ref = stateFromStores1.useRef(diff);
   ref.current = diff;
   let obj3 = guildId(publish[16]);
   [tmp10, c7] = stateFromStores(stateFromStores1.useState("publishing"), 2);
-  const tmp11 = stateFromStores(
+  const tmp9 = stateFromStores(stateFromStores1.useState("publishing"), 2);
+  [tmp12, c8] = stateFromStores(stateFromStores1.useState(null), 2);
+  const tmp13 = stateFromStores(
     stateFromStores1.useState(() => {
       const result = VibegrationsPatchNotesChannel.lastPatchNotesChannel(applicationId);
       guildId = result;
@@ -106,19 +108,19 @@ export default function VibegrationsPublishNotesSheet(guildId) {
     }),
     2,
   );
-  first = tmp11[0];
-  closure_9 = tmp11[1];
-  const tmp9 = stateFromStores(stateFromStores1.useState("publishing"), 2);
-  [str, c10] = stateFromStores(stateFromStores1.useState(""), 2);
-  const tmp14 = stateFromStores(stateFromStores1.useState(true), 2);
-  closure_11 = tmp14[1];
-  const tmp13 = stateFromStores(stateFromStores1.useState(""), 2);
-  [tmp16, c12] = stateFromStores(stateFromStores1.useState(false), 2);
-  const tmp15 = stateFromStores(stateFromStores1.useState(false), 2);
+  const first = tmp13[0];
+  closure_10 = tmp13[1];
+  const tmp11 = stateFromStores(stateFromStores1.useState(null), 2);
+  [str, c11] = stateFromStores(stateFromStores1.useState(""), 2);
+  const tmp16 = stateFromStores(stateFromStores1.useState(true), 2);
+  closure_12 = tmp16[1];
+  const tmp15 = stateFromStores(stateFromStores1.useState(""), 2);
   [tmp18, c13] = stateFromStores(stateFromStores1.useState(false), 2);
   const tmp17 = stateFromStores(stateFromStores1.useState(false), 2);
   [tmp20, c14] = stateFromStores(stateFromStores1.useState(false), 2);
-  closure_15 = stateFromStores1.useRef(false);
+  const tmp19 = stateFromStores(stateFromStores1.useState(false), 2);
+  [tmp22, c15] = stateFromStores(stateFromStores1.useState(false), 2);
+  closure_16 = stateFromStores1.useRef(false);
   ref = stateFromStores1.useRef(null != first);
   const items3 = [publish];
   const effect = stateFromStores1.useEffect(() => {
@@ -129,9 +131,15 @@ export default function VibegrationsPublishNotesSheet(guildId) {
           c7("succeeded");
         }
       },
-      () => {
+      (message) => {
         if (!c0) {
           c7("failed");
+          const _Error = Error;
+          message = null;
+          if (message instanceof Error) {
+            message = message.message;
+          }
+          c8(message);
         }
       },
     );
@@ -146,7 +154,7 @@ export default function VibegrationsPublishNotesSheet(guildId) {
       current = ref.current;
     }
     if (!current) {
-      closure_9(stateFromStores1);
+      closure_10(stateFromStores1);
     }
   }, items4);
   const items5 = [initialDraft];
@@ -155,9 +163,9 @@ export default function VibegrationsPublishNotesSheet(guildId) {
     initialDraft.then(
       (ok) => {
         if (!c0) {
-          closure_11(false);
+          closure_12(false);
           if (true !== ok.ok) {
-            c12(true);
+            c13(true);
           } else {
             let current = null == ok.notes;
             if (!current) {
@@ -168,15 +176,15 @@ export default function VibegrationsPublishNotesSheet(guildId) {
             }
             if (!current) {
               const notes = ok.notes;
-              c10(notes.slice(0, ref.current));
+              c11(notes.slice(0, ref.current));
             }
           }
         }
       },
       () => {
         if (!c0) {
-          closure_11(false);
-          c12(true);
+          closure_12(false);
+          c13(true);
         }
       },
     );
@@ -184,9 +192,9 @@ export default function VibegrationsPublishNotesSheet(guildId) {
       c0 = true;
     };
   }, items5);
-  found = null;
+  let found = null;
   const callback = stateFromStores1.useCallback((arg0) => {
-    closure_15.current = true;
+    closure_16.current = true;
     _undefined2(false);
     _undefined(arg0);
   }, []);
@@ -203,7 +211,7 @@ export default function VibegrationsPublishNotesSheet(guildId) {
     formatPlaySuffixResult = tmp4(tmp2[16]).formatPlaySuffix("<#" + stateFromStores1 + ">");
     const tmp4Result = tmp4(tmp2[16]);
   }
-  c19 = formatPlaySuffixResult;
+  c20 = formatPlaySuffixResult;
   const items6 = [stateFromStores, guildId, found];
   const callback1 = obj4.useCallback(() => {
     const obj2 = { content: null, key: "VibegrationsPatchNotesChannelSheet", stackingBehavior: "stack" };
@@ -218,7 +226,7 @@ export default function VibegrationsPublishNotesSheet(guildId) {
     obj3.selectedChannel = found;
     obj3.onSelect = function onSelect(id) {
       ref.current = true;
-      closure_1_9(id.id);
+      closure_1_10(id.id);
     };
     obj2.content = closure_2_14(ChannelPickerActionSheetDefault, obj3);
     obj.showActionSheet(obj2);
@@ -261,13 +269,13 @@ export default function VibegrationsPublishNotesSheet(guildId) {
                   _undefined2(false);
                   dependencyMap = 1;
                   let combined = trimmed;
-                  if (null != c19) {
+                  if (null != c20) {
                     const _HermesInternal = HermesInternal;
                     combined = "" + trimmed + tmp34;
                   }
-                  const parsed = tmp3(7260).parse(found, combined);
-                  const tmp31Result = tmp3(7042);
-                  const obj5 = { location: _undefined.VIBEGRATIONS_PATCH_NOTES };
+                  const parsed = tmp3(7290).parse(found, combined);
+                  const tmp31Result = tmp3(7072);
+                  const obj5 = { location: constants.VIBEGRATIONS_PATCH_NOTES };
                   c3 = 2;
                   c4 = 1;
                   const obj6 = { value: tmp31Result.sendMessage(found.id, parsed, false, obj5), done: false };
@@ -278,8 +286,8 @@ export default function VibegrationsPublishNotesSheet(guildId) {
           } else {
             if (1 === tmp7) {
               dependencyMap = 0;
-              closure_129_14(true);
-              closure_129_13(false);
+              closure_129_15(true);
+              closure_129_14(false);
             } else if (arg0 === 1) {
               c4 = 3;
               throw value;
@@ -295,10 +303,10 @@ export default function VibegrationsPublishNotesSheet(guildId) {
                 ok = closure_128_0.ok;
               }
               if (false !== ok) {
-                const result = guildId(16419).rememberPatchNotesChannel(closure_129_1, closure_129_17.id);
-                closure_129_20();
+                const result = guildId(16448).rememberPatchNotesChannel(closure_129_1, closure_129_18.id);
+                closure_129_21();
                 dependencyMap = 0;
-                const obj = guildId(16419);
+                const obj = guildId(16448);
               }
             }
             const _Error = Error;
@@ -331,14 +339,14 @@ export default function VibegrationsPublishNotesSheet(guildId) {
   const items8 = [c14(guildId(publish[25]).Text, obj9)];
   if ("publishing" === tmp10) {
     const obj10 = { style: tmp3.statusRow, children: null };
-    const items9 = [tmp31(ref, { size: "small" })];
+    const items9 = [tmp33(ref, { size: "small" })];
     const obj11 = { variant: "text-md/medium", color: "text-subtle", children: null };
     const intl5 = tmp4(tmp2[19]).intl;
     const obj12 = { projectName };
     obj11.children = intl5.formatToPlainString(tmp(tmp2[20]).g5fncX, obj12);
-    items9[1] = tmp31(tmp4(tmp2[25]).Text, obj11);
+    items9[1] = tmp33(tmp4(tmp2[25]).Text, obj11);
     obj10.children = items9;
-    let tmp31Result = tmp32(tmp33, obj10);
+    let tmp33Result = tmp34(tmp35, obj10);
   } else {
     if ("succeeded" === tmp10) {
       const obj13 = { variant: "text-md/medium", color: "text-feedback-positive", children: null };
@@ -347,16 +355,18 @@ export default function VibegrationsPublishNotesSheet(guildId) {
       obj13.children = intl4.formatToPlainString(tmp(tmp2[20]).CC69wK, obj14);
       let obj15 = obj13;
     } else {
-      obj15 = { variant: "text-md/medium", color: "text-feedback-critical", children: null };
-      const intl3 = tmp4(tmp2[19]).intl;
-      obj15.children = intl3.string(tmp(tmp2[20]).fNP6Cd);
+      if (stringResult == null) {
+        const intl3 = tmp4(tmp2[19]).intl;
+        stringResult = intl3.string(tmp(tmp2[20]).fNP6Cd);
+      }
+      obj15 = { variant: "text-md/medium", color: "text-feedback-critical", children: stringResult };
     }
-    tmp31Result = tmp31(tmp4(tmp2[25]).Text, obj15);
+    tmp33Result = tmp33(tmp4(tmp2[25]).Text, obj15);
   }
-  items8[1] = tmp31Result;
+  items8[1] = tmp33Result;
   obj8.children = items8;
-  const items10 = [closure_15(c7, obj8), ,];
-  let tmp32Result2 = null;
+  const items10 = [c15(c7, obj8), ,];
+  let tmp34Result2 = null;
   if (stateFromStores.length > 0) {
     const obj16 = { style: tmp3.notesSection, children: null };
     const obj17 = {
@@ -373,28 +383,28 @@ export default function VibegrationsPublishNotesSheet(guildId) {
     obj17.label = intl6.string(tmp(tmp2[20]).oouynk);
     const intl7 = tmp4(tmp2[19]).intl;
     const tmpResult = tmp(tmp2[20]);
-    obj17.placeholder = intl7.string(tmp14[0] ? tmpResult.VQhlkB : tmpResult.xkxDN1);
-    let stringResult;
-    if (tmp16) {
-      const intl8 = tmp4(tmp2[19]).intl;
-      stringResult = intl8.string(tmp(tmp2[20]).PCST1n);
-    }
-    obj17.description = stringResult;
+    obj17.placeholder = intl7.string(tmp16[0] ? tmpResult.VQhlkB : tmpResult.xkxDN1);
     let stringResult1;
-    if (tmp20) {
-      const intl9 = tmp4(tmp2[19]).intl;
-      stringResult1 = intl9.string(tmp(tmp2[20]).P6SoGm);
+    if (tmp18) {
+      const intl8 = tmp4(tmp2[19]).intl;
+      stringResult1 = intl8.string(tmp(tmp2[20]).PCST1n);
     }
-    obj17.errorMessage = stringResult1;
+    obj17.description = stringResult1;
+    let stringResult2;
+    if (tmp22) {
+      const intl9 = tmp4(tmp2[19]).intl;
+      stringResult2 = intl9.string(tmp(tmp2[20]).P6SoGm);
+    }
+    obj17.errorMessage = stringResult2;
     obj17.maxLength = diff;
     obj17.value = str;
     obj17.onChange = callback;
-    obj17.disabled = tmp18;
-    const items11 = [tmp31(tmp4(tmp2[26]).TextArea, obj17)];
+    obj17.disabled = tmp20;
+    const items11 = [tmp33(tmp4(tmp2[26]).TextArea, obj17)];
     const intl10 = tmp4(tmp2[19]).intl;
     if (null != found) {
       const _HermesInternal2 = HermesInternal;
-      let combined = "#" + tmp4(tmp2[27]).computeChannelName(found, c12, closure_11);
+      let combined = "#" + tmp4(tmp2[27]).computeChannelName(found, closure_12, c11);
       const tmp4Result2 = tmp4(tmp2[27]);
     } else {
       const intl11 = tmp4(tmp2[19]).intl;
@@ -402,17 +412,17 @@ export default function VibegrationsPublishNotesSheet(guildId) {
     }
     const obj18 = { channel: combined, onPick: null };
     let fn = callback1;
-    if (tmp18) {
+    if (tmp20) {
       fn = () => {};
     }
     const obj19 = { variant: "text-md/medium", color: "text-subtle", children: null };
     obj18.onPick = fn;
     obj19.children = intl10.format(tmp(tmp2[20]).unJ01l, obj18);
-    items11[1] = tmp31(tmp4(tmp2[25]).Text, obj19);
+    items11[1] = tmp33(tmp4(tmp2[25]).Text, obj19);
     obj16.children = items11;
-    tmp32Result2 = tmp32(tmp33, obj16);
+    tmp34Result2 = tmp34(tmp35, obj16);
   }
-  items10[1] = tmp32Result2;
+  items10[1] = tmp34Result2;
   const obj20 = { style: tmp3.actions, children: null };
   const intl12 = tmp4(tmp2[19]).intl;
   if ("failed" === tmp10) {
@@ -420,7 +430,7 @@ export default function VibegrationsPublishNotesSheet(guildId) {
   } else {
     NmaE9T = tmp(tmp2[20]).NmaE9T;
   }
-  const tmp19 = stateFromStores(stateFromStores1.useState(false), 2);
+  const tmp21 = stateFromStores(stateFromStores1.useState(false), 2);
   const items12 = [
     c14(guildId(publish[28]).Button, {
       variant: "tertiary",
@@ -432,14 +442,14 @@ export default function VibegrationsPublishNotesSheet(guildId) {
   const obj22 = { variant: "primary", grow: true, text: null, loading: null, disabled: null, onPress: null };
   const intl13 = tmp4(tmp2[19]).intl;
   obj22.text = intl13.string(applicationId(publish[20]).dx7eQG);
-  obj22.loading = tmp18;
-  obj22.disabled = "succeeded" !== tmp10 || "" === trimmed || trimmed.length > diff || null == found || tmp18;
+  obj22.loading = tmp20;
+  obj22.disabled = "succeeded" !== tmp10 || "" === trimmed || trimmed.length > diff || null == found || tmp20;
   obj22.onPress = callback3;
   items12[1] = c14(guildId(publish[28]).Button, obj22);
   obj20.children = items12;
-  items10[2] = closure_15(c7, obj20);
+  items10[2] = c15(c7, obj20);
   obj7.children = items10;
-  obj5.children = closure_15(c7, obj7);
+  obj5.children = c15(c7, obj7);
   return c14(guildId(publish[23]).ActionSheet, obj5);
 }
 export const VIBEGRATIONS_PUBLISH_NOTES_SHEET_KEY = "VibegrationsPublishNotesSheet";

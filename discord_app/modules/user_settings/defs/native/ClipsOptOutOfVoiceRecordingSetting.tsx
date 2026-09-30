@@ -54,7 +54,7 @@ let closure_4 = async function _updateClipsAllowVoiceRecording(arg0) {
     }
   }
 };
-const SettingBuilders = fn(11175);
+const SettingBuilders = fn(11211);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -64,7 +64,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t["wW9/zQ"]);
   },
-  parent: fn(7582).MobileUserSettings.CLIPS,
+  parent: fn(7612).MobileUserSettings.CLIPS,
   useValue: fn(2021).ClipsAllowVoiceRecording.useSetting,
   onValueChange: function updateClipsAllowVoiceRecording() {
     const self = this;

@@ -281,15 +281,14 @@ function startPublish(project, navigatesOnPublish, platform) {
   }
   if ("channel" === destination) {
     let obj2 = { type: "VIBEGRATIONS_PROJECT_APP_CHANNEL_PENDING", projectId: id, pending: true };
-    project(platform[20]).dispatch(obj2);
-    let obj = project(platform[20]);
+    project(platform[21]).dispatch(obj2);
+    let obj = project(platform[21]);
   }
   let promise = closure_12(id);
   let nextPromise = promise.then((ok) => {
     if (true !== ok.ok) {
       const _Error = Error;
-      const intl = project(platform[17]).intl;
-      const error = new Error(intl.string(project(platform[18]).fNP6Cd));
+      const error = new Error(project(platform[17])(ok));
       throw error;
     } else {
       return ok;
@@ -357,7 +356,7 @@ function startPublish(project, navigatesOnPublish, platform) {
             return tmp;
           })
           .finally(() => {
-            project(platform[20]).dispatch({
+            project(platform[21]).dispatch({
               type: "VIBEGRATIONS_PROJECT_APP_CHANNEL_PENDING",
               projectId,
               pending: false,
@@ -381,7 +380,7 @@ function startPublish(project, navigatesOnPublish, platform) {
             return tmp;
           })
           .finally(() => {
-            project(platform[20]).dispatch({
+            project(platform[21]).dispatch({
               type: "VIBEGRATIONS_PROJECT_APP_CHANNEL_PENDING",
               projectId,
               pending: false,
@@ -419,7 +418,7 @@ function startPublish(project, navigatesOnPublish, platform) {
             return tmp;
           })
           .finally(() => {
-            project(platform[20]).dispatch({
+            project(platform[21]).dispatch({
               type: "VIBEGRATIONS_PROJECT_APP_CHANNEL_PENDING",
               projectId,
               pending: false,
@@ -644,13 +643,13 @@ let closure_26 = async function _runVibegrationsPublishAction(arg0) {
                             set.add(closure_0);
                             c11 = 1;
                             const requestConsent = platform.requestConsent;
-                            let f126631 = requestConsent;
+                            let f126809 = requestConsent;
                             if (requestConsent == null) {
-                              f126631 = (arg0) => closure_2_19(arg0, closure_1_2);
+                              f126809 = (arg0) => closure_2_19(arg0, closure_1_2);
                             }
                             c12 = 2;
                             c13 = 1;
-                            const obj7 = { value: f126631(closure_0), done: false };
+                            const obj7 = { value: f126809(closure_0), done: false };
                             return obj7;
                           }
                         } else {
@@ -731,7 +730,7 @@ let closure_26 = async function _runVibegrationsPublishAction(arg0) {
             if (!obj6.requiresPermissionReview(obj9)) {
               closure_137_22(closure_136_4, closure_136_3, closure_136_1);
             }
-            obj6 = closure_137_0(closure_137_2[25]);
+            obj6 = closure_137_0(closure_137_2[26]);
           }
         }
       }
@@ -748,9 +747,9 @@ let closure_26 = async function _runVibegrationsPublishAction(arg0) {
     }
   }
 };
-const VibegrationsConnectionStore = fn(12812);
+const VibegrationsConnectionStore = fn(12842);
 ({ draftPatchNotes: closure_11, publishProject: closure_12 } = VibegrationsConnectionStore);
-const canPublishProject = fn(8660).canPublishProject;
+const canPublishProject = fn(8694).canPublishProject;
 const Permissions = fn(1074).Permissions;
 let context = noop.createContext(null);
 const set = new Set(["dm", "guild", "channel"]);
@@ -758,8 +757,8 @@ const set1 = new Set();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/vibegrations/lib/useVibegrationsPublishAction.tsx");
 
-export default function useVibegrationsPublishAction(arg0, arg1) {
-  _require = arg0;
+export default function useVibegrationsPublishAction(projectId, arg1) {
+  _require = projectId;
   context = arg1;
   if (arg1 == null) {
     context = guildId.useContext(context);
@@ -772,7 +771,7 @@ export default function useVibegrationsPublishAction(arg0, arg1) {
     guildId1 = null;
   }
   const items = [memo, appChannelName, guildName, integrationStatus, appChannelPending, status, installScope];
-  const items1 = [arg0, guildId1];
+  const items1 = [projectId, guildId1];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(
     items,
     () => {
@@ -995,7 +994,7 @@ export default function useVibegrationsPublishAction(arg0, arg1) {
     }
     return vibegrationsPublishAction;
   }, items4);
-  const items5 = [arg0, context];
+  const items5 = [projectId, context];
   let tmp13 = null;
   if (null != context) {
     tmp13 = null;
@@ -1012,14 +1011,7 @@ export default function useVibegrationsPublishAction(arg0, arg1) {
           status1 = null;
         }
         obj3.status = status1;
-        let guildName1;
-        if (memo != null) {
-          guildName1 = memo.guildName;
-        }
-        if (guildName1 == null) {
-          guildName1 = null;
-        }
-        obj3.guildName = guildName1;
+        obj3.guildId = guildId;
         obj3.publishing = publishing;
         if (!publishing) {
           publishing = true === context.busy;

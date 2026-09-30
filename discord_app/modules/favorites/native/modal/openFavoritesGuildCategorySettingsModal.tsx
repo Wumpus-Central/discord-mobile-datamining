@@ -6,5 +6,5 @@ import size from "../../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/favorites/native/modal/openFavoritesGuildCategorySettingsModal.tsx");
 
 export default function openFavoritesGuildCategorySettingsModal(categoryId) {
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15919, dependencyMap.paths), { categoryId });
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15944, dependencyMap.paths), { categoryId });
 }

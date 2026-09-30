@@ -46,13 +46,20 @@ export default function AccessibilityPreferencesContextProvider(children) {
     items5,
     () => stateFromStores1.isSwitchIconsEnabled,
   );
-  const items6 = [
+  const obj6 = stateFromStoresObject(stateFromStores[3]);
+  const items6 = [stateFromStores1];
+  const stateFromStores4 = stateFromStoresObject(stateFromStores[3]).useStateFromStores(
+    items6,
+    () => stateFromStores1.minToastDurationMs,
+  );
+  const items7 = [
     stateFromStoresObject,
     stateFromStores,
     stateFromStoresObject1,
     stateFromStores1,
     stateFromStores2,
     stateFromStores3,
+    stateFromStores4,
   ];
   value = stateFromStoresObject1.useMemo(
     () => ({
@@ -63,8 +70,9 @@ export default function AccessibilityPreferencesContextProvider(children) {
       highContrastModeEnabled: false,
       keyboardModeEnabled: stateFromStores2,
       switchIconsEnabled: stateFromStores3,
+      minToastDurationMs: stateFromStores4,
     }),
-    items6,
+    items7,
   );
   return stateFromStores2(stateFromStoresObject(stateFromStores[4]).AccessibilityPreferencesContext.Provider, {
     value,

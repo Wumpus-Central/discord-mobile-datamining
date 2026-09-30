@@ -1,21 +1,21 @@
 // discord_app/modules/directory_channels/native/GuildDirectoryTemplatesIcons.tsx
-import _modDef11978 from "../../../../_runtime/metro/11978__.js";
-import _modDef11979 from "../../../../_runtime/metro/11979__.js";
-import _modDef11980 from "../../../../_runtime/metro/11980__.js";
-import _modDef11981 from "../../../../_runtime/metro/11981__.js";
-import _modDef11982 from "../../../../_runtime/metro/11982__.js";
-import _modDef11983 from "../../../../_runtime/metro/11983__.js";
-import _modDef11984 from "../../../../_runtime/metro/11984__.js";
+import _modDef12012 from "../../../../_runtime/metro/12012__.js";
+import _modDef12013 from "../../../../_runtime/metro/12013__.js";
+import _modDef12014 from "../../../../_runtime/metro/12014__.js";
+import _modDef12015 from "../../../../_runtime/metro/12015__.js";
+import _modDef12016 from "../../../../_runtime/metro/12016__.js";
+import _modDef12017 from "../../../../_runtime/metro/12017__.js";
+import _modDef12018 from "../../../../_runtime/metro/12018__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/directory_channels/native/GuildDirectoryTemplatesIcons.tsx");
 
 export const GUILD_TEMPLATE_ICONS = {
-  CREATE: _modDef11978,
-  HUB_SCHOOL_CLUB: _modDef11979,
-  HUB_STUDY: _modDef11980,
-  HUB_CLASS: _modDef11981,
-  HUB_SOCIAL: _modDef11982,
-  HUB_MAJOR: _modDef11983,
-  HUB_DORM: _modDef11984,
+  CREATE: _modDef12012,
+  HUB_SCHOOL_CLUB: _modDef12013,
+  HUB_STUDY: _modDef12014,
+  HUB_CLASS: _modDef12015,
+  HUB_SOCIAL: _modDef12016,
+  HUB_MAJOR: _modDef12017,
+  HUB_DORM: _modDef12018,
 };

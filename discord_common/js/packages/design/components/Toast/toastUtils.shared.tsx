@@ -1,10 +1,9 @@
 // discord_common/js/packages/design/components/Toast/toastUtils.shared.tsx
-import 04543__ from "../../../../../../_runtime/metro/04543__.js";
+import 04573__ from "../../../../../../_runtime/metro/04573__.js";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
-const require = globalThis.__r;
-
-const useToastStore = module_4543.create(() => {
+let c2 = 1;
+const useToastStore = module_4573.create(() => {
   const obj = { currentToastMap: new Map(), queuedToastsMap: null };
   const map = new Map();
   obj.queuedToastsMap = new Map();
@@ -14,7 +13,6 @@ let result = size.fileFinishedImporting("../discord_common/js/packages/design/co
 
 export { useToastStore };
 export const showToast = function showToast(surface) {
-  _require = surface;
   let str;
   if (surface != null) {
     str = surface.surface;
@@ -22,7 +20,10 @@ export const showToast = function showToast(surface) {
   if (str == null) {
     str = "app";
   }
-  require("ReactBatchUpdates").batchUpdates(() => {
+  let obj = { toast: surface, key: null };
+  closure_2 = tmp + 1;
+  obj.key = +closure_2;
+  str(obj[1]).batchUpdates(() => {
     obj.setState((currentToastMap) => {
       currentToastMap = currentToastMap.currentToastMap;
       const _Map = Map;
@@ -33,15 +34,15 @@ export const showToast = function showToast(surface) {
           items1 = [];
         }
         const items = [];
-        items[HermesBuiltin.arraySpread(items1, 0)] = surface;
+        items[HermesBuiltin.arraySpread(items1, 0)] = closure_1_1;
         const result = _Map1.set(str, items);
-        const obj = {};
+        obj = {};
         const merged = Object.assign(currentToastMap);
         obj.queuedToastsMap = _Map1;
         return obj;
       } else {
         const _Map2 = new _Map(currentToastMap.currentToastMap);
-        const result1 = _Map2.set(str, surface);
+        const result1 = _Map2.set(str, closure_1_1);
         const obj2 = {};
         const merged1 = Object.assign(currentToastMap);
         obj2.currentToastMap = _Map2;
@@ -50,7 +51,7 @@ export const showToast = function showToast(surface) {
     });
   });
 };
-export const popToast = function popToast() {
+export const popToast = function popToast(arg0) {
   let str = arg0;
   if (arg0 === undefined) {
     str = "app";

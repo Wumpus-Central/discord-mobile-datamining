@@ -7,7 +7,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let closure_6 = createStyles.createStyles((width, backgroundColor) => {
   const obj = { image: { width, height: width }, avatar: null, roleDot: null };
   const size = { width, height: width, borderRadius: nativeDefault.radii.round, overflow: "hidden" };

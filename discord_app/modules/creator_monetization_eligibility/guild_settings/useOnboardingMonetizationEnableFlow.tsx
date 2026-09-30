@@ -39,18 +39,18 @@ export default function useOnboardingMonetizationEnableFlow(features) {
   if (features != null) {
     id = features.id;
   }
-  const tmp10 = refresh(17728);
-  ({ submittedRequest, error, loading, createEnableRequest } = refresh(17728)(id));
+  const tmp10 = refresh(17763);
+  ({ submittedRequest, error, loading, createEnableRequest } = refresh(17763)(id));
   let id1;
-  const tmp10Result = refresh(17728)(id);
+  const tmp10Result = refresh(17763)(id);
   if (features != null) {
     id1 = features.id;
   }
-  const tmp9ResultResult = refresh(17729)(id1);
+  const tmp9ResultResult = refresh(17764)(id1);
   refresh = tmp9ResultResult.refresh;
   ({ eligibility, loading: loading2, error: error2 } = tmp9ResultResult);
-  const tmp9Result = refresh(17729);
-  ({ isApplicationRejected, requestCooldownDuration } = refresh(17730)(eligibility));
+  const tmp9Result = refresh(17764);
+  ({ isApplicationRejected, requestCooldownDuration } = refresh(17765)(eligibility));
   let hasItem2;
   if (features != null) {
     const features3 = features.features;
@@ -65,7 +65,7 @@ export default function useOnboardingMonetizationEnableFlow(features) {
     }
     tmp19 = true === hasItem3;
   }
-  const tmp16 = refresh(17730)(eligibility);
+  const tmp16 = refresh(17765)(eligibility);
   let id2;
   if (features != null) {
     id2 = features.id;

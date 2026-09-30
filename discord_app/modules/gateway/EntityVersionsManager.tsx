@@ -34,7 +34,7 @@ function handleDeletedEntityIds(guild_id) {
       const item = keys.forEach((id) => {
         if (!set1.has(id)) {
           const obj2 = { type: "CHANNEL_DELETE", channel: null };
-          const obj3 = { guild_id: set3, id, parent_id: "r" };
+          const obj3 = { guild_id: set3, id, parent_id: "Array" };
           obj2.channel = obj3;
           set3(573).dispatch(obj2);
           const obj = set3(573);

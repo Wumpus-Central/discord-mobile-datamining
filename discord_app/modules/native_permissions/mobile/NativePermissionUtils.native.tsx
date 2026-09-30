@@ -98,7 +98,7 @@ let closure_9 = async function _combineStatuses(arg0) {
 };
 get_ActivityIndicator = fn(17);
 const NativeModules = get_ActivityIndicator.NativeModules;
-const NativePermissionConstants = fn(5045);
+const NativePermissionConstants = fn(5075);
 ({ NativePermissionTypes, NativePermissionStatus: metroRequire } = NativePermissionConstants);
 const jsx = fn(21).jsx;
 let PlatformUtils = fn(1364);
@@ -139,7 +139,7 @@ if (MetaQuestUtils) {
 }
 HermesBuiltin.arraySpread(items9, tmp8);
 let NativePermissionIOSUtils;
-const NativePermissionBaseUtils = fn(5622).NativePermissionBaseUtils;
+const NativePermissionBaseUtils = fn(5652).NativePermissionBaseUtils;
 class NativePermissionIOSUtils extends NativePermissionBaseUtils {}
 const prototype = NativePermissionIOSUtils.prototype;
 prototype["requestPermissionCore"] = function requestPermissionCore(arg0, arg1) {

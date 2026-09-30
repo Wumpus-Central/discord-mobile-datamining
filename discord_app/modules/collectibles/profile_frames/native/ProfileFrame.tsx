@@ -130,9 +130,9 @@ function LiveProfileFrame(frame) {
   c10 = undefined;
   c11 = undefined;
   const tmp = c10();
-  closure_6 = frame(7834).useIsProfileFrameLayerPreloadEnabled("ProfileFrame");
-  let obj = frame(7834);
-  const settled = frame(7833).usePreloadLayerImages({ frame, containerWidth, profileThemeType, filterLayer }).settled;
+  closure_6 = frame(7864).useIsProfileFrameLayerPreloadEnabled("ProfileFrame");
+  let obj = frame(7864);
+  const settled = frame(7863).usePreloadLayerImages({ frame, containerWidth, profileThemeType, filterLayer }).settled;
   const items = [frame.layers, frameOrder, profileThemeType, filterLayer];
   const memo = profileThemeType.useMemo(() => {
     const layers = frame.layers;
@@ -145,12 +145,12 @@ function LiveProfileFrame(frame) {
       return result;
     });
   }, items);
-  const obj2 = frame(7833);
+  const obj2 = frame(7863);
   let num = 0;
   if (settled) {
     num = 1;
   }
-  sharedValue = frame(4566).useSharedValue(num);
+  sharedValue = frame(4596).useSharedValue(num);
   const items1 = [settled, sharedValue];
   const effect = profileThemeType.useEffect(() => {
     let num = 0;
@@ -167,7 +167,7 @@ function LiveProfileFrame(frame) {
           overflowTop: c9,
           overflowBottom: c10,
           overflowHorizontal: c11,
-        } = containerWidth(7835)(frame, containerWidth));
+        } = containerWidth(7865)(frame, containerWidth));
         const obj5 = { style: null, children: null };
         const items2 = [tmp.container];
         const obj6 = { opacity: sharedValue };
@@ -186,7 +186,7 @@ function LiveProfileFrame(frame) {
             fade={!closure_6}
           />
         ));
-        return sharedValue(containerWidth(4566).View, obj5);
+        return sharedValue(containerWidth(4596).View, obj5);
       }
     }
   }
@@ -194,15 +194,15 @@ function LiveProfileFrame(frame) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-let closure_5 = fn(7813).useFramePreviewOverrideStore;
-const ProfileFrameConstants = fn(7832);
+let closure_5 = fn(7843).useFramePreviewOverrideStore;
+const ProfileFrameConstants = fn(7862);
 ({ PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO: metroRequire, PROFILE_FRAME_Z_INDEX: closure_7 } =
   ProfileFrameConstants);
 const jsx = fn(21).jsx;
 let source = { duration: 150, easing: null };
-const Easing = fn(4566).Easing;
-source.easing = Easing.in(fn(4566).Easing.ease);
-const createStyles = fn(4836);
+const Easing = fn(4596).Easing;
+source.easing = Easing.in(fn(4596).Easing.ease);
+const createStyles = fn(4866);
 let obj3 = { container: null, layer: null };
 let obj4 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

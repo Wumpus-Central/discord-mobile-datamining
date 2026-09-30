@@ -17,7 +17,7 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 
 export default function UserProfileTryItOutGetPremiumUpsell(onLayout) {
   let analyticsLocations;
-  let nitroTrialCtaOverride = analyticsLocations(7032).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
+  let nitroTrialCtaOverride = analyticsLocations(7062).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
   analyticsLocations = useAnalyticsLocationsDefault(items).analyticsLocations;
   items = [analyticsLocations];
   let callback = noop.useCallback(() => {
@@ -32,7 +32,7 @@ export default function UserProfileTryItOutGetPremiumUpsell(onLayout) {
     };
     openPremiumModalDefault(obj);
   }, items);
-  let obj = analyticsLocations(7032);
+  let obj = analyticsLocations(7062);
   ({ loading, onPress } = usePremiumFeatureUpsellGetNitroDefault(
     false,
     callback,
@@ -42,7 +42,7 @@ export default function UserProfileTryItOutGetPremiumUpsell(onLayout) {
   ));
   const tmp5 = usePremiumFeatureUpsellGetNitroDefault(false, callback, constants2.USER_SETTINGS, undefined, items);
   const mobileNitroPreviewDirectCheckoutEnabled =
-    analyticsLocations(14377).useMobileNitroPreviewDirectCheckoutEnabled();
+    analyticsLocations(14407).useMobileNitroPreviewDirectCheckoutEnabled();
   const obj3 = {
     text: null,
     buttonText: null,
@@ -51,7 +51,7 @@ export default function UserProfileTryItOutGetPremiumUpsell(onLayout) {
     onButtonPress: null,
     onLayout: null,
   };
-  const obj2 = analyticsLocations(14377);
+  const obj2 = analyticsLocations(14407);
   const intl = analyticsLocations(1115).intl;
   obj3.text = intl.string(analyticsLocations(1115).t["MswR/h"]);
   if (nitroTrialCtaOverride == null) {

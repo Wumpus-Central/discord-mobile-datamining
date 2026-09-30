@@ -92,7 +92,7 @@ let closure_3 = ["fontScale"];
 const Constants = fn(1074);
 const Accessibility = Constants.Accessibility;
 const ThemeTypes = Constants.ThemeTypes;
-const MessageConstants = fn(4829);
+const MessageConstants = fn(4859);
 ({
   MESSAGE_GROUP_SPACING: closure_11,
   DEFAULT_COMPACT_SPACING: closure_12,
@@ -109,6 +109,7 @@ let obj3 = {
   lowContrastMode: false,
   saturation: 1,
   contrast: 1,
+  minToastDurationMs: Accessibility.TOAST_DURATION_DEFAULT_MS,
   desaturateUserColors: false,
   forcedColorsModalSeen: false,
   keyboardNavigationExplainerModalSeen: false,
@@ -163,11 +164,23 @@ prototype["initialize"] = function initialize(arg0) {
   if (isNaN(obj.fontSize)) {
     obj.fontSize = Accessibility.FONT_SIZE_DEFAULT;
   }
-  let num = -1;
-  if (null != obj.messageGroupSpacing) {
-    num = obj.messageGroupSpacing;
+  const minToastDurationMs = obj.minToastDurationMs;
+  if (Number.isFinite(minToastDurationMs)) {
+    const _Math = Math;
+    const _Math2 = Math;
+    let TOAST_DURATION_DEFAULT_MS = Math.min(
+      Math.max(minToastDurationMs, 1000 * Accessibility.TOAST_DURATION_MIN_SECONDS),
+      1000 * Accessibility.TOAST_DURATION_MAX_SECONDS,
+    );
+  } else {
+    TOAST_DURATION_DEFAULT_MS = Accessibility.TOAST_DURATION_DEFAULT_MS;
   }
-  if (closure_11.indexOf(num) < 0) {
+  obj.minToastDurationMs = TOAST_DURATION_DEFAULT_MS;
+  let num2 = -1;
+  if (null != obj.messageGroupSpacing) {
+    num2 = obj.messageGroupSpacing;
+  }
+  if (closure_11.indexOf(num2) < 0) {
     obj.messageGroupSpacing = null;
   }
   const items = [UserSettingsProtoStore, SelectivelySyncedUserSettingsStore];
@@ -274,6 +287,12 @@ Object.defineProperty(prototype, "saturation", {
 Object.defineProperty(prototype, "contrast", {
   get: function contrast() {
     return obj.contrast;
+  },
+  set: undefined,
+});
+Object.defineProperty(prototype, "minToastDurationMs", {
+  get: function minToastDurationMs() {
+    return obj.minToastDurationMs;
   },
   set: undefined,
 });
@@ -831,6 +850,22 @@ const accessibilityStore = new AccessibilityStore(DispatcherDefault, {
     obj = {};
     const merged = Object.assign(obj);
     obj.contrast = contrast.contrast;
+  },
+  ACCESSIBILITY_SET_MIN_TOAST_DURATION: function handleSetMinToastDuration(minToastDurationMs) {
+    obj = {};
+    const merged = Object.assign(obj);
+    minToastDurationMs = minToastDurationMs.minToastDurationMs;
+    if (Number.isFinite(minToastDurationMs)) {
+      const _Math = Math;
+      const _Math2 = Math;
+      let TOAST_DURATION_DEFAULT_MS = Math.min(
+        Math.max(minToastDurationMs, 1000 * Accessibility.TOAST_DURATION_MIN_SECONDS),
+        1000 * Accessibility.TOAST_DURATION_MAX_SECONDS,
+      );
+    } else {
+      TOAST_DURATION_DEFAULT_MS = Accessibility.TOAST_DURATION_DEFAULT_MS;
+    }
+    obj.minToastDurationMs = TOAST_DURATION_DEFAULT_MS;
   },
   ACCESSIBILITY_SET_CONTRAST_MODE: function handleSetContrastMode(contrastMode) {
     obj = {};

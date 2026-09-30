@@ -208,6 +208,7 @@ let closure_15 = async function _claimStorefrontPromotion() {
             closure_130_0 = promotionId;
             closure_130_1 = closure_1;
             closure_130_2 = undefined;
+            closure_130_3 = undefined;
             const obj4 = { type: "STOREFRONT_PROMOTION_CLAIM_START", promotionId };
             DispatcherDefault.dispatch(obj4);
             c5 = 1;
@@ -220,12 +221,12 @@ let closure_15 = async function _claimStorefrontPromotion() {
           }
         } else if (1 === tmp7) {
           c5 = 0;
-          closure_130_3 = closure_4;
-          const tmp25 = new closure_131_1(closure_131_2[10])(closure_130_3);
-          closure_130_2 = tmp25;
-          const obj7 = { type: "STOREFRONT_PROMOTION_CLAIM_FAIL", promotionId: closure_130_0, apiError: closure_130_2 };
-          closure_131_1(closure_131_2[8]).dispatch(obj7);
-          throw closure_130_2;
+          closure_130_4 = closure_4;
+          const tmp27 = new closure_131_1(closure_131_2[10])(closure_130_4);
+          closure_130_3 = tmp27;
+          const obj6 = { type: "STOREFRONT_PROMOTION_CLAIM_FAIL", promotionId: closure_130_0, apiError: closure_130_3 };
+          closure_131_1(closure_131_2[8]).dispatch(obj6);
+          throw closure_130_3;
         } else if (2 === tmp7) {
           if (arg0 === 1) {
             c7 = 3;
@@ -236,7 +237,8 @@ let closure_15 = async function _claimStorefrontPromotion() {
             return obj8;
           } else {
             c7 = 3;
-            return { value: "HermesInternal", done: null };
+            const obj9 = { value: closure_130_2.body, done: true };
+            return obj9;
           }
         } else if (arg0 === 1) {
           c7 = 3;
@@ -244,23 +246,24 @@ let closure_15 = async function _claimStorefrontPromotion() {
         } else if (arg0 === 2) {
           c5 = 0;
           c7 = 3;
-          const obj9 = { value, done: true };
-          return obj9;
+          const obj10 = { value, done: true };
+          return obj10;
         } else {
+          closure_130_2 = value;
           c5 = 0;
-          const obj10 = { type: "STOREFRONT_PROMOTION_CLAIM_SUCCESS", promotionId: closure_130_0 };
-          closure_131_1(closure_131_2[8]).dispatch(obj10);
+          const obj11 = { type: "STOREFRONT_PROMOTION_CLAIM_SUCCESS", promotionId: closure_130_0 };
+          closure_131_1(closure_131_2[8]).dispatch(obj11);
           const items = [closure_130_1];
           c6 = 2;
           c7 = 1;
-          const obj12 = { value: closure_131_13(items), done: false };
-          return obj12;
+          const obj13 = { value: closure_131_13(items), done: false };
+          return obj13;
         }
-      } catch (tmp33) {
-        closure_4 = tmp33;
+      } catch (tmp35) {
+        closure_4 = tmp35;
         if (tmp4 === c5) {
           c7 = tmp2;
-          throw tmp33;
+          throw tmp35;
         } else {
           c6 = tmp;
         }

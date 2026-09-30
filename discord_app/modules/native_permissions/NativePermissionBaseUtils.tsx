@@ -4,7 +4,7 @@ import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import NativePermissionStore from "NativePermissionStore.tsx";
 
 require = fn;
-const NativePermissionConstants = fn(5045);
+const NativePermissionConstants = fn(5075);
 ({
   NativePermissionTypes: hasOwnProperty,
   NativePermissionStates: metroRequire,
@@ -48,7 +48,7 @@ prototype["requestAuthorization"] = function requestAuthorization(arg0, hasPermi
       DENIED = constants.DENIED;
     }
     closure_128_2 = DENIED;
-    tmp5(5624).setPermission(closure_129_0, closure_128_2);
+    tmp5(5654).setPermission(closure_129_0, closure_128_2);
     let showAuthorizationError = !closure_128_1;
     if (!closure_128_1) {
       showAuthorizationError = closure_129_2.showAuthorizationError;

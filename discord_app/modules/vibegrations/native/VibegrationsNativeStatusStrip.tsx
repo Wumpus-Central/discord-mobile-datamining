@@ -102,10 +102,10 @@ function ThinkingIndicator(line) {
   return closure_8(ref2, obj);
 }
 const View = fn(17).View;
-const AI_LOADER_CYCLE_MS = fn(14105).AI_LOADER_CYCLE_MS;
+const AI_LOADER_CYCLE_MS = fn(14132).AI_LOADER_CYCLE_MS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj2 = {
   row: {
     flexDirection: "row",
@@ -169,7 +169,7 @@ export default function VibegrationsNativeStatusStrip(compacting) {
   ({ activity, projectUsage, connLabel, thinkingOpen } = compacting);
   ({ connFailed, controlling, onToggleThinking } = compacting);
   const tmp = closure_9();
-  const thinkingLabelResult = projectId(16578).thinkingLabel({
+  const thinkingLabelResult = projectId(16614).thinkingLabel({
     activity,
     compacting: compacting.compacting,
     recalling,
@@ -179,8 +179,8 @@ export default function VibegrationsNativeStatusStrip(compacting) {
   const stringResult = intl.string(thinkingLabelResult);
   let runesUsedLabelsResult = null;
   if (null != projectUsage) {
-    runesUsedLabelsResult = tmp2(16578).runesUsedLabels(projectUsage);
-    const tmp2Result = tmp2(16578);
+    runesUsedLabelsResult = tmp2(16614).runesUsedLabels(projectUsage);
+    const tmp2Result = tmp2(16614);
   }
   let tmp7 = null != activity;
   if (tmp7) {
@@ -205,7 +205,7 @@ export default function VibegrationsNativeStatusStrip(compacting) {
     ActionSheetActionCreators.showActionSheet(obj2);
   }, items);
   if (thinking) {
-    const tmp14 = thinkingLabelResult === projectId(16578).RECALLING_LINES[0];
+    const tmp14 = thinkingLabelResult === projectId(16614).RECALLING_LINES[0];
     let tmp15 = tmp8;
     if (!tmp8) {
       tmp15 = tmp14;
@@ -246,7 +246,7 @@ export default function VibegrationsNativeStatusStrip(compacting) {
     obj5.onPress = onToggleThinking;
     const obj7 = { line: stringResult, rotating: tmp14 };
     obj5.children = closure_7(ThinkingIndicator, obj7);
-    let tmp12Result = closure_7(tmp2(5602).PressableOpacity, obj5);
+    let tmp12Result = closure_7(tmp2(5632).PressableOpacity, obj5);
   } else {
     tmp12Result = null;
   }
@@ -270,7 +270,7 @@ export default function VibegrationsNativeStatusStrip(compacting) {
       str3 = "text-feedback-critical";
     }
     const obj9 = { variant: "text-xs/medium", color: str3, children: connLabel };
-    tmp12Result4 = closure_7(tmp2(4832).Text, obj9);
+    tmp12Result4 = closure_7(tmp2(4862).Text, obj9);
   }
   items2[1] = tmp12Result4;
   let tmp10Result = null;
@@ -284,11 +284,11 @@ export default function VibegrationsNativeStatusStrip(compacting) {
       children: null,
     };
     const obj11 = { variant: "text-xs/medium", color: "text-muted", children: runesUsedLabelsResult.text };
-    const items3 = [closure_7(tmp2(4832).Text, obj11)];
+    const items3 = [closure_7(tmp2(4862).Text, obj11)];
     const obj12 = { size: "xxs", color: nativeDefault.colors.TEXT_MUTED };
-    items3[1] = closure_7(tmp2(4787).CircleInformationIcon, obj12);
+    items3[1] = closure_7(tmp2(4817).CircleInformationIcon, obj12);
     obj10.children = items3;
-    tmp10Result = closure_8(tmp2(5602).PressableOpacity, obj10);
+    tmp10Result = closure_8(tmp2(5632).PressableOpacity, obj10);
   }
   items2[2] = tmp10Result;
   obj2.children = items2;

@@ -147,9 +147,9 @@ const prototype = function CustomStatusManager() {
             true,
           );
         } else {
-          applyArgumentsResult(9717).setFocusMode(false);
+          applyArgumentsResult(9751).setFocusMode(false);
           timeout1.stop();
-          const tmpResult = applyArgumentsResult(9717);
+          const tmpResult = applyArgumentsResult(9751);
         }
       }
     }

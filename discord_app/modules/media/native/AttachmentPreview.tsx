@@ -6,20 +6,20 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FileUtils from "../../../utils/FileUtils.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import common_Video from "../../../components_native/common/Video.tsx";
-import _modDef9825 from "../../../../_runtime/metro/09825__.js";
-import _modDef9826 from "../../../../_runtime/metro/09826__.js";
-import _modDef9827 from "../../../../_runtime/metro/09827__.js";
-import _modDef9828 from "../../../../_runtime/metro/09828__.js";
-import _modDef9829 from "../../../../_runtime/metro/09829__.js";
-import _modDef9830 from "../../../../_runtime/metro/09830__.js";
-import _modDef9831 from "../../../../_runtime/metro/09831__.js";
-import _modDef9832 from "../../../../_runtime/metro/09832__.js";
-import _modDef9833 from "../../../../_runtime/metro/09833__.js";
-import _modDef9834 from "../../../../_runtime/metro/09834__.js";
-import _modDef9835 from "../../../../_runtime/metro/09835__.js";
-import _modDef9836 from "../../../../_runtime/metro/09836__.js";
-import _modDef9837 from "../../../../_runtime/metro/09837__.js";
-import _modDef9838 from "../../../../_runtime/metro/09838__.js";
+import _modDef9859 from "../../../../_runtime/metro/09859__.js";
+import _modDef9860 from "../../../../_runtime/metro/09860__.js";
+import _modDef9861 from "../../../../_runtime/metro/09861__.js";
+import _modDef9862 from "../../../../_runtime/metro/09862__.js";
+import _modDef9863 from "../../../../_runtime/metro/09863__.js";
+import _modDef9864 from "../../../../_runtime/metro/09864__.js";
+import _modDef9865 from "../../../../_runtime/metro/09865__.js";
+import _modDef9866 from "../../../../_runtime/metro/09866__.js";
+import _modDef9867 from "../../../../_runtime/metro/09867__.js";
+import _modDef9868 from "../../../../_runtime/metro/09868__.js";
+import _modDef9869 from "../../../../_runtime/metro/09869__.js";
+import _modDef9870 from "../../../../_runtime/metro/09870__.js";
+import _modDef9871 from "../../../../_runtime/metro/09871__.js";
+import _modDef9872 from "../../../../_runtime/metro/09872__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -39,7 +39,7 @@ class AttachmentIcon {
         }
         let tmp2 = obj4[obj.classifyFileName(obj, str)];
         if (tmp2 == null) {
-          tmp2 = _modDef9836;
+          tmp2 = _modDef9870;
         }
         return tmp2;
       }, items),
@@ -105,7 +105,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj = {
   fileInfoAttachmentPreviewFile: {
     flexDirection: "row",
@@ -131,20 +131,20 @@ let obj = {
 };
 const React6 = createStyles.createStyles(obj);
 let obj4 = {
-  archive: _modDef9825,
-  acrobat: _modDef9826,
-  ae: _modDef9827,
-  ai: _modDef9828,
-  audio: _modDef9829,
-  code: _modDef9830,
-  document: _modDef9831,
-  image: _modDef9832,
-  photoshop: _modDef9833,
-  sketch: _modDef9834,
-  spreadsheet: _modDef9835,
-  unknown: _modDef9836,
-  video: _modDef9837,
-  webcode: _modDef9838,
+  archive: _modDef9859,
+  acrobat: _modDef9860,
+  ae: _modDef9861,
+  ai: _modDef9862,
+  audio: _modDef9863,
+  code: _modDef9864,
+  document: _modDef9865,
+  image: _modDef9866,
+  photoshop: _modDef9867,
+  sketch: _modDef9868,
+  spreadsheet: _modDef9869,
+  unknown: _modDef9870,
+  video: _modDef9871,
+  webcode: _modDef9872,
 };
 let closure_13 = noop.memo((borderRadius) => {
   ({ uri, width, height, style, fileName } = borderRadius);
@@ -265,7 +265,7 @@ export default function AttachmentPreview(height) {
       const obj8 = { style: null, children: null };
       videoIcon = videoIcon.videoIcon;
       obj8.style = videoIcon;
-      CirclePlayIcon = CirclePlayIcon(8341).CirclePlayIcon;
+      CirclePlayIcon = CirclePlayIcon(8372).CirclePlayIcon;
       tmp6 = timestampProducer(CirclePlayIcon, { size: "md", color: "white", secondaryColor: "black" });
       obj8.children = tmp6;
       items[1] = timestampProducer(hasOwnProperty, obj8);

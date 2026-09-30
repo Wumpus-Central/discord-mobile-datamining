@@ -14,12 +14,12 @@ import UserProfileStore from "../UserProfileStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const getWishlistProductLines = fn(8405).getWishlistProductLines;
-let closure_12 = fn(7793).TrackUserProfileWishlistActions;
-const ACTION_SHEET_MAX_WIDTH = fn(6738).ACTION_SHEET_MAX_WIDTH;
+const getWishlistProductLines = fn(8436).getWishlistProductLines;
+let closure_12 = fn(7823).TrackUserProfileWishlistActions;
+const ACTION_SHEET_MAX_WIDTH = fn(6768).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj2 = {
   container: { flex: 1, paddingHorizontal: nativeDefault.space.PX_16 },
   loadingContainer: null,
@@ -42,7 +42,7 @@ obj2.itemWrapper = { position: "relative" };
 const rect = { position: "absolute", top: nativeDefault.space.PX_8, right: nativeDefault.space.PX_8, zIndex: 1 };
 obj2.deleteButton = rect;
 let closure_16 = createStyles.createStyles(obj2);
-const LinearTransition = fn(4566).LinearTransition;
+const LinearTransition = fn(4596).LinearTransition;
 let obj5 = { marginBottom: nativeDefault.space.PX_16 };
 const springifyResult = LinearTransition.springify();
 const massResult = LinearTransition.springify().mass(0.8);
@@ -62,7 +62,7 @@ function exitingAnimation() {
   return obj;
 }
 const dampingResult = LinearTransition.springify().mass(0.8).damping(100);
-exitingAnimation.__closure = { withTiming: fn(4837).withTiming };
+exitingAnimation.__closure = { withTiming: fn(4867).withTiming };
 exitingAnimation.__workletHash = 17293915965800;
 exitingAnimation.__initData = {
   code: "function exitingAnimation_EditWishlistActionSheetTsx1(_values){const{withTiming}=this.__closure;return{animations:{opacity:withTiming(0,{duration:150}),transform:[{scale:withTiming(0.8,{duration:150})}]},initialValues:{opacity:1,transform:[{scale:1}]}};}",
@@ -89,18 +89,18 @@ export default function EditWishlistActionSheet(wishlistId) {
   if (analyticsLocations1 == null) {
     analyticsLocations1 = [];
   }
-  analyticsLocations = analyticsContext(6749)(
+  analyticsLocations = analyticsContext(6779)(
     analyticsLocations1,
-    tmp4(6769).USER_PROFILE_EDIT_WISHLIST_ACTION_SHEET,
+    tmp4(6799).USER_PROFILE_EDIT_WISHLIST_ACTION_SHEET,
   ).analyticsLocations;
   let obj2 = { maxWidth: ACTION_SHEET_MAX_WIDTH };
-  const tmp5 = analyticsContext(6749);
-  ({ cardWidth: c5, rowWidth } = analyticsContext(12730)({ maxWidth: ACTION_SHEET_MAX_WIDTH }));
+  const tmp5 = analyticsContext(6779);
+  ({ cardWidth: c5, rowWidth } = analyticsContext(12760)({ maxWidth: ACTION_SHEET_MAX_WIDTH }));
   if (null != rowWidth) {
     let obj3 = { width: rowWidth };
     let tmp7 = obj3;
   }
-  let tmp6 = analyticsContext(12730)({ maxWidth: ACTION_SHEET_MAX_WIDTH });
+  let tmp6 = analyticsContext(12760)({ maxWidth: ACTION_SHEET_MAX_WIDTH });
   const items1 = [value];
   stateFromStores = wishlistId(504).useStateFromStores(items1, () => WishlistStore.getWishlist(wishlistId));
   const tmp2Result = wishlistId(504);
@@ -185,8 +185,8 @@ export default function EditWishlistActionSheet(wishlistId) {
   obj10.subLabel = intl3.string(wishlistId(1115).t.dw58pE);
   obj10.value = value;
   obj10.onValueChange = callback;
-  obj9.children = closure_14(wishlistId(6787).TableSwitchRow, obj10);
-  obj8.children = closure_14(wishlistId(6165).TableRowGroup, obj9);
+  obj9.children = closure_14(wishlistId(6817).TableSwitchRow, obj10);
+  obj8.children = closure_14(wishlistId(6195).TableRowGroup, obj9);
   const items8 = [closure_14(stateFromStores, obj8)];
   if (stateFromStores1) {
     if (null == stateFromStores) {
@@ -196,7 +196,7 @@ export default function EditWishlistActionSheet(wishlistId) {
     items8[1] = tmp16Result;
     obj6.children = items8;
     obj5.children = closure_15(tmp19, obj6);
-    obj4.children = closure_14(tmp2(6211).BottomSheetScrollView, obj5);
+    obj4.children = closure_14(tmp2(6241).BottomSheetScrollView, obj5);
     return closure_14(tmp4Result, obj4);
   }
   tmp16Result = null;
@@ -258,5 +258,5 @@ export default function EditWishlistActionSheet(wishlistId) {
     });
     tmp16Result = closure_14(tmp19, obj12);
   }
-  tmp4Result = analyticsContext(10782);
+  tmp4Result = analyticsContext(10816);
 }

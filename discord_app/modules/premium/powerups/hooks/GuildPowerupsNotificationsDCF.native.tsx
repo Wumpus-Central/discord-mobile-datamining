@@ -40,10 +40,6 @@ export function useNewGamesCoachmarkDC() {
   const items = [null, () => {}];
   return items;
 }
-export function useGameServerPricingCoachmarkDCF() {
-  const items = [null, () => {}];
-  return items;
-}
 export const useBoostToUnlockCoachmarkDCF = function useBoostToUnlockCoachmarkDCF(arg0, id, GUILD_HEADER_TOOLTIPS) {
   let _location = "useBoostToUnlockCoachmarkDCF-ineligible";
   if (arg0) {

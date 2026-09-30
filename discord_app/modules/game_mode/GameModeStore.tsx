@@ -4,7 +4,7 @@ import DispatcherDefault from "../../Dispatcher.tsx";
 import RunningGameStore from "../game_detection/RunningGameStore.native.tsx";
 
 const require = fn;
-const DefaultGameModeSettings = fn(4827).DefaultGameModeSettings;
+const DefaultGameModeSettings = fn(4857).DefaultGameModeSettings;
 let obj = {};
 let merged = Object.assign(DefaultGameModeSettings);
 let c5 = false;

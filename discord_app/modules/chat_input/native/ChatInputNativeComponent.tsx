@@ -11,7 +11,7 @@ import ClientThemesBackgroundStore from "../../client_themes/ClientThemesBackgro
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4836);
+const createStyles = fn(4866);
 let obj = { style: { flex: 1 }, textColor: { color: nativeDefault.colors.TEXT_DEFAULT }, placeholderColor: null };
 let obj3 = { color: nativeDefault.colors.TEXT_DEFAULT };
 obj.placeholderColor = { color: nativeDefault.colors.TEXT_MUTED };

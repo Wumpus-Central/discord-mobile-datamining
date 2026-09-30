@@ -133,6 +133,9 @@ export const toggleSyncProfileThemeWithUserTheme = function toggleSyncProfileThe
 export const setContrast = function setContrast(contrast) {
   DispatcherDefault.dispatch({ type: "ACCESSIBILITY_SET_CONTRAST", contrast });
 };
+export const setMinToastDuration = function setMinToastDuration(minToastDurationMs) {
+  DispatcherDefault.dispatch({ type: "ACCESSIBILITY_SET_MIN_TOAST_DURATION", minToastDurationMs });
+};
 export const setContrastMode = function setContrastMode(contrastMode) {
   DispatcherDefault.dispatch({ type: "ACCESSIBILITY_SET_CONTRAST_MODE", contrastMode });
 };
