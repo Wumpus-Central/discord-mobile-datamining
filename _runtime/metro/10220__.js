@@ -1,15 +1,13 @@
 // === Module 10220: ? ===
 
 // Module 10220
-import AbstractTimeExpressionParser from "AbstractTimeExpressionParser" /* 10076 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10103 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _get from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
 
-const UKTimeExpressionParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,109 +27,170 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class UKTimeExpressionParser {
-  constructor(arg0) {
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturn;
+class ZHHansCasualDateParser {
+  constructor() {
     self = this;
-    tmp = c2(this, UKTimeExpressionParser);
-    items = [];
-    items[0] = global;
-    tmp2 = closure_4;
-    obj = closure_4(UKTimeExpressionParser);
-    tmp3 = closure_3;
-    if (metroRequire()) {
-      tmp5 = globalThis;
+    tmp = closure_0(this, ZHHansCasualDateParser);
+    tmp2 = c2;
+    obj = c2(ZHHansCasualDateParser);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
     return tmp3(self, constructResult);
   }
 }
-_inherits(UKTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
+_classCallCheck = ZHHansCasualDateParser;
+_inherits(ZHHansCasualDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "patternFlags",
-  value: function patternFlags() {
-    return UKTimeExpressionParser(10216).REGEX_PARTS.flags;
+  key: "innerPattern",
+  value: function innerPattern(arg0) {
+    const regExp = new RegExp("(\u73B0\u5728|\u7ACB(?:\u523B|\u5373)|\u5373\u523B)|(\u4ECA|\u660E|\u524D|\u5927\u524D|\u540E|\u5927\u540E|\u6628)(\u65E9|\u665A)|(\u4E0A(?:\u5348)|\u65E9(?:\u4E0A)|\u4E0B(?:\u5348)|\u665A(?:\u4E0A)|\u591C(?:\u665A)?|\u4E2D(?:\u5348)|\u51CC(?:\u6668))|(\u4ECA|\u660E|\u524D|\u5927\u524D|\u540E|\u5927\u540E|\u6628)(?:\u65E5|\u5929)(?:[\\s|,|\uFF0C]*)(?:(\u4E0A(?:\u5348)|\u65E9(?:\u4E0A)|\u4E0B(?:\u5348)|\u665A(?:\u4E0A)|\u591C(?:\u665A)?|\u4E2D(?:\u5348)|\u51CC(?:\u6668)))?", "i");
+    return regExp;
   }
 };
-let items = [
+const items = [
   entry,
   {
-    key: "primaryPatternLeftBoundary",
-    value: function primaryPatternLeftBoundary() {
-      return "(^|\\s|T|(?:[^\\p{L}\\p{N}_]))";
-    }
-  },
-  {
-    key: "followingPhase",
-    value: function followingPhase() {
-      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|\u0434\u043E|\u0456|\u043F\u043E|\\?)\\s*";
-    }
-  },
-  {
-    key: "primaryPrefix",
-    value: function primaryPrefix() {
-      return "(?:(?:\u0432|\u0443|\u043E|\u043E\u0431|\u0437|\u0456\u0437|\u0432\u0456\u0434)\\s*)??";
-    }
-  },
-  {
-    key: "primarySuffix",
-    value: function primarySuffix() {
-      return "(?:\\s*(?:\u0440\u0430\u043D\u043A\u0443|\u0432\u0435\u0447\u043E\u0440\u0430|\u043F\u043E \u043E\u0431\u0456\u0434\u0456|\u043F\u0456\u0441\u043B\u044F \u043E\u0431\u0456\u0434\u0443))?(?!\\/)" + UKTimeExpressionParser(10216).REGEX_PARTS.rightBoundary;
-    }
-  },
-  {
-    key: "extractPrimaryTimeComponents",
-    value: function extractPrimaryTimeComponents(arg0, arg1) {
-      const self = this;
-      const tmp = hasOwnProperty(_getPrototypeOf(UKTimeExpressionParser.prototype), "extractPrimaryTimeComponents", this);
-      dependencyMap = tmp;
-      let fn = tmp;
-      if (typeof tmp === "function") {
-        fn = (items) => closure_1.apply(self, items);
-      }
-      const items = [arg0, arg1];
-      const fnResult = fn(items);
-      if (fnResult) {
-        const first = arg1[0];
-        if (first.endsWith("\u0432\u0435\u0447\u043E\u0440\u0430")) {
-          value = fnResult.get("hour");
-          if (value >= 6) {
-            if (value < 12) {
-              fnResult.assign("hour", fnResult.get("hour") + 12);
-              fnResult.assign("meridiem", UKTimeExpressionParser(10067).Meridiem.PM);
+    key: "innerExtract",
+    value: function innerExtract(createParsingResult, index) {
+      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
+      const refDate = createParsingResult.refDate;
+      const date = new Date(refDate.getTime());
+      if (index[1]) {
+        const start16 = parsingResult.start;
+        start16.imply("hour", refDate.getHours());
+        const start17 = parsingResult.start;
+        start17.imply("minute", refDate.getMinutes());
+        const start18 = parsingResult.start;
+        start18.imply("second", refDate.getSeconds());
+        const start19 = parsingResult.start;
+        start19.imply("millisecond", refDate.getMilliseconds());
+      } else if (index[2]) {
+        if ("\u660E" == index[2]) {
+          if (refDate.getHours() > 1) {
+            date.setDate(date.getDate() + 1);
+          }
+        } else if ("\u6628" == tmp25) {
+          date.setDate(date.getDate() - 1);
+        } else if ("\u524D" == tmp25) {
+          date.setDate(date.getDate() - 2);
+        } else if ("\u5927\u524D" == tmp25) {
+          date.setDate(date.getDate() - 3);
+        } else if ("\u540E" == tmp25) {
+          date.setDate(date.getDate() + 2);
+        } else if ("\u5927\u540E" == tmp25) {
+          date.setDate(date.getDate() + 3);
+        }
+        if ("\u65E9" == index[3]) {
+          const start15 = parsingResult.start;
+          start15.imply("hour", 6);
+        } else if ("\u665A" == tmp26) {
+          const start25 = parsingResult.start;
+          start25.imply("hour", 22);
+          const start26 = parsingResult.start;
+          start26.imply("meridiem", 1);
+        }
+      } else if (index[4]) {
+        const first = index[4][0];
+        if ("\u65E9" != first) {
+          if ("\u4E0A" != first) {
+            if ("\u4E0B" == first) {
+              const start12 = parsingResult.start;
+              start12.imply("hour", 15);
+              const start13 = parsingResult.start;
+              start13.imply("meridiem", 1);
+            } else if ("\u4E2D" == first) {
+              const start10 = parsingResult.start;
+              start10.imply("hour", 12);
+              const start11 = parsingResult.start;
+              start11.imply("meridiem", 1);
+            } else {
+              if ("\u591C" != first) {
+                if ("\u665A" != first) {
+                  if ("\u51CC" == first) {
+                    const start24 = parsingResult.start;
+                    start24.imply("hour", 0);
+                  }
+                }
+              }
+              const start8 = parsingResult.start;
+              start8.imply("hour", 22);
+              const start9 = parsingResult.start;
+              start9.imply("meridiem", 1);
             }
           }
-          if (value < 6) {
-            fnResult.assign("meridiem", UKTimeExpressionParser(10067).Meridiem.AM);
-          }
         }
-        const first1 = arg1[0];
-        if (first1.endsWith("\u043F\u043E \u043E\u0431\u0456\u0434\u0456")) {
-          fnResult.assign("meridiem", UKTimeExpressionParser(10067).Meridiem.PM);
-          value2 = fnResult.get("hour");
-          let tmp14 = value2 >= 0;
-          if (tmp14) {
-            tmp14 = value2 <= 6;
+        const start14 = parsingResult.start;
+        start14.imply("hour", 6);
+      } else if (index[5]) {
+        if ("\u660E" == index[5]) {
+          if (refDate.getHours() > 1) {
+            date.setDate(date.getDate() + 1);
           }
-          if (tmp14) {
-            fnResult.assign("hour", fnResult.get("hour") + 12);
-          }
-        } else {
-          const first2 = arg1[0];
+        } else if ("\u6628" == tmp2) {
+          date.setDate(date.getDate() - 1);
+        } else if ("\u524D" == tmp2) {
+          date.setDate(date.getDate() - 2);
+        } else if ("\u5927\u524D" == tmp2) {
+          date.setDate(date.getDate() - 3);
+        } else if ("\u540E" == tmp2) {
+          date.setDate(date.getDate() + 2);
+        } else if ("\u5927\u540E" == tmp2) {
+          date.setDate(date.getDate() + 3);
         }
-        const first3 = arg1[0];
-        if (first3.endsWith("\u0440\u0430\u043D\u043A\u0443")) {
-          fnResult.assign("meridiem", UKTimeExpressionParser(10067).Meridiem.AM);
-          if (fnResult.get("hour") < 12) {
-            fnResult.assign("hour", fnResult.get("hour"));
+        if (index[6]) {
+          const first1 = tmp8[0];
+          if ("\u65E9" != first1) {
+            if ("\u4E0A" != first1) {
+              if ("\u4E0B" == first1) {
+                const start5 = parsingResult.start;
+                start5.imply("hour", 15);
+                const start6 = parsingResult.start;
+                start6.imply("meridiem", 1);
+              } else if ("\u4E2D" == first1) {
+                const start3 = parsingResult.start;
+                start3.imply("hour", 12);
+                const start4 = parsingResult.start;
+                start4.imply("meridiem", 1);
+              } else {
+                if ("\u591C" != first1) {
+                  if ("\u665A" != first1) {
+                    if ("\u51CC" == first1) {
+                      const start23 = parsingResult.start;
+                      start23.imply("hour", 0);
+                    }
+                  }
+                }
+                const start = parsingResult.start;
+                start.imply("hour", 22);
+                const start2 = parsingResult.start;
+                start2.imply("meridiem", 1);
+              }
+            }
           }
+          const start7 = parsingResult.start;
+          start7.imply("hour", 6);
         }
       }
-      return fnResult;
+      const start20 = parsingResult.start;
+      start20.assign("day", date.getDate());
+      const start21 = parsingResult.start;
+      start21.assign("month", date.getMonth() + 1);
+      const start22 = parsingResult.start;
+      start22.assign("year", date.getFullYear());
+      return parsingResult;
     }
   }
 ];
 
-export default _createClass(UKTimeExpressionParser, items);
+export default _createClass(ZHHansCasualDateParser, items);

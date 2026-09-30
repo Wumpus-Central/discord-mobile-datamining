@@ -4,4 +4,4 @@
 import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/billing/native/images", width: 223, height: 126, scales: [2, 3], hash: "06b6cfc90c8de0a27298c16b4f578563", name: "blocked-purchases-light", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "88df5c832b935fed96e52c66883efce1", name: "CircleXIcon", type: "png" });

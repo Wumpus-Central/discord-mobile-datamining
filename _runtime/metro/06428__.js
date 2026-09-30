@@ -1,7 +1,8 @@
 // === Module 6428: ? ===
 
 // Module 6428
-import _modDef6429 from "module_6429" /* 6429 */;
+import _mod17 from "module_17" /* 17 */;
 
+const StyleSheet = _mod17.StyleSheet;
 
-export default _modDef6429;
+export const styles = StyleSheet.create({ container: { flexDirection: "column-reverse", position: "absolute", top: 0, left: 0, right: 0 } });

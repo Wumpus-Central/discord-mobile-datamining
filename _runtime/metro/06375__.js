@@ -1,21 +1,11 @@
 // === Module 6375: ? ===
 
 // Module 6375
-import _modDef6372 from "module_6372" /* 6372 */;
-import noop from "module_19" /* 19 */;
+import _mod6376 from "module_6376" /* 6376 */;
+import _mod6378 from "module_6378" /* 6378 */;
+import _mod6379 from "module_6379" /* 6379 */;
 
-const jsx = fn(21).jsx;
 
-export default function _default(delayLongPress) {
-  let num = delayLongPress.delayLongPress;
-  if (num === undefined) {
-    num = 600;
-  }
-  let extraButtonProps = delayLongPress.extraButtonProps;
-  if (extraButtonProps === undefined) {
-    extraButtonProps = { rippleColor: "transparent", exclusive: true };
-  }
-  const merged = Object.assign(delayLongPress, Object.assign({ delayLongPress: 0, extraButtonProps: 0 }));
-  const merged1 = Object.assign(merged);
-  return jsx(_modDef6372, { delayLongPress: num, extraButtonProps });
-};
+export const useCompetingGestures = _mod6376.useCompetingGestures;
+export const useExclusiveGestures = _mod6378.useExclusiveGestures;
+export const useSimultaneousGestures = _mod6379.useSimultaneousGestures;

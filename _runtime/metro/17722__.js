@@ -1,7 +1,8 @@
 // === Module 17722: ? ===
 
 // Module 17722
-import registerAsset from "module_1121" /* 1121 */;
+const regex = RegExp("[\\u200d\\ud800-\\udfff\\u0300-\\u036f\\ufe20-\\ufe2f\\u20d0-\\u20ff\\ufe0e\\ufe0f]");
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_role_subscriptions/native/guild_settings/welcome/images", width: 159, height: 105.5, scales: [2, 3], hash: "deeeb1ec32f8166fcc70387b3490f426", name: "role_subscription_lanyard_illo", type: "png" });
+export default function hasUnicode(arg0) {
+  return regex.test(arg0);
+};

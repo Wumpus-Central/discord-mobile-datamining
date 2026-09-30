@@ -1,9 +1,47 @@
 // === Module 8601: ? ===
 
 // Module 8601
-import _mod8568 from "module_8568" /* 8568 */;
+import _mod8599 from "module_8599" /* 8599 */;
+import _mod8602 from "module_8602" /* 8602 */;
 
 const self = this;
+function toDotPath(path) {
+  const items = [];
+  const mapped = path.map((key) => {
+    if (typeof key === "object") {
+      key = key.key;
+    }
+    return key;
+  });
+  const iter = mapped[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let tmp3 = nextResult;
+    if (typeof nextResult === "number") {
+      let _HermesInternal3 = HermesInternal;
+      let arr = items.push("[" + tmp3 + "]");
+    } else if (typeof tmp3 === "symbol") {
+      let _JSON2 = JSON;
+      let _String = String;
+      let _HermesInternal2 = HermesInternal;
+      let arr6 = items.push("[" + JSON.stringify(String(tmp3)) + "]");
+    } else {
+      let obj = /[^\w$]/;
+      if (obj.test(tmp3)) {
+        let _JSON = JSON;
+        let _HermesInternal = HermesInternal;
+        let arr7 = items.push("[" + JSON.stringify(tmp3) + "]");
+      } else {
+        if (items.length) {
+          let arr8 = items.push(".");
+        }
+        let arr9 = items.push(tmp3);
+      }
+    }
+    continue;
+  }
+  return items.join("");
+}
 let self2 = this;
 if (this) {
   self2 = self.__createBinding;
@@ -54,317 +92,241 @@ if (self2) {
       };
     }
     const _Object3 = Object;
-    exports.default = function default_1() {
-      if (typeof error === "function") {
-        let obj = { localeError: null };
-        let obj2 = { string: null, file: null, array: null, set: null };
-        const obj3 = { unit: { one: "simbolis", few: "simboliai", many: "simboli\u0173" }, verb: null };
-        const obj4 = { smaller: { inclusive: "turi b\u016Bti ne ilgesn\u0117 kaip", notInclusive: "turi b\u016Bti trumpesn\u0117 kaip" }, bigger: { inclusive: "turi b\u016Bti ne trumpesn\u0117 kaip", notInclusive: "turi b\u016Bti ilgesn\u0117 kaip" } };
-        obj3.verb = obj4;
-        obj2.string = obj3;
-        const obj5 = { unit: { one: "baitas", few: "baitai", many: "bait\u0173" }, verb: null };
-        const obj6 = { smaller: { inclusive: "turi b\u016Bti ne didesnis kaip", notInclusive: "turi b\u016Bti ma\u017Eesnis kaip" }, bigger: { inclusive: "turi b\u016Bti ne ma\u017Eesnis kaip", notInclusive: "turi b\u016Bti didesnis kaip" } };
-        obj5.verb = obj6;
-        obj2.file = obj5;
-        const obj7 = { unit: { one: "element\u0105", few: "elementus", many: "element\u0173" }, verb: null };
-        const obj8 = { smaller: { inclusive: "turi tur\u0117ti ne daugiau kaip", notInclusive: "turi tur\u0117ti ma\u017Eiau kaip" }, bigger: { inclusive: "turi tur\u0117ti ne ma\u017Eiau kaip", notInclusive: "turi tur\u0117ti daugiau kaip" } };
-        obj7.verb = obj8;
-        obj2.array = obj7;
-        const obj9 = { unit: { one: "element\u0105", few: "elementus", many: "element\u0173" }, verb: null };
-        const obj10 = { smaller: { inclusive: "turi tur\u0117ti ne daugiau kaip", notInclusive: "turi tur\u0117ti ma\u017Eiau kaip" }, bigger: { inclusive: "turi tur\u0117ti ne ma\u017Eiau kaip", notInclusive: "turi tur\u0117ti daugiau kaip" } };
-        obj9.verb = obj10;
-        obj2.set = obj9;
-        closure_1 = { regex: "\u012Fvestis", email: "el. pa\u0161to adresas", url: "URL", emoji: "jaustukas", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "ISO data ir laikas", date: "ISO data", time: "ISO laikas", duration: "ISO trukm\u0117", ipv4: "IPv4 adresas", ipv6: "IPv6 adresas", cidrv4: "IPv4 tinklo prefiksas (CIDR)", cidrv6: "IPv6 tinklo prefiksas (CIDR)", base64: "base64 u\u017Ekoduota eilut\u0117", base64url: "base64url u\u017Ekoduota eilut\u0117", json_string: "JSON eilut\u0117", e164: "E.164 numeris", jwt: "JWT", template_literal: "\u012Fvestis" };
-        closure_2 = { nan: "NaN", number: "skai\u010Dius", bigint: "sveikasis skai\u010Dius", string: "eilut\u0117", boolean: "login\u0117 reik\u0161m\u0117", undefined: "neapibr\u0117\u017Eta reik\u0161m\u0117", function: "funkcija", symbol: "simbolis", array: "masyvas", object: "objektas", null: "nulin\u0117 reik\u0161m\u0117" };
-        obj.localeError = (code) => {
-          switch (code.code) {
-            case "invalid_type":
-              let expected = closure_2[code.expected];
-              if (expected == null) {
-                expected = code.expected;
-              }
-              const parsedTypeResult = closure_2.parsedType(code.input);
-              let tmp82 = closure_2[parsedTypeResult];
-              if (tmp82 == null) {
-                tmp82 = parsedTypeResult;
-              }
-              if (obj3.test(code.expected)) {
-                const _HermesInternal16 = HermesInternal;
-                let combined = "Gautas tipas " + tmp82 + ", o tik\u0117tasi - instanceof " + code.expected;
-              } else {
-                const _HermesInternal15 = HermesInternal;
-                combined = "Gautas tipas " + tmp82 + ", o tik\u0117tasi - " + expected;
-              }
-              return combined;
-            case "invalid_value":
-              if (1 === code.values.length) {
-                const _HermesInternal14 = HermesInternal;
-                let combined1 = "Privalo b\u016Bti " + closure_2.stringifyPrimitive(code.values[0]);
-              } else {
-                const _HermesInternal13 = HermesInternal;
-                combined1 = "Privalo b\u016Bti vienas i\u0161 " + closure_2.joinValues(code.values, "|") + " pasirinkim\u0173";
-              }
-              return combined1;
-            case "too_big":
-              let str45 = closure_2[code.origin];
-              if (str45 == null) {
-                str45 = code.origin;
-              }
-              const _Number2 = Number;
-              const _Math2 = Math;
-              const absolute = Math.abs(Number(code.maximum));
-              const result = absolute % 10;
-              const result1 = absolute % 100;
-              if (11 > result1) {
-                let str46 = "many";
-                if (0 !== result) {
-                  let str47 = "few";
-                  if (1 === result) {
-                    str47 = "one";
-                  }
-                  str46 = str47;
-                }
-              } else {
-                str46 = "many";
-              }
-              let flag2 = code.inclusive;
-              if (flag2 == null) {
-                flag2 = false;
-              }
-              let tmp53 = obj2[code.origin];
-              if (tmp53 == null) {
-                tmp53 = null;
-              }
-              let tmp54 = tmp53;
-              if (null !== tmp53) {
-                obj2 = { unit: tmp53.unit[str46], verb: null };
-                let str48 = "notInclusive";
-                if (flag2) {
-                  str48 = "inclusive";
-                }
-                obj2.verb = tmp53.verb.smaller[str48];
-                tmp54 = obj2;
-              }
-              let verb1;
-              if (tmp54 != null) {
-                verb1 = tmp54.verb;
-              }
-              if (verb1) {
-                if (str45 == null) {
-                  str45 = code.origin;
-                }
-                if (str45 == null) {
-                  str45 = "reik\u0161m\u0117";
-                }
-                if (typeof capitalizeFirstCharacter === "function") {
-                  const formatted = str45.charAt(0).toUpperCase();
-                  const sum = formatted + str45.slice(1);
-                  const verb2 = tmp54.verb;
-                  const str1 = code.maximum.toString();
-                  let str60 = tmp54.unit;
-                  if (str60 == null) {
-                    str60 = "element\u0173";
-                  }
-                  const _HermesInternal12 = HermesInternal;
-                  return "" + sum + " " + verb2 + " " + str1 + " " + str60;
-                } else {
-                  throw new TypeError("Trying to call a non-function");
-                }
-              } else {
-                let str49 = "ma\u017Eesnis kaip";
-                if (code.inclusive) {
-                  str49 = "ne didesnis kaip";
-                }
-                let str50 = str45;
-                if (str45 == null) {
-                  str50 = code.origin;
-                }
-                if (str50 == null) {
-                  str50 = "reik\u0161m\u0117";
-                }
-                if (typeof capitalizeFirstCharacter === "function") {
-                  const formatted1 = str50.charAt(0).toUpperCase();
-                  const sum1 = formatted1 + str50.slice(1);
-                  const str82 = code.maximum.toString();
-                  let unit;
-                  if (tmp54 != null) {
-                    unit = tmp54.unit;
-                  }
-                  const _HermesInternal11 = HermesInternal;
-                  return "" + sum1 + " turi b\u016Bti " + str49 + " " + str82 + " " + unit;
-                } else {
-                  throw new TypeError("Trying to call a non-function");
-                }
-              }
-            break;
-            case "too_small":
-              let str24 = closure_2[code.origin];
-              if (str24 == null) {
-                str24 = code.origin;
-              }
-              const _Number = Number;
-              const _Math = Math;
-              const absolute1 = Math.abs(Number(code.minimum));
-              const result2 = absolute1 % 10;
-              const result3 = absolute1 % 100;
-              if (11 > result3) {
-                let str25 = "many";
-                if (0 !== result2) {
-                  let str26 = "few";
-                  if (1 === result2) {
-                    str26 = "one";
-                  }
-                  str25 = str26;
-                }
-              } else {
-                str25 = "many";
-              }
-              let flag = code.inclusive;
-              if (flag == null) {
-                flag = false;
-              }
-              let tmp26 = obj2[code.origin];
-              if (tmp26 == null) {
-                tmp26 = null;
-              }
-              let tmp27 = tmp26;
-              if (null !== tmp26) {
-                const obj = { unit: tmp26.unit[str25], verb: null };
-                let str27 = "notInclusive";
-                if (flag) {
-                  str27 = "inclusive";
-                }
-                obj.verb = tmp26.verb.bigger[str27];
-                tmp27 = obj;
-              }
-              let verb3;
-              if (tmp27 != null) {
-                verb3 = tmp27.verb;
-              }
-              if (verb3) {
-                if (str24 == null) {
-                  str24 = code.origin;
-                }
-                if (str24 == null) {
-                  str24 = "reik\u0161m\u0117";
-                }
-                if (typeof capitalizeFirstCharacter === "function") {
-                  const formatted2 = str24.charAt(0).toUpperCase();
-                  const sum2 = formatted2 + str24.slice(1);
-                  const verb = tmp27.verb;
-                  const str83 = code.minimum.toString();
-                  let str39 = tmp27.unit;
-                  if (str39 == null) {
-                    str39 = "element\u0173";
-                  }
-                  const _HermesInternal10 = HermesInternal;
-                  return "" + sum2 + " " + verb + " " + str83 + " " + str39;
-                } else {
-                  throw new TypeError("Trying to call a non-function");
-                }
-              } else {
-                let str28 = "didesnis kaip";
-                if (code.inclusive) {
-                  str28 = "ne ma\u017Eesnis kaip";
-                }
-                let str29 = str24;
-                if (str24 == null) {
-                  str29 = code.origin;
-                }
-                if (str29 == null) {
-                  str29 = "reik\u0161m\u0117";
-                }
-                if (typeof capitalizeFirstCharacter === "function") {
-                  const formatted3 = str29.charAt(0).toUpperCase();
-                  const sum3 = formatted3 + str29.slice(1);
-                  const str84 = code.minimum.toString();
-                  let unit1;
-                  if (tmp27 != null) {
-                    unit1 = tmp27.unit;
-                  }
-                  const _HermesInternal9 = HermesInternal;
-                  return "" + sum3 + " turi b\u016Bti " + str28 + " " + str84 + " " + unit1;
-                } else {
-                  throw new TypeError("Trying to call a non-function");
-                }
-              }
-            break;
-            case "invalid_format":
-              if ("starts_with" === code.format) {
-                const _HermesInternal8 = HermesInternal;
-                let combined2 = "Eilut\u0117 privalo prasid\u0117ti \"" + code.prefix + "\"";
-              } else if ("ends_with" === code.format) {
-                const _HermesInternal7 = HermesInternal;
-                combined2 = "Eilut\u0117 privalo pasibaigti \"" + code.suffix + "\"";
-              } else if ("includes" === code.format) {
-                const _HermesInternal6 = HermesInternal;
-                combined2 = "Eilut\u0117 privalo \u012Ftraukti \"" + code.includes + "\"";
-              } else if ("regex" === code.format) {
-                const _HermesInternal5 = HermesInternal;
-                combined2 = "Eilut\u0117 privalo atitikti " + code.pattern;
-              } else {
-                let format = closure_1[code.format];
-                if (format == null) {
-                  format = code.format;
-                }
-                const _HermesInternal4 = HermesInternal;
-                combined2 = "Neteisingas " + format;
-              }
-              return combined2;
-            case "not_multiple_of":
-              const _HermesInternal3 = HermesInternal;
-              return "Skai\u010Dius privalo b\u016Bti " + code.divisor + " kartotinis.";
-            case "unrecognized_keys":
-              let str6 = "as";
-              let str7 = "as";
-              if (code.keys.length > 1) {
-                str7 = "i";
-              }
-              if (code.keys.length > 1) {
-                str6 = "ai";
-              }
-              const _HermesInternal2 = HermesInternal;
-              return "Neatpa\u017Eint" + str7 + " rakt" + str6 + ": " + closure_2.joinValues(code.keys, ", ");
-            case "invalid_key":
-              return "Rastas klaidingas raktas";
-            case "invalid_union":
-              return "Klaidinga \u012Fvestis";
-            case "invalid_element":
-              let str = closure_2[code.origin];
-              if (str == null) {
-                str = code.origin;
-              }
-              if (str == null) {
-                str = code.origin;
-              }
-              if (str == null) {
-                str = "reik\u0161m\u0117";
-              }
-              if (typeof capitalizeFirstCharacter === "function") {
-                const formatted4 = str.charAt(0).toUpperCase();
-                const _HermesInternal = HermesInternal;
-                return "" + formatted4 + str.slice(1) + " turi klaiding\u0105 \u012Fvest\u012F";
-              } else {
-                throw new TypeError("Trying to call a non-function");
-              }
-            break;
-            default:
-              return "Klaidinga \u012Fvestis";
-          }
+    exports.$ZodError = undefined;
+    exports.$ZodRealError = undefined;
+    exports.flattenError = function flattenError(arg0, arg1) {
+      let fn = arg1;
+      if (arg1 === undefined) {
+        fn = function o(message) {
+          return message.message;
         };
-        return obj;
-      } else {
-        throw new TypeError("Trying to call a non-function");
       }
+      const fieldErrors = {};
+      const formErrors = [];
+      const iter = arg0.issues[Symbol.iterator]();
+      const nextResult = iter.next();
+      while (iter !== undefined) {
+        let tmp2 = nextResult;
+        if (nextResult.path.length > 0) {
+          let items1 = fieldErrors[tmp2.path[0]];
+          if (!items1) {
+            items1 = [];
+          }
+          fieldErrors[tmp2.path[0]] = items1;
+          let arr3 = fieldErrors[tmp2.path[0]];
+          let arr = arr3.push(fn(tmp2));
+        } else {
+          let arr2 = formErrors.push(fn(tmp2));
+        }
+        continue;
+      }
+      return { formErrors, fieldErrors };
     };
-    let closure_2 = fn(_mod8568);
-    function capitalizeFirstCharacter(arg0) {
-
+    exports.formatError = function formatError(arg0, arg1) {
+      let fn = arg1;
+      if (arg1 === undefined) {
+        fn = function o(message) {
+          return message.message;
+        };
+      }
+      let obj = { _errors: [] };
+      function processError(arg0) {
+        const iter = arg0.issues[Symbol.iterator]();
+        const nextResult = iter.next();
+        while (iter !== undefined) {
+          let tmp2 = nextResult;
+          if ("invalid_union" === nextResult.code) {
+            if (tmp2.errors.length) {
+              let errors = tmp2.errors;
+              let mapped = errors.map((issues) => {
+                processError({ issues });
+              });
+              continue;
+            }
+          }
+          if ("invalid_key" === tmp2.code) {
+            let obj2 = { issues: null };
+            obj2.issues = tmp2.issues;
+            let tmp34 = processError(obj2);
+          } else if ("invalid_element" === tmp2.code) {
+            let obj3 = { issues: null };
+            obj3.issues = tmp2.issues;
+            let tmp31 = processError(obj3);
+          } else if (0 === tmp2.path.length) {
+            let _errors = obj._errors;
+            let arr = _errors.push(fn(tmp2));
+          } else {
+            let tmp21 = obj;
+            let num = 0;
+            if (0 < tmp2.path.length) {
+              do {
+                let tmp7 = tmp2.path[num];
+                if (num === tmp2.path.length - 1) {
+                  let tmp13 = tmp21[tmp7];
+                  if (!tmp13) {
+                    let obj4 = { _errors: [] };
+                    tmp13 = obj4;
+                  }
+                  tmp21[tmp7] = tmp13;
+                  let _errors1 = tmp21[tmp7]._errors;
+                  let arr2 = _errors1.push(fn(tmp2));
+                } else {
+                  let tmp10 = tmp21[tmp7];
+                  if (!tmp10) {
+                    obj = { _errors: [] };
+                    tmp10 = obj;
+                  }
+                  tmp21[tmp7] = tmp10;
+                }
+                tmp21 = tmp21[tmp7];
+                sum = num + 1;
+                num = sum;
+              } while (sum < tmp2.path.length);
+            }
+          }
+        }
+      }
+      processError(arg0);
+      return obj;
+    };
+    exports.treeifyError = function treeifyError(arg0) {
+      let fn = arg1;
+      if (arg1 === undefined) {
+        fn = function o(message) {
+          return message.message;
+        };
+      }
+      let obj = { errors: [] };
+      function processError(arg0) {
+        let items = arg1;
+        if (arg1 === undefined) {
+          items = [];
+        }
+        let properties;
+        items = undefined;
+        function _loop(iter) {
+          if ("invalid_union" === iter.code) {
+            if (iter.errors.length) {
+              const errors = iter.errors;
+              const mapped = errors.map((issues) => {
+                items({ issues }, iter.path);
+              });
+            }
+          }
+          if ("invalid_key" === iter.code) {
+            const obj2 = { issues: iter.issues };
+            processError(obj2, iter.path);
+          } else if ("invalid_element" === iter.code) {
+            const obj3 = { issues: iter.issues };
+            processError(obj3, iter.path);
+          } else {
+            const items1 = [];
+            HermesBuiltin.arraySpread(iter.path, HermesBuiltin.arraySpread(items, 0));
+            if (0 === items1.length) {
+              const errors1 = obj.errors;
+              errors1.push(fn(iter));
+              return 1;
+            } else {
+              let tmp10 = obj;
+              let num = 0;
+              if (0 < items1.length) {
+                do {
+                  let tmp = items1[num];
+                  let diff = items1.length - 1;
+                  if (typeof tmp === "string") {
+                    if (tmp10.properties == null) {
+                      tmp10.properties = {};
+                    }
+                    properties = tmp10.properties;
+                    if (properties[tmp] == null) {
+                      let obj4 = { errors: [] };
+                      properties[tmp] = obj4;
+                    }
+                    let tmp6 = tmp10.properties[tmp];
+                  } else {
+                    if (tmp10.items == null) {
+                      tmp10.items = [];
+                    }
+                    items = tmp10.items;
+                    if (items[tmp] == null) {
+                      obj = { errors: [] };
+                      items[tmp] = obj;
+                    }
+                    tmp6 = tmp10.items[tmp];
+                  }
+                  if (num === diff) {
+                    let errors2 = tmp6.errors;
+                    let arr2 = errors2.push(fn(iter));
+                  }
+                  num = num + 1;
+                  tmp10 = tmp6;
+                } while (num < items1.length);
+              }
+            }
+          }
+        }
+        const iter = arg0.issues[Symbol.iterator]();
+        while (iter !== undefined) {
+          let _loopResult = _loop(iter.next());
+          continue;
+        }
+      }
+      processError(arg0);
+      return obj;
+    };
+    exports.toDotPath = toDotPath;
+    exports.prettifyError = function prettifyError(issues) {
+      const items = [];
+      const items1 = [...issues.issues];
+      const sorted = items1.sort((path, path2) => {
+        path = path.path;
+        if (path == null) {
+          path = [];
+        }
+        let path1 = path2.path;
+        if (path1 == null) {
+          path1 = [];
+        }
+        return path.length - path1.length;
+      });
+      const iter = sorted[Symbol.iterator]();
+      const nextResult = iter.next();
+      while (iter !== undefined) {
+        let _HermesInternal = HermesInternal;
+        let tmp3 = nextResult;
+        let arr = items.push("\u2716 " + nextResult.message);
+        let path = nextResult.path;
+        let length;
+        if (path != null) {
+          length = path.length;
+        }
+        if (length) {
+          let _HermesInternal2 = HermesInternal;
+          let arr2 = items.push("  \u2192 at " + toDotPath(tmp3.path));
+        }
+        continue;
+      }
+      return items.join("\n");
+    };
+    let closure_2 = fn(_mod8602);
+    function initializer(_zod, value) {
+      const message = _zod;
+      _zod.name = "$ZodError";
+      Object.defineProperty(_zod, "_zod", { value: _zod._zod, enumerable: false });
+      Object.defineProperty(_zod, "issues", { value, enumerable: false });
+      _zod.message = JSON.stringify(value, closure_2.jsonStringifyReplacer, 2);
+      Object.defineProperty(_zod, "toString", {
+        value() {
+          return message.message;
+        },
+        enumerable: false
+      });
     }
-    function error() {
-
-    }
-    module.exports = exports.default;
+    exports.$ZodError = _mod8599.$constructor("$ZodError", initializer);
+    let obj = { Parent: null };
+    const _Error = Error;
+    obj.Parent = Error;
+    exports.$ZodRealError = _mod8599.$constructor("$ZodError", initializer, obj);
   } else {
     const _Object2 = Object;
   }

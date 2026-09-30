@@ -1,37 +1,14 @@
 // === Module 4086: ? ===
 
 // Module 4086
-import module_3922_mod from "module_3922" /* 3922 */;
-import module_4066_mod from "module_4066" /* 4066 */;
-import requiredArgs_mod from "requiredArgs" /* 3919 */;
+import module_2117 from "module_2117" /* 2117 */;
 
-let module_3922 = module_3922_mod;
-if (!module_3922) {
-  const obj = { default: module_3922 };
-  let tmp3 = obj;
+if (!module_2117) {
+  const obj2 = { default: module_2117 };
+  let obj = obj2;
 } else {
-  tmp3 = module_3922;
+  obj = module_2117;
 }
-module_3922 = tmp3;
-let module_4066 = module_4066_mod;
-if (!module_4066) {
-  const obj2 = { default: module_4066 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4066;
-}
-module_4066 = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
-} else {
-  tmp7 = requiredArgs;
-}
-requiredArgs = tmp7;
 
-export default function addWeeks(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  return module_4066.default(arg0, 7 * module_3922.default(arg1));
-};
+export default { date: obj.default({ formats: { full: "d MMMM y EEEE", long: "d MMMM y", medium: "d MMM y", short: "dd.MM.yyyy" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "HH:mm:ss zzzz", long: "HH:mm:ss z", medium: "HH:mm:ss", short: "HH:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} 'saat' {{time}}", long: "{{date}} 'saat' {{time}}", medium: "{{date}}, {{time}}", short: "{{date}}, {{time}}" }, defaultWidth: "full" }) };
 export default exports.default;

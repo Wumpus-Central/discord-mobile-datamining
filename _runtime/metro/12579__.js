@@ -1,79 +1,102 @@
 // === Module 12579: ? ===
 
 // Module 12579
-import stackParserFromStackParserOptions from "stackParserFromStackParserOptions" /* 12487 */;
-import setupIntegration from "module_12540" /* 12540 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-let c2 = "_sentryBundlerPluginAppKey:";
-
-export const thirdPartyErrorFilterIntegration = setupIntegration.defineIntegration((arg0) => {
-  const behaviour = arg0;
-  return {
-    name: "ThirdPartyErrorsFilter",
-    setup(on) {
-      const options = on;
-      on.on("beforeEnvelope", (arg0) => {
-        options(closure_1_1[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
-          if ("event" === arg1) {
-            const _Array = Array;
-            let tmp3;
-            if (Array.isArray(arg0)) {
-              tmp3 = arg0[1];
-            }
-            if (tmp3) {
-              const result = options(dependencyMap[2]).stripMetadataFromStackFrames(tmp3);
-              arg0[1] = tmp3;
-              const obj = options(dependencyMap[2]);
-            }
-          }
-        });
-      });
-      on.on("applyFrameMetadata", (type) => {
-        if (!type.type) {
-          const result = options(dependencyMap[2]).addMetadataToStackFrames(options.getOptions().stackParser, type);
-          const obj = options(dependencyMap[2]);
-        }
-      });
-    },
-    processEvent(tags) {
-      const framesFromEvent = stackParserFromStackParserOptions.getFramesFromEvent(tags);
-      let mapped;
-      if (framesFromEvent) {
-        let found = framesFromEvent.filter((filename) => filename.filename);
-        mapped = found.map((module_metadata) => {
-          if (module_metadata.module_metadata) {
-            const _Object = Object;
-            const keys = Object.keys(module_metadata.module_metadata);
-            const found = keys.filter((item) => item.startsWith(length));
-            let mapped = found.map((arr) => arr.slice(length.length));
-          } else {
-            mapped = [];
-          }
-          return mapped;
-        });
-      }
-      if (mapped) {
-        if ("drop-error-if-contains-third-party-frames" === behaviour.behaviour) {
-          let str2 = "some";
-        } else {
-          str2 = "every";
-        }
-        if (mapped[str2]((arr) => !arr.some((item) => {
-          filterKeys = filterKeys.filterKeys;
-          return filterKeys.includes(item);
-        }))) {
-          if ("drop-error-if-contains-third-party-frames" !== behaviour.behaviour) {
-            if ("drop-error-if-exclusively-contains-third-party-frames" !== behaviour.behaviour) {
-              const obj2 = {};
-              const merged = Object.assign(tags.tags);
-              obj2.third_party_code = true;
-              tags.tags = obj2;
-            }
-          }
-          return null;
-        }
-      }
-      return tags;
+function parseRetryAfterHeader(arg0) {
+  let timestamp = arg1;
+  if (arg1 === undefined) {
+    const _Date = Date;
+    timestamp = Date.now();
+  }
+  const parsed = parseInt("" + arg0, 10);
+  if (isNaN(parsed)) {
+    const _Date2 = Date;
+    const _HermesInternal = HermesInternal;
+    const parsed1 = Date.parse("" + arg0);
+    const _isNaN = isNaN;
+    let num2 = 60000;
+    if (!isNaN(parsed1)) {
+      num2 = parsed1 - timestamp;
     }
-  };
-});
+    return num2;
+  } else {
+    return 1000 * parsed;
+  }
+}
+
+export const DEFAULT_RETRY_AFTER = 60000;
+export const disabledUntil = function disabledUntil(all, arg1) {
+  return all[arg1] || all.all || 0;
+};
+export const isRateLimited = function isRateLimited(all, result) {
+  let timestamp = arg2;
+  if (arg2 === undefined) {
+    const _Date = Date;
+    timestamp = Date.now();
+  }
+  return (all[result] || all.all || 0) > timestamp;
+};
+export { parseRetryAfterHeader };
+export const updateRateLimits = function updateRateLimits(arg0, headers) {
+  headers = headers.headers;
+  let timestamp = arg2;
+  if (arg2 === undefined) {
+    const _Date = Date;
+    timestamp = Date.now();
+  }
+  const obj = {};
+  const merged = Object.assign(arg0);
+  let str = headers;
+  if (headers) {
+    str = headers["x-sentry-rate-limits"];
+  }
+  let prop = headers;
+  if (headers) {
+    prop = headers["retry-after"];
+  }
+  if (str) {
+    const parts = str.trim().split(",");
+    const iter = parts[Symbol.iterator]();
+    const str2 = str.trim();
+    while (iter !== undefined) {
+      let tmp12 = _slicedToArray(str8.split(":", 5), 5);
+      let str9 = tmp12[1];
+      let str10 = tmp12[4];
+      let _parseInt = parseInt;
+      let parsed = parseInt(tmp12[0], 10);
+      let _isNaN = isNaN;
+      let num6 = 60;
+      if (!isNaN(parsed)) {
+        num6 = parsed;
+      }
+      let result = 1000 * num6;
+      if (str9) {
+        let parts1 = str9.split(";");
+        for (const item10065 of parts1) {
+          let tmp23 = "metric_bucket" === item10065;
+          if (tmp23) {
+            tmp23 = str10;
+          }
+          if (tmp23) {
+            let parts2 = str10.split(";");
+            tmp23 = !parts2.includes("custom");
+          }
+          if (!tmp23) {
+            obj[item10065] = timestamp + result;
+          }
+          continue;
+        }
+      } else {
+        obj.all = timestamp + result;
+      }
+      continue;
+    }
+    str8 = iter.next();
+  } else if (prop) {
+    obj.all = timestamp + parseRetryAfterHeader(prop, timestamp);
+  } else if (429 === headers.statusCode) {
+    obj.all = timestamp + 60000;
+  }
+  return obj;
+};

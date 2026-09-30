@@ -1,54 +1,41 @@
 // === Module 5742: ? ===
 
 // Module 5742
-import _modDef5710 from "module_5710" /* 5710 */;
+import _mod5723 from "module_5723" /* 5723 */;
+import _modDef5728 from "module_5728" /* 5728 */;
+import get0thIfdOffset from "get0thIfdOffset" /* 5743 */;
+import IFD_TYPE_0TH from "IFD_TYPE_0TH" /* 5744 */;
 
+require = arg1;
 importDefault = arg2;
 const dependencyMap = arg6;
-let c2 = 4;
-let c3 = 7;
+let c3 = "Exif IFD Pointer";
+let c4 = "GPS Info IFD Pointer";
+let c5 = "Interoperability IFD Pointer";
 
 export default {
-  read(getUint8, sum) {
-    const byteAt = _modDef5710.getByteAt(getUint8, sum);
-    let num = 0;
-    if (16 & byteAt) {
-      num = 1;
+  read(getUint16, c5, arg2) {
+    const byteOrder = _modDef5728.getByteOrder(getUint16, c5);
+    const obj2 = get0thIfdOffset;
+    const ifd = obj2.readIfd(getUint16, IFD_TYPE_0TH.IFD_TYPE_0TH, c5, get0thIfdOffset.get0thIfdOffset(getUint16, c5, byteOrder), byteOrder, arg2);
+    let objectAssignResult = ifd;
+    if (undefined !== ifd[c3]) {
+      const tmp3Result6 = get0thIfdOffset;
+      objectAssignResult = _mod5723.objectAssign(ifd, tmp3Result6.readIfd(getUint16, IFD_TYPE_0TH.IFD_TYPE_EXIF, c5, c5 + ifd[tmp5].value, byteOrder, arg2));
+      const tmp3Result = _mod5723;
     }
-    const obj2 = { value: num, description: null };
-    let str = "No";
-    let str2 = "No";
-    if (16 & byteAt) {
-      str2 = "Yes";
+    let objectAssignResult3 = objectAssignResult;
+    if (undefined !== objectAssignResult[c4]) {
+      const tmp3Result8 = get0thIfdOffset;
+      objectAssignResult3 = _mod5723.objectAssign(objectAssignResult, tmp3Result8.readIfd(getUint16, IFD_TYPE_0TH.IFD_TYPE_GPS, c5, c5 + objectAssignResult[tmp12].value, byteOrder, arg2));
+      const tmp3Result7 = _mod5723;
     }
-    const obj3 = { Alpha: obj2 };
-    obj2.description = str2;
-    let num2 = 0;
-    if (2 & byteAt) {
-      num2 = 1;
+    let objectAssignResult4 = objectAssignResult3;
+    if (undefined !== objectAssignResult3[c5]) {
+      const tmp3Result10 = get0thIfdOffset;
+      objectAssignResult4 = _mod5723.objectAssign(objectAssignResult3, tmp3Result10.readIfd(getUint16, IFD_TYPE_0TH.IFD_TYPE_INTEROPERABILITY, c5, c5 + objectAssignResult3[tmp19].value, byteOrder, arg2));
+      const tmp3Result9 = _mod5723;
     }
-    const obj4 = { value: num2, description: null };
-    if (2 & byteAt) {
-      str = "Yes";
-    }
-    obj4.description = str;
-    obj3.Animation = obj4;
-    sum = sum + c2;
-    const byteAt1 = _modDef5710.getByteAt(getUint8, sum);
-    const tmpResult = _modDef5710;
-    const sum1 = byteAt1 + 256 * _modDef5710.getByteAt(getUint8, sum + 1);
-    const tmpResult6 = _modDef5710;
-    const sum2 = sum1 + 65536 * _modDef5710.getByteAt(getUint8, sum + 2) + 1;
-    obj3.ImageWidth = { value: sum2, description: `${tmp9}px` };
-    const sum3 = sum + c3;
-    const obj5 = { value: sum2, description: `${tmp9}px` };
-    const tmpResult7 = _modDef5710;
-    const byteAt2 = _modDef5710.getByteAt(getUint8, sum3);
-    const tmpResult8 = _modDef5710;
-    const sum4 = byteAt2 + 256 * _modDef5710.getByteAt(getUint8, sum3 + 1);
-    const tmpResult9 = _modDef5710;
-    const sum5 = sum4 + 65536 * _modDef5710.getByteAt(getUint8, sum3 + 2) + 1;
-    obj3.ImageHeight = { value: sum5, description: `${tmp13}px` };
-    return obj3;
+    return { tags: objectAssignResult4, byteOrder };
   }
 };

@@ -1,84 +1,23 @@
 // === Module 13763: ? ===
 
 // Module 13763
-import _mod13728 from "module_13728" /* 13728 */;
-import _mod13748 from "module_13748" /* 13748 */;
+import _mod13755 from "module_13755" /* 13755 */;
 
 
-export default (arg0, arg1) => {
-  obj = new obj(13757)(arg0, arg1);
-  const tmp3 = new obj(13728)("0.0.0");
-  if (obj.test(tmp3)) {
-    return tmp3;
-  } else {
-    const tmp6 = new tmp(13728)("0.0.0-0");
-    if (obj.test(tmp6)) {
-      return tmp6;
-    } else {
-      let num = 0;
-      let num3 = 0;
-      let tmp9 = null;
-      let tmp10 = null;
-      if (0 < obj.set.length) {
-        do {
-          let arr = obj.set[num3];
-          obj = null;
-          let item = arr.forEach((semver) => {
-            obj = new _mod13728(semver.semver.version);
-            const operator = semver.operator;
-            if (">" === operator) {
-              if (0 === obj.prerelease.length) {
-                obj.patch = obj.patch + 1;
-              } else {
-                const prerelease = obj.prerelease;
-                prerelease.push(0);
-              }
-              obj.raw = obj.format();
-            } else {
-              if ("" !== operator) {
-                if (">=" !== operator) {
-                  if ("<" !== operator) {
-                    if ("<=" !== operator) {
-                      const _Error = Error;
-                      const _HermesInternal = HermesInternal;
-                      const error = new Error("Unexpected operation: " + semver.operator);
-                      throw error;
-                    }
-                  }
-                }
-              }
-              if (obj) {
-                !_mod13748(obj, obj);
-              }
-            }
-          });
-          let tmp13 = !obj;
-          let tmp14 = tmp9;
-          if (obj) {
-            let tmp16 = tmp14;
-            if (tmp14) {
-              tmp16 = !obj(13748)(tmp14, obj);
-            }
-            tmp13 = tmp16;
-          }
-          if (!tmp13) {
-            tmp14 = obj;
-          }
-          num3 = num + 1;
-          tmp9 = tmp14;
-          tmp10 = tmp14;
-          num = num3;
-        } while (num3 < obj.set.length);
-      }
-      let tmp20 = null;
-      if (tmp10) {
-        tmp20 = null;
-        if (obj.test(tmp10)) {
-          tmp20 = tmp10;
-        }
-      }
-      return tmp20;
-    }
+export default (version, pre, major2, major2, major22) => {
+  let tmp = major22;
+  let tmp2 = major2;
+  if (typeof major2 === "string") {
+    tmp = major2;
+    tmp2 = major2;
   }
-  tmp = obj;
+  try {
+    if (version instanceof _mod13755) {
+      version = version.version;
+    }
+    const tmp72 = new _mod13755(version, tmp3);
+    return tmp72.inc(pre, tmp2, tmp).version;
+  } catch (err) {
+    return null;
+  }
 };

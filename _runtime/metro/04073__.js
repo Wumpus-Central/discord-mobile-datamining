@@ -1,39 +1,38 @@
 // === Module 4073: ? ===
 
 // Module 4073
-import module_3922_mod from "module_3922" /* 3922 */;
-import _typeof_mod from "module_3918" /* 3918 */;
-import requiredArgs_mod from "requiredArgs" /* 3919 */;
+let closure_0 = { lessThanXSeconds: { one: "mindre \u00E4n en sekund", other: "mindre \u00E4n {{count}} sekunder" }, xSeconds: { one: "en sekund", other: "{{count}} sekunder" }, halfAMinute: "en halv minut", lessThanXMinutes: { one: "mindre \u00E4n en minut", other: "mindre \u00E4n {{count}} minuter" }, xMinutes: { one: "en minut", other: "{{count}} minuter" }, aboutXHours: { one: "ungef\u00E4r en timme", other: "ungef\u00E4r {{count}} timmar" }, xHours: { one: "en timme", other: "{{count}} timmar" }, xDays: { one: "en dag", other: "{{count}} dagar" }, aboutXWeeks: { one: "ungef\u00E4r en vecka", other: "ungef\u00E4r {{count}} vecka" }, xWeeks: { one: "en vecka", other: "{{count}} vecka" }, aboutXMonths: { one: "ungef\u00E4r en m\u00E5nad", other: "ungef\u00E4r {{count}} m\u00E5nader" }, xMonths: { one: "en m\u00E5nad", other: "{{count}} m\u00E5nader" }, aboutXYears: { one: "ungef\u00E4r ett \u00E5r", other: "ungef\u00E4r {{count}} \u00E5r" }, xYears: { one: "ett \u00E5r", other: "{{count}} \u00E5r" }, overXYears: { one: "\u00F6ver ett \u00E5r", other: "\u00F6ver {{count}} \u00E5r" }, almostXYears: { one: "n\u00E4stan ett \u00E5r", other: "n\u00E4stan {{count}} \u00E5r" } };
+let closure_1 = ["noll", "en", "tv\u00E5", "tre", "fyra", "fem", "sex", "sju", "\u00E5tta", "nio", "tio", "elva", "tolv"];
 
-let module_3922 = module_3922_mod;
-if (!module_3922) {
-  const obj = { default: module_3922 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_3922;
-}
-module_3922 = tmp3;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj2 = { default: _typeof };
-  let tmp5 = obj2;
-} else {
-  tmp5 = _typeof;
-}
-_typeof = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
-} else {
-  tmp7 = requiredArgs;
-}
-requiredArgs = tmp7;
-
-export default function addMilliseconds(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  const time = _typeof.default(arg0).getTime();
-  const defaultResult1 = _typeof.default(arg0);
-  return new Date(time + module_3922.default(arg1));
+export default function formatDistance(arg0, arg1, addSuffix) {
+  if (typeof closure_0[arg0] === "string") {
+    let tmp8 = tmp;
+    if (null != addSuffix) {
+      tmp8 = tmp;
+      if (addSuffix.addSuffix) {
+        if (!addSuffix.comparison) {
+          let text = `${tmp} sedan`;
+        }
+        text = `om ${tmp}`;
+      }
+    }
+    return tmp8;
+  } else if (1 === arg1) {
+    let one = tmp.one;
+  } else {
+    if (addSuffix) {
+      if (addSuffix.onlyNumeric) {
+        const _String2 = String;
+        one = tmp.other.replace("{{count}}", String(arg1));
+      }
+    }
+    if (arg1 < 13) {
+      let StringResult = closure_1[arg1];
+    } else {
+      const _String = String;
+      StringResult = String(arg1);
+    }
+    one = tmp.other.replace("{{count}}", StringResult);
+  }
 };
 export default exports.default;

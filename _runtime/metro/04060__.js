@@ -4,8 +4,8 @@
 import module_4061 from "module_4061" /* 4061 */;
 import module_4062 from "module_4062" /* 4062 */;
 import module_4063 from "module_4063" /* 4063 */;
-import date_mod from "module_4362" /* 4362 */;
-import date_mod from "module_4363" /* 4363 */;
+import date_mod from "module_4064" /* 4064 */;
+import date_mod from "module_4065" /* 4065 */;
 
 if (!module_4061) {
   const obj = { default: module_4061 };
@@ -40,5 +40,5 @@ if (!date) {
   tmp11 = date;
 }
 
-export default { code: "uk", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 1 } };
+export default { code: "ro", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 1 } };
 export default exports.default;

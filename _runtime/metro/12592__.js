@@ -1,73 +1,34 @@
 // === Module 12592: ? ===
 
 // Module 12592
-import _mod12511 from "module_12511" /* 12511 */;
-import _flush from "_flush" /* 12532 */;
-import _mod12557 from "module_12557" /* 12557 */;
+import _mod12593 from "module_12593" /* 12593 */;
+import setupIntegration from "module_12570" /* 12570 */;
 
-require = arg1;
-const dependencyMap = arg6;
-function getCurrentHubShim() {
-  return {
-    bindClient(arg0) {
-      const currentScope = _mod12511.getCurrentScope();
-      currentScope.setClient(arg0);
-    },
-    withScope: _mod12511.withScope,
-    getClient() {
-      return _mod12511.getClient();
-    },
-    getScope: _mod12511.getCurrentScope,
-    getIsolationScope: _mod12511.getIsolationScope,
-    captureException(arg0, arg1) {
-      const currentScope = _mod12511.getCurrentScope();
-      return currentScope.captureException(arg0, arg1);
-    },
-    captureMessage(arg0, arg1, arg2) {
-      const currentScope = _mod12511.getCurrentScope();
-      return currentScope.captureMessage(arg0, arg1, arg2);
-    },
-    captureEvent: _flush.captureEvent,
-    addBreadcrumb: _mod12557.addBreadcrumb,
-    setUser: _flush.setUser,
-    setTags: _flush.setTags,
-    setTag: _flush.setTag,
-    setExtra: _flush.setExtra,
-    setExtras: _flush.setExtras,
-    setContext: _flush.setContext,
-    getIntegration(id) {
-      const client = _mod12511.getClient();
-      let integrationByName = client;
-      if (client) {
-        integrationByName = client.getIntegrationByName(id.id);
-      }
-      if (!integrationByName) {
-        integrationByName = null;
-      }
-      return integrationByName;
-    },
-    startSession: _flush.startSession,
-    endSession: _flush.endSession,
-    captureSession(arg0) {
-      if (arg0) {
-        return _flush.endSession();
-      } else {
-        const currentScope = _mod12511.getCurrentScope();
-        const tmpResult3 = _mod12511;
-        const client = _mod12511.getClient();
-        const session = currentScope.getSession();
-        let tmp4 = client;
-        if (client) {
-          tmp4 = session;
-        }
-        if (tmp4) {
-          client.captureSession(session);
-        }
-        const tmpResult4 = _mod12511;
-      }
-    }
-  };
-}
 
-export const getCurrentHub = getCurrentHubShim;
-export { getCurrentHubShim };
+export const moduleMetadataIntegration = setupIntegration.defineIntegration(() => ({
+  name: "ModuleMetadata",
+  setup(on) {
+    const options = on;
+    on.on("beforeEnvelope", (arg0) => {
+      options(closure_1_1[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
+        if ("event" === arg1) {
+          const _Array = Array;
+          let tmp3;
+          if (Array.isArray(arg0)) {
+            tmp3 = arg0[1];
+          }
+          if (tmp3) {
+            const result = options(dependencyMap[2]).stripMetadataFromStackFrames(tmp3);
+            arg0[1] = tmp3;
+            const obj = options(dependencyMap[2]);
+          }
+        }
+      });
+    });
+    on.on("applyFrameMetadata", (type) => {
+      if (!type.type) {
+        const result = _mod12593.addMetadataToStackFrames(options.getOptions().stackParser, type);
+      }
+    });
+  }
+}));

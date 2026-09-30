@@ -2,6 +2,6 @@
 
 // Module 13937
 
-export const shouldPolyfill = function shouldPolyfill() {
-  return !("supportedValuesOf" in Intl);
+export const CanonicalizeLocaleList = function CanonicalizeLocaleList(items) {
+  return Intl.getCanonicalLocales(items);
 };

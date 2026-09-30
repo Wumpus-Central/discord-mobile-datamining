@@ -1,14 +1,7 @@
 // === Module 17683: ? ===
 
 // Module 17683
+import registerAsset from "module_1121" /* 1121 */;
 
-export default function basePropertyOf(arg0) {
-  closure_0 = arg0;
-  return (arg0) => {
-    let tmp2;
-    if (null != closure_0) {
-      tmp2 = tmp[arg0];
-    }
-    return tmp2;
-  };
-};
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 250, height: 200, scales: [2, 3], hash: "3c95b7ec7d2eb4c8fde35f37e918dd98", name: "img_bans_empty_light", type: "png" });

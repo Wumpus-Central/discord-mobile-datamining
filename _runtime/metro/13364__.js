@@ -1,12 +1,7 @@
 // === Module 13364: ? ===
 
 // Module 13364
-import _mod13378 from "module_13378" /* 13378 */;
-import assign from "module_13365" /* 13365 */;
-import Deflate from "Deflate" /* 13366 */;
-import Inflate from "Inflate" /* 13374 */;
+import registerAsset from "module_1121" /* 1121 */;
 
-const obj = {};
-assign.assign(obj, Deflate, Inflate, _mod13378);
 
-export default obj;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/activated", width: 213.5, height: 19, scales: [2, 3], hash: "9fe6076328e716d8c76fe3781ba19232", name: "img_subscription_activated_dark", type: "png" });

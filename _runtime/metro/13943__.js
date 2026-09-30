@@ -1,56 +1,27 @@
 // === Module 13943: ? ===
 
 // Module 13943
-import _mod13860 from "module_13860" /* 13860 */;
-import currencies2 from "currencies" /* 13944 */;
+import e from "e" /* 1161 */;
 
-require = arg1;
-const dependencyMap = arg6;
-function isSupportedCurrency(arr3, locale) {
-  let str = locale;
-  if (undefined === locale) {
-    str = "en";
-  }
-  try {
-    const obj = { style: "currency", currencyDisplay: "name", currency: arr3 };
-    const memoizedNumberFormat = _mod13860.createMemoizedNumberFormat(str, obj);
-    const str2 = memoizedNumberFormat.format(123);
-    if (str2.substring(0, 3) !== arr3) {
-      if (str3.substring(str3.length - 3) !== arr3) {
-        return true;
-      }
+e.__extends(function MissingLocaleDataError() {
+  const self = this;
+  let tmp2 = null !== Error;
+  if (!tmp2) {
+    if (!tmp2) {
+      tmp2 = self;
     }
-    return false;
-  } catch (err) {
-  }
-}
-
-export const getSupportedCurrencies = function getSupportedCurrencies(locale) {
-  const items = [];
-  const currencies = currencies2.currencies;
-  for (let num = 0; num < currencies.length; num = num + 1) {
-    let arr3 = currencies[num];
-    if (3 === arr3.length) {
-      if (isSupportedCurrency(arr3, locale)) {
-        let arr = items.push(arr3);
-      }
-    } else if (5 === arr3.length) {
-      if ("~" === arr3[3]) {
-        let indexOf = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf;
-        let index = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf(arr3[2]);
-        let indexOf2 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf;
-        let index1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf(arr3[4]);
-        if (index <= index1) {
-          do {
-            let sum = arr3.substring(0, 2) + "ABCDEFGHIJKLMNOPQRSTUVWXYZ"[index];
-            if (isSupportedCurrency(sum, locale)) {
-              let arr2 = items.push(sum);
-            }
-            index = index + 1;
-          } while (index <= index1);
-        }
-      }
+    tmp2.type = "MISSING_LOCALE_DATA";
+    return tmp2;
+  } else {
+    const apply = Error.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
     }
   }
-  return items;
+}, Error);
+
+export const isMissingLocaleDataError = function isMissingLocaleDataError(type) {
+  return "MISSING_LOCALE_DATA" === type.type;
 };

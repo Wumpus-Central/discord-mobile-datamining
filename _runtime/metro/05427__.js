@@ -1,17 +1,15 @@
 // === Module 5427: ? ===
 
 // Module 5427
-import _modDef5402 from "module_5402" /* 5402 */;
 import noop from "module_19" /* 19 */;
 
+({ useEffect: closure_0, useRef: closure_1 } = noop);
 
-export default function useTransitionProgress() {
-  const context = noop.useContext(_modDef5402);
-  if (undefined === context) {
-    const _Error = Error;
-    const error = new Error("Couldn't find values for transition progress. Are you inside a screen in Native Stack?");
-    throw error;
-  } else {
-    return context;
-  }
+export const usePrevious = function usePrevious(current) {
+  const tmp = framebus(undefined);
+  closure_1 = tmp;
+  React(() => {
+    closure_1.current = current;
+  });
+  return tmp.current;
 };

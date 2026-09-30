@@ -1,16 +1,7 @@
 // === Module 16837: ? ===
 
 // Module 16837
-import _mod8048 from "module_8048" /* 8048 */;
+import registerAsset from "module_1121" /* 1121 */;
 
 
-export default _mod8048((arg0, arg1, arg2) => {
-  let num = 1;
-  if (arg2) {
-    num = 0;
-  }
-  arg0[num].push(arg1);
-}, () => {
-  const items = [[], []];
-  return items;
-});
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/referral_program/native/images", width: 200.5, height: 114, scales: [2, 3], hash: "fbbee3b1c0716eaa554a8f9a94badc67", name: "asset_nitro_ticket", type: "png" });

@@ -1,28 +1,14 @@
 // === Module 4194: ? ===
 
 // Module 4194
-import _typeof_mod from "module_3918" /* 3918 */;
-import requiredArgs_mod from "requiredArgs" /* 3919 */;
+import code from "module_2114" /* 2114 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+if (!code) {
+  const obj = { default: code };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = code;
 }
-_typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
-  let tmp5 = obj2;
-} else {
-  tmp5 = requiredArgs;
-}
-requiredArgs = tmp5;
 
-export default function getMonth(arg0) {
-  requiredArgs.default(1, arguments);
-  return _typeof.default(arg0).getMonth();
-};
+export default tmp3.default;
 export default exports.default;

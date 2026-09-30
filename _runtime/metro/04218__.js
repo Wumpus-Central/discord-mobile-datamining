@@ -1,8 +1,8 @@
 // === Module 4218: ? ===
 
 // Module 4218
-import _typeof_mod from "module_3918" /* 3918 */;
-import requiredArgs_mod from "requiredArgs" /* 3919 */;
+import _typeof_mod from "module_3948" /* 3948 */;
+import requiredArgs_mod from "requiredArgs" /* 3949 */;
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -21,9 +21,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isFuture(arg0) {
+export default function getHours(arg0) {
   requiredArgs.default(1, arguments);
-  const time = _typeof.default(arg0).getTime();
-  return time > Date.now();
+  return _typeof.default(arg0).getHours();
 };
 export default exports.default;

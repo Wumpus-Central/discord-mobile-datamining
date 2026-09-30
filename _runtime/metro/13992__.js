@@ -1,17 +1,17 @@
 // === Module 13992: ? ===
 
 // Module 13992
-import _mod13961 from "module_13961" /* 13961 */;
-import element from "element" /* 13993 */;
-import getOwnPropertyDescriptor from "module_13960" /* 13960 */;
+import _mod13988 from "module_13988" /* 13988 */;
 
-let tmp2 = !getOwnPropertyDescriptor;
-if (!getOwnPropertyDescriptor) {
-  tmp2 = !_mod13961(() => 7 !== Object.defineProperty(element("div"), "a", {
-    get() {
-      return 7;
-    }
-  }).a);
-}
 
-export default tmp2;
+export default !_mod13988(() => {
+  const fn = () => {
+
+  };
+  const bindResult = fn.bind();
+  let hasOwnPropertyResult = typeof bindResult !== "function";
+  if (typeof bindResult === "function") {
+    hasOwnPropertyResult = bindResult.hasOwnProperty("prototype");
+  }
+  return hasOwnPropertyResult;
+});
