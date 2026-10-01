@@ -10,9 +10,9 @@ require = fn;
 function defaultAreStatesEqual(arg0, arg1) {
   return arg0 === arg1;
 }
-function useStateFromStores(items, getCurrentRestrictedHoursState, items1) {
+function useStateFromStores(items, getCurrentUser, items1) {
   _require = items;
-  const getStateFromStores = getCurrentRestrictedHoursState;
+  const getStateFromStores = getCurrentUser;
   dependencyMap = items1;
   let tmp = isVersionEqual;
   if (isVersionEqual === undefined) {
@@ -24,13 +24,13 @@ function useStateFromStores(items, getCurrentRestrictedHoursState, items1) {
   closure_6 = undefined;
   const tmp2 = state(null);
   if (null == tmp2.current) {
-    const obj = { stores: items, areStatesEqual: tmp, getStateFromStores: getCurrentRestrictedHoursState, prevDeps: "Boolean", state: "paddingHorizontal" };
+    const obj = { stores: items, areStatesEqual: tmp, getStateFromStores: getCurrentUser, prevDeps: "Boolean", state: "add" };
     tmp2.current = obj;
   }
   current = tmp2.current;
   state = current.state;
   if (null == items1) {
-    const tmp6 = getCurrentRestrictedHoursState();
+    const tmp6 = getCurrentUser();
     let tmp5 = state;
     if (!tmp7) {
       state = tmp6;
@@ -70,9 +70,9 @@ export function statesWillNeverBeEqual() {
   return false;
 }
 export { useStateFromStores };
-export const useStateFromStoresObject = function useStateFromStoresObject(items, getCurrentRestrictedHoursState, items1) {
-  return useStateFromStores(items, getCurrentRestrictedHoursState, items1, discord_common_shallowEqualDefault);
+export const useStateFromStoresObject = function useStateFromStoresObject(items, getCurrentUser, items1) {
+  return useStateFromStores(items, getCurrentUser, items1, discord_common_shallowEqualDefault);
 };
-export const useStateFromStoresArray = function useStateFromStoresArray(items, getCurrentRestrictedHoursState, items1) {
-  return useStateFromStores(items, getCurrentRestrictedHoursState, items1, discord_common_shallowEqual.areArraysShallowEqual);
+export const useStateFromStoresArray = function useStateFromStoresArray(items, getCurrentUser, items1) {
+  return useStateFromStores(items, getCurrentUser, items1, discord_common_shallowEqual.areArraysShallowEqual);
 };

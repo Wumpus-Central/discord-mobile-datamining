@@ -1,6 +1,6 @@
-// === Module 7612: SettingsConstants ===
+// === Module 7590: SettingsConstants ===
 
-// Module 7612 (SettingsConstants)
+// Module 7590 (SettingsConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_settings/core/native/SettingsConstants.tsx");

@@ -1,9 +1,9 @@
-// === Module 12796: UserProfileActivityTimebar ===
+// === Module 12805: UserProfileActivityTimebar ===
 
-// Module 12796 (UserProfileActivityTimebar)
+// Module 12805 (UserProfileActivityTimebar)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4862 */;
-import useActivityTimer from "useActivityTimer" /* 12797 */;
+import Text_Text from "Text/Text" /* 4841 */;
+import useActivityTimer from "useActivityTimer" /* 12806 */;
 import noop from "module_19" /* 19 */;
 
 const useActivityTimerDefault = useActivityTimer;
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = { bar: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.xs, height: 4, marginBottom: 4 }, progress: null, textRow: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.xs, height: 4, marginBottom: 4 };
 obj2.progress = { backgroundColor: nativeDefault.colors.ACTIVITY_TIMEBAR_PROGRESS_BACKGROUND, borderRadius: nativeDefault.radii.xs, height: "100%", minWidth: 4 };

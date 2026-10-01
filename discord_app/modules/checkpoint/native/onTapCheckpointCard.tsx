@@ -1,9 +1,9 @@
-// === Module 11622: onTapCheckpointCard ===
+// === Module 11630: onTapCheckpointCard ===
 
-// Module 11622 (onTapCheckpointCard)
+// Module 11630 (onTapCheckpointCard)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5046 */;
-import ChannelStore from "ChannelStore" /* 2045 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5025 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
 
 require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;

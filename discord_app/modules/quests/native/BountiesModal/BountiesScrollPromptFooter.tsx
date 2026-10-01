@@ -1,17 +1,17 @@
-// === Module 14750: BountiesScrollPromptFooter ===
+// === Module 14756: BountiesScrollPromptFooter ===
 
-// Module 14750 (BountiesScrollPromptFooter)
+// Module 14756 (BountiesScrollPromptFooter)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4596 */;
-import timing from "timing" /* 4867 */;
-import timingPresets from "timingPresets" /* 4870 */;
-import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 9625 */;
-import BountiesModalTransitionsRefactorExperiment from "BountiesModalTransitionsRefactorExperiment" /* 14751 */;
-import useVisibilityTransition from "useVisibilityTransition" /* 14752 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4595 */;
+import timing from "timing" /* 4846 */;
+import timingPresets from "timingPresets" /* 4849 */;
+import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 9619 */;
+import BountiesModalTransitionsRefactorExperiment from "BountiesModalTransitionsRefactorExperiment" /* 14757 */;
+import useVisibilityTransition from "useVisibilityTransition" /* 14758 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4855 */;
+import AccessibilityStore from "AccessibilityStore" /* 4834 */;
 
 require = fn;
 function BountiesScrollPromptFooterContent(zIndex) {
@@ -44,7 +44,7 @@ function BountiesScrollPromptFooterContent(zIndex) {
   if (stateFromStores) {
     str = "halt";
   }
-  obj3.children = closure_7(zIndex(4648).BountiesScrollGradientRive, { stateMachine: "State Machine 1", fit: "fill", alignment: "bottom-center", withReducedMotion: str });
+  obj3.children = closure_7(zIndex(4647).BountiesScrollGradientRive, { stateMachine: "State Machine 1", fit: "fill", alignment: "bottom-center", withReducedMotion: str });
   const items5 = [closure_7(ReanimatedRexportDefault.View, obj3), ];
   const obj4 = { style: null, onLayout: onContentLayout, children };
   const items6 = [tmp.content, memo1, opacityStyle];
@@ -54,10 +54,10 @@ function BountiesScrollPromptFooterContent(zIndex) {
   return closure_8(ReanimatedRexportDefault.View, obj2);
 }
 const StyleSheet = fn(17).StyleSheet;
-const QuestsExperimentLocations = fn(5953).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5942).QuestsExperimentLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let closure_9 = createStyles.createStyles(() => {
   const obj = { root: { position: "absolute", bottom: 0, left: 0, right: 0 }, content: { flex: 1, minHeight: 97, alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16 }, gradient: null };
   const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -68,15 +68,15 @@ const entering = function t(value) {
   const obj = { opacity: timing.withTiming(value, timingPresets.timingStandard, "respect-motion-settings") };
   return obj;
 };
-entering.__closure = { withTiming: fn(4867).withTiming, timingStandard: fn(4870).timingStandard };
+entering.__closure = { withTiming: fn(4846).withTiming, timingStandard: fn(4849).timingStandard };
 entering.__workletHash = 11416950434629;
 entering.__initData = { code: "function BountiesScrollPromptFooterTsx1(visible){const{withTiming,timingStandard}=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings')};}" };
 const fn2 = function n(value, fn) {
   const obj = { opacity: timing.withTiming(value, timingPresets.timingStandard, "respect-motion-settings", fn) };
   return obj;
 };
-let obj2 = { withTiming: fn(4867).withTiming, timingStandard: fn(4870).timingStandard };
-fn2.__closure = { withTiming: fn(4867).withTiming, timingStandard: fn(4870).timingStandard };
+let obj2 = { withTiming: fn(4846).withTiming, timingStandard: fn(4849).timingStandard };
+fn2.__closure = { withTiming: fn(4846).withTiming, timingStandard: fn(4849).timingStandard };
 fn2.__workletHash = 9928471408966;
 fn2.__initData = { code: "function BountiesScrollPromptFooterTsx2(visible,cleanUp){const{withTiming,timingStandard}=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings',cleanUp)};}" };
 const size = fn(2);

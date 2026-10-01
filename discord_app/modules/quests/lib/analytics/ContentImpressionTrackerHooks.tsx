@@ -1,11 +1,11 @@
-// === Module 10915: ContentImpressionTrackerHooks ===
+// === Module 10916: ContentImpressionTrackerHooks ===
 
-// Module 10915 (ContentImpressionTrackerHooks)
-import AdCreativeType from "AdCreativeType" /* 5960 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7336 */;
-import ContentImpressionTracker from "ContentImpressionTracker" /* 10916 */;
+// Module 10916 (ContentImpressionTrackerHooks)
+import AdCreativeType from "AdCreativeType" /* 5949 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7314 */;
+import QuestImpressionContext from "QuestImpressionContext" /* 10917 */;
 import noop from "module_19" /* 19 */;
-import QuestStore from "QuestStore" /* 7311 */;
+import QuestStore from "QuestStore" /* 7289 */;
 
 require = fn;
 const size = fn(2);
@@ -77,10 +77,10 @@ export const useQuestStatusChanged = function useQuestStatusChanged(adContentIds
   return memo !== adCreativeType(stateFromStores[5])(memo);
 };
 export const useQuestImpressionRef = function useQuestImpressionRef() {
-  return noop.useContext(ContentImpressionTracker.QuestImpressionContext);
+  return noop.useContext(QuestImpressionContext.QuestImpressionContext);
 };
 export const useQuestImpression = function useQuestImpression() {
-  const context = noop.useContext(ContentImpressionTracker.QuestImpressionContext);
+  const context = noop.useContext(QuestImpressionContext.QuestImpressionContext);
   let current;
   if (context != null) {
     current = context.current;
@@ -88,7 +88,7 @@ export const useQuestImpression = function useQuestImpression() {
   return current;
 };
 export const useQuestImpressionId = function useQuestImpressionId() {
-  const context = noop.useContext(ContentImpressionTracker.QuestImpressionContext);
+  const context = noop.useContext(QuestImpressionContext.QuestImpressionContext);
   let current;
   if (context != null) {
     current = context.current;
@@ -100,7 +100,7 @@ export const useQuestImpressionId = function useQuestImpressionId() {
   return id;
 };
 export const useGetQuestImpressionId = function useGetQuestImpressionId() {
-  const context = noop.useContext(ContentImpressionTracker.QuestImpressionContext);
+  const context = noop.useContext(QuestImpressionContext.QuestImpressionContext);
   const items = [context];
   return noop.useCallback(() => {
     let id;

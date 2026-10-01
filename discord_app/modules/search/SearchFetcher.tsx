@@ -1,10 +1,10 @@
-// === Module 12036: SearchFetcher ===
+// === Module 12044: SearchFetcher ===
 
-// Module 12036 (SearchFetcher)
+// Module 12044 (SearchFetcher)
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import _modDef1473 from "module_1473" /* 1473 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 2045 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
 
 require = fn;
 const Constants = fn(1074);

@@ -1,14 +1,14 @@
-// === Module 16433: GuildSettingsModalMemberApplications ===
+// === Module 16455: GuildSettingsModalMemberApplications ===
 
-// Module 16433 (GuildSettingsModalMemberApplications)
+// Module 16455 (GuildSettingsModalMemberApplications)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4688 */;
-import UserUtilsDefault from "UserUtils" /* 4708 */;
-import Text_Text from "Text/Text" /* 4862 */;
-import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 16434 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4687 */;
+import UserUtilsDefault from "UserUtils" /* 4707 */;
+import Text_Text from "Text/Text" /* 4841 */;
+import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 16456 */;
 import noop from "module_19" /* 19 */;
-import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6050 */;
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6039 */;
 
 const require = globalThis.__r;
 
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj = { containerInner: { paddingHorizontal: nativeDefault.space.PX_12, flex: 1, marginTop: 16 }, spinnerContainer: { padding: 32 }, footerSpinner: { paddingVertical: 16 }, spinner: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_12, flex: 1, marginTop: 16 };
 obj.spinner = { color: nativeDefault.colors.TEXT_BRAND };
@@ -61,7 +61,7 @@ let closure_12 = noop.memo((joinRequest) => {
       obj2.onPress = tmp;
       obj2.start = start;
       obj2.end = end;
-      return closure_7(joinRequest(6113).TableRow, obj2);
+      return closure_7(joinRequest(6103).TableRow, obj2);
     }
   }
 });

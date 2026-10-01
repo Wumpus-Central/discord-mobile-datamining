@@ -1,12 +1,12 @@
-// === Module 9902: FavoritesGuildIntroPopover ===
+// === Module 9894: FavoritesGuildIntroPopover ===
 
-// Module 9902 (FavoritesGuildIntroPopover)
+// Module 9894 (FavoritesGuildIntroPopover)
 import dismissible_content from "dismissible_content" /* 2029 */;
-import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 9903 */;
+import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 9895 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import DismissibleContentShownStateStore_mod from "DismissibleContentShownStateStore" /* 2035 */;
-import FavoriteStore from "FavoriteStore" /* 2048 */;
+import FavoriteStore from "FavoriteStore" /* 2047 */;
 
 const require = globalThis.__r;
 
@@ -45,7 +45,7 @@ export default noop.memo(function FavoritesGuildIntroPopover() {
           } else {
             items3 = [];
           }
-          const tmp12 = _slicedToArray(tmp(7002).useSelectedDismissibleContent(items3, undefined, true), 1)[0] === tmp(2029).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
+          const tmp12 = _slicedToArray(tmp(6993).useSelectedDismissibleContent(items3, undefined, true), 1)[0] === tmp(2029).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
           importDefault = tmp12;
           const items4 = [tmp12];
           const effect = noop.useEffect(() => {

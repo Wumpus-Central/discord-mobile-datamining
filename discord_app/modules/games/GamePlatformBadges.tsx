@@ -1,14 +1,15 @@
-// === Module 12085: GamePlatformBadges ===
+// === Module 12093: GamePlatformBadges ===
 
-// Module 12085 (GamePlatformBadges)
+// Module 12093 (GamePlatformBadges)
 import util from "util" /* 1115 */;
-import GamePlatformAvailability from "GamePlatformAvailability" /* 12084 */;
+import GamePlatformAvailability from "GamePlatformAvailability" /* 12092 */;
+import GamePlatformAvailabilityUtils from "GamePlatformAvailabilityUtils" /* 12094 */;
 import size from "module_2" /* 2 */;
 
-const items = [GamePlatformAvailability.GamePlatformAvailability.DESKTOP, GamePlatformAvailability.GamePlatformAvailability.MOBILE, GamePlatformAvailability.GamePlatformAvailability.CONSOLE];
 const result = size.fileFinishedImporting("modules/games/GamePlatformBadges.tsx");
 
-export const GAME_PLATFORM_AVAILABILITY_ORDER = items;
+export const GAME_PLATFORM_AVAILABILITY_ORDER = GamePlatformAvailabilityUtils.GAME_PLATFORM_AVAILABILITY_ORDER;
+export const sortGamePlatformAvailability = GamePlatformAvailabilityUtils.getOrderedGamePlatforms;
 export const getGamePlatformAvailabilityLabel = function getGamePlatformAvailabilityLabel(item) {
   if (GamePlatformAvailability.GamePlatformAvailability.DESKTOP === item) {
     const intl3 = util.intl;
@@ -20,13 +21,4 @@ export const getGamePlatformAvailabilityLabel = function getGamePlatformAvailabi
     const intl = util.intl;
     return intl.string(util.t.RT9Ccb);
   }
-};
-export const sortGamePlatformAvailability = function sortGamePlatformAvailability(platforms) {
-  if (null != platforms) {
-    if (0 !== platforms.length) {
-      const _Set = Set;
-      return items.filter((item) => set.has(item));
-    }
-  }
-  return [];
 };

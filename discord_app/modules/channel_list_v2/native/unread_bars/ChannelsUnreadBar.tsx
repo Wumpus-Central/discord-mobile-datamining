@@ -1,24 +1,24 @@
-// === Module 16014: ChannelsUnreadBar ===
+// === Module 16029: ChannelsUnreadBar ===
 
-// Module 16014 (ChannelsUnreadBar)
+// Module 16029 (ChannelsUnreadBar)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4596 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5046 */;
-import spring from "spring" /* 5476 */;
-import springPresets from "springPresets" /* 5480 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4595 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5025 */;
+import spring from "spring" /* 5464 */;
+import springPresets from "springPresets" /* 5468 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
-const RedesignChannelListConstants = fn(9778);
+const RedesignChannelListConstants = fn(9770);
 ({ getScaledSearchBarHeight: hasOwnProperty, VIEWABILITY_CONFIG: metroRequire } = RedesignChannelListConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let closure_10 = ReanimatedRexport.createAnimatedComponent(fn(17).Pressable);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let closure_11 = createStyles.createStyles((arg0, arg1) => {
   let num = 5;
   if (arg0) {

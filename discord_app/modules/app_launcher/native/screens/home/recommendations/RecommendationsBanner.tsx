@@ -1,12 +1,12 @@
-// === Module 11777: RecommendationsBanner ===
+// === Module 11785: RecommendationsBanner ===
 
-// Module 11777 (RecommendationsBanner)
+// Module 11785 (RecommendationsBanner)
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import FastImageDefault from "FastImage" /* 6095 */;
-import useAvatarColorDefault from "useAvatarColor" /* 7784 */;
-import useDisplayProfileDefault from "useDisplayProfile" /* 7826 */;
-import UserProfileBannerDefault from "UserProfileBanner" /* 7887 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 9132 */;
+import FastImageDefault from "FastImage" /* 6085 */;
+import useAvatarColorDefault from "useAvatarColor" /* 7771 */;
+import useDisplayProfileDefault from "useDisplayProfile" /* 7813 */;
+import UserProfileBannerDefault from "UserProfileBanner" /* 7874 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 9126 */;
 import noop from "module_19" /* 19 */;
 import UserRecord from "UserRecord" /* 1386 */;
 
@@ -15,12 +15,12 @@ const View = fn(17).View;
 const Constants = fn(1074);
 ({ BANNER_HEIGHT: metroRequire, EMPTY_STRING_SNOWFLAKE_ID: closure_7 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let closure_9 = createStyles.createStyles({ imageContainer: { width: "100%", height: "100%" }, image: { width: "100%", height: "100%" } });
 let closure_10 = noop.memo((applicationId) => {
   let heroMediaDimensions;
-  let obj = heroMediaDimensions(10990);
-  heroMediaDimensions = heroMediaDimensions(11769).useHeroMediaDimensions({ width: obj.useRequiredAppLauncherContext().width });
+  let obj = heroMediaDimensions(10994);
+  heroMediaDimensions = heroMediaDimensions(11777).useHeroMediaDimensions({ width: obj.useRequiredAppLauncherContext().width });
   const tmp4 = useEmbeddedActivityBackgroundDefault({ applicationId: applicationId.applicationId, size: heroMediaDimensions.width, names: ["embedded_cover"] });
   importDefault = tmp4;
   let items = [heroMediaDimensions, tmp4];

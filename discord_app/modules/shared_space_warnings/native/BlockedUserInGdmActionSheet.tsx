@@ -1,17 +1,17 @@
-// === Module 13477: BlockedUserInGdmActionSheet ===
+// === Module 13485: BlockedUserInGdmActionSheet ===
 
-// Module 13477 (BlockedUserInGdmActionSheet)
+// Module 13485 (BlockedUserInGdmActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4830 */;
-import Text_Text from "Text/Text" /* 4862 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4879 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5018 */;
-import TableRow from "TableRow" /* 6113 */;
-import SharedSpacesWarningActionCreators from "SharedSpacesWarningActionCreators" /* 13479 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4809 */;
+import Text_Text from "Text/Text" /* 4841 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4858 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4997 */;
+import TableRow from "TableRow" /* 6103 */;
+import SharedSpacesWarningActionCreators from "SharedSpacesWarningActionCreators" /* 13487 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2045 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -88,11 +88,11 @@ function UserCalloutAvatars(userIds) {
       obj3.size = REFRESH_MEDIUM_32;
       let tmp6 = closure_11(tmp(1177).Avatar, obj3);
     } else {
-      tmp6 = closure_11(tmp(11508).UserIcon, {});
+      tmp6 = closure_11(tmp(11516).UserIcon, {});
     }
   } else {
     const obj4 = { users: found, size: tmp(1177).AvatarSizes.REFRESH_MEDIUM_32 };
-    return closure_11(tmp(10574).FacepileGroupDMAvatar, obj4);
+    return closure_11(tmp(10566).FacepileGroupDMAvatar, obj4);
   }
   const obj = userIds(504);
 }
@@ -135,12 +135,12 @@ function BlockedUserInGDMDescription(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const SharedSpaceWarningConstants = fn(13478);
+const SharedSpaceWarningConstants = fn(13486);
 ({ BlockWarningEngagements: closure_8, GdmWarningMedium: closure_9 } = SharedSpaceWarningConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_11, Fragment: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = { container: { paddingTop: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8, textAlign: "center" }, headerImage: { alignSelf: "center", width: 73, height: 86 }, title: { textAlign: "center", alignSelf: "center" }, description: { textAlign: "center", alignSelf: "center" }, tableGroup: null, buttons: null, icon: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8, textAlign: "center" };
 obj2.tableGroup = { paddingVertical: nativeDefault.space.PX_24 };

@@ -1,9 +1,9 @@
-// === Module 8884: PremiumFeaturesLogo ===
+// === Module 8876: PremiumFeaturesLogo ===
 
-// Module 8884 (PremiumFeaturesLogo)
-import PremiumUtils from "PremiumUtils" /* 4518 */;
-import _modDef7053 from "module_7053" /* 7053 */;
-import _modDef8885 from "module_8885" /* 8885 */;
+// Module 8876 (PremiumFeaturesLogo)
+import PremiumUtils from "PremiumUtils" /* 4517 */;
+import _modDef7045 from "module_7045" /* 7045 */;
+import _modDef8877 from "module_8877" /* 8877 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,14 +15,14 @@ const result = size.fileFinishedImporting("modules/user_settings/premium/native/
 export default function PremiumFeaturesLogo(premiumType) {
   premiumType = premiumType.premiumType;
   if (premiumType === PremiumTypes.TIER_0) {
-    let tmp3 = _modDef8885;
+    let tmp3 = _modDef8877;
     let tmp = importDefault;
   } else {
     tmp = importDefault;
-    tmp3 = _modDef7053;
+    tmp3 = _modDef7045;
   }
   const obj = { accessible: true, accessibilityLabel: null, accessibilityRole: "header", style: null, resizeMode: "contain", source: null };
-  const tmpResult = tmp(6095);
+  const tmpResult = tmp(6085);
   obj.accessibilityLabel = PremiumUtils.getPremiumTypeDisplayName(premiumType);
   obj.style = premiumType.style;
   obj.source = tmp3;

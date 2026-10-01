@@ -1,16 +1,16 @@
-// === Module 16602: vibegrations/VibegrationsAwaitingUser ===
+// === Module 16623: vibegrations/VibegrationsAwaitingUser ===
 
-// Module 16602 (vibegrations/VibegrationsAwaitingUser)
+// Module 16623 (vibegrations/VibegrationsAwaitingUser)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4596 */;
-import timing from "timing" /* 4867 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4595 */;
+import timing from "timing" /* 4846 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4855 */;
+import AccessibilityStore from "AccessibilityStore" /* 4834 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 const PX_4 = nativeDefault.space.PX_4;
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = { ring: null };
 const rect = { position: "absolute", top: -PX_4, right: -PX_4, bottom: -PX_4, left: -PX_4, borderWidth: PX_4, borderColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.md };
 obj2.ring = rect;
@@ -24,7 +24,7 @@ export const VibegrationsAwaitingPulseRing = function VibegrationsAwaitingPulseR
   const items = [AccessibilityStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let obj = stateFromStores(504);
-  const sharedValue = stateFromStores(4596).useSharedValue(0);
+  const sharedValue = stateFromStores(4595).useSharedValue(0);
   const items1 = [sharedValue, stateFromStores];
   const effect = noop.useEffect(() => {
     if (stateFromStores) {
@@ -40,16 +40,16 @@ export const VibegrationsAwaitingPulseRing = function VibegrationsAwaitingPulseR
     }
     return fn;
   }, items1);
-  let obj2 = stateFromStores(4596);
+  let obj2 = stateFromStores(4595);
   let fn = function p() {
     return { opacity: sharedValue.get() };
   };
   fn.__closure = { opacity: sharedValue };
   fn.__workletHash = 7009775530053;
   fn.__initData = __initData;
-  const animatedStyle = stateFromStores(4596).useAnimatedStyle(fn);
+  const animatedStyle = stateFromStores(4595).useAnimatedStyle(fn);
   let obj4 = { pointerEvents: "none", style: null };
   const items2 = [tmp.ring, animatedStyle];
   obj4.style = items2;
-  return jsx(sharedValue(4596).View, { pointerEvents: "none", style: null });
+  return jsx(sharedValue(4595).View, { pointerEvents: "none", style: null });
 };

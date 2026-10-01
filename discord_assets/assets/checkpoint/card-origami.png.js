@@ -1,6 +1,6 @@
-// === Module 5105: ? ===
+// === Module 5084: ? ===
 
-// Module 5105
+// Module 5084
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/card-origami.png.js");

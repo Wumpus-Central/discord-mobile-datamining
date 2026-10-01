@@ -1,6 +1,6 @@
-// === Module 10737: GeneratedPaymentCurrencies ===
+// === Module 10734: GeneratedPaymentCurrencies ===
 
-// Module 10737 (GeneratedPaymentCurrencies)
+// Module 10734 (GeneratedPaymentCurrencies)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/GeneratedPaymentCurrencies.tsx");

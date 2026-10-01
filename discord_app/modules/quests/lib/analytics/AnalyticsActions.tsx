@@ -1,23 +1,23 @@
-// === Module 7326: AnalyticsActions ===
+// === Module 7304: AnalyticsActions ===
 
-// Module 7326 (AnalyticsActions)
+// Module 7304 (AnalyticsActions)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5046 */;
-import QuestTypes from "QuestTypes" /* 5956 */;
-import AdCreativeType from "AdCreativeType" /* 5960 */;
-import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7077 */;
-import QuestDataUtils from "QuestDataUtils" /* 7307 */;
-import SessionAdGenerator from "SessionAdGenerator" /* 7329 */;
-import utils_QuestUtils from "utils/QuestUtils" /* 7330 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7332 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7336 */;
-import captureAdUserAction from "captureAdUserAction" /* 7337 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7347 */;
-import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 7348 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5025 */;
+import QuestTypes from "QuestTypes" /* 5945 */;
+import AdCreativeType from "AdCreativeType" /* 5949 */;
+import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7069 */;
+import QuestDataUtils from "QuestDataUtils" /* 7285 */;
+import SessionAdGenerator from "SessionAdGenerator" /* 7307 */;
+import utils_QuestUtils from "utils/QuestUtils" /* 7308 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7310 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7314 */;
+import captureAdUserAction from "captureAdUserAction" /* 7315 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7325 */;
+import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 7326 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7327 */;
+import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7305 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1346 */;
-import QuestStore from "QuestStore" /* 7311 */;
+import QuestStore from "QuestStore" /* 7289 */;
 
 require = fn;
 function trackQuestEvent(sourceQuestContent) {
@@ -197,107 +197,42 @@ function getCommonClickEventProperties() {
   }
   return applyArgumentsResult;
 }
-let closure_14 = async function _getCommonClickEventProperties(arg0) {
-  if (c5 === 2) {
-    c5 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj4 = { value, done: true };
-      return obj4;
-    } else {
-      return { value: "HermesInternal", done: null };
+let closure_14 = async function _getCommonClickEventProperties() {
+  closure_2 = tmp2;
+  ({ questContent: closure_130_0, questContentPosition: closure_130_1, questContentRowIndex: closure_130_2, questContentCTA: closure_130_3, impressionId: closure_130_4, clickId: closure_130_5 } = closure_0);
+  await "flex";
+  await closure_131_0(closure_131_2[18]).getAdUser(closure_131_0(closure_131_2[10]).getQuestContentName(closure_130_0));
+  closure_130_6 = value;
+  const obj11 = {};
+  const merged = Object.assign(closure_131_0(closure_131_2[10]).getContentProperties(closure_130_0, closure_130_1, closure_130_2));
+  const merged1 = Object.assign(closure_131_1(closure_131_2[19])());
+  obj11.cta_name = closure_130_3;
+  obj11.impression_id = closure_130_4;
+  let advertisingId = null;
+  if (null != closure_130_6) {
+    advertisingId = null;
+    if (obj.isIOS()) {
+      advertisingId = closure_130_6.advertisingId;
     }
-  } else {
-    try {
-      c5 = 2;
-      if (0 === c4) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
-        } else {
-          closure_3 = tmp5;
-          closure_2 = tmp2;
-          closure_130_0 = undefined;
-          closure_130_1 = undefined;
-          closure_130_2 = undefined;
-          closure_130_3 = undefined;
-          closure_130_4 = undefined;
-          closure_130_5 = undefined;
-          ({ questContent: closure_130_0, questContentPosition: closure_130_1, questContentRowIndex: closure_130_2, questContentCTA: closure_130_3, impressionId: closure_130_4, clickId: closure_130_5 } = closure_0);
-          closure_130_6 = undefined;
-          c4 = 1;
-          c5 = 1;
-          return { value: "flex", done: true };
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          const obj8 = { value, done: true };
-          return obj8;
-        } else {
-          const obj6 = closure_131_0(closure_131_2[18]);
-          c4 = 2;
-          c5 = 1;
-          const obj9 = { value: obj6.getAdUser(closure_131_0(closure_131_2[10]).getQuestContentName(closure_130_0)), done: false };
-          return obj9;
-        }
-      } else if (arg0 === 1) {
-        c5 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c5 = 3;
-        const obj10 = { value, done: true };
-        return obj10;
-      } else {
-        closure_130_6 = value;
-        const obj11 = {};
-        const merged = Object.assign(closure_131_0(closure_131_2[10]).getContentProperties(closure_130_0, closure_130_1, closure_130_2));
-        const merged1 = Object.assign(closure_131_1(closure_131_2[19])());
-        obj11.cta_name = closure_130_3;
-        obj11.impression_id = closure_130_4;
-        let advertisingId = null;
-        if (null != closure_130_6) {
-          advertisingId = null;
-          if (obj.isIOS()) {
-            advertisingId = closure_130_6.advertisingId;
-          }
-          obj = closure_131_0(closure_131_2[20]);
-        }
-        obj11.apple_advertising_id = advertisingId;
-        let advertisingId1 = null;
-        if (null != closure_130_6) {
-          advertisingId1 = null;
-          if (obj2.isAndroid()) {
-            advertisingId1 = closure_130_6.advertisingId;
-          }
-          obj2 = closure_131_0(closure_131_2[20]);
-        }
-        obj11.android_advertising_id = advertisingId1;
-        let click_id = closure_130_5;
-        if (closure_130_5 == null) {
-          click_id = closure_131_0(closure_131_2[21]).v4();
-          const obj3 = closure_131_0(closure_131_2[21]);
-        }
-        obj11.click_id = click_id;
-        c5 = 3;
-        const obj12 = { value: obj11, done: true };
-        return obj12;
-      }
-    } catch (tmp33) {
-      c5 = tmp;
-      throw tmp33;
-    }
+    obj = closure_131_0(closure_131_2[20]);
   }
+  obj11.apple_advertising_id = advertisingId;
+  let advertisingId1 = null;
+  if (null != closure_130_6) {
+    advertisingId1 = null;
+    if (obj2.isAndroid()) {
+      advertisingId1 = closure_130_6.advertisingId;
+    }
+    obj2 = closure_131_0(closure_131_2[20]);
+  }
+  obj11.android_advertising_id = advertisingId1;
+  let click_id = closure_130_5;
+  if (closure_130_5 == null) {
+    click_id = closure_131_0(closure_131_2[21]).v4();
+    closure_131_0(closure_131_2[21]);
+  }
+  obj11.click_id = click_id;
+  return obj11;
 };
 function trackQuestContentClicked() {
   const self = this;
@@ -309,44 +244,112 @@ function trackQuestContentClicked() {
   }
   return applyArgumentsResult;
 }
-let closure_16 = async function _trackQuestContentClicked() {
-  const adTrafficMetadataSealed = closure_134_0(closure_134_2[7]).getAdTrafficMetadataSealed(closure_135_8, closure_135_0);
-  set = closure_134_9;
-  const obj6 = { questId: closure_135_0, event: closure_134_7.QUEST_CONTENT_CLICKED };
-  const properties = {};
-  await closure_134_13({ questContent: closure_135_1, questContentPosition: closure_135_3, questContentRowIndex: closure_135_4, questContentCTA: closure_135_2, impressionId: closure_135_5, clickId: closure_135_6 });
-  const merged = Object.assign(value);
-  const adMetadataSealed = closure_134_0(closure_134_2[7]).getAdMetadataSealed(closure_135_8);
-  let metadata_sealed = adMetadataSealed;
-  if (adMetadataSealed == null) {
-    metadata_sealed = null;
+let closure_16 = async function _trackQuestContentClicked(arg0) {
+  if (c10 === 2) {
+    c10 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj3 = { value, done: true };
+      return obj3;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c10 = 2;
+      if (0 === c9) {
+        if (arg0 === 1) {
+          c10 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c10 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          closure_6 = tmp5;
+          closure_7 = tmp2;
+          closure_135_0 = undefined;
+          closure_135_1 = undefined;
+          closure_135_2 = undefined;
+          closure_135_3 = undefined;
+          closure_135_4 = undefined;
+          closure_135_5 = undefined;
+          closure_135_6 = undefined;
+          closure_135_7 = undefined;
+          closure_135_8 = undefined;
+          ({ questId: closure_135_0, questContent: closure_135_1, questContentCTA: closure_135_2, questContentPosition: closure_135_3, questContentRowIndex: closure_135_4, impressionId: closure_135_5, clickId: closure_135_6, trackGuildAndChannelMetadata: closure_135_7, sourceQuestContent: closure_135_8 } = closure_0);
+          let adTrafficMetadataSealed;
+          c9 = 1;
+          c10 = 1;
+          return { value: "flex", done: null };
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c10 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c10 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
+        } else {
+          adTrafficMetadataSealed = closure_134_0(closure_134_2[7]).getAdTrafficMetadataSealed(closure_135_8, closure_135_0);
+          set = closure_134_9;
+          const obj6 = { questId: closure_135_0, event: closure_134_7.QUEST_CONTENT_CLICKED };
+          const properties = {};
+          const obj7 = { questContent: closure_135_1, questContentPosition: closure_135_3, questContentRowIndex: closure_135_4, questContentCTA: closure_135_2, impressionId: closure_135_5, clickId: closure_135_6 };
+          c9 = 2;
+          c10 = 1;
+          const obj10 = { value: closure_134_13(obj7), done: false };
+          return obj10;
+        }
+      } else if (arg0 === 1) {
+        c10 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c10 = 3;
+        const obj11 = { value, done: true };
+        return obj11;
+      } else {
+        const merged = Object.assign(value);
+        const adMetadataSealed = closure_134_0(closure_134_2[7]).getAdMetadataSealed(closure_135_8);
+        let metadata_sealed = adMetadataSealed;
+        if (adMetadataSealed == null) {
+          metadata_sealed = null;
+        }
+        properties.metadata_sealed = metadata_sealed;
+        let traffic_metadata_sealed = adTrafficMetadataSealed;
+        if (adTrafficMetadataSealed == null) {
+          traffic_metadata_sealed = null;
+        }
+        properties.traffic_metadata_sealed = traffic_metadata_sealed;
+        const obj8 = closure_134_0(closure_134_2[7]);
+        const currentQuestHomeSearchSession = closure_134_0(closure_134_2[22]).getCurrentQuestHomeSearchSession();
+        let uuid;
+        if (currentQuestHomeSearchSession != null) {
+          uuid = currentQuestHomeSearchSession.uuid;
+        }
+        let search_session_id = uuid;
+        if (uuid == null) {
+          search_session_id = null;
+        }
+        properties.search_session_id = search_session_id;
+        obj6.properties = properties;
+        obj6.trackGuildAndChannelMetadata = closure_135_7;
+        obj = closure_134_0(closure_134_2[22]);
+        obj6.shouldExtendSession = closure_134_0(closure_134_2[7]).isBillableQuestContent(closure_135_1);
+        obj6.sourceQuestContent = closure_135_8;
+        set(obj6);
+        c10 = 3;
+        return { value: "HermesInternal", done: null };
+      }
+    } catch (tmp29) {
+      c10 = tmp;
+      throw tmp29;
+    }
   }
-  properties.metadata_sealed = metadata_sealed;
-  let traffic_metadata_sealed = adTrafficMetadataSealed;
-  if (adTrafficMetadataSealed == null) {
-    traffic_metadata_sealed = null;
-  }
-  properties.traffic_metadata_sealed = traffic_metadata_sealed;
-  closure_134_0(closure_134_2[7]);
-  const currentQuestHomeSearchSession = closure_134_0(closure_134_2[22]).getCurrentQuestHomeSearchSession();
-  if (currentQuestHomeSearchSession != null) {
-    const uuid = currentQuestHomeSearchSession.uuid;
-  }
-  let search_session_id = uuid;
-  if (uuid == null) {
-    search_session_id = null;
-  }
-  properties.search_session_id = search_session_id;
-  obj6.properties = properties;
-  obj6.trackGuildAndChannelMetadata = closure_135_7;
-  closure_134_0(closure_134_2[22]);
-  obj6.shouldExtendSession = closure_134_0(closure_134_2[7]).isBillableQuestContent(closure_135_1);
-  obj6.sourceQuestContent = closure_135_8;
-  set(obj6);
-  await "HermesInternal";
-  closure_7 = tmp2;
-  ({ questId: closure_135_0, questContent: closure_135_1, questContentCTA: closure_135_2, questContentPosition: closure_135_3, questContentRowIndex: closure_135_4, impressionId: closure_135_5, clickId: closure_135_6, trackGuildAndChannelMetadata: closure_135_7, sourceQuestContent: closure_135_8 } = closure_0);
-  return "flex";
 };
 function trackAdContentClicked() {
   const self = this;
@@ -358,19 +361,86 @@ function trackAdContentClicked() {
   }
   return applyArgumentsResult;
 }
-let closure_18 = async function _trackAdContentClicked() {
-  dependencyMap = closure_131_12;
-  const obj5 = { adContentId: closure_132_0, relatedQuestId: closure_132_1, adCreativeType: closure_132_2, event: closure_131_7.QUEST_CONTENT_CLICKED };
-  await closure_131_13({ questContent: closure_132_3, questContentPosition: closure_132_5, questContentRowIndex: closure_132_6, questContentCTA: closure_132_4, impressionId: closure_132_7 });
-  obj5.properties = value;
-  obj5.trackGuildAndChannelMetadata = closure_132_8;
-  obj5.shouldExtendSession = closure_131_0(closure_131_2[7]).isBillableQuestContent(closure_132_3);
-  obj5.sourceQuestContent = closure_132_9;
-  dependencyMap(obj5);
-  await "HermesInternal";
-  closure_4 = tmp2;
-  ({ adContentId: closure_132_0, relatedQuestId: closure_132_1, adCreativeType: closure_132_2, questContent: closure_132_3, questContentCTA: closure_132_4, questContentPosition: closure_132_5, questContentRowIndex: closure_132_6, impressionId: closure_132_7, trackGuildAndChannelMetadata: closure_132_8, sourceQuestContent: closure_132_9 } = closure_0);
-  return "flex";
+let closure_18 = async function _trackAdContentClicked(arg0) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_3 = tmp5;
+          closure_4 = tmp2;
+          closure_132_0 = undefined;
+          closure_132_1 = undefined;
+          closure_132_2 = undefined;
+          closure_132_3 = undefined;
+          closure_132_4 = undefined;
+          closure_132_5 = undefined;
+          closure_132_6 = undefined;
+          closure_132_7 = undefined;
+          closure_132_8 = undefined;
+          closure_132_9 = undefined;
+          ({ adContentId: closure_132_0, relatedQuestId: closure_132_1, adCreativeType: closure_132_2, questContent: closure_132_3, questContentCTA: closure_132_4, questContentPosition: closure_132_5, questContentRowIndex: closure_132_6, impressionId: closure_132_7, trackGuildAndChannelMetadata: closure_132_8, sourceQuestContent: closure_132_9 } = closure_0);
+          c5 = 1;
+          c6 = 1;
+          return { value: "flex", done: null };
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          dependencyMap = closure_131_12;
+          const obj5 = { adContentId: closure_132_0, relatedQuestId: closure_132_1, adCreativeType: closure_132_2, event: closure_131_7.QUEST_CONTENT_CLICKED };
+          const obj6 = { questContent: closure_132_3, questContentPosition: closure_132_5, questContentRowIndex: closure_132_6, questContentCTA: closure_132_4, impressionId: closure_132_7 };
+          c5 = 2;
+          c6 = 1;
+          const obj7 = { value: closure_131_13(obj6), done: false };
+          return obj7;
+        }
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 3;
+        const obj8 = { value, done: true };
+        return obj8;
+      } else {
+        obj5.properties = value;
+        obj5.trackGuildAndChannelMetadata = closure_132_8;
+        obj5.shouldExtendSession = closure_131_0(closure_131_2[7]).isBillableQuestContent(closure_132_3);
+        obj5.sourceQuestContent = closure_132_9;
+        dependencyMap(obj5);
+        c6 = 3;
+        return { value: "HermesInternal", done: null };
+      }
+    } catch (tmp16) {
+      c6 = tmp;
+      throw tmp16;
+    }
+  }
 };
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const items = [, , ];

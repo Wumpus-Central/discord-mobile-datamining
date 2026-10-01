@@ -1,9 +1,9 @@
-// === Module 9467: StartEventUtils ===
+// === Module 9461: StartEventUtils ===
 
-// Module 9467 (StartEventUtils)
+// Module 9461 (StartEventUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 2045 */;
-import GuildStore from "GuildStore" /* 2067 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
+import GuildStore from "GuildStore" /* 2066 */;
 
 const require = fn;
 function createStageChannelForEvent() {
@@ -55,7 +55,7 @@ let closure_11 = async function _createStageChannelForEvent(arg0) {
           closure_131_4 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "flex", done: true };
+          return { value: "flex", done: null };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -177,71 +177,120 @@ let closure_13 = async function _preStartEventActions(arg0, arg1) {
   })();
 };
 let closure_14 = async function _setEventAsActive(arg0) {
-  if (1 === tmp5) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
     if (arg0 === 1) {
-      c5 = 3;
       throw value;
     } else if (arg0 === 2) {
-      c5 = 3;
-      return { value, done: true };
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
-      const channel_id = closure_130_0.channel_id;
-      const entity_type = closure_130_0.entity_type;
-      const name = closure_130_0.name;
-      const id = closure_130_0.id;
-      const guild_id = closure_130_0.guild_id;
-      if (closure_131_7.STAGE_INSTANCE === entity_type) {
-        closure_131_1(closure_131_2[7])(null != channel_id, "channel_id is required");
-        c4 = 2;
-        c5 = 1;
-        closure_131_0(closure_131_2[8]);
-        return { value: closure_131_0(closure_131_2[8]).startStageInstance(channel_id, name, closure_131_8.GUILD_ONLY, closure_130_1, id), done: false };
-      } else if (closure_131_7.VOICE === tmp53) {
-        closure_131_1(closure_131_2[7])(null != channel_id, "channel_id is required");
-        c4 = 3;
-        c5 = 1;
-        return { value: closure_131_1(closure_131_2[9]).startEvent(id, guild_id), done: false };
-      } else if (closure_131_7.EXTERNAL === tmp53) {
-        c4 = 4;
-        c5 = 1;
-        return { value: closure_131_1(closure_131_2[9]).startEvent(id, guild_id), done: false };
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c4) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_3 = tmp5;
+          closure_2 = tmp2;
+          closure_130_1 = undefined;
+          closure_130_0 = closure_0;
+          let flag = closure_1;
+          if (closure_1 === undefined) {
+            flag = false;
+          }
+          closure_130_1 = flag;
+          let channel_id;
+          let entity_type;
+          let name;
+          let id;
+          let guild_id;
+          c4 = 1;
+          c5 = 1;
+          return { value: "flex", done: null };
+        }
+      } else {
+        if (1 === tmp5) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            const obj5 = { value, done: true };
+            return obj5;
+          } else {
+            channel_id = closure_130_0.channel_id;
+            entity_type = closure_130_0.entity_type;
+            name = closure_130_0.name;
+            id = closure_130_0.id;
+            guild_id = closure_130_0.guild_id;
+            if (closure_131_7.STAGE_INSTANCE === entity_type) {
+              closure_131_1(closure_131_2[7])(null != channel_id, "channel_id is required");
+              const obj8 = closure_131_0(closure_131_2[8]);
+              c4 = 2;
+              c5 = 1;
+              const obj7 = { value: obj8.startStageInstance(channel_id, name, closure_131_8.GUILD_ONLY, closure_130_1, id), done: false };
+              return obj7;
+            } else if (closure_131_7.VOICE === tmp53) {
+              closure_131_1(closure_131_2[7])(null != channel_id, "channel_id is required");
+              c4 = 3;
+              c5 = 1;
+              const obj9 = { value: closure_131_1(closure_131_2[9]).startEvent(id, guild_id), done: false };
+              return obj9;
+            } else if (closure_131_7.EXTERNAL === tmp53) {
+              c4 = 4;
+              c5 = 1;
+              const obj10 = { value: closure_131_1(closure_131_2[9]).startEvent(id, guild_id), done: false };
+              return obj10;
+            }
+          }
+        } else if (2 === tmp5) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            const obj11 = { value, done: true };
+            return obj11;
+          }
+        } else if (3 === tmp5) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            const obj12 = { value, done: true };
+            return obj12;
+          }
+        } else if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj = { value, done: true };
+          return obj;
+        }
+        c5 = 3;
+        return { value: "HermesInternal", done: null };
       }
+    } catch (tmp41) {
+      c5 = tmp;
+      throw tmp41;
     }
-  } else if (2 === tmp5) {
-    if (arg0 === 1) {
-      c5 = 3;
-      throw value;
-    } else if (arg0 === 2) {
-      c5 = 3;
-      return { value, done: true };
-    }
-  } else if (3 === tmp5) {
-    if (arg0 === 1) {
-      c5 = 3;
-      throw value;
-    } else if (arg0 === 2) {
-      c5 = 3;
-      return { value, done: true };
-    }
-  } else if (arg0 === 1) {
-    c5 = 3;
-    throw value;
-  } else if (arg0 === 2) {
-    c5 = 3;
-    return { value, done: true };
   }
-  await "HermesInternal";
-  closure_2 = tmp2;
-  closure_130_0 = closure_0;
-  let flag = closure_1;
-  if (closure_1 === undefined) {
-    flag = false;
-  }
-  closure_130_1 = flag;
-  return "flex";
 };
-let closure_4 = fn(2049).createChannelRecordFromServer;
-const GuildScheduledEventsConstants = fn(2051);
+let closure_4 = fn(2048).createChannelRecordFromServer;
+const GuildScheduledEventsConstants = fn(2050);
 ({ GuildScheduledEventEntityTypes: closure_7, GuildScheduledEventPrivacyLevel: closure_8 } = GuildScheduledEventsConstants);
 const ChannelTypes = fn(1074).ChannelTypes;
 const size = fn(2);

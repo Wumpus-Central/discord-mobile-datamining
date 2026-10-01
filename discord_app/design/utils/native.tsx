@@ -1,10 +1,10 @@
-// === Module 4563: native ===
+// === Module 4562: native ===
 
-// Module 4563 (native)
-import getNodeText from "getNodeText" /* 4564 */;
-import mergeProps from "mergeProps" /* 4566 */;
-import useFocus from "useFocus" /* 4567 */;
-import themes from "themes" /* 4568 */;
+// Module 4562 (native)
+import getNodeText from "getNodeText" /* 4563 */;
+import mergeProps from "mergeProps" /* 4565 */;
+import useFocus from "useFocus" /* 4566 */;
+import themes from "themes" /* 4567 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/utils/native.tsx");

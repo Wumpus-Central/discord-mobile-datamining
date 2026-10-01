@@ -1,12 +1,12 @@
-// === Module 7684: JoinRequestNotificationSystemMessage ===
+// === Module 7672: JoinRequestNotificationSystemMessage ===
 
-// Module 7684 (JoinRequestNotificationSystemMessage)
+// Module 7672 (JoinRequestNotificationSystemMessage)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1115 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7601 */;
-import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6050 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4686 */;
-import GuildStore from "GuildStore" /* 2067 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7579 */;
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6039 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4685 */;
+import GuildStore from "GuildStore" /* 2066 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;

@@ -1,21 +1,21 @@
-// === Module 5934: StageChannelParticipants ===
+// === Module 5923: StageChannelParticipants ===
 
-// Module 5934 (StageChannelParticipants)
-import SecondaryIndexMap from "SecondaryIndexMap" /* 4494 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 4918 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 5013 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5018 */;
-import getParticipantUserKeyDefault from "getParticipantUserKey" /* 5937 */;
-import useGuildMemberDisplayRole from "useGuildMemberDisplayRole" /* 5938 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4888 */;
-import ChannelStore from "ChannelStore" /* 2045 */;
-import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 5935 */;
-import GuildMemberStore from "GuildMemberStore" /* 2108 */;
-import RelationshipStore from "RelationshipStore" /* 4509 */;
+// Module 5923 (StageChannelParticipants)
+import SecondaryIndexMap from "SecondaryIndexMap" /* 4493 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 4897 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4992 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4997 */;
+import getParticipantUserKeyDefault from "getParticipantUserKey" /* 5926 */;
+import useGuildMemberDisplayRole from "useGuildMemberDisplayRole" /* 5927 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4867 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
+import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 5924 */;
+import GuildMemberStore from "GuildMemberStore" /* 2107 */;
+import RelationshipStore from "RelationshipStore" /* 4508 */;
 import UserStore from "UserStore" /* 1372 */;
-import VoiceStateStore from "VoiceStateStore" /* 4885 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 5930 */;
-import StageInstanceStore from "StageInstanceStore" /* 2050 */;
+import VoiceStateStore from "VoiceStateStore" /* 4864 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 5919 */;
+import StageInstanceStore from "StageInstanceStore" /* 2049 */;
 
 require = fn;
 function sortKey(speaker) {
@@ -91,7 +91,7 @@ function getParticipantIndex(arg0) {
   }
   return items;
 }
-const getComparator = fn(4890).getComparator;
+const getComparator = fn(4869).getComparator;
 const StageChannelParticipantNamedIndex = { SPEAKER: "SPEAKER", AUDIENCE: "AUDIENCE", NO_ROLE: "NO_ROLE", ALL_REQUESTED_TO_SPEAK: "ALL_REQUESTED_TO_SPEAK", REQUESTED_TO_SPEAK_ONLY: "REQUESTED_TO_SPEAK_ONLY", BLOCKED: "BLOCKED", IGNORED: "IGNORED", FRIEND: "FRIEND", SELECTED: "SELECTED", MEDIA: "MEDIA" };
 let obj2 = { VOICE: "VOICE", STREAM: "STREAM" };
 const size = fn(2);

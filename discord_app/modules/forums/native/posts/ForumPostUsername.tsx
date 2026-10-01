@@ -1,16 +1,16 @@
-// === Module 11690: ForumPostUsername ===
+// === Module 11698: ForumPostUsername ===
 
-// Module 11690 (ForumPostUsername)
+// Module 11698 (ForumPostUsername)
 import initialize from "initialize" /* 504 */;
 import native from "native" /* 1177 */;
-import ForumLayout from "ForumLayout" /* 2055 */;
-import Text_Text from "Text/Text" /* 4862 */;
-import ForumHooks from "ForumHooks" /* 7506 */;
-import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 7598 */;
-import useChatWidthDefault from "useChatWidth" /* 11225 */;
-import ForumPostGridBody from "ForumPostGridBody" /* 11691 */;
+import ForumLayout from "ForumLayout" /* 2054 */;
+import Text_Text from "Text/Text" /* 4841 */;
+import ForumHooks from "ForumHooks" /* 7484 */;
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 7576 */;
+import useChatWidthDefault from "useChatWidth" /* 11229 */;
+import ForumPostGridBody from "ForumPostGridBody" /* 11699 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4855 */;
+import AccessibilityStore from "AccessibilityStore" /* 4834 */;
 
 require = fn;
 function ForumPostUsername(arg0) {
@@ -68,10 +68,10 @@ function ForumPostUsername(arg0) {
   const tmp2Result = initialize;
 }
 const View = fn(17).View;
-const useForumChannelStore = fn(11686).useForumChannelStore;
+const useForumChannelStore = fn(11694).useForumChannelStore;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let closure_8 = createStyles.createStyles({ authorContainer: { flexDirection: "row", alignItems: "center", justifyContent: "center", marginEnd: 8 }, roleDotContainer: { alignItems: "center", justifyContent: "center", marginEnd: 2, marginBottom: 4 }, authorName: { overflow: "hidden", flexWrap: "nowrap" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPostUsername.tsx");

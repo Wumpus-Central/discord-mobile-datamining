@@ -1,12 +1,12 @@
-// === Module 16951: useAutoSettingsSearchSessionAnalytics ===
+// === Module 16973: useAutoSettingsSearchSessionAnalytics ===
 
-// Module 16951 (useAutoSettingsSearchSessionAnalytics)
-import useMountEffectDefault from "useMountEffect" /* 5494 */;
-import SettingSearchSessionAnalyticsManagerDefault from "SettingSearchSessionAnalyticsManager" /* 6613 */;
-import usePreviousDefault from "usePrevious" /* 7915 */;
+// Module 16973 (useAutoSettingsSearchSessionAnalytics)
+import useMountEffectDefault from "useMountEffect" /* 5482 */;
+import SettingSearchSessionAnalyticsManagerDefault from "SettingSearchSessionAnalyticsManager" /* 6603 */;
+import usePreviousDefault from "usePrevious" /* 7902 */;
 import noop from "module_19" /* 19 */;
 import AppStateStore from "AppStateStore" /* 1980 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 14456 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 14462 */;
 
 const require = fn;
 const size = fn(2);

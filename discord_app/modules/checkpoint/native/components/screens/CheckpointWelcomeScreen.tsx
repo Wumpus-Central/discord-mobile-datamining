@@ -1,20 +1,20 @@
-// === Module 15467: CheckpointWelcomeScreen ===
+// === Module 15472: CheckpointWelcomeScreen ===
 
-// Module 15467 (CheckpointWelcomeScreen)
+// Module 15472 (CheckpointWelcomeScreen)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1479 */;
-import _modDef3005 from "module_3005" /* 3005 */;
-import _modDef3037 from "module_3037" /* 3037 */;
-import UserUtils from "UserUtils" /* 4708 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 15468 */;
-import TextWritingAnimation from "TextWritingAnimation" /* 15469 */;
-import CheckpointKnickKnacksDefault from "CheckpointKnickKnacks" /* 15471 */;
+import _modDef3004 from "module_3004" /* 3004 */;
+import _modDef3036 from "module_3036" /* 3036 */;
+import UserUtils from "UserUtils" /* 4707 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 15473 */;
+import TextWritingAnimation from "TextWritingAnimation" /* 15474 */;
+import CheckpointKnickKnacksDefault from "CheckpointKnickKnacks" /* 15476 */;
 import UserStore from "UserStore" /* 1372 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4866 */;
+import createStyles from "createStyles" /* 4845 */;
 import size from "module_2" /* 2 */;
 
 const TextWritingAnimationDefault = TextWritingAnimation;
@@ -45,11 +45,11 @@ export default function CheckpointWelcomeScreen() {
   obj6.style = items1;
   const tmp5 = CheckpointScreenDefault;
   const intl = util.intl;
-  obj6.text = intl.string(_modDef3005["CdU/PF"]);
+  obj6.text = intl.string(_modDef3004["CdU/PF"]);
   const items3 = [hasOwnProperty(TextWritingAnimationDefault, obj6), , ];
   const obj8 = { style: tmp.subtitle, text: null, delay: null, variant: "heading-xl/medium" };
   const intl2 = util.intl;
-  obj8.text = intl2.formatToPlainString(_modDef3037.xhZ23b, { username: name });
+  obj8.text = intl2.formatToPlainString(_modDef3036.xhZ23b, { username: name });
   obj8.delay = 100 + TextWritingAnimation.DURATION;
   items3[1] = hasOwnProperty(TextWritingAnimationDefault, obj8);
   items3[2] = hasOwnProperty(CheckpointKnickKnacksDefault, { style: tmp.knickKnacks });

@@ -1,6 +1,6 @@
-// === Module 7271: FriendSuggestionActionCreators ===
+// === Module 7249: FriendSuggestionActionCreators ===
 
-// Module 7271 (FriendSuggestionActionCreators)
+// Module 7249 (FriendSuggestionActionCreators)
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

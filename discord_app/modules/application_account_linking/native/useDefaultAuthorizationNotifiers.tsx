@@ -1,9 +1,9 @@
-// === Module 16098: useDefaultAuthorizationNotifiers ===
+// === Module 16118: useDefaultAuthorizationNotifiers ===
 
-// Module 16098 (useDefaultAuthorizationNotifiers)
+// Module 16118 (useDefaultAuthorizationNotifiers)
 import util from "util" /* 1115 */;
-import _modDef3231 from "module_3231" /* 3231 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4558 */;
+import _modDef3230 from "module_3230" /* 3230 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4557 */;
 import noop from "module_19" /* 19 */;
 import AppStateStore from "AppStateStore" /* 1980 */;
 
@@ -56,7 +56,7 @@ export const useDefaultAuthorizationNotifiers = function useDefaultAuthorization
             if (flag) {
               const obj2 = { content: null, key: "account-linked-toast" };
               const intl = util.intl;
-              obj2.content = intl.string(_modDef3231.uG6teD);
+              obj2.content = intl.string(_modDef3230.uG6teD);
               ToastActionCreatorsDefault.open(obj2);
             }
           }

@@ -1,10 +1,10 @@
-// === Module 11456: SpotifyActionCreators ===
+// === Module 11464: SpotifyActionCreators ===
 
-// Module 11456 (SpotifyActionCreators)
+// Module 11464 (SpotifyActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import GameUtilsDefault from "GameUtils" /* 8333 */;
-import SpotifyProtocolStore from "SpotifyProtocolStore" /* 11455 */;
+import GameUtilsDefault from "GameUtils" /* 8324 */;
+import SpotifyProtocolStore from "SpotifyProtocolStore" /* 11463 */;
 
 const require = globalThis.__r;
 
@@ -317,7 +317,7 @@ function apiRequest(fn, arg1, arg2, value) {
     return Promise.reject(error);
   });
 }
-const SpotifyConstants = fn(7983);
+const SpotifyConstants = fn(7970);
 ({ SPOTIFY_APP_PROTOCOL: closure_4, SpotifyEndpoints: hasOwnProperty } = SpotifyConstants);
 const Constants = fn(1074);
 ({ AbortCodes: metroRequire, Endpoints: closure_7, PlatformTypes: closure_8 } = Constants);

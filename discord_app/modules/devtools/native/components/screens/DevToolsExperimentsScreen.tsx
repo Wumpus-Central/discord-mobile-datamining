@@ -1,23 +1,23 @@
-// === Module 11495: DevToolsExperimentsScreen ===
+// === Module 11503: DevToolsExperimentsScreen ===
 
-// Module 11495 (DevToolsExperimentsScreen)
+// Module 11503 (DevToolsExperimentsScreen)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
 import FingerprintUtils from "FingerprintUtils" /* 1254 */;
-import ExperimentManager from "ExperimentManager" /* 4785 */;
-import TableRow from "TableRow" /* 6113 */;
-import TableRowGroup from "TableRowGroup" /* 6195 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6766 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6767 */;
-import ClipboardUtils from "ClipboardUtils" /* 6806 */;
-import ExperimentDevToolsUtils from "ExperimentDevToolsUtils" /* 7514 */;
-import useExperimentAssignments from "useExperimentAssignments" /* 11493 */;
+import ExperimentManager from "ExperimentManager" /* 4766 */;
+import TableRow from "TableRow" /* 6103 */;
+import TableRowGroup from "TableRowGroup" /* 6185 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6756 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6757 */;
+import ClipboardUtils from "ClipboardUtils" /* 6796 */;
+import ExperimentDevToolsUtils from "ExperimentDevToolsUtils" /* 7492 */;
+import useExperimentAssignments from "useExperimentAssignments" /* 11501 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ExperimentStore from "ExperimentStore" /* 4780 */;
+import ExperimentStore from "ExperimentStore" /* 4761 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildStore from "GuildStore" /* 2067 */;
+import GuildStore from "GuildStore" /* 2066 */;
 
 require = fn;
 function UserExperimentDebugView(id) {
@@ -148,11 +148,11 @@ function GuildExperimentDebugView(arg0) {
   }
   const obj4 = _modDef12(obj3);
   obj6.subLabel = str;
-  const items1 = [closure_11(obj3(6195).TableRowGroup, { title: "Overview", hasIcons: false, children: closure_11(obj3(6113).TableRow, obj6) }), closure_11(obj3(1177).Spacer, { size: 16 }), , , , , , , ];
+  const items1 = [closure_11(obj3(6185).TableRowGroup, { title: "Overview", hasIcons: false, children: closure_11(obj3(6103).TableRow, obj6) }), closure_11(obj3(1177).Spacer, { size: 16 }), , , , , , , ];
   const obj8 = { title: "Guild Assignments", hasIcons: false, children: null };
-  const obj7 = { title: "Overview", hasIcons: false, children: closure_11(obj3(6113).TableRow, obj6) };
-  obj8.children = closure_11(obj3(6113).TableRow, { label: items.join("\n") });
-  items1[2] = closure_11(obj3(6195).TableRowGroup, obj8);
+  const obj7 = { title: "Overview", hasIcons: false, children: closure_11(obj3(6103).TableRow, obj6) };
+  obj8.children = closure_11(obj3(6103).TableRow, { label: items.join("\n") });
+  items1[2] = closure_11(obj3(6185).TableRowGroup, obj8);
   items1[3] = closure_11(obj3(1177).Spacer, { size: 16 });
   let str2 = "None";
   let str3 = "None";
@@ -161,21 +161,21 @@ function GuildExperimentDebugView(arg0) {
     str3 = JSON.stringify(loadedGuildExperiment, undefined, 2);
   }
   const obj9 = { label: items.join("\n") };
-  items1[4] = closure_11(obj3(6195).TableRowGroup, { title: "Server Descriptor", hasIcons: false, children: closure_11(obj3(6113).TableRow, { label: str3 }) });
+  items1[4] = closure_11(obj3(6185).TableRowGroup, { title: "Server Descriptor", hasIcons: false, children: closure_11(obj3(6103).TableRow, { label: str3 }) });
   items1[5] = closure_11(obj3(1177).Spacer, { size: 16 });
   if (null != override) {
     const _JSON2 = JSON;
     str2 = JSON.stringify(override, undefined, 2);
   }
-  const obj10 = { title: "Server Descriptor", hasIcons: false, children: closure_11(obj3(6113).TableRow, { label: str3 }) };
-  items1[6] = closure_11(obj3(6195).TableRowGroup, { title: "Override Descriptor", hasIcons: false, children: closure_11(obj3(6113).TableRow, { label: str2 }) });
+  const obj10 = { title: "Server Descriptor", hasIcons: false, children: closure_11(obj3(6103).TableRow, { label: str3 }) };
+  items1[6] = closure_11(obj3(6185).TableRowGroup, { title: "Override Descriptor", hasIcons: false, children: closure_11(obj3(6103).TableRow, { label: str2 }) });
   items1[7] = closure_11(obj3(1177).Spacer, { size: 16 });
   if (0 === mapped.length) {
-    let mapped3 = closure_11(tmp20(6113).TableRow, { label: "none" });
+    let mapped3 = closure_11(tmp20(6103).TableRow, { label: "none" });
   } else {
     mapped3 = mapped.map((label) => closure_1_11(obj3(dependencyMap[23]).TableRow, { label, labelLineClamp: 1 }, label));
   }
-  items1[8] = closure_11(obj3(6195).TableRowGroup, { title: "Recent Exposures", hasIcons: false, children: mapped3 });
+  items1[8] = closure_11(obj3(6185).TableRowGroup, { title: "Recent Exposures", hasIcons: false, children: mapped3 });
   obj5.children = items1;
   return closure_12(View, obj5);
 }
@@ -194,8 +194,8 @@ class ExperimentDetails {
     obj9 = { paddingHorizontal: null };
     callback = closure_4.useCallback(() => {
       ClipboardUtils.copy(uRLForExperiment, () => {
-        const obj = uRLForExperiment(4558);
-        obj.open({ key: "experiment-link-copied", content: "Copied experiment link", IconComponent: onCopyLink(4822).CircleCheckIcon, iconColor: "status-positive" });
+        const obj = uRLForExperiment(4557);
+        obj.open({ key: "experiment-link-copied", content: "Copied experiment link", IconComponent: onCopyLink(4801).CircleCheckIcon, iconColor: "status-positive" });
         if (closure_1_0 != null) {
           closure_1_0();
         }
@@ -215,7 +215,7 @@ class ExperimentDetails {
             if (isDestructive) {
               variant = "danger";
             }
-            return closure_1_11(onCopyLink(6113).TableRow, { variant, label, onPress }, index);
+            return closure_1_11(onCopyLink(6103).TableRow, { variant, label, onPress }, index);
           })
     };
     items1 = [, , ];
@@ -250,11 +250,11 @@ function ExperimentActionSheet(arg0) {
   return closure_1_11(Sheet_BottomSheet.BottomSheet, obj);
 }
 const View = fn(17).View;
-const ExperimentConstants = fn(4781);
+const ExperimentConstants = fn(4762);
 ({ ExperimentBuckets: closure_9, ExperimentTypes: c10 } = ExperimentConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, listContainer: null, searchBar: null, debugContainer: null, copyExperimentLink: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj.listContainer = { paddingHorizontal: nativeDefault.space.PX_12 };

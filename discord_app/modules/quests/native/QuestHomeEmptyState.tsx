@@ -1,15 +1,15 @@
-// === Module 14800: QuestHomeEmptyState ===
+// === Module 14806: QuestHomeEmptyState ===
 
-// Module 14800 (QuestHomeEmptyState)
+// Module 14806 (QuestHomeEmptyState)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import useToken from "useToken" /* 4561 */;
-import useChatLayoutDefault from "useChatLayout" /* 4725 */;
-import Text_Text from "Text/Text" /* 4862 */;
-import LinearGradientDefault from "LinearGradient" /* 5489 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6740 */;
-import _modDef14801 from "module_14801" /* 14801 */;
+import useToken from "useToken" /* 4560 */;
+import useChatLayoutDefault from "useChatLayout" /* 4724 */;
+import Text_Text from "Text/Text" /* 4841 */;
+import LinearGradientDefault from "LinearGradient" /* 5477 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6730 */;
+import _modDef14807 from "module_14807" /* 14807 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 const VerticalGradient = fn(1074).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = { container: { flex: 1 }, emptyStateContainer: { justifyContent: "center", alignItems: "center", flex: 1 }, emptyStateContentContainer: { top: -55, paddingHorizontal: nativeDefault.space.PX_32 }, emptyStateContentTitle: { textAlign: "center" }, emptyStateContentDescription: { textAlign: "center", marginTop: 4 }, emptyImage: { flex: 1, width: "100%", aspectRatio: 1.6375545851528384, minWidth: "100%", position: "absolute", bottom: 0, zIndex: -1 }, gradient: { height: 22, width: "100%", position: "absolute", bottom: 0 }, actionWrapper: { marginTop: 16, alignSelf: "center" } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -55,7 +55,7 @@ export default function QuestHomeEmptyState(subtitle) {
   let tmp11Result = null;
   if (!useChatLayoutDefault().isChatLockedOpen) {
     const obj10 = { children: null };
-    const obj11 = { style: tmp5.emptyImage, source: _modDef14801, resizeMode: "cover" };
+    const obj11 = { style: tmp5.emptyImage, source: _modDef14807, resizeMode: "cover" };
     const items2 = [timestampProducer(React4, obj11), ];
     const obj22 = { style: tmp5.gradient, end: null, start: null, colors: null };
     ({ END: obj12.end, START: obj12.start } = VerticalGradient);

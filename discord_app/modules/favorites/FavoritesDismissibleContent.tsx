@@ -1,20 +1,20 @@
-// === Module 9904: FavoritesDismissibleContent ===
+// === Module 9896: FavoritesDismissibleContent ===
 
-// Module 9904 (FavoritesDismissibleContent)
+// Module 9896 (FavoritesDismissibleContent)
 import dismissible_content from "dismissible_content" /* 2029 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7002 */;
-import useGetDismissibleContent from "useGetDismissibleContent" /* 7003 */;
-import FavoritesHooks from "FavoritesHooks" /* 9886 */;
-import FavoritesGuildExperiment from "FavoritesGuildExperiment" /* 9888 */;
-import FavoritesGuildIntroPopover from "FavoritesGuildIntroPopover" /* 9902 */;
-import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 9903 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 6993 */;
+import useGetDismissibleContent from "useGetDismissibleContent" /* 6994 */;
+import FavoritesHooks from "FavoritesHooks" /* 9878 */;
+import FavoritesGuildExperiment from "FavoritesGuildExperiment" /* 9880 */;
+import FavoritesGuildIntroPopover from "FavoritesGuildIntroPopover" /* 9894 */;
+import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 9895 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ContentDismissActionType = fn(2042).ContentDismissActionType;
+const ContentDismissActionType = fn(2041).ContentDismissActionType;
 let items = [fn(2029).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO, fn(2029).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM, fn(2029).DismissibleContent.FAVORITES_GUILD_NEW_BADGE, fn(2029).DismissibleContent.FAVORITES_GUILD_SUGGESTIONS];
 const items1 = [fn(2029).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO, fn(2029).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
 const items2 = [fn(2029).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];

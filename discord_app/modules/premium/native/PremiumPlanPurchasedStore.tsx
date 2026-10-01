@@ -1,10 +1,10 @@
-// === Module 7037: PremiumPlanPurchasedStore ===
+// === Module 7029: PremiumPlanPurchasedStore ===
 
-// Module 7037 (PremiumPlanPurchasedStore)
+// Module 7029 (PremiumPlanPurchasedStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1248 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6799 */;
-import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7038 */;
-import ActionSheetStore from "ActionSheetStore" /* 4551 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6789 */;
+import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7030 */;
+import ActionSheetStore from "ActionSheetStore" /* 4550 */;
 
 const require = globalThis.__r;
 
@@ -84,6 +84,6 @@ export const reset = function reset() {
         str = "dismissed";
       }
     }
-    obj3.setState({ productId: "", initiatedPurchaseFromNewFlow: false, isPaymentSuccess: false, mobileWebRedirectCheckoutStatus: str, onPaymentSuccess: "r", onPaymentDismiss: "sa" });
+    obj3.setState({ productId: "", initiatedPurchaseFromNewFlow: false, isPaymentSuccess: false, mobileWebRedirectCheckoutStatus: str, onPaymentSuccess: "channelId", onPaymentDismiss: "count" });
   });
 };

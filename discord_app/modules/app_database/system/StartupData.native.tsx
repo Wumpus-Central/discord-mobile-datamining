@@ -1,37 +1,19 @@
-// === Module 2092: StartupData ===
+// === Module 2091: StartupData ===
 
-// Module 2092 (StartupData)
-import _mod17 from "module_17" /* 17 */;
-import PlatformUtils from "PlatformUtils" /* 1364 */;
-import NativeAppDatabaseModuleDefault from "NativeAppDatabaseModule" /* 2093 */;
+// Module 2091 (StartupData)
+import NativeAppDatabaseModuleDefault from "NativeAppDatabaseModule" /* 2092 */;
 import size from "module_2" /* 2 */;
 
-const NativeModules = _mod17.NativeModules;
 const result = size.fileFinishedImporting("modules/app_database/system/StartupData.native.tsx");
 
 export const getUserId = function getUserId() {
-  if (obj.isAndroid()) {
-    const userId = NativeAppDatabaseModuleDefault.getConstants().userId;
-    let tmp6 = null;
-    if (null != userId) {
-      tmp6 = userId;
-    }
-    return tmp6;
-  } else {
-    let userId1 = NativeModules.DCDAppDatabase.userId;
-    if (userId1 == null) {
-      userId1 = null;
-    }
-    return userId1;
+  const userId = NativeAppDatabaseModuleDefault.getConstants().userId;
+  let tmp = null;
+  if (null != userId) {
+    tmp = userId;
   }
-  obj = PlatformUtils;
+  return tmp;
 };
 export const setUserId = function setUserId(id) {
-  if (obj.isAndroid()) {
-    NativeAppDatabaseModuleDefault.setUserId(id);
-  } else {
-    const DCDAppDatabase = NativeModules.DCDAppDatabase;
-    DCDAppDatabase.setUserId(id);
-  }
-  obj = PlatformUtils;
+  NativeAppDatabaseModuleDefault.setUserId(id);
 };

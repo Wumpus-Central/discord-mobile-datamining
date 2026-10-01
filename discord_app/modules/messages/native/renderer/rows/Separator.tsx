@@ -1,10 +1,11 @@
-// === Module 13018: Separator ===
+// === Module 13026: Separator ===
 
-// Module 13018 (Separator)
+// Module 13026 (Separator)
 import nativeDefault from "native" /* 576 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import RowGeneratorConstants from "RowGeneratorConstants" /* 7570 */;
-import createStyles from "createStyles" /* 4866 */;
+import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4681 */;
+import RowGeneratorConstants from "RowGeneratorConstants" /* 7548 */;
+import createStyles from "createStyles" /* 4845 */;
 import size from "module_2" /* 2 */;
 
 ({ RowType: c2, SeparatorType: c3 } = RowGeneratorConstants);
@@ -19,14 +20,18 @@ export const generateSeparatorRowData = function generateSeparatorRowData(text, 
     return obj2;
   } else if (constants2.UNREAD === rowType) {
     const obj4 = { type: constants.SEPARATOR, id: rowType, color: null, borderColor: null, changeType: null, text: null };
-    ({ unreadTextColor: obj3.color, unreadBorderColor: obj3.borderColor } = tmp);
+    ({ unreadTextColor: obj5.color, unreadBorderColor: obj5.borderColor } = tmp);
     obj4.changeType = changeType;
     obj4.text = text.text;
     return obj4;
   } else if (constants2.SUMMARY === rowType) {
     const summary = text.summary;
-    const obj7 = { type: constants.SEPARATOR, id: rowType, color: tmp.summaryColor, text: summary.topic, summary, isBeforeContent: text.isBeforeContent, changeType };
-    return obj7;
+    const obj6 = { type: constants.SEPARATOR, id: rowType, color: tmp.summaryColor, text: summary.topic, summary, isBeforeContent: text.isBeforeContent, changeType };
+    return obj6;
+  } else if (constants2.CONVERSATION === rowType) {
+    const conversationHeader = text.conversationHeader;
+    const obj10 = { type: constants.SEPARATOR, id: rowType, text: conversationHeader.title, conversationHeader, isCustomTheme: client_themes_ClientThemesUtils.isCustomThemeActive(), changeType };
+    return obj10;
   } else {
     GlobalUtils.assertNever(rowType);
   }

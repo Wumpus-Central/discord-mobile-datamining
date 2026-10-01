@@ -1,26 +1,26 @@
-// === Module 4879: ChannelActionCreators ===
+// === Module 4858: ChannelActionCreators ===
 
-// Module 4879 (ChannelActionCreators)
+// Module 4858 (ChannelActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import router_utils from "router_utils" /* 1101 */;
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import shared from "shared" /* 4715 */;
-import RootNavigationRef from "RootNavigationRef" /* 4723 */;
-import transitionToChannel from "transitionToChannel" /* 4877 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5920 */;
-import isChangelogChannelDefault from "isChangelogChannel" /* 8017 */;
+import shared from "shared" /* 4714 */;
+import RootNavigationRef from "RootNavigationRef" /* 4722 */;
+import transitionToChannel from "transitionToChannel" /* 4856 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5909 */;
+import isChangelogChannelDefault from "isChangelogChannel" /* 8006 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChangelogStore from "ChangelogStore" /* 4880 */;
-import ChannelStore from "ChannelStore" /* 2045 */;
-import ReadStateStore from "ReadStateStore" /* 4881 */;
+import ChangelogStore from "ChangelogStore" /* 4859 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
+import ReadStateStore from "ReadStateStore" /* 4860 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_6 = fn(2049).createChannelRecordFromServer;
+let closure_6 = fn(2048).createChannelRecordFromServer;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, AbortCodes: c10, Endpoints: closure_11, Routes: closure_12, ME: map1, CURRENT_APP_CONTEXT: closure_14, ChannelTypes: closure_15 } = Constants);
 const size = fn(2);
@@ -518,8 +518,8 @@ export default {
         obj = channel2;
       }
       if (!tmp10) {
-        const result = name(6937).checkGuildTemplateDirty(closure_128_2);
-        name(6937);
+        const result = name(6928).checkGuildTemplateDirty(closure_128_2);
+        name(6928);
       }
       return closure_128_1;
     })();

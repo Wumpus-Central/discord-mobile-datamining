@@ -1,17 +1,17 @@
-// === Module 9833: MessageNotificationHeader ===
+// === Module 9825: MessageNotificationHeader ===
 
-// Module 9833 (MessageNotificationHeader)
+// Module 9825 (MessageNotificationHeader)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import ChannelTypes from "ChannelTypes" /* 1095 */;
-import Text_Text from "Text/Text" /* 4862 */;
-import useChannelName from "useChannelName" /* 5019 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5531 */;
-import ChatIcon2 from "ChatIcon" /* 5581 */;
-import ThreadIcon2 from "ThreadIcon" /* 5583 */;
+import Text_Text from "Text/Text" /* 4841 */;
+import useChannelName from "useChannelName" /* 4998 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5519 */;
+import ChatIcon2 from "ChatIcon" /* 5569 */;
+import ThreadIcon2 from "ThreadIcon" /* 5571 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4855 */;
-import RelationshipStore from "RelationshipStore" /* 4509 */;
+import AccessibilityStore from "AccessibilityStore" /* 4834 */;
+import RelationshipStore from "RelationshipStore" /* 4508 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -61,7 +61,7 @@ function LocationText(channel) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = { container: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 }, headerContent: { flex: 1, flexDirection: "row", alignItems: "center" }, primaryText: { flexShrink: 1, marginRight: 2 }, secondaryTextContainer: { flexDirection: "row", alignItems: "center", gap: 2, flex: 1, overflow: "hidden" }, separator: { marginHorizontal: 2 }, icon: { width: 16, height: 16 }, secondaryText: { flex: 1 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);

@@ -1,12 +1,12 @@
-// === Module 17445: RedesignDiscoverabilityModal ===
+// === Module 17477: RedesignDiscoverabilityModal ===
 
-// Module 17445 (RedesignDiscoverabilityModal)
+// Module 17477 (RedesignDiscoverabilityModal)
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1094 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1249 */;
-import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 12382 */;
-import SkipHeaderButtonDefault from "SkipHeaderButton" /* 12394 */;
-import NUFActionCreators from "NUFActionCreators" /* 12402 */;
+import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 12394 */;
+import SkipHeaderButtonDefault from "SkipHeaderButton" /* 12406 */;
+import NUFActionCreators from "NUFActionCreators" /* 12414 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -76,7 +76,7 @@ function DiscoverabilityNameScene(onComplete) {
     name = "";
   }
   obj2.initialName = name;
-  obj.children = jsx(allowPhone(12395), { onNext: callback, loading: false, initialName: null });
+  obj.children = jsx(allowPhone(12407), { onNext: callback, loading: false, initialName: null });
   return <View style={tmp.container}>{null}</View>;
 }
 class RedesignDiscoverabilityModal {
@@ -156,12 +156,12 @@ class RedesignDiscoverabilityModal {
   }
 }
 const View = fn(17).View;
-const useContactSyncModalStore = fn(12375).useContactSyncModalStore;
+const useContactSyncModalStore = fn(12387).useContactSyncModalStore;
 const jsx = fn(21).jsx;
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = { header: { borderBottomWidth: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" }, container: null };
 const obj3 = { borderBottomWidth: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" };
-obj2.container = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center", paddingBottom: 44, paddingTop: fn(6190).NAV_BAR_HEIGHT + 32 };
+obj2.container = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, justifyContent: "center", paddingBottom: 44, paddingTop: fn(6180).NAV_BAR_HEIGHT + 32 };
 const React6 = createStyles.createStyles(obj2);
 RedesignDiscoverabilityModal.modalConfig = { animation: fn(1074).ModalAnimation.SLIDE_IN_OUT };
 const size = fn(2);

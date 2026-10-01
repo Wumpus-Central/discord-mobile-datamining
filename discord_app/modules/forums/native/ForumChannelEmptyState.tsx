@@ -1,12 +1,12 @@
-// === Module 12483: ForumChannelEmptyState ===
+// === Module 12494: ForumChannelEmptyState ===
 
-// Module 12483 (ForumChannelEmptyState)
+// Module 12494 (ForumChannelEmptyState)
 import util from "util" /* 1115 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
-import shared from "shared" /* 4715 */;
-import Text_Text from "Text/Text" /* 4862 */;
-import _modDef12484 from "module_12484" /* 12484 */;
-import _modDef12485 from "module_12485" /* 12485 */;
+import shared from "shared" /* 4714 */;
+import Text_Text from "Text/Text" /* 4841 */;
+import _modDef12495 from "module_12495" /* 12495 */;
+import _modDef12496 from "module_12496" /* 12496 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let closure_7 = createStyles.createStyles({ container: { flex: 1, alignSelf: "stretch", justifyContent: "center", alignItems: "center" }, image: { width: 120, height: 80 }, title: { textAlign: "center", marginTop: 16, marginHorizontal: 20 }, subtext: { textAlign: "center", marginTop: 4, marginHorizontal: 20 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/ForumChannelEmptyState.tsx");
@@ -32,9 +32,9 @@ export default noop.memo((topViewHeight) => {
   obj2.style = items;
   const obj = shared;
   if (obj3.isThemeLight(obj.useThemeContext().theme)) {
-    let tmp4Result = _modDef12484;
+    let tmp4Result = _modDef12495;
   } else {
-    tmp4Result = _modDef12485;
+    tmp4Result = _modDef12496;
   }
   const items1 = [hasOwnProperty(React4, { source: tmp4Result, style: tmp.image }), , ];
   const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };

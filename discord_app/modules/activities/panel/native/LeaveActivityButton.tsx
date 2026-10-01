@@ -1,10 +1,10 @@
-// === Module 17082: LeaveActivityButton ===
+// === Module 17104: LeaveActivityButton ===
 
-// Module 17082 (LeaveActivityButton)
+// Module 17104 (LeaveActivityButton)
 import util from "util" /* 1115 */;
-import components_Button_Button from "components/Button/Button" /* 5477 */;
-import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager" /* 8964 */;
-import _modDef9571 from "module_9571" /* 9571 */;
+import components_Button_Button from "components/Button/Button" /* 5465 */;
+import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager" /* 8957 */;
+import _modDef9565 from "module_9565" /* 9565 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ class BaseLeaveActivityButton {
     return jsx(closure_0(closure_2[3]).Button, obj);
   }
 }
-const ActivityPanelModes = fn(8701).ActivityPanelModes;
+const ActivityPanelModes = fn(8693).ActivityPanelModes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/panel/native/LeaveActivityButton.tsx");

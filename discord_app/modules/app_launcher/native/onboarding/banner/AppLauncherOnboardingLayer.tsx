@@ -1,14 +1,14 @@
-// === Module 11732: AppLauncherOnboardingLayer ===
+// === Module 11740: AppLauncherOnboardingLayer ===
 
-// Module 11732 (AppLauncherOnboardingLayer)
+// Module 11740 (AppLauncherOnboardingLayer)
 import nativeDefault from "native" /* 576 */;
-import AppLauncherOnboardingBannerDefault from "AppLauncherOnboardingBanner" /* 11733 */;
+import AppLauncherOnboardingBannerDefault from "AppLauncherOnboardingBanner" /* 11741 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
-let closure_3 = fn(9042).useBestActiveChatInputContainerHeight;
+let closure_3 = fn(9036).useBestActiveChatInputContainerHeight;
 const jsx = fn(21).jsx;
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj = { container: null };
 const rect = { opacity: 1, width: "100%", position: "absolute", left: 0, top: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM };
 obj.container = rect;

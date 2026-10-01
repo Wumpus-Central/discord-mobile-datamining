@@ -1,10 +1,10 @@
-// === Module 8488: useWishlistButtonState ===
+// === Module 8480: useWishlistButtonState ===
 
-// Module 8488 (useWishlistButtonState)
+// Module 8480 (useWishlistButtonState)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 7230 */;
+import UserProfileStore from "UserProfileStore" /* 7208 */;
 
 const require = globalThis.__r;
 

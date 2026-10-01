@@ -1,6 +1,6 @@
-// === Module 17915: openSafetyFlow ===
+// === Module 17950: openSafetyFlow ===
 
-// Module 17915 (openSafetyFlow)
+// Module 17950 (openSafetyFlow)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserRequiredActionStore from "UserRequiredActionStore" /* 2037 */;
 
@@ -42,7 +42,7 @@ let closure_6 = async function _openSafetyFlow() {
           closure_130_2 = undefined;
           c6 = 1;
           c7 = 1;
-          return { value: "flex", done: true };
+          return { value: "flex", done: null };
         }
       } else {
         if (1 === tmp7) {

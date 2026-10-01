@@ -1,12 +1,12 @@
-// === Module 16830: useVibegrationsProjects ===
+// === Module 16852: useVibegrationsProjects ===
 
-// Module 16830 (useVibegrationsProjects)
+// Module 16852 (useVibegrationsProjects)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2067 */;
-import PermissionStore from "PermissionStore" /* 4499 */;
-import VibegrationsChatStore from "VibegrationsChatStore" /* 12843 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 8694 */;
+import GuildStore from "GuildStore" /* 2066 */;
+import PermissionStore from "PermissionStore" /* 4498 */;
+import VibegrationsChatStore from "VibegrationsChatStore" /* 12852 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 8686 */;
 
 const require = globalThis.__r;
 
@@ -35,16 +35,16 @@ export const useVibegrationsProjects = function useVibegrationsProjects(Vibegrat
     const _location = nextExpiry;
     function add(item10061) {
       if (!set.has(item10061.id)) {
-        const result = nextExpiry(16831).vibegrationsProjectGuildId(item10061);
+        const result = nextExpiry(12308).vibegrationsProjectGuildId(item10061);
         if (null == result) {
           set.add(item10061.id);
           let num = closure_2_6.getFinishedAt(item10061.id);
           const isThinkingResult = closure_2_6.isThinking(item10061.id);
           const obj4 = { thinking: isThinkingResult, finishedAt: num, now };
-          const vibegrationsActivityResult = nextExpiry(16831).vibegrationsActivity(obj4);
+          const vibegrationsActivityResult = nextExpiry(12308).vibegrationsActivity(obj4);
           if ("done" === vibegrationsActivityResult) {
             if (null != num) {
-              const sum = num + nextExpiry(16831).VIBEGRATIONS_DONE_WINDOW_MS;
+              const sum = num + nextExpiry(12308).VIBEGRATIONS_DONE_WINDOW_MS;
               bound = sum;
               if (null != bound) {
                 const _Math = Math;
@@ -87,18 +87,18 @@ export const useVibegrationsProjects = function useVibegrationsProjects(Vibegrat
           }
           obj5.sortTime = num;
           items.push(obj5);
-          const tmpResult = nextExpiry(16831);
+          const tmpResult = nextExpiry(12308);
         } else {
           value = map.get(result);
           if (null == value) {
             const obj6 = { guildId: result, location: _location };
-            const result1 = nextExpiry(5568).isVibegrationsGuildEnabled(obj6);
+            const result1 = nextExpiry(5556).isVibegrationsGuildEnabled(obj6);
             const result2 = map.set(result, result1);
             value = result1;
-            const tmpResult2 = nextExpiry(5568);
+            const tmpResult2 = nextExpiry(5556);
           }
         }
-        const obj2 = nextExpiry(16831);
+        const obj2 = nextExpiry(12308);
       }
     }
     function isEnabled(id) {
@@ -107,7 +107,7 @@ export const useVibegrationsProjects = function useVibegrationsProjects(Vibegrat
         return value;
       } else {
         const obj3 = { guildId: id, location: _location };
-        const result = nextExpiry(5568).isVibegrationsGuildEnabled(obj3);
+        const result = nextExpiry(5556).isVibegrationsGuildEnabled(obj3);
         const result1 = map.set(id, result);
         return result;
       }
@@ -136,7 +136,7 @@ export const useVibegrationsProjects = function useVibegrationsProjects(Vibegrat
       }
       continue;
     }
-    let obj2 = { entries: _location(16831).sortVibegrationsProjects(items), nextExpiry: bound };
+    let obj2 = { entries: _location(12308).sortVibegrationsProjects(items), nextExpiry: bound };
     return obj2;
   })(nextExpiry), items1, vibegrationsEntriesEqual);
   nextExpiry = stateFromStores.nextExpiry;

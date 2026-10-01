@@ -1,8 +1,8 @@
-// === Module 12669: InAppReportsShareWithParentElement ===
+// === Module 12680: InAppReportsShareWithParentElement ===
 
-// Module 12669 (InAppReportsShareWithParentElement)
-import FamilyCenterActionCreators from "FamilyCenterActionCreators" /* 7155 */;
-import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow" /* 12668 */;
+// Module 12680 (InAppReportsShareWithParentElement)
+import FamilyCenterActionCreators from "FamilyCenterActionCreators" /* 7147 */;
+import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow" /* 12679 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -46,7 +46,7 @@ export default function _default(parents) {
     }
     obj3.parent3 = username3;
     obj.disabledTitle = intl.formatToPlainString(parents(1115).t.BlAMme, obj3);
-    obj.icon = jsx(parents(12670).ShareIcon, {});
+    obj.icon = jsx(parents(12681).ShareIcon, {});
     const intl2 = tmp15(1115).intl;
     obj.description = intl2.string(parents(1115).t["5l/hlt"]);
     obj.disabled = tmp[0];

@@ -1,9 +1,9 @@
-// === Module 12695: ProtocolUtils ===
+// === Module 12706: ProtocolUtils ===
 
-// Module 12695 (ProtocolUtils)
-import _modDef5369 from "module_5369" /* 5369 */;
+// Module 12706 (ProtocolUtils)
+import _modDef5357 from "module_5357" /* 5357 */;
 
-const os = _modDef5369.os;
+const os = _modDef5357.os;
 let family;
 if (os != null) {
   family = os.family;
@@ -15,7 +15,7 @@ function launchMobile(href, arg1) {
 }
 let tmp3 = launchMobile;
 if ("Android" !== family) {
-  const os2 = _modDef5369.os;
+  const os2 = _modDef5357.os;
   let family1;
   if (os2 != null) {
     family1 = os2.family;
@@ -66,7 +66,7 @@ if ("Android" !== family) {
         return process.nextTick(() => closure_0(true));
       }
     }
-    if ("Gecko" !== _modDef5369.layout) {
+    if ("Gecko" !== _modDef5357.layout) {
       function launchChrome(href, arg1) {
         closure_0 = arg1;
         function handleBlur() {
@@ -81,8 +81,8 @@ if ("Android" !== family) {
         }, 1000);
       }
       let launchSteam = launchChrome;
-      if (null != _modDef5369.ua) {
-        const ua = _modDef5369.ua;
+      if (null != _modDef5357.ua) {
+        const ua = _modDef5357.ua;
         launchSteam = launchChrome;
         if (-1 !== ua.indexOf("Valve Steam GameOverlay")) {
           launchSteam = function launchSteam(arg0, fn) {

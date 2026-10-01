@@ -1,7 +1,7 @@
-// === Module 7998: useLabFeature ===
+// === Module 7987: useLabFeature ===
 
-// Module 7998 (useLabFeature)
-import LabFeatureStore from "LabFeatureStore" /* 7996 */;
+// Module 7987 (useLabFeature)
+import LabFeatureStore from "LabFeatureStore" /* 7985 */;
 
 const require = globalThis.__r;
 

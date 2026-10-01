@@ -1,19 +1,19 @@
-// === Module 9394: RelationshipActionCreators ===
+// === Module 9388: RelationshipActionCreators ===
 
-// Module 9394 (RelationshipActionCreators)
+// Module 9388 (RelationshipActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1115 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import UserUtilsDefault from "UserUtils" /* 4708 */;
-import shared from "shared" /* 4715 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5399 */;
-import openQuarantineModeInfoModalDefault from "openQuarantineModeInfoModal" /* 6031 */;
-import ContextMenuActionCreators from "ContextMenuActionCreators" /* 6061 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 8047 */;
-import ClaimAccountModalActionCreatorsAll from "ClaimAccountModalActionCreators" /* 9396 */;
-import UserLimitedAccessUtils from "UserLimitedAccessUtils" /* 9397 */;
-import FriendsUtils from "FriendsUtils" /* 9398 */;
-import ClearAllIncomingRequestsConfirmationModalDefault from "ClearAllIncomingRequestsConfirmationModal" /* 9399 */;
+import UserUtilsDefault from "UserUtils" /* 4707 */;
+import shared from "shared" /* 4714 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5387 */;
+import openQuarantineModeInfoModalDefault from "openQuarantineModeInfoModal" /* 6020 */;
+import ContextMenuActionCreators from "ContextMenuActionCreators" /* 6050 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 8036 */;
+import ClaimAccountModalActionCreatorsAll from "ClaimAccountModalActionCreators" /* 9390 */;
+import UserLimitedAccessUtils from "UserLimitedAccessUtils" /* 9391 */;
+import FriendsUtils from "FriendsUtils" /* 9392 */;
+import ClearAllIncomingRequestsConfirmationModalDefault from "ClearAllIncomingRequestsConfirmationModal" /* 9393 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -89,7 +89,7 @@ function handleRelationshipAddError(error, SHOW_ALWAYS, userTag) {
 }
 const Constants = fn(1074);
 ({ Endpoints: metroRequire, AbortCodes: closure_7, RelationshipTypes: closure_8 } = Constants);
-const ClearFriendRequestFilters = fn(9395).ClearFriendRequestFilters;
+const ClearFriendRequestFilters = fn(9389).ClearFriendRequestFilters;
 const RelationshipErrorUXConfig = { SHOW_ALWAYS: 0, [0]: "SHOW_ALWAYS", SHOW_ONLY_IF_ACTION_NEEDED: 1, [1]: "SHOW_ONLY_IF_ACTION_NEEDED" };
 let obj2 = {
   sendRequest(discordTag) {
@@ -185,7 +185,7 @@ let obj2 = {
         tmp();
       }
     }).catch(() => {
-      const AccessibilityAnnouncer = closure_0(4715).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = closure_0(4714).AccessibilityAnnouncer;
       const intl = closure_0(1115).intl;
       AccessibilityAnnouncer.announce(intl.string(closure_0(1115).t.n6Jo3E));
     });
@@ -253,8 +253,8 @@ let obj2 = {
       obj2 = DispatcherDefault;
       obj2.dispatch({ type: "RELATIONSHIP_IGNORE_USER_SUCCESS", userId, timestamp: Date.now() });
     }).catch(() => {
-      channelId(8047).showFailedToast();
-      const AccessibilityAnnouncer = userId(4715).AccessibilityAnnouncer;
+      channelId(8036).showFailedToast();
+      const AccessibilityAnnouncer = userId(4714).AccessibilityAnnouncer;
       const intl = userId(1115).intl;
       AccessibilityAnnouncer.announce(intl.string(userId(1115).t.n6Jo3E));
     });
@@ -272,8 +272,8 @@ let obj2 = {
       const intl = util.intl;
       AccessibilityAnnouncer.announce(intl.string(util.t.QlH5w6));
     }).catch(() => {
-      channelId(8047).showFailedToast();
-      const AccessibilityAnnouncer = id(4715).AccessibilityAnnouncer;
+      channelId(8036).showFailedToast();
+      const AccessibilityAnnouncer = id(4714).AccessibilityAnnouncer;
       const intl = id(1115).intl;
       AccessibilityAnnouncer.announce(intl.string(id(1115).t.n6Jo3E));
     });

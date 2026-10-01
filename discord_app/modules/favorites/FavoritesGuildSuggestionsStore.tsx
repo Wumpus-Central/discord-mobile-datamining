@@ -1,6 +1,6 @@
-// === Module 16034: FavoritesGuildSuggestionsStore ===
+// === Module 16049: FavoritesGuildSuggestionsStore ===
 
-// Module 16034 (FavoritesGuildSuggestionsStore)
+// Module 16049 (FavoritesGuildSuggestionsStore)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import DismissibleContentShownStateStore from "DismissibleContentShownStateStore" /* 2035 */;
@@ -9,7 +9,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const NOOP = fn(1074).NOOP;
-const ContentDismissActionType = fn(2042).ContentDismissActionType;
+const ContentDismissActionType = fn(2041).ContentDismissActionType;
 let items = [];
 const module_560 = fn(560);
 const state = module_560.create(() => ({ suggestions: items, dismiss: NOOP }));

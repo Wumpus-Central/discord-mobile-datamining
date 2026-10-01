@@ -1,9 +1,9 @@
-// === Module 9136: ChannelCallModalManager ===
+// === Module 9130: ChannelCallModalManager ===
 
-// Module 9136 (ChannelCallModalManager)
+// Module 9130 (ChannelCallModalManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import UserStore from "UserStore" /* 1372 */;
-import VoiceStateStore from "VoiceStateStore" /* 4885 */;
+import VoiceStateStore from "VoiceStateStore" /* 4864 */;
 import LifecycleManager from "LifecycleManager" /* 1983 */;
 
 let require = fn;

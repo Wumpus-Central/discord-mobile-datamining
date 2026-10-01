@@ -1,19 +1,19 @@
-// === Module 9027: transitionToActivity ===
+// === Module 9021: transitionToActivity ===
 
-// Module 9027 (transitionToActivity)
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4488 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4722 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4830 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5067 */;
-import ActivityPanelConstants from "ActivityPanelConstants" /* 8701 */;
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 8981 */;
-import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 9002 */;
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 9004 */;
-import ChannelCallStore from "ChannelCallStore" /* 9028 */;
-import ChannelCallConstants from "ChannelCallConstants" /* 9029 */;
-import ChannelCallModalDefault from "ChannelCallModal" /* 9034 */;
-import openChannelCallModalForChannelIdDefault from "openChannelCallModalForChannelId" /* 12644 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2044 */;
+// Module 9021 (transitionToActivity)
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4487 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4721 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4809 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5046 */;
+import ActivityPanelConstants from "ActivityPanelConstants" /* 8693 */;
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 8974 */;
+import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 8995 */;
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 8997 */;
+import ChannelCallStore from "ChannelCallStore" /* 9022 */;
+import ChannelCallConstants from "ChannelCallConstants" /* 9023 */;
+import ChannelCallModalDefault from "ChannelCallModal" /* 9028 */;
+import openChannelCallModalForChannelIdDefault from "openChannelCallModalForChannelId" /* 12655 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2043 */;
 import size from "module_2" /* 2 */;
 
 const setVoiceChatDrawerState = ChannelCallStore.setVoiceChatDrawerState;

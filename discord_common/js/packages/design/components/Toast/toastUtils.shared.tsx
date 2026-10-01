@@ -1,11 +1,11 @@
-// === Module 14187: ? ===
+// === Module 14195: ? ===
 
-// Module 14187
-import module_4573 from "module_4573" /* 4573 */;
+// Module 14195
+import module_4572 from "module_4572" /* 4572 */;
 import size from "module_2" /* 2 */;
 
 let c2 = 1;
-const useToastStore = module_4573.create(() => {
+const useToastStore = module_4572.create(() => {
   const obj = { currentToastMap: new Map(), queuedToastsMap: null };
   const map = new Map();
   obj.queuedToastsMap = new Map();

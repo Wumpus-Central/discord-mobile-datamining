@@ -1,8 +1,8 @@
-// === Module 11984: InvitesDisabledAlertModal ===
+// === Module 11991: InvitesDisabledAlertModal ===
 
-// Module 11984 (InvitesDisabledAlertModal)
+// Module 11991 (InvitesDisabledAlertModal)
 import util from "util" /* 1115 */;
-import AlertModal from "AlertModal" /* 5405 */;
+import AlertModal from "AlertModal" /* 5393 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,13 +1,13 @@
-// === Module 17785: GuildRoleSubscriptionTierEditStep ===
+// === Module 17820: GuildRoleSubscriptionTierEditStep ===
 
-// Module 17785 (GuildRoleSubscriptionTierEditStep)
+// Module 17820 (GuildRoleSubscriptionTierEditStep)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import useNavigation from "useNavigation" /* 1485 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
-import Text_Text from "Text/Text" /* 4862 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6740 */;
-import FormSeparatorDefault from "FormSeparator" /* 14968 */;
+import Text_Text from "Text/Text" /* 4841 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6730 */;
+import FormSeparatorDefault from "FormSeparator" /* 14974 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -35,14 +35,14 @@ function Footer(arg0) {
   const tmp = closure_8();
   items[1] = { paddingBottom: useSafeAreaInsetsDefault().bottom };
   obj.style = items;
-  obj.children = timestampProducer(tmp5(5477).Button, { loading: submitting, disabled: !canProceedToNextStep, text: stringResult, onPress: onProceed });
+  obj.children = timestampProducer(tmp5(5465).Button, { loading: submitting, disabled: !canProceedToNextStep, text: stringResult, onPress: onProceed });
   return timestampProducer(React4, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, height: "100%" }, scrollContainer: { flexGrow: 1 }, headerContainer: { position: "relative", paddingTop: 48, paddingBottom: 8, paddingHorizontal: 16, alignItems: "center" }, title: { marginTop: 12, textAlign: "center" }, subtitle: { marginTop: 8, textAlign: "center" }, separator: { marginTop: 24 }, footerContainer: { width: "100%", padding: 16 } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);

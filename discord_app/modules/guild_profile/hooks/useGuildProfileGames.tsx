@@ -1,6 +1,6 @@
-// === Module 9418: useGuildProfileGames ===
+// === Module 9412: useGuildProfileGames ===
 
-// Module 9418 (useGuildProfileGames)
+// Module 9412 (useGuildProfileGames)
 import GlobalUtils from "GlobalUtils" /* 1370 */;
 import noop from "module_19" /* 19 */;
 import GameRecord from "GameRecord" /* 2002 */;

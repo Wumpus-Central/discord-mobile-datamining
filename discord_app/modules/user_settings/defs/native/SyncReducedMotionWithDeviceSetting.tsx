@@ -1,19 +1,19 @@
-// === Module 15173: SyncReducedMotionWithDeviceSetting ===
+// === Module 15178: SyncReducedMotionWithDeviceSetting ===
 
-// Module 15173 (SyncReducedMotionWithDeviceSetting)
+// Module 15178 (SyncReducedMotionWithDeviceSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14199 */;
-import AccessibilityStore from "AccessibilityStore" /* 4855 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14207 */;
+import AccessibilityStore from "AccessibilityStore" /* 4834 */;
 
 require = fn;
-const SettingBuilders = fn(11211);
+const SettingBuilders = fn(11215);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["St+DJK"]);
   },
-  parent: fn(7612).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(7590).MobileUserSettings.ACCESSIBILITY,
   useValue: function useReducedMotionSyncSettingValue() {
     const items = [AccessibilityStore];
     return initialize.useStateFromStores(items, () => "auto" === AccessibilityStore.rawPrefersReducedMotion);

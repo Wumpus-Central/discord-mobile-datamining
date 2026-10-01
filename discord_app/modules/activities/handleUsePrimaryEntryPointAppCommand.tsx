@@ -1,9 +1,9 @@
-// === Module 10945: handleUsePrimaryEntryPointAppCommand ===
+// === Module 10946: handleUsePrimaryEntryPointAppCommand ===
 
-// Module 10945 (handleUsePrimaryEntryPointAppCommand)
-import getCachedOrFetchActivityApplicationForLaunchDefault from "getCachedOrFetchActivityApplicationForLaunch" /* 8992 */;
+// Module 10946 (handleUsePrimaryEntryPointAppCommand)
+import getCachedOrFetchActivityApplicationForLaunchDefault from "getCachedOrFetchActivityApplicationForLaunch" /* 8985 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 2045 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = fn;
@@ -149,7 +149,7 @@ let closure_8 = async function _handleUsePrimaryEntryPointAppCommandInternal(arg
           let currentUser;
           c3 = 1;
           c4 = 1;
-          return { value: "flex", done: true };
+          return { value: "flex", done: null };
         }
       } else {
         if (1 === tmp5) {

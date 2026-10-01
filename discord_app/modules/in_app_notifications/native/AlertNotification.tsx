@@ -1,17 +1,17 @@
-// === Module 9878: AlertNotification ===
+// === Module 9870: AlertNotification ===
 
-// Module 9878 (AlertNotification)
+// Module 9870 (AlertNotification)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import transitionToChannel from "transitionToChannel" /* 4877 */;
+import transitionToChannel from "transitionToChannel" /* 4856 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-let size = { shape: fn(8472).CutoutShape.RoundedRect, x: fn(6092).ImageSizes[fn(undefined, 6092).GuildIconSizes.NORMAL] - -6 - 24, y: -6, width: 24, height: 24, cornerRadius: nativeDefault.radii.sm };
-const createStyles = fn(4866);
+let size = { shape: fn(8464).CutoutShape.RoundedRect, x: fn(6082).ImageSizes[fn(undefined, 6082).GuildIconSizes.NORMAL] - -6 - 24, y: -6, width: 24, height: 24, cornerRadius: nativeDefault.radii.sm };
+const createStyles = fn(4845);
 let closure_9 = createStyles.createStyles({ warningBadge: { position: "absolute", top: -6, right: -6, width: 24, height: 24, alignItems: "center", justifyContent: "center" }, warningIcon: { width: 16, height: 16 } });
 size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/AlertNotification.tsx");
@@ -21,7 +21,7 @@ export default function AlertNotification(notification) {
   const channel = notification.channel;
   const guild = notification.guild;
   const tmp = closure_9();
-  const incidentData = channel(9758).useGuildIncidentsState(notification.key).incidentData;
+  const incidentData = channel(9752).useGuildIncidentsState(notification.key).incidentData;
   let raidDetectedAt;
   if (incidentData != null) {
     raidDetectedAt = incidentData.raidDetectedAt;
@@ -54,18 +54,18 @@ export default function AlertNotification(notification) {
   const obj4 = { cutouts: null, children: null };
   const items2 = [size];
   obj4.cutouts = items2;
-  let obj = channel(9758);
-  obj4.children = closure_5(guild(6092), { guild, selected: false });
-  const items3 = [closure_5(guild(8472), obj4), ];
+  let obj = channel(9752);
+  obj4.children = closure_5(guild(6082), { guild, selected: false });
+  const items3 = [closure_5(guild(8464), obj4), ];
   const obj5 = { style: tmp.warningBadge, children: null };
-  const tmp8 = guild(8472);
-  obj5.children = closure_5(channel(8244).WarningIcon, { style: tmp.warningIcon, color: guild(576).colors.ICON_FEEDBACK_WARNING });
+  const tmp8 = guild(8464);
+  obj5.children = closure_5(channel(8234).WarningIcon, { style: tmp.warningIcon, color: guild(576).colors.ICON_FEEDBACK_WARNING });
   items3[1] = closure_5(View, obj5);
   obj3.children = items3;
   obj2.icon = closure_7(closure_6, obj3);
   obj2.header = memo;
-  obj2.children = closure_5(channel(9767).SystemMessageText, { text: stringResult });
+  obj2.children = closure_5(channel(9759).SystemMessageText, { text: stringResult });
   obj2.onPress = callback;
   obj2.notification = notification;
-  return closure_5(channel(9831).NotificationPressable, obj2);
+  return closure_5(channel(9823).NotificationPressable, obj2);
 };

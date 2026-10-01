@@ -1,6 +1,6 @@
-// === Module 6735: AutomaticLifecycleManager ===
+// === Module 6725: AutomaticLifecycleManager ===
 
-// Module 6735 (AutomaticLifecycleManager)
+// Module 6725 (AutomaticLifecycleManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import size from "module_2" /* 2 */;
 

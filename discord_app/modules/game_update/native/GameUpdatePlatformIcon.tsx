@@ -1,13 +1,13 @@
-// === Module 8545: GameUpdatePlatformIcon ===
+// === Module 8537: GameUpdatePlatformIcon ===
 
-// Module 8545 (GameUpdatePlatformIcon)
-import MobilePhoneIcon from "MobilePhoneIcon" /* 6575 */;
-import PlatformType from "PlatformType" /* 7985 */;
-import AppleNeutralIcon from "AppleNeutralIcon" /* 8095 */;
-import XboxNeutralIcon from "XboxNeutralIcon" /* 8357 */;
-import ScreenIcon from "ScreenIcon" /* 8546 */;
-import PlaystationNeutralIcon from "PlaystationNeutralIcon" /* 8548 */;
-import NintendoSwitchNeutralIcon from "NintendoSwitchNeutralIcon" /* 8550 */;
+// Module 8537 (GameUpdatePlatformIcon)
+import MobilePhoneIcon from "MobilePhoneIcon" /* 6565 */;
+import PlatformType from "PlatformType" /* 7972 */;
+import AppleNeutralIcon from "AppleNeutralIcon" /* 8084 */;
+import XboxNeutralIcon from "XboxNeutralIcon" /* 8348 */;
+import ScreenIcon from "ScreenIcon" /* 8538 */;
+import PlaystationNeutralIcon from "PlaystationNeutralIcon" /* 8540 */;
+import NintendoSwitchNeutralIcon from "NintendoSwitchNeutralIcon" /* 8542 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 10659: roundToNearestPixel ===
+// === Module 10651: roundToNearestPixel ===
 
-// Module 10659 (roundToNearestPixel)
+// Module 10651 (roundToNearestPixel)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

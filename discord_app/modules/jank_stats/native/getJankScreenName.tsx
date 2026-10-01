@@ -1,9 +1,9 @@
-// === Module 15838: getJankScreenName ===
+// === Module 15854: getJankScreenName ===
 
-// Module 15838 (getJankScreenName)
-import RootNavigationRef from "RootNavigationRef" /* 4723 */;
-import getScreenAnalyticsName from "getScreenAnalyticsName" /* 15840 */;
-import JankScreenConstants from "JankScreenConstants" /* 15839 */;
+// Module 15854 (getJankScreenName)
+import RootNavigationRef from "RootNavigationRef" /* 4722 */;
+import getScreenAnalyticsName from "getScreenAnalyticsName" /* 15856 */;
+import JankScreenConstants from "JankScreenConstants" /* 15855 */;
 import size from "module_2" /* 2 */;
 
 function resolveScreenName(items) {
@@ -184,7 +184,7 @@ export default function getJankScreenName() {
         obj7.rendered = items.concat(items2);
         ({ focused, rendered } = obj7);
         if (0 === focused.length) {
-          let obj9 = { screen, expectedScreenIds: "", focusedRoute: "channel" };
+          let obj9 = { screen, expectedScreenIds: "", focusedRoute: "paddingHorizontal" };
           let obj15 = obj9;
         } else {
           obj15 = { screen: resolveScreenName(focused), expectedScreenIds: null, focusedRoute: null };
@@ -342,8 +342,8 @@ export const getBaseScreenName = function getBaseScreenName() {
   }
   return tmp6;
 };
-export const isModalScreenName = function isModalScreenName(baseScreenName) {
-  return baseScreenName.startsWith("" + modal + ":") || baseScreenName === modal;
+export const isModalScreenName = function isModalScreenName(str) {
+  return str.startsWith("" + modal + ":") || str === modal;
 };
 export const getWideViewScreenName = function getWideViewScreenName(baseScreenName) {
   const rootNavigationRef = RootNavigationRef.getRootNavigationRef();

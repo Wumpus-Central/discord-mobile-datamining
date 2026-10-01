@@ -1,6 +1,6 @@
-// === Module 10998: FilePickerUtils ===
+// === Module 11002: FilePickerUtils ===
 
-// Module 10998 (FilePickerUtils)
+// Module 11002 (FilePickerUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -47,7 +47,7 @@ let closure_5 = async function _handleDocumentSelection() {
           closure_129_3 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "flex", done: true };
+          return { value: "flex", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

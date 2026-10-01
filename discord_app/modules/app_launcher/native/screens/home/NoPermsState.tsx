@@ -1,13 +1,13 @@
-// === Module 11798: NoPermsState ===
+// === Module 11806: NoPermsState ===
 
-// Module 11798 (NoPermsState)
+// Module 11806 (NoPermsState)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import shared from "shared" /* 4715 */;
-import useThemeDefault from "useTheme" /* 4797 */;
-import Text_Text from "Text/Text" /* 4862 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 8911 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11736 */;
+import shared from "shared" /* 4714 */;
+import useThemeDefault from "useTheme" /* 4776 */;
+import Text_Text from "Text/Text" /* 4841 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 8904 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11744 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = { container: { paddingVertical: 16, paddingHorizontal: 24, gap: 12, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.lg, alignItems: "center", justifyContent: "flex-start", display: "flex", flexDirection: "row" }, textContainer: { flexShrink: 1 }, image: { width: 64, height: 64 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -23,7 +23,7 @@ const result = size.fileFinishedImporting("modules/app_launcher/native/screens/h
 
 export default function EmptyState() {
   const tmp = closure_7();
-  const tmp4Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 11799 : 11800);
+  const tmp4Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 11807 : 11808);
   const logAppLauncherEmptyStateView = AppLauncherNativeUtils.useLogAppLauncherEmptyStateView(AppLauncherTypes.AppLauncherEmptyStateType.HOME_NO_PERMISSIONS);
   const obj2 = { style: tmp.container, children: null };
   const items = [hasOwnProperty(React4, { style: tmp.image, resizeMode: "contain", source: tmp4Result }), ];

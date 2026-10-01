@@ -1,23 +1,23 @@
-// === Module 15108: DisplayNameStylesEditPreview ===
+// === Module 15114: DisplayNameStylesEditPreview ===
 
-// Module 15108 (DisplayNameStylesEditPreview)
+// Module 15114 (DisplayNameStylesEditPreview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import utils from "utils" /* 1971 */;
-import _modDef2877 from "module_2877" /* 2877 */;
-import DateUtils from "DateUtils" /* 4542 */;
-import Text_Text from "Text/Text" /* 4862 */;
-import usePendingAvatarSettingsDefault from "usePendingAvatarSettings" /* 7799 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 7806 */;
-import useAvatarDecoration from "useAvatarDecoration" /* 7856 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10560 */;
-import types from "types" /* 10561 */;
-import UserProfilePreviewDefault from "UserProfilePreview" /* 10775 */;
-import NameplatePreview from "NameplatePreview" /* 10995 */;
+import _modDef2876 from "module_2876" /* 2876 */;
+import DateUtils from "DateUtils" /* 4541 */;
+import Text_Text from "Text/Text" /* 4841 */;
+import usePendingAvatarSettingsDefault from "usePendingAvatarSettings" /* 7786 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 7793 */;
+import useAvatarDecoration from "useAvatarDecoration" /* 7843 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10552 */;
+import types from "types" /* 10553 */;
+import UserProfilePreviewDefault from "UserProfilePreview" /* 10772 */;
+import NameplatePreview from "NameplatePreview" /* 10999 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4855 */;
+import AccessibilityStore from "AccessibilityStore" /* 4834 */;
 
 require = fn;
 function ChatPreview(arg0) {
@@ -50,7 +50,7 @@ function ChatPreview(arg0) {
   const items3 = [React5(View, obj6), ];
   const obj9 = { variant: "text-md/normal", color: "text-default", style: tmp.chatMessageText, children: null };
   const intl = util.intl;
-  obj9.children = intl.string(_modDef2877.h5Cuej);
+  obj9.children = intl.string(_modDef2876.h5Cuej);
   items3[1] = timestampProducer(Text_Text.Text, obj9);
   obj5.children = items3;
   items1[1] = React5(View, obj5);
@@ -60,7 +60,7 @@ function ChatPreview(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = { previewSection: { marginBottom: nativeDefault.space.PX_24, alignItems: "center", alignSelf: "center", width: "100%", maxWidth: 360 }, chatPreviewWrapper: null, nameplatePreviewWrapper: null, chatContainer: null, chatContent: null, chatHeader: null, chatUsername: null, chatTimestamp: null, chatMessageText: null };
 let obj3 = { marginBottom: nativeDefault.space.PX_24, alignItems: "center", alignSelf: "center", width: "100%", maxWidth: 360 };
 obj2.chatPreviewWrapper = { marginTop: -18, alignSelf: "flex-end", width: 260, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
@@ -89,7 +89,7 @@ export default function DisplayNameStylesEditPreview(selectedEffectId) {
   const obj3 = { style: tmp.previewSection, children: null };
   const obj4 = { user, displayName, guildId, displayNameStylesOverride: memo, compact: true, hideFrame: true, maxWidth: 320, accessibilityLabel: null };
   const intl = util.intl;
-  obj4.accessibilityLabel = intl.string(_modDef2877.zoh6MT);
+  obj4.accessibilityLabel = intl.string(_modDef2876.zoh6MT);
   const items1 = [timestampProducer(UserProfilePreviewDefault, obj4), , ];
   items1[1] = timestampProducer(View, { style: tmp.chatPreviewWrapper, children: timestampProducer(ChatPreview, { user, displayName, displayNameStyles: memo, guildId }) });
   const obj6 = { style: tmp.nameplatePreviewWrapper, children: null };

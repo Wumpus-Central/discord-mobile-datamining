@@ -1,15 +1,15 @@
-// === Module 15828: MainTabsNavigatorPanel ===
+// === Module 15844: MainTabsNavigatorPanel ===
 
-// Module 15828 (MainTabsNavigatorPanel)
+// Module 15844 (MainTabsNavigatorPanel)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 576 */;
-import RootNavigationRef from "RootNavigationRef" /* 4723 */;
-import ChatInputUtils from "ChatInputUtils" /* 4731 */;
-import transitionToChannel from "transitionToChannel" /* 4877 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4879 */;
-import PanelsNavigationUtils from "PanelsNavigationUtils" /* 15829 */;
-import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 15830 */;
-import ChannelScreenAnimatedFrameDefault from "ChannelScreenAnimatedFrame" /* 15834 */;
+import RootNavigationRef from "RootNavigationRef" /* 4722 */;
+import ChatInputUtils from "ChatInputUtils" /* 4730 */;
+import transitionToChannel from "transitionToChannel" /* 4856 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4858 */;
+import PanelsNavigationUtils from "PanelsNavigationUtils" /* 15845 */;
+import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 15846 */;
+import ChannelScreenAnimatedFrameDefault from "ChannelScreenAnimatedFrame" /* 15850 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,7 +21,7 @@ const Constants = fn(1074);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let closure_12 = new LoggerDefault("MainTabsNavigatorPanel");
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj = { container: { flex: 1 }, containerBackground: null, tabsContainer: null };
 const tmp5 = new LoggerDefault("MainTabsNavigatorPanel");
 obj.containerBackground = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
@@ -49,11 +49,11 @@ export default noop.memo(function MainTabsNavigatorPanel() {
       let obj = require;
       let result = dependencyMap;
       if (isChatLockedOpen) {
-        obj = obj(15829);
+        obj = obj(15845);
         result = obj.convertPortraitToLandscapeScreens();
       } else {
-        obj(4731).dismissKeyboard();
-        const objResult = obj(4731);
+        obj(4730).dismissKeyboard();
+        const objResult = obj(4730);
         const result1 = PanelsNavigationUtils.convertLandscapeToPortraitScreens();
       }
       closure_4.current = true;

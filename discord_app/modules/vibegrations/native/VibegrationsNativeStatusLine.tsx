@@ -1,9 +1,9 @@
-// === Module 16544: VibegrationsNativeStatusLine ===
+// === Module 16566: VibegrationsNativeStatusLine ===
 
-// Module 16544 (VibegrationsNativeStatusLine)
+// Module 16566 (VibegrationsNativeStatusLine)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4862 */;
-import MagicWandIcon from "MagicWandIcon" /* 9812 */;
+import Text_Text from "Text/Text" /* 4841 */;
+import MagicWandIcon from "MagicWandIcon" /* 9804 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let items = [nativeDefault.colors.TEXT_BRAND, nativeDefault.colors.TEXT_FEEDBACK_POSITIVE, nativeDefault.colors.TEXT_FEEDBACK_WARNING, nativeDefault.colors.TEXT_FEEDBACK_INFO];
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = { row: { flexDirection: "row", alignItems: "flex-start", paddingVertical: nativeDefault.space.PX_4 }, glyphGutter: { width: 40, marginRight: 12, alignItems: "center" }, label: { flex: 1 }, trailing: null, chevron: null };
 let obj3 = { flexDirection: "row", alignItems: "flex-start", paddingVertical: nativeDefault.space.PX_4 };
 obj2.trailing = { flexShrink: 0, marginLeft: nativeDefault.space.PX_8 };
@@ -97,7 +97,7 @@ export default function VibegrationsNativeStatusLine(live) {
     if (inGutter) {
       const obj2 = { style: row.glyphGutter, children: null };
       let tmp6Result = glyph;
-      if (glyph == null) {
+      if (undefined === glyph) {
         const obj3 = { size: "refresh_sm", color: TEXT_BRAND };
         tmp6Result = hasOwnProperty(MagicWandIcon.MagicWandIcon, obj3);
       }

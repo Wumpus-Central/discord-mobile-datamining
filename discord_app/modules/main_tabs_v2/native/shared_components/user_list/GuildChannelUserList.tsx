@@ -1,28 +1,28 @@
-// === Module 11288: GuildChannelUserList ===
+// === Module 11296: GuildChannelUserList ===
 
-// Module 11288 (GuildChannelUserList)
+// Module 11296 (GuildChannelUserList)
 import throttleDefault from "throttle" /* 550 */;
 import util from "util" /* 1115 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4504 */;
-import UserUtilsDefault from "UserUtils" /* 4708 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5018 */;
-import GuildUtilsDefault from "GuildUtils" /* 6028 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7819 */;
-import sortByMatchScore from "sortByMatchScore" /* 9491 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4503 */;
+import UserUtilsDefault from "UserUtils" /* 4707 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4997 */;
+import GuildUtilsDefault from "GuildUtils" /* 6017 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7806 */;
+import sortByMatchScore from "sortByMatchScore" /* 9485 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelMemberStore_mod from "ChannelMemberStore" /* 6893 */;
-import ChannelStore from "ChannelStore" /* 2045 */;
-import GuildMemberStore from "GuildMemberStore" /* 2108 */;
-import GuildStore from "GuildStore" /* 2067 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2099 */;
+import ChannelMemberStore_mod from "ChannelMemberStore" /* 6884 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
+import GuildMemberStore from "GuildMemberStore" /* 2107 */;
+import GuildStore from "GuildStore" /* 2066 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const sortByMatchScoreDefault = sortByMatchScore;
 
 require = fn;
 const View = fn(17).View;
-let ChannelMemberStore = fn(6893);
+let ChannelMemberStore = fn(6884);
 ({ EVERYONE_CHANNEL_ID: closure_7, MemberListRowTypes: closure_8 } = ChannelMemberStore);
 let ChannelMemberStore = ChannelMemberStore_mod;
 const Constants = fn(1074);
@@ -78,11 +78,11 @@ export default noop.memo(function GuildChannelUserList(searchable) {
     const items = [sortByMatchScore.AutocompleterResultTypes.USER];
     const obj = { userFilters: { guild: channelId, strict: true } };
     const obj2 = { guild: channelId, strict: true };
-    return new sortByMatchScoreDefault((canMentionEveryone, str) => {
+    return new sortByMatchScoreDefault((stateFromStores, str) => {
       if ("" === str.trim()) {
         analyticsLocations(closure_20);
       } else {
-        analyticsLocations(canMentionEveryone);
+        analyticsLocations(stateFromStores);
       }
     }, items, undefined, obj);
   }), 1)[0];

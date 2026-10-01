@@ -1,16 +1,16 @@
-// === Module 15886: MessagesEmptyState ===
+// === Module 15902: MessagesEmptyState ===
 
-// Module 15886 (MessagesEmptyState)
+// Module 15902 (MessagesEmptyState)
 import util from "util" /* 1115 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1249 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1479 */;
 import useNavigation from "useNavigation" /* 1485 */;
-import Text_Text from "Text/Text" /* 4862 */;
-import components_Button_Button from "components/Button/Button" /* 5477 */;
-import useIsScreenLandscape from "useIsScreenLandscape" /* 5635 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 8426 */;
-import useYouBarTotalHeight from "useYouBarTotalHeight" /* 14835 */;
-import _modDef15887 from "module_15887" /* 15887 */;
+import Text_Text from "Text/Text" /* 4841 */;
+import components_Button_Button from "components/Button/Button" /* 5465 */;
+import useIsScreenLandscape from "useIsScreenLandscape" /* 5624 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 8418 */;
+import useYouBarTotalHeight from "useYouBarTotalHeight" /* 14841 */;
+import _modDef15903 from "module_15903" /* 15903 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,7 +21,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let closure_10 = createStyles.createStyles({ container: { flex: 1, justifyContent: "center" }, scrollViewContentContainer: { flexGrow: 2 }, innerContainer: { alignItems: "center", justifyContent: "center" }, imageContainer: { alignItems: "center", marginBottom: 24 }, textWrapper: { paddingHorizontal: 48 }, body: { marginBottom: 24, textAlign: "center" }, title: { textAlign: "center", fontSize: 18, marginBottom: 8 }, buttonWrapper: { paddingHorizontal: 16, paddingBottom: 16 } });
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesEmptyState.tsx");
@@ -60,7 +60,7 @@ export default function MessagesEmptyState() {
   const obj5 = { style: tmp.container, onLayout: callback, children: null };
   const obj6 = { style: tmp.innerContainer, children: null };
   const obj7 = { style: tmp.imageContainer, children: null };
-  const obj8 = { resizeMode: "contain", source: _modDef15887, style: null };
+  const obj8 = { resizeMode: "contain", source: _modDef15903, style: null };
   let num = 350;
   if (result < 622) {
     num = result / 622 * 350;

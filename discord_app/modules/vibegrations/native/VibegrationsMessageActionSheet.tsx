@@ -1,12 +1,12 @@
-// === Module 16550: VibegrationsMessageActionSheet ===
+// === Module 16572: VibegrationsMessageActionSheet ===
 
-// Module 16550 (VibegrationsMessageActionSheet)
+// Module 16572 (VibegrationsMessageActionSheet)
 import util from "util" /* 1115 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4558 */;
-import CopyIcon from "CopyIcon" /* 4809 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4830 */;
-import ClipboardUtils from "ClipboardUtils" /* 6806 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7819 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4557 */;
+import CopyIcon from "CopyIcon" /* 4788 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4809 */;
+import ClipboardUtils from "ClipboardUtils" /* 6796 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7806 */;
 import noop from "module_19" /* 19 */;
 
 const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;

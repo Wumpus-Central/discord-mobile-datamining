@@ -1,21 +1,21 @@
-// === Module 16133: useGuildsBarProps ===
+// === Module 16153: useGuildsBarProps ===
 
-// Module 16133 (useGuildsBarProps)
+// Module 16153 (useGuildsBarProps)
 import useWindowDimensions from "useWindowDimensions" /* 1479 */;
-import GuildsBarFooterWrapperDefault from "GuildsBarFooterWrapper" /* 16190 */;
+import GuildsBarFooterWrapperDefault from "GuildsBarFooterWrapper" /* 16211 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5786 */;
-import LurkingStore from "LurkingStore" /* 4500 */;
-import MessageRequestStore from "MessageRequestStore" /* 6836 */;
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6837 */;
-import GeoRestrictedGuildStore from "GeoRestrictedGuildStore" /* 13486 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5397 */;
-import GuildMemberStore from "GuildMemberStore" /* 2108 */;
-import GuildStore from "GuildStore" /* 2067 */;
-import PrivateChannelReadStateStore from "PrivateChannelReadStateStore" /* 13494 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4685 */;
-import SortedGuildStore from "SortedGuildStore" /* 5947 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 16126 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5775 */;
+import LurkingStore from "LurkingStore" /* 4499 */;
+import MessageRequestStore from "MessageRequestStore" /* 6827 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6828 */;
+import GeoRestrictedGuildStore from "GeoRestrictedGuildStore" /* 13494 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5385 */;
+import GuildMemberStore from "GuildMemberStore" /* 2107 */;
+import GuildStore from "GuildStore" /* 2066 */;
+import PrivateChannelReadStateStore from "PrivateChannelReadStateStore" /* 13502 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4684 */;
+import SortedGuildStore from "SortedGuildStore" /* 5936 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 16146 */;
 
 const require = globalThis.__r;
 
@@ -75,8 +75,8 @@ function isAnchorIdEqual(arg0, arg1, arg2) {
   }
   return tmp;
 }
-const GuildsNodeType = fn(5947).GuildsNodeType;
-const GuildsBarConstants = fn(16123);
+const GuildsNodeType = fn(5936).GuildsNodeType;
+const GuildsBarConstants = fn(16143);
 ({ FastListRenderSections: closure_17, useGuildWrapperSize: closure_18 } = GuildsBarConstants);
 const jsx = fn(21).jsx;
 let closure_21 = { MESSAGES: "section-messages", FAVORITES: "section-favorites", PENDING_JOIN_REQUESTS: "section-pending-join-requests", LURKING_GUILDS: "section-lurking-guilds", GUEST_GUILDS: "section-guest-guilds", UNREAD_PRIVATE_CHANNELS: "section-private-channels", SEPARATOR: "section-separator", GUILDS: "section-guilds" };
@@ -443,22 +443,22 @@ export default function useGuildsBarProps(arg0) {
         const obj = {
           children: items1.map((item) => {
             if ("unavailable-guilds" === item) {
-              return closure_1_19(closure_1_1(16191), {}, item);
+              return closure_1_19(closure_1_1(16212), {}, item);
             } else if ("empty-nux" === item) {
-              return closure_1_19(closure_1_1(16192), {}, item);
+              return closure_1_19(closure_1_1(16213), {}, item);
             } else if ("create-join-guild" === item) {
-              return closure_1_19(closure_1_1(16194), {}, item);
+              return closure_1_19(closure_1_1(16214), {}, item);
             }
           })
         };
         return jsx(GuildsBarFooterWrapperDefault, {
           children: items1.map((item) => {
             if ("unavailable-guilds" === item) {
-              return closure_1_19(closure_1_1(16191), {}, item);
+              return closure_1_19(closure_1_1(16212), {}, item);
             } else if ("empty-nux" === item) {
-              return closure_1_19(closure_1_1(16192), {}, item);
+              return closure_1_19(closure_1_1(16213), {}, item);
             } else if ("create-join-guild" === item) {
-              return closure_1_19(closure_1_1(16194), {}, item);
+              return closure_1_19(closure_1_1(16214), {}, item);
             }
           })
         });

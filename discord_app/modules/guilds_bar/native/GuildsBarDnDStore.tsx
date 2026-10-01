@@ -1,10 +1,10 @@
-// === Module 16126: GuildsBarDnDStore ===
+// === Module 16146: GuildsBarDnDStore ===
 
-// Module 16126 (GuildsBarDnDStore)
+// Module 16146 (GuildsBarDnDStore)
 import SentryUtilsDefault from "SentryUtils" /* 1231 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1248 */;
-import _mod4482 from "module_4482" /* 4482 */;
-import SortedGuildStore from "SortedGuildStore" /* 5947 */;
+import _mod4481 from "module_4481" /* 4481 */;
+import SortedGuildStore from "SortedGuildStore" /* 5936 */;
 import identity from "module_1243" /* 1243 */;
 import size from "module_2" /* 2 */;
 
@@ -16,7 +16,7 @@ let c5 = -1;
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   _require = arg0;
   closure_1 = arg1;
-  let obj = { dragSpecs: "Boolean", overSpecs: "disabled", dropSpecs: "isArray", dragRegion: require("ReanimatedRexport").makeMutable({ min: 0, max: 0 }), gestureState: null, dragDropInProgress: null, listInsets: 12, scrollPosition: 12, windowSize: null, setStateShallow: null, dropStart: 0, dropComplete: "No Output Devices" };
+  let obj = { dragSpecs: "Boolean", overSpecs: "disabled", dropSpecs: "isArray", dragRegion: require("ReanimatedRexport").makeMutable({ min: 0, max: 0 }), gestureState: null, dragDropInProgress: null, listInsets: "row", scrollPosition: 4, windowSize: "wrap", setStateShallow: null, dropStart: null, dropComplete: null };
   let obj2 = require("ReanimatedRexport");
   obj.gestureState = require("ReanimatedRexport").makeMutable(obj);
   let obj3 = require("ReanimatedRexport");
@@ -80,7 +80,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     obj2.data = { gestureState: gestureState.get(), dropSpecs, dragSpecs };
     obj.addBreadcrumb(obj2);
     if (null != dropSpecs) {
-      ReactBatchUpdates.batchUpdates(() => closure_1_0({ dropSpecs: "Array" }));
+      ReactBatchUpdates.batchUpdates(() => closure_1_0({ dropSpecs: "r" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(c5);
       if (null == dragSpecs) {
@@ -198,7 +198,7 @@ export const useItemDragState = function useItemDragState(arg0, arg1) {
     obj.itemSize = num;
     obj.dragDropInProgress = dragDropInProgress;
     return obj;
-  }, _mod4482.shallow);
+  }, _mod4481.shallow);
 };
 export const useFolderBGHeightOffset = function useFolderBGHeightOffset(arg0) {
   closure_0 = arg0;

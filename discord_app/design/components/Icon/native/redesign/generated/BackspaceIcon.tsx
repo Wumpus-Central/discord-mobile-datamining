@@ -1,9 +1,9 @@
-// === Module 10024: BackspaceIcon ===
+// === Module 10016: BackspaceIcon ===
 
-// Module 10024 (BackspaceIcon)
+// Module 10016 (BackspaceIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4560 */;
-import _mod10025 from "module_10025" /* 10025 */;
+import BaseIconImage from "BaseIconImage" /* 4559 */;
+import _mod10017 from "module_10017" /* 10017 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const BackspaceIcon = function BackspaceIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10025, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10017, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

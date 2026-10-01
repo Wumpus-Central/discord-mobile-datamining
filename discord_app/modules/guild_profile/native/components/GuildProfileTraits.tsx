@@ -1,11 +1,11 @@
-// === Module 9420: GuildProfileTraits ===
+// === Module 9414: GuildProfileTraits ===
 
-// Module 9420 (GuildProfileTraits)
+// Module 9414 (GuildProfileTraits)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4517 */;
-import Text_Text from "Text/Text" /* 4862 */;
-import EmojiDefault from "Emoji" /* 6747 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4516 */;
+import Text_Text from "Text/Text" /* 4841 */;
+import EmojiDefault from "Emoji" /* 6737 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -34,7 +34,7 @@ function GuildProfileTraitView(trait) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 const obj2 = { container: { display: "flex", flexDirection: "row", flexWrap: "wrap", gap: 8 }, trait: { display: "flex", flexDirection: "row", gap: 4, alignItems: "center", paddingHorizontal: 8, paddingVertical: 4, borderRadius: nativeDefault.radii.lg, borderWidth: 1, borderStyle: "solid", borderColor: nativeDefault.colors.BORDER_SUBTLE }, emojiImage: { width: 16, height: 16 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);

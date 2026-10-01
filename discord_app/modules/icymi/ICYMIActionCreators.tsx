@@ -1,10 +1,10 @@
-// === Module 7994: ICYMIActionCreators ===
+// === Module 7983: ICYMIActionCreators ===
 
-// Module 7994 (ICYMIActionCreators)
+// Module 7983 (ICYMIActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import UserSettings from "UserSettings" /* 2021 */;
-import ICYMIUtils from "ICYMIUtils" /* 7993 */;
+import ICYMIExperiment from "ICYMIExperiment" /* 7984 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -353,7 +353,7 @@ export default {
       const obj3 = { type: "LOAD_ICYMI_FROM_NOTIFICATION", customStatusItem };
       DispatcherDefault.dispatch(obj3);
     }
-    obj = ICYMIUtils;
+    obj = ICYMIExperiment;
   },
   fetchHydrated(arg0, dependencyMap2, arg2) {
     closure_0 = arg0;
@@ -420,8 +420,8 @@ export default {
               closure_128_4 = tmp33;
               endingIndex(tmp33[4]).captureException(closure_128_4);
               const obj2 = endingIndex(tmp33[4]);
-              closure_128_3 = startingIndex(tmp33[5]).generateHydrationId(closure_129_0, closure_129_1);
-              const obj3 = startingIndex(tmp33[5]);
+              closure_128_3 = startingIndex(tmp33[6]).generateHydrationId(closure_129_0, closure_129_1);
+              const obj3 = startingIndex(tmp33[6]);
               const obj11 = { type: "LOAD_ICYMI_HYDRATED_FAILED", hydrationId: closure_128_3 };
               endingIndex(tmp33[3]).dispatch(obj11);
               const obj4 = endingIndex(tmp33[3]);
@@ -490,7 +490,7 @@ export default {
                 const obj6 = { value: HTTP.get(obj5), done: false };
                 return obj6;
               }
-              obj9 = ICYMIUtils;
+              obj9 = ICYMIExperiment;
             }
           } else {
             if (1 === tmp7) {
@@ -564,7 +564,7 @@ export default {
                 const obj6 = { value: HTTP.get(obj5), done: false };
                 return obj6;
               }
-              obj9 = ICYMIUtils;
+              obj9 = ICYMIExperiment;
             }
           } else {
             if (1 === tmp7) {
@@ -646,7 +646,7 @@ export default {
                   }
                 }
               }
-              obj9 = ICYMIUtils;
+              obj9 = ICYMIExperiment;
             }
           } else {
             if (1 === tmp8) {

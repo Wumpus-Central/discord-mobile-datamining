@@ -1,6 +1,6 @@
-// === Module 4907: hasRichActivity ===
+// === Module 4886: hasRichActivity ===
 
-// Module 4907 (hasRichActivity)
+// Module 4886 (hasRichActivity)
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

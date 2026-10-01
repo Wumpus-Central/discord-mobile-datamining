@@ -1,6 +1,6 @@
-// === Module 12287: ? ===
+// === Module 12295: ? ===
 
-// Module 12287
+// Module 12295
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/BoostGemIllocon-2x.png.js");

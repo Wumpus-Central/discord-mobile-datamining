@@ -1,8 +1,8 @@
-// === Module 5488: ButtonShine ===
+// === Module 5476: ButtonShine ===
 
-// Module 5488 (ButtonShine)
-import ReanimatedRexport from "ReanimatedRexport" /* 4596 */;
-import timing from "timing" /* 4867 */;
+// Module 5476 (ButtonShine)
+import ReanimatedRexport from "ReanimatedRexport" /* 4595 */;
+import timing from "timing" /* 4846 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

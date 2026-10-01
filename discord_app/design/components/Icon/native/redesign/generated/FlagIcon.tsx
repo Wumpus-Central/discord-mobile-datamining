@@ -1,9 +1,9 @@
-// === Module 8320: FlagIcon ===
+// === Module 8311: FlagIcon ===
 
-// Module 8320 (FlagIcon)
+// Module 8311 (FlagIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4560 */;
-import _mod8321 from "module_8321" /* 8321 */;
+import BaseIconImage from "BaseIconImage" /* 4559 */;
+import _mod8312 from "module_8312" /* 8312 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const FlagIcon = function FlagIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8321, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8312, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

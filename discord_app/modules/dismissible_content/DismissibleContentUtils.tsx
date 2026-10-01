@@ -8,9 +8,9 @@ import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /*
 import dismissible_content from "dismissible_content" /* 2029 */;
 import DismissibleContentTypes from "DismissibleContentTypes" /* 2030 */;
 import DismissibleContentFatigueConfig from "DismissibleContentFatigueConfig" /* 2034 */;
-import VersionedDismissibleContentUtils from "VersionedDismissibleContentUtils" /* 2043 */;
-import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry" /* 4706 */;
-import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 9901 */;
+import VersionedDismissibleContentUtils from "VersionedDismissibleContentUtils" /* 2042 */;
+import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry" /* 4705 */;
+import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 9893 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
@@ -432,7 +432,7 @@ function trackDismissibleContentDismissed(dismissibleContent, guildId) {
 const DCFEventTypes = fn(2032).DCFEventTypes;
 const DismissibleContentShownStateStore = fn(2035);
 ({ addCandidateContent: closure_8, removeCandidateContent: closure_9, isContentShown: c10, getCurrentlyShownCounts: closure_11 } = DismissibleContentShownStateStore);
-const ContentDismissActionType = fn(2042).ContentDismissActionType;
+const ContentDismissActionType = fn(2041).ContentDismissActionType;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 let c14 = 2592000000;
 let items = [fn(2029).DismissibleContent.ACCOUNT_LINK_INVITE_FRIENDS, fn(2029).DismissibleContent.AUTOCLIPPING_ACCOUNT_PANEL_COACHMARK];
@@ -557,7 +557,7 @@ export const isTimeRecurringDismissibleContentDismissed = function isTimeRecurri
       }
     }
     if (undefined === tmp5) {
-      return { isDismissed: false, lastDismissedAtMs: "r" };
+      return { isDismissed: false, lastDismissedAtMs: "a" };
     } else {
       let flag = true;
       if (null != cooldownConfig) {

@@ -1,6 +1,6 @@
-// === Module 13428: ConnectionIndicatorExperiment ===
+// === Module 13436: ConnectionIndicatorExperiment ===
 
-// Module 13428 (ConnectionIndicatorExperiment)
+// Module 13436 (ConnectionIndicatorExperiment)
 import ApexExperiment from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 

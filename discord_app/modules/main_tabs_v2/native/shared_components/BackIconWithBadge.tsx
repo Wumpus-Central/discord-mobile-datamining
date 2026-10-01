@@ -1,14 +1,14 @@
-// === Module 16245: BackIconWithBadge ===
+// === Module 16265: BackIconWithBadge ===
 
-// Module 16245 (BackIconWithBadge)
+// Module 16265 (BackIconWithBadge)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import XLargeIcon from "XLargeIcon" /* 4815 */;
-import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 6136 */;
-import XSmallIcon from "XSmallIcon" /* 6188 */;
-import ClipView from "ClipView" /* 8472 */;
+import XLargeIcon from "XLargeIcon" /* 4794 */;
+import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 6126 */;
+import XSmallIcon from "XSmallIcon" /* 6178 */;
+import ClipView from "ClipView" /* 8464 */;
 import noop from "module_19" /* 19 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7245 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7223 */;
 
 require = fn;
 function IconWithBadge(includeNotificationsCount) {
@@ -27,7 +27,7 @@ function IconWithBadge(includeNotificationsCount) {
   }
   let num2 = 0;
   if (flag) {
-    num2 = memo(16236)().value;
+    num2 = memo(16256)().value;
   }
   const sum = num + num2;
   _require = sum;
@@ -64,7 +64,7 @@ function IconWithBadge(includeNotificationsCount) {
     items4 = [];
   }
   const obj4 = { cutouts: items4, children: closure_6(includeNotificationsCount.Icon, { size: "md", style: tmp.backIcon, color: "interactive-text-default" }) };
-  const items5 = [closure_6(tmp5(8472), obj4), ];
+  const items5 = [closure_6(tmp5(8464), obj4), ];
   let tmp9Result = null;
   if (sum > 0) {
     const obj6 = { style: tmp.badgeWrapper, children: null };
@@ -80,7 +80,7 @@ function IconWithBadge(includeNotificationsCount) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = { badgeWrapper: { position: "absolute", top: 16, left: 12 }, backIcon: { height: 24, width: 24 }, iconWithBadge: { display: "flex", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, borderRadius: nativeDefault.modules.button.BORDER_RADIUS, padding: 7, backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT } };
 let closure_8 = createStyles.createStyles(obj2);
 let size = fn(2);

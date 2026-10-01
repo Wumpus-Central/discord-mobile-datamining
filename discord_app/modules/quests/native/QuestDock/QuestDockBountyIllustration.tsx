@@ -1,16 +1,16 @@
-// === Module 14947: QuestDockBountyIllustration ===
+// === Module 14953: QuestDockBountyIllustration ===
 
-// Module 14947 (QuestDockBountyIllustration)
+// Module 14953 (QuestDockBountyIllustration)
 import initialize from "initialize" /* 504 */;
-import native from "native" /* 4570 */;
-import FastImageDefault from "FastImage" /* 6095 */;
-import APNGPlayer from "APNGPlayer" /* 8467 */;
-import BountiesMobileQuestBarExperiment2 from "BountiesMobileQuestBarExperiment" /* 10891 */;
-import QuestDockHooks from "QuestDockHooks" /* 14827 */;
-import useIsQuestDockContentVisibleDefault from "useIsQuestDockContentVisible" /* 14943 */;
-import _modDef14948 from "module_14948" /* 14948 */;
+import native from "native" /* 4569 */;
+import FastImageDefault from "FastImage" /* 6085 */;
+import APNGPlayer from "APNGPlayer" /* 8459 */;
+import BountiesMobileQuestBarExperiment2 from "BountiesMobileQuestBarExperiment" /* 10892 */;
+import QuestDockHooks from "QuestDockHooks" /* 14833 */;
+import useIsQuestDockContentVisibleDefault from "useIsQuestDockContentVisible" /* 14949 */;
+import _modDef14954 from "module_14954" /* 14954 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4855 */;
+import AccessibilityStore from "AccessibilityStore" /* 4834 */;
 
 require = fn;
 function useRivePlaybackGateRef() {
@@ -87,7 +87,7 @@ function QuestDock3DOrbsAPNGPlayer(shouldAnimate) {
       aPNGPlayerControls.pause();
     }
   }, items);
-  return jsx(APNGPlayer.APNGPlayer, { ref, url: _modDef14948, style: tmp.fill, autoplay: false });
+  return jsx(APNGPlayer.APNGPlayer, { ref, url: _modDef14954, style: tmp.fill, autoplay: false });
 }
 function QuestDock3DOrbsIllustration() {
   const tmp = closure_8();
@@ -107,7 +107,7 @@ function QuestDock3DOrbsIllustration() {
     let tmp8Result = <QuestDock3DOrbsAPNGPlayer shouldAnimate={tmp7} />;
   } else {
     const obj4 = { source: null, style: null, resizeMode: "contain", enableAnimation: null, paused: null, accessible: false };
-    const obj5 = { uri: _modDef14948 };
+    const obj5 = { uri: _modDef14954 };
     obj4.source = obj5;
     obj4.style = tmp.fill;
     obj4.enableAnimation = !stateFromStores;
@@ -124,11 +124,11 @@ function QuestDockOrbHandsIllustration() {
   return jsx(native.OrbsIllustration_HandsRive, { ref: useRivePlaybackGateRef(), stateMachine: "State Machine 1", fit: "contain" });
 }
 const View = fn(17).View;
-const QuestsExperimentLocations = fn(5953).QuestsExperimentLocations;
-const QuestDockConstants = fn(14830);
+const QuestsExperimentLocations = fn(5942).QuestsExperimentLocations;
+const QuestDockConstants = fn(14836);
 ({ QUEST_DOCK_COLLAPSED_HEIGHT, QUEST_DOCK_COLLAPSED_HEADER_PADDING_RIGHT } = QuestDockConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj = { frame: { marginRight: -QUEST_DOCK_COLLAPSED_HEADER_PADDING_RIGHT + 5 }, hands: null, orbs: null, fill: { flex: 1 } };
 let size = { width: 124, height: QUEST_DOCK_COLLAPSED_HEIGHT, transform: null };
 let items = [{ translateY: -2 }];

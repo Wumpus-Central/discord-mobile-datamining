@@ -163,7 +163,7 @@ class Dispatcher {
     if (global === undefined) {
       num = 0;
     }
-    merged = Object.assign({ _interceptors: null, _subscriptions: null, _waitQueue: null, _processingWaitQueue: false, _currentDispatchActionType: null, _actionHandlers: null, _sentryUtils: "Array", functionCache: "a" });
+    merged = Object.assign({ _interceptors: null, _subscriptions: null, _waitQueue: null, _processingWaitQueue: false, _currentDispatchActionType: null, _actionHandlers: null, _sentryUtils: "Array", functionCache: false });
     merged[0] = [];
     merged[1] = {};
     merged[2] = [];

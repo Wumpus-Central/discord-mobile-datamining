@@ -1,9 +1,9 @@
-// === Module 11750: BotsBanner ===
+// === Module 11758: BotsBanner ===
 
-// Module 11750 (BotsBanner)
+// Module 11758 (BotsBanner)
 import util from "util" /* 1115 */;
-import BannerBaseDefault from "BannerBase" /* 11746 */;
-import useBannerBots from "useBannerBots" /* 11751 */;
+import BannerBaseDefault from "BannerBase" /* 11754 */;
+import useBannerBots from "useBannerBots" /* 11759 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

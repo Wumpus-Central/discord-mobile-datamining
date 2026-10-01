@@ -1,33 +1,33 @@
-// === Module 7977: MediaShareActions ===
+// === Module 7964: MediaShareActions ===
 
-// Module 7977 (MediaShareActions)
+// Module 7964 (MediaShareActions)
 import util from "util" /* 1115 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1981 */;
-import ToastUtils from "ToastUtils" /* 4557 */;
-import useChatLayout from "useChatLayout" /* 4725 */;
-import LinkIcon from "LinkIcon" /* 4805 */;
-import DownloadIcon from "DownloadIcon" /* 4811 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4830 */;
-import transitionToChannel from "transitionToChannel" /* 4877 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 5016 */;
-import ImageWarningIcon from "ImageWarningIcon" /* 5591 */;
-import ClipboardUtils from "ClipboardUtils" /* 6806 */;
-import ActionSheet from "ActionSheet" /* 6814 */;
-import ActionSheetRow from "ActionSheetRow" /* 6816 */;
-import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 7904 */;
-import MediaSourceUtil from "MediaSourceUtil" /* 7908 */;
-import showShareActionSheet from "showShareActionSheet" /* 8004 */;
-import MaskedLinkUtils from "MaskedLinkUtils" /* 8013 */;
-import ForwardModalUtils from "ForwardModalUtils" /* 11381 */;
-import ForwardingIconDefault from "ForwardingIcon" /* 11390 */;
-import ChatArrowRightIcon from "ChatArrowRightIcon" /* 11441 */;
-import ShareIcon from "ShareIcon" /* 12670 */;
-import WindowLaunchIcon from "WindowLaunchIcon" /* 12712 */;
+import ToastUtils from "ToastUtils" /* 4556 */;
+import useChatLayout from "useChatLayout" /* 4724 */;
+import LinkIcon from "LinkIcon" /* 4784 */;
+import DownloadIcon from "DownloadIcon" /* 4790 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4809 */;
+import transitionToChannel from "transitionToChannel" /* 4856 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 4995 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 5579 */;
+import ClipboardUtils from "ClipboardUtils" /* 6796 */;
+import ActionSheet from "ActionSheet" /* 6804 */;
+import ActionSheetRow from "ActionSheetRow" /* 6806 */;
+import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 7891 */;
+import MediaSourceUtil from "MediaSourceUtil" /* 7895 */;
+import showShareActionSheet from "showShareActionSheet" /* 7993 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 8002 */;
+import ForwardModalUtils from "ForwardModalUtils" /* 11389 */;
+import ForwardingIconDefault from "ForwardingIcon" /* 11398 */;
+import ChatArrowRightIcon from "ChatArrowRightIcon" /* 11449 */;
+import ShareIcon from "ShareIcon" /* 12681 */;
+import WindowLaunchIcon from "WindowLaunchIcon" /* 12721 */;
 import noop from "module_19" /* 19 */;
-import ICYMIStore from "ICYMIStore" /* 7978 */;
-import ChannelStore from "ChannelStore" /* 2045 */;
-import MessageStore from "MessageStore" /* 5086 */;
-import MessagePreviewStore from "MessagePreviewStore" /* 8003 */;
+import ICYMIStore from "ICYMIStore" /* 7965 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
+import MessageStore from "MessageStore" /* 5065 */;
+import MessagePreviewStore from "MessagePreviewStore" /* 7992 */;
 
 require = fn;
 function useMediaShareActions(source) {
@@ -124,7 +124,7 @@ function useMediaShareActions(source) {
       if ("embed" !== source.accessoryType) {
         const attachmentId = source.attachmentId;
         if (null != attachmentId) {
-          const obj3 = { message: stateFromStores, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "fortnite" };
+          const obj3 = { message: stateFromStores, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "RECENT_MENTION_DELETE" };
           const obj4 = { onlyAttachmentIds: null };
           const items = [attachmentId];
           obj4.onlyAttachmentIds = items;
@@ -132,7 +132,7 @@ function useMediaShareActions(source) {
           ForwardModalUtils.openForwardModal(obj3);
         }
       } else {
-        const obj6 = { message: stateFromStores, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "fortnite" };
+        const obj6 = { message: stateFromStores, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "RECENT_MENTION_DELETE" };
         const obj7 = { onlyEmbedIndices: null };
         const items1 = [source.mediaIndex];
         obj7.onlyEmbedIndices = items1;
@@ -162,7 +162,7 @@ function useMediaShareActions(source) {
       const obj2 = { messageId: null, channelId: null, attachmentId: null };
       ({ messageId: obj3.messageId, channelId: obj3.channelId } = source);
       obj2.attachmentId = attachmentId;
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11377, dependencyMap.paths), closure_11, obj2);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11385, dependencyMap.paths), closure_11, obj2);
       const tmpResult = ActionSheetActionCreatorsDefault;
     }
     tmp5 = null != attachmentId && null != source.channelId && null != source.messageId;
@@ -247,7 +247,7 @@ function useMediaShareActions(source) {
 }
 const Constants = fn(1074);
 ({ AnalyticsSections: closure_8, GIF_RE_IOS: closure_9, MediaType: c10 } = Constants);
-let closure_11 = fn(7216).EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY;
+let closure_11 = fn(7207).EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/components/MediaShareActions.tsx");

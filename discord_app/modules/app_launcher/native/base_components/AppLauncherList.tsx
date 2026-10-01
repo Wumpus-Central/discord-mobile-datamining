@@ -1,11 +1,11 @@
-// === Module 11852: AppLauncherList ===
+// === Module 11860: AppLauncherList ===
 
-// Module 11852 (AppLauncherList)
+// Module 11860 (AppLauncherList)
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import mergeProps from "mergeProps" /* 4566 */;
-import SearchField from "SearchField" /* 6667 */;
-import _modDef11853 from "module_11853" /* 11853 */;
+import mergeProps from "mergeProps" /* 4565 */;
+import SearchField from "SearchField" /* 6657 */;
+import _modDef11861 from "module_11861" /* 11861 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -13,7 +13,7 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let closure_6 = createStyles.createStyles({ searchBarContainer: { marginBottom: 16 }, emptyState: { backgroundColor: "transparent", justifyContent: "flex-start" }, emptyStateImage: { flex: 0 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/base_components/AppLauncherList.tsx");
@@ -30,16 +30,16 @@ export const AppLauncherList = noop.forwardRef((contentContainerStyle, arg1) => 
   const obj = require("AppLauncherFlashList");
   const merged = Object.assign(contentContainerStyle);
   ({ onScroll: obj2.animatedOnScroll, gestureRef: obj2.simultaneousHandlers, animatedProps: obj2.animatedProps } = appLauncherFlashListProps);
-  return jsx(appLauncherFlashListProps(11787), { contentContainerStyle: null, scrollIndicatorInsets: { bottom }, ref: memo });
+  return jsx(appLauncherFlashListProps(11795), { contentContainerStyle: null, scrollIndicatorInsets: { bottom }, ref: memo });
 });
 export const AppLauncherListEmptyState = function AppLauncherListEmptyState() {
   const tmp = closure_6();
-  const obj = { style: tmp.emptyState, imageStyle: tmp.emptyStateImage, lightSource: _modDef11853, darkSource: _modDef11853, title: null, body: null };
+  const obj = { style: tmp.emptyState, imageStyle: tmp.emptyStateImage, lightSource: _modDef11861, darkSource: _modDef11861, title: null, body: null };
   const intl = util.intl;
   obj.title = intl.string(util.t.vYocDz);
   const intl2 = util.intl;
   obj.body = intl2.string(util.t.V6nAfF);
-  return jsx(native.EmptyState, { style: tmp.emptyState, imageStyle: tmp.emptyStateImage, lightSource: _modDef11853, darkSource: _modDef11853, title: null, body: null });
+  return jsx(native.EmptyState, { style: tmp.emptyState, imageStyle: tmp.emptyStateImage, lightSource: _modDef11861, darkSource: _modDef11861, title: null, body: null });
 };
 export const AppLauncherListSearchBar = function AppLauncherListSearchBar(arg0) {
   const obj = { style: closure_6().searchBarContainer, children: null };

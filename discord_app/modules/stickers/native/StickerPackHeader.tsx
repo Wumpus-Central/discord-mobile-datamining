@@ -1,25 +1,25 @@
-// === Module 10059: StickerPackHeader ===
+// === Module 10051: StickerPackHeader ===
 
-// Module 10059 (StickerPackHeader)
+// Module 10051 (StickerPackHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import Text_Text from "Text/Text" /* 4862 */;
-import StickersUtils from "StickersUtils" /* 5394 */;
-import Pressables from "Pressables" /* 5632 */;
-import _modDef10060 from "module_10060" /* 10060 */;
-import _modDef10061 from "module_10061" /* 10061 */;
-import StickerPackBannerDefault from "StickerPackBanner" /* 10062 */;
+import Text_Text from "Text/Text" /* 4841 */;
+import StickersUtils from "StickersUtils" /* 5382 */;
+import Pressables from "Pressables" /* 5621 */;
+import _modDef10052 from "module_10052" /* 10052 */;
+import _modDef10053 from "module_10053" /* 10053 */;
+import StickerPackBannerDefault from "StickerPackBanner" /* 10054 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const StickerPickerConstants = fn(9937);
+const StickerPickerConstants = fn(9929);
 ({ PADDING_VERTICAL, PADDING_HORIZONTAL } = StickerPickerConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
 let result = 2 * PADDING_VERTICAL;
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj = { section: { paddingTop: PADDING_VERTICAL, paddingHorizontal: PADDING_HORIZONTAL, height: 36 + result, justifyContent: "center", overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, label: { flex: -1 }, header: { flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, bannerContainer: { aspectRatio: 3.824074074074074, marginVertical: -8, width: "100%" }, banner: { height: "100%" }, headline: { height: 20, flex: 1, flexDirection: "row", alignItems: "center" }, iconContainer: null, icon: null, animatedIcon: null, premiumIcon: null };
 let size = { marginLeft: 8, height: 16, width: 16, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, alignItems: "center", justifyContent: "center" };
 obj.iconContainer = size;
@@ -48,14 +48,14 @@ export default noop.memo((withDescription) => {
   let result = StickersUtils.isStickerPackAnimated(stickerPack);
   if (result) {
     const obj5 = { style: tmp.iconContainer, children: null };
-    const obj6 = { source: _modDef10060, style: tmp.animatedIcon, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color };
+    const obj6 = { source: _modDef10052, style: tmp.animatedIcon, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color };
     obj5.children = React4(native.Icon, obj6);
     result = React4(View, obj5);
   }
   items[1] = result;
   const obj7 = { style: tmp.iconContainer, children: null };
   const obj3 = { style: tmp.label, lineClamp: 1, variant: "text-md/bold", color: "mobile-text-heading-primary", children: stickerPack.name };
-  obj7.children = React4(native.Icon, { source: _modDef10061, style: tmp.premiumIcon, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color });
+  obj7.children = React4(native.Icon, { source: _modDef10053, style: tmp.premiumIcon, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color });
   items[2] = React4(View, obj7);
   obj2.children = items;
   obj.children = hasOwnProperty(View, obj2);

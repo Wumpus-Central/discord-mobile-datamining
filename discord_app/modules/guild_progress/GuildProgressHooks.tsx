@@ -1,22 +1,22 @@
-// === Module 12170: GuildProgressHooks ===
+// === Module 12178: GuildProgressHooks ===
 
-// Module 12170 (GuildProgressHooks)
+// Module 12178 (GuildProgressHooks)
 import _modDef12 from "module_12" /* 12 */;
-import canViewInviteModal from "canViewInviteModal" /* 9263 */;
+import canViewInviteModal from "canViewInviteModal" /* 9257 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2045 */;
-import GuildChannelStore_mod from "GuildChannelStore" /* 4497 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 4784 */;
-import GuildStore from "GuildStore" /* 2067 */;
-import LayerStore from "LayerStore" /* 12171 */;
-import MessageStore from "MessageStore" /* 5086 */;
-import PermissionStore from "PermissionStore" /* 4499 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
+import GuildChannelStore_mod from "GuildChannelStore" /* 4496 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4765 */;
+import GuildStore from "GuildStore" /* 2066 */;
+import LayerStore from "LayerStore" /* 12179 */;
+import MessageStore from "MessageStore" /* 5065 */;
+import PermissionStore from "PermissionStore" /* 4498 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let GuildChannelStore = fn(4497);
+let GuildChannelStore = fn(4496);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: metroRequire, GUILD_VOCAL_CHANNELS_KEY: closure_7 } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1074);

@@ -1,11 +1,11 @@
-// === Module 8062: SafetyHubUtils ===
+// === Module 8051: SafetyHubUtils ===
 
-// Module 8062 (SafetyHubUtils)
+// Module 8051 (SafetyHubUtils)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
-import _modDef4451 from "module_4451" /* 4451 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 5016 */;
-import SafetyHubModels from "SafetyHubModels" /* 8064 */;
+import _modDef4450 from "module_4450" /* 4450 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 4995 */;
+import SafetyHubModels from "SafetyHubModels" /* 8053 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -43,7 +43,7 @@ function parseMessageEmbedForProps(fields) {
     return obj;
   }
 }
-const SafetyHubConstants = fn(8063);
+const SafetyHubConstants = fn(8052);
 ({ AppealIngestionSignal: closure_4, SafetySystemNotificationCtaType: hasOwnProperty, SafetySystemNotificationEmbedKeys: metroRequire } = SafetyHubConstants);
 const Constants = fn(1074);
 ({ AbortCodes: closure_7, MessageAttachmentFlags: closure_8 } = Constants);
@@ -51,7 +51,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/SafetyHubUtils.tsx");
 
 export const getClassificationRelativeIncidentTime = function getClassificationRelativeIncidentTime(timestamp) {
-  return _modDef4451().to(_modDef4451(timestamp));
+  return _modDef4450().to(_modDef4450(timestamp));
 };
 export const getSpoilerFlagsForAttachment = function getSpoilerFlagsForAttachment(filename) {
   if (obj.isImageFile(filename.filename)) {
@@ -144,17 +144,22 @@ export const getRequestReviewErrorFromCode = function getRequestReviewErrorFromC
   }
   return stringResult;
 };
-export const getClassificationExpiration = function getClassificationExpiration(classification) {
-  const max_expiration_time = classification.max_expiration_time;
-  if (null == max_expiration_time) {
+export const getClassificationAccountStatusExpiration = function getClassificationAccountStatusExpiration(classification) {
+  const actions = classification.actions;
+  if (actions.some((action_type) => action_type.action_type === SafetyHubModels.ActionType.BAN)) {
     return null;
   } else {
-    try {
-      const _Date = Date;
-      const date = new Date(max_expiration_time);
-      return date;
-    } catch (err) {
-      return tmp;
+    const max_expiration_time = classification.max_expiration_time;
+    if (null == max_expiration_time) {
+      return null;
+    } else {
+      try {
+        const _Date = Date;
+        const date = new Date(max_expiration_time);
+        return date;
+      } catch (err) {
+        return tmp;
+      }
     }
   }
 };

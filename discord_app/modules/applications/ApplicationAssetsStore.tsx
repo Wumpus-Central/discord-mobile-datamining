@@ -1,6 +1,6 @@
-// === Module 7791: ApplicationAssetsStore ===
+// === Module 7778: ApplicationAssetsStore ===
 
-// Module 7791 (ApplicationAssetsStore)
+// Module 7778 (ApplicationAssetsStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;

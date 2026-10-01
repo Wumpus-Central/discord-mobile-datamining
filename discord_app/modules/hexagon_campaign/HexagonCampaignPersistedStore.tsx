@@ -1,6 +1,6 @@
-// === Module 14082: HexagonCampaignPersistedStore ===
+// === Module 14090: HexagonCampaignPersistedStore ===
 
-// Module 14082 (HexagonCampaignPersistedStore)
+// Module 14090 (HexagonCampaignPersistedStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

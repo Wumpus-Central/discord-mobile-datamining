@@ -1,9 +1,9 @@
-// === Module 9412: GuildBadgeConstants ===
+// === Module 9406: GuildBadgeConstants ===
 
-// Module 9412 (GuildBadgeConstants)
+// Module 9406 (GuildBadgeConstants)
 import util from "util" /* 1115 */;
-import BadgeCategory from "BadgeCategory" /* 8400 */;
-import GuildTraits from "GuildTraits" /* 8401 */;
+import BadgeCategory from "BadgeCategory" /* 8392 */;
+import GuildTraits from "GuildTraits" /* 8393 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_badge/GuildBadgeConstants.tsx");

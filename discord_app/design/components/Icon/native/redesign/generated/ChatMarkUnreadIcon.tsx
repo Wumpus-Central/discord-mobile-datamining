@@ -1,9 +1,9 @@
-// === Module 9908: ChatMarkUnreadIcon ===
+// === Module 9900: ChatMarkUnreadIcon ===
 
-// Module 9908 (ChatMarkUnreadIcon)
+// Module 9900 (ChatMarkUnreadIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4560 */;
-import _mod9909 from "module_9909" /* 9909 */;
+import BaseIconImage from "BaseIconImage" /* 4559 */;
+import _mod9901 from "module_9901" /* 9901 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const ChatMarkUnreadIcon = function ChatMarkUnreadIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9909, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9901, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

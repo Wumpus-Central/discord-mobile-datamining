@@ -1,9 +1,9 @@
-// === Module 12765: BumpingFistsSpotIllustration ===
+// === Module 12774: BumpingFistsSpotIllustration ===
 
-// Module 12765 (BumpingFistsSpotIllustration)
+// Module 12774 (BumpingFistsSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 6095 */;
-import _modDef12766 from "module_12766" /* 12766 */;
+import FastImageDefault from "FastImage" /* 6085 */;
+import _modDef12775 from "module_12775" /* 12775 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const BumpingFistsSpotIllustration = function BumpingFistsSpotIllustratio
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef12766 };
+  const obj2 = { uri: _modDef12775 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

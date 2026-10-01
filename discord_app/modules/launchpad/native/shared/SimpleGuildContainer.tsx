@@ -1,11 +1,11 @@
-// === Module 17024: SimpleGuildContainer ===
+// === Module 17046: SimpleGuildContainer ===
 
-// Module 17024 (SimpleGuildContainer)
-import ReanimatedRexport from "ReanimatedRexport" /* 4596 */;
-import spring from "spring" /* 5476 */;
-import MaskedBadgeDefault from "MaskedBadge" /* 7489 */;
-import GuildsBarActivityIndicator from "GuildsBarActivityIndicator" /* 16175 */;
-import CutoutImageDefault from "CutoutImage" /* 17025 */;
+// Module 17046 (SimpleGuildContainer)
+import ReanimatedRexport from "ReanimatedRexport" /* 4595 */;
+import spring from "spring" /* 5464 */;
+import MaskedBadgeDefault from "MaskedBadge" /* 7467 */;
+import GuildsBarActivityIndicator from "GuildsBarActivityIndicator" /* 16195 */;
+import CutoutImageDefault from "CutoutImage" /* 17047 */;
 import noop from "module_19" /* 19 */;
 
 const GuildsBarActivityIndicatorDefault = GuildsBarActivityIndicator;
@@ -17,7 +17,7 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = 48;
 const springConfig = { mass: 0.2, damping: 40, stiffness: 300, overshootClamping: true, restSpeedThreshold: 1 };
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let closure_11 = createStyles.createStyles({ badgeWrapper: { position: "absolute", right: -4, bottom: 0 } });
 let closure_12 = noop.memo((backgroundColor) => {
   ({ badge, unread } = backgroundColor);

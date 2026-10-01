@@ -1,11 +1,11 @@
-// === Module 10592: IconUploader ===
+// === Module 10584: IconUploader ===
 
-// Module 10592 (IconUploader)
+// Module 10584 (IconUploader)
 import util from "util" /* 1115 */;
 import AvatarUtils from "AvatarUtils" /* 1397 */;
-import Pressables from "Pressables" /* 5632 */;
-import GuildIcon from "GuildIcon" /* 6092 */;
-import _modDef10593 from "module_10593" /* 10593 */;
+import Pressables from "Pressables" /* 5621 */;
+import GuildIcon from "GuildIcon" /* 6082 */;
+import _modDef10585 from "module_10585" /* 10585 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 const UPLOAD_MEDIUM_SIZE = fn(1074).UPLOAD_MEDIUM_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let closure_11 = createStyles.createStyles({ uploadIcon: { position: "absolute", right: -7, top: -7 }, avatar: { height: 64, width: 64, borderRadius: 32 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/IconUploader.tsx");
@@ -123,7 +123,7 @@ export default function IconUploader(disabled) {
   const items1 = [tmp7, ];
   let tmp16 = null;
   if (!flag) {
-    let obj5 = { style: tmp.uploadIcon, source: _modDef10593 };
+    let obj5 = { style: tmp.uploadIcon, source: _modDef10585 };
     tmp16 = closure_8(closure_6, obj5);
   }
   items1[1] = tmp16;

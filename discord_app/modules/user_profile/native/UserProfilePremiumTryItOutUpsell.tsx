@@ -1,17 +1,17 @@
-// === Module 14408: UserProfilePremiumTryItOutUpsell ===
+// === Module 14412: UserProfilePremiumTryItOutUpsell ===
 
-// Module 14408 (UserProfilePremiumTryItOutUpsell)
-import spring from "spring" /* 5476 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 8862 */;
-import openPremiumModalDefault from "openPremiumModal" /* 8894 */;
-import UserProfileUpsellCardV2 from "UserProfileUpsellCardV2" /* 14367 */;
+// Module 14412 (UserProfilePremiumTryItOutUpsell)
+import spring from "spring" /* 5464 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 8854 */;
+import openPremiumModalDefault from "openPremiumModal" /* 8886 */;
+import UserProfileUpsellCardV2 from "UserProfileUpsellCardV2" /* 14411 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const PROFILE_SIDE_PADDING = fn(6825).PROFILE_SIDE_PADDING;
+const PROFILE_SIDE_PADDING = fn(6815).PROFILE_SIDE_PADDING;
 const jsx = fn(21).jsx;
 const FLOATING_UPSELL_SPRING = { mass: 1, damping: 25, stiffness: 400, overshootClamping: false };
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let closure_7 = createStyles.createStyles((bottom) => {
   const obj = { container: { position: "absolute", bottom, start: 0, end: 0 }, card: { marginHorizontal: PROFILE_SIDE_PADDING - UserProfileUpsellCardV2.GRADIENT_BORDER_WIDTH } };
   return obj;
@@ -24,14 +24,14 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 export default function UserProfilePremiumTryItOutUpsell(isVisible) {
   isVisible = isVisible.isVisible;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(6779)(analyticsLocations(6799).USER_SETTINGS_TRY_OUT_PREMIUM).analyticsLocations;
+  analyticsLocations = analyticsLocations(6769)(analyticsLocations(6789).USER_SETTINGS_TRY_OUT_PREMIUM).analyticsLocations;
   const tmp2 = closure_7(analyticsLocations(1613)().bottom);
   let items = [analyticsLocations];
   const callback = noop.useCallback(() => {
     const obj = { analyticsLocations, premiumFeatureCardOrder: PremiumFeaturesCards.PremiumFeatureCardOrder.TIER_2_LEADING };
     openPremiumModalDefault(obj);
   }, items);
-  const tmp = analyticsLocations(6779);
+  const tmp = analyticsLocations(6769);
   const fn = function u() {
     value = isVisible.get();
     let num = 0;
@@ -55,12 +55,12 @@ export default function UserProfilePremiumTryItOutUpsell(isVisible) {
     obj2.transform = items;
     return obj2;
   };
-  let obj = isVisible(4596);
-  fn.__closure = { isVisible, withSpring: isVisible(5476).withSpring, FLOATING_UPSELL_SPRING, DISMISSED_TRANSLATE_Y: 60, DISMISSED_SCALE: 0.9 };
+  let obj = isVisible(4595);
+  fn.__closure = { isVisible, withSpring: isVisible(5464).withSpring, FLOATING_UPSELL_SPRING, DISMISSED_TRANSLATE_Y: 60, DISMISSED_SCALE: 0.9 };
   fn.__workletHash = 7434922701119;
   fn.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  let obj2 = { isVisible, withSpring: isVisible(5476).withSpring, FLOATING_UPSELL_SPRING, DISMISSED_TRANSLATE_Y: 60, DISMISSED_SCALE: 0.9 };
+  let obj2 = { isVisible, withSpring: isVisible(5464).withSpring, FLOATING_UPSELL_SPRING, DISMISSED_TRANSLATE_Y: 60, DISMISSED_SCALE: 0.9 };
   class I {
     constructor() {
       value = isVisible.get();
@@ -80,17 +80,17 @@ export default function UserProfilePremiumTryItOutUpsell(isVisible) {
   I.__closure = { isVisible };
   I.__workletHash = 4173826125285;
   I.__initData = __initData2;
-  const animatedProps = isVisible(4596).useAnimatedProps(I);
+  const animatedProps = isVisible(4595).useAnimatedProps(I);
   const obj4 = { animatedProps, style: null, children: null };
   const items1 = [tmp2.container, animatedStyle];
   obj4.style = items1;
   const obj5 = { style: tmp2.card, text: null, buttonText: null, onButtonPress: null, buttonVariant: "primary" };
-  let obj3 = isVisible(4596);
+  let obj3 = isVisible(4595);
   const intl = isVisible(1115).intl;
   obj5.text = intl.format(isVisible(1115).t.TmfgI2, { onClick: callback });
   const intl2 = isVisible(1115).intl;
   obj5.buttonText = intl2.string(isVisible(1115).t.PxUx8e);
   obj5.onButtonPress = isVisible.onPreviewPremium;
-  obj4.children = jsx(analyticsLocations(14367), { style: tmp2.card, text: null, buttonText: null, onButtonPress: null, buttonVariant: "primary" });
-  return jsx(analyticsLocations(4596).View, { animatedProps, style: null, children: null });
+  obj4.children = jsx(analyticsLocations(14411), { style: tmp2.card, text: null, buttonText: null, onButtonPress: null, buttonVariant: "primary" });
+  return jsx(analyticsLocations(4595).View, { animatedProps, style: null, children: null });
 };

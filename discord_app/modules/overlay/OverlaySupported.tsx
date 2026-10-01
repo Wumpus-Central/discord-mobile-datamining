@@ -1,6 +1,6 @@
-// === Module 13575: OverlaySupported ===
+// === Module 13583: OverlaySupported ===
 
-// Module 13575 (OverlaySupported)
+// Module 13583 (OverlaySupported)
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import size from "module_2" /* 2 */;
 

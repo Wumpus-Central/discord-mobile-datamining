@@ -1,20 +1,20 @@
-// === Module 13229: Footer ===
+// === Module 13237: Footer ===
 
-// Module 13229 (Footer)
+// Module 13237 (Footer)
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4862 */;
-import components_Button_Button from "components/Button/Button" /* 5477 */;
-import FastImageDefault from "FastImage" /* 6095 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6799 */;
-import useOpenPremiumMarketingPaymentDefault from "useOpenPremiumMarketingPayment" /* 13230 */;
-import _modDef13231 from "module_13231" /* 13231 */;
+import Text_Text from "Text/Text" /* 4841 */;
+import components_Button_Button from "components/Button/Button" /* 5465 */;
+import FastImageDefault from "FastImage" /* 6085 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6789 */;
+import useOpenPremiumMarketingPaymentDefault from "useOpenPremiumMarketingPayment" /* 13238 */;
+import _modDef13239 from "module_13239" /* 13239 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let closure_7 = createStyles.createStyles({ container: { flex: 1, flexDirection: "column", alignItems: "center", width: "100%" }, footerText: { marginBottom: 24 }, button: { marginBottom: 40 }, easterEggSpacing: { position: "absolute", top: 40 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/premium/native/Footer.tsx");
@@ -46,7 +46,7 @@ export default function Footer(showSubscribeButton) {
     easterEggSpacing = tmp.easterEggSpacing;
   }
   const tmp2Result = FastImageDefault;
-  items2[1] = React4(tmp2Result, { style: easterEggSpacing, source: _modDef13231 });
+  items2[1] = React4(tmp2Result, { style: easterEggSpacing, source: _modDef13239 });
   obj.children = items2;
   return timestampProducer(View, obj);
 };

@@ -1,11 +1,11 @@
-// === Module 7992: ICYMIUnreadStateStore ===
+// === Module 7979: ICYMIUnreadStateStore ===
 
-// Module 7992 (ICYMIUnreadStateStore)
+// Module 7979 (ICYMIUnreadStateStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1091 */;
-import ICYMITypes from "ICYMITypes" /* 7991 */;
-import ICYMIUtils from "ICYMIUtils" /* 7993 */;
+import ICYMITypes from "ICYMITypes" /* 7978 */;
+import isItemUnreadInChannel from "isItemUnreadInChannel" /* 7980 */;
 
 require = fn;
 let closure_2 = 7 * DurationsDefault.Millis.DAY;
@@ -69,7 +69,7 @@ const iCYMIUnreadStateStore = new ICYMIUnreadStateStore(DispatcherDefault, {
           result = null != prop;
         }
         if (!result) {
-          let tmp3Result = ICYMIUtils;
+          let tmp3Result = isItemUnreadInChannel;
           result = tmp3Result.isItemUnreadInChannel(tmp2.data.channel_id, tmp2.data.message_id);
         }
         if (!result) {

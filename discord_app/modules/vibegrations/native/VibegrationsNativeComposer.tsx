@@ -1,30 +1,30 @@
-// === Module 16624: VibegrationsNativeComposer ===
+// === Module 16647: VibegrationsNativeComposer ===
 
-// Module 16624 (VibegrationsNativeComposer)
+// Module 16647 (VibegrationsNativeComposer)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import _modDef3715 from "module_3715" /* 3715 */;
-import useToken from "useToken" /* 4561 */;
-import SendMessageIcon from "SendMessageIcon" /* 4807 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4830 */;
-import VibegrationsTypes from "VibegrationsTypes" /* 5567 */;
-import WarningIcon from "WarningIcon" /* 8244 */;
-import VibegrationsActionCreators from "VibegrationsActionCreators" /* 8695 */;
-import ImageCarousel from "ImageCarousel" /* 10295 */;
-import PlusLargeIcon from "PlusLargeIcon" /* 10616 */;
-import ChatInputNativeCommandsDefault from "ChatInputNativeCommands" /* 11673 */;
-import ChatInputActionButtonDefault from "ChatInputActionButton" /* 11924 */;
-import ChatInputActionButtonTransitionItemDefault from "ChatInputActionButtonTransitionItem" /* 11931 */;
-import FiltersHorizontalIcon from "FiltersHorizontalIcon" /* 14742 */;
-import VibegrationsModelSettingsSheet from "VibegrationsModelSettingsSheet" /* 16473 */;
-import StopIcon from "StopIcon" /* 16591 */;
-import vibegrationsAttachmentDrafts from "vibegrationsAttachmentDrafts" /* 16608 */;
+import _modDef3714 from "module_3714" /* 3714 */;
+import useToken from "useToken" /* 4560 */;
+import SendMessageIcon from "SendMessageIcon" /* 4786 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4809 */;
+import VibegrationsTypes from "VibegrationsTypes" /* 5555 */;
+import WarningIcon from "WarningIcon" /* 8234 */;
+import VibegrationsActionCreators from "VibegrationsActionCreators" /* 8687 */;
+import ImageCarousel from "ImageCarousel" /* 10287 */;
+import PlusLargeIcon from "PlusLargeIcon" /* 10608 */;
+import ChatInputNativeCommandsDefault from "ChatInputNativeCommands" /* 11681 */;
+import ChatInputActionButtonDefault from "ChatInputActionButton" /* 11931 */;
+import ChatInputActionButtonTransitionItemDefault from "ChatInputActionButtonTransitionItem" /* 11938 */;
+import FiltersHorizontalIcon from "FiltersHorizontalIcon" /* 14748 */;
+import VibegrationsModelSettingsSheet from "VibegrationsModelSettingsSheet" /* 16494 */;
+import StopIcon from "StopIcon" /* 16613 */;
+import vibegrationsAttachmentDrafts from "vibegrationsAttachmentDrafts" /* 16629 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4855 */;
-import VibegrationsComposerDraftStore from "VibegrationsComposerDraftStore" /* 16610 */;
-import VibegrationsConnectionStore from "VibegrationsConnectionStore" /* 12842 */;
+import AccessibilityStore from "AccessibilityStore" /* 4834 */;
+import VibegrationsComposerDraftStore from "VibegrationsComposerDraftStore" /* 16631 */;
+import VibegrationsConnectionStore from "VibegrationsConnectionStore" /* 12851 */;
 
 const VibegrationsModelSettingsSheetDefault = VibegrationsModelSettingsSheet;
 
@@ -37,7 +37,7 @@ function tooLargeText(contentType) {
   const obj = { size: null };
   const obj2 = VibegrationsTypes;
   obj.size = obj2.formatVibegrationsAttachmentLimit(VibegrationsTypes.vibegrationsAttachmentLimit(contentType));
-  return intl.formatToPlainString(_modDef3715.cI7t94, obj);
+  return intl.formatToPlainString(_modDef3714.cI7t94, obj);
 }
 function VibegrationsNativeDraftTile(draft) {
   draft = draft.draft;
@@ -59,11 +59,11 @@ function VibegrationsNativeDraftTile(draft) {
   if ("uploading" === draft.status) {
     const intl3 = util.intl;
     const obj5 = { name: draft.name };
-    let formatToPlainStringResult = intl3.formatToPlainString(_modDef3715.sFX7H4, obj5);
+    let formatToPlainStringResult = intl3.formatToPlainString(_modDef3714.sFX7H4, obj5);
   } else if (null != draft.errorText) {
     const intl2 = util.intl;
     ({ name: obj4.name, errorText: obj4.error } = draft);
-    formatToPlainStringResult = intl2.formatToPlainString(_modDef3715.ZOkckv, { name: null, error: null });
+    formatToPlainStringResult = intl2.formatToPlainString(_modDef3714.ZOkckv, { name: null, error: null });
     const obj6 = { name: null, error: null };
   } else {
     const intl = util.intl;
@@ -93,11 +93,11 @@ function VibegrationsNativeDraftTile(draft) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7, StyleSheet } = get_ActivityIndicator);
-const uploadAttachmentBytes = fn(12842).uploadAttachmentBytes;
+const uploadAttachmentBytes = fn(12851).uploadAttachmentBytes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = { container: { paddingHorizontal: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, paddingVertical: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 }, box: null, boxFocused: null, boxContents: null, input: null, draftCarousel: null, draftOverlay: null, trailingButton: null, trailingSlot: null, sendButtonActive: null, sendIconActive: null };
 let obj3 = { paddingHorizontal: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, paddingVertical: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
 obj2.box = { backgroundColor: nativeDefault.colors.MOBILE_CHATINPUT_BACKGROUND_DEFAULT, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_CHATINPUT_BORDER_DEFAULT, borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_BORDER_RADIUS, overflow: "hidden" };
@@ -226,8 +226,8 @@ export default function VibegrationsNativeComposer(projectId) {
       const diff = VibegrationsTypes.VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE - vibegrationsAttachmentDrafts.getVibegrationsAttachmentDrafts(projectId, "chat").length;
       if (arr.length > diff) {
         let intl = obj2(1115).intl;
-        let obj = { count: obj2(5567).VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE };
-        _undefined3(intl.formatToPlainString(_modDef3715.DlX57a, obj));
+        let obj = { count: obj2(5555).VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE };
+        _undefined3(intl.formatToPlainString(_modDef3714.DlX57a, obj));
         const _Math = Math;
         const substr = arr.slice(0, Math.max(0, diff));
         arr = substr;
@@ -353,7 +353,7 @@ export default function VibegrationsNativeComposer(projectId) {
         };
         return obj5;
       });
-      obj2 = obj2(16608);
+      obj2 = obj2(16629);
       result = obj2.addVibegrationsAttachmentDrafts(projectId, "chat", mapped);
     }
   }, items5);
@@ -386,10 +386,10 @@ export default function VibegrationsNativeComposer(projectId) {
             return obj4;
           } else {
             closure_128_0 = undefined;
-            const obj5 = { mediaType: "any", selectionLimit: tmp2(5567).VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE, skipProcessing: true };
+            const obj5 = { mediaType: "any", selectionLimit: tmp2(5555).VIBEGRATIONS_MAX_ATTACHMENTS_PER_MESSAGE, skipProcessing: true };
             dependencyMap = 1;
             c3 = 1;
-            const obj6 = { value: tmp5(5659).launchImageLibraryAsync(obj5), done: false };
+            const obj6 = { value: tmp5(5648).launchImageLibraryAsync(obj5), done: false };
             return obj6;
           }
         } else if (arg0 === 1) {
@@ -542,12 +542,12 @@ export default function VibegrationsNativeComposer(projectId) {
   const memo = obj.useMemo(() => {
     const obj = { label: null, action: null };
     const intl = util.intl;
-    obj.label = intl.string(_modDef3715.xE6M2k);
+    obj.label = intl.string(_modDef3714.xE6M2k);
     obj.action = callback4;
     const items = [obj, ];
     const obj2 = { label: null, action: null };
     const intl2 = util.intl;
-    obj2.label = intl2.string(_modDef3715.DN7KeU);
+    obj2.label = intl2.string(_modDef3714.DN7KeU);
     obj2.action = callback6;
     items[1] = obj2;
     return items;
@@ -619,12 +619,12 @@ export default function VibegrationsNativeComposer(projectId) {
     if ("stop" === key.key) {
       const obj2 = { style: closure_15.trailingButton, IconComponent: StopIcon.StopIcon, onPress: onInterrupt, disabled: null == onInterrupt, accessibilityLabel: null };
       const intl2 = util.intl;
-      obj2.accessibilityLabel = intl2.string(_modDef3715.KdgI4k);
+      obj2.accessibilityLabel = intl2.string(_modDef3714.KdgI4k);
       let tmp14 = closure_2_12(ChatInputActionButtonDefault, obj2);
     } else if ("models" === key.key) {
       const obj = { style: closure_15.trailingButton, IconComponent: FiltersHorizontalIcon.FiltersHorizontalIcon, onPress: callback8, disabled: !canSend, accessibilityLabel: null };
       const intl = util.intl;
-      obj.accessibilityLabel = intl.string(_modDef3715["2NWMqY"]);
+      obj.accessibilityLabel = intl.string(_modDef3714["2NWMqY"]);
       tmp14 = closure_2_12(ChatInputActionButtonDefault, obj);
     } else {
       const obj5 = { active: true, style: null, activeStyle: null, activeIconStyle: null, IconComponent: null, accessibilityLabel: null, onPress: null, disabled: null };
@@ -692,7 +692,7 @@ export default function VibegrationsNativeComposer(projectId) {
         ({ ref, onPress, accessibilityActions, onAccessibilityAction } = arg0);
         const obj = { ref, IconComponent: PlusLargeIcon.PlusLargeIcon, onPress, disabled: !canSend, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null };
         const intl = util.intl;
-        obj.accessibilityLabel = intl.string(_modDef3715.gUn10I);
+        obj.accessibilityLabel = intl.string(_modDef3714.gUn10I);
         obj.accessibilityActions = accessibilityActions;
         obj.onAccessibilityAction = onAccessibilityAction;
         return closure_2_12(ChatInputActionButtonDefault, obj);
@@ -711,7 +711,7 @@ export default function VibegrationsNativeComposer(projectId) {
       ({ ref, onPress, accessibilityActions, onAccessibilityAction } = arg0);
       const obj = { ref, IconComponent: PlusLargeIcon.PlusLargeIcon, onPress, disabled: !canSend, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null };
       const intl = util.intl;
-      obj.accessibilityLabel = intl.string(_modDef3715.gUn10I);
+      obj.accessibilityLabel = intl.string(_modDef3714.gUn10I);
       obj.accessibilityActions = accessibilityActions;
       obj.onAccessibilityAction = onAccessibilityAction;
       return closure_2_12(ChatInputActionButtonDefault, obj);

@@ -1,19 +1,19 @@
-// === Module 15000: AutoVoiceSensitivitySetting ===
+// === Module 15006: AutoVoiceSensitivitySetting ===
 
-// Module 15000 (AutoVoiceSensitivitySetting)
+// Module 15006 (AutoVoiceSensitivitySetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 9303 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9297 */;
 import MediaEngineStore from "MediaEngineStore" /* 1993 */;
 
 require = fn;
-const SettingBuilders = fn(11211);
+const SettingBuilders = fn(11215);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.Z4oaN0);
   },
-  parent: fn(7612).MobileUserSettings.VOICE,
+  parent: fn(7590).MobileUserSettings.VOICE,
   useValue: function useAutoVoiceSensitivitySettingValue() {
     const items = [MediaEngineStore];
     return initialize.useStateFromStores(items, () => modeOptions.getModeOptions().autoThreshold);

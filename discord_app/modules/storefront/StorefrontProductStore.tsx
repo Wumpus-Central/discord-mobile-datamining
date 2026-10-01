@@ -1,6 +1,6 @@
-// === Module 7859: StorefrontProductStore ===
+// === Module 7846: StorefrontProductStore ===
 
-// Module 7859 (StorefrontProductStore)
+// Module 7846 (StorefrontProductStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

@@ -1,12 +1,12 @@
-// === Module 14406: UserProfileTryItOutGetPremiumUpsell ===
+// === Module 15632: UserProfileTryItOutGetPremiumUpsell ===
 
-// Module 14406 (UserProfileTryItOutGetPremiumUpsell)
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6779 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6799 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 8862 */;
-import openPremiumModalDefault from "openPremiumModal" /* 8894 */;
-import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 9623 */;
-import UserProfileFloatingUpsellDefault from "UserProfileFloatingUpsell" /* 14366 */;
+// Module 15632 (UserProfileTryItOutGetPremiumUpsell)
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6769 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6789 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 8854 */;
+import openPremiumModalDefault from "openPremiumModal" /* 8886 */;
+import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 9617 */;
+import UserProfileFloatingUpsellDefault from "UserProfileFloatingUpsell" /* 14422 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -19,19 +19,19 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 
 export default function UserProfileTryItOutGetPremiumUpsell(onLayout) {
   let analyticsLocations;
-  let nitroTrialCtaOverride = analyticsLocations(7062).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
+  let nitroTrialCtaOverride = analyticsLocations(7054).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
   analyticsLocations = useAnalyticsLocationsDefault(items).analyticsLocations;
   items = [analyticsLocations];
   let callback = noop.useCallback(() => {
     const obj = { analyticsLocation: { page: constants2.USER_SETTINGS, section: constants3.SETTINGS_CUSTOMIZE_PROFILE_TRY_IT_OUT, object: constants.BUTTON_CTA }, analyticsLocations, premiumFeatureCardOrder: PremiumFeaturesCards.PremiumFeatureCardOrder.TIER_2_LEADING };
     openPremiumModalDefault(obj);
   }, items);
-  let obj = analyticsLocations(7062);
+  let obj = analyticsLocations(7054);
   ({ loading, onPress } = usePremiumFeatureUpsellGetNitroDefault(false, callback, constants2.USER_SETTINGS, undefined, items));
   const tmp5 = usePremiumFeatureUpsellGetNitroDefault(false, callback, constants2.USER_SETTINGS, undefined, items);
-  const mobileNitroPreviewDirectCheckoutEnabled = analyticsLocations(14407).useMobileNitroPreviewDirectCheckoutEnabled();
+  const mobileNitroPreviewDirectCheckoutEnabled = analyticsLocations(14414).useMobileNitroPreviewDirectCheckoutEnabled();
   const obj3 = { text: null, buttonText: null, buttonVariant: "experimental_premium-primary", loading: null, onButtonPress: null, onLayout: null };
-  const obj2 = analyticsLocations(14407);
+  const obj2 = analyticsLocations(14414);
   const intl = analyticsLocations(1115).intl;
   obj3.text = intl.string(analyticsLocations(1115).t["MswR/h"]);
   if (nitroTrialCtaOverride == null) {

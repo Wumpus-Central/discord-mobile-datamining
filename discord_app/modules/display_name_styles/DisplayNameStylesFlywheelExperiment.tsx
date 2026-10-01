@@ -1,6 +1,6 @@
-// === Module 9388: DisplayNameStylesFlywheelExperiment ===
+// === Module 9382: DisplayNameStylesFlywheelExperiment ===
 
-// Module 9388 (DisplayNameStylesFlywheelExperiment)
+// Module 9382 (DisplayNameStylesFlywheelExperiment)
 import ApexExperiment_mod from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 

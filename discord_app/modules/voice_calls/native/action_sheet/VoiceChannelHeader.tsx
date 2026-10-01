@@ -1,24 +1,24 @@
-// === Module 13534: VoiceChannelHeader ===
+// === Module 13542: VoiceChannelHeader ===
 
-// Module 13534 (VoiceChannelHeader)
+// Module 13542 (VoiceChannelHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import Text_Text from "Text/Text" /* 4862 */;
-import useChannelNameDefault from "useChannelName" /* 5019 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 5569 */;
-import Pressables from "Pressables" /* 5632 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9476 */;
-import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 9595 */;
-import _modDef9692 from "module_9692" /* 9692 */;
-import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11290 */;
-import CallStateHooks from "CallStateHooks" /* 13535 */;
-import OngoingCallStatusLabelDefault from "OngoingCallStatusLabel" /* 13536 */;
-import OngoingCallTimerDefault from "OngoingCallTimer" /* 13537 */;
+import Text_Text from "Text/Text" /* 4841 */;
+import useChannelNameDefault from "useChannelName" /* 4998 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 5557 */;
+import Pressables from "Pressables" /* 5621 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9470 */;
+import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 9589 */;
+import _modDef9686 from "module_9686" /* 9686 */;
+import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11298 */;
+import CallStateHooks from "CallStateHooks" /* 13543 */;
+import OngoingCallStatusLabelDefault from "OngoingCallStatusLabel" /* 13544 */;
+import OngoingCallTimerDefault from "OngoingCallTimer" /* 13545 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2044 */;
-import GuildStore from "GuildStore" /* 2067 */;
-import PermissionStore from "PermissionStore" /* 4499 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2043 */;
+import GuildStore from "GuildStore" /* 2066 */;
+import PermissionStore from "PermissionStore" /* 4498 */;
 
 const CallStateHooksDefault = CallStateHooks;
 
@@ -148,7 +148,7 @@ class VoiceChannelHeader {
   }
 }
 function AddMemberButton(onPress) {
-  const obj = { onPress: onPress.onPress, iconSource: _modDef9692, iconStyle: closure_12().icons, accessibilityLabel: null };
+  const obj = { onPress: onPress.onPress, iconSource: _modDef9686, iconStyle: closure_12().icons, accessibilityLabel: null };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t["6Qgrev"]);
   return closure_1_10(IconButton, obj);
@@ -165,7 +165,7 @@ const Constants = fn(1074);
 ({ Permissions: closure_7, AnalyticsPages: closure_8, InstantInviteSources: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = { container: { alignSelf: "stretch", flexDirection: "row", paddingVertical: 10, paddingHorizontal: 16, alignItems: "center" }, middle: { flex: 1, justifyContent: "space-around", marginHorizontal: 16 }, icons: { flexDirection: "row", tintColor: nativeDefault.colors.WHITE }, subtitle: null, subtitleWrapper: null };
 let obj3 = { flexDirection: "row", tintColor: nativeDefault.colors.WHITE };
 obj2.subtitle = { fontSize: 12, lineHeight: 16, color: nativeDefault.colors.WHITE };

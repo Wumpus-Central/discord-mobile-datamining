@@ -1,18 +1,18 @@
-// === Module 8950: FramesNativeManager ===
+// === Module 8943: FramesNativeManager ===
 
-// Module 8950 (FramesNativeManager)
+// Module 8943 (FramesNativeManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
 import util from "util" /* 1115 */;
 import v1 from "v1" /* 1255 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5400 */;
-import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 8951 */;
-import getPostMessageJavaScriptDefault from "getPostMessageJavaScript" /* 8952 */;
-import WebViewPostMessageTransportDefault from "WebViewPostMessageTransport" /* 8965 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5388 */;
+import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 8944 */;
+import getPostMessageJavaScriptDefault from "getPostMessageJavaScript" /* 8945 */;
+import WebViewPostMessageTransportDefault from "WebViewPostMessageTransport" /* 8958 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import FramesStore from "FramesStore" /* 8698 */;
-import FramesManager from "FramesManager" /* 8953 */;
+import FramesStore from "FramesStore" /* 8690 */;
+import FramesManager from "FramesManager" /* 8946 */;
 
 require = fn;
 function postMessageToWebView() {
@@ -42,11 +42,11 @@ let closure_12 = async function _postMessageToWebView(arg0) {
   }
   return value;
 };
-const isLaunched = fn(8699).isLaunched;
+const isLaunched = fn(8691).isLaunched;
 const ComponentActions = fn(1074).ComponentActions;
 let closure_7 = fn(2005).DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY;
-const TransportTypes = fn(4769).TransportTypes;
-const WebView = fn(7941);
+const TransportTypes = fn(5270).TransportTypes;
+const WebView = fn(7928);
 const React7 = WebView.getWebViewProxy("FRAME_WEB_VIEW_KEY");
 const PlatformUtils = fn(1365);
 let nativeEventEmitter = null;

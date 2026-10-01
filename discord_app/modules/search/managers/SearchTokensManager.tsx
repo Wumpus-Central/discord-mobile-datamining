@@ -1,9 +1,9 @@
-// === Module 17476: SearchTokensManager ===
+// === Module 17508: SearchTokensManager ===
 
-// Module 17476 (SearchTokensManager)
-import IntlLoaderStore from "IntlLoaderStore" /* 2113 */;
-import SearchUtils from "SearchUtils" /* 12026 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6735 */;
+// Module 17508 (SearchTokensManager)
+import IntlLoaderStore from "IntlLoaderStore" /* 2112 */;
+import SearchUtils from "SearchUtils" /* 12033 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6725 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = IntlLoaderStore.subscribeToIntlLoadingSuccess;

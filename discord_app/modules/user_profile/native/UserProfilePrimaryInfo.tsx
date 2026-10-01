@@ -1,27 +1,27 @@
-// === Module 10817: UserProfilePrimaryInfo ===
+// === Module 10814: UserProfilePrimaryInfo ===
 
-// Module 10817 (UserProfilePrimaryInfo)
+// Module 10814 (UserProfilePrimaryInfo)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4558 */;
-import UserUtilsDefault from "UserUtils" /* 4708 */;
-import Text_Text from "Text/Text" /* 4862 */;
-import Pressables from "Pressables" /* 5632 */;
-import QuestTypes from "QuestTypes" /* 5956 */;
-import openUserSettings from "openUserSettings" /* 6996 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7336 */;
-import captureAdUserAction from "captureAdUserAction" /* 7337 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7347 */;
-import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 7348 */;
-import GuildTagUtils from "GuildTagUtils" /* 7805 */;
-import BadgeId from "BadgeId" /* 7824 */;
-import useBadges from "useBadges" /* 7883 */;
-import BotTagDefault from "BotTag" /* 8940 */;
-import GuildTagDefault from "GuildTag" /* 9404 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10560 */;
-import openBadgeDirectoryScreen from "openBadgeDirectoryScreen" /* 10859 */;
-import BadgeUtils from "BadgeUtils" /* 10863 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4557 */;
+import UserUtilsDefault from "UserUtils" /* 4707 */;
+import Text_Text from "Text/Text" /* 4841 */;
+import Pressables from "Pressables" /* 5621 */;
+import QuestTypes from "QuestTypes" /* 5945 */;
+import openUserSettings from "openUserSettings" /* 6987 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7314 */;
+import captureAdUserAction from "captureAdUserAction" /* 7315 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7325 */;
+import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 7326 */;
+import GuildTagUtils from "GuildTagUtils" /* 7792 */;
+import BadgeId from "BadgeId" /* 7811 */;
+import useBadges from "useBadges" /* 7870 */;
+import BotTagDefault from "BotTag" /* 8933 */;
+import GuildTagDefault from "GuildTag" /* 9398 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10552 */;
+import openBadgeDirectoryScreen from "openBadgeDirectoryScreen" /* 10856 */;
+import BadgeUtils from "BadgeUtils" /* 10859 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
 
@@ -471,19 +471,20 @@ class ProfileBadgeRows {
       obj1.source = badges(tmp5[39]);
       obj1.userId = userId;
       intl = tmp4(tmp5[21]).intl;
-      obj14 = { date: null };
+      obj17 = { date: null };
       tmp14 = globalThis;
       _Date = Date;
       tmp15 = new.target;
       tmp16 = new.target;
       date = new Date();
       tmp18 = date;
-      obj14.date = date;
-      obj1.label = intl.formatToPlainString(tmp4(tmp5[21]).t["8zbGNR"], obj14);
+      obj17.date = date;
+      obj1.label = intl.formatToPlainString(tmp4(tmp5[21]).t["8zbGNR"], obj17);
       obj1.badgeSize = badgeSize;
       obj1.showToastOnPress = tmp8;
       arr1 = mapped.push(jsx(ProfileBadge, obj1));
     }
+    tmp20 = badges;
     width = badges(tmp5[40])().width;
     items3 = [, , , , ];
     items3[0] = mapped;
@@ -543,82 +544,99 @@ class ProfileBadgeRows {
       diff = length - mapped1.length;
       num3 = 0;
       if (0 === mapped1.length) {
-        tmp31 = null;
+        tmp32 = null;
         if (isBadgeDirectoryUpdatesEnabled) {
-          tmp31 = null;
+          tmp32 = null;
           if (userId === id) {
-            tmp32 = jsx;
-            obj15 = { variant: "secondary", size: "sm", icon: null, text: null, onPress: null };
-            obj15.icon = jsx(tmp4(tmp5[42]).PlusSmallIcon, {});
+            tmp35 = jsxs;
+            obj18 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
             intl4 = tmp4(tmp5[21]).intl;
-            obj15.text = intl4.string(tmp4(tmp5[21]).t.l6w3Vj);
-            obj15.onPress = callback;
-            tmp31 = jsx(tmp4(tmp5[41]).Button, obj15);
+            obj18.accessibilityLabel = intl4.string(tmp4(tmp5[21]).t.l6w3Vj);
+            obj18.onPress = callback;
+            items4 = [, , ];
+            items4[0] = tmp.addBadgesChip;
+            obj19 = { minHeight: null };
+            num4 = 4;
+            obj19.minHeight = badgeSize + 4;
+            items4[1] = obj19;
+            items4[2] = style;
+            obj18.style = items4;
+            tmp36 = jsx;
+            obj20 = { size: "xs", color: null };
+            obj20.color = tmp20(tmp5[10]).colors.TEXT_STRONG;
+            items5 = [, ];
+            items5[0] = jsx(tmp4(tmp5[41]).PlusMediumIcon, obj20);
+            obj21 = { variant: "text-xs/normal", color: "text-strong", children: null };
+            intl5 = tmp4(tmp5[21]).intl;
+            obj21.children = intl5.string(tmp4(tmp5[21]).t.l6w3Vj);
+            items5[1] = jsx(tmp4(tmp5[16]).Text, obj21);
+            obj18.children = items5;
+            tmp32 = jsxs(tmp4(tmp5[14]).PressableOpacity, obj18);
           }
         }
-        return tmp31;
+        return tmp32;
       } else {
         tmp34 = badgeSize;
-        obj16 = { style: null, children: null };
-        items4 = [, , , ];
+        obj22 = { style: null, children: null };
+        items6 = [, , , ];
         ({ badgeRow: arr11[0], limitedBadgeRow: arr11[1] } = tmp);
-        obj17 = { paddingHorizontal: null };
-        obj17.paddingHorizontal = badgeRowHorizontalPadding;
-        items4[2] = obj17;
-        items4[3] = style;
-        obj16.style = items4;
-        items5 = [, ];
-        items5[0] = mapped1;
-        tmp27 = diff > 0;
+        obj23 = { paddingHorizontal: null };
+        obj23.paddingHorizontal = badgeRowHorizontalPadding;
+        items6[2] = obj23;
+        items6[3] = style;
+        obj22.style = items6;
+        items7 = [, ];
+        items7[0] = mapped1;
+        tmp28 = diff > 0;
         tmp33 = jsxs;
-        if (tmp27) {
-          tmp25 = jsx;
-          obj18 = { variant: null, color: "mobile-text-heading-primary", accessibilityLabel: null, children: null };
-          obj18.variant = tmp2.textVariant;
+        if (tmp28) {
+          tmp26 = jsx;
+          obj24 = { variant: null, color: "mobile-text-heading-primary", accessibilityLabel: null, children: null };
+          obj24.variant = tmp2.textVariant;
           intl2 = tmp4(tmp5[21]).intl;
-          obj19 = { overflow_count: null };
-          obj19.overflow_count = diff;
-          obj18.accessibilityLabel = intl2.formatToPlainString(tmp4(tmp5[21]).t.eIHfGZ, obj19);
-          tmp26 = globalThis;
+          obj25 = { overflow_count: null };
+          obj25.overflow_count = diff;
+          obj24.accessibilityLabel = intl2.formatToPlainString(tmp4(tmp5[21]).t.eIHfGZ, obj25);
+          tmp27 = globalThis;
           _HermesInternal = HermesInternal;
           str = "+";
-          obj18.children = "+" + diff;
-          tmp27 = jsx(tmp4(tmp5[16]).Text, obj18);
+          obj24.children = "+" + diff;
+          tmp28 = jsx(tmp4(tmp5[16]).Text, obj24);
         }
-        items5[1] = tmp27;
-        obj16.children = items5;
-        tmp33Result = tmp33(tmp34, obj16);
-        tmp29 = jsx;
-        obj20 = { style: null, children: null };
-        items6 = [];
-        items6[0] = tmp.badges;
-        obj20.style = items6;
-        tmp29Result = tmp33Result;
+        items7[1] = tmp28;
+        obj22.children = items7;
+        tmp33Result = tmp33(tmp34, obj22);
+        tmp30 = jsx;
+        obj26 = { style: null, children: null };
+        items8 = [];
+        items8[0] = tmp.badges;
+        obj26.style = items8;
+        tmp30Result = tmp33Result;
         if (isBadgeDirectoryUpdatesEnabled) {
-          obj21 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
+          obj27 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
           intl3 = tmp4(tmp5[21]).intl;
-          obj21.accessibilityLabel = intl3.string(tmp4(tmp5[21]).t.PEjP4L);
-          obj21.onPress = callback;
-          obj21.children = tmp33Result;
-          tmp29Result = tmp29(tmp4(tmp5[14]).PressableOpacity, obj21);
+          obj27.accessibilityLabel = intl3.string(tmp4(tmp5[21]).t.PEjP4L);
+          obj27.onPress = callback;
+          obj27.children = tmp33Result;
+          tmp30Result = tmp30(tmp4(tmp5[14]).PressableOpacity, obj27);
         }
-        obj20.children = tmp29Result;
-        return tmp29(tmp34, obj20);
+        obj26.children = tmp30Result;
+        return tmp30(tmp34, obj26);
       }
     } else {
-      tmp20 = jsx;
-      tmp21 = badgeSize;
-      obj22 = { style: null, children: null };
-      items7 = [];
-      items7[0] = tmp.badges;
-      obj22.style = items7;
-      obj22.children = memo.map((children, index) => {
+      tmp21 = jsx;
+      tmp22 = badgeSize;
+      obj28 = { style: null, children: null };
+      items9 = [];
+      items9[0] = tmp.badges;
+      obj28.style = items9;
+      obj28.children = memo.map((children, index) => {
         const obj = { style: null, children };
         const items = [badgeRow.badgeRow, { paddingHorizontal: badgeRowHorizontalPadding }, style];
         obj.style = items;
         return closure_2_14(hasOwnProperty, obj, index);
       });
-      return jsx(badgeSize, obj22);
+      return jsx(badgeSize, obj28);
     }
   }
 }
@@ -665,20 +683,22 @@ function GuildTag(style) {
 }
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const getBadgeName = fn(7823).getBadgeName;
-let Constants = fn(6825);
+const getBadgeName = fn(7810).getBadgeName;
+let Constants = fn(6815);
 ({ DIVIDER_DOT: closure_8, PROFILE_SIDE_PADDING: closure_9, UserProfileThemeTypes } = Constants);
 Constants = fn(1074);
 ({ AnalyticEvents: closure_11, UserSettingsSections: closure_12 } = Constants);
-const GuildTagBadgeSize = fn(7581).GuildTagBadgeSize;
-const DEFAULT_PREMIUM_BADGE_ID = fn(7834).DEFAULT_PREMIUM_BADGE_ID;
+const GuildTagBadgeSize = fn(7559).GuildTagBadgeSize;
+const DEFAULT_PREMIUM_BADGE_ID = fn(7821).DEFAULT_PREMIUM_BADGE_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-const createStyles = fn(4866);
-let obj2 = { container: { flexDirection: "column" }, displayName: { flexDirection: "row", alignItems: "center", columnGap: 4 }, displayNameText: { flexShrink: 1, minWidth: 0 }, details: { flexDirection: "row", flexWrap: "wrap", gap: 8 }, detailsText: { flexDirection: "row", flexWrap: "wrap", alignContent: "center", paddingVertical: 2 }, botTag: { marginLeft: 4 }, guildTag: { alignSelf: "center", justifyContent: "center", borderRadius: nativeDefault.radii.sm, columnGap: 4 }, transparentBackground: { backgroundColor: "transparent" }, badge: { resizeMode: "contain" }, badges: { alignSelf: "center", flexDirection: "column", justifyContent: "flex-start", rowGap: 8 }, badgeRow: null, limitedBadgeRow: null };
+const createStyles = fn(4845);
+let obj2 = { container: { flexDirection: "column" }, displayName: { flexDirection: "row", alignItems: "center", columnGap: 4 }, displayNameText: { flexShrink: 1, minWidth: 0 }, details: { flexDirection: "row", flexWrap: "wrap", gap: 8 }, detailsText: { flexDirection: "row", flexWrap: "wrap", alignContent: "center", paddingVertical: 2 }, botTag: { marginLeft: 4 }, guildTag: { alignSelf: "center", justifyContent: "center", borderRadius: nativeDefault.radii.sm, columnGap: 4 }, transparentBackground: { backgroundColor: "transparent" }, badge: { resizeMode: "contain" }, badges: { alignSelf: "center", flexDirection: "column", justifyContent: "flex-start", rowGap: 8 }, badgeRow: null, limitedBadgeRow: null, addBadgesChip: null };
 let obj3 = { alignSelf: "center", justifyContent: "center", borderRadius: nativeDefault.radii.sm, columnGap: 4 };
 obj2.badgeRow = { borderRadius: nativeDefault.radii.sm, paddingVertical: 2, justifyContent: "flex-start", flexDirection: "row", marginRight: "auto", columnGap: 4 };
 obj2.limitedBadgeRow = { alignItems: "center" };
+let obj4 = { borderRadius: nativeDefault.radii.sm, paddingVertical: 2, justifyContent: "flex-start", flexDirection: "row", marginRight: "auto", columnGap: 4 };
+obj2.addBadgesChip = { flexDirection: "row", alignItems: "center", alignSelf: "center", columnGap: 2, paddingHorizontal: nativeDefault.space.PX_6, borderRadius: nativeDefault.radii.sm };
 let closure_17 = createStyles.createStyles(obj2);
 let closure_18 = { headingVariant: "heading-xl/bold", textVariant: "text-md/normal", badgeSize: 20, badgeRowHorizontalPadding: 7, guildTagBadgeSize: GuildTagBadgeSize.SIZE_16, guildTagTextVariant: "text-sm/medium", guildTagHorizontalPadding: 8 };
 const dependencyMap = { [UserProfileThemeTypes.PREVIEW]: { headingVariant: "heading-lg/bold", textVariant: "text-sm/normal", badgeSize: 16, badgeRowHorizontalPadding: 6, guildTagBadgeSize: GuildTagBadgeSize.SIZE_12, guildTagTextVariant: "text-xs/medium", guildTagHorizontalPadding: 6 } };

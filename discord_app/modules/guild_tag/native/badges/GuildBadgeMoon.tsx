@@ -1,8 +1,8 @@
-// === Module 13663: GuildBadgeMoon ===
+// === Module 13671: GuildBadgeMoon ===
 
-// Module 13663 (GuildBadgeMoon)
-import inlineStyles from "inlineStyles" /* 8106 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 13658 */;
+// Module 13671 (GuildBadgeMoon)
+import inlineStyles from "inlineStyles" /* 8095 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 13666 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,7 +1,7 @@
-// === Module 4587: ThemeContextFlags ===
+// === Module 4586: ThemeContextFlags ===
 
-// Module 4587 (ThemeContextFlags)
-import ThemeContext from "ThemeContext" /* 4577 */;
+// Module 4586 (ThemeContextFlags)
+import ThemeContext from "ThemeContext" /* 4576 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/ThemeContextProvider/ThemeContextFlags.tsx");

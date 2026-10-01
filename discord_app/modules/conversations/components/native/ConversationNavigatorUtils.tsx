@@ -1,9 +1,9 @@
-// === Module 7546: ConversationNavigatorUtils ===
+// === Module 7524: ConversationNavigatorUtils ===
 
-// Module 7546 (ConversationNavigatorUtils)
-import RootNavigationRef from "RootNavigationRef" /* 4723 */;
-import transitionToChannel from "transitionToChannel" /* 4877 */;
-import ConversationsActionCreators from "ConversationsActionCreators" /* 7528 */;
+// Module 7524 (ConversationNavigatorUtils)
+import RootNavigationRef from "RootNavigationRef" /* 4722 */;
+import transitionToChannel from "transitionToChannel" /* 4856 */;
+import ConversationsActionCreators from "ConversationsActionCreators" /* 7506 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/conversations/components/native/ConversationNavigatorUtils.tsx");

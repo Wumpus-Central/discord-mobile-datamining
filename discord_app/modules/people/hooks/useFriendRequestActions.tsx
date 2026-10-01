@@ -1,7 +1,7 @@
-// === Module 12887: useFriendRequestActions ===
+// === Module 12895: useFriendRequestActions ===
 
-// Module 12887 (useFriendRequestActions)
-import PeopleUtilsDefault from "PeopleUtils" /* 10533 */;
+// Module 12895 (useFriendRequestActions)
+import PeopleUtilsDefault from "PeopleUtils" /* 10525 */;
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

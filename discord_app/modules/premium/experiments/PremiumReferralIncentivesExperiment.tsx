@@ -1,6 +1,6 @@
-// === Module 13174: PremiumReferralIncentivesExperiment ===
+// === Module 13182: PremiumReferralIncentivesExperiment ===
 
-// Module 13174 (PremiumReferralIncentivesExperiment)
+// Module 13182 (PremiumReferralIncentivesExperiment)
 import ApexExperiment from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 

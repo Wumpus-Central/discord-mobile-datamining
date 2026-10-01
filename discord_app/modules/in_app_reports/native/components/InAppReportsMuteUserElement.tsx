@@ -1,13 +1,13 @@
-// === Module 12672: InAppReportsMuteUserElement ===
+// === Module 12683: InAppReportsMuteUserElement ===
 
-// Module 12672 (InAppReportsMuteUserElement)
-import NicknameUtilsDefault from "NicknameUtils" /* 5018 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5046 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 8047 */;
-import MuteSettingsUtils from "MuteSettingsUtils" /* 9802 */;
+// Module 12683 (InAppReportsMuteUserElement)
+import NicknameUtilsDefault from "NicknameUtils" /* 4997 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5025 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 8036 */;
+import MuteSettingsUtils from "MuteSettingsUtils" /* 9794 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2045 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
 
 require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;

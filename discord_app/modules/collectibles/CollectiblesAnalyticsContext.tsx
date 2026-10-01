@@ -1,6 +1,6 @@
-// === Module 8425: CollectiblesAnalyticsContext ===
+// === Module 8417: CollectiblesAnalyticsContext ===
 
-// Module 8425 (CollectiblesAnalyticsContext)
+// Module 8417 (CollectiblesAnalyticsContext)
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;

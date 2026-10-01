@@ -1,9 +1,9 @@
-// === Module 8916: ApplicationCommandChoiceUtils ===
+// === Module 8909: ApplicationCommandChoiceUtils ===
 
-// Module 8916 (ApplicationCommandChoiceUtils)
-import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 7393 */;
+// Module 8909 (ApplicationCommandChoiceUtils)
+import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 7371 */;
 
-const ApplicationCommandConstants = fn(5501);
+const ApplicationCommandConstants = fn(5489);
 ({ FALSE_OPTION_NAME: closure_1, TRUE_OPTION_NAME: c2 } = ApplicationCommandConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandChoiceUtils.tsx");

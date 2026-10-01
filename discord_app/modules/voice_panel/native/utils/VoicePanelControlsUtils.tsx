@@ -1,9 +1,9 @@
-// === Module 11965: VoicePanelControlsUtils ===
+// === Module 11972: VoicePanelControlsUtils ===
 
-// Module 11965 (VoicePanelControlsUtils)
-import VoicePanelControlsConstants from "VoicePanelControlsConstants" /* 11956 */;
-import VoicePanelConstants from "VoicePanelConstants" /* 11958 */;
-import VoicePanelCardConstants from "VoicePanelCardConstants" /* 11961 */;
+// Module 11972 (VoicePanelControlsUtils)
+import VoicePanelControlsConstants from "VoicePanelControlsConstants" /* 11963 */;
+import VoicePanelConstants from "VoicePanelConstants" /* 11965 */;
+import VoicePanelCardConstants from "VoicePanelCardConstants" /* 11968 */;
 import size from "module_2" /* 2 */;
 
 const VOICE_PANEL_DRAWER_MAX_WIDTH = VoicePanelConstants.VOICE_PANEL_DRAWER_MAX_WIDTH;

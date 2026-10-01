@@ -1,8 +1,8 @@
-// === Module 15709: ReactCompilerSetting ===
+// === Module 15726: ReactCompilerSetting ===
 
-// Module 15709 (ReactCompilerSetting)
-import WrenchIcon from "WrenchIcon" /* 15323 */;
-import SettingBuilders from "SettingBuilders" /* 11211 */;
+// Module 15726 (ReactCompilerSetting)
+import WrenchIcon from "WrenchIcon" /* 15328 */;
+import SettingBuilders from "SettingBuilders" /* 11215 */;
 import size from "module_2" /* 2 */;
 
 const obj = {

@@ -1,6 +1,6 @@
-// === Module 12940: useCollectibleListLayout ===
+// === Module 12948: useCollectibleListLayout ===
 
-// Module 12940 (useCollectibleListLayout)
+// Module 12948 (useCollectibleListLayout)
 import _slicedToArray from "module_32" /* 32 */;
 
 const noop = fn(19);

@@ -1,10 +1,10 @@
-// === Module 15598: UserSettingsDesignSystemTooltip ===
+// === Module 15603: UserSettingsDesignSystemTooltip ===
 
-// Module 15598 (UserSettingsDesignSystemTooltip)
-import Text_Text from "Text/Text" /* 4862 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6740 */;
-import LayerScope from "LayerScope" /* 6773 */;
-import DeviceOrientation from "DeviceOrientation" /* 7975 */;
+// Module 15603 (UserSettingsDesignSystemTooltip)
+import Text_Text from "Text/Text" /* 4841 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6730 */;
+import LayerScope from "LayerScope" /* 6763 */;
+import DeviceOrientation from "DeviceOrientation" /* 7962 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -50,11 +50,11 @@ function Content() {
     };
   }, items1);
   const tmp8 = first2(items, 2);
-  const tooltip = first1(10793).useTooltip(ref, memo);
+  const tooltip = first1(10790).useTooltip(ref, memo);
   const obj3 = { children: null };
   const obj4 = {
     style: tmp.container,
-    children: closure_5(first1(5477).Button, {
+    children: closure_5(first1(5465).Button, {
       ref,
       onPress() {
         closure_1(!first1);
@@ -64,7 +64,7 @@ function Content() {
       size: "md"
     })
   };
-  const items2 = [closure_5(View, obj4), closure_5(first1(6817).TableSwitchRow, { label: "Unlock Orientation", value: tmp9, onValueChange: tmp10 }), closure_5(first1(6817).TableSwitchRow, { label: "Enable Bottom Position", value: first2, onValueChange: tmp11[1] }), closure_5(TooltipNote, {})];
+  const items2 = [closure_5(View, obj4), closure_5(first1(6807).TableSwitchRow, { label: "Unlock Orientation", value: tmp9, onValueChange: tmp10 }), closure_5(first1(6807).TableSwitchRow, { label: "Enable Bottom Position", value: first2, onValueChange: tmp11[1] }), closure_5(TooltipNote, {})];
   obj3.children = items2;
   return closure_7(closure_6, obj3);
 }
@@ -81,7 +81,7 @@ class TooltipNote {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let closure_8 = createStyles.createStyles({ container: { padding: 16, flex: 1, alignItems: "center", justifyContent: "center" }, flex: { flex: 1 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemTooltip.tsx");

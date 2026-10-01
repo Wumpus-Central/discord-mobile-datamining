@@ -1,6 +1,6 @@
-// === Module 5121: ? ===
+// === Module 5100: ? ===
 
-// Module 5121
+// Module 5100
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/base/midnight.png.js");

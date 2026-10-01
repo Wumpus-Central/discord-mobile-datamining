@@ -1,20 +1,20 @@
-// === Module 15728: ParentalControlsUseDataToImproveDiscordSetting ===
+// === Module 15745: ParentalControlsUseDataToImproveDiscordSetting ===
 
-// Module 15728 (ParentalControlsUseDataToImproveDiscordSetting)
+// Module 15745 (ParentalControlsUseDataToImproveDiscordSetting)
 import util from "util" /* 1115 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7155 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14559 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7153 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7147 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14565 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7145 */;
 
 require = fn;
 const Consents = fn(1074).Consents;
-const SettingBuilders = fn(11211);
+const SettingBuilders = fn(11215);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.XuADY2);
   },
-  parent: fn(7612).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(7590).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: function useDataToImproveDiscordSettingValue() {
     return useParentalControlSettings.useParentalControlledConsent(Consents.USAGE_STATISTICS).hasConsented;
   },

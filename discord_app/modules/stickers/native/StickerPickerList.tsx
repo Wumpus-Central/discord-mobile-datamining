@@ -1,29 +1,31 @@
-// === Module 10077: StickerPickerList ===
+// === Module 10069: StickerPickerList ===
 
-// Module 10077 (StickerPickerList)
+// Module 10069 (StickerPickerList)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import Text_Text from "Text/Text" /* 4862 */;
-import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 6679 */;
-import PremiumUpsellSectionDividerDefault from "PremiumUpsellSectionDivider" /* 9967 */;
-import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 9968 */;
-import StickerPickerListRowDefault from "StickerPickerListRow" /* 10064 */;
-import _modDef10078 from "module_10078" /* 10078 */;
-import useStickerPickerListData from "useStickerPickerListData" /* 10079 */;
-import StickerPickerPremiumSearchUpsellDefault from "StickerPickerPremiumSearchUpsell" /* 10080 */;
+import Text_Text from "Text/Text" /* 4841 */;
+import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 6669 */;
+import PremiumUpsellSectionDividerDefault from "PremiumUpsellSectionDivider" /* 9959 */;
+import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 9960 */;
+import StickerPickerListRowDefault from "StickerPickerListRow" /* 10056 */;
+import _modDef10070 from "module_10070" /* 10070 */;
+import useStickerPickerListData from "useStickerPickerListData" /* 10071 */;
+import StickerPickerPremiumSearchUpsellDefault from "StickerPickerPremiumSearchUpsell" /* 10072 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import StickersStore from "StickersStore" /* 6011 */;
+import StickersStore from "StickersStore" /* 6000 */;
 
 require = fn;
 const View = fn(17).View;
-const useStickerPickerStore = fn(10052).useStickerPickerStore;
-const StickerPickerConstants = fn(9937);
+const useStickerPickerStore = fn(10044).useStickerPickerStore;
+const StickerPickerConstants = fn(9929);
 ({ STICKER_SCROLL_LOAD_DELAY_MS: closure_8, STICKER_SCROLL_LOAD_DELAY_AFTER_HEIGHT_CHANGE_MS: closure_9, STICKER_SIZE: c10 } = StickerPickerConstants);
+const Constants = fn(1074);
+({ AnalyticsPages: closure_11, AnalyticsSections: closure_12 } = Constants);
 const jsxProd = fn(21);
-({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(4866);
+({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
+const createStyles = fn(4845);
 let obj = { listPlaceholder: { color: nativeDefault.colors.BACKGROUND_MOD_MUTED }, section: null, sectionSticker: null, nsfwContainer: null, nsfwText: null };
 let obj3 = { color: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 obj.section = { justifyContent: "center", overflow: "hidden", backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
@@ -32,41 +34,41 @@ obj.sectionSticker = { backgroundColor: nativeDefault.colors.MOBILE_EXPRESSION_P
 let obj5 = { backgroundColor: nativeDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT };
 obj.nsfwContainer = { flexDirection: "row", alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.sm, marginLeft: 12, marginRight: 12, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
 obj.nsfwText = { marginLeft: 4, textAlign: "center" };
-let closure_14 = createStyles.createStyles(obj);
-let closure_15 = noop.memo((height) => {
-  const tmp = closure_14();
+let closure_16 = createStyles.createStyles(obj);
+let closure_17 = noop.memo((height) => {
+  const tmp = closure_16();
   const obj = { style: null, children: null };
   const items = [tmp.nsfwContainer, { height: height.height }];
   obj.style = items;
-  const items1 = [closure_1_11(native.Icon, { source: _modDef10078, size: native.Icon.Sizes.SMALL }), ];
+  const items1 = [map1(native.Icon, { source: _modDef10070, size: native.Icon.Sizes.SMALL }), ];
   const obj3 = { style: tmp.nsfwText, variant: "text-sm/normal", color: "interactive-text-active", children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t.uy25Qz);
-  items1[1] = closure_1_11(Text_Text.Text, obj3);
+  items1[1] = map1(Text_Text.Text, obj3);
   obj.children = items1;
-  return closure_1_12(View, obj);
+  return closure_1_14(View, obj);
 });
-let closure_16 = noop.memo((isSectionNitroLocked) => {
+let closure_18 = noop.memo((isSectionNitroLocked) => {
   isSectionNitroLocked = isSectionNitroLocked.isSectionNitroLocked;
   ({ height, label, sectionStyle } = isSectionNitroLocked);
   const obj = { style: null, children: null };
-  const items = [closure_14().section, sectionStyle, { height }];
+  const items = [closure_16().section, sectionStyle, { height }];
   obj.style = items;
   if (isSectionNitroLocked) {
-    isSectionNitroLocked = closure_1_11(PremiumUpsellGradientBackground.PremiumUpsellGradientBackground, {});
+    isSectionNitroLocked = map1(PremiumUpsellGradientBackground.PremiumUpsellGradientBackground, {});
   }
-  const items1 = [isSectionNitroLocked, closure_1_11(Text_Text.Text, { lineClamp: 1, color: "interactive-text-default", variant: "heading-sm/semibold", children: label })];
+  const items1 = [isSectionNitroLocked, map1(Text_Text.Text, { lineClamp: 1, color: "interactive-text-default", variant: "heading-sm/semibold", children: label })];
   obj.children = items1;
-  return closure_1_12(View, obj);
+  return closure_1_14(View, obj);
 });
-let closure_17 = noop.memo((height) => {
+let closure_19 = noop.memo((height) => {
   let isSectionNitroLocked = height.isSectionNitroLocked;
   const obj = { style: { height: height.height }, children: null };
   if (isSectionNitroLocked) {
-    isSectionNitroLocked = closure_1_11(PremiumUpsellGradientBackground.PremiumUpsellGradientBackground, {});
+    isSectionNitroLocked = map1(PremiumUpsellGradientBackground.PremiumUpsellGradientBackground, {});
   }
   obj.children = isSectionNitroLocked;
-  return closure_1_11(View, obj);
+  return map1(View, obj);
 });
 let obj6 = { flexDirection: "row", alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.sm, marginLeft: 12, marginRight: 12, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
 let size = fn(2);
@@ -93,27 +95,27 @@ export default noop.memo((bottomSheetRef) => {
   }
   let stickerFormats = bottomSheetRef.stickerFormats;
   if (stickerFormats === undefined) {
-    let items = [bottomSheetRef(setCategoryIndex[14]).StickerFormat.PNG, bottomSheetRef(setCategoryIndex[14]).StickerFormat.APNG, bottomSheetRef(setCategoryIndex[14]).StickerFormat.LOTTIE, bottomSheetRef(setCategoryIndex[14]).StickerFormat.GIF];
+    let items = [bottomSheetRef(setCategoryIndex[15]).StickerFormat.PNG, bottomSheetRef(setCategoryIndex[15]).StickerFormat.APNG, bottomSheetRef(setCategoryIndex[15]).StickerFormat.LOTTIE, bottomSheetRef(setCategoryIndex[15]).StickerFormat.GIF];
     stickerFormats = items;
   }
-  let containerWidth;
+  closure_16 = undefined;
   sectionFooterSizes = undefined;
-  onLongPressStickerDetail.useRef(null);
-  const tmp4 = containerWidth();
+  const ref = onLongPressStickerDetail.useRef(null);
+  const tmp4 = closure_16();
   closure_8 = tmp4;
   let tmp5 = onPressSticker(onLongPressStickerDetail.useState(null), 2);
   const focusedSticker = tmp5[0];
   const setFocusedSticker = tmp5[1];
-  const sharedValue = bottomSheetRef(setCategoryIndex[15]).useSharedValue(false);
-  const ref = onLongPressStickerDetail.useRef(0);
+  const sharedValue = bottomSheetRef(setCategoryIndex[16]).useSharedValue(false);
+  constants = onLongPressStickerDetail.useRef(0);
   const ref2 = onLongPressStickerDetail.useRef(0);
-  let obj2 = bottomSheetRef(setCategoryIndex[15]);
-  const isPortalKeyboardInModal = bottomSheetRef(setCategoryIndex[16]).useIsPortalKeyboardInModal();
-  const tmp12 = bottomSheetIndex(setCategoryIndex[17])(flag);
-  containerWidth = tmp12;
-  let obj3 = bottomSheetRef(setCategoryIndex[16]);
+  let obj2 = bottomSheetRef(setCategoryIndex[16]);
+  const isPortalKeyboardInModal = bottomSheetRef(setCategoryIndex[17]).useIsPortalKeyboardInModal();
+  const tmp12 = bottomSheetIndex(setCategoryIndex[18])(flag);
+  const containerWidth = tmp12;
+  let obj3 = bottomSheetRef(setCategoryIndex[17]);
   const items1 = [flag];
-  const stateFromStores = bottomSheetRef(setCategoryIndex[18]).useStateFromStores(items1, () => flag.hasLoadedStickerPacks);
+  const stateFromStores = bottomSheetRef(setCategoryIndex[19]).useStateFromStores(items1, () => flag.hasLoadedStickerPacks);
   const tmp14 = ref((setPackToScrollTo) => setPackToScrollTo.setPackToScrollTo);
   closure_16 = tmp14;
   const items2 = [setCategoryIndex, tmp14, bottomSheetRef];
@@ -148,7 +150,7 @@ export default noop.memo((bottomSheetRef) => {
       }
     };
   }, items2);
-  const tmp16 = bottomSheetIndex(setCategoryIndex[19])({ channel, containerWidth: tmp12, searchResults, stickerFormats });
+  const tmp16 = bottomSheetIndex(setCategoryIndex[20])({ channel, containerWidth: tmp12, searchResults, stickerFormats });
   const sectionHeights = tmp16.sectionHeights;
   const sectionSize = tmp16.sectionSize;
   ({ sectionFooterSize, sectionFooterSizes } = tmp16);
@@ -184,19 +186,19 @@ export default noop.memo((bottomSheetRef) => {
   }, items3);
   const items4 = [sectionLabels, sectionNitroLocked, sectionSize, tmp4.sectionSticker];
   const items5 = [sectionDividerPositions, sectionFooterSizes, sectionNitroLocked];
-  const callback = obj.useCallback((arg0) => closure_2_11(closure_16, { label: sectionLabels[arg0], isSectionNitroLocked: sectionNitroLocked[arg0], sectionStyle: closure_8.sectionSticker, height: sectionSize }), items4);
+  const callback = obj.useCallback((arg0) => map1(closure_18, { label: sectionLabels[arg0], isSectionNitroLocked: sectionNitroLocked[arg0], sectionStyle: closure_8.sectionSticker, height: sectionSize }), items4);
   const items6 = [listHeaderDividerPosition];
   const callback1 = obj.useCallback((arg0) => {
     if (null != sectionDividerPositions[arg0]) {
       const obj2 = { position: tmp };
-      return closure_2_11(PremiumUpsellSectionDividerDefault, obj2);
+      return map1(PremiumUpsellSectionDividerDefault, obj2);
     } else {
       let tmp3 = true === sectionNitroLocked[arg0];
       if (tmp3) {
         tmp3 = true === tmp2[arg0 + 1];
       }
       const obj = { height: sectionFooterSizes[arg0], isSectionNitroLocked: tmp3 };
-      return closure_2_11(closure_17, obj);
+      return map1(closure_19, obj);
     }
   }, items5);
   const items7 = [channel.guild_id, null != searchResults && searchResults.nitroLocked.length > 0];
@@ -204,7 +206,7 @@ export default noop.memo((bottomSheetRef) => {
     let tmp2 = null;
     if (null != listHeaderDividerPosition) {
       const obj = { position: tmp };
-      tmp2 = closure_2_11(PremiumUpsellSectionDividerDefault, obj);
+      tmp2 = map1(PremiumUpsellSectionDividerDefault, obj);
     }
     return tmp2;
   }, items6);
@@ -213,7 +215,7 @@ export default noop.memo((bottomSheetRef) => {
     let tmp = null;
     if (closure_30) {
       const obj = { guildId: channel.guild_id };
-      tmp = closure_2_11(StickerPickerPremiumSearchUpsellDefault, obj);
+      tmp = map1(StickerPickerPremiumSearchUpsellDefault, obj);
     }
     return tmp;
   }, items7);
@@ -225,12 +227,12 @@ export default noop.memo((bottomSheetRef) => {
       const type = tmp.type;
       if (useStickerPickerListData.StickerPickerSectionType.STICKERS === type) {
         const obj2 = { containerWidth, stickers: tmp.stickersByRow[arg1], rowSize, isSectionNitroLocked: sectionNitroLocked[arg0], onPressSticker, onLongPressStickerDetail, focusedSticker, setFocusedSticker, channel };
-        let tmp5 = closure_2_11(StickerPickerListRowDefault, obj2);
-        let tmp2 = closure_2_11;
+        let tmp5 = map1(StickerPickerListRowDefault, obj2);
+        let tmp2 = map1;
       } else if (useStickerPickerListData.StickerPickerSectionType.NSFW === type) {
-        tmp2 = closure_2_11;
+        tmp2 = map1;
         const obj = { height: rowHeight };
-        tmp5 = closure_2_11(closure_15, obj);
+        tmp5 = map1(closure_17, obj);
       } else {
         return null;
       }
@@ -239,13 +241,13 @@ export default noop.memo((bottomSheetRef) => {
         const obj3 = { children: null };
         const items = [tmp2(PremiumUpsellGradientBackground.PremiumUpsellGradientBackground, {}), tmp5];
         obj3.children = items;
-        tmp18 = closure_2_12(map1, obj3);
+        tmp18 = closure_2_14(__initData, obj3);
       }
       return tmp18;
     }
   }, items8);
   const memo1 = obj.useMemo(() => {
-    const debounceResult = bottomSheetIndex(setCategoryIndex[23]).debounce((arg0) => {
+    const debounceResult = bottomSheetIndex(setCategoryIndex[24]).debounce((arg0) => {
       let num = 0;
       if (0 < sectionHeights.length) {
         let num3 = 0;
@@ -268,8 +270,8 @@ export default noop.memo((bottomSheetRef) => {
       setCategoryIndex(num);
     }, 100);
     bottomSheetRef = debounceResult;
-    const obj = bottomSheetIndex(setCategoryIndex[23]);
-    const debounceResult1 = bottomSheetIndex(setCategoryIndex[23]).debounce((arg0, arg1) => {
+    const obj = bottomSheetIndex(setCategoryIndex[24]);
+    const debounceResult1 = bottomSheetIndex(setCategoryIndex[24]).debounce((arg0, arg1) => {
       const sum = arg0 + arg1 / 2;
       let num = 0;
       if (0 < sectionHeights.length) {
@@ -341,22 +343,22 @@ export default noop.memo((bottomSheetRef) => {
   }, items15);
   if (tmp19) {
     const obj5 = { inActionSheet: true, insetTop: num2, insetBottom: num };
-    let tmp33Result = sharedValue(tmp11(tmp8[25]), obj5);
+    let tmp33Result = ref2(tmp11(tmp8[26]), obj5);
   } else {
     const obj6 = { accessibilityLabel: null, estimatedListSize: null, inActionSheet: true, preventNativeModalDismiss: null, insetEnd: null, insetStart: null, itemSize: null, keyboardShouldPersistTaps: "always", listId: "sticker-picker-list", listFooterSize: null, listHeaderSize: null, onLayout: null, onScroll: null, placeholderConfig: null, renderItem: null, renderListFooter: null, renderListHeader: null, renderSectionHeader: null, renderSectionFooter: null, ref: null, scrollReporting: "callbacks", sections: null, sectionHeaderSize: null, sectionFooterSize: null, wrapChildren: null };
-    const intl = tmp7(tmp8[12]).intl;
-    obj6.accessibilityLabel = intl.string(tmp7(tmp8[12]).t.nf1s3u);
-    const tmp11Result = tmp11(tmp8[26]);
-    const tmp33 = ref;
-    const tmp34 = ref2;
-    obj6.estimatedListSize = tmp7(tmp8[27]).getCustomKeyboardHeight();
+    const intl = tmp7(tmp8[13]).intl;
+    obj6.accessibilityLabel = intl.string(tmp7(tmp8[13]).t.nf1s3u);
+    const tmp11Result = tmp11(tmp8[27]);
+    const tmp33 = containerWidth;
+    const tmp34 = stateFromStores;
+    obj6.estimatedListSize = tmp7(tmp8[28]).getCustomKeyboardHeight();
     obj6.preventNativeModalDismiss = isPortalKeyboardInModal;
     obj6.insetEnd = num;
     obj6.insetStart = num2;
     obj6.itemSize = rowHeight;
     let num3 = 0;
     if (tmp18) {
-      num3 = tmp7(tmp8[28]).PREMIUM_EXPRESSION_PICKER_SEARCH_UPSELL_HEIGHT;
+      num3 = tmp7(tmp8[29]).PREMIUM_EXPRESSION_PICKER_SEARCH_UPSELL_HEIGHT;
     }
     obj6.listFooterSize = num3;
     obj6.listHeaderSize = listHeaderSize;
@@ -380,18 +382,27 @@ export default noop.memo((bottomSheetRef) => {
     }
     obj6.sectionFooterSize = sectionFooterSize;
     obj6.wrapChildren = someResult;
-    const items16 = [sharedValue(tmp11Result, obj6), ];
-    let tmp35Result = someResult;
-    if (someResult) {
-      const obj7 = { bottomSheetIndex, featureName: tmp7(tmp8[30]).EntitlementFeatureNames.STICKERS_EVERYWHERE, inPortalKeyboard: flag, shouldShow: sharedValue };
-      tmp35Result = tmp35(tmp11(tmp8[29]), obj7);
-      const tmp11Result2 = tmp11(tmp8[29]);
+    const items16 = [ref2(tmp11Result, obj6), ];
+    if (!someResult) {
+      const obj7 = { children: null };
+      items16[1] = someResult;
+      obj7.children = items16;
+      tmp33Result = tmp33(tmp34, obj7);
+    } else {
+      const obj8 = { bottomSheetIndex, featureName: tmp7(tmp8[31]).EntitlementFeatureNames.STICKERS_EVERYWHERE, analyticsLocation: null, inPortalKeyboard: null, shouldShow: null };
+      if (null != channel.guild_id) {
+        let DM_CHANNEL = sharedValue.GUILD_CHANNEL;
+      } else {
+        DM_CHANNEL = sharedValue.DM_CHANNEL;
+      }
+      const obj9 = { page: DM_CHANNEL, section: constants.STICKER_PICKER_UPSELL };
+      obj8.analyticsLocation = obj9;
+      obj8.inPortalKeyboard = flag;
+      obj8.shouldShow = sharedValue;
+      tmp35(tmp11(tmp8[30]), obj8);
+      const tmp11Result2 = tmp11(tmp8[30]);
     }
-    const obj8 = { children: null };
-    items16[1] = tmp35Result;
-    obj8.children = items16;
-    tmp33Result = tmp33(tmp34, obj8);
-    const tmp7Result = tmp7(tmp8[27]);
+    const tmp7Result = tmp7(tmp8[28]);
   }
   return tmp33Result;
 });

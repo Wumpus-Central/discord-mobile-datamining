@@ -1,6 +1,6 @@
-// === Module 13816: DisableCameraSimulcastExperiment ===
+// === Module 13824: DisableCameraSimulcastExperiment ===
 
-// Module 13816 (DisableCameraSimulcastExperiment)
+// Module 13824 (DisableCameraSimulcastExperiment)
 import ApexExperiment from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 

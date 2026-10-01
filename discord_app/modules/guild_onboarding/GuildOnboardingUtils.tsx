@@ -1,18 +1,18 @@
-// === Module 6723: GuildOnboardingUtils ===
+// === Module 6713: GuildOnboardingUtils ===
 
-// Module 6723 (GuildOnboardingUtils)
+// Module 6713 (GuildOnboardingUtils)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
 import FlagUtilsAll from "FlagUtils" /* 1385 */;
 import StringUtils from "StringUtils" /* 2011 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4504 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 5569 */;
-import DefaultChannelUtils from "DefaultChannelUtils" /* 6719 */;
-import ChannelStore from "ChannelStore" /* 2045 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5790 */;
-import GuildChannelStore from "GuildChannelStore" /* 4497 */;
-import GuildStore from "GuildStore" /* 2067 */;
-import PermissionStore from "PermissionStore" /* 4499 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4503 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 5557 */;
+import DefaultChannelUtils from "DefaultChannelUtils" /* 6709 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5779 */;
+import GuildChannelStore from "GuildChannelStore" /* 4496 */;
+import GuildStore from "GuildStore" /* 2066 */;
+import PermissionStore from "PermissionStore" /* 4498 */;
 
 const require = globalThis.__r;
 
@@ -79,11 +79,11 @@ function areStatesEqual(arg0, arg1) {
   }
   return tmp;
 }
-let closure_7 = fn(4497).GUILD_SELECTABLE_CHANNELS_KEY;
-const OnboardingConnectionType = fn(6718).OnboardingConnectionType;
+let closure_7 = fn(4496).GUILD_SELECTABLE_CHANNELS_KEY;
+const OnboardingConnectionType = fn(6708).OnboardingConnectionType;
 const Constants = fn(1074);
 ({ GuildFeatures: closure_11, Permissions: closure_12 } = Constants);
-const GuildMemberFlags = fn(4485).GuildMemberFlags;
+const GuildMemberFlags = fn(4484).GuildMemberFlags;
 let date = new Date(1682488800000);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding/GuildOnboardingUtils.tsx");

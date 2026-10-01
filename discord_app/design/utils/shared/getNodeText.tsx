@@ -1,7 +1,7 @@
-// === Module 4564: getNodeText ===
+// === Module 4563: getNodeText ===
 
-// Module 4564 (getNodeText)
-import utils_getNodeText from "utils/getNodeText" /* 4565 */;
+// Module 4563 (getNodeText)
+import utils_getNodeText from "utils/getNodeText" /* 4564 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/utils/shared/getNodeText.tsx");

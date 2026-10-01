@@ -60,7 +60,7 @@ let closure_5 = {
   }
 };
 const DeveloperOptionsStore = "DeveloperOptionsStore";
-let obj = { trace: false, canary: false, logGatewayEvents: false, logOverlayEvents: false, logAnalyticsEvents: false, sourceMapsEnabled: false, axeEnabled: false, cssDebuggingEnabled: false, layoutDebuggingEnabled: false, bugReporterEnabled: true, idleStatusIndicatorEnabled: false, onlyShowPreviewAppCollections: false, disableAppCollectionsCache: false, isStreamInfoOverlayEnabled: false, preventPopoutClose: false, logKeyboardMismatches: false, alertStartupMetrics: false, logQuestEvents: false };
+let obj = { trace: false, canary: false, logGatewayEvents: false, logOverlayEvents: false, logAnalyticsEvents: false, logInteractionTTIAnalytics: false, sourceMapsEnabled: false, axeEnabled: false, cssDebuggingEnabled: false, layoutDebuggingEnabled: false, bugReporterEnabled: true, idleStatusIndicatorEnabled: false, onlyShowPreviewAppCollections: false, disableAppCollectionsCache: false, isStreamInfoOverlayEnabled: false, preventPopoutClose: false, logKeyboardMismatches: false, alertStartupMetrics: false, logQuestEvents: false };
 let merged = Object.assign(obj);
 obj = {};
 const DeveloperOptionsRoutingKey = "DeveloperOptionsRoutingKey";
@@ -110,6 +110,12 @@ Object.defineProperty(prototype, "isLoggingOverlayEvents", {
 Object.defineProperty(prototype, "isLoggingAnalyticsEvents", {
   get: function isLoggingAnalyticsEvents() {
     return obj.logAnalyticsEvents;
+  },
+  set: undefined
+});
+Object.defineProperty(prototype, "isLoggingInteractionTTIAnalytics", {
+  get: function isLoggingInteractionTTIAnalytics() {
+    return obj.logInteractionTTIAnalytics;
   },
   set: undefined
 });

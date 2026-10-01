@@ -1,8 +1,8 @@
-// === Module 13667: GuildBadgeFire ===
+// === Module 13675: GuildBadgeFire ===
 
-// Module 13667 (GuildBadgeFire)
-import inlineStyles from "inlineStyles" /* 8106 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 13658 */;
+// Module 13675 (GuildBadgeFire)
+import inlineStyles from "inlineStyles" /* 8095 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 13666 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

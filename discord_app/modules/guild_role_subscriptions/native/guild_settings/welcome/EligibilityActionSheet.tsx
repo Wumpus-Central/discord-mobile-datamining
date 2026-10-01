@@ -1,9 +1,9 @@
-// === Module 17738: EligibilityActionSheet ===
+// === Module 17773: EligibilityActionSheet ===
 
-// Module 17738 (EligibilityActionSheet)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4830 */;
-import useCreatorMonetizationEligibilityItemsDefault from "useCreatorMonetizationEligibilityItems" /* 17739 */;
-import EligibilityChecklistDefault from "EligibilityChecklist" /* 17743 */;
+// Module 17773 (EligibilityActionSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4809 */;
+import useCreatorMonetizationEligibilityItemsDefault from "useCreatorMonetizationEligibilityItems" /* 17774 */;
+import EligibilityChecklistDefault from "EligibilityChecklist" /* 17778 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -11,7 +11,7 @@ const UserSettingsSections = fn(1074).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const EligibilityActionSheet = "EligibilityActionSheet";
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let closure_8 = createStyles.createStyles({ container: { flex: 1, paddingHorizontal: 0 }, title: { marginHorizontal: 24, marginTop: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/welcome/EligibilityActionSheet.tsx");
@@ -23,11 +23,11 @@ export default function EligibilityActionSheet(onRequireModeratorMFAClick) {
   const memo = noop.useMemo(() => ({
     actions: {
       onEnableMFAClick() {
-        closure_1_1(4830).hideActionSheet(closure_1_7);
-        const obj = closure_1_1(4830);
-        closure_1_1(9247).close();
-        const obj2 = closure_1_1(9247);
-        onRequireModeratorMFAClick(6996).openUserSettings({ screen: constants.ACCOUNT });
+        closure_1_1(4809).hideActionSheet(closure_1_7);
+        const obj = closure_1_1(4809);
+        closure_1_1(9241).close();
+        const obj2 = closure_1_1(9241);
+        onRequireModeratorMFAClick(6987).openUserSettings({ screen: constants.ACCOUNT });
       },
       onRequireModeratorMFAClick() {
         ActionSheetActionCreatorsDefault.hideActionSheet(EligibilityActionSheet);
@@ -40,10 +40,10 @@ export default function EligibilityActionSheet(onRequireModeratorMFAClick) {
   let obj2 = { style: tmp.title, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = onRequireModeratorMFAClick(1115).intl;
   obj2.children = intl.string(onRequireModeratorMFAClick(1115).t["3s47iN"]);
-  const items1 = [closure_5(onRequireModeratorMFAClick(4862).Heading, obj2), ];
+  const items1 = [closure_5(onRequireModeratorMFAClick(4841).Heading, obj2), ];
   const tmp3 = useCreatorMonetizationEligibilityItemsDefault(onRequireModeratorMFAClick.eligibility, memo);
   items1[1] = closure_5(EligibilityChecklistDefault, { style: tmp.container, items: useCreatorMonetizationEligibilityItemsDefault(onRequireModeratorMFAClick.eligibility, memo) });
   obj.children = items1;
-  return closure_6(onRequireModeratorMFAClick(6767).BottomSheet, obj);
+  return closure_6(onRequireModeratorMFAClick(6757).BottomSheet, obj);
 };
 export const ELIGIBILITY_ACTION_SHEET_KEY = "EligibilityActionSheet";

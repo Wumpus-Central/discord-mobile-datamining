@@ -1,8 +1,8 @@
-// === Module 5100: getTimestampString ===
+// === Module 5079: getTimestampString ===
 
-// Module 5100 (getTimestampString)
+// Module 5079 (getTimestampString)
 import util from "util" /* 1115 */;
-import _modDef4451 from "module_4451" /* 4451 */;
+import _modDef4450 from "module_4450" /* 4450 */;
 import size from "module_2" /* 2 */;
 
 function getDurationString(seconds) {
@@ -49,7 +49,7 @@ let c4 = 31104000;
 const result = size.fileFinishedImporting("modules/notification_center/getTimestampString.tsx");
 
 export default function getTimestampString(arg0) {
-  const obj = { seconds: _modDef4451().diff(_modDef4451(since), "s"), getFormatter };
+  const obj = { seconds: _modDef4450().diff(_modDef4450(since), "s"), getFormatter };
   ({ since, getFormatter } = arg0);
   return getDurationString(obj);
 };

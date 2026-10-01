@@ -1,10 +1,10 @@
-// === Module 15623: PremiumProfileCustomizationTryItOutSetting ===
+// === Module 15628: PremiumProfileCustomizationTryItOutSetting ===
 
-// Module 15623 (PremiumProfileCustomizationTryItOutSetting)
+// Module 15628 (PremiumProfileCustomizationTryItOutSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
-import SettingsConstants from "SettingsConstants" /* 7612 */;
-import SettingBuilders from "SettingBuilders" /* 11211 */;
+import SettingsConstants from "SettingsConstants" /* 7590 */;
+import SettingBuilders from "SettingBuilders" /* 11215 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -19,7 +19,7 @@ const route = SettingBuilders.createRoute({
   screen: {
     route: Constants.UserSettingsSections.PROFILE_CUSTOMIZATION_TRY_IT_OUT,
     getComponent() {
-      return require("ProfileCustomizationTryItOutSettingScreen").default;
+      return require("ProfileCustomizationTryItOutSettingScreenExperimentWrapper").default;
     }
   }
 });

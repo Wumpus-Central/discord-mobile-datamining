@@ -1,20 +1,20 @@
-// === Module 10716: IAPUtils ===
+// === Module 10712: IAPUtils ===
 
-// Module 10716 (IAPUtils)
+// Module 10712 (IAPUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import v1 from "v1" /* 1255 */;
 import ClientInfoUtilsAll from "ClientInfoUtils" /* 1363 */;
 import PlatformUtils2 from "PlatformUtils" /* 1364 */;
-import DeviceUtils from "DeviceUtils" /* 4842 */;
-import ProductIds from "ProductIds" /* 6857 */;
-import StorekitIAPQueueDefault from "StorekitIAPQueue" /* 10736 */;
-import GeneratedPaymentCurrencies from "GeneratedPaymentCurrencies" /* 10737 */;
+import DeviceUtils from "DeviceUtils" /* 4821 */;
+import ProductIds from "ProductIds" /* 6848 */;
+import StorekitIAPQueueDefault from "StorekitIAPQueue" /* 10733 */;
+import GeneratedPaymentCurrencies from "GeneratedPaymentCurrencies" /* 10734 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import DevSettingsStore from "DevSettingsStore" /* 4865 */;
+import DevSettingsStore from "DevSettingsStore" /* 4844 */;
 import UserStore from "UserStore" /* 1372 */;
-import IAPStore from "IAPStore" /* 6854 */;
+import IAPStore from "IAPStore" /* 6845 */;
 
 const require = globalThis.__r;
 
@@ -74,7 +74,7 @@ let closure_16 = async function _restorePurchases(arg0) {
             closure_132_3 = undefined;
             c7 = 1;
             c8 = 1;
-            return { value: "flex", done: true };
+            return { value: "flex", done: null };
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {
@@ -88,12 +88,12 @@ let closure_16 = async function _restorePurchases(arg0) {
             if (fullRestore2) {
               c7 = 2;
               c8 = 1;
-              const obj6 = { value: closure_131_12.sync(), done: false };
+              const obj6 = { value: closure_131_11.sync(), done: false };
               return obj6;
             } else {
               c7 = 3;
               c8 = 1;
-              const obj7 = { value: closure_131_12.getPendingTransactions(), done: false };
+              const obj7 = { value: closure_131_11.getPendingTransactions(), done: false };
               return obj7;
             }
           } else {
@@ -110,10 +110,10 @@ let closure_16 = async function _restorePurchases(arg0) {
             const obj10 = { value, done: true };
             return obj10;
           } else {
-            arr2 = closure_131_1(closure_131_3[14]);
+            arr2 = closure_131_1(closure_131_3[15]);
             c7 = 4;
             c8 = 1;
-            const obj11 = { value: closure_131_0(closure_131_3[8]).getAvailablePurchases({ onlyIncludeActiveItems: false }), done: false };
+            const obj11 = { value: closure_131_0(closure_131_3[10]).getAvailablePurchases({ onlyIncludeActiveItems: false }), done: false };
             return obj11;
           }
         } else if (3 === tmp5) {
@@ -126,13 +126,13 @@ let closure_16 = async function _restorePurchases(arg0) {
             return obj12;
           } else {
             closure_132_2 = value;
-            closure_132_3 = closure_131_1(closure_131_3[14]).map(closure_132_2, (id) => id.id);
-            arr4 = closure_131_1(closure_131_3[14]);
+            closure_132_3 = closure_131_1(closure_131_3[15]).map(closure_132_2, (id) => id.id);
+            arr4 = closure_131_1(closure_131_3[15]);
             filter = arr4.filter;
-            const arr3 = closure_131_1(closure_131_3[14]);
+            const arr3 = closure_131_1(closure_131_3[15]);
             c7 = 5;
             c8 = 1;
-            const obj13 = { value: closure_131_0(closure_131_3[8]).getAvailablePurchases({ onlyIncludeActiveItems: false }), done: false };
+            const obj13 = { value: closure_131_0(closure_131_3[10]).getAvailablePurchases({ onlyIncludeActiveItems: false }), done: false };
             return obj13;
           }
         } else {
@@ -147,7 +147,7 @@ let closure_16 = async function _restorePurchases(arg0) {
             } else {
               closure_132_1 = map(value, (originalPurchase) => {
                 const obj = { originalPurchase, purchaseResponse: null };
-                filter(closure_1_3[10])(null != originalPurchase.transactionId, "should have transactionId");
+                filter(closure_1_3[12])(null != originalPurchase.transactionId, "should have transactionId");
                 const obj3 = { originalTransactionDate: originalPurchase.originalTransactionDateIOS, originalTransactionIdentifier: null, transactionDate: null, transactionIdentifier: null, productIdentifier: null, transactionReceipt: null, jwsRepresentation: null };
                 let parsed;
                 if (null != originalPurchase.originalTransactionIdentifierIOS) {
@@ -176,7 +176,7 @@ let closure_16 = async function _restorePurchases(arg0) {
               return hasItem;
             }).map((originalPurchase) => {
               const obj = { originalPurchase, purchaseResponse: null };
-              filter(closure_1_3[10])(null != originalPurchase.transactionId, "should have transactionId");
+              filter(closure_1_3[12])(null != originalPurchase.transactionId, "should have transactionId");
               const obj3 = { originalTransactionDate: originalPurchase.originalTransactionDateIOS, originalTransactionIdentifier: null, transactionDate: null, transactionIdentifier: null, productIdentifier: null, transactionReceipt: null, jwsRepresentation: null };
               let parsed;
               if (null != originalPurchase.originalTransactionIdentifierIOS) {
@@ -216,8 +216,8 @@ function isStorekit2Available() {
   let isIOSResult = PlatformUtils2.isIOS();
   if (isIOSResult) {
     let isAvailableResult;
-    if (closure_1_12 != null) {
-      isAvailableResult = closure_1_12.isAvailable();
+    if (RNIapIosSk2 != null) {
+      isAvailableResult = RNIapIosSk2.isAvailable();
     }
     isIOSResult = 1 === isAvailableResult;
   }
@@ -269,7 +269,7 @@ let closure_19 = async function _fetchStoreFront() {
             c3 = 1;
             c4 = 2;
             c5 = 1;
-            const obj6 = { value: require("module_10717").getStorefront(), done: false };
+            const obj6 = { value: require("module_10714").getStorefront(), done: false };
             return obj6;
           } else {
             c5 = 3;
@@ -279,7 +279,7 @@ let closure_19 = async function _fetchStoreFront() {
       } else if (1 === tmp7) {
         c3 = 0;
         closure_128_1 = closure_2;
-        const result = closure_129_0(closure_129_3[16]).captureBillingException(closure_128_1);
+        const result = closure_129_0(closure_129_3[17]).captureBillingException(closure_128_1);
         c5 = 3;
         return { value: null, done: true };
       } else if (arg0 === 1) {
@@ -309,12 +309,17 @@ let closure_19 = async function _fetchStoreFront() {
     }
   }
 };
-const convertToAlpha2 = fn(5081).convertToAlpha2;
+const convertToAlpha2 = fn(5060).convertToAlpha2;
 const Constants = fn(1074);
 ({ CurrencyCodes: closure_8, IOS_BUNDLE_ID } = Constants);
 const NAMESPACE_SNOWFLAKE_UUID = fn(1374).NAMESPACE_SNOWFLAKE_UUID;
-({ InAppUtils: closure_11, RNIapIosSk2: closure_12 } = fn(17).NativeModules);
-let items = [fn(10717).ErrorCode.E_USER_CANCELLED, Constants.StoreKitErrors.PAYMENT_CANCELED, fn(10717).ErrorCode.E_UNKNOWN];
+const RNIapIosSk2 = fn(17).NativeModules.RNIapIosSk2;
+let PlatformUtils = fn(1364);
+let _default = null;
+if (PlatformUtils.isIOS()) {
+  _default = fn(10713).default;
+}
+let items = [fn(10714).ErrorCode.E_USER_CANCELLED, Constants.StoreKitErrors.PAYMENT_CANCELED, fn(10714).ErrorCode.E_UNKNOWN];
 let set = new Set(items);
 new LoggerDefault("IAPUtils.tsx");
 let obj = {
@@ -385,7 +390,7 @@ let obj = {
                   c5 = 1;
                   c6 = 2;
                   c7 = 1;
-                  const obj5 = { value: sku(10717).clearTransactionIOS(), done: false };
+                  const obj5 = { value: sku(10714).clearTransactionIOS(), done: false };
                   return obj5;
                 } else {
                   const _Error2 = Error;
@@ -410,7 +415,7 @@ let obj = {
                   const obj8 = { sku, appAccountToken, withOffer };
                   c6 = 3;
                   c7 = 1;
-                  const obj9 = { value: sku(10717).requestPurchase(obj8), done: false };
+                  const obj9 = { value: sku(10714).requestPurchase(obj8), done: false };
                   return obj9;
                 }
               } else if (arg0 === 1) {
@@ -461,7 +466,8 @@ let obj = {
     return new Promise((arg0, arg1) => {
       closure_0 = arg0;
       closure_1 = arg1;
-      closure_1_11.canMakePayments((arg0) => {
+      _modDef38(null != _default, "StoreKit payments are only available on iOS");
+      _default.canMakePayments((arg0) => {
         if (!arg0) {
           const _Error = Error;
           const error = new Error();
@@ -492,7 +498,7 @@ let obj = {
     return applyArgumentsResult;
   }
 };
-let PlatformUtils = fn(1364);
+PlatformUtils = fn(1364);
 PlatformUtils = PlatformUtils.isIOS();
 if (PlatformUtils) {
   let isIOSResult1 = fn(1364).isIOS();
@@ -501,8 +507,8 @@ if (PlatformUtils) {
     let _HermesInternal = HermesInternal;
     let isRunningOnSimulator = Identifier.startsWith("" + IOS_BUNDLE_ID + ".local");
     if (!isRunningOnSimulator) {
-      isRunningOnSimulator = fn(4842).getIsRunningOnSimulator();
-      let obj6 = fn(4842);
+      isRunningOnSimulator = fn(4821).getIsRunningOnSimulator();
+      let obj7 = fn(4821);
     }
     isIOSResult1 = isRunningOnSimulator;
     const importAllResult = ClientInfoUtilsAll;
@@ -512,10 +518,10 @@ if (PlatformUtils) {
     value = DevSettingsStore.get("force_mock_iap");
   }
   PlatformUtils = value;
-  let obj4 = fn(1364);
+  let obj5 = fn(1364);
 }
 if (PlatformUtils) {
-  obj = fn(10738).default;
+  obj = fn(10735).default;
 }
 function shouldMockIAPForceEnable() {
   let isIOSResult = PlatformUtils2.isIOS();
@@ -579,7 +585,7 @@ export const makeIAPRequest = function makeIAPRequest(arg0, arg1, arg2) {
                 const obj6 = { requestJSONString, sku, appAccountToken: convertToUUID(currentUser.id), andDangerouslyFinishTransactionAutomaticallyIOS: false, useACOM };
                 c6 = 2;
                 c7 = 1;
-                const obj7 = { value: requestJSONString(10717).requestPurchase(obj6), done: false };
+                const obj7 = { value: requestJSONString(10714).requestPurchase(obj6), done: false };
                 return obj7;
               } else {
                 const _Error2 = Error;
@@ -592,8 +598,8 @@ export const makeIAPRequest = function makeIAPRequest(arg0, arg1, arg2) {
               c5 = 0;
               closure_130_3 = closure_4;
               if (!set.has(closure_130_3.code)) {
-                const result = requestJSONString(4533).captureBillingException(closure_130_3);
-                const obj3 = requestJSONString(4533);
+                const result = requestJSONString(4532).captureBillingException(closure_130_3);
+                const obj3 = requestJSONString(4532);
               }
               closure_130_1(closure_130_3);
             } else if (arg0 === 1) {
@@ -687,13 +693,13 @@ export const manageSubscription = function manageSubscription() {
   let isIOSResult = PlatformUtils2.isIOS();
   if (isIOSResult) {
     let isAvailableResult;
-    if (closure_1_12 != null) {
-      isAvailableResult = closure_1_12.isAvailable();
+    if (RNIapIosSk2 != null) {
+      isAvailableResult = RNIapIosSk2.isAvailable();
     }
     isIOSResult = 1 === isAvailableResult;
   }
   if (isIOSResult) {
-    let result = closure_1_12.showManageSubscriptions();
+    let result = RNIapIosSk2.showManageSubscriptions();
   } else {
     const _Error = Error;
     const error = new Error("StoreKit 2 is not available");

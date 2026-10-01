@@ -1,9 +1,9 @@
-// === Module 16609: useVibegrationsDraftHasText ===
+// === Module 16630: useVibegrationsDraftHasText ===
 
-// Module 16609 (useVibegrationsDraftHasText)
+// Module 16630 (useVibegrationsDraftHasText)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VibegrationsComposerDraftStore from "VibegrationsComposerDraftStore" /* 16610 */;
+import VibegrationsComposerDraftStore from "VibegrationsComposerDraftStore" /* 16631 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/vibegrations/lib/useVibegrationsDraftHasText.tsx");

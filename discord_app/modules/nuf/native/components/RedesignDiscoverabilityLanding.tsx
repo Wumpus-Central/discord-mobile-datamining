@@ -1,15 +1,15 @@
-// === Module 17446: RedesignDiscoverabilityLanding ===
+// === Module 17478: RedesignDiscoverabilityLanding ===
 
-// Module 17446 (RedesignDiscoverabilityLanding)
+// Module 17478 (RedesignDiscoverabilityLanding)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
-import Text_Text from "Text/Text" /* 4862 */;
-import components_Button_Button from "components/Button/Button" /* 5477 */;
-import FastImageDefault from "FastImage" /* 6095 */;
-import NavigatorConstants from "NavigatorConstants" /* 6190 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 12378 */;
-import _modDef12467 from "module_12467" /* 12467 */;
+import Text_Text from "Text/Text" /* 4841 */;
+import components_Button_Button from "components/Button/Button" /* 5465 */;
+import FastImageDefault from "FastImage" /* 6085 */;
+import NavigatorConstants from "NavigatorConstants" /* 6180 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 12390 */;
+import _modDef12479 from "module_12479" /* 12479 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, topContainer: null, growContainer: null, image: null, title: null, subtitle: null, info: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.topContainer = { paddingTop: nativeDefault.space.PX_16 };
@@ -48,7 +48,7 @@ export default function RedesignDiscoverabilityLanding(onNext) {
   const obj6 = { resizeMode: "contain", style: tmp.image, source: null };
   const obj2 = { flexGrow: 2, paddingTop: NavigatorConstants.NAV_BAR_HEIGHT + 32, paddingBottom: useSafeAreaInsetsDefault().bottom + 16, paddingHorizontal: nativeDefault.space.PX_16 };
   const obj3 = { style: tmp.topContainer };
-  obj6.source = _modDef12467;
+  obj6.source = _modDef12479;
   items[3] = hasOwnProperty(FastImageDefault, obj6);
   const obj7 = { style: tmp.info, variant: "text-sm/medium", color: "text-default", children: null };
   const intl3 = util.intl;

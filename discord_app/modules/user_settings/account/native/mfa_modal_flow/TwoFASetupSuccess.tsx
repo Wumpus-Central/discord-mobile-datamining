@@ -1,13 +1,13 @@
-// === Module 14531: TwoFASetupSuccess ===
+// === Module 14537: TwoFASetupSuccess ===
 
-// Module 14531 (TwoFASetupSuccess)
+// Module 14537 (TwoFASetupSuccess)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import Text_Text from "Text/Text" /* 4862 */;
-import components_Button_Button from "components/Button/Button" /* 5477 */;
-import TwoFASetupModal from "TwoFASetupModal" /* 14522 */;
-import _mod14532 from "module_14532" /* 14532 */;
+import Text_Text from "Text/Text" /* 4841 */;
+import components_Button_Button from "components/Button/Button" /* 5465 */;
+import TwoFASetupModal from "TwoFASetupModal" /* 14528 */;
+import _mod14538 from "module_14538" /* 14538 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -17,12 +17,12 @@ get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Image: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = { container: { alignSelf: "stretch", flex: 1, alignItems: "center", justifyContent: "flex-start", flexDirection: "column" }, flex: { flex: 1 }, image: { width: 190, height: 70 }, success: { marginTop: 33 }, successBody: { fontSize: 14, textAlign: "center", marginHorizontal: 20, marginTop: 4, color: nativeDefault.colors.TEXT_STRONG }, divider: null, buttonWrapper: null, ctaDescription: null, errorText: null };
 let size = { height: 2, width: 48, margin: 32, backgroundColor: nativeDefault.colors.BORDER_STRONG };
 obj2.divider = size;
 obj2.buttonWrapper = { alignSelf: "stretch", margin: 16, marginTop: 0 };
-let obj3 = { fontSize: 14, textAlign: "center", marginHorizontal: 20, marginTop: 4, color: nativeDefault.colors.TEXT_STRONG };
+const obj3 = { fontSize: 14, textAlign: "center", marginHorizontal: 20, marginTop: 4, color: nativeDefault.colors.TEXT_STRONG };
 obj2.ctaDescription = { fontSize: 14, textAlign: "center", marginTop: 4, marginHorizontal: 16, color: nativeDefault.colors.TEXT_STRONG };
 let obj4 = { fontSize: 14, textAlign: "center", marginTop: 4, marginHorizontal: 16, color: nativeDefault.colors.TEXT_STRONG };
 obj2.errorText = { fontSize: 14, textAlign: "center", marginHorizontal: 16, marginTop: 8, color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
@@ -37,81 +37,24 @@ export default function TwoFASetupSuccess() {
   [tmp5, importDefault] = noop.useState("");
   const callback = noop.useCallback(() => {
     setRegistering = async function _onRegisterSuccess(arg0) {
-      if (c6 === 2) {
+      closure_2 = tmp3;
+      ({ ticket: closure_129_0, credential: closure_129_1 } = closure_0);
+      await "flex";
+      const intl = setRegistering(1115).intl;
+      await closure_2_0(6200).finishRegisterWebAuthnCredential(intl.string(closure_2_0(1115).t["8H5RmH"]), closure_129_0, closure_129_1);
+      if (2 === tmp8) {
+        c4 = 0;
+        tmp5(tmp19.body.message);
         c6 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp7 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj2 = { value, done: true };
-          return obj2;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              const obj3 = { value, done: true };
-              return obj3;
-            } else {
-              closure_2 = tmp3;
-              closure_129_0 = undefined;
-              closure_129_1 = undefined;
-              ({ ticket: closure_129_0, credential: closure_129_1 } = closure_0);
-              c5 = 1;
-              c6 = 1;
-              return { value: "flex", done: true };
-            }
-          } else if (1 === tmp8) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
-            } else {
-              c4 = 1;
-              const intl = setRegistering(1115).intl;
-              c5 = 3;
-              c6 = 1;
-              const obj5 = { value: setRegistering(6210).finishRegisterWebAuthnCredential(intl.string(setRegistering(1115).t["8H5RmH"]), closure_129_0, closure_129_1), done: false };
-              return obj5;
-            }
-          } else {
-            if (2 === tmp8) {
-              c4 = 0;
-              tmp5(tmp19.body.message);
-              c6 = 3;
-            } else if (arg0 === 1) {
-              c6 = 3;
-              throw value;
-            } else if (arg0 !== 2) {
-              setError(14521).close();
-              c4 = 0;
-              const obj = setError(14521);
-            }
-            c4 = 0;
-            c6 = 3;
-            const obj6 = { value, done: true };
-            return obj6;
-          }
-        } catch (tmp19) {
-          if (tmp4 === c4) {
-            c6 = tmp2;
-            throw tmp19;
-          } else {
-            c5 = tmp;
-          }
-        }
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 !== 2) {
+        setError(14527).close();
+        c4 = 0;
+        setError(14527);
       }
+      return value;
     };
     setError("");
     setError(dependencyMap[10]).registerPasskey({
@@ -129,16 +72,16 @@ export default function TwoFASetupSuccess() {
       }
     });
   }, []);
-  let obj = { style: tmp.container, children: null };
+  const obj = { style: tmp.container, children: null };
   const items = [closure_8(closure_6, { style: tmp.flex }), , , , , , , ];
-  let obj2 = { style: tmp.flex };
+  const obj2 = { style: tmp.flex };
   const tmp4 = _slicedToArray(noop.useState(""), 2);
-  items[1] = closure_8(closure_7, { source: _mod14532, style: tmp.image });
-  let obj4 = { style: tmp.success, variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: null };
+  items[1] = closure_8(closure_7, { source: _mod14538, style: tmp.image });
+  const obj4 = { style: tmp.success, variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: null };
   let intl = util.intl;
   obj4.children = intl.string(util.t.Awk3Gw);
   items[2] = closure_8(Text_Text.Text, obj4);
-  let obj5 = { style: tmp.successBody, children: null };
+  const obj5 = { style: tmp.successBody, children: null };
   const intl2 = util.intl;
   obj5.children = intl2.string(util.t["0d1bXM"]);
   items[3] = closure_8(native.LegacyText, obj5);

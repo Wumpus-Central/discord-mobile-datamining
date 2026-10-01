@@ -1,7 +1,7 @@
-// === Module 15547: MountMeasure ===
+// === Module 15552: MountMeasure ===
 
-// Module 15547 (MountMeasure)
-import useMountEffect from "useMountEffect" /* 5494 */;
+// Module 15552 (MountMeasure)
+import useMountEffect from "useMountEffect" /* 5482 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

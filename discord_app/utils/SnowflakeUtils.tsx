@@ -16,6 +16,12 @@ export default {
   extractTimestamp(arg0) {
     return utils_SnowflakeUtilsAll.extractTimestamp(arg0);
   },
+  getNonTimestampBits(arg0) {
+    return utils_SnowflakeUtilsAll.getNonTimestampBits(arg0);
+  },
+  setNonTimestampBits(arg0, arg1) {
+    return utils_SnowflakeUtilsAll.setNonTimestampBits(arg0, arg1);
+  },
   compare(arg0, arg1) {
     return utils_SnowflakeUtilsAll.compare(arg0, arg1);
   },

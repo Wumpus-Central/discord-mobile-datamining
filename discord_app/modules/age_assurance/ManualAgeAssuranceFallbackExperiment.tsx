@@ -1,7 +1,7 @@
-// === Module 8082: ManualAgeAssuranceFallbackExperiment ===
+// === Module 8071: ManualAgeAssuranceFallbackExperiment ===
 
-// Module 8082 (ManualAgeAssuranceFallbackExperiment)
-import SafetyHubStore from "SafetyHubStore" /* 8076 */;
+// Module 8071 (ManualAgeAssuranceFallbackExperiment)
+import SafetyHubStore from "SafetyHubStore" /* 8065 */;
 
 const require = fn;
 const ApexExperiment = fn(1435);

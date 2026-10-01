@@ -1,30 +1,30 @@
-// === Module 16832: YouScreenNavIcon ===
+// === Module 16853: YouScreenNavIcon ===
 
-// Module 16832 (YouScreenNavIcon)
+// Module 16853 (YouScreenNavIcon)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4862 */;
-import ClipViewDefault from "ClipView" /* 8472 */;
-import native from "native" /* 8569 */;
+import Text_Text from "Text/Text" /* 4841 */;
+import ClipViewDefault from "ClipView" /* 8464 */;
+import native from "native" /* 8561 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const md = fn(16247).ICON_SIZE.md;
+const md = fn(16267).ICON_SIZE.md;
 const result = (nativeDefault.space.PX_32 - md) / 2;
 const TEXT_DEFAULT = nativeDefault.colors.TEXT_DEFAULT;
-const point = { shape: fn(8472).CutoutShape.Circle, x: md - 8 - 4, y: -4, size: 16 };
+const point = { shape: fn(8464).CutoutShape.Circle, x: md - 8 - 4, y: -4, size: 16 };
 let items = [point];
-const createStyles = fn(4866);
-const obj = { container: { borderRadius: nativeDefault.modules.button.BORDER_RADIUS, marginHorizontal: nativeDefault.space.PX_4, flexDirection: "column", alignItems: "center", padding: result }, label: null, dot: null };
-let obj2 = { borderRadius: nativeDefault.modules.button.BORDER_RADIUS, marginHorizontal: nativeDefault.space.PX_4, flexDirection: "column", alignItems: "center", padding: result };
-obj.label = { marginTop: nativeDefault.space.PX_4 };
+const createStyles = fn(4845);
+const obj = { container: { borderRadius: nativeDefault.modules.button.BORDER_RADIUS, width: nativeDefault.space.PX_64 - nativeDefault.space.PX_4, flexShrink: 1, flexDirection: "column", alignItems: "center", padding: result }, label: null, dot: null };
+let obj2 = { borderRadius: nativeDefault.modules.button.BORDER_RADIUS, width: nativeDefault.space.PX_64 - nativeDefault.space.PX_4, flexShrink: 1, flexDirection: "column", alignItems: "center", padding: result };
+obj.label = { marginTop: nativeDefault.space.PX_4, textAlign: "center" };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION, borderRadius: nativeDefault.radii.round, height: 8, width: 8, position: "absolute", right: 0, top: 0 };
 obj.dot = size;
 let closure_8 = createStyles.createStyles(obj);
-let obj4 = { marginTop: nativeDefault.space.PX_4 };
+let obj4 = { marginTop: nativeDefault.space.PX_4, textAlign: "center" };
 size = fn(2);
 const result1 = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouScreenNavIcon.tsx");
 
@@ -55,7 +55,7 @@ export default noop.memo(noop.forwardRef((arg0, ref) => {
   }
   const obj6 = { ref, style: tmp.container, accessibilityRole: "button", accessibilityLabel, accessibilityValue: tmp10, onPress, hitSlop: nativeDefault.space.PX_8, children: null };
   const items1 = [tmp4, ];
-  const obj7 = { style: tmp.label, variant: "text-xs/semibold", color: "text-default", maxFontSizeMultiplier: 2, children: null };
+  const obj7 = { style: tmp.label, variant: "text-xs/semibold", color: "text-default", maxFontSizeMultiplier: 2, lineClamp: 1, children: null };
   if (label == null) {
     label = accessibilityLabel;
   }

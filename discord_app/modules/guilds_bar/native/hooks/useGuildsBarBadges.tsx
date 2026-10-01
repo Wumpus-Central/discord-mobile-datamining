@@ -1,17 +1,17 @@
-// === Module 16170: useGuildsBarBadges ===
+// === Module 16190: useGuildsBarBadges ===
 
-// Module 16170 (useGuildsBarBadges)
+// Module 16190 (useGuildsBarBadges)
 import native from "native" /* 1177 */;
-import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 4687 */;
-import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 16139 */;
-import GuildsBarActivityIndicator from "GuildsBarActivityIndicator" /* 16175 */;
+import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 4686 */;
+import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 16159 */;
+import GuildsBarActivityIndicator from "GuildsBarActivityIndicator" /* 16195 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 9741 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4686 */;
-import GuildMemberStore from "GuildMemberStore" /* 2108 */;
-import GuildStore from "GuildStore" /* 2067 */;
-import PermissionStore from "PermissionStore" /* 4499 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 9735 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4685 */;
+import GuildMemberStore from "GuildMemberStore" /* 2107 */;
+import GuildStore from "GuildStore" /* 2066 */;
+import PermissionStore from "PermissionStore" /* 4498 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;
@@ -21,7 +21,7 @@ let closure_3 = ["guildActivityIndicatorSource"];
 const Constants = fn(1074);
 ({ GuildFeatures: closure_12, Permissions: map1 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let closure_15 = createStyles.createStyles({ topRightBadge: { position: "absolute", right: 9, backgroundColor: "transparent", borderColor: "transparent" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/native/hooks/useGuildsBarBadges.tsx");

@@ -1,8 +1,8 @@
-// === Module 16559: VibegrationsTimelineTree ===
+// === Module 16581: VibegrationsTimelineTree ===
 
-// Module 16559 (VibegrationsTimelineTree)
+// Module 16581 (VibegrationsTimelineTree)
 import util from "util" /* 1115 */;
-import _modDef3715 from "module_3715" /* 3715 */;
+import _modDef3714 from "module_3714" /* 3714 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -435,7 +435,7 @@ function isTurnWorkFrame(task_id) {
   }
   return tmp;
 }
-let obj = { healthcheck_failed: _modDef3715.FUWbq1, preview_ready: _modDef3715["78YNh7"], working: _modDef3715.nv6pUM, error: _modDef3715.j3hBoA };
+let obj = { healthcheck_failed: _modDef3714.FUWbq1, preview_ready: _modDef3714["78YNh7"], working: _modDef3714.nv6pUM, error: _modDef3714.j3hBoA };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsTimelineTree.tsx");
 
@@ -451,26 +451,26 @@ export const describeNode = function describeNode(currentStepResult) {
   }
   const intl = util.intl;
   if (nv6pUM == null) {
-    nv6pUM = _modDef3715.nv6pUM;
+    nv6pUM = _modDef3714.nv6pUM;
   }
   return intl.string(nv6pUM);
 };
 export const describeTaskStatus = function describeTaskStatus(arg0) {
   if ("running" === arg0) {
     const intl5 = util.intl;
-    return intl5.string(_modDef3715["fW7T+d"]);
+    return intl5.string(_modDef3714["fW7T+d"]);
   } else if ("done" === arg0) {
     const intl4 = util.intl;
-    return intl4.string(_modDef3715.X3c4hc);
+    return intl4.string(_modDef3714.X3c4hc);
   } else if ("failed" === arg0) {
     const intl3 = util.intl;
-    return intl3.string(_modDef3715.LK4Wsd);
+    return intl3.string(_modDef3714.LK4Wsd);
   } else if ("cancelled" === arg0) {
     const intl2 = util.intl;
-    return intl2.string(_modDef3715.msWvKA);
+    return intl2.string(_modDef3714.msWvKA);
   } else if ("incomplete" === arg0) {
     const intl = util.intl;
-    return intl.string(_modDef3715.esfcU6);
+    return intl.string(_modDef3714.esfcU6);
   }
 };
 export { buildTimelineTree };

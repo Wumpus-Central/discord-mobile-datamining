@@ -1,13 +1,13 @@
-// === Module 10631: ChannelVoiceChatModal ===
+// === Module 10623: ChannelVoiceChatModal ===
 
-// Module 10631 (ChannelVoiceChatModal)
-import native from "native" /* 4570 */;
-import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4718 */;
-import GuildThemeGuildIdOverrideContextDefault from "GuildThemeGuildIdOverrideContext" /* 4748 */;
-import useChannelNameDefault from "useChannelName" /* 5019 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5067 */;
-import ChannelVoiceChatDefault from "ChannelVoiceChat" /* 9737 */;
-import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10588 */;
+// Module 10623 (ChannelVoiceChatModal)
+import native from "native" /* 4569 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4717 */;
+import GuildThemeGuildIdOverrideContextDefault from "GuildThemeGuildIdOverrideContext" /* 4747 */;
+import useChannelNameDefault from "useChannelName" /* 4998 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5046 */;
+import ChannelVoiceChatDefault from "ChannelVoiceChat" /* 9731 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10580 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -33,7 +33,7 @@ export default function ChannelVoiceChatModal(channel) {
   if (tmp2 == null) {
     str = "";
   }
-  return <tmp5 screenKey="StageVoiceChat" title={str} titleIcon={jsx(channel(5607).StageIcon, { size: "sm" })} render={function render() {
+  return <tmp5 screenKey="StageVoiceChat" title={str} titleIcon={jsx(channel(5595).StageIcon, { size: "sm" })} render={function render() {
     let guild_id = channel.guild_id;
     if (guild_id == null) {
       guild_id = null;

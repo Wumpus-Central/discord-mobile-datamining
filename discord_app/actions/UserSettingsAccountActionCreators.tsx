@@ -1,12 +1,12 @@
-// === Module 6601: UserSettingsAccountActionCreators ===
+// === Module 6591: UserSettingsAccountActionCreators ===
 
-// Module 6601 (UserSettingsAccountActionCreators)
+// Module 6591 (UserSettingsAccountActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import router_utils from "router_utils" /* 1101 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6206 */;
-import trackUserAvatarUpdated from "trackUserAvatarUpdated" /* 6605 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6607 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6196 */;
+import trackUserAvatarUpdated from "trackUserAvatarUpdated" /* 6595 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6597 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -20,112 +20,48 @@ function saveProfileAndAccountRequest() {
   }
   return applyArgumentsResult;
 }
-let closure_11 = async function _saveProfileAndAccountRequest(arg0) {
-  if (c5 === 2) {
-    c5 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c5 = 2;
-      if (0 === c4) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          closure_3 = tmp7;
-          closure_2 = tmp2;
-          closure_130_1 = undefined;
-          closure_130_0 = closure_0;
-          let obj6 = closure_1;
-          if (closure_1 === undefined) {
-            obj6 = {};
-          }
-          closure_130_1 = obj6;
-          closure_130_2 = undefined;
-          let body;
-          let token;
-          c4 = 1;
-          c5 = 1;
-          return { value: "flex", done: true };
-        }
-      } else if (1 === tmp7) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          const obj7 = { value, done: true };
-          return obj7;
-        } else {
-          const HTTP = closure_131_0(closure_131_2[4]).HTTP;
-          const request = { url: closure_131_4.ME, oldFormErrors: true, body: closure_130_0, headers: closure_130_1.headers, rejectWithError: closure_131_0(closure_131_2[4]).rejectWithMigratedError() };
-          c4 = 2;
-          c5 = 1;
-          const obj8 = { value: HTTP.patch(request), done: false };
-          return obj8;
-        }
-      } else if (arg0 === 1) {
-        c5 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c5 = 3;
-        const obj9 = { value, done: true };
-        return obj9;
-      } else {
-        closure_130_2 = value;
-        body = closure_130_2.body;
-        if (body.token) {
-          token = body.token;
-          delete tmp4[tmp3];
-          const obj10 = { type: "UPDATE_TOKEN", token, userId: body.id };
-          closure_131_1(closure_131_2[3]).dispatch(obj10);
-          let password;
-          if (closure_130_0 != null) {
-            password = closure_130_0.password;
-          }
-          let tmp19 = null != password;
-          if (tmp19) {
-            let new_password;
-            if (closure_130_0 != null) {
-              new_password = closure_130_0.new_password;
-            }
-            tmp19 = null != new_password;
-          }
-          if (tmp19) {
-            const obj11 = { type: "PASSWORD_UPDATED", userId: body.id };
-            closure_131_1(closure_131_2[3]).dispatch(obj11);
-            const obj3 = closure_131_1(closure_131_2[3]);
-          }
-          const obj = closure_131_1(closure_131_2[3]);
-        }
-        const obj12 = { type: "CURRENT_USER_UPDATE", user: body };
-        closure_131_1(closure_131_2[3]).dispatch(obj12);
-        c5 = 3;
-        const obj13 = { value: closure_130_2, done: true };
-        return obj13;
-      }
-    } catch (tmp35) {
-      c5 = tmp;
-      throw tmp35;
-    }
+let closure_11 = async function _saveProfileAndAccountRequest() {
+  closure_2 = tmp2;
+  closure_130_0 = closure_0;
+  let obj6 = closure_1;
+  if (closure_1 === undefined) {
+    obj6 = {};
   }
+  closure_130_1 = obj6;
+  await "flex";
+  const HTTP = closure_131_0(closure_131_2[4]).HTTP;
+  const request = { url: closure_131_4.ME, oldFormErrors: true, body: closure_130_0, headers: closure_130_1.headers, rejectWithError: closure_131_0(closure_131_2[4]).rejectWithMigratedError() };
+  await HTTP.patch(request);
+  closure_130_2 = value;
+  const body = closure_130_2.body;
+  if (body.token) {
+    const token = body.token;
+    delete tmp4[tmp3];
+    closure_131_1(closure_131_2[3]).dispatch({ type: "UPDATE_TOKEN", token, userId: body.id });
+    let password;
+    if (closure_130_0 != null) {
+      password = closure_130_0.password;
+    }
+    let tmp19 = null != password;
+    if (tmp19) {
+      let new_password;
+      if (closure_130_0 != null) {
+        new_password = closure_130_0.new_password;
+      }
+      tmp19 = null != new_password;
+    }
+    if (tmp19) {
+      closure_131_1(closure_131_2[3]).dispatch({ type: "PASSWORD_UPDATED", userId: body.id });
+      closure_131_1(closure_131_2[3]);
+    }
+    closure_131_1(closure_131_2[3]);
+  }
+  closure_131_1(closure_131_2[3]).dispatch({ type: "CURRENT_USER_UPDATE", user: body });
+  return closure_130_2;
 };
 const Constants = fn(1074);
 ({ Endpoints: closure_4, Routes: hasOwnProperty, DEVICE_TOKEN: metroRequire, DEVICE_VOIP_TOKEN: closure_7 } = Constants);
-const PushNotificationConstants = fn(6209);
+const PushNotificationConstants = fn(6199);
 ({ DEVICE_PUSH_VOIP_PROVIDER: closure_8, getDevicePushProvider: closure_9 } = PushNotificationConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/UserSettingsAccountActionCreators.tsx");
@@ -214,8 +150,8 @@ export const saveProfileAndAccountChanges = function saveProfileAndAccountChange
   const obj4 = { headers: null };
   const obj = avatarId(573);
   tmp13 = null != tmp12 && null != value;
-  obj4.headers = avatarId(5679).buildHeadersForMd5({ [avatar(6602).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5 });
-  let tmpResult = avatarId(5679);
+  obj4.headers = avatarId(5668).buildHeadersForMd5({ [avatar(6592).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5 });
+  let tmpResult = avatarId(5668);
   return saveProfileAndAccountRequest(user, obj4).then((result) => {
     DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_SUCCESS" });
     let tmp4 = null == avatar;

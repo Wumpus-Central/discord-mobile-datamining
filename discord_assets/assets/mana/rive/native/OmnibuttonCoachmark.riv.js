@@ -1,6 +1,6 @@
-// === Module 4671: ? ===
+// === Module 4670: ? ===
 
-// Module 4671
+// Module 4670
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/rive/native/OmnibuttonCoachmark.riv.js");

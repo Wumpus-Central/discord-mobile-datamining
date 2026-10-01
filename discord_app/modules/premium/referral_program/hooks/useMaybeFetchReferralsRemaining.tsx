@@ -1,9 +1,9 @@
-// === Module 7696: useMaybeFetchReferralsRemaining ===
+// === Module 7684: useMaybeFetchReferralsRemaining ===
 
-// Module 7696 (useMaybeFetchReferralsRemaining)
+// Module 7684 (useMaybeFetchReferralsRemaining)
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 7068 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 7060 */;
 
 const require = fn;
 const PremiumConstants = fn(1374);
@@ -20,10 +20,10 @@ export const useMaybeFetchReferralsRemaining = function useMaybeFetchReferralsRe
   const stateFromStores = flag(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj = flag(504);
   let tmp = flag;
-  const hasDiscountApplied = flag(7697).useHasDiscountApplied();
-  const obj2 = flag(7697);
-  const hasActiveTrial = flag(7698).useHasActiveTrial();
-  const tmp6 = fetched(7009)();
+  const hasDiscountApplied = flag(7685).useHasDiscountApplied();
+  const obj2 = flag(7685);
+  const hasActiveTrial = flag(7686).useHasActiveTrial();
+  const tmp6 = fetched(7000)();
   let verified;
   if (stateFromStores != null) {
     verified = stateFromStores.verified;
@@ -55,5 +55,5 @@ export const useMaybeFetchReferralsRemaining = function useMaybeFetchReferralsRe
       const result = ReferralTrialStore.checkAndFetchReferralsRemaining();
     }
   }, items1);
-  const obj3 = flag(7698);
+  const obj3 = flag(7686);
 };

@@ -1,17 +1,17 @@
-// === Module 15485: CheckpointNavigationControls ===
+// === Module 15490: CheckpointNavigationControls ===
 
-// Module 15485 (CheckpointNavigationControls)
+// Module 15490 (CheckpointNavigationControls)
 import nativeDefault from "native" /* 576 */;
 import Constants from "Constants" /* 1074 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
-import _modDef3037 from "module_3037" /* 3037 */;
-import CheckpointConstants from "CheckpointConstants" /* 5091 */;
-import CheckpointTextDefault from "CheckpointText" /* 15470 */;
-import CheckpointButtonDefault from "CheckpointButton" /* 15486 */;
-import CheckpointPressableDefault from "CheckpointPressable" /* 15487 */;
+import _modDef3036 from "module_3036" /* 3036 */;
+import CheckpointConstants from "CheckpointConstants" /* 5070 */;
+import CheckpointTextDefault from "CheckpointText" /* 15475 */;
+import CheckpointButtonDefault from "CheckpointButton" /* 15491 */;
+import CheckpointPressableDefault from "CheckpointPressable" /* 15492 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4866 */;
+import createStyles from "createStyles" /* 4845 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -58,15 +58,15 @@ export default function CheckpointNavigationControls(onNext) {
             variant: "text-sm/medium",
             style: link.link,
             onPress() {
-              const obj = closure_1_1(4555);
-              return obj.openURL(closure_1_1(2111).getArticleURL(constants.CHECKPOINT));
+              const obj = closure_1_1(4554);
+              return obj.openURL(closure_1_1(2110).getArticleURL(constants.CHECKPOINT));
             },
             accessibilityRole: "link",
             children
           }, arg1);
         }
     };
-    obj3.children = intl4.format(_modDef3037.hcNhyq, obj4);
+    obj3.children = intl4.format(_modDef3036.hcNhyq, obj4);
     items2[1] = closure_7(CheckpointTextDefault, obj3);
     obj.children = items2;
     let tmp11 = obj;

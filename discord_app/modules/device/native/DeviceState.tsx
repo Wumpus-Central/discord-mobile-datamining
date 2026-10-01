@@ -1,6 +1,6 @@
-// === Module 7364: device/DeviceState ===
+// === Module 7342: device/DeviceState ===
 
-// Module 7364 (device/DeviceState)
+// Module 7342 (device/DeviceState)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -40,7 +40,7 @@ let closure_5 = async function _getDeviceState() {
           fallback = obj5.fallback;
           c5 = 1;
           c6 = 1;
-          return { value: "flex", done: true };
+          return { value: "flex", done: null };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {

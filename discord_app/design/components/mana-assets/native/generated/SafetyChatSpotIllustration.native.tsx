@@ -1,9 +1,9 @@
-// === Module 15533: SafetyChatSpotIllustration ===
+// === Module 15538: SafetyChatSpotIllustration ===
 
-// Module 15533 (SafetyChatSpotIllustration)
+// Module 15538 (SafetyChatSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 6095 */;
-import _modDef15534 from "module_15534" /* 15534 */;
+import FastImageDefault from "FastImage" /* 6085 */;
+import _modDef15539 from "module_15539" /* 15539 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const SafetyChatSpotIllustration = function SafetyChatSpotIllustration(wi
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef15534 };
+  const obj2 = { uri: _modDef15539 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

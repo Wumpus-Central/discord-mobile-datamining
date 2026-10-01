@@ -1,13 +1,13 @@
-// === Module 7832: BadgeDirectoryStore ===
+// === Module 7819: BadgeDirectoryStore ===
 
-// Module 7832 (BadgeDirectoryStore)
+// Module 7819 (BadgeDirectoryStore)
 import initializeDefault from "initialize" /* 504 */;
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import privDefault from "priv" /* 1439 */;
-import BadgeIdResolution from "BadgeIdResolution" /* 7833 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 7837 */;
+import BadgeIdResolution from "BadgeIdResolution" /* 7820 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 7824 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;

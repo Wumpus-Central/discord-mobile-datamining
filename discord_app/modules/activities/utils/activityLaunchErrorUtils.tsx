@@ -1,17 +1,18 @@
-// === Module 9010: activityLaunchErrorUtils ===
+// === Module 9003: activityLaunchErrorUtils ===
 
-// Module 9010 (activityLaunchErrorUtils)
+// Module 9003 (activityLaunchErrorUtils)
 import util from "util" /* 1115 */;
 import UserSettings from "UserSettings" /* 2021 */;
-import InteractionCallbackErrorDefault from "InteractionCallbackError" /* 5094 */;
-import InteractionUtils from "InteractionUtils" /* 7768 */;
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 8981 */;
-import EmbeddedActivityClientErrorDefault from "EmbeddedActivityClientError" /* 8987 */;
+import InteractionCallbackErrorDefault from "InteractionCallbackError" /* 5073 */;
+import InteractionUtils from "InteractionUtils" /* 7755 */;
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 8974 */;
+import EmbeddedActivityClientErrorDefault from "EmbeddedActivityClientError" /* 8980 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 8516 */;
+import LocationMetadataStore from "LocationMetadataStore" /* 9004 */;
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 8508 */;
 
 require = fn;
-let closure_8 = async function _getActivityLaunchErrorInfo(arg0) {
+let closure_9 = async function _getActivityLaunchErrorInfo(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -19,8 +20,8 @@ let closure_8 = async function _getActivityLaunchErrorInfo(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      const obj3 = { value, done: true };
-      return obj3;
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -33,8 +34,8 @@ let closure_8 = async function _getActivityLaunchErrorInfo(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_4 = tmp5;
           closure_3 = tmp2;
@@ -44,8 +45,8 @@ let closure_8 = async function _getActivityLaunchErrorInfo(arg0) {
           let detailCode;
           let reason2;
           closure_131_5 = undefined;
-          const intl9 = util.intl;
-          closure_131_5 = intl9.string(util.t["IOy+I5"]);
+          const intl10 = util.intl;
+          closure_131_5 = intl10.string(util.t["IOy+I5"]);
           if (_require instanceof EmbeddedActivityClientErrorDefault) {
             ClientError2 = ClientError.ClientError;
             reason2 = _require.reason;
@@ -58,8 +59,8 @@ let closure_8 = async function _getActivityLaunchErrorInfo(arg0) {
             if (setting) {
               c5 = 1;
               c6 = 1;
-              const obj6 = { value: EmbeddedActivitiesActionCreators.fetchDeveloperApplications(), done: false };
-              return obj6;
+              const obj5 = { value: EmbeddedActivitiesActionCreators.fetchDeveloperApplications(), done: false };
+              return obj5;
             }
           } else if (_require instanceof InteractionCallbackErrorDefault) {
             ClientError2 = ClientError.CallbackError;
@@ -85,22 +86,59 @@ let closure_8 = async function _getActivityLaunchErrorInfo(arg0) {
             } else if (constants2.INVALID_ACTIVITY_LAUNCH_AFK_CHANNEL === code) {
               const intl3 = util.intl;
               closure_131_5 = intl3.string(util.t.j29zCr);
-            } else {
-              if (constants2.INVALID_ACTIVITY_LAUNCH_AGE_GATED === code) {
-                const intl2 = util.intl;
-                closure_131_5 = intl2.string(util.t["4WuFRE"]);
-              } else if (constants2.INVALID_ACTIVITY_LAUNCH_DEV_PREVIEW_GUILD_SIZE !== code) {
-                if (constants2.ACTIVITY_CONFIGURATION_DOES_NOT_SUPPORT_PLATFORM === code) {
-                  const intl10 = util.intl;
-                  closure_131_5 = intl10.string(util.t.uGDCcw);
-                }
-              }
+            } else if (constants2.INVALID_ACTIVITY_LAUNCH_AGE_GATED === code) {
+              const intl2 = util.intl;
+              closure_131_5 = intl2.string(util.t["4WuFRE"]);
+            } else if (constants2.INVALID_ACTIVITY_LAUNCH_DEV_PREVIEW_GUILD_SIZE === code) {
               const intl = util.intl;
               closure_131_5 = intl.string(util.t.RvkXdb);
+            } else if (constants2.ACTIVITY_CONFIGURATION_DOES_NOT_SUPPORT_PLATFORM === code) {
+              const intl11 = util.intl;
+              closure_131_5 = intl11.string(util.t.uGDCcw);
             }
           }
-          const obj7 = { message: closure_131_5, errorType: ClientError2, errorStatus: detailCode, errorCode: reason2 };
+          let tmp75 = ClientError2 === closure_132_8.CallbackError;
+          if (tmp75) {
+            tmp75 = reason2 === closure_132_1(closure_132_2[8]).ReasonCodes.ACTIVITY_LAUNCH_INVALID_USER_REGION_FOR_APPLICATION;
+          }
+          if (!tmp75) {
+            let tmp85 = ClientError2 === closure_132_8.ApiError;
+            if (tmp85) {
+              tmp85 = 20060 === reason2;
+            }
+            tmp75 = tmp85;
+          }
+          if (tmp75) {
+            if (null == closure_132_4.getCountryCode()) {
+              c5 = 2;
+              c6 = 1;
+              const obj7 = { value: closure_132_1(closure_132_2[10]).getLocationMetadata(), done: false };
+              return obj7;
+            } else {
+              const countryCode = closure_132_4.getCountryCode();
+              let alpha2;
+              if (countryCode != null) {
+                alpha2 = countryCode.alpha2;
+              }
+              if ("BR" === alpha2) {
+                const intl9 = closure_132_0(closure_132_2[4]).intl;
+                closure_131_5 = intl9.formatToPlainString(closure_132_0(closure_132_2[4]).t.GJ27pD, { supportArticleUrl: "https://support.discord.com/hc/en-us/articles/42704051358359-Why-video-features-are-currently-unavailable-in-Brazil" });
+              }
+            }
+          }
+          const obj9 = { message: closure_131_5, errorType: ClientError2, errorStatus: detailCode, errorCode: reason2 };
           c6 = 3;
+          const obj10 = { value: obj9, done: true };
+          return obj10;
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj11 = { value, done: true };
+          return obj11;
         }
       } else if (arg0 === 1) {
         c6 = 3;
@@ -111,24 +149,24 @@ let closure_8 = async function _getActivityLaunchErrorInfo(arg0) {
         return obj;
       }
       const reason = closure_131_0.reason;
-      if (closure_132_1(closure_132_2[4]).Reasons.PRIMARY_APP_COMMAND_NOT_FOUND === reason) {
-        if (closure_132_4.inDevModeForApplication(closure_131_1)) {
-          const intl8 = closure_132_0(closure_132_2[3]).intl;
-          closure_131_5 = intl8.string(closure_132_0(closure_132_2[3]).t.hXRXfz);
+      if (closure_132_1(closure_132_2[5]).Reasons.PRIMARY_APP_COMMAND_NOT_FOUND === reason) {
+        if (closure_132_5.inDevModeForApplication(closure_131_1)) {
+          const intl8 = closure_132_0(closure_132_2[4]).intl;
+          closure_131_5 = intl8.string(closure_132_0(closure_132_2[4]).t.hXRXfz);
         }
-      } else if (closure_132_1(closure_132_2[4]).Reasons.INVALID_CHANNEL === reason) {
-        const intl7 = closure_132_0(closure_132_2[3]).intl;
-        closure_131_5 = intl7.string(closure_132_0(closure_132_2[3]).t.j29zCr);
-      } else if (closure_132_1(closure_132_2[4]).Reasons.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED === reason) {
+      } else if (closure_132_1(closure_132_2[5]).Reasons.INVALID_CHANNEL === reason) {
+        const intl7 = closure_132_0(closure_132_2[4]).intl;
+        closure_131_5 = intl7.string(closure_132_0(closure_132_2[4]).t.j29zCr);
+      } else if (closure_132_1(closure_132_2[5]).Reasons.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED === reason) {
         detailCode = closure_131_0.detailCode;
       }
-    } catch (tmp78) {
+    } catch (tmp112) {
       c6 = tmp;
-      throw tmp78;
+      throw tmp112;
     }
   }
 };
-const DevShelfFetchState = fn(8516).DevShelfFetchState;
+const DevShelfFetchState = fn(8508).DevShelfFetchState;
 const AbortCodes = fn(1074).AbortCodes;
 const ActivityLaunchFailErrorType = { ClientError: 0, [0]: "ClientError", CallbackError: 1, [1]: "CallbackError", ApiError: 2, [2]: "ApiError" };
 const size = fn(2);
@@ -137,7 +175,7 @@ let result = size.fileFinishedImporting("modules/activities/utils/activityLaunch
 export { ActivityLaunchFailErrorType };
 export const getActivityLaunchErrorInfo = function getActivityLaunchErrorInfo() {
   const self = this;
-  const apply = closure_8.apply;
+  const apply = closure_9.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

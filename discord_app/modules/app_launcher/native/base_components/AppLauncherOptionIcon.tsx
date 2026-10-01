@@ -1,12 +1,12 @@
-// === Module 11864: AppLauncherOptionIcon ===
+// === Module 11872: AppLauncherOptionIcon ===
 
-// Module 11864 (AppLauncherOptionIcon)
+// Module 11872 (AppLauncherOptionIcon)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 const obj2 = { iconWrapper: { justifyContent: "center", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: nativeDefault.radii.round } };
 const styles = createStyles.createStyles(obj2);
 const size = fn(2);

@@ -1,13 +1,13 @@
-// === Module 5643: FileUtils ===
+// === Module 5632: FileUtils ===
 
-// Module 5643 (FileUtils)
+// Module 5632 (FileUtils)
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1115 */;
-import PremiumUtils from "PremiumUtils" /* 4518 */;
-import FileSizeUtils from "FileSizeUtils" /* 4761 */;
-import UploadUtils from "UploadUtils" /* 5638 */;
-import noConflictDefault from "noConflict" /* 5644 */;
-import GuildStore from "GuildStore" /* 2067 */;
+import PremiumUtils from "PremiumUtils" /* 4517 */;
+import FileSizeUtils from "FileSizeUtils" /* 5271 */;
+import UploadUtils from "UploadUtils" /* 5627 */;
+import noConflictDefault from "noConflict" /* 5633 */;
+import GuildStore from "GuildStore" /* 2066 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const PremiumUtilsDefault = PremiumUtils;

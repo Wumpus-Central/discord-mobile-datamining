@@ -1,6 +1,6 @@
-// === Module 4578: useA11yRolesNative ===
+// === Module 4577: useA11yRolesNative ===
 
-// Module 4578 (useA11yRolesNative)
+// Module 4577 (useA11yRolesNative)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

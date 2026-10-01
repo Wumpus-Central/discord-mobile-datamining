@@ -1,6 +1,6 @@
-// === Module 4843: parseURL ===
+// === Module 4822: parseURL ===
 
-// Module 4843 (parseURL)
+// Module 4822 (parseURL)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import FingerprintUtils from "FingerprintUtils" /* 1254 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
@@ -9,16 +9,16 @@ import UrlDefault from "Url" /* 1368 */;
 import _modDef1473 from "module_1473" /* 1473 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1610 */;
 import _modDef1930 from "module_1930" /* 1930 */;
-import findCodedLinks from "findCodedLinks" /* 4846 */;
-import CodedLink from "CodedLink" /* 4851 */;
-import LinkUtils from "LinkUtils" /* 5020 */;
-import GiftCodeUtils from "GiftCodeUtils" /* 5285 */;
-import MobileWebRedirectCheckoutUtils from "MobileWebRedirectCheckoutUtils" /* 7022 */;
-import Authorize from "Authorize" /* 8715 */;
-import SecureFramesDeeplinkExperiment from "SecureFramesDeeplinkExperiment" /* 9372 */;
-import useVirtualCurrencyMobileEnabled from "useVirtualCurrencyMobileEnabled" /* 12701 */;
-import QRLoginUtils from "QRLoginUtils" /* 13589 */;
-import urlPartToSettingsEnumDefault from "urlPartToSettingsEnum" /* 13590 */;
+import findCodedLinks from "findCodedLinks" /* 4825 */;
+import CodedLink from "CodedLink" /* 4830 */;
+import LinkUtils from "LinkUtils" /* 4999 */;
+import GiftCodeUtils from "GiftCodeUtils" /* 5264 */;
+import MobileWebRedirectCheckoutUtils from "MobileWebRedirectCheckoutUtils" /* 7014 */;
+import Authorize from "Authorize" /* 8707 */;
+import SecureFramesDeeplinkExperiment from "SecureFramesDeeplinkExperiment" /* 9366 */;
+import useVirtualCurrencyMobileEnabled from "useVirtualCurrencyMobileEnabled" /* 12712 */;
+import QRLoginUtils from "QRLoginUtils" /* 13597 */;
+import urlPartToSettingsEnumDefault from "urlPartToSettingsEnum" /* 13598 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -45,8 +45,8 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_4, GuildSettingsSections: hasOwnProperty, GuildSettingsSubsections: metroRequire, LinkingTypes: closure_7 } = Constants);
 const CollectiblesShopConstants = fn(1076);
 ({ CollectibleShopTab: closure_8, CollectiblesMobileShopScreen: closure_9 } = CollectiblesShopConstants);
-const UPDATE_CONFIG = fn(4844).UPDATE_CONFIG;
-const PaymentConstants = fn(4845);
+const UPDATE_CONFIG = fn(4823).UPDATE_CONFIG;
+const PaymentConstants = fn(4824);
 ({ MobileWebRedirectCheckoutDeepLinkActions: closure_11, MobileWebRedirectCheckoutDeepLinkQueryKeys: closure_12 } = PaymentConstants);
 const re13 = /feature\/([\w-]+)/;
 const re14 = /feature\/boost\/([0-9]+)/;
@@ -150,10 +150,12 @@ export default function parseURL(ctaLink) {
                                         FEATURED_PAGE = constants3.FEATURED_PAGE;
                                         const tmp8 = _slicedToArray(findCodedLinkResult.code.split("-"), 2);
                                       } else if (CodedLink.CodedLinkType.GAME_SERVER_SHARE !== type) {
-                                        if (CodedLink.CodedLinkType.USER_PROFILE !== type) {
-                                          const _Error2 = Error;
-                                          const _HermesInternal = HermesInternal;
-                                          throw Error("Unknown coded link type: " + findCodedLinkResult.type);
+                                        if (CodedLink.CodedLinkType.GAME_ORGANIZATION_INVITE !== type) {
+                                          if (CodedLink.CodedLinkType.USER_PROFILE !== type) {
+                                            const _Error2 = Error;
+                                            const _HermesInternal = HermesInternal;
+                                            throw Error("Unknown coded link type: " + findCodedLinkResult.type);
+                                          }
                                         }
                                       }
                                     }

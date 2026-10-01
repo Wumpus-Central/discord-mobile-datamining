@@ -1,9 +1,9 @@
-// === Module 5587: TextSpoilerIcon ===
+// === Module 5575: TextSpoilerIcon ===
 
-// Module 5587 (TextSpoilerIcon)
+// Module 5575 (TextSpoilerIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4560 */;
-import _mod5548 from "module_5548" /* 5548 */;
+import BaseIconImage from "BaseIconImage" /* 4559 */;
+import _mod5536 from "module_5536" /* 5536 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const TextSpoilerIcon = function TextSpoilerIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod5548, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5536, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

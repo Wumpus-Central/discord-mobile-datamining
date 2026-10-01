@@ -1,17 +1,17 @@
-// === Module 10649: SearchableDestinationListHeader ===
+// === Module 10641: SearchableDestinationListHeader ===
 
-// Module 10649 (SearchableDestinationListHeader)
+// Module 10641 (SearchableDestinationListHeader)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
-import NavigatorHeader from "NavigatorHeader" /* 6132 */;
-import _mod6139 from "module_6139" /* 6139 */;
-import useIsWindowLarge from "useIsWindowLarge" /* 6560 */;
-import HeaderShared from "HeaderShared" /* 7484 */;
+import NavigatorHeader from "NavigatorHeader" /* 6122 */;
+import _mod6129 from "module_6129" /* 6129 */;
+import useIsWindowLarge from "useIsWindowLarge" /* 6550 */;
+import HeaderShared from "HeaderShared" /* 7462 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = { headerLeftContainer: { paddingLeft: nativeDefault.space.PX_16 }, headerRightContainer: null, header: null };
 const obj3 = { paddingLeft: nativeDefault.space.PX_16 };
 obj2.headerRightContainer = { paddingRight: nativeDefault.space.PX_16 };
@@ -46,7 +46,7 @@ export default function SearchableDestinationListHeader(arg0) {
     num = 0;
   }
   obj.headerStatusBarHeight = num + nativeDefault.space.PX_8;
-  return jsx(_mod6139.Header, {
+  return jsx(_mod6129.Header, {
     headerStyle: tmp.header,
     title,
     headerTitle(children) {

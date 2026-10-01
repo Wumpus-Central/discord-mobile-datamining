@@ -1,6 +1,6 @@
-// === Module 12694: getDescription ===
+// === Module 12705: getDescription ===
 
-// Module 12694 (getDescription)
+// Module 12705 (getDescription)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/dynamic-links/getDescription.tsx");

@@ -1,7 +1,7 @@
-// === Module 14980: useSubscriptionRole ===
+// === Module 14986: useSubscriptionRole ===
 
-// Module 14980 (useSubscriptionRole)
-import GuildRoleStore from "GuildRoleStore" /* 2102 */;
+// Module 14986 (useSubscriptionRole)
+import GuildRoleStore from "GuildRoleStore" /* 2101 */;
 
 const require = globalThis.__r;
 

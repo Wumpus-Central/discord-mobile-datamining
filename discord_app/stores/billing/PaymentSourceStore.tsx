@@ -1,9 +1,9 @@
-// === Module 4521: PaymentSourceStore ===
+// === Module 4520: PaymentSourceStore ===
 
-// Module 4521 (PaymentSourceStore)
+// Module 4520 (PaymentSourceStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import PaymentSourceRecord from "PaymentSourceRecord" /* 4522 */;
+import PaymentSourceRecord from "PaymentSourceRecord" /* 4521 */;
 
 function handlePaymentSourceUpdate(paymentSource) {
   paymentSource = paymentSource.paymentSource;

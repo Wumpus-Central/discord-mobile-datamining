@@ -1,18 +1,18 @@
-// === Module 16511: openVibegrationsPublishDestination ===
+// === Module 16532: openVibegrationsPublishDestination ===
 
-// Module 16511 (openVibegrationsPublishDestination)
+// Module 16532 (openVibegrationsPublishDestination)
 import router_utils from "router_utils" /* 1101 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4879 */;
-import transitionToGuild from "transitionToGuild" /* 6956 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 8959 */;
-import canLaunchFrame from "canLaunchFrame" /* 8982 */;
-import ApplicationStore from "ApplicationStore" /* 5093 */;
-import GuildChannelStore from "GuildChannelStore" /* 4497 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4858 */;
+import transitionToGuild from "transitionToGuild" /* 6947 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 8952 */;
+import canLaunchFrame from "canLaunchFrame" /* 8975 */;
+import ApplicationStore from "ApplicationStore" /* 5072 */;
+import GuildChannelStore from "GuildChannelStore" /* 4496 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 const Routes = fn(1074).Routes;
-const MAIN_SURFACE = fn(8699).MAIN_SURFACE;
+const MAIN_SURFACE = fn(8691).MAIN_SURFACE;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/vibegrations/lib/openVibegrationsPublishDestination.tsx");
 

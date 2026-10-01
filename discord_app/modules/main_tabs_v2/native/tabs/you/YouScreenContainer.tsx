@@ -1,20 +1,20 @@
-// === Module 16822: YouScreenContainer ===
+// === Module 16845: YouScreenContainer ===
 
-// Module 16822 (YouScreenContainer)
+// Module 16845 (YouScreenContainer)
 import nativeDefault from "native" /* 576 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1365 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
-import TabsPerformanceTracker from "TabsPerformanceTracker" /* 15847 */;
+import TabsPerformanceTracker from "TabsPerformanceTracker" /* 15863 */;
 import noop from "module_19" /* 19 */;
 
 const useWindowDimensionsDefault = tmp(1479);
-const useChatLayoutDefault = tmp(4725);
-const YouScreenDefault = tmp(16823);
+const useChatLayoutDefault = tmp(4724);
+const YouScreenDefault = tmp(16846);
 require = fn;
 const View = fn(17).View;
-const RootNavigatorScreen = fn(10752).RootNavigatorScreen;
+const RootNavigatorScreen = fn(10749).RootNavigatorScreen;
 const jsx = fn(21).jsx;
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj = { container: { flex: 1, overflow: "hidden", alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.xl }, androidContainer: null, wrapper: null };
 let obj3 = { flex: 1, overflow: "hidden", alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.xl };
 obj.androidContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM, borderRadius: nativeDefault.radii.none };

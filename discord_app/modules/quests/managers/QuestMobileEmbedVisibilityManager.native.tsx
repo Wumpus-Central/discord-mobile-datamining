@@ -1,33 +1,33 @@
-// === Module 17867: QuestMobileEmbedVisibilityManager ===
+// === Module 17902: QuestMobileEmbedVisibilityManager ===
 
-// Module 17867 (QuestMobileEmbedVisibilityManager)
+// Module 17902 (QuestMobileEmbedVisibilityManager)
 import ConstantsIOS from "ConstantsIOS" /* 1094 */;
 import ChannelTypes from "ChannelTypes" /* 1095 */;
 import privDefault from "priv" /* 1439 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4722 */;
-import RootNavigationRef from "RootNavigationRef" /* 4723 */;
-import useAlertStore2 from "useAlertStore" /* 5401 */;
-import QuestTypes from "QuestTypes" /* 5956 */;
-import AdCreativeType from "AdCreativeType" /* 5960 */;
-import getQuestLogger from "getQuestLogger" /* 7317 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7336 */;
-import ContentImpressionTracker from "ContentImpressionTracker" /* 10916 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4721 */;
+import RootNavigationRef from "RootNavigationRef" /* 4722 */;
+import useAlertStore2 from "useAlertStore" /* 5389 */;
+import QuestTypes from "QuestTypes" /* 5945 */;
+import AdCreativeType from "AdCreativeType" /* 5949 */;
+import getQuestLogger from "getQuestLogger" /* 7295 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7314 */;
+import ContentImpressionTracker from "ContentImpressionTracker" /* 10959 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ActionSheetStore from "ActionSheetStore" /* 4551 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4882 */;
-import VoicePanelStore from "VoicePanelStore" /* 5074 */;
-import ChannelStore from "ChannelStore" /* 2045 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2099 */;
-import AlertStore from "AlertStore" /* 11245 */;
+import ActionSheetStore from "ActionSheetStore" /* 4550 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4861 */;
+import VoicePanelStore from "VoicePanelStore" /* 5053 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
+import AlertStore from "AlertStore" /* 11248 */;
 import AppStateStore from "AppStateStore" /* 1980 */;
-import QuestStore from "QuestStore" /* 7311 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6735 */;
+import QuestStore from "QuestStore" /* 7289 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6725 */;
 
 require = fn;
-const ChannelDetailsStore = fn(7497);
+const ChannelDetailsStore = fn(7475);
 ({ useChannelDetailsStore: closure_7, getIsChannelDetailsSearchActive: closure_8 } = ChannelDetailsStore);
-const isTextChannel = fn(2049).isTextChannel;
-let closure_16 = fn(7341).MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE;
+const isTextChannel = fn(2048).isTextChannel;
+let closure_16 = fn(7319).MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE;
 const MessageStates = fn(1074).MessageStates;
 function log() {
   if (questLogger == null) {
@@ -82,7 +82,7 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
       const set = new Set();
       codedLinks = codedLinks.codedLinks;
       const item = codedLinks.forEach((type, questContentPosition) => {
-        if (type.type === applyArgumentsResult(4851).CodedLinkType.QUESTS_EMBED) {
+        if (type.type === applyArgumentsResult(4830).CodedLinkType.QUESTS_EMBED) {
           const code = type.code;
           if (!set.has(code)) {
             const obj3 = { questId: code, questContentPosition, messageId: null, channelId: null };
@@ -206,8 +206,8 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
       return { channelId: tmp[0], messageId: tmp[1], questId: tmp[2] };
     };
     applyArgumentsResult.isOnChannelNavigationRoute = function isOnChannelNavigationRoute() {
-      let isChannelFocusedResult = applyArgumentsResult(9750).isChannelFocused();
-      applyArgumentsResult(4722);
+      let isChannelFocusedResult = applyArgumentsResult(9744).isChannelFocused();
+      applyArgumentsResult(4721);
       if (isChannelFocusedResult) {
         isChannelFocusedResult = "channel" === tmp3;
       }

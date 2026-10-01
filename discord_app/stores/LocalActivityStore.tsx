@@ -1,29 +1,29 @@
-// === Module 9013: LocalActivityStore ===
+// === Module 9007: LocalActivityStore ===
 
-// Module 9013 (LocalActivityStore)
+// Module 9007 (LocalActivityStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import _modDef1331 from "module_1331" /* 1331 */;
 import FlagUtils from "FlagUtils" /* 1385 */;
 import UserSettings from "UserSettings" /* 2021 */;
-import RobloxSubgameUtils from "RobloxSubgameUtils" /* 4996 */;
-import userSettingToActivity from "userSettingToActivity" /* 9018 */;
-import PresenceActivityFiltering from "PresenceActivityFiltering" /* 9019 */;
-import ActivityFlagUtils from "ActivityFlagUtils" /* 9020 */;
+import RobloxSubgameUtils from "RobloxSubgameUtils" /* 4975 */;
+import userSettingToActivity from "userSettingToActivity" /* 9012 */;
+import PresenceActivityFiltering from "PresenceActivityFiltering" /* 9013 */;
+import ActivityFlagUtils from "ActivityFlagUtils" /* 9014 */;
 import _slicedToArray from "module_32" /* 32 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2044 */;
-import ApplicationStore from "ApplicationStore" /* 5093 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2043 */;
+import ApplicationStore from "ApplicationStore" /* 5072 */;
 import RunningGameStore from "RunningGameStore" /* 2000 */;
-import FirstPartyRichPresenceStore from "FirstPartyRichPresenceStore" /* 9014 */;
-import SpotifyStore from "SpotifyStore" /* 5789 */;
+import FirstPartyRichPresenceStore from "FirstPartyRichPresenceStore" /* 9008 */;
+import SpotifyStore from "SpotifyStore" /* 5778 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4888 */;
-import ChannelStore from "ChannelStore" /* 2045 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4867 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
 import DetectableGameStore from "DetectableGameStore" /* 2017 */;
-import ExternalStreamingStore from "ExternalStreamingStore" /* 9017 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2099 */;
-import SessionsStore from "SessionsStore" /* 4884 */;
+import ExternalStreamingStore from "ExternalStreamingStore" /* 9011 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
+import SessionsStore from "SessionsStore" /* 4863 */;
 
 require = fn;
 function updateActivities() {

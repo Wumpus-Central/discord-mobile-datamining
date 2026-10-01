@@ -1,8 +1,8 @@
-// === Module 13689: GuildBadgeDollarSign ===
+// === Module 13697: GuildBadgeDollarSign ===
 
-// Module 13689 (GuildBadgeDollarSign)
-import inlineStyles from "inlineStyles" /* 8106 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 13658 */;
+// Module 13697 (GuildBadgeDollarSign)
+import inlineStyles from "inlineStyles" /* 8095 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 13666 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

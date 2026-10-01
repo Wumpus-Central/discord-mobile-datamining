@@ -1,6 +1,6 @@
-// === Module 4859: MessageConstants ===
+// === Module 4838: MessageConstants ===
 
-// Module 4859 (MessageConstants)
+// Module 4838 (MessageConstants)
 import Constants from "Constants" /* 1074 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import Backoff from "Backoff" /* 559 */;
@@ -37,4 +37,4 @@ export const isChannelStreamMessage = function isChannelStreamMessage(type) {
   return type.type === ChannelStreamTypes.MESSAGE;
 };
 export const MESSAGE_HTTP_TIMEOUT_RETRY_OPTIONS = obj;
-export const MessageSendLocation = { PUSH_NOTIFICATION: "push_notification", CHAT_INPUT: "chat_input", SHARE_MODAL: "share_modal", VOICE_MESSAGE: "voice_message", THREAD_CREATION: "thread_creation", FORWARDING: "forwarding", USER_PROFILE: "user_profile", RETRY: "explicit_retry", OVERLAY: "overlay", ACTIVITY_SHARE: "activity_share", ICYMI: "icymi", INSTANT_UPLOAD: "instant_upload", APP_COMMAND: "app_command", PRIVATE_MESSAGE_COMMAND: "private_message_command", POLL_CREATION: "poll_creation", SHARE_CUSTOM_THEME: "share_custom_theme", VIBEGRATIONS_PATCH_NOTES: "vibegrations_patch_notes", GIF_REPLY: "gif_reply", STICKER_REPLY: "sticker_reply", SEND_WAVE: "send_wave", GIFTING: "gifting", CONTENT_INVENTORY_MEMBERLIST: "content_inventory_memberlist", GREET: "greet", SOCIAL_LAYER_STOREFRONT: "social_layer_storefront", COLLECTIBLES_SHOP: "collectibles_shop", GAME_SERVER_SHOP: "game_server_shop", MEDIA_MENTION: "media_mention", OTHER: "other" };
+export const MessageSendLocation = { PUSH_NOTIFICATION: "push_notification", CHAT_INPUT: "chat_input", SHARE_MODAL: "share_modal", VOICE_MESSAGE: "voice_message", THREAD_CREATION: "thread_creation", FORWARDING: "forwarding", USER_PROFILE: "user_profile", RETRY: "explicit_retry", OVERLAY: "overlay", ACTIVITY_SHARE: "activity_share", ICYMI: "icymi", INSTANT_UPLOAD: "instant_upload", APP_COMMAND: "app_command", PRIVATE_MESSAGE_COMMAND: "private_message_command", POLL_CREATION: "poll_creation", SHARE_CUSTOM_THEME: "share_custom_theme", VIBEGRATIONS_PATCH_NOTES: "vibegrations_patch_notes", GIF_REPLY: "gif_reply", STICKER_REPLY: "sticker_reply", SEND_WAVE: "send_wave", GIFTING: "gifting", CONTENT_INVENTORY_MEMBERLIST: "content_inventory_memberlist", GREET: "greet", SOCIAL_LAYER_STOREFRONT: "social_layer_storefront", COLLECTIBLES_SHOP: "collectibles_shop", GAME_SERVER_SHOP: "game_server_shop", MEDIA_MENTION: "media_mention", GUILD_SPACE: "guild_space", OTHER: "other" };

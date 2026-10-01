@@ -1,17 +1,17 @@
-// === Module 15082: SettingsAccessibilityScreen ===
+// === Module 15088: SettingsAccessibilityScreen ===
 
-// Module 15082 (SettingsAccessibilityScreen)
+// Module 15088 (SettingsAccessibilityScreen)
 import util from "util" /* 1115 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2111 */;
-import _modDef2877 from "module_2877" /* 2877 */;
-import SettingBuilders from "SettingBuilders" /* 11211 */;
-import getSettingsOverrideReasonDefault from "getSettingsOverrideReason" /* 15083 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2110 */;
+import _modDef2876 from "module_2876" /* 2876 */;
+import SettingBuilders from "SettingBuilders" /* 11215 */;
+import getSettingsOverrideReasonDefault from "getSettingsOverrideReason" /* 15089 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4855 */;
+import AccessibilityStore from "AccessibilityStore" /* 4834 */;
 import UserSettingsOverridesStore from "UserSettingsOverridesStore" /* 2022 */;
 
 require = fn;
-const MobileUserSettings = fn(7612).MobileUserSettings;
+const MobileUserSettings = fn(7590).MobileUserSettings;
 const Constants = fn(1074);
 ({ HelpdeskArticles: closure_7, UserSettingsSections: closure_8 } = Constants);
 const jsx = fn(21).jsx;
@@ -51,7 +51,7 @@ export default function SettingsAccessibilityScreen() {
     const items3 = [MobileUserSettings.DISPLAY_NAME_STYLES_ACCESSIBILITY];
     obj6.settings = items3;
     const intl3 = util.intl;
-    obj6.subLabel = intl3.format(_modDef2877.L8U56h, {
+    obj6.subLabel = intl3.format(_modDef2876.L8U56h, {
       onClickOpenModal() {
         closure_0(animateEmojiOverrideReason[9]).openUserSettings({ screen: constants.PROFILE_CUSTOMIZATION }, () => {
           closure_1_0(closure_1_2[10]).runAfterInteractions(() => {

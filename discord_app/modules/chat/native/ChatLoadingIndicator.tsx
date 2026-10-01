@@ -1,18 +1,18 @@
-// === Module 13042: ChatLoadingIndicator ===
+// === Module 13050: ChatLoadingIndicator ===
 
-// Module 13042 (ChatLoadingIndicator)
+// Module 13050 (ChatLoadingIndicator)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4596 */;
-import Text_Text from "Text/Text" /* 4862 */;
-import timing from "timing" /* 4867 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5400 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4595 */;
+import Text_Text from "Text/Text" /* 4841 */;
+import timing from "timing" /* 4846 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5388 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4855 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5786 */;
-import MessageStore from "MessageStore" /* 5086 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2099 */;
+import AccessibilityStore from "AccessibilityStore" /* 4834 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5775 */;
+import MessageStore from "MessageStore" /* 5065 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
 import UserStore from "UserStore" /* 1372 */;
 import AppStateStore from "AppStateStore" /* 1980 */;
 
@@ -56,7 +56,7 @@ const View = fn(17).View;
 const AppStates = fn(1074).AppStates;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj = { container: { flexDirection: "row", alignItems: "center", gap: 4 }, pulse: null };
 let size = { height: 8, width: 8, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj.pulse = size;
@@ -262,8 +262,8 @@ export const ChannelHeaderLoadingIndicator = function ChannelHeaderLoadingIndica
     }
     return tmp7;
   };
-  let obj3 = stateFromStores(4596);
-  fn.__closure = { useReducedMotion: stateFromStores, withRepeat: stateFromStores(4596).withRepeat, withSequence: stateFromStores(4596).withSequence, withTiming: stateFromStores(4867).withTiming, Easing: stateFromStores(4596).Easing };
+  let obj3 = stateFromStores(4595);
+  fn.__closure = { useReducedMotion: stateFromStores, withRepeat: stateFromStores(4595).withRepeat, withSequence: stateFromStores(4595).withSequence, withTiming: stateFromStores(4846).withTiming, Easing: stateFromStores(4595).Easing };
   fn.__workletHash = 17454673879926;
   fn.__initData = __initData;
   let obj5 = { style: tmp.container, children: null };
@@ -275,13 +275,13 @@ export const ChannelHeaderLoadingIndicator = function ChannelHeaderLoadingIndica
   let obj7 = { variant: "text-xs/medium", color: "text-muted", children: null };
   const intl = stateFromStores(1115).intl;
   obj7.children = intl.string(stateFromStores(1115).t.JwIJMV);
-  items3[1] = closure_13(stateFromStores(4862).Text, obj7);
+  items3[1] = closure_13(stateFromStores(4841).Text, obj7);
   obj5.children = items3;
   const tmp8 = closure_14(View, obj5);
   let tmp7Result = tmp8;
   if (stateFromStores1) {
     let obj8 = { onPress: openLoadingIndicatorDebugBody, children: tmp8 };
-    tmp7Result = closure_13(tmp2(5632).PressableOpacity, obj8);
+    tmp7Result = closure_13(tmp2(5621).PressableOpacity, obj8);
   }
   return tmp7Result;
 };

@@ -1,20 +1,20 @@
-// === Module 9215: ChannelPermissionsUtils ===
+// === Module 9209: ChannelPermissionsUtils ===
 
-// Module 9215 (ChannelPermissionsUtils)
+// Module 9209 (ChannelPermissionsUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import util from "util" /* 1115 */;
 import Server from "Server" /* 1979 */;
-import ChannelRecord from "ChannelRecord" /* 2049 */;
-import GuildRecord from "GuildRecord" /* 2063 */;
-import GuildRoleUtils from "GuildRoleUtils" /* 2106 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4504 */;
-import UserUtilsDefault from "UserUtils" /* 4708 */;
-import ChannelUtils from "ChannelUtils" /* 5011 */;
-import ChannelPermissionsConstants from "ChannelPermissionsConstants" /* 8044 */;
-import ChannelSettingsPermissionsActionCreators from "ChannelSettingsPermissionsActionCreators" /* 9216 */;
-import GuildRoleRecord from "GuildRoleRecord" /* 2103 */;
-import GuildMemberStore from "GuildMemberStore" /* 2108 */;
+import ChannelRecord from "ChannelRecord" /* 2048 */;
+import GuildRecord from "GuildRecord" /* 2062 */;
+import GuildRoleUtils from "GuildRoleUtils" /* 2105 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4503 */;
+import UserUtilsDefault from "UserUtils" /* 4707 */;
+import ChannelUtils from "ChannelUtils" /* 4990 */;
+import ChannelPermissionsConstants from "ChannelPermissionsConstants" /* 8033 */;
+import ChannelSettingsPermissionsActionCreators from "ChannelSettingsPermissionsActionCreators" /* 9210 */;
+import GuildRoleRecord from "GuildRoleRecord" /* 2102 */;
+import GuildMemberStore from "GuildMemberStore" /* 2107 */;
 import UserStore from "UserStore" /* 1372 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;

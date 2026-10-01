@@ -1,18 +1,18 @@
-// === Module 16374: ThemedHeaderBackgroundGradient ===
+// === Module 16394: ThemedHeaderBackgroundGradient ===
 
-// Module 16374 (ThemedHeaderBackgroundGradient)
+// Module 16394 (ThemedHeaderBackgroundGradient)
 import nativeDefault from "native" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1092 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
-import useToken from "useToken" /* 4561 */;
-import LinearGradientDefault from "LinearGradient" /* 5489 */;
+import useToken from "useToken" /* 4560 */;
+import LinearGradientDefault from "LinearGradient" /* 5477 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let closure_6 = createStyles.createStyles({ container: { position: "absolute", left: 0, right: 0, top: 0 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/ThemedHeaderBackgroundGradient.tsx");

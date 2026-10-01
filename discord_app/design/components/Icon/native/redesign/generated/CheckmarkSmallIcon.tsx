@@ -1,9 +1,9 @@
-// === Module 6750: CheckmarkSmallIcon ===
+// === Module 6740: CheckmarkSmallIcon ===
 
-// Module 6750 (CheckmarkSmallIcon)
+// Module 6740 (CheckmarkSmallIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4560 */;
-import _mod6751 from "module_6751" /* 6751 */;
+import BaseIconImage from "BaseIconImage" /* 4559 */;
+import _mod6741 from "module_6741" /* 6741 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const CheckmarkSmallIcon = function CheckmarkSmallIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod6751, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod6741, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

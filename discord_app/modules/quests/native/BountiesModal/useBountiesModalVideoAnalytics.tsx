@@ -1,17 +1,17 @@
-// === Module 14765: useBountiesModalVideoAnalytics ===
+// === Module 14771: useBountiesModalVideoAnalytics ===
 
-// Module 14765 (useBountiesModalVideoAnalytics)
-import MonitoringAgentDefault from "MonitoringAgent" /* 5375 */;
-import MetricEvents from "MetricEvents" /* 5380 */;
-import AdCreativeType from "AdCreativeType" /* 5960 */;
-import AnalyticsActions from "AnalyticsActions" /* 7326 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 10939 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 14757 */;
-import AdsVideoUtils from "AdsVideoUtils" /* 14767 */;
+// Module 14771 (useBountiesModalVideoAnalytics)
+import MonitoringAgentDefault from "MonitoringAgent" /* 5363 */;
+import MetricEvents from "MetricEvents" /* 5368 */;
+import AdCreativeType from "AdCreativeType" /* 5949 */;
+import AnalyticsActions from "AnalyticsActions" /* 7304 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 10940 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 14763 */;
+import AdsVideoUtils from "AdsVideoUtils" /* 14773 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import NetworkStore from "NetworkStore" /* 4915 */;
+import NetworkStore from "NetworkStore" /* 4894 */;
 
 require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;
@@ -120,7 +120,7 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
               closure_129_3 = undefined;
               let impressionId;
               closure_129_5 = undefined;
-              VIDEO_MODAL_MOBILE = closure_0(5958).QuestContent.VIDEO_MODAL_MOBILE;
+              VIDEO_MODAL_MOBILE = closure_0(5947).QuestContent.VIDEO_MODAL_MOBILE;
               ({ bountyId: closure_129_2, sourceQuestContent: closure_129_3 } = ref.current);
               c4 = 1;
               const current = ref.current;
@@ -133,7 +133,7 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
           } else if (1 === tmp8) {
             c4 = 0;
             closure_129_6 = closure_3;
-            const questLogger = closure_0(7317).getQuestLogger();
+            const questLogger = closure_0(7295).getQuestLogger();
             questLogger.warn("[EngagedView] failed to emit quest_content_engaged_viewed", closure_129_6);
             throw closure_129_6;
           } else if (arg0 === 1) {
@@ -146,11 +146,11 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
             return obj7;
           } else {
             closure_129_5 = value;
-            const obj8 = { adContentId: closure_129_2, adCreativeType: closure_0(5960).AdCreativeType.BOUNTY, event: constants.QUEST_CONTENT_ENGAGED_VIEWED, properties: null, sourceQuestContent: null };
+            const obj8 = { adContentId: closure_129_2, adCreativeType: closure_0(5949).AdCreativeType.BOUNTY, event: constants.QUEST_CONTENT_ENGAGED_VIEWED, properties: null, sourceQuestContent: null };
             const obj10 = {};
-            const obj9 = closure_0(7326);
-            const merged = Object.assign(closure_0(7336).getContentProperties(VIDEO_MODAL_MOBILE));
-            const merged1 = Object.assign(sourceQuestContent(7285)());
+            const obj9 = closure_0(7304);
+            const merged = Object.assign(closure_0(7314).getContentProperties(VIDEO_MODAL_MOBILE));
+            const merged1 = Object.assign(sourceQuestContent(7263)());
             obj10.impression_id = impressionId;
             obj10.video_watch_seconds = closure_129_0.video_watch_seconds;
             obj10.video_position_seconds = closure_129_0.video_position_seconds;

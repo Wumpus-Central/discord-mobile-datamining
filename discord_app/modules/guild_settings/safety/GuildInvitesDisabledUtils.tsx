@@ -1,8 +1,8 @@
-// === Module 12065: GuildInvitesDisabledUtils ===
+// === Module 12073: GuildInvitesDisabledUtils ===
 
-// Module 12065 (GuildInvitesDisabledUtils)
-import GuildIncidentsStore from "GuildIncidentsStore" /* 9741 */;
-import PermissionStore from "PermissionStore" /* 4499 */;
+// Module 12073 (GuildInvitesDisabledUtils)
+import GuildIncidentsStore from "GuildIncidentsStore" /* 9735 */;
+import PermissionStore from "PermissionStore" /* 4498 */;
 
 const require = globalThis.__r;
 

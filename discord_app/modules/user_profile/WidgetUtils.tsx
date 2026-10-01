@@ -1,22 +1,22 @@
-// === Module 7233: WidgetUtils ===
+// === Module 7211: WidgetUtils ===
 
-// Module 7233 (WidgetUtils)
+// Module 7211 (WidgetUtils)
 import util from "util" /* 1115 */;
 import dismissible_content from "dismissible_content" /* 2029 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4684 */;
-import GameWidgetLimits from "GameWidgetLimits" /* 5619 */;
-import utils from "utils" /* 5621 */;
-import useGame2 from "useGame" /* 6923 */;
-import WidgetType from "WidgetType" /* 7231 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7232 */;
-import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 7237 */;
-import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7238 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7239 */;
-import WidgetGameTag from "WidgetGameTag" /* 7241 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4683 */;
+import GameWidgetLimits from "GameWidgetLimits" /* 5607 */;
+import utils from "utils" /* 5609 */;
+import useGame2 from "useGame" /* 6914 */;
+import WidgetType from "WidgetType" /* 7209 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7210 */;
+import WidgetActionCreatorsDefault from "WidgetActionCreators" /* 7215 */;
+import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7216 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7217 */;
+import WidgetGameTag from "WidgetGameTag" /* 7219 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1372 */;
-import UserProfileStore from "UserProfileStore" /* 7230 */;
-import WidgetStore from "WidgetStore" /* 7234 */;
+import UserProfileStore from "UserProfileStore" /* 7208 */;
+import WidgetStore from "WidgetStore" /* 7212 */;
 
 require = fn;
 function findGameWidget(widgetType) {
@@ -85,10 +85,10 @@ function replaceWidgetInList(clipsGalleryWidget) {
     return items1;
   }
 }
-const UserProfileWidgetConstants = fn(7235);
+const UserProfileWidgetConstants = fn(7213);
 ({ WIDGET_TITLES_BY_TYPE: closure_7, WIDGETS_SUPPORTING_COMMENT: closure_8, WIDGETS_SUPPORTING_TAGS: closure_9 } = UserProfileWidgetConstants);
-const ContentDismissActionType = fn(2042).ContentDismissActionType;
-let closure_11 = fn(7236).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
+const ContentDismissActionType = fn(2041).ContentDismissActionType;
+let closure_11 = fn(7214).USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/WidgetUtils.tsx");
 

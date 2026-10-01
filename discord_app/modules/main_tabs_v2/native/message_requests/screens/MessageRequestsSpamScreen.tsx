@@ -1,7 +1,7 @@
-// === Module 16939: MessageRequestsSpamScreen ===
+// === Module 16960: MessageRequestsSpamScreen ===
 
-// Module 16939 (MessageRequestsSpamScreen)
-import SpamMessageListDefault from "SpamMessageList" /* 16937 */;
+// Module 16960 (MessageRequestsSpamScreen)
+import SpamMessageListDefault from "SpamMessageList" /* 16958 */;
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;

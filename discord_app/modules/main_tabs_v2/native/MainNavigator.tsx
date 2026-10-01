@@ -1,17 +1,17 @@
-// === Module 15764: MainNavigator ===
+// === Module 15780: MainNavigator ===
 
-// Module 15764 (MainNavigator)
+// Module 15780 (MainNavigator)
 import PlatformUtils2 from "PlatformUtils" /* 1364 */;
-import GlobalStatusIndicatorDefault from "GlobalStatusIndicator" /* 9164 */;
-import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10589 */;
-import StartupProfiler from "StartupProfiler" /* 11232 */;
-import createAccessibleNativeStackNavigatorDefault from "createAccessibleNativeStackNavigator" /* 14192 */;
-import createChatPanelNativeStackNavigatorDefault from "createChatPanelNativeStackNavigator" /* 15766 */;
-import AutoAnalytics from "AutoAnalytics" /* 16787 */;
-import VisualEffectViewTargetDefault from "VisualEffectViewTarget" /* 16840 */;
-import LaunchPadContainerDefault from "LaunchPadContainer" /* 17012 */;
-import ParentalConsentWarningBannerDefault from "ParentalConsentWarningBanner" /* 17043 */;
-import AppComponents from "AppComponents" /* 17045 */;
+import GlobalStatusIndicatorDefault from "GlobalStatusIndicator" /* 9158 */;
+import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10581 */;
+import StartupProfiler from "StartupProfiler" /* 11236 */;
+import createAccessibleNativeStackNavigatorDefault from "createAccessibleNativeStackNavigator" /* 14200 */;
+import createChatPanelNativeStackNavigatorDefault from "createChatPanelNativeStackNavigator" /* 15782 */;
+import AutoAnalytics from "AutoAnalytics" /* 16810 */;
+import VisualEffectViewTargetDefault from "VisualEffectViewTarget" /* 16861 */;
+import LaunchPadContainerDefault from "LaunchPadContainer" /* 17034 */;
+import ParentalConsentWarningBannerDefault from "ParentalConsentWarningBanner" /* 17065 */;
+import AppComponents from "AppComponents" /* 17067 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -63,19 +63,19 @@ function getAccountStanding() {
   return require("SuspendedUserPage").default;
 }
 const View = fn(17).View;
-let closure_7 = fn(15765).StackNavigationAnimationSettings;
+let closure_7 = fn(15781).StackNavigationAnimationSettings;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_8, DrawerSourceTypes: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const mainNavigator = "mainNavigator";
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let closure_14 = createStyles.createStyles({ flex: { flex: 1 } });
 let PlatformUtils = fn(1364);
 PlatformUtils = PlatformUtils.isIOS();
 if (PlatformUtils) {
-  PlatformUtils = fn(4842).getSystemVersionMajor() <= 15;
-  let obj4 = fn(4842);
+  PlatformUtils = fn(4821).getSystemVersionMajor() <= 15;
+  let obj4 = fn(4821);
 }
 function getChannelScreen() {
   let animation = arg0;
@@ -102,20 +102,20 @@ function getChannelScreen() {
             type = action.type;
           }
         }
-        obj = animation(4731);
+        obj = animation(4730);
         if ("GO_BACK" === type) {
           let SWIPE = constants2.BACK_BUTTON;
         } else {
           SWIPE = constants2.SWIPE;
         }
-        closure_1_1(5046).trackWithMetadata(constants.CHANNEL_BACK_NAVIGATED, { source: SWIPE });
-        const obj4 = closure_1_1(5046);
+        closure_1_1(5025).trackWithMetadata(constants.CHANNEL_BACK_NAVIGATED, { source: SWIPE });
+        const obj4 = closure_1_1(5025);
       }
     },
     options(arg0) {
-      const obj = { headerShown: true, header: styles(7484).renderHeader };
+      const obj = { headerShown: true, header: styles(7462).renderHeader };
       ({ navigation, route } = arg0);
-      const merged = Object.assign(styles(7484).getDefaultChannelStackHeaderProps(navigation, route));
+      const merged = Object.assign(styles(7462).getDefaultChannelStackHeaderProps(navigation, route));
       const merged1 = Object.assign(animation2);
       obj.animation = animation;
       return obj;
@@ -180,7 +180,7 @@ export default noop.memo(function StackNavigator() {
               if (closure_1_15) {
                 str = "default";
               }
-              const merged = Object.assign(animation(7484).getDefaultStackHeaderProps(navigation.navigation));
+              const merged = Object.assign(animation(7462).getDefaultStackHeaderProps(navigation.navigation));
               const merged1 = Object.assign(animation2);
               return { orientation: str, headerShown: false };
             },
@@ -218,20 +218,20 @@ export default noop.memo(function StackNavigator() {
                     type = action.type;
                   }
                 }
-                obj = animation(4731);
+                obj = animation(4730);
                 if ("GO_BACK" === type) {
                   let SWIPE = constants2.BACK_BUTTON;
                 } else {
                   SWIPE = constants2.SWIPE;
                 }
-                closure_1_1(5046).trackWithMetadata(constants.CHANNEL_BACK_NAVIGATED, { source: SWIPE });
-                const obj4 = closure_1_1(5046);
+                closure_1_1(5025).trackWithMetadata(constants.CHANNEL_BACK_NAVIGATED, { source: SWIPE });
+                const obj4 = closure_1_1(5025);
               }
             },
             options(arg0) {
-              const obj = { headerShown: true, header: styles(7484).renderHeader };
+              const obj = { headerShown: true, header: styles(7462).renderHeader };
               ({ navigation, route } = arg0);
-              const merged = Object.assign(styles(7484).getDefaultChannelStackHeaderProps(navigation, route));
+              const merged = Object.assign(styles(7462).getDefaultChannelStackHeaderProps(navigation, route));
               const merged1 = Object.assign(animation2);
               obj.animation = animation;
               return obj;
@@ -249,7 +249,7 @@ export default noop.memo(function StackNavigator() {
         name: "conversations",
         getComponent: getConversationsComponent,
         options() {
-          return stateFromStores(10589)();
+          return stateFromStores(10581)();
         }
       }),
       closure_2_10(closure_16.Screen, { name: "auth", getComponent: getAuthComponent, options }),
@@ -311,7 +311,7 @@ export default noop.memo(function StackNavigator() {
           str = "modal";
         }
         const obj = {};
-        const merged = Object.assign(stateFromStores(10589)({ presentation: str }));
+        const merged = Object.assign(stateFromStores(10581)({ presentation: str }));
         const params3 = route.params;
         let presentation;
         if (params3 != null) {
@@ -367,7 +367,7 @@ export default noop.memo(function StackNavigator() {
             if (closure_1_15) {
               str = "default";
             }
-            const merged = Object.assign(animation(7484).getDefaultStackHeaderProps(navigation.navigation));
+            const merged = Object.assign(animation(7462).getDefaultStackHeaderProps(navigation.navigation));
             const merged1 = Object.assign(animation2);
             return { orientation: str, headerShown: false };
           },
@@ -405,20 +405,20 @@ export default noop.memo(function StackNavigator() {
                   type = action.type;
                 }
               }
-              obj = animation(4731);
+              obj = animation(4730);
               if ("GO_BACK" === type) {
                 let SWIPE = constants2.BACK_BUTTON;
               } else {
                 SWIPE = constants2.SWIPE;
               }
-              closure_1_1(5046).trackWithMetadata(constants.CHANNEL_BACK_NAVIGATED, { source: SWIPE });
-              const obj4 = closure_1_1(5046);
+              closure_1_1(5025).trackWithMetadata(constants.CHANNEL_BACK_NAVIGATED, { source: SWIPE });
+              const obj4 = closure_1_1(5025);
             }
           },
           options(arg0) {
-            const obj = { headerShown: true, header: styles(7484).renderHeader };
+            const obj = { headerShown: true, header: styles(7462).renderHeader };
             ({ navigation, route } = arg0);
-            const merged = Object.assign(styles(7484).getDefaultChannelStackHeaderProps(navigation, route));
+            const merged = Object.assign(styles(7462).getDefaultChannelStackHeaderProps(navigation, route));
             const merged1 = Object.assign(animation2);
             obj.animation = animation;
             return obj;
@@ -436,7 +436,7 @@ export default noop.memo(function StackNavigator() {
       name: "conversations",
       getComponent: getConversationsComponent,
       options() {
-        return stateFromStores(10589)();
+        return stateFromStores(10581)();
       }
     };
     const obj8 = { name: "auth", getComponent: getAuthComponent, options };
@@ -457,7 +457,7 @@ export default noop.memo(function StackNavigator() {
     items1[7] = closure_2_10(closure_16.Screen, {
       name: "settings",
       options() {
-        const tmp = stateFromStores(10589);
+        const tmp = stateFromStores(10581);
         let obj2;
         if (obj.isIpadOS()) {
           obj2 = { presentation: "modal" };
@@ -474,13 +474,13 @@ export default noop.memo(function StackNavigator() {
       name: "sidebar",
       getComponent: getChannelDetailsComponent,
       options() {
-        return stateFromStores(10589)({ lockOrientation: false });
+        return stateFromStores(10581)({ lockOrientation: false });
       }
     });
     const obj16 = {
       name: "settings",
       options() {
-        const tmp = stateFromStores(10589);
+        const tmp = stateFromStores(10581);
         let obj2;
         if (obj.isIpadOS()) {
           obj2 = { presentation: "modal" };
@@ -497,7 +497,7 @@ export default noop.memo(function StackNavigator() {
       name: "sidebar",
       getComponent: getChannelDetailsComponent,
       options() {
-        return stateFromStores(10589)({ lockOrientation: false });
+        return stateFromStores(10581)({ lockOrientation: false });
       }
     };
     tmp5Result = PlatformUtils2;
@@ -525,7 +525,7 @@ export default noop.memo(function StackNavigator() {
           }
           str2 = str3;
         }
-        const merged = Object.assign(stateFromStores(10589)({ presentation: str2 }));
+        const merged = Object.assign(stateFromStores(10581)({ presentation: str2 }));
         return obj;
       },
       getComponent: getModalComponent

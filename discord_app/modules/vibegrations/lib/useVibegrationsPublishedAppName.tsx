@@ -1,8 +1,8 @@
-// === Module 16589: useVibegrationsPublishedAppName ===
+// === Module 16611: useVibegrationsPublishedAppName ===
 
-// Module 16589 (useVibegrationsPublishedAppName)
-import ApplicationStore from "ApplicationStore" /* 5093 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 8694 */;
+// Module 16611 (useVibegrationsPublishedAppName)
+import ApplicationStore from "ApplicationStore" /* 5072 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 8686 */;
 
 const require = globalThis.__r;
 

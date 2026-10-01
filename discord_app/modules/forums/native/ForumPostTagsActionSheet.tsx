@@ -1,18 +1,18 @@
-// === Module 11023: ForumPostTagsActionSheet ===
+// === Module 11027: ForumPostTagsActionSheet ===
 
-// Module 11023 (ForumPostTagsActionSheet)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4830 */;
-import ForumActionCreatorsDefault from "ForumActionCreators" /* 7519 */;
-import AvailableForumTagDefault from "AvailableForumTag" /* 11024 */;
+// Module 11027 (ForumPostTagsActionSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4809 */;
+import ForumActionCreatorsDefault from "ForumActionCreators" /* 7497 */;
+import AvailableForumTagDefault from "AvailableForumTag" /* 11028 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
-const MAX_FORUM_POST_TAGS = fn(6887).MAX_FORUM_POST_TAGS;
+const MAX_FORUM_POST_TAGS = fn(6878).MAX_FORUM_POST_TAGS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let closure_9 = createStyles.createStyles({ tagsContainer: { display: "flex", flexDirection: "row", flexWrap: "wrap" }, saveButton: { marginTop: 8, marginHorizontal: 16, marginBottom: 16 }, subtitle: { marginTop: 4 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/native/ForumPostTagsActionSheet.tsx");
@@ -45,15 +45,15 @@ export default function ForumPostTagsActionSheet(thread) {
     }
   }
   const tmp3 = closure_9();
-  let appliedTags = thread(6889).useAppliedTags(thread);
+  let appliedTags = thread(6880).useAppliedTags(thread);
   if (null != tags) {
     appliedTags = tags;
   }
-  let obj = thread(6889);
+  let obj = thread(6880);
   [first, closure_5] = first.useState(new Set(appliedTags));
   closure_6 = first.size >= closure_6;
   let set = new Set(appliedTags);
-  const visibleForumTags = thread(6889).useVisibleForumTags(thread.parentChannel);
+  const visibleForumTags = thread(6880).useVisibleForumTags(thread.parentChannel);
   let obj2 = {
     onDismiss() {
       let tmp;
@@ -69,8 +69,8 @@ export default function ForumPostTagsActionSheet(thread) {
   const intl2 = tmp4(1115).intl;
   obj3.subtitle = intl2.string(thread(1115).t["+HS9+m"]);
   obj3.subtitleStyle = tmp3.subtitle;
-  obj2.header = toggleTag(thread(6766).BottomSheetTitleHeader, obj3);
-  const tmp4Result = thread(6889);
+  obj2.header = toggleTag(thread(6756).BottomSheetTitleHeader, obj3);
+  const tmp4Result = thread(6880);
   let items = [
     toggleTag(closure_5, {
       style: tmp3.tagsContainer,
@@ -108,8 +108,8 @@ export default function ForumPostTagsActionSheet(thread) {
     }
     ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  obj5.children = toggleTag(thread(5477).Button, obj6);
+  obj5.children = toggleTag(thread(5465).Button, obj6);
   items[1] = toggleTag(closure_5, obj5);
   obj2.children = items;
-  return closure_8(thread(6814).ActionSheet, obj2);
+  return closure_8(thread(6804).ActionSheet, obj2);
 };

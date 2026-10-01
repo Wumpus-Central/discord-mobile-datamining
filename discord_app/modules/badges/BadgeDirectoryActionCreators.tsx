@@ -1,6 +1,6 @@
-// === Module 7837: BadgeDirectoryActionCreators ===
+// === Module 7824: BadgeDirectoryActionCreators ===
 
-// Module 7837 (BadgeDirectoryActionCreators)
+// Module 7824 (BadgeDirectoryActionCreators)
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1372 */;
@@ -62,7 +62,7 @@ let closure_10 = async function _fetchBadgeDirectory(arg0) {
           closure_131_8 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "flex", done: true };
+          return { value: "flex", done: null };
         }
       } else {
         if (1 === tmp7) {

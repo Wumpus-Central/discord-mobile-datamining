@@ -1,8 +1,8 @@
-// === Module 9152: PermissionsConstants ===
+// === Module 9146: PermissionsConstants ===
 
-// Module 9152 (PermissionsConstants)
+// Module 9146 (PermissionsConstants)
 import Constants from "Constants" /* 1074 */;
-import StageChannelPermissions from "StageChannelPermissions" /* 2053 */;
+import StageChannelPermissions from "StageChannelPermissions" /* 2052 */;
 import "BigFlagUtils";
 import BigFlagUtils from "BigFlagUtils" /* 1086 */;
 import size from "module_2" /* 2 */;

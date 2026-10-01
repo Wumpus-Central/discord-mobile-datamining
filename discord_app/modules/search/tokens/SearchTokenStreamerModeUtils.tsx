@@ -1,8 +1,8 @@
-// === Module 12031: SearchTokenStreamerModeUtils ===
+// === Module 12039: SearchTokenStreamerModeUtils ===
 
-// Module 12031 (SearchTokenStreamerModeUtils)
-import SearchUtils from "SearchUtils" /* 12026 */;
-import StreamerModeStore from "StreamerModeStore" /* 4709 */;
+// Module 12039 (SearchTokenStreamerModeUtils)
+import isGuildLikeSearchContext from "isGuildLikeSearchContext" /* 12036 */;
+import StreamerModeStore from "StreamerModeStore" /* 4708 */;
 
 require = fn;
 function getValidOrderedFilterTokens(type, items) {
@@ -15,7 +15,7 @@ function getValidOrderedFilterTokens(type, items) {
   }
   const items2 = [tmp];
   [tmp5] = items2;
-  let result = SearchUtils.isGuildLikeSearchContext(type);
+  let result = isGuildLikeSearchContext.isGuildLikeSearchContext(type);
   if (!result) {
     result = type.type === constants2.DMS && !tmp5.hidePersonalInformation;
     const tmp8 = type.type === constants2.DMS && !tmp5.hidePersonalInformation;
@@ -65,7 +65,7 @@ export const isInChannelFilterSupported = function isInChannelFilterSupported(se
     tmp = items;
   }
   [tmp3] = tmp;
-  let result = SearchUtils.isGuildLikeSearchContext(selectedSearchContext);
+  let result = isGuildLikeSearchContext.isGuildLikeSearchContext(selectedSearchContext);
   if (!result) {
     result = selectedSearchContext.type === constants2.DMS && !tmp3.hidePersonalInformation;
     const tmp6 = selectedSearchContext.type === constants2.DMS && !tmp3.hidePersonalInformation;

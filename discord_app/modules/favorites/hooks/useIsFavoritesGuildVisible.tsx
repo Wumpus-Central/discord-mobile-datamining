@@ -1,11 +1,11 @@
-// === Module 15078: useIsFavoritesGuildVisible ===
+// === Module 15084: useIsFavoritesGuildVisible ===
 
-// Module 15078 (useIsFavoritesGuildVisible)
-import FavoritesUtils from "FavoritesUtils" /* 2070 */;
-import FavoritesHooks from "FavoritesHooks" /* 9886 */;
-import FavoritesGuildIntroPopover from "FavoritesGuildIntroPopover" /* 9902 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4685 */;
-import FavoriteStore from "FavoriteStore" /* 2048 */;
+// Module 15084 (useIsFavoritesGuildVisible)
+import FavoritesUtils from "FavoritesUtils" /* 2069 */;
+import FavoritesHooks from "FavoritesHooks" /* 9878 */;
+import FavoritesGuildIntroPopover from "FavoritesGuildIntroPopover" /* 9894 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4684 */;
+import FavoriteStore from "FavoriteStore" /* 2047 */;
 
 require = fn;
 function computeIsFavoritesGuildVisible(FavoriteStore, SelectedGuildStore, isExperimentEnabled) {

@@ -1,12 +1,12 @@
-// === Module 4864: useManaTextMigrationHighlight ===
+// === Module 4843: useManaTextMigrationHighlight ===
 
-// Module 4864 (useManaTextMigrationHighlight)
+// Module 4843 (useManaTextMigrationHighlight)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
-import DevSettingsStore from "DevSettingsStore" /* 4865 */;
+import DevSettingsStore from "DevSettingsStore" /* 4844 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
-import createStyles from "createStyles" /* 4866 */;
+import createStyles from "createStyles" /* 4845 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

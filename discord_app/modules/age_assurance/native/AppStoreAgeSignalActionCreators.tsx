@@ -1,6 +1,6 @@
-// === Module 8222: AppStoreAgeSignalActionCreators ===
+// === Module 8211: AppStoreAgeSignalActionCreators ===
 
-// Module 8222 (AppStoreAgeSignalActionCreators)
+// Module 8211 (AppStoreAgeSignalActionCreators)
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -100,115 +100,54 @@ let closure_6 = async function _registerAgeSignalAttestKey() {
     return true === registered;
   })();
 };
-let closure_7 = async function _submitAgeSignal(arg0) {
-  if (c9 === 2) {
-    c9 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c9 = 2;
-      if (0 === c8) {
-        if (arg0 === 1) {
-          c9 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c9 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_7 = tmp5;
-          closure_6 = tmp2;
-          closure_134_3 = undefined;
-          closure_134_4 = undefined;
-          closure_134_0 = closure_0;
-          closure_134_1 = closure_1;
-          closure_134_2 = closure_2;
-          let str = closure_3;
-          if (closure_3 === undefined) {
-            str = "app_start";
-          }
-          closure_134_3 = str;
-          closure_134_4 = closure_4;
-          c8 = 1;
-          c9 = 1;
-          return { value: "flex", done: true };
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c9 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c9 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          function toSubmitOutcome(body) {
-            let result;
-            if (body != null) {
-              result = body.result;
-            }
-            if ("accepted" !== result) {
-              if ("skipped" !== result) {
-                let obj = closure_1_4;
-              }
-              return obj;
-            }
-            obj = { result, reason: null };
-            let reason;
-            if (body != null) {
-              reason = body.reason;
-            }
-            if (reason == null) {
-              reason = null;
-            }
-            obj.reason = reason;
-          }
-          const HTTP = closure_135_0(closure_135_1[2]).HTTP;
-          const request = { url: closure_135_3.AGE_SIGNAL, body: null, rejectWithError: true, failImmediatelyWhenRateLimited: true };
-          const obj5 = { platform: closure_134_0.platform, age_lower: closure_134_0.ageLower, age_upper: closure_134_0.ageUpper, google_age_signals_status: closure_134_0.googleAgeSignalsStatus, google_age_range_source: closure_134_0.googleAgeRangeSource, google_significant_change_status: closure_134_0.googleSignificantChangeStatus, apple_verified_method: closure_134_0.appleVerifiedMethod, is_cold_launch: closure_134_2, integrity_token: closure_134_1, attest_key_id: null, attest_assertion: null, source: null };
-          let keyId;
-          if (closure_134_4 != null) {
-            keyId = closure_134_4.keyId;
-          }
-          obj5.attest_key_id = keyId;
-          let assertion;
-          if (closure_134_4 != null) {
-            assertion = closure_134_4.assertion;
-          }
-          obj5.attest_assertion = assertion;
-          obj5.source = closure_134_3;
-          request.body = obj5;
-          c8 = 2;
-          c9 = 1;
-          const obj6 = { value: HTTP.post(request), done: false };
-          return obj6;
-        }
-      } else if (arg0 === 1) {
-        c9 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c9 = 3;
-        const obj7 = { value, done: true };
-        return obj7;
-      } else {
-        c9 = 3;
-        let obj = { value: toSubmitOutcome(value.body), done: true };
-        return obj;
-      }
-    } catch (tmp16) {
-      c9 = tmp;
-      throw tmp16;
-    }
+let closure_7 = async function _submitAgeSignal() {
+  closure_6 = tmp2;
+  closure_134_0 = closure_0;
+  closure_134_1 = closure_1;
+  closure_134_2 = closure_2;
+  let str = closure_3;
+  if (closure_3 === undefined) {
+    str = "app_start";
   }
+  closure_134_3 = str;
+  closure_134_4 = closure_4;
+  await "flex";
+  function toSubmitOutcome(body) {
+    let result;
+    if (body != null) {
+      result = body.result;
+    }
+    if ("accepted" !== result) {
+      if ("skipped" !== result) {
+        let obj = closure_1_4;
+      }
+      return obj;
+    }
+    obj = { result, reason: null };
+    let reason;
+    if (body != null) {
+      reason = body.reason;
+    }
+    if (reason == null) {
+      reason = null;
+    }
+    obj.reason = reason;
+  }
+  const HTTP = closure_135_0(closure_135_1[2]).HTTP;
+  const request = { url: closure_135_3.AGE_SIGNAL, body: null, rejectWithError: true, failImmediatelyWhenRateLimited: true };
+  const obj5 = { platform: closure_134_0.platform, age_lower: closure_134_0.ageLower, age_upper: closure_134_0.ageUpper, google_age_signals_status: closure_134_0.googleAgeSignalsStatus, google_age_range_source: closure_134_0.googleAgeRangeSource, google_significant_change_status: closure_134_0.googleSignificantChangeStatus, apple_verified_method: closure_134_0.appleVerifiedMethod, is_cold_launch: closure_134_2, integrity_token: closure_134_1, attest_key_id: null, attest_assertion: null, source: null };
+  if (closure_134_4 != null) {
+    const keyId = closure_134_4.keyId;
+  }
+  obj5.attest_key_id = keyId;
+  if (closure_134_4 != null) {
+    const assertion = closure_134_4.assertion;
+  }
+  obj5.attest_assertion = assertion;
+  obj5.source = closure_134_3;
+  request.body = obj5;
+  await HTTP.post(request);
+  return toSubmitOutcome(value.body);
 };
 const Endpoints = fn(1074).Endpoints;
 let closure_4 = { result: "skipped", reason: null };

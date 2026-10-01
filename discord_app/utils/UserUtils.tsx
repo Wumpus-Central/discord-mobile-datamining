@@ -1,9 +1,9 @@
-// === Module 4708: UserUtils ===
+// === Module 4707: UserUtils ===
 
-// Module 4708 (UserUtils)
+// Module 4707 (UserUtils)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1115 */;
-import StreamerModeStore from "StreamerModeStore" /* 4709 */;
+import StreamerModeStore from "StreamerModeStore" /* 4708 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;

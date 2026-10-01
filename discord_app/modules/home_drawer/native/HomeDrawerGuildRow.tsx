@@ -1,24 +1,24 @@
-// === Module 16158: HomeDrawerGuildRow ===
+// === Module 16178: HomeDrawerGuildRow ===
 
-// Module 16158 (HomeDrawerGuildRow)
-import Text_Text from "Text/Text" /* 4862 */;
-import useChannelName from "useChannelName" /* 5019 */;
-import BellSlashIcon2 from "BellSlashIcon" /* 9814 */;
-import BellZIcon from "BellZIcon" /* 13062 */;
-import StreamingSubtitleDefault from "StreamingSubtitle" /* 16163 */;
-import VoiceSubtitleDefault from "VoiceSubtitle" /* 16164 */;
-import MentionSubtitleDefault from "MentionSubtitle" /* 16165 */;
-import TypingSubtitleDefault from "TypingSubtitle" /* 16167 */;
-import UnreadSubtitleDefault from "UnreadSubtitle" /* 16168 */;
+// Module 16178 (HomeDrawerGuildRow)
+import Text_Text from "Text/Text" /* 4841 */;
+import useChannelName from "useChannelName" /* 4998 */;
+import BellSlashIcon2 from "BellSlashIcon" /* 9806 */;
+import BellZIcon from "BellZIcon" /* 13070 */;
+import StreamingSubtitleDefault from "StreamingSubtitle" /* 16183 */;
+import VoiceSubtitleDefault from "VoiceSubtitle" /* 16184 */;
+import MentionSubtitleDefault from "MentionSubtitle" /* 16185 */;
+import TypingSubtitleDefault from "TypingSubtitle" /* 16187 */;
+import UnreadSubtitleDefault from "UnreadSubtitle" /* 16188 */;
 import noop from "module_19" /* 19 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4501 */;
-import ChannelStore from "ChannelStore" /* 2045 */;
-import GuildChannelStore from "GuildChannelStore" /* 4497 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7245 */;
-import GuildStore from "GuildStore" /* 2067 */;
-import ReadStateStore from "ReadStateStore" /* 4881 */;
-import RelationshipStore from "RelationshipStore" /* 4509 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5047 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4500 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
+import GuildChannelStore from "GuildChannelStore" /* 4496 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7223 */;
+import GuildStore from "GuildStore" /* 2066 */;
+import ReadStateStore from "ReadStateStore" /* 4860 */;
+import RelationshipStore from "RelationshipStore" /* 4508 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5026 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -294,14 +294,14 @@ function GuildRowWrapper(guild) {
   return typingChannelName(guild(onActiveHookChange[34]).HomeDrawerSharedItem, obj12);
 }
 const View = fn(17).View;
-const isThread = fn(2049).isThread;
+const isThread = fn(2048).isThread;
 const Constants = fn(1074);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_15, NOOP: closure_16 } = Constants);
-const UnreadSetting = fn(5048).UnreadSetting;
+const UnreadSetting = fn(5027).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
 const HomeDrawerActiveHook = { STREAMING: "streaming", VOICE: "voice", MENTION: "mention", TYPING: "typing", UNREAD: "unread", NONE: "none" };
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let closure_21 = createStyles.createStyles({ guildName: { flexDirection: "row", alignItems: "center", gap: 4 }, guildNameText: { flexShrink: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawerGuildRow.tsx");
@@ -311,7 +311,7 @@ export default function HomeDrawerGuildRow(guildId) {
   ({ disableSubtitle, onActiveHookChange } = guildId);
   const items = [GuildStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
-  const MobileHomeDrawerExperiment = guildId(4728).MobileHomeDrawerExperiment;
+  const MobileHomeDrawerExperiment = guildId(4727).MobileHomeDrawerExperiment;
   let tmp3 = null;
   if (null != stateFromStores) {
     tmp3 = null;

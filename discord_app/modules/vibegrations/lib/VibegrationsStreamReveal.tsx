@@ -1,6 +1,6 @@
-// === Module 16557: VibegrationsStreamReveal ===
+// === Module 16579: VibegrationsStreamReveal ===
 
-// Module 16557 (VibegrationsStreamReveal)
+// Module 16579 (VibegrationsStreamReveal)
 import size from "module_2" /* 2 */;
 
 function splitsCharacter(target, sum) {

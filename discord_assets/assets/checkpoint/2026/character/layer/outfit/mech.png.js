@@ -1,6 +1,6 @@
-// === Module 5158: ? ===
+// === Module 5137: ? ===
 
-// Module 5158
+// Module 5137
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/outfit/mech.png.js");

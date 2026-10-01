@@ -1,9 +1,9 @@
-// === Module 13432: ConnectionOpenTriggerPoint ===
+// === Module 13440: ConnectionOpenTriggerPoint ===
 
-// Module 13432 (ConnectionOpenTriggerPoint)
-import ExperimentConstants from "ExperimentConstants" /* 4781 */;
-import Helpers from "Helpers" /* 10474 */;
-import ContentInventoryExperiments from "ContentInventoryExperiments" /* 13433 */;
+// Module 13440 (ConnectionOpenTriggerPoint)
+import ExperimentConstants from "ExperimentConstants" /* 4762 */;
+import Helpers from "Helpers" /* 10466 */;
+import ContentInventoryExperiments from "ContentInventoryExperiments" /* 13441 */;
 import size from "module_2" /* 2 */;
 
 const items = [ContentInventoryExperiments.HotwheelsActivityFeedNvidiaExperiment];

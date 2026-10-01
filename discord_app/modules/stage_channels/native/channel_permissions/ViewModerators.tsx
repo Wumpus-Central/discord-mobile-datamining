@@ -1,19 +1,19 @@
-// === Module 16868: ViewModerators ===
+// === Module 16889: ViewModerators ===
 
-// Module 16868 (ViewModerators)
+// Module 16889 (ViewModerators)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1981 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4830 */;
-import ChannelOverwritesItemDefault from "ChannelOverwritesItem" /* 9231 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4809 */;
+import ChannelOverwritesItemDefault from "ChannelOverwritesItem" /* 9225 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 2108 */;
-import GuildRoleStore from "GuildRoleStore" /* 2102 */;
-import GuildStore from "GuildStore" /* 2067 */;
+import GuildMemberStore from "GuildMemberStore" /* 2107 */;
+import GuildRoleStore from "GuildRoleStore" /* 2101 */;
+import GuildStore from "GuildStore" /* 2066 */;
 
 require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const RowType = fn(8044).RowType;
+const RowType = fn(8033).RowType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const size = fn(2);
@@ -67,16 +67,16 @@ export default function ViewModerators(channel) {
               if (obj11.isEmptyOverwrite(id)) {
                 c1 = 2;
                 c2 = 1;
-                const obj8 = { value: v1(4879).clearPermissionOverwrite(tmp2.id, id.id), done: false };
+                const obj8 = { value: v1(4858).clearPermissionOverwrite(tmp2.id, id.id), done: false };
                 return obj8;
               } else {
                 const items = [id];
                 c1 = 1;
                 c2 = 1;
-                const obj9 = { value: tmp2(9216).savePermissionUpdates(tmp2.id, items), done: false };
+                const obj9 = { value: tmp2(9210).savePermissionUpdates(tmp2.id, items), done: false };
                 return obj9;
               }
-              obj11 = tmp2(5924);
+              obj11 = tmp2(5913);
             }
           } else {
             if (1 === tmp5) {
@@ -96,9 +96,9 @@ export default function ViewModerators(channel) {
               const obj = { value, done: true };
               return obj;
             }
-            const result = tmp2(4557).memberOrRoleRemovedToast(closure_128_0.name);
-            const obj2 = tmp2(4557);
-            v1(4830).hideActionSheet();
+            const result = tmp2(4556).memberOrRoleRemovedToast(closure_128_0.name);
+            const obj2 = tmp2(4556);
+            v1(4809).hideActionSheet();
             c2 = 3;
             return { value: "HermesInternal", done: null };
           }
@@ -176,8 +176,8 @@ export default function ViewModerators(channel) {
             const _HermesInternal = HermesInternal;
             const obj2 = ActionSheetActionCreatorsDefault;
             const obj3 = { channel, canSkip: false };
-            obj2.openLazy(asyncRequireImpl(16869, dependencyMap.paths), "channel-add-moderators-" + channel.id, obj3);
-            const tmp7 = asyncRequireImpl(16869, dependencyMap.paths);
+            obj2.openLazy(asyncRequireImpl(16890, dependencyMap.paths), "channel-add-moderators-" + channel.id, obj3);
+            const tmp7 = asyncRequireImpl(16890, dependencyMap.paths);
           }
         };
         obj9.disabled = !canUpdateStageChannelModerators;
@@ -208,5 +208,5 @@ export const openAddModeratorsActionSheet = function openAddModeratorsActionShee
   }
   AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_POPOUT, { type: "Grant Channel Access" });
   const obj2 = ActionSheetActionCreatorsDefault;
-  obj2.openLazy(asyncRequireImpl(16869, dependencyMap.paths), "channel-add-moderators-" + channel.id, { channel, canSkip: flag });
+  obj2.openLazy(asyncRequireImpl(16890, dependencyMap.paths), "channel-add-moderators-" + channel.id, { channel, canSkip: flag });
 };

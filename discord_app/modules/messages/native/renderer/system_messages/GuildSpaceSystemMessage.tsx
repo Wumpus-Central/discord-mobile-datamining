@@ -1,12 +1,12 @@
-// === Module 7726: GuildSpaceSystemMessage ===
+// === Module 7713: GuildSpaceSystemMessage ===
 
-// Module 7726 (GuildSpaceSystemMessage)
+// Module 7713 (GuildSpaceSystemMessage)
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import _modDef2419 from "module_2419" /* 2419 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7599 */;
-import GuildSpaceLeaderboardSystemMessage from "GuildSpaceLeaderboardSystemMessage" /* 7727 */;
+import _modDef2418 from "module_2418" /* 2418 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7577 */;
+import GuildSpaceLeaderboardSystemMessage from "GuildSpaceLeaderboardSystemMessage" /* 7714 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelStore from "ChannelStore" /* 2045 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -33,9 +33,9 @@ export const createGuildSpaceSystemMessage = function createGuildSpaceSystemMess
         const channel = ChannelStore.getChannel(message.channel_id);
         [tmp18, tmp19] = substr;
         const tmp17 = _slicedToArray(substr, 2);
-        const userAuthorWithProcessedColor = string(7597).getUserAuthorWithProcessedColor(tmp18, channel);
-        const stringResult = string(7597);
-        const userAuthorWithProcessedColor1 = string(7597).getUserAuthorWithProcessedColor(tmp19, channel);
+        const userAuthorWithProcessedColor = string(7575).getUserAuthorWithProcessedColor(tmp18, channel);
+        const stringResult = string(7575);
+        const userAuthorWithProcessedColor1 = string(7575).getUserAuthorWithProcessedColor(tmp19, channel);
         const intl2 = string(1115).intl;
         let tmp11 = importDefault;
         const obj2 = { displayCount: substr.length, username: userAuthorWithProcessedColor.nick, usernameOnClick: null, username2: null, username2OnClick: null, additionalCount: null };
@@ -45,19 +45,19 @@ export const createGuildSpaceSystemMessage = function createGuildSpaceSystemMess
         let tmp8;
         if (null != tmp19) {
           const obj4 = { userId: tmp19.id, message, author: userAuthorWithProcessedColor1, roleStyle };
-          tmp8 = tmp11(7599)(obj4);
+          tmp8 = tmp11(7577)(obj4);
         }
         obj2.username2OnClick = tmp8;
         obj2.additionalCount = diff;
-        let formatToPartsResult = intl2.formatToParts(_modDef2419.zUiZPF, obj2);
-        const stringResult1 = string(7597);
+        let formatToPartsResult = intl2.formatToParts(_modDef2418.zUiZPF, obj2);
+        const stringResult1 = string(7575);
       }
       const obj5 = { content: formatToPartsResult };
-      merged = Object.assign(tmp11(7601)(message));
+      merged = Object.assign(tmp11(7579)(message));
     }
     const intl = string(1115).intl;
     string = intl.string;
-    formatToPartsResult = string(_modDef2419.Sxxqdx);
+    formatToPartsResult = string(_modDef2418.Sxxqdx);
     tmp11 = importDefault;
   } else {
     const guildSpaceData2 = message.message.guildSpaceData;

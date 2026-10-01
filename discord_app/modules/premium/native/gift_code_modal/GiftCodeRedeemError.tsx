@@ -1,15 +1,15 @@
-// === Module 11202: GiftCodeRedeemError ===
+// === Module 11206: GiftCodeRedeemError ===
 
-// Module 11202 (GiftCodeRedeemError)
+// Module 11206 (GiftCodeRedeemError)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import Link from "Link" /* 1486 */;
-import Text_Text from "Text/Text" /* 4862 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5069 */;
-import components_Button_Button from "components/Button/Button" /* 5477 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6740 */;
-import _modDef11203 from "module_11203" /* 11203 */;
-import _modDef11204 from "module_11204" /* 11204 */;
+import Text_Text from "Text/Text" /* 4841 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5048 */;
+import components_Button_Button from "components/Button/Button" /* 5465 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6730 */;
+import _modDef11207 from "module_11207" /* 11207 */;
+import _modDef11208 from "module_11208" /* 11208 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = { container: { flex: 1, justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, body: { flex: 1, alignItems: "center", justifyContent: "center", paddingTop: 28, paddingBottom: 12, paddingHorizontal: 32 }, header: { marginTop: 32, textAlign: "center" }, message: { marginTop: 8, textAlign: "center" }, footer: { paddingHorizontal: 24 } };
 let closure_8 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -29,9 +29,9 @@ export default function GiftCodeRedeemError(children) {
   const obj2 = { bottom: true, style: tmp.container, children: null };
   const obj3 = { contentContainerStyle: tmp.body, alwaysBounceVertical: false, children: null };
   if (theme.dark) {
-    let tmp9Result = _modDef11203;
+    let tmp9Result = _modDef11207;
   } else {
-    tmp9Result = _modDef11204;
+    tmp9Result = _modDef11208;
   }
   const items = [timestampProducer(React3, { source: tmp9Result }), , ];
   const obj4 = { variant: "heading-xl/bold", style: tmp.header, children: null };

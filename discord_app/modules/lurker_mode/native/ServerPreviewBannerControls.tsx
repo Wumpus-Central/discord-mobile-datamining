@@ -1,12 +1,12 @@
-// === Module 16009: ServerPreviewBannerControls ===
+// === Module 16024: ServerPreviewBannerControls ===
 
-// Module 16009 (ServerPreviewBannerControls)
+// Module 16024 (ServerPreviewBannerControls)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import _modDef6137 from "module_6137" /* 6137 */;
-import transitionToGuild from "transitionToGuild" /* 6956 */;
-import IconButton from "IconButton" /* 7558 */;
-import ServerPreviewPillDefault from "ServerPreviewPill" /* 16010 */;
+import _modDef6127 from "module_6127" /* 6127 */;
+import transitionToGuild from "transitionToGuild" /* 6947 */;
+import IconButton from "IconButton" /* 7536 */;
+import ServerPreviewPillDefault from "ServerPreviewPill" /* 16025 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const View = fn(17).View;
 const MOBILE_GUILD_UPSELL_LIST = fn(1074).MOBILE_GUILD_UPSELL_LIST;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = { row: null };
 const rect = { position: "absolute", top: nativeDefault.space.PX_16, left: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 obj2.row = rect;
@@ -27,7 +27,7 @@ export default function ServerPreviewBannerControls() {
   const callback = noop.useCallback(() => {
     transitionToGuild.transitionToGuild(MOBILE_GUILD_UPSELL_LIST);
   }, []);
-  const obj2 = { size: "md", variant: "secondary-overlay", icon: _modDef6137, onPress: callback, accessibilityLabel: null, maxFontSizeMultiplier: 1.5 };
+  const obj2 = { size: "md", variant: "secondary-overlay", icon: _modDef6127, onPress: callback, accessibilityLabel: null, maxFontSizeMultiplier: 1.5 };
   const intl = util.intl;
   obj2.accessibilityLabel = intl.string(util.t["13/7kX"]);
   const items = [timestampProducer(IconButton.IconButton, obj2), timestampProducer(ServerPreviewPillDefault, {})];

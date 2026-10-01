@@ -1,12 +1,12 @@
-// === Module 9025: handleJoinEmbeddedActivity ===
+// === Module 9019: handleJoinEmbeddedActivity ===
 
-// Module 9025 (handleJoinEmbeddedActivity)
+// Module 9019 (handleJoinEmbeddedActivity)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 5093 */;
-import ChannelStore from "ChannelStore" /* 2045 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2099 */;
+import ApplicationStore from "ApplicationStore" /* 5072 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
 import UserStore from "UserStore" /* 1372 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2044 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2043 */;
 
 const require = globalThis.__r;
 
@@ -60,7 +60,7 @@ let closure_10 = async function _handleJoinEmbeddedActivityInternal(arg0) {
           closure_129_18 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "flex", done: true };
+          return { value: "flex", done: null };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

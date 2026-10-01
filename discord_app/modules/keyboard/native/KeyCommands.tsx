@@ -1,8 +1,8 @@
-// === Module 5473: KeyCommands ===
+// === Module 5461: KeyCommands ===
 
-// Module 5473 (KeyCommands)
+// Module 5461 (KeyCommands)
 import noop from "module_19" /* 19 */;
-import NativeKeyCommandsModule_mod from "NativeKeyCommandsModule" /* 5474 */;
+import NativeKeyCommandsModule_mod from "NativeKeyCommandsModule" /* 5462 */;
 
 function toNativeKeyCommand(eventName) {
   return { eventName: eventName.eventName, input: eventName.input, modifierFlags: eventName.modifierFlags, discoverabilityTitle: eventName.discoverabilityTitle };

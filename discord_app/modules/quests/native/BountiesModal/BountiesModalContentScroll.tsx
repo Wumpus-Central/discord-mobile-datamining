@@ -1,28 +1,28 @@
-// === Module 14748: BountiesModalContentScroll ===
+// === Module 14754: BountiesModalContentScroll ===
 
-// Module 14748 (BountiesModalContentScroll)
+// Module 14754 (BountiesModalContentScroll)
 import nativeDefault from "native" /* 576 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
-import native from "native" /* 4570 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4596 */;
-import timing from "timing" /* 4867 */;
-import timingPresets from "timingPresets" /* 4870 */;
-import QuestContent from "QuestContent" /* 5958 */;
-import AdCreativeType from "AdCreativeType" /* 5960 */;
-import QuestDataUtils from "QuestDataUtils" /* 7307 */;
-import AnalyticsActions from "AnalyticsActions" /* 7326 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7336 */;
-import QuestActionCreators from "QuestActionCreators" /* 10887 */;
-import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 10924 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 10939 */;
-import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 14745 */;
-import useBountiesRecapScroll from "useBountiesRecapScroll" /* 14754 */;
-import BountiesScrollVideoItem from "BountiesScrollVideoItem" /* 14756 */;
-import BountiesScrollRecapPage from "BountiesScrollRecapPage" /* 14791 */;
-import shared_ThemeTypes from "shared/ThemeTypes" /* 14797 */;
+import native from "native" /* 4569 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4595 */;
+import timing from "timing" /* 4846 */;
+import timingPresets from "timingPresets" /* 4849 */;
+import QuestContent from "QuestContent" /* 5947 */;
+import AdCreativeType from "AdCreativeType" /* 5949 */;
+import QuestDataUtils from "QuestDataUtils" /* 7285 */;
+import AnalyticsActions from "AnalyticsActions" /* 7304 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7314 */;
+import QuestActionCreators from "QuestActionCreators" /* 10888 */;
+import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 10919 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 10940 */;
+import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 14751 */;
+import useBountiesRecapScroll from "useBountiesRecapScroll" /* 14760 */;
+import BountiesScrollVideoItem from "BountiesScrollVideoItem" /* 14762 */;
+import BountiesScrollRecapPage from "BountiesScrollRecapPage" /* 14797 */;
+import shared_ThemeTypes from "shared/ThemeTypes" /* 14803 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BountyStore from "BountyStore" /* 7310 */;
+import BountyStore from "BountyStore" /* 7288 */;
 
 require = fn;
 function ItemSeparator(trailingItem) {
@@ -89,7 +89,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
   dependencyMap = tmp;
   const height = sourceQuestContent(1479)().height;
   const ref = noop.useRef(null);
-  [tmp7, c4] = height(noop.useState(initialBountyId(14750).BOUNTIES_MODAL_BASE_FOOTER_HEIGHT), 2);
+  [tmp7, c4] = height(noop.useState(initialBountyId(14756).BOUNTIES_MODAL_BASE_FOOTER_HEIGHT), 2);
   closure_129_0 = tmp7;
   const callback = noop.useCallback((nativeEvent) => {
     _undefined(Math.ceil(nativeEvent.nativeEvent.layout.height));
@@ -117,8 +117,8 @@ function BountiesModalContentScrollInner(initialBountyId) {
     const size = { top: rect.top, left: Math.floor(rect.left + (diff - result1) / 2), width: Math.floor(result1), height: Math.floor(result) };
     return size;
   }, items);
-  const tmp6 = height(noop.useState(initialBountyId(14750).BOUNTIES_MODAL_BASE_FOOTER_HEIGHT), 2);
-  const questHomeBounties = initialBountyId(10885).useQuestHomeBounties().questHomeBounties;
+  const tmp6 = height(noop.useState(initialBountyId(14756).BOUNTIES_MODAL_BASE_FOOTER_HEIGHT), 2);
+  const questHomeBounties = initialBountyId(10886).useQuestHomeBounties().questHomeBounties;
   const data = height(noop.useState(() => {
     const findIndexResult = questHomeBounties.findIndex((id) => id.id === initialBountyId);
     if (findIndexResult < 0) {
@@ -148,9 +148,9 @@ function BountiesModalContentScrollInner(initialBountyId) {
     }
   }, items1);
   adContentId = closure_8;
-  let obj2 = initialBountyId(10885);
-  const sharedValue = initialBountyId(4596).useSharedValue(0);
-  let obj3 = initialBountyId(4596);
+  let obj2 = initialBountyId(10886);
+  const sharedValue = initialBountyId(4595).useSharedValue(0);
+  let obj3 = initialBountyId(4595);
   [tmp15, c11] = height(noop.useState(null), 2);
   getBountyVideoEndPeekScale = noop.useRef(null);
   noop.useRef(0);
@@ -192,7 +192,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
   const items8 = [data, closure_8];
   const stateFromStores = initialBountyId(504).useStateFromStores(items7, () => BountyStore.getCompletedBountyCount(first) * closure_9, items8);
   let obj4 = initialBountyId(504);
-  const bountyRecurringSwipeUpNux = initialBountyId(14753).useBountyRecurringSwipeUpNux({ isEligible: tmp23 });
+  const bountyRecurringSwipeUpNux = initialBountyId(14759).useBountyRecurringSwipeUpNux({ isEligible: tmp23 });
   let hasRecurringSwipeUpNux = bountyRecurringSwipeUpNux.hasRecurringSwipeUpNux;
   const dismissRecurringSwipeUpNux = bountyRecurringSwipeUpNux.dismissRecurringSwipeUpNux;
   const height3 = memo.height;
@@ -206,8 +206,8 @@ function BountiesModalContentScrollInner(initialBountyId) {
   const sum1 = result + height3;
   const items9 = [sum1, result, height3];
   const memo4 = noop.useMemo(() => ({ lastBounty, fullRecap: sum1, revealHeight: height3 }), items9);
-  let obj5 = initialBountyId(14753);
-  const handleRecapMomentumEnd = initialBountyId(14754).useBountiesRecapScroll({ listRef: ref, enabled: tmp27, offsets: memo4 }).handleRecapMomentumEnd;
+  let obj5 = initialBountyId(14759);
+  const handleRecapMomentumEnd = initialBountyId(14760).useBountiesRecapScroll({ listRef: ref, enabled: tmp27, offsets: memo4 }).handleRecapMomentumEnd;
   const items10 = [data, sum1, stateFromStores > 0, sum];
   const memo5 = noop.useMemo(() => {
     const mapped = first.map((item, index) => index * slotHeight);
@@ -222,7 +222,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
   const tmp35 = height(noop.useState(false), 2);
   const first2 = tmp35[0];
   closure_31 = tmp37;
-  let obj6 = initialBountyId(14754);
+  let obj6 = initialBountyId(14760);
   [tmp39, tmp40] = height(noop.useState(true), 2);
   c32 = tmp40;
   const tmp38 = height(noop.useState(true), 2);
@@ -232,11 +232,11 @@ function BountiesModalContentScrollInner(initialBountyId) {
   const first3 = tmp44[0];
   __initData2 = tmp44[1];
   const tmp41 = height(noop.useState(false), 2);
-  const sharedValue1 = initialBountyId(4596).useSharedValue(false);
-  const obj7 = initialBountyId(4596);
-  const sharedValue2 = initialBountyId(4596).useSharedValue(false);
-  const obj8 = initialBountyId(4596);
-  const sharedValue3 = initialBountyId(4596).useSharedValue(0);
+  const sharedValue1 = initialBountyId(4595).useSharedValue(false);
+  const obj7 = initialBountyId(4595);
+  const sharedValue2 = initialBountyId(4595).useSharedValue(false);
+  const obj8 = initialBountyId(4595);
+  const sharedValue3 = initialBountyId(4595).useSharedValue(0);
   const memo6 = noop.useMemo(() => initialBountyId(closure_2[27]).v4(), []);
   __initData3 = noop.useRef(0);
   __initData4 = noop.useRef(0);
@@ -279,8 +279,8 @@ function BountiesModalContentScrollInner(initialBountyId) {
     callback3(arg0);
     tmp = 0 === first3 && arg0 > 0 && hasRecurringSwipeUpNux;
   }, items12);
-  const obj9 = initialBountyId(4596);
-  __initData5 = initialBountyId(14755).useBountiesRecapOrbCount({ scrollY: sharedValue3, lastBountyScrollOffset: result, recapRevealHeight: height3, targetOrbAmount: stateFromStores, enabled: tmp27 });
+  const obj9 = initialBountyId(4595);
+  __initData5 = initialBountyId(14761).useBountiesRecapOrbCount({ scrollY: sharedValue3, lastBountyScrollOffset: result, recapRevealHeight: height3, targetOrbAmount: stateFromStores, enabled: tmp27 });
   const items13 = [data, first3];
   const effect2 = noop.useEffect(() => {
     if (null != first[first3]) {
@@ -333,7 +333,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
     obj.trackAdContentEvent(obj2);
     BountiesModalActionCreatorsDefault.hideModal();
   }, items15);
-  const obj10 = initialBountyId(14755);
+  const obj10 = initialBountyId(14761);
   const obj12 = { onScroll: null, onBeginDrag: null, onEndDrag: null, onMomentumEnd: null };
   class Rt {
     constructor(arg0) {
@@ -399,14 +399,14 @@ function BountiesModalContentScrollInner(initialBountyId) {
       return;
     }
   }
-  const obj11 = initialBountyId(4596);
+  const obj11 = initialBountyId(4595);
   const obj13 = { scrollY: sharedValue3, isDraggingSharedValue: sharedValue2, isScrollingInBoundsSharedValue: sharedValue1, isScrollEventInBounds: first2 };
   const obj14 = { isDraggingSharedValue: sharedValue2, IS_ANDROID: dismissRecurringSwipeUpNux, isScrollingInBoundsSharedValue: sharedValue1 };
-  Ot.__closure = { showRecapPullZone: stateFromStores > 0, runOnJS: initialBountyId(4596).runOnJS, handleRecapMomentumEnd, isScrollingInBoundsSharedValue: sharedValue1 };
+  Ot.__closure = { showRecapPullZone: stateFromStores > 0, runOnJS: initialBountyId(4595).runOnJS, handleRecapMomentumEnd, isScrollingInBoundsSharedValue: sharedValue1 };
   Ot.__workletHash = 13684210320337;
   Ot.__initData = sharedValue3;
   obj12.onMomentumEnd = Ot;
-  const obj15 = { showRecapPullZone: stateFromStores > 0, runOnJS: initialBountyId(4596).runOnJS, handleRecapMomentumEnd, isScrollingInBoundsSharedValue: sharedValue1 };
+  const obj15 = { showRecapPullZone: stateFromStores > 0, runOnJS: initialBountyId(4595).runOnJS, handleRecapMomentumEnd, isScrollingInBoundsSharedValue: sharedValue1 };
   const animatedScrollHandler = obj11.useAnimatedScrollHandler(obj12);
   class Tt {
     constructor() {
@@ -421,12 +421,12 @@ function BountiesModalContentScrollInner(initialBountyId) {
       ReanimatedRexport.runOnJS(callback4)(arg0);
     }
   }
-  const obj16 = initialBountyId(4596);
-  vt.__closure = { runOnJS: initialBountyId(4596).runOnJS, commitSwipe: callback4 };
+  const obj16 = initialBountyId(4595);
+  vt.__closure = { runOnJS: initialBountyId(4595).runOnJS, commitSwipe: callback4 };
   vt.__workletHash = 14015091539518;
   vt.__initData = __initData3;
   const animatedReaction = obj16.useAnimatedReaction(Tt, vt);
-  const obj17 = { runOnJS: initialBountyId(4596).runOnJS, commitSwipe: callback4 };
+  const obj17 = { runOnJS: initialBountyId(4595).runOnJS, commitSwipe: callback4 };
   class Bt {
     constructor() {
       tmp = closure_23;
@@ -441,8 +441,8 @@ function BountiesModalContentScrollInner(initialBountyId) {
       return tmp;
     }
   }
-  const obj18 = initialBountyId(4596);
-  Bt.__closure = { showRecapPullZone: stateFromStores > 0, scrollY: sharedValue3, lastBountyScrollOffset: result, RECAP_SNAP_EPSILON: initialBountyId(14754).RECAP_SNAP_EPSILON };
+  const obj18 = initialBountyId(4595);
+  Bt.__closure = { showRecapPullZone: stateFromStores > 0, scrollY: sharedValue3, lastBountyScrollOffset: result, RECAP_SNAP_EPSILON: initialBountyId(14760).RECAP_SNAP_EPSILON };
   Bt.__workletHash = 6584708256992;
   Bt.__initData = __initData4;
   class At {
@@ -457,12 +457,12 @@ function BountiesModalContentScrollInner(initialBountyId) {
       return;
     }
   }
-  const obj19 = { showRecapPullZone: stateFromStores > 0, scrollY: sharedValue3, lastBountyScrollOffset: result, RECAP_SNAP_EPSILON: initialBountyId(14754).RECAP_SNAP_EPSILON };
-  At.__closure = { runOnJS: initialBountyId(4596).runOnJS, setShowRecapFooter: tmp43 };
+  const obj19 = { showRecapPullZone: stateFromStores > 0, scrollY: sharedValue3, lastBountyScrollOffset: result, RECAP_SNAP_EPSILON: initialBountyId(14760).RECAP_SNAP_EPSILON };
+  At.__closure = { runOnJS: initialBountyId(4595).runOnJS, setShowRecapFooter: tmp43 };
   At.__workletHash = 10788669301891;
   At.__initData = callback3;
   const animatedReaction1 = obj18.useAnimatedReaction(Bt, At);
-  const obj20 = { runOnJS: initialBountyId(4596).runOnJS, setShowRecapFooter: tmp43 };
+  const obj20 = { runOnJS: initialBountyId(4595).runOnJS, setShowRecapFooter: tmp43 };
   class Dt {
     constructor() {
       tmp = closure_23;
@@ -489,12 +489,12 @@ function BountiesModalContentScrollInner(initialBountyId) {
       return;
     }
   }
-  const obj21 = initialBountyId(4596);
-  Ct.__closure = { runOnJS: initialBountyId(4596).runOnJS, setIsRecapPageRevealed: tmp32[1] };
+  const obj21 = initialBountyId(4595);
+  Ct.__closure = { runOnJS: initialBountyId(4595).runOnJS, setIsRecapPageRevealed: tmp32[1] };
   Ct.__workletHash = 12713474352874;
   Ct.__initData = __initData5;
   const animatedReaction2 = obj21.useAnimatedReaction(Dt, Ct);
-  const obj22 = { runOnJS: initialBountyId(4596).runOnJS, setIsRecapPageRevealed: tmp32[1] };
+  const obj22 = { runOnJS: initialBountyId(4595).runOnJS, setIsRecapPageRevealed: tmp32[1] };
   class It {
     constructor() {
       tmp = closure_23;
@@ -509,8 +509,8 @@ function BountiesModalContentScrollInner(initialBountyId) {
       return tmp;
     }
   }
-  const obj23 = initialBountyId(4596);
-  It.__closure = { showRecapPullZone: stateFromStores > 0, scrollY: sharedValue3, fullRecapScrollOffset: sum1, RECAP_SNAP_EPSILON: initialBountyId(14754).RECAP_SNAP_EPSILON };
+  const obj23 = initialBountyId(4595);
+  It.__closure = { showRecapPullZone: stateFromStores > 0, scrollY: sharedValue3, fullRecapScrollOffset: sum1, RECAP_SNAP_EPSILON: initialBountyId(14760).RECAP_SNAP_EPSILON };
   It.__workletHash = 5669564400667;
   It.__initData = __initData6;
   function yt(arg0, arg1) {
@@ -518,8 +518,8 @@ function BountiesModalContentScrollInner(initialBountyId) {
       ReanimatedRexport.runOnJS(closure_31)(arg0);
     }
   }
-  const obj24 = { showRecapPullZone: stateFromStores > 0, scrollY: sharedValue3, fullRecapScrollOffset: sum1, RECAP_SNAP_EPSILON: initialBountyId(14754).RECAP_SNAP_EPSILON };
-  yt.__closure = { runOnJS: initialBountyId(4596).runOnJS, setIsRecapPageOnTop: tmp35[1] };
+  const obj24 = { showRecapPullZone: stateFromStores > 0, scrollY: sharedValue3, fullRecapScrollOffset: sum1, RECAP_SNAP_EPSILON: initialBountyId(14760).RECAP_SNAP_EPSILON };
+  yt.__closure = { runOnJS: initialBountyId(4595).runOnJS, setIsRecapPageOnTop: tmp35[1] };
   yt.__workletHash = 8102193741774;
   yt.__initData = animatedStyle;
   const animatedReaction3 = obj23.useAnimatedReaction(It, yt);
@@ -532,7 +532,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
     }
     return tmp;
   }, items16);
-  const obj25 = { runOnJS: initialBountyId(4596).runOnJS, setIsRecapPageOnTop: tmp35[1] };
+  const obj25 = { runOnJS: initialBountyId(4595).runOnJS, setIsRecapPageOnTop: tmp35[1] };
   class Mt {
     constructor() {
       value = closure_10.get();
@@ -550,7 +550,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
   Mt.__closure = { videoEndPeekProgress: sharedValue, getBountyVideoEndPeekScale, videoEndPeekTargetScale: memo1, getBountyVideoEndPeekClipHeight, videoLayout: memo, BOUNTIES_MODAL_FOOTER_HEIGHT: 97 };
   Mt.__workletHash = 6723524234865;
   Mt.__initData = first4;
-  animatedStyle = initialBountyId(4596).useAnimatedStyle(Mt);
+  animatedStyle = initialBountyId(4595).useAnimatedStyle(Mt);
   const items17 = [animatedStyle, tmp.listWrapper, , ];
   ({ left: arr19[2], width: arr19[3] } = memo);
   const memo8 = noop.useMemo(() => {
@@ -563,7 +563,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
   const tmp63 = height(noop.useState(false), 2);
   first4 = tmp63[0];
   __initData7 = tmp65;
-  const obj26 = initialBountyId(4596);
+  const obj26 = initialBountyId(4595);
   const obj27 = { videoEndPeekProgress: sharedValue, getBountyVideoEndPeekScale, videoEndPeekTargetScale: memo1, getBountyVideoEndPeekClipHeight, videoLayout: memo, BOUNTIES_MODAL_FOOTER_HEIGHT: 97 };
   function kt() {
     return sharedValue.get() > 0;
@@ -583,8 +583,8 @@ function BountiesModalContentScrollInner(initialBountyId) {
       return;
     }
   }
-  const obj28 = initialBountyId(4596);
-  Ht.__closure = { runOnJS: initialBountyId(4596).runOnJS, setHideListFooterPadding: tmp63[1] };
+  const obj28 = initialBountyId(4595);
+  Ht.__closure = { runOnJS: initialBountyId(4595).runOnJS, setHideListFooterPadding: tmp63[1] };
   Ht.__workletHash = 7553157067719;
   Ht.__initData = memo10;
   const animatedReaction4 = obj28.useAnimatedReaction(kt, Ht);
@@ -630,19 +630,19 @@ function BountiesModalContentScrollInner(initialBountyId) {
     items[1] = size;
     return items;
   }, items21);
-  const obj29 = { runOnJS: initialBountyId(4596).runOnJS, setHideListFooterPadding: tmp63[1] };
+  const obj29 = { runOnJS: initialBountyId(4595).runOnJS, setHideListFooterPadding: tmp63[1] };
   class Ut {
     constructor() {
       obj = closure_0(closure_2[26]);
       return obj.getRevealProgress(closure_38.get(), closure_25, height);
     }
   }
-  const obj30 = initialBountyId(4596);
-  Ut.__closure = { getRevealProgress: initialBountyId(14754).getRevealProgress, scrollY: sharedValue3, lastBountyScrollOffset: result, recapRevealHeight: height3 };
+  const obj30 = initialBountyId(4595);
+  Ut.__closure = { getRevealProgress: initialBountyId(14760).getRevealProgress, scrollY: sharedValue3, lastBountyScrollOffset: result, recapRevealHeight: height3 };
   Ut.__workletHash = 1141192763711;
   Ut.__initData = derivedValue;
   derivedValue = obj30.useDerivedValue(Ut);
-  const obj31 = { getRevealProgress: initialBountyId(14754).getRevealProgress, scrollY: sharedValue3, lastBountyScrollOffset: result, recapRevealHeight: height3 };
+  const obj31 = { getRevealProgress: initialBountyId(14760).getRevealProgress, scrollY: sharedValue3, lastBountyScrollOffset: result, recapRevealHeight: height3 };
   class Gt {
     constructor() {
       obj = { opacity: null };
@@ -652,12 +652,12 @@ function BountiesModalContentScrollInner(initialBountyId) {
       return obj;
     }
   }
-  const obj32 = initialBountyId(4596);
-  Gt.__closure = { interpolate: initialBountyId(4596).interpolate, recapPullProgress: derivedValue, Extrapolation: initialBountyId(4596).Extrapolation };
+  const obj32 = initialBountyId(4595);
+  Gt.__closure = { interpolate: initialBountyId(4595).interpolate, recapPullProgress: derivedValue, Extrapolation: initialBountyId(4595).Extrapolation };
   Gt.__workletHash = 15664240485606;
   Gt.__initData = __initData8;
   const animatedStyle1 = obj32.useAnimatedStyle(Gt);
-  const obj33 = { interpolate: initialBountyId(4596).interpolate, recapPullProgress: derivedValue, Extrapolation: initialBountyId(4596).Extrapolation };
+  const obj33 = { interpolate: initialBountyId(4595).interpolate, recapPullProgress: derivedValue, Extrapolation: initialBountyId(4595).Extrapolation };
   class Qt {
     constructor() {
       obj = { opacity: null };
@@ -670,12 +670,12 @@ function BountiesModalContentScrollInner(initialBountyId) {
       return obj;
     }
   }
-  const obj34 = initialBountyId(4596);
-  Qt.__closure = { interpolate: initialBountyId(4596).interpolate, recapPullProgress: derivedValue, FOOTER_FADE_START_PROGRESS: handleRecapMomentumEnd, FOOTER_FADE_END_PROGRESS: first1, Extrapolation: initialBountyId(4596).Extrapolation };
+  const obj34 = initialBountyId(4595);
+  Qt.__closure = { interpolate: initialBountyId(4595).interpolate, recapPullProgress: derivedValue, FOOTER_FADE_START_PROGRESS: handleRecapMomentumEnd, FOOTER_FADE_END_PROGRESS: first1, Extrapolation: initialBountyId(4595).Extrapolation };
   Qt.__workletHash = 13645152212589;
   Qt.__initData = hasRecurringSwipeUpNux;
   const animatedStyle2 = obj34.useAnimatedStyle(Qt);
-  const obj35 = { interpolate: initialBountyId(4596).interpolate, recapPullProgress: derivedValue, FOOTER_FADE_START_PROGRESS: handleRecapMomentumEnd, FOOTER_FADE_END_PROGRESS: first1, Extrapolation: initialBountyId(4596).Extrapolation };
+  const obj35 = { interpolate: initialBountyId(4595).interpolate, recapPullProgress: derivedValue, FOOTER_FADE_START_PROGRESS: handleRecapMomentumEnd, FOOTER_FADE_END_PROGRESS: first1, Extrapolation: initialBountyId(4595).Extrapolation };
   const tmp73 = first1;
   class Zt {
     constructor() {
@@ -700,8 +700,8 @@ function BountiesModalContentScrollInner(initialBountyId) {
       return obj1;
     }
   }
-  const obj36 = initialBountyId(4596);
-  Zt.__closure = { scrollY: sharedValue3, lastBountyScrollOffset: result, slotHeight: sum, recapPullProgress: derivedValue, getRevealProgress: initialBountyId(14754).getRevealProgress, recapRevealHeight: height3, interpolate: initialBountyId(4596).interpolate, FOOTER_FADE_START_PROGRESS: handleRecapMomentumEnd, FOOTER_FADE_END_PROGRESS: first1, Extrapolation: initialBountyId(4596).Extrapolation };
+  const obj36 = initialBountyId(4595);
+  Zt.__closure = { scrollY: sharedValue3, lastBountyScrollOffset: result, slotHeight: sum, recapPullProgress: derivedValue, getRevealProgress: initialBountyId(14760).getRevealProgress, recapRevealHeight: height3, interpolate: initialBountyId(4595).interpolate, FOOTER_FADE_START_PROGRESS: handleRecapMomentumEnd, FOOTER_FADE_END_PROGRESS: first1, Extrapolation: initialBountyId(4595).Extrapolation };
   Zt.__workletHash = 3460917733424;
   Zt.__initData = __initData9;
   const items22 = [tmp.peekGradient, , , , ];
@@ -724,7 +724,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
   if (hasRecurringSwipeUpNux) {
     hasRecurringSwipeUpNux = tmp23;
   }
-  const obj37 = { scrollY: sharedValue3, lastBountyScrollOffset: result, slotHeight: sum, recapPullProgress: derivedValue, getRevealProgress: initialBountyId(14754).getRevealProgress, recapRevealHeight: height3, interpolate: initialBountyId(4596).interpolate, FOOTER_FADE_START_PROGRESS: handleRecapMomentumEnd, FOOTER_FADE_END_PROGRESS: first1, Extrapolation: initialBountyId(4596).Extrapolation };
+  const obj37 = { scrollY: sharedValue3, lastBountyScrollOffset: result, slotHeight: sum, recapPullProgress: derivedValue, getRevealProgress: initialBountyId(14760).getRevealProgress, recapRevealHeight: height3, interpolate: initialBountyId(4595).interpolate, FOOTER_FADE_START_PROGRESS: handleRecapMomentumEnd, FOOTER_FADE_END_PROGRESS: first1, Extrapolation: initialBountyId(4595).Extrapolation };
   function zt() {
     const obj = { opacity: null };
     value = sharedValue3.get();
@@ -732,12 +732,12 @@ function BountiesModalContentScrollInner(initialBountyId) {
     obj.opacity = ReanimatedRexport.interpolate(value, items, [1, 0], ReanimatedRexport.Extrapolation.CLAMP);
     return obj;
   }
-  const tmp5Result = initialBountyId(4596);
-  zt.__closure = { interpolate: initialBountyId(4596).interpolate, scrollY: sharedValue3, slotHeight: sum, Extrapolation: initialBountyId(4596).Extrapolation };
+  const tmp5Result = initialBountyId(4595);
+  zt.__closure = { interpolate: initialBountyId(4595).interpolate, scrollY: sharedValue3, slotHeight: sum, Extrapolation: initialBountyId(4595).Extrapolation };
   zt.__workletHash = 7289479842131;
   zt.__initData = __initData10;
   const animatedStyle4 = tmp5Result.useAnimatedStyle(zt);
-  const obj38 = { interpolate: initialBountyId(4596).interpolate, scrollY: sharedValue3, slotHeight: sum, Extrapolation: initialBountyId(4596).Extrapolation };
+  const obj38 = { interpolate: initialBountyId(4595).interpolate, scrollY: sharedValue3, slotHeight: sum, Extrapolation: initialBountyId(4595).Extrapolation };
   class Kt {
     constructor() {
       return closure_50.get() < c28;
@@ -758,8 +758,8 @@ function BountiesModalContentScrollInner(initialBountyId) {
       return;
     }
   }
-  const tmp5Result2 = initialBountyId(4596);
-  Wt.__closure = { runOnJS: initialBountyId(4596).runOnJS, setIsCloseButtonPressable: tmp40 };
+  const tmp5Result2 = initialBountyId(4595);
+  Wt.__closure = { runOnJS: initialBountyId(4595).runOnJS, setIsCloseButtonPressable: tmp40 };
   Wt.__workletHash = 12445734761450;
   Wt.__initData = __initData12;
   const animatedReaction5 = tmp5Result2.useAnimatedReaction(Kt, Wt);
@@ -805,7 +805,7 @@ function BountiesModalContentScrollInner(initialBountyId) {
     let tmp84 = null;
     if (tmp42) {
       const obj40 = { orbAmount: stateFromStores };
-      tmp84 = callback2(tmp5(14790).BountiesScrollRecapFooter, obj40);
+      tmp84 = callback2(tmp5(14796).BountiesScrollRecapFooter, obj40);
     }
     const obj41 = { value: memo3, children: null };
     const obj42 = { style: tmp.root, children: null };
@@ -821,16 +821,16 @@ function BountiesModalContentScrollInner(initialBountyId) {
       obj43.pointerEvents = str;
       const obj44 = {
         adContentId,
-        adCreativeType: tmp5(5960).AdCreativeType.BOUNTY,
-        questContent: tmp5(5958).QuestContent.BOUNTIES_END_INTERSTITIAL,
+        adCreativeType: tmp5(5949).AdCreativeType.BOUNTY,
+        questContent: tmp5(5947).QuestContent.BOUNTIES_END_INTERSTITIAL,
         overrideVisibility: first2,
         sourceQuestContent,
         children() {
               return closure_2_17(BountiesScrollRecapPage.BountiesScrollRecapPage, { orbAmount, onClose, style: { flex: 1 } });
             }
       };
-      obj43.children = tmp85(tmp5(10957).QuestContentImpressionTrackerNative, obj44);
-      tmp85Result = tmp85(tmp2(4596).View, obj43);
+      obj43.children = tmp85(tmp5(10958).QuestContentImpressionTrackerNative, obj44);
+      tmp85Result = tmp85(tmp2(4595).View, obj43);
     }
     const items26 = [tmp85Result, , , , , ];
     const obj45 = { style: memo8, children: null };
@@ -855,13 +855,13 @@ function BountiesModalContentScrollInner(initialBountyId) {
       scrollEnabled: !tmp16,
       contentContainerStyle: memo9
     };
-    obj45.children = callback2(tmp5(8375).AnimatedFlashList, obj46);
-    items26[1] = callback2(tmp2(4596).View, obj45);
+    obj45.children = callback2(tmp5(8367).AnimatedFlashList, obj46);
+    items26[1] = callback2(tmp2(4595).View, obj45);
     let tmp85Result4 = null;
     if (null != tmp15) {
       const obj47 = { metadata: tmp15.metadata, sheetHeight: memo2, revealProgress: sharedValue, onDismiss: callback2, onInstallPress: null, onOverlaySurfaceClick: null, onCarouselScroll: null };
       ({ onInstallPress: obj49.onInstallPress, onOverlaySurfaceClick: obj49.onOverlaySurfaceClick, onCarouselScroll: obj49.onCarouselScroll } = tmp15);
-      tmp85Result4 = tmp85(tmp2(14795), obj47);
+      tmp85Result4 = tmp85(tmp2(14801), obj47);
     }
     items26[2] = tmp85Result4;
     let tmp85Result5 = null;
@@ -872,8 +872,8 @@ function BountiesModalContentScrollInner(initialBountyId) {
         const items27 = [memo13, animatedStyle4];
         obj48.style = items27;
         const obj50 = { colors: sum1, style: memo.absoluteFill };
-        obj48.children = tmp85(tmp2(5489), obj50);
-        tmp85Result5 = tmp85(tmp2(4596).View, obj48);
+        obj48.children = tmp85(tmp2(5477), obj50);
+        tmp85Result5 = tmp85(tmp2(4595).View, obj48);
       }
     }
     items26[3] = tmp85Result5;
@@ -888,27 +888,27 @@ function BountiesModalContentScrollInner(initialBountyId) {
     let tmp85Result6 = null;
     if (tmp39) {
       const obj52 = { onPress: callback5 };
-      tmp85Result6 = tmp85(tmp2(14796), obj52);
+      tmp85Result6 = tmp85(tmp2(14802), obj52);
     }
     obj51.children = tmp85Result6;
-    items26[4] = callback2(tmp2(4596).View, obj51);
+    items26[4] = callback2(tmp2(4595).View, obj51);
     const obj53 = { visible: tmp42, onContentLayout: callback, zIndex: zIndex4, opacityStyle: animatedStyle3, children: tmp84 };
-    items26[5] = callback2(tmp2(14750), obj53);
+    items26[5] = callback2(tmp2(14756), obj53);
     obj42.children = items26;
     obj41.children = hasRecurringSwipeUpNux(questHomeBounties, obj42);
-    return callback2(tmp5(14759).BountyVideoEndAppStoreProvider, obj41);
+    return callback2(tmp5(14765).BountyVideoEndAppStoreProvider, obj41);
   }
-  const obj39 = { runOnJS: initialBountyId(4596).runOnJS, setIsCloseButtonPressable: tmp40 };
+  const obj39 = { runOnJS: initialBountyId(4595).runOnJS, setIsCloseButtonPressable: tmp40 };
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const QuestConstants = fn(5953);
+const QuestConstants = fn(5942);
 ({ BOUNTY_ORB_AMOUNT: closure_8, DEFAULT_PLACEHOLDER_ENTRYPOINT_BOUNTY_ID: closure_9 } = QuestConstants);
-const BountiesModalConstants = fn(14749);
+const BountiesModalConstants = fn(14755);
 ({ getBountyVideoEndAppStoreSheetHeight: c10, getBountyVideoEndPeekClipHeight: closure_11, getBountyVideoEndPeekScale: closure_12, getBountyVideoEndPeekTargetScale: map1 } = BountiesModalConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_14, ComponentActions: closure_15 } = Constants);
-const ContentDismissActionType = fn(2042).ContentDismissActionType;
+const ContentDismissActionType = fn(2041).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 const PlatformUtils = fn(1365);
@@ -928,7 +928,7 @@ function isScrollEventInBounds(contentOffset) {
 isScrollEventInBounds.__closure = {};
 isScrollEventInBounds.__workletHash = 14148486927190;
 isScrollEventInBounds.__initData = { code: "function isScrollEventInBounds_BountiesModalContentScrollTsx1(event){const maxOffset=Math.max(0,event.contentSize.height-event.layoutMeasurement.height);return event.contentOffset.y>=0&&event.contentOffset.y<=maxOffset;}" };
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let closure_32 = createStyles.createStyles(() => {
   const obj = { root: { flex: 1 }, recapPage: { position: "absolute", zIndex }, listWrapper: { position: "absolute", zIndex: zIndex2, overflow: "hidden" }, closeButton: { position: "absolute", zIndex: zIndex4 }, peekGradient: { position: "absolute", zIndex: zIndex3 } };
   return obj;

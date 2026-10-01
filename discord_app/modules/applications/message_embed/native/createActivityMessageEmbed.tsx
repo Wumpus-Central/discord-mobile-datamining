@@ -1,8 +1,8 @@
-// === Module 12977: createActivityMessageEmbed ===
+// === Module 12985: createActivityMessageEmbed ===
 
-// Module 12977 (createActivityMessageEmbed)
-import createAppMessageEmbed from "createAppMessageEmbed" /* 11623 */;
-import CustomActivityLinkUtils from "CustomActivityLinkUtils" /* 12696 */;
+// Module 12985 (createActivityMessageEmbed)
+import createAppMessageEmbed from "createAppMessageEmbed" /* 11631 */;
+import CustomActivityLinkUtils from "CustomActivityLinkUtils" /* 12707 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/applications/message_embed/native/createActivityMessageEmbed.tsx");

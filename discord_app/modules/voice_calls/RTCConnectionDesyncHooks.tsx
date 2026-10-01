@@ -1,12 +1,12 @@
-// === Module 16068: RTCConnectionDesyncHooks ===
+// === Module 16086: RTCConnectionDesyncHooks ===
 
-// Module 16068 (RTCConnectionDesyncHooks)
+// Module 16086 (RTCConnectionDesyncHooks)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionDesyncStore from "RTCConnectionDesyncStore" /* 13496 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4889 */;
-import VoiceStateStore from "VoiceStateStore" /* 4885 */;
+import RTCConnectionDesyncStore from "RTCConnectionDesyncStore" /* 13504 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4868 */;
+import VoiceStateStore from "VoiceStateStore" /* 4864 */;
 
 const require = globalThis.__r;
 

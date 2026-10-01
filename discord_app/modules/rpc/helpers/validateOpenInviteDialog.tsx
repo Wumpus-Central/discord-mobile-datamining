@@ -1,19 +1,19 @@
-// === Module 14243: validateOpenInviteDialog ===
+// === Module 14251: validateOpenInviteDialog ===
 
-// Module 14243 (validateOpenInviteDialog)
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8700 */;
-import RPCErrorDefault from "RPCError" /* 8969 */;
-import canViewInviteModal from "canViewInviteModal" /* 9263 */;
-import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14230 */;
-import FramesStore from "FramesStore" /* 8698 */;
-import ChannelStore from "ChannelStore" /* 2045 */;
-import GuildStore from "GuildStore" /* 2067 */;
-import PermissionStore from "PermissionStore" /* 4499 */;
+// Module 14251 (validateOpenInviteDialog)
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8692 */;
+import RPCErrorDefault from "RPCError" /* 8962 */;
+import canViewInviteModal from "canViewInviteModal" /* 9257 */;
+import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14238 */;
+import FramesStore from "FramesStore" /* 8690 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
+import GuildStore from "GuildStore" /* 2066 */;
+import PermissionStore from "PermissionStore" /* 4498 */;
 
 require = fn;
-const TransportTypes = fn(4769).TransportTypes;
+const TransportTypes = fn(5270).TransportTypes;
 const RPCErrors = fn(1074).RPCErrors;
-const asLaunched = fn(8699).asLaunched;
+const asLaunched = fn(8691).asLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/helpers/validateOpenInviteDialog.tsx");
 

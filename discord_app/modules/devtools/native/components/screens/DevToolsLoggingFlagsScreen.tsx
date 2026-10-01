@@ -1,15 +1,15 @@
-// === Module 15349: DevToolsLoggingFlagsScreen ===
+// === Module 15354: DevToolsLoggingFlagsScreen ===
 
-// Module 15349 (DevToolsLoggingFlagsScreen)
+// Module 15354 (DevToolsLoggingFlagsScreen)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import DeveloperOptionsActionCreators from "DeveloperOptionsActionCreators" /* 1347 */;
-import TableRowGroup from "TableRowGroup" /* 6195 */;
-import TableSwitchRow from "TableSwitchRow" /* 6817 */;
+import TableRowGroup from "TableRowGroup" /* 6185 */;
+import TableSwitchRow from "TableSwitchRow" /* 6807 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1346 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4866 */;
+import createStyles from "createStyles" /* 4845 */;
 import size from "module_2" /* 2 */;
 
 const ScrollView = _mod17.ScrollView;
@@ -23,9 +23,9 @@ const result = size.fileFinishedImporting("modules/devtools/native/components/sc
 export default function DevToolsLoggingFlagsScreen() {
   const tmp = closure_6();
   const items = [DeveloperOptionsStore];
-  const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => ({ isLoggingGatewayEvents: DeveloperOptionsStore.isLoggingGatewayEvents, isLoggingAnalyticsEvents: DeveloperOptionsStore.isLoggingAnalyticsEvents, isTracingRequests: DeveloperOptionsStore.isTracingRequests }));
+  const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => ({ isLoggingGatewayEvents: DeveloperOptionsStore.isLoggingGatewayEvents, isLoggingAnalyticsEvents: DeveloperOptionsStore.isLoggingAnalyticsEvents, isLoggingInteractionTTIAnalytics: DeveloperOptionsStore.isLoggingInteractionTTIAnalytics, isTracingRequests: DeveloperOptionsStore.isTracingRequests }));
   const obj2 = { style: tmp.container, contentContainerStyle: tmp.content, children: null };
-  ({ isLoggingGatewayEvents, isLoggingAnalyticsEvents, isTracingRequests } = stateFromStoresObject);
+  ({ isLoggingGatewayEvents, isLoggingAnalyticsEvents, isLoggingInteractionTTIAnalytics, isTracingRequests } = stateFromStoresObject);
   const obj3 = { title: "Logging", hasIcons: false, children: null };
   const items1 = [
     React4(TableSwitchRow.TableSwitchRow, {
@@ -42,6 +42,14 @@ export default function DevToolsLoggingFlagsScreen() {
       value: isLoggingAnalyticsEvents,
       onValueChange(logAnalyticsEvents) {
         return DeveloperOptionsActionCreators.setDeveloperOptionSettings({ logAnalyticsEvents });
+      }
+    }),
+    React4(TableSwitchRow.TableSwitchRow, {
+      label: "Interaction TTI Analytics",
+      subLabel: "Logs Interaction TTI analytics events to the developer console.",
+      value: isLoggingInteractionTTIAnalytics,
+      onValueChange(logInteractionTTIAnalytics) {
+        return DeveloperOptionsActionCreators.setDeveloperOptionSettings({ logInteractionTTIAnalytics });
       }
     }),
     React4(TableSwitchRow.TableSwitchRow, {

@@ -1,16 +1,16 @@
-// === Module 5394: StickersUtils ===
+// === Module 5382: StickersUtils ===
 
-// Module 5394 (StickersUtils)
+// Module 5382 (StickersUtils)
 import PlatformUtils from "PlatformUtils" /* 1364 */;
 import AvatarUtils from "AvatarUtils" /* 1397 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1432 */;
 import ForceSdrEmojisStickersExperiment from "ForceSdrEmojisStickersExperiment" /* 1881 */;
-import StickersTypes from "StickersTypes" /* 5778 */;
-import StickersSuggestionUtils from "StickersSuggestionUtils" /* 5779 */;
+import StickersTypes from "StickersTypes" /* 5767 */;
+import StickersSuggestionUtils from "StickersSuggestionUtils" /* 5768 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
-import GuildStore from "GuildStore" /* 2067 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 5395 */;
-import StickerMessagePreviewStore from "StickerMessagePreviewStore" /* 5777 */;
+import GuildStore from "GuildStore" /* 2066 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 5383 */;
+import StickerMessagePreviewStore from "StickerMessagePreviewStore" /* 5766 */;
 
 require = fn;
 function getStickerExtensionFromFormatType(format_type) {
@@ -37,7 +37,7 @@ const API_ENDPOINT = GLOBAL_ENV.API_ENDPOINT;
 const MEDIA_PROXY_ENDPOINT = GLOBAL_ENV.MEDIA_PROXY_ENDPOINT;
 ({ PROJECT_ENV: closure_12, ASSET_ENDPOINT } = GLOBAL_ENV);
 const CDN_HOST = GLOBAL_ENV.CDN_HOST;
-const values = Object.values(fn(5778).StickerExtensions);
+const values = Object.values(fn(5767).StickerExtensions);
 const decodeURIComponentResult = decodeURIComponent(Endpoints.STICKER_ASSET("[\\d]+", "(" + values.join("|") + ")"));
 const regExp = new RegExp("(" + location.protocol + ASSET_ENDPOINT + "|" + location.protocol + MEDIA_PROXY_ENDPOINT + ")(" + decodeURIComponentResult + ")", "ig");
 const regExp1 = new RegExp("" + location.protocol + API_ENDPOINT + "(" + decodeURIComponentResult + ")", "ig");

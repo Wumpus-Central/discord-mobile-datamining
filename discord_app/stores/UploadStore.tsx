@@ -1,9 +1,9 @@
-// === Module 7452: UploadStore ===
+// === Module 7430: UploadStore ===
 
-// Module 7452 (UploadStore)
+// Module 7430 (UploadStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import MessageStore from "MessageStore" /* 5086 */;
+import MessageStore from "MessageStore" /* 5065 */;
 
 const re1 = /^(assets-library|ph|file):\/\//;
 const re2 = /^content:\/\//;

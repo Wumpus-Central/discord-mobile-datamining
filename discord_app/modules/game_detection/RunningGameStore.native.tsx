@@ -3,10 +3,10 @@
 // Module 2000 (RunningGameStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import OverlayTypes from "OverlayTypes" /* 13731 */;
+import OverlayTypes from "OverlayTypes" /* 13739 */;
 import GameStore from "GameStore" /* 2001 */;
 import DetectableGameStore from "DetectableGameStore" /* 2017 */;
-import LibraryApplicationStore from "LibraryApplicationStore" /* 7013 */;
+import LibraryApplicationStore from "LibraryApplicationStore" /* 7004 */;
 
 require = fn;
 const Store = initializeDefault.Store;

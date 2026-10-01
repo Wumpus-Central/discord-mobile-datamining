@@ -1,14 +1,14 @@
-// === Module 16622: VibegrationsNativeTurnTimer ===
+// === Module 16645: VibegrationsNativeTurnTimer ===
 
-// Module 16622 (VibegrationsNativeTurnTimer)
-import Text_Text from "Text/Text" /* 4862 */;
-import VibegrationsDuration from "VibegrationsDuration" /* 16560 */;
-import useVibegrationsElapsedMs from "useVibegrationsElapsedMs" /* 16623 */;
+// Module 16645 (VibegrationsNativeTurnTimer)
+import Text_Text from "Text/Text" /* 4841 */;
+import VibegrationsDuration from "VibegrationsDuration" /* 16582 */;
+import useVibegrationsElapsedMs from "useVibegrationsElapsedMs" /* 16646 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let closure_3 = createStyles.createStyles({ timer: { fontVariant: ["tabular-nums"] } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/vibegrations/native/VibegrationsNativeTurnTimer.tsx");

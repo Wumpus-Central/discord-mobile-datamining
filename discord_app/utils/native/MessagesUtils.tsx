@@ -1,10 +1,10 @@
-// === Module 11641: MessagesUtils ===
+// === Module 11649: MessagesUtils ===
 
-// Module 11641 (MessagesUtils)
-import CodedLink from "CodedLink" /* 4851 */;
-import MediaPostEmbedUtils from "MediaPostEmbedUtils" /* 5014 */;
-import GuildTemplatesConstants from "GuildTemplatesConstants" /* 6940 */;
-import ExperimentEmbedUtils from "ExperimentEmbedUtils" /* 7512 */;
+// Module 11649 (MessagesUtils)
+import CodedLink from "CodedLink" /* 4830 */;
+import MediaPostEmbedUtils from "MediaPostEmbedUtils" /* 4993 */;
+import GuildTemplatesConstants from "GuildTemplatesConstants" /* 6931 */;
+import ExperimentEmbedUtils from "ExperimentEmbedUtils" /* 7490 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 
@@ -197,9 +197,11 @@ export default {
                                         if (CodedLink.CodedLinkType.GAME_PROFILE !== type) {
                                           if (CodedLink.CodedLinkType.GAME_SERVER_SHARE !== type) {
                                             if (CodedLink.CodedLinkType.USER_PROFILE !== type) {
-                                              const _Error = Error;
-                                              const _HermesInternal = HermesInternal;
-                                              throw Error("Unknown coded link type: " + type);
+                                              if (CodedLink.CodedLinkType.GAME_ORGANIZATION_INVITE !== type) {
+                                                const _Error = Error;
+                                                const _HermesInternal = HermesInternal;
+                                                throw Error("Unknown coded link type: " + type);
+                                              }
                                             }
                                           }
                                         }

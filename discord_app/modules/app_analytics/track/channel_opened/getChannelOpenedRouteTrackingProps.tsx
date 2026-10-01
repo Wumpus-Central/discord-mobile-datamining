@@ -1,9 +1,9 @@
-// === Module 16791: getChannelOpenedRouteTrackingProps ===
+// === Module 16814: getChannelOpenedRouteTrackingProps ===
 
-// Module 16791 (getChannelOpenedRouteTrackingProps)
+// Module 16814 (getChannelOpenedRouteTrackingProps)
 import router_utils from "router_utils" /* 1101 */;
-import ThreadAnalyticsUtils from "ThreadAnalyticsUtils" /* 7388 */;
-import ChannelStore from "ChannelStore" /* 2045 */;
+import ThreadAnalyticsUtils from "ThreadAnalyticsUtils" /* 7366 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
 
 require = fn;
 const size = fn(2);

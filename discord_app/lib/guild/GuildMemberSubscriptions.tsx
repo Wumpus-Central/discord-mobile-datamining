@@ -1,11 +1,11 @@
-// === Module 6899: GuildMemberSubscriptions ===
+// === Module 6890: GuildMemberSubscriptions ===
 
-// Module 6899 (GuildMemberSubscriptions)
+// Module 6890 (GuildMemberSubscriptions)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import DurationsDefault from "Durations" /* 1091 */;
-import Timers from "Timers" /* 2040 */;
+import Timers from "Timers" /* 2039 */;
 
 require = fn;
 const MINUTE = DurationsDefault.Millis.MINUTE;

@@ -1,12 +1,12 @@
-// === Module 15473: CheckpointStatsScreen ===
+// === Module 15478: CheckpointStatsScreen ===
 
-// Module 15473 (CheckpointStatsScreen)
+// Module 15478 (CheckpointStatsScreen)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 15468 */;
-import CheckpointTextDefault from "CheckpointText" /* 15470 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 15473 */;
+import CheckpointTextDefault from "CheckpointText" /* 15475 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4866 */;
+import createStyles from "createStyles" /* 4845 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;

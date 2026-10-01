@@ -1,18 +1,18 @@
-// === Module 10970: BadgeProgressSection ===
+// === Module 10972: BadgeProgressSection ===
 
-// Module 10970 (BadgeProgressSection)
+// Module 10972 (BadgeProgressSection)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4862 */;
-import BadgeArtImageDefault from "BadgeArtImage" /* 10856 */;
-import BadgeDetailsUtils from "BadgeDetailsUtils" /* 10871 */;
+import Text_Text from "Text/Text" /* 4841 */;
+import BadgeArtImageDefault from "BadgeArtImage" /* 10853 */;
+import BadgeDetailsUtils from "BadgeDetailsUtils" /* 10872 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = { section: { gap: nativeDefault.space.PX_12 }, row: null, content: null, track: null, fill: null };
 let obj3 = { gap: nativeDefault.space.PX_12 };
 obj2.row = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_16 };

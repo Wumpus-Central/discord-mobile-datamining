@@ -1,6 +1,6 @@
-// === Module 12898: ? ===
+// === Module 12906: ? ===
 
-// Module 12898
+// Module 12906
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/assets/mobile_wishlist_coachmark.png.js");

@@ -1,19 +1,19 @@
-// === Module 16120: FavoritesGuildSidebarHeader ===
+// === Module 16140: FavoritesGuildSidebarHeader ===
 
-// Module 16120 (FavoritesGuildSidebarHeader)
+// Module 16140 (FavoritesGuildSidebarHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1981 */;
-import _modDef3361 from "module_3361" /* 3361 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4830 */;
-import Text_Text from "Text/Text" /* 4862 */;
-import Stack_Stack from "Stack/Stack" /* 5475 */;
-import ChatIcon from "ChatIcon" /* 5581 */;
-import TextIcon from "TextIcon" /* 5590 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 5611 */;
-import FavoritesHooks from "FavoritesHooks" /* 9886 */;
-import openFavoritesGuildLimitUpsell from "openFavoritesGuildLimitUpsell" /* 9889 */;
-import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 10642 */;
+import _modDef3360 from "module_3360" /* 3360 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4809 */;
+import Text_Text from "Text/Text" /* 4841 */;
+import Stack_Stack from "Stack/Stack" /* 5463 */;
+import ChatIcon from "ChatIcon" /* 5569 */;
+import TextIcon from "TextIcon" /* 5578 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 5599 */;
+import FavoritesHooks from "FavoritesHooks" /* 9878 */;
+import openFavoritesGuildLimitUpsell from "openFavoritesGuildLimitUpsell" /* 9881 */;
+import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 10634 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -30,7 +30,7 @@ function EmptyBody() {
   }, []);
   let obj = { variant: "text-sm/medium", color: "text-muted", children: null };
   const intl = util.intl;
-  obj.children = intl.format(_modDef3361.Z3Hdr5, { onClick: callback });
+  obj.children = intl.format(_modDef3360.Z3Hdr5, { onClick: callback });
   return timestampProducer(Text_Text.Text, obj);
 }
 function PlaceholderRows() {
@@ -69,10 +69,10 @@ function PlaceholderRows() {
   return React5(View, obj);
 }
 const View = fn(17).View;
-let closure_5 = fn(16034).useHasFavoritesGuildSuggestions;
+let closure_5 = fn(16049).useHasFavoritesGuildSuggestions;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = { copy: { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 }, divider: null, placeholderRows: null, placeholderRow: null, placeholderBar: null, placeholderBarShort: null, placeholderBarLong: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.divider = { height: 1, marginTop: nativeDefault.space.PX_12, marginHorizontal: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
@@ -103,7 +103,7 @@ export default function FavoritesGuildSidebarHeader() {
   const obj3 = { spacing: nativeDefault.space.PX_8, style: tmp.copy, children: null };
   const obj4 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
-  obj4.children = intl.string(_modDef3361["1n0TGE"]);
+  obj4.children = intl.string(_modDef3360["1n0TGE"]);
   const items1 = [timestampProducer(Text_Text.Heading, obj4), timestampProducer(EmptyBody, {})];
   obj3.children = items1;
   items[1] = React5(Stack_Stack.Stack, obj3);

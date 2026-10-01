@@ -1,8 +1,8 @@
-// === Module 16930: useMessageRequestsCount ===
+// === Module 16951: useMessageRequestsCount ===
 
-// Module 16930 (useMessageRequestsCount)
+// Module 16951 (useMessageRequestsCount)
 import initialize from "initialize" /* 504 */;
-import MessageRequestStore from "MessageRequestStore" /* 6836 */;
+import MessageRequestStore from "MessageRequestStore" /* 6827 */;
 
 require = fn;
 const size = fn(2);

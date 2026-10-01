@@ -1,6 +1,6 @@
-// === Module 13820: AppCrashedReasons ===
+// === Module 13828: AppCrashedReasons ===
 
-// Module 13820 (AppCrashedReasons)
+// Module 13828 (AppCrashedReasons)
 import size from "module_2" /* 2 */;
 
 const obj = { ALL: new Set(["socket_crashed", "unhandled_js_error", "unhandled_native_error"]) };

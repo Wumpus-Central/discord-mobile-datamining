@@ -1,21 +1,21 @@
-// === Module 7762: transformMessageComponents ===
+// === Module 7749: transformMessageComponents ===
 
-// Module 7762 (transformMessageComponents)
+// Module 7749 (transformMessageComponents)
 import DurationsDefault from "Durations" /* 1091 */;
 import URLUtilsDefault from "URLUtils" /* 1366 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 5016 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 5090 */;
-import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 7760 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 7778 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 4995 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 5069 */;
+import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 7747 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 7765 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import priv from "priv" /* 1439 */;
 
 const util = tmp4(1115);
 const FlagUtils = tmp4(1385);
-const AgeVerificationUtils = tmp4(5078);
-const MediaTypes = tmp4(5096);
-const sanitizeMediaDimension = tmp4(7759);
-const ExplicitMediaUtils = tmp4(7777);
+const AgeVerificationUtils = tmp4(5057);
+const MediaTypes = tmp4(5075);
+const sanitizeMediaDimension = tmp4(7746);
+const ExplicitMediaUtils = tmp4(7764);
 require = fn;
 function transformToRowGeneratedComponent(message, accessory) {
   _require = message;
@@ -424,7 +424,7 @@ function transformToRowGeneratedComponent(message, accessory) {
                     } else if (tmp7.V2026 === version) {
                       const obj22 = {};
                       const merged11 = Object.assign(tmp6);
-                      obj22.checkpointData = tmp(tmp2[30]).transformCheckpoint2026CardToRowGeneratedComponent(checkpointData);
+                      obj22.checkpointData = tmp(tmp2[30]).transformCheckpoint2026CardToRowGeneratedComponent(checkpointData, message);
                       obj = obj22;
                       const tmpResult40 = tmp(tmp2[30]);
                     } else {
@@ -529,8 +529,8 @@ function transformUnfurledMediaItem(media, shouldShowMedia) {
 }
 let closure_3 = ["checkpointData"];
 const processColor = fn(17).processColor;
-const CheckpointVersions = fn(5091).CheckpointVersions;
-let closure_7 = fn(7763).TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS;
+const CheckpointVersions = fn(5070).CheckpointVersions;
+let closure_7 = fn(7750).TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS;
 let obj = { max: Infinity, maxAge: null, updateAgeOnGet: true };
 obj.maxAge = 15 * DurationsDefault.Millis.MINUTE;
 const importDefaultResult1 = new priv(obj);
@@ -538,7 +538,7 @@ let size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/renderer/transformMessageComponents.tsx");
 
 export default function transformMessageComponents(message, arr) {
-  const obj = { type: "textDisplayComponent", parserState: obj3(7509).getInitialParserStateFromMessage(message.message, closure_7) };
+  const obj = { type: "textDisplayComponent", parserState: obj3(7487).getInitialParserStateFromMessage(message.message, closure_7) };
   obj3 = {};
   const merged = Object.assign(message);
   obj3.markdownConfigs = { textDisplayComponent: obj };

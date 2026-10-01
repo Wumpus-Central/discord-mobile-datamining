@@ -1,10 +1,10 @@
-// === Module 11921: useUploadDisabled ===
+// === Module 11928: useUploadDisabled ===
 
-// Module 11921 (useUploadDisabled)
-import DraftStore from "DraftStore" /* 5396 */;
-import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 6838 */;
-import PermissionStore from "PermissionStore" /* 4499 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 5395 */;
+// Module 11928 (useUploadDisabled)
+import DraftStore from "DraftStore" /* 5384 */;
+import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 6829 */;
+import PermissionStore from "PermissionStore" /* 4498 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 5383 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 

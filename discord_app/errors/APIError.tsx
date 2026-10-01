@@ -1,6 +1,6 @@
-// === Module 4766: APIError ===
+// === Module 5267: APIError ===
 
-// Module 4766 (APIError)
+// Module 5267 (APIError)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1115 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;

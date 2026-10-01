@@ -1,138 +1,195 @@
-// === Module 6955: GuildDiscoveryUtils ===
+// === Module 6946: GuildDiscoveryUtils ===
 
-// Module 6955 (GuildDiscoveryUtils)
+// Module 6946 (GuildDiscoveryUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import _modDef1473 from "module_1473" /* 1473 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LurkingStore from "LurkingStore" /* 4500 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 4784 */;
-import GuildStore from "GuildStore" /* 2067 */;
+import LurkingStore from "LurkingStore" /* 4499 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4765 */;
+import GuildStore from "GuildStore" /* 2066 */;
 
 require = fn;
 let closure_11 = async function _startLurking(arg0) {
-  if (1 === tmp5) {
+  if (c8 === 2) {
+    c8 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
     if (arg0 === 1) {
-      c8 = 3;
       throw value;
     } else if (arg0 === 2) {
-      c8 = 3;
-      return { value, done: true };
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
-      const channelId = closure_133_2.channelId;
-      const onSuccess = closure_133_2.onSuccess;
-      const joinSource = closure_133_2.joinSource;
-      const loadId = closure_133_2.loadId;
-      const shouldNavigate = closure_133_2.shouldNavigate;
-      let tmp24 = undefined === shouldNavigate;
-      if (!tmp24) {
-        tmp24 = shouldNavigate;
-      }
-      closure_133_9 = tmp24;
-      const history = closure_134_0(closure_134_2[5]).getHistory();
-      const guild = closure_134_6.getGuild(closure_133_0);
-      const obj8 = { sourceLocationStack: closure_133_3, state: null };
-      obj8.state = { analyticsSource: closure_133_1 };
-      closure_133_12 = obj8;
-      if (null != guild) {
-        if (null != guild.joinedAt) {
-          if (closure_133_9) {
-            if (null == channelId) {
-              closure_134_0(closure_134_2[6]).transitionToGuild(closure_133_0, closure_133_12);
-              closure_134_0(closure_134_2[6]);
-            } else {
-              const obj11 = {};
-              const merged = Object.assign(closure_133_12);
-              obj11.navigationReplace = true;
-              obj11.openChannel = true;
-              closure_134_1(closure_134_2[7])(closure_134_10.CHANNEL(closure_133_0, channelId, closure_133_2.messageId), obj11);
-              closure_134_10.CHANNEL(closure_133_0, channelId, closure_133_2.messageId);
-              closure_134_1(closure_134_2[7]);
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c8 = 2;
+      if (0 === c7) {
+        if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c8 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          closure_6 = tmp5;
+          closure_5 = tmp2;
+          closure_133_2 = undefined;
+          closure_133_3 = undefined;
+          closure_133_0 = closure_0;
+          closure_133_1 = closure_1;
+          let obj5 = closure_2;
+          if (closure_2 === undefined) {
+            obj5 = {};
+          }
+          closure_133_2 = obj5;
+          closure_133_3 = closure_3;
+          let channelId;
+          let onSuccess;
+          let joinSource;
+          let loadId;
+          let shouldNavigate;
+          closure_133_9 = undefined;
+          let history;
+          let guild;
+          closure_133_12 = undefined;
+          closure_133_13 = undefined;
+          c7 = 1;
+          c8 = 1;
+          return { value: "flex", done: null };
+        }
+      } else {
+        if (1 === tmp5) {
+          if (arg0 === 1) {
+            c8 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c8 = 3;
+            const obj6 = { value, done: true };
+            return obj6;
+          } else {
+            channelId = closure_133_2.channelId;
+            onSuccess = closure_133_2.onSuccess;
+            joinSource = closure_133_2.joinSource;
+            loadId = closure_133_2.loadId;
+            shouldNavigate = closure_133_2.shouldNavigate;
+            let tmp24 = undefined === shouldNavigate;
+            if (!tmp24) {
+              tmp24 = shouldNavigate;
             }
-          }
-        }
-      }
-      if (null != guild) {
-        if (closure_134_4.isLurking(closure_133_0)) {
-          if (closure_133_9) {
-            const obj12 = {};
-            const merged1 = Object.assign(closure_133_12);
-            obj12.welcomeModalChannelId = channelId;
-            obj12.navigationReplace = null != channelId;
-            obj12.openChannel = null != channelId;
-            obj12.search = history.location.search;
-            c7 = 2;
+            closure_133_9 = tmp24;
+            history = closure_134_0(closure_134_2[5]).getHistory();
+            guild = closure_134_6.getGuild(closure_133_0);
+            const obj8 = { sourceLocationStack: closure_133_3, state: null };
+            const obj9 = { analyticsSource: closure_133_1 };
+            obj8.state = obj9;
+            closure_133_12 = obj8;
+            if (null != guild) {
+              if (null != guild.joinedAt) {
+                if (closure_133_9) {
+                  if (null == channelId) {
+                    closure_134_0(closure_134_2[6]).transitionToGuild(closure_133_0, closure_133_12);
+                    const obj17 = closure_134_0(closure_134_2[6]);
+                  } else {
+                    const obj11 = {};
+                    const tmp84 = closure_134_1(closure_134_2[7]);
+                    const merged = Object.assign(closure_133_12);
+                    obj11.navigationReplace = true;
+                    obj11.openChannel = true;
+                    tmp84(closure_134_10.CHANNEL(closure_133_0, channelId, closure_133_2.messageId), obj11);
+                    const CHANNELResult = closure_134_10.CHANNEL(closure_133_0, channelId, closure_133_2.messageId);
+                  }
+                }
+              }
+            }
+            if (null != guild) {
+              if (closure_134_4.isLurking(closure_133_0)) {
+                if (closure_133_9) {
+                  const obj13 = closure_134_1(closure_134_2[8]);
+                  const obj12 = {};
+                  const merged1 = Object.assign(closure_133_12);
+                  obj12.welcomeModalChannelId = channelId;
+                  obj12.navigationReplace = null != channelId;
+                  obj12.openChannel = null != channelId;
+                  obj12.search = history.location.search;
+                  c7 = 2;
+                  c8 = 1;
+                  const obj14 = { value: obj13.transitionToGuildSync(closure_133_0, obj12, channelId, closure_133_2.messageId), done: false };
+                  return obj14;
+                }
+              }
+            }
+            let tmp45;
+            if (closure_133_3 != null) {
+              tmp45 = tmp44[closure_133_3.length - 1];
+            }
+            let page = tmp45;
+            if (tmp45 == null) {
+              page = undefined;
+              if (closure_133_1 != null) {
+                page = closure_133_1.page;
+              }
+            }
+            closure_133_13 = page;
+            const obj7 = closure_134_0(closure_134_2[5]);
+            const obj15 = { lurker: true, source: joinSource, loadId, lurkLocation: closure_133_13 };
+            c7 = 3;
             c8 = 1;
-            closure_134_1(closure_134_2[8]);
-            return { value: closure_134_1(closure_134_2[8]).transitionToGuildSync(closure_133_0, obj12, channelId, closure_133_2.messageId), done: false };
+            const obj16 = { value: closure_134_1(closure_134_2[8]).joinGuild(closure_133_0, obj15), done: false };
+            return obj16;
           }
+        } else if (2 === tmp5) {
+          if (arg0 === 1) {
+            c8 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c8 = 3;
+            const obj18 = { value, done: true };
+            return obj18;
+          }
+        } else if (3 === tmp5) {
+          if (arg0 === 1) {
+            c8 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c8 = 3;
+            const obj19 = { value, done: true };
+            return obj19;
+          } else if (closure_133_9) {
+            const obj2 = closure_134_1(closure_134_2[8]);
+            const obj20 = {};
+            const merged2 = Object.assign(closure_133_12);
+            obj20.welcomeModalChannelId = channelId;
+            obj20.navigationReplace = null != channelId;
+            obj20.openChannel = null != channelId;
+            obj20.search = history.location.search;
+            c7 = 4;
+            c8 = 1;
+            const obj21 = { value: obj2.transitionToGuildSync(closure_133_0, obj20, channelId, closure_133_2.messageId), done: false };
+            return obj21;
+          }
+        } else if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c8 = 3;
+          const obj = { value, done: true };
+          return obj;
         }
-      }
-      let tmp45;
-      if (closure_133_3 != null) {
-        tmp45 = tmp44[closure_133_3.length - 1];
-      }
-      let page = tmp45;
-      if (tmp45 == null) {
-        page = undefined;
-        if (closure_133_1 != null) {
-          page = closure_133_1.page;
+        if (onSuccess != null) {
+          tmp102();
         }
+        c8 = 3;
+        return { value: "HermesInternal", done: null };
       }
-      closure_133_13 = page;
-      closure_134_0(closure_134_2[5]);
-      c7 = 3;
-      c8 = 1;
-      return { value: closure_134_1(closure_134_2[8]).joinGuild(closure_133_0, { lurker: true, source: joinSource, loadId, lurkLocation: closure_133_13 }), done: false };
+    } catch (tmp106) {
+      c8 = tmp;
+      throw tmp106;
     }
-  } else if (2 === tmp5) {
-    if (arg0 === 1) {
-      c8 = 3;
-      throw value;
-    } else if (arg0 === 2) {
-      c8 = 3;
-      return { value, done: true };
-    }
-  } else if (3 === tmp5) {
-    if (arg0 === 1) {
-      c8 = 3;
-      throw value;
-    } else if (arg0 === 2) {
-      c8 = 3;
-      return { value, done: true };
-    } else if (closure_133_9) {
-      const obj20 = {};
-      const merged2 = Object.assign(closure_133_12);
-      obj20.welcomeModalChannelId = channelId;
-      obj20.navigationReplace = null != channelId;
-      obj20.openChannel = null != channelId;
-      obj20.search = history.location.search;
-      c7 = 4;
-      c8 = 1;
-      closure_134_1(closure_134_2[8]);
-      return { value: closure_134_1(closure_134_2[8]).transitionToGuildSync(closure_133_0, obj20, channelId, closure_133_2.messageId), done: false };
-    }
-  } else if (arg0 === 1) {
-    c8 = 3;
-    throw value;
-  } else if (arg0 === 2) {
-    c8 = 3;
-    return { value, done: true };
   }
-  if (onSuccess != null) {
-    tmp102();
-  }
-  await "HermesInternal";
-  closure_5 = tmp2;
-  closure_133_0 = closure_0;
-  closure_133_1 = closure_1;
-  let obj5 = closure_2;
-  if (closure_2 === undefined) {
-    obj5 = {};
-  }
-  closure_133_2 = obj5;
-  closure_133_3 = closure_3;
-  return "flex";
 };
 function makeDiscoverableGuild(body) {
   const obj = { id: body.id, name: body.name, description: body.description, splash: body.splash, banner: body.banner, icon: body.icon, features: new Set(body.features), presenceCount: null, memberCount: null, premiumSubscriptionCount: null, preferredLocale: null, discoverySplash: null, emojis: null, emojiCount: null, stickers: null, stickerCount: null, keywords: null };

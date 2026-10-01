@@ -1,30 +1,30 @@
-// === Module 16447: VibegrationsPublishNotesSheet ===
+// === Module 16468: VibegrationsPublishNotesSheet ===
 
-// Module 16447 (VibegrationsPublishNotesSheet)
+// Module 16468 (VibegrationsPublishNotesSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import _modDef3715 from "module_3715" /* 3715 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4830 */;
-import VibegrationsUtils from "VibegrationsUtils" /* 5566 */;
-import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11077 */;
-import VibegrationsPatchNotesChannel from "VibegrationsPatchNotesChannel" /* 16448 */;
+import _modDef3714 from "module_3714" /* 3714 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4809 */;
+import VibegrationsUtils from "VibegrationsUtils" /* 5554 */;
+import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 11081 */;
+import VibegrationsPatchNotesChannel from "VibegrationsPatchNotesChannel" /* 16469 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 4497 */;
-import GuildStore from "GuildStore" /* 2067 */;
-import RelationshipStore from "RelationshipStore" /* 4509 */;
+import GuildChannelStore from "GuildChannelStore" /* 4496 */;
+import GuildStore from "GuildStore" /* 2066 */;
+import RelationshipStore from "RelationshipStore" /* 4508 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-let closure_9 = fn(4497).GUILD_SELECTABLE_CHANNELS_KEY;
-const MessageSendLocation = fn(4859).MessageSendLocation;
+let closure_9 = fn(4496).GUILD_SELECTABLE_CHANNELS_KEY;
+const MessageSendLocation = fn(4838).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const VibegrationsPublishNotesSheet = "VibegrationsPublishNotesSheet";
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let closure_17 = createStyles.createStyles((paddingBottom) => {
   const obj = { container: { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom }, section: null, notesSection: null, statusRow: null, actions: null };
   const obj2 = { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom };
@@ -202,7 +202,7 @@ export default function VibegrationsPublishNotesSheet(guildId) {
     const obj4 = { title: null };
     const obj = ActionSheetActionCreators;
     const intl = util.intl;
-    obj4.title = intl.string(_modDef3715.IcSdnu);
+    obj4.title = intl.string(_modDef3714.IcSdnu);
     obj3.header = obj4;
     obj3.guild = GuildStore.getGuild(guildId);
     obj3.channels = stateFromStores;
@@ -255,8 +255,8 @@ export default function VibegrationsPublishNotesSheet(guildId) {
                   const _HermesInternal = HermesInternal;
                   combined = "" + trimmed + tmp34;
                 }
-                const parsed = tmp3(7290).parse(found, combined);
-                const tmp31Result = tmp3(7072);
+                const parsed = tmp3(7268).parse(found, combined);
+                const tmp31Result = tmp3(7064);
                 const obj5 = { location: constants.VIBEGRATIONS_PATCH_NOTES };
                 c3 = 2;
                 c4 = 1;
@@ -285,10 +285,10 @@ export default function VibegrationsPublishNotesSheet(guildId) {
               ok = closure_128_0.ok;
             }
             if (false !== ok) {
-              const result = guildId(16448).rememberPatchNotesChannel(closure_129_1, closure_129_18.id);
+              const result = guildId(16469).rememberPatchNotesChannel(closure_129_1, closure_129_18.id);
               closure_129_21();
               dependencyMap = 0;
-              const obj = guildId(16448);
+              const obj = guildId(16469);
             }
           }
           const _Error = Error;

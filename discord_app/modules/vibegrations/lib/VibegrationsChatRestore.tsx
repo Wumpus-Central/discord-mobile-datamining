@@ -1,6 +1,6 @@
-// === Module 16587: VibegrationsChatRestore ===
+// === Module 16609: VibegrationsChatRestore ===
 
-// Module 16587 (VibegrationsChatRestore)
+// Module 16609 (VibegrationsChatRestore)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsChatRestore.tsx");

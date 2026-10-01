@@ -1,12 +1,12 @@
-// === Module 8722: oauth2/actions ===
+// === Module 8714: oauth2/actions ===
 
-// Module 8722 (oauth2/actions)
+// Module 8714 (oauth2/actions)
 import utils_PathUtils from "utils/PathUtils" /* 1083 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6206 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6196 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 2045 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2099 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
 
 require = fn;
 function getLocationContextServer() {
@@ -37,190 +37,43 @@ function getLocationContextServer() {
   obj.channel_type = type;
   return obj;
 }
-let closure_9 = async function _authorize(arg0) {
-  if (c4 === 2) {
-    c4 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c4 = 2;
-      if (0 === c3) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          closure_2 = tmp5;
-          closure_1 = tmp2;
-          closure_129_0 = undefined;
-          closure_129_1 = undefined;
-          closure_129_2 = undefined;
-          closure_129_3 = undefined;
-          closure_129_4 = undefined;
-          closure_129_5 = undefined;
-          closure_129_6 = undefined;
-          closure_129_7 = undefined;
-          closure_129_8 = undefined;
-          closure_129_9 = undefined;
-          closure_129_10 = undefined;
-          closure_129_11 = undefined;
-          closure_129_12 = undefined;
-          closure_129_13 = undefined;
-          ({ authorize: closure_129_0, clientId: closure_129_1, scopes: closure_129_2, responseType: closure_129_3, redirectUri: closure_129_4, codeChallenge: closure_129_5, codeChallengeMethod: closure_129_6, state: closure_129_7, permissions: closure_129_8, guildId: closure_129_9, channelId: closure_129_10, integrationType: closure_129_11, connectedAccountProvider: closure_129_12, nonce: closure_129_13 } = closure_0);
-          c3 = 1;
-          c4 = 1;
-          return { value: "flex", done: true };
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
-        } else {
-          const HTTP = closure_130_0(closure_130_2[4]).HTTP;
-          const request = { url: closure_130_7.OAUTH2_AUTHORIZE, query: null, body: null, oldFormErrors: true, rejectWithError: null };
-          const obj6 = { client_id: closure_129_1, response_type: closure_129_3, redirect_uri: closure_129_4, code_challenge: closure_129_5, code_challenge_method: closure_129_6, scope: closure_129_2.join(" "), state: closure_129_7, nonce: closure_129_13 };
-          request.query = obj6;
-          const obj7 = { guild_id: closure_129_9, webhook_channel_id: null, channel_id: null, permissions: null, authorize: null, integration_type: null, connected_account_provider: null, location_context: null };
-          let tmp8;
-          if (null != closure_129_9) {
-            if (null != closure_129_10) {
-              tmp8 = closure_129_10;
-            }
-          }
-          obj7.webhook_channel_id = tmp8;
-          let tmp12;
-          if (null == closure_129_9) {
-            if (null != closure_129_10) {
-              tmp12 = closure_129_10;
-            }
-          }
-          obj7.channel_id = tmp12;
-          obj7.permissions = closure_129_8;
-          obj7.authorize = closure_129_0;
-          obj7.integration_type = closure_129_11;
-          obj7.connected_account_provider = closure_129_12;
-          obj7.location_context = closure_130_8();
-          request.body = obj7;
-          request.rejectWithError = closure_130_0(closure_130_2[4]).rejectWithMigratedError();
-          c3 = 2;
-          c4 = 1;
-          const obj8 = { value: HTTP.post(request), done: false };
-          return obj8;
-        }
-      } else if (arg0 === 1) {
-        c4 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c4 = 3;
-        const obj9 = { value, done: true };
-        return obj9;
-      } else {
-        c4 = 3;
-        const obj = { value: value.body, done: true };
-        return obj;
-      }
-    } catch (tmp25) {
-      c4 = tmp;
-      throw tmp25;
+let closure_9 = async function _authorize() {
+  closure_1 = tmp2;
+  ({ authorize: closure_129_0, clientId: closure_129_1, scopes: closure_129_2, responseType: closure_129_3, redirectUri: closure_129_4, codeChallenge: closure_129_5, codeChallengeMethod: closure_129_6, state: closure_129_7, permissions: closure_129_8, guildId: closure_129_9, channelId: closure_129_10, integrationType: closure_129_11, connectedAccountProvider: closure_129_12, nonce: closure_129_13 } = closure_0);
+  await "flex";
+  const HTTP = closure_130_0(closure_130_2[4]).HTTP;
+  const request = { url: closure_130_7.OAUTH2_AUTHORIZE, query: { client_id: closure_129_1, response_type: closure_129_3, redirect_uri: closure_129_4, code_challenge: closure_129_5, code_challenge_method: closure_129_6, scope: closure_129_2.join(" "), state: closure_129_7, nonce: closure_129_13 }, body: null, oldFormErrors: true, rejectWithError: null };
+  const obj7 = { guild_id: closure_129_9, webhook_channel_id: null, channel_id: null, permissions: null, authorize: null, integration_type: null, connected_account_provider: null, location_context: null };
+  if (null != closure_129_9) {
+    if (null != closure_129_10) {
+      const tmp8 = closure_129_10;
     }
   }
+  obj7.webhook_channel_id = tmp8;
+  if (null == closure_129_9) {
+    if (null != closure_129_10) {
+      const tmp12 = closure_129_10;
+    }
+  }
+  obj7.channel_id = tmp12;
+  obj7.permissions = closure_129_8;
+  obj7.authorize = closure_129_0;
+  obj7.integration_type = closure_129_11;
+  obj7.connected_account_provider = closure_129_12;
+  obj7.location_context = closure_130_8();
+  request.body = obj7;
+  request.rejectWithError = closure_130_0(closure_130_2[4]).rejectWithMigratedError();
+  await HTTP.post(request);
+  return value.body;
 };
-let closure_10 = async function _fetchAuthorization(arg0) {
-  if (c4 === 2) {
-    c4 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c4 = 2;
-      if (0 === c3) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_2 = tmp5;
-          closure_1 = tmp2;
-          closure_129_0 = undefined;
-          closure_129_1 = undefined;
-          closure_129_2 = undefined;
-          closure_129_3 = undefined;
-          closure_129_4 = undefined;
-          closure_129_5 = undefined;
-          closure_129_6 = undefined;
-          closure_129_7 = undefined;
-          closure_129_8 = undefined;
-          closure_129_9 = undefined;
-          closure_129_10 = undefined;
-          ({ clientId: closure_129_0, scopes: closure_129_1, responseType: closure_129_2, redirectUri: closure_129_3, codeChallenge: closure_129_4, codeChallengeMethod: closure_129_5, state: closure_129_6, integrationType: closure_129_7, connectedAccountProvider: closure_129_8, nonce: closure_129_9, signal: closure_129_10 } = closure_0);
-          c3 = 1;
-          c4 = 1;
-          return { value: "flex", done: true };
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          const HTTP = closure_130_0(closure_130_2[4]).HTTP;
-          const request = { url: closure_130_7.OAUTH2_AUTHORIZE, query: null, signal: null, retries: 3, oldFormErrors: true, rejectWithError: null };
-          const obj5 = { client_id: closure_129_0, response_type: closure_129_2, redirect_uri: closure_129_3, code_challenge: closure_129_4, code_challenge_method: closure_129_5, scope: closure_129_1.join(" "), state: closure_129_6, integration_type: closure_129_7, connected_account_provider: closure_129_8, nonce: closure_129_9 };
-          request.query = obj5;
-          request.signal = closure_129_10;
-          request.rejectWithError = closure_130_0(closure_130_2[4]).rejectWithMigratedError();
-          c3 = 2;
-          c4 = 1;
-          const obj6 = { value: HTTP.get(request), done: false };
-          return obj6;
-        }
-      } else if (arg0 === 1) {
-        c4 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c4 = 3;
-        const obj7 = { value, done: true };
-        return obj7;
-      } else {
-        c4 = 3;
-        const obj = { value: value.body, done: true };
-        return obj;
-      }
-    } catch (tmp6) {
-      c4 = tmp;
-      throw tmp6;
-    }
-  }
+let closure_10 = async function _fetchAuthorization() {
+  closure_1 = tmp2;
+  ({ clientId: closure_129_0, scopes: closure_129_1, responseType: closure_129_2, redirectUri: closure_129_3, codeChallenge: closure_129_4, codeChallengeMethod: closure_129_5, state: closure_129_6, integrationType: closure_129_7, connectedAccountProvider: closure_129_8, nonce: closure_129_9, signal: closure_129_10 } = closure_0);
+  await "flex";
+  const HTTP = closure_130_0(closure_130_2[4]).HTTP;
+  const request = { url: closure_130_7.OAUTH2_AUTHORIZE, query: { client_id: closure_129_0, response_type: closure_129_2, redirect_uri: closure_129_3, code_challenge: closure_129_4, code_challenge_method: closure_129_5, scope: closure_129_1.join(" "), state: closure_129_6, integration_type: closure_129_7, connected_account_provider: closure_129_8, nonce: closure_129_9 }, signal: closure_129_10, retries: 3, oldFormErrors: true, rejectWithError: closure_130_0(closure_130_2[4]).rejectWithMigratedError() };
+  await HTTP.get(request);
+  return value.body;
 };
 let closure_11 = async function _startSamsungAuthorization() {
   closure_1 = arg1;

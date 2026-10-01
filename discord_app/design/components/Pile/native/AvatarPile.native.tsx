@@ -1,11 +1,11 @@
-// === Module 12801: AvatarPile ===
+// === Module 12810: AvatarPile ===
 
-// Module 12801 (AvatarPile)
-import ClipView from "ClipView" /* 8472 */;
-import Pile from "Pile" /* 10669 */;
-import PileOverflow from "PileOverflow" /* 10670 */;
-import ListUtils from "ListUtils" /* 12317 */;
-import CutoutableAvatarImage from "CutoutableAvatarImage" /* 12802 */;
+// Module 12810 (AvatarPile)
+import ClipView from "ClipView" /* 8464 */;
+import Pile from "Pile" /* 10665 */;
+import PileOverflow from "PileOverflow" /* 10666 */;
+import ListUtils from "ListUtils" /* 12329 */;
+import CutoutableAvatarImage from "CutoutableAvatarImage" /* 12811 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

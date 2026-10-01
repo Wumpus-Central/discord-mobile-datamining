@@ -1,24 +1,24 @@
-// === Module 12976: CodedLinks ===
+// === Module 12984: CodedLinks ===
 
-// Module 12976 (CodedLinks)
+// Module 12984 (CodedLinks)
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import CodedLink from "CodedLink" /* 4851 */;
-import ApplicationCodedLink from "ApplicationCodedLink" /* 7298 */;
-import createSocialLayerStorefrontProductDetailsEmbed from "createSocialLayerStorefrontProductDetailsEmbed" /* 11229 */;
-import storefrontCodedLink from "storefrontCodedLink" /* 11231 */;
-import ExperimentEmbed from "ExperimentEmbed" /* 11490 */;
-import createAppMessageEmbed from "createAppMessageEmbed" /* 11623 */;
-import createActivityMessageEmbed from "createActivityMessageEmbed" /* 12977 */;
-import InviteEmbed from "InviteEmbed" /* 12978 */;
-import GuildScheduledEventEmbed from "GuildScheduledEventEmbed" /* 12983 */;
-import EmbeddedActivityInviteEmbed from "EmbeddedActivityInviteEmbed" /* 12985 */;
-import GuildTemplateEmbed from "GuildTemplateEmbed" /* 12988 */;
-import BuildOverrideEmbed from "BuildOverrideEmbed" /* 12990 */;
-import VoiceChannelLinkEmbed from "VoiceChannelLinkEmbed" /* 12992 */;
-import QuestEmbed from "QuestEmbed" /* 12993 */;
+import CodedLink from "CodedLink" /* 4830 */;
+import ApplicationCodedLink from "ApplicationCodedLink" /* 7276 */;
+import createSocialLayerStorefrontProductDetailsEmbed from "createSocialLayerStorefrontProductDetailsEmbed" /* 11233 */;
+import storefrontCodedLink from "storefrontCodedLink" /* 11235 */;
+import ExperimentEmbed from "ExperimentEmbed" /* 11498 */;
+import createAppMessageEmbed from "createAppMessageEmbed" /* 11631 */;
+import createActivityMessageEmbed from "createActivityMessageEmbed" /* 12985 */;
+import InviteEmbed from "InviteEmbed" /* 12986 */;
+import GuildScheduledEventEmbed from "GuildScheduledEventEmbed" /* 12991 */;
+import EmbeddedActivityInviteEmbed from "EmbeddedActivityInviteEmbed" /* 12993 */;
+import GuildTemplateEmbed from "GuildTemplateEmbed" /* 12996 */;
+import BuildOverrideEmbed from "BuildOverrideEmbed" /* 12998 */;
+import VoiceChannelLinkEmbed from "VoiceChannelLinkEmbed" /* 13000 */;
+import QuestEmbed from "QuestEmbed" /* 13001 */;
 import _slicedToArray from "module_32" /* 32 */;
-import LurkingStore from "LurkingStore" /* 4500 */;
-import GuildStore from "GuildStore" /* 2067 */;
+import LurkingStore from "LurkingStore" /* 4499 */;
+import GuildStore from "GuildStore" /* 2066 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;
@@ -133,7 +133,9 @@ export const createCodedLinkEmbeds = function createCodedLinkEmbeds(message, mes
                       if (CodedLink.CodedLinkType.GAME_PROFILE !== type) {
                         if (CodedLink.CodedLinkType.GAME_SERVER_SHARE !== type) {
                           if (CodedLink.CodedLinkType.USER_PROFILE !== type) {
-                            return GlobalUtils.assertNever(type);
+                            if (CodedLink.CodedLinkType.GAME_ORGANIZATION_INVITE !== type) {
+                              return GlobalUtils.assertNever(type);
+                            }
                           }
                         }
                       }

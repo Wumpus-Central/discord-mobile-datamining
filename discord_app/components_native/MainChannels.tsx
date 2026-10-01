@@ -1,27 +1,27 @@
-// === Module 15848: MainChannels ===
+// === Module 15864: MainChannels ===
 
-// Module 15848 (MainChannels)
+// Module 15864 (MainChannels)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4596 */;
-import useChatLayoutDefault from "useChatLayout" /* 4725 */;
-import HomeDrawerExperiment from "HomeDrawerExperiment" /* 4728 */;
-import useRefValueDefault from "useRefValue" /* 6094 */;
-import StartupProfiler from "StartupProfiler" /* 11232 */;
-import isJankScreenReportingEnabled from "isJankScreenReportingEnabled" /* 15836 */;
-import getJankScreenName from "getJankScreenName" /* 15838 */;
-import JankSlidingSurfaceReporterDefault from "JankSlidingSurfaceReporter" /* 15841 */;
-import useGuildsRouteGuildId from "useGuildsRouteGuildId" /* 15851 */;
-import useChannelListWidthDefault from "useChannelListWidth" /* 15852 */;
-import NativeFreezeScreens from "NativeFreezeScreens" /* 15853 */;
-import messages_MessagesDefault from "messages/Messages" /* 15854 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 15855 */;
-import RedesignChannelListDefault from "RedesignChannelList" /* 15935 */;
-import HomePanelContent from "HomePanelContent" /* 16122 */;
-import NonCollapsableGestureDetector from "NonCollapsableGestureDetector" /* 16204 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4595 */;
+import useChatLayoutDefault from "useChatLayout" /* 4724 */;
+import HomeDrawerExperiment from "HomeDrawerExperiment" /* 4727 */;
+import useRefValueDefault from "useRefValue" /* 6084 */;
+import StartupProfiler from "StartupProfiler" /* 11236 */;
+import isJankScreenReportingEnabled from "isJankScreenReportingEnabled" /* 15852 */;
+import getJankScreenName from "getJankScreenName" /* 15854 */;
+import JankSlidingSurfaceReporterDefault from "JankSlidingSurfaceReporter" /* 15857 */;
+import useGuildsRouteGuildId from "useGuildsRouteGuildId" /* 15867 */;
+import useChannelListWidthDefault from "useChannelListWidth" /* 15868 */;
+import NativeFreezeScreens from "NativeFreezeScreens" /* 15869 */;
+import messages_MessagesDefault from "messages/Messages" /* 15870 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 15871 */;
+import RedesignChannelListDefault from "RedesignChannelList" /* 15951 */;
+import HomePanelContent from "HomePanelContent" /* 16142 */;
+import NonCollapsableGestureDetector from "NonCollapsableGestureDetector" /* 16224 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import HomeDrawerStore from "HomeDrawerStore" /* 15849 */;
+import HomeDrawerStore from "HomeDrawerStore" /* 15865 */;
 
 const StartupProfilerDefault = StartupProfiler;
 
@@ -126,10 +126,10 @@ get_ActivityIndicator = fn(17);
 const Constants = fn(1074);
 const DM_WIDTH = Constants.DM_WIDTH;
 const ME = Constants.ME;
-const HOME_DRAWER_SCREEN = fn(15839).HOME_DRAWER_SCREEN;
+const HOME_DRAWER_SCREEN = fn(15855).HOME_DRAWER_SCREEN;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj = { fill: { flex: 1 }, sideContainer: null, side: null, sideTablet: null };
 const rect = { position: "absolute", top: 0, left: DM_WIDTH, bottom: 0, right: 0, flexDirection: "row", borderLeftWidth: 1, borderTopWidth: 1, borderColor: nativeDefault.colors.APP_FRAME_BORDER, borderTopLeftRadius: nativeDefault.radii.xl };
 obj.sideContainer = rect;

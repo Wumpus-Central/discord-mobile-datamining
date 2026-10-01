@@ -1,8 +1,8 @@
-// === Module 8420: navigateToGameAnnouncement ===
+// === Module 8412: navigateToGameAnnouncement ===
 
-// Module 8420 (navigateToGameAnnouncement)
+// Module 8412 (navigateToGameAnnouncement)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildStore from "GuildStore" /* 2067 */;
+import GuildStore from "GuildStore" /* 2066 */;
 
 const require = fn;
 let closure_8 = async function _navigateToGameAnnouncement(arg0) {
@@ -43,7 +43,7 @@ let closure_8 = async function _navigateToGameAnnouncement(arg0) {
           let guild3;
           c3 = 1;
           c4 = 1;
-          return { value: "flex", done: true };
+          return { value: "flex", done: null };
         }
       } else {
         if (1 === tmp5) {

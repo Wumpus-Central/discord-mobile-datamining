@@ -1,20 +1,20 @@
-// === Module 14707: XboxTwoWayLinkUpsell ===
+// === Module 14713: XboxTwoWayLinkUpsell ===
 
-// Module 14707 (XboxTwoWayLinkUpsell)
+// Module 14713 (XboxTwoWayLinkUpsell)
 import util from "util" /* 1115 */;
 import dismissible_content from "dismissible_content" /* 2029 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2111 */;
-import FastImageDefault from "FastImage" /* 6095 */;
-import XboxLinkModalActionCreatorsDefault from "XboxLinkModalActionCreators" /* 8728 */;
-import OneWayToTwoWayLinkUpsell from "OneWayToTwoWayLinkUpsell" /* 14708 */;
-import _modDef14709 from "module_14709" /* 14709 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2110 */;
+import FastImageDefault from "FastImage" /* 6085 */;
+import XboxLinkModalActionCreatorsDefault from "XboxLinkModalActionCreators" /* 8720 */;
+import OneWayToTwoWayLinkUpsell from "OneWayToTwoWayLinkUpsell" /* 14714 */;
+import _modDef14715 from "module_14715" /* 14715 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Constants = fn(1074);
 ({ HelpdeskArticles: c3, AnalyticsLocations: closure_4 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let closure_6 = createStyles.createStyles({ upsellImage: { alignSelf: "center", width: 84, marginLeft: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxTwoWayLinkUpsell.tsx");
@@ -28,7 +28,7 @@ export const XboxTwoWayLinkUpsell = function XboxTwoWayLinkUpsell() {
   const intl2 = util.intl;
   obj2.body = intl2.format(util.t.OnERSS, { help_article: articleURL });
   const obj3 = { style: tmp.upsellImage, source: null, resizeMode: "contain" };
-  obj3.source = _modDef14709;
+  obj3.source = _modDef14715;
   obj2.img = jsx(FastImageDefault, { style: tmp.upsellImage, source: null, resizeMode: "contain" });
   obj2.newIndicatorDismissibleContent = dismissible_content.DismissibleContent.XBOX_ONE_WAY_RECONNECT;
   obj2.onPress = function onPress() {

@@ -1,7 +1,7 @@
-// === Module 4926: DirectVideo ===
+// === Module 4905: DirectVideo ===
 
-// Module 4926 (DirectVideo)
-import DirectVideoStream from "DirectVideoStream" /* 4927 */;
+// Module 4905 (DirectVideo)
+import DirectVideoStream from "DirectVideoStream" /* 4906 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

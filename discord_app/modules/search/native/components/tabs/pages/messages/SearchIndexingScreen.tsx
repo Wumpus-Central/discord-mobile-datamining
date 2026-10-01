@@ -1,8 +1,8 @@
-// === Module 16754: SearchIndexingScreen ===
+// === Module 16777: SearchIndexingScreen ===
 
-// Module 16754 (SearchIndexingScreen)
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12044 */;
-import pages_ErrorScreenDefault from "pages/ErrorScreen" /* 16678 */;
+// Module 16777 (SearchIndexingScreen)
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12052 */;
+import pages_ErrorScreenDefault from "pages/ErrorScreen" /* 16701 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -16,6 +16,6 @@ export default function SearchIndexingScreen(searchContext) {
   const effect = noop.useEffect(() => {
     search_tracking_TrackingDefault.trackSearchIndexing({ searchContext });
   }, items);
-  const text = searchContext(12026).getIndexingErrorText(searchContext);
+  const text = searchContext(12033).getIndexingErrorText(searchContext);
   return jsx(pages_ErrorScreenDefault, { text });
 };

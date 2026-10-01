@@ -1,6 +1,6 @@
-// === Module 15170: DesignSystemsNotificationComponentsExperiment ===
+// === Module 15175: DesignSystemsNotificationComponentsExperiment ===
 
-// Module 15170 (DesignSystemsNotificationComponentsExperiment)
+// Module 15175 (DesignSystemsNotificationComponentsExperiment)
 import ApexExperiment from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 
@@ -14,4 +14,7 @@ const result = size.fileFinishedImporting("modules/design/DesignSystemsNotificat
 export default apexExperiment;
 export const useDesignSystemsNotificationComponents = function useDesignSystemsNotificationComponents(ToastDurationSettingNative) {
   return apexExperiment.useConfig({ location: ToastDurationSettingNative }).enabled;
+};
+export const getDesignSystemsNotificationComponents = function getDesignSystemsNotificationComponents(location) {
+  return apexExperiment.getConfig({ location }).enabled;
 };

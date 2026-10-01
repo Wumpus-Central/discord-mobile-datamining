@@ -1,9 +1,9 @@
-// === Module 9947: useExpressionPickerInsets ===
+// === Module 9939: useExpressionPickerInsets ===
 
-// Module 9947 (useExpressionPickerInsets)
+// Module 9939 (useExpressionPickerInsets)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6598 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6588 */;
 import noop from "module_19" /* 19 */;
 
 const EXPRESSION_FOOTER_HEIGHT = fn(1074).EXPRESSION_FOOTER_HEIGHT;

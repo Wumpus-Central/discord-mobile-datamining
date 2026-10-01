@@ -1,6 +1,6 @@
-// === Module 12338: getChatPlaceholderRowHeight ===
+// === Module 12350: getChatPlaceholderRowHeight ===
 
-// Module 12338 (getChatPlaceholderRowHeight)
+// Module 12350 (getChatPlaceholderRowHeight)
 import nativeDefault from "native" /* 576 */;
 
 const PX_24 = nativeDefault.space.PX_24;

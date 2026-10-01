@@ -1,18 +1,18 @@
-// === Module 7209: ChannelConversationsStore ===
+// === Module 7200: ChannelConversationsStore ===
 
-// Module 7209 (ChannelConversationsStore)
+// Module 7200 (ChannelConversationsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import privDefault from "priv" /* 1439 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5088 */;
-import ConversationMessageCacheUtils from "ConversationMessageCacheUtils" /* 7212 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5067 */;
+import ConversationMessageCacheUtils from "ConversationMessageCacheUtils" /* 7203 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2045 */;
-import RelationshipStore from "RelationshipStore" /* 4509 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2099 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
+import RelationshipStore from "RelationshipStore" /* 4508 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
 import UserStore from "UserStore" /* 1372 */;
-import ConversationVisibilityStore from "ConversationVisibilityStore" /* 7210 */;
+import ConversationVisibilityStore from "ConversationVisibilityStore" /* 7201 */;
 
 require = fn;
 function removePendingListFetch(channelId, requestKey) {
@@ -219,7 +219,7 @@ function evictChannel(arg0) {
   }
   return hasItem;
 }
-const ConversationConstants = fn(7211);
+const ConversationConstants = fn(7202);
 ({ CONVERSATION_COLORS: closure_9, CONVERSATION_FEEDBACK_RATINGS_CACHE_MAX: c10, MAX_CONVERSATIONS_PER_CHANNEL: closure_11, MAX_CHANNELS_WITH_CONVERSATIONS } = ConversationConstants);
 const navigation = new privDefault({
   max: MAX_CHANNELS_WITH_CONVERSATIONS,
@@ -561,7 +561,7 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
     ({ channelId, rawConversations, direction, anchor, isJump, fullyHydrated } = requestKey);
     let set;
     if (removePendingListFetch(channelId, requestKey.requestKey)) {
-      const mapped = rawConversations.map(set(7213).mapConversation);
+      const mapped = rawConversations.map(set(7204).mapConversation);
       const found = mapped.filter(set(1370).isNotNullish);
       const peekResult = navigation.peek(channelId);
       if (isJump) {

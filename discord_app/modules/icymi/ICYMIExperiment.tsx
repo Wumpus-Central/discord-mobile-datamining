@@ -1,8 +1,8 @@
-// === Module 7995: ICYMIExperiment ===
+// === Module 7984: ICYMIExperiment ===
 
-// Module 7995 (ICYMIExperiment)
-import useLabFeatureDefault from "useLabFeature" /* 7998 */;
-import LabFeatureStore from "LabFeatureStore" /* 7996 */;
+// Module 7984 (ICYMIExperiment)
+import useLabFeatureDefault from "useLabFeature" /* 7987 */;
+import LabFeatureStore from "LabFeatureStore" /* 7985 */;
 
 const hide_icymi_tab = "hide_icymi_tab";
 let ApexExperiment = fn(1435);
@@ -38,6 +38,14 @@ export const useICYMIEnabled = function useICYMIEnabled(TabsNavigator) {
   return enabled;
 };
 export const getICYMIEnabled = function getICYMIEnabled(ICYMIManager) {
+  value = LabFeatureStore.get(hide_icymi_tab);
+  let enabled = !value;
+  if (!value) {
+    enabled = apexExperiment.getConfig(obj).enabled;
+  }
+  return enabled;
+};
+export const icymiEnabled = function icymiEnabled(customScores) {
   value = LabFeatureStore.get(hide_icymi_tab);
   let enabled = !value;
   if (!value) {

@@ -1,6 +1,6 @@
-// === Module 16292: ? ===
+// === Module 16312: ? ===
 
-// Module 16292
+// Module 16312
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/MailboxSpotIllustration-2x.png.js");

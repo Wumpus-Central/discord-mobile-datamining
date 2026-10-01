@@ -1,6 +1,6 @@
-// === Module 7999: ContentInventoryAuthorType ===
+// === Module 7989: ContentInventoryAuthorType ===
 
-// Module 7999 (ContentInventoryAuthorType)
+// Module 7989 (ContentInventoryAuthorType)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ContentInventoryAuthorType.tsx");

@@ -1,20 +1,20 @@
-// === Module 16804: NewGroupDMScreen ===
+// === Module 16827: NewGroupDMScreen ===
 
-// Module 16804 (NewGroupDMScreen)
+// Module 16827 (NewGroupDMScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import ToastUtils from "ToastUtils" /* 4557 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4879 */;
-import HeaderShared from "HeaderShared" /* 7484 */;
-import openGroupDMNitroCapLimitSheetDefault from "openGroupDMNitroCapLimitSheet" /* 11295 */;
-import GroupDMRecipientLimitTitleDefault from "GroupDMRecipientLimitTitle" /* 16803 */;
+import ToastUtils from "ToastUtils" /* 4556 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4858 */;
+import HeaderShared from "HeaderShared" /* 7462 */;
+import openGroupDMNitroCapLimitSheetDefault from "openGroupDMNitroCapLimitSheet" /* 11303 */;
+import GroupDMRecipientLimitTitleDefault from "GroupDMRecipientLimitTitle" /* 16826 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2045 */;
-import PrivateChannelRecipientsInviteStore from "PrivateChannelRecipientsInviteStore" /* 13495 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4889 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
+import PrivateChannelRecipientsInviteStore from "PrivateChannelRecipientsInviteStore" /* 13503 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4868 */;
 import UserStore from "UserStore" /* 1372 */;
 
 const require = globalThis.__r;
@@ -84,7 +84,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
           closure_131_3 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "flex", done: true };
+          return { value: "flex", done: null };
         }
       } else {
         if (1 === tmp5) {
@@ -148,7 +148,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
                               const obj5 = { value: closure_1_20(length, closure_2_2), done: false };
                               return obj5;
                             } else {
-                              const obj6 = v3(4879);
+                              const obj6 = v3(4858);
                               v3 = 1;
                               dependencyMap = 1;
                               const obj7 = { value: obj6.addRecipients(id.id, length, undefined, closure_2_2), done: false };
@@ -182,21 +182,21 @@ let closure_22 = async function _handleInviteUsers(arg0) {
                             const obj = { value, done: true };
                             return obj;
                           } else {
-                            const tmp8 = v3(9393);
+                            const tmp8 = v3(9387);
                             const call = tmp8.call;
                             if (typeof call === "unknown") {
                               tmp8(false, true);
                             } else {
                               call(tmp9, false, true);
                             }
-                            v3(12644)(closure_128_3);
+                            v3(12655)(closure_128_3);
                             dependencyMap = 3;
                             tmp9 = closure_128_3;
                           }
                           closure_128_3 = value;
                           v3 = 3;
                           dependencyMap = 1;
-                          const obj10 = { value: id(5073).monkeyPatchCall(), done: false };
+                          const obj10 = { value: id(5052).monkeyPatchCall(), done: false };
                           return obj10;
                         }
                       } catch (tmp26) {
@@ -278,12 +278,12 @@ let closure_22 = async function _handleInviteUsers(arg0) {
 };
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const UserRowModes = fn(10523).UserRowModes;
+const UserRowModes = fn(10515).UserRowModes;
 const Constants = fn(1074);
 ({ InstantInviteSources: map1, AnalyticEvents: closure_14, AnalyticsSections: closure_15, NEW_GROUP_DM_POPOUT_ID: closure_16 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = { button: { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE }, container: { height: "100%", display: "flex" }, instantInviteView: null, nameInputContainer: null, nameInput: null };
 let obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 obj2.instantInviteView = { flexShrink: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };

@@ -1,15 +1,15 @@
-// === Module 10328: PremiumGiftPlanSelect ===
+// === Module 10320: PremiumGiftPlanSelect ===
 
-// Module 10328 (PremiumGiftPlanSelect)
+// Module 10320 (PremiumGiftPlanSelect)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
 import native from "native" /* 1177 */;
-import timing from "timing" /* 4867 */;
-import PremiumGiftFeaturesCardDefault from "PremiumGiftFeaturesCard" /* 10416 */;
+import timing from "timing" /* 4846 */;
+import PremiumGiftFeaturesCardDefault from "PremiumGiftFeaturesCard" /* 10408 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7832 */;
-import PromotionsStore from "PromotionsStore" /* 10329 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7819 */;
+import PromotionsStore from "PromotionsStore" /* 10321 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -20,7 +20,7 @@ const jsxProd = fn(21);
 let items = [, ];
 ({ TIER_2: arr[0], TIER_0: arr[1] } = fn(1374).PremiumTypes);
 let c16 = 16;
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let closure_17 = createStyles.createStyles((width, arg1, arg2) => {
   const obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, headerBackground: null, headerBackgroundColor: null, headerImageContainer: null, headerImage: null, headerOverlay: null, avatar: null, title: null, description: null, carousel: null, dmGiftingContent: null, loadingContainer: null, closeButtonContainer: null, closeButton: null, closeButtonIcon: null, badgeBanner: null };
   const size = { position: "absolute", width, height: 0.1 * arg1, top: arg1 / 1.75 - 0.1 * arg1 };
@@ -503,7 +503,7 @@ export default function PremiumGiftPlanSelect(shouldUseDMWishlistGiftingDesign) 
         const tmp4Result8 = tmp4(tmp2[31]);
       }
     } else {
-      const obj44 = { style: tmp14.avatar, guildId: "r", size: "replace", user: "r" };
+      const obj44 = { style: tmp14.avatar, guildId: "r", size: "flex", user: null };
       const AvatarSizes = tmp(tmp2[27]).AvatarSizes;
       obj44.size = enabled ? AvatarSizes.LARGE_48 : AvatarSizes.XLARGE;
       obj44.user = recipientUser;

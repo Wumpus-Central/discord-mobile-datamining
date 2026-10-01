@@ -1,24 +1,24 @@
-// === Module 16114: FavoritesGuildChannelList ===
+// === Module 16134: FavoritesGuildChannelList ===
 
-// Module 16114 (FavoritesGuildChannelList)
+// Module 16134 (FavoritesGuildChannelList)
 import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
-import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 6928 */;
-import ChannelListState from "ChannelListState" /* 7144 */;
+import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 6919 */;
+import ChannelListState from "ChannelListState" /* 7136 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2044 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5786 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7142 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6015 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4501 */;
-import CategoryCollapseStore from "CategoryCollapseStore" /* 6734 */;
-import ChannelStore from "ChannelStore" /* 2045 */;
-import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7143 */;
-import PermissionStore from "PermissionStore" /* 4499 */;
-import ReadStateStore from "ReadStateStore" /* 4881 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2099 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5047 */;
-import FavoriteStore from "FavoriteStore" /* 2048 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2043 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5775 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7134 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6004 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4500 */;
+import CategoryCollapseStore from "CategoryCollapseStore" /* 6724 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
+import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7135 */;
+import PermissionStore from "PermissionStore" /* 4498 */;
+import ReadStateStore from "ReadStateStore" /* 4860 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5026 */;
+import FavoriteStore from "FavoriteStore" /* 2047 */;
 
 const require = globalThis.__r;
 
@@ -250,7 +250,7 @@ function computeFavoritesState(favoriteChannels, arg1) {
     },
     set: undefined
   });
-  const favoritesCategories = favoriteChannels(9886).getFavoritesCategories(favoriteChannels);
+  const favoritesCategories = favoriteChannels(9878).getFavoritesCategories(favoriteChannels);
   let found = favoritesCategories.filter((id) => null != id.id);
   let mapped = found.map((id) => {
     id = id.id;
@@ -562,12 +562,12 @@ function computeFavoritesState(favoriteChannels, arg1) {
     }
   };
 }
-const ChannelRecord = fn(2049);
+const ChannelRecord = fn(2048);
 ({ THREAD_CHANNEL_TYPES: closure_8, isGuildReadableType: closure_9, isVoiceChannel: c10 } = ChannelRecord);
-let closure_19 = fn(4498).createFavoritesGuildChannelRecord;
-const FavoritesConstants = fn(2058);
+let closure_19 = fn(4497).createFavoritesGuildChannelRecord;
+const FavoritesConstants = fn(2057);
 ({ FAVORITES_RAW_GUILD_ID: closure_20, MAX_FAVORITE_CHANNELS: closure_21 } = FavoritesConstants);
-const constants = fn(7150).ChannelListChannelNoticeRow;
+const constants = fn(7142).ChannelListChannelNoticeRow;
 const Permissions = fn(1085).Permissions;
 let items = [EmbeddedActivitiesStore, FavoriteStore, GatewayConnectionStore, GuildScheduledEventStore, ActiveJoinedThreadsStore, JoinedThreadsStore, CategoryCollapseStore, ChannelStore, PermissionStore, ReadStateStore, SelectedChannelStore, UserGuildSettingsStore];
 const size = fn(2);

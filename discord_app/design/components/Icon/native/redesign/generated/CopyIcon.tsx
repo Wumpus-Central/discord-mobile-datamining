@@ -1,9 +1,9 @@
-// === Module 4809: CopyIcon ===
+// === Module 4788: CopyIcon ===
 
-// Module 4809 (CopyIcon)
+// Module 4788 (CopyIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4560 */;
-import _mod4810 from "module_4810" /* 4810 */;
+import BaseIconImage from "BaseIconImage" /* 4559 */;
+import _mod4789 from "module_4789" /* 4789 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const CopyIcon = function CopyIcon(tmp6Result2) {
   }
   const merged = Object.assign(tmp6Result2, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod4810, color: INTERACTIVE_ICON_DEFAULT, style: tmp6Result2.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod4789, color: INTERACTIVE_ICON_DEFAULT, style: tmp6Result2.style });
 };

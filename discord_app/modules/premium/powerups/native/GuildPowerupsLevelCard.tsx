@@ -1,16 +1,16 @@
-// === Module 12264: GuildPowerupsLevelCard ===
+// === Module 12272: GuildPowerupsLevelCard ===
 
-// Module 12264 (GuildPowerupsLevelCard)
+// Module 12272 (GuildPowerupsLevelCard)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4862 */;
-import LinearGradientDefault from "LinearGradient" /* 5489 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6597 */;
-import BoostGemIcon from "BoostGemIcon" /* 8877 */;
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12201 */;
-import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 12218 */;
-import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 12223 */;
-import useGuildPowerupOnShowMoreDefault from "useGuildPowerupOnShowMore" /* 12266 */;
-import GuildPowerupsCardDefault from "GuildPowerupsCard" /* 12267 */;
+import Text_Text from "Text/Text" /* 4841 */;
+import LinearGradientDefault from "LinearGradient" /* 5477 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6587 */;
+import BoostGemIcon from "BoostGemIcon" /* 8869 */;
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12209 */;
+import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 12226 */;
+import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 12231 */;
+import useGuildPowerupOnShowMoreDefault from "useGuildPowerupOnShowMore" /* 12274 */;
+import GuildPowerupsCardDefault from "GuildPowerupsCard" /* 12275 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -138,14 +138,14 @@ class GuildPowerupLevelBody {
   }
 }
 const View = fn(17).View;
-const GuildPowerupsConstants = fn(4754);
+const GuildPowerupsConstants = fn(4753);
 ({ LevelCardPosition: hasOwnProperty, PowerupActiveStatusType: metroRequire } = GuildPowerupsConstants);
 const Constants = fn(1074);
 ({ BoostedGuildTiers: closure_7, HorizontalGradient: closure_8 } = Constants);
-const TIER_CARDS = fn(12265).TIER_CARDS;
+const TIER_CARDS = fn(12273).TIER_CARDS;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = { cardContainer: { flex: 1 }, card: { padding: 0, overflow: "hidden", flex: 1 }, progressContainer: { marginVertical: nativeDefault.space.PX_24, position: "relative" }, progress: null, progressStart: null, progressEnd: null, boostContainerBackground: null, boostContainer: null, boostContainerActive: null, boostContainerInactive: null, contentContainer: null, perkRowContainer: null, perkRow: null, perkRowStyle: null, perkText: null, footerContainer: null };
 let obj3 = { marginVertical: nativeDefault.space.PX_24, position: "relative" };
 obj2.progress = { height: 6, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };

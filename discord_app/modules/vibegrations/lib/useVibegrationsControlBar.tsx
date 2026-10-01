@@ -1,14 +1,14 @@
-// === Module 16498: useVibegrationsControlBar ===
+// === Module 16519: useVibegrationsControlBar ===
 
-// Module 16498 (useVibegrationsControlBar)
+// Module 16519 (useVibegrationsControlBar)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VibegrationsChatStore from "VibegrationsChatStore" /* 12843 */;
+import VibegrationsChatStore from "VibegrationsChatStore" /* 12852 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const interruptTurn = fn(12842).interruptTurn;
+const interruptTurn = fn(12851).interruptTurn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/vibegrations/lib/useVibegrationsControlBar.tsx");
 

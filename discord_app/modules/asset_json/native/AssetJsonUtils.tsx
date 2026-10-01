@@ -44,102 +44,37 @@ function loadJsonAsset() {
   }
   return applyArgumentsResult;
 }
-let closure_7 = async function _loadJsonAsset(arg0) {
-  if (c5 === 2) {
-    c5 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c5 = 2;
-      if (0 === c4) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          c3 = 0;
-          closure_2 = tmp2;
-          closure_130_1 = undefined;
-          closure_130_0 = closure_0;
-          let flag = closure_1;
-          if (closure_1 === undefined) {
-            flag = true;
-          }
-          closure_130_1 = flag;
-          let uri;
-          closure_130_3 = undefined;
-          closure_130_4 = undefined;
-          c4 = 1;
-          c5 = 1;
-          return { value: "flex", done: true };
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
-        } else {
-          if (null != closure_131_5[closure_130_0]) {
-            if (closure_130_1) {
-              c5 = 3;
-              const obj6 = { value: closure_131_5[closure_130_0], done: true };
-              return obj6;
-            }
-          }
-          uri = closure_131_4.resolveAssetSource(closure_130_0).uri;
-          c4 = 2;
-          c5 = 1;
-          const obj7 = { value: closure_131_1(closure_131_2[32]).readAsset(uri, "utf8"), done: false };
-          return obj7;
-        }
-      } else if (arg0 === 1) {
-        c5 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c5 = 3;
-        const obj8 = { value, done: true };
-        return obj8;
-      } else {
-        closure_130_3 = value;
-        if (null == closure_130_3) {
-          c5 = 3;
-          return { value: null, done: true };
-        } else {
-          if (null != closure_131_5[closure_130_0]) {
-            if (closure_130_1) {
-              c5 = 3;
-              const obj9 = { value: closure_131_5[closure_130_0], done: true };
-              return obj9;
-            }
-          }
-          const _JSON = JSON;
-          closure_130_4 = JSON.parse(closure_130_3);
-          closure_131_5[closure_130_0] = closure_130_4;
-          c5 = 3;
-          const obj = { value: closure_130_4, done: true };
-          return obj;
-        }
-      }
-    } catch (tmp31) {
-      c5 = tmp;
-      throw tmp31;
+let closure_7 = async function _loadJsonAsset() {
+  closure_2 = tmp2;
+  closure_130_0 = closure_0;
+  let flag = closure_1;
+  if (closure_1 === undefined) {
+    flag = true;
+  }
+  closure_130_1 = flag;
+  await "flex";
+  if (null != closure_131_5[closure_130_0]) {
+    if (closure_130_1) {
+      c5 = 3;
+      return { value: closure_131_5[closure_130_0], done: true };
     }
   }
+  const uri = closure_131_4.resolveAssetSource(closure_130_0).uri;
+  await closure_131_1(closure_131_2[32]).readAsset(uri, "utf8");
+  closure_130_3 = value;
+  if (null == closure_130_3) {
+    return null;
+  }
+  if (null != closure_131_5[closure_130_0]) {
+    if (closure_130_1) {
+      c5 = 3;
+      return { value: closure_131_5[closure_130_0], done: true };
+    }
+  }
+  const _JSON = JSON;
+  closure_130_4 = JSON.parse(closure_130_3);
+  closure_131_5[closure_130_0] = closure_130_4;
+  return closure_130_4;
 };
 const Image = fn(17).Image;
 let closure_5 = {};

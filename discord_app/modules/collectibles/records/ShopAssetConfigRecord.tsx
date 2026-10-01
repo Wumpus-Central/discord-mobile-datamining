@@ -1,6 +1,6 @@
-// === Module 7171: ShopAssetConfigRecord ===
+// === Module 7163: ShopAssetConfigRecord ===
 
-// Module 7171 (ShopAssetConfigRecord)
+// Module 7163 (ShopAssetConfigRecord)
 import size from "module_2" /* 2 */;
 
 let AssetDisplayConfigRecord;

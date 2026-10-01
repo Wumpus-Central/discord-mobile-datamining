@@ -1,10 +1,10 @@
-// === Module 12128: ChatInputCharCounter ===
+// === Module 12136: ChatInputCharCounter ===
 
-// Module 12128 (ChatInputCharCounter)
+// Module 12136 (ChatInputCharCounter)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4558 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 8813 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4557 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 8805 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1372 */;
@@ -15,7 +15,7 @@ const Constants = fn(1074);
 const PremiumUpsellTypes = fn(1374).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj = { container: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 } };
 let closure_11 = createStyles.createStyles(obj);
 const forwardRefResult = noop.forwardRef((arg0, arg1) => {
@@ -26,7 +26,7 @@ const forwardRefResult = noop.forwardRef((arg0, arg1) => {
   const tmp = closure_11();
   const items = [currentUser];
   const stateFromStores = analyticsLocations(504).useStateFromStores(items, () => stateFromStores(maxLength[9]).canUseIncreasedMessageLength(currentUser.getCurrentUser()));
-  const tmp5 = stateFromStores(8804)();
+  const tmp5 = stateFromStores(8796)();
   dependencyMap = tmp5;
   let result = tmp5 / 10;
   _slicedToArray = result;
@@ -68,35 +68,35 @@ const forwardRefResult = noop.forwardRef((arg0, arg1) => {
     let obj3 = { color: "text-feedback-critical", lineClamp: 1, variant: "text-xxs/semibold", children: null };
     const _HermesInternal = HermesInternal;
     obj3.children = "-" + first;
-    const items3 = [closure_9(analyticsLocations(4862).Text, obj3), ];
+    const items3 = [closure_9(analyticsLocations(4841).Text, obj3), ];
     let tmp20Result = null;
     if (!stateFromStores) {
-      tmp20Result = closure_9(analyticsLocations(8318).NitroWheelIcon, { size: "xs", color: "icon-muted" });
+      tmp20Result = closure_9(analyticsLocations(8309).NitroWheelIcon, { size: "xs", color: "icon-muted" });
     }
     items3[1] = tmp20Result;
     obj2.children = items3;
-    let tmp16Result = closure_10(analyticsLocations(5632).PressableOpacity, obj2);
+    let tmp16Result = closure_10(analyticsLocations(5621).PressableOpacity, obj2);
   } else if (first >= tmp7) {
     let obj4 = { onPress: callback, style: null, children: null };
     const items4 = [tmp.container, style];
     obj4.style = items4;
     let obj5 = { color: "text-default", lineClamp: 1, variant: "text-xxs/semibold", children: -first };
-    const items5 = [closure_9(analyticsLocations(4862).Text, obj5), ];
+    const items5 = [closure_9(analyticsLocations(4841).Text, obj5), ];
     let tmp17Result = null;
     if (tmp11) {
-      tmp17Result = closure_9(analyticsLocations(8318).NitroWheelIcon, { size: "xs", color: "icon-muted" });
+      tmp17Result = closure_9(analyticsLocations(8309).NitroWheelIcon, { size: "xs", color: "icon-muted" });
     }
     items5[1] = tmp17Result;
     obj4.children = items5;
-    tmp16Result = closure_10(analyticsLocations(5632).PressableOpacity, obj4);
+    tmp16Result = closure_10(analyticsLocations(5621).PressableOpacity, obj4);
   } else {
     tmp16Result = null;
     if (tmp11) {
       let obj6 = { onPress: callback, style: null, children: null };
       const items6 = [tmp.container, style];
       obj6.style = items6;
-      obj6.children = closure_9(analyticsLocations(8318).NitroWheelIcon, { size: "xs", color: "icon-muted" });
-      tmp16Result = closure_9(analyticsLocations(5632).PressableOpacity, obj6);
+      obj6.children = closure_9(analyticsLocations(8309).NitroWheelIcon, { size: "xs", color: "icon-muted" });
+      tmp16Result = closure_9(analyticsLocations(5621).PressableOpacity, obj6);
     }
   }
   return tmp16Result;

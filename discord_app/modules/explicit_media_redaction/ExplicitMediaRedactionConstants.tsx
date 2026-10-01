@@ -1,6 +1,6 @@
-// === Module 7216: ExplicitMediaRedactionConstants ===
+// === Module 7207: ExplicitMediaRedactionConstants ===
 
-// Module 7216 (ExplicitMediaRedactionConstants)
+// Module 7207 (ExplicitMediaRedactionConstants)
 import MessageEmbedTypes from "MessageEmbedTypes" /* 1096 */;
 import size from "module_2" /* 2 */;
 
@@ -13,5 +13,6 @@ export const EXPLICIT_MEDIA_LEARN_MORE_ACTION_SHEET_KEY = "ExplicitMediaLearnMor
 export const EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_ACTION_SHEET_KEY = "ExplicitMediaSenderFalsePositiveActionSheet";
 export const EXPLICIT_MEDIA_SETTINGS_ACTION_SHEET_KEY = "ExplicitMediaSettingsActionSheet";
 export const SUPPORTED_EMBED_TYPES = new Set(items);
+export const MESSAGE_SCAN_TIMEOUT = 3000;
 export const EXPLICIT_MEDIA_MIN_WIDTH = 146;
 export const EXPLICIT_MEDIA_MIN_HEIGHT = 212;

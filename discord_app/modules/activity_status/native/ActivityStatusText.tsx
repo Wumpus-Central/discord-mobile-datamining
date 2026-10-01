@@ -1,12 +1,12 @@
-// === Module 10547: ActivityStatusText ===
+// === Module 10539: ActivityStatusText ===
 
-// Module 10547 (ActivityStatusText)
-import Text_Text from "Text/Text" /* 4862 */;
+// Module 10539 (ActivityStatusText)
+import Text_Text from "Text/Text" /* 4841 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let closure_3 = createStyles.createStyles({ text: { flexShrink: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activity_status/native/ActivityStatusText.tsx");

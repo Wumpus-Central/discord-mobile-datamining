@@ -1,6 +1,6 @@
-// === Module 16831: VibegrationsActivity ===
+// === Module 12308: VibegrationsActivity ===
 
-// Module 16831 (VibegrationsActivity)
+// Module 12308 (VibegrationsActivity)
 import size from "module_2" /* 2 */;
 
 let closure_0 = { building: 0, done: 1, idle: 2 };

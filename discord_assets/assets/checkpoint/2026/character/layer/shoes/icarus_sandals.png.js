@@ -1,6 +1,6 @@
-// === Module 5142: ? ===
+// === Module 5121: ? ===
 
-// Module 5142
+// Module 5121
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/shoes/icarus_sandals.png.js");

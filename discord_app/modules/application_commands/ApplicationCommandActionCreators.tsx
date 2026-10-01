@@ -1,14 +1,15 @@
-// === Module 7392: ApplicationCommandActionCreators ===
+// === Module 7370: ApplicationCommandActionCreators ===
 
-// Module 7392 (ApplicationCommandActionCreators)
+// Module 7370 (ApplicationCommandActionCreators)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef38 from "module_38" /* 38 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1271 */;
 import Server from "Server" /* 1979 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7139 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7129 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7131 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 7393 */;
+import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 7371 */;
 
 require = fn;
 const Endpoints = fn(1074).Endpoints;
@@ -50,32 +51,56 @@ export const updateApplicationGuildCommandPermissions = function updateApplicati
 export const performAutocomplete = function performAutocomplete(applicationId, autocomplete, data) {
   _modDef38(null != autocomplete.autocomplete, "Missing autocomplete context");
   ({ query, name } = autocomplete.autocomplete);
+  let str = "";
+  let interactionOptions = ApplicationCommandUtils.extractInteractionDataProps(data).interactionOptions;
+  if (interactionOptions == null) {
+    interactionOptions = [];
+  }
+  const iter = interactionOptions[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let iter2 = nextResult;
+    let focused = "focused" in nextResult;
+    if (focused) {
+      focused = iter2.focused;
+    }
+    if (!focused) {
+      let name2 = iter2.name;
+      let _String = String;
+      let _HermesInternal = HermesInternal;
+      let str2 = "";
+      let str3 = "=";
+      let str4 = "\0";
+      str = str + "" + name2 + "=" + String(iter2.value) + "\0";
+    }
+    continue;
+  }
   const fromTimestampResult = SnowflakeUtilsDefault.fromTimestamp(Date.now());
   require = fromTimestampResult;
   if (null != autocomplete.channel) {
-    const obj2 = { type: "APPLICATION_COMMAND_AUTOCOMPLETE_REQUEST", nonce: fromTimestampResult, channelId: autocomplete.channel.id, query, name };
-    DispatcherDefault.dispatch(obj2);
+    const obj3 = { type: "APPLICATION_COMMAND_AUTOCOMPLETE_REQUEST", nonce: fromTimestampResult, channelId: autocomplete.channel.id, query, name, contextKey: str };
+    DispatcherDefault.dispatch(obj3);
     if (null == ApplicationCommandAutocompleteStore.getAutocompleteChoices(autocomplete.channel.id, name, query)) {
       const HTTP = HTTPUtils.HTTP;
       const request = { url: Endpoints.INTERACTIONS, body: null, timeout: 3000, rejectWithError: true };
-      const obj3 = { type: Server.InteractionTypes.APPLICATION_COMMAND_AUTOCOMPLETE, application_id: applicationId.applicationId, guild_id: null, channel_id: null, session_id: null, data: null, nonce: null };
+      const obj4 = { type: Server.InteractionTypes.APPLICATION_COMMAND_AUTOCOMPLETE, application_id: applicationId.applicationId, guild_id: null, channel_id: null, session_id: null, data: null, nonce: null };
       const guild = autocomplete.guild;
       let id;
       if (guild != null) {
         id = guild.id;
       }
-      obj3.guild_id = id;
-      obj3.channel_id = autocomplete.channel.id;
-      obj3.session_id = AuthenticationStore.getSessionId();
-      obj3.data = data;
-      obj3.nonce = fromTimestampResult;
-      request.body = obj3;
+      obj4.guild_id = id;
+      obj4.channel_id = autocomplete.channel.id;
+      obj4.session_id = AuthenticationStore.getSessionId();
+      obj4.data = data;
+      obj4.nonce = fromTimestampResult;
+      request.body = obj4;
       HTTP.post(request).catch(() => {
         DispatcherDefault.dispatch({ type: "INTERACTION_FAILURE", nonce: fromTimestampResult });
       });
       const postResult = HTTP.post(request);
     }
-    const tmpResult = DispatcherDefault;
+    const tmp7Result = DispatcherDefault;
   }
 };
 export const fetchCommand = function fetchCommand(guildId, channelId, commandId) {

@@ -1,9 +1,9 @@
-// === Module 16514: vibegrationsPublishAction ===
+// === Module 16535: vibegrationsPublishAction ===
 
-// Module 16514 (vibegrationsPublishAction)
+// Module 16535 (vibegrationsPublishAction)
 import util from "util" /* 1115 */;
-import _modDef3715 from "module_3715" /* 3715 */;
-import vibegrationsPreviewModes from "vibegrationsPreviewModes" /* 16481 */;
+import _modDef3714 from "module_3714" /* 3714 */;
+import vibegrationsPreviewModes from "vibegrationsPreviewModes" /* 16502 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/vibegrations/lib/vibegrationsPublishAction.tsx");
@@ -27,115 +27,128 @@ export const resolveVibegrationsPublishAction = function resolveVibegrationsPubl
     }
     if (null == surface) {
       const status2 = input.status;
-      let tmp22 = "guild" === input.installScope;
+      let tmp21 = "guild" === input.installScope;
       ({ appChannelName: appChannelName2, appChannelPending, botInGuild } = input);
-      if (tmp22) {
-        tmp22 = null != status2;
+      if (tmp21) {
+        tmp21 = null != status2;
       }
-      if (tmp22) {
-        tmp22 = "unpublished" !== status2.state;
+      if (tmp21) {
+        tmp21 = "unpublished" !== status2.state;
       }
-      if (!tmp22) {
+      if (!tmp21) {
         if (null != null) {
           if ("up_to_date" === status.state) {
-            if (!tmp22) {
+            if (!tmp21) {
               ({ open: obj9.label, destination: obj9.destination } = null);
               return { label: null, intent: "open", action: "open", destination: null, navigatesOnPublish: false, upToDate: true, isUpdate: false, disabledReason: null };
             }
           }
         }
-        let formatToPlainStringResult = null;
-        if ("guild" === installScope) {
-          formatToPlainStringResult = null;
-          if (false === tmp) {
-            const intl13 = util.intl;
-            if (guildName == null) {
-              guildName = "";
-            }
-            const obj3 = { server: guildName };
-            formatToPlainStringResult = intl13.formatToPlainString(_modDef3715.x71ku3, obj3);
+        ({ guildName: guildName2, usesNativeAppChannels } = input);
+        if ("guild" !== input.installScope) {
+          const obj3 = { installScope, previewReady: null, integrationInstalled: null, botPermissionsChanged: null };
+          let preview_ready1;
+          if (integrationStatus != null) {
+            preview_ready1 = integrationStatus.preview_ready;
           }
-        }
-        const obj4 = { installScope, previewReady: null, integrationInstalled: null, botPermissionsChanged: null };
-        let preview_ready1;
-        if (integrationStatus != null) {
-          preview_ready1 = integrationStatus.preview_ready;
-        }
-        obj4.previewReady = true === preview_ready1;
-        let prop;
-        if (integrationStatus != null) {
-          prop = integrationStatus.integration_installed;
-        }
-        if (prop == null) {
-          prop = null;
-        }
-        obj4.integrationInstalled = prop;
-        let prop1;
-        if (integrationStatus != null) {
-          prop1 = integrationStatus.bot_permissions_changed;
-        }
-        obj4.botPermissionsChanged = true === prop1;
-        const result = vibegrationsPreviewModes.requiresPermissionReview(obj4);
-        let str12 = "publish";
-        if (result) {
-          str12 = "consent_then_publish";
-        }
-        const obj5 = { intent: str12, destination: null, upToDate: false, isUpdate: null, disabledReason: null };
-        let destination;
-        if (null != null) {
-          destination = null.destination;
-        }
-        if (destination == null) {
-          destination = null;
-        }
-        obj5.destination = destination;
-        obj5.isUpdate = "changes" === status.state && !tmp22;
-        obj5.disabledReason = formatToPlainStringResult;
-        if (null == null) {
+          obj3.previewReady = true === preview_ready1;
+          let prop;
+          if (integrationStatus != null) {
+            prop = integrationStatus.integration_installed;
+          }
+          if (prop == null) {
+            prop = null;
+          }
+          obj3.integrationInstalled = prop;
+          let prop1;
+          if (integrationStatus != null) {
+            prop1 = integrationStatus.bot_permissions_changed;
+          }
+          obj3.botPermissionsChanged = true === prop1;
+          const result = vibegrationsPreviewModes.requiresPermissionReview(obj3);
+          let str12 = "publish";
           if (result) {
-            let prop2;
-            if (integrationStatus != null) {
-              prop2 = integrationStatus.bot_permissions_changed;
-            }
-            if (true === prop2) {
-              const obj6 = {};
-              const merged = Object.assign(obj5);
-              const intl16 = util.intl;
-              obj6.label = intl16.string(_modDef3715.zFcLHP);
-              obj6.action = "review_permissions";
-              obj6.navigatesOnPublish = tmp38;
-              return obj6;
-            }
+            str12 = "consent_then_publish";
           }
-          let update;
+          const obj4 = { intent: str12, destination: null, upToDate: false, isUpdate: null, disabledReason: null };
+          let destination;
           if (null != null) {
-            update = null.update;
+            destination = null.destination;
           }
-          if (update == null) {
-            const intl14 = util.intl;
-            update = intl14.string(_modDef3715["91710b"]);
+          if (destination == null) {
+            destination = null;
           }
-          const obj7 = {};
-          const merged1 = Object.assign(obj5);
-          if (!tmp36) {
-            const intl15 = util.intl;
-            update = intl15.string(_modDef3715["5gU57O"]);
+          obj4.destination = destination;
+          obj4.isUpdate = "changes" === status.state && !tmp21;
+          obj4.disabledReason = null;
+          if (null == null) {
+            if (result) {
+              let prop2;
+              if (integrationStatus != null) {
+                prop2 = integrationStatus.bot_permissions_changed;
+              }
+              if (true === prop2) {
+                const obj5 = {};
+                const merged = Object.assign(obj4);
+                const intl18 = util.intl;
+                obj5.label = intl18.string(_modDef3714.zFcLHP);
+                obj5.action = "review_permissions";
+                obj5.navigatesOnPublish = tmp48;
+                return obj5;
+              }
+            }
+            let update;
+            if (null != null) {
+              update = null.update;
+            }
+            if (update == null) {
+              const intl16 = util.intl;
+              update = intl16.string(_modDef3714["91710b"]);
+            }
+            const obj6 = {};
+            const merged1 = Object.assign(obj4);
+            if (!tmp46) {
+              const intl17 = util.intl;
+              update = intl17.string(_modDef3714["5gU57O"]);
+            }
+            obj6.label = update;
+            obj6.action = "publish";
+            obj6.navigatesOnPublish = tmp48;
+            return obj6;
           }
-          obj7.label = update;
-          obj7.action = "publish";
-          obj7.navigatesOnPublish = tmp38;
-          return obj7;
+        } else {
+          if (usesNativeAppChannels) {
+            usesNativeAppChannels = false === tmp26;
+          }
+          if (guildName2 == null) {
+            guildName2 = "";
+          }
+          const obj7 = { server: guildName2 };
+          if (false !== tmp25) {
+            if (tmp28) {
+              const intl14 = util.intl;
+              let formatToPlainStringResult = intl14.formatToPlainString(_modDef3714.x71ku3, obj7);
+            } else {
+              formatToPlainStringResult = null;
+              if (usesNativeAppChannels) {
+                const intl13 = util.intl;
+                formatToPlainStringResult = intl13.formatToPlainString(_modDef3714["53xiNu"], obj7);
+              }
+            }
+          }
+          const intl15 = util.intl;
+          formatToPlainStringResult = intl15.formatToPlainString(_modDef3714.qG1SMK, obj7);
         }
       } else if ("activity" === status2.surface) {
-        let tmp24 = null == appChannelName2;
-        if (tmp24) {
-          tmp24 = true !== appChannelPending;
-        }
-        let tmp23 = tmp24;
-      } else {
-        tmp23 = "bot" === status2.surface;
+        let tmp23 = null == appChannelName2;
         if (tmp23) {
-          tmp23 = false === botInGuild;
+          tmp23 = true !== appChannelPending;
+        }
+        let tmp22 = tmp23;
+      } else {
+        tmp22 = "bot" === status2.surface;
+        if (tmp22) {
+          tmp22 = false === botInGuild;
         }
       }
     } else {
@@ -143,51 +156,51 @@ export const resolveVibegrationsPublishAction = function resolveVibegrationsPubl
         if (null != guildName) {
           const intl = util.intl;
           const obj = { server: guildName };
-          const formatToPlainStringResult1 = intl.formatToPlainString(_modDef3715.jnwfvk, obj);
+          const formatToPlainStringResult1 = intl.formatToPlainString(_modDef3714.jnwfvk, obj);
           if ("bot" === surface) {
             const obj8 = { update: null, open: null, destination: "guild", navigatesOnFirstPublish: true, navigatesOnUpdate: false };
             const intl6 = util.intl;
-            obj8.update = intl6.string(_modDef3715.o046LG);
+            obj8.update = intl6.string(_modDef3714.o046LG);
             obj8.open = formatToPlainStringResult1;
           } else if ("activity" === surface) {
             const obj10 = { update: null, open: null, destination: "channel", navigatesOnFirstPublish: true, navigatesOnUpdate: false };
             const intl4 = util.intl;
-            obj10.update = intl4.string(_modDef3715["91710b"]);
+            obj10.update = intl4.string(_modDef3714["91710b"]);
             let formatToPlainStringResult2 = formatToPlainStringResult1;
             if (null != appChannelName) {
               const intl5 = util.intl;
               const obj12 = { channel: appChannelName };
-              formatToPlainStringResult2 = intl5.formatToPlainString(_modDef3715.Nfs5wk, obj12);
+              formatToPlainStringResult2 = intl5.formatToPlainString(_modDef3714.Nfs5wk, obj12);
             }
             obj10.open = formatToPlainStringResult2;
           } else if ("automod" === surface) {
             const obj13 = { update: null, open: null, destination: "automod", navigatesOnFirstPublish: false, navigatesOnUpdate: false };
             const intl2 = util.intl;
-            obj13.update = intl2.string(_modDef3715.Qn0VCU);
+            obj13.update = intl2.string(_modDef3714.Qn0VCU);
             const intl3 = util.intl;
-            obj13.open = intl3.string(_modDef3715.j8541Y);
+            obj13.open = intl3.string(_modDef3714.j8541Y);
           }
         }
       }
       if ("bot" === surface) {
         const obj14 = { update: null, open: null, destination: "dm", navigatesOnFirstPublish: true, navigatesOnUpdate: false };
         const intl11 = util.intl;
-        obj14.update = intl11.string(_modDef3715.o046LG);
+        obj14.update = intl11.string(_modDef3714.o046LG);
         const intl12 = util.intl;
-        obj14.open = intl12.string(_modDef3715.BceUWe);
+        obj14.open = intl12.string(_modDef3714.BceUWe);
       } else {
         if ("activity" === surface) {
           const obj15 = { update: null, open: null, destination: "launch", navigatesOnFirstPublish: false, navigatesOnUpdate: false };
           const intl9 = util.intl;
-          obj15.update = intl9.string(_modDef3715["91710b"]);
+          obj15.update = intl9.string(_modDef3714["91710b"]);
           const intl10 = util.intl;
-          obj15.open = intl10.string(_modDef3715.c4LI5t);
+          obj15.open = intl10.string(_modDef3714.c4LI5t);
         }
         const obj28 = { update: null, open: null, destination: "profile", navigatesOnFirstPublish: true, navigatesOnUpdate: true };
         const intl7 = util.intl;
-        obj28.update = intl7.string(_modDef3715["S+XFJ2"]);
+        obj28.update = intl7.string(_modDef3714["S+XFJ2"]);
         const intl8 = util.intl;
-        obj28.open = intl8.string(_modDef3715.wK3FYl);
+        obj28.open = intl8.string(_modDef3714.wK3FYl);
       }
     }
   }

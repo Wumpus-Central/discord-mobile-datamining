@@ -1,9 +1,9 @@
-// === Module 7598: enhanced_role_colors/EnhancedRoleColorUtils ===
+// === Module 7576: enhanced_role_colors/EnhancedRoleColorUtils ===
 
-// Module 7598 (enhanced_role_colors/EnhancedRoleColorUtils)
+// Module 7576 (enhanced_role_colors/EnhancedRoleColorUtils)
 import _modDef672 from "module_672" /* 672 */;
 import GlobalUtils from "GlobalUtils" /* 1370 */;
-import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 5506 */;
+import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 5494 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1182 */;

@@ -1,28 +1,28 @@
-// === Module 16457: VibegrationsTemplateWizardSheet ===
+// === Module 16478: VibegrationsTemplateWizardSheet ===
 
-// Module 16457 (VibegrationsTemplateWizardSheet)
+// Module 16478 (VibegrationsTemplateWizardSheet)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4830 */;
-import Text_Text from "Text/Text" /* 4862 */;
-import TableRadioRow from "TableRadioRow" /* 6196 */;
-import VibegrationsActionCreators from "VibegrationsActionCreators" /* 8695 */;
-import VibegrationsCreateErrors from "VibegrationsCreateErrors" /* 12652 */;
-import VibegrationsTemplateWizard from "VibegrationsTemplateWizard" /* 16460 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4809 */;
+import Text_Text from "Text/Text" /* 4841 */;
+import TableRadioRow from "TableRadioRow" /* 6186 */;
+import VibegrationsActionCreators from "VibegrationsActionCreators" /* 8687 */;
+import VibegrationsCreateErrors from "VibegrationsCreateErrors" /* 12663 */;
+import VibegrationsTemplateWizard from "VibegrationsTemplateWizard" /* 16481 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2067 */;
-import PermissionStore from "PermissionStore" /* 4499 */;
-import VibegrationsChatStore from "VibegrationsChatStore" /* 12843 */;
+import GuildStore from "GuildStore" /* 2066 */;
+import PermissionStore from "PermissionStore" /* 4498 */;
+import VibegrationsChatStore from "VibegrationsChatStore" /* 12852 */;
 
 require = fn;
 const View = fn(17).View;
-const VibegrationsConnectionStore = fn(12842);
+const VibegrationsConnectionStore = fn(12851);
 ({ ensureConnection: c10, sendUserMessage: closure_11, stageModelSettings: closure_12 } = VibegrationsConnectionStore);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 const VibegrationsTemplateWizardSheet = "VibegrationsTemplateWizardSheet";
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 }, loading: null, pointCard: null, pointIcon: null, point: null, actions: null, action: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.loading = { alignItems: "center", paddingVertical: nativeDefault.space.PX_24 };
@@ -36,7 +36,7 @@ let obj7 = { flex: 1, gap: nativeDefault.space.PX_4 };
 obj2.actions = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
 obj2.action = { flex: 1 };
 let closure_17 = createStyles.createStyles(obj2);
-let obj9 = { shield: fn(16458).ChatShieldIcon, hammer: fn(8935).HammerIcon, group: fn(5599).GroupIcon };
+let obj9 = { shield: fn(16479).ChatShieldIcon, hammer: fn(8928).HammerIcon, group: fn(5587).GroupIcon };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/vibegrations/native/VibegrationsTemplateWizardSheet.tsx");
 
@@ -53,7 +53,7 @@ export default function VibegrationsTemplateWizardSheet(template) {
   let tmp = ref();
   noop = tmp;
   let items = [c7, first];
-  const stateFromStores = template(504).useStateFromStores(items, () => template(16460).vibegrationsTemplateWizardGuilds(_undefined.getGuildsArray(), "VibegrationsTemplateWizardSheet"));
+  const stateFromStores = template(504).useStateFromStores(items, () => template(16481).vibegrationsTemplateWizardGuilds(_undefined.getGuildsArray(), "VibegrationsTemplateWizardSheet"));
   let obj = template(504);
   [tmp5, c7] = onCreated(noop.useState(0), 2);
   const tmp6 = onCreated(noop.useState(() => {
@@ -91,10 +91,10 @@ export default function VibegrationsTemplateWizardSheet(template) {
     if (null != first) {
       c0 = false;
       let obj2 = { guild_id: tmp, install_scope: "guild", flags: null };
-      let obj = template(8695);
-      obj2.flags = template(5567).vibegrationsCreateFlags(closure_3);
+      let obj = template(8687);
+      obj2.flags = template(5555).vibegrationsCreateFlags(closure_3);
       const project = obj.createProject(obj2);
-      const obj3 = template(5567);
+      const obj3 = template(5555);
       project.then((current) => {
         closure_17.current = current;
         closure_18.current = current;
@@ -157,13 +157,13 @@ export default function VibegrationsTemplateWizardSheet(template) {
     }
   }, items5);
   let obj4 = template(504);
-  let result = template(16460).vibegrationsWizardIntro(stateFromStores1);
-  const tmp2Result = template(16460);
-  const result1 = template(16460).vibegrationsWizardServerCopy(stateFromStores1);
-  const tmp2Result6 = template(16460);
-  const result2 = template(16460).vibegrationsWizardQuestions(stateFromStores1);
-  const tmp2Result7 = template(16460);
-  const result3 = template(16460).vibegrationsTemplateWizardSteps(result2, onCreated(noop.useState(() => VibegrationsTemplateWizard.vibegrationsWizardNeedsServerStep(guildId, stateFromStores)), 1)[0]);
+  let result = template(16481).vibegrationsWizardIntro(stateFromStores1);
+  const tmp2Result = template(16481);
+  const result1 = template(16481).vibegrationsWizardServerCopy(stateFromStores1);
+  const tmp2Result6 = template(16481);
+  const result2 = template(16481).vibegrationsWizardQuestions(stateFromStores1);
+  const tmp2Result7 = template(16481);
+  const result3 = template(16481).vibegrationsTemplateWizardSteps(result2, onCreated(noop.useState(() => VibegrationsTemplateWizard.vibegrationsWizardNeedsServerStep(guildId, stateFromStores)), 1)[0]);
   const tmp23 = result3[Math.min(Math, tmp5, result3.length - 1)];
   const length = result3.length;
   let tmp24;
@@ -199,7 +199,7 @@ export default function VibegrationsTemplateWizardSheet(template) {
     }
   }, []);
   const callback1 = obj2.useCallback(() => {
-    guildId(4830).hideActionSheet(c16);
+    guildId(4809).hideActionSheet(c16);
   }, []);
   const items6 = [first2, onCreated, first, first1, result2, first3, template.id];
   closure_24 = obj2.useCallback(asyncGeneratorStep(async () => {
@@ -311,14 +311,14 @@ export default function VibegrationsTemplateWizardSheet(template) {
   }
   if (null != tmp15) {
     let obj5 = { variant: "text-sm/normal", color: "text-feedback-critical", children: tmp15 };
-    let tmp35Result2 = closure_13(tmp2(4862).Text, obj5);
+    let tmp35Result2 = closure_13(tmp2(4841).Text, obj5);
     let tmp31 = closure_13;
   } else {
     tmp31 = closure_13;
-    let obj6 = { style: tmp.loading, children: closure_13(tmp2(6085).ActivityIndicator, {}) };
+    let obj6 = { style: tmp.loading, children: closure_13(tmp2(6075).ActivityIndicator, {}) };
     tmp35Result2 = closure_13(stateFromStores, obj6);
   }
-  let obj7 = { startExpanded: true, keyboardShouldPersistTaps: "handled", onDismiss: callback, header: tmp31(template(6766).BottomSheetTitleHeader, { title: name }), children: null };
+  let obj7 = { startExpanded: true, keyboardShouldPersistTaps: "handled", onDismiss: callback, header: tmp31(template(6756).BottomSheetTitleHeader, { title: name }), children: null };
   const obj8 = { style: tmp.content, children: null };
   let tmp37 = null;
   if ("about" === tmp23) {
@@ -326,7 +326,7 @@ export default function VibegrationsTemplateWizardSheet(template) {
     if (null != result) {
       obj9 = { children: null };
       let obj10 = { variant: "text-md/medium", color: "text-default", children: result.lead };
-      const items7 = [tmp31(tmp2(4862).Text, obj10), ];
+      const items7 = [tmp31(tmp2(4841).Text, obj10), ];
       const points = result.points;
       items7[1] = points.map((children, index) => {
         const obj = { style: closure_5.pointCard, children: null };
@@ -375,17 +375,17 @@ export default function VibegrationsTemplateWizardSheet(template) {
                 },
           disabled: first3
         };
-        const items9 = [tmp31(tmp2(6702).TextArea, obj12), , ];
+        const items9 = [tmp31(tmp2(6692).TextArea, obj12), , ];
         let tmp31Result = null;
         if (null != tmp24.hint) {
           let obj13 = { variant: "text-sm/normal", color: "text-muted", children: tmp24.hint };
-          tmp31Result = tmp31(tmp2(4862).Text, obj13);
+          tmp31Result = tmp31(tmp2(4841).Text, obj13);
         }
         items9[1] = tmp31Result;
         let tmp31Result3 = null;
         if (null != tmp15) {
           const obj14 = { variant: "text-xs/normal", color: "text-feedback-critical", children: tmp15 };
-          tmp31Result3 = tmp31(tmp2(4862).Text, obj14);
+          tmp31Result3 = tmp31(tmp2(4841).Text, obj14);
         }
         items9[2] = tmp31Result3;
         obj11.children = items9;
@@ -412,17 +412,17 @@ export default function VibegrationsTemplateWizardSheet(template) {
         return _undefined((arg0) => Math.max(0, arg0 - 1));
       };
     }
-    obj16.children = tmp31(tmp2(5477).Button, obj18);
+    obj16.children = tmp31(tmp2(5465).Button, obj18);
     const items10 = [tmp31(tmp36, obj16), ];
     const obj19 = { style: tmp.action, children: null };
     if (tmp5 === length - 1) {
       const obj20 = { variant: "primary", text: null, disabled: null, loading: null, onPress: null };
       const intl5 = tmp2(1115).intl;
-      obj20.text = intl5.string(guildId(3715).KD2m2Y);
+      obj20.text = intl5.string(guildId(3714).KD2m2Y);
       let tmp50 = null == first1 || null == first;
       if (!tmp50) {
-        tmp50 = !tmp2(16460).isVibegrationsWizardComplete(result2, first2);
-        const tmp2Result9 = tmp2(16460);
+        tmp50 = !tmp2(16481).isVibegrationsWizardComplete(result2, first2);
+        const tmp2Result9 = tmp2(16481);
       }
       obj20.disabled = tmp50;
       obj20.loading = first3;
@@ -442,8 +442,8 @@ export default function VibegrationsTemplateWizardSheet(template) {
       if (!tmp40) {
         let tmp48 = typeof tmp23 === "object";
         if (typeof tmp23 === "object") {
-          tmp48 = !tmp2(16460).canLeaveVibegrationsWizardQuestion(tmp24, str);
-          const tmp2Result10 = tmp2(16460);
+          tmp48 = !tmp2(16481).canLeaveVibegrationsWizardQuestion(tmp24, str);
+          const tmp2Result10 = tmp2(16481);
         }
         tmp40 = tmp48;
       }
@@ -452,18 +452,18 @@ export default function VibegrationsTemplateWizardSheet(template) {
         return _undefined((arg0) => Math.min(length - 1, arg0 + 1));
       };
     }
-    obj19.children = tmp31(tmp2(5477).Button, obj21);
+    obj19.children = tmp31(tmp2(5465).Button, obj21);
     items10[1] = tmp31(tmp36, obj19);
     obj15.children = items10;
     items8[3] = tmp35(tmp36, obj15);
     obj8.children = items8;
     obj7.children = tmp35(tmp36, obj8);
-    return tmp31(tmp2(6814).ActionSheet, obj7);
+    return tmp31(tmp2(6804).ActionSheet, obj7);
   } else if (0 === stateFromStores.length) {
     const obj22 = { variant: "text-sm/normal", color: "text-muted", children: null };
     const intl2 = tmp2(1115).intl;
-    obj22.children = intl2.string(guildId(3715).ipwoYO);
-    let tmp31Result4 = tmp31(tmp2(4862).Text, obj22);
+    obj22.children = intl2.string(guildId(3714).ipwoYO);
+    let tmp31Result4 = tmp31(tmp2(4841).Text, obj22);
   } else {
     let str4 = first;
     if (first == null) {
@@ -480,14 +480,14 @@ export default function VibegrationsTemplateWizardSheet(template) {
       children: null
     };
     const intl = tmp2(1115).intl;
-    obj24.accessibilityLabel = intl.string(guildId(3715)["6NyGSZ"]);
+    obj24.accessibilityLabel = intl.string(guildId(3714)["6NyGSZ"]);
     obj24.children = stateFromStores.map((label) => map1(TableRadioRow.TableRadioRow, { label: label.name, value: label.id, disabled: first3 }, label.id));
-    const items11 = [tmp31(tmp2(6193).TableRadioGroup, obj24), ];
+    const items11 = [tmp31(tmp2(6183).TableRadioGroup, obj24), ];
     const obj25 = { variant: "text-sm/normal", color: "text-muted", children: result1.hint };
-    items11[1] = tmp31(tmp2(4862).Text, obj25);
+    items11[1] = tmp31(tmp2(4841).Text, obj25);
     obj23.children = items11;
     tmp31Result4 = tmp35(closure_15, obj23);
   }
-  const tmp2Result8 = template(16460);
+  const tmp2Result8 = template(16481);
 };
 export const VIBEGRATIONS_TEMPLATE_WIZARD_SHEET_KEY = "VibegrationsTemplateWizardSheet";

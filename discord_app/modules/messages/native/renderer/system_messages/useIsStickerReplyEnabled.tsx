@@ -1,9 +1,9 @@
-// === Module 7635: useIsStickerReplyEnabled ===
+// === Module 7613: useIsStickerReplyEnabled ===
 
-// Module 7635 (useIsStickerReplyEnabled)
-import ThreadHooks from "ThreadHooks" /* 6883 */;
-import GuildMemberStore from "GuildMemberStore" /* 2108 */;
-import PermissionStore from "PermissionStore" /* 4499 */;
+// Module 7613 (useIsStickerReplyEnabled)
+import ThreadHooks from "ThreadHooks" /* 6874 */;
+import GuildMemberStore from "GuildMemberStore" /* 2107 */;
+import PermissionStore from "PermissionStore" /* 4498 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;

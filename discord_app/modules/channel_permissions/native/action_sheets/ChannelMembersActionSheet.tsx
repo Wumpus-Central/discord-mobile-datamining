@@ -1,33 +1,33 @@
-// === Module 11309: ChannelMembersActionSheet ===
+// === Module 11317: ChannelMembersActionSheet ===
 
-// Module 11309 (ChannelMembersActionSheet)
+// Module 11317 (ChannelMembersActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
 import useNavigation from "useNavigation" /* 1485 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4830 */;
-import Text_Text from "Text/Text" /* 4862 */;
-import Pressables from "Pressables" /* 5632 */;
-import BottomSheetModal from "BottomSheetModal" /* 6241 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6766 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6767 */;
-import SettingsIcon from "SettingsIcon" /* 6994 */;
-import RowButton from "RowButton" /* 8251 */;
-import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8281 */;
-import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 9215 */;
-import ChannelOverwritesItemDefault from "ChannelOverwritesItem" /* 9231 */;
-import GroupPlusIcon from "GroupPlusIcon" /* 9693 */;
-import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11308 */;
-import AppChannelPermissionUtils from "AppChannelPermissionUtils" /* 11310 */;
-import ChannelDetailsUtils from "ChannelDetailsUtils" /* 11312 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4809 */;
+import Text_Text from "Text/Text" /* 4841 */;
+import Pressables from "Pressables" /* 5621 */;
+import BottomSheetModal from "BottomSheetModal" /* 6231 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6756 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6757 */;
+import SettingsIcon from "SettingsIcon" /* 6985 */;
+import RowButton from "RowButton" /* 8241 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8271 */;
+import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 9209 */;
+import ChannelOverwritesItemDefault from "ChannelOverwritesItem" /* 9225 */;
+import GroupPlusIcon from "GroupPlusIcon" /* 9687 */;
+import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11316 */;
+import AppChannelPermissionUtils from "AppChannelPermissionUtils" /* 11318 */;
+import ChannelDetailsUtils from "ChannelDetailsUtils" /* 11320 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2045 */;
-import GuildMemberStore from "GuildMemberStore" /* 2108 */;
-import GuildRoleStore from "GuildRoleStore" /* 2102 */;
-import GuildStore from "GuildStore" /* 2067 */;
-import PermissionStore from "PermissionStore" /* 4499 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
+import GuildMemberStore from "GuildMemberStore" /* 2107 */;
+import GuildRoleStore from "GuildRoleStore" /* 2101 */;
+import GuildStore from "GuildStore" /* 2066 */;
+import PermissionStore from "PermissionStore" /* 4498 */;
 
 require = fn;
 const View = fn(17).View;
@@ -35,7 +35,7 @@ const Constants = fn(1074);
 ({ ChannelSettingsSections: closure_9, Permissions: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = { container: { paddingHorizontal: 16, flex: 1 }, sectionRowWrapper: { paddingVertical: nativeDefault.space.PX_12 }, warning: { margin: 16, marginBottom: 0 } };
 let closure_13 = createStyles.createStyles(obj2);
 const size = fn(2);

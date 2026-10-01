@@ -1,11 +1,11 @@
-// === Module 16848: useShouldShowExpiringTrialOfferCard ===
+// === Module 16869: useShouldShowExpiringTrialOfferCard ===
 
-// Module 16848 (useShouldShowExpiringTrialOfferCard)
+// Module 16869 (useShouldShowExpiringTrialOfferCard)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import DurationsDefault from "Durations" /* 1091 */;
-import useCountdownDefault from "useCountdown" /* 7055 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7063 */;
-import NoticeStore from "NoticeStore" /* 13463 */;
+import useCountdownDefault from "useCountdown" /* 7047 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7055 */;
+import NoticeStore from "NoticeStore" /* 13471 */;
 
 require = fn;
 const NoticeTypes = fn(1074).NoticeTypes;

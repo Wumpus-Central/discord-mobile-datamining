@@ -1,14 +1,14 @@
-// === Module 10662: ModalActionButton ===
+// === Module 10654: ModalActionButton ===
 
-// Module 10662 (ModalActionButton)
-import components_Button_Button from "components/Button/Button" /* 5477 */;
+// Module 10654 (ModalActionButton)
+import components_Button_Button from "components/Button/Button" /* 5465 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let closure_6 = createStyles.createStyles({ spacer: { marginTop: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Modal/native/ModalActionButton.native.tsx");

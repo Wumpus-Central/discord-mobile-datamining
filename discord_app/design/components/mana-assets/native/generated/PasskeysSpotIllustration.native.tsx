@@ -1,9 +1,9 @@
-// === Module 14434: PasskeysSpotIllustration ===
+// === Module 14440: PasskeysSpotIllustration ===
 
-// Module 14434 (PasskeysSpotIllustration)
+// Module 14440 (PasskeysSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 6095 */;
-import _modDef14435 from "module_14435" /* 14435 */;
+import FastImageDefault from "FastImage" /* 6085 */;
+import _modDef14441 from "module_14441" /* 14441 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const PasskeysSpotIllustration = function PasskeysSpotIllustration(width)
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef14435 };
+  const obj2 = { uri: _modDef14441 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];

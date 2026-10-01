@@ -1,6 +1,6 @@
-// === Module 7890: useGetIsMounted ===
+// === Module 7877: useGetIsMounted ===
 
-// Module 7890 (useGetIsMounted)
+// Module 7877 (useGetIsMounted)
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

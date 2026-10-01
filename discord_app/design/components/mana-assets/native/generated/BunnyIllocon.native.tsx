@@ -1,9 +1,9 @@
-// === Module 16569: BunnyIllocon ===
+// === Module 16591: BunnyIllocon ===
 
-// Module 16569 (BunnyIllocon)
+// Module 16591 (BunnyIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 6095 */;
-import _modDef16570 from "module_16570" /* 16570 */;
+import FastImageDefault from "FastImage" /* 6085 */;
+import _modDef16592 from "module_16592" /* 16592 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,7 +16,7 @@ export const BunnyIllocon = function BunnyIllocon(size) {
     num = 64;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef16570 };
+  const obj2 = { uri: _modDef16592 };
   obj.source = obj2;
   const items = [{ width: num, height: num }];
   obj.style = items;

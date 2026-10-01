@@ -1,6 +1,6 @@
-// === Module 13732: PathUtils ===
+// === Module 13740: PathUtils ===
 
-// Module 13732 (PathUtils)
+// Module 13740 (PathUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/PathUtils.tsx");

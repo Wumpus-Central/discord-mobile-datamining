@@ -1,33 +1,33 @@
-// === Module 11087: ChatView ===
+// === Module 11091: ChatView ===
 
-// Module 11087 (ChatView)
+// Module 11091 (ChatView)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import ChatInputUtils from "ChatInputUtils" /* 4731 */;
-import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 6928 */;
-import SummaryActionCreators from "SummaryActionCreators" /* 11091 */;
-import ChatViewWrapperDefault from "ChatViewWrapper" /* 11096 */;
-import ChatViewStickyHeaderDefault from "ChatViewStickyHeader" /* 11109 */;
-import MessagesDefault from "Messages" /* 11173 */;
-import ChatInputDefault from "ChatInput" /* 11643 */;
-import JumpToPresentButtonDefault from "JumpToPresentButton" /* 11952 */;
-import ChatBeginningRowDefault from "ChatBeginningRow" /* 12166 */;
-import PortalKeyboardInlineComponentDefault from "PortalKeyboardInlineComponent" /* 12335 */;
-import ChatPlaceholderDefault from "ChatPlaceholder" /* 12336 */;
-import ChannelSafeAreaBottomDefault from "ChannelSafeAreaBottom" /* 12340 */;
-import VoiceMessageOverlayDefault from "VoiceMessageOverlay" /* 12343 */;
+import ChatInputUtils from "ChatInputUtils" /* 4730 */;
+import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 6919 */;
+import SummaryActionCreators from "SummaryActionCreators" /* 11095 */;
+import ChatViewWrapperDefault from "ChatViewWrapper" /* 11100 */;
+import ChatViewStickyHeaderDefault from "ChatViewStickyHeader" /* 11113 */;
+import MessagesDefault from "Messages" /* 11177 */;
+import ChatInputDefault from "ChatInput" /* 11651 */;
+import JumpToPresentButtonDefault from "JumpToPresentButton" /* 11959 */;
+import ChatBeginningRowDefault from "ChatBeginningRow" /* 12174 */;
+import PortalKeyboardInlineComponentDefault from "PortalKeyboardInlineComponent" /* 12347 */;
+import ChatPlaceholderDefault from "ChatPlaceholder" /* 12348 */;
+import ChannelSafeAreaBottomDefault from "ChannelSafeAreaBottom" /* 12352 */;
+import VoiceMessageOverlayDefault from "VoiceMessageOverlay" /* 12355 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5786 */;
-import ChannelStore from "ChannelStore" /* 2045 */;
-import MessageStore from "MessageStore" /* 5086 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5775 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
+import MessageStore from "MessageStore" /* 5065 */;
 
 require = fn;
-const createChannelRecord = fn(2049).createChannelRecord;
+const createChannelRecord = fn(2048).createChannelRecord;
 const ChannelTypes = fn(1074).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj = { empty: { flex: 1, borderTopWidth: fn(17).StyleSheet.hairlineWidth, borderTopColor: nativeDefault.colors.BORDER_SUBTLE }, messages: { flex: 1, overflow: "hidden" }, chat: null };
 let obj3 = { flex: 1, borderTopWidth: fn(17).StyleSheet.hairlineWidth, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };
 obj.chat = { backgroundColor: nativeDefault.colors.CHANNEL_BACKGROUND_DEFAULT, justifyContent: "flex-start", overflow: "hidden", flex: 1 };

@@ -1,6 +1,6 @@
-// === Module 11802: AllowNonStaffToPreviewAppCollectionsExperiment ===
+// === Module 11810: AllowNonStaffToPreviewAppCollectionsExperiment ===
 
-// Module 11802 (AllowNonStaffToPreviewAppCollectionsExperiment)
+// Module 11810 (AllowNonStaffToPreviewAppCollectionsExperiment)
 import ApexExperiment from "ApexExperiment" /* 1435 */;
 import size from "module_2" /* 2 */;
 

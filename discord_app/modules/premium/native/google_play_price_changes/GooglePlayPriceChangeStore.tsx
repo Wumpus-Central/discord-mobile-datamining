@@ -1,10 +1,10 @@
-// === Module 16976: GooglePlayPriceChangeStore ===
+// === Module 16998: GooglePlayPriceChangeStore ===
 
-// Module 16976 (GooglePlayPriceChangeStore)
+// Module 16998 (GooglePlayPriceChangeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import SubscriptionStore from "SubscriptionStore" /* 4524 */;
+import SubscriptionStore from "SubscriptionStore" /* 4523 */;
 
 require = fn;
 function onInitializeSync() {

@@ -1,11 +1,11 @@
-// === Module 9463: GuildEventsNoContent ===
+// === Module 9457: GuildEventsNoContent ===
 
-// Module 9463 (GuildEventsNoContent)
+// Module 9457 (GuildEventsNoContent)
 import nativeDefault from "native" /* 576 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9247 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9241 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4499 */;
-import TextStyles from "TextStyles" /* 6033 */;
+import PermissionStore from "PermissionStore" /* 4498 */;
+import TextStyles from "TextStyles" /* 6022 */;
 
 const require = fn;
 const View = fn(17).View;
@@ -14,7 +14,7 @@ const Constants = fn(1085);
 ({ Permissions: metroRequire, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = { container: { display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", marginBottom: 88, padding: 16 }, title: null, subtitle: null };
 let obj3 = {};
 const merged = Object.assign(TextStyles(Fonts.DISPLAY_EXTRABOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24, { marginBottom: 8 }));
@@ -35,17 +35,17 @@ export default function GuildEventsNoContent(guild) {
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { icon: null, IconComponent: null };
   const obj = guild(504);
-  obj3.icon = onClose(9273);
-  obj3.IconComponent = guild(9275).CalendarIcon;
-  const items2 = [closure_7(onClose(8050), obj3), , , ];
+  obj3.icon = onClose(9267);
+  obj3.IconComponent = guild(9269).CalendarIcon;
+  const items2 = [closure_7(onClose(8039), obj3), , , ];
   const obj4 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = guild(1115).intl;
   obj4.children = intl.string(guild(1115).t["WgZ+3D"]);
-  items2[1] = closure_7(guild(4862).Text, obj4);
+  items2[1] = closure_7(guild(4841).Text, obj4);
   const obj5 = { style: tmp.subtitle, variant: "text-sm/normal", color: "text-default", children: null };
   const intl2 = guild(1115).intl;
   obj5.children = intl2.string(guild(1115).t["v/S/PG"]);
-  items2[2] = closure_7(guild(4862).Text, obj5);
+  items2[2] = closure_7(guild(4841).Text, obj5);
   if (stateFromStores) {
     const obj6 = { style: tmp.subtitle, variant: "text-sm/normal", color: "text-default", children: null };
     const intl3 = tmp2(1115).intl;
@@ -56,7 +56,7 @@ export default function GuildEventsNoContent(guild) {
         }
     };
     obj6.children = intl3.format(tmp2(1115).t["K+DH2o"], obj7);
-    stateFromStores = closure_7(tmp2(4862).Text, obj6);
+    stateFromStores = closure_7(tmp2(4841).Text, obj6);
   }
   items2[3] = stateFromStores;
   obj2.children = items2;

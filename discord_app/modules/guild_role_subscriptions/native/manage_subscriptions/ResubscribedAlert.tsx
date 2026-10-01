@@ -1,12 +1,12 @@
-// === Module 14969: ResubscribedAlert ===
+// === Module 14975: ResubscribedAlert ===
 
-// Module 14969 (ResubscribedAlert)
+// Module 14975 (ResubscribedAlert)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
 import native from "native" /* 1177 */;
-import Text_Text from "Text/Text" /* 4862 */;
-import common_AlertDefault from "common/Alert" /* 5496 */;
-import _modDef14970 from "module_14970" /* 14970 */;
+import Text_Text from "Text/Text" /* 4841 */;
+import common_AlertDefault from "common/Alert" /* 5484 */;
+import _modDef14976 from "module_14976" /* 14976 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL }, body: { alignItems: "center", textAlign: "center" }, centerText: { textAlign: "center" }, headerImage: { width: 87, height: 87 } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -29,7 +29,7 @@ export default function ResubscribedAlert(onClose) {
   obj.style = tmp.container;
   const obj2 = { style: tmp.body, children: null };
   const tmp2 = common_AlertDefault;
-  const items = [hasOwnProperty(React4, { source: _modDef14970, style: tmp.headerImage }), hasOwnProperty(native.Spacer, { size: 27 }), , , ];
+  const items = [hasOwnProperty(React4, { source: _modDef14976, style: tmp.headerImage }), hasOwnProperty(native.Spacer, { size: 27 }), , , ];
   const obj4 = { variant: "text-lg/semibold", color: "mobile-text-heading-primary", style: tmp.centerText, children: null };
   const intl2 = util.intl;
   obj4.children = intl2.string(util.t.oPV2cy);

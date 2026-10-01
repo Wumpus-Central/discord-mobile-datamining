@@ -1,9 +1,9 @@
-// === Module 6931: MobileWebHandoffLinking ===
+// === Module 6922: MobileWebHandoffLinking ===
 
-// Module 6931 (MobileWebHandoffLinking)
+// Module 6922 (MobileWebHandoffLinking)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
 import FingerprintUtils from "FingerprintUtils" /* 1254 */;
-import MobileWebHandoffUtilsDefault from "MobileWebHandoffUtils" /* 6934 */;
+import MobileWebHandoffUtilsDefault from "MobileWebHandoffUtils" /* 6925 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -87,7 +87,7 @@ let closure_10 = async function _redirectWithHandoffToken(arg0) {
           closure_131_5 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "flex", done: true };
+          return { value: "flex", done: null };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

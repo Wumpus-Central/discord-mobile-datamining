@@ -1,7 +1,7 @@
-// === Module 6939: createResolvedGuildTemplate ===
+// === Module 6930: createResolvedGuildTemplate ===
 
-// Module 6939 (createResolvedGuildTemplate)
-import GuildTemplatesConstants from "GuildTemplatesConstants" /* 6940 */;
+// Module 6930 (createResolvedGuildTemplate)
+import GuildTemplatesConstants from "GuildTemplatesConstants" /* 6931 */;
 import size from "module_2" /* 2 */;
 
 const GuildTemplateStates = GuildTemplatesConstants.GuildTemplateStates;

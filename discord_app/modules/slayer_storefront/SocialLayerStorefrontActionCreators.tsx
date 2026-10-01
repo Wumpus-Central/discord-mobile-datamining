@@ -1,12 +1,12 @@
-// === Module 10466: SocialLayerStorefrontActionCreators ===
+// === Module 10458: SocialLayerStorefrontActionCreators ===
 
-// Module 10466 (SocialLayerStorefrontActionCreators)
+// Module 10458 (SocialLayerStorefrontActionCreators)
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 8444 */;
-import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 6845 */;
+import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 8436 */;
+import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 6836 */;
 
 const require = globalThis.__r;
 
@@ -73,7 +73,7 @@ let closure_13 = async function _fetchSocialLayerStorefront2(arg0) {
           closure_132_17 = undefined;
           c8 = 1;
           c9 = 1;
-          return { value: "flex", done: true };
+          return { value: "flex", done: null };
         }
       } else {
         if (1 === tmp7) {
@@ -303,7 +303,7 @@ let closure_15 = async function _fetchSocialLayerStorefrontSkuWithUrl2(arg0) {
           let storefront_metadata;
           c7 = 1;
           c8 = 1;
-          return { value: "flex", done: true };
+          return { value: "flex", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -729,13 +729,11 @@ let closure_26 = async function _fetchSocialLayerStorefrontConfig() {
           let body;
           closure_129_1 = undefined;
           closure_129_2 = undefined;
-          closure_129_3 = undefined;
-          closure_129_4 = undefined;
           configFetchState = configFetchState.getConfigFetchState();
           if ("loading" !== configFetchState.state) {
             if ("success" !== configFetchState.state) {
               if ("error" === configFetchState.state) {
-                const _Date3 = Date;
+                const _Date2 = Date;
               }
               c3 = 1;
               DispatcherDefault.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_START" });
@@ -746,7 +744,7 @@ let closure_26 = async function _fetchSocialLayerStorefrontConfig() {
               const obj8 = { value: HTTP.get(obj5), done: false };
               return obj8;
             } else {
-              const _Date2 = Date;
+              const _Date = Date;
             }
           }
         }
@@ -760,42 +758,17 @@ let closure_26 = async function _fetchSocialLayerStorefrontConfig() {
           throw value;
         } else if (arg0 !== 2) {
           body = value.body;
-          closure_129_1 = null;
-          if (null != body.promotion_end_datetime) {
-            let _Date = Date;
-            let date = new Date(body.promotion_end_datetime);
-            closure_129_2 = date;
-            let _Number = Number;
-            if (!Number.isNaN(closure_129_2.getTime())) {
-              closure_129_1 = closure_129_2;
-            }
-          }
           const storefronts = body.storefronts;
           let mapped;
           if (storefronts != null) {
             mapped = storefronts.map((guildId) => {
-              let date = null;
-              if (null != guildId.promotion_end_datetime) {
-                const _Date = Date;
-                date = new Date(guildId.promotion_end_datetime);
-              }
-              let isNaNResult = null == date;
-              if (!isNaNResult) {
-                const _Number = Number;
-                isNaNResult = Number.isNaN(date.getTime());
-              }
-              let tmp7 = null;
-              if (!isNaNResult) {
-                tmp7 = date;
-              }
-              const obj = { guildId: guildId.guild_id, applicationId: guildId.application_id, gameId: guildId.game_id, collectiblesShopNavigationEnabled: true === guildId.collectibles_shop_navigation_enabled, excludedPlatforms: null, disableMobileAccountLinking: null, promotionEndDatetime: null, allowOrbsSpending: null };
+              const obj = { guildId: guildId.guild_id, applicationId: guildId.application_id, gameId: guildId.game_id, collectiblesShopNavigationEnabled: true === guildId.collectibles_shop_navigation_enabled, excludedPlatforms: null, disableMobileAccountLinking: null, allowOrbsSpending: null };
               let excluded_platforms = guildId.excluded_platforms;
               if (excluded_platforms == null) {
                 excluded_platforms = [];
               }
               obj.excludedPlatforms = excluded_platforms;
               obj.disableMobileAccountLinking = true === guildId.disable_mobile_account_linking;
-              obj.promotionEndDatetime = tmp7;
               obj.allowOrbsSpending = true === guildId.allow_orbs_spending;
               return obj;
             });
@@ -804,14 +777,14 @@ let closure_26 = async function _fetchSocialLayerStorefrontConfig() {
           if (mapped == null) {
             closure_0 = [];
           }
-          closure_129_3 = closure_0;
-          closure_129_4 = null;
+          closure_129_1 = closure_0;
+          closure_129_2 = null;
           if (null != body.announcement_modal_config) {
             let obj = { version: body.announcement_modal_config.version, applicationId: body.announcement_modal_config.application_id };
-            closure_129_4 = obj;
+            closure_129_2 = obj;
           }
           const obj9 = { type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS", config: null };
-          const obj10 = { promotionalSkuIds: body.promotional_sku_ids, promotionEndDatetime: closure_129_1, storefronts: closure_129_3, announcementModalConfig: closure_129_4 };
+          const obj10 = { promotionalSkuIds: body.promotional_sku_ids, storefronts: closure_129_1, announcementModalConfig: closure_129_2 };
           obj9.config = obj10;
           closure_130_1(closure_130_2[5]).dispatch(obj9);
           c3 = 0;
@@ -823,10 +796,10 @@ let closure_26 = async function _fetchSocialLayerStorefrontConfig() {
         return obj11;
       }
       c5 = 3;
-    } catch (tmp47) {
+    } catch (tmp35) {
       if (tmp4 === c3) {
         c5 = tmp2;
-        throw tmp47;
+        throw tmp35;
       } else {
         c4 = tmp;
       }

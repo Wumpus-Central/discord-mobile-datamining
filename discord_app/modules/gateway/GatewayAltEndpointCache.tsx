@@ -1,6 +1,6 @@
-// === Module 14315: GatewayAltEndpointCache ===
+// === Module 14323: GatewayAltEndpointCache ===
 
-// Module 14315 (GatewayAltEndpointCache)
+// Module 14323 (GatewayAltEndpointCache)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/gateway/GatewayAltEndpointCache.tsx");

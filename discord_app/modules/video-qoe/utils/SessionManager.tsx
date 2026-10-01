@@ -1,6 +1,6 @@
-// === Module 14875: SessionManager ===
+// === Module 14881: SessionManager ===
 
-// Module 14875 (SessionManager)
+// Module 14881 (SessionManager)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/video-qoe/utils/SessionManager.tsx");

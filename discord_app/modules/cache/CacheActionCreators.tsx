@@ -1,54 +1,98 @@
-// === Module 15334: CacheActionCreators ===
+// === Module 15339: CacheActionCreators ===
 
-// Module 15334 (CacheActionCreators)
+// Module 15339 (CacheActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import CacheStore from "CacheStore" /* 7092 */;
+import CacheStore from "CacheStore" /* 7084 */;
 
 let closure_5 = async function _writeCaches() {
-  if (1 === tmp5) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
     if (arg0 === 1) {
-      c4 = 3;
       throw value;
     } else if (arg0 === 2) {
-      c4 = 3;
-      return { value, done: true };
-    } else if (closure_130_4.canWriteCaches(closure_129_0)) {
-      c3 = 2;
-      c4 = 1;
-      return { value: closure_130_3.loadAllMissingChannels(), done: false };
-    }
-  } else if (2 === tmp5) {
-    if (arg0 === 1) {
-      c4 = 3;
-      throw value;
-    } else if (arg0 === 2) {
-      c4 = 3;
-      return { value, done: true };
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
-      closure_129_1 = [];
-      closure_130_0(closure_130_1[3]).dispatch({ type: "WRITE_CACHES", promisesToWaitOn: closure_129_1 });
-      c3 = 3;
-      c4 = 1;
-      return { value: Promise.all(closure_129_1), done: false };
+      return { value: "HermesInternal", done: null };
     }
-  } else if (arg0 === 1) {
-    c4 = 3;
-    throw value;
-  } else if (arg0 === 2) {
-    c4 = 3;
-    return { value, done: true };
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          closure_2 = tmp5;
+          closure_1 = tmp2;
+          closure_129_0 = undefined;
+          let flag = closure_0;
+          if (closure_0 === undefined) {
+            flag = false;
+          }
+          closure_129_0 = flag;
+          closure_129_1 = undefined;
+          c3 = 1;
+          c4 = 1;
+          return { value: "flex", done: null };
+        }
+      } else {
+        if (1 === tmp5) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj5 = { value, done: true };
+            return obj5;
+          } else if (closure_130_4.canWriteCaches(closure_129_0)) {
+            c3 = 2;
+            c4 = 1;
+            const obj6 = { value: closure_130_3.loadAllMissingChannels(), done: false };
+            return obj6;
+          }
+        } else if (2 === tmp5) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj7 = { value, done: true };
+            return obj7;
+          } else {
+            closure_129_1 = [];
+            const obj8 = { type: "WRITE_CACHES", promisesToWaitOn: closure_129_1 };
+            closure_130_0(closure_130_1[3]).dispatch(obj8);
+            c3 = 3;
+            c4 = 1;
+            const obj9 = { value: Promise.all(closure_129_1), done: false };
+            return obj9;
+          }
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj = { value, done: true };
+          return obj;
+        }
+        c4 = 3;
+        return { value: "HermesInternal", done: null };
+      }
+    } catch (tmp20) {
+      c4 = tmp;
+      throw tmp20;
+    }
   }
-  await "HermesInternal";
-  closure_1 = tmp2;
-  let flag = closure_0;
-  if (closure_0 === undefined) {
-    flag = false;
-  }
-  closure_129_0 = flag;
-  return "flex";
 };
-const ChannelLoader = fn(2045).ChannelLoader;
+const ChannelLoader = fn(2044).ChannelLoader;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/cache/CacheActionCreators.tsx");
 

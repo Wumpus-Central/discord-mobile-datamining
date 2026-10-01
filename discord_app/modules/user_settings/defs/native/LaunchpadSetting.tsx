@@ -1,13 +1,13 @@
-// === Module 15291: LaunchpadSetting ===
+// === Module 15296: LaunchpadSetting ===
 
-// Module 15291 (LaunchpadSetting)
+// Module 15296 (LaunchpadSetting)
 import util from "util" /* 1115 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
 import UserSettings from "UserSettings" /* 2021 */;
-import SettingsConstants from "SettingsConstants" /* 7612 */;
-import LaunchPadConstants from "LaunchPadConstants" /* 11207 */;
-import useLaunchPadTypeDefault from "useLaunchPadType" /* 11208 */;
-import SettingBuilders from "SettingBuilders" /* 11211 */;
+import SettingsConstants from "SettingsConstants" /* 7590 */;
+import LaunchPadConstants from "LaunchPadConstants" /* 11211 */;
+import useLaunchPadTypeDefault from "useLaunchPadType" /* 11212 */;
+import SettingBuilders from "SettingBuilders" /* 11215 */;
 import size from "module_2" /* 2 */;
 
 const LaunchPadTypes = LaunchPadConstants.LaunchPadTypes;

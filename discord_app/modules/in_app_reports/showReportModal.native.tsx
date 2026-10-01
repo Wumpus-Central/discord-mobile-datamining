@@ -1,7 +1,7 @@
-// === Module 8287: showReportModal ===
+// === Module 8277: showReportModal ===
 
-// Module 8287 (showReportModal)
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5069 */;
+// Module 8277 (showReportModal)
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5048 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -44,7 +44,7 @@ let closure_5 = async function _showReportModal(arg0) {
           closure_131_4 = undefined;
           c6 = 1;
           c7 = 1;
-          return { value: "flex", done: true };
+          return { value: "flex", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

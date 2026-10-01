@@ -1,14 +1,14 @@
-// === Module 7489: MaskedBadge ===
+// === Module 7467: MaskedBadge ===
 
-// Module 7489 (MaskedBadge)
+// Module 7467 (MaskedBadge)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1177 */;
-import BadgeDefault from "Badge" /* 7490 */;
+import BadgeDefault from "Badge" /* 7468 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = { maskStyle: { position: "relative", right: "HermesInternal" }, unreadDot: { width: 0, height: 0 }, badgeStyle: { flexGrow: 1, flexShrink: 0 }, unreadBadge: { position: "relative", bottom: -3 }, lowPriorityBadge: { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_400 } };
 let closure_5 = createStyles.createStyles(obj2);
 const size = fn(2);

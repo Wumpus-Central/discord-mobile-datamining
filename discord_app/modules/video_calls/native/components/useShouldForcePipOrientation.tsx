@@ -1,15 +1,15 @@
-// === Module 9046: useShouldForcePipOrientation ===
+// === Module 9040: useShouldForcePipOrientation ===
 
-// Module 9046 (useShouldForcePipOrientation)
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 9004 */;
-import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 9047 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2044 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4882 */;
+// Module 9040 (useShouldForcePipOrientation)
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 8997 */;
+import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 9041 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2043 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4861 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
 const OrientationLockState = fn(2005).OrientationLockState;
-const CallConstants = fn(4887);
+const CallConstants = fn(4866);
 ({ isStreamParticipant: closure_7, ParticipantTypes: closure_8 } = CallConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/components/useShouldForcePipOrientation.tsx");
@@ -78,17 +78,17 @@ export const useShouldForcePipOrientation = function useShouldForcePipOrientatio
   if (null != focusedEmbeddedActivityParticipant) {
     if (closure_7(focusedEmbeddedActivityParticipant)) {
       if (null == stateFromStores) {
-        return tmp2(7975).OrientationType.LANDSCAPE;
+        return tmp2(7962).OrientationType.LANDSCAPE;
       }
     }
   }
   if (activityLockOrientation === OrientationLockState.LANDSCAPE) {
-    OrientationType = tmp2(7975).OrientationType;
+    OrientationType = tmp2(7962).OrientationType;
     let LANDSCAPE = OrientationType.LANDSCAPE;
   } else {
     LANDSCAPE = null;
     if (activityLockOrientation === tmp8.PORTRAIT) {
-      LANDSCAPE = tmp2(7975).OrientationType.PORTRAIT;
+      LANDSCAPE = tmp2(7962).OrientationType.PORTRAIT;
     }
   }
   const obj3 = channel(504);

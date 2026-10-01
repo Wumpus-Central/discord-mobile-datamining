@@ -1,10 +1,10 @@
-// === Module 8736: TwoWayLinkLanding ===
+// === Module 8728: TwoWayLinkLanding ===
 
-// Module 8736 (TwoWayLinkLanding)
-import Text_Text from "Text/Text" /* 4862 */;
-import TableRow from "TableRow" /* 6113 */;
+// Module 8728 (TwoWayLinkLanding)
+import Text_Text from "Text/Text" /* 4841 */;
+import TableRow from "TableRow" /* 6103 */;
 import noop from "module_19" /* 19 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5790 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5779 */;
 
 const require = globalThis.__r;
 
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: c2, View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let closure_8 = createStyles.createStyles({ image: { marginBottom: 32 }, valueProps: { marginTop: 24, maxWidth: "100%" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/TwoWayLinkLanding.tsx");

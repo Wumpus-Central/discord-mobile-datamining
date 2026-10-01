@@ -1,6 +1,6 @@
-// === Module 9742: NotificationSettingsStore ===
+// === Module 9736: NotificationSettingsStore ===
 
-// Module 9742 (NotificationSettingsStore)
+// Module 9736 (NotificationSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import PlatformUtils from "PlatformUtils" /* 1364 */;

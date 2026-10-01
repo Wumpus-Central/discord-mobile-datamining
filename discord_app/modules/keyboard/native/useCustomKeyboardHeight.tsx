@@ -1,6 +1,6 @@
-// === Module 6087: useCustomKeyboardHeight ===
+// === Module 6077: useCustomKeyboardHeight ===
 
-// Module 6087 (useCustomKeyboardHeight)
+// Module 6077 (useCustomKeyboardHeight)
 import AppEntryKeyContext from "AppEntryKeyContext" /* 1482 */;
 import KeyboardUIStoreDefault from "KeyboardUIStore" /* 1483 */;
 import size from "module_2" /* 2 */;

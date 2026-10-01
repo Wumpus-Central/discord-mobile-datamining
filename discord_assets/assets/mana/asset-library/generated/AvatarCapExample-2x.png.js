@@ -1,6 +1,6 @@
-// === Module 15601: ? ===
+// === Module 15606: ? ===
 
-// Module 15601
+// Module 15606
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AvatarCapExample-2x.png.js");

@@ -1,6 +1,6 @@
-// === Module 14808: Shopfront ===
+// === Module 14814: Shopfront ===
 
-// Module 14808 (Shopfront)
+// Module 14814 (Shopfront)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -41,7 +41,7 @@ let closure_4 = async function _search(arg0) {
           closure_130_2 = undefined;
           c6 = 1;
           c7 = 1;
-          return { value: "flex", done: true };
+          return { value: "flex", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

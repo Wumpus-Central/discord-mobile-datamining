@@ -1,11 +1,11 @@
-// === Module 5081: CountryCodeUtils ===
+// === Module 5060: CountryCodeUtils ===
 
-// Module 5081 (CountryCodeUtils)
+// Module 5060 (CountryCodeUtils)
 import _modDef38 from "module_38" /* 38 */;
 import util from "util" /* 1115 */;
-import CountriesDefault from "Countries" /* 5082 */;
-import CountryCodes from "CountryCodes" /* 5083 */;
-import CountryCodesISO3to2 from "CountryCodesISO3to2" /* 5084 */;
+import CountriesDefault from "Countries" /* 5061 */;
+import CountryCodes from "CountryCodes" /* 5062 */;
+import CountryCodesISO3to2 from "CountryCodesISO3to2" /* 5063 */;
 import size from "module_2" /* 2 */;
 
 let c3 = "United States";

@@ -1,21 +1,21 @@
-// === Module 6104: MemberVerificationForm ===
+// === Module 6094: MemberVerificationForm ===
 
-// Module 6104 (MemberVerificationForm)
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4688 */;
+// Module 6094 (MemberVerificationForm)
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4687 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MemberVerificationFormStore from "MemberVerificationFormStore" /* 6080 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 6070 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_8 = fn(6080).NO_MEMBER_VERIFICATION_FORM;
+let closure_8 = fn(6070).NO_MEMBER_VERIFICATION_FORM;
 const VerificationLevels = fn(1074).VerificationLevels;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let closure_12 = createStyles.createStyles({ container: { flex: 1, flexDirection: "column", alignItems: "stretch", paddingHorizontal: 16, paddingVertical: 0 }, submitButton: { marginTop: 12, marginBottom: 12 }, error: { alignSelf: "center", paddingVertical: 16, fontSize: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/native/components/MemberVerificationForm.tsx");
@@ -63,8 +63,8 @@ export default function MemberVerificationForm(guild) {
                   const obj2 = { key: "MEMBER_VERIFICATION_FORM_INCOMPLETE", content: null, icon: null };
                   const intl = closure_1_0(1115).intl;
                   obj2.content = intl.string(closure_1_0(1115).t.StC497);
-                  obj2.icon = closure_1_1(6105);
-                  closure_1_1(4558).open(obj2);
+                  obj2.icon = closure_1_1(6095);
+                  closure_1_1(4557).open(obj2);
                 })();
                 c6 = 3;
                 return { value: "HermesInternal", done: null };

@@ -1,25 +1,25 @@
-// === Module 15935: RedesignChannelList ===
+// === Module 15951: RedesignChannelList ===
 
-// Module 15935 (RedesignChannelList)
-import ChannelListState from "ChannelListState" /* 7144 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 10659 */;
-import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11580 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 15855 */;
-import RedesignGuildHeaderDefault from "RedesignGuildHeader" /* 15965 */;
-import registerSidebarVisibilityMethods from "registerSidebarVisibilityMethods" /* 16012 */;
-import ChannelsUnreadBarsDefault from "ChannelsUnreadBars" /* 16013 */;
-import renderRedesignChannelListItem from "renderRedesignChannelListItem" /* 16021 */;
-import GuildUpsellChannelListDefault from "GuildUpsellChannelList" /* 16102 */;
-import GuildsEmptyDefault from "GuildsEmpty" /* 16111 */;
-import NsfwGateGuildSidebarDefault from "NsfwGateGuildSidebar" /* 16121 */;
+// Module 15951 (RedesignChannelList)
+import ChannelListState from "ChannelListState" /* 7136 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 10651 */;
+import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11588 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 15871 */;
+import RedesignGuildHeaderDefault from "RedesignGuildHeader" /* 15981 */;
+import registerSidebarVisibilityMethods from "registerSidebarVisibilityMethods" /* 16027 */;
+import ChannelsUnreadBarsDefault from "ChannelsUnreadBars" /* 16028 */;
+import renderRedesignChannelListItem from "renderRedesignChannelListItem" /* 16036 */;
+import GuildUpsellChannelListDefault from "GuildUpsellChannelList" /* 16122 */;
+import GuildsEmptyDefault from "GuildsEmpty" /* 16131 */;
+import NsfwGateGuildSidebarDefault from "NsfwGateGuildSidebar" /* 16141 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4855 */;
-import ChannelListStore from "ChannelListStore" /* 7141 */;
-import HomeDrawerStore from "HomeDrawerStore" /* 15849 */;
-import GuildStore from "GuildStore" /* 2067 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2099 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4890 */;
+import AccessibilityStore from "AccessibilityStore" /* 4834 */;
+import ChannelListStore from "ChannelListStore" /* 7133 */;
+import HomeDrawerStore from "HomeDrawerStore" /* 15865 */;
+import GuildStore from "GuildStore" /* 2066 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4869 */;
 
 require = fn;
 function GuildChannels(guild) {
@@ -67,7 +67,7 @@ function ChannelsWrapper(selectedGuildId) {
           obj4.guild = stateFromStores;
           obj4.selectedChannelId = selectedChannelId;
           obj4.selectedVoiceChannelId = stateFromStores1;
-          return closure_14(tmp2(16113).default, obj4);
+          return closure_14(tmp2(16133).default, obj4);
         } else {
           if (tmp2Result2.shouldNSFWGateGuild(selectedGuildId)) {
             const obj5 = { style: merged.style, guildId: selectedGuildId };
@@ -82,7 +82,7 @@ function ChannelsWrapper(selectedGuildId) {
           }
           return tmp6Result;
         }
-        tmp2Result = tmp2(2070);
+        tmp2Result = tmp2(2069);
       }
     }
     const obj7 = { style: merged.style, selectedGuildId };

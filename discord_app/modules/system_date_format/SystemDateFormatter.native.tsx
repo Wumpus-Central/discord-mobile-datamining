@@ -1,8 +1,8 @@
-// === Module 4545: SystemDateFormatter ===
+// === Module 4544: SystemDateFormatter ===
 
-// Module 4545 (SystemDateFormatter)
+// Module 4544 (SystemDateFormatter)
 import PlatformUtils from "PlatformUtils" /* 1364 */;
-import NativeDateFormatUtilsModuleDefault from "NativeDateFormatUtilsModule" /* 4546 */;
+import NativeDateFormatUtilsModuleDefault from "NativeDateFormatUtilsModule" /* 4545 */;
 import size from "module_2" /* 2 */;
 
 if (null != global.__DiscordCreateDateFormatter) {

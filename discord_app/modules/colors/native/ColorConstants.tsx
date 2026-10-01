@@ -1,6 +1,6 @@
-// === Module 7048: ColorConstants ===
+// === Module 7040: ColorConstants ===
 
-// Module 7048 (ColorConstants)
+// Module 7040 (ColorConstants)
 import nativeDefault from "native" /* 576 */;
 import PremiumConstants from "PremiumConstants" /* 1374 */;
 import size from "module_2" /* 2 */;

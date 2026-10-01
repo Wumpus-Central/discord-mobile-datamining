@@ -1,12 +1,12 @@
-// === Module 16450: VibegrationsCreateSheet ===
+// === Module 16471: VibegrationsCreateSheet ===
 
-// Module 16450 (VibegrationsCreateSheet)
+// Module 16471 (VibegrationsCreateSheet)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4830 */;
-import VibegrationsTypes from "VibegrationsTypes" /* 5567 */;
-import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 6812 */;
-import VibegrationsEffortPicker from "VibegrationsEffortPicker" /* 16453 */;
-import VibegrationsTemplateWizardSheet from "VibegrationsTemplateWizardSheet" /* 16457 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4809 */;
+import VibegrationsTypes from "VibegrationsTypes" /* 5555 */;
+import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 6802 */;
+import VibegrationsEffortPicker from "VibegrationsEffortPicker" /* 16474 */;
+import VibegrationsTemplateWizardSheet from "VibegrationsTemplateWizardSheet" /* 16478 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -17,12 +17,12 @@ const VibegrationsTemplateWizardSheetDefault = VibegrationsTemplateWizardSheet;
 
 require = fn;
 const View = fn(17).View;
-const VibegrationsConnectionStore = fn(12842);
+const VibegrationsConnectionStore = fn(12851);
 ({ ensureConnection: closure_7, sendUserMessage: closure_8, stageModelSettings: closure_9 } = VibegrationsConnectionStore);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const VibegrationsCreateSheet = "VibegrationsCreateSheet";
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 }, form: null, section: null, sectionHeading: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.form = { gap: nativeDefault.space.PX_8 };

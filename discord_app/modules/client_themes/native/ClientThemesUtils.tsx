@@ -1,19 +1,19 @@
-// === Module 4682: client_themes/ClientThemesUtils ===
+// === Module 4681: client_themes/ClientThemesUtils ===
 
-// Module 4682 (client_themes/ClientThemesUtils)
+// Module 4681 (client_themes/ClientThemesUtils)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
 import ClientThemesTypes from "ClientThemesTypes" /* 1230 */;
-import ColorUtils from "ColorUtils" /* 4713 */;
-import utils_ColorDefault from "utils/Color" /* 4714 */;
-import shared from "shared" /* 4715 */;
-import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4718 */;
-import MobileThemesUtils from "MobileThemesUtils" /* 4794 */;
-import useThemeDefault from "useTheme" /* 4797 */;
+import ColorUtils from "ColorUtils" /* 4712 */;
+import utils_ColorDefault from "utils/Color" /* 4713 */;
+import shared from "shared" /* 4714 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4717 */;
+import MobileThemesUtils from "MobileThemesUtils" /* 4773 */;
+import useThemeDefault from "useTheme" /* 4776 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1182 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4683 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4682 */;
 import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1227 */;
 
 require = fn;
@@ -288,6 +288,13 @@ export const useGradientValue = function useGradientValue(END, arg1) {
       return calculateGradientValueWithOpacity(closure_2, closure_0, closure_3, light);
     }
   }, items);
+};
+export const isCustomThemeActive = function isCustomThemeActive() {
+  let tmp = null != MobileThemesUtils.getCustomBackgroundGradient();
+  if (!tmp) {
+    tmp = null != ClientThemesBackgroundStore.gradientPreset;
+  }
+  return tmp;
 };
 export const getEmbedScrollGradientBackground = function getEmbedScrollGradientBackground() {
   let customBackgroundGradient = MobileThemesUtils.getCustomBackgroundGradient();

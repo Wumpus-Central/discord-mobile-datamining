@@ -1,9 +1,9 @@
-// === Module 16163: StreamingSubtitle ===
+// === Module 16183: StreamingSubtitle ===
 
-// Module 16163 (StreamingSubtitle)
+// Module 16183 (StreamingSubtitle)
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4862 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5018 */;
+import Text_Text from "Text/Text" /* 4841 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4997 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

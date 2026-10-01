@@ -1,20 +1,20 @@
-// === Module 14937: QuestDockVideoBackground ===
+// === Module 14943: QuestDockVideoBackground ===
 
-// Module 14937 (QuestDockVideoBackground)
+// Module 14943 (QuestDockVideoBackground)
 import _modDef672 from "module_672" /* 672 */;
-import spring from "spring" /* 5476 */;
-import FastImageDefault from "FastImage" /* 6095 */;
-import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 6690 */;
-import QuestDockUtils from "QuestDockUtils" /* 14829 */;
+import spring from "spring" /* 5464 */;
+import FastImageDefault from "FastImage" /* 6085 */;
+import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 6680 */;
+import QuestDockUtils from "QuestDockUtils" /* 14835 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4855 */;
+import AccessibilityStore from "AccessibilityStore" /* 4834 */;
 
 require = fn;
 function QuestDockBackgroundMediaFade(arg0) {
   let activeQuestDockMode;
   ({ children, style } = arg0);
-  activeQuestDockMode = noop.useContext(activeQuestDockMode(14831).QuestDockGestureContext).activeQuestDockMode;
+  activeQuestDockMode = noop.useContext(activeQuestDockMode(14837).QuestDockGestureContext).activeQuestDockMode;
   const tmp = closure_17();
   const fn = function n() {
     let num = 0;
@@ -23,8 +23,8 @@ function QuestDockBackgroundMediaFade(arg0) {
     }
     return { opacity: spring.withSpring(num, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED) };
   };
-  let obj = activeQuestDockMode(4596);
-  fn.__closure = { withSpring: activeQuestDockMode(5476).withSpring, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED };
+  let obj = activeQuestDockMode(4595);
+  fn.__closure = { withSpring: activeQuestDockMode(5464).withSpring, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED };
   fn.__workletHash = 5908890006198;
   fn.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(fn);
@@ -35,8 +35,8 @@ function QuestDockBackgroundMediaFade(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ AppState: hasOwnProperty, StyleSheet, View: metroRequire } = get_ActivityIndicator);
-const QuestDockMode = fn(5953).QuestDockMode;
-const QuestDockConstants = fn(14830);
+const QuestDockMode = fn(5942).QuestDockMode;
+const QuestDockConstants = fn(14836);
 ({ QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: closure_9, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: c10 } = QuestDockConstants);
 const VerticalGradient = fn(1074).VerticalGradient;
 const jsxProd = fn(21);
@@ -44,7 +44,7 @@ const jsxProd = fn(21);
 let closure_14 = [0, 0.1, 0.8, 1];
 const locations = [0, 0.33, 0.76, 1];
 const QuestDockBackgroundCollapsedMediaMode = { PAUSED: "paused", HIDDEN: "hidden" };
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = { backgroundWrapper: null, backgroundImage: null, backgroundImageWrapper: null, backgroundVideo: null, media: null, backgroundGradient: null, backdrop: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

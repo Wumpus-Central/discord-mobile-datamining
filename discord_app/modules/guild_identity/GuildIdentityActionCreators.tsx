@@ -1,6 +1,6 @@
-// === Module 9428: GuildIdentityActionCreators ===
+// === Module 9422: GuildIdentityActionCreators ===
 
-// Module 9428 (GuildIdentityActionCreators)
+// Module 9422 (GuildIdentityActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -49,7 +49,7 @@ let closure_5 = async function _saveGuildIdentityChanges(arg0) {
           let body;
           c7 = 1;
           c8 = 1;
-          return { value: "flex", done: true };
+          return { value: "flex", done: null };
         }
       } else if (1 === tmp9) {
         if (arg0 === 1) {

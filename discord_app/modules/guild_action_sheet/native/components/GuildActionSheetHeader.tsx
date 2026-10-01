@@ -1,16 +1,16 @@
-// === Module 13708: GuildActionSheetHeader ===
+// === Module 13716: GuildActionSheetHeader ===
 
-// Module 13708 (GuildActionSheetHeader)
+// Module 13716 (GuildActionSheetHeader)
 import nativeDefault from "native" /* 576 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 2059 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4558 */;
-import _modDef8402 from "module_8402" /* 8402 */;
-import _modDef8405 from "module_8405" /* 8405 */;
-import GuildPopoutActionCreators from "GuildPopoutActionCreators" /* 13710 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 2058 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4557 */;
+import _modDef8394 from "module_8394" /* 8394 */;
+import _modDef8397 from "module_8397" /* 8397 */;
+import GuildPopoutActionCreators from "GuildPopoutActionCreators" /* 13718 */;
 import noop from "module_19" /* 19 */;
-import GuildPopoutStore from "GuildPopoutStore" /* 13709 */;
-import GuildStore from "GuildStore" /* 2067 */;
-import GuildSubscriptionsStore from "GuildSubscriptionsStore" /* 6892 */;
+import GuildPopoutStore from "GuildPopoutStore" /* 13717 */;
+import GuildStore from "GuildStore" /* 2066 */;
+import GuildSubscriptionsStore from "GuildSubscriptionsStore" /* 6883 */;
 
 const require = globalThis.__r;
 
@@ -20,12 +20,12 @@ function CommunityPill(guildVisibility) {
   const tmp = closure_12();
   const intl = GlobeEarthIcon(1115).intl;
   importDefault = intl.string(GlobeEarthIcon(1115).t.TME4LJ);
-  let tmp4Result = _modDef8402;
-  if (guildVisibility.guildVisibility === GlobeEarthIcon(8401).GuildVisibility.PUBLIC) {
+  let tmp4Result = _modDef8394;
+  if (guildVisibility.guildVisibility === GlobeEarthIcon(8393).GuildVisibility.PUBLIC) {
     const intl2 = tmp2(1115).intl;
     importDefault = intl2.string(tmp2(1115).t.op2cJ6);
-    GlobeEarthIcon = tmp2(8553).GlobeEarthIcon;
-    tmp4Result = _modDef8405;
+    GlobeEarthIcon = tmp2(8545).GlobeEarthIcon;
+    tmp4Result = _modDef8397;
   }
   const obj = {
     style: tmp.communityPill,
@@ -39,16 +39,16 @@ function CommunityPill(guildVisibility) {
   const obj3 = { variant: "text-xs/medium", color: "text-default", style: tmp.communityPillText, children: null };
   const intl3 = tmp2(1115).intl;
   obj3.children = intl3.string(GlobeEarthIcon(1115).t.K7iRig);
-  items[1] = closure_10(GlobeEarthIcon(4862).Text, obj3);
+  items[1] = closure_10(GlobeEarthIcon(4841).Text, obj3);
   obj.children = items;
-  return closure_11(GlobeEarthIcon(5632).PressableOpacity, obj);
+  return closure_11(GlobeEarthIcon(5621).PressableOpacity, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
 const GuildFeatures = fn(1074).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = { content: { padding: 16 }, avatar: { borderRadius: 14.117647058823529, height: 60, width: 60 }, headerContainer: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, avatarBackground: null, description: null, memberInfo: null, nameRow: null, communityPill: null, communityPillIcon: null, communityPillText: null, guildBanner: null };
 let size = { height: 68, width: 68, marginBottom: 12, marginLeft: -4, padding: 4, borderRadius: 16, alignContent: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj2.avatarBackground = size;

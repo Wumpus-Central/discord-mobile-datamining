@@ -1,6 +1,6 @@
-// === Module 7174: CollectiblesShopStore ===
+// === Module 7166: CollectiblesShopStore ===
 
-// Module 7174 (CollectiblesShopStore)
+// Module 7166 (CollectiblesShopStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

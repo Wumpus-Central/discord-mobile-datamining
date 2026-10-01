@@ -1,13 +1,13 @@
-// === Module 16675: useSuggestedSearches ===
+// === Module 16698: useSuggestedSearches ===
 
-// Module 16675 (useSuggestedSearches)
-import SuggestedSearchStore from "SuggestedSearchStore" /* 12061 */;
+// Module 16698 (useSuggestedSearches)
+import SuggestedSearchStore from "SuggestedSearchStore" /* 12069 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const EMPTY_SUGGESTED_SEARCHES = fn(12061).EMPTY_SUGGESTED_SEARCHES;
-let closure_4 = fn(12050).SUGGESTED_SEARCHES_WINDOW_SIZE;
+const EMPTY_SUGGESTED_SEARCHES = fn(12069).EMPTY_SUGGESTED_SEARCHES;
+let closure_4 = fn(12058).SUGGESTED_SEARCHES_WINDOW_SIZE;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/intelligence_layer/search/native/useSuggestedSearches.tsx");
 

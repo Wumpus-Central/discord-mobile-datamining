@@ -1,14 +1,14 @@
-// === Module 6755: Form/Form ===
+// === Module 6745: Form/Form ===
 
-// Module 6755 (Form/Form)
-import RedesignCompat from "RedesignCompat" /* 6194 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6598 */;
+// Module 6745 (Form/Form)
+import RedesignCompat from "RedesignCompat" /* 6184 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6588 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsx = fn(21).jsx;
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let closure_6 = createStyles.createStyles({ form: { flex: 1 }, redesign: { paddingTop: 16 } });
 const context = noop.createContext({ isForm: false });
 const size = fn(2);

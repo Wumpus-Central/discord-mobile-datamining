@@ -1,21 +1,21 @@
-// === Module 5509: MarkupChannelMentionRule ===
+// === Module 5497: MarkupChannelMentionRule ===
 
-// Module 5509 (MarkupChannelMentionRule)
+// Module 5497 (MarkupChannelMentionRule)
 import util from "util" /* 1115 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
 import _modDef1930 from "module_1930" /* 1930 */;
 import StringUtils from "StringUtils" /* 2011 */;
-import ChannelUtils from "ChannelUtils" /* 5011 */;
-import useChannelName from "useChannelName" /* 5019 */;
-import LinkUtils from "LinkUtils" /* 5020 */;
-import MarkupTextRuleDefault from "MarkupTextRule" /* 5508 */;
-import useChannelRoleSubscriptionStatus from "useChannelRoleSubscriptionStatus" /* 5510 */;
-import markup_ChannelUtils from "markup/ChannelUtils" /* 5511 */;
-import GatedChannelStore from "GatedChannelStore" /* 2100 */;
-import ChannelStore from "ChannelStore" /* 2045 */;
-import GuildStore from "GuildStore" /* 2067 */;
-import PermissionStore from "PermissionStore" /* 4499 */;
-import RelationshipStore from "RelationshipStore" /* 4509 */;
+import ChannelUtils from "ChannelUtils" /* 4990 */;
+import useChannelName from "useChannelName" /* 4998 */;
+import LinkUtils from "LinkUtils" /* 4999 */;
+import MarkupTextRuleDefault from "MarkupTextRule" /* 5496 */;
+import useChannelRoleSubscriptionStatus from "useChannelRoleSubscriptionStatus" /* 5498 */;
+import markup_ChannelUtils from "markup/ChannelUtils" /* 5499 */;
+import GatedChannelStore from "GatedChannelStore" /* 2099 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
+import GuildStore from "GuildStore" /* 2066 */;
+import PermissionStore from "PermissionStore" /* 4498 */;
+import RelationshipStore from "RelationshipStore" /* 4508 */;
 import UserStore from "UserStore" /* 1372 */;
 
 require = fn;

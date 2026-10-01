@@ -1,11 +1,11 @@
-// === Module 8676: UserProfileApplicationWidgetFieldUtils ===
+// === Module 8668: UserProfileApplicationWidgetFieldUtils ===
 
-// Module 8676 (UserProfileApplicationWidgetFieldUtils)
+// Module 8668 (UserProfileApplicationWidgetFieldUtils)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4862 */;
-import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 8677 */;
-import ApplicationWidgetMarkupUtils from "ApplicationWidgetMarkupUtils" /* 8678 */;
+import Text_Text from "Text/Text" /* 4841 */;
+import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 8669 */;
+import ApplicationWidgetMarkupUtils from "ApplicationWidgetMarkupUtils" /* 8670 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: c2, View: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = { fieldTextRow: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 }, fieldIcon: { width: 16, height: 16 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);

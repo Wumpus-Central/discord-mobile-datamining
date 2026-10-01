@@ -1,12 +1,15 @@
-// === Module 16384: NavigationSpanTracker ===
+// === Module 16405: NavigationSpanTracker ===
 
-// Module 16384 (NavigationSpanTracker)
+// Module 16405 (NavigationSpanTracker)
 import LoggerDefault from "Logger" /* 3 */;
 import v1 from "v1" /* 1255 */;
-import NavigationSpanTypes from "NavigationSpanTypes" /* 16383 */;
-import NavigationTTIDebugFreeze from "NavigationTTIDebugFreeze" /* 16385 */;
+import NavigationSpanTypes from "NavigationSpanTypes" /* 16404 */;
+import NavigationTTIAnalytics from "NavigationTTIAnalytics" /* 16406 */;
+import NavigationTTIDebugFreeze from "NavigationTTIDebugFreeze" /* 16407 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
 require = fn;
+let closure_2 = ["spanComponentName", "measurementSource", "lateLayoutMs"];
 let obj = new LoggerDefault("NavTTI");
 obj.enableNativeLogger(true);
 class NavigationSpanTracker {
@@ -266,19 +269,16 @@ prototype["flush"] = function flush(arg0) {
     }
     const bundle = self.buildBundle(active, true, INTERRUPTED);
     self.lastBundle = bundle;
-    const obj3 = {};
-    const merged = Object.assign(bundle.navigation.spanTtiProperties);
-    const firstPaint = bundle.firstPaint;
-    let spanComponent;
-    if (firstPaint != null) {
-      spanComponent = firstPaint.spanComponent;
-    }
-    if (spanComponent == null) {
-      spanComponent = null;
-    }
-    obj3.first_paint_component = spanComponent;
-    ({ settled: obj2.settled, components: obj2.components } = bundle);
-    obj.info(JSON.stringify(obj3));
+    (function emitNavigationSpanBundle(bundle) {
+      const result = NavigationTTIAnalytics.trackNavigationTTISpan(bundle.navigation.spanTtiName, bundle.navigation.spanTtiProperties);
+      for (const item10016 of tmp2) {
+        ({ measurementSource, lateLayoutMs } = item10016);
+        let tmp5 = _objectWithoutProperties(item10016, closure_1_2);
+        let obj2 = NavigationTTIAnalytics;
+        let result1 = obj2.trackNavigationTTISpan(item10016.spanComponentName, tmp5);
+        continue;
+      }
+    })(bundle);
     if (flag) {
       self.notifySurface(active.definition, active.destinationKey);
     }

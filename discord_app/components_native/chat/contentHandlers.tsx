@@ -1,15 +1,15 @@
-// === Module 11286: contentHandlers ===
+// === Module 11289: contentHandlers ===
 
-// Module 11286 (contentHandlers)
+// Module 11289 (contentHandlers)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1981 */;
-import ToastUtils from "ToastUtils" /* 4557 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4830 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5399 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6799 */;
-import ClipboardUtils from "ClipboardUtils" /* 6806 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7819 */;
-import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 11284 */;
+import ToastUtils from "ToastUtils" /* 4556 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4809 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5387 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6789 */;
+import ClipboardUtils from "ClipboardUtils" /* 6796 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7806 */;
+import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 11287 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -26,94 +26,108 @@ let obj = {
     }
   },
   onTapAttachmentLink: null,
+  onTapAttachmentTextPreview: null,
   onLongPressAttachmentLink: null,
   onTapMention: null,
   onTapTimestamp: null,
   onTapInlineCode: null,
   onTapEmoji: null
 };
-let closure_5 = asyncGeneratorStep(async (arg0) => {
+let closure_6 = asyncGeneratorStep(async (arg0) => {
   const nativeEvent = arg0;
   c3 = 0;
   c4 = 0;
   const iter = (async (arg0) => {
-    if (c4 === 2) {
-      c4 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
+    closure_1 = tmp2;
+    const attachmentUrl = nativeEvent.nativeEvent.data.attachmentUrl;
+    await "flex";
+    if (1 === tmp5) {
       if (arg0 === 1) {
+        c4 = 3;
         throw value;
       } else if (arg0 === 2) {
-        const obj3 = { value, done: true };
-        return obj3;
+        c4 = 3;
+        return { value, done: true };
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c4 = 2;
-        if (0 === c3) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj5 = { value, done: true };
-            return obj5;
-          } else {
-            closure_2 = tmp5;
-            closure_1 = tmp2;
-            let attachmentUrl;
-            attachmentUrl = nativeEvent.nativeEvent.data.attachmentUrl;
-            closure_129_1 = undefined;
-            c3 = 1;
+        if (null != attachmentUrl) {
+          if ("" !== attachmentUrl) {
+            c3 = 2;
             c4 = 1;
-            return { value: "flex", done: true };
+            return { value: closure_130_2(closure_130_3[2]).maybeRefreshAttachmentUrl(attachmentUrl), done: false };
           }
-        } else {
-          if (1 === tmp5) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              const obj6 = { value, done: true };
-              return obj6;
-            } else {
-              if (null != attachmentUrl) {
-                if ("" !== attachmentUrl) {
-                  c3 = 2;
-                  c4 = 1;
-                  const obj7 = { value: closure_130_2(closure_130_3[2]).maybeRefreshAttachmentUrl(attachmentUrl), done: false };
-                  return obj7;
-                }
-              }
-              c4 = 3;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 !== 2) {
-            closure_129_1 = value;
-            closure_130_1(closure_130_3[3]).trackLinkClicked(closure_129_1);
-            const obj = closure_130_1(closure_130_3[3]);
-            closure_130_1(closure_130_3[4]).openURL(closure_129_1);
-            const obj2 = closure_130_1(closure_130_3[4]);
-          }
-          c4 = 3;
-          const obj8 = { value, done: true };
-          return obj8;
         }
-      } catch (tmp25) {
-        c4 = tmp;
-        throw tmp25;
+        c4 = 3;
       }
+    } else if (arg0 === 1) {
+      c4 = 3;
+      throw value;
+    } else if (arg0 !== 2) {
+      closure_129_1 = value;
+      closure_130_1(closure_130_3[3]).trackLinkClicked(closure_129_1);
+      closure_130_1(closure_130_3[3]);
+      closure_130_1(closure_130_3[4]).openURL(closure_129_1);
+      closure_130_1(closure_130_3[4]);
     }
+    return value;
   })();
   iter.next();
   return iter;
 });
 obj.onTapAttachmentLink = function() {
+  const self = this;
+  const apply = closure_6.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+let closure_5 = asyncGeneratorStep(async (arg0) => {
+  const nativeEvent = arg0;
+  c4 = 0;
+  c5 = 0;
+  const iter = (async (arg0) => {
+    closure_2 = tmp2;
+    ({ attachmentUrl: closure_130_0, fileName: closure_130_1 } = nativeEvent.nativeEvent.data);
+    await "flex";
+    if (1 === tmp5) {
+      if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 3;
+        return { value, done: true };
+      } else {
+        if (null != closure_130_0) {
+          if ("" !== closure_130_0) {
+            c4 = 2;
+            c5 = 1;
+            return { value: closure_131_2(closure_131_3[2]).maybeRefreshAttachmentUrl(closure_130_0), done: false };
+          }
+        }
+        c5 = 3;
+      }
+    } else if (arg0 === 1) {
+      c5 = 3;
+      throw value;
+    } else if (arg0 !== 2) {
+      closure_130_2 = value;
+      const obj7 = { url: closure_130_2, fileName: null };
+      fileName = closure_130_1;
+      if (closure_130_1 == null) {
+        fileName = "";
+      }
+      obj7.fileName = fileName;
+      const result = closure_131_0(closure_131_3[5]).openPlaintextFilePreview(obj7);
+      closure_131_0(closure_131_3[5]);
+    }
+    return value;
+  })();
+  iter.next();
+  return iter;
+});
+obj.onTapAttachmentTextPreview = function() {
   const self = this;
   const apply = closure_5.apply;
   if (typeof apply === "unknown") {
@@ -128,76 +142,34 @@ let closure_4 = asyncGeneratorStep(async (arg0) => {
   c3 = 0;
   c4 = 0;
   const iter = (async (arg0) => {
-    if (c4 === 2) {
-      c4 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
+    closure_1 = tmp2;
+    const attachmentUrl = nativeEvent.nativeEvent.data.attachmentUrl;
+    await "flex";
+    if (1 === tmp5) {
       if (arg0 === 1) {
+        c4 = 3;
         throw value;
       } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
+        c4 = 3;
+        return { value, done: true };
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c4 = 2;
-        if (0 === c3) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            closure_2 = tmp5;
-            closure_1 = tmp2;
-            let attachmentUrl;
-            attachmentUrl = nativeEvent.nativeEvent.data.attachmentUrl;
-            closure_129_1 = undefined;
-            c3 = 1;
+        if (null != attachmentUrl) {
+          if ("" !== attachmentUrl) {
+            c3 = 2;
             c4 = 1;
-            return { value: "flex", done: true };
+            return { value: closure_130_2(closure_130_3[2]).maybeRefreshAttachmentUrl(attachmentUrl), done: false };
           }
-        } else {
-          if (1 === tmp5) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              const obj5 = { value, done: true };
-              return obj5;
-            } else {
-              if (null != attachmentUrl) {
-                if ("" !== attachmentUrl) {
-                  c3 = 2;
-                  c4 = 1;
-                  const obj6 = { value: closure_130_2(closure_130_3[2]).maybeRefreshAttachmentUrl(attachmentUrl), done: false };
-                  return obj6;
-                }
-              }
-              c4 = 3;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 !== 2) {
-            closure_129_1 = value;
-            const obj = { urlString: closure_129_1 };
-            closure_130_1(closure_130_3[1])(obj);
-          }
-          c4 = 3;
-          const obj7 = { value, done: true };
-          return obj7;
         }
-      } catch (tmp22) {
-        c4 = tmp;
-        throw tmp22;
+        c4 = 3;
       }
+    } else if (arg0 === 1) {
+      c4 = 3;
+      throw value;
+    } else if (arg0 !== 2) {
+      closure_129_1 = value;
+      closure_130_1(closure_130_3[1])({ urlString: closure_129_1 });
     }
+    return value;
   })();
   iter.next();
   return iter;
@@ -213,7 +185,7 @@ obj.onLongPressAttachmentLink = function() {
   return applyArgumentsResult;
 };
 obj.onTapMention = function onTapMention(nativeEvent) {
-  const nativeSyntheticEventData = parsedUserId(11247).getNativeSyntheticEventData(nativeEvent);
+  const nativeSyntheticEventData = parsedUserId(11250).getNativeSyntheticEventData(nativeEvent);
   ({ userId, channelId, roleName, parsedUserId } = nativeSyntheticEventData);
   ({ roleId, guildId } = nativeSyntheticEventData);
   if (null != userId) {
@@ -225,14 +197,14 @@ obj.onTapMention = function onTapMention(nativeEvent) {
     if (null != roleId) {
       if (null != guildId) {
         const obj3 = { guildId, roleId, channelId };
-        ActionSheetActionCreatorsDefault.openLazy(parsedUserId(1981)(11287, dependencyMap.paths), "RoleMembersActionSheet", obj3);
+        ActionSheetActionCreatorsDefault.openLazy(parsedUserId(1981)(11295, dependencyMap.paths), "RoleMembersActionSheet", obj3);
       }
     }
     if ("@everyone" === roleName) {
       if (null != guildId) {
         const obj5 = { guildId, roleId: null, channelId: null };
         const obj6 = ActionSheetActionCreatorsDefault;
-        const tmp10 = parsedUserId(1981)(11287, dependencyMap.paths);
+        const tmp10 = parsedUserId(1981)(11295, dependencyMap.paths);
         obj5.roleId = SnowflakeUtilsDefault.castGuildIdAsEveryoneGuildRoleId(guildId);
         obj5.channelId = channelId;
         obj6.openLazy(tmp10, "RoleMembersActionSheet", obj5);
@@ -264,7 +236,7 @@ obj.onTapMention = function onTapMention(nativeEvent) {
       obj11 = {};
     }
   }
-  let obj = parsedUserId(11247);
+  let obj = parsedUserId(11250);
 };
 obj.onTapTimestamp = function onTapTimestamp(nativeEvent) {
   ToastUtils.presentTimestamp(nativeEvent.nativeEvent.node.full);
@@ -278,7 +250,7 @@ obj.onTapInlineCode = function onTapInlineCode(nativeEvent) {
   tmp = null != node.content && typeof node.content === "string";
 };
 obj.onTapEmoji = function onTapEmoji(emojiNode) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9991, dependencyMap.paths), "MessageEmojiActionSheet", { emojiNode: emojiNode.nativeEvent.node });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9983, dependencyMap.paths), "MessageEmojiActionSheet", { emojiNode: emojiNode.nativeEvent.node });
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/chat/contentHandlers.tsx");

@@ -1,8 +1,8 @@
-// === Module 17190: ActivityAccessibilityLayer ===
+// === Module 17212: ActivityAccessibilityLayer ===
 
-// Module 17190 (ActivityAccessibilityLayer)
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5462 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 5471 */;
+// Module 17212 (ActivityAccessibilityLayer)
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5450 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 5459 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -71,10 +71,10 @@ function FocusedActivityAccessibilityLayer(activityName) {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const IS_IOS = fn(11958).IS_IOS;
+const IS_IOS = fn(11965).IS_IOS;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let closure_10 = createStyles.createStyles({ fill: { flex: 1 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/card/ActivityAccessibilityLayer.tsx");

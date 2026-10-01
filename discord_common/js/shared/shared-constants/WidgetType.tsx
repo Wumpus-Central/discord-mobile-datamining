@@ -1,6 +1,6 @@
-// === Module 7231: WidgetType ===
+// === Module 7209: WidgetType ===
 
-// Module 7231 (WidgetType)
+// Module 7209 (WidgetType)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/WidgetType.tsx");

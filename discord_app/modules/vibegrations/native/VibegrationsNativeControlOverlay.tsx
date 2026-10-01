@@ -1,21 +1,21 @@
-// === Module 16497: VibegrationsNativeControlOverlay ===
+// === Module 16518: VibegrationsNativeControlOverlay ===
 
-// Module 16497 (VibegrationsNativeControlOverlay)
+// Module 16518 (VibegrationsNativeControlOverlay)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4596 */;
-import timing from "timing" /* 4867 */;
-import spring from "spring" /* 5476 */;
-import springPresets from "springPresets" /* 5480 */;
-import useVibegrationsControlBar from "useVibegrationsControlBar" /* 16498 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4595 */;
+import timing from "timing" /* 4846 */;
+import spring from "spring" /* 5464 */;
+import springPresets from "springPresets" /* 5468 */;
+import useVibegrationsControlBar from "useVibegrationsControlBar" /* 16519 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4855 */;
+import AccessibilityStore from "AccessibilityStore" /* 4834 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = { block: null, border: null, glow: null, barArea: null, bar: null, status: null, copy: null, actions: null };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj2.block = {};
@@ -52,18 +52,18 @@ export default function VibegrationsNativeControlOverlay(onOpenPublishedApp) {
   let vibegrationsControlPhase;
   ({ projectId, active } = onOpenPublishedApp);
   const tmp = closure_9();
-  vibegrationsControlPhase = vibegrationsControlPhase(16498).useVibegrationsControlPhase(active);
-  let obj = vibegrationsControlPhase(16498);
-  const vibegrationsControlStop = vibegrationsControlPhase(16498).useVibegrationsControlStop(projectId);
+  vibegrationsControlPhase = vibegrationsControlPhase(16519).useVibegrationsControlPhase(active);
+  let obj = vibegrationsControlPhase(16519);
+  const vibegrationsControlStop = vibegrationsControlPhase(16519).useVibegrationsControlStop(projectId);
   ({ stop, stopping } = vibegrationsControlStop);
-  let obj2 = vibegrationsControlPhase(16498);
+  let obj2 = vibegrationsControlPhase(16519);
   let items = [AccessibilityStore];
   const stateFromStores = vibegrationsControlPhase(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   dependencyMap = tmp7;
   let obj3 = vibegrationsControlPhase(504);
-  const sharedValue = vibegrationsControlPhase(4596).useSharedValue(-96);
-  let obj4 = vibegrationsControlPhase(4596);
-  const sharedValue1 = vibegrationsControlPhase(4596).useSharedValue(0.5);
+  const sharedValue = vibegrationsControlPhase(4595).useSharedValue(-96);
+  let obj4 = vibegrationsControlPhase(4595);
+  const sharedValue1 = vibegrationsControlPhase(4595).useSharedValue(0.5);
   const items1 = [sharedValue, vibegrationsControlPhase];
   const effect = sharedValue.useEffect(() => {
     if ("controlling" === vibegrationsControlPhase) {
@@ -96,7 +96,7 @@ export default function VibegrationsNativeControlOverlay(onOpenPublishedApp) {
     ReanimatedRexport.cancelAnimation(sharedValue1);
     const result2 = sharedValue1.set(0.5);
   }, items2);
-  const obj5 = vibegrationsControlPhase(4596);
+  const obj5 = vibegrationsControlPhase(4595);
   class C {
     constructor() {
       obj = { transform: null };
@@ -110,8 +110,8 @@ export default function VibegrationsNativeControlOverlay(onOpenPublishedApp) {
   C.__closure = { barOffset: sharedValue };
   C.__workletHash = 4238220742706;
   C.__initData = __initData;
-  const animatedStyle = vibegrationsControlPhase(4596).useAnimatedStyle(C);
-  vibegrationsControlPhase(4596);
+  const animatedStyle = vibegrationsControlPhase(4595).useAnimatedStyle(C);
+  vibegrationsControlPhase(4595);
   class D {
     constructor() {
       obj = { opacity: closure_4.get() };
@@ -131,7 +131,7 @@ export default function VibegrationsNativeControlOverlay(onOpenPublishedApp) {
       const obj9 = { style: null, pointerEvents: "none" };
       const items4 = [tmp.glow, tmp14];
       obj9.style = items4;
-      items3[1] = closure_6(stateFromStores(4596).View, obj9);
+      items3[1] = closure_6(stateFromStores(4595).View, obj9);
       const obj10 = { style: tmp.border, pointerEvents: "none" };
       items3[2] = closure_6(sharedValue1, obj10);
       obj7.children = items3;
@@ -144,23 +144,23 @@ export default function VibegrationsNativeControlOverlay(onOpenPublishedApp) {
     obj12.style = items6;
     const obj13 = { style: tmp.status, children: null };
     const obj14 = { size: "sm", color: stateFromStores(576).colors.TEXT_OVERLAY_LIGHT };
-    const items7 = [closure_6(tmp2(16499).SparklesIcon, obj14), , ];
+    const items7 = [closure_6(tmp2(16520).SparklesIcon, obj14), , ];
     let tmp20Result = null;
     if (tmp7) {
-      tmp20Result = closure_6(tmp2(14131).AILoader, { size: 12, color: "text-overlay-light" });
+      tmp20Result = closure_6(tmp2(14139).AILoader, { size: 12, color: "text-overlay-light" });
     }
     items7[1] = tmp20Result;
     const obj15 = { style: tmp.copy, children: null };
     const intl = tmp2(1115).intl;
-    const tmp22Result = stateFromStores(3715);
+    const tmp22Result = stateFromStores(3714);
     const obj16 = { variant: "text-sm/semibold", color: "text-overlay-light", children: intl.string(tmp7 ? tmp22Result.ydhvN1 : tmp22Result["7U6tIB"]) };
-    const items8 = [closure_6(tmp2(4862).Text, obj16), ];
+    const items8 = [closure_6(tmp2(4841).Text, obj16), ];
     let tmp20Result4 = null;
     if (tmp7) {
       const obj17 = { variant: "text-xs/medium", color: "text-overlay-light", children: null };
       const intl2 = tmp2(1115).intl;
-      obj17.children = intl2.string(tmp22(3715).NldIIG);
-      tmp20Result4 = closure_6(tmp2(4862).Text, obj17);
+      obj17.children = intl2.string(tmp22(3714).NldIIG);
+      tmp20Result4 = closure_6(tmp2(4841).Text, obj17);
     }
     items8[1] = tmp20Result4;
     obj15.children = items8;
@@ -174,19 +174,19 @@ export default function VibegrationsNativeControlOverlay(onOpenPublishedApp) {
       if (null != onOpenPublishedApp) {
         const obj19 = { variant: "secondary-overlay", size: "sm", text: null, onPress: null };
         const intl3 = tmp2(1115).intl;
-        obj19.text = intl3.string(tmp22(3715).kj5epw);
+        obj19.text = intl3.string(tmp22(3714).kj5epw);
         obj19.onPress = onOpenPublishedApp;
-        tmp20Result5 = closure_6(tmp2(5477).Button, obj19);
+        tmp20Result5 = closure_6(tmp2(5465).Button, obj19);
       }
       const items10 = [tmp20Result5, ];
       let tmp20Result6 = null;
       if (null != stop) {
         const obj20 = { variant: "primary-overlay", size: "sm", text: null, loading: null, onPress: null };
         const intl4 = tmp2(1115).intl;
-        obj20.text = intl4.string(tmp22(3715)["2HalWx"]);
+        obj20.text = intl4.string(tmp22(3714)["2HalWx"]);
         obj20.loading = stopping;
         obj20.onPress = stop;
-        tmp20Result6 = closure_6(tmp2(5477).Button, obj20);
+        tmp20Result6 = closure_6(tmp2(5465).Button, obj20);
       }
       items10[1] = tmp20Result6;
       obj18.children = items10;
@@ -204,7 +204,7 @@ export default function VibegrationsNativeControlOverlay(onOpenPublishedApp) {
         return obj;
       }
     }
-    obj11.children = closure_8(stateFromStores(4596).View, obj12);
+    obj11.children = closure_8(stateFromStores(4595).View, obj12);
     items5[1] = closure_6(sharedValue1, obj11);
     obj21.children = items5;
     tmp29Result4 = closure_8(closure_7, obj21);

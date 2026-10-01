@@ -1,31 +1,31 @@
-// === Module 9599: MessageManager ===
+// === Module 9593: MessageManager ===
 
-// Module 9599 (MessageManager)
+// Module 9593 (MessageManager)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage3 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1091 */;
 import router_utils from "router_utils" /* 1101 */;
 import util from "util" /* 1115 */;
-import matchPathCompat from "matchPathCompat" /* 4690 */;
-import Client from "Client" /* 4793 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5399 */;
-import ChannelMessagesDefault from "ChannelMessages" /* 5781 */;
-import SidebarActionTypes from "SidebarActionTypes" /* 6896 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7072 */;
-import isChangelogChannelDefault from "isChangelogChannel" /* 8017 */;
-import AttachmentUrlUtilsAll from "AttachmentUrlUtils" /* 9600 */;
-import getAdaptiveMessageLimit from "getAdaptiveMessageLimit" /* 9601 */;
+import matchPathCompat from "matchPathCompat" /* 4689 */;
+import Client from "Client" /* 4772 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5387 */;
+import ChannelMessagesDefault from "ChannelMessages" /* 5770 */;
+import SidebarActionTypes from "SidebarActionTypes" /* 6887 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7064 */;
+import isChangelogChannelDefault from "isChangelogChannel" /* 8006 */;
+import AttachmentUrlUtilsAll from "AttachmentUrlUtils" /* 9594 */;
+import getAdaptiveMessageLimit from "getAdaptiveMessageLimit" /* 9595 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4882 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5786 */;
-import ChannelSectionStore from "ChannelSectionStore" /* 6894 */;
-import ChannelStore from "ChannelStore" /* 2045 */;
-import GuildStore from "GuildStore" /* 2067 */;
-import ReadStateStore from "ReadStateStore" /* 4881 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2099 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4685 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6735 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4861 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5775 */;
+import ChannelSectionStore from "ChannelSectionStore" /* 6885 */;
+import ChannelStore from "ChannelStore" /* 2044 */;
+import GuildStore from "GuildStore" /* 2066 */;
+import ReadStateStore from "ReadStateStore" /* 4860 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4684 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6725 */;
 
 require = fn;
 function fetchMessages(arg0) {
@@ -407,10 +407,10 @@ function handleAppWillBecomeActive() {
     const newLocalMessages = MessageActionCreatorsDefault.fetchNewLocalMessages(channelId, closure_1_14);
   }
 }
-const isTextChannel = fn(2049).isTextChannel;
+const isTextChannel = fn(2048).isTextChannel;
 const Constants = fn(1074);
 ({ MAX_MESSAGES_PER_CHANNEL: closure_14, CURRENT_APP_CONTEXT: closure_15, ChannelTypes: closure_16, AbortCodes: closure_17, Routes: closure_18, ChannelTypesSets: closure_19 } = Constants);
-const isStaticChannelRoute = fn(2052).isStaticChannelRoute;
+const isStaticChannelRoute = fn(2051).isStaticChannelRoute;
 let closure_21 = 10 * DurationsDefault.Millis.SECOND;
 const logger = new LoggerDefault("MessageManager");
 let closure_25 = 90 * DurationsDefault.Millis.DAY;

@@ -1,9 +1,9 @@
-// === Module 7007: LaptopSpotIllustration ===
+// === Module 6998: LaptopSpotIllustration ===
 
-// Module 7007 (LaptopSpotIllustration)
+// Module 6998 (LaptopSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 6095 */;
-import _modDef7008 from "module_7008" /* 7008 */;
+import FastImageDefault from "FastImage" /* 6085 */;
+import _modDef6999 from "module_6999" /* 6999 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const LaptopSpotIllustration = function LaptopSpotIllustration(width) {
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef7008 };
+  const obj2 = { uri: _modDef6999 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
