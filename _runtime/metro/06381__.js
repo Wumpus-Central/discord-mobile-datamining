@@ -1,105 +1,207 @@
 // _runtime/metro/06381__.js
-import tagMessage from "../06274_tagMessage.js";
-import _mod6275 from "06275__.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _get from "00096__get.js";
+import _inherits from "../00098__inherits.js";
 
-require = fn;
-const dependencyMap = arg6;
-const setGestureState = function t(arg0, arg1) {
-  const _globalThis = globalThis;
-  if (globalThis._setGestureStateSync) {
-    _globalThis._setGestureStateSync(arg0, arg1);
-  } else if (_globalThis._setGestureStateAsync) {
-    const _globalThis2 = globalThis;
-    const result = globalThis._setGestureStateAsync(arg0, arg1);
-  } else {
-    const _Error = Error;
-    const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
-    throw error;
-  }
-};
-setGestureState.__closure = { tagMessage: fn(6274).tagMessage };
-setGestureState.__workletHash = 727405139747;
-setGestureState.__initData = {
-  code: "function pnpm_gestureStateManagerTs1(handlerTag,state){const{tagMessage}=this.__closure;if(globalThis._setGestureStateSync){globalThis._setGestureStateSync(handlerTag,state);}else if(globalThis._setGestureStateAsync){globalThis._setGestureStateAsync(handlerTag,state);}else{throw new Error(tagMessage('Failed to set gesture state'));}}",
-};
-const obj2 = { activate: null, fail: null, deactivate: null };
-const fn2 = function _(arg0) {
-  const ACTIVE = _mod6275.State.ACTIVE;
-  if (typeof fn === "function") {
-    const _globalThis = globalThis;
-    const _globalThis2 = globalThis;
-    if (globalThis._setGestureStateSync) {
-      _globalThis2._setGestureStateSync(arg0, ACTIVE);
-    } else if (_globalThis2._setGestureStateAsync) {
-      const _globalThis3 = globalThis;
-      const result = globalThis._setGestureStateAsync(arg0, ACTIVE);
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
     } else {
-      const _Error = Error;
-      const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
-      throw error;
+      callResult = call(constructResult);
     }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturnDefault;
+function changeEventCalculator(translationX, translationX2) {
+  if (undefined === translationX2) {
+    ({ translationX: obj2.changeX, translationY: obj2.changeY } = translationX);
+    let obj = { changeX: null, changeY: null };
+    const obj3 = { changeX: null, changeY: null };
   } else {
-    throw new TypeError("Trying to call a non-function");
+    obj = {
+      changeX: translationX.translationX - translationX2.translationX,
+      changeY: translationX.translationY - translationX2.translationY,
+    };
   }
+  const merged = Object.assign(translationX);
+  const merged1 = Object.assign(obj);
+  return {};
+}
+changeEventCalculator.__closure = {};
+changeEventCalculator.__workletHash = 1947784830943;
+changeEventCalculator.__initData = {
+  code: "function changeEventCalculator_Pnpm_panGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={changeX:current.translationX,changeY:current.translationY};}else{changePayload={changeX:current.translationX-previous.translationX,changeY:current.translationY-previous.translationY};}return{...current,...changePayload};}",
 };
-const obj = { tagMessage: fn(6274).tagMessage };
-fn2.__closure = { setGestureState, State: fn(6275).State };
-fn2.__workletHash = 14928129771754;
-fn2.__initData = {
-  code: "function activate_Pnpm_gestureStateManagerTs2(handlerTag){const{setGestureState,State}=this.__closure;setGestureState(handlerTag,State.ACTIVE);}",
-};
-obj2.activate = fn2;
-const fn3 = function n(arg0) {
-  const FAILED = _mod6275.State.FAILED;
-  if (typeof fn === "function") {
-    const _globalThis = globalThis;
-    const _globalThis2 = globalThis;
-    if (globalThis._setGestureStateSync) {
-      _globalThis2._setGestureStateSync(arg0, FAILED);
-    } else if (_globalThis2._setGestureStateAsync) {
-      const _globalThis3 = globalThis;
-      const result = globalThis._setGestureStateAsync(arg0, FAILED);
+class PanGesture {
+  constructor() {
+    self = this;
+    tmp = closure_0(this, PanGesture);
+    tmp2 = c2;
+    obj = c2(PanGesture);
+    tmp3 = closure_1;
+    if (closure_4()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
     } else {
-      const _Error = Error;
-      const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
-      throw error;
+      constructResult = obj.apply(self, undefined);
     }
-  } else {
-    throw new TypeError("Trying to call a non-function");
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.config = {};
+    tmp3Result.handlerName = "PanGestureHandler";
+    return tmp3Result;
   }
-};
-const obj3 = { setGestureState, State: fn(6275).State };
-fn3.__closure = { setGestureState, State: fn(6275).State };
-fn3.__workletHash = 1703030189599;
-fn3.__initData = {
-  code: "function fail_Pnpm_gestureStateManagerTs3(handlerTag){const{setGestureState,State}=this.__closure;setGestureState(handlerTag,State.FAILED);}",
-};
-obj2.fail = fn3;
-const fn4 = function s(arg0) {
-  const END = _mod6275.State.END;
-  if (typeof fn === "function") {
-    const _globalThis = globalThis;
-    const _globalThis2 = globalThis;
-    if (globalThis._setGestureStateSync) {
-      _globalThis2._setGestureStateSync(arg0, END);
-    } else if (_globalThis2._setGestureStateAsync) {
-      const _globalThis3 = globalThis;
-      const result = globalThis._setGestureStateAsync(arg0, END);
+}
+_classCallCheck = PanGesture;
+_inherits(PanGesture, fn(6280).ContinousBaseGesture);
+const entry = {
+  key: "activeOffsetY",
+  value: function activeOffsetY(items) {
+    const self = this;
+    if (Array.isArray(items)) {
+      [self.config.activeOffsetYStart, self.config.activeOffsetYEnd] = items;
+    } else if (items < 0) {
+      self.config.activeOffsetYStart = items;
     } else {
-      const _Error = Error;
-      const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
-      throw error;
+      self.config.activeOffsetYEnd = items;
     }
-  } else {
-    throw new TypeError("Trying to call a non-function");
-  }
+    return self;
+  },
 };
-const obj4 = { setGestureState, State: fn(6275).State };
-fn4.__closure = { setGestureState, State: fn(6275).State };
-fn4.__workletHash = 5511283927342;
-fn4.__initData = {
-  code: "function deactivate_Pnpm_gestureStateManagerTs4(handlerTag){const{setGestureState,State}=this.__closure;setGestureState(handlerTag,State.END);}",
-};
-obj2.deactivate = fn4;
+let items = [
+  entry,
+  {
+    key: "activeOffsetX",
+    value: function activeOffsetX(items) {
+      const self = this;
+      if (Array.isArray(items)) {
+        [self.config.activeOffsetXStart, self.config.activeOffsetXEnd] = items;
+      } else if (items < 0) {
+        self.config.activeOffsetXStart = items;
+      } else {
+        self.config.activeOffsetXEnd = items;
+      }
+      return self;
+    },
+  },
+  {
+    key: "failOffsetY",
+    value: function failOffsetY(GestureDetector) {
+      const self = this;
+      if (Array.isArray(GestureDetector)) {
+        [self.config.failOffsetYStart, self.config.failOffsetYEnd] = GestureDetector;
+      } else if (GestureDetector < 0) {
+        self.config.failOffsetYStart = GestureDetector;
+      } else {
+        self.config.failOffsetYEnd = GestureDetector;
+      }
+      return self;
+    },
+  },
+  {
+    key: "failOffsetX",
+    value: function failOffsetX(items1) {
+      const self = this;
+      if (Array.isArray(items1)) {
+        [self.config.failOffsetXStart, self.config.failOffsetXEnd] = items1;
+      } else if (items1 < 0) {
+        self.config.failOffsetXStart = items1;
+      } else {
+        self.config.failOffsetXEnd = items1;
+      }
+      return self;
+    },
+  },
+  {
+    key: "minPointers",
+    value: function minPointers(minPointers) {
+      this.config.minPointers = minPointers;
+      return this;
+    },
+  },
+  {
+    key: "maxPointers",
+    value: function maxPointers(maxPointers) {
+      this.config.maxPointers = maxPointers;
+      return this;
+    },
+  },
+  {
+    key: "minDistance",
+    value: function minDistance(minDist) {
+      this.config.minDist = minDist;
+      return this;
+    },
+  },
+  {
+    key: "minVelocity",
+    value: function minVelocity(minVelocity) {
+      this.config.minVelocity = minVelocity;
+      return this;
+    },
+  },
+  {
+    key: "minVelocityX",
+    value: function minVelocityX(minVelocityX) {
+      this.config.minVelocityX = minVelocityX;
+      return this;
+    },
+  },
+  {
+    key: "minVelocityY",
+    value: function minVelocityY(minVelocityY) {
+      this.config.minVelocityY = minVelocityY;
+      return this;
+    },
+  },
+  {
+    key: "averageTouches",
+    value: function averageTouches(avgTouches) {
+      this.config.avgTouches = avgTouches;
+      return this;
+    },
+  },
+  {
+    key: "enableTrackpadTwoFingerGesture",
+    value: function enableTrackpadTwoFingerGesture(enableTrackpadTwoFingerGesture) {
+      this.config.enableTrackpadTwoFingerGesture = enableTrackpadTwoFingerGesture;
+      return this;
+    },
+  },
+  {
+    key: "activateAfterLongPress",
+    value: function activateAfterLongPress(activateAfterLongPress) {
+      this.config.activateAfterLongPress = activateAfterLongPress;
+      return this;
+    },
+  },
+  {
+    key: "onChange",
+    value: function onChange(arg0) {
+      this.handlers.changeEventCalculator = hasOwnProperty;
+      const self = this;
+      let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
+      if (typeof fn === "function") {
+        fn = (items) => fn.apply(self, items);
+      }
+      const items = [arg0];
+      return fn(items);
+    },
+  },
+];
 
-export const GestureStateManager = obj2;
+export const PanGesture = _createClass(PanGesture, items);

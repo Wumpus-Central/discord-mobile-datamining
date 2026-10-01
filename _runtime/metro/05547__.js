@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "4f055c482a5386d393f6b9bf8363f15e",
-  name: "TextWarningIcon",
+  hash: "e0c0be280ef4e57b36ea99cdd95bd9e8",
+  name: "AppsSpoilerIcon",
   type: "png",
 });

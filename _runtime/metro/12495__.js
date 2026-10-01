@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/forums/native/images",
+  width: 120,
+  height: 80,
   scales: [2, 3],
-  hash: "76fb8109cdd9e459537ee050fc2f3187",
-  name: "ic_members",
+  hash: "80a29bcae35fa62f1f957cb01201db17",
+  name: "img_forum_empty_state_light",
   type: "png",
 });

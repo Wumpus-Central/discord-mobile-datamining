@@ -1,103 +1,30 @@
 // _runtime/metro/05310__.js
-import _mod1455 from "01455__.js";
-import _mod5311 from "05311__.js";
-import _mod5312 from "05312__.js";
-import _mod5313 from "05313__.js";
 
-let tmp = typeof Symbol === "function";
-if (typeof Symbol === "function") {
-  let _Symbol = Symbol;
-  tmp = typeof Symbol.iterator === "symbol";
-}
-let closure_2 = tmp;
-
-export default function ToPrimitive(arg0) {
-  let tmp22;
-  if (_mod5311(arg0)) {
-    return arg0;
-  } else {
-    let str2 = "default";
-    if (arguments.length > 1) {
-      const _String = String;
-      let str3 = "string";
-      if (arguments[1] !== String) {
-        const _Number = Number;
-        let str4 = "default";
-        if (arguments[1] === Number) {
-          str4 = "number";
-        }
-        str3 = str4;
-      }
-      str2 = str3;
+export default function isArguments(callee) {
+  const call = toString.call;
+  const tmp2 = typeof call === "unknown" ? toString() : call(callee);
+  let tmp3 = "[object Arguments]" === tmp2;
+  if (!tmp3) {
+    let tmp4 = "[object Array]" !== tmp2;
+    if (tmp4) {
+      tmp4 = null !== callee;
     }
-    if (!closure_2) {
-      {
-        let tmp16 = "default" === str2;
-        if (tmp16) {
-          tmp16 = _mod5313(arg0) || _mod5312(arg0);
-          const tmp15 = _mod5313(arg0) || _mod5312(arg0);
-        }
-        let str8 = str2;
-        if (tmp16) {
-          str8 = "string";
-        }
-        let str10 = "number";
-        if ("default" !== str8) {
-          str10 = str8;
-        }
-        if (null == arg0) {
-          const _TypeError4 = TypeError;
-          const typeError = new TypeError("Cannot call method on " + arg0);
-          throw typeError;
-        } else {
-          if (typeof str10 === "string") {
-            const arr = "string" === str10 ? ["toString", "valueOf"] : ["valueOf", "toString"];
-            let num2 = 0;
-            if (0 < arr.length) {
-              while (true) {
-                let tmp18 = arg0[arr[num2]];
-                if (_mod1455(tmp18)) {
-                  let call = tmp18.call;
-                  tmp22 = typeof call === "unknown" ? tmp18() : call(arg0);
-                  if (_mod5311(tmp22)) {
-                    break;
-                  }
-                }
-                num2 = num2 + 1;
-              }
-              return tmp22;
-            }
-            const _TypeError2 = TypeError;
-            const typeError1 = new TypeError("No default value");
-            throw typeError1;
-          }
-          const _TypeError3 = TypeError;
-          const typeError2 = new TypeError('hint must be "string" or "number"');
-          throw typeError2;
-        }
-      }
+    if (tmp4) {
+      tmp4 = typeof callee === "object";
+    }
+    if (tmp4) {
+      tmp4 = typeof callee.length === "number";
+    }
+    if (tmp4) {
+      tmp4 = callee.length >= 0;
+    }
+    if (!tmp4) {
+      tmp3 = tmp4;
     } else {
-      const _Symbol = Symbol;
-      if (Symbol.toPrimitive) {
-        const _Symbol3 = Symbol;
-        let tmp8;
-        if (null != arg0[toPrimitive]) {
-          tmp8 = tmp6;
-          if (!_mod1455(tmp6)) {
-            const _TypeError = TypeError;
-            const _String2 = String;
-            const text = `${tmp6} returned for property `;
-            const typeError3 = new TypeError(
-              `${tmp6} returned for property ` + String(toPrimitive) + " of object " + arg0 + " is not a function",
-            );
-            throw typeError3;
-          }
-        }
-        let valueOf = tmp8;
-      } else if (_mod5312(arg0)) {
-        const _Symbol2 = Symbol;
-        valueOf = Symbol.prototype.valueOf;
-      }
+      const call2 = toString.call;
+      const str2 = "[object Function]";
+      const tmp6 = typeof call2 === "unknown" ? toString() : call2(str2);
     }
   }
+  return tmp3;
 }

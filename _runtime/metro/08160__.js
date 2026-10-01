@@ -1,15 +1,12 @@
 // _runtime/metro/08160__.js
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _modDef8144 from "08144__.js";
-import _modDef8145 from "08145__.js";
-import _modDef8161 from "08161__.js";
+import _modDef8134 from "08134__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
-import noop from "00019__.js";
 
-const FeFlood = fn;
+const FeTile = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,16 +25,14 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-_possibleConstructorReturnDefault;
-const jsx = fn(21).jsx;
-class FeFlood {
+class FeTile {
   constructor() {
     self = this;
-    tmp = closure_3(this, FeFlood);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(FeFlood);
-    tmp3 = closure_4;
-    if (closure_7()) {
+    tmp = c2(this, FeTile);
+    tmp2 = closure_4;
+    obj = closure_4(FeTile);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -50,34 +45,18 @@ class FeFlood {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeFlood, _modDef8145);
+_inherits(FeTile, _modDef8134);
 const entry = {
   key: "render",
   value: function render() {
-    const self = this;
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      },
-    };
-    const merged = Object.assign(FeFlood(8144).extractFilter(this.props));
-    const merged1 = Object.assign(_modDef8144(this.props));
-    return (
-      <tmp
-        ref={function ref(arg0) {
-          return self.refMethod(arg0);
-        }}
-      />
-    );
+    const result = FeTile(8111).warnUnimplementedFilter();
+    return null;
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeFlood, items);
-importDefaultResultResult.displayName = "FeFlood";
-let obj = {};
-let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-obj.floodColor = "black";
-obj.floodOpacity = 1;
-importDefaultResultResult.defaultProps = obj;
+const importDefaultResultResult = _createClass(FeTile, items);
+importDefaultResultResult.displayName = "FeTile";
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

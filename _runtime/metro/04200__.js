@@ -1,15 +1,15 @@
 // _runtime/metro/04200__.js
-import module_4196_mod from "04196__.js";
-import requiredArgs_mod from "../03949_requiredArgs.js";
+import module_4198_mod from "04198__.js";
+import requiredArgs_mod from "../03948_requiredArgs.js";
 
-let module_4196 = module_4196_mod;
-if (!module_4196) {
-  const obj = { default: module_4196 };
+let module_4198 = module_4198_mod;
+if (!module_4198) {
+  const obj = { default: module_4198 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4196;
+  tmp3 = module_4198;
 }
-module_4196 = tmp3;
+module_4198 = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -19,8 +19,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function formatDistanceToNow(arg0, arg1) {
+export default function formatDistanceToNowStrict(arg0, arg1) {
   requiredArgs.default(1, arguments);
-  return module_4196.default(arg0, Date.now(), arg1);
+  return module_4198.default(arg0, Date.now(), arg1);
 };
 export default exports.default;

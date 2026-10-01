@@ -1,7 +1,10 @@
 // _runtime/metro/06254__.js
-import _mod19 from "00019__.js";
+const global = arg0;
 
-const context = _mod19.createContext(null);
-
-export const BottomSheetModalContext = context;
-export const BottomSheetModalProvider = context.Provider;
+export const isFabricInstalled = function isFabricInstalled() {
+  let prop;
+  if (global != null) {
+    prop = global.nativeFabricUIManager;
+  }
+  return null != prop;
+};

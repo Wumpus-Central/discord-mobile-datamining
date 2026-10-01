@@ -1,19 +1,17 @@
 // _runtime/metro/14019__.js
-import _mod13988 from "13988__.js";
-import element from "../14020_element.js";
-import getOwnPropertyDescriptor from "13987__.js";
+import _mod14010 from "14010__.js";
+import _mod14018 from "14018__.js";
+import _mod14020 from "14020__.js";
+import _mod14021 from "14021__.js";
 
-let tmp2 = !getOwnPropertyDescriptor;
-if (!getOwnPropertyDescriptor) {
-  tmp2 = !_mod13988(
-    () =>
-      7 !==
-      Object.defineProperty(element("div"), "a", {
-        get() {
-          return 7;
-        },
-      }).a,
-  );
-}
-
-export default tmp2;
+export default _mod14010
+  ? (arg0) => typeof arg0 === "symbol"
+  : (arg0) => {
+      const tmp3 = _mod14020("Symbol");
+      let tmpResultResult = _mod14018(tmp3);
+      if (tmpResultResult) {
+        tmpResultResult = _mod14021(tmp3.prototype, Object(arg0));
+        const tmpResult = _mod14021;
+      }
+      return tmpResultResult;
+    };

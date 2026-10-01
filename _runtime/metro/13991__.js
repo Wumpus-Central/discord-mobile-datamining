@@ -1,25 +1,77 @@
 // _runtime/metro/13991__.js
-import module_13992_mod from "13992__.js";
+import _mod13992 from "13992__.js";
+import _mod13993 from "13993__.js";
+import _mod13994 from "13994__.js";
+import _mod14031 from "14031__.js";
+import _mod14032 from "14032__.js";
+import _mod14048 from "14048__.js";
+import _mod14049 from "14049__.js";
 
-const call = prototype.call;
-let module_13992 = module_13992_mod;
-if (module_13992) {
-  const bind = prototype.bind;
-  module_13992 = bind.bind(call, call);
-}
-if (!module_13992) {
-  module_13992 = (arg0) => {
-    closure_0 = arg0;
-    return () => {
-      const apply = call.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(closure_0);
-      } else {
-        applyArgumentsResult = apply(closure_0, arguments);
+export default (dontCallGetSet, obj) => {
+  ({ target, global: _global, stat } = dontCallGetSet);
+  const tmp3 = _mod13992;
+  if (_global) {
+    let prototype = tmp3;
+  } else {
+    let tmp4 = tmp3[target];
+    if (stat) {
+      if (!tmp4) {
+        tmp4 = _mod13993(target, {});
       }
-      return applyArgumentsResult;
-    };
-  };
-}
-
-export default module_13992;
+      prototype = tmp4;
+    } else {
+      prototype = tmp4;
+      if (tmp4) {
+        prototype = _mod13992[target].prototype;
+      }
+    }
+  }
+  if (prototype) {
+    for (const key10024 in arg1) {
+      let tmp21 = arg1[key10024];
+      if (arg0.dontCallGetSet) {
+        obj = _mod13994;
+        let iter = obj.f(prototype, key10024);
+        value = iter;
+        if (iter) {
+          value = iter.value;
+        }
+        let tmp7 = value;
+      } else {
+        tmp7 = prototype[key10024];
+      }
+      let sum = key10024;
+      let tmp12 = _mod14031;
+      if (!_global) {
+        let str4 = "#";
+        if (stat) {
+          str4 = ".";
+        }
+        sum = target + str4 + key10024;
+      }
+      if (!tmp12(sum, arg0.forced)) {
+        if (undefined !== tmp7) {
+          if (typeof tmp21 === typeof tmp7) {
+            continue;
+          } else {
+            let tmp22 = _mod14032(tmp21, tmp7);
+          }
+        }
+        continue;
+      }
+      let sham = arg0.sham;
+      if (!sham) {
+        let sham2 = tmp7;
+        if (tmp7) {
+          sham2 = tmp7.sham;
+        }
+        sham = sham2;
+      }
+      if (sham) {
+        let tmp14 = _mod14048(tmp21, "sham", true);
+      }
+      let tmp19 = _mod14049(prototype, key10024, tmp21, arg0);
+      continue;
+    }
+  }
+};

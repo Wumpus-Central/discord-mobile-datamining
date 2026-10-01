@@ -1,17 +1,11 @@
 // _runtime/metro/05317__.js
-import callBoundIntrinsic from "../01315_callBoundIntrinsic.js";
-import RequireObjectCoercible from "../05304_RequireObjectCoercible.js";
-import ToString from "../05318_ToString.js";
+import _mod1307 from "01307__.js";
 
-let closure_2 = callBoundIntrinsic("String.prototype.replace");
-const isMatch = /^\s$/.test("\u180E");
-let closure_3 = isMatch
-  ? /^[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u180E\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+/
-  : /^[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+/;
-let closure_4 = isMatch
-  ? /[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u180E\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+$/
-  : /[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+$/;
-
-export default function trim() {
-  return closure_2(closure_2(ToString(RequireObjectCoercible(this)), closure_3, ""), closure_4, "");
+export default function mod(arg0, arg1) {
+  const result = arg0 % arg1;
+  let sum = result;
+  if (result < 0) {
+    sum = result + arg1;
+  }
+  return _mod1307(sum);
 }

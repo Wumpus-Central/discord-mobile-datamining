@@ -1,18 +1,17 @@
 // _runtime/metro/06347__.js
-import noop from "00019__.js";
+import ComposedGestureName from "../06318_ComposedGestureName.js";
+import DEFAULT_PROPS_TRANSFORMER from "../06327_DEFAULT_PROPS_TRANSFORMER.js";
+import _mod6342 from "06342__.js";
 
-const use = noop.use;
-const context = noop.createContext(null);
+require = arg1;
+const dependencyMap = arg6;
+let closure_2 = {};
 
-export const InterceptingDetectorMode = {
-  DEFAULT: 0,
-  [0]: "DEFAULT",
-  ANIMATED: 1,
-  [1]: "ANIMATED",
-  REANIMATED: 2,
-  [2]: "REANIMATED",
-};
-export const InterceptingDetectorContext = context;
-export const useInterceptingDetectorContext = function useInterceptingDetectorContext() {
-  return use(context);
+export const useFlingGesture = function useFlingGesture() {
+  let tmp = gestureHandlerProps;
+  if (gestureHandlerProps === undefined) {
+    tmp = closure_2;
+  }
+  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp);
+  return _mod6342.useGesture(ComposedGestureName.SingleGestureName.Fling, clonedAndRemappedConfig);
 };

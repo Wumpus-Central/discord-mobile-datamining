@@ -1,5 +1,5 @@
 // _runtime/metro/04280__.js
-import Parser2 from "../04254_Parser.js";
+import Parser2 from "../04253_Parser.js";
 
 function _typeof(arg0) {
   if (typeof Symbol === "function") {
@@ -26,15 +26,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(Hour1to12Parser, Parser) {
+function _setPrototypeOf(Hour0to23Parser, Parser) {
   _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(Hour1to12Parser, Parser) {
-      Hour1to12Parser.__proto__ = Parser;
-      return Hour1to12Parser;
+    _setPrototypeOf = function _setPrototypeOf(Hour0to23Parser, Parser) {
+      Hour0to23Parser.__proto__ = Parser;
+      return Hour0to23Parser;
     };
   }
-  return _setPrototypeOf(Hour1to12Parser, Parser);
+  return _setPrototypeOf(Hour0to23Parser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -54,7 +54,7 @@ function _getPrototypeOf(arg0) {
 }
 const Parser = Parser2.Parser;
 let _createSuperInternal;
-class Hour1to12Parser {
+class Hour0to23Parser {
   constructor() {
     if (this instanceof closure_1) {
       length = arguments.length;
@@ -109,7 +109,7 @@ class Hour1to12Parser {
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
-          items1 = ["H", "K", "k", "t", "T"];
+          items1 = ["a", "b", "h", "K", "k", "t", "T"];
           str3 = "incompatibleTokens";
           if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
@@ -133,7 +133,7 @@ class Hour1to12Parser {
     }
   }
 }
-let dependencyMap = Hour1to12Parser;
+let dependencyMap = Hour0to23Parser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -145,11 +145,11 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-Hour1to12Parser.prototype = Object.create(prototype, {
-  constructor: { value: Hour1to12Parser, writable: true, configurable: true },
+Hour0to23Parser.prototype = Object.create(prototype, {
+  constructor: { value: Hour0to23Parser, writable: true, configurable: true },
 });
 if (Parser) {
-  _setPrototypeOf(Hour1to12Parser, Parser);
+  _setPrototypeOf(Hour0to23Parser, Parser);
 }
 let num = 0;
 dependencyMap = (function _isNativeReflectConstruct() {
@@ -211,12 +211,12 @@ _createSuperInternal = function _createSuperInternal() {
 const entry = {
   key: "parse",
   value: function parse(arg0, arg1, ordinalNumber) {
-    if ("h" === arg1) {
-      return _createSuperInternal(4256).parseNumericPattern(_createSuperInternal(4257).numericPatterns.hour12h, arg0);
-    } else if ("ho" === arg1) {
+    if ("H" === arg1) {
+      return _createSuperInternal(4255).parseNumericPattern(_createSuperInternal(4256).numericPatterns.hour23h, arg0);
+    } else if ("Ho" === arg1) {
       return ordinalNumber.ordinalNumber(arg0, { unit: "hour" });
     } else {
-      return _createSuperInternal(4256).parseNDigits(arg1.length, arg0);
+      return _createSuperInternal(4255).parseNDigits(arg1.length, arg0);
     }
   },
 };
@@ -225,29 +225,18 @@ let items = [
   {
     key: "validate",
     value: function validate(arg0, arg1) {
-      let tmp = arg1 >= 1;
+      let tmp = arg1 >= 0;
       if (tmp) {
-        tmp = arg1 <= 12;
+        tmp = arg1 <= 23;
       }
       return tmp;
     },
   },
   {
     key: "set",
-    value: function set(getUTCHours, arg1, arg2) {
-      const tmp = getUTCHours.getUTCHours() >= 12;
-      if (tmp) {
-        if (arg2 < 12) {
-          getUTCHours.setUTCHours(arg2 + 12, 0, 0, 0);
-        }
-        return getUTCHours;
-      }
-      if (!tmp) {
-        if (12 === arg2) {
-          getUTCHours.setUTCHours(0, 0, 0, 0);
-        }
-      }
-      getUTCHours.setUTCHours(arg2, 0, 0, 0);
+    value: function set(setUTCHours, arg1, arg2) {
+      setUTCHours.setUTCHours(arg2, 0, 0, 0);
+      return setUTCHours;
     },
   },
 ];
@@ -269,4 +258,4 @@ if (0 < items.length) {
   } while (num < items.length);
 }
 
-export { Hour1to12Parser };
+export { Hour0to23Parser };

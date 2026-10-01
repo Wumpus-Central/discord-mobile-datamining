@@ -1,12 +1,14 @@
 // _runtime/metro/10183__.js
-import AbstractParserWithWordBoundaryChecking from "../10103_AbstractParserWithWordBoundaryChecking.js";
+import repeatedTimeunitPattern from "../10088_repeatedTimeunitPattern.js";
+import AbstractParserWithWordBoundaryChecking from "../10095_AbstractParserWithWordBoundaryChecking.js";
+import _mod10182 from "10182__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const PTCasualTimeParser = require;
+const NLWeekdayParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,12 +27,18 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class PTCasualTimeParser {
+const regExp = new RegExp(
+  "(?:(?:\\,|\\(|\\\uFF08)\\s*)?(?:op\\s*?)?(?:(deze|vorige|volgende)\\s*(?:week\\s*)?)?(" +
+    repeatedTimeunitPattern.matchAnyPattern(_mod10182.WEEKDAY_DICTIONARY) +
+    ")(?=\\W|$)",
+  "i",
+);
+class NLWeekdayParser {
   constructor() {
     self = this;
-    tmp = c2(this, PTCasualTimeParser);
+    tmp = c2(this, NLWeekdayParser);
     tmp2 = closure_4;
-    obj = closure_4(PTCasualTimeParser);
+    obj = closure_4(NLWeekdayParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -45,51 +53,44 @@ class PTCasualTimeParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(PTCasualTimeParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(NLWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
-    return /(?:esta\s*)?(manha|manhã|tarde|meia-noite|meio-dia|noite)(?=\W|$)/i;
+    return regExp;
   },
 };
 const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(refDate, arg1) {
-      refDate = refDate.refDate;
-      const parsingComponents = refDate.createParsingComponents();
-      const formatted = arg1[1].toLowerCase();
-      if ("tarde" === formatted) {
-        parsingComponents.imply("meridiem", PTCasualTimeParser(10101).Meridiem.PM);
-        parsingComponents.imply("hour", 15);
-      } else if ("noite" === formatted) {
-        parsingComponents.imply("meridiem", PTCasualTimeParser(10101).Meridiem.PM);
-        parsingComponents.imply("hour", 22);
-      } else {
-        if ("manha" !== formatted) {
-          if ("manh\u00E3" !== formatted) {
-            if ("meia-noite" === formatted) {
-              const _Date = Date;
-              const date = new Date(refDate.getTime());
-              date.setDate(date.getDate() + 1);
-              PTCasualTimeParser(10102).assignSimilarDate(parsingComponents, date);
-              PTCasualTimeParser(10102).implySimilarTime(parsingComponents, date);
-              parsingComponents.imply("hour", 0);
-              parsingComponents.imply("minute", 0);
-              parsingComponents.imply("second", 0);
-            } else if ("meio-dia" === formatted) {
-              parsingComponents.imply("meridiem", PTCasualTimeParser(10101).Meridiem.AM);
-              parsingComponents.imply("hour", 12);
-            }
+    value: function innerExtract(reference, arg1) {
+      const formatted = arg1[2].toLowerCase();
+      let str2 = arg1[1];
+      if (!str2) {
+        str2 = arg1[3];
+      }
+      if (!str2) {
+        str2 = "";
+      }
+      const formatted1 = str2.toLowerCase();
+      let str3 = "last";
+      if ("vorige" != formatted1) {
+        str3 = "next";
+        if ("volgende" != formatted1) {
+          str3 = null;
+          if ("deze" == formatted1) {
+            str3 = "this";
           }
         }
-        parsingComponents.imply("meridiem", PTCasualTimeParser(10101).Meridiem.AM);
-        parsingComponents.imply("hour", 6);
       }
-      return parsingComponents;
+      return NLWeekdayParser(10115).createParsingComponentsAtWeekday(
+        reference.reference,
+        NLWeekdayParser(10182).WEEKDAY_DICTIONARY[formatted],
+        str3,
+      );
     },
   },
 ];
 
-export default _createClass(PTCasualTimeParser, items);
+export default _createClass(NLWeekdayParser, items);

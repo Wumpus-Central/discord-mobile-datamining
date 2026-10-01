@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/forum_channels",
-  width: 343,
-  height: 236,
-  scales: [1],
-  hash: "6e9bbbae1088530d5ab3c52a383f127c",
-  name: "channel_settings_list_view_example_post",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "c7e2eadc5cd55417a6c70f428f65fac7",
+  name: "SlashIcon",
   type: "png",
 });

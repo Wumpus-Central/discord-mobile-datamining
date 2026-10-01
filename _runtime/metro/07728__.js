@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "8f1bbba7f556b427515687c5a1498793",
-  name: "TrophyIcon",
+  hash: "98f362bfbfa9b6f14fb4a7feec2a0587",
+  name: "FacebookNeutralIcon",
   type: "png",
 });

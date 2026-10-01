@@ -1,17 +1,28 @@
 // _runtime/metro/12543__.js
-import _mod12520 from "12520__.js";
+import _mod12526 from "12526__.js";
+import _mod12527 from "12527__.js";
 
 require = arg1;
 const dependencyMap = arg6;
-const _sentryScope = "_sentryScope";
-const _sentryIsolationScope = "_sentryIsolationScope";
 
-export const getCapturedScopesOnSpan = function getCapturedScopesOnSpan(scope) {
-  return { scope: scope[_sentryScope], isolationScope: scope[_sentryIsolationScope] };
+export const getMainCarrier = function getMainCarrier() {
+  const GLOBAL_OBJ = _mod12526.GLOBAL_OBJ;
+  const tmp3 = GLOBAL_OBJ.__SENTRY__ || {};
+  GLOBAL_OBJ.__SENTRY__ = tmp3;
+  tmp3.version = tmp3.version || _mod12527.SDK_VERSION;
+  const tmp4 = tmp3.version || _mod12527.SDK_VERSION;
+  tmp3[_mod12527.SDK_VERSION] = tmp3[_mod12527.SDK_VERSION] || {};
+  return _mod12526.GLOBAL_OBJ;
 };
-export const setCapturedScopesOnSpan = function setCapturedScopesOnSpan(sentrySpan, scope, isolationScope) {
-  if (sentrySpan) {
-    const result = _mod12520.addNonEnumerableProperty(sentrySpan, _sentryIsolationScope, isolationScope);
-    const result1 = _mod12520.addNonEnumerableProperty(sentrySpan, _sentryScope, scope);
+export const getSentryCarrier = function getSentryCarrier(__SENTRY__) {
+  const tmp = __SENTRY__.__SENTRY__ || {};
+  __SENTRY__.__SENTRY__ = tmp;
+  let SDK_VERSION = tmp.version;
+  if (!SDK_VERSION) {
+    SDK_VERSION = _mod12527.SDK_VERSION;
   }
+  tmp.version = SDK_VERSION;
+  const tmp4 = tmp[_mod12527.SDK_VERSION] || {};
+  tmp[_mod12527.SDK_VERSION] = tmp4;
+  return tmp4;
 };

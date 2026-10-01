@@ -1,6 +1,6 @@
 // _runtime/metro/04243__.js
-import _typeof_mod from "03948__.js";
-import requiredArgs_mod from "../03949_requiredArgs.js";
+import _typeof_mod from "03947__.js";
+import requiredArgs_mod from "../03948_requiredArgs.js";
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -19,10 +19,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isBefore(arg0, arg1) {
+export default function isEqual(arg0, arg1) {
   requiredArgs.default(2, arguments);
   const defaultResult1 = _typeof.default(arg0);
   const time = defaultResult1.getTime();
-  return time < _typeof.default(arg1).getTime();
+  return time === _typeof.default(arg1).getTime();
 };
 export default exports.default;

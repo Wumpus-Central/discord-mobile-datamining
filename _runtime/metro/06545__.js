@@ -1,54 +1,13 @@
 // _runtime/metro/06545__.js
-import jsxProd from "../react/00021_jsxProd.js";
-import _mod6246 from "06246__.js";
-import LegacyBaseButton from "../06269_LegacyBaseButton.js";
-import noop_mod from "00019__.js";
+import registerAsset from "01121__.js";
 
-let noop = noop_mod;
-({ useCallback: c2, useEffect: c3 } = noop);
-({ memo, forwardRef } = noop);
-let noop = noop_mod;
-const jsx = jsxProd.jsx;
-const memoResult = memo(
-  forwardRef((onFocus, ref) => {
-    onFocus = onFocus.onFocus;
-    const onBlur = onFocus.onBlur;
-    const merged = Object.assign(onFocus, Object.assign({ onFocus: 0, onBlur: 0 }));
-    const shouldHandleKeyboardEvents = _mod6246.useBottomSheetInternal().shouldHandleKeyboardEvents;
-    const items = [onFocus, shouldHandleKeyboardEvents];
-    const items1 = [onBlur, shouldHandleKeyboardEvents];
-    const items2 = [shouldHandleKeyboardEvents];
-    const tmp2 = React2((arg0) => {
-      shouldHandleKeyboardEvents.value = true;
-      if (onFocus) {
-        tmp(arg0);
-      }
-    }, items);
-    React3(
-      () => () => {
-        shouldHandleKeyboardEvents.value = false;
-      },
-      items2,
-    );
-    const tmp3 = React2((arg0) => {
-      shouldHandleKeyboardEvents.value = false;
-      if (onBlur) {
-        tmp(arg0);
-      }
-    }, items1);
-    const merged1 = Object.assign(merged);
-    return jsx(LegacyBaseButton.TextInput, {
-      ref,
-      onFocus: tmp2,
-      onBlur: React2((arg0) => {
-        shouldHandleKeyboardEvents.value = false;
-        if (onBlur) {
-          tmp(arg0);
-        }
-      }, items1),
-    });
-  }),
-);
-memoResult.displayName = "BottomSheetTextInput";
-
-export default memoResult;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "2f67acde4c60441cfd2d6684d11b6d76",
+  name: "ic_close_circle_24px",
+  type: "png",
+});

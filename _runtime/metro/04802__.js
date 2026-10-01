@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "021d4551cb2e4d8e923e934b6403ea10",
-  name: "UserPlatformIcon",
+  hash: "80a1b67e775ddb8de80fde27e63a5302",
+  name: "CircleCheckIcon-secondary",
   type: "png",
 });

@@ -1,19 +1,7 @@
 // _runtime/metro/13990__.js
-import _mod13988 from "13988__.js";
-import _mod13991 from "13991__.js";
-import _mod13993 from "13993__.js";
+import _mod14056 from "14056__.js";
+import 13991__ from "13991__.js";
 
-let fn = Object;
-let closure_3 = _mod13991("".split);
-if (_mod13988(() => !Object("z").propertyIsEnumerable(0))) {
-  fn = (arg0) => {
-    if ("String" === _mod13993(arg0)) {
-      let tmp2 = closure_3(arg0, "");
-    } else {
-      tmp2 = Object(arg0);
-    }
-    return tmp2;
-  };
-}
-
-export default fn;
+const obj = { target: "Object", stat: true, arity: 2, forced: null };
+obj.forced = Object.assign !== _mod14056;
+module_13991(obj, { assign: _mod14056 });

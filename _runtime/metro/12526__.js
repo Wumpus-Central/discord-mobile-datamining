@@ -1,76 +1,24 @@
 // _runtime/metro/12526__.js
-import generatePropagationContext from "../12524_generatePropagationContext.js";
-import BAGGAGE_HEADER_NAME from "../12527_BAGGAGE_HEADER_NAME.js";
+import _mod12527 from "12527__.js";
 
 require = arg1;
 const dependencyMap = arg6;
-const regExp = new RegExp("^[ \\t]*([0-9a-f]{32})?-?([0-9a-f]{16})?-?([01])?[ \\t]*$");
 
-export const TRACEPARENT_REGEXP = regExp;
-export const extractTraceparentData = function extractTraceparentData(str) {
-  if (str) {
-    const match = str.match(regExp);
-    if (match) {
-      let flag = true;
-      if ("1" !== match[3]) {
-        if ("0" === match[3]) {
-          flag = false;
-        }
-      }
-      const obj = { traceId: match[1], parentSampled: flag, parentSpanId: match[2] };
-      return obj;
-    }
+export const GLOBAL_OBJ = globalThis;
+export const getGlobalSingleton = function getGlobalSingleton(globalMetricsAggregators, fn, arg2) {
+  let tmp = arg2;
+  if (!arg2) {
+    tmp = globalThis;
   }
-};
-export const generateSentryTraceHeader = function generateSentryTraceHeader() {
-  if (traceId === undefined) {
-    traceId = generatePropagationContext.generateTraceId();
+  const tmp2 = tmp.__SENTRY__ || {};
+  tmp.__SENTRY__ = tmp2;
+  const tmp3 = tmp2[_mod12527.SDK_VERSION] || {};
+  tmp2[_mod12527.SDK_VERSION] = tmp3;
+  let tmp4 = tmp3[globalMetricsAggregators];
+  if (!tmp4) {
+    const tmp6 = fn();
+    tmp3[globalMetricsAggregators] = tmp6;
+    tmp4 = tmp6;
   }
-  if (spanId === undefined) {
-    spanId = generatePropagationContext.generateSpanId();
-  }
-  let str = "";
-  if (undefined !== sampled) {
-    let str2 = "-0";
-    if (sampled) {
-      str2 = "-1";
-    }
-    str = str2;
-  }
-  return "" + traceId + "-" + spanId + str;
-};
-export const propagationContextFromHeaders = function propagationContextFromHeaders(str, _slicedToArray) {
-  let tmp;
-  if (str) {
-    const match = str.match(regExp);
-    if (match) {
-      let flag = true;
-      if ("1" !== match[3]) {
-        if ("0" === match[3]) {
-          flag = false;
-        }
-      }
-      const obj = { traceId: match[1], parentSampled: flag, parentSpanId: match[2] };
-      tmp = obj;
-    }
-  }
-  let result = BAGGAGE_HEADER_NAME.baggageHeaderToDynamicSamplingContext(_slicedToArray);
-  if (tmp) {
-    if (tmp.traceId) {
-      const obj3 = { traceId: null, parentSpanId: null, spanId: null, sampled: null, dsc: null };
-      ({ traceId: obj7.traceId, parentSpanId: obj7.parentSpanId, parentSampled } = tmp);
-      obj3.spanId = generatePropagationContext.generateSpanId();
-      obj3.sampled = parentSampled;
-      if (!result) {
-        result = {};
-      }
-      obj3.dsc = result;
-      return obj3;
-    }
-  }
-  const obj4 = { traceId: null, spanId: null };
-  obj4.traceId = generatePropagationContext.generateTraceId();
-  const tmp4Result3 = generatePropagationContext;
-  obj4.spanId = generatePropagationContext.generateSpanId();
-  return obj4;
+  return tmp4;
 };

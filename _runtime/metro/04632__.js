@@ -1,16 +1,16 @@
 // _runtime/metro/04632__.js
-import c from "../04616_c.js";
-import _mod4629 from "04629__.js";
+import c from "../04615_c.js";
+import _mod4628 from "04628__.js";
 import _slicedToArray from "00032__.js";
 
 require = arg1;
-function getBooleanProperty(booleanProperty, arg1) {
-  return booleanProperty.booleanProperty(arg1);
+function getEnumProperty(enumProperty, arg1) {
+  return enumProperty.enumProperty(arg1);
 }
 
-export const useRiveBoolean = function useRiveBoolean(reducedMotion, instance) {
+export const useRiveEnum = function useRiveEnum(FillColor, instance) {
   const cResult = c.c(4);
-  [tmp3, tmp4, tmp5] = _mod4629.useRiveProperty(instance, reducedMotion, getBooleanProperty);
+  [tmp3, tmp4, tmp5] = _mod4628.useRiveProperty(instance, FillColor, getEnumProperty);
   if (cResult[0] === tmp5) {
     if (cResult[1] === tmp4) {
       if (cResult[2] === tmp3) {

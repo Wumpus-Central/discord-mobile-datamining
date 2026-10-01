@@ -1,28 +1,11 @@
 // _runtime/metro/06416__.js
-import noop from "00019__.js";
+import _mod17 from "00017__.js";
 
-({ useCallback: closure_0, useEffect: closure_1, useLayoutEffect: c2, useRef: c3 } = noop);
+const StyleSheet = _mod17.StyleSheet;
+const obj = { container: null };
+const obj2 = {};
+const merged = Object.assign(StyleSheet.absoluteFillObject);
+obj2.pointerEvents = "box-none";
+obj.container = obj2;
 
-export const useStableCallback = function useStableCallback(current) {
-  React3(undefined);
-  React2(() => {
-    closure_1.current = current;
-  });
-  framebus(
-    () => () => {
-      ref.current = undefined;
-    },
-    [],
-  );
-  return React(() => {
-    const items = [...arguments];
-    current = ref.current;
-    let applyResult;
-    if (current != null) {
-      const items1 = [];
-      HermesBuiltin.arraySpread(items, 0);
-      applyResult = HermesBuiltin.apply(items1, ref);
-    }
-    return applyResult;
-  }, []);
-};
+export const styles = StyleSheet.create(obj);

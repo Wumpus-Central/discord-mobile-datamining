@@ -1,0 +1,14 @@
+// _runtime/metro/05350__.js
+import _mod5282 from "05282__.js";
+
+export default function Type(arg0) {
+  let str = "Symbol";
+  if (typeof arg0 !== "symbol") {
+    let str2 = "BigInt";
+    if (typeof arg0 !== "bigint") {
+      str2 = _mod5282(arg0);
+    }
+    str = str2;
+  }
+  return str;
+}

@@ -1,13 +1,16 @@
 // _runtime/metro/16893__.js
-import registerAsset from "01121__.js";
+import _mod8067 from "08067__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
-  width: 292,
-  height: 182,
-  scales: [2, 3],
-  hash: "580ec4f595fa69a80ec70eff21ac3c71",
-  name: "webhook_empty_darker",
-  type: "png",
-});
+export default _mod8067(
+  (arg0, arg1, arg2) => {
+    let num = 1;
+    if (arg2) {
+      num = 0;
+    }
+    arg0[num].push(arg1);
+  },
+  () => {
+    const items = [[], []];
+    return items;
+  },
+);

@@ -1,13 +1,13 @@
 // _runtime/metro/04943__.js
-import _mod545 from "00545__.js";
-import object from "../04944_object.js";
-import _mod4945 from "04945__.js";
+import _process from "../00539__process.js";
+import baseUnary from "../00540_baseUnary.js";
+import baseIsMap from "../04944_baseIsMap.js";
 
-export default function initCloneObject(arg0) {
-  if (typeof arg0.constructor === "function") {
-    if (!_mod545(arg0)) {
-      object(_mod4945(arg0));
-    }
-    return {};
-  }
+const tmp = _process && _process.isMap;
+if (tmp) {
+  let _module = baseUnary(tmp);
+} else {
+  _module = baseIsMap;
 }
+
+export default _module;

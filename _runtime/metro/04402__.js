@@ -1,12 +1,33 @@
 // _runtime/metro/04402__.js
-import 02117__ from "02117__.js";
+import module_3949_mod from "03949__.js";
 
-if (!module_2117) {
-  const obj2 = { default: module_2117 };
-  let obj = obj2;
+let module_3949 = module_3949_mod;
+if (!module_3949) {
+  const obj = { default: module_3949 };
+  let tmp3 = obj;
 } else {
-  obj = module_2117;
+  tmp3 = module_3949;
 }
+function checkWeek(getTime, getTime2, arg2) {
+  let str = "eeee p";
+  if (!module_3949.default(getTime, getTime2, arg2)) {
+    const time = getTime.getTime();
+    let str2 = "'\u4E0A\u4E2A'eeee p";
+    if (time > getTime2.getTime()) {
+      str2 = "'\u4E0B\u4E2A'eeee p";
+    }
+    str = str2;
+  }
+  return str;
+}
+module_3949 = tmp3;
+let closure_1 = { lastWeek: checkWeek, yesterday: "'\u6628\u5929' p", today: "'\u4ECA\u5929' p", tomorrow: "'\u660E\u5929' p", nextWeek: checkWeek, other: "PP p" };
 
-export default { date: obj.default({ formats: { full: "y'\u5E74'M'\u6708'd'\u65E5' EEEE", long: "y'\u5E74'M'\u6708'd'\u65E5'", medium: "yyyy-MM-dd", short: "yy-MM-dd" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "zzzz a h:mm:ss", long: "z a h:mm:ss", medium: "a h:mm:ss", short: "a h:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} {{time}}", long: "{{date}} {{time}}", medium: "{{date}} {{time}}", short: "{{date}} {{time}}" }, defaultWidth: "full" }) };
+export default function formatRelative(arg0, arg1, arg2, arg3) {
+  let tmpResult = tmp;
+  if (typeof closure_1[arg0] === "function") {
+    tmpResult = tmp(arg1, arg2, arg3);
+  }
+  return tmpResult;
+};
 export default exports.default;

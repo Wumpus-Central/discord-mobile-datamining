@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/user_settings",
-  width: 224,
-  height: 104,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "a2009aeba6d9e049dbc8c9ac25b7dc92",
-  name: "crunchyroll_link_success",
+  hash: "5bfdb70bf70b33af737927fefb52cdba",
+  name: "ServerIcon",
   type: "png",
 });

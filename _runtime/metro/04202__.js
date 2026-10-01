@@ -1,75 +1,131 @@
 // _runtime/metro/04202__.js
-import _mod3953 from "03953__.js";
-import code_mod from "04194__.js";
+import _typeof_mod from "03947__.js";
+import module_4190_mod from "04190__.js";
+import requiredArgs_mod from "../03948_requiredArgs.js";
 
-let code = code_mod;
-if (!code) {
-  const obj = { default: code };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = code;
+  tmp3 = _typeof;
 }
-code = tmp3;
-let closure_3 = ["years", "months", "weeks", "days", "hours", "minutes", "seconds"];
+_typeof = tmp3;
+let module_4190 = module_4190_mod;
+if (!module_4190) {
+  const obj2 = { default: module_4190 };
+  let tmp5 = obj2;
+} else {
+  tmp5 = module_4190;
+}
+module_4190 = tmp5;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
 
-export default function formatDuration(arg0, locale) {
-  closure_0 = arg0;
-  if (arguments.length < 1) {
-    const _TypeError = TypeError;
-    const concat = "1 argument required, but only ".concat;
-    const typeError = new TypeError("1 argument required, but only ".concat(arguments.length, " present"));
-    throw typeError;
+export default function formatISO(arg0, format) {
+  requiredArgs.default(1, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  if (isNaN(defaultResult1.getTime())) {
+    const _RangeError3 = RangeError;
+    const rangeError = new RangeError("Invalid time value");
+    throw rangeError;
   } else {
-    locale = undefined;
-    const defaultOptions = _mod3953.getDefaultOptions();
-    if (null != locale) {
-      locale = locale.locale;
+    format = undefined;
+    if (null != format) {
+      format = format.format;
     }
-    if (null === locale) {
-      locale = defaultOptions.locale;
-    }
-    if (null === locale) {
-      locale = code.default;
-    }
-    let format;
-    if (null != locale) {
-      format = locale.format;
-    }
-    if (null === format) {
-      format = closure_3;
-    }
-    let zero;
-    if (null != locale) {
-      zero = locale.zero;
-    }
-    closure_2 = null !== zero && undefined !== zero && zero;
-    let delimiter;
-    if (null != locale) {
-      delimiter = locale.delimiter;
-    }
-    let str2 = " ";
-    if (null !== delimiter) {
-      str2 = " ";
-      if (undefined !== delimiter) {
-        str2 = delimiter;
+    let str2 = "extended";
+    if (null !== format) {
+      str2 = "extended";
+      if (undefined !== format) {
+        str2 = format;
       }
     }
-    if (locale.formatDistance) {
-      const reduced = format.reduce((arr, item) => {
-        let combined = arr;
-        if (typeof closure_0[item] === "number") {
-          if (closure_2) {
-            combined = arr.concat(locale.formatDistance(tmp, tmp3));
-          } else {
-            combined = arr;
-          }
-        }
-        return combined;
-      }, []);
-      return reduced.join(str2);
-    } else {
-      return "";
+    const StringResult = String(str2);
+    let representation;
+    if (null != format) {
+      representation = format.representation;
     }
+    let str4 = "complete";
+    if (null !== representation) {
+      str4 = "complete";
+      if (undefined !== representation) {
+        str4 = representation;
+      }
+    }
+    const StringResult1 = String(str4);
+    if ("extended" !== StringResult) {
+      if ("basic" !== StringResult) {
+        const _RangeError2 = RangeError;
+        const rangeError1 = new RangeError("format must be 'extended' or 'basic'");
+        throw rangeError1;
+      }
+    }
+    if ("date" !== StringResult1) {
+      if ("time" !== StringResult1) {
+        if ("complete" !== StringResult1) {
+          const _RangeError = RangeError;
+          const rangeError2 = new RangeError("representation must be 'date', 'time', or 'complete'");
+          throw rangeError2;
+        }
+      }
+    }
+    let str9 = "";
+    if ("extended" === StringResult) {
+      str9 = "-";
+    }
+    let str10 = "";
+    if ("extended" === StringResult) {
+      str10 = ":";
+    }
+    let str12 = "";
+    if ("time" !== StringResult1) {
+      const defaultResult2 = module_4190.default(defaultResult1.getDate(), 2);
+      const concat2 = "".concat;
+      const combined = "".concat(module_4190.default(defaultResult1.getFullYear(), 4));
+      const combined1 = combined.concat(str9);
+      const combined2 = combined1.concat(module_4190.default(defaultResult1.getMonth() + 1, 2));
+      const combined3 = combined2.concat(str9);
+      str12 = combined3.concat(defaultResult2);
+      const defaultResult3 = module_4190.default(defaultResult1.getMonth() + 1, 2);
+    }
+    let combined9 = str12;
+    if ("date" !== StringResult1) {
+      const timezoneOffset = defaultResult1.getTimezoneOffset();
+      let str13 = "Z";
+      if (0 !== timezoneOffset) {
+        const _Math = Math;
+        const absolute = Math.abs(timezoneOffset);
+        const _Math2 = Math;
+        let str14 = "-";
+        const defaultResult4 = module_4190.default(Math.floor(absolute / 60), 2);
+        if (timezoneOffset < 0) {
+          str14 = "+";
+        }
+        const combined4 = "".concat(str14);
+        const combined5 = combined4.concat(defaultResult4, ":");
+        str13 = combined5.concat(module_4190.default(absolute % 60, 2));
+        const defaultResult5 = module_4190.default(absolute % 60, 2);
+      }
+      let str16 = "T";
+      if ("" === str12) {
+        str16 = "";
+      }
+      const items = [module_4190.default(defaultResult1.getHours(), 2), module_4190.default(defaultResult1.getMinutes(), 2), module_4190.default(defaultResult1.getSeconds(), 2)];
+      const concat = "".concat;
+      const joined = items.join(str10);
+      const combined6 = "".concat(str12);
+      const combined7 = combined6.concat(str16);
+      const combined8 = combined7.concat(joined);
+      combined9 = combined8.concat(str13);
+    }
+    return combined9;
   }
 };
 export default exports.default;

@@ -1,66 +1,81 @@
 // _runtime/metro/05762__.js
-import _mod5723 from "05723__.js";
-import _modDef5740 from "05740__.js";
-import _modDef5763 from "05763__.js";
-import _slicedToArray from "00032__.js";
+import _mod5712 from "05712__.js";
 
 require = arg1;
-function getTagName(dataView, sum1) {
-  const tmp = _slicedToArray(_mod5723.getPascalStringFromDataView(dataView, sum1), 2);
-  const first = tmp[0];
-  const obj2 = { tagName: tmp[1], tagNameSize: null };
-  let num = 0;
-  const sum = 1 + first;
-  if (first % 2 === 0) {
-    num = 1;
-  }
-  obj2.tagNameSize = sum + num;
-  return obj2;
-}
-let c4 = "8BIM";
-let c5 = 2;
-let c6 = 4;
-({ length, length: closure_7 } = "8BIM");
+const dependencyMap = arg6;
 
 export default {
-  read(arg0, arg1) {
-    const uint8Array = new Uint8Array(arg0);
-    const dataView = _mod5723.getDataView(uint8Array.buffer);
-    const obj2 = {};
-    let num = 0;
-    if (0 < arg0.length) {
-      const sum = num + React5;
-      const stringFromDataView = _mod5723.getStringFromDataView(dataView, num, React5);
-      const shortAt = _modDef5740.getShortAt(dataView, sum);
-      const sum1 = sum + c5;
-      const tmp15 = getTagName(dataView, sum1);
-      let name = tmp15.tagName;
-      const sum2 = sum1 + tmp15.tagNameSize;
-      const longAt = _modDef5740.getLongAt(dataView, sum2);
-      const sum3 = sum2 + c6;
-      if (stringFromDataView === c4) {
-        const dataView1 = _mod5723.getDataView(dataView.buffer, sum3, longAt);
-        const obj7 = { id: shortAt, value: null };
-        const tmp5Result = _mod5723;
-        obj7.value = _mod5723.getStringFromDataView(dataView1, 0, longAt);
-        if (_modDef5763[shortAt]) {
-          try {
-            obj7.description = _modDef5763[shortAt].description(dataView1);
-            if (!name) {
-              name = _modDef5763[shortAt].name;
-            }
-            obj2[name] = obj7;
-          } catch (err) {
-            tmp.description = tmp2;
-          }
-        } else if (arg1) {
-          const _HermesInternal = HermesInternal;
-          obj2["undefined-" + shortAt] = obj7;
-        }
-        const tmp5Result2 = _mod5723;
-      }
-      num = sum3 + (longAt + (longAt % 2));
+  read(byteLength) {
+    let tmp;
+    if (6 <= byteLength.byteLength) {
+      const stringFromDataView = _mod5712.getStringFromDataView(byteLength, 3, 3);
+      const obj2 = { value: stringFromDataView, description: stringFromDataView };
+      tmp = obj2;
     }
-    return obj2;
+    const obj3 = {
+      "GIF Version": tmp,
+      "Image Width": null,
+      "Image Height": null,
+      "Global Color Map": null,
+      "Bits Per Pixel": null,
+      "Color Resolution Depth": null,
+    };
+    let tmp5;
+    if (8 <= byteLength.byteLength) {
+      const uint16 = byteLength.getUint16(6, true);
+      const obj4 = { value: uint16, description: null };
+      const _HermesInternal = HermesInternal;
+      obj4.description = "" + uint16 + "px";
+      tmp5 = obj4;
+    }
+    obj3["Image Width"] = tmp5;
+    let tmp8;
+    if (10 <= byteLength.byteLength) {
+      const uint161 = byteLength.getUint16(8, true);
+      const obj5 = { value: uint161, description: null };
+      const _HermesInternal2 = HermesInternal;
+      obj5.description = "" + uint161 + "px";
+      tmp8 = obj5;
+    }
+    obj3["Image Height"] = tmp8;
+    let tmp11;
+    if (11 <= byteLength.byteLength) {
+      const tmp12 = (128 & byteLength.getUint8(10)) >>> 7;
+      const obj6 = { value: tmp12, description: null };
+      let str5 = "No";
+      if (1 === tmp12) {
+        str5 = "Yes";
+      }
+      obj6.description = str5;
+      tmp11 = obj6;
+    }
+    obj3["Global Color Map"] = tmp11;
+    let tmp13;
+    if (11 <= byteLength.byteLength) {
+      const sum = 1 + (7 & byteLength.getUint8(10));
+      const obj7 = { value: sum, description: null };
+      let str6 = "bits";
+      if (1 === sum) {
+        str6 = "bit";
+      }
+      const _HermesInternal3 = HermesInternal;
+      obj7.description = "" + sum + " " + str6;
+      tmp13 = obj7;
+    }
+    obj3["Bits Per Pixel"] = tmp13;
+    let tmp16;
+    if (11 <= byteLength.byteLength) {
+      const sum1 = 1 + ((112 & byteLength.getUint8(10)) >>> 4);
+      const obj8 = { value: sum1, description: null };
+      let str9 = "bits";
+      if (1 === sum1) {
+        str9 = "bit";
+      }
+      const _HermesInternal4 = HermesInternal;
+      obj8.description = "" + sum1 + " " + str9;
+      tmp16 = obj8;
+    }
+    obj3["Color Resolution Depth"] = tmp16;
+    return obj3;
   },
 };

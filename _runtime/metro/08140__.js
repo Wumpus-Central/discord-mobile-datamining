@@ -1,14 +1,12 @@
 // _runtime/metro/08140__.js
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _modDef8130 from "08130__.js";
-import _modDef8141 from "08141__.js";
+import _modDef8134 from "08134__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
-import noop from "00019__.js";
 
-const Ellipse = fn;
+const FeConvolveMatrix = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,16 +25,14 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-_possibleConstructorReturnDefault;
-const jsx = fn(21).jsx;
-class Ellipse {
+class FeConvolveMatrix {
   constructor() {
     self = this;
-    tmp = closure_3(this, Ellipse);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(Ellipse);
-    tmp3 = closure_4;
-    if (closure_7()) {
+    tmp = c2(this, FeConvolveMatrix);
+    tmp2 = closure_4;
+    obj = closure_4(FeConvolveMatrix);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -49,36 +45,18 @@ class Ellipse {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Ellipse, _modDef8130);
+_inherits(FeConvolveMatrix, _modDef8134);
 const entry = {
   key: "render",
   value: function render() {
-    const self = this;
-    const props = this.props;
-    const obj = {};
-    ({ cx, cy, rx, ry } = props);
-    const merged = Object.assign(Ellipse(8121).extract(this, props));
-    obj.cx = cx;
-    obj.cy = cy;
-    obj.rx = rx;
-    obj.ry = ry;
-    const obj2 = Ellipse(8121);
-    const obj3 = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      },
-    };
-    const merged1 = Object.assign(obj);
-    return jsx(_modDef8141, {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      },
-    });
+    const result = FeConvolveMatrix(8111).warnUnimplementedFilter();
+    return null;
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Ellipse, items);
-importDefaultResultResult.displayName = "Ellipse";
-importDefaultResultResult.defaultProps = { cx: 0, cy: 0, rx: 0, ry: 0 };
+const importDefaultResultResult = _createClass(FeConvolveMatrix, items);
+importDefaultResultResult.displayName = "FeConvolveMatrix";
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
+  httpServerLocation: "/assets/modules/icymi/native/images",
+  width: 24.5,
   height: 24,
   scales: [2, 3],
-  hash: "308384ec5f601de5c19058de1122cf7d",
-  name: "PaintbrushThinIcon",
+  hash: "17237a5c49ea745b655cbec7c093406d",
+  name: "emoji-positive",
   type: "png",
 });

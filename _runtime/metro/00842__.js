@@ -32,8 +32,8 @@ export const createLangChainCallbackHandler = function createLangChainCallbackHa
     lc_namespace: ["langchain_core", "callbacks", "sentry"],
     lc_secrets: "r",
     lc_attributes: "paddingHorizontal",
-    lc_aliases: "userId",
-    lc_serializable_keys: "code",
+    lc_aliases: "enumerable",
+    lc_serializable_keys: "apply",
     lc_id: ["langchain_core", "callbacks", "sentry"],
     lc_kwargs: {},
     name: false,
@@ -41,8 +41,8 @@ export const createLangChainCallbackHandler = function createLangChainCallbackHa
     ignoreChain: false,
     ignoreAgent: false,
     ignoreRetriever: false,
-    ignoreCustomEvent: false,
-    raiseError: true,
+    ignoreCustomEvent: true,
+    raiseError: null,
     awaitHandlers: null,
     handleLLMStart(kwargs, arr, arg2, arg3, arg4, invocation_params, ls_provider, arg7) {
       closure_0 = arg2;

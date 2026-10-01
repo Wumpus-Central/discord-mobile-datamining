@@ -1,38 +1,35 @@
 // _runtime/metro/04317__.js
-import _typeof_mod from "03948__.js";
-import requiredArgs_mod from "../03949_requiredArgs.js";
+import module_4128_mod from "04128__.js";
+import subDays_mod from "../04318_subDays.js";
+import requiredArgs_mod from "../03948_requiredArgs.js";
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let module_4128 = module_4128_mod;
+if (!module_4128) {
+  const obj = { default: module_4128 };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = module_4128;
 }
-_typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
+module_4128 = tmp3;
+let subDays = subDays_mod;
+if (!subDays) {
+  const obj2 = { default: subDays };
   let tmp5 = obj2;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = subDays;
 }
-requiredArgs = tmp5;
+subDays = tmp5;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
 
-export default function isWithinInterval(arg0, start) {
-  requiredArgs.default(2, arguments);
-  const time = _typeof.default(arg0).getTime();
-  const defaultResult1 = _typeof.default(arg0);
-  const time1 = _typeof.default(start.start).getTime();
-  const defaultResult2 = _typeof.default(start.start);
-  const time2 = _typeof.default(start.end).getTime();
-  if (time1 <= time2) {
-    return time >= time1 && time <= time2;
-  } else {
-    const _RangeError = RangeError;
-    const rangeError = new RangeError("Invalid interval");
-    throw rangeError;
-  }
-  const defaultResult3 = _typeof.default(start.end);
+export default function isYesterday(arg0) {
+  requiredArgs.default(1, arguments);
+  return module_4128.default(arg0, subDays.default(Date.now(), 1));
 };
 export default exports.default;

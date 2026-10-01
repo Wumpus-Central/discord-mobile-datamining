@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 120,
-  height: 108,
-  scales: [1, 2, 3],
-  hash: "3ec4fb1a4fcdb736c4c87e7591f26daf",
-  name: "img_remote_auth_succeeded",
+  httpServerLocation: "/assets/modules/contact_sync/native/images",
+  width: 40,
+  height: 40,
+  scales: [2, 3],
+  hash: "1d68443a64aaff8d1d20c2355b47322a",
+  name: "cta",
   type: "png",
 });

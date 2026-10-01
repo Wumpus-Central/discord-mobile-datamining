@@ -1,151 +1,119 @@
 // _runtime/metro/12605__.js
-import _mod12606 from "12606__.js";
-import setupIntegration from "12570__.js";
+import extractRequestData from "../12606_extractRequestData.js";
+import _slicedToArray from "00032__.js";
+import _objectWithoutProperties from "00109__objectWithoutProperties.js";
+import setupIntegration from "12581__.js";
 
-export const generateIteratee = function generateIteratee(arg0) {
-  ({ isBrowser: require, root: dependencyMap, prefix: closure_2 } = arg0);
-  return (root) => {
-    if (root.filename) {
-      let isMatch = /^[a-zA-Z]:\\/.test(root.filename);
-      if (!isMatch) {
-        const filename = root.filename;
-        let hasItem = filename.includes("\\");
-        if (hasItem) {
-          const filename2 = root.filename;
-          hasItem = !filename2.includes("/");
-        }
-        isMatch = hasItem;
-      }
-      if (fn) {
-        if (root) {
-          const filename1 = root.filename;
-          if (0 === filename1.indexOf(root)) {
-            root.filename = filename1.replace(root, prefix);
-          }
-        }
-      } else if (isMatch) {
-        if (isMatch) {
-          let replaced = str3.replace(/^[a-zA-Z]:/, "").replace(/\\/g, "/");
-          const str5 = str3.replace(/^[a-zA-Z]:/, "");
-        } else {
-          replaced = str3;
-        }
-        const obj2 = _mod12606;
-        if (root) {
-          let relativeResult = obj2.relative(root, replaced);
-        } else {
-          relativeResult = obj2.basename(replaced);
-        }
-        const _HermesInternal = HermesInternal;
-        root.filename = "" + prefix + relativeResult;
-      }
-      return root;
-    } else {
-      return root;
-    }
-  };
+let closure_4 = ["ip", "user"];
+let obj = {
+  include: {
+    cookies: true,
+    data: true,
+    headers: true,
+    ip: false,
+    query_string: true,
+    url: true,
+    user: { id: true, username: true, email: true },
+  },
+  transactionNamingScheme: "methodPath",
 };
-export const rewriteFramesIntegration = setupIntegration.defineIntegration(() => {
-  let obj = arg0;
+
+export const requestDataIntegration = setupIntegration.defineIntegration(() => {
+  obj = arg0;
   if (arg0 === undefined) {
     obj = {};
   }
-  let fn;
-  ({ prefix, root } = obj);
-  if (!prefix) {
-    prefix = "app:///";
-  }
-  fn = obj.iteratee;
-  if (!fn) {
-    fn = (root) => {
-      if (root.filename) {
-        let isMatch = /^[a-zA-Z]:\\/.test(root.filename);
-        if (!isMatch) {
-          const filename = root.filename;
-          let hasItem = filename.includes("\\");
-          if (hasItem) {
-            const filename2 = root.filename;
-            hasItem = !filename2.includes("/");
-          }
-          isMatch = hasItem;
+  let obj2 = {};
+  const merged = Object.assign(obj);
+  const merged1 = Object.assign(obj);
+  let obj3 = {};
+  const merged2 = Object.assign(obj.include);
+  const merged3 = Object.assign(obj.include);
+  if (obj.include) {
+    if (typeof obj.include.user === "boolean") {
+      let user = obj.include.user;
+    }
+    obj3.user = user;
+    obj2.include = obj3;
+    const obj4 = {
+      name: "RequestData",
+      processEvent(sdkProcessingMetadata) {
+        let prop = sdkProcessingMetadata.sdkProcessingMetadata;
+        if (undefined === prop) {
+          prop = {};
         }
-        if (fn) {
-          if (root) {
-            const filename1 = root.filename;
-            if (0 === filename1.indexOf(root)) {
-              root.filename = filename1.replace(root, prefix);
+        ({ request, normalizedRequest } = prop);
+        const tmp = (function convertReqDataIntegrationOptsToAddReqDataOpts(include) {
+          include = include.include;
+          const user = include.user;
+          const items = ["method"];
+          const entries = Object.entries(closure_1_3(include, closure_1_4));
+          while (tmp2 !== undefined) {
+            let tmp5 = closure_1_2(tmp3, 2);
+            let first = tmp5[0];
+            if (tmp5[1]) {
+              let arr = items.push(first);
+            }
+            continue;
+          }
+          let flag = true;
+          if (undefined !== user) {
+            flag = user;
+            if (typeof user !== "boolean") {
+              const items1 = [];
+              const _Object = Object;
+              const entries1 = Object.entries(user);
+              flag = items1;
+              for (const item10032 of entries1) {
+                let tmp11 = closure_1_2(item10032, 2);
+                let first1 = tmp11[0];
+                if (tmp11[1]) {
+                  let arr2 = items1.push(first1);
+                }
+                continue;
+              }
             }
           }
-        } else if (isMatch) {
-          if (isMatch) {
-            let replaced = str3.replace(/^[a-zA-Z]:/, "").replace(/\\/g, "/");
-            const str5 = str3.replace(/^[a-zA-Z]:/, "");
-          } else {
-            replaced = str3;
+          const include2 = { ip: include.ip, user: flag, request: null, transaction: null };
+          let tmp15;
+          if (0 !== items.length) {
+            tmp15 = items;
           }
-          const obj2 = _mod12606;
-          if (root) {
-            let relativeResult = obj2.relative(root, replaced);
-          } else {
-            relativeResult = obj2.basename(replaced);
+          include2.request = tmp15;
+          include2.transaction = include.transactionNamingScheme;
+          return { include: include2 };
+        })(obj2);
+        if (normalizedRequest) {
+          let tmp5;
+          if (request) {
+            let ip = request.ip;
+            if (!ip) {
+              ip = request.socket && request.socket.remoteAddress;
+              const tmp6 = request.socket && request.socket.remoteAddress;
+            }
+            tmp5 = ip;
           }
-          const _HermesInternal = HermesInternal;
-          root.filename = "" + prefix + relativeResult;
+          let user;
+          if (request) {
+            user = request.user;
+          }
+          const obj3 = extractRequestData;
+          obj = { ipAddress: tmp5, user };
+          const result = obj3.addNormalizedRequestDataToEvent(sdkProcessingMetadata, normalizedRequest, obj, tmp);
+          return sdkProcessingMetadata;
+        } else {
+          let result1 = sdkProcessingMetadata;
+          if (request) {
+            obj2 = extractRequestData;
+            result1 = obj2.addRequestDataToEvent(sdkProcessingMetadata, request, tmp);
+          }
+          return result1;
         }
-        return root;
-      } else {
-        return root;
-      }
+      },
     };
+    return obj4;
   }
-  return {
-    name: "RewriteFrames",
-    processEvent(exception) {
-      exception = exception.exception;
-      if (exception) {
-        const _Array = Array;
-        exception = Array.isArray(exception.exception.values);
-      }
-      let tmp2 = exception;
-      if (exception) {
-        tmp2 = (function _processExceptionsEvent(exception) {
-          try {
-            const obj = {};
-            let merged = Object.assign(exception);
-            let obj2 = {};
-            let merged1 = Object.assign(exception.exception);
-            const values = exception.exception.values;
-            obj2.values = values.map((stacktrace) => {
-              const merged = Object.assign(stacktrace);
-              stacktrace = stacktrace.stacktrace;
-              if (stacktrace) {
-                const stacktrace2 = stacktrace.stacktrace;
-                const obj2 = {};
-                const merged1 = Object.assign(stacktrace2);
-                let frames = stacktrace2;
-                if (stacktrace2) {
-                  frames = stacktrace2.frames;
-                }
-                if (frames) {
-                  const frames1 = stacktrace2.frames;
-                  frames = frames1.map((item) => closure_1_0(item));
-                }
-                const obj3 = { stacktrace: null };
-                obj2.frames = frames;
-                obj3.stacktrace = obj2;
-                stacktrace = obj3;
-              }
-              const merged2 = Object.assign(stacktrace);
-              return {};
-            });
-            obj.exception = obj2;
-            return obj;
-          } catch (err) {
-            return tmp;
-          }
-        })(exception);
-      }
-      return tmp2;
-    },
-  };
+  user = {};
+  const merged4 = Object.assign(obj.include.user);
+  const merged5 = Object.assign(obj.include || {}.user);
 });

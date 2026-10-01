@@ -1,7 +1,12 @@
 // _runtime/metro/13993__.js
-import _mod13991 from "13991__.js";
+import _mod13992 from "13992__.js";
 
-let closure_0 = _mod13991({}.toString);
-let closure_1 = _mod13991("".slice);
-
-export default (arg0) => closure_1(closure_0(arg0), 8, -1);
+export default (arg0, value) => {
+  try {
+    const obj = { value, configurable: true, writable: true };
+    defineProperty(_mod13992, arg0, obj);
+    return value;
+  } catch (err) {
+    _mod13992[tmp2] = tmp;
+  }
+};

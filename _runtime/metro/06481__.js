@@ -1,39 +1,40 @@
 // _runtime/metro/06481__.js
-import _mod6482 from "06482__.js";
+import RecyclerViewManager from "../06482_RecyclerViewManager.js";
+import _slicedToArray from "06461__.js";
 
-export default function _createClass(arg0, arg1, arg2) {
-  if (arg1) {
-    for (let num = 0; num < arg1.length; num = num + 1) {
-      let tmp3 = arg1[num];
-      let flag2 = tmp3.enumerable;
-      if (!flag2) {
-        flag2 = false;
-      }
-      tmp3.enumerable = flag2;
-      tmp3.configurable = true;
-      if ("value" in tmp3) {
-        tmp3.writable = true;
-      }
-      let _Object = Object;
-      let definePropertyResult = Object.defineProperty(tmp, _mod6482(tmp3.key), tmp3);
-    }
-  }
-  if (arg2) {
-    for (let num3 = 0; num3 < arg2.length; num3 = num3 + 1) {
-      let tmp9 = arg2[num3];
-      let flag4 = tmp9.enumerable;
-      if (!flag4) {
-        flag4 = false;
-      }
-      tmp9.enumerable = flag4;
-      tmp9.configurable = true;
-      if ("value" in tmp9) {
-        tmp9.writable = true;
-      }
-      let _Object2 = Object;
-      let definePropertyResult1 = Object.defineProperty(arg0, _mod6482(tmp9.key), tmp9);
-    }
-  }
-  Object.defineProperty(arg0, "prototype", { writable: false });
-  return arg0;
-}
+require = fn;
+const noop = fn(19);
+({ useEffect: c3, useMemo: closure_4, useState: hasOwnProperty } = noop);
+
+export const useRecyclerViewManager = (data) => {
+  let recyclerViewManager = velocityTracker(
+    closure_5(() => {
+      recyclerViewManager = new RecyclerViewManager.RecyclerViewManager(closure_0);
+      return recyclerViewManager;
+    }),
+    1,
+  )[0];
+  velocityTracker = velocityTracker(
+    closure_5(() => {
+      velocityTracker = new data(recyclerViewManager[3]).VelocityTracker();
+      return velocityTracker;
+    }),
+    1,
+  )[0];
+  const items = [data];
+  closure_4(() => {
+    recyclerViewManager.updateProps(closure_0);
+  }, items);
+  const items1 = [data.data];
+  closure_4(() => {
+    recyclerViewManager.processDataUpdate();
+  }, items1);
+  closure_3(() => {
+    recyclerViewManager.restoreIfNeeded();
+    return () => {
+      recyclerViewManager.dispose();
+      velocityTracker.cleanUp();
+    };
+  }, []);
+  return { recyclerViewManager, velocityTracker };
+};

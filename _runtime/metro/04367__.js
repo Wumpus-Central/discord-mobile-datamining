@@ -1,18 +1,17 @@
 // _runtime/metro/04367__.js
-import module_3952_mod from "03952__.js";
-import _typeof_mod from "03948__.js";
-import module_4096_mod from "04096__.js";
+import module_3951_mod from "03951__.js";
+import _typeof_mod from "03947__.js";
 import module_4219_mod from "04219__.js";
-import requiredArgs_mod from "../03949_requiredArgs.js";
+import requiredArgs_mod from "../03948_requiredArgs.js";
 
-let module_3952 = module_3952_mod;
-if (!module_3952) {
-  const obj = { default: module_3952 };
+let module_3951 = module_3951_mod;
+if (!module_3951) {
+  const obj = { default: module_3951 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_3952;
+  tmp3 = module_3951;
 }
-module_3952 = tmp3;
+module_3951 = tmp3;
 let _typeof = _typeof_mod;
 if (!_typeof) {
   const obj2 = { default: _typeof };
@@ -21,34 +20,28 @@ if (!_typeof) {
   tmp5 = _typeof;
 }
 _typeof = tmp5;
-let module_4096 = module_4096_mod;
-if (!module_4096) {
-  const obj3 = { default: module_4096 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4096;
-}
-module_4096 = tmp7;
 let module_4219 = module_4219_mod;
 if (!module_4219) {
-  const obj4 = { default: module_4219 };
-  let tmp9 = obj4;
+  const obj3 = { default: module_4219 };
+  let tmp7 = obj3;
 } else {
-  tmp9 = module_4219;
+  tmp7 = module_4219;
 }
-module_4219 = tmp9;
+module_4219 = tmp7;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj5 = { default: requiredArgs };
-  let tmp11 = obj5;
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
 } else {
-  tmp11 = requiredArgs;
+  tmp9 = requiredArgs;
 }
-requiredArgs = tmp11;
+requiredArgs = tmp9;
 
-export default function setISODay(arg0, arg1) {
+export default function setISOWeek(arg0, arg1) {
   requiredArgs.default(2, arguments);
   const defaultResult1 = _typeof.default(arg0);
-  return module_4096.default(defaultResult1, module_3952.default(arg1) - module_4219.default(defaultResult1));
+  const diff = module_4219.default(defaultResult1) - module_3951.default(arg1);
+  defaultResult1.setDate(defaultResult1.getDate() - 7 * diff);
+  return defaultResult1;
 };
 export default exports.default;

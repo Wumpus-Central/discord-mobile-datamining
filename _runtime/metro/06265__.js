@@ -1,4 +1,3 @@
 // _runtime/metro/06265__.js
-import _mod17 from "00017__.js";
 
-export const findNodeHandle = _mod17.findNodeHandle;
+export const State = { UNDETERMINED: 0, FAILED: 1, BEGAN: 2, CANCELLED: 3, ACTIVE: 4, END: 5 };

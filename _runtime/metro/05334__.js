@@ -1,16 +1,46 @@
 // _runtime/metro/05334__.js
-import _mod1281 from "01281__.js";
-import callBoundIntrinsic from "../01315_callBoundIntrinsic.js";
+import _mod1282 from "01282__.js";
+import _mod1314 from "01314__.js";
 
-const tmp = _mod1281("%Array%");
-const isArray = tmp.isArray;
-let tmp2 = !isArray;
-if (!isArray) {
-  tmp2 = callBoundIntrinsic("Object.prototype.toString");
+let closure_2 = Object.assign({
+  "[[Configurable]]": true,
+  "[[Enumerable]]": true,
+  "[[Get]]": true,
+  "[[Set]]": true,
+  "[[Value]]": true,
+  "[[Writable]]": true,
+});
+
+export default function isPropertyDescriptor(obj) {
+  if (obj) {
+    if (typeof obj === "object") {
+      for (const key10001 in arg0) {
+        if (!_mod1314(arg0, key10001)) {
+          continue;
+        } else if (closure_2[key10001]) {
+          continue;
+        } else {
+          let flag = false;
+          return false;
+        }
+        continue;
+      }
+      let tmp4 = _mod1314(obj, "[[Value]]");
+      if (!tmp4) {
+        tmp4 = _mod1314(obj, "[[Writable]]");
+      }
+      let tmp5 = _mod1314(obj, "[[Get]]");
+      if (!tmp5) {
+        tmp5 = _mod1314(obj, "[[Set]]");
+      }
+      if (tmp4) {
+        if (tmp5) {
+          const tmp8 = new _mod1282("Property Descriptors may not be both accessor and data descriptors");
+          throw tmp8;
+        }
+      }
+      return true;
+    }
+  }
+  return false;
 }
-let closure_0 = tmp2;
-
-export default tmp.isArray ||
-  function IsArray(arg0) {
-    return "[object Array]" === closure_0(arg0);
-  };

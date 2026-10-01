@@ -1,5 +1,5 @@
 // _runtime/metro/08185__.js
-import _modDef8130 from "08130__.js";
+import _modDef8119 from "08119__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
@@ -7,7 +7,7 @@ import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const Marker = importDefault;
+const Polyline = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,67 +27,59 @@ function _isNativeReflectConstruct() {
   } catch (err) {}
 }
 const jsx = fn(21).jsx;
-class Marker {
+class Polyline {
   constructor() {
     self = this;
-    tmp = c2(this, Marker);
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = c2(this, Polyline);
+    items1 = [...items];
     tmp2 = closure_4;
-    obj = closure_4(Marker);
+    obj = closure_4(Polyline);
     tmp3 = closure_3;
     if (metroRequire()) {
-      tmp7 = globalThis;
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, items1);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.setNativeProps = (points) => {
+      points = points.points;
+      if (points) {
+        const _HermesInternal = HermesInternal;
+        points.d = "M" + Polyline(8184)(points);
+      }
+      if (closure_0.root) {
+        const root = closure_0.root;
+        root.setNativeProps(points);
+      }
+    };
+    return tmp3Result;
   }
 }
-_inherits(Marker, _modDef8130);
+_inherits(Polyline, _modDef8119);
 const entry = {
   key: "render",
   value: function render() {
-    const self = this;
     const props = this.props;
-    ({ viewBox, preserveAspectRatio, markerWidth, markerHeight, children } = props);
-    const obj2 = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      },
-    };
-    const obj = {
-      name: props.id,
-      refX: props.refX,
-      refY: props.refY,
-      markerUnits: props.markerUnits,
-      orient: String(props.orient),
-      markerWidth,
-      markerHeight,
-    };
-    const merged = Object.assign(obj);
-    const merged1 = Object.assign(Marker(8119)({ viewBox, preserveAspectRatio }));
-    obj2.children = children;
-    return jsx(Marker(8186), {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      },
-    });
+    const points = props.points;
+    const obj = { ref: this.refMethod, d: null };
+    let combined = points;
+    if (points) {
+      const _HermesInternal = HermesInternal;
+      combined = "M" + Polyline(8184)(points);
+    }
+    obj.d = combined;
+    const merged = Object.assign(props);
+    return jsx(Polyline(8179), { ref: this.refMethod, d: null });
   },
 };
-const items = [entry];
-const importDefaultResultResult = _createClass(Marker, items);
-importDefaultResultResult.displayName = "Marker";
-importDefaultResultResult.defaultProps = {
-  refX: 0,
-  refY: 0,
-  orient: "0",
-  markerWidth: 3,
-  markerHeight: 3,
-  markerUnits: "strokeWidth",
-};
+let items = [entry];
+const importDefaultResultResult = _createClass(Polyline, items);
+importDefaultResultResult.displayName = "Polyline";
+importDefaultResultResult.defaultProps = { points: "" };
 
 export default importDefaultResultResult;

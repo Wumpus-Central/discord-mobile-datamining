@@ -1,28 +1,34 @@
 // _runtime/metro/06420__.js
-import _mod19 from "00019__.js";
-import _mod6264 from "06264__.js";
+import _mod17 from "00017__.js";
+import jsxProd from "../react/00021_jsxProd.js";
+import _mod6421 from "06421__.js";
+import noop_mod from "00019__.js";
 
-const useLayoutEffect = _mod19.useLayoutEffect;
-
-export const useBoundingClientRect = function useBoundingClientRect(arg0, arg1) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  if (obj.isFabricInstalled()) {
-    useLayoutEffect(() => {
-      if (closure_0) {
-        if (closure_0.current) {
-          if (typeof closure_0.current.unstable_getBoundingClientRect !== "function") {
-            if (typeof closure_0.current.getBoundingClientRect === "function") {
-              const current2 = closure_0.current;
-              closure_1(current2.getBoundingClientRect());
-            }
-          } else {
-            const current = closure_0.current;
-            closure_1(current.unstable_getBoundingClientRect());
-          }
-        }
-      }
-    });
+let noop = noop_mod;
+const useMemo = noop.useMemo;
+let noop = noop_mod;
+const StyleSheet = _mod17.StyleSheet;
+const jsx = jsxProd.jsx;
+const memoResult = noop.memo((arg0) => {
+  ({ backgroundComponent, backgroundStyle } = arg0);
+  let items = [backgroundStyle];
+  ({ animatedIndex, animatedPosition } = arg0);
+  const style = useMemo(() => {
+    const items = [_mod6421.styles.container, backgroundStyle];
+    return StyleSheet.flatten(items);
+  }, items);
+  if (backgroundComponent == null) {
+    backgroundComponent = backgroundStyle(6422).BottomSheetBackground;
   }
-  obj = _mod6264;
-};
+  return (
+    <backgroundComponent
+      pointerEvents="none"
+      animatedIndex={animatedIndex}
+      animatedPosition={animatedPosition}
+      style={style}
+    />
+  );
+});
+memoResult.displayName = "BottomSheetBackgroundContainer";
+
+export const BottomSheetBackgroundContainer = memoResult;

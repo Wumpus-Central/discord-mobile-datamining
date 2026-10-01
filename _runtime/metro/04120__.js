@@ -1,6 +1,6 @@
 // _runtime/metro/04120__.js
-import _typeof_mod from "03948__.js";
-import requiredArgs_mod from "../03949_requiredArgs.js";
+import _typeof_mod from "03947__.js";
+import requiredArgs_mod from "../03948_requiredArgs.js";
 
 function _typeof(arg0) {
   if (typeof Symbol === "function") {
@@ -44,7 +44,7 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function max(arg0) {
+export default function min(arg0) {
   requiredArgs.default(1, arguments);
   if (!arg0) {
     if ("object" === _typeof(arg0)) {
@@ -62,11 +62,10 @@ export default function max(arg0) {
   }
   const item = arr.forEach((item) => {
     defaultResult = _typeof.default(item);
-    let isNaNResult = undefined === defaultResult || defaultResult < defaultResult;
+    let isNaNResult = undefined === defaultResult || defaultResult > defaultResult;
     if (!isNaNResult) {
       const _isNaN = isNaN;
-      const _Number = Number;
-      isNaNResult = isNaN(Number(defaultResult));
+      isNaNResult = isNaN(defaultResult.getDate());
     }
   });
   let date1 = _typeof;

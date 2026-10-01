@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/BeanieIcon",
+  httpServerLocation: "/assets/images/native/custom_app_icons/MushroomIcon",
   width: 60,
   height: 60,
   scales: [2, 3],
-  hash: "5ed4f057d69445a6e4a7fd8ca936d32a",
-  name: "BeanieIcon",
+  hash: "d0258153ad64bd0da42bc5243da496aa",
+  name: "MushroomIcon",
   type: "png",
 });

@@ -1,5 +1,5 @@
 // _runtime/metro/08617__.js
-import _mod8602 from "08602__.js";
+import _mod8594 from "08594__.js";
 
 const self = this;
 let self2 = this;
@@ -56,15 +56,14 @@ if (self2) {
       if (typeof error === "function") {
         const obj = { localeError: null };
         const obj2 = {
-          string: { unit: "characters", verb: "to have" },
-          file: { unit: "bytes", verb: "to have" },
-          array: { unit: "items", verb: "to have" },
-          set: { unit: "items", verb: "to have" },
-          map: { unit: "entries", verb: "to have" },
+          string: { unit: "karakter", verb: "legyen" },
+          file: { unit: "byte", verb: "legyen" },
+          array: { unit: "elem", verb: "legyen" },
+          set: { unit: "elem", verb: "legyen" },
         };
         closure_1 = {
-          regex: "input",
-          email: "email address",
+          regex: "bemenet",
+          email: "email c\u00EDm",
           url: "URL",
           emoji: "emoji",
           uuid: "UUID",
@@ -77,23 +76,22 @@ if (self2) {
           ulid: "ULID",
           xid: "XID",
           ksuid: "KSUID",
-          datetime: "ISO datetime",
-          date: "ISO date",
-          time: "ISO time",
-          duration: "ISO duration",
-          ipv4: "IPv4 address",
-          ipv6: "IPv6 address",
-          mac: "MAC address",
-          cidrv4: "IPv4 range",
-          cidrv6: "IPv6 range",
-          base64: "base64-encoded string",
-          base64url: "base64url-encoded string",
+          datetime: "ISO id\u0151b\u00E9lyeg",
+          date: "ISO d\u00E1tum",
+          time: "ISO id\u0151",
+          duration: "ISO id\u0151intervallum",
+          ipv4: "IPv4 c\u00EDm",
+          ipv6: "IPv6 c\u00EDm",
+          cidrv4: "IPv4 tartom\u00E1ny",
+          cidrv6: "IPv6 tartom\u00E1ny",
+          base64: "base64-k\u00F3dolt string",
+          base64url: "base64url-k\u00F3dolt string",
           json_string: "JSON string",
-          e164: "E.164 number",
+          e164: "E.164 sz\u00E1m",
           jwt: "JWT",
-          template_literal: "input",
+          template_literal: "bemenet",
         };
-        closure_2 = { nan: "NaN" };
+        closure_2 = { nan: "NaN", number: "sz\u00E1m", array: "t\u00F6mb" };
         obj.localeError = (code) => {
           switch (code.code) {
             case "invalid_type":
@@ -106,108 +104,142 @@ if (self2) {
               if (tmp48 == null) {
                 tmp48 = parsedTypeResult;
               }
-              const _HermesInternal16 = HermesInternal;
-              return "Invalid input: expected " + expected + ", received " + tmp48;
+              if (obj.test(code.expected)) {
+                const _HermesInternal17 = HermesInternal;
+                let combined =
+                  "\u00C9rv\u00E9nytelen bemenet: a v\u00E1rt \u00E9rt\u00E9k instanceof " +
+                  code.expected +
+                  ", a kapott \u00E9rt\u00E9k " +
+                  tmp48;
+              } else {
+                const _HermesInternal16 = HermesInternal;
+                combined =
+                  "\u00C9rv\u00E9nytelen bemenet: a v\u00E1rt \u00E9rt\u00E9k " +
+                  expected +
+                  ", a kapott \u00E9rt\u00E9k " +
+                  tmp48;
+              }
+              return combined;
             case "invalid_value":
               if (1 === code.values.length) {
                 const _HermesInternal15 = HermesInternal;
-                let combined = "Invalid input: expected " + closure_2.stringifyPrimitive(code.values[0]);
+                let combined1 =
+                  "\u00C9rv\u00E9nytelen bemenet: a v\u00E1rt \u00E9rt\u00E9k " +
+                  closure_2.stringifyPrimitive(code.values[0]);
               } else {
                 const _HermesInternal14 = HermesInternal;
-                combined = "Invalid option: expected one of " + closure_2.joinValues(code.values, "|");
+                combined1 =
+                  "\u00C9rv\u00E9nytelen opci\u00F3: valamelyik \u00E9rt\u00E9k v\u00E1rt " +
+                  closure_2.joinValues(code.values, "|");
               }
-              return combined;
+              return combined1;
             case "too_big":
-              let str24 = "<";
+              let str26 = "<";
               if (code.inclusive) {
-                str24 = "<=";
+                str26 = "<=";
               }
               let tmp27 = obj2[code.origin];
               if (tmp27 == null) {
                 tmp27 = null;
               }
-              let str25 = code.origin;
+              let str27 = code.origin;
               if (tmp27) {
-                if (str25 == null) {
-                  str25 = "value";
+                if (str27 == null) {
+                  str27 = "\u00E9rt\u00E9k";
                 }
                 const str1 = code.maximum.toString();
-                let str31 = tmp27.unit;
-                if (str31 == null) {
-                  str31 = "elements";
+                let str33 = tmp27.unit;
+                if (str33 == null) {
+                  str33 = "elem";
                 }
                 const _HermesInternal13 = HermesInternal;
-                let combined1 = "Too big: expected " + str25 + " to have " + str24 + str1 + " " + str31;
+                let combined2 = "T\u00FAl nagy: " + str27 + " m\u00E9rete t\u00FAl nagy " + str26 + str1 + " " + str33;
               } else {
-                let str26 = str25;
-                if (str25 == null) {
-                  str26 = "value";
+                let str28 = str27;
+                if (str27 == null) {
+                  str28 = "\u00E9rt\u00E9k";
                 }
                 const _HermesInternal12 = HermesInternal;
-                combined1 = "Too big: expected " + str26 + " to be " + str24 + code.maximum.toString();
+                combined2 =
+                  "T\u00FAl nagy: a bemeneti \u00E9rt\u00E9k " +
+                  str28 +
+                  " t\u00FAl nagy: " +
+                  str26 +
+                  code.maximum.toString();
               }
-              return combined1;
+              return combined2;
             case "too_small":
-              let str18 = ">";
+              let str20 = ">";
               if (code.inclusive) {
-                str18 = ">=";
+                str20 = ">=";
               }
               let tmp15 = obj2[code.origin];
               if (tmp15 == null) {
                 tmp15 = null;
               }
               ({ origin, minimum } = code);
-              const str43 = minimum.toString();
+              const str47 = minimum.toString();
               if (tmp15) {
                 const _HermesInternal11 = HermesInternal;
-                let combined2 = "Too small: expected " + origin + " to have " + str18 + str43 + " " + tmp15.unit;
+                let combined3 =
+                  "T\u00FAl kicsi: a bemeneti \u00E9rt\u00E9k " +
+                  origin +
+                  " m\u00E9rete t\u00FAl kicsi " +
+                  str20 +
+                  str47 +
+                  " " +
+                  tmp15.unit;
               } else {
                 const _HermesInternal10 = HermesInternal;
-                combined2 = "Too small: expected " + origin + " to be " + str18 + str43;
+                combined3 = "T\u00FAl kicsi: a bemeneti \u00E9rt\u00E9k " + origin + " t\u00FAl kicsi " + str20 + str47;
               }
-              return combined2;
+              return combined3;
             case "invalid_format":
               if ("starts_with" === code.format) {
                 const _HermesInternal9 = HermesInternal;
-                let combined3 = 'Invalid string: must start with "' + code.prefix + '"';
+                let combined4 =
+                  '\u00C9rv\u00E9nytelen string: "' + code.prefix + '" \u00E9rt\u00E9kkel kell kezd\u0151dnie';
               } else if ("ends_with" === code.format) {
                 const _HermesInternal8 = HermesInternal;
-                combined3 = 'Invalid string: must end with "' + code.suffix + '"';
+                combined4 =
+                  '\u00C9rv\u00E9nytelen string: "' + code.suffix + '" \u00E9rt\u00E9kkel kell v\u00E9gz\u0151dnie';
               } else if ("includes" === code.format) {
                 const _HermesInternal7 = HermesInternal;
-                combined3 = 'Invalid string: must include "' + code.includes + '"';
+                combined4 = '\u00C9rv\u00E9nytelen string: "' + code.includes + '" \u00E9rt\u00E9ket kell tartalmaznia';
               } else if ("regex" === code.format) {
                 const _HermesInternal6 = HermesInternal;
-                combined3 = "Invalid string: must match pattern " + code.pattern;
+                combined4 = "\u00C9rv\u00E9nytelen string: " + code.pattern + " mint\u00E1nak kell megfelelnie";
               } else {
                 let format = closure_1[code.format];
                 if (format == null) {
                   format = code.format;
                 }
                 const _HermesInternal5 = HermesInternal;
-                combined3 = "Invalid " + format;
+                combined4 = "\u00C9rv\u00E9nytelen " + format;
               }
-              return combined3;
+              return combined4;
             case "not_multiple_of":
               const _HermesInternal4 = HermesInternal;
-              return "Invalid number: must be a multiple of " + code.divisor;
+              return (
+                "\u00C9rv\u00E9nytelen sz\u00E1m: " + code.divisor + " t\u00F6bbsz\u00F6r\u00F6s\u00E9nek kell lennie"
+              );
             case "unrecognized_keys":
               let str3 = "";
               if (code.keys.length > 1) {
                 str3 = "s";
               }
               const _HermesInternal3 = HermesInternal;
-              return "Unrecognized key" + str3 + ": " + closure_2.joinValues(code.keys, ", ");
+              return "Ismeretlen kulcs" + str3 + ": " + closure_2.joinValues(code.keys, ", ");
             case "invalid_key":
               const _HermesInternal2 = HermesInternal;
-              return "Invalid key in " + code.origin;
+              return "\u00C9rv\u00E9nytelen kulcs " + code.origin;
             case "invalid_union":
-              return "Invalid input";
+              return "\u00C9rv\u00E9nytelen bemenet";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              return "Invalid value in " + code.origin;
+              return "\u00C9rv\u00E9nytelen \u00E9rt\u00E9k: " + code.origin;
             default:
-              return "Invalid input";
+              return "\u00C9rv\u00E9nytelen bemenet";
           }
         };
         return obj;
@@ -215,7 +247,7 @@ if (self2) {
         throw new TypeError("Trying to call a non-function");
       }
     };
-    let closure_2 = fn(_mod8602);
+    let closure_2 = fn(_mod8594);
     function error() {}
     module.exports = exports.default;
   } else {

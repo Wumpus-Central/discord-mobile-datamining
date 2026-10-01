@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "9efbede8b87c94f401364acf34876922",
-  name: "HammerIcon",
+  hash: "d6a8eeb03988caf260d6fea57b710519",
+  name: "ArrowSmallLeftIcon",
   type: "png",
 });

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "69dddc8653cca8ffd8b6435928647a3f",
-  name: "MobilePhoneIcon",
+  hash: "1b06201c0ce237bba30c4db64f994263",
+  name: "EyeIcon",
   type: "png",
 });

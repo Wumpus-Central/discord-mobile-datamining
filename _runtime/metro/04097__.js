@@ -1,54 +1,116 @@
 // _runtime/metro/04097__.js
-import module_3952_mod from "03952__.js";
-import _typeof_mod from "03948__.js";
-import requiredArgs_mod from "../03949_requiredArgs.js";
+import module_4098_mod from "04098__.js";
+import _typeof_mod from "03947__.js";
+import module_3951_mod from "03951__.js";
+import requiredArgs_mod from "../03948_requiredArgs.js";
+import module_4099_mod from "04099__.js";
+import module_4100_mod from "04100__.js";
 
-let module_3952 = module_3952_mod;
-if (!module_3952) {
-  const obj = { default: module_3952 };
+let module_4098 = module_4098_mod;
+if (!module_4098) {
+  const obj = { default: module_4098 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_3952;
+  tmp3 = module_4098;
 }
-module_3952 = tmp3;
+module_4098 = tmp3;
 let _typeof = _typeof_mod;
 if (!_typeof) {
-  const obj2 = { default: _typeof };
+  let obj2 = { default: _typeof };
   let tmp5 = obj2;
 } else {
   tmp5 = _typeof;
 }
 _typeof = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
+let module_3951 = module_3951_mod;
+if (!module_3951) {
+  const obj3 = { default: module_3951 };
   let tmp7 = obj3;
 } else {
-  tmp7 = requiredArgs;
+  tmp7 = module_3951;
 }
-requiredArgs = tmp7;
+module_3951 = tmp7;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
+} else {
+  tmp9 = requiredArgs;
+}
+requiredArgs = tmp9;
+let module_4099 = module_4099_mod;
+if (!module_4099) {
+  const obj5 = { default: module_4099 };
+  let tmp11 = obj5;
+} else {
+  tmp11 = module_4099;
+}
+module_4099 = tmp11;
+let module_4100 = module_4100_mod;
+if (!module_4100) {
+  const obj6 = { default: module_4100 };
+  let tmp13 = obj6;
+} else {
+  tmp13 = module_4100;
+}
+module_4100 = tmp13;
 
-export default function addMonths(interval, arg1) {
+export default function addBusinessDays(arg0, arg1) {
+  let diff;
   requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(interval);
-  const defaultResult2 = module_3952.default(arg1);
-  if (isNaN(defaultResult2)) {
-    const _Date2 = Date;
+  const defaultResult1 = _typeof.default(arg0);
+  let obj2 = module_4098;
+  let defaultResult2 = module_4098.default(defaultResult1);
+  const defaultResult3 = module_3951.default(arg1);
+  if (isNaN(defaultResult3)) {
+    const _Date = Date;
     const date = new Date(NaN);
     return date;
-  } else if (defaultResult2) {
-    const date1 = defaultResult1.getDate();
-    const _Date = Date;
-    const date2 = new Date(defaultResult1.getTime());
-    date2.setMonth(defaultResult1.getMonth() + defaultResult2 + 1, 0);
-    let tmp8 = date2;
-    if (date1 < date2.getDate()) {
-      const fullYear = date2.getFullYear();
-      defaultResult1.setFullYear(fullYear, date2.getMonth(), date1);
-      tmp8 = defaultResult1;
-    }
-    return tmp8;
   } else {
+    let num3 = 1;
+    const hours = defaultResult1.getHours();
+    if (defaultResult3 < 0) {
+      num3 = -1;
+    }
+    defaultResult1.setDate(defaultResult1.getDate() + 7 * module_3951.default(defaultResult3 / 5));
+    const _Math = Math;
+    let absolute = Math.abs(defaultResult3 % 5);
+    if (absolute > 0) {
+      do {
+        let setDateResult1 = defaultResult1.setDate(defaultResult1.getDate() + num3);
+        diff = absolute;
+        if (!module_4098.default(defaultResult1)) {
+          diff = absolute - 1;
+        }
+        absolute = diff;
+        obj2 = module_4098;
+      } while (diff > 0);
+    }
+    if (defaultResult2) {
+      defaultResult2 = obj2.default(defaultResult1);
+    }
+    if (defaultResult2) {
+      defaultResult2 = 0 !== defaultResult3;
+    }
+    if (defaultResult2) {
+      if (module_4100.default(defaultResult1)) {
+        let num6 = -1;
+        if (num3 < 0) {
+          num6 = 2;
+        }
+        defaultResult1.setDate(defaultResult1.getDate() + num6);
+        const date1 = defaultResult1.getDate();
+      }
+      if (module_4099.default(defaultResult1)) {
+        let num7 = -2;
+        if (num3 < 0) {
+          num7 = 1;
+        }
+        defaultResult1.setDate(defaultResult1.getDate() + num7);
+        const date2 = defaultResult1.getDate();
+      }
+    }
+    defaultResult1.setHours(hours);
     return defaultResult1;
   }
 };

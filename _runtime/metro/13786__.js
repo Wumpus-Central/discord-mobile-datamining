@@ -1,11 +1,4 @@
 // _runtime/metro/13786__.js
-import _mod13784 from "13784__.js";
+import _mod13777 from "13777__.js";
 
-export default (arg0, arg1, arg2) => {
-  try {
-    const tmp7 = new _mod13784(arg1, arg2);
-    return tmp7.test(arg0);
-  } catch (err) {
-    return false;
-  }
-};
+export default (arg0, arg1, arg2) => 0 !== _mod13777(arg0, arg1, arg2);

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "45e56b0ad20f9774b74dbe6cbb00fca0",
-  name: "GroupIcon",
+  hash: "c170cae09967261462282317c17e6a43",
+  name: "AnnouncementsWarningIcon",
   type: "png",
 });

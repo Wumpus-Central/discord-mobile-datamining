@@ -1,13 +1,12 @@
 // _runtime/metro/17745__.js
-import registerAsset from "01121__.js";
+import _mod17746 from "17746__.js";
+import capitalize from "../17754_capitalize.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 16,
-  height: 16,
-  scales: [2, 3],
-  hash: "0ddefd9d8828364a18e4207ffcdf1e76",
-  name: "ic_close_circle",
-  type: "png",
+export default _mod17746((arg0, str, arg2) => {
+  const formatted = str.toLowerCase();
+  let tmp2 = formatted;
+  if (arg2) {
+    tmp2 = capitalize(formatted);
+  }
+  return arg0 + tmp2;
 });

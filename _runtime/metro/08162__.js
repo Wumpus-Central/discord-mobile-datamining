@@ -1,14 +1,13 @@
 // _runtime/metro/08162__.js
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _modDef8145 from "08145__.js";
-import _modDef8163 from "08163__.js";
+import _modDef8119 from "08119__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const FeMerge = fn;
+const Filter = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,16 +26,15 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-_possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class FeMerge {
+class Filter {
   constructor() {
     self = this;
-    tmp = closure_3(this, FeMerge);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(FeMerge);
-    tmp3 = closure_4;
-    if (closure_7()) {
+    tmp = c2(this, Filter);
+    tmp2 = closure_4;
+    obj = closure_4(Filter);
+    tmp3 = closure_3;
+    if (metroRequire()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -49,32 +47,45 @@ class FeMerge {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeMerge, _modDef8145);
+_inherits(Filter, _modDef8119);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
+    const props = this.props;
+    const size = {
+      name: props.id,
+      x: props.x,
+      y: props.y,
+      width: props.width,
+      height: props.height,
+      filterUnits: props.filterUnits,
+      primitiveUnits: props.primitiveUnits,
+    };
     const obj = {
       ref(arg0) {
         return self.refMethod(arg0);
       },
     };
-    const merged = Object.assign(FeMerge(8144).extractFilter(this.props));
-    const obj2 = FeMerge(8144);
-    const merged1 = Object.assign(FeMerge(8144).extractFeMerge(this.props, this));
-    return (
-      <tmp
-        ref={function ref(arg0) {
-          return self.refMethod(arg0);
-        }}
-      />
-    );
+    const merged = Object.assign(size);
+    obj.children = this.props.children;
+    return jsx(Filter(8163), {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      },
+    });
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeMerge, items);
-importDefaultResultResult.displayName = "FeMerge";
-let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-importDefaultResultResult.defaultProps = {};
+const importDefaultResultResult = _createClass(Filter, items);
+importDefaultResultResult.displayName = "Filter";
+importDefaultResultResult.defaultProps = {
+  x: "-10%",
+  y: "-10%",
+  width: "120%",
+  height: "120%",
+  filterUnits: "objectBoundingBox",
+  primitiveUnits: "userSpaceOnUse",
+};
 
 export default importDefaultResultResult;

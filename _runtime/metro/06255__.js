@@ -1,7 +1,4 @@
 // _runtime/metro/06255__.js
-import _mod19 from "00019__.js";
+import _mod17 from "00017__.js";
 
-const context = _mod19.createContext(null);
-
-export const BottomSheetModalInternalContext = context;
-export const BottomSheetModalInternalProvider = context.Provider;
+export const findNodeHandle = _mod17.findNodeHandle;

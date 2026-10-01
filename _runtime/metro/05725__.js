@@ -1,94 +1,105 @@
 // _runtime/metro/05725__.js
-import _mod5723 from "05723__.js";
-import _modDef5726 from "05726__.js";
-import _modDef5727 from "05727__.js";
-import sumDefault from "../05729_sum.js";
-import PNG_CHUNK_TYPE_SIZEDefault from "../05730_PNG_CHUNK_TYPE_SIZE.js";
-import _modDef5731 from "05731__.js";
-import _modDef5735 from "05735__.js";
-import _modDef5736 from "05736__.js";
-import _modDef5737 from "05737__.js";
-import _modDef5738 from "05738__.js";
+import _mod5712 from "05712__.js";
+import _modDef5715 from "05715__.js";
 
 require = arg1;
 importDefault = arg2;
 const dependencyMap = arg6;
 
 export default {
-  parseAppMarkers(byteLength, flag2) {
-    if (_modDef5726.USE_TIFF) {
-      if (tmpResult.isTiffFile(byteLength)) {
-        const tmpResult16 = _modDef5727;
-        const findTiffOffsetsResult = _modDef5727.findTiffOffsets();
-        const obj = { fileType: { value: "tiff", description: "TIFF" } };
-        return _mod5723.objectAssign({}, findTiffOffsetsResult, obj);
-      }
-      tmpResult = _modDef5727;
+  isWebpFile(dataView) {
+    let tmp = dataView;
+    if (tmp) {
+      tmp = _mod5712.getStringFromDataView(dataView, 0, 4) === "RIFF";
     }
-    if (_modDef5726.USE_JPEG) {
-      if (tmpResult17.isJpegFile(byteLength)) {
-        const tmpResult18 = sumDefault;
-        const findJpegOffsetsResult = sumDefault.findJpegOffsets(byteLength);
-        const obj2 = { fileType: { value: "jpeg", description: "JPEG" } };
-        return _mod5723.objectAssign({}, findJpegOffsetsResult, obj2);
-      }
-      tmpResult17 = sumDefault;
+    if (tmp) {
+      tmp = _mod5712.getStringFromDataView(dataView, 8, 4) === "WEBP";
     }
-    if (_modDef5726.USE_PNG) {
-      if (tmpResult19.isPngFile(byteLength)) {
-        const tmpResult20 = PNG_CHUNK_TYPE_SIZEDefault;
-        const findPngOffsetsResult = PNG_CHUNK_TYPE_SIZEDefault.findPngOffsets(byteLength, flag2);
-        const obj3 = { fileType: { value: "png", description: "PNG" } };
-        return _mod5723.objectAssign({}, findPngOffsetsResult, obj3);
+    return tmp;
+  },
+  findOffsets(byteLength) {
+    let flag = false;
+    let num = 12;
+    let hasAppMarkers = false;
+    let vp8xChunkOffset;
+    let iccChunks;
+    let xmpChunks;
+    let tiffHeaderOffset;
+    if (20 < byteLength.byteLength) {
+      while (true) {
+        let obj = _mod5712;
+        let stringFromDataView = obj.getStringFromDataView(byteLength, num, 4);
+        let uint32 = byteLength.getUint32(num + 4, true);
+        let flag3 = flag;
+        if (_modDef5715.USE_EXIF) {
+          if ("EXIF" === stringFromDataView) {
+            let tmp9Result = _mod5712;
+            let sum = num + 8;
+            let sum1 = sum;
+            if (tmp9Result.getStringFromDataView(byteLength, sum, 6) === "Exif\0\0") {
+              sum1 = sum + 6;
+            }
+            let tmp22 = sum1;
+            flag3 = true;
+            let sum4 = tmp;
+            let tmp20 = tmp2;
+            let tmp21 = tmp3;
+            let sum2 = uint32;
+            if (uint32 % 2 !== 0) {
+              sum2 = uint32 + 1;
+            }
+            let sum3 = num + (8 + sum2);
+            flag = flag3;
+            num = sum3;
+            tmp = sum4;
+            tmp2 = tmp20;
+            tmp3 = tmp21;
+            let tmp4 = tmp22;
+            hasAppMarkers = flag3;
+            vp8xChunkOffset = sum4;
+            iccChunks = tmp20;
+            xmpChunks = tmp21;
+            tiffHeaderOffset = tmp22;
+            if (sum3 + 8 >= byteLength.byteLength) {
+              break;
+            }
+          }
+        }
+        if (_modDef5715.USE_XMP) {
+          if ("XMP " === stringFromDataView) {
+            let obj2 = { dataOffset: num + 8, length: uint32 };
+            let items = [obj2];
+            flag3 = true;
+            sum4 = tmp;
+            tmp20 = tmp2;
+            tmp21 = items;
+            tmp22 = tmp4;
+          }
+        }
+        if (_modDef5715.USE_ICC) {
+          if ("ICCP" === stringFromDataView) {
+            let obj3 = { offset: num + 8, length: uint32, chunkNumber: 1, chunksTotal: 1 };
+            let items1 = [obj3];
+            flag3 = true;
+            sum4 = tmp;
+            tmp20 = items1;
+            tmp21 = tmp3;
+            tmp22 = tmp4;
+          }
+        }
+        sum4 = tmp;
+        tmp20 = tmp2;
+        tmp21 = tmp3;
+        tmp22 = tmp4;
+        if ("VP8X" === stringFromDataView) {
+          sum4 = num + 8;
+          flag3 = true;
+          tmp20 = tmp2;
+          tmp21 = tmp3;
+          tmp22 = tmp4;
+        }
       }
-      tmpResult19 = PNG_CHUNK_TYPE_SIZEDefault;
     }
-    if (_modDef5726.USE_HEIC) {
-      if (tmpResult21.isHeicFile(byteLength)) {
-        const tmpResult22 = _modDef5731;
-        const findHeicOffsetsResult = _modDef5731.findHeicOffsets(byteLength);
-        const obj4 = { fileType: { value: "heic", description: "HEIC" } };
-        return _mod5723.objectAssign({}, findHeicOffsetsResult, obj4);
-      }
-      tmpResult21 = _modDef5731;
-    }
-    if (_modDef5726.USE_AVIF) {
-      if (tmpResult23.isAvifFile(byteLength)) {
-        const tmpResult24 = _modDef5735;
-        const findAvifOffsetsResult = _modDef5735.findAvifOffsets(byteLength);
-        const obj5 = { fileType: { value: "avif", description: "AVIF" } };
-        return _mod5723.objectAssign({}, findAvifOffsetsResult, obj5);
-      }
-      tmpResult23 = _modDef5735;
-    }
-    if (_modDef5726.USE_WEBP) {
-      if (tmpResult25.isWebpFile(byteLength)) {
-        const tmpResult26 = _modDef5736;
-        const findOffsetsResult = _modDef5736.findOffsets(byteLength);
-        const obj6 = { fileType: { value: "webp", description: "WebP" } };
-        return _mod5723.objectAssign({}, findOffsetsResult, obj6);
-      }
-      tmpResult25 = _modDef5736;
-    }
-    if (_modDef5726.USE_GIF) {
-      if (tmpResult27.isGifFile(byteLength)) {
-        const tmpResult28 = _modDef5737;
-        const findOffsetsResult1 = _modDef5737.findOffsets(byteLength);
-        const obj7 = { fileType: { value: "gif", description: "GIF" } };
-        return _mod5723.objectAssign({}, findOffsetsResult1, obj7);
-      }
-      tmpResult27 = _modDef5737;
-    }
-    if (_modDef5726.USE_XMP) {
-      if (tmpResult29.isXMLFile(byteLength)) {
-        const tmpResult30 = _modDef5738;
-        const findOffsetsResult2 = _modDef5738.findOffsets(byteLength);
-        const obj8 = { fileType: { value: "xml", description: "XML" } };
-        return _mod5723.objectAssign({}, findOffsetsResult2, obj8);
-      }
-      tmpResult29 = _modDef5738;
-    }
-    const error = new Error("Invalid image format");
-    throw error;
+    return { hasAppMarkers, tiffHeaderOffset, xmpChunks, iccChunks, vp8xChunkOffset };
   },
 };

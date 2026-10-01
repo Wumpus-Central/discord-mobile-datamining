@@ -1,15 +1,54 @@
 // _runtime/metro/06256__.js
-import _mod19 from "00019__.js";
-import BottomSheetContext from "../06252_BottomSheetContext.js";
+import normalizeSnapPoint from "../06248_normalizeSnapPoint.js";
+import noop from "00019__.js";
 
-const useContext = _mod19.useContext;
+const require = globalThis.__r;
 
-export const useBottomSheetModalInternal = function useBottomSheetModalInternal(arg0) {
-  const tmp = useContext(BottomSheetContext.BottomSheetModalInternalContext);
-  if (true !== arg0) {
-    if (null === tmp) {
-      throw "'BottomSheetModalInternalContext' cannot be null!";
-    }
+({ useCallback: c2, useEffect: c3 } = noop);
+
+export const useScrollableSetter = (scrollableRef, value, scrollableContentOffsetY, value2) => {
+  _require = scrollableRef;
+  dependencyMap = value;
+  let tmp = focusHook;
+  if (focusHook === undefined) {
+    tmp = value2;
   }
-  return tmp;
+  const bottomSheetInternal = require("06239__.js").useBottomSheetInternal();
+  const animatedScrollableType = bottomSheetInternal.animatedScrollableType;
+  const animatedScrollableContentOffsetY = bottomSheetInternal.animatedScrollableContentOffsetY;
+  const isContentHeightFixed = bottomSheetInternal.isContentHeightFixed;
+  const isScrollableRefreshable = bottomSheetInternal.isScrollableRefreshable;
+  const setScrollableRef = bottomSheetInternal.setScrollableRef;
+  const removeScrollableRef = bottomSheetInternal.removeScrollableRef;
+  const items = [
+    scrollableRef,
+    value,
+    value2,
+    animatedScrollableType,
+    animatedScrollableContentOffsetY,
+    scrollableContentOffsetY,
+    isScrollableRefreshable,
+    isContentHeightFixed,
+    setScrollableRef,
+    removeScrollableRef,
+  ];
+  tmp(
+    scrollableContentOffsetY(() => {
+      animatedScrollableContentOffsetY.value = scrollableContentOffsetY.value;
+      animatedScrollableType.value = value;
+      isScrollableRefreshable.value = value2;
+      isContentHeightFixed.value = false;
+      const findNodeHandleResult = normalizeSnapPoint.findNodeHandle(scrollableRef.current);
+      if (findNodeHandleResult) {
+        const obj2 = { id: findNodeHandleResult, node: scrollableRef };
+        setScrollableRef(obj2);
+      } else {
+        const _console = console;
+        console.warn("Couldn't find the scrollable node handle id!");
+      }
+      return () => {
+        removeScrollableRef(scrollableRef);
+      };
+    }, items),
+  );
 };

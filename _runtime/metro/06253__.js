@@ -1,8 +1,12 @@
 // _runtime/metro/06253__.js
-import _mod19 from "00019__.js";
+const fn = function o() {
 
-const createContext = _mod19.createContext;
-const context = createContext(null);
+};
+fn.__closure = {};
+fn.__workletHash = 16791771801238;
+fn.__initData = { code: "function pnpm_noopTs1(){}" };
 
-export const BottomSheetGestureHandlersContext = context;
-export const BottomSheetDraggableContext = createContext(null);
+export () => {
+
+}
+export const workletNoop = fn;

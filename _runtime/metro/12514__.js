@@ -1,72 +1,97 @@
 // _runtime/metro/12514__.js
-import GLOBAL_OBJ from "12515__.js";
+import _objectWithoutProperties from "00109__objectWithoutProperties.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import hasOwnProperty from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
+import noop from "00019__.js";
+import emptyFunction from "04692__.js";
 
-const require = globalThis.__r;
-
-function consoleSandbox(fn) {
-  if ("console" in console(12515).GLOBAL_OBJ) {
-    console = tmp(12515).GLOBAL_OBJ.console;
-    dependencyMap = {};
-    const _Object = Object;
-    const keys = Object.keys(obj);
-    const item = keys.forEach((item) => {
-      closure_1[item] = console[item];
-      console[item] = obj[item];
-    });
-    try {
-      const item1 = keys.forEach((item) => {
-        console[item] = closure_1[item];
-      });
-      return fn();
-    } catch (tmp8) {
-      const item2 = arr.forEach((item) => {
-        console[item] = closure_1[item];
-      });
-      throw tmp8;
+let Link = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-  } else {
-    return fn();
-  }
-  tmp = console;
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
 }
-let items = ["debug", "info", "warn", "error", "log", "assert", "trace"];
-const originalConsoleMethods = {};
-
-export const CONSOLE_LEVELS = items;
-export { consoleSandbox };
-export const logger = GLOBAL_OBJ.getGlobalSingleton("logger", function makeLogger() {
-  _require = false;
-  const obj = {
-    enable() {
-      c0 = true;
-    },
-    disable() {
-      c0 = false;
-    },
-    isEnabled() {
-      return c0;
-    },
-  };
-  const forEach = items.forEach;
-  if (require("12513__.js").DEBUG_BUILD) {
-    const item = forEach((arg0) => {
-      closure_0 = arg0;
-      obj[arg0] = () => {
-        const args = [...arguments];
-        if (args) {
-          consoleSandbox(() => {
-            const _console = GLOBAL_OBJ.GLOBAL_OBJ.console;
-            items = ["Sentry Logger [" + args + "]:", ...closure_0];
-            _console[args].apply(items);
-          });
+let closure_2 = ["component", "to", "replace"];
+const jsx = fn(21).jsx;
+class Link {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = closure_4(this, Link);
+    items1 = [...items];
+    tmp2 = metroRequire;
+    obj = metroRequire(Link);
+    tmp3 = hasOwnProperty;
+    if (closure_8()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.handlePress = (defaultPrevented, str) => {
+      if (props.props.onPress) {
+        props = tmp.props;
+        props.onPress(defaultPrevented);
+      }
+      if (!defaultPrevented.defaultPrevented) {
+        const to = str.to;
+        if (tmp.props.replace) {
+          const replaced = str.replace(to);
+        } else {
+          str.push(to);
         }
-      };
-    });
-  } else {
-    const item1 = forEach((arg0) => {
-      obj[arg0] = () => {};
-    });
+      }
+    };
+    return tmp3Result;
   }
-  return obj;
-});
-export { originalConsoleMethods };
+}
+_inherits(Link, noop.Component);
+const entry = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const props = this.props;
+    ({ component: dependencyMap, to, replace } = props);
+    Link = _objectWithoutProperties(props, self);
+    return jsx(Link(4695).__HistoryContext.Consumer, {
+      children(arg0) {
+        closure_0 = arg0;
+        const obj = {};
+        const merged = Object.assign(closure_0);
+        obj.onPress = function onPress(arg0) {
+          return self.handlePress(arg0, closure_0);
+        };
+        return <closure_1 />;
+      },
+    });
+  },
+};
+let items = [entry];
+const importDefaultResultResult = _createClass(Link, items);
+importDefaultResultResult.defaultProps = { component: fn(17).TouchableHighlight, replace: false };
+let obj = { onPress: emptyFunction.func, component: emptyFunction.elementType, replace: emptyFunction.bool, to: null };
+let items1 = [emptyFunction.string, emptyFunction.object];
+obj.to = emptyFunction.oneOfType(items1);
+importDefaultResultResult.propTypes = obj;
+
+export default importDefaultResultResult;

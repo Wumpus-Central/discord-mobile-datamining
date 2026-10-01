@@ -1,62 +1,82 @@
 // _runtime/metro/06313__.js
-import RNGestureHandlerModuleDefault from "../06298_RNGestureHandlerModule.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
+import noop from "00019__.js";
 
-const require = arg1;
-importDefault = fn;
-let dependencyMap = arg6;
-let obj = {
-  createGestureHandler(Handler, handlerTag, config) {
-    _require = Handler;
-    closure_1 = handlerTag;
-    dependencyMap = config;
-    const result = require("transformIntoHandlerTags").scheduleOperationToBeFlushed(() => {
-      let obj2 = closure_2;
-      if (!closure_2) {
-        obj2 = {};
-      }
-      RNGestureHandlerModuleDefault.createGestureHandler(closure_0, closure_1, obj2);
-    });
+const Wrap = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+class Wrap {
+  constructor() {
+    self = this;
+    tmp = c2(this, Wrap);
+    tmp2 = closure_4;
+    obj = closure_4(Wrap);
+    tmp3 = closure_3;
+    if (metroRequire()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(Wrap, noop.Component);
+const entry = {
+  key: "render",
+  value: function render() {
+    try {
+      const self = this;
+      const Children = noop.Children;
+      const onlyResult = Children.only(this.props.children);
+      return noop.cloneElement(onlyResult, { collapsable: false }, onlyResult.props.children);
+    } catch (err) {
+      const _Error = Error;
+      const error = new Error(
+        Wrap(6264).tagMessage(
+          "GestureDetector got more than one view as a child. If you want the gesture to work on multiple views, wrap them with a common parent and attach the gesture to that view.",
+        ),
+      );
+      throw error;
+    }
   },
-  setGestureHandlerConfig(handlerTag, result) {
-    _require = handlerTag;
-    closure_1 = result;
-    result = require("transformIntoHandlerTags").scheduleOperationToBeFlushed(() => {
-      result = RNGestureHandlerModuleDefault.setGestureHandlerConfig(closure_0, closure_1);
-    });
-  },
-  updateGestureHandlerConfig: null,
-  dropGestureHandler: null,
-  configureRelations: null,
-  installUIRuntimeBindings: null,
 };
-fn = function n(arg0, arg1) {
-  const result = RNGestureHandlerModuleDefault.updateGestureHandlerConfig(arg0, arg1);
-  RNGestureHandlerModuleDefault.flushOperations();
-};
-fn.__closure = {
-  updateGestureHandlerConfig: fn(6298).updateGestureHandlerConfig,
-  flushOperations: fn(6298).flushOperations,
-};
-fn.__workletHash = 12442858879797;
-fn.__initData = {
-  code: "function pnpm_NativeProxyTs1(handlerTag,newConfig){const{updateGestureHandlerConfig,flushOperations}=this.__closure;updateGestureHandlerConfig(handlerTag,newConfig);flushOperations();}",
-};
-obj.updateGestureHandlerConfig = fn;
-obj.dropGestureHandler = function dropGestureHandler(handlerTag) {
-  _require = handlerTag;
-  const result = require("transformIntoHandlerTags").scheduleOperationToBeFlushed(() => {
-    RNGestureHandlerModuleDefault.dropGestureHandler(closure_0);
-  });
-};
-obj.configureRelations = function configureRelations(arg0, arg1) {
-  _require = arg0;
-  closure_1 = arg1;
-  const result = require("transformIntoHandlerTags").scheduleOperationToBeFlushed(() => {
-    RNGestureHandlerModuleDefault.configureRelations(closure_0, closure_1);
-  });
-};
-obj.installUIRuntimeBindings = function installUIRuntimeBindings() {
-  return RNGestureHandlerModuleDefault.installUIRuntimeBindings();
-};
+const items = [entry];
+const importDefaultResultResult = _createClass(Wrap, items);
+const Reanimated = fn(6302).Reanimated;
+let animatedComponent;
+if (Reanimated != null) {
+  if (Reanimated.default != null) {
+    animatedComponent = _default.createAnimatedComponent(importDefaultResultResult);
+  }
+}
+if (animatedComponent == null) {
+  animatedComponent = importDefaultResultResult;
+}
 
-export const NativeProxy = obj;
+export const Wrap = importDefaultResultResult;
+export const AnimatedWrap = animatedComponent;

@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/emoji_picker/native/images",
+  width: 16,
+  height: 16,
   scales: [2, 3],
-  hash: "f008a1e156929bb73f7856d4125be1de",
-  name: "UnknownGameIcon",
+  hash: "494d75fe739ed4a36d195ab8193847fa",
+  name: "alert",
   type: "png",
 });

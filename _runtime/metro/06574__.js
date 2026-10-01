@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "e37bbde49f12a4469b46214e14dfde4a",
-  name: "KeyIcon",
+  hash: "14a4fdad987e2761599ba055042fdafa",
+  name: "EyeSlashIcon",
   type: "png",
 });

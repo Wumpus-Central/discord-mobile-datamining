@@ -1,32 +1,17 @@
 // _runtime/metro/05305__.js
 import callBoundIntrinsic from "../01315_callBoundIntrinsic.js";
-import _mod1446 from "01446__.js";
+import RequireObjectCoercible from "../05292_RequireObjectCoercible.js";
+import ToString from "../05306_ToString.js";
 
-let closure_0 = callBoundIntrinsic("String.prototype.valueOf");
-let closure_1 = callBoundIntrinsic("Object.prototype.toString");
-let closure_2 = _mod1446();
+let closure_2 = callBoundIntrinsic("String.prototype.replace");
+const isMatch = /^\s$/.test("\u180E");
+let closure_3 = isMatch
+  ? /^[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u180E\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+/
+  : /^[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+/;
+let closure_4 = isMatch
+  ? /[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u180E\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+$/
+  : /[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+$/;
 
-export default function isString(str) {
-  let tmp = typeof str === "string";
-  if (typeof str !== "string") {
-    let tmp2 = !str;
-    if (str) {
-      tmp2 = typeof str !== "object";
-    }
-    if (tmp2) {
-      tmp = !tmp2;
-    } else if (closure_2) {
-      let tmp5 = (function tryStringObject(arg0) {
-        try {
-          closure_1_0(arg0);
-          return true;
-        } catch (err) {
-          return false;
-        }
-      })(str);
-    } else {
-      tmp5 = "[object String]" === closure_1(str);
-    }
-  }
-  return tmp;
+export default function trim() {
+  return closure_2(closure_2(ToString(RequireObjectCoercible(this)), closure_3, ""), closure_4, "");
 }

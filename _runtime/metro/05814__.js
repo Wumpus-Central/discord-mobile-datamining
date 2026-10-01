@@ -4,10 +4,10 @@ import registerAsset from "01121__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 256,
-  height: 256,
+  width: 24,
+  height: 24,
   scales: [1],
-  hash: "a9a658fd475f7a20d9e2c83953494ec4",
-  name: "img_bungie_white",
+  hash: "98be8451aca35f74c79e6384bee97580",
+  name: "img_account_sync_steam_light",
   type: "svg",
 });

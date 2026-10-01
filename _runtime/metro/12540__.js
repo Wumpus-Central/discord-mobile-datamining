@@ -1,19 +1,17 @@
 // _runtime/metro/12540__.js
-import _mod12515 from "12515__.js";
-import ScopeClass from "../12535_ScopeClass.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const getDefaultCurrentScope = function getDefaultCurrentScope() {
-  return _mod12515.getGlobalSingleton("defaultCurrentScope", () => {
-    const scope = new ScopeClass.Scope();
-    return scope;
-  });
-};
-export const getDefaultIsolationScope = function getDefaultIsolationScope() {
-  return _mod12515.getGlobalSingleton("defaultIsolationScope", () => {
-    const scope = new ScopeClass.Scope();
-    return scope;
-  });
-};
+export const SEMANTIC_ATTRIBUTE_CACHE_HIT = "cache.hit";
+export const SEMANTIC_ATTRIBUTE_CACHE_ITEM_SIZE = "cache.item_size";
+export const SEMANTIC_ATTRIBUTE_CACHE_KEY = "cache.key";
+export const SEMANTIC_ATTRIBUTE_EXCLUSIVE_TIME = "sentry.exclusive_time";
+export const SEMANTIC_ATTRIBUTE_HTTP_REQUEST_METHOD = "http.request.method";
+export const SEMANTIC_ATTRIBUTE_PROFILE_ID = "sentry.profile_id";
+export const SEMANTIC_ATTRIBUTE_SENTRY_CUSTOM_SPAN_NAME = "sentry.custom_span_name";
+export const SEMANTIC_ATTRIBUTE_SENTRY_IDLE_SPAN_FINISH_REASON = "sentry.idle_span_finish_reason";
+export const SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT = "sentry.measurement_unit";
+export const SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE = "sentry.measurement_value";
+export const SEMANTIC_ATTRIBUTE_SENTRY_OP = "sentry.op";
+export const SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN = "sentry.origin";
+export const SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE = "sentry.sample_rate";
+export const SEMANTIC_ATTRIBUTE_SENTRY_SOURCE = "sentry.source";
+export const SEMANTIC_ATTRIBUTE_URL_FULL = "url.full";

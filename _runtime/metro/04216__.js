@@ -1,26 +1,17 @@
 // _runtime/metro/04216__.js
-import _typeof_mod from "03948__.js";
-import requiredArgs_mod from "../03949_requiredArgs.js";
+import _mod3952 from "03952__.js";
+import assign_mod from "../04197_assign.js";
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let assign = assign_mod;
+if (!assign) {
+  const obj = { default: assign };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = assign;
 }
-_typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
-  let tmp5 = obj2;
-} else {
-  tmp5 = requiredArgs;
-}
-requiredArgs = tmp5;
+assign = tmp3;
 
-export default function getDecade(arg0) {
-  requiredArgs.default(1, arguments);
-  return 10 * Math.floor(_typeof.default(arg0).getFullYear() / 10);
+export default function getDefaultOptions() {
+  return assign.default({}, _mod3952.getDefaultOptions());
 };
 export default exports.default;

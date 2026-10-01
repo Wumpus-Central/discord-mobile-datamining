@@ -1,7 +1,8 @@
 // _runtime/metro/04187__.js
-import _typeof_mod from "03948__.js";
-import requiredArgs_mod from "../03949_requiredArgs.js";
-import startOfUTCISOWeek_mod from "../04185_startOfUTCISOWeek.js";
+import _typeof_mod from "03947__.js";
+import startOfUTCWeek_mod from "../03950_startOfUTCWeek.js";
+import startOfUTCWeekYear_mod from "../04188_startOfUTCWeekYear.js";
+import requiredArgs_mod from "../03948_requiredArgs.js";
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -11,44 +12,37 @@ if (!_typeof) {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
+let startOfUTCWeek = startOfUTCWeek_mod;
+if (!startOfUTCWeek) {
+  const obj2 = { default: startOfUTCWeek };
   let tmp5 = obj2;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = startOfUTCWeek;
 }
-requiredArgs = tmp5;
-let startOfUTCISOWeek = startOfUTCISOWeek_mod;
-if (!startOfUTCISOWeek) {
-  const obj3 = { default: startOfUTCISOWeek };
+startOfUTCWeek = tmp5;
+let startOfUTCWeekYear = startOfUTCWeekYear_mod;
+if (!startOfUTCWeekYear) {
+  const obj3 = { default: startOfUTCWeekYear };
   let tmp7 = obj3;
 } else {
-  tmp7 = startOfUTCISOWeek;
+  tmp7 = startOfUTCWeekYear;
 }
-startOfUTCISOWeek = tmp7;
+startOfUTCWeekYear = tmp7;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
+} else {
+  tmp9 = requiredArgs;
+}
+requiredArgs = tmp9;
+let c4 = 604800000;
 
-export default function getUTCISOWeekYear(arg0) {
+export default function getUTCWeek(arg0, arg1) {
   requiredArgs.default(1, arguments);
   const defaultResult1 = _typeof.default(arg0);
-  const uTCFullYear = defaultResult1.getUTCFullYear();
-  const date = new Date(0);
-  date.setUTCFullYear(uTCFullYear + 1, 0, 4);
-  date.setUTCHours(0, 0, 0, 0);
-  const date1 = new Date(0);
-  date1.setUTCFullYear(uTCFullYear, 0, 4);
-  date1.setUTCHours(0, 0, 0, 0);
-  const defaultResult2 = startOfUTCISOWeek.default(date);
-  const time = defaultResult1.getTime();
-  if (time >= defaultResult2.getTime()) {
-    let sum = uTCFullYear + 1;
-  } else {
-    const time1 = defaultResult1.getTime();
-    sum = uTCFullYear;
-    if (time1 < defaultResult3.getTime()) {
-      sum = uTCFullYear - 1;
-    }
-  }
-  return sum;
+  const time = startOfUTCWeek.default(defaultResult1, arg1).getTime();
+  const defaultResult2 = startOfUTCWeek.default(defaultResult1, arg1);
+  return Math.round((time - startOfUTCWeekYear.default(defaultResult1, arg1).getTime()) / c4) + 1;
 };
 export default exports.default;

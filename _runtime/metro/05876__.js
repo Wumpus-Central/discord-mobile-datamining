@@ -4,10 +4,10 @@ import registerAsset from "01121__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 256,
-  height: 256,
+  width: 255,
+  height: 255,
   scales: [1],
-  hash: "8fce658b14b12e381e1ecc554a57f171",
-  name: "img_roblox_dark",
-  type: "png",
+  hash: "447c7f6f73d6eb74cf002340a994c38c",
+  name: "img_account_sync_ebay_light_and_dark",
+  type: "svg",
 });

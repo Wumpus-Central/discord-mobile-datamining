@@ -1,24 +1,21 @@
 // _runtime/metro/04949__.js
-import arrayPush from "../00658_arrayPush.js";
-import stubArray from "../00659_stubArray.js";
-import _mod660 from "00660__.js";
-import _mod4945 from "04945__.js";
 
-if (Object.getOwnPropertySymbols) {
-  let fn = (arg0) => {
-    let tmp = arg0;
-    const items = [];
-    if (arg0) {
-      do {
-        let tmp4 = arrayPush;
-        let tmp4Result = tmp4(items, stubArray(tmp));
-        tmp = _mod4945(tmp);
-      } while (tmp);
+export default function shortOut(arg0) {
+  closure_0 = arg0;
+  c1 = 0;
+  closure_2 = 0;
+  return () => {
+    const tmp = now();
+    closure_2 = tmp;
+    if (0 < 16 - (tmp - closure_2)) {
+      const sum = c1 + 1;
+      c1 = sum;
+      if (800 <= sum) {
+        return arguments[0];
+      }
+    } else {
+      c1 = 0;
     }
-    return items;
+    return closure_0(...arguments);
   };
-} else {
-  fn = _mod660;
 }
-
-export default fn;

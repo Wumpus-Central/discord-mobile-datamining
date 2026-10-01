@@ -1,143 +1,151 @@
 // _runtime/metro/08133__.js
-import _mod17 from "00017__.js";
+import extractOpacityDefault from "../08101_extractOpacity.js";
+import extractBrushDefault from "../08113_extractBrush.js";
+import noop from "00019__.js";
 
-let closure_0 = { top: 20, left: 20, right: 20, bottom: 30 };
-const Mixin = _mod17.Touchable.Mixin;
-({
-  touchableHandleStartShouldSetResponder: closure_1,
-  touchableHandleResponderTerminationRequest: c2,
-  touchableHandleResponderGrant: c3,
-  touchableHandleResponderMove: closure_4,
-  touchableHandleResponderRelease: hasOwnProperty,
-  touchableHandleResponderTerminate: metroRequire,
-  touchableGetInitialState: closure_7,
-} = Mixin);
-let obj = {};
-const merged = Object.assign(Mixin);
-obj.touchableHandleStartShouldSetResponder = function touchableHandleStartShouldSetResponder(arg0) {
-  const self = this;
-  const onStartShouldSetResponder = this.props.onStartShouldSetResponder;
-  if (onStartShouldSetResponder) {
-    let result = onStartShouldSetResponder(arg0);
+const re3 = /\s+/;
+const action = { type: 0, payload: fn(17).processColor("black") };
+
+export default function extractFeFlood(arg0) {
+  ({ floodColor, floodOpacity } = arg0);
+  if (null == floodColor) {
+    let tmp = action;
   } else {
-    const call = framebus.call;
-    result = typeof call === "unknown" ? framebus(arg0) : call(self, arg0);
+    tmp = extractBrushDefault(floodColor);
   }
-  return result;
+  const obj = { floodColor: tmp };
+  if (null != floodOpacity) {
+    obj.floodOpacity = extractOpacityDefault(floodOpacity);
+  }
+  return obj;
+}
+export const extractFilter = (props) => {
+  const size = { x: props.x, y: props.y, width: props.width, height: props.height, result: props.result };
+  return size;
 };
-obj.touchableHandleResponderTerminationRequest = function touchableHandleResponderTerminationRequest(arg0) {
-  const self = this;
-  const onResponderTerminationRequest = this.props.onResponderTerminationRequest;
-  if (onResponderTerminationRequest) {
-    let result = onResponderTerminationRequest(arg0);
+export const extractIn = (props) => {
+  if (props.in) {
+    const obj2 = { in1: props.in };
+    let obj = obj2;
   } else {
-    const call = React2.call;
-    result = typeof call === "unknown" ? React2(arg0) : call(self, arg0);
+    obj = {};
   }
-  return result;
+  return obj;
 };
-obj.touchableHandleResponderGrant = function touchableHandleResponderGrant(arg0) {
-  const self = this;
-  const onResponderGrant = this.props.onResponderGrant;
-  if (onResponderGrant) {
-    let onResponderGrantResult = onResponderGrant(arg0);
-  } else {
-    const call = React3.call;
-    onResponderGrantResult = typeof call === "unknown" ? React3(arg0) : call(self, arg0);
+export const extractFeBlend = (props) => {
+  const obj = {};
+  if (props.in2) {
+    obj.in2 = props.in2;
   }
-  return onResponderGrantResult;
-};
-obj.touchableHandleResponderMove = function touchableHandleResponderMove(arg0) {
-  const self = this;
-  const onResponderMove = this.props.onResponderMove;
-  if (onResponderMove) {
-    let onResponderMoveResult = onResponderMove(arg0);
-  } else {
-    const call = React4.call;
-    onResponderMoveResult = typeof call === "unknown" ? React4(arg0) : call(self, arg0);
+  if (props.mode) {
+    obj.mode = props.mode;
   }
-  return onResponderMoveResult;
+  return obj;
 };
-obj.touchableHandleResponderRelease = function touchableHandleResponderRelease(View) {
-  const self = this;
-  const onResponderRelease = this.props.onResponderRelease;
-  if (onResponderRelease) {
-    let onResponderReleaseResult = onResponderRelease(View);
-  } else {
-    const call = hasOwnProperty.call;
-    onResponderReleaseResult = typeof call === "unknown" ? hasOwnProperty(View) : call(self, View);
-  }
-  return onResponderReleaseResult;
-};
-obj.touchableHandleResponderTerminate = function touchableHandleResponderTerminate(arg0) {
-  const self = this;
-  const onResponderTerminate = this.props.onResponderTerminate;
-  if (onResponderTerminate) {
-    let onResponderTerminateResult = onResponderTerminate(arg0);
-  } else {
-    const call = timestampProducer.call;
-    onResponderTerminateResult = typeof call === "unknown" ? timestampProducer(arg0) : call(self, arg0);
-  }
-  return onResponderTerminateResult;
-};
-obj.touchableHandlePress = function touchableHandlePress(nativeEvent) {
-  const onPress = this.props.onPress;
-  if (onPress) {
-    onPress(nativeEvent);
-  }
-};
-obj.touchableHandleActivePressIn = function touchableHandleActivePressIn(nativeEvent) {
-  const onPressIn = this.props.onPressIn;
-  if (onPressIn) {
-    onPressIn(nativeEvent);
-  }
-};
-obj.touchableHandleActivePressOut = function touchableHandleActivePressOut(nativeEvent) {
-  const onPressOut = this.props.onPressOut;
-  if (onPressOut) {
-    onPressOut(nativeEvent);
-  }
-};
-obj.touchableHandleLongPress = function touchableHandleLongPress(nativeEvent) {
-  const onLongPress = this.props.onLongPress;
-  if (onLongPress) {
-    onLongPress(nativeEvent);
-  }
-};
-obj.touchableGetPressRectOffset = function touchableGetPressRectOffset() {
-  return this.props.pressRetentionOffset || closure_0;
-};
-obj.touchableGetHitSlop = function touchableGetHitSlop() {
-  return this.props.hitSlop;
-};
-obj.touchableGetHighlightDelayMS = function touchableGetHighlightDelayMS() {
-  return this.props.delayPressIn || 0;
-};
-obj.touchableGetLongPressDelayMS = function touchableGetLongPressDelayMS() {
-  let num = this.props.delayLongPress;
-  let num2 = 0;
-  if (0 !== num) {
-    if (!num) {
-      num = 500;
+export const extractFeColorMatrix = (props) => {
+  const obj = {};
+  if (undefined !== props.values) {
+    const _Array = Array;
+    const values = props.values;
+    if (Array.isArray(props.values)) {
+      obj.values = values.map((item) => {
+        let parsed = item;
+        if (typeof item !== "number") {
+          const _parseFloat = parseFloat;
+          parsed = parseFloat(item);
+        }
+        return parsed;
+      });
+    } else if (typeof values === "number") {
+      const items = [props.values];
+      obj.values = items;
+    } else if (typeof props.values === "string") {
+      const parts = props.values.split(re3);
+      let _parseFloat = parseFloat;
+      const mapped = parts.map(parseFloat);
+      obj.values = mapped.filter((item) => !isNaN(item));
+    } else {
+      const _console = console;
+      console.warn("Invalid value for FeColorMatrix `values` prop");
     }
-    num2 = num;
   }
-  return num2;
+  if (props.type) {
+    obj.type = props.type;
+  }
+  return obj;
 };
-obj.touchableGetPressOutDelayMS = function touchableGetPressOutDelayMS() {
-  return this.props.delayPressOut || 0;
+export const extractFeComposite = (props) => {
+  const obj = { in1: props.in || "", in2: props.in2 || "", operator1: props.operator || "over" };
+  const items = ["k1", "k2", "k3", "k4"];
+  const item = items.forEach((item) => {
+    if (undefined !== props[item]) {
+      const _Number = Number;
+      obj[item] = Number(tmp[item]) || 0;
+      const tmp4 = Number(tmp[item]) || 0;
+    }
+  });
+  return obj;
 };
-const keys = Object.keys(obj);
-let closure_10 = keys.map((item) => obj[item]);
-
-export default (self) => {
+export const extractFeGaussianBlur = (props) => {
+  const obj = {};
+  if (Array.isArray(props.stdDeviation)) {
+    const _Number5 = Number;
+    obj.stdDeviationX = Number(props.stdDeviation[0]) || 0;
+    const _Number6 = Number;
+    const tmp7 = Number(props.stdDeviation[0]) || 0;
+    obj.stdDeviationY = Number(props.stdDeviation[1]) || 0;
+    const tmp8 = Number(props.stdDeviation[1]) || 0;
+  } else {
+    if (typeof props.stdDeviation === "string") {
+      if (str2.match(re3)) {
+        const parts = props.stdDeviation.split(re3);
+        const _Number3 = Number;
+        obj.stdDeviationX = Number(parts[0]) || 0;
+        const _Number4 = Number;
+        const tmp5 = Number(parts[0]) || 0;
+        obj.stdDeviationY = Number(parts[1]) || 0;
+        const tmp6 = Number(parts[1]) || 0;
+      }
+      str2 = props.stdDeviation;
+    }
+    const stdDeviation = props.stdDeviation;
+    let tmp = typeof stdDeviation === "number";
+    if (typeof stdDeviation !== "number") {
+      const stdDeviation2 = props.stdDeviation;
+      let tmp10 = typeof stdDeviation2 === "string";
+      if (typeof stdDeviation2 === "string") {
+        tmp10 = !props.stdDeviation.match(re3);
+      }
+      tmp = tmp10;
+    }
+    if (tmp) {
+      const _Number = Number;
+      obj.stdDeviationX = Number(props.stdDeviation) || 0;
+      const _Number2 = Number;
+      const tmp2 = Number(props.stdDeviation) || 0;
+      obj.stdDeviationY = Number(props.stdDeviation) || 0;
+      const tmp3 = Number(props.stdDeviation) || 0;
+    }
+  }
+  if (props.edgeMode) {
+    obj.edgeMode = props.edgeMode;
+  }
+  return obj;
+};
+export const extractFeMerge = (props, parent) => {
+  if (props.children) {
+    const Children = noop.Children;
+    let mapped = Children.map(props.children, (onlyResult) => noop.cloneElement(onlyResult, { parent }));
+  } else {
+    mapped = [];
+  }
+  const nodes = [];
   for (let num = 0; num < length; num = num + 1) {
-    obj = closure_10[num];
-    let bindResult = obj;
-    if (typeof obj === "function") {
-      bindResult = obj.bind(self);
+    let str = mapped[num].props.in;
+    if (!str) {
+      str = "";
     }
-    self[keys[num]] = bindResult;
+    let arr = nodes.push(str);
   }
-  self.state = React5();
+  return { nodes };
 };

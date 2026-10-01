@@ -3,11 +3,11 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
-  width: 48,
-  height: 48,
-  scales: [2, 3],
-  hash: "047af24ad7333177fbe250a3bbe8025e",
-  name: "feedback-modal-neutral-desaturated_darker",
+  httpServerLocation: "/assets/images/native/stream_feedback",
+  width: 72,
+  height: 72,
+  scales: [1, 2, 3],
+  hash: "4c77a93db477bc03f2ffe1ca6854a9fa",
+  name: "feedback-modal-sad",
   type: "png",
 });

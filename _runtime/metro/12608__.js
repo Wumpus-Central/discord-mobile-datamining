@@ -1,179 +1,73 @@
 // _runtime/metro/12608__.js
-import _mod12521 from "12521__.js";
-import _mod12523 from "12523__.js";
-import setupIntegration from "12570__.js";
+const items = [
+  "X-Client-IP",
+  "X-Forwarded-For",
+  "Fly-Client-IP",
+  "CF-Connecting-IP",
+  "Fastly-Client-Ip",
+  "True-Client-Ip",
+  "X-Real-IP",
+  "X-Cluster-Client-IP",
+  "X-Forwarded",
+  "Forwarded-For",
+  "Forwarded",
+  "X-Vercel-Forwarded-For",
+];
 
-function flattenIssue(path) {
-  const obj = {};
-  const merged = Object.assign(path);
-  let joined;
-  if ("path" in path) {
-    const _Array = Array;
-    if (Array.isArray(path.path)) {
-      path = path.path;
-      joined = path.join(".");
+export const getClientIPAddress = function getClientIPAddress(headers) {
+  let mapped = items.map((item) => {
+    let str = obj;
+    if (Array.isArray(headers[item])) {
+      str = obj.join(";");
     }
-  }
-  obj.path = joined;
-  let json;
-  if ("keys" in path) {
-    const _JSON = JSON;
-    json = JSON.stringify(path.keys);
-  }
-  obj.keys = json;
-  let json1;
-  if ("unionErrors" in path) {
-    const _JSON2 = JSON;
-    json1 = JSON.stringify(path.unionErrors);
-  }
-  obj.unionErrors = json1;
-  return obj;
-}
-function flattenIssuePath(arr) {
-  const mapped = arr.map((item) => {
-    let str = "<array>";
-    if (typeof item !== "number") {
-      str = item;
-    }
-    return str;
-  });
-  return mapped.join(".");
-}
-function formatIssueMessage(issues) {
-  const set = new Set();
-  while (tmp !== undefined) {
-    let arr = flattenIssuePath(tmp2.path);
-    if (arr.length > 0) {
-      let addResult = set.add(tmp4);
-    }
-    continue;
-  }
-  const arr2 = Array.from(set);
-  if (0 === arr2.length) {
-    let str4 = "variable";
-    if (issues.issues.length > 0) {
-      const first = issues.issues[0];
-      let tmp10 = undefined !== first;
-      if (tmp10) {
-        tmp10 = "expected" in first;
-      }
-      if (tmp10) {
-        tmp10 = typeof first.expected === "string";
-      }
-      str4 = "variable";
-      if (tmp10) {
-        str4 = first.expected;
-      }
-    }
-    const _HermesInternal2 = HermesInternal;
-    return "Failed to validate " + str4;
-  } else {
-    const _HermesInternal = HermesInternal;
-    return "Failed to validate keys: " + _mod12523.truncate(arr2.join(", "), 100);
-  }
-  tmp = issues.issues[Symbol.iterator]();
-}
-function applyZodErrorsToEvent(arg0, arg1) {
-  let flag = arg1;
-  if (arg1 === undefined) {
-    flag = false;
-  }
-  if (exception.exception) {
-    if (exception.exception.values) {
-      if (originalException) {
-        if (originalException.originalException) {
-          if (
-            (function originalExceptionIsZodError(originalException) {
-              let isErrorResult = _mod12521.isError(originalException);
-              if (isErrorResult) {
-                isErrorResult = "ZodError" === originalException.name;
-              }
-              if (isErrorResult) {
-                const _Array = Array;
-                isErrorResult = Array.isArray(originalException.issues);
-              }
-              return isErrorResult;
-            })(originalException.originalException)
-          ) {
-            if (0 !== originalException.originalException.issues.length) {
-              try {
-                const issues = originalException.originalException.issues;
-                if (flag) {
-                  let substr = issues;
-                } else {
-                  substr = issues.slice(0, arg0);
-                }
-                const mapped = substr.map(flattenIssue);
-                if (flag) {
-                  let _Array = Array;
-                  if (!Array.isArray(originalException.attachments)) {
-                    originalException.attachments = [];
-                  }
-                  const attachments = originalException.attachments;
-                  const obj = { filename: "zod_issues.json", data: null };
-                  const _JSON = JSON;
-                  const obj2 = { issues: mapped };
-                  obj.data = JSON.stringify(obj2);
-                  attachments.push(obj);
-                }
-                const obj3 = {};
-                const merged = Object.assign(exception);
-                const obj4 = {};
-                const merged1 = Object.assign(exception.exception);
-                const obj5 = {};
-                const merged2 = Object.assign(exception.exception.values[0]);
-                obj5.value = formatIssueMessage(originalException.originalException);
-                const items = [obj5];
-                const values = exception.exception.values;
-                HermesBuiltin.arraySpread(values.slice(1), 1);
-                obj4.values = items;
-                obj3.exception = obj4;
-                const obj6 = {};
-                const merged3 = Object.assign(exception.extra);
-                obj6["zoderror.issues"] = mapped.slice(0, arg0);
-                obj3.extra = obj6;
-                return obj3;
-              } catch (error) {
-                const obj7 = {};
-                const merged4 = Object.assign(tmp);
-                const obj8 = {};
-                const merged5 = Object.assign(tmp.extra);
-                const _Error = Error;
-                let str = "unknown";
-                if (error instanceof Error) {
-                  const _HermesInternal = HermesInternal;
-                  str = "" + error.name + ": " + error.message + "\n" + error.stack;
-                }
-                const obj9 = {
-                  message: "an exception was thrown while processing ZodError within applyZodErrorsToEvent()",
-                  error: str,
-                };
-                obj8["zoderrors sentry integration parse error"] = obj9;
-                obj7.extra = obj8;
-                return obj7;
-              }
+    if ("Forwarded" === item) {
+      let mapped = (function parseForwardedHeader(str) {
+        if (str) {
+          const parts = str.split(";");
+          const iter = parts[Symbol.iterator]();
+          const nextResult = iter.next();
+          while (iter !== undefined) {
+            let arr = nextResult;
+            if (nextResult.startsWith("for=")) {
+              let substr = arr.slice(4);
+              iter.return();
+              return substr;
             }
           }
+          return null;
+        } else {
+          return null;
         }
+      })(str);
+    } else {
+      mapped = str;
+      if (str) {
+        let parts = str.split(",");
+        mapped = parts.map((item) => item.trim());
       }
     }
-  }
-  return exception;
-}
-
-export { applyZodErrorsToEvent };
-export { flattenIssue };
-export { flattenIssuePath };
-export { formatIssueMessage };
-export const zodErrorsIntegration = setupIntegration.defineIntegration(() => {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
-  }
-  return {
-    name: "ZodErrors",
-    processEvent(arg0, arg1) {
-      return applyZodErrorsToEvent(num, obj.saveZodIssuesAsAttachment, arg0, arg1);
-    },
-  };
-});
+    return mapped;
+  });
+  const reduced = mapped.reduce((arr, item) => {
+    let combined = arr;
+    if (item) {
+      combined = arr.concat(item);
+    }
+    return combined;
+  }, []);
+  return (
+    reduced.find((item) => {
+      let isMatch = null !== item;
+      if (isMatch) {
+        isMatch =
+          /(?:^(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}$)|(?:^(?:(?:[a-fA-F\d]{1,4}:){7}(?:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){6}(?:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){5}(?::(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,2}|:)|(?:[a-fA-F\d]{1,4}:){4}(?:(?::[a-fA-F\d]{1,4}){0,1}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,3}|:)|(?:[a-fA-F\d]{1,4}:){3}(?:(?::[a-fA-F\d]{1,4}){0,2}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,4}|:)|(?:[a-fA-F\d]{1,4}:){2}(?:(?::[a-fA-F\d]{1,4}){0,3}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,5}|:)|(?:[a-fA-F\d]{1,4}:){1}(?:(?::[a-fA-F\d]{1,4}){0,4}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,6}|:)|(?::(?:(?::[a-fA-F\d]{1,4}){0,5}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,7}|:)))(?:%[0-9a-zA-Z]{1,})?$)/.test(
+            item,
+          );
+        const obj =
+          /(?:^(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}$)|(?:^(?:(?:[a-fA-F\d]{1,4}:){7}(?:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){6}(?:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|:[a-fA-F\d]{1,4}|:)|(?:[a-fA-F\d]{1,4}:){5}(?::(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,2}|:)|(?:[a-fA-F\d]{1,4}:){4}(?:(?::[a-fA-F\d]{1,4}){0,1}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,3}|:)|(?:[a-fA-F\d]{1,4}:){3}(?:(?::[a-fA-F\d]{1,4}){0,2}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,4}|:)|(?:[a-fA-F\d]{1,4}:){2}(?:(?::[a-fA-F\d]{1,4}){0,3}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,5}|:)|(?:[a-fA-F\d]{1,4}:){1}(?:(?::[a-fA-F\d]{1,4}){0,4}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,6}|:)|(?::(?:(?::[a-fA-F\d]{1,4}){0,5}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-fA-F\d]{1,4}){1,7}|:)))(?:%[0-9a-zA-Z]{1,})?$)/;
+      }
+      return isMatch;
+    }) || null
+  );
+};
+export const ipHeaderNames = items;

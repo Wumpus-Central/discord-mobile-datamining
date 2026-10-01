@@ -1,37 +1,13 @@
 // _runtime/metro/05415__.js
-import _mod5413 from "05413__.js";
 import noop from "00019__.js";
 
-const require = globalThis.__r;
+({ useEffect: closure_0, useRef: closure_1 } = noop);
 
-require = fn;
-const findNodeHandle = fn(17).findNodeHandle;
-
-export const useRenderDebugInfo = function useRenderDebugInfo(arg0) {
-  _require = arg0;
-  const ref = ref1.useRef(null);
-  ref1 = ref1.useRef(-1);
-  closure_3 = ref1.useEffectEvent((arg0) => {
-    const RNSLog = _mod5413.RNSLog;
-    RNSLog.log("" + closure_0 + " [" + ref1.current + "] " + arg0);
+export const usePrevious = function usePrevious(current) {
+  const tmp = framebus(undefined);
+  closure_1 = tmp;
+  React(() => {
+    closure_1.current = current;
   });
-  const effect = ref1.useEffect(() => {
-    if (null != ref.current) {
-      let num = findNodeHandle(tmp.current);
-      if (num == null) {
-        num = -1;
-      }
-      ref1.current = num;
-      if (-1 === ref1.current) {
-        closure_3("failed to find node handle");
-      }
-    }
-    closure_3("mounted");
-    return () => {
-      closure_1_3("unmounted");
-    };
-  }, []);
-  let RNSLog = require("05413__.js").RNSLog;
-  RNSLog.log("" + arg0 + " [" + ref1.current + "] " + "rendered");
-  return ref;
+  return tmp.current;
 };

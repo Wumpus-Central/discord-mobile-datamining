@@ -1,4 +1,11 @@
 // _runtime/metro/07946__.js
-import _mod17 from "00017__.js";
+import emptyFunction from "04692__.js";
 
-export default _mod17.requireNativeComponent("RNCWebViewContainer");
+const rect = {
+  top: emptyFunction.number,
+  left: emptyFunction.number,
+  bottom: emptyFunction.number,
+  right: emptyFunction.number,
+};
+
+export default emptyFunction.shape(rect);

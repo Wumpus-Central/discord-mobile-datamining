@@ -3,9 +3,9 @@ import registerAsset from "01121__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9nYW1lX3NlcnZlcg==",
+  httpServerLocation: "/assets/modules/game_server",
   scales: [1],
-  hash: "c3eb569a5201ad64dbfd2283a1eedf2b",
-  name: "zh-TW.messages.c3eb569a5201ad64dbfd2283a1eedf2b.compiled.messages",
+  hash: "b965678ebf8b66d4d84833f3d0cfaba0",
+  name: "GameServer.compiled.messages",
   type: "jsona",
 });

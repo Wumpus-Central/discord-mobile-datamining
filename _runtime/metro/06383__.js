@@ -1,71 +1,81 @@
 // _runtime/metro/06383__.js
-import nativeViewGestureHandlerProps from "../06311_nativeViewGestureHandlerProps.js";
-import "module_19";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _get from "00096__get.js";
+import _inherits from "../00098__inherits.js";
 
-require = fn;
-const noop = fn(19);
-({ useImperativeHandle: c2, useRef: c3 } = noop);
-const jsx = fn(21).jsx;
-let items = [...fn(6311).nativeViewProps, "onGestureHandlerEvent", "onGestureHandlerStateChange"];
-
-export default function createNativeWrapper(displayName, arg1) {
-  _require = displayName;
-  if (arg1 === undefined) {
-    let obj = {};
-  }
-  let str;
-  if (displayName != null) {
-    str = displayName.displayName;
-  }
-  if (!str) {
-    let name;
-    if (displayName != null) {
-      const render = displayName.render;
-      if (render != null) {
-        name = render.name;
-      }
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-    str = name;
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturnDefault;
+function changeEventCalculator(rotation, rotation2) {
+  if (undefined === rotation2) {
+    const obj2 = { rotationChange: rotation.rotation };
+    let obj = obj2;
+  } else {
+    obj = { rotationChange: rotation.rotation - rotation2.rotation };
   }
-  if (!str) {
-    let tmp2 = typeof displayName === "string";
-    if (typeof displayName === "string") {
-      tmp2 = displayName;
-    }
-    str = tmp2;
-  }
-  if (!str) {
-    str = "ComponentWrapper";
-  }
-  class ComponentWrapper {
-    constructor(arg0) {
-      closure_0 = displayName;
-      keys = Object.keys(displayName);
-      obj = { gestureHandlerProps: null, childProps: null };
-      obj1 = {};
-      merged = Object.assign(closure_1);
-      obj.gestureHandlerProps = obj1;
-      obj.childProps = { enabled: displayName.enabled, hitSlop: displayName.hitSlop, testID: displayName.testID };
-      reduced = keys.reduce(() => { ... }, obj);
-      ({ gestureHandlerProps, childProps } = reduced);
-      tmp3 = useRef(null);
-      closure_1 = tmp3;
-      tmp4 = useRef(null);
-      closure_2 = tmp4;
-      items = [, ];
-      items[0] = tmp3;
-      items[1] = tmp4;
-      tmp5 = useImperativeHandle(displayName.ref, () => { ... }, items);
-      obj5 = {};
-      merged1 = Object.assign(gestureHandlerProps);
-      obj5.ref = tmp4;
-      obj6 = {};
-      merged2 = Object.assign(childProps);
-      obj6.ref = tmp3;
-      obj5.children = jsx(closure_0, obj6);
-      return jsx(closure_0(closure_1[2]).NativeViewGestureHandler, obj5);
-    }
-  }
-  ComponentWrapper.displayName = str;
-  return ComponentWrapper;
+  const merged = Object.assign(rotation);
+  const merged1 = Object.assign(obj);
+  return {};
+}
+changeEventCalculator.__closure = {};
+changeEventCalculator.__workletHash = 11988645380499;
+changeEventCalculator.__initData = {
+  code: "function changeEventCalculator_Pnpm_rotationGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={rotationChange:current.rotation};}else{changePayload={rotationChange:current.rotation-previous.rotation};}return{...current,...changePayload};}",
 };
+class RotationGesture {
+  constructor() {
+    self = this;
+    tmp = closure_0(this, RotationGesture);
+    tmp2 = c2;
+    obj = c2(RotationGesture);
+    tmp3 = closure_1;
+    if (closure_4()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.handlerName = "RotationGestureHandler";
+    return tmp3Result;
+  }
+}
+_classCallCheck = RotationGesture;
+_inherits(RotationGesture, fn(6280).ContinousBaseGesture);
+const entry = {
+  key: "onChange",
+  value: function onChange(arg0) {
+    this.handlers.changeEventCalculator = hasOwnProperty;
+    const self = this;
+    let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
+    if (typeof fn === "function") {
+      fn = (items) => fn.apply(self, items);
+    }
+    const items = [arg0];
+    return fn(items);
+  },
+};
+let items = [entry];
+
+export const RotationGesture = _createClass(RotationGesture, items);

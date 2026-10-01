@@ -1,172 +1,76 @@
 // _runtime/metro/12537__.js
-import _mod12520 from "12520__.js";
-import _mod12525 from "12525__.js";
-import _mod12528 from "12528__.js";
-import _mod12538 from "12538__.js";
-import __SENTRY_DEBUG__ from "12513__.js";
-import consoleSandbox from "12514__.js";
+import generatePropagationContext from "../12535_generatePropagationContext.js";
+import BAGGAGE_HEADER_NAME from "../12538_BAGGAGE_HEADER_NAME.js";
 
-function updateSession(ipAddress) {
-  let obj = arg1;
-  if (arg1 === undefined) {
-    obj = {};
-  }
-  if (obj.user) {
-    ipAddress = ipAddress.ipAddress;
-    let ip_address = !ipAddress;
-    if (!ipAddress) {
-      ip_address = obj.user.ip_address;
-    }
-    if (ip_address) {
-      ipAddress.ipAddress = obj.user.ip_address;
-    }
-    if (!tmp) {
-      ipAddress.did = obj.user.id || obj.user.email || obj.user.username;
-    }
-    tmp = ipAddress.did || obj.did;
-  }
-  let timestamp = obj.timestamp;
-  if (!timestamp) {
-    timestamp = _mod12528.timestampInSeconds();
-  }
-  ipAddress.timestamp = timestamp;
-  if (obj.abnormal_mechanism) {
-    ipAddress.abnormal_mechanism = obj.abnormal_mechanism;
-  }
-  if (obj.ignoreDuration) {
-    ipAddress.ignoreDuration = obj.ignoreDuration;
-  }
-  if (!obj.sid) {
-    if (undefined !== obj.init) {
-      ipAddress.init = obj.init;
-    }
-    const did = ipAddress.did;
-    let did2 = !did;
-    if (!did) {
-      did2 = obj.did;
-    }
-    if (did2) {
-      const _HermesInternal = HermesInternal;
-      ipAddress.did = "" + obj.did;
-    }
-    if (typeof obj.started === "number") {
-      ipAddress.started = obj.started;
-    }
-    if (ipAddress.ignoreDuration) {
-      ipAddress.duration = undefined;
-    } else if (typeof obj.duration === "number") {
-      ipAddress.duration = obj.duration;
-    } else {
-      const diff = ipAddress.timestamp - ipAddress.started;
-      let num2 = 0;
-      if (diff >= 0) {
-        num2 = diff;
+require = arg1;
+const dependencyMap = arg6;
+const regExp = new RegExp("^[ \\t]*([0-9a-f]{32})?-?([0-9a-f]{16})?-?([01])?[ \\t]*$");
+
+export const TRACEPARENT_REGEXP = regExp;
+export const extractTraceparentData = function extractTraceparentData(str) {
+  if (str) {
+    const match = str.match(regExp);
+    if (match) {
+      let flag = true;
+      if ("1" !== match[3]) {
+        if ("0" === match[3]) {
+          flag = false;
+        }
       }
-      ipAddress.duration = num2;
-    }
-    if (obj.release) {
-      ipAddress.release = obj.release;
-    }
-    if (obj.environment) {
-      ipAddress.environment = obj.environment;
-    }
-    const ipAddress2 = ipAddress.ipAddress;
-    let ipAddress3 = !ipAddress2;
-    if (!ipAddress2) {
-      ipAddress3 = obj.ipAddress;
-    }
-    if (ipAddress3) {
-      ipAddress.ipAddress = obj.ipAddress;
-    }
-    const userAgent = ipAddress.userAgent;
-    let userAgent2 = !userAgent;
-    if (!userAgent) {
-      userAgent2 = obj.userAgent;
-    }
-    if (userAgent2) {
-      ipAddress.userAgent = obj.userAgent;
-    }
-    if (typeof obj.errors === "number") {
-      ipAddress.errors = obj.errors;
-    }
-    if (obj.status) {
-      ipAddress.status = obj.status;
-    }
-  } else {
-    if (32 === obj.sid.length) {
-      let sid = obj.sid;
-    } else {
-      sid = _mod12525.uuid4();
-    }
-    ipAddress.sid = sid;
-  }
-}
-_mod12538;
-
-export const closeSession = function closeSession(status, status2) {
-  if (status2) {
-    const obj2 = { status: status2 };
-    let obj = obj2;
-  } else {
-    obj = {};
-    if ("ok" === status.status) {
-      obj = { status: "exited" };
+      const obj = { traceId: match[1], parentSampled: flag, parentSpanId: match[2] };
+      return obj;
     }
   }
-  updateSession(status, obj);
 };
-export const makeSession = function makeSession(arg0) {
-  const timestampInSecondsResult = obj2(12528).timestampInSeconds();
-  obj2 = {
-    sid: null,
-    init: true,
-    timestamp: null,
-    started: null,
-    duration: 0,
-    status: "ok",
-    errors: 0,
-    ignoreDuration: false,
-    toJSON: null,
-  };
-  let obj = obj2(12528);
-  obj2.sid = obj2(12525).uuid4();
-  obj2.timestamp = timestampInSecondsResult;
-  obj2.started = timestampInSecondsResult;
-  obj2.toJSON = function toJSON() {
-    const obj3 = {
-      sid: "" + obj2.sid,
-      init: obj2.init,
-      started: null,
-      timestamp: null,
-      status: null,
-      errors: null,
-      did: null,
-      duration: null,
-      abnormal_mechanism: null,
-      attrs: null,
-    };
-    const obj = _mod12520;
-    obj3.started = new Date(1000 * obj2.started).toISOString();
-    const date = new Date(1000 * obj2.started);
-    obj3.timestamp = new Date(1000 * obj2.timestamp).toISOString();
-    ({ status: obj2.status, errors: obj2.errors } = obj2);
-    if (typeof obj2.did === "number") {
-      const _HermesInternal = HermesInternal;
-      const combined = "" + obj2.did;
-    }
-    obj3.did = combined;
-    ({ duration: obj2.duration, abnormal_mechanism: obj2.abnormal_mechanism } = obj2);
-    obj3.attrs = {
-      release: obj2.release,
-      environment: obj2.environment,
-      ip_address: obj2.ipAddress,
-      user_agent: obj2.userAgent,
-    };
-    return obj.dropUndefinedKeys(obj3);
-  };
-  if (arg0) {
-    updateSession(obj2, arg0);
+export const generateSentryTraceHeader = function generateSentryTraceHeader() {
+  if (traceId === undefined) {
+    traceId = generatePropagationContext.generateTraceId();
   }
-  return obj2;
+  if (spanId === undefined) {
+    spanId = generatePropagationContext.generateSpanId();
+  }
+  let str = "";
+  if (undefined !== sampled) {
+    let str2 = "-0";
+    if (sampled) {
+      str2 = "-1";
+    }
+    str = str2;
+  }
+  return "" + traceId + "-" + spanId + str;
 };
-export { updateSession };
+export const propagationContextFromHeaders = function propagationContextFromHeaders(str, _slicedToArray) {
+  let tmp;
+  if (str) {
+    const match = str.match(regExp);
+    if (match) {
+      let flag = true;
+      if ("1" !== match[3]) {
+        if ("0" === match[3]) {
+          flag = false;
+        }
+      }
+      const obj = { traceId: match[1], parentSampled: flag, parentSpanId: match[2] };
+      tmp = obj;
+    }
+  }
+  let result = BAGGAGE_HEADER_NAME.baggageHeaderToDynamicSamplingContext(_slicedToArray);
+  if (tmp) {
+    if (tmp.traceId) {
+      const obj3 = { traceId: null, parentSpanId: null, spanId: null, sampled: null, dsc: null };
+      ({ traceId: obj7.traceId, parentSpanId: obj7.parentSpanId, parentSampled } = tmp);
+      obj3.spanId = generatePropagationContext.generateSpanId();
+      obj3.sampled = parentSampled;
+      if (!result) {
+        result = {};
+      }
+      obj3.dsc = result;
+      return obj3;
+    }
+  }
+  const obj4 = { traceId: null, spanId: null };
+  obj4.traceId = generatePropagationContext.generateTraceId();
+  const tmp4Result3 = generatePropagationContext;
+  obj4.spanId = generatePropagationContext.generateSpanId();
+  return obj4;
+};

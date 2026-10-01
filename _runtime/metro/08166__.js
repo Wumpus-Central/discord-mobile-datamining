@@ -1,12 +1,14 @@
 // _runtime/metro/08166__.js
-import _modDef8145 from "08145__.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _modDef8119 from "08119__.js";
+import _modDef8167 from "08167__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
+import noop from "00019__.js";
 
-const FeImage = arg1;
+const SvgImage = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,14 +27,18 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class FeImage {
+_possibleConstructorReturnDefault;
+const Image = fn(17).Image;
+const jsx = fn(21).jsx;
+const re9 = /\s+/;
+class SvgImage {
   constructor() {
     self = this;
-    tmp = c2(this, FeImage);
-    tmp2 = closure_4;
-    obj = closure_4(FeImage);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    tmp = closure_3(this, SvgImage);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(SvgImage);
+    tmp3 = closure_4;
+    if (closure_8()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -45,18 +51,66 @@ class FeImage {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeImage, _modDef8145);
+_inherits(SvgImage, _modDef8119);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeImage(8122).warnUnimplementedFilter();
-    return null;
+    const self = this;
+    const props = this.props;
+    ({ preserveAspectRatio, href } = props);
+    ({ x, y, width, height } = props);
+    if (undefined === href) {
+      href = props.xlinkHref;
+    }
+    if (preserveAspectRatio) {
+      let parts = preserveAspectRatio.trim().split(re9);
+      const str = preserveAspectRatio.trim();
+    } else {
+      parts = [];
+    }
+    const size = {
+      x,
+      y,
+      width,
+      height,
+      onLoad: props.onLoad,
+      meetOrSlice: SvgImage(8108).meetOrSliceTypes[tmp3] || 0,
+      align: null,
+      src: null,
+    };
+    [tmp2, tmp3] = parts;
+    const tmp6 = SvgImage(8108).meetOrSliceTypes[tmp3] || 0;
+    size.align = SvgImage(8108).alignEnum[tmp2] || "xMidYMid";
+    let assetSource = null;
+    if (href) {
+      let tmp10 = href;
+      if (typeof href === "string") {
+        const obj = { uri: href };
+        tmp10 = obj;
+      }
+      assetSource = Image.resolveAssetSource(tmp10);
+    }
+    size.src = assetSource;
+    const obj2 = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      },
+    };
+    const tmp7 = SvgImage(8108).alignEnum[tmp2] || "xMidYMid";
+    const merged = Object.assign(SvgImage(8110).withoutXY(this, props));
+    const merged1 = Object.assign(size);
+    return (
+      <tmp11
+        ref={function ref(arg0) {
+          return self.refMethod(arg0);
+        }}
+      />
+    );
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeImage, items);
-importDefaultResultResult.displayName = "FeImage";
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-importDefaultResultResult.defaultProps = {};
+const importDefaultResultResult = _createClass(SvgImage, items);
+importDefaultResultResult.displayName = "Image";
+importDefaultResultResult.defaultProps = { x: 0, y: 0, width: 0, height: 0, preserveAspectRatio: "xMidYMid meet" };
 
 export default importDefaultResultResult;

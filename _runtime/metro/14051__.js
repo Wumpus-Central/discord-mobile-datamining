@@ -1,7 +1,11 @@
 // _runtime/metro/14051__.js
-import _mod17 from "00017__.js";
-import setupURLPolyfill_mod from "../14052_setupURLPolyfill.js";
+import _mod13999 from "13999__.js";
+import _mod14008 from "14008__.js";
+import all from "14018__.js";
 
-const Platform = _mod17.Platform;
-let setupURLPolyfill = setupURLPolyfill_mod;
-setupURLPolyfill = setupURLPolyfill.setupURLPolyfill();
+let closure_0 = _mod13999(Function.toString);
+if (!all(_mod14008.inspectSource)) {
+  _mod14008.inspectSource = (arg0) => closure_0(arg0);
+}
+
+export default _mod14008.inspectSource;

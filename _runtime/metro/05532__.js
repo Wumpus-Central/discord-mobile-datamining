@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "e06e2e681624b5a052b477a4af8dc512",
-  name: "ThreadLockIcon",
+  hash: "55dfae0c7ba72f2b92f72dd1258be0b7",
+  name: "VoiceWarningIcon",
   type: "png",
 });
