@@ -1,71 +1,62 @@
 // === Module 12541: ? ===
 
 // Module 12541
-import _mod12515 from "module_12515" /* 12515 */;
-import _mod12520 from "module_12520" /* 12520 */;
-import _mod12532 from "module_12532" /* 12532 */;
-import _mod12533 from "module_12533" /* 12533 */;
-import ScopeClass from "ScopeClass" /* 12535 */;
+import _mod12531 from "module_12531" /* 12531 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-require = arg1;
-const dependencyMap = arg6;
+const _sentryMetrics = "_sentryMetrics";
 
-export const getClient = function getClient() {
-  const mainCarrier = _mod12532.getMainCarrier();
-  const asyncContextStrategy = _mod12533.getAsyncContextStrategy(mainCarrier);
-  const currentScope = asyncContextStrategy.getCurrentScope();
-  return currentScope.getClient();
-};
-export const getCurrentScope = function getCurrentScope() {
-  const mainCarrier = _mod12532.getMainCarrier();
-  const asyncContextStrategy = _mod12533.getAsyncContextStrategy(mainCarrier);
-  return asyncContextStrategy.getCurrentScope();
-};
-export const getGlobalScope = function getGlobalScope() {
-  return _mod12515.getGlobalSingleton("globalScope", () => {
-    const scope = new ScopeClass.Scope();
-    return scope;
-  });
-};
-export const getIsolationScope = function getIsolationScope() {
-  const mainCarrier = _mod12532.getMainCarrier();
-  const asyncContextStrategy = _mod12533.getAsyncContextStrategy(mainCarrier);
-  return asyncContextStrategy.getIsolationScope();
-};
-export const getTraceContextFromScope = function getTraceContextFromScope(getPropagationContext) {
-  const propagationContext = getPropagationContext.getPropagationContext();
-  ({ traceId, spanId, parentSpanId } = propagationContext);
-  return _mod12520.dropUndefinedKeys({ trace_id, span_id, parent_span_id });
-};
-export const withIsolationScope = function withIsolationScope() {
-  const items = [...arguments];
-  const mainCarrier = _mod12532.getMainCarrier();
-  const asyncContextStrategy = _mod12533.getAsyncContextStrategy(mainCarrier);
-  if (2 === items.length) {
-    [tmp2, tmp3] = items;
-    if (tmp2) {
-      let result = asyncContextStrategy.withSetIsolationScope(tmp2, tmp3);
-    } else {
-      result = asyncContextStrategy.withIsolationScope(tmp3);
+export const getMetricSummaryJsonForSpan = function getMetricSummaryJsonForSpan(self) {
+  if (self[_sentryMetrics]) {
+    const obj = {};
+    const tmp3 = tmp[Symbol.iterator]();
+    while (tmp3 !== undefined) {
+      let tmp8 = _slicedToArray(_slicedToArray(tmp5, 2)[1], 2);
+      [tmp9, tmp11] = tmp8;
+      let arr = obj[tmp9];
+      if (!arr) {
+        let items = [];
+        obj[tmp10] = items;
+        arr = items;
+      }
+      let obj2 = _mod12531;
+      let arr2 = arr.push(obj2.dropUndefinedKeys(tmp11));
+      continue;
     }
-    return result;
-  } else {
-    return asyncContextStrategy.withIsolationScope(items[0]);
+    return obj;
   }
 };
-export const withScope = function withScope() {
-  const items = [...arguments];
-  const mainCarrier = _mod12532.getMainCarrier();
-  const asyncContextStrategy = _mod12533.getAsyncContextStrategy(mainCarrier);
-  if (2 === items.length) {
-    [tmp2, tmp3] = items;
-    if (tmp2) {
-      let withSetScopeResult = asyncContextStrategy.withSetScope(tmp2, tmp3);
-    } else {
-      withSetScopeResult = asyncContextStrategy.withScope(tmp3);
-    }
-    return withSetScopeResult;
+export const updateMetricSummaryOnSpan = function updateMetricSummaryOnSpan(activeSpan, metricType, sanitizeMetricKeyResult, min, sanitizeUnitResult, tags, bucketKey) {
+  let obj = activeSpan[_sentryMetrics];
+  if (!obj) {
+    const _Map = Map;
+    const map = new Map();
+    activeSpan[tmp] = map;
+    obj = map;
+  }
+  const combined = "" + metricType + ":" + sanitizeMetricKeyResult + "@" + sanitizeUnitResult;
+  value = obj.get(bucketKey);
+  if (value) {
+    const range = _slicedToArray(value, 2)[1];
+    const items = [combined, ];
+    const range1 = { min: null, max: null, count: null, sum: null, tags: null };
+    const _Math = Math;
+    range1.min = Math.min(range.min, min);
+    const _Math2 = Math;
+    range1.max = Math.max(range.max, min);
+    const sum = range.count + 1;
+    range.count = sum;
+    range1.count = sum;
+    const sum1 = range.sum + min;
+    range.sum = sum1;
+    range1.sum = sum1;
+    range1.tags = range.tags;
+    items[1] = range1;
+    const result = obj.set(bucketKey, items);
   } else {
-    return asyncContextStrategy.withScope(items[0]);
+    const items1 = [combined, ];
+    const range2 = { min, max: min, count: 1, sum: min, tags };
+    items1[1] = range2;
+    const result1 = obj.set(bucketKey, items1);
   }
 };

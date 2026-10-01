@@ -188,172 +188,233 @@ export function makeOfflineTransport(arg0) {
       return applyArgumentsResult;
     }
     closure_8 = async function _send(arg0) {
-      if (1 === tmp6) {
+      if (c7 === 2) {
+        c7 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp5 === 3) {
         if (arg0 === 1) {
-          c7 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c7 = 3;
-          return { value, done: true };
+          let obj2 = { value, done: true };
+          return obj2;
         } else {
-          if (!closure_130_1) {
-            if (obj14.envelopeContainsItemType(closure_130_0, ["replay_event", "replay_recording"])) {
-              c6 = 2;
-              c7 = 1;
-              return { value: closure_131_3.push(closure_130_0), done: false };
-            }
-            obj14 = createStore(729);
-          }
-          c5 = 1;
-          if (closure_131_0.shouldSend) {
-            c6 = 6;
-            c7 = 1;
-            return { value: closure_131_0.shouldSend(closure_130_0), done: false };
-          }
-        }
-      } else if (2 === tmp6) {
-        if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c7 = 3;
-          return { value, done: true };
-        } else {
-          closure_131_5(closure_2_3);
-          c7 = 3;
-          return { value: {}, done: true };
-        }
-      } else if (3 === tmp6) {
-        c5 = 0;
-        closure_130_4 = closure_4;
-        c6 = 4;
-        c7 = 1;
-        return {
-          value: (function shouldQueue(arg0, arg1, arg2) {
-              const result = createStore(729).envelopeContainsItemType(arg0, ["client_report"]);
-              let tmp2 = !result;
-              if (!result) {
-                shouldStore = shouldStore.shouldStore;
-                let shouldStoreResult = !shouldStore;
-                if (shouldStore) {
-                  shouldStoreResult = obj2.shouldStore(arg0, arg1, arg2);
-                }
-                tmp2 = shouldStoreResult;
-                obj2 = shouldStore;
-              }
-              return tmp2;
-            })(closure_130_0, closure_130_4, closure_131_4),
-          done: false
-        };
-      } else if (4 === tmp6) {
-        if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c7 = 3;
-          return { value, done: true };
-        } else if (value) {
-          if (closure_130_1) {
-            c6 = 8;
-            c7 = 1;
-            return { value: closure_131_3.unshift(closure_130_0), done: false };
-          } else {
-            c6 = 7;
-            c7 = 1;
-            return { value: closure_131_3.push(closure_130_0), done: false };
-          }
-        } else {
-          throw closure_130_4;
-        }
-      } else if (5 === tmp6) {
-        if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 0;
-          c7 = 3;
-          return { value, done: true };
-        } else {
-          closure_130_2 = value;
-          closure_130_3 = closure_2_3;
-          if (!closure_130_2) {
-            closure_131_5(closure_130_3);
-            closure_131_4 = closure_2_4;
-            c5 = 0;
-            c7 = 3;
-          } else {
-            const headers = closure_130_2.headers;
-            let prop;
-            if (headers != null) {
-              prop = headers["retry-after"];
-            }
-            if (!prop) {
-              const headers2 = closure_130_2.headers;
-              let prop1;
-              if (headers2 != null) {
-                prop1 = headers2["x-sentry-rate-limits"];
-              }
-              if (prop1) {
-                closure_130_3 = 60000;
-              } else {
-                let num9 = closure_130_2.statusCode;
-                if (!num9) {
-                  num9 = 0;
-                }
-                if (num9 >= 400) {
-                  c5 = 0;
-                  c7 = 3;
-                  return { value: closure_130_2, done: true };
-                }
-              }
-            }
-          }
-          closure_130_3 = createStore(744).parseRetryAfterHeader(closure_130_2.headers["retry-after"]);
-          createStore(744);
-        }
-      } else if (6 === tmp6) {
-        if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 0;
-          c7 = 3;
-          return { value, done: true };
-        } else if (false === value) {
-          const _Error = Error;
-          const error = new Error("Envelope not sent because `shouldSend` callback returned false");
-          throw error;
+          return { value: "HermesInternal", done: null };
         }
       } else {
-        if (7 === tmp6) {
-          if (arg0 === 1) {
-            c7 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c7 = 3;
-            return { value, done: true };
+        try {
+          c7 = 2;
+          if (0 === c6) {
+            if (arg0 === 1) {
+              c7 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c7 = 3;
+              const obj3 = { value, done: true };
+              return obj3;
+            } else {
+              closure_3 = tmp2;
+              closure_2 = tmp6;
+              closure_130_1 = undefined;
+              closure_130_0 = shouldStore;
+              let flag = closure_1;
+              if (closure_1 === undefined) {
+                flag = false;
+              }
+              closure_130_1 = flag;
+              closure_130_2 = undefined;
+              closure_130_3 = undefined;
+              c6 = 1;
+              c7 = 1;
+              return { value: "flex", done: null };
+            }
+          } else {
+            if (1 === tmp6) {
+              if (arg0 === 1) {
+                c7 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c7 = 3;
+                const obj4 = { value, done: true };
+                return obj4;
+              } else {
+                if (!closure_130_1) {
+                  if (obj14.envelopeContainsItemType(closure_130_0, ["replay_event", "replay_recording"])) {
+                    c6 = 2;
+                    c7 = 1;
+                    const obj5 = { value: closure_131_3.push(closure_130_0), done: false };
+                    return obj5;
+                  }
+                  obj14 = createStore(729);
+                }
+                c5 = 1;
+                if (closure_131_0.shouldSend) {
+                  c6 = 6;
+                  c7 = 1;
+                  const obj7 = { value: closure_131_0.shouldSend(closure_130_0), done: false };
+                  return obj7;
+                }
+              }
+            } else if (2 === tmp6) {
+              if (arg0 === 1) {
+                c7 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c7 = 3;
+                const obj8 = { value, done: true };
+                return obj8;
+              } else {
+                closure_131_5(closure_2_3);
+                c7 = 3;
+                const obj9 = { value: {}, done: true };
+                return obj9;
+              }
+            } else if (3 === tmp6) {
+              c5 = 0;
+              closure_130_4 = closure_4;
+              c6 = 4;
+              c7 = 1;
+              const obj10 = {
+                value: (function shouldQueue(arg0, arg1, arg2) {
+                          const result = createStore(729).envelopeContainsItemType(arg0, ["client_report"]);
+                          let tmp2 = !result;
+                          if (!result) {
+                            shouldStore = shouldStore.shouldStore;
+                            let shouldStoreResult = !shouldStore;
+                            if (shouldStore) {
+                              shouldStoreResult = obj2.shouldStore(arg0, arg1, arg2);
+                            }
+                            tmp2 = shouldStoreResult;
+                            obj2 = shouldStore;
+                          }
+                          return tmp2;
+                        })(closure_130_0, closure_130_4, closure_131_4),
+                done: false
+              };
+              return obj10;
+            } else if (4 === tmp6) {
+              if (arg0 === 1) {
+                c7 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c7 = 3;
+                const obj11 = { value, done: true };
+                return obj11;
+              } else if (value) {
+                if (closure_130_1) {
+                  c6 = 8;
+                  c7 = 1;
+                  const obj12 = { value: closure_131_3.unshift(closure_130_0), done: false };
+                  return obj12;
+                } else {
+                  c6 = 7;
+                  c7 = 1;
+                  const obj13 = { value: closure_131_3.push(closure_130_0), done: false };
+                  return obj13;
+                }
+              } else {
+                throw closure_130_4;
+              }
+            } else if (5 === tmp6) {
+              if (arg0 === 1) {
+                c7 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c5 = 0;
+                c7 = 3;
+                const obj15 = { value, done: true };
+                return obj15;
+              } else {
+                closure_130_2 = value;
+                closure_130_3 = closure_2_3;
+                if (!closure_130_2) {
+                  closure_131_5(closure_130_3);
+                  closure_131_4 = closure_2_4;
+                  c5 = 0;
+                  c7 = 3;
+                } else {
+                  const headers = closure_130_2.headers;
+                  let prop;
+                  if (headers != null) {
+                    prop = headers["retry-after"];
+                  }
+                  if (!prop) {
+                    const headers2 = closure_130_2.headers;
+                    let prop1;
+                    if (headers2 != null) {
+                      prop1 = headers2["x-sentry-rate-limits"];
+                    }
+                    if (prop1) {
+                      closure_130_3 = 60000;
+                    } else {
+                      let num9 = closure_130_2.statusCode;
+                      if (!num9) {
+                        num9 = 0;
+                      }
+                      if (num9 >= 400) {
+                        c5 = 0;
+                        c7 = 3;
+                        const obj16 = { value: closure_130_2, done: true };
+                        return obj16;
+                      }
+                    }
+                  }
+                }
+                closure_130_3 = createStore(744).parseRetryAfterHeader(closure_130_2.headers["retry-after"]);
+                const obj6 = createStore(744);
+              }
+            } else if (6 === tmp6) {
+              if (arg0 === 1) {
+                c7 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c5 = 0;
+                c7 = 3;
+                const obj17 = { value, done: true };
+                return obj17;
+              } else if (false === value) {
+                const _Error = Error;
+                const error = new Error("Envelope not sent because `shouldSend` callback returned false");
+                throw error;
+              }
+            } else {
+              if (7 === tmp6) {
+                if (arg0 === 1) {
+                  c7 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  c7 = 3;
+                  const obj18 = { value, done: true };
+                  return obj18;
+                }
+              } else if (arg0 === 1) {
+                c7 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c7 = 3;
+                const obj = { value, done: true };
+                return obj;
+              }
+              closure_131_6();
+              closure_1("Error sending. Event queued.", closure_130_4);
+              c7 = 3;
+              const obj19 = { value: {}, done: true };
+              return obj19;
+            }
+            c6 = 5;
+            c7 = 1;
+            const obj20 = { value: closure_131_1.send(closure_130_0), done: false };
+            return obj20;
           }
-        } else if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c7 = 3;
-          return { value, done: true };
+        } catch (tmp69) {
+          closure_4 = tmp69;
+          if (tmp3 === c5) {
+            c7 = tmp;
+            throw tmp69;
+          } else {
+            c6 = tmp;
+          }
         }
-        closure_131_6();
-        closure_1("Error sending. Event queued.", closure_130_4);
-        c7 = 3;
-        return { value: {}, done: true };
       }
-      await closure_131_1.send(closure_130_0);
-      closure_3 = tmp2;
-      closure_130_0 = shouldStore;
-      let flag = closure_1;
-      if (closure_1 === undefined) {
-        flag = false;
-      }
-      closure_130_1 = flag;
-      return "flex";
     };
     closure_1 = closure_0(createStore);
     if (createStore.createStore) {

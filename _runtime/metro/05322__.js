@@ -1,32 +1,17 @@
 // === Module 5322: ? ===
 
 // Module 5322
+import _mod1281 from "module_1281" /* 1281 */;
+import callBoundIntrinsic from "callBoundIntrinsic" /* 1315 */;
 
-export default function isArguments(callee) {
-  const call = toString.call;
-  const tmp2 = typeof call === "unknown" ? toString() : call(callee);
-  let tmp3 = "[object Arguments]" === tmp2;
-  if (!tmp3) {
-    let tmp4 = "[object Array]" !== tmp2;
-    if (tmp4) {
-      tmp4 = null !== callee;
-    }
-    if (tmp4) {
-      tmp4 = typeof callee === "object";
-    }
-    if (tmp4) {
-      tmp4 = typeof callee.length === "number";
-    }
-    if (tmp4) {
-      tmp4 = callee.length >= 0;
-    }
-    if (!tmp4) {
-      tmp3 = tmp4;
-    } else {
-      const call2 = toString.call;
-      const str2 = "[object Function]";
-      const tmp6 = typeof call2 === "unknown" ? toString() : call2(str2);
-    }
-  }
-  return tmp3;
-};
+const tmp = _mod1281("%Array%");
+const isArray = tmp.isArray;
+let tmp2 = !isArray;
+if (!isArray) {
+  tmp2 = callBoundIntrinsic("Object.prototype.toString");
+}
+let closure_0 = tmp2;
+
+export default tmp.isArray || (function IsArray(arg0) {
+  return "[object Array]" === closure_0(arg0);
+});

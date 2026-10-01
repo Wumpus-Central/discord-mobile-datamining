@@ -1,21 +1,9 @@
 // === Module 13990: ? ===
 
 // Module 13990
-import _mod13988 from "module_13988" /* 13988 */;
-import _mod13991 from "module_13991" /* 13991 */;
-import _mod13993 from "module_13993" /* 13993 */;
+import _mod14056 from "module_14056" /* 14056 */;
+import module_13991 from "module_13991" /* 13991 */;
 
-let fn = Object;
-let closure_3 = _mod13991("".split);
-if (_mod13988(() => !Object("z").propertyIsEnumerable(0))) {
-  fn = (arg0) => {
-    if ("String" === _mod13993(arg0)) {
-      let tmp2 = closure_3(arg0, "");
-    } else {
-      tmp2 = Object(arg0);
-    }
-    return tmp2;
-  };
-}
-
-export default fn;
+const obj = { target: "Object", stat: true, arity: 2, forced: null };
+obj.forced = Object.assign !== _mod14056;
+module_13991(obj, { assign: _mod14056 });

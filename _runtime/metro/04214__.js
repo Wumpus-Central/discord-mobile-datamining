@@ -1,9 +1,8 @@
 // === Module 4214: ? ===
 
 // Module 4214
-import _typeof_mod from "module_3948" /* 3948 */;
-import module_4215_mod from "module_4215" /* 4215 */;
-import requiredArgs_mod from "requiredArgs" /* 3949 */;
+import _typeof_mod from "module_3947" /* 3947 */;
+import requiredArgs_mod from "requiredArgs" /* 3948 */;
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -13,35 +12,28 @@ if (!_typeof) {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
-let module_4215 = module_4215_mod;
-if (!module_4215) {
-  const obj2 = { default: module_4215 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4215;
-}
-module_4215 = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp7 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp7;
+requiredArgs = tmp5;
 
-export default function getDaysInYear(arg0) {
+export default function isLeapYear(arg0) {
   requiredArgs.default(1, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  if ("Invalid Date" === String(date)) {
-    return NaN;
-  } else {
-    let num = 365;
-    if (module_4215.default(defaultResult1)) {
-      num = 366;
+  const fullYear = _typeof.default(arg0).getFullYear();
+  const result = fullYear % 400;
+  let tmp4 = result === 0;
+  if (result !== 0) {
+    const result1 = fullYear % 4;
+    let tmp6 = result1 === 0;
+    if (result1 === 0) {
+      tmp6 = fullYear % 100 !== 0;
     }
-    return num;
+    tmp4 = tmp6;
   }
-  date = new Date(defaultResult1);
+  return tmp4;
 };
 export default exports.default;

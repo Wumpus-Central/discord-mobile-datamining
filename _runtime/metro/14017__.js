@@ -1,20 +1,14 @@
 // === Module 14017: ? ===
 
 // Module 14017
-import _mod13992 from "module_13992" /* 13992 */;
+import _mod14018 from "module_14018" /* 14018 */;
 
-if (_mod13992) {
-  let fn = call.bind(call);
-} else {
-  fn = () => {
-    const apply = call.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(call);
-    } else {
-      applyArgumentsResult = apply(call, arguments);
-    }
-    return applyArgumentsResult;
-  };
-}
 
-export default fn;
+export default (obj) => {
+  if (typeof obj === "object") {
+    let tmp2 = null !== obj;
+  } else {
+    tmp2 = _mod14018(obj);
+  }
+  return tmp2;
+};

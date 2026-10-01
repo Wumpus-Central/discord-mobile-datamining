@@ -1,13 +1,29 @@
 // === Module 6413: ? ===
 
 // Module 6413
-const fn = function t(arg0, velocityY, substr) {
-  closure_0 = arg0 + 0.2 * velocityY;
-  closure_1 = min.apply(null, substr.map((item) => Math.abs(closure_0 - item)));
-  return substr.filter((item) => Math.abs(closure_0 - item) === closure_1)[0];
-};
-fn.__closure = {};
-fn.__workletHash = 8913698095371;
-fn.__initData = { code: "function pnpm_snapPointTs1(value,velocity,points){const point=value+0.2*velocity;const deltas=points.map(function(p){return Math.abs(point-p);});const minDelta=Math.min.apply(null,deltas);return points.filter(function(p){return Math.abs(point-p)===minDelta;})[0];}" };
+import cancelAnimation from "cancelAnimation" /* 1638 */;
+import value2 from "value2" /* 6232 */;
+import _mod6236 from "module_6236" /* 6236 */;
+import BottomSheetContext from "BottomSheetContext" /* 6242 */;
+import noop from "module_19" /* 19 */;
 
-export const snapPoint = fn;
+require = fn;
+const useMemo = fn(19).useMemo;
+const jsx = fn(21).jsx;
+
+export default function _default(children) {
+  let useGestureEventsHandlersDefault = children.gestureEventsHandlersHook;
+  if (useGestureEventsHandlersDefault === undefined) {
+    useGestureEventsHandlersDefault = _mod6236.useGestureEventsHandlersDefault;
+  }
+  const sharedValue = cancelAnimation.useSharedValue(value2.GESTURE_SOURCE.UNDETERMINED);
+  const bottomSheetInternal = _mod6236.useBottomSheetInternal();
+  ({ animatedHandleGestureState, animatedContentGestureState } = bottomSheetInternal);
+  ({ handleOnStart, handleOnChange, handleOnEnd, handleOnFinalize } = useGestureEventsHandlersDefault());
+  const gestureEventsHandlersDefault = useGestureEventsHandlersDefault();
+  const gestureHandler = _mod6236.useGestureHandler(value2.GESTURE_SOURCE.CONTENT, animatedContentGestureState, sharedValue, handleOnStart, handleOnChange, handleOnEnd, handleOnFinalize);
+  const gestureHandler1 = _mod6236.useGestureHandler(value2.GESTURE_SOURCE.HANDLE, animatedHandleGestureState, sharedValue, handleOnStart, handleOnChange, handleOnEnd, handleOnFinalize);
+  const items = [gestureHandler, gestureHandler1, sharedValue];
+  value = useMemo(() => ({ contentPanGestureHandler: gestureHandler, handlePanGestureHandler: gestureHandler1, animatedGestureSource: sharedValue }), items);
+  return jsx(BottomSheetContext.BottomSheetGestureHandlersContext.Provider, { value, children: children.children });
+};

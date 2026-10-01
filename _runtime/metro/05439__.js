@@ -1,38 +1,20 @@
 // === Module 5439: ? ===
 
 // Module 5439
-import _mod26 from "module_26" /* 26 */;
-import renderElement from "renderElement" /* 114 */;
-import get_ActivityIndicator from "module_17" /* 17 */;
-import weakSet from "weakSet" /* 106 */;
-import module_65 from "module_65" /* 65 */;
+import _modDef5440 from "module_5440" /* 5440 */;
+import noop from "module_19" /* 19 */;
 
-({ codegenNativeCommands, codegenNativeComponent } = get_ActivityIndicator);
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSSearchBar", directEventTypes: { topSearchFocus: { registrationName: "onSearchFocus" }, topSearchBlur: { registrationName: "onSearchBlur" }, topSearchButtonPress: { registrationName: "onSearchButtonPress" }, topCancelButtonPress: { registrationName: "onCancelButtonPress" }, topChangeText: { registrationName: "onChangeText" }, topClose: { registrationName: "onClose" }, topOpen: { registrationName: "onOpen" } }, validAttributes: null };
-const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onSearchFocus: true, onSearchBlur: true, onSearchButtonPress: true, onCancelButtonPress: true, onChangeText: true, onClose: true, onOpen: true }));
-__INTERNAL_VIEW_CONFIG.validAttributes = { hideWhenScrolling: true, autoCapitalize: true, placeholder: true, placement: true, allowToolbarIntegration: true, obscureBackground: true, hideNavigationBar: true, cancelButtonText: true, barTintColor: _mod26.colorAttribute, tintColor: _mod26.colorAttribute, textColor: _mod26.colorAttribute, autoFocus: true, disableBackButtonOverride: true, inputType: true, hintTextColor: _mod26.colorAttribute, headerIconColor: _mod26.colorAttribute, shouldShowHintSearchIcon: true };
+const StyleSheet = fn(17).StyleSheet;
+const jsx = fn(21).jsx;
+const styles = StyleSheet.create({ flex: { flex: 1 } });
 
-export default module_65.get("RNSSearchBar", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
-export const Commands = {
-  blur(arg0) {
-    renderElement.dispatchCommand(arg0, "blur", []);
-  },
-  focus(arg0) {
-    renderElement.dispatchCommand(arg0, "focus", []);
-  },
-  clearText(arg0) {
-    renderElement.dispatchCommand(arg0, "clearText", []);
-  },
-  toggleCancelButton(arg0, arg1) {
-    const items = [arg1];
-    renderElement.dispatchCommand(arg0, "toggleCancelButton", items);
-  },
-  setText(arg0, arg1) {
-    const items = [arg1];
-    renderElement.dispatchCommand(arg0, "setText", items);
-  },
-  cancelSearch(arg0) {
-    renderElement.dispatchCommand(arg0, "cancelSearch", []);
-  }
+export const SafeAreaView = function SafeAreaView(style) {
+  const obj = {};
+  const merged = Object.assign(style);
+  const items = [styles.flex, style.style];
+  obj.style = items;
+  const rect = { top: false, bottom: false, left: false, right: false };
+  const merged1 = Object.assign(style.edges);
+  obj.edges = rect;
+  return jsx(_modDef5440, {});
 };

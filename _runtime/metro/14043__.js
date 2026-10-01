@@ -1,13 +1,15 @@
 // === Module 14043: ? ===
 
 // Module 14043
-import _mod13991 from "module_13991" /* 13991 */;
-import _mod14000 from "module_14000" /* 14000 */;
-import all from "module_14010" /* 14010 */;
+import _mod14041 from "module_14041" /* 14041 */;
 
-let closure_0 = _mod13991(Function.toString);
-if (!all(_mod14000.inspectSource)) {
-  _mod14000.inspectSource = (arg0) => closure_0(arg0);
-}
 
-export default _mod14000.inspectSource;
+export default (arg0, arg1) => {
+  const tmp = _mod14041(arg0);
+  if (tmp < 0) {
+    let tmp3 = max(tmp + arg1, 0);
+  } else {
+    tmp3 = min(tmp, arg1);
+  }
+  return tmp3;
+};

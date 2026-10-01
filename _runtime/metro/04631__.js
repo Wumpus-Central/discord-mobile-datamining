@@ -1,18 +1,18 @@
 // === Module 4631: ? ===
 
 // Module 4631
-import c from "c" /* 4616 */;
-import _mod4629 from "module_4629" /* 4629 */;
+import c from "c" /* 4615 */;
+import _mod4628 from "module_4628" /* 4628 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = arg1;
-function getStringProperty(stringProperty, arg1) {
-  return stringProperty.stringProperty(arg1);
+function getBooleanProperty(booleanProperty, arg1) {
+  return booleanProperty.booleanProperty(arg1);
 }
 
-export const useRiveString = function useRiveString(LVL, instance) {
+export const useRiveBoolean = function useRiveBoolean(reducedMotion, instance) {
   const cResult = c.c(4);
-  [tmp3, tmp4, tmp5] = _mod4629.useRiveProperty(instance, LVL, getStringProperty);
+  [tmp3, tmp4, tmp5] = _mod4628.useRiveProperty(instance, reducedMotion, getBooleanProperty);
   if (cResult[0] === tmp5) {
     if (cResult[1] === tmp4) {
       if (cResult[2] === tmp3) {

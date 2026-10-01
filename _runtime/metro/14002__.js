@@ -1,16 +1,14 @@
 // === Module 14002: ? ===
 
 // Module 14002
-import prop_mod from "module_14003" /* 14003 */;
+import _mod14003 from "module_14003" /* 14003 */;
 
-let prop = prop_mod;
-if (prop) {
-  const _Symbol = Symbol;
-  prop = !Symbol.sham;
-}
-if (prop) {
-  const _Symbol2 = Symbol;
-  prop = typeof Symbol.iterator === "symbol";
-}
 
-export default prop;
+export default (arg0) => {
+  if (_mod14003(arg0)) {
+    const tmp4 = new TypeError("Can't call method on " + arg0);
+    throw tmp4;
+  } else {
+    return arg0;
+  }
+};

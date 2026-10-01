@@ -1,29 +1,19 @@
 // === Module 6353: ? ===
 
 // Module 6353
-import _mod6312 from "module_6312" /* 6312 */;
-import DEFAULT_PROPS_TRANSFORMER from "DEFAULT_PROPS_TRANSFORMER" /* 6337 */;
-import _mod6354 from "module_6354" /* 6354 */;
-import _mod6356 from "module_6356" /* 6356 */;
+import ComposedGestureName from "ComposedGestureName" /* 6318 */;
+import DEFAULT_PROPS_TRANSFORMER from "DEFAULT_PROPS_TRANSFORMER" /* 6327 */;
+import _mod6342 from "module_6342" /* 6342 */;
 
 require = arg1;
 const dependencyMap = arg6;
+let closure_2 = {};
 
-export const useGestureCallbacks = function useGestureCallbacks(handlerTag, disableReanimated) {
-  const memoizedGestureCallbacks = DEFAULT_PROPS_TRANSFORMER.useMemoizedGestureCallbacks(disableReanimated);
-  let reanimatedEventHandler;
-  if (!disableReanimated.disableReanimated) {
-    const Reanimated = _mod6312.Reanimated;
-    let handler;
-    if (Reanimated != null) {
-      handler = Reanimated.useHandler(memoizedGestureCallbacks);
-    }
-    const tmpResult = _mod6356;
-    reanimatedEventHandler = tmpResult.useReanimatedEventHandler(handlerTag, memoizedGestureCallbacks, handler, disableReanimated.changeEventCalculator, disableReanimated.fillInDefaultValues);
+export const useNativeGesture = function useNativeGesture() {
+  let tmp = gestureHandlerProps;
+  if (gestureHandlerProps === undefined) {
+    tmp = closure_2;
   }
-  let animatedEventHandler;
-  if (disableReanimated.dispatchesAnimatedEvents) {
-    animatedEventHandler = disableReanimated.onUpdate;
-  }
-  return { jsEventHandler: _mod6354.useGestureEventHandler(handlerTag, memoizedGestureCallbacks, disableReanimated), reanimatedEventHandler, animatedEventHandler };
+  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp);
+  return _mod6342.useGesture(ComposedGestureName.SingleGestureName.Native, clonedAndRemappedConfig);
 };

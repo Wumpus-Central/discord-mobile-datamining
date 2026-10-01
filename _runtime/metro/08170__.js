@@ -1,13 +1,15 @@
 // === Module 8170: ? ===
 
 // Module 8170
+import _modDef8119 from "module_8119" /* 8119 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-const FeSpotLight = fn;
+const LinearGradient = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,14 +29,15 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeSpotLight {
+const jsx = fn(21).jsx;
+class LinearGradient {
   constructor() {
     self = this;
-    tmp = c2(this, FeSpotLight);
+    tmp = c2(this, LinearGradient);
     tmp2 = closure_4;
-    obj = closure_4(FeSpotLight);
+    obj = closure_4(LinearGradient);
     tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    if (metroRequire()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -47,17 +50,24 @@ class FeSpotLight {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeSpotLight, fn(19).Component);
+_inherits(LinearGradient, _modDef8119);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeSpotLight(8122).warnUnimplementedFilter();
-    return null;
+    const self = this;
+    const props = this.props;
+    const merged = Object.assign({ x1: props.x1, y1: props.y1, x2: props.x2, y2: props.y2 });
+    const merged1 = Object.assign(LinearGradient(8172)(props, this));
+    return jsx(LinearGradient(8171), {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    });
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeSpotLight, items);
-importDefaultResultResult.displayName = "FeSpotLight";
-importDefaultResultResult.defaultProps = {};
+const importDefaultResultResult = _createClass(LinearGradient, items);
+importDefaultResultResult.displayName = "LinearGradient";
+importDefaultResultResult.defaultProps = { x1: "0%", y1: "0%", x2: "100%", y2: "0%" };
 
 export default importDefaultResultResult;

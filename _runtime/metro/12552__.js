@@ -1,95 +1,71 @@
 // === Module 12552: ? ===
 
 // Module 12552
-import _mod12514 from "module_12514" /* 12514 */;
-import spanTimeInputToSeconds from "spanTimeInputToSeconds" /* 12519 */;
-import _mod12542 from "module_12542" /* 12542 */;
+import _mod12526 from "module_12526" /* 12526 */;
+import _mod12531 from "module_12531" /* 12531 */;
+import _mod12543 from "module_12543" /* 12543 */;
+import _mod12544 from "module_12544" /* 12544 */;
+import ScopeClass from "ScopeClass" /* 12546 */;
 
 require = arg1;
 const dependencyMap = arg6;
 
-export const logSpanEnd = function logSpanEnd(spanContext) {
-  if (_mod12542.DEBUG_BUILD) {
-    const spanToJSONResult = spanTimeInputToSeconds.spanToJSON(spanContext);
-    const description = spanToJSONResult.description;
-    let str = "< unknown name >";
-    if (undefined !== description) {
-      str = description;
+export const getClient = function getClient() {
+  const mainCarrier = _mod12543.getMainCarrier();
+  const asyncContextStrategy = _mod12544.getAsyncContextStrategy(mainCarrier);
+  const currentScope = asyncContextStrategy.getCurrentScope();
+  return currentScope.getClient();
+};
+export const getCurrentScope = function getCurrentScope() {
+  const mainCarrier = _mod12543.getMainCarrier();
+  const asyncContextStrategy = _mod12544.getAsyncContextStrategy(mainCarrier);
+  return asyncContextStrategy.getCurrentScope();
+};
+export const getGlobalScope = function getGlobalScope() {
+  return _mod12526.getGlobalSingleton("globalScope", () => {
+    const scope = new ScopeClass.Scope();
+    return scope;
+  });
+};
+export const getIsolationScope = function getIsolationScope() {
+  const mainCarrier = _mod12543.getMainCarrier();
+  const asyncContextStrategy = _mod12544.getAsyncContextStrategy(mainCarrier);
+  return asyncContextStrategy.getIsolationScope();
+};
+export const getTraceContextFromScope = function getTraceContextFromScope(getPropagationContext) {
+  const propagationContext = getPropagationContext.getPropagationContext();
+  ({ traceId, spanId, parentSpanId } = propagationContext);
+  return _mod12531.dropUndefinedKeys({ trace_id, span_id, parent_span_id });
+};
+export const withIsolationScope = function withIsolationScope() {
+  const items = [...arguments];
+  const mainCarrier = _mod12543.getMainCarrier();
+  const asyncContextStrategy = _mod12544.getAsyncContextStrategy(mainCarrier);
+  if (2 === items.length) {
+    [tmp2, tmp3] = items;
+    if (tmp2) {
+      let result = asyncContextStrategy.withSetIsolationScope(tmp2, tmp3);
+    } else {
+      result = asyncContextStrategy.withIsolationScope(tmp3);
     }
-    const op = spanToJSONResult.op;
-    let str2 = "< unknown op >";
-    if (undefined !== op) {
-      str2 = op;
-    }
-    const spanId = spanContext.spanContext().spanId;
-    const tmpResult = spanTimeInputToSeconds;
-    let str3 = "";
-    if (tmpResult2.getRootSpan(spanContext) === spanContext) {
-      str3 = "root ";
-    }
-    const _HermesInternal = HermesInternal;
-    const combined = "[Tracing] Finishing \"" + str2 + "\" " + str3 + "span \"" + str + "\" with ID " + spanId;
-    const logger = _mod12514.logger;
-    logger.log(combined);
-    tmpResult2 = spanTimeInputToSeconds;
+    return result;
+  } else {
+    return asyncContextStrategy.withIsolationScope(items[0]);
   }
 };
-export const logSpanStart = function logSpanStart(spanContext) {
-  if (_mod12542.DEBUG_BUILD) {
-    const spanToJSONResult = spanTimeInputToSeconds.spanToJSON(spanContext);
-    const description = spanToJSONResult.description;
-    let str = "< unknown name >";
-    if (undefined !== description) {
-      str = description;
+export const withScope = function withScope() {
+  const items = [...arguments];
+  const mainCarrier = _mod12543.getMainCarrier();
+  const asyncContextStrategy = _mod12544.getAsyncContextStrategy(mainCarrier);
+  if (2 === items.length) {
+    [tmp2, tmp3] = items;
+    if (tmp2) {
+      let withSetScopeResult = asyncContextStrategy.withSetScope(tmp2, tmp3);
+    } else {
+      withSetScopeResult = asyncContextStrategy.withScope(tmp3);
     }
-    const op = spanToJSONResult.op;
-    let str2 = "< unknown op >";
-    if (undefined !== op) {
-      str2 = op;
-    }
-    const parent_span_id = spanToJSONResult.parent_span_id;
-    const tmpResult = spanTimeInputToSeconds;
-    const tmpResult4 = spanTimeInputToSeconds;
-    const spanIsSampledResult = spanTimeInputToSeconds.spanIsSampled(spanContext);
-    const rootSpan = spanTimeInputToSeconds.getRootSpan(spanContext);
-    let str3 = "unsampled";
-    if (spanIsSampledResult) {
-      str3 = "sampled";
-    }
-    let str5 = "";
-    if (rootSpan === spanContext) {
-      str5 = "root ";
-    }
-    const _HermesInternal = HermesInternal;
-    const _HermesInternal2 = HermesInternal;
-    const combined = "[Tracing] Starting " + str3 + " " + str5 + "span";
-    const items = ["op: " + str2, , ];
-    const _HermesInternal3 = HermesInternal;
-    items[1] = "name: " + str;
-    const _HermesInternal4 = HermesInternal;
-    items[2] = "ID: " + spanContext.spanContext().spanId;
-    if (parent_span_id) {
-      const _HermesInternal5 = HermesInternal;
-      items.push("parent ID: " + parent_span_id);
-    }
-    if (rootSpan !== spanContext) {
-      const tmpResult6 = spanTimeInputToSeconds;
-      ({ op: op2, description: description2 } = spanTimeInputToSeconds.spanToJSON(rootSpan));
-      const _HermesInternal6 = HermesInternal;
-      items.push("root ID: " + rootSpan.spanContext().spanId);
-      if (op2) {
-        const _HermesInternal7 = HermesInternal;
-        items.push("root op: " + op2);
-      }
-      if (description2) {
-        const _HermesInternal8 = HermesInternal;
-        items.push("root description: " + description2);
-      }
-      const spanToJSONResult1 = spanTimeInputToSeconds.spanToJSON(rootSpan);
-    }
-    const logger = _mod12514.logger;
-    const _HermesInternal9 = HermesInternal;
-    logger.log("" + combined + "\n  " + items.join("\n  "));
-    const tmpResult5 = spanTimeInputToSeconds;
+    return withSetScopeResult;
+  } else {
+    return asyncContextStrategy.withScope(items[0]);
   }
 };

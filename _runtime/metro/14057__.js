@@ -1,9 +1,10 @@
 // === Module 14057: ? ===
 
 // Module 14057
-import _mod14058 from "module_14058" /* 14058 */;
-import _mod14065 from "module_14065" /* 14065 */;
+import _mod14035 from "module_14035" /* 14035 */;
+import _mod14036 from "module_14036" /* 14036 */;
 
 
-export const URL = _mod14058;
-export const URLSearchParams = _mod14065;
+export default Object.keys || (function keys(arg0) {
+  return _mod14036(arg0, _mod14035);
+});

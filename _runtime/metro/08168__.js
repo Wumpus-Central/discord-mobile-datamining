@@ -1,13 +1,16 @@
 // === Module 8168: ? ===
 
 // Module 8168
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _modDef8119 from "module_8119" /* 8119 */;
+import _modDef8169 from "module_8169" /* 8169 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-const FePointLight = fn;
+const Line = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,14 +30,16 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FePointLight {
+_possibleConstructorReturnDefault;
+const jsx = fn(21).jsx;
+class Line {
   constructor() {
     self = this;
-    tmp = c2(this, FePointLight);
-    tmp2 = closure_4;
-    obj = closure_4(FePointLight);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    tmp = closure_3(this, Line);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(Line);
+    tmp3 = closure_4;
+    if (closure_7()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -47,17 +52,36 @@ class FePointLight {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FePointLight, fn(19).Component);
+_inherits(Line, _modDef8119);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FePointLight(8122).warnUnimplementedFilter();
-    return null;
+    const self = this;
+    const props = this.props;
+    const obj = {};
+    ({ x1, y1, x2, y2 } = props);
+    const merged = Object.assign(Line(8110).extract(this, props));
+    obj.x1 = x1;
+    obj.y1 = y1;
+    obj.x2 = x2;
+    obj.y2 = y2;
+    const obj2 = Line(8110);
+    const obj3 = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    };
+    const merged1 = Object.assign(obj);
+    return jsx(_modDef8169, {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    });
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FePointLight, items);
-importDefaultResultResult.displayName = "FePointLight";
-importDefaultResultResult.defaultProps = {};
+const importDefaultResultResult = _createClass(Line, items);
+importDefaultResultResult.displayName = "Line";
+importDefaultResultResult.defaultProps = { x1: 0, y1: 0, x2: 0, y2: 0 };
 
 export default importDefaultResultResult;

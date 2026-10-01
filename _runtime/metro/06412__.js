@@ -1,11 +1,7 @@
 // === Module 6412: ? ===
 
 // Module 6412
-const fn = function n(sum1, initialPosition, value3) {
-  return Math.min(Math.max(initialPosition, sum1), value3);
-};
-fn.__closure = {};
-fn.__workletHash = 4405247003092;
-fn.__initData = { code: "function pnpm_clampTs1(value,lowerBound,upperBound){return Math.min(Math.max(lowerBound,value),upperBound);}" };
+import _modDef6413 from "module_6413" /* 6413 */;
 
-export const clamp = fn;
+
+export default _modDef6413;

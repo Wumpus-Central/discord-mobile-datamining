@@ -1,36 +1,37 @@
 // === Module 4231: ? ===
 
 // Module 4231
-import _mod3953 from "module_3953" /* 3953 */;
-import startOfWeek_mod from "startOfWeek" /* 4107 */;
-import _typeof_mod from "module_3948" /* 3948 */;
-import module_3952_mod from "module_3952" /* 3952 */;
-import requiredArgs_mod from "requiredArgs" /* 3949 */;
+import _mod3952 from "module_3952" /* 3952 */;
+import module_4209_mod from "module_4209" /* 4209 */;
+import module_4210_mod from "module_4210" /* 4210 */;
+import startOfMonth_mod from "startOfMonth" /* 4163 */;
+import requiredArgs_mod from "requiredArgs" /* 3948 */;
+import module_3951_mod from "module_3951" /* 3951 */;
 
-let startOfWeek = startOfWeek_mod;
-if (!startOfWeek) {
-  const obj = { default: startOfWeek };
+let module_4209 = module_4209_mod;
+if (!module_4209) {
+  const obj = { default: module_4209 };
   let tmp3 = obj;
 } else {
-  tmp3 = startOfWeek;
+  tmp3 = module_4209;
 }
-startOfWeek = tmp3;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj2 = { default: _typeof };
+module_4209 = tmp3;
+let module_4210 = module_4210_mod;
+if (!module_4210) {
+  const obj2 = { default: module_4210 };
   let tmp5 = obj2;
 } else {
-  tmp5 = _typeof;
+  tmp5 = module_4210;
 }
-_typeof = tmp5;
-let module_3952 = module_3952_mod;
-if (!module_3952) {
-  const obj3 = { default: module_3952 };
+module_4210 = tmp5;
+let startOfMonth = startOfMonth_mod;
+if (!startOfMonth) {
+  const obj3 = { default: startOfMonth };
   let tmp7 = obj3;
 } else {
-  tmp7 = module_3952;
+  tmp7 = startOfMonth;
 }
-module_3952 = tmp7;
+startOfMonth = tmp7;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj4 = { default: requiredArgs };
@@ -39,84 +40,83 @@ if (!requiredArgs) {
   tmp9 = requiredArgs;
 }
 requiredArgs = tmp9;
+let module_3951 = module_3951_mod;
+if (!module_3951) {
+  const obj5 = { default: module_3951 };
+  let tmp11 = obj5;
+} else {
+  tmp11 = module_3951;
+}
+module_3951 = tmp11;
 
-export default function getWeekYear(arg0, firstWeekContainsDate) {
+export default function getWeekOfMonth(arg0, weekStartsOn) {
   requiredArgs.default(1, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const fullYear = defaultResult1.getFullYear();
-  const defaultOptions = _mod3953.getDefaultOptions();
-  let prop;
-  if (null != firstWeekContainsDate) {
-    prop = firstWeekContainsDate.firstWeekContainsDate;
+  const defaultOptions = _mod3952.getDefaultOptions();
+  weekStartsOn = undefined;
+  if (null != weekStartsOn) {
+    weekStartsOn = weekStartsOn.weekStartsOn;
   }
-  if (null === prop) {
-    let prop1;
-    if (null != firstWeekContainsDate) {
-      locale = firstWeekContainsDate.locale;
+  if (null === weekStartsOn) {
+    let weekStartsOn1;
+    if (null != weekStartsOn) {
+      locale = weekStartsOn.locale;
       if (null !== locale) {
         if (undefined !== locale) {
           const options = locale.options;
           if (null !== options) {
             if (undefined !== options) {
-              prop1 = options.firstWeekContainsDate;
+              weekStartsOn1 = options.weekStartsOn;
             }
           }
         }
       }
     }
-    prop = prop1;
+    weekStartsOn = weekStartsOn1;
   }
-  if (null === prop) {
-    prop = defaultOptions.firstWeekContainsDate;
+  if (null === weekStartsOn) {
+    weekStartsOn = defaultOptions.weekStartsOn;
   }
-  if (null === prop) {
+  if (null === weekStartsOn) {
     const locale2 = defaultOptions.locale;
-    let prop2;
+    let weekStartsOn2;
     if (null !== locale2) {
       if (undefined !== locale2) {
         const options2 = locale2.options;
         if (null !== options2) {
           if (undefined !== options2) {
-            prop2 = options2.firstWeekContainsDate;
+            weekStartsOn2 = options2.weekStartsOn;
           }
         }
       }
     }
-    prop = prop2;
+    weekStartsOn = weekStartsOn2;
   }
-  let num = 1;
-  if (null !== prop) {
-    num = 1;
-    if (undefined !== prop) {
-      num = prop;
+  let num = 0;
+  if (null !== weekStartsOn) {
+    num = 0;
+    if (undefined !== weekStartsOn) {
+      num = weekStartsOn;
     }
   }
-  const defaultResult2 = module_3952.default(num);
-  if (defaultResult2 >= 1) {
-    if (defaultResult2 <= 7) {
-      const _Date = Date;
-      const date = new Date(0);
-      date.setFullYear(fullYear + 1, 0, defaultResult2);
-      date.setHours(0, 0, 0, 0);
-      const _Date2 = Date;
-      const date1 = new Date(0);
-      date1.setFullYear(fullYear, 0, defaultResult2);
-      date1.setHours(0, 0, 0, 0);
-      const defaultResult3 = startOfWeek.default(date, firstWeekContainsDate);
-      const time = defaultResult1.getTime();
-      if (time >= defaultResult3.getTime()) {
-        let sum = fullYear + 1;
+  const defaultResult1 = module_3951.default(num);
+  if (defaultResult1 >= 0) {
+    if (defaultResult1 <= 6) {
+      const defaultResult2 = module_4209.default(arg0);
+      const _isNaN = isNaN;
+      if (isNaN(defaultResult2)) {
+        return NaN;
       } else {
-        const time1 = defaultResult1.getTime();
-        sum = fullYear;
-        if (time1 < defaultResult4.getTime()) {
-          sum = fullYear - 1;
+        const diff = defaultResult1 - module_4210.default(startOfMonth.default(arg0));
+        let sum = diff;
+        if (diff <= 0) {
+          sum = diff + 7;
         }
+        const _Math = Math;
+        return Math.ceil((defaultResult2 - sum) / 7) + 1;
       }
-      return sum;
     }
   }
-  const rangeError = new RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
+  const rangeError = new RangeError("weekStartsOn must be between 0 and 6 inclusively");
   throw rangeError;
 };
 export default exports.default;

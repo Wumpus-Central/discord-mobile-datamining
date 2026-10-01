@@ -1,14 +1,18 @@
 // === Module 14014: ? ===
 
 // Module 14014
-import _mod13995 from "module_13995" /* 13995 */;
-import _mod14015 from "module_14015" /* 14015 */;
+import _mod13999 from "module_13999" /* 13999 */;
 
+let c0 = 0;
+let closure_1 = Math.random();
+let closure_2 = _mod13999(1.toString);
 
-export default (arg0, arg1) => {
-  let tmp4;
-  if (!_mod13995(arg0[arg1])) {
-    tmp4 = _mod14015(tmp);
+export default (arg0) => {
+  let str = "";
+  if (undefined !== arg0) {
+    str = arg0;
   }
-  return tmp4;
+  const sum = c0 + 1;
+  c0 = sum;
+  return `Symbol(${str}` + ")_" + closure_2(sum + closure_1, 36);
 };

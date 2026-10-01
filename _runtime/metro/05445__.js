@@ -1,15 +1,17 @@
 // === Module 5445: ? ===
 
 // Module 5445
-import _mod17 from "module_17" /* 17 */;
-import _mod26 from "module_26" /* 26 */;
-import weakSet from "weakSet" /* 106 */;
-import module_65 from "module_65" /* 65 */;
+import _modDef5420 from "module_5420" /* 5420 */;
+import noop from "module_19" /* 19 */;
 
-const codegenNativeComponent = _mod17.codegenNativeComponent;
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSScreenStack", directEventTypes: { topFinishTransitioning: { registrationName: "onFinishTransitioning" } }, validAttributes: null };
-const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onFinishTransitioning: true }));
-__INTERNAL_VIEW_CONFIG.validAttributes = { nativeContainerBackgroundColor: _mod26.colorAttribute };
 
-export default module_65.get("RNSScreenStack", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default function useTransitionProgress() {
+  const context = noop.useContext(_modDef5420);
+  if (undefined === context) {
+    const _Error = Error;
+    const error = new Error("Couldn't find values for transition progress. Are you inside a screen in Native Stack?");
+    throw error;
+  } else {
+    return context;
+  }
+};

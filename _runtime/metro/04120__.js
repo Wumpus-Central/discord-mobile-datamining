@@ -1,8 +1,8 @@
 // === Module 4120: ? ===
 
 // Module 4120
-import _typeof_mod from "module_3948" /* 3948 */;
-import requiredArgs_mod from "requiredArgs" /* 3949 */;
+import _typeof_mod from "module_3947" /* 3947 */;
+import requiredArgs_mod from "requiredArgs" /* 3948 */;
 
 function _typeof(arg0) {
   if (typeof Symbol === "function") {
@@ -46,7 +46,7 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function max(arg0) {
+export default function min(arg0) {
   requiredArgs.default(1, arguments);
   if (!arg0) {
     if ("object" === _typeof(arg0)) {
@@ -64,11 +64,10 @@ export default function max(arg0) {
   }
   const item = arr.forEach((item) => {
     defaultResult = _typeof.default(item);
-    let isNaNResult = undefined === defaultResult || defaultResult < defaultResult;
+    let isNaNResult = undefined === defaultResult || defaultResult > defaultResult;
     if (!isNaNResult) {
       const _isNaN = isNaN;
-      const _Number = Number;
-      isNaNResult = isNaN(Number(defaultResult));
+      isNaNResult = isNaN(defaultResult.getDate());
     }
   });
   let date1 = _typeof;

@@ -1,16 +1,15 @@
 // === Module 4943: ? ===
 
 // Module 4943
-import _mod545 from "module_545" /* 545 */;
-import object from "object" /* 4944 */;
-import _mod4945 from "module_4945" /* 4945 */;
+import _process from "_process" /* 539 */;
+import baseUnary from "baseUnary" /* 540 */;
+import baseIsMap from "baseIsMap" /* 4944 */;
 
+const tmp = _process && _process.isMap;
+if (tmp) {
+  let _module = baseUnary(tmp);
+} else {
+  _module = baseIsMap;
+}
 
-export default function initCloneObject(arg0) {
-  if (typeof arg0.constructor === "function") {
-    if (!_mod545(arg0)) {
-      object(_mod4945(arg0));
-    }
-    return {};
-  }
-};
+export default _module;

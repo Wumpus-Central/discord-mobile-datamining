@@ -1,23 +1,37 @@
 // === Module 10426: ? ===
 
 // Module 10426
-import _mod10427 from "module_10427" /* 10427 */;
-import _mod10430 from "module_10430" /* 10430 */;
-import _mod10434 from "module_10434" /* 10434 */;
-import _mod10435 from "module_10435" /* 10435 */;
-import CarouselLayout from "CarouselLayout" /* 10436 */;
 import noop from "module_19" /* 19 */;
 
-require = fn;
-const jsx = fn(21).jsx;
 
-export default noop.forwardRef((defaultIndex, ref) => {
-  const initProps = _mod10427.useInitProps(defaultIndex);
-  const commonVariables = _mod10430.useCommonVariables(initProps);
-  const obj4 = {};
-  const merged = Object.assign(initProps);
-  obj4.dataLength = initProps.dataLength;
-  const propsErrorBoundary = _mod10434.usePropsErrorBoundary(obj4);
-  const obj5 = { value: { props: initProps, common: commonVariables }, children: jsx(CarouselLayout.CarouselLayout, { ref }) };
-  return jsx(_mod10435.GlobalStateProvider, { value: { props: initProps, common: commonVariables }, children: jsx(CarouselLayout.CarouselLayout, { ref }) });
-});
+export const usePropsErrorBoundary = function usePropsErrorBoundary(arg0) {
+  closure_0 = arg0;
+  const items = [arg0];
+  const effect = noop.useEffect(() => {
+    const size = closure_0;
+    ({ defaultIndex, dataLength } = closure_0);
+    if (typeof defaultIndex === "number") {
+      if (dataLength > 0) {
+        const _Error3 = Error;
+        const error = new Error("DefaultIndex must be in the range of data length.");
+        throw error;
+      }
+    }
+    if (!size.mode) {
+      if (!size.vertical) {
+        if (!size.width) {
+          const _Error = Error;
+          const error1 = new Error("`width` must be specified for horizontal carousels.");
+          throw error1;
+        }
+      }
+      if (size.vertical) {
+        if (!size.height) {
+          const _Error2 = Error;
+          const error2 = new Error("`height` must be specified for vertical carousels.");
+          throw error2;
+        }
+      }
+    }
+  }, items);
+};

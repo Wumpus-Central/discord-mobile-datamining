@@ -1,7 +1,17 @@
 // === Module 15659: ? ===
 
 // Module 15659
-import registerAsset from "module_1121" /* 1121 */;
+import _mod637 from "module_637" /* 637 */;
+import _mod654 from "module_654" /* 654 */;
+import noop_mod from "module_15660" /* 15660 */;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/collectibles/native/images", width: 375, height: 162, scales: [1], hash: "8c6551e987e65957d7c90c18eddac8f1", name: "featured_page_footer_dark", type: "png" });
+if (_mod637) {
+  const _module = _mod654;
+  const items = [, -0];
+  const tmp5 = new _mod637(items);
+  if (1 / _module(tmp5)[1] === Infinity) {
+    let noop = (arg0) => new _mod637(arg0);
+  }
+  module.exports = noop;
+}
+let noop = noop_mod;

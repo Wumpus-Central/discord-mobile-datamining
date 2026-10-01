@@ -1,55 +1,47 @@
 // === Module 6312: ? ===
 
 // Module 6312
-import cancelAnimation from "cancelAnimation" /* 1638 */;
-import reactNativeWorkletsCompat from "reactNativeWorkletsCompat" /* 4595 */;
-import tagMessage from "tagMessage" /* 6274 */;
-import ghQueueMicrotask from "ghQueueMicrotask" /* 6301 */;
-import _mod6313 from "module_6313" /* 6313 */;
+import _mod19 from "module_19" /* 19 */;
+import transformIntoHandlerTags from "transformIntoHandlerTags" /* 6290 */;
+import MountRegistry2 from "MountRegistry" /* 6293 */;
 
-try {
-  const _module = cancelAnimation;
-  try {
-    const _module1 = reactNativeWorkletsCompat;
-    if (_module1 != null) {
-      const fn = function t() {
-
-      };
-      fn.__closure = {};
-      fn.__workletHash = 1792171573139;
-      fn.__initData = { code: "function pnpm_reanimatedWrapperTs1(){}" };
-      _module1.scheduleOnUI(fn);
+function shouldUpdateDetector(blocksHandlers, handlerTag) {
+  if (undefined === blocksHandlers) {
+    return false;
+  } else {
+    const result = transformIntoHandlerTags.transformIntoHandlerTags(blocksHandlers);
+    for (const item10012 of result) {
+      if (item10012 === arg1.handlerTag) {
+        obj2.return();
+        let flag = true;
+        return true;
+      }
     }
-    const _module2 = ghQueueMicrotask;
-    _module2.ghQueueMicrotask(() => {
-      const NativeProxy = _mod6313.NativeProxy;
-      if (!NativeProxy.installUIRuntimeBindings()) {
-        const _console = console;
-        console.warn(tagMessage.tagMessage("Failed to install UI runtime bindings. Please report this at https://github.com/software-mansion/react-native-gesture-handler/issues."));
-        const tmpResult = tagMessage;
+    return false;
+  }
+}
+const useEffect = _mod19.useEffect;
+
+export const useMountReactions = function useMountReactions(detectorUpdater, current2) {
+  closure_0 = detectorUpdater;
+  closure_1 = current2;
+  const items = [detectorUpdater, current2];
+  useEffect(() => {
+    const MountRegistry = MountRegistry2.MountRegistry;
+    return MountRegistry.addMountListener((handlerTag) => {
+      if (current2.isMounted) {
+        const attachedGestures = current2.attachedGestures;
+        const iter = attachedGestures[Symbol.iterator]();
+        const nextResult = iter.next();
+        while (iter !== undefined) {
+          let requireToFail = nextResult.config.requireToFail;
+          let simultaneousWith = nextResult.config.simultaneousWith;
+          if (!shouldUpdateDetector(nextResult.config.blocksHandlers, handlerTag)) {
+          }
+          let tmp9 = detectorUpdater();
+          iter.return();
+        }
       }
     });
-    let useSharedValue;
-    if (_module != null) {
-      useSharedValue = _module.useSharedValue;
-    }
-    let setGestureState = undefined === _module;
-    if (!setGestureState) {
-      setGestureState = _module.setGestureState;
-    }
-    if (!setGestureState) {
-      const fn2 = function o() {
-        console.warn(tagMessage.tagMessage("Please use newer version of react-native-reanimated in order to control state of the gestures."));
-      };
-      const obj = { tagMessage: tagMessage.tagMessage };
-      fn2.__closure = obj;
-      fn2.__workletHash = 3596069664305;
-      fn2.__initData = { code: "function pnpm_reanimatedWrapperTs2(){const{tagMessage}=this.__closure;console.warn(tagMessage('Please use newer version of react-native-reanimated in order to control state of the gestures.'));}" };
-      _module.setGestureState = fn2;
-      const obj2 = { code: "function pnpm_reanimatedWrapperTs2(){const{tagMessage}=this.__closure;console.warn(tagMessage('Please use newer version of react-native-reanimated in order to control state of the gestures.'));}" };
-    }
-    exports.Reanimated = _module;
-  } catch (err) {
-  }
-} catch (err) {
-}
+  }, items);
+};

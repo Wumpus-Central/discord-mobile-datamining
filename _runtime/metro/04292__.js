@@ -1,17 +1,17 @@
 // === Module 4292: ? ===
 
 // Module 4292
-import _typeof_mod from "module_3948" /* 3948 */;
-import requiredArgs_mod from "requiredArgs" /* 3949 */;
+import startOfHour_mod from "startOfHour" /* 4293 */;
+import requiredArgs_mod from "requiredArgs" /* 3948 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let startOfHour = startOfHour_mod;
+if (!startOfHour) {
+  const obj = { default: startOfHour };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = startOfHour;
 }
-_typeof = tmp3;
+startOfHour = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -21,9 +21,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isPast(date) {
-  requiredArgs.default(1, arguments);
-  const time = _typeof.default(date).getTime();
-  return time < Date.now();
+export default function isSameHour(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = startOfHour.default(arg0);
+  const time = defaultResult1.getTime();
+  return time === startOfHour.default(arg1).getTime();
 };
 export default exports.default;

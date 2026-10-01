@@ -1,306 +1,262 @@
 // === Module 12630: ? ===
 
 // Module 12630
-import stackParserFromStackParserOptions from "stackParserFromStackParserOptions" /* 12517 */;
+import errorCallback from "errorCallback" /* 12521 */;
+import _mod12532 from "module_12532" /* 12532 */;
+import _mod12549 from "module_12549" /* 12549 */;
+import _mod12557 from "module_12557" /* 12557 */;
+import _mod12596 from "module_12596" /* 12596 */;
+import _toArray from "_toArray" /* 718 */;
+import "module_12524";
+import consoleSandbox from "module_12525" /* 12525 */;
+import dateTimestampInSeconds from "module_12539" /* 12539 */;
+import __SENTRY_DEBUG__ from "module_12553" /* 12553 */;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const filenameIsInApp = function filenameIsInApp(str) {
-  let flag = arg1;
-  if (arg1 === undefined) {
-    flag = false;
-  }
-  if (!flag) {
-    let tmp = str;
-    if (str) {
-      tmp = !str.startsWith("/");
-    }
-    if (tmp) {
-      tmp = !str.match(/^[A-Z]:/);
-    }
-    if (tmp) {
-      tmp = !str.startsWith(".");
-    }
-    if (tmp) {
-      tmp = !str.match(/^[a-zA-Z]([a-zA-Z0-9.\-+])*:\/\//);
-    }
-    flag = tmp;
-  }
-  let tmp2 = !flag;
-  if (!flag) {
-    tmp2 = undefined !== str;
-  }
-  if (tmp2) {
-    tmp2 = !str.includes("node_modules/");
-  }
-  return tmp2;
-};
-export function node(arg0) {
-  closure_0 = arg0;
-  const re1 = /^\s*[-]{4,}$/;
-  const re2 = /at (?:async )?(?:(.+?)\s+\()?(?:(.+):(\d+):(\d+)?|([^)]+))\)?/;
-  return (filename) => {
-    const match = filename.match(re2);
-    if (match) {
-      let tmp3;
-      let tmp4;
-      if (match[1]) {
-        const lastIndexOfResult = match[1].lastIndexOf(".");
-        let diff = lastIndexOfResult;
-        if ("." === match[1][lastIndexOfResult - 1]) {
-          diff = lastIndexOfResult - 1;
-        }
-        let substr2 = arr;
-        let tmp9;
-        let substr3;
-        if (diff > 0) {
-          const substr = arr.slice(0, diff);
-          const substr1 = arr.slice(diff + 1);
-          const index = substr.indexOf(".Module");
-          substr2 = arr;
-          tmp9 = substr1;
-          substr3 = substr;
-          if (index > 0) {
-            substr2 = arr.slice(index + 1);
-            substr3 = substr.slice(0, index);
-            tmp9 = substr1;
-          }
-        }
-        tmp3 = substr2;
-        tmp4 = tmp9;
+function _addTracingHeadersToFetchRequest(headers, headers2, span) {
+  const traceData = _mod12596.getTraceData({ span });
+  ({ sentry-trace: tmp4, baggage } = traceData);
+  if (tmp4) {
+    headers = headers2.headers;
+    if (!headers) {
+      const _Request = Request;
+      let isInstanceOfResult = typeof Request !== "undefined";
+      if (typeof Request !== "undefined") {
+        const _Request2 = Request;
+        isInstanceOfResult = _mod12532.isInstanceOf(headers, Request);
+        const tmpResult = _mod12532;
       }
-      if (tmp4) {
-        let UNKNOWN_FUNCTION = tmp4;
+      let headers1;
+      if (isInstanceOfResult) {
+        headers1 = headers.headers;
       }
-      if (undefined === tmp3) {
-        if (!UNKNOWN_FUNCTION) {
-          UNKNOWN_FUNCTION = stackParserFromStackParserOptions.UNKNOWN_FUNCTION;
-        }
-        let combined = UNKNOWN_FUNCTION;
-        if (tmp13) {
-          const _HermesInternal = HermesInternal;
-          combined = "" + tmp13 + "." + UNKNOWN_FUNCTION;
-        }
-        tmp3 = combined;
-      }
-      if (match[2]) {
-        if (obj2.startsWith("file://")) {
-          let str7 = match[2].slice(7);
-        }
-        let match1 = str7;
-        if (str7) {
-          match1 = str7.match(/\/[A-Z]:/);
-        }
-        let substr4 = str7;
-        if (match1) {
-          substr4 = str7.slice(1);
-        }
-        let tmp20 = substr4;
-        if (!substr4) {
-          tmp20 = !match[5];
-        }
-        let tmp21 = "native" === match[5];
-        if (!tmp20) {
-          tmp20 = tmp21;
-        }
-        if (!tmp20) {
-          substr4 = match[5];
-        }
-        let decodeURIResult;
-        if (substr4) {
-          const _decodeURI = decodeURI;
-          decodeURIResult = decodeURI(substr4);
-        }
-        const obj3 = { filename: decodeURIResult, module: null, function: null, lineno: null, colno: null, in_app: null };
-        let tmp24;
-        if (closure_0) {
-          tmp24 = closure_0(substr4);
-        }
-        obj3.module = tmp24;
-        obj3.function = tmp3;
-        let str9 = match[3];
-        if (!str9) {
-          str9 = "";
-        }
-        obj3.lineno = parseInt(str9, 10) || undefined;
-        let str10 = match[4];
-        if (!str10) {
-          str10 = "";
-        }
-        obj2 = match[2];
-        const tmp26 = parseInt(str9, 10) || undefined;
-        obj3.colno = parseInt(str10, 10) || undefined;
-        let str11 = substr4;
-        if (!substr4) {
-          str11 = "";
-        }
-        if (!tmp21) {
-          let tmp28 = str11;
-          if (str11) {
-            tmp28 = !str11.startsWith("/");
-          }
-          if (tmp28) {
-            tmp28 = !str11.match(/^[A-Z]:/);
-          }
-          if (tmp28) {
-            tmp28 = !str11.startsWith(".");
-          }
-          if (tmp28) {
-            tmp28 = !str11.match(/^[a-zA-Z]([a-zA-Z0-9.\-+])*:\/\//);
-          }
-          tmp21 = tmp28;
-        }
-        let tmp29 = !tmp21;
-        if (!tmp21) {
-          tmp29 = undefined !== str11;
-        }
-        if (tmp29) {
-          tmp29 = !str11.includes("node_modules/");
-        }
-        obj3.in_app = tmp29;
-        return obj3;
-      }
-      str7 = match[2];
-    } else if (filename.match(re1)) {
-      const obj = { filename };
-      return obj;
+      headers = headers1;
     }
-  };
-}
-export function nodeStackLineParser(arg0) {
-  closure_0 = arg0;
-  const re1 = /^\s*[-]{4,}$/;
-  const re2 = /at (?:async )?(?:(.+?)\s+\()?(?:(.+):(\d+):(\d+)?|([^)]+))\)?/;
-  const items = [
-    90,
-    (filename) => {
-      const match = filename.match(re2);
-      if (match) {
-        let tmp3;
-        let tmp4;
-        if (match[1]) {
-          const lastIndexOfResult = match[1].lastIndexOf(".");
-          let diff = lastIndexOfResult;
-          if ("." === match[1][lastIndexOfResult - 1]) {
-            diff = lastIndexOfResult - 1;
-          }
-          let substr2 = arr;
-          let tmp9;
-          let substr3;
-          if (diff > 0) {
-            const substr = arr.slice(0, diff);
-            const substr1 = arr.slice(diff + 1);
-            const index = substr.indexOf(".Module");
-            substr2 = arr;
-            tmp9 = substr1;
-            substr3 = substr;
-            if (index > 0) {
-              substr2 = arr.slice(index + 1);
-              substr3 = substr.slice(0, index);
-              tmp9 = substr1;
+    if (headers) {
+      const _Headers = Headers;
+      let isInstanceOfResult1 = typeof Headers !== "undefined";
+      if (typeof Headers !== "undefined") {
+        const _Headers3 = Headers;
+        isInstanceOfResult1 = _mod12532.isInstanceOf(headers, Headers);
+        const tmpResult2 = _mod12532;
+      }
+      if (isInstanceOfResult1) {
+        const _Headers2 = Headers;
+        headers2 = new Headers(headers);
+        const result = headers2.set("sentry-trace", tmp4);
+        if (baggage) {
+          const str6 = headers2.get("baggage");
+          if (str6) {
+            let parts = str6.split(",");
+            let found = parts.filter((item) => {
+              const first = item.split("=")[0];
+              return !first.startsWith(closure_1_0(closure_1_1[15]).SENTRY_BAGGAGE_KEY_PREFIX);
+            });
+            let joined = found.join(",");
+            let combined = baggage;
+            if (joined) {
+              const _HermesInternal = HermesInternal;
+              combined = "" + joined + "," + baggage;
             }
+            const result1 = headers2.set("baggage", combined);
+          } else {
+            const result2 = headers2.set("baggage", baggage);
           }
-          tmp3 = substr2;
-          tmp4 = tmp9;
         }
-        if (tmp4) {
-          let UNKNOWN_FUNCTION = tmp4;
-        }
-        if (undefined === tmp3) {
-          if (!UNKNOWN_FUNCTION) {
-            UNKNOWN_FUNCTION = stackParserFromStackParserOptions.UNKNOWN_FUNCTION;
-          }
-          let combined = UNKNOWN_FUNCTION;
-          if (tmp13) {
-            const _HermesInternal = HermesInternal;
-            combined = "" + tmp13 + "." + UNKNOWN_FUNCTION;
-          }
-          tmp3 = combined;
-        }
-        if (match[2]) {
-          if (obj2.startsWith("file://")) {
-            let str7 = match[2].slice(7);
-          }
-          let match1 = str7;
-          if (str7) {
-            match1 = str7.match(/\/[A-Z]:/);
-          }
-          let substr4 = str7;
-          if (match1) {
-            substr4 = str7.slice(1);
-          }
-          let tmp20 = substr4;
-          if (!substr4) {
-            tmp20 = !match[5];
-          }
-          let tmp21 = "native" === match[5];
-          if (!tmp20) {
-            tmp20 = tmp21;
-          }
-          if (!tmp20) {
-            substr4 = match[5];
-          }
-          let decodeURIResult;
-          if (substr4) {
-            const _decodeURI = decodeURI;
-            decodeURIResult = decodeURI(substr4);
-          }
-          const obj3 = { filename: decodeURIResult, module: null, function: null, lineno: null, colno: null, in_app: null };
-          let tmp24;
-          if (closure_0) {
-            tmp24 = closure_0(substr4);
-          }
-          obj3.module = tmp24;
-          obj3.function = tmp3;
-          let str9 = match[3];
-          if (!str9) {
-            str9 = "";
-          }
-          obj3.lineno = parseInt(str9, 10) || undefined;
-          let str10 = match[4];
-          if (!str10) {
-            str10 = "";
-          }
-          obj2 = match[2];
-          const tmp26 = parseInt(str9, 10) || undefined;
-          obj3.colno = parseInt(str10, 10) || undefined;
-          let str11 = substr4;
-          if (!substr4) {
-            str11 = "";
-          }
-          if (!tmp21) {
-            let tmp28 = str11;
-            if (str11) {
-              tmp28 = !str11.startsWith("/");
+        return headers2;
+      } else {
+        const _Array = Array;
+        if (Array.isArray(headers)) {
+          const found1 = headers.filter((item) => {
+            let isArray = Array.isArray(item);
+            if (isArray) {
+              isArray = "sentry-trace" === item[0];
             }
-            if (tmp28) {
-              tmp28 = !str11.match(/^[A-Z]:/);
+            return !isArray;
+          });
+          let items = [];
+          const items1 = ["sentry-trace", tmp4];
+          items[HermesBuiltin.arraySpread(found1.map((item) => {
+            if (Array.isArray(item)) {
+              if ("baggage" === item[0]) {
+                if (typeof item[1] === "string") {
+                  const arr = _toArray(item);
+                  const items = [arr[0], ];
+                  const substr = arr.slice(2);
+                  const parts = arr[1].split(",");
+                  const found = parts.filter((item) => {
+                    const first = item.split("=")[0];
+                    return !first.startsWith(closure_1_0(closure_1_1[15]).SENTRY_BAGGAGE_KEY_PREFIX);
+                  });
+                  items[1] = found.join(",");
+                  HermesBuiltin.arraySpread(substr, 2);
+                  return items;
+                }
+              }
             }
-            if (tmp28) {
-              tmp28 = !str11.startsWith(".");
+            return item;
+          }), 0)] = items1;
+          if (baggage) {
+            const items2 = ["baggage", baggage];
+            items.push(items2);
+          }
+          return items;
+        } else {
+          let baggage1;
+          if ("baggage" in headers) {
+            baggage1 = headers.baggage;
+          }
+          const _Array2 = Array;
+          if (Array.isArray(baggage1)) {
+            const mapped = baggage1.map((item) => {
+              let joined = item;
+              if (typeof item === "string") {
+                const parts = item.split(",");
+                const found = parts.filter((item) => {
+                  const first = item.split("=")[0];
+                  return !first.startsWith(closure_1_0(closure_1_1[15]).SENTRY_BAGGAGE_KEY_PREFIX);
+                });
+                joined = found.join(",");
+              }
+              return joined;
+            });
+            let found2 = mapped.filter((item) => "" === item);
+          } else {
+            const items3 = [];
+            found2 = items3;
+            if (baggage1) {
+              const parts1 = baggage1.split(",");
+              const found3 = parts1.filter((item) => {
+                const first = item.split("=")[0];
+                return !first.startsWith(closure_1_0(closure_1_1[15]).SENTRY_BAGGAGE_KEY_PREFIX);
+              });
+              items3.push(found3.join(","));
+              found2 = items3;
             }
-            if (tmp28) {
-              tmp28 = !str11.match(/^[a-zA-Z]([a-zA-Z0-9.\-+])*:\/\//);
-            }
-            tmp21 = tmp28;
           }
-          let tmp29 = !tmp21;
-          if (!tmp21) {
-            tmp29 = undefined !== str11;
+          if (baggage) {
+            found2.push(baggage);
           }
-          if (tmp29) {
-            tmp29 = !str11.includes("node_modules/");
+          const obj3 = {};
+          const merged = Object.assign(headers);
+          obj3["sentry-trace"] = tmp4;
+          let joined1;
+          if (found2.length > 0) {
+            joined1 = found2.join(",");
           }
-          obj3.in_app = tmp29;
+          obj3.baggage = joined1;
           return obj3;
         }
-        str7 = match[2];
-      } else if (filename.match(re1)) {
-        const obj = { filename };
-        return obj;
+      }
+    } else {
+      const obj4 = {};
+      const merged1 = Object.assign(traceData);
+      return obj4;
+    }
+  }
+  const obj2 = { span };
+}
+errorCallback;
+_mod12549;
+
+export const addTracingHeadersToFetchRequest = function addTracingHeadersToFetchRequest(arg0, arg1, arg2, arg3, arg4) {
+  return _addTracingHeadersToFetchRequest(arg0, arg3, arg4);
+};
+export const instrumentFetchRequest = function instrumentFetchRequest(fetchData, fn, fn2, arg3) {
+  let str = arg4;
+  if (arg4 === undefined) {
+    str = "auto.http.browser";
+  }
+  let endResult = fetchData;
+  if (fetchData.fetchData) {
+    let setHttpStatus = require;
+    let headers = dependencyMap;
+    let hasTracingEnabledResult = _mod12557.hasTracingEnabled();
+    if (hasTracingEnabledResult) {
+      hasTracingEnabledResult = fn(endResult.fetchData.url);
+    }
+    if (endResult.endTimestamp) {
+      if (hasTracingEnabledResult) {
+        const __span = endResult.fetchData.__span;
+        if (__span) {
+          if (arg3[__span]) {
+            if (endResult.response) {
+              setHttpStatus = setHttpStatus(12542).setHttpStatus;
+              setHttpStatus(obj10, endResult.response.status);
+              headers = endResult.response;
+              if (headers) {
+                headers = endResult.response.headers;
+              }
+              if (headers) {
+                const headers2 = endResult.response.headers;
+                headers = headers2.get("content-length");
+              }
+              if (headers) {
+                const _parseInt = parseInt;
+                setHttpStatus = parseInt(headers);
+                if (setHttpStatus > 0) {
+                  const attr = obj10.setAttribute("http.response_content_length", setHttpStatus);
+                }
+              }
+              const setHttpStatusResult = setHttpStatus(12542);
+            } else if (endResult.error) {
+              const obj2 = { code: setHttpStatus(12542).SPAN_STATUS_ERROR, message: "internal_error" };
+              obj10.setStatus(obj2);
+            }
+            endResult = obj10.end();
+            delete tmp2[tmp];
+          }
+        }
       }
     }
-  ];
-  return items;
-}
+    ({ method, url } = endResult.fetchData);
+    const tmp7 = (function getFullURL(url) {
+      try {
+        const _URL = URL;
+        const uRL = new URL(url);
+        return uRL.href;
+      } catch (err) {
+      }
+    })(url);
+    if (tmp7) {
+      const host = setHttpStatus(12607).parseUrl(tmp7).host;
+      const setHttpStatusResult2 = setHttpStatus(12607);
+    }
+    const activeSpan = setHttpStatus(12530).getActiveSpan();
+    if (hasTracingEnabledResult) {
+      if (activeSpan) {
+        const obj3 = { name: null, attributes: null };
+        const _HermesInternal = HermesInternal;
+        obj3.name = "" + method + " " + url;
+        const obj4 = { url, type: "fetch", "http.method": method, "http.url": tmp7, "server.address": host };
+        obj4[setHttpStatus(12540).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = str;
+        obj4[setHttpStatus(12540).SEMANTIC_ATTRIBUTE_SENTRY_OP] = "http.client";
+        obj3.attributes = obj4;
+        let startInactiveSpanResult = setHttpStatus(12559).startInactiveSpan(obj3);
+        const setHttpStatusResult4 = setHttpStatus(12559);
+      }
+      endResult.fetchData.__span = startInactiveSpanResult.spanContext().spanId;
+      arg3[startInactiveSpanResult.spanContext().spanId] = startInactiveSpanResult;
+      if (fn2(endResult.fetchData.url)) {
+        let obj5 = endResult.args[1];
+        if (!obj5) {
+          obj5 = {};
+        }
+        let tmp14;
+        if (setHttpStatusResult5.hasTracingEnabled()) {
+          if (activeSpan) {
+            tmp14 = startInactiveSpanResult;
+          }
+        }
+        const tmp13Result = _addTracingHeadersToFetchRequest(endResult.args[0], obj5, tmp14);
+        if (tmp13Result) {
+          endResult.args[1] = obj5;
+          obj5.headers = tmp13Result;
+        }
+        setHttpStatusResult5 = setHttpStatus(12557);
+      }
+      return startInactiveSpanResult;
+    }
+    startInactiveSpanResult = new setHttpStatus(12558).SentryNonRecordingSpan();
+    const setHttpStatusResult3 = setHttpStatus(12530);
+  }
+};

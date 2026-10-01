@@ -24,7 +24,7 @@ export const wrapMcpServerWithSentry = function wrapMcpServerWithSentry(arg0, re
       if (recordInputs == null) {
         recordInputs = BooleanResult;
       }
-      let obj3 = { recordInputs, recordOutputs: null };
+      const obj3 = { recordInputs, recordOutputs: null };
       let recordOutputs;
       if (recordInputs != null) {
         recordOutputs = recordInputs.recordOutputs;
@@ -42,82 +42,22 @@ export const wrapMcpServerWithSentry = function wrapMcpServerWithSentry(arg0, re
           c6 = 0;
           c7 = 0;
           const iter = (async (arg0) => {
-            if (c7 === 2) {
-              c7 = 3;
-              throw new TypeError("Generator functions may not be called on executing generators");
-            } else if (tmp4 === 3) {
-              if (arg0 === 1) {
-                throw value;
-              } else if (arg0 === 2) {
-                const obj2 = { value, done: true };
-                return obj2;
-              } else {
-                return { value: "HermesInternal", done: null };
-              }
-            } else {
-              try {
-                c7 = 2;
-                if (0 === c6) {
-                  if (arg0 === 1) {
-                    c7 = 3;
-                    throw value;
-                  } else if (arg0 === 2) {
-                    c7 = 3;
-                    obj3 = { value, done: true };
-                    return obj3;
-                  } else {
-                    closure_5 = self;
-                    closure_4 = self;
-                    closure_3 = tmp2;
-                    closure_131_0 = closure_1;
-                    closure_131_1 = closure_2;
-                    closure_131_2 = undefined;
-                    c6 = 1;
-                    c7 = 1;
-                    return { value: "flex", done: true };
-                  }
-                } else if (1 === tmp5) {
-                  if (arg0 === 1) {
-                    c7 = 3;
-                    throw value;
-                  } else if (arg0 === 2) {
-                    c7 = 3;
-                    const obj4 = { value, done: true };
-                    return obj4;
-                  } else {
-                    const call = self.call;
-                    const items = [closure_5, closure_131_0];
-                    HermesBuiltin.arraySpread(closure_131_1, 2);
-                    c6 = 2;
-                    c7 = 1;
-                    const obj5 = { value: HermesBuiltin.apply(items, self), done: false };
-                    return obj5;
-                  }
-                } else if (arg0 === 1) {
-                  c7 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c7 = 3;
-                  const obj6 = { value, done: true };
-                  return obj6;
-                } else {
-                  closure_131_2 = value;
-                  const result = obj3(802).wrapTransportOnMessage(closure_131_0, closure_0);
-                  const obj7 = obj3(802);
-                  obj3(802).wrapTransportSend(closure_131_0, closure_0);
-                  const obj8 = obj3(802);
-                  obj3(802).wrapTransportOnClose(closure_131_0);
-                  const obj9 = obj3(802);
-                  obj3(802).wrapTransportError(closure_131_0);
-                  c7 = 3;
-                  const obj = { value: closure_131_2, done: true };
-                  return obj;
-                }
-              } catch (tmp21) {
-                c7 = tmp;
-                throw tmp21;
-              }
-            }
+            closure_5 = self;
+            closure_4 = self;
+            closure_3 = tmp2;
+            closure_131_0 = closure_1;
+            closure_131_1 = closure_2;
+            await "flex";
+            const call = self.call;
+            const items = [closure_5, closure_131_0];
+            HermesBuiltin.arraySpread(closure_131_1, 2);
+            await HermesBuiltin.apply(items, self);
+            closure_131_2 = value;
+            const result = obj3(802).wrapTransportOnMessage(closure_131_0, closure_0);
+            obj3(802).wrapTransportSend(closure_131_0, closure_0);
+            obj3(802).wrapTransportOnClose(closure_131_0);
+            obj3(802).wrapTransportError(closure_131_0);
+            return closure_131_2;
           })();
           iter.next();
           return iter;

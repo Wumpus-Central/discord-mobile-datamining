@@ -1,34 +1,16 @@
 // === Module 10274: ? ===
 
 // Module 10274
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _mod10114 from "module_10114" /* 10114 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
+import _mod10117 from "module_10117" /* 10117 */;
+import includeCommonConfiguration from "includeCommonConfiguration" /* 10124 */;
+import _mod10129 from "module_10129" /* 10129 */;
+import _mod10275 from "module_10275" /* 10275 */;
+import _mod10277 from "module_10277" /* 10277 */;
+import _mod10278 from "module_10278" /* 10278 */;
+import _mod10279 from "module_10279" /* 10279 */;
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
+const require = globalThis.__r;
+
 let fn = this;
 if (this) {
   fn = this.__importDefault;
@@ -44,34 +26,126 @@ if (!fn) {
     return tmp;
   };
 }
-class ENMergeDateRangeRefiner {
-  constructor() {
-    self = this;
-    tmp = closure_0(this, ENMergeDateRangeRefiner);
-    tmp2 = c2;
-    obj = c2(ENMergeDateRangeRefiner);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
+function createCasualConfiguration() {
+  let flag = arg0;
+  if (arg0 === undefined) {
+    flag = true;
   }
+  if (flag === undefined) {
+    flag = true;
+  }
+  const obj = { parsers: null, refiners: null };
+  const items = [new _isNativeReflectConstruct.default(), , , , ];
+  const _default = new _isNativeReflectConstruct.default();
+  items[1] = new regExp.default(flag);
+  const _default1 = new regExp.default(flag);
+  items[2] = new _isNativeReflectConstruct.default();
+  const _default2 = new _isNativeReflectConstruct.default();
+  items[3] = new _isNativeReflectConstruct.default();
+  const _default3 = new _isNativeReflectConstruct.default();
+  items[4] = new _isNativeReflectConstruct.default();
+  obj.parsers = items;
+  obj.refiners = [];
+  const result = includeCommonConfiguration.includeCommonConfiguration(obj, false);
+  const parsers = result.parsers;
+  const _default4 = new _isNativeReflectConstruct.default();
+  parsers.unshift(new _isNativeReflectConstruct.default());
+  return result;
 }
-_classCallCheck = ENMergeDateRangeRefiner;
-_inherits(ENMergeDateRangeRefiner, fn(_mod10114).default);
-const entry = {
-  key: "patternBetween",
-  value: function patternBetween() {
-    return /^\s*(to|-)\s*$/i;
+function createConfiguration() {
+  if (flag === undefined) {
+    flag = true;
+  }
+  let flag2 = arg1;
+  if (arg1 === undefined) {
+    flag2 = true;
+  }
+  const obj = { parsers: null, refiners: null };
+  const items = [new _isNativeReflectConstruct.default(), , , , ];
+  const _default = new _isNativeReflectConstruct.default();
+  items[1] = new regExp.default(flag2);
+  const _default1 = new regExp.default(flag2);
+  items[2] = new _isNativeReflectConstruct.default();
+  const _default2 = new _isNativeReflectConstruct.default();
+  items[3] = new _isNativeReflectConstruct.default();
+  const _default3 = new _isNativeReflectConstruct.default();
+  items[4] = new _isNativeReflectConstruct.default();
+  obj.parsers = items;
+  obj.refiners = [];
+  return includeCommonConfiguration.includeCommonConfiguration(obj, flag);
+}
+const regExp = fn(_mod10117);
+fn(_mod10129);
+fn(_mod10275);
+fn(_mod10277);
+fn(_mod10278);
+const _isNativeReflectConstruct = fn(_mod10279);
+const chrono = new require("module_10084").Chrono(createCasualConfiguration());
+const obj7 = { parsers: null, refiners: null };
+let items = [new _isNativeReflectConstruct.default(), , , , ];
+let _default = new _isNativeReflectConstruct.default();
+let obj = {
+  enumerable: true,
+  get() {
+    return require("module_10084").Chrono;
   }
 };
-const items = [entry];
+const obj2 = {
+  enumerable: true,
+  get() {
+    return require("ReferenceWithTimezone").ParsingResult;
+  }
+};
+const obj3 = {
+  enumerable: true,
+  get() {
+    return require("ReferenceWithTimezone").ParsingComponents;
+  }
+};
+const obj4 = {
+  enumerable: true,
+  get() {
+    return require("ReferenceWithTimezone").ReferenceWithTimezone;
+  }
+};
+const obj5 = {
+  enumerable: true,
+  get() {
+    return require("Meridiem").Meridiem;
+  }
+};
+const obj6 = {
+  enumerable: true,
+  get() {
+    return require("Meridiem").Weekday;
+  }
+};
+items[1] = new regExp.default(true);
+let _default1 = new regExp.default(true);
+items[2] = new _isNativeReflectConstruct.default();
+let _default2 = new _isNativeReflectConstruct.default();
+items[3] = new _isNativeReflectConstruct.default();
+let _default3 = new _isNativeReflectConstruct.default();
+items[4] = new _isNativeReflectConstruct.default();
+obj7.parsers = items;
+obj7.refiners = [];
+const chrono1 = new require("module_10084").Chrono(includeCommonConfiguration.includeCommonConfiguration(obj7, true));
 
-export default _createClass(ENMergeDateRangeRefiner, items);
+export const parse = function parse(arg0, arg1, arg2) {
+  const casual = exports.casual;
+  return casual.parse(arg0, arg1, arg2);
+};
+export const parseDate = function parseDate(arg0, arg1, arg2) {
+  const casual = exports.casual;
+  return casual.parseDate(arg0, arg1, arg2);
+};
+export { createCasualConfiguration };
+export { createConfiguration };
+export const Chrono = require("module_10084").Chrono;
+export const ParsingResult = require("ReferenceWithTimezone").ParsingResult;
+export const ParsingComponents = require("ReferenceWithTimezone").ParsingComponents;
+export const ReferenceWithTimezone = require("ReferenceWithTimezone").ReferenceWithTimezone;
+export const Meridiem = require("Meridiem").Meridiem;
+export const Weekday = require("Meridiem").Weekday;
+export const casual = chrono;
+export const strict = chrono1;

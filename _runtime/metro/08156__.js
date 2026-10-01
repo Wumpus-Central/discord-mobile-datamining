@@ -1,16 +1,14 @@
 // === Module 8156: ? ===
 
 // Module 8156
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef8145 from "module_8145" /* 8145 */;
-import _modDef8157 from "module_8157" /* 8157 */;
+import _modDef8134 from "module_8134" /* 8134 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
-import noop from "module_19" /* 19 */;
 
-const FeGaussianBlur = fn;
+const FeMorphology = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,16 +28,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-_possibleConstructorReturnDefault;
-const jsx = fn(21).jsx;
-class FeGaussianBlur {
+class FeMorphology {
   constructor() {
     self = this;
-    tmp = closure_3(this, FeGaussianBlur);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(FeGaussianBlur);
-    tmp3 = closure_4;
-    if (closure_7()) {
+    tmp = c2(this, FeMorphology);
+    tmp2 = closure_4;
+    obj = closure_4(FeMorphology);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -52,33 +48,18 @@ class FeGaussianBlur {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeGaussianBlur, _modDef8145);
+_inherits(FeMorphology, _modDef8134);
 const entry = {
   key: "render",
   value: function render() {
-    const self = this;
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const merged = Object.assign(FeGaussianBlur(8144).extractFilter(this.props));
-    const obj2 = FeGaussianBlur(8144);
-    const merged1 = Object.assign(FeGaussianBlur(8144).extractIn(this.props));
-    const obj3 = FeGaussianBlur(8144);
-    const merged2 = Object.assign(FeGaussianBlur(8144).extractFeGaussianBlur(this.props));
-    return <tmp ref={function ref(arg0) {
-      return self.refMethod(arg0);
-    }} />;
+    const result = FeMorphology(8111).warnUnimplementedFilter();
+    return null;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeGaussianBlur, items);
-importDefaultResultResult.displayName = "FeGaussianBlur";
-let obj = {};
-let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-obj.stdDeviation = 0;
-obj.edgeMode = "none";
-importDefaultResultResult.defaultProps = obj;
+const importDefaultResultResult = _createClass(FeMorphology, items);
+importDefaultResultResult.displayName = "FeMorphology";
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

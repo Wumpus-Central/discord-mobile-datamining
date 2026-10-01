@@ -1,50 +1,40 @@
 // === Module 4220: ? ===
 
 // Module 4220
-import _typeof_mod from "module_3948" /* 3948 */;
-import startOfISOWeek_mod from "startOfISOWeek" /* 4106 */;
-import startOfISOWeekYear_mod from "startOfISOWeekYear" /* 4109 */;
-import requiredArgs_mod from "requiredArgs" /* 3949 */;
+import startOfISOWeekYear_mod from "startOfISOWeekYear" /* 4108 */;
+import module_4115_mod from "module_4115" /* 4115 */;
+import requiredArgs_mod from "requiredArgs" /* 3948 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
-  let tmp3 = obj;
-} else {
-  tmp3 = _typeof;
-}
-_typeof = tmp3;
-let startOfISOWeek = startOfISOWeek_mod;
-if (!startOfISOWeek) {
-  const obj2 = { default: startOfISOWeek };
-  let tmp5 = obj2;
-} else {
-  tmp5 = startOfISOWeek;
-}
-startOfISOWeek = tmp5;
 let startOfISOWeekYear = startOfISOWeekYear_mod;
 if (!startOfISOWeekYear) {
-  const obj3 = { default: startOfISOWeekYear };
-  let tmp7 = obj3;
+  const obj = { default: startOfISOWeekYear };
+  let tmp3 = obj;
 } else {
-  tmp7 = startOfISOWeekYear;
+  tmp3 = startOfISOWeekYear;
 }
-startOfISOWeekYear = tmp7;
+startOfISOWeekYear = tmp3;
+let module_4115 = module_4115_mod;
+if (!module_4115) {
+  const obj2 = { default: module_4115 };
+  let tmp5 = obj2;
+} else {
+  tmp5 = module_4115;
+}
+module_4115 = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
 } else {
-  tmp9 = requiredArgs;
+  tmp7 = requiredArgs;
 }
-requiredArgs = tmp9;
-let c4 = 604800000;
+requiredArgs = tmp7;
+let c3 = 604800000;
 
-export default function getISOWeek(arg0) {
+export default function getISOWeeksInYear(arg0) {
   requiredArgs.default(1, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const time = startOfISOWeek.default(defaultResult1).getTime();
-  const defaultResult2 = startOfISOWeek.default(defaultResult1);
-  return Math.round((time - startOfISOWeekYear.default(defaultResult1).getTime()) / c4) + 1;
+  const defaultResult1 = startOfISOWeekYear.default(arg0);
+  const defaultResult2 = startOfISOWeekYear.default(module_4115.default(defaultResult1, 60));
+  return Math.round((startOfISOWeekYear.default(module_4115.default(defaultResult1, 60)).valueOf() - defaultResult1.valueOf()) / c3);
 };
 export default exports.default;

@@ -1,19 +1,32 @@
 // === Module 12529: ? ===
 
 // Module 12529
+import _mod12523 from "module_12523" /* 12523 */;
+import _mod12526 from "module_12526" /* 12526 */;
 
-export const SEMANTIC_ATTRIBUTE_CACHE_HIT = "cache.hit";
-export const SEMANTIC_ATTRIBUTE_CACHE_ITEM_SIZE = "cache.item_size";
-export const SEMANTIC_ATTRIBUTE_CACHE_KEY = "cache.key";
-export const SEMANTIC_ATTRIBUTE_EXCLUSIVE_TIME = "sentry.exclusive_time";
-export const SEMANTIC_ATTRIBUTE_HTTP_REQUEST_METHOD = "http.request.method";
-export const SEMANTIC_ATTRIBUTE_PROFILE_ID = "sentry.profile_id";
-export const SEMANTIC_ATTRIBUTE_SENTRY_CUSTOM_SPAN_NAME = "sentry.custom_span_name";
-export const SEMANTIC_ATTRIBUTE_SENTRY_IDLE_SPAN_FINISH_REASON = "sentry.idle_span_finish_reason";
-export const SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT = "sentry.measurement_unit";
-export const SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE = "sentry.measurement_value";
-export const SEMANTIC_ATTRIBUTE_SENTRY_OP = "sentry.op";
-export const SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN = "sentry.origin";
-export const SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE = "sentry.sample_rate";
-export const SEMANTIC_ATTRIBUTE_SENTRY_SOURCE = "sentry.source";
-export const SEMANTIC_ATTRIBUTE_URL_FULL = "url.full";
+require = arg1;
+const dependencyMap = arg6;
+function instrumentUnhandledRejection() {
+  onunhandledrejection = _mod12526.GLOBAL_OBJ.onunhandledrejection;
+  _mod12526.GLOBAL_OBJ.onunhandledrejection = function(arg0) {
+    _mod12523.triggerHandlers("unhandledrejection", arg0);
+    if (!onunhandledrejection) {
+      return !onunhandledrejection;
+    } else {
+      const self = this;
+      const apply = onunhandledrejection.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+    }
+  };
+  _mod12526.GLOBAL_OBJ.onunhandledrejection.__SENTRY_INSTRUMENTED__ = true;
+}
+let onunhandledrejection = null;
+
+export const addGlobalUnhandledRejectionInstrumentationHandler = function addGlobalUnhandledRejectionInstrumentationHandler(errorCallback) {
+  _mod12523.addHandler("unhandledrejection", errorCallback);
+  _mod12523.maybeInstrument("unhandledrejection", instrumentUnhandledRejection);
+};

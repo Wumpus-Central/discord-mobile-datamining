@@ -1,20 +1,7 @@
 // === Module 5332: ? ===
 
 // Module 5332
-import _mod1306 from "module_1306" /* 1306 */;
-import _mod1307 from "module_1307" /* 1307 */;
-import _mod1313 from "module_1313" /* 1313 */;
-import _mod5324 from "module_5324" /* 5324 */;
+import _mod1281 from "module_1281" /* 1281 */;
 
 
-export default function isInteger(num) {
-  if (typeof num === "number") {
-    if (!_mod1313(num)) {
-      if (_mod5324(num)) {
-        const tmp = _mod1306(num);
-        return _mod1307(tmp) === tmp;
-      }
-    }
-  }
-  return false;
-};
+export default _mod1281;

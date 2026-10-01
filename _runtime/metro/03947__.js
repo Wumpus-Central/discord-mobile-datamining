@@ -1,84 +1,75 @@
 // === Module 3947: ? ===
 
 // Module 3947
-import _typeof_mod from "module_3948" /* 3948 */;
-import module_3950_mod from "module_3950" /* 3950 */;
+import requiredArgs_mod from "requiredArgs" /* 3948 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+function _typeof(arg0) {
+  if (typeof Symbol === "function") {
+    let _Symbol = Symbol;
+    if (typeof Symbol.iterator === "symbol") {
+      _typeof = function _typeof(arg0) {
+        return typeof arg0;
+      };
+    }
+    return _typeof(arg0);
+  }
+  _typeof = function _typeof(arg0) {
+    if (arg0) {
+      const _Symbol = Symbol;
+      if (typeof Symbol === "function") {
+        const _Symbol3 = Symbol;
+        if (arg0.constructor === Symbol) {
+          const _Symbol2 = Symbol;
+          let str = "symbol";
+        }
+        return str;
+      }
+    }
+    str = typeof arg0;
+  };
+}
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj = { default: requiredArgs };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = requiredArgs;
 }
-_typeof = tmp3;
-let module_3950 = module_3950_mod;
-if (!module_3950) {
-  const obj2 = { default: module_3950 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_3950;
-}
-module_3950 = tmp5;
-const dependencyMap = ["\u043D\u0435\u0434\u0435\u043B\u044F", "\u043F\u043E\u043D\u0435\u0434\u0435\u043B\u043D\u0438\u043A", "\u0432\u0442\u043E\u0440\u043D\u0438\u043A", "\u0441\u0440\u044F\u0434\u0430", "\u0447\u0435\u0442\u0432\u044A\u0440\u0442\u044A\u043A", "\u043F\u0435\u0442\u044A\u043A", "\u0441\u044A\u0431\u043E\u0442\u0430"];
-let closure_3 = {
-  lastWeek: function lastWeekFormatToken(arg0, arg1, arg2) {
-    const defaultResult = _typeof.default(arg0);
-    const uTCDay = defaultResult.getUTCDay();
-    let text = dependencyMap[uTCDay];
-    if (module_3950.default(defaultResult, arg1, arg2)) {
-      if (2 === uTCDay) {
-        text = `'във ${tmp2}`;
-        let text1 = `'във ${tmp2} в' p`;
-      } else {
-        text1 = `${"'\u0432 " + `'във ${tmp2}`} в' p`;
-      }
-    } else {
-      if (0 !== uTCDay) {
-        if (3 !== uTCDay) {
-          if (6 !== uTCDay) {
-            let text2 = `${"'\u043C\u0438\u043D\u0430\u043B\u0438\u044F " + tmp2} в' p`;
-          }
-          return text2;
-        }
-      }
-      text2 = `${"'\u043C\u0438\u043D\u0430\u043B\u0430\u0442\u0430 " + tmp2} в' p`;
-    }
-  },
-  yesterday: "'\u0432\u0447\u0435\u0440\u0430 \u0432' p",
-  today: "'\u0434\u043D\u0435\u0441 \u0432' p",
-  tomorrow: "'\u0443\u0442\u0440\u0435 \u0432' p",
-  nextWeek: function nextWeekFormatToken(arg0, arg1, arg2) {
-    const defaultResult = _typeof.default(arg0);
-    const uTCDay = defaultResult.getUTCDay();
-    let text = dependencyMap[uTCDay];
-    if (module_3950.default(defaultResult, arg1, arg2)) {
-      if (2 === uTCDay) {
-        text = `'във ${tmp2}`;
-        let text1 = `'във ${tmp2} в' p`;
-      } else {
-        text1 = `${"'\u0432 " + `'във ${tmp2}`} в' p`;
-      }
-    } else {
-      if (0 !== uTCDay) {
-        if (3 !== uTCDay) {
-          if (6 !== uTCDay) {
-            let text2 = `${"'\u0441\u043B\u0435\u0434\u0432\u0430\u0449\u0438\u044F " + tmp2} в' p`;
-          }
-          return text2;
-        }
-      }
-      text2 = `${"'\u0441\u043B\u0435\u0434\u0432\u0430\u0449\u0430\u0442\u0430 " + tmp2} в' p`;
-    }
-  },
-  other: "P"
-};
+requiredArgs = tmp3;
 
-export default function formatRelative(arg0, arg1, arg2, arg3) {
-  let tmpResult = tmp;
-  if (typeof closure_3[arg0] === "function") {
-    tmpResult = tmp(arg1, arg2, arg3);
+export default function toDate(getTime) {
+  requiredArgs.default(1, arguments);
+  const call = toString.call;
+  const tmp2 = typeof call === "unknown" ? toString() : call(getTime);
+  if (!(getTime instanceof Date)) {
+    if ("object" === _typeof(getTime)) {
+      return date;
+    }
+    if (typeof getTime !== "number") {
+      if ("[object Number]" !== tmp2) {
+        let tmp4 = typeof getTime !== "string";
+        if (typeof getTime !== "string") {
+          tmp4 = "[object String]" !== tmp2;
+        }
+        if (!tmp4) {
+          const _console = console;
+          tmp4 = typeof console === "undefined";
+        }
+        if (!tmp4) {
+          const _console2 = console;
+          console.warn("Starting with v2.0.0-beta.1 date-fns doesn't accept strings as date arguments. Please use `parseISO` to parse strings. See: https://github.com/date-fns/date-fns/blob/master/docs/upgradeGuide.md#string-arguments");
+          const _console3 = console;
+          const _Error = Error;
+          const error = new Error();
+          console.warn(error.stack);
+        }
+        const _Date = Date;
+        date = new Date(NaN);
+      }
+    }
+    const _Date2 = Date;
+    date = new Date(getTime);
   }
-  return tmpResult;
+  date = new Date(getTime.getTime());
 };
 export default exports.default;

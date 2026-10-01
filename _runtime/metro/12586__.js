@@ -1,16 +1,34 @@
 // === Module 12586: ? ===
 
 // Module 12586
-import _mod12585 from "module_12585" /* 12585 */;
+import _mod12531 from "module_12531" /* 12531 */;
+import _mod12569 from "module_12569" /* 12569 */;
+import _mod12572 from "module_12572" /* 12572 */;
 
 require = arg1;
 const dependencyMap = arg6;
 
-export const getTraceMetaTags = function getTraceMetaTags() {
-  const entries = Object.entries(_mod12585.getTraceData());
-  const mapped = entries.map((item) => {
-    [tmp, tmp2] = item;
-    return "<meta name=\"" + tmp + "\" content=\"" + tmp2 + "\"/>";
-  });
-  return mapped.join("\n");
+export const createCheckInEnvelope = function createCheckInEnvelope(arg0, contexts, sdk, arg3, url) {
+  const obj = { sent_at: new Date().toISOString() };
+  if (sdk) {
+    sdk = sdk.sdk;
+  }
+  if (sdk) {
+    const obj2 = { name: sdk.sdk.name, version: sdk.sdk.version };
+    obj.sdk = obj2;
+  }
+  let tmp = arg3;
+  if (arg3) {
+    tmp = url;
+  }
+  if (tmp) {
+    obj.dsn = _mod12572.dsnToString(url);
+  }
+  if (contexts) {
+    obj.trace = _mod12531.dropUndefinedKeys(contexts);
+  }
+  const items = [{ type: "check_in" }, arg0];
+  const date = new Date();
+  const items1 = [items];
+  return _mod12569.createEnvelope(obj, items1);
 };

@@ -1,19 +1,35 @@
 // === Module 6357: ? ===
 
 // Module 6357
-import ComposedGestureName from "ComposedGestureName" /* 6328 */;
-import DEFAULT_PROPS_TRANSFORMER from "DEFAULT_PROPS_TRANSFORMER" /* 6337 */;
-import _mod6352 from "module_6352" /* 6352 */;
+import _mod17 from "module_17" /* 17 */;
 
-require = arg1;
-const dependencyMap = arg6;
-let closure_2 = {};
+const Platform = _mod17.Platform;
 
-export const useFlingGesture = function useFlingGesture() {
-  let tmp = gestureHandlerProps;
-  if (gestureHandlerProps === undefined) {
-    tmp = closure_2;
+export const getTVProps = function getTVProps(focusable) {
+  if (Platform.isTV) {
+    let flag = focusable.focusable;
+    if (flag == null) {
+      flag = focusable.isTVSelectable;
+    }
+    if (flag == null) {
+      flag = true;
+    }
+    const obj2 = { isTVSelectable: flag };
+    let obj = obj2;
+  } else {
+    obj = {};
   }
-  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp);
-  return _mod6352.useGesture(ComposedGestureName.SingleGestureName.Fling, clonedAndRemappedConfig);
+  return obj;
+};
+export const applyRelationProp = function applyRelationProp(arg0, arg1, arg2) {
+  if (arg2) {
+    const _Array = Array;
+    if (Array.isArray(arg2)) {
+      const items = [];
+      HermesBuiltin.arraySpread(arg2, 0);
+      HermesBuiltin.apply(items, arg0);
+    } else {
+      tmp4(arg2);
+    }
+  }
 };

@@ -1,7 +1,7 @@
 // === Module 8181: ? ===
 
 // Module 8181
-import _modDef8130 from "module_8130" /* 8130 */;
+import _modDef8119 from "module_8119" /* 8119 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
@@ -9,7 +9,7 @@ import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const LinearGradient = importDefault;
+const Pattern = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,12 +30,12 @@ function _isNativeReflectConstruct() {
   }
 }
 const jsx = fn(21).jsx;
-class LinearGradient {
+class Pattern {
   constructor() {
     self = this;
-    tmp = c2(this, LinearGradient);
+    tmp = c2(this, Pattern);
     tmp2 = closure_4;
-    obj = closure_4(LinearGradient);
+    obj = closure_4(Pattern);
     tmp3 = closure_3;
     if (metroRequire()) {
       tmp7 = globalThis;
@@ -50,15 +50,45 @@ class LinearGradient {
     return tmp3(self, constructResult);
   }
 }
-_inherits(LinearGradient, _modDef8130);
+_inherits(Pattern, _modDef8119);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
     const props = this.props;
-    const merged = Object.assign({ x1: props.x1, y1: props.y1, x2: props.x2, y2: props.y2 });
-    const merged1 = Object.assign(LinearGradient(8183)(props, this));
-    return jsx(LinearGradient(8182), {
+    ({ patternTransform, patternUnits, patternContentUnits } = props);
+    ({ transform, id, x, y, width, height, children, viewBox, preserveAspectRatio } = props);
+    if (!patternTransform) {
+      patternTransform = transform;
+    }
+    if (!patternTransform) {
+      patternTransform = props;
+    }
+    const tmp3Result = Pattern(8103)(patternTransform);
+    const size = { x, y, width, height, name: id, matrix: tmp3Result, patternTransform: tmp3Result, patternUnits: null, patternContentUnits: null };
+    let num = patternUnits;
+    if (patternUnits) {
+      num = Pattern(8173)[patternUnits];
+    }
+    if (!num) {
+      num = 0;
+    }
+    size.patternUnits = num;
+    let num2 = 1;
+    if (patternContentUnits) {
+      num2 = Pattern(8173)[patternContentUnits];
+    }
+    size.patternContentUnits = num2;
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    };
+    const tmp3 = Pattern(8103);
+    const merged = Object.assign(size);
+    const merged1 = Object.assign(Pattern(8108)({ viewBox, preserveAspectRatio }));
+    obj.children = children;
+    return jsx(Pattern(8182), {
       ref(arg0) {
         return self.refMethod(arg0);
       }
@@ -66,8 +96,8 @@ const entry = {
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(LinearGradient, items);
-importDefaultResultResult.displayName = "LinearGradient";
-importDefaultResultResult.defaultProps = { x1: "0%", y1: "0%", x2: "100%", y2: "0%" };
+const importDefaultResultResult = _createClass(Pattern, items);
+importDefaultResultResult.displayName = "Pattern";
+importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
 
 export default importDefaultResultResult;

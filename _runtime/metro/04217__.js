@@ -1,19 +1,28 @@
 // === Module 4217: ? ===
 
 // Module 4217
-import _mod3953 from "module_3953" /* 3953 */;
-import assign_mod from "assign" /* 4198 */;
+import _typeof_mod from "module_3947" /* 3947 */;
+import requiredArgs_mod from "requiredArgs" /* 3948 */;
 
-let assign = assign_mod;
-if (!assign) {
-  const obj = { default: assign };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = assign;
+  tmp3 = _typeof;
 }
-assign = tmp3;
+_typeof = tmp3;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
+} else {
+  tmp5 = requiredArgs;
+}
+requiredArgs = tmp5;
 
-export default function getDefaultOptions() {
-  return assign.default({}, _mod3953.getDefaultOptions());
+export default function getHours(arg0) {
+  requiredArgs.default(1, arguments);
+  return _typeof.default(arg0).getHours();
 };
 export default exports.default;

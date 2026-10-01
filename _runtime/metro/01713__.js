@@ -81,7 +81,7 @@ fn = function n(userConfig, fn) {
       current: "sa",
       lastTimestamp: null,
       startTimestamp: "ProfileBadgeRows",
-      reduceMotion: "BadgeDetailsSheet"
+      reduceMotion: "CustomizeBadgesSheet"
     };
     let num = obj.velocity;
     if (num == null) {

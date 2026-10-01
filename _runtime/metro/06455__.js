@@ -1,21 +1,40 @@
 // === Module 6455: ? ===
 
 // Module 6455
-import _mod19 from "module_19" /* 19 */;
-import _mod6246 from "module_6246" /* 6246 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import noop_mod from "module_19" /* 19 */;
 
-_mod19.useCallback;
-
-export const useBottomSheetContentSizeSetter = function useBottomSheetContentSizeSetter() {
-  const bottomSheetInternal = _mod6246.useBottomSheetInternal();
-  const enableDynamicSizing = bottomSheetInternal.enableDynamicSizing;
-  const animatedContentHeight = bottomSheetInternal.animatedContentHeight;
-  const obj2 = { setContentSize: null };
-  const items = [enableDynamicSizing, animatedContentHeight];
-  obj2.setContentSize = useCallback((arg0) => {
-    if (enableDynamicSizing) {
-      const result = animatedContentHeight.set(arg0);
-    }
-  }, items);
-  return obj2;
-};
+let closure_2 = ["focusHook", "scrollEventsHandlersHook", "enableFooterMarginAdjustment"];
+let noop = fn(19);
+const forwardRef = noop.forwardRef;
+({ useMemo: metroRequire, memo } = noop);
+let noop = noop_mod;
+const jsx = fn(21).jsx;
+try {
+  const FlashList = fn(6456);
+  const memoResult = memo(forwardRef((focusHook, ref) => {
+    focusHook = focusHook.focusHook;
+    const scrollEventsHandlersHook = focusHook.scrollEventsHandlersHook;
+    const enableFooterMarginAdjustment = focusHook.enableFooterMarginAdjustment;
+    closure_6(() => {
+      if (!FlashList) {
+        throw "You need to install FlashList first, `yarn install @shopify/flash-list`";
+      }
+    }, []);
+    const items = [focusHook, scrollEventsHandlersHook, enableFooterMarginAdjustment];
+    const tmp = _objectWithoutProperties(focusHook, enableFooterMarginAdjustment);
+    let merged = Object.assign(tmp);
+    return <FlashList.FlashList ref={ref} renderScrollComponent={closure_6(() => forwardRef((arg0, ref) => {
+      const merged = Object.assign(arg0, Object.assign({ data: 0 }));
+      const obj = { ref };
+      const merged1 = Object.assign(merged);
+      obj.focusHook = focusHook;
+      obj.scrollEventsHandlersHook = scrollEventsHandlersHook;
+      obj.enableFooterMarginAdjustment = enableFooterMarginAdjustment;
+      return jsx(focusHook(scrollEventsHandlersHook[4]), { ref });
+    }), items)} />;
+  }));
+  exports.default = memoResult;
+  exports.BottomSheetFlashList = memoResult;
+} catch (err) {
+}

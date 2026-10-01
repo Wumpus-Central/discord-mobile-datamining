@@ -4,4 +4,4 @@
 import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "c4aafc313c19c8dfb2febbf6a9f3f39c", name: "ScienceIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 19, height: 19, scales: [2, 3], hash: "77f70d67a495166d7b55949a3fa57226", name: "ic_channel_arrow", type: "png" });

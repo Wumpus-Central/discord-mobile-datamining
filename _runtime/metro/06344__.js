@@ -1,33 +1,20 @@
 // === Module 6344: ? ===
 
 // Module 6344
-import traverseAndConfigureRelations from "traverseAndConfigureRelations" /* 6343 */;
-import noop from "module_19" /* 19 */;
+import _mod19 from "module_19" /* 19 */;
 
-({ useEffect: c2, useMemo: c3 } = noop);
+let useMemo = _mod19.useMemo;
 
-export const useGestureRelationsUpdater = function useGestureRelationsUpdater(gesture) {
-  closure_0 = gesture;
-  const items = [gesture];
-  const tmp = closure_3(() => {
-    let configureRelationsResult = null;
-    if (closure_0) {
-      configureRelationsResult = traverseAndConfigureRelations.configureRelations(tmp);
-    }
-    return configureRelationsResult;
+export const useGestureEventHandler = function useGestureEventHandler(handlerTag, memoizedGestureCallbacks, disableReanimated) {
+  closure_0 = handlerTag;
+  closure_1 = memoizedGestureCallbacks;
+  useMemo = disableReanimated;
+  const tmp = useMemo(() => ({ lastUpdateEvent: "r" }), []);
+  closure_3 = tmp;
+  const items = [handlerTag, memoizedGestureCallbacks, , , , ];
+  ({ changeEventCalculator: arr[2], dispatchesAnimatedEvents: arr[3], fillInDefaultValues: arr[4] } = disableReanimated);
+  items[5] = tmp;
+  return useMemo(() => (arg0) => {
+    closure_0(closure_1[1]).eventHandler(handlerTag, arg0, memoizedGestureCallbacks, disableReanimated.changeEventCalculator, closure_1_3, disableReanimated.dispatchesAnimatedEvents, disableReanimated.fillInDefaultValues);
   }, items);
-  closure_1 = tmp;
-  const items1 = [tmp];
-  closure_2(() => {
-    if (closure_1) {
-      const _requestAnimationFrame = requestAnimationFrame;
-      closure_0 = requestAnimationFrame(() => {
-        const item = closure_1_1.forEach((item, index) => {
-          const NativeProxy = closure_1_0(closure_1_1[2]).NativeProxy;
-          NativeProxy.configureRelations(index, item);
-        });
-      });
-      return () => cancelAnimationFrame(closure_0);
-    }
-  }, items1);
 };

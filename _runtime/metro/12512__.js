@@ -1,57 +1,93 @@
 // === Module 12512: ? ===
 
 // Module 12512
-import _mod12513 from "module_12513" /* 12513 */;
-import _mod12514 from "module_12514" /* 12514 */;
-import stackParserFromStackParserOptions from "stackParserFromStackParserOptions" /* 12517 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-const dependencyMap = {};
-let closure_3 = {};
-
-export const addHandler = function addHandler(console, errorCallback) {
-  dependencyMap[console] = dependencyMap[console] || [];
-  dependencyMap[console].push(errorCallback);
-  const tmp2 = dependencyMap[console] || [];
-};
-export const maybeInstrument = function maybeInstrument(console, fn) {
-  if (!closure_3[console]) {
-    tmp2[console] = true;
-    try {
-      fn();
-    } catch (tmp5) {
-      if (_mod12513.DEBUG_BUILD) {
-        const logger = _mod12514.logger;
-        const _HermesInternal = HermesInternal;
-        logger.error("Error while instrumenting " + tmp, tmp5);
-      }
+const BackButton = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+fn(17).BackHandler;
+const jsx = fn(21).jsx;
+class BackButton {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = c2(this, BackButton);
+    items1 = [...items];
+    tmp2 = closure_4;
+    obj = closure_4(BackButton);
+    tmp3 = closure_3;
+    if (closure_7()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.handleBack = () => {
+      let flag = 0 !== closure_0.history.index;
+      if (flag) {
+        const history = closure_0.history;
+        history.goBack();
+        flag = true;
+      }
+      return flag;
+    };
+    return tmp3Result;
+  }
+}
+_inherits(BackButton, noop.Component);
+const entry = {
+  key: "componentDidMount",
+  value: function componentDidMount() {
+    const listener = BackHandler.addEventListener("hardwareBackPress", this.handleBack);
   }
 };
-export const resetInstrumentationHandlers = function resetInstrumentationHandlers() {
-  const keys = Object.keys(closure_2);
-  const item = keys.forEach((item) => {
-    dependencyMap[item] = undefined;
-  });
-};
-export const triggerHandlers = function triggerHandlers(arg0, arg1) {
-  let tmp8 = arg0;
-  if (arg0) {
-    tmp8 = dependencyMap[arg0];
-  }
-  if (tmp8) {
-    const iter = tmp8[Symbol.iterator]();
-    if (iter !== undefined) {
-      try {
-        tmp15(arg1);
-      } catch (tmp18) {
-        if (_mod12513.DEBUG_BUILD) {
-          const logger = _mod12514.logger;
-          logger.error(tmp2 + tmp6 + tmp3 + stackParserFromStackParserOptions.getFunctionName(tmp7) + tmp4, tmp18);
-          const tmp19Result = stackParserFromStackParserOptions;
+let items = [
+  entry,
+  {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      const removed = BackHandler.removeEventListener("hardwareBackPress", this.handleBack);
+    }
+  },
+  {
+    key: "render",
+    value: function render() {
+      const self = this;
+      return jsx(BackButton(4695).__HistoryContext.Consumer, {
+        children(history) {
+          self.history = history;
+          return self.props.children || null;
         }
-      }
+      });
     }
-    const nextResult = iter.next();
   }
-};
+];
+
+export default _createClass(BackButton, items);

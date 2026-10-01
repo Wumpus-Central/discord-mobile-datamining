@@ -1,17 +1,10 @@
 // === Module 14047: ? ===
 
 // Module 14047
-import _mod13999 from "module_13999" /* 13999 */;
-import _mod14006 from "module_14006" /* 14006 */;
+import _mod13995 from "module_13995" /* 13995 */;
+import _mod13996 from "module_13996" /* 13996 */;
 
-let closure_2 = _mod13999("keys");
 
-export default (arg0) => {
-  let tmp2 = closure_2[arg0];
-  if (!tmp2) {
-    const tmp5 = _mod14006(arg0);
-    tmp[arg0] = tmp5;
-    tmp2 = tmp5;
-  }
-  return tmp2;
-};
+export default _mod13995 && _mod13996(() => 42 !== Object.defineProperty(() => {
+
+}, "prototype", { value: 42, writable: false }).prototype);

@@ -2,7 +2,7 @@
 
 // Module 4307
 import module_4299_mod from "module_4299" /* 4299 */;
-import requiredArgs_mod from "requiredArgs" /* 3949 */;
+import requiredArgs_mod from "requiredArgs" /* 3948 */;
 
 let module_4299 = module_4299_mod;
 if (!module_4299) {
@@ -21,7 +21,7 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisMonth(arg0) {
+export default function isThisQuarter(arg0) {
   requiredArgs.default(1, arguments);
   return module_4299.default(Date.now(), arg0);
 };

@@ -1,41 +1,182 @@
 // === Module 6537: ? ===
 
 // Module 6537
-import _mod6489 from "module_6489" /* 6489 */;
-import _slicedToArray from "module_6471" /* 6471 */;
+import cancelAnimation from "cancelAnimation" /* 1638 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6259 */;
+import _mod6539 from "module_6539" /* 6539 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop_mod from "module_19" /* 19 */;
 
 require = fn;
-const noop = fn(19);
-({ useCallback: c3, useMemo: closure_4, useRef: hasOwnProperty } = noop);
+let noop = fn(19);
+({ useCallback: closure_4, useEffect: hasOwnProperty, useMemo: metroRequire, useRef: closure_7, useState: closure_8, memo } = noop);
+let noop = noop_mod;
+const jsx = fn(21).jsx;
+let closure_10 = { code: "function pnpm_BottomSheetBackdropTsx1(){const{runOnJS,handleOnPress}=this.__closure;runOnJS(handleOnPress)();}" };
+let __initData = { code: "function pnpm_BottomSheetBackdropTsx2(){const{interpolate,animatedIndex,disappearsOnIndex,appearsOnIndex,opacity,Extrapolation}=this.__closure;return{opacity:interpolate(animatedIndex.value,[-1,disappearsOnIndex,appearsOnIndex],[0,0,opacity],Extrapolation.CLAMP)};}" };
+let __initData2 = { code: "function pnpm_BottomSheetBackdropTsx3(){const{animatedIndex,disappearsOnIndex}=this.__closure;return Math.round(animatedIndex.value)<=disappearsOnIndex;}" };
+let closure_13 = { code: "function pnpm_BottomSheetBackdropTsx4(shouldDisableTouchability,previous){const{runOnJS,handleContainerTouchability}=this.__closure;if(shouldDisableTouchability===previous){return;}runOnJS(handleContainerTouchability)(shouldDisableTouchability);}" };
+const memoResult = memo((animatedIndex) => {
+  animatedIndex = animatedIndex.animatedIndex;
+  ({ opacity, appearsOnIndex, disappearsOnIndex, enableTouchThrough, pressBehavior } = animatedIndex);
+  if (pressBehavior === undefined) {
+    pressBehavior = animatedIndex(onPress[3]).DEFAULT_PRESS_BEHAVIOR;
+  }
+  onPress = animatedIndex.onPress;
+  const style = animatedIndex.style;
+  ({ ViewComponent, children } = animatedIndex);
+  if (ViewComponent === undefined) {
+    ViewComponent = pressBehavior(onPress[4]).View;
+  }
+  let DEFAULT_ACCESSIBLE = animatedIndex.accessible;
+  if (DEFAULT_ACCESSIBLE === undefined) {
+    DEFAULT_ACCESSIBLE = animatedIndex(onPress[3]).DEFAULT_ACCESSIBLE;
+  }
+  let DEFAULT_ACCESSIBILITY_ROLE = animatedIndex.accessibilityRole;
+  if (DEFAULT_ACCESSIBILITY_ROLE === undefined) {
+    DEFAULT_ACCESSIBILITY_ROLE = animatedIndex(onPress[3]).DEFAULT_ACCESSIBILITY_ROLE;
+  }
+  let DEFAULT_ACCESSIBILITY_LABEL = animatedIndex.accessibilityLabel;
+  if (DEFAULT_ACCESSIBILITY_LABEL === undefined) {
+    DEFAULT_ACCESSIBILITY_LABEL = animatedIndex(onPress[3]).DEFAULT_ACCESSIBILITY_LABEL;
+  }
+  let DEFAULT_ACCESSIBILITY_HINT = animatedIndex.accessibilityHint;
+  if (DEFAULT_ACCESSIBILITY_HINT === undefined) {
+    DEFAULT_ACCESSIBILITY_HINT = animatedIndex(onPress[3]).DEFAULT_ACCESSIBILITY_HINT;
+  }
+  opacity = undefined;
+  appearsOnIndex = undefined;
+  disappearsOnIndex = undefined;
+  __initData = undefined;
+  __initData2 = undefined;
+  let animatedStyle;
+  const bottomSheet = animatedIndex(onPress[5]).useBottomSheet();
+  const snapToIndex = bottomSheet.snapToIndex;
+  const close = bottomSheet.close;
+  const ref = opacity(false);
+  if (opacity == null) {
+    opacity = tmp13(tmp14[3]).DEFAULT_OPACITY;
+  }
+  if (appearsOnIndex == null) {
+    appearsOnIndex = tmp13(tmp14[3]).DEFAULT_APPEARS_ON_INDEX;
+  }
+  if (disappearsOnIndex == null) {
+    disappearsOnIndex = tmp13(tmp14[3]).DEFAULT_DISAPPEARS_ON_INDEX;
+  }
+  if (enableTouchThrough == null) {
+    enableTouchThrough = tmp13(tmp14[3]).DEFAULT_ENABLE_TOUCH_THROUGH;
+  }
+  let str = "auto";
+  if (enableTouchThrough) {
+    str = "none";
+  }
+  const tmp17 = style(appearsOnIndex(str), 2);
+  let items = [snapToIndex, close, disappearsOnIndex, pressBehavior, onPress];
+  const tmp18 = snapToIndex(() => {
+    if (onPress != null) {
+      tmp();
+    }
+    if ("close" === pressBehavior) {
+      close();
+    } else if ("collapse" === pressBehavior) {
+      snapToIndex(disappearsOnIndex);
+    } else if (typeof pressBehavior === "number") {
+      snapToIndex(pressBehavior);
+    }
+  }, items);
+  __initData = tmp18;
+  const tmp19 = snapToIndex((arg0) => {
+    if (ref.current) {
+      let str = "auto";
+      if (arg0) {
+        str = "none";
+      }
+      __initData(str);
+    }
+  }, []);
+  __initData2 = tmp19;
+  let items1 = [tmp18];
+  let obj = animatedIndex(onPress[5]);
+  const tmp20 = ref(() => {
+    const Gesture = LegacyBaseButton.Gesture;
+    const fn = function n() {
+      animatedIndex(onPress[4]).runOnJS(handleOnPress)();
+    };
+    const TapResult = Gesture.Tap();
+    fn.__closure = { runOnJS: cancelAnimation.runOnJS, handleOnPress };
+    fn.__workletHash = 10704059633145;
+    fn.__initData = __initData;
+    return TapResult.onEnd(fn);
+  }, items1);
+  class P {
+    constructor() {
+      obj = { opacity: null };
+      obj2 = closure_0(closure_2[4]);
+      items = [-1];
+      items[1] = closure_9;
+      items[2] = DEFAULT_APPEARS_ON_INDEX;
+      items1 = [0, 0];
+      items1[2] = DEFAULT_OPACITY;
+      obj.opacity = obj2.interpolate(animatedIndex.value, items, items1, closure_0(closure_2[4]).Extrapolation.CLAMP);
+      return obj;
+    }
+  }
+  const tmp13Result = animatedIndex(onPress[4]);
+  P.__closure = { interpolate: animatedIndex(onPress[4]).interpolate, animatedIndex, disappearsOnIndex, appearsOnIndex, opacity, Extrapolation: animatedIndex(onPress[4]).Extrapolation };
+  P.__workletHash = 7085425846204;
+  P.__initData = __initData;
+  const items2 = [animatedIndex, appearsOnIndex, disappearsOnIndex, opacity];
+  animatedStyle = tmp13Result.useAnimatedStyle(P, items2);
+  const items3 = [style, animatedStyle];
+  const obj2 = { interpolate: animatedIndex(onPress[4]).interpolate, animatedIndex, disappearsOnIndex, appearsOnIndex, opacity, Extrapolation: animatedIndex(onPress[4]).Extrapolation };
+  const tmp22 = ref(() => {
+    const items = [_mod6539.styles.backdrop, style, animatedStyle];
+    return items;
+  }, items3);
+  class H {
+    constructor() {
+      return Math.round(animatedIndex.value) <= closure_9;
+    }
+  }
+  H.__closure = { animatedIndex, disappearsOnIndex };
+  H.__workletHash = 17177056692744;
+  H.__initData = __initData2;
+  let fn = function k(arg0, arg1) {
+    if (arg0 !== arg1) {
+      cancelAnimation.runOnJS(closure_12)(arg0);
+    }
+  };
+  const tmp13Result2 = animatedIndex(onPress[4]);
+  fn.__closure = { runOnJS: animatedIndex(onPress[4]).runOnJS, handleContainerTouchability: tmp19 };
+  fn.__workletHash = 17426135168622;
+  fn.__initData = animatedStyle;
+  const items4 = [disappearsOnIndex];
+  const animatedReaction = tmp13Result2.useAnimatedReaction(H, fn, items4);
+  close(() => {
+    closure_6.current = true;
+    return () => {
+      ref.current = false;
+    };
+  }, []);
+  const obj4 = { style: tmp22, pointerEvents: tmp17[0], accessible: DEFAULT_ACCESSIBLE, accessibilityRole: DEFAULT_ACCESSIBILITY_ROLE, accessibilityLabel: DEFAULT_ACCESSIBILITY_LABEL, accessibilityHint: null, children: null };
+  if (!DEFAULT_ACCESSIBILITY_HINT) {
+    let str2 = "move";
+    if (typeof pressBehavior === "string") {
+      str2 = pressBehavior;
+    }
+    const _HermesInternal = HermesInternal;
+    DEFAULT_ACCESSIBILITY_HINT = "Tap to " + str2 + " the Bottom Sheet";
+  }
+  obj4.accessibilityHint = DEFAULT_ACCESSIBILITY_HINT;
+  obj4.children = children;
+  const tmp25Result = disappearsOnIndex(ViewComponent, obj4);
+  let tmp25Result2 = tmp25Result;
+  if ("none" !== pressBehavior) {
+    const obj5 = { gesture: tmp20, children: tmp25Result };
+    tmp25Result2 = tmp25(tmp13(tmp14[6]).GestureDetector, obj5);
+  }
+  return tmp25Result2;
+});
+memoResult.displayName = "BottomSheetBackdrop";
 
-export const useRecyclingState = function useRecyclingState(arg0, arg1, arg2) {
-  closure_0 = arg0;
-  closure_1 = arg2;
-  let tmp = hasOwnProperty(undefined);
-  [r10015, tmp3] = _mod6489.useLayoutState(0);
-  React4(() => {
-    let tmpResult = closure_0;
-    if (typeof closure_0 === "function") {
-      tmpResult = tmp();
-    }
-    closure_2.current = tmpResult;
-    if (closure_1 != null) {
-      tmp3();
-    }
-  }, arg1);
-  const items = [tmp3];
-  const items1 = [
-    tmp.current,
-    React3((fn, arg1) => {
-      let tmp = fn;
-      if (typeof fn === "function") {
-        tmp = fn(ref.current);
-      }
-      if (tmp !== ref.current) {
-        tmp2.current = tmp;
-        arg1((arg0) => arg0 + 1, arg1);
-      }
-    }, items)
-  ];
-  return items1;
-};
+export const BottomSheetBackdrop = memoResult;

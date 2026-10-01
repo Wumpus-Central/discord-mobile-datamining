@@ -1,7 +1,21 @@
 // === Module 7050: ? ===
 
 // Module 7050
-import registerAsset from "module_1121" /* 1121 */;
+import _mod19 from "module_19" /* 19 */;
+import _modDef7051 from "module_7051" /* 7051 */;
 
+const useRef = _mod19.useRef;
+let closure_3 = [];
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 343, height: 112, scales: [2, 3], hash: "a236f8cc27bca615087c819a6d4db4e6", name: "img_clouds_header_tier_2", type: "png" });
+export default function useStableMemo(fn, items) {
+  const tmp = useRef();
+  const tmp2 = useRef(closure_3);
+  if (tmp2.current === closure_3) {
+    tmp.current = fn();
+    tmp2.current = items;
+  } else if (!_modDef7051(items, tmp2.current)) {
+    tmp.current = fn();
+    tmp2.current = items;
+  }
+  return tmp.current;
+};

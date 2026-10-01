@@ -1,44 +1,32 @@
 // === Module 3968: ? ===
 
 // Module 3968
-import module_3969 from "module_3969" /* 3969 */;
-import module_3970 from "module_3970" /* 3970 */;
-import module_3971 from "module_3971" /* 3971 */;
-import date_mod from "module_3972" /* 3972 */;
-import date_mod from "module_3973" /* 3973 */;
+const obj = { lessThanXSeconds: { standalone: { one: "weniger als 1 Sekunde", other: "weniger als {{count}} Sekunden" }, withPreposition: { one: "weniger als 1 Sekunde", other: "weniger als {{count}} Sekunden" } }, xSeconds: { standalone: { one: "1 Sekunde", other: "{{count}} Sekunden" }, withPreposition: { one: "1 Sekunde", other: "{{count}} Sekunden" } }, halfAMinute: { standalone: "halbe Minute", withPreposition: "halben Minute" }, lessThanXMinutes: { standalone: { one: "weniger als 1 Minute", other: "weniger als {{count}} Minuten" }, withPreposition: { one: "weniger als 1 Minute", other: "weniger als {{count}} Minuten" } }, xMinutes: { standalone: { one: "1 Minute", other: "{{count}} Minuten" }, withPreposition: { one: "1 Minute", other: "{{count}} Minuten" } }, aboutXHours: { standalone: { one: "etwa 1 Stunde", other: "etwa {{count}} Stunden" }, withPreposition: { one: "etwa 1 Stunde", other: "etwa {{count}} Stunden" } }, xHours: { standalone: { one: "1 Stunde", other: "{{count}} Stunden" }, withPreposition: { one: "1 Stunde", other: "{{count}} Stunden" } }, xDays: { standalone: { one: "1 Tag", other: "{{count}} Tage" }, withPreposition: { one: "1 Tag", other: "{{count}} Tagen" } }, aboutXWeeks: { standalone: { one: "etwa 1 Woche", other: "etwa {{count}} Wochen" }, withPreposition: { one: "etwa 1 Woche", other: "etwa {{count}} Wochen" } }, xWeeks: { standalone: { one: "1 Woche", other: "{{count}} Wochen" }, withPreposition: { one: "1 Woche", other: "{{count}} Wochen" } }, aboutXMonths: { standalone: { one: "etwa 1 Monat", other: "etwa {{count}} Monate" }, withPreposition: { one: "etwa 1 Monat", other: "etwa {{count}} Monaten" } }, xMonths: { standalone: { one: "1 Monat", other: "{{count}} Monate" }, withPreposition: { one: "1 Monat", other: "{{count}} Monaten" } }, aboutXYears: { standalone: { one: "etwa 1 Jahr", other: "etwa {{count}} Jahre" }, withPreposition: { one: "etwa 1 Jahr", other: "etwa {{count}} Jahren" } }, xYears: { standalone: { one: "1 Jahr", other: "{{count}} Jahre" }, withPreposition: { one: "1 Jahr", other: "{{count}} Jahren" } }, overXYears: { standalone: { one: "mehr als 1 Jahr", other: "mehr als {{count}} Jahre" }, withPreposition: { one: "mehr als 1 Jahr", other: "mehr als {{count}} Jahren" } }, almostXYears: { standalone: { one: "fast 1 Jahr", other: "fast {{count}} Jahre" }, withPreposition: { one: "fast 1 Jahr", other: "fast {{count}} Jahren" } } };
 
-if (!module_3969) {
-  const obj = { default: module_3969 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_3969;
-}
-if (!module_3970) {
-  const obj2 = { default: module_3970 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_3970;
-}
-if (!module_3971) {
-  const obj3 = { default: module_3971 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_3971;
-}
-let date = date_mod;
-if (!date) {
-  const obj4 = { default: date };
-  let tmp9 = obj4;
-} else {
-  tmp9 = date;
-}
-let date = date_mod;
-if (!date) {
-  const obj5 = { default: date };
-  let tmp11 = obj5;
-} else {
-  tmp11 = date;
-}
-
-export default { code: "de", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
+export default function formatDistance(arg0, arg1, addSuffix) {
+  if (null != addSuffix) {
+    if (addSuffix.addSuffix) {
+      let standalone = obj[arg0].withPreposition;
+    }
+    if (typeof standalone === "string") {
+      let tmp5 = standalone;
+      if (null != addSuffix) {
+        tmp5 = standalone;
+        if (addSuffix.addSuffix) {
+          if (!addSuffix.comparison) {
+            let text = `vor ${standalone}`;
+          }
+          text = `in ${standalone}`;
+        }
+      }
+      return tmp5;
+    } else if (1 === arg1) {
+      let one = standalone.one;
+    } else {
+      const _String = String;
+      one = standalone.other.replace("{{count}}", String(arg1));
+    }
+  }
+  standalone = obj[arg0].standalone;
+};
 export default exports.default;

@@ -4,4 +4,4 @@
 import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "1699074ac253625e6b37940d47094c82", name: "AnalyticsIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/stickers/native/images", width: 24, height: 24, scales: [2, 3], hash: "14e9f26f2a47abbd4dc478a8a748d9e9", name: "history", type: "png" });

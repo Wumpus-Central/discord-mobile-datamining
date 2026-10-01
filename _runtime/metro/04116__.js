@@ -1,18 +1,18 @@
 // === Module 4116: ? ===
 
 // Module 4116
-import module_3952_mod from "module_3952" /* 3952 */;
+import module_3951_mod from "module_3951" /* 3951 */;
 import module_4096_mod from "module_4096" /* 4096 */;
-import requiredArgs_mod from "requiredArgs" /* 3949 */;
+import requiredArgs_mod from "requiredArgs" /* 3948 */;
 
-let module_3952 = module_3952_mod;
-if (!module_3952) {
-  const obj = { default: module_3952 };
+let module_3951 = module_3951_mod;
+if (!module_3951) {
+  const obj = { default: module_3951 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_3952;
+  tmp3 = module_3951;
 }
-module_3952 = tmp3;
+module_3951 = tmp3;
 let module_4096 = module_4096_mod;
 if (!module_4096) {
   const obj2 = { default: module_4096 };
@@ -30,8 +30,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp7;
 
-export default function addWeeks(arg0, arg1) {
+export default function addYears(interval, arg1) {
   requiredArgs.default(2, arguments);
-  return module_4096.default(arg0, 7 * module_3952.default(arg1));
+  return module_4096.default(interval, 12 * module_3951.default(arg1));
 };
 export default exports.default;

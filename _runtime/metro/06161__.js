@@ -1,15 +1,27 @@
 // === Module 6161: ? ===
 
 // Module 6161
+import noop from "module_19" /* 19 */;
 
-export const getHeaderTitle = function getHeaderTitle(options, name) {
-  if (typeof options.headerTitle === "string") {
-    let title = options.headerTitle;
-  } else {
-    title = name;
-    if (undefined !== options.title) {
-      title = options.title;
+const UIManager = fn(17).UIManager;
+const jsx = fn(21).jsx;
+try {
+  let closure_0 = fn(6162).default;
+  let closure_2 = null != UIManager.getViewManagerConfig("RNCMaskedView");
+  exports.MaskedView = function MaskedView(children) {
+    children = children.children;
+    const merged = Object.assign(children, Object.assign({ children: 0 }));
+    let tmp2 = children;
+    if (closure_2) {
+      tmp2 = children;
+      if (closure_0) {
+        const obj = {};
+        const merged1 = Object.assign(merged);
+        obj.children = children;
+        tmp2 = <tmp3 />;
+      }
     }
-  }
-  return title;
-};
+    return tmp2;
+  };
+} catch (err) {
+}

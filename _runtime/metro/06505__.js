@@ -1,19 +1,18 @@
 // === Module 6505: ? ===
 
 // Module 6505
-function _setPrototypeOf(arg0, arg1) {
-  if (Object.setPrototypeOf) {
-    const _Object = Object;
-    exports = setPrototypeOf.bind();
-  } else {
-    exports = (arg0, arg1) => {
-      arg0.__proto__ = arg1;
-      return arg0;
-    };
-  }
-  module.exports = exports;
-  return exports(arg0, arg1);
-}
-let exports = _setPrototypeOf;
+import noop from "module_19" /* 19 */;
 
-export default _setPrototypeOf;
+({ useRef: closure_0, useLayoutEffect: closure_1 } = noop);
+
+export const useUnmountFlag = () => {
+  const tmp = React(false);
+  closure_0 = tmp;
+  framebus(() => {
+    closure_0.current = false;
+    return () => {
+      closure_1_0.current = true;
+    };
+  }, []);
+  return tmp;
+};

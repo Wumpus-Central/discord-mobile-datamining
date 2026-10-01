@@ -1,14 +1,9 @@
 // === Module 6376: ? ===
 
 // Module 6376
-import ComposedGestureName from "ComposedGestureName" /* 6328 */;
-import _mod6377 from "module_6377" /* 6377 */;
+import module_65 from "module_65" /* 65 */;
 
-require = arg1;
-const dependencyMap = arg6;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNGestureHandlerRootView", validAttributes: { moduleId: true, unstable_forceActive: true } };
 
-export const useCompetingGestures = function useCompetingGestures() {
-  const items = [...arguments];
-  const items1 = [ComposedGestureName.ComposedGestureName.Race, ...items];
-  return _mod6377.useComposedGesture.apply(items1);
-};
+export default module_65.get("RNGestureHandlerRootView", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

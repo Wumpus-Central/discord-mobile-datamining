@@ -1,91 +1,73 @@
 // === Module 12633: ? ===
 
 // Module 12633
-import _readOnlyError from "_readOnlyError" /* 377 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
+import _mod12552 from "module_12552" /* 12552 */;
+import _flush from "_flush" /* 12573 */;
+import _mod12598 from "module_12598" /* 12598 */;
 
-let _classCallCheck = _classCallCheck_mod;
-class LRUMap {
-  constructor(arg0) {
-    tmp = closure_0(this, LRUMap);
-    this._maxSize = global;
-    map = new Map();
-    this._cache = map;
-    return;
-  }
+require = arg1;
+const dependencyMap = arg6;
+function getCurrentHubShim() {
+  return {
+    bindClient(arg0) {
+      const currentScope = _mod12552.getCurrentScope();
+      currentScope.setClient(arg0);
+    },
+    withScope: _mod12552.withScope,
+    getClient() {
+      return _mod12552.getClient();
+    },
+    getScope: _mod12552.getCurrentScope,
+    getIsolationScope: _mod12552.getIsolationScope,
+    captureException(arg0, arg1) {
+      const currentScope = _mod12552.getCurrentScope();
+      return currentScope.captureException(arg0, arg1);
+    },
+    captureMessage(arg0, arg1, arg2) {
+      const currentScope = _mod12552.getCurrentScope();
+      return currentScope.captureMessage(arg0, arg1, arg2);
+    },
+    captureEvent: _flush.captureEvent,
+    addBreadcrumb: _mod12598.addBreadcrumb,
+    setUser: _flush.setUser,
+    setTags: _flush.setTags,
+    setTag: _flush.setTag,
+    setExtra: _flush.setExtra,
+    setExtras: _flush.setExtras,
+    setContext: _flush.setContext,
+    getIntegration(id) {
+      const client = _mod12552.getClient();
+      let integrationByName = client;
+      if (client) {
+        integrationByName = client.getIntegrationByName(id.id);
+      }
+      if (!integrationByName) {
+        integrationByName = null;
+      }
+      return integrationByName;
+    },
+    startSession: _flush.startSession,
+    endSession: _flush.endSession,
+    captureSession(arg0) {
+      if (arg0) {
+        return _flush.endSession();
+      } else {
+        const currentScope = _mod12552.getCurrentScope();
+        const tmpResult3 = _mod12552;
+        const client = _mod12552.getClient();
+        const session = currentScope.getSession();
+        let tmp4 = client;
+        if (client) {
+          tmp4 = session;
+        }
+        if (tmp4) {
+          client.captureSession(session);
+        }
+        const tmpResult4 = _mod12552;
+      }
+    }
+  };
 }
-_classCallCheck = LRUMap;
-let items = [
-  {
-    key: "size",
-    get() {
-      return this._cache.size;
-    }
-  },
-  {
-    key: "get",
-    value: function get(arg0) {
-      const self = this;
-      const _cache = this._cache;
-      value = _cache.get(arg0);
-      if (undefined !== value) {
-        const _cache2 = self._cache;
-        _cache2.delete(arg0);
-        const _cache3 = self._cache;
-        const result = _cache3.set(arg0, value);
-        return value;
-      }
-    }
-  },
-  {
-    key: "set",
-    value: function set(arg0, arg1) {
-      const self = this;
-      if (this._cache.size >= this._maxSize) {
-        ({ _cache, _cache: _cache2 } = self);
-        _cache.delete(_cache2.keys().next().value);
-        const iter = _cache2.keys();
-      }
-      const _cache3 = self._cache;
-      const result = _cache3.set(arg0, arg1);
-    }
-  },
-  {
-    key: "remove",
-    value: function remove(arg0) {
-      const _cache = this._cache;
-      value = _cache.get(arg0);
-      if (value) {
-        const _cache2 = this._cache;
-        _cache2.delete(arg0);
-      }
-      return value;
-    }
-  },
-  {
-    key: "clear",
-    value: function clear() {
-      const _cache = this._cache;
-      _cache.clear();
-    }
-  },
-  {
-    key: "keys",
-    value: function keys() {
-      const _cache = this._cache;
-      return Array.from(_cache.keys());
-    }
-  },
-  {
-    key: "values",
-    value: function values() {
-      const items = [];
-      const _cache = this._cache;
-      const item = _cache.forEach((item) => items.push(item));
-      return items;
-    }
-  }
-];
 
-export const LRUMap = _createClass(LRUMap, items);
+export const getCurrentHub = getCurrentHubShim;
+export { getCurrentHubShim };

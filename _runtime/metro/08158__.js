@@ -1,16 +1,14 @@
 // === Module 8158: ? ===
 
 // Module 8158
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef8145 from "module_8145" /* 8145 */;
-import _modDef8159 from "module_8159" /* 8159 */;
+import _modDef8134 from "module_8134" /* 8134 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
-import noop from "module_19" /* 19 */;
 
-const FeOffset = fn;
+const FeSpecularLighting = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,16 +28,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-_possibleConstructorReturnDefault;
-const jsx = fn(21).jsx;
-class FeOffset {
+class FeSpecularLighting {
   constructor() {
     self = this;
-    tmp = closure_3(this, FeOffset);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(FeOffset);
-    tmp3 = closure_4;
-    if (closure_7()) {
+    tmp = c2(this, FeSpecularLighting);
+    tmp2 = closure_4;
+    obj = closure_4(FeSpecularLighting);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -52,32 +48,18 @@ class FeOffset {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeOffset, _modDef8145);
+_inherits(FeSpecularLighting, _modDef8134);
 const entry = {
   key: "render",
   value: function render() {
-    const self = this;
-    const merged = Object.assign(this.props);
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const merged1 = Object.assign(FeOffset(8144).extractFilter(this.props));
-    const obj2 = FeOffset(8144);
-    const merged2 = Object.assign(FeOffset(8144).extractIn(this.props));
-    return <tmp ref={function ref(arg0) {
-      return self.refMethod(arg0);
-    }} />;
+    const result = FeSpecularLighting(8111).warnUnimplementedFilter();
+    return null;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeOffset, items);
-importDefaultResultResult.displayName = "FeOffset";
-let obj = {};
-let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-obj.dx = 0;
-obj.dy = 0;
-importDefaultResultResult.defaultProps = obj;
+const importDefaultResultResult = _createClass(FeSpecularLighting, items);
+importDefaultResultResult.displayName = "FeSpecularLighting";
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

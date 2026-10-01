@@ -1,44 +1,34 @@
 // === Module 12587: ? ===
 
 // Module 12587
-import _mod12514 from "module_12514" /* 12514 */;
-import _mod12528 from "module_12528" /* 12528 */;
-import _mod12541 from "module_12541" /* 12541 */;
+import _mod12525 from "module_12525" /* 12525 */;
+import _mod12552 from "module_12552" /* 12552 */;
+import _mod12553 from "module_12553" /* 12553 */;
 
 require = arg1;
 const dependencyMap = arg6;
 
-export const addBreadcrumb = function addBreadcrumb(arg0, arg1) {
-  closure_0 = arg1;
-  const client = _mod12541.getClient();
-  const isolationScope = _mod12541.getIsolationScope();
-  if (client) {
-    const options = client.getOptions();
-    let beforeBreadcrumb = options.beforeBreadcrumb;
-    let tmp5 = null;
-    if (undefined !== beforeBreadcrumb) {
-      tmp5 = beforeBreadcrumb;
-    }
-    beforeBreadcrumb = tmp5;
-    const maxBreadcrumbs = options.maxBreadcrumbs;
-    let num = 100;
-    if (undefined !== maxBreadcrumbs) {
-      num = maxBreadcrumbs;
-    }
-    if (num > 0) {
-      let obj2 = { timestamp: _mod12528.dateTimestampInSeconds() };
-      const merged = Object.assign(arg0);
-      if (tmp5) {
-        obj2 = _mod12514.consoleSandbox(() => beforeBreadcrumb(obj2, closure_0));
-        const tmpResult2 = _mod12514;
-      }
-      if (null !== obj2) {
-        if (client.emit) {
-          client.emit("beforeAddBreadcrumb", obj2, arg1);
-        }
-        isolationScope.addBreadcrumb(obj2, num);
-      }
-      const tmpResult = _mod12528;
+export const initAndBind = function initAndBind(arg0, debug) {
+  if (true === debug.debug) {
+    const obj = _mod12525;
+    if (_mod12553.DEBUG_BUILD) {
+      const logger = obj.logger;
+      logger.enable();
+    } else {
+      obj.consoleSandbox(() => {
+        console.warn("[Sentry] Cannot initialize SDK with `debug` option using a non-debug bundle.");
+      });
     }
   }
+  const currentScope = _mod12552.getCurrentScope();
+  currentScope.update(debug.initialScope);
+  const obj4 = new arg0(debug);
+  const currentScope1 = _mod12552.getCurrentScope();
+  currentScope1.setClient(obj4);
+  obj4.init();
+  return obj4;
+};
+export const setCurrentClient = function setCurrentClient(arg0) {
+  const currentScope = _mod12552.getCurrentScope();
+  currentScope.setClient(arg0);
 };

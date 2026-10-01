@@ -1,33 +1,30 @@
 // === Module 6474: ? ===
 
 // Module 6474
-import _mod6475 from "module_6475" /* 6475 */;
-
-
-export default function _unsupportedIterableToArray(str, arg1) {
-  if (str) {
-    if (typeof str === "string") {
-      return _mod6475(str, arg1);
-    } else {
-      const toString = {}.toString;
-      const call = toString.call;
-      const substr = typeof call === "unknown" ? toString() : call(str).slice(8, -1);
-      let name = substr;
-      if (tmp3) {
-        name = str.constructor.name;
-      }
-      if ("Map" !== name) {
-        if ("Set" !== name) {
-          if ("Arguments" === name) {
-            let arr2 = _mod6475(str, arg1);
-          }
-        }
-        return arr2;
-      }
-      const _Array = Array;
-      arr2 = Array.from(str);
-      const arr = typeof call === "unknown" ? toString() : call(str);
-      tmp3 = "Object" === substr && "Object".constructor;
+function _typeof(arg0) {
+  if (typeof Symbol === "function") {
+    let _Symbol = Symbol;
+    if (typeof Symbol.iterator === "symbol") {
+      exports = (arg0) => typeof arg0;
     }
+    module.exports = exports;
+    return exports(arg0);
   }
-};
+  exports = (arg0) => {
+    if (arg0) {
+      const _Symbol = Symbol;
+      if (typeof Symbol === "function") {
+        const _Symbol3 = Symbol;
+        if (arg0.constructor === Symbol) {
+          const _Symbol2 = Symbol;
+          let str = "symbol";
+        }
+        return str;
+      }
+    }
+    str = typeof arg0;
+  };
+}
+let exports = _typeof;
+
+export default _typeof;

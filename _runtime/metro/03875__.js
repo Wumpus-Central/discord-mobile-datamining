@@ -4,4 +4,4 @@
 import registerAsset from "module_1121" /* 1121 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3Jpb3RfY3JlZGl0X2NhbXBhaWdu", scales: [1], hash: "e1dc5fd88f0478fec1b6dc0d41b4600e", name: "zh-TW.messages.e1dc5fd88f0478fec1b6dc0d41b4600e.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/riot_credit_campaign", scales: [1], hash: "562e5850b1a8debc0b2f374ca26bd962", name: "RiotCreditCampaign.compiled.messages", type: "jsona" });

@@ -1,29 +1,24 @@
 // === Module 5727: ? ===
 
 // Module 5727
-import _modDef5726 from "module_5726" /* 5726 */;
-import _modDef5728 from "module_5728" /* 5728 */;
+import _mod5712 from "module_5712" /* 5712 */;
 
-importDefault = arg2;
+require = arg1;
 const dependencyMap = arg6;
+let c2 = 0;
+let c3 = "<?xpacket begin";
 
 export default {
-  isTiffFile(byteLength) {
-    let tmp = byteLength;
+  isXMLFile(dataView) {
+    let tmp = dataView;
     if (tmp) {
-      tmp = byteLength.byteLength >= 4;
-    }
-    if (tmp) {
-      const uint16 = byteLength.getUint16(0);
-      tmp = byteLength.getUint16(2, uint16 === _modDef5728.LITTLE_ENDIAN) === 42;
+      tmp = _mod5712.getStringFromDataView(dataView, c2, length.length) === length;
     }
     return tmp;
   },
-  findTiffOffsets() {
-    if (_modDef5726.USE_EXIF) {
-      return { hasAppMarkers: true, tiffHeaderOffset: 0 };
-    } else {
-      return {};
-    }
+  findOffsets(byteLength) {
+    const xmpChunks = [];
+    xmpChunks.push({ dataOffset, length: byteLength.byteLength });
+    return { xmpChunks };
   }
 };

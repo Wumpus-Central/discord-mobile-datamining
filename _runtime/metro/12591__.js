@@ -1,110 +1,556 @@
 // === Module 12591: ? ===
 
 // Module 12591
-import _mod12521 from "module_12521" /* 12521 */;
-import _mod12523 from "module_12523" /* 12523 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-require = arg1;
-let dependencyMap = arg6;
-function aggregateExceptionsFromError(fn, value, arg2, errors, source, arg5, mechanism, exception_id) {
-  _require = fn;
-  dependencyMap = value;
-  aggregateExceptionsFromError = arg2;
-  closure_3 = source;
-  if (arg5.length >= arg2 + 1) {
-    return arg5;
-  } else {
-    let items = [];
-    HermesBuiltin.arraySpread(arg5, 0);
-    length = items;
-    const _Error = Error;
-    if (obj3.isInstanceOf(errors[source], Error)) {
-      mechanism.mechanism = mechanism.mechanism || { type: "generic", handled: true };
-      let obj = {};
-      let merged = Object.assign(mechanism.mechanism);
-      const tmp3 = "AggregateError" === mechanism.type && { is_exception_group: true };
-      let merged1 = Object.assign(tmp3);
-      obj.exception_id = exception_id;
-      mechanism.mechanism = obj;
-      const tmp7 = fn(value, errors[source]);
-      length = length.length;
-      tmp7.mechanism = tmp7.mechanism || { type: "generic", handled: true };
-      let obj2 = {};
-      let merged2 = Object.assign(tmp7.mechanism);
-      obj2.type = "chained";
-      obj2.source = source;
-      obj2.exception_id = length;
-      obj2.parent_id = exception_id;
-      tmp7.mechanism = obj2;
-      const items1 = [tmp7];
-      HermesBuiltin.arraySpread(length, 1);
-      length = aggregateExceptionsFromError(fn, value, arg2, errors[source], source, items1, tmp7, length);
-    }
-    const _Array = Array;
-    if (Array.isArray(errors.errors)) {
-      errors = errors.errors;
-      const item = errors.forEach((item, index) => {
-        if (obj.isInstanceOf(item, Error)) {
-          mechanism.mechanism = mechanism.mechanism || { type: "generic", handled: true };
-          const obj2 = {};
-          const merged = Object.assign(tmp.mechanism);
-          const tmp5 = "AggregateError" === mechanism.type && { is_exception_group: true };
-          const merged1 = Object.assign(tmp5);
-          obj2.exception_id = exception_id;
-          mechanism.mechanism = obj2;
-          const tmp12 = closure_0(closure_1, item);
-          length = length.length;
-          const _HermesInternal = HermesInternal;
-          mechanism = tmp12.mechanism;
-          const combined = "errors[" + index + "]";
-          if (!mechanism) {
-            mechanism = { type: "generic", handled: true };
-          }
-          tmp12.mechanism = mechanism;
-          const obj3 = {};
-          const merged2 = Object.assign(tmp12.mechanism);
-          obj3.type = "chained";
-          obj3.source = combined;
-          obj3.exception_id = length;
-          obj3.parent_id = exception_id;
-          tmp12.mechanism = obj3;
-          const items = [tmp12];
-          HermesBuiltin.arraySpread(length, 1);
-          length = aggregateExceptionsFromError(closure_0, closure_1, closure_2, item, closure_3, items, tmp12, length);
-        }
-        obj = _mod12521;
-      });
-    }
-    return length;
-  }
-}
+let c3 = 100;
+let c4 = 5000;
 
-export const applyAggregateErrorsToEvent = function applyAggregateErrorsToEvent(exceptionFromError, stackParser) {
-  let num = maxValueLength;
-  if (maxValueLength === undefined) {
-    num = 250;
+export const MIN_DELAY = 100;
+export const START_DELAY = 5000;
+export function makeOfflineTransport(arg0) {
+  closure_0 = arg0;
+  function log() {
+    const items = [...arguments];
+    if (closure_0(log[1]).DEBUG_BUILD) {
+      const logger = closure_0(log[2]).logger;
+      const info = logger.info;
+      const items1 = ["[Offline]:"];
+      HermesBuiltin.arraySpread(items, 1);
+      HermesBuiltin.apply(items1, logger);
+    }
   }
-  if (exception.exception) {
-    if (exception.exception.values) {
-      if (originalException) {
-        const _Error = Error;
-        if (obj.isInstanceOf(originalException.originalException, Error)) {
-          let tmp5;
-          if (exception.exception.values.length > 0) {
-            tmp5 = exception.exception.values[exception.exception.values.length - 1];
+  return (createStore) => {
+    closure_0 = createStore;
+    function flushIn(arg0) {
+      if (timerId) {
+        const _clearTimeout = clearTimeout;
+        clearTimeout(timerId);
+      }
+      timerId = setTimeout(asyncGeneratorStep(async () => {
+        if (c3 === 2) {
+          c3 = 3;
+          throw new TypeError("Generator functions may not be called on executing generators");
+        } else if (tmp4 === 3) {
+          if (arg0 === 1) {
+            throw value;
+          } else if (arg0 === 2) {
+            const obj = { value, done: true };
+            return obj;
+          } else {
+            return { value: "HermesInternal", done: null };
           }
-          if (tmp5) {
-            exception.exception.values = aggregateExceptionsFromError(exceptionFromError, stackParser, arg4, originalException.originalException, arg3, exception.exception.values, tmp5, 0).map((value) => {
-              if (value.value) {
-                value.value = _mod12523.truncate(value.value, num);
+        } else {
+          try {
+            c3 = 2;
+            if (0 === c2) {
+              if (arg0 === 1) {
+                c3 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c3 = 3;
+                const obj2 = { value, done: true };
+                return obj2;
+              } else {
+                closure_0 = tmp2;
+                closure_128_0 = undefined;
+                c2 = undefined;
+                c2 = 1;
+                c3 = 1;
+                const obj3 = { value: closure_2_3.shift(), done: false };
+                return obj3;
               }
-              return value;
-            });
-            const arr = aggregateExceptionsFromError(exceptionFromError, stackParser, arg4, originalException.originalException, arg3, exception.exception.values, tmp5, 0);
+            } else if (arg0 === 1) {
+              c3 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c3 = 3;
+              const obj4 = { value, done: true };
+              return obj4;
+            } else {
+              closure_128_0 = value;
+              if (closure_128_0) {
+                tmp5("Attempting to send previously queued event");
+                const _Date = Date;
+                const date = new Date();
+                closure_128_0[0].sent_at = date.toISOString();
+                closure_129_7(closure_128_0, true).catch((error) => {
+                  closure_1_1("Failed to retry sending", error);
+                });
+                const promise = closure_129_7(closure_128_0, true);
+              }
+              c3 = 3;
+              return { value: "HermesInternal", done: null };
+            }
+          } catch (tmp18) {
+            c3 = tmp;
+            throw tmp18;
           }
         }
-        obj = num(12521);
+      }), arg0);
+      let unref = typeof timerId !== "number";
+      if (typeof timerId !== "number") {
+        unref = timerId.unref;
+      }
+      if (unref) {
+        timerId.unref();
       }
     }
-  }
-};
+    function flushWithBackOff() {
+      if (!timerId) {
+        if (tmp) {
+          const _clearTimeout = clearTimeout;
+          clearTimeout(timerId);
+        }
+        const _setTimeout = setTimeout;
+        timerId = setTimeout(asyncGeneratorStep(async () => {
+          if (c3 === 2) {
+            c3 = 3;
+            throw new TypeError("Generator functions may not be called on executing generators");
+          } else if (tmp4 === 3) {
+            if (arg0 === 1) {
+              throw value;
+            } else if (arg0 === 2) {
+              const obj = { value, done: true };
+              return obj;
+            } else {
+              return { value: "HermesInternal", done: null };
+            }
+          } else {
+            try {
+              c3 = 2;
+              if (0 === c2) {
+                if (arg0 === 1) {
+                  c3 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  c3 = 3;
+                  const obj2 = { value, done: true };
+                  return obj2;
+                } else {
+                  closure_0 = tmp2;
+                  closure_128_0 = undefined;
+                  c2 = undefined;
+                  c2 = 1;
+                  c3 = 1;
+                  const obj3 = { value: closure_2_3.shift(), done: false };
+                  return obj3;
+                }
+              } else if (arg0 === 1) {
+                c3 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c3 = 3;
+                const obj4 = { value, done: true };
+                return obj4;
+              } else {
+                closure_128_0 = value;
+                if (closure_128_0) {
+                  tmp5("Attempting to send previously queued event");
+                  const _Date = Date;
+                  const date = new Date();
+                  closure_128_0[0].sent_at = date.toISOString();
+                  closure_129_7(closure_128_0, true).catch((error) => {
+                    closure_1_1("Failed to retry sending", error);
+                  });
+                  const promise = closure_129_7(closure_128_0, true);
+                }
+                c3 = 3;
+                return { value: "HermesInternal", done: null };
+              }
+            } catch (tmp18) {
+              c3 = tmp;
+              throw tmp18;
+            }
+          }
+        }), closure_4);
+        let unref = typeof timerId !== "number";
+        if (typeof timerId !== "number") {
+          unref = timerId.unref;
+        }
+        if (unref) {
+          timerId.unref();
+        }
+        const _Math = Math;
+        closure_4 = Math.min(2 * closure_4, 3600000);
+      }
+    }
+    function send(arg0) {
+      const self = this;
+      const apply = closure_8.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
+    }
+    closure_8 = async function _send(arg0) {
+      if (c7 === 2) {
+        c7 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp5 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          let obj2 = { value, done: true };
+          return obj2;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c7 = 2;
+          if (0 === c6) {
+            if (arg0 === 1) {
+              c7 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c7 = 3;
+              const obj3 = { value, done: true };
+              return obj3;
+            } else {
+              closure_3 = tmp2;
+              closure_2 = tmp6;
+              closure_130_1 = undefined;
+              closure_130_0 = shouldStore;
+              let flag = closure_1;
+              if (closure_1 === undefined) {
+                flag = false;
+              }
+              closure_130_1 = flag;
+              closure_130_2 = undefined;
+              closure_130_3 = undefined;
+              c6 = 1;
+              c7 = 1;
+              return { value: "flex", done: null };
+            }
+          } else if (1 === tmp6) {
+            if (arg0 === 1) {
+              c7 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c7 = 3;
+              const obj4 = { value, done: true };
+              return obj4;
+            } else {
+              if (!closure_130_1) {
+                if (obj13.envelopeContainsItemType(closure_130_0, ["replay_event", "replay_recording"])) {
+                  c6 = 2;
+                  c7 = 1;
+                  const obj6 = { value: closure_131_3.push(closure_130_0), done: false };
+                  return obj6;
+                }
+                obj13 = createStore(12569);
+              }
+              c5 = 1;
+              c6 = 5;
+              c7 = 1;
+              const obj7 = { value: closure_131_1.send(closure_130_0), done: false };
+              return obj7;
+            }
+          } else if (2 === tmp6) {
+            if (arg0 === 1) {
+              c7 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c7 = 3;
+              const obj8 = { value, done: true };
+              return obj8;
+            } else {
+              closure_131_5(closure_2_3);
+              c7 = 3;
+              const obj9 = { value: {}, done: true };
+              return obj9;
+            }
+          } else if (3 === tmp6) {
+            c5 = 0;
+            closure_130_4 = closure_4;
+            c6 = 4;
+            c7 = 1;
+            const obj10 = {
+              value: (function shouldQueue(arg0, arg1, arg2) {
+                      const result = createStore(12569).envelopeContainsItemType(arg0, ["client_report"]);
+                      let tmp2 = !result;
+                      if (!result) {
+                        shouldStore = shouldStore.shouldStore;
+                        let shouldStoreResult = !shouldStore;
+                        if (shouldStore) {
+                          shouldStoreResult = obj2.shouldStore(arg0, arg1, arg2);
+                        }
+                        tmp2 = shouldStoreResult;
+                        obj2 = shouldStore;
+                      }
+                      return tmp2;
+                    })(closure_130_0, closure_130_4, closure_131_4),
+              done: false
+            };
+            return obj10;
+          } else if (4 === tmp6) {
+            if (arg0 === 1) {
+              c7 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c7 = 3;
+              const obj11 = { value, done: true };
+              return obj11;
+            } else if (value) {
+              if (closure_130_1) {
+                c6 = 7;
+                c7 = 1;
+                const obj12 = { value: closure_131_3.unshift(closure_130_0), done: false };
+                return obj12;
+              } else {
+                c6 = 6;
+                c7 = 1;
+                const obj14 = { value: closure_131_3.push(closure_130_0), done: false };
+                return obj14;
+              }
+            } else {
+              throw closure_130_4;
+            }
+          } else if (5 === tmp6) {
+            if (arg0 === 1) {
+              c7 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c5 = 0;
+              c7 = 3;
+              const obj15 = { value, done: true };
+              return obj15;
+            } else {
+              closure_130_2 = value;
+              closure_130_3 = closure_2_3;
+              if (!closure_130_2) {
+                closure_131_5(closure_130_3);
+                closure_131_4 = closure_2_4;
+                c5 = 0;
+                c7 = 3;
+              } else if (!closure_130_2.headers) {
+                if (closure_130_2.headers) {
+                  if (closure_130_2.headers["x-sentry-rate-limits"]) {
+                    closure_130_3 = 60000;
+                  }
+                }
+                let num7 = closure_130_2.statusCode;
+                if (!num7) {
+                  num7 = 0;
+                }
+                if (num7 >= 400) {
+                  c5 = 0;
+                  c7 = 3;
+                  const obj16 = { value: closure_130_2, done: true };
+                  return obj16;
+                }
+              }
+              closure_130_3 = createStore(12590).parseRetryAfterHeader(closure_130_2.headers["retry-after"]);
+              const obj5 = createStore(12590);
+            }
+          } else {
+            if (6 === tmp6) {
+              if (arg0 === 1) {
+                c7 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c7 = 3;
+                const obj17 = { value, done: true };
+                return obj17;
+              }
+            } else if (arg0 === 1) {
+              c7 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c7 = 3;
+              const obj = { value, done: true };
+              return obj;
+            }
+            closure_131_6();
+            closure_1("Error sending. Event queued.", closure_130_4);
+            c7 = 3;
+            const obj18 = { value: {}, done: true };
+            return obj18;
+          }
+        } catch (tmp67) {
+          closure_4 = tmp67;
+          if (tmp3 === c5) {
+            c7 = tmp;
+            throw tmp67;
+          } else {
+            c6 = tmp;
+          }
+        }
+      }
+    };
+    closure_1 = closure_0(createStore);
+    if (createStore.createStore) {
+      closure_3 = createStore.createStore(createStore);
+      closure_4 = closure_1_4;
+      if (createStore.flushAtStartup) {
+        if (!timerId) {
+          if (tmp7) {
+            let _clearTimeout = clearTimeout;
+            clearTimeout(timerId);
+          }
+          let _setTimeout = setTimeout;
+          timerId = setTimeout(asyncGeneratorStep(async () => {
+            if (c3 === 2) {
+              c3 = 3;
+              throw new TypeError("Generator functions may not be called on executing generators");
+            } else if (tmp4 === 3) {
+              if (arg0 === 1) {
+                throw value;
+              } else if (arg0 === 2) {
+                const obj = { value, done: true };
+                return obj;
+              } else {
+                return { value: "HermesInternal", done: null };
+              }
+            } else {
+              try {
+                c3 = 2;
+                if (0 === c2) {
+                  if (arg0 === 1) {
+                    c3 = 3;
+                    throw value;
+                  } else if (arg0 === 2) {
+                    c3 = 3;
+                    const obj2 = { value, done: true };
+                    return obj2;
+                  } else {
+                    closure_0 = tmp2;
+                    closure_128_0 = undefined;
+                    c2 = undefined;
+                    c2 = 1;
+                    c3 = 1;
+                    const obj3 = { value: closure_2_3.shift(), done: false };
+                    return obj3;
+                  }
+                } else if (arg0 === 1) {
+                  c3 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  c3 = 3;
+                  const obj4 = { value, done: true };
+                  return obj4;
+                } else {
+                  closure_128_0 = value;
+                  if (closure_128_0) {
+                    tmp5("Attempting to send previously queued event");
+                    const _Date = Date;
+                    const date = new Date();
+                    closure_128_0[0].sent_at = date.toISOString();
+                    closure_129_7(closure_128_0, true).catch((error) => {
+                      closure_1_1("Failed to retry sending", error);
+                    });
+                    const promise = closure_129_7(closure_128_0, true);
+                  }
+                  c3 = 3;
+                  return { value: "HermesInternal", done: null };
+                }
+              } catch (tmp18) {
+                c3 = tmp;
+                throw tmp18;
+              }
+            }
+          }), closure_4);
+          let unref = typeof timerId !== "number";
+          if (typeof timerId !== "number") {
+            unref = timerId.unref;
+          }
+          if (unref) {
+            timerId.unref();
+          }
+          let _Math = Math;
+          closure_4 = Math.min(2 * closure_4, 3600000);
+        }
+      }
+      let obj = {
+        send,
+        flush(arg0) {
+            if (undefined === arg0) {
+              closure_4 = c4;
+              if (timerId) {
+                const _clearTimeout = clearTimeout;
+                clearTimeout(timerId);
+              }
+              const _setTimeout = setTimeout;
+              timerId = setTimeout(asyncGeneratorStep(async () => {
+                if (c3 === 2) {
+                  c3 = 3;
+                  throw new TypeError("Generator functions may not be called on executing generators");
+                } else if (tmp4 === 3) {
+                  if (arg0 === 1) {
+                    throw value;
+                  } else if (arg0 === 2) {
+                    const obj = { value, done: true };
+                    return obj;
+                  } else {
+                    return { value: "HermesInternal", done: null };
+                  }
+                } else {
+                  try {
+                    c3 = 2;
+                    if (0 === c2) {
+                      if (arg0 === 1) {
+                        c3 = 3;
+                        throw value;
+                      } else if (arg0 === 2) {
+                        c3 = 3;
+                        const obj2 = { value, done: true };
+                        return obj2;
+                      } else {
+                        closure_0 = tmp2;
+                        closure_128_0 = undefined;
+                        c2 = undefined;
+                        c2 = 1;
+                        c3 = 1;
+                        const obj3 = { value: closure_2_3.shift(), done: false };
+                        return obj3;
+                      }
+                    } else if (arg0 === 1) {
+                      c3 = 3;
+                      throw value;
+                    } else if (arg0 === 2) {
+                      c3 = 3;
+                      const obj4 = { value, done: true };
+                      return obj4;
+                    } else {
+                      closure_128_0 = value;
+                      if (closure_128_0) {
+                        tmp5("Attempting to send previously queued event");
+                        const _Date = Date;
+                        const date = new Date();
+                        closure_128_0[0].sent_at = date.toISOString();
+                        closure_129_7(closure_128_0, true).catch((error) => {
+                          closure_1_1("Failed to retry sending", error);
+                        });
+                        const promise = closure_129_7(closure_128_0, true);
+                      }
+                      c3 = 3;
+                      return { value: "HermesInternal", done: null };
+                    }
+                  } catch (tmp18) {
+                    c3 = tmp;
+                    throw tmp18;
+                  }
+                }
+              }), c3);
+              let unref = typeof timerId !== "number";
+              if (typeof timerId !== "number") {
+                unref = timerId.unref;
+              }
+              if (unref) {
+                timerId.unref();
+              }
+            }
+            return closure_1.flush(arg0);
+          }
+      };
+      return obj;
+    } else {
+      const _Error = Error;
+      const error = new Error("No `createStore` function was provided");
+      throw error;
+    }
+  };
+}

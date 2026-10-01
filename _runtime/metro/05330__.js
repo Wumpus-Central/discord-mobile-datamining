@@ -1,7 +1,11 @@
 // === Module 5330: ? ===
 
 // Module 5330
-import _mod1455 from "module_1455" /* 1455 */;
 
-
-export default _mod1455;
+export default function isPropertyKey(str) {
+  let tmp = typeof str === "string";
+  if (typeof str !== "string") {
+    tmp = typeof str === "symbol";
+  }
+  return tmp;
+};

@@ -1,26 +1,33 @@
 // === Module 12634: ? ===
 
 // Module 12634
-import _mod12515 from "module_12515" /* 12515 */;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const vercelWaitUntil = function vercelWaitUntil(arg0) {
-  const obj = _mod12515.GLOBAL_OBJ[Symbol.for(Symbol, "@vercel/request-context")];
-  if (obj) {
-    if (obj.get) {
-      if (obj.get()) {
-        let obj1 = obj.get();
-      }
-      let waitUntil = obj1;
-      if (obj1) {
-        waitUntil = obj1.waitUntil;
-      }
-      if (waitUntil) {
-        obj1.waitUntil(arg0);
-      }
+export const flatten = function flatten(arr) {
+  const items = [];
+  const item = arr.forEach((arr) => {
+    if (Array.isArray(arr)) {
+      let item = arr.forEach((arr) => {
+        if (Array.isArray(arr)) {
+          let item = arr.forEach((arr) => {
+            if (Array.isArray(arr)) {
+              let item = arr.forEach((arr) => {
+                if (Array.isArray(arr)) {
+                  let item = arr.forEach(() => { ... });
+                } else {
+                  arr = closure_1_0.push(arr);
+                }
+              });
+            } else {
+              arr = closure_1_0.push(arr);
+            }
+          });
+        } else {
+          arr = closure_1_0.push(arr);
+        }
+      });
+    } else {
+      arr = closure_1_0.push(arr);
     }
-  }
-  obj1 = {};
+  });
+  return items;
 };

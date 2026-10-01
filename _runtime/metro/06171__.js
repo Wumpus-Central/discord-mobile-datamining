@@ -1,27 +1,15 @@
 // === Module 6171: ? ===
 
 // Module 6171
-import noop from "module_19" /* 19 */;
 
-const UIManager = fn(17).UIManager;
-const jsx = fn(21).jsx;
-try {
-  let closure_0 = fn(6172).default;
-  let closure_2 = null != UIManager.getViewManagerConfig("RNCMaskedView");
-  exports.MaskedView = function MaskedView(children) {
-    children = children.children;
-    const merged = Object.assign(children, Object.assign({ children: 0 }));
-    let tmp2 = children;
-    if (closure_2) {
-      tmp2 = children;
-      if (closure_0) {
-        const obj = {};
-        const merged1 = Object.assign(merged);
-        obj.children = children;
-        tmp2 = <tmp3 />;
-      }
+export const getLabel = function getLabel(label, arg1) {
+  if (undefined !== label.label) {
+    let title = label.label;
+  } else {
+    title = arg1;
+    if (undefined !== label.title) {
+      title = label.title;
     }
-    return tmp2;
-  };
-} catch (err) {
-}
+  }
+  return title;
+};

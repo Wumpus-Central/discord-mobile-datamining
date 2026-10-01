@@ -1,7 +1,20 @@
 // === Module 4818: ? ===
 
 // Module 4818
-import registerAsset from "module_1121" /* 1121 */;
+import PATTERN_CHARS_mod from "PATTERN_CHARS" /* 4819 */;
 
+const obj = { success: null, error: null, warning: null, heartbeat: null, tripleClick: null, notification: null };
+let PATTERN_CHARS = PATTERN_CHARS_mod;
+obj.success = PATTERN_CHARS.pattern("oO.O");
+let PATTERN_CHARS = PATTERN_CHARS_mod;
+obj.error = PATTERN_CHARS.pattern("OO.OO");
+let PATTERN_CHARS = PATTERN_CHARS_mod;
+obj.warning = PATTERN_CHARS.pattern("O.O");
+let PATTERN_CHARS = PATTERN_CHARS_mod;
+obj.heartbeat = PATTERN_CHARS.pattern("oO--oO");
+let PATTERN_CHARS = PATTERN_CHARS_mod;
+obj.tripleClick = PATTERN_CHARS.pattern("o.o.o");
+let PATTERN_CHARS = PATTERN_CHARS_mod;
+obj.notification = PATTERN_CHARS.pattern("o-O=o");
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "80a1b67e775ddb8de80fde27e63a5302", name: "CircleInformationIcon-secondary", type: "png" });
+export const Patterns = obj;

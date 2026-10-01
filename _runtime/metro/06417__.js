@@ -1,85 +1,51 @@
 // === Module 6417: ? ===
 
 // Module 6417
-import _mod19 from "module_19" /* 19 */;
-import _modDef38 from "module_38" /* 38 */;
+import _mod17 from "module_17" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import _mod6418 from "module_6418" /* 6418 */;
+import noop_mod from "module_19" /* 19 */;
 
-const useMemo = _mod19.useMemo;
+let noop = noop_mod;
+({ useMemo: c3, memo } = noop);
+let noop = noop_mod;
+const Platform = _mod17.Platform;
+const jsx = jsxProd.jsx;
+const __initData = { code: "function pnpm_BottomSheetBodyTsx1(){const{Platform,animatedIndex,animatedPosition}=this.__closure;return{opacity:Platform.OS==='android'&&animatedIndex.get()===-1?0:1,transform:[{translateY:animatedPosition.get()}]};}" };
+const memoResult = memo(function BottomSheetBodyComponent(children) {
+  const style = children.style;
+  let View = children.BodyComponent;
+  if (View === undefined) {
+    View = animatedIndex(animatedPosition[3]).View;
+  }
+  animatedPosition = undefined;
+  const bottomSheetInternal = style(animatedPosition[4]).useBottomSheetInternal();
+  animatedIndex = bottomSheetInternal.animatedIndex;
+  animatedPosition = bottomSheetInternal.animatedPosition;
+  let obj = style(animatedPosition[4]);
+  const fn = function y() {
+    let num = 1;
+    if (-1 === animatedIndex.get()) {
+      num = 0;
+    }
+    const obj = { opacity: num, transform: null };
+    const items = [{ translateY: animatedPosition.get() }];
+    obj.transform = items;
+    return obj;
+  };
+  fn.__closure = { Platform, animatedIndex, animatedPosition };
+  fn.__workletHash = 5915282482182;
+  fn.__initData = __initData;
+  let items = [animatedPosition, animatedIndex];
+  const animatedStyle = style(animatedPosition[3]).useAnimatedStyle(fn, items);
+  const items1 = [style, animatedStyle];
+  const obj2 = style(animatedPosition[3]);
+  const obj3 = { Platform, animatedIndex, animatedPosition };
+  return <View style={animatedStyle(() => {
+    const items = [style, _mod6418.styles.container, animatedStyle];
+    return items;
+  }, items1)} collapsable>{children.children}</View>;
+});
+memoResult.displayName = "BottomSheetBody";
 
-export const usePropsValidator = (index) => {
-  index = index.index;
-  const snapPoints = index.snapPoints;
-  const enableDynamicSizing = index.enableDynamicSizing;
-  const topInset = index.topInset;
-  const bottomInset = index.bottomInset;
-  let items = [index, snapPoints, topInset, bottomInset, enableDynamicSizing];
-  topInset(() => {
-    if (snapPoints) {
-      value = snapPoints;
-      if ("get" in snapPoints) {
-        value = snapPoints.get();
-      }
-      let items = value;
-    } else {
-      items = [];
-    }
-    let tmp5 = items;
-    if (!items) {
-      tmp5 = enableDynamicSizing;
-    }
-    _modDef38(tmp5, "'snapPoints' was not provided! please provide at least one snap point.");
-    const mapped = items.map((item) => {
-      let parsed = item;
-      if (typeof item !== "number") {
-        const _Number = Number;
-        parsed = Number.parseInt(item.replace("%", ""), 10);
-      }
-      let tmp4 = parsed > 0;
-      if (!tmp4) {
-        tmp4 = parsed === index(enableDynamicSizing[2]).INITIAL_SNAP_POINT;
-      }
-      snapPoints(enableDynamicSizing[1])(tmp4, "Snap point '" + item + "' is invalid. if you want to allow user to close the sheet, Please use 'enablePanDownToClose' prop.");
-      const tmp3 = snapPoints(enableDynamicSizing[1]);
-    });
-    let tmp9 = "value" in items;
-    if (!tmp9) {
-      tmp9 = items.length > 0;
-    }
-    if (!tmp9) {
-      tmp9 = enableDynamicSizing;
-    }
-    _modDef38(tmp9, "'snapPoints' was provided with no points! please provide at least one snap point.");
-    let tmp13 = typeof index === "number";
-    const tmp2Result = _modDef38;
-    if (typeof index !== "number") {
-      tmp13 = undefined === index;
-    }
-    _modDef38(tmp13, "'index' was provided but with wrong type ! expected type is a number.");
-    let tmp16 = enableDynamicSizing;
-    const tmp2Result5 = _modDef38;
-    if (!enableDynamicSizing) {
-      tmp16 = typeof index !== "number";
-    }
-    if (!tmp16) {
-      let tmp17 = index >= -1;
-      if (tmp17) {
-        tmp17 = index <= items.length - 1;
-      }
-      tmp16 = tmp17;
-    }
-    _modDef38(tmp16, `'index' was provided but out of the provided snap points range! expected value to be between -1, ${arr.length - 1}`);
-    let tmp20 = typeof topInset === "number";
-    const tmp2Result6 = _modDef38;
-    if (typeof topInset !== "number") {
-      tmp20 = undefined === topInset;
-    }
-    _modDef38(tmp20, "'topInset' was provided but with wrong type ! expected type is a number.");
-    let tmp23 = typeof bottomInset === "number";
-    const tmp2Result7 = _modDef38;
-    if (typeof bottomInset !== "number") {
-      tmp23 = undefined === bottomInset;
-    }
-    _modDef38(tmp23, "'bottomInset' was provided but with wrong type ! expected type is a number.");
-    const tmp2Result8 = _modDef38;
-  }, items);
-};
+export const BottomSheetBody = memoResult;

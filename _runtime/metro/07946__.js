@@ -1,7 +1,8 @@
 // === Module 7946: ? ===
 
 // Module 7946
-import _mod17 from "module_17" /* 17 */;
+import emptyFunction from "module_4692" /* 4692 */;
 
+const rect = { top: emptyFunction.number, left: emptyFunction.number, bottom: emptyFunction.number, right: emptyFunction.number };
 
-export default _mod17.requireNativeComponent("RNCWebViewContainer");
+export default emptyFunction.shape(rect);

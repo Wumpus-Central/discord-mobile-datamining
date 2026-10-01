@@ -1,14 +1,16 @@
 // === Module 8151: ? ===
 
 // Module 8151
-import _modDef8145 from "module_8145" /* 8145 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _modDef8134 from "module_8134" /* 8134 */;
+import _modDef8152 from "module_8152" /* 8152 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-const FeConvolveMatrix = arg1;
+const FeMerge = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,14 +30,16 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeConvolveMatrix {
+_possibleConstructorReturnDefault;
+const jsx = fn(21).jsx;
+class FeMerge {
   constructor() {
     self = this;
-    tmp = c2(this, FeConvolveMatrix);
-    tmp2 = closure_4;
-    obj = closure_4(FeConvolveMatrix);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    tmp = closure_3(this, FeMerge);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(FeMerge);
+    tmp3 = closure_4;
+    if (closure_7()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -48,18 +52,28 @@ class FeConvolveMatrix {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeConvolveMatrix, _modDef8145);
+_inherits(FeMerge, _modDef8134);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeConvolveMatrix(8122).warnUnimplementedFilter();
-    return null;
+    const self = this;
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    };
+    const merged = Object.assign(FeMerge(8133).extractFilter(this.props));
+    const obj2 = FeMerge(8133);
+    const merged1 = Object.assign(FeMerge(8133).extractFeMerge(this.props, this));
+    return <tmp ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeConvolveMatrix, items);
-importDefaultResultResult.displayName = "FeConvolveMatrix";
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+const importDefaultResultResult = _createClass(FeMerge, items);
+importDefaultResultResult.displayName = "FeMerge";
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
 importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;
