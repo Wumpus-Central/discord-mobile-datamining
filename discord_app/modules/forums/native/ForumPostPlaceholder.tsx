@@ -8,7 +8,7 @@ import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj = { postPlaceholder: { height: 2 * nativeDefault.space.PX_64, marginBottom: nativeDefault.space.PX_12 } };
 let closure_7 = createStyles.createStyles(obj);
 let c8 = 0.55;
@@ -27,8 +27,8 @@ export default noop.memo(() => {
     noop.useState(() => {
       const obj = { timingConfig: null };
       const obj2 = { duration: 1000 + 500 * Math.random(), easing: null };
-      const Easing = stateFromStores(4596).Easing;
-      obj2.easing = Easing.inOut(stateFromStores(4596).Easing.sin);
+      const Easing = stateFromStores(4595).Easing;
+      obj2.easing = Easing.inOut(stateFromStores(4595).Easing.sin);
       obj.timingConfig = obj2;
       return obj;
     }),
@@ -53,15 +53,15 @@ export default noop.memo(() => {
     }
     return tmp6;
   };
-  let obj2 = stateFromStores(4596);
+  let obj2 = stateFromStores(4595);
   fn.__closure = {
     reducedMotion: stateFromStores,
     ROW_OPACITY_END,
-    withDelay: stateFromStores(4596).withDelay,
+    withDelay: stateFromStores(4595).withDelay,
     INITIAL_DELAY_MS: 1000,
-    withRepeat: stateFromStores(4596).withRepeat,
-    withSequence: stateFromStores(4596).withSequence,
-    withTiming: stateFromStores(4867).withTiming,
+    withRepeat: stateFromStores(4595).withRepeat,
+    withSequence: stateFromStores(4595).withSequence,
+    withTiming: stateFromStores(4846).withTiming,
     timingConfig,
   };
   fn.__workletHash = 9488742940898;
@@ -70,11 +70,11 @@ export default noop.memo(() => {
   let obj4 = {
     style: animatedStyle,
     pointerEvents: "none",
-    children: jsx(stateFromStores(6115).Card, { variant: "secondary", style: tmp.postPlaceholder }),
+    children: jsx(stateFromStores(6105).Card, { variant: "secondary", style: tmp.postPlaceholder }),
   };
-  return jsx(timingConfig(4596).View, {
+  return jsx(timingConfig(4595).View, {
     style: animatedStyle,
     pointerEvents: "none",
-    children: jsx(stateFromStores(6115).Card, { variant: "secondary", style: tmp.postPlaceholder }),
+    children: jsx(stateFromStores(6105).Card, { variant: "secondary", style: tmp.postPlaceholder }),
   });
 });

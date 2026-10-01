@@ -10,7 +10,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const Routes = fn(1074).Routes;
-const MAIN_SURFACE = fn(8699).MAIN_SURFACE;
+const MAIN_SURFACE = fn(8691).MAIN_SURFACE;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/vibegrations/lib/openVibegrationsPublishDestination.tsx");
 

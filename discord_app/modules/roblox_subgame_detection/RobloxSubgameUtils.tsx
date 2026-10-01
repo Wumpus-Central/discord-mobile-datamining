@@ -5,16 +5,15 @@ import RobloxSubgamePlatformUtilsDefault from "RobloxSubgamePlatformUtils.native
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-let closure_7 = async function _openRobloxURLWithRootPlaceId() {
+let closure_6 = async function _openRobloxURLWithRootPlaceId() {
   closure_1 = tmp2;
   await RobloxSubgamePlatformUtilsDefault.getRobloxSubgameURL(closure_0);
   closure_129_0 = value;
-  await closure_130_1(closure_130_2[6])(closure_129_0);
+  await closure_130_1(closure_130_2[5])(closure_129_0);
   return value;
 };
-const isDetectionEnabled = fn(2000).isDetectionEnabled;
 const Constants = fn(1074);
-({ DistributorNames: hasOwnProperty, Distributors: metroRequire } = Constants);
+({ DistributorNames: closure_4, Distributors: hasOwnProperty } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/roblox_subgame_detection/RobloxSubgameUtils.tsx");
 
@@ -90,88 +89,6 @@ export const hasSubgameInfoChanged = function hasSubgameInfoChanged(arg0, arg1) 
   }
   return tmp;
 };
-export const updateRunningGameWithRobloxSubgameInfo = function updateRunningGameWithRobloxSubgameInfo(
-  gameMetadata,
-  arg1,
-) {
-  const obj = {};
-  const merged = Object.assign(gameMetadata);
-  ({ subgameInfo, application } = arg1);
-  gameMetadata = gameMetadata.gameMetadata;
-  let tmp2;
-  if (gameMetadata != null) {
-    tmp2 = gameMetadata[RobloxSubgameTypes.RobloxMetadataKeys.ROBLOX_TIME_STARTED];
-  }
-  let str = Number(tmp2);
-  let isNaNResult = isNaN(str);
-  if (!isNaNResult) {
-    isNaNResult = 0 === str;
-  }
-  if (isNaNResult) {
-    let start = gameMetadata.start;
-    if (start == null) {
-      const _Date = Date;
-      start = Date.now();
-    }
-    str = start;
-  }
-  if (null == subgameInfo) {
-    let tmp15 = gameMetadata.distributor === constants.ROBLOX;
-    if (tmp15) {
-      tmp15 = gameMetadata.id !== RobloxSubgameTypes.ROBLOX_APPLICATION_ID;
-    }
-    if (tmp15) {
-      obj.id = RobloxSubgameTypes.ROBLOX_APPLICATION_ID;
-      obj.name = dependencyMap[constants.ROBLOX];
-    }
-    obj.gameMetadata = undefined;
-    obj.sku = undefined;
-    obj.start = str;
-    const _Math2 = Math;
-    obj.lastFocused = Math.floor(str / 1000);
-  } else {
-    if (null != application) {
-      const obj2 = { exePath: gameMetadata.exePath, name: null, id: null, distributor: null };
-      ({ name: obj4.name, id: obj4.id } = application);
-      obj2.distributor = constants.ROBLOX;
-      if (isDetectionEnabled(obj2)) {
-        const obj3 = {
-          exePath: gameMetadata.exePath,
-          name: dependencyMap[constants.ROBLOX],
-          id: RobloxSubgameTypes.ROBLOX_APPLICATION_ID,
-          distributor: constants.ROBLOX,
-        };
-        if (isDetectionEnabled(obj3)) {
-          ({ id: obj.id, name: obj.name, name: obj.gameName } = application);
-          const _Date2 = Date;
-          obj.start = Date.now();
-          const _Math = Math;
-          const _Date3 = Date;
-          obj.lastFocused = Math.floor(Date.now() / 1000);
-          let tmp9 = require;
-        }
-        const obj7 = {};
-        obj7[tmp9(4997).RobloxMetadataKeys.ROBLOX_TIME_STARTED] = str.toString();
-        const universeId = subgameInfo.universeId;
-        obj.sku = universeId;
-        if (null != subgameInfo.placeId) {
-          obj7[tmp9(4997).RobloxMetadataKeys.PLACE_ID] = subgameInfo.placeId;
-        }
-        const _Object = Object;
-        let tmp13;
-        if (Object.keys(obj7).length > 0) {
-          tmp13 = obj7;
-        }
-        obj.gameMetadata = tmp13;
-      }
-    }
-    tmp9 = require;
-    obj.id = RobloxSubgameTypes.ROBLOX_APPLICATION_ID;
-    obj.name = dependencyMap[constants.ROBLOX];
-    obj.start = str;
-  }
-  return obj;
-};
 export const convertMapToRobloxSubgameInfo = function convertMapToRobloxSubgameInfo(arg0) {
   let tmp3 = null;
   if (null != arg0[RobloxSubgameTypes.NativeRobloxSubgameKeys.UNIVERSE_ID]) {
@@ -239,7 +156,7 @@ export const isRobloxSubgameGame = function isRobloxSubgameGame(gameRecord) {
 };
 export const openRobloxURLWithRootPlaceId = function openRobloxURLWithRootPlaceId() {
   const self = this;
-  const apply = closure_7.apply;
+  const apply = closure_6.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -255,7 +172,7 @@ export const maybeTransformRobloxSubgameToRoblox = function maybeTransformRoblox
       const obj = {};
       const merged = Object.assign(distributor);
       obj.id = RobloxSubgameTypes.ROBLOX_APPLICATION_ID;
-      obj.name = dependencyMap[tmp.ROBLOX];
+      obj.name = React4[tmp.ROBLOX];
       tmp2 = obj;
     }
   }

@@ -1,6 +1,7 @@
 // discord_app/modules/messages/native/renderer/rows/Separator.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import GlobalUtils from "../../../../../utils/GlobalUtils.tsx";
+import client_themes_ClientThemesUtils from "../../../../client_themes/native/ClientThemesUtils.tsx";
 import RowGeneratorConstants from "../RowGeneratorConstants.tsx";
 import createStyles from "../../../../../design/components/Styles/native/createStyles.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
@@ -29,13 +30,13 @@ export const generateSeparatorRowData = function generateSeparatorRowData(text, 
       changeType: null,
       text: null,
     };
-    ({ unreadTextColor: obj3.color, unreadBorderColor: obj3.borderColor } = tmp);
+    ({ unreadTextColor: obj5.color, unreadBorderColor: obj5.borderColor } = tmp);
     obj4.changeType = changeType;
     obj4.text = text.text;
     return obj4;
   } else if (constants2.SUMMARY === rowType) {
     const summary = text.summary;
-    const obj7 = {
+    const obj6 = {
       type: constants.SEPARATOR,
       id: rowType,
       color: tmp.summaryColor,
@@ -44,7 +45,18 @@ export const generateSeparatorRowData = function generateSeparatorRowData(text, 
       isBeforeContent: text.isBeforeContent,
       changeType,
     };
-    return obj7;
+    return obj6;
+  } else if (constants2.CONVERSATION === rowType) {
+    const conversationHeader = text.conversationHeader;
+    const obj10 = {
+      type: constants.SEPARATOR,
+      id: rowType,
+      text: conversationHeader.title,
+      conversationHeader,
+      isCustomTheme: client_themes_ClientThemesUtils.isCustomThemeActive(),
+      changeType,
+    };
+    return obj10;
   } else {
     GlobalUtils.assertNever(rowType);
   }

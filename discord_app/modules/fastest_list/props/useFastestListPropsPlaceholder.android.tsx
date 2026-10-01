@@ -39,10 +39,10 @@ function createNativePlaceholderConfig(listFooter) {
     placeholderFeedShape: "isArray",
     placeholderFeedShapeSize: "channel",
     placeholderType: NONE,
-    width: 51259392,
-    height: 578113792,
-    verticalAlignment: 587202568,
-    horizontalAlignment: 603979784,
+    width: "e",
+    height: "AddReactionButton",
+    verticalAlignment: "e",
+    horizontalAlignment: "commandText",
   };
   if (null == listFooter) {
     return size;
@@ -161,7 +161,7 @@ function createNativePlaceholderConfig(listFooter) {
   }
 }
 const processColor = fn(17).processColor;
-const obj = { sectionItem: { type: fn(6679).FastestListPropsPlaceholderType.NONE } };
+const obj = { sectionItem: { type: fn(6669).FastestListPropsPlaceholderType.NONE } };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/fastest_list/props/useFastestListPropsPlaceholder.android.tsx");
 

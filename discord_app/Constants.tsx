@@ -142,11 +142,14 @@ const frozen2 = Object.freeze({
   UNVERIFIED_APPLICATIONS_ICONS: "/unverified-applications/icons",
   PLATFORM_APPLICATION: "/platform-application",
   ROBLOX_APPLICATIONS_SUPPLEMENTAL_DATA: "/roblox-applications-supplemental-data",
-  GUILD_FEATURE_ACK(arg0, outgoingAck, type) {
-    return "/guilds/" + arg0 + "/ack/" + type + "/" + outgoingAck;
+  GUILD_FEATURE_ACK(channelId, outgoingAck, type) {
+    return "/guilds/" + channelId + "/ack/" + type + "/" + outgoingAck;
   },
   USER_NON_CHANNEL_ACK(outgoingAck, type) {
     return "/users/@me/" + type + "/" + outgoingAck + "/ack";
+  },
+  VIBEGRATIONS_PROJECT_ACK(channelId, outgoingAck) {
+    return "/conjuring/projects/" + channelId + "/ack/" + outgoingAck;
   },
   BULK_ACK: "/read-states/ack-bulk",
   DM_SETTINGS_UPSELL_ACK(guildId) {
@@ -2189,11 +2192,14 @@ const obj2 = {
   UNVERIFIED_APPLICATIONS_ICONS: "/unverified-applications/icons",
   PLATFORM_APPLICATION: "/platform-application",
   ROBLOX_APPLICATIONS_SUPPLEMENTAL_DATA: "/roblox-applications-supplemental-data",
-  GUILD_FEATURE_ACK(arg0, outgoingAck, type) {
-    return "/guilds/" + arg0 + "/ack/" + type + "/" + outgoingAck;
+  GUILD_FEATURE_ACK(channelId, outgoingAck, type) {
+    return "/guilds/" + channelId + "/ack/" + type + "/" + outgoingAck;
   },
   USER_NON_CHANNEL_ACK(outgoingAck, type) {
     return "/users/@me/" + type + "/" + outgoingAck + "/ack";
+  },
+  VIBEGRATIONS_PROJECT_ACK(channelId, outgoingAck) {
+    return "/conjuring/projects/" + channelId + "/ack/" + outgoingAck;
   },
   BULK_ACK: "/read-states/ack-bulk",
   DM_SETTINGS_UPSELL_ACK(guildId) {
@@ -5644,6 +5650,14 @@ const frozen16 = Object.freeze({
     }
     return combined;
   },
+  GAME_ORGANIZATION_INVITE(arg0) {
+    let combined = null;
+    if (null != arg0) {
+      const _HermesInternal = HermesInternal;
+      combined = "game-organization-invite/" + arg0;
+    }
+    return combined;
+  },
   GUILD_OFFICIAL_MESSAGES(arg0) {
     let combined = null;
     if (null != arg0) {
@@ -5984,7 +5998,6 @@ export const NoticeTypes = {
   PREMIUM_PAST_DUE_MISSING_PAYMENT: "PREMIUM_PAST_DUE_MISSING_PAYMENT",
   PREMIUM_PAST_DUE_INVALID_PAYMENT: "PREMIUM_PAST_DUE_INVALID_PAYMENT",
   PREMIUM_REACTIVATE: "PREMIUM_REACTIVATE",
-  CONNECT_PLAYSTATION: "CONNECT_PLAYSTATION",
   LOCALIZED_PRICING: "LOCALIZED_PRICING",
   BACK_TO_PREVIOUS_SCREEN: "BACK_TO_PREVIOUS_SCREEN",
   QUARANTINED: "QUARANTINED",
@@ -7277,6 +7290,7 @@ export const ComponentActions = {
   SHAKE_SETTINGS_MODAL: "SHAKE_SETTINGS_MODAL",
   WOW_MOMENT_CONFIRMATION_MODAL_CLOSED: "WOW_MOMENT_CONFIRMATION_MODAL_CLOSED",
   PREMIUM_GROUP_PURCHASE_FLOW_COMPLETED: "PREMIUM_GROUP_PURCHASE_FLOW_COMPLETED",
+  FRIENDS_SIDEBAR_RESIZED: "FRIENDS_SIDEBAR_RESIZED",
 };
 export const ComponentActionsKeyed = {
   TOGGLE_REACTION_POPOUT: "TOGGLE_REACTION_POPOUT",
@@ -7483,7 +7497,7 @@ export const AnalyticEvents = {
   ANDROID_JANK_STATS: "android_jank_stats",
   ANDROID_JANK_SESSION: "android_jank_session",
   ANDROID_JANK_SCREEN: "android_jank_screen",
-  IOS_JANK_STATS: "ios_jank_stats",
+  IOS_JANK_SESSION: "ios_jank_session",
   APP_JS_STALLED: "app_js_stalled",
   LIBDISCORE_LOADED: "libdiscore_loaded",
   LIBDISCORE_KV_DUAL_READ_ERROR: "libdiscore_kv_dual_read_error",
@@ -7669,6 +7683,11 @@ export const AnalyticEvents = {
   GAME_NEWS_CHANGED: "game_news_changed",
   GAME_NEWS_OPENED: "game_news_opened",
   APPLICATION_OPENED: "application_opened",
+  LEADERBOARD_CLICK: "leaderboard_click",
+  LEADERBOARD_END_IMPRESSION: "leaderboard_end_impression",
+  LEADERBOARD_HOVER: "leaderboard_hover",
+  SERVER_HUB_TOGGLE_SETTING: "server_hub_toggle_setting",
+  SERVER_HUB_VISIT: "server_hub_visit",
   LAUNCH_GAME: "launch_game",
   LAUNCH_NON_GAME_APPLICATION: "launch_non_game_application",
   GAME_DETECTED: "game_detected",

@@ -12,63 +12,121 @@ const require = globalThis.__r;
 
 require = fn;
 let closure_13 = async function _sendGiftIntentGif(arg0) {
-  if (1 === tmp5) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
     if (arg0 === 1) {
-      c4 = 3;
       throw value;
     } else if (arg0 === 2) {
-      c4 = 3;
-      return { value, done: true };
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
-      closure_129_4 = closure_129_2.trim().length > 0;
-      if (closure_129_4) {
-        const id2 = closure_129_0.id;
-        c3 = 2;
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
+        } else {
+          closure_2 = tmp5;
+          closure_1 = tmp2;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          closure_129_3 = undefined;
+          ({
+            channel: closure_129_0,
+            giftIntentType: closure_129_1,
+            text: closure_129_2,
+            gif: closure_129_3,
+          } = closure_0);
+          closure_129_4 = undefined;
+          c3 = 1;
+          c4 = 1;
+          return { value: "flex", done: null };
+        }
+      } else {
+        if (1 === tmp5) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj6 = { value, done: true };
+            return obj6;
+          } else {
+            closure_129_4 = closure_129_2.trim().length > 0;
+            if (closure_129_4) {
+              const obj7 = closure_130_1(closure_130_2[10]);
+              const id2 = closure_129_0.id;
+              const obj9 = { location: closure_130_9.GIFTING };
+              c3 = 2;
+              c4 = 1;
+              const obj10 = {
+                value: obj7.sendMessage(
+                  id2,
+                  closure_130_1(closure_130_2[11]).parse(closure_129_0, closure_129_2),
+                  true,
+                  obj9,
+                ),
+                done: false,
+              };
+              return obj10;
+            }
+          }
+        } else if (2 === tmp5) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj11 = { value, done: true };
+            return obj11;
+          }
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj = { value, done: true };
+          return obj;
+        } else {
+          const obj12 = { gift_intent_type: closure_129_1, is_custom_message: closure_129_4, location_stack: null };
+          const items = [closure_130_1(closure_130_2[13]).PREMIUM_GIFT_INTENT_CARD];
+          obj12.location_stack = items;
+          closure_130_1(closure_130_2[12]).track(closure_130_8.GIFT_INTENT_MESSAGE_SENT, obj12);
+          c4 = 3;
+          return { value: "HermesInternal", done: null };
+        }
+        const obj3 = closure_130_1(closure_130_2[10]);
+        const id = closure_129_0.id;
+        const obj13 = { location: closure_130_9.GIFTING };
+        c3 = 3;
         c4 = 1;
-        closure_130_1(closure_130_2[10]);
-        return {
-          value: closure_130_1(closure_130_2[10]).sendMessage(
-            id2,
-            closure_130_1(closure_130_2[11]).parse(closure_129_0, closure_129_2),
+        const obj15 = {
+          value: obj3.sendMessage(
+            id,
+            closure_130_1(closure_130_2[11]).parse(closure_129_0, closure_129_3.url),
             true,
-            { location: closure_130_9.GIFTING },
+            obj13,
           ),
           done: false,
         };
+        return obj15;
       }
+    } catch (tmp33) {
+      c4 = tmp;
+      throw tmp33;
     }
-  } else if (2 === tmp5) {
-    if (arg0 === 1) {
-      c4 = 3;
-      throw value;
-    } else if (arg0 === 2) {
-      c4 = 3;
-      return { value, done: true };
-    }
-  } else if (arg0 === 1) {
-    c4 = 3;
-    throw value;
-  } else if (arg0 === 2) {
-    c4 = 3;
-    return { value, done: true };
-  } else {
-    const obj12 = { gift_intent_type: closure_129_1, is_custom_message: closure_129_4, location_stack: null };
-    const items = [closure_130_1(closure_130_2[13]).PREMIUM_GIFT_INTENT_CARD];
-    obj12.location_stack = items;
-    closure_130_1(closure_130_2[12]).track(closure_130_8.GIFT_INTENT_MESSAGE_SENT, obj12);
-    c4 = 3;
-    return { value: "HermesInternal", done: null };
   }
-  const id = closure_129_0.id;
-  await closure_130_1(closure_130_2[10]).sendMessage(
-    id,
-    closure_130_1(closure_130_2[11]).parse(closure_129_0, closure_129_3.url),
-    true,
-    { location: closure_130_9.GIFTING },
-  );
-  closure_1 = tmp2;
-  ({ channel: closure_129_0, giftIntentType: closure_129_1, text: closure_129_2, gif: closure_129_3 } = closure_0);
-  return "flex";
 };
 function GiftIntentGifModalBody(channelId) {
   channelId = channelId.channelId;
@@ -191,10 +249,10 @@ function GiftIntentGifModalBody(channelId) {
 }
 const View = fn(17).View;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const MessageSendLocation = fn(4859).MessageSendLocation;
+const MessageSendLocation = fn(4838).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   messageContainer: null,

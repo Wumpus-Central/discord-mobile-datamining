@@ -188,7 +188,7 @@ export default function getJankScreenName() {
         obj7.rendered = items.concat(items2);
         ({ focused, rendered } = obj7);
         if (0 === focused.length) {
-          let obj9 = { screen, expectedScreenIds: "", focusedRoute: "channel" };
+          let obj9 = { screen, expectedScreenIds: "", focusedRoute: "paddingHorizontal" };
           let obj15 = obj9;
         } else {
           obj15 = { screen: resolveScreenName(focused), expectedScreenIds: null, focusedRoute: null };
@@ -346,8 +346,8 @@ export const getBaseScreenName = function getBaseScreenName() {
   }
   return tmp6;
 };
-export const isModalScreenName = function isModalScreenName(baseScreenName) {
-  return baseScreenName.startsWith("" + modal + ":") || baseScreenName === modal;
+export const isModalScreenName = function isModalScreenName(str) {
+  return str.startsWith("" + modal + ":") || str === modal;
 };
 export const getWideViewScreenName = function getWideViewScreenName(baseScreenName) {
   const rootNavigationRef = RootNavigationRef.getRootNavigationRef();

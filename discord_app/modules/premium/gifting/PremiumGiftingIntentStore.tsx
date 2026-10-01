@@ -4,7 +4,7 @@ import initializeDefault from "../../../../discord_common/js/packages/flux/index
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import UserSettings from "../../user_settings/UserSettings.tsx";
 import FriendAnniversaryUtils from "shared/FriendAnniversaryUtils.tsx";
-import FriendAnniversaryGate from "FriendAnniversaryGate.native.tsx";
+import FriendAnniversaryGate from "FriendAnniversaryGate.tsx";
 import ExperimentStore from "../../experiments/ExperimentStore.tsx";
 import ApexExperimentStore from "../../experiments/apex/ApexExperimentStore.tsx";
 import UserAffinitiesV2Store from "../../user_affinities/UserAffinitiesV2Store.tsx";
@@ -129,7 +129,7 @@ function generateFriendAnniversaries(c15) {
             }
           });
           const sorted = closure_11.sort((arg0, arg1) => UserAffinitiesV2Store.compareByDmProbability(arg0, arg1));
-          const result = highestAffinity(7717).categorizeFriendAnniversariesByAffinity(
+          const result = highestAffinity(7705).categorizeFriendAnniversariesByAffinity(
             closure_11,
             (userId) => {
               const userAffinity = UserAffinitiesV2Store.getUserAffinity(userId);
@@ -142,14 +142,14 @@ function generateFriendAnniversaries(c15) {
             true,
           );
           ({ highestAffinity, highAffinity } = result);
-          const highestAffinityResult = highestAffinity(7717);
+          const highestAffinityResult = highestAffinity(7705);
         }
         sampleSizeResult = _null;
       }
       sampleSizeResult = _modDef12.sampleSize(found, c15);
     }
   }
-  obj2 = set2(7718);
+  obj2 = set2(7706);
 }
 const Consents = fn(1074).Consents;
 let closure_10 = {

@@ -21,7 +21,13 @@ const items = [
     time: "00:00",
     platforms: ["desktop", "mobile"],
     summary:
-      "A new Rust Sphere template: a spinning, lit 3D globe drawn by Rust running as WebAssembly, ready to clone into your own renderer.",
+      "A new Rust Sphere recipe: a spinning, lit 3D globe drawn by Rust running as WebAssembly, ready to clone into your own renderer.",
+  },
+  {
+    date: "2026-09-29",
+    time: "04:10",
+    platforms: ["desktop"],
+    summary: "Returning to a server takes you back to the app you were building there, if that is where you left off.",
   },
   {
     date: "2026-09-02",
@@ -175,6 +181,12 @@ const items = [
       "Collaborators on an app shared with their server can now clone it for themselves, with no need for the owner to turn sharing on first.",
   },
   {
+    date: "2026-09-28",
+    time: "06:02",
+    platforms: ["desktop", "mobile"],
+    summary: "Commands the agent runs show up to four lines in chat, set in Discord's code font.",
+  },
+  {
     date: "2026-09-08",
     time: "00:00",
     platforms: ["desktop"],
@@ -199,6 +211,13 @@ const items = [
     platforms: ["desktop", "mobile"],
     summary:
       "Conjure now follows the AGENTS.md notes in your project and the skills you add under .discord/skills, including running their JavaScript helpers.",
+  },
+  {
+    date: "2026-09-25",
+    time: "09:50",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "Conjure now tells you when it finishes or needs your answer, even after you step away, and marks those projects in your list, calling out the ones waiting on you.",
   },
   {
     date: "2026-09-26",
@@ -244,6 +263,12 @@ const items = [
     time: "01:17",
     platforms: ["desktop"],
     summary: "Drop images and files anywhere on the chat to bring them along, not just onto the message box.",
+  },
+  {
+    date: "2026-09-30",
+    time: "07:31",
+    platforms: ["desktop", "mobile"],
+    summary: "Edit App at the top of your app\u2019s DM opens it in the builder, instead of offering to disconnect it.",
   },
   {
     date: "2026-09-20",
@@ -497,7 +522,7 @@ const items = [
     time: "00:02",
     platforms: ["mobile"],
     summary:
-      "On phones, new projects start from a Create button in the header, with templates, starter prompts, who the app is for, and the Effort scale, and the landing leads with what is new.",
+      "On phones, new projects start from a Create button in the header, with recipes, starter prompts, who the app is for, and the Effort scale, and the landing leads with what is new.",
   },
   {
     date: "2026-09-18",
@@ -641,7 +666,7 @@ const items = [
     time: "23:06",
     platforms: ["desktop", "mobile"],
     summary:
-      "Picking a template shows it running in a few seconds, instead of after Conjure has rebuilt it from scratch.",
+      "Picking a recipe shows it running in a few seconds, instead of after Conjure has rebuilt it from scratch.",
   },
   {
     date: "2026-09-26",
@@ -649,6 +674,13 @@ const items = [
     platforms: ["desktop", "mobile"],
     summary:
       "Plan cards have an Approve button that starts the build. To change the plan, type what you want different.",
+  },
+  {
+    date: "2026-09-30",
+    time: "05:23",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "Plan cards keep their Conjure it! button while you ask Conjure follow-up questions, until a newer plan takes its place.",
   },
   {
     date: "2026-09-28",
@@ -683,6 +715,13 @@ const items = [
     platforms: ["desktop", "mobile"],
     summary:
       "Project, app, secrets, and model settings now live together in one Settings dialog, one tab each; the gear beside the chat is gone.",
+  },
+  {
+    date: "2026-09-30",
+    time: "00:13",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "Publish now tells you which server permissions you're missing when you can't publish an app into its server.",
   },
   {
     date: "2026-09-01",
@@ -736,7 +775,7 @@ const items = [
     time: "02:09",
     platforms: ["desktop", "mobile"],
     summary:
-      "Starting from a template shows its progress as one Putting it in the preview step, the same as every other change.",
+      "Starting from a recipe shows its progress as one Putting it in the preview step, the same as every other change.",
   },
   {
     date: "2026-09-26",
@@ -750,6 +789,14 @@ const items = [
     platforms: ["desktop", "mobile"],
     summary:
       "Task lists stop spinning once Conjure finishes or you press Stop, and an earlier list folds away with its unfinished tasks marked when a new one starts.",
+  },
+  { date: "2026-09-30", time: "11:30", platforms: ["desktop", "mobile"], summary: "Templates are now called recipes." },
+  {
+    date: "2026-09-29",
+    time: "20:21",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "The Conjuring MCP panel now gives you a one-time link, good for 10 minutes, to hand your coding agent. It signs you in with Discord instead of asking you to paste a header, and stays connected for up to 30 days.",
   },
   {
     date: "2026-09-28",
@@ -837,6 +884,12 @@ const items = [
     summary: "The publish card is now just a button, with the server's icon and name beside it.",
   },
   {
+    date: "2026-09-22",
+    time: "00:01",
+    platforms: ["desktop"],
+    summary: "The recipe and starter cards light up under your cursor.",
+  },
+  {
     date: "2026-09-05",
     time: "00:02",
     platforms: ["desktop", "mobile"],
@@ -848,12 +901,6 @@ const items = [
     time: "00:00",
     platforms: ["desktop", "mobile"],
     summary: "The rune usage panel now shows Deciding, the quick checks that keep an eye on your builds.",
-  },
-  {
-    date: "2026-09-22",
-    time: "00:01",
-    platforms: ["desktop"],
-    summary: "The template and starter cards light up under your cursor.",
   },
   {
     date: "2026-09-18",

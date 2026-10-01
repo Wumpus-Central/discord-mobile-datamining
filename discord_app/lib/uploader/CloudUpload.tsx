@@ -983,7 +983,7 @@ prototype["upload"] = function upload() {
                   let tmp151 = null;
                   if (closure_133_0.allowOptimization) {
                     tmp151 = null;
-                    if (closure_133_0.item.platform === v0(5637).UploadPlatform.WEB) {
+                    if (closure_133_0.item.platform === v0(5626).UploadPlatform.WEB) {
                       tmp151 = null;
                       if (true !== closure_133_0.item.imageConversionEvaluated) {
                         tmp151 = null;
@@ -995,17 +995,17 @@ prototype["upload"] = function upload() {
                               str2 = "jxr";
                             }
                             str = str2;
-                            obj16 = v0(5681);
+                            obj16 = v0(5670);
                           }
                           tmp151 = str;
-                          obj15 = v0(5681);
+                          obj15 = v0(5670);
                         }
                       }
                     }
                   }
                   closure_132_1 = tmp151;
                   if (null != closure_132_1) {
-                    if (closure_133_0.item.platform === v0(5637).UploadPlatform.WEB) {
+                    if (closure_133_0.item.platform === v0(5626).UploadPlatform.WEB) {
                       if (null != closure_133_0.item.file) {
                         let tmp168 = null != closure_133_0.mimeType;
                         if (tmp168) {
@@ -1013,10 +1013,10 @@ prototype["upload"] = function upload() {
                         }
                         if (tmp168) {
                           if ("heic" === closure_132_1) {
-                            const HeicUploadConversionExperiment = v0(5682).HeicUploadConversionExperiment;
+                            const HeicUploadConversionExperiment = v0(5671).HeicUploadConversionExperiment;
                             let config = HeicUploadConversionExperiment.getConfig({ location: "CloudUpload.tryConvertToJpeg.heic" });
                           } else {
-                            const JxrUploadConversionExperiment = v0(5683).JxrUploadConversionExperiment;
+                            const JxrUploadConversionExperiment = v0(5672).JxrUploadConversionExperiment;
                             config = JxrUploadConversionExperiment.getConfig({ location: "CloudUpload.tryConvertToJpeg.jxr" });
                           }
                           closure_132_2 = config;
@@ -1039,11 +1039,11 @@ prototype["upload"] = function upload() {
                           }
                         } else {
                           if ("heic" === closure_132_1) {
-                            let heicMimeTypeResult = v0(5681).heicMimeType(closure_133_0.item.file);
-                            const obj18 = v0(5681);
+                            let heicMimeTypeResult = v0(5670).heicMimeType(closure_133_0.item.file);
+                            const obj18 = v0(5670);
                           } else {
-                            heicMimeTypeResult = v0(5681).jxrMimeType(closure_133_0.item.file);
-                            const obj17 = v0(5681);
+                            heicMimeTypeResult = v0(5670).jxrMimeType(closure_133_0.item.file);
+                            const obj17 = v0(5670);
                           }
                           closure_133_0.mimeType = heicMimeTypeResult;
                         }
@@ -1054,7 +1054,7 @@ prototype["upload"] = function upload() {
                     closure_133_0.handleComplete(closure_133_0.id);
                   } else {
                     if (closure_133_0.allowOptimization) {
-                      if (closure_133_0.item.platform === v0(5637).UploadPlatform.WEB) {
+                      if (closure_133_0.item.platform === v0(5626).UploadPlatform.WEB) {
                         if (!closure_132_0) {
                           if (true !== closure_133_0.item.imageConversionEvaluated) {
                             c8 = 5;
@@ -1065,7 +1065,7 @@ prototype["upload"] = function upload() {
                         }
                       }
                     }
-                    const uploadPayload = v0(5684).default.getUploadPayload(closure_133_0);
+                    const uploadPayload = v0(5673).default.getUploadPayload(closure_133_0);
                     c8 = 6;
                     c9 = 1;
                     c9 = 3;
@@ -1121,10 +1121,10 @@ prototype["upload"] = function upload() {
                   }
                   if (tmp119) {
                     closure_3 = closure_133_0;
-                    const obj10 = status(5666);
+                    const obj10 = status(5655);
                     c8 = 4;
                     c9 = 1;
-                    const obj14 = { value: status(5666).fromBlob(file).catch(() => null), done: false };
+                    const obj14 = { value: status(5655).fromBlob(file).catch(() => null), done: false };
                     return obj14;
                   } else {
                     closure_133_0.item.file = closure_132_4.convertedFile;
@@ -1180,7 +1180,7 @@ prototype["upload"] = function upload() {
               return obj21;
             } else {
               closure_132_6 = value;
-              uploadTarget = v0(5685).getUploadTarget(closure_133_0.item.target);
+              uploadTarget = v0(5674).getUploadTarget(closure_133_0.item.target);
               if (null != closure_132_6.filename) {
                 if ("" !== closure_132_6.filename) {
                   const currentSize2 = closure_133_0.currentSize;
@@ -1403,7 +1403,7 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
               const obj7 = { value: self, done: true };
               return obj7;
             }
-            obj16 = size(5685);
+            obj16 = size(5674);
           }
         } else {
           if (1 === tmp5) {
@@ -1480,7 +1480,7 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
                         if (fileSize == null) {
                           c3 = 2;
                           c4 = 1;
-                          const obj9 = { value: size(5638).getFileData(uri), done: false };
+                          const obj9 = { value: size(5627).getFileData(uri), done: false };
                           return obj9;
                         }
                       }
@@ -1919,7 +1919,7 @@ prototype["delete"] = function delete() {
             const obj4 = { value, done: true };
             return obj4;
           } else if (null != self.uploadedFilename) {
-            const uploadTarget = v3(5685).getUploadTarget(self.item.target);
+            const uploadTarget = v3(5674).getUploadTarget(self.item.target);
             dependencyMap = 1;
             const deleteUploadURL = uploadTarget.getDeleteUploadURL(self.uploadedFilename);
             const HTTP = v3(1271).HTTP;

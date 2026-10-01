@@ -1,12 +1,14 @@
 // discord_common/js/shared/utils/SnowflakeUtils.tsx
 import IntegerDefault from "../../../../_runtime/00014_Integer.js";
-import size from "../../../../_runtime/metro/00002__.js";
 
 function extractTimestamp(arg0) {
   return Math.floor(Number(arg0) / 4194304) + c2;
 }
 let c2 = 1420070400000;
 let c3 = 4095;
+let obj = IntegerDefault(1);
+let closure_5 = IntegerDefault(1).shiftLeft(22).minus(1);
+const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/shared/utils/SnowflakeUtils.tsx");
 class SnowflakeSequence {
   constructor() {
@@ -47,6 +49,16 @@ export const fromTimestamp = function fromTimestamp(arg0) {
     const str2 = IntegerDefault(diff).shiftLeft(22);
   }
   return str;
+};
+export const getNonTimestampBits = function getNonTimestampBits(arg0) {
+  const obj = IntegerDefault(arg0);
+  return IntegerDefault(arg0).and(closure_5).toJSNumber();
+};
+export const setNonTimestampBits = function setNonTimestampBits(arg0, arg1) {
+  const obj = IntegerDefault(arg0);
+  const andResult = IntegerDefault(arg0).and(closure_5.not());
+  const obj3 = IntegerDefault(arg1);
+  return andResult.or(IntegerDefault(arg1).and(closure_5)).toString();
 };
 export const fromTimestampWithSequence = function fromTimestampWithSequence(arg0, next) {
   const diff = arg0 - c2;

@@ -7,7 +7,7 @@ import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_5 = fn(9102).VAD_COLOR_MIN_CONTRAST_RATIO;
+let closure_5 = fn(9096).VAD_COLOR_MIN_CONTRAST_RATIO;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/native/useAvatarSpeakingColor.tsx");
 

@@ -7,19 +7,19 @@ import ChannelStore from "../../../stores/ChannelStore.tsx";
 import GuildChannelStore from "../../../stores/GuildChannelStore.tsx";
 
 require = fn;
-const UnreadSetting = fn(5048).UnreadSetting;
+const UnreadSetting = fn(5027).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj = {
   container: {
-    marginVertical: fn(9778).CHANNEL_MARGIN_VERTICAL,
+    marginVertical: fn(9770).CHANNEL_MARGIN_VERTICAL,
     marginHorizontal: 8,
     borderRadius: nativeDefault.radii.md,
   },
 };
 let closure_8 = createStyles.createStyles(obj);
 let obj3 = {
-  marginVertical: fn(9778).CHANNEL_MARGIN_VERTICAL,
+  marginVertical: fn(9770).CHANNEL_MARGIN_VERTICAL,
   marginHorizontal: 8,
   borderRadius: nativeDefault.radii.md,
 };
@@ -66,13 +66,13 @@ export default noop.memo((guildId) => {
       resolvedUnreadSetting: null,
     };
     const obj3 = { channel: stateFromStores };
-    obj2.accessibilityLabel = id(9259)(obj3);
+    obj2.accessibilityLabel = id(9253)(obj3);
     const obj4 = { selected };
     obj2.accessibilityState = obj4;
     obj2.channel = stateFromStores;
     obj2.selected = selected;
     obj2.resolvedUnreadSetting = UnreadSetting.ONLY_MENTIONS;
-    tmp7 = jsx(id(15948), {
+    tmp7 = jsx(id(15964), {
       onPress: callback,
       onLongPress: tmp6,
       style: tmp.container,
@@ -84,7 +84,7 @@ export default noop.memo((guildId) => {
       selected: null,
       resolvedUnreadSetting: null,
     });
-    const tmp10 = id(15948);
+    const tmp10 = id(15964);
   }
   return tmp7;
 });

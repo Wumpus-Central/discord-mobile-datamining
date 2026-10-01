@@ -5,7 +5,7 @@ import native from "../../../design/void/native.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef6555 from "../../../../_runtime/metro/06555__.js";
+import _modDef6545 from "../../../../_runtime/metro/06545__.js";
 import DraftActionCreatorsDefault from "../../../actions/DraftActionCreators.tsx";
 import ScheduledMessageTypes from "../../scheduled_messages/ScheduledMessageTypes.tsx";
 import ScheduledMessagesUtils from "../../scheduled_messages/native/ScheduledMessagesUtils.native.tsx";
@@ -51,7 +51,7 @@ function ChatInputReplyBarNoAuthor(onCancelReplying) {
   obj6.hitSlop = tmp10;
   obj6.onPress = onCancelReplying.onCancelReplying;
   obj6.children = closure_1_12(native.Icon, {
-    source: _modDef6555,
+    source: _modDef6545,
     size: native.Icon.Sizes.CUSTOM,
     style: tmp.floatingCloseIcon,
   });
@@ -111,8 +111,8 @@ class ChatInputReplyBar {
       }
       return tmp;
     }, items1);
-    obj24 = { userId: pendingReply.message.author.id, guildId };
-    tmp9 = closure_1(colorString[17])(obj24);
+    obj25 = { userId: pendingReply.message.author.id, guildId };
+    tmp9 = closure_1(colorString[17])(obj25);
     obj7 = pendingReply(colorString[18]);
     closure_7 = obj7.useDisplayNameStylesFont({ displayNameStyles: tmp9 });
     obj8 = pendingReply(colorString[19]);
@@ -127,10 +127,10 @@ class ChatInputReplyBar {
     );
     if (null == onTapContextBarReply) {
       tmp11 = jsx;
-      obj25 = { lineClamp: 1, variant: "text-sm/normal", color: "text-strong", children: null };
+      obj26 = { lineClamp: 1, variant: "text-sm/normal", color: "text-strong", children: null };
       intl = tmp2(tmp3[12]).intl;
-      obj26 = { userHook: null };
-      obj26.userHook = function userHook(arg0, arg1) {
+      obj27 = { userHook: null };
+      obj27.userHook = function userHook(arg0, arg1) {
         if ("dot" === stateFromStores) {
           if (null != colorString) {
             const obj2 = { color: tmp, colors: colorStrings, guildId, size: "small" };
@@ -167,12 +167,12 @@ class ChatInputReplyBar {
         obj.children = nick;
         tmp3Result = closure_2_12(Text_Text.Text, obj, "" + arg1 + "-" + pendingReply.message.author.id);
       };
-      obj25.children = intl.format(tmp2(tmp3[12]).t["8E4GxS"], obj26);
-      tmp12 = jsx(tmp2(tmp3[11]).Text, obj25);
+      obj26.children = intl.format(tmp2(tmp3[12]).t["8E4GxS"], obj27);
+      tmp12 = jsx(tmp2(tmp3[11]).Text, obj26);
       tmp13 = jsx;
     } else {
       tmp13 = jsx;
-      obj27 = {
+      obj28 = {
         style: null,
         accessibilityRole: "link",
         accessibilityLabel: null,
@@ -181,18 +181,18 @@ class ChatInputReplyBar {
         onPress: null,
         children: null,
       };
-      obj27.style = tmp.floatingReplyTextWrapper;
+      obj28.style = tmp.floatingReplyTextWrapper;
       intl6 = tmp2(tmp3[12]).intl;
-      obj28 = { username: null };
-      obj28.username = nick;
-      obj27.accessibilityLabel = intl6.formatToPlainString(tmp2(tmp3[12]).t.EpJL4E, obj28);
+      obj29 = { username: null };
+      obj29.username = nick;
+      obj28.accessibilityLabel = intl6.formatToPlainString(tmp2(tmp3[12]).t.EpJL4E, obj29);
       intl7 = tmp2(tmp3[12]).intl;
-      obj27.accessibilityHint = intl7.string(tmp2(tmp3[12]).t["0CfCVW"]);
-      obj27.onPress = onTapContextBarReply;
-      obj29 = { lineClamp: 1, variant: "text-sm/normal", color: "text-strong", children: null };
+      obj28.accessibilityHint = intl7.string(tmp2(tmp3[12]).t["0CfCVW"]);
+      obj28.onPress = onTapContextBarReply;
+      obj30 = { lineClamp: 1, variant: "text-sm/normal", color: "text-strong", children: null };
       intl8 = tmp2(tmp3[12]).intl;
-      obj30 = { userHook: null };
-      obj30.userHook = function userHook(arg0, arg1) {
+      obj31 = { userHook: null };
+      obj31.userHook = function userHook(arg0, arg1) {
         if ("dot" === stateFromStores) {
           if (null != colorString) {
             const obj2 = { color: tmp, colors: colorStrings, guildId, size: "small" };
@@ -229,13 +229,13 @@ class ChatInputReplyBar {
         obj.children = nick;
         tmp3Result = closure_2_12(Text_Text.Text, obj, "" + arg1 + "-" + pendingReply.message.author.id);
       };
-      obj29.children = intl8.format(tmp2(tmp3[12]).t["8E4GxS"], obj30);
-      obj27.children = jsx(tmp2(tmp3[11]).Text, obj29);
-      tmp12 = jsx(tmp2(tmp3[13]).PressableOpacity, obj27);
+      obj30.children = intl8.format(tmp2(tmp3[12]).t["8E4GxS"], obj31);
+      obj28.children = jsx(tmp2(tmp3[11]).Text, obj30);
+      tmp12 = jsx(tmp2(tmp3[13]).PressableOpacity, obj28);
     }
     tmp13Result = null;
     if (null != onCancelReplying) {
-      obj31 = {
+      obj32 = {
         accessibilityRole: "button",
         accessibilityLabel: null,
         activeOpacity: 0.5,
@@ -244,19 +244,19 @@ class ChatInputReplyBar {
         children: null,
       };
       intl2 = tmp2(tmp3[12]).intl;
-      obj31.accessibilityLabel = intl2.string(tmp2(tmp3[12]).t.jSnJGT);
+      obj32.accessibilityLabel = intl2.string(tmp2(tmp3[12]).t.jSnJGT);
       tmp15 = undefined;
       if (bound > 0) {
         tmp15 = bound;
       }
-      obj31.hitSlop = tmp15;
-      obj31.onPress = onCancelReplying;
-      obj32 = { source: null, size: null, style: null };
-      obj32.source = tmp4(tmp3[14]);
-      obj32.size = tmp2(tmp3[7]).Icon.Sizes.CUSTOM;
-      obj32.style = tmp.floatingCloseIcon;
-      obj31.children = tmp13(tmp2(tmp3[7]).Icon, obj32);
-      tmp13Result = tmp13(tmp2(tmp3[13]).PressableOpacity, obj31);
+      obj32.hitSlop = tmp15;
+      obj32.onPress = onCancelReplying;
+      obj33 = { source: null, size: null, style: null };
+      obj33.source = tmp4(tmp3[14]);
+      obj33.size = tmp2(tmp3[7]).Icon.Sizes.CUSTOM;
+      obj33.style = tmp.floatingCloseIcon;
+      obj32.children = tmp13(tmp2(tmp3[7]).Icon, obj33);
+      tmp13Result = tmp13(tmp2(tmp3[13]).PressableOpacity, obj32);
     }
     showMentionToggle = undefined;
     if (pendingReply != null) {
@@ -271,44 +271,50 @@ class ChatInputReplyBar {
       if (showMentionToggle1) {
         tmp13Result1 = null;
         if (null != tmp13Result) {
-          tmp24 = guildId;
-          obj33 = { style: null };
-          obj33.style = tmp.floatingDivider;
-          tmp13Result1 = tmp13(guildId, obj33);
+          tmp25 = guildId;
+          obj34 = { style: null };
+          obj34.style = tmp.floatingDivider;
+          tmp13Result1 = tmp13(guildId, obj34);
         }
       }
-      tmp25 = jsxs;
-      tmp26 = guildId;
-      obj34 = { style: null, children: null };
-      obj34.style = tmp.contextBarRow;
+      tmp26 = jsxs;
+      tmp27 = guildId;
+      obj35 = { style: null, children: null };
+      obj35.style = tmp.contextBarRow;
       items2 = [,];
       items2[0] = tmp12;
-      obj35 = { style: null, children: null };
-      obj35.style = tmp.floatingRightActions;
-      items3 = [, ,];
-      items3[0] = null;
-      items3[1] = tmp13Result1;
-      items3[2] = tmp13Result;
-      obj35.children = items3;
-      items2[1] = jsxs(guildId, obj35);
-      obj34.children = items2;
-      return jsxs(guildId, obj34);
+      obj36 = { style: null, children: null };
+      items3 = [,];
+      items3[0] = tmp.floatingRightActions;
+      obj37 = { gap: null };
+      obj37.gap = bound;
+      items3[1] = obj37;
+      obj36.style = items3;
+      items4 = [, ,];
+      items4[0] = null;
+      items4[1] = tmp13Result1;
+      items4[2] = tmp13Result;
+      obj36.children = items4;
+      items2[1] = jsxs(guildId, obj36);
+      obj35.children = items2;
+      return jsxs(guildId, obj35);
     } else {
       tmp17 = jsxs;
-      obj36 = {
+      obj38 = {
         accessibilityRole: null,
         accessibilityState: null,
         accessibilityLabel: null,
         accessibilityHint: null,
         activeOpacity: 0.5,
+        hitSlop: null,
         onPress: null,
         style: null,
         children: null,
       };
-      obj36.accessibilityRole = accessibilityRole;
-      obj36.accessibilityState = accessibilityState;
+      obj38.accessibilityRole = accessibilityRole;
+      obj38.accessibilityState = accessibilityState;
       intl3 = tmp2(tmp3[12]).intl;
-      obj36.accessibilityLabel = intl3.string(tmp2(tmp3[12]).t.P8tvKG);
+      obj38.accessibilityLabel = intl3.string(tmp2(tmp3[12]).t.P8tvKG);
       intl4 = tmp2(tmp3[12]).intl;
       string = intl4.string;
       t = tmp2(tmp3[12]).t;
@@ -317,24 +323,29 @@ class ChatInputReplyBar {
       } else {
         stringResult = string(t["+LXBxU"]);
       }
-      obj36.accessibilityHint = stringResult;
-      obj36.onPress = global.onToggleReplyMention;
-      obj36.style = tmp.floatingMentionGroup;
-      obj37 = { source: null, size: null, style: null };
-      obj37.source = tmp4(tmp3[20]);
-      obj37.size = tmp2(tmp3[7]).Icon.Sizes.CUSTOM;
-      items4 = [,];
-      items4[0] = tmp.replyMentionIcon;
-      items4[1] = pendingReply.shouldMention && tmp.replyMentionIconActive;
-      obj37.style = items4;
+      obj38.accessibilityHint = stringResult;
+      tmp19 = undefined;
+      if (bound > 0) {
+        tmp19 = bound;
+      }
+      obj38.hitSlop = tmp19;
+      obj38.onPress = global.onToggleReplyMention;
+      obj38.style = tmp.floatingMentionGroup;
+      obj39 = { source: null, size: null, style: null };
+      obj39.source = tmp4(tmp3[20]);
+      obj39.size = tmp2(tmp3[7]).Icon.Sizes.CUSTOM;
       items5 = [,];
-      items5[0] = tmp13(tmp2(tmp3[7]).Icon, obj37);
+      items5[0] = tmp.replyMentionIcon;
+      items5[1] = pendingReply.shouldMention && tmp.replyMentionIconActive;
+      obj39.style = items5;
+      items6 = [,];
+      items6[0] = tmp13(tmp2(tmp3[7]).Icon, obj39);
       prop = undefined;
       if (pendingReply.shouldMention) {
         prop = tmp.replyMentionButtonActive;
       }
-      obj38 = { variant: "text-sm/semibold", color: "text-muted", style: null, children: null };
-      obj38.style = prop;
+      obj40 = { variant: "text-sm/semibold", color: "text-muted", style: null, children: null };
+      obj40.style = prop;
       intl5 = tmp2(tmp3[12]).intl;
       string2 = intl5.string;
       p9jC2r = tmp2(tmp3[12]).t;
@@ -344,11 +355,11 @@ class ChatInputReplyBar {
       } else {
         string2Result = string2(p9jC2r.U7f3bK);
       }
-      obj38.children = string2Result;
-      obj38 = tmp13(tmp2(tmp3[11]).Text, obj38);
-      items5[1] = obj38;
-      obj36.children = items5;
-      tmp17Result = tmp17(tmp2(tmp3[13]).PressableOpacity, obj36);
+      obj40.children = string2Result;
+      obj40 = tmp13(tmp2(tmp3[11]).Text, obj40);
+      items6[1] = obj40;
+      obj38.children = items6;
+      tmp17Result = tmp17(tmp2(tmp3[13]).PressableOpacity, obj38);
     }
     return;
   }
@@ -387,14 +398,14 @@ function ChatInputEditBar(onCancelEditing) {
   obj4.onPress = onCancelEditing.onCancelEditing;
   const tmp8 = closure_1_12(Text_Text.Text, obj3);
   obj4.children = closure_1_12(native.Icon, {
-    source: _modDef6555,
+    source: _modDef6545,
     size: native.Icon.Sizes.CUSTOM,
     style: tmp.floatingCloseIcon,
   });
   const obj6 = { style: tmp.contextBarRow, children: null };
   const obj7 = { children: null };
   const items = [tmp8];
-  const obj5 = { source: _modDef6555, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
+  const obj5 = { source: _modDef6545, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
   items[1] = closure_1_12(component, {
     style: tmp.floatingRightActions,
     children: closure_1_12(Pressables.PressableOpacity, obj4),
@@ -447,14 +458,14 @@ function ChatInputScheduledMessageBar(scheduledTimestamp) {
   obj6.onPress = onCancelScheduling;
   const tmp8 = closure_1_12(Pressables.PressableOpacity, obj3);
   obj6.children = closure_1_12(native.Icon, {
-    source: _modDef6555,
+    source: _modDef6545,
     size: native.Icon.Sizes.CUSTOM,
     style: tmp.floatingCloseIcon,
   });
   const obj8 = { style: tmp.contextBarRow, children: null };
   const obj9 = { children: null };
   const items = [tmp8];
-  const obj7 = { source: _modDef6555, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
+  const obj7 = { source: _modDef6545, size: native.Icon.Sizes.CUSTOM, style: tmp.floatingCloseIcon };
   items[1] = closure_1_12(component, {
     style: tmp.floatingRightActions,
     children: closure_1_12(Pressables.PressableOpacity, obj6),
@@ -465,13 +476,13 @@ function ChatInputScheduledMessageBar(scheduledTimestamp) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const DraftType = fn(5396).DraftType;
+const DraftType = fn(5384).DraftType;
 const Constants = fn(1074);
 ({ AnalyticEvents: c10, Routes: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 let obj = { duration: 250, easing: fn(1177).STANDARD_EASING };
-let createStyles = fn(4866);
+let createStyles = fn(4845);
 let closure_16 = createStyles.createStyles((arg0) => {
   let MOBILE_FLOATING_ACCESSORY_BACKGROUND = arg0;
   if (arg0 == null) {
@@ -479,7 +490,7 @@ let closure_16 = createStyles.createStyles((arg0) => {
   }
   return { contextBar: { backgroundColor: MOBILE_FLOATING_ACCESSORY_BACKGROUND } };
 });
-createStyles = fn(4866);
+createStyles = fn(4845);
 let closure_17 = createStyles.createStyles(() => {
   obj = {
     contextBarRow: {

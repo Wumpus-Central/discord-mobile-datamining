@@ -1,8 +1,8 @@
 // discord_app/modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingProgressBar.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
-import GuildBoostingUtils from "../../../../utils/GuildBoostingUtils.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
+import GuildBoostingUtils from "../../../../utils/GuildBoostingUtils.tsx";
 import GuildBoostingMarketingProgressBarMarker from "GuildBoostingMarketingProgressBarMarker.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -15,14 +15,14 @@ const View = fn(17).View;
 const BoostedGuildTiers = fn(1074).BoostedGuildTiers;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = {
   progressBarContainer: {
     display: "flex",
     alignItems: "center",
     width: "100%",
     marginTop: 40,
-    paddingHorizontal: fn(13320).MARKER_DIMENSIONS / 2 + 34,
+    paddingHorizontal: fn(13328).MARKER_DIMENSIONS / 2 + 34,
   },
   progressBar: { height: 54, maxWidth: 660, width: "100%" },
   progressBarScrubber: null,
@@ -35,12 +35,12 @@ let obj3 = {
   alignItems: "center",
   width: "100%",
   marginTop: 40,
-  paddingHorizontal: fn(13320).MARKER_DIMENSIONS / 2 + 34,
+  paddingHorizontal: fn(13328).MARKER_DIMENSIONS / 2 + 34,
 };
 obj2.progressBarScrubber = {
   height: 8,
-  top: fn(13320).MARKER_DIMENSIONS / 2 - 4,
-  marginHorizontal: fn(13320).MARKER_DIMENSIONS / 2 + 2,
+  top: fn(13328).MARKER_DIMENSIONS / 2 - 4,
+  marginHorizontal: fn(13328).MARKER_DIMENSIONS / 2 + 2,
 };
 let size = {
   borderRadius: 8,

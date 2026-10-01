@@ -2,7 +2,7 @@
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const UserProfileSections = fn(7823).UserProfileSections;
+const UserProfileSections = fn(7810).UserProfileSections;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/native/useProfileSectionTabs.tsx");
 
@@ -28,6 +28,17 @@ export function useProfileTabIndices(arg0, isRecentActivityMobileEnabled, arg2) 
   obj.wishlistTabIndex = num;
   return obj;
 }
+export const getProfileTabSectionIndex = function getProfileTabSectionIndex(initialTab, wishlistTabIndex) {
+  if (UserProfileSections.WISHLIST === initialTab) {
+    return wishlistTabIndex.wishlistTabIndex;
+  } else if (UserProfileSections.WIDGETS === initialTab) {
+    return tmp;
+  } else if (UserProfileSections.ACTIVITY === initialTab) {
+    return tmp2;
+  } else if (UserProfileSections.MAIN === initialTab) {
+    return 0;
+  }
+};
 export const useProfileSectionTabs = function useProfileSectionTabs(boardTabIndex) {
   ({ initialUserProfileSection: _slicedToArray, wishlistTabIndex } = boardTabIndex);
   boardTabIndex = boardTabIndex.boardTabIndex;

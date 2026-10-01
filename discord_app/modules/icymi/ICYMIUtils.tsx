@@ -1,12 +1,10 @@
 // discord_app/modules/icymi/ICYMIUtils.tsx
-import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import util from "../../intl/index.native.tsx";
 import MessageRecordUtils from "../messages/MessageRecordUtils.tsx";
 import ForumPostMediaUtils from "../forums/ForumPostMediaUtils.tsx";
 import ContentInventoryEntryType from "../../../discord_common/js/shared/shared-constants/ContentInventoryEntryType.tsx";
 import ICYMITypes from "ICYMITypes.tsx";
 import ICYMIActionCreatorsDefault from "ICYMIActionCreators.tsx";
-import ICYMIExperiment from "ICYMIExperiment.tsx";
 import ContentInventoryAuthorType from "../../../discord_common/js/shared/shared-constants/ContentInventoryAuthorType.tsx";
 import ICYMIItemTypes from "ICYMIItemTypes.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -21,12 +19,9 @@ import ICYMIUnreadStateStore from "ICYMIUnreadStateStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-function generateHydrationId(startingIndex, endingIndex) {
-  return "hydration-" + startingIndex + "-" + endingIndex;
-}
 function hydrateItems() {
   const self = this;
-  const apply = closure_17.apply;
+  const apply = closure_16.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -34,7 +29,7 @@ function hydrateItems() {
   }
   return applyArgumentsResult;
 }
-let closure_17 = async function _hydrateItems(arg0) {
+let closure_16 = async function _hydrateItems(arg0) {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -42,8 +37,8 @@ let closure_17 = async function _hydrateItems(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      let obj3 = { value, done: true };
-      return obj3;
+      const obj4 = { value, done: true };
+      return obj4;
     } else {
       return { value: "HermesInternal", done: null };
     }
@@ -56,23 +51,24 @@ let closure_17 = async function _hydrateItems(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
           dependencyMap = hydratedItems.getHydratedItems();
           const substr = dependencyMap.slice(closure_1, dependencyMap2);
           if (0 !== substr.length) {
-            const hydratedAttempt = ICYMIActionCreatorsDefault.loadHydratedAttempt(
-              generateHydrationId(closure_1, dependencyMap2),
+            let obj2 = ICYMIActionCreatorsDefault;
+            const hydratedAttempt = obj2.loadHydratedAttempt(
+              require("generateHydrationId").generateHydrationId(closure_1, dependencyMap2),
             );
             const found = substr.filter((item) => null == dependencyMap[item.id]);
-            const found1 = found.filter((type) => type.type === dependencyMap(7991).ICYMIItemTypes.MESSAGE);
+            const found1 = found.filter((type) => type.type === dependencyMap(7978).ICYMIItemTypes.MESSAGE);
             const mapped = found1.map((channel_id) => ({
               channel_id: channel_id.data.channel_id,
               message_id: channel_id.data.message_id,
             }));
             const mapped1 = found.map((type) => {
-              if (type.type === dependencyMap(7991).ICYMIItemTypes.MESSAGE) {
+              if (type.type === dependencyMap(7978).ICYMIItemTypes.MESSAGE) {
                 const message_context = type.data.message_context;
                 let reply_message_id;
                 if (message_context != null) {
@@ -115,23 +111,24 @@ let closure_17 = async function _hydrateItems(arg0) {
                 return [];
               }
             });
+            let obj3 = require("generateHydrationId");
             const _Boolean = Boolean;
             const found2 = mapped1.flat().filter(Boolean);
-            const found3 = found.filter((type) => type.type === dependencyMap(7991).ICYMIItemTypes.ACTIVITY);
+            const found3 = found.filter((type) => type.type === dependencyMap(7978).ICYMIItemTypes.ACTIVITY);
             const mapped2 = found3.map((data) => ({ user_id: data.data.user_id, content_id: data.data.content_id }));
             const flatResult = mapped1.flat();
-            const obj6 = { messageItems: null, activityItems: null };
+            const obj7 = { messageItems: null, activityItems: null };
             let items = [];
             HermesBuiltin.arraySpread(found2, HermesBuiltin.arraySpread(mapped, 0));
-            obj6.messageItems = items;
-            obj6.activityItems = mapped2;
+            obj7.messageItems = items;
+            obj7.activityItems = mapped2;
             c4 = 1;
             c3 = 1;
-            const obj7 = {
-              value: ICYMIActionCreatorsDefault.fetchHydrated(closure_1, dependencyMap2, obj6),
+            const obj8 = {
+              value: ICYMIActionCreatorsDefault.fetchHydrated(closure_1, dependencyMap2, obj7),
               done: false,
             };
-            return obj7;
+            return obj8;
           }
         }
       } else if (arg0 === 1) {
@@ -150,7 +147,7 @@ let closure_17 = async function _hydrateItems(arg0) {
     }
   }
 };
-let closure_18 = async function _hydrateNextPage() {
+let closure_17 = async function _hydrateNextPage() {
   if (c0 === 2) {
     c0 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -205,7 +202,7 @@ let closure_18 = async function _hydrateNextPage() {
     }
   }
 };
-let closure_19 = async function _regenerateFeedAndClearReadStates(arg0) {
+let closure_18 = async function _regenerateFeedAndClearReadStates(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -237,7 +234,7 @@ let closure_19 = async function _regenerateFeedAndClearReadStates(arg0) {
           let AnalyticsObjectTypes;
           c3 = 1;
           c4 = 1;
-          const obj5 = { value: require("asyncRequireImpl")(paths[21], paths.paths), done: false };
+          const obj5 = { value: require("asyncRequireImpl")(paths[20], paths.paths), done: false };
           return obj5;
         }
       } else if (1 === tmp5) {
@@ -252,7 +249,7 @@ let closure_19 = async function _regenerateFeedAndClearReadStates(arg0) {
           ack = value.ack;
           c3 = 2;
           c4 = 1;
-          const obj8 = { value: closure_130_0(closure_130_2[22])(closure_130_2[23], closure_130_2.paths), done: false };
+          const obj8 = { value: closure_130_0(closure_130_2[21])(closure_130_2[22], closure_130_2.paths), done: false };
           return obj8;
         }
       } else if (2 === tmp5) {
@@ -273,11 +270,11 @@ let closure_19 = async function _regenerateFeedAndClearReadStates(arg0) {
             }
             if (tmp2) {
               tmp2 =
-                closure_1(constants[13]).compare(
+                closure_1(constants[23]).compare(
                   closure_2_9.ackMessageId(type.data.channel_id),
                   type.data.message_id,
                 ) >= 0;
-              const obj = closure_1(constants[13]);
+              const obj = closure_1(constants[23]);
             }
             if (tmp2) {
               const channel_id = type.data.channel_id;
@@ -287,9 +284,9 @@ let closure_19 = async function _regenerateFeedAndClearReadStates(arg0) {
                 obj2,
                 true,
                 true,
-                closure_1(constants[13]).atPreviousMillisecond(type.data.message_id),
+                closure_1(constants[23]).atPreviousMillisecond(type.data.message_id),
               );
-              const obj3 = closure_1(constants[13]);
+              const obj3 = closure_1(constants[23]);
             }
           });
           c3 = 3;
@@ -360,7 +357,7 @@ let closure_19 = async function _regenerateFeedAndClearReadStates(arg0) {
     }
   }
 };
-const ThreadChannelRecord = fn(2049).ThreadChannelRecord;
+const ThreadChannelRecord = fn(2048).ThreadChannelRecord;
 const Constants = fn(1074);
 ({ ChannelTypes: closure_12, GuildNSFWContentLevel: map1 } = Constants);
 const ICYMICustomScore = {
@@ -378,7 +375,6 @@ const ICYMICustomScore = {
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/ICYMIUtils.tsx");
 
-export { generateHydrationId };
 export { ICYMICustomScore };
 export const isGuildItem = function isGuildItem(type) {
   let tmp3 = type.type === ICYMITypes.ICYMIItemTypes.MESSAGE;
@@ -421,7 +417,7 @@ export const customScoreToNumber = function customScoreToNumber(DEFAULT) {
 export { hydrateItems };
 export const hydrateNextPage = function hydrateNextPage() {
   const self = this;
-  const apply = closure_18.apply;
+  const apply = closure_17.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -439,15 +435,6 @@ export const createGravityMessageFromServer = function createGravityMessageFromS
   }
   obj.threadChannel = fromServerResult;
   return obj;
-};
-export const isItemUnreadInChannel = function isItemUnreadInChannel(channel_id, message_id) {
-  const trackedAckMessageId = ReadStateStore.getTrackedAckMessageId(channel_id);
-  let tmp2 = null == trackedAckMessageId;
-  if (!tmp2) {
-    const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(message_id);
-    tmp2 = extractTimestampResult > SnowflakeUtilsDefault.extractTimestamp(trackedAckMessageId);
-  }
-  return tmp2;
 };
 export const useGravityMessage = function useGravityMessage(message) {
   _require = message;
@@ -504,9 +491,6 @@ export const useICYMIMessage = function useICYMIMessage(id, before_message_id) {
     },
     items1,
   );
-};
-export const icymiEnabled = function icymiEnabled(customScores) {
-  return ICYMIExperiment.getICYMIEnabled(customScores);
 };
 export const customStatusToContentInventoryEntry = function customStatusToContentInventoryEntry(notificationItem) {
   const obj = {
@@ -794,7 +778,7 @@ export const contentTypeToText = function contentTypeToText(arg0) {
 };
 export const regenerateFeedAndClearReadStates = function regenerateFeedAndClearReadStates() {
   const self = this;
-  const apply = closure_19.apply;
+  const apply = closure_18.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

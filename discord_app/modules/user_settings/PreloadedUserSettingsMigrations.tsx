@@ -410,7 +410,7 @@ let items = [
             NAGBAR_NOTICE_DOWNLOAD,
           );
           flag = true;
-          const tmpResult6 = Uint8ArrayUtils;
+          const tmpResult4 = Uint8ArrayUtils;
         }
         value = flag;
         tmpResult = Uint8ArrayUtils;
@@ -420,8 +420,8 @@ let items = [
         flag2 = true;
       }
       const Storage2 = Storage4.Storage;
-      let value3 = Storage2.get("hideConnectSpotify");
-      if (value3) {
+      value2 = Storage2.get("hideConnectSpotify");
+      if (value2) {
         const NAGBAR_NOTICE_CONNECT_SPOTIFY = dismissible_content.DismissibleContent.NAGBAR_NOTICE_CONNECT_SPOTIFY;
         if (null == userContent.userContent) {
           const UserContentSettings2 = preloaded_user_settings.UserContentSettings;
@@ -433,47 +433,18 @@ let items = [
           userContent.userContent.dismissedContents = uint8Array1;
         }
         let flag3 = false;
-        if (!tmpResult7.hasBit(userContent.userContent.dismissedContents, NAGBAR_NOTICE_CONNECT_SPOTIFY)) {
+        if (!tmpResult5.hasBit(userContent.userContent.dismissedContents, NAGBAR_NOTICE_CONNECT_SPOTIFY)) {
           userContent.userContent.dismissedContents = Uint8ArrayUtils.addBit(
             userContent.userContent.dismissedContents,
             NAGBAR_NOTICE_CONNECT_SPOTIFY,
           );
           flag3 = true;
-          const tmpResult8 = Uint8ArrayUtils;
+          const tmpResult6 = Uint8ArrayUtils;
         }
-        value3 = flag3;
-        tmpResult7 = Uint8ArrayUtils;
+        value2 = flag3;
+        tmpResult5 = Uint8ArrayUtils;
       }
-      if (value3) {
-        flag2 = true;
-      }
-      const Storage3 = Storage4.Storage;
-      let value4 = Storage3.get("hideConnectPlayStation");
-      if (value4) {
-        const NAGBAR_NOTICE_CONNECT_PLAYSTATION =
-          dismissible_content.DismissibleContent.NAGBAR_NOTICE_CONNECT_PLAYSTATION;
-        if (null == userContent.userContent) {
-          const UserContentSettings3 = preloaded_user_settings.UserContentSettings;
-          userContent.userContent = UserContentSettings3.create();
-        }
-        if (null == userContent.userContent.dismissedContents) {
-          const _Uint8Array3 = Uint8Array;
-          const uint8Array2 = new Uint8Array();
-          userContent.userContent.dismissedContents = uint8Array2;
-        }
-        let flag4 = false;
-        if (!tmpResult9.hasBit(userContent.userContent.dismissedContents, NAGBAR_NOTICE_CONNECT_PLAYSTATION)) {
-          userContent.userContent.dismissedContents = Uint8ArrayUtils.addBit(
-            userContent.userContent.dismissedContents,
-            NAGBAR_NOTICE_CONNECT_PLAYSTATION,
-          );
-          flag4 = true;
-          const tmpResult10 = Uint8ArrayUtils;
-        }
-        value4 = flag4;
-        tmpResult9 = Uint8ArrayUtils;
-      }
-      if (value4) {
+      if (value2) {
         flag2 = true;
       }
       return flag2;
@@ -483,8 +454,6 @@ let items = [
       Storage.remove("hideNag");
       const Storage2 = Storage4.Storage;
       Storage2.remove("hideConnectSpotify");
-      const Storage3 = Storage4.Storage;
-      Storage3.remove("hideConnectPlayStation");
     },
   },
   {

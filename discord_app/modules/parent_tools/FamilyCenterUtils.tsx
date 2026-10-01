@@ -1,12 +1,12 @@
 // discord_app/modules/parent_tools/FamilyCenterUtils.tsx
 import util from "../../intl/index.native.tsx";
-import _modDef2487 from "FamilyCenter.messages.js";
-import _modDef4451 from "../../../_runtime/metro/04451__.js";
+import _modDef2486 from "FamilyCenter.messages.js";
+import _modDef4450 from "../../../_runtime/metro/04450__.js";
 import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators.tsx";
 import FamilyCenterStore from "FamilyCenterStore.tsx";
 
 require = fn;
-const FamilyCenterConstants = fn(7154);
+const FamilyCenterConstants = fn(7146);
 ({
   ACTION_TO_TEXT: closure_4,
   FAMILY_CENTER_ERROR_CODE_TO_FAILURE: hasOwnProperty,
@@ -23,37 +23,37 @@ let result = size.fileFinishedImporting("modules/parent_tools/FamilyCenterUtils.
 export const getEmptyActivityFormatter = function getEmptyActivityFormatter() {
   const obj = { today: null, yesterday: null, days: null };
   const intl = util.intl;
-  obj.today = intl.string(_modDef2487.VjIAQQ);
+  obj.today = intl.string(_modDef2486.VjIAQQ);
   const intl2 = util.intl;
-  obj.yesterday = intl2.string(_modDef2487["2a8xHY"]);
-  obj.days = _modDef2487.Xt6oND;
+  obj.yesterday = intl2.string(_modDef2486["2a8xHY"]);
+  obj.days = _modDef2486.Xt6oND;
   return obj;
 };
 export const getActivityWindowTimestampFormatter = function getActivityWindowTimestampFormatter(arg0) {
   const obj = { today: null, yesterday: null, days: null };
   const intl = util.intl;
   const string = intl.string;
-  const tmp4 = _modDef2487;
+  const tmp4 = _modDef2486;
   if (arg0) {
     obj.today = string(tmp4["2AtcIs"]);
     const intl3 = util.intl;
-    obj.yesterday = intl3.string(_modDef2487.stOECr);
-    obj.days = _modDef2487.n8n5Ba;
+    obj.yesterday = intl3.string(_modDef2486.stOECr);
+    obj.days = _modDef2486.n8n5Ba;
     let tmp5 = obj;
   } else {
     obj.today = string(tmp4.g1ZX6m);
     const intl2 = util.intl;
-    obj.yesterday = intl2.string(_modDef2487.s3qSVt);
-    obj.days = _modDef2487.f1UJiC;
+    obj.yesterday = intl2.string(_modDef2486.s3qSVt);
+    obj.days = _modDef2486.f1UJiC;
     tmp5 = obj;
   }
   return tmp5;
 };
 export const formatUserActivityTimestamp = function formatUserActivityTimestamp(time, timestampFormatter, arg2) {
-  const diffResult = _modDef4451().diff(_modDef4451(time), "s");
+  const diffResult = _modDef4450().diff(_modDef4450(time), "s");
   const tmp3 = timestampFormatter();
-  const obj = _modDef4451();
-  _modDef4451(time).format("LL");
+  const obj = _modDef4450();
+  _modDef4450(time).format("LL");
   if (diffResult < c10) {
     let yesterday = tmp3.today;
   } else if (diffResult < c11) {
@@ -72,9 +72,9 @@ export const formatUserActivityTimestamp = function formatUserActivityTimestamp(
   return yesterday;
 };
 export const formatLinkTimestamp = function formatLinkTimestamp(arg0, SENT_TIMESTAMP_FORMATTER) {
-  const diffResult = _modDef4451().diff(_modDef4451(arg0), "s");
+  const diffResult = _modDef4450().diff(_modDef4450(arg0), "s");
   const time = SENT_TIMESTAMP_FORMATTER();
-  _modDef4451(arg0);
+  _modDef4450(arg0);
   if (diffResult < 60) {
     let yesterday = time.seconds;
   } else if (diffResult < 3600) {
@@ -119,15 +119,6 @@ export const isPurchase = function isPurchase(action) {
 };
 export const isGift = function isGift(action) {
   return action.display_type === constants2.GIFTS;
-};
-export const displayTypeFromString = function displayTypeFromString(arg0) {
-  const values = Object.values(constants2);
-  for (const item10011 of values) {
-    if (item10011.toString() === arg0) {
-      obj.return();
-      return item10011;
-    }
-  }
 };
 export const getFailureCodeForAPIError = function getFailureCodeForAPIError(arg0) {
   let GENERIC_ERROR = hasOwnProperty[arg0.code];
@@ -194,7 +185,7 @@ export const getTopUserOrGuildDescription = function getTopUserOrGuildDescriptio
     if (0 === dms_sent) {
       const intl3 = util.intl;
       const obj2 = { callCount: call_count };
-      let formatToPlainStringResult = intl3.formatToPlainString(_modDef2487["L/Cj7S"], obj2);
+      let formatToPlainStringResult = intl3.formatToPlainString(_modDef2486["L/Cj7S"], obj2);
     }
     return formatToPlainStringResult;
   }
@@ -202,11 +193,11 @@ export const getTopUserOrGuildDescription = function getTopUserOrGuildDescriptio
     if (0 === call_count) {
       const intl2 = util.intl;
       const obj3 = { messageCount: dms_sent };
-      formatToPlainStringResult = intl2.formatToPlainString(_modDef2487["6X1F0i"], obj3);
+      formatToPlainStringResult = intl2.formatToPlainString(_modDef2486["6X1F0i"], obj3);
     }
   }
   const intl = util.intl;
-  formatToPlainStringResult = intl.formatToPlainString(_modDef2487.IYqGMG, {
+  formatToPlainStringResult = intl.formatToPlainString(_modDef2486.IYqGMG, {
     messageCount: dms_sent,
     callCount: call_count,
   });

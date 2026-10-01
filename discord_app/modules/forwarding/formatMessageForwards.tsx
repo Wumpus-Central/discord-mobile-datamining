@@ -1,4 +1,5 @@
 // discord_app/modules/forwarding/formatMessageForwards.tsx
+import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import util from "../../intl/index.native.tsx";
 import AvatarUtilsDefault from "../../utils/AvatarUtils.tsx";
 import DateUtils from "../../utils/DateUtils.tsx";
@@ -47,19 +48,35 @@ MessageForward.prototype["getForwardInfo"] = function getForwardInfo(arg0) {
     obj4 = BasicGuildStore;
   }
   ({ snapshotIndex, parentMessage } = this);
-  const result = DateUtils.calendarFormatCompact(this.messageSnapshot.message.timestamp);
+  let tmp5;
+  if (isForwardMessageDefault(parentMessage)) {
+    const messageReference = parentMessage.messageReference;
+    let message_id;
+    if (messageReference != null) {
+      message_id = messageReference.message_id;
+    }
+    tmp5 = message_id;
+  }
+  if (null != tmp5) {
+    const _Date = Date;
+    let timestamp = new Date(SnowflakeUtilsDefault.extractTimestamp(tmp5));
+    const tmp3Result = SnowflakeUtilsDefault;
+  } else {
+    timestamp = this.messageSnapshot.message.timestamp;
+  }
+  const result = DateUtils.calendarFormatCompact(timestamp);
   const channel = obj.getChannel(this.parentMessage.channel_id);
   if (null != channel) {
-    const messageReference = parentMessage.messageReference;
+    const messageReference2 = parentMessage.messageReference;
     let guild_id;
-    if (messageReference != null) {
-      guild_id = messageReference.guild_id;
+    if (messageReference2 != null) {
+      guild_id = messageReference2.guild_id;
     }
     if (channel.guild_id === guild_id) {
-      const messageReference3 = parentMessage.messageReference;
+      const messageReference4 = parentMessage.messageReference;
       let channel_id;
-      if (messageReference3 != null) {
-        channel_id = messageReference3.channel_id;
+      if (messageReference4 != null) {
+        channel_id = messageReference4.channel_id;
       }
       const channel1 = obj.getChannel(channel_id);
       if (null == channel1) {
@@ -70,7 +87,7 @@ MessageForward.prototype["getForwardInfo"] = function getForwardInfo(arg0) {
         } else {
           obj7 = { snapshotIndex, footerInfo: null };
           const obj8 = { originLabel: guild.name, originIconUrl: null, timestampLabel: null, accessibilityLabel: null };
-          ({ id: obj22.id, icon: obj22.icon } = guild);
+          ({ id: obj23.id, icon: obj23.icon } = guild);
           obj8.originIconUrl = AvatarUtilsDefault.getGuildIconURL({
             id: null,
             size: 16,
@@ -83,13 +100,14 @@ MessageForward.prototype["getForwardInfo"] = function getForwardInfo(arg0) {
           obj8.accessibilityLabel = intl3.formatToPlainString(util.t["+l04BN"], obj10);
           obj7.footerInfo = obj8;
           const obj9 = { id: null, size: 16, icon: null, canAnimate: false };
+          const tmp3Result3 = AvatarUtilsDefault;
         }
         return obj7;
       } else {
         if (obj2.can(channel1.accessPermissions, channel1)) {
           const obj11 = { snapshotIndex, footerInfo: null };
-          const tmp3Result = useChannelName;
-          const channelName = tmp3Result.computeChannelName(channel1, tmp, tmp2, true);
+          const tmp8Result = useChannelName;
+          const channelName = tmp8Result.computeChannelName(channel1, tmp, tmp2, true);
           const obj12 = { originLabel: channelName, timestampLabel: result, accessibilityLabel: null };
           const intl = util.intl;
           const obj13 = { origin: channelName, timestamp: result };
@@ -103,10 +121,10 @@ MessageForward.prototype["getForwardInfo"] = function getForwardInfo(arg0) {
       }
     }
   }
-  const messageReference2 = parentMessage.messageReference;
+  const messageReference3 = parentMessage.messageReference;
   let guild_id1;
-  if (messageReference2 != null) {
-    guild_id1 = messageReference2.guild_id;
+  if (messageReference3 != null) {
+    guild_id1 = messageReference3.guild_id;
   }
   if (null == guild_id1) {
     const obj15 = { snapshotIndex };
@@ -118,20 +136,21 @@ MessageForward.prototype["getForwardInfo"] = function getForwardInfo(arg0) {
     }
     if (null == guild1) {
       const obj16 = { snapshotIndex };
-      let obj19 = obj16;
+      let obj17 = obj16;
     } else {
-      obj19 = { snapshotIndex, footerInfo: null };
-      const obj20 = { originLabel: guild1.name, originIconUrl: null, timestampLabel: null, accessibilityLabel: null };
-      ({ id: obj18.id, icon: obj18.icon } = guild1);
-      obj20.originIconUrl = AvatarUtilsDefault.getGuildIconURL({ id: null, size: 16, icon: null, canAnimate: false });
-      obj20.timestampLabel = result;
+      obj17 = { snapshotIndex, footerInfo: null };
+      const obj18 = { originLabel: guild1.name, originIconUrl: null, timestampLabel: null, accessibilityLabel: null };
+      ({ id: obj19.id, icon: obj19.icon } = guild1);
+      obj18.originIconUrl = AvatarUtilsDefault.getGuildIconURL({ id: null, size: 16, icon: null, canAnimate: false });
+      obj18.timestampLabel = result;
       const intl2 = util.intl;
-      const obj38 = { origin: guild1.name, timestamp: result };
-      obj20.accessibilityLabel = intl2.formatToPlainString(util.t["+l04BN"], obj38);
-      obj19.footerInfo = obj20;
-      const obj23 = { id: null, size: 16, icon: null, canAnimate: false };
+      const obj21 = { origin: guild1.name, timestamp: result };
+      obj18.accessibilityLabel = intl2.formatToPlainString(util.t["+l04BN"], obj21);
+      obj17.footerInfo = obj18;
+      const obj20 = { id: null, size: 16, icon: null, canAnimate: false };
+      const tmp3Result4 = AvatarUtilsDefault;
     }
-    return obj19;
+    return obj17;
   }
 };
 const size = fn(2);

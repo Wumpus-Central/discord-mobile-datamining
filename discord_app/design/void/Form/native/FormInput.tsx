@@ -5,14 +5,14 @@ import native2 from "../../../../../discord_common/js/packages/design/native.tsx
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const native = TextArea(1177);
-const shared = TextArea(4715);
-const RedesignCompat = TextArea(6194);
-const TextInput = TextArea(6220);
-const TextArea2 = TextArea(6702);
+const shared = TextArea(4714);
+const RedesignCompat = TextArea(6184);
+const TextInput = TextArea(6210);
+const TextArea2 = TextArea(6692);
 require = fn;
 const KeyboardThemes = fn(1074).KeyboardThemes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj = {
   inputViewContainer: { paddingVertical: 13, paddingHorizontal: 15 },
   placeholderText: { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT },

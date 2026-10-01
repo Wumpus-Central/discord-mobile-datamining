@@ -429,6 +429,7 @@ export const GhostInput = GhostInput.GhostInput;
 export const GhostInputProps = GhostInput.GhostInputProps;
 export const TextAreaField = TextAreaField.TextAreaField;
 export const TextAreaFieldProps = TextAreaField.TextAreaFieldProps;
+export const TEXT_AREA_HEIGHT = TextAreaField.TEXT_AREA_HEIGHT;
 export const TextArea = TextArea.TextArea;
 export const TextAreaProps = TextArea.TextAreaProps;
 export const TextInput = TextInput.TextInput;

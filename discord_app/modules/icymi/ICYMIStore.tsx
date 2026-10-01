@@ -5,6 +5,7 @@ import DurationsDefault from "../../utils/Durations.tsx";
 import utils from "../content_inventory/utils.tsx";
 import ContentInventoryTypes from "../content_inventory/ContentInventoryTypes.tsx";
 import ICYMITypes from "ICYMITypes.tsx";
+import isItemUnreadInChannel from "isItemUnreadInChannel.tsx";
 import ICYMIUtils from "ICYMIUtils.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import ContentInventoryStore from "../content_inventory/ContentInventoryStore.tsx";
@@ -168,8 +169,8 @@ function reload(arg0) {
       if (tmp4) {
         let tmp7 = tmp;
         if (!tmp) {
-          tmp7 = !ICYMIUtils.isItemUnreadInChannel(id.data.channel_id, id.data.message_id);
-          const tmp2Result = ICYMIUtils;
+          tmp7 = !isItemUnreadInChannel.isItemUnreadInChannel(id.data.channel_id, id.data.message_id);
+          const tmp2Result = isItemUnreadInChannel;
         }
         tmp6 = tmp7;
       }
@@ -368,7 +369,7 @@ function getNewUnreadItems(arr9, channelId) {
         if (tmp7) {
           let tmp9 = tmp2.type !== ICYMITypes.ICYMIItemTypes.MESSAGE;
           if (!tmp9) {
-            let tmp3Result = ICYMIUtils;
+            let tmp3Result = isItemUnreadInChannel;
             let result = tmp3Result.isItemUnreadInChannel(tmp2.data.channel_id, tmp2.data.message_id);
             if (result) {
               result = tmp2.data.channel_id !== channelId;
@@ -541,8 +542,8 @@ function handleAck(channelId) {
     if (tmp4) {
       let tmp7 = tmp;
       if (!tmp) {
-        tmp7 = !ICYMIUtils.isItemUnreadInChannel(id.data.channel_id, id.data.message_id);
-        const tmp2Result = ICYMIUtils;
+        tmp7 = !isItemUnreadInChannel.isItemUnreadInChannel(id.data.channel_id, id.data.message_id);
+        const tmp2Result = isItemUnreadInChannel;
       }
       tmp6 = tmp7;
     }
@@ -593,7 +594,7 @@ function handleAck(channelId) {
   }
   arr8 = getNewUnreadItems(_slicedToArray(items6, 2)[0], channelId);
 }
-let GuildScheduledEventStore = fn(7142);
+let GuildScheduledEventStore = fn(7134);
 ({
   eventScheduledToStartWithin: metroRequire,
   isGuildEventEnded: closure_7,
@@ -602,7 +603,7 @@ let GuildScheduledEventStore = fn(7142);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
 const Constants = fn(1074);
 ({ ChannelTypes: closure_21, GuildFeatures: closure_22, Permissions: closure_23 } = Constants);
-const ContentInventoryFeedKey = fn(8001).ContentInventoryFeedKey;
+const ContentInventoryFeedKey = fn(7981).ContentInventoryFeedKey;
 const DAY = DurationsDefault.Millis.DAY;
 let closure_26 = 3 * DurationsDefault.Millis.DAY;
 let dehydratedItems = [];
@@ -901,7 +902,7 @@ obj = {
       closure_33[messageItem.message.id] = obj;
       const obj3 = {};
       const merged = Object.assign(obj);
-      obj3.message = items2(items4[25]).createMessageRecord(messageItem.message);
+      obj3.message = items2(items4[27]).createMessageRecord(messageItem.message);
       closure_34[messageItem.message.id] = obj3;
       if (null == c28) {
         if (null == closure_32) {
@@ -925,8 +926,8 @@ obj = {
             if (tmp4) {
               let tmp7 = tmp;
               if (!tmp) {
-                tmp7 = !ICYMIUtils.isItemUnreadInChannel(id.data.channel_id, id.data.message_id);
-                const tmp2Result = ICYMIUtils;
+                tmp7 = !isItemUnreadInChannel.isItemUnreadInChannel(id.data.channel_id, id.data.message_id);
+                const tmp2Result = isItemUnreadInChannel;
               }
               tmp6 = tmp7;
             }
@@ -955,7 +956,7 @@ obj = {
       items7 = [obj];
       HermesBuiltin.arraySpread(items7, 1);
       reload();
-      const obj4 = items2(items4[25]);
+      const obj4 = items2(items4[27]);
     } else {
       return false;
     }
@@ -964,7 +965,7 @@ obj = {
     items = items.items;
     let set1;
     ({ loadId, startTime, isInitialLoad, isReloading } = items);
-    set1 = new Set(set1(7991).SUPPORTED_ITEM_TYPES);
+    set1 = new Set(set1(7978).SUPPORTED_ITEM_TYPES);
     const found = items.filter((type) => set1.has(type.type));
     const found1 = found.filter(filterStaffGuild);
     closure_30 = found1.map((type) => {
@@ -1043,8 +1044,8 @@ obj = {
       if (tmp4) {
         let tmp7 = tmp;
         if (!tmp) {
-          tmp7 = !ICYMIUtils.isItemUnreadInChannel(id.data.channel_id, id.data.message_id);
-          const tmp2Result = ICYMIUtils;
+          tmp7 = !isItemUnreadInChannel.isItemUnreadInChannel(id.data.channel_id, id.data.message_id);
+          const tmp2Result = isItemUnreadInChannel;
         }
         tmp6 = tmp7;
       }
@@ -1061,7 +1062,7 @@ obj = {
     });
     const items4 = [...items2];
     const items5 = [items4, items1.sort((id, id2) => set1(dependencyMap[18]).compareGravityUnreadIds(id.id, id2.id))];
-    set = new Set(set1(7991).SUPPORTED_ITEM_TYPES);
+    set = new Set(set1(7978).SUPPORTED_ITEM_TYPES);
     [arr9, arr10] = items5;
     let tmp6 = _slicedToArray(items5, 2);
     if (c41) {
@@ -1070,20 +1071,20 @@ obj = {
           if (c38 > 0) {
             c43 = null;
           }
-          const tmp8 = arr11.length > tmp(7991).MIN_ITEMS_FOR_NEW_PILL;
+          const tmp8 = arr11.length > tmp(7978).MIN_ITEMS_FOR_NEW_PILL;
           if (!isReloading) {
             hasNewContent = tmp8;
           }
           if (tmp8) {
             const items6 = [];
             HermesBuiltin.arraySpread(arr10, HermesBuiltin.arraySpread(arr9, 0));
-            tmp(7993).hydrateItems(items6, 0, tmp(7991).ICYMI_PAGE_SIZE);
+            tmp(7982).hydrateItems(items6, 0, tmp(7978).ICYMI_PAGE_SIZE);
             if (arr9.length + arr10.length === 0) {
               c54 = true;
             }
-            const tmpResult = tmp(7993);
+            const tmpResult = tmp(7982);
           }
-          const ICYMIAnalytics = tmp(8002).ICYMIAnalytics;
+          const ICYMIAnalytics = tmp(7991).ICYMIAnalytics;
           const obj2 = {
             newTrackingProps,
             hasNewContent,
@@ -1174,7 +1175,7 @@ obj = {
         closure_35[content_id.content_id] = true;
       }
     });
-    set.delete(require("ICYMIUtils").generateHydrationId(startingIndex, endingIndex));
+    set.delete(require("generateHydrationId").generateHydrationId(startingIndex, endingIndex));
   },
   LOAD_ICYMI_CUSTOM_SCORES: function handleLoadCustomScores(arg0) {
     const iter = arg0.scores[Symbol.iterator]();

@@ -167,134 +167,89 @@ function fetchInventory() {
   return applyArgumentsResult;
 }
 let closure_24 = async function _fetchInventory(arg0) {
-  if (c7 === 2) {
-    c7 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
+  closure_3 = tmp3;
+  ({ feedId: closure_130_0, feature: closure_130_1, force } = feedId);
+  if (force === undefined) {
+    force = false;
+  }
+  closure_130_2 = force;
+  await "flex";
+  if (1 === tmp7) {
     if (arg0 === 1) {
+      c7 = 3;
       throw value;
     } else if (arg0 === 2) {
-      const obj3 = { value, done: true };
-      return obj3;
+      c7 = 3;
+      return { value, done: true };
     } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c7 = 2;
-      if (0 === c6) {
-        if (arg0 === 1) {
+      if (!closure_131_21(closure_130_0)) {
+        if (!closure_130_2) {
           c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c7 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
-        } else {
-          closure_3 = tmp3;
-          force = tmp7;
-          closure_130_0 = undefined;
-          closure_130_1 = undefined;
-          closure_130_2 = undefined;
-          ({ feedId: closure_130_0, feature: closure_130_1, force } = feedId);
-          if (force === undefined) {
-            force = false;
-          }
-          closure_130_2 = force;
-          let feed;
-          closure_130_4 = undefined;
-          closure_130_5 = undefined;
-          closure_130_6 = undefined;
-          closure_130_7 = undefined;
-          c6 = 1;
-          c7 = 1;
-          return { value: "flex", done: true };
         }
-      } else {
-        if (1 === tmp7) {
-          if (arg0 === 1) {
-            c7 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c7 = 3;
-            const obj6 = { value, done: true };
-            return obj6;
-          } else {
-            if (!closure_131_21(closure_130_0)) {
-              if (!closure_130_2) {
-                c7 = 3;
-              }
-            }
-            c5 = 1;
-            feed = closure_131_8.getFeed(closure_130_0);
-            closure_131_15.add(closure_130_0);
-            closure_131_20(closure_130_0, { loading: true });
-            let refresh_token;
-            if (feed != null) {
-              refresh_token = feed.refresh_token;
-            }
-            const obj7 = { token: refresh_token, feedId: closure_130_0, feature: closure_130_1 };
-            c6 = 3;
-            c7 = 1;
-            const obj8 = { value: closure_131_0(closure_131_2[11]).getMyContentInventory(obj7), done: false };
-            return obj8;
-          }
-        } else if (2 === tmp7) {
-          c5 = 0;
-          value = closure_131_16.get(closure_130_0);
-          c1 = value;
-          if (value == null) {
-            c1 = 0;
-          }
-          closure_130_5 = c1;
-          if (closure_130_5 < 4) {
-            const _Math = Math;
-            closure_130_6 = closure_131_1(closure_131_2[9]).Millis.MINUTE * Math.pow(2, closure_130_5);
-            closure_130_7 = closure_131_19(closure_130_5);
-            const _setTimeout = setTimeout;
-            const result = closure_131_14.set(
-              closure_130_0,
-              setTimeout(() => closure_2_23({ feedId, feature, force }), closure_130_6 + closure_130_7),
-            );
-            const result1 = closure_131_16.set(closure_130_0, closure_130_5 + 1);
-          } else {
-            const obj9 = { type: "CONTENT_INVENTORY_CLEAR_FEED", feedId: closure_130_0 };
-            closure_131_1(closure_131_2[12]).dispatch(obj9);
-            const obj2 = closure_131_1(closure_131_2[12]);
-          }
-          closure_131_15.delete(closure_130_0);
-        } else if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 !== 2) {
-          closure_130_4 = value;
-          const obj11 = { type: "CONTENT_INVENTORY_SET_FEED", feedId: closure_130_0, feed: closure_130_4 };
-          closure_131_1(closure_131_2[12]).dispatch(obj11);
-          const result2 = closure_131_16.set(closure_130_0, 0);
-          closure_131_15.delete(closure_130_0);
-          closure_131_20(closure_130_0, { loading: false });
-          if (closure_130_0 === closure_131_12) {
-            closure_131_17 = null;
-            closure_131_22();
-          }
-          c5 = 0;
-          const obj10 = closure_131_1(closure_131_2[12]);
-        }
-        c5 = 0;
-        c7 = 3;
-        const obj = { value, done: true };
-        return obj;
       }
-    } catch (tmp66) {
-      closure_4 = tmp66;
-      if (tmp4 === c5) {
-        c7 = tmp2;
-        throw tmp66;
-      } else {
-        c6 = tmp;
+      c5 = 1;
+      const feed = closure_131_8.getFeed(closure_130_0);
+      closure_131_15.add(closure_130_0);
+      closure_131_20(closure_130_0, { loading: true });
+      let refresh_token;
+      if (feed != null) {
+        refresh_token = feed.refresh_token;
       }
+      c6 = 3;
+      c7 = 1;
+      return {
+        value: closure_131_0(closure_131_2[11]).getMyContentInventory({
+          token: refresh_token,
+          feedId: closure_130_0,
+          feature: closure_130_1,
+        }),
+        done: false,
+      };
     }
+  } else if (2 === tmp7) {
+    c5 = 0;
+    value = closure_131_16.get(closure_130_0);
+    c1 = value;
+    if (value == null) {
+      c1 = 0;
+    }
+    closure_130_5 = c1;
+    if (closure_130_5 < 4) {
+      const _Math = Math;
+      closure_130_6 = closure_131_1(closure_131_2[9]).Millis.MINUTE * Math.pow(2, closure_130_5);
+      closure_130_7 = closure_131_19(closure_130_5);
+      const _setTimeout = setTimeout;
+      const result = closure_131_14.set(
+        closure_130_0,
+        setTimeout(() => closure_2_23({ feedId, feature, force }), closure_130_6 + closure_130_7),
+      );
+      const result1 = closure_131_16.set(closure_130_0, closure_130_5 + 1);
+    } else {
+      closure_131_1(closure_131_2[12]).dispatch({ type: "CONTENT_INVENTORY_CLEAR_FEED", feedId: closure_130_0 });
+      closure_131_1(closure_131_2[12]);
+    }
+    closure_131_15.delete(closure_130_0);
+  } else if (arg0 === 1) {
+    c7 = 3;
+    throw value;
+  } else if (arg0 !== 2) {
+    closure_130_4 = value;
+    closure_131_1(closure_131_2[12]).dispatch({
+      type: "CONTENT_INVENTORY_SET_FEED",
+      feedId: closure_130_0,
+      feed: closure_130_4,
+    });
+    const result2 = closure_131_16.set(closure_130_0, 0);
+    closure_131_15.delete(closure_130_0);
+    closure_131_20(closure_130_0, { loading: false });
+    if (closure_130_0 === closure_131_12) {
+      closure_131_17 = null;
+      closure_131_22();
+    }
+    c5 = 0;
+    closure_131_1(closure_131_2[12]);
   }
+  return value;
 };
 function handleUpdatePollingState() {
   scheduleNextFetch();
@@ -374,7 +329,7 @@ function handleFetchGameProfileFeed() {
     fetchInventory(obj);
   }
 }
-const ContentInventoryFeedKey = fn(8001).ContentInventoryFeedKey;
+const ContentInventoryFeedKey = fn(7981).ContentInventoryFeedKey;
 const PlatformTypes = fn(1074).PlatformTypes;
 let closure_11 = 2 * DurationsDefault.Millis.MINUTE;
 const GLOBAL_FEED = ContentInventoryFeedKey.GLOBAL_FEED;
@@ -384,7 +339,7 @@ const set = new Set();
 const map1 = new Map();
 let closure_17 = null;
 let apply = fn(12);
-let closure_18 = apply.debounce(fn(12853).postTrackToContentInventory, 3000, { trailing: true });
+let closure_18 = apply.debounce(fn(12862).postTrackToContentInventory, 3000, { trailing: true });
 const prototype = function ContentInventoryManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = {

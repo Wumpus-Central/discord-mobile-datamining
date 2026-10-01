@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = {
   container: { marginTop: nativeDefault.space.PX_16 },
   divider: null,
@@ -86,7 +86,7 @@ export default function UserProfilePremiumTryItOutSection(arg0) {
   const obj4 = { style: tmp.lockCircle, children: null };
   const obj3 = { style: tmp.dividerLine };
   const tmp4 = UserProfileUpsellCardV2Default;
-  obj4.children = closure_5(analyticsLocations(5605).LockIcon, {
+  obj4.children = closure_5(analyticsLocations(5593).LockIcon, {
     size: "xs",
     color: nativeDefault.colors.ICON_MUTED,
     style: tmp.lockIcon,

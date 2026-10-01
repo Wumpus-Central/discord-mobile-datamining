@@ -10,7 +10,7 @@ const require = globalThis.__r;
 
 require = fn;
 const GuildNSFWContentLevel = fn(1074).GuildNSFWContentLevel;
-let closure_4 = fn(9430).TINY_BRONCO_NSFW_SERVER_LOCATION;
+let closure_4 = fn(9424).TINY_BRONCO_NSFW_SERVER_LOCATION;
 const items = [,];
 ({ EXPLICIT: arr[0], AGE_RESTRICTED: arr[1] } = GuildNSFWContentLevel);
 const set = new Set(items);

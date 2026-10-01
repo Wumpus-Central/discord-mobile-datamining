@@ -84,7 +84,7 @@ let closure_10 = async function _convertViaSysimg(arg0) {
           };
           c9 = 1;
           c10 = 1;
-          return { value: "flex", done: true };
+          return { value: "flex", done: null };
         }
       } else if (1 === tmp10) {
         if (arg0 === 1) {
@@ -390,14 +390,14 @@ const ImageConversionFailureReason = {
 };
 let obj2 = {
   label: "heic",
-  matches: fn(5681).isHeicFile,
+  matches: fn(5670).isHeicFile,
   canConvert(canConvertHeic) {
     return canConvertHeic.canConvertHeic();
   },
 };
 let obj3 = {
   label: "jxr",
-  matches: fn(5681).isJxrFile,
+  matches: fn(5670).isJxrFile,
   canConvert(canConvertJxr) {
     return canConvertJxr.canConvertJxr();
   },
@@ -406,7 +406,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("lib/uploader/imageConversion.tsx");
 
 export { ImageConversionFailureReason };
-export const renameToJpegExtension = fn(5681).renameToJpegExtension;
+export const renameToJpegExtension = fn(5670).renameToJpegExtension;
 export { maybeConvertHeicToJpeg };
 export { maybeConvertJxrToJpeg };
 export const convertFileToJpeg = function convertFileToJpeg() {

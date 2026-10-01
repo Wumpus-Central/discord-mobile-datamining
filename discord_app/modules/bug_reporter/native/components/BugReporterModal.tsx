@@ -84,7 +84,7 @@ class BugCreateScreen {
               dependencyMap = 1;
               c3 = 1;
               const obj5 = {
-                value: tmp5(5659).launchImageLibraryAsync({
+                value: tmp5(5648).launchImageLibraryAsync({
                   mediaType: "any",
                   includeBase64: false,
                   selectionLimit: 1,
@@ -109,10 +109,10 @@ class BugCreateScreen {
               const merged = Object.assign(closure_128_1);
               obj6.uri = closure_128_1.uri;
               obj6.originalUri = closure_128_1.uri;
-              obj6.platform = tmp2(5637).UploadPlatform.REACT_NATIVE;
+              obj6.platform = tmp2(5626).UploadPlatform.REACT_NATIVE;
               obj6.filename = closure_128_1.fileName;
               closure_128_2 = obj6;
-              const tmp34 = new tmp5(5637)(closure_128_2);
+              const tmp34 = new tmp5(5626)(closure_128_2);
               closure_128_3 = tmp34;
               closure_129_23.current = closure_129_7.length;
               closure_129_8((arg0) => {
@@ -327,25 +327,25 @@ class BugCreateScreen {
                                 closure_131_3.succeed();
                                 const obj5 = {
                                   key: "BUG_REPORT_BUG_SUBMITTED",
-                                  icon: closure_2_1(9009),
+                                  icon: closure_2_1(9002),
                                   content: null,
                                   toastDurationMs: null,
                                 };
                                 const intl2 = closure_2_0(1115).intl;
                                 obj5.content = intl2.string(closure_2_0(1115).t.jB8yOL);
                                 obj5.toastDurationMs = toastDurationMs;
-                                closure_2_1(4558).open(obj5);
-                                const obj6 = closure_2_1(4558);
+                                closure_2_1(4557).open(obj5);
+                                const obj6 = closure_2_1(4557);
                               } else {
                                 const obj7 = {
                                   key: "BUG_REPORT_FAILED_TO_SUBMIT",
-                                  icon: closure_2_1(6609),
+                                  icon: closure_2_1(6599),
                                   content: null,
                                 };
                                 const intl = closure_2_0(1115).intl;
                                 obj7.content = intl.string(closure_2_0(1115).t["4t1o0u"]);
-                                closure_2_1(4558).open(obj7);
-                                const obj4 = closure_2_1(4558);
+                                closure_2_1(4557).open(obj7);
+                                const obj4 = closure_2_1(4557);
                               }
                               c6 = 3;
                             }
@@ -391,7 +391,7 @@ class BugCreateScreen {
                         c5 = 1;
                         c6 = 1;
                         const obj11 = {
-                          value: closure_2_0(9848).submitReport(closure_131_0, closure_131_1, closure_131_2),
+                          value: closure_2_0(9840).submitReport(closure_131_0, closure_131_1, closure_131_2),
                           done: false,
                         };
                         return obj11;
@@ -414,26 +414,26 @@ class BugCreateScreen {
                   if (first5) {
                     let obj5 = {
                       key: "BUG_REPORT_SUBMITTING_BUG",
-                      icon: screenshot(6609),
+                      icon: screenshot(6599),
                       content: null,
                       toastDurationMs: null,
                     };
                     let intl2 = handleSubmit(1115).intl;
                     obj5.content = intl2.string(handleSubmit(1115).t.Uuqbcm);
                     obj5.toastDurationMs = toastDurationMs;
-                    screenshot(4558).open(obj5);
+                    screenshot(4557).open(obj5);
                     closure_1_16(true);
                     first8();
-                    let obj9 = screenshot(4558);
+                    let obj9 = screenshot(4557);
                   }
                   priority = 3;
                 } else {
                   callback(true);
                   if (null == priority) {
-                    let obj7 = { key: "BUG_REPORT_FAILED_TO_SUBMIT", icon: screenshot(6609), content: null };
+                    let obj7 = { key: "BUG_REPORT_FAILED_TO_SUBMIT", icon: screenshot(6599), content: null };
                     let intl = handleSubmit(1115).intl;
                     obj7.content = intl.string(handleSubmit(1115).t["4t1o0u"]);
-                    screenshot(4558).open(obj7);
+                    screenshot(4557).open(obj7);
                     callback(false);
                     priority = 3;
                     const obj8 = { value: undefined, done: true };
@@ -441,7 +441,7 @@ class BugCreateScreen {
                   } else {
                     description = 1;
                     priority = 1;
-                    let obj10 = { value: handleSubmit(9847).getAttachments(first3), done: false };
+                    let obj10 = { value: handleSubmit(9839).getAttachments(first3), done: false };
                     return obj10;
                   }
                 }
@@ -643,46 +643,46 @@ class BugCreateScreen {
     tmp31 = closure_11;
     tmp33 = closure_10;
     tmp32 = closure_12;
-    tmp34 = closure_7;
-    obj1 = { spacing: 24, style: tmp.container, children: null };
-    obj20 = { spacing: 8, children: null };
-    obj21 = { variant: "text-sm/semibold", color: "text-subtle", children: null };
+    obj1 = { bottomOffset: screenshotUri(closure_2[29]).TEXT_AREA_HEIGHT, children: null };
+    obj20 = { spacing: 24, style: tmp.container, children: null };
+    obj21 = { spacing: 8, children: null };
+    obj22 = { variant: "text-sm/semibold", color: "text-subtle", children: null };
     intl = screenshotUri(closure_2[14]).intl;
-    obj21.children = intl.string(screenshotUri(closure_2[14]).t.tM969v);
+    obj22.children = intl.string(screenshotUri(closure_2[14]).t.tM969v);
     items6 = [,];
-    items6[0] = closure_10(screenshotUri(closure_2[29]).Text, obj21);
-    obj22 = { children: null };
-    obj23 = {
+    items6[0] = closure_10(screenshotUri(closure_2[31]).Text, obj22);
+    obj23 = { children: null };
+    obj24 = {
       horizontal: true,
       ref,
       contentContainerStyle: tmp.attachmentCarousel,
       children: first3.map((uri) => {
         const obj = { style: closure_2.attachmentContainer, children: null };
         const size = { uri: uri.item.uri, isImage: uri.isImage, isVideo: uri.isVideo, height: 280, width: 134 };
-        const items = [first4(screenshot(closure_2[31]), size)];
+        const items = [first4(screenshot(closure_2[33]), size)];
         const obj2 = {
           onPress: () => {
             closure_8((arr) => arr.filter((item) => item !== closure_1_0));
           },
           style: closure_2.closeContainer,
-          children: first4(screenshotUri(closure_2[33]).Icon, {
+          children: first4(screenshotUri(closure_2[35]).Icon, {
             source: screenshot(closure_2[18]),
-            size: screenshotUri(closure_2[33]).Icon.Sizes.REFRESH_SMALL_16,
+            size: screenshotUri(closure_2[35]).Icon.Sizes.REFRESH_SMALL_16,
             color: screenshot(closure_2[8]).unsafe_rawColors.WHITE,
           }),
         };
         closure_0 = uri;
-        items[1] = first4(screenshotUri(closure_2[32]).PressableOpacity, obj2);
+        items[1] = first4(screenshotUri(closure_2[34]).PressableOpacity, obj2);
         obj.children = items;
         return closure_11(first2, obj, uri.id);
       }),
     };
     items7 = [,];
-    items7[0] = closure_10(closure_7, obj23);
-    obj24 = { text: null, onPress: null };
+    items7[0] = closure_10(closure_7, obj24);
+    obj25 = { text: null, onPress: null };
     intl2 = screenshotUri(closure_2[14]).intl;
-    obj24.text = intl2.string(screenshotUri(closure_2[14]).t.HVxmOD);
-    obj24.onPress = function handleAttachmentSelect() {
+    obj25.text = intl2.string(screenshotUri(closure_2[14]).t.HVxmOD);
+    obj25.onPress = function handleAttachmentSelect() {
       const self = this;
       const apply = closure_25.apply;
       if (typeof apply === "unknown") {
@@ -692,33 +692,32 @@ class BugCreateScreen {
       }
       return applyArgumentsResult;
     };
-    items7[1] = closure_10(screenshotUri(closure_2[34]).Button, obj24);
-    obj22.children = items7;
-    items6[1] = closure_11(screenshotUri(closure_2[30]).Card, obj22);
-    obj20.children = items6;
+    items7[1] = closure_10(screenshotUri(closure_2[36]).Button, obj25);
+    obj23.children = items7;
+    items6[1] = closure_11(screenshotUri(closure_2[32]).Card, obj23);
+    obj21.children = items6;
     items8 = [, , , , , ,];
-    items8[0] = closure_11(screenshotUri(closure_2[28]).Stack, obj20);
-    obj25 = { label: null, placeholder: null, onChange: null, clearable: true, autoCapitalize: "sentences" };
+    items8[0] = closure_11(screenshotUri(closure_2[30]).Stack, obj21);
+    obj26 = { label: null, placeholder: null, onChange: null, clearable: true, autoCapitalize: "sentences" };
     intl3 = screenshotUri(closure_2[14]).intl;
-    obj25.label = intl3.string(screenshotUri(closure_2[14]).t.OZRgjw);
+    obj26.label = intl3.string(screenshotUri(closure_2[14]).t.OZRgjw);
     intl4 = screenshotUri(closure_2[14]).intl;
-    obj25.placeholder = intl4.string(screenshotUri(closure_2[14]).t["6mpW05"]);
-    obj25.onChange = tmp2[1];
-    items8[1] = closure_10(screenshotUri(closure_2[35]).TextInput, obj25);
+    obj26.placeholder = intl4.string(screenshotUri(closure_2[14]).t["6mpW05"]);
+    obj26.onChange = tmp2[1];
+    items8[1] = closure_10(screenshotUri(closure_2[37]).TextInput, obj26);
     if (!stateFromStores) {
       items8[2] = stateFromStores;
-      obj26 = { title: null, defaultValue: null, onChange: null, hasIcons: true, children: null };
+      obj27 = { title: null, defaultValue: null, onChange: null, hasIcons: true, children: null };
       intl7 = tmp21(tmp22[14]).intl;
-      obj26.title = intl7.string(tmp21(tmp22[14]).t.xMXLda);
+      obj27.title = intl7.string(tmp21(tmp22[14]).t.xMXLda);
       if (num == null) {
         num = -1;
       }
-      obj27 = { children: null };
-      obj26.defaultValue = num;
-      obj26.onChange = tmp6[1];
+      obj27.defaultValue = num;
+      obj27.onChange = tmp6[1];
       tmp21Result = tmp21(tmp22[21]);
       priorities = tmp21Result.getPriorities();
-      obj26.children = priorities.map((value) => {
+      obj27.children = priorities.map((value) => {
         value = value.value;
         ({ title, description, emoji } = value);
         const obj = { value, label: title, subLabel: description, icon: null };
@@ -730,33 +729,33 @@ class BugCreateScreen {
         obj.icon = closure_2_10(tmp, obj2);
         return closure_2_10(TableRadioRow.TableRadioRow, obj, value);
       });
-      items8[3] = tmp33(tmp21(tmp22[41]).TableRadioGroup, obj26);
+      items8[3] = tmp33(tmp21(tmp22[43]).TableRadioGroup, obj27);
       obj28 = { label: null, placeholder: null, onChange: null, autoCorrect: true, autoCapitalize: "sentences" };
       intl8 = tmp21(tmp22[14]).intl;
       obj28.label = intl8.string(tmp21(tmp22[14]).t["1SplH2"]);
       intl9 = tmp21(tmp22[14]).intl;
       obj28.placeholder = intl9.string(tmp21(tmp22[14]).t.CQmAZd);
       obj28.onChange = tmp4[1];
-      items8[4] = tmp33(tmp21(tmp22[42]).TextArea, obj28);
+      items8[4] = tmp33(tmp21(tmp22[44]).TextArea, obj28);
       obj29 = { label: null, placeholder: null, onChange: null, clearable: true };
       intl10 = tmp21(tmp22[14]).intl;
       obj29.label = intl10.string(tmp21(tmp22[14]).t["7p5pqh"]);
       intl11 = tmp21(tmp22[14]).intl;
       obj29.placeholder = intl11.string(tmp21(tmp22[14]).t.HewMzo);
       obj29.onChange = tmp7[1];
-      items8[5] = tmp33(tmp21(tmp22[35]).TextInput, obj29);
-      tmp36 = closure_6;
+      items8[5] = tmp33(tmp21(tmp22[37]).TextInput, obj29);
+      tmp35 = closure_6;
       obj30 = { style: null, children: null };
       obj30.style = tmp.offButton;
       obj31 = { text: null, size: "sm", variant: "secondary", onPress: null };
       intl12 = tmp21(tmp22[14]).intl;
       obj31.text = intl12.string(tmp21(tmp22[14]).t["636e+U"]);
       obj31.onPress = function onPress() {
-        const result = screenshotUri(closure_2[43]).setDeveloperOptionSettings({ bugReporterEnabled: false });
-        const obj = screenshotUri(closure_2[43]);
-        screenshot(closure_2[44]).terminate(true);
+        const result = screenshotUri(closure_2[45]).setDeveloperOptionSettings({ bugReporterEnabled: false });
+        const obj = screenshotUri(closure_2[45]);
+        screenshot(closure_2[46]).terminate(true);
         state.setState({ isReportOpen: false });
-        const obj2 = screenshot(closure_2[44]);
+        const obj2 = screenshot(closure_2[46]);
         screenshot(closure_2[11]).pop();
         const arr = screenshot(closure_2[11]);
         const obj4 = { key: "BUG_REPORT_HAS_BEEN_TURNED_OFF_TEXT", icon: screenshot(closure_2[22]), content: null };
@@ -764,22 +763,22 @@ class BugCreateScreen {
         obj4.content = intl.string(screenshotUri(closure_2[14]).t["J3/feu"]);
         screenshot(closure_2[17]).open(obj4);
       };
-      obj30.children = tmp33(tmp21(tmp22[34]).Button, obj31);
+      obj30.children = tmp33(tmp21(tmp22[36]).Button, obj31);
       items8[6] = tmp33(closure_6, obj30);
-      obj1.children = items8;
-      obj27.children = tmp31(screenshotUri(closure_2[28]).Stack, obj1);
+      obj20.children = items8;
+      obj1.children = tmp31(screenshotUri(closure_2[30]).Stack, obj20);
       items9 = [,];
-      items9[0] = tmp33(tmp34, obj27);
+      items9[0] = tmp33(screenshotUri(closure_2[28]).KeyboardAwareScrollView, obj1);
       tmp33Result = null;
       if (first4) {
         tmp33Result = tmp33(function Submitting() {
           const tmp = closure_14();
           const obj = { style: tmp.submittingOverlay, children: null };
-          const items = [first4(screenshot(closure_2[45]), { sticker: first5, animated: true, size: 148 })];
+          const items = [first4(screenshot(closure_2[47]), { sticker: first5, animated: true, size: 148 })];
           const obj3 = { style: tmp.submittingText, variant: "heading-md/medium", children: null };
           const intl = screenshotUri(closure_2[14]).intl;
           obj3.children = intl.string(screenshotUri(closure_2[14]).t.Uuqbcm);
-          items[1] = first4(screenshotUri(closure_2[29]).Text, obj3);
+          items[1] = first4(screenshotUri(closure_2[31]).Text, obj3);
           obj.children = items;
           return closure_11(first2, obj);
         }, {});
@@ -796,7 +795,7 @@ class BugCreateScreen {
       obj34.disabled = null == first7;
       obj34.onPress = function onPress() {
         return ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(9873, dependencyMap.paths),
+          asyncRequireImpl(9865, dependencyMap.paths),
           "BugReporterFeatureActionSheet",
           { features: null != first7 ? first7.features : [], feature: first8, setFeature },
         );
@@ -808,9 +807,9 @@ class BugCreateScreen {
         name = intl6.string(tmp21(tmp22[14]).t["77VVd8"]);
       }
       obj34.label = name;
-      obj34 = tmp33(tmp21(tmp22[37]).TableRow, obj34);
+      obj34 = tmp33(tmp21(tmp22[39]).TableRow, obj34);
       obj33.children = obj34;
-      tmp33Result1 = tmp33(tmp21(tmp22[36]).TableRowGroup, obj33);
+      tmp33Result1 = tmp33(tmp21(tmp22[38]).TableRowGroup, obj33);
     }
     return;
   }
@@ -820,7 +819,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 let closure_13 = Object.freeze({ id: "749049128012742676", format_type: 3, name: "Wumpus zipping by on a monowheel" });
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = {
   container: { padding: 16 },
   attachmentCarousel: { justifyContent: "center", minWidth: "100%" },
@@ -873,7 +872,7 @@ export default function BugReportModal(screenshotUri) {
   const items = [screenshotUri, screenshot];
   const screens = noop.useMemo(() => {
     const obj2 = { BUG_REPORT_CREATE: null };
-    const obj3 = { title: null, initialParams: null, render: null };
+    const obj3 = { title: null, initialParams: null, ignoreKeyboard: true, render: null };
     const intl = util.intl;
     obj3.title = intl.string(util.t.mCCdwi);
     obj3.initialParams = { screenshotUri, screenshot };
@@ -884,6 +883,6 @@ export default function BugReportModal(screenshotUri) {
     obj2.BUG_REPORT_CREATE = obj3;
     return obj2;
   }, items);
-  return closure_10(screenshotUri(6617).Navigator, { screens, initialRouteName: "BUG_REPORT_CREATE" });
+  return closure_10(screenshotUri(6607).Navigator, { screens, initialRouteName: "BUG_REPORT_CREATE" });
 }
 export { BugCreateScreen };

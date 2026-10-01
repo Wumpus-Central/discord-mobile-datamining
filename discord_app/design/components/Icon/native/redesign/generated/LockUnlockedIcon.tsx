@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/LockUnlockedIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod9913 from "../../../../../../../_runtime/metro/09913__.js";
+import _mod9905 from "../../../../../../../_runtime/metro/09905__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export const LockUnlockedIcon = function LockUnlockedIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9913, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9905, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

@@ -1,11 +1,11 @@
 // discord_app/modules/premium/powerups/GuildPowerupsManager.tsx
 import FavoritesUtils from "../../favorites/FavoritesUtils.tsx";
-import BoostingActionCreators from "../../../actions/BoostingActionCreators.tsx";
-import GameServerExperiment2 from "../../game_server/GameServerExperiment.tsx";
 import ServerThemeUserExperiment from "experiments/ServerThemeUserExperiment.tsx";
 import ServerThemeExperiment2 from "experiments/ServerThemeExperiment.tsx";
 import ServerThemeApexShadowExperiment2 from "experiments/ServerThemeApexShadowExperiment.tsx";
+import GameServerExperiment2 from "../../game_server/GameServerExperiment.tsx";
 import shared_PlatformUtils from "../../../../discord_common/js/shared/lib/PlatformUtils.tsx";
+import actions_BoostingActionCreators from "../../../actions/BoostingActionCreators.tsx";
 import GuildPowerupsActionCreators from "GuildPowerupsActionCreators.tsx";
 import useHasAllocateBoostPermission from "hooks/useHasAllocateBoostPermission.tsx";
 import useIsCurrentUserEligibleForPowerupUpsells from "hooks/useIsCurrentUserEligibleForPowerupUpsells.tsx";
@@ -109,10 +109,10 @@ prototype["refreshGuildPowerups"] = function refreshGuildPowerups(guildId) {
   if (true === obj.getHasAllocateBoostPermission(PermissionStore, GuildStore.getGuild(guildId))) {
     const guildBoostEntitlements = GuildPowerupsActionCreators.fetchGuildBoostEntitlements(guildId);
     const tmpResult = GuildPowerupsActionCreators;
-    const appliedGuildBoostsForGuild = BoostingActionCreators.fetchAppliedGuildBoostsForGuild(guildId, {
+    const appliedGuildBoostsForGuild = actions_BoostingActionCreators.fetchAppliedGuildBoostsForGuild(guildId, {
       includeEnded: true,
     });
-    const tmpResult2 = BoostingActionCreators;
+    const tmpResult2 = actions_BoostingActionCreators;
   }
   obj = useHasAllocateBoostPermission;
 };

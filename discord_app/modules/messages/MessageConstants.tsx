@@ -88,5 +88,6 @@ export const MessageSendLocation = {
   COLLECTIBLES_SHOP: "collectibles_shop",
   GAME_SERVER_SHOP: "game_server_shop",
   MEDIA_MENTION: "media_mention",
+  GUILD_SPACE: "guild_space",
   OTHER: "other",
 };

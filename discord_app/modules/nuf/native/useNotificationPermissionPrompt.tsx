@@ -32,7 +32,7 @@ export default function useNotificationPermissionPrompt() {
     }
   }, items2);
   const obj2 = stateFromStores(504);
-  const guildOpenNudge = stateFromStores(16368).useGuildOpenNudge();
-  const obj3 = stateFromStores(16368);
-  const postCallDisconnectNudge = stateFromStores(16372).usePostCallDisconnectNudge();
+  const guildOpenNudge = stateFromStores(16388).useGuildOpenNudge();
+  const obj3 = stateFromStores(16388);
+  const postCallDisconnectNudge = stateFromStores(16392).usePostCallDisconnectNudge();
 }

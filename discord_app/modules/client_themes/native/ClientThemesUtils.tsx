@@ -336,6 +336,13 @@ export const useGradientValue = function useGradientValue(END, arg1) {
     }
   }, items);
 };
+export const isCustomThemeActive = function isCustomThemeActive() {
+  let tmp = null != MobileThemesUtils.getCustomBackgroundGradient();
+  if (!tmp) {
+    tmp = null != ClientThemesBackgroundStore.gradientPreset;
+  }
+  return tmp;
+};
 export const getEmbedScrollGradientBackground = function getEmbedScrollGradientBackground() {
   let customBackgroundGradient = MobileThemesUtils.getCustomBackgroundGradient();
   if (customBackgroundGradient == null) {

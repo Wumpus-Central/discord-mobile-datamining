@@ -1,17 +1,16 @@
 // discord_app/modules/premium/powerups/constants/GuildPowerupsConstants.tsx
 import util from "../../../../intl/index.native.tsx";
-import PremiumConstants from "../../PremiumConstants.tsx";
 import dismissible_content from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import GameServerConstants from "../../../game_server/GameServerConstants.tsx";
 import Powerups from "../../../../../discord_common/js/shared/shared-constants/Powerups.tsx";
-import GuildBoostingUtils from "../../../../utils/GuildBoostingUtils.tsx";
-import GameServerExperiment from "../../../game_server/GameServerExperiment.tsx";
 import ServerThemeUserExperiment from "../experiments/ServerThemeUserExperiment.tsx";
 import ServerThemeExperiment from "../experiments/ServerThemeExperiment.tsx";
+import GameServerExperiment from "../../../game_server/GameServerExperiment.tsx";
+import PremiumConstants from "../../PremiumConstants.tsx";
 import Constants from "../../../../Constants.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-const BoostedGuildFeatures = PremiumConstants.BoostedGuildFeatures;
+({ BoostedGuildFeatures: c2, PerkIcons: c3 } = PremiumConstants);
 const BoostedGuildTiers = Constants.BoostedGuildTiers;
 const GuildFeatures = Constants.GuildFeatures;
 const items = [
@@ -167,60 +166,60 @@ export const GUILD_POWERUP_CONFIGURABLE_SKUS_DESKTOP = set2;
 export const GUILD_POWERUP_CONFIGURABLE_SKUS_MOBILE = set3;
 export const GUILD_FEATURE_TO_PERK = () => {
   const obj = {};
-  const obj2 = { perkIcon: GuildBoostingUtils.PerkIcons.STREAM, description: null };
+  const obj2 = { perkIcon: constants.STREAM, description: null };
   const intl = util.intl;
   obj2.description = intl.string(util.t.y4ft4D);
   obj[GuildFeatures.VIDEO_QUALITY_1080_60FPS] = obj2;
-  const obj3 = { perkIcon: GuildBoostingUtils.PerkIcons.AUDIO, description: null };
+  const obj3 = { perkIcon: constants.AUDIO, description: null };
   const intl2 = util.intl;
   obj3.description = intl2.formatToPlainString(util.t.zoT1ZE, {
-    bitrate: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.bitrate / 1000,
+    bitrate: dependencyMap[BoostedGuildTiers.TIER_1].limits.bitrate / 1000,
   });
   obj[GuildFeatures.AUDIO_BITRATE_128_KBPS] = obj3;
-  const obj5 = { perkIcon: GuildBoostingUtils.PerkIcons.CUSTOMIZATION, description: null };
+  const obj5 = { perkIcon: constants.CUSTOMIZATION, description: null };
   const intl3 = util.intl;
   obj5.description = intl3.string(util.t.Qwlpov);
   obj[GuildFeatures.INVITE_SPLASH] = obj5;
-  const obj6 = { perkIcon: GuildBoostingUtils.PerkIcons.ANIMATED, description: null };
+  const obj6 = { perkIcon: constants.ANIMATED, description: null };
   const intl4 = util.intl;
   obj6.description = intl4.string(util.t.PbAyub);
   obj[GuildFeatures.ANIMATED_ICON] = obj6;
-  const obj7 = { perkIcon: GuildBoostingUtils.PerkIcons.AUDIO, description: null };
+  const obj7 = { perkIcon: constants.AUDIO, description: null };
   const intl5 = util.intl;
   obj7.description = intl5.formatToPlainString(util.t.zoT1ZE, {
-    bitrate: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.bitrate / 1000,
+    bitrate: dependencyMap[BoostedGuildTiers.TIER_2].limits.bitrate / 1000,
   });
   obj[GuildFeatures.AUDIO_BITRATE_256_KBPS] = obj7;
-  const obj9 = { perkIcon: GuildBoostingUtils.PerkIcons.CUSTOM_ROLE_ICON, description: null };
+  const obj9 = { perkIcon: constants.CUSTOM_ROLE_ICON, description: null };
   const intl6 = util.intl;
   obj9.description = intl6.string(util.t["6PV6Qc"]);
   obj[GuildFeatures.ROLE_ICONS] = obj9;
-  const obj10 = { perkIcon: GuildBoostingUtils.PerkIcons.UPLOAD, description: null };
+  const obj10 = { perkIcon: constants.UPLOAD, description: null };
   const intl7 = util.intl;
   const obj11 = { uploadSizeLimit: null };
   const intl8 = util.intl;
   obj11.uploadSizeLimit = intl8.string(util.t.M6qV8j);
   obj10.description = intl7.formatToPlainString(util.t.aFRl53, obj11);
   obj[GuildFeatures.MAX_FILE_SIZE_50_MB] = obj10;
-  const obj12 = { perkIcon: GuildBoostingUtils.PerkIcons.CUSTOMIZATION, description: null };
+  const obj12 = { perkIcon: constants.CUSTOMIZATION, description: null };
   const intl9 = util.intl;
   obj12.description = intl9.string(util.t["1a5rjl"]);
   obj[GuildFeatures.BANNER] = obj12;
-  const obj13 = { perkIcon: GuildBoostingUtils.PerkIcons.ANIMATED, description: null };
+  const obj13 = { perkIcon: constants.ANIMATED, description: null };
   const intl10 = util.intl;
   obj13.description = intl10.string(util.t["1+Vmh9"]);
   obj[GuildFeatures.ANIMATED_BANNER] = obj13;
-  const obj14 = { perkIcon: GuildBoostingUtils.PerkIcons.AUDIO, description: null };
+  const obj14 = { perkIcon: constants.AUDIO, description: null };
   const intl11 = util.intl;
   obj14.description = intl11.formatToPlainString(util.t.zoT1ZE, {
-    bitrate: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.bitrate / 1000,
+    bitrate: dependencyMap[BoostedGuildTiers.TIER_3].limits.bitrate / 1000,
   });
   obj[GuildFeatures.AUDIO_BITRATE_384_KBPS] = obj14;
-  const obj16 = { perkIcon: GuildBoostingUtils.PerkIcons.VANITY, description: null };
+  const obj16 = { perkIcon: constants.VANITY, description: null };
   const intl12 = util.intl;
   obj16.description = intl12.string(util.t["5XZKy/"]);
   obj[GuildFeatures.VANITY_URL] = obj16;
-  const obj17 = { perkIcon: GuildBoostingUtils.PerkIcons.UPLOAD, description: null };
+  const obj17 = { perkIcon: constants.UPLOAD, description: null };
   const intl13 = util.intl;
   const obj18 = { uploadSizeLimit: null };
   const intl14 = util.intl;

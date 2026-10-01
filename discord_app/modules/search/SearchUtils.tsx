@@ -2,7 +2,7 @@
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import _modDef12 from "../../../_runtime/metro/00012__.js";
 import util from "../../intl/index.native.tsx";
-import _modDef4451 from "../../../_runtime/metro/04451__.js";
+import _modDef4450 from "../../../_runtime/metro/04450__.js";
 import UserUtilsDefault from "../../utils/UserUtils.tsx";
 import useChannelName from "../channel/useChannelName.tsx";
 import SearchTokens from "tokens/SearchTokens.tsx";
@@ -21,7 +21,7 @@ import UserStore from "../../stores/UserStore.tsx";
 const SearchTokensDefault = SearchTokens;
 
 require = fn;
-const SearchTabs = fn(7499).SearchTabs;
+const SearchTabs = fn(7477).SearchTabs;
 const Constants = fn(1074);
 ({ SearchTypes: closure_12, SearchTokenTypes } = Constants);
 ({
@@ -98,7 +98,7 @@ export const getSearchTabFetchId = function getSearchTabFetchId(searchContext, M
   return "" + channelId + "-" + MESSAGES + "-" + searchResultsQuery;
 };
 export const getChannelActiveAgoTimestamp = function getChannelActiveAgoTimestamp(arg0) {
-  const diffResult = _modDef4451().diff(_modDef4451(arg0), "s");
+  const diffResult = _modDef4450().diff(_modDef4450(arg0), "s");
   if (diffResult > c21) {
     const _Math5 = Math;
     const rounded = Math.round(diffResult / tmp3);
@@ -136,7 +136,7 @@ export const getChannelActiveAgoTimestamp = function getChannelActiveAgoTimestam
     const intl = util.intl;
     return intl.string(util.t["5Ldpkc"]);
   }
-  const obj = _modDef4451();
+  const obj = _modDef4450();
 };
 export const getIndexingErrorText = function getIndexingErrorText(searchContext) {
   const type = searchContext.type;
@@ -173,13 +173,6 @@ export const getGuildIdFromSearchContext = function getGuildIdFromSearchContext(
     }
   }
   return searchContext.guildId;
-};
-export const isGuildLikeSearchContext = function isGuildLikeSearchContext(searchContext) {
-  return (
-    searchContext.type === constants.GUILD ||
-    searchContext.type === constants.GUILD_CHANNEL ||
-    searchContext.type === constants.THREAD
-  );
 };
 export const getChannelIdFromSearchContext = function getChannelIdFromSearchContext(searchContext) {
   const type = searchContext.type;
@@ -685,27 +678,27 @@ export const removeInvalidPrivateChannelSearchTokens = function removeInvalidPri
   });
   return importDefault.trim();
 };
-export const getSearchAnalyticsIds = function getSearchAnalyticsIds(type, getSessionId) {
-  if (tmp2) {
+export const getSearchAnalyticsIds = function getSearchAnalyticsIds(guildId, getSessionId) {
+  if (obj.isGuildLikeSearchContext(guildId)) {
     if (ConsentStore.hasConsented(constants4.USAGE_STATISTICS)) {
-      const guild = GuildStore.getGuild(type.guildId);
+      const guild = GuildStore.getGuild(guildId.guildId);
       let hasItem;
       if (guild != null) {
         const features = guild.features;
         hasItem = features.has(constants5.DISCOVERABLE);
       }
       if (hasItem) {
-        const sessionId = getSessionId.getSessionId(type);
-        const queryId = getSessionId.getQueryId(type);
-        let tmp13 = null;
+        const sessionId = getSessionId.getSessionId(guildId);
+        const queryId = getSessionId.getQueryId(guildId);
+        let tmp11 = null;
         if (null != sessionId) {
-          tmp13 = null;
+          tmp11 = null;
           if (null != queryId) {
-            const obj = { search_session_id: sessionId, search_query_id: queryId };
-            tmp13 = obj;
+            const obj2 = { search_session_id: sessionId, search_query_id: queryId };
+            tmp11 = obj2;
           }
         }
-        return tmp13;
+        return tmp11;
       }
     }
   }

@@ -131,7 +131,9 @@ export const createCodedLinkEmbeds = function createCodedLinkEmbeds(message, mes
                       if (CodedLink.CodedLinkType.GAME_PROFILE !== type) {
                         if (CodedLink.CodedLinkType.GAME_SERVER_SHARE !== type) {
                           if (CodedLink.CodedLinkType.USER_PROFILE !== type) {
-                            return GlobalUtils.assertNever(type);
+                            if (CodedLink.CodedLinkType.GAME_ORGANIZATION_INVITE !== type) {
+                              return GlobalUtils.assertNever(type);
+                            }
                           }
                         }
                       }

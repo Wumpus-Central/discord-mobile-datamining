@@ -24,10 +24,12 @@ export default function DevToolsLoggingFlagsScreen() {
   const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => ({
     isLoggingGatewayEvents: DeveloperOptionsStore.isLoggingGatewayEvents,
     isLoggingAnalyticsEvents: DeveloperOptionsStore.isLoggingAnalyticsEvents,
+    isLoggingInteractionTTIAnalytics: DeveloperOptionsStore.isLoggingInteractionTTIAnalytics,
     isTracingRequests: DeveloperOptionsStore.isTracingRequests,
   }));
   const obj2 = { style: tmp.container, contentContainerStyle: tmp.content, children: null };
-  ({ isLoggingGatewayEvents, isLoggingAnalyticsEvents, isTracingRequests } = stateFromStoresObject);
+  ({ isLoggingGatewayEvents, isLoggingAnalyticsEvents, isLoggingInteractionTTIAnalytics, isTracingRequests } =
+    stateFromStoresObject);
   const obj3 = { title: "Logging", hasIcons: false, children: null };
   const items1 = [
     React4(TableSwitchRow.TableSwitchRow, {
@@ -44,6 +46,14 @@ export default function DevToolsLoggingFlagsScreen() {
       value: isLoggingAnalyticsEvents,
       onValueChange(logAnalyticsEvents) {
         return DeveloperOptionsActionCreators.setDeveloperOptionSettings({ logAnalyticsEvents });
+      },
+    }),
+    React4(TableSwitchRow.TableSwitchRow, {
+      label: "Interaction TTI Analytics",
+      subLabel: "Logs Interaction TTI analytics events to the developer console.",
+      value: isLoggingInteractionTTIAnalytics,
+      onValueChange(logInteractionTTIAnalytics) {
+        return DeveloperOptionsActionCreators.setDeveloperOptionSettings({ logInteractionTTIAnalytics });
       },
     }),
     React4(TableSwitchRow.TableSwitchRow, {

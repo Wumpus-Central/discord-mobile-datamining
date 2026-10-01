@@ -1075,6 +1075,30 @@ export const DEFAULT_STICKER_SLOTS = 5;
 export const IncrementalStickerCountsByTier = obj42;
 export const TotalStickerCountsByTier = obj43;
 export const TotalSoundboardSoundCountsByTier = obj44;
+export const PerkIcons = {
+  EMOJI: 1,
+  [1]: "EMOJI",
+  AUDIO: 2,
+  [2]: "AUDIO",
+  ANIMATED: 3,
+  [3]: "ANIMATED",
+  CUSTOMIZATION: 4,
+  [4]: "CUSTOMIZATION",
+  UPLOAD: 5,
+  [5]: "UPLOAD",
+  VANITY: 6,
+  [6]: "VANITY",
+  STREAM: 7,
+  [7]: "STREAM",
+  STICKER: 8,
+  [8]: "STICKER",
+  CUSTOM_ROLE_ICON: 11,
+  [11]: "CUSTOM_ROLE_ICON",
+  STAGE_VIDEO: 12,
+  [12]: "STAGE_VIDEO",
+  SOUNDBOARD: 13,
+  [13]: "SOUNDBOARD",
+};
 export const BoostedGuildFeatures = frozen9;
 export const ORDERED_PREMIUM_SUBSCRIPTION_PLANS = items27;
 export const ORDERED_PREMIUM_GUILD_SUBSCRIPTION_PLANS = items28;

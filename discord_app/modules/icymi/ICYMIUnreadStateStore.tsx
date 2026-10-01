@@ -3,7 +3,7 @@ import initializeDefault from "../../../discord_common/js/packages/flux/index.ts
 import DispatcherDefault from "../../Dispatcher.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
 import ICYMITypes from "ICYMITypes.tsx";
-import ICYMIUtils from "ICYMIUtils.tsx";
+import isItemUnreadInChannel from "isItemUnreadInChannel.tsx";
 
 require = fn;
 let closure_2 = 7 * DurationsDefault.Millis.DAY;
@@ -66,7 +66,7 @@ const iCYMIUnreadStateStore = new ICYMIUnreadStateStore(DispatcherDefault, {
           result = null != prop;
         }
         if (!result) {
-          let tmp3Result = ICYMIUtils;
+          let tmp3Result = isItemUnreadInChannel;
           result = tmp3Result.isItemUnreadInChannel(tmp2.data.channel_id, tmp2.data.message_id);
         }
         if (!result) {

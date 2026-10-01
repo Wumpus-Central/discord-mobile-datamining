@@ -20,6 +20,7 @@ export const ImpressionTypes = StandardAnalyticsConstants.ImpressionTypes;
 export const ImpressionGroups = StandardAnalyticsConstants.ImpressionGroups;
 export const ImpressionNames = AnalyticsSchema.ImpressionNames;
 export const NetworkActionNames = AnalyticsSchema.NetworkActionNames;
+export const SpanComponentNames = AnalyticsSchema.SpanComponentNames;
 export const SpanTtiNames = AnalyticsSchema.SpanTtiNames;
 export const getSuperProperties = getSuperProperties.getSuperProperties;
 export const getSuperPropertiesBase64 = getSuperProperties.getSuperPropertiesBase64;

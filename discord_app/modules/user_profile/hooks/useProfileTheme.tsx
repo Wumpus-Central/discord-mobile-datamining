@@ -10,7 +10,7 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-const useEffectiveThemeOverride = fn(7869).useEffectiveThemeOverride;
+const useEffectiveThemeOverride = fn(7856).useEffectiveThemeOverride;
 const ThemeTypes = fn(1074).ThemeTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/hooks/useProfileTheme.tsx");

@@ -8,7 +8,7 @@ import Loading from "rows/Loading.tsx";
 import ThemeStore from "../../../user_settings/ThemeStore.tsx";
 
 require = fn;
-const RowGeneratorConstants = fn(7570);
+const RowGeneratorConstants = fn(7548);
 ({ RowType: closure_4, SeparatorType: hasOwnProperty, LoadingType: metroRequire } = RowGeneratorConstants);
 let obj = {
   constrainedWidth: 0,
@@ -17,7 +17,7 @@ let obj = {
   shouldObscureSpoiler: true,
   shouldDisableInteractiveComponents: true,
 };
-let merged = Object.assign(fn(7571).DEFAULT_OPTIONS);
+let merged = Object.assign(fn(7549).DEFAULT_OPTIONS);
 class RowManager {
   constructor() {
     merged = Object.assign({ options: null });
@@ -46,12 +46,14 @@ prototype["generate"] = function generate(rowType) {
           if (constants2.DAY !== rowType) {
             if (constants2.UNREAD !== rowType) {
               if (constants2.SUMMARY !== rowType) {
-                if (constants3.LOAD_BEFORE !== rowType) {
-                  if (constants3.LOAD_AFTER !== rowType) {
-                    GlobalUtils.assertNever(rowType);
+                if (constants2.CONVERSATION !== rowType) {
+                  if (constants3.LOAD_BEFORE !== rowType) {
+                    if (constants3.LOAD_AFTER !== rowType) {
+                      GlobalUtils.assertNever(rowType);
+                    }
                   }
+                  return Loading.generateLoadingRowData(rowType, theme);
                 }
-                return Loading.generateLoadingRowData(rowType, theme);
               }
             }
           }

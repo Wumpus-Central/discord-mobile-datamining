@@ -85,7 +85,7 @@ let closure_26 = async function _joinGuild(arg0) {
           closure_131_12 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "flex", done: true };
+          return { value: "flex", done: null };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -421,14 +421,12 @@ export default {
               closure_130_0 = undefined;
               closure_130_1 = undefined;
               function getChannelId(guildId, arg1) {
-                let channelIdForGuildTransition = arg1;
+                let first = arg1;
                 if (null == arg1) {
-                  channelIdForGuildTransition = welcomeModalChannelId(dependencyMap[22]).getChannelIdForGuildTransition(
-                    guildId,
-                  );
+                  first = welcomeModalChannelId(dependencyMap[22]).getGuildTransitionRoute(guildId)[0];
                   const obj = welcomeModalChannelId(dependencyMap[22]);
                 }
-                return channelIdForGuildTransition;
+                return first;
               }
               c4 = 1;
               c5 = 1;
@@ -769,7 +767,7 @@ export default {
                 obj6 = { primary_color, secondary_color: null, tertiary_color: null };
               }
               obj5.colors = obj6;
-              obj5.permissions = primary_color(4504).NONE;
+              obj5.permissions = primary_color(4503).NONE;
               c6 = 1;
               const HTTP = color(1271).HTTP;
               const request = {
@@ -786,7 +784,7 @@ export default {
           } else if (1 === tmp7) {
             c6 = 0;
             closure_131_2 = closure_5;
-            const tmp30 = new obj6(4541)(closure_131_2);
+            const tmp30 = new obj6(4540)(closure_131_2);
             throw tmp30;
           } else if (arg0 === 1) {
             c8 = 3;
@@ -806,7 +804,7 @@ export default {
               obj6(573).dispatch(obj10);
               const obj = obj6(573);
             }
-            const result = obj6(6937).checkGuildTemplateDirty(closure_132_0);
+            const result = obj6(6928).checkGuildTemplateDirty(closure_132_0);
             c6 = 0;
             c8 = 3;
             const obj11 = { value: body, done: true };
@@ -850,7 +848,7 @@ export default {
       request.rejectWithError = tmp5(1271).rejectWithMigratedError();
       await HTTP.patch(request);
       closure_128_0 = value;
-      const result = tmp2(6937).checkGuildTemplateDirty(closure_129_0);
+      const result = tmp2(6928).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
     })();
   },
@@ -886,7 +884,7 @@ export default {
       };
       await HTTP.patch(request);
       closure_128_0 = value;
-      const result = body(6937).checkGuildTemplateDirty(closure_129_0);
+      const result = body(6928).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
     })();
   },
@@ -904,7 +902,7 @@ export default {
       };
       await HTTP.patch(request);
       closure_128_0 = value;
-      const result = body(6937).checkGuildTemplateDirty(closure_129_0);
+      const result = body(6928).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
     })();
   },
@@ -959,16 +957,15 @@ export default {
   move(fromIndex, toIndex, fromFolderIndex, toFolderIndex) {
     DispatcherDefault.dispatch({ type: "GUILD_MOVE", fromIndex, toIndex, fromFolderIndex, toFolderIndex });
   },
-  moveById(id, id2) {
+  moveById(id, id1) {
     let flag = c4;
     if (c4 === undefined) {
       flag = false;
     }
-    let flag2 = arg3;
-    if (arg3 === undefined) {
+    if (flag2 === undefined) {
       flag2 = false;
     }
-    if (id === id2) {
+    if (id === id1) {
       const _Error = Error;
       const _HermesInternal = HermesInternal;
       const error = new Error(
@@ -976,7 +973,7 @@ export default {
       );
       throw error;
     } else {
-      const obj2 = { type: "GUILD_MOVE_BY_ID", sourceId: id, targetId: id2, moveToBelow: flag, combine: flag2 };
+      const obj2 = { type: "GUILD_MOVE_BY_ID", sourceId: id, targetId: id1, moveToBelow: flag, combine: flag2 };
       DispatcherDefault.dispatch(obj2);
     }
   },

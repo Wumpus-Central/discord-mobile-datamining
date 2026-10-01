@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = {
   loadingIndicator: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, zIndex: 1 },
   container: { paddingHorizontal: nativeDefault.space.PX_16, flex: 1 },
@@ -83,10 +83,10 @@ export default function GetStartedScreen(modalSessionId) {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              const result = v3(8056).trackAgeVerificationModalClicked(
+              const result = v3(8045).trackAgeVerificationModalClicked(
                 c0,
-                v3(8056).AgeVerificationModalVersion.RETRY,
-                v3(8056).AgeVerificationModalCta.GET_STARTED,
+                v3(8045).AgeVerificationModalVersion.RETRY,
+                v3(8045).AgeVerificationModalCta.GET_STARTED,
               );
               v1 = 1;
               c0 = 1;

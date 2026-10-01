@@ -22,7 +22,7 @@ function getOptionValue(arr, arg1) {
   }
   return value;
 }
-const BuiltInSectionId = fn(5501).BuiltInSectionId;
+const BuiltInSectionId = fn(5489).BuiltInSectionId;
 const Constants = fn(1074);
 ({
   Permissions: closure_7,
@@ -31,12 +31,12 @@ const Constants = fn(1074);
   DISPLAY_NAME_MAX_LENGTH,
   MAX_CHANNEL_NAME_LENGTH,
 } = Constants);
-const DiceRollConstants = fn(8801);
+const DiceRollConstants = fn(8793);
 ({ ALLOWED_DICE_SIDES, MAX_DICE_COUNT } = DiceRollConstants);
-let closure_11 = fn(2110).getDisableCommunicationDurationOptions;
-const MessageSendLocation = fn(4859).MessageSendLocation;
+let closure_11 = fn(2109).getDisableCommunicationDurationOptions;
+const MessageSendLocation = fn(4838).MessageSendLocation;
 let obj = {};
-let obj2 = { id: BuiltInSectionId.BUILT_IN, type: fn(7139).ApplicationCommandSectionType.BUILT_IN };
+let obj2 = { id: BuiltInSectionId.BUILT_IN, type: fn(7131).ApplicationCommandSectionType.BUILT_IN };
 Object.defineProperty(obj2, "name", {
   get: () => {
     const intl = require("util").intl;
@@ -45,7 +45,7 @@ Object.defineProperty(obj2, "name", {
   set: undefined,
 });
 obj[BuiltInSectionId.BUILT_IN] = obj2;
-let obj3 = { id: BuiltInSectionId.FRECENCY, type: fn(7139).ApplicationCommandSectionType.BUILT_IN };
+let obj3 = { id: BuiltInSectionId.FRECENCY, type: fn(7131).ApplicationCommandSectionType.BUILT_IN };
 Object.defineProperty(obj3, "name", {
   get: () => {
     const intl = require("util").intl;
@@ -54,13 +54,13 @@ Object.defineProperty(obj3, "name", {
   set: undefined,
 });
 obj[BuiltInSectionId.FRECENCY] = obj3;
-let items = [...fn(8802).default];
+let items = [...fn(8794).default];
 let obj4 = {
   id: "-1",
   untranslatedName: "shrug",
   displayName: "shrug",
   type: fn(1979).ApplicationCommandType.CHAT,
-  inputType: fn(7139).ApplicationCommandInputType.BUILT_IN_TEXT,
+  inputType: fn(7131).ApplicationCommandInputType.BUILT_IN_TEXT,
   applicationId: BuiltInSectionId.BUILT_IN,
 };
 Object.defineProperty(obj4, "untranslatedDescription", {
@@ -114,7 +114,7 @@ let obj6 = {
   untranslatedName: "tableflip",
   displayName: "tableflip",
   type: fn(1979).ApplicationCommandType.CHAT,
-  inputType: fn(7139).ApplicationCommandInputType.BUILT_IN_TEXT,
+  inputType: fn(7131).ApplicationCommandInputType.BUILT_IN_TEXT,
   applicationId: BuiltInSectionId.BUILT_IN,
 };
 Object.defineProperty(obj6, "untranslatedDescription", {
@@ -168,7 +168,7 @@ let obj8 = {
   untranslatedName: "unflip",
   displayName: "unflip",
   type: fn(1979).ApplicationCommandType.CHAT,
-  inputType: fn(7139).ApplicationCommandInputType.BUILT_IN_TEXT,
+  inputType: fn(7131).ApplicationCommandInputType.BUILT_IN_TEXT,
   applicationId: BuiltInSectionId.BUILT_IN,
 };
 Object.defineProperty(obj8, "untranslatedDescription", {
@@ -222,7 +222,7 @@ let obj10 = {
   untranslatedName: "tts",
   displayName: "tts",
   type: fn(1979).ApplicationCommandType.CHAT,
-  inputType: fn(7139).ApplicationCommandInputType.BUILT_IN_TEXT,
+  inputType: fn(7131).ApplicationCommandInputType.BUILT_IN_TEXT,
   applicationId: BuiltInSectionId.BUILT_IN,
 };
 Object.defineProperty(obj10, "untranslatedDescription", {
@@ -288,7 +288,7 @@ const obj12 = {
   untranslatedName: "me",
   displayName: "me",
   type: fn(1979).ApplicationCommandType.CHAT,
-  inputType: fn(7139).ApplicationCommandInputType.BUILT_IN_TEXT,
+  inputType: fn(7131).ApplicationCommandInputType.BUILT_IN_TEXT,
   applicationId: BuiltInSectionId.BUILT_IN,
 };
 Object.defineProperty(obj12, "untranslatedDescription", {
@@ -342,7 +342,7 @@ const obj14 = {
   untranslatedName: "spoiler",
   displayName: "spoiler",
   type: fn(1979).ApplicationCommandType.CHAT,
-  inputType: fn(7139).ApplicationCommandInputType.BUILT_IN_TEXT,
+  inputType: fn(7131).ApplicationCommandInputType.BUILT_IN_TEXT,
   applicationId: BuiltInSectionId.BUILT_IN,
 };
 Object.defineProperty(obj14, "untranslatedDescription", {
@@ -397,7 +397,7 @@ const obj16 = {
   untranslatedName: "nick",
   displayName: "nick",
   type: fn(1979).ApplicationCommandType.CHAT,
-  inputType: fn(7139).ApplicationCommandInputType.BUILT_IN,
+  inputType: fn(7131).ApplicationCommandInputType.BUILT_IN,
   applicationId: BuiltInSectionId.BUILT_IN,
 };
 Object.defineProperty(obj16, "untranslatedDescription", {
@@ -475,7 +475,7 @@ const obj18 = {
   untranslatedName: "thread",
   displayName: "thread",
   type: fn(1979).ApplicationCommandType.CHAT,
-  inputType: fn(7139).ApplicationCommandInputType.BUILT_IN,
+  inputType: fn(7131).ApplicationCommandInputType.BUILT_IN,
   applicationId: BuiltInSectionId.BUILT_IN,
 };
 Object.defineProperty(obj18, "untranslatedDescription", {
@@ -546,39 +546,99 @@ let closure_14 = asyncGeneratorStep(async (arg0, arg1) => {
   c6 = 0;
   c7 = 0;
   const iter = (async (arg0, value) => {
-    const tmp49 = closure_133_13(closure_132_0, "name");
-    c2 = tmp49;
-    if (tmp49 == null) {
-      c2 = "";
+    if (c7 === 2) {
+      c7 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj4 = { value, done: true };
+        return obj4;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c7 = 2;
+        if (0 === c6) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 3;
+            const obj5 = { value, done: true };
+            return obj5;
+          } else {
+            closure_5 = tmp5;
+            closure_4 = tmp2;
+            let channel2;
+            closure_132_0 = closure_0;
+            channel2 = channel.channel;
+            closure_132_2 = undefined;
+            closure_132_3 = undefined;
+            closure_132_4 = undefined;
+            c6 = 1;
+            c7 = 1;
+            return { value: "flex", done: null };
+          }
+        } else if (1 === tmp5) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 3;
+            const obj6 = { value, done: true };
+            return obj6;
+          } else {
+            const tmp49 = closure_133_13(closure_132_0, "name");
+            c2 = tmp49;
+            if (tmp49 == null) {
+              c2 = "";
+            }
+            closure_132_2 = c2;
+            const tmp11 = closure_133_13(closure_132_0, "message");
+            c3 = tmp11;
+            if (tmp11 == null) {
+              c3 = "";
+            }
+            closure_132_3 = c3;
+            const obj2 = closure_133_0(closure_133_2[17]);
+            c6 = 2;
+            c7 = 1;
+            const obj7 = {
+              value: obj2.createThread(
+                channel2,
+                closure_132_2,
+                closure_133_0(closure_133_2[18]).ChannelTypes.PUBLIC_THREAD,
+                closure_133_0(closure_133_2[19]).getAutoArchiveDuration(channel2, null),
+                "Slash Command",
+              ),
+              done: false,
+            };
+            return obj7;
+          }
+        } else if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c7 = 3;
+          const obj = { value, done: true };
+          return obj;
+        } else {
+          closure_132_4 = value;
+          const obj8 = closure_133_1(closure_133_2[20]);
+          const id = closure_132_4.id;
+          const obj10 = { location: closure_133_12.THREAD_CREATION };
+          obj8.sendMessage(id, closure_133_1(closure_133_2[21]).parse(closure_132_4, closure_132_3), true, obj10);
+          c7 = 3;
+          return { value: "HermesInternal", done: null };
+        }
+      } catch (tmp27) {
+        c7 = tmp;
+        throw tmp27;
+      }
     }
-    closure_132_2 = c2;
-    const tmp11 = closure_133_13(closure_132_0, "message");
-    c3 = tmp11;
-    if (tmp11 == null) {
-      c3 = "";
-    }
-    closure_132_3 = c3;
-    await closure_133_0(closure_133_2[17]).createThread(
-      channel2,
-      closure_132_2,
-      closure_133_0(closure_133_2[18]).ChannelTypes.PUBLIC_THREAD,
-      closure_133_0(closure_133_2[19]).getAutoArchiveDuration(channel2, null),
-      "Slash Command",
-    );
-    closure_132_4 = value;
-    closure_133_0(closure_133_2[17]);
-    const id = closure_132_4.id;
-    closure_133_1(closure_133_2[20]).sendMessage(
-      id,
-      closure_133_1(closure_133_2[21]).parse(closure_132_4, closure_132_3),
-      true,
-      { location: closure_133_12.THREAD_CREATION },
-    );
-    await "HermesInternal";
-    closure_4 = tmp2;
-    closure_132_0 = closure_0;
-    channel2 = channel.channel;
-    return "flex";
   })();
   iter.next();
   return iter;
@@ -600,7 +660,7 @@ const obj21 = {
   untranslatedName: "kick",
   displayName: "kick",
   type: fn(1979).ApplicationCommandType.CHAT,
-  inputType: fn(7139).ApplicationCommandInputType.BUILT_IN,
+  inputType: fn(7131).ApplicationCommandInputType.BUILT_IN,
   applicationId: BuiltInSectionId.BUILT_IN,
 };
 Object.defineProperty(obj21, "untranslatedDescription", {
@@ -780,7 +840,7 @@ const obj24 = {
   untranslatedName: "ban",
   displayName: "ban",
   type: fn(1979).ApplicationCommandType.CHAT,
-  inputType: fn(7139).ApplicationCommandInputType.BUILT_IN,
+  inputType: fn(7131).ApplicationCommandInputType.BUILT_IN,
   applicationId: BuiltInSectionId.BUILT_IN,
 };
 Object.defineProperty(obj24, "untranslatedDescription", {
@@ -1044,7 +1104,7 @@ const obj28 = {
   untranslatedName: "timeout",
   displayName: "timeout",
   type: fn(1979).ApplicationCommandType.CHAT,
-  inputType: fn(7139).ApplicationCommandInputType.BUILT_IN,
+  inputType: fn(7131).ApplicationCommandInputType.BUILT_IN,
   applicationId: BuiltInSectionId.BUILT_IN,
 };
 Object.defineProperty(obj28, "untranslatedDescription", {
@@ -1271,7 +1331,7 @@ const obj32 = {
   untranslatedName: "msg",
   displayName: "msg",
   type: fn(1979).ApplicationCommandType.CHAT,
-  inputType: fn(7139).ApplicationCommandInputType.BUILT_IN,
+  inputType: fn(7131).ApplicationCommandInputType.BUILT_IN,
   applicationId: BuiltInSectionId.BUILT_IN,
 };
 Object.defineProperty(obj32, "untranslatedDescription", {
@@ -1358,17 +1418,17 @@ obj32.execute = function execute(arr, channel) {
             return obj4;
           } else {
             const obj5 = { recipientIds };
-            const obj2 = v1(4879);
+            const obj2 = v1(4858);
             v1 = 1;
             c0 = 1;
             const obj6 = {
-              value: v1(4879)
+              value: v1(4858)
                 .openPrivateChannel(obj5)
                 .then((result) => {
                   channel = channel.getChannel(result);
                   c1(38)(null != channel, "Newly created PrivateChannel is null");
-                  const obj = c1(7072);
-                  obj.sendMessage(channel.id, c1(7290).parse(channel, dependencyMap), true, {
+                  const obj = c1(7064);
+                  obj.sendMessage(channel.id, c1(7268).parse(channel, dependencyMap), true, {
                     location: constants.PRIVATE_MESSAGE_COMMAND,
                   });
                 }),
@@ -1441,7 +1501,7 @@ const obj35 = {
   untranslatedName: "roll-dice",
   displayName: "roll-dice",
   type: fn(1979).ApplicationCommandType.CHAT,
-  inputType: fn(7139).ApplicationCommandInputType.BUILT_IN,
+  inputType: fn(7131).ApplicationCommandInputType.BUILT_IN,
   applicationId: BuiltInSectionId.BUILT_IN,
 };
 Object.defineProperty(obj35, "untranslatedDescription", {
@@ -1528,7 +1588,7 @@ const found = items.filter((untranslatedName) => {
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandBuiltIns.tsx");
 
-export const PLATFORM_COMMANDS = fn(8802).default;
+export const PLATFORM_COMMANDS = fn(8794).default;
 export const BUILT_IN_SECTIONS = obj;
 export const BUILT_IN_COMMANDS = items;
 export const BUILT_IN_COMMANDS_ORIGINAL = found;

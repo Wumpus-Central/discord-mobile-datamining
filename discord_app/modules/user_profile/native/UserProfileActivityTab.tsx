@@ -61,8 +61,8 @@ function RecentActivityIntroText() {
           accessibilityRole: "link",
           onPress() {
             const obj2 = { href: null };
-            const obj = learnMore(8013);
-            obj2.href = closure_1_1(2111).getArticleURL(constants.ACTIVITY_STATUS_SETTINGS);
+            const obj = learnMore(8002);
+            obj2.href = closure_1_1(2110).getArticleURL(constants.ACTIVITY_STATUS_SETTINGS);
             return obj.handleClick(obj2);
           },
           children,
@@ -76,7 +76,7 @@ const View = fn(17).View;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = {
   section: { gap: nativeDefault.space.PX_16 },
   sectionHeading: null,
@@ -123,7 +123,7 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 export default function UserProfileActivityTab(user) {
   user = user.user;
   ({ currentUser, guildId, cardStyle } = user);
-  ({ recent, isCurrentUser, hasCurrentActivity, hasRecentActivity } = cardStyle(12851)({
+  ({ recent, isCurrentUser, hasCurrentActivity, hasRecentActivity } = cardStyle(12860)({
     userId: user.id,
     currentUserId: currentUser.id,
     guildId,
@@ -133,7 +133,7 @@ export default function UserProfileActivityTab(user) {
       if (tmp4) {
         let tmp10Result = closure_5(UserProfileActivityTabSkeleton, {});
       } else {
-        const tmp7 = user(12854);
+        const tmp7 = user(12863);
         if (isCurrentUser) {
           tmp10Result = closure_5(tmp7.UserProfileActivityEmptyCurrentUser, {});
         } else {
@@ -149,7 +149,7 @@ export default function UserProfileActivityTab(user) {
     const intl = user(1115).intl;
     obj3.heading = intl.string(user(1115).t.J6STd9);
     const obj4 = { user, currentUser, guildId, style: cardStyle };
-    obj3.children = closure_5(cardStyle(12772), obj4);
+    obj3.children = closure_5(cardStyle(12781), obj4);
     hasCurrentActivity = closure_5(Section, obj3);
   }
   const items = [hasCurrentActivity];
@@ -170,5 +170,5 @@ export default function UserProfileActivityTab(user) {
   items[1] = hasRecentActivity;
   tmp10Result = closure_6(closure_7, { children: items });
   const obj = { userId: user.id, currentUserId: currentUser.id, guildId };
-  const tmp3 = cardStyle(12851)({ userId: user.id, currentUserId: currentUser.id, guildId });
+  const tmp3 = cardStyle(12860)({ userId: user.id, currentUserId: currentUser.id, guildId });
 }

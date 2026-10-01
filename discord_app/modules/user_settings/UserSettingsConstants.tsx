@@ -65,8 +65,8 @@ export const createEmptyEditInfo = function createEmptyEditInfo() {
     errorCallbacks: [],
     loaded: false,
     loading: "channel",
-    triggeredMigrations: "<string:3243311464>",
-    offlineEditDataVersion: "<string:108138996>",
+    triggeredMigrations: "VOICE_BYPASS_SYSTEM_AUDIO_INPUT_PROCESSING",
+    offlineEditDataVersion: "\u{1F919}",
   };
   return obj;
 };

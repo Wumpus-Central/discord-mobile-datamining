@@ -22,6 +22,7 @@ import MessageDataSnowflakeUtils from "../../modules/messages/native/snowflake/M
 import handleMessagesTapChannel from "../../modules/messages/native/handlers/handleMessagesTapChannel.tsx";
 import handleMessagesLongPressChannel from "../../modules/messages/native/handlers/handleMessagesLongPressChannel.tsx";
 import showLongPressURLActionSheetDefault from "../../modules/links/native/showLongPressURLActionSheet.tsx";
+import contentHandlers2 from "../chat/contentHandlers.tsx";
 import handleMessagesTapLink from "../../modules/messages/native/handlers/handleMessagesTapLink.tsx";
 import showLongPressMessageActionSheet from "../../modules/messages/native/long_press/showLongPressMessageActionSheet.tsx";
 import ChatDefault from "../../modules/chat/native/Chat.android.tsx";
@@ -39,11 +40,11 @@ const NativeChatUtilsDefault = NativeChatUtils;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const RowGeneratorConstants = fn(7570);
+const RowGeneratorConstants = fn(7548);
 ({ Changeset: c10, RowType: closure_11, SeparatorType: closure_12 } = RowGeneratorConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = {
   chat: { flex: 1, overflow: "hidden" },
   containerInner: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
@@ -284,9 +285,9 @@ class ChatPreviewBase extends PureComponent {
           jumpTargetId,
           jumpType: "flexDirection",
           shouldInitialScroll: "Array",
-          animated: "4.8.0",
-          scrollPosition: null,
-          focusTargetId: 60,
+          animated: 632.234,
+          scrollPosition: 1132.161,
+          focusTargetId: "gr",
         };
         applyArgumentsResult.scrollData = computeScrollDataDefault(obj3);
         if (!tmp7) {
@@ -318,11 +319,11 @@ class ChatPreviewBase extends PureComponent {
       if (null != jumpTargetId) {
         const resolved = Promise.resolve();
         resolved.then(() => {
-          const result = applyArgumentsResult(7528).setSelectedConversation(closure_1_0, roleStyle, {
+          const result = applyArgumentsResult(7506).setSelectedConversation(closure_1_0, roleStyle, {
             shouldJump: false,
           });
-          const obj = applyArgumentsResult(7528);
-          applyArgumentsResult(4877).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
+          const obj = applyArgumentsResult(7506);
+          applyArgumentsResult(4856).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
         });
       }
     };
@@ -355,14 +356,14 @@ class ChatPreviewBase extends PureComponent {
           channel = channel.getChannel(arg1);
           if (null != channel) {
             const obj2 = { source, navigationReplace: true };
-            applyArgumentsResult(4877).transitionToThread(channel, obj2);
-            const obj = applyArgumentsResult(4877);
+            applyArgumentsResult(4856).transitionToThread(channel, obj2);
+            const obj = applyArgumentsResult(4856);
           }
         },
         message: applyArgumentsResult.getMessage(data.messageId),
-        messageChannel: "scalar",
-        selectedChannelId: null,
-        tapLinkData: 2,
+        messageChannel: "asc",
+        selectedChannelId: "asc",
+        tapLinkData: "https://support.discord.com/hc/articles/14155060633623",
       };
       channel = applyArgumentsResult.props.channel;
       obj2.messageChannel = channel;
@@ -510,6 +511,12 @@ class ChatPreviewBase extends PureComponent {
         const tmpResult = handleMessagesLongPressChannel;
       }
     };
+    applyArgumentsResult.handleTapAttachmentTextPreview = function handleTapAttachmentTextPreview(arg0) {
+      if (!applyArgumentsResult.props.hasActionSheetOpen) {
+        const result = contentHandlers2.contentHandlers.onTapAttachmentTextPreview(arg0);
+        const contentHandlers = contentHandlers2.contentHandlers;
+      }
+    };
     return applyArgumentsResult;
   }
 }
@@ -589,6 +596,7 @@ prototype["render"] = function render() {
     onTapLink: self.handleTapLink,
     onTapChannel: self.handleTapChannel,
     onLongPressChannel: self.handleLongPressChannel,
+    onTapAttachmentTextPreview: self.handleTapAttachmentTextPreview,
     onLongPressLink: self.handleLongPressLink,
     onLongPressMessage: self.handleLongPressMessage,
     onLongPressReaction: self.handleLongPressReaction,
@@ -633,7 +641,7 @@ prototype["render"] = function render() {
   tmp14 = tmp6Result;
   tmp6Result2 = map1(common_SafeAreaView.SafeAreaPaddingView, obj9);
 };
-ChatPreviewBase.contextType = fn(4570).ThemeContext;
+ChatPreviewBase.contextType = fn(4569).ThemeContext;
 ChatPreviewBase.defaultProps = { withSafeArea: true };
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/ChatPreview.tsx");
@@ -652,10 +660,10 @@ export const ChatPreview = function ChatPreview(channelId) {
   const items1 = [ChannelStore];
   const stateFromStores1 = channelId(504).useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
   const obj2 = channelId(504);
-  const isChannelSpoilerGated = channelId(6943).useIsChannelSpoilerGated(stateFromStores1);
-  const obj3 = channelId(6943);
-  const isChannelContentGated = channelId(5076).useIsChannelContentGated(stateFromStores1);
-  const obj4 = channelId(5076);
+  const isChannelSpoilerGated = channelId(6934).useIsChannelSpoilerGated(stateFromStores1);
+  const obj3 = channelId(6934);
+  const isChannelContentGated = channelId(5055).useIsChannelContentGated(stateFromStores1);
+  const obj4 = channelId(5055);
   const items2 = [ActionSheetStore];
   const obj6 = {};
   const stateFromStores2 = channelId(504).useStateFromStores(items2, () => null != content.getContent());

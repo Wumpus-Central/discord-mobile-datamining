@@ -16,7 +16,7 @@ export default function openCheckpointModal(source) {
   AnalyticsUtilsDefault.track(AnalyticEvents.CHECKPOINT_STARTED, { source });
   const obj2 = { source };
   ModalActionCreatorsDefault.pushLazy(
-    asyncRequireImpl(15453, dependencyMap.paths),
+    asyncRequireImpl(15458, dependencyMap.paths),
     { didPlayerShareDataWithDiscord: flag },
     "CHECKPOINT_MODAL",
   );

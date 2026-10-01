@@ -1,6 +1,6 @@
 // discord_app/modules/vibegrations/native/VibegrationsPublishNoticeLine.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3715 from "../intl/VibegrationsUntranslated.messages.js";
+import _modDef3714 from "../intl/VibegrationsUntranslated.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useVibegrationsPublishAction from "../lib/useVibegrationsPublishAction.tsx";
 import vibegrationsPublishCard from "../lib/vibegrationsPublishCard.tsx";
@@ -11,7 +11,7 @@ const useVibegrationsPublishActionDefault = useVibegrationsPublishAction;
 require = fn;
 function PublishedNoticeLine(projectId) {
   projectId = projectId.projectId;
-  const context = noop.useContext(projectId(16510).VibegrationsPublishActionContext);
+  const context = noop.useContext(projectId(16531).VibegrationsPublishActionContext);
   const items = [context, projectId];
   const callback = noop.useCallback(() => {
     if (null != context) {
@@ -20,9 +20,9 @@ function PublishedNoticeLine(projectId) {
   }, items);
   let obj = { variant: "text-md/normal", color: "text-default", children: null };
   const intl = projectId(1115).intl;
-  const tmp2 = context(16589)(projectId);
-  obj.children = intl.format(projectId(16590).publishNoticeMessage(projectId.notice), { name: tmp2, onOpen: callback });
-  return jsx(projectId(4862).Text, { variant: "text-md/normal", color: "text-default", children: null });
+  const tmp2 = context(16611)(projectId);
+  obj.children = intl.format(projectId(16612).publishNoticeMessage(projectId.notice), { name: tmp2, onOpen: callback });
+  return jsx(projectId(4841).Text, { variant: "text-md/normal", color: "text-default", children: null });
 }
 function OutdatedNoticeLine(projectId) {
   const tmp3 = useVibegrationsPublishActionDefault(projectId.projectId);
@@ -39,7 +39,7 @@ function OutdatedNoticeLine(projectId) {
           return closure_0.run("outdated_notice");
         },
       };
-      obj2.children = intl.format(_modDef3715.AcWS6c, obj3);
+      obj2.children = intl.format(_modDef3714.AcWS6c, obj3);
       tmp4 = jsx(Text_Text.Text, { variant: "text-xs/normal", color: "text-muted", children: null });
     }
     obj = vibegrationsPublishCard;

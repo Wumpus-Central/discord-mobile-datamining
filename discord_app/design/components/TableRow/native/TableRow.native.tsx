@@ -266,7 +266,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
 const React7 = { padding: 0 };
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let closure_10 = createStyles.createStyles((arg0, arg1, arg2) => {
   const obj = {
     padding: nativeDefault.modules.mobile.TABLE_ROW_PADDING,
@@ -343,9 +343,9 @@ let closure_10 = createStyles.createStyles((arg0, arg1, arg2) => {
   obj2.dragHandle = { marginEnd: 8 };
   return obj2;
 });
-TableRow.Icon = fn(6119).TableRowIcon;
-TableRow.Arrow = fn(6120).TableRowArrow;
-TableRow.TrailingText = fn(6122).TableRowTrailingText;
+TableRow.Icon = fn(6109).TableRowIcon;
+TableRow.Arrow = fn(6110).TableRowArrow;
+TableRow.TrailingText = fn(6112).TableRowTrailingText;
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/TableRow/native/TableRow.native.tsx");
 

@@ -1,10 +1,9 @@
-// discord_app/modules/feedback/native/requestReviewModal.tsx
+// discord_app/modules/feedback/native/requestReviewModal.android.tsx
 import LoggerDefault from "../../debug/Logger.tsx";
 import NativeAppRatingRequestModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeAppRatingRequestModule.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
-const require = fn;
-let closure_6 = async function _showAndroidRatingRequest() {
+let closure_4 = async function _requestReviewModal() {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -48,7 +47,7 @@ let closure_6 = async function _showAndroidRatingRequest() {
         c3 = 0;
         closure_128_0 = closure_2;
         const _HermesInternal = HermesInternal;
-        closure_129_5.error("Failed to show Android rating request: " + closure_128_0);
+        closure_129_3.error("Failed to show Android rating request: " + closure_128_0);
         const obj5 = { ok: false, error: null };
         const _String = String;
         obj5.error = String(closure_128_0);
@@ -64,7 +63,7 @@ let closure_6 = async function _showAndroidRatingRequest() {
         const obj7 = { value, done: true };
         return obj7;
       } else {
-        closure_129_5.info("Android rating request dispatched");
+        closure_129_3.info("Android rating request dispatched");
         c3 = 0;
         c5 = 3;
         const obj = { value: { ok: true }, done: true };
@@ -81,27 +80,17 @@ let closure_6 = async function _showAndroidRatingRequest() {
     }
   }
 };
-const NativeModules = fn(17).NativeModules;
-let closure_5 = new LoggerDefault("requestReviewModal");
+let closure_3 = new LoggerDefault("requestReviewModal");
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/feedback/native/requestReviewModal.tsx");
+const result = size.fileFinishedImporting("modules/feedback/native/requestReviewModal.android.tsx");
 
 export default function requestReviewModal() {
-  if (obj.isAndroid()) {
-    let resolved = (function showAndroidRatingRequest() {
-      const self = this;
-      const apply = closure_1_6.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
-      }
-      return applyArgumentsResult;
-    })();
+  const self = this;
+  const apply = closure_4.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
-    const AppStoreManager = NativeModules.AppStoreManager;
-    const review = AppStoreManager.requestReview();
-    resolved = Promise.resolve({ ok: true });
+    applyArgumentsResult = apply(self, arguments);
   }
-  return resolved;
+  return applyArgumentsResult;
 }

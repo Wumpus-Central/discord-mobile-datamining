@@ -1,15 +1,15 @@
 // discord_app/modules/vibegrations/lib/vibegrationsPublishCard.tsx
-import _modDef3715 from "../intl/VibegrationsUntranslated.messages.js";
+import _modDef3714 from "../intl/VibegrationsUntranslated.messages.js";
 import VibegrationsChatStore from "../stores/VibegrationsChatStore.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const turnSettled = VibegrationsChatStore.turnSettled;
 const result = size.fileFinishedImporting("modules/vibegrations/lib/vibegrationsPublishCard.tsx");
 
-export const isVibegrationsPublishCtaVisible = function isVibegrationsPublishCtaVisible(tmp3Result) {
-  let tmp = null != tmp3Result;
+export const isVibegrationsPublishCtaVisible = function isVibegrationsPublishCtaVisible(tmp5Result) {
+  let tmp = null != tmp5Result;
   if (tmp) {
-    const status = tmp3Result.status;
+    const status = tmp5Result.status;
     let state;
     if (status != null) {
       state = status.state;
@@ -77,16 +77,16 @@ export const publishNoticeMessage = function publishNoticeMessage(notice) {
   if (notice.update) {
     const surface = notice.surface;
     if ("bot" === surface) {
-      return _modDef3715.ncJb2S;
+      return _modDef3714.ncJb2S;
     } else if ("widget" === surface) {
-      return _modDef3715.gSpqdm;
+      return _modDef3714.gSpqdm;
     } else if ("automod" === surface) {
-      return _modDef3715.M3cBMT;
+      return _modDef3714.M3cBMT;
     } else {
-      return _modDef3715.tg9fgb;
+      return _modDef3714.tg9fgb;
     }
   } else {
-    return _modDef3715.ogEl54;
+    return _modDef3714.ogEl54;
   }
 };
 export const withLivePublishCard = function withLivePublishCard(stateFromStores1, stateFromStores2) {

@@ -4,6 +4,7 @@ import _modDef38 from "../../../_runtime/metro/00038__.js";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import Server from "../../flow/Server.tsx";
+import ApplicationCommandUtils from "ApplicationCommandUtils.tsx";
 import ApplicationCommandTypes from "ApplicationCommandTypes.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore.tsx";
@@ -100,21 +101,46 @@ export const updateApplicationGuildCommandPermissions = function updateApplicati
 export const performAutocomplete = function performAutocomplete(applicationId, autocomplete, data) {
   _modDef38(null != autocomplete.autocomplete, "Missing autocomplete context");
   ({ query, name } = autocomplete.autocomplete);
+  let str = "";
+  let interactionOptions = ApplicationCommandUtils.extractInteractionDataProps(data).interactionOptions;
+  if (interactionOptions == null) {
+    interactionOptions = [];
+  }
+  const iter = interactionOptions[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let iter2 = nextResult;
+    let focused = "focused" in nextResult;
+    if (focused) {
+      focused = iter2.focused;
+    }
+    if (!focused) {
+      let name2 = iter2.name;
+      let _String = String;
+      let _HermesInternal = HermesInternal;
+      let str2 = "";
+      let str3 = "=";
+      let str4 = "\0";
+      str = str + "" + name2 + "=" + String(iter2.value) + "\0";
+    }
+    continue;
+  }
   const fromTimestampResult = SnowflakeUtilsDefault.fromTimestamp(Date.now());
   require = fromTimestampResult;
   if (null != autocomplete.channel) {
-    const obj2 = {
+    const obj3 = {
       type: "APPLICATION_COMMAND_AUTOCOMPLETE_REQUEST",
       nonce: fromTimestampResult,
       channelId: autocomplete.channel.id,
       query,
       name,
+      contextKey: str,
     };
-    DispatcherDefault.dispatch(obj2);
+    DispatcherDefault.dispatch(obj3);
     if (null == ApplicationCommandAutocompleteStore.getAutocompleteChoices(autocomplete.channel.id, name, query)) {
       const HTTP = HTTPUtils.HTTP;
       const request = { url: Endpoints.INTERACTIONS, body: null, timeout: 3000, rejectWithError: true };
-      const obj3 = {
+      const obj4 = {
         type: Server.InteractionTypes.APPLICATION_COMMAND_AUTOCOMPLETE,
         application_id: applicationId.applicationId,
         guild_id: null,
@@ -128,18 +154,18 @@ export const performAutocomplete = function performAutocomplete(applicationId, a
       if (guild != null) {
         id = guild.id;
       }
-      obj3.guild_id = id;
-      obj3.channel_id = autocomplete.channel.id;
-      obj3.session_id = AuthenticationStore.getSessionId();
-      obj3.data = data;
-      obj3.nonce = fromTimestampResult;
-      request.body = obj3;
+      obj4.guild_id = id;
+      obj4.channel_id = autocomplete.channel.id;
+      obj4.session_id = AuthenticationStore.getSessionId();
+      obj4.data = data;
+      obj4.nonce = fromTimestampResult;
+      request.body = obj4;
       HTTP.post(request).catch(() => {
         DispatcherDefault.dispatch({ type: "INTERACTION_FAILURE", nonce: fromTimestampResult });
       });
       const postResult = HTTP.post(request);
     }
-    const tmpResult = DispatcherDefault;
+    const tmp7Result = DispatcherDefault;
   }
 };
 export const fetchCommand = function fetchCommand(guildId, channelId, commandId) {

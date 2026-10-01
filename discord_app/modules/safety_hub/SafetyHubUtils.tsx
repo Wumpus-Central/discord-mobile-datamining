@@ -1,7 +1,7 @@
 // discord_app/modules/safety_hub/SafetyHubUtils.tsx
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import util from "../../intl/index.native.tsx";
-import _modDef4451 from "../../../_runtime/metro/04451__.js";
+import _modDef4450 from "../../../_runtime/metro/04450__.js";
 import MediaFormatTesters from "../messages/MediaFormatTesters.tsx";
 import SafetyHubModels from "SafetyHubModels.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
@@ -50,7 +50,7 @@ function parseMessageEmbedForProps(fields) {
     return obj;
   }
 }
-const SafetyHubConstants = fn(8063);
+const SafetyHubConstants = fn(8052);
 ({
   AppealIngestionSignal: closure_4,
   SafetySystemNotificationCtaType: hasOwnProperty,
@@ -62,7 +62,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/SafetyHubUtils.tsx");
 
 export const getClassificationRelativeIncidentTime = function getClassificationRelativeIncidentTime(timestamp) {
-  return _modDef4451().to(_modDef4451(timestamp));
+  return _modDef4450().to(_modDef4450(timestamp));
 };
 export const getSpoilerFlagsForAttachment = function getSpoilerFlagsForAttachment(filename) {
   if (obj.isImageFile(filename.filename)) {
@@ -155,17 +155,24 @@ export const getRequestReviewErrorFromCode = function getRequestReviewErrorFromC
   }
   return stringResult;
 };
-export const getClassificationExpiration = function getClassificationExpiration(classification) {
-  const max_expiration_time = classification.max_expiration_time;
-  if (null == max_expiration_time) {
+export const getClassificationAccountStatusExpiration = function getClassificationAccountStatusExpiration(
+  classification,
+) {
+  const actions = classification.actions;
+  if (actions.some((action_type) => action_type.action_type === SafetyHubModels.ActionType.BAN)) {
     return null;
   } else {
-    try {
-      const _Date = Date;
-      const date = new Date(max_expiration_time);
-      return date;
-    } catch (err) {
-      return tmp;
+    const max_expiration_time = classification.max_expiration_time;
+    if (null == max_expiration_time) {
+      return null;
+    } else {
+      try {
+        const _Date = Date;
+        const date = new Date(max_expiration_time);
+        return date;
+      } catch (err) {
+        return tmp;
+      }
     }
   }
 };

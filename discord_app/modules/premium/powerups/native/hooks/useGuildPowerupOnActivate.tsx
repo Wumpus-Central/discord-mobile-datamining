@@ -1,6 +1,6 @@
 // discord_app/modules/premium/powerups/native/hooks/useGuildPowerupOnActivate.tsx
+import BoostingActionCreators from "../../../../../actions/native/BoostingActionCreators.tsx";
 import GuildBoostingUtils from "../../../../../utils/GuildBoostingUtils.tsx";
-import actions_BoostingActionCreators from "../../../../../actions/native/BoostingActionCreators.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../../../stores/GuildStore.tsx";
 import GuildBoostSlotStore from "../../../../../stores/billing/GuildBoostSlotStore.tsx";
@@ -8,7 +8,7 @@ import GuildBoostSlotStore from "../../../../../stores/billing/GuildBoostSlotSto
 const require = globalThis.__r;
 
 require = fn;
-const GuildPowerupsConstants = fn(4754);
+const GuildPowerupsConstants = fn(4753);
 ({ BoostPurchaseIntent: metroRequire, GuildPowerupType: closure_7 } = GuildPowerupsConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupOnActivate.tsx");
@@ -76,7 +76,7 @@ export default function useGuildPowerupOnActivate(arg0, arg1) {
               analyticsLocations,
               guildId: stateFromStores.id,
               onBack() {
-                return PERK(5069).popWithKey(diff(7028).PREMIUM_KEY);
+                return PERK(5048).popWithKey(diff(7020).PREMIUM_KEY);
               },
               onPaymentSuccess() {
                 const availableGuildBoostSlots = GuildBoostingUtils.getAvailableGuildBoostSlots(
@@ -93,12 +93,12 @@ export default function useGuildPowerupOnActivate(arg0, arg1) {
                       }
                     },
                   };
-                  actions_BoostingActionCreators.openTransferModal(obj2);
-                  const tmpResult = actions_BoostingActionCreators;
+                  BoostingActionCreators.openTransferModal(obj2);
+                  const tmpResult = BoostingActionCreators;
                 }
               },
               onPaymentDismiss() {
-                return PERK(5069).popWithKey(diff(7028).PREMIUM_KEY);
+                return PERK(5048).popWithKey(diff(7020).PREMIUM_KEY);
               },
             };
             const result = tmp17(onToggle[13]).launchGuildBoostFlowOrAlert(obj3);

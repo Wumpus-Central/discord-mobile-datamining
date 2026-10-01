@@ -1,6 +1,6 @@
 // discord_app/design/components/Illustration/native/redesign/generated/StreamEnded.tsx
 import shared from "../../../../../shared.tsx";
-import _mod7874 from "../../index.tsx";
+import _mod7861 from "../../index.tsx";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -12,35 +12,35 @@ const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/StreamEnded.tsx");
 
 export const getStreamEndedSource = function getStreamEndedSource(theme) {
-  return _mod7874.getIllustrationSource(theme, {
+  return _mod7861.getIllustrationSource(theme, {
     dark() {
-      return require("../../../../../../../_runtime/metro/09077__.js");
+      return require("../../../../../../../_runtime/metro/09071__.js");
     },
     darker() {
-      return require("../../../../../../../_runtime/metro/09078__.js");
+      return require("../../../../../../../_runtime/metro/09072__.js");
     },
   });
 };
 export const useStreamEndedSource = function useStreamEndedSource() {
   const obj = shared;
-  return _mod7874.getIllustrationSource(obj.useThemeContext().theme, {
+  return _mod7861.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("../../../../../../../_runtime/metro/09077__.js");
+      return require("../../../../../../../_runtime/metro/09071__.js");
     },
     darker() {
-      return require("../../../../../../../_runtime/metro/09078__.js");
+      return require("../../../../../../../_runtime/metro/09072__.js");
     },
   });
 };
 export const StreamEnded = function StreamEnded(arg0) {
   const obj = shared;
   const obj4 = {};
-  const illustrationSource = _mod7874.getIllustrationSource(obj.useThemeContext().theme, {
+  const illustrationSource = _mod7861.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("../../../../../../../_runtime/metro/09077__.js");
+      return require("../../../../../../../_runtime/metro/09071__.js");
     },
     darker() {
-      return require("../../../../../../../_runtime/metro/09078__.js");
+      return require("../../../../../../../_runtime/metro/09072__.js");
     },
   });
   const merged = Object.assign(arg0);

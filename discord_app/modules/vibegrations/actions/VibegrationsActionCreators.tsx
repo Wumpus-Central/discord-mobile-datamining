@@ -5,6 +5,7 @@ import VibegrationsTypes from "../VibegrationsTypes.tsx";
 import VibegrationsAnalytics from "../lib/VibegrationsAnalytics.tsx";
 import VibegrationsPlatformUtilsDefault from "../lib/VibegrationsPlatformUtils.native.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
+import ReadStateStore from "../../../stores/ReadStateStore.tsx";
 import VibegrationsProjectStore from "../stores/VibegrationsProjectStore.tsx";
 
 require = fn;
@@ -13,7 +14,7 @@ function reloadVibegrationsAppFrames(application_id) {
 }
 function listProjects() {
   const self = this;
-  const apply = closure_10.apply;
+  const apply = closure_12.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -21,7 +22,7 @@ function listProjects() {
   }
   return applyArgumentsResult;
 }
-let closure_10 = async function _listProjects() {
+let closure_12 = async function _listProjects() {
   c5 = 0;
   c6 = 0;
   c4 = 0;
@@ -67,29 +68,29 @@ let closure_10 = async function _listProjects() {
               type = projectsFetchState.type;
             }
             if ("loading" !== type) {
-              closure_7 = tmp32;
-              const obj5 = { type: "VIBEGRATIONS_PROJECTS_FETCH_START", guildId: tmp32 };
+              closure_9 = tmp33;
+              const obj5 = { type: "VIBEGRATIONS_PROJECTS_FETCH_START", guildId: tmp33 };
               DispatcherDefault.dispatch(obj5);
               c4 = 1;
               const HTTP = HTTPUtils.HTTP;
               const request = { url: constants.VIBEGRATIONS_PROJECTS, query: null, rejectWithError: true };
-              let tmp43;
+              let tmp44;
               if (null != guild_id) {
                 const obj7 = { guild_id };
-                tmp43 = obj7;
+                tmp44 = obj7;
               }
-              request.query = tmp43;
+              request.query = tmp44;
               c5 = 2;
               c6 = 1;
               const obj8 = { value: HTTP.get(request), done: false };
               return obj8;
             } else {
-              tmp7 = null != tmp32;
+              tmp7 = null != tmp33;
               if (tmp7) {
-                tmp7 = tmp32 !== closure_7;
+                tmp7 = tmp33 !== closure_9;
               }
               if (tmp7) {
-                closure_8 = tmp32;
+                closure_10 = tmp33;
               }
             }
           }
@@ -97,8 +98,8 @@ let closure_10 = async function _listProjects() {
           if (1 === tmp7) {
             c4 = 0;
             const obj9 = { type: "VIBEGRATIONS_PROJECTS_FETCH_FAIL", guildId: closure_130_0 };
-            closure_131_1(closure_131_2[3]).dispatch(obj9);
-            const obj4 = closure_131_1(closure_131_2[3]);
+            closure_131_1(closure_131_2[5]).dispatch(obj9);
+            const obj4 = closure_131_1(closure_131_2[5]);
           } else if (arg0 === 1) {
             c6 = 3;
             throw value;
@@ -110,25 +111,35 @@ let closure_10 = async function _listProjects() {
           } else {
             body = value.body;
             const obj11 = { type: "VIBEGRATIONS_PROJECTS_FETCH_SUCCESS", projects: body, guildId: closure_130_0 };
-            closure_131_1(closure_131_2[3]).dispatch(obj11);
+            closure_131_1(closure_131_2[5]).dispatch(obj11);
+            (function forgetMissingProjects() {
+              const self = this;
+              const apply = closure_1_14.apply;
+              if (typeof apply === "unknown") {
+                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+              } else {
+                applyArgumentsResult = apply(self, arguments);
+              }
+              return applyArgumentsResult;
+            })();
             c4 = 0;
-            const obj = closure_131_1(closure_131_2[3]);
+            const obj = closure_131_1(closure_131_2[5]);
           }
-          closure_130_2 = closure_131_8;
-          closure_131_8 = null;
+          closure_130_2 = closure_131_10;
+          closure_131_10 = null;
           tmp7 = null != closure_130_2;
           if (tmp7) {
             tmp7 = closure_130_2 !== closure_130_0;
           }
           if (tmp7) {
-            tmp7 = closure_131_9(closure_130_2);
+            tmp7 = closure_131_11(closure_130_2);
           }
         }
         c6 = 3;
-      } catch (tmp44) {
+      } catch (tmp45) {
         if (tmp4 === c4) {
           c6 = tmp2;
-          throw tmp44;
+          throw tmp45;
         } else {
           c5 = tmp;
         }
@@ -136,9 +147,115 @@ let closure_10 = async function _listProjects() {
     }
   })();
 };
+let closure_14 = async function _forgetMissingProjects() {
+  if (c7 === 2) {
+    c7 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj3 = { value, done: true };
+      return obj3;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    while (true) {
+      c7 = 2;
+      let tmp4 = c6;
+      if (0 === c6) {
+        if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c7 = 3;
+          let obj4 = { value, done: true };
+          return obj4;
+        } else {
+          closure_3 = tmp;
+          closure_2 = tmp4;
+          closure_130_0 = undefined;
+          closure_130_1 = undefined;
+          if (!c13) {
+            c13 = true;
+            resourceIds = resourceIds.getResourceIds(constants.CONJURING_PROJECT);
+            _require = resourceIds[Symbol.iterator]();
+            if (_require !== undefined) {
+              c5 = 1;
+              closure_130_0 = tmp36;
+              if (null == closure_131_5.getProject(closure_130_0)) {
+                if (0 !== closure_131_4.getMentionCount(closure_130_0, closure_131_7.CONJURING_PROJECT)) {
+                  let obj5 = closure_131_0(closure_131_2[9]);
+                  let _Math = Math;
+                  c6 = 2;
+                  c7 = 1;
+                  let obj6 = { value: obj5.sleep(5000 * Math.random()), done: false };
+                  return obj6;
+                } else {
+                  let tmp46 = closure_131_15(closure_130_0);
+                }
+              }
+            }
+          }
+          c7 = 3;
+          return { value: "HermesInternal", done: null };
+        }
+      } else if (1 === tmp4) {
+        c5 = 0;
+        _require.return();
+        throw ReadStateStore;
+      } else if (2 === tmp4) {
+        if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 0;
+          _require.return();
+          c7 = 3;
+          let obj7 = { value, done: true };
+          return obj7;
+        } else if (null == closure_131_5.getProject(closure_130_0)) {
+          c5 = 2;
+          c6 = 4;
+          c7 = 1;
+          let obj8 = { value: closure_131_16(closure_130_0), done: false };
+          return obj8;
+        }
+      } else if (3 === tmp4) {
+        c5 = 1;
+        closure_130_2 = ReadStateStore;
+        let obj2 = closure_131_0(closure_131_2[10]);
+        closure_130_1 = obj2.createFailureStatus(closure_130_2);
+        let tmp14 = 403 !== closure_130_1;
+        if (tmp14) {
+          tmp14 = 404 !== closure_130_1;
+        }
+        if (!tmp14) {
+          let tmp21 = closure_131_15(closure_130_0);
+        }
+      } else if (arg0 === 1) {
+        c7 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 0;
+        _require.return();
+        c7 = 3;
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        c5 = 1;
+      }
+      c5 = 0;
+    }
+  }
+};
+function forgetProject(projectId) {
+  DispatcherDefault.dispatch({ type: "VIBEGRATIONS_PROJECT_DELETE_SUCCESS", projectId });
+}
 function getProject() {
   const self = this;
-  const apply = closure_12.apply;
+  const apply = closure_17.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -146,7 +263,7 @@ function getProject() {
   }
   return applyArgumentsResult;
 }
-let closure_12 = async function _getProject(arg0) {
+let closure_17 = async function _getProject(arg0) {
   closure_0 = arg0;
   c4 = 0;
   c5 = 0;
@@ -166,12 +283,12 @@ let closure_12 = async function _getProject(arg0) {
       ok = closure_130_2.ok;
     }
     if (ok) {
-      closure_131_1(closure_131_2[3]).dispatch({
+      closure_131_1(closure_131_2[5]).dispatch({
         type: "VIBEGRATIONS_PROJECT_UPDATE_SUCCESS",
         project: closure_130_2.body.project,
       });
       (function updateIntegrationStatus(projectId, integrationStatus) {
-        signal(closure_1_2[3]).dispatch({
+        signal(closure_1_2[5]).dispatch({
           type: "VIBEGRATIONS_PROJECT_INTEGRATION_STATUS_UPDATE",
           projectId,
           integrationStatus,
@@ -183,12 +300,12 @@ let closure_12 = async function _getProject(arg0) {
         has_activity: closure_130_2.body.has_activity,
         owner_authorization_revoked: closure_130_2.body.owner_authorization_revoked,
       });
-      closure_131_1(closure_131_2[3]);
+      closure_131_1(closure_131_2[5]);
     }
     return closure_130_2;
   })();
 };
-let closure_13 = async function _createProject(arg0) {
+let closure_18 = async function _createProject(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -230,11 +347,11 @@ let closure_13 = async function _createProject(arg0) {
       } else if (1 === tmp7) {
         c4 = 0;
         closure_129_1 = closure_3;
-        const result = closure_130_0(closure_130_2[8]).classifyCreateFailure(closure_129_1);
-        const obj5 = closure_130_0(closure_130_2[8]);
-        const vibegrationsCreateError = new closure_130_0(closure_130_2[8]).VibegrationsCreateError(
+        const result = closure_130_0(closure_130_2[10]).classifyCreateFailure(closure_129_1);
+        const obj5 = closure_130_0(closure_130_2[10]);
+        const vibegrationsCreateError = new closure_130_0(closure_130_2[10]).VibegrationsCreateError(
           result,
-          closure_130_0(closure_130_2[8]).createFailureStatus(closure_129_1),
+          closure_130_0(closure_130_2[10]).createFailureStatus(closure_129_1),
         );
         throw vibegrationsCreateError;
       } else if (arg0 === 1) {
@@ -249,7 +366,7 @@ let closure_13 = async function _createProject(arg0) {
         body = value.body;
         c4 = 0;
         const obj9 = { type: "VIBEGRATIONS_PROJECT_CREATE_SUCCESS", project: body };
-        closure_130_1(closure_130_2[3]).dispatch(obj9);
+        closure_130_1(closure_130_2[5]).dispatch(obj9);
         c6 = 3;
         const obj10 = { value: body.id, done: true };
         return obj10;
@@ -267,7 +384,7 @@ let closure_13 = async function _createProject(arg0) {
 };
 function patchProject() {
   const self = this;
-  const apply = closure_15.apply;
+  const apply = closure_20.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -275,7 +392,7 @@ function patchProject() {
   }
   return applyArgumentsResult;
 }
-let closure_15 = async function _patchProject(arg0) {
+let closure_20 = async function _patchProject(arg0) {
   closure_0 = arg0;
   c4 = 0;
   c5 = 0;
@@ -287,16 +404,16 @@ let closure_15 = async function _patchProject(arg0) {
     await HTTP.patch(request);
     closure_130_0 = value;
     if (closure_130_0.ok) {
-      closure_131_1(closure_131_2[3]).dispatch({
+      closure_131_1(closure_131_2[5]).dispatch({
         type: "VIBEGRATIONS_PROJECT_UPDATE_SUCCESS",
         project: closure_130_0.body,
       });
-      closure_131_1(closure_131_2[3]);
+      closure_131_1(closure_131_2[5]);
     }
     return closure_130_0;
   })();
 };
-let closure_16 = async function _setProjectIcon(arg0) {
+let closure_21 = async function _setProjectIcon(arg0) {
   closure_0 = arg0;
   c5 = 0;
   c6 = 0;
@@ -353,7 +470,7 @@ let closure_16 = async function _setProjectIcon(arg0) {
                   c4 = 1;
                   c5 = 3;
                   c6 = 1;
-                  const obj8 = { value: closure_131_0(closure_131_2[9]).fetchApplication(closure_130_1), done: false };
+                  const obj8 = { value: closure_131_0(closure_131_2[12]).fetchApplication(closure_130_1), done: false };
                   return obj8;
                 }
               }
@@ -387,7 +504,7 @@ let closure_16 = async function _setProjectIcon(arg0) {
 };
 function deleteProject() {
   const self = this;
-  const apply = closure_18.apply;
+  const apply = closure_23.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -395,7 +512,7 @@ function deleteProject() {
   }
   return applyArgumentsResult;
 }
-let closure_18 = async function _deleteProject() {
+let closure_23 = async function _deleteProject() {
   c5 = 0;
   c6 = 0;
   c4 = 0;
@@ -442,7 +559,7 @@ let closure_18 = async function _deleteProject() {
           c4 = 0;
           closure_129_2 = closure_3;
           const obj8 = { type: "VIBEGRATIONS_PROJECT_DELETE_FAIL", projectId: closure_129_0 };
-          closure_130_1(closure_130_2[3]).dispatch(obj8);
+          closure_130_1(closure_130_2[5]).dispatch(obj8);
           throw closure_129_2;
         } else if (arg0 === 1) {
           c6 = 3;
@@ -460,7 +577,7 @@ let closure_18 = async function _deleteProject() {
             str = "VIBEGRATIONS_PROJECT_DELETE_SUCCESS";
           }
           const obj11 = { type: str, projectId: closure_129_0 };
-          closure_130_1(closure_130_2[3]).dispatch(obj11);
+          closure_130_1(closure_130_2[5]).dispatch(obj11);
           c6 = 3;
           const obj12 = { value: closure_129_1, done: true };
           return obj12;
@@ -477,146 +594,89 @@ let closure_18 = async function _deleteProject() {
     }
   })();
 };
-let closure_19 = async function _refreshPublishedProject(arg0, arg1) {
+let closure_24 = async function _refreshPublishedProject(arg0, arg1) {
   closure_0 = arg0;
   let isPreview = arg1;
   c4 = 0;
   c5 = 0;
   let iter = (async (arg0, value) => {
-    if (c5 === 2) {
-      c5 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
+    closure_2 = tmp2;
+    closure_130_0 = closure_0;
+    const isPreview2 = isPreview.isPreview;
+    await "flex";
+    await closure_131_16(closure_130_0);
+    if (2 === tmp5) {
       if (arg0 === 1) {
+        c5 = 3;
         throw value;
       } else if (arg0 === 2) {
-        const obj3 = { value, done: true };
-        return obj3;
+        c5 = 3;
+        return { value, done: true };
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c5 = 2;
-        if (0 === c4) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            closure_3 = tmp5;
-            closure_2 = tmp2;
-            let isPreview2;
-            closure_130_0 = closure_0;
-            isPreview2 = isPreview.isPreview;
-            let body;
-            closure_130_3 = undefined;
-            closure_130_4 = undefined;
-            let project;
-            closure_130_6 = undefined;
-            c4 = 1;
-            c5 = 1;
-            return { value: "flex", done: true };
-          }
-        } else if (1 === tmp5) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj6 = { value, done: true };
-            return obj6;
-          } else {
-            c4 = 2;
-            c5 = 1;
-            const obj8 = { value: closure_131_11(closure_130_0), done: false };
-            return obj8;
-          }
+        const body = value.body;
+        closure_130_3 = body.bot_permissions_changed;
+        closure_130_4 = body.integration_installed;
+        const project = body.project;
+        if (isPreview2) {
+          let application_id = tmp54.preview_application_id;
         } else {
-          if (2 === tmp5) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              const obj9 = { value, done: true };
-              return obj9;
-            } else {
-              body = value.body;
-              closure_130_3 = body.bot_permissions_changed;
-              closure_130_4 = body.integration_installed;
-              project = body.project;
-              if (isPreview2) {
-                let application_id = tmp54.preview_application_id;
-              } else {
-                application_id = tmp54.application_id;
-              }
-              closure_130_6 = application_id;
-              if (null != closure_130_6) {
-                c4 = 3;
-                c5 = 1;
-                const obj10 = { value: closure_131_0(closure_131_2[9]).fetchApplication(closure_130_6), done: false };
-                return obj10;
-              } else {
-                const obj11 = { isPreview: isPreview2 };
-                const result = closure_131_0(closure_131_2[4]).trackVibegrationDeployed(closure_130_0, obj11);
-                c5 = 3;
-                const obj5 = closure_131_0(closure_131_2[4]);
-              }
-            }
-          } else if (3 === tmp5) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              const obj12 = { value, done: true };
-              return obj12;
-            } else {
-              const widgetConfigs = closure_131_0(closure_131_2[10]).fetchWidgetConfigs(closure_130_6, { force: true });
-              c4 = 4;
-              c5 = 1;
-              const obj13 = {
-                value: widgetConfigs.catch(() => {}),
-                done: false,
-              };
-              return obj13;
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 !== 2) {
-            let tmp8 = !isPreview2;
-            if (isPreview2) {
-              let tmp10 = closure_130_4;
-              if (closure_130_4) {
-                tmp10 = !closure_130_3;
-              }
-              tmp8 = tmp10;
-            }
-            if (tmp8) {
-              closure_131_6(closure_130_6);
-            }
-          }
-          c5 = 3;
-          const obj = { value, done: true };
-          return obj;
+          application_id = tmp54.application_id;
         }
-      } catch (tmp43) {
-        c5 = tmp;
-        throw tmp43;
+        closure_130_6 = application_id;
+        if (null != closure_130_6) {
+          c4 = 3;
+          c5 = 1;
+          return { value: closure_131_0(closure_131_2[12]).fetchApplication(closure_130_6), done: false };
+        } else {
+          const result = closure_131_0(closure_131_2[6]).trackVibegrationDeployed(closure_130_0, {
+            isPreview: isPreview2,
+          });
+          c5 = 3;
+          closure_131_0(closure_131_2[6]);
+        }
+      }
+    } else if (3 === tmp5) {
+      if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 3;
+        return { value, done: true };
+      } else {
+        const widgetConfigs = closure_131_0(closure_131_2[13]).fetchWidgetConfigs(closure_130_6, { force: true });
+        c4 = 4;
+        c5 = 1;
+        return {
+          value: widgetConfigs.catch(() => {}),
+          done: false,
+        };
+      }
+    } else if (arg0 === 1) {
+      c5 = 3;
+      throw value;
+    } else if (arg0 !== 2) {
+      let tmp8 = !isPreview2;
+      if (isPreview2) {
+        let tmp10 = closure_130_4;
+        if (closure_130_4) {
+          tmp10 = !closure_130_3;
+        }
+        tmp8 = tmp10;
+      }
+      if (tmp8) {
+        closure_131_8(closure_130_6);
       }
     }
+    return value;
   })();
   iter.next();
   return iter;
 };
 const Endpoints = fn(1074).Endpoints;
-let c7 = null;
-let c8 = null;
+const ReadStateTypes = fn(5027).ReadStateTypes;
+let c9 = null;
+let c10 = null;
+let c13 = false;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/vibegrations/actions/VibegrationsActionCreators.tsx");
 
@@ -654,7 +714,7 @@ export { listProjects };
 export { getProject };
 export const createProject = function createProject() {
   const self = this;
-  const apply = closure_13.apply;
+  const apply = closure_18.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -670,7 +730,7 @@ export const updateProjectSettings = function updateProjectSettings(first1, arg1
 };
 export const setProjectIcon = function setProjectIcon() {
   const self = this;
-  const apply = closure_16.apply;
+  const apply = closure_21.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -695,7 +755,7 @@ export const setSelectedProjectForGuild = function setSelectedProjectForGuild(gu
 };
 export const refreshPublishedProject = function refreshPublishedProject() {
   const self = this;
-  const apply = closure_19.apply;
+  const apply = closure_24.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

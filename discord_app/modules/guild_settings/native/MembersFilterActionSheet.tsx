@@ -10,7 +10,7 @@ const require = globalThis.__r;
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = { listView: { marginVertical: 8, borderRadius: nativeDefault.radii.lg, overflow: "hidden" } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);

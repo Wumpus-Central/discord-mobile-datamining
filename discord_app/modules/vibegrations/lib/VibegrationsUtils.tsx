@@ -149,16 +149,14 @@ export const eligibleVibegrationsGuilds = function eligibleVibegrationsGuilds(
     return num;
   });
 };
-export const resolveVibegrationsWorkspaceGuildId = function resolveVibegrationsWorkspaceGuildId(
-  VibegrationsCustomWidgetSheet,
-) {
+export const resolveVibegrationsWorkspaceGuildId = function resolveVibegrationsWorkspaceGuildId(VibegrationsChatStore) {
   const guildId = SelectedGuildStore.getGuildId();
   let guild = null;
   if (null != guildId) {
     guild = GuildStore.getGuild(guildId);
   }
   if (null != guild) {
-    const obj2 = { guildId: guild.id, location: VibegrationsCustomWidgetSheet };
+    const obj2 = { guildId: guild.id, location: VibegrationsChatStore };
     let result = require("VibegrationsGuildExperiment").isVibegrationsGuildEnabled(obj2);
     if (result) {
       let features = guild.features;
@@ -170,7 +168,7 @@ export const resolveVibegrationsWorkspaceGuildId = function resolveVibegrationsW
     return id;
   }
   const guildsArray = GuildStore.getGuildsArray();
-  _require = VibegrationsCustomWidgetSheet;
+  _require = VibegrationsChatStore;
   const found = guildsArray.filter((guildId) => {
     let result = VibegrationsGuildExperiment.isVibegrationsGuildEnabled({ guildId: guildId.id, location: _location });
     if (result) {

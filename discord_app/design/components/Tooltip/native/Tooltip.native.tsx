@@ -10,7 +10,7 @@ const Pressable = fn(17).Pressable;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const ON_PRESS_SPRING = { mass: 1, overshootClamping: true, damping: 27, stiffness: 300 };
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = {
   container: { position: "absolute", alignItems: "center" },
   textContainer: {

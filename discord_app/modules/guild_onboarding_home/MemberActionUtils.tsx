@@ -7,7 +7,7 @@ import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore.t
 const require = globalThis.__r;
 
 const require = fn;
-const GuildMemberFlags = fn(4485).GuildMemberFlags;
+const GuildMemberFlags = fn(4484).GuildMemberFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/MemberActionUtils.tsx");
 

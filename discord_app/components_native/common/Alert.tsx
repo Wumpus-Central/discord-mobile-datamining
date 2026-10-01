@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj = {
   alert: {
     borderRadius: nativeDefault.radii.sm,
@@ -323,7 +323,7 @@ prototype["render"] = function render() {
   }
   return tmp2Result;
 };
-Alert.contextType = fn(4570).ThemeContext;
+Alert.contextType = fn(4569).ThemeContext;
 const obj7 = { borderRadius: nativeDefault.radii.sm };
 Alert.defaultProps = { confirmColor: fn(1177).ButtonColors.BRAND, autoCloseOnConfirm: true };
 const memoResult = noop.memo((arg0) => {

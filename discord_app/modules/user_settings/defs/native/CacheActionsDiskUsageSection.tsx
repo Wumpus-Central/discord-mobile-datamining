@@ -1,8 +1,8 @@
 // discord_app/modules/user_settings/defs/native/CacheActionsDiskUsageSection.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import FileSizeUtils from "../../../../utils/FileSizeUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import FileSizeUtils from "../../../../utils/FileSizeUtils.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import Card from "../../../../design/components/Card/native/Card.native.tsx";
 import DiskUsageManagerDefault from "../../../install/native/DiskUsageManager.android.tsx";
@@ -91,7 +91,7 @@ function DiskUsageResults(report) {
   const obj5 = { variant: "heading-sm/semibold", children: null };
   const intl15 = obj(1115).intl;
   obj5.children = intl15.string(obj(1115).t.CoudPr);
-  const items1 = [closure_6(obj(4862).Heading, obj5), ,];
+  const items1 = [closure_6(obj(4841).Heading, obj5), ,];
   const roots = report.roots;
   items1[1] = roots.map((bytes) => {
     const root = bytes.root;
@@ -114,17 +114,17 @@ function DiskUsageResults(report) {
     const intl16 = tmp(1115).intl;
     ({ errorCount: obj7.errors, unmeasuredRootCount: obj7.unavailable } = report);
     obj6.children = intl16.formatToPlainString(tmp(1115).t.kt7tAT, { errors: null, unavailable: null });
-    tmp4Result = closure_6(tmp(4862).Text, obj6);
+    tmp4Result = closure_6(tmp(4841).Text, obj6);
     const obj13 = { errors: null, unavailable: null };
   }
   items1[2] = tmp4Result;
-  items[2] = closure_7(obj(5475).Stack, { children: items1 });
+  items[2] = closure_7(obj(5463).Stack, { children: items1 });
   obj2.children = items;
-  return closure_7(obj(5475).Stack, obj2);
+  return closure_7(obj(5463).Stack, obj2);
 }
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let closure_8 = createStyles.createStyles({ label: { flex: 1 }, value: { flexShrink: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/CacheActionsDiskUsageSection.tsx");

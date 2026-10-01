@@ -16,6 +16,8 @@ export const ReadStateTypes = {
   [4]: "GUILD_ONBOARDING_QUESTION",
   MESSAGE_REQUESTS: 5,
   [5]: "MESSAGE_REQUESTS",
+  CONJURING_PROJECT: 6,
+  [6]: "CONJURING_PROJECT",
 };
 export const UnreadSetting = {
   UNSET: 0,

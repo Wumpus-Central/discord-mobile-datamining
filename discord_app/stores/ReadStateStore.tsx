@@ -488,9 +488,9 @@ function mergeForGuild(guild) {
   }
   const value3 = obj.get(guild.id, tmp3.GUILD_HOME);
   const obj4 = id(11);
-  const tmp12 = id(4451);
-  const tmp12Result = id(4451)(Date.now());
-  value3.lastMessageId = obj4.fromTimestamp(id(4451)(Date.now()).subtract(24, "h").valueOf());
+  const tmp12 = id(4450);
+  const tmp12Result = id(4450)(Date.now());
+  value3.lastMessageId = obj4.fromTimestamp(id(4450)(Date.now()).subtract(24, "h").valueOf());
   guild = GuildStore.getGuild(guild.id);
   if (null != guild) {
     let prop2;
@@ -503,7 +503,7 @@ function mergeForGuild(guild) {
       value4.lastMessageId = prop2;
     }
   }
-  const subtractResult = id(4451)(Date.now()).subtract(24, "h");
+  const subtractResult = id(4450)(Date.now()).subtract(24, "h");
 }
 function mergeRelationships(relationships) {
   const currentUser = UserStore.getCurrentUser();
@@ -715,25 +715,25 @@ function handleGuildFeatureAck(id) {
   }
   return tmp;
 }
-const isEventUpcoming = fn(7142).isEventUpcoming;
-const ChannelRecord = fn(2049);
+const isEventUpcoming = fn(7134).isEventUpcoming;
+const ChannelRecord = fn(2048);
 ({ isReadableType: closure_17, isThread: closure_18, isPrivate: closure_19, ALL_CHANNEL_TYPES: closure_20, THREAD_CHANNEL_TYPES: closure_21 } = ChannelRecord);
 const Constants = fn(1074);
 ({ AnalyticsObjectTypes: closure_36, AnalyticsObjects: closure_37, AnalyticsSections: closure_38, Endpoints: closure_39, ChannelLayouts: closure_40, OverlayWidgets, CURRENT_APP_CONTEXT: closure_41, ChannelTypes: closure_42, BasicPermissions } = Constants);
 ({ Permissions: closure_44, MessageTypes: closure_45, RelationshipTypes: closure_46, ChannelTypesSets: closure_47, UserNotificationSettings: closure_48, MessageTypesSets: closure_49, AppStates: closure_50 } = Constants);
-const ActivityPanelConstants = fn(8701);
+const ActivityPanelConstants = fn(8693);
 ({ ActivityPanelModes: closure_51, FocusedActivityLayouts: closure_52 } = ActivityPanelConstants);
-const ChannelConstants = fn(2052);
+const ChannelConstants = fn(2051);
 ({ ChannelFlags: closure_53, isStaticChannelRoute: closure_54 } = ChannelConstants);
-const GuildScheduledEventStatus = fn(2051).GuildScheduledEventStatus;
-const ReadStateTypes = fn(5048).ReadStateTypes;
+const GuildScheduledEventStatus = fn(2050).GuildScheduledEventStatus;
+const ReadStateTypes = fn(5027).ReadStateTypes;
 const ThreadMemberFlags = fn(1114).ThreadMemberFlags;
 const logger = new LoggerDefault("ReadStateStore");
 function isOverlayChannelVisible() {
   return false;
 }
-if (fn(13575).OVERLAY_SUPPORTED) {
-  isOverlayChannelVisible = fn(13576).isOverlayChannelVisible;
+if (fn(13583).OVERLAY_SUPPORTED) {
+  isOverlayChannelVisible = fn(13584).isOverlayChannelVisible;
 }
 function handleMessageDelete(channelId) {
   value = ReadState.get(channelId.channelId);
@@ -1944,14 +1944,14 @@ prototype2["_ack"] = function _ack(importDefault, ackMessageId) {
         }
         DispatcherDefault.dispatch({ type: "MESSAGE_ACKED" });
         if (closure_2) {
-          asyncRequireImpl(13579, dependencyMap.paths).then((result) => {
+          asyncRequireImpl(13587, dependencyMap.paths).then((result) => {
             let obj = importDefault;
             if (importDefault == null) {
               obj = {};
             }
             result.default(channelId.channelId, obj);
           });
-          const promise = asyncRequireImpl(13579, dependencyMap.paths);
+          const promise = asyncRequireImpl(13587, dependencyMap.paths);
         }
       }
     });
@@ -1980,23 +1980,30 @@ prototype2["recalculateFlags"] = function recalculateFlags() {
 };
 prototype2["_nonChannelAck"] = function _nonChannelAck() {
   let self = this;
-  ({ outgoingAck, type } = this);
+  ({ outgoingAck, channelId, type } = this);
   if (null != outgoingAck) {
     if (ReadStateTypes.GUILD_HOME !== type) {
       if (ReadStateTypes.GUILD_EVENT !== type) {
         if (ReadStateTypes.GUILD_ONBOARDING_QUESTION !== type) {
-          let url = closure_39.USER_NON_CHANNEL_ACK(outgoingAck, type);
+          if (ReadStateTypes.NOTIFICATION_CENTER !== type) {
+            if (ReadStateTypes.MESSAGE_REQUESTS !== type) {
+              if (ReadStateTypes.CONJURING_PROJECT === type) {
+                let url = closure_39.VIBEGRATIONS_PROJECT_ACK(channelId, outgoingAck);
+              }
+            }
+            self._persisted = true;
+            self = importDefault;
+            networkAwareRetryDefault(() => {
+              const HTTP = HTTPUtils.HTTP;
+              const request = { url, body: {}, oldFormErrors: true, rejectWithError: true };
+              return HTTP.post(request);
+            });
+          }
         }
-        self._persisted = true;
-        self = importDefault;
-        networkAwareRetryDefault(() => {
-          const HTTP = HTTPUtils.HTTP;
-          const request = { url, body: {}, oldFormErrors: true, rejectWithError: true };
-          return HTTP.post(request);
-        });
+        url = closure_39.USER_NON_CHANNEL_ACK(outgoingAck, type);
       }
     }
-    url = closure_39.GUILD_FEATURE_ACK(tmp, outgoingAck, type);
+    url = closure_39.GUILD_FEATURE_ACK(channelId, outgoingAck, type);
   }
 };
 prototype2["delete"] = function delete() {
@@ -2593,6 +2600,18 @@ prototype3["getGuildUnreadsSentinel"] = function getGuildUnreadsSentinel(_guildI
 };
 prototype3["getMentionChannelIds"] = function getMentionChannelIds() {
   return ReadState.getMentionChannelIds();
+};
+prototype3["getResourceIds"] = function getResourceIds(CONJURING_PROJECT) {
+  const _readStates = ReadState._readStates;
+  value = _readStates.get(CONJURING_PROJECT);
+  let keys;
+  if (value != null) {
+    keys = value.keys();
+  }
+  if (keys == null) {
+    keys = [];
+  }
+  return Array.from(keys);
 };
 prototype3["getNonChannelAckId"] = function getNonChannelAckId(arg0) {
   const currentUser = UserStore.getCurrentUser();
@@ -3574,7 +3593,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
     });
     const item = found.forEach((messageId) => {
       value = ReadState.get(messageId.channelId, messageId.readStateType);
-      value.ack({ messageId: messageId.messageId, local: true, immediate: "HermesInternal", force: "flex", isExplicitUserAction: "bindJumpToMessage", trackAnalytics: null });
+      value.ack({ messageId: messageId.messageId, local: true, immediate: "HermesInternal", force: "flex", isExplicitUserAction: "bindOpenRoleSubscriptionOverview", trackAnalytics: null });
     });
     if (context === closure_1_41) {
       const push = navigation.push;
@@ -3969,6 +3988,26 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
         value.ackMessageId = undefined;
       }
     }
+  },
+  VIBEGRATIONS_TURN_SETTLED: function handleVibegrationsTurnSettled(projectId) {
+    value = ReadState.get(projectId.projectId, ReadStateTypes.CONJURING_PROJECT);
+    value._persisted = true;
+    value.ackMessageId = projectId.entityId;
+    value.mentionCount = value.mentionCount + 1;
+  },
+  VIBEGRATIONS_PROJECT_ACK: function handleVibegrationsProjectAck(projectId) {
+    const ifExists = ReadState.getIfExists(projectId.projectId, ReadStateTypes.CONJURING_PROJECT);
+    if (null != ifExists) {
+      if (0 !== ifExists.mentionCount) {
+        const _Date = Date;
+        const obj = { messageId: require("SnowflakeUtils").fromTimestamp(Date.now()), isExplicitUserAction: true, trackAnalytics: false, immediate: true };
+        return ifExists.ack(obj);
+      }
+    }
+    return false;
+  },
+  VIBEGRATIONS_PROJECT_DELETE_SUCCESS: function handleVibegrationsProjectDeleteSuccess(projectId) {
+    return ReadState.clear(projectId.projectId, ReadStateTypes.CONJURING_PROJECT);
   },
   APP_STATE_UPDATE: function handleAppStateUpdate(state) {
     let tmp = state.state === constants12.ACTIVE;

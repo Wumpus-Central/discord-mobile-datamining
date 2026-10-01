@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-const ContentDismissActionType = fn(2042).ContentDismissActionType;
+const ContentDismissActionType = fn(2041).ContentDismissActionType;
 const PX_64 = nativeDefault.space.PX_64;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/BadgeCustomizationProfileCoachmark.tsx");
@@ -24,7 +24,7 @@ export default function BadgeCustomizationProfileCoachmark(markAsDismissed) {
   const stateFromStores = targetRef(504).useStateFromStores(items, () =>
     visible(_undefined[9]).canUsePremiumProfileCustomization(str2.getCurrentUser()),
   );
-  reducedMotion = reducedMotion.useContext(targetRef(4580).AccessibilityPreferencesContext).reducedMotion;
+  reducedMotion = reducedMotion.useContext(targetRef(4579).AccessibilityPreferencesContext).reducedMotion;
   dependencyMap = undefined;
   const height = visible(1479)().height;
   let rect = visible(1613)();
@@ -52,7 +52,7 @@ export default function BadgeCustomizationProfileCoachmark(markAsDismissed) {
       str = "top";
     }
     str2 = str;
-    tmpResult = tmp(16825);
+    tmpResult = tmp(16848);
   }
   const items2 = [stateFromStores, visible, str2, markAsDismissed, onTryItOut, reducedMotion.enabled];
   const memo = obj2.useMemo(() => {
@@ -91,6 +91,6 @@ export default function BadgeCustomizationProfileCoachmark(markAsDismissed) {
     return obj;
   }, items2);
   const tmp4 = stateFromStores(reducedMotion.useState(null), 2);
-  const coachmark = targetRef(10792).useCoachmark(targetRef, memo);
+  const coachmark = targetRef(10789).useCoachmark(targetRef, memo);
   return null;
 }

@@ -11,17 +11,17 @@ const EmojiPickerNativeComponentDefault = EmojiPickerNativeComponent2;
 const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
-const EmojiCategoryTypes = fn(5972).EmojiCategoryTypes;
-const IMAGE_SIZE = fn(9954).IMAGE_SIZE;
+const EmojiCategoryTypes = fn(5961).EmojiCategoryTypes;
+const IMAGE_SIZE = fn(9946).IMAGE_SIZE;
 const PADDING_VERTICAL = fn(1218).PADDING_VERTICAL;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let closure_11 = createStyles.createStyles({ container: { flex: 1 } });
 const EmojiPickerNativeComponent = ReanimatedRexport.createAnimatedComponent(EmojiPickerNativeComponentDefault);
-const BottomSheetModal = fn(6241);
+const BottomSheetModal = fn(6231);
 let closure_12 = BottomSheetModal.createBottomSheetScrollableComponent(
-  fn(6241).SCROLLABLE_TYPE.SCROLLVIEW,
+  fn(6231).SCROLLABLE_TYPE.SCROLLVIEW,
   EmojiPickerNativeComponent,
 );
 const MetaQuestUtils = fn(1610);

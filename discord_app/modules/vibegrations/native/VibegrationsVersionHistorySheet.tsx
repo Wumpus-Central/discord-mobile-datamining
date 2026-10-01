@@ -1,7 +1,7 @@
 // discord_app/modules/vibegrations/native/VibegrationsVersionHistorySheet.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3715 from "../intl/VibegrationsUntranslated.messages.js";
+import _modDef3714 from "../intl/VibegrationsUntranslated.messages.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import AlertModal from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
 import NotificationCenterUtils from "../../notification_center/NotificationCenterUtils.tsx";
@@ -11,10 +11,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const fetchSourceHistory = fn(12842).fetchSourceHistory;
+const fetchSourceHistory = fn(12851).fetchSourceHistory;
 const jsx = fn(21).jsx;
 const VibegrationsVersionHistorySheet = "VibegrationsVersionHistorySheet";
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = { state: { alignItems: "center", padding: nativeDefault.space.PX_24 } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -80,8 +80,8 @@ export default function VibegrationsVersionHistorySheet(projectId) {
     const obj3 = { style: tmp.state, accessibilityRole: "alert", children: null };
     const obj4 = { variant: "text-md/normal", color: "text-muted", children: null };
     let intl2 = projectId(1115).intl;
-    obj4.children = intl2.string(tmp2(3715)["mSJn+K"]);
-    obj3.children = jsx(projectId(4862).Text, { variant: "text-md/normal", color: "text-muted", children: null });
+    obj4.children = intl2.string(tmp2(3714)["mSJn+K"]);
+    obj3.children = jsx(projectId(4841).Text, { variant: "text-md/normal", color: "text-muted", children: null });
     tmp9 = (
       <closure_6 style={tmp.state} accessibilityRole="alert">
         {null}
@@ -92,8 +92,8 @@ export default function VibegrationsVersionHistorySheet(projectId) {
     const obj5 = { style: tmp.state, children: null };
     const obj6 = { variant: "text-md/normal", color: "text-muted", children: null };
     let intl = projectId(1115).intl;
-    obj6.children = intl.string(tmp2(3715).TOmYPT);
-    obj5.children = jsx(projectId(4862).Text, { variant: "text-md/normal", color: "text-muted", children: null });
+    obj6.children = intl.string(tmp2(3714).TOmYPT);
+    obj5.children = jsx(projectId(4841).Text, { variant: "text-md/normal", color: "text-muted", children: null });
     tmp9 = <closure_6 style={tmp.state}>{null}</closure_6>;
     tmp7 = jsx;
   } else {
@@ -119,19 +119,19 @@ export default function VibegrationsVersionHistorySheet(projectId) {
         subject.sha,
       );
     });
-    tmp9 = jsx(projectId(6195).TableRowGroup, { hasIcons: false, children: null });
+    tmp9 = jsx(projectId(6185).TableRowGroup, { hasIcons: false, children: null });
   }
   const obj7 = { scrollable: true, header: null, children: null };
   const obj8 = { title: null };
   let intl3 = projectId(1115).intl;
-  obj8.title = intl3.string(onRestore(3715).jAWwzi);
-  obj7.header = tmp7(projectId(6766).BottomSheetTitleHeader, obj8);
+  obj8.title = intl3.string(onRestore(3714).jAWwzi);
+  obj7.header = tmp7(projectId(6756).BottomSheetTitleHeader, obj8);
   const tmp4 = _slicedToArray(noop.useState({ status: "loading" }), 2);
-  obj7.children = tmp7(projectId(6241).BottomSheetScrollView, {
+  obj7.children = tmp7(projectId(6231).BottomSheetScrollView, {
     contentContainerStyle: { paddingBottom: onRestore(1613)().bottom },
     children: tmp9,
   });
-  return tmp7(projectId(6814).ActionSheet, obj7);
+  return tmp7(projectId(6804).ActionSheet, obj7);
 }
 export const VIBEGRATIONS_VERSION_HISTORY_SHEET_KEY = "VibegrationsVersionHistorySheet";
 export const authoredAgo = function authoredAgo(authored_at) {
@@ -151,11 +151,11 @@ export const confirmRestoreVersion = function confirmRestoreVersion(onConfirm) {
     onConfirm: null,
   };
   const intl = util.intl;
-  obj2.title = intl.string(_modDef3715.qOUOPE);
+  obj2.title = intl.string(_modDef3714.qOUOPE);
   const intl2 = util.intl;
-  obj2.content = intl2.string(_modDef3715.k2JBj5);
+  obj2.content = intl2.string(_modDef3714.k2JBj5);
   const intl3 = util.intl;
-  obj2.confirmText = intl3.string(_modDef3715["+sRK16"]);
+  obj2.confirmText = intl3.string(_modDef3714["+sRK16"]);
   obj2.onConfirm = onConfirm;
   AlertModal.showConfirmModal(obj2);
 };

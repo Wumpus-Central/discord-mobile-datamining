@@ -4,10 +4,10 @@ import FastImageDefault from "../../../../components_native/common/FastImage.tsx
 import QuestDockUtils from "QuestDockUtils.tsx";
 import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext.tsx";
 import BountiesAndroidQuestBarSmokeAnimationExperiment from "../../experiments/BountiesAndroidQuestBarSmokeAnimationExperiment.tsx";
-import _modDef14941 from "../../../../../discord_assets/assets/quests/bounties/BG_Smoke_Full_FigmaMatched_Frame0.png.js";
-import _modDef14942 from "../../../../../discord_assets/assets/quests/bounties/BG_Smoke_Baked_Android_Frame0.png.js";
+import _modDef14947 from "../../../../../discord_assets/assets/quests/bounties/BG_Smoke_Full_FigmaMatched_Frame0.png.js";
+import _modDef14948 from "../../../../../discord_assets/assets/quests/bounties/BG_Smoke_Baked_Android_Frame0.png.js";
 import useIsQuestDockContentVisibleDefault from "useIsQuestDockContentVisible.tsx";
-import _modDef14944 from "../../../../../discord_assets/assets/quests/bounties/BG_Smoke_Full_FigmaMatched.mov.js";
+import _modDef14950 from "../../../../../discord_assets/assets/quests/bounties/BG_Smoke_Full_FigmaMatched.mov.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
@@ -21,7 +21,7 @@ function QuestDockBountySmokePlaceholder() {
     accessible: false,
     importantForAccessibility: "no-hide-descendants",
   };
-  const obj2 = { uri: _modDef14941 };
+  const obj2 = { uri: _modDef14947 };
   obj.source = obj2;
   obj.style = StyleSheet.absoluteFillObject;
   return React6(FastImageDefault, obj);
@@ -67,7 +67,7 @@ function QuestDockBountySmokeLayerIOS(paused) {
       onReadyForDisplay: null,
       onError: null,
     };
-    const obj4 = { uri: _modDef14944 };
+    const obj4 = { uri: _modDef14950 };
     obj3.source = obj4;
     if (!flag) {
       flag = !tmp5;
@@ -75,7 +75,7 @@ function QuestDockBountySmokeLayerIOS(paused) {
     obj3.paused = flag;
     obj3.onReadyForDisplay = callback;
     obj3.onError = tmp14;
-    tmp18Result = closure_8(tmp(7950).VideoComponent, obj3);
+    tmp18Result = closure_8(tmp(7937).VideoComponent, obj3);
   }
   const children = [tmp18Result];
   let tmp20 = !tmp7;
@@ -132,7 +132,7 @@ function QuestDockBountySmokeLayerAndroidAnimated(paused) {
   if (!stateFromStores) {
     tmp4Result = null;
     if (tmp11) {
-      tmp4Result = tmp4(14945);
+      tmp4Result = tmp4(14951);
     }
   }
   const tmp6Result = tmp6(noop.useState(tmp4Result), 2);
@@ -185,7 +185,7 @@ function QuestDockBountySmokeLayerAndroidAnimated(paused) {
     obj3.paused = flag;
     obj3.onLoad = callback;
     obj3.onError = tmp24;
-    tmp28Result = closure_8(tmp(7950).VideoComponent, obj3);
+    tmp28Result = closure_8(tmp(7937).VideoComponent, obj3);
   }
   const children = [tmp28Result];
   let tmp30 = !tmp8;
@@ -197,11 +197,11 @@ function QuestDockBountySmokeLayerAndroidAnimated(paused) {
       accessible: false,
       importantForAccessibility: "no-hide-descendants",
     };
-    const obj6 = { uri: tmp4(14942) };
+    const obj6 = { uri: tmp4(14948) };
     obj5.source = obj6;
     obj5.style = StyleSheet.absoluteFillObject;
-    tmp30 = closure_8(tmp4(6095), obj5);
-    const tmp4Result2 = tmp4(6095);
+    tmp30 = closure_8(tmp4(6085), obj5);
+    const tmp4Result2 = tmp4(6085);
   }
   children[1] = tmp30;
   return closure_10(closure_9, { children });
@@ -219,7 +219,7 @@ function QuestDockBountySmokeLayerAndroid(surface) {
   tmp3 = React6(QuestDockBountySmokePlaceholder, {});
 }
 const StyleSheet = fn(17).StyleSheet;
-const QuestsExperimentLocations = fn(5953).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5942).QuestsExperimentLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
 const QuestDockBountySmokeSurface = { COLLAPSED: "collapsed", EXPANDED: "expanded" };
@@ -254,11 +254,11 @@ export const useQuestDockBountySmokeCollapsedPlaceholderUrl =
       );
     if (obj2.isAndroid()) {
       if (isBountiesAndroidQuestBarSmokeAnimationEnabled) {
-        let tmp3 = _modDef14942;
+        let tmp3 = _modDef14948;
       }
       return tmp3;
     }
-    tmp3 = _modDef14941;
+    tmp3 = _modDef14947;
     obj2 = PlatformUtils;
   };
 export const useSmokeArtSize = function useSmokeArtSize() {

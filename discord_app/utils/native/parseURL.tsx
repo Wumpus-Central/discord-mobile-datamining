@@ -50,8 +50,8 @@ const Constants = fn(1074);
 } = Constants);
 const CollectiblesShopConstants = fn(1076);
 ({ CollectibleShopTab: closure_8, CollectiblesMobileShopScreen: closure_9 } = CollectiblesShopConstants);
-const UPDATE_CONFIG = fn(4844).UPDATE_CONFIG;
-const PaymentConstants = fn(4845);
+const UPDATE_CONFIG = fn(4823).UPDATE_CONFIG;
+const PaymentConstants = fn(4824);
 ({ MobileWebRedirectCheckoutDeepLinkActions: closure_11, MobileWebRedirectCheckoutDeepLinkQueryKeys: closure_12 } =
   PaymentConstants);
 const re13 = /feature\/([\w-]+)/;
@@ -168,10 +168,12 @@ export default function parseURL(ctaLink) {
                                         FEATURED_PAGE = constants3.FEATURED_PAGE;
                                         const tmp8 = _slicedToArray(findCodedLinkResult.code.split("-"), 2);
                                       } else if (CodedLink.CodedLinkType.GAME_SERVER_SHARE !== type) {
-                                        if (CodedLink.CodedLinkType.USER_PROFILE !== type) {
-                                          const _Error2 = Error;
-                                          const _HermesInternal = HermesInternal;
-                                          throw Error("Unknown coded link type: " + findCodedLinkResult.type);
+                                        if (CodedLink.CodedLinkType.GAME_ORGANIZATION_INVITE !== type) {
+                                          if (CodedLink.CodedLinkType.USER_PROFILE !== type) {
+                                            const _Error2 = Error;
+                                            const _HermesInternal = HermesInternal;
+                                            throw Error("Unknown coded link type: " + findCodedLinkResult.type);
+                                          }
                                         }
                                       }
                                     }

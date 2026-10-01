@@ -31,7 +31,7 @@ import ReactionActionCreators from "../../reactions/ReactionActionCreators.tsx";
 import ThreadActionCreatorsDefault from "../../threads/ThreadActionCreators.tsx";
 import tracking_Tracking from "../../forums/tracking/Tracking.tsx";
 import QuestActionCreators from "../../quests/QuestActionCreators.tsx";
-import _modDef11028 from "../../../../_runtime/metro/11028__.js";
+import _modDef11032 from "../../../../_runtime/metro/11032__.js";
 import reactions_ReactionUtils from "../../reactions/native/ReactionUtils.tsx";
 import computeScrollData from "../../chat/native/computeScrollData.tsx";
 import NativeChatUtilsDefault from "../../chat/native/NativeChatUtils.tsx";
@@ -214,8 +214,8 @@ function parseVoiceStateChannelIdSummary(prop) {
   }
   return map;
 }
-let closure_5 = fn(9042).updateShouldShowJumpToPresentButton;
-const RowGeneratorConstants = fn(7570);
+let closure_5 = fn(9036).updateShouldShowJumpToPresentButton;
+const RowGeneratorConstants = fn(7548);
 ({ RowType: closure_15, Changeset: closure_16 } = RowGeneratorConstants);
 const Constants = fn(1074);
 ({
@@ -434,7 +434,7 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
       stringResult = string(t.X2L3Oa);
     }
     const obj3 = { key: "ARCHIVED_POST_REACTIONS_DISABLED_TOAST", content: stringResult, icon: null };
-    tmp36Result = _modDef11028;
+    tmp36Result = _modDef11032;
     obj3.icon = tmp36Result;
     t = obj15.open(obj3);
     isForumPostResult = channel.isForumPost();
@@ -534,9 +534,9 @@ export const handleCopyLinkForumPost = function handleCopyLinkForumPost(guildId,
   ToastUtils.presentLinkCopied();
   const tmp4Result12 = ToastUtils;
 };
-export const findMessageIndex = function findMessageIndex(previousRows, ChatTTITracker) {
-  if (null != ChatTTITracker) {
-    return computeScrollData.findMessageRowIndex(previousRows, ChatTTITracker);
+export const findMessageIndex = function findMessageIndex(previousRows, startMessageId) {
+  if (null != startMessageId) {
+    return computeScrollData.findMessageRowIndex(previousRows, startMessageId);
   }
 };
 export { getVisibleMessages };
@@ -574,9 +574,9 @@ export const recordTimings = function recordTimings(channelId, hasFetched) {
   }
   TTITrackerDefault.recordMessageRender(channelId, mapped, hasFetched, hasFetched.hasMoreAfter);
 };
-export const findMessageIndexInRows = function findMessageIndexInRows(ChatTTITracker, previousRows) {
-  if (null != ChatTTITracker) {
-    return computeScrollData.findMessageRowIndex(previousRows, ChatTTITracker);
+export const findMessageIndexInRows = function findMessageIndexInRows(startMessageId, previousRows) {
+  if (null != startMessageId) {
+    return computeScrollData.findMessageRowIndex(previousRows, startMessageId);
   }
 };
 export { getMessage };

@@ -1,16 +1,16 @@
 // discord_app/modules/guilds_bar/native/utils/getGuildsBarGuildAccessibilityActions.tsx
 import shared from "../../../../design/shared.tsx";
 import GuildActionCreatorsDefault from "../../../../actions/GuildActionCreators.tsx";
-import UserSettingsActionCreators from "../../../../actions/UserSettingsActionCreators.tsx";
 import getGuildBarNeighborsDefault from "getGuildBarNeighbors.tsx";
+import moveGuildNode from "../../moveGuildNode.tsx";
 import GuildStore from "../../../../stores/GuildStore.tsx";
-import SortedGuildStore from "../../../../stores/SortedGuildStore.tsx";
 
 const require = globalThis.__r;
+const moveGuildNodeDefault = moveGuildNode;
 
 require = fn;
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/guilds_bar/native/utils/getGuildsBarGuildAccessibilityActions.tsx");
+let result = size.fileFinishedImporting("modules/guilds_bar/native/utils/getGuildsBarGuildAccessibilityActions.tsx");
 
 export default function getGuildsBarGuildAccessibilityActions(arg0) {
   _require = arg0;
@@ -31,7 +31,7 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
     ({ containingFolder, above, below } = tmp3);
     let ejhw4S = _require;
     const intl13 = require("util").intl;
-    let obj2 = { name: str };
+    const obj2 = { name: str };
     importDefault = intl13.formatToPlainString(require("util").t["2XShGC"], obj2);
     const intl14 = require("util").intl;
     const obj3 = { name: str };
@@ -43,11 +43,9 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
       obj.action = function action() {
         const items = [closure_0];
         const guildFolderLocal = GuildActionCreatorsDefault.createGuildFolderLocal(items, "");
-        UserSettingsActionCreators.saveGuildFolders(SortedGuildStore.getCompatibleGuildFolders());
-        if (null != closure_1) {
-          const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
-          AccessibilityAnnouncer.announce(closure_1);
-        }
+        const result = moveGuildNode.persistGuildsBarOrder();
+        const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
+        AccessibilityAnnouncer.announce(closure_1);
       };
       items.push(obj);
     }
@@ -74,9 +72,7 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
                 }
               }
               if (null != node) {
-                const tmp3Result = GuildActionCreatorsDefault;
-                tmp3Result.moveById(closure_0, node.id, true, true);
-                UserSettingsActionCreators.saveGuildFolders(SortedGuildStore.getCompatibleGuildFolders());
+                moveGuildNodeDefault(closure_0, node.id, true, true);
                 if (null != closure_1) {
                   const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
                   AccessibilityAnnouncer.announce(closure_1);
@@ -103,9 +99,7 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
                 }
               }
               if (null != node) {
-                const tmp2Result = GuildActionCreatorsDefault;
-                tmp2Result.moveById(closure_0, node.id, false, false);
-                UserSettingsActionCreators.saveGuildFolders(SortedGuildStore.getCompatibleGuildFolders());
+                moveGuildNodeDefault(closure_0, node.id, false, false);
               }
             }
           };
@@ -127,9 +121,7 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
               }
             }
             if (null != node) {
-              const tmp2Result = GuildActionCreatorsDefault;
-              tmp2Result.moveById(closure_0, node.id, false, false);
-              UserSettingsActionCreators.saveGuildFolders(SortedGuildStore.getCompatibleGuildFolders());
+              moveGuildNodeDefault(closure_0, node.id, false, false);
             }
           }
         };
@@ -159,9 +151,7 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
                 }
               }
               if (null != node) {
-                const tmp3Result = GuildActionCreatorsDefault;
-                tmp3Result.moveById(closure_0, node.id, true, true);
-                UserSettingsActionCreators.saveGuildFolders(SortedGuildStore.getCompatibleGuildFolders());
+                moveGuildNodeDefault(closure_0, node.id, true, true);
                 if (null != closure_1) {
                   const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
                   AccessibilityAnnouncer.announce(closure_1);
@@ -188,9 +178,7 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
                 }
               }
               if (null != node) {
-                const tmp2Result = GuildActionCreatorsDefault;
-                tmp2Result.moveById(closure_0, node.id, true, false);
-                UserSettingsActionCreators.saveGuildFolders(SortedGuildStore.getCompatibleGuildFolders());
+                moveGuildNodeDefault(closure_0, node.id, true, false);
               }
             }
           };
@@ -212,9 +200,7 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
               }
             }
             if (null != node) {
-              const tmp2Result = GuildActionCreatorsDefault;
-              tmp2Result.moveById(closure_0, node.id, true, false);
-              UserSettingsActionCreators.saveGuildFolders(SortedGuildStore.getCompatibleGuildFolders());
+              moveGuildNodeDefault(closure_0, node.id, true, false);
             }
           }
         };
@@ -239,9 +225,7 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
           if (null != tmp5) {
             const containingFolder = tmp5.containingFolder;
             if (null != containingFolder) {
-              const tmp3Result = GuildActionCreatorsDefault;
-              tmp3Result.moveById(closure_0, containingFolder.id, false, false);
-              UserSettingsActionCreators.saveGuildFolders(SortedGuildStore.getCompatibleGuildFolders());
+              moveGuildNodeDefault(closure_0, containingFolder.id, false, false);
               if (null != closure_2) {
                 const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
                 AccessibilityAnnouncer.announce(closure_2);
@@ -263,9 +247,7 @@ export default function getGuildsBarGuildAccessibilityActions(arg0) {
           if (null != tmp5) {
             const containingFolder = tmp5.containingFolder;
             if (null != containingFolder) {
-              const tmp3Result = GuildActionCreatorsDefault;
-              tmp3Result.moveById(closure_0, containingFolder.id, true, false);
-              UserSettingsActionCreators.saveGuildFolders(SortedGuildStore.getCompatibleGuildFolders());
+              moveGuildNodeDefault(closure_0, containingFolder.id, true, false);
               if (null != closure_2) {
                 const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
                 AccessibilityAnnouncer.announce(closure_2);

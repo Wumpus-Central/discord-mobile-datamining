@@ -1,6 +1,8 @@
 // discord_app/modules/premium/gifting/native/views/promotions/GiftingSKUCardsGrid.tsx
+import _modDef12 from "../../../../../../../_runtime/metro/00012__.js";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../../intl/index.native.tsx";
+import useWindowDimensionsDefault from "../../../../../screen/useWindowDimensions.native.tsx";
 import useA11yRolesNative from "../../../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
 import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../../../design/void/Pressables/native/Pressables.tsx";
@@ -14,11 +16,13 @@ import noop from "../../../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const isAvatarDecorationRecord = fn(7163).isAvatarDecorationRecord;
+const isAvatarDecorationRecord = fn(7155).isAvatarDecorationRecord;
 const isNameplateRecord = fn(1972).isNameplateRecord;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-let createStyles = fn(4866);
+const PX_12 = nativeDefault.space.PX_12;
+let closure_10 = 2 * nativeDefault.space.PX_24;
+let createStyles = fn(4845);
 let obj = {
   card: {
     width: 150,
@@ -32,7 +36,6 @@ let obj = {
     borderRadius: nativeDefault.radii.sm,
     overflow: "hidden",
     borderColor: nativeDefault.colors.BORDER_SUBTLE,
-    margin: nativeDefault.space.PX_4,
   },
   previewContainer: {
     display: "flex",
@@ -66,18 +69,17 @@ let obj3 = {
   borderRadius: nativeDefault.radii.sm,
   overflow: "hidden",
   borderColor: nativeDefault.colors.BORDER_SUBTLE,
-  margin: nativeDefault.space.PX_4,
 };
 obj.selected = { borderColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj.claimed = { opacity: 0.4 };
 obj.checkmark = { position: "absolute", opacity: 1, fontWeight: "bold" };
 let obj5 = { borderColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj.textContainer = { alignSelf: "stretch", paddingHorizontal: nativeDefault.space.PX_16, alignItems: "flex-start" };
-let closure_9 = createStyles.createStyles(obj);
-let closure_10 = noop.memo((rewardSkuId) => {
+let closure_11 = createStyles.createStyles(obj);
+let closure_12 = noop.memo((rewardSkuId) => {
   rewardSkuId = rewardSkuId.rewardSkuId;
   ({ claimed, onSelect: importDefault, isSelected } = rewardSkuId);
-  const tmp = closure_9();
+  const tmp = closure_11();
   const currentUser = useCurrentUser.useCurrentUser();
   const radioA11yNative = useA11yRolesNative.useRadioA11yNative({ selected: isSelected });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
@@ -165,29 +167,50 @@ let closure_10 = noop.memo((rewardSkuId) => {
     return React6(Pressables.PressableOpacity, obj4);
   }
 });
-createStyles = fn(4866);
-let closure_11 = createStyles.createStyles({
-  grid: { flexDirection: "row", flexWrap: "wrap", justifyContent: "center" },
+createStyles = fn(4845);
+let closure_13 = createStyles.createStyles({
+  grid: { flexDirection: "column", alignSelf: "center", gap: PX_12 },
+  row: { flexDirection: "row", gap: PX_12 },
 });
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/premium/gifting/native/views/promotions/GiftingSKUCardsGrid.tsx");
+let result = size.fileFinishedImporting("modules/premium/gifting/native/views/promotions/GiftingSKUCardsGrid.tsx");
 
-export default function GiftingSKUCardsGrid(arg0) {
-  ({ rewardsToDisplay, claimableRewards: require, onSelect: importDefault, highlightedSkuId: dependencyMap } = arg0);
-  return closure_7(closure_4, {
-    style: closure_11().grid,
-    children: rewardsToDisplay.map((rewardSkuId) => {
-      closure_0 = rewardSkuId;
-      return React5(
-        closure_10,
-        {
-          rewardSkuId,
-          claimed: !require.some((item) => item === closure_0),
-          isSelected: dependencyMap === rewardSkuId,
-          onSelect,
-        },
-        rewardSkuId,
-      );
-    }),
-  });
+export default function GiftingSKUCardsGrid(rewardsToDisplay) {
+  rewardsToDisplay = rewardsToDisplay.rewardsToDisplay;
+  ({ claimableRewards: importDefault, onSelect: dependencyMap, highlightedSkuId: noop } = rewardsToDisplay);
+  const tmp = closure_13();
+  const row = tmp;
+  let length = Math.max(1, Math.floor((useWindowDimensionsDefault().width - closure_10 + PX_12) / (150 + PX_12)));
+  const items = [rewardsToDisplay, length];
+  const memo = noop.useMemo(() => _modDef12.chunk(rewardsToDisplay, length), items);
+  if (memo.length <= 1) {
+    length = rewardsToDisplay.length;
+  }
+  const result = 150 * length;
+  const obj = { style: null, children: null };
+  const items1 = [tmp.grid, { width: result + Math.max(0, length - 1) * PX_12 }];
+  obj.style = items1;
+  obj.children = memo.map((arr, index) =>
+    React5(
+      React4,
+      {
+        style: row.row,
+        children: arr.map((rewardSkuId) => {
+          closure_0 = rewardSkuId;
+          return closure_2_7(
+            closure_2_12,
+            {
+              rewardSkuId,
+              claimed: !closure_1_1.some((item) => item === closure_0),
+              isSelected: closure_1_3 === rewardSkuId,
+              onSelect,
+            },
+            rewardSkuId,
+          );
+        }),
+      },
+      index,
+    ),
+  );
+  return closure_7(row, obj);
 }

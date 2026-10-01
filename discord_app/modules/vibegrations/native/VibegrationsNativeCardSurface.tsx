@@ -4,7 +4,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 const obj2 = {
   surface: {
     backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,

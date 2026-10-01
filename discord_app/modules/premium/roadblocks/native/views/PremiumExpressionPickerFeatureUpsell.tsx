@@ -8,7 +8,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let closure_5 = createStyles.createStyles((arg0) => {
   const obj = { container: null };
   const rect = { position: "absolute", bottom: arg0 + nativeDefault.space.PX_12, left: 0, right: 0 };
@@ -27,9 +27,10 @@ export default function PremiumExpressionPickerFeatureUpsell(bottomSheetIndex) {
   bottomSheetIndex = bottomSheetIndex.bottomSheetIndex;
   const inPortalKeyboard = bottomSheetIndex.inPortalKeyboard;
   const shouldShow = bottomSheetIndex.shouldShow;
+  ({ featureName, analyticsLocation } = bottomSheetIndex);
   const tmp3 = useKeyboardIsOpenDefault();
   ReanimatedRexport;
-  const fn = function b() {
+  const fn = function _() {
     const value1 = shouldShow.get();
     if (!value1) {
       return value1;
@@ -48,8 +49,8 @@ export default function PremiumExpressionPickerFeatureUpsell(bottomSheetIndex) {
   let tmp7 = null;
   if (!tmp3) {
     const obj = { style: tmp4.container, children: null };
-    const obj2 = { shouldShow: tmp6, featureName: bottomSheetIndex.featureName };
-    obj.children = jsx(PremiumFeatureUpsellDefault, { shouldShow: tmp6, featureName: bottomSheetIndex.featureName });
+    const obj2 = { shouldShow: tmp6, featureName, analyticsLocation };
+    obj.children = jsx(PremiumFeatureUpsellDefault, { shouldShow: tmp6, featureName, analyticsLocation });
     tmp7 = <View style={tmp4.container}>{null}</View>;
   }
   return tmp7;

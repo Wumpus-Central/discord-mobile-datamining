@@ -1,10 +1,10 @@
 // discord_app/utils/web/DesktopNativeUtils.tsx
 import logger_Logger from "../../../discord_common/js/packages/logger/Logger.tsx";
 import Storage3 from "../../../discord_common/js/packages/storage/Storage.tsx";
-import GameDetectionTypes from "../../modules/game_detection/GameDetectionTypes.tsx";
 import Client from "../../flow/Client.tsx";
 import discord_common_DiscordNative from "../../../discord_common/js/packages/discord-native-types/DiscordNative.tsx";
 import DomainMigrationUtils from "../../../discord_common/js/shared/domain-migration/DomainMigrationUtils.tsx";
+import GameDetectionDebugLevel from "../../modules/game_detection/GameDetectionDebugLevel.tsx";
 import IPCEvents from "../../../discord_common/js/packages/discord-native-types/IPCEvents.tsx";
 import FileExtensionUtils from "../../modules/media/FileExtensionUtils.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
@@ -549,7 +549,7 @@ obj2.setObserverDebugCallback = function setObserverDebugCallback(arg0, NONE, ar
 };
 obj2.clearObserverDebugCallback = function clearObserverDebugCallback() {
   const discordUtils = this.getDiscordUtils();
-  const result = discordUtils.setObserverDebugCallback(null, GameDetectionTypes.GameDetectionDebugLevel.NONE, 0);
+  const result = discordUtils.setObserverDebugCallback(null, GameDetectionDebugLevel.GameDetectionDebugLevel.NONE, 0);
 };
 obj2.shouldDisplayNotifications = function shouldDisplayNotifications() {
   const discordUtils = this.getDiscordUtils();
@@ -847,7 +847,7 @@ obj2.copyImage = function copyImage(arg0, arg1) {
             return obj5;
           } else {
             closure_129_0 = value;
-            closure_129_1 = closure_0(6076).decideFileExtension(closure_130_0, closure_130_1);
+            closure_129_1 = closure_0(6066).decideFileExtension(closure_130_0, closure_130_1);
             if (null != closure_129_1) {
               if (set2.has(closure_129_1)) {
                 closure_0 = closure_130_1;
@@ -883,7 +883,7 @@ obj2.copyImage = function copyImage(arg0, arg1) {
             }
             const _HermesInternal = HermesInternal;
             combined = "image." + closure_129_1;
-            const obj8 = closure_0(6076);
+            const obj8 = closure_0(6066);
           }
         } else if (arg0 === 1) {
           c4 = 3;
@@ -1042,7 +1042,7 @@ obj2.saveImage = function saveImage(arg0, arg1, arg2) {
                 }
                 const str3 = str2.replace(closure_1_21, "");
               } else if (!str.includes(".")) {
-                const decideFileExtensionResult = unknown(6076).decideFileExtension(tmp54, closure_1);
+                const decideFileExtensionResult = unknown(6066).decideFileExtension(tmp54, closure_1);
                 dependencyMap = decideFileExtensionResult;
                 png = dependencyMap;
                 if (dependencyMap == null) {
@@ -1050,7 +1050,7 @@ obj2.saveImage = function saveImage(arg0, arg1, arg2) {
                 }
                 const _HermesInternal = HermesInternal;
                 closure_133_0 = "" + str + "." + png;
-                const obj9 = unknown(6076);
+                const obj9 = unknown(6066);
               }
               tmp54 = getImageData(tmp54);
               c9 = 1;

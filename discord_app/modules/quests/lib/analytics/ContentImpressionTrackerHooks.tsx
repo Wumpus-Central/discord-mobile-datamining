@@ -1,7 +1,7 @@
 // discord_app/modules/quests/lib/analytics/ContentImpressionTrackerHooks.tsx
 import AdCreativeType from "../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import AnalyticsTypes from "AnalyticsTypes.tsx";
-import ContentImpressionTracker from "ContentImpressionTracker.tsx";
+import QuestImpressionContext from "QuestImpressionContext.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import QuestStore from "../../QuestStore.tsx";
 
@@ -79,10 +79,10 @@ export const useQuestStatusChanged = function useQuestStatusChanged(adContentIds
   return memo !== adCreativeType(stateFromStores[5])(memo);
 };
 export const useQuestImpressionRef = function useQuestImpressionRef() {
-  return noop.useContext(ContentImpressionTracker.QuestImpressionContext);
+  return noop.useContext(QuestImpressionContext.QuestImpressionContext);
 };
 export const useQuestImpression = function useQuestImpression() {
-  const context = noop.useContext(ContentImpressionTracker.QuestImpressionContext);
+  const context = noop.useContext(QuestImpressionContext.QuestImpressionContext);
   let current;
   if (context != null) {
     current = context.current;
@@ -90,7 +90,7 @@ export const useQuestImpression = function useQuestImpression() {
   return current;
 };
 export const useQuestImpressionId = function useQuestImpressionId() {
-  const context = noop.useContext(ContentImpressionTracker.QuestImpressionContext);
+  const context = noop.useContext(QuestImpressionContext.QuestImpressionContext);
   let current;
   if (context != null) {
     current = context.current;
@@ -102,7 +102,7 @@ export const useQuestImpressionId = function useQuestImpressionId() {
   return id;
 };
 export const useGetQuestImpressionId = function useGetQuestImpressionId() {
-  const context = noop.useContext(ContentImpressionTracker.QuestImpressionContext);
+  const context = noop.useContext(QuestImpressionContext.QuestImpressionContext);
   const items = [context];
   return noop.useCallback(() => {
     let id;

@@ -29,7 +29,7 @@ import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const UserProfileThemeTypes = fn(6825).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(6815).UserProfileThemeTypes;
 const Constants = fn(1074);
 ({
   AnalyticEvents: closure_11,
@@ -39,8 +39,8 @@ const Constants = fn(1074);
   NOOP: closure_15,
   RelationshipTypes: closure_16,
 } = Constants);
-const ParticipantTypes = fn(4887).ParticipantTypes;
-const RestrictionConfirmationConstants = fn(11131);
+const ParticipantTypes = fn(4866).ParticipantTypes;
+const RestrictionConfirmationConstants = fn(11135);
 ({ BLOCK_CONFIRMATION_ACTION_SHEET_KEY: closure_18, IGNORE_CONFIRMATION_ACTION_SHEET_KEY: closure_19 } =
   RestrictionConfirmationConstants);
 const jsxProd = fn(21);
@@ -316,8 +316,8 @@ export default function UserProfileOverflowMenu(user) {
             };
             obj2.onSuccess = onSuccess;
             obj2.impressionName = discord_common_AnalyticsUtils.ImpressionNames.BLOCK_USER_CONFIRMATION;
-            obj.openLazy(asyncRequireImpl(11132, dependencyMap.paths), collapsedCategories, obj2, "stack");
-            const tmp3 = asyncRequireImpl(11132, dependencyMap.paths);
+            obj.openLazy(asyncRequireImpl(11136, dependencyMap.paths), collapsedCategories, obj2, "stack");
+            const tmp3 = asyncRequireImpl(11136, dependencyMap.paths);
           };
           push(obj10);
           if (result) {
@@ -330,7 +330,7 @@ export default function UserProfileOverflowMenu(user) {
                 trackUserProfileAction({ action: "REPORT", analyticsLocations });
                 if (user.bot) {
                   const obj4 = ActionSheetActionCreatorsDefault;
-                  const tmp18 = asyncRequireImpl(12762, dependencyMap.paths);
+                  const tmp18 = asyncRequireImpl(12771, dependencyMap.paths);
                   const BOT_REPORT_CHOOSER_KEY = BotReportChooser.BOT_REPORT_CHOOSER_KEY;
                   const obj5 = {
                     user,
@@ -411,8 +411,8 @@ export default function UserProfileOverflowMenu(user) {
           };
           obj2.onSuccess = onSuccess;
           obj2.impressionName = discord_common_AnalyticsUtils.ImpressionNames.IGNORE_USER_CONFIRMATION;
-          obj.openLazy(asyncRequireImpl(11133, dependencyMap.paths), closure_2_19, obj2, "stack");
-          const tmp3 = asyncRequireImpl(11133, dependencyMap.paths);
+          obj.openLazy(asyncRequireImpl(11137, dependencyMap.paths), closure_2_19, obj2, "stack");
+          const tmp3 = asyncRequireImpl(11137, dependencyMap.paths);
         };
         items6.push(obj14);
       }
@@ -429,7 +429,7 @@ export default function UserProfileOverflowMenu(user) {
         label: stringResult,
         action() {
           trackUserProfileAction({ action: "PRESS_SET_FRIEND_NICKNAME", analyticsLocations });
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12761, dependencyMap.paths), {
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12770, dependencyMap.paths), {
             userId: id,
             showUserProfile,
           });

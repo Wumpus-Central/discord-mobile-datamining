@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 const obj2 = {
   button: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT },
   insideNavigatorButton: { paddingRight: 16 },

@@ -2,14 +2,14 @@
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import StageChannelPermissions from "../../StageChannelPermissions.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import actions_BoostingActionCreators from "../../../../actions/native/BoostingActionCreators.tsx";
+import BoostingActionCreators from "../../../../actions/native/BoostingActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 import PermissionStore from "../../../../stores/PermissionStore.tsx";
 
 require = fn;
-const STAGE_BOOSTING_SHEET_KEY = fn(5923).STAGE_BOOSTING_SHEET_KEY;
+const STAGE_BOOSTING_SHEET_KEY = fn(5912).STAGE_BOOSTING_SHEET_KEY;
 const Constants = fn(1074);
 ({
   AnalyticEvents: closure_7,
@@ -114,13 +114,13 @@ export default function StageBoostingActionSheet(channel) {
       });
     }
     const string3Result1 = string3(t1.pqPQL0);
-    dependencyMap = tmp(5940).useActualStageSpeakerCount(channel.id);
-    const tmpResult3 = tmp(5940);
-    useReducedMotion = tmp(5940).useStageParticipantsCount(
+    dependencyMap = tmp(5929).useActualStageSpeakerCount(channel.id);
+    const tmpResult3 = tmp(5929);
+    useReducedMotion = tmp(5929).useStageParticipantsCount(
       channel.id,
-      tmp(5934).StageChannelParticipantNamedIndex.AUDIENCE,
+      tmp(5923).StageChannelParticipantNamedIndex.AUDIENCE,
     );
-    stateFromStores2(5494)(() => {
+    stateFromStores2(5482)(() => {
       AnalyticsUtilsDefault.track(constants.BOOSTING_UPSELL_VIEWED, {
         guild_id: channel.guild_id,
         type: constants4.VIDEO_STAGE_LIMIT,
@@ -153,7 +153,7 @@ export default function StageBoostingActionSheet(channel) {
           is_moderator: stateFromStores2,
           action: constants3.DISMISS,
         };
-        actions_BoostingActionCreators.openApplyBoostModal(channel.guild_id);
+        BoostingActionCreators.openApplyBoostModal(channel.guild_id);
         AnalyticsUtilsDefault.track(constants.BOOSTING_UPSELL_CLICKED, {
           guild_id: channel.guild_id,
           type: constants4.VIDEO_STAGE_LIMIT,
@@ -161,14 +161,14 @@ export default function StageBoostingActionSheet(channel) {
           action: constants3.BOOST,
         });
       };
-      const items5 = [closure_14(tmp(5477).Button, obj4)];
+      const items5 = [closure_14(tmp(5465).Button, obj4)];
       const obj5 = { variant: "secondary", size: "lg", text: null, onPress: null };
       const intl7 = tmp(1115).intl;
       obj5.text = intl7.string(tmp(1115).t.f3Pet9);
       obj5.onPress = handleClose;
-      items5[1] = closure_14(tmp(5477).Button, obj5);
+      items5[1] = closure_14(tmp(5465).Button, obj5);
       obj3.children = items5;
-      let tmp24Result = closure_15(tmp(5942).ButtonGroup, obj3);
+      let tmp24Result = closure_15(tmp(5931).ButtonGroup, obj3);
       let tmp24 = closure_14;
     } else {
       tmp24 = closure_14;
@@ -184,19 +184,19 @@ export default function StageBoostingActionSheet(channel) {
         obj7.text = intl4.string(tmp(1115).t["NX+WJN"]);
         obj7.onPress = handleClose;
       }
-      tmp24Result = tmp24(tmp(5477).Button, obj7);
+      tmp24Result = tmp24(tmp(5465).Button, obj7);
     }
     const obj8 = { title: string3Result1, description: stringResult, illustration: null, actions: null };
     if (tmp9) {
-      let tmp24Result2 = tmp24(tmp(13365).HoldingGemSpotIllustration, { accessible: false });
+      let tmp24Result2 = tmp24(tmp(13373).HoldingGemSpotIllustration, { accessible: false });
     } else {
-      const obj9 = { source: tmp22(8248) };
-      tmp24Result2 = tmp24(tmp22(6095), obj9);
-      const tmp22Result = tmp22(6095);
+      const obj9 = { source: tmp22(8238) };
+      tmp24Result2 = tmp24(tmp22(6085), obj9);
+      const tmp22Result = tmp22(6085);
     }
     obj8.illustration = tmp24Result2;
     obj8.actions = tmp24Result;
-    return tmp24(tmp(9892).PromoSheet, obj8);
+    return tmp24(tmp(9884).PromoSheet, obj8);
   }
   const tmpResult = channel(504);
 }

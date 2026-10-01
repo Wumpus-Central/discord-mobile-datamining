@@ -20,3 +20,6 @@ export const useDesignSystemsNotificationComponents = function useDesignSystemsN
 ) {
   return apexExperiment.useConfig({ location: ToastDurationSettingNative }).enabled;
 };
+export const getDesignSystemsNotificationComponents = function getDesignSystemsNotificationComponents(location) {
+  return apexExperiment.getConfig({ location }).enabled;
+};

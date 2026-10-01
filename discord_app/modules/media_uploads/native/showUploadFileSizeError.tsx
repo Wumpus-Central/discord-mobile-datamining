@@ -2,8 +2,8 @@
 import ConstantsIOS from "../../../ConstantsIOS.tsx";
 import util from "../../../intl/index.native.tsx";
 import PremiumTypeUtils from "../../../utils/PremiumTypeUtils.tsx";
-import FileSizeUtils from "../../../utils/FileSizeUtils.tsx";
 import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
+import FileSizeUtils from "../../../utils/FileSizeUtils.tsx";
 import AlertActionCreatorsDefault from "../../../actions/AlertActionCreators.tsx";
 import UploadUtils from "../../../utils/UploadUtils.tsx";
 import NitroFileUploadExperiments from "../../premium/experiments/NitroFileUploadExperiments.tsx";
@@ -19,7 +19,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 const Constants = fn(1074);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsSections: metroRequire } = Constants);
-const FileUploadErrorTypes = fn(4859).FileUploadErrorTypes;
+const FileUploadErrorTypes = fn(4838).FileUploadErrorTypes;
 const PremiumConstants = fn(1374);
 ({ PremiumTypes: closure_8, PremiumUpsellTypes: closure_9 } = PremiumConstants);
 const constants = { NITRO_UPSELL: "Nitro Upsell", OVER_MAX_SIZE: "Over Max Size" };

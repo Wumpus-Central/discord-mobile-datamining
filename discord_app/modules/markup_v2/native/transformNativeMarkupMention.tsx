@@ -26,12 +26,12 @@ export const transformNativeMention = function transformNativeMention(value, all
     return MarkupRules.hydrateUserMention(obj5, allowGameMentions);
   } else if ("everyone" === type) {
     return MarkupRules.hydrateUserMention(
-      { fullMatch: "@everyone", id: "paddingHorizontal", everyoneOrHere: true },
+      { fullMatch: "@everyone", id: "paddingHorizontal", everyoneOrHere: "Array" },
       allowGameMentions,
     );
   } else if ("here" === type) {
     return MarkupRules.hydrateUserMention(
-      { fullMatch: "@here", id: "paddingHorizontal", everyoneOrHere: true },
+      { fullMatch: "@here", id: "paddingHorizontal", everyoneOrHere: "Array" },
       allowGameMentions,
     );
   } else if ("role" === type) {

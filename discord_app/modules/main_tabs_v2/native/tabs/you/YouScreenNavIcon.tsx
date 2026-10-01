@@ -10,16 +10,17 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const md = fn(16247).ICON_SIZE.md;
+const md = fn(16267).ICON_SIZE.md;
 const result = (nativeDefault.space.PX_32 - md) / 2;
 const TEXT_DEFAULT = nativeDefault.colors.TEXT_DEFAULT;
-const point = { shape: fn(8472).CutoutShape.Circle, x: md - 8 - 4, y: -4, size: 16 };
+const point = { shape: fn(8464).CutoutShape.Circle, x: md - 8 - 4, y: -4, size: 16 };
 let items = [point];
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 const obj = {
   container: {
     borderRadius: nativeDefault.modules.button.BORDER_RADIUS,
-    marginHorizontal: nativeDefault.space.PX_4,
+    width: nativeDefault.space.PX_64 - nativeDefault.space.PX_4,
+    flexShrink: 1,
     flexDirection: "column",
     alignItems: "center",
     padding: result,
@@ -29,12 +30,13 @@ const obj = {
 };
 let obj2 = {
   borderRadius: nativeDefault.modules.button.BORDER_RADIUS,
-  marginHorizontal: nativeDefault.space.PX_4,
+  width: nativeDefault.space.PX_64 - nativeDefault.space.PX_4,
+  flexShrink: 1,
   flexDirection: "column",
   alignItems: "center",
   padding: result,
 };
-obj.label = { marginTop: nativeDefault.space.PX_4 };
+obj.label = { marginTop: nativeDefault.space.PX_4, textAlign: "center" };
 let size = {
   backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION,
   borderRadius: nativeDefault.radii.round,
@@ -46,7 +48,7 @@ let size = {
 };
 obj.dot = size;
 let closure_8 = createStyles.createStyles(obj);
-let obj4 = { marginTop: nativeDefault.space.PX_4 };
+let obj4 = { marginTop: nativeDefault.space.PX_4, textAlign: "center" };
 size = fn(2);
 const result1 = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouScreenNavIcon.tsx");
 
@@ -92,6 +94,7 @@ export default noop.memo(
       variant: "text-xs/semibold",
       color: "text-default",
       maxFontSizeMultiplier: 2,
+      lineClamp: 1,
       children: null,
     };
     if (label == null) {

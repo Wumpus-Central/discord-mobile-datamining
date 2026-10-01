@@ -14,7 +14,7 @@ let items = [
   nativeDefault.colors.TEXT_FEEDBACK_WARNING,
   nativeDefault.colors.TEXT_FEEDBACK_INFO,
 ];
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = {
   row: { flexDirection: "row", alignItems: "flex-start", paddingVertical: nativeDefault.space.PX_4 },
   glyphGutter: { width: 40, marginRight: 12, alignItems: "center" },
@@ -106,7 +106,7 @@ export default function VibegrationsNativeStatusLine(live) {
     if (inGutter) {
       const obj2 = { style: row.glyphGutter, children: null };
       let tmp6Result = glyph;
-      if (glyph == null) {
+      if (undefined === glyph) {
         const obj3 = { size: "refresh_sm", color: TEXT_BRAND };
         tmp6Result = hasOwnProperty(MagicWandIcon.MagicWandIcon, obj3);
       }

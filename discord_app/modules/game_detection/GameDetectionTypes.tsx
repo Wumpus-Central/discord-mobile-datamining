@@ -53,14 +53,6 @@ prototype["hasTheme"] = function hasTheme(arg0) {
 
 export const GameTheme = { EROTIC: "Erotic" };
 export { DetectableGameRecord };
-export const GameDetectionDebugLevel = {
-  NONE: 0,
-  [0]: "NONE",
-  WINDOWED_ONLY: 1,
-  [1]: "WINDOWED_ONLY",
-  ALL: 2,
-  [2]: "ALL",
-};
 export const SteamReviewScoreDescription = {
   NO_USER_REVIEWS: 0,
   [0]: "NO_USER_REVIEWS",

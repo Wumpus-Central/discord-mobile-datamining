@@ -1,7 +1,7 @@
 // discord_app/modules/premium/powerups/hooks/useMaybeGetSortedBoosts.tsx
 import SnowflakeUtilsDefault from "../../../../utils/SnowflakeUtils.tsx";
 import util from "../../../../intl/index.native.tsx";
-import BoostingActionCreators from "../../../../actions/BoostingActionCreators.tsx";
+import actions_BoostingActionCreators from "../../../../actions/BoostingActionCreators.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AppliedGuildBoostStore from "../../../../stores/AppliedGuildBoostStore.tsx";
@@ -101,7 +101,7 @@ export default function useMaybeGetSortedBoosts(arg0, arg1) {
   const items10 = [arg0, stateFromStores, memo1, stateFromStores1];
   const effect1 = memo.useEffect(() => {
     if (!tmp) {
-      const appliedGuildBoostsForGuild = BoostingActionCreators.fetchAppliedGuildBoostsForGuild(closure_0, {
+      const appliedGuildBoostsForGuild = actions_BoostingActionCreators.fetchAppliedGuildBoostsForGuild(closure_0, {
         includeEnded: true,
       });
     }

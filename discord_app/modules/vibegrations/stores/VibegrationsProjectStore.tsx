@@ -121,8 +121,8 @@ prototype["isAppChannelPending"] = function isAppChannelPending(projectId) {
 prototype["isProjectDeleting"] = function isProjectDeleting(id) {
   return set2.has(id);
 };
-prototype["getSelectedProjectId"] = function getSelectedProjectId(guildId) {
-  value = map3.get(guildId);
+prototype["getSelectedProjectId"] = function getSelectedProjectId(guildId1) {
+  value = map3.get(guildId1);
   if (value == null) {
     value = null;
   }

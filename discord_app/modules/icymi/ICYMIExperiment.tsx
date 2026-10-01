@@ -53,5 +53,13 @@ export const getICYMIEnabled = function getICYMIEnabled(ICYMIManager) {
   }
   return enabled;
 };
+export const icymiEnabled = function icymiEnabled(customScores) {
+  value = LabFeatureStore.get(hide_icymi_tab);
+  let enabled = !value;
+  if (!value) {
+    enabled = apexExperiment.getConfig(obj).enabled;
+  }
+  return enabled;
+};
 export const ICYMIStaffDebuggingUtilityExperiment = apexExperiment1;
 export const ICYMIDesktopExperiment = apexExperiment2;

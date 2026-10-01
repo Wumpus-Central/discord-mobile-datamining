@@ -29,7 +29,7 @@ function LoggedEvent(arg0) {
   let tmp6Result2 = dependencyMap;
   let obj = {
     arrow: !tmp2,
-    icon: closure_8(fingerprint(10046).AnalyticsIcon, {}),
+    icon: closure_8(fingerprint(10038).AnalyticsIcon, {}),
     label: event,
     subLabel: null,
     onPress: null,
@@ -53,7 +53,7 @@ function LoggedEvent(arg0) {
   };
   obj.start = start;
   obj.end = end;
-  let items = [closure_8(fingerprint(6113).TableRow, obj)];
+  let items = [closure_8(fingerprint(6103).TableRow, obj)];
   if (!tmp2) {
     let obj2 = { collapsable: false, children: null };
     items[1] = tmp2;
@@ -66,15 +66,15 @@ function LoggedEvent(arg0) {
     const obj7 = {
       variant: "text-sm/semibold",
       color: "mobile-text-heading-primary",
-      children: map(4451)(timestamp).calendar(),
+      children: map(4450)(timestamp).calendar(),
     };
-    obj6.children = closure_8(CopyIcon(4862).Text, obj7);
+    obj6.children = closure_8(CopyIcon(4841).Text, obj7);
     let items1 = [closure_8(CommonProperty, obj6), ,];
     let tmp6Result = null != user;
     if (tmp6Result) {
       const obj8 = { name: "User ", children: null };
       const obj9 = { user };
-      obj8.children = closure_8(tmp10(9293), obj9);
+      obj8.children = closure_8(tmp10(9287), obj9);
       tmp6Result = closure_8(CommonProperty, obj8);
     }
     items1[1] = tmp6Result;
@@ -92,20 +92,20 @@ function LoggedEvent(arg0) {
       const items2 = [map.monospace, { marginRight: 4 }];
       obj11.style = items2;
       obj11.children = fingerprint;
-      const items3 = [closure_8(CopyIcon(4862).Text, obj11)];
-      CopyIcon = CopyIcon(4809).CopyIcon;
+      const items3 = [closure_8(CopyIcon(4841).Text, obj11)];
+      CopyIcon = CopyIcon(4788).CopyIcon;
       tmp6Result2 = closure_8(CopyIcon, { size: "sm" });
       items3[1] = tmp6Result2;
       obj10.children = items3;
-      let tmp6Result3 = closure_9(CopyIcon(5632).PressableOpacity, obj10);
+      let tmp6Result3 = closure_9(CopyIcon(5621).PressableOpacity, obj10);
     } else {
       const obj12 = { variant: "text-sm/medium", color: "text-muted", style: map.monospace, children: "null" };
-      tmp6Result3 = closure_8(CopyIcon(4862).Text, obj12);
+      tmp6Result3 = closure_8(CopyIcon(4841).Text, obj12);
     }
     const obj13 = { name: "Fingerprint", children: tmp6Result3 };
     items1[2] = closure_8(CommonProperty, obj13);
     obj4.children = items1;
-    const obj5 = map(4451)(timestamp);
+    const obj5 = map(4450)(timestamp);
     tmp10 = map;
     obj4 = [,];
     obj4[0] = closure_9(View, obj4);
@@ -149,7 +149,7 @@ const View = fn(17).View;
 const Fonts = fn(1074).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = {
   analyticsContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
   contentContainer: null,
@@ -224,48 +224,48 @@ export default function DevToolsAnalyticsScreen() {
   const obj3 = { title: "Actions", hasIcons: true, children: null };
   const str2 = str.toLowerCase();
   const items2 = [
-    closure_8(trimmed(6817).TableSwitchRow, {
-      icon: closure_8(trimmed(11836).ArrowsUpDownIcon, {}),
+    closure_8(trimmed(6807).TableSwitchRow, {
+      icon: closure_8(trimmed(11844).ArrowsUpDownIcon, {}),
       label: "Reverse Events",
       value: first,
       onValueChange: tmp5[1],
     }),
   ];
   const obj4 = {
-    icon: closure_8(trimmed(11836).ArrowsUpDownIcon, {}),
+    icon: closure_8(trimmed(11844).ArrowsUpDownIcon, {}),
     label: "Reverse Events",
     value: first,
     onValueChange: tmp5[1],
   };
-  items2[1] = closure_8(trimmed(6113).TableRow, {
+  items2[1] = closure_8(trimmed(6103).TableRow, {
     arrow: true,
     variant: "danger",
-    icon: closure_8(trimmed(4820).TrashIcon, { color: "text-feedback-critical" }),
+    icon: closure_8(trimmed(4799).TrashIcon, { color: "text-feedback-critical" }),
     label: "Clear Analytics Log",
-    onPress: trimmed(15338).clearAnalyticsLog,
+    onPress: trimmed(15343).clearAnalyticsLog,
   });
   obj3.children = items2;
-  const items3 = [closure_9(trimmed(6195).TableRowGroup, obj3), ,];
+  const items3 = [closure_9(trimmed(6185).TableRowGroup, obj3), ,];
   const obj5 = {
     arrow: true,
     variant: "danger",
-    icon: closure_8(trimmed(4820).TrashIcon, { color: "text-feedback-critical" }),
+    icon: closure_8(trimmed(4799).TrashIcon, { color: "text-feedback-critical" }),
     label: "Clear Analytics Log",
-    onPress: trimmed(15338).clearAnalyticsLog,
+    onPress: trimmed(15343).clearAnalyticsLog,
   };
   items3[1] = closure_8(View, {
     style: tmp.searchFieldContainer,
-    children: closure_8(trimmed(6667).SearchField, { placeholder: "Search by event name", onChange: tmp8 }),
+    children: closure_8(trimmed(6657).SearchField, { placeholder: "Search by event name", onChange: tmp8 }),
   });
   if (0 === loggedEvents.length) {
-    let tmp11Result = closure_8(tmp2(6113).TableRow, { label: "No events logged." });
+    let tmp11Result = closure_8(tmp2(6103).TableRow, { label: "No events logged." });
   } else {
     tmp11Result = null;
     if (0 === found.length) {
       const obj7 = { label: null };
       const _HermesInternal = HermesInternal;
       obj7.label = 'No events match "' + str + '"';
-      tmp11Result = closure_8(tmp2(6113).TableRow, obj7);
+      tmp11Result = closure_8(tmp2(6103).TableRow, obj7);
     }
   }
   const obj8 = {
@@ -276,13 +276,13 @@ export default function DevToolsAnalyticsScreen() {
     renderItem: null,
   };
   const obj9 = { spacing: 16, children: null };
-  items3[2] = closure_8(trimmed(6195).TableRowGroup, {
+  items3[2] = closure_8(trimmed(6185).TableRowGroup, {
     title: "Analytics Events",
     hasIcons: false,
     children: tmp11Result,
   });
   obj9.children = items3;
-  obj8.ListHeaderComponent = closure_9(trimmed(5475).Stack, obj9);
+  obj8.ListHeaderComponent = closure_9(trimmed(5463).Stack, obj9);
   obj8.contentContainerStyle = tmp.contentContainer;
   obj8.extraData = stateFromStores;
   obj8.data = reversed;
@@ -297,6 +297,6 @@ export default function DevToolsAnalyticsScreen() {
       fingerprint: item.fingerprint,
     });
   };
-  obj2.children = closure_8(trimmed(8375).FlashList, obj8);
+  obj2.children = closure_8(trimmed(8367).FlashList, obj8);
   return closure_8(View, obj2);
 }

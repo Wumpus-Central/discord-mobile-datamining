@@ -143,801 +143,280 @@ function createOrder() {
   }
   return applyArgumentsResult;
 }
-let closure_10 = async function _createOrder(arg0) {
-  if (c7 === 2) {
-    c7 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "HermesInternal", done: null };
+let closure_10 = async function _createOrder() {
+  closure_3 = tmp3;
+  ({
+    orderLineItems: closure_130_0,
+    paymentGateway: closure_130_1,
+    recipientUserId: closure_130_2,
+    isGift: closure_130_3,
+    giftInfo: closure_130_4,
+    subscriptionFacet: closure_130_5,
+    externalGatewayFacet: closure_130_6,
+    countryCode: closure_130_7,
+  } = closure_0);
+  await "flex";
+  closure_131_1(closure_131_2[6]).dispatch({ type: "ORDER_CREATE_START" });
+  if (closure_130_3) {
+    closure_130_8 = { recipient_id: closure_130_2 };
+    let gift_style;
+    if (closure_130_4 != null) {
+      gift_style = closure_130_4.gift_style;
     }
-  } else {
-    try {
-      c7 = 2;
-      if (0 === c6) {
-        if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c7 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_3 = tmp3;
-          closure_2 = tmp7;
-          closure_130_0 = undefined;
-          closure_130_1 = undefined;
-          closure_130_2 = undefined;
-          closure_130_3 = undefined;
-          closure_130_4 = undefined;
-          closure_130_5 = undefined;
-          closure_130_6 = undefined;
-          closure_130_7 = undefined;
-          ({
-            orderLineItems: closure_130_0,
-            paymentGateway: closure_130_1,
-            recipientUserId: closure_130_2,
-            isGift: closure_130_3,
-            giftInfo: closure_130_4,
-            subscriptionFacet: closure_130_5,
-            externalGatewayFacet: closure_130_6,
-            countryCode: closure_130_7,
-          } = closure_0);
-          closure_130_8 = undefined;
-          closure_130_9 = undefined;
-          let body2;
-          closure_130_11 = undefined;
-          let status;
-          let body;
-          c6 = 1;
-          c7 = 1;
-          return { value: "flex", done: true };
-        }
-      } else if (1 === tmp7) {
-        if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c7 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          closure_131_1(closure_131_2[6]).dispatch({ type: "ORDER_CREATE_START" });
-          c5 = 1;
-          if (closure_130_3) {
-            const obj5 = { recipient_id: closure_130_2 };
-            closure_130_8 = obj5;
-            let gift_style;
-            if (closure_130_4 != null) {
-              gift_style = closure_130_4.gift_style;
-            }
-            if (null != gift_style) {
-              closure_130_8.gift_style = closure_130_4.gift_style;
-            }
-            let emoji_id;
-            if (closure_130_4 != null) {
-              emoji_id = closure_130_4.emoji_id;
-            }
-            if (null != emoji_id) {
-              closure_130_8.emoji_id = closure_130_4.emoji_id;
-            }
-            let emoji_name;
-            if (closure_130_4 != null) {
-              emoji_name = closure_130_4.emoji_name;
-            }
-            if (null != emoji_name) {
-              closure_130_8.emoji_name = closure_130_4.emoji_name;
-            }
-            let sound_id;
-            if (closure_130_4 != null) {
-              sound_id = closure_130_4.sound_id;
-            }
-            if (null != sound_id) {
-              closure_130_8.sound_id = closure_130_4.sound_id;
-            }
-            let reward_sku_ids;
-            if (closure_130_4 != null) {
-              reward_sku_ids = closure_130_4.reward_sku_ids;
-            }
-            if (null != reward_sku_ids) {
-              closure_130_8.reward_sku_ids = closure_130_4.reward_sku_ids;
-            }
-            let prop;
-            if (closure_130_4 != null) {
-              prop = closure_130_4.custom_message_contents;
-            }
-            if (null != prop) {
-              closure_130_8.custom_message_contents = closure_130_4.custom_message_contents;
-            }
-          }
-          const obj7 = { order_line_items: closure_130_0, billing_facet: null, subscription_facet: null };
-          const obj8 = { payment_gateway: closure_130_1 };
-          obj7.billing_facet = obj8;
-          obj7.subscription_facet = closure_130_5;
-          closure_130_9 = obj7;
-          if (null != closure_130_7) {
-            const obj9 = { request_gateway_country_code: closure_130_7 };
-            closure_130_9.location_facet = obj9;
-          }
-          if (closure_130_3) {
-            const obj11 = { is_gift: closure_130_3, gift_customization: closure_130_8 };
-            closure_130_9.gifting_facet = obj11;
-          }
-          if (null != closure_130_6) {
-            closure_130_9.external_gateway_facet = closure_130_6;
-          }
-          const HTTP = closure_131_0(closure_131_2[4]).HTTP;
-          const request = { url: closure_131_5.ORDER_CREATE, body: closure_130_9, rejectWithError: true, retries: 3 };
-          c6 = 3;
-          c7 = 1;
-          const obj12 = { value: HTTP.post(request), done: false };
-          return obj12;
-        }
-      } else if (2 === tmp7) {
-        c5 = 0;
-        closure_130_14 = closure_4;
-        closure_1 = closure_130_14;
-        if (closure_130_14 == null) {
-          closure_1 = {};
-        }
-        closure_130_11 = closure_1;
-        status = closure_130_11.status;
-        body = closure_130_11.body;
-        const obj13 = { tags: { source: "OrderActionCreators_createOrder" }, extra: null };
-        const obj14 = { paymentGateway: closure_130_1, isGift: closure_130_3, status, code: null };
-        let code;
-        if (body != null) {
-          code = body.code;
-        }
-        obj14.code = code;
-        obj13.extra = obj14;
-        const result = closure_131_0(closure_131_2[5]).captureBillingException(closure_130_14, obj13);
-        const obj15 = { error: closure_130_14, status, code: null, paymentGateway: null, isGift: null };
-        let code1;
-        if (body != null) {
-          code1 = body.code;
-        }
-        obj15.code = code1;
-        obj15.paymentGateway = closure_130_1;
-        obj15.isGift = closure_130_3;
-        closure_131_6.error("failed to create order", obj15);
-        const obj6 = closure_131_0(closure_131_2[5]);
-        c6 = 5;
-        c7 = 1;
-        const obj16 = { value: closure_131_1(closure_131_2[6]).dispatch({ type: "ORDER_CREATE_FAIL" }), done: false };
-        return obj16;
-      } else if (3 === tmp7) {
-        if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 0;
-          c7 = 3;
-          const obj17 = { value, done: true };
-          return obj17;
-        } else {
-          body2 = value.body;
-          const obj18 = { orderId: body2.id, paymentGateway: closure_130_1, body: closure_130_9 };
-          closure_131_6.info("created order", obj18);
-          const obj19 = { type: "ORDER_CREATE_SUCCESS", orderId: body2.id, order: body2 };
-          c6 = 4;
-          c7 = 1;
-          const obj20 = { value: closure_131_1(closure_131_2[6]).dispatch(obj19), done: false };
-          return obj20;
-        }
-      } else if (4 === tmp7) {
-        if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 0;
-          c7 = 3;
-          const obj21 = { value, done: true };
-          return obj21;
-        } else {
-          c5 = 0;
-          c7 = 3;
-          const obj22 = { value: body2, done: true };
-          return obj22;
-        }
-      } else if (arg0 === 1) {
-        c7 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c7 = 3;
-        const obj = { value, done: true };
-        return obj;
-      } else {
-        throw closure_130_14;
-      }
-    } catch (tmp95) {
-      closure_4 = tmp95;
-      if (tmp4 === c5) {
-        c7 = tmp2;
-        throw tmp95;
-      } else {
-        c6 = tmp;
-      }
+    if (null != gift_style) {
+      closure_130_8.gift_style = closure_130_4.gift_style;
+    }
+    let emoji_id;
+    if (closure_130_4 != null) {
+      emoji_id = closure_130_4.emoji_id;
+    }
+    if (null != emoji_id) {
+      closure_130_8.emoji_id = closure_130_4.emoji_id;
+    }
+    let emoji_name;
+    if (closure_130_4 != null) {
+      emoji_name = closure_130_4.emoji_name;
+    }
+    if (null != emoji_name) {
+      closure_130_8.emoji_name = closure_130_4.emoji_name;
+    }
+    let sound_id;
+    if (closure_130_4 != null) {
+      sound_id = closure_130_4.sound_id;
+    }
+    if (null != sound_id) {
+      closure_130_8.sound_id = closure_130_4.sound_id;
+    }
+    let reward_sku_ids;
+    if (closure_130_4 != null) {
+      reward_sku_ids = closure_130_4.reward_sku_ids;
+    }
+    if (null != reward_sku_ids) {
+      closure_130_8.reward_sku_ids = closure_130_4.reward_sku_ids;
+    }
+    let prop;
+    if (closure_130_4 != null) {
+      prop = closure_130_4.custom_message_contents;
+    }
+    if (null != prop) {
+      closure_130_8.custom_message_contents = closure_130_4.custom_message_contents;
     }
   }
+  closure_130_9 = {
+    order_line_items: closure_130_0,
+    billing_facet: { payment_gateway: closure_130_1 },
+    subscription_facet: closure_130_5,
+  };
+  if (null != closure_130_7) {
+    closure_130_9.location_facet = { request_gateway_country_code: closure_130_7 };
+  }
+  if (closure_130_3) {
+    closure_130_9.gifting_facet = { is_gift: closure_130_3, gift_customization: closure_130_8 };
+  }
+  if (null != closure_130_6) {
+    closure_130_9.external_gateway_facet = closure_130_6;
+  }
+  const HTTP = closure_131_0(closure_131_2[4]).HTTP;
+  const request = { url: closure_131_5.ORDER_CREATE, body: closure_130_9, rejectWithError: true, retries: 3 };
+  await HTTP.post(request);
+  closure_130_14 = closure_4;
+  closure_1 = closure_130_14;
+  if (closure_130_14 == null) {
+    closure_1 = {};
+  }
+  closure_130_11 = closure_1;
+  const status = closure_130_11.status;
+  const body = closure_130_11.body;
+  const obj13 = { tags: { source: "OrderActionCreators_createOrder" }, extra: null };
+  const obj14 = { paymentGateway: closure_130_1, isGift: closure_130_3, status, code: null };
+  if (body != null) {
+    const code = body.code;
+  }
+  obj14.code = code;
+  obj13.extra = obj14;
+  const result = closure_131_0(closure_131_2[5]).captureBillingException(closure_130_14, obj13);
+  const obj15 = { error: closure_130_14, status, code: null, paymentGateway: null, isGift: null };
+  if (body != null) {
+    const code1 = body.code;
+  }
+  obj15.code = code1;
+  obj15.paymentGateway = closure_130_1;
+  obj15.isGift = closure_130_3;
+  closure_131_6.error("failed to create order", obj15);
+  closure_131_0(closure_131_2[5]);
+  await closure_131_1(closure_131_2[6]).dispatch({ type: "ORDER_CREATE_FAIL" });
+  const body2 = value.body;
+  closure_131_6.info("created order", { orderId: body2.id, paymentGateway: closure_130_1, body: closure_130_9 });
+  await closure_131_1(closure_131_2[6]).dispatch({ type: "ORDER_CREATE_SUCCESS", orderId: body2.id, order: body2 });
+  return body2;
 };
-let closure_12 = async function _getOrCreateOrder(arg0) {
-  if (c4 === 2) {
-    c4 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp3 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c4 = 2;
-      if (0 === c3) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_2 = tmp4;
-          c1 = 0;
-          closure_129_0 = undefined;
-          closure_129_1 = undefined;
-          closure_129_2 = undefined;
-          closure_129_3 = undefined;
-          closure_129_4 = undefined;
-          closure_129_5 = undefined;
-          closure_129_6 = undefined;
-          closure_129_7 = undefined;
-          closure_129_8 = undefined;
-          ({
-            skuId: closure_129_0,
-            paymentGateway: closure_129_1,
-            recipientUserId: closure_129_2,
-            purchaseType: closure_129_3,
-            isGift: closure_129_4,
-            giftInfo: closure_129_5,
-            createdAfter: closure_129_6,
-            subscriptionPlanId: closure_129_7,
-            externalGatewayFacet: closure_129_8,
-          } = closure_0);
-          closure_129_9 = undefined;
-          closure_129_10 = undefined;
-          c3 = 1;
-          c4 = 1;
-          return { value: "flex", done: true };
-        }
-      } else if (1 === tmp4) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          const obj5 = {
-            isGift: closure_129_4,
-            status: closure_130_4.DRAFT,
-            skuId: closure_129_0,
-            createdAfter: closure_129_6,
-            recipientUserId: closure_129_2,
-          };
-          c3 = 2;
-          c4 = 1;
-          const obj6 = { value: closure_130_7(obj5), done: false };
-          return obj6;
-        }
-      } else if (2 === tmp4) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj7 = { value, done: true };
-          return obj7;
-        } else {
-          closure_129_9 = value;
-          if (closure_129_9.length > 0) {
-            closure_129_10 = closure_129_9[0];
-            const obj8 = { orderId: closure_129_10.id, skuId: closure_129_0, isGift: closure_129_4 };
-            closure_130_6.info("reusing existing draft order", obj8);
-            c4 = 3;
-            const obj9 = { value: closure_129_10, done: true };
-            return obj9;
-          } else {
-            const obj10 = {
-              paymentGateway: closure_129_1,
-              recipientUserId: closure_129_2,
-              isGift: closure_129_4,
-              giftInfo: closure_129_5,
-              orderLineItems: null,
-              externalGatewayFacet: null,
-            };
-            const obj11 = {
-              sku_id: closure_129_0,
-              quantity: 1,
-              purchase_type: closure_129_3,
-              subscription_plan_id: closure_129_7,
-            };
-            const items = [obj11];
-            obj10.orderLineItems = items;
-            obj10.externalGatewayFacet = closure_129_8;
-            c3 = 3;
-            c4 = 1;
-            const obj12 = { value: closure_130_9(obj10), done: false };
-            return obj12;
-          }
-        }
-      } else if (arg0 === 1) {
-        c4 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c4 = 3;
-        const obj13 = { value, done: true };
-        return obj13;
-      } else {
-        c4 = 3;
-        const obj = { value, done: true };
-        return obj;
-      }
-    } catch (tmp21) {
-      c4 = tmp;
-      throw tmp21;
-    }
+let closure_12 = async function _getOrCreateOrder() {
+  ({
+    skuId: closure_129_0,
+    paymentGateway: closure_129_1,
+    recipientUserId: closure_129_2,
+    purchaseType: closure_129_3,
+    isGift: closure_129_4,
+    giftInfo: closure_129_5,
+    createdAfter: closure_129_6,
+    subscriptionPlanId: closure_129_7,
+    externalGatewayFacet: closure_129_8,
+  } = closure_0);
+  await "flex";
+  await closure_130_7({
+    isGift: closure_129_4,
+    status: closure_130_4.DRAFT,
+    skuId: closure_129_0,
+    createdAfter: closure_129_6,
+    recipientUserId: closure_129_2,
+  });
+  closure_129_9 = value;
+  if (closure_129_9.length > 0) {
+    closure_129_10 = closure_129_9[0];
+    closure_130_6.info("reusing existing draft order", {
+      orderId: closure_129_10.id,
+      skuId: closure_129_0,
+      isGift: closure_129_4,
+    });
+    return closure_129_10;
   }
+  const obj10 = {
+    paymentGateway: closure_129_1,
+    recipientUserId: closure_129_2,
+    isGift: closure_129_4,
+    giftInfo: closure_129_5,
+    orderLineItems: null,
+    externalGatewayFacet: closure_129_8,
+  };
+  const items = [
+    { sku_id: closure_129_0, quantity: 1, purchase_type: closure_129_3, subscription_plan_id: closure_129_7 },
+  ];
+  obj10.orderLineItems = items;
+  await closure_130_9(obj10);
+  return value;
 };
-let closure_13 = async function _patchOrderLineItem(arg0) {
-  if (c6 === 2) {
-    c6 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c6 = 2;
-      if (0 === c5) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_2 = tmp3;
-          closure_1 = tmp7;
-          closure_129_0 = undefined;
-          closure_129_1 = undefined;
-          closure_129_2 = undefined;
-          closure_129_3 = undefined;
-          ({
-            orderId: closure_129_0,
-            orderLineItemId: closure_129_1,
-            subscriptionPlanId: closure_129_2,
-            expectedRevision: closure_129_3,
-          } = closure_0);
-          closure_129_4 = undefined;
-          closure_129_5 = undefined;
-          c5 = 1;
-          c6 = 1;
-          return { value: "flex", done: true };
-        }
-      } else if (1 === tmp7) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          closure_130_1(closure_130_2[6]).dispatch({ type: "ORDER_UPDATE_START" });
-          c4 = 1;
-          const obj5 = { expected_revision: closure_129_3, subscription_plan_id: closure_129_2 };
-          closure_129_4 = obj5;
-          const HTTP = closure_130_0(closure_130_2[4]).HTTP;
-          const request = {
-            url: closure_130_5.ORDER_PATCH_LINE_ITEM(closure_129_0, closure_129_1),
-            body: closure_129_4,
-            rejectWithError: true,
-          };
-          c5 = 4;
-          c6 = 1;
-          const obj7 = { value: HTTP.patch(request), done: false };
-          return obj7;
-        }
-      } else if (2 === tmp7) {
-        c4 = 0;
-        closure_129_6 = closure_3;
-        const obj8 = { tags: { source: "OrderActionCreators_patchOrderLineItem" }, extra: null };
-        const obj9 = { orderId: closure_129_0, orderLineItemId: closure_129_1, subscriptionPlanId: closure_129_2 };
-        obj8.extra = obj9;
-        const result = closure_130_0(closure_130_2[5]).captureBillingException(closure_129_6, obj8);
-        const obj11 = { error: closure_129_6, orderId: closure_129_0, orderLineItemId: closure_129_1 };
-        closure_130_6.error("failed to update order line item id", obj11);
-        const obj6 = closure_130_0(closure_130_2[5]);
-        c5 = 3;
-        c6 = 1;
-        const obj12 = { value: closure_130_1(closure_130_2[6]).dispatch({ type: "ORDER_UPDATE_FAIL" }), done: false };
-        return obj12;
-      } else if (3 === tmp7) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          const obj13 = { value, done: true };
-          return obj13;
-        } else {
-          throw closure_129_6;
-        }
-      } else if (4 === tmp7) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 0;
-          c6 = 3;
-          const obj14 = { value, done: true };
-          return obj14;
-        } else {
-          closure_129_5 = value;
-          const obj15 = { orderId: closure_129_0, orderLineItemId: closure_129_1, body: closure_129_4 };
-          closure_130_6.info("updated order line item", obj15);
-          const obj16 = { type: "ORDER_UPDATE_SUCCESS", orderId: closure_129_0 };
-          c5 = 5;
-          c6 = 1;
-          const obj18 = { value: closure_130_1(closure_130_2[6]).dispatch(obj16), done: false };
-          return obj18;
-        }
-      } else if (arg0 === 1) {
-        c6 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c4 = 0;
-        c6 = 3;
-        const obj20 = { value, done: true };
-        return obj20;
-      } else {
-        c4 = 0;
-        c6 = 3;
-        const obj = { value: closure_129_5.body.revision, done: true };
-        return obj;
-      }
-    } catch (tmp31) {
-      closure_3 = tmp31;
-      if (tmp4 === c4) {
-        c6 = tmp2;
-        throw tmp31;
-      } else {
-        c5 = tmp;
-      }
-    }
-  }
+let closure_13 = async function _patchOrderLineItem() {
+  closure_2 = tmp3;
+  ({
+    orderId: closure_129_0,
+    orderLineItemId: closure_129_1,
+    subscriptionPlanId: closure_129_2,
+    expectedRevision: closure_129_3,
+  } = closure_0);
+  await "flex";
+  closure_130_1(closure_130_2[6]).dispatch({ type: "ORDER_UPDATE_START" });
+  closure_129_4 = { expected_revision: closure_129_3, subscription_plan_id: closure_129_2 };
+  const HTTP = closure_130_0(closure_130_2[4]).HTTP;
+  const request = {
+    url: closure_130_5.ORDER_PATCH_LINE_ITEM(closure_129_0, closure_129_1),
+    body: closure_129_4,
+    rejectWithError: true,
+  };
+  await HTTP.patch(request);
+  closure_129_6 = closure_3;
+  const result = closure_130_0(closure_130_2[5]).captureBillingException(closure_129_6, {
+    tags: { source: "OrderActionCreators_patchOrderLineItem" },
+    extra: { orderId: closure_129_0, orderLineItemId: closure_129_1, subscriptionPlanId: closure_129_2 },
+  });
+  closure_130_6.error("failed to update order line item id", {
+    error: closure_129_6,
+    orderId: closure_129_0,
+    orderLineItemId: closure_129_1,
+  });
+  closure_130_0(closure_130_2[5]);
+  await closure_130_1(closure_130_2[6]).dispatch({ type: "ORDER_UPDATE_FAIL" });
+  closure_129_5 = value;
+  closure_130_6.info("updated order line item", {
+    orderId: closure_129_0,
+    orderLineItemId: closure_129_1,
+    body: closure_129_4,
+  });
+  await closure_130_1(closure_130_2[6]).dispatch({ type: "ORDER_UPDATE_SUCCESS", orderId: closure_129_0 });
+  return closure_129_5.body.revision;
 };
-let closure_14 = async function _patchOrder(arg0) {
-  if (c6 === 2) {
-    c6 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c6 = 2;
-      if (0 === c5) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_2 = tmp3;
-          closure_1 = tmp7;
-          closure_129_0 = undefined;
-          closure_129_1 = undefined;
-          closure_129_2 = undefined;
-          closure_129_3 = undefined;
-          closure_129_4 = undefined;
-          ({
-            orderId: closure_129_0,
-            expectedRevision: closure_129_1,
-            orderLineItems: closure_129_2,
-            subscriptionFacet: closure_129_3,
-            externalGatewayFacet: closure_129_4,
-          } = closure_0);
-          closure_129_5 = undefined;
-          let body;
-          c5 = 1;
-          c6 = 1;
-          return { value: "flex", done: true };
-        }
-      } else if (1 === tmp7) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          closure_130_1(closure_130_2[6]).dispatch({ type: "ORDER_UPDATE_START" });
-          c4 = 1;
-          const obj5 = { expected_revision: closure_129_1 };
-          closure_129_5 = obj5;
-          if (null != closure_129_2) {
-            closure_129_5.order_line_items = closure_129_2;
-          }
-          if (null != closure_129_3) {
-            closure_129_5.subscription_facet = closure_129_3;
-          }
-          if (null != closure_129_4) {
-            closure_129_5.external_gateway_facet = closure_129_4;
-          }
-          const HTTP = closure_130_0(closure_130_2[4]).HTTP;
-          const request = {
-            url: closure_130_5.ORDER_UPDATE(closure_129_0),
-            body: closure_129_5,
-            rejectWithError: true,
-          };
-          c5 = 4;
-          c6 = 1;
-          const obj7 = { value: HTTP.patch(request), done: false };
-          return obj7;
-        }
-      } else if (2 === tmp7) {
-        c4 = 0;
-        closure_129_7 = closure_3;
-        const obj8 = { tags: { source: "OrderActionCreators_patchOrder" }, extra: null };
-        const obj9 = { orderId: closure_129_0, orderLineItems: closure_129_2 };
-        obj8.extra = obj9;
-        const result = closure_130_0(closure_130_2[5]).captureBillingException(closure_129_7, obj8);
-        const obj11 = { error: closure_129_7, orderId: closure_129_0 };
-        closure_130_6.error("failed to patch order", obj11);
-        const obj6 = closure_130_0(closure_130_2[5]);
-        c5 = 3;
-        c6 = 1;
-        const obj12 = { value: closure_130_1(closure_130_2[6]).dispatch({ type: "ORDER_UPDATE_FAIL" }), done: false };
-        return obj12;
-      } else if (3 === tmp7) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          const obj13 = { value, done: true };
-          return obj13;
-        } else {
-          throw closure_129_7;
-        }
-      } else if (4 === tmp7) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 0;
-          c6 = 3;
-          const obj14 = { value, done: true };
-          return obj14;
-        } else {
-          body = value.body;
-          const obj15 = { orderId: closure_129_0, body: closure_129_5 };
-          closure_130_6.info("patched order", obj15);
-          const obj16 = { type: "ORDER_UPDATE_SUCCESS", orderId: closure_129_0 };
-          c5 = 5;
-          c6 = 1;
-          const obj17 = { value: closure_130_1(closure_130_2[6]).dispatch(obj16), done: false };
-          return obj17;
-        }
-      } else if (arg0 === 1) {
-        c6 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c4 = 0;
-        c6 = 3;
-        const obj19 = { value, done: true };
-        return obj19;
-      } else {
-        c4 = 0;
-        c6 = 3;
-        const obj = { value: body, done: true };
-        return obj;
-      }
-    } catch (tmp48) {
-      closure_3 = tmp48;
-      if (tmp4 === c4) {
-        c6 = tmp2;
-        throw tmp48;
-      } else {
-        c5 = tmp;
-      }
-    }
+let closure_14 = async function _patchOrder() {
+  closure_2 = tmp3;
+  ({
+    orderId: closure_129_0,
+    expectedRevision: closure_129_1,
+    orderLineItems: closure_129_2,
+    subscriptionFacet: closure_129_3,
+    externalGatewayFacet: closure_129_4,
+  } = closure_0);
+  await "flex";
+  closure_130_1(closure_130_2[6]).dispatch({ type: "ORDER_UPDATE_START" });
+  closure_129_5 = { expected_revision: closure_129_1 };
+  if (null != closure_129_2) {
+    closure_129_5.order_line_items = closure_129_2;
   }
+  if (null != closure_129_3) {
+    closure_129_5.subscription_facet = closure_129_3;
+  }
+  if (null != closure_129_4) {
+    closure_129_5.external_gateway_facet = closure_129_4;
+  }
+  const HTTP = closure_130_0(closure_130_2[4]).HTTP;
+  const request = { url: closure_130_5.ORDER_UPDATE(closure_129_0), body: closure_129_5, rejectWithError: true };
+  await HTTP.patch(request);
+  closure_129_7 = closure_3;
+  const result = closure_130_0(closure_130_2[5]).captureBillingException(closure_129_7, {
+    tags: { source: "OrderActionCreators_patchOrder" },
+    extra: { orderId: closure_129_0, orderLineItems: closure_129_2 },
+  });
+  closure_130_6.error("failed to patch order", { error: closure_129_7, orderId: closure_129_0 });
+  closure_130_0(closure_130_2[5]);
+  await closure_130_1(closure_130_2[6]).dispatch({ type: "ORDER_UPDATE_FAIL" });
+  const body = value.body;
+  closure_130_6.info("patched order", { orderId: closure_129_0, body: closure_129_5 });
+  await closure_130_1(closure_130_2[6]).dispatch({ type: "ORDER_UPDATE_SUCCESS", orderId: closure_129_0 });
+  return body;
 };
-let closure_15 = async function _updateOrder(arg0) {
-  if (c6 === 2) {
-    c6 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "HermesInternal", done: null };
+let closure_15 = async function _updateOrder() {
+  closure_2 = tmp3;
+  ({ orderId: closure_129_0, giftInfo: closure_129_1, expectedRevision: closure_129_2 } = closure_0);
+  await "flex";
+  closure_130_1(closure_130_2[6]).dispatch({ type: "ORDER_UPDATE_START" });
+  closure_129_3 = { expected_revision: closure_129_2 };
+  if (null != closure_129_1) {
+    closure_129_4 = {};
+    if (null != closure_129_1.recipient_id) {
+      closure_129_4.recipient_id = closure_129_1.recipient_id;
     }
-  } else {
-    try {
-      c6 = 2;
-      if (0 === c5) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_2 = tmp3;
-          closure_1 = tmp7;
-          closure_129_0 = undefined;
-          closure_129_1 = undefined;
-          closure_129_2 = undefined;
-          ({ orderId: closure_129_0, giftInfo: closure_129_1, expectedRevision: closure_129_2 } = closure_0);
-          closure_129_3 = undefined;
-          closure_129_4 = undefined;
-          closure_129_5 = undefined;
-          c5 = 1;
-          c6 = 1;
-          return { value: "flex", done: true };
-        }
-      } else if (1 === tmp7) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          closure_130_1(closure_130_2[6]).dispatch({ type: "ORDER_UPDATE_START" });
-          c4 = 1;
-          const obj5 = { expected_revision: closure_129_2 };
-          closure_129_3 = obj5;
-          if (null != closure_129_1) {
-            closure_129_4 = {};
-            if (null != closure_129_1.recipient_id) {
-              closure_129_4.recipient_id = closure_129_1.recipient_id;
-            }
-            if (null != closure_129_1.gift_style) {
-              closure_129_4.gift_style = closure_129_1.gift_style;
-            }
-            if (null != closure_129_1.emoji_id) {
-              closure_129_4.emoji_id = closure_129_1.emoji_id;
-            }
-            if (null != closure_129_1.emoji_name) {
-              closure_129_4.emoji_name = closure_129_1.emoji_name;
-            }
-            if (null != closure_129_1.sound_id) {
-              closure_129_4.sound_id = closure_129_1.sound_id;
-            }
-            if (null != closure_129_1.reward_sku_ids) {
-              closure_129_4.reward_sku_ids = closure_129_1.reward_sku_ids;
-            }
-            if (null != closure_129_1.custom_message_contents) {
-              closure_129_4.custom_message_contents = closure_129_1.custom_message_contents;
-            }
-            const obj7 = { is_gift: true, gift_customization: closure_129_4 };
-            closure_129_3.gifting_facet = obj7;
-          }
-          const HTTP = closure_130_0(closure_130_2[4]).HTTP;
-          const request = {
-            url: closure_130_5.ORDER_UPDATE(closure_129_0),
-            body: closure_129_3,
-            rejectWithError: true,
-          };
-          c5 = 4;
-          c6 = 1;
-          const obj8 = { value: HTTP.patch(request), done: false };
-          return obj8;
-        }
-      } else if (2 === tmp7) {
-        c4 = 0;
-        closure_129_6 = closure_3;
-        const obj9 = { tags: { source: "OrderActionCreators_updateOrder" }, extra: null };
-        const obj11 = { orderId: closure_129_0, giftInfo: closure_129_1 };
-        obj9.extra = obj11;
-        const result = closure_130_0(closure_130_2[5]).captureBillingException(closure_129_6, obj9);
-        const obj12 = { error: closure_129_6, orderId: closure_129_0 };
-        closure_130_6.error("failed to update order", obj12);
-        const obj6 = closure_130_0(closure_130_2[5]);
-        c5 = 3;
-        c6 = 1;
-        const obj13 = { value: closure_130_1(closure_130_2[6]).dispatch({ type: "ORDER_UPDATE_FAIL" }), done: false };
-        return obj13;
-      } else if (3 === tmp7) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c6 = 3;
-          const obj14 = { value, done: true };
-          return obj14;
-        } else {
-          throw closure_129_6;
-        }
-      } else if (4 === tmp7) {
-        if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 0;
-          c6 = 3;
-          const obj15 = { value, done: true };
-          return obj15;
-        } else {
-          closure_129_5 = value;
-          const obj16 = { orderId: closure_129_0, body: closure_129_3 };
-          closure_130_6.info("updated order with gift customization", obj16);
-          const obj17 = { type: "ORDER_UPDATE_SUCCESS", orderId: closure_129_0 };
-          c5 = 5;
-          c6 = 1;
-          const obj18 = { value: closure_130_1(closure_130_2[6]).dispatch(obj17), done: false };
-          return obj18;
-        }
-      } else if (arg0 === 1) {
-        c6 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c4 = 0;
-        c6 = 3;
-        const obj20 = { value, done: true };
-        return obj20;
-      } else {
-        c4 = 0;
-        c6 = 3;
-        const obj = { value: closure_129_5.body.revision, done: true };
-        return obj;
-      }
-    } catch (tmp72) {
-      closure_3 = tmp72;
-      if (tmp4 === c4) {
-        c6 = tmp2;
-        throw tmp72;
-      } else {
-        c5 = tmp;
-      }
+    if (null != closure_129_1.gift_style) {
+      closure_129_4.gift_style = closure_129_1.gift_style;
     }
+    if (null != closure_129_1.emoji_id) {
+      closure_129_4.emoji_id = closure_129_1.emoji_id;
+    }
+    if (null != closure_129_1.emoji_name) {
+      closure_129_4.emoji_name = closure_129_1.emoji_name;
+    }
+    if (null != closure_129_1.sound_id) {
+      closure_129_4.sound_id = closure_129_1.sound_id;
+    }
+    if (null != closure_129_1.reward_sku_ids) {
+      closure_129_4.reward_sku_ids = closure_129_1.reward_sku_ids;
+    }
+    if (null != closure_129_1.custom_message_contents) {
+      closure_129_4.custom_message_contents = closure_129_1.custom_message_contents;
+    }
+    closure_129_3.gifting_facet = { is_gift: true, gift_customization: closure_129_4 };
   }
+  const HTTP = closure_130_0(closure_130_2[4]).HTTP;
+  const request = { url: closure_130_5.ORDER_UPDATE(closure_129_0), body: closure_129_3, rejectWithError: true };
+  await HTTP.patch(request);
+  closure_129_6 = closure_3;
+  const result = closure_130_0(closure_130_2[5]).captureBillingException(closure_129_6, {
+    tags: { source: "OrderActionCreators_updateOrder" },
+    extra: { orderId: closure_129_0, giftInfo: closure_129_1 },
+  });
+  closure_130_6.error("failed to update order", { error: closure_129_6, orderId: closure_129_0 });
+  closure_130_0(closure_130_2[5]);
+  await closure_130_1(closure_130_2[6]).dispatch({ type: "ORDER_UPDATE_FAIL" });
+  closure_129_5 = value;
+  closure_130_6.info("updated order with gift customization", { orderId: closure_129_0, body: closure_129_3 });
+  await closure_130_1(closure_130_2[6]).dispatch({ type: "ORDER_UPDATE_SUCCESS", orderId: closure_129_0 });
+  return closure_129_5.body.revision;
 };
 let closure_16 = async function _discardOrder() {
   closure_1 = tmp4;
@@ -1364,7 +843,7 @@ let closure_19 = async function _cancelOrderSigning() {
     }
   })();
 };
-const OrderStatus = fn(4845).OrderStatus;
+const OrderStatus = fn(4824).OrderStatus;
 const Endpoints = fn(1074).Endpoints;
 const tmp2 = new LoggerDefault("OrderActionCreators");
 let closure_6 = tmp2;

@@ -8,7 +8,7 @@ const require = globalThis.__r;
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = {
   container: { flexDirection: "row" },
   names: { marginStart: 4, paddingRight: 1 },

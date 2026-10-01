@@ -4,7 +4,7 @@ import DispatcherDefault from "../../Dispatcher.tsx";
 import RunningGameStore from "../game_detection/RunningGameStore.native.tsx";
 
 const require = fn;
-const DefaultGameModeSettings = fn(4857).DefaultGameModeSettings;
+const DefaultGameModeSettings = fn(4836).DefaultGameModeSettings;
 let obj = {};
 let merged = Object.assign(DefaultGameModeSettings);
 let c5 = false;
@@ -57,27 +57,32 @@ Object.defineProperty(prototype, "hasRunningGame", {
   },
   set: undefined
 });
-Object.defineProperty(prototype, "isThrottling", {
-  get: function isThrottling() {
+Object.defineProperty(prototype, "isActive", {
+  get: function isActive() {
     const enabled = obj.enabled;
     let tmp = !enabled;
     if (enabled) {
       tmp = !c5;
     }
-    let tmp3 = !tmp;
+    let enabled2 = !tmp;
     if (!tmp) {
       obj = require("GameModeExperiment");
-      let enabled1 = obj.getGameModeExperimentConfig({ location: "GameModeStore" }).enabled;
-      if (enabled1) {
-        let tmp8 = !focused;
-        if (!focused) {
-          tmp8 = !hovered;
-        }
-        enabled1 = tmp8;
-      }
-      tmp3 = enabled1;
+      enabled2 = obj.getGameModeExperimentConfig({ location: "GameModeStore" }).enabled;
     }
-    return tmp3;
+    return enabled2;
+  },
+  set: undefined
+});
+Object.defineProperty(prototype, "isThrottling", {
+  get: function isThrottling() {
+    let isActive = this.isActive;
+    if (isActive) {
+      isActive = !focused;
+    }
+    if (isActive) {
+      isActive = !hovered;
+    }
+    return isActive;
   },
   set: undefined
 });

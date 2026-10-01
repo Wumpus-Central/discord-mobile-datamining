@@ -10,10 +10,10 @@ import GuildRoleStore from "../../../stores/GuildRoleStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const EVERYONE_CHANNEL_ID = fn(6893).EVERYONE_CHANNEL_ID;
+const EVERYONE_CHANNEL_ID = fn(6884).EVERYONE_CHANNEL_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = {
   header: {
     flexDirection: "row",
@@ -74,7 +74,7 @@ export default function RoleMembersActionSheet(guildId) {
   let obj2 = guildId(504);
   const tmp9 = roleId;
   const result = roleId(11).castGuildIdAsEveryoneGuildRoleId(guildId);
-  const tmp11 = roleId(6744)(guildId);
+  const tmp11 = roleId(6734)(guildId);
   let tmp12 = null;
   if (roleId !== result) {
     let tmp13;
@@ -105,9 +105,9 @@ export default function RoleMembersActionSheet(guildId) {
     }
     obj5.channelId = channelId;
     obj5.roleId = roleId;
-    obj4.children = closure_8(tmp9(11288), obj5);
-    tmp16Result = closure_8(tmp3(6767).BottomSheet, obj4);
-    let tmp9Result = tmp9(11288);
+    obj4.children = closure_8(tmp9(11296), obj5);
+    tmp16Result = closure_8(tmp3(6757).BottomSheet, obj4);
+    let tmp9Result = tmp9(11296);
   }
   return tmp16Result;
 }

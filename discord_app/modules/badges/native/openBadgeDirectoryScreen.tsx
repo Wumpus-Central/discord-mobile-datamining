@@ -13,7 +13,7 @@ export const openBadgeDirectoryScreen = function openBadgeDirectoryScreen(arg0) 
     obj = {};
   }
   ModalActionCreatorsDefault.pushLazy(
-    asyncRequireImpl(10860, dependencyMap.paths),
+    asyncRequireImpl(10857, dependencyMap.paths),
     { targetUserId: obj.targetUserId },
     c3,
   );

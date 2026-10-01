@@ -2,12 +2,12 @@
 import util from "../../../../intl/index.native.tsx";
 import user from "../../../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
 import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
-import BoostingActionCreators from "../../../../actions/BoostingActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import actions_BillingActionCreators from "../../../billing/actions/BillingActionCreators.tsx";
 import UserSettingsModalActionCreatorsDefault from "../../../../actions/UserSettingsModalActionCreators.tsx";
 import UserSettingsUtils from "../../../../utils/UserSettingsUtils.tsx";
 import SubscriptionPlanActionCreators from "../../../../actions/SubscriptionPlanActionCreators.tsx";
+import actions_BoostingActionCreators from "../../../../actions/BoostingActionCreators.tsx";
 import GuildBoostSlotsInventoryDefault from "../../../premium/native/GuildBoostSlotsInventory.tsx";
 import BoostingUnavailablePillDefault from "../../../premium/premium_group/native/BoostingUnavailablePill.tsx";
 import BoostingCountDownPillDefault from "../../../premium/fractional/native/BoostingCountDownPill.tsx";
@@ -30,11 +30,11 @@ const Constants = fn(1074);
 const FractionalPremiumStates = fn(1374).FractionalPremiumStates;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = {
   upsellSection: { position: "relative" },
   background: { position: "absolute", width: "100%" },
-  scroller: { flex: 1, backgroundColor: fn(5950).DARK_TRANSPARENT_LIGHT_WHITE_500, marginTop: 16 },
+  scroller: { flex: 1, backgroundColor: fn(5939).DARK_TRANSPARENT_LIGHT_WHITE_500, marginTop: 16 },
   subscriptionHeader: { paddingHorizontal: 16, paddingBottom: 32 },
   blurb: { lineHeight: 18 },
   blurbNotLast: { marginBottom: 8 },
@@ -68,7 +68,7 @@ const prototype = UserSettingsPremiumGuildSubscriptions.prototype;
 prototype["componentDidMount"] = function componentDidMount() {
   const self = this;
   if (!this.props.hasFetchedSlots) {
-    const guildBoostSlots = BoostingActionCreators.fetchGuildBoostSlots();
+    const guildBoostSlots = actions_BoostingActionCreators.fetchGuildBoostSlots();
   }
   if (tmp4) {
     const premiumSubscriptionPlans = SubscriptionPlanActionCreators.fetchPremiumSubscriptionPlans();
@@ -152,7 +152,7 @@ prototype["render"] = function render() {
   obj3.children = items;
   return __initData(hasOwnProperty, obj3);
 };
-UserSettingsPremiumGuildSubscriptions.contextType = fn(4570).ThemeContext;
+UserSettingsPremiumGuildSubscriptions.contextType = fn(4569).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/user_settings/premium/native/UserSettingsPremiumGuildSubscriptions.tsx",
@@ -176,12 +176,12 @@ export default function ConnectedUserSettingsPremiumGuildSubscriptions(route) {
     flag = true;
   }
   let obj = require("useSubscriptionPlansLoaded");
-  ({ fractionalState: c2, endsAt } = flag(7009)({ forceFetch: true }));
-  const tmp3 = flag(7009)({ forceFetch: true });
+  ({ fractionalState: c2, endsAt } = flag(7000)({ forceFetch: true }));
+  const tmp3 = flag(7000)({ forceFetch: true });
   isInReverseTrial = require("ReverseTrialUtils").useIsInReverseTrial();
   const tmpResult = require("ReverseTrialUtils");
-  fpDurationText = flag(13198)(endsAt, tmp(13198).CountDownMessageTypes.LONG_TIME_LEFT);
-  const tmp4 = flag(13198);
+  fpDurationText = flag(13206)(endsAt, tmp(13206).CountDownMessageTypes.LONG_TIME_LEFT);
+  const tmp4 = flag(13206);
   const items = [GuildBoostSlotStore, BillingInfoStore, SubscriptionPlanStore, UserStore];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
     const obj = {

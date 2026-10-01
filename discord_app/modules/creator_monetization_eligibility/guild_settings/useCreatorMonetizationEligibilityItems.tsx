@@ -156,8 +156,8 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
       let fn;
       if (!noRecentViolations) {
         fn = () => {
-          const tmp = onEligibilityBecameStale(4549);
-          return tmp(onEligibilityBecameStale(2111).getSubmitRequestURL());
+          const tmp = onEligibilityBecameStale(4548);
+          return tmp(onEligibilityBecameStale(2110).getSubmitRequestURL());
         };
       }
       obj2.actionHandler = fn;

@@ -70,6 +70,7 @@ let obj = {
   logGatewayEvents: false,
   logOverlayEvents: false,
   logAnalyticsEvents: false,
+  logInteractionTTIAnalytics: false,
   sourceMapsEnabled: false,
   axeEnabled: false,
   cssDebuggingEnabled: false,
@@ -132,6 +133,12 @@ Object.defineProperty(prototype, "isLoggingOverlayEvents", {
 Object.defineProperty(prototype, "isLoggingAnalyticsEvents", {
   get: function isLoggingAnalyticsEvents() {
     return obj.logAnalyticsEvents;
+  },
+  set: undefined,
+});
+Object.defineProperty(prototype, "isLoggingInteractionTTIAnalytics", {
+  get: function isLoggingInteractionTTIAnalytics() {
+    return obj.logInteractionTTIAnalytics;
   },
   set: undefined,
 });

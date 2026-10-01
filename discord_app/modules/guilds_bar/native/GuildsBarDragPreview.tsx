@@ -1,5 +1,5 @@
 // discord_app/modules/guilds_bar/native/GuildsBarDragPreview.tsx
-import _mod4482 from "../../../../_runtime/metro/04482__.js";
+import _mod4481 from "../../../../_runtime/metro/04481__.js";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import spring from "../../../design/animation/reanimated/spring/spring.tsx";
@@ -147,7 +147,7 @@ function PreviewItem(dragRegion) {
           id: -1,
           parentId: "flex",
           name: "Array",
-          color: "channel",
+          color: "channelId",
           expanded: null,
           children: null,
         };
@@ -358,16 +358,16 @@ function AnimatedItemPreview(cleanUp) {
   obj5.children = tmp12Result;
   return jsx(cleanUp(sharedValue[9]), { style: items, children: null });
 }
-const GuildsNodeType = fn(5947).GuildsNodeType;
-const GUILD_ITEM_INSET_LEFT = fn(16123).GUILD_ITEM_INSET_LEFT;
+const GuildsNodeType = fn(5936).GuildsNodeType;
+const GUILD_ITEM_INSET_LEFT = fn(16143).GUILD_ITEM_INSET_LEFT;
 const jsx = fn(21).jsx;
-let createStyles = fn(4866);
+let createStyles = fn(4845);
 let closure_8 = createStyles.createStyles({
   dragPreview: { position: "absolute", left: 0 },
   animatedPreviewStyle: { position: "absolute" },
   dragPreviewHome: { right: 0 },
 });
-createStyles = fn(4866);
+createStyles = fn(4845);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { animatedPreviewStyleHome: null };
   const rect = { left: 0, right: 0, transformOrigin: null };
@@ -451,12 +451,15 @@ export default noop.memo(function GuildsBarDragPreview() {
             overState: null,
             overNode: null,
             dropPosition: "o",
-            gestureState: "ultra-thin",
-            scrollPosition: null,
-            dragRegion: null,
-            windowSize: null,
-            dropComplete: "I_x",
-            listInsets: null,
+            gestureState: "#5865F2",
+            scrollPosition:
+              "m180.747 219.024 29.309.136s-13.284-17.969-30.586-3.674a2.005 2.005 0 0 0-.598 2.215 2.006 2.006 0 0 0 1.875 1.323ZM279.165 161.961l20.489 16.006a2.122 2.122 0 0 1-.058 3.413 2.13 2.13 0 0 1-1.238.397c-6.35-.045-16.711-1.75-23.911-11.113l4.718-8.703Z",
+            dragRegion: "#242145",
+            windowSize:
+              "m190.667 112.195-2.682 37.96a138.277 138.277 0 0 0 .097 20.736s.279 37.15 3.564 39.126c6.765.959 13.802 9.143 13.802 9.143h9.895a2.08 2.08 0 0 0 1.509-.643 2.073 2.073 0 0 0 .578-1.534l-.246-5.333-2.806-60.621 23.892 34.072a8.718 8.718 0 0 0 9.02 3.467l30.054-6.648a2.896 2.896 0 0 0 2.236-2.495l2.086-18.792a1.985 1.985 0 0 0-1.475-2.138 1.984 1.984 0 0 0-.935-.014l-27.988 6.293-20.865-27.398a7.256 7.256 0 0 1-1.257-6.26c.991-3.654 1.723-9.895-2.294-15.467l-36.185-3.454Z",
+            dropComplete: "#000",
+            listInsets:
+              "m245.41 73.425 30.126 4.095a3.057 3.057 0 0 1 2.541 3.86 3.057 3.057 0 0 1-.915 1.46c-3.24 2.839-8.56 5.457-16.323 2.67l4.322 3.61a2.41 2.41 0 0 1 .793 2.5 2.416 2.416 0 0 1-1.953 1.75c-3.35.474-8.339-.388-13.841-6.693l-.35 2.637a3.06 3.06 0 0 1-4.536 2.274 16.336 16.336 0 0 1-7.458-8.89 7.04 7.04 0 0 1 4.075-8.844 7.043 7.043 0 0 1 3.519-.429Z",
           };
           ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
           obj.overState = state;
@@ -476,7 +479,7 @@ export default noop.memo(function GuildsBarDragPreview() {
       }
       return null;
     }
-  }, _mod4482.shallow);
+  }, _mod4481.shallow);
   let tmp2 = null;
   if (null != tmp) {
     let obj = {};

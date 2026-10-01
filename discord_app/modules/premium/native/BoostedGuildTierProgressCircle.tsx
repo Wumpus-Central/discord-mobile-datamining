@@ -1,12 +1,12 @@
 // discord_app/modules/premium/native/BoostedGuildTierProgressCircle.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import GuildBoostingUtils from "../../../utils/GuildBoostingUtils.tsx";
 import useGuildPowerupsBoostCountDefault from "../powerups/hooks/useGuildPowerupsBoostCount.tsx";
-import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Tier048Px from "../../../design/components/Illustration/native/redesign/generated/Tier048Px.tsx";
-import _modDef13248 from "../../../../_runtime/metro/13248__.js";
-import _modDef13249 from "../../../../_runtime/metro/13249__.js";
-import _modDef13250 from "../../../../_runtime/metro/13250__.js";
+import _modDef13256 from "../../../../_runtime/metro/13256__.js";
+import _modDef13257 from "../../../../_runtime/metro/13257__.js";
+import _modDef13258 from "../../../../_runtime/metro/13258__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,7 +16,7 @@ const Constants = fn(1074);
 ({ AppliedGuildBoostsRequiredForBoostedGuildTier: hasOwnProperty, BoostedGuildTiers: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = {
   guildTierProgressCircle: { position: "relative", width: 70, height: 70 },
   guildTierBackground: null,
@@ -76,11 +76,11 @@ export default function BoostedGuildTierProgressCircle(arg0) {
       if (guild.premiumTier !== constants.NONE) {
         const premiumTier = guild.premiumTier;
         if (constants.TIER_1 === premiumTier) {
-          let tier048PxSource = _modDef13248;
+          let tier048PxSource = _modDef13256;
         } else if (constants.TIER_2 === premiumTier) {
-          tier048PxSource = _modDef13249;
+          tier048PxSource = _modDef13257;
         } else if (constants.TIER_3 === premiumTier) {
-          tier048PxSource = _modDef13250;
+          tier048PxSource = _modDef13258;
         }
       }
       const obj5 = {

@@ -1,6 +1,6 @@
 // discord_app/modules/vibegrations/lib/VibegrationsStatusLabels.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3715 from "../intl/VibegrationsUntranslated.messages.js";
+import _modDef3714 from "../intl/VibegrationsUntranslated.messages.js";
 import VibegrationsTypes from "../VibegrationsTypes.tsx";
 
 require = fn;
@@ -26,13 +26,13 @@ function thinkingLabel(restoring) {
     tmp = "end" !== activity.phase;
   }
   if (flag3) {
-    let ivvYHP = _modDef3715.ivvYHP;
+    let ivvYHP = _modDef3714.ivvYHP;
   } else if (flag) {
-    ivvYHP = _modDef3715.aFffp2;
+    ivvYHP = _modDef3714.aFffp2;
   } else if (flag2) {
     ivvYHP = items[0];
   } else {
-    const tmp4 = _modDef3715;
+    const tmp4 = _modDef3714;
     if (compacting) {
       ivvYHP = tmp4["0vH/5G"];
     } else {
@@ -42,11 +42,11 @@ function thinkingLabel(restoring) {
   return ivvYHP;
 }
 const items = [
-  _modDef3715.krnkPq,
-  _modDef3715["8oUm/J"],
-  _modDef3715["6Ea4dF"],
-  _modDef3715.fQx5qC,
-  _modDef3715["phXeK/"],
+  _modDef3714.krnkPq,
+  _modDef3714["8oUm/J"],
+  _modDef3714["6Ea4dF"],
+  _modDef3714.fQx5qC,
+  _modDef3714["phXeK/"],
 ];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsStatusLabels.tsx");
@@ -68,13 +68,13 @@ export const isRecallingLine = function isRecallingLine(current) {
 export const connectionLabel = function connectionLabel(stateFromStores7) {
   if ("connecting" === stateFromStores7) {
     const intl3 = util.intl;
-    return intl3.string(_modDef3715.W7oyuf);
+    return intl3.string(_modDef3714.W7oyuf);
   } else if ("closed" === stateFromStores7) {
     const intl2 = util.intl;
-    return intl2.string(_modDef3715["yBmS+I"]);
+    return intl2.string(_modDef3714["yBmS+I"]);
   } else if ("failed" === stateFromStores7) {
     const intl = util.intl;
-    return intl.string(_modDef3715.eE60xI);
+    return intl.string(_modDef3714.eE60xI);
   }
 };
 export { thinkingLabel };
@@ -86,9 +86,9 @@ export const runesUsedLabels = function runesUsedLabels(projectUsage) {
   const runesFromUsdResult = VibegrationsTypes.runesFromUsd(projectUsage.cost_usd);
   const obj2 = { text: null, aria: null };
   const intl = util.intl;
-  obj2.text = intl.formatToPlainString(_modDef3715["4PFO2p"], { runes: runesFromUsdResult.toLocaleString() });
+  obj2.text = intl.formatToPlainString(_modDef3714["4PFO2p"], { runes: runesFromUsdResult.toLocaleString() });
   const intl2 = util.intl;
-  obj2.aria = intl2.formatToPlainString(_modDef3715["7SZZvj"], {
+  obj2.aria = intl2.formatToPlainString(_modDef3714["7SZZvj"], {
     runes: runesFromUsdResult,
     turns: projectUsage.turns,
   });

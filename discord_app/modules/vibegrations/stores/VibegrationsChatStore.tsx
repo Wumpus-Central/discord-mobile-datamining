@@ -4,7 +4,8 @@ import initializeDefault from "../../../../discord_common/js/packages/flux/index
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import util from "../../../intl/index.native.tsx";
 import UserSettings from "../../user_settings/UserSettings.tsx";
-import _modDef3715 from "../intl/VibegrationsUntranslated.messages.js";
+import _modDef3714 from "../intl/VibegrationsUntranslated.messages.js";
+import VibegrationsUtils from "../lib/VibegrationsUtils.tsx";
 import VibegrationsPlatformUtilsDefault from "../lib/VibegrationsPlatformUtils.native.tsx";
 import SoundUtils from "../../sound_playback/SoundUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -282,7 +283,6 @@ function hasOpenTurn(map) {
   }
 }
 function recordThinkingTransition(projectId) {
-  let tmp51;
   let flag = map2.get(projectId);
   if (flag == null) {
     flag = false;
@@ -340,14 +340,14 @@ function recordThinkingTransition(projectId) {
       } else {
         map1.delete(projectId);
       }
-      const value3 = map.get(projectId);
-      if (null != value3) {
-        let diff1 = value3.length - 1;
+      value2 = map.get(projectId);
+      if (null != value2) {
+        let diff1 = value2.length - 1;
         if (0 <= diff1) {
-          while ("assistant" !== value3[diff1].role) {
+          while ("assistant" !== value2[diff1].role) {
             diff1 = diff1 - 1;
           }
-          if (null == value3[diff1].finished_at) {
+          if (null == value2[diff1].finished_at) {
             let someResult1 = true === tmp15.finished || true === tmp15.continued;
             if (!someResult1) {
               someResult1 = "" !== tmp15.content;
@@ -367,145 +367,14 @@ function recordThinkingTransition(projectId) {
             }
             if (someResult1) {
               const items = [];
-              const arraySpreadResult = HermesBuiltin.arraySpread(value3.slice(0, diff1), 0);
+              const arraySpreadResult = HermesBuiltin.arraySpread(value2.slice(0, diff1), 0);
               const obj4 = {};
               const merged = Object.assign(tmp15);
               const _Date2 = Date;
               obj4.finished_at = Date.now();
               items[arraySpreadResult] = obj4;
-              HermesBuiltin.arraySpread(value3.slice(diff1 + 1), arraySpreadResult + 1);
+              HermesBuiltin.arraySpread(value2.slice(diff1 + 1), arraySpreadResult + 1);
               const result2 = map.set(projectId, items);
-            }
-          }
-        }
-      }
-      const project = VibegrationsProjectStore.getProject(projectId);
-      if (null != project) {
-        let result4 = VibegrationsPlatformUtilsDefault.areTurnNotificationsDisabled();
-        if (!result4) {
-          result4 = SelfPresenceStore.getStatus() === constants.DND;
-        }
-        if (!result4) {
-          const FocusMode = UserSettings.FocusMode;
-          result4 = FocusMode.getSetting();
-        }
-        if (!result4) {
-          result4 = FamilyCenterStore.isCurrentUserInRestrictedHours();
-        }
-        if (!result4) {
-          const isSoundDisabledResult = NotificationSettingsStore.isSoundDisabled("message1");
-          const guildId = SelectedGuildStore.getGuildId();
-          let guild_id = null;
-          if (null != guildId) {
-            guild_id = null;
-            if (VibegrationsProjectStore.getSelectedProjectId(guildId) === projectId) {
-              guild_id = guildId;
-            }
-          }
-          let isWindowFocusedResult = null != guild_id;
-          if (isWindowFocusedResult) {
-            isWindowFocusedResult = SelectedChannelStore.getChannelId() === StaticChannelRoute.VIBEGRATIONS;
-          }
-          if (isWindowFocusedResult) {
-            isWindowFocusedResult = VibegrationsPlatformUtilsDefault.isWindowFocused();
-            const tmp74Result = VibegrationsPlatformUtilsDefault;
-          }
-          if (guild_id == null) {
-            guild_id = project.guild_id;
-          }
-          if (guild_id == null) {
-            guild_id = project.preview_guild_id;
-          }
-          const value4 = map.get(projectId);
-          let tmp45 = null;
-          if (null != value4) {
-            let diff2 = value4.length - 1;
-            tmp45 = null;
-            if (0 <= diff2) {
-              while (true) {
-                if ("assistant" === value4[diff2].role) {
-                  let tmp48 = value4[diff2];
-                  let tmp49 = "side_reply" === tmp48.kind || "publish_notice" === tmp48.kind;
-                  if (!tmp49) {
-                    break;
-                  }
-                }
-                diff2 = diff2 - 1;
-                tmp45 = null;
-              }
-              tmp45 = value4[diff2];
-            }
-          }
-          let content = null;
-          if (null != tmp45) {
-            if ("" !== str11.trim()) {
-              content = tmp45.content;
-            } else if (null != tmp45.proposal) {
-              content = tmp45.proposal.summary;
-            } else if (null != tmp45.clarification) {
-              const first = tmp45.clarification.questions[0];
-              let question;
-              if (first != null) {
-                question = first.question;
-              }
-              if (question == null) {
-                question = null;
-              }
-              content = question;
-            } else if (null != tmp45.intake) {
-              content = tmp45.intake.intro.lead;
-            } else {
-              let diff3 = tmp45.steps.length - 1;
-              content = null;
-              if (0 <= diff3) {
-                while (true) {
-                  tmp51 = tmp45.steps[diff3];
-                  if ("error" !== tmp51.kind) {
-                    if ("terminal_error" !== tmp51.kind) {
-                      if ("preview_ready" === tmp51.kind) {
-                        let intl = util.intl;
-                        content = intl.string(_modDef3715["78YNh7"]);
-                      } else {
-                        diff3 = diff3 - 1;
-                        content = null;
-                      }
-                    }
-                  }
-                  if (null != tmp51.message) {
-                    if ("" !== tmp51.message) {
-                      break;
-                    }
-                  }
-                }
-                content = tmp51.message;
-              }
-            }
-            str11 = tmp45.content;
-          }
-          if (null != content) {
-            if (isWindowFocusedResult) {
-              if (!isSoundDisabledResult) {
-                SoundUtils.playSound(bit_message1, 0.4);
-              }
-            } else {
-              let CHANNELResult = null;
-              if (null != guild_id) {
-                CHANNELResult = closure_1_14.CHANNEL(guild_id, StaticChannelRoute.VIBEGRATIONS, projectId);
-              }
-              const obj6 = { projectId, guildId: null, title: null, body: null, route: null, sound: null, volume: 0.4 };
-              if (guild_id == null) {
-                guild_id = null;
-              }
-              obj6.guildId = guild_id;
-              obj6.title = project.name;
-              obj6.body = content;
-              obj6.route = CHANNELResult;
-              let tmp64;
-              if (!isSoundDisabledResult) {
-                tmp64 = bit_message1;
-              }
-              obj6.sound = tmp64;
-              const result3 = VibegrationsPlatformUtilsDefault.presentTurnNotification(obj6);
             }
           }
         }
@@ -665,7 +534,7 @@ let closure_4 = ["disposition"];
 let closure_5 = ["disposition"];
 const Constants = fn(1074);
 ({ Routes: closure_14, StatusTypes: closure_15 } = Constants);
-const StaticChannelRoute = fn(2052).StaticChannelRoute;
+const StaticChannelRoute = fn(2051).StaticChannelRoute;
 const bit_message1 = "bit_message1";
 let set = new Set(["reply", "plan_proposed", "terminal_error"]);
 const map = new Map();
@@ -1468,7 +1337,7 @@ const vibegrationsChatStore = new VibegrationsChatStore(DispatcherDefault, {
                   const items = [];
                   const obj2 = { type: "step", kind: "terminal_error", message: null };
                   const intl = util.intl;
-                  obj2.message = intl.string(_modDef3715["wjWm+/"]);
+                  obj2.message = intl.string(_modDef3714["wjWm+/"]);
                   items[HermesBuiltin.arraySpread(disposition.steps, 0)] = obj2;
                   obj.steps = items;
                   tmp2 = obj;
@@ -1518,6 +1387,56 @@ const vibegrationsChatStore = new VibegrationsChatStore(DispatcherDefault, {
       continue;
     }
     return flag ? undefined : false;
+  },
+  VIBEGRATIONS_TURN_SETTLED: function handleVibegrationsTurnSettled(arg0) {
+    ({ projectId, guildId } = arg0);
+    ({ title, body } = arg0);
+    let result1 = VibegrationsPlatformUtilsDefault.areTurnNotificationsDisabled();
+    if (!result1) {
+      result1 = SelfPresenceStore.getStatus() === constants.DND;
+    }
+    if (!result1) {
+      const FocusMode = UserSettings.FocusMode;
+      result1 = FocusMode.getSetting();
+    }
+    if (!result1) {
+      result1 = FamilyCenterStore.isCurrentUserInRestrictedHours();
+    }
+    if (result1) {
+      return false;
+    } else {
+      const isSoundDisabledResult = NotificationSettingsStore.isSoundDisabled("message1");
+      const guildId1 = SelectedGuildStore.getGuildId();
+      if (null != guildId1) {
+        if (VibegrationsProjectStore.getSelectedProjectId(guildId1) === projectId) {
+          if (SelectedChannelStore.getChannelId() === StaticChannelRoute.VIBEGRATIONS) {
+            if (tmpResult.isWindowFocused()) {
+              if (!isSoundDisabledResult) {
+                SoundUtils.playSound(bit_message1, 0.4);
+              }
+              return false;
+            }
+            tmpResult = VibegrationsPlatformUtilsDefault;
+          }
+        }
+      }
+      if (guildId == null) {
+        guildId = VibegrationsUtils.resolveVibegrationsWorkspaceGuildId("VibegrationsChatStore");
+      }
+      const obj2 = { projectId, guildId, title, body, route: null, sound: null, volume: 0.4 };
+      let CHANNELResult = null;
+      if (null != guildId) {
+        CHANNELResult = closure_1_14.CHANNEL(guildId, StaticChannelRoute.VIBEGRATIONS, projectId);
+      }
+      obj2.route = CHANNELResult;
+      let tmp21;
+      if (!isSoundDisabledResult) {
+        tmp21 = bit_message1;
+      }
+      obj2.sound = tmp21;
+      const result = VibegrationsPlatformUtilsDefault.presentTurnNotification(obj2);
+      return false;
+    }
   },
 });
 const size = fn(2);

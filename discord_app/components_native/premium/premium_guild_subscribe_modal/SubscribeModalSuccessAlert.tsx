@@ -5,11 +5,11 @@ import ConstantsIOS from "../../../ConstantsIOS.tsx";
 import util from "../../../intl/index.native.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../_runtime/05489_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05477_LinearGradient.js";
 import common_AlertDefault from "../../common/Alert.tsx";
-import actions_BoostingActionCreators from "../../../actions/native/BoostingActionCreators.tsx";
+import BoostingActionCreators from "../../../actions/native/BoostingActionCreators.tsx";
 import SequencedLottieAnimationViewDefault from "../../common/SequencedLottieAnimationView.tsx";
-import _mod13362 from "../../../../_runtime/metro/13362__.js";
+import _mod13370 from "../../../../_runtime/metro/13370__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../stores/GuildStore.tsx";
@@ -27,10 +27,10 @@ class PremiumPaymentGuildAnimation {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
-const Gradients = fn(7048).Gradients;
+const Gradients = fn(7040).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = {
   wrapper: { paddingHorizontal: 24, paddingBottom: 16, paddingTop: 4, alignItems: "stretch" },
   animation: { width: "auto", height: 112, alignSelf: "center" },
@@ -87,9 +87,9 @@ export default function SubscribeModalSuccessAlert(arg0) {
   const intl = util.intl;
   obj2.confirmText = intl.string(util.t.YKxJCI);
   obj2.onConfirm = function onConfirm() {
-    closure_1(5400).close();
-    const obj = closure_1(5400);
-    actions_BoostingActionCreators.closeApplyBoostModal();
+    closure_1(5388).close();
+    const obj = closure_1(5388);
+    BoostingActionCreators.closeApplyBoostModal();
   };
   const items1 = [
     closure_9(PremiumPaymentGuildAnimation, {
@@ -124,9 +124,9 @@ export default function SubscribeModalSuccessAlert(arg0) {
   const obj6 = { style: tmp.activatedImage, source: null };
   const tmp14 = LinearGradientDefault;
   if (tmp2Result.isThemeLight(tmp9)) {
-    let tmp8Result = tmp8(13363);
+    let tmp8Result = tmp8(13371);
   } else {
-    tmp8Result = tmp8(13364);
+    tmp8Result = tmp8(13372);
   }
   obj6.source = tmp8Result;
   obj5.children = closure_9(closure_6, obj6);

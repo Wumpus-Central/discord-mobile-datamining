@@ -1,16 +1,13 @@
 // discord_app/modules/games/GamePlatformBadges.tsx
 import util from "../../intl/index.native.tsx";
 import GamePlatformAvailability from "../../../discord_common/js/shared/shared-constants/GamePlatformAvailability.tsx";
+import GamePlatformAvailabilityUtils from "../../../discord_common/js/shared/utils/GamePlatformAvailabilityUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-const items = [
-  GamePlatformAvailability.GamePlatformAvailability.DESKTOP,
-  GamePlatformAvailability.GamePlatformAvailability.MOBILE,
-  GamePlatformAvailability.GamePlatformAvailability.CONSOLE,
-];
 const result = size.fileFinishedImporting("modules/games/GamePlatformBadges.tsx");
 
-export const GAME_PLATFORM_AVAILABILITY_ORDER = items;
+export const GAME_PLATFORM_AVAILABILITY_ORDER = GamePlatformAvailabilityUtils.GAME_PLATFORM_AVAILABILITY_ORDER;
+export const sortGamePlatformAvailability = GamePlatformAvailabilityUtils.getOrderedGamePlatforms;
 export const getGamePlatformAvailabilityLabel = function getGamePlatformAvailabilityLabel(item) {
   if (GamePlatformAvailability.GamePlatformAvailability.DESKTOP === item) {
     const intl3 = util.intl;
@@ -22,13 +19,4 @@ export const getGamePlatformAvailabilityLabel = function getGamePlatformAvailabi
     const intl = util.intl;
     return intl.string(util.t.RT9Ccb);
   }
-};
-export const sortGamePlatformAvailability = function sortGamePlatformAvailability(platforms) {
-  if (null != platforms) {
-    if (0 !== platforms.length) {
-      const _Set = Set;
-      return items.filter((item) => set.has(item));
-    }
-  }
-  return [];
 };

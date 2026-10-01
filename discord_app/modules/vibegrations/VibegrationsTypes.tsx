@@ -39,8 +39,8 @@ export const isProjectShared = function isProjectShared(flags) {
   }
   return num & frozen.SHAREABLE;
 };
-export const projectUsesNativeAppChannels = function projectUsesNativeAppChannels(flags) {
-  let num = flags.flags;
+export const projectUsesNativeAppChannels = function projectUsesNativeAppChannels(project) {
+  let num = project.flags;
   if (num == null) {
     num = 0;
   }

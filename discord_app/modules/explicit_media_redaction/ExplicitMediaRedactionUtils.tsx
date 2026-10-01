@@ -8,18 +8,22 @@ import MetricEvents from "../../../discord_common/js/shared/shared-constants/Met
 import RegionalFeatureConfigUtils from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import AgeGatedFeature from "../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
 import SelfModUtils from "../self_mod/SelfModUtils.tsx";
+import ObscuredMediaUtils from "ObscuredMediaUtils.tsx";
 import ObscureMediaModels from "ObscureMediaModels.tsx";
-import ExplicitMediaManager from "ExplicitMediaManager.tsx";
 import DevSettingsStore from "../devtools/dev_settings/DevSettingsStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import ExplicitMediaStore from "ExplicitMediaStore.tsx";
 
 require = fn;
-const ExplicitMediaRedactionConstants = fn(7216);
-({ EXPLICIT_MEDIA_MIN_HEIGHT: metroRequire, EXPLICIT_MEDIA_MIN_WIDTH: closure_7 } = ExplicitMediaRedactionConstants);
+const ExplicitMediaRedactionConstants = fn(7207);
+({
+  EXPLICIT_MEDIA_MIN_HEIGHT: metroRequire,
+  EXPLICIT_MEDIA_MIN_WIDTH: closure_7,
+  MESSAGE_SCAN_TIMEOUT: closure_8,
+} = ExplicitMediaRedactionConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaRedactionUtils.tsx");
+let result = size.fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaRedactionUtils.tsx");
 
 export const redactionSettingToRenderedString = function redactionSettingToRenderedString(prop) {
   if (preloaded_user_settings.ExplicitContentRedaction.SHOW === prop) {
@@ -144,7 +148,7 @@ export const trackScanningTimedOut = function trackScanningTimedOut(arg0) {
         obj2.embed_ids = embedIds;
         const obj = AnalyticsUtilsDefault;
         obj2.user_is_underage = SelfModUtils.isCurrentUserTeen();
-        obj2.scan_timeout_duration = ExplicitMediaManager.MESSAGE_SCAN_TIMEOUT;
+        obj2.scan_timeout_duration = scan_timeout_duration;
         obj2.attachment_ids_v2 = attachmentIds;
         obj.track(AnalyticEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT, obj2);
         const obj4 = {
@@ -313,12 +317,19 @@ export const handleExplicitMediaScanTimeoutForMessage = function handleExplicitM
     item.content_scan_version = -1;
     return item;
   });
+  let components = message.components;
+  const embeds1 = embeds.map((components) => {
+    components.contentScanVersion = -1;
+    components = components.components;
+    if (components == null) {
+      components = [];
+    }
+    const result = closure_1_0(closure_1_2[11]).failOverComponentMedia(components);
+    return components;
+  });
+  let result = ObscuredMediaUtils.failOverComponentMedia(components);
   const messageSnapshots = message.messageSnapshots;
   let messageSnapshots1 = messageSnapshots;
-  const embeds1 = embeds.map((item) => {
-    item.contentScanVersion = -1;
-    return item;
-  });
   if (null != messageSnapshots) {
     messageSnapshots1 = messageSnapshots;
     if (0 !== messageSnapshots.length) {
@@ -330,26 +341,22 @@ export const handleExplicitMediaScanTimeoutForMessage = function handleExplicitM
           item.content_scan_version = -1;
           return item;
         });
-        const obj = {
-          attachments: mapped,
-          embeds: embeds.map((item) => {
-            item.contentScanVersion = -1;
-            return item;
-          }),
-        };
-        return message.merge({
-          message: message.merge({
-            attachments: mapped,
-            embeds: embeds.map((item) => {
-              item.contentScanVersion = -1;
-              return item;
-            }),
-          }),
+        let components = message.components;
+        const mapped1 = embeds.map((components) => {
+          components.contentScanVersion = -1;
+          components = components.components;
+          if (components == null) {
+            components = [];
+          }
+          const result = closure_1_0(closure_1_2[11]).failOverComponentMedia(components);
+          return components;
         });
+        let result = ObscuredMediaUtils.failOverComponentMedia(components);
+        return message.merge({ message: message.merge({ attachments: mapped, embeds: mapped1, components }) });
       });
     }
   }
-  return message.merge({ attachments: attachments1, embeds: embeds1, messageSnapshots: messageSnapshots1 });
+  return message.merge({ attachments: attachments1, embeds: embeds1, components, messageSnapshots: messageSnapshots1 });
 };
 export const isObscuredMediaBelowConstraints = function isObscuredMediaBelowConstraints(arg0, arg1) {
   let tmp = null != arg0 && null != arg1;

@@ -1,19 +1,19 @@
 // discord_app/modules/user_settings/appearance/native/SettingsAppearanceDummyData.tsx
 import Constants from "../../../../Constants.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef9820 from "../../../../../_runtime/metro/09820__.js";
-import _modDef13700 from "../../../../../_runtime/metro/13700__.js";
-import _modDef15031 from "../../../../../_runtime/metro/15031__.js";
-import _modDef15032 from "../../../../../_runtime/metro/15032__.js";
-import _modDef15033 from "../../../../../_runtime/metro/15033__.js";
-import _modDef15034 from "../../../../../_runtime/metro/15034__.js";
-import _modDef15035 from "../../../../../_runtime/metro/15035__.js";
-import _modDef15036 from "../../../../../_runtime/metro/15036__.js";
+import _modDef9812 from "../../../../../_runtime/metro/09812__.js";
+import _modDef13708 from "../../../../../_runtime/metro/13708__.js";
 import _modDef15037 from "../../../../../_runtime/metro/15037__.js";
 import _modDef15038 from "../../../../../_runtime/metro/15038__.js";
 import _modDef15039 from "../../../../../_runtime/metro/15039__.js";
 import _modDef15040 from "../../../../../_runtime/metro/15040__.js";
 import _modDef15041 from "../../../../../_runtime/metro/15041__.js";
+import _modDef15042 from "../../../../../_runtime/metro/15042__.js";
+import _modDef15043 from "../../../../../_runtime/metro/15043__.js";
+import _modDef15044 from "../../../../../_runtime/metro/15044__.js";
+import _modDef15045 from "../../../../../_runtime/metro/15045__.js";
+import _modDef15046 from "../../../../../_runtime/metro/15046__.js";
+import _modDef15047 from "../../../../../_runtime/metro/15047__.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const StatusTypes = Constants.StatusTypes;
@@ -27,8 +27,8 @@ export default function _default() {
   obj2.title = intl.string(util.t.B6GPzA);
   const intl2 = util.intl;
   obj2.subtitle = intl2.string(util.t["Tnrh/k"]);
-  obj2.image = _modDef15031;
-  const items1 = [_modDef15032, _modDef15033, _modDef15034, _modDef15035, _modDef15036];
+  obj2.image = _modDef15037;
+  const items1 = [_modDef15038, _modDef15039, _modDef15040, _modDef15041, _modDef15042];
   obj2.avatars = items1;
   const items2 = [obj2];
   const obj3 = { title: null, subtitle: null, kind: "voice-chat", image: null };
@@ -36,7 +36,7 @@ export default function _default() {
   obj3.title = intl3.string(util.t.YAgqmE);
   const intl4 = util.intl;
   obj3.subtitle = intl4.string(util.t["9YJgal"]);
-  obj3.image = _modDef15037;
+  obj3.image = _modDef15043;
   items2[1] = obj3;
   obj.cards = items2;
   items[1] = obj;
@@ -55,7 +55,7 @@ export default function _default() {
   obj4.title = intl6.string(util.t["mK5Zd+"]);
   const intl7 = util.intl;
   obj4.preview = intl7.string(util.t.cvvVUV);
-  obj4.avatar1 = _modDef15038;
+  obj4.avatar1 = _modDef15044;
   items[2] = obj4;
   const obj5 = {
     id: "4",
@@ -73,8 +73,8 @@ export default function _default() {
   obj5.title = intl9.string(util.t.FpJH9k);
   const intl10 = util.intl;
   obj5.preview = intl10.string(util.t.F1WIrQ);
-  obj5.avatar1 = _modDef15039;
-  obj5.avatar2 = _modDef15040;
+  obj5.avatar1 = _modDef15045;
+  obj5.avatar2 = _modDef15046;
   items[3] = obj5;
   const obj6 = {
     id: "5",
@@ -91,7 +91,7 @@ export default function _default() {
   obj6.title = intl12.string(util.t.PHbyD7);
   const intl13 = util.intl;
   obj6.preview = intl13.string(util.t.GSuP1s);
-  obj6.avatar1 = _modDef13700;
+  obj6.avatar1 = _modDef13708;
   obj6.status = StatusTypes.IDLE;
   items[4] = obj6;
   const obj7 = {
@@ -109,8 +109,8 @@ export default function _default() {
   obj7.title = intl15.string(util.t["0HGnUV"]);
   const intl16 = util.intl;
   obj7.preview = intl16.string(util.t["VYL+vm"]);
-  obj7.avatar1 = _modDef9820;
-  obj7.avatar2 = _modDef15034;
+  obj7.avatar1 = _modDef9812;
+  obj7.avatar2 = _modDef15040;
   items[5] = obj7;
   const obj8 = { id: "10", kind: "channel-row", timestamp: null, title: null, preview: null, avatar1: null };
   const intl17 = util.intl;
@@ -119,7 +119,7 @@ export default function _default() {
   obj8.title = intl18.string(util.t["z+f+zN"]);
   const intl19 = util.intl;
   obj8.preview = intl19.string(util.t.Wy2xnv);
-  obj8.avatar1 = _modDef15040;
+  obj8.avatar1 = _modDef15046;
   items[6] = obj8;
   const obj9 = {
     id: "11",
@@ -136,8 +136,8 @@ export default function _default() {
   obj9.title = intl21.string(util.t["AYOqO/"]);
   const intl22 = util.intl;
   obj9.preview = intl22.string(util.t.OrbvPP);
-  obj9.avatar1 = _modDef15035;
-  obj9.avatar2 = _modDef9820;
+  obj9.avatar1 = _modDef15041;
+  obj9.avatar2 = _modDef9812;
   items[7] = obj9;
   const obj10 = {
     id: "12",
@@ -154,7 +154,7 @@ export default function _default() {
   obj10.title = intl24.string(util.t["86rWJp"]);
   const intl25 = util.intl;
   obj10.preview = intl25.string(util.t.dFT4dX);
-  obj10.avatar1 = _modDef15041;
+  obj10.avatar1 = _modDef15047;
   obj10.status = StatusTypes.DND;
   items[8] = obj10;
   const obj11 = { id: "13", kind: "channel-row", timestamp: null, title: null, preview: null, avatar1: null };
@@ -164,7 +164,7 @@ export default function _default() {
   obj11.title = intl27.string(util.t["z3+vGV"]);
   const intl28 = util.intl;
   obj11.preview = intl28.string(util.t.Zj8Sl1);
-  obj11.avatar1 = _modDef15035;
+  obj11.avatar1 = _modDef15041;
   items[9] = obj11;
   const obj12 = {
     id: "15",
@@ -181,7 +181,7 @@ export default function _default() {
   obj12.title = intl30.string(util.t["8SENG2"]);
   const intl31 = util.intl;
   obj12.preview = intl31.string(util.t["2ziAWp"]);
-  obj12.avatar1 = _modDef15033;
+  obj12.avatar1 = _modDef15039;
   obj12.status = StatusTypes.DND;
   items[10] = obj12;
   return items;

@@ -15,7 +15,7 @@ export const useGuildProfile = function useGuildProfile(guildId) {
   const stateFromStores = require("initialize").useStateFromStores(items, () =>
     GuildProfileStore.getProfile(closure_0),
   );
-  let obj = require("initialize");
+  const obj = require("initialize");
   const items1 = [GuildProfileStore];
   const obj3 = { guildProfile: stateFromStores, fetchGuildProfile: null, fetchStatus: null };
   const stateFromStores1 = require("initialize").useStateFromStores(items1, () =>
@@ -24,72 +24,14 @@ export const useGuildProfile = function useGuildProfile(guildId) {
   const items2 = [guildId];
   obj3.fetchGuildProfile = noop.useCallback(
     asyncGeneratorStep(async () => {
-      if (c4 === 2) {
-        c4 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          const obj2 = { value, done: true };
-          return obj2;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
-            } else {
-              closure_2 = tmp5;
-              closure_129_0 = undefined;
-              let flag = guildId;
-              if (guildId === undefined) {
-                flag = false;
-              }
-              closure_129_0 = flag;
-              c3 = 1;
-              c4 = 1;
-              return { value: "flex", done: true };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              const obj5 = { value, done: true };
-              return obj5;
-            } else {
-              c3 = 2;
-              c4 = 1;
-              const obj6 = { value: guildId(tmp2[4]).getGuildProfile(closure_130_0, closure_129_0), done: false };
-              return obj6;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj7 = { value, done: true };
-            return obj7;
-          } else {
-            c4 = 3;
-            const obj = { value, done: true };
-            return obj;
-          }
-        } catch (tmp12) {
-          c4 = tmp;
-          throw tmp12;
-        }
+      let flag = guildId;
+      if (guildId === undefined) {
+        flag = false;
       }
+      closure_129_0 = flag;
+      await "flex";
+      await closure_0(tmp2[4]).getGuildProfile(closure_130_0, closure_129_0);
+      return value;
     }),
     items2,
   );

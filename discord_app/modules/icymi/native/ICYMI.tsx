@@ -39,10 +39,10 @@ import ICYMIStore from "../ICYMIStore.tsx";
 const require = globalThis.__r;
 
 const util = LeftBackIconWithBadge(1115);
-const Pressables = LeftBackIconWithBadge(5632);
-const XSmallIcon = LeftBackIconWithBadge(6188);
-const notifications_Notifications = LeftBackIconWithBadge(16243);
-const BackIconWithBadge = LeftBackIconWithBadge(16245);
+const Pressables = LeftBackIconWithBadge(5621);
+const XSmallIcon = LeftBackIconWithBadge(6178);
+const notifications_Notifications = LeftBackIconWithBadge(16263);
+const BackIconWithBadge = LeftBackIconWithBadge(16265);
 require = fn;
 function SettingsButton() {
   return closure_1_14(IconButton.IconButton, {
@@ -182,7 +182,7 @@ function ICYMI(inNestedNavigator) {
       hasOpenedEnoughTimesResult = ICYMIStore.hasOpenedEnoughTimes();
     }
     if (hasOpenedEnoughTimesResult) {
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16319, dependencyMap.paths), "ICYMIFeedbackSheet", {});
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16339, dependencyMap.paths), "ICYMIFeedbackSheet", {});
     }
   }, items6);
   const ref = handleOnRefresh.useRef(null);
@@ -228,7 +228,7 @@ function ICYMI(inNestedNavigator) {
     } else {
       let obj = {
         scrollToTop() {
-          isFocused(7480).showForLaterModal(isFocused(7481).SavedMessageSortTypes.BOOKMARK);
+          isFocused(7458).showForLaterModal(isFocused(7459).SavedMessageSortTypes.BOOKMARK);
         },
       };
       ref1.current = obj;
@@ -412,11 +412,11 @@ function keyExtractor(id) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, RefreshControl: metroRequire } = get_ActivityIndicator);
-let closure_12 = fn(16295).NUM_GUILDS_EXTENDED_ONBOARDING;
-const ContentDismissActionType = fn(2042).ContentDismissActionType;
+let closure_12 = fn(16315).NUM_GUILDS_EXTENDED_ONBOARDING;
+const ContentDismissActionType = fn(2041).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let closure_17 = createStyles.createStyles((paddingTop) => {
   const obj = {
     containerOuterTablet: {
@@ -429,7 +429,7 @@ let closure_17 = createStyles.createStyles((paddingTop) => {
   };
   return obj;
 });
-const createICYMIStyles = fn(16296);
+const createICYMIStyles = fn(16316);
 let closure_18 = createICYMIStyles.createICYMIStyles((margin) => {
   const obj = {
     container: { flex: 1, flexShrink: 1, flexGrow: 1 },

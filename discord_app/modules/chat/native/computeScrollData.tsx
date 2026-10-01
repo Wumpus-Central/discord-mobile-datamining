@@ -4,13 +4,22 @@ import NativeChatUtils from "NativeChatUtils.tsx";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-const RowGeneratorConstants = fn(7570);
+const RowGeneratorConstants = fn(7548);
 ({ RowType: c3, SeparatorType: closure_4 } = RowGeneratorConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat/native/computeScrollData.tsx");
 
 export default function computeScrollData(shouldInitialScroll) {
-  ({ rows, scrollToMessageId, jumpTargetId, animated, scrollPosition, focusTargetId, jumpType } = shouldInitialScroll);
+  ({
+    rows,
+    scrollToMessageId,
+    jumpTargetId,
+    animated,
+    scrollPosition,
+    focusTargetId,
+    scrollToRowIndexOverride,
+    jumpType,
+  } = shouldInitialScroll);
   if (shouldInitialScroll.shouldInitialScroll) {
     if (null == jumpTargetId) {
       const findIndexResult = rows.findIndex((type) => {
@@ -43,22 +52,25 @@ export default function computeScrollData(shouldInitialScroll) {
   }
   let tmp4;
   if (null != scrollToMessageId) {
-    focusTargetId = scrollToMessageId;
-    const findIndexResult1 = rows.findIndex((message) => {
-      let tmp = null != message.message;
-      if (tmp) {
-        tmp = message.message.id === focusTargetId;
+    if (scrollToRowIndexOverride == null) {
+      focusTargetId = scrollToMessageId;
+      const findIndexResult1 = rows.findIndex((message) => {
+        let tmp = null != message.message;
+        if (tmp) {
+          tmp = message.message.id === focusTargetId;
+        }
+        return tmp;
+      });
+      let tmp6;
+      if (-1 !== findIndexResult1) {
+        tmp6 = findIndexResult1;
       }
-      return tmp;
-    });
-    let tmp6;
-    if (-1 !== findIndexResult1) {
-      tmp6 = findIndexResult1;
+      scrollToRowIndexOverride = tmp6;
     }
-    if (null != tmp6) {
+    if (null != scrollToRowIndexOverride) {
       const obj = {
         type: NativeChatUtils.ChatScrollType.SCROLL,
-        index: tmp6,
+        index: scrollToRowIndexOverride,
         animate: null,
         highlight: null,
         position: null,
@@ -100,8 +112,8 @@ export default function computeScrollData(shouldInitialScroll) {
   }
   return tmp4;
 }
-export const findMessageRowIndex = function findMessageRowIndex(previousRows, ChatTTITracker) {
-  closure_0 = ChatTTITracker;
+export const findMessageRowIndex = function findMessageRowIndex(previousRows, startMessageId) {
+  closure_0 = startMessageId;
   const findIndexResult = previousRows.findIndex((message) => {
     let tmp = null != message.message;
     if (tmp) {

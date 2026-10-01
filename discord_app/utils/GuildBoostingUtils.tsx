@@ -3,12 +3,12 @@ import util from "../intl/index.native.tsx";
 import SentryUtilsDefault from "SentryUtils.native.tsx";
 import GlobalUtils from "GlobalUtils.tsx";
 import HelpdeskUtilsDefault from "HelpdeskUtils.tsx";
-import _modDef3199 from "../modules/premium/premium_group/PremiumGroup.messages.js";
-import _modDef4451 from "../../_runtime/metro/04451__.js";
+import _modDef3198 from "../modules/premium/premium_group/PremiumGroup.messages.js";
+import _modDef4450 from "../../_runtime/metro/04450__.js";
 import PremiumUtilsAll from "PremiumUtils.tsx";
-import PremiumGuildOverrides from "../../discord_common/js/shared/shared-constants/PremiumGuildOverrides.tsx";
 import FileSizeUtils from "FileSizeUtils.tsx";
-import BoostingActionCreators from "../actions/BoostingActionCreators.tsx";
+import PremiumGuildOverrides from "../../discord_common/js/shared/shared-constants/PremiumGuildOverrides.tsx";
+import actions_BoostingActionCreators from "../actions/BoostingActionCreators.tsx";
 import useGuildPowerupsBoostCount from "../modules/premium/powerups/hooks/useGuildPowerupsBoostCount.tsx";
 import GuildStore from "../stores/GuildStore.tsx";
 import UserStore from "../stores/UserStore.tsx";
@@ -49,8 +49,9 @@ const PremiumConstants = fn(1374);
   IncrementalStickerCountsByTier: closure_22,
   TotalSoundboardSoundCountsByTier: closure_23,
   TotalStickerCountsByTier: closure_24,
+  PerkIcons: closure_25,
 } = PremiumConstants);
-let closure_25 = fn(4532).getPremiumGroupProductName;
+let closure_26 = fn(4531).getPremiumGroupProductName;
 let obj = {
   LEVEL_1: 1,
   [1]: "LEVEL_1",
@@ -71,7 +72,7 @@ let obj = {
   LEVEL_9: 9,
   [9]: "LEVEL_9",
 };
-let closure_26 = Object.freeze({
+let closure_27 = Object.freeze({
   [obj.LEVEL_1]: 1,
   [obj.LEVEL_2]: 2,
   [obj.LEVEL_3]: 3,
@@ -82,30 +83,6 @@ let closure_26 = Object.freeze({
   [obj.LEVEL_8]: 18,
   [obj.LEVEL_9]: 24,
 });
-let obj2 = {
-  EMOJI: 1,
-  [1]: "EMOJI",
-  AUDIO: 2,
-  [2]: "AUDIO",
-  ANIMATED: 3,
-  [3]: "ANIMATED",
-  CUSTOMIZATION: 4,
-  [4]: "CUSTOMIZATION",
-  UPLOAD: 5,
-  [5]: "UPLOAD",
-  VANITY: 6,
-  [6]: "VANITY",
-  STREAM: 7,
-  [7]: "STREAM",
-  STICKER: 8,
-  [8]: "STICKER",
-  CUSTOM_ROLE_ICON: 11,
-  [11]: "CUSTOM_ROLE_ICON",
-  STAGE_VIDEO: 12,
-  [12]: "STAGE_VIDEO",
-  SOUNDBOARD: 13,
-  [13]: "SOUNDBOARD",
-};
 let items = [, , ,];
 ({ NONE: arr[0], TIER_1: arr[1], TIER_2: arr[2], TIER_3: arr[3] } = BoostedGuildTiers);
 const substr = items.slice();
@@ -127,7 +104,7 @@ let items1 = [
     nextTier: BoostedGuildTiers.TIER_2,
   },
 ];
-let obj4 = {
+let obj3 = {
   [BoostedGuildTiers.NONE]: 0,
   [BoostedGuildTiers.TIER_1]: 0.3333333333333333,
   [BoostedGuildTiers.TIER_2]: 0.6666666666666666,
@@ -136,7 +113,6 @@ let obj4 = {
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/GuildBoostingUtils.tsx");
 
-export const PerkIcons = obj2;
 export const OrderedTiers = items;
 export const ReverseOrderedTiers = reversed;
 export const getNextTier = function getNextTier(arg0) {
@@ -187,7 +163,7 @@ export const getTiers = (arg0) => {
   const obj = { tier: BoostedGuildTiers.TIER_1, title: null, perks: null };
   const intl = util.intl;
   obj.title = intl.string(util.t["lK+WOT"]);
-  obj2 = { title: null, description: null, icon: null };
+  const obj2 = { title: null, description: null, icon: null };
   const intl2 = util.intl;
   obj2.title = intl2.formatToPlainString(util.t.dnLAwl, {
     adding: dependencyMap[BoostedGuildTiers.TIER_1].limits.emoji - dependencyMap[BoostedGuildTiers.NONE].limits.emoji,
@@ -195,9 +171,9 @@ export const getTiers = (arg0) => {
   });
   const intl3 = util.intl;
   obj2.description = intl3.string(util.t["/Guvxs"]);
-  obj2.icon = obj2.EMOJI;
+  obj2.icon = constants4.EMOJI;
   items = [obj2, , , , , ,];
-  obj4 = { title: null, description: null, icon: null };
+  const obj4 = { title: null, description: null, icon: null };
   const intl4 = util.intl;
   obj4.title = intl4.formatToPlainString(util.t["/9p2/g"], {
     adding: dependencyMap2[BoostedGuildTiers.TIER_1],
@@ -205,7 +181,7 @@ export const getTiers = (arg0) => {
   });
   const intl5 = util.intl;
   obj4.description = intl5.string(util.t.JfsnDQ);
-  obj4.icon = obj2.STICKER;
+  obj4.icon = constants4.STICKER;
   items[1] = obj4;
   const intl6 = util.intl;
   const TIER_1 = BoostedGuildTiers.TIER_1;
@@ -226,7 +202,7 @@ export const getTiers = (arg0) => {
   };
   const intl7 = util.intl;
   obj6.description = intl7.string(util.t.Oq7OVl);
-  obj6.icon = obj2.SOUNDBOARD;
+  obj6.icon = constants4.SOUNDBOARD;
   items[2] = obj6;
   const obj8 = { title: null, description: null, icon: null };
   const intl8 = util.intl;
@@ -235,28 +211,28 @@ export const getTiers = (arg0) => {
   });
   const intl9 = util.intl;
   obj8.description = intl9.string(util.t["8a03jk"]);
-  obj8.icon = obj2.AUDIO;
+  obj8.icon = constants4.AUDIO;
   items[3] = obj8;
   const obj10 = { title: null, description: null, icon: null };
   const intl10 = util.intl;
   obj10.title = intl10.string(util.t.h0s84V);
   const intl11 = util.intl;
   obj10.description = intl11.format(util.t["t+0cbk"], {});
-  obj10.icon = obj2.ANIMATED;
+  obj10.icon = constants4.ANIMATED;
   items[4] = obj10;
   const obj11 = { title: null, description: null, icon: null };
   const intl12 = util.intl;
   obj11.title = intl12.string(util.t.vjPGPp);
   const intl13 = util.intl;
   obj11.description = intl13.string(util.t.tG4MMU);
-  obj11.icon = obj2.CUSTOMIZATION;
+  obj11.icon = constants4.CUSTOMIZATION;
   items[5] = obj11;
   const obj12 = { title: null, description: null, icon: null };
   const intl14 = util.intl;
   obj12.title = intl14.string(util.t.cObMZD);
   const intl15 = util.intl;
   obj12.description = intl15.string(util.t["puH/9R"]);
-  obj12.icon = obj2.STREAM;
+  obj12.icon = constants4.STREAM;
   items[6] = obj12;
   obj.perks = items.filter(GlobalUtils.isNotNullish);
   items1 = [obj, ,];
@@ -271,7 +247,7 @@ export const getTiers = (arg0) => {
   });
   const intl18 = util.intl;
   obj14.description = intl18.string(util.t.fRiNhw);
-  obj14.icon = obj2.EMOJI;
+  obj14.icon = constants4.EMOJI;
   const items2 = [obj14, , , , , , , ,];
   const obj16 = { title: null, description: null, icon: null };
   const intl19 = util.intl;
@@ -281,7 +257,7 @@ export const getTiers = (arg0) => {
   });
   const intl20 = util.intl;
   obj16.description = intl20.string(util.t.t4TM28);
-  obj16.icon = obj2.STICKER;
+  obj16.icon = constants4.STICKER;
   items2[1] = obj16;
   const intl21 = util.intl;
   const TIER_2 = BoostedGuildTiers.TIER_2;
@@ -300,7 +276,7 @@ export const getTiers = (arg0) => {
   };
   const intl22 = util.intl;
   obj18.description = intl22.string(util.t.pEYlPZ);
-  obj18.icon = obj2.SOUNDBOARD;
+  obj18.icon = constants4.SOUNDBOARD;
   items2[2] = obj18;
   const obj20 = { title: null, description: null, icon: null };
   const intl23 = util.intl;
@@ -309,14 +285,14 @@ export const getTiers = (arg0) => {
   });
   const intl24 = util.intl;
   obj20.description = intl24.string(util.t["nzRo/I"]);
-  obj20.icon = obj2.AUDIO;
+  obj20.icon = constants4.AUDIO;
   items2[3] = obj20;
   const obj22 = { title: null, description: null, icon: null };
   const intl25 = util.intl;
   obj22.title = intl25.string(util.t["+KhQKM"]);
   const intl26 = util.intl;
   obj22.description = intl26.string(util.t.ZWf10P);
-  obj22.icon = obj2.CUSTOMIZATION;
+  obj22.icon = constants4.CUSTOMIZATION;
   items2[4] = obj22;
   const obj23 = { title: null, description: null, icon: null };
   const intl27 = util.intl;
@@ -328,21 +304,21 @@ export const getTiers = (arg0) => {
   obj23.title = intl27.formatToPlainString(util.t.t95LnM, obj24);
   const intl28 = util.intl;
   obj23.description = intl28.format(util.t.yvht65, {});
-  obj23.icon = obj2.UPLOAD;
+  obj23.icon = constants4.UPLOAD;
   items2[5] = obj23;
   const obj25 = { title: null, description: null, icon: null };
   const intl29 = util.intl;
   obj25.title = intl29.string(util.t.bmaoNI);
   const intl30 = util.intl;
   obj25.description = intl30.string(util.t.WZW2Bj);
-  obj25.icon = obj2.STREAM;
+  obj25.icon = constants4.STREAM;
   items2[6] = obj25;
   const obj26 = { title: null, description: null, icon: null };
   const intl31 = util.intl;
   obj26.title = intl31.string(util.t.BHtqcV);
   const intl32 = util.intl;
   obj26.description = intl32.string(util.t.ukVcEe);
-  obj26.icon = obj2.CUSTOM_ROLE_ICON;
+  obj26.icon = constants4.CUSTOM_ROLE_ICON;
   items2[7] = obj26;
   let tmp14 = null;
   if (arg0) {
@@ -353,7 +329,7 @@ export const getTiers = (arg0) => {
     const intl34 = util.intl;
     const obj29 = { limit };
     obj27.description = intl34.formatToPlainString(util.t.T8P3TH, obj29);
-    obj27.icon = tmp5.STAGE_VIDEO;
+    obj27.icon = constants4.STAGE_VIDEO;
     tmp14 = obj27;
   }
   items2[8] = tmp14;
@@ -370,7 +346,7 @@ export const getTiers = (arg0) => {
   });
   const intl37 = util.intl;
   obj31.description = intl37.string(util.t.AfJxnV);
-  obj31.icon = obj2.EMOJI;
+  obj31.icon = constants4.EMOJI;
   const items3 = [obj31, , , , , , ,];
   const obj33 = { title: null, description: null, icon: null };
   const intl38 = util.intl;
@@ -380,7 +356,7 @@ export const getTiers = (arg0) => {
   });
   const intl39 = util.intl;
   obj33.description = intl39.string(util.t["+ZI4QZ"]);
-  obj33.icon = obj2.STICKER;
+  obj33.icon = constants4.STICKER;
   items3[1] = obj33;
   const intl40 = util.intl;
   const TIER_3 = BoostedGuildTiers.TIER_3;
@@ -399,7 +375,7 @@ export const getTiers = (arg0) => {
   };
   const intl41 = util.intl;
   obj35.description = intl41.string(util.t["8omJSY"]);
-  obj35.icon = obj2.SOUNDBOARD;
+  obj35.icon = constants4.SOUNDBOARD;
   items3[2] = obj35;
   const obj37 = { title: null, description: null, icon: null };
   const intl42 = util.intl;
@@ -408,7 +384,7 @@ export const getTiers = (arg0) => {
   });
   const intl43 = util.intl;
   obj37.description = intl43.string(util.t["cOkbp/"]);
-  obj37.icon = obj2.AUDIO;
+  obj37.icon = constants4.AUDIO;
   items3[3] = obj37;
   const obj39 = { title: null, description: null, icon: null };
   const intl44 = util.intl;
@@ -422,7 +398,7 @@ export const getTiers = (arg0) => {
   const obj17 = { adding: dependencyMap2[BoostedGuildTiers.TIER_2], total: dependencyMap4[BoostedGuildTiers.TIER_2] };
   const obj19 = { soundCount: diff1, totalSoundCount: tmp9[BoostedGuildTiers.TIER_2] };
   const obj21 = { bitrate: dependencyMap[BoostedGuildTiers.TIER_2].limits.bitrate / 1000 };
-  const obj3 = {
+  obj3 = {
     adding: dependencyMap[BoostedGuildTiers.TIER_1].limits.emoji - dependencyMap[BoostedGuildTiers.NONE].limits.emoji,
     total: dependencyMap[BoostedGuildTiers.TIER_1].limits.emoji,
   };
@@ -439,7 +415,7 @@ export const getTiers = (arg0) => {
   const tmp2Result = FileSizeUtils;
   obj40.helpdeskArticle = HelpdeskUtilsDefault.getArticleURL(constants.GUILD_VANITY_URL);
   obj39.description = intl45.format(util.t["3Reosx"], obj40);
-  obj39.icon = obj2.VANITY;
+  obj39.icon = constants4.VANITY;
   items3[4] = obj39;
   const obj41 = { title: null, description: null, icon: null };
   const intl46 = util.intl;
@@ -450,14 +426,14 @@ export const getTiers = (arg0) => {
   obj41.title = intl46.formatToPlainString(util.t.t95LnM, obj43);
   const intl47 = util.intl;
   obj41.description = intl47.format(util.t.IwDqSL, {});
-  obj41.icon = obj2.UPLOAD;
+  obj41.icon = constants4.UPLOAD;
   items3[5] = obj41;
   const obj44 = { title: null, description: null, icon: null };
   const intl48 = util.intl;
   obj44.title = intl48.string(util.t.z0GtBG);
   const intl49 = util.intl;
   obj44.description = intl49.string(util.t.v92GNV);
-  obj44.icon = obj2.ANIMATED;
+  obj44.icon = constants4.ANIMATED;
   items3[6] = obj44;
   let tmp18 = null;
   if (arg0) {
@@ -468,7 +444,7 @@ export const getTiers = (arg0) => {
     const intl51 = util.intl;
     const obj47 = { limit: limit2 };
     obj45.description = intl51.formatToPlainString(util.t.T8P3TH, obj47);
-    obj45.icon = tmp5.STAGE_VIDEO;
+    obj45.icon = constants4.STAGE_VIDEO;
     tmp18 = obj45;
   }
   items3[7] = tmp18;
@@ -569,7 +545,7 @@ export const getNextGuildTierFromGuild = function getNextGuildTierFromGuild(id) 
   return BoostedGuildTiers.TIER_1;
 };
 export const getAppliedGuildBoostMonths = function getAppliedGuildBoostMonths(arg0) {
-  let num = _modDef4451().diff(_modDef4451(arg0), "months");
+  let num = _modDef4450().diff(_modDef4450(arg0), "months");
   if (num == null) {
     num = 1;
   }
@@ -577,10 +553,10 @@ export const getAppliedGuildBoostMonths = function getAppliedGuildBoostMonths(ar
 };
 export const getUserLevel = function getUserLevel(arg0) {
   let num = 1;
-  const obj = _modDef4451();
-  const keys = Object.keys(closure_26);
+  const obj = _modDef4450();
+  const keys = Object.keys(closure_27);
   for (const item10021 of keys) {
-    if (diffResult >= closure_26[item10021]) {
+    if (diffResult >= closure_27[item10021]) {
       num = +tmp3;
     }
     continue;
@@ -614,7 +590,7 @@ export const generateBlockGuildSubscriptionPurchasesNode = function generateBloc
   const premiumTypeSubscription = SubscriptionStore.getPremiumTypeSubscription();
   const currentUser = UserStore.getCurrentUser();
   if (!tmp3) {
-    const guildBoostSlots = BoostingActionCreators.fetchGuildBoostSlots();
+    const guildBoostSlots = actions_BoostingActionCreators.fetchGuildBoostSlots();
   }
   const values = apply.values(GuildBoostSlotStore.boostSlots);
   let prop;
@@ -636,8 +612,8 @@ export const generateBlockGuildSubscriptionPurchasesNode = function generateBloc
   }
   if (isPremiumGroupMemberResult) {
     const intl7 = util.intl;
-    const obj = { premiumGroupProductName: closure_25() };
-    return intl7.formatToPlainString(_modDef3199["5xN/C1"], obj);
+    const obj = { premiumGroupProductName: closure_26() };
+    return intl7.formatToPlainString(_modDef3198["5xN/C1"], obj);
   } else {
     const _Object = Object;
     const values2 = Object.values(GuildBoostSlotStore.boostSlots);
@@ -795,7 +771,7 @@ export const getGracePeriodEndingDate = function getGracePeriodEndingDate(arr, a
     const found = sorted.filter((endsAt) => null != endsAt.endsAt);
     const diff = found.length - num;
     if (diff < 0) {
-      obj2 = {
+      const obj2 = {
         subscriptionLength: arr.length,
         subscriptionsNeededForPremiumTier: null,
         endingSubscriptionLength: null,
@@ -808,7 +784,11 @@ export const getGracePeriodEndingDate = function getGracePeriodEndingDate(arr, a
       if (premiumTier1 == null) {
         premiumTier1 = BoostedGuildTiers.NONE;
       }
-      obj4 = { category: "premium", message: "Negative index while checking grace period ending date.", data: null };
+      const obj4 = {
+        category: "premium",
+        message: "Negative index while checking grace period ending date.",
+        data: null,
+      };
       obj2.subscriptionsNeededForPremiumTier = AppliedGuildBoostsRequiredForBoostedGuildTier[premiumTier1];
       obj2.endingSubscriptionLength = found.length;
       obj4.data = obj2;
@@ -925,9 +905,9 @@ export const getNextPremiumTierForSubscriberCount = function getNextPremiumTierF
   }
   return TIER_3;
 };
-export const TierMarkerPositions = obj4;
+export const TierMarkerPositions = obj3;
 export const getGuildBoostingProgressBarFillFactor = function getGuildBoostingProgressBarFillFactor(guild) {
-  totalAvailableBoostsCount = totalAvailableBoostsCount(4789).getGuildPowerupBoostLevelProgress(guild.id);
+  totalAvailableBoostsCount = totalAvailableBoostsCount(7631).getGuildPowerupBoostLevelProgress(guild.id);
   let NONE = reversed.find((item) => totalAvailableBoostsCount >= AppliedGuildBoostsRequiredForBoostedGuildTier[item]);
   if (NONE == null) {
     NONE = BoostedGuildTiers.NONE;

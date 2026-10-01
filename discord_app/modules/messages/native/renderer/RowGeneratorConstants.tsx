@@ -29,7 +29,7 @@ export const RowType = {
   SUSPENDED_USER_GROUP: 7,
   [7]: "SUSPENDED_USER_GROUP",
 };
-export const SeparatorType = { DAY: "day", UNREAD: "unread", SUMMARY: "summary" };
+export const SeparatorType = { DAY: "day", UNREAD: "unread", SUMMARY: "summary", CONVERSATION: "conversation" };
 export const SeparatorAction = {
   TOGGLE_BLOCKED_MESSAGES: "toggle",
   LOAD_MORE_BEFORE: "load_more_before",
@@ -46,5 +46,11 @@ export const MessageFailureState = {
   AUTO_MODERATION_BLOCKED_MESSAGE: 2,
   [2]: "AUTO_MODERATION_BLOCKED_MESSAGE",
 };
-export const AttachmentType = { IMAGE: "image", VIDEO: "video", AUDIO: "audio", OTHER: "other" };
+export const AttachmentType = {
+  IMAGE: "image",
+  VIDEO: "video",
+  AUDIO: "audio",
+  PLAINTEXT: "plaintext",
+  OTHER: "other",
+};
 export const SwipeActionsType = { NONE: 0, [0]: "NONE", REPLY: 1, [1]: "REPLY", REPLY_EDIT: 2, [2]: "REPLY_EDIT" };

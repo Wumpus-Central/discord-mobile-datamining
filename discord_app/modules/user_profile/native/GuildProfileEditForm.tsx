@@ -12,10 +12,10 @@ import ProfileCustomizationUtils from "../../profile_customization/ProfileCustom
 import PremiumUpsellUtilsDefault from "../../../utils/native/PremiumUpsellUtils.tsx";
 import PremiumFeaturesCards from "../../user_settings/premium/native/PremiumFeaturesCards.tsx";
 import openPremiumModalDefault from "../../../components_native/premium/openPremiumModal.tsx";
+import UserProfileUpsellCardDefault from "UserProfileUpsellCard.tsx";
 import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton.tsx";
 import UserProfilePremiumTryItOutMobileRefreshExperiment from "../experiments/UserProfilePremiumTryItOutMobileRefreshExperiment.tsx";
 import UserProfileFloatingUpsellDefault from "UserProfileFloatingUpsell.tsx";
-import UserProfileUpsellCardDefault from "UserProfileUpsellCard.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
@@ -50,7 +50,7 @@ function EditGuildProfileBanner(user) {
     if (c4) {
       const obj = { user, analyticsLocations, showRemoveBanner: null, removeText: null, onBannerChange: null };
       const tmpResult = ActionSheetActionCreatorsDefault;
-      const tmp13 = asyncRequireImpl(14350, dependencyMap.paths);
+      const tmp13 = asyncRequireImpl(14360, dependencyMap.paths);
       banner = undefined;
       if (banner != null) {
         banner = banner.banner;
@@ -85,7 +85,7 @@ function EditGuildProfileBanner(user) {
   obj3.editButtonAccessibilityLabel = intl.string(user(1115).t["95hPAe"]);
   obj3.editDisabled = disabled;
   obj2.children = closure_16(UserProfileEditBannerButtonDefault, obj3);
-  return closure_16(user(6779).AnalyticsLocationProvider, obj2);
+  return closure_16(user(6769).AnalyticsLocationProvider, obj2);
 }
 function GuildProfileTryItOutUpsellExperimentWrapper(onButtonPress) {
   onButtonPress = onButtonPress.onButtonPress;

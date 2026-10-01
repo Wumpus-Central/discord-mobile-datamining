@@ -225,9 +225,11 @@ export default {
                                         if (CodedLink.CodedLinkType.GAME_PROFILE !== type) {
                                           if (CodedLink.CodedLinkType.GAME_SERVER_SHARE !== type) {
                                             if (CodedLink.CodedLinkType.USER_PROFILE !== type) {
-                                              const _Error = Error;
-                                              const _HermesInternal = HermesInternal;
-                                              throw Error("Unknown coded link type: " + type);
+                                              if (CodedLink.CodedLinkType.GAME_ORGANIZATION_INVITE !== type) {
+                                                const _Error = Error;
+                                                const _HermesInternal = HermesInternal;
+                                                throw Error("Unknown coded link type: " + type);
+                                              }
                                             }
                                           }
                                         }

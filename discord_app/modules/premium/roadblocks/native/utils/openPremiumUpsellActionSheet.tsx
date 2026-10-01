@@ -13,7 +13,7 @@ export default function openPremiumUpsellActionSheet(
   onDismiss,
   appEntryKey,
 ) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7467, dependencyMap.paths), PremiumUpsellActionSheetKey, {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7445, dependencyMap.paths), PremiumUpsellActionSheetKey, {
     featureName,
     subfeatureName,
     analyticsLocations,

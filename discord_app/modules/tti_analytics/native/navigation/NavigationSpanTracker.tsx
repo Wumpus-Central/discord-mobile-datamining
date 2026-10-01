@@ -2,9 +2,12 @@
 import LoggerDefault from "../../../debug/Logger.tsx";
 import v1 from "../../../../../_runtime/01255_v1.js";
 import NavigationSpanTypes from "NavigationSpanTypes.tsx";
+import NavigationTTIAnalytics from "NavigationTTIAnalytics.tsx";
 import NavigationTTIDebugFreeze from "debug/NavigationTTIDebugFreeze.tsx";
+import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 
 require = fn;
+let closure_2 = ["spanComponentName", "measurementSource", "lateLayoutMs"];
 let obj = new LoggerDefault("NavTTI");
 obj.enableNativeLogger(true);
 class NavigationSpanTracker {
@@ -299,19 +302,19 @@ prototype["flush"] = function flush(arg0) {
     }
     const bundle = self.buildBundle(active, true, INTERRUPTED);
     self.lastBundle = bundle;
-    const obj3 = {};
-    const merged = Object.assign(bundle.navigation.spanTtiProperties);
-    const firstPaint = bundle.firstPaint;
-    let spanComponent;
-    if (firstPaint != null) {
-      spanComponent = firstPaint.spanComponent;
-    }
-    if (spanComponent == null) {
-      spanComponent = null;
-    }
-    obj3.first_paint_component = spanComponent;
-    ({ settled: obj2.settled, components: obj2.components } = bundle);
-    obj.info(JSON.stringify(obj3));
+    (function emitNavigationSpanBundle(bundle) {
+      const result = NavigationTTIAnalytics.trackNavigationTTISpan(
+        bundle.navigation.spanTtiName,
+        bundle.navigation.spanTtiProperties,
+      );
+      for (const item10016 of tmp2) {
+        ({ measurementSource, lateLayoutMs } = item10016);
+        let tmp5 = _objectWithoutProperties(item10016, closure_1_2);
+        let obj2 = NavigationTTIAnalytics;
+        let result1 = obj2.trackNavigationTTISpan(item10016.spanComponentName, tmp5);
+        continue;
+      }
+    })(bundle);
     if (flag) {
       self.notifySurface(active.definition, active.destinationKey);
     }

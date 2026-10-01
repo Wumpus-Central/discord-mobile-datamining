@@ -2,47 +2,110 @@
 import util from "../../intl/index.native.tsx";
 import v1 from "../../../_runtime/01255_v1.js";
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
-import GlobalDiscoveryServersSearchResultsStoreDefault from "GlobalDiscoveryServersSearchResultsStore.tsx";
-import GlobalDiscoveryServersFeaturedSearchManagerDefault from "GlobalDiscoveryServersFeaturedSearchManager.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import LocaleStore from "../user_settings/LocaleStore.tsx";
 
 require = fn;
-let closure_15 = async function _navigateToGuild() {
-  const obj6 = {};
-  const merged = Object.assign(closure_129_5);
-  obj6.loadId = closure_129_0;
-  closure_129_6 = obj6;
-  await closure_130_2(closure_130_3[7]).startLurking(closure_129_1, closure_129_4, closure_129_6);
-  closure_130_1(closure_130_3[8]).track(closure_130_14.GUILD_DISCOVERY_GUILD_SELECTED, {
-    guild_id: closure_129_1,
-    load_id: closure_129_0,
-    card_index: closure_129_2,
-    category_id: closure_129_3,
-    location: closure_129_4,
-  });
-  await "HermesInternal";
-  closure_1 = tmp2;
-  ({
-    loadId: closure_129_0,
-    guildId: closure_129_1,
-    index: closure_129_2,
-    categoryId: closure_129_3,
-    analyticsLocation: closure_129_4,
-    options: closure_129_5,
-  } = closure_0);
-  return "flex";
+let closure_13 = async function _navigateToGuild(arg0) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_2 = tmp5;
+          closure_1 = tmp2;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          closure_129_3 = undefined;
+          closure_129_4 = undefined;
+          closure_129_5 = undefined;
+          ({
+            loadId: closure_129_0,
+            guildId: closure_129_1,
+            index: closure_129_2,
+            categoryId: closure_129_3,
+            analyticsLocation: closure_129_4,
+            options: closure_129_5,
+          } = closure_0);
+          closure_129_6 = undefined;
+          c3 = 1;
+          c4 = 1;
+          return { value: "flex", done: null };
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          const obj6 = {};
+          const merged = Object.assign(closure_129_5);
+          obj6.loadId = closure_129_0;
+          closure_129_6 = obj6;
+          c3 = 2;
+          c4 = 1;
+          const obj7 = {
+            value: closure_130_2(closure_130_3[6]).startLurking(closure_129_1, closure_129_4, closure_129_6),
+            done: false,
+          };
+          return obj7;
+        }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        const obj8 = { value, done: true };
+        return obj8;
+      } else {
+        const obj9 = {
+          guild_id: closure_129_1,
+          load_id: closure_129_0,
+          card_index: closure_129_2,
+          category_id: closure_129_3,
+          location: closure_129_4,
+        };
+        closure_130_1(closure_130_3[7]).track(closure_130_12.GUILD_DISCOVERY_GUILD_SELECTED, obj9);
+        c4 = 3;
+        return { value: "HermesInternal", done: null };
+      }
+    } catch (tmp28) {
+      c4 = tmp;
+      throw tmp28;
+    }
+  }
 };
-GlobalDiscoveryServersSearchResultsStoreDefault;
-const GlobalDiscoveryServersConstants = fn(9249);
+const GlobalDiscoveryServersConstants = fn(9243);
 ({
-  GlobalDiscoveryServerTab: closure_7,
-  FEATURED_GUILDS_CACHE_DURATION: closure_8,
-  FEATURED_GUILDS_SEARCH_OPTIONS: closure_9,
-  CategoryId: c10,
-  DISCOVERY_ALL_CATEGORIES_ID: closure_11,
-  getLanguageOptions: closure_12,
-  HUBS_CATEGORY_ID: map1,
+  GlobalDiscoveryServerTab: metroRequire,
+  FEATURED_GUILDS_CACHE_DURATION: closure_7,
+  CategoryId: closure_8,
+  DISCOVERY_ALL_CATEGORIES_ID: closure_9,
+  getLanguageOptions: c10,
+  HUBS_CATEGORY_ID: closure_11,
 } = GlobalDiscoveryServersConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const size = fn(2);
@@ -155,19 +218,19 @@ export const getGlobalDiscoveryServersTabSectionTitle = function getGlobalDiscov
 };
 export const getCategoryIdFromServerTab = function getCategoryIdFromServerTab(type) {
   if (constants.FEATURED === type) {
-    return closure_1_11;
+    return React7;
   } else if (constants.GAMING === type) {
-    return closure_1_10.Activity;
+    return React6.Activity;
   } else if (constants.MUSIC === type) {
-    return closure_1_10.Music;
+    return React6.Music;
   } else if (constants.ENTERTAINMENT === type) {
-    return closure_1_10.Television;
+    return React6.Television;
   } else if (constants.TECH === type) {
-    return closure_1_10.Science;
+    return React6.Science;
   } else if (constants.EDUCATION === type) {
-    return closure_1_10.Education;
+    return React6.Education;
   } else if (constants.HUBS === type) {
-    return map1;
+    return closure_1_11;
   } else {
     GlobalUtils.assertNever(type);
   }
@@ -176,7 +239,7 @@ export const isStaleFeaturedGuilds = function isStaleFeaturedGuilds(arg0) {
   let tmp = null == arg0;
   if (!tmp) {
     const _Date = Date;
-    tmp = Date.now() - arg0 > React6;
+    tmp = Date.now() - arg0 > React5;
   }
   return tmp;
 };
@@ -220,9 +283,9 @@ export const fromDiscoverableGuildSearchResult = function fromDiscoverableGuildS
     presenceCount: null,
     memberCount: null,
     premiumSubscriptionCount: "r",
-    preferredLocale: "channel",
-    discoverySplash: 1091633470,
-    emojis: "r",
+    preferredLocale: "isArray",
+    discoverySplash: "scalar",
+    emojis: 9,
   };
   ({
     approximate_presence_count: obj.presenceCount,
@@ -239,7 +302,7 @@ export const getLanguageCodeFallback = function getLanguageCodeFallback() {
     tmp = items;
   }
   [tmp3] = tmp;
-  const arr2 = closure_1_12();
+  const arr2 = closure_1_10();
   locale = tmp3.locale;
   let found = arr2.find((code) => code.code === locale);
   if (found == null) {
@@ -249,34 +312,13 @@ export const getLanguageCodeFallback = function getLanguageCodeFallback() {
 };
 export const navigateToGuild = function navigateToGuild() {
   const self = this;
-  const apply = closure_15.apply;
+  const apply = closure_13.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const handleTabPressPrefetch = function handleTabPressPrefetch() {
-  const error = GlobalDiscoveryServersSearchResultsStore.getError(React7);
-  const isFetching = GlobalDiscoveryServersSearchResultsStore.getIsFetching(React7);
-  let isInitialFetchComplete = GlobalDiscoveryServersSearchResultsStore.getIsInitialFetchComplete(React7);
-  if (!isInitialFetchComplete) {
-    if (!isFetching) {
-      const featuredGuilds = GlobalDiscoveryServersFeaturedSearchManagerDefault.fetchFeaturedGuilds();
-    }
-  }
-  if (isInitialFetchComplete) {
-    isInitialFetchComplete = !isFetching;
-  }
-  if (isInitialFetchComplete) {
-    isInitialFetchComplete = null != error;
-  }
-  if (isInitialFetchComplete) {
-    const featuredGuilds1 = GlobalDiscoveryServersFeaturedSearchManagerDefault.fetchFeaturedGuilds({
-      forceRefresh: true,
-    });
-  }
 };
 export const makeAnalyticsID = function makeAnalyticsID() {
   return v1.v4().replace(/-/g, "");

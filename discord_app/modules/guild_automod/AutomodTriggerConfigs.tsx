@@ -1,14 +1,14 @@
 // discord_app/modules/guild_automod/AutomodTriggerConfigs.tsx
 import util from "../../intl/index.native.tsx";
-import guild_automod_ExperimentUtils from "ExperimentUtils.tsx";
+import guild_automod_PermissionUtils from "PermissionUtils.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
-const Constants = fn(11546);
+const Constants = fn(11554);
 ({ AutomodActionType, AutomodEventType, AutomodTriggerType } = Constants);
 const mentionTotalLimit = Constants.MENTION_SPAM_LIMIT_DEFAULT;
 let obj = { NEW: "new", RECOMMENDED: "recommended", BETA: "beta", ALPHA: "alpha" };
-let obj2 = {};
+const obj2 = {};
 let obj3 = {
   getDefaultRuleName() {
     const intl = util.intl;
@@ -26,7 +26,7 @@ obj3.flags = new Set();
 const set1 = new Set();
 obj3.defaultActionTypes = new Set();
 obj2[AutomodTriggerType.SPAM_LINK] = obj3;
-const obj4 = {
+let obj4 = {
   getDefaultRuleName() {
     const intl = util.intl;
     return intl.string(util.t.ffR2cM);
@@ -276,15 +276,17 @@ export const getDefaultTriggerMetadataForTriggerType = function getDefaultTrigge
   triggerType,
   guildId,
 ) {
-  guild_automod_ExperimentUtils;
   if (AutomodTriggerType.DEFAULT_KEYWORD_LIST === triggerType) {
-    obj2 = { allowList: [], presets: [] };
-    return obj2;
+    const obj3 = { allowList: [], presets: [] };
+    return obj3;
   } else {
     if (AutomodTriggerType.USER_PROFILE !== triggerType) {
       if (AutomodTriggerType.KEYWORD !== triggerType) {
         if (AutomodTriggerType.MENTION_SPAM === triggerType) {
-          const obj = { mentionTotalLimit, mentionRaidProtectionEnabled: tmp2 };
+          const obj = {
+            mentionTotalLimit,
+            mentionRaidProtectionEnabled: guild_automod_PermissionUtils.hasMentionRaidLimitAccess(guildId),
+          };
           return obj;
         } else if (AutomodTriggerType.APPLICATION === triggerType) {
           return { applicationId: null };
@@ -293,7 +295,7 @@ export const getDefaultTriggerMetadataForTriggerType = function getDefaultTrigge
         }
       }
     }
-    const obj3 = { keywordFilter: [], regexPatterns: [], allowList: [] };
-    return obj3;
+    const obj4 = { keywordFilter: [], regexPatterns: [], allowList: [] };
+    return obj4;
   }
 };

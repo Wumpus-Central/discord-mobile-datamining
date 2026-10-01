@@ -9,7 +9,7 @@ import RootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
 import TimeUtils from "../../../../discord_common/js/packages/time-utils/TimeUtils.tsx";
 import useKeyboardIsOpen from "../../keyboard/native/useKeyboardIsOpen.tsx";
 import RequestReviewNoTTIExperiment2 from "RequestReviewNoTTIExperiment.tsx";
-import requestReviewModalDefault from "requestReviewModal.tsx";
+import requestReviewModalDefault from "requestReviewModal.android.tsx";
 import InstallTime from "../../install/native/InstallTime.tsx";
 import ExperimentStore from "../../experiments/ExperimentStore.tsx";
 import ApexExperimentStore from "../../experiments/apex/ApexExperimentStore.tsx";

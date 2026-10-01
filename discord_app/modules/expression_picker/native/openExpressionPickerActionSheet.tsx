@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/expression_picker/native/open
 export const EXPRESSION_PICKER_ACTION_SHEET_KEY = "ExpressionPickerActionSheet";
 export const openExpressionPickerActionSheet = function openExpressionPickerActionSheet(arg0) {
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(9936, dependencyMap.paths),
+    asyncRequireImpl(9928, dependencyMap.paths),
     ExpressionPickerActionSheet,
     arg0,
   );

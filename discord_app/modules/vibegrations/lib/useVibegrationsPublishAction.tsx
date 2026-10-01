@@ -1,8 +1,9 @@
 // discord_app/modules/vibegrations/lib/useVibegrationsPublishAction.tsx
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3715 from "../intl/VibegrationsUntranslated.messages.js";
+import _modDef3714 from "../intl/VibegrationsUntranslated.messages.js";
 import VibegrationsUtils from "VibegrationsUtils.tsx";
+import VibegrationsTypes from "../VibegrationsTypes.tsx";
 import UserActionCreators from "../../../actions/UserActionCreators.tsx";
 import VibegrationsActionCreators from "../actions/VibegrationsActionCreators.tsx";
 import openVibegrationsPublishDestination from "openVibegrationsPublishDestination.tsx";
@@ -51,6 +52,8 @@ function readPublishSubject(projectId, guildId) {
       appChannelName: null,
       appChannelPending: null,
       canManageGuild: null,
+      canManageChannels: null,
+      usesNativeAppChannels: null,
       botInGuild: null,
     };
     let name;
@@ -80,8 +83,14 @@ function readPublishSubject(projectId, guildId) {
       canResult = PermissionStore.can(Permissions.MANAGE_GUILD, guild);
     }
     obj4.canManageGuild = canResult;
+    let canResult1 = null;
+    if (null != guild) {
+      canResult1 = PermissionStore.can(Permissions.MANAGE_CHANNELS, guild);
+    }
+    obj4.canManageChannels = canResult1;
+    obj4.usesNativeAppChannels = VibegrationsTypes.projectUsesNativeAppChannels(project);
     guild_id = tmp2;
-    let tmp16 = null;
+    let tmp21 = null;
     if (null != tmp2) {
       const application = ApplicationStore.getApplication(project.application_id);
       let id;
@@ -99,9 +108,9 @@ function readPublishSubject(projectId, guildId) {
       if (null != mutualGuilds) {
         someResult = mutualGuilds.some((guild) => guild.guild.id === guild_id);
       }
-      tmp16 = someResult;
+      tmp21 = someResult;
     }
-    obj4.botInGuild = tmp16;
+    obj4.botInGuild = tmp21;
     obj3.input = obj4;
     return obj3;
   }
@@ -204,7 +213,7 @@ let closure_20 = async function _requestVibegrationsInstallConsent(arg0) {
           const obj8 = { value, done: true };
           return obj8;
         } else {
-          let result = closure_131_0(closure_131_2[13]).repairVibegrationsGuildHints(closure_130_1, closure_130_3);
+          let result = closure_131_0(closure_131_2[14]).repairVibegrationsGuildHints(closure_130_1, closure_130_3);
           c4 = 3;
           c5 = 1;
           const obj10 = {
@@ -222,7 +231,7 @@ let closure_20 = async function _requestVibegrationsInstallConsent(arg0) {
           const obj12 = { value, done: true };
           return obj12;
         } else {
-          const project1 = closure_131_0(closure_131_2[16]).getProject(closure_130_0);
+          const project1 = closure_131_0(closure_131_2[17]).getProject(closure_130_0);
           c4 = 4;
           c5 = 1;
           const obj13 = {
@@ -248,7 +257,7 @@ let closure_20 = async function _requestVibegrationsInstallConsent(arg0) {
         obj2.application = application;
         obj2.guildId = guildId;
         obj2.onClose = onClose;
-        const result = closure_1(applicationId[15]).openVibegrationsAppInstallModal(obj2);
+        const result = closure_1(applicationId[16]).openVibegrationsAppInstallModal(obj2);
       });
       c4 = 2;
       c5 = 1;
@@ -281,14 +290,14 @@ function startPublish(project, navigatesOnPublish, platform) {
   }
   if ("channel" === destination) {
     let obj2 = { type: "VIBEGRATIONS_PROJECT_APP_CHANNEL_PENDING", projectId: id, pending: true };
-    project(platform[21]).dispatch(obj2);
-    let obj = project(platform[21]);
+    project(platform[22]).dispatch(obj2);
+    let obj = project(platform[22]);
   }
   let promise = closure_12(id);
   let nextPromise = promise.then((ok) => {
     if (true !== ok.ok) {
       const _Error = Error;
-      const error = new Error(project(platform[17])(ok));
+      const error = new Error(project(platform[18])(ok));
       throw error;
     } else {
       return ok;
@@ -356,7 +365,7 @@ function startPublish(project, navigatesOnPublish, platform) {
             return tmp;
           })
           .finally(() => {
-            project(platform[21]).dispatch({
+            project(platform[22]).dispatch({
               type: "VIBEGRATIONS_PROJECT_APP_CHANNEL_PENDING",
               projectId,
               pending: false,
@@ -380,7 +389,7 @@ function startPublish(project, navigatesOnPublish, platform) {
             return tmp;
           })
           .finally(() => {
-            project(platform[21]).dispatch({
+            project(platform[22]).dispatch({
               type: "VIBEGRATIONS_PROJECT_APP_CHANNEL_PENDING",
               projectId,
               pending: false,
@@ -391,7 +400,7 @@ function startPublish(project, navigatesOnPublish, platform) {
             if (tmp == null) {
               tmp = project;
             }
-            return closure_0(platform[12]).openVibegrationsPublishDestination(destination, {
+            return closure_0(platform[13]).openVibegrationsPublishDestination(destination, {
               applicationId: tmp.project.application_id,
               guildId: tmp.guildId,
               appChannelId: tmp.appChannelId,
@@ -418,7 +427,7 @@ function startPublish(project, navigatesOnPublish, platform) {
             return tmp;
           })
           .finally(() => {
-            project(platform[21]).dispatch({
+            project(platform[22]).dispatch({
               type: "VIBEGRATIONS_PROJECT_APP_CHANNEL_PENDING",
               projectId,
               pending: false,
@@ -429,7 +438,7 @@ function startPublish(project, navigatesOnPublish, platform) {
             if (tmp == null) {
               tmp = project;
             }
-            return closure_0(platform[12]).openVibegrationsPublishDestination(destination, {
+            return closure_0(platform[13]).openVibegrationsPublishDestination(destination, {
               applicationId: tmp.project.application_id,
               guildId: tmp.guildId,
               appChannelId: tmp.appChannelId,
@@ -445,7 +454,7 @@ function startPublish(project, navigatesOnPublish, platform) {
         message = message.message;
       } else {
         const intl = util.intl;
-        message = intl.string(_modDef3715.fNP6Cd);
+        message = intl.string(_modDef3714.fNP6Cd);
       }
       platform.showError(message);
       const obj2 = { type: "VIBEGRATIONS_PROJECT_APP_CHANNEL_PENDING", projectId: id, pending: false };
@@ -643,13 +652,13 @@ let closure_26 = async function _runVibegrationsPublishAction(arg0) {
                             set.add(closure_0);
                             c11 = 1;
                             const requestConsent = platform.requestConsent;
-                            let f126809 = requestConsent;
+                            let f127008 = requestConsent;
                             if (requestConsent == null) {
-                              f126809 = (arg0) => closure_2_19(arg0, closure_1_2);
+                              f127008 = (arg0) => closure_2_19(arg0, closure_1_2);
                             }
                             c12 = 2;
                             c13 = 1;
-                            const obj7 = { value: f126809(closure_0), done: false };
+                            const obj7 = { value: f127008(closure_0), done: false };
                             return obj7;
                           }
                         } else {
@@ -730,7 +739,7 @@ let closure_26 = async function _runVibegrationsPublishAction(arg0) {
             if (!obj6.requiresPermissionReview(obj9)) {
               closure_137_22(closure_136_4, closure_136_3, closure_136_1);
             }
-            obj6 = closure_137_0(closure_137_2[26]);
+            obj6 = closure_137_0(closure_137_2[27]);
           }
         }
       }
@@ -747,9 +756,9 @@ let closure_26 = async function _runVibegrationsPublishAction(arg0) {
     }
   }
 };
-const VibegrationsConnectionStore = fn(12842);
+const VibegrationsConnectionStore = fn(12851);
 ({ draftPatchNotes: closure_11, publishProject: closure_12 } = VibegrationsConnectionStore);
-const canPublishProject = fn(8694).canPublishProject;
+const canPublishProject = fn(8686).canPublishProject;
 const Permissions = fn(1074).Permissions;
 let context = noop.createContext(null);
 const set = new Set(["dm", "guild", "channel"]);
@@ -761,7 +770,7 @@ export default function useVibegrationsPublishAction(projectId, arg1) {
   _require = projectId;
   context = arg1;
   if (arg1 == null) {
-    context = guildId.useContext(context);
+    context = guildId.useContext(state);
   }
   let guildId1;
   if (context != null) {
@@ -770,7 +779,15 @@ export default function useVibegrationsPublishAction(projectId, arg1) {
   if (guildId1 == null) {
     guildId1 = null;
   }
-  const items = [memo, appChannelName, guildName, integrationStatus, appChannelPending, status, installScope];
+  const items = [
+    usesNativeAppChannels,
+    appChannelName,
+    guildName,
+    integrationStatus,
+    appChannelPending,
+    status,
+    installScope,
+  ];
   const items1 = [projectId, guildId1];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(
     items,
@@ -798,6 +815,8 @@ export default function useVibegrationsPublishAction(projectId, arg1) {
         appChannelName: null,
         appChannelPending: null,
         canManageGuild: null,
+        canManageChannels: null,
+        usesNativeAppChannels: null,
         botInGuild: null,
       };
       project = undefined;
@@ -877,6 +896,22 @@ export default function useVibegrationsPublishAction(projectId, arg1) {
         canManageGuild = null;
       }
       obj.canManageGuild = canManageGuild;
+      canManageChannels = undefined;
+      if (tmp2 != null) {
+        canManageChannels = tmp2.input.canManageChannels;
+      }
+      if (canManageChannels == null) {
+        canManageChannels = null;
+      }
+      obj.canManageChannels = canManageChannels;
+      let flag2;
+      if (tmp2 != null) {
+        flag2 = tmp2.input.usesNativeAppChannels;
+      }
+      if (flag2 == null) {
+        flag2 = false;
+      }
+      obj.usesNativeAppChannels = flag2;
       botInGuild = undefined;
       if (tmp2 != null) {
         botInGuild = tmp2.input.botInGuild;
@@ -898,6 +933,8 @@ export default function useVibegrationsPublishAction(projectId, arg1) {
   appChannelName = stateFromStoresObject.appChannelName;
   appChannelPending = stateFromStoresObject.appChannelPending;
   let canManageGuild = stateFromStoresObject.canManageGuild;
+  let canManageChannels = stateFromStoresObject.canManageChannels;
+  usesNativeAppChannels = stateFromStoresObject.usesNativeAppChannels;
   let botInGuild = stateFromStoresObject.botInGuild;
   const items2 = [
     project,
@@ -908,9 +945,11 @@ export default function useVibegrationsPublishAction(projectId, arg1) {
     appChannelName,
     appChannelPending,
     canManageGuild,
+    canManageChannels,
+    usesNativeAppChannels,
     botInGuild,
   ];
-  memo = obj.useMemo(() => {
+  const memo = obj.useMemo(() => {
     let tmp = null;
     if (null != project) {
       const obj = {
@@ -921,13 +960,15 @@ export default function useVibegrationsPublishAction(projectId, arg1) {
         appChannelName,
         appChannelPending,
         canManageGuild,
+        canManageChannels,
+        usesNativeAppChannels,
         botInGuild,
       };
       tmp = obj;
     }
     return tmp;
   }, items2);
-  let state;
+  state = undefined;
   if (memo != null) {
     const status2 = memo.status;
     if (status2 != null) {
@@ -950,7 +991,7 @@ export default function useVibegrationsPublishAction(projectId, arg1) {
     }
     tmp7 = "bot" === surface;
   }
-  closure_15 = tmp7;
+  closure_17 = tmp7;
   let id;
   if (project != null) {
     id = project.id;
@@ -962,7 +1003,7 @@ export default function useVibegrationsPublishAction(projectId, arg1) {
       tmp2 = null != guildId;
     }
     if (tmp2) {
-      tmp2 = closure_15;
+      tmp2 = closure_17;
     }
     if (tmp2) {
       tmp2 = null != state;

@@ -6,7 +6,7 @@ import APNGPlayer from "../../../image/native/APNGPlayer.android.tsx";
 import BountiesMobileQuestBarExperiment2 from "../../experiments/BountiesMobileQuestBarExperiment.tsx";
 import QuestDockHooks from "QuestDockHooks.tsx";
 import useIsQuestDockContentVisibleDefault from "useIsQuestDockContentVisible.tsx";
-import _modDef14948 from "../../../../../discord_assets/assets/quests/bounties/QuestBar_3DOrbs_2X.png.js";
+import _modDef14954 from "../../../../../discord_assets/assets/quests/bounties/QuestBar_3DOrbs_2X.png.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
@@ -95,7 +95,7 @@ function QuestDock3DOrbsAPNGPlayer(shouldAnimate) {
       aPNGPlayerControls.pause();
     }
   }, items);
-  return jsx(APNGPlayer.APNGPlayer, { ref, url: _modDef14948, style: tmp.fill, autoplay: false });
+  return jsx(APNGPlayer.APNGPlayer, { ref, url: _modDef14954, style: tmp.fill, autoplay: false });
 }
 function QuestDock3DOrbsIllustration() {
   const tmp = closure_8();
@@ -122,7 +122,7 @@ function QuestDock3DOrbsIllustration() {
       paused: null,
       accessible: false,
     };
-    const obj5 = { uri: _modDef14948 };
+    const obj5 = { uri: _modDef14954 };
     obj4.source = obj5;
     obj4.style = tmp.fill;
     obj4.enableAnimation = !stateFromStores;
@@ -154,11 +154,11 @@ function QuestDockOrbHandsIllustration() {
   });
 }
 const View = fn(17).View;
-const QuestsExperimentLocations = fn(5953).QuestsExperimentLocations;
-const QuestDockConstants = fn(14830);
+const QuestsExperimentLocations = fn(5942).QuestsExperimentLocations;
+const QuestDockConstants = fn(14836);
 ({ QUEST_DOCK_COLLAPSED_HEIGHT, QUEST_DOCK_COLLAPSED_HEADER_PADDING_RIGHT } = QuestDockConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj = {
   frame: { marginRight: -QUEST_DOCK_COLLAPSED_HEADER_PADDING_RIGHT + 5 },
   hands: null,

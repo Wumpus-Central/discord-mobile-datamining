@@ -270,24 +270,24 @@ class BaseActivityPanelFocusedView {
   }
 }
 const ActivityLayoutMode = fn(2005).ActivityLayoutMode;
-const ActivityPanelConstants = fn(8701);
+const ActivityPanelConstants = fn(8693);
 ({
   ACTIVITY_LAYOUT_PHYSICS_GESTURE: closure_8,
   ACTIVITY_LAYOUT_PHYSICS_DEFAULT: closure_9,
   ActivityPanelModes: c10,
 } = ActivityPanelConstants);
-const ActivityPanelNativeConstants = fn(17064);
+const ActivityPanelNativeConstants = fn(17086);
 ({
   DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG: closure_11,
   DEFAULT_PORTRAIT_LETTERBOX_CONFIG: closure_12,
   DEFAULT_LANDSCAPE_PILLERBOX_CONFIG: map1,
 } = ActivityPanelNativeConstants);
 const ThemeTypes = fn(1074).ThemeTypes;
-const IS_IOS = fn(11958).IS_IOS;
+const IS_IOS = fn(11965).IS_IOS;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
 const collapsedCategories = { duration: 300 };
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj = {
   wrapper: {
     position: "absolute",

@@ -5,8 +5,7 @@ import GuildIncidentsStore from "GuildIncidentsStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const Constants = fn(1074);
-({ EMPTY_STRING_SNOWFLAKE_ID: closure_4, Permissions: hasOwnProperty } = Constants);
+const Permissions = fn(1074).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidPermissionsUtils.tsx");
 
@@ -15,15 +14,15 @@ export const canReportRaid = function canReportRaid(guild) {
   if (PermissionStore === undefined) {
     obj = PermissionStore;
   }
-  let canResult = obj.can(constants.BAN_MEMBERS, guild);
+  let canResult = obj.can(Permissions.BAN_MEMBERS, guild);
   if (!canResult) {
-    canResult = obj.can(constants.KICK_MEMBERS, guild);
+    canResult = obj.can(Permissions.KICK_MEMBERS, guild);
   }
   if (!canResult) {
-    canResult = obj.can(constants.MODERATE_MEMBERS, guild);
+    canResult = obj.can(Permissions.MODERATE_MEMBERS, guild);
   }
   if (!canResult) {
-    canResult = obj.can(constants.MANAGE_GUILD, guild);
+    canResult = obj.can(Permissions.MANAGE_GUILD, guild);
   }
   return canResult;
 };
@@ -36,10 +35,10 @@ export const useCanReportRaid = function useCanReportRaid(guild) {
     () => {
       if (PermissionStore !== undefined) {
         return (
-          PermissionStore.can(constants.BAN_MEMBERS, closure_0) ||
-          PermissionStore.can(constants.KICK_MEMBERS, closure_0) ||
-          PermissionStore.can(constants.MODERATE_MEMBERS, closure_0) ||
-          PermissionStore.can(constants.MANAGE_GUILD, closure_0)
+          PermissionStore.can(Permissions.BAN_MEMBERS, closure_0) ||
+          PermissionStore.can(Permissions.KICK_MEMBERS, closure_0) ||
+          PermissionStore.can(Permissions.MODERATE_MEMBERS, closure_0) ||
+          PermissionStore.can(Permissions.MANAGE_GUILD, closure_0)
         );
       }
     },
@@ -62,8 +61,8 @@ export const useCanReportRaid = function useCanReportRaid(guild) {
   );
   let hasDetectedActivityResult = null != stateFromStores1;
   if (hasDetectedActivityResult) {
-    hasDetectedActivityResult = tmp(7653).hasDetectedActivity(stateFromStores1);
-    const tmpResult = tmp(7653);
+    hasDetectedActivityResult = tmp(7641).hasDetectedActivity(stateFromStores1);
+    const tmpResult = tmp(7641);
   }
   let tmp6 = !hasDetectedActivityResult;
   if (!hasDetectedActivityResult) {
@@ -76,7 +75,7 @@ export const canEnableRaidAlerts = function canEnableRaidAlerts(arg0) {
   if (arg1 === undefined) {
     obj = PermissionStore;
   }
-  return obj.can(constants.MANAGE_GUILD, arg0);
+  return obj.can(Permissions.MANAGE_GUILD, arg0);
 };
 export const useCanEnableRaidAlerts = function useCanEnableRaidAlerts(arg0) {
   _require = arg0;
@@ -86,33 +85,9 @@ export const useCanEnableRaidAlerts = function useCanEnableRaidAlerts(arg0) {
     items,
     () => {
       if (PermissionStore !== undefined) {
-        return PermissionStore.can(constants.MANAGE_GUILD, tmp);
+        return PermissionStore.can(Permissions.MANAGE_GUILD, tmp);
       }
     },
     items1,
   );
-};
-export const useShowMentionRaidLimitUpsell = function useShowMentionRaidLimitUpsell(id) {
-  _require = id;
-  const items = [PermissionStore];
-  const items1 = [id];
-  const stateFromStores = require("initialize").useStateFromStores(
-    items,
-    () => {
-      if (PermissionStore !== undefined) {
-        return PermissionStore.can(constants.MANAGE_GUILD, tmp);
-      }
-    },
-    items1,
-  );
-  const obj = require("initialize");
-  id = undefined;
-  if (id != null) {
-    id = id.id;
-  }
-  if (id == null) {
-    id = closure_4;
-  }
-  const obj2 = require("guild_automod/ExperimentUtils");
-  return require("guild_automod/ExperimentUtils").useIsMentionRaidExperimentEnabled(id, false) && stateFromStores;
 };

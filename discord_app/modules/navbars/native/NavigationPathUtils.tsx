@@ -1,6 +1,6 @@
 // discord_app/modules/navbars/native/NavigationPathUtils.tsx
 import Constants from "../../../Constants.tsx";
-import _mod4696 from "../../../../_runtime/metro/04696__.js";
+import _mod4695 from "../../../../_runtime/metro/04695__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const Routes = Constants.Routes;
@@ -14,7 +14,7 @@ export const getSelectedSpecialNavigationPath = function getSelectedSpecialNavig
   }
 };
 export const useSelectedSpecialNavigationPath = function useSelectedSpecialNavigationPath() {
-  const obj = _mod4696;
+  const obj = _mod4695;
   let FRIENDS;
   if (obj.useLocation().pathname === Routes.FRIENDS) {
     FRIENDS = obj.FRIENDS;

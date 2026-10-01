@@ -1,7 +1,7 @@
 // discord_app/modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx
 import util from "../../../intl/index.native.tsx";
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
-import _modDef3585 from "../intl/SlayerStorefront.messages.js";
+import _modDef3584 from "../intl/SlayerStorefront.messages.js";
 import SlayerStorefrontUtils from "../SlayerStorefrontUtils.tsx";
 import StorefrontUtils from "../../storefront/StorefrontUtils.tsx";
 import getEmbedThemeColorsDefault from "../../messages/native/renderer/row_data/embeds/getEmbedThemeColors.tsx";
@@ -13,7 +13,7 @@ import SKUStore from "../../../stores/game_store/SKUStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const InviteTypes = fn(7350).InviteTypes;
+const InviteTypes = fn(7328).InviteTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx",
@@ -78,7 +78,7 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
             if (result1) {
               let stringResult = string(util.t.boqtTA);
             } else {
-              stringResult = string(_modDef3585.BKf0MM);
+              stringResult = string(_modDef3584.BKf0MM);
             }
             obj3.acceptLabelText = stringResult;
             let prop;
@@ -146,5 +146,5 @@ export const useFetchSocialLayerStorefrontProductDetailsEmbedApplications =
       },
       items2,
     );
-    memo(6785)(stateFromStoresArray);
+    memo(6775)(stateFromStoresArray);
   };

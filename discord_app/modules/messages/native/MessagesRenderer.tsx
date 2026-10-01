@@ -50,9 +50,9 @@ function isLoadingAtTop(arg0, arg1) {
     return false;
   }
 }
-let closure_6 = fn(9042).updateShouldShowJumpToPresentButton;
-let closure_7 = fn(2108).getUserCommunicationDisabledVersion;
-const Changeset = fn(7570).Changeset;
+let closure_6 = fn(9036).updateShouldShowJumpToPresentButton;
+let closure_7 = fn(2107).getUserCommunicationDisabledVersion;
+const Changeset = fn(7548).Changeset;
 const Constants = fn(1074);
 ({
   ActivityActionTypes: closure_12,
@@ -360,7 +360,7 @@ const forwardRefResult = noop.forwardRef((messages, arg1) => {
     oldestUnreadMessageId: messages.oldestUnreadMessageId,
     shouldJumpToOriginalPost: callback3,
   };
-  ({ startOrCancelLatestMessagesLoad: closure_15, channelLatestMessageLoadingStatsManager } = first(11239)({
+  ({ startOrCancelLatestMessagesLoad: closure_15, channelLatestMessageLoadingStatsManager } = first(11243)({
     channelId: messages.channelId,
     jumpTargetId: messages.messages.jumpTargetId,
     oldestUnreadMessageId: messages.oldestUnreadMessageId,
@@ -418,9 +418,8 @@ const forwardRefResult = noop.forwardRef((messages, arg1) => {
     useReducedMotion: messages.useReducedMotion,
     isStaff: messages.isStaff,
     visibleMessagesWindowHandler: messages.visibleMessagesWindowHandler,
-    selectedConversation: messages.selectedConversation,
   };
-  const tmp16 = first(11239)({
+  const tmp16 = first(11243)({
     channelId: messages.channelId,
     jumpTargetId: messages.messages.jumpTargetId,
     oldestUnreadMessageId: messages.oldestUnreadMessageId,
@@ -441,7 +440,7 @@ const forwardRefResult = noop.forwardRef((messages, arg1) => {
     scrollToTopMessage,
     updateNativeRows,
     handleScrollPosition,
-  } = first(11241)({
+  } = first(11245)({
     chatRef: ref5,
     chatManager: first,
     chatUpdatesQueue,
@@ -493,7 +492,6 @@ const forwardRefResult = noop.forwardRef((messages, arg1) => {
     useReducedMotion: messages.useReducedMotion,
     isStaff: messages.isStaff,
     visibleMessagesWindowHandler: messages.visibleMessagesWindowHandler,
-    selectedConversation: messages.selectedConversation,
   }));
   const ref6 = noop.useRef(null);
   ref6.current = {
@@ -516,7 +514,7 @@ const forwardRefResult = noop.forwardRef((messages, arg1) => {
     scrollToNewMessages,
     getChatRef,
   }));
-  let tmp17 = first(11241)({
+  let tmp17 = first(11245)({
     chatRef: ref5,
     chatManager: first,
     chatUpdatesQueue,
@@ -568,7 +566,6 @@ const forwardRefResult = noop.forwardRef((messages, arg1) => {
     useReducedMotion: messages.useReducedMotion,
     isStaff: messages.isStaff,
     visibleMessagesWindowHandler: messages.visibleMessagesWindowHandler,
-    selectedConversation: messages.selectedConversation,
   });
   let obj4 = {
     chatManager: first,
@@ -617,7 +614,7 @@ const forwardRefResult = noop.forwardRef((messages, arg1) => {
     scrollToTopMessage,
     useReducedMotion: messages.useReducedMotion,
   };
-  ({ updateRows: closure_33, scrollToMessageId: closure_34 } = first(11633)({
+  ({ updateRows: closure_33, scrollToMessageId: closure_34 } = first(11641)({
     chatManager: first,
     rowGenerator: first1(
       noop.useState(() => new first(hasJumpedToOriginalPost[16])()),
@@ -1512,7 +1509,7 @@ const forwardRefResult = noop.forwardRef((messages, arg1) => {
   });
   let obj6 = { children: null };
   const items4 = [
-    findMessageIndex(first(11578), {
+    findMessageIndex(first(11586), {
       ref: ref5,
       style: messages.style,
       inverted: true,
@@ -1523,6 +1520,7 @@ const forwardRefResult = noop.forwardRef((messages, arg1) => {
       onTapChannel: first2.handleTapChannel,
       onLongPressChannel: first2.handleLongPressChannel,
       onTapAttachmentLink: first2.handleTapAttachmentLink,
+      onTapAttachmentTextPreview: first2.handleTapAttachmentTextPreview,
       onLongPressAttachmentLink: first2.handleLongPressAttachmentLink,
       onTapCall: first2.handleTapCall,
       onTapMention: first2.handleTapMention,

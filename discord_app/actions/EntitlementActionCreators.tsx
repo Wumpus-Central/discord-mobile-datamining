@@ -11,117 +11,56 @@ let closure_5 = async function _fetchUserEntitlements(arg0) {
   c6 = 0;
   c4 = 0;
   let iter = (async (arg0) => {
-    if (c6 === 2) {
-      c6 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c6 = 2;
-        if (0 === c5) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            closure_2 = tmp3;
-            closure_1 = tmp7;
-            closure_129_0 = undefined;
-            closure_129_1 = undefined;
-            closure_129_2 = undefined;
-            let entitlementType;
-            let flag = withSku.withSku;
-            if (flag === undefined) {
-              flag = false;
-            }
-            closure_129_0 = flag;
-            let flag2 = withSku.withApplication;
-            if (flag2 === undefined) {
-              flag2 = false;
-            }
-            closure_129_1 = flag2;
-            let flag3 = withSku.excludeEnded;
-            if (flag3 === undefined) {
-              flag3 = true;
-            }
-            closure_129_2 = flag3;
-            entitlementType = withSku.entitlementType;
-            closure_129_4 = undefined;
-            c5 = 1;
-            c6 = 1;
-            return { value: "flex", done: true };
-          }
-        } else if (1 === tmp7) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj5 = { value, done: true };
-            return obj5;
-          } else {
-            closure_130_1(closure_130_2[2]).dispatch({ type: "ENTITLEMENTS_FETCH_FOR_USER_START" });
-            c4 = 1;
-            const HTTP = closure_130_0(closure_130_2[3]).HTTP;
-            const request = { url: closure_130_4.ENTITLEMENTS_FOR_USER, query: null, rejectWithError: true };
-            const obj6 = {
-              with_sku: closure_129_0,
-              with_application: closure_129_1,
-              entitlement_type: entitlementType,
-              exclude_ended: closure_129_2,
-            };
-            request.query = obj6;
-            c5 = 3;
-            c6 = 1;
-            const obj7 = { value: HTTP.get(request), done: false };
-            return obj7;
-          }
-        } else {
-          if (2 === tmp7) {
-            c4 = 0;
-            closure_130_1(closure_130_2[2]).dispatch({ type: "ENTITLEMENTS_FETCH_FOR_USER_FAIL" });
-            c6 = 3;
-            const obj4 = closure_130_1(closure_130_2[2]);
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 !== 2) {
-            closure_129_4 = value;
-            const obj8 = {
-              type: "ENTITLEMENTS_FETCH_FOR_USER_SUCCESS",
-              entitlements: closure_129_4.body,
-              excludeEnded: closure_129_2,
-            };
-            closure_130_1(closure_130_2[2]).dispatch(obj8);
-            c4 = 0;
-            const obj = closure_130_1(closure_130_2[2]);
-          }
-          c4 = 0;
-          c6 = 3;
-          const obj10 = { value, done: true };
-          return obj10;
-        }
-      } catch (tmp20) {
-        closure_3 = tmp20;
-        if (tmp4 === c4) {
-          c6 = tmp2;
-          throw tmp20;
-        } else {
-          c5 = tmp;
-        }
-      }
+    closure_2 = tmp3;
+    let flag = withSku.withSku;
+    if (flag === undefined) {
+      flag = false;
     }
+    closure_129_0 = flag;
+    let flag2 = withSku.withApplication;
+    if (flag2 === undefined) {
+      flag2 = false;
+    }
+    closure_129_1 = flag2;
+    let flag3 = withSku.excludeEnded;
+    if (flag3 === undefined) {
+      flag3 = true;
+    }
+    closure_129_2 = flag3;
+    const entitlementType = withSku.entitlementType;
+    await "flex";
+    closure_130_1(closure_130_2[2]).dispatch({ type: "ENTITLEMENTS_FETCH_FOR_USER_START" });
+    const HTTP = closure_130_0(closure_130_2[3]).HTTP;
+    const request = {
+      url: closure_130_4.ENTITLEMENTS_FOR_USER,
+      query: {
+        with_sku: closure_129_0,
+        with_application: closure_129_1,
+        entitlement_type: entitlementType,
+        exclude_ended: closure_129_2,
+      },
+      rejectWithError: true,
+    };
+    await HTTP.get(request);
+    if (2 === tmp7) {
+      c4 = 0;
+      closure_130_1(closure_130_2[2]).dispatch({ type: "ENTITLEMENTS_FETCH_FOR_USER_FAIL" });
+      c6 = 3;
+      closure_130_1(closure_130_2[2]);
+    } else if (arg0 === 1) {
+      c6 = 3;
+      throw value;
+    } else if (arg0 !== 2) {
+      closure_129_4 = value;
+      closure_130_1(closure_130_2[2]).dispatch({
+        type: "ENTITLEMENTS_FETCH_FOR_USER_SUCCESS",
+        entitlements: closure_129_4.body,
+        excludeEnded: closure_129_2,
+      });
+      c4 = 0;
+      closure_130_1(closure_130_2[2]);
+    }
+    return value;
   })();
   iter.next();
   return iter;

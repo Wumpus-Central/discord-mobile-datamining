@@ -6,10 +6,10 @@ import UserProfileUpsellCardV2 from "UserProfileUpsellCardV2.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const PROFILE_SIDE_PADDING = fn(6825).PROFILE_SIDE_PADDING;
+const PROFILE_SIDE_PADDING = fn(6815).PROFILE_SIDE_PADDING;
 const jsx = fn(21).jsx;
 const FLOATING_UPSELL_SPRING = { mass: 1, damping: 25, stiffness: 400, overshootClamping: false };
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let closure_7 = createStyles.createStyles((bottom) => {
   const obj = {
     container: { position: "absolute", bottom, start: 0, end: 0 },
@@ -29,8 +29,8 @@ const result = size.fileFinishedImporting("modules/user_profile/native/UserProfi
 export default function UserProfilePremiumTryItOutUpsell(isVisible) {
   isVisible = isVisible.isVisible;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(6779)(
-    analyticsLocations(6799).USER_SETTINGS_TRY_OUT_PREMIUM,
+  analyticsLocations = analyticsLocations(6769)(
+    analyticsLocations(6789).USER_SETTINGS_TRY_OUT_PREMIUM,
   ).analyticsLocations;
   const tmp2 = closure_7(analyticsLocations(1613)().bottom);
   let items = [analyticsLocations];
@@ -41,7 +41,7 @@ export default function UserProfilePremiumTryItOutUpsell(isVisible) {
     };
     openPremiumModalDefault(obj);
   }, items);
-  const tmp = analyticsLocations(6779);
+  const tmp = analyticsLocations(6769);
   const fn = function u() {
     value = isVisible.get();
     let num = 0;
@@ -65,10 +65,10 @@ export default function UserProfilePremiumTryItOutUpsell(isVisible) {
     obj2.transform = items;
     return obj2;
   };
-  let obj = isVisible(4596);
+  let obj = isVisible(4595);
   fn.__closure = {
     isVisible,
-    withSpring: isVisible(5476).withSpring,
+    withSpring: isVisible(5464).withSpring,
     FLOATING_UPSELL_SPRING,
     DISMISSED_TRANSLATE_Y: 60,
     DISMISSED_SCALE: 0.9,
@@ -78,7 +78,7 @@ export default function UserProfilePremiumTryItOutUpsell(isVisible) {
   const animatedStyle = obj.useAnimatedStyle(fn);
   let obj2 = {
     isVisible,
-    withSpring: isVisible(5476).withSpring,
+    withSpring: isVisible(5464).withSpring,
     FLOATING_UPSELL_SPRING,
     DISMISSED_TRANSLATE_Y: 60,
     DISMISSED_SCALE: 0.9,
@@ -102,23 +102,23 @@ export default function UserProfilePremiumTryItOutUpsell(isVisible) {
   I.__closure = { isVisible };
   I.__workletHash = 4173826125285;
   I.__initData = __initData2;
-  const animatedProps = isVisible(4596).useAnimatedProps(I);
+  const animatedProps = isVisible(4595).useAnimatedProps(I);
   const obj4 = { animatedProps, style: null, children: null };
   const items1 = [tmp2.container, animatedStyle];
   obj4.style = items1;
   const obj5 = { style: tmp2.card, text: null, buttonText: null, onButtonPress: null, buttonVariant: "primary" };
-  let obj3 = isVisible(4596);
+  let obj3 = isVisible(4595);
   const intl = isVisible(1115).intl;
   obj5.text = intl.format(isVisible(1115).t.TmfgI2, { onClick: callback });
   const intl2 = isVisible(1115).intl;
   obj5.buttonText = intl2.string(isVisible(1115).t.PxUx8e);
   obj5.onButtonPress = isVisible.onPreviewPremium;
-  obj4.children = jsx(analyticsLocations(14367), {
+  obj4.children = jsx(analyticsLocations(14411), {
     style: tmp2.card,
     text: null,
     buttonText: null,
     onButtonPress: null,
     buttonVariant: "primary",
   });
-  return jsx(analyticsLocations(4596).View, { animatedProps, style: null, children: null });
+  return jsx(analyticsLocations(4595).View, { animatedProps, style: null, children: null });
 }

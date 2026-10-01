@@ -50,7 +50,7 @@ function useFavoritesAccess() {
   } else if (isPremiumExactlyResult) {
   }
 }
-const MAX_FAVORITE_CHANNELS = fn(2058).MAX_FAVORITE_CHANNELS;
+const MAX_FAVORITE_CHANNELS = fn(2057).MAX_FAVORITE_CHANNELS;
 const PremiumTypes = fn(1374).PremiumTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/FavoritesHooks.tsx");
@@ -111,8 +111,8 @@ export const useFavorites = function useFavorites() {
   const items = [FavoriteStore];
   return initialize.useStateFromStoresObject(items, () => favoriteChannels.getFavoriteChannels());
 };
-export const useFavorite = function useFavorite(id) {
-  _require = id;
+export const useFavorite = function useFavorite(arg0) {
+  _require = arg0;
   const items = [FavoriteStore];
   return require("initialize").useStateFromStores(items, () => FavoriteStore.getFavorite(closure_0));
 };

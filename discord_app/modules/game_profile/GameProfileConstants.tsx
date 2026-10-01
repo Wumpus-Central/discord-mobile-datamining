@@ -5,3 +5,4 @@ const result = size.fileFinishedImporting("modules/game_profile/GameProfileConst
 
 export const MAX_VISIBLE_ANNOUNCEMENTS = 8;
 export const MOBILE_GAME_PROFILE_MAX_WIDTH = 520;
+export const DISCORD_APP_GAME_ID = "1552821538409939044";

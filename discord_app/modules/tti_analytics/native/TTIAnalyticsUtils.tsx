@@ -603,8 +603,8 @@ let closure_30 = async function _trackAppLaunchCompletedAsync(arg0) {
   }
 };
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const ACCEPT_INVITE_MODAL_KEY = fn(7279).ACCEPT_INVITE_MODAL_KEY;
-const StaticChannelRoutes = fn(2052).StaticChannelRoutes;
+const ACCEPT_INVITE_MODAL_KEY = fn(7257).ACCEPT_INVITE_MODAL_KEY;
+const StaticChannelRoutes = fn(2051).StaticChannelRoutes;
 const jsx = fn(21).jsx;
 const v1 = fn(1255);
 const load_id = v1.v4();

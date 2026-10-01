@@ -11,10 +11,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(6887).FORUM_GUIDELINES_ACTION_SHEET;
+let closure_6 = fn(6878).FORUM_GUIDELINES_ACTION_SHEET;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = {
   scrollContainer: { paddingHorizontal: 16 },
   header: { alignItems: "center", paddingTop: 20, paddingBottom: 24 },
@@ -233,5 +233,5 @@ export const openForumGuidelinesActionSheet = function openForumGuidelinesAction
   const obj = ActionSheetActionCreatorsDefault;
   const obj2 = {};
   const merged = Object.assign(arg0);
-  obj.openLazy(asyncRequireImpl(9931, dependencyMap.paths), closure_6, obj2);
+  obj.openLazy(asyncRequireImpl(9923, dependencyMap.paths), closure_6, obj2);
 };

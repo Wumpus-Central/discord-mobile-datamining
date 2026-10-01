@@ -82,7 +82,7 @@ export default noop.memo(
         return Math.max(0, Math.min(diff, contentSize + footerSize + insetEnd - listViewportHeight));
       }
     }, []);
-    const sharedValue = footerSize(4596).useSharedValue(memo);
+    const sharedValue = footerSize(4595).useSharedValue(memo);
     const ref1 = insetEnd.useRef(tmp3);
     ref1.current = tmp3;
     const ref2 = insetEnd.useRef(0);
@@ -297,7 +297,7 @@ export default noop.memo(
     }, items);
     const items1 = [memo1];
     const imperativeHandle = insetEnd.useImperativeHandle(arg1, () => memo1, items1);
-    let obj = footerSize(4596);
+    let obj = footerSize(4595);
     const tmp5 = footerSize;
     class Q {
       constructor(arg0) {
@@ -316,12 +316,12 @@ export default noop.memo(
         return;
       }
     }
-    let obj2 = footerSize(4596);
-    Q.__closure = { scrollPosValue: sharedValue, onScrollWorklet, onScroll, runOnJS: footerSize(4596).runOnJS };
+    let obj2 = footerSize(4595);
+    Q.__closure = { scrollPosValue: sharedValue, onScrollWorklet, onScroll, runOnJS: footerSize(4595).runOnJS };
     Q.__workletHash = 11450141164730;
     Q.__initData = renderSectionHeader;
     const items2 = [renderItem, renderSectionFooter, renderSectionHeader];
-    const obj3 = { scrollPosValue: sharedValue, onScrollWorklet, onScroll, runOnJS: footerSize(4596).runOnJS };
+    const obj3 = { scrollPosValue: sharedValue, onScrollWorklet, onScroll, runOnJS: footerSize(4595).runOnJS };
     const callback = insetEnd.useCallback((item) => {
       item = item.item;
       const type = item.type;
@@ -349,7 +349,7 @@ export default noop.memo(
     const obj4 = { children: null };
     const animatedScrollHandler = obj2.useAnimatedScrollHandler(Q);
     const items6 = [
-      onScroll(tmp5(15932).AnimatedLegendList, {
+      onScroll(tmp5(15948).AnimatedLegendList, {
         ref,
         contentContainerStyle: memo3,
         data: tmp3.listData,

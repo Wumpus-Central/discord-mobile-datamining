@@ -9,7 +9,7 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import GuildIcon from "../../../guild/native/GuildIcon.tsx";
-import _modDef6706 from "../../../../../_runtime/metro/06706__.js";
+import _modDef6696 from "../../../../../_runtime/metro/06696__.js";
 import HotspotStore2 from "../../../hotspot/index.tsx";
 import StageSparkleDefault from "../components/StageSparkle.tsx";
 import Form from "../../../../design/void/Form/native/index.tsx";
@@ -36,7 +36,7 @@ function NavigationBar(guild) {
     const intl = util.intl;
     obj2.accessibilityLabel = intl.string(util.t.cpT0Cq);
     obj2.onPress = closeModal;
-    const obj3 = { source: _modDef6706 };
+    const obj3 = { source: _modDef6696 };
     obj2.children = closure_1_14(native.Icon, obj3);
     obj.children = closure_1_14(Pressables.PressableOpacity, obj2);
     tmp2 = closure_1_14(React5, obj);
@@ -97,13 +97,13 @@ class NotificationToggle {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-const StageChannelsConstants = fn(5923);
+const StageChannelsConstants = fn(5912);
 ({ MAX_STAGE_TOPIC_LENGTH: c10, START_STAGE_CHANNEL_EVENT_MODAL_KEY: closure_11 } = StageChannelsConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
-let constants = fn(2051).GuildScheduledEventPrivacyLevel;
+let constants = fn(2050).GuildScheduledEventPrivacyLevel;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj = {
   keyboardAwareView: { flex: 1 },
   closeButtonContainer: { right: 10 },
@@ -229,10 +229,10 @@ export default noop.forwardRef((channel, arg1) => {
                 if (null != memo) {
                   c4 = 3;
                   c5 = 1;
-                  const obj8 = { value: tmp66(8041).editStage(channel, first1, first2), done: false };
+                  const obj8 = { value: tmp66(8030).editStage(channel, first1, first2), done: false };
                   return obj8;
                 } else {
-                  obj5 = tmp66(8041);
+                  obj5 = tmp66(8030);
                   c4 = 2;
                   c5 = 1;
                   const obj9 = { value: obj5.startStage(channel, first1, first2, first3), done: false };
@@ -246,7 +246,7 @@ export default noop.forwardRef((channel, arg1) => {
           if (1 === tmp7) {
             dependencyMap = 0;
             closure_128_1 = tmp66;
-            const aPIError = new closure_0(4765).APIError(closure_128_1);
+            const aPIError = new closure_0(5266).APIError(closure_128_1);
             closure_128_0 = aPIError;
             closure_129_9(closure_128_0);
             closure_129_8(false);
@@ -261,8 +261,8 @@ export default noop.forwardRef((channel, arg1) => {
                   tmp8 = closure_129_13;
                 }
                 if (tmp8) {
-                  tmp66(6833).hideHotspot(closure_0(6830).HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE);
-                  const obj2 = tmp66(6833);
+                  tmp66(6823).hideHotspot(closure_0(6820).HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE);
+                  const obj2 = tmp66(6823);
                 }
               }
             } else if (arg0 === 1) {
@@ -316,7 +316,7 @@ export default noop.forwardRef((channel, arg1) => {
       const tmp = c16();
       const intl = require("util").intl;
       obj.accessibilityLabel = intl.string(require("util").t.cpT0Cq);
-      obj.source = require("../../../../../_runtime/metro/06706__.js");
+      obj.source = require("../../../../../_runtime/metro/06696__.js");
       obj.onPress = onPress;
       return obj5(require("TouchableHitBox"), obj);
     },

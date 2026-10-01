@@ -87,6 +87,7 @@ items2[4] = {
 const result = size.fileFinishedImporting("modules/collectibles/CollectiblesShopConstants.tsx");
 const items3 = [{ categorySkuId: "1440063059895779408", rewardSkuId: "1440063059862487193" }];
 
+export const PrioritizedCurrency = { FIAT: "fiat", ORBS: "orbs" };
 export const POPULAR_PICK_PRODUCTS = [
   "1212569433839636530",
   "1232073608168472638",

@@ -2,9 +2,9 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import TokenManagerAll from "../../../discord_common/js/shared/lib/TokenManager.tsx";
+import DragAndDropUtils from "../../utils/DragAndDropUtils.tsx";
 import Constants from "Constants.tsx";
 import isStaffFromRawUserDefault from "../user/isStaffFromRawUser.tsx";
-import DragAndDropUtils from "../../utils/DragAndDropUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const MAX_ACCOUNTS = Constants.MAX_ACCOUNTS;

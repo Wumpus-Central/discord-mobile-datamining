@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/tiny_bronco/native/openTinyBr
 
 export default function openTinyBroncoPromoSheet(arg0) {
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(14485, dependencyMap.paths),
+    asyncRequireImpl(14491, dependencyMap.paths),
     TINY_BRONCO_PROMO_SHEET_KEY,
     arg0,
   );

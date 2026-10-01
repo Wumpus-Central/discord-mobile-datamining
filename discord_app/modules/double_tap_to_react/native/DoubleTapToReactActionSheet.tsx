@@ -20,15 +20,15 @@ function EmojiConfetti(children) {
   const top = children.top;
   ({ bottom, left } = children);
   ({ right, leading: dependencyMap } = children);
-  const sharedValue = top(4596).useSharedValue(0);
-  let obj = top(4596);
-  const sharedValue1 = top(4596).useSharedValue(0);
-  const obj2 = top(4596);
-  const sharedValue2 = top(4596).useSharedValue(0.2);
-  const obj3 = top(4596);
-  const sharedValue3 = top(4596).useSharedValue(0);
-  let obj4 = top(4596);
-  const mountLayoutEffect = top(5494).useMountLayoutEffect(() => {
+  const sharedValue = top(4595).useSharedValue(0);
+  let obj = top(4595);
+  const sharedValue1 = top(4595).useSharedValue(0);
+  const obj2 = top(4595);
+  const sharedValue2 = top(4595).useSharedValue(0.2);
+  const obj3 = top(4595);
+  const sharedValue3 = top(4595).useSharedValue(0);
+  let obj4 = top(4595);
+  const mountLayoutEffect = top(5482).useMountLayoutEffect(() => {
     let num = 0;
     if (!dependencyMap) {
       const _Math = Math;
@@ -60,7 +60,7 @@ function EmojiConfetti(children) {
       obj17.withSequence(withTimingResult4, withTimingResult5, timing.withTiming(0, { duration: 240 })),
     );
   });
-  let obj5 = top(5494);
+  let obj5 = top(5482);
   const fn = function f() {
     const items = [{ scale: sharedValue2.get() }];
     let num = 1;
@@ -99,8 +99,8 @@ function EmojiConfetti(children) {
   };
   fn.__workletHash = 1455873119263;
   fn.__initData = __initData;
-  const style = top(4596).useAnimatedStyle(fn);
-  return closure_11(left(4596).View, { style, children: children.emojiComponent });
+  const style = top(4595).useAnimatedStyle(fn);
+  return closure_11(left(4595).View, { style, children: children.emojiComponent });
 }
 function EmojiBurstAnimation(emojiComponent) {
   emojiComponent = emojiComponent.emojiComponent;
@@ -119,7 +119,7 @@ const AnalyticEvents = fn(1074).AnalyticEvents;
 const EMOJI_URL_BASE_SIZE = fn(1375).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj2 = {
   emoji: { width: 48, height: 48, zIndex: 2 },
   selectedCustomEmoji: { width: 48, height: 48 },
@@ -436,7 +436,7 @@ export default function DoubleTapToReactActionSheet(emoji) {
             emoji_name: closure_129_2.name,
             emoji_animated: closure_129_2.animated,
             recommended: closure_129_4.current,
-            location: tmp22(6799).DOUBLE_TAP_TO_REACT_ACTION_SHEET,
+            location: tmp22(6789).DOUBLE_TAP_TO_REACT_ACTION_SHEET,
           };
           tmp22(1241).track(constants.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj7);
           const _setTimeout = setTimeout;

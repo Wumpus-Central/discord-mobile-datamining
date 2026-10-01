@@ -37,7 +37,7 @@ function AddAppButton(application) {
   const customInstallUrl = application.customInstallUrl;
   if (null != customInstallUrl) {
     if (!obj2.isDiscordUrl(customInstallUrl)) {
-      let PlusSmallIcon = application(8233).LinkExternalSmallIcon;
+      let PlusSmallIcon = application(8222).LinkExternalSmallIcon;
       let tmp6 = application;
     }
     const items1 = [application];
@@ -71,7 +71,7 @@ function AddAppButton(application) {
     obj3.onAccessibilityAction = callback1;
     const obj4 = { size: "sm", color: guildId(576).colors.WHITE };
     obj3.icon = <PlusSmallIcon size="sm" color={guildId(576).colors.WHITE} />;
-    return jsx(tmp6(5477).Button, {
+    return jsx(tmp6(5465).Button, {
       text: null,
       onPress: null,
       onLongPress: null,
@@ -80,7 +80,7 @@ function AddAppButton(application) {
       icon: null,
     });
   }
-  PlusSmallIcon = application(8531).PlusSmallIcon;
+  PlusSmallIcon = application(8523).PlusSmallIcon;
   tmp6 = application;
 }
 function OpenAppButton(profileApplication) {
@@ -139,18 +139,18 @@ function OpenAppButton(profileApplication) {
               if (application1 == null) {
                 c3 = 1;
                 c4 = 1;
-                const obj7 = { value: tmp2(6780).fetchApplication(profileApplication.id), done: false };
+                const obj7 = { value: tmp2(6770).fetchApplication(profileApplication.id), done: false };
                 return obj7;
               } else {
                 closure_129_1 = closure_0;
                 closure_130_3(false);
                 if (null != closure_129_0) {
-                  tmp2(4830).hideAllActionSheets();
-                  const obj5 = tmp2(4830);
+                  tmp2(4809).hideAllActionSheets();
+                  const obj5 = tmp2(4809);
                   const obj8 = { recipientIds: closure_130_1 };
                   c3 = 2;
                   c4 = 1;
-                  const obj10 = { value: tmp2(4879).openPrivateChannel(obj8), done: false };
+                  const obj10 = { value: tmp2(4858).openPrivateChannel(obj8), done: false };
                   return obj10;
                 } else {
                   c4 = 3;
@@ -215,7 +215,7 @@ function OpenAppButton(profileApplication) {
   obj.onPress = callback;
   return jsx(profileApplication(channel[17]).Button, { text: null, loading: null, onPress: null });
 }
-const getSection = fn(8790).getSection;
+const getSection = fn(8782).getSection;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const AppLauncherRouteName = fn(1484).AppLauncherRouteName;
 const jsx = fn(21).jsx;

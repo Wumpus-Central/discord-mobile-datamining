@@ -274,17 +274,29 @@ function ChannelLongPressActionSheetConnected(channel) {
   const tmp5Result24 = tmp5(tmp2[89]);
   const tmp38 = onClose(tmp2[98])(channel);
   const tmp39 = onClose(tmp2[99])(channel);
+  let isFavorites;
+  if (tmp39 != null) {
+    isFavorites = tmp39.isFavorites;
+  }
+  let tmp41 = null;
+  if (true === isFavorites) {
+    const destinations = tmp39.destinations;
+    tmp41 = null;
+    if (destinations.some((disabled) => !disabled.disabled)) {
+      tmp41 = tmp39;
+    }
+  }
   const tmp37 = onClose(tmp2[97])(channel, "ChannelLongPressActionSheet");
   const isVibegrationsChannelCandidate = tmp5(tmp2[100]).useIsVibegrationsChannelCandidate(
     channel,
     "ChannelLongPressActionSheet",
   );
-  let tmp42 = null;
+  let tmp44 = null;
   const tmp5Result25 = tmp5(tmp2[100]);
   if (isVibegrationsChannelCandidate) {
-    tmp42 = channel;
+    tmp44 = channel;
   }
-  const tmpResult2Result = onClose(tmp2[101])(tmp42);
+  const tmpResult2Result = onClose(tmp2[101])(tmp44);
   if (stateFromStores7 != null) {
     const isStaffResult = stateFromStores7.isStaff();
   }
@@ -301,7 +313,7 @@ function ChannelLongPressActionSheetConnected(channel) {
   closure_129_3 = isPinned;
   closure_129_4 = stateFromStores8;
   closure_129_5 = analyticsLocations;
-  closure_129_6 = tmp39;
+  closure_129_6 = tmp41;
   closure_129_7 = id;
   const obj7 = { sectionKey: "dm", buttons: [] };
   if (channel.isDM()) {
@@ -391,7 +403,7 @@ function ChannelLongPressActionSheetConnected(channel) {
       obj14.label = intl5.string(tmp5(tmp2[24]).t.OQ9MKu);
       obj14.IconComponent = tmp5(tmp2[33]).LinkIcon;
       obj14.onPress = function onPress() {
-        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10595, dependencyMap.paths), { channelId: channel.id });
+        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10587, dependencyMap.paths), { channelId: channel.id });
       };
       buttons4.push(obj14);
     }
@@ -400,14 +412,14 @@ function ChannelLongPressActionSheetConnected(channel) {
   if (obj7.buttons.length > 0) {
     items12.push(obj7);
   }
-  let tmp52 = isFavoritesGuildSelected;
+  let tmp54 = isFavoritesGuildSelected;
   if (isFavoritesGuildSelected) {
-    tmp52 = null != channel.guild_id;
+    tmp54 = null != channel.guild_id;
   }
-  if (tmp52) {
-    tmp52 = !channel.isCategory();
+  if (tmp54) {
+    tmp54 = !channel.isCategory();
   }
-  if (tmp52) {
+  if (tmp54) {
     const obj15 = { sectionKey: "go-to-server", buttons: null };
     const obj16 = { label: null, IconComponent: null, onPress: null };
     let intl6 = tmp5(tmp2[24]).intl;
@@ -428,9 +440,9 @@ function ChannelLongPressActionSheetConnected(channel) {
     items12.push(obj17);
   }
   const items15 = [];
-  if (null != tmp39) {
+  if (null != tmp41) {
     const obj19 = {
-      label: tmp39.label,
+      label: tmp41.label,
       IconComponent: tmp5(tmp2[40]).FolderIcon,
       onPress() {
         openFavoritesGuildMoveToCategoryActionSheetDefault(channel.id, ChannelSpoilerAgreeStore);
@@ -438,9 +450,9 @@ function ChannelLongPressActionSheetConnected(channel) {
     };
     items15.push(obj19);
   }
-  const tmp56 = onClose(tmp2[42])(tmp37);
-  if (null != tmp56) {
-    items15.push(tmp56);
+  const tmp58 = onClose(tmp2[42])(tmp37);
+  if (null != tmp58) {
+    items15.push(tmp58);
   }
   if (items15.length > 0) {
     const obj20 = { sectionKey: "favorites", buttons: items15 };
@@ -448,7 +460,7 @@ function ChannelLongPressActionSheetConnected(channel) {
   }
   const guildId1 = channel.getGuildId();
   closure_129_8 = guildId1;
-  if (tmp60) {
+  if (tmp62) {
     const obj21 = { sectionKey: "vibegrations", buttons: null };
     const obj22 = { label: null, IconComponent: null, onPress: null };
     const intl7 = tmp5(tmp2[24]).intl;
@@ -667,7 +679,7 @@ function ChannelLongPressActionSheetConnected(channel) {
       items12.push(obj23);
     }
     const obj34 = { sectionKey: "notifications", buttons: [] };
-    if (tmp83) {
+    if (tmp85) {
       const MarkChannelUnreadExperiment = tmp5(tmp2[55]).MarkChannelUnreadExperiment;
       if (MarkChannelUnreadExperiment.getConfig({ location: "channel_action_sheet" }).enabled) {
         if (!stateFromStores2) {
@@ -699,7 +711,7 @@ function ChannelLongPressActionSheetConnected(channel) {
       buttons14.push(obj36);
     }
     if (!closure_12(channel.type)) {
-      if (tmp93) {
+      if (tmp95) {
         const buttons15 = obj34.buttons;
         const obj37 = { label: null, IconComponent: null, disableColor: true, onPress: null };
         const intl26 = tmp5(tmp2[24]).intl;
@@ -715,9 +727,9 @@ function ChannelLongPressActionSheetConnected(channel) {
         items12.push(obj34);
       }
       const obj38 = { sectionKey: "threads", buttons: [] };
-      tmp93 =
+      tmp95 =
         closure_9(channel.type) || channel.isCategory() || channel.isGuildStageVoice() || channel.isForumLikeChannel();
-      if (!tmp96) {
+      if (!tmp98) {
         const buttons16 = obj38.buttons;
         const obj39 = { label: null, IconComponent: null, onPress: null };
         const intl27 = tmp5(tmp2[24]).intl;
@@ -732,8 +744,8 @@ function ChannelLongPressActionSheetConnected(channel) {
         items12.push(obj38);
       }
       const obj40 = { sectionKey: "voice", buttons: [] };
-      tmp96 = channel.isThread() || channel.isForumLikeChannel() || !stateFromStores3 || tmp21;
-      if (!tmp100) {
+      tmp98 = channel.isThread() || channel.isForumLikeChannel() || !stateFromStores3 || tmp21;
+      if (!tmp102) {
         if (channel.isGuildVocal()) {
           const buttons17 = obj40.buttons;
           const push2 = buttons17.push;
@@ -755,7 +767,7 @@ function ChannelLongPressActionSheetConnected(channel) {
             obj42.IconComponent = tmp5(tmp2[70]).ChatIcon;
             obj42.onPress = function onPress() {
               ActionSheetActionCreatorsDefault.hideActionSheet();
-              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10631, dependencyMap.paths), { channel });
+              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10623, dependencyMap.paths), { channel });
               hideLaunchPadDefault();
             };
             buttons18.push(obj42);
@@ -771,7 +783,7 @@ function ChannelLongPressActionSheetConnected(channel) {
           }
           isGuildStageVoiceResult = channel.isGuildStageVoice();
         }
-        if (tmp106) {
+        if (tmp108) {
           const buttons19 = obj40.buttons;
           const obj43 = { label: null, IconComponent: null, isDestructive: true, onPress: null };
           const intl31 = tmp5(tmp2[24]).intl;
@@ -829,8 +841,8 @@ function ChannelLongPressActionSheetConnected(channel) {
           };
           buttons19.push(obj43);
         }
-        tmp106 = channel.isGuildStageVoice() && stateFromStores6 && canModerateStage;
-        if (tmp108) {
+        tmp108 = channel.isGuildStageVoice() && stateFromStores6 && canModerateStage;
+        if (tmp110) {
           const buttons20 = obj40.buttons;
           const obj44 = { label: null, IconComponent: null, isDestructive: true, onPress: null };
           const intl32 = tmp5(tmp2[24]).intl;
@@ -880,7 +892,7 @@ function ChannelLongPressActionSheetConnected(channel) {
           };
           buttons22.push(obj48);
           isCategoryResult = channel.isCategory();
-          if (tmp116) {
+          if (tmp118) {
             const buttons23 = obj47.buttons;
             const intl35 = tmp5(tmp2[24]).intl;
             const string8 = intl35.string;
@@ -914,7 +926,7 @@ function ChannelLongPressActionSheetConnected(channel) {
             obj49 = buttons23.push(obj49);
             isCategoryResult1 = channel.isCategory();
           }
-          tmp116 =
+          tmp118 =
             closure_9(channel.type) || channel.isForumLikeChannel() || channel.isGuildVoice() || channel.isCategory();
         }
         if (setting) {
@@ -953,7 +965,7 @@ function ChannelLongPressActionSheetConnected(channel) {
         }, items17);
         const obj52 = { value: analyticsLocations, children: null };
         const obj53 = { showGradient: true, startExpanded: null, header: null, children: null };
-        tmp108 = channel.isGuildStageVoice() && stateFromStores6 && canConnect;
+        tmp110 = channel.isGuildStageVoice() && stateFromStores6 && canConnect;
         obj53.startExpanded = tmp5(tmp2[103]).isMetaQuest();
         const obj54 = { icon: tmp24, title: tmpResultResult, subtitle: formatToPlainStringResult };
         obj53.header = tmp23(tmp5(tmp2[104]).ActionSheetIconHeader, obj54);
@@ -968,11 +980,11 @@ function ChannelLongPressActionSheetConnected(channel) {
               str = "danger";
             }
             return closure_1_35(
-              channel(6816).ActionSheetRow,
+              channel(6806).ActionSheetRow,
               {
                 variant: str,
                 label,
-                icon: closure_1_35(channel(6816).ActionSheetRow.Icon, {
+                icon: closure_1_35(channel(6806).ActionSheetRow.Icon, {
                   IconComponent,
                   style: iconStyle,
                   disableColor,
@@ -1011,7 +1023,7 @@ function ChannelLongPressActionSheetConnected(channel) {
         };
         t5 = buttons25.push(obj55);
       }
-      tmp100 = closure_10(channel.type) && !stateFromStores4;
+      tmp102 = closure_10(channel.type) && !stateFromStores4;
     }
     const intl19 = tmp5(tmp2[24]).intl;
     const string4 = intl19.string;
@@ -1086,7 +1098,7 @@ function ChannelLongPressActionSheetConnected(channel) {
       buttons27.push(obj57);
       string4Result1 = string4(t4.tbeRRJ);
     }
-    tmp83 = closure_11(channel.type) || channel.isCategory() || channel.isForumLikeChannel();
+    tmp85 = closure_11(channel.type) || channel.isCategory() || channel.isForumLikeChannel();
   } else {
     const buttons28 = obj23.buttons;
     const intl12 = tmp5(tmp2[24]).intl;
@@ -1106,18 +1118,18 @@ function ChannelLongPressActionSheetConnected(channel) {
     };
     t3 = buttons28.push(obj58);
   }
-  tmp60 = null != id && null != guildId1;
+  tmp62 = null != id && null != guildId1;
   const tmpResult4 = onClose(tmp2[101]);
 }
-const SafetyWarningTypes = fn(10579).SafetyWarningTypes;
-const ChannelRecord = fn(2049);
+const SafetyWarningTypes = fn(10571).SafetyWarningTypes;
+const ChannelRecord = fn(2048);
 ({
   isGuildTextChannelType: closure_9,
   isGuildVocalChannelType: c10,
   isReadableType: closure_11,
   isTextChannel: closure_12,
 } = ChannelRecord);
-const StaticChannelRoute = fn(2052).StaticChannelRoute;
+const StaticChannelRoute = fn(2051).StaticChannelRoute;
 const Constants = fn(1074);
 ({
   AnalyticsObjectTypes: closure_24,
@@ -1131,7 +1143,7 @@ const Constants = fn(1074);
   Routes: closure_32,
   ZERO_STRING_GUILD_ID: closure_33,
 } = Constants);
-let closure_34 = fn(10580).ChannelDetailsNavigatorScreens;
+let closure_34 = fn(10572).ChannelDetailsNavigatorScreens;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/channel/native/ChannelLongPressActionSheet.tsx");

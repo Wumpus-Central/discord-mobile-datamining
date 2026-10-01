@@ -2,12 +2,13 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import UserUtilsDefault from "../../utils/UserUtils.tsx";
-import _modDef4985 from "../../../_runtime/metro/04985__.js";
+import _modDef4964 from "../../../_runtime/metro/04964__.js";
 import AutocompleteUtils from "../../utils/AutocompleteUtils.tsx";
 import GuildUtilsDefault from "../../utils/GuildUtils.tsx";
 import UserSearchManagerDefault from "../autocompleter/UserSearchManager.tsx";
 import SearchUtils from "SearchUtils.tsx";
 import SearchTokens from "tokens/SearchTokens.tsx";
+import isGuildLikeSearchContext from "isGuildLikeSearchContext.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
@@ -185,7 +186,7 @@ function getAutocompleteList(searchContext, autocompleteMode, tokens) {
       } else {
         autocompletions = [];
       }
-      obj = SearchUtils;
+      obj = isGuildLikeSearchContext;
     }
     if (null != tmp4) {
       const items = [tmp4];
@@ -228,7 +229,7 @@ function rebuildAutocompleteResults(c13) {
 const Constants = fn(1074);
 ({ SearchPopoutModes: closure_9, SearchTokenTypes } = Constants);
 const ME = Constants.ME;
-fn(6024).AutocompleterResultTypes;
+fn(6013).AutocompleterResultTypes;
 let c13 = null;
 let closure_14 = [];
 const map = new Map();
@@ -262,7 +263,7 @@ SearchAutocompleteStoreClass.displayName = "SearchAutocompleteStore";
 const searchAutocompleteStoreClass = new SearchAutocompleteStoreClass(DispatcherDefault, {
   SEARCH_AUTOCOMPLETE_INITIALIZE: function handleSearchAutocompleteInitialize(searchContext) {
     searchContext = searchContext.searchContext;
-    if (!_modDef4985(c13, searchContext)) {
+    if (!_modDef4964(c13, searchContext)) {
       c13 = searchContext;
       SearchUtils.clearTokenCache();
     }
@@ -270,7 +271,7 @@ const searchAutocompleteStoreClass = new SearchAutocompleteStoreClass(Dispatcher
   },
   SEARCH_AUTOCOMPLETE_QUERY_UPDATE: function handleSearchAutocompleteQueryUpdate(arg0) {
     ({ searchContext, tokens, cursorScope } = arg0);
-    if (!_modDef4985(c13, searchContext)) {
+    if (!_modDef4964(c13, searchContext)) {
       c13 = searchContext;
       SearchUtils.clearTokenCache();
     }

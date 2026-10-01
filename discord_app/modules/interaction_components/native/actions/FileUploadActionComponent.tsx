@@ -1,8 +1,8 @@
 // discord_app/modules/interaction_components/native/actions/FileUploadActionComponent.tsx
 import util from "../../../../intl/index.native.tsx";
-import FileSizeUtils from "../../../../utils/FileSizeUtils.tsx";
 import CircleCheckIcon from "../../../../design/components/Icon/native/redesign/generated/CircleCheckIcon.tsx";
 import InteractionComponentUtils from "../../InteractionComponentUtils.tsx";
+import FileSizeUtils from "../../../../utils/FileSizeUtils.tsx";
 import TableRow from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import XSmallIcon from "../../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
 import IconButton from "../../../../design/components/Button/native/IconButton.native.tsx";
@@ -99,11 +99,11 @@ function File(upload) {
   return React7(TableRow.TableRow, obj);
 }
 const View = fn(17).View;
-const DraftType = fn(5396).DraftType;
+const DraftType = fn(5384).DraftType;
 const NOOP = fn(1074).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let closure_11 = createStyles.createStyles({ defaultAttachmentIconWrapper: { width: 32, alignItems: "center" } });
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/interaction_components/native/actions/FileUploadActionComponent.tsx");
@@ -313,7 +313,7 @@ export default function FileUploadActionComponent(maxValues) {
       extensions: allowedExtensions,
       uploadLimit: InteractionModal,
       onDismissKeyboard() {
-        return InteractionModal(10300).hideMediaKeyboardActionSheet();
+        return InteractionModal(10292).hideMediaKeyboardActionSheet();
       },
       onRestoreKeyboard: effectiveUploadLimit,
       onSelectFiles(arg0) {
@@ -346,7 +346,7 @@ export default function FileUploadActionComponent(maxValues) {
           const result = InteractionModal(customId[29]).hideMediaKeyboardActionSheet();
           if (item.isIncluded) {
             const found = currentUploads.find((item) =>
-              InteractionModal(5645).doesImageMatchUpload(item.node.image, item),
+              InteractionModal(5634).doesImageMatchUpload(item.node.image, item),
             );
             if (null != found) {
               callback1(found.id);
@@ -367,9 +367,9 @@ export default function FileUploadActionComponent(maxValues) {
           obj.handleViewAllDialog(obj2);
         },
         onManageLimited() {
-          obj = InteractionModal(10299);
+          obj = InteractionModal(10291);
           const result = obj.handleLimitedPickerDialog({
-            onDismissKeyboard: InteractionModal(10300).hideMediaKeyboardActionSheet,
+            onDismissKeyboard: InteractionModal(10292).hideMediaKeyboardActionSheet,
             onRestoreKeyboard,
           });
         },

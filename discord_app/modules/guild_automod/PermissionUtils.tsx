@@ -5,7 +5,7 @@ import PermissionStore from "../../stores/PermissionStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const AutomodTriggerType = fn(11546).AutomodTriggerType;
+const AutomodTriggerType = fn(11554).AutomodTriggerType;
 const Constants = fn(1074);
 ({ GuildFeatures: hasOwnProperty, Permissions: metroRequire } = Constants);
 const size = fn(2);
@@ -47,6 +47,45 @@ export const useCanCurrentUserManageAutomod = function useCanCurrentUserManageAu
           }
           return canResult;
         }
+      }
+    },
+    items1,
+  );
+};
+export const hasMentionRaidLimitAccess = function hasMentionRaidLimitAccess(guildId) {
+  let obj = arg1;
+  if (arg1 === undefined) {
+    obj = GuildStore;
+  }
+  const guild = obj.getGuild(guildId);
+  let flag;
+  if (guild != null) {
+    const features = guild.features;
+    flag = features.has(constants.COMMUNITY);
+  }
+  if (flag == null) {
+    flag = false;
+  }
+  return flag;
+};
+export const useHasMentionRaidLimitAccess = function useHasMentionRaidLimitAccess(guildId) {
+  _require = guildId;
+  const items = [GuildStore];
+  const items1 = [guildId];
+  return require("initialize").useStateFromStores(
+    items,
+    () => {
+      if (GuildStore !== undefined) {
+        const guild = GuildStore.getGuild(tmp);
+        let flag;
+        if (guild != null) {
+          const features = guild.features;
+          flag = features.has(constants.COMMUNITY);
+        }
+        if (flag == null) {
+          flag = false;
+        }
+        return flag;
       }
     },
     items1,

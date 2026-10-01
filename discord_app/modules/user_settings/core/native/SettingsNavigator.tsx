@@ -7,8 +7,8 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import UserSettingsUtils from "../../../../utils/UserSettingsUtils.tsx";
 import SettingRendererUtils from "../../../settings/native/renderer/SettingRendererUtils.tsx";
-import SettingRendererTypes from "../../../settings/native/renderer/SettingRendererTypes.tsx";
 import BackIconWithBadge from "../../../main_tabs_v2/native/shared_components/BackIconWithBadge.tsx";
+import SettingRendererTypes from "../../../settings/native/renderer/SettingRendererTypes.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../LocaleStore.tsx";
@@ -54,9 +54,9 @@ const Constants = fn(1074);
 ({ AnalyticsPages: closure_8, UserSettingsSections: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const NativeStackNavigator = fn(7534);
+const NativeStackNavigator = fn(7512);
 let closure_12 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let obj = {
   statusBarSpacer: { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND },
   headerContainer: null,

@@ -1,12 +1,12 @@
 // discord_app/polyfillsNative.tsx
 import q from "../_runtime/01237_q.js";
 import Buffer from "../_runtime/01252_Buffer.js";
-import _mod14075 from "../_runtime/metro/14075__.js";
+import _mod14083 from "../_runtime/metro/14083__.js";
 import Logger from "modules/debug/Logger.tsx";
-import 13981__ from "../_runtime/metro/13981__.js";
-import get_ActivityIndicator from "../_runtime/metro/14051__.js";
-import _typeof from "../_runtime/metro/14069__.js";
-import GetOption from "../_runtime/metro/14072__.js";
+import 13989__ from "../_runtime/metro/13989__.js";
+import get_ActivityIndicator from "../_runtime/metro/14059__.js";
+import _typeof from "../_runtime/metro/14077__.js";
+import GetOption from "../_runtime/metro/14080__.js";
 import size from "../_runtime/metro/00002__.js";
 
 if (typeof process === "undefined") {
@@ -21,7 +21,7 @@ if (!global.self) {
   global.self = global;
 }
 if (null == window.crypto) {
-  const _module5 = _mod14075;
+  const _module5 = _mod14083;
   const _window = window;
   window.crypto = global.crypto;
 }

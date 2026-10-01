@@ -20,7 +20,7 @@ const sortByMatchScoreDefault = sortByMatchScore;
 
 require = fn;
 const View = fn(17).View;
-let ChannelMemberStore = fn(6893);
+let ChannelMemberStore = fn(6884);
 ({ EVERYONE_CHANNEL_ID: closure_7, MemberListRowTypes: closure_8 } = ChannelMemberStore);
 let ChannelMemberStore = ChannelMemberStore_mod;
 const Constants = fn(1074);
@@ -88,11 +88,11 @@ export default noop.memo(function GuildChannelUserList(searchable) {
       const obj = { userFilters: { guild: channelId, strict: true } };
       const obj2 = { guild: channelId, strict: true };
       return new sortByMatchScoreDefault(
-        (canMentionEveryone, str) => {
+        (stateFromStores, str) => {
           if ("" === str.trim()) {
             analyticsLocations(closure_20);
           } else {
-            analyticsLocations(canMentionEveryone);
+            analyticsLocations(stateFromStores);
           }
         },
         items,

@@ -86,22 +86,13 @@ let closure_26 = async function _trackHeartbeat() {
           const obj11 = { initialized: closure_129_1.createdAtTimestamp };
           obj10.data = obj11;
           closure_130_1(closure_130_2[11]).addBreadcrumb(obj10);
-          const obj12 = {
-            client_heartbeat_initialization_timestamp: closure_129_1.createdAtTimestamp,
-            client_heartbeat_version: 31,
-          };
+          const obj12 = { client_heartbeat_initialization_timestamp: closure_129_1.createdAtTimestamp, client_heartbeat_version: 31 };
           const obj2 = closure_130_1(closure_130_2[11]);
           const merged = Object.assign(closure_130_0(closure_130_2[13]).getClientHeartbeatPiggybackProperties());
           const idleSince = closure_130_6.getIdleSince();
           num2 = idleSince;
           closure_129_3 = num2;
-          const obj13 = {
-            is_idle: closure_130_6.isIdle(),
-            idle_duration_ms: null,
-            is_afk: null,
-            is_system_suspended: null,
-            is_system_locked: null,
-          };
+          const obj13 = { is_idle: closure_130_6.isIdle(), idle_duration_ms: null, is_afk: null, is_system_suspended: null, is_system_locked: null };
           const _Date = tmp40.Date;
           obj13.idle_duration_ms = _Date.now() - closure_129_3;
           obj13.is_afk = closure_130_6.isAFK();
@@ -120,9 +111,7 @@ let closure_26 = async function _trackHeartbeat() {
         } else {
           const _Error = Error;
           const _HermesInternal = HermesInternal;
-          closure_130_1(closure_130_2[11]).captureException(
-            Error("Null session when tracking session heartbeat. Waited " + closure_129_2 - closure_129_0 + "ms"),
-          );
+          closure_130_1(closure_130_2[11]).captureException(Error("Null session when tracking session heartbeat. Waited " + closure_129_2 - closure_129_0 + "ms"));
           const obj = closure_130_1(closure_130_2[11]);
         }
         c4 = 3;
@@ -146,9 +135,7 @@ function isActive() {
   return items.length > 0;
 }
 function scheduleHeartbeatTracking() {
-  SentryUtilsDefault.addBreadcrumb({
-    message: `Heartbeat Track State Parameters Changed. Foregrounded ${closure_22}, Connection State: ${closure_21}`,
-  });
+  SentryUtilsDefault.addBreadcrumb({ message: `Heartbeat Track State Parameters Changed. Foregrounded ${closure_22}, Connection State: ${closure_21}` });
   const items = [];
   if (tmp4) {
     if (closure_22) {
@@ -166,10 +153,7 @@ function scheduleHeartbeatTracking() {
       }
       const obj4 = { message: null };
       const _HermesInternal = HermesInternal;
-      obj4.message =
-        "Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: " +
-        num / 1000 +
-        " seconds. Scheduling Heartbeat";
+      obj4.message = "Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: " + num / 1000 + " seconds. Scheduling Heartbeat";
       SentryUtilsDefault.addBreadcrumb(obj4);
       const obj5 = { type: "timeout", id: null };
       const _setTimeout = setTimeout;
@@ -179,7 +163,7 @@ function scheduleHeartbeatTracking() {
           type: "interval",
           id: setInterval(() => {
             closure_1_25();
-          }, closure_1_11),
+          }, closure_1_11)
         };
       }, num);
       _null = obj5;
@@ -217,9 +201,7 @@ function scheduleHeartbeatTracking() {
     obj6 = { active: items1.length > 0, ver: 31, reasons: items1 };
     const result = socket.handleActiveStateChange(obj6);
   }
-  const obj2 = {
-    message: `Heartbeat Track State Parameters Changed. Foregrounded ${closure_22}, Connection State: ${closure_21}`,
-  };
+  const obj2 = { message: `Heartbeat Track State Parameters Changed. Foregrounded ${closure_22}, Connection State: ${closure_21}` };
   tmp4 = null != token && closure_23;
 }
 function validateClientSession(version) {
@@ -228,12 +210,7 @@ function validateClientSession(version) {
     let tmp4 = version;
     if (version.version !== SessionUtils.CLIENT_SESSION_STORAGE_VERSION) {
       const _HermesInternal = HermesInternal;
-      logger.warn(
-        "Throwing away client session with invalid version: " +
-          version.version +
-          ", expected " +
-          SessionUtils.CLIENT_SESSION_STORAGE_VERSION,
-      );
+      logger.warn("Throwing away client session with invalid version: " + version.version + ", expected " + SessionUtils.CLIENT_SESSION_STORAGE_VERSION);
       tmp4 = null;
     }
     tmp = tmp4;
@@ -296,11 +273,7 @@ let closure_31 = async function _forceDispatchSessionIdUpdate() {
           const socket = closure_129_4.getSocket();
           if (socket != null) {
             ({ createdAtTimestamp, uuid } = closure_128_0);
-            const result = socket.handleUpdateTimeSpentSessionId(
-              createdAtTimestamp,
-              uuid,
-              closure_129_0(closure_129_2[18]).clientLaunchId,
-            );
+            const result = socket.handleUpdateTimeSpentSessionId(createdAtTimestamp, uuid, closure_129_0(closure_129_2[18]).clientLaunchId);
           }
         }
         c3 = 3;
@@ -358,7 +331,7 @@ function handleLocationChange() {
   }
 }
 function handleAppStateUpdate(state) {
-  if ((closure_22 !== state.state) === constants.ACTIVE) {
+  if (closure_22 !== state.state === constants.ACTIVE) {
     closure_22 = tmp;
     scheduleHeartbeatTracking();
   }
@@ -380,170 +353,110 @@ function getSession() {
   return applyArgumentsResult;
 }
 let closure_39 = async function _getSession() {
-  if (c7 === 2) {
-    c7 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp6 === 3) {
+  closure_3 = tmp3;
+  let flag = closure_0;
+  if (closure_0 === undefined) {
+    flag = true;
+  }
+  closure_130_0 = flag;
+  await "flex";
+  if (1 === tmp7) {
     if (arg0 === 1) {
+      c7 = 3;
       throw value;
     } else if (arg0 === 2) {
-      const obj5 = { value, done: true };
-      return obj5;
+      c7 = 3;
+      return { value, done: true };
     } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c7 = 2;
-      if (0 === c6) {
-        if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c7 = 3;
-          const obj7 = { value, done: true };
-          return obj7;
-        } else {
-          closure_3 = tmp3;
-          dependencyMap = tmp7;
-          closure_130_0 = undefined;
-          let flag = closure_0;
-          if (closure_0 === undefined) {
-            flag = true;
-          }
-          closure_130_0 = flag;
-          closure_130_1 = undefined;
-          let session2;
-          closure_130_3 = undefined;
-          c6 = 1;
-          c7 = 1;
-          return { value: "flex", done: true };
+      let session2 = null;
+      let tmp21 = null;
+      if ("loaded" === closure_131_20.state) {
+        const session = closure_131_20.session;
+        let uuid1;
+        if (session != null) {
+          uuid1 = session.uuid;
         }
+        tmp21 = uuid1;
+      }
+      closure_130_3 = tmp21;
+      c4 = 1;
+      if ("uninitialized" === closure_131_20.state) {
+        importDefault = closure_131_29;
+        let Storage = closure_131_0(closure_131_2[16]).Storage;
+        c6 = 3;
+        c7 = 1;
+        return { value: Storage.getAfterRefresh(closure_131_13), done: false };
       } else {
-        if (1 === tmp7) {
-          if (arg0 === 1) {
-            c7 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c7 = 3;
-            const obj8 = { value, done: true };
-            return obj8;
-          } else {
-            session2 = null;
-            let tmp21 = null;
-            if ("loaded" === closure_131_20.state) {
-              const session = closure_131_20.session;
-              let uuid1;
-              if (session != null) {
-                uuid1 = session.uuid;
-              }
-              tmp21 = uuid1;
-            }
-            closure_130_3 = tmp21;
-            c4 = 1;
-            if ("uninitialized" === closure_131_20.state) {
-              importDefault = closure_131_29;
-              let Storage = closure_131_0(closure_131_2[16]).Storage;
-              c6 = 3;
-              c7 = 1;
-              const obj9 = { value: Storage.getAfterRefresh(closure_131_13), done: false };
-              return obj9;
-            } else {
-              session2 = closure_131_20.session;
-              c4 = 0;
-            }
-          }
-        } else if (2 === tmp7) {
-          c4 = 0;
-          closure_130_4 = closure_5;
-          closure_131_1(closure_131_2[11]).captureException(closure_130_4);
-          const _Date = Date;
-          closure_130_1 = Date.now();
-          if (closure_131_27()) {
-            let isSessionExpiredResult = null == tmp30;
-            if (!isSessionExpiredResult) {
-              isSessionExpiredResult = closure_131_0(closure_131_2[17]).isSessionExpired(session2);
-              const obj4 = closure_131_0(closure_131_2[17]);
-            }
-            if (isSessionExpiredResult) {
-              const obj10 = {
-                uuid: closure_131_0(closure_131_2[21]).v4(),
-                createdAtTimestamp: closure_130_1,
-                lastUsedTimestamp: closure_130_1,
-                version: closure_131_0(closure_131_2[17]).CLIENT_SESSION_STORAGE_VERSION,
-              };
-              session2 = obj10;
-              closure_131_18 = 0;
-              obj6 = closure_131_0(closure_131_2[21]);
-            }
-            session2.lastUsedTimestamp = closure_130_1;
-            (function maybeFlushSessionToStorage(session2) {
-              monotonicNowMsResult = closure_1_0(dependencyMap[10]).monotonicNowMs();
-              if (monotonicNowMsResult - monotonicNowMsResult >= closure_1_12) {
-                try {
-                  const Storage = closure_1_0(dependencyMap[16]).Storage;
-                  const result = Storage.set(closure_1_13, session2);
-                } catch (tmp9) {
-                  closure_1_1(tmp2[11]).captureException(tmp9);
-                  const obj2 = closure_1_1(tmp2[11]);
-                }
-              }
-              const obj = closure_1_0(dependencyMap[10]);
-            })(session2);
-          } else {
-            let isSessionExpiredResult1 = null != tmp30;
-            if (isSessionExpiredResult1) {
-              isSessionExpiredResult1 = closure_131_0(closure_131_2[17]).isSessionExpired(session2);
-              const obj3 = closure_131_0(closure_131_2[17]);
-            }
-            if (isSessionExpiredResult1) {
-              session2 = null;
-            }
-          }
-          const obj11 = { state: "loaded", session: session2 };
-          closure_131_20 = obj11;
-          let tmp61 = null != session2;
-          if (tmp61) {
-            tmp61 = closure_130_3 !== session2.uuid;
-          }
-          if (tmp61) {
-            tmp61 = closure_130_0;
-          }
-          if (tmp61) {
-            const socket = closure_131_4.getSocket();
-            if (socket != null) {
-              ({ createdAtTimestamp, uuid } = session2);
-              let result = socket.handleUpdateTimeSpentSessionId(
-                createdAtTimestamp,
-                uuid,
-                closure_131_0(closure_131_2[18]).clientLaunchId,
-              );
-            }
-          }
-          c7 = 3;
-          const obj12 = { value: session2, done: true };
-          return obj12;
-        } else if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 !== 2) {
-          importDefault(value);
-        }
+        session2 = closure_131_20.session;
         c4 = 0;
-        c7 = 3;
-        let obj = { value, done: true };
-        return obj;
-      }
-    } catch (tmp81) {
-      closure_5 = tmp81;
-      if (tmp4 === c4) {
-        c7 = tmp2;
-        throw tmp81;
-      } else {
-        c6 = tmp;
       }
     }
+  } else if (2 === tmp7) {
+    c4 = 0;
+    closure_130_4 = closure_5;
+    closure_131_1(closure_131_2[11]).captureException(closure_130_4);
+    const _Date = Date;
+    closure_130_1 = Date.now();
+    if (closure_131_27()) {
+      let isSessionExpiredResult = null == tmp30;
+      if (!isSessionExpiredResult) {
+        isSessionExpiredResult = closure_131_0(closure_131_2[17]).isSessionExpired(session2);
+        closure_131_0(closure_131_2[17]);
+      }
+      if (isSessionExpiredResult) {
+        session2 = { uuid: closure_131_0(closure_131_2[21]).v4(), createdAtTimestamp: closure_130_1, lastUsedTimestamp: closure_130_1, version: closure_131_0(closure_131_2[17]).CLIENT_SESSION_STORAGE_VERSION };
+        closure_131_18 = 0;
+        closure_131_0(closure_131_2[21]);
+        { uuid: closure_131_0(closure_131_2[21]).v4(), createdAtTimestamp: closure_130_1, lastUsedTimestamp: closure_130_1, version: closure_131_0(closure_131_2[17]).CLIENT_SESSION_STORAGE_VERSION };
+      }
+      session2.lastUsedTimestamp = closure_130_1;
+      (function maybeFlushSessionToStorage(session2) {
+        monotonicNowMsResult = closure_1_0(dependencyMap[10]).monotonicNowMs();
+        if (monotonicNowMsResult - monotonicNowMsResult >= closure_1_12) {
+          try {
+            const Storage = closure_1_0(dependencyMap[16]).Storage;
+            const result = Storage.set(closure_1_13, session2);
+          } catch (tmp9) {
+            closure_1_1(tmp2[11]).captureException(tmp9);
+            const obj2 = closure_1_1(tmp2[11]);
+          }
+        }
+        const obj = closure_1_0(dependencyMap[10]);
+      })(session2);
+    } else {
+      let isSessionExpiredResult1 = null != tmp30;
+      if (isSessionExpiredResult1) {
+        isSessionExpiredResult1 = closure_131_0(closure_131_2[17]).isSessionExpired(session2);
+        closure_131_0(closure_131_2[17]);
+      }
+      if (isSessionExpiredResult1) {
+        session2 = null;
+      }
+    }
+    closure_131_20 = { state: "loaded", session: session2 };
+    let tmp61 = null != session2;
+    if (tmp61) {
+      tmp61 = closure_130_3 !== session2.uuid;
+    }
+    if (tmp61) {
+      tmp61 = closure_130_0;
+    }
+    if (tmp61) {
+      const socket = closure_131_4.getSocket();
+      if (socket != null) {
+        ({ createdAtTimestamp, uuid } = session2);
+        let result = socket.handleUpdateTimeSpentSessionId(createdAtTimestamp, uuid, closure_131_0(closure_131_2[18]).clientLaunchId);
+      }
+    }
+    c7 = 3;
+    return { value: session2, done: true };
+  } else if (arg0 === 1) {
+    c7 = 3;
+    throw value;
+  } else if (arg0 !== 2) {
+    importDefault(value);
   }
+  return value;
 };
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_8, AppStates: closure_9, RTCConnectionStates: c10 } = Constants);
@@ -557,9 +470,9 @@ let c18 = 0;
 let c19 = 0;
 let closure_20 = { state: "uninitialized" };
 let state = RTCConnectionStore.getState();
-const SessionForegroundUtils = fn(7078);
+const SessionForegroundUtils = fn(7070);
 let closure_22 = SessionForegroundUtils.isForegrounded();
-const SessionRouteUtils = fn(7079);
+const SessionRouteUtils = fn(7071);
 let closure_23 = SessionRouteUtils.isActiveUserRoute();
 let token = AuthenticationStore.getToken();
 const size = fn(2);
@@ -603,12 +516,7 @@ export const getActiveSessionUnsafe = function getActiveSessionUnsafe() {
       let tmp8 = value;
       if (value.version !== SessionUtils.CLIENT_SESSION_STORAGE_VERSION) {
         const _HermesInternal = HermesInternal;
-        logger.warn(
-          "Throwing away client session with invalid version: " +
-            value.version +
-            ", expected " +
-            SessionUtils.CLIENT_SESSION_STORAGE_VERSION,
-        );
+        logger.warn("Throwing away client session with invalid version: " + value.version + ", expected " + SessionUtils.CLIENT_SESSION_STORAGE_VERSION);
         tmp8 = null;
       }
       tmp7 = tmp8;

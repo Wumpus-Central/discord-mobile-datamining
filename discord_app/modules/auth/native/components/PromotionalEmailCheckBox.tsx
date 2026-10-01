@@ -6,11 +6,11 @@ const require = globalThis.__r;
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c2, Pressable: c3 } = get_ActivityIndicator);
-const PromoEmailConsentStore = fn(6207);
+const PromoEmailConsentStore = fn(6197);
 ({ usePromoEmailConsentStore: closure_4, setPromoEmailConsentChecked: hasOwnProperty } = PromoEmailConsentStore);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4866);
+const createStyles = fn(4845);
 let closure_8 = createStyles.createStyles({
   checkboxRow: { flexDirection: "row", alignItems: "flex-start", gap: 8 },
   checkboxLabel: { flex: 1 },
@@ -44,14 +44,14 @@ export default function PromotionalEmailCheckBox(style) {
       children: null,
     };
     const obj5 = { checked: tmp3 };
-    const items = [closure_6(tmp4(6125).FormCheckbox, obj5)];
+    const items = [closure_6(tmp4(6115).FormCheckbox, obj5)];
     const obj6 = {
       variant: "text-xs/medium",
       color: "text-muted",
       style: tmp.checkboxLabel,
       children: promoEmailOptInLabel,
     };
-    items[1] = closure_6(tmp4(4862).Text, obj6);
+    items[1] = closure_6(tmp4(4841).Text, obj6);
     obj4.children = items;
     obj3.children = closure_7(closure_3, obj4);
     tmp8 = closure_6(closure_2, obj3);

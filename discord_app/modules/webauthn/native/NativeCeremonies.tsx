@@ -6,95 +6,22 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 
 require = fn;
 let closure_5 = async function _promptForRegisterCredential() {
-  if (c5 === 2) {
-    c5 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp5 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c5 = 2;
-      if (0 === c4) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_3 = tmp3;
-          closure_2 = tmp2;
-          closure_130_0 = undefined;
-          let register = closure_0;
-          if (closure_0 === undefined) {
-            register = NativeSecurityKeyManagerModuleDefault.register;
-          }
-          closure_130_0 = register;
-          closure_130_1 = undefined;
-          let ticket;
-          let challenge;
-          c4 = 1;
-          c5 = 1;
-          return { value: "flex", done: true };
-        }
-      } else if (1 === tmp6) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          c4 = 2;
-          c5 = 1;
-          const obj5 = { value: closure_131_0(closure_131_2[3]).startRegisterWebAuthnCredential(), done: false };
-          return obj5;
-        }
-      } else if (2 === tmp6) {
-        if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c5 = 3;
-          const obj7 = { value, done: true };
-          return obj7;
-        } else {
-          closure_130_1 = value;
-          ticket = closure_130_1.ticket;
-          challenge = closure_130_1.challenge;
-          const obj8 = { ticket };
-          c4 = 3;
-          c5 = 1;
-          const obj9 = { value: closure_130_0(challenge), done: false };
-          return obj9;
-        }
-      } else if (arg0 === 1) {
-        c5 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c5 = 3;
-        const obj10 = { value, done: true };
-        return obj10;
-      } else {
-        obj8.credential = value;
-        c5 = 3;
-        const obj = { value: obj8, done: true };
-        return obj;
-      }
-    } catch (tmp20) {
-      c5 = tmp;
-      throw tmp20;
-    }
+  closure_3 = tmp3;
+  closure_2 = tmp2;
+  let register = closure_0;
+  if (closure_0 === undefined) {
+    register = NativeSecurityKeyManagerModuleDefault.register;
   }
+  closure_130_0 = register;
+  await "flex";
+  await closure_131_0(closure_131_2[3]).startRegisterWebAuthnCredential();
+  closure_130_1 = value;
+  const ticket = closure_130_1.ticket;
+  const challenge = closure_130_1.challenge;
+  const obj8 = { ticket };
+  await closure_130_0(challenge);
+  obj8.credential = value;
+  return obj8;
 };
 let closure_4 = new LoggerDefault("WebAuthnUtils");
 let obj = {};
@@ -151,7 +78,7 @@ obj.getPasskeyAuthenticator = function getPasskeyAuthenticator() {
               closure_129_0 = closure_0;
               c5 = 1;
               c6 = 1;
-              return { value: "flex", done: true };
+              return { value: "flex", done: null };
             }
           } else if (1 === tmp8) {
             if (arg0 === 1) {
@@ -214,7 +141,7 @@ obj.getPasskeyAuthenticator = function getPasskeyAuthenticator() {
   });
 };
 obj.registerAndroidCredentialManagerPasskey = function registerAndroidCredentialManagerPasskey(setError) {
-  setRegistering(6213).registerPasskey;
+  setRegistering(6203).registerPasskey;
   setError = undefined;
   setError = setError.setError;
   setRegistering = setError.setRegistering;
@@ -270,7 +197,7 @@ obj.registerAndroidCredentialManagerPasskey = function registerAndroidCredential
     .finally(() => setRegistering(false));
 };
 obj.registerAndroidDevicePasskey = function registerAndroidDevicePasskey(setError) {
-  setRegistering(6213).register;
+  setRegistering(6203).register;
   setError = undefined;
   setError = setError.setError;
   setRegistering = setError.setRegistering;
@@ -327,7 +254,7 @@ obj.registerAndroidDevicePasskey = function registerAndroidDevicePasskey(setErro
 };
 obj.registerPasskey = function registerPasskey(setError) {
   const obj = setError(1364);
-  const tmp2 = setRegistering(6213);
+  const tmp2 = setRegistering(6203);
   if (isAndroidResult) {
     setError = undefined;
     const setError2 = setError.setError;
@@ -479,7 +406,7 @@ obj.registerPasskey = function registerPasskey(setError) {
 obj.registerSecurityKey = function registerSecurityKey(setError) {
   let register = fn;
   if (fn === undefined) {
-    register = setRegistering(6213).register;
+    register = setRegistering(6203).register;
   }
   setError = undefined;
   setError = setError.setError;

@@ -1,5 +1,5 @@
 // discord_app/modules/guild_boosting/native/GuildBoostingMarketingUtils.tsx
-import GuildBoostingUtils from "../../../utils/GuildBoostingUtils.tsx";
+import PremiumConstants from "../../premium/PremiumConstants.tsx";
 import StageIcon from "../../../design/components/Icon/native/redesign/generated/StageIcon.tsx";
 import ReactionIcon from "../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
 import UploadIcon from "../../../design/components/Icon/native/redesign/generated/UploadIcon.tsx";
@@ -13,30 +13,31 @@ import HeadphonesIcon from "../../../design/components/Icon/native/redesign/gene
 import ScreenArrowIcon from "../../../design/components/Icon/native/redesign/generated/ScreenArrowIcon.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
+const PerkIcons = PremiumConstants.PerkIcons;
 const result = size.fileFinishedImporting("modules/guild_boosting/native/GuildBoostingMarketingUtils.tsx");
 
 export const getIconForPerk = function getIconForPerk(perkIcon) {
-  if (GuildBoostingUtils.PerkIcons.EMOJI === perkIcon) {
+  if (PerkIcons.EMOJI === perkIcon) {
     return ReactionIcon.ReactionIcon;
-  } else if (GuildBoostingUtils.PerkIcons.SOUNDBOARD === perkIcon) {
+  } else if (PerkIcons.SOUNDBOARD === perkIcon) {
     return SoundboardIcon.SoundboardIcon;
-  } else if (GuildBoostingUtils.PerkIcons.ANIMATED === perkIcon) {
+  } else if (PerkIcons.ANIMATED === perkIcon) {
     return GifIcon.GifIcon;
-  } else if (GuildBoostingUtils.PerkIcons.AUDIO === perkIcon) {
+  } else if (PerkIcons.AUDIO === perkIcon) {
     return HeadphonesIcon.HeadphonesIcon;
-  } else if (GuildBoostingUtils.PerkIcons.STREAM === perkIcon) {
+  } else if (PerkIcons.STREAM === perkIcon) {
     return ScreenArrowIcon.ScreenArrowIcon;
-  } else if (GuildBoostingUtils.PerkIcons.UPLOAD === perkIcon) {
+  } else if (PerkIcons.UPLOAD === perkIcon) {
     return UploadIcon.UploadIcon;
-  } else if (GuildBoostingUtils.PerkIcons.CUSTOM_ROLE_ICON === perkIcon) {
+  } else if (PerkIcons.CUSTOM_ROLE_ICON === perkIcon) {
     return ShieldUserIcon.ShieldUserIcon;
-  } else if (GuildBoostingUtils.PerkIcons.CUSTOMIZATION === perkIcon) {
+  } else if (PerkIcons.CUSTOMIZATION === perkIcon) {
     return ImagesIcon.ImagesIcon;
-  } else if (GuildBoostingUtils.PerkIcons.VANITY === perkIcon) {
+  } else if (PerkIcons.VANITY === perkIcon) {
     return StarIcon.StarIcon;
-  } else if (GuildBoostingUtils.PerkIcons.STAGE_VIDEO === perkIcon) {
+  } else if (PerkIcons.STAGE_VIDEO === perkIcon) {
     return StageIcon.StageIcon;
-  } else if (GuildBoostingUtils.PerkIcons.STICKER === perkIcon) {
+  } else if (PerkIcons.STICKER === perkIcon) {
     return StickerIcon.StickerIcon;
   } else {
     return ReactionIcon.ReactionIcon;

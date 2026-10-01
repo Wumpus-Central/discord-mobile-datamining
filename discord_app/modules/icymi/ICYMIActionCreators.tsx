@@ -2,7 +2,7 @@
 import DispatcherDefault from "../../Dispatcher.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import UserSettings from "../user_settings/UserSettings.tsx";
-import ICYMIUtils from "ICYMIUtils.tsx";
+import ICYMIExperiment from "ICYMIExperiment.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
@@ -363,7 +363,7 @@ export default {
       const obj3 = { type: "LOAD_ICYMI_FROM_NOTIFICATION", customStatusItem };
       DispatcherDefault.dispatch(obj3);
     }
-    obj = ICYMIUtils;
+    obj = ICYMIExperiment;
   },
   fetchHydrated(arg0, dependencyMap2, arg2) {
     closure_0 = arg0;
@@ -438,8 +438,8 @@ export default {
               closure_128_4 = tmp33;
               endingIndex(tmp33[4]).captureException(closure_128_4);
               const obj2 = endingIndex(tmp33[4]);
-              closure_128_3 = startingIndex(tmp33[5]).generateHydrationId(closure_129_0, closure_129_1);
-              const obj3 = startingIndex(tmp33[5]);
+              closure_128_3 = startingIndex(tmp33[6]).generateHydrationId(closure_129_0, closure_129_1);
+              const obj3 = startingIndex(tmp33[6]);
               const obj11 = { type: "LOAD_ICYMI_HYDRATED_FAILED", hydrationId: closure_128_3 };
               endingIndex(tmp33[3]).dispatch(obj11);
               const obj4 = endingIndex(tmp33[3]);
@@ -516,7 +516,7 @@ export default {
                 const obj6 = { value: HTTP.get(obj5), done: false };
                 return obj6;
               }
-              obj9 = ICYMIUtils;
+              obj9 = ICYMIExperiment;
             }
           } else {
             if (1 === tmp7) {
@@ -590,7 +590,7 @@ export default {
                 const obj6 = { value: HTTP.get(obj5), done: false };
                 return obj6;
               }
-              obj9 = ICYMIUtils;
+              obj9 = ICYMIExperiment;
             }
           } else {
             if (1 === tmp7) {
@@ -672,7 +672,7 @@ export default {
                   }
                 }
               }
-              obj9 = ICYMIUtils;
+              obj9 = ICYMIExperiment;
             }
           } else {
             if (1 === tmp8) {
