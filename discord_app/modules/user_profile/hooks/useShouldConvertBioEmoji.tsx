@@ -1,18 +1,29 @@
 // discord_app/modules/user_profile/hooks/useShouldConvertBioEmoji.tsx
 import UserSettings from "../../user_settings/UserSettings.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useShouldConvertBioEmoji.tsx");
 
-export default function useShouldConvertBioEmoji() {
-  const UseLegacyChatInput = UserSettings.UseLegacyChatInput;
-  let setting = UseLegacyChatInput.useSetting();
-  const UseRichChatInput = UserSettings.UseRichChatInput;
-  if (!setting) {
-    setting = !UseRichChatInput.useSetting();
-  }
-  return setting;
-}
+export default ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const UseLegacyChatInput = UserSettings.UseLegacyChatInput;
+      let setting = UseLegacyChatInput.useSetting();
+      const UseRichChatInput = UserSettings.UseRichChatInput;
+      if (!setting) {
+        setting = !UseRichChatInput.useSetting();
+      }
+      return setting;
+    }
+  : () => {
+      const UseLegacyChatInput = UserSettings.UseLegacyChatInput;
+      let setting = UseLegacyChatInput.useSetting();
+      const UseRichChatInput = UserSettings.UseRichChatInput;
+      if (!setting) {
+        setting = !UseRichChatInput.useSetting();
+      }
+      return setting;
+    };
 export const getShouldConvertBioEmoji = function getShouldConvertBioEmoji() {
   const UseLegacyChatInput = UserSettings.UseLegacyChatInput;
   let setting = UseLegacyChatInput.getSetting();

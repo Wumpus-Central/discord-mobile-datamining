@@ -8,7 +8,7 @@ import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import MultiAccountStore from "MultiAccountStore.tsx";
 
 require = fn;
-const AnalyticEvents = fn(1074).AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 const logger = new LoggerDefault("MultiAccountSwitchStore");
 let c7 = null;
 let c8 = null;
@@ -107,8 +107,8 @@ const multiAccountSwitchStore = new MultiAccountSwitchStore(DispatcherDefault, {
           obj3.is_user_mismatch = tmp8;
           logger.log("Token mismatch on account switch connection open", obj3);
           const obj5 = id2(15);
-          token2(1241).track(AnalyticEvents.MULTI_ACCOUNT_SWITCH_READY_MISMATCH, obj3);
-          const obj6 = token2(1241);
+          token2(1252).track(AnalyticEvents.MULTI_ACCOUNT_SWITCH_READY_MISMATCH, obj3);
+          const obj6 = token2(1252);
         }
       }
       let tmp26 = from_user_id !== user.id;
@@ -125,7 +125,7 @@ const multiAccountSwitchStore = new MultiAccountSwitchStore(DispatcherDefault, {
       obj7.linked_user_ids = users1.map((id) => id.id);
       obj7.has_ever_connected = has_ever_connected;
       obj7.switch_origin = switch_origin;
-      let tmp35 = token2(1241);
+      let tmp35 = token2(1252);
       const track = tmp35.track;
       let obj9 = AnalyticEvents;
       if (tmp26) {
@@ -203,8 +203,8 @@ const multiAccountSwitchStore = new MultiAccountSwitchStore(DispatcherDefault, {
             obj13.is_already_corrupted = tmp46;
             logger.log("setToken about to introduce per-user token collision", obj13);
             const obj17 = id2(15);
-            token2(1241).track(AnalyticEvents.MULTI_ACCOUNT_SWITCH_TOKEN_COLLISION_WRITE, obj13);
-            const obj12 = token2(1241);
+            token2(1252).track(AnalyticEvents.MULTI_ACCOUNT_SWITCH_TOKEN_COLLISION_WRITE, obj13);
+            const obj12 = token2(1252);
           }
         }
         TokenManagerAll.setToken(token2, user.id);

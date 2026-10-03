@@ -44,7 +44,7 @@ let closure_18 = async function _handleThumbnailUpload() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -116,13 +116,13 @@ let closure_18 = async function _handleThumbnailUpload() {
   })();
 };
 const Linking = fn(17).Linking;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ Base64JPEGPrefix: closure_8, Endpoints: closure_9, NOOP_NULL: c10, IOS_BUNDLE_ID: closure_11 } = Constants);
-const getAppIntentScheme = fn(2005).getAppIntentScheme;
+const getAppIntentScheme = fn(2011).getAppIntentScheme;
 let obj2 = new LoggerDefault("VoiceEngineStreamingManager");
 obj2.enableNativeLogger(true);
-const timeout = new fn(2039).Timeout();
-const timeout1 = new fn(2039).Timeout();
+const timeout = new fn(2046).Timeout();
+const timeout1 = new fn(2046).Timeout();
 let closure_16 = [];
 const voiceChannelId = SelectedChannelStore.getVoiceChannelId();
 class VoiceEngineStreamingManager extends tmp6 {
@@ -164,13 +164,13 @@ prototype["_initialize"] = function _initialize() {
     currentAppIntent = currentAppIntent.getCurrentAppIntent();
     if (null != channel) {
       const guildId = channel.getGuildId();
-      currentUserActiveStream(4987).startStream(guildId, channel.id, { sourceId: "screen:0" });
+      currentUserActiveStream(5032).startStream(guildId, channel.id, { sourceId: "screen:0" });
       currentUserActiveStream = obj2.getCurrentUserActiveStream();
       if (null != currentUserActiveStream) {
-        const tmp2Result = closure_1(5046);
+        const tmp2Result = closure_1(5091);
         const participant = tmp2Result.selectParticipant(
           channel.id,
-          tmp9(4897).encodeStreamKey(currentUserActiveStream),
+          tmp9(4942).encodeStreamKey(currentUserActiveStream),
         );
         if ("android" === closure_19.platform) {
           closure_15.start(15000, () => {
@@ -191,9 +191,9 @@ prototype["_initialize"] = function _initialize() {
         if (null != currentAppIntent) {
           closure_4.openURL(closure_12(currentAppIntent));
         }
-        const tmp9Result = tmp9(4897);
+        const tmp9Result = tmp9(4942);
       }
-      const obj3 = currentUserActiveStream(4987);
+      const obj3 = currentUserActiveStream(5032);
       tmp9 = currentUserActiveStream;
     } else {
       let result = closure_19.stopBroadcastWithError(-1, "Not currently in a voice channel");
@@ -228,10 +228,10 @@ prototype["_initialize"] = function _initialize() {
 prototype["_terminate"] = function _terminate() {
   voiceEngine = inject.getVoiceEngine();
   if (null != voiceEngine) {
-    const result = voiceEngine.setBroadcastRequestCallback(closure_1_10);
-    const result1 = voiceEngine.setBroadcastFinishedCallback(closure_1_10);
-    const result2 = voiceEngine.setBroadcastAnnotatedCallback(closure_1_10);
-    const result3 = voiceEngine.setBroadcastBlockedCallback(closure_1_10);
+    const result = voiceEngine.setBroadcastRequestCallback(v65535);
+    const result1 = voiceEngine.setBroadcastFinishedCallback(v65535);
+    const result2 = voiceEngine.setBroadcastAnnotatedCallback(v65535);
+    const result3 = voiceEngine.setBroadcastBlockedCallback(v65535);
   }
   timeout.stop();
   timeout1.stop();

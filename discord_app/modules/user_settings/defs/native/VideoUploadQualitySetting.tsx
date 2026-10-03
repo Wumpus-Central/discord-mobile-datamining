@@ -1,23 +1,63 @@
 // discord_app/modules/user_settings/defs/native/VideoUploadQualitySetting.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
 import UserSettings from "../../UserSettings.tsx";
 import UserSettingsText from "../../chat/native/UserSettingsText.tsx";
 import UnsyncedUserSettingsStore from "../../UnsyncedUserSettingsStore.tsx";
 
 require = fn;
-const VideoQualitySettings = fn(1184).VideoQualitySettings;
-const SettingBuilders = fn(11215);
+const VideoQualitySettings = fn(1195).VideoQualitySettings;
+const ReactCompilerGating = fn(558);
+const SettingBuilders = fn(11129);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = c.c(2);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const items = [UnsyncedUserSettingsStore];
+        const fn = function l() {
+          return videoUploadQuality.videoUploadQuality;
+        };
+        cResult[0] = items;
+        cResult[1] = fn;
+        tmp4 = items;
+        tmp5 = fn;
+      } else {
+        [tmp4, tmp5] = cResult;
+      }
+      return initialize.useStateFromStores(tmp4, tmp5);
+    }
+  : () => {
+      const items = [UnsyncedUserSettingsStore];
+      return initialize.useStateFromStores(items, () => videoUploadQuality.videoUploadQuality);
+    };
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.PXq9f1);
   },
-  parent: fn(7590).MobileUserSettings.CHAT,
-  useValue: function useVideoUploadQualitySettingValue() {
-    const items = [UnsyncedUserSettingsStore];
-    return initialize.useStateFromStores(items, () => videoUploadQuality.videoUploadQuality);
-  },
+  parent: fn(7634).MobileUserSettings.CHAT,
+  useValue: ReactCompilerGating.isReactCompilerEnabled()
+    ? () => {
+        const cResult = c.c(2);
+        if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+          const items = [UnsyncedUserSettingsStore];
+          const fn = function l() {
+            return videoUploadQuality.videoUploadQuality;
+          };
+          cResult[0] = items;
+          cResult[1] = fn;
+          tmp4 = items;
+          tmp5 = fn;
+        } else {
+          [tmp4, tmp5] = cResult;
+        }
+        return initialize.useStateFromStores(tmp4, tmp5);
+      }
+    : () => {
+        const items = [UnsyncedUserSettingsStore];
+        return initialize.useStateFromStores(items, () => videoUploadQuality.videoUploadQuality);
+      },
   onValueChange: function onVideoUploadQualitySettingValueChange(videoUploadQuality) {
     const obj3 = { videoUploadQuality, viewImageDescriptions: null, lowQualityImageMode: null, dataSavingMode: null };
     const ViewImageDescriptions = UserSettings.ViewImageDescriptions;

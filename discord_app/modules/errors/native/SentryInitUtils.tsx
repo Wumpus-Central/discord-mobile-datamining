@@ -1,6 +1,7 @@
 // discord_app/modules/errors/native/SentryInitUtils.tsx
 import LoggerDefault from "../../debug/Logger.tsx";
-import _mod675 from "../../../../_runtime/metro/00675__.js";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
+import _mod686 from "../../../../_runtime/metro/00686__.js";
 import router_utils from "../../routing/router_utils.tsx";
 import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
 import TelemetryRingLifecycle from "../../telemetry_ring/native/index.tsx";
@@ -31,7 +32,7 @@ let closure_15 = async function _maybeBackfillMissingBreadcrumbsFromTelemetryRin
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -561,8 +562,8 @@ function trackCrash(event, hint, arg2) {
     tmp39 = 0 !== event_id2.length;
   }
   if (tmp39) {
-    tmp25(1231).markCrashHandled(event_id2);
-    const tmp25Result = tmp25(1231);
+    tmp25(1242).markCrashHandled(event_id2);
+    const tmp25Result = tmp25(1242);
   }
   const AppCrashedReasons = AppCrashedReasons2.AppCrashedReasons;
   const tmp41 = tmp4 ? AppCrashedReasons.UNHANDLED_NATIVE_ERROR : AppCrashedReasons.UNHANDLED_JS_ERROR;
@@ -573,14 +574,14 @@ function trackCrash(event, hint, arg2) {
   }
   items[1] = "level:" + level;
   obj6.tags = items;
-  tmp26(5363).increment(obj6, true);
-  const tmp26Result = tmp26(5363);
+  tmp26(5409).increment(obj6, true);
+  const tmp26Result = tmp26(5409);
 }
 const NativeModules = fn(17).NativeModules;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AnalyticEvents: metroRequire, Endpoints } = Constants);
-const PRIMARY_DOMAIN = fn(1085).PRIMARY_DOMAIN;
-let registerSpanErrorInstrumentation = fn(675);
+const PRIMARY_DOMAIN = fn(1096).PRIMARY_DOMAIN;
+let registerSpanErrorInstrumentation = fn(686);
 registerSpanErrorInstrumentation = registerSpanErrorInstrumentation.reactNavigationIntegration();
 const regExp = new RegExp("/v" + window.GLOBAL_ENV.API_VERSION + Endpoints.METRICS, "g");
 let items = [regExp, ,];
@@ -599,7 +600,7 @@ let closure_11 = [
 let c12 = 0.05;
 let c13 = 0.005;
 let c14 = false;
-const CommonSentryInitUtils = fn(1357);
+const CommonSentryInitUtils = fn(1362);
 let closure_20 = CommonSentryInitUtils.filterThrottle({ maxBudgetMinute: 1, maxBudgetHour: 15 });
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/errors/native/SentryInitUtils.tsx");
@@ -617,22 +618,22 @@ export const initSentry = function initSentry() {
           const isStable = ReleaseChannelUtils.isStable;
           const obj2 = { releaseChannel: ReleaseChannel, isProductionChannel: isStable };
           logger.verbose("Initialize", obj2);
-          if (obj15.isAndroid()) {
+          if (obj18.isAndroid()) {
             if (isStable) {
               const device = DeviceUtils.getDevice();
-              const tmp14Result = DeviceUtils;
+              const tmp15Result = DeviceUtils;
             }
           }
           c12 = 0.05;
           const SentryDsn = constants.SentryDsn;
           if (isStable) {
             let SentryStaffDsn = SentryDsn;
-            if (tmp14Result9.isMetaQuest()) {
+            if (tmp15Result12.isMetaQuest()) {
               c12 = 1;
               c13 = 1;
               SentryStaffDsn = SentryDsn;
             }
-            tmp14Result9 = MetaQuestUtils;
+            tmp15Result12 = MetaQuestUtils;
           } else {
             c12 = 1;
             SentryStaffDsn = constants.SentryAlphaBetaDsn;
@@ -641,7 +642,7 @@ export const initSentry = function initSentry() {
             SentryStaffDsn = constants.SentryStaffDsn;
             c12 = 1;
           }
-          obj15 = PlatformUtils;
+          obj18 = PlatformUtils;
           const lastCrashReport = SentryUtilsDefault.getLastCrashReport();
           lastCrashReport
             .then((result) => {
@@ -657,22 +658,22 @@ export const initSentry = function initSentry() {
               closure_1_19(result, { crash_event_source: "startup_reconcile" });
             }
           });
-          const tmp14Result10 = _mod675;
+          const tmp15Result13 = _mod686;
           let str2 = "ios";
-          if (tmp14Result11.isAndroid()) {
+          if (tmp15Result14.isAndroid()) {
             str2 = "android";
           }
           const obj3 = {
             tunnel: `/error-reporting-proxy/${str2}`,
             autoInitializeNativeSdk: false,
             beforeSend,
-            dist: "6547",
+            dist: "34920500000000",
             dsn: SentryStaffDsn,
             environment: ReleaseChannel,
             tracesSampleRate: 0,
             sampleRate: 1,
             ignoreErrors,
-            release: "discord_android@349.3.0-2+349203",
+            release: "discord_android@349.5.0-2+349205",
             tracePropagationTargets: null,
             integrations: null,
             beforeBreadcrumb: null,
@@ -680,15 +681,15 @@ export const initSentry = function initSentry() {
           items = [PRIMARY_DOMAIN];
           obj3.tracePropagationTargets = items;
           const items1 = [registerSpanErrorInstrumentation, ,];
-          tmp14Result11 = PlatformUtils;
-          items1[1] = _mod675.featureFlagsIntegration();
-          const tmp14Result12 = _mod675;
+          tmp15Result14 = PlatformUtils;
+          items1[1] = _mod686.featureFlagsIntegration();
+          const tmp15Result15 = _mod686;
           const obj5 = {
             shouldCreateSpanForRequest(url) {
               return !closure_1_9.some((item) => null != url.match(item));
             },
           };
-          items1[2] = _mod675.reactNativeTracingIntegration(obj5);
+          items1[2] = _mod686.reactNativeTracingIntegration(obj5);
           obj3.integrations = items1;
           obj3.beforeBreadcrumb = function beforeBreadcrumb(data) {
             if (null == data.data) {
@@ -705,15 +706,25 @@ export const initSentry = function initSentry() {
             }
             return data;
           };
-          tmp14Result10.init(obj3);
-          const tmp14Result13 = _mod675;
-          _mod675.setTag("buildNumber", "6547");
-          const tmp14Result14 = _mod675;
-          _mod675.setTag("appVersion", constants.Version);
-          const tmp14Result15 = _mod675;
+          tmp15Result13.init(obj3);
+          const tmp15Result16 = _mod686;
+          _mod686.setTag("buildNumber", "34920500000000");
+          const tmp15Result17 = _mod686;
+          _mod686.setTag("appVersion", constants.Version);
+          const tmp15Result18 = _mod686;
           const _HermesInternal = HermesInternal;
-          _mod675.setTag("design_id", "" + DesignIds.DesignIds.DESIGN_TABS_IA);
-          const tmp14Result16 = _mod675;
+          _mod686.setTag("design_id", "" + DesignIds.DesignIds.DESIGN_TABS_IA);
+          const tmp15Result19 = _mod686;
+          if (tmp15Result20.isReactCompilerBuild()) {
+            const tmp15Result21 = _mod686;
+            let str9 = "unoptimized";
+            if (tmp15Result22.isReactCompilerEnabled()) {
+              str9 = "optimized";
+            }
+            tmp15Result21.setTag("react_compiler", str9);
+            tmp15Result22 = ReactCompilerGating;
+          }
+          tmp15Result20 = ReactCompilerGating;
         }
       }
     });

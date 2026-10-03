@@ -1,72 +1,160 @@
 // discord_app/modules/video_calls/native/components/usePipDimensions.tsx
+import c from "../../../../../_runtime/00576_c.js";
+import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
 import DeviceOrientation from "../../../device/native/DeviceOrientation.tsx";
+import useIsViewingActivity from "../../../activities/native/useIsViewingActivity.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 let c4 = 0.5625;
+let c5 = 0.25;
+let c6 = 0.5;
+let c7 = 400;
+let c8 = 300;
+const ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/components/usePipDimensions.tsx");
 
-export default function usePipDimensions(channelId) {
-  let forcedOrientation = channelId.forcedOrientation;
-  if (forcedOrientation === undefined) {
-    forcedOrientation = null;
-  }
-  let width;
-  const isViewingActivity = forcedOrientation(width[1]).useIsViewingActivity({ channelId: channelId.channelId });
-  const size = isViewingActivity(width[2])();
-  width = size.width;
-  let height = size.height;
-  const items = [height, width, forcedOrientation, isViewingActivity];
-  return height.useMemo(() => {
-    let tmp3 = width > height;
-    let tmp7 = forcedOrientation === DeviceOrientation.OrientationType.LANDSCAPE;
-    if (!tmp7) {
-      let tmp8 = tmp3;
-      if (tmp3) {
-        tmp8 = forcedOrientation !== DeviceOrientation.OrientationType.PORTRAIT;
+export default ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      const cResult = c.c(5);
+      ({ channelId, forcedOrientation } = arg0);
+      let tmp4 = null;
+      if (undefined !== forcedOrientation) {
+        tmp4 = forcedOrientation;
       }
-      tmp7 = tmp8;
+      if (cResult[0] !== channelId) {
+        const obj2 = { channelId };
+        cResult[0] = channelId;
+        cResult[1] = obj2;
+        let tmp5 = obj2;
+      } else {
+        tmp5 = cResult[1];
+      }
+      const isViewingActivity = useIsViewingActivity.useIsViewingActivity(tmp5);
+      const tmpResult = useIsViewingActivity;
+      ({ width, height } = useWindowDimensionsDefault());
+      let tmp8 = width > height;
+      let tmp9 = tmp4 === DeviceOrientation.OrientationType.LANDSCAPE;
+      if (!tmp9) {
+        let tmp10 = tmp8;
+        if (tmp8) {
+          tmp10 = tmp4 !== DeviceOrientation.OrientationType.PORTRAIT;
+        }
+        tmp9 = tmp10;
+      }
+      let num3 = 96;
+      let num4 = 96;
+      if (!isViewingActivity) {
+        if (!tmp8) {
+          if (!tmp9) {
+            const _Math = Math;
+            const bound = Math.min(height * c5, c8);
+            num4 = bound * c4;
+            num3 = bound;
+          }
+        }
+        if (!tmp8) {
+          if (tmp9) {
+            const _Math2 = Math;
+            const bound1 = Math.min(width * c6, c7);
+            num3 = bound1 * c4;
+            num4 = bound1;
+          }
+        }
+        if (tmp8) {
+          if (tmp9) {
+            const _Math4 = Math;
+            const bound2 = Math.min(width * c5, c7);
+            num3 = bound2 * c4;
+            num4 = bound2;
+          }
+        }
+        if (tmp8) {
+          tmp8 = !tmp9;
+        }
+        num3 = 1;
+        num4 = 1;
+        if (tmp8) {
+          const _Math3 = Math;
+          const bound3 = Math.min(height * c6, c8);
+          num4 = bound3 * c4;
+          num3 = bound3;
+        }
+      }
+      if (cResult[2] === num3) {
+        if (cResult[3] === num4) {
+          let tmp31 = cResult[4];
+        }
+        return tmp31;
+      }
+      const size = { height: num3, width: num4 };
+      cResult[2] = num3;
+      cResult[3] = num4;
+      cResult[4] = size;
+      tmp31 = size;
+      const tmp7 = useWindowDimensionsDefault();
     }
-    height = 96;
-    width = 96;
-    if (!isViewingActivity) {
-      if (!tmp3) {
+  : (channelId) => {
+      let forcedOrientation = channelId.forcedOrientation;
+      if (forcedOrientation === undefined) {
+        forcedOrientation = null;
+      }
+      let width;
+      const isViewingActivity = forcedOrientation(width[3]).useIsViewingActivity({ channelId: channelId.channelId });
+      const size = isViewingActivity(width[4])();
+      width = size.width;
+      let height = size.height;
+      const items = [height, width, forcedOrientation, isViewingActivity];
+      return height.useMemo(() => {
+        let tmp3 = width > height;
+        let tmp7 = forcedOrientation === DeviceOrientation.OrientationType.LANDSCAPE;
         if (!tmp7) {
-          const _Math = Math;
-          const bound = Math.min(0.25 * tmp2, 300);
-          width = bound * c4;
-          height = bound;
+          let tmp8 = tmp3;
+          if (tmp3) {
+            tmp8 = forcedOrientation !== DeviceOrientation.OrientationType.PORTRAIT;
+          }
+          tmp7 = tmp8;
         }
-      }
-      if (!tmp3) {
-        if (tmp7) {
-          const _Math2 = Math;
-          const bound1 = Math.min(0.5 * tmp, 400);
-          height = bound1 * c4;
-          width = bound1;
+        height = 96;
+        width = 96;
+        if (!isViewingActivity) {
+          if (!tmp3) {
+            if (!tmp7) {
+              const _Math = Math;
+              const bound = Math.min(tmp2 * c5, c8);
+              width = bound * c4;
+              height = bound;
+            }
+          }
+          if (!tmp3) {
+            if (tmp7) {
+              const _Math2 = Math;
+              const bound1 = Math.min(tmp * c6, c7);
+              height = bound1 * c4;
+              width = bound1;
+            }
+          }
+          if (tmp3) {
+            if (tmp7) {
+              const _Math4 = Math;
+              const bound2 = Math.min(tmp * c5, c7);
+              height = bound2 * c4;
+              width = bound2;
+            }
+          }
+          if (tmp3) {
+            tmp3 = !tmp7;
+          }
+          height = 1;
+          width = 1;
+          if (tmp3) {
+            const _Math3 = Math;
+            const bound3 = Math.min(tmp2 * c6, c8);
+            width = bound3 * c4;
+            height = bound3;
+          }
         }
-      }
-      if (tmp3) {
-        if (tmp7) {
-          const _Math4 = Math;
-          const bound2 = Math.min(0.25 * tmp, 400);
-          height = bound2 * c4;
-          width = bound2;
-        }
-      }
-      if (tmp3) {
-        tmp3 = !tmp7;
-      }
-      height = 1;
-      width = 1;
-      if (tmp3) {
-        const _Math3 = Math;
-        const bound3 = Math.min(0.5 * tmp2, 300);
-        width = bound3 * c4;
-        height = bound3;
-      }
-    }
-    return { height, width };
-  }, items);
-}
+        return { height, width };
+      }, items);
+    };

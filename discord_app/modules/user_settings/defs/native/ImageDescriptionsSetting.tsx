@@ -13,21 +13,23 @@ function onImageDescriptionSettingValueChange(viewImageDescriptions) {
     dataSavingMode: UnsyncedUserSettingsStore.dataSavingMode,
   });
 }
-const SettingBuilders = fn(11215);
+let ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
+const SettingBuilders = fn(11129);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["w8j+yW"]);
   },
-  parent: fn(7590).MobileUserSettings.CHAT,
-  useValue: function useImageDescriptionSettingValue() {
+  parent: fn(7634).MobileUserSettings.CHAT,
+  useValue: () => {
     const ViewImageDescriptions = UserSettings.ViewImageDescriptions;
     return ViewImageDescriptions.useSetting();
   },
   onValueChange: onImageDescriptionSettingValueChange,
 });
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_settings/defs/native/ImageDescriptionsSetting.tsx");
+const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/ImageDescriptionsSetting.tsx");
 
 export default toggle;
 export { onImageDescriptionSettingValueChange };

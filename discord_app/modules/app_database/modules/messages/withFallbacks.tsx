@@ -30,7 +30,7 @@ function mergeInto(extendedMemoryLru, allEntries) {
   }
   return extendedMemoryLru;
 }
-const ChannelTypes = fn(1074).ChannelTypes;
+const ChannelTypes = fn(1085).ChannelTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_database/modules/messages/withFallbacks.tsx");
 

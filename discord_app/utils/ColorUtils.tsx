@@ -1,13 +1,13 @@
 // discord_app/utils/ColorUtils.tsx
 import LoggerDefault from "../modules/debug/Logger.tsx";
-import _modDef672 from "../../_runtime/metro/00672__.js";
+import _modDef683 from "../../_runtime/metro/00683__.js";
 import util from "../intl/index.native.tsx";
 import utils_ColorDefault from "Color.tsx";
 import _slicedToArray from "../../_runtime/metro/00032__.js";
 
 require = fn;
 function hexToRgba(PRIMARY_760) {
-  const tmp = _slicedToArray(_modDef672(PRIMARY_760).rgba(), 4);
+  const tmp = _slicedToArray(_modDef683(PRIMARY_760).rgba(), 4);
   return { r: tmp[0], g: tmp[1], b: tmp[2], a: tmp[3] };
 }
 function rgbToHslObject(items, items2, items3) {
@@ -61,8 +61,8 @@ function hslToHex(sum2, sum, sum1) {
   const str3 = Math.round(255 * (result - result1 * Math.max(Math.min(result4 - 3, 9 - result4, 1), -1)));
   return "#" + padStartResult + padStartResult1 + Math.round(255 * (result - result1 * Math.max(Math.min(result4 - 3, 9 - result4, 1), -1))).toString(16).padStart(2, "0");
 }
-function hex2rgb2hsv(first4) {
-  const match = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(first4);
+function hex2rgb2hsv(combined) {
+  const match = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(combined);
   if (null == match) {
     return null;
   } else {
@@ -241,15 +241,15 @@ function sortColors(hsv, hsv2) {
   hsv2 = hsv2.hsv;
   return hsv2.s + hsv2.v - (hsv.s + hsv.v);
 }
-function hexWithOpacity(BLACK, c3) {
-  if (7 === BLACK.length) {
-    const str1 = 255 * c3 | 0.toString(16);
-    const str14 = 255 * c3 | 0;
-    return BLACK + 255 * c3 | 0.toString(16).padStart(2, "0").toUpperCase();
+function hexWithOpacity(color, overlayOpacity) {
+  if (7 === color.length) {
+    const str1 = 255 * overlayOpacity | 0.toString(16);
+    const str14 = 255 * overlayOpacity | 0;
+    return color + 255 * overlayOpacity | 0.toString(16).padStart(2, "0").toUpperCase();
   } else {
-    let substr = BLACK;
-    if ("#" === BLACK.charAt(0)) {
-      substr = BLACK.slice(1);
+    let substr = color;
+    if ("#" === color.charAt(0)) {
+      substr = color.slice(1);
     }
     if (3 === substr.length) {
       const charAtResult = substr.charAt(0);
@@ -258,9 +258,9 @@ function hexWithOpacity(BLACK, c3) {
       const sum = charAtResult + charAtResult;
       const sum1 = charAtResult1 + charAtResult1;
       const sum2 = charAtResult2 + charAtResult2;
-      const str11 = 255 * c3 | 0;
-      const str18 = 255 * c3 | 0.toString(16);
-      return "#" + sum + sum1 + sum2 + 255 * c3 | 0.toString(16).padStart(2, "0").toUpperCase();
+      const str11 = 255 * overlayOpacity | 0;
+      const str18 = 255 * overlayOpacity | 0.toString(16);
+      return "#" + sum + sum1 + sum2 + 255 * overlayOpacity | 0.toString(16).padStart(2, "0").toUpperCase();
     } else if (4 === length) {
       const charAtResult3 = substr.charAt(0);
       const charAtResult4 = substr.charAt(1);
@@ -270,20 +270,20 @@ function hexWithOpacity(BLACK, c3) {
       const sum3 = charAtResult3 + charAtResult3;
       const sum4 = charAtResult4 + charAtResult4;
       const sum5 = charAtResult5 + charAtResult5;
-      const str8 = 255 * (parseInt(charAtResult6 + charAtResult6, 16) / 255 * c3) | 0;
-      const str19 = 255 * (parseInt(charAtResult6 + charAtResult6, 16) / 255 * c3) | 0.toString(16);
-      return "#" + sum3 + sum4 + sum5 + 255 * (parseInt(charAtResult6 + charAtResult6, 16) / 255 * c3) | 0.toString(16).padStart(2, "0").toUpperCase();
+      const str8 = 255 * (parseInt(charAtResult6 + charAtResult6, 16) / 255 * overlayOpacity) | 0;
+      const str19 = 255 * (parseInt(charAtResult6 + charAtResult6, 16) / 255 * overlayOpacity) | 0.toString(16);
+      return "#" + sum3 + sum4 + sum5 + 255 * (parseInt(charAtResult6 + charAtResult6, 16) / 255 * overlayOpacity) | 0.toString(16).padStart(2, "0").toUpperCase();
     } else if (6 === length) {
       const text = `#${arr}`;
-      const str20 = 255 * c3 | 0.toString(16);
-      const str5 = 255 * c3 | 0;
-      return `#${arr}` + 255 * c3 | 0.toString(16).padStart(2, "0").toUpperCase();
+      const str20 = 255 * overlayOpacity | 0.toString(16);
+      const str5 = 255 * overlayOpacity | 0;
+      return `#${arr}` + 255 * overlayOpacity | 0.toString(16).padStart(2, "0").toUpperCase();
     } else if (8 === length) {
       const _parseInt = parseInt;
       const text1 = `#${arr.slice(0, 6)}`;
-      const str2 = parseInt(substr.slice(6), 16) / 255 * c3 * 255 | 0;
-      const str21 = parseInt(substr.slice(6), 16) / 255 * c3 * 255 | 0.toString(16);
-      return `#${arr.slice(0, 6)}` + parseInt(substr.slice(6), 16) / 255 * c3 * 255 | 0.toString(16).padStart(2, "0").toUpperCase();
+      const str2 = parseInt(substr.slice(6), 16) / 255 * overlayOpacity * 255 | 0;
+      const str21 = parseInt(substr.slice(6), 16) / 255 * overlayOpacity * 255 | 0.toString(16);
+      return `#${arr.slice(0, 6)}` + parseInt(substr.slice(6), 16) / 255 * overlayOpacity * 255 | 0.toString(16).padStart(2, "0").toUpperCase();
     } else {
       const _Error = Error;
       const error = new Error("Invalid hex color format");
@@ -294,9 +294,9 @@ function hexWithOpacity(BLACK, c3) {
 hexWithOpacity.__closure = {};
 hexWithOpacity.__workletHash = 1677228068105;
 hexWithOpacity.__initData = { code: "function hexWithOpacity_ColorUtilsTsx1(color,value){if(color.length===7){const alpha=value*255|0;return color+alpha.toString(16).padStart(2,'0').toUpperCase();}const hex=color.charAt(0)==='#'?color.slice(1):color;let r;let g;let b;let a;switch(hex.length){case 3:r=hex.charAt(0);g=hex.charAt(1);b=hex.charAt(2);r+=r;g+=g;b+=b;a=(value*255|0).toString(16).padStart(2,'0').toUpperCase();return'#'+r+g+b+a;case 4:r=hex.charAt(0);g=hex.charAt(1);b=hex.charAt(2);a=hex.charAt(3);r+=r;g+=g;b+=b;a+=a;const alpha4=parseInt(a,16)/255*value;const alpha4Hex=(alpha4*255|0).toString(16).padStart(2,'0').toUpperCase();return'#'+r+g+b+alpha4Hex;case 6:const alpha6=(value*255|0).toString(16).padStart(2,'0').toUpperCase();return'#'+hex+alpha6;case 8:const baseColor='#'+hex.slice(0,6);const existingAlpha=parseInt(hex.slice(6),16)/255;const alpha8=(existingAlpha*value*255|0).toString(16).padStart(2,'0').toUpperCase();return baseColor+alpha8;default:throw new Error('Invalid hex color format');}}" };
-function hexToRgbaString(colorHex, opacity) {
+function hexToRgbaString(tmpResult13, opacity) {
   let tmp = opacity;
-  const tmp2 = _slicedToArray(_modDef672(colorHex).rgba(), 4);
+  const tmp2 = _slicedToArray(_modDef683(tmpResult13).rgba(), 4);
   [tmp3, tmp4, tmp5] = tmp2;
   if (opacity == null) {
     tmp = tmp2[3];
@@ -402,20 +402,20 @@ let result = size.fileFinishedImporting("utils/ColorUtils.tsx");
 
 export { hexWithOpacity };
 export const hexToRgb = function hexToRgb(PRIMARY_800) {
-  const tmp = _slicedToArray(_modDef672(PRIMARY_800).rgb(), 3);
+  const tmp = _slicedToArray(_modDef683(PRIMARY_800).rgb(), 3);
   return { r: tmp[0], g: tmp[1], b: tmp[2] };
 };
 export const hexToRgbArray = function hexToRgbArray(arg0) {
-  obj = _modDef672(arg0);
+  obj = _modDef683(arg0);
   const items = [, , ];
-  [arr[0], arr[1], arr[2]] = _modDef672(arg0).rgb();
+  [arr[0], arr[1], arr[2]] = _modDef683(arg0).rgb();
   return items;
 };
 export { hexToRgba };
 export { hexToRgbaString };
-export const hexOpacityToRgba = function hexOpacityToRgba(backgroundColor, c6) {
-  const tmp = _slicedToArray(_modDef672(backgroundColor).rgb(), 3);
-  return "rgba(" + tmp[0] + ", " + tmp[1] + ", " + tmp[2] + ", " + c6 + ")";
+export const hexOpacityToRgba = function hexOpacityToRgba(backgroundColor, dividerOpacity) {
+  const tmp = _slicedToArray(_modDef683(backgroundColor).rgb(), 3);
+  return "rgba(" + tmp[0] + ", " + tmp[1] + ", " + tmp[2] + ", " + dividerOpacity + ")";
 };
 export { rgbToHslObject };
 export const hslToString = function hslToString(arg0, arg1, arg2) {
@@ -490,7 +490,7 @@ export const getComplimentaryPaletteForColor = function getComplimentaryPaletteF
         sum2 = diff1 + 360;
       }
       let tmp8 = hslToHex(sum2, sum, sum1);
-      obj = _modDef672(tmp8);
+      obj = _modDef683(tmp8);
       let tmp12 = _slicedToArray(obj.rgb(), 3);
       let items1 = [, , ];
       [arr2[0], arr2[1], arr2[2]] = tmp12;

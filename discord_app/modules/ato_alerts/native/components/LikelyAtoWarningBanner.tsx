@@ -1,14 +1,14 @@
 // discord_app/modules/ato_alerts/native/components/LikelyAtoWarningBanner.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01981_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
 import LinkingDefault from "../../../../lib/native/Linking.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import SafetyToastsActionCreatorsDefault from "../../../safety_common/SafetyToastsActionCreators.native.tsx";
-import MuteSettingsUtils from "../../../main_tabs_v2/native/sidebar/details/screens/MuteSettingsUtils.tsx";
 import SafetyWarningUtils from "../../../self_mod/shared/SafetyWarningUtils.tsx";
 import ChannelSafetyWarningsActionCreators from "../../../self_mod/ChannelSafetyWarningsActionCreators.tsx";
+import MuteSettingsUtils from "../../../main_tabs_v2/native/sidebar/details/screens/MuteSettingsUtils.tsx";
 import LikelyAtoMoreTipsModalActionItemsDefault from "LikelyAtoMoreTipsModalActionItems.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -117,17 +117,17 @@ class LikelyAtoWarningBanner {
       let obj = ModalActionCreatorsDefault;
       const intl = util.intl;
       obj2.description = intl.string(util.t["/uid3p"]);
-      const tmp = asyncRequireImpl(11126, dependencyMap.paths);
+      const tmp = asyncRequireImpl(9805, dependencyMap.paths);
       obj2.safetyTips = hasOwnProperty().map((children, index) => {
         const obj = { children: null };
         const items = [
           closure_1_10(
-            channelId(4841).Text,
+            channelId(4886).Text,
             { variant: "text-md/medium", color: "mobile-text-heading-primary", children: children.title },
             index,
           ),
           closure_1_10(
-            channelId(4841).Text,
+            channelId(4886).Text,
             { variant: "text-xs/medium", color: "text-subtle", children: children.description },
             index,
           ),
@@ -135,7 +135,7 @@ class LikelyAtoWarningBanner {
         obj.children = items;
         return closure_1_12(closure_1_11, obj);
       });
-      obj2.actionItems = closure_2_10(LikelyAtoMoreTipsModalActionItemsDefault, {
+      obj2.actionItems = v65535(LikelyAtoMoreTipsModalActionItemsDefault, {
         senderId,
         handleMutePressed() {
           return closure_1_5(channelId(senderId[8]).CtaEventTypes.USER_MODAL_MUTE);
@@ -144,7 +144,7 @@ class LikelyAtoWarningBanner {
       const obj4 = { variant: "text-sm/normal", color: "text-link", children: null };
       const intl2 = util.intl;
       obj4.children = intl2.format(util.t.UkH122, { learnMoreLink: handleLearnMore });
-      obj2.learnMore = closure_2_10(Text_Text.Text, obj4);
+      obj2.learnMore = v65535(Text_Text.Text, obj4);
       obj.pushLazy(tmp, obj2, modalKey);
       const arr = hasOwnProperty();
       const obj3 = {
@@ -176,22 +176,22 @@ class LikelyAtoWarningBanner {
     return jsx(tmp3, obj);
   }
 }
-const SafetyWarningTypes = fn(10571).SafetyWarningTypes;
-const Constants = fn(11120);
+const SafetyWarningTypes = fn(9786).SafetyWarningTypes;
+const Constants = fn(9797);
 ({
   getLikelyAtoMoreTips: hasOwnProperty,
   LIKELY_ATO_MORE_TIPS_MODAL_KEY: metroRequire,
   LEARN_MORE_HC_ARTICLE: closure_7,
 } = Constants);
-const AnalyticEvents = fn(1074).AnalyticEvents;
-const MuteUntilSeconds = fn(1084).MuteUntilSeconds;
+const AnalyticEvents = fn(1085).AnalyticEvents;
+const MuteUntilSeconds = fn(1095).MuteUntilSeconds;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = {
   moreTipsHeader: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, shadowColor: "transparent" },
 };
-createStyles.createStyles(obj2);
+const __initData2 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/ato_alerts/native/components/LikelyAtoWarningBanner.tsx");
 

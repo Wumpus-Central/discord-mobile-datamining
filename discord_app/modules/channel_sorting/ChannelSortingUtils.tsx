@@ -830,8 +830,9 @@ export const getDropData = function getDropData(localChannel, arg1, localChannel
 };
 export { getChannelMoveUpdates };
 export { getCategoryKey };
-export const getSectionSiblings = function getSectionSiblings(listChannel, categories) {
-  let parent_id = listChannel.parent_id;
+export const getSectionSiblings = function getSectionSiblings(id, categories) {
+  let type = id;
+  let parent_id = id.parent_id;
   if (null == parent_id) {
     parent_id = closure_6;
   }
@@ -840,8 +841,8 @@ export const getSectionSiblings = function getSectionSiblings(listChannel, categ
     items = [];
   }
   return items.filter((channel) => {
-    const type = channel.channel.type;
-    const type2 = listChannel.type;
+    type = channel.channel.type;
+    const type2 = type.type;
     let tmp = null != type && null != type2;
     if (tmp) {
       let tmp2 = type === type2;
@@ -858,10 +859,10 @@ export const getSectionSiblings = function getSectionSiblings(listChannel, categ
     return tmp;
   });
 };
-export const getChannelPlacementUpdates = function getChannelPlacementUpdates(isCategory, guildId, id, arg3) {
-  _require = isCategory;
-  if (isCategory.isCategory()) {
-    const _categories1 = guildId._categories;
+export const getChannelPlacementUpdates = function getChannelPlacementUpdates(id, categories, categoryKey, arg3) {
+  _require = id;
+  if (id.isCategory()) {
+    const _categories1 = categories._categories;
     const found = _categories1.filter((channel) => channel.channel.id !== closure_1_6);
     if ("first" === arg3) {
       let first = found[0];
@@ -869,7 +870,7 @@ export const getChannelPlacementUpdates = function getChannelPlacementUpdates(is
       first = found[found.length - 1];
     }
     if (null != first) {
-      let items = getChannelMoveUpdates(isCategory, first.channel, null, guildId);
+      let items = getChannelMoveUpdates(id, first.channel, null, categories);
     } else {
       items = [];
     }
@@ -877,7 +878,7 @@ export const getChannelPlacementUpdates = function getChannelPlacementUpdates(is
   } else {
     function isSameSection(channel) {
       const type = channel.channel.type;
-      const type2 = isCategory.type;
+      const type2 = user.type;
       let tmp = null != type && null != type2;
       if (tmp) {
         let tmp2 = type === type2;
@@ -893,13 +894,13 @@ export const getChannelPlacementUpdates = function getChannelPlacementUpdates(is
       }
       return tmp;
     }
-    const arr = getFlattedChannelListDefault(guildId._categories, guildId, isSameSection);
-    const found1 = arr.find((channel) => channel.channel.id === isCategory.id);
+    const arr = getFlattedChannelListDefault(categories._categories, categories, isSameSection);
+    const found1 = arr.find((channel) => channel.channel.id === user.id);
     if (null == found1) {
       return [];
     } else {
       const obj2 = {};
-      const _categories = guildId._categories;
+      const _categories = categories._categories;
       for (const item10019 of _categories) {
         obj2[item10019.channel.id] = [];
         continue;
@@ -913,7 +914,7 @@ export const getChannelPlacementUpdates = function getChannelPlacementUpdates(is
         }
         continue;
       }
-      if (null == obj2[id]) {
+      if (null == obj2[categoryKey]) {
         return [];
       } else {
         if ("first" === arg3) {
@@ -923,7 +924,7 @@ export const getChannelPlacementUpdates = function getChannelPlacementUpdates(is
         }
         const obj3 = {
           oldOrdering: arr,
-          newOrdering: getFlattedChannelListDefault(guildId._categories, obj2, isSameSection),
+          newOrdering: getFlattedChannelListDefault(categories._categories, obj2, isSameSection),
           idGetter(channel) {
             return channel.channel.id;
           },
@@ -933,15 +934,15 @@ export const getChannelPlacementUpdates = function getChannelPlacementUpdates(is
         };
         const result = require("DragAndDropUtils").calculatePositionDeltas(obj3);
         let tmp20 = null;
-        if (id !== closure_6) {
-          tmp20 = id;
+        if (categoryKey !== closure_6) {
+          tmp20 = categoryKey;
         }
-        if (isCategory.parent_id !== tmp20) {
-          const found2 = result.find((id) => id.id === isCategory.id);
+        if (id.parent_id !== tmp20) {
+          const found2 = result.find((id) => id.id === user.id);
           if (null != found2) {
             found2.parent_id = tmp20;
           } else {
-            const obj4 = { id: isCategory.id, parent_id: tmp20 };
+            const obj4 = { id: id.id, parent_id: tmp20 };
             result.push(obj4);
           }
         }

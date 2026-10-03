@@ -78,14 +78,14 @@ function doSearchRequest(q, arg1, limit) {
     () => DispatcherDefault.dispatch({ type: "GIF_PICKER_QUERY_FAILURE", query }),
   );
 }
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({
   AnalyticEvents: metroRequire,
   Endpoints: closure_7,
   SearchTypes: closure_8,
   GIFPickerResultTypes: closure_9,
 } = Constants);
-const UserSettingsConstants = fn(1084);
+const UserSettingsConstants = fn(1095);
 ({ MAX_FAVORITE_GIFS_SIZE: c10, UserSettingsDelay: closure_11 } = UserSettingsConstants);
 const re12 = /-/g;
 let closure_14 = apply.debounce(doSearchRequest, 250);
@@ -198,9 +198,9 @@ export const trackSelectGIF = function trackSelectGIF(arg0) {
   }
 };
 export const initializeSearch = function initializeSearch() {
-  const obj = replaced(1255);
-  replaced = replaced(1255).v4().replace(closure_12, "");
-  const str = replaced(1255).v4();
+  const obj = replaced(1266);
+  replaced = replaced(1266).v4().replace(closure_12, "");
+  const str = replaced(1266).v4();
   AppAnalyticsUtilsDefault.trackWithMetadata(constants.SEARCH_OPENED, {
     search_type: constants3.GIF,
     load_id: replaced,
@@ -389,7 +389,7 @@ export const addFavoriteGIF = function addFavoriteGIF(size) {
             obj3.order = num + 1;
             gifs.gifs[tmp23] = obj3;
             const FavoriteGIFs = frecency_user_settings.FavoriteGIFs;
-            if (FavoriteGIFs.toBinary(gifs).length > closure_2_10) {
+            if (FavoriteGIFs.toBinary(gifs).length > v65535) {
               const obj5 = { title: null, body: null };
               const intl = util.intl;
               obj5.title = intl.string(util.t["+XYXtZ"]);

@@ -13,14 +13,15 @@ import ReactionUtils from "../../reactions/ReactionUtils.tsx";
 import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import Client from "../../../flow/Client.tsx";
+import _modDef4811 from "../../../../_runtime/metro/04811__.js";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../haptics/HapticFeedbackTypes.tsx";
 import ChannelUtils from "../../../utils/ChannelUtils.tsx";
 import MediaFormatTesters from "../MediaFormatTesters.tsx";
 import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
 import InteractionComponentUtils from "../../interaction_components/InteractionComponentUtils.tsx";
-import useShowMemberVerificationGate from "../../guild_member_verification/hooks/useShowMemberVerificationGate.tsx";
 import QuestTypes from "../../quests/QuestTypes.tsx";
+import useShowMemberVerificationGate from "../../guild_member_verification/hooks/useShowMemberVerificationGate.tsx";
 import MemberVerificationModalActionCreators from "../../guild_member_verification/MemberVerificationModalActionCreators.tsx";
 import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import ExplicitMediaRedactionModels from "../../explicit_media_redaction/ExplicitMediaRedactionModels.tsx";
@@ -30,12 +31,11 @@ import MessageReactionsTypes from "../MessageReactionsTypes.tsx";
 import ReactionActionCreators from "../../reactions/ReactionActionCreators.tsx";
 import ThreadActionCreatorsDefault from "../../threads/ThreadActionCreators.tsx";
 import tracking_Tracking from "../../forums/tracking/Tracking.tsx";
-import QuestActionCreators from "../../quests/QuestActionCreators.tsx";
-import _modDef11032 from "../../../../_runtime/metro/11032__.js";
 import reactions_ReactionUtils from "../../reactions/native/ReactionUtils.tsx";
 import computeScrollData from "../../chat/native/computeScrollData.tsx";
 import NativeChatUtilsDefault from "../../chat/native/NativeChatUtils.tsx";
 import MediaPlaybackFacts from "../MediaPlaybackFacts.tsx";
+import QuestActionCreators from "../../quests/QuestActionCreators.tsx";
 import MessageImpressionAnalyticsHelpers from "MessageImpressionAnalyticsHelpers.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -123,7 +123,7 @@ let closure_24 = async function _handleTapNavBar(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -160,7 +160,7 @@ let closure_24 = async function _handleTapNavBar(arg0) {
                 );
                 if (null == findMessageIndexResult) {
                   c3 = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 } else {
                   const obj8 = { animated: !useReducedMotion };
                   NativeChatUtilsDefault.scrollTo(chatRef.current, findMessageIndexResult, obj8);
@@ -214,10 +214,10 @@ function parseVoiceStateChannelIdSummary(prop) {
   }
   return map;
 }
-let closure_5 = fn(9036).updateShouldShowJumpToPresentButton;
-const RowGeneratorConstants = fn(7548);
+let closure_5 = fn(9064).updateShouldShowJumpToPresentButton;
+const RowGeneratorConstants = fn(7592);
 ({ RowType: closure_15, Changeset: closure_16 } = RowGeneratorConstants);
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({
   AnalyticEvents: closure_17,
   MessageEmbedTypes: closure_18,
@@ -434,7 +434,7 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
       stringResult = string(t.X2L3Oa);
     }
     const obj3 = { key: "ARCHIVED_POST_REACTIONS_DISABLED_TOAST", content: stringResult, icon: null };
-    tmp36Result = _modDef11032;
+    tmp36Result = _modDef4811;
     obj3.icon = tmp36Result;
     t = obj15.open(obj3);
     isForumPostResult = channel.isForumPost();
@@ -485,10 +485,10 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
     const result4 = tmp12Result16.handleAddNewReactions(channel, messageId, MESSAGE, obj7);
   }
 };
-export const handleToggleFollowForumPost = function handleToggleFollowForumPost(channel, JoinedThreadsStore) {
+export const handleToggleFollowForumPost = function handleToggleFollowForumPost(channel, stateFromStores1) {
   const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
   const obj2 = ThreadActionCreatorsDefault;
-  if (JoinedThreadsStore) {
+  if (stateFromStores1) {
     obj2.leaveThread(channel, "iOS Forum Toolbar");
   } else {
     obj2.joinThread(channel, "iOS Forum Toolbar");
@@ -540,10 +540,10 @@ export const findMessageIndex = function findMessageIndex(previousRows, startMes
   }
 };
 export { getVisibleMessages };
-export const shouldJumpToOriginalPost = function shouldJumpToOriginalPost(isForumPost, id, jumpTargetId, arg3) {
-  let isForumPostResult = isForumPost.isForumPost();
+export const shouldJumpToOriginalPost = function shouldJumpToOriginalPost(first1, id, arg2, arg3) {
+  let isForumPostResult = first1.isForumPost();
   if (isForumPostResult) {
-    isForumPostResult = SnowflakeUtilsDefault.castChannelIdAsMessageId(id) === jumpTargetId.jumpTargetId;
+    isForumPostResult = SnowflakeUtilsDefault.castChannelIdAsMessageId(id) === arg2.jumpTargetId;
   }
   if (isForumPostResult) {
     isForumPostResult = !arg3;

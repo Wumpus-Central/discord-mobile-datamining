@@ -14,7 +14,7 @@ let closure_6 = async function _uploadMessageAttachments(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -47,7 +47,7 @@ let closure_6 = async function _uploadMessageAttachments(arg0) {
           closure_130_7 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "flex", done: null };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -59,7 +59,7 @@ let closure_6 = async function _uploadMessageAttachments(arg0) {
           return obj5;
         } else if (closure_131_5.has(closure_130_2)) {
           c5 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         } else {
           const tmp16 = new closure_131_1(closure_131_2[2])();
           closure_130_5 = tmp16;
@@ -71,18 +71,18 @@ let closure_6 = async function _uploadMessageAttachments(arg0) {
           closure_130_7 = closure_131_0(closure_131_2[3]).createMessageRecord(obj6);
           closure_130_5.on("start", (file) => {
             uploader.add(dependencyMap);
-            closure_1(573).dispatch({ type: "UPLOAD_START", channelId, file, uploader, message });
+            closure_1(584).dispatch({ type: "UPLOAD_START", channelId, file, uploader, message });
           });
           closure_130_5.on("compression-progress", (file) => {
-            closure_1(573).dispatch({ type: "UPLOAD_COMPRESSION_PROGRESS", channelId, file });
+            closure_1(584).dispatch({ type: "UPLOAD_COMPRESSION_PROGRESS", channelId, file });
           });
           closure_130_5.on("progress", (file) => {
-            closure_1(573).dispatch({ type: "UPLOAD_PROGRESS", channelId, file });
+            closure_1(584).dispatch({ type: "UPLOAD_PROGRESS", channelId, file });
           });
           closure_130_5.on("error", (file) => {
             uploader.delete(dependencyMap);
             uploader.cancel();
-            closure_1(573).dispatch({
+            closure_1(584).dispatch({
               type: "UPLOAD_FAIL",
               channelId,
               file,
@@ -107,8 +107,8 @@ let closure_6 = async function _uploadMessageAttachments(arg0) {
                 id = messageForFile.id;
               }
               const obj2 = { type: "MESSAGE_DELETE", id, channelId: messageForFile.channel_id };
-              closure_1_1(573).dispatch(obj2);
-              const obj = closure_1_1(573);
+              closure_1_1(584).dispatch(obj2);
+              const obj = closure_1_1(584);
             }
             if (uploader._aborted) {
               const _setTimeout = setTimeout;
@@ -118,7 +118,7 @@ let closure_6 = async function _uploadMessageAttachments(arg0) {
             }
           });
           closure_130_5.on("cancel-upload-item", (file) => {
-            closure_1(573).dispatch({ type: "UPLOAD_FILE_UPDATE", file, channelId });
+            closure_1(584).dispatch({ type: "UPLOAD_FILE_UPDATE", file, channelId });
           });
           value = {};
           c4 = 2;

@@ -43,7 +43,7 @@ export default function createMediaPostPreviewEmbedContent(message, roleStyle, u
     if (null == media) {
       return null;
     } else {
-      const guild = GuildStore.getGuild(media.guild_id);
+      guild = GuildStore.getGuild(media.guild_id);
       const user = UserStore.getUser(media.author_id);
       const channel = ChannelStore.getChannel(media.parent_channel_id);
       const channel1 = ChannelStore.getChannel(media.channel_id);
@@ -106,7 +106,7 @@ export default function createMediaPostPreviewEmbedContent(message, roleStyle, u
             if (mediaPostEmbedCommonData.shouldShowBlurredThumbnailImage) {
               const obj5 = {};
               const merged = Object.assign(mediaPostEmbedCommonData);
-              obj5.blurredCoverImage = React3.resolveAssetSource(tmp10(13022)).uri;
+              obj5.blurredCoverImage = React3.resolveAssetSource(tmp10(13083)).uri;
               obj5.footer = formatToPartsResult;
               obj5.ctaButtonColor = tmp11;
               return obj5;

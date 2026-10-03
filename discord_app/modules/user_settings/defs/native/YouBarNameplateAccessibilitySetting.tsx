@@ -5,13 +5,13 @@ import AccessibilityActionCreators from "../../../a11y/AccessibilityActionCreato
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(11215);
+const SettingBuilders = fn(11129);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.EEms8K);
   },
-  parent: fn(7590).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(7634).MobileUserSettings.ACCESSIBILITY,
   useValue() {
     const items = [AccessibilityStore];
     return initialize.useStateFromStores(items, () => AccessibilityStore.animateYouBarNameplate);

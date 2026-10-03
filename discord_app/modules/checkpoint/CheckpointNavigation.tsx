@@ -27,6 +27,17 @@ const obj = {
   SUMMARY: "summary",
   PROFILE_WIDGET: "profile_widget",
 };
+const items = [, , , , , ,];
+({
+  VOICE_FACE: arr[0],
+  MESSAGES_OUTFIT: arr[1],
+  SERVERS_HEADWEAR: arr[2],
+  EMOJI_SHOES: arr[3],
+  GAMES_WEARABLE: arr[4],
+  GAME_TIME_AURA: arr[5],
+  FINALIZE_CHARACTER: arr[6],
+} = obj);
+const set = new Set(items);
 const obj2 = {
   IDLE: "idle",
   INTRODUCTION: "introduction",
@@ -52,7 +63,7 @@ const obj3 = {
   SIDEKICK: "sidekick",
   SUMMARY: "summary",
 };
-let closure_0 = {
+let closure_1 = {
   [obj.HOME]: { characterStage: obj2.IDLE },
   [obj.INTRODUCTION]: { characterStage: obj2.INTRODUCTION },
   [obj.VOICE_STATS]: { characterStage: obj2.FACE, statsScreen: obj3.VOICE },
@@ -82,8 +93,11 @@ const result = size.fileFinishedImporting("modules/checkpoint/CheckpointNavigati
 
 export const CheckpointFlow = { SHARED_DATA: "shared_data", NO_SHARED_DATA: "no_shared_data" };
 export const CheckpointRoute = obj;
+export const isCheckpointCustomizationRoute = function isCheckpointCustomizationRoute(arg0) {
+  return set.has(arg0);
+};
 export const CheckpointCharacterStage = obj2;
 export const CheckpointStatsScreen = obj3;
 export const getCheckpointRoutePresentation = function getCheckpointRoutePresentation(route) {
-  return closure_0[route];
+  return closure_1[route];
 };

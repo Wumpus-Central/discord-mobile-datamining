@@ -8,7 +8,7 @@ import UserGuildJoinRequestStore from "../UserGuildJoinRequestStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const GuildFeatures = fn(1074).GuildFeatures;
+const GuildFeatures = fn(1085).GuildFeatures;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/guild_member_verification/hooks/useCanReapplyToRejectedMemberVerificationApplication.tsx",
@@ -38,7 +38,7 @@ export const useCanReapplyToRejectedMemberVerificationApplication =
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -81,7 +81,7 @@ export const useCanReapplyToRejectedMemberVerificationApplication =
           c4 = 0;
           tmp3(false);
           c5 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         } catch (tmp18) {
           closure_3 = tmp18;
           if (tmp4 === c4) {

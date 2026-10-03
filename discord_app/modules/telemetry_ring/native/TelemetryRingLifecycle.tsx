@@ -7,7 +7,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 import AppStateStore from "../../../stores/native/AppStateStore.tsx";
 import LifecycleManager from "../../../lib/LifecycleManager.tsx";
 
-const AppStates = fn(1074).AppStates;
+const AppStates = fn(1085).AppStates;
 class TelemetryRingLifecycleImpl extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -18,16 +18,16 @@ class TelemetryRingLifecycleImpl extends tmp2 {
       const result = applyArgumentsResult._updateZoomedInExport();
     };
     applyArgumentsResult._handleLogout = function _handleLogout() {
-      applyArgumentsResult(1988).clear();
-      const obj = applyArgumentsResult(1988);
-      applyArgumentsResult(1984).reset();
+      applyArgumentsResult(1994).clear();
+      const obj = applyArgumentsResult(1994);
+      applyArgumentsResult(1990).reset();
     };
     return applyArgumentsResult;
   }
 }
 const prototype = TelemetryRingLifecycleImpl.prototype;
 prototype["_updateZoomedInExport"] = function _updateZoomedInExport() {
-  const state = AppStateStore.getState();
+  state = AppStateStore.getState();
   let shouldRunResult = state === AppStates.ACTIVE;
   if (shouldRunResult) {
     shouldRunResult = ZoomedInTelemetryDefault.shouldRun();
@@ -45,17 +45,17 @@ prototype["_initialize"] = function _initialize() {
   const self = this;
   if (!this._initialized) {
     self._initialized = true;
-    const subscription = self(573).subscribe("LOGOUT", self._handleLogout);
+    const subscription = self(584).subscribe("LOGOUT", self._handleLogout);
     AppStateStore.addChangeListener(self._handleEligibilityChange);
     UserStore.addChangeListener(self._handleEligibilityChange);
     ApexExperimentStore.addChangeListener(self._handleEligibilityChange);
     self._experimentUnsubscribe = () => {
       ApexExperimentStore.removeChangeListener(self._handleEligibilityChange);
     };
-    const obj = self(573);
-    self(1984).initialize();
+    const obj = self(584);
+    self(1990).initialize();
     const result = self._updateZoomedInExport();
-    const obj2 = self(1984);
+    const obj2 = self(1990);
   }
 };
 prototype["_terminate"] = function _terminate() {

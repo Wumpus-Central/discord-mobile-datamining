@@ -1,19 +1,19 @@
 // discord_common/js/packages/media-engine/native/Connection.tsx
 import inject from "inject.tsx";
-import BaseConnectionEvent from "../index.tsx";
 import VideoQualityManager from "../VideoQualityManager.tsx";
-import cloneDeepDefault from "../../../../../_runtime/04917_cloneDeep.js";
+import discord_common_BaseConnectionEvent from "../BaseConnectionEvent.tsx";
+import cloneDeepDefault from "../../../../../_runtime/04963_cloneDeep.js";
 import VideoCodecUtils from "../utils/VideoCodecUtils.tsx";
 import transformStatsDefault from "transformStats.tsx";
-import _modDef4964 from "../../../../../_runtime/metro/04964__.js";
+import _modDef5010 from "../../../../../_runtime/metro/05010__.js";
 import discord_common_VoiceEngine from "VoiceEngine.tsx";
-import reduceDefault from "../../../../../_runtime/04966_reduce.js";
-import _modDef4969 from "../../../../../_runtime/metro/04969__.js";
+import reduceDefault from "../../../../../_runtime/05012_reduce.js";
+import _modDef5015 from "../../../../../_runtime/metro/05015__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import BaseConnection from "../BaseConnection.tsx";
 
 require = fn;
-let Constants = fn(4870);
+let Constants = fn(4915);
 ({
   StatsFilter: closure_4,
   ExperimentFlags: hasOwnProperty,
@@ -23,7 +23,7 @@ let Constants = fn(4870);
   MediaTypes: closure_9,
   SIMULCAST_HQ_QUALITY: c10,
 } = Constants);
-Constants = fn(4902);
+Constants = fn(4947);
 ({
   NATIVE_MODE_VALUES: closure_11,
   InputModes: closure_12,
@@ -110,7 +110,7 @@ class Connection extends tmp4 {
       }
     };
     tmp1.handleNativeMuteChanged = function handleNativeMuteChanged(arg0) {
-      closure_0.emit(BaseConnectionEvent.BaseConnectionEvent.NativeMuteChanged, arg0);
+      closure_0.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.NativeMuteChanged, arg0);
     };
     tmp1.handleSpeakingFlags = function handleSpeakingFlags(id, flag, arg2) {
       let NONE = closure_0.localSpeakingFlags[id];
@@ -125,35 +125,38 @@ class Connection extends tmp4 {
         } else {
           audioSSRC = closure_0.remoteAudioSSRCs[id];
         }
-        closure_0.emit(BaseConnectionEvent.BaseConnectionEvent.Speaking, id, flag, audioSSRC, arg2);
+        closure_0.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.Speaking, id, flag, audioSSRC, arg2);
         let tmp11 = flag & constants6.SOUNDSHARE;
         if (tmp11) {
           tmp11 = false === closure_0.soundshareSentSpeakingEvent;
         }
         if (tmp11) {
-          closure_0.emit(BaseConnectionEvent.BaseConnectionEvent.SoundshareSpeaking);
+          closure_0.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.SoundshareSpeaking);
           closure_0.soundshareSentSpeakingEvent = true;
         }
       }
     };
     tmp1.handleSpeakingWhileMuted = function handleSpeakingWhileMuted() {
-      closure_0.emit(BaseConnectionEvent.BaseConnectionEvent.SpeakingWhileMuted);
+      closure_0.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.SpeakingWhileMuted);
     };
     tmp1.handlePing = function handlePing(arg0) {
-      closure_0.emit(BaseConnectionEvent.BaseConnectionEvent.Ping, arg0);
+      closure_0.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.Ping, arg0);
     };
     tmp1.handlePingTimeout = function handlePingTimeout(arg0, arg1, arg2, arg3) {
       let num = 4000;
       if (arg3 > 0) {
         num = arg3;
       }
-      closure_0.emit(BaseConnectionEvent.BaseConnectionEvent.PingTimeout, arg2, num);
+      closure_0.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.PingTimeout, arg2, num);
     };
     tmp1.handleConnectionFailed = function handleConnectionFailed(arg0) {
       if (!closure_0.destroyed) {
         closure_0.setConnectionState(constants4.NO_ROUTE);
         const _HermesInternal = HermesInternal;
-        closure_0.emit(BaseConnectionEvent.BaseConnectionEvent.Error, "UDP endpoint retarget failed: " + arg0);
+        closure_0.emit(
+          discord_common_BaseConnectionEvent.BaseConnectionEvent.Error,
+          "UDP endpoint retarget failed: " + arg0,
+        );
       }
     };
     tmp1.handleVideoEncoderFallback = function handleVideoEncoderFallback(arg0) {
@@ -195,7 +198,7 @@ class Connection extends tmp4 {
           }
           return !tmp;
         });
-        obj.emit(BaseConnectionEvent.BaseConnectionEvent.VideoEncoderFallback, obj.codecs);
+        obj.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.VideoEncoderFallback, obj.codecs);
         obj.videoEncoderFallbackPending = true;
       }
     };
@@ -233,11 +236,11 @@ class Connection extends tmp4 {
           }
           return !tmp;
         });
-        obj.emit(BaseConnectionEvent.BaseConnectionEvent.VideoDecoderFallback, obj.codecs);
+        obj.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.VideoDecoderFallback, obj.codecs);
       }
     };
     tmp1.handleVideoCodecError = function handleVideoCodecError(arg0) {
-      closure_0.emit(BaseConnectionEvent.BaseConnectionEvent.VideoCodecError, arg0);
+      closure_0.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.VideoCodecError, arg0);
     };
     tmp1.handleVideo = function handleVideo(arg0, ssrc, arg2, arr) {
       const tmp2 = cloneDeepDefault(closure_0.videoStreamParameters);
@@ -309,7 +312,7 @@ class Connection extends tmp4 {
         }
       }
       closure_0.emit(
-        BaseConnectionEvent.BaseConnectionEvent.Video,
+        discord_common_BaseConnectionEvent.BaseConnectionEvent.Video,
         arg0,
         tmp8,
         audioSSRC,
@@ -319,19 +322,19 @@ class Connection extends tmp4 {
       );
     };
     tmp1.handleFirstFrame = function handleFirstFrame(arg0, arg1, arg2) {
-      closure_0.emit(BaseConnectionEvent.BaseConnectionEvent.FirstFrame, arg0, arg1, arg2);
+      closure_0.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.FirstFrame, arg0, arg1, arg2);
     };
     tmp1.handleFirstFrameStats = function handleFirstFrameStats(arg0) {
-      closure_0.emit(BaseConnectionEvent.BaseConnectionEvent.FirstFrameStats, arg0);
+      closure_0.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.FirstFrameStats, arg0);
     };
     tmp1.handleFirstFrameEncryptedStats = function handleFirstFrameEncryptedStats(arg0) {
-      closure_0.emit(BaseConnectionEvent.BaseConnectionEvent.FirstFrameEncryptedStats, arg0);
+      closure_0.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.FirstFrameEncryptedStats, arg0);
     };
     tmp1.handleNoInput = function handleNoInput(arg0) {
-      closure_0.emit(BaseConnectionEvent.BaseConnectionEvent.Silence, !arg0);
+      closure_0.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.Silence, !arg0);
     };
     tmp1.handleDesktopSourceEnded = function handleDesktopSourceEnded(arg0, arg1) {
-      closure_0.emit(BaseConnectionEvent.BaseConnectionEvent.DesktopSourceEnd, arg0, arg1);
+      closure_0.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.DesktopSourceEnd, arg0, arg1);
     };
     tmp1.handleSoundshare = function handleSoundshare(arg0) {
       if (arg0) {
@@ -339,13 +342,13 @@ class Connection extends tmp4 {
         const conn = closure_0.conn;
         const obj = { encodingVoiceBitRate: null };
         const _Math = Math;
-        obj.encodingVoiceBitRate = Math.max(__initData2, closure_0.voiceBitrate);
+        obj.encodingVoiceBitRate = Math.max(closure_2_22, closure_0.voiceBitrate);
         conn.setTransportOptions(obj);
-        closure_0.emit(BaseConnectionEvent.BaseConnectionEvent.SoundshareAttached);
+        closure_0.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.SoundshareAttached);
       }
     };
     tmp1.handleSoundshareFailed = function handleSoundshareFailed(failureCode, failureReason, willRetry) {
-      closure_0.emit(BaseConnectionEvent.BaseConnectionEvent.SoundshareFailed, {
+      closure_0.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.SoundshareFailed, {
         failureCode,
         failureReason,
         willRetry,
@@ -360,7 +363,7 @@ class Connection extends tmp4 {
       }
     };
     tmp1.handleNewListenerNative = function handleNewListenerNative(arg0) {
-      if (arg0 === BaseConnectionEvent.BaseConnectionEvent.ConnectionStateChange) {
+      if (arg0 === discord_common_BaseConnectionEvent.BaseConnectionEvent.ConnectionStateChange) {
         closure_0.emit(arg0, closure_0.connectionState);
       }
     };
@@ -405,14 +408,14 @@ class Connection extends tmp4 {
             const diff = tmp26.sent - tmp27.sent;
             const diff1 = tmp26.lost - tmp27.lost;
             if (0 === diff) {
-              closure_0.emit(BaseConnectionEvent.BaseConnectionEvent.OutboundLossRate, 0);
+              closure_0.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.OutboundLossRate, 0);
             } else if (diff > 0) {
               if (diff1 >= 0) {
                 closure_0.emit(
-                  BaseConnectionEvent.BaseConnectionEvent.OutboundLossRate,
-                  100 * _modDef4969(diff1 / (diff + diff1), 0, 1),
+                  discord_common_BaseConnectionEvent.BaseConnectionEvent.OutboundLossRate,
+                  100 * _modDef5015(diff1 / (diff + diff1), 0, 1),
                 );
-                const tmp6 = _modDef4969(diff1 / (diff + diff1), 0, 1);
+                const tmp6 = _modDef5015(diff1 / (diff + diff1), 0, 1);
               }
             }
             const outbound = rtp.rtp.outbound;
@@ -440,12 +443,12 @@ class Connection extends tmp4 {
                               const diff3 = first.noiseCancellerProcessTime - first1.noiseCancellerProcessTime;
                               if (diff3 / tmp13 > 8) {
                                 closure_0.emit(
-                                  BaseConnectionEvent.BaseConnectionEvent.NoiseCancellationError,
+                                  discord_common_BaseConnectionEvent.BaseConnectionEvent.NoiseCancellationError,
                                   constants9.KRISP_CPU_OVERUSE,
                                 );
                               } else if (0 === diff3) {
                                 closure_0.emit(
-                                  BaseConnectionEvent.BaseConnectionEvent.NoiseCancellationError,
+                                  discord_common_BaseConnectionEvent.BaseConnectionEvent.NoiseCancellationError,
                                   constants9.KRISP_FAILED,
                                 );
                               }
@@ -465,7 +468,7 @@ class Connection extends tmp4 {
                                     4
                                   ) {
                                     closure_0.emit(
-                                      BaseConnectionEvent.BaseConnectionEvent.VoiceActivityDetectorError,
+                                      discord_common_BaseConnectionEvent.BaseConnectionEvent.VoiceActivityDetectorError,
                                       constants9.KRISP_VAD_CPU_OVERUSE,
                                     );
                                   }
@@ -485,11 +488,11 @@ class Connection extends tmp4 {
           closure_0.stats = rtp;
         }
       } else {
-        closure_0.off(BaseConnectionEvent.BaseConnectionEvent.Stats, closure_0.handleStats);
+        closure_0.off(discord_common_BaseConnectionEvent.BaseConnectionEvent.Stats, closure_0.handleStats);
       }
     };
     tmp1.handleMLSFailure = function handleMLSFailure(arg0, arg1) {
-      closure_0.emit(BaseConnectionEvent.BaseConnectionEvent.MLSFailure, arg0, arg1);
+      closure_0.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.MLSFailure, arg0, arg1);
     };
     tmp1.videoSupported = importDefault;
     logger1 = new closure_0(closure_2[5]).Logger("Connection(" + global + ")");
@@ -510,7 +513,12 @@ class Connection extends tmp4 {
     keys = Object.keys(self.localSpeakingFlags);
     found = keys.filter((item) => item !== self.userId);
     item = found.forEach((item) =>
-      self.emit(BaseConnectionEvent.BaseConnectionEvent.Speaking, item, constants6.NONE, self.remoteAudioSSRCs[item]),
+      self.emit(
+        discord_common_BaseConnectionEvent.BaseConnectionEvent.Speaking,
+        item,
+        constants6.NONE,
+        self.remoteAudioSSRCs[item],
+      ),
     );
     setConnectionStateResult = self.setConnectionState(ConnectionStates.DISCONNECTED);
     destroyResult1 = super.destroy();
@@ -532,7 +540,7 @@ Connection["createReplay"] = function createReplay(arg0, arg1) {
   const replayConnection = voiceEngine.createReplayConnection(
     "default",
     () => {
-      obj.on(BaseConnectionEvent.BaseConnectionEvent.Stats, obj.handleStats);
+      obj.on(discord_common_BaseConnectionEvent.BaseConnectionEvent.Stats, obj.handleStats);
       let conn = obj.conn;
       conn.setOnVideoCallback(obj.handleVideo);
       const codecCapabilities = voiceEngine.getCodecCapabilities((arg0) => {
@@ -595,7 +603,7 @@ prototype["initialize"] = function initialize(address) {
   ];
   address.streamParameters = items;
   address.context = this.context;
-  const voiceEngine = createVoiceConnection(1995).getVoiceEngine();
+  const voiceEngine = createVoiceConnection(2001).getVoiceEngine();
   if (null != voiceEngine.createOwnStreamConnectionWithOptions) {
     if (self.context !== constants5.STREAM) {
       const createVoiceConnectionWithOptions = voiceEngine.createVoiceConnectionWithOptions;
@@ -879,18 +887,18 @@ prototype["initialize"] = function initialize(address) {
       let result2 = setSecureFramesStateUpdateCallback((arg0) => {
         const logger = self.logger;
         logger.info("DAVE protocol state update: " + JSON.stringify(arg0));
-        self.emit(BaseConnectionEvent.BaseConnectionEvent.SecureFramesUpdate, arg0);
+        self.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.SecureFramesUpdate, arg0);
       });
     }
     if (fnResult.setDesktopSourceStatusCallback != null) {
       let result3 = setDesktopSourceStatusCallback((type) => {
         if ("videohook_start" === type.type) {
-          self.emit(BaseConnectionEvent.BaseConnectionEvent.VideoHookStart);
+          self.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.VideoHookStart);
         } else if ("videohook_stop" === type.type) {
-          self.emit(BaseConnectionEvent.BaseConnectionEvent.VideoHookStop);
+          self.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.VideoHookStop);
         } else if ("videohook_initialize" === type.type) {
           self.emit(
-            BaseConnectionEvent.BaseConnectionEvent.VideoHookInitialize,
+            discord_common_BaseConnectionEvent.BaseConnectionEvent.VideoHookInitialize,
             type.backend,
             type.format,
             type.framebufferFormat,
@@ -899,7 +907,7 @@ prototype["initialize"] = function initialize(address) {
             type.reinitialization,
           );
         } else if ("screenshare_finish" === type.type) {
-          const ScreenshareFinish = BaseConnectionEvent.BaseConnectionEvent.ScreenshareFinish;
+          const ScreenshareFinish = discord_common_BaseConnectionEvent.BaseConnectionEvent.ScreenshareFinish;
           ({
             screenshareFrames,
             videohookFrames,
@@ -952,11 +960,11 @@ prototype["initialize"] = function initialize(address) {
             type.videohookBackend,
           );
         } else if ("video_state" === type.type) {
-          self.emit(BaseConnectionEvent.BaseConnectionEvent.VideoState, type.state);
+          self.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.VideoState, type.state);
         } else {
           type = type.type;
           if (type.startsWith("soundshare_")) {
-            self.emit(BaseConnectionEvent.BaseConnectionEvent.SoundshareTrace, type);
+            self.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.SoundshareTrace, type);
           }
         }
       });
@@ -970,7 +978,7 @@ prototype["initialize"] = function initialize(address) {
     maxBitrate: 64000,
     soundshare: this.context === constants5.STREAM,
   };
-  let obj2 = createVoiceConnection(1995);
+  let obj2 = createVoiceConnection(2001);
 };
 prototype["setCodecs"] = function setCodecs(OPUS, H264, context) {
   const self = this;
@@ -1023,7 +1031,7 @@ prototype["getStats"] = function getStats() {
           ),
         );
       } else {
-        const voiceEngine = self(1995).getVoiceEngine();
+        const voiceEngine = self(2001).getVoiceEngine();
         const stats1 = voiceEngine.getStats((arg0) =>
           closure_0(
             transformStatsDefault(
@@ -1034,18 +1042,18 @@ prototype["getStats"] = function getStats() {
             ),
           ),
         );
-        const obj = self(1995);
+        const obj = self(2001);
       }
     });
-    let obj = self(4961);
-    resolved = self(4961)
-      .timeout(promise, self(4910).STATS_INTERVAL)
+    let obj = self(5007);
+    resolved = self(5007)
+      .timeout(promise, self(4956).STATS_INTERVAL)
       .catch((error) => {
-        if (!(error instanceof self(4961).TimeoutError)) {
+        if (!(error instanceof self(5007).TimeoutError)) {
           throw error;
         }
       });
-    const timeoutResult = self(4961).timeout(promise, self(4910).STATS_INTERVAL);
+    const timeoutResult = self(5007).timeout(promise, self(4956).STATS_INTERVAL);
   }
   return resolved;
 };
@@ -1076,7 +1084,7 @@ prototype["createUser"] = function createUser(id, ssrc, arg2) {
     HermesBuiltin.arraySpread(arg2, 0);
     sorted1 = items2.sort();
   }
-  _modDef4964(sorted, sorted1);
+  _modDef5010(sorted, sorted1);
   self.remoteAudioSSRCs[id] = ssrc;
   let items3 = sorted1;
   if (sorted1 == null) {
@@ -1146,7 +1154,7 @@ prototype["setSelfMute"] = function setSelfMute(selfMute) {
   this.selfMute = selfMute;
   const conn = this.conn;
   conn.setSelfMute(selfMute);
-  this.emit(BaseConnectionEvent.BaseConnectionEvent.Mute, selfMute);
+  this.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.Mute, selfMute);
 };
 prototype["getSelfMute"] = function getSelfMute() {
   return this.selfMute;
@@ -1158,7 +1166,7 @@ prototype["setSelfDeaf"] = function setSelfDeaf(deaf) {
   this.selfDeaf = deaf;
   const conn = this.conn;
   conn.setSelfDeafen(deaf);
-  this.emit(BaseConnectionEvent.BaseConnectionEvent.Deafen, deaf);
+  this.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.Deafen, deaf);
 };
 prototype["setSoundshareSource"] = function setSoundshareSource(arg0, soundshareLoopback) {
   const self = this;
@@ -1180,7 +1188,7 @@ prototype["setLocalMute"] = function setLocalMute(userId, flag) {
   this.localMutes[userId] = flag;
   const conn = this.conn;
   conn.setLocalMute(userId, flag);
-  this.emit(BaseConnectionEvent.BaseConnectionEvent.LocalMute, userId, flag);
+  this.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.LocalMute, userId, flag);
 };
 prototype["setUserPosition"] = function setUserPosition(item10006, position) {
   const conn = this.conn;
@@ -1234,7 +1242,7 @@ prototype["wasRemoteDisconnected"] = function wasRemoteDisconnected() {
 };
 prototype["setLocalVideoDisabled"] = function setLocalVideoDisabled(arg0, arg1) {
   this.disabledLocalVideos[arg0] = arg1;
-  this.emit(BaseConnectionEvent.BaseConnectionEvent.LocalVideoDisabled, arg0, arg1);
+  this.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.LocalVideoDisabled, arg0, arg1);
 };
 prototype["setMinimumJitterBufferLevel"] = function setMinimumJitterBufferLevel(minimumJitterBufferLevel) {
   this.minimumJitterBufferLevel = minimumJitterBufferLevel;
@@ -1329,7 +1337,7 @@ prototype["setVoiceBitRate"] = function setVoiceBitRate(voiceBitrate) {
     let bound = voiceBitrate;
     if (self.soundshareActive) {
       const _Math = Math;
-      bound = Math.max(__initData2, voiceBitrate);
+      bound = Math.max(closure_1_22, voiceBitrate);
     }
     const conn = self.conn;
     const obj = { encodingVoiceBitRate: bound };
@@ -1597,7 +1605,7 @@ prototype["setAudioVideoOverridesTransport"] = function setAudioVideoOverridesTr
         const _performance = performance;
         self.overrideCodecResetAt = performance.now();
       }
-      self.emit(BaseConnectionEvent.BaseConnectionEvent.VideoEncoderFallback, self.codecs);
+      self.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.VideoEncoderFallback, self.codecs);
       const set2 = new Set(found2.map((name) => name.name));
     }
   }
@@ -1796,7 +1804,7 @@ prototype["setDesktopEncodingOptions"] = function setDesktopEncodingOptions(widt
         const obj = { capture: size2, encode: size2, bitrateMax: calcMaxBitrateFuncResult };
         videoQualityManager2.setGoliveQuality(obj);
         if (self.videoStreamParameters.length <= num5) {
-          const Video = BaseConnectionEvent.BaseConnectionEvent.Video;
+          const Video = discord_common_BaseConnectionEvent.BaseConnectionEvent.Video;
           ({ userId, audioSSRC } = self);
           const ssrc = self.videoStreamParameters[num5].ssrc;
           const ssrc2 = self.videoStreamParameters[num5].ssrc;
@@ -1829,7 +1837,7 @@ prototype["setDesktopEncodingOptions"] = function setDesktopEncodingOptions(widt
 prototype["setSDP"] = function setSDP() {};
 prototype["setRemoteVideoSinkWants"] = function setRemoteVideoSinkWants(_remoteVideoSinkWants) {
   this.remoteVideoSinkWants = _remoteVideoSinkWants;
-  this.updateVideoQuality(React6);
+  this.updateVideoQuality(closure_1_8);
 };
 prototype["setLocalVideoSinkWants"] = function setLocalVideoSinkWants(localVideoSinkWants) {
   const self = this;
@@ -1938,7 +1946,7 @@ prototype["setStreamParameters"] = function setStreamParameters(arg0) {
         return { v: "r" };
       } else {
         const items = [];
-        if (!_modDef4964(self.videoStreamParameters[findIndexResult], closure_1[findIndexResult])) {
+        if (!_modDef5010(self.videoStreamParameters[findIndexResult], closure_1[findIndexResult])) {
           const obj = {};
           const merged = Object.assign(closure_1[findIndexResult]);
           self.videoStreamParameters[findIndexResult] = obj;
@@ -2350,7 +2358,7 @@ prototype["presentDesktopSourcePicker"] = function presentDesktopSourcePicker(ar
 prototype["mergeUsers"] = function mergeUsers(items4) {
   const conn = this.conn;
   conn.mergeUsers(items4);
-  this.emit(BaseConnectionEvent.BaseConnectionEvent.UsersMerged, items4);
+  this.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.UsersMerged, items4);
 };
 let size = fn(2);
 let result = size.fileFinishedImporting("../discord_common/js/packages/media-engine/native/Connection.tsx");

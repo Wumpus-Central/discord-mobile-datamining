@@ -3,7 +3,7 @@ import ChannelStore from "../stores/ChannelStore.tsx";
 import PermissionStore from "../stores/PermissionStore.tsx";
 import UserStore from "../stores/UserStore.tsx";
 
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ ChannelTypes: c3, Permissions: closure_4, MessageTypesSets: hasOwnProperty } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("utils/ReportUtils.tsx");

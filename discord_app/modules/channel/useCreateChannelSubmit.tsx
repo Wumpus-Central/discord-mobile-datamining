@@ -5,7 +5,7 @@ import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ ChannelTypes: closure_7, Permissions: closure_8 } = Constants);
 const CreateChannelMode = { PREMIUM_CHANNEL: 0, [0]: "PREMIUM_CHANNEL" };
 const size = fn(2);
@@ -26,7 +26,7 @@ export default function useCreateChannelSubmit(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -68,7 +68,7 @@ export default function useCreateChannelSubmit(arg0) {
             let guild_id;
             c7 = 1;
             c8 = 1;
-            return { value: "flex", done: null };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === tmp8) {
           if (arg0 === 1) {
@@ -82,12 +82,12 @@ export default function useCreateChannelSubmit(arg0) {
             if (closure_131_3 === constants3.PREMIUM_CHANNEL) {
               const obj6 = {
                 id: closure_131_4,
-                type: closure_0(1979).PermissionOverwriteType.ROLE,
+                type: closure_0(1985).PermissionOverwriteType.ROLE,
                 deny: constants2.VIEW_CHANNEL,
-                allow: closure_2(1086).getFlag(0),
+                allow: closure_2(1097).getFlag(0),
               };
               closure_131_0.push(obj6);
-              const obj10 = closure_2(1086);
+              const obj10 = closure_2(1097);
             }
             closure_1(true);
             c6 = 2;
@@ -120,9 +120,9 @@ export default function useCreateChannelSubmit(arg0) {
           if (3 === tmp8) {
             c6 = 1;
             closure_131_13 = closure_5;
-            const AccessibilityAnnouncer = closure_0(4714).AccessibilityAnnouncer;
-            const intl = closure_0(1115).intl;
-            AccessibilityAnnouncer.announce(intl.string(closure_0(1115).t["0SbUzm"]));
+            const AccessibilityAnnouncer = closure_0(4729).AccessibilityAnnouncer;
+            const intl = closure_0(1126).intl;
+            AccessibilityAnnouncer.announce(intl.string(closure_0(1126).t["0SbUzm"]));
             const body = closure_131_13.body;
             let errors;
             if (body != null) {
@@ -151,10 +151,10 @@ export default function useCreateChannelSubmit(arg0) {
               id = closure_131_10.id;
               guild_id = closure_131_10.guild_id;
               if (null != id) {
-                const AccessibilityAnnouncer2 = closure_0(4714).AccessibilityAnnouncer;
-                const intl2 = closure_0(1115).intl;
+                const AccessibilityAnnouncer2 = closure_0(4729).AccessibilityAnnouncer;
+                const intl2 = closure_0(1126).intl;
                 const obj9 = { name: closure_131_5 };
-                AccessibilityAnnouncer2.announce(intl2.formatToPlainString(closure_0(1115).t.Wke70b, obj9));
+                AccessibilityAnnouncer2.announce(intl2.formatToPlainString(closure_0(1126).t.Wke70b, obj9));
                 if (closure_0 != null) {
                   tmp86(id, guild_id);
                 }

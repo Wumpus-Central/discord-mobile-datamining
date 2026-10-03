@@ -1,5 +1,5 @@
 // discord_common/js/packages/media-engine/MediaEngineDummy.tsx
-import BaseConnectionEvent from "index.tsx";
+import MediaEngineEvent from "MediaEngineEvent.tsx";
 import Constants from "Constants.tsx";
 import TypedEventEmitter from "../../shared/utils/TypedEventEmitter.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -26,7 +26,7 @@ class MediaEngineDummy extends tmp3 {
 }
 const prototype = MediaEngineDummy.prototype;
 prototype["destroy"] = function destroy() {
-  this.emit(BaseConnectionEvent.MediaEngineEvent.Destroy);
+  this.emit(MediaEngineEvent.MediaEngineEvent.Destroy);
   this.removeAllListeners();
 };
 prototype["interact"] = function interact() {};

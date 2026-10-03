@@ -50,7 +50,7 @@ let closure_6 = async function _unfurlEmbedUrl() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -95,11 +95,11 @@ let closure_6 = async function _unfurlEmbedUrl() {
           const obj = { value: value.body, done: true };
           return obj;
         }
-      } catch (tmp23) {
-        closure_3 = tmp23;
+      } catch (tmp19) {
+        closure_3 = tmp19;
         if (tmp4 === c4) {
           c6 = tmp2;
-          throw tmp23;
+          throw tmp19;
         } else {
           c5 = tmp;
         }
@@ -107,7 +107,7 @@ let closure_6 = async function _unfurlEmbedUrl() {
     }
   })();
 };
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_channel/MediaChannelActionCreators.tsx");
 

@@ -52,7 +52,7 @@ function scheduleNextNotification() {
       timeout = null;
     }
   }
-  obj = found(7449);
+  obj = found(7485);
 }
 let c4 = null;
 const prototype = function MessageRemindersNotificationManager() {

@@ -8,20 +8,20 @@ const result = size.fileFinishedImporting(
   "../discord_common/js/packages/design/components/Text/typographyVariantRemap.tsx",
 );
 
-export const remapTypographyVariant = function remapTypographyVariant(enabledExperiments, variant, arg2) {
+export const remapTypographyVariant = function remapTypographyVariant(cResult, arg1, arg2) {
   const obj = TypographyVariantRemap.TYPOGRAPHY_EXPERIMENT_REMAPS[Symbol.iterator]();
   while (obj !== undefined) {
     let tmp3 = _slicedToArray(tmp, 2);
     let tmp4 = tmp3[1];
-    if (enabledExperiments.includes(tmp3[0])) {
+    if (cResult.includes(tmp3[0])) {
       value = undefined;
       if (arg2) {
         let heading = tmp4.heading;
-        value = heading.get(variant);
+        value = heading.get(arg1);
       }
       if (value == null) {
         let text = tmp4.text;
-        value = text.get(variant);
+        value = text.get(arg1);
       }
       if (null != value) {
         obj.return();
@@ -30,5 +30,5 @@ export const remapTypographyVariant = function remapTypographyVariant(enabledExp
     }
     continue;
   }
-  return variant;
+  return arg1;
 };

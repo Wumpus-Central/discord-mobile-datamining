@@ -6,7 +6,7 @@ import AppEntryKey from "../../window/native/AppEntryKey.tsx";
 import readAppEntryWindowMetrics from "readAppEntryWindowMetrics.android.tsx";
 import useSystemKeyboardHeight from "../../keyboard/native/useSystemKeyboardHeight.native.tsx";
 import subscribeToKeyboardUIStore from "../../keyboard/native/subscribeToKeyboardUIStore.tsx";
-import 00560__ from "../../../../_runtime/metro/00560__.js";
+import 00570__ from "../../../../_runtime/metro/00570__.js";
 import SafeAreaStore from "../../safe_area/SafeAreaStore.native.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -114,7 +114,7 @@ function getDimensionsStoreState(arg0) {
   return tmp;
 }
 const Dimensions = _mod17.Dimensions;
-let byAppEntry = module_560.create(() => getDimensionsStoreState(undefined));
+let byAppEntry = module_570.create(() => getDimensionsStoreState(undefined));
 const subscription = SafeAreaStore.subscribe(() => {
   ReactBatchUpdates.batchUpdates(() => state.setState((arg0) => closure_1_4(arg0)));
 });

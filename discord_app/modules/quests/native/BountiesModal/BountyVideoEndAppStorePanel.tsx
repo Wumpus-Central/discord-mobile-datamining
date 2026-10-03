@@ -1,12 +1,13 @@
 // discord_app/modules/quests/native/BountiesModal/BountyVideoEndAppStorePanel.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import openURLDefault from "../../../../lib/openURL.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06259_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06140_LegacyBaseButton.js";
 import AnalyticsActions from "../../lib/analytics/AnalyticsActions.tsx";
 import AppStoreOverlayContent from "../AppStoreOverlay/AppStoreOverlayContent.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -124,7 +125,7 @@ function BountyVideoEndAppStorePanelInner(metadata) {
       withTiming: timing.withTiming,
       timingStandard: timingPresets.timingStandard,
     };
-    fn3.__workletHash = 11043554169049;
+    fn3.__workletHash = 1930356737433;
     fn3.__initData = __initData;
     return onUpdateResult.onEnd(fn3);
   }, items3);
@@ -179,10 +180,10 @@ function BountyVideoEndAppStorePanelInner(metadata) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ACTION_SHEET_BORDER_RADIUS = fn(6758).ACTION_SHEET_BORDER_RADIUS;
+const ACTION_SHEET_BORDER_RADIUS = fn(6646).ACTION_SHEET_BORDER_RADIUS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = {
   root: { position: "absolute", left: 0, right: 0, bottom: 0, zIndex: 10 },
   panel: {
@@ -210,7 +211,7 @@ const __initData = {
   code: "function BountyVideoEndAppStorePanelTsx1(){const{interpolate,revealProgress,sheetHeight,Extrapolation}=this.__closure;return{transform:[{translateY:interpolate(revealProgress.get(),[0,1],[sheetHeight,0],Extrapolation.CLAMP)}]};}",
 };
 let closure_11 = {
-  code: "function BountyVideoEndAppStorePanelTsx2(event){const{revealProgress,DISMISS_PROGRESS_THRESHOLD,DISMISS_VELOCITY_THRESHOLD,runOnJS,handleDismiss,withTiming,timingStandard}=this.__closure;if(revealProgress.get()<DISMISS_PROGRESS_THRESHOLD||event.velocityY>DISMISS_VELOCITY_THRESHOLD){runOnJS(handleDismiss)();return;}revealProgress.set(withTiming(1,timingStandard));}",
+  code: "function BountyVideoEndAppStorePanelTsx2(event_0){const{revealProgress,DISMISS_PROGRESS_THRESHOLD,DISMISS_VELOCITY_THRESHOLD,runOnJS,handleDismiss,withTiming,timingStandard}=this.__closure;if(revealProgress.get()<DISMISS_PROGRESS_THRESHOLD||event_0.velocityY>DISMISS_VELOCITY_THRESHOLD){runOnJS(handleDismiss)();return;}revealProgress.set(withTiming(1,timingStandard));}",
 };
 let closure_12 = {
   code: "function BountyVideoEndAppStorePanelTsx3(event){const{revealProgress,dragStartProgress,sheetHeight}=this.__closure;revealProgress.set(Math.max(0,Math.min(1,dragStartProgress.get()-event.translationY/sheetHeight)));}",
@@ -218,14 +219,55 @@ let closure_12 = {
 let closure_13 = {
   code: "function BountyVideoEndAppStorePanelTsx4(){const{dragStartProgress,revealProgress}=this.__closure;dragStartProgress.set(revealProgress.get());}",
 };
+const ReactCompilerGating = fn(558);
+let obj4 = { paddingBottom: fn(10924).APP_STORE_OVERLAY_FOOTER_GRADIENT_HEIGHT };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountyVideoEndAppStorePanel.tsx");
 
-export default function BountyVideoEndAppStorePanel(arg0) {
-  const items = [ThemeStore];
-  const stateFromStores = initialize.useStateFromStores(items, () => theme.theme);
-  const obj2 = { theme: stateFromStores, children: null };
-  const merged = Object.assign(arg0);
-  obj2.children = React5(BountyVideoEndAppStorePanelInner, {});
-  return React5(native.ThemeContextProvider, obj2);
-}
+export default ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      const cResult = c.c(7);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const items = [ThemeStore];
+        const fn = function n() {
+          return theme.theme;
+        };
+        cResult[0] = items;
+        cResult[1] = fn;
+        tmp4 = items;
+        tmp5 = fn;
+      } else {
+        [tmp4, tmp5] = cResult;
+      }
+      const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
+      if (cResult[2] !== arg0) {
+        const obj2 = {};
+        const merged = Object.assign(arg0);
+        const tmp14 = React5(BountyVideoEndAppStorePanelInner, obj2);
+        cResult[2] = arg0;
+        cResult[3] = tmp14;
+        let tmp8 = tmp14;
+      } else {
+        tmp8 = cResult[3];
+      }
+      if (cResult[4] === stateFromStores) {
+        if (cResult[5] === tmp8) {
+          let tmp15 = cResult[6];
+        }
+        return tmp15;
+      }
+      const tmp16 = React5(native.ThemeContextProvider, { theme: stateFromStores, children: tmp8 });
+      cResult[4] = stateFromStores;
+      cResult[5] = tmp8;
+      cResult[6] = tmp16;
+      tmp15 = tmp16;
+      const tmpResult = initialize;
+    }
+  : (arg0) => {
+      const items = [ThemeStore];
+      const stateFromStores = initialize.useStateFromStores(items, () => theme.theme);
+      const obj2 = { theme: stateFromStores, children: null };
+      const merged = Object.assign(arg0);
+      obj2.children = React5(BountyVideoEndAppStorePanelInner, {});
+      return React5(native.ThemeContextProvider, obj2);
+    };

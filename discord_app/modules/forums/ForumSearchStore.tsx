@@ -10,16 +10,16 @@ const prototype = ForumSearchStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(ChannelStore);
 };
-prototype["getSearchQuery"] = function getSearchQuery(arg0) {
+prototype["getSearchQuery"] = function getSearchQuery(channelId) {
   let query;
-  if (dependencyMap[arg0] != null) {
+  if (dependencyMap[channelId] != null) {
     query = tmp.query;
   }
   return query;
 };
-prototype["getSearchLoading"] = function getSearchLoading(arg0) {
+prototype["getSearchLoading"] = function getSearchLoading(channelId) {
   let flag;
-  if (dependencyMap[arg0] != null) {
+  if (dependencyMap[channelId] != null) {
     flag = tmp.loading;
   }
   if (flag == null) {

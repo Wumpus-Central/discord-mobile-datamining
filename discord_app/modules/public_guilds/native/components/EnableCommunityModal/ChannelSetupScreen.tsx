@@ -1,6 +1,6 @@
 // discord_app/modules/public_guilds/native/components/EnableCommunityModal/ChannelSetupScreen.tsx
 import util from "../../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/01981_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/01987_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import GuildSettingsStore from "../../../../guild_settings/GuildSettingsStore.tsx";
@@ -12,9 +12,9 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let closure_9 = fn(4496).GUILD_SELECTABLE_CHANNELS_KEY;
-const CREATE_NEW_CHANNEL_VALUE = fn(7662).CREATE_NEW_CHANNEL_VALUE;
-const ChannelTypes = fn(1074).ChannelTypes;
+let closure_9 = fn(4507).GUILD_SELECTABLE_CHANNELS_KEY;
+const CREATE_NEW_CHANNEL_VALUE = fn(7706).CREATE_NEW_CHANNEL_VALUE;
+const ChannelTypes = fn(1085).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const size = fn(2);
@@ -98,10 +98,10 @@ export default function ChannelSetupScreen() {
     obj2.title = intl.string(util.t.Yr6nGx);
     obj2.items = callback();
     obj2.onItemSelect = function onItemSelect(rulesChannelId) {
-      rulesChannel(9241).updateGuild({ rulesChannelId });
-      const obj = rulesChannel(9241);
+      rulesChannel(9247).updateGuild({ rulesChannelId });
+      const obj = rulesChannel(9247);
       const obj2 = { rulesChannelId };
-      rulesChannel(4809).hideActionSheet();
+      rulesChannel(4854).hideActionSheet();
     };
     let id;
     if (rulesChannel != null) {
@@ -111,7 +111,7 @@ export default function ChannelSetupScreen() {
       id = CREATE_NEW_CHANNEL_VALUE;
     }
     obj2.selectedItem = id;
-    obj.openLazy(asyncRequireImpl(8921, dependencyMap.paths), "SelectRulesChannel", obj2);
+    obj.openLazy(asyncRequireImpl(8949, dependencyMap.paths), "SelectRulesChannel", obj2);
   }, items3);
   const callback2 = obj.useCallback(() => {
     let obj2 = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
@@ -120,10 +120,10 @@ export default function ChannelSetupScreen() {
     obj2.title = intl.string(util.t.VqhxxN);
     obj2.items = callback();
     obj2.onItemSelect = function onItemSelect(publicUpdatesChannelId) {
-      rulesChannel(9241).updateGuild({ publicUpdatesChannelId });
-      const obj = rulesChannel(9241);
+      rulesChannel(9247).updateGuild({ publicUpdatesChannelId });
+      const obj = rulesChannel(9247);
       const obj2 = { publicUpdatesChannelId };
-      rulesChannel(4809).hideActionSheet();
+      rulesChannel(4854).hideActionSheet();
     };
     let id;
     if (publicUpdatesChannel != null) {
@@ -133,7 +133,7 @@ export default function ChannelSetupScreen() {
       id = CREATE_NEW_CHANNEL_VALUE;
     }
     obj2.selectedItem = id;
-    obj.openLazy(asyncRequireImpl(8921, dependencyMap.paths), "SelectUpdatesChannel", obj2);
+    obj.openLazy(asyncRequireImpl(8949, dependencyMap.paths), "SelectUpdatesChannel", obj2);
   }, items4);
   const obj6 = {
     headerRef: ref,

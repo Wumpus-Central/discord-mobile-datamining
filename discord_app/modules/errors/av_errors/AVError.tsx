@@ -144,8 +144,8 @@ if (mapped.length !== set.size) {
       context,
     });
   };
-  exports.getErrorInfo = function getErrorInfo(avError) {
-    return obj4[avError];
+  exports.getErrorInfo = function getErrorInfo(STREAM_FAILED_TO_START) {
+    return obj4[STREAM_FAILED_TO_START];
   };
 }
 set = new Set(mapped);

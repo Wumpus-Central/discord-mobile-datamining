@@ -1,29 +1,11 @@
 // discord_app/modules/premium/powerups/hooks/useGetGuildPowerupBannerImage.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import c from "../../../../../_runtime/00576_c.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGetGuildPowerupBannerImage.tsx");
-
-export default function useGetGuildPowerupBannerImage(animatedImageUrl, arg1, arg2) {
-  initialize;
-  [][0] = AccessibilityStore;
-  if (null != animatedImageUrl) {
-    if (!tmp2) {
-      if (false !== arg1) {
-        if (!arg2) {
-          let staticImageUrl = animatedImageUrl.animatedImageUrl;
-          if (staticImageUrl == null) {
-            staticImageUrl = animatedImageUrl.staticImageUrl;
-          }
-        }
-      }
-    }
-    staticImageUrl = animatedImageUrl.staticImageUrl;
-  }
-}
-export const getGuildPowerupBannerImage = function getGuildPowerupBannerImage(arr, stateFromStores1, arg2, arg3) {
+const ReactCompilerGating = fn(558);
+function getGuildPowerupBannerImage(arr, stateFromStores1, arg2, arg3) {
   if (null != arr) {
     if (!stateFromStores1) {
       if (false !== arg2) {
@@ -38,4 +20,72 @@ export const getGuildPowerupBannerImage = function getGuildPowerupBannerImage(ar
     }
     staticImageUrl = arr.staticImageUrl;
   }
-};
+}
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGetGuildPowerupBannerImage.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
+  ? (animatedImageUrl, arg1, arg2) => {
+      const cResult = c.c(7);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const items = [AccessibilityStore];
+        const fn = function s() {
+          return useReducedMotion.useReducedMotion;
+        };
+        cResult[0] = items;
+        cResult[1] = fn;
+        tmp4 = items;
+        tmp5 = fn;
+      } else {
+        [tmp4, tmp5] = cResult;
+      }
+      const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
+      if (cResult[2] === arg2) {
+        if (cResult[3] === arg1) {
+          if (cResult[4] === animatedImageUrl) {
+            if (cResult[5] === stateFromStores) {
+              const tmp8 = cResult[6];
+            }
+            return tmp8;
+          }
+        }
+      }
+      if (null == animatedImageUrl) {
+        cResult[2] = arg2;
+        cResult[3] = arg1;
+        cResult[4] = animatedImageUrl;
+        cResult[5] = stateFromStores;
+        cResult[6] = undefined;
+      } else {
+        if (!stateFromStores) {
+          if (false !== arg1) {
+            if (!arg2) {
+              let staticImageUrl = animatedImageUrl.animatedImageUrl;
+              if (staticImageUrl == null) {
+                staticImageUrl = animatedImageUrl.staticImageUrl;
+              }
+            }
+          }
+        }
+        staticImageUrl = animatedImageUrl.staticImageUrl;
+      }
+      const tmpResult = initialize;
+    }
+  : (animatedImageUrl, arg1, arg2) => {
+      initialize;
+      [][0] = AccessibilityStore;
+      if (null != animatedImageUrl) {
+        if (!tmp2) {
+          if (false !== arg1) {
+            if (!arg2) {
+              let staticImageUrl = animatedImageUrl.animatedImageUrl;
+              if (staticImageUrl == null) {
+                staticImageUrl = animatedImageUrl.staticImageUrl;
+              }
+            }
+          }
+        }
+        staticImageUrl = animatedImageUrl.staticImageUrl;
+      }
+    };
+export { getGuildPowerupBannerImage };

@@ -2,7 +2,7 @@
 import LoggerDefault from "../../debug/Logger.tsx";
 import DeveloperOptionsStore from "../../../stores/DeveloperOptionsStore.tsx";
 
-const NOOP = fn(1085).NOOP;
+const NOOP = fn(1096).NOOP;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/lib/getQuestLogger.tsx");
 

@@ -131,7 +131,7 @@ export default function setupLoadFromMessageManagerHandlers(actions, arg1) {
   const onBeforeBatch = obj.onBeforeBatch;
   const set = new Set();
   let map = new Map();
-  map1 = new Map();
+  const map1 = new Map();
   const obj2 = {};
   const merged = Object.assign(actions.actions);
   obj2.POST_CONNECTION_OPEN = function POST_CONNECTION_OPEN() {

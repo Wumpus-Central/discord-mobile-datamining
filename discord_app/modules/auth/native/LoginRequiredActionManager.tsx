@@ -5,7 +5,7 @@ import LoginRequiredActionStore from "../LoginRequiredActionStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 const require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ LoginRequiredActions: hasOwnProperty, Routes: metroRequire, UserSettingsSections: closure_7 } = Constants);
 class LoginRequiredActionManager extends tmp3 {
   constructor() {
@@ -32,8 +32,8 @@ LoginRequiredActionManager.prototype["handleConnectionOpen"] = function handleCo
             }
           },
         };
-        currentUser(6987).openUserSettings(obj3);
-        const obj2 = currentUser(6987);
+        currentUser(6885).openUserSettings(obj3);
+        const obj2 = currentUser(6885);
       }
     }
     if (result1) {

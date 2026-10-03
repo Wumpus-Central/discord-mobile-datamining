@@ -16,9 +16,9 @@ export const Commands = {
   refreshEmojis(current) {
     renderElement.dispatchCommand(current, "refreshEmojis", []);
   },
-  scrollingEnabled(current, arg1) {
+  scrollingEnabled(arg0, arg1) {
     const items = [arg1];
-    renderElement.dispatchCommand(current, "scrollingEnabled", items);
+    renderElement.dispatchCommand(arg0, "scrollingEnabled", items);
   },
   scrollToHeaderIndex(arg0, arg1, arg2) {
     const items = [arg1, arg2];

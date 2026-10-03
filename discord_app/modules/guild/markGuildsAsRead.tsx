@@ -9,18 +9,18 @@ import GuildChannelStore from "../../stores/GuildChannelStore.tsx";
 import ReadStateStore from "../../stores/ReadStateStore.tsx";
 
 const require = fn;
-const AnalyticEvents = fn(1074).AnalyticEvents;
-const ReadStateTypes = fn(5027).ReadStateTypes;
+const AnalyticEvents = fn(1085).AnalyticEvents;
+const ReadStateTypes = fn(5072).ReadStateTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild/markGuildsAsRead.tsx");
 
 export default function markGuildsAsRead(arr, source, onFinished) {
   const mapped = _modDef12
-    .flatMap(arr, (guildId) => {
-      const selectableChannelIds = GuildChannelStore.getSelectableChannelIds(guildId);
-      const vocalChannelIds = GuildChannelStore.getVocalChannelIds(guildId);
+    .flatMap(arr, (id) => {
+      const selectableChannelIds = GuildChannelStore.getSelectableChannelIds(id);
+      const vocalChannelIds = GuildChannelStore.getVocalChannelIds(id);
       const items = [...vocalChannelIds];
-      activeJoinedThreadsForGuild = activeJoinedThreadsForGuild.getActiveJoinedThreadsForGuild(guildId);
+      activeJoinedThreadsForGuild = activeJoinedThreadsForGuild.getActiveJoinedThreadsForGuild(id);
       const iter = selectableChannelIds[Symbol.iterator]();
       while (iter !== undefined) {
         let obj = activeJoinedThreadsForGuild[iter.next()];
@@ -64,11 +64,11 @@ export default function markGuildsAsRead(arr, source, onFinished) {
     obj3.messageId = GuildOnboardingPromptsStore.ackIdForGuild(item);
     mapped.push(obj3);
   });
-  const flatMapResult = _modDef12.flatMap(arr, (guildId) => {
-    const selectableChannelIds = GuildChannelStore.getSelectableChannelIds(guildId);
-    const vocalChannelIds = GuildChannelStore.getVocalChannelIds(guildId);
+  const flatMapResult = _modDef12.flatMap(arr, (id) => {
+    const selectableChannelIds = GuildChannelStore.getSelectableChannelIds(id);
+    const vocalChannelIds = GuildChannelStore.getVocalChannelIds(id);
     const items = [...vocalChannelIds];
-    activeJoinedThreadsForGuild = activeJoinedThreadsForGuild.getActiveJoinedThreadsForGuild(guildId);
+    activeJoinedThreadsForGuild = activeJoinedThreadsForGuild.getActiveJoinedThreadsForGuild(id);
     const iter = selectableChannelIds[Symbol.iterator]();
     while (iter !== undefined) {
       let obj = activeJoinedThreadsForGuild[iter.next()];
@@ -85,5 +85,5 @@ export default function markGuildsAsRead(arr, source, onFinished) {
   });
   AnalyticsUtilsDefault.track(AnalyticEvents.MARK_AS_READ, { source, type: "guild" });
   let obj3 = { source, type: "guild" };
-  return mapped(6717).bulkAck(mapped, onFinished);
+  return mapped(6605).bulkAck(mapped, onFinished);
 }

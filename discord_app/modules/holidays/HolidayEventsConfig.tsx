@@ -1,8 +1,8 @@
 // discord_app/modules/holidays/HolidayEventsConfig.tsx
 import util from "../../intl/index.native.tsx";
 import HalloweenHolidayExperimentDefault from "HalloweenHolidayExperiment.tsx";
-import _modDef17398 from "../../../_runtime/metro/17398__.js";
-import _modDef17399 from "../../../_runtime/metro/17399__.js";
+import _modDef17488 from "../../../_runtime/metro/17488__.js";
+import _modDef17489 from "../../../_runtime/metro/17489__.js";
 
 require = fn;
 const obj = {
@@ -16,9 +16,9 @@ const obj = {
   startTimeMs: 1791388800000,
   endTimeMs: 1793638800000,
   isDesktopOnly: true,
-  soundpack: fn(9554).Soundpacks.HALLOWEEN,
-  soundpackLabel: fn(1115).t["+LasFV"],
-  appSpinnerSources: { webmDark: _modDef17398, webmLight: _modDef17399 },
+  soundpack: fn(9564).Soundpacks.HALLOWEEN,
+  soundpackLabel: fn(1126).t["+LasFV"],
+  appSpinnerSources: { webmDark: _modDef17488, webmLight: _modDef17489 },
   getLoadingTips() {
     const intl = util.intl;
     const items = [intl.string(util.t.ydMZ2o), , , , , , , , , , , ,];
@@ -48,7 +48,7 @@ const obj = {
     items[12] = intl13.string(util.t["1XGw3F"]);
     return items;
   },
-  coachmarkDismissibleContent: fn(2029).DismissibleContent.HOLIDAY_COACHMARK_HALLOWEEN_2026,
+  coachmarkDismissibleContent: fn(2036).DismissibleContent.HOLIDAY_COACHMARK_HALLOWEEN_2026,
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/holidays/HolidayEventsConfig.tsx");

@@ -6,7 +6,7 @@ import SKURecord from "../modules/skus/SKURecord.tsx";
 import UserRecord from "UserRecord.tsx";
 
 require = fn;
-const EntitlementTypes = fn(1074).EntitlementTypes;
+const EntitlementTypes = fn(1085).EntitlementTypes;
 let EntitlementRecord;
 class EntitlementRecord extends tmp2 {
   constructor(arg0) {

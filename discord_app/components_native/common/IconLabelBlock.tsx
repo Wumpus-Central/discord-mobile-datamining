@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = {
   wrapper: { alignItems: "center", paddingTop: 26, paddingBottom: 16 },
   error: {
@@ -93,7 +93,7 @@ prototype["renderIcon"] = function renderIcon() {
     }
     items[1] = tmp14Result;
     obj2.children = items;
-    return React6(hasOwnProperty, obj2);
+    return closure_1_8(hasOwnProperty, obj2);
   } else {
     if (null == source) {
       if (obj.isThemeLight(this.context.theme)) {
@@ -112,9 +112,9 @@ prototype["render"] = function render() {
   obj.style = items;
   const items1 = [this.renderIcon(), this.props.children, this.renderLabel(), this.renderText()];
   obj.children = items1;
-  return React6(hasOwnProperty, obj);
+  return closure_1_8(hasOwnProperty, obj);
 };
-IconLabelBlock.contextType = fn(4569).ThemeContext;
+IconLabelBlock.contextType = fn(4589).ThemeContext;
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/IconLabelBlock.tsx");
 

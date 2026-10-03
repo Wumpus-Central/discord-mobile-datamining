@@ -8,185 +8,62 @@ import debounce_mod from "../../../_runtime/00551_debounce.js";
 
 const require = globalThis.__r;
 
-let closure_7 = async function _addDirectoryGuildEntry(arg0) {
-  if (c7 === 2) {
-    c7 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp5 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c7 = 2;
-      if (0 === c6) {
-        if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c7 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_5 = tmp3;
-          closure_4 = tmp2;
-          closure_132_3 = undefined;
-          closure_132_0 = closure_0;
-          closure_132_1 = closure_1;
-          closure_132_2 = closure_2;
-          let UNCATEGORIZED = closure_3;
-          if (closure_3 === undefined) {
-            UNCATEGORIZED = constants.UNCATEGORIZED;
-          }
-          closure_132_3 = UNCATEGORIZED;
-          closure_132_4 = undefined;
-          c6 = 1;
-          c7 = 1;
-          return { value: "flex", done: null };
-        }
-      } else if (1 === tmp6) {
-        if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c7 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          const request = {
-            url: closure_133_6.DIRECTORY_CHANNEL_ENTRY(closure_132_0, closure_132_1),
-            body: null,
-            trackedActionData: null,
-            rejectWithError: null,
-          };
-          const obj5 = { description: closure_132_2, primary_category_id: closure_132_3 };
-          request.body = obj5;
-          const obj6 = {
-            event: closure_133_0(closure_133_2[8]).NetworkActionNames.DIRECTORY_GUILD_ENTRY_CREATE,
-            properties: null,
-          };
-          const obj7 = {
-            directory_channel_id: closure_132_0,
-            guild_id: closure_132_1,
-            primary_category_id: closure_132_3,
-          };
-          obj6.properties = obj7;
-          request.trackedActionData = obj6;
-          const obj8 = closure_133_1(closure_133_2[7]);
-          request.rejectWithError = closure_133_0(closure_133_2[6]).rejectWithMigratedError();
-          c6 = 2;
-          c7 = 1;
-          const obj9 = { value: obj8.post(request), done: false };
-          return obj9;
-        }
-      } else if (arg0 === 1) {
-        c7 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c7 = 3;
-        const obj10 = { value, done: true };
-        return obj10;
-      } else {
-        closure_132_4 = value;
-        const obj11 = { type: "GUILD_DIRECTORY_ENTRY_CREATE", channelId: closure_132_0, entry: closure_132_4.body };
-        closure_133_1(closure_133_2[5]).dispatch(obj11);
-        c7 = 3;
-        return { value: "HermesInternal", done: null };
-      }
-    } catch (tmp18) {
-      c7 = tmp;
-      throw tmp18;
-    }
+let closure_7 = async function _addDirectoryGuildEntry() {
+  const request = {
+    url: closure_133_6.DIRECTORY_CHANNEL_ENTRY(closure_132_0, closure_132_1),
+    body: { description: closure_132_2, primary_category_id: closure_132_3 },
+    trackedActionData: {
+      event: closure_133_0(closure_133_2[8]).NetworkActionNames.DIRECTORY_GUILD_ENTRY_CREATE,
+      properties: { directory_channel_id: closure_132_0, guild_id: closure_132_1, primary_category_id: closure_132_3 },
+    },
+    rejectWithError: closure_133_0(closure_133_2[6]).rejectWithMigratedError(),
+  };
+  await closure_133_1(closure_133_2[7]).post(request);
+  closure_132_4 = value;
+  closure_133_1(closure_133_2[5]).dispatch({
+    type: "GUILD_DIRECTORY_ENTRY_CREATE",
+    channelId: closure_132_0,
+    entry: closure_132_4.body,
+  });
+  await "IconComponent";
+  closure_5 = tmp3;
+  closure_4 = tmp2;
+  closure_132_0 = closure_0;
+  closure_132_1 = closure_1;
+  closure_132_2 = closure_2;
+  let UNCATEGORIZED = closure_3;
+  if (closure_3 === undefined) {
+    UNCATEGORIZED = constants.UNCATEGORIZED;
   }
+  closure_132_3 = UNCATEGORIZED;
+  return "Reflect";
 };
-let closure_8 = async function _updateDirectoryEntry(arg0) {
-  if (c7 === 2) {
-    c7 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp5 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c7 = 2;
-      if (0 === c6) {
-        if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c7 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_5 = tmp3;
-          closure_4 = tmp2;
-          closure_132_3 = undefined;
-          closure_132_0 = closure_0;
-          closure_132_1 = closure_1;
-          closure_132_2 = closure_2;
-          let UNCATEGORIZED = closure_3;
-          if (closure_3 === undefined) {
-            UNCATEGORIZED = constants.UNCATEGORIZED;
-          }
-          closure_132_3 = UNCATEGORIZED;
-          closure_132_4 = undefined;
-          c6 = 1;
-          c7 = 1;
-          return { value: "flex", done: null };
-        }
-      } else if (1 === tmp6) {
-        if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c7 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          const HTTP = closure_133_0(closure_133_2[6]).HTTP;
-          const request = {
-            url: closure_133_6.DIRECTORY_CHANNEL_ENTRY(closure_132_0, closure_132_1),
-            body: null,
-            rejectWithError: null,
-          };
-          const obj5 = { description: closure_132_2, primary_category_id: closure_132_3 };
-          request.body = obj5;
-          request.rejectWithError = closure_133_0(closure_133_2[6]).rejectWithMigratedError();
-          c6 = 2;
-          c7 = 1;
-          const obj6 = { value: HTTP.patch(request), done: false };
-          return obj6;
-        }
-      } else if (arg0 === 1) {
-        c7 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c7 = 3;
-        const obj7 = { value, done: true };
-        return obj7;
-      } else {
-        closure_132_4 = value;
-        const obj8 = { type: "GUILD_DIRECTORY_ENTRY_UPDATE", channelId: closure_132_0, entry: closure_132_4.body };
-        closure_133_1(closure_133_2[5]).dispatch(obj8);
-        c7 = 3;
-        return { value: "HermesInternal", done: null };
-      }
-    } catch (tmp18) {
-      c7 = tmp;
-      throw tmp18;
-    }
+let closure_8 = async function _updateDirectoryEntry() {
+  const HTTP = closure_133_0(closure_133_2[6]).HTTP;
+  const request = {
+    url: closure_133_6.DIRECTORY_CHANNEL_ENTRY(closure_132_0, closure_132_1),
+    body: { description: closure_132_2, primary_category_id: closure_132_3 },
+    rejectWithError: closure_133_0(closure_133_2[6]).rejectWithMigratedError(),
+  };
+  await HTTP.patch(request);
+  closure_132_4 = value;
+  closure_133_1(closure_133_2[5]).dispatch({
+    type: "GUILD_DIRECTORY_ENTRY_UPDATE",
+    channelId: closure_132_0,
+    entry: closure_132_4.body,
+  });
+  await "IconComponent";
+  closure_5 = tmp3;
+  closure_4 = tmp2;
+  closure_132_0 = closure_0;
+  closure_132_1 = closure_1;
+  closure_132_2 = closure_2;
+  let UNCATEGORIZED = closure_3;
+  if (closure_3 === undefined) {
+    UNCATEGORIZED = constants.UNCATEGORIZED;
   }
+  closure_132_3 = UNCATEGORIZED;
+  return "Reflect";
 };
 let closure_9 = async function _fetchGuildEntriesForIds(arg0) {
   closure_0 = arg0;
@@ -222,8 +99,8 @@ let closure_9 = async function _fetchGuildEntriesForIds(arg0) {
     return value;
   })();
 };
-const DirectoryEntryCategories = fn(11998).DirectoryEntryCategories;
-let Endpoints = fn(1074).Endpoints;
+const DirectoryEntryCategories = fn(11933).DirectoryEntryCategories;
+let Endpoints = fn(1085).Endpoints;
 asyncGeneratorStep(async (arg0, category_id) => {
   closure_0 = arg0;
   c6 = 0;
@@ -232,27 +109,27 @@ asyncGeneratorStep(async (arg0, category_id) => {
   return (async (arg0, value) => {
     closure_3 = tmp3;
     closure_130_0 = closure_0;
-    category_id(573).dispatch({ type: "GUILD_DIRECTORY_FETCH_START" });
-    const HTTP = closure_0(1271).HTTP;
+    category_id(584).dispatch({ type: "GUILD_DIRECTORY_FETCH_START" });
+    const HTTP = closure_0(1282).HTTP;
     const request = { url: c6.DIRECTORY_CHANNEL_ENTRIES(closure_0), query: { category_id }, rejectWithError: true };
     await HTTP.get(request);
     if (1 === tmp7) {
       c5 = 0;
-      category_id(573).dispatch({ type: "GUILD_DIRECTORY_FETCH_FAILURE" });
+      category_id(584).dispatch({ type: "GUILD_DIRECTORY_FETCH_FAILURE" });
       c7 = 3;
-      category_id(573);
+      category_id(584);
     } else if (arg0 === 1) {
       c7 = 3;
       throw value;
     } else if (arg0 !== 2) {
       closure_130_1 = value;
-      category_id(573).dispatch({
+      category_id(584).dispatch({
         type: "GUILD_DIRECTORY_FETCH_SUCCESS",
         channelId: closure_130_0,
         entries: closure_130_1.body,
       });
       c5 = 0;
-      category_id(573);
+      category_id(584);
     }
     return value;
   })();
@@ -306,7 +183,7 @@ let closure_0 = asyncGeneratorStep(async (channelId, query) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -328,8 +205,8 @@ let closure_0 = asyncGeneratorStep(async (channelId, query) => {
             if (tmp30.shouldFetch(channelId, query)) {
               c5 = 1;
               const obj6 = { type: "GUILD_DIRECTORY_SEARCH_START", channelId, query };
-              query(573).dispatch(obj6);
-              const HTTP = channelId(1271).HTTP;
+              query(584).dispatch(obj6);
+              const HTTP = channelId(1282).HTTP;
               const request = { url: c6.DIRECTORY_ENTRIES_SEARCH(channelId), query: null, rejectWithError: true };
               const obj8 = { query };
               request.query = obj8;
@@ -339,15 +216,15 @@ let closure_0 = asyncGeneratorStep(async (channelId, query) => {
               return obj9;
             } else {
               const obj10 = { type: "GUILD_DIRECTORY_CACHED_SEARCH", channelId, query };
-              query(573).dispatch(obj10);
-              const obj5 = query(573);
+              query(584).dispatch(obj10);
+              const obj5 = query(584);
             }
           }
         } else {
           if (1 === tmp7) {
             c5 = 0;
-            query(573).dispatch({ type: "GUILD_DIRECTORY_FETCH_FAILURE" });
-            const obj4 = query(573);
+            query(584).dispatch({ type: "GUILD_DIRECTORY_FETCH_FAILURE" });
+            const obj4 = query(584);
           } else if (arg0 === 1) {
             c7 = 3;
             throw value;
@@ -359,9 +236,9 @@ let closure_0 = asyncGeneratorStep(async (channelId, query) => {
               query: closure_130_1,
               results: closure_130_2.body,
             };
-            query(573).dispatch(obj11);
+            query(584).dispatch(obj11);
             c5 = 0;
-            const obj = query(573);
+            const obj = query(584);
           }
           c5 = 0;
           c7 = 3;
@@ -413,12 +290,12 @@ export const removeDirectoryGuildEntry = function removeDirectoryGuildEntry(chan
   };
   const obj = TrackedHTTPUtilsDefault;
   obj2.trackedActionData = {
-    event: closure_0(1249).NetworkActionNames.DIRECTORY_GUILD_ENTRY_DELETE,
+    event: closure_0(1260).NetworkActionNames.DIRECTORY_GUILD_ENTRY_DELETE,
     properties: { directory_channel_id: channelId, guild_id: guildId },
   };
   obj.delete(obj2);
   const obj3 = {
-    event: closure_0(1249).NetworkActionNames.DIRECTORY_GUILD_ENTRY_DELETE,
+    event: closure_0(1260).NetworkActionNames.DIRECTORY_GUILD_ENTRY_DELETE,
     properties: { directory_channel_id: channelId, guild_id: guildId },
   };
   DispatcherDefault.dispatch({ type: "GUILD_DIRECTORY_ENTRY_DELETE", channelId, guildId });

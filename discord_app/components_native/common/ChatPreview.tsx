@@ -40,11 +40,11 @@ const NativeChatUtilsDefault = NativeChatUtils;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const RowGeneratorConstants = fn(7548);
+const RowGeneratorConstants = fn(7592);
 ({ Changeset: c10, RowType: closure_11, SeparatorType: closure_12 } = RowGeneratorConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = {
   chat: { flex: 1, overflow: "hidden" },
   containerInner: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
@@ -283,11 +283,11 @@ class ChatPreviewBase extends PureComponent {
           rows: previousRows,
           scrollToMessageId: jumpTargetId,
           jumpTargetId,
-          jumpType: "flexDirection",
+          jumpType: "Set",
           shouldInitialScroll: "Array",
-          animated: 632.234,
-          scrollPosition: 1132.161,
-          focusTargetId: "gr",
+          animated: "2025-11-video-end-card-v2",
+          scrollPosition: "user",
+          focusTargetId: null,
         };
         applyArgumentsResult.scrollData = computeScrollDataDefault(obj3);
         if (!tmp7) {
@@ -319,11 +319,11 @@ class ChatPreviewBase extends PureComponent {
       if (null != jumpTargetId) {
         const resolved = Promise.resolve();
         resolved.then(() => {
-          const result = applyArgumentsResult(7506).setSelectedConversation(closure_1_0, roleStyle, {
+          const result = applyArgumentsResult(7550).setSelectedConversation(closure_1_0, roleStyle, {
             shouldJump: false,
           });
-          const obj = applyArgumentsResult(7506);
-          applyArgumentsResult(4856).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
+          const obj = applyArgumentsResult(7550);
+          applyArgumentsResult(4901).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
         });
       }
     };
@@ -356,14 +356,14 @@ class ChatPreviewBase extends PureComponent {
           channel = channel.getChannel(arg1);
           if (null != channel) {
             const obj2 = { source, navigationReplace: true };
-            applyArgumentsResult(4856).transitionToThread(channel, obj2);
-            const obj = applyArgumentsResult(4856);
+            applyArgumentsResult(4901).transitionToThread(channel, obj2);
+            const obj = applyArgumentsResult(4901);
           }
         },
         message: applyArgumentsResult.getMessage(data.messageId),
-        messageChannel: "asc",
-        selectedChannelId: "asc",
-        tapLinkData: "https://support.discord.com/hc/articles/14155060633623",
+        messageChannel: "System",
+        selectedChannelId: null,
+        tapLinkData: "ix",
       };
       channel = applyArgumentsResult.props.channel;
       obj2.messageChannel = channel;
@@ -479,7 +479,7 @@ class ChatPreviewBase extends PureComponent {
             allowWithinModal: true,
             message,
             messageChannel: channel,
-            selectedChannelId: "HermesInternal",
+            selectedChannelId: "IconComponent",
             showContextName: null,
           };
           const result = handleMessagesTapImage.handleMessagesTapImage(obj);
@@ -562,7 +562,7 @@ prototype["render"] = function render() {
     }
     if (null != guild_id) {
       ({ guild_id: obj8.guildId, id: obj8.channelId } = channel);
-      let tmp14 = map1(GuildNSFWDefault, { guildId: null, channelId: null });
+      let tmp14 = __initData2(GuildNSFWDefault, { guildId: null, channelId: null });
       const obj3 = { guildId: null, channelId: null };
     }
     const items = [tmp.containerInner];
@@ -576,7 +576,7 @@ prototype["render"] = function render() {
     obj5.style = items;
     const items1 = [tmp14, tmp6Result2];
     obj5.children = items1;
-    return closure_1_14(hasOwnProperty, obj5);
+    return state(hasOwnProperty, obj5);
   }
   if (isSpoilerHidden) {
     let guild_id1;
@@ -585,7 +585,7 @@ prototype["render"] = function render() {
     }
     if (null != guild_id1) {
       ({ guild_id: obj7.guildId, id: obj7.channelId } = channel);
-      tmp14 = map1(ChannelSpoilerDefault, { guildId: null, channelId: null });
+      tmp14 = __initData2(ChannelSpoilerDefault, { guildId: null, channelId: null });
       const obj6 = { guildId: null, channelId: null };
     }
   }
@@ -623,64 +623,186 @@ prototype["render"] = function render() {
     accessibilityRole: "button",
     style: tmp.jumpToChatButton,
     onPress: self.handleJumpToChat,
-    children: map1(Text_Text.Text, {
+    children: __initData2(Text_Text.Text, {
       style: tmp.jumpToChatText,
       variant: "text-md/medium",
       color: "interactive-text-default",
       children: self.props.jumpToChatProps.jumpToChatText,
     }),
   };
-  obj9.children = map1(Pressables.PressableOpacity, obj10);
+  obj9.children = __initData2(Pressables.PressableOpacity, obj10);
   const obj17 = {
     style: tmp.jumpToChatText,
     variant: "text-md/medium",
     color: "interactive-text-default",
     children: self.props.jumpToChatProps.jumpToChatText,
   };
-  const tmp6Result = map1(tmp8, obj);
+  const tmp6Result = __initData2(tmp8, obj);
   tmp14 = tmp6Result;
-  tmp6Result2 = map1(common_SafeAreaView.SafeAreaPaddingView, obj9);
+  tmp6Result2 = __initData2(common_SafeAreaView.SafeAreaPaddingView, obj9);
 };
-ChatPreviewBase.contextType = fn(4569).ThemeContext;
+ChatPreviewBase.contextType = fn(4589).ThemeContext;
 ChatPreviewBase.defaultProps = { withSafeArea: true };
+const ReactCompilerGating = fn(558);
+let obj5 = { height: 44, borderTopWidth: StyleSheet.hairlineWidth, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/ChatPreview.tsx");
 
-export const ChatPreview = function ChatPreview(channelId) {
-  channelId = channelId.channelId;
-  const InlineAttachmentMedia = channelId(2021).InlineAttachmentMedia;
-  const setting = InlineAttachmentMedia.useSetting();
-  const InlineEmbedMedia = channelId(2021).InlineEmbedMedia;
-  const setting1 = InlineEmbedMedia.useSetting();
-  const RenderEmbeds = channelId(2021).RenderEmbeds;
-  const setting2 = RenderEmbeds.useSetting();
-  const items = [AccessibilityStore];
-  const stateFromStores = channelId(504).useStateFromStores(items, () => roleStyle.roleStyle);
-  const obj = channelId(504);
-  const items1 = [ChannelStore];
-  const stateFromStores1 = channelId(504).useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
-  const obj2 = channelId(504);
-  const isChannelSpoilerGated = channelId(6934).useIsChannelSpoilerGated(stateFromStores1);
-  const obj3 = channelId(6934);
-  const isChannelContentGated = channelId(5055).useIsChannelContentGated(stateFromStores1);
-  const obj4 = channelId(5055);
-  const items2 = [ActionSheetStore];
-  const obj6 = {};
-  const stateFromStores2 = channelId(504).useStateFromStores(items2, () => null != content.getContent());
-  const merged = Object.assign(channelId);
-  obj6.inlineAttachmentMedia = setting;
-  obj6.inlineEmbedMedia = setting1;
-  obj6.renderEmbeds = setting2;
-  obj6.roleStyle = stateFromStores;
-  obj6.channel = stateFromStores1;
-  obj6.width = useWindowDimensionsDefault().width;
-  obj6.isSpoilerHidden = isChannelSpoilerGated;
-  obj6.isNSFWHidden = isChannelContentGated;
-  let tmp12 = !isChannelSpoilerGated;
-  if (!isChannelSpoilerGated) {
-    tmp12 = !isChannelContentGated;
-  }
-  obj6.canAccessChannel = tmp12;
-  obj6.hasActionSheetOpen = stateFromStores2;
-  return closure_13(ChatPreviewBase, obj6);
-};
+export const ChatPreview = ReactCompilerGating.isReactCompilerEnabled()
+  ? (channelId) => {
+      const cResult = channelId(576).c(19);
+      channelId = channelId.channelId;
+      const InlineAttachmentMedia = channelId(2028).InlineAttachmentMedia;
+      const setting = InlineAttachmentMedia.useSetting();
+      const InlineEmbedMedia = channelId(2028).InlineEmbedMedia;
+      const setting1 = InlineEmbedMedia.useSetting();
+      const RenderEmbeds = channelId(2028).RenderEmbeds;
+      const setting2 = RenderEmbeds.useSetting();
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const items = [AccessibilityStore];
+        const fn = function s() {
+          return roleStyle.roleStyle;
+        };
+        cResult[0] = items;
+        cResult[1] = fn;
+        tmp7 = items;
+        tmp8 = fn;
+      } else {
+        [tmp7, tmp8] = cResult;
+      }
+      const obj = channelId(576);
+      const stateFromStores = channelId(504).useStateFromStores(tmp7, tmp8);
+      if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+        const items1 = [ChannelStore];
+        cResult[2] = items1;
+        let tmp11 = items1;
+      } else {
+        tmp11 = cResult[2];
+      }
+      if (cResult[3] !== channelId) {
+        class S {
+          constructor() {
+            return closure_8.getChannel(channelId);
+          }
+        }
+        cResult[3] = channelId;
+        cResult[4] = S;
+      } else {
+        class S {
+          constructor() {
+            return closure_8.getChannel(channelId);
+          }
+        }
+      }
+      const tmpResult = channelId(504);
+      const stateFromStores1 = channelId(504).useStateFromStores(tmp11, S);
+      const width = useWindowDimensionsDefault().width;
+      const tmpResult5 = channelId(504);
+      const isChannelSpoilerGated = channelId(6832).useIsChannelSpoilerGated(stateFromStores1);
+      const tmpResult6 = channelId(6832);
+      const isChannelContentGated = channelId(5100).useIsChannelContentGated(stateFromStores1);
+      if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
+        class S {
+          constructor() {
+            return closure_8.getChannel(channelId);
+          }
+        }
+        const items2 = [ActionSheetStore];
+        class I {
+          constructor() {
+            return null != closure_1_7.getContent();
+          }
+        }
+        cResult[5] = items2;
+        cResult[6] = I;
+        let tmp18 = I;
+        const tmp17 = items2;
+      } else {
+        class S {
+          constructor() {
+            return closure_8.getChannel(channelId);
+          }
+        }
+        tmp18 = cResult[6];
+      }
+      const tmpResult7 = channelId(5100);
+      const stateFromStores2 = channelId(504).useStateFromStores(tmp17, tmp18);
+      if (!isChannelSpoilerGated) {
+        class S {
+          constructor() {
+            return closure_8.getChannel(channelId);
+          }
+        }
+      }
+      if (cResult[7] === stateFromStores1) {
+        class S {
+          constructor() {
+            return closure_8.getChannel(channelId);
+          }
+        }
+      }
+      const obj2 = {};
+      const merged = Object.assign(channelId);
+      obj2.inlineAttachmentMedia = setting;
+      obj2.inlineEmbedMedia = setting1;
+      obj2.renderEmbeds = setting2;
+      obj2.roleStyle = stateFromStores;
+      obj2.channel = stateFromStores1;
+      obj2.width = width;
+      obj2.isSpoilerHidden = isChannelSpoilerGated;
+      obj2.isNSFWHidden = isChannelContentGated;
+      obj2.canAccessChannel = !isChannelSpoilerGated;
+      obj2.hasActionSheetOpen = stateFromStores2;
+      const tmpResult8 = channelId(504);
+      cResult[7] = stateFromStores1;
+      cResult[8] = stateFromStores2;
+      cResult[9] = setting;
+      cResult[10] = setting1;
+      cResult[11] = isChannelContentGated;
+      cResult[12] = isChannelSpoilerGated;
+      cResult[13] = channelId;
+      cResult[14] = setting2;
+      cResult[15] = stateFromStores;
+      cResult[16] = !isChannelSpoilerGated;
+      cResult[17] = width;
+      cResult[18] = closure_13(ChatPreviewBase, obj2);
+      const tmp22 = closure_13(ChatPreviewBase, obj2);
+    }
+  : (channelId) => {
+      channelId = channelId.channelId;
+      const InlineAttachmentMedia = channelId(2028).InlineAttachmentMedia;
+      const setting = InlineAttachmentMedia.useSetting();
+      const InlineEmbedMedia = channelId(2028).InlineEmbedMedia;
+      const setting1 = InlineEmbedMedia.useSetting();
+      const RenderEmbeds = channelId(2028).RenderEmbeds;
+      const setting2 = RenderEmbeds.useSetting();
+      const items = [AccessibilityStore];
+      const stateFromStores = channelId(504).useStateFromStores(items, () => roleStyle.roleStyle);
+      const obj = channelId(504);
+      const items1 = [ChannelStore];
+      const stateFromStores1 = channelId(504).useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
+      const obj2 = channelId(504);
+      const isChannelSpoilerGated = channelId(6832).useIsChannelSpoilerGated(stateFromStores1);
+      const obj3 = channelId(6832);
+      const isChannelContentGated = channelId(5100).useIsChannelContentGated(stateFromStores1);
+      const obj4 = channelId(5100);
+      const items2 = [ActionSheetStore];
+      const obj6 = {};
+      const stateFromStores2 = channelId(504).useStateFromStores(items2, () => null != content.getContent());
+      const merged = Object.assign(channelId);
+      obj6.inlineAttachmentMedia = setting;
+      obj6.inlineEmbedMedia = setting1;
+      obj6.renderEmbeds = setting2;
+      obj6.roleStyle = stateFromStores;
+      obj6.channel = stateFromStores1;
+      obj6.width = useWindowDimensionsDefault().width;
+      obj6.isSpoilerHidden = isChannelSpoilerGated;
+      obj6.isNSFWHidden = isChannelContentGated;
+      let tmp12 = !isChannelSpoilerGated;
+      if (!isChannelSpoilerGated) {
+        tmp12 = !isChannelContentGated;
+      }
+      obj6.canAccessChannel = tmp12;
+      obj6.hasActionSheetOpen = stateFromStores2;
+      return closure_13(ChatPreviewBase, obj6);
+    };

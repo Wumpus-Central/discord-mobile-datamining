@@ -1,10 +1,10 @@
 // discord_app/modules/channel_following/native/components/NewChannelFollower.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01981_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import openChannelPickerDefault from "../../../channel/native/openChannelPicker.tsx";
 import ChannelFollowerActionCreatorsDefault from "../../../../actions/ChannelFollowerActionCreators.tsx";
+import openChannelPickerDefault from "../../../channel/native/openChannelPicker.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
@@ -26,13 +26,13 @@ function canFollowIntoChannel(channel) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ImageBackground: metroRequire } = get_ActivityIndicator);
-fn(2048).GUILD_FOLLOW_DESTINATION_CHANNEL_TYPES;
-let closure_10 = fn(4496).GUILD_SELECTABLE_CHANNELS_KEY;
-const Constants = fn(1074);
+fn(2055).GUILD_FOLLOW_DESTINATION_CHANNEL_TYPES;
+let closure_10 = fn(4507).GUILD_SELECTABLE_CHANNELS_KEY;
+const Constants = fn(1085);
 ({ AbortCodes: closure_14, Permissions: closure_15 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = {
   container: { flex: 1, flexDirection: "column", alignItems: "stretch", paddingHorizontal: 16, paddingVertical: 24 },
   header: { flex: 1, flexDirection: "row", justifyContent: "center", alignItems: "center", height: 96 },
@@ -111,9 +111,9 @@ export default function NewChannelFollower(targetChannelId) {
   });
   const tmp12 = require("useChannelName")(sourceChannel);
   if (tmp5Result.isThemeDark(tmp9)) {
-    let tmp8Result = require("../../../../../_runtime/metro/11078__.js");
+    let tmp8Result = require("../../../../../_runtime/metro/12100__.js");
   } else {
-    tmp8Result = require("../../../../../_runtime/metro/11079__.js");
+    tmp8Result = require("../../../../../_runtime/metro/12101__.js");
   }
   const obj4 = { handleDisabled: true, startExpanded: true, scrollable: true, ref: bottomSheetRef, children: null };
   const obj5 = { source: tmp8Result, style: tmp.header, children: null };
@@ -202,8 +202,8 @@ export default function NewChannelFollower(targetChannelId) {
     obj2.onClose = function onClose() {
       closure_1_4(targetGuildId, targetChannelId);
     };
-    obj.openLazy(asyncRequireImpl(8921, dependencyMap.paths), "NewChannelFollowerGuildPicker", obj2);
-    const tmp = asyncRequireImpl(8921, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(8949, dependencyMap.paths), "NewChannelFollowerGuildPicker", obj2);
+    const tmp = asyncRequireImpl(8949, dependencyMap.paths);
   };
   obj14.children = closure_16(require("TableRow").TableRow, obj15);
   const items6 = [closure_16(require("TableRowGroup").TableRowGroup, obj14)];

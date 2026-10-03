@@ -1,0 +1,128 @@
+// discord_app/modules/vibegrations/lib/VibegrationsPlanAutomodOutcomes.tsx
+import util from "../../../intl/index.native.tsx";
+import GuildDisableCommunicationConstants from "../../guild_communication_disabled/GuildDisableCommunicationConstants.tsx";
+import _modDef3723 from "../intl/VibegrationsUntranslated.messages.js";
+import MarkupUtilsDefault from "../../markup/MarkupUtils.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
+
+const getFriendlyDurationString = GuildDisableCommunicationConstants.getFriendlyDurationString;
+let closure_4 = ["blocked", "alert", "allowed"];
+let closure_5 = { block: "blocked", timeout: "blocked", alert: "alert", allow: "allowed" };
+let c6 = 604800;
+const result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsPlanAutomodOutcomes.tsx");
+
+export const VIBEGRATIONS_PLAN_AUTOMOD_OUTCOMES = {
+  alert: {
+    label() {
+      const intl = util.intl;
+      return intl.string(_modDef3723.EVMdYA);
+    },
+    blockedStyle: false,
+  },
+  block: {
+    label() {
+      const intl = util.intl;
+      return intl.string(_modDef3723.OlKZgi);
+    },
+    blockedStyle: true,
+  },
+  timeout: {
+    label() {
+      const intl = util.intl;
+      return intl.string(_modDef3723["mtBG+G"]);
+    },
+    blockedStyle: true,
+  },
+  allow: {
+    label() {
+      const intl = util.intl;
+      return intl.string(_modDef3723.DLAXIs);
+    },
+    blockedStyle: false,
+  },
+};
+export const VIBEGRATIONS_PLAN_AUTOMOD_SECTIONS = {
+  blocked: {
+    label() {
+      const intl = util.intl;
+      return intl.string(_modDef3723.OlKZgi);
+    },
+    tone: "red",
+  },
+  alert: {
+    label() {
+      const intl = util.intl;
+      return intl.string(_modDef3723["5hI77G"]);
+    },
+    tone: "blurple",
+  },
+  allowed: {
+    label() {
+      const intl = util.intl;
+      return intl.string(_modDef3723.DLAXIs);
+    },
+    tone: "green",
+  },
+};
+export const groupPlanAutomodExamples = function groupPlanAutomodExamples(examples) {
+  const mapped = closure_4.map((section) => {
+    examples = section;
+    return { section, examples: examples.filter((item) => closure_2_5[item.outcome] === closure_0) };
+  });
+  return mapped.filter((examples) => examples.examples.length > 0);
+};
+export const planAutomodReasonText = function planAutomodReasonText(example) {
+  let formatToPlainStringResult = null;
+  if ("timeout" === example.outcome) {
+    formatToPlainStringResult = null;
+    if (null != example.timeout_seconds) {
+      let EmoBD2 = require;
+      let obj = dependencyMap;
+      const intl = util.intl;
+      const timeout_seconds = example.timeout_seconds;
+      const tmp3 = getFriendlyDurationString(timeout_seconds);
+      if (null != tmp3) {
+        const obj2 = { duration: tmp3 };
+        formatToPlainStringResult = intl.formatToPlainString(util.t["3LYql6"], obj2);
+      } else if (timeout_seconds % c6 === 0) {
+        const intl6 = EmoBD2(1126).intl;
+        EmoBD2 = EmoBD2(1126).t.EmoBD2;
+        obj = { weeks: timeout_seconds / tmp8 };
+        let formatToPlainStringResult1 = intl6.formatToPlainString(EmoBD2, obj);
+      } else if (timeout_seconds % 86400 === 0) {
+        const intl5 = EmoBD2(1126).intl;
+        const obj3 = { days: timeout_seconds / 86400 };
+        formatToPlainStringResult1 = intl5.formatToPlainString(EmoBD2(1126).t["k2UNz+"], obj3);
+      } else if (timeout_seconds % 3600 === 0) {
+        const intl4 = EmoBD2(1126).intl;
+        const obj4 = { hours: timeout_seconds / 3600 };
+        formatToPlainStringResult1 = intl4.formatToPlainString(EmoBD2(1126).t.xCjYxK, obj4);
+      } else if (timeout_seconds % 60 === 0) {
+        const intl3 = EmoBD2(1126).intl;
+        const obj5 = { mins: timeout_seconds / 60 };
+        formatToPlainStringResult1 = intl3.formatToPlainString(EmoBD2(1126).t.opVZ9q, obj5);
+      } else {
+        const intl2 = EmoBD2(1126).intl;
+        const obj6 = { secs: timeout_seconds };
+        formatToPlainStringResult1 = intl2.formatToPlainString(EmoBD2(1126).t["4zv/jq"], obj6);
+      }
+    }
+  }
+  const items = [formatToPlainStringResult, example.reason];
+  const found = items.filter((item) => {
+    let tmp = null != item;
+    if (tmp) {
+      tmp = "" !== item;
+    }
+    return tmp;
+  });
+  const joined = found.join(" ");
+  let tmp7 = null;
+  if ("" !== joined) {
+    tmp7 = joined;
+  }
+  return tmp7;
+};
+export const renderPlanAutomodExampleContent = function renderPlanAutomodExampleContent(content) {
+  return MarkupUtilsDefault.parseEmbedTitleWithoutLinks(content, true);
+};

@@ -5,9 +5,9 @@ import wrappers from "../../discord_common/js/packages/protos/google/protobuf/wr
 import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import GlobalUtils from "../utils/GlobalUtils.tsx";
 import UnicodeEmojisDefault from "../modules/emojis/UnicodeEmojis.tsx";
+import dedupeEmojisByNameOrIdDefault from "../modules/emojis/utils/dedupeEmojisByNameOrId.tsx";
 import AlertActionCreatorsDefault from "AlertActionCreators.tsx";
 import InlineUploaderDefault from "../lib/uploader_inline/InlineUploader.tsx";
-import dedupeEmojisByNameOrIdDefault from "../modules/emojis/utils/dedupeEmojisByNameOrId.tsx";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 import EmojiStore from "../modules/emojis/EmojiStore.tsx";
 import GatewayConnectionStore from "../modules/gateway/GatewayConnectionStore.tsx";
@@ -27,7 +27,7 @@ let closure_10 = async function _updateEmoji(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -50,7 +50,7 @@ let closure_10 = async function _updateEmoji(arg0) {
           ({ guildId: closure_129_0, emojiId: closure_129_1, name: closure_129_2, roles: closure_129_3 } = closure_0);
           c5 = 1;
           c6 = 1;
-          return { value: "flex", done: null };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {
@@ -106,8 +106,8 @@ let closure_10 = async function _updateEmoji(arg0) {
     }
   }
 };
-const Endpoints = fn(1074).Endpoints;
-const UserSettingsConstants = fn(1084);
+const Endpoints = fn(1085).Endpoints;
+const UserSettingsConstants = fn(1095);
 ({ MAX_FAVORITES: closure_8, UserSettingsDelay: closure_9 } = UserSettingsConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/EmojiActionCreators.tsx");
@@ -142,7 +142,7 @@ export const uploadEmoji = function uploadEmoji(guildId) {
   const analyticsLocation = guildId.analyticsLocation;
   ({ image, name, roles, originalMd5 } = guildId);
   DispatcherDefault.dispatch({ type: "EMOJI_UPLOAD_START", guildId });
-  const HTTP = guildId(1271).HTTP;
+  const HTTP = guildId(1282).HTTP;
   const request = {
     url: Endpoints.GUILD_EMOJIS(guildId),
     body: { image, name, roles },
@@ -158,8 +158,8 @@ export const uploadEmoji = function uploadEmoji(guildId) {
     page = analyticsLocation.page;
   }
   request.context = { client_event_source: page };
-  request.rejectWithError = tmp3(1271).rejectWithMigratedError();
-  const tmp3Result = tmp3(1271);
+  request.rejectWithError = tmp3(1282).rejectWithMigratedError();
+  const tmp3Result = tmp3(1282);
   return HTTP.post(request).then(
     (body) => {
       DispatcherDefault.dispatch({ type: "EMOJI_UPLOAD_STOP", guildId });
@@ -200,12 +200,12 @@ export const updateEmoji = function updateEmoji() {
   }
   return applyArgumentsResult;
 };
-export const favoriteEmoji = function favoriteEmoji(customEmojiFromJoinedGuild) {
+export const favoriteEmoji = function favoriteEmoji(stateFromStores1) {
   let tmp = null;
-  if (null != customEmojiFromJoinedGuild) {
-    let name = customEmojiFromJoinedGuild.id;
+  if (null != stateFromStores1) {
+    let name = stateFromStores1.id;
     if (name == null) {
-      const result = UnicodeEmojisDefault.convertSurrogateToBase(customEmojiFromJoinedGuild.surrogates);
+      const result = UnicodeEmojisDefault.convertSurrogateToBase(stateFromStores1.surrogates);
       let name1;
       if (result != null) {
         name1 = result.name;
@@ -213,13 +213,13 @@ export const favoriteEmoji = function favoriteEmoji(customEmojiFromJoinedGuild) 
       name = name1;
     }
     if (name == null) {
-      name = customEmojiFromJoinedGuild.name;
+      name = stateFromStores1.name;
     }
     tmp = name;
   }
   name = tmp;
   if (null != tmp) {
-    const FrecencyUserSettingsActionCreators = name(2026).FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators = name(2033).FrecencyUserSettingsActionCreators;
     FrecencyUserSettingsActionCreators.updateAsync(
       "favoriteEmojis",
       async (emojis) => {
@@ -244,7 +244,7 @@ export const favoriteEmoji = function favoriteEmoji(customEmojiFromJoinedGuild) 
           }
         }
         emojis.emojis = tmp;
-        if (obj2.size(emojis.emojis) >= React6) {
+        if (obj2.size(emojis.emojis) >= closure_2_8) {
           const obj3 = { title: null, body: null };
           const intl = util.intl;
           obj3.title = intl.string(util.t["+XYXtZ"]);
@@ -269,12 +269,12 @@ export const favoriteEmoji = function favoriteEmoji(customEmojiFromJoinedGuild) 
     );
   }
 };
-export const unfavoriteEmoji = function unfavoriteEmoji(customEmojiFromJoinedGuild) {
+export const unfavoriteEmoji = function unfavoriteEmoji(stateFromStores1) {
   let tmp = null;
-  if (null != customEmojiFromJoinedGuild) {
-    let name = customEmojiFromJoinedGuild.id;
+  if (null != stateFromStores1) {
+    let name = stateFromStores1.id;
     if (name == null) {
-      const result = UnicodeEmojisDefault.convertSurrogateToBase(customEmojiFromJoinedGuild.surrogates);
+      const result = UnicodeEmojisDefault.convertSurrogateToBase(stateFromStores1.surrogates);
       let name1;
       if (result != null) {
         name1 = result.name;
@@ -282,13 +282,13 @@ export const unfavoriteEmoji = function unfavoriteEmoji(customEmojiFromJoinedGui
       name = name1;
     }
     if (name == null) {
-      name = customEmojiFromJoinedGuild.name;
+      name = stateFromStores1.name;
     }
     tmp = name;
   }
   name = tmp;
   if (null != tmp) {
-    const FrecencyUserSettingsActionCreators = name(2026).FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators = name(2033).FrecencyUserSettingsActionCreators;
     FrecencyUserSettingsActionCreators.updateAsync(
       "favoriteEmojis",
       async (emojis) => {

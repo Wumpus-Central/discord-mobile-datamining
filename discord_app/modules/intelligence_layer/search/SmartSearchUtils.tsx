@@ -1,10 +1,8 @@
 // discord_app/modules/intelligence_layer/search/SmartSearchUtils.tsx
-import MessageRecordUtils from "../../messages/MessageRecordUtils.tsx";
 import SearchUtils from "../../search/SearchUtils.tsx";
 import QueryTokenizer from "../../../lib/QueryTokenizer.tsx";
 import SmartSearchResultsStoreDefault from "SmartSearchResultsStore.tsx";
 import SmartSearchTypes from "SmartSearchTypes.tsx";
-import RelationshipStore from "../../../stores/RelationshipStore.tsx";
 
 require = fn;
 function isUnsupportedFilterToken(type) {
@@ -15,11 +13,11 @@ function isUnsupportedFilterToken(type) {
   return tmp;
 }
 SmartSearchResultsStoreDefault;
-const SmartSearchConstants = fn(12058);
-({ MAX_PRESENTED_CITATIONS: closure_4, SUGGESTED_SEARCH_CHANNEL_KEY_DELIMITER: hasOwnProperty } = SmartSearchConstants);
-const Constants = fn(1074);
-({ SearchTokenTypes, SearchTypes: metroRequire } = Constants);
-const SearchTabs = fn(7477).SearchTabs;
+const SmartSearchConstants = fn(11988);
+({ MAX_PRESENTED_CITATIONS: c3, SUGGESTED_SEARCH_CHANNEL_KEY_DELIMITER: closure_4 } = SmartSearchConstants);
+const Constants = fn(1085);
+({ SearchTokenTypes, SearchTypes: hasOwnProperty } = Constants);
+const SearchTabs = fn(7513).SearchTabs;
 let items = [,];
 ({ FILTER_IN: arr[0], ANSWER_IN: arr[1] } = SearchTokenTypes);
 const set = new Set(items);
@@ -71,42 +69,10 @@ export const isSupportedSearchContext = function isSupportedSearchContext(type) 
 export const getChannelFilterKey = function getChannelFilterKey(channelIds) {
   const items = [...channelIds];
   const sorted = items.sort();
-  return sorted.join(hasOwnProperty);
+  return sorted.join(React4);
 };
 export const getChannelIdsForFilterKey = function getChannelIdsForFilterKey(item) {
-  return item.split(hasOwnProperty);
-};
-export const hydrateAndFilterCitations = function hydrateAndFilterCitations(response) {
-  const message_citations = response.message_citations;
-  const mapped = message_citations.map((sourceId) => {
-    const obj = {
-      sourceId: sourceId.source_id,
-      sourceType: sourceId.source_type,
-      guildId: sourceId.guild_id,
-      channelId: sourceId.channel_id,
-      messageId: sourceId.message_id,
-      message: MessageRecordUtils.createMessageRecord(sourceId.message),
-    };
-    return obj;
-  });
-  return mapped.filter((message) => !blockedOrIgnoredForMessage.isBlockedOrIgnoredForMessage(message.message));
-};
-export const resolveSearchStatus = function resolveSearchStatus(response, length) {
-  const search_status = response.search_status;
-  if ("not_qualified" === search_status) {
-    return SmartSearchTypes.SmartSearchStatus.NOT_QUALIFIED;
-  } else if ("no_results" === search_status) {
-    return SmartSearchTypes.SmartSearchStatus.EMPTY;
-  } else if ("success" === search_status) {
-    if (length > 0) {
-      let EMPTY = SmartSearchTypes.SmartSearchStatus.LOADED;
-    } else {
-      EMPTY = SmartSearchTypes.SmartSearchStatus.EMPTY;
-    }
-    return EMPTY;
-  } else {
-    return SmartSearchTypes.SmartSearchStatus.ERROR;
-  }
+  return item.split(React4);
 };
 export const parseConversationId = function parseConversationId(sourceId) {
   const match = /\/(\d+)$/.exec(sourceId);
@@ -159,7 +125,7 @@ export const getSmartSearchCitationsCount = function getSmartSearchCitationsCoun
     let bound = num;
     if (arg2) {
       const _Math = Math;
-      bound = Math.min(num, React4);
+      bound = Math.min(num, React3);
     }
     return bound;
   }

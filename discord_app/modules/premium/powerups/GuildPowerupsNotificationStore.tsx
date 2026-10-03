@@ -40,7 +40,7 @@ GuildPowerupsNotificationStore.migrations = items;
 const guildPowerupsNotificationStore = new GuildPowerupsNotificationStore(DispatcherDefault, {
   GUILD_POWERUPS_ACK_NOTIFICATION: function handleAckNotification(guildId) {
     guildId = guildId.guildId;
-    const guild = GuildStore.getGuild(guildId);
+    guild = GuildStore.getGuild(guildId);
     let num;
     if (guild != null) {
       num = guild.premiumSubscriberCount;

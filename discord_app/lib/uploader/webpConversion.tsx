@@ -1,6 +1,6 @@
 // discord_app/lib/uploader/webpConversion.tsx
 import LoggerDefault from "../../modules/debug/Logger.tsx";
-import MurmurHashV3Default from "../../../_runtime/01240_MurmurHashV3.js";
+import MurmurHashV3Default from "../../../_runtime/01251_MurmurHashV3.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = fn;
@@ -30,7 +30,7 @@ let closure_7 = async function _shouldConvertToWebP2(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -215,7 +215,7 @@ let closure_9 = async function _performWebPConversion(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -464,7 +464,7 @@ let closure_10 = async function _maybeConvertToWebP(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {

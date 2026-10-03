@@ -1,20 +1,51 @@
 // discord_app/modules/interaction_components/native/layouts/ActionRowLayoutComponent.tsx
+import c from "../../../../../_runtime/00576_c.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/interaction_components/native/layouts/ActionRowLayoutComponent.tsx");
 
-export default function ActionRowLayoutComponent(components) {
-  components = components.components;
-  let tmp2 = null;
-  if (null != components) {
-    tmp2 = null;
-    if (0 !== components.length) {
-      const obj = { children: tmp(components) };
-      tmp2 = <View>{tmp(components)}</View>;
+export default ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      const cResult = c.c(5);
+      ({ components, renderComponents } = arg0);
+      let tmp2 = null;
+      if (null != components) {
+        tmp2 = null;
+        if (0 !== components.length) {
+          if (cResult[0] === components) {
+            if (cResult[1] === renderComponents) {
+              let tmp3 = cResult[2];
+            }
+            if (cResult[3] !== tmp3) {
+              const obj2 = { children: tmp3 };
+              const tmp8 = <View>{tmp3}</View>;
+              cResult[3] = tmp3;
+              cResult[4] = tmp8;
+            }
+          }
+          const renderComponentsResult = renderComponents(components);
+          cResult[0] = components;
+          cResult[1] = renderComponents;
+          cResult[2] = renderComponentsResult;
+          tmp3 = renderComponentsResult;
+        }
+      }
+      return tmp2;
     }
-  }
-  return tmp2;
-}
+  : (components) => {
+      components = components.components;
+      let tmp2 = null;
+      if (null != components) {
+        tmp2 = null;
+        if (0 !== components.length) {
+          const obj = { children: tmp(components) };
+          tmp2 = <View>{tmp(components)}</View>;
+        }
+      }
+      return tmp2;
+    };

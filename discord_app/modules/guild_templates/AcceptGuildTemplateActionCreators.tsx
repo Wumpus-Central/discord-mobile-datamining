@@ -5,14 +5,14 @@ import GatewayConnectionStore from "../gateway/GatewayConnectionStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 
 require = fn;
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_templates/AcceptGuildTemplateActionCreators.tsx");
 
 export default {
-  acceptGuildTemplate(code, name, first1) {
-    importDefault = name;
-    dependencyMap = first1;
+  acceptGuildTemplate(code, first1, first12) {
+    importDefault = first1;
+    dependencyMap = first12;
     DispatcherDefault.dispatch({ type: "GUILD_TEMPLATE_ACCEPT", code });
     let obj2 = { type: "GUILD_TEMPLATE_ACCEPT", code };
     return new Promise((code, arg1) => {

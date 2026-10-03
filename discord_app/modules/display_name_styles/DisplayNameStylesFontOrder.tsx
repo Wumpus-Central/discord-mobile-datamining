@@ -1,24 +1,29 @@
 // discord_app/modules/display_name_styles/DisplayNameStylesFontOrder.tsx
+import DisplayNameStylesFlywheelExperiment from "DisplayNameStylesFlywheelExperiment.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
-const require = fn;
+require = fn;
 let items = [
-  fn(1392).DisplayNameFont.DEFAULT,
-  fn(1392).DisplayNameFont.ZILLA_SLAB,
-  fn(1392).DisplayNameFont.CHERRY_BOMB,
-  fn(1392).DisplayNameFont.CHICLE,
-  fn(1392).DisplayNameFont.MUSEO_MODERNO,
-  fn(1392).DisplayNameFont.NEO_CASTEL,
-  fn(1392).DisplayNameFont.PIXELIFY,
-  fn(1392).DisplayNameFont.SINISTRE,
+  fn(1397).DisplayNameFont.DEFAULT,
+  fn(1397).DisplayNameFont.ZILLA_SLAB,
+  fn(1397).DisplayNameFont.CHERRY_BOMB,
+  fn(1397).DisplayNameFont.CHICLE,
+  fn(1397).DisplayNameFont.MUSEO_MODERNO,
+  fn(1397).DisplayNameFont.NEO_CASTEL,
+  fn(1397).DisplayNameFont.PIXELIFY,
+  fn(1397).DisplayNameFont.SINISTRE,
 ];
-const items1 = [...fn(1390).FLYWHEEL_FONTS];
+const items1 = [...fn(1395).FLYWHEEL_FONTS];
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/display_name_styles/DisplayNameStylesFontOrder.tsx");
 
-export const useVisibleFontOrder = function useVisibleFontOrder() {
-  isDisplayNameStylesFlywheelSettersEnabled =
-    isDisplayNameStylesFlywheelSettersEnabled(9382).useIsDisplayNameStylesFlywheelSettersEnabled("font-order");
-  items = [isDisplayNameStylesFlywheelSettersEnabled];
-  return noop.useMemo(() => (isDisplayNameStylesFlywheelSettersEnabled ? items1 : items), items);
-};
+export const useVisibleFontOrder = ReactCompilerGating.isReactCompilerEnabled()
+  ? () =>
+      DisplayNameStylesFlywheelExperiment.useIsDisplayNameStylesFlywheelSettersEnabled("font-order") ? items1 : items
+  : () => {
+      isDisplayNameStylesFlywheelSettersEnabled =
+        isDisplayNameStylesFlywheelSettersEnabled(9390).useIsDisplayNameStylesFlywheelSettersEnabled("font-order");
+      items = [isDisplayNameStylesFlywheelSettersEnabled];
+      return noop.useMemo(() => (isDisplayNameStylesFlywheelSettersEnabled ? items1 : items), items);
+    };

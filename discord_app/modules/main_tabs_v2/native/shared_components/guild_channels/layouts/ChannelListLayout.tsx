@@ -4,6 +4,7 @@ import ChannelListLayoutTypes2 from "../../../../ChannelListLayoutTypes.tsx";
 import CozyDrawer from "layout/CozyDrawer.tsx";
 import Compact from "layout/Compact.tsx";
 import Cozy from "layout/Cozy.tsx";
+import ReactCompilerGating from "../../../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../../../_runtime/metro/00002__.js";
 
 function getLayoutStyles(layout) {
@@ -26,6 +27,9 @@ function getLayoutStyles(layout) {
     return flag ? tmpResult2.CHANNEL_LIST_STYLES_COZY_LAUNCHPAD : tmpResult2.CHANNEL_LIST_STYLES_COZY;
   }
 }
+function isLayoutCompact(messagesTabLayout) {
+  return messagesTabLayout === ChannelListLayoutTypes2.ChannelListLayoutTypes.COMPACT;
+}
 let result = size.fileFinishedImporting(
   "modules/main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx",
 );
@@ -35,9 +39,7 @@ export function makeSizeStyle(size) {
   size = { width: size, height: size };
   return size;
 }
-export const isLayoutCompact = function isLayoutCompact(layout) {
-  return layout === ChannelListLayoutTypes2.ChannelListLayoutTypes.COMPACT;
-};
+export { isLayoutCompact };
 export const isLayoutCozy = function isLayoutCozy(messagesTabLayout) {
   return (
     messagesTabLayout === ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY ||
@@ -45,19 +47,33 @@ export const isLayoutCozy = function isLayoutCozy(messagesTabLayout) {
     messagesTabLayout === ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY_DRAWER_SMOL
   );
 };
-export const useMessagesTabLayout = function useMessagesTabLayout(panelVariant) {
-  const ChannelListLayoutSetting = UserSettings.ChannelListLayoutSetting;
-  const setting = ChannelListLayoutSetting.useSetting();
-  const ChannelListLayoutTypes = ChannelListLayoutTypes2.ChannelListLayoutTypes;
-  if (panelVariant) {
-    let COZY = ChannelListLayoutTypes.COZY_DRAWER_SMOL;
-  } else if (setting === ChannelListLayoutTypes.COMPACT) {
-    COZY = ChannelListLayoutTypes2.ChannelListLayoutTypes.COMPACT;
-  } else {
-    COZY = ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY;
-  }
-  return COZY;
-};
+export const useMessagesTabLayout = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      const ChannelListLayoutSetting = UserSettings.ChannelListLayoutSetting;
+      const setting = ChannelListLayoutSetting.useSetting();
+      const ChannelListLayoutTypes = ChannelListLayoutTypes2.ChannelListLayoutTypes;
+      if (arg0) {
+        let COZY = ChannelListLayoutTypes.COZY_DRAWER_SMOL;
+      } else if (setting === ChannelListLayoutTypes.COMPACT) {
+        COZY = ChannelListLayoutTypes2.ChannelListLayoutTypes.COMPACT;
+      } else {
+        COZY = ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY;
+      }
+      return COZY;
+    }
+  : (arg0) => {
+      const ChannelListLayoutSetting = UserSettings.ChannelListLayoutSetting;
+      const setting = ChannelListLayoutSetting.useSetting();
+      const ChannelListLayoutTypes = ChannelListLayoutTypes2.ChannelListLayoutTypes;
+      if (arg0) {
+        let COZY = ChannelListLayoutTypes.COZY_DRAWER_SMOL;
+      } else if (setting === ChannelListLayoutTypes.COMPACT) {
+        COZY = ChannelListLayoutTypes2.ChannelListLayoutTypes.COMPACT;
+      } else {
+        COZY = ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY;
+      }
+      return COZY;
+    };
 export const getScaledChannelRowHeight = function getScaledChannelRowHeight(fontScale, layout) {
   let flag = isThreadResult;
   if (isThreadResult === undefined) {

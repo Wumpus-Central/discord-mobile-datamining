@@ -2,7 +2,7 @@
 import Storage4 from "../../../../discord_common/js/packages/storage/Storage.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import ReactBatchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import 00560__ from "../../../../_runtime/metro/00560__.js";
+import 00570__ from "../../../../_runtime/metro/00570__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
@@ -27,7 +27,7 @@ Storage.asyncGet("V2_DCD_CONTACTS_STORAGE_KEY", async (arg0) => {
   let obj = require("ReactBatchUpdates");
   DispatcherDefault.wait(() => DispatcherDefault.dispatch({ type: "CONTACT_SYNC_STORED_CONTACTS", empty: "" === closure_0 }));
 });
-const useContactSyncStore = module_560.create(() => ({ loadedPolicyNotice: false, storedContacts: "", upsellCTADismissed: false, policyUpdateNoticeDismissed: false, dmListCTADismissed: false }));
+const useContactSyncStore = module_570.create(() => ({ loadedPolicyNotice: false, storedContacts: "", upsellCTADismissed: false, policyUpdateNoticeDismissed: false, dmListCTADismissed: false }));
 let Storage2 = Storage4.Storage;
 Storage2.asyncGet("ContactSyncDMListCTADismissed", async (arg0) => {
   _require = Boolean(arg0);

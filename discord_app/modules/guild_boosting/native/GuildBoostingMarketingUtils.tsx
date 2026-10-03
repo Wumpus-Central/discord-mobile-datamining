@@ -4,13 +4,13 @@ import StageIcon from "../../../design/components/Icon/native/redesign/generated
 import ReactionIcon from "../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
 import UploadIcon from "../../../design/components/Icon/native/redesign/generated/UploadIcon.tsx";
 import ShieldUserIcon from "../../../design/components/Icon/native/redesign/generated/ShieldUserIcon.tsx";
-import StickerIcon from "../../../design/components/Icon/native/redesign/generated/StickerIcon.tsx";
 import StarIcon from "../../../design/components/Icon/native/redesign/generated/StarIcon.tsx";
 import GifIcon from "../../../design/components/Icon/native/redesign/generated/GifIcon.tsx";
 import ImagesIcon from "../../../design/components/Icon/native/redesign/generated/ImagesIcon.tsx";
 import SoundboardIcon from "../../../design/components/Icon/native/redesign/generated/SoundboardIcon.tsx";
 import HeadphonesIcon from "../../../design/components/Icon/native/redesign/generated/HeadphonesIcon.tsx";
 import ScreenArrowIcon from "../../../design/components/Icon/native/redesign/generated/ScreenArrowIcon.tsx";
+import StickerIcon from "../../../design/components/Icon/native/redesign/generated/StickerIcon.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const PerkIcons = PremiumConstants.PerkIcons;

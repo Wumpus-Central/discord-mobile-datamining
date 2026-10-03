@@ -14,6 +14,7 @@ import GuildTemplateEmbed from "GuildTemplateEmbed.tsx";
 import BuildOverrideEmbed from "BuildOverrideEmbed.tsx";
 import VoiceChannelLinkEmbed from "VoiceChannelLinkEmbed.tsx";
 import QuestEmbed from "../../../../../../quests/native/QuestEmbed.native.tsx";
+import GameOrganizationInviteEmbed from "GameOrganizationInviteEmbed.tsx";
 import _slicedToArray from "../../../../../../../../_runtime/metro/00032__.js";
 import LurkingStore from "../../../../../../lurker_mode/LurkingStore.tsx";
 import GuildStore from "../../../../../../../stores/GuildStore.tsx";
@@ -41,7 +42,7 @@ export const createCodedLinkEmbeds = function createCodedLinkEmbeds(message, mes
               if (null == applicationCodedLinkData) {
                 return null;
               } else {
-                const obj2 = { appId: applicationCodedLinkData.applicationId, channel: tmp27, message, theme };
+                const obj2 = { appId: applicationCodedLinkData.applicationId, channel: tmp29, message, theme };
                 const appLinkGateResult = createAppMessageEmbed.getAppLinkGateResult(obj2);
                 if ("unavailable" === appLinkGateResult.state) {
                   return null;
@@ -63,9 +64,9 @@ export const createCodedLinkEmbeds = function createCodedLinkEmbeds(message, mes
                     return createAppMessageEmbed.createAppMessageEmbed(obj4);
                   }
                 }
-                const tmpResult19 = createAppMessageEmbed;
+                const tmpResult21 = createAppMessageEmbed;
               }
-              const tmpResult18 = ApplicationCodedLink;
+              const tmpResult20 = ApplicationCodedLink;
             } else {
               return null;
             }
@@ -92,16 +93,16 @@ export const createCodedLinkEmbeds = function createCodedLinkEmbeds(message, mes
             isStaffResult = isStaffPersonalResult;
           }
           if (!isStaffResult) {
-            let tmp19 = null != GuildStore.getGuild("943265993613008967");
-            if (tmp19) {
-              tmp19 = !LurkingStore.isLurking("943265993613008967");
+            let tmp21 = null != GuildStore.getGuild("943265993613008967");
+            if (tmp21) {
+              tmp21 = !LurkingStore.isLurking("943265993613008967");
             }
-            isStaffResult = tmp19;
+            isStaffResult = tmp21;
           }
           let buildOverrideEmbed = null;
           if (isStaffResult) {
             buildOverrideEmbed = BuildOverrideEmbed.createBuildOverrideEmbed(code, theme);
-            const tmpResult25 = BuildOverrideEmbed;
+            const tmpResult27 = BuildOverrideEmbed;
           }
           return buildOverrideEmbed;
         } else if (CodedLink.CodedLinkType.EVENT === type) {
@@ -113,9 +114,9 @@ export const createCodedLinkEmbeds = function createCodedLinkEmbeds(message, mes
           return EmbeddedActivityInviteEmbed.createEmbeddedActivityInviteEmbed(obj5);
         } else if (CodedLink.CodedLinkType.EXPERIMENT === type) {
           let experimentEmbed = null;
-          if (tmpResult29.canSeeExperimentEmbeds()) {
+          if (tmpResult31.canSeeExperimentEmbeds()) {
             experimentEmbed = ExperimentEmbed.createExperimentEmbed(url, theme);
-            const tmpResult30 = ExperimentEmbed;
+            const tmpResult32 = ExperimentEmbed;
           }
           return experimentEmbed;
         } else {
@@ -131,7 +132,15 @@ export const createCodedLinkEmbeds = function createCodedLinkEmbeds(message, mes
                       if (CodedLink.CodedLinkType.GAME_PROFILE !== type) {
                         if (CodedLink.CodedLinkType.GAME_SERVER_SHARE !== type) {
                           if (CodedLink.CodedLinkType.USER_PROFILE !== type) {
-                            if (CodedLink.CodedLinkType.GAME_ORGANIZATION_INVITE !== type) {
+                            if (CodedLink.CodedLinkType.GAME_ORGANIZATION_INVITE === type) {
+                              let gameOrganizationInviteEmbed = null;
+                              if (tmpResult34.getLinkedGameOrgInvitesEnabled("mobile_coded_link_embed")) {
+                                gameOrganizationInviteEmbed =
+                                  GameOrganizationInviteEmbed.createGameOrganizationInviteEmbed(code, theme);
+                                const tmpResult35 = GameOrganizationInviteEmbed;
+                              }
+                              return gameOrganizationInviteEmbed;
+                            } else {
                               return GlobalUtils.assertNever(type);
                             }
                           }

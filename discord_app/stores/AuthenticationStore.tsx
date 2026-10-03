@@ -120,21 +120,21 @@ function handleLogout(isSwitchingAccount) {
   const tmp2 = null != TokenManagerAll.getToken();
   closure_13.verbose("handleLogout called.", {
     tokenManagerHasToken: null != TokenManagerAll.getToken(),
-    storageHasToken: null != Storage.get(closure_1_12),
+    storageHasToken: null != Storage.get(__initData),
   });
   const obj2 = {
     tokenManagerHasToken: null != TokenManagerAll.getToken(),
-    storageHasToken: null != Storage.get(closure_1_12),
+    storageHasToken: null != Storage.get(__initData),
   };
   const Storage2 = Storage6.Storage;
   const tmp5 = null != TokenManagerAll.getToken();
   closure_13.verbose("removeAuthToken called.", {
     tokenManagerHasToken: null != TokenManagerAll.getToken(),
-    storageHasToken: null != Storage2.get(closure_1_12),
+    storageHasToken: null != Storage2.get(__initData),
   });
   const obj4 = {
     tokenManagerHasToken: null != TokenManagerAll.getToken(),
-    storageHasToken: null != Storage2.get(closure_1_12),
+    storageHasToken: null != Storage2.get(__initData),
   };
   TokenManagerAll.removeAnalyticsToken();
   let flag;
@@ -213,10 +213,10 @@ function handleLogout(isSwitchingAccount) {
   }
   const tmp14Result = SentryUtilsDefault;
 }
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AnalyticEvents: closure_8, LoginStates } = Constants);
 ({ Platforms: c10, Routes: closure_11, TOKEN_KEY: closure_12 } = Constants);
-const AgeGateConstants = fn(1099);
+const AgeGateConstants = fn(1110);
 ({ EXISTING_USER_AGE_GATE_MODAL_KEY, NEW_USER_AGE_GATE_MODAL_KEY } = AgeGateConstants);
 let closure_13 = new LoggerDefault("AuthenticationStore");
 let fingerprint = "fingerprint";
@@ -363,11 +363,11 @@ const authenticationStore = new AuthenticationStore(
       const tmp3 = null != TokenManagerAll.getToken();
       closure_13.verbose("handleConnectionOpen called", {
         tokenManagerHasToken: null != TokenManagerAll.getToken(),
-        storageHasToken: null != Storage.get(closure_1_12),
+        storageHasToken: null != Storage.get(__initData),
       });
       const obj2 = {
         tokenManagerHasToken: null != TokenManagerAll.getToken(),
-        storageHasToken: null != Storage.get(closure_1_12),
+        storageHasToken: null != Storage.get(__initData),
       };
       ({ id, username, email } = user);
       SentryUtilsDefault.setUser(id, username, email, isStaffFromRawUserDefault(user));
@@ -412,7 +412,7 @@ const authenticationStore = new AuthenticationStore(
       const tmp5 = null != TokenManagerAll.getToken();
       closure_13.verbose("setAuthToken called.", {
         tokenManagerHasToken: null != TokenManagerAll.getToken(),
-        storageHasToken: null != Storage.get(closure_1_12),
+        storageHasToken: null != Storage.get(__initData),
       });
       let tmp8 = null != id2;
       if (tmp8) {
@@ -424,7 +424,7 @@ const authenticationStore = new AuthenticationStore(
       }
       const obj3 = {
         tokenManagerHasToken: null != TokenManagerAll.getToken(),
-        storageHasToken: null != Storage.get(closure_1_12),
+        storageHasToken: null != Storage.get(__initData),
       };
       TokenManagerAll.setToken(token, id2);
       if (null != analyticsToken) {
@@ -447,7 +447,7 @@ const authenticationStore = new AuthenticationStore(
       const tmp3 = null != TokenManagerAll.getToken();
       closure_13.verbose(combined, {
         tokenManagerHasToken: null != TokenManagerAll.getToken(),
-        storageHasToken: null != Storage.get(closure_1_12),
+        storageHasToken: null != Storage.get(__initData),
       });
       if (4004 === code) {
         if (c26) {
@@ -468,7 +468,7 @@ const authenticationStore = new AuthenticationStore(
       }
       const obj2 = {
         tokenManagerHasToken: null != TokenManagerAll.getToken(),
-        storageHasToken: null != Storage.get(closure_1_12),
+        storageHasToken: null != Storage.get(__initData),
       };
     },
     AUTH_SESSION_CHANGE: function handleAuthSessionChange(authSessionIdHash) {
@@ -488,11 +488,11 @@ const authenticationStore = new AuthenticationStore(
       const tmp = null != TokenManagerAll.getToken();
       closure_13.verbose("setAuthToken called.", {
         tokenManagerHasToken: null != TokenManagerAll.getToken(),
-        storageHasToken: null != Storage.get(closure_1_12),
+        storageHasToken: null != Storage.get(__initData),
       });
       const obj2 = {
         tokenManagerHasToken: null != TokenManagerAll.getToken(),
-        storageHasToken: null != Storage.get(closure_1_12),
+        storageHasToken: null != Storage.get(__initData),
       };
       TokenManagerAll.removeAnalyticsToken();
       TokenManagerAll.setToken(token.token, undefined);
@@ -608,7 +608,7 @@ const authenticationStore = new AuthenticationStore(
         const Storage = Storage6.Storage;
         const obj2 = {
           tokenManagerHasToken: null != TokenManagerAll.getToken(),
-          storageHasToken: null != Storage.get(closure_1_12),
+          storageHasToken: null != Storage.get(__initData),
         };
         closure_13.verbose("removeAuthToken called.", obj2);
         const tmp9 = null != TokenManagerAll.getToken();
@@ -677,11 +677,11 @@ const authenticationStore = new AuthenticationStore(
       const tmp = null != TokenManagerAll.getToken();
       closure_13.verbose("setAuthToken called.", {
         tokenManagerHasToken: null != TokenManagerAll.getToken(),
-        storageHasToken: null != Storage.get(closure_1_12),
+        storageHasToken: null != Storage.get(__initData),
       });
       const obj2 = {
         tokenManagerHasToken: null != TokenManagerAll.getToken(),
-        storageHasToken: null != Storage.get(closure_1_12),
+        storageHasToken: null != Storage.get(__initData),
       };
       TokenManagerAll.removeAnalyticsToken();
       TokenManagerAll.setToken(token.token, undefined);
@@ -702,17 +702,17 @@ const authenticationStore = new AuthenticationStore(
       const tmp3 = null != TokenManagerAll.getToken();
       closure_13.verbose("handleUpdateToken called", {
         tokenManagerHasToken: null != TokenManagerAll.getToken(),
-        storageHasToken: null != Storage.get(closure_1_12),
+        storageHasToken: null != Storage.get(__initData),
       });
       const obj2 = {
         tokenManagerHasToken: null != TokenManagerAll.getToken(),
-        storageHasToken: null != Storage.get(closure_1_12),
+        storageHasToken: null != Storage.get(__initData),
       };
       const Storage2 = Storage6.Storage;
       const tmp6 = null != TokenManagerAll.getToken();
       closure_13.verbose("setAuthToken called.", {
         tokenManagerHasToken: null != TokenManagerAll.getToken(),
-        storageHasToken: null != Storage2.get(closure_1_12),
+        storageHasToken: null != Storage2.get(__initData),
       });
       let tmp8 = null != userId;
       if (tmp8) {
@@ -724,7 +724,7 @@ const authenticationStore = new AuthenticationStore(
       }
       const obj4 = {
         tokenManagerHasToken: null != TokenManagerAll.getToken(),
-        storageHasToken: null != Storage2.get(closure_1_12),
+        storageHasToken: null != Storage2.get(__initData),
       };
       TokenManagerAll.setToken(userId.token, userId);
       closure_22 = c21;
@@ -827,7 +827,7 @@ const authenticationStore = new AuthenticationStore(
       c35 = true;
     },
   },
-  fn(573).DispatchBand.Early,
+  fn(584).DispatchBand.Early,
 );
 const size = fn(2);
 let result = size.fileFinishedImporting("stores/AuthenticationStore.tsx");

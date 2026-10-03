@@ -5,7 +5,7 @@ import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const ChannelTypes = fn(1074).ChannelTypes;
+const ChannelTypes = fn(1085).ChannelTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/getChannelIcon.tsx");
 

@@ -3,9 +3,25 @@ import util from "../../../../intl/index.native.tsx";
 import UserSettings from "../../UserSettings.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import useUserIsTeenAgeGroupDefault from "../../../parent_tools/hooks/useUserIsTeenAgeGroup.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      let hasActiveParentLinks = useUserIsTeenAgeGroupDefault();
+      if (hasActiveParentLinks) {
+        hasActiveParentLinks = obj.useHasActiveParentLinks();
+      }
+      return hasActiveParentLinks;
+    }
+  : () => {
+      let hasActiveParentLinks = useUserIsTeenAgeGroupDefault();
+      if (hasActiveParentLinks) {
+        hasActiveParentLinks = obj.useHasActiveParentLinks();
+      }
+      return hasActiveParentLinks;
+    };
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -21,13 +37,21 @@ const toggle = SettingBuilders.createToggle({
     const EnableScreenDowntimeScheduleNotifications = UserSettings.EnableScreenDowntimeScheduleNotifications;
     return EnableScreenDowntimeScheduleNotifications.updateSetting(arg0);
   },
-  usePredicate() {
-    let hasActiveParentLinks = useUserIsTeenAgeGroupDefault();
-    if (hasActiveParentLinks) {
-      hasActiveParentLinks = obj.useHasActiveParentLinks();
-    }
-    return hasActiveParentLinks;
-  },
+  usePredicate: ReactCompilerGating.isReactCompilerEnabled()
+    ? () => {
+        let hasActiveParentLinks = useUserIsTeenAgeGroupDefault();
+        if (hasActiveParentLinks) {
+          hasActiveParentLinks = obj.useHasActiveParentLinks();
+        }
+        return hasActiveParentLinks;
+      }
+    : () => {
+        let hasActiveParentLinks = useUserIsTeenAgeGroupDefault();
+        if (hasActiveParentLinks) {
+          hasActiveParentLinks = obj.useHasActiveParentLinks();
+        }
+        return hasActiveParentLinks;
+      },
 });
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/ScreenDowntimeScheduleSetting.tsx");
 

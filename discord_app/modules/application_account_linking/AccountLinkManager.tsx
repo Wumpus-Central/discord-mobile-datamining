@@ -8,36 +8,93 @@ import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
 let require = fn;
 let closure_9 = async function _claimIncentivizedAccountLinkingReward(arg0) {
-  closure_2 = tmp3;
-  closure_1 = tmp5;
-  ({ applicationId: closure_129_0, onSuccess: closure_129_1, onError: closure_129_2 } = closure_0);
-  await "flex";
-  const HTTP = closure_130_0(closure_130_1[6]).HTTP;
-  const request = {
-    url: closure_130_7.OAUTH2_ACCOUNT_LINKING_ACHIEVEMENT,
-    body: { application_id: closure_129_0 },
-    rejectWithError: true,
-  };
-  await HTTP.post(request);
-  if (2 === tmp8) {
-    c4 = 0;
-    closure_129_3 = closure_3;
-    if (closure_129_2 != null) {
-      tmp14(closure_129_3);
-    }
+  if (c6 === 2) {
     c6 = 3;
-  } else if (arg0 === 1) {
-    c6 = 3;
-    throw value;
-  } else if (arg0 !== 2) {
-    if (closure_129_1 != null) {
-      closure_129_1();
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp7 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: "IconComponent" };
     }
-    c4 = 0;
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_2 = tmp3;
+          closure_1 = tmp5;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          ({ applicationId: closure_129_0, onSuccess: closure_129_1, onError: closure_129_2 } = closure_0);
+          c5 = 1;
+          c6 = 1;
+          return { value: "Reflect", done: true };
+        }
+      } else if (1 === tmp8) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          c4 = 1;
+          const HTTP = closure_130_0(closure_130_1[6]).HTTP;
+          const request = { url: closure_130_7.OAUTH2_ACCOUNT_LINKING_ACHIEVEMENT, body: null, rejectWithError: true };
+          const obj5 = { application_id: closure_129_0 };
+          request.body = obj5;
+          c5 = 3;
+          c6 = 1;
+          const obj6 = { value: HTTP.post(request), done: false };
+          return obj6;
+        }
+      } else {
+        if (2 === tmp8) {
+          c4 = 0;
+          closure_129_3 = closure_3;
+          if (closure_129_2 != null) {
+            tmp14(closure_129_3);
+          }
+          c6 = 3;
+        } else if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 !== 2) {
+          if (closure_129_1 != null) {
+            closure_129_1();
+          }
+          c4 = 0;
+        }
+        c4 = 0;
+        c6 = 3;
+        const obj = { value, done: true };
+        return obj;
+      }
+    } catch (tmp25) {
+      closure_3 = tmp25;
+      if (tmp4 === c4) {
+        c6 = tmp2;
+        throw tmp25;
+      } else {
+        c5 = tmp;
+      }
+    }
   }
-  return value;
 };
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AppStates: metroRequire, Endpoints: closure_7 } = Constants);
 let closure_8 = 20 * DurationsDefault.Millis.MINUTE;
 class AccountLinkManager extends tmp3 {

@@ -5,7 +5,7 @@ import VoiceStateStore from "../../../stores/VoiceStateStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const NOOP_NULL = fn(1074).NOOP_NULL;
+const NOOP_NULL = fn(1085).NOOP_NULL;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/native/getPrivateChannelCall.tsx");
 

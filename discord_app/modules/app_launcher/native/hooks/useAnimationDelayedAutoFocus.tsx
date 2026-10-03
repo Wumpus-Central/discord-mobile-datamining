@@ -1,27 +1,66 @@
 // discord_app/modules/app_launcher/native/hooks/useAnimationDelayedAutoFocus.tsx
+import c from "../../../../../_runtime/00576_c.js";
 import useAwaitAnimationComplete from "useAwaitAnimationComplete.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/hooks/useAnimationDelayedAutoFocus.tsx");
 
-export const useAnimationDelayedAutoFocus = function useAnimationDelayedAutoFocus(autoFocus, onPress) {
-  closure_0 = autoFocus;
-  closure_1 = onPress;
-  const awaitAnimationCompletion = useAwaitAnimationComplete.useAwaitAnimationCompletion();
-  noop.useRef(false);
-  const items = [autoFocus, onPress, awaitAnimationCompletion];
-  const effect = noop.useEffect(() => {
-    let tmp = closure_0;
-    if (closure_0) {
-      tmp = !ref.current;
+export const useAnimationDelayedAutoFocus = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0, arg1) => {
+      closure_0 = arg0;
+      closure_1 = arg1;
+      const cResult = c.c(5);
+      const awaitAnimationCompletion = useAwaitAnimationComplete.useAwaitAnimationCompletion();
+      noop.useRef(false);
+      if (cResult[0] === awaitAnimationCompletion) {
+        if (cResult[1] === arg0) {
+          if (cResult[2] === arg1) {
+            let tmp3 = cResult[3];
+            let tmp4 = cResult[4];
+          }
+          const effect = noop.useEffect(tmp3, tmp4);
+        }
+      }
+      const fn = function o() {
+        let tmp = closure_0;
+        if (closure_0) {
+          tmp = !ref.current;
+        }
+        if (tmp) {
+          awaitAnimationCompletion(() => {
+            closure_1_1();
+          });
+        }
+        ref.current = true;
+      };
+      const items = [arg0, arg1, awaitAnimationCompletion];
+      cResult[0] = awaitAnimationCompletion;
+      cResult[1] = arg0;
+      cResult[2] = arg1;
+      cResult[3] = fn;
+      cResult[4] = items;
+      tmp4 = items;
+      tmp3 = fn;
     }
-    if (tmp) {
-      awaitAnimationCompletion(() => {
-        onPress();
-      });
-    }
-    ref.current = true;
-  }, items);
-};
+  : (arg0, arg1) => {
+      closure_0 = arg0;
+      closure_1 = arg1;
+      const awaitAnimationCompletion = useAwaitAnimationComplete.useAwaitAnimationCompletion();
+      noop.useRef(false);
+      const items = [arg0, arg1, awaitAnimationCompletion];
+      const effect = noop.useEffect(() => {
+        let tmp = closure_0;
+        if (closure_0) {
+          tmp = !ref.current;
+        }
+        if (tmp) {
+          awaitAnimationCompletion(() => {
+            closure_1_1();
+          });
+        }
+        ref.current = true;
+      }, items);
+    };

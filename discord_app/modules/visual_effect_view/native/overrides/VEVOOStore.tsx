@@ -1,17 +1,18 @@
 // discord_app/modules/visual_effect_view/native/overrides/VEVOOStore.tsx
 import ReactBatchUpdates from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import 00560__ from "../../../../../_runtime/metro/00560__.js";
+import 00570__ from "../../../../../_runtime/metro/00570__.js";
+import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 
 let closure_2 = {};
-const state = module_560.create(() => closure_2);
-const result = size.fileFinishedImporting("modules/visual_effect_view/native/overrides/VEVOOStore.tsx");
+const state = module_570.create(() => closure_2);
+let ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
+const result1 = size.fileFinishedImporting("modules/visual_effect_view/native/overrides/VEVOOStore.tsx");
 
-export const useVisualEffectViewOverrides = function useVisualEffectViewOverrides() {
-  return state();
-};
+export const useVisualEffectViewOverrides = () => state();
 export const getVisualEffectViewOverrides = function getVisualEffectViewOverrides() {
   return state.getState();
 };

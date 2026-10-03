@@ -24,7 +24,7 @@ export const createGuildReportRaidSystemMessage = function createGuildReportRaid
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  const guild = GuildStore.getGuild(guild_id);
+  guild = GuildStore.getGuild(guild_id);
   const tmp3 = resolveMessageContentColorsDefault(theme);
   const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
   let automodUsernameColor = GuildAlertModeSystemMessage.resolveAlertModeColors(theme).automodUsernameColor;

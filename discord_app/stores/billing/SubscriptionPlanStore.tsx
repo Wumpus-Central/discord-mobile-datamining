@@ -68,9 +68,9 @@ function reset() {
     );
   });
 }
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ CurrencyCodes: closure_4, PriceSetAssignmentPurchaseTypes: hasOwnProperty } = Constants);
-const PremiumConstants = fn(1374);
+const PremiumConstants = fn(1379);
 ({ SubscriptionIntervalTypes, SubscriptionPlanInfo } = PremiumConstants);
 const SubscriptionPlans = PremiumConstants.SubscriptionPlans;
 ({ PremiumSubscriptionSKUs: closure_8, ACTIVE_PREMIUM_SKUS: closure_9 } = PremiumConstants);
@@ -184,11 +184,11 @@ prototype["isLoadedForSKUs"] = function isLoadedForSKUs(items) {
 };
 prototype["isFetchingForPremiumSKUs"] = function isFetchingForPremiumSKUs() {
   const self = this;
-  return React7.some((item) => self.isFetchingForSKU(item));
+  return options.some((item) => self.isFetchingForSKU(item));
 };
 prototype["isLoadedForPremiumSKUs"] = function isLoadedForPremiumSKUs() {
   const self = this;
-  return React7.every((item) => self.isLoadedForSKU(item));
+  return options.every((item) => self.isLoadedForSKU(item));
 };
 prototype["ignoreSKUFetch"] = function ignoreSKUFetch(arg0) {
   set1.add(arg0);

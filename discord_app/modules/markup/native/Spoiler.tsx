@@ -5,10 +5,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 let require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet: closure_4 } = get_ActivityIndicator);
-const EMOJI_CHAT_SIZE = fn(1074).EMOJI_CHAT_SIZE;
+const EMOJI_CHAT_SIZE = fn(1085).EMOJI_CHAT_SIZE;
 const jsx = fn(21).jsx;
-const createStyles = fn(4845);
-const PlatformUtils = fn(1364);
+const createStyles = fn(4890);
+const PlatformUtils = fn(1369);
 let str = "transparent";
 if (PlatformUtils.isAndroid()) {
   str = "rgba(0,0,0,0.0019607844)";
@@ -18,7 +18,7 @@ let size = { width: EMOJI_CHAT_SIZE, height: EMOJI_CHAT_SIZE, backgroundColor: n
 obj3.placeholder = size;
 const obj4 = { color: str, backgroundColor: nativeDefault.colors.SPOILER_HIDDEN_BACKGROUND };
 obj3.spoilerRevealed = { color: nativeDefault.colors.TEXT_DEFAULT, backgroundColor: nativeDefault.colors.SPOILER_REVEALED_BACKGROUND };
-obj3.muted = { opacity: fn(9770).MUTED_OPACITY_CONTENT };
+obj3.muted = { opacity: fn(11697).MUTED_OPACITY_CONTENT };
 let closure_6 = createStyles.createLegacyClassComponentStyles(obj3);
 const PureComponent = noop.PureComponent;
 class Spoiler extends PureComponent {
@@ -149,7 +149,7 @@ Spoiler.prototype["render"] = function render() {
     return jsx(require("native").LegacyText, { accessibilityRole: "button", style: null, onPress: null, children: null });
   }
 };
-Spoiler.contextType = fn(4569).ThemeContext;
+Spoiler.contextType = fn(4589).ThemeContext;
 size = fn(2);
 const result = size.fileFinishedImporting("modules/markup/native/Spoiler.tsx");
 

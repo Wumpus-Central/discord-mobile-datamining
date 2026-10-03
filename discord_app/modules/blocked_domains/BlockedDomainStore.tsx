@@ -1,7 +1,7 @@
 // discord_app/modules/blocked_domains/BlockedDomainStore.tsx
+import js_shim_shim from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
 import Constants from "../../Constants.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
-import js_shim_shim from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const AnalyticEvents = Constants.AnalyticEvents;

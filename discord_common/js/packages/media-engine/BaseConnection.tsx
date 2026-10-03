@@ -2,13 +2,13 @@
 import VideoQualityManager from "VideoQualityManager.tsx";
 import ConnectionEventFramerateReducer from "ConnectionEventFramerateReducer.tsx";
 import discord_common_BaseConnectionEvent from "BaseConnectionEvent.tsx";
-import cloneDeepDefault from "../../../../_runtime/04917_cloneDeep.js";
-import flatRestDefault from "../../../../_runtime/04946_flatRest.js";
+import cloneDeepDefault from "../../../../_runtime/04963_cloneDeep.js";
+import flatRestDefault from "../../../../_runtime/04992_flatRest.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import TypedEventEmitter from "../../shared/utils/TypedEventEmitter.tsx";
 
 require = fn;
-const Constants = fn(4870);
+const Constants = fn(4915);
 ({
   ConnectionStates: closure_4,
   DEFAULT_VOICE_BITRATE: hasOwnProperty,
@@ -149,7 +149,7 @@ prototype["setConnectionState"] = function setConnectionState(DISCONNECTED) {
   this.connectionState = DISCONNECTED;
   this.emit(discord_common_BaseConnectionEvent.BaseConnectionEvent.ConnectionStateChange, this.connectionState);
 };
-prototype["updateVideoQuality"] = function updateVideoQuality(React6) {
+prototype["updateVideoQuality"] = function updateVideoQuality(arg0) {
   const self = this;
   const videoStreamParameters = this.videoStreamParameters;
   let num = videoStreamParameters.findIndex((quality) => 100 === quality.quality);
@@ -224,8 +224,8 @@ prototype["updateVideoQuality"] = function updateVideoQuality(React6) {
     }),
   ];
   tmp5.remoteSinkWantsPixelCount = Math.max.apply(items);
-  if (null != React6) {
-    let obj = flatRestDefault(tmp5, React6);
+  if (null != arg0) {
+    let obj = flatRestDefault(tmp5, arg0);
   } else {
     obj = {};
     const merged = Object.assign(tmp5);
@@ -315,7 +315,7 @@ prototype["getLocalWant"] = function getLocalWant(arg0) {
   let someResult = videoStreamParameters.some((ssrc) => {
     let tmp = ssrc.ssrc === closure_0;
     if (tmp) {
-      tmp = ssrc.quality === closure_2_10;
+      tmp = ssrc.quality === v65535;
     }
     return tmp;
   });
@@ -401,4 +401,4 @@ let size = fn(2);
 let result = size.fileFinishedImporting("../discord_common/js/packages/media-engine/BaseConnection.tsx");
 
 export default BaseConnection;
-export const BaseConnectionEvent = fn(4916).BaseConnectionEvent;
+export const BaseConnectionEvent = fn(4962).BaseConnectionEvent;

@@ -8,10 +8,10 @@ import ChangeNicknameActionCreatorsDefault from "../../actions/ChangeNicknameAct
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import EmojiStore from "../emojis/EmojiStore.tsx";
 import MessageStore from "../../stores/MessageStore.tsx";
-import t_mod from "../../../_runtime/metro/01930__.js";
+import t_mod from "../../../_runtime/metro/01936__.js";
 
 require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AnalyticEvents: metroRequire, MARKDOWN_SPOILER_WRAPPER: closure_7, ME: closure_8 } = Constants);
 const re9 = /\\([*?+/])/g;
 const COMMANDS = {
@@ -51,7 +51,7 @@ const COMMANDS = {
       channel = channel.channel;
       if (null != channel.guild_id) {
         const obj = ChangeNicknameActionCreatorsDefault;
-        obj.changeNickname(channel.guild_id, channel.id, React6, arg0);
+        obj.changeNickname(channel.guild_id, channel.id, closure_1_8, arg0);
         return { content: "" };
       }
     },

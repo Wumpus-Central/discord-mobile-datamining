@@ -3,7 +3,7 @@ import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = fn;
-let closure_5 = fn(4887).WINDOWS_SETTINGS_SOUND_DEVICE_DEEPLINK_SEMVER;
+let closure_5 = fn(4932).WINDOWS_SETTINGS_SOUND_DEVICE_DEEPLINK_SEMVER;
 const logger = new fn(4).Logger("InputWatcher");
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_engine/InputWatcher.tsx");
@@ -27,7 +27,7 @@ class InputWatcher {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -154,7 +154,7 @@ class InputWatcher {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else {
             try {
@@ -195,7 +195,7 @@ class InputWatcher {
               };
               v1(inputDetected[10]).dispatch(obj6);
               inputDetected = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             } catch (tmp12) {
               inputDetected = tmp;
               throw tmp12;

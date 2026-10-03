@@ -3,7 +3,7 @@ import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
 
 const require = fn;
-const AnalyticEvents = fn(1074).AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 let manual_browsing = "manual_browsing";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/analytics/FavoritesGuildAnalytics.tsx");

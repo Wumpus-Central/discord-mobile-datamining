@@ -8,11 +8,11 @@ import FramesStore from "../../../frames/FramesStore.tsx";
 import QuestStore from "../../../quests/QuestStore.tsx";
 
 require = fn;
-const TransportTypes = fn(5270).TransportTypes;
-const RPCEvents = fn(1074).RPCEvents;
-const Constants = fn(2005);
+const TransportTypes = fn(5316).TransportTypes;
+const RPCEvents = fn(1085).RPCEvents;
+const Constants = fn(2011);
 ({ ActivityLayoutMode: closure_7, ActivityScreenOrientation: closure_8 } = Constants);
-const asLaunched = fn(8691).asLaunched;
+const asLaunched = fn(8704).asLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/server/events/subscriptionHelpers.tsx");
 
@@ -71,7 +71,7 @@ export const getInitialSubscriptionPayload = function getInitialSubscriptionPayl
     return tmp23;
   } else if (RPCEvents.ORIENTATION_UPDATE === arg1) {
     const obj9 = {
-      screen_orientation: useIsScreenLandscape.getIsScreenLandscape() ? React6.LANDSCAPE : React6.PORTRAIT,
+      screen_orientation: useIsScreenLandscape.getIsScreenLandscape() ? constants.LANDSCAPE : constants.PORTRAIT,
     };
     return obj9;
   } else if (RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE === arg1) {

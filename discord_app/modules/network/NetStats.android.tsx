@@ -1,7 +1,7 @@
 // discord_app/modules/network/NetStats.android.tsx
 import LoggerDefault from "../debug/Logger.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
-import configure from "../../../_runtime/01465_configure.js";
+import configure from "../../../_runtime/01470_configure.js";
 import NativeTTIManagerModuleDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeTTIManagerModule.tsx";
 import RTCBandwidthMonitor from "../../lib/RTCBandwidthMonitor.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -46,7 +46,7 @@ function updateNetworkUsage() {
 }
 get_ActivityIndicator = fn(17);
 ({ NativeModules: closure_4, AppState } = get_ActivityIndicator);
-const AnalyticEvents = fn(1074).AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 let closure_9 = new LoggerDefault("NetStats");
 let closure_10 = {
   signalStrengthLevel: null,
@@ -70,7 +70,7 @@ let closure_10 = {
 };
 let c11 = null;
 const tmp3 = new LoggerDefault("NetStats");
-let global = { type: fn(1465).NetInfoStateType.unknown, effectiveSpeed: null, serviceProvider: null };
+let global = { type: fn(1470).NetInfoStateType.unknown, effectiveSpeed: null, serviceProvider: null };
 global = null;
 let closure_14 = "active" === AppState.currentState;
 let closure_15 = 0;
@@ -177,7 +177,7 @@ prototype["writeExistingEventStorage"] = function writeExistingEventStorage() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -245,7 +245,7 @@ prototype["track"] = function track() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {

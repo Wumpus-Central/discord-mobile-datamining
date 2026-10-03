@@ -1,15 +1,15 @@
 // discord_app/modules/rpc/RPCServer.tsx
 import _modDef12 from "../../../_runtime/metro/00012__.js";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
+import RpcCommandInterception from "RpcCommandInterception.tsx";
 import RPCErrorDefault from "RPCError.tsx";
 import transformUserDefault from "helpers/transformUser.tsx";
-import RpcCommandInterception from "RpcCommandInterception.tsx";
 import validateScopeDefault from "helpers/validateScope.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-const TransportTypes = fn(5270).TransportTypes;
-const Constants = fn(1074);
+const TransportTypes = fn(5316).TransportTypes;
+const Constants = fn(1085);
 ({
   AnalyticEvents: hasOwnProperty,
   RPCCloseCodes: metroRequire,
@@ -170,7 +170,7 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -279,7 +279,7 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -423,7 +423,7 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {

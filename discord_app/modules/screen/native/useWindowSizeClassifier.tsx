@@ -1,5 +1,7 @@
 // discord_app/modules/screen/native/useWindowSizeClassifier.tsx
+import c from "../../../../_runtime/00576_c.js";
 import useBaseAppContainerDimensions from "useBaseAppContainerDimensions.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const useBaseAppContainerDimensionsDefault = useBaseAppContainerDimensions;
@@ -16,19 +18,40 @@ const WindowSizeClassifier = {
 };
 const result = size.fileFinishedImporting("modules/screen/native/useWindowSizeClassifier.tsx");
 
-export default function useWindowSizeClassifier() {
-  const width = useBaseAppContainerDimensionsDefault().width;
-  if (width <= 360) {
-    let XLARGE = obj.SMALL;
-  } else if (width <= 600) {
-    XLARGE = obj.NORMAL;
-  } else if (width <= 840) {
-    XLARGE = obj.LARGE;
-  } else {
-    XLARGE = obj.XLARGE;
-  }
-  return XLARGE;
-}
+export default ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const obj = c;
+      const cResult = obj.c(2);
+      const width = useBaseAppContainerDimensionsDefault().width;
+      if (cResult[0] !== width) {
+        if (width <= 360) {
+          let XLARGE = obj.SMALL;
+        } else if (width <= 600) {
+          XLARGE = obj.NORMAL;
+        } else if (width <= 840) {
+          XLARGE = obj.LARGE;
+        } else {
+          XLARGE = obj.XLARGE;
+        }
+        cResult[0] = width;
+        cResult[1] = XLARGE;
+      } else {
+        return cResult[1];
+      }
+    }
+  : () => {
+      const width = useBaseAppContainerDimensionsDefault().width;
+      if (width <= 360) {
+        let XLARGE = obj.SMALL;
+      } else if (width <= 600) {
+        XLARGE = obj.NORMAL;
+      } else if (width <= 840) {
+        XLARGE = obj.LARGE;
+      } else {
+        XLARGE = obj.XLARGE;
+      }
+      return XLARGE;
+    };
 export const WINDOW_SIZE_THRESHOLD_SMALL = 360;
 export const WINDOW_SIZE_THRESHOLD_LARGE = 600;
 export const WINDOW_SIZE_THRESHOLD_XLARGE = 840;

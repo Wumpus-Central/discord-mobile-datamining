@@ -3,7 +3,7 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
-const GuildFeatures = fn(1074).GuildFeatures;
+const GuildFeatures = fn(1085).GuildFeatures;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forwarding/isStaffToNonStaffForward.tsx");
 
@@ -24,7 +24,7 @@ export default function isStaffToNonStaffForward(channel_id, arr) {
           return null != user && user.isStaff();
         });
       } else {
-        let guild = GuildStore.getGuild(channel.guild_id);
+        guild = GuildStore.getGuild(channel.guild_id);
         everyResult = null != guild;
         if (everyResult) {
           let features = guild.features;

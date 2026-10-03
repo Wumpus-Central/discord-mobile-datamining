@@ -246,19 +246,19 @@ export const getPollExpiryLabel = function getPollExpiryLabel(poll) {
   }
   return result;
 };
-export const getPosterUrl = function getPosterUrl(proxyUrl, arg1, arg2) {
+export const getPosterUrl = function getPosterUrl(proxyUrl, c12, c11) {
   const str = URLUtilsDefault.toURLSafe(proxyUrl);
   let str1 = null;
   if (null != str) {
     const searchParams = str.searchParams;
     searchParams.append("format", "webp");
-    if (null != arg1) {
+    if (null != c12) {
       const searchParams2 = str.searchParams;
-      searchParams2.append("width", arg1.toString());
+      searchParams2.append("width", c12.toString());
     }
-    if (null != arg2) {
+    if (null != c11) {
       const searchParams3 = str.searchParams;
-      searchParams3.append("height", arg2.toString());
+      searchParams3.append("height", c11.toString());
     }
     str1 = str.toString();
   }

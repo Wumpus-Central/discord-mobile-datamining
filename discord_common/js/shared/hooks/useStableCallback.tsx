@@ -1,16 +1,46 @@
 // discord_common/js/shared/hooks/useStableCallback.tsx
+import c from "../../../../_runtime/00576_c.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
+require = fn;
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/shared/hooks/useStableCallback.tsx");
 
-export default function useStableCallback(current) {
-  noop.useRef(current);
-  const insertionEffect = noop.useInsertionEffect(() => {
-    closure_1.current = current;
-  });
-  return noop.useCallback(() => {
-    const items = [...HermesBuiltin.copyRestArgs()];
-    return ref.current.apply(items);
-  }, []);
-}
+export default ReactCompilerGating.isReactCompilerEnabled()
+  ? (current) => {
+      const cResult = c.c(3);
+      noop.useRef(current);
+      if (cResult[0] !== current) {
+        const fn = function c() {
+          closure_1.current = current;
+        };
+        cResult[0] = current;
+        cResult[1] = fn;
+        let tmp2 = fn;
+      } else {
+        tmp2 = cResult[1];
+      }
+      const insertionEffect = noop.useInsertionEffect(tmp2);
+      if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+        const fn2 = function s() {
+          const items = [...HermesBuiltin.copyRestArgs()];
+          return ref.current.apply(items);
+        };
+        cResult[2] = fn2;
+        let tmp4 = fn2;
+      } else {
+        tmp4 = cResult[2];
+      }
+      return tmp4;
+    }
+  : (current) => {
+      noop.useRef(current);
+      const insertionEffect = noop.useInsertionEffect(() => {
+        closure_1.current = current;
+      });
+      return noop.useCallback(() => {
+        const items = [...HermesBuiltin.copyRestArgs()];
+        return ref.current.apply(items);
+      }, []);
+    };

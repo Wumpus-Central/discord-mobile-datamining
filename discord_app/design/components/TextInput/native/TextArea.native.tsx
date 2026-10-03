@@ -1,32 +1,113 @@
 // discord_app/design/components/TextInput/native/TextArea.native.tsx
+import c from "../../../../../_runtime/00576_c.js";
 import useFieldLabelA11yNative from "../../../../../discord_common/js/packages/design/hooks/useFieldLabelA11yNative.tsx";
-import Input from "../../Input/native/Input.native.tsx";
 import getRequiredFieldA11yName from "../../Input/native/getRequiredFieldA11yName.native.tsx";
+import Input from "../../Input/native/Input.native.tsx";
 import TextAreaField from "../../TextField/native/TextAreaField.native.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 let closure_2 = ["labelId", "accessibilityLabel"];
+let closure_3 = ["labelId", "accessibilityLabel"];
 const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/TextInput/native/TextArea.native.tsx");
 
-export const TextArea = noop.forwardRef((required, ref) => {
-  const fieldLabelA11yNative = useFieldLabelA11yNative.useFieldLabelA11yNative(required);
-  const accessibilityLabel = fieldLabelA11yNative.accessibilityLabel;
-  const obj2 = {};
-  const merged = Object.assign(required);
-  obj2.labelId = fieldLabelA11yNative.labelId;
-  const obj3 = { ref };
-  const merged1 = Object.assign(required);
-  const merged2 = Object.assign(_objectWithoutProperties(fieldLabelA11yNative, closure_2));
-  const tmp2 = _objectWithoutProperties(fieldLabelA11yNative, closure_2);
-  let requiredFieldA11yName = getRequiredFieldA11yName.getRequiredFieldA11yName(accessibilityLabel, required.required);
-  if (requiredFieldA11yName == null) {
-    requiredFieldA11yName = accessibilityLabel;
-  }
-  obj3.accessibilityLabel = requiredFieldA11yName;
-  obj2.children = jsx(TextAreaField.TextAreaField, { ref });
-  return jsx(Input.Input, {});
-});
+export const TextArea = noop.forwardRef(
+  ReactCompilerGating.isReactCompilerEnabled()
+    ? (required, ref) => {
+        const cResult = c.c(16);
+        required = required.required;
+        const fieldLabelA11yNative = useFieldLabelA11yNative.useFieldLabelA11yNative(required);
+        if (cResult[0] !== fieldLabelA11yNative) {
+          ({ labelId, accessibilityLabel } = fieldLabelA11yNative);
+          const tmp10 = _objectWithoutProperties(fieldLabelA11yNative, closure_2);
+          cResult[0] = fieldLabelA11yNative;
+          cResult[1] = accessibilityLabel;
+          cResult[2] = tmp10;
+          cResult[3] = labelId;
+          let tmp7 = labelId;
+          let tmp6 = tmp10;
+          let tmp5 = accessibilityLabel;
+        } else {
+          tmp5 = cResult[1];
+          tmp6 = cResult[2];
+          tmp7 = cResult[3];
+        }
+        if (cResult[4] === tmp5) {
+          if (cResult[5] === required) {
+            let tmp11 = cResult[6];
+          }
+          if (cResult[7] === tmp6) {
+            if (cResult[8] === required) {
+              if (cResult[9] === ref) {
+                if (cResult[10] === tmp11) {
+                  let tmp14 = cResult[11];
+                }
+                if (cResult[12] === tmp7) {
+                  if (cResult[13] === required) {
+                    if (cResult[14] === tmp14) {
+                      let tmp23 = cResult[15];
+                    }
+                    return tmp23;
+                  }
+                }
+                const obj3 = {};
+                const merged = Object.assign(required);
+                obj3.labelId = tmp7;
+                obj3.children = tmp14;
+                const tmp28 = jsx(Input.Input, {});
+                cResult[12] = tmp7;
+                cResult[13] = required;
+                cResult[14] = tmp14;
+                cResult[15] = tmp28;
+                tmp23 = tmp28;
+              }
+            }
+          }
+          const obj4 = { ref };
+          const merged1 = Object.assign(required);
+          const merged2 = Object.assign(tmp6);
+          obj4.accessibilityLabel = tmp11;
+          const tmp22 = jsx(TextAreaField.TextAreaField, { ref });
+          cResult[7] = tmp6;
+          cResult[8] = required;
+          cResult[9] = ref;
+          cResult[10] = tmp11;
+          cResult[11] = tmp22;
+          tmp14 = tmp22;
+        }
+        let requiredFieldA11yName = getRequiredFieldA11yName.getRequiredFieldA11yName(tmp5, required);
+        if (requiredFieldA11yName == null) {
+          requiredFieldA11yName = tmp5;
+        }
+        cResult[4] = tmp5;
+        cResult[5] = required;
+        cResult[6] = requiredFieldA11yName;
+        tmp11 = requiredFieldA11yName;
+        const tmpResult = getRequiredFieldA11yName;
+      }
+    : (required, ref) => {
+        const fieldLabelA11yNative = useFieldLabelA11yNative.useFieldLabelA11yNative(required);
+        const accessibilityLabel = fieldLabelA11yNative.accessibilityLabel;
+        const obj2 = {};
+        const merged = Object.assign(required);
+        obj2.labelId = fieldLabelA11yNative.labelId;
+        const obj3 = { ref };
+        const merged1 = Object.assign(required);
+        const merged2 = Object.assign(_objectWithoutProperties(fieldLabelA11yNative, closure_3));
+        const tmp2 = _objectWithoutProperties(fieldLabelA11yNative, closure_3);
+        let requiredFieldA11yName = getRequiredFieldA11yName.getRequiredFieldA11yName(
+          accessibilityLabel,
+          required.required,
+        );
+        if (requiredFieldA11yName == null) {
+          requiredFieldA11yName = accessibilityLabel;
+        }
+        obj3.accessibilityLabel = requiredFieldA11yName;
+        obj2.children = jsx(TextAreaField.TextAreaField, { ref });
+        return jsx(Input.Input, {});
+      },
+);

@@ -23,7 +23,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -66,7 +66,7 @@ export default {
             return obj;
           } else {
             guildId = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp15) {
           guildId = tmp;

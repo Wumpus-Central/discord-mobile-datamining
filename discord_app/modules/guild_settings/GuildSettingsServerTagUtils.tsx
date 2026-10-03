@@ -5,13 +5,13 @@ import GuildStore from "../../stores/GuildStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
 require = fn;
-const Permissions = fn(1074).Permissions;
+const Permissions = fn(1085).Permissions;
 const GuildSettingsServerTag = "GuildSettingsServerTag";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/GuildSettingsServerTagUtils.tsx");
 
 export const canUseMobileServerTagSettings = function canUseMobileServerTagSettings(guildId) {
-  const guild = GuildStore.getGuild(guildId);
+  guild = GuildStore.getGuild(guildId);
   let enabled = null != guild;
   if (enabled) {
     enabled = PermissionStore.can(Permissions.MANAGE_GUILD, guild);
@@ -23,7 +23,7 @@ export const canUseMobileServerTagSettings = function canUseMobileServerTagSetti
   return enabled;
 };
 export const canViewMobileServerTag = function canViewMobileServerTag(id) {
-  const guild = GuildStore.getGuild(id);
+  guild = GuildStore.getGuild(id);
   let enabled = null != guild;
   if (enabled) {
     enabled = GuildTagUtils.guildSupportsTags(guild);

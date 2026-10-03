@@ -51,7 +51,7 @@ let closure_9 = async function _fetchGamesWithSupplementalData(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -79,14 +79,14 @@ let closure_9 = async function _fetchGamesWithSupplementalData(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     } catch (tmp7) {
       c1 = tmp;
       throw tmp7;
     }
   }
 };
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 let closure_0 = asyncGeneratorStep(async (arg0) => {
   if (v3 === 2) {
     v3 = 3;
@@ -98,7 +98,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -127,7 +127,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
         return obj;
       } else {
         v3 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp10) {
       v3 = tmp;
@@ -135,7 +135,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
     }
   }
 });
-const batchInvocationManager = new fn(2039).BatchInvocationManager(
+const batchInvocationManager = new fn(2046).BatchInvocationManager(
   function () {
     const self = this;
     const apply = closure_0.apply;

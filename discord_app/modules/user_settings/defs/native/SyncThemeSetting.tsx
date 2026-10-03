@@ -1,5 +1,6 @@
 // discord_app/modules/user_settings/defs/native/SyncThemeSetting.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
 import UserSettingsActionCreatorsDefault from "../../../../actions/UserSettingsActionCreators.tsx";
 import actions_AnalyticsTrackingActionCreators from "../../../../actions/AnalyticsTrackingActionCreators.tsx";
@@ -9,25 +10,86 @@ import ThemeStore from "../../ThemeStore.tsx";
 import UserSettingsProtoStore from "../../UserSettingsProtoStore.tsx";
 
 require = fn;
-const AnalyticEvents = fn(1074).AnalyticEvents;
-const SettingBuilders = fn(11215);
+const AnalyticEvents = fn(1085).AnalyticEvents;
+fn(558);
+const ReactCompilerGating = fn(558);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = c.c(2);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const items = [ThemeStore];
+        const fn = function n() {
+          return sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled();
+        };
+        cResult[0] = items;
+        cResult[1] = fn;
+        tmp4 = items;
+        tmp5 = fn;
+      } else {
+        [tmp4, tmp5] = cResult;
+      }
+      return initialize.useStateFromStores(tmp4, tmp5);
+    }
+  : () => {
+      const items = [ThemeStore];
+      return initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
+    };
+const SettingBuilders = fn(11129);
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = c.c(2);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const items = [SelectivelySyncedUserSettingsStore];
+        const fn = function s() {
+          return false !== SelectivelySyncedUserSettingsStore.shouldSync("appearance");
+        };
+        cResult[0] = items;
+        cResult[1] = fn;
+        tmp4 = items;
+        tmp5 = fn;
+      } else {
+        [tmp4, tmp5] = cResult;
+      }
+      return initialize.useStateFromStores(tmp4, tmp5);
+    }
+  : () => {
+      const items = [SelectivelySyncedUserSettingsStore];
+      return initialize.useStateFromStores(
+        items,
+        () => false !== SelectivelySyncedUserSettingsStore.shouldSync("appearance"),
+      );
+    };
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["3340dY"]);
   },
-  parent: fn(7590).MobileUserSettings.APPEARANCE,
-  useIsDisabled: function useSyncThemeDisabled() {
-    const items = [ThemeStore];
-    return initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
-  },
-  useValue: function useSyncThemeAcrossClientsValue() {
-    const items = [SelectivelySyncedUserSettingsStore];
-    return initialize.useStateFromStores(
-      items,
-      () => false !== SelectivelySyncedUserSettingsStore.shouldSync("appearance"),
-    );
-  },
+  parent: fn(7634).MobileUserSettings.APPEARANCE,
+  useIsDisabled: tmp2,
+  useValue: ReactCompilerGating.isReactCompilerEnabled()
+    ? () => {
+        const cResult = c.c(2);
+        if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+          const items = [SelectivelySyncedUserSettingsStore];
+          const fn = function s() {
+            return false !== SelectivelySyncedUserSettingsStore.shouldSync("appearance");
+          };
+          cResult[0] = items;
+          cResult[1] = fn;
+          tmp4 = items;
+          tmp5 = fn;
+        } else {
+          [tmp4, tmp5] = cResult;
+        }
+        return initialize.useStateFromStores(tmp4, tmp5);
+      }
+    : () => {
+        const items = [SelectivelySyncedUserSettingsStore];
+        return initialize.useStateFromStores(
+          items,
+          () => false !== SelectivelySyncedUserSettingsStore.shouldSync("appearance"),
+        );
+      },
   onValueChange: function onSyncThemeAcrossClientsValueChange(is_sync_enabled) {
     const gradientPreset = ClientThemesBackgroundStore.gradientPreset;
     let id;

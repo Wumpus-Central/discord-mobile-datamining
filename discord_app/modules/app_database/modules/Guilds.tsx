@@ -10,7 +10,7 @@ import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 import GuildRoleStore from "../../../stores/GuildRoleStore.tsx";
 import GuildStore from "../../../stores/GuildStore.tsx";
 
-const updateJoinedAt = fn(2062).updateJoinedAt;
+const updateJoinedAt = fn(2070).updateJoinedAt;
 let closure_9 = new LoggerDefault("Guilds");
 class Guilds {
   constructor() {
@@ -84,7 +84,7 @@ prototype["handleBackgroundSync"] = function handleBackgroundSync(arg0, arg1) {
   while (iter !== undefined) {
     let tmp2 = nextResult;
     if ("unavailable" !== nextResult.data_mode) {
-      let guild = GuildStore.getGuild(tmp2.id);
+      guild = GuildStore.getGuild(tmp2.id);
       if (null != guild) {
         let unsafeMutableRoles = GuildRoleStore.getUnsafeMutableRoles(tmp2.id);
         if ("partial" === tmp2.data_mode) {
@@ -96,10 +96,10 @@ prototype["handleBackgroundSync"] = function handleBackgroundSync(arg0, arg1) {
           filterRoleDeletesResult = obj.fromServerArray(tmp2.id, tmp2.roles);
           tmp7 = importAll;
         }
-        let tmp7Result = tmp7(2058);
-        let tmp7Result3 = tmp7(2058);
+        let tmp7Result = tmp7(2066);
+        let tmp7Result3 = tmp7(2066);
         let fromBackgroundSyncResult = tmp7Result3.fromBackgroundSync(tmp2, tmp22);
-        let tmp7Result4 = tmp7(2103);
+        let tmp7Result4 = tmp7(2108);
         let result = tmp7Result4.toSerializedPartition(filterRoleDeletesResult);
         let putResult = self.put(tmp7Result.attachSerializedData(fromBackgroundSyncResult, result, GuildMemberStore.getSelfMember(tmp2.id)), arg1);
       }
@@ -131,7 +131,7 @@ prototype["handleGuildDelete"] = function handleGuildDelete(guild, arg1) {
   this.delete(guild.guild.id, arg1);
 };
 prototype["handleGuildRoleChange"] = function handleGuildRoleChange(guildId, arg1) {
-  const guild = GuildStore.getGuild(guildId.guildId);
+  guild = GuildStore.getGuild(guildId.guildId);
   const unsafeMutableRoles = GuildRoleStore.getUnsafeMutableRoles(guildId.guildId);
   if (null != guild) {
     const self = this;
@@ -145,7 +145,7 @@ prototype["handleGuildRoleChange"] = function handleGuildRoleChange(guildId, arg
   }
 };
 prototype["handleGuildRoleDelete"] = function handleGuildRoleDelete(guildId, arg1) {
-  const guild = GuildStore.getGuild(guildId.guildId);
+  guild = GuildStore.getGuild(guildId.guildId);
   if (null != guild) {
     const obj4 = {};
     const merged = Object.assign(GuildRoleStore.getUnsafeMutableRoles(guildId.guildId));
@@ -168,7 +168,7 @@ prototype["handleGuildRoleDelete"] = function handleGuildRoleDelete(guildId, arg
 prototype["handleGuildMemberAdd"] = function handleGuildMemberAdd(joinedAt, arg1) {
   if (null != joinedAt.joinedAt) {
     if (joinedAt.user.id === AuthenticationStore.getId()) {
-      const guild = GuildStore.getGuild(joinedAt.guildId);
+      guild = GuildStore.getGuild(joinedAt.guildId);
       if (null != guild) {
         const self = this;
         const obj = GuildRecordUtilsAll;
@@ -181,7 +181,7 @@ prototype["handleGuildMemberAdd"] = function handleGuildMemberAdd(joinedAt, arg1
 };
 prototype["handleGuildMemberUpdate"] = function handleGuildMemberUpdate(user, arg1) {
   if (user.user.id === AuthenticationStore.getId()) {
-    const guild = GuildStore.getGuild(user.guildId);
+    guild = GuildStore.getGuild(user.guildId);
     if (null != guild) {
       const self = this;
       const obj = GuildRecordUtilsAll;
@@ -196,7 +196,7 @@ prototype["resetInMemoryState"] = function resetInMemoryState() {
 prototype["putOne"] = function putOne(members, arg1) {
   members = members.members;
   const found = members.find((user) => user.user.id === id.getId());
-  const guild = GuildStore.getGuild(members.id);
+  guild = GuildStore.getGuild(members.id);
   if (null != members.properties) {
     ({ id, roles } = members);
     const fromSyncOperationResult = GuildRoleRecordUtilsAll.fromSyncOperation(id, roles, GuildRoleStore.getUnsafeMutableRoles(members.id));

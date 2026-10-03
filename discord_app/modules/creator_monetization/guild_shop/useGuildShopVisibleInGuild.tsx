@@ -1,36 +1,68 @@
 // discord_app/modules/creator_monetization/guild_shop/useGuildShopVisibleInGuild.tsx
+import c from "../../../../_runtime/00576_c.js";
 import Constants from "../../../Constants.tsx";
 import useRoleSubscriptionsVisibleInGuild from "../../guild_role_subscriptions/useRoleSubscriptionsVisibleInGuild.tsx";
 import CreatorMonetizationRestrictionsHooks from "../../creator_monetization_review/CreatorMonetizationRestrictionsHooks.tsx";
 import GuildProductsEligibility from "../../guild_products/GuildProductsEligibility.tsx";
 import useGuildShopPreviewVisible from "useGuildShopPreviewVisible.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const GuildFeatures = Constants.GuildFeatures;
 let result = size.fileFinishedImporting("modules/creator_monetization/guild_shop/useGuildShopVisibleInGuild.tsx");
 
-export const useGuildShopVisibleInGuild = function useGuildShopVisibleInGuild(id) {
-  id = undefined;
-  if (id != null) {
-    id = id.id;
-  }
-  const guildEligibleForGuildProducts = GuildProductsEligibility.useGuildEligibleForGuildProducts(id);
-  let id1;
-  if (id != null) {
-    id1 = id.id;
-  }
-  const roleSubscriptionsVisibleInGuild = useRoleSubscriptionsVisibleInGuild.useRoleSubscriptionsVisibleInGuild(id1);
-  const tmpResult = useRoleSubscriptionsVisibleInGuild;
-  const guildShopPreviewVisible = useGuildShopPreviewVisible.useGuildShopPreviewVisible(id);
-  const tmpResult3 = useGuildShopPreviewVisible;
-  let id2;
-  if (id != null) {
-    id2 = id.id;
-  }
-  const shouldHideGuildPurchaseEntryPoints =
-    CreatorMonetizationRestrictionsHooks.useShouldHideGuildPurchaseEntryPoints(id2).shouldHideGuildPurchaseEntryPoints;
-  return false;
-};
+export const useGuildShopVisibleInGuild = ReactCompilerGating.isReactCompilerEnabled()
+  ? (id) => {
+      c.c(5);
+      id = undefined;
+      if (id != null) {
+        id = id.id;
+      }
+      const guildEligibleForGuildProducts = GuildProductsEligibility.useGuildEligibleForGuildProducts(id);
+      let id1;
+      if (id != null) {
+        id1 = id.id;
+      }
+      const roleSubscriptionsVisibleInGuild =
+        useRoleSubscriptionsVisibleInGuild.useRoleSubscriptionsVisibleInGuild(id1);
+      const tmpResult = useRoleSubscriptionsVisibleInGuild;
+      const guildShopPreviewVisible = useGuildShopPreviewVisible.useGuildShopPreviewVisible(id);
+      const tmpResult3 = useGuildShopPreviewVisible;
+      let id2;
+      if (id != null) {
+        id2 = id.id;
+      }
+      const shouldHideGuildPurchaseEntryPoints =
+        CreatorMonetizationRestrictionsHooks.useShouldHideGuildPurchaseEntryPoints(
+          id2,
+        ).shouldHideGuildPurchaseEntryPoints;
+      return false;
+    }
+  : (id) => {
+      id = undefined;
+      if (id != null) {
+        id = id.id;
+      }
+      const guildEligibleForGuildProducts = GuildProductsEligibility.useGuildEligibleForGuildProducts(id);
+      let id1;
+      if (id != null) {
+        id1 = id.id;
+      }
+      const roleSubscriptionsVisibleInGuild =
+        useRoleSubscriptionsVisibleInGuild.useRoleSubscriptionsVisibleInGuild(id1);
+      const tmpResult = useRoleSubscriptionsVisibleInGuild;
+      const guildShopPreviewVisible = useGuildShopPreviewVisible.useGuildShopPreviewVisible(id);
+      const tmpResult3 = useGuildShopPreviewVisible;
+      let id2;
+      if (id != null) {
+        id2 = id.id;
+      }
+      const shouldHideGuildPurchaseEntryPoints =
+        CreatorMonetizationRestrictionsHooks.useShouldHideGuildPurchaseEntryPoints(
+          id2,
+        ).shouldHideGuildPurchaseEntryPoints;
+      return false;
+    };
 export const isGuildShopVisibleInGuild = function isGuildShopVisibleInGuild(id, unsafeMutableRoles) {
   id = undefined;
   if (id != null) {

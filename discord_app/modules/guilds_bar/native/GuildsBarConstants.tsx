@@ -1,9 +1,12 @@
 // discord_app/modules/guilds_bar/native/GuildsBarConstants.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
+import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarConstants.tsx");
+let ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
+const result1 = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarConstants.tsx");
 
 export const GUILD_ITEM_SIZE = 48;
 export const GUILD_LIST_WIDTH = 72;
@@ -11,7 +14,7 @@ export const GUILD_ITEM_EMPTY_SRC = { uri: "invalid" };
 export const GUILD_ITEM_HIT_SLOP = { top: 4, left: 12, bottom: 4, right: 12 };
 export const GUILD_ITEM_BADGE_SIZE = 16;
 export const GUILD_ITEM_INSET_LEFT = 12;
-export const useGuildWrapperSize = function useGuildWrapperSize() {
+export const useGuildWrapperSize = () => {
   const token = useToken.useToken(nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE);
   return token + 2 * useToken.useToken(nativeDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN);
 };

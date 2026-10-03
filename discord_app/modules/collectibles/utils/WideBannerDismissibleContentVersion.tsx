@@ -3,7 +3,7 @@ import ShopBlockType from "../../../../discord_common/js/shared/shared-constants
 import CollectiblesShopHomeStore from "../CollectiblesShopHomeStore.tsx";
 
 require = fn;
-const CollectibleShopTab = fn(1076).CollectibleShopTab;
+const CollectibleShopTab = fn(1087).CollectibleShopTab;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/utils/WideBannerDismissibleContentVersion.tsx");
 

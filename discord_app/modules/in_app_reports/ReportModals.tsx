@@ -69,7 +69,7 @@ let closure_9 = async function _submitReportForInappropriateConversationSafetyAl
     return value;
   })();
 };
-const AnalyticEvents = fn(1074).AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/in_app_reports/ReportModals.tsx");
 
@@ -183,7 +183,7 @@ export const submitHamReportForFirstDM = function submitHamReportForFirstDM() {
   }
   return applyArgumentsResult;
 };
-export const showReportModalForUser = function showReportModalForUser(user, guildId1, onSubmit, appContext) {
+export const showReportModalForUser = function showReportModalForUser(user, contextualGuildId, onSubmit, appContext) {
   const obj = { reported_user_id: user.id };
   const obj2 = AppAnalyticsUtilsDefault;
   const merged = Object.assign(obj);
@@ -191,7 +191,7 @@ export const showReportModalForUser = function showReportModalForUser(user, guil
   const obj3 = { report_type: MenuTypes.ReportNames.USER };
   const obj4 = showReportModal;
   obj4.showReportModal(
-    { name: MenuTypes.ReportNames.USER, record: user, contextualGuildId: guildId1 },
+    { name: MenuTypes.ReportNames.USER, record: user, contextualGuildId },
     {},
     { onSubmit, appContext },
   );
@@ -271,7 +271,7 @@ export const showUnauthenticatedReportModalForMessage = function showUnauthentic
 ) {
   const tmp = new MessageRecord({});
   const obj = AppAnalyticsUtilsDefault;
-  const merged = Object.assign({ message_id: "Array", channel_id: "paddingHorizontal" });
+  const merged = Object.assign({ message_id: "Symbol", channel_id: "current" });
   obj.trackWithMetadata(AnalyticEvents.IAR_MODAL_OPEN, { report_type: MenuTypes.UnauthenticatedReportNames.MESSAGE });
   const obj2 = { report_type: MenuTypes.UnauthenticatedReportNames.MESSAGE };
   const obj3 = showReportModal;

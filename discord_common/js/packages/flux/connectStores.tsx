@@ -1,5 +1,6 @@
 // discord_common/js/packages/flux/connectStores.tsx
 import BatchedStoreListener from "BatchedStoreListener.tsx";
+import c from "../../../../_runtime/00576_c.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -124,9 +125,28 @@ export default function connectStores(items, arg1, arg2) {
           return <closure_0 ref={forwardedConnectStoresRef} />;
         };
         FluxContainer.displayName = combined;
-        const forwardRefResult = React.forwardRef((childProps, forwardedConnectStoresRef) => (
-          <FluxContainer childProps={childProps} forwardedConnectStoresRef={forwardedConnectStoresRef} />
-        ));
+        const forwardRefResult = React.forwardRef(
+          items(558).isReactCompilerEnabled()
+            ? (childProps, forwardedConnectStoresRef) => {
+                const cResult = c.c(3);
+                if (cResult[0] === childProps) {
+                  if (cResult[1] === forwardedConnectStoresRef) {
+                    let tmp2 = cResult[2];
+                  }
+                  return tmp2;
+                }
+                const tmp3 = (
+                  <FluxContainer childProps={childProps} forwardedConnectStoresRef={forwardedConnectStoresRef} />
+                );
+                cResult[0] = childProps;
+                cResult[1] = forwardedConnectStoresRef;
+                cResult[2] = tmp3;
+                tmp2 = tmp3;
+              }
+            : (childProps, forwardedConnectStoresRef) => (
+                <FluxContainer childProps={childProps} forwardedConnectStoresRef={forwardedConnectStoresRef} />
+              ),
+        );
         forwardRefResult.displayName = "ForwardRef(" + combined + ")";
         return forwardRefResult;
       };

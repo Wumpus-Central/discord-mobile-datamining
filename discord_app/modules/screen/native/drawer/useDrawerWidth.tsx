@@ -1,7 +1,9 @@
 // discord_app/modules/screen/native/drawer/useDrawerWidth.tsx
+import c from "../../../../../_runtime/00576_c.js";
 import Constants from "../../../../Constants.tsx";
 import useChatLayout from "../../../chat/native/useChatLayout.tsx";
 import useBaseAppContainerDimensions from "../useBaseAppContainerDimensions.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const useChatLayoutDefault = useChatLayout;
@@ -26,15 +28,35 @@ export const getDrawerWidth = function getDrawerWidth() {
     bound = Math.min(closure_4, width - 32);
   }
 };
-export const useDrawerWidth = function useDrawerWidth() {
-  const width = useBaseAppContainerDimensionsDefault().width;
-  if (!tmp.isChatBesideChannelList) {
-    return width;
-  } else if (tmp2) {
-    let bound = sum;
-  } else {
-    const _Math = Math;
-    bound = Math.min(closure_4, width - 32);
-  }
-  tmp = useChatLayoutDefault();
-};
+export const useDrawerWidth = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = c.c(3);
+      const width = useBaseAppContainerDimensionsDefault().width;
+      const tmp2 = useChatLayoutDefault();
+      const isChatLockedOpen = tmp2.isChatLockedOpen;
+      if (!tmp2.isChatBesideChannelList) {
+        return width;
+      } else {
+        if (isChatLockedOpen) {
+          let bound = sum;
+        } else {
+          const _Math = Math;
+          bound = Math.min(closure_4, width - 32);
+        }
+        cResult[0] = isChatLockedOpen;
+        cResult[1] = width;
+        cResult[2] = bound;
+      }
+    }
+  : () => {
+      const width = useBaseAppContainerDimensionsDefault().width;
+      if (!tmp.isChatBesideChannelList) {
+        return width;
+      } else if (tmp2) {
+        let bound = sum;
+      } else {
+        const _Math = Math;
+        bound = Math.min(closure_4, width - 32);
+      }
+      tmp = useChatLayoutDefault();
+    };

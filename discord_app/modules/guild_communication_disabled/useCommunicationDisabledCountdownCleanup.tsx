@@ -1,18 +1,141 @@
 // discord_app/modules/guild_communication_disabled/useCommunicationDisabledCountdownCleanup.tsx
 import noop from "../../../_runtime/metro/00019__.js";
+import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 
-({ useEffect: c2, useRef: c3 } = noop);
-let result = size.fileFinishedImporting(
-  "modules/guild_communication_disabled/useCommunicationDisabledCountdownCleanup.tsx",
-);
+({ useEffect: c3, useRef: closure_4 } = noop);
+let result = size.fileFinishedImporting("modules/guild_communication_disabled/useCommunicationDisabledCountdownCleanup.tsx");
 
-export const useCommunicationDisabledCountdownCleanup = function useCommunicationDisabledCountdownCleanup(guildMember) {
-  importDefault = guildMember;
-  let obj = guildMember;
-  if (guildMember == null) {
+export const useCommunicationDisabledCountdownCleanup = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  _require = arg0;
+  const cResult = require("c").c(15);
+  if (cResult[0] !== arg0) {
+    let obj2 = arg0;
+    if (arg0 == null) {
+      obj2 = {};
+    }
+    cResult[0] = arg0;
+    cResult[1] = obj2;
+    let tmp3 = obj2;
+  } else {
+    tmp3 = cResult[1];
+  }
+  ({ communicationDisabledUntil, userId } = tmp3);
+  guildId = tmp3.guildId;
+  if (cResult[2] !== communicationDisabledUntil) {
+    if (null != communicationDisabledUntil) {
+      const _Date2 = Date;
+      let parsed = Date.parse(communicationDisabledUntil);
+    } else {
+      const _Date = Date;
+      parsed = Date.now();
+    }
+    cResult[2] = communicationDisabledUntil;
+    cResult[3] = parsed;
+  } else {
+    const tmp11 = userId(guildId[3])(cResult[3]);
+    const seconds = tmp11.seconds;
+    ref = ref(null);
+    if (cResult[4] === guildId) {
+      if (cResult[5] === arg0) {
+        if (cResult[6] === seconds) {
+          if (cResult[7] === userId) {
+            let tmp14 = cResult[8];
+          }
+          if (cResult[9] === communicationDisabledUntil) {
+            if (cResult[10] === guildId) {
+              if (cResult[11] === arg0) {
+                if (cResult[12] === seconds) {
+                  if (cResult[13] === userId) {
+                    let tmp15 = cResult[14];
+                  }
+                  seconds(tmp14, tmp15);
+                  return tmp11;
+                }
+              }
+            }
+          }
+          const items = [guildId, userId, seconds, communicationDisabledUntil, arg0];
+          class T {
+            constructor() {
+              if (null != closure_0) {
+                tmp = guildId;
+                if (null != guildId) {
+                  tmp2 = userId;
+                  if (null != userId) {
+                    tmp4 = seconds;
+                    num = 0;
+                    tmp5 = seconds <= 0;
+                    if (tmp5) {
+                      tmp6 = closure_4;
+                      tmp5 = null == closure_4.current;
+                    }
+                    if (tmp5) {
+                      tmp7 = closure_4;
+                      tmp8 = globalThis;
+                      _setTimeout = setTimeout;
+                      num2 = 1000;
+                      closure_4.current = setTimeout(() => { ... }, 1000);
+                    }
+                    return () => { ... };
+                  }
+                }
+              }
+              clearTimeoutResult = clearTimeout(closure_4.current);
+              return;
+            }
+          }
+          cResult[10] = guildId;
+          cResult[11] = arg0;
+          cResult[12] = seconds;
+          cResult[13] = userId;
+          cResult[14] = items;
+          tmp15 = items;
+        }
+      }
+    }
+    class T {
+      constructor() {
+        if (null != closure_0) {
+          tmp = guildId;
+          if (null != guildId) {
+            tmp2 = userId;
+            if (null != userId) {
+              tmp4 = seconds;
+              num = 0;
+              tmp5 = seconds <= 0;
+              if (tmp5) {
+                tmp6 = closure_4;
+                tmp5 = null == closure_4.current;
+              }
+              if (tmp5) {
+                tmp7 = closure_4;
+                tmp8 = globalThis;
+                _setTimeout = setTimeout;
+                num2 = 1000;
+                closure_4.current = setTimeout(() => { ... }, 1000);
+              }
+              return () => { ... };
+            }
+          }
+        }
+        clearTimeoutResult = clearTimeout(closure_4.current);
+        return;
+      }
+    }
+    cResult[4] = guildId;
+    cResult[5] = arg0;
+    cResult[6] = seconds;
+    cResult[7] = userId;
+    cResult[8] = T;
+    tmp14 = T;
+  }
+}) : ((arg0) => {
+  closure_0 = arg0;
+  let obj = arg0;
+  if (arg0 == null) {
     obj = {};
   }
   ({ communicationDisabledUntil, userId } = obj);
@@ -24,11 +147,11 @@ export const useCommunicationDisabledCountdownCleanup = function useCommunicatio
     const _Date = Date;
     parsed = Date.now();
   }
-  const tmpResult = require("useCountdown")(parsed);
+  const tmpResult = userId(guildId[3])(parsed);
   const seconds = tmpResult.seconds;
-  seconds(null);
-  const items = [guildId, userId, seconds, communicationDisabledUntil, guildMember];
-  guildId(() => {
+  const tmp = userId(guildId[3]);
+  const items = [guildId, userId, seconds, communicationDisabledUntil, arg0];
+  seconds(() => {
     if (null != closure_0) {
       if (null != guildId) {
         if (null != userId) {
@@ -39,7 +162,7 @@ export const useCommunicationDisabledCountdownCleanup = function useCommunicatio
           if (tmp5) {
             const _setTimeout = setTimeout;
             ref.current = setTimeout(() => {
-              const result = closure_0(userId[2]).clearGuildMemberTimeout(guildId, closure_1_1);
+              const result = userId(guildId[4]).clearGuildMemberTimeout(closure_1_2, closure_1_1);
             }, 1000);
           }
           return () => {
@@ -55,4 +178,4 @@ export const useCommunicationDisabledCountdownCleanup = function useCommunicatio
     clearTimeout(ref.current);
   }, items);
   return tmpResult;
-};
+});

@@ -32,6 +32,7 @@ const serverOnboardingSetupProgressSkipStore = new ServerOnboardingSetupProgress
     closure_3 = new Set(closure_3).add(guildId.guildId);
   },
 });
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/ServerOnboardingSetupProgressSkipStore.tsx");
 
@@ -39,13 +40,41 @@ export default serverOnboardingSetupProgressSkipStore;
 export const skipServerOnboardingSetupProgress = function skipServerOnboardingSetupProgress(guildId) {
   DispatcherDefault.dispatch({ type: "SERVER_ONBOARDING_SETUP_PROGRESS_SKIP", guildId });
 };
-export const useIsServerOnboardingSetupProgressSkipped = function useIsServerOnboardingSetupProgressSkipped(arg0) {
-  _require = arg0;
-  const items = [serverOnboardingSetupProgressSkipStore];
-  const items1 = [arg0];
-  return require("initialize").useStateFromStores(
-    items,
-    () => serverOnboardingSetupProgressSkipStore.isSkipped(closure_0),
-    items1,
-  );
-};
+export const useIsServerOnboardingSetupProgressSkipped = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      _require = arg0;
+      const cResult = require("c").c(4);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const items = [serverOnboardingSetupProgressSkipStore];
+        cResult[0] = items;
+        let first = items;
+      } else {
+        first = cResult[0];
+      }
+      if (cResult[1] !== arg0) {
+        const fn = function n() {
+          return serverOnboardingSetupProgressSkipStore.isSkipped(closure_0);
+        };
+        const items1 = [arg0];
+        cResult[1] = arg0;
+        cResult[2] = fn;
+        cResult[3] = items1;
+        let tmp7 = items1;
+        let tmp6 = fn;
+      } else {
+        tmp6 = cResult[2];
+        tmp7 = cResult[3];
+      }
+      const obj = require("c");
+      return require("initialize").useStateFromStores(first, tmp6, tmp7);
+    }
+  : (arg0) => {
+      _require = arg0;
+      const items = [serverOnboardingSetupProgressSkipStore];
+      const items1 = [arg0];
+      return require("initialize").useStateFromStores(
+        items,
+        () => serverOnboardingSetupProgressSkipStore.isSkipped(closure_0),
+        items1,
+      );
+    };

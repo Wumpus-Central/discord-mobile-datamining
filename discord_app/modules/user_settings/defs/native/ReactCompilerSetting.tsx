@@ -1,4 +1,5 @@
 // discord_app/modules/user_settings/defs/native/ReactCompilerSetting.tsx
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
 import WrenchIcon from "../../../../design/components/Icon/native/redesign/generated/WrenchIcon.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
@@ -10,10 +11,14 @@ const obj = {
   parent: null,
   IconComponent: WrenchIcon.WrenchIcon,
   useTrailing() {
-    return "Enabled";
+    let str = "Disabled";
+    if (obj.isReactCompilerEnabled()) {
+      str = "Enabled";
+    }
+    return str;
   },
   usePredicate() {
-    return false;
+    return ReactCompilerGating.isReactCompilerBuild();
   },
 };
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/ReactCompilerSetting.tsx");
@@ -25,9 +30,13 @@ export default SettingBuilders.createStatic({
   parent: null,
   IconComponent: WrenchIcon.WrenchIcon,
   useTrailing() {
-    return "Enabled";
+    let str = "Disabled";
+    if (obj.isReactCompilerEnabled()) {
+      str = "Enabled";
+    }
+    return str;
   },
   usePredicate() {
-    return false;
+    return ReactCompilerGating.isReactCompilerBuild();
   },
 });

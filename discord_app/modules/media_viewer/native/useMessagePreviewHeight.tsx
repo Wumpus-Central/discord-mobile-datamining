@@ -1,19 +1,20 @@
 // discord_app/modules/media_viewer/native/useMessagePreviewHeight.tsx
-import 00560__ from "../../../../_runtime/metro/00560__.js";
+import 00570__ from "../../../../_runtime/metro/00570__.js";
+import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 
-const useMessagePreviewHeightStore = module_560.create(() => ({ collapsedHeight: 0, expandedHeight: 0 }));
-const result = size.fileFinishedImporting("modules/media_viewer/native/useMessagePreviewHeight.tsx");
+const useMessagePreviewHeightStore = module_570.create(() => ({ collapsedHeight: 0, expandedHeight: 0 }));
+let ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating.isReactCompilerEnabled();
+let ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
+const result2 = size.fileFinishedImporting("modules/media_viewer/native/useMessagePreviewHeight.tsx");
 
 export { useMessagePreviewHeightStore };
-export const useMessagePreviewCollapsedheight = function useMessagePreviewCollapsedheight() {
-  return obj().collapsedHeight;
-};
-export const useMessagePreviewExpandedHeight = function useMessagePreviewExpandedHeight() {
-  return obj().expandedHeight;
-};
+export const useMessagePreviewCollapsedheight = () => obj().collapsedHeight;
+export const useMessagePreviewExpandedHeight = () => obj().expandedHeight;
 export const setMesssagePreviewHeight = function setMesssagePreviewHeight(arg0) {
   _require = arg0;
   require("ReactBatchUpdates").batchUpdates(() => obj.setState(closure_0));

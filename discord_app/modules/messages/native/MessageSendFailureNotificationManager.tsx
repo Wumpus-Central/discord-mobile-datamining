@@ -72,9 +72,9 @@ function handleMessageCreate(message) {
     }, 3000);
   }
 }
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ InAppNotificationTypes: closure_7, MessageStates: closure_8 } = Constants);
-const LocalNotificationTypes = fn(8695).LocalNotificationTypes;
+const LocalNotificationTypes = fn(8707).LocalNotificationTypes;
 const prototype = function MessageSendFailureNotificationManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { MESSAGE_CREATE: handleMessageCreate, MESSAGE_SEND_FAILED: handleMessageSendFailure };

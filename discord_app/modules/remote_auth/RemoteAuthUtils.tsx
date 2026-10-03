@@ -53,6 +53,6 @@ export const base64Encode = function base64Encode(arg0) {
     .replace(/\+/g, "-")
     .replace(/={1,2}$/, "");
 };
-export const base64Decode = function base64Decode(match) {
-  return Uint8Array.from(atob(match), (str) => str.charCodeAt(0));
+export const base64Decode = function base64Decode(placeholder) {
+  return Uint8Array.from(atob(placeholder), (str) => str.charCodeAt(0));
 };

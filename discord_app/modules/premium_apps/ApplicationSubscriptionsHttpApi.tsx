@@ -46,7 +46,7 @@ let closure_8 = async function _fetchEligibleApplicationSubscriptionGuilds() {
     return value.body;
   })();
 };
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium_apps/ApplicationSubscriptionsHttpApi.tsx");
 

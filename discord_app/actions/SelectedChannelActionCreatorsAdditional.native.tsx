@@ -1,6 +1,6 @@
 // discord_app/actions/SelectedChannelActionCreatorsAdditional.native.tsx
 import DispatcherDefault from "../Dispatcher.tsx";
-import v1 from "../../_runtime/01255_v1.js";
+import v1 from "../../_runtime/01266_v1.js";
 import ChannelStore from "../stores/ChannelStore.tsx";
 import GuildStore from "../stores/GuildStore.tsx";
 import GuildVerificationStore from "../stores/GuildVerificationStore.tsx";
@@ -13,9 +13,9 @@ import VoiceStateStore from "../stores/VoiceStateStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const STAGE_BOOSTING_SHEET_KEY = fn(5912).STAGE_BOOSTING_SHEET_KEY;
+const STAGE_BOOSTING_SHEET_KEY = fn(5571).STAGE_BOOSTING_SHEET_KEY;
 const size = fn(2);
-const result = size.fileFinishedImporting("actions/SelectedChannelActionCreatorsAdditional.native.tsx");
+let result = size.fileFinishedImporting("actions/SelectedChannelActionCreatorsAdditional.native.tsx");
 
 export const getChannelSelectionOrigin = function getChannelSelectionOrigin() {
   let guildId = SelectedGuildStore.getGuildId();
@@ -55,27 +55,31 @@ export const selectVoiceChannelAdditional = function selectVoiceChannelAdditiona
   const currentUser = UserStore.getCurrentUser();
   if (null != currentUser) {
     if (null != channel) {
-      const obj8 = require("ChannelUtils");
+      const obj9 = require("ChannelUtils");
       const check = flag4.getCheck(channel.guild_id);
       if (!check.canChat) {
-        if (!tmp14Result.canLurkerListen(channel)) {
-          return tmp14(tmp15[11]).unverifiedVoiceGate(check);
+        if (!tmp17Result.canLurkerListen(channel)) {
+          return tmp17(tmp18[11]).unverifiedVoiceGate(check);
         }
-        tmp14Result = tmp14(tmp15[10]);
+        tmp17Result = tmp17(tmp18[10]);
       }
       const isChannelFullResult = require("ChannelUtils").isChannelFull(channel, VoiceStateStore, flag3);
       const tmp2 = importDefault;
       if (isChannelFullResult) {
         if (channel.isGuildStageVoice()) {
-          if (tmp14Result4.getStageHasMedia(channel.id)) {
+          if (tmp17Result4.getStageHasMedia(channel.id)) {
             let obj2 = { channel };
-            tmp2(tmp15[14]).openLazy(tmp14(tmp15[16])(tmp15[15], tmp15.paths), STAGE_BOOSTING_SHEET_KEY, obj2);
-            const tmp2Result = tmp2(tmp15[14]);
+            tmp2(tmp18[14]).openLazy(tmp17(tmp18[16])(tmp18[15], tmp18.paths), STAGE_BOOSTING_SHEET_KEY, obj2);
+            const tmp2Result = tmp2(tmp18[14]);
           }
-          tmp14Result4 = tmp14(tmp15[13]);
+          tmp17Result4 = tmp17(tmp18[13]);
         }
       }
       const tmp4 = require("canJoinVoiceChannel")(channel, PermissionStore);
+    }
+    if (flag) {
+      const result = require("applyBackgroundOption").applyInitialVideoBackgroundOption();
+      const obj6 = require("applyBackgroundOption");
     }
     require("collectCallFeedback")(
       () => {

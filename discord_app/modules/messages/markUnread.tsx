@@ -20,7 +20,7 @@ let closure_11 = async function _markUnread(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -95,7 +95,7 @@ let closure_11 = async function _markUnread(arg0) {
             const toArrayResult = messages.toArray();
           }
           c5 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -126,8 +126,8 @@ let closure_11 = async function _markUnread(arg0) {
     }
   }
 };
-const shouldBadgeMessage = fn(4860).shouldBadgeMessage;
-const Endpoints = fn(1074).Endpoints;
+const shouldBadgeMessage = fn(4905).shouldBadgeMessage;
+const Endpoints = fn(1085).Endpoints;
 let closure_10 = new LoggerDefault("markUnread");
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/markUnread.tsx");

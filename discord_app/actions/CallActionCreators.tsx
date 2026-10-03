@@ -3,8 +3,8 @@ import DispatcherDefault from "../Dispatcher.tsx";
 import util from "../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../utils/AnalyticsUtils.tsx";
 import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import AlertActionCreatorsDefault from "AlertActionCreators.tsx";
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators.tsx";
+import AlertActionCreatorsDefault from "AlertActionCreators.tsx";
 import useCanRing from "../modules/calls/useCanRing.tsx";
 import ChannelStore from "../stores/ChannelStore.tsx";
 import RelationshipStore from "../stores/RelationshipStore.tsx";
@@ -13,7 +13,7 @@ import UserStore from "../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ Endpoints: metroRequire, AnalyticEvents: closure_7, ChannelTypesSets: closure_8 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/CallActionCreators.tsx");
@@ -78,7 +78,7 @@ export default {
       }
     }
   },
-  ring(channelId, items, gdm_invite) {
+  ring(channelId, items, voice_panel_floating_cta) {
     const channel = ChannelStore.getChannel(channelId);
     if (null != channel) {
       const CALLABLE = constants2.CALLABLE;
@@ -91,7 +91,7 @@ export default {
           oldFormErrors: true,
           rejectWithError: true,
         };
-        const obj2 = { recipients: items, analytics_location: gdm_invite };
+        const obj2 = { recipients: items, analytics_location: voice_panel_floating_cta };
         request.body = obj2;
         HTTP.post(request);
       } else if (tmp12) {

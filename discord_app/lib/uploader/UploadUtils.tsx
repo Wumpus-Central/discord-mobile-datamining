@@ -1,7 +1,7 @@
 // discord_app/lib/uploader/UploadUtils.tsx
-import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import js_shim_shim from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
-import Upload from "Upload.tsx";
+import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import UploadPlatform from "../../modules/media_uploads/UploadPlatform.tsx";
 import AttachmentFile from "../../utils/AttachmentFile.native.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -77,7 +77,7 @@ LibdiscoreHttpClient.prototype["doUpload"] = function doUpload(body, arg1) {
 
 export const doesImageMatchUpload = function doesImageMatchUpload(image, id) {
   if (id.id !== image.uri) {
-    if (id.item.platform === Upload.UploadPlatform.REACT_NATIVE) {
+    if (id.item.platform === UploadPlatform.UploadPlatform.REACT_NATIVE) {
       const item = id.item;
       const filename = image.filename;
       let tmp3 = item.originalUri === image.uri;
@@ -111,7 +111,7 @@ export const calculateProgress = function calculateProgress(loaded, currentSize)
 };
 export { DefaultHttpClient };
 export const canUploadNatively = function canUploadNatively(platform) {
-  let fileIsInAppDirResult = platform.platform === Upload.UploadPlatform.REACT_NATIVE;
+  let fileIsInAppDirResult = platform.platform === UploadPlatform.UploadPlatform.REACT_NATIVE;
   if (fileIsInAppDirResult) {
     fileIsInAppDirResult = null != platform.uri;
   }

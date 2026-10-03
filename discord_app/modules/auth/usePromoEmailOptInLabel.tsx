@@ -1,14 +1,46 @@
 // discord_app/modules/auth/usePromoEmailOptInLabel.tsx
+import c from "../../../_runtime/00576_c.js";
 import util from "../../intl/index.native.tsx";
+import RegistrationEmailOptInCopyExperimentDefault from "RegistrationEmailOptInCopyExperiment.tsx";
+import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/auth/usePromoEmailOptInLabel.tsx");
 
-export const usePromoEmailOptInLabel = function usePromoEmailOptInLabel(ylFCLt, REGISTER_PROMO_EMAIL_CHECKBOX_MOBILE) {
-  let LSoXK5 = ylFCLt;
-  const intl = util.intl;
-  if (obj.useConfig(obj2).trackingCopy) {
-    LSoXK5 = util.t.LSoXK5;
-  }
-  return intl.string(LSoXK5);
-};
+export const usePromoEmailOptInLabel = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0, location) => {
+      const cResult = c.c(5);
+      if (cResult[0] !== location) {
+        const obj2 = { location };
+        cResult[0] = location;
+        cResult[1] = obj2;
+        let tmp4 = obj2;
+      } else {
+        tmp4 = cResult[1];
+      }
+      const trackingCopy = RegistrationEmailOptInCopyExperimentDefault.useConfig(tmp4).trackingCopy;
+      if (cResult[2] === arg0) {
+        if (cResult[3] === trackingCopy) {
+          let tmp5 = cResult[4];
+        }
+        return tmp5;
+      }
+      const intl = util.intl;
+      let LSoXK5 = arg0;
+      if (trackingCopy) {
+        LSoXK5 = util.t.LSoXK5;
+      }
+      const stringResult = intl.string(LSoXK5);
+      cResult[2] = arg0;
+      cResult[3] = trackingCopy;
+      cResult[4] = stringResult;
+      tmp5 = stringResult;
+    }
+  : (arg0, location) => {
+      let LSoXK5 = arg0;
+      const intl = util.intl;
+      if (obj.useConfig(obj2).trackingCopy) {
+        LSoXK5 = util.t.LSoXK5;
+      }
+      return intl.string(LSoXK5);
+    };

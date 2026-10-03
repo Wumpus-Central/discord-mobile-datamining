@@ -17,7 +17,7 @@ import MessageStore from "../../../stores/MessageStore.tsx";
 import PermissionStore from "../../../stores/PermissionStore.tsx";
 import AppStateStore from "../../../stores/native/AppStateStore.tsx";
 import MediaPlaybackPanelConstants from "../../media_panel/native/MediaPlaybackPanelConstants.tsx";
-import 00560__ from "../../../../_runtime/metro/00560__.js";
+import 00570__ from "../../../../_runtime/metro/00570__.js";
 import LifecycleManager from "../../../lib/LifecycleManager.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -29,22 +29,22 @@ const ActivityPanelModes = ActivityPanelConstants.ActivityPanelModes;
 ({ PLAYBACK_COMPLETION_DETECTION_TOLERANCE: map1, PLAYBACK_PROGRESS_UPDATE_INTERVAL: closure_14 } = MediaPlaybackPanelConstants);
 const Permissions = Constants2.Permissions;
 let closure_16 = new LoggerDefault("MediaPlayerManager");
-const useMediaPlayerManagerStore = module_560.create((arg0) => {
+const useMediaPlayerManagerStore = module_570.create((arg0) => {
   closure_0 = arg0;
   const obj = {
-    activeMediaPlayerSource: "HermesInternal",
-    mediaSourceMessage: "flexDirection",
-    canAccessMedia: "disabled",
+    activeMediaPlayerSource: "IconComponent",
+    mediaSourceMessage: "Set",
+    canAccessMedia: "done",
     isPlaying: false,
     wasPipClosedByUser: null,
     progress: null,
-    rate: "flex",
-    showPip: "new_moon",
+    rate: "Reflect",
+    showPip: "M7 9H6V10H7V9Z",
     closePip() {
       ReactBatchUpdates.batchUpdates(() => closure_1_0({ showPip: false }));
     },
     displayedMediaItemIdsPerChannel: {},
-    currentlyDisplayedChannelId: false
+    currentlyDisplayedChannelId: 1358954884
   };
   return obj;
 });
@@ -115,7 +115,7 @@ prototype["_initialize"] = function _initialize() {
 };
 prototype["updateMediaPermissions"] = function updateMediaPermissions() {
   const self = this;
-  self(1248).batchUpdates(() => {
+  self(1259).batchUpdates(() => {
     const activeMediaPlayerSource = obj.getState().activeMediaPlayerSource;
     let channelId;
     if (activeMediaPlayerSource != null) {
@@ -171,13 +171,13 @@ prototype["userDidClosePip"] = function userDidClosePip() {
 };
 prototype["pauseAndClosePip"] = function pauseAndClosePip() {
   const self = this;
-  self(1248).batchUpdates(() => {
+  self(1259).batchUpdates(() => {
     self.pauseCurrentPlayer();
     obj.setState({ wasPipClosedByUser: true, showPip: false });
   });
 };
 prototype["handleVoicePanelStateUpdated"] = function handleVoicePanelStateUpdated() {
-  const state = VoicePanelStore.getState();
+  state = VoicePanelStore.getState();
   let result = state.isVoicePanelFullscreen();
   if (!result) {
     result = state.voicePanelsPIP.size > 0;
@@ -205,7 +205,7 @@ prototype["handleMediaPlayerPlaybackRateChanged"] = function handleMediaPlayerPl
       id = source.id;
     }
     closure_16.verbose("Playback rate changed to " + _require + ": " + id);
-    const state = obj.getState();
+    state = obj.getState();
     ({ activeMediaPlayerSource, isPlaying, wasPipClosedByUser } = state);
     if (tmp9(activeMediaPlayerSource, source)) {
       const obj2 = { rate: _require, isPlaying: 0 !== _require, wasPipClosedByUser: null };
@@ -232,7 +232,7 @@ prototype["handleMediaPlayerPlaybackRateChanged"] = function handleMediaPlayerPl
 prototype["handleMediaPlayerPlaybackProgressUpdated"] = function handleMediaPlayerPlaybackProgressUpdated(arg0) {
   ({ source: require, time: importDefault, duration: dependencyMap } = arg0);
   ReactBatchUpdates.batchUpdates(() => {
-    const state = obj.getState();
+    state = obj.getState();
     if (tmp2(state.activeMediaPlayerSource, _require)) {
       const currentlyDisplayedChannelId = state.currentlyDisplayedChannelId;
       if (state.showPip) {
@@ -241,7 +241,7 @@ prototype["handleMediaPlayerPlaybackProgressUpdated"] = function handleMediaPlay
           const obj2 = { time, duration: dependencyMap, isCompleted: null };
           let flag;
           if (dependencyMap > 0) {
-            flag = dependencyMap - time <= map1;
+            flag = dependencyMap - time <= __initData2;
           }
           if (flag == null) {
             flag = false;
@@ -275,16 +275,16 @@ prototype["handleMediaPlayerPlaybackProgressUpdated"] = function handleMediaPlay
 prototype["handleMediaPlayerPlaybackSourceChanged"] = function handleMediaPlayerPlaybackSourceChanged(source) {
   const self = this;
   source = source.source;
-  source(1248).batchUpdates(() => {
+  source(1259).batchUpdates(() => {
     let id;
-    const state = obj.getState();
+    state = obj.getState();
     if (source != null) {
       id = source.id;
     }
     closure_16.verbose("Playback source changed: " + id);
     const activeMediaPlayerSource = state.activeMediaPlayerSource;
     if (!tmp6(activeMediaPlayerSource, source)) {
-      const obj2 = { activeMediaPlayerSource: source, mediaSourceMessage: null, progress: "disabled", rate: false, isPlaying: false, wasPipClosedByUser: 0 };
+      const obj2 = { activeMediaPlayerSource: source, mediaSourceMessage: null, progress: "done", rate: false, isPlaying: false, wasPipClosedByUser: 0 };
       let orFetchMediaSourceMessage;
       if (null != source) {
         orFetchMediaSourceMessage = self.getOrFetchMediaSourceMessage(source);
@@ -388,7 +388,7 @@ prototype["handleMediaPlayerViewDidDisappear"] = function handleMediaPlayerViewD
 };
 function updateDisplayState() {
   ReactBatchUpdates.batchUpdates(() => {
-    const state = useMediaPlayerManagerStore.getState();
+    state = useMediaPlayerManagerStore.getState();
     ({ displayedMediaItemIdsPerChannel, activeMediaPlayerSource } = state);
     if (undefined === activeMediaPlayerSource) {
       activeMediaPlayerSource = {};
@@ -476,6 +476,6 @@ export default updateDisplayState1;
 export { useMediaPlayerManagerStore };
 export const isPlaybackComplete = function isPlaybackComplete(duration) {
   if (duration.duration > 0) {
-    return duration.duration - duration.time <= map1;
+    return duration.duration - duration.time <= __initData2;
   }
 };

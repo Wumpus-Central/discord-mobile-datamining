@@ -1,7 +1,7 @@
 // discord_app/modules/games/autocomplete/GameAutocompleteStore.tsx
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
-import privDefault from "../../../../_runtime/01439_priv.js";
+import privDefault from "../../../../_runtime/01444_priv.js";
 import GameAutocompleteTypes from "GameAutocompleteTypes.tsx";
 import GameAutocompleteUtils from "GameAutocompleteUtils.tsx";
 
@@ -50,9 +50,9 @@ prototype["getClosestResults"] = function getClosestResults(result) {
 prototype["shouldSuppressFetch"] = function shouldSuppressFetch(query, arg1) {
   let DEFAULT = arg1;
   if (arg1 === undefined) {
-    DEFAULT = DEFAULT(5605).GameAutocompleteProfile.DEFAULT;
+    DEFAULT = DEFAULT(5893).GameAutocompleteProfile.DEFAULT;
   }
-  const result = DEFAULT(5606).normalizeGameAutocompleteQuery(query);
+  const result = DEFAULT(5894).normalizeGameAutocompleteQuery(query);
   if (null == result) {
     return false;
   } else {
@@ -64,12 +64,12 @@ prototype["shouldSuppressFetch"] = function shouldSuppressFetch(query, arg1) {
       result1 = !set.has(combined);
     }
     if (result1) {
-      result1 = tmp3(5606).shouldSuppressAutocompleteFetch(result, (arg0) => closure_3.peek("" + DEFAULT + ":" + arg0));
-      const tmp3Result = tmp3(5606);
+      result1 = tmp3(5894).shouldSuppressAutocompleteFetch(result, (arg0) => closure_3.peek("" + DEFAULT + ":" + arg0));
+      const tmp3Result = tmp3(5894);
     }
     return result1;
   }
-  const obj = DEFAULT(5606);
+  const obj = DEFAULT(5894);
   tmp3 = DEFAULT;
 };
 prototype["isFetching"] = function isFetching(query) {

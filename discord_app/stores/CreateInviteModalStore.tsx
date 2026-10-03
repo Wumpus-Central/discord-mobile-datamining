@@ -16,7 +16,7 @@ function updateWithLatestInvite(channelId, arg1) {
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  const guild = GuildStore.getGuild(guild_id);
+  guild = GuildStore.getGuild(guild_id);
   let maxAge = DefaultInviteExpirationExperiments.getDefaultInviteExpiration({ guild });
   const invite = InstantInviteStore.getInvite(channelId, { targetType, targetUserId, targetApplicationId });
   _null = invite;
@@ -68,7 +68,7 @@ function updateWithLatestInvite(channelId, arg1) {
   closure_6 = obj2;
   closure_7 = obj2;
 }
-const FormStates = fn(1074).FormStates;
+const FormStates = fn(1085).FormStates;
 InstantInviteUtilsDefault.INVITE_OPTIONS_UNLIMITED.value;
 let CLOSED = FormStates.CLOSED;
 let c15 = false;

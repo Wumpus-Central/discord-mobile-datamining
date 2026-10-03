@@ -1,6 +1,6 @@
 // discord_app/modules/messages/MessageRecordUtils.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
-import _modDef4450 from "../../../_runtime/metro/04450__.js";
+import _modDef4461 from "../../../_runtime/metro/04461__.js";
 import findCodedLinksDefault from "../coded_links/findCodedLinks.tsx";
 import useMessageAuthor from "useMessageAuthor.tsx";
 import isMessageMentioned from "isMessageMentioned.tsx";
@@ -195,11 +195,11 @@ function createMessageRecord(message, arg1) {
     if (null != call.ended_timestamp) {
       const _Date = Date;
       const date = new Date(call.ended_timestamp);
-      tmp39Result = _modDef4450(date);
+      tmp39Result = _modDef4461(date);
     }
     let durationResult = null;
     if (null != tmp39Result) {
-      durationResult = _modDef4450.duration(tmp39Result.diff(tmp35));
+      durationResult = _modDef4461.duration(tmp39Result.diff(tmp35));
     }
     const obj11 = { participants: call.participants, endedTimestamp: tmp39Result, duration: durationResult };
     tmp36 = obj11;
@@ -312,10 +312,10 @@ function createMessageRecord(message, arg1) {
   });
   const tmp9Result4 = GiftCodeUtils;
 }
-let MessageRecord = fn(4509);
+let MessageRecord = fn(4520);
 ({ MessageSnapshotRecord: closure_4, MinimalMessageRecord: hasOwnProperty } = MessageRecord);
 let MessageRecord = MessageRecord_mod;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ MessageFlags: closure_11, MessageTypes: closure_12, MessageTypesSets: map1 } = Constants);
 const importDefaultResult1 = new UserRecord({ id: "???", username: "???" });
 const size = fn(2);
@@ -349,11 +349,11 @@ export const updateMessageRecord = function updateMessageRecord(message, message
         if (null != call.ended_timestamp) {
           const _Date = Date;
           const date = new Date(call.ended_timestamp);
-          tmp = _modDef4450(date);
+          tmp = _modDef4461(date);
         }
         let durationResult = null;
         if (null != tmp) {
-          durationResult = _modDef4450.duration(tmp.diff(tmp46));
+          durationResult = _modDef4461.duration(tmp.diff(tmp46));
         }
         const obj3 = { participants: call.participants, endedTimestamp: tmp, duration: durationResult };
         tmp13 = obj3;

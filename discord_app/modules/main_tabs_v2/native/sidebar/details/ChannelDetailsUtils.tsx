@@ -24,10 +24,10 @@ export const getChannelDetailsButtons = function getChannelDetailsButtons(channe
   return found;
 };
 export const navigateToChannelDetailsScreen = function navigateToChannelDetailsScreen(
-  navigate,
+  navigation,
   PERMISSIONS,
   channelId,
   source,
 ) {
-  navigate.navigate("sidebar", { screen: PERMISSIONS, channelId, source });
+  navigation.navigate("sidebar", { screen: PERMISSIONS, channelId, source });
 };

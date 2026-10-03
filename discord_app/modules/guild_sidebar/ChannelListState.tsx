@@ -232,20 +232,20 @@ function shouldShowInRecents(guild, record, initializationData) {
     return false;
   }
 }
-const ChannelRecord = fn(2048);
+const ChannelRecord = fn(2055);
 ({
   ChannelRecordBase: closure_14,
   isGuildReadableType: closure_15,
   isThread: closure_16,
   THREADED_CHANNEL_TYPES: closure_17,
 } = ChannelRecord);
-const ChannelListGuildActionRow = fn(7142).ChannelListGuildActionRow;
-const Constants = fn(1074);
+const ChannelListGuildActionRow = fn(7045).ChannelListGuildActionRow;
+const Constants = fn(1085);
 ({ ChannelTypes: closure_30, GuildFeatures: items } = Constants);
-const ChannelFlags = fn(2051).ChannelFlags;
-const Permissions = fn(1085).Permissions;
+const ChannelFlags = fn(2058).ChannelFlags;
+const Permissions = fn(1096).Permissions;
 let c34 = "placeholder-channel-id";
-const __initData13 = {
+const __initData8 = {
   CannotShow: 1,
   [1]: "CannotShow",
   DoNotShow: 2,
@@ -285,7 +285,7 @@ class ChannelListImpl {
       rows: null,
       firstVoiceChannel: "Array",
       allChannelsById: 0,
-      version: "asc",
+      version: "System",
     });
     merged.id = global;
     obj = closure_25;
@@ -1430,7 +1430,7 @@ prototype5["updateChannel"] = function updateChannel(type, initializationData) {
   if (this.enabled) {
     if (value2(type.type)) {
       return null != self.channels[type.parent_id] && self.updateShownChannelIds(self.channels[type.parent_id]);
-    } else if (__initData(type.type)) {
+    } else if (closure_1_15(type.type)) {
       if (null == self.channels[type.id]) {
         self.channels[type.id] = new RecentlyActiveChannelListChannel(self, type, initializationData);
         self.invalidate();
@@ -1930,7 +1930,7 @@ prototype10["updateChannel"] = function updateChannel(record, arg1) {
     self.record = record;
     flag = true;
   }
-  const state = self.computeState(arg1);
+  state = self.computeState(arg1);
   let isEqualResult = state.renderLevel === self.renderLevel;
   if (isEqualResult) {
     isEqualResult = _modDef12.isEqual(state.threadIds, self.threadIds);
@@ -1978,7 +1978,7 @@ ChannelListChannelImpl.prototype["computeState"] = function computeState(arg0) {
     }
   }
   const parent_id = self.record.parent_id;
-  const guild = self.category.guild;
+  guild = self.category.guild;
   const favoriteChannelIds = guild.favoriteChannelIds;
   if (favoriteChannelIds.has(self.record.id)) {
     const obj3 = { renderLevel: closure_35.CannotShow, threadIds: [] };
@@ -2046,7 +2046,7 @@ ChannelListChannelImpl.prototype["computeState"] = function computeState(arg0) {
                     const record2 = self.record;
                     if (!record2.isGuildVocal()) {
                       if (self.record.type !== constants.GUILD_STORE) {
-                        if (__initData(self.record.type)) {
+                        if (closure_1_15(self.record.type)) {
                           if (!ReadStateStore.hasUnread(self.record.id)) {
                             const obj11 = { renderLevel: closure_35.WouldShowIfUncollapsed, threadIds: tmp12 };
                             return obj11;
@@ -2336,7 +2336,7 @@ prototype12["nonPositionalChannelIdUpdate"] = function nonPositionalChannelIdUpd
       const self = this;
       let tmp4 = null != this.guilds[basicChannel.guild_id];
       if (tmp4) {
-        let result = basicChannel instanceof closure_1_14;
+        let result = basicChannel instanceof state;
         let tmp7 = basicChannel;
         if (!result) {
           const channel = ChannelStore.getChannel(channelId);

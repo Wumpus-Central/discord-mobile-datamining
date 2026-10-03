@@ -1,4 +1,5 @@
 // discord_app/modules/notification_center/native/ForYouSuggestedFriendsSectionHeader.tsx
+import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
@@ -7,7 +8,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = {
   container: {
     borderTopWidth: 1,
@@ -22,7 +23,7 @@ let obj2 = {
   noDivider: { borderTopWidth: 0, marginTop: 0 },
   text: null,
 };
-const obj3 = {
+let obj3 = {
   borderTopWidth: 1,
   borderTopColor: nativeDefault.colors.BORDER_SUBTLE,
   marginTop: 12,
@@ -34,27 +35,84 @@ const obj3 = {
 };
 obj2.text = { marginTop: nativeDefault.space.PX_16 };
 let closure_4 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+const obj4 = { marginTop: nativeDefault.space.PX_16 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notification_center/native/ForYouSuggestedFriendsSectionHeader.tsx");
 
-export default function ForYouSuggestedFriendsSectionHeader(showDivider) {
-  showDivider = showDivider.showDivider;
-  const tmp = closure_4();
-  const items = [tmp.container];
-  let noDivider = !showDivider;
-  if (!showDivider) {
-    noDivider = tmp.noDivider;
-  }
-  const obj = { style: items, children: null };
-  items[1] = noDivider;
-  const obj2 = { style: tmp.text, color: "text-muted", variant: "text-sm/semibold", children: null };
-  const intl = util.intl;
-  obj2.children = intl.string(util.t["1uAmCw"]);
-  obj.children = jsx(Text_Text.Text, {
-    style: tmp.text,
-    color: "text-muted",
-    variant: "text-sm/semibold",
-    children: null,
-  });
-  return <View style={items}>{null}</View>;
-}
+export default ReactCompilerGating.isReactCompilerEnabled()
+  ? (showDivider) => {
+      const cResult = c.c(9);
+      showDivider = showDivider.showDivider;
+      const tmp4 = closure_4();
+      let noDivider = !showDivider;
+      if (!showDivider) {
+        noDivider = tmp4.noDivider;
+      }
+      if (cResult[0] === tmp4.container) {
+        if (cResult[1] === noDivider) {
+          let tmp5 = cResult[2];
+        }
+        const _Symbol = Symbol;
+        if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+          const intl = util.intl;
+          const stringResult = intl.string(util.t["1uAmCw"]);
+          cResult[3] = stringResult;
+          let tmp7 = stringResult;
+        } else {
+          tmp7 = cResult[3];
+        }
+        if (cResult[4] !== tmp4.text) {
+          const obj2 = { style: tmp4.text, color: "text-muted", variant: "text-sm/semibold", children: tmp7 };
+          const tmp11 = jsx(Text_Text.Text, {
+            style: tmp4.text,
+            color: "text-muted",
+            variant: "text-sm/semibold",
+            children: tmp7,
+          });
+          cResult[4] = tmp4.text;
+          cResult[5] = tmp11;
+          let tmp9 = tmp11;
+        } else {
+          tmp9 = cResult[5];
+        }
+        if (cResult[6] === tmp5) {
+          if (cResult[7] === tmp9) {
+            let tmp12 = cResult[8];
+          }
+          return tmp12;
+        }
+        const obj3 = { style: tmp5, children: tmp9 };
+        const tmp15 = <View style={tmp5}>{tmp9}</View>;
+        cResult[6] = tmp5;
+        cResult[7] = tmp9;
+        cResult[8] = tmp15;
+        tmp12 = tmp15;
+      }
+      const items = [tmp4.container, noDivider];
+      cResult[0] = tmp4.container;
+      cResult[1] = noDivider;
+      cResult[2] = items;
+      tmp5 = items;
+    }
+  : (showDivider) => {
+      showDivider = showDivider.showDivider;
+      const tmp = closure_4();
+      const items = [tmp.container];
+      let noDivider = !showDivider;
+      if (!showDivider) {
+        noDivider = tmp.noDivider;
+      }
+      const obj = { style: items, children: null };
+      items[1] = noDivider;
+      const obj2 = { style: tmp.text, color: "text-muted", variant: "text-sm/semibold", children: null };
+      const intl = util.intl;
+      obj2.children = intl.string(util.t["1uAmCw"]);
+      obj.children = jsx(Text_Text.Text, {
+        style: tmp.text,
+        color: "text-muted",
+        variant: "text-sm/semibold",
+        children: null,
+      });
+      return <View style={items}>{null}</View>;
+    };

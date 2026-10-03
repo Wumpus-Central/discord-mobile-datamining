@@ -1,6 +1,6 @@
 // discord_common/js/packages/dynamic-links/generateDynamicLink.tsx
-import v1 from "../../../../_runtime/01255_v1.js";
-import formatDefault from "../../../../_runtime/01340_format.js";
+import v1 from "../../../../_runtime/01266_v1.js";
+import formatDefault from "../../../../_runtime/01351_format.js";
 import getDescriptionDefault from "getDescription.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";

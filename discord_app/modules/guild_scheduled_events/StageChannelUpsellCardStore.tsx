@@ -1,9 +1,11 @@
 // discord_app/modules/guild_scheduled_events/StageChannelUpsellCardStore.tsx
 import Storage2 from "../../../discord_common/js/packages/storage/Storage.tsx";
+import c from "../../../_runtime/00576_c.js";
 import ReactBatchUpdates from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 import GuildScheduledEventsConstants from "GuildScheduledEventsConstants.tsx";
-import _mod4481 from "../../../_runtime/metro/04481__.js";
-import identity from "../../../_runtime/metro/01243__.js";
+import _mod4492 from "../../../_runtime/metro/04492__.js";
+import identity from "../../../_runtime/metro/01254__.js";
+import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
@@ -23,10 +25,25 @@ let closure_3 = identity.createWithEqualityFn((arg0) => {
 });
 let result = size.fileFinishedImporting("modules/guild_scheduled_events/StageChannelUpsellCardStore.tsx");
 
-export const useStageChannelUpsellCardStore = function useStageChannelUpsellCardStore() {
-  return closure_3((arg0) => {
-    const items = [,];
-    ({ hasSeenUpsellCard: arr[0], markAsSeen: arr[1] } = arg0);
-    return items;
-  }, _mod4481.shallow);
-};
+export const useStageChannelUpsellCardStore = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = c.c(1);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const fn = function l(arg0) {
+          const items = [,];
+          ({ hasSeenUpsellCard: arr[0], markAsSeen: arr[1] } = arg0);
+          return items;
+        };
+        cResult[0] = fn;
+        let first = fn;
+      } else {
+        first = cResult[0];
+      }
+      return closure_3(first, _mod4492.shallow);
+    }
+  : () =>
+      closure_3((arg0) => {
+        const items = [,];
+        ({ hasSeenUpsellCard: arr[0], markAsSeen: arr[1] } = arg0);
+        return items;
+      }, _mod4492.shallow);

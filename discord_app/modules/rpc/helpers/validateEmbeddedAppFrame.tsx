@@ -1,5 +1,5 @@
 // discord_app/modules/rpc/helpers/validateEmbeddedAppFrame.tsx
-import ApplicationFlagUtils from "../../applications/utils/ApplicationFlagUtils.tsx";
+import EmbeddedSurfaceUtils from "../../applications/utils/EmbeddedSurfaceUtils.tsx";
 import EmbeddedSurfaceType from "../../../../discord_common/js/shared/shared-constants/EmbeddedSurfaceType.tsx";
 import RPCErrorDefault from "../RPCError.tsx";
 import RPCHelpers from "../RPCHelpers.tsx";
@@ -10,9 +10,9 @@ require = fn;
 function validateEmbeddedAppFrame(transport) {
   const result = RPCHelpers.validatePostMessageTransport(transport.transport);
   const validateApplicationResult = RPCHelpers.validateApplication(transport.application);
-  if (obj3.hasApplicationFlag(transport.application, constants.EMBEDDED)) {
+  if (obj3.isEmbeddedApplication(transport.application)) {
     if (transport.source.type !== TransportTypes.POST_MESSAGE) {
-      const obj4 = { errorCode: constants2.INVALID_COMMAND };
+      const obj4 = { errorCode: RPCErrors.INVALID_COMMAND };
       const tmp31 = new RPCErrorDefault(obj4, "command requires an embedded app frame");
       throw tmp31;
     } else {
@@ -24,7 +24,7 @@ function validateEmbeddedAppFrame(transport) {
           if (EmbeddedSurfaceType.EmbeddedSurfaceType.VOICE_CHANNEL !== type) {
             if (EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN === type) {
               if (tmp35.applicationId === VibegrationsBuilderPreviewStore.getBuilderPreviewApplicationId()) {
-                let obj5 = { channelId: "Array", guildId: "paddingHorizontal" };
+                let obj5 = { channelId: "Symbol", guildId: "current" };
               } else {
                 obj5 = null;
               }
@@ -39,7 +39,7 @@ function validateEmbeddedAppFrame(transport) {
         tmp13 = obj6;
       }
       if (null == tmp13) {
-        const obj7 = { errorCode: constants2.UNAUTHORIZED_FOR_APPLICATION };
+        const obj7 = { errorCode: RPCErrors.UNAUTHORIZED_FOR_APPLICATION };
         const tmp24 = new RPCErrorDefault(obj7, "Command not available for this application");
         throw tmp24;
       } else {
@@ -49,16 +49,15 @@ function validateEmbeddedAppFrame(transport) {
       }
     }
   } else {
-    const obj14 = { errorCode: constants2.UNAUTHORIZED_FOR_APPLICATION };
+    const obj14 = { errorCode: RPCErrors.UNAUTHORIZED_FOR_APPLICATION };
     const tmp10 = new RPCErrorDefault(obj14, "This application cannot access this API");
     throw tmp10;
   }
-  obj3 = ApplicationFlagUtils;
+  obj3 = EmbeddedSurfaceUtils;
 }
-const TransportTypes = fn(5270).TransportTypes;
-const Constants = fn(1074);
-({ ApplicationFlags: metroRequire, RPCErrors: closure_7 } = Constants);
-const asLaunched = fn(8691).asLaunched;
+const TransportTypes = fn(5316).TransportTypes;
+const RPCErrors = fn(1085).RPCErrors;
+const asLaunched = fn(8704).asLaunched;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rpc/helpers/validateEmbeddedAppFrame.tsx");
 

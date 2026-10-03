@@ -1,5 +1,5 @@
 // discord_app/modules/keyboard/native/PortalKeyboardUIStore.native.tsx
-import v1 from "../../../../_runtime/01255_v1.js";
+import v1 from "../../../../_runtime/01266_v1.js";
 import ZustandStore from "../../../lib/ZustandStore.tsx";
 import PortalKeyboard from "PortalKeyboard.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -109,7 +109,7 @@ export const closePortalKeyboard = function closePortalKeyboard() {
   zustandStore.setState({ state: PortalKeyboard.PortalKeyboardState.CLOSED, keyboard: null });
 };
 export const closePortalKeyboardIfUnhandled = function closePortalKeyboardIfUnhandled() {
-  const state = zustandStore.getState();
+  state = zustandStore.getState();
   const keyboard = state.keyboard;
   let tmp3 = null == keyboard;
   if (tmp3) {

@@ -1,8 +1,8 @@
 // discord_app/modules/instant_invite/native/GuildInviteUtils.tsx
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/01981_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import fuzzysearchDefault from "../../../../_runtime/06015_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../_runtime/05702_fuzzysearch.js";
 import InstantInviteActionCreatorsDefault from "../../../actions/InstantInviteActionCreators.tsx";
 import InstantInviteUtilsDefault from "../../../utils/InstantInviteUtils.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -44,9 +44,9 @@ let closure_16 = async function _sendGuildInvite(arg0) {
   if (1 === tmp7) {
     c5 = 0;
     closure_132_12(closure_131_0, closure_131_1, closure_132_13.ERROR);
-    let AccessibilityAnnouncer = closure_132_0(closure_132_2[18]).AccessibilityAnnouncer;
-    let intl = closure_132_0(closure_132_2[19]).intl;
-    AccessibilityAnnouncer.announce(intl.string(closure_132_0(closure_132_2[19]).t.fEptJP));
+    let AccessibilityAnnouncer = closure_132_0(closure_132_2[20]).AccessibilityAnnouncer;
+    let intl = closure_132_0(closure_132_2[21]).intl;
+    AccessibilityAnnouncer.announce(intl.string(closure_132_0(closure_132_2[21]).t.fEptJP));
     c7 = 3;
   } else if (arg0 === 1) {
     c7 = 3;
@@ -55,27 +55,28 @@ let closure_16 = async function _sendGuildInvite(arg0) {
     closure_131_3 = value;
     const obj7 = {
       inviteKey: closure_131_3.code,
-      type: closure_132_0(closure_132_2[22]).InvitePropertiesType.USER,
+      type: closure_132_0(closure_132_2[24]).InvitePropertiesType.USER,
       user: closure_132_11.getUser(closure_131_0),
       location: closure_131_2,
       inviteAnalyticsMetadata: null,
     };
     obj7.inviteAnalyticsMetadata = { source: closure_131_2 };
-    closure_132_1(closure_132_2[22]).enqueue(obj7, () => {
+    closure_132_1(closure_132_2[24]).enqueue(obj7, () => {
       closure_2_12(closure_1_0, closure_1_1, constants.SENT);
-      const AccessibilityAnnouncer = closure_0(4570).AccessibilityAnnouncer;
-      const intl = closure_0(1115).intl;
-      AccessibilityAnnouncer.announce(intl.string(closure_0(1115).t.PuLLzP));
+      const AccessibilityAnnouncer = closure_0(4590).AccessibilityAnnouncer;
+      const intl = closure_0(1126).intl;
+      AccessibilityAnnouncer.announce(intl.string(closure_0(1126).t.PuLLzP));
     });
     c5 = 0;
-    closure_132_1(closure_132_2[22]);
+    closure_132_1(closure_132_2[24]);
   }
   return value;
 };
-const setSendState = fn(12755).setSendState;
-const InviteSendStates = fn(7328).InviteSendStates;
-const Constants = fn(1074);
+const setSendState = fn(12791).setSendState;
+const InviteSendStates = fn(7226).InviteSendStates;
+const Constants = fn(1085);
 ({ Permissions: closure_14, AnalyticEvents: closure_15 } = Constants);
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/instant_invite/native/GuildInviteUtils.tsx");
 
@@ -83,74 +84,161 @@ export const showGuildInviteActionSheet = function showGuildInviteActionSheet(id
   AnalyticsUtilsDefault.track(constants2.OPEN_POPOUT, { type: "Invite to Guilds", source: newestAnalyticsLocation });
   const obj2 = { type: "Invite to Guilds", source: newestAnalyticsLocation };
   const obj3 = ActionSheetActionCreatorsDefault;
-  obj3.openLazy(asyncRequireImpl(12756, dependencyMap.paths), "invite-to-guilds-" + id, {
+  obj3.openLazy(asyncRequireImpl(12792, dependencyMap.paths), "invite-to-guilds-" + id, {
     recipientId: id,
     source: newestAnalyticsLocation,
   });
 };
-export const useServerInviteRows = function useServerInviteRows(id, query) {
-  _require = id;
-  closure_1 = query;
-  let items = [SortedGuildStore, GuildStore];
-  stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {
-    flattenedGuildIds = flattenedGuildIds.getFlattenedGuildIds();
-    const items = [];
-    const item = flattenedGuildIds.forEach((item) => {
-      guild = guild.getGuild(item);
-      if (null != guild) {
-        items.push(guild);
+export const useServerInviteRows = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0, arg1) => {
+      _require = arg0;
+      closure_1 = arg1;
+      const cResult = require("c").c(7);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        let items = [SortedGuildStore, GuildStore];
+        const fn = function o() {
+          flattenedGuildIds = flattenedGuildIds.getFlattenedGuildIds();
+          const items = [];
+          const item = flattenedGuildIds.forEach((item) => {
+            guild = guild.getGuild(item);
+            if (null != guild) {
+              items.push(guild);
+            }
+          });
+          return items;
+        };
+        cResult[0] = items;
+        cResult[1] = fn;
+        tmp4 = items;
+        tmp5 = fn;
+      } else {
+        [tmp4, tmp5] = cResult;
       }
-    });
-    return items;
-  });
-  let items1 = [stateFromStoresArray, query, id];
-  return noop.useMemo(() => {
-    if (null == memberCounts2) {
-      const items = [[], []];
-      return items;
-    } else {
-      memberCounts2 = memberCounts.getMemberCounts();
-      const items1 = [];
-      const items2 = [];
-      const item = items2.forEach((vanityURLCode) => {
-        let canResult = PermissionStore.can(constants.CREATE_INSTANT_INVITE, vanityURLCode);
-        if (!canResult) {
-          canResult = null != vanityURLCode.vanityURLCode;
-        }
-        if (canResult) {
-          let tmp7Result = null == items1;
-          if (!tmp7Result) {
-            const formatted = items1.toLowerCase();
-            tmp7Result = fuzzysearchDefault(formatted, str.toLowerCase());
+      let obj = require("c");
+      const stateFromStoresArray = require("initialize").useStateFromStoresArray(tmp4, tmp5);
+      if (null != arg0) {
+        if (cResult[3] === stateFromStoresArray) {
+          if (cResult[4] === arg1) {
           }
-          if (tmp7Result) {
-            if (!GuildMemberStore.isMember(vanityURLCode.id, closure_0)) {
-              const obj = { guild: vanityURLCode, memberCount: null };
-              let num = closure_0[vanityURLCode.id];
-              if (num == null) {
-                num = 0;
-              }
-              obj.memberCount = num;
-              const currentUser = UserStore.getCurrentUser();
-              id = undefined;
-              if (currentUser != null) {
-                id = currentUser.id;
-              }
-              if (vanityURLCode.ownerId === id) {
-                items1.push(obj);
-              } else {
-                items2.push(obj);
+        }
+        dependencyMap = GuildMemberCountStore.getMemberCounts();
+        const items1 = [];
+        const items2 = [];
+        let item = stateFromStoresArray.forEach((vanityURLCode) => {
+          let canResult = PermissionStore.can(constants.CREATE_INSTANT_INVITE, vanityURLCode);
+          if (!canResult) {
+            canResult = null != vanityURLCode.vanityURLCode;
+          }
+          if (canResult) {
+            let tmp7Result = null == closure_1;
+            if (!tmp7Result) {
+              const formatted = closure_1.toLowerCase();
+              tmp7Result = fuzzysearchDefault(formatted, str.toLowerCase());
+            }
+            if (tmp7Result) {
+              if (!GuildMemberStore.isMember(vanityURLCode.id, closure_0)) {
+                const obj = { guild: vanityURLCode, memberCount: null };
+                let num = closure_2[vanityURLCode.id];
+                if (num == null) {
+                  num = 0;
+                }
+                obj.memberCount = num;
+                const currentUser = UserStore.getCurrentUser();
+                let id;
+                if (currentUser != null) {
+                  id = currentUser.id;
+                }
+                if (vanityURLCode.ownerId === id) {
+                  items1.push(obj);
+                } else {
+                  items2.push(obj);
+                }
               }
             }
+            str = vanityURLCode.name;
           }
-          str = vanityURLCode.name;
+        });
+        const items3 = [items1, items2];
+        cResult[3] = stateFromStoresArray;
+        cResult[4] = arg1;
+        cResult[5] = arg0;
+        cResult[6] = items3;
+      } else {
+        const _Symbol = Symbol;
+        if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+          const items4 = [[], []];
+          cResult[2] = items4;
+          let tmp8 = items4;
+        } else {
+          tmp8 = cResult[2];
         }
-      });
-      const items3 = [items1, items2];
-      return items3;
+        return tmp8;
+      }
+      const tmpResult = require("initialize");
     }
-  }, items1);
-};
+  : (arg0, arg1) => {
+      _require = arg0;
+      closure_1 = arg1;
+      let items = [SortedGuildStore, GuildStore];
+      stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {
+        flattenedGuildIds = flattenedGuildIds.getFlattenedGuildIds();
+        const items = [];
+        const item = flattenedGuildIds.forEach((item) => {
+          guild = guild.getGuild(item);
+          if (null != guild) {
+            items.push(guild);
+          }
+        });
+        return items;
+      });
+      let items1 = [stateFromStoresArray, arg1, arg0];
+      return noop.useMemo(() => {
+        if (null == memberCounts2) {
+          const items = [[], []];
+          return items;
+        } else {
+          memberCounts2 = memberCounts.getMemberCounts();
+          const items1 = [];
+          const items2 = [];
+          const item = items2.forEach((vanityURLCode) => {
+            let canResult = PermissionStore.can(constants.CREATE_INSTANT_INVITE, vanityURLCode);
+            if (!canResult) {
+              canResult = null != vanityURLCode.vanityURLCode;
+            }
+            if (canResult) {
+              let tmp7Result = null == items1;
+              if (!tmp7Result) {
+                const formatted = items1.toLowerCase();
+                tmp7Result = fuzzysearchDefault(formatted, str.toLowerCase());
+              }
+              if (tmp7Result) {
+                if (!GuildMemberStore.isMember(vanityURLCode.id, closure_0)) {
+                  const obj = { guild: vanityURLCode, memberCount: null };
+                  let num = closure_0[vanityURLCode.id];
+                  if (num == null) {
+                    num = 0;
+                  }
+                  obj.memberCount = num;
+                  const currentUser = UserStore.getCurrentUser();
+                  let id;
+                  if (currentUser != null) {
+                    id = currentUser.id;
+                  }
+                  if (vanityURLCode.ownerId === id) {
+                    items1.push(obj);
+                  } else {
+                    items2.push(obj);
+                  }
+                }
+              }
+              str = vanityURLCode.name;
+            }
+          });
+          const items3 = [items1, items2];
+          return items3;
+        }
+      }, items1);
+    };
 export const sendGuildInvite = function sendGuildInvite() {
   const self = this;
   const apply = closure_16.apply;

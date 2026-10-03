@@ -1,5 +1,8 @@
 // discord_app/modules/premium/sounds/soundmoji/SoundmojiSendingExperiment.tsx
+import c from "../../../../../_runtime/00576_c.js";
 import ApexExperiment from "../../../experiments/apex/index.tsx";
+import "ReactCompilerGating";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const obj = {
@@ -8,18 +11,43 @@ const obj = {
   defaultConfig: { enabled: false, showSoundmojiInEmojiPicker: false },
   variations: null,
 };
-const obj2 = { 1: null, 2: { enabled: true, showSoundmojiInEmojiPicker: false } };
+let obj2 = { 1: null, 2: { enabled: true, showSoundmojiInEmojiPicker: false } };
 obj2[2] = { enabled: true, showSoundmojiInEmojiPicker: true };
 obj.variations = obj2;
-let closure_0 = ApexExperiment.createApexExperiment(obj);
+let closure_2 = ApexExperiment.createApexExperiment(obj);
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (location) => {
+      const cResult = c.c(2);
+      const _location = location.location;
+      if (cResult[0] !== _location) {
+        const obj2 = { location: _location };
+        cResult[0] = _location;
+        cResult[1] = obj2;
+        let tmp2 = obj2;
+      } else {
+        tmp2 = cResult[1];
+      }
+      return closure_2.useConfig(tmp2).enabled;
+    }
+  : (location) => closure_2.useConfig({ location: location.location }).enabled;
 const result = size.fileFinishedImporting("modules/premium/sounds/soundmoji/SoundmojiSendingExperiment.tsx");
 
 export const getSoundmojiSendExperiment = function getSoundmojiSendExperiment(location) {
-  return closure_0.getConfig({ location: location.location }).enabled;
+  return closure_2.getConfig({ location: location.location }).enabled;
 };
-export const useSoundmojiSendExperiment = function useSoundmojiSendExperiment(location) {
-  return closure_0.useConfig({ location: location.location }).enabled;
-};
-export const useSoundmojiEmojiPickerSectionExperiment = function useSoundmojiEmojiPickerSectionExperiment(location) {
-  return closure_0.useConfig({ location: location.location }).showSoundmojiInEmojiPicker;
-};
+export const useSoundmojiSendExperiment = tmp2;
+export const useSoundmojiEmojiPickerSectionExperiment = ReactCompilerGating.isReactCompilerEnabled()
+  ? (location) => {
+      const cResult = c.c(2);
+      const _location = location.location;
+      if (cResult[0] !== _location) {
+        const obj2 = { location: _location };
+        cResult[0] = _location;
+        cResult[1] = obj2;
+        let tmp2 = obj2;
+      } else {
+        tmp2 = cResult[1];
+      }
+      return closure_2.useConfig(tmp2).showSoundmojiInEmojiPicker;
+    }
+  : (location) => closure_2.useConfig({ location: location.location }).showSoundmojiInEmojiPicker;

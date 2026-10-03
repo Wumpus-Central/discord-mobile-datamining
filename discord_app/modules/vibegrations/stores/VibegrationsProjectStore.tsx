@@ -45,18 +45,21 @@ let set = new Set();
 let set1 = new Set();
 const map3 = new Map();
 const set2 = new Set();
+let c12 = false;
+let maxProjects = null;
+let c14 = false;
 let obj = null;
 const set3 = new Set();
 const map4 = new Map();
-let closure_15 = [];
+let closure_18 = [];
 const map5 = new Map();
-let c17 = 0;
+let c20 = 0;
 const map6 = new Map();
 const map7 = new Map();
-let closure_20 = [];
+let closure_23 = [];
 const map8 = new Map();
 const map9 = new Map();
-let closure_23 = { status: "idle", truncated: false, count: 0 };
+let closure_26 = { status: "idle", truncated: false, count: 0 };
 const map10 = new Map();
 const Store = initializeDefault.Store;
 class VibegrationsProjectStore extends Store {
@@ -67,6 +70,15 @@ prototype["initialize"] = function initialize() {
 };
 prototype["getOwnedProjects"] = function getOwnedProjects() {
   return Array.from(map.values()).filter(isProjectOwner);
+};
+prototype["hasFetchedOwnedProjects"] = function hasFetchedOwnedProjects() {
+  return c12;
+};
+prototype["getMaxProjects"] = function getMaxProjects() {
+  return maxProjects;
+};
+prototype["hasFetchedProjectLimit"] = function hasFetchedProjectLimit() {
+  return c14;
 };
 prototype["getProject"] = function getProject(arg0) {
   value = map.get(arg0);
@@ -121,8 +133,8 @@ prototype["isAppChannelPending"] = function isAppChannelPending(projectId) {
 prototype["isProjectDeleting"] = function isProjectDeleting(id) {
   return set2.has(id);
 };
-prototype["getSelectedProjectId"] = function getSelectedProjectId(guildId1) {
-  value = map3.get(guildId1);
+prototype["getSelectedProjectId"] = function getSelectedProjectId(guildId) {
+  value = map3.get(guildId);
   if (value == null) {
     value = null;
   }
@@ -131,7 +143,7 @@ prototype["getSelectedProjectId"] = function getSelectedProjectId(guildId1) {
 prototype["getLogs"] = function getLogs(projectId) {
   value = map5.get(projectId);
   if (value == null) {
-    value = closure_15;
+    value = closure_18;
   }
   return value;
 };
@@ -167,7 +179,7 @@ prototype["getUnreadLogErrorCount"] = function getUnreadLogErrorCount(arg0) {
 prototype["getTrace"] = function getTrace(projectId) {
   value = map8.get(projectId);
   if (value == null) {
-    value = closure_20;
+    value = closure_23;
   }
   return value;
 };
@@ -178,7 +190,7 @@ prototype["getHistoryState"] = function getHistoryState(arg0, arg1) {
     value2 = value.get(arg1);
   }
   if (value2 == null) {
-    value2 = closure_23;
+    value2 = closure_26;
   }
   return value2;
 };
@@ -220,7 +232,11 @@ obj = {
                         if (0 === map10.size) {
                           if (0 === map9.size) {
                             if (null == obj) {
-                              return false;
+                              if (null == maxProjects) {
+                                if (!c14) {
+                                  return false;
+                                }
+                              }
                             }
                           }
                         }
@@ -250,6 +266,9 @@ obj = {
     map10.clear();
     map9.clear();
     obj = null;
+    c12 = false;
+    maxProjects = null;
+    c14 = false;
     map11.clear();
   },
   VIBEGRATIONS_PROJECTS_FETCH_START: function handleProjectsFetchStart(guildId) {
@@ -312,6 +331,7 @@ obj = {
       }
       tmp14 = set4[Symbol.iterator]();
     })();
+    c12 = true;
     { type: "success", fetchedAt: Date.now() };
     tmp2 = map[Symbol.iterator]();
   },
@@ -321,6 +341,10 @@ obj = {
       const result = map4.set(guildId, "error");
     }
     { type: "error", fetchedAt: Date.now() };
+  },
+  VIBEGRATIONS_PROJECT_LIMIT_FETCH_SETTLE: function handleProjectLimitFetchSettle(maxProjects) {
+    maxProjects = maxProjects.maxProjects;
+    c14 = true;
   },
   VIBEGRATIONS_PROJECT_CREATE_SUCCESS: handleProjectUpsert,
   VIBEGRATIONS_PROJECT_UPDATE_SUCCESS: handleProjectUpsert,
@@ -338,7 +362,7 @@ obj = {
       str = str2;
     }
     value = map2.get(projectId);
-    let state;
+    state = undefined;
     if (value != null) {
       state = value.state;
     }
@@ -413,7 +437,7 @@ obj = {
     projectId = projectId.projectId;
     value = map8.get(projectId);
     if (value == null) {
-      value = closure_20;
+      value = closure_23;
     }
     obj = { snapshot: new Set(value.map((kind) => "" + kind.kind + ":" + kind.id)), touched: null };
     set = new Set(value.map((kind) => "" + kind.kind + ":" + kind.id));
@@ -504,8 +528,8 @@ obj = {
       const result = map6.set(projectId, seq);
     }
     const obj2 = { key: null, log };
-    const sum = c17 + 1;
-    c17 = sum;
+    const sum = c20 + 1;
+    c20 = sum;
     obj2.key = sum;
     value2 = map5.get(projectId);
     if (null == value2) {
@@ -563,7 +587,7 @@ obj = {
     } else {
       let value7 = map8.get(projectId);
       if (value7 == null) {
-        value7 = closure_20;
+        value7 = closure_23;
       }
       const tool = "tool";
       const id = toolCall.id;
@@ -773,7 +797,7 @@ obj = {
     } else {
       let value7 = map8.get(projectId);
       if (value7 == null) {
-        value7 = closure_20;
+        value7 = closure_23;
       }
       const model = "model";
       const id = modelCall.id;

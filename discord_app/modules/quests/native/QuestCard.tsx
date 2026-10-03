@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/01981_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
 import ColorUtils from "../../../utils/ColorUtils.tsx";
 import design_shared from "../../../../discord_common/js/packages/design/shared.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -15,8 +15,8 @@ import captureAdUserAction from "../../ads/analytics/captureAdUserAction.tsx";
 import captureAdUserActionTypes from "../../ads/analytics/captureAdUserActionTypes.tsx";
 import AdAnalyticsInterfaceExperiment from "../experiments/AdAnalyticsInterfaceExperiment.tsx";
 import OrbsIcon from "../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx";
-import QuestUtils from "QuestUtils.native.tsx";
 import AssetUtils from "../lib/AssetUtils.tsx";
+import QuestUtils from "QuestUtils.native.tsx";
 import QuestPlatformUtils from "../utils/QuestPlatformUtils.tsx";
 import openQuestAccessSuspendedBottomSheetDefault from "openQuestAccessSuspendedBottomSheet.tsx";
 import openVideoQuestModalDefault from "VideoQuestModal/openVideoQuestModal.tsx";
@@ -32,11 +32,11 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: metroRequire, StyleSheet, View: closure_7 } = get_ActivityIndicator);
-const QuestsExperimentLocations = fn(5942).QuestsExperimentLocations;
-const NOOP = fn(1085).NOOP;
+const QuestsExperimentLocations = fn(5623).QuestsExperimentLocations;
+const NOOP = fn(1096).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-let createStyles = fn(4845);
+let createStyles = fn(4890);
 let result = createStyles.experimental_createToken((theme) => {
   theme = theme.theme;
   const internal = nativeDefault.internal;
@@ -48,7 +48,7 @@ let result = createStyles.experimental_createToken((theme) => {
   const isThemeDarkResult = design_shared.isThemeDark(theme);
   return ColorUtils.hexOpacityToRgba(semanticColor, 0);
 });
-createStyles = fn(4845);
+createStyles = fn(4890);
 let result1 = createStyles.experimental_createToken((theme) => {
   theme = theme.theme;
   const isThemeDarkResult = design_shared.isThemeDark(theme);
@@ -64,13 +64,13 @@ let result1 = createStyles.experimental_createToken((theme) => {
   }
   return ColorUtils.hexOpacityToRgba(semanticColor, num);
 });
-createStyles = fn(4845);
+createStyles = fn(4890);
 let result2 = createStyles.experimental_createToken((theme) => {
   const colors = nativeDefault.colors;
   return design_shared.isThemeDark(theme.theme) ? colors.BACKGROUND_SURFACE_HIGH : colors.BLACK;
 });
 const PX_16 = nativeDefault.space.PX_16;
-createStyles = fn(4845);
+createStyles = fn(4890);
 let obj = {
   container: {
     position: "relative",
@@ -190,7 +190,7 @@ obj.buttonContainers = {
 };
 obj.equalWidthContainer = { flexBasis: 0, flexGrow: 1, flexShrink: 1 };
 let closure_16 = createStyles.createStyles(obj);
-createStyles = fn(4845);
+createStyles = fn(4890);
 let closure_17 = createStyles.createStyleProperties({
   gradientStart: result,
   gradientMid: result1,
@@ -239,7 +239,7 @@ export const QuestCard = noop.memo((questContent) => {
     obj = AdAnalyticsInterfaceExperiment;
   }
   function showQuestBottomSheet() {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14863, dependencyMap.paths), "QuestBottomSheet", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14919, dependencyMap.paths), "QuestBottomSheet", {
       questId: quest.id,
       questContentPosition,
       sourceQuestContent,
@@ -580,7 +580,7 @@ export const QuestCard = noop.memo((questContent) => {
             } else {
               const obj2 = { questId: quest.id, questContentPosition, sourceQuestContent };
               ActionSheetActionCreatorsDefault.openLazy(
-                asyncRequireImpl(14863, dependencyMap.paths),
+                asyncRequireImpl(14919, dependencyMap.paths),
                 "QuestBottomSheet",
                 obj2,
               );
@@ -626,7 +626,7 @@ export const QuestCard = noop.memo((questContent) => {
               logger.log("Navigating to console connection action sheet");
               trackClick(AnalyticsTypes.QuestContentCTA.VIEW_REQUIREMENTS);
               ActionSheetActionCreatorsDefault.openLazy(
-                asyncRequireImpl(14863, dependencyMap.paths),
+                asyncRequireImpl(14919, dependencyMap.paths),
                 "QuestBottomSheet",
                 { questId: quest.id, questContentPosition, sourceQuestContent },
               );
@@ -666,7 +666,7 @@ export const QuestCard = noop.memo((questContent) => {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -681,11 +681,11 @@ export const QuestCard = noop.memo((questContent) => {
                 return obj3;
               } else {
                 logger.log("Enrolling in quest");
-                tmp2(10888);
+                tmp2(9994);
                 let obj4 = { questContent: QUEST_HOME_MOBILE, questContentCTA: null, sourceQuestContent: null };
                 if (!isMobileActivityQuest) {
                   if (!hasWatchVideoTasksResult) {
-                    let START_QUEST = tmp2(7314).QuestContentCTA.ACCEPT_QUEST;
+                    let START_QUEST = tmp2(7212).QuestContentCTA.ACCEPT_QUEST;
                   }
                   obj4.questContentCTA = START_QUEST;
                   obj4.sourceQuestContent = sourceQuestContent;
@@ -693,7 +693,7 @@ export const QuestCard = noop.memo((questContent) => {
                   v1 = 1;
                   dependencyMap = 1;
                 }
-                START_QUEST = tmp2(7314).QuestContentCTA.START_QUEST;
+                START_QUEST = tmp2(7212).QuestContentCTA.START_QUEST;
               }
             } else if (arg0 === 1) {
               dependencyMap = 3;
@@ -706,7 +706,7 @@ export const QuestCard = noop.memo((questContent) => {
               if (closure_128_14) {
                 if (closure_128_15) {
                   const obj = { questId: closure_128_1.id, sourceQuestContent: closure_128_4 };
-                  v1(14867)(obj);
+                  v1(14924)(obj);
                   dependencyMap = 3;
                 }
                 closure_128_32();
@@ -818,11 +818,11 @@ export const QuestCard = noop.memo((questContent) => {
       if (result2) {
         const obj3 = { style: shrinkableText.orbWithAmountRow, children: null };
         const obj4 = { size: "custom", color: "mobile-text-heading-primary", style: size };
-        const items1 = [closure_2_12(OrbsIcon.OrbsIcon, obj4), ,];
+        const items1 = [__initData(OrbsIcon.OrbsIcon, obj4), ,];
         const obj5 = { style: null };
         const obj6 = { width: result };
         obj5.style = obj6;
-        items1[1] = closure_2_12(React5, obj5);
+        items1[1] = __initData(React5, obj5);
         const obj7 = {};
         const merged = Object.assign(obj2);
         const intl4 = util.intl;
@@ -832,9 +832,9 @@ export const QuestCard = noop.memo((questContent) => {
         }
         const obj8 = { orbAmount: num4 };
         obj7.children = intl4.format(util.t["nLXlh+"], obj8);
-        items1[2] = closure_2_12(Text_Text.Text, obj7);
+        items1[2] = __initData(Text_Text.Text, obj7);
         obj3.children = items1;
-        let tmp15Result = map1(React5, obj3);
+        let tmp15Result = __initData2(React5, obj3);
       }
       return tmp15Result;
     }
@@ -842,7 +842,7 @@ export const QuestCard = noop.memo((questContent) => {
       const obj9 = {};
       const merged1 = Object.assign(obj2);
       obj9.children = defaultRewardName;
-      tmp15Result = closure_2_12(Text_Text.Text, obj9);
+      tmp15Result = __initData(Text_Text.Text, obj9);
     } else if (result2) {
       const obj10 = { style: shrinkableText.rewardSubtitleRow, children: null };
       const obj11 = {};
@@ -854,14 +854,14 @@ export const QuestCard = noop.memo((questContent) => {
         },
       };
       obj11.children = intl2.format(util.t["0IUT4Y"], obj12);
-      const items2 = [closure_2_12(Text_Text.Text, obj11)];
+      const items2 = [__initData(Text_Text.Text, obj11)];
       const obj13 = { style: shrinkableText.orbWithAmountRow, children: null };
       const obj14 = { size: "custom", color: "mobile-text-heading-primary", style: size };
-      const items3 = [closure_2_12(OrbsIcon.OrbsIcon, obj14), ,];
+      const items3 = [__initData(OrbsIcon.OrbsIcon, obj14), ,];
       const obj15 = { style: null };
       const obj16 = { width: result };
       obj15.style = obj16;
-      items3[1] = closure_2_12(React5, obj15);
+      items3[1] = __initData(React5, obj15);
       const obj17 = {};
       const merged3 = Object.assign(obj2);
       const intl3 = util.intl;
@@ -871,11 +871,11 @@ export const QuestCard = noop.memo((questContent) => {
       }
       const obj18 = { orbAmount: num3 };
       obj17.children = intl3.format(util.t["nLXlh+"], obj18);
-      items3[2] = closure_2_12(Text_Text.Text, obj17);
+      items3[2] = __initData(Text_Text.Text, obj17);
       obj13.children = items3;
-      items2[1] = map1(React5, obj13);
+      items2[1] = __initData2(React5, obj13);
       obj10.children = items2;
-      tmp15Result = map1(React5, obj10);
+      tmp15Result = __initData2(React5, obj10);
     } else {
       const obj19 = {};
       const merged4 = Object.assign(obj2);
@@ -886,7 +886,7 @@ export const QuestCard = noop.memo((questContent) => {
         },
       };
       obj19.children = intl.format(util.t["0IUT4Y"], obj20);
-      tmp15Result = closure_2_12(Text_Text.Text, obj19);
+      tmp15Result = __initData(Text_Text.Text, obj19);
     }
     obj = PlatformUtils;
   }, items10);
@@ -926,7 +926,7 @@ export const QuestCard = noop.memo((questContent) => {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -955,7 +955,7 @@ export const QuestCard = noop.memo((questContent) => {
             return obj;
           } else {
             v3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp9) {
           v3 = tmp;
@@ -1138,7 +1138,7 @@ export const QuestCard = noop.memo((questContent) => {
     const obj44 = {
       onPress() {
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(14909, dependencyMap.paths),
+          asyncRequireImpl(14966, dependencyMap.paths),
           "QuestEnrollmentBlockedBottomSheet",
           { questId: quest.id, questEnrollmentBlockedUntil, sourceQuestContent },
         );

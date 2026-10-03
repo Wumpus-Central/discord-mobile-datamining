@@ -1,13 +1,13 @@
 // discord_app/modules/device/ThermalUtils.native.tsx
 import _mod17 from "../../../_runtime/metro/00017__.js";
 import NativeDeviceThermalStateModuleDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceThermalStateModule.tsx";
-import 00560__ from "../../../_runtime/metro/00560__.js";
+import 00570__ from "../../../_runtime/metro/00570__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 
 const nativeEventEmitter = new _mod17.NativeEventEmitter(NativeDeviceThermalStateModuleDefault);
-let closure_4 = module_560.create((arg0) => {
+let closure_4 = module_570.create((arg0) => {
   _require = arg0;
   nativeEventEmitter.addListener("DeviceThermalStateDidChange", (state) => {
     state = state.state;

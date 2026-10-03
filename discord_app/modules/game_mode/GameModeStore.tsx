@@ -1,18 +1,47 @@
 // discord_app/modules/game_mode/GameModeStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
+import ApexExperimentStore from "../experiments/apex/ApexExperimentStore.tsx";
 import RunningGameStore from "../game_detection/RunningGameStore.native.tsx";
 
 const require = fn;
-const DefaultGameModeSettings = fn(4836).DefaultGameModeSettings;
+function syncRunningGame() {
+  const visibleRunningGames = RunningGameStore.getVisibleRunningGames();
+  const someResult = visibleRunningGames.some((isLauncher) => true !== isLauncher.isLauncher);
+  let flag = someResult !== c6;
+  if (flag) {
+    c6 = someResult;
+    flag = true;
+    if (someResult) {
+      obj = {};
+      const merged = Object.assign(obj);
+      obj.hasDetectedGame = true;
+      const gameModeExperimentConfig = require("GameModeExperiment").getGameModeExperimentConfig({
+        location: "GameModeRunningGame",
+      });
+      flag = true;
+      const obj3 = require("GameModeExperiment");
+    }
+  }
+  return flag;
+}
+function syncExperimentAssignment() {
+  if (c6) {
+    const gameModeExperimentConfig = require("GameModeExperiment").getGameModeExperimentConfig({
+      location: "GameModeExperimentAssignment",
+    });
+    obj = require("GameModeExperiment");
+  }
+  return false;
+}
+const DefaultGameModeSettings = fn(4881).DefaultGameModeSettings;
 let obj = {};
 let merged = Object.assign(DefaultGameModeSettings);
-let c5 = false;
+let c6 = false;
 let focused = false;
 let hovered = false;
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
-class GameModeStore extends DeviceSettingsStore {
-}
+class GameModeStore extends DeviceSettingsStore {}
 const prototype = GameModeStore.prototype;
 prototype["initialize"] = function initialize(enabled) {
   enabled = undefined;
@@ -22,6 +51,7 @@ prototype["initialize"] = function initialize(enabled) {
   if (enabled == null) {
     enabled = DefaultGameModeSettings.enabled;
   }
+  obj = { enabled, promptSuppressedGameIds: null, hasDetectedGame: null };
   let prop;
   if (enabled != null) {
     prop = enabled.promptSuppressedGameIds;
@@ -29,18 +59,38 @@ prototype["initialize"] = function initialize(enabled) {
   if (prop == null) {
     prop = DefaultGameModeSettings.promptSuppressedGameIds;
   }
-  { enabled, promptSuppressedGameIds: null }.promptSuppressedGameIds = prop;
+  obj.promptSuppressedGameIds = prop;
+  let hasDetectedGame;
+  if (enabled != null) {
+    hasDetectedGame = enabled.hasDetectedGame;
+  }
+  if (hasDetectedGame == null) {
+    hasDetectedGame = DefaultGameModeSettings.hasDetectedGame;
+  }
+  obj.hasDetectedGame = hasDetectedGame;
   const items = [RunningGameStore];
-  this.syncWith(items, () => {
-    visibleRunningGames = visibleRunningGames.getVisibleRunningGames();
-    someResult = visibleRunningGames.some((isLauncher) => true !== isLauncher.isLauncher);
-    let flag = someResult !== someResult;
-    if (flag) {
+  this.syncWith(items, syncRunningGame);
+  const items1 = [ApexExperimentStore];
+  this.syncWith(items1, syncExperimentAssignment);
+  const visibleRunningGames = RunningGameStore.getVisibleRunningGames();
+  const someResult = visibleRunningGames.some((isLauncher) => true !== isLauncher.isLauncher);
+  let flag = someResult !== c6;
+  if (flag) {
+    c6 = someResult;
+    flag = true;
+    if (someResult) {
+      const obj2 = {};
+      const merged = Object.assign(obj);
+      obj2.hasDetectedGame = true;
+      obj = obj2;
+      const gameModeExperimentConfig = require("GameModeExperiment").getGameModeExperimentConfig({
+        location: "GameModeRunningGame",
+      });
       flag = true;
+      const obj4 = require("GameModeExperiment");
     }
-    return flag;
-  });
-  obj = { enabled, promptSuppressedGameIds: null };
+  }
+  return flag;
 };
 prototype["getUserAgnosticState"] = function getUserAgnosticState() {
   return obj;
@@ -49,20 +99,26 @@ Object.defineProperty(prototype, "enabled", {
   get: function enabled() {
     return obj.enabled;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "hasRunningGame", {
   get: function hasRunningGame() {
-    return c5;
+    return c6;
   },
-  set: undefined
+  set: undefined,
+});
+Object.defineProperty(prototype, "hasDetectedGame", {
+  get: function hasDetectedGame() {
+    return obj.hasDetectedGame;
+  },
+  set: undefined,
 });
 Object.defineProperty(prototype, "isActive", {
   get: function isActive() {
     const enabled = obj.enabled;
     let tmp = !enabled;
     if (enabled) {
-      tmp = !c5;
+      tmp = !c6;
     }
     let enabled2 = !tmp;
     if (!tmp) {
@@ -71,7 +127,7 @@ Object.defineProperty(prototype, "isActive", {
     }
     return enabled2;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isThrottling", {
   get: function isThrottling() {
@@ -84,25 +140,25 @@ Object.defineProperty(prototype, "isThrottling", {
     }
     return isActive;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isDiscordFocused", {
   get: function isDiscordFocused() {
     return focused;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "isDiscordHovered", {
   get: function isDiscordHovered() {
     return hovered;
   },
-  set: undefined
+  set: undefined,
 });
 Object.defineProperty(prototype, "suppressedPromptGameCount", {
   get: function suppressedPromptGameCount() {
     return obj.promptSuppressedGameIds.length;
   },
-  set: undefined
+  set: undefined,
 });
 prototype["isPromptSuppressedForGame"] = function isPromptSuppressedForGame(arg0) {
   const promptSuppressedGameIds = obj.promptSuppressedGameIds;
@@ -160,7 +216,7 @@ const gameModeStore = new GameModeStore(DispatcherDefault, {
       flag = true;
     }
     return flag;
-  }
+  },
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_mode/GameModeStore.tsx");

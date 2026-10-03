@@ -1,9 +1,49 @@
 // discord_app/modules/guild_settings/native/GuildSettingsModal.tsx
-import util from "../../../intl/index.native.tsx";
-import discord_common_AnalyticsUtils from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import GuildSettingsActionCreatorsDefault from "../GuildSettingsActionCreators.tsx";
+import GuildSettingsModalMemberEdit from "GuildSettingsModalMemberEdit.tsx";
+import KickConfirmDefault from "../../guild_moderation/native/KickConfirm.tsx";
+import BanConfirmDefault from "../../guild_moderation/native/BanConfirm.tsx";
 import GuildSettingsModalChannelsActionCreatorsDefault from "../GuildSettingsModalChannelsActionCreators.tsx";
+import GuildSettingsModalChannelsDefault from "GuildSettingsModalChannels.tsx";
+import IntegrationsSettingsWebhooksOverviewDefault from "../../integration_settings/native/IntegrationsSettingsWebhooksOverview.tsx";
+import IntegrationsSettingsEditWebhookDefault from "../../integration_settings/native/IntegrationsSettingsEditWebhook.tsx";
+import IntegrationsSettingsEditLinkedLobbyDefault from "../../integration_settings/native/IntegrationsSettingsEditLinkedLobby.tsx";
+import GuildSettingsModalLandingDefault from "GuildSettingsModalLanding.tsx";
+import GuildSettingsModalOverviewDefault from "GuildSettingsModalOverview.tsx";
+import GuildSettingsModalModerationDefault from "../safety/native/GuildSettingsModalModeration.tsx";
+import GuildSettingsAutoModerationDefault from "../../guild_automod/native/GuildSettingsAutoModeration.tsx";
+import GuildSettingsAutomodRuleDefault from "../../guild_automod/native/GuildSettingsAutomodRule.tsx";
+import GuildSettingsModalAuditLogDefault from "../audit_log/native/GuildSettingsModalAuditLog.tsx";
+import GuildSettingsModalAuditLogFilterDefault from "../audit_log/native/GuildSettingsModalAuditLogFilter.tsx";
+import GuildSettingsModalIntegrationsDefault from "../integrations/native/GuildSettingsModalIntegrations.tsx";
+import GuildSettingsModalEmojiDefault from "GuildSettingsModalEmoji.tsx";
+import GuildSettingsModalStickersDefault from "../server_monetization/stickers/native/GuildSettingsModalStickers.tsx";
+import GuildSettingsModalServerTagDefault from "GuildSettingsModalServerTag.tsx";
+import GuildSettingsModalServerTagCustomizeDefault from "GuildSettingsModalServerTagCustomize.tsx";
+import GuildSettingsModalIntegrationSettingsDefault from "../integrations/native/GuildSettingsModalIntegrationSettings.tsx";
+import GuildSettingsModalIntegrationPlatformDefault from "../integrations/native/GuildSettingsModalIntegrationPlatform.tsx";
+import GuildSettingsModalLobbiesLinkedDefault from "../apps/native/GuildSettingsModalLobbiesLinked.tsx";
+import GuildSettingsModalSecurityDefault from "../safety/native/GuildSettingsModalSecurity.tsx";
+import GuildSettingsRolesDefault from "../roles/native/GuildSettingsRoles.tsx";
+import GuildSettingsRoleEditDefault from "../roles/native/GuildSettingsRoleEdit.tsx";
+import GuildSettingsModalVanityURLDefault from "../server_monetization/boost_perks/native/GuildSettingsModalVanityURL.tsx";
+import GuildSettingsModalInstantInvitesDefault from "GuildSettingsModalInstantInvites.tsx";
+import GuildSettingsModalTemplateDefault from "GuildSettingsModalTemplate.tsx";
+import GuildSettingsModalMembersWrapperDefault from "GuildSettingsModalMembersWrapper.tsx";
+import GuildSettingsModalBansDefault from "../safety/native/GuildSettingsModalBans.tsx";
+import GuildSettingsModalCommunityDefault from "../community/native/GuildSettingsModalCommunity.tsx";
+import GuildSettingsModalCommunityIntroDefault from "../community/native/GuildSettingsModalCommunityIntro.tsx";
+import GuildSettingsModalAnalyticsDefault from "../community/native/GuildSettingsModalAnalytics.tsx";
+import GuildSettingsRoleSubscriptionsEmptyDefault from "../../guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsEmpty.tsx";
+import GuildSettingsRoleSubscriptionsEnableMonetizationDefault from "../../guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsEnableMonetization.tsx";
+import GuildSettingsRoleSubscriptionsGroupEditDefault from "../../guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsGroupEdit.tsx";
+import GuildSettingsRoleSubscriptionTiersDefault from "../../guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionTiers.tsx";
+import GuildSettingsRoleSubscriptionTierEditDefault from "../../guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionTierEdit.tsx";
+import GuildSettingsRoleSubscriptionsPaymentsDefault from "../../guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsPayments.tsx";
+import GuildSettingsRoleSubscriptionEmojisDefault from "../../guild_role_subscriptions/native/guild_settings/emojis/GuildSettingsRoleSubscriptionEmojis.tsx";
+import GuildSettingsRoleSubscriptionTierTemplateSelectionDefault from "../../guild_role_subscriptions/native/guild_settings/tier_templates/GuildSettingsRoleSubscriptionTierTemplateSelection.tsx";
+import GuildSettingsModalOfficialMessagesDefault from "GuildSettingsModalOfficialMessages.tsx";
+import GuildSettingsModalGuildSpaceDefault from "GuildSettingsModalGuildSpace.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../stores/GuildStore.tsx";
@@ -16,458 +56,833 @@ function close() {
   GuildSettingsModalChannelsActionCreatorsDefault.terminate();
   GuildSettingsActionCreatorsDefault.close();
 }
-const Constants = fn(1074);
+function getScreens(guildId, arg1) {
+  _require = guildId;
+  let obj = { contentContainerStyle: { paddingBottom: 16 + arg1 } };
+  const obj3 = {};
+  const obj4 = {
+    impressionName: require("discord_common/AnalyticsUtils").ImpressionNames.GUILD_SETTINGS_LANDING,
+    title: null,
+    headerLeft: null,
+    render: null,
+  };
+  const intl = require("util").intl;
+  obj4.title = intl.string(require("util").t["154/bL"]);
+  obj4.headerLeft = require("NavigatorHeader").getHeaderCloseButton(close);
+  obj4.render = function render() {
+    obj = { guildId };
+    const merged = Object.assign(obj);
+    return jsx(GuildSettingsModalLandingDefault, { guildId });
+  };
+  obj3[constants.LANDING] = obj4;
+  const obj6 = {
+    impressionName: require("discord_common/AnalyticsUtils").ImpressionNames.GUILD_SETTINGS_OVERVIEW,
+    title: null,
+    render: null,
+  };
+  const intl2 = require("util").intl;
+  obj6.title = intl2.string(require("util").t["/dp6yY"]);
+  obj6.render = function render() {
+    obj = {};
+    const merged = Object.assign(obj);
+    return jsx(GuildSettingsModalOverviewDefault, {});
+  };
+  obj3[constants.OVERVIEW] = obj6;
+  const obj7 = {
+    impressionName: require("discord_common/AnalyticsUtils").ImpressionNames.GUILD_SETTINGS_MODERATION,
+    title: null,
+    render: null,
+  };
+  const intl3 = require("util").intl;
+  obj7.title = intl3.string(require("util").t["5tbTdV"]);
+  obj7.render = function render() {
+    obj = {};
+    const merged = Object.assign(obj);
+    return jsx(GuildSettingsModalModerationDefault, {});
+  };
+  obj3[constants.MODERATION] = obj7;
+  const obj8 = { title: null, postponeRender: true, render: null };
+  const intl4 = require("util").intl;
+  obj8.title = intl4.string(require("util").t.uRelgx);
+  obj8.render = function render() {
+    obj = { guildId };
+    const merged = Object.assign(obj);
+    return jsx(GuildSettingsAutoModerationDefault, { guildId });
+  };
+  obj3[constants.GUILD_AUTOMOD] = obj8;
+  const obj9 = { title: null, render: null };
+  const intl5 = require("util").intl;
+  obj9.title = intl5.string(require("util").t.uRelgx);
+  obj9.render = function render(arg0) {
+    obj = { guildId };
+    const merged = Object.assign(arg0);
+    const merged1 = Object.assign(obj);
+    return jsx(GuildSettingsAutomodRuleDefault, { guildId });
+  };
+  obj3[constants.GUILD_AUTOMOD_RULE] = obj9;
+  const obj10 = {
+    impressionName: require("discord_common/AnalyticsUtils").ImpressionNames.GUILD_SETTINGS_AUDIT_LOG,
+    title: null,
+    postponeRender: true,
+    render: null,
+  };
+  const intl6 = require("util").intl;
+  obj10.title = intl6.string(require("util").t.SPWLyT);
+  obj10.render = function render() {
+    obj = { guildId };
+    const merged = Object.assign(obj);
+    return jsx(GuildSettingsModalAuditLogDefault, { guildId });
+  };
+  obj3[constants.AUDIT_LOG] = obj10;
+  const obj11 = { title: null, render: null };
+  const intl7 = require("util").intl;
+  obj11.title = intl7.string(require("util").t.pEasFX);
+  obj11.render = function render(arg0) {
+    obj = { guildId };
+    const merged = Object.assign(arg0);
+    const merged1 = Object.assign(obj);
+    return jsx(GuildSettingsModalAuditLogFilterDefault, { guildId });
+  };
+  obj3[constants.AUDIT_LOG_FILTER] = obj11;
+  const obj12 = {
+    impressionName: require("discord_common/AnalyticsUtils").ImpressionNames.GUILD_SETTINGS_INTEGRATION,
+    title: null,
+    render: null,
+  };
+  const intl8 = require("util").intl;
+  obj12.title = intl8.string(require("util").t.CIsNZw);
+  obj12.render = function render() {
+    obj = {};
+    const merged = Object.assign(obj);
+    return jsx(GuildSettingsModalIntegrationsDefault, {});
+  };
+  obj3[constants.INTEGRATIONS] = obj12;
+  const obj13 = {
+    impressionName: require("discord_common/AnalyticsUtils").ImpressionNames.GUILD_SETTINGS_EMOJI,
+    title: null,
+    postponeRender: true,
+    render: null,
+  };
+  const intl9 = require("util").intl;
+  obj13.title = intl9.string(require("util").t.sMOuuS);
+  obj13.render = function render() {
+    obj = { guildId };
+    const merged = Object.assign(obj);
+    return jsx(GuildSettingsModalEmojiDefault, { guildId });
+  };
+  obj3[constants.EMOJI] = obj13;
+  const obj14 = {
+    impressionName: require("discord_common/AnalyticsUtils").ImpressionNames.GUILD_SETTINGS_STICKERS,
+    title: null,
+    postponeRender: true,
+    render: null,
+  };
+  const intl10 = require("util").intl;
+  obj14.title = intl10.string(require("util").t.R5nQkS);
+  obj14.render = function render() {
+    obj = { guildId };
+    const merged = Object.assign(obj);
+    return jsx(GuildSettingsModalStickersDefault, { guildId });
+  };
+  obj3[constants.STICKERS] = obj14;
+  const obj15 = {
+    impressionName: require("discord_common/AnalyticsUtils").ImpressionNames.GUILD_SETTINGS_TAG,
+    title: null,
+    render: null,
+  };
+  const intl11 = require("util").intl;
+  obj15.title = intl11.string(require("util").t["2QmKZ2"]);
+  obj15.render = function render() {
+    obj = { guildId };
+    const merged = Object.assign(obj);
+    return jsx(GuildSettingsModalServerTagDefault, { guildId });
+  };
+  obj3[constants.TAG] = obj15;
+  const obj16 = { title: null, render: null };
+  const intl12 = require("util").intl;
+  obj16.title = intl12.string(require("util").t.r4R7mm);
+  obj16.render = function render() {
+    obj = { guildId };
+    const merged = Object.assign(obj);
+    return jsx(GuildSettingsModalServerTagCustomizeDefault, { guildId });
+  };
+  obj3[constants.TAG_CUSTOMIZE] = obj16;
+  const obj17 = {
+    impressionName: require("discord_common/AnalyticsUtils").ImpressionNames.GUILD_SETTINGS_WEBHOOKS,
+    title: null,
+    render: null,
+  };
+  const intl13 = require("util").intl;
+  obj17.title = intl13.string(require("util").t.jp25Id);
+  obj17.render = function render() {
+    obj = { guildId, webhookType: constants2.INCOMING };
+    const merged = Object.assign(obj);
+    return jsx(IntegrationsSettingsWebhooksOverviewDefault, { guildId, webhookType: constants2.INCOMING });
+  };
+  obj3[constants.WEBHOOKS] = obj17;
+  const obj18 = { title: null, render: null };
+  const intl14 = require("util").intl;
+  obj18.title = intl14.string(require("util").t["6SE3L3"]);
+  obj18.render = function render(arg0) {
+    obj = {};
+    const merged = Object.assign(arg0);
+    const merged1 = Object.assign(obj);
+    return jsx(IntegrationsSettingsEditWebhookDefault, {});
+  };
+  obj3[constants.EDIT_WEBHOOK] = obj18;
+  const obj19 = {
+    impressionName: require("discord_common/AnalyticsUtils").ImpressionNames.GUILD_SETTINGS_WEBHOOKS,
+    title: null,
+    render: null,
+  };
+  const intl15 = require("util").intl;
+  obj19.title = intl15.string(require("util").t.OrV60r);
+  obj19.render = function render() {
+    obj = { guildId, webhookType: constants2.CHANNEL_FOLLOWER };
+    const merged = Object.assign(obj);
+    return jsx(IntegrationsSettingsWebhooksOverviewDefault, { guildId, webhookType: constants2.CHANNEL_FOLLOWER });
+  };
+  obj3[constants.CHANNELS_FOLLOWED] = obj19;
+  const obj20 = {
+    impressionName: require("discord_common/AnalyticsUtils").ImpressionNames.GUILD_SETTINGS_INTEGRATION,
+    title: null,
+    render: null,
+  };
+  const intl16 = require("util").intl;
+  obj20.title = intl16.string(require("util").t.sE5hSZ);
+  obj20.render = function render(arg0) {
+    obj = {};
+    const merged = Object.assign(arg0);
+    const merged1 = Object.assign(obj);
+    return jsx(GuildSettingsModalIntegrationSettingsDefault, {});
+  };
+  obj3[constants.INTEGRATION_SETTINGS] = obj20;
+  const obj21 = { title: null, render: null };
+  const intl17 = require("util").intl;
+  obj21.title = intl17.string(require("util").t.CIsNZw);
+  obj21.render = function render(arg0) {
+    obj = {};
+    const merged = Object.assign(arg0);
+    obj.closeGuildSettings = close;
+    const merged1 = Object.assign(obj);
+    return jsx(GuildSettingsModalIntegrationPlatformDefault, {});
+  };
+  obj3[constants.INTEGRATION_PLATFORM] = obj21;
+  const obj22 = { title: null, render: null };
+  const intl18 = require("util").intl;
+  obj22.title = intl18.string(require("util").t.tqtDXC);
+  obj22.render = function render() {
+    obj = { guildId };
+    const merged = Object.assign(obj);
+    return jsx(GuildSettingsModalLobbiesLinkedDefault, { guildId });
+  };
+  obj3[constants.LOBBIES_LINKED] = obj22;
+  const obj23 = { title: null, render: null };
+  const intl19 = require("util").intl;
+  obj23.title = intl19.string(require("util").t.OJknhi);
+  obj23.render = function render(arg0) {
+    obj = {};
+    const merged = Object.assign(arg0);
+    const merged1 = Object.assign(obj);
+    return jsx(IntegrationsSettingsEditLinkedLobbyDefault, {});
+  };
+  obj3[constants.EDIT_LINKED_LOBBY] = obj23;
+  const obj24 = {
+    impressionName: require("discord_common/AnalyticsUtils").ImpressionNames.GUILD_SETTINGS_CHANNELS,
+    title: null,
+    postponeRender: true,
+    render: null,
+  };
+  const intl20 = require("util").intl;
+  obj24.title = intl20.string(require("util").t.OGiMXJ);
+  obj24.render = function render() {
+    obj = { guildId, onDone: GuildSettingsModalChannelsActionCreatorsDefault.stopReordering };
+    const merged = Object.assign(obj);
+    return jsx(GuildSettingsModalChannelsDefault, {
+      guildId,
+      onDone: GuildSettingsModalChannelsActionCreatorsDefault.stopReordering,
+    });
+  };
+  obj3[constants.CHANNELS] = obj24;
+  const obj25 = {
+    impressionName: require("discord_common/AnalyticsUtils").ImpressionNames.GUILD_SETTINGS_SECURITY,
+    title: null,
+    render: null,
+  };
+  const intl21 = require("util").intl;
+  obj25.title = intl21.string(require("util").t.Am9YHi);
+  obj25.render = function render() {
+    obj = { guildId };
+    const merged = Object.assign(obj);
+    return jsx(GuildSettingsModalSecurityDefault, { guildId });
+  };
+  obj3[constants.SECURITY] = obj25;
+  const obj26 = {
+    impressionName: require("discord_common/AnalyticsUtils").ImpressionNames.GUILD_SETTINGS_ROLES,
+    title: null,
+    render: null,
+  };
+  const intl22 = require("util").intl;
+  obj26.title = intl22.string(require("util").t["LPJmL/"]);
+  obj26.render = function render() {
+    obj = { guildId };
+    const merged = Object.assign(obj);
+    return jsx(GuildSettingsRolesDefault, { guildId });
+  };
+  obj3[constants.ROLES] = obj26;
+  const obj27 = { title: null, render: null };
+  const intl23 = require("util").intl;
+  obj27.title = intl23.string(require("util").t["LPJmL/"]);
+  obj27.render = function render(arg0) {
+    obj = { guildId };
+    const merged = Object.assign(arg0);
+    const merged1 = Object.assign(obj);
+    return jsx(GuildSettingsRoleEditDefault, { guildId });
+  };
+  obj3[constants.ROLE_EDIT_REFRESH] = obj27;
+  const obj28 = { title: null, render: null };
+  const intl24 = require("util").intl;
+  obj28.title = intl24.string(require("util").t["5XZKy/"]);
+  obj28.render = function render() {
+    obj = { guildId };
+    const merged = Object.assign(obj);
+    return jsx(GuildSettingsModalVanityURLDefault, { guildId });
+  };
+  obj3[constants.VANITY_URL] = obj28;
+  const obj29 = {
+    impressionName: require("discord_common/AnalyticsUtils").ImpressionNames.GUILD_SETTINGS_INVITES,
+    title: null,
+    postponeRender: true,
+    render: null,
+  };
+  const intl25 = require("util").intl;
+  obj29.title = intl25.string(require("util").t.ngRFjZ);
+  obj29.render = function render() {
+    obj = { guildId };
+    const merged = Object.assign(obj);
+    return jsx(GuildSettingsModalInstantInvitesDefault, { guildId });
+  };
+  obj3[constants.INSTANT_INVITES] = obj29;
+  const obj30 = {
+    impressionName: require("discord_common/AnalyticsUtils").ImpressionNames.GUILD_SETTINGS_TEMPLATE,
+    title: null,
+    postponeRender: true,
+    render: null,
+  };
+  const intl26 = require("util").intl;
+  obj30.title = intl26.string(require("util").t.KUw7Ss);
+  obj30.render = function render() {
+    obj = { guildId };
+    const merged = Object.assign(obj);
+    return jsx(GuildSettingsModalTemplateDefault, { guildId });
+  };
+  obj3[constants.GUILD_TEMPLATES] = obj30;
+  const obj31 = {
+    impressionName: require("discord_common/AnalyticsUtils").ImpressionNames.GUILD_SETTINGS_MEMBERS,
+    title: null,
+    postponeRender: true,
+    render: null,
+  };
+  const intl27 = require("util").intl;
+  obj31.title = intl27.string(require("util").t["9Oq93m"]);
+  obj31.render = function render() {
+    obj = { guildId };
+    const merged = Object.assign(obj);
+    return jsx(GuildSettingsModalMembersWrapperDefault, { guildId });
+  };
+  obj3[constants.MEMBERS] = obj31;
+  obj3[constants.MEMBER_EDIT] = {
+    render(arg0) {
+      obj = { guildId };
+      const merged = Object.assign(arg0);
+      const merged1 = Object.assign(obj);
+      return jsx(GuildSettingsModalMemberEdit.GuildSettingsModalMemberEditScene, { guildId });
+    },
+  };
+  obj3[constants.MEMBER_KICK] = {
+    headerTitle() {
+      return null;
+    },
+    render(arg0) {
+      obj = { guildId };
+      const merged = Object.assign(arg0);
+      const merged1 = Object.assign(obj);
+      return jsx(KickConfirmDefault, { guildId });
+    },
+  };
+  obj3[constants.MEMBER_BAN] = {
+    headerTitle() {
+      return null;
+    },
+    render(arg0) {
+      obj = { guildId };
+      const merged = Object.assign(arg0);
+      const merged1 = Object.assign(obj);
+      return jsx(BanConfirmDefault, { guildId });
+    },
+  };
+  const obj32 = {
+    impressionName: require("discord_common/AnalyticsUtils").ImpressionNames.GUILD_SETTINGS_BANS,
+    title: null,
+    postponeRender: true,
+    render: null,
+  };
+  const intl28 = require("util").intl;
+  obj32.title = intl28.string(require("util").t.ZbeITS);
+  obj32.render = function render() {
+    obj = { guildId };
+    const merged = Object.assign(obj);
+    return jsx(GuildSettingsModalBansDefault, { guildId });
+  };
+  obj3[constants.BANS] = obj32;
+  const obj33 = {
+    impressionName: require("discord_common/AnalyticsUtils").ImpressionNames.GUILD_SETTINGS_COMMUNITY_OVERVIEW,
+    title: null,
+    postponeRender: true,
+    render: null,
+  };
+  const intl29 = require("util").intl;
+  obj33.title = intl29.string(require("util").t.nRtNqn);
+  obj33.render = function render(arg0) {
+    obj = {};
+    const merged = Object.assign(arg0);
+    obj.guildId = guildId;
+    return jsx(GuildSettingsModalCommunityDefault, {});
+  };
+  obj3[constants.COMMUNITY] = obj33;
+  const obj34 = {
+    impressionName: require("discord_common/AnalyticsUtils").ImpressionNames.GUILD_SETTINGS_COMMUNITY_WELCOME,
+    title: null,
+    render: null,
+  };
+  const intl30 = require("util").intl;
+  obj34.title = intl30.string(require("util").t.ElKTeb);
+  obj34.render = function render(arg0) {
+    obj = { guildId };
+    const merged = Object.assign(arg0);
+    const merged1 = Object.assign(obj);
+    return jsx(GuildSettingsModalCommunityIntroDefault, { guildId });
+  };
+  obj3[constants.COMMUNITY_INTRO] = obj34;
+  const obj35 = {
+    impressionName: require("discord_common/AnalyticsUtils").ImpressionNames.GUILD_SETTINGS_ANALYTICS,
+    title: null,
+    postponeRender: true,
+    render: null,
+  };
+  const intl31 = require("util").intl;
+  obj35.title = intl31.string(require("util").t["0wWfUG"]);
+  obj35.render = function render() {
+    obj = { guildId };
+    const merged = Object.assign(obj);
+    return jsx(GuildSettingsModalAnalyticsDefault, { guildId });
+  };
+  obj3[constants.ANALYTICS] = obj35;
+  const obj36 = { title: null, render: null };
+  const intl32 = require("util").intl;
+  obj36.title = intl32.string(require("util").t["KzCF/6"]);
+  obj36.render = function render() {
+    return jsx(GuildSettingsRoleSubscriptionsEmptyDefault, { guildId });
+  };
+  obj3[constants.ROLE_SUBSCRIPTIONS] = obj36;
+  const obj37 = { title: null, render: null };
+  const intl33 = require("util").intl;
+  obj37.title = intl33.string(require("util").t["KzCF/6"]);
+  obj37.render = function render() {
+    return jsx(GuildSettingsRoleSubscriptionsEnableMonetizationDefault, { guildId });
+  };
+  obj3[constants.ROLE_SUBSCRIPTIONS_ENABLE_MONETIZATION] = obj37;
+  const obj38 = { title: null, render: null };
+  const intl34 = require("util").intl;
+  obj38.title = intl34.string(require("util").t["/CfKoD"]);
+  obj38.render = function render() {
+    return jsx(GuildSettingsRoleSubscriptionsGroupEditDefault, { guildId });
+  };
+  obj3[constants.ROLE_SUBSCRIPTIONS_BASIC] = obj38;
+  const obj39 = { title: null, render: null };
+  const intl35 = require("util").intl;
+  obj39.title = intl35.string(require("util").t.pXbGYc);
+  obj39.render = function render() {
+    return jsx(GuildSettingsRoleSubscriptionTiersDefault, { guildId });
+  };
+  obj3[constants.ROLE_SUBSCRIPTIONS_TIERS] = obj39;
+  const obj40 = { title: null, render: null };
+  const intl36 = require("util").intl;
+  obj40.title = intl36.string(require("util").t["KzCF/6"]);
+  obj40.render = function render(arg0) {
+    obj = {};
+    const merged = Object.assign(arg0);
+    obj.guildId = guildId;
+    return jsx(GuildSettingsRoleSubscriptionTierEditDefault, {});
+  };
+  obj3[constants.ROLE_SUBSCRIPTIONS_TIER_EDIT] = obj40;
+  const obj41 = { title: null, render: null };
+  const intl37 = require("util").intl;
+  obj41.title = intl37.string(require("util").t.p2Rsdl);
+  obj41.render = function render() {
+    return jsx(GuildSettingsRoleSubscriptionsPaymentsDefault, { guildId });
+  };
+  obj3[constants.ROLE_SUBSCRIPTIONS_PAYMENTS] = obj41;
+  const obj42 = { title: null, render: null };
+  const intl38 = require("util").intl;
+  obj42.title = intl38.string(require("util").t.C5Dbwn);
+  obj42.render = function render() {
+    return jsx(GuildSettingsRoleSubscriptionEmojisDefault, { guildId });
+  };
+  obj3[constants.ROLE_SUBSCRIPTIONS_EMOJIS] = obj42;
+  const obj43 = { title: null, render: null };
+  const intl39 = require("util").intl;
+  obj43.title = intl39.string(require("util").t["KzCF/6"]);
+  obj43.render = function render(arg0) {
+    obj = {};
+    const merged = Object.assign(arg0);
+    obj.guildId = guildId;
+    return jsx(GuildSettingsRoleSubscriptionTierTemplateSelectionDefault, {});
+  };
+  obj3[constants.ROLE_SUBSCRIPTIONS_TIER_TEMPLATE_SELECTION] = obj43;
+  const obj44 = { title: null, render: null };
+  const intl40 = require("util").intl;
+  obj44.title = intl40.string(require("util").t.xHEzFh);
+  obj44.render = function render() {
+    return jsx(GuildSettingsModalOfficialMessagesDefault, { guildId });
+  };
+  obj3[constants.OFFICIAL_MESSAGES] = obj44;
+  const obj45 = { title: null, render: null };
+  const intl41 = require("util").intl;
+  obj45.title = intl41.string(require("util").t.OBskVU);
+  obj45.render = function render() {
+    obj = {};
+    const merged = Object.assign(obj);
+    return jsx(GuildSettingsModalGuildSpaceDefault, {});
+  };
+  obj3[constants.GUILD_SPACE] = obj45;
+  return obj3;
+}
+const Constants = fn(1085);
 ({ GuildSettingsSections: closure_7, WebhookTypes: closure_8 } = Constants);
 const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/native/GuildSettingsModal.tsx");
 
-export default function GuildSettingsModal() {
-  let bottom = require("useSafeAreaInsets")().bottom;
-  let tmp2 = require("useInitialValue")(() => GuildSettingsStore.getGuildId());
-  importDefault = tmp2;
-  const items = [GuildStore];
-  stateFromStores = bottom(stateFromStores[56]).useStateFromStores(items, () => GuildStore.getGuild(closure_1));
-  const items1 = [bottom, tmp2];
-  const memo = noop.useMemo(() => {
-    let tmp2;
-    if (null != closure_1) {
-      bottom = tmp;
-      const obj2 = { paddingBottom: 16 + bottom };
-      { contentContainerStyle: null }.contentContainerStyle = obj2;
-      const obj3 = {};
-      const obj4 = { impressionName: discord_common_AnalyticsUtils.ImpressionNames.GUILD_SETTINGS_LANDING, title: null, headerLeft: null, render: null };
-      const intl = util.intl;
-      obj4.title = intl.string(util.t["154/bL"]);
-      obj4.headerLeft = NavigatorHeader.getHeaderCloseButton(close);
-      obj4.render = function render() {
-        obj = { guildId };
-        const merged = Object.assign(obj);
-        return jsx(closure_1(stateFromStores[11]), { guildId });
-      };
-      obj3[constants.LANDING] = obj4;
-      const obj6 = { impressionName: discord_common_AnalyticsUtils.ImpressionNames.GUILD_SETTINGS_OVERVIEW, title: null, render: null };
-      const intl2 = util.intl;
-      obj6.title = intl2.string(util.t["/dp6yY"]);
-      obj6.render = function render() {
-        obj = {};
-        const merged = Object.assign(obj);
-        return jsx(closure_1(stateFromStores[12]), {});
-      };
-      obj3[constants.OVERVIEW] = obj6;
-      const obj7 = { impressionName: discord_common_AnalyticsUtils.ImpressionNames.GUILD_SETTINGS_MODERATION, title: null, render: null };
-      const intl3 = util.intl;
-      obj7.title = intl3.string(util.t["5tbTdV"]);
-      obj7.render = function render() {
-        obj = {};
-        const merged = Object.assign(obj);
-        return jsx(closure_1(stateFromStores[13]), {});
-      };
-      obj3[constants.MODERATION] = obj7;
-      const obj8 = { title: null, postponeRender: true, render: null };
-      const intl4 = util.intl;
-      obj8.title = intl4.string(util.t.uRelgx);
-      obj8.render = function render() {
-        obj = { guildId };
-        const merged = Object.assign(obj);
-        return jsx(closure_1(stateFromStores[14]), { guildId });
-      };
-      obj3[constants.GUILD_AUTOMOD] = obj8;
-      const obj9 = { title: null, render: null };
-      const intl5 = util.intl;
-      obj9.title = intl5.string(util.t.uRelgx);
-      obj9.render = function render(arg0) {
-        obj = { guildId };
-        const merged = Object.assign(arg0);
-        const merged1 = Object.assign(obj);
-        return jsx(closure_1(stateFromStores[15]), { guildId });
-      };
-      obj3[constants.GUILD_AUTOMOD_RULE] = obj9;
-      const obj10 = { impressionName: discord_common_AnalyticsUtils.ImpressionNames.GUILD_SETTINGS_AUDIT_LOG, title: null, postponeRender: true, render: null };
-      const intl6 = util.intl;
-      obj10.title = intl6.string(util.t.SPWLyT);
-      obj10.render = function render() {
-        obj = { guildId };
-        const merged = Object.assign(obj);
-        return jsx(closure_1(stateFromStores[16]), { guildId });
-      };
-      obj3[constants.AUDIT_LOG] = obj10;
-      const obj11 = { title: null, render: null };
-      const intl7 = util.intl;
-      obj11.title = intl7.string(util.t.pEasFX);
-      obj11.render = function render(arg0) {
-        obj = { guildId };
-        const merged = Object.assign(arg0);
-        const merged1 = Object.assign(obj);
-        return jsx(closure_1(stateFromStores[17]), { guildId });
-      };
-      obj3[constants.AUDIT_LOG_FILTER] = obj11;
-      const obj12 = { impressionName: discord_common_AnalyticsUtils.ImpressionNames.GUILD_SETTINGS_INTEGRATION, title: null, render: null };
-      const intl8 = util.intl;
-      obj12.title = intl8.string(util.t.CIsNZw);
-      obj12.render = function render() {
-        obj = {};
-        const merged = Object.assign(obj);
-        return jsx(closure_1(stateFromStores[18]), {});
-      };
-      obj3[constants.INTEGRATIONS] = obj12;
-      const obj13 = { impressionName: discord_common_AnalyticsUtils.ImpressionNames.GUILD_SETTINGS_EMOJI, title: null, postponeRender: true, render: null };
-      const intl9 = util.intl;
-      obj13.title = intl9.string(util.t.sMOuuS);
-      obj13.render = function render() {
-        obj = { guildId };
-        const merged = Object.assign(obj);
-        return jsx(closure_1(stateFromStores[19]), { guildId });
-      };
-      obj3[constants.EMOJI] = obj13;
-      const obj14 = { impressionName: discord_common_AnalyticsUtils.ImpressionNames.GUILD_SETTINGS_STICKERS, title: null, postponeRender: true, render: null };
-      const intl10 = util.intl;
-      obj14.title = intl10.string(util.t.R5nQkS);
-      obj14.render = function render() {
-        obj = { guildId };
-        const merged = Object.assign(obj);
-        return jsx(closure_1(stateFromStores[20]), { guildId });
-      };
-      obj3[constants.STICKERS] = obj14;
-      const obj15 = { impressionName: discord_common_AnalyticsUtils.ImpressionNames.GUILD_SETTINGS_TAG, title: null, render: null };
-      const intl11 = util.intl;
-      obj15.title = intl11.string(util.t["2QmKZ2"]);
-      obj15.render = function render() {
-        obj = { guildId };
-        const merged = Object.assign(obj);
-        return jsx(closure_1(stateFromStores[21]), { guildId });
-      };
-      obj3[constants.TAG] = obj15;
-      const obj16 = { title: null, render: null };
-      const intl12 = util.intl;
-      obj16.title = intl12.string(util.t.r4R7mm);
-      obj16.render = function render() {
-        obj = { guildId };
-        const merged = Object.assign(obj);
-        return jsx(closure_1(stateFromStores[22]), { guildId });
-      };
-      obj3[constants.TAG_CUSTOMIZE] = obj16;
-      const obj17 = { impressionName: discord_common_AnalyticsUtils.ImpressionNames.GUILD_SETTINGS_WEBHOOKS, title: null, render: null };
-      const intl13 = util.intl;
-      obj17.title = intl13.string(util.t.jp25Id);
-      obj17.render = function render() {
-        obj = { guildId, webhookType: constants.INCOMING };
-        const merged = Object.assign(obj);
-        return jsx(closure_1(stateFromStores[23]), { guildId, webhookType: constants.INCOMING });
-      };
-      obj3[constants.WEBHOOKS] = obj17;
-      const obj18 = { title: null, render: null };
-      const intl14 = util.intl;
-      obj18.title = intl14.string(util.t["6SE3L3"]);
-      obj18.render = function render(arg0) {
-        obj = {};
-        const merged = Object.assign(arg0);
-        const merged1 = Object.assign(obj);
-        return jsx(closure_1(stateFromStores[24]), {});
-      };
-      obj3[constants.EDIT_WEBHOOK] = obj18;
-      const obj19 = { impressionName: discord_common_AnalyticsUtils.ImpressionNames.GUILD_SETTINGS_WEBHOOKS, title: null, render: null };
-      const intl15 = util.intl;
-      obj19.title = intl15.string(util.t.OrV60r);
-      obj19.render = function render() {
-        obj = { guildId, webhookType: constants.CHANNEL_FOLLOWER };
-        const merged = Object.assign(obj);
-        return jsx(closure_1(stateFromStores[23]), { guildId, webhookType: constants.CHANNEL_FOLLOWER });
-      };
-      obj3[constants.CHANNELS_FOLLOWED] = obj19;
-      const obj20 = { impressionName: discord_common_AnalyticsUtils.ImpressionNames.GUILD_SETTINGS_INTEGRATION, title: null, render: null };
-      const intl16 = util.intl;
-      obj20.title = intl16.string(util.t.sE5hSZ);
-      obj20.render = function render(arg0) {
-        obj = {};
-        const merged = Object.assign(arg0);
-        const merged1 = Object.assign(obj);
-        return jsx(closure_1(stateFromStores[25]), {});
-      };
-      obj3[constants.INTEGRATION_SETTINGS] = obj20;
-      const obj21 = { title: null, render: null };
-      const intl17 = util.intl;
-      obj21.title = intl17.string(util.t.CIsNZw);
-      obj21.render = function render(arg0) {
-        obj = {};
-        const merged = Object.assign(arg0);
-        obj.closeGuildSettings = closeGuildSettings;
-        const merged1 = Object.assign(obj);
-        return jsx(closure_1(stateFromStores[26]), {});
-      };
-      obj3[constants.INTEGRATION_PLATFORM] = obj21;
-      const obj22 = { title: null, render: null };
-      const intl18 = util.intl;
-      obj22.title = intl18.string(util.t.tqtDXC);
-      obj22.render = function render() {
-        obj = { guildId };
-        const merged = Object.assign(obj);
-        return jsx(closure_1(stateFromStores[27]), { guildId });
-      };
-      obj3[constants.LOBBIES_LINKED] = obj22;
-      const obj23 = { title: null, render: null };
-      const intl19 = util.intl;
-      obj23.title = intl19.string(util.t.OJknhi);
-      obj23.render = function render(arg0) {
-        obj = {};
-        const merged = Object.assign(arg0);
-        const merged1 = Object.assign(obj);
-        return jsx(closure_1(stateFromStores[28]), {});
-      };
-      obj3[constants.EDIT_LINKED_LOBBY] = obj23;
-      const obj24 = { impressionName: discord_common_AnalyticsUtils.ImpressionNames.GUILD_SETTINGS_CHANNELS, title: null, postponeRender: true, render: null };
-      const intl20 = util.intl;
-      obj24.title = intl20.string(util.t.OGiMXJ);
-      obj24.render = function render() {
-        obj = { guildId, onDone: closure_1(stateFromStores[6]).stopReordering };
-        const merged = Object.assign(obj);
-        return jsx(closure_1(stateFromStores[29]), { guildId, onDone: closure_1(stateFromStores[6]).stopReordering });
-      };
-      obj3[constants.CHANNELS] = obj24;
-      const obj25 = { impressionName: discord_common_AnalyticsUtils.ImpressionNames.GUILD_SETTINGS_SECURITY, title: null, render: null };
-      const intl21 = util.intl;
-      obj25.title = intl21.string(util.t.Am9YHi);
-      obj25.render = function render() {
-        obj = { guildId };
-        const merged = Object.assign(obj);
-        return jsx(closure_1(stateFromStores[30]), { guildId });
-      };
-      obj3[constants.SECURITY] = obj25;
-      const obj26 = { impressionName: discord_common_AnalyticsUtils.ImpressionNames.GUILD_SETTINGS_ROLES, title: null, render: null };
-      const intl22 = util.intl;
-      obj26.title = intl22.string(util.t["LPJmL/"]);
-      obj26.render = function render() {
-        obj = { guildId };
-        const merged = Object.assign(obj);
-        return jsx(closure_1(stateFromStores[31]), { guildId });
-      };
-      obj3[constants.ROLES] = obj26;
-      const obj27 = { title: null, render: null };
-      const intl23 = util.intl;
-      obj27.title = intl23.string(util.t["LPJmL/"]);
-      obj27.render = function render(arg0) {
-        obj = { guildId };
-        const merged = Object.assign(arg0);
-        const merged1 = Object.assign(obj);
-        return jsx(closure_1(stateFromStores[32]), { guildId });
-      };
-      obj3[constants.ROLE_EDIT_REFRESH] = obj27;
-      const obj28 = { title: null, render: null };
-      const intl24 = util.intl;
-      obj28.title = intl24.string(util.t["5XZKy/"]);
-      obj28.render = function render() {
-        obj = { guildId };
-        const merged = Object.assign(obj);
-        return jsx(closure_1(stateFromStores[33]), { guildId });
-      };
-      obj3[constants.VANITY_URL] = obj28;
-      const obj29 = { impressionName: discord_common_AnalyticsUtils.ImpressionNames.GUILD_SETTINGS_INVITES, title: null, postponeRender: true, render: null };
-      const intl25 = util.intl;
-      obj29.title = intl25.string(util.t.ngRFjZ);
-      obj29.render = function render() {
-        obj = { guildId };
-        const merged = Object.assign(obj);
-        return jsx(closure_1(stateFromStores[34]), { guildId });
-      };
-      obj3[constants.INSTANT_INVITES] = obj29;
-      const obj30 = { impressionName: discord_common_AnalyticsUtils.ImpressionNames.GUILD_SETTINGS_TEMPLATE, title: null, postponeRender: true, render: null };
-      const intl26 = util.intl;
-      obj30.title = intl26.string(util.t.KUw7Ss);
-      obj30.render = function render() {
-        obj = { guildId };
-        const merged = Object.assign(obj);
-        return jsx(closure_1(stateFromStores[35]), { guildId });
-      };
-      obj3[constants.GUILD_TEMPLATES] = obj30;
-      const obj31 = { impressionName: discord_common_AnalyticsUtils.ImpressionNames.GUILD_SETTINGS_MEMBERS, title: null, postponeRender: true, render: null };
-      const intl27 = util.intl;
-      obj31.title = intl27.string(util.t["9Oq93m"]);
-      obj31.render = function render() {
-        obj = { guildId };
-        const merged = Object.assign(obj);
-        return jsx(closure_1(stateFromStores[36]), { guildId });
-      };
-      obj3[constants.MEMBERS] = obj31;
-      const obj32 = {
-        render(arg0) {
-            obj = { guildId };
-            const merged = Object.assign(arg0);
-            const merged1 = Object.assign(obj);
-            return jsx(bottom(stateFromStores[37]).GuildSettingsModalMemberEditScene, { guildId });
+export default ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = require("c").c(16);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        class I {
+          constructor() {
+            return closure_1_6.getGuildId();
           }
-      };
-      obj3[constants.MEMBER_EDIT] = obj32;
-      const obj33 = {
-        headerTitle() {
-            return null;
-          },
-        render(arg0) {
-            obj = { guildId };
-            const merged = Object.assign(arg0);
-            const merged1 = Object.assign(obj);
-            return jsx(closure_1(stateFromStores[38]), { guildId });
+        }
+        cResult[0] = I;
+      } else {
+        class I {
+          constructor() {
+            return closure_1_6.getGuildId();
           }
-      };
-      obj3[constants.MEMBER_KICK] = obj33;
-      const obj34 = {
-        headerTitle() {
-            return null;
-          },
-        render(arg0) {
-            obj = { guildId };
-            const merged = Object.assign(arg0);
-            const merged1 = Object.assign(obj);
-            return jsx(closure_1(stateFromStores[39]), { guildId });
+        }
+      }
+      const tmp6 = stateFromStores(5984)(I);
+      _require = tmp6;
+      if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
+        class I {
+          constructor() {
+            return closure_1_6.getGuildId();
           }
-      };
-      obj3[constants.MEMBER_BAN] = obj34;
-      const obj35 = { impressionName: discord_common_AnalyticsUtils.ImpressionNames.GUILD_SETTINGS_BANS, title: null, postponeRender: true, render: null };
-      const intl28 = util.intl;
-      obj35.title = intl28.string(util.t.ZbeITS);
-      obj35.render = function render() {
-        obj = { guildId };
-        const merged = Object.assign(obj);
-        return jsx(closure_1(stateFromStores[40]), { guildId });
-      };
-      obj3[constants.BANS] = obj35;
-      const obj36 = { impressionName: discord_common_AnalyticsUtils.ImpressionNames.GUILD_SETTINGS_COMMUNITY_OVERVIEW, title: null, postponeRender: true, render: null };
-      const intl29 = util.intl;
-      obj36.title = intl29.string(util.t.nRtNqn);
-      obj36.render = function render(arg0) {
-        obj = {};
-        const merged = Object.assign(arg0);
-        obj.guildId = guildId;
-        return jsx(closure_1(stateFromStores[41]), {});
-      };
-      obj3[constants.COMMUNITY] = obj36;
-      const obj37 = { impressionName: discord_common_AnalyticsUtils.ImpressionNames.GUILD_SETTINGS_COMMUNITY_WELCOME, title: null, render: null };
-      const intl30 = util.intl;
-      obj37.title = intl30.string(util.t.ElKTeb);
-      obj37.render = function render(arg0) {
-        obj = { guildId };
-        const merged = Object.assign(arg0);
-        const merged1 = Object.assign(obj);
-        return jsx(closure_1(stateFromStores[42]), { guildId });
-      };
-      obj3[constants.COMMUNITY_INTRO] = obj37;
-      const obj38 = { impressionName: discord_common_AnalyticsUtils.ImpressionNames.GUILD_SETTINGS_ANALYTICS, title: null, postponeRender: true, render: null };
-      const intl31 = util.intl;
-      obj38.title = intl31.string(util.t["0wWfUG"]);
-      obj38.render = function render() {
-        obj = { guildId };
-        const merged = Object.assign(obj);
-        return jsx(closure_1(stateFromStores[43]), { guildId });
-      };
-      obj3[constants.ANALYTICS] = obj38;
-      const obj39 = { title: null, render: null };
-      const intl32 = util.intl;
-      obj39.title = intl32.string(util.t["KzCF/6"]);
-      obj39.render = function render() {
-        return jsx(closure_1(stateFromStores[44]), { guildId });
-      };
-      obj3[constants.ROLE_SUBSCRIPTIONS] = obj39;
-      const obj40 = { title: null, render: null };
-      const intl33 = util.intl;
-      obj40.title = intl33.string(util.t["KzCF/6"]);
-      obj40.render = function render() {
-        return jsx(closure_1(stateFromStores[45]), { guildId });
-      };
-      obj3[constants.ROLE_SUBSCRIPTIONS_ENABLE_MONETIZATION] = obj40;
-      const obj41 = { title: null, render: null };
-      const intl34 = util.intl;
-      obj41.title = intl34.string(util.t["/CfKoD"]);
-      obj41.render = function render() {
-        return jsx(closure_1(stateFromStores[46]), { guildId });
-      };
-      obj3[constants.ROLE_SUBSCRIPTIONS_BASIC] = obj41;
-      const obj42 = { title: null, render: null };
-      const intl35 = util.intl;
-      obj42.title = intl35.string(util.t.pXbGYc);
-      obj42.render = function render() {
-        return jsx(closure_1(stateFromStores[47]), { guildId });
-      };
-      obj3[constants.ROLE_SUBSCRIPTIONS_TIERS] = obj42;
-      const obj43 = { title: null, render: null };
-      const intl36 = util.intl;
-      obj43.title = intl36.string(util.t["KzCF/6"]);
-      obj43.render = function render(arg0) {
-        obj = {};
-        const merged = Object.assign(arg0);
-        obj.guildId = guildId;
-        return jsx(closure_1(stateFromStores[48]), {});
-      };
-      obj3[constants.ROLE_SUBSCRIPTIONS_TIER_EDIT] = obj43;
-      const obj44 = { title: null, render: null };
-      const intl37 = util.intl;
-      obj44.title = intl37.string(util.t.p2Rsdl);
-      obj44.render = function render() {
-        return jsx(closure_1(stateFromStores[49]), { guildId });
-      };
-      obj3[constants.ROLE_SUBSCRIPTIONS_PAYMENTS] = obj44;
-      const obj45 = { title: null, render: null };
-      const intl38 = util.intl;
-      obj45.title = intl38.string(util.t.C5Dbwn);
-      obj45.render = function render() {
-        return jsx(closure_1(stateFromStores[50]), { guildId });
-      };
-      obj3[constants.ROLE_SUBSCRIPTIONS_EMOJIS] = obj45;
-      const obj46 = { title: null, render: null };
-      const intl39 = util.intl;
-      obj46.title = intl39.string(util.t["KzCF/6"]);
-      obj46.render = function render(arg0) {
-        obj = {};
-        const merged = Object.assign(arg0);
-        obj.guildId = guildId;
-        return jsx(closure_1(stateFromStores[51]), {});
-      };
-      obj3[constants.ROLE_SUBSCRIPTIONS_TIER_TEMPLATE_SELECTION] = obj46;
-      const obj47 = { title: null, render: null };
-      const intl40 = util.intl;
-      obj47.title = intl40.string(util.t.xHEzFh);
-      obj47.render = function render() {
-        return jsx(closure_1(stateFromStores[52]), { guildId });
-      };
-      obj3[constants.OFFICIAL_MESSAGES] = obj47;
-      const obj48 = { title: null, render: null };
-      const intl41 = util.intl;
-      obj48.title = intl41.string(util.t.OBskVU);
-      obj48.render = function render() {
-        obj = {};
-        const merged = Object.assign(obj);
-        return jsx(closure_1(stateFromStores[53]), {});
-      };
-      obj3[constants.GUILD_SPACE] = obj48;
-      tmp2 = obj3;
-      let obj = { contentContainerStyle: null };
+        }
+        const items = [GuildStore];
+        cResult[1] = items;
+        const tmp7 = items;
+      } else {
+        class I {
+          constructor() {
+            return closure_1_6.getGuildId();
+          }
+        }
+      }
+      if (cResult[2] !== tmp6) {
+        class I {
+          constructor() {
+            return closure_1_6.getGuildId();
+          }
+        }
+        cResult[2] = tmp6;
+        cResult[3] = tmp9;
+      } else {
+        class I {
+          constructor() {
+            return closure_1_6.getGuildId();
+          }
+        }
+      }
+      let obj = require("c");
+      stateFromStores = require("initialize").useStateFromStores(tmp7, tmp9);
+      if (cResult[4] === tmp6) {
+        class I {
+          constructor() {
+            return closure_1_6.getGuildId();
+          }
+        }
+        if (cResult[7] === stateFromStores) {
+          class I {
+            constructor() {
+              return closure_1_6.getGuildId();
+            }
+          }
+          class L {
+            constructor() {
+              tmp = null != closure_0;
+              if (tmp) {
+                tmp2 = closure_1;
+                tmp = null != closure_1;
+              }
+              if (!tmp) {
+                tmp3 = closure_1;
+                tmp4 = closure_2;
+                obj = closure_1(closure_2[7]);
+                closeResult = obj.close();
+              }
+              return;
+            }
+          }
+          const _Symbol = Symbol;
+          if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
+            class O {
+              constructor() {
+                return closure_1_6.getSavedRouteState();
+              }
+            }
+            class L {
+              constructor() {
+                tmp = null != closure_0;
+                if (tmp) {
+                  tmp2 = closure_1;
+                  tmp = null != closure_1;
+                }
+                if (!tmp) {
+                  tmp3 = closure_1;
+                  tmp4 = closure_2;
+                  obj = closure_1(closure_2[7]);
+                  closeResult = obj.close();
+                }
+                return;
+              }
+            }
+          } else {
+            class O {
+              constructor() {
+                return closure_1_6.getSavedRouteState();
+              }
+            }
+          }
+          const first = _slicedToArray(noop.useState(O), 1)[0];
+          const _Symbol2 = Symbol;
+          if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
+            class D {
+              constructor(arg0) {
+                navigation = arg0.navigation;
+                obj = closure_1(closure_1_2[7]);
+                saveRouteStackResult = obj.saveRouteStack(navigation.getState());
+                return;
+              }
+            }
+            class L {
+              constructor() {
+                tmp = null != closure_0;
+                if (tmp) {
+                  tmp2 = closure_1;
+                  tmp = null != closure_1;
+                }
+                if (!tmp) {
+                  tmp3 = closure_1;
+                  tmp4 = closure_2;
+                  obj = closure_1(closure_2[7]);
+                  closeResult = obj.close();
+                }
+                return;
+              }
+            }
+          } else {
+            class D {
+              constructor(arg0) {
+                navigation = arg0.navigation;
+                obj = closure_1(closure_1_2[7]);
+                saveRouteStackResult = obj.saveRouteStack(navigation.getState());
+                return;
+              }
+            }
+          }
+          if (cResult[13] === first) {
+            class D {
+              constructor(arg0) {
+                navigation = arg0.navigation;
+                obj = closure_1(closure_1_2[7]);
+                saveRouteStackResult = obj.saveRouteStack(navigation.getState());
+                return;
+              }
+            }
+            return tmp19;
+          }
+          let tmp22Result = null;
+          if (null != tmp11) {
+            class D {
+              constructor(arg0) {
+                navigation = arg0.navigation;
+                obj = closure_1(closure_1_2[7]);
+                saveRouteStackResult = obj.saveRouteStack(navigation.getState());
+                return;
+              }
+            }
+            const obj2 = { onWillFocus: null, initialRouteName: null, initialRouteState: null, screens: null };
+            class L {
+              constructor() {
+                tmp = null != closure_0;
+                if (tmp) {
+                  tmp2 = closure_1;
+                  tmp = null != closure_1;
+                }
+                if (!tmp) {
+                  tmp3 = closure_1;
+                  tmp4 = closure_2;
+                  obj = closure_1(closure_2[7]);
+                  closeResult = obj.close();
+                }
+                return;
+              }
+            }
+            let LANDING;
+            if (null == first) {
+              class D {
+                constructor(arg0) {
+                  navigation = arg0.navigation;
+                  obj = closure_1(closure_1_2[7]);
+                  saveRouteStackResult = obj.saveRouteStack(navigation.getState());
+                  return;
+                }
+              }
+              LANDING = constants.LANDING;
+            }
+            obj2.initialRouteName = LANDING;
+            if (null != first) {
+              class D {
+                constructor(arg0) {
+                  navigation = arg0.navigation;
+                  obj = closure_1(closure_1_2[7]);
+                  saveRouteStackResult = obj.saveRouteStack(navigation.getState());
+                  return;
+                }
+              }
+            }
+            obj2.initialRouteState = undefined;
+            obj2.screens = tmp11;
+            tmp22Result = tmp22(tmp(6496).Navigator, obj2);
+          }
+          cResult[13] = first;
+          cResult[14] = tmp11;
+          cResult[15] = tmp22Result;
+          tmp19 = tmp22Result;
+        }
+        class L {
+          constructor() {
+            tmp = null != closure_0;
+            if (tmp) {
+              tmp2 = closure_1;
+              tmp = null != closure_1;
+            }
+            if (!tmp) {
+              tmp3 = closure_1;
+              tmp4 = closure_2;
+              obj = closure_1(closure_2[7]);
+              closeResult = obj.close();
+            }
+            return;
+          }
+        }
+        const items1 = [stateFromStores, tmp6];
+        cResult[7] = stateFromStores;
+        cResult[8] = tmp6;
+        cResult[9] = L;
+        cResult[10] = items1;
+      }
+      if (null != tmp6) {
+        class D {
+          constructor(arg0) {
+            navigation = arg0.navigation;
+            obj = closure_1(closure_1_2[7]);
+            saveRouteStackResult = obj.saveRouteStack(navigation.getState());
+            return;
+          }
+        }
+        class L {
+          constructor() {
+            tmp = null != closure_0;
+            if (tmp) {
+              tmp2 = closure_1;
+              tmp = null != closure_1;
+            }
+            if (!tmp) {
+              tmp3 = closure_1;
+              tmp4 = closure_2;
+              obj = closure_1(closure_2[7]);
+              closeResult = obj.close();
+            }
+            return;
+          }
+        }
+      }
+      cResult[4] = tmp6;
+      cResult[5] = stateFromStores(1618)().bottom;
+      cResult[6] = undefined;
+      const tmpResult = require("initialize");
     }
-    return tmp2;
-  }, items1);
-  const items2 = [stateFromStores, tmp2];
-  const effect = noop.useEffect(() => {
-    let tmp = null != closure_1;
-    if (tmp) {
-      tmp = null != stateFromStores;
-    }
-    if (!tmp) {
-      GuildSettingsActionCreatorsDefault.close();
-    }
-  }, items2);
-  const first = _slicedToArray(noop.useState(() => GuildSettingsStore.getSavedRouteState()), 1)[0];
-  let tmp10Result = null;
-  if (null != memo) {
-    let obj2 = { onWillFocus: tmp8, initialRouteName: null, initialRouteState: null, screens: null };
-    let LANDING;
-    if (null == first) {
-      LANDING = constants.LANDING;
-    }
-    obj2.initialRouteName = LANDING;
-    let tmp13;
-    if (null != first) {
-      tmp13 = first;
-    }
-    obj2.initialRouteState = tmp13;
-    obj2.screens = memo;
-    tmp10Result = jsx(bottom(stateFromStores[57]).Navigator, { onWillFocus: tmp8, initialRouteName: null, initialRouteState: null, screens: null });
-  }
-  return tmp10Result;
-};
+  : () => {
+      const bottom = require("useSafeAreaInsets")().bottom;
+      let tmp2 = require("useInitialValue")(() => GuildSettingsStore.getGuildId());
+      importDefault = tmp2;
+      const items = [GuildStore];
+      stateFromStores = bottom(stateFromStores[58]).useStateFromStores(items, () => GuildStore.getGuild(closure_1));
+      const items1 = [bottom, tmp2];
+      const memo = noop.useMemo(() => {
+        let tmp2;
+        if (null != closure_1) {
+          tmp2 = getScreens(tmp, bottom);
+        }
+        return tmp2;
+      }, items1);
+      const items2 = [stateFromStores, tmp2];
+      const effect = noop.useEffect(() => {
+        let tmp = null != closure_1;
+        if (tmp) {
+          tmp = null != stateFromStores;
+        }
+        if (!tmp) {
+          GuildSettingsActionCreatorsDefault.close();
+        }
+      }, items2);
+      const first = _slicedToArray(
+        noop.useState(() => GuildSettingsStore.getSavedRouteState()),
+        1,
+      )[0];
+      let tmp10Result = null;
+      if (null != memo) {
+        const obj2 = { onWillFocus: tmp8, initialRouteName: null, initialRouteState: null, screens: null };
+        let LANDING;
+        if (null == first) {
+          LANDING = constants.LANDING;
+        }
+        obj2.initialRouteName = LANDING;
+        let tmp13;
+        if (null != first) {
+          tmp13 = first;
+        }
+        obj2.initialRouteState = tmp13;
+        obj2.screens = memo;
+        tmp10Result = jsx(bottom(stateFromStores[59]).Navigator, {
+          onWillFocus: tmp8,
+          initialRouteName: null,
+          initialRouteState: null,
+          screens: null,
+        });
+      }
+      return tmp10Result;
+    };

@@ -6,10 +6,10 @@ import StatusDisplayTypes from "../../../../../discord_common/js/shared/shared-c
 import ApplicationStore from "../../../applications/ApplicationStore.tsx";
 
 require = fn;
-let Constants = fn(5270);
+let Constants = fn(5316);
 const RPC_LOCAL_SCOPE = Constants.RPC_LOCAL_SCOPE;
 ({ TransportTypes: hasOwnProperty, RPC_SCOPE_CONFIG, RPC_EMBEDDED_APP_SCOPE } = Constants);
-Constants = fn(1074);
+Constants = fn(1085);
 ({
   ActivityGamePlatforms: metroRequire,
   ActivityPartyPrivacy: closure_7,
@@ -22,8 +22,8 @@ let obj = {};
 let obj2 = { scope: null, validation: null, handler: null };
 let obj3 = {};
 let items = [
-  fn(7969).OAuth2Scopes.RPC,
-  fn(7969).OAuth2Scopes.RPC_ACTIVITIES_WRITE,
+  fn(8015).OAuth2Scopes.RPC,
+  fn(8015).OAuth2Scopes.RPC_ACTIVITIES_WRITE,
   RPC_LOCAL_SCOPE,
   RPC_EMBEDDED_APP_SCOPE,
 ];
@@ -236,15 +236,15 @@ obj2.handler = function handler(socket) {
         delete tmp3[tmp];
       }
       const tmp4Result = tmp4(tmp6[9]);
-      let canLaunchFrameResult = null != application;
-      if (canLaunchFrameResult) {
-        canLaunchFrameResult = tmp4(tmp6[10]).canLaunchFrame(application);
+      let result = null != application;
+      if (result) {
+        result = tmp4(tmp6[10]).canLaunchContextlessFrame(application);
         const tmp4Result2 = tmp4(tmp6[10]);
       }
-      if (canLaunchFrameResult) {
-        canLaunchFrameResult = tmp27;
+      if (result) {
+        result = tmp27;
       }
-      const activityFlags = tmp4Result.computeActivityFlags(activity, flag, tmp27, canLaunchFrameResult, privacy);
+      const activityFlags = tmp4Result.computeActivityFlags(activity, flag, tmp27, result, privacy);
       if (activityFlags > 0) {
         activity.flags = activityFlags;
       }
@@ -416,6 +416,6 @@ obj2.handler = function handler(socket) {
 };
 obj[Constants.RPCCommands.SET_ACTIVITY] = obj2;
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/rpc/server/commands/setActivity.tsx");
+let result = size.fileFinishedImporting("modules/rpc/server/commands/setActivity.tsx");
 
 export default obj;

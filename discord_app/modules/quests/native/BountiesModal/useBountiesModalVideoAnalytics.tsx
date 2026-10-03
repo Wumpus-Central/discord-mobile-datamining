@@ -12,7 +12,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import NetworkStore from "../../../../stores/NetworkStore.tsx";
 
 require = fn;
-const AnalyticEvents = fn(1074).AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 let closure_8 = [25, 50, 75];
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/useBountiesModalVideoAnalytics.tsx");
@@ -103,7 +103,7 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -125,7 +125,7 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
               closure_129_3 = undefined;
               let impressionId;
               closure_129_5 = undefined;
-              VIDEO_MODAL_MOBILE = closure_0(5947).QuestContent.VIDEO_MODAL_MOBILE;
+              VIDEO_MODAL_MOBILE = closure_0(5628).QuestContent.VIDEO_MODAL_MOBILE;
               ({ bountyId: closure_129_2, sourceQuestContent: closure_129_3 } = ref.current);
               c4 = 1;
               const current = ref.current;
@@ -138,7 +138,7 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
           } else if (1 === tmp8) {
             c4 = 0;
             closure_129_6 = closure_3;
-            const questLogger = closure_0(7295).getQuestLogger();
+            const questLogger = closure_0(7193).getQuestLogger();
             questLogger.warn("[EngagedView] failed to emit quest_content_engaged_viewed", closure_129_6);
             throw closure_129_6;
           } else if (arg0 === 1) {
@@ -153,15 +153,15 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
             closure_129_5 = value;
             const obj8 = {
               adContentId: closure_129_2,
-              adCreativeType: closure_0(5949).AdCreativeType.BOUNTY,
+              adCreativeType: closure_0(5630).AdCreativeType.BOUNTY,
               event: constants.QUEST_CONTENT_ENGAGED_VIEWED,
               properties: null,
               sourceQuestContent: null,
             };
             const obj10 = {};
-            const obj9 = closure_0(7304);
-            const merged = Object.assign(closure_0(7314).getContentProperties(VIDEO_MODAL_MOBILE));
-            const merged1 = Object.assign(sourceQuestContent(7263)());
+            const obj9 = closure_0(7202);
+            const merged = Object.assign(closure_0(7212).getContentProperties(VIDEO_MODAL_MOBILE));
+            const merged1 = Object.assign(sourceQuestContent(7161)());
             obj10.impression_id = impressionId;
             obj10.video_watch_seconds = closure_129_0.video_watch_seconds;
             obj10.video_position_seconds = closure_129_0.video_position_seconds;
@@ -172,7 +172,7 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
               if (obj.isIOS()) {
                 advertisingId = closure_129_5.advertisingId;
               }
-              obj = closure_0(1364);
+              obj = closure_0(1369);
             }
             obj10.apple_advertising_id = advertisingId;
             let advertisingId1 = null;
@@ -181,7 +181,7 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
               if (obj2.isAndroid()) {
                 advertisingId1 = closure_129_5.advertisingId;
               }
-              obj2 = closure_0(1364);
+              obj2 = closure_0(1369);
             }
             obj10.android_advertising_id = advertisingId1;
             obj8.properties = obj10;
@@ -189,7 +189,7 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
             obj9.trackAdContentEvent(obj8);
             c4 = 0;
             c6 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp35) {
           closure_3 = tmp35;

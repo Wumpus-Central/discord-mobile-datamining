@@ -5,39 +5,73 @@ import BillingPlatformUtils from "../../device/BillingPlatformUtils.tsx";
 import CollectiblesProductUtils from "../utils/CollectiblesProductUtils.tsx";
 import CollectiblesUtils from "../CollectiblesUtils.tsx";
 import useCurrentUser from "useCurrentUser.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 let result = size.fileFinishedImporting("modules/collectibles/hooks/useCanGiftProduct.tsx");
 
-export const useCanGiftProduct = function useCanGiftProduct(product) {
-  const currentUser = useCurrentUser.useCurrentUser();
-  let result = CollectiblesUtils.isPremiumCollectiblesProduct(product);
-  const result1 = CollectiblesUtils.isFreeCollectiblesProduct(product);
-  const result2 = CollectiblesProductUtils.isOrbsExclusiveProduct(product);
-  const canUseShopDiscountsResult = PremiumUtilsDefault.canUseShopDiscounts(currentUser);
-  const defaultPriceSetAssignmentPurchaseType =
-    CollectiblesUtils.getDefaultPriceSetAssignmentPurchaseType(canUseShopDiscountsResult);
-  const result3 = CollectiblesUtils.extractPriceByPurchaseTypes(product, defaultPriceSetAssignmentPurchaseType);
-  if (!result) {
-    result = result1;
-  }
-  if (!result) {
-    result = result2;
-  }
-  if (!result) {
-    result = product.type === CollectiblesItemType.CollectiblesItemType.EXTERNAL_SKU;
-  }
-  if (!result) {
-    let currency;
-    if (result3 != null) {
-      currency = result3.currency;
+export const useCanGiftProduct = ReactCompilerGating.isReactCompilerEnabled()
+  ? (type) => {
+      const currentUser = useCurrentUser.useCurrentUser();
+      let result = CollectiblesUtils.isPremiumCollectiblesProduct(type);
+      const result1 = CollectiblesUtils.isFreeCollectiblesProduct(type);
+      const result2 = CollectiblesProductUtils.isOrbsExclusiveProduct(type);
+      const canUseShopDiscountsResult = PremiumUtilsDefault.canUseShopDiscounts(currentUser);
+      const defaultPriceSetAssignmentPurchaseType =
+        CollectiblesUtils.getDefaultPriceSetAssignmentPurchaseType(canUseShopDiscountsResult);
+      const result3 = CollectiblesUtils.extractPriceByPurchaseTypes(type, defaultPriceSetAssignmentPurchaseType);
+      if (!result) {
+        result = result1;
+      }
+      if (!result) {
+        result = result2;
+      }
+      if (!result) {
+        result = type.type === CollectiblesItemType.CollectiblesItemType.EXTERNAL_SKU;
+      }
+      if (!result) {
+        let currency;
+        if (result3 != null) {
+          currency = result3.currency;
+        }
+        result = CollectiblesUtils.shouldHideGiftingForCurrency(currency);
+        const tmpResult = CollectiblesUtils;
+      }
+      if (!result) {
+        result = !BillingPlatformUtils.isCollectibleGiftingSupported();
+        const tmpResult2 = BillingPlatformUtils;
+      }
+      return !result;
     }
-    result = CollectiblesUtils.shouldHideGiftingForCurrency(currency);
-    const tmpResult = CollectiblesUtils;
-  }
-  if (!result) {
-    result = !BillingPlatformUtils.isCollectibleGiftingSupported();
-    const tmpResult2 = BillingPlatformUtils;
-  }
-  return !result;
-};
+  : (type) => {
+      const currentUser = useCurrentUser.useCurrentUser();
+      let result = CollectiblesUtils.isPremiumCollectiblesProduct(type);
+      const result1 = CollectiblesUtils.isFreeCollectiblesProduct(type);
+      const result2 = CollectiblesProductUtils.isOrbsExclusiveProduct(type);
+      const canUseShopDiscountsResult = PremiumUtilsDefault.canUseShopDiscounts(currentUser);
+      const defaultPriceSetAssignmentPurchaseType =
+        CollectiblesUtils.getDefaultPriceSetAssignmentPurchaseType(canUseShopDiscountsResult);
+      const result3 = CollectiblesUtils.extractPriceByPurchaseTypes(type, defaultPriceSetAssignmentPurchaseType);
+      if (!result) {
+        result = result1;
+      }
+      if (!result) {
+        result = result2;
+      }
+      if (!result) {
+        result = type.type === CollectiblesItemType.CollectiblesItemType.EXTERNAL_SKU;
+      }
+      if (!result) {
+        let currency;
+        if (result3 != null) {
+          currency = result3.currency;
+        }
+        result = CollectiblesUtils.shouldHideGiftingForCurrency(currency);
+        const tmpResult = CollectiblesUtils;
+      }
+      if (!result) {
+        result = !BillingPlatformUtils.isCollectibleGiftingSupported();
+        const tmpResult2 = BillingPlatformUtils;
+      }
+      return !result;
+    };

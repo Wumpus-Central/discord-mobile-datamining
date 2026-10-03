@@ -3,8 +3,8 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import ChannelTypes from "../../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
 import util from "../../../intl/index.native.tsx";
 import FavoritesUtils from "../../favorites/FavoritesUtils.tsx";
-import ButtonConstants from "../../../design/components/Button/native/ButtonConstants.native.tsx";
 import StageChannelParticipants from "../../stage_channels/StageChannelParticipants.tsx";
+import ButtonConstants from "../../../design/components/Button/native/ButtonConstants.native.tsx";
 import FastList from "../../../lib/native/FastList.tsx";
 import ChannelListState from "../../guild_sidebar/ChannelListState.tsx";
 import Divider from "components/Divider.tsx";
@@ -32,9 +32,9 @@ const DividerDefault = Divider;
 
 require = fn;
 const View = fn(17).View;
-const ChannelRecord = fn(2048);
+const ChannelRecord = fn(2055);
 ({ THREADED_CHANNEL_TYPES: hasOwnProperty, THREAD_CHANNEL_TYPES: metroRequire } = ChannelRecord);
-const RedesignChannelListConstants = fn(9770);
+const RedesignChannelListConstants = fn(11697);
 ({
   CATEGORY_MARGIN_TOP: c10,
   getScaledCategoryRowHeight: closure_11,
@@ -42,16 +42,16 @@ const RedesignChannelListConstants = fn(9770);
   getScaledChannelSubtitleHeight: map1,
   STICKY_HEADER_MARGIN_BOTTOM: closure_14,
 } = RedesignChannelListConstants);
-const StaticChannelRoute = fn(2051).StaticChannelRoute;
-const GuildSidebarConstants = fn(7142);
+const StaticChannelRoute = fn(2058).StaticChannelRoute;
+const GuildSidebarConstants = fn(7045);
 ({ ChannelListChannelNoticeRow: closure_16, ChannelListGuildActionRow: closure_17 } = GuildSidebarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
 let obj = {
   nonChannelContainer: { marginHorizontal: 16 },
   liveChannelNotice: {
-    marginTop: fn(16035).LIVE_CHANNEL_NOTICE_MARGIN_TOP,
-    marginBottom: fn(16035).LIVE_CHANNEL_NOTICE_MARGIN_BOTTOM,
+    marginTop: fn(16109).LIVE_CHANNEL_NOTICE_MARGIN_TOP,
+    marginBottom: fn(16109).LIVE_CHANNEL_NOTICE_MARGIN_BOTTOM,
     marginHorizontal: 16,
   },
   gameClaimNotice: null,
@@ -60,28 +60,28 @@ let obj = {
   showAllVoiceChannelsButtonLastShownChannelInactive: null,
 };
 let obj2 = {
-  marginTop: fn(16035).LIVE_CHANNEL_NOTICE_MARGIN_TOP,
-  marginBottom: fn(16035).LIVE_CHANNEL_NOTICE_MARGIN_BOTTOM,
+  marginTop: fn(16109).LIVE_CHANNEL_NOTICE_MARGIN_TOP,
+  marginBottom: fn(16109).LIVE_CHANNEL_NOTICE_MARGIN_BOTTOM,
   marginHorizontal: 16,
 };
 obj.gameClaimNotice = {
-  marginTop: fn(16037).GAME_CLAIM_NOTICE_MARGIN_TOP,
-  marginBottom: fn(16037).GAME_CLAIM_NOTICE_MARGIN_BOTTOM,
+  marginTop: fn(16111).GAME_CLAIM_NOTICE_MARGIN_TOP,
+  marginBottom: fn(16111).GAME_CLAIM_NOTICE_MARGIN_BOTTOM,
   marginHorizontal: 16,
 };
 let obj3 = {
-  marginTop: fn(16037).GAME_CLAIM_NOTICE_MARGIN_TOP,
-  marginBottom: fn(16037).GAME_CLAIM_NOTICE_MARGIN_BOTTOM,
+  marginTop: fn(16111).GAME_CLAIM_NOTICE_MARGIN_TOP,
+  marginBottom: fn(16111).GAME_CLAIM_NOTICE_MARGIN_BOTTOM,
   marginHorizontal: 16,
 };
 obj.applicationAccountLinkNotice = {
-  marginTop: fn(16041).ACCOUNT_LINK_BANNER_MARGIN_TOP,
-  marginBottom: fn(16041).ACCOUNT_LINK_BANNER_MARGIN_BOTTOM,
+  marginTop: fn(16115).ACCOUNT_LINK_BANNER_MARGIN_TOP,
+  marginBottom: fn(16115).ACCOUNT_LINK_BANNER_MARGIN_BOTTOM,
   marginHorizontal: 16,
 };
 let obj4 = {
-  marginTop: fn(16041).ACCOUNT_LINK_BANNER_MARGIN_TOP,
-  marginBottom: fn(16041).ACCOUNT_LINK_BANNER_MARGIN_BOTTOM,
+  marginTop: fn(16115).ACCOUNT_LINK_BANNER_MARGIN_TOP,
+  marginBottom: fn(16115).ACCOUNT_LINK_BANNER_MARGIN_BOTTOM,
   marginHorizontal: 16,
 };
 obj.showAllVoiceChannelsButtonLastShownChannelActive = { marginHorizontal: 16, marginTop: nativeDefault.space.PX_16 };
@@ -205,7 +205,7 @@ export const getChannelListSectionHeaderSize = function getChannelListSectionHea
   const tmp = closure_1_11(fontScale);
   let num = 0;
   if (arg3) {
-    num = closure_1_10;
+    num = v65535;
   }
   if (guildChannels.favoritesSectionNumber !== section) {
     if (guildChannels.recentsSectionNumber !== section) {
@@ -432,42 +432,42 @@ export const renderChannelListItem = function renderChannelListItem(arg0) {
     startApplicationAccountLinkAuthorization,
     accountLinkApplication,
   } = arg0);
-  if (channel(7136).SECTION_INDEX_CHANNEL_NOTICES === section) {
+  if (channel(7039).SECTION_INDEX_CHANNEL_NOTICES === section) {
     const channelNoticeSection = guildChannels.getChannelNoticeSection();
     const row1 = channelNoticeSection.getRow(row);
-    let tmp65 = null;
+    let tmp61 = null;
     if (null != row1) {
       if (constants.SPACER === row1) {
         obj = { style: null };
         let obj2 = { height };
         obj.style = obj2;
-        tmp65 = closure_18(View, obj);
+        tmp61 = closure_18(View, obj);
       } else if (constants.GUILD_PROGRESS === row1) {
         const obj4 = { style: obj.nonChannelContainer, children: null };
         const obj5 = { guild };
-        obj4.children = closure_18(selectedChannelId(16044), obj5);
-        tmp65 = closure_18(View, obj4);
+        obj4.children = closure_18(selectedChannelId(16118), obj5);
+        tmp61 = closure_18(View, obj4);
       } else if (constants.MFA_WARNING === row1) {
-        const obj6 = { style: obj.nonChannelContainer, children: closure_18(selectedChannelId(16046), {}) };
-        tmp65 = closure_18(View, obj6);
+        const obj6 = { style: obj.nonChannelContainer, children: closure_18(selectedChannelId(16120), {}) };
+        tmp61 = closure_18(View, obj6);
       } else if (constants.LIVE_CHANNEL_NOTICE === row1) {
         const obj7 = { style: obj.liveChannelNotice, guild };
-        tmp65 = closure_18(selectedChannelId(16035), obj7);
+        tmp61 = closure_18(selectedChannelId(16109), obj7);
       } else if (constants.GAME_CLAIM === row1) {
-        let tmp72 = null;
+        let tmp68 = null;
         if (null != gameClaimMarkAsDismissed) {
           const obj9 = { style: obj.gameClaimNotice, children: null };
           const obj10 = { guild, markAsDismissed: gameClaimMarkAsDismissed };
-          obj9.children = closure_18(selectedChannelId(16037), obj10);
-          tmp72 = closure_18(View, obj9);
+          obj9.children = closure_18(selectedChannelId(16111), obj10);
+          tmp68 = closure_18(View, obj9);
         }
-        tmp65 = tmp72;
+        tmp61 = tmp68;
       } else if (constants.APPLICATION_ACCOUNT_LINK === row1) {
-        let tmp67 = null;
+        let tmp63 = null;
         if (null != applicationAccountLinkMarkAsDismissed) {
-          tmp67 = null;
+          tmp63 = null;
           if (null != startApplicationAccountLinkAuthorization) {
-            tmp67 = null;
+            tmp63 = null;
             if (null != accountLinkApplication) {
               const obj11 = { style: obj.applicationAccountLinkNotice, children: null };
               const obj12 = {
@@ -475,89 +475,89 @@ export const renderChannelListItem = function renderChannelListItem(arg0) {
                 startAuthorization: startApplicationAccountLinkAuthorization,
                 application: accountLinkApplication,
               };
-              obj11.children = closure_18(selectedChannelId(16041), obj12);
-              tmp67 = closure_18(View, obj11);
+              obj11.children = closure_18(selectedChannelId(16115), obj12);
+              tmp63 = closure_18(View, obj11);
             }
           }
         }
-        tmp65 = tmp67;
+        tmp61 = tmp63;
       } else {
-        tmp65 = null;
+        tmp61 = null;
         if (constants.FAVORITES_SUGGESTIONS === row1) {
-          tmp65 = closure_18(selectedChannelId(16048), {});
+          tmp61 = closure_18(selectedChannelId(16122), {});
         }
       }
     }
-    return tmp65;
-  } else if (tmp(7136).SECTION_INDEX_GUILD_ACTIONS === section) {
+    return tmp61;
+  } else if (tmp(7039).SECTION_INDEX_GUILD_ACTIONS === section) {
     const guildActionSection = guildChannels.getGuildActionSection();
     const row2 = guildActionSection.getRow(row);
-    let tmp55Result = null;
+    let tmp51Result = null;
     if (null != row2) {
       if (constants2.GUILD_ROLE_SUBSCRIPTIONS === row2) {
         const obj13 = { guild, selected: selectedChannelId === StaticChannelRoute.ROLE_SUBSCRIPTIONS };
-        tmp55Result = closure_18(selectedChannelId(16052), obj13);
+        tmp51Result = closure_18(selectedChannelId(16126), obj13);
       } else if (constants2.GUILD_HOME === row2) {
         const obj14 = { guild, selected: selectedChannelId === StaticChannelRoute.GUILD_HOME };
-        tmp55Result = closure_18(selectedChannelId(16054), obj14);
+        tmp51Result = closure_18(selectedChannelId(16128), obj14);
       } else if (constants2.CHANNELS_AND_ROLES === row2) {
         const obj15 = { guild, selected: null };
-        let tmp56 = selectedChannelId === StaticChannelRoute.CHANNEL_BROWSER;
-        if (!tmp56) {
-          tmp56 = selectedChannelId === StaticChannelRoute.CUSTOMIZE_COMMUNITY;
+        let tmp52 = selectedChannelId === StaticChannelRoute.CHANNEL_BROWSER;
+        if (!tmp52) {
+          tmp52 = selectedChannelId === StaticChannelRoute.CUSTOMIZE_COMMUNITY;
         }
-        obj15.selected = tmp56;
-        tmp55Result = closure_18(tmp(16055).GuildRolesAndChannelsRow, obj15);
+        obj15.selected = tmp52;
+        tmp51Result = closure_18(tmp(16129).GuildRolesAndChannelsRow, obj15);
       } else if (constants2.GUILD_DIRECTORY === row2) {
         const obj16 = {
           guildId: guild.id,
           selected: selectedChannelId === GuildChannelStore.getDirectoryChannelIds(guild.id)[0],
         };
-        tmp55Result = closure_18(selectedChannelId(16056), obj16);
+        tmp51Result = closure_18(selectedChannelId(16130), obj16);
       } else if (constants2.GUILD_NEW_MEMBER_ACTIONS_PROGRESS_BAR === row2) {
         const obj17 = { children: null };
         const obj18 = { style: obj.nonChannelContainer, children: null };
         const obj19 = { guildId: guild.id };
-        obj18.children = closure_18(tmp(16057).NewMemberActionsProgress, obj19);
-        const items = [closure_18(View, obj18), closure_18(selectedChannelId(11988), {})];
+        obj18.children = closure_18(tmp(16131).NewMemberActionsProgress, obj19);
+        const items = [closure_18(View, obj18), closure_18(selectedChannelId(11923), {})];
         obj17.children = items;
-        tmp55Result = closure_19(View, obj17);
+        tmp51Result = closure_19(View, obj17);
       } else if (constants2.GUILD_HUB_HEADER_OPTIONS === row2) {
         const obj20 = { guild };
-        tmp55Result = closure_18(selectedChannelId(16058), obj20);
+        tmp51Result = closure_18(selectedChannelId(16132), obj20);
       } else if (constants2.GUILD_MOD_DASH_MEMBER_SAFETY === row2) {
         const obj21 = { guild, selected: selectedChannelId === StaticChannelRoute.MEMBER_SAFETY };
-        tmp55Result = closure_18(selectedChannelId(16061), obj21);
+        tmp51Result = closure_18(selectedChannelId(16135), obj21);
       } else if (constants2.GUILD_VIBEGRATIONS === row2) {
         const obj22 = { guild, selected: selectedChannelId === StaticChannelRoute.VIBEGRATIONS };
-        tmp55Result = closure_18(selectedChannelId(16063), obj22);
+        tmp51Result = closure_18(selectedChannelId(16137), obj22);
       } else if (constants2.GUILD_BOOSTS === row2) {
         const obj23 = { guildId: guild.id };
-        tmp55Result = closure_18(selectedChannelId(16069), obj23);
+        tmp51Result = closure_18(selectedChannelId(16143), obj23);
       } else if (constants2.GUILD_PREMIUM_PROGRESS_BAR === row2) {
         const obj24 = { children: null };
         const obj25 = { guildId: guild.id };
-        const items1 = [closure_18(selectedChannelId(16072), obj25), closure_18(selectedChannelId(11988), {})];
+        const items1 = [closure_18(selectedChannelId(16147), obj25), closure_18(selectedChannelId(11923), {})];
         obj24.children = items1;
-        tmp55Result = closure_19(View, obj24);
+        tmp51Result = closure_19(View, obj24);
       } else {
-        tmp55Result = null;
+        tmp51Result = null;
         if (constants2.GUILD_SCHEDULED_EVENTS !== row2) {
-          tmp55Result = null;
+          tmp51Result = null;
           if (constants2.GUILD_FAVORITES !== row2) {
-            tmp55Result = null;
+            tmp51Result = null;
             if (constants2.GUILD_CHANNEL_LIST_OPT_IN_NOTICE !== row2) {
-              tmp55Result = null;
+              tmp51Result = null;
               if (constants2.GUILD_SHOP !== row2) {
                 const BROWSE_CHANNELS = constants2.BROWSE_CHANNELS;
-                tmp55Result = null;
+                tmp51Result = null;
               }
             }
           }
         }
       }
     }
-    return tmp55Result;
+    return tmp51Result;
   } else {
     const channelFromSectionRow = guildChannels.getChannelFromSectionRow(section, row);
     let tmp13 = null;
@@ -569,12 +569,20 @@ export const renderChannelListItem = function renderChannelListItem(arg0) {
         type1 = record.type;
       }
       const type = record.type;
-      if (tmp(1095).ChannelTypes.GUILD_APP === type) {
-        const obj26 = { children: null };
-        const obj27 = { channel: record, selected: tmp5 };
-        const items2 = [closure_18(selectedChannelId(16076), obj27)];
-        closure_129_0 = channel;
-        closure_129_1 = selectedChannelId;
+      if (type1 === type) {
+        const obj26 = {
+          channel: record,
+          selected: tmp5,
+          muted: null,
+          subtitle: null,
+          isRulesChannel: null,
+          isSuggestedSection: null,
+        };
+        ({ isMuted: obj8.muted, subtitle: obj8.subtitle } = channel);
+        obj26.isRulesChannel = guild.rulesChannelId === record.id;
+        obj26.isSuggestedSection = section === guildChannels.recentsSectionNumber;
+        const obj27 = { children: null };
+        const items2 = [closure_18(selectedChannelId(16151), obj26)];
         const threadIds = channel.threadIds;
         items2[1] = threadIds.map((threadId, threadIndex) => {
           let tmp = null;
@@ -591,71 +599,39 @@ export const renderChannelListItem = function renderChannelListItem(arg0) {
           }
           return tmp;
         });
-        obj26.children = items2;
-        tmp13 = closure_19(closure_20, obj26);
-      } else if (type1 === type) {
-        const obj28 = {
-          channel: record,
-          selected: tmp5,
-          muted: null,
-          subtitle: null,
-          isRulesChannel: null,
-          isSuggestedSection: null,
-        };
-        ({ isMuted: obj8.muted, subtitle: obj8.subtitle } = channel);
-        obj28.isRulesChannel = guild.rulesChannelId === record.id;
-        obj28.isSuggestedSection = section === guildChannels.recentsSectionNumber;
-        const obj29 = { children: null };
-        const items3 = [closure_18(selectedChannelId(16077), obj28)];
-        const threadIds1 = channel.threadIds;
-        items3[1] = threadIds1.map((threadId, threadIndex) => {
-          let tmp = null;
-          if (null != ChannelStore.getChannel(threadId)) {
-            obj = { children: null };
-            const obj2 = {
-              threadId,
-              threadIndex,
-              threadCount: channel.threadCount,
-              selected: selectedChannelId === threadId,
-            };
-            obj.children = collapsedCategories(ThreadChannelDefault, obj2);
-            tmp = collapsedCategories(View, obj, threadId);
-          }
-          return tmp;
-        });
-        obj29.children = items3;
-        tmp13 = closure_19(closure_20, obj29);
+        obj27.children = items2;
+        tmp13 = closure_19(closure_20, obj27);
         const tmp20 = section === guildChannels.recentsSectionNumber;
-      } else if (tmp(1095).ChannelTypes.GUILD_VOICE === type) {
-        const obj30 = { channel: record, selected: tmp5, subtitle: channel.subtitle };
-        tmp13 = closure_18(selectedChannelId(16085), obj30);
-      } else if (tmp(1095).ChannelTypes.GUILD_STAGE_VOICE === type) {
-        const obj31 = { channel: record, selected: tmp5 };
-        tmp13 = closure_18(selectedChannelId(16087), obj31);
+      } else if (tmp(1106).ChannelTypes.GUILD_VOICE === type) {
+        const obj28 = { channel: record, selected: tmp5, subtitle: channel.subtitle };
+        tmp13 = closure_18(selectedChannelId(16159), obj28);
+      } else if (tmp(1106).ChannelTypes.GUILD_STAGE_VOICE === type) {
+        const obj29 = { channel: record, selected: tmp5 };
+        tmp13 = closure_18(selectedChannelId(16161), obj29);
       } else {
-        if (tmp(1095).ChannelTypes.DM !== type) {
-          if (tmp(1095).ChannelTypes.GROUP_DM !== type) {
+        if (tmp(1106).ChannelTypes.DM !== type) {
+          if (tmp(1106).ChannelTypes.GROUP_DM !== type) {
             if (section === guildChannels.voiceChannelsSectionNumber) {
               if (record.isCategory()) {
-                const obj32 = { channel: record, withMarginTop: true };
-                let tmp9 = closure_18(tmp(15953).CategoryChannel, obj32);
+                const obj30 = { channel: record, withMarginTop: true };
+                let tmp9 = closure_18(tmp(16027).CategoryChannel, obj30);
               }
               tmp13 = tmp9;
             }
             if (tmpResult.isFavoritesGuildId(guildChannels.id)) {
               if (set2.has(record.type)) {
-                const obj33 = { channel: record, selected: tmp5, muted: null, subtitle: null, isRulesChannel: false };
+                const obj31 = { channel: record, selected: tmp5, muted: null, subtitle: null, isRulesChannel: false };
                 ({ isMuted: obj3.muted, subtitle: obj3.subtitle } = channel);
-                tmp9 = closure_18(selectedChannelId(16077), obj33);
+                tmp9 = closure_18(selectedChannelId(16151), obj31);
               }
             }
-            const obj34 = { channel: record, selected: tmp5 };
-            tmp9 = closure_18(selectedChannelId(16076), obj34);
-            tmpResult = tmp(2069);
+            const obj32 = { channel: record, selected: tmp5 };
+            tmp9 = closure_18(selectedChannelId(16164), obj32);
+            tmpResult = tmp(2077);
           }
         }
-        const obj35 = { channel: record, selected: tmp5 };
-        tmp13 = closure_18(selectedChannelId(16089), obj35);
+        const obj33 = { channel: record, selected: tmp5 };
+        tmp13 = closure_18(selectedChannelId(16163), obj33);
       }
     }
     return tmp13;
@@ -691,7 +667,7 @@ export const getChannelListItemSize = function getChannelListItemSize(liveChanne
     const row2 = guildActionSection.getRow(row);
     let num4 = 0;
     if (null != row2) {
-      const tmp25 = closure_1_12(fontScale);
+      const tmp25 = __initData(fontScale);
       num4 = tmp25;
       if (constants2.GUILD_ROLE_SUBSCRIPTIONS !== row2) {
         num4 = tmp25;
@@ -741,7 +717,7 @@ export const getChannelListItemSize = function getChannelListItemSize(liveChanne
     }
     return num4;
   } else {
-    const tmp31 = closure_1_12(fontScale);
+    const tmp31 = __initData(fontScale);
     const channelFromSectionRow = guildChannels.getChannelFromSectionRow(section, row);
     let num = 0;
     if (null != channelFromSectionRow) {
@@ -765,7 +741,7 @@ export const getChannelListItemSize = function getChannelListItemSize(liveChanne
                   if (ChannelTypes.ChannelTypes.PRIVATE_THREAD !== type) {
                     if (section === guildChannels.voiceChannelsSectionNumber) {
                       if (record.isCategory()) {
-                        let sum = closure_1_11(fontScale) + closure_1_10;
+                        let sum = closure_1_11(fontScale) + v65535;
                       }
                       num = sum;
                     }
@@ -790,7 +766,7 @@ export const getChannelListItemSize = function getChannelListItemSize(liveChanne
         }
         let num2 = 0;
         if (null != channel.subtitle) {
-          num2 = map1(fontScale);
+          num2 = __initData2(fontScale);
         }
         const voiceUserHeight = VoiceUserItem.getVoiceUserHeight(fontScale);
         if (record.type === ChannelTypes.ChannelTypes.GUILD_STAGE_VOICE) {

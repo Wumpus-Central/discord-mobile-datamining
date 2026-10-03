@@ -29,7 +29,7 @@ function handleActivityStateChanged(COMPLETE, JOIN, type) {
       if (null != dependencyMap[applicationId]) {
         dependencyMap[applicationId].stop();
       }
-      const timeout = new applicationId(2039).Timeout();
+      const timeout = new applicationId(2046).Timeout();
       timeout.start(c9, () =>
         DispatcherDefault.dispatch({ type: "ACTIVITY_LAUNCH_FAIL", applicationId, activityType }),
       );
@@ -43,7 +43,7 @@ function handleActivityStateChanged(COMPLETE, JOIN, type) {
       if (null != dependencyMap[applicationId]) {
         dependencyMap[applicationId].stop();
       }
-      const timeout1 = new applicationId(2039).Timeout();
+      const timeout1 = new applicationId(2046).Timeout();
       timeout1.start(num, () =>
         DispatcherDefault.dispatch({ type: "ACTIVITY_LAUNCH_FAIL", applicationId, activityType }),
       );
@@ -105,7 +105,7 @@ function handleActivityUpdate() {
   });
   return c0;
 }
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ ActivityActionStates: hasOwnProperty, ActivityActionTypes: metroRequire } = Constants);
 let obj = {};
 const dependencyMap = {};
@@ -118,7 +118,7 @@ prototype["initialize"] = function initialize() {
   this.syncWith(items, handleActivityUpdate);
 };
 prototype["getState"] = function getState(arg0, arg1) {
-  let state;
+  state = undefined;
   if (obj[arg0] != null) {
     if (tmp[arg1] != null) {
       state = tmp4.state;

@@ -30,7 +30,7 @@ function SyncedLoadingAlertModal(onConfirm) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -69,7 +69,7 @@ function SyncedLoadingAlertModal(onConfirm) {
               c3 = 0;
               closure_128_1(false);
               c4 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } catch (tmp22) {
             closure_2 = tmp22;
@@ -122,12 +122,12 @@ export const showCheckoutOrderErrorModal = function showCheckoutOrderErrorModal(
       onCancel: null,
       dismissable: false,
     };
-    const intl = closure_0(1115).intl;
-    obj.title = intl.string(closure_0(1115).t.zrhHH3);
-    const intl2 = closure_0(1115).intl;
-    obj.content = intl2.string(closure_0(1115).t.PjfUXe);
-    const intl3 = closure_0(1115).intl;
-    obj.confirmText = intl3.string(closure_0(1115).t["7NqTJn"]);
+    const intl = closure_0(1126).intl;
+    obj.title = intl.string(closure_0(1126).t.zrhHH3);
+    const intl2 = closure_0(1126).intl;
+    obj.content = intl2.string(closure_0(1126).t.PjfUXe);
+    const intl3 = closure_0(1126).intl;
+    obj.confirmText = intl3.string(closure_0(1126).t["7NqTJn"]);
     dependencyMap = asyncGeneratorStep(async () => {
       if (c3 === 2) {
         c3 = 3;
@@ -139,7 +139,7 @@ export const showCheckoutOrderErrorModal = function showCheckoutOrderErrorModal(
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -171,7 +171,7 @@ export const showCheckoutOrderErrorModal = function showCheckoutOrderErrorModal(
             closure_128_0 = value;
             closure_129_0(closure_128_0);
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp12) {
           c3 = tmp;
@@ -198,7 +198,7 @@ export const showCheckoutOrderErrorModal = function showCheckoutOrderErrorModal(
     ({ key, onCloseCallback } = obj);
     const merged = Object.assign(obj, Object.assign({ key: 0, onCloseCallback: 0, dismissable: 0 }));
     const merged1 = Object.assign(merged);
-    closure_0(5389).openAlert(key, closure_1_5(SyncedLoadingAlertModal, {}), onCloseCallback, {
+    closure_0(5709).openAlert(key, closure_1_5(SyncedLoadingAlertModal, {}), onCloseCallback, {
       dismissable: obj.dismissable,
     });
   });

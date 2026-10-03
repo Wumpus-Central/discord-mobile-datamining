@@ -1,5 +1,5 @@
 // discord_common/js/shared/utils/ColorUtils.tsx
-import _modDef672 from "../../../../_runtime/metro/00672__.js";
+import _modDef683 from "../../../../_runtime/metro/00683__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 function int2hslRaw(initialColor) {
@@ -40,7 +40,7 @@ const re2 = /rgba?\((\d{1,3}), ?(\d{1,3}), ?(\d{1,3})\)?(?:, ?(\d(?:\.\d*)?)\))?
 let result = size.fileFinishedImporting("../discord_common/js/shared/utils/ColorUtils.tsx");
 
 export const hex2int = function hex2int(c8) {
-  return _modDef672(c8).num();
+  return _modDef683(c8).num();
 };
 export const int2hex = function int2hex(color) {
   if (color <= 16777215) {
@@ -153,12 +153,12 @@ export const int2hsl = function int2hsl(accent_color, arg1) {
   }
   return combined;
 };
-export const hex2rgb = function hex2rgb(PRIMARY_200) {
+export const hex2rgb = function hex2rgb(gradientValue) {
   if (alphaResult === undefined) {
     alphaResult = null;
   }
-  if (obj.valid(PRIMARY_200)) {
-    const obj2 = _modDef672(PRIMARY_200);
+  if (obj.valid(gradientValue)) {
+    const obj2 = _modDef683(gradientValue);
     if (alphaResult == null) {
       alphaResult = obj2.alpha();
     }
@@ -166,7 +166,7 @@ export const hex2rgb = function hex2rgb(PRIMARY_200) {
   } else {
     return null;
   }
-  obj = _modDef672;
+  obj = _modDef683;
 };
 export const int2rgba = function int2rgba(ColorUtils, arg1) {
   let result = arg1;
@@ -175,8 +175,8 @@ export const int2rgba = function int2rgba(ColorUtils, arg1) {
   }
   return "rgba(" + ColorUtils >> 16 & 255 + ", " + ColorUtils >> 8 & 255 + ", " + 255 & ColorUtils + ", " + result + ")";
 };
-export const rgb2int = function rgb2int(tmp2Result5) {
-  const match = tmp2Result5.match(re2);
+export const rgb2int = function rgb2int(dominantColorFromImage) {
+  const match = dominantColorFromImage.match(re2);
   if (null != match) {
     const color1 = { red: null, green: null, blue: null };
     const _parseInt = parseInt;
@@ -228,7 +228,7 @@ export const getDarkness = function getDarkness(hex2intResult) {
   return 1 - (0.299 * (hex2intResult >> 16 & 255) + 0.587 * (hex2intResult >> 8 & 255) + 0.114 * (255 & hex2intResult)) / 255;
 };
 export const isValidHex = function isValidHex(variantValue) {
-  return _modDef672.valid(variantValue);
+  return _modDef683.valid(variantValue);
 };
 export const int2rgbArray = function int2rgbArray(modalV2BackgroundColor) {
   const items = [modalV2BackgroundColor >> 16 & 255, modalV2BackgroundColor >> 8 & 255, 255 & modalV2BackgroundColor];

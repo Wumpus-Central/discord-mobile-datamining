@@ -171,8 +171,8 @@ function handleGuildCreateOrDelete(guild) {
   });
   delete tmp2[tmp];
 }
-const ME = fn(1074).ME;
-const VoicePlatforms = fn(4866).VoicePlatforms;
+const ME = fn(1085).ME;
+const VoicePlatforms = fn(4911).VoicePlatforms;
 let c9 = 0;
 let closure_10 = 0;
 const dependencyMap = {};
@@ -363,10 +363,10 @@ prototype["hasVideo"] = function hasVideo(arg0) {
   }
   return Object.values(tmp2).length > 0;
 };
-prototype["getVoicePlatformForChannel"] = function getVoicePlatformForChannel(channelId, id) {
+prototype["getVoicePlatformForChannel"] = function getVoicePlatformForChannel(id, id2) {
   let tmp = null != sessionId;
   if (tmp) {
-    channelId = undefined;
+    let channelId;
     if (dependencyMap4[id] != null) {
       if (tmp4[sessionId] != null) {
         channelId = tmp7.channelId;
@@ -374,12 +374,12 @@ prototype["getVoicePlatformForChannel"] = function getVoicePlatformForChannel(ch
     }
     tmp = channelId;
   }
-  if (id === id) {
-    if (channelId === tmp) {
+  if (id2 === id) {
+    if (id === tmp) {
       MetaQuestUtils.isMetaQuest() ? VoicePlatforms.QUEST : VoicePlatforms.MOBILE;
     }
   }
-  return closure_17["" + id + ":" + channelId];
+  return closure_17["" + id2 + ":" + id];
 };
 Object.defineProperty(prototype, "userHasBeenMovedVersion", {
   get: function userHasBeenMovedVersion() {

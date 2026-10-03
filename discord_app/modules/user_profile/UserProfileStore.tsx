@@ -6,9 +6,9 @@ import CollectiblesItemType from "../../../discord_common/js/shared/shared-const
 import Timers from "../../../discord_common/js/packages/timers/Timers.tsx";
 import WidgetType from "../../../discord_common/js/shared/shared-constants/WidgetType.tsx";
 import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes.tsx";
-import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes.tsx";
-import UserProfilePersonalWidget from "UserProfilePersonalWidget.tsx";
 import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes.tsx";
+import UserProfilePersonalWidget from "UserProfilePersonalWidget.tsx";
+import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes.tsx";
 import TieredTenureBadgeUtils from "TieredTenureBadgeUtils.tsx";
 import parseUserProfileCollectiblesDefault from "utils/parseUserProfileCollectibles.tsx";
 import LocaleStore from "../user_settings/LocaleStore.tsx";
@@ -286,7 +286,7 @@ function handleProfileFetch(arg0) {
     const mutual_guilds = userProfile.mutual_guilds;
     const item = mutual_guilds.forEach((id) => {
       id = id.id;
-      const guild = GuildStore.getGuild(id);
+      guild = GuildStore.getGuild(id);
       if (null != guild) {
         obj = { guild, nick: id.nick };
         set[id] = obj;
@@ -467,6 +467,7 @@ function handleProfileFetch(arg0) {
       install_params: obj3.installParams,
       integration_types_config: obj3.integrationTypesConfig,
       flags: obj3.flags,
+      embedded_surfaces: obj3.embeddedSurfaces,
       popular_application_command_ids: obj3.popularApplicationCommandIds,
       storefront_available: obj3.storefront_available,
       name: obj3.name,
@@ -480,6 +481,7 @@ function handleProfileFetch(arg0) {
       installParams: null,
       integrationTypesConfig: null,
       flags: null,
+      embeddedSurfaces: null,
       popularApplicationCommandIds: null,
       storefront_available: null,
       name: null,
@@ -493,6 +495,7 @@ function handleProfileFetch(arg0) {
       installParams: null,
       integrationTypesConfig: null,
       flags: null,
+      embeddedSurfaces: null,
       popularApplicationCommandIds: null,
       storefront_available: null,
       name: null,
@@ -596,7 +599,7 @@ function handleProfileFetchFailure(arg0) {
       premiumType: null,
       fetchStartedAt: 0,
       fetchEndedAt: 0,
-      fetchError: "channelId",
+      fetchError: "unicodeVersion",
     };
     value4 = obj;
   }
@@ -638,7 +641,7 @@ function handleProfileUpdateSuccess(guild_id) {
     value = map2.get(userId);
     if (null != guild_id) {
       if (null != value) {
-        const value3 = value.get(guild_id);
+        value3 = value.get(guild_id);
         if (null != value3) {
           obj = {};
           const merged = Object.assign(value3);
@@ -785,7 +788,7 @@ function resetProfileFetch(id) {
     }
   }
 }
-const MAX_TIMEOUT_MS = fn(1074).MAX_TIMEOUT_MS;
+const MAX_TIMEOUT_MS = fn(1085).MAX_TIMEOUT_MS;
 let closure_10 = Symbol("NO GUILD ID");
 let map = new Map();
 let set = new Set();

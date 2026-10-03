@@ -1,7 +1,7 @@
 // discord_app/modules/stage_channels/StageChannelSelfRichPresenceStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
-import _modDef1331 from "../../../_runtime/metro/01331__.js";
+import _modDef1342 from "../../../_runtime/metro/01342__.js";
 import PermissionUtilsAll from "../../utils/PermissionUtils.tsx";
 import useChannelName from "../channel/useChannelName.tsx";
 import StageMediaHooks from "StageMediaHooks.tsx";
@@ -29,7 +29,7 @@ function handleUpdateActivity() {
       if (null != channel) {
         tmp2 = null;
         if (obj2.canEveryone(constants2.VIEW_CHANNEL, channel)) {
-          const guild = GuildStore.getGuild(channel.getGuildId());
+          guild = GuildStore.getGuild(channel.getGuildId());
           tmp2 = null;
           if (null != guild) {
             const features = guild.features;
@@ -84,7 +84,7 @@ function handleUpdateActivity() {
                 const tmp12Result = useChannelName;
               }
               obj.name = topic;
-              obj.type = StageMediaHooks.getStageHasMedia(channel.id) ? map1.WATCHING : map1.LISTENING;
+              obj.type = StageMediaHooks.getStageHasMedia(channel.id) ? __initData2.WATCHING : __initData2.LISTENING;
               let start;
               if (tmp15 != null) {
                 const timestamps = tmp15.timestamps;
@@ -117,7 +117,7 @@ function handleUpdateActivity() {
       }
     }
   }
-  const tmp30 = _modDef1331(tmp2, obj);
+  const tmp30 = _modDef1342(tmp2, obj);
   let flag = !tmp30;
   if (!tmp30) {
     obj = tmp2;
@@ -125,8 +125,8 @@ function handleUpdateActivity() {
   }
   return flag;
 }
-const STAGE_APPLICATION_ID = fn(5912).STAGE_APPLICATION_ID;
-const Constants = fn(1074);
+const STAGE_APPLICATION_ID = fn(5571).STAGE_APPLICATION_ID;
+const Constants = fn(1085);
 ({
   ActivityTypes: map1,
   GuildFeatures: closure_14,

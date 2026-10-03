@@ -4,7 +4,7 @@ import encodeProperties from "encodeProperties.tsx";
 import getSystemLocale2 from "../i18n/getSystemLocale.tsx";
 import ClientModDetectionUtils from "../../shared/utils/ClientModDetectionUtils.tsx";
 import clientLaunchId from "clientLaunchId.tsx";
-import formatDefault from "../../../../_runtime/01340_format.js";
+import formatDefault from "../../../../_runtime/01351_format.js";
 import NativeMetaQuestModule from "../rtn-codegen/js/NativeMetaQuestModule.tsx";
 import NativeDeviceModule from "../rtn-codegen/js/NativeDeviceModule.tsx";
 import NativeClientInfoModule from "../rtn-codegen/js/NativeClientInfoModule.tsx";
@@ -149,7 +149,7 @@ if (null == obj) {
         value = tmp6;
       }
       const Storage3 = Storage5.Storage;
-      let value3 = Storage3.get(referralProperties);
+      value3 = Storage3.get(referralProperties);
       if (null == value3) {
         obj = {};
         const Storage4 = Storage5.Storage;
@@ -194,7 +194,7 @@ function extendSuperProperties(arg0) {
 }
 let result = extendSuperProperties(
   (function getContextualSuperProperties() {
-    obj = { client_build_number: parseInt("6547", 10) };
+    obj = { client_build_number: parseInt("34920500000000", 10) };
     let buildNumber;
     if (DiscordNative != null) {
       const app = DiscordNative.app;

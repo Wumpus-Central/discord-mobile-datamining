@@ -1,10 +1,12 @@
 // discord_app/modules/payments/utils/MobileWebRedirectCheckoutUtils.tsx
+import c from "../../../../_runtime/00576_c.js";
 import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
 import MetaQuestUtils from "../../device/MetaQuestUtils.android.tsx";
-import _mod4690 from "../../../../_runtime/metro/04690__.js";
+import _mod4705 from "../../../../_runtime/metro/04705__.js";
 import PaymentConstants from "../PaymentConstants.tsx";
-import keysSorter from "../../../../_runtime/05954_keysSorter.js";
+import keysSorter from "../../../../_runtime/05635_keysSorter.js";
 import Constants from "../../../Constants.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const CustomCheckoutFlow = PaymentConstants.CustomCheckoutFlow;
@@ -32,19 +34,43 @@ export const getCustomCheckoutFlowForAnalytics = function getCustomCheckoutFlowF
     ? CustomCheckoutFlow.META_QUEST_WEB_REDIRECT_CHECKOUT
     : CustomCheckoutFlow.MOBILE_WEB_REDIRECT_CHECKOUT;
 };
-export const useGetCustomCheckoutFlow = function useGetCustomCheckoutFlow() {
-  const _location = _mod4690.useLocation();
-  ({ pathname, search } = _location);
-  const parsed = keysSorter.parse(search);
-  ({ deep_link_type, flow_type } = parsed);
-  if (!pathname.startsWith(constants.BILLING_MANAGE_SUBSCRIPTION)) {
-    if (deep_link_type === constants2.MOBILE_WEB_REDIRECT_CHECKOUT) {
-      let META_QUEST_WEB_REDIRECT_CHECKOUT = CustomCheckoutFlow.MOBILE_WEB_REDIRECT_CHECKOUT;
-    } else if (flow_type === CustomCheckoutFlow.META_QUEST_WEB_REDIRECT_CHECKOUT) {
-      META_QUEST_WEB_REDIRECT_CHECKOUT = CustomCheckoutFlow.META_QUEST_WEB_REDIRECT_CHECKOUT;
+export const useGetCustomCheckoutFlow = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = c.c(3);
+      const _location = _mod4705.useLocation();
+      ({ search, pathname } = _location);
+      if (cResult[0] === search) {
+        if (cResult[1] === pathname) {
+          const tmp5 = cResult[2];
+        }
+        return tmp5;
+      }
+      const parsed = keysSorter.parse(search);
+      ({ deep_link_type, flow_type } = parsed);
+      if (pathname.startsWith(constants.BILLING_MANAGE_SUBSCRIPTION)) {
+        cResult[0] = search;
+        cResult[1] = pathname;
+        cResult[2] = undefined;
+      } else if (deep_link_type === constants2.MOBILE_WEB_REDIRECT_CHECKOUT) {
+        let META_QUEST_WEB_REDIRECT_CHECKOUT = CustomCheckoutFlow.MOBILE_WEB_REDIRECT_CHECKOUT;
+      } else if (flow_type === CustomCheckoutFlow.META_QUEST_WEB_REDIRECT_CHECKOUT) {
+        META_QUEST_WEB_REDIRECT_CHECKOUT = CustomCheckoutFlow.META_QUEST_WEB_REDIRECT_CHECKOUT;
+      }
+      const tmpResult = keysSorter;
     }
-  }
-};
+  : () => {
+      const _location = _mod4705.useLocation();
+      ({ pathname, search } = _location);
+      const parsed = keysSorter.parse(search);
+      ({ deep_link_type, flow_type } = parsed);
+      if (!pathname.startsWith(constants.BILLING_MANAGE_SUBSCRIPTION)) {
+        if (deep_link_type === constants2.MOBILE_WEB_REDIRECT_CHECKOUT) {
+          let META_QUEST_WEB_REDIRECT_CHECKOUT = CustomCheckoutFlow.MOBILE_WEB_REDIRECT_CHECKOUT;
+        } else if (flow_type === CustomCheckoutFlow.META_QUEST_WEB_REDIRECT_CHECKOUT) {
+          META_QUEST_WEB_REDIRECT_CHECKOUT = CustomCheckoutFlow.META_QUEST_WEB_REDIRECT_CHECKOUT;
+        }
+      }
+    };
 export const getCustomCheckoutFlow = function getCustomCheckoutFlow() {
   const parsed = keysSorter.parse(window.location.search);
   ({ deep_link_type, flow_type } = parsed);

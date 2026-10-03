@@ -10,9 +10,9 @@ import NewUserStore from "../NewUserStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const NewUserTypes = fn(12415).NewUserTypes;
-const PlatformTypes = fn(1074).PlatformTypes;
-let closure_10 = fn(12446).HUBS_IN_ONBOARDING_COUNTRIES;
+const NewUserTypes = fn(12354).NewUserTypes;
+const PlatformTypes = fn(1085).PlatformTypes;
+let closure_10 = fn(12385).HUBS_IN_ONBOARDING_COUNTRIES;
 let obj = {
   REGISTRATION: "Registration",
   ADD_AVATAR: "Add Avatar",
@@ -33,7 +33,7 @@ let obj2 = {
     }
     return null == avatar;
   },
-  transitionToStep: fn(17458).openAddAvatarModal,
+  transitionToStep: fn(17544).openAddAvatarModal,
 };
 const items = [obj2, , , , ,];
 let obj3 = {
@@ -55,14 +55,14 @@ let obj3 = {
     }
     return tmp3;
   },
-  transitionToStep: fn(12386).openContactSyncModalOnboarding,
+  transitionToStep: fn(12325).openContactSyncModalOnboarding,
 };
 items[1] = {
   key: obj.DISCOVERABILITY,
   shouldShowStep() {
     return null == ConnectedAccountsStore.getLocalAccount(PlatformTypes.CONTACTS);
   },
-  transitionToStep: fn(12414).openDiscoverabilityModal,
+  transitionToStep: fn(12353).openDiscoverabilityModal,
 };
 items[2] = obj3;
 items[3] = {
@@ -97,11 +97,11 @@ let obj4 = {
   shouldShowStep() {
     return null == ConnectedAccountsStore.getLocalAccount(PlatformTypes.CONTACTS);
   },
-  transitionToStep: fn(12414).openDiscoverabilityModal,
+  transitionToStep: fn(12353).openDiscoverabilityModal,
 };
 items[5] = {
   key: obj.ACCEPT_INVITE,
-  shouldShowStep: fn(9470).hasDeferredInvite,
+  shouldShowStep: fn(9481).hasDeferredInvite,
   transitionToStep() {
     DispatcherDefault.dispatch({ type: "DEFERRED_INVITE_SHOW" });
   },
@@ -128,7 +128,7 @@ const prototype = function NewUserManager() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -172,7 +172,7 @@ const prototype = function NewUserManager() {
             let transitionToStep2;
             c5 = 1;
             c6 = 1;
-            return { value: "flex", done: null };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {

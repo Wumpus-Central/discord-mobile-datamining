@@ -1,119 +1,32 @@
 // discord_app/modules/quests/native/QuestOrbMultiplierPerkInfoActionSheet.tsx
+import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
-import _modDef3520 from "../../partner_perks/xbox/game_pass_perks/XboxGamePassPerks.messages.js";
+import _modDef3529 from "../../partner_perks/xbox/game_pass_perks/XboxGamePassPerks.messages.js";
 import LinkingDefault from "../../../lib/native/Linking.tsx";
 import NitroQuestOrbsMultiplierRive from "../../../../discord_common/js/packages/design/components/Rive/native/generated/NitroQuestOrbsMultiplierRive.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import useTypeConsolidationTextTransform from "../../design/useTypeConsolidationTextTransform.tsx";
+import Sheet_BottomSheet from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import ActionSheetHeaderBar from "../../../design/components/Sheet/native/ActionSheetHeaderBar.native.tsx";
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
 import usePremiumFeatureUpsellGetNitroDefault from "../../premium/roadblocks/native/hooks/usePremiumFeatureUpsellGetNitro.tsx";
 import QuestOrbMultiplierUtils from "../utils/QuestOrbMultiplierUtils.tsx";
+import PremiumRewardGradientDefault from "PremiumRewardGradient.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-function Footer(eligibleToReceivePremiumRewards) {
-  const callback = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.hideActionSheet();
-    openUserSettings.openUserSettings({ screen: constants2.PREMIUM });
-  }, []);
-  const tmp = closure_12();
-  ({ loading, onPress } = usePremiumFeatureUpsellGetNitroDefault(
-    false,
-    callback,
-    constants.QUEST_ORB_MULTIPLIER_PERK_INFO,
-  ));
-  const callback1 = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.hideActionSheet();
-    const obj2 = LinkingDefault;
-    obj2.openURL(HelpdeskUtilsDefault.getArticleURL(constants.VIRTUAL_CURRENCY_ORB_MULTIPLIER_LEARN_MORE));
-  }, []);
-  let obj = { style: tmp.buttonContainer, children: null };
-  const callback2 = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.hideActionSheet();
-  }, []);
-  const Button = components_Button_Button.Button;
-  if (eligibleToReceivePremiumRewards.eligibleToReceivePremiumRewards) {
-    let obj2 = { size: "lg", text: null, variant: "primary", onPress: null };
-    const intl3 = util.intl;
-    obj2.text = intl3.string(util.t.hvVgAZ);
-    obj2.onPress = callback1;
-    const items = [React6(Button, obj2)];
-    const obj3 = { size: "lg", variant: "secondary", text: null, onPress: null };
-    const intl4 = util.intl;
-    obj3.text = intl4.string(util.t.cpT0Cq);
-    obj3.onPress = callback2;
-    items[1] = React6(components_Button_Button.Button, obj3);
-    obj.children = items;
-    let tmp11 = obj;
-  } else {
-    const obj4 = { size: "lg", variant: "primary", text: null, onPress: null, loading: null };
-    const intl = util.intl;
-    obj4.text = intl.string(util.t.pj0XBN);
-    obj4.onPress = onPress;
-    obj4.loading = loading;
-    const items1 = [React6(Button, obj4)];
-    const obj5 = { size: "lg", variant: "secondary", text: null, onPress: null };
-    const intl2 = util.intl;
-    obj5.text = intl2.string(util.t.PcTCB7);
-    obj5.onPress = callback;
-    items1[1] = React6(components_Button_Button.Button, obj5);
-    obj.children = items1;
-    tmp11 = obj;
-  }
-  return React7(View, tmp11);
-}
-function SheetContent(arg0) {
-  ({ title, body, eligibleToReceivePremiumRewards } = arg0);
-  const tmp = closure_12();
-  const typeConsolidationTextTransform =
-    useTypeConsolidationTextTransform.useTypeConsolidationTextTransform("QuestOrbMultiplierPerkInfo");
-  const obj2 = { children: null };
-  const items = [React6(ActionSheetHeaderBar.ActionSheetHeaderBar, { variant: "floating" })];
-  const obj3 = { style: null, children: null };
-  const items1 = [tmp.container, { marginBottom: useSafeAreaInsetsDefault().bottom }];
-  obj3.style = items1;
-  const obj4 = { style: tmp.contentContainer, children: null };
-  const items2 = [
-    React6(View, {
-      style: tmp.riveContainer,
-      children: React6(NitroQuestOrbsMultiplierRive.NitroQuestOrbsMultiplierRive, {}),
-    }),
-    ,
-    ,
-  ];
-  const obj6 = {
-    style: null,
-    variant: "display-md",
-    color: "mobile-text-heading-primary",
-    accessibilityRole: "header",
-    children: title,
-  };
-  const items3 = [, ,];
-  ({ text: arr4[0], title: arr4[1] } = tmp);
-  items3[2] = typeConsolidationTextTransform;
-  obj6.style = items3;
-  items2[1] = React6(Text_Text.Text, obj6);
-  items2[2] = React6(Text_Text.Text, { style: tmp.text, variant: "text-sm/normal", children: body });
-  items2[3] = React6(Footer, { eligibleToReceivePremiumRewards });
-  obj4.children = items2;
-  obj3.children = React7(View, obj4);
-  items[1] = React6(View, obj3);
-  obj2.children = items;
-  return React7(closure_1_10, obj2);
-}
 const View = fn(17).View;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AnalyticsPages: hasOwnProperty, HelpdeskArticles: metroRequire, UserSettingsSections: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
 const contentStyles = { marginBottom: 0 };
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = {
   container: { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16 },
   contentContainer: null,
@@ -139,57 +52,678 @@ obj2.buttonContainer = { width: "100%", gap: nativeDefault.space.PX_12, marginVe
 obj2.title = { textTransform: "uppercase", textAlign: "center", lineHeight: 34, paddingHorizontal: 0 };
 obj2.riveContainer = { width: "100%", height: 160 };
 let closure_12 = createStyles.createStyles(obj2);
+let ReactCompilerGating = fn(558);
+let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (eligibleToReceivePremiumRewards) => {
+      const cResult = c.c(15);
+      const tmp4 = closure_12();
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const fn = function l() {
+          ActionSheetActionCreatorsDefault.hideActionSheet();
+          openUserSettings.openUserSettings({ screen: constants2.PREMIUM });
+        };
+        cResult[0] = fn;
+        let first = fn;
+      } else {
+        first = cResult[0];
+      }
+      ({ loading, onPress } = usePremiumFeatureUpsellGetNitroDefault(
+        false,
+        first,
+        constants.QUEST_ORB_MULTIPLIER_PERK_INFO,
+      ));
+      if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
+        class R {
+          constructor() {
+            obj = closure_1_1(closure_1_2[8]);
+            hideActionSheetResult = obj.hideActionSheet();
+            obj2 = closure_1_1(closure_1_2[11]);
+            obj3 = closure_1_1(closure_1_2[12]);
+            openURLResult = obj2.openURL(obj3.getArticleURL(closure_1_6.VIRTUAL_CURRENCY_ORB_MULTIPLIER_LEARN_MORE));
+            return;
+          }
+        }
+        cResult[1] = R;
+      } else {
+        class R {
+          constructor() {
+            obj = closure_1_1(closure_1_2[8]);
+            hideActionSheetResult = obj.hideActionSheet();
+            obj2 = closure_1_1(closure_1_2[11]);
+            obj3 = closure_1_1(closure_1_2[12]);
+            openURLResult = obj2.openURL(obj3.getArticleURL(closure_1_6.VIRTUAL_CURRENCY_ORB_MULTIPLIER_LEARN_MORE));
+            return;
+          }
+        }
+      }
+      if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+        class R {
+          constructor() {
+            obj = closure_1_1(closure_1_2[8]);
+            hideActionSheetResult = obj.hideActionSheet();
+            obj2 = closure_1_1(closure_1_2[11]);
+            obj3 = closure_1_1(closure_1_2[12]);
+            openURLResult = obj2.openURL(obj3.getArticleURL(closure_1_6.VIRTUAL_CURRENCY_ORB_MULTIPLIER_LEARN_MORE));
+            return;
+          }
+        }
+        cResult[2] = tmp9;
+      } else {
+        class R {
+          constructor() {
+            obj = closure_1_1(closure_1_2[8]);
+            hideActionSheetResult = obj.hideActionSheet();
+            obj2 = closure_1_1(closure_1_2[11]);
+            obj3 = closure_1_1(closure_1_2[12]);
+            openURLResult = obj2.openURL(obj3.getArticleURL(closure_1_6.VIRTUAL_CURRENCY_ORB_MULTIPLIER_LEARN_MORE));
+            return;
+          }
+        }
+      }
+      if (eligibleToReceivePremiumRewards.eligibleToReceivePremiumRewards) {
+        class R {
+          constructor() {
+            obj = closure_1_1(closure_1_2[8]);
+            hideActionSheetResult = obj.hideActionSheet();
+            obj2 = closure_1_1(closure_1_2[11]);
+            obj3 = closure_1_1(closure_1_2[12]);
+            openURLResult = obj2.openURL(obj3.getArticleURL(closure_1_6.VIRTUAL_CURRENCY_ORB_MULTIPLIER_LEARN_MORE));
+            return;
+          }
+        }
+        if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+          class R {
+            constructor() {
+              obj = closure_1_1(closure_1_2[8]);
+              hideActionSheetResult = obj.hideActionSheet();
+              obj2 = closure_1_1(closure_1_2[11]);
+              obj3 = closure_1_1(closure_1_2[12]);
+              openURLResult = obj2.openURL(obj3.getArticleURL(closure_1_6.VIRTUAL_CURRENCY_ORB_MULTIPLIER_LEARN_MORE));
+              return;
+            }
+          }
+          const obj3 = { size: "lg", text: null, variant: "primary", onPress: null };
+          const intl2 = util.intl;
+          obj3.text = intl2.string(util.t.hvVgAZ);
+          obj3.onPress = R;
+          const tmp22 = closure_1_8(components_Button_Button.Button, obj3);
+          cResult[3] = tmp22;
+          const tmp21 = tmp22;
+        } else {
+          class R {
+            constructor() {
+              obj = closure_1_1(closure_1_2[8]);
+              hideActionSheetResult = obj.hideActionSheet();
+              obj2 = closure_1_1(closure_1_2[11]);
+              obj3 = closure_1_1(closure_1_2[12]);
+              openURLResult = obj2.openURL(obj3.getArticleURL(closure_1_6.VIRTUAL_CURRENCY_ORB_MULTIPLIER_LEARN_MORE));
+              return;
+            }
+          }
+        }
+        const _Symbol2 = Symbol;
+        if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+          class R {
+            constructor() {
+              obj = closure_1_1(closure_1_2[8]);
+              hideActionSheetResult = obj.hideActionSheet();
+              obj2 = closure_1_1(closure_1_2[11]);
+              obj3 = closure_1_1(closure_1_2[12]);
+              openURLResult = obj2.openURL(obj3.getArticleURL(closure_1_6.VIRTUAL_CURRENCY_ORB_MULTIPLIER_LEARN_MORE));
+              return;
+            }
+          }
+          const obj4 = { size: "lg", variant: "secondary", text: null, onPress: null };
+          const intl3 = util.intl;
+          obj4.text = intl3.string(util.t.cpT0Cq);
+          obj4.onPress = tmp9;
+          const tmp24 = closure_1_8(components_Button_Button.Button, obj4);
+          cResult[4] = tmp24;
+          const tmp23 = tmp24;
+        } else {
+          class R {
+            constructor() {
+              obj = closure_1_1(closure_1_2[8]);
+              hideActionSheetResult = obj.hideActionSheet();
+              obj2 = closure_1_1(closure_1_2[11]);
+              obj3 = closure_1_1(closure_1_2[12]);
+              openURLResult = obj2.openURL(obj3.getArticleURL(closure_1_6.VIRTUAL_CURRENCY_ORB_MULTIPLIER_LEARN_MORE));
+              return;
+            }
+          }
+        }
+        if (cResult[5] !== tmp4.buttonContainer) {
+          class R {
+            constructor() {
+              obj = closure_1_1(closure_1_2[8]);
+              hideActionSheetResult = obj.hideActionSheet();
+              obj2 = closure_1_1(closure_1_2[11]);
+              obj3 = closure_1_1(closure_1_2[12]);
+              openURLResult = obj2.openURL(obj3.getArticleURL(closure_1_6.VIRTUAL_CURRENCY_ORB_MULTIPLIER_LEARN_MORE));
+              return;
+            }
+          }
+          const obj5 = { style: tmp4.buttonContainer, children: null };
+          const items = [tmp21, tmp23];
+          obj5.children = items;
+          const tmp27 = options(View, obj5);
+          cResult[5] = tmp4.buttonContainer;
+          cResult[6] = tmp27;
+          const tmp25 = tmp27;
+        } else {
+          class R {
+            constructor() {
+              obj = closure_1_1(closure_1_2[8]);
+              hideActionSheetResult = obj.hideActionSheet();
+              obj2 = closure_1_1(closure_1_2[11]);
+              obj3 = closure_1_1(closure_1_2[12]);
+              openURLResult = obj2.openURL(obj3.getArticleURL(closure_1_6.VIRTUAL_CURRENCY_ORB_MULTIPLIER_LEARN_MORE));
+              return;
+            }
+          }
+        }
+        return tmp25;
+      } else {
+        class R {
+          constructor() {
+            obj = closure_1_1(closure_1_2[8]);
+            hideActionSheetResult = obj.hideActionSheet();
+            obj2 = closure_1_1(closure_1_2[11]);
+            obj3 = closure_1_1(closure_1_2[12]);
+            openURLResult = obj2.openURL(obj3.getArticleURL(closure_1_6.VIRTUAL_CURRENCY_ORB_MULTIPLIER_LEARN_MORE));
+            return;
+          }
+        }
+        if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
+          class R {
+            constructor() {
+              obj = closure_1_1(closure_1_2[8]);
+              hideActionSheetResult = obj.hideActionSheet();
+              obj2 = closure_1_1(closure_1_2[11]);
+              obj3 = closure_1_1(closure_1_2[12]);
+              openURLResult = obj2.openURL(obj3.getArticleURL(closure_1_6.VIRTUAL_CURRENCY_ORB_MULTIPLIER_LEARN_MORE));
+              return;
+            }
+          }
+          const stringResult = obj2.string(util.t.pj0XBN);
+          cResult[7] = stringResult;
+          const tmp10 = stringResult;
+        } else {
+          class R {
+            constructor() {
+              obj = closure_1_1(closure_1_2[8]);
+              hideActionSheetResult = obj.hideActionSheet();
+              obj2 = closure_1_1(closure_1_2[11]);
+              obj3 = closure_1_1(closure_1_2[12]);
+              openURLResult = obj2.openURL(obj3.getArticleURL(closure_1_6.VIRTUAL_CURRENCY_ORB_MULTIPLIER_LEARN_MORE));
+              return;
+            }
+          }
+        }
+        if (cResult[8] === onPress) {
+          class R {
+            constructor() {
+              obj = closure_1_1(closure_1_2[8]);
+              hideActionSheetResult = obj.hideActionSheet();
+              obj2 = closure_1_1(closure_1_2[11]);
+              obj3 = closure_1_1(closure_1_2[12]);
+              openURLResult = obj2.openURL(obj3.getArticleURL(closure_1_6.VIRTUAL_CURRENCY_ORB_MULTIPLIER_LEARN_MORE));
+              return;
+            }
+          }
+          const _Symbol = Symbol;
+          if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
+            class R {
+              constructor() {
+                obj = closure_1_1(closure_1_2[8]);
+                hideActionSheetResult = obj.hideActionSheet();
+                obj2 = closure_1_1(closure_1_2[11]);
+                obj3 = closure_1_1(closure_1_2[12]);
+                openURLResult = obj2.openURL(
+                  obj3.getArticleURL(closure_1_6.VIRTUAL_CURRENCY_ORB_MULTIPLIER_LEARN_MORE),
+                );
+                return;
+              }
+            }
+            const obj6 = { size: "lg", variant: "secondary", text: null, onPress: null };
+            const intl = util.intl;
+            obj6.text = intl.string(util.t.PcTCB7);
+            obj6.onPress = first;
+            const tmp16 = closure_1_8(components_Button_Button.Button, obj6);
+            cResult[11] = tmp16;
+            const tmp15 = tmp16;
+          } else {
+            class R {
+              constructor() {
+                obj = closure_1_1(closure_1_2[8]);
+                hideActionSheetResult = obj.hideActionSheet();
+                obj2 = closure_1_1(closure_1_2[11]);
+                obj3 = closure_1_1(closure_1_2[12]);
+                openURLResult = obj2.openURL(
+                  obj3.getArticleURL(closure_1_6.VIRTUAL_CURRENCY_ORB_MULTIPLIER_LEARN_MORE),
+                );
+                return;
+              }
+            }
+          }
+          if (cResult[12] === tmp4.buttonContainer) {
+            class R {
+              constructor() {
+                obj = closure_1_1(closure_1_2[8]);
+                hideActionSheetResult = obj.hideActionSheet();
+                obj2 = closure_1_1(closure_1_2[11]);
+                obj3 = closure_1_1(closure_1_2[12]);
+                openURLResult = obj2.openURL(
+                  obj3.getArticleURL(closure_1_6.VIRTUAL_CURRENCY_ORB_MULTIPLIER_LEARN_MORE),
+                );
+                return;
+              }
+            }
+            return tmp17;
+          }
+          const obj7 = { style: tmp4.buttonContainer, children: null };
+          const items1 = [tmp12, tmp15];
+          obj7.children = items1;
+          const tmp20 = options(View, obj7);
+          cResult[12] = tmp4.buttonContainer;
+          cResult[13] = tmp12;
+          cResult[14] = tmp20;
+          tmp17 = tmp20;
+        }
+        const obj8 = { size: "lg", variant: "primary", text: tmp10, onPress, loading };
+        const tmp14 = closure_1_8(components_Button_Button.Button, obj8);
+        cResult[8] = onPress;
+        cResult[9] = loading;
+        cResult[10] = tmp14;
+      }
+      const tmp6 = usePremiumFeatureUpsellGetNitroDefault(false, first, constants.QUEST_ORB_MULTIPLIER_PERK_INFO);
+    }
+  : (eligibleToReceivePremiumRewards) => {
+      const callback = noop.useCallback(() => {
+        ActionSheetActionCreatorsDefault.hideActionSheet();
+        openUserSettings.openUserSettings({ screen: constants2.PREMIUM });
+      }, []);
+      const tmp = closure_12();
+      ({ loading, onPress } = usePremiumFeatureUpsellGetNitroDefault(
+        false,
+        callback,
+        constants.QUEST_ORB_MULTIPLIER_PERK_INFO,
+      ));
+      const callback1 = noop.useCallback(() => {
+        ActionSheetActionCreatorsDefault.hideActionSheet();
+        const obj2 = LinkingDefault;
+        obj2.openURL(HelpdeskUtilsDefault.getArticleURL(constants.VIRTUAL_CURRENCY_ORB_MULTIPLIER_LEARN_MORE));
+      }, []);
+      let obj = { style: tmp.buttonContainer, children: null };
+      const callback2 = noop.useCallback(() => {
+        ActionSheetActionCreatorsDefault.hideActionSheet();
+      }, []);
+      const Button = components_Button_Button.Button;
+      if (eligibleToReceivePremiumRewards.eligibleToReceivePremiumRewards) {
+        let obj2 = { size: "lg", text: null, variant: "primary", onPress: null };
+        const intl3 = util.intl;
+        obj2.text = intl3.string(util.t.hvVgAZ);
+        obj2.onPress = callback1;
+        const items = [closure_1_8(Button, obj2)];
+        const obj3 = { size: "lg", variant: "secondary", text: null, onPress: null };
+        const intl4 = util.intl;
+        obj3.text = intl4.string(util.t.cpT0Cq);
+        obj3.onPress = callback2;
+        items[1] = closure_1_8(components_Button_Button.Button, obj3);
+        obj.children = items;
+        let tmp11 = obj;
+      } else {
+        const obj4 = { size: "lg", variant: "primary", text: null, onPress: null, loading: null };
+        const intl = util.intl;
+        obj4.text = intl.string(util.t.pj0XBN);
+        obj4.onPress = onPress;
+        obj4.loading = loading;
+        const items1 = [closure_1_8(Button, obj4)];
+        const obj5 = { size: "lg", variant: "secondary", text: null, onPress: null };
+        const intl2 = util.intl;
+        obj5.text = intl2.string(util.t.PcTCB7);
+        obj5.onPress = callback;
+        items1[1] = closure_1_8(components_Button_Button.Button, obj5);
+        obj.children = items1;
+        tmp11 = obj;
+      }
+      return options(View, tmp11);
+    };
+ReactCompilerGating = fn(558);
+let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      const cResult = c.c(30);
+      ({ title, body, eligibleToReceivePremiumRewards } = arg0);
+      const tmp4 = closure_12();
+      const typeConsolidationTextTransform =
+        useTypeConsolidationTextTransform.useTypeConsolidationTextTransform("QuestOrbMultiplierPerkInfo");
+      const bottom = useSafeAreaInsetsDefault().bottom;
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const tmp8 = closure_1_8(ActionSheetHeaderBar.ActionSheetHeaderBar, { variant: "floating" });
+        cResult[0] = tmp8;
+        let first = tmp8;
+      } else {
+        first = cResult[0];
+      }
+      if (cResult[1] !== bottom) {
+        const obj3 = { marginBottom: bottom };
+        cResult[1] = bottom;
+        cResult[2] = obj3;
+        let tmp9 = obj3;
+      } else {
+        tmp9 = cResult[2];
+      }
+      if (cResult[3] === tmp4.container) {
+        if (cResult[4] === tmp9) {
+          let tmp10 = cResult[5];
+        }
+        const _Symbol = Symbol;
+        if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
+          const tmp13 = closure_1_8(NitroQuestOrbsMultiplierRive.NitroQuestOrbsMultiplierRive, {});
+          cResult[6] = tmp13;
+          let tmp11 = tmp13;
+        } else {
+          tmp11 = cResult[6];
+        }
+        if (cResult[7] !== tmp4.riveContainer) {
+          const obj4 = { style: tmp4.riveContainer, children: tmp11 };
+          const tmp17 = closure_1_8(View, obj4);
+          cResult[7] = tmp4.riveContainer;
+          cResult[8] = tmp17;
+          let tmp14 = tmp17;
+        } else {
+          tmp14 = cResult[8];
+        }
+        if (cResult[9] === tmp4.text) {
+          if (cResult[10] === tmp4.title) {
+            if (cResult[11] === typeConsolidationTextTransform) {
+              let tmp18 = cResult[12];
+            }
+            if (cResult[13] === tmp18) {
+              if (cResult[14] === title) {
+                let tmp19 = cResult[15];
+              }
+              if (cResult[16] === body) {
+                if (cResult[17] === tmp4.text) {
+                  let tmp22 = cResult[18];
+                }
+                if (cResult[19] !== eligibleToReceivePremiumRewards) {
+                  const obj5 = { eligibleToReceivePremiumRewards };
+                  const tmp28 = closure_1_8(closure_13, obj5);
+                  cResult[19] = eligibleToReceivePremiumRewards;
+                  cResult[20] = tmp28;
+                  let tmp25 = tmp28;
+                } else {
+                  tmp25 = cResult[20];
+                }
+                if (cResult[21] === tmp4.contentContainer) {
+                  if (cResult[22] === tmp14) {
+                    if (cResult[23] === tmp19) {
+                      if (cResult[24] === tmp22) {
+                        if (cResult[25] === tmp25) {
+                          let tmp29 = cResult[26];
+                        }
+                        if (cResult[27] === tmp29) {
+                          if (cResult[28] === tmp10) {
+                            let tmp33 = cResult[29];
+                          }
+                          return tmp33;
+                        }
+                        const obj6 = { children: null };
+                        const items = [first];
+                        const obj7 = { style: tmp10, children: tmp29 };
+                        items[1] = closure_1_8(View, obj7);
+                        obj6.children = items;
+                        const tmp38 = options(v65535, obj6);
+                        cResult[27] = tmp29;
+                        cResult[28] = tmp10;
+                        cResult[29] = tmp38;
+                        tmp33 = tmp38;
+                      }
+                    }
+                  }
+                }
+                const obj8 = { style: tmp4.contentContainer, children: null };
+                const items1 = [tmp14, tmp19, tmp22, tmp25];
+                obj8.children = items1;
+                const tmp32 = options(View, obj8);
+                cResult[21] = tmp4.contentContainer;
+                cResult[22] = tmp14;
+                cResult[23] = tmp19;
+                cResult[24] = tmp22;
+                cResult[25] = tmp25;
+                cResult[26] = tmp32;
+                tmp29 = tmp32;
+              }
+              const obj9 = { style: tmp4.text, variant: "text-sm/normal", children: body };
+              const tmp24 = closure_1_8(Text_Text.Text, obj9);
+              cResult[16] = body;
+              cResult[17] = tmp4.text;
+              cResult[18] = tmp24;
+              tmp22 = tmp24;
+            }
+            const obj10 = {
+              style: tmp18,
+              variant: "display-md",
+              color: "mobile-text-heading-primary",
+              accessibilityRole: "header",
+              children: title,
+            };
+            const tmp21 = closure_1_8(Text_Text.Text, obj10);
+            cResult[13] = tmp18;
+            cResult[14] = title;
+            cResult[15] = tmp21;
+            tmp19 = tmp21;
+          }
+        }
+        const items2 = [, ,];
+        ({ text: arr2[0], title: arr2[1] } = tmp4);
+        items2[2] = typeConsolidationTextTransform;
+        cResult[9] = tmp4.text;
+        cResult[10] = tmp4.title;
+        cResult[11] = typeConsolidationTextTransform;
+        cResult[12] = items2;
+        tmp18 = items2;
+      }
+      const items3 = [tmp4.container, tmp9];
+      cResult[3] = tmp4.container;
+      cResult[4] = tmp9;
+      cResult[5] = items3;
+      tmp10 = items3;
+    }
+  : (arg0) => {
+      ({ title, body, eligibleToReceivePremiumRewards } = arg0);
+      const tmp = closure_12();
+      const typeConsolidationTextTransform =
+        useTypeConsolidationTextTransform.useTypeConsolidationTextTransform("QuestOrbMultiplierPerkInfo");
+      const obj2 = { children: null };
+      const items = [closure_1_8(ActionSheetHeaderBar.ActionSheetHeaderBar, { variant: "floating" })];
+      const obj3 = { style: null, children: null };
+      const items1 = [tmp.container, { marginBottom: useSafeAreaInsetsDefault().bottom }];
+      obj3.style = items1;
+      const obj4 = { style: tmp.contentContainer, children: null };
+      const items2 = [
+        closure_1_8(View, {
+          style: tmp.riveContainer,
+          children: closure_1_8(NitroQuestOrbsMultiplierRive.NitroQuestOrbsMultiplierRive, {}),
+        }),
+        ,
+        ,
+      ];
+      const obj6 = {
+        style: null,
+        variant: "display-md",
+        color: "mobile-text-heading-primary",
+        accessibilityRole: "header",
+        children: title,
+      };
+      const items3 = [, ,];
+      ({ text: arr4[0], title: arr4[1] } = tmp);
+      items3[2] = typeConsolidationTextTransform;
+      obj6.style = items3;
+      items2[1] = closure_1_8(Text_Text.Text, obj6);
+      items2[2] = closure_1_8(Text_Text.Text, { style: tmp.text, variant: "text-sm/normal", children: body });
+      items2[3] = closure_1_8(closure_13, { eligibleToReceivePremiumRewards });
+      obj4.children = items2;
+      obj3.children = options(View, obj4);
+      items[1] = closure_1_8(View, obj3);
+      obj2.children = items;
+      return options(v65535, obj2);
+    };
+ReactCompilerGating = fn(558);
+let obj6 = { width: "100%", gap: nativeDefault.space.PX_12, marginVertical: nativeDefault.space.PX_16 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestOrbMultiplierPerkInfoActionSheet.tsx");
 
-export default function QuestOrbMultiplierPerkInfoActionSheet(multiplier) {
-  multiplier = multiplier.multiplier;
-  const orbMultiplierEligibility = multiplier.orbMultiplierEligibility;
-  const result = multiplier(10902).shouldReceiveQuestOrbMultiplier(orbMultiplierEligibility);
-  dependencyMap = result;
-  let obj = multiplier(10902);
-  const items = [orbMultiplierEligibility];
-  const items1 = [result, orbMultiplierEligibility, multiplier];
-  const memo = noop.useMemo(() => {
-    if (orbMultiplierEligibility === QuestOrbMultiplierUtils.QuestOrbMultiplierEligibilityType.XBOX_GAME_PASS) {
-      const intl2 = util.intl;
-      let stringResult = intl2.string(_modDef3520.c5usUr);
-    } else {
-      const intl = util.intl;
-      stringResult = intl.string(util.t.Csf5Ol);
-    }
-    return stringResult;
-  }, items);
-  const memo1 = noop.useMemo(() => {
-    if (orbMultiplierEligibility === QuestOrbMultiplierUtils.QuestOrbMultiplierEligibilityType.XBOX_GAME_PASS) {
-      const intl2 = util.intl;
-      const obj2 = { bonusOrbMultiplier: multiplier };
-      let formatResult = intl2.format(_modDef3520.UkrcSH, obj2);
-    } else {
-      const intl = util.intl;
-      const format = intl.format;
-      const t = util.t;
-      if (c2) {
-        const obj3 = { bonusOrbMultiplier: multiplier };
-        formatResult = format(t.NpUfej, obj3);
+export default ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      const cResult = c.c(17);
+      ({ multiplier, orbMultiplierEligibility } = arg0);
+      if (cResult[0] !== orbMultiplierEligibility) {
+        const result = QuestOrbMultiplierUtils.shouldReceiveQuestOrbMultiplier(orbMultiplierEligibility);
+        cResult[0] = orbMultiplierEligibility;
+        cResult[1] = result;
+        let tmp4 = result;
+        const tmpResult = QuestOrbMultiplierUtils;
       } else {
-        const obj = { bonusOrbMultiplier: multiplier };
-        formatResult = format(t["G5k+lZ"], obj);
+        tmp4 = cResult[1];
+      }
+      const tmp6 =
+        orbMultiplierEligibility === QuestOrbMultiplierUtils.QuestOrbMultiplierEligibilityType.NITRO ||
+        orbMultiplierEligibility === QuestOrbMultiplierUtils.QuestOrbMultiplierEligibilityType.UPSELL;
+      if (orbMultiplierEligibility !== QuestOrbMultiplierUtils.QuestOrbMultiplierEligibilityType.XBOX_GAME_PASS) {
+        const _Symbol2 = Symbol;
+        if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+          const intl2 = util.intl;
+          const stringResult = intl2.string(util.t.Csf5Ol);
+          cResult[3] = stringResult;
+        }
+      } else {
+        const _Symbol = Symbol;
+        if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+          const intl = util.intl;
+          const stringResult1 = intl.string(_modDef3529.c5usUr);
+          cResult[2] = stringResult1;
+          let tmp8 = stringResult1;
+        } else {
+          tmp8 = cResult[2];
+        }
+        if (orbMultiplierEligibility !== QuestOrbMultiplierUtils.QuestOrbMultiplierEligibilityType.XBOX_GAME_PASS) {
+          if (tmp4) {
+            if (cResult[6] !== multiplier) {
+              const intl5 = util.intl;
+              const obj2 = { bonusOrbMultiplier: multiplier };
+              const formatResult = intl5.format(util.t.NpUfej, obj2);
+              cResult[6] = multiplier;
+              cResult[7] = formatResult;
+            }
+          } else {
+            if (cResult[8] !== multiplier) {
+              const intl4 = util.intl;
+              const obj3 = { bonusOrbMultiplier: multiplier };
+              const formatResult1 = intl4.format(util.t["G5k+lZ"], obj3);
+              cResult[8] = multiplier;
+              cResult[9] = formatResult1;
+              let tmp18 = formatResult1;
+            } else {
+              tmp18 = cResult[9];
+            }
+            let tmp15 = tmp18;
+          }
+        } else if (cResult[4] !== multiplier) {
+          const intl3 = util.intl;
+          const obj4 = { bonusOrbMultiplier: multiplier };
+          const formatResult2 = intl3.format(_modDef3529.UkrcSH, obj4);
+          cResult[4] = multiplier;
+          cResult[5] = formatResult2;
+          tmp15 = formatResult2;
+        } else {
+          tmp15 = cResult[5];
+        }
+        if (cResult[10] === tmp15) {
+          if (cResult[11] === tmp4) {
+            if (cResult[12] === tmp8) {
+              let tmp23 = cResult[13];
+            }
+            if (cResult[14] === tmp6) {
+              if (cResult[15] === tmp23) {
+                let tmp27 = cResult[16];
+              }
+              return tmp27;
+            }
+            const obj5 = {
+              scrollable: false,
+              handleDisabled: true,
+              startExpanded: true,
+              contentStyles,
+              children: null,
+            };
+            const obj6 = { visible: tmp6, children: tmp23 };
+            obj5.children = closure_1_8(PremiumRewardGradientDefault, obj6);
+            const tmp31 = closure_1_8(Sheet_BottomSheet.BottomSheet, obj5);
+            cResult[14] = tmp6;
+            cResult[15] = tmp23;
+            cResult[16] = tmp31;
+            tmp27 = tmp31;
+          }
+        }
+        const obj7 = { title: tmp8, body: tmp15, eligibleToReceivePremiumRewards: tmp4 };
+        const tmp26 = closure_1_8(closure_14, obj7);
+        cResult[10] = tmp15;
+        cResult[11] = tmp4;
+        cResult[12] = tmp8;
+        cResult[13] = tmp26;
+        tmp23 = tmp26;
       }
     }
-    return formatResult;
-  }, items1);
-  let obj2 = { scrollable: false, handleDisabled: true, startExpanded: true, contentStyles, children: null };
-  let obj3 = {
-    visible:
-      orbMultiplierEligibility === multiplier(10902).QuestOrbMultiplierEligibilityType.NITRO ||
-      orbMultiplierEligibility === multiplier(10902).QuestOrbMultiplierEligibilityType.UPSELL,
-    children: null,
-  };
-  const tmp4 =
-    orbMultiplierEligibility === multiplier(10902).QuestOrbMultiplierEligibilityType.NITRO ||
-    orbMultiplierEligibility === multiplier(10902).QuestOrbMultiplierEligibilityType.UPSELL;
-  obj3.children = closure_8(SheetContent, { title: memo, body: memo1, eligibleToReceivePremiumRewards: result });
-  obj2.children = closure_8(orbMultiplierEligibility(14905), obj3);
-  return closure_8(multiplier(6757).BottomSheet, obj2);
-}
+  : (multiplier) => {
+      multiplier = multiplier.multiplier;
+      const orbMultiplierEligibility = multiplier.orbMultiplierEligibility;
+      const result = multiplier(10008).shouldReceiveQuestOrbMultiplier(orbMultiplierEligibility);
+      dependencyMap = result;
+      let obj = multiplier(10008);
+      const items = [orbMultiplierEligibility];
+      const items1 = [result, orbMultiplierEligibility, multiplier];
+      const memo = noop.useMemo(() => {
+        if (orbMultiplierEligibility === QuestOrbMultiplierUtils.QuestOrbMultiplierEligibilityType.XBOX_GAME_PASS) {
+          const intl2 = util.intl;
+          let stringResult = intl2.string(_modDef3529.c5usUr);
+        } else {
+          const intl = util.intl;
+          stringResult = intl.string(util.t.Csf5Ol);
+        }
+        return stringResult;
+      }, items);
+      const memo1 = noop.useMemo(() => {
+        if (orbMultiplierEligibility === QuestOrbMultiplierUtils.QuestOrbMultiplierEligibilityType.XBOX_GAME_PASS) {
+          const intl2 = util.intl;
+          const obj2 = { bonusOrbMultiplier: multiplier };
+          let formatResult = intl2.format(_modDef3529.UkrcSH, obj2);
+        } else {
+          const intl = util.intl;
+          const format = intl.format;
+          const t = util.t;
+          if (c2) {
+            const obj3 = { bonusOrbMultiplier: multiplier };
+            formatResult = format(t.NpUfej, obj3);
+          } else {
+            const obj = { bonusOrbMultiplier: multiplier };
+            formatResult = format(t["G5k+lZ"], obj);
+          }
+        }
+        return formatResult;
+      }, items1);
+      let obj2 = { scrollable: false, handleDisabled: true, startExpanded: true, contentStyles, children: null };
+      let obj3 = {
+        visible:
+          orbMultiplierEligibility === multiplier(10008).QuestOrbMultiplierEligibilityType.NITRO ||
+          orbMultiplierEligibility === multiplier(10008).QuestOrbMultiplierEligibilityType.UPSELL,
+        children: null,
+      };
+      const tmp4 =
+        orbMultiplierEligibility === multiplier(10008).QuestOrbMultiplierEligibilityType.NITRO ||
+        orbMultiplierEligibility === multiplier(10008).QuestOrbMultiplierEligibilityType.UPSELL;
+      obj3.children = closure_8(closure_14, { title: memo, body: memo1, eligibleToReceivePremiumRewards: result });
+      obj2.children = closure_8(orbMultiplierEligibility(14962), obj3);
+      return closure_8(multiplier(6645).BottomSheet, obj2);
+    };

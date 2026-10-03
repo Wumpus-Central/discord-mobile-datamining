@@ -3,11 +3,11 @@ import NativeDeviceLocaleModule from "../../discord_common/js/packages/rtn-codeg
 import intl_util from "util.tsx";
 import native from "../design/void/native.tsx";
 import migration from "native/migration.tsx";
-import _modDef13883 from "messages/international.messages.js";
+import _modDef13950 from "messages/international.messages.js";
 import noop from "../../_runtime/metro/00019__.js";
 
 require = fn;
-const Fonts = fn(1074).Fonts;
+const Fonts = fn(1085).Fonts;
 const jsx = fn(21).jsx;
 let obj = {
   strong: { fontFamily: Fonts.PRIMARY_SEMIBOLD },
@@ -15,7 +15,7 @@ let obj = {
   code: { fontFamily: Fonts.CODE_NORMAL },
   del: { textDecorationLine: "line-through", textDecorationStyle: "solid" },
 };
-let _default = fn(1116).default;
+let _default = fn(1127).default;
 let str = "en-US";
 if (null != _default) {
   str = _default.getConstants().Language;
@@ -28,10 +28,10 @@ function getSystemLocale(arg0) {
   }
   return Language;
 }
-const util = fn(1117);
+const util = fn(1128);
 const normalizedLocale = util.getNormalizedLocale(str, "en-US");
-const module_1154 = fn(1154);
-const reactFormatter = module_1154.makeReactFormatter({
+const module_1165 = fn(1165);
+const reactFormatter = module_1165.makeReactFormatter({
   $i(children, key) {
     obj = { style: obj.italic, children };
     return jsx(native.LegacyText, { style: obj.italic, children }, key);
@@ -56,24 +56,24 @@ const reactFormatter = module_1154.makeReactFormatter({
     return jsx(migration.IntlLink, { target: tmp, children }, key);
   },
 });
-const intlManager = new fn(1154).IntlManager({ initialLocale: normalizedLocale, defaultLocale: "en-US" });
+const intlManager = new fn(1165).IntlManager({ initialLocale: normalizedLocale, defaultLocale: "en-US" });
 const withFormattersResult = intlManager.withFormatters({
   format: reactFormatter,
-  formatToPlainString: fn(1154).stringFormatter,
-  formatToMarkdownString: fn(1154).markdownFormatter,
-  formatToParts: fn(1154).astFormatter,
+  formatToPlainString: fn(1165).stringFormatter,
+  formatToMarkdownString: fn(1165).markdownFormatter,
+  formatToParts: fn(1165).astFormatter,
 });
+let ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const size = fn(2);
-const result = size.fileFinishedImporting("intl/index.native.tsx");
+const result1 = size.fileFinishedImporting("intl/index.native.tsx");
 
 export const intl = withFormattersResult;
 export { getSystemLocale };
-export const getAvailableLocales = fn(1117).getAvailableLocales;
-export const getLanguages = fn(1117).getLanguages;
-export const useSyncMessages = function useSyncMessages(arg0) {
-  return intl_util.useSyncMessages(arg0, withFormattersResult);
-};
-export const t = fn(13880)._defaultMessages;
-export const international = _modDef13883;
+export const getAvailableLocales = fn(1128).getAvailableLocales;
+export const getLanguages = fn(1128).getLanguages;
+export const useSyncMessages = (messagesLoader) => intl_util.useSyncMessages(messagesLoader, withFormattersResult);
+export const t = fn(13947)._defaultMessages;
+export const international = _modDef13950;
 export const systemLocale = str;
 export const initialLocale = normalizedLocale;

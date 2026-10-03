@@ -64,7 +64,6 @@ const items2 = [
   dismissible_content.DismissibleContent.DISCOUNT_OFFER_ACTION_SHEET,
   dismissible_content.DismissibleContent.MOBILE_PREMIUM_TRIAL_OFFER_ACTION_SHEET,
   dismissible_content.DismissibleContent.PREMIUM_ORBS_REWARDS_DROP_POPOVER,
-  dismissible_content.DismissibleContent.QUEST_HOME_ENTRYPOINT_TAKEOVER_BADGE,
   dismissible_content.DismissibleContent.REFERRAL_PROGRAM_POPOVER_V2,
   dismissible_content.DismissibleContent.ML_REVERSE_TRIAL_UPSELL_MODAL,
   dismissible_content.DismissibleContent.ML_REVERSE_TRIAL_FOLLOWUP_UPSELL_MODAL,

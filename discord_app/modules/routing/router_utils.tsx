@@ -3,38 +3,38 @@ import LoggerDefault from "../debug/Logger.tsx";
 import ComponentDispatchUtils from "../../utils/ComponentDispatchUtils.tsx";
 import RoutingSources from "RoutingSources.tsx";
 import Constants from "../../Constants.tsx";
-import _extends_mod from "../../../_runtime/metro/01102__.js";
+import _extends_mod from "../../../_runtime/metro/01113__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
-function transitionTo(CHANNELResult, guildScheduledEvent2) {
-  closure_0 = CHANNELResult;
-  let tmp = typeof CHANNELResult !== "string";
-  if (typeof CHANNELResult === "string") {
+function transitionTo(Routes, guildScheduledEvent2) {
+  closure_0 = Routes;
+  let tmp = typeof Routes !== "string";
+  if (typeof Routes === "string") {
     tmp = !items.some((item) => ME.startsWith(item));
   }
   let flag = !tmp;
   if (!tmp) {
     const _HermesInternal = HermesInternal;
-    logger.log("" + "assign" + " - route to external path " + CHANNELResult);
+    logger.log("" + "assign" + " - route to external path " + Routes);
     const _window = window;
     const _Event = Event;
     const event = new Event("beforeunload");
     window.dispatchEvent(event);
     const _window2 = window;
     const _location = window.location;
-    _location.assign(CHANNELResult);
+    _location.assign(Routes);
     flag = true;
   }
   if (!flag) {
     const _URL = URL;
     const _window3 = window;
     const _HermesInternal2 = HermesInternal;
-    const uRL = new URL(CHANNELResult, "https:" + window.GLOBAL_ENV.WEBAPP_ENDPOINT);
+    const uRL = new URL(Routes, "https:" + window.GLOBAL_ENV.WEBAPP_ENDPOINT);
     const obj = { pathname: null, search: null, hash: null };
     ({ pathname: obj.pathname, search: obj.search, hash: obj.hash } = uRL);
     const merged = Object.assign(guildScheduledEvent2);
     const _HermesInternal3 = HermesInternal;
-    logger.log("transitionTo - Transitioning to " + CHANNELResult);
+    logger.log("transitionTo - Transitioning to " + Routes);
     if (guildScheduledEvent2 != null) {
       const source = guildScheduledEvent2.source;
     }
@@ -85,7 +85,7 @@ function transitionTo(CHANNELResult, guildScheduledEvent2) {
     } else if (null != guildScheduledEvent2) {
       _extends.push(obj);
     }
-    _extends.push(CHANNELResult);
+    _extends.push(Routes);
   }
 }
 ({ Routes: hasOwnProperty, PageAnalyticsLocations: metroRequire, ComponentActions: closure_7 } = Constants);

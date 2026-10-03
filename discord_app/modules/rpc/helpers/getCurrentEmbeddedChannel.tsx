@@ -5,7 +5,7 @@ import FramesStore from "../../frames/FramesStore.tsx";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 
 require = fn;
-const TransportTypes = fn(5270).TransportTypes;
+const TransportTypes = fn(5316).TransportTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/helpers/getCurrentEmbeddedChannel.tsx");
 

@@ -11,7 +11,7 @@ import PremiumGiftingIntentStore from "../PremiumGiftingIntentStore.tsx";
 import AutomaticLifecycleManager from "../../../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const MessageTypes = fn(1074).MessageTypes;
+const MessageTypes = fn(1085).MessageTypes;
 let closure_8 = 10 * DurationsDefault.Millis.SECOND;
 let closure_9 = 5 * DurationsDefault.Millis.MINUTE;
 class GiftIntentReconcilingManager extends tmp2 {

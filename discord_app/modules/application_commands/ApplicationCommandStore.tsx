@@ -68,7 +68,7 @@ function handleSetActiveCommand(arg0) {
     tmp2.commandOrigin = commandOrigin;
     tmp2.source = source;
     obj2 = {};
-    let options;
+    options = undefined;
     if (command != null) {
       options = command.options;
     }
@@ -170,7 +170,7 @@ function handleUpdateOptionStates(channelId) {
           lastValidationResult: null,
           optionValue: null,
           location: "r",
-          length: "HermesInternal",
+          length: "IconComponent",
         };
         if (tmp.activeOptionName === tmp9) {
           tmp.activeOptionName = null;
@@ -273,7 +273,7 @@ prototype["getActiveOption"] = function getActiveOption(channelId) {
   const activeCommand = tmp2.activeCommand;
   let found;
   if (activeCommand != null) {
-    const options = activeCommand.options;
+    options = activeCommand.options;
     if (options != null) {
       found = options.find((name) => name.name === activeOptionName.activeOptionName);
     }
@@ -375,7 +375,7 @@ prototype["getOption"] = function getOption(arg0, arg1) {
   const activeCommand = dependencyMap[arg0].activeCommand;
   let found;
   if (activeCommand != null) {
-    const options = activeCommand.options;
+    options = activeCommand.options;
     if (options != null) {
       found = options.find((name) => name.name === closure_0);
     }

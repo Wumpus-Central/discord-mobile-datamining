@@ -37,8 +37,8 @@ export const createRadio = function createRadio(arg0) {
   const merged = Object.assign(arg0);
   return { type: NodeType.RADIO };
 };
-export const createList = function createList(arg0) {
-  const merged = Object.assign(arg0);
+export const createList = function createList(list) {
+  const merged = Object.assign(list);
   return { type: NodeType.LIST };
 };
 export const createSegmentedControl = function createSegmentedControl(arg0) {

@@ -9,7 +9,7 @@ import UserStore from "../../stores/UserStore.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const MessageFlags = fn(1074).MessageFlags;
+const MessageFlags = fn(1085).MessageFlags;
 class StageChannelRequestToSpeakMessageManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -28,16 +28,16 @@ StageChannelRequestToSpeakMessageManager.prototype["handleVoiceStateUpdates"] = 
       if (requestToSpeakTimestamp.suppress) {
         if (null != channelId) {
           if (userId !== id.getId()) {
-            if (closure_6.can(userId(2052).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel.getChannel(channelId))) {
+            if (closure_6.can(userId(2060).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel.getChannel(channelId))) {
               if (null != requestToSpeakTimestamp) {
                 user = user.getUser(userId);
                 if (null != user) {
-                  const result = userId(17514).sendStageRequestToSpeakEphemeralMessage(
+                  const result = userId(17603).sendStageRequestToSpeakEphemeralMessage(
                     channelId,
                     user,
                     requestToSpeakTimestamp,
                   );
-                  const tmp11Result = userId(17514);
+                  const tmp11Result = userId(17603);
                 }
               } else {
                 messages = messages.getMessages(channelId);
@@ -52,8 +52,8 @@ StageChannelRequestToSpeakMessageManager.prototype["handleVoiceStateUpdates"] = 
                   return hasFlagResult;
                 });
                 if (null != findNewestResult) {
-                  closure_1(7064).deleteMessage(channelId, findNewestResult.id, true);
-                  const obj2 = closure_1(7064);
+                  closure_1(6965).deleteMessage(channelId, findNewestResult.id, true);
+                  const obj2 = closure_1(6965);
                 }
               }
             }

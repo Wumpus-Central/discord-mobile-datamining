@@ -7,95 +7,148 @@ import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import PromotionsStore from "../../../promotions/PromotionsStore.tsx";
 
-const require = globalThis.__r;
-
 require = fn;
-const SubscriptionPlans = fn(1374).SubscriptionPlans;
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/premium/gifting/utils/promotions/GiftingPromotionUtils.tsx");
-
-export const useFetchClaimableGiftingPromotionRewardSkuIds = function useFetchClaimableGiftingPromotionRewardSkuIds() {
-  const tmp = purchases(hasPreviouslyFetched.useState(), 2);
-  _require = tmp[1];
-  const items = [fetchPurchasesError];
-  stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () =>
-    fetchPurchasesError.getGiftPromotionRewardSkuIds(),
-  );
-  const obj = require("initialize");
-  const fetchPurchases = require("useFetchCollectiblesCategoriesAndPurchases").useFetchPurchases();
-  purchases = fetchPurchases.purchases;
-  hasPreviouslyFetched = fetchPurchases.hasPreviouslyFetched;
-  fetchPurchasesError = fetchPurchases.fetchPurchasesError;
-  hasPreviouslyFetched.useRef(false);
-  const items1 = [stateFromStoresArray, purchases, hasPreviouslyFetched, fetchPurchasesError];
-  const effect = hasPreviouslyFetched.useEffect(() => {
-    if (hasPreviouslyFetched) {
-      if (!ref.current) {
-        if (stateFromStoresArray.length > 0) {
-          if (null == fetchPurchasesError) {
-            let found = stateFromStoresArray.filter((item) => null == purchases.get(item));
-          } else {
-            found = [];
+const SubscriptionPlans = fn(1379).SubscriptionPlans;
+fn(558);
+let ReactCompilerGating = fn(558);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = require("c").c(8);
+      const tmp4 = purchases(hasPreviouslyFetched.useState(), 2);
+      _require = tmp4[1];
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const items = [fetchPurchasesError];
+        const fn = function l() {
+          return fetchPurchasesError.getGiftPromotionRewardSkuIds();
+        };
+        cResult[0] = items;
+        cResult[1] = fn;
+        tmp5 = items;
+        tmp6 = fn;
+      } else {
+        [tmp5, tmp6] = cResult;
+      }
+      const obj = require("c");
+      stateFromStoresArray = require("initialize").useStateFromStoresArray(tmp5, tmp6);
+      const tmpResult = require("initialize");
+      const fetchPurchases = require("useFetchCollectiblesCategoriesAndPurchases").useFetchPurchases();
+      purchases = fetchPurchases.purchases;
+      hasPreviouslyFetched = fetchPurchases.hasPreviouslyFetched;
+      fetchPurchasesError = fetchPurchases.fetchPurchasesError;
+      hasPreviouslyFetched.useRef(false);
+      if (cResult[2] === fetchPurchasesError) {
+        if (cResult[3] === hasPreviouslyFetched) {
+          if (cResult[4] === purchases) {
+            if (cResult[5] === stateFromStoresArray) {
+              let tmp10 = cResult[6];
+              let tmp11 = cResult[7];
+            }
+            const effect = obj2.useEffect(tmp10, tmp11);
+            return tmp4[0];
           }
-          closure_0(found);
-          tmp.current = true;
         }
       }
+      const fn2 = function b() {
+        if (hasPreviouslyFetched) {
+          if (!ref.current) {
+            if (stateFromStoresArray.length > 0) {
+              if (null == fetchPurchasesError) {
+                let found = stateFromStoresArray.filter((item) => null == purchases.get(item));
+              } else {
+                found = [];
+              }
+              closure_0(found);
+              tmp.current = true;
+            }
+          }
+        }
+      };
+      const items1 = [stateFromStoresArray, purchases, hasPreviouslyFetched, fetchPurchasesError];
+      cResult[2] = fetchPurchasesError;
+      cResult[3] = hasPreviouslyFetched;
+      cResult[4] = purchases;
+      cResult[5] = stateFromStoresArray;
+      cResult[6] = fn2;
+      cResult[7] = items1;
+      tmp11 = items1;
+      tmp10 = fn2;
     }
-  }, items1);
-  return tmp[0];
-};
-export const getRewardAssetIdMap = function getRewardAssetIdMap(arr) {
-  const map = new Map();
-  const item = arr.forEach((skuId) => map.set(skuId.skuId, skuId.assetId));
-  return map;
-};
-export const useShouldShowSelectFreeSkuStep = function useShouldShowSelectFreeSkuStep(id, arg1, arg2) {
-  const items = [,];
-  ({ PREMIUM_YEAR_TIER_2: arr[0], PREMIUM_MONTH_TIER_2: arr[1] } = SubscriptionPlans);
-  id = undefined;
-  if (id != null) {
-    id = id.id;
-  }
-  let tmp3 = null != arg2;
-  const hasItem = items.includes(id);
-  if (tmp3) {
-    tmp3 = arg2.length >= 1;
-  }
-  let tmp4 = arg1;
-  if (arg1) {
-    tmp4 = hasItem;
-  }
-  if (tmp4) {
-    tmp4 = tmp3;
-  }
-  return tmp4;
-};
-export const useShouldAutoSelectGiftingPromotionReward = function useShouldAutoSelectGiftingPromotionReward(
-  id,
-  arg1,
-  arg2,
-) {
-  const items = [,];
-  ({ PREMIUM_YEAR_TIER_2: arr[0], PREMIUM_MONTH_TIER_2: arr[1] } = SubscriptionPlans);
-  id = undefined;
-  if (id != null) {
-    id = id.id;
-  }
-  let tmp3 = null != arg2;
-  const hasItem = items.includes(id);
-  if (tmp3) {
-    tmp3 = 1 === arg2.length;
-  }
-  if (tmp3) {
-    tmp3 = hasItem;
-  }
-  if (tmp3) {
-    tmp3 = arg1;
-  }
-  return tmp3;
-};
-export const useIsPlanEligibleForGiftingPromotion = function useIsPlanEligibleForGiftingPromotion(id) {
+  : () => {
+      const tmp = purchases(hasPreviouslyFetched.useState(), 2);
+      _require = tmp[1];
+      const items = [fetchPurchasesError];
+      stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () =>
+        fetchPurchasesError.getGiftPromotionRewardSkuIds(),
+      );
+      const obj = require("initialize");
+      const fetchPurchases = require("useFetchCollectiblesCategoriesAndPurchases").useFetchPurchases();
+      purchases = fetchPurchases.purchases;
+      hasPreviouslyFetched = fetchPurchases.hasPreviouslyFetched;
+      fetchPurchasesError = fetchPurchases.fetchPurchasesError;
+      hasPreviouslyFetched.useRef(false);
+      const items1 = [stateFromStoresArray, purchases, hasPreviouslyFetched, fetchPurchasesError];
+      const effect = hasPreviouslyFetched.useEffect(() => {
+        if (hasPreviouslyFetched) {
+          if (!ref.current) {
+            if (stateFromStoresArray.length > 0) {
+              if (null == fetchPurchasesError) {
+                let found = stateFromStoresArray.filter((item) => null == purchases.get(item));
+              } else {
+                found = [];
+              }
+              closure_0(found);
+              tmp.current = true;
+            }
+          }
+        }
+      }, items1);
+      return tmp[0];
+    };
+ReactCompilerGating = fn(558);
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (id, arg1, arg2) => {
+      const items = [,];
+      ({ PREMIUM_YEAR_TIER_2: arr[0], PREMIUM_MONTH_TIER_2: arr[1] } = SubscriptionPlans);
+      id = undefined;
+      if (id != null) {
+        id = id.id;
+      }
+      let tmp3 = null != arg2;
+      const hasItem = items.includes(id);
+      if (tmp3) {
+        tmp3 = arg2.length >= 1;
+      }
+      let tmp4 = arg1;
+      if (arg1) {
+        tmp4 = hasItem;
+      }
+      if (tmp4) {
+        tmp4 = tmp3;
+      }
+      return tmp4;
+    }
+  : (id, arg1, arg2) => {
+      const items = [,];
+      ({ PREMIUM_YEAR_TIER_2: arr[0], PREMIUM_MONTH_TIER_2: arr[1] } = SubscriptionPlans);
+      id = undefined;
+      if (id != null) {
+        id = id.id;
+      }
+      let tmp3 = null != arg2;
+      const hasItem = items.includes(id);
+      if (tmp3) {
+        tmp3 = arg2.length >= 1;
+      }
+      let tmp4 = arg1;
+      if (arg1) {
+        tmp4 = hasItem;
+      }
+      if (tmp4) {
+        tmp4 = tmp3;
+      }
+      return tmp4;
+    };
+function useIsPlanEligibleForGiftingPromotion(id) {
   const items = [,];
   ({ PREMIUM_YEAR_TIER_2: arr[0], PREMIUM_MONTH_TIER_2: arr[1] } = SubscriptionPlans);
   id = undefined;
@@ -103,7 +156,59 @@ export const useIsPlanEligibleForGiftingPromotion = function useIsPlanEligibleFo
     id = id.id;
   }
   return items.includes(id);
+}
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/premium/gifting/utils/promotions/GiftingPromotionUtils.tsx");
+
+export const useFetchClaimableGiftingPromotionRewardSkuIds = tmp2;
+export const getRewardAssetIdMap = function getRewardAssetIdMap(arr) {
+  const map = new Map();
+  const item = arr.forEach((skuId) => map.set(skuId.skuId, skuId.assetId));
+  return map;
 };
+export const useShouldShowSelectFreeSkuStep = tmp3;
+export const useShouldAutoSelectGiftingPromotionReward = ReactCompilerGating.isReactCompilerEnabled()
+  ? (id, arg1, arg2) => {
+      const items = [,];
+      ({ PREMIUM_YEAR_TIER_2: arr[0], PREMIUM_MONTH_TIER_2: arr[1] } = SubscriptionPlans);
+      id = undefined;
+      if (id != null) {
+        id = id.id;
+      }
+      let tmp3 = null != arg2;
+      const hasItem = items.includes(id);
+      if (tmp3) {
+        tmp3 = 1 === arg2.length;
+      }
+      if (tmp3) {
+        tmp3 = hasItem;
+      }
+      if (tmp3) {
+        tmp3 = arg1;
+      }
+      return tmp3;
+    }
+  : (id, arg1, arg2) => {
+      const items = [,];
+      ({ PREMIUM_YEAR_TIER_2: arr[0], PREMIUM_MONTH_TIER_2: arr[1] } = SubscriptionPlans);
+      id = undefined;
+      if (id != null) {
+        id = id.id;
+      }
+      let tmp3 = null != arg2;
+      const hasItem = items.includes(id);
+      if (tmp3) {
+        tmp3 = 1 === arg2.length;
+      }
+      if (tmp3) {
+        tmp3 = hasItem;
+      }
+      if (tmp3) {
+        tmp3 = arg1;
+      }
+      return tmp3;
+    };
+export { useIsPlanEligibleForGiftingPromotion };
 export const createGradientStyle = function createGradientStyle(gradient, arg1) {
   if (null != gradient) {
     let obj = arg1;

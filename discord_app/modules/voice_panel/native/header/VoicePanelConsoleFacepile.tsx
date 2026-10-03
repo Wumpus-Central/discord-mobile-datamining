@@ -41,9 +41,9 @@ function getConsoleInfo(type) {
     return null;
   }
 }
-const PlatformTypes = fn(1074).PlatformTypes;
+const PlatformTypes = fn(1085).PlatformTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = {
   consoleIconContainer: {
     borderRadius: nativeDefault.radii.round,
@@ -63,31 +63,82 @@ const obj3 = {
 };
 obj2.consoleIcon = { tintColor: nativeDefault.colors.WHITE };
 let closure_6 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+const obj4 = { tintColor: nativeDefault.colors.WHITE };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/header/VoicePanelConsoleFacepile.tsx");
 
-export default function VoicePanelConsoleFacepile() {
-  let tmp = closure_6();
-  _require = tmp;
-  const tmp2 = useGameConsoleAccountsDefault();
-  importDefault = tmp2;
-  let items = [tmp2];
-  const items1 = [tmp];
-  const items2 = noop.useMemo(() => {
-    const mapped = closure_1.map(getConsoleInfo);
-    return mapped.filter(GlobalUtils.isNotNullish);
-  }, items);
-  const renderItem = noop.useCallback((backgroundColor) => {
-    const obj = { style: null, children: null };
-    const items = [closure_0.consoleIconContainer, { backgroundColor: backgroundColor.color }];
-    obj.style = items;
-    obj.children = jsx(native.Icon, {
-      style: closure_0.consoleIcon,
-      size: native.Icon.Sizes.MEDIUM,
-      source: backgroundColor.icon,
-    });
-    return <tmp style={null}>{null}</tmp>;
-  }, items1);
-  return jsx(require("native").SummarizedIconRow, { items: items2, renderItem, offsetAmount: -3 });
-}
+export default ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = require("c").c(8);
+      const tmp4 = closure_6();
+      _require = tmp4;
+      const arr = useGameConsoleAccountsDefault();
+      if (cResult[0] !== arr) {
+        const mapped = arr.map(getConsoleInfo);
+        const found = mapped.filter(tmp(1375).isNotNullish);
+        cResult[0] = arr;
+        cResult[1] = found;
+        let tmp5 = found;
+      } else {
+        tmp5 = cResult[1];
+      }
+      if (cResult[2] === tmp4.consoleIcon) {
+        if (cResult[3] === tmp4.consoleIconContainer) {
+          let tmp8 = cResult[4];
+        }
+        if (cResult[5] === tmp5) {
+          if (cResult[6] === tmp8) {
+            let tmp9 = cResult[7];
+          }
+          return tmp9;
+        }
+        const obj2 = { items: tmp5, renderItem: tmp8, offsetAmount: -3 };
+        const tmp11 = jsx(tmp(1188).SummarizedIconRow, { items: tmp5, renderItem: tmp8, offsetAmount: -3 });
+        cResult[5] = tmp5;
+        cResult[6] = tmp8;
+        cResult[7] = tmp11;
+        tmp9 = tmp11;
+      }
+      const fn = function u(backgroundColor) {
+        const obj = { style: null, children: null };
+        const items = [closure_0.consoleIconContainer, { backgroundColor: backgroundColor.color }];
+        obj.style = items;
+        obj.children = jsx(native.Icon, {
+          style: closure_0.consoleIcon,
+          size: native.Icon.Sizes.MEDIUM,
+          source: backgroundColor.icon,
+        });
+        return <tmp style={null}>{null}</tmp>;
+      };
+      cResult[2] = tmp4.consoleIcon;
+      cResult[3] = tmp4.consoleIconContainer;
+      cResult[4] = fn;
+      tmp8 = fn;
+      let obj = require("c");
+    }
+  : () => {
+      let tmp = closure_6();
+      _require = tmp;
+      const tmp2 = useGameConsoleAccountsDefault();
+      importDefault = tmp2;
+      let items = [tmp2];
+      const items1 = [tmp];
+      const items2 = noop.useMemo(() => {
+        const mapped = closure_1.map(getConsoleInfo);
+        return mapped.filter(GlobalUtils.isNotNullish);
+      }, items);
+      const renderItem = noop.useCallback((backgroundColor) => {
+        const obj = { style: null, children: null };
+        const items = [closure_0.consoleIconContainer, { backgroundColor: backgroundColor.color }];
+        obj.style = items;
+        obj.children = jsx(native.Icon, {
+          style: closure_0.consoleIcon,
+          size: native.Icon.Sizes.MEDIUM,
+          source: backgroundColor.icon,
+        });
+        return <tmp style={null}>{null}</tmp>;
+      }, items1);
+      return jsx(require("native").SummarizedIconRow, { items: items2, renderItem, offsetAmount: -3 });
+    };
 export { getConsoleInfo };

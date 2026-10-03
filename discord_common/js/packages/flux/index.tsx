@@ -34,6 +34,7 @@ export default obj;
 export { NO_DATA };
 export { Store };
 export const Dispatcher = flux_Dispatcher.Dispatcher;
+export const DispatchBand = flux_Dispatcher.DispatchBand;
 export const BatchedStoreListener = BatchedStoreListener.BatchedStoreListener;
 export { createFetchStore };
 export const statesWillNeverBeEqual = useStateFromStores.statesWillNeverBeEqual;

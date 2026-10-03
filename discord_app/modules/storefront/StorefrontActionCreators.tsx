@@ -37,7 +37,7 @@ let closure_12 = async function _maybeFetchStorefrontPromotions(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -68,7 +68,7 @@ let closure_12 = async function _maybeFetchStorefrontPromotions(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     } catch (tmp8) {
       c1 = tmp;
       throw tmp8;
@@ -96,7 +96,7 @@ let closure_14 = async function _fetchStorefrontPromotions(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -189,7 +189,7 @@ let closure_15 = async function _claimStorefrontPromotion() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -276,69 +276,11 @@ let closure_16 = async function _fetchStorefrontPricesForApplicationId(arg0) {
   c3 = 0;
   c4 = 0;
   let iter = (async (arg0) => {
-    if (c4 === 2) {
-      c4 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c4 = 2;
-        if (0 === c3) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            closure_2 = tmp5;
-            closure_1 = tmp2;
-            let applicationId2;
-            applicationId2 = applicationId.applicationId;
-            c3 = 1;
-            c4 = 1;
-            return { value: "flex", done: null };
-          }
-        } else if (1 === tmp5) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            const obj5 = { type: "application", applicationId: applicationId2 };
-            c3 = 2;
-            c4 = 1;
-            const obj6 = { value: closure_130_18(obj5), done: false };
-            return obj6;
-          }
-        } else if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj = { value, done: true };
-          return obj;
-        } else {
-          c4 = 3;
-          return { value: "HermesInternal", done: null };
-        }
-      } catch (tmp11) {
-        c4 = tmp;
-        throw tmp11;
-      }
-    }
+    await closure_130_18({ type: "application", applicationId: applicationId2 });
+    await "IconComponent";
+    closure_1 = tmp2;
+    applicationId2 = applicationId.applicationId;
+    return "Reflect";
   })();
   iter.next();
   return iter;
@@ -348,69 +290,11 @@ let closure_17 = async function _fetchStorefrontPricesForSkuIds(arg0) {
   c3 = 0;
   c4 = 0;
   let iter = (async (arg0) => {
-    if (c4 === 2) {
-      c4 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c4 = 2;
-        if (0 === c3) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            closure_2 = tmp5;
-            closure_1 = tmp2;
-            let skuIds2;
-            skuIds2 = skuIds.skuIds;
-            c3 = 1;
-            c4 = 1;
-            return { value: "flex", done: null };
-          }
-        } else if (1 === tmp5) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            const obj5 = { type: "skus", skuIds: skuIds2 };
-            c3 = 2;
-            c4 = 1;
-            const obj6 = { value: closure_130_18(obj5), done: false };
-            return obj6;
-          }
-        } else if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj = { value, done: true };
-          return obj;
-        } else {
-          c4 = 3;
-          return { value: "HermesInternal", done: null };
-        }
-      } catch (tmp11) {
-        c4 = tmp;
-        throw tmp11;
-      }
-    }
+    await closure_130_18({ type: "skus", skuIds: skuIds2 });
+    await "IconComponent";
+    closure_1 = tmp2;
+    skuIds2 = skuIds.skuIds;
+    return "Reflect";
   })();
   iter.next();
   return iter;
@@ -436,7 +320,7 @@ let closure_19 = async function _fetchStorefrontPrices(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -489,7 +373,7 @@ let closure_19 = async function _fetchStorefrontPrices(arg0) {
     }
   }
 };
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 let closure_9 = 10 * DurationsDefault.Millis.MINUTE;
 const MINUTE = DurationsDefault.Millis.MINUTE;
 const size = fn(2);

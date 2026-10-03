@@ -4,7 +4,7 @@ import UserOfferStore from "../../../stores/billing/UserOfferStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 let require = fn;
-const PaymentGateways = fn(1085).PaymentGateways;
+const PaymentGateways = fn(1096).PaymentGateways;
 const prototype = function UserOfferManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;

@@ -8,11 +8,11 @@ import UserStore from "../../../../stores/UserStore.tsx";
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const ChangeEmailStore = fn(6121);
+const ChangeEmailStore = fn(6009);
 ({ useChangeEmailError: closure_9, ChangeEmailFields: c10 } = ChangeEmailStore);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = {
   background: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -65,7 +65,7 @@ export default function ConfirmEmailCode(onFormSubmit) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {

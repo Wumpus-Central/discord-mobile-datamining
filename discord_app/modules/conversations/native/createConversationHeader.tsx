@@ -1,9 +1,9 @@
 // discord_app/modules/conversations/native/createConversationHeader.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3616 from "../Conversations.messages.js";
+import _modDef3625 from "../Conversations.messages.js";
 import renderer_EmbedUtils from "../../messages/native/renderer/EmbedUtils.tsx";
 import computeScrollData from "../../chat/native/computeScrollData.tsx";
-import _modDef11644 from "../../../../_runtime/metro/11644__.js";
+import _modDef11564 from "../../../../_runtime/metro/11564__.js";
 import RowGeneratorConstants from "../../messages/native/renderer/RowGeneratorConstants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -16,11 +16,11 @@ export default function createConversationHeader(conversationId) {
     channelId: conversationId.channelId,
     startMessageId: conversationId.startMessageId,
     title: conversationId.title,
-    expandIconUrl: renderer_EmbedUtils.getAssetUriForEmbed(_modDef11644),
+    expandIconUrl: renderer_EmbedUtils.getAssetUriForEmbed(_modDef11564),
     expandAccessibilityLabel: null,
   };
   const intl = util.intl;
-  obj.expandAccessibilityLabel = intl.string(_modDef3616.pU5Dut);
+  obj.expandAccessibilityLabel = intl.string(_modDef3625.pU5Dut);
   return obj;
 }
 export const isConversationStartMessage = function isConversationStartMessage(startMessageId, id) {

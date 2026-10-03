@@ -32,7 +32,7 @@ function isUsableGameProfileInvite(state) {
   }
   return tmp;
 }
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ InviteStates: closure_7, QueryIds } = Constants);
 const initialize = fn(504);
 const obj2 = {
@@ -83,7 +83,7 @@ let closure_9 = asyncGeneratorStep(async (arg0) => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -124,7 +124,7 @@ let closure_9 = asyncGeneratorStep(async (arg0) => {
         throw error;
       }
       c4 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     } catch (tmp22) {
       c4 = tmp;
       throw tmp22;
@@ -142,83 +142,283 @@ obj2.load = function () {
   return applyArgumentsResult;
 };
 let closure_10 = initialize.createFetchStore(InviteStore, obj2);
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileInvite.tsx");
 
-export default function useGameProfileInvite(websites, current) {
-  _require = current;
-  noop.useRef(current);
-  const items = [current];
-  const effect = noop.useEffect(() => {
-    closure_1.current = current;
-  }, items);
-  let found;
-  if (websites != null) {
-    websites = websites.websites;
-    if (websites != null) {
-      found = websites.find(
-        (category) =>
-          category.category === closure_1_0(closure_1_2[6]).ThirdPartyGameApplicationWebsiteCategory.DISCORD,
-      );
-    }
-  }
-  let arr;
-  if (found != null) {
-    const parts = found.url.split("/");
-    arr = parts.pop();
-  }
-  let tmp4 = null;
-  if (null != arr) {
-    tmp4 = null;
-    if ("" !== arr) {
-      tmp4 = arr;
-    }
-  }
-  const tmp5 = closure_10(tmp4);
-  const data = tmp5.data;
-  let isLoading = tmp5.isLoading;
-  const items1 = [GuildMembershipStore];
-  const items2 = [data];
-  const stateFromStores = require("initialize").useStateFromStores(items1, () => {
-    let id;
-    if (data != null) {
-      const guild = data.guild;
-      if (guild != null) {
-        id = guild.id;
+export default ReactCompilerGating.isReactCompilerEnabled()
+  ? (websites, current) => {
+      _require = current;
+      const cResult = require("c").c(15);
+      noop.useRef(current);
+      if (cResult[0] !== current) {
+        const fn = function u() {
+          closure_1.current = current;
+        };
+        const items = [current];
+        cResult[0] = current;
+        cResult[1] = fn;
+        cResult[2] = items;
+        let tmp5 = items;
+        let tmp4 = fn;
+      } else {
+        tmp4 = cResult[1];
+        tmp5 = cResult[2];
       }
-    }
-    let isMemberResult = null != id;
-    if (isMemberResult) {
-      let id1;
+      const effect = noop.useEffect(tmp4, tmp5);
+      if (cResult[3] !== websites) {
+        let found;
+        if (websites != null) {
+          websites = websites.websites;
+          if (websites != null) {
+            found = websites.find(
+              (category) =>
+                category.category === closure_1_0(closure_1_2[6]).ThirdPartyGameApplicationWebsiteCategory.DISCORD,
+            );
+          }
+        }
+        let arr;
+        if (found != null) {
+          const parts = found.url.split("/");
+          arr = parts.pop();
+        }
+        let tmp11 = null;
+        if (null != arr) {
+          tmp11 = null;
+          if ("" !== arr) {
+            tmp11 = arr;
+          }
+        }
+        cResult[3] = websites;
+        cResult[4] = tmp11;
+        let tmp7 = tmp11;
+      } else {
+        tmp7 = cResult[4];
+      }
+      const tmp12 = closure_10(tmp7);
+      data = tmp12.data;
+      let isLoading = tmp12.isLoading;
+      let tmp13 = null != tmp7;
+      if (tmp13) {
+        tmp13 = null == data;
+      }
+      if (tmp13) {
+        if (!isLoading) {
+          isLoading = null == tmp12.error;
+        }
+        tmp13 = isLoading;
+      }
+      if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
+        const items1 = [GuildMembershipStore];
+        cResult[5] = items1;
+        let tmp14 = items1;
+      } else {
+        tmp14 = cResult[5];
+      }
+      let id;
       if (data != null) {
-        const guild2 = data.guild;
-        if (guild2 != null) {
-          id1 = guild2.id;
+        guild = data.guild;
+        if (guild != null) {
+          id = guild.id;
         }
       }
-      isMemberResult = GuildMembershipStore.isMember(id1);
-    }
-    return isMemberResult;
-  });
-  const effect1 = noop.useEffect(() => {
-    if (null != data) {
-      current = ref.current;
-      if (current != null) {
-        current(tmp);
+      if (cResult[6] !== id) {
+        if (data != null) {
+          let guild2 = data.guild;
+          class G {
+            constructor() {
+              tmp = data;
+              id = undefined;
+              if (data != null) {
+                guild = tmp.guild;
+                if (guild != null) {
+                  id = guild.id;
+                }
+              }
+              isMemberResult = null != id;
+              if (isMemberResult) {
+                id1 = undefined;
+                tmp4 = closure_5;
+                if (tmp != null) {
+                  guild2 = tmp.guild;
+                  if (guild2 != null) {
+                    id1 = guild2.id;
+                  }
+                }
+                isMemberResult = closure_5.isMember(id1);
+              }
+              return isMemberResult;
+            }
+          }
+        }
+        class G {
+          constructor() {
+            tmp = data;
+            id = undefined;
+            if (data != null) {
+              guild = tmp.guild;
+              if (guild != null) {
+                id = guild.id;
+              }
+            }
+            isMemberResult = null != id;
+            if (isMemberResult) {
+              id1 = undefined;
+              tmp4 = closure_5;
+              if (tmp != null) {
+                guild2 = tmp.guild;
+                if (guild2 != null) {
+                  id1 = guild2.id;
+                }
+              }
+              isMemberResult = closure_5.isMember(id1);
+            }
+            return isMemberResult;
+          }
+        }
+        cResult[6] = undefined;
+        cResult[7] = G;
+        let tmp17 = G;
+      } else {
+        tmp17 = cResult[7];
       }
+      const obj = require("c");
+      const stateFromStores = require("initialize").useStateFromStores(tmp14, tmp17);
+      if (cResult[8] !== data) {
+        const fn2 = function _() {
+          if (null != data) {
+            current = ref.current;
+            if (current != null) {
+              current(tmp);
+            }
+          }
+        };
+        const items2 = [];
+        class G {
+          constructor() {
+            tmp = data;
+            id = undefined;
+            if (data != null) {
+              guild = tmp.guild;
+              if (guild != null) {
+                id = guild.id;
+              }
+            }
+            isMemberResult = null != id;
+            if (isMemberResult) {
+              id1 = undefined;
+              tmp4 = closure_5;
+              if (tmp != null) {
+                guild2 = tmp.guild;
+                if (guild2 != null) {
+                  id1 = guild2.id;
+                }
+              }
+              isMemberResult = closure_5.isMember(id1);
+            }
+            return isMemberResult;
+          }
+        }
+        cResult[8] = data;
+        cResult[9] = fn2;
+        cResult[10] = items2;
+        let tmp21 = items2;
+        let tmp20 = fn2;
+      } else {
+        tmp20 = cResult[9];
+        tmp21 = cResult[10];
+      }
+      const effect1 = noop.useEffect(tmp20, tmp21);
+      if (cResult[11] === data) {
+        if (cResult[12] === stateFromStores) {
+          if (cResult[13] === tmp13) {
+            let tmp23 = cResult[14];
+          }
+          return tmp23;
+        }
+      }
+      const obj3 = { invite: data, isMember: stateFromStores, isResolving: tmp13 };
+      cResult[11] = data;
+      cResult[12] = stateFromStores;
+      cResult[13] = tmp13;
+      cResult[14] = obj3;
+      tmp23 = obj3;
+      const tmpResult = require("initialize");
     }
-  }, items2);
-  const obj3 = { invite: data, isMember: stateFromStores, isResolving: null };
-  let tmp8 = null != tmp4 && null == data;
-  if (tmp8) {
-    if (!isLoading) {
-      isLoading = null == tmp5.error;
-    }
-    tmp8 = isLoading;
-  }
-  obj3.isResolving = tmp8;
-  return obj3;
-}
+  : (websites, current) => {
+      _require = current;
+      noop.useRef(current);
+      const items = [current];
+      const effect = noop.useEffect(() => {
+        closure_1.current = current;
+      }, items);
+      let found;
+      if (websites != null) {
+        websites = websites.websites;
+        if (websites != null) {
+          found = websites.find(
+            (category) =>
+              category.category === closure_1_0(closure_1_2[6]).ThirdPartyGameApplicationWebsiteCategory.DISCORD,
+          );
+        }
+      }
+      let arr;
+      if (found != null) {
+        const parts = found.url.split("/");
+        arr = parts.pop();
+      }
+      let tmp4 = null;
+      if (null != arr) {
+        tmp4 = null;
+        if ("" !== arr) {
+          tmp4 = arr;
+        }
+      }
+      const tmp5 = closure_10(tmp4);
+      const data = tmp5.data;
+      let isLoading = tmp5.isLoading;
+      const items1 = [GuildMembershipStore];
+      const items2 = [data];
+      const stateFromStores = require("initialize").useStateFromStores(items1, () => {
+        let id;
+        if (data != null) {
+          guild = data.guild;
+          if (guild != null) {
+            id = guild.id;
+          }
+        }
+        let isMemberResult = null != id;
+        if (isMemberResult) {
+          let id1;
+          if (data != null) {
+            const guild2 = data.guild;
+            if (guild2 != null) {
+              id1 = guild2.id;
+            }
+          }
+          isMemberResult = GuildMembershipStore.isMember(id1);
+        }
+        return isMemberResult;
+      });
+      const effect1 = noop.useEffect(() => {
+        if (null != data) {
+          current = ref.current;
+          if (current != null) {
+            current(tmp);
+          }
+        }
+      }, items2);
+      const obj3 = { invite: data, isMember: stateFromStores, isResolving: null };
+      let tmp8 = null != tmp4 && null == data;
+      if (tmp8) {
+        if (!isLoading) {
+          isLoading = null == tmp5.error;
+        }
+        tmp8 = isLoading;
+      }
+      obj3.isResolving = tmp8;
+      return obj3;
+    };
 export const hasGameProfileDiscordWebsite = function hasGameProfileDiscordWebsite(game) {
   let flag;
   if (game != null) {

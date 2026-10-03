@@ -1,5 +1,5 @@
 // discord_app/modules/guild_identity/native/EditGuildIdentityAvatar.tsx
-import asyncRequireImpl from "../../../../_runtime/01981_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import PremiumUpsellUtilsDefault from "../../../utils/native/PremiumUpsellUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -7,12 +7,12 @@ import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AnalyticsSections: metroRequire, AnalyticsObjects: closure_7, UpsellTypes: closure_8 } = Constants);
-const PremiumUpsellTypes = fn(1374).PremiumUpsellTypes;
+const PremiumUpsellTypes = fn(1379).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let closure_12 = createStyles.createStyles({ editAvatarIcon: { position: "absolute", right: 0 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_identity/native/EditGuildIdentityAvatar.tsx");

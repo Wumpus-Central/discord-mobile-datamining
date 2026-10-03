@@ -7,10 +7,10 @@ import ActionSheetStore from "../../action_sheet/native/ActionSheetStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const PremiumConstants = fn(1374);
+const PremiumConstants = fn(1379);
 ({ PREMIUM_PLAN_SELECTION_ACTION_SHEET_KEY: closure_4, PremiumTypes: hasOwnProperty } = PremiumConstants);
-const module_560 = fn(560);
-const obj3 = module_560.create(() => ({
+const module_570 = fn(570);
+const obj3 = module_570.create(() => ({
   productId: "",
   initiatedPurchaseFromNewFlow: false,
   isPaymentSuccess: false,
@@ -23,7 +23,7 @@ export const usePremiumPlanPurchasedStore = obj3;
 export const setInitiatedPurchaseFromNewFlow = function setInitiatedPurchaseFromNewFlow(productId) {
   productId = productId.productId;
   ({ onPaymentStart, onPaymentSuccess: importDefault, onPaymentDismiss: dependencyMap } = productId);
-  productId(1248).batchUpdates(() => {
+  productId(1259).batchUpdates(() => {
     obj3.setState({ productId, initiatedPurchaseFromNewFlow: true, onPaymentSuccess, onPaymentDismiss });
   });
   if (onPaymentStart != null) {
@@ -32,7 +32,7 @@ export const setInitiatedPurchaseFromNewFlow = function setInitiatedPurchaseFrom
 };
 export const setPaymentSuccess = function setPaymentSuccess() {
   if (obj3.getState().initiatedPurchaseFromNewFlow) {
-    const state = obj3.getState();
+    state = obj3.getState();
     const onPaymentSuccess = state.onPaymentSuccess;
     ReactBatchUpdates.batchUpdates(() => state.setState({ isPaymentSuccess: true }));
     if (onPaymentSuccess != null) {
@@ -49,7 +49,7 @@ export const setMobileWebRedirectCheckoutStatus = function setMobileWebRedirectC
 export const handleMobileWebCheckoutStatus = function handleMobileWebCheckoutStatus(mobileWebRedirectCheckoutStatus) {
   _require = mobileWebRedirectCheckoutStatus;
   if ("succeeded" === mobileWebRedirectCheckoutStatus) {
-    const state = obj3.getState();
+    state = obj3.getState();
     const onPaymentSuccess = state.onPaymentSuccess;
     if ("dismissed" !== state.mobileWebRedirectCheckoutStatus) {
       if (ActionSheetStore.getKey() !== closure_4) {
@@ -77,7 +77,7 @@ export const showOldPaymentFlowSuccess = function showOldPaymentFlowSuccess(fn) 
   }
 };
 export const reset = function reset() {
-  const state = obj3.getState();
+  state = obj3.getState();
   ({ onPaymentDismiss, mobileWebRedirectCheckoutStatus: require } = state);
   if (onPaymentDismiss != null) {
     const obj = { productId: tmp2, isSuccess: tmp3 };
@@ -96,8 +96,8 @@ export const reset = function reset() {
       initiatedPurchaseFromNewFlow: false,
       isPaymentSuccess: false,
       mobileWebRedirectCheckoutStatus: str,
-      onPaymentSuccess: "channelId",
-      onPaymentDismiss: "count",
+      onPaymentSuccess: "r",
+      onPaymentDismiss: "ix",
     });
   });
 };

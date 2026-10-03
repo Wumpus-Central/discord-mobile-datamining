@@ -10,9 +10,9 @@ import SortedVoiceStateStore from "../../../stores/views/SortedVoiceStateStore.t
 const require = globalThis.__r;
 
 const require = fn;
-const InviteTargetTypes = fn(7328).InviteTargetTypes;
-const AnalyticEvents = fn(1074).AnalyticEvents;
-const NOOP_NULL = fn(1085).NOOP_NULL;
+const InviteTargetTypes = fn(7226).InviteTargetTypes;
+const AnalyticEvents = fn(1085).AnalyticEvents;
+const NOOP_NULL = fn(1096).NOOP_NULL;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/instant_invite/native/useMobileInviteSuggestions.tsx");
 
@@ -58,8 +58,8 @@ export default function useMobileInviteSuggestions(arg0, _location, arg2, applic
     }
     if (isGuildVoiceResult) {
       const obj2 = { location: "useMobileInviteSuggestions", guildId: set.guild_id };
-      isGuildVoiceResult = closure_0(9496).getGuildMembersInMobileVCInvitesExperiment(obj2);
-      const obj = closure_0(9496);
+      isGuildVoiceResult = closure_0(9507).getGuildMembersInMobileVCInvitesExperiment(obj2);
+      const obj = closure_0(9507);
     }
     if (dependencyMap !== constants.EMBEDDED_APPLICATION) {
       if (!isGuildVoiceResult) {
@@ -81,8 +81,8 @@ export default function useMobileInviteSuggestions(arg0, _location, arg2, applic
         channel: set,
         inviteTargetType: dependencyMap,
       };
-      const inviteSuggestions = closure_0(9497).loadInviteSuggestions(obj4);
-      const obj3 = closure_0(9497);
+      const inviteSuggestions = closure_0(9508).loadInviteSuggestions(obj4);
+      const obj3 = closure_0(9508);
       inviteSuggestions.catch(NOOP_NULL).finally(() => {
         closure_1_7(false);
       });

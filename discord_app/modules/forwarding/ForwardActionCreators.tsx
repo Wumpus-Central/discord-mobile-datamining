@@ -1,13 +1,13 @@
 // discord_app/modules/forwarding/ForwardActionCreators.tsx
-import allSettledDefault from "../../../_runtime/05277_allSettled.js";
+import allSettledDefault from "../../../_runtime/05323_allSettled.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
 const require = fn;
-const MessageFlags = fn(1074).MessageFlags;
-const MessageSendLocation = fn(4838).MessageSendLocation;
+const MessageFlags = fn(1085).MessageFlags;
+const MessageSendLocation = fn(4883).MessageSendLocation;
 let obj = {
   sendForward(arg0, item, arg2) {
     closure_0 = arg0;
@@ -23,7 +23,7 @@ let obj = {
           const obj5 = { value, done: true };
           return obj5;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -49,7 +49,7 @@ let obj = {
                 prop = dependencyMap.isICYMIGameContentForwarding;
               }
               if (prop) {
-                let guild_id = tmp2(7978).GAME_CONTENT_GUILD_ID;
+                let guild_id = tmp2(8024).GAME_CONTENT_GUILD_ID;
               } else if (channel1 != null) {
                 guild_id = channel1.guild_id;
               }
@@ -65,10 +65,10 @@ let obj = {
                 const error1 = new Error("Unable to find destination channel for message");
                 throw error1;
               } else {
-                const parsed = item(7268).parse(channel, "");
+                const parsed = item(7166).parse(channel, "");
                 const obj7 = { guild_id, channel_id: null, message_id: null, type: null, forward_only: null };
                 ({ channel_id: obj16.channel_id, id: obj16.message_id } = tmp2);
-                obj7.type = tmp2(1097).MessageReferenceTypes.FORWARD;
+                obj7.type = tmp2(1108).MessageReferenceTypes.FORWARD;
                 let onlyAttachmentIds;
                 if (dependencyMap != null) {
                   onlyAttachmentIds = dependencyMap.onlyAttachmentIds;
@@ -92,17 +92,17 @@ let obj = {
                 closure_128_2 = withMessage;
                 let num9 = 0;
                 if (null != withMessage) {
-                  const tmp39 = v3(item(7270)(withMessage), 2);
+                  const tmp39 = v3(item(7168)(withMessage), 2);
                   num9 = 0;
                   if (tmp39[0]) {
                     closure_128_2 = tmp39[1];
-                    const addFlagResult = tmp2(1385).addFlag(0, constants.SUPPRESS_NOTIFICATIONS);
+                    const addFlagResult = tmp2(1390).addFlag(0, constants.SUPPRESS_NOTIFICATIONS);
                     closure_128_1 = addFlagResult;
                     num9 = addFlagResult;
-                    const obj9 = tmp2(1385);
+                    const obj9 = tmp2(1390);
                   }
                 }
-                const obj10 = item(7064);
+                const obj10 = item(6965);
                 const obj12 = {
                   messageReference: obj7,
                   location: constants2.FORWARDING,
@@ -130,17 +130,17 @@ let obj = {
                   result = "" === closure_128_2;
                 }
                 if (!result) {
-                  result = tmp2(11393).isRatelimitedInChannel(closure_128_0, PermissionStore);
-                  const obj2 = tmp2(11393);
+                  result = tmp2(11310).isRatelimitedInChannel(closure_128_0, PermissionStore);
+                  const obj2 = tmp2(11310);
                 }
                 if (!result) {
-                  const obj3 = item(7064);
+                  const obj3 = item(6965);
                   const id = closure_128_0.id;
                   const obj25 = { location: constants2.FORWARDING, flags: closure_128_1 };
                   dependencyMap = 2;
                   v3 = 1;
                   const obj26 = {
-                    value: obj3.sendMessage(id, item(7268).parse(closure_128_0, closure_128_2), false, obj25),
+                    value: obj3.sendMessage(id, item(7166).parse(closure_128_0, closure_128_2), false, obj25),
                     done: false,
                   };
                   return obj26;
@@ -155,7 +155,7 @@ let obj = {
               return obj;
             }
             v3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp60) {
           v3 = tmp;

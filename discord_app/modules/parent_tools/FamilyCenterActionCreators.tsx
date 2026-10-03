@@ -27,7 +27,7 @@ let closure_9 = async function _maybeFetchCollectiblesForInvoices(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -71,7 +71,7 @@ let closure_9 = async function _maybeFetchCollectiblesForInvoices(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp5) {
       c1 = tmp;
@@ -100,7 +100,7 @@ let closure_11 = async function _maybeFetchCollectiblesForGifts(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -139,7 +139,7 @@ let closure_11 = async function _maybeFetchCollectiblesForGifts(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp5) {
       c1 = tmp;
@@ -161,7 +161,7 @@ let closure_12 = async function _updateLinkForUserId() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -205,7 +205,7 @@ let closure_12 = async function _updateLinkForUserId() {
           return obj;
         } else {
           c2 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp5) {
         c2 = tmp;
@@ -228,7 +228,7 @@ let closure_13 = async function _removeLinkForUserId() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -273,7 +273,7 @@ let closure_13 = async function _removeLinkForUserId() {
           return obj;
         } else {
           c1 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp5) {
         c1 = tmp;
@@ -293,7 +293,7 @@ let closure_14 = async function _getLinkCodeForCurrentUser() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -339,7 +339,7 @@ let closure_14 = async function _getLinkCodeForCurrentUser() {
         return obj;
       } else {
         c0 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp5) {
       c0 = tmp;
@@ -358,7 +358,7 @@ let closure_15 = async function _shareIarWithParents() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -388,7 +388,7 @@ let closure_15 = async function _shareIarWithParents() {
         return obj;
       } else {
         c0 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp8) {
       c0 = tmp;
@@ -396,8 +396,8 @@ let closure_15 = async function _shareIarWithParents() {
     }
   }
 };
-const FamilyCenterAction = fn(7146).FamilyCenterAction;
-const Constants = fn(1074);
+const FamilyCenterAction = fn(7049).FamilyCenterAction;
+const Constants = fn(1085);
 ({ AnalyticEvents: metroRequire, Endpoints: closure_7 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/parent_tools/FamilyCenterActionCreators.tsx");
@@ -415,7 +415,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -703,17 +703,17 @@ export default {
     return (async () => {
       const code = tmp2;
       const recipient_id = tmp5;
-      const HTTP = recipient_id(1271).HTTP;
+      const HTTP = recipient_id(1282).HTTP;
       const request = {
         url: constants.FAMILY_CENTER_LINKED_USERS,
         body: { recipient_id, code },
-        rejectWithError: recipient_id(1271).rejectWithMigratedError(),
+        rejectWithError: recipient_id(1282).rejectWithMigratedError(),
       };
       await HTTP.post(request);
       const body = value.body;
       closure_128_1 = { linkedUsers: body.linked_users, users: body.users };
       const merged = Object.assign(closure_128_1);
-      code(573).dispatch({ type: "FAMILY_CENTER_REQUEST_LINK_SUCCESS" });
+      code(584).dispatch({ type: "FAMILY_CENTER_REQUEST_LINK_SUCCESS" });
       return closure_128_1;
     })();
   },
@@ -730,7 +730,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -1042,7 +1042,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -1057,31 +1057,31 @@ export default {
               return obj3;
             } else {
               let settings2;
-              const protoFieldClass = tmp5(2027).getProtoFieldClass(tmp5(1186).PreloadedUserSettings, tmp2);
+              const protoFieldClass = tmp5(2034).getProtoFieldClass(tmp5(1197).PreloadedUserSettings, tmp2);
               settings = settings.getSettings(tmp5);
               let tmp13;
               if (settings != null) {
                 tmp13 = settings[tmp2];
               }
-              const tmp33Result = tmp5(2027);
+              const tmp33Result = tmp5(2034);
               const modifiedProto = tmp33Result.createModifiedProto(
                 tmp13,
                 closure_2,
                 protoFieldClass,
-                tmp5(1186).PreloadedUserSettings,
+                tmp5(1197).PreloadedUserSettings,
                 tmp2,
               );
               if (null != modifiedProto) {
-                const HTTP = tmp5(1271).HTTP;
+                const HTTP = tmp5(1282).HTTP;
                 const request = {
                   url: closure_1_7.FAMILY_CENTER_TEEN_SETTINGS(tmp5),
                   body: null,
                   rejectWithError: null,
                 };
-                const obj4 = { settings: tmp5(1222).protoToB64(tmp5(1186).PreloadedUserSettings, modifiedProto) };
+                const obj4 = { settings: tmp5(1233).protoToB64(tmp5(1197).PreloadedUserSettings, modifiedProto) };
                 request.body = obj4;
-                const tmp33Result3 = tmp5(1222);
-                request.rejectWithError = tmp5(1271).rejectWithMigratedError();
+                const tmp33Result3 = tmp5(1233);
+                request.rejectWithError = tmp5(1282).rejectWithMigratedError();
                 dependencyMap = 1;
                 c3 = 1;
                 const obj5 = { value: HTTP.patch(request), done: false };
@@ -1089,7 +1089,7 @@ export default {
               } else {
                 c3 = 3;
               }
-              const obj12 = tmp5(2027);
+              const obj12 = tmp5(2034);
             }
           } else if (arg0 === 1) {
             c3 = 3;
@@ -1101,8 +1101,8 @@ export default {
               userId: closure_129_0,
               settings: settings2,
             };
-            tmp2(573).dispatch(obj6);
-            const obj = tmp2(573);
+            tmp2(584).dispatch(obj6);
+            const obj = tmp2(584);
           }
           c3 = 3;
           const obj7 = { value, done: true };

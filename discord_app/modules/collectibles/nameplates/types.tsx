@@ -25,4 +25,5 @@ export const NameplatePlacements = {
   PREVIEW: "preview",
   MINI_PREVIEW: "mini_preview",
   MUTUAL_FRIENDS_LIST: "mutual_friends_list",
+  FRIENDS_LIST: "friends_list",
 };

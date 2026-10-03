@@ -3,7 +3,7 @@ import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/friend_suggestions/FriendSuggestionActionCreators.tsx");
 

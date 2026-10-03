@@ -1,14 +1,16 @@
 // discord_app/modules/report_to_mod/ReportToModChannelStore.tsx
-import 00560__ from "../../../_runtime/metro/00560__.js";
-import "module_4735";
-import 04735__ from "../../../_runtime/metro/04735__.js";
+import c from "../../../_runtime/00576_c.js";
+import 00570__ from "../../../_runtime/metro/00570__.js";
+import "module_4750";
+import 04750__ from "../../../_runtime/metro/04750__.js";
+import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 
 let obj = { name: "report-to-mod-channel-storage", storage: null };
-obj.storage = module_4735.createJSONStorage(() => require("LocalStorageWrapper"));
-let obj2 = module_560.create(module_4735.persist((arg0, arg1) => {
+obj.storage = module_4750.createJSONStorage(() => require("LocalStorageWrapper"));
+let obj2 = module_570.create(module_4750.persist((arg0, arg1) => {
   closure_0 = arg0;
   closure_1 = arg1;
   return {
@@ -39,7 +41,63 @@ let obj2 = module_560.create(module_4735.persist((arg0, arg1) => {
 const result = size.fileFinishedImporting("modules/report_to_mod/ReportToModChannelStore.tsx");
 
 export const useReportToModChannelFiltersStore = obj2;
-export const useShouldShowResolvedFlagsForChannel = function useShouldShowResolvedFlagsForChannel(arg0) {
+export const useShouldShowResolvedFlagsForChannel = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  closure_0 = arg0;
+  const cResult = c.c(10);
+  obj2 = obj2();
+  if (null == arg0) {
+    const _Symbol = Symbol;
+    if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+      const obj3 = {
+        showResolvedFlags: true,
+        setShowResolvedFlags() {
+
+            }
+      };
+      cResult[0] = obj3;
+      let first = obj3;
+    } else {
+      first = cResult[0];
+    }
+  } else {
+    if (cResult[1] === arg0) {
+      if (cResult[2] === obj2) {
+        let tmp2 = cResult[3];
+      }
+      if (cResult[4] === arg0) {
+        if (cResult[5] === obj2) {
+          let tmp3 = cResult[6];
+        }
+        if (cResult[7] === tmp2) {
+          if (cResult[8] === tmp3) {
+            let tmp4 = cResult[9];
+          }
+          return tmp4;
+        }
+        const obj4 = { showResolvedFlags: tmp2, setShowResolvedFlags: tmp3 };
+        cResult[7] = tmp2;
+        cResult[8] = tmp3;
+        cResult[9] = obj4;
+        tmp4 = obj4;
+      }
+      const fn = function n(arg0) {
+        return obj2.setShowResolvedFlags(closure_0, arg0);
+      };
+      cResult[4] = arg0;
+      cResult[5] = obj2;
+      cResult[6] = fn;
+      tmp3 = fn;
+    }
+    let flag = obj2.getShowResolvedFlags(arg0);
+    if (flag == null) {
+      flag = true;
+    }
+    cResult[1] = arg0;
+    cResult[2] = obj2;
+    cResult[3] = flag;
+    tmp2 = flag;
+  }
+}) : ((arg0) => {
   closure_0 = arg0;
   const obj = obj2();
   if (null == arg0) {
@@ -63,4 +121,4 @@ export const useShouldShowResolvedFlagsForChannel = function useShouldShowResolv
     };
   }
   return obj3;
-};
+});

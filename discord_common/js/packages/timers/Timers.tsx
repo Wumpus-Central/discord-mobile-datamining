@@ -148,7 +148,7 @@ prototype5["queue"] = function queue(items) {
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp3 = nextResult;
-    let options = self.options;
+    options = self.options;
     let predicate = options.predicate;
     let num;
     if (predicate != null) {
@@ -201,7 +201,7 @@ prototype5["reset"] = function reset() {
   this._flushReady = false;
   this._flushHandler.cancel();
   if (items.length > 0) {
-    const options = this.options;
+    options = this.options;
     const onCancelled = options.onCancelled;
     if (onCancelled != null) {
       onCancelled(items);
@@ -228,7 +228,7 @@ prototype5["_flush"] = function _flush() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {

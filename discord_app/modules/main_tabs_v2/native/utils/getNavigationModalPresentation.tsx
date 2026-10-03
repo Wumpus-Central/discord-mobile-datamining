@@ -25,7 +25,7 @@ let PlatformUtils = PlatformUtils_mod;
 obj.lockOrientation = !PlatformUtils.isAndroid();
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/utils/getNavigationModalPresentation.tsx");
 
-export default function getNavigationModalPresentation() {
+export default function getNavigationModalPresentation(arg0) {
   let tmp = arg0;
   if (arg0 === undefined) {
     tmp = obj;

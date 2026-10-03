@@ -1,7 +1,7 @@
 // discord_app/actions/native/AlertActionCreators.tsx
 import DispatcherDefault from "../../Dispatcher.tsx";
 import util from "../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../_runtime/01981_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/01987_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../modules/action_sheet/native/ActionSheetActionCreators.tsx";
 import useAlertStore from "../../design/components/AlertModal/native/useAlertStore.native.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
@@ -50,8 +50,8 @@ export default {
     }
     let confirmText = hideActionSheet.confirmText;
     if (confirmText === undefined) {
-      const intl = confirmText(1115).intl;
-      confirmText = intl.string(confirmText(1115).t.BddRzS);
+      const intl = confirmText(1126).intl;
+      confirmText = intl.string(confirmText(1126).t.BddRzS);
     }
     let merged = Object.assign(
       hideActionSheet,
@@ -126,14 +126,14 @@ export default {
     }
     if (!tmp7) {
       if (flag) {
-        merged(4809).hideActionSheet();
-        const obj4 = merged(4809);
+        merged(4854).hideActionSheet();
+        const obj4 = merged(4854);
       }
       if (null != c6) {
-        confirmText(5389).dismissAlert(c6);
-        const obj5 = confirmText(5389);
+        confirmText(5709).dismissAlert(c6);
+        const obj5 = confirmText(5709);
       }
-      merged(573).dispatch({ type: "ALERT_CLOSE" });
+      merged(584).dispatch({ type: "ALERT_CLOSE" });
       closure_7 = tmp27 + 1;
       const text = `legacy-alert-${tmp27}`;
       dependencyMap = text;
@@ -141,14 +141,14 @@ export default {
       ({ cancelText, onConfirm: c3, onCancel: c4 } = merged);
       c5 = false;
       ({ title, body: body2, children, confirmColor } = merged);
-      const obj7 = confirmText(5389);
+      const obj7 = confirmText(5709);
       const obj3 = { title, content: body2, extraContent: children, actions: null };
       const obj8 = { variant: null, text: null, onPress: null };
-      const obj6 = merged(573);
+      const obj6 = merged(584);
       const tmp29 = confirmText;
       const tmp31 = c5;
       const tmp32 = c4;
-      obj8.variant = confirmText(5484).getAlertButtonVariant(confirmColor);
+      obj8.variant = confirmText(5783).getAlertButtonVariant(confirmColor);
       obj8.text = confirmText;
       obj8.onPress = function onPress() {
         c5 = true;
@@ -156,7 +156,7 @@ export default {
           tmp();
         }
       };
-      const items = [c3(confirmText(5393).AlertActionButton, obj8)];
+      const items = [c3(confirmText(5713).AlertActionButton, obj8)];
       let tmp30Result = null;
       if (null != cancelText) {
         const obj9 = {
@@ -169,7 +169,7 @@ export default {
             }
           },
         };
-        tmp30Result = tmp30(tmp29(5393).AlertActionButton, obj9);
+        tmp30Result = tmp30(tmp29(5713).AlertActionButton, obj9);
       }
       const obj11 = { children: null };
       items[1] = tmp30Result;
@@ -178,7 +178,7 @@ export default {
       const obj12 = { dismissable: flag2 };
       obj7.openAlert(
         text,
-        c3(confirmText(5393).AlertModal, obj3),
+        c3(confirmText(5713).AlertModal, obj3),
         () => {
           if (!c5) {
             if (c4 != null) {
@@ -191,17 +191,17 @@ export default {
         },
         obj12,
       );
-      const obj10 = confirmText(5484);
+      const obj10 = confirmText(5783);
     } else {
       if (null != c6) {
-        confirmText(5389).dismissAlert(c6);
+        confirmText(5709).dismissAlert(c6);
         c6 = null;
-        const obj2 = confirmText(5389);
+        const obj2 = confirmText(5709);
       }
       const self = this;
       const obj13 = {
         importer() {
-          return asyncRequireImpl(5484, dependencyMap.paths).then((result) => {
+          return asyncRequireImpl(5783, dependencyMap.paths).then((result) => {
             closure_0 = result.default;
             return (arg0) => {
               const obj = {};

@@ -1,4 +1,5 @@
 // discord_app/modules/guild_role_subscriptions/native/components/MessageBlock.tsx
+import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -7,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 const MessageBlockColors = { RED: 0, [0]: "RED", YELLOW: 1, [1]: "YELLOW" };
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let closure_6 = createStyles.createStyles((arg0) => {
   if (obj.RED === arg0) {
     obj = {
@@ -39,15 +40,47 @@ let closure_6 = createStyles.createStyles((arg0) => {
   obj3.text = { textAlign: "center", color: TEXT_FEEDBACK_WARNING };
   return obj3;
 });
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/MessageBlock.tsx");
 
-export default function MessageBlock(children) {
-  const tmp = closure_6(children.color);
-  const obj = {
-    style: tmp.container,
-    children: jsx(native.LegacyText, { style: tmp.text, children: children.children }),
-  };
-  return <View style={tmp.container}>{jsx(native.LegacyText, { style: tmp.text, children: children.children })}</View>;
-}
+export default ReactCompilerGating.isReactCompilerEnabled()
+  ? (children) => {
+      const cResult = c.c(6);
+      children = children.children;
+      const tmp4 = closure_6(children.color);
+      if (cResult[0] === children) {
+        if (cResult[1] === tmp4.text) {
+          let tmp5 = cResult[2];
+        }
+        if (cResult[3] === tmp4.container) {
+          if (cResult[4] === tmp5) {
+            let tmp7 = cResult[5];
+          }
+          return tmp7;
+        }
+        const obj2 = { style: tmp4.container, children: tmp5 };
+        const tmp10 = <View style={tmp4.container}>{tmp5}</View>;
+        cResult[3] = tmp4.container;
+        cResult[4] = tmp5;
+        cResult[5] = tmp10;
+        tmp7 = tmp10;
+      }
+      const tmp6 = jsx(native.LegacyText, { style: tmp4.text, children });
+      cResult[0] = children;
+      cResult[1] = tmp4.text;
+      cResult[2] = tmp6;
+      tmp5 = tmp6;
+      const obj3 = { style: tmp4.text, children };
+    }
+  : (children) => {
+      const tmp = closure_6(children.color);
+      const obj = {
+        style: tmp.container,
+        children: jsx(native.LegacyText, { style: tmp.text, children: children.children }),
+      };
+      return (
+        <View style={tmp.container}>{jsx(native.LegacyText, { style: tmp.text, children: children.children })}</View>
+      );
+    };
 export { MessageBlockColors };

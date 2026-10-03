@@ -8,8 +8,8 @@ import AutomodActionUtils from "AutomodActionUtils.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 
 require = fn;
-const getRuleCountByTriggerType = fn(17563).getRuleCountByTriggerType;
-const Constants = fn(11554);
+const getRuleCountByTriggerType = fn(17651).getRuleCountByTriggerType;
+const Constants = fn(11474);
 ({
   AutomodTriggerType: closure_4,
   MAX_KEYWORDS_PER_KEYWORD_FILTER: hasOwnProperty,
@@ -45,10 +45,10 @@ export const isRegexSupported = function isRegexSupported(arg0) {
 export const getNewAutomodRuleMockId = function getNewAutomodRuleMockId(arg0, arg1) {
   return "" + arg0 + "-" + arg1 + "-new-rule";
 };
-export const isRuleKeywordFilter = function isRuleKeywordFilter(length) {
+export const isRuleKeywordFilter = function isRuleKeywordFilter(rule) {
   let triggerType;
-  if (length != null) {
-    triggerType = length.triggerType;
+  if (rule != null) {
+    triggerType = rule.triggerType;
   }
   return triggerType === constants.KEYWORD;
 };
@@ -87,10 +87,10 @@ export const isRuleUserProfileFilter = function isRuleUserProfileFilter(rule) {
   }
   return triggerType === constants.USER_PROFILE;
 };
-export const isRuleApplicationFilter = function isRuleApplicationFilter(editingRule) {
+export const isRuleApplicationFilter = function isRuleApplicationFilter(rule) {
   let triggerType;
-  if (editingRule != null) {
-    triggerType = editingRule.triggerType;
+  if (rule != null) {
+    triggerType = rule.triggerType;
   }
   return triggerType === constants.APPLICATION;
 };
@@ -145,11 +145,11 @@ export const createDefaultRule = function createDefaultRule(guildId, triggerType
   }
   obj5 = ApplicationCommandUtils;
 };
-export const validateKeywordsOrThrow = function validateKeywordsOrThrow(arr, limit) {
-  if (arr.length > limit) {
+export const validateKeywordsOrThrow = function validateKeywordsOrThrow(arr, maxWordCount) {
+  if (arr.length > maxWordCount) {
     const _Error = Error;
     const intl = util.intl;
-    const obj = { limit };
+    const obj = { limit: maxWordCount };
     const error = new Error(intl.formatToPlainString(util.t.mee4qd, obj));
     throw error;
   } else {

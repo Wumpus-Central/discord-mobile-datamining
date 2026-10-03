@@ -13,7 +13,7 @@ let closure_5 = async function _handleDocumentSelection() {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -45,7 +45,7 @@ let closure_5 = async function _handleDocumentSelection() {
           closure_129_3 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "flex", done: null };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -115,7 +115,7 @@ let closure_5 = async function _handleDocumentSelection() {
         if (obj4.isErrorWithCode(closure_129_4)) {
           if (closure_129_4.code === closure_130_0(closure_130_2[2]).errorCodes.OPERATION_CANCELED) {
             c6 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         }
         obj4 = closure_130_0(closure_130_2[2]);
@@ -131,7 +131,7 @@ let closure_5 = async function _handleDocumentSelection() {
         obj13.body = intl4.string(closure_130_0(closure_130_2[5]).t.fZRH9P);
         closure_130_1(closure_130_2[4]).show(obj13);
         c6 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       } else if (arg0 === 1) {
         c6 = 3;
         throw value;
@@ -165,7 +165,7 @@ let closure_5 = async function _handleDocumentSelection() {
     }
   }
 };
-const AnalyticEvents = fn(1074).AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/native/FilePickerUtils.tsx");
 

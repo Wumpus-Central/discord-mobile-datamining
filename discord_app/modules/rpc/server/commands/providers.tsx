@@ -4,13 +4,13 @@ import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep
 import ConnectedAccountsStore from "../../../../stores/ConnectedAccountsStore.tsx";
 
 const require = fn;
-let Constants = fn(5270);
+let Constants = fn(5316);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG } = Constants);
-Constants = fn(1074);
-({ AnalyticsLocations: metroRequire, ComponentActions: closure_7, PlatformTypes: closure_8 } = Constants);
-Constants = fn(2005);
-({ AM_HARMONY_PRD_APPLICATION_ID, AM_HARMONY_STG_APPLICATION_ID } = Constants);
 Constants = fn(1085);
+({ AnalyticsLocations: metroRequire, ComponentActions: closure_7, PlatformTypes: closure_8 } = Constants);
+Constants = fn(2011);
+({ AM_HARMONY_PRD_APPLICATION_ID, AM_HARMONY_STG_APPLICATION_ID } = Constants);
+Constants = fn(1096);
 ({ RPCCommands, RPCErrors: closure_9 } = Constants);
 const items = [AM_HARMONY_PRD_APPLICATION_ID, AM_HARMONY_STG_APPLICATION_ID];
 const set = new Set(items);
@@ -56,7 +56,7 @@ obj2 = {
             let obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -136,7 +136,7 @@ obj2 = {
                   if (closure_0.aborted) {
                     const result = handleSocketDisconnected();
                     c7 = 3;
-                    return { value: "HermesInternal", done: null };
+                    return { value: "IconComponent", done: "IconComponent" };
                   } else {
                     const subscription = provider(connection_redirect[10]).subscribe(
                       "USER_CONNECTIONS_UPDATE",
@@ -247,7 +247,7 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -273,7 +273,7 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
           closure_129_5 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "flex", done: null };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {

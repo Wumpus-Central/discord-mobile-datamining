@@ -73,8 +73,8 @@ const prototype = GuildMemberRequesterStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(ChannelStore, GuildMemberStore);
 };
-prototype["requestMember"] = function requestMember(guildId, id) {
-  navigation.request(guildId, id);
+prototype["requestMember"] = function requestMember(guild_id, id) {
+  navigation.request(guild_id, id);
 };
 prototype["getDebugState"] = function getDebugState(arg0) {
   return navigation.getDebugState(arg0);

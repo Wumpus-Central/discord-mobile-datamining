@@ -4,9 +4,9 @@ import RPCErrorDefault from "../../RPCError.tsx";
 import createRpcJoiSchemaObjectDefault from "../../helpers/createRpcJoiSchemaObject.tsx";
 import FramesStore from "../../../frames/FramesStore.tsx";
 
-const TransportTypes = fn(5270).TransportTypes;
-const OrientationLockState = fn(2005).OrientationLockState;
-const Constants = fn(1085);
+const TransportTypes = fn(5316).TransportTypes;
+const OrientationLockState = fn(2011).OrientationLockState;
+const Constants = fn(1096);
 const RPCErrors = Constants.RPCErrors;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/server/commands/setOrientationLockState.tsx");

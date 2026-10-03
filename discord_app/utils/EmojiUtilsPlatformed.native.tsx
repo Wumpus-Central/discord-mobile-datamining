@@ -2,6 +2,7 @@
 import _modDef12 from "../../_runtime/metro/00012__.js";
 import PlatformUtils from "PlatformUtils.tsx";
 import AvatarUtilsDefault from "AvatarUtils.tsx";
+import NativeImageManagerModuleDefault from "../../discord_common/js/packages/rtn-codegen/js/NativeImageManagerModule.tsx";
 import DeviceUtils from "native/DeviceUtils.tsx";
 import burst_reactions_BurstReactionEffectUtils from "../modules/messages/native/burst_reactions/BurstReactionEffectUtils.tsx";
 import BurstReactionFirstSendActionSheet from "../components_native/reactions/BurstReactionFirstSendActionSheet.tsx";
@@ -22,7 +23,7 @@ function getURL(name) {
   }
   return str;
 }
-let closure_9 = async function _getEmojiColors(arg0) {
+let closure_8 = async function _getEmojiColors(arg0) {
   let id = arg0;
   c3 = 0;
   c4 = 0;
@@ -37,7 +38,7 @@ let closure_9 = async function _getEmojiColors(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -60,28 +61,27 @@ let closure_9 = async function _getEmojiColors(arg0) {
               const obj5 = { id, size: 32, animated: false };
               let emojiURL = AvatarUtilsDefault.getEmojiURL(obj5);
             } else {
-              emojiURL = getURL(tmp31);
+              emojiURL = getURL(tmp32);
             }
             closure_129_0 = emojiURL;
             if ("" === emojiURL) {
-              ImageManager = ImageManager.ImageManager;
               c3 = 1;
               c4 = 1;
-              const obj7 = {
-                value: ImageManager.getEmojiBase64(
-                  tmp30.name,
+              const obj8 = {
+                value: NativeImageManagerModuleDefault.getEmojiBase64(
+                  tmp31.name,
                   burst_reactions_BurstReactionEffectUtils.EMOJI_IN_ANIMATION_SIZE,
                 ),
                 done: false,
               };
-              return obj7;
+              return obj8;
             } else {
-              const paletteForAvatar = closure_130_0(closure_130_2[9]).getPaletteForAvatar(closure_129_0);
+              const paletteForAvatar = closure_130_0(closure_130_2[10]).getPaletteForAvatar(closure_129_0);
               c3 = 2;
               c4 = 1;
-              const obj6 = closure_130_0(closure_130_2[9]);
+              const obj6 = closure_130_0(closure_130_2[10]);
             }
-            tmp30 = id;
+            tmp31 = id;
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {
@@ -96,8 +96,8 @@ let closure_9 = async function _getEmojiColors(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          const obj8 = { value, done: true };
-          return obj8;
+          const obj9 = { value, done: true };
+          return obj9;
         } else {
           closure_129_1 = value;
           let mapped;
@@ -105,7 +105,7 @@ let closure_9 = async function _getEmojiColors(arg0) {
             mapped = closure_129_1.map((item) => {
               [tmp2, tmp3, tmp4] = closure_1_3(item, 3);
               const tmp = closure_1_3(item, 3);
-              return id(closure_1_2[10]).rgbToHex(tmp2, tmp3, tmp4);
+              return id(closure_1_2[11]).rgbToHex(tmp2, tmp3, tmp4);
             });
           }
           c4 = 3;
@@ -113,17 +113,16 @@ let closure_9 = async function _getEmojiColors(arg0) {
           return obj;
         }
         c4 = 3;
-        const obj9 = { value, done: true };
-        return obj9;
-      } catch (tmp25) {
+        const obj10 = { value, done: true };
+        return obj10;
+      } catch (tmp26) {
         c4 = tmp;
-        throw tmp25;
+        throw tmp26;
       }
     }
   })();
 };
-get_ActivityIndicator = fn(17);
-({ NativeModules: hasOwnProperty, processColor: metroRequire } = get_ActivityIndicator);
+const processColor = fn(17).processColor;
 let obj = {
   getURL: null,
   filterUnsupportedEmojis: null,
@@ -269,7 +268,7 @@ obj.applyPlatformToThemedEmojiColorPalette = function applyPlatformToThemedEmoji
         accentColor = LIGHT.accentColor;
       }
       const obj = {
-        accentColor: timestampProducer(accentColor),
+        accentColor: processColor(accentColor),
         backgroundColor: null,
         highlightColor: null,
         opacity: null,
@@ -278,12 +277,12 @@ obj.applyPlatformToThemedEmojiColorPalette = function applyPlatformToThemedEmoji
       if (LIGHT != null) {
         backgroundColor = LIGHT.backgroundColor;
       }
-      obj.backgroundColor = timestampProducer(backgroundColor);
+      obj.backgroundColor = processColor(backgroundColor);
       let highlightColor;
       if (LIGHT != null) {
         highlightColor = LIGHT.highlightColor;
       }
-      obj.highlightColor = timestampProducer(highlightColor);
+      obj.highlightColor = processColor(highlightColor);
       let opacity;
       if (LIGHT != null) {
         opacity = LIGHT.opacity;
@@ -296,7 +295,7 @@ obj.applyPlatformToThemedEmojiColorPalette = function applyPlatformToThemedEmoji
         accentColor1 = DARK.accentColor;
       }
       const obj3 = {
-        accentColor: timestampProducer(accentColor1),
+        accentColor: processColor(accentColor1),
         backgroundColor: null,
         highlightColor: null,
         opacity: null,
@@ -305,12 +304,12 @@ obj.applyPlatformToThemedEmojiColorPalette = function applyPlatformToThemedEmoji
       if (DARK != null) {
         backgroundColor1 = DARK.backgroundColor;
       }
-      obj3.backgroundColor = timestampProducer(backgroundColor1);
+      obj3.backgroundColor = processColor(backgroundColor1);
       let highlightColor1;
       if (DARK != null) {
         highlightColor1 = DARK.highlightColor;
       }
-      obj3.highlightColor = timestampProducer(highlightColor1);
+      obj3.highlightColor = processColor(highlightColor1);
       let opacity1;
       if (DARK != null) {
         opacity1 = DARK.opacity;
@@ -324,7 +323,7 @@ obj.applyPlatformToThemedEmojiColorPalette = function applyPlatformToThemedEmoji
 };
 obj.getEmojiColors = function getEmojiColors() {
   const self = this;
-  const apply = closure_9.apply;
+  const apply = closure_8.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

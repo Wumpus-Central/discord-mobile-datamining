@@ -7,6 +7,7 @@ import ContextMenuContainer from "../../../design/components/ContextMenu/native/
 import PortalKeyboardRenderer from "../../keyboard/native/PortalKeyboardRenderer.tsx";
 import MainShared from "../../../components_native/MainShared.tsx";
 import MainViewTooltipActionSheetsV2Default from "../../upsell_tooltip/native/MainViewTooltipActionSheetsV2.tsx";
+import FramePoolDefault from "../../frames/native/FramePool.tsx";
 import ExternalPipViewDefault from "../../external_pip/ExternalPipView.android.tsx";
 import ActivityPanelContainerDefault from "../../activities/panel/native/ActivityPanelContainer.tsx";
 import FramePanelContainerDefault from "../../frames/panel/native/FramePanelContainer.tsx";
@@ -17,7 +18,7 @@ import PlatformUtils_mod from "../../../utils/PlatformUtils.tsx";
 import AppFreezer_mod from "../../panels/morphable/native/AppFreezer.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-({ jsx, jsxs } = jsxProd);
+({ jsx, jsxs, Fragment } = jsxProd);
 let closure_2 = jsx(PortalKeyboardRenderer.PortalKeyboardRenderer, {});
 let PlatformUtils = PlatformUtils_mod;
 const obj = { lockKeys: ["external-pip"], children: null };
@@ -58,25 +59,28 @@ const tmp3 = PlatformUtils.isIOS()
       return tmp;
     }
   : () => closure_2;
+const items1 = [jsx(FramePoolDefault, {})];
 let PlatformUtils = PlatformUtils_mod;
 let jsxResult = null;
 if (PlatformUtils.isAndroid()) {
   jsxResult = jsx(AccessibilityAnnouncerLiveRegion.AccessibilityAnnouncerLiveRegion, {});
 }
+items1[1] = jsxResult;
 const jsxsResult = <AppFreezer lockKeys={["external-pip"]}>{null}</AppFreezer>;
+const jsxsResult1 = <>{items1}</>;
 const obj2 = { lockKeys: ["external-pip"], children: null };
 let AppFreezer = AppFreezer_mod;
-const items1 = [
+const items2 = [
   jsx(ActivityPanelContainerDefault, {}),
   jsx(FramePanelContainerDefault, {}),
   jsx(VoicePanelContainerDefault, {}),
   jsx(MediaPlaybackPanelContainerDefault, {}),
 ];
-obj2.children = items1;
+obj2.children = items2;
 const jsxResult1 = jsx(ExternalPipViewDefault, {});
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/AppComponents.tsx");
 
 export const APP_EXTRA_COMPONENTS = jsxsResult;
-export const APP_EXTRA_COMPONENTS_NEVER_FREEZE = jsxResult;
+export const APP_EXTRA_COMPONENTS_NEVER_FREEZE = jsxsResult1;
 export const APP_EXTRA_COMPONENTS_EXTERNAL_PIP = jsxResult1;
 export const APP_EXTRA_COMPONENTS_VOICE_AND_VIDEO = <AppFreezer lockKeys={["external-pip"]}>{null}</AppFreezer>;

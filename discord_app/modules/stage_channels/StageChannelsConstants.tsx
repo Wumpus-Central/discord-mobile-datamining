@@ -14,13 +14,11 @@ export const REQUEST_TO_SPEAK_SHEET_KEY = "request-to-speak-list";
 export const START_STAGE_CHANNEL_EVENT_SHEET_KEY = "start-stage-channel-event";
 export const START_STAGE_CHANNEL_EVENT_MODAL_KEY = "start-stage-channel-event-modal";
 export const PUBLIC_STAGE_INFO_ACTION_SHEET_KEY = "public-stage-info-action-sheet";
-export const STAGE_AUDIENCE_NOTICE_SHEET_KEY = "stage-channel-audience-notice";
 export const STAGE_BLOCKED_USERS_SHEET_KEY = "stage-channel-blocked-users";
 export const STAGE_SETTINGS_SHEET_KEY = "stage-settings";
 export const EXPLICIT_END_STAGE_SHEET_KEY = "explicit-end-stage";
 export const STAGE_INVITE_STATE_KEY = "stage-invite";
 export const STAGE_BOOSTING_SHEET_KEY = "stage-boosting";
-export const STAGE_AUDIENCE_NOTICE_SHOWN_STORAGE_KEY = "stage-channel-audience-notice-shown";
 export const RequestToSpeakPermissionStates = {
   EVERYONE: 1,
   [1]: "EVERYONE",

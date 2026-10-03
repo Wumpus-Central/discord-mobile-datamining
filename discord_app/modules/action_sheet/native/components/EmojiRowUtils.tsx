@@ -6,10 +6,10 @@ import size from "../../../../../_runtime/metro/00002__.js";
 ({ MessageFlags: c2, MessageStates: c3, MessageTypes: closure_4 } = Constants);
 const result = size.fileFinishedImporting("modules/action_sheet/native/components/EmojiRowUtils.tsx");
 
-export const shouldShowEmojiRow = function shouldShowEmojiRow(arg0, message, arg2) {
+export const shouldShowEmojiRow = function shouldShowEmojiRow(arg0, message, isActiveChannelOrUnarchivableThread) {
   let tmp = arg0;
   if (arg0) {
-    tmp = arg2;
+    tmp = isActiveChannelOrUnarchivableThread;
   }
   if (tmp) {
     tmp = message.state !== constants2.SEND_FAILED;

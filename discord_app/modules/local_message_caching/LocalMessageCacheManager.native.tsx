@@ -3,7 +3,7 @@ import LoggerDefault from "../debug/Logger.tsx";
 import Storage3 from "../../../discord_common/js/packages/storage/Storage.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
-import _modDef4450 from "../../../_runtime/metro/04450__.js";
+import _modDef4461 from "../../../_runtime/metro/04461__.js";
 import DateUtils from "../../utils/DateUtils.tsx";
 import UploadActionCreatorsDefault from "../../actions/native/UploadActionCreators.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -38,11 +38,11 @@ function removeCachedMessage(arg0) {
 function getAllCachedMessages() {
   return closure_10(_getMessages);
 }
-function messageTimestampIsInInterval(arg0, arg1) {
+function messageTimestampIsInInterval(arg0, c7) {
   if (null != arg0) {
-    const tmp4 = _modDef4450();
-    const tmp5 = _modDef4450(arg0);
-    return DateUtils.isWithinInterval(tmp4, tmp5, arg1);
+    const tmp4 = _modDef4461();
+    const tmp5 = _modDef4461(arg0);
+    return DateUtils.isWithinInterval(tmp4, tmp5, c7);
   } else {
     return false;
   }
@@ -50,16 +50,16 @@ function messageTimestampIsInInterval(arg0, arg1) {
 function createFailedMessage(channel_id) {
   channel_id = channel_id.channel_id;
   ({ content, tts, state } = channel_id);
-  const tmp3 = file(7344)({ channelId: channel_id, content, tts, state: MessageStates.SEND_FAILED });
+  const tmp3 = file(7248)({ channelId: channel_id, content, tts, state: MessageStates.SEND_FAILED });
   const id = tmp3;
   ({ timestamp: tmp3.timestamp, file } = channel_id);
-  file(7064).receiveMessage(channel_id, tmp3, true, { isHydratingExpiredPendingMessage: state === MessageStates.SENDING });
+  file(6965).receiveMessage(channel_id, tmp3, true, { isHydratingExpiredPendingMessage: state === MessageStates.SENDING });
   if (null != file) {
-    file(573).wait(() => UploadActionCreatorsDefault.restoreFailedUpload(id.id, file));
-    const tmpResult = file(573);
+    file(584).wait(() => UploadActionCreatorsDefault.restoreFailedUpload(id.id, file));
+    const tmpResult = file(584);
   }
   const obj = { channelId: channel_id, content, tts, state: MessageStates.SEND_FAILED };
-  const obj2 = file(7064);
+  const obj2 = file(6965);
   const obj3 = { isHydratingExpiredPendingMessage: state === MessageStates.SENDING };
 }
 function resumeSendingMessage() {
@@ -111,7 +111,7 @@ let closure_25 = async function _rehydrateFailedMessages(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -133,7 +133,7 @@ let closure_25 = async function _rehydrateFailedMessages(arg0) {
           closure_134_2 = undefined;
           closure_134_3 = undefined;
           let timestamp;
-          let state;
+          state = undefined;
           c8 = 1;
           c9 = 1;
           const obj4 = { value: getAllCachedMessages(), done: false };
@@ -240,8 +240,8 @@ let closure_25 = async function _rehydrateFailedMessages(arg0) {
     }
   }
 };
-const MessageStates = fn(1074).MessageStates;
-const MutexUtils = fn(14321);
+const MessageStates = fn(1085).MessageStates;
+const MutexUtils = fn(14389);
 let closure_10 = MutexUtils.createLock();
 let closure_11 = new LoggerDefault("LocalMessageCacheManager");
 const LocalMessageCacheManagerMessageCacheKey = "LocalMessageCacheManagerMessageCacheKey";
@@ -318,7 +318,7 @@ class LocalMessageCacheManager extends tmp3 {
             let obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -337,7 +337,7 @@ class LocalMessageCacheManager extends tmp3 {
                 closure_134_1 = undefined;
                 closure_134_2 = undefined;
                 let channel_id;
-                let state;
+                state = undefined;
                 c9 = 1;
                 c10 = 1;
                 const obj4 = { value: getAllCachedMessages(), done: false };
@@ -365,7 +365,7 @@ class LocalMessageCacheManager extends tmp3 {
                         const obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "HermesInternal", done: null };
+                        return { value: "IconComponent", done: "IconComponent" };
                       }
                     } else {
                       try {
@@ -385,7 +385,7 @@ class LocalMessageCacheManager extends tmp3 {
                             }, 0);
                           }
                           c1 = 3;
-                          return { value: "HermesInternal", done: null };
+                          return { value: "IconComponent", done: "IconComponent" };
                         }
                       } catch (tmp9) {
                         c1 = tmp;
@@ -398,7 +398,7 @@ class LocalMessageCacheManager extends tmp3 {
                   applyArgumentsResult = values[Symbol.iterator]();
                   if (applyArgumentsResult === undefined) {
                     c10 = 3;
-                    return { value: "HermesInternal", done: null };
+                    return { value: "IconComponent", done: "IconComponent" };
                   } else {
                     c7 = 1;
                     closure_134_2 = tmp34;
@@ -640,7 +640,7 @@ class LocalMessageCacheManager extends tmp3 {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -681,7 +681,7 @@ class LocalMessageCacheManager extends tmp3 {
               return obj;
             }
             c1 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           } catch (tmp9) {
             c1 = tmp;
             throw tmp9;
@@ -906,7 +906,7 @@ prototype["_initialize"] = function _initialize() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       while (true) {
@@ -952,17 +952,17 @@ prototype["_initialize"] = function _initialize() {
               let values = Object.values(closure_131_0);
               _self = values[Symbol.iterator]();
               if (_self === undefined) {
-                let obj3 = values(573);
+                let obj3 = values(584);
                 let subscription = obj3.subscribe("LOAD_MESSAGES_SUCCESS", closure_132_0.handleLoadMessagesSuccess);
-                let obj4 = values(573);
+                let obj4 = values(584);
                 let subscription1 = obj4.subscribe("CACHE_LOADED", closure_132_0.handleCacheLoaded);
                 c8 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               } else {
                 c6 = 1;
                 closure_131_1 = tmp10;
                 channel_id = closure_131_1.channel_id;
-                let obj9 = values(5770);
+                let obj9 = values(5431);
                 value = obj9.get(channel_id);
                 dependencyMap = value;
                 if (value == null) {

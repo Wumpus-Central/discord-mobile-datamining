@@ -21,7 +21,7 @@ let closure_5 = async function _createGatewayCheckoutContext(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -68,7 +68,7 @@ let closure_5 = async function _createGatewayCheckoutContext(arg0) {
     }
   })();
 };
-const PaymentGateways = fn(1085).PaymentGateways;
+const PaymentGateways = fn(1096).PaymentGateways;
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/BillingUtils.tsx");
 

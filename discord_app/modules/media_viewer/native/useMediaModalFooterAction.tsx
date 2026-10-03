@@ -1,11 +1,11 @@
 // discord_app/modules/media_viewer/native/useMediaModalFooterAction.tsx
 import ReactBatchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import 00560__ from "../../../../_runtime/metro/00560__.js";
+import 00570__ from "../../../../_runtime/metro/00570__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 
-const useMediaModalFooterActionStore = module_560.create(() => ({}));
+const useMediaModalFooterActionStore = module_570.create(() => ({}));
 const result = size.fileFinishedImporting("modules/media_viewer/native/useMediaModalFooterAction.tsx");
 
 export { useMediaModalFooterActionStore };

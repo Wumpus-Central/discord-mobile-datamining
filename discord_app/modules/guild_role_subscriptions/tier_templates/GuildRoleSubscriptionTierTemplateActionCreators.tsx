@@ -15,7 +15,7 @@ let closure_5 = async function _getTemplates(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -62,7 +62,7 @@ let closure_5 = async function _getTemplates(arg0) {
           const obj = closure_130_1(closure_130_2[2]);
         }
         c4 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp16) {
       c4 = tmp;
@@ -70,7 +70,7 @@ let closure_5 = async function _getTemplates(arg0) {
     }
   }
 };
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/tier_templates/GuildRoleSubscriptionTierTemplateActionCreators.tsx",

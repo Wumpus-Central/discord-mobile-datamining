@@ -17,12 +17,12 @@ import MarkupListRuleDefault from "MarkupListRule.tsx";
 import MarkupSubtextRuleDefault from "MarkupSubtextRule.tsx";
 import PlatformMarkupRulesDefault from "PlatformMarkupRules.native.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
-import _toArray from "../../../_runtime/00718__toArray.js";
+import _toArray from "../../../_runtime/00729__toArray.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import GuildRoleStore from "../../stores/GuildRoleStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
-import t_mod from "../../../_runtime/metro/01930__.js";
+import t_mod from "../../../_runtime/metro/01936__.js";
 import combineMarkupRules_mod from "combineMarkupRules.tsx";
 import "module_12";
 import apply_mod from "../../../_runtime/metro/00012__.js";
@@ -37,7 +37,7 @@ function parseLink(arg0) {
     const obj2 = { type: "text", content: arg0[1] };
     let obj3 = obj2;
   } else {
-    obj3 = { type: "link", content: null, target: null, title: "channel" };
+    obj3 = { type: "link", content: null, target: null, title: "ix" };
     const obj4 = { type: "text", content: punycodeLinkResult.displayTarget };
     const items = [obj4];
     obj3.content = items;
@@ -47,7 +47,7 @@ function parseLink(arg0) {
 }
 function hydrateRoleMention(roleId, guildId) {
   if (null != guildId.guildId) {
-    let guild = GuildStore.getGuild(guildId.guildId);
+    guild = GuildStore.getGuild(guildId.guildId);
   } else {
     guild = null;
     if (null != guildId.channelId) {
@@ -196,7 +196,7 @@ function hydrateUserMention(everyoneOrHere, channelId) {
 function hydrateStaticRouteLink(id, itemId, guildId) {
   const result = StaticRouteRendering.staticRouteToTranslation(id);
   if (null != guildId.guildId) {
-    let guild = GuildStore.getGuild(guildId.guildId);
+    guild = GuildStore.getGuild(guildId.guildId);
   } else {
     guild = null;
     if (null != guildId.channelId) {
@@ -255,10 +255,10 @@ function hydrateStaticRouteLink(id, itemId, guildId) {
   obj3.channelId = id;
   return obj3;
 }
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ ID_REGEX: closure_9, MARKDOWN_SPOILER_REGEXP: c10, MARKDOWN_STATIC_ROUTE_NAME_REGEXP: closure_11 } = Constants);
-const SUB_COMMAND_KEY_SEPARATOR = fn(5489).SUB_COMMAND_KEY_SEPARATOR;
-const GAME_MENTION_RAW_RE = fn(5490).GAME_MENTION_RAW_RE;
+const SUB_COMMAND_KEY_SEPARATOR = fn(5788).SUB_COMMAND_KEY_SEPARATOR;
+const GAME_MENTION_RAW_RE = fn(5789).GAME_MENTION_RAW_RE;
 const re14 = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/;
 const re15 = /^$|\n *$/;
 const re16 = /^ *>>> ?/;

@@ -43,7 +43,7 @@ function getSystemMessageUserJoinMobile(id) {
   const obj = SnowflakeUtilsDefault;
   return items[obj.extractTimestamp(obj, id) % items.length];
 }
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ MessageEmbedTypes: c10, MessageTypes: closure_11, NOOP: closure_12 } = Constants);
 let closure_13 = {
   "234395307759108106": "https://groovy.bot/commands",
@@ -250,7 +250,7 @@ export default {
                   const channel = ChannelStore.getChannel(channel_id);
                   let astToStringResult6 = null;
                   if (null != channel) {
-                    const guild = GuildStore.getGuild(channel.getGuildId());
+                    guild = GuildStore.getGuild(channel.getGuildId());
                     astToStringResult6 = null;
                     if (null != guild) {
                       if (
@@ -335,16 +335,16 @@ export default {
                 if (result != null) {
                   userId = result.userId;
                 }
-                let previousUserId;
+                let secondaryUserId;
                 const user = UserStore.getUser(userId);
                 if (result != null) {
-                  previousUserId = result.previousUserId;
+                  secondaryUserId = result.secondaryUserId;
                 }
                 const guildSpaceLeaderboardMessage =
                   GuildLeaderboardSystemMessageCopy.resolveGuildSpaceLeaderboardMessage(
                     result,
                     user,
-                    UserStore.getUser(previousUserId),
+                    UserStore.getUser(secondaryUserId),
                   );
                 if (null == guildSpaceLeaderboardMessage) {
                   return mentions.content;

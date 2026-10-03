@@ -18,7 +18,7 @@ let closure_5 = async function _checkForNewerBuild() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -112,7 +112,7 @@ function openBuildInstallerUrl(install) {
     }
   } catch (err) {}
 }
-const UPDATE_CONFIG = fn(4823).UPDATE_CONFIG;
+const UPDATE_CONFIG = fn(4868).UPDATE_CONFIG;
 const logger = new LoggerDefault("MobileNativeUpdateUtils");
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/mobile_native_updater/MobileNativeUpdateUtils.tsx");

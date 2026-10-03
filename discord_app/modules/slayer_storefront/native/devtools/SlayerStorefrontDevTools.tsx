@@ -11,7 +11,17 @@ import IAPStore from "../../../../stores/native/IAPStore.android.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_16 = async function _describeStorefrontSkuFailure(arg0) {
+function describeStorefrontSkuFailure() {
+  const self = this;
+  const apply = closure_17.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+let closure_17 = async function _describeStorefrontSkuFailure(arg0) {
   if (c9 === 2) {
     c9 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -22,7 +32,7 @@ let closure_16 = async function _describeStorefrontSkuFailure(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -101,11 +111,11 @@ let closure_16 = async function _describeStorefrontSkuFailure(arg0) {
 };
 get_ActivityIndicator = fn(17);
 ({ ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ Endpoints: closure_11, PriceSetAssignmentPurchaseTypes: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = {
   wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_16 },
   inputRow: null,
@@ -113,403 +123,1071 @@ let obj2 = {
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.inputRow = { padding: nativeDefault.space.PX_12 };
 let closure_15 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj4 = { padding: nativeDefault.space.PX_12 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/slayer_storefront/native/devtools/SlayerStorefrontDevTools.tsx");
 
-export default function SlayerStorefrontDevTools() {
-  const tmp = closure_15();
-  [str, tmp6] = first(first1.useState(""), 2);
-  const tmp4 = first;
-  const tmp5 = first(first1.useState(""), 2);
-  [str2, tmp8] = first(first1.useState(""), 2);
-  const trimmed = str.trim();
-  _require = trimmed;
-  let trimmed1 = str2.trim();
-  const tmp7 = first(first1.useState(""), 2);
-  let items = [stateFromStores2];
-  stateFromStores = require("initialize").useStateFromStores(items, () => {
-    value = undefined;
-    if (length.length > 0) {
-      value = SKUStore.get(tmp);
-    }
-    return value;
-  });
-  const tmp11 = first(first1.useState(false), 2);
-  first = tmp11[0];
-  asyncGeneratorStep = tmp11[1];
-  const tmp13 = first(first1.useState(null), 2);
-  first1 = tmp13[0];
-  closure_6 = tmp13[1];
-  let obj2 = require("initialize");
-  const items1 = [c8];
-  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => _null.getCurrentUser());
-  let tmp16;
-  if (stateFromStores != null) {
-    const googleSkuIds = stateFromStores.googleSkuIds;
-    if (googleSkuIds != null) {
-      tmp16 = googleSkuIds[constants.DEFAULT];
-    }
-  }
-  if (tmp16 == null) {
-    tmp16 = null;
-  }
-  c8 = tmp16;
-  let obj3 = require("initialize");
-  const items2 = [stateFromStores3];
-  const items3 = [tmp16];
-  stateFromStores2 = require("initialize").useStateFromStores(
-    items2,
-    () => {
-      let product = null;
-      if (null != c8) {
-        product = IAPStore.getProduct(tmp);
-      }
-      return product;
-    },
-    items3,
-  );
-  const tmp9Result = require("initialize");
-  const items4 = [stateFromStores3];
-  stateFromStores3 = require("initialize").useStateFromStores(items4, () => stateFromStores3.isReady());
-  _require = asyncGeneratorStep(async (arg0) => {
-    if (c5 === 2) {
-      c5 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
+export default ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = require("c").c(74);
+      const tmp4 = closure_15();
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        let obj2 = { includeKeyboardHeight: true };
+        cResult[0] = obj2;
+        let first = obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        first = cResult[0];
       }
-    } else {
-      try {
-        c5 = 2;
-        if (0 === v2) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            closure_3 = tmp5;
-            closure_2 = tmp2;
-            closure_130_0 = length;
-            let tmp19 = 0 !== length.length;
-            if (tmp19) {
-              tmp19 = 0 !== trimmed1.length;
+      let obj = require("c");
+      [str, r10032] = noop.useState("");
+      const tmp8 = _slicedToArray(noop.useState(""), 2);
+      [str2, r10037] = noop.useState("");
+      if (cResult[1] !== str) {
+        const trimmed = str.trim();
+        cResult[1] = str;
+        cResult[2] = trimmed;
+        let arr = trimmed;
+      } else {
+        arr = cResult[2];
+      }
+      _require = arr;
+      if (cResult[3] !== str2) {
+        const trimmed1 = str2.trim();
+        cResult[3] = str2;
+        cResult[4] = trimmed1;
+        let arr2 = trimmed1;
+      } else {
+        arr2 = cResult[4];
+      }
+      if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
+        let items = [SKUStore];
+        cResult[5] = items;
+        let tmp12 = items;
+      } else {
+        tmp12 = cResult[5];
+      }
+      if (cResult[6] !== arr) {
+        class K {
+          constructor() {
+            value = undefined;
+            if (closure_0.length > 0) {
+              tmp3 = closure_9;
+              value = closure_9.get(tmp);
             }
-            if (tmp19) {
-              closure_1_6(null);
-              v2(true);
-              const obj5 = { withGoogleSkuIds: null };
-              const obj4 = length(stateFromStores[14]);
-              obj5.withGoogleSkuIds = length(stateFromStores[15]).isAndroid();
-              v2 = 1;
-              c5 = 1;
-              const obj7 = {
-                value: obj4.fetchSocialLayerStorefrontSkuForApplication(trimmed1, length, obj5),
-                done: false,
-              };
-              return obj7;
-            } else {
-              c5 = 3;
+            return value;
+          }
+        }
+        cResult[6] = arr;
+        cResult[7] = K;
+      } else {
+        class K {
+          constructor() {
+            value = undefined;
+            if (closure_0.length > 0) {
+              tmp3 = closure_9;
+              value = closure_9.get(tmp);
+            }
+            return value;
+          }
+        }
+      }
+      const tmp9 = _slicedToArray(noop.useState(""), 2);
+      const stateFromStores = require("initialize").useStateFromStores(tmp12, K);
+      const tmpResult = require("initialize");
+      [tmp17, dependencyMap] = noop.useState(false);
+      const tmp7Result = _slicedToArray(noop.useState(false), 2);
+      [tmp19, _slicedToArray] = noop.useState(null);
+      if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
+        class K {
+          constructor() {
+            value = undefined;
+            if (closure_0.length > 0) {
+              tmp3 = closure_9;
+              value = closure_9.get(tmp);
+            }
+            return value;
+          }
+        }
+        const items1 = [UserStore];
+        class O {
+          constructor() {
+            return closure_1_8.getCurrentUser();
+          }
+        }
+        cResult[8] = items1;
+        cResult[9] = O;
+        let tmp21 = O;
+        let tmp20 = items1;
+      } else {
+        class K {
+          constructor() {
+            value = undefined;
+            if (closure_0.length > 0) {
+              tmp3 = closure_9;
+              value = closure_9.get(tmp);
+            }
+            return value;
+          }
+        }
+        tmp21 = cResult[9];
+      }
+      const tmp7Result3 = _slicedToArray(noop.useState(null), 2);
+      const stateFromStores1 = require("initialize").useStateFromStores(tmp20, tmp21);
+      let tmp23;
+      if (stateFromStores != null) {
+        class K {
+          constructor() {
+            value = undefined;
+            if (closure_0.length > 0) {
+              tmp3 = closure_9;
+              value = closure_9.get(tmp);
+            }
+            return value;
+          }
+        }
+        if (tmp24 != null) {
+          class K {
+            constructor() {
+              value = undefined;
+              if (closure_0.length > 0) {
+                tmp3 = closure_9;
+                value = closure_9.get(tmp);
+              }
+              return value;
             }
           }
-        } else if (1 === tmp5) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj8 = { value, done: true };
-            return obj8;
+          tmp23 = tmp24[constants.DEFAULT];
+        }
+      }
+      if (tmp23 == null) {
+        class K {
+          constructor() {
+            value = undefined;
+            if (closure_0.length > 0) {
+              tmp3 = closure_9;
+              value = closure_9.get(tmp);
+            }
+            return value;
+          }
+        }
+      }
+      noop = tmp23;
+      if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
+        class K {
+          constructor() {
+            value = undefined;
+            if (closure_0.length > 0) {
+              tmp3 = closure_9;
+              value = closure_9.get(tmp);
+            }
+            return value;
+          }
+        }
+        const items2 = [IAPStore];
+        class O {
+          constructor() {
+            return closure_1_8.getCurrentUser();
+          }
+        }
+        cResult[10] = items2;
+        const tmp25 = items2;
+      } else {
+        class K {
+          constructor() {
+            value = undefined;
+            if (closure_0.length > 0) {
+              tmp3 = closure_9;
+              value = closure_9.get(tmp);
+            }
+            return value;
+          }
+        }
+      }
+      if (cResult[11] !== tmp23) {
+        class K {
+          constructor() {
+            value = undefined;
+            if (closure_0.length > 0) {
+              tmp3 = closure_9;
+              value = closure_9.get(tmp);
+            }
+            return value;
+          }
+        }
+        const items3 = [tmp23];
+        class O {
+          constructor() {
+            return closure_1_8.getCurrentUser();
+          }
+        }
+        cResult[11] = tmp23;
+        cResult[12] = tmp28;
+        cResult[13] = items3;
+        let tmp27 = items3;
+      } else {
+        class K {
+          constructor() {
+            value = undefined;
+            if (closure_0.length > 0) {
+              tmp3 = closure_9;
+              value = closure_9.get(tmp);
+            }
+            return value;
+          }
+        }
+        tmp27 = cResult[13];
+      }
+      const tmpResult4 = require("initialize");
+      const stateFromStores2 = require("initialize").useStateFromStores(tmp25, tmp28, tmp27);
+      if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
+        class K {
+          constructor() {
+            value = undefined;
+            if (closure_0.length > 0) {
+              tmp3 = closure_9;
+              value = closure_9.get(tmp);
+            }
+            return value;
+          }
+        }
+        const items4 = [IAPStore];
+        class O {
+          constructor() {
+            return closure_1_8.getCurrentUser();
+          }
+        }
+        cResult[14] = items4;
+        cResult[15] = tmp32;
+        let tmp31 = tmp32;
+        const tmp30 = items4;
+      } else {
+        class K {
+          constructor() {
+            value = undefined;
+            if (closure_0.length > 0) {
+              tmp3 = closure_9;
+              value = closure_9.get(tmp);
+            }
+            return value;
+          }
+        }
+        tmp31 = cResult[15];
+      }
+      const tmpResult5 = require("initialize");
+      const stateFromStores3 = require("initialize").useStateFromStores(tmp30, tmp31);
+      if (cResult[16] === arr2) {
+        class K {
+          constructor() {
+            value = undefined;
+            if (closure_0.length > 0) {
+              tmp3 = closure_9;
+              value = closure_9.get(tmp);
+            }
+            return value;
+          }
+        }
+        if (cResult[19] !== tmp34) {
+          class K {
+            constructor() {
+              value = undefined;
+              if (closure_0.length > 0) {
+                tmp3 = closure_9;
+                value = closure_9.get(tmp);
+              }
+              return value;
+            }
+          }
+          cResult[19] = tmp34;
+          class O {
+            constructor() {
+              return closure_1_8.getCurrentUser();
+            }
+          }
+          cResult[20] = tmp36;
+        } else {
+          class K {
+            constructor() {
+              value = undefined;
+              if (closure_0.length > 0) {
+                tmp3 = closure_9;
+                value = closure_9.get(tmp);
+              }
+              return value;
+            }
+          }
+        }
+        class O {
+          constructor() {
+            return closure_1_8.getCurrentUser();
+          }
+        }
+        if (cResult[23] === stateFromStores1) {
+          class K {
+            constructor() {
+              value = undefined;
+              if (closure_0.length > 0) {
+                tmp3 = closure_9;
+                value = closure_9.get(tmp);
+              }
+              return value;
+            }
+          }
+          const first1 = _slicedToArray(obj3.useState(null), 2)[0];
+          class O {
+            constructor() {
+              return closure_1_8.getCurrentUser();
+            }
+          }
+          if (cResult[26] !== tmp23) {
+            class K {
+              constructor() {
+                value = undefined;
+                if (closure_0.length > 0) {
+                  tmp3 = closure_9;
+                  value = closure_9.get(tmp);
+                }
+                return value;
+              }
+            }
+            cResult[26] = tmp23;
+            class O {
+              constructor() {
+                return closure_1_8.getCurrentUser();
+              }
+            }
+            cResult[27] = tmp41;
           } else {
-            v2(false);
-            if (null != stateFromStores2.get(length)) {
-              closure_130_0(length);
-            } else {
-              trimmed1 = closure_1_6;
-              v2 = 2;
-              c5 = 1;
-              const obj9 = {
-                value: (function describeStorefrontSkuFailure() {
-                  const self = this;
-                  const apply = closure_1_16.apply;
-                  if (typeof apply === "unknown") {
-                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                  } else {
-                    applyArgumentsResult = apply(self, arguments);
+            class K {
+              constructor() {
+                value = undefined;
+                if (closure_0.length > 0) {
+                  tmp3 = closure_9;
+                  value = closure_9.get(tmp);
+                }
+                return value;
+              }
+            }
+          }
+          if (arr.length > 0 && arr2.length > 0) {
+            class K {
+              constructor() {
+                value = undefined;
+                if (closure_0.length > 0) {
+                  tmp3 = closure_9;
+                  value = closure_9.get(tmp);
+                }
+                return value;
+              }
+            }
+          }
+          if (null == tmp19) {
+            class K {
+              constructor() {
+                value = undefined;
+                if (closure_0.length > 0) {
+                  tmp3 = closure_9;
+                  value = closure_9.get(tmp);
+                }
+                return value;
+              }
+            }
+            if (!tmp17) {
+              class K {
+                constructor() {
+                  value = undefined;
+                  if (closure_0.length > 0) {
+                    tmp3 = closure_9;
+                    value = closure_9.get(tmp);
                   }
-                  return applyArgumentsResult;
-                })(trimmed1, length),
-                done: false,
-              };
-              return obj9;
+                  return value;
+                }
+              }
             }
-          }
-        } else if (arg0 === 1) {
-          c5 = 3;
-          throw value;
-        } else if (arg0 !== 2) {
-          trimmed1(value);
-        }
-        c5 = 3;
-        const obj = { value, done: true };
-        return obj;
-      } catch (tmp29) {
-        c5 = tmp;
-        throw tmp29;
-      }
-    }
-  });
-  const items5 = [trimmed, trimmed1];
-  const callback = obj.useCallback(function () {
-    const self = this;
-    const apply = closure_0.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
-  }, items5);
-  const items6 = [callback];
-  const items7 = [callback];
-  const callback1 = obj.useCallback(() => {
-    callback((skuId) => {
-      const result = length(stateFromStores[16]).openSocialLayerStorefrontProductDetailsModal({ skuId });
-    });
-  }, items6);
-  const items8 = [callback, stateFromStores1];
-  const callback2 = obj.useCallback(() => {
-    callback((skuId) => {
-      const result = length(stateFromStores[16]).openSocialLayerStorefrontProductSelfPurchaseSuccessModal({ skuId });
-    });
-  }, items7);
-  const callback3 = obj.useCallback(() => {
-    callback((skuId) => {
-      const obj2 = { skuId, recipient: stateFromStores1 };
-      const result = closure_0(stateFromStores[16]).openSocialLayerStorefrontProductGiftPurchaseSuccessModal(obj2);
-      const obj = closure_0(stateFromStores[16]);
-    });
-  }, items8);
-  const tmp9Result3 = require("initialize");
-  [tmp25, closure_12] = tmp4(first1.useState(null), 2);
-  const items9 = [tmp16];
-  let tmp27 = trimmed.length > 0;
-  const callback4 = obj.useCallback(() => {
-    if (null != c8) {
-      constants("Querying Play\u2026");
-      const items = [tmp];
-      const inAppSkus = GPlayActionCreators.loadInAppSkus(items);
-      inAppSkus
-        .then((result) => {
-          if (null != result) {
-            if (result.length > 0) {
-              const _HermesInternal = HermesInternal;
-              let combined = "Play returned " + result.length + " product(s) for " + _null;
-            }
-            tmp(combined);
-          }
-          combined = "Play returned no products for " + _null;
-        })
-        .catch((error) => {
-          let obj = error;
-          if (error == null) {
-            obj = {};
-          }
-          ({ code, message } = obj);
-          let str = "";
-          if (null != code) {
-            const _HermesInternal = HermesInternal;
-            str = " [" + code + "]";
-          }
-          if (message == null) {
-            const _String = String;
-            message = String(error);
-          }
-          closure_1_12("Play query failed" + str + ": " + message);
-        });
-      const nextPromise = inAppSkus.then((result) => {
-        if (null != result) {
-          if (result.length > 0) {
-            const _HermesInternal = HermesInternal;
-            let combined = "Play returned " + result.length + " product(s) for " + _null;
-          }
-          tmp(combined);
-        }
-        combined = "Play returned no products for " + _null;
-      });
-    }
-  }, items9);
-  if (tmp27) {
-    tmp27 = trimmed1.length > 0;
-  }
-  closure_13 = tmp27;
-  let tmp28 = !tmp27;
-  if (tmp27) {
-    tmp28 = first;
-  }
-  const items10 = [first1, first, stateFromStores, tmp27, tmp16, stateFromStores2, stateFromStores3];
-  let obj4 = { style: tmp.wrap, contentContainerStyle: null, children: null };
-  let obj5 = { paddingVertical: null, paddingBottom: null };
-  const memo = obj.useMemo(() => {
-    if (null != first1) {
-      const _HermesInternal5 = HermesInternal;
-      let str13 = "Fetch failed: " + tmp;
-    } else {
-      str13 = "Fetching SKU\u2026";
-      if (!first) {
-        if (null != stateFromStores) {
-          let str3 = stateFromStores3;
-          if (null == c8) {
-            const _HermesInternal4 = HermesInternal;
-            let str2 = "" + tmp3 + " \u00B7 " + "no DEFAULT googleSkuId, so nothing to price";
-          } else if (null == stateFromStores2) {
-            let str9 = " (billing not connected)";
-            if (str3) {
-              str9 = "";
-            }
-            const _HermesInternal3 = HermesInternal;
-            str3 = "play id ";
-            let combined = "play id " + c8 + " \u00B7 not in IAPStore" + str9;
-          } else if (null == stateFromStores2.priceString) {
-            const _HermesInternal2 = HermesInternal;
-            combined = "play id " + c8 + " \u00B7 product found, no priceString";
           } else {
-            const _HermesInternal = HermesInternal;
-            combined = "play id " + c8 + " \u00B7 " + stateFromStores2.priceString;
+            class K {
+              constructor() {
+                value = undefined;
+                if (closure_0.length > 0) {
+                  tmp3 = closure_9;
+                  value = closure_9.get(tmp);
+                }
+                return value;
+              }
+            }
+            let combined = "Fetch failed: " + tmp19;
+          }
+          const sum = tmp6(587).space.PX_16 + arr2(6471)(first).insets.bottom;
+          if (cResult[32] !== sum) {
+            class K {
+              constructor() {
+                value = undefined;
+                if (closure_0.length > 0) {
+                  tmp3 = closure_9;
+                  value = closure_9.get(tmp);
+                }
+                return value;
+              }
+            }
+            tmp47[0] = tmp6(587).space.PX_16;
+            tmp47[1] = sum;
+            class O {
+              constructor() {
+                return closure_1_8.getCurrentUser();
+              }
+            }
+            cResult[32] = sum;
+            cResult[33] = tmp47;
+          } else {
+            class K {
+              constructor() {
+                value = undefined;
+                if (closure_0.length > 0) {
+                  tmp3 = closure_9;
+                  value = closure_9.get(tmp);
+                }
+                return value;
+              }
+            }
+          }
+          if (cResult[34] !== str2) {
+            class K {
+              constructor() {
+                value = undefined;
+                if (closure_0.length > 0) {
+                  tmp3 = closure_9;
+                  value = closure_9.get(tmp);
+                }
+                return value;
+              }
+            }
+            let obj4 = {
+              label: "Application ID",
+              value: str2,
+              onChange: null,
+              placeholder: "1234567890123456789",
+              autoCapitalize: "none",
+              autoCorrect: false,
+              keyboardType: "number-pad",
+            };
+            class O {
+              constructor() {
+                return closure_1_8.getCurrentUser();
+              }
+            }
+            const tmp49 = closure_13(tmp(6098).TextInput, obj4);
+            cResult[34] = str2;
+            cResult[35] = tmp49;
+          } else {
+            class K {
+              constructor() {
+                value = undefined;
+                if (closure_0.length > 0) {
+                  tmp3 = closure_9;
+                  value = closure_9.get(tmp);
+                }
+                return value;
+              }
+            }
+          }
+          if (cResult[36] === tmp4.inputRow) {
+            class K {
+              constructor() {
+                value = undefined;
+                if (closure_0.length > 0) {
+                  tmp3 = closure_9;
+                  value = closure_9.get(tmp);
+                }
+                return value;
+              }
+            }
+            if (cResult[39] !== str) {
+              class K {
+                constructor() {
+                  value = undefined;
+                  if (closure_0.length > 0) {
+                    tmp3 = closure_9;
+                    value = closure_9.get(tmp);
+                  }
+                  return value;
+                }
+              }
+              let obj5 = {
+                label: "SKU ID",
+                value: str,
+                onChange: null,
+                placeholder: "1234567890123456789",
+                autoCapitalize: "none",
+                autoCorrect: false,
+                keyboardType: "number-pad",
+              };
+              class O {
+                constructor() {
+                  return closure_1_8.getCurrentUser();
+                }
+              }
+              const tmp55 = closure_13(tmp(6098).TextInput, obj5);
+              cResult[39] = str;
+              cResult[40] = tmp55;
+            } else {
+              class K {
+                constructor() {
+                  value = undefined;
+                  if (closure_0.length > 0) {
+                    tmp3 = closure_9;
+                    value = closure_9.get(tmp);
+                  }
+                  return value;
+                }
+              }
+            }
+            if (cResult[41] === tmp4.inputRow) {
+              class K {
+                constructor() {
+                  value = undefined;
+                  if (closure_0.length > 0) {
+                    tmp3 = closure_9;
+                    value = closure_9.get(tmp);
+                  }
+                  return value;
+                }
+              }
+              if (cResult[44] === combined) {
+                class K {
+                  constructor() {
+                    value = undefined;
+                    if (closure_0.length > 0) {
+                      tmp3 = closure_9;
+                      value = closure_9.get(tmp);
+                    }
+                    return value;
+                  }
+                }
+              }
+              class O {
+                constructor() {
+                  return closure_1_8.getCurrentUser();
+                }
+              }
+              tmp61[1] = combined;
+              const items5 = [tmp50, tmp56];
+              tmp61[3] = items5;
+              const tmp62 = closure_14(tmp(6074).TableRowGroup, tmp61);
+              cResult[44] = combined;
+              cResult[45] = tmp50;
+              cResult[46] = tmp56;
+              cResult[47] = tmp62;
+            }
+            class O {
+              constructor() {
+                return closure_1_8.getCurrentUser();
+              }
+            }
+            const obj6 = { style: tmp4.inputRow, children: tmp54 };
+            const tmp58 = closure_13(closure_7, obj6);
+            cResult[41] = tmp4.inputRow;
+            cResult[42] = tmp54;
+            cResult[43] = tmp58;
+          }
+          let obj7 = { style: tmp4.inputRow, children: tmp48 };
+          const tmp53 = closure_13(closure_7, obj7);
+          cResult[36] = tmp4.inputRow;
+          cResult[37] = tmp48;
+          cResult[38] = tmp53;
+          const tmp7Result4 = _slicedToArray(obj3.useState(null), 2);
+        }
+        function se() {
+          tmp34((skuId) => {
+            const obj2 = { skuId, recipient: stateFromStores1 };
+            const result = closure_0(10531).openSocialLayerStorefrontProductGiftPurchaseSuccessModal(obj2);
+            const obj = closure_0(10531);
+          });
+        }
+        cResult[23] = stateFromStores1;
+        cResult[24] = tmp34;
+        cResult[25] = se;
+      }
+      _require = stateFromStores1(function* (arg0) {
+        if (c5 === 2) {
+          c5 = 3;
+          throw new TypeError("Generator functions may not be called on executing generators");
+        } else if (tmp5 === 3) {
+          if (arg0 === 1) {
+            throw value;
+          } else if (arg0 === 2) {
+            const obj2 = { value, done: true };
+            return obj2;
+          } else {
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
-          str2 = "Paste a SKU ID and its application ID to enable the modals below.";
-          if (closure_13) {
-            str2 = "Not fetched yet. Opening a modal fetches it first.";
+          try {
+            c5 = 2;
+            if (0 === c4) {
+              if (arg0 === 1) {
+                c5 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c5 = 3;
+                const obj3 = { value, done: true };
+                return obj3;
+              } else {
+                closure_130_0 = length;
+                let tmp20 = 0 !== length.length;
+                if (tmp20) {
+                  tmp20 = 0 !== arr2.length;
+                }
+                if (tmp20) {
+                  tmp2(null);
+                  tmp3(true);
+                  const obj5 = { withGoogleSkuIds: null };
+                  const obj4 = length(10532);
+                  obj5.withGoogleSkuIds = length(1369).isAndroid();
+                  c4 = 1;
+                  c5 = 1;
+                  const obj7 = {
+                    value: obj4.fetchSocialLayerStorefrontSkuForApplication(arr2, length, obj5),
+                    done: false,
+                  };
+                  return obj7;
+                } else {
+                  c5 = 3;
+                }
+              }
+            } else if (1 === tmp6) {
+              if (arg0 === 1) {
+                c5 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c5 = 3;
+                const obj8 = { value, done: true };
+                return obj8;
+              } else {
+                tmp3(false);
+                if (null != SKUStore.get(length)) {
+                  closure_130_0(length);
+                } else {
+                  arr2 = tmp2;
+                  c4 = 2;
+                  c5 = 1;
+                  const obj9 = { value: describeStorefrontSkuFailure(arr2, length), done: false };
+                  return obj9;
+                }
+              }
+            } else if (arg0 === 1) {
+              c5 = 3;
+              throw value;
+            } else if (arg0 !== 2) {
+              arr2(value);
+            }
+            c5 = 3;
+            const obj = { value, done: true };
+            return obj;
+          } catch (tmp30) {
+            c5 = tmp;
+            throw tmp30;
           }
         }
+      });
+      const fn = function () {
+        const self = this;
+        const apply = closure_0.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
+      };
+      cResult[16] = arr2;
+      cResult[17] = arr;
+      cResult[18] = fn;
+      const tmpResult6 = require("initialize");
+    }
+  : () => {
+      const tmp = closure_15();
+      [str, tmp6] = first(first1.useState(""), 2);
+      const tmp4 = first;
+      const tmp5 = first(first1.useState(""), 2);
+      [str2, tmp8] = first(first1.useState(""), 2);
+      const trimmed = str.trim();
+      _require = trimmed;
+      let trimmed1 = str2.trim();
+      const tmp7 = first(first1.useState(""), 2);
+      let items = [stateFromStores2];
+      stateFromStores = require("initialize").useStateFromStores(items, () => {
+        value = undefined;
+        if (length.length > 0) {
+          value = SKUStore.get(tmp);
+        }
+        return value;
+      });
+      const tmp11 = first(first1.useState(false), 2);
+      first = tmp11[0];
+      asyncGeneratorStep = tmp11[1];
+      const tmp13 = first(first1.useState(null), 2);
+      first1 = tmp13[0];
+      closure_6 = tmp13[1];
+      let obj2 = require("initialize");
+      const items1 = [c8];
+      const stateFromStores1 = require("initialize").useStateFromStores(items1, () => _null.getCurrentUser());
+      let tmp16;
+      if (stateFromStores != null) {
+        const googleSkuIds = stateFromStores.googleSkuIds;
+        if (googleSkuIds != null) {
+          tmp16 = googleSkuIds[constants.DEFAULT];
+        }
       }
-    }
-    return str13;
-  }, items10);
-  obj5.paddingVertical = trimmed1(stateFromStores[10]).space.PX_16;
-  obj5.paddingBottom =
-    trimmed1(stateFromStores[10]).space.PX_16 +
-    trimmed1(stateFromStores[12])({ includeKeyboardHeight: true }).insets.bottom;
-  obj4.contentContainerStyle = obj5;
-  const obj6 = { title: "SKU", description: memo, hasIcons: false, children: null };
-  const tmp31 = closure_6;
-  const tmp4Result = tmp4(first1.useState(null), 2);
-  const items11 = [
-    closure_13(stateFromStores1, {
-      style: tmp.inputRow,
-      children: closure_13(require("TextInput").TextInput, {
-        label: "Application ID",
-        value: str2,
-        onChange: tmp8,
-        placeholder: "1234567890123456789",
-        autoCapitalize: "none",
-        autoCorrect: false,
-        keyboardType: "number-pad",
-      }),
-    }),
-  ];
-  let obj7 = {
-    style: tmp.inputRow,
-    children: closure_13(require("TextInput").TextInput, {
-      label: "Application ID",
-      value: str2,
-      onChange: tmp8,
-      placeholder: "1234567890123456789",
-      autoCapitalize: "none",
-      autoCorrect: false,
-      keyboardType: "number-pad",
-    }),
-  };
-  items11[1] = closure_13(stateFromStores1, {
-    style: tmp.inputRow,
-    children: closure_13(require("TextInput").TextInput, {
-      label: "SKU ID",
-      value: str,
-      onChange: tmp6,
-      placeholder: "1234567890123456789",
-      autoCapitalize: "none",
-      autoCorrect: false,
-      keyboardType: "number-pad",
-    }),
-  });
-  obj6.children = items11;
-  const items12 = [closure_14(require("TableRowGroup").TableRowGroup, obj6), ,];
-  let obj8 = {
-    style: tmp.inputRow,
-    children: closure_13(require("TextInput").TextInput, {
-      label: "SKU ID",
-      value: str,
-      onChange: tmp6,
-      placeholder: "1234567890123456789",
-      autoCapitalize: "none",
-      autoCorrect: false,
-      keyboardType: "number-pad",
-    }),
-  };
-  let isAndroidResult = require("PlatformUtils").isAndroid();
-  if (isAndroidResult) {
-    let obj9 = { title: "Pricing", description: tmp25, hasIcons: false, children: null };
-    let str3 = "needs a fetched SKU with a DEFAULT googleSkuId";
-    if (null != tmp16) {
-      let _HermesInternal = HermesInternal;
-      str3 = "play id " + tmp16;
-    }
-    const obj10 = {
-      label: "Query Play for this SKU's price",
-      subLabel: str3,
-      onPress: callback4,
-      disabled: null == tmp16,
-      arrow: true,
+      if (tmp16 == null) {
+        tmp16 = null;
+      }
+      c8 = tmp16;
+      let obj3 = require("initialize");
+      const items2 = [stateFromStores3];
+      const items3 = [tmp16];
+      stateFromStores2 = require("initialize").useStateFromStores(
+        items2,
+        () => {
+          let product = null;
+          if (null != c8) {
+            product = IAPStore.getProduct(tmp);
+          }
+          return product;
+        },
+        items3,
+      );
+      const tmp9Result = require("initialize");
+      const items4 = [stateFromStores3];
+      stateFromStores3 = require("initialize").useStateFromStores(items4, () => stateFromStores3.isReady());
+      _require = asyncGeneratorStep(async (arg0) => {
+        if (c5 === 2) {
+          c5 = 3;
+          throw new TypeError("Generator functions may not be called on executing generators");
+        } else if (tmp5 === 3) {
+          if (arg0 === 1) {
+            throw value;
+          } else if (arg0 === 2) {
+            const obj2 = { value, done: true };
+            return obj2;
+          } else {
+            return { value: "IconComponent", done: "IconComponent" };
+          }
+        } else {
+          try {
+            c5 = 2;
+            if (0 === v2) {
+              if (arg0 === 1) {
+                c5 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c5 = 3;
+                const obj3 = { value, done: true };
+                return obj3;
+              } else {
+                closure_3 = tmp2;
+                closure_2 = tmp3;
+                closure_130_0 = length;
+                let tmp20 = 0 !== length.length;
+                if (tmp20) {
+                  tmp20 = 0 !== trimmed1.length;
+                }
+                if (tmp20) {
+                  closure_1_6(null);
+                  v2(true);
+                  const obj5 = { withGoogleSkuIds: null };
+                  const obj4 = length(stateFromStores[16]);
+                  obj5.withGoogleSkuIds = length(stateFromStores[17]).isAndroid();
+                  v2 = 1;
+                  c5 = 1;
+                  const obj7 = {
+                    value: obj4.fetchSocialLayerStorefrontSkuForApplication(trimmed1, length, obj5),
+                    done: false,
+                  };
+                  return obj7;
+                } else {
+                  c5 = 3;
+                }
+              }
+            } else if (1 === tmp6) {
+              if (arg0 === 1) {
+                c5 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c5 = 3;
+                const obj8 = { value, done: true };
+                return obj8;
+              } else {
+                v2(false);
+                if (null != stateFromStores2.get(length)) {
+                  closure_130_0(length);
+                } else {
+                  trimmed1 = closure_1_6;
+                  v2 = 2;
+                  c5 = 1;
+                  const obj9 = { value: describeStorefrontSkuFailure(trimmed1, length), done: false };
+                  return obj9;
+                }
+              }
+            } else if (arg0 === 1) {
+              c5 = 3;
+              throw value;
+            } else if (arg0 !== 2) {
+              trimmed1(value);
+            }
+            c5 = 3;
+            const obj = { value, done: true };
+            return obj;
+          } catch (tmp30) {
+            c5 = tmp;
+            throw tmp30;
+          }
+        }
+      });
+      const items5 = [trimmed, trimmed1];
+      const callback = obj.useCallback(function () {
+        const self = this;
+        const apply = closure_0.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
+      }, items5);
+      const items6 = [callback];
+      const items7 = [callback];
+      const callback1 = obj.useCallback(() => {
+        callback((skuId) => {
+          const result = length(stateFromStores[18]).openSocialLayerStorefrontProductDetailsModal({ skuId });
+        });
+      }, items6);
+      const items8 = [callback, stateFromStores1];
+      const callback2 = obj.useCallback(() => {
+        callback((skuId) => {
+          const result = length(stateFromStores[18]).openSocialLayerStorefrontProductSelfPurchaseSuccessModal({
+            skuId,
+          });
+        });
+      }, items7);
+      const callback3 = obj.useCallback(() => {
+        callback((skuId) => {
+          const obj2 = { skuId, recipient: stateFromStores1 };
+          const result = closure_0(stateFromStores[18]).openSocialLayerStorefrontProductGiftPurchaseSuccessModal(obj2);
+          const obj = closure_0(stateFromStores[18]);
+        });
+      }, items8);
+      const tmp9Result3 = require("initialize");
+      [tmp25, closure_12] = tmp4(first1.useState(null), 2);
+      const items9 = [tmp16];
+      let tmp27 = trimmed.length > 0;
+      const callback4 = obj.useCallback(() => {
+        if (null != c8) {
+          constants("Querying Play\u2026");
+          const items = [tmp];
+          const inAppSkus = GPlayActionCreators.loadInAppSkus(items);
+          inAppSkus
+            .then((result) => {
+              if (null != result) {
+                if (result.length > 0) {
+                  const _HermesInternal = HermesInternal;
+                  let combined = "Play returned " + result.length + " product(s) for " + _null;
+                }
+                tmp(combined);
+              }
+              combined = "Play returned no products for " + _null;
+            })
+            .catch((error) => {
+              let obj = error;
+              if (error == null) {
+                obj = {};
+              }
+              ({ code, message } = obj);
+              let str = "";
+              if (null != code) {
+                const _HermesInternal = HermesInternal;
+                str = " [" + code + "]";
+              }
+              if (message == null) {
+                const _String = String;
+                message = String(error);
+              }
+              closure_1_12("Play query failed" + str + ": " + message);
+            });
+          const nextPromise = inAppSkus.then((result) => {
+            if (null != result) {
+              if (result.length > 0) {
+                const _HermesInternal = HermesInternal;
+                let combined = "Play returned " + result.length + " product(s) for " + _null;
+              }
+              tmp(combined);
+            }
+            combined = "Play returned no products for " + _null;
+          });
+        }
+      }, items9);
+      if (tmp27) {
+        tmp27 = trimmed1.length > 0;
+      }
+      closure_13 = tmp27;
+      let tmp28 = !tmp27;
+      if (tmp27) {
+        tmp28 = first;
+      }
+      const items10 = [first1, first, stateFromStores, tmp27, tmp16, stateFromStores2, stateFromStores3];
+      let obj4 = { style: tmp.wrap, contentContainerStyle: null, children: null };
+      let obj5 = { paddingVertical: null, paddingBottom: null };
+      const memo = obj.useMemo(() => {
+        if (null != first1) {
+          const _HermesInternal5 = HermesInternal;
+          let str13 = "Fetch failed: " + tmp;
+        } else {
+          str13 = "Fetching SKU\u2026";
+          if (!first) {
+            if (null != stateFromStores) {
+              let str3 = stateFromStores3;
+              if (null == c8) {
+                const _HermesInternal4 = HermesInternal;
+                let str2 = "" + tmp3 + " \u00B7 " + "no DEFAULT googleSkuId, so nothing to price";
+              } else if (null == stateFromStores2) {
+                let str9 = " (billing not connected)";
+                if (str3) {
+                  str9 = "";
+                }
+                const _HermesInternal3 = HermesInternal;
+                str3 = "play id ";
+                let combined = "play id " + c8 + " \u00B7 not in IAPStore" + str9;
+              } else if (null == stateFromStores2.priceString) {
+                const _HermesInternal2 = HermesInternal;
+                combined = "play id " + c8 + " \u00B7 product found, no priceString";
+              } else {
+                const _HermesInternal = HermesInternal;
+                combined = "play id " + c8 + " \u00B7 " + stateFromStores2.priceString;
+              }
+            } else {
+              str2 = "Paste a SKU ID and its application ID to enable the modals below.";
+              if (closure_13) {
+                str2 = "Not fetched yet. Opening a modal fetches it first.";
+              }
+            }
+          }
+        }
+        return str13;
+      }, items10);
+      obj5.paddingVertical = trimmed1(stateFromStores[10]).space.PX_16;
+      obj5.paddingBottom =
+        trimmed1(stateFromStores[10]).space.PX_16 +
+        trimmed1(stateFromStores[14])({ includeKeyboardHeight: true }).insets.bottom;
+      obj4.contentContainerStyle = obj5;
+      const obj6 = { title: "SKU", description: memo, hasIcons: false, children: null };
+      const tmp31 = closure_6;
+      const tmp4Result = tmp4(first1.useState(null), 2);
+      const items11 = [
+        closure_13(stateFromStores1, {
+          style: tmp.inputRow,
+          children: closure_13(require("TextInput").TextInput, {
+            label: "Application ID",
+            value: str2,
+            onChange: tmp8,
+            placeholder: "1234567890123456789",
+            autoCapitalize: "none",
+            autoCorrect: false,
+            keyboardType: "number-pad",
+          }),
+        }),
+      ];
+      let obj7 = {
+        style: tmp.inputRow,
+        children: closure_13(require("TextInput").TextInput, {
+          label: "Application ID",
+          value: str2,
+          onChange: tmp8,
+          placeholder: "1234567890123456789",
+          autoCapitalize: "none",
+          autoCorrect: false,
+          keyboardType: "number-pad",
+        }),
+      };
+      items11[1] = closure_13(stateFromStores1, {
+        style: tmp.inputRow,
+        children: closure_13(require("TextInput").TextInput, {
+          label: "SKU ID",
+          value: str,
+          onChange: tmp6,
+          placeholder: "1234567890123456789",
+          autoCapitalize: "none",
+          autoCorrect: false,
+          keyboardType: "number-pad",
+        }),
+      });
+      obj6.children = items11;
+      const items12 = [closure_14(require("TableRowGroup").TableRowGroup, obj6), ,];
+      let obj8 = {
+        style: tmp.inputRow,
+        children: closure_13(require("TextInput").TextInput, {
+          label: "SKU ID",
+          value: str,
+          onChange: tmp6,
+          placeholder: "1234567890123456789",
+          autoCapitalize: "none",
+          autoCorrect: false,
+          keyboardType: "number-pad",
+        }),
+      };
+      let isAndroidResult = require("PlatformUtils").isAndroid();
+      if (isAndroidResult) {
+        let obj9 = { title: "Pricing", description: tmp25, hasIcons: false, children: null };
+        let str3 = "needs a fetched SKU with a DEFAULT googleSkuId";
+        if (null != tmp16) {
+          let _HermesInternal = HermesInternal;
+          str3 = "play id " + tmp16;
+        }
+        const obj10 = {
+          label: "Query Play for this SKU's price",
+          subLabel: str3,
+          onPress: callback4,
+          disabled: null == tmp16,
+          arrow: true,
+        };
+        obj9.children = tmp30(tmp9(tmp3[22]).TableRow, obj10);
+        isAndroidResult = tmp30(tmp9(tmp3[21]).TableRowGroup, obj9);
+      }
+      items12[1] = isAndroidResult;
+      const items13 = [
+        closure_13(require("TableRow").TableRow, {
+          label: "Product details",
+          subLabel: "The PDP, as opened from a gift-code embed",
+          onPress: callback1,
+          disabled: tmp28,
+          arrow: true,
+        }),
+        closure_13(require("TableRow").TableRow, {
+          label: "Purchase success (self)",
+          subLabel: "Redeem / link-account screen shown after buying",
+          onPress: callback2,
+          disabled: tmp28,
+          arrow: true,
+        }),
+      ];
+      let str5;
+      if (stateFromStores1 != null) {
+        str5 = stateFromStores1.username;
+      }
+      if (str5 == null) {
+        str5 = "you";
+      }
+      const obj11 = { spacing: 16, children: null };
+      const obj12 = { title: "Modals", hasIcons: false, children: null };
+      const tmp9Result4 = require("PlatformUtils");
+      items13[2] = closure_13(require("TableRow").TableRow, {
+        label: "Purchase success (gift)",
+        subLabel: "Recipient: " + str5 + " (self)",
+        onPress: callback3,
+        disabled: tmp28,
+        arrow: true,
+      });
+      obj12.children = items13;
+      items12[2] = closure_14(require("TableRowGroup").TableRowGroup, obj12);
+      obj11.children = items12;
+      obj4.children = closure_14(require("Stack/Stack").Stack, obj11);
+      return closure_13(tmp31, obj4);
     };
-    obj9.children = tmp30(tmp9(tmp3[21]).TableRow, obj10);
-    isAndroidResult = tmp30(tmp9(tmp3[19]).TableRowGroup, obj9);
-  }
-  items12[1] = isAndroidResult;
-  const items13 = [
-    closure_13(require("TableRow").TableRow, {
-      label: "Product details",
-      subLabel: "The PDP, as opened from a gift-code embed",
-      onPress: callback1,
-      disabled: tmp28,
-      arrow: true,
-    }),
-    closure_13(require("TableRow").TableRow, {
-      label: "Purchase success (self)",
-      subLabel: "Redeem / link-account screen shown after buying",
-      onPress: callback2,
-      disabled: tmp28,
-      arrow: true,
-    }),
-  ];
-  let str5;
-  if (stateFromStores1 != null) {
-    str5 = stateFromStores1.username;
-  }
-  if (str5 == null) {
-    str5 = "you";
-  }
-  const obj11 = { spacing: 16, children: null };
-  const obj12 = { title: "Modals", hasIcons: false, children: null };
-  const tmp9Result4 = require("PlatformUtils");
-  items13[2] = closure_13(require("TableRow").TableRow, {
-    label: "Purchase success (gift)",
-    subLabel: "Recipient: " + str5 + " (self)",
-    onPress: callback3,
-    disabled: tmp28,
-    arrow: true,
-  });
-  obj12.children = items13;
-  items12[2] = closure_14(require("TableRowGroup").TableRowGroup, obj12);
-  obj11.children = items12;
-  obj4.children = closure_14(require("Stack/Stack").Stack, obj11);
-  return closure_13(tmp31, obj4);
-}

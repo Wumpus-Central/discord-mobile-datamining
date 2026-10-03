@@ -1,14 +1,15 @@
 // discord_app/modules/applications/useGuildEmbeddedApplications.tsx
+import c from "../../../_runtime/00576_c.js";
 import DurationsDefault from "../../utils/Durations.tsx";
 import ApplicationActionCreatorsDefault from "ApplicationActionCreators.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import ApplicationStore from "ApplicationStore.tsx";
 
-const require = fn;
+require = fn;
 const initialize = fn(504);
 const obj2 = {
-  getQueryId: fn(1074).QueryIds.GUILD_EMBEDDED_APPLICATIONS,
+  getQueryId: fn(1085).QueryIds.GUILD_EMBEDDED_APPLICATIONS,
   failureStaleAfter: DurationsDefault.Seconds.MINUTE,
   get(arg0, arg1) {
     const guildEmbeddedApplications = ApplicationStore.getGuildEmbeddedApplications(arg1, arg0);
@@ -40,7 +41,7 @@ let closure_3 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -71,7 +72,7 @@ let closure_3 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
         return obj;
       }
       c3 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     } catch (tmp11) {
       c3 = tmp;
       throw tmp11;
@@ -89,33 +90,82 @@ obj2.load = function () {
   return applyArgumentsResult;
 };
 let closure_6 = initialize.createFetchStore(ApplicationStore, obj2);
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/useGuildEmbeddedApplications.tsx");
 
-export const useGuildEmbeddedApplications = function useGuildEmbeddedApplications(APP_CHANNEL, guildId, channelId) {
-  const tmp = closure_6(APP_CHANNEL, guildId, channelId);
-  const data = tmp.data;
-  const error = tmp.error;
-  const isLoading = tmp.isLoading;
-  const refetch = tmp.refetch;
-  noop.useRef(false);
-  const items = [data, isLoading, error, refetch];
-  const effect = noop.useEffect(() => {
-    if (null != data) {
-      ref.current = true;
-    } else {
-      let current = ref.current;
-      if (current) {
-        current = !isLoading;
+export const useGuildEmbeddedApplications = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0, arg1, arg2) => {
+      const cResult = c.c(6);
+      const tmp2 = closure_6(arg0, arg1, arg2);
+      const data = tmp2.data;
+      const error = tmp2.error;
+      const isLoading = tmp2.isLoading;
+      const refetch = tmp2.refetch;
+      noop.useRef(false);
+      if (cResult[0] === data) {
+        if (cResult[1] === error) {
+          if (cResult[2] === isLoading) {
+            if (cResult[3] === refetch) {
+              let tmp3 = cResult[4];
+              let tmp4 = cResult[5];
+            }
+            const effect = noop.useEffect(tmp3, tmp4);
+            return tmp2;
+          }
+        }
       }
-      if (current) {
-        current = null == error;
-      }
-      if (current) {
-        ref.current = false;
-        refetch();
-      }
+      const fn = function c() {
+        if (null != data) {
+          ref.current = true;
+        } else {
+          let current = ref.current;
+          if (current) {
+            current = !isLoading;
+          }
+          if (current) {
+            current = null == error;
+          }
+          if (current) {
+            ref.current = false;
+            refetch();
+          }
+        }
+      };
+      const items = [data, isLoading, error, refetch];
+      cResult[0] = data;
+      cResult[1] = error;
+      cResult[2] = isLoading;
+      cResult[3] = refetch;
+      cResult[4] = fn;
+      cResult[5] = items;
+      tmp4 = items;
+      tmp3 = fn;
     }
-  }, items);
-  return tmp;
-};
+  : (arg0, arg1, arg2) => {
+      const tmp = closure_6(arg0, arg1, arg2);
+      const data = tmp.data;
+      const error = tmp.error;
+      const isLoading = tmp.isLoading;
+      const refetch = tmp.refetch;
+      noop.useRef(false);
+      const items = [data, isLoading, error, refetch];
+      const effect = noop.useEffect(() => {
+        if (null != data) {
+          ref.current = true;
+        } else {
+          let current = ref.current;
+          if (current) {
+            current = !isLoading;
+          }
+          if (current) {
+            current = null == error;
+          }
+          if (current) {
+            ref.current = false;
+            refetch();
+          }
+        }
+      }, items);
+      return tmp;
+    };

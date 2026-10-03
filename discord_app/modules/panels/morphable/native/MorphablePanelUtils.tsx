@@ -12,10 +12,10 @@ clamp.__workletHash = 1391695493868;
 clamp.__initData = {
   code: "function clamp_MorphablePanelUtilsTsx1(value,min,max){return Math.min(Math.max(value,min),max);}",
 };
-function calculateXYDiff(state, get) {
+function calculateXYDiff(state, sharedValue) {
   ({ absoluteY, absoluteX } = state.changedTouches[0]);
-  const diff = get.get().absoluteYStart - absoluteY;
-  const diff1 = get.get().absoluteXStart - absoluteX;
+  const diff = sharedValue.get().absoluteYStart - absoluteY;
+  const diff1 = sharedValue.get().absoluteXStart - absoluteX;
   const absolute = Math.abs(diff);
   const obj = { absoluteX, absoluteY, xDiff: diff1, yDiff: diff, isNotPullDownGesture: null, absoluteMovement: null };
   const bound = Math.max(absolute, Math.abs(diff1));

@@ -1,47 +1,98 @@
 // discord_app/modules/media_viewer/native/components/MediaViewerThumbnails.tsx
+import c from "../../../../../_runtime/00576_c.js";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
-import ReanimatedRexportDefault from "../../../reanimated/ReanimatedRexport.tsx";
 import REAWorkaroundViewDefault from "../../../reanimated/native/REAWorkaroundView.tsx";
-import VisualEffectViewDefault from "../../../visual_effect_view/native/VisualEffectView.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import useMediaItemSpoilerState from "../useMediaItemSpoilerState.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const ReanimatedRexportDefault = View(4612);
+const VisualEffectViewDefault = View(5773);
 require = fn;
-function ObscuredView(source) {
-  source = source.source;
-  [tmp4, tmp5] = useMediaItemSpoilerState.useMediaItemSpoilerState(source.index);
-  useToken;
-  let tmp10Result = null;
-  if (tmp4) {
-    if (source.spoiler) {
-      const obj2 = { style: null, children: null };
-      const items = [absoluteFill.absoluteFill, tmp5];
-      obj2.style = items;
-      const tmp7Result = VisualEffectViewDefault;
-      let str = "light";
-      if (tmpResult.isAndroid()) {
-        str = "dark";
-      }
-      const obj3 = { blurTheme: str, style: absoluteFill.absoluteFill, android_fallbackColor: tmp8 };
-      obj2.children = React6(tmp7Result, obj3);
-      tmp10Result = React6(ReanimatedRexportDefault.View, obj2);
-      tmpResult = PlatformUtils;
-    } else {
-      tmp10Result = null;
-    }
-  }
-  return tmp10Result;
-}
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
-const Constants = fn(7922);
+const Constants = fn(7967);
 ({ THUMBNAIL_WIDTH_MARGIN: closure_7, THUMBNAIL_MARGIN, THUMBNAIL_HEIGHT } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4845);
+const ReactCompilerGating = fn(558);
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      let tmp2 = dependencyMap;
+      const cResult = c.c(7);
+      ({ source, index } = arg0);
+      [tmp5, tmp6] = useMediaItemSpoilerState.useMediaItemSpoilerState(index);
+      const tmp4 = _slicedToArray(useMediaItemSpoilerState.useMediaItemSpoilerState(index), 2);
+      let View = importDefault;
+      const token = useToken.useToken(nativeDefault.colors.SPOILER_HIDDEN_BACKGROUND);
+      let tmp8 = null;
+      if (tmp5) {
+        if (!source.spoiler) {
+          tmp8 = null;
+        }
+        if (cResult[0] !== tmp6) {
+          const items = [timestampProducer.absoluteFill, tmp6];
+          cResult[0] = tmp6;
+          cResult[1] = items;
+          let tmp9 = items;
+        } else {
+          tmp9 = cResult[1];
+        }
+        if (cResult[2] !== token) {
+          const ViewResult = VisualEffectViewDefault;
+          let str = "light";
+          if (tmpResult.isAndroid()) {
+            str = "dark";
+          }
+          const obj4 = { blurTheme: str, style: timestampProducer.absoluteFill, android_fallbackColor: token };
+          const tmp12Result = closure_1_8(ViewResult, obj4);
+          cResult[2] = token;
+          cResult[3] = tmp12Result;
+          let tmp11 = tmp12Result;
+          tmpResult = PlatformUtils;
+        } else {
+          tmp11 = cResult[3];
+        }
+        if (cResult[4] === tmp9) {
+        }
+        View = ReanimatedRexportDefault.View;
+        const obj5 = { style: tmp9, children: tmp11 };
+        tmp2 = closure_1_8(View, obj5);
+        cResult[4] = tmp9;
+        cResult[5] = tmp11;
+        cResult[6] = tmp2;
+      }
+      return tmp8;
+    }
+  : (source) => {
+      source = source.source;
+      [tmp4, tmp5] = useMediaItemSpoilerState.useMediaItemSpoilerState(source.index);
+      useToken;
+      let tmp10Result = null;
+      if (tmp4) {
+        if (source.spoiler) {
+          const obj2 = { style: null, children: null };
+          const items = [timestampProducer.absoluteFill, tmp5];
+          obj2.style = items;
+          const tmp7Result = VisualEffectViewDefault;
+          let str = "light";
+          if (tmpResult.isAndroid()) {
+            str = "dark";
+          }
+          const obj3 = { blurTheme: str, style: timestampProducer.absoluteFill, android_fallbackColor: tmp8 };
+          obj2.children = closure_1_8(tmp7Result, obj3);
+          tmp10Result = closure_1_8(ReanimatedRexportDefault.View, obj2);
+          tmpResult = PlatformUtils;
+        } else {
+          tmp10Result = null;
+        }
+      }
+      return tmp10Result;
+    };
+const createStyles = fn(4890);
 let closure_11 = createStyles.createStyles({
   containerPortrait: { height: 60 },
   thumbnailButtonPortrait: { overflow: "hidden", marginHorizontal: THUMBNAIL_MARGIN, borderRadius: 2 },
@@ -78,10 +129,10 @@ let closure_12 = noop.memo((onSelect) => {
     thumbnail = first;
   }
   obj3.source = thumbnail;
-  const items2 = [React6(FastImageDefault, obj3), React6(ObscuredView, { source: first, index })];
+  const items2 = [closure_1_8(FastImageDefault, obj3), closure_1_8(closure_10, { source: first, index })];
   obj2.children = items2;
-  obj.children = React7(hasOwnProperty, obj2);
-  return React6(ReanimatedRexportDefault.View, obj);
+  obj.children = options(hasOwnProperty, obj2);
+  return closure_1_8(ReanimatedRexportDefault.View, obj);
 });
 const __initData = {
   code: "function MediaViewerThumbnailsTsx1(){const{scrollEnabled}=this.__closure;return{scrollEnabled:scrollEnabled.get()};}",
@@ -119,14 +170,14 @@ export default function MediaViewerThumbnails(syncer) {
   }, items);
   const tmp = closure_11();
   const selectedIndex = thumbnailScrollPositions(
-    sources(variableWidthThumbnailsEnabled[13]).useSelectedMediaSource(syncer),
+    sources(variableWidthThumbnailsEnabled[15]).useSelectedMediaSource(syncer),
     1,
   )[0];
   const items1 = [sources, selectedIndex, onSelect, useThumbnailStyle];
   const items2 = [sources.length];
   const callback = headerBufferStyle.useCallback(
     (arg0, index) =>
-      React6(closure_12, {
+      closure_2_8(closure_12, {
         index,
         source: sources[index],
         numSources: sources.length,
@@ -140,27 +191,27 @@ export default function MediaViewerThumbnails(syncer) {
     const items = [sources.length];
     return items;
   }, items2);
-  const obj = sources(variableWidthThumbnailsEnabled[13]);
-  const fn = function n() {
+  const obj = sources(variableWidthThumbnailsEnabled[15]);
+  const fn = function o() {
     return { scrollEnabled: scrollEnabled.get() };
   };
   fn.__closure = { scrollEnabled };
   fn.__workletHash = 13439565264141;
   fn.__initData = __initData;
   const items3 = [headerBufferStyle];
-  const animatedProps = sources(variableWidthThumbnailsEnabled[8]).useAnimatedProps(fn);
+  const animatedProps = sources(variableWidthThumbnailsEnabled[12]).useAnimatedProps(fn);
   const items4 = [footerBufferStyle];
   const callback1 = headerBufferStyle.useCallback(
-    () => React6(REAWorkaroundViewDefault, { style: headerBufferStyle }),
+    () => closure_2_8(REAWorkaroundViewDefault, { style: headerBufferStyle }),
     items3,
   );
   const items5 = [index];
   const callback2 = headerBufferStyle.useCallback(
-    () => React6(REAWorkaroundViewDefault, { style: footerBufferStyle }),
+    () => closure_2_8(REAWorkaroundViewDefault, { style: footerBufferStyle }),
     items4,
   );
   const memo2 = headerBufferStyle.useMemo(() => index.get(), items5);
-  return useThumbnailStyle(sources(variableWidthThumbnailsEnabled[15]).AnimatedFastList, {
+  return useThumbnailStyle(sources(variableWidthThumbnailsEnabled[17]).AnimatedFastList, {
     ref,
     style: tmp.containerPortrait,
     sections: memo1,

@@ -4,15 +4,15 @@ import GameOrganizationInviteActionCreatorsDefault from "GameOrganizationInviteA
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import GameOrganizationInviteStore from "GameOrganizationInviteStore.tsx";
 
-const constants = fn(17443).GameOrganizationInviteStates;
+const constants = fn(11084).GameOrganizationInviteStates;
 const initialize = fn(504);
 const obj2 = {
-  getQueryId: fn(1074).QueryIds.GAME_ORGANIZATION_INVITE,
+  getQueryId: fn(1085).QueryIds.GAME_ORGANIZATION_INVITE,
   staleAfter: 5 * DurationsDefault.Seconds.MINUTE,
   failureStaleAfter: 5 * DurationsDefault.Seconds.MINUTE,
   get(arg0) {
     const invite = GameOrganizationInviteStore.getInvite(arg0);
-    let state;
+    state = undefined;
     if (invite != null) {
       state = invite.state;
     }
@@ -35,7 +35,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -66,7 +66,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
         return obj;
       } else {
         c1 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp8) {
       c1 = tmp;

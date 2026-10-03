@@ -43,6 +43,6 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/utils/ApplicationFlagUtils.tsx");
 
 export { getApplicationFlags };
-export const hasApplicationFlag = function hasApplicationFlag(application, EMBEDDED) {
-  return BigFlagUtilsAll.has(getApplicationFlags(application), EMBEDDED);
+export const hasApplicationFlag = function hasApplicationFlag(application, EMBEDDED_FIRST_PARTY) {
+  return BigFlagUtilsAll.has(getApplicationFlags(application), EMBEDDED_FIRST_PARTY);
 };

@@ -6,7 +6,7 @@ import ChannelStore from "../../../stores/ChannelStore.tsx";
 import LurkingStore from "../LurkingStore.tsx";
 
 const require = fn;
-const JoinGuildSources = fn(1074).JoinGuildSources;
+const JoinGuildSources = fn(1085).JoinGuildSources;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/lurker_mode/native/LurkerServerPreviewJoinButton.tsx");
@@ -30,7 +30,7 @@ export default noop.memo(function LurkerServerPreviewJoinButton(guildId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {

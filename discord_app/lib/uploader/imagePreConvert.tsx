@@ -1,6 +1,6 @@
 // discord_app/lib/uploader/imagePreConvert.tsx
-import asyncRequireImpl from "../../../_runtime/01981_asyncRequireImpl.js";
-import Upload from "Upload.tsx";
+import asyncRequireImpl from "../../../_runtime/01987_asyncRequireImpl.js";
+import UploadPlatform from "../../modules/media_uploads/UploadPlatform.tsx";
 import imageFilename from "imageFilename.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -8,7 +8,7 @@ import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 require = fn;
 function preConversionFormat(platform) {
   let tmp3 = null;
-  if (platform.platform === Upload.UploadPlatform.WEB) {
+  if (platform.platform === UploadPlatform.UploadPlatform.WEB) {
     tmp3 = null;
     if (true !== platform.imageConversionEvaluated) {
       tmp3 = null;
@@ -44,7 +44,7 @@ let closure_5 = async function _maybePreConvertImageItem() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -79,7 +79,7 @@ let closure_5 = async function _maybePreConvertImageItem() {
             const tmp94 = preConversionFormat(value);
             closure_131_1 = tmp94;
             if (null != tmp94) {
-              if (value.platform === Upload.UploadPlatform.WEB) {
+              if (value.platform === UploadPlatform.UploadPlatform.WEB) {
                 c5 = 1;
                 const items = [
                   asyncRequireImpl(dependencyMap[4], dependencyMap.paths),
@@ -249,7 +249,7 @@ const result = size.fileFinishedImporting("lib/uploader/imagePreConvert.tsx");
 
 export const itemNeedsImagePreConversion = function itemNeedsImagePreConversion(file) {
   let tmp3 = null;
-  if (file.platform === Upload.UploadPlatform.WEB) {
+  if (file.platform === UploadPlatform.UploadPlatform.WEB) {
     tmp3 = null;
     if (true !== file.imageConversionEvaluated) {
       tmp3 = null;

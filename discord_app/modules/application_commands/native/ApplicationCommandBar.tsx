@@ -1,4 +1,5 @@
 // discord_app/modules/application_commands/native/ApplicationCommandBar.tsx
+import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
@@ -8,14 +9,198 @@ import usePreviousDefault from "../../../hooks/usePrevious.tsx";
 import application_commands_ApplicationCommandUtils from "ApplicationCommandUtils.tsx";
 import DescriptionEllipsisDefault from "../../../components_native/common/DescriptionEllipsis.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
+import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 
 require = fn;
-function ApplicationCommandOptionItem(arg0) {
+let closure_3 = ["option", "optionState"];
+get_ActivityIndicator = fn(17);
+({ View: closure_7, ScrollView: closure_8, StyleSheet } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
+const createStyles = fn(4890);
+let obj2 = { applicationCommandBar: { flexDirection: "column", backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND, borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BORDER, overflow: "hidden" }, applicationIcon: null, applicationTopWrapperScrollView: null, applicationName: null, applicationOptionalOptionsDivider: null, applicationOptionalOptionsDividerWithNoRequired: null, applicationOptionalOptionsIndicator: null, applicationDescriptionContainer: null, applicationDescriptionDivider: null, applicationCommandOption: null, applicationCommandOptionText: null, activeCommandOption: null, activeCommandOptionText: null, completeCommandOptionText: null, errorCommandOptionText: null, optionDescriptionContainer: null, descriptionEllipsis: null, descriptionEllipsisDots: null, completeCommandOption: null };
+let size = { width: 24, height: 24, borderRadius: nativeDefault.radii.md, marginRight: 16 };
+obj2.applicationIcon = size;
+obj2.applicationTopWrapperScrollView = { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, paddingVertical: 8 };
+obj2.applicationName = { textAlignVertical: "center", marginRight: 12 };
+const size1 = { width: StyleSheet.hairlineWidth, marginVertical: 8, marginHorizontal: 12, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, height: "100%" };
+obj2.applicationOptionalOptionsDivider = size1;
+obj2.applicationOptionalOptionsDividerWithNoRequired = { marginLeft: 4 };
+obj2.applicationOptionalOptionsIndicator = { marginHorizontal: 4, paddingVertical: 8 };
+obj2.applicationDescriptionContainer = { flexShrink: 1 };
+let obj3 = { flexDirection: "column", backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND, borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH, borderColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BORDER, overflow: "hidden" };
+obj2.applicationDescriptionDivider = { marginLeft: 0, backgroundColor: nativeDefault.colors.MOBILE_COMMAND_BAR_DIVIDER };
+let obj4 = { marginLeft: 0, backgroundColor: nativeDefault.colors.MOBILE_COMMAND_BAR_DIVIDER };
+obj2.applicationCommandOption = { marginHorizontal: 4, padding: 8, fontSize: 12, alignItems: "center", borderRadius: nativeDefault.radii.xs, backgroundColor: fn(5620).DARK_PRIMARY_800_LIGHT_PRIMARY_300 };
+let obj5 = { marginHorizontal: 4, padding: 8, fontSize: 12, alignItems: "center", borderRadius: nativeDefault.radii.xs, backgroundColor: fn(5620).DARK_PRIMARY_800_LIGHT_PRIMARY_300 };
+obj2.applicationCommandOptionText = { color: nativeDefault.colors.TEXT_DEFAULT };
+let obj6 = { color: nativeDefault.colors.TEXT_DEFAULT };
+obj2.activeCommandOption = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
+let obj7 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
+obj2.activeCommandOptionText = { color: nativeDefault.colors.WHITE };
+obj2.completeCommandOptionText = { opacity: 0.5 };
+let obj8 = { color: nativeDefault.colors.WHITE };
+obj2.errorCommandOptionText = { color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
+obj2.optionDescriptionContainer = { overflow: "hidden", paddingHorizontal: 16, paddingVertical: 8, flexDirection: "row" };
+const obj9 = { color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
+obj2.descriptionEllipsis = { marginLeft: 10, backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND };
+let obj10 = { marginLeft: 10, backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND };
+obj2.descriptionEllipsisDots = { backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+let obj11 = { backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+obj2.completeCommandOption = { backgroundColor: fn(5620).DARK_PRIMARY_660_LIGHT_PRIMARY_300 };
+let closure_13 = createStyles.createStyles(obj2);
+let ReactCompilerGating = fn(558);
+let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(24);
+  if (cResult[0] !== arg0) {
+    ({ option, optionState } = arg0);
+    const tmp9 = _objectWithoutProperties(arg0, closure_3);
+    cResult[0] = arg0;
+    cResult[1] = option;
+    cResult[2] = optionState;
+    cResult[3] = tmp9;
+    let tmp6 = tmp9;
+    let tmp5 = optionState;
+    let tmp4 = option;
+  } else {
+    tmp4 = cResult[1];
+    tmp5 = cResult[2];
+    tmp6 = cResult[3];
+  }
+  const tmp10 = closure_13();
+  let flag;
+  if (tmp5 != null) {
+    flag = tmp5.isActive;
+  }
+  if (flag == null) {
+    flag = false;
+  }
+  if (cResult[4] !== tmp4.displayName) {
+    const intl = util.intl;
+    const obj2 = { optionName: tmp4.displayName };
+    const formatToPlainStringResult = intl.formatToPlainString(util.t.evoEHc, obj2);
+    cResult[4] = tmp4.displayName;
+    cResult[5] = formatToPlainStringResult;
+    let tmp11 = formatToPlainStringResult;
+  } else {
+    tmp11 = cResult[5];
+  }
+  let activeCommandOption = flag;
+  if (flag) {
+    activeCommandOption = tmp10.activeCommandOption;
+  }
+  let completeCommandOption = !flag;
+  if (!flag) {
+    let success;
+    if (tmp5 != null) {
+      if (tmp5.lastValidationResult != null) {
+        success = lastValidationResult.success;
+      }
+    }
+    completeCommandOption = success;
+  }
+  if (completeCommandOption) {
+    completeCommandOption = tmp10.completeCommandOption;
+  }
+  if (cResult[6] === tmp10.applicationCommandOption) {
+    if (cResult[7] === activeCommandOption) {
+      if (cResult[8] === completeCommandOption) {
+        let tmp14 = cResult[9];
+      }
+      let activeCommandOptionText = flag;
+      if (flag) {
+        activeCommandOptionText = tmp10.activeCommandOptionText;
+      }
+      let completeCommandOptionText = !flag;
+      if (!flag) {
+        let success1;
+        if (tmp5 != null) {
+          if (tmp5.lastValidationResult != null) {
+            success1 = lastValidationResult2.success;
+          }
+        }
+        completeCommandOptionText = success1;
+      }
+      if (completeCommandOptionText) {
+        completeCommandOptionText = tmp10.completeCommandOptionText;
+      }
+      let errorCommandOptionText = !flag;
+      if (!flag) {
+        let success2;
+        if (tmp5 != null) {
+          if (tmp5.lastValidationResult != null) {
+            success2 = lastValidationResult3.success;
+          }
+        }
+        errorCommandOptionText = false === success2;
+      }
+      if (errorCommandOptionText) {
+        errorCommandOptionText = tmp10.errorCommandOptionText;
+      }
+      if (cResult[10] === tmp10.applicationCommandOptionText) {
+        if (cResult[11] === activeCommandOptionText) {
+          if (cResult[12] === completeCommandOptionText) {
+            if (cResult[13] === errorCommandOptionText) {
+              let tmp17 = cResult[14];
+            }
+            if (cResult[15] === tmp4.displayName) {
+              if (cResult[16] === tmp17) {
+                let tmp18 = cResult[17];
+              }
+              if (cResult[18] === flag) {
+                if (cResult[19] === tmp6) {
+                  if (cResult[20] === tmp11) {
+                    if (cResult[21] === tmp14) {
+                      if (cResult[22] === tmp18) {
+                        let tmp21 = cResult[23];
+                      }
+                      return tmp21;
+                    }
+                  }
+                }
+              }
+              const obj3 = { accessibilityLabel: tmp11, accessibilityRole: "button", disabled: flag, style: tmp14 };
+              const merged = Object.assign(tmp6);
+              obj3.children = tmp18;
+              const tmp26 = v65535(Pressables.PressableOpacity, obj3);
+              cResult[18] = flag;
+              cResult[19] = tmp6;
+              cResult[20] = tmp11;
+              cResult[21] = tmp14;
+              cResult[22] = tmp18;
+              cResult[23] = tmp26;
+              tmp21 = tmp26;
+            }
+            const obj4 = { style: tmp17, numberOfLines: 1, children: tmp4.displayName };
+            const tmp20 = v65535(native.LegacyText, obj4);
+            cResult[15] = tmp4.displayName;
+            cResult[16] = tmp17;
+            cResult[17] = tmp20;
+            tmp18 = tmp20;
+          }
+        }
+      }
+      const items = [tmp10.applicationCommandOptionText, activeCommandOptionText, completeCommandOptionText, errorCommandOptionText];
+      cResult[10] = tmp10.applicationCommandOptionText;
+      cResult[11] = activeCommandOptionText;
+      cResult[12] = completeCommandOptionText;
+      cResult[13] = errorCommandOptionText;
+      cResult[14] = items;
+      tmp17 = items;
+    }
+  }
+  const items1 = [tmp10.applicationCommandOption, activeCommandOption, completeCommandOption];
+  cResult[6] = tmp10.applicationCommandOption;
+  cResult[7] = activeCommandOption;
+  cResult[8] = completeCommandOption;
+  cResult[9] = items1;
+  tmp14 = items1;
+}) : ((arg0) => {
   ({ option, optionState } = arg0);
   const merged = Object.assign(arg0, Object.assign({ option: 0, optionState: 0 }));
-  const tmp2 = closure_11();
+  const tmp2 = closure_13();
   let flag;
   if (optionState != null) {
     flag = optionState.isActive;
@@ -27,7 +212,7 @@ function ApplicationCommandOptionItem(arg0) {
   const intl = util.intl;
   obj.accessibilityLabel = intl.formatToPlainString(util.t.evoEHc, { optionName: option.displayName });
   obj.disabled = flag;
-  const items = [tmp2.applicationCommandOption, ,];
+  const items = [tmp2.applicationCommandOption, , ];
   let activeCommandOption = flag;
   if (flag) {
     activeCommandOption = tmp2.activeCommandOption;
@@ -49,7 +234,7 @@ function ApplicationCommandOptionItem(arg0) {
   items[2] = completeCommandOption;
   obj.style = items;
   const merged1 = Object.assign(merged);
-  const items1 = [tmp2.applicationCommandOptionText, , ,];
+  const items1 = [tmp2.applicationCommandOptionText, , , ];
   let activeCommandOptionText = flag;
   if (flag) {
     activeCommandOptionText = tmp2.activeCommandOptionText;
@@ -83,116 +268,318 @@ function ApplicationCommandOptionItem(arg0) {
     errorCommandOptionText = tmp2.errorCommandOptionText;
   }
   items1[3] = errorCommandOptionText;
-  obj.children = React6(native.LegacyText, { style: items1, numberOfLines: 1, children: option.displayName });
-  return React6(Pressables.PressableOpacity, obj);
-}
-get_ActivityIndicator = fn(17);
-({ View: hasOwnProperty, ScrollView: metroRequire, StyleSheet } = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4845);
-let obj2 = {
-  applicationCommandBar: {
-    flexDirection: "column",
-    backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND,
-    borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_BORDER_RADIUS,
-    borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH,
-    borderColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BORDER,
-    overflow: "hidden",
-  },
-  applicationIcon: null,
-  applicationTopWrapperScrollView: null,
-  applicationName: null,
-  applicationOptionalOptionsDivider: null,
-  applicationOptionalOptionsDividerWithNoRequired: null,
-  applicationOptionalOptionsIndicator: null,
-  applicationDescriptionContainer: null,
-  applicationDescriptionDivider: null,
-  applicationCommandOption: null,
-  applicationCommandOptionText: null,
-  activeCommandOption: null,
-  activeCommandOptionText: null,
-  completeCommandOptionText: null,
-  errorCommandOptionText: null,
-  optionDescriptionContainer: null,
-  descriptionEllipsis: null,
-  descriptionEllipsisDots: null,
-  completeCommandOption: null,
-};
-let size = { width: 24, height: 24, borderRadius: nativeDefault.radii.md, marginRight: 16 };
-obj2.applicationIcon = size;
-obj2.applicationTopWrapperScrollView = {
-  flexDirection: "row",
-  alignItems: "center",
-  paddingHorizontal: 16,
-  paddingVertical: 8,
-};
-obj2.applicationName = { textAlignVertical: "center", marginRight: 12 };
-const size1 = {
-  width: StyleSheet.hairlineWidth,
-  marginVertical: 8,
-  marginHorizontal: 12,
-  backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL,
-  height: "100%",
-};
-obj2.applicationOptionalOptionsDivider = size1;
-obj2.applicationOptionalOptionsDividerWithNoRequired = { marginLeft: 4 };
-obj2.applicationOptionalOptionsIndicator = { marginHorizontal: 4, paddingVertical: 8 };
-obj2.applicationDescriptionContainer = { flexShrink: 1 };
-let obj3 = {
-  flexDirection: "column",
-  backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND,
-  borderRadius: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_BORDER_RADIUS,
-  borderWidth: nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH,
-  borderColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BORDER,
-  overflow: "hidden",
-};
-obj2.applicationDescriptionDivider = {
-  marginLeft: 0,
-  backgroundColor: nativeDefault.colors.MOBILE_COMMAND_BAR_DIVIDER,
-};
-let obj4 = { marginLeft: 0, backgroundColor: nativeDefault.colors.MOBILE_COMMAND_BAR_DIVIDER };
-obj2.applicationCommandOption = {
-  marginHorizontal: 4,
-  padding: 8,
-  fontSize: 12,
-  alignItems: "center",
-  borderRadius: nativeDefault.radii.xs,
-  backgroundColor: fn(5939).DARK_PRIMARY_800_LIGHT_PRIMARY_300,
-};
-let obj5 = {
-  marginHorizontal: 4,
-  padding: 8,
-  fontSize: 12,
-  alignItems: "center",
-  borderRadius: nativeDefault.radii.xs,
-  backgroundColor: fn(5939).DARK_PRIMARY_800_LIGHT_PRIMARY_300,
-};
-obj2.applicationCommandOptionText = { color: nativeDefault.colors.TEXT_DEFAULT };
-let obj6 = { color: nativeDefault.colors.TEXT_DEFAULT };
-obj2.activeCommandOption = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
-let obj7 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
-obj2.activeCommandOptionText = { color: nativeDefault.colors.WHITE };
-obj2.completeCommandOptionText = { opacity: 0.5 };
-let obj8 = { color: nativeDefault.colors.WHITE };
-obj2.errorCommandOptionText = { color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
-obj2.optionDescriptionContainer = {
-  overflow: "hidden",
-  paddingHorizontal: 16,
-  paddingVertical: 8,
-  flexDirection: "row",
-};
-const obj9 = { color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
-obj2.descriptionEllipsis = {
-  marginLeft: 10,
-  backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND,
-};
-const obj10 = { marginLeft: 10, backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND };
-obj2.descriptionEllipsisDots = { backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-let obj11 = { backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-obj2.completeCommandOption = { backgroundColor: fn(5939).DARK_PRIMARY_660_LIGHT_PRIMARY_300 };
-let closure_11 = createStyles.createStyles(obj2);
-function ApplicationCommandOptionDescription(option) {
+  obj.children = v65535(native.LegacyText, { style: items1, numberOfLines: 1, children: option.displayName });
+  return v65535(Pressables.PressableOpacity, obj);
+});
+fn(558);
+const obj12 = { backgroundColor: fn(5620).DARK_PRIMARY_660_LIGHT_PRIMARY_300 };
+ReactCompilerGating = fn(558);
+let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((optionState) => {
+  const cResult = c.c(34);
+  ({ command, option } = optionState);
+  optionState = optionState.optionState;
+  const tmp4 = closure_13();
+  const tmp5 = usePreviousDefault(option);
+  closure_1 = tmp5;
+  [lineClamp, closure_3] = noop.useState(undefined);
+  [first1, _objectWithoutProperties] = noop.useState(0);
+  [tmp11, noop] = noop.useState(0);
+  const tmp12 = usePreviousDefault(first1);
+  closure_7 = tmp12;
+  if (cResult[0] === first1) {
+    if (cResult[1] === option) {
+      if (cResult[2] === tmp12) {
+        if (cResult[3] === tmp5) {
+          let tmp13 = cResult[4];
+          let tmp14 = cResult[5];
+        }
+        const effect = noop.useEffect(tmp13, tmp14);
+        if (cResult[6] !== lineClamp) {
+          const fn2 = function s() {
+            closure_3(1);
+          };
+          cResult[6] = lineClamp;
+          class B {
+            constructor(arg0) {
+              truncResult = Math.trunc(optionState.nativeEvent.layout.height);
+              tmp2 = undefined === closure_2;
+              if (!tmp2) {
+                tmp3 = closure_4;
+                tmp2 = truncResult > closure_4;
+              }
+              if (tmp2) {
+                tmp4 = closure_5;
+                tmp5 = closure_5(truncResult);
+              }
+              tmp6 = closure_6(truncResult);
+              return;
+            }
+          }
+          let tmp16 = fn2;
+        } else {
+          tmp16 = cResult[7];
+        }
+        if (cResult[8] === first1) {
+          if (cResult[9] === lineClamp) {
+            let tmp17 = cResult[10];
+          }
+          class B {
+            constructor(arg0) {
+              truncResult = Math.trunc(optionState.nativeEvent.layout.height);
+              tmp2 = undefined === closure_2;
+              if (!tmp2) {
+                tmp3 = closure_4;
+                tmp2 = truncResult > closure_4;
+              }
+              if (tmp2) {
+                tmp4 = closure_5;
+                tmp5 = closure_5(truncResult);
+              }
+              tmp6 = closure_6(truncResult);
+              return;
+            }
+          }
+          if (cResult[11] === command) {
+            if (cResult[12] === lineClamp) {
+              if (cResult[13] === tmp17) {
+                if (cResult[14] === option) {
+                  if (cResult[15] === optionState) {
+                    if (cResult[17] === tmp4.applicationDescriptionContainer) {
+                      if (cResult[18] === tmp19) {
+                        let tmp25 = cResult[19];
+                      }
+                      if (cResult[20] === tmp11) {
+                        if (cResult[21] === first1) {
+                          if (cResult[22] === tmp4.descriptionEllipsis) {
+                            if (cResult[23] === tmp4.descriptionEllipsisDots) {
+                              let tmp30 = cResult[24];
+                            }
+                            if (cResult[25] === tmp4.optionDescriptionContainer) {
+                              if (cResult[26] === tmp25) {
+                                if (cResult[27] === tmp30) {
+                                  let tmp33 = cResult[28];
+                                }
+                                if (cResult[29] === str) {
+                                  if (cResult[30] === tmp16) {
+                                    if (cResult[31] === tmp18) {
+                                      if (cResult[32] === tmp33) {
+                                        let tmp38 = cResult[33];
+                                      }
+                                      return tmp38;
+                                    }
+                                  }
+                                }
+                                const obj3 = { accessibilityRole: null, disabled: null, onPress: null, children: null };
+                                class B {
+                                  constructor(arg0) {
+                                    truncResult = Math.trunc(optionState.nativeEvent.layout.height);
+                                    tmp2 = undefined === closure_2;
+                                    if (!tmp2) {
+                                      tmp3 = closure_4;
+                                      tmp2 = truncResult > closure_4;
+                                    }
+                                    if (tmp2) {
+                                      tmp4 = closure_5;
+                                      tmp5 = closure_5(truncResult);
+                                    }
+                                    tmp6 = closure_6(truncResult);
+                                    return;
+                                  }
+                                }
+                                obj3.disabled = tmp18;
+                                obj3.onPress = tmp16;
+                                obj3.children = tmp33;
+                                const tmp40 = v65535(Pressables.PressableOpacity, obj3);
+                                cResult[29] = str;
+                                cResult[30] = tmp16;
+                                cResult[31] = tmp18;
+                                cResult[32] = tmp33;
+                                cResult[33] = tmp40;
+                                tmp38 = tmp40;
+                              }
+                            }
+                            class B {
+                              constructor(arg0) {
+                                truncResult = Math.trunc(optionState.nativeEvent.layout.height);
+                                tmp2 = undefined === closure_2;
+                                if (!tmp2) {
+                                  tmp3 = closure_4;
+                                  tmp2 = truncResult > closure_4;
+                                }
+                                if (tmp2) {
+                                  tmp4 = closure_5;
+                                  tmp5 = closure_5(truncResult);
+                                }
+                                tmp6 = closure_6(truncResult);
+                                return;
+                              }
+                            }
+                            tmp36[0] = tmp4.optionDescriptionContainer;
+                            const items = [tmp25, tmp30];
+                            tmp36[1] = items;
+                            const tmp37 = __initData(ref, tmp36);
+                            cResult[25] = tmp4.optionDescriptionContainer;
+                            cResult[26] = tmp25;
+                            cResult[27] = tmp30;
+                            cResult[28] = tmp37;
+                            tmp33 = tmp37;
+                          }
+                        }
+                      }
+                      if (tmp11 !== first1) {
+                        ({ descriptionEllipsis: obj5.style, descriptionEllipsisDots: obj5.dotStyle } = tmp4);
+                        class B {
+                          constructor(arg0) {
+                            truncResult = Math.trunc(optionState.nativeEvent.layout.height);
+                            tmp2 = undefined === closure_2;
+                            if (!tmp2) {
+                              tmp3 = closure_4;
+                              tmp2 = truncResult > closure_4;
+                            }
+                            if (tmp2) {
+                              tmp4 = closure_5;
+                              tmp5 = closure_5(truncResult);
+                            }
+                            tmp6 = closure_6(truncResult);
+                            return;
+                          }
+                        }
+                      }
+                      class B {
+                        constructor(arg0) {
+                          truncResult = Math.trunc(optionState.nativeEvent.layout.height);
+                          tmp2 = undefined === closure_2;
+                          if (!tmp2) {
+                            tmp3 = closure_4;
+                            tmp2 = truncResult > closure_4;
+                          }
+                          if (tmp2) {
+                            tmp4 = closure_5;
+                            tmp5 = closure_5(truncResult);
+                          }
+                          tmp6 = closure_6(truncResult);
+                          return;
+                        }
+                      }
+                      cResult[20] = tmp11;
+                      cResult[21] = first1;
+                      cResult[22] = tmp4.descriptionEllipsis;
+                      cResult[23] = tmp4.descriptionEllipsisDots;
+                      cResult[24] = null;
+                      tmp30 = tmp31;
+                    }
+                    class B {
+                      constructor(arg0) {
+                        truncResult = Math.trunc(optionState.nativeEvent.layout.height);
+                        tmp2 = undefined === closure_2;
+                        if (!tmp2) {
+                          tmp3 = closure_4;
+                          tmp2 = truncResult > closure_4;
+                        }
+                        if (tmp2) {
+                          tmp4 = closure_5;
+                          tmp5 = closure_5(truncResult);
+                        }
+                        tmp6 = closure_6(truncResult);
+                        return;
+                      }
+                    }
+                    tmp28[0] = tmp4.applicationDescriptionContainer;
+                    tmp28[1] = cResult[16];
+                    const tmp29 = v65535(ref, tmp28);
+                    cResult[17] = tmp4.applicationDescriptionContainer;
+                    cResult[18] = cResult[16];
+                    cResult[19] = tmp29;
+                    tmp25 = tmp29;
+                  }
+                }
+              }
+            }
+          }
+          let error;
+          if (optionState != null) {
+            if (optionState.lastValidationResult != null) {
+              error = lastValidationResult.error;
+            }
+          }
+          if (null != error) {
+            const obj6 = { lineClamp, onLayout: tmp17, variant: "text-sm/medium", color: "text-feedback-critical", children: optionState.lastValidationResult.error };
+            class B {
+              constructor(arg0) {
+                truncResult = Math.trunc(optionState.nativeEvent.layout.height);
+                tmp2 = undefined === closure_2;
+                if (!tmp2) {
+                  tmp3 = closure_4;
+                  tmp2 = truncResult > closure_4;
+                }
+                if (tmp2) {
+                  tmp4 = closure_5;
+                  tmp5 = closure_5(truncResult);
+                }
+                tmp6 = closure_6(truncResult);
+                return;
+              }
+            }
+          } else {
+            const obj10 = { lineClamp, onLayout: tmp17, variant: "text-sm/medium", color: "mobile-text-heading-primary", children: null != option ? option.displayDescription : command.displayDescription };
+          }
+          const tmp20Result = v65535(Text_Text.Text, obj10);
+          cResult[11] = command;
+          cResult[12] = lineClamp;
+          cResult[13] = tmp17;
+          cResult[14] = option;
+          cResult[15] = optionState;
+          cResult[16] = tmp20Result;
+        }
+        class B {
+          constructor(arg0) {
+            truncResult = Math.trunc(optionState.nativeEvent.layout.height);
+            tmp2 = undefined === closure_2;
+            if (!tmp2) {
+              tmp3 = closure_4;
+              tmp2 = truncResult > closure_4;
+            }
+            if (tmp2) {
+              tmp4 = closure_5;
+              tmp5 = closure_5(truncResult);
+            }
+            tmp6 = closure_6(truncResult);
+            return;
+          }
+        }
+        cResult[8] = first1;
+        cResult[9] = lineClamp;
+        cResult[10] = B;
+        tmp17 = B;
+      }
+    }
+  }
+  const fn = function n() {
+    if (closure_1 !== option) {
+      closure_5(0);
+      noop(0);
+      closure_3(undefined);
+    } else {
+      let tmp2 = first1 > 0;
+      if (tmp2) {
+        tmp2 = 0 === closure_7;
+      }
+      if (tmp2) {
+        closure_3(1);
+      }
+    }
+  };
+  const items1 = [tmp5, option, first1, tmp12];
+  cResult[0] = first1;
+  cResult[1] = option;
+  cResult[2] = tmp12;
+  cResult[3] = tmp5;
+  cResult[4] = fn;
+  cResult[5] = items1;
+  tmp14 = items1;
+  tmp13 = fn;
+  const tmp10 = _slicedToArray(noop.useState(0), 2);
+}) : ((option) => {
   option = option.option;
   const optionState = option.optionState;
   lineClamp = undefined;
@@ -200,7 +587,7 @@ function ApplicationCommandOptionDescription(option) {
   first1 = undefined;
   closure_5 = undefined;
   c6 = undefined;
-  const tmp = closure_11();
+  const tmp = closure_13();
   const tmp4 = usePreviousDefault(option);
   closure_1 = tmp4;
   [lineClamp, closure_3] = noop.useState(undefined);
@@ -257,40 +644,669 @@ function ApplicationCommandOptionDescription(option) {
     _undefined(truncResult);
   }
   if (null != error) {
-    const obj4 = {
-      lineClamp,
-      onLayout: onDescriptionLayout,
-      variant: "text-sm/medium",
-      color: "text-feedback-critical",
-      children: optionState.lastValidationResult.error,
-    };
+    const obj4 = { lineClamp, onLayout: onDescriptionLayout, variant: "text-sm/medium", color: "text-feedback-critical", children: optionState.lastValidationResult.error };
     let obj5 = obj4;
   } else {
-    obj5 = {
-      lineClamp,
-      onLayout: onDescriptionLayout,
-      variant: "text-sm/medium",
-      color: "mobile-text-heading-primary",
-      children: null != option ? option.displayDescription : option.command.displayDescription,
-    };
+    obj5 = { lineClamp, onLayout: onDescriptionLayout, variant: "text-sm/medium", color: "mobile-text-heading-primary", children: null != option ? option.displayDescription : option.command.displayDescription };
   }
-  obj3.children = React6(Text_Text.Text, obj5);
-  const items2 = [React6(hasOwnProperty, obj3)];
+  obj3.children = v65535(Text_Text.Text, obj5);
+  const items2 = [v65535(ref, obj3), ];
   let tmp15Result = null;
   if (tmp10 !== first1) {
     ({ descriptionEllipsis: obj6.style, descriptionEllipsisDots: obj6.dotStyle } = tmp);
-    tmp15Result = React6(DescriptionEllipsisDefault, { style: null, dotStyle: null });
+    tmp15Result = v65535(DescriptionEllipsisDefault, { style: null, dotStyle: null });
     const obj11 = { style: null, dotStyle: null };
   }
   items2[1] = tmp15Result;
   obj2.children = items2;
-  obj.children = closure_1_10(hasOwnProperty, obj2);
-  return React6(Pressables.PressableOpacity, obj);
-}
+  obj.children = __initData(ref, obj2);
+  return v65535(Pressables.PressableOpacity, obj);
+});
 size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/native/ApplicationCommandBar.tsx");
 
-export default function _default(command) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((command) => {
+  const cResult = command(guildId[10]).c(62);
+  command = command.command;
+  const section = command.section;
+  guildId = command.guildId;
+  const currentOption = command.currentOption;
+  const optionStates = command.optionStates;
+  const onPressOption = command.onPressOption;
+  const tmp4 = closure_13();
+  noop = tmp4;
+  noop.useRef(null);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const obj3 = {};
+    cResult[0] = obj3;
+    let first = obj3;
+  } else {
+    first = cResult[0];
+  }
+  noop.useRef(first);
+  let obj = command(guildId[10]);
+  [r10038, GuildMemberStore] = optionStates(noop.useState(false), 2);
+  const tmp7 = optionStates(noop.useState(false), 2);
+  [r10043, closure_10] = optionStates(noop.useState(false), 2);
+  const tmp9 = optionStates(noop.useState(), 2);
+  const first1 = tmp9[0];
+  closure_12 = tmp9[1];
+  if (cResult[1] !== command.options) {
+    class I {
+      constructor() {
+        c0 = false;
+        c1 = false;
+        options = command.options;
+        if (options != null) {
+          item = options.forEach(() => { ... });
+        }
+        tmp2 = closure_9(c0);
+        tmp3 = closure_10(c1);
+        return;
+      }
+    }
+    cResult[1] = command.options;
+    cResult[2] = I;
+  } else {
+    class I {
+      constructor() {
+        c0 = false;
+        c1 = false;
+        options = command.options;
+        if (options != null) {
+          item = options.forEach(() => { ... });
+        }
+        tmp2 = closure_9(c0);
+        tmp3 = closure_10(c1);
+        return;
+      }
+    }
+  }
+  if (cResult[3] !== command) {
+    class I {
+      constructor() {
+        c0 = false;
+        c1 = false;
+        options = command.options;
+        if (options != null) {
+          item = options.forEach(() => { ... });
+        }
+        tmp2 = closure_9(c0);
+        tmp3 = closure_10(c1);
+        return;
+      }
+    }
+    tmp13[0] = command;
+    cResult[3] = command;
+    cResult[4] = tmp13;
+  } else {
+    class I {
+      constructor() {
+        c0 = false;
+        c1 = false;
+        options = command.options;
+        if (options != null) {
+          item = options.forEach(() => { ... });
+        }
+        tmp2 = closure_9(c0);
+        tmp3 = closure_10(c1);
+        return;
+      }
+    }
+  }
+  const effect = obj2.useEffect(I, tmp13);
+  if (currentOption != null) {
+    class I {
+      constructor() {
+        c0 = false;
+        c1 = false;
+        options = command.options;
+        if (options != null) {
+          item = options.forEach(() => { ... });
+        }
+        tmp2 = closure_9(c0);
+        tmp3 = closure_10(c1);
+        return;
+      }
+    }
+  }
+  if (cResult[5] !== undefined) {
+    class I {
+      constructor() {
+        c0 = false;
+        c1 = false;
+        options = command.options;
+        if (options != null) {
+          item = options.forEach(() => { ... });
+        }
+        tmp2 = closure_9(c0);
+        tmp3 = closure_10(c1);
+        return;
+      }
+    }
+    if (currentOption != null) {
+      class I {
+        constructor() {
+          c0 = false;
+          c1 = false;
+          options = command.options;
+          if (options != null) {
+            item = options.forEach(() => { ... });
+          }
+          tmp2 = closure_9(c0);
+          tmp3 = closure_10(c1);
+          return;
+        }
+      }
+    }
+    class N {
+      constructor() {
+        name = undefined;
+        tmp = closure_12;
+        if (currentOption != null) {
+          name = currentOption.name;
+        }
+        tmpResult = tmp(name);
+        return;
+      }
+    }
+    cResult[5] = tmp16;
+    cResult[6] = N;
+  } else {
+    class I {
+      constructor() {
+        c0 = false;
+        c1 = false;
+        options = command.options;
+        if (options != null) {
+          item = options.forEach(() => { ... });
+        }
+        tmp2 = closure_9(c0);
+        tmp3 = closure_10(c1);
+        return;
+      }
+    }
+  }
+  if (cResult[7] !== currentOption) {
+    class I {
+      constructor() {
+        c0 = false;
+        c1 = false;
+        options = command.options;
+        if (options != null) {
+          item = options.forEach(() => { ... });
+        }
+        tmp2 = closure_9(c0);
+        tmp3 = closure_10(c1);
+        return;
+      }
+    }
+    tmp18[0] = currentOption;
+    class N {
+      constructor() {
+        name = undefined;
+        tmp = closure_12;
+        if (currentOption != null) {
+          name = currentOption.name;
+        }
+        tmpResult = tmp(name);
+        return;
+      }
+    }
+    cResult[7] = currentOption;
+    cResult[8] = tmp18;
+  } else {
+    class I {
+      constructor() {
+        c0 = false;
+        c1 = false;
+        options = command.options;
+        if (options != null) {
+          item = options.forEach(() => { ... });
+        }
+        tmp2 = closure_9(c0);
+        tmp3 = closure_10(c1);
+        return;
+      }
+    }
+  }
+  const effect1 = obj2.useEffect(N, tmp18);
+  if (cResult[9] === first1) {
+    class I {
+      constructor() {
+        c0 = false;
+        c1 = false;
+        options = command.options;
+        if (options != null) {
+          item = options.forEach(() => { ... });
+        }
+        tmp2 = closure_9(c0);
+        tmp3 = closure_10(c1);
+        return;
+      }
+    }
+    if (cResult[12] === first1) {
+      class I {
+        constructor() {
+          c0 = false;
+          c1 = false;
+          options = command.options;
+          if (options != null) {
+            item = options.forEach(() => { ... });
+          }
+          tmp2 = closure_9(c0);
+          tmp3 = closure_10(c1);
+          return;
+        }
+      }
+      const effect2 = obj2.useEffect(V, tmp21);
+      class N {
+        constructor() {
+          name = undefined;
+          tmp = closure_12;
+          if (currentOption != null) {
+            name = currentOption.name;
+          }
+          tmpResult = tmp(name);
+          return;
+        }
+      }
+      if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
+        class I {
+          constructor() {
+            c0 = false;
+            c1 = false;
+            options = command.options;
+            if (options != null) {
+              item = options.forEach(() => { ... });
+            }
+            tmp2 = closure_9(c0);
+            tmp3 = closure_10(c1);
+            return;
+          }
+        }
+        const items = [];
+        class N {
+          constructor() {
+            name = undefined;
+            tmp = closure_12;
+            if (currentOption != null) {
+              name = currentOption.name;
+            }
+            tmpResult = tmp(name);
+            return;
+          }
+        }
+        cResult[15] = items;
+      } else {
+        class I {
+          constructor() {
+            c0 = false;
+            c1 = false;
+            options = command.options;
+            if (options != null) {
+              item = options.forEach(() => { ... });
+            }
+            tmp2 = closure_9(c0);
+            tmp3 = closure_10(c1);
+            return;
+          }
+        }
+      }
+      if (cResult[16] === guildId) {
+        class I {
+          constructor() {
+            c0 = false;
+            c1 = false;
+            options = command.options;
+            if (options != null) {
+              item = options.forEach(() => { ... });
+            }
+            tmp2 = closure_9(c0);
+            tmp3 = closure_10(c1);
+            return;
+          }
+        }
+        tmp(tmp2[14]);
+        class N {
+          constructor() {
+            name = undefined;
+            tmp = closure_12;
+            if (currentOption != null) {
+              name = currentOption.name;
+            }
+            tmpResult = tmp(name);
+            return;
+          }
+        }
+        if (cResult[19] === tmp26) {
+          class I {
+            constructor() {
+              c0 = false;
+              c1 = false;
+              options = command.options;
+              if (options != null) {
+                item = options.forEach(() => { ... });
+              }
+              tmp2 = closure_9(c0);
+              tmp3 = closure_10(c1);
+              return;
+            }
+          }
+          const _Symbol = Symbol;
+          class N {
+            constructor() {
+              name = undefined;
+              tmp = closure_12;
+              if (currentOption != null) {
+                name = currentOption.name;
+              }
+              tmpResult = tmp(name);
+              return;
+            }
+          }
+          if (tmp29 === Symbol.for("react.memo_cache_sentinel")) {
+            class Z {
+              constructor(arg0, arg1) {
+                nativeEvent = command.nativeEvent;
+                current = closure_8.current;
+                current[arg1.name] = { x: nativeEvent.layout.x, width: nativeEvent.layout.width };
+                closure_8.current = current;
+                return;
+              }
+            }
+            class N {
+              constructor() {
+                name = undefined;
+                tmp = closure_12;
+                if (currentOption != null) {
+                  name = currentOption.name;
+                }
+                tmpResult = tmp(name);
+                return;
+              }
+            }
+          } else {
+            class Z {
+              constructor(arg0, arg1) {
+                nativeEvent = command.nativeEvent;
+                current = closure_8.current;
+                current[arg1.name] = { x: nativeEvent.layout.x, width: nativeEvent.layout.width };
+                closure_8.current = current;
+                return;
+              }
+            }
+          }
+          closure_13 = Z;
+          class B {
+            constructor() {
+              if (null != guildId) {
+                tmp2 = section;
+                botId = undefined;
+                if (section != null) {
+                  botId = tmp2.botId;
+                }
+                if (null != botId) {
+                  tmp4 = closure_9;
+                  return closure_9.getMember(tmp, tmp2.botId);
+                }
+              }
+              return;
+            }
+          }
+          if (null != undefined) {
+            class Z {
+              constructor(arg0, arg1) {
+                nativeEvent = command.nativeEvent;
+                current = closure_8.current;
+                current[arg1.name] = { x: nativeEvent.layout.x, width: nativeEvent.layout.width };
+                closure_8.current = current;
+                return;
+              }
+            }
+            if (currentOption != null) {
+              class Z {
+                constructor(arg0, arg1) {
+                  nativeEvent = command.nativeEvent;
+                  current = closure_8.current;
+                  current[arg1.name] = { x: nativeEvent.layout.x, width: nativeEvent.layout.width };
+                  closure_8.current = current;
+                  return;
+                }
+              }
+            }
+            class N {
+              constructor() {
+                name = undefined;
+                tmp = closure_12;
+                if (currentOption != null) {
+                  name = currentOption.name;
+                }
+                tmpResult = tmp(name);
+                return;
+              }
+            }
+          }
+          if (cResult[23] === tmp27) {
+            class Z {
+              constructor(arg0, arg1) {
+                nativeEvent = command.nativeEvent;
+                current = closure_8.current;
+                current[arg1.name] = { x: nativeEvent.layout.x, width: nativeEvent.layout.width };
+                closure_8.current = current;
+                return;
+              }
+            }
+            class N {
+              constructor() {
+                name = undefined;
+                tmp = closure_12;
+                if (currentOption != null) {
+                  name = currentOption.name;
+                }
+                tmpResult = tmp(name);
+                return;
+              }
+            }
+            if (cResult[26] === tmp4.applicationName) {
+              class Z {
+                constructor(arg0, arg1) {
+                  nativeEvent = command.nativeEvent;
+                  current = closure_8.current;
+                  current[arg1.name] = { x: nativeEvent.layout.x, width: nativeEvent.layout.width };
+                  closure_8.current = current;
+                  return;
+                }
+              }
+              if (cResult[29] === command.options) {
+                class Z {
+                  constructor(arg0, arg1) {
+                    nativeEvent = command.nativeEvent;
+                    current = closure_8.current;
+                    current[arg1.name] = { x: nativeEvent.layout.x, width: nativeEvent.layout.width };
+                    closure_8.current = current;
+                    return;
+                  }
+                }
+              }
+              class N {
+                constructor() {
+                  name = undefined;
+                  tmp = closure_12;
+                  if (currentOption != null) {
+                    name = currentOption.name;
+                  }
+                  tmpResult = tmp(name);
+                  return;
+                }
+              }
+              if (tmp41 != null) {
+                class Z {
+                  constructor(arg0, arg1) {
+                    nativeEvent = command.nativeEvent;
+                    current = closure_8.current;
+                    current[arg1.name] = { x: nativeEvent.layout.x, width: nativeEvent.layout.width };
+                    closure_8.current = current;
+                    return;
+                  }
+                }
+              }
+              class B {
+                constructor() {
+                  if (null != guildId) {
+                    tmp2 = section;
+                    botId = undefined;
+                    if (section != null) {
+                      botId = tmp2.botId;
+                    }
+                    if (null != botId) {
+                      tmp4 = closure_9;
+                      return closure_9.getMember(tmp, tmp2.botId);
+                    }
+                  }
+                  return;
+                }
+              }
+              cResult[30] = onPressOption;
+              cResult[31] = optionStates;
+              cResult[32] = undefined;
+            }
+            const obj4 = { style: null, lineClamp: 1, variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
+            class B {
+              constructor() {
+                if (null != guildId) {
+                  tmp2 = section;
+                  botId = undefined;
+                  if (section != null) {
+                    botId = tmp2.botId;
+                  }
+                  if (null != botId) {
+                    tmp4 = closure_9;
+                    return closure_9.getMember(tmp, tmp2.botId);
+                  }
+                }
+                return;
+              }
+            }
+            obj4.children = tmp36;
+            const tmp39 = closure_10(tmp(tmp2[17]).Text, obj4);
+            cResult[26] = tmp4.applicationName;
+            cResult[27] = tmp36;
+            cResult[28] = tmp39;
+          }
+          let tmp33 = null != tmp27;
+          if (tmp33) {
+            class Z {
+              constructor(arg0, arg1) {
+                nativeEvent = command.nativeEvent;
+                current = closure_8.current;
+                current[arg1.name] = { x: nativeEvent.layout.x, width: nativeEvent.layout.width };
+                closure_8.current = current;
+                return;
+              }
+            }
+            class N {
+              constructor() {
+                name = undefined;
+                tmp = closure_12;
+                if (currentOption != null) {
+                  name = currentOption.name;
+                }
+                tmpResult = tmp(name);
+                return;
+              }
+            }
+            tmp35[0] = tmp4.applicationIcon;
+            tmp35[1] = tmp27;
+            tmp33 = closure_10(section(tmp2[16]), tmp35);
+          }
+          cResult[23] = tmp27;
+          cResult[24] = tmp4.applicationIcon;
+          cResult[25] = tmp33;
+        }
+        const applicationCommandsIconSource = tmp(tmp2[15]).getApplicationCommandsIconSource(section, tmp26);
+        class B {
+          constructor() {
+            if (null != guildId) {
+              tmp2 = section;
+              botId = undefined;
+              if (section != null) {
+                botId = tmp2.botId;
+              }
+              if (null != botId) {
+                tmp4 = closure_9;
+                return closure_9.getMember(tmp, tmp2.botId);
+              }
+            }
+            return;
+          }
+        }
+        cResult[19] = tmp26;
+        cResult[20] = section;
+        cResult[21] = applicationCommandsIconSource;
+        const tmpResult2 = tmp(tmp2[15]);
+      }
+      class B {
+        constructor() {
+          if (null != guildId) {
+            tmp2 = section;
+            botId = undefined;
+            if (section != null) {
+              botId = tmp2.botId;
+            }
+            if (null != botId) {
+              tmp4 = closure_9;
+              return closure_9.getMember(tmp, tmp2.botId);
+            }
+          }
+          return;
+        }
+      }
+      cResult[16] = guildId;
+      cResult[17] = section;
+      cResult[18] = B;
+    }
+    class N {
+      constructor() {
+        name = undefined;
+        tmp = closure_12;
+        if (currentOption != null) {
+          name = currentOption.name;
+        }
+        tmpResult = tmp(name);
+        return;
+      }
+    }
+    tmp21[0] = first1;
+    tmp21[1] = tmp4;
+    cResult[13] = tmp4;
+    cResult[14] = tmp21;
+  }
+  class V {
+    constructor() {
+      tmp2 = null;
+      if (null != closure_11) {
+        tmp3 = closure_8;
+        tmp2 = closure_8.current[tmp];
+      }
+      if (null != tmp2) {
+        tmp4 = closure_7;
+        current = closure_7.current;
+        if (current != null) {
+          obj = { x: null, animated: true };
+          tmp5 = closure_6;
+          obj.x = tmp2.x - closure_6.applicationTopWrapperScrollView.paddingHorizontal;
+          scrollToResult = current.scrollTo(obj);
+        }
+      }
+      return;
+    }
+  }
+  cResult[9] = first1;
+  cResult[10] = tmp4.applicationTopWrapperScrollView;
+  cResult[11] = V;
+  const tmp8 = optionStates(noop.useState(false), 2);
+}) : ((command) => {
   command = command.command;
   const section = command.section;
   ({ guildId: dependencyMap, currentOption } = command);
@@ -298,22 +1314,22 @@ export default function _default(command) {
   const onPressOption = command.onPressOption;
   c9 = undefined;
   c10 = undefined;
-  let first;
-  let tmp = first();
-  closure_6 = tmp;
-  optionStates.useRef(null);
-  const ref = optionStates.useRef({});
-  [tmp4, c9] = currentOption(optionStates.useState(false), 2);
-  const tmp3 = currentOption(optionStates.useState(false), 2);
-  [tmp6, c10] = currentOption(optionStates.useState(false), 2);
-  const tmp7 = currentOption(optionStates.useState(), 2);
-  first = tmp7[0];
+  let stateFromStores;
+  let tmp = stateFromStores();
+  noop = tmp;
+  noop.useRef(null);
+  ref = noop.useRef({});
+  [tmp4, c9] = optionStates(noop.useState(false), 2);
+  const tmp3 = optionStates(noop.useState(false), 2);
+  [tmp6, c10] = optionStates(noop.useState(false), 2);
+  const tmp7 = optionStates(noop.useState(), 2);
+  const first = tmp7[0];
   closure_12 = tmp7[1];
   const items = [command];
-  const effect = optionStates.useEffect(() => {
+  const effect = noop.useEffect(() => {
     c0 = false;
     c1 = false;
-    const options = command.options;
+    options = command.options;
     if (options != null) {
       const item = options.forEach((required) => {
         if (true !== required.required) {
@@ -327,7 +1343,7 @@ export default function _default(command) {
     _undefined2(c1);
   }, items);
   const items1 = [currentOption];
-  const effect1 = optionStates.useEffect(() => {
+  const effect1 = noop.useEffect(() => {
     let name;
     if (currentOption != null) {
       name = currentOption.name;
@@ -335,7 +1351,7 @@ export default function _default(command) {
     closure_12(name);
   }, items1);
   const items2 = [first, tmp];
-  const effect2 = optionStates.useEffect(() => {
+  const effect2 = noop.useEffect(() => {
     let tmp2 = null;
     if (null != first) {
       tmp2 = ref.current[tmp];
@@ -348,9 +1364,9 @@ export default function _default(command) {
       }
     }
   }, items2);
-  const tmp5 = currentOption(optionStates.useState(false), 2);
-  const items3 = [ref];
-  const stateFromStores = command(504).useStateFromStores(items3, () => {
+  const tmp5 = optionStates(noop.useState(false), 2);
+  const items3 = [c9];
+  stateFromStores = command(504).useStateFromStores(items3, () => {
     if (null != dependencyMap) {
       let botId;
       if (section != null) {
@@ -362,11 +1378,8 @@ export default function _default(command) {
     }
   });
   const items4 = [section, stateFromStores];
-  const memo = optionStates.useMemo(
-    () => application_commands_ApplicationCommandUtils.getApplicationCommandsIconSource(section, stateFromStores),
-    items4,
-  );
-  closure_14 = optionStates.useCallback((nativeEvent, name) => {
+  const memo = noop.useMemo(() => application_commands_ApplicationCommandUtils.getApplicationCommandsIconSource(section, stateFromStores), items4);
+  closure_14 = noop.useCallback((nativeEvent, name) => {
     nativeEvent = nativeEvent.nativeEvent;
     const current = ref.current;
     current[name.name] = { x: nativeEvent.layout.x, width: nativeEvent.layout.width };
@@ -385,31 +1398,14 @@ export default function _default(command) {
     tmp17 = optionStates[name1];
   }
   const obj2 = { style: tmp.applicationCommandBar, children: null };
-  const obj3 = {
-    ref,
-    contentContainerStyle: tmp.applicationTopWrapperScrollView,
-    keyboardShouldPersistTaps: "always",
-    showsHorizontalScrollIndicator: false,
-    horizontal: true,
-    children: null,
-  };
+  const obj3 = { ref, contentContainerStyle: tmp.applicationTopWrapperScrollView, keyboardShouldPersistTaps: "always", showsHorizontalScrollIndicator: false, horizontal: true, children: null };
   let tmp22 = null != memo;
   if (tmp22) {
     const obj4 = { style: tmp.applicationIcon, source: memo };
-    tmp22 = ref(section(6085), obj4);
+    tmp22 = c10(section(5974), obj4);
   }
-  const items5 = [
-    tmp22,
-    ref(command(4841).Text, {
-      style: tmp.applicationName,
-      lineClamp: 1,
-      variant: "text-sm/semibold",
-      color: "mobile-text-heading-primary",
-      children: `/ ${command.displayName}`,
-    }),
-    ,
-  ];
-  let options = command.options;
+  const items5 = [tmp22, c10(command(4886).Text, { style: tmp.applicationName, lineClamp: 1, variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: `/ ${command.displayName}` }), , ];
+  options = command.options;
   let mapped;
   if (options != null) {
     mapped = options.map((required) => {
@@ -419,18 +1415,18 @@ export default function _default(command) {
         const obj = {
           option: required,
           onPress() {
-            let tmpResult;
-            if (onPressOption != null) {
-              tmpResult = tmp(closure_0);
-            }
-            return tmpResult;
-          },
+              let tmpResult;
+              if (onPressOption != null) {
+                tmpResult = tmp(closure_0);
+              }
+              return tmpResult;
+            },
           optionState: optionStates[required.name],
           onLayout(arg0) {
-            return closure_14(arg0, closure_0);
-          },
+              return closure_14(arg0, closure_0);
+            }
         };
-        tmp = ref(closure_12, obj, required.name);
+        tmp = _undefined2(closure_14, obj, required.name);
       }
       return tmp;
     });
@@ -438,7 +1434,7 @@ export default function _default(command) {
   items5[2] = mapped;
   let tmp19Result = null;
   if (tmp4) {
-    const items6 = [tmp.applicationOptionalOptionsDivider];
+    const items6 = [tmp.applicationOptionalOptionsDivider, ];
     let applicationOptionalOptionsDividerWithNoRequired = !tmp6;
     if (!tmp6) {
       applicationOptionalOptionsDividerWithNoRequired = tmp.applicationOptionalOptionsDividerWithNoRequired;
@@ -446,17 +1442,11 @@ export default function _default(command) {
     const obj6 = { style: null };
     items6[1] = applicationOptionalOptionsDividerWithNoRequired;
     obj6.style = items6;
-    const items7 = [tmp25(tmp20, obj6), ,];
-    const obj7 = {
-      style: tmp.applicationOptionalOptionsIndicator,
-      lineClamp: 1,
-      variant: "eyebrow",
-      color: "text-muted",
-      children: null,
-    };
-    const intl = tmp12(1115).intl;
-    obj7.children = intl.string(tmp12(1115).t.U19GM3);
-    items7[1] = tmp25(tmp12(4841).Text, obj7);
+    const items7 = [tmp25(tmp20, obj6), , ];
+    const obj7 = { style: tmp.applicationOptionalOptionsIndicator, lineClamp: 1, variant: "eyebrow", color: "text-muted", children: null };
+    const intl = tmp12(1126).intl;
+    obj7.children = intl.string(tmp12(1126).t.U19GM3);
+    items7[1] = tmp25(tmp12(4886).Text, obj7);
     const options1 = command.options;
     let mapped1;
     if (options1 != null) {
@@ -467,14 +1457,14 @@ export default function _default(command) {
           const obj = {
             option: required,
             onPress() {
-              return onPressOption(closure_0);
-            },
+                return onPressOption(closure_0);
+              },
             optionState: optionStates[required.name],
             onLayout(arg0) {
-              return closure_14(arg0, closure_0);
-            },
+                return closure_14(arg0, closure_0);
+              }
           };
-          tmp = ref(closure_12, obj, required.name);
+          tmp = _undefined2(closure_14, obj, required.name);
         }
         return tmp;
       });
@@ -482,16 +1472,11 @@ export default function _default(command) {
     const obj8 = { children: null };
     items7[2] = mapped1;
     obj8.children = items7;
-    tmp19Result = tmp19(c9, obj8);
+    tmp19Result = tmp19(first, obj8);
   }
   items5[3] = tmp19Result;
   obj3.children = items5;
-  const items8 = [
-    c10(closure_6, obj3),
-    ref(command(8239).FormDivider, { style: tmp.applicationDescriptionDivider }),
-    ref(stateFromStores, { command, option: currentOption, optionState: tmp17 }),
-    ref(command(8239).FormDivider, { style: tmp.applicationDescriptionDivider }),
-  ];
+  const items8 = [closure_12(ref, obj3), c10(command(8895).FormDivider, { style: tmp.applicationDescriptionDivider }), c10(closure_15, { command, option: currentOption, optionState: tmp17 }), c10(command(8895).FormDivider, { style: tmp.applicationDescriptionDivider })];
   obj2.children = items8;
-  return c10(onPressOption, obj2);
-}
+  return closure_12(ref, obj2);
+});

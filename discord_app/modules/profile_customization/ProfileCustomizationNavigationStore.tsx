@@ -7,6 +7,7 @@ const constants = UserSettingsConstants.ProfileCustomizationSubsection;
 const zustandStore = ZustandStore.createZustandStore(() => ({
   subsection: constants.USER_PROFILE,
   scrollPosition: null,
+  pendingCustomizeBadgesSheet: false,
 }));
 const result = size.fileFinishedImporting("modules/profile_customization/ProfileCustomizationNavigationStore.tsx");
 

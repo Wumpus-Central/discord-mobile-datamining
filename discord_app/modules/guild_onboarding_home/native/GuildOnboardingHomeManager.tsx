@@ -1,7 +1,7 @@
 // discord_app/modules/guild_onboarding_home/native/GuildOnboardingHomeManager.tsx
 import ConstantsIOS from "../../../ConstantsIOS.tsx";
 import FlagUtils from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/01981_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import GuildOnboardingHomeTypes from "../GuildOnboardingHomeTypes.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -17,7 +17,7 @@ import GuildOnboardingMemberActionStore from "../GuildOnboardingMemberActionStor
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const GuildMemberFlags = fn(4484).GuildMemberFlags;
+const GuildMemberFlags = fn(4495).GuildMemberFlags;
 const prototype = function GuildOnboardingHomeManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
@@ -89,7 +89,7 @@ const prototype = function GuildOnboardingHomeManager() {
           }
           if (0 !== num) {
             const obj2 = ModalActionCreatorsDefault;
-            const tmp9 = asyncRequireImpl(17386, dependencyMap.paths);
+            const tmp9 = asyncRequireImpl(17478, dependencyMap.paths);
             const obj3 = { initialPercent: (num - 1) / num, numActions: num };
             const obj4 = { animation: ConstantsIOS.ModalAnimation.FADE };
             obj2.pushLazy(tmp9, obj3, GuildOnboardingHomeTypes.NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY, obj4);
@@ -105,56 +105,101 @@ const prototype = function GuildOnboardingHomeManager() {
   };
   closure_129_1 = applyArgumentsResult;
   closure_129_0 = asyncGeneratorStep(async (arg0) => {
-    closure_1 = tmp2;
-    ({ guildId: closure_129_0, channelId: closure_129_1 } = applyArgumentsResult);
-    await "flex";
-    if (1 === tmp5) {
+    if (c4 === 2) {
+      c4 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
       if (arg0 === 1) {
-        c4 = 3;
         throw value;
       } else if (arg0 === 2) {
-        c4 = 3;
-        return { value, done: true };
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        if (null != closure_129_0) {
-          if (null != closure_129_1) {
-            c3 = 2;
+        return { value: "IconComponent", done: "IconComponent" };
+      }
+    } else {
+      try {
+        c4 = 2;
+        if (0 === c3) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            dependencyMap = tmp5;
+            closure_1 = tmp2;
+            closure_129_0 = undefined;
+            closure_129_1 = undefined;
+            ({ guildId: closure_129_0, channelId: closure_129_1 } = applyArgumentsResult);
+            closure_129_2 = undefined;
+            let memberActions;
+            let completedActions;
+            closure_129_5 = undefined;
+            c3 = 1;
             c4 = 1;
-            return { value: closure_130_1._getOrLoadOnboardingMemberActions(closure_129_0), done: false };
+            return { value: "Reflect", done: true };
           }
+        } else {
+          if (1 === tmp5) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              const obj4 = { value, done: true };
+              return obj4;
+            } else {
+              if (null != closure_129_0) {
+                if (null != closure_129_1) {
+                  c3 = 2;
+                  c4 = 1;
+                  const obj5 = { value: closure_130_1._getOrLoadOnboardingMemberActions(closure_129_0), done: false };
+                  return obj5;
+                }
+              }
+              c4 = 3;
+            }
+          } else if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            closure_129_2 = value;
+            memberActions = closure_129_2.memberActions;
+            completedActions = closure_129_2.completedActions;
+            let found;
+            if (memberActions != null) {
+              found = arr.find((channelId) => channelId.channelId === closure_1_1);
+            }
+            closure_129_5 = found;
+            let tmp10;
+            if (completedActions != null) {
+              tmp10 = tmp9[closure_129_1];
+            }
+            let tmp13 = true !== tmp10;
+            if (tmp13) {
+              tmp13 = null != closure_129_5;
+            }
+            if (tmp13) {
+              tmp13 = closure_129_5.actionType === applyArgumentsResult(7522).NewMemberActionTypes.VIEW;
+            }
+            if (tmp13) {
+              const result = applyArgumentsResult(7521).completeNewMemberAction(closure_129_0, closure_129_1);
+              const obj = applyArgumentsResult(7521);
+            }
+            arr = memberActions;
+          }
+          c4 = 3;
+          const obj6 = { value, done: true };
+          return obj6;
         }
-        c4 = 3;
+      } catch (tmp38) {
+        c4 = tmp;
+        throw tmp38;
       }
-    } else if (arg0 === 1) {
-      c4 = 3;
-      throw value;
-    } else if (arg0 !== 2) {
-      closure_129_2 = value;
-      const memberActions = closure_129_2.memberActions;
-      const completedActions = closure_129_2.completedActions;
-      let found;
-      if (memberActions != null) {
-        found = arr.find((channelId) => channelId.channelId === closure_1_1);
-      }
-      closure_129_5 = found;
-      let tmp10;
-      if (completedActions != null) {
-        tmp10 = tmp9[closure_129_1];
-      }
-      let tmp13 = true !== tmp10;
-      if (tmp13) {
-        tmp13 = null != closure_129_5;
-      }
-      if (tmp13) {
-        tmp13 = closure_129_5.actionType === applyArgumentsResult(11978).NewMemberActionTypes.VIEW;
-      }
-      if (tmp13) {
-        const result = applyArgumentsResult(11977).completeNewMemberAction(closure_129_0, closure_129_1);
-        applyArgumentsResult(11977);
-      }
-      arr = memberActions;
     }
-    return value;
   });
   applyArgumentsResult.handleChannelSelect = function () {
     const self = this;
@@ -228,7 +273,7 @@ const prototype = function GuildOnboardingHomeManager() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -286,7 +331,7 @@ const prototype = function GuildOnboardingHomeManager() {
             const obj = applyArgumentsResult(tmp2[18]);
           }
           c5 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp31) {
         c5 = tmp;
@@ -316,7 +361,7 @@ const prototype = function GuildOnboardingHomeManager() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -401,7 +446,7 @@ const prototype = function GuildOnboardingHomeManager() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -486,7 +531,7 @@ const prototype = function GuildOnboardingHomeManager() {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {

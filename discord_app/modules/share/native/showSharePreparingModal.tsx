@@ -1,5 +1,5 @@
 // discord_app/modules/share/native/showSharePreparingModal.tsx
-import asyncRequireImpl from "../../../../_runtime/01981_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import SharePreparingModalConstants from "SharePreparingModalConstants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -17,23 +17,23 @@ export const showSharePreparingModal = function showSharePreparingModal(onCancel
           _true = true;
           const _clearTimeout = clearTimeout;
           clearTimeout(dependencyMap);
-          _true(5048).popWithKey(SHARE_PREPARING_MODAL_KEY);
+          _true(5093).popWithKey(SHARE_PREPARING_MODAL_KEY);
           onCancel();
-          const obj = _true(5048);
+          const obj = _true(5093);
         }
       },
     };
     ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(7999, dependencyMap.paths),
+      asyncRequireImpl(8044, dependencyMap.paths),
       {
         onCancel() {
           if (!_true) {
             _true = true;
             const _clearTimeout = clearTimeout;
             clearTimeout(dependencyMap);
-            _true(5048).popWithKey(SHARE_PREPARING_MODAL_KEY);
+            _true(5093).popWithKey(SHARE_PREPARING_MODAL_KEY);
             onCancel();
-            const obj = _true(5048);
+            const obj = _true(5093);
           }
         },
       },
@@ -41,8 +41,8 @@ export const showSharePreparingModal = function showSharePreparingModal(onCancel
       { animation: "fade", presentation: "transparentModal" },
     ).then(() => {
       if (_true) {
-        _true(5048).popWithKey(SHARE_PREPARING_MODAL_KEY);
-        const obj = _true(5048);
+        _true(5093).popWithKey(SHARE_PREPARING_MODAL_KEY);
+        const obj = _true(5093);
       }
     });
   }, 1000);

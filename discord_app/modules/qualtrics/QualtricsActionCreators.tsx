@@ -27,7 +27,7 @@ let closure_11 = async function _fetchSurveyDetails(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -108,7 +108,7 @@ let closure_12 = async function _submitSurveyResponse(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -315,10 +315,10 @@ let closure_13 = async function _fireSurveyAction() {
     return value;
   })();
 };
-const useQualtricsResponseStore = fn(5039).useQualtricsResponseStore;
-const QualtricsConstants = fn(5041);
+const useQualtricsResponseStore = fn(5084).useQualtricsResponseStore;
+const QualtricsConstants = fn(5086);
 ({ QuestionSelectorEnum: closure_8, QuestionTypeEnum: closure_9 } = QualtricsConstants);
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/qualtrics/QualtricsActionCreators.tsx");
 

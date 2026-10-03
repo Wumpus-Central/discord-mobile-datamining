@@ -1,6 +1,6 @@
 // discord_app/modules/guild_automod/native/getActionInfo.tsx
-import TextIcon from "../../../design/components/Icon/native/redesign/generated/TextIcon.tsx";
 import CircleXIcon2 from "../../../design/components/Icon/native/redesign/generated/CircleXIcon.tsx";
+import TextIcon from "../../../design/components/Icon/native/redesign/generated/TextIcon.tsx";
 import ClockWarningIcon from "../../../design/components/Icon/native/redesign/generated/ClockWarningIcon.tsx";
 import Constants from "../Constants.tsx";
 import ChatXIcon from "../../../design/components/Icon/native/redesign/generated/ChatXIcon.tsx";

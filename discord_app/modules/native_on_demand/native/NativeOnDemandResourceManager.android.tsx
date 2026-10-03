@@ -5,7 +5,7 @@ import MediaEngineStore from "../../../stores/MediaEngineStore.tsx";
 import AppStateStore from "../../../stores/native/AppStateStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
-const AppStates = fn(1074).AppStates;
+const AppStates = fn(1085).AppStates;
 const prototype = function NativeOnDemandResourceManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   importDefault = applyArgumentsResult;

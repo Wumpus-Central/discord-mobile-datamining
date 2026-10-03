@@ -2,7 +2,7 @@
 import PresenceStore from "../../stores/PresenceStore.tsx";
 import RelationshipStore from "../../stores/RelationshipStore.tsx";
 
-const StatusTypes = fn(1074).StatusTypes;
+const StatusTypes = fn(1085).StatusTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/friends/getFriendStatusCounts.tsx");
 

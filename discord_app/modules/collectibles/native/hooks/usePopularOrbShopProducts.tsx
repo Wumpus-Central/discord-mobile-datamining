@@ -5,7 +5,7 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-let constants = fn(1076).CollectiblesMobileShopScreen;
+let constants = fn(1087).CollectiblesMobileShopScreen;
 let closure_6 = 10 * DurationsDefault.Millis.SECOND;
 let closure_7 = 10 * DurationsDefault.Millis.SECOND;
 const size = fn(2);
@@ -51,7 +51,7 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -73,16 +73,16 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
                   colors: [],
                   themes: [],
                   orbs_eligible: true,
-                  currency: _true(14815).CollectibleSearchCurrencyFilter.ORBS,
+                  currency: _true(14871).CollectibleSearchCurrencyFilter.ORBS,
                   offset: 0,
                   limit: 10,
                   sort_type,
-                  sort_direction: _true(1080).CollectibleSearchSortDirection.DESC,
+                  sort_direction: _true(1091).CollectibleSearchSortDirection.DESC,
                 };
                 const obj6 = { timeout };
                 c5 = 3;
                 sort_type = 1;
-                const obj7 = { value: _true(14814).search(obj4, obj6), done: false };
+                const obj7 = { value: _true(14870).search(obj4, obj6), done: false };
                 return obj7;
               }
             } else if (1 === tmp8) {
@@ -125,7 +125,7 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
                 v0(true);
               }
               sort_type = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } catch (tmp34) {
             closure_3 = tmp34;
@@ -198,7 +198,7 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
     return mapped.filter((item) => null != item);
   }, items2);
   const someResult = first.some((item) => {
-    let state;
+    state = undefined;
     if (collectiblesShopProducts[item] != null) {
       state = tmp.state;
     }

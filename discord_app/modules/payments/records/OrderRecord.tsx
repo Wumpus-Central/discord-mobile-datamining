@@ -3,8 +3,8 @@ import Record from "../../../lib/Record.tsx";
 import CheckoutContextRecord from "CheckoutContextRecord.tsx";
 import SubscriptionFacetRecord from "SubscriptionFacetRecord.tsx";
 
-const BaseInvoiceRecord = fn(4526).BaseInvoiceRecord;
-const PaymentGateways = fn(1085).PaymentGateways;
+const BaseInvoiceRecord = fn(4537).BaseInvoiceRecord;
+const PaymentGateways = fn(1096).PaymentGateways;
 let BillingFacetRecord;
 class BillingFacetRecord extends tmp2 {
   constructor(arg0) {

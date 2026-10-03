@@ -1,7 +1,7 @@
 // discord_app/modules/vibegrations/lib/useVibegrationsPublishAction.tsx
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3714 from "../intl/VibegrationsUntranslated.messages.js";
+import _modDef3723 from "../intl/VibegrationsUntranslated.messages.js";
 import VibegrationsUtils from "VibegrationsUtils.tsx";
 import VibegrationsTypes from "../VibegrationsTypes.tsx";
 import UserActionCreators from "../../../actions/UserActionCreators.tsx";
@@ -39,7 +39,7 @@ function readPublishSubject(projectId, guildId) {
     if (null != tmp2) {
       result = VibegrationsUtils.findVibegrationChannelId(tmp2, project.application_id);
     }
-    let guild = null;
+    guild = null;
     if (null != tmp2) {
       guild = GuildStore.getGuild(tmp2);
     }
@@ -145,7 +145,7 @@ let closure_20 = async function _requestVibegrationsInstallConsent(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -193,7 +193,7 @@ let closure_20 = async function _requestVibegrationsInstallConsent(arg0) {
             }
           }
           c5 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else if (1 === tmp6) {
         if (arg0 === 1) {
@@ -454,7 +454,7 @@ function startPublish(project, navigatesOnPublish, platform) {
         message = message.message;
       } else {
         const intl = util.intl;
-        message = intl.string(_modDef3714.fNP6Cd);
+        message = intl.string(_modDef3723.fNP6Cd);
       }
       platform.showError(message);
       const obj2 = { type: "VIBEGRATIONS_PROJECT_APP_CHANNEL_PENDING", projectId: id, pending: false };
@@ -490,7 +490,7 @@ let closure_23 = async function _waitForAppChannel(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -572,7 +572,7 @@ let closure_26 = async function _runVibegrationsPublishAction(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -614,7 +614,7 @@ let closure_26 = async function _runVibegrationsPublishAction(arg0) {
                       action: null,
                     };
                     const status2 = tmp43.input.status;
-                    let state;
+                    state = undefined;
                     if (status2 != null) {
                       state = status2.state;
                     }
@@ -652,13 +652,13 @@ let closure_26 = async function _runVibegrationsPublishAction(arg0) {
                             set.add(closure_0);
                             c11 = 1;
                             const requestConsent = platform.requestConsent;
-                            let f127008 = requestConsent;
+                            let f153176 = requestConsent;
                             if (requestConsent == null) {
-                              f127008 = (arg0) => closure_2_19(arg0, closure_1_2);
+                              f153176 = (arg0) => closure_2_19(arg0, closure_1_2);
                             }
                             c12 = 2;
                             c13 = 1;
-                            const obj7 = { value: f127008(closure_0), done: false };
+                            const obj7 = { value: f153176(closure_0), done: false };
                             return obj7;
                           }
                         } else {
@@ -698,7 +698,7 @@ let closure_26 = async function _runVibegrationsPublishAction(arg0) {
         closure_137_24.delete(closure_136_0);
         if (closure_137_13.isProjectPublishing(closure_136_0)) {
           c13 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         } else {
           closure_136_4 = closure_137_17(closure_136_0, closure_136_2);
           let integrationStatus1;
@@ -744,7 +744,7 @@ let closure_26 = async function _runVibegrationsPublishAction(arg0) {
         }
       }
       c13 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     } catch (tmp61) {
       closure_10 = tmp61;
       if (tmp4 === c11) {
@@ -756,18 +756,18 @@ let closure_26 = async function _runVibegrationsPublishAction(arg0) {
     }
   }
 };
-const VibegrationsConnectionStore = fn(12851);
+const VibegrationsConnectionStore = fn(12904);
 ({ draftPatchNotes: closure_11, publishProject: closure_12 } = VibegrationsConnectionStore);
-const canPublishProject = fn(8686).canPublishProject;
-const Permissions = fn(1074).Permissions;
+const canPublishProject = fn(8699).canPublishProject;
+const Permissions = fn(1085).Permissions;
 let context = noop.createContext(null);
 const set = new Set(["dm", "guild", "channel"]);
 const set1 = new Set();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/vibegrations/lib/useVibegrationsPublishAction.tsx");
 
-export default function useVibegrationsPublishAction(projectId, arg1) {
-  _require = projectId;
+export default function useVibegrationsPublishAction(arg0, arg1) {
+  _require = arg0;
   context = arg1;
   if (arg1 == null) {
     context = guildId.useContext(state);
@@ -788,7 +788,7 @@ export default function useVibegrationsPublishAction(projectId, arg1) {
     status,
     installScope,
   ];
-  const items1 = [projectId, guildId1];
+  const items1 = [arg0, guildId1];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(
     items,
     () => {
@@ -807,6 +807,7 @@ export default function useVibegrationsPublishAction(projectId, arg1) {
         canPublish: tmp5,
         project: null,
         guildId: null,
+        appChannelId: null,
         publishing: null,
         installScope: null,
         status: null,
@@ -835,6 +836,14 @@ export default function useVibegrationsPublishAction(projectId, arg1) {
         guildId = null;
       }
       obj.guildId = guildId;
+      let appChannelId;
+      if (tmp2 != null) {
+        appChannelId = tmp2.appChannelId;
+      }
+      if (appChannelId == null) {
+        appChannelId = null;
+      }
+      obj.appChannelId = appChannelId;
       let isProjectPublishingResult = null != closure_0;
       if (isProjectPublishingResult) {
         isProjectPublishingResult = VibegrationsProjectStore.isProjectPublishing(closure_0);
@@ -949,6 +958,7 @@ export default function useVibegrationsPublishAction(projectId, arg1) {
     usesNativeAppChannels,
     botInGuild,
   ];
+  ({ canPublish, appChannelId } = stateFromStoresObject);
   const memo = obj.useMemo(() => {
     let tmp = null;
     if (null != project) {
@@ -1035,11 +1045,11 @@ export default function useVibegrationsPublishAction(projectId, arg1) {
     }
     return vibegrationsPublishAction;
   }, items4);
-  const items5 = [projectId, context];
+  const items5 = [arg0, context];
   let tmp13 = null;
   if (null != context) {
     tmp13 = null;
-    if (stateFromStoresObject.canPublish) {
+    if (canPublish) {
       tmp13 = null;
       if (null != memo1) {
         const obj3 = {};
@@ -1053,6 +1063,7 @@ export default function useVibegrationsPublishAction(projectId, arg1) {
         }
         obj3.status = status1;
         obj3.guildId = guildId;
+        obj3.appChannelId = appChannelId;
         obj3.publishing = publishing;
         if (!publishing) {
           publishing = true === context.busy;

@@ -7,7 +7,17 @@ import NoteStore from "../notes/NoteStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-let closure_7 = async function _fetchNote() {
+function fetchNote() {
+  const self = this;
+  const apply = closure_8.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+let closure_8 = async function _fetchNote() {
   c5 = 0;
   c6 = 0;
   c4 = 0;
@@ -22,7 +32,7 @@ let closure_7 = async function _fetchNote() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -54,9 +64,9 @@ let closure_7 = async function _fetchNote() {
           if (1 === tmp7) {
             c4 = 0;
             const obj8 = { type: "USER_NOTE_UPDATE", id: closure_129_0 };
-            closure_130_1(closure_130_2[5]).dispatch(obj8);
+            closure_130_1(closure_130_2[7]).dispatch(obj8);
             c6 = 3;
-            const obj4 = closure_130_1(closure_130_2[5]);
+            const obj4 = closure_130_1(closure_130_2[7]);
           } else if (arg0 === 1) {
             c6 = 3;
             throw value;
@@ -69,9 +79,9 @@ let closure_7 = async function _fetchNote() {
             body = value.body;
             if (body.note_user_id === closure_129_0) {
               const obj11 = { type: "USER_NOTE_UPDATE", id: closure_129_0, note: body.note };
-              closure_130_1(closure_130_2[5]).dispatch(obj11);
+              closure_130_1(closure_130_2[7]).dispatch(obj11);
               c4 = 0;
-              const obj = closure_130_1(closure_130_2[5]);
+              const obj = closure_130_1(closure_130_2[7]);
             }
           }
           const _Error = Error;
@@ -90,31 +100,79 @@ let closure_7 = async function _fetchNote() {
     }
   })();
 };
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useNote.tsx");
 
-export default function useNote(arg0) {
-  _require = arg0;
-  const items = [NoteStore];
-  let stateFromStores = require("initialize").useStateFromStores(items, () => NoteStore.getNote(closure_0));
-  const items1 = [stateFromStores, arg0];
-  const effect = noop.useEffect(() => {
-    if (null == stateFromStores) {
-      (function fetchNote() {
-        const self = this;
-        const apply = closure_1_7.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
+export default ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      _require = arg0;
+      const cResult = require("c").c(9);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const items = [NoteStore];
+        cResult[0] = items;
+        let first = items;
+      } else {
+        first = cResult[0];
+      }
+      if (cResult[1] !== arg0) {
+        const fn = function s() {
+          return NoteStore.getNote(closure_0);
+        };
+        cResult[1] = arg0;
+        cResult[2] = fn;
+        let tmp6 = fn;
+      } else {
+        tmp6 = cResult[2];
+      }
+      const obj = require("c");
+      const stateFromStores = require("initialize").useStateFromStores(first, tmp6);
+      if (cResult[3] === stateFromStores) {
+        if (cResult[4] === arg0) {
+          let tmp8 = cResult[5];
+          let tmp9 = cResult[6];
         }
-        return applyArgumentsResult;
-      })(closure_0);
+        const effect = noop.useEffect(tmp8, tmp9);
+        if (cResult[7] !== stateFromStores) {
+          let obj2 = stateFromStores;
+          if (stateFromStores == null) {
+            obj2 = { loading: true, note: null };
+          }
+          cResult[7] = stateFromStores;
+          cResult[8] = obj2;
+          let tmp12 = obj2;
+        } else {
+          tmp12 = cResult[8];
+        }
+        return tmp12;
+      }
+      const fn2 = function c() {
+        if (null == stateFromStores) {
+          fetchNote(closure_0);
+        }
+      };
+      const items1 = [stateFromStores, arg0];
+      cResult[3] = stateFromStores;
+      cResult[4] = arg0;
+      cResult[5] = fn2;
+      cResult[6] = items1;
+      tmp9 = items1;
+      tmp8 = fn2;
+      const tmpResult = require("initialize");
     }
-  }, items1);
-  if (stateFromStores == null) {
-    stateFromStores = { loading: true, note: null };
-  }
-  return stateFromStores;
-}
+  : (arg0) => {
+      _require = arg0;
+      const items = [NoteStore];
+      let stateFromStores = require("initialize").useStateFromStores(items, () => NoteStore.getNote(closure_0));
+      const items1 = [stateFromStores, arg0];
+      const effect = noop.useEffect(() => {
+        if (null == stateFromStores) {
+          fetchNote(closure_0);
+        }
+      }, items1);
+      if (stateFromStores == null) {
+        stateFromStores = { loading: true, note: null };
+      }
+      return stateFromStores;
+    };

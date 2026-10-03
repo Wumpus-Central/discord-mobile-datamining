@@ -138,7 +138,7 @@ function computeGuildMediaState(guildId) {
     }
     blockedOrIgnoredIDs = blockedOrIgnoredIDs.getBlockedOrIgnoredIDs();
     obj = {
-      skipMutedVcs: guildId(13459).getIsDontBadgeMutedVcsEnabled("GuildMediaStateStore"),
+      skipMutedVcs: guildId(13519).getIsDontBadgeMutedVcsEnabled("GuildMediaStateStore"),
       currentUserId: id.getId(),
       selectedVoiceChannelId: voiceChannelId,
       selectedVoiceGuildId: null,
@@ -217,7 +217,7 @@ function computeGuildMediaState(guildId) {
     obj2.activity = found.length > 0;
     return obj2;
   } else {
-    const guild = GuildStore.getGuild(guildId);
+    guild = GuildStore.getGuild(guildId);
     if (guild != null) {
       const afkChannelId = guild.afkChannelId;
     }
@@ -274,7 +274,7 @@ function computeGuildMediaState(guildId) {
           const basicChannel = ChannelStore.getBasicChannel(item);
           let tmp2 = null != basicChannel;
           if (tmp2) {
-            tmp2 = closure_1(5914)(basicChannel, PermissionStore);
+            tmp2 = closure_1(5573)(basicChannel, PermissionStore);
           }
           return tmp2;
         });
@@ -285,13 +285,13 @@ function computeGuildMediaState(guildId) {
           _location = first.location;
         }
         let embeddedActivityLocationChannelId = obj5.getEmbeddedActivityLocationChannelId(_location);
-        let tmp34Result = tmp34(8981);
+        let tmp34Result = tmp34(9000);
         if (tmp34Result.isActivitiesInTextEnabled(ChannelStore.getChannel(embeddedActivityLocationChannelId))) {
           let someResult2 = found.length > 0;
         } else {
           someResult2 = found.some((location) => {
             const channel = ChannelStore.getChannel(
-              guildId(4487).getEmbeddedActivityLocationChannelId(location.location),
+              guildId(4498).getEmbeddedActivityLocationChannelId(location.location),
             );
             let tmp2 = null != channel;
             if (tmp2) {
@@ -309,7 +309,7 @@ function computeGuildMediaState(guildId) {
           activity: null,
           isCurrentUserConnected: false,
         };
-        let tmp34Result2 = tmp34(9136);
+        let tmp34Result2 = tmp34(9160);
         obj4.activeEvent = null != tmp34Result2.getGuildActiveEvent(arg0);
         obj4.activity = someResult2;
         return obj4;
@@ -358,8 +358,8 @@ function handleGuildCreateOrDelete(guild) {
   map.delete(guild.guild.id);
   return flag;
 }
-const isVoiceChannel = fn(2048).isVoiceChannel;
-const Constants = fn(1074);
+const isVoiceChannel = fn(2055).isVoiceChannel;
+const Constants = fn(1085);
 ({ BasicPermissions: closure_19, ME: closure_20 } = Constants);
 let closure_21 = Object.freeze({
   audio: false,

@@ -1,16 +1,16 @@
 // discord_app/utils/AvatarUtils.tsx
 import SnowflakeUtilsDefault from "SnowflakeUtils.tsx";
 import IntegerDefault from "../../_runtime/00014_Integer.js";
-import Url from "../../_runtime/01368_Url.js";
+import Url from "../../_runtime/01373_Url.js";
 import AvatarDecorationConstants from "../modules/collectibles/avatar_decorations/AvatarDecorationConstants.tsx";
 import utils_AvatarUtils from "native/AvatarUtils.tsx";
 import ImageLoaderUtils from "../modules/image_upload/ImageLoaderUtils.tsx";
-import _modDef1473 from "../../_runtime/metro/01473__.js";
+import _modDef1478 from "../../_runtime/metro/01478__.js";
 import ForceSdrEmojisStickersExperiment from "../modules/image_upload/ForceSdrEmojisStickersExperiment.tsx";
 import NumberUtils from "../../discord_common/js/shared/utils/NumberUtils.tsx";
 import AvatarDecorationUtils from "../modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx";
 import CollectiblesAssetUtils from "../modules/collectibles/utils/CollectiblesAssetUtils.tsx";
-import _modDef1969 from "../../_runtime/metro/01969__.js";
+import _modDef1975 from "../../_runtime/metro/01975__.js";
 import Constants from "../Constants.tsx";
 import PlatformUtils from "PlatformUtils.tsx";
 import size from "../../_runtime/metro/00002__.js";
@@ -109,7 +109,7 @@ function getAvatarURL(canAnimate) {
           obj4.animated = true;
         }
         const _HermesInternal2 = HermesInternal;
-        return combined + "?" + _modDef1473.stringify(obj4);
+        return combined + "?" + _modDef1478.stringify(obj4);
       }
     }
   }
@@ -267,7 +267,7 @@ function getGuildMemberAvatarURLSimple(size) {
   if (tmp20) {
     obj.animated = true;
   }
-  return combined + "?" + _modDef1473.stringify(obj);
+  return combined + "?" + _modDef1478.stringify(obj);
 }
 function getGuildBannerURL(guild) {
   ({ id, banner } = guild);
@@ -324,7 +324,7 @@ function getGuildBannerURL(guild) {
       obj.animated = true;
     }
     const _HermesInternal2 = HermesInternal;
-    return combined + "?" + _modDef1473.stringify(obj);
+    return combined + "?" + _modDef1478.stringify(obj);
   }
 }
 function getApplicationIconURL(guildMember) {
@@ -442,7 +442,7 @@ function getApplicationIconURL(guildMember) {
     }
     let tmp18;
     if (fallbackAvatar) {
-      tmp18 = _modDef1969;
+      tmp18 = _modDef1975;
     }
     return tmp18;
   }
@@ -498,8 +498,8 @@ let num = utils_AvatarUtils.default.DEFAULT_AVATARS_SMALL_MAX_SIZE;
 if (num == null) {
   num = 0;
 }
-function getEmojiURL(size) {
-  ({ id, animated, forcePNG } = size);
+function getEmojiURL(dependencyMap) {
+  ({ id, animated, forcePNG } = dependencyMap);
   if (forcePNG === undefined) {
     forcePNG = false;
   }
@@ -515,7 +515,7 @@ function getEmojiURL(size) {
     const obj = ImageLoaderUtils;
     const _HermesInternal = HermesInternal;
     const combined =
-      "size=" + obj.getBestMediaProxySize(size.size * ImageLoaderUtils.getDevicePixelRatio(), closure_12);
+      "size=" + obj.getBestMediaProxySize(dependencyMap.size * ImageLoaderUtils.getDevicePixelRatio(), closure_12);
     try {
       const enabled = ForceSdrEmojisStickersExperiment.getForceSdrEmojisStickersConfig({
         location: "getEmojiURL",
@@ -650,7 +650,7 @@ function getUserBannerURL(arg0) {
       obj.animated = true;
     }
     const _HermesInternal2 = HermesInternal;
-    return combined + "?" + _modDef1473.stringify(obj);
+    return combined + "?" + _modDef1478.stringify(obj);
   }
 }
 function getAvatarDecorationURL(canAnimate) {
@@ -759,7 +759,7 @@ function getGuildMemberBannerURL(arg0) {
         obj.animated = true;
       }
       const _HermesInternal2 = HermesInternal;
-      return combined + "?" + _modDef1473.stringify(obj);
+      return combined + "?" + _modDef1478.stringify(obj);
     }
   }
 }
@@ -855,10 +855,10 @@ function isAnimatedIconHash(storageHash) {
   }
   return startsWithResult;
 }
-function makeSource(automodAvatarURL) {
-  let tmp = automodAvatarURL;
-  if (typeof automodAvatarURL !== "number") {
-    const obj = { uri: automodAvatarURL };
+function makeSource(src) {
+  let tmp = src;
+  if (typeof src !== "number") {
+    const obj = { uri: src };
     tmp = obj;
   }
   return tmp;
@@ -1224,10 +1224,10 @@ export default {
     return tmp2;
   },
   makeSource,
-  getAnimatableSourceWithFallback(flag, fn) {
-    const tmp = fn(flag);
+  getAnimatableSourceWithFallback(hasItem, fn) {
+    const tmp = fn(hasItem);
     if (obj.isAndroid()) {
-      if (flag) {
+      if (hasItem) {
         if (typeof tmp !== "number") {
           const tmp2 = fn(false);
           if (typeof tmp2 === "number") {

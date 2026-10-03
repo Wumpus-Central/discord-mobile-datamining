@@ -8,7 +8,7 @@ import RTCRegionStore from "../../stores/RTCRegionStore.tsx";
 import StateManager from "../../lib/StateManager.tsx";
 
 require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ ChannelTypes: hasOwnProperty, VoiceFlags: metroRequire } = Constants);
 class LocalVoiceStateManager extends tmp3 {
   constructor(arg0) {

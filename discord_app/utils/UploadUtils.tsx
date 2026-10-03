@@ -1,7 +1,7 @@
 // discord_app/utils/UploadUtils.tsx
-import Upload from "../lib/uploader/Upload.tsx";
 import NitroFileUploadExperiments from "../modules/premium/experiments/NitroFileUploadExperiments.tsx";
 import clipPayloadUtils from "../modules/clips/clipPayloadUtils.tsx";
+import UploadPlatform from "../modules/media_uploads/UploadPlatform.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
 const items = [
@@ -164,7 +164,7 @@ export const getAttachmentPayload = function getAttachmentPayload(id) {
   }
   let tmp9 = "item" in id && null != id.item;
   if (tmp9) {
-    tmp9 = id.item.platform === Upload.UploadPlatform.WEB;
+    tmp9 = id.item.platform === UploadPlatform.UploadPlatform.WEB;
   }
   if (tmp9) {
     tmp9 = "mimeType" in id;

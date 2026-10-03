@@ -45,7 +45,7 @@ function trackRoundtrip(channelId) {
     logger.warn("Ignoring a messageData for channel " + channelId.channelId + " because we can't find that channel.");
   }
 }
-const AnalyticEvents = fn(1074).AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 const logger = new LoggerDefault("MessageRoundtripTrackerStore");
 const Store = initializeDefault.Store;
 class MessageRoundtripTrackerStoreClass extends Store {

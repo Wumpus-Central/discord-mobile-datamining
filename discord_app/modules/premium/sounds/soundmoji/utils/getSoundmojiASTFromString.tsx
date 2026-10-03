@@ -8,7 +8,7 @@ import SoundboardStore from "../../../../soundboard/SoundboardStore.tsx";
 import MessageStore from "../../../../../stores/MessageStore.tsx";
 
 require = fn;
-const MessageStates = fn(1074).MessageStates;
+const MessageStates = fn(1085).MessageStates;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/sounds/soundmoji/utils/getSoundmojiASTFromString.tsx");
 
@@ -26,7 +26,7 @@ export default function getSoundmojiASTFromString(soundId, guildId) {
           tmp5 = tmp16;
           if (null == tmp16) {
             const message = MessageStore.getMessage(channelId, messageId);
-            let state;
+            state = undefined;
             if (message != null) {
               state = message.state;
             }
@@ -110,7 +110,7 @@ export const getSoundmojiFromMessage = function getSoundmojiFromMessage(guildId,
         if (tmp9) {
           if (null == tmp16) {
             const message = MessageStore.getMessage(channelId, messageId);
-            let state;
+            state = undefined;
             if (message != null) {
               state = message.state;
             }

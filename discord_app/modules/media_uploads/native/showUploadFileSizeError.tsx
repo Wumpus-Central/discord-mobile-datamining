@@ -5,10 +5,10 @@ import PremiumTypeUtils from "../../../utils/PremiumTypeUtils.tsx";
 import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
 import FileSizeUtils from "../../../utils/FileSizeUtils.tsx";
 import AlertActionCreatorsDefault from "../../../actions/AlertActionCreators.tsx";
+import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import UploadUtils from "../../../utils/UploadUtils.tsx";
 import NitroFileUploadExperiments from "../../premium/experiments/NitroFileUploadExperiments.tsx";
 import utils_UploadUtils from "../../../utils/native/UploadUtils.tsx";
-import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import logMessageSendFailure from "../../messages/logMessageSendFailure.tsx";
 import buildFileSizeLimitEventProperties from "../buildFileSizeLimitEventProperties.tsx";
 import getUploaderFileSizeMetrics from "../getUploaderFileSizeMetrics.tsx";
@@ -17,10 +17,10 @@ import UnsyncedUserSettingsStore from "../../user_settings/UnsyncedUserSettingsS
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsSections: metroRequire } = Constants);
-const FileUploadErrorTypes = fn(4838).FileUploadErrorTypes;
-const PremiumConstants = fn(1374);
+const FileUploadErrorTypes = fn(4883).FileUploadErrorTypes;
+const PremiumConstants = fn(1379);
 ({ PremiumTypes: closure_8, PremiumUpsellTypes: closure_9 } = PremiumConstants);
 const constants = { NITRO_UPSELL: "Nitro Upsell", OVER_MAX_SIZE: "Over Max Size" };
 const size = fn(2);

@@ -1,12 +1,5 @@
 // discord_app/modules/premium/premium_group/PremiumGroup.messages.js
 import AssetJsonUtils from "../../asset_json/native/AssetJsonUtils.tsx";
-import _mod3199 from "../../../../_runtime/metro/03199__.js";
-import _mod3200 from "../../../../_runtime/metro/03200__.js";
-import _mod3201 from "../../../../_runtime/metro/03201__.js";
-import _mod3202 from "../../../../_runtime/metro/03202__.js";
-import _mod3203 from "../../../../_runtime/metro/03203__.js";
-import _mod3204 from "../../../../_runtime/metro/03204__.js";
-import _mod3205 from "../../../../_runtime/metro/03205__.js";
 import _mod3206 from "../../../../_runtime/metro/03206__.js";
 import _mod3207 from "../../../../_runtime/metro/03207__.js";
 import _mod3208 from "../../../../_runtime/metro/03208__.js";
@@ -31,138 +24,145 @@ import _mod3226 from "../../../../_runtime/metro/03226__.js";
 import _mod3227 from "../../../../_runtime/metro/03227__.js";
 import _mod3228 from "../../../../_runtime/metro/03228__.js";
 import _mod3229 from "../../../../_runtime/metro/03229__.js";
-import module_1154_mod from "../../../../_runtime/metro/01154__.js";
+import _mod3230 from "../../../../_runtime/metro/03230__.js";
+import _mod3231 from "../../../../_runtime/metro/03231__.js";
+import _mod3232 from "../../../../_runtime/metro/03232__.js";
+import _mod3233 from "../../../../_runtime/metro/03233__.js";
+import _mod3234 from "../../../../_runtime/metro/03234__.js";
+import _mod3235 from "../../../../_runtime/metro/03235__.js";
+import _mod3236 from "../../../../_runtime/metro/03236__.js";
+import module_1165_mod from "../../../../_runtime/metro/01165__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
-let module_1154 = module_1154_mod;
-const loader = module_1154.createLoader({
+let module_1165 = module_1165_mod;
+const loader = module_1165.createLoader({
   bg() {
-    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3199);
-    return jsonAsset.then((result) => ({ default: result }));
-  },
-  cs() {
-    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3200);
-    return jsonAsset.then((result) => ({ default: result }));
-  },
-  da() {
-    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3201);
-    return jsonAsset.then((result) => ({ default: result }));
-  },
-  de() {
-    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3202);
-    return jsonAsset.then((result) => ({ default: result }));
-  },
-  el() {
-    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3203);
-    return jsonAsset.then((result) => ({ default: result }));
-  },
-  () => {
-    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3204);
-    return jsonAsset.then((result) => ({ default: result }));
-  },
-  () => {
-    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3205);
-    return jsonAsset.then((result) => ({ default: result }));
-  },
-  () => {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3206);
     return jsonAsset.then((result) => ({ default: result }));
   },
-  fi() {
+  cs() {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3207);
     return jsonAsset.then((result) => ({ default: result }));
   },
-  fr() {
+  da() {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3208);
     return jsonAsset.then((result) => ({ default: result }));
   },
-  hi() {
+  de() {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3209);
     return jsonAsset.then((result) => ({ default: result }));
   },
-  hr() {
+  el() {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3210);
     return jsonAsset.then((result) => ({ default: result }));
   },
-  hu() {
+  () => {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3211);
     return jsonAsset.then((result) => ({ default: result }));
   },
-  it() {
+  () => {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3212);
     return jsonAsset.then((result) => ({ default: result }));
   },
-  ja() {
+  () => {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3213);
     return jsonAsset.then((result) => ({ default: result }));
   },
-  ko() {
+  fi() {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3214);
     return jsonAsset.then((result) => ({ default: result }));
   },
-  lt() {
+  fr() {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3215);
     return jsonAsset.then((result) => ({ default: result }));
   },
-  nl() {
+  hi() {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3216);
     return jsonAsset.then((result) => ({ default: result }));
   },
-  no() {
+  hr() {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3217);
     return jsonAsset.then((result) => ({ default: result }));
   },
-  pl() {
+  hu() {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3218);
     return jsonAsset.then((result) => ({ default: result }));
   },
-  () => {
+  it() {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3219);
     return jsonAsset.then((result) => ({ default: result }));
   },
-  ro() {
+  ja() {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3220);
     return jsonAsset.then((result) => ({ default: result }));
   },
-  ru() {
+  ko() {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3221);
     return jsonAsset.then((result) => ({ default: result }));
   },
-  () => {
+  lt() {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3222);
     return jsonAsset.then((result) => ({ default: result }));
   },
-  th() {
+  nl() {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3223);
     return jsonAsset.then((result) => ({ default: result }));
   },
-  tr() {
+  no() {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3224);
     return jsonAsset.then((result) => ({ default: result }));
   },
-  uk() {
+  pl() {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3225);
     return jsonAsset.then((result) => ({ default: result }));
   },
-  vi() {
+  () => {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3226);
     return jsonAsset.then((result) => ({ default: result }));
   },
-  () => {
+  ro() {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3227);
     return jsonAsset.then((result) => ({ default: result }));
   },
-  () => {
+  ru() {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3228);
     return jsonAsset.then((result) => ({ default: result }));
   },
   () => {
     const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3229);
     return jsonAsset.then((result) => ({ default: result }));
+  },
+  th() {
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3230);
+    return jsonAsset.then((result) => ({ default: result }));
+  },
+  tr() {
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3231);
+    return jsonAsset.then((result) => ({ default: result }));
+  },
+  uk() {
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3232);
+    return jsonAsset.then((result) => ({ default: result }));
+  },
+  vi() {
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3233);
+    return jsonAsset.then((result) => ({ default: result }));
+  },
+  () => {
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3234);
+    return jsonAsset.then((result) => ({ default: result }));
+  },
+  () => {
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3235);
+    return jsonAsset.then((result) => ({ default: result }));
+  },
+  () => {
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3236);
+    return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");
-let module_1154 = module_1154_mod;
-const messagesProxy = module_1154.makeMessagesProxy(loader);
+let module_1165 = module_1165_mod;
+const messagesProxy = module_1165.makeMessagesProxy(loader);
 const result = size.fileFinishedImporting("modules/premium/premium_group/PremiumGroup.messages.js");
 
 export default messagesProxy;

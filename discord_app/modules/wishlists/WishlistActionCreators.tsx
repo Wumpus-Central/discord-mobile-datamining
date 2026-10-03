@@ -42,8 +42,8 @@ function maybeDispatchAdditionalActions(wishlist_items) {
     const tmpResult = StorefrontUtils;
   }
 }
-const getWishlistSkuIds = fn(8428).getWishlistSkuIds;
-const Constants = fn(1074);
+const getWishlistSkuIds = fn(8432).getWishlistSkuIds;
+const Constants = fn(1085);
 ({ AnalyticEvents: c10, Endpoints: closure_11, PaymentGateways: closure_12 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/WishlistActionCreators.tsx");
@@ -117,7 +117,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -257,7 +257,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -375,7 +375,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -545,9 +545,9 @@ export default {
       return value;
     })();
   },
-  fetchWishlistRecommendations(memo3, userIdsAndWishlistIds) {
-    closure_0 = memo3;
-    closure_1 = userIdsAndWishlistIds;
+  fetchWishlistRecommendations(applicationIds, userIds) {
+    closure_0 = applicationIds;
+    closure_1 = userIds;
     let flag = arg3;
     if (arg3 === undefined) {
       flag = true;

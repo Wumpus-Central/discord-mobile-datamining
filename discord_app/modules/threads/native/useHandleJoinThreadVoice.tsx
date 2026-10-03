@@ -49,7 +49,7 @@ export default function useHandleJoinThreadVoice(arg0) {
     } else {
       value.openGuildVoiceModal(closure_129_0, "Thread Header");
       c3 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
     await guildId(c2[4])(c2[6], c2.paths);
     return value.openMemberVerificationModal(closure_128_0);

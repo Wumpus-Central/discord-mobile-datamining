@@ -5,6 +5,7 @@ import subscribeToSafeAreaInsetsDefault from "subscribeToSafeAreaInsets.native.t
 import updateSharedValueIfChangedDefault from "../reanimated/utils/updateSharedValueIfChanged.native.tsx";
 import ReanimatedRexport_mod from "../reanimated/ReanimatedRexport.tsx";
 import useSafeAreaInsets_mod from "useSafeAreaInsets.native.tsx";
+import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 let obj = { main: null, share: null };
@@ -27,17 +28,11 @@ while (iter !== undefined) {
   let _loopResult = _loop(iter.next());
   continue;
 }
-const __initData = {
-  code: "function getSafeAreaInsetsWorklet_useSafeAreaInsetsSharedValueNativeTsx1(appEntryKey='main'){const{safeAreaInsetsSharedValues}=this.__closure;return safeAreaInsetsSharedValues[appEntryKey].get();}",
-};
-const result = size.fileFinishedImporting("modules/safe_area/useSafeAreaInsetsSharedValue.native.tsx");
-
-export default function useSafeAreaInsetsSharedValue() {
-  obj = AppEntryKeyContext;
-  return obj[obj.useAppEntryKey(obj)];
-}
-export const getSafeAreaInsetsWorklet = (() => {
-  function getSafeAreaInsetsWorklet() {
+const __initData = { code: "function getSafeAreaInsetsWorklet_useSafeAreaInsetsSharedValueNativeTsx1(appEntryKey='main'){const{safeAreaInsetsSharedValues}=this.__closure;return safeAreaInsetsSharedValues[appEntryKey].get();}" };
+const obj2 = {};
+const obj3 = {};
+const tmp5 = (() => {
+  export function getSafeAreaInsetsWorklet() {
     let str = arg0;
     if (arg0 === undefined) {
       str = "main";
@@ -50,3 +45,12 @@ export const getSafeAreaInsetsWorklet = (() => {
   getSafeAreaInsetsWorklet.__initData = __initData;
   return getSafeAreaInsetsWorklet;
 })();
+const result = size.fileFinishedImporting("modules/safe_area/useSafeAreaInsetsSharedValue.native.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  obj = AppEntryKeyContext;
+  return obj[obj.useAppEntryKey(obj)];
+}) : (() => {
+  obj = AppEntryKeyContext;
+  return obj[obj.useAppEntryKey(obj)];
+});

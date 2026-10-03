@@ -19,7 +19,7 @@ let closure_3 = async function _repairVibegrationsGuildHints(arg0, arg1) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -54,7 +54,7 @@ let closure_3 = async function _repairVibegrationsGuildHints(arg0, arg1) {
           return obj;
         }
         c2 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       } catch (tmp8) {
         c2 = tmp;
         throw tmp8;

@@ -1,5 +1,6 @@
 // discord_app/modules/guild_member_verification/native/MemberVerificationModalHooks.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import c from "../../../../_runtime/00576_c.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 import InitialMemberVerificationStore from "InitialMemberVerificationStore.tsx";
@@ -7,87 +8,195 @@ import InitialMemberVerificationStore from "InitialMemberVerificationStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const setInitialVerification = fn(6073).setInitialVerification;
+const setInitialVerification = fn(5966).setInitialVerification;
+fn(558);
+let ReactCompilerGating = fn(558);
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = c.c(2);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const items = [UserStore];
+        const fn = function o() {
+          currentUser = currentUser.getCurrentUser();
+          let flag;
+          if (currentUser != null) {
+            flag = currentUser.verified;
+          }
+          if (flag == null) {
+            flag = false;
+          }
+          const obj = {};
+          obj[require("MemberVerificationTypes").UserVerificationFieldPlatforms.EMAIL] = flag;
+          let flag2;
+          if (currentUser != null) {
+            flag2 = currentUser.isPhoneVerified();
+          }
+          if (flag2 == null) {
+            flag2 = false;
+          }
+          obj[require("MemberVerificationTypes").UserVerificationFieldPlatforms.PHONE] = flag2;
+          return obj;
+        };
+        cResult[0] = items;
+        cResult[1] = fn;
+        tmp4 = items;
+        tmp5 = fn;
+      } else {
+        [tmp4, tmp5] = cResult;
+      }
+      return initialize.useStateFromStoresObject(tmp4, tmp5);
+    }
+  : () => {
+      const items = [UserStore];
+      return initialize.useStateFromStoresObject(items, () => {
+        currentUser = currentUser.getCurrentUser();
+        let flag;
+        if (currentUser != null) {
+          flag = currentUser.verified;
+        }
+        if (flag == null) {
+          flag = false;
+        }
+        const obj = {};
+        obj[require("MemberVerificationTypes").UserVerificationFieldPlatforms.EMAIL] = flag;
+        let flag2;
+        if (currentUser != null) {
+          flag2 = currentUser.isPhoneVerified();
+        }
+        if (flag2 == null) {
+          flag2 = false;
+        }
+        obj[require("MemberVerificationTypes").UserVerificationFieldPlatforms.PHONE] = flag2;
+        return obj;
+      });
+    };
+let closure_6 = tmp3;
+ReactCompilerGating = fn(558);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      _require = arg0;
+      const cResult = require("c").c(4);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const items = [InitialMemberVerificationStore];
+        cResult[0] = items;
+        let first = items;
+      } else {
+        first = cResult[0];
+      }
+      if (cResult[1] !== arg0) {
+        const fn = function c() {
+          return InitialMemberVerificationStore.getInitialVerificationState(closure_0);
+        };
+        const items1 = [arg0];
+        cResult[1] = arg0;
+        cResult[2] = fn;
+        cResult[3] = items1;
+        let tmp7 = items1;
+        let tmp6 = fn;
+      } else {
+        tmp6 = cResult[2];
+        tmp7 = cResult[3];
+      }
+      const obj = require("c");
+      return require("initialize").useStateFromStores(first, tmp6, tmp7);
+    }
+  : (arg0) => {
+      _require = arg0;
+      const items = [InitialMemberVerificationStore];
+      const items1 = [arg0];
+      return require("initialize").useStateFromStores(
+        items,
+        () => InitialMemberVerificationStore.getInitialVerificationState(closure_0),
+        items1,
+      );
+    };
+let closure_7 = tmp4;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/native/MemberVerificationModalHooks.tsx");
 
-export const useSetInitialVerificationEffect = function useSetInitialVerificationEffect(guildId) {
-  _require = guildId;
-  const current = { initial: null, current: null };
-  closure_129_0 = guildId;
-  const items = [InitialMemberVerificationStore];
-  const items1 = [guildId];
-  current.initial = require("initialize").useStateFromStores(
-    items,
-    () => InitialMemberVerificationStore.getInitialVerificationState(closure_0),
-    items1,
-  );
-  const obj2 = require("initialize");
-  const items2 = [UserStore];
-  current.current = require("initialize").useStateFromStoresObject(items2, () => {
-    currentUser = currentUser.getCurrentUser();
-    let flag;
-    if (currentUser != null) {
-      flag = currentUser.verified;
+export const useSetInitialVerificationEffect = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      _require = arg0;
+      const cResult = require("c").c(8);
+      const tmp2 = closure_7(arg0);
+      const tmp3 = closure_6();
+      if (cResult[0] === tmp2) {
+        if (cResult[1] === tmp3) {
+          let tmp4 = cResult[2];
+        }
+        dependencyMap = tmp4;
+        noop = noop.useRef(tmp4);
+        if (cResult[3] !== tmp4) {
+          class S {
+            constructor() {
+              closure_2.current = closure_1;
+              return;
+            }
+          }
+          cResult[3] = tmp4;
+          cResult[4] = S;
+        } else {
+          class S {
+            constructor() {
+              closure_2.current = closure_1;
+              return;
+            }
+          }
+        }
+        const effect = obj3.useEffect(S);
+        if (cResult[5] !== arg0) {
+          class V {
+            constructor() {
+              if (null == closure_2.current.initial) {
+                tmp2 = setInitialVerification;
+                tmp3 = closure_0;
+                tmp4 = setInitialVerification(closure_0, tmp);
+              }
+              return;
+            }
+          }
+          const items = [arg0];
+          cResult[5] = arg0;
+          cResult[6] = V;
+          cResult[7] = items;
+          let tmp8 = items;
+        } else {
+          class V {
+            constructor() {
+              if (null == closure_2.current.initial) {
+                tmp2 = setInitialVerification;
+                tmp3 = closure_0;
+                tmp4 = setInitialVerification(closure_0, tmp);
+              }
+              return;
+            }
+          }
+          tmp8 = cResult[7];
+        }
+        const effect1 = obj3.useEffect(V, tmp8);
+        return tmp4.initial;
+      }
+      const obj2 = { initial: tmp2, current: tmp3 };
+      cResult[0] = tmp2;
+      cResult[1] = tmp3;
+      cResult[2] = obj2;
+      tmp4 = obj2;
+      const obj = require("c");
     }
-    if (flag == null) {
-      flag = false;
-    }
-    const obj = {};
-    obj[guildId(obj[4]).UserVerificationFieldPlatforms.EMAIL] = flag;
-    let flag2;
-    if (currentUser != null) {
-      flag2 = currentUser.isPhoneVerified();
-    }
-    if (flag2 == null) {
-      flag2 = false;
-    }
-    obj[guildId(obj[4]).UserVerificationFieldPlatforms.PHONE] = flag2;
-    return obj;
-  });
-  noop = noop.useRef(current);
-  const effect = noop.useEffect(() => {
-    closure_2.current = current;
-  });
-  const items3 = [guildId];
-  const effect1 = noop.useEffect(() => {
-    if (null == ref.current.initial) {
-      setInitialVerification(closure_0, tmp);
-    }
-  }, items3);
-  return current.initial;
-};
-export const useUserVerificationState = function useUserVerificationState() {
-  const items = [UserStore];
-  return initialize.useStateFromStoresObject(items, () => {
-    currentUser = currentUser.getCurrentUser();
-    let flag;
-    if (currentUser != null) {
-      flag = currentUser.verified;
-    }
-    if (flag == null) {
-      flag = false;
-    }
-    const obj = {};
-    obj[guildId(obj[4]).UserVerificationFieldPlatforms.EMAIL] = flag;
-    let flag2;
-    if (currentUser != null) {
-      flag2 = currentUser.isPhoneVerified();
-    }
-    if (flag2 == null) {
-      flag2 = false;
-    }
-    obj[guildId(obj[4]).UserVerificationFieldPlatforms.PHONE] = flag2;
-    return obj;
-  });
-};
-export const useInitialVerification = function useInitialVerification(id) {
-  _require = id;
-  const items = [InitialMemberVerificationStore];
-  const items1 = [id];
-  return require("initialize").useStateFromStores(
-    items,
-    () => InitialMemberVerificationStore.getInitialVerificationState(closure_0),
-    items1,
-  );
-};
+  : (arg0) => {
+      closure_0 = arg0;
+      const current = { initial: closure_7(arg0), current: closure_6() };
+      noop = noop.useRef(current);
+      const effect = noop.useEffect(() => {
+        closure_2.current = current;
+      });
+      const items = [arg0];
+      const effect1 = noop.useEffect(() => {
+        if (null == ref.current.initial) {
+          setInitialVerification(closure_0, tmp);
+        }
+      }, items);
+      return current.initial;
+    };
+export const useUserVerificationState = tmp3;
+export const useInitialVerification = tmp4;

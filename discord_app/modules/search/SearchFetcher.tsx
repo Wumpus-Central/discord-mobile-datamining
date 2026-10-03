@@ -1,11 +1,11 @@
 // discord_app/modules/search/SearchFetcher.tsx
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import _modDef1473 from "../../../_runtime/metro/01473__.js";
+import _modDef1478 from "../../../_runtime/metro/01478__.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 
 require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ SearchTypes: hasOwnProperty, Endpoints: metroRequire } = Constants);
 class SearchFetcher {
   constructor(arg0, arg1, arg2) {
@@ -33,7 +33,7 @@ prototype["fetch"] = function fetch(arg0, arg1, arg2) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -78,7 +78,7 @@ prototype["fetch"] = function fetch(arg0, arg1, arg2) {
             if (null == closure_129_0) {
               c4 = 0;
               c6 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             } else if (!closure_130_3.isCanceled) {
               if (200 === closure_129_0.status) {
                 closure_130_0(closure_129_0);
@@ -92,7 +92,7 @@ prototype["fetch"] = function fetch(arg0, arg1, arg2) {
                 if (closure_130_3.query.attempts > 5) {
                   c4 = 0;
                   c6 = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 } else {
                   const _parseInt = parseInt;
                   closure_129_1 = parseInt(closure_129_0.headers["retry-after"]);
@@ -114,7 +114,7 @@ prototype["fetch"] = function fetch(arg0, arg1, arg2) {
           }
           c4 = 0;
           c6 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
         c6 = 3;
       } catch (tmp49) {
@@ -191,7 +191,7 @@ prototype2["makeRequest"] = function makeRequest(rejectWithError) {
     const HTTP = HTTPUtils.HTTP;
     const request = {
       url: endpoint,
-      query: _modDef1473.stringify(this.query),
+      query: _modDef1478.stringify(this.query),
       oldFormErrors: true,
       rejectWithError: rejectWithError.rejectWithError,
     };

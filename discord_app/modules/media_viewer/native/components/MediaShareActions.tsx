@@ -1,6 +1,7 @@
 // discord_app/modules/media_viewer/native/components/MediaShareActions.tsx
+import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01981_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
 import ToastUtils from "../../../toast/native/ToastUtils.tsx";
 import useChatLayout from "../../../chat/native/useChatLayout.tsx";
 import LinkIcon from "../../../../design/components/Icon/native/redesign/generated/LinkIcon.tsx";
@@ -10,8 +11,8 @@ import transitionToChannel from "../../../routing/transitionToChannel.tsx";
 import MediaFormatTesters from "../../../messages/MediaFormatTesters.tsx";
 import ImageWarningIcon from "../../../../design/components/Icon/native/redesign/generated/ImageWarningIcon.tsx";
 import ClipboardUtils from "../../../../utils/ClipboardUtils.native.tsx";
-import ActionSheet from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import ActionSheetRow from "../../../../design/components/Sheet/native/ActionSheetRow.native.tsx";
+import ActionSheet from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import MediaViewerAnalyticsManager from "../../MediaViewerAnalyticsManager.tsx";
 import MediaSourceUtil from "../MediaSourceUtil.tsx";
 import showShareActionSheet from "../../../action_sheet/native/showShareActionSheet.tsx";
@@ -86,7 +87,7 @@ function useMediaShareActions(source) {
         source.contentType,
       );
     } else if (null != source.sourceURI) {
-      const result1 = MediaFormatTesters.urlMatchesFileExtension(source.sourceURI, React7);
+      const result1 = MediaFormatTesters.urlMatchesFileExtension(source.sourceURI, options);
       const result2 = MediaSourceUtil.downloadMediaAssetWithContentType(
         source.sourceURI,
         result1 ? constants2.GIF : constants2.IMAGE,
@@ -143,7 +144,8 @@ function useMediaShareActions(source) {
             message: stateFromStores,
             source: "media-viewer",
             initialSelectedDestinations: "Array",
-            forwardOptions: "RECENT_MENTION_DELETE",
+            forwardOptions:
+              "function hexWithOpacity_ColorUtilsTsx1(color,value){if(color.length===7){const alpha=value*255|0;return color+alpha.toString(16).padStart(2,'0').toUpperCase();}const hex=color.charAt(0)==='#'?color.slice(1):color;let r;let g;let b;let a;switch(hex.length){case 3:r=hex.charAt(0);g=hex.charAt(1);b=hex.charAt(2);r+=r;g+=g;b+=b;a=(value*255|0).toString(16).padStart(2,'0').toUpperCase();return'#'+r+g+b+a;case 4:r=hex.charAt(0);g=hex.charAt(1);b=hex.charAt(2);a=hex.charAt(3);r+=r;g+=g;b+=b;a+=a;const alpha4=parseInt(a,16)/255*value;const alpha4Hex=(alpha4*255|0).toString(16).padStart(2,'0').toUpperCase();return'#'+r+g+b+alpha4Hex;case 6:const alpha6=(value*255|0).toString(16).padStart(2,'0').toUpperCase();return'#'+hex+alpha6;case 8:const baseColor='#'+hex.slice(0,6);const existingAlpha=parseInt(hex.slice(6),16)/255;const alpha8=(existingAlpha*value*255|0).toString(16).padStart(2,'0').toUpperCase();return baseColor+alpha8;default:throw new Error('Invalid hex color format');}}",
           };
           const obj4 = { onlyAttachmentIds: null };
           const items = [attachmentId];
@@ -156,7 +158,8 @@ function useMediaShareActions(source) {
           message: stateFromStores,
           source: "media-viewer",
           initialSelectedDestinations: "Array",
-          forwardOptions: "RECENT_MENTION_DELETE",
+          forwardOptions:
+            "function hexWithOpacity_ColorUtilsTsx1(color,value){if(color.length===7){const alpha=value*255|0;return color+alpha.toString(16).padStart(2,'0').toUpperCase();}const hex=color.charAt(0)==='#'?color.slice(1):color;let r;let g;let b;let a;switch(hex.length){case 3:r=hex.charAt(0);g=hex.charAt(1);b=hex.charAt(2);r+=r;g+=g;b+=b;a=(value*255|0).toString(16).padStart(2,'0').toUpperCase();return'#'+r+g+b+a;case 4:r=hex.charAt(0);g=hex.charAt(1);b=hex.charAt(2);a=hex.charAt(3);r+=r;g+=g;b+=b;a+=a;const alpha4=parseInt(a,16)/255*value;const alpha4Hex=(alpha4*255|0).toString(16).padStart(2,'0').toUpperCase();return'#'+r+g+b+alpha4Hex;case 6:const alpha6=(value*255|0).toString(16).padStart(2,'0').toUpperCase();return'#'+hex+alpha6;case 8:const baseColor='#'+hex.slice(0,6);const existingAlpha=parseInt(hex.slice(6),16)/255;const alpha8=(existingAlpha*value*255|0).toString(16).padStart(2,'0').toUpperCase();return baseColor+alpha8;default:throw new Error('Invalid hex color format');}}",
         };
         const obj7 = { onlyEmbedIndices: null };
         const items1 = [source.mediaIndex];
@@ -187,7 +190,7 @@ function useMediaShareActions(source) {
       const obj2 = { messageId: null, channelId: null, attachmentId: null };
       ({ messageId: obj3.messageId, channelId: obj3.channelId } = source);
       obj2.attachmentId = attachmentId;
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11385, dependencyMap.paths), closure_11, obj2);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11301, dependencyMap.paths), closure_11, obj2);
       const tmpResult = ActionSheetActionCreatorsDefault;
     }
     tmp5 = null != attachmentId && null != source.channelId && null != source.messageId;
@@ -288,45 +291,107 @@ function useMediaShareActions(source) {
     return items;
   }, items9);
 }
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AnalyticsSections: closure_8, GIF_RE_IOS: closure_9, MediaType: c10 } = Constants);
-let closure_11 = fn(7207).EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY;
+let closure_11 = fn(7110).EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY;
 const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/components/MediaShareActions.tsx");
 
-export default function MediaShareActionSheet(source) {
-  const obj2 = { children: null };
-  const arr = useMediaShareActions({
-    source: source.source,
-    disableDownload: source.disableDownload,
-    shareable: source.shareable,
-  });
-  let obj = { source: source.source, disableDownload: source.disableDownload, shareable: source.shareable };
-  obj2.children = jsx(ActionSheetRow.ActionSheetRow.Group, {
-    hasIcons: true,
-    children: useMediaShareActions({
-      source: source.source,
-      disableDownload: source.disableDownload,
-      shareable: source.shareable,
-    }).map((IconComponent, index) => {
-      const obj = {
-        icon: jsx(ActionSheetRow.ActionSheetRow.Icon, { IconComponent: IconComponent.IconComponent }),
-        onPress: null,
-        label: null,
-      };
-      ({ action: obj.onPress, label: obj.label } = IconComponent);
-      return jsx(
-        ActionSheetRow.ActionSheetRow,
-        {
-          icon: jsx(ActionSheetRow.ActionSheetRow.Icon, { IconComponent: IconComponent.IconComponent }),
-          onPress: null,
-          label: null,
-        },
-        index,
-      );
-    }),
-  });
-  return jsx(ActionSheet.ActionSheet, { children: null });
-}
+export default ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      const cResult = c.c(9);
+      ({ source, disableDownload, shareable } = arg0);
+      if (cResult[0] === disableDownload) {
+        if (cResult[1] === shareable) {
+          if (cResult[2] === source) {
+            let tmp4 = cResult[3];
+          }
+          const arr = useMediaShareActions(tmp4);
+          if (cResult[4] !== arr) {
+            const _Symbol = Symbol;
+            if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
+              const fn = function u(IconComponent, id) {
+                const obj = {
+                  icon: jsx(ActionSheetRow.ActionSheetRow.Icon, { IconComponent: IconComponent.IconComponent }),
+                  onPress: null,
+                  label: null,
+                };
+                ({ action: obj.onPress, label: obj.label } = IconComponent);
+                return jsx(
+                  ActionSheetRow.ActionSheetRow,
+                  {
+                    icon: jsx(ActionSheetRow.ActionSheetRow.Icon, { IconComponent: IconComponent.IconComponent }),
+                    onPress: null,
+                    label: null,
+                  },
+                  id,
+                );
+              };
+              cResult[6] = fn;
+              let tmp8 = fn;
+            } else {
+              tmp8 = cResult[6];
+            }
+            const mapped = arr.map(tmp8);
+            cResult[4] = arr;
+            cResult[5] = mapped;
+          } else {
+            if (cResult[7] !== cResult[5]) {
+              const obj2 = { children: null };
+              const obj3 = { hasIcons: true, children: tmp6 };
+              obj2.children = jsx(ActionSheetRow.ActionSheetRow.Group, { hasIcons: true, children: tmp6 });
+              const tmp13 = jsx(ActionSheet.ActionSheet, { children: null });
+              cResult[7] = tmp6;
+              cResult[8] = tmp13;
+              let tmp11 = tmp13;
+            } else {
+              tmp11 = cResult[8];
+            }
+            return tmp11;
+          }
+        }
+      }
+      const obj4 = { source, disableDownload, shareable };
+      cResult[0] = disableDownload;
+      cResult[1] = shareable;
+      cResult[2] = source;
+      cResult[3] = obj4;
+      tmp4 = obj4;
+    }
+  : (source) => {
+      const obj2 = { children: null };
+      const arr = useMediaShareActions({
+        source: source.source,
+        disableDownload: source.disableDownload,
+        shareable: source.shareable,
+      });
+      let obj = { source: source.source, disableDownload: source.disableDownload, shareable: source.shareable };
+      obj2.children = jsx(ActionSheetRow.ActionSheetRow.Group, {
+        hasIcons: true,
+        children: useMediaShareActions({
+          source: source.source,
+          disableDownload: source.disableDownload,
+          shareable: source.shareable,
+        }).map((IconComponent, index) => {
+          const obj = {
+            icon: jsx(ActionSheetRow.ActionSheetRow.Icon, { IconComponent: IconComponent.IconComponent }),
+            onPress: null,
+            label: null,
+          };
+          ({ action: obj.onPress, label: obj.label } = IconComponent);
+          return jsx(
+            ActionSheetRow.ActionSheetRow,
+            {
+              icon: jsx(ActionSheetRow.ActionSheetRow.Icon, { IconComponent: IconComponent.IconComponent }),
+              onPress: null,
+              label: null,
+            },
+            index,
+          );
+        }),
+      });
+      return jsx(ActionSheet.ActionSheet, { children: null });
+    };
 export { useMediaShareActions };

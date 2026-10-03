@@ -25,10 +25,10 @@ import RTCRegionStore from "../../stores/RTCRegionStore.tsx";
 import RTCConnection from "../../lib/RTCConnection.tsx";
 
 require = fn;
-const getSystemAnalyticsInfo = fn(4890).getSystemAnalyticsInfo;
-const Constants = fn(1074);
+const getSystemAnalyticsInfo = fn(4935).getSystemAnalyticsInfo;
+const Constants = fn(1085);
 ({ AnalyticEvents: map1, MediaEngineHookTypes: closure_14, RTCConnectionStates: closure_15 } = Constants);
-const MediaEngineContextTypes = fn(4870).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(4915).MediaEngineContextTypes;
 let closure_17 = 5 * DurationsDefault.Millis.SECOND;
 let closure_18 = {
   DETACHED: 0,
@@ -447,15 +447,15 @@ prototype["initializeEvents"] = function initializeEvents() {
               obj3.share_game_distributor = share_game_distributor;
               obj3.hdr_frames_capable = hdr_frames_capable;
               obj3.hdr_frames = hdr_frames;
-              const obj2 = self(1241);
-              obj3.discord_is_elevated = self(4839).getDiscordIsElevated();
+              const obj2 = self(1252);
+              obj3.discord_is_elevated = self(4884).getDiscordIsElevated();
               obj3.target_window_elevated = target_window_elevated;
               obj3.pipewire_frames = pipewire_frames;
               obj3.x11_frames = x11_frames;
               obj3.videohook_backend = videohook_backend;
               const merged = Object.assign(tmp);
               obj2.track(constants.SCREENSHARE_FINISHED, obj3);
-              const tmp2Result = self(4839);
+              const tmp2Result = self(4884);
             });
           },
         );
@@ -470,15 +470,15 @@ prototype["initializeEvents"] = function initializeEvents() {
           }
           if (null != desktopSource) {
             let desktopSource1;
-            const obj = self(1241);
+            const obj = self(1252);
             if (goLiveSource != null) {
               desktopSource1 = goLiveSource.desktopSource;
             }
             const obj2 = {};
-            const merged = Object.assign(self(4980)(desktopSource1));
+            const merged = Object.assign(self(5025)(desktopSource1));
             const merged1 = Object.assign(closure_1_1.getSoundshareAnalyticsProperties());
             obj.track(constants.SOUNDSHARE_ATTACHED, obj2);
-            const tmp6 = self(4980);
+            const tmp6 = self(5025);
           }
         });
       }
@@ -504,19 +504,19 @@ prototype["initializeEvents"] = function initializeEvents() {
           }
           if (null != desktopSource) {
             let desktopSource1;
-            const obj3 = self(1241);
+            const obj3 = self(1252);
             if (goLiveSource != null) {
               desktopSource1 = goLiveSource.desktopSource;
             }
             const obj = {};
-            const merged = Object.assign(self(4980)(desktopSource1));
+            const merged = Object.assign(self(5025)(desktopSource1));
             const merged1 = Object.assign(closure_1_1.getSoundshareAnalyticsProperties());
             obj3.track(constants.SOUNDSHARE_TRANSMITTING, obj);
             if (null != hookError.getHookError(constants2.SOUND)) {
-              self(573).dispatch({ type: "MEDIA_ENGINE_SOUNDSHARE_TRANSMITTING" });
-              const tmp13Result = self(573);
+              self(584).dispatch({ type: "MEDIA_ENGINE_SOUNDSHARE_TRANSMITTING" });
+              const tmp13Result = self(584);
             }
-            const tmp16 = self(4980);
+            const tmp16 = self(5025);
           }
         });
       }
@@ -558,16 +558,16 @@ prototype["initializeEvents"] = function initializeEvents() {
                 const errorTimer = closure_1_1.errorTimer;
                 errorTimer.stop();
                 const obj3 = { type: "MEDIA_ENGINE_SOUNDSHARE_FAILED", errorMessage: reason, errorCode: code };
-                self(573).dispatch(obj3);
-                const obj2 = self(573);
+                self(584).dispatch(obj3);
+                const obj2 = self(584);
               }
             }
           } else if ("soundshare_state_transition" === type) {
             if (type.newState === constants4.PLAYING) {
               const errorTimer3 = closure_1_1.errorTimer;
               errorTimer3.stop();
-              self(573).dispatch({ type: "MEDIA_ENGINE_SOUNDSHARE_TRANSMITTING" });
-              const obj4 = self(573);
+              self(584).dispatch({ type: "MEDIA_ENGINE_SOUNDSHARE_TRANSMITTING" });
+              const obj4 = self(584);
             }
           }
         });
@@ -606,9 +606,9 @@ prototype["initializeEvents"] = function initializeEvents() {
               } = streamAnalyticsProperties);
               obj5.num_viewers = closure_1_1.analyticsContext.numViewers;
               obj5.time_connected_to_first_frame_delivered = closure_1_1.getDuration();
-              const obj2 = self(1241);
-              const obj4 = c0(4874);
-              obj5.time_total_to_first_frame = c0(4874).now() - closure_1_1.getCreatedTime();
+              const obj2 = self(1252);
+              const obj4 = c0(4919);
+              obj5.time_total_to_first_frame = c0(4919).now() - closure_1_1.getCreatedTime();
               let NumberResult = null;
               if (undefined !== remoteVideoStreamCreatedTimestamp.remoteVideoStreamCreatedTimestamp) {
                 NumberResult = null;
@@ -694,7 +694,7 @@ prototype["initializeEvents"] = function initializeEvents() {
               }
               obj5.time_remote_user_to_first_frame_decrypted = NumberResult6;
               obj2.track(constants.RECEIVER_FIRST_FRAME_DELIVERED, obj5);
-              const nowResult = c0(4874).now();
+              const nowResult = c0(4919).now();
             }
           },
         );
@@ -777,7 +777,7 @@ prototype["initializeEvents"] = function initializeEvents() {
               }
             }
             obj2.time_local_user_to_first_frame_encrypted = NumberResult4;
-            self(1241).track(constants.STREAMER_FIRST_FRAME_ENCRYPTED, obj2);
+            self(1252).track(constants.STREAMER_FIRST_FRAME_ENCRYPTED, obj2);
           },
         );
       }
@@ -823,20 +823,20 @@ prototype["initializeEvents"] = function initializeEvents() {
       };
       let tmp4 = arg3;
       if (senderUserId === id) {
-        tmp4 = self(4981)("StreamRTCConnection", guildId, arg3, maxFrameRate);
+        tmp4 = self(5026)("StreamRTCConnection", guildId, arg3, maxFrameRate);
       }
       obj2.maxResolution = tmp4;
       obj2.maxFrameRate = maxFrameRate;
       obj2.context = context;
-      self(573).dispatch(obj2);
-      const obj = self(573);
+      self(584).dispatch(obj2);
+      const obj = self(584);
     },
   );
   this.on(require("RTCConnectionEvent").RTCConnectionEvent.SecureFramesUpdate, () => {
-    self(573).dispatch({ type: "RTC_CONNECTION_SECURE_FRAMES_UPDATE" });
+    self(584).dispatch({ type: "RTC_CONNECTION_SECURE_FRAMES_UPDATE" });
   });
   this.on(require("RTCConnectionEvent").RTCConnectionEvent.RosterMapUpdate, (userIds) => {
-    self(573).dispatch({ type: "RTC_CONNECTION_ROSTER_MAP_UPDATE", userIds });
+    self(584).dispatch({ type: "RTC_CONNECTION_ROSTER_MAP_UPDATE", userIds });
   });
 };
 prototype["reportSoundshareFailure"] = function reportSoundshareFailure(desktopSource, code, failureReason, retry) {
@@ -958,11 +958,11 @@ prototype["trackVideoEndStats"] = function trackVideoEndStats(reason) {
     } else {
       codecUsageStats = getCodecUsageStats("receiver", tmp3);
     }
-    let obj = { stream_application_name: obj5(4986).default.getApplicationNames() };
+    let obj = { stream_application_name: obj5(5031).default.getApplicationNames() };
     if (self.isOwner) {
-      let obj2 = { clips_enabled: tmp5(13423).isClipsEnabled(), clips_buffer_length: tmp8.clipsLength };
+      let obj2 = { clips_enabled: tmp5(13483).isClipsEnabled(), clips_buffer_length: tmp8.clipsLength };
       obj3 = obj2;
-      const tmp5Result = tmp5(13423);
+      const tmp5Result = tmp5(13483);
     } else {
       obj3 = {};
     }
@@ -1049,7 +1049,7 @@ prototype["trackVideoEndStats"] = function trackVideoEndStats(reason) {
         obj.track(constants.VIDEO_STREAM_ENDED, obj2);
       }
     });
-    const _default = obj5(4986).default;
+    const _default = obj5(5031).default;
     tmp5 = obj5;
   }
 };

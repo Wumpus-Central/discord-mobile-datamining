@@ -2,7 +2,7 @@
 import LoggerDefault from "../../debug/Logger.tsx";
 import Constants2 from "../../../../discord_common/js/shared/Constants.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import v1 from "../../../../_runtime/01255_v1.js";
+import v1 from "../../../../_runtime/01266_v1.js";
 import FlagUtils from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import ChannelConstants from "../../channel/ChannelConstants.tsx";
 import DatabaseDaosDefault from "../DatabaseDaos.tsx";
@@ -208,7 +208,7 @@ prototype["handleBackgroundSyncGuild"] = function handleBackgroundSyncGuild(item
           }
         }
         const properties = item10008.properties;
-        const guild = GuildStore.getGuild(item10008.id);
+        guild = GuildStore.getGuild(item10008.id);
         let ownerId;
         if (guild != null) {
           ownerId = guild.ownerId;
@@ -269,7 +269,7 @@ prototype["handleGuild"] = function handleGuild(channels, database, BackgroundSy
   const self = this;
   if ("full_sync" !== channels.channels.op) {
     const id = AuthenticationStore.getId();
-    const guild = GuildStore.getGuild(channels.id);
+    guild = GuildStore.getGuild(channels.id);
     if (null != guild) {
       const properties = channels.properties;
       let owner_id;

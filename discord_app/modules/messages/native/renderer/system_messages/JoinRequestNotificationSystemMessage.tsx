@@ -8,7 +8,7 @@ import GuildStore from "../../../../../stores/GuildStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
 
 require = fn;
-const MessageTypes = fn(1074).MessageTypes;
+const MessageTypes = fn(1085).MessageTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/JoinRequestNotificationSystemMessage.tsx",
@@ -19,7 +19,7 @@ export const createJoinRequestNotificationSystemMessage = function createJoinReq
   const request = GuildJoinRequestStore.getRequest(SnowflakeUtilsDefault.cast(message.channel_id));
   let tmp4;
   if (null != request) {
-    let guild = GuildStore.getGuild(request.guildId);
+    guild = GuildStore.getGuild(request.guildId);
     if (guild == null) {
       guild = UserGuildJoinRequestStore.getJoinRequestGuild(request.guildId);
     }

@@ -1,132 +1,403 @@
 // discord_app/modules/guild_progress/native/components/GuildProgressOverview.tsx
+import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import showSimpleActionSheet from "../../../action_sheet/native/showSimpleActionSheet.tsx";
-import _modDef9591 from "../../../../../_runtime/metro/09591__.js";
+import _modDef9602 from "../../../../../_runtime/metro/09602__.js";
 import GuildProgressUtils from "../GuildProgressUtils.tsx";
 import GuildProgressActionCreatorsDefault from "../../GuildProgressActionCreators.tsx";
 import GuildProgressBarDefault from "GuildProgressBar.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-class GuildProgressOverviewView {
-  constructor(arg0) {
-    ({ titleStyle, onPress, onLongPress, title, subtitle, percentComplete } = global);
-    tmp = closure_7();
-    obj = {
-      accessibilityRole: "button",
-      activeOpacity: 0.4,
-      style: tmp.container,
-      onPress,
-      onLongPress,
-      children: null,
-    };
-    obj1 = { style: tmp.horizontal, children: null };
-    obj8 = { children: null };
-    obj9 = { style: null, children: title };
-    items = [,];
-    items[0] = tmp.title;
-    items[1] = titleStyle;
-    obj9.style = items;
-    items1 = [,];
-    items1[0] = jsx(closure_0(closure_2[11]).LegacyText, obj9);
-    obj10 = { style: tmp.step, variant: "text-xs/medium", color: "text-default", children: subtitle };
-    items1[1] = jsx(closure_0(closure_2[12]).Text, obj10);
-    obj8.children = items1;
-    items2 = [,];
-    items2[0] = jsxs(View, obj8);
-    obj11 = { source: closure_1(closure_2[13]) };
-    items2[1] = jsx(closure_0(closure_2[11]).Icon, obj11);
-    obj1.children = items2;
-    items3 = [,];
-    items3[0] = jsxs(View, obj1);
-    obj12 = { style: tmp.progressBar, percent: percentComplete };
-    items3[1] = jsx(closure_1(closure_2[14]), obj12);
-    obj.children = items3;
-    return jsxs(closure_0(closure_2[10]).PressableOpacity, obj);
-  }
-}
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = {
   container: { padding: 16 },
   horizontal: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
   title: {
     fontSize: 16,
     lineHeight: 20,
-    fontFamily: fn(1074).Fonts.PRIMARY_SEMIBOLD,
+    fontFamily: fn(1085).Fonts.PRIMARY_SEMIBOLD,
     color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
     marginBottom: 2,
   },
   step: { lineHeight: 16 },
   progressBar: { marginTop: 8 },
 };
-const React5 = createStyles.createStyles(obj2);
+let closure_7 = createStyles.createStyles(obj2);
+fn(558);
+let obj3 = {
+  fontSize: 16,
+  lineHeight: 20,
+  fontFamily: fn(1085).Fonts.PRIMARY_SEMIBOLD,
+  color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
+  marginBottom: 2,
+};
+const ReactCompilerGating = fn(558);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      const cResult = c.c(25);
+      ({ titleStyle, onPress, onLongPress, title, subtitle, percentComplete } = arg0);
+      const tmp4 = closure_7();
+      if (cResult[0] === tmp4.title) {
+        if (cResult[1] === titleStyle) {
+          let tmp5 = cResult[2];
+        }
+        if (cResult[3] === tmp5) {
+          if (cResult[4] === title) {
+            let tmp6 = cResult[5];
+          }
+          if (cResult[6] === tmp4.step) {
+            if (cResult[7] === subtitle) {
+              let tmp9 = cResult[8];
+            }
+            if (cResult[9] === tmp6) {
+              if (cResult[10] === tmp9) {
+                let tmp12 = cResult[11];
+              }
+              const _Symbol = Symbol;
+              if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
+                const obj2 = { source: _modDef9602 };
+                const tmp20 = hasOwnProperty(native.Icon, obj2);
+                cResult[12] = tmp20;
+                let tmp17 = tmp20;
+              } else {
+                tmp17 = cResult[12];
+              }
+              if (cResult[13] === tmp4.horizontal) {
+                if (cResult[14] === tmp12) {
+                  let tmp21 = cResult[15];
+                }
+                if (cResult[16] === percentComplete) {
+                  if (cResult[17] === tmp4.progressBar) {
+                    let tmp25 = cResult[18];
+                  }
+                  if (cResult[19] === onLongPress) {
+                    if (cResult[20] === onPress) {
+                      if (cResult[21] === tmp4.container) {
+                        if (cResult[22] === tmp21) {
+                          if (cResult[23] === tmp25) {
+                            let tmp29 = cResult[24];
+                          }
+                          return tmp29;
+                        }
+                      }
+                    }
+                  }
+                  const obj3 = {
+                    accessibilityRole: "button",
+                    activeOpacity: 0.4,
+                    style: tmp4.container,
+                    onPress,
+                    onLongPress,
+                    children: null,
+                  };
+                  const items = [tmp21, tmp25];
+                  obj3.children = items;
+                  const tmp31 = timestampProducer(Pressables.PressableOpacity, obj3);
+                  cResult[19] = onLongPress;
+                  cResult[20] = onPress;
+                  cResult[21] = tmp4.container;
+                  cResult[22] = tmp21;
+                  cResult[23] = tmp25;
+                  cResult[24] = tmp31;
+                  tmp29 = tmp31;
+                }
+                const obj4 = { style: tmp4.progressBar, percent: percentComplete };
+                const tmp28 = hasOwnProperty(GuildProgressBarDefault, obj4);
+                cResult[16] = percentComplete;
+                cResult[17] = tmp4.progressBar;
+                cResult[18] = tmp28;
+                tmp25 = tmp28;
+              }
+              const obj5 = { style: tmp4.horizontal, children: null };
+              const items1 = [tmp12, tmp17];
+              obj5.children = items1;
+              const tmp24 = timestampProducer(View, obj5);
+              cResult[13] = tmp4.horizontal;
+              cResult[14] = tmp12;
+              cResult[15] = tmp24;
+              tmp21 = tmp24;
+            }
+            const obj6 = { children: null };
+            const items2 = [tmp6, tmp9];
+            obj6.children = items2;
+            const tmp15 = timestampProducer(View, obj6);
+            cResult[9] = tmp6;
+            cResult[10] = tmp9;
+            cResult[11] = tmp15;
+            tmp12 = tmp15;
+          }
+          const obj7 = { style: tmp4.step, variant: "text-xs/medium", color: "text-default", children: subtitle };
+          const tmp11 = hasOwnProperty(Text_Text.Text, obj7);
+          cResult[6] = tmp4.step;
+          cResult[7] = subtitle;
+          cResult[8] = tmp11;
+          tmp9 = tmp11;
+        }
+        const obj8 = { style: tmp5, children: title };
+        const tmp8 = hasOwnProperty(native.LegacyText, obj8);
+        cResult[3] = tmp5;
+        cResult[4] = title;
+        cResult[5] = tmp8;
+        tmp6 = tmp8;
+      }
+      const items3 = [tmp4.title, titleStyle];
+      cResult[0] = tmp4.title;
+      cResult[1] = titleStyle;
+      cResult[2] = items3;
+      tmp5 = items3;
+    }
+  : (arg0) => {
+      ({ titleStyle, onPress, onLongPress, title, subtitle, percentComplete } = arg0);
+      const tmp = closure_7();
+      const obj = {
+        accessibilityRole: "button",
+        activeOpacity: 0.4,
+        style: tmp.container,
+        onPress,
+        onLongPress,
+        children: null,
+      };
+      const obj2 = { style: tmp.horizontal, children: null };
+      const obj3 = { children: null };
+      const obj4 = { style: null, children: title };
+      const items = [tmp.title, titleStyle];
+      obj4.style = items;
+      const items1 = [
+        hasOwnProperty(native.LegacyText, obj4),
+        hasOwnProperty(Text_Text.Text, {
+          style: tmp.step,
+          variant: "text-xs/medium",
+          color: "text-default",
+          children: subtitle,
+        }),
+      ];
+      obj3.children = items1;
+      const items2 = [timestampProducer(View, obj3), hasOwnProperty(native.Icon, { source: _modDef9602 })];
+      obj2.children = items2;
+      const items3 = [
+        timestampProducer(View, obj2),
+        hasOwnProperty(GuildProgressBarDefault, { style: tmp.progressBar, percent: percentComplete }),
+      ];
+      obj.children = items3;
+      return timestampProducer(Pressables.PressableOpacity, obj);
+    };
+let closure_8 = tmp4;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_progress/native/components/GuildProgressOverview.tsx");
 
-export default function GuildProgressOverview(guild) {
-  guild = guild.guild;
-  let flag = guild.longPressDisabled;
-  if (flag === undefined) {
-    flag = false;
-  }
-  let flag2 = guild.resume;
-  if (flag2 === undefined) {
-    flag2 = false;
-  }
-  let completed;
-  const guildProgressStep = guild(completed[6]).useGuildProgressStep(guild);
-  completed = guildProgressStep.completed;
-  let items = [completed, guild.id];
-  ({ percentComplete, subtitle } = guildProgressStep);
-  const effect = noop.useEffect(() => {
-    if (completed) {
-      const result = GuildProgressActionCreatorsDefault.markCompletedProgressSeen(guild.id);
-    }
-  }, items);
-  let obj2 = {
-    titleStyle: guild.titleStyle,
-    onPress() {
-      if (!completed) {
-        const progress = GuildProgressActionCreatorsDefault.createProgress(guild.id);
-      }
-      GuildProgressUtils.openActionSheet(guild);
-    },
-    onLongPress() {
-      if (!flag) {
-        const obj2 = { key: "GuildProgressOverviewLongPress", options: null, hasIcons: false };
-        const obj3 = { label: null, onPress: null };
-        const intl = util.intl;
-        obj3.label = intl.string(util.t.PbNxaW);
-        obj3.onPress = function onPress() {
-          flag(completed[7]).dismissProgress(id.id);
+export default ReactCompilerGating.isReactCompilerEnabled()
+  ? (guild) => {
+      const cResult = guild(completed[7]).c(19);
+      guild = guild.guild;
+      ({ titleStyle, longPressDisabled, resume } = guild);
+      importDefault = tmp4;
+      let obj = guild(completed[7]);
+      const guildProgressStep = guild(completed[8]).useGuildProgressStep(guild);
+      ({ percentComplete, subtitle, completed } = guildProgressStep);
+      if (cResult[0] === completed) {
+        if (cResult[1] === guild.id) {
+          let tmp7 = cResult[2];
+          let tmp8 = cResult[3];
+        }
+        const effect = noop.useEffect(tmp7, tmp8);
+        if (cResult[4] === guild.id) {
+          if (cResult[5] === tmp4) {
+            let tmp11 = cResult[6];
+          }
+          if (cResult[7] === completed) {
+            if (cResult[8] === guild) {
+              let tmp12 = cResult[9];
+            }
+            if (cResult[10] !== tmp5) {
+              let intl = tmp(completed[11]).intl;
+              const string = intl.string;
+              class I {
+                constructor() {
+                  if (!completed) {
+                    tmp = closure_1;
+                    tmp2 = closure_2;
+                    obj = closure_1(closure_2[9]);
+                    tmp3 = guild;
+                    progress = obj.createProgress(guild.id);
+                  }
+                  obj2 = closure_0(closure_2[8]);
+                  openActionSheetResult = obj2.openActionSheet(guild);
+                  return;
+                }
+              }
+              if (tmp5) {
+                NzxWjb = NzxWjb.NzxWjb;
+                let stringResult = string(NzxWjb);
+              } else {
+                stringResult = string(NzxWjb.o3HK3d);
+              }
+              cResult[10] = tmp5;
+              cResult[11] = stringResult;
+            } else {
+              if (cResult[12] === tmp11) {
+                if (cResult[13] === tmp12) {
+                  if (cResult[14] === percentComplete) {
+                    if (cResult[15] === subtitle) {
+                      if (cResult[16] === tmp13) {
+                        if (cResult[17] === titleStyle) {
+                          let tmp16 = cResult[18];
+                        }
+                        return tmp16;
+                      }
+                    }
+                  }
+                }
+              }
+              class I {
+                constructor() {
+                  if (!completed) {
+                    tmp = closure_1;
+                    tmp2 = closure_2;
+                    obj = closure_1(closure_2[9]);
+                    tmp3 = guild;
+                    progress = obj.createProgress(guild.id);
+                  }
+                  obj2 = closure_0(closure_2[8]);
+                  openActionSheetResult = obj2.openActionSheet(guild);
+                  return;
+                }
+              }
+              let obj2 = {
+                titleStyle,
+                onPress: tmp12,
+                onLongPress: tmp11,
+                title: cResult[11],
+                subtitle,
+                percentComplete,
+              };
+              const tmp18 = closure_5(closure_8, obj2);
+              cResult[12] = tmp11;
+              cResult[13] = tmp12;
+              cResult[14] = percentComplete;
+              cResult[15] = subtitle;
+              cResult[16] = cResult[11];
+              cResult[17] = titleStyle;
+              cResult[18] = tmp18;
+              tmp16 = tmp18;
+            }
+          }
+          class I {
+            constructor() {
+              if (!completed) {
+                tmp = closure_1;
+                tmp2 = closure_2;
+                obj = closure_1(closure_2[9]);
+                tmp3 = guild;
+                progress = obj.createProgress(guild.id);
+              }
+              obj2 = closure_0(closure_2[8]);
+              openActionSheetResult = obj2.openActionSheet(guild);
+              return;
+            }
+          }
+          cResult[7] = completed;
+          cResult[8] = guild;
+          cResult[9] = I;
+          tmp12 = I;
+        }
+        const fn2 = function c() {
+          if (!closure_1) {
+            const obj2 = { key: "GuildProgressOverviewLongPress", options: null, hasIcons: false };
+            const obj3 = { label: null, onPress: null };
+            const intl = util.intl;
+            obj3.label = intl.string(util.t.PbNxaW);
+            obj3.onPress = function onPress() {
+              closure_1(completed[9]).dismissProgress(id.id);
+            };
+            const items = [obj3];
+            obj2.options = items;
+            const result = showSimpleActionSheet.showSimpleActionSheet(obj2);
+          }
         };
-        const items = [obj3];
-        obj2.options = items;
-        const result = showSimpleActionSheet.showSimpleActionSheet(obj2);
+        cResult[4] = guild.id;
+        cResult[5] = tmp4;
+        cResult[6] = fn2;
+        tmp11 = fn2;
       }
-    },
-    title: null,
-    subtitle: null,
-    percentComplete: null,
-  };
-  let intl = guild(completed[9]).intl;
-  const string = intl.string;
-  const t = guild(completed[9]).t;
-  if (flag2) {
-    let stringResult = string(t.NzxWjb);
-  } else {
-    stringResult = string(t.o3HK3d);
-  }
-  obj2.title = stringResult;
-  obj2.subtitle = subtitle;
-  obj2.percentComplete = percentComplete;
-  return closure_5(GuildProgressOverviewView, obj2);
-}
-export { GuildProgressOverviewView };
+      const fn = function n() {
+        if (completed) {
+          const result = GuildProgressActionCreatorsDefault.markCompletedProgressSeen(guild.id);
+        }
+      };
+      let items = [completed, guild.id];
+      cResult[0] = completed;
+      cResult[1] = guild.id;
+      cResult[2] = fn;
+      cResult[3] = items;
+      tmp8 = items;
+      tmp7 = fn;
+      const tmpResult = guild(completed[8]);
+    }
+  : (guild) => {
+      guild = guild.guild;
+      let flag = guild.longPressDisabled;
+      if (flag === undefined) {
+        flag = false;
+      }
+      let flag2 = guild.resume;
+      if (flag2 === undefined) {
+        flag2 = false;
+      }
+      let completed;
+      const guildProgressStep = guild(completed[8]).useGuildProgressStep(guild);
+      completed = guildProgressStep.completed;
+      let items = [completed, guild.id];
+      ({ percentComplete, subtitle } = guildProgressStep);
+      const effect = noop.useEffect(() => {
+        if (completed) {
+          const result = GuildProgressActionCreatorsDefault.markCompletedProgressSeen(guild.id);
+        }
+      }, items);
+      let obj2 = {
+        titleStyle: guild.titleStyle,
+        onPress() {
+          if (!completed) {
+            const progress = GuildProgressActionCreatorsDefault.createProgress(guild.id);
+          }
+          GuildProgressUtils.openActionSheet(guild);
+        },
+        onLongPress() {
+          if (!flag) {
+            const obj2 = { key: "GuildProgressOverviewLongPress", options: null, hasIcons: false };
+            const obj3 = { label: null, onPress: null };
+            const intl = util.intl;
+            obj3.label = intl.string(util.t.PbNxaW);
+            obj3.onPress = function onPress() {
+              flag(completed[9]).dismissProgress(id.id);
+            };
+            const items = [obj3];
+            obj2.options = items;
+            const result = showSimpleActionSheet.showSimpleActionSheet(obj2);
+          }
+        },
+        title: null,
+        subtitle: null,
+        percentComplete: null,
+      };
+      let intl = guild(completed[11]).intl;
+      const string = intl.string;
+      const t = guild(completed[11]).t;
+      if (flag2) {
+        let stringResult = string(t.NzxWjb);
+      } else {
+        stringResult = string(t.o3HK3d);
+      }
+      obj2.title = stringResult;
+      obj2.subtitle = subtitle;
+      obj2.percentComplete = percentComplete;
+      return closure_5(closure_8, obj2);
+    };
+export const GuildProgressOverviewView = tmp4;

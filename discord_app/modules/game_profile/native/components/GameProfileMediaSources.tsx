@@ -59,9 +59,9 @@ export const buildMediaEntries = function buildMediaEntries(game) {
   }
   return items;
 };
-export const buildMediaViewerSources = function buildMediaViewerSources(memo1, memo) {
-  closure_0 = memo;
-  return memo1.map((originalUrl, mediaIndex) => {
+export const buildMediaViewerSources = function buildMediaViewerSources(arr2, cResult) {
+  closure_0 = cResult;
+  return arr2.map((originalUrl, mediaIndex) => {
     const obj = { uri: originalUrl.originalUrl, videoURI: null, mediaIndex: null };
     originalUrl = undefined;
     if ("trailer" === originalUrl.type) {

@@ -15,7 +15,7 @@ import ApplicationAssetUtils from "../../../../utils/ApplicationAssetUtils.tsx";
 import ApplicationUtils from "../../../../utils/native/ApplicationUtils.tsx";
 import AppLauncherUtils from "../../../app_launcher/utils/AppLauncherUtils.tsx";
 import FramesActionCreatorsDefault from "../../../frames/FramesActionCreators.native.tsx";
-import canLaunchFrame from "../../../frames/utils/canLaunchFrame.tsx";
+import canLaunchContextlessFrame from "../../../frames/utils/canLaunchContextlessFrame.tsx";
 import AppLauncherPlayUtils from "../../../app_launcher/utils/AppLauncherPlayUtils.tsx";
 import ContentClassificationVisibility from "../../../content_classification/ContentClassificationVisibility.tsx";
 import CodedLinksTypes from "../../../messages/native/renderer/row_data/embeds/coded_links/CodedLinksTypes.tsx";
@@ -28,10 +28,10 @@ import ApplicationAssetsStore from "../../ApplicationAssetsStore.tsx";
 import ApplicationStore from "../../ApplicationStore.tsx";
 
 require = fn;
-const FetchState = fn(7778).FetchState;
-const AppLauncherRouteName = fn(1484).AppLauncherRouteName;
-const MAIN_SURFACE = fn(8691).MAIN_SURFACE;
-const CodedLinkExtendedType = fn(11060).CodedLinkExtendedType;
+const FetchState = fn(7822).FetchState;
+const AppLauncherRouteName = fn(1489).AppLauncherRouteName;
+const MAIN_SURFACE = fn(8704).MAIN_SURFACE;
+const CodedLinkExtendedType = fn(10024).CodedLinkExtendedType;
 let closure_11 = ["embedded_cover"];
 let c12 = 512;
 const size = fn(2);
@@ -105,8 +105,8 @@ export const createAppMessageEmbed = function createAppMessageEmbed(arg0) {
   const baseColors = getEmbedThemeColorsDefault(theme).baseColors;
   ({ id, tags, maxParticipants, icon } = app);
   ({ name, bot } = app);
-  const isEmbeddedAppResult = AppLauncherUtils.isEmbeddedApp(app);
-  if (isEmbeddedAppResult) {
+  const isActivityAppResult = AppLauncherUtils.isActivityApp(app);
+  if (isActivityAppResult) {
     const applicationAssetFetchState = ApplicationAssetsStore.getApplicationAssetFetchState(id);
     if (applicationAssetFetchState === FetchState.NOT_FETCHED) {
       const assetIds = ApplicationAssetUtils.fetchAssetIds(id, closure_11);
@@ -122,8 +122,8 @@ export const createAppMessageEmbed = function createAppMessageEmbed(arg0) {
       let formatToPlainStringResult = intl2.formatToPlainString(util.t.z8EAJW, obj2);
     }
     const items = [];
-    if (isEmbeddedAppResult) {
-      if (tmp2Result9.canLaunchFrame(app)) {
+    if (isActivityAppResult) {
+      if (tmp2Result9.canLaunchContextlessFrame(app)) {
         const obj3 = { id: "play_frame", label: null };
         const intl6 = util.intl;
         obj3.label = intl6.string(util.t.RscU7I);
@@ -153,11 +153,11 @@ export const createAppMessageEmbed = function createAppMessageEmbed(arg0) {
         }
         const tmp2Result10 = getPlayInContext;
       }
-      tmp2Result9 = canLaunchFrame;
+      tmp2Result9 = canLaunchContextlessFrame;
     }
     ({ id: id2, bot: bot2 } = app);
     const joined = tags.join(" \u2219 ");
-    if (tmp2Result11.isEmbeddedApp(app)) {
+    if (tmp2Result11.isActivityApp(app)) {
       let assetIds1 = ApplicationAssetUtils.getAssetIds(id2, closure_11);
       if (assetIds1 == null) {
         assetIds1 = [];

@@ -1,11 +1,11 @@
 // discord_app/modules/home_drawer/native/HomeDrawerSubtitleStore.tsx
-import 00560__ from "../../../../_runtime/metro/00560__.js";
+import 00570__ from "../../../../_runtime/metro/00570__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 let c0 = null;
 const result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawerSubtitleStore.tsx");
 
-export default module_560.create((arg0, arg1) => {
+export default module_570.create((arg0, arg1) => {
   closure_0 = arg0;
   closure_1 = arg1;
   return {

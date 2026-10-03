@@ -20,7 +20,7 @@ let closure_10 = async function _handleJoinEmbeddedActivityInternal(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -69,7 +69,7 @@ let closure_10 = async function _handleJoinEmbeddedActivityInternal(arg0) {
           closure_129_18 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "flex", done: null };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -250,7 +250,7 @@ let closure_10 = async function _handleJoinEmbeddedActivityInternal(arg0) {
     }
   }
 };
-let closure_9 = fn(2005).SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES;
+let closure_9 = fn(2011).SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/handleJoinEmbeddedActivity.tsx");
 

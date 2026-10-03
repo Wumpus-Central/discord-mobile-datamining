@@ -21,7 +21,7 @@ let closure_9 = async function _getActivityLaunchErrorInfo(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -169,8 +169,8 @@ let closure_9 = async function _getActivityLaunchErrorInfo(arg0) {
     }
   }
 };
-const DevShelfFetchState = fn(8508).DevShelfFetchState;
-const AbortCodes = fn(1074).AbortCodes;
+const DevShelfFetchState = fn(8513).DevShelfFetchState;
+const AbortCodes = fn(1085).AbortCodes;
 const ActivityLaunchFailErrorType = {
   ClientError: 0,
   [0]: "ClientError",

@@ -1,6 +1,6 @@
 // discord_app/modules/vibegrations/lib/VibegrationsTimelineTree.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3714 from "../intl/VibegrationsUntranslated.messages.js";
+import _modDef3723 from "../intl/VibegrationsUntranslated.messages.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 
 require = fn;
@@ -50,7 +50,7 @@ function buildTimelineTree(steps, arg1) {
           };
           const result = map1.set(combined, obj3);
           if (null != taskId) {
-            let value3 = map.get(taskId);
+            value3 = map.get(taskId);
             if (null == value3) {
               const obj4 = { taskId, task: null, steps: null };
               const obj5 = {
@@ -117,7 +117,7 @@ function buildTimelineTree(steps, arg1) {
   }
   let items = [];
   const map = new Map();
-  map1 = new Map();
+  const map1 = new Map();
   let sum1 = 0;
   const segmentOf = scanTurnColumn(steps).segmentOf;
   scanTurnColumn = (function cancelledLaneIds(steps) {
@@ -477,10 +477,10 @@ function isTurnWorkFrame(task_id) {
   return tmp;
 }
 let obj = {
-  healthcheck_failed: _modDef3714.FUWbq1,
-  preview_ready: _modDef3714["78YNh7"],
-  working: _modDef3714.nv6pUM,
-  error: _modDef3714.j3hBoA,
+  healthcheck_failed: _modDef3723.FUWbq1,
+  preview_ready: _modDef3723["78YNh7"],
+  working: _modDef3723.nv6pUM,
+  error: _modDef3723.j3hBoA,
 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsTimelineTree.tsx");
@@ -497,32 +497,32 @@ export const describeNode = function describeNode(currentStepResult) {
   }
   const intl = util.intl;
   if (nv6pUM == null) {
-    nv6pUM = _modDef3714.nv6pUM;
+    nv6pUM = _modDef3723.nv6pUM;
   }
   return intl.string(nv6pUM);
 };
 export const describeTaskStatus = function describeTaskStatus(arg0) {
   if ("running" === arg0) {
     const intl5 = util.intl;
-    return intl5.string(_modDef3714["fW7T+d"]);
+    return intl5.string(_modDef3723["fW7T+d"]);
   } else if ("done" === arg0) {
     const intl4 = util.intl;
-    return intl4.string(_modDef3714.X3c4hc);
+    return intl4.string(_modDef3723.X3c4hc);
   } else if ("failed" === arg0) {
     const intl3 = util.intl;
-    return intl3.string(_modDef3714.LK4Wsd);
+    return intl3.string(_modDef3723.LK4Wsd);
   } else if ("cancelled" === arg0) {
     const intl2 = util.intl;
-    return intl2.string(_modDef3714.msWvKA);
+    return intl2.string(_modDef3723.msWvKA);
   } else if ("incomplete" === arg0) {
     const intl = util.intl;
-    return intl.string(_modDef3714.esfcU6);
+    return intl.string(_modDef3723.esfcU6);
   }
 };
 export { buildTimelineTree };
-export const currentStep = function currentStep(steps) {
+export const currentStep = function currentStep(productId) {
   let tmp;
-  const iter = steps[Symbol.iterator]();
+  const iter = productId[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp5 = null == tmp;
@@ -636,14 +636,14 @@ export const turnSegments = function turnSegments(steps, arg1) {
   }
   return items4;
 };
-export const turnLifecycle = function turnLifecycle(memo1, turnActive) {
-  const found = memo1.filter((hasWork) => hasWork.hasWork || hasWork.hasTodos);
+export const turnLifecycle = function turnLifecycle(arr, turnActive) {
+  const found = arr.filter((hasWork) => hasWork.hasWork || hasWork.hasTodos);
   const atResult = found.at(-1);
   let index1;
   if (atResult != null) {
     index1 = atResult.index;
   }
-  const atResult1 = memo1.at(-1);
+  const atResult1 = arr.at(-1);
   if (atResult1 != null) {
     const index = atResult1.index;
   }

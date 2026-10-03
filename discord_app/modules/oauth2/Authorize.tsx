@@ -1,14 +1,15 @@
 // discord_app/modules/oauth2/Authorize.tsx
 import BigFlagUtilsAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import PermissionUtilsAll from "../../utils/PermissionUtils.tsx";
-import keysSorter from "../../../_runtime/05954_keysSorter.js";
+import QueryStringUtils from "../../utils/QueryStringUtils.tsx";
+import keysSorter from "../../../_runtime/05635_keysSorter.js";
 import OAuth2Scopes from "../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
 import scopes from "scopes.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import SelectedGuildStore from "../../stores/SelectedGuildStore.tsx";
 
 require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ EMPTY_NUX_SERVER: hasOwnProperty, FAVORITES: metroRequire, ME: closure_7 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/oauth2/Authorize.tsx");
@@ -51,14 +52,27 @@ export const parseOAuth2AuthorizeProps = function parseOAuth2AuthorizeProps(quer
     if (guild_id == null) {
       guild_id = SelectedGuildStore.getGuildId();
     }
-    let str4 = parsed.client_id;
     const deserializeResult = deserializer.deserialize(str2);
+    const tmp12 = (function sanitizeOAuthGuild(guild_id) {
+      const items = [closure_1_7, closure_1_6, closure_1_5];
+      if (!items.includes(guild_id)) {
+        return tmp;
+      }
+    })(guild_id);
+    let str4 = QueryStringUtils.getFirstQueryStringValue(parsed.scope);
     if (str4 == null) {
       str4 = "";
     }
-    const obj3 = {
-      clientId: str4,
-      scopes: null,
+    const tmpResult = QueryStringUtils;
+    const parts = str4.replace(/\+/g, " ").split(" ");
+    let str7 = parsed.client_id;
+    const found = parts.filter((item) => item.length > 0);
+    if (str7 == null) {
+      str7 = "";
+    }
+    const obj2 = {
+      clientId: str7,
+      scopes: found,
       responseType: null,
       redirectUri: null,
       codeChallenge: null,
@@ -72,37 +86,25 @@ export const parseOAuth2AuthorizeProps = function parseOAuth2AuthorizeProps(quer
       integrationType: null,
       nonce: null,
     };
-    let str5 = parsed.scope;
-    if (str5 == null) {
-      str5 = "";
-    }
-    const tmp11 = (function sanitizeOAuthGuild(guild_id) {
-      const items = [closure_1_7, closure_1_6, closure_1_5];
-      if (!items.includes(guild_id)) {
-        return tmp;
-      }
-    })(guild_id);
-    const parts = str5.replace(/\+/g, " ").split(" ");
-    obj3.scopes = parts.filter((item) => item.length > 0);
     ({
-      response_type: obj2.responseType,
-      redirect_uri: obj2.redirectUri,
-      code_challenge: obj2.codeChallenge,
-      code_challenge_method: obj2.codeChallengeMethod,
-      state: obj2.state,
+      response_type: obj3.responseType,
+      redirect_uri: obj3.redirectUri,
+      code_challenge: obj3.codeChallenge,
+      code_challenge_method: obj3.codeChallengeMethod,
+      state: obj3.state,
     } = parsed);
-    obj3.permissions = deserializeResult;
-    obj3.channelId = channel_id;
-    obj3.guildId = tmp11;
-    obj3.prompt = parsed.prompt;
-    obj3.disableGuildSelect = "true" === parsed.disable_guild_select;
+    obj2.permissions = deserializeResult;
+    obj2.channelId = channel_id;
+    obj2.guildId = tmp12;
+    obj2.prompt = parsed.prompt;
+    obj2.disableGuildSelect = "true" === parsed.disable_guild_select;
     let NumberResult;
     if (null != parsed.integration_type) {
       const _Number = Number;
       NumberResult = Number(parsed.integration_type);
     }
-    obj3.integrationType = NumberResult;
-    obj3.nonce = parsed.nonce;
-    return obj3;
+    obj2.integrationType = NumberResult;
+    obj2.nonce = parsed.nonce;
+    return obj2;
   } catch (err) {}
 };

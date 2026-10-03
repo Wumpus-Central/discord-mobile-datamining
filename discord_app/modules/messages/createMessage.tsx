@@ -6,8 +6,8 @@ import UserRecord from "../../records/UserRecord.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const ReferencedMessageState = fn(7199).ReferencedMessageState;
-const Constants = fn(1074);
+const ReferencedMessageState = fn(7102).ReferencedMessageState;
+const Constants = fn(1085);
 ({
   MessageStates: closure_7,
   MessageTypes: closure_8,

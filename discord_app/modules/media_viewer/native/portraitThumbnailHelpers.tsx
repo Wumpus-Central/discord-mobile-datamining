@@ -1,26 +1,26 @@
 // discord_app/modules/media_viewer/native/portraitThumbnailHelpers.tsx
 import size from "../../../../_runtime/metro/00002__.js";
 
-function lerpVarWidthThumbnailScrollBounds(items, arg1) {
-  if (0 === items.length) {
+function lerpVarWidthThumbnailScrollBounds(thumbnailScrollPositions, arg1) {
+  if (0 === thumbnailScrollPositions.length) {
     return 0;
   } else {
     let length = arg1;
     if (arg1 < 0) {
       return 0;
     } else {
-      if (length >= items.length) {
-        length = items.length;
+      if (length >= thumbnailScrollPositions.length) {
+        length = thumbnailScrollPositions.length;
       }
       const _Math = Math;
       const rounded = Math.floor(length);
-      if (rounded >= items.length) {
-        return items[items.length - 1].scrollStart;
+      if (rounded >= thumbnailScrollPositions.length) {
+        return thumbnailScrollPositions[thumbnailScrollPositions.length - 1].scrollStart;
       } else {
-        const scrollStart = items[rounded].scrollStart;
+        const scrollStart = thumbnailScrollPositions[rounded].scrollStart;
         let scrollStart2 = scrollStart;
-        if (rounded < items.length - 1) {
-          scrollStart2 = items[rounded + 1].scrollStart;
+        if (rounded < thumbnailScrollPositions.length - 1) {
+          scrollStart2 = thumbnailScrollPositions[rounded + 1].scrollStart;
         }
         return scrollStart + tmp3 * (scrollStart2 - scrollStart);
       }

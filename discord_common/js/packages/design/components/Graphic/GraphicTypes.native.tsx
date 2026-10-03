@@ -8,6 +8,6 @@ const result = size.fileFinishedImporting(
 export const isImage = function isImage(type) {
   return "image" === type.type;
 };
-export const isRive = function isRive(merged) {
-  return "rive" === merged.type;
+export const isRive = function isRive(cResult) {
+  return "rive" === cResult.type;
 };

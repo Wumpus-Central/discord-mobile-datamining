@@ -38,7 +38,7 @@ function migrateHotspotLocation(userContent, HUB_LINK_CHANNEL_NOTICE, CHANNEL_NO
   }
   return hasHiddenHotspotResult;
 }
-const ChannelNoticeTypes = fn(1074).ChannelNoticeTypes;
+const ChannelNoticeTypes = fn(1085).ChannelNoticeTypes;
 let items = [
   {
     version: 2,
@@ -124,7 +124,7 @@ let items = [
           return { diversitySurrogate };
         },
       ];
-      const state = PersistedStore.migrateAndReadStoreState("EmojiStore", items).state;
+      state = PersistedStore.migrateAndReadStoreState("EmojiStore", items).state;
       if (null == state) {
         return false;
       } else {
@@ -489,7 +489,7 @@ let items = [
         flag2 = true;
       }
       const Storage2 = Storage4.Storage;
-      let value3 = Storage2.get("hidePremiumTier2TrialEnding");
+      value3 = Storage2.get("hidePremiumTier2TrialEnding");
       if (value3) {
         const NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING =
           dismissible_content.DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING;
@@ -602,7 +602,7 @@ let items = [
     version: 17,
     run(textAndImages) {
       const PersistedStore = initializeDefault.PersistedStore;
-      const state = PersistedStore.migrateAndReadStoreState("ExpressionSuggestionsPersistedStore", null).state;
+      state = PersistedStore.migrateAndReadStoreState("ExpressionSuggestionsPersistedStore", null).state;
       if (null == state) {
         return false;
       } else {

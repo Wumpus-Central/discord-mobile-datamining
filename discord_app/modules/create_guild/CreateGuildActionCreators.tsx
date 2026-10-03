@@ -20,7 +20,7 @@ let closure_5 = async function _createGuildFromTemplate() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -95,7 +95,7 @@ let closure_5 = async function _createGuildFromTemplate() {
     }
   })();
 };
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/create_guild/CreateGuildActionCreators.tsx");
 

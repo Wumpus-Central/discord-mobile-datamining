@@ -1,10 +1,9 @@
 // discord_app/modules/webauthn/native/PasskeyUpsellActionCreators.tsx
-import asyncRequireImpl from "../../../../_runtime/01981_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
 import dismissible_content from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import DismissibleContentUtils from "../../dismissible_content/DismissibleContentUtils.tsx";
 import DismissibleContentUnsafeUtils from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const PASSKEY_UPSELL_KEY = "PASSKEY_UPSELL_KEY";
@@ -22,19 +21,10 @@ export default {
     }
     obj = DismissibleContentUnsafeUtils;
   },
-  openPasskeyUpsellModal() {
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14435, dependencyMap.paths), undefined, PASSKEY_UPSELL_KEY);
-  },
-  closePasskeyUpsellModal() {
-    ModalActionCreatorsDefault.popWithKey(PASSKEY_UPSELL_KEY);
-  },
   openPasskeyUpsellPromoSheet() {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14436, dependencyMap.paths), PASSKEY_UPSELL_KEY);
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15510, dependencyMap.paths), PASSKEY_UPSELL_KEY);
   },
   closePasskeyUpsellPromoSheet() {
     ActionSheetActionCreatorsDefault.hideActionSheet(PASSKEY_UPSELL_KEY);
-  },
-  openPasskeyUpsellPromoModal(merged) {
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14438, dependencyMap.paths), merged, PASSKEY_UPSELL_KEY);
   },
 };

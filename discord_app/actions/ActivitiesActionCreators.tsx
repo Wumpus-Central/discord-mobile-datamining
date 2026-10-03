@@ -8,14 +8,14 @@ import ChannelStore from "../stores/ChannelStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({
   Endpoints: hasOwnProperty,
   ActivityTypes: metroRequire,
   AnalyticEvents: closure_7,
   LoggingInviteTypes: closure_8,
 } = Constants);
-const MessageSendLocation = fn(4838).MessageSendLocation;
+const MessageSendLocation = fn(4883).MessageSendLocation;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/ActivitiesActionCreators.tsx");
 
@@ -159,12 +159,12 @@ export default {
       if (null != message_id) {
         obj4.message_id = message_id;
       }
-      const HTTP = tmp4(1271).HTTP;
+      const HTTP = tmp4(1282).HTTP;
       const request = {
         url: constants.USER_ACTIVITY_JOIN(tmp4, closure_1, closure_2),
         retries: 3,
         query: obj4,
-        rejectWithError: tmp4(1271).rejectWithMigratedError(),
+        rejectWithError: tmp4(1282).rejectWithMigratedError(),
       };
       await HTTP.get(request);
       closure_128_0 = value;
@@ -181,12 +181,12 @@ export default {
         message_id: userId.messageId,
         channel_id: userId.channelId,
       }));
-      const HTTP = v3(1271).HTTP;
+      const HTTP = v3(1282).HTTP;
       const request = {
         url: constants.USER_ACTIVITY_SUBSCRIBE,
         body: { subscriptions: mapped },
         retries: 1,
-        rejectWithError: v3(1271).rejectWithMigratedError(),
+        rejectWithError: v3(1282).rejectWithMigratedError(),
       };
       await HTTP.post(request);
       return value.body;

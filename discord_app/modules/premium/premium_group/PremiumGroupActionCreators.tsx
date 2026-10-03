@@ -17,7 +17,7 @@ let closure_7 = async function _fetchPremiumGroupMembership() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -151,7 +151,7 @@ let closure_9 = async function _inviteUsersToSubscriptionGroup(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -233,7 +233,7 @@ let closure_10 = async function _removeUserFromSubscriptionGroup(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -306,7 +306,7 @@ let closure_11 = async function _fetchSubscriptionGroupMembers(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -393,7 +393,7 @@ let closure_12 = async function _acceptSubscriptionGroupInvite(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -475,7 +475,7 @@ let closure_13 = async function _removeSubscriptionGroupInvite(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -619,7 +619,7 @@ let closure_15 = async function _fetchPremiumGroupInvite() {
     return value;
   })();
 };
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/premium_group/PremiumGroupActionCreators.tsx");
 

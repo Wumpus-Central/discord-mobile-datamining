@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = {
   guildSelector: {
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
@@ -28,9 +28,9 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/profiles/native/UserSettingsEditGuildProfile.tsx");
 
 export default function UserSettingsEditGuildProfile() {
-  function onSelectGuild(id) {
+  function onSelectGuild(dependencyMap) {
     resetPending();
-    GuildIdentityActionCreators.setCurrentGuild(id.id);
+    GuildIdentityActionCreators.setCurrentGuild(dependencyMap.id);
   }
   let tmp = closure_9();
   const tmp4 = guild(resetPending[7]);

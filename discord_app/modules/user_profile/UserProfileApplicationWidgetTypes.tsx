@@ -46,13 +46,13 @@ prototype["getProfileEditAnalyticsOptions"] = function getProfileEditAnalyticsOp
 const result = size.fileFinishedImporting("modules/user_profile/UserProfileApplicationWidgetTypes.tsx");
 
 export { ApplicationWidget };
-export const isApplicationWidgetWithId = function isApplicationWidgetWithId(applicationId, applicationId) {
-  let tmp = null != applicationId;
+export const isApplicationWidgetWithId = function isApplicationWidgetWithId(applicationId, arg1) {
+  let tmp = null != arg1;
   if (tmp) {
     tmp = applicationId instanceof ApplicationWidget;
   }
   if (tmp) {
-    tmp = applicationId.applicationId === applicationId;
+    tmp = applicationId.applicationId === arg1;
   }
   return tmp;
 };

@@ -302,17 +302,21 @@ export const getBundleItemsPriceSum = function getBundleItemsPriceSum(bundledPro
         return acc + num;
       }, 0);
     } else {
-      tmp(1364);
+      tmp(1369);
     }
     DEFAULT = constants3.DEFAULT;
     obj = require("PlatformUtils");
     tmp = _require;
   }
 };
-export const extractPriceByPurchaseTypes = function extractPriceByPurchaseTypes(product, DEFAULT, arg2) {
+export const extractPriceByPurchaseTypes = function extractPriceByPurchaseTypes(
+  type,
+  defaultPriceSetAssignmentPurchaseType,
+  arg2,
+) {
   closure_0 = arg2;
   let prices;
-  if (product.prices[DEFAULT] != null) {
+  if (type.prices[defaultPriceSetAssignmentPurchaseType] != null) {
     const countryPrices = tmp.countryPrices;
     if (countryPrices != null) {
       prices = countryPrices.prices;
@@ -411,7 +415,7 @@ export const getProductDiscount = function getProductDiscount(product, hasShopDi
           return acc + num;
         }, 0);
       } else {
-        tmp(1364);
+        tmp(1369);
       }
       DEFAULT = constants3.DEFAULT;
       obj = require("PlatformUtils");
@@ -696,12 +700,12 @@ export const shouldShowLimitedTimeBadge = function shouldShowLimitedTimeBadge(da
     tmp =
       Math.floor(
         (Date.UTC(fullYear1, month1, date.getDate()) - Date.UTC(fullYear, month, date.getDate())) / 86400000,
-      ) <= React7;
+      ) <= options;
     const UTCResult = Date.UTC(fullYear, month, date.getDate());
   }
   return tmp;
 };
-export const isProductNew = function isProductNew(skuId) {
+export const isProductNew = function isProductNew(cResult) {
   let tmp2 = null != tmp;
   if (tmp2) {
     const _Date = Date;

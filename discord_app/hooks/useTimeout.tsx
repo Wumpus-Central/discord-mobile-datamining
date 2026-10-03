@@ -1,24 +1,67 @@
 // discord_app/hooks/useTimeout.tsx
+import c from "../../_runtime/00576_c.js";
 import noop from "../../_runtime/metro/00019__.js";
+import ReactCompilerGating from "../modules/react_compiler/ReactCompilerGating.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
-({ useEffect: closure_0, useRef: closure_1 } = noop);
+({ useEffect: c2, useRef: c3 } = noop);
 const result = size.fileFinishedImporting("hooks/useTimeout.tsx");
 
-export default function useTimeout(current, arg1) {
-  closure_1 = arg1;
-  const tmp = framebus(current);
-  closure_2 = tmp;
-  const items = [current];
-  React(() => {
-    closure_2.current = current;
-  }, items);
-  const items1 = [arg1, tmp];
-  React(() => {
-    if (null !== closure_1) {
-      const _setTimeout = setTimeout;
-      const timeout = setTimeout(() => ref.current(), tmp);
-      return () => clearTimeout(closure_0);
+export default ReactCompilerGating.isReactCompilerEnabled()
+  ? (current, arg1) => {
+      closure_1 = arg1;
+      const cResult = c.c(6);
+      const tmp2 = React3(current);
+      closure_2 = tmp2;
+      if (cResult[0] !== current) {
+        const fn = function o() {
+          closure_2.current = current;
+        };
+        const items = [current];
+        cResult[0] = current;
+        cResult[1] = fn;
+        cResult[2] = items;
+        let tmp4 = items;
+        let tmp3 = fn;
+      } else {
+        tmp3 = cResult[1];
+        tmp4 = cResult[2];
+      }
+      React2(tmp3, tmp4);
+      if (cResult[3] !== arg1) {
+        const fn2 = function s() {
+          if (null !== closure_1) {
+            const _setTimeout = setTimeout;
+            const timeout = setTimeout(() => ref.current(), tmp);
+            return () => clearTimeout(closure_0);
+          }
+        };
+        const items1 = [arg1, tmp2];
+        cResult[3] = arg1;
+        cResult[4] = fn2;
+        cResult[5] = items1;
+        let tmp8 = items1;
+        let tmp7 = fn2;
+      } else {
+        tmp7 = cResult[4];
+        tmp8 = cResult[5];
+      }
+      React2(tmp7, tmp8);
     }
-  }, items1);
-}
+  : (current, arg1) => {
+      closure_1 = arg1;
+      const tmp = React3(current);
+      closure_2 = tmp;
+      const items = [current];
+      React2(() => {
+        closure_2.current = current;
+      }, items);
+      const items1 = [arg1, tmp];
+      React2(() => {
+        if (null !== closure_1) {
+          const _setTimeout = setTimeout;
+          const timeout = setTimeout(() => ref.current(), tmp);
+          return () => clearTimeout(closure_0);
+        }
+      }, items1);
+    };

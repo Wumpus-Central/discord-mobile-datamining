@@ -1,6 +1,7 @@
 // discord_app/modules/game_detection/RunningGameStore.native.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
+import SocialSdkGameResolver from "SocialSdkGameResolver.tsx";
 import OverlayTypes from "../overlay/OverlayTypes.tsx";
 import GameStore from "../games/GameStore.tsx";
 import DetectableGameStore from "../../stores/DetectableGameStore.tsx";
@@ -43,6 +44,9 @@ prototype["getRunningVerifiedApplicationIds"] = function getRunningVerifiedAppli
 };
 prototype["getGameForPID"] = function getGameForPID() {
   return null;
+};
+prototype["getSdkResolutionForPID"] = function getSdkResolutionForPID() {
+  return { type: SocialSdkGameResolver.SdkCanonicalGameResolutionType.UNRESOLVED };
 };
 prototype["getGameForName"] = function getGameForName() {
   return null;

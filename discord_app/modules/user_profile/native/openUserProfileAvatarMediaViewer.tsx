@@ -3,7 +3,7 @@ import openMediaModal from "../../media_viewer/native/components/openMediaModal.
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-const AVATAR_MAX_SIZE = fn(1074).AVATAR_MAX_SIZE;
+const AVATAR_MAX_SIZE = fn(1085).AVATAR_MAX_SIZE;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/openUserProfileAvatarMediaViewer.tsx");
 

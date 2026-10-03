@@ -1,7 +1,7 @@
 // discord_app/modules/guild_antiraid/GuildAntiRaidActionCreators.tsx
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import _modDef4450 from "../../../_runtime/metro/04450__.js";
+import _modDef4461 from "../../../_runtime/metro/04461__.js";
 import AppAnalyticsUtils from "../app_analytics/AppAnalyticsUtils.tsx";
 import GuildSettingsActionCreatorsDefault from "../guild_settings/GuildSettingsActionCreators.tsx";
 import getGuildSafetyAlertsChannelIdDefault from "getGuildSafetyAlertsChannelId.tsx";
@@ -25,7 +25,7 @@ let closure_9 = async function _setGuildRaidAlerts(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -69,7 +69,7 @@ let closure_9 = async function _setGuildRaidAlerts(arg0, arg1) {
           return obj;
         } else {
           c2 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp12) {
         c2 = tmp;
@@ -89,9 +89,9 @@ let closure_10 = async function _setGuildIncidentActions() {
   }
   let toISOStringResult = null;
   if (tmp5) {
-    _modDef4450();
-    toISOStringResult = _modDef4450().add(tmp8, "hours").toISOString();
-    _modDef4450().add(tmp8, "hours");
+    _modDef4461();
+    toISOStringResult = _modDef4461().add(tmp8, "hours").toISOString();
+    _modDef4461().add(tmp8, "hours");
   }
   let tmp12 = null;
   if (closure_1) {
@@ -132,7 +132,7 @@ let closure_11 = async function _handleResolveRaid(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -200,7 +200,7 @@ let closure_12 = async function _handleReportRaid(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -252,22 +252,22 @@ let closure_12 = async function _handleReportRaid(arg0) {
     }
   }
 };
-const DEFAULT_LOCKDOWN_DURATION = fn(7642).DEFAULT_LOCKDOWN_DURATION;
-const Constants = fn(1074);
+const DEFAULT_LOCKDOWN_DURATION = fn(7686).DEFAULT_LOCKDOWN_DURATION;
+const Constants = fn(1085);
 ({ AnalyticEvents: metroRequire, Endpoints: closure_7, GuildFeatures: closure_8 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidActionCreators.tsx");
 
-export const trackReportRaidViewed = function trackReportRaidViewed(guildId, arg1) {
-  let items = arg1;
-  if (arg1 === undefined) {
+export const trackReportRaidViewed = function trackReportRaidViewed(c1) {
+  let items = c2;
+  if (c2 === undefined) {
     items = [];
   }
   if (0 !== items.length) {
     const obj2 = {};
     const obj = AnalyticsUtilsDefault;
-    const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guildId));
-    obj2.guild_id = guildId;
+    const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(importDefault));
+    obj2.guild_id = importDefault;
     obj2.raid_types = items;
     obj.track(constants.GUILD_RAID_REPORTED, obj2);
   }

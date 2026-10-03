@@ -47,7 +47,7 @@ function handleAppStateChanged(state) {
       const blockedUsersForVoiceChannel = VoiceChannelBlockedUserStore.getBlockedUsersForVoiceChannel(channelId);
       const ignoredUsersForVoiceChannel = VoiceChannelBlockedUserStore.getIgnoredUsersForVoiceChannel(channelId);
       if (blockedUsersForVoiceChannel.size > 0) {
-        if (React6()) {
+        if (closure_1_8()) {
           const _Set = Set;
           const items = [];
           HermesBuiltin.arraySpread(
@@ -88,13 +88,13 @@ function handleAppStateChanged(state) {
           }
         }
       }
-      React7();
+      options();
     } else {
-      React7();
+      options();
     }
   }
 }
-const SharedSpacesWarningStore = fn(13483);
+const SharedSpacesWarningStore = fn(13543);
 ({
   getChannelDismissTimestamp: hasOwnProperty,
   getUserDismissTimestamp: metroRequire,

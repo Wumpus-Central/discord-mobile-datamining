@@ -1,8 +1,8 @@
 // discord_app/modules/application_commands/executeCommand.tsx
+import ApplicationCommandTypes from "ApplicationCommandTypes.tsx";
 import UploadUtils from "../../utils/UploadUtils.tsx";
 import FileUtils from "../../utils/FileUtils.tsx";
 import UploadLimits from "../media_uploads/UploadLimits.tsx";
-import ApplicationCommandTypes from "ApplicationCommandTypes.tsx";
 import MessageQueue from "../../lib/MessageQueue.tsx";
 import InteractionActionCreatorsAll from "../interactions/InteractionActionCreators.tsx";
 import UserActionCreatorsAll from "../../actions/UserActionCreators.tsx";
@@ -34,7 +34,7 @@ let closure_16 = async function _executeCommand(arg0) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       while (true) {
@@ -103,7 +103,7 @@ let closure_16 = async function _executeCommand(arg0) {
             closure_139_31 = undefined;
             c15 = 1;
             c16 = 1;
-            return { value: "flex", done: null };
+            return { value: "Reflect", done: true };
           }
         } else {
           if (1 === tmp4) {
@@ -346,7 +346,7 @@ let closure_16 = async function _executeCommand(arg0) {
                                       channelId = str.trim();
                                     } else {
                                       let obj11 = closure_140_0(closure_140_3[17]);
-                                      let guild = closure_139_2.guild;
+                                      guild = closure_139_2.guild;
                                       let id5;
                                       if (guild != null) {
                                         id5 = guild.id;
@@ -759,7 +759,7 @@ let closure_17 = async function _retryCommandMessage(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -822,7 +822,7 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
   interactionLifecycleOptions = interactionLifecycleOptions.interactionLifecycleOptions;
   let message;
   if (null != context.channel) {
-    const guild = context.guild;
+    guild = context.guild;
     const id = context.channel.id;
     let id1;
     if (guild != null) {
@@ -842,8 +842,8 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
     };
     let nonce = interactionLifecycleOptions.nonce;
     if (nonce == null) {
-      nonce = onMessageSuccess(7345).createNonce();
-      let obj2 = onMessageSuccess(7345);
+      nonce = onMessageSuccess(7249).createNonce();
+      let obj2 = onMessageSuccess(7249);
     }
     message.nonce = nonce;
     message.attachments = attachments;
@@ -859,7 +859,7 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
       onFailure: obj4.onFailure,
     } = interactionLifecycleOptions);
     const obj7 = {
-      interactionType: onMessageSuccess(1979).InteractionTypes.APPLICATION_COMMAND,
+      interactionType: onMessageSuccess(1985).InteractionTypes.APPLICATION_COMMAND,
       applicationId,
       channelId: id,
     };
@@ -919,8 +919,8 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
     }
     closure_129_0 = message;
     closure_129_1 = onMessageSuccess;
-    const obj10 = { type: onMessageSuccess(7426).MessageDataType.COMMAND, message };
-    message(7426).enqueue(obj10, (ok) => {
+    const obj10 = { type: onMessageSuccess(7462).MessageDataType.COMMAND, message };
+    message(7462).enqueue(obj10, (ok) => {
       ({ nonce, applicationId, channelId, guildId } = closure_0);
       if (guildId == null) {
         guildId = null;
@@ -941,7 +941,7 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
       }
       const obj = onMessageSuccess(dependencyMap[26]);
     });
-    const obj6 = message(7426);
+    const obj6 = message(7462);
   }
 }
 function displayInteractionLifecycleInChat() {
@@ -972,7 +972,7 @@ let closure_20 = async function _displayInteractionLifecycleInChat(arg0, arg1, a
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -1174,7 +1174,7 @@ let closure_23 = async function _getMaxAndTotalFileSize(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       while (true) {
@@ -1259,7 +1259,7 @@ let closure_24 = async function _stageAttachments(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -1288,16 +1288,16 @@ let closure_24 = async function _stageAttachments(arg0) {
             if (closure_1_2 != null) {
               tmp(dependencyMap, arg0);
             }
-            const intl = closure_0(1115).intl;
+            const intl = closure_0(1126).intl;
             const obj2 = { maxSize: null };
-            const obj = closure_2(7756);
-            obj2.maxSize = closure_0(5632).sizeString(dependencyMap);
+            const obj = closure_2(7800);
+            obj2.maxSize = closure_0(7270).sizeString(dependencyMap);
             obj.setFailed(
               closure_1_1,
               constants.ENTITY_TOO_LARGE,
-              intl.formatToPlainString(closure_0(1115).t.fxEKdS, obj2),
+              intl.formatToPlainString(closure_0(1126).t.fxEKdS, obj2),
             );
-            const obj3 = closure_0(5632);
+            const obj3 = closure_0(7270);
           };
           const obj11 = UploadLimits;
           effectiveUploadLimit = obj11.getEffectiveUploadLimit(FileUtils.maxFileSize(closure_2));
@@ -1395,14 +1395,14 @@ let closure_24 = async function _stageAttachments(arg0) {
     }
   }
 };
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({
   AbortCodes: closure_11,
   AnalyticEvents: closure_12,
   MessageTypes: map1,
   NON_USER_BOT_DISCRIMINATOR: closure_14,
 } = Constants);
-let closure_15 = fn(4838).DEFAULT_MOBILE_PRE_COMPRESSION_MAX_ATTACHMENT_SIZE;
+let closure_15 = fn(4883).DEFAULT_MOBILE_PRE_COMPRESSION_MAX_ATTACHMENT_SIZE;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_commands/executeCommand.tsx");
 

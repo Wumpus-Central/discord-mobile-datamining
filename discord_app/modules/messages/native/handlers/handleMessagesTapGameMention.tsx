@@ -1,6 +1,6 @@
 // discord_app/modules/messages/native/handlers/handleMessagesTapGameMention.tsx
-import GameProfileActionCreatorsDefault from "../../../game_profile/GameProfileActionCreators.native.tsx";
 import GameProfileAnalyticUtils from "../../../game_profile/GameProfileAnalyticUtils.tsx";
+import GameProfileActionCreatorsDefault from "../../../game_profile/GameProfileActionCreators.native.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/messages/native/handlers/handleMessagesTapGameMention.tsx");

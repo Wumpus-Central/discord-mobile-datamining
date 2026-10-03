@@ -1,26 +1,80 @@
 // discord_app/design/components/Button/native/ToggleButton.native.tsx
+import c from "../../../../../_runtime/00576_c.js";
 import BaseTextButton from "BaseTextButton.native.tsx";
 import useToggleButtonProps from "useToggleButtonProps.native.tsx";
+import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
+let closure_2 = ["pressed"];
 const jsx = fn(21).jsx;
-const obj = { Icon: fn(5466).BaseTextButton.Icon };
+const ReactCompilerGating = fn(558);
+let obj = { Icon: fn(5595).BaseTextButton.Icon };
 let merged = Object.assign(
-  noop.forwardRef((pressed, ref) => {
-    pressed = pressed.pressed;
-    const merged = Object.assign(pressed, Object.assign({ pressed: 0 }));
-    const toggleButtonProps = useToggleButtonProps.useToggleButtonProps({ on: merged, off: merged }, pressed);
-    const obj2 = {};
-    const merged1 = Object.assign(toggleButtonProps);
-    obj2.ref = ref;
-    let str = "toggle-off";
-    if (pressed) {
-      str = "toggle-on";
-    }
-    obj2.variant = str;
-    return jsx(BaseTextButton.BaseTextButton, {});
-  }),
+  noop.forwardRef(
+    ReactCompilerGating.isReactCompilerEnabled()
+      ? (pressed, ref) => {
+          const cResult = c.c(9);
+          if (cResult[0] !== pressed) {
+            pressed = pressed.pressed;
+            const tmp8 = _objectWithoutProperties(pressed, closure_2);
+            cResult[0] = pressed;
+            cResult[1] = pressed;
+            cResult[2] = tmp8;
+            let tmp5 = tmp8;
+            let tmp4 = pressed;
+          } else {
+            tmp4 = cResult[1];
+            tmp5 = cResult[2];
+          }
+          if (cResult[3] !== tmp5) {
+            const obj2 = { on: tmp5, off: tmp5 };
+            cResult[3] = tmp5;
+            cResult[4] = obj2;
+            let tmp9 = obj2;
+          } else {
+            tmp9 = cResult[4];
+          }
+          const toggleButtonProps = useToggleButtonProps.useToggleButtonProps(tmp9, tmp4);
+          let str = "toggle-off";
+          if (tmp4) {
+            str = "toggle-on";
+          }
+          if (cResult[5] === ref) {
+            if (cResult[6] === str) {
+              if (cResult[7] === toggleButtonProps) {
+                let tmp11 = cResult[8];
+              }
+              return tmp11;
+            }
+          }
+          const obj3 = {};
+          const merged = Object.assign(toggleButtonProps);
+          obj3.ref = ref;
+          obj3.variant = str;
+          const tmp13 = jsx(BaseTextButton.BaseTextButton, {});
+          cResult[5] = ref;
+          cResult[6] = str;
+          cResult[7] = toggleButtonProps;
+          cResult[8] = tmp13;
+          tmp11 = tmp13;
+          const tmpResult = useToggleButtonProps;
+        }
+      : (pressed, ref) => {
+          pressed = pressed.pressed;
+          const merged = Object.assign(pressed, Object.assign({ pressed: 0 }));
+          const toggleButtonProps = useToggleButtonProps.useToggleButtonProps({ on: merged, off: merged }, pressed);
+          const obj2 = {};
+          const merged1 = Object.assign(toggleButtonProps);
+          obj2.ref = ref;
+          let str = "toggle-off";
+          if (pressed) {
+            str = "toggle-on";
+          }
+          obj2.variant = str;
+          return jsx(BaseTextButton.BaseTextButton, {});
+        },
+  ),
   obj,
 );
 const size = fn(2);

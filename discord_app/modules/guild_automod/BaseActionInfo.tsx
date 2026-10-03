@@ -6,9 +6,9 @@ import RelationshipStore from "../../stores/RelationshipStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const Constants = fn(11554);
+const Constants = fn(11474);
 ({ AutomodActionType: hasOwnProperty, AutomodTriggerType: metroRequire } = Constants);
-const getFriendlyDurationString = fn(2109).getFriendlyDurationString;
+const getFriendlyDurationString = fn(2114).getFriendlyDurationString;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/BaseActionInfo.tsx");
 

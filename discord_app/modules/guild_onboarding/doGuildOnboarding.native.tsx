@@ -1,165 +1,106 @@
 // discord_app/modules/guild_onboarding/doGuildOnboarding.native.tsx
 import AvatarUtilsDefault from "../../utils/AvatarUtils.tsx";
 import getDevicePixelRatioDefault from "../../utils/getDevicePixelRatio.native.tsx";
-import asyncRequireImpl from "../../../_runtime/01981_asyncRequireImpl.js";
+import NativeImageManagerModuleDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeImageManagerModule.tsx";
+import asyncRequireImpl from "../../../_runtime/01987_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../actions/ModalActionCreators.tsx";
-import _mod6705 from "../../../_runtime/metro/06705__.js";
+import _mod6593 from "../../../_runtime/metro/06593__.js";
 import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators.tsx";
+import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import SelectedGuildStore from "../../stores/SelectedGuildStore.tsx";
 import GuildOnboardingStore from "GuildOnboardingStore.tsx";
 
 require = fn;
 function getBaseAnimationData() {
-  return JSON.parse(JSON.stringify(_mod6705));
+  return JSON.parse(JSON.stringify(_mod6593));
 }
-let closure_13 = async function _doGuildOnboarding(arg0) {
+let closure_14 = async function _doGuildOnboarding(arg0) {
   let guildId = arg0;
   c5 = 0;
   c6 = 0;
   let iter = (async (arg0) => {
-    if (c6 === 2) {
-      c6 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
+    closure_131_1(closure_131_2[8]).hideActionSheet();
+    closure_131_1(closure_131_2[8]);
+    closure_131_1(closure_131_2[9]).popAll();
+    closure_131_1(closure_131_2[9]);
+    await closure_131_0(closure_131_2[10]).waitForGuild(guildId2);
+    if (2 === tmp5) {
       if (arg0 === 1) {
+        c6 = 3;
         throw value;
       } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
+        c6 = 3;
+        return { value, done: true };
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c6 = 2;
-        if (0 === c5) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            closure_3 = tmp2;
-            closure_4 = tmp5;
-            let guildId2;
-            guildId2 = guildId.guildId;
-            closure_132_1 = undefined;
-            c5 = 1;
-            c6 = 1;
-            return { value: "flex", done: null };
-          }
-        } else if (1 === tmp5) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            closure_131_1(closure_131_2[7]).hideActionSheet();
-            const obj9 = closure_131_1(closure_131_2[7]);
-            closure_131_1(closure_131_2[8]).popAll();
-            const obj10 = closure_131_1(closure_131_2[8]);
-            c5 = 2;
-            c6 = 1;
-            const obj5 = { value: closure_131_0(closure_131_2[9]).waitForGuild(guildId2), done: false };
-            return obj5;
-          }
-        } else {
-          if (2 === tmp5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              const obj7 = { value, done: true };
-              return obj7;
-            } else {
-              closure_132_1 = value;
-              const features2 = closure_132_1.features;
-              let hasItem = features2.has(closure_131_8.GUILD_ONBOARDING);
-              if (hasItem) {
-                const features = closure_132_1.features;
-                hasItem = features.has(closure_131_8.COMMUNITY);
-              }
-              if (hasItem) {
-                c5 = 3;
-                c6 = 1;
-                const obj8 = {
-                  value: closure_131_0(closure_131_2[10]).maybeFetchOnboardingPrompts(guildId2),
-                  done: false,
-                };
-                return obj8;
-              }
-            }
-          } else if (3 === tmp5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              const obj12 = { value, done: true };
-              return obj12;
-            } else if (closure_131_6.shouldShowOnboarding(guildId2)) {
-              closure_2 = closure_131_12;
-              closure_1 = guildId2;
-              c5 = 4;
-              c6 = 1;
-              const obj13 = {
-                value: (function fetchLandingAsset() {
-                  const self = this;
-                  const apply = closure_1_14.apply;
-                  if (typeof apply === "unknown") {
-                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                  } else {
-                    applyArgumentsResult = apply(self, arguments);
-                  }
-                  return applyArgumentsResult;
-                })(closure_132_1),
-                done: false,
-              };
-              return obj13;
-            }
-          } else if (4 === tmp5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              const obj14 = { value, done: true };
-              return obj14;
-            } else {
-              closure_2[closure_1] = value;
-              c5 = 5;
-              c6 = 1;
-              const obj15 = { value: closure_131_15(closure_132_1.id), done: false };
-              return obj15;
-            }
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj = { value, done: true };
-            return obj;
-          }
-          c6 = 3;
-          return { value: "HermesInternal", done: null };
+        closure_132_1 = value;
+        const features2 = closure_132_1.features;
+        let hasItem = features2.has(closure_131_9.GUILD_ONBOARDING);
+        if (hasItem) {
+          const features = closure_132_1.features;
+          hasItem = features.has(closure_131_9.COMMUNITY);
         }
-      } catch (tmp42) {
-        c6 = tmp;
-        throw tmp42;
+        if (hasItem) {
+          c5 = 3;
+          c6 = 1;
+          return { value: closure_131_0(closure_131_2[11]).maybeFetchOnboardingPrompts(guildId2), done: false };
+        }
       }
+    } else if (3 === tmp5) {
+      if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 3;
+        return { value, done: true };
+      } else if (closure_131_7.shouldShowOnboarding(guildId2)) {
+        closure_2 = closure_131_13;
+        closure_1 = guildId2;
+        c5 = 4;
+        c6 = 1;
+        return {
+          value: (function fetchLandingAsset() {
+            const self = this;
+            const apply = closure_1_15.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          })(closure_132_1),
+          done: false,
+        };
+      }
+    } else if (4 === tmp5) {
+      if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 3;
+        return { value, done: true };
+      } else {
+        closure_2[closure_1] = value;
+        c5 = 5;
+        c6 = 1;
+        return { value: closure_131_16(closure_132_1.id), done: false };
+      }
+    } else if (arg0 === 1) {
+      c6 = 3;
+      throw value;
+    } else if (arg0 === 2) {
+      c6 = 3;
+      return { value, done: true };
     }
+    await "IconComponent";
+    closure_3 = tmp2;
+    guildId2 = guildId.guildId;
+    return "Reflect";
   })();
   iter.next();
   return iter;
 };
-let closure_14 = async function _fetchLandingAsset(arg0) {
+let closure_15 = async function _fetchLandingAsset(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -170,7 +111,7 @@ let closure_14 = async function _fetchLandingAsset(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -181,31 +122,34 @@ let closure_14 = async function _fetchLandingAsset(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c5 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
+          const obj4 = { value, done: true };
+          return obj4;
         } else {
           closure_2 = tmp3;
           closure_1 = tmp7;
           closure_129_0 = undefined;
           closure_129_1 = undefined;
           closure_129_2 = undefined;
-          const obj4 = { id: null, icon: null, canAnimate: false, size: null };
-          ({ id: obj10.id, icon: obj10.icon } = closure_0);
-          obj4.size = 96 / getDevicePixelRatioDefault();
-          const guildIconSource = AvatarUtilsDefault.getGuildIconSource(obj4);
-          closure_129_0 = guildIconSource;
+          closure_129_3 = undefined;
+          closure_129_4 = undefined;
+          closure_129_5 = undefined;
+          closure_129_6 = undefined;
+          const obj5 = { id: null, icon: null, canAnimate: false, size: null };
+          ({ id: obj11.id, icon: obj11.icon } = closure_0);
+          obj5.size = 96 / getDevicePixelRatioDefault();
           c3 = 1;
-          const ImageManager2 = ImageManager.ImageManager;
+          const assetSource = Image.resolveAssetSource(AvatarUtilsDefault.getGuildIconSource(obj5));
+          closure_129_0 = assetSource;
           c4 = 2;
           c5 = 1;
-          const obj5 = { value: ImageManager2.getAvatarBase64(guildIconSource), done: false };
-          return obj5;
+          const obj6 = { value: NativeImageManagerModuleDefault.getAvatarBase64(assetSource), done: false };
+          return obj6;
         }
       } else if (1 === tmp7) {
         c3 = 0;
         c5 = 3;
-        const obj6 = { value: closure_130_10(), done: true };
-        return obj6;
+        const obj7 = { value: closure_130_11(), done: true };
+        return obj7;
       } else if (2 === tmp7) {
         if (arg0 === 1) {
           c5 = 3;
@@ -213,15 +157,14 @@ let closure_14 = async function _fetchLandingAsset(arg0) {
         } else if (arg0 === 2) {
           c3 = 0;
           c5 = 3;
-          const obj7 = { value, done: true };
-          return obj7;
+          const obj8 = { value, done: true };
+          return obj8;
         } else {
           closure_129_1 = value;
-          ImageManager = closure_130_4.ImageManager;
           c4 = 3;
           c5 = 1;
-          const obj8 = { value: ImageManager.getDominantColors(closure_129_0), done: false };
-          return obj8;
+          const obj9 = { value: closure_130_1(closure_130_2[14]).getDominantColors(closure_129_0), done: false };
+          return obj9;
         }
       } else if (arg0 === 1) {
         c5 = 3;
@@ -229,24 +172,26 @@ let closure_14 = async function _fetchLandingAsset(arg0) {
       } else if (arg0 === 2) {
         c3 = 0;
         c5 = 3;
-        const obj18 = { value, done: true };
-        return obj18;
+        const obj20 = { value, done: true };
+        return obj20;
       } else {
         closure_129_2 = value;
+        closure_129_3 = closure_130_3(closure_129_2[0], 3);
+        closure_129_4 = closure_129_3[0];
+        closure_129_5 = closure_129_3[1];
+        closure_129_6 = closure_129_3[2];
         const _HermesInternal = HermesInternal;
-        const tmp12 = closure_130_1(closure_130_2[13]);
+        const tmp31 = closure_130_1(closure_130_2[15]);
+        const items = [closure_129_4, closure_129_5, closure_129_6];
         c3 = 0;
         c5 = 3;
-        const obj = {
-          value: tmp12(closure_130_10(), "data:image/png;base64," + closure_129_1, closure_129_2[0]),
-          done: true,
-        };
+        const obj = { value: tmp31(closure_130_11(), "data:image/png;base64," + closure_129_1, items), done: true };
         return obj;
       }
-    } catch (tmp23) {
+    } catch (tmp15) {
       if (tmp4 === c3) {
         c5 = tmp2;
-        throw tmp23;
+        throw tmp15;
       } else {
         c4 = tmp;
       }
@@ -277,7 +222,7 @@ function openAndWaitForOnboarding(guildId) {
       isFirstOpen: true,
     };
     ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(6728, dependencyMap.paths),
+      asyncRequireImpl(6616, dependencyMap.paths),
       {
         guildId,
         backShouldLeaveGuild: true,
@@ -285,15 +230,15 @@ function openAndWaitForOnboarding(guildId) {
         landingAnimation: dependencyMap[guildId],
         isFirstOpen: true,
       },
-      closure_7,
+      closure_8,
     ).then(() => {
       if (guildId.getGuildId() !== closure_1_0) {
-        closure_0(dependencyMap[18]).transitionTo(closure_2_9.CHANNEL(tmp));
-        const obj = closure_0(dependencyMap[18]);
+        closure_0(dependencyMap[20]).transitionTo(closure_2_10.CHANNEL(tmp));
+        const obj = closure_0(dependencyMap[20]);
       }
     });
     const pushLazyResult = ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(6728, dependencyMap.paths),
+      asyncRequireImpl(6616, dependencyMap.paths),
       {
         guildId,
         backShouldLeaveGuild: true,
@@ -301,22 +246,22 @@ function openAndWaitForOnboarding(guildId) {
         landingAnimation: dependencyMap[guildId],
         isFirstOpen: true,
       },
-      closure_7,
+      closure_8,
     );
   });
 }
-const NativeModules = fn(17).NativeModules;
-let closure_7 = fn(6704).GUILD_ONBOARDING_MODAL_KEY;
-const Constants = fn(1074);
-({ GuildFeatures: closure_8, Routes: closure_9 } = Constants);
-let closure_11 = {};
+const Image = fn(17).Image;
+let closure_8 = fn(6592).GUILD_ONBOARDING_MODAL_KEY;
+const Constants = fn(1085);
+({ GuildFeatures: closure_9, Routes: c10 } = Constants);
 let closure_12 = {};
+let closure_13 = {};
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_onboarding/doGuildOnboarding.native.tsx");
 
 export default function doGuildOnboarding() {
   const self = this;
-  const apply = closure_13.apply;
+  const apply = closure_14.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -329,5 +274,5 @@ export const discardOnboardingPromise = function discardOnboardingPromise(id) {
   delete tmp2[tmp];
 };
 export const isOnboardingActiveForGuild = function isOnboardingActiveForGuild(arg0) {
-  return null != closure_11[arg0];
+  return null != closure_12[arg0];
 };

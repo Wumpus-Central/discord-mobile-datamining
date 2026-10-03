@@ -32,7 +32,7 @@ const result = size.fileFinishedImporting(
 export const canShowVoiceChannelListInviteEmbed = function canShowVoiceChannelListInviteEmbed(invite) {
   let tmp = null;
   if (null != invite.guild) {
-    const guild = GuildStore.getGuild(invite.guild.id);
+    guild = GuildStore.getGuild(invite.guild.id);
     tmp = null;
     if (null != guild) {
       const channel = getChannelAndRecipientsFromInviteDefault(invite).channel;
@@ -62,7 +62,7 @@ export const createVoiceChannelListInviteEmbed = function createVoiceChannelList
     const guild1 = GuildStore.getGuild(invite.guild.id);
     tmp = null;
     if (null != guild1) {
-      const channel = displayNameStylesEnabled(11061)(invite).channel;
+      const channel = displayNameStylesEnabled(10025)(invite).channel;
       tmp = null;
       if (null != channel) {
         tmp = null;
@@ -84,18 +84,18 @@ export const createVoiceChannelListInviteEmbed = function createVoiceChannelList
   if (null == tmp) {
     return null;
   } else {
-    const guild = tmp.guild;
+    guild = tmp.guild;
     const channel2 = tmp.channel;
-    ({ colors, baseColors } = displayNameStylesEnabled(7560)(theme));
+    ({ colors, baseColors } = displayNameStylesEnabled(7604)(theme));
     let assetUriForEmbed;
     if (null != guild.icon) {
-      assetUriForEmbed = guild(7561).getAssetUriForEmbed(getGuildIconSource(guild, 128, false));
-      let obj2 = guild(7561);
+      assetUriForEmbed = guild(7605).getAssetUriForEmbed(getGuildIconSource(guild, 128, false));
+      let obj2 = guild(7605);
     }
     const voiceStatesForChannelAlt = SortedVoiceStateStore.getVoiceStatesForChannelAlt(channel2.id, guild.id);
     const items = [];
     const tmp39 = displayNameStylesEnabled;
-    const tmp41 = displayNameStylesEnabled(7560)(theme);
+    const tmp41 = displayNameStylesEnabled(7604)(theme);
     HermesBuiltin.arraySpread(
       voiceStatesForChannelAlt.filter((voiceState) => !voiceState.voiceState.selfStream),
       HermesBuiltin.arraySpread(
@@ -166,7 +166,7 @@ export const createVoiceChannelListInviteEmbed = function createVoiceChannelList
       voiceStatesForChannelAlt.filter((voiceState) => voiceState.voiceState.selfStream),
       0,
     );
-    const embedScrollGradientBackground = guild(4681).getEmbedScrollGradientBackground();
+    const embedScrollGradientBackground = guild(4696).getEmbedScrollGradientBackground();
     let backgroundColor = processColor(embedScrollGradientBackground);
     if (backgroundColor == null) {
       backgroundColor = baseColors.backgroundColor;
@@ -177,33 +177,33 @@ export const createVoiceChannelListInviteEmbed = function createVoiceChannelList
     obj5.guildName = guild.name;
     obj5.guildIcon = assetUriForEmbed;
     obj5.headerText = "";
-    let obj4 = guild(4681);
-    obj5.titleText = guild(4998).computeChannelName(channel2, UserStore, RelationshipStore);
+    let obj4 = guild(4696);
+    obj5.titleText = guild(5043).computeChannelName(channel2, UserStore, RelationshipStore);
     obj5.titleColor = voiceStatesForChannelAlt.length > 0 ? colors.voiceActiveColor : colors.voiceMutedColor;
-    const intl = tmp30(1115).intl;
-    obj5.acceptLabelText = intl.string(guild(1115).t.gpqgah);
+    const intl = tmp30(1126).intl;
+    obj5.acceptLabelText = intl.string(guild(1126).t.gpqgah);
     ({
       acceptLabelGreenColor: obj3.acceptLabelColor,
       acceptLabelGreenBackgroundColor: obj3.acceptLabelBackgroundColor,
     } = colors);
-    const tmp30Result = guild(4998);
+    const tmp30Result = guild(5043);
     const tmp35 = currentClientVoiceChannelId === channel2.id;
     const items1 = [GuildMemberStore];
-    obj5.canBeAccepted = tmp39(11062).canAcceptInvite(items1, invite);
+    obj5.canBeAccepted = tmp39(10026).canAcceptInvite(items1, invite);
     obj5.embedCanBeTapped = true;
     obj5.type = InviteTypes.GUILD;
     obj5.voiceUsers = mapped;
     obj5.voiceStartTimestamp = startTime;
-    const intl2 = tmp30(1115).intl;
-    obj5.emptyStateText = intl2.string(guild(1115).t.zSqdrS);
-    const intl3 = tmp30(1115).intl;
-    const tmp39Result = tmp39(11062);
-    obj5.streamingLabel = intl3.string(guild(1115).t.dI3q4h).toUpperCase();
+    const intl2 = tmp30(1126).intl;
+    obj5.emptyStateText = intl2.string(guild(1126).t.zSqdrS);
+    const intl3 = tmp30(1126).intl;
+    const tmp39Result = tmp39(10026);
+    obj5.streamingLabel = intl3.string(guild(1126).t.dI3q4h).toUpperCase();
     obj5.voiceHeaderBackgroundColor = colors.voiceHeaderBackgroundColor;
     obj5.reducedMotion = AccessibilityStore.useReducedMotion;
     obj5.isConnected = tmp35;
-    const intl4 = tmp30(1115).intl;
-    obj5.privacyHintText = intl4.string(guild(1115).t.fkg9mQ);
+    const intl4 = tmp30(1126).intl;
+    obj5.privacyHintText = intl4.string(guild(1126).t.fkg9mQ);
     return obj5;
   }
 };

@@ -1,62 +1,103 @@
 // discord_app/modules/vibegrations/native/VibegrationsIdeasOffer.tsx
-import timing from "../../../design/animation/reanimated/timing/timing.tsx";
+import c from "../../../../_runtime/00576_c.js";
+import util from "../../../intl/index.native.tsx";
+import _modDef3723 from "../intl/VibegrationsUntranslated.messages.js";
+import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
+import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
+import VibegrationsNativeMarkdownDefault from "VibegrationsNativeMarkdown.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
-import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 require = fn;
+const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const __initData = {
-  code: "function VibegrationsIdeasOfferTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}",
-};
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const ReactCompilerGating = fn(558);
 const size = fn(2);
-let result = size.fileFinishedImporting("modules/vibegrations/native/VibegrationsIdeasOffer.tsx");
+const result = size.fileFinishedImporting("modules/vibegrations/native/VibegrationsIdeasOffer.tsx");
 
-export default function VibegrationsIdeasOffer(onAsk) {
-  onAsk = onAsk.onAsk;
-  let stateFromStores;
-  let sharedValue;
-  ({ style, attribution } = onAsk);
-  const items = [AccessibilityStore];
-  stateFromStores = stateFromStores(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  let obj = stateFromStores(504);
-  let num = 0;
-  if (stateFromStores) {
-    num = 1;
-  }
-  sharedValue = stateFromStores(4595).useSharedValue(num);
-  const items1 = [sharedValue, stateFromStores];
-  const effect = noop.useEffect(() => {
-    let num = 1;
-    if (!stateFromStores) {
-      num = timing.withTiming(1, { duration: 180 });
+export default ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      const cResult = c.c(9);
+      ({ style, attribution, onAsk } = arg0);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const obj2 = { source: null };
+        const intl = util.intl;
+        obj2.source = intl.string(_modDef3723.tG5PBo);
+        const tmp8 = React4(VibegrationsNativeMarkdownDefault, obj2);
+        cResult[0] = tmp8;
+        let first = tmp8;
+      } else {
+        first = cResult[0];
+      }
+      if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
+        const intl2 = util.intl;
+        const stringResult = intl2.string(_modDef3723.cwTe5o);
+        cResult[1] = stringResult;
+        let tmp10 = stringResult;
+      } else {
+        tmp10 = cResult[1];
+      }
+      if (cResult[2] === onAsk) {
+        if (cResult[3] === tmp9) {
+          let tmp13 = cResult[4];
+        }
+        if (cResult[5] === attribution) {
+          if (cResult[6] === style) {
+            if (cResult[7] === tmp13) {
+              let tmp15 = cResult[8];
+            }
+            return tmp15;
+          }
+        }
+        const obj3 = { style, children: null };
+        const items = [attribution, first, tmp13];
+        obj3.children = items;
+        const tmp18 = hasOwnProperty(View, obj3);
+        cResult[5] = attribution;
+        cResult[6] = style;
+        cResult[7] = tmp13;
+        cResult[8] = tmp18;
+        tmp15 = tmp18;
+      }
+      const tmp14 = React4(Stack_Stack.Stack, {
+        direction: "horizontal",
+        children: React4(components_Button_Button.Button, {
+          variant: "secondary",
+          size: "sm",
+          disabled: null == onAsk,
+          onPress: onAsk,
+          text: tmp10,
+        }),
+      });
+      cResult[2] = onAsk;
+      cResult[3] = null == onAsk;
+      cResult[4] = tmp14;
+      tmp13 = tmp14;
+      const obj4 = {
+        direction: "horizontal",
+        children: React4(components_Button_Button.Button, {
+          variant: "secondary",
+          size: "sm",
+          disabled: null == onAsk,
+          onPress: onAsk,
+          text: tmp10,
+        }),
+      };
     }
-    const result = sharedValue.set(num);
-    return () => stateFromStores(dependencyMap[4]).cancelAnimation(sharedValue);
-  }, items1);
-  const obj2 = stateFromStores(4595);
-  const fn = function b() {
-    return { opacity: sharedValue.get() };
-  };
-  fn.__closure = { opacity: sharedValue };
-  fn.__workletHash = 14150175995676;
-  fn.__initData = __initData;
-  const animatedStyle = stateFromStores(4595).useAnimatedStyle(fn);
-  const obj3 = { style: null, children: null };
-  const items2 = [style, animatedStyle];
-  obj3.style = items2;
-  const items3 = [attribution, ,];
-  const obj4 = { source: null };
-  const tmpResult = stateFromStores(4595);
-  const intl = tmp(1115).intl;
-  obj4.source = intl.string(sharedValue(3714).tG5PBo);
-  items3[1] = closure_5(sharedValue(16576), obj4);
-  const obj5 = { direction: "horizontal", children: null };
-  const obj6 = { variant: "secondary", size: "sm", disabled: null == onAsk, onPress: onAsk, text: null };
-  const intl2 = tmp(1115).intl;
-  obj6.text = intl2.string(sharedValue(3714).cwTe5o);
-  obj5.children = closure_5(stateFromStores(5465).Button, obj6);
-  items3[2] = closure_5(stateFromStores(5463).Stack, obj5);
-  obj3.children = items3;
-  return closure_6(sharedValue(4595).View, obj3);
-}
+  : (onAsk) => {
+      onAsk = onAsk.onAsk;
+      const obj = { style: onAsk.style, children: null };
+      const items = [onAsk.attribution, ,];
+      const obj2 = { source: null };
+      const intl = util.intl;
+      obj2.source = intl.string(_modDef3723.tG5PBo);
+      items[1] = React4(VibegrationsNativeMarkdownDefault, obj2);
+      const obj3 = { direction: "horizontal", children: null };
+      const obj4 = { variant: "secondary", size: "sm", disabled: null == onAsk, onPress: onAsk, text: null };
+      const intl2 = util.intl;
+      obj4.text = intl2.string(_modDef3723.cwTe5o);
+      obj3.children = React4(components_Button_Button.Button, obj4);
+      items[2] = React4(Stack_Stack.Stack, obj3);
+      obj.children = items;
+      return hasOwnProperty(View, obj);
+    };

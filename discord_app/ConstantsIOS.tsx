@@ -83,6 +83,7 @@ export const LinkingTypes = {
   GUILD_EVENT_DETAILS: "guild-event-details",
   FRIENDS: "friends",
   EDIT_PROFILE: "edit-profile",
+  BADGE_DIRECTORY: "badge-directory",
   MOBILE_WEB_HANDOFF: "mobile-web-handoff",
   USER_CONNECTIONS_CALLBACK: "user-connections-callback",
   VOICE_CHANNEL: "voice-channel",

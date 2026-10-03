@@ -5,7 +5,7 @@ import PermissionStore from "../../../../../stores/PermissionStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
 
 require = fn;
-const Permissions = fn(1074).Permissions;
+const Permissions = fn(1085).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/useIsStickerReplyEnabled.tsx",

@@ -9,7 +9,7 @@ import ChannelConversationsStore from "../../ChannelConversationsStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const ConversationConstants = fn(7202);
+const ConversationConstants = fn(7105);
 ({
   CONVERSATION_HAS_MORE_EXPIRATION_MS: hasOwnProperty,
   MOBILE_FETCH_LIMIT: metroRequire,
@@ -52,7 +52,7 @@ export const useConversationsHeaderButton = function useConversationsHeaderButto
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {

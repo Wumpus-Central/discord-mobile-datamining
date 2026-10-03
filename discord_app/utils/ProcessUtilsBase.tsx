@@ -21,5 +21,6 @@ export const ElectronProcessType = {
   Utility: "utility",
   Crashpad: "crashpad",
   Clips: "clips",
+  Ndi: "ndi",
 };
 export { ProcessUtils };

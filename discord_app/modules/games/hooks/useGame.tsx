@@ -5,10 +5,12 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 import noop from "../../../../_runtime/metro/00019__.js";
 import GameStore from "../GameStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
 const initialize = fn(504);
 const obj2 = {
-  getQueryId: fn(1074).QueryIds.GAME,
+  getQueryId: fn(1085).QueryIds.GAME,
   failureStaleAfter: 15 * DurationsDefault.Seconds.SECOND,
   get(gameId) {
     if (null == gameId) {
@@ -37,7 +39,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -66,7 +68,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     } catch (tmp9) {
       c1 = tmp;
       throw tmp9;
@@ -102,19 +104,47 @@ obj2.getError = function getError(item) {
   return error;
 };
 const fetchStore = initialize.createFetchStore(GameStore, obj2);
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/games/hooks/useGame.tsx");
 
 export const useGame = fetchStore;
-export const useGames = function useGames(memo) {
-  let items = [memo];
-  const effect = noop.useEffect(() => {
-    let items = [
-      ...closure_0.map((item) => {
-        const items = [item];
-        return items;
-      }),
-    ];
-    fetchStore.fetchMany.apply(items);
-  }, items);
-};
+export const useGames = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      _require = arg0;
+      const cResult = require("c").c(3);
+      if (cResult[0] !== arg0) {
+        const fn = function n() {
+          let items = [
+            ...closure_0.map((item) => {
+              const items = [item];
+              return items;
+            }),
+          ];
+          fetchStore.fetchMany.apply(items);
+        };
+        let items = [arg0];
+        cResult[0] = arg0;
+        cResult[1] = fn;
+        cResult[2] = items;
+        let tmp3 = items;
+        let tmp2 = fn;
+      } else {
+        tmp2 = cResult[1];
+        tmp3 = cResult[2];
+      }
+      const effect = noop.useEffect(tmp2, tmp3);
+    }
+  : (arg0) => {
+      closure_0 = arg0;
+      let items = [arg0];
+      const effect = noop.useEffect(() => {
+        let items = [
+          ...closure_0.map((item) => {
+            const items = [item];
+            return items;
+          }),
+        ];
+        fetchStore.fetchMany.apply(items);
+      }, items);
+    };

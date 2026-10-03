@@ -2,7 +2,7 @@
 import GuildSettingsActionCreatorsDefault from "../../guild_settings/GuildSettingsActionCreators.tsx";
 import RoleTierEditStore from "RoleTierEditStore.tsx";
 
-const GuildSettingsSections = fn(1074).GuildSettingsSections;
+const GuildSettingsSections = fn(1085).GuildSettingsSections;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/guild_role_subscriptions/native/GuildRoleSettingsActionCreators.tsx",

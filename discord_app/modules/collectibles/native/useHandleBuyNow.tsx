@@ -24,7 +24,7 @@ function useHandleBuyNow(product) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -40,7 +40,7 @@ function useHandleBuyNow(product) {
           } else {
             v1 = 1;
             dependencyMap = 1;
-            const obj6 = { value: tmp4(7149).fetchCollectiblesPurchases(), done: false };
+            const obj6 = { value: tmp4(7052).fetchCollectiblesPurchases(), done: false };
             return obj6;
           }
         } else if (arg0 === 1) {
@@ -52,16 +52,16 @@ function useHandleBuyNow(product) {
           return obj7;
         } else {
           closure_128_4(false);
-          v1(4809).hideAllActionSheets();
-          const obj = v1(4809);
+          v1(4854).hideAllActionSheets();
+          const obj = v1(4854);
           const obj8 = {
             product: closure_128_0,
             useCategoryImage: true,
             stageCollectibleChangeForEditProfile: closure_128_2,
           };
-          v1(10742).open(obj8);
+          v1(10813).open(obj8);
           dependencyMap = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp17) {
         dependencyMap = tmp;
@@ -71,7 +71,7 @@ function useHandleBuyNow(product) {
   };
   ({ analyticsLocations, orderId } = product);
   [isBuying, _slicedToArray] = noop.useState(false);
-  const tmp3 = onBuySettled(10679)({
+  const tmp3 = onBuySettled(10750)({
     product,
     analyticsLocations,
     onPurchaseComplete() {
@@ -108,7 +108,7 @@ function useHandleBuyNow(product) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -232,7 +232,7 @@ function useHandleBuyNow(product) {
   );
   return obj2;
 }
-const Routes = fn(1074).Routes;
+const Routes = fn(1085).Routes;
 let closure_7 = new LoggerDefault("useHandleBuyNow");
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/useHandleBuyNow.tsx");

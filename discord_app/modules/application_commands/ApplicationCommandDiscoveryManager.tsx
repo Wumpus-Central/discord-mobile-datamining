@@ -1,10 +1,10 @@
 // discord_app/modules/application_commands/ApplicationCommandDiscoveryManager.tsx
-import 00560__ from "../../../_runtime/metro/00560__.js";
+import 00570__ from "../../../_runtime/metro/00570__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 
-const useCommandDiscoveryManager = module_560.create(() => ({ initialSectionId: "r" }));
+const useCommandDiscoveryManager = module_570.create(() => ({ initialSectionId: "r" }));
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandDiscoveryManager.tsx");
 
 export { useCommandDiscoveryManager };

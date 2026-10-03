@@ -27,12 +27,12 @@ import VoiceStateStore from "../../stores/VoiceStateStore.tsx";
 import Constants from "../../Constants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-const AnalyticsUtilsDefault = track(1241);
+const AnalyticsUtilsDefault = track(1252);
 function collectGuildAnalyticsMetadata(guildId) {
   if (null == guildId) {
     return null;
   } else {
-    const guild = GuildStore.getGuild(guildId);
+    guild = GuildStore.getGuild(guildId);
     if (null == guild) {
       return null;
     } else {
@@ -43,9 +43,9 @@ function collectGuildAnalyticsMetadata(guildId) {
       const obj = {
         guild_id: guild.id,
         guild_size_total: GuildMemberCountStore.getMemberCount(guildId),
-        guild_num_channels: channels[React5].length + channels[React6].length,
+        guild_num_channels: channels[React5].length + channels[closure_1_8].length,
         guild_num_text_channels: channels[React5].length,
-        guild_num_voice_channels: channels[React6].length,
+        guild_num_voice_channels: channels[closure_1_8].length,
         guild_num_roles: numRoles,
         guild_member_num_roles: null,
         guild_member_perms: null,
@@ -142,7 +142,7 @@ function collectChannelAnalyticsMetadata(channel) {
     }
   }
 }
-function trackWithMetadata(IAR_MODAL_OPEN) {
+function trackWithMetadata(TEXT_AREA_CTA_CLICKED) {
   let obj = fileSizeLimitEventProperties;
   if (fileSizeLimitEventProperties === undefined) {
     obj = {};
@@ -152,7 +152,7 @@ function trackWithMetadata(IAR_MODAL_OPEN) {
     flag = false;
   }
   let track = importDefault;
-  if (!obj2.isThrottled(IAR_MODAL_OPEN)) {
+  if (!obj2.isThrottled(TEXT_AREA_CTA_CLICKED)) {
     let tmp2 = !("location" in obj);
     if (!tmp2) {
       tmp2 = obj.location !== constants2.GUILD_CREATE_INVITE_SUGGESTION;
@@ -201,7 +201,7 @@ function trackWithMetadata(IAR_MODAL_OPEN) {
         const merged2 = Object.assign(tmp22);
         track = AnalyticsUtilsDefault.track;
         const obj4 = { flush: flag };
-        track(IAR_MODAL_OPEN, obj3, obj4);
+        track(TEXT_AREA_CTA_CLICKED, obj3, obj4);
         const trackResult = AnalyticsUtilsDefault;
       }
       const obj5 = { channel_static_route: channel_id, channel_hidden: false };
@@ -297,7 +297,7 @@ export const collectVoiceAnalyticsMetadata = function collectVoiceAnalyticsMetad
       });
       const merged = Object.assign(obj3);
       const tmp9Result = obj3(12)(VoiceStateStore.getVoiceStates(guildId));
-      const merged1 = Object.assign(id(5028).getVoiceAnalyticsMetadataAdditional());
+      const merged1 = Object.assign(id(5073).getVoiceAnalyticsMetadataAdditional());
       return obj;
     }
   }
@@ -313,7 +313,7 @@ export const getChannelOpenedMetadata = function getChannelOpenedMetadata(select
       const obj2 = { channel_id: selectedChannelId };
       return obj2;
     } else {
-      const guild = GuildStore.getGuild(channel.guild_id);
+      guild = GuildStore.getGuild(channel.guild_id);
       if (null == guild) {
         let flag = false;
         if (channel.isDM()) {

@@ -45,9 +45,9 @@ function handlePurchaseSuccess(arg0) {
 function handleEntitlementUpdate(entitlement) {
   addEntitlement(entitlement.entitlement);
 }
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ EntitlementSourceTypes: metroRequire, EntitlementTypes: closure_7 } = Constants);
-let closure_8 = fn(1374).PREMIUM_SUBSCRIPTION_APPLICATION;
+let closure_8 = fn(1379).PREMIUM_SUBSCRIPTION_APPLICATION;
 const dependencyMap = {};
 let closure_10 = {};
 const dependencyMap2 = {};

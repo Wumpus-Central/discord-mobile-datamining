@@ -2,7 +2,7 @@
 import GuildVerificationStore from "../../stores/GuildVerificationStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
-const Permissions = fn(1074).Permissions;
+const Permissions = fn(1085).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/reactions/canAddNewReactions.tsx");
 

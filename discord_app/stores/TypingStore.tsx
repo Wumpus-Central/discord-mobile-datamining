@@ -104,8 +104,8 @@ function handleConnectionOpen() {
   closure_11 = {};
   closure_12 = {};
 }
-const SlowmodeType = fn(7273).SlowmodeType;
-const Endpoints = fn(1074).Endpoints;
+const SlowmodeType = fn(7171).SlowmodeType;
+const Endpoints = fn(1085).Endpoints;
 let closure_8 = 10 * DurationsDefault.Millis.SECOND;
 let closure_9 = 1.5 * DurationsDefault.Millis.SECOND;
 const dependencyMap = {};
@@ -133,12 +133,12 @@ prototype["getTypingUsersByGuild"] = function getTypingUsersByGuild(arg0) {
   }
   return tmp;
 };
-prototype["isTyping"] = function isTyping(isStage, id) {
-  let tmp = dependencyMap[isStage];
+prototype["isTyping"] = function isTyping(id, id2) {
+  let tmp = dependencyMap[id];
   if (tmp == null) {
     tmp = closure_13;
   }
-  return null != tmp[id];
+  return null != tmp[id2];
 };
 prototype["getCustomTypingIndicatorConfig"] = function getCustomTypingIndicatorConfig(arg0) {
   let tmp = closure_12[arg0];
@@ -156,7 +156,7 @@ const typingStore = new TypingStore(DispatcherDefault, {
     const id = AuthenticationStore.getId();
     if (null == id) {
       return false;
-    } else if (channelId === channelId(6829).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
+    } else if (channelId === channelId(6722).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
       return false;
     } else {
       let tmp3 = null != obj;
@@ -226,8 +226,8 @@ const typingStore = new TypingStore(DispatcherDefault, {
                       slowmodeType: SlowmodeType.SendMessage,
                       cooldownMs: num,
                     };
-                    id(573).dispatch(obj2);
-                    obj = id(573);
+                    id(584).dispatch(obj2);
+                    obj = id(584);
                   }
                   if (num2 > 0) {
                     const obj4 = {
@@ -236,8 +236,8 @@ const typingStore = new TypingStore(DispatcherDefault, {
                       slowmodeType: SlowmodeType.CreateThread,
                       cooldownMs: num2,
                     };
-                    id(573).dispatch(obj4);
-                    const obj3 = id(573);
+                    id(584).dispatch(obj4);
+                    const obj3 = id(584);
                   }
                 }
               });

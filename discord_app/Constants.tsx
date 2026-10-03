@@ -222,8 +222,8 @@ const frozen2 = Object.freeze({
   GUILD_ROLE_MEMBERS(id, id2) {
     return "/guilds/" + id + "/roles/" + id2 + "/members";
   },
-  GUILD_ROLE_CONNECTIONS_ELIGIBILITY(guildId, id) {
-    return "/guilds/" + guildId + "/roles/" + id + "/connections/eligibility";
+  GUILD_ROLE_CONNECTIONS_ELIGIBILITY(guildId, roleId) {
+    return "/guilds/" + guildId + "/roles/" + roleId + "/connections/eligibility";
   },
   GUILD_ROLE_CONNECTIONS_ASSIGN(arg0, arg1) {
     return "/guilds/" + arg0 + "/roles/" + arg1 + "/connections/assign";
@@ -696,8 +696,8 @@ const frozen2 = Object.freeze({
   CONNECTIONS_SESSION_HANDOFF(arg0) {
     return "/connections/" + arg0 + "/callback/session-handoff";
   },
-  CONNECTIONS_CALLBACK(arg0) {
-    return "/connections/" + arg0 + "/callback";
+  CONNECTIONS_CALLBACK(provider) {
+    return "/connections/" + provider + "/callback";
   },
   CONNECTION(arg0, arg1) {
     return "/users/@me/connections/" + arg0 + "/" + escape(arg1);
@@ -1240,8 +1240,8 @@ const frozen2 = Object.freeze({
     return "/users/@me/applications/" + id + "/ticket";
   },
   ENTITLEMENTS_GIFTABLE: "/users/@me/entitlements/gifts",
-  STORE_ASSET(React5, banner_asset_id, mp4) {
-    return "/store/applications/" + React5 + "/assets/" + banner_asset_id + "." + mp4;
+  STORE_ASSET(hasOwnProperty, banner_asset_id, mp4) {
+    return "/store/applications/" + hasOwnProperty + "/assets/" + banner_asset_id + "." + mp4;
   },
   APPLICATION_ASSET(arg0, arg1, arg2) {
     return "/applications/" + arg0 + "/app-assets/" + arg1 + "." + arg2;
@@ -1477,8 +1477,8 @@ const frozen2 = Object.freeze({
   GUILD_EVENT_EXCEPTIONS(guild_id, id) {
     return "/guilds/" + guild_id + "/scheduled-events/" + id + "/exceptions";
   },
-  GUILD_EVENT_EXCEPTION(guild_id, id, event_exception_id) {
-    return "/guilds/" + guild_id + "/scheduled-events/" + id + "/exceptions/" + event_exception_id;
+  GUILD_EVENT_EXCEPTION(guild_id, id, c2) {
+    return "/guilds/" + guild_id + "/scheduled-events/" + id + "/exceptions/" + c2;
   },
   MEMBER_SAFETY_SUPPLEMENTAL(arg0) {
     return "/guilds/" + arg0 + "/members/supplemental";
@@ -2064,8 +2064,8 @@ const frozen2 = Object.freeze({
   GUILD_ROOM_CONNECT(arg0, arg1) {
     return "/guilds/" + arg0 + "/rooms/" + arg1 + "/connect";
   },
-  GUILD_ROOM_UPDATE(arg0, arg1) {
-    return "/guilds/" + arg0 + "/rooms/" + arg1 + "/update";
+  GUILD_ROOM_UPDATE(arg0, roomId) {
+    return "/guilds/" + arg0 + "/rooms/" + roomId + "/update";
   },
   GUILD_ROOM_OBJECT_CREATE(arg0, arg1) {
     return "/guilds/" + arg0 + "/rooms/" + arg1 + "/objects";
@@ -2080,6 +2080,7 @@ const frozen2 = Object.freeze({
   VIBEGRATIONS_PROJECT(projectId) {
     return "/vibegrations/projects/" + projectId;
   },
+  VIBEGRATIONS_PROJECT_LIMIT: "/vibegrations/project-limit",
   VIBEGRATIONS_PROJECT_WS_TICKET(projectId) {
     return "/vibegrations/projects/" + projectId + "/ws-ticket";
   },
@@ -2272,8 +2273,8 @@ const obj2 = {
   GUILD_ROLE_MEMBERS(id, id2) {
     return "/guilds/" + id + "/roles/" + id2 + "/members";
   },
-  GUILD_ROLE_CONNECTIONS_ELIGIBILITY(guildId, id) {
-    return "/guilds/" + guildId + "/roles/" + id + "/connections/eligibility";
+  GUILD_ROLE_CONNECTIONS_ELIGIBILITY(guildId, roleId) {
+    return "/guilds/" + guildId + "/roles/" + roleId + "/connections/eligibility";
   },
   GUILD_ROLE_CONNECTIONS_ASSIGN(arg0, arg1) {
     return "/guilds/" + arg0 + "/roles/" + arg1 + "/connections/assign";
@@ -2746,8 +2747,8 @@ const obj2 = {
   CONNECTIONS_SESSION_HANDOFF(arg0) {
     return "/connections/" + arg0 + "/callback/session-handoff";
   },
-  CONNECTIONS_CALLBACK(arg0) {
-    return "/connections/" + arg0 + "/callback";
+  CONNECTIONS_CALLBACK(provider) {
+    return "/connections/" + provider + "/callback";
   },
   CONNECTION(arg0, arg1) {
     return "/users/@me/connections/" + arg0 + "/" + escape(arg1);
@@ -3290,8 +3291,8 @@ const obj2 = {
     return "/users/@me/applications/" + id + "/ticket";
   },
   ENTITLEMENTS_GIFTABLE: "/users/@me/entitlements/gifts",
-  STORE_ASSET(React5, banner_asset_id, mp4) {
-    return "/store/applications/" + React5 + "/assets/" + banner_asset_id + "." + mp4;
+  STORE_ASSET(hasOwnProperty, banner_asset_id, mp4) {
+    return "/store/applications/" + hasOwnProperty + "/assets/" + banner_asset_id + "." + mp4;
   },
   APPLICATION_ASSET(arg0, arg1, arg2) {
     return "/applications/" + arg0 + "/app-assets/" + arg1 + "." + arg2;
@@ -3527,8 +3528,8 @@ const obj2 = {
   GUILD_EVENT_EXCEPTIONS(guild_id, id) {
     return "/guilds/" + guild_id + "/scheduled-events/" + id + "/exceptions";
   },
-  GUILD_EVENT_EXCEPTION(guild_id, id, event_exception_id) {
-    return "/guilds/" + guild_id + "/scheduled-events/" + id + "/exceptions/" + event_exception_id;
+  GUILD_EVENT_EXCEPTION(guild_id, id, c2) {
+    return "/guilds/" + guild_id + "/scheduled-events/" + id + "/exceptions/" + c2;
   },
   MEMBER_SAFETY_SUPPLEMENTAL(arg0) {
     return "/guilds/" + arg0 + "/members/supplemental";
@@ -4114,8 +4115,8 @@ const obj2 = {
   GUILD_ROOM_CONNECT(arg0, arg1) {
     return "/guilds/" + arg0 + "/rooms/" + arg1 + "/connect";
   },
-  GUILD_ROOM_UPDATE(arg0, arg1) {
-    return "/guilds/" + arg0 + "/rooms/" + arg1 + "/update";
+  GUILD_ROOM_UPDATE(arg0, roomId) {
+    return "/guilds/" + arg0 + "/rooms/" + roomId + "/update";
   },
   GUILD_ROOM_OBJECT_CREATE(arg0, arg1) {
     return "/guilds/" + arg0 + "/rooms/" + arg1 + "/objects";
@@ -4130,6 +4131,7 @@ const obj2 = {
   VIBEGRATIONS_PROJECT(projectId) {
     return "/vibegrations/projects/" + projectId;
   },
+  VIBEGRATIONS_PROJECT_LIMIT: "/vibegrations/project-limit",
   VIBEGRATIONS_PROJECT_WS_TICKET(projectId) {
     return "/vibegrations/projects/" + projectId + "/ws-ticket";
   },
@@ -4343,6 +4345,7 @@ const obj6 = {
   GAME_POPOUT: "Game Popout",
   EMOJI_UPSELL_POPOUT: "Emoji Upsell Popout",
   EMOJI_PICKER_FLOATING_UPSELL: "Emoji Picker Floating Upsell",
+  STICKER_PICKER_FLOATING_UPSELL: "Sticker Picker Floating Upsell",
   SOUND_PICKER_FLOATING_UPSELL: "Sound Picker Floating Upsell",
   EMPTY_STICKER_PICKER_UPSELL: "Empty Sticker Picker Upsell",
   FOR_LATER_POPOUT_UPSELL: "For Later Popout Upsell",
@@ -4552,6 +4555,10 @@ const obj6 = {
   CUSTOM_THEMES_COACHMARK_FOOTER: "Custom Themes Coachmark Footer",
   DISPLAY_NAME_STYLES_MODAL_FOOTER: "Display Name Styles Modal Footer",
   SETTINGS_WEBAUTHN_VIEW: "View Security Keys",
+  SETTINGS_WEBAUTHN_REGISTER: "Register Security Key",
+  SETTINGS_WEBAUTHN_NAME: "Name Security Key",
+  SETTINGS_WEBAUTHN_EDIT: "Rename Security Key",
+  SETTINGS_WEBAUTHN_SUCCESS: "Security Key Added",
   SETTINGS_PUBLIC_WELCOME: "Welcome Screen Settings",
   SETTINGS_POGGERMODE: "Powermode Settings",
   GUILD_ROLE_CREATION_MODAL: "Guild Role Creation Modal",
@@ -5046,6 +5053,10 @@ const frozen5 = Object.freeze({
   GUILD_ROLE_SUBSCRIPTIONS_CANCEL: obj6.GUILD_ROLE_SUBSCRIPTION_CANCEL,
   GUILD_BOOSTING: obj6.GUILD_BOOSTING,
   WEBAUTHN_VIEW: obj6.SETTINGS_WEBAUTHN_VIEW,
+  WEBAUTHN_REGISTER: obj6.SETTINGS_WEBAUTHN_REGISTER,
+  WEBAUTHN_NAME: obj6.SETTINGS_WEBAUTHN_NAME,
+  WEBAUTHN_EDIT: obj6.SETTINGS_WEBAUTHN_EDIT,
+  WEBAUTHN_SUCCESS: obj6.SETTINGS_WEBAUTHN_SUCCESS,
 });
 const items2 = [,];
 ({ FACEBOOK: arr3[0], CONTACTS: arr3[1] } = obj11);
@@ -5191,6 +5202,10 @@ const obj9 = {
   GUILD_ROLE_SUBSCRIPTIONS_CANCEL: obj6.GUILD_ROLE_SUBSCRIPTION_CANCEL,
   GUILD_BOOSTING: obj6.GUILD_BOOSTING,
   WEBAUTHN_VIEW: obj6.SETTINGS_WEBAUTHN_VIEW,
+  WEBAUTHN_REGISTER: obj6.SETTINGS_WEBAUTHN_REGISTER,
+  WEBAUTHN_NAME: obj6.SETTINGS_WEBAUTHN_NAME,
+  WEBAUTHN_EDIT: obj6.SETTINGS_WEBAUTHN_EDIT,
+  WEBAUTHN_SUCCESS: obj6.SETTINGS_WEBAUTHN_SUCCESS,
 };
 const items3 = [, , , ,];
 ({ SPOTIFY: arr4[0], XBOX: arr4[1], PLAYSTATION: arr4[2], PLAYSTATION_STAGING: arr4[3], CRUNCHYROLL: arr4[4] } = obj11);
@@ -5326,7 +5341,6 @@ const obj18 = {
   GATEWAY_PRESENCE_LIMITED: null,
   GATEWAY_GUILD_MEMBERS: null,
   GATEWAY_GUILD_MEMBERS_LIMITED: null,
-  EMBEDDED: null,
   GATEWAY_MESSAGE_CONTENT: null,
   GATEWAY_MESSAGE_CONTENT_LIMITED: null,
   EMBEDDED_FIRST_PARTY: null,
@@ -5360,8 +5374,6 @@ let BigFlagUtils = BigFlagUtils_mod;
 obj18.GATEWAY_GUILD_MEMBERS = BigFlagUtils.getFlag(14);
 let BigFlagUtils = BigFlagUtils_mod;
 obj18.GATEWAY_GUILD_MEMBERS_LIMITED = BigFlagUtils.getFlag(15);
-let BigFlagUtils = BigFlagUtils_mod;
-obj18.EMBEDDED = BigFlagUtils.getFlag(17);
 let BigFlagUtils = BigFlagUtils_mod;
 obj18.GATEWAY_MESSAGE_CONTENT = BigFlagUtils.getFlag(18);
 let BigFlagUtils = BigFlagUtils_mod;
@@ -6567,6 +6579,8 @@ export const AbortCodes = {
   [10014]: "UNKNOWN_EMOJI",
   UNKNOWN_WEBHOOK: 10015,
   [10015]: "UNKNOWN_WEBHOOK",
+  UNKNOWN_SESSION: 10020,
+  [10020]: "UNKNOWN_SESSION",
   UNKNOWN_GIFT_CODE: 10038,
   [10038]: "UNKNOWN_GIFT_CODE",
   UNKNOWN_TIDA_CONTENT: 10134,
@@ -6593,6 +6607,8 @@ export const AbortCodes = {
   [20022]: "CHANNEL_FOLLOWING_EDIT_RATE_LIMITED",
   UNDER_MINIMUM_AGE: 20024,
   [20024]: "UNDER_MINIMUM_AGE",
+  AGE_GROUP_UNVERIFIED: 20086,
+  [20086]: "AGE_GROUP_UNVERIFIED",
   QUARANTINED: 20026,
   [20026]: "QUARANTINED",
   VANITY_URL_REQUIRED_FOR_PUBLISHED_GUILDS: 20040,
@@ -7147,7 +7163,6 @@ export const ChannelNoticeCtaSources = {
   ROLE_SUBSCRIPTION_MWEB_PURCHASE_NOTICE: "Role Subscription MWeb Purchase Notice",
   GUILD_ONBOARDING_UPSELL_NOTICE: "Guild Onboarding Upsell Notice",
   CLIPS_EDUCATION: "Clips Education Channel Notice",
-  LINKED_ROLES_ADMIN_NUX: "Linked Roles Admin Nux Channel Notice",
   SUMMARIES_NOTICE: "Summaries Channel Notice",
   SUMMARIES_ENABLED_NOTICE: "Summaries Enabled Notice",
   CLAN_ADMIN_UPSELL: "Clan Admin Upsell",
@@ -8110,6 +8125,7 @@ export const AnalyticEvents = {
   PREMIUM_UPSELL_INTERACTED: "premium_upsell_interacted",
   DISMISSIBLE_CONTENT_SHOWN: "dismissible_content_shown",
   DISMISSIBLE_CONTENT_SHOWN_BEFORE_CONNECTION_OPEN: "dismissible_content_shown_before_connection_open",
+  DISMISSIBLE_CONTENT_ACTIONED: "dismissible_content_actioned",
   DISMISSIBLE_CONTENT_DISMISSED: "dismissible_content_dismissed",
   DISMISSIBLE_CONTENT_DISMISSED_BEFORE_CONNECTION_OPEN: "dismissible_content_dismissed_before_connection_open",
   DISMISSIBLE_CONTENT_REJECTED: "dismissible_content_rejected",
@@ -8421,6 +8437,7 @@ export const AnalyticEvents = {
   CANCELLATION_FLOW_DISCOUNT_OFFER_PROMPT_VIEWED: "cancellation_flow_discount_offer_prompt_viewed",
   ATTACHMENT_UPLOAD_STARTED: "attachment_upload_started",
   ATTACHMENT_UPLOAD_FINISHED: "attachment_upload_finished",
+  MEDIA_DRAFT_EDITED: "media_draft_edited",
   IMAGE_LOADING_COMPLETED: "image_loading_completed",
   MEDIA_PLAY_FINISHED: "media_play_finished",
   MESSAGE_SENT_WITH_ATTACHMENTS: "message_sent_with_attachments",
@@ -9237,7 +9254,6 @@ export const ChannelNoticeTypes = {
   APPLICATION_SUBSCRIPTION_EXPIRATION: "APPLICATION_SUBSCRIPTION_EXPIRATION",
   GUILD_ONBOARDING_UPSELL: "GUILD_ONBOARDING_UPSELL",
   CLIPS_EDUCATION: "CLIPS_EDUCATION",
-  LINKED_ROLES_ADMIN: "LINKED_ROLES_ADMIN",
   SUMMARIES: "SUMMARIES",
   SUMMARIES_ENABLED: "SUMMARIES_ENABLED",
   CLAN_ADMIN_UPSELL: "CLAN_ADMIN_UPSELL",
@@ -9622,6 +9638,7 @@ export const HelpdeskArticles = {
   INTEGRATIONS: "360045093012",
   PARTNER_CODE_OF_CONDUCT: "360024871991",
   ORBS_FAQ: "30593690165783",
+  ORBS_WALLET: "30593690165783-Discord-Orbs-FAQ#h_01M3WB2TWDD7WVN8ETJCW2PKDM",
   ORBS_REWARDS_FAQ: "37097755077015-Monthly-Orbs-for-Nitro-Members-FAQ",
   MAX_MEMBERS: "360052841734",
   STICKERS: "360056891113",
@@ -9680,6 +9697,7 @@ export const HelpdeskArticles = {
   SOUNDBOARD: "12612888127767",
   GUILD_BOOSTING_FAQ: "360028038352",
   NITRO: "115000435108",
+  NITRO_EMOJI_PACKS: "43925773089175",
   VOICE_MESSAGES: "13091096725527",
   SAFE_DIRECT_MESSAGING: "115000068672",
   PAID_TERMS: "4410339366295",
@@ -9757,6 +9775,7 @@ export const HelpdeskArticles = {
   YOUTUBE_PROMOTION_CURRENT_SUBSCRIBER: "39188406147479-Nitro-Rewards#h_01M2GVH8RZYMDKFGEAFDNSWFCT",
   PREMIUM_GROUP_ABOUT: "36320645875479",
   SOCIAL_LAYER_STOREFRONT: "40102783004311",
+  RUST_PROMOTION: "40102783004311-Game-Shops-FAQ#h_01KQJNEWWHB6E6WFRAF5WTPM8E",
   CHECKPOINT: "36415877391511",
   NITRO_TRIAL_FOR_ALL: "37127619588375-Nitro-2-Week-Trial-Offer",
   WINDOWS_MEDIA_PACK: "37976093740695",

@@ -86,7 +86,7 @@ function handleRecomputeAllSubtitles() {
 function handleGuildScheduledEventUpdate(guildScheduledEvent) {
   return closure_20.updateSubtitles(guildScheduledEvent.guildScheduledEvent.guild_id);
 }
-const UserSettingsTypes = fn(1084).UserSettingsTypes;
+const UserSettingsTypes = fn(1095).UserSettingsTypes;
 let channelId = null;
 let voiceChannelId = null;
 let closure_20 = new ChannelListStateDefault();
@@ -126,7 +126,7 @@ prototype["getGuild"] = function getGuild(arg0, guildActionRows) {
   if (channelNoticeRows == null) {
     channelNoticeRows = [];
   }
-  const guild = closure_20.getGuild(arg0, guildActionRows, channelNoticeRows);
+  guild = closure_20.getGuild(arg0, guildActionRows, channelNoticeRows);
   return { guildChannelsVersion: guild.version, guildChannels: guild };
 };
 prototype["getGuildWithoutChangingGuildActionRows"] = function getGuildWithoutChangingGuildActionRows(id) {

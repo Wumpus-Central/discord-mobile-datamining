@@ -14,7 +14,7 @@ function updateUserGuildSettings(guildId, arg1, INFREQUENT_USER_ACTION) {
   closure_1 = arg1;
   return obj.updateAsync(
     "guilds",
-    async (guilds) => obj2(1222).mutateUserGuildSettingsInternal(guilds, closure_0, closure_1),
+    async (guilds) => obj2(1233).mutateUserGuildSettingsInternal(guilds, closure_0, closure_1),
     INFREQUENT_USER_ACTION,
   );
 }
@@ -53,10 +53,10 @@ let closure_15 = async function _updateGuildDismissedContent() {
   );
   return value;
 };
-const UserSettingsConstants = fn(1084);
+const UserSettingsConstants = fn(1095);
 const UserSettingsTypes = UserSettingsConstants.UserSettingsTypes;
 const UserSettingsDelay = UserSettingsConstants.UserSettingsDelay;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AbortCodes: closure_7, Endpoints: closure_8, AnalyticEvents: closure_9 } = Constants);
 const UserSettingsProtoLastWriteTimes = "UserSettingsProtoLastWriteTimes";
 let timestamp = Date.now();
@@ -91,7 +91,7 @@ class UserSettingsProtoActionCreators {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -228,7 +228,7 @@ class UserSettingsProtoActionCreators {
             }
             c3 = 0;
             c5 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
           c5 = 3;
         } catch (tmp82) {
@@ -272,7 +272,7 @@ prototype["updateAsync"] = function updateAsync(favorites, update, INFREQUENT_US
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -303,9 +303,9 @@ prototype["updateAsync"] = function updateAsync(favorites, update, INFREQUENT_US
           const obj = { value, done: true };
           return obj;
         } else {
-          protoFieldClass = tmp2(2027).getProtoFieldClass(closure_129_4.ProtoClass, closure_129_0);
+          protoFieldClass = tmp2(2034).getProtoFieldClass(closure_129_4.ProtoClass, closure_129_0);
           closure_128_1 = closure_129_4.getCurrentValue()[closure_129_0];
-          const obj6 = tmp2(2027);
+          const obj6 = tmp2(2034);
           closure_128_2 = obj6.createModifiedProto(
             closure_128_1,
             closure_129_1,
@@ -328,7 +328,7 @@ prototype["updateAsync"] = function updateAsync(favorites, update, INFREQUENT_US
             closure_129_4.markDirty(closure_128_2, obj7);
           }
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp14) {
         c3 = tmp;
@@ -393,8 +393,8 @@ prototype["markDirty"] = function markDirty(proto, dispatch) {
     if (null == editInfo.protoToSave) {
       obj.protoToSave = proto;
     } else {
-      obj.protoToSave = obj2(1222).mergeTopLevelFields(self.ProtoClass, editInfo.protoToSave, proto);
-      const obj5 = obj2(1222);
+      obj.protoToSave = obj2(1233).mergeTopLevelFields(self.ProtoClass, editInfo.protoToSave, proto);
+      const obj5 = obj2(1233);
     }
     self.dispatchChanges(obj);
     tmp9 = null != obj.timeout && num < editInfo.timeoutDelay && !editInfo.rateLimited;
@@ -441,7 +441,7 @@ prototype["loadIfNecessary"] = function loadIfNecessary(arg0) {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -466,7 +466,7 @@ prototype["loadIfNecessary"] = function loadIfNecessary(arg0) {
             const editInfo = self.getEditInfo().editInfo;
             if (!closure_0) {
               c5 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
             const logger = self.logger;
             logger.log("Loading proto");
@@ -588,16 +588,16 @@ prototype["scheduleSaveFromOfflineEdit"] = function scheduleSaveFromOfflineEdit(
 };
 function updateUserAllGuildSettings(arg0, INFREQUENT_USER_ACTION) {
   closure_0 = arg0;
-  return obj.updateAsync("guilds", async (arg0) => f76247(arg0), INFREQUENT_USER_ACTION);
+  return obj.updateAsync("guilds", async (arg0) => f85521(arg0), INFREQUENT_USER_ACTION);
 }
 function setGuildThemeSourcePreferenceOverride(id, arg1) {
   closure_0 = id;
-  const f76237 = (arg0) => {
+  const f85511 = (arg0) => {
     arg0.guildThemeSourcePreference = guildThemeSourcePreference;
   };
   return obj.updateAsync(
     "guilds",
-    async (guilds) => obj2(1222).mutateUserGuildSettingsInternal(guilds, closure_0, closure_1),
+    async (guilds) => obj2(1233).mutateUserGuildSettingsInternal(guilds, closure_0, closure_1),
     UserSettingsDelay.INFREQUENT_USER_ACTION,
   );
 }
@@ -615,7 +615,7 @@ PreloadedUserSettingsActionCreators.persistChanges = asyncGeneratorStep(async ()
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -748,7 +748,7 @@ PreloadedUserSettingsActionCreators.persistChanges = asyncGeneratorStep(async ()
         }
         c3 = 0;
         c5 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
       c5 = 3;
     } catch (tmp82) {
@@ -761,7 +761,7 @@ PreloadedUserSettingsActionCreators.persistChanges = asyncGeneratorStep(async ()
     }
   }
 });
-PreloadedUserSettingsActionCreators.ProtoClass = fn(1186).PreloadedUserSettings;
+PreloadedUserSettingsActionCreators.ProtoClass = fn(1197).PreloadedUserSettings;
 PreloadedUserSettingsActionCreators.type = UserSettingsTypes.PRELOADED_USER_SETTINGS;
 PreloadedUserSettingsActionCreators.logger = new LoggerDefault(PreloadedUserSettingsActionCreators.ProtoClass.typeName);
 obj2 = Object.create(UserSettingsProtoActionCreators.prototype);
@@ -778,7 +778,7 @@ obj2.persistChanges = asyncGeneratorStep(async () => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -911,7 +911,7 @@ obj2.persistChanges = asyncGeneratorStep(async () => {
         }
         c3 = 0;
         c5 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
       c5 = 3;
     } catch (tmp82) {
@@ -924,14 +924,14 @@ obj2.persistChanges = asyncGeneratorStep(async () => {
     }
   }
 });
-obj2.ProtoClass = fn(1221).FrecencyUserSettings;
+obj2.ProtoClass = fn(1232).FrecencyUserSettings;
 obj2.type = UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS;
 let tmp10 = new LoggerDefault(PreloadedUserSettingsActionCreators.ProtoClass.typeName);
 obj2.logger = new LoggerDefault(obj2.ProtoClass.typeName);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/UserSettingsProtoActionCreators.tsx");
 
-export const UserSettingsDelay = fn(1084).UserSettingsDelay;
+export const UserSettingsDelay = fn(1095).UserSettingsDelay;
 export function markUserSettingsLoadOkayForDevelopment() {}
 export { UserSettingsProtoActionCreators };
 export { PreloadedUserSettingsActionCreators };
@@ -949,7 +949,7 @@ export const setDefaultGuildThemePreference = function setDefaultGuildThemePrefe
     async (defaultGuildThemePreference) => {
       let UNSPECIFIED = defaultGuildThemePreference.defaultGuildThemePreference;
       if (UNSPECIFIED == null) {
-        UNSPECIFIED = obj2(1186).GuildThemeSourcePreference.UNSPECIFIED;
+        UNSPECIFIED = obj2(1197).GuildThemeSourcePreference.UNSPECIFIED;
       }
       if (UNSPECIFIED === closure_0) {
         return false;
@@ -964,14 +964,14 @@ export { setGuildThemeSourcePreferenceOverride };
 export const clearGuildThemeSourcePreferenceOverride = function clearGuildThemeSourcePreferenceOverride(
   guildThemeSourcePreference,
 ) {
-  obj2(1186).GuildThemeSourcePreference.UNSPECIFIED;
+  obj2(1197).GuildThemeSourcePreference.UNSPECIFIED;
   obj2 = guildThemeSourcePreference;
-  const f76237 = (arg0) => {
+  const f85511 = (arg0) => {
     arg0.guildThemeSourcePreference = guildThemeSourcePreference;
   };
   return obj.updateAsync(
     "guilds",
-    async (guilds) => obj2(1222).mutateUserGuildSettingsInternal(guilds, closure_0, closure_1),
+    async (guilds) => obj2(1233).mutateUserGuildSettingsInternal(guilds, closure_0, closure_1),
     UserSettingsDelay.INFREQUENT_USER_ACTION,
   );
 };
@@ -979,10 +979,10 @@ export const updateUserChannelSettings = function updateUserChannelSettings(arg0
   closure_0 = arg1;
   closure_1 = arg2;
   closure_129_0 = arg0;
-  closure_129_1 = (channels) => obj2(1222).mutateUserChannelSettingsInternal(channels, closure_0, closure_1);
+  closure_129_1 = (channels) => obj2(1233).mutateUserChannelSettingsInternal(channels, closure_0, closure_1);
   return obj.updateAsync(
     "guilds",
-    async (guilds) => obj2(1222).mutateUserGuildSettingsInternal(guilds, closure_0, closure_1),
+    async (guilds) => obj2(1233).mutateUserGuildSettingsInternal(guilds, closure_0, closure_1),
     INFREQUENT_USER_ACTION,
   );
 };
@@ -996,12 +996,12 @@ export const addDismissedContent = function addDismissedContent(CHANNEL_NOTICE_I
     }
     let hasBitResult = null != dismissedContents;
     if (hasBitResult) {
-      let obj = obj2(2028);
+      let obj = obj2(2035);
       hasBitResult = obj.hasBit(dismissedContents, CHANNEL_NOTICE_INVITE);
     }
     if (!hasBitResult) {
       obj2 = AnalyticsUtilsDefault;
-      const obj3 = { content_type: obj2(2029).DismissibleContent[CHANNEL_NOTICE_INVITE] };
+      const obj3 = { content_type: obj2(2036).DismissibleContent[CHANNEL_NOTICE_INVITE] };
       obj2.track(constants.DISMISSIBLE_CONTENT_DISMISSED_BEFORE_CONNECTION_OPEN, obj3);
     }
   }
@@ -1011,10 +1011,10 @@ export const addDismissedContent = function addDismissedContent(CHANNEL_NOTICE_I
       if (obj.hasBit(dismissedContents.dismissedContents, closure_0)) {
         return false;
       } else {
-        dismissedContents.dismissedContents = obj2(2028).addBit(dismissedContents.dismissedContents, closure_0);
-        const tmpResult = obj2(2028);
+        dismissedContents.dismissedContents = obj2(2035).addBit(dismissedContents.dismissedContents, closure_0);
+        const tmpResult = obj2(2035);
       }
-      obj = obj2(2028);
+      obj = obj2(2035);
     },
     UserSettingsDelay.INFREQUENT_USER_ACTION,
   );
@@ -1036,12 +1036,12 @@ export const removeDismissedContent = function removeDismissedContent(DOUBLE_TAP
     "userContent",
     async (dismissedContents) => {
       if (obj.hasBit(dismissedContents.dismissedContents, closure_0)) {
-        dismissedContents.dismissedContents = obj2(2028).removeBit(dismissedContents.dismissedContents, closure_0);
-        const tmpResult = obj2(2028);
+        dismissedContents.dismissedContents = obj2(2035).removeBit(dismissedContents.dismissedContents, closure_0);
+        const tmpResult = obj2(2035);
       } else {
         return false;
       }
-      obj = obj2(2028);
+      obj = obj2(2035);
     },
     UserSettingsDelay.INFREQUENT_USER_ACTION,
   );
@@ -1055,7 +1055,7 @@ export const removeDismissedRecurringContent = function removeDismissedRecurring
   });
 };
 export const clearGuildDismissedContents = function clearGuildDismissedContents() {
-  const f76247 = (guilds) => {
+  const f85521 = (guilds) => {
     if (null != guilds.guilds) {
       const _Object = Object;
       const values = Object.values(guilds.guilds);
@@ -1072,7 +1072,7 @@ export const clearGuildDismissedContents = function clearGuildDismissedContents(
       }
     }
   };
-  return obj.updateAsync("guilds", async (arg0) => f76247(arg0), UserSettingsDelay.INFREQUENT_USER_ACTION);
+  return obj.updateAsync("guilds", async (arg0) => f85521(arg0), UserSettingsDelay.INFREQUENT_USER_ACTION);
 };
 export const clearDismissedContents = function clearDismissedContents() {
   return obj.updateAsync(

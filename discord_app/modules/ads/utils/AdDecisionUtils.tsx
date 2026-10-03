@@ -9,17 +9,17 @@ const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/ads/utils/AdDecisionUtils.tsx");
 
 export const MAX_RESPONSE_TTL_MS = result;
-export const getDeliveredAdCreativeId = function getDeliveredAdCreativeId(type) {
-  if (null == type) {
+export const getDeliveredAdCreativeId = function getDeliveredAdCreativeId(creative) {
+  if (null == creative) {
     return null;
   } else {
-    type = type.type;
+    const type = creative.type;
     if (AdCreativeType.AdCreativeType.QUEST === type) {
-      return type.questId;
+      return creative.questId;
     } else if (AdCreativeType.AdCreativeType.BOUNTY === type) {
-      return type.bounty.id;
+      return creative.bounty.id;
     } else if (AdCreativeType.AdCreativeType.QUEST_HOME_HERO === type) {
-      return type.questHomeHero.id;
+      return creative.questHomeHero.id;
     }
   }
 };

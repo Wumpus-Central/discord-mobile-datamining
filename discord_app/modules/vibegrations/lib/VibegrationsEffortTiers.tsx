@@ -1,13 +1,13 @@
 // discord_app/modules/vibegrations/lib/VibegrationsEffortTiers.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3714 from "../intl/VibegrationsUntranslated.messages.js";
+import _modDef3723 from "../intl/VibegrationsUntranslated.messages.js";
 import VibegrationsModelLabels from "VibegrationsModelLabels.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 
 require = fn;
 let closure_2 = ["thinking"];
 let closure_3 = ["fast"];
-let obj = { simple: _modDef3714.Mo0a1m, balanced: _modDef3714.dkt78K, complex: _modDef3714.Ly6zYL };
+let obj = { simple: _modDef3723.Mo0a1m, balanced: _modDef3723.dkt78K, complex: _modDef3723.Ly6zYL };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsEffortTiers.tsx");
 

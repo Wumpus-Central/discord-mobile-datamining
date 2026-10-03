@@ -3,7 +3,7 @@ import initializeDefault from "../../../discord_common/js/packages/flux/index.ts
 import BackoffDefault from "../../../discord_common/js/packages/backoff/Backoff.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
-import privDefault from "../../../_runtime/01439_priv.js";
+import privDefault from "../../../_runtime/01444_priv.js";
 import BadgeIdResolution from "BadgeIdResolution.tsx";
 import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators.tsx";
 import UserStore from "../../stores/UserStore.tsx";
@@ -65,9 +65,9 @@ prototype["isCatalogStaleFor"] = function isCatalogStaleFor(id) {
   }
   return tmp3;
 };
-prototype["hasCatalogFetchErrorFor"] = function hasCatalogFetchErrorFor(stateFromStores) {
-  let tmp = stateFromStores;
-  if (stateFromStores == null) {
+prototype["hasCatalogFetchErrorFor"] = function hasCatalogFetchErrorFor(targetUserId) {
+  let tmp = targetUserId;
+  if (targetUserId == null) {
     const currentUser = UserStore.getCurrentUser();
     let id;
     if (currentUser != null) {
@@ -213,7 +213,7 @@ const badgeDirectoryStore = new BadgeDirectoryStore(DispatcherDefault, {
     peekResult.fetchError = false;
     peekResult.fetchedAt = Date.now();
     const result = closure_5.set(userId, peekResult);
-    map1 = new Map(
+    const map1 = new Map(
       badges.map((badge_id) => {
         const items = [badge_id.badge_id, badge_id];
         return items;

@@ -1,7 +1,7 @@
 // discord_app/stores/GiftCodeStore.tsx
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
-import _modDef4450 from "../../_runtime/metro/04450__.js";
+import _modDef4461 from "../../_runtime/metro/04461__.js";
 import GiftCodeUtils from "../utils/GiftCodeUtils.tsx";
 import GiftCodeActionCreatorsDefault from "../actions/GiftCodeActionCreators.tsx";
 import GiftCodeRecord from "../records/GiftCodeRecord.tsx";
@@ -16,14 +16,14 @@ function updateGiftCode(giftCode) {
   } else {
     const result1 = set(code, fromServer);
     if (null != fromServer.expiresAt) {
-      const timeout = new code(2039).Timeout();
+      const timeout = new code(2046).Timeout();
       dependencyMap[code] = timeout;
       value2 = map.get(code);
       if (null != value2) {
         if (null != value2.expiresAt) {
           const expiresAt = value2.expiresAt;
           const valueOfResult = expiresAt.valueOf();
-          const diff = valueOfResult - _modDef4450().valueOf();
+          const diff = valueOfResult - _modDef4461().valueOf();
           if (diff <= 0) {
             map.delete(code);
             delete tmp2[tmp];
@@ -108,7 +108,7 @@ function updateGiftCode(giftCode) {
               }
             });
           }
-          const obj4 = _modDef4450();
+          const obj4 = _modDef4461();
         }
       }
     }
@@ -155,11 +155,11 @@ function resolveMessageGiftCodes(message, arg1) {
           items = [];
           items[HermesBuiltin.arraySpread(items, 0)] = item;
         }
-        closure_1(573).wait(() => {
+        closure_1(584).wait(() => {
           const giftCode = GiftCodeActionCreatorsDefault.resolveGiftCode(closure_0, false, true);
           return giftCode.catch(closure_2_6);
         });
-        const obj = closure_1(573);
+        const obj = closure_1(584);
       }
     });
   }
@@ -188,7 +188,7 @@ function handleLoadThreadsSuccess(firstMessages) {
     });
   }
 }
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AbortCodes: closure_4, MAX_TIMEOUT_MS: hasOwnProperty, NOOP_NULL: metroRequire } = Constants);
 const dependencyMap = {};
 const map = new Map();

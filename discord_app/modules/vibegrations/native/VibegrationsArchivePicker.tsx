@@ -1,6 +1,6 @@
 // discord_app/modules/vibegrations/native/VibegrationsArchivePicker.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3714 from "../intl/VibegrationsUntranslated.messages.js";
+import _modDef3723 from "../intl/VibegrationsUntranslated.messages.js";
 import VibegrationsTypes from "../VibegrationsTypes.tsx";
 import FilePickerUtils from "../../../utils/native/FilePickerUtils.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -48,7 +48,7 @@ let closure_9 = async function _sendVibegrationsArchiveImport(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -88,7 +88,7 @@ let closure_9 = async function _sendVibegrationsArchiveImport(arg0) {
         const items = [closure_131_2];
         closure_132_5(closure_131_0, closure_131_1, items);
         c6 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp21) {
       c6 = tmp;
@@ -96,7 +96,7 @@ let closure_9 = async function _sendVibegrationsArchiveImport(arg0) {
     }
   }
 };
-const VibegrationsConnectionStore = fn(12851);
+const VibegrationsConnectionStore = fn(12904);
 ({
   ensureConnection: closure_4,
   sendUserMessage: hasOwnProperty,
@@ -125,7 +125,7 @@ export const describeVibegrationsArchiveRejection = function describeVibegration
     obj2.size = tmpResult.formatVibegrationsAttachmentLimit(
       VibegrationsTypes.vibegrationsAttachmentLimit(bytes.contentType),
     );
-    formatToPlainStringResult = intl.formatToPlainString(_modDef3714.AzziHF, obj2);
+    formatToPlainStringResult = intl.formatToPlainString(_modDef3723.AzziHF, obj2);
     const tmpResult2 = VibegrationsTypes;
   }
   return formatToPlainStringResult;

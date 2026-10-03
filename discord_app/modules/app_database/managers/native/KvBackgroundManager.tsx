@@ -10,7 +10,7 @@ import FileSystemStore from "../../stores/FileSystemStore.tsx";
 import AutomaticLifecycleManager from "../../../../lib/AutomaticLifecycleManager.tsx";
 
 let require = fn;
-let SaveableChannelsStore = fn(7086);
+let SaveableChannelsStore = fn(6987);
 ({ MAXIMUM_MESSAGES_PER_CHANNEL_DEFAULT: metroRequire, MAXIMUM_MESSAGES_PER_CHANNEL_EVER: closure_7 } =
   SaveableChannelsStore);
 let SaveableChannelsStore = SaveableChannelsStore_mod;
@@ -49,7 +49,7 @@ class KvBackgroundManager extends tmp4 {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else {
             try {
@@ -63,12 +63,12 @@ class KvBackgroundManager extends tmp4 {
                   const obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  prefix = v1(2073).channels(prefix);
-                  const obj5 = v1(2073);
+                  prefix = v1(2078).channels(prefix);
+                  const obj5 = v1(2078);
                   const obj6 = prefix;
-                  closure_1 = v1(2073).messages(prefix);
-                  const obj7 = v1(2073);
-                  closure_2 = v1(2073).channelsTemp(prefix);
+                  closure_1 = v1(2078).messages(prefix);
+                  const obj7 = v1(2078);
+                  closure_2 = v1(2078).channelsTemp(prefix);
                   if (closure_1_8.canEvictOrphans()) {
                     v1 = 1;
                     c0 = 1;
@@ -92,7 +92,7 @@ class KvBackgroundManager extends tmp4 {
                     };
                     return obj4;
                   }
-                  const obj8 = v1(2073);
+                  const obj8 = v1(2078);
                 }
               } else if (arg0 === 1) {
                 c0 = 3;
@@ -103,7 +103,7 @@ class KvBackgroundManager extends tmp4 {
                 return obj;
               }
               c0 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             } catch (tmp5) {
               c0 = tmp;
               throw tmp5;
@@ -124,7 +124,7 @@ class KvBackgroundManager extends tmp4 {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else {
             try {
@@ -149,12 +149,12 @@ class KvBackgroundManager extends tmp4 {
                         let tmp10 = new.target;
                         let tmp11 = new.target;
                         let flag = true;
-                        let table = new c0(2074).Table(items, tmp5, closure_1_0, true);
+                        let table = new c0(2079).Table(items, tmp5, closure_1_0, true);
                         let upgradeTransactionResult = table.upgradeTransaction(arg0);
                         let deleteResult = upgradeTransactionResult.delete();
                         continue;
                       }
-                      tmp = c0(2073).DEPRECATED_KEYSPACES[Symbol.iterator]();
+                      tmp = c0(2078).DEPRECATED_KEYSPACES[Symbol.iterator]();
                     }, "deleteDeprecatedKeyspaces"),
                     done: false,
                   };
@@ -169,7 +169,7 @@ class KvBackgroundManager extends tmp4 {
                 return obj;
               } else {
                 c0 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             } catch (tmp6) {
               c0 = tmp;
@@ -191,7 +191,7 @@ class KvBackgroundManager extends tmp4 {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else {
             try {
@@ -222,7 +222,7 @@ class KvBackgroundManager extends tmp4 {
                 return obj;
               }
               c0 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             } catch (tmp7) {
               c0 = tmp;
               throw tmp7;
@@ -242,7 +242,7 @@ class KvBackgroundManager extends tmp4 {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else {
             while (true) {
@@ -295,7 +295,7 @@ class KvBackgroundManager extends tmp4 {
                     continue;
                   }
                   c7 = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 }
               } else {
                 users = 0;
@@ -318,7 +318,7 @@ class KvBackgroundManager extends tmp4 {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else {
             try {
@@ -347,7 +347,7 @@ class KvBackgroundManager extends tmp4 {
                 return obj;
               } else {
                 v3 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             } catch (tmp7) {
               v3 = tmp;
@@ -394,7 +394,7 @@ prototype["maybeCleanup"] = function maybeCleanup() {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -442,7 +442,7 @@ prototype["maybeCleanup"] = function maybeCleanup() {
             if (obj10.isIOS()) {
               if (closure_128_2 === tmp3(tmp70[9]).backgroundTaskIdentifierInvalid) {
                 c5 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             }
             c3 = 1;
@@ -514,7 +514,7 @@ prototype["cleanupAsync"] = function cleanupAsync(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -574,7 +574,7 @@ prototype["cleanupAsync"] = function cleanupAsync(arg0) {
           return obj;
         } else {
           dependencyMap = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
         const steps2 = closure_128_1.steps;
         v2 = 2;
@@ -603,7 +603,7 @@ prototype["cleanDatabaseAsync"] = function cleanDatabaseAsync(databaseResult, ar
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {

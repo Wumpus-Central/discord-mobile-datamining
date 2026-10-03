@@ -10,11 +10,11 @@ import CodedLink from "../../coded_links/CodedLink.tsx";
 import QuestTypes from "../../quests/QuestTypes.tsx";
 import MessageActionCreatorsDefault from "../../../actions/MessageActionCreators.tsx";
 import InviteTypeUtils from "../../instant_invite/InviteTypeUtils.tsx";
-import QuestActionCreators from "../../quests/QuestActionCreators.tsx";
 import messages_MessagesUtils from "MessagesUtils.tsx";
 import computeScrollData from "../../chat/native/computeScrollData.tsx";
 import NativeChatUtilsDefault from "../../chat/native/NativeChatUtils.tsx";
 import ChatChangesetUpdateTracker from "../../chat/native/ChatChangesetUpdateTracker.tsx";
+import QuestActionCreators from "../../quests/QuestActionCreators.tsx";
 import MessageImpressionAnalyticsHelpers from "MessageImpressionAnalyticsHelpers.tsx";
 import openMediaModalOverlayAltTextSheetDefault from "../../media_viewer/native/components/overlay/openMediaModalOverlayAltTextSheet.tsx";
 import MessagesHandlers from "MessagesHandlers.tsx";
@@ -50,10 +50,10 @@ function isLoadingAtTop(arg0, arg1) {
     return false;
   }
 }
-let closure_6 = fn(9036).updateShouldShowJumpToPresentButton;
-let closure_7 = fn(2107).getUserCommunicationDisabledVersion;
-const Changeset = fn(7548).Changeset;
-const Constants = fn(1074);
+let closure_6 = fn(9064).updateShouldShowJumpToPresentButton;
+let closure_7 = fn(2112).getUserCommunicationDisabledVersion;
+const Changeset = fn(7592).Changeset;
+const Constants = fn(1085);
 ({
   ActivityActionTypes: closure_12,
   MAX_MESSAGES_PER_CHANNEL: map1,
@@ -139,7 +139,7 @@ const forwardRefResult = noop.forwardRef((messages, arg1) => {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -172,7 +172,7 @@ const forwardRefResult = noop.forwardRef((messages, arg1) => {
                   const tmp26 = findMessageIndex(tmp11(tmp12[20]).castChannelIdAsMessageId(channel.id));
                   if (null == tmp26) {
                     hasJumpedToOriginalPost = 3;
-                    return { value: "HermesInternal", done: null };
+                    return { value: "IconComponent", done: "IconComponent" };
                   } else {
                     const obj8 = { animated: !useReducedMotion };
                     tmp11(tmp12[17]).scrollTo(ref.current, tmp26, obj8);
@@ -360,7 +360,7 @@ const forwardRefResult = noop.forwardRef((messages, arg1) => {
     oldestUnreadMessageId: messages.oldestUnreadMessageId,
     shouldJumpToOriginalPost: callback3,
   };
-  ({ startOrCancelLatestMessagesLoad: closure_15, channelLatestMessageLoadingStatsManager } = first(11243)({
+  ({ startOrCancelLatestMessagesLoad: closure_15, channelLatestMessageLoadingStatsManager } = first(11156)({
     channelId: messages.channelId,
     jumpTargetId: messages.messages.jumpTargetId,
     oldestUnreadMessageId: messages.oldestUnreadMessageId,
@@ -419,7 +419,7 @@ const forwardRefResult = noop.forwardRef((messages, arg1) => {
     isStaff: messages.isStaff,
     visibleMessagesWindowHandler: messages.visibleMessagesWindowHandler,
   };
-  const tmp16 = first(11243)({
+  const tmp16 = first(11156)({
     channelId: messages.channelId,
     jumpTargetId: messages.messages.jumpTargetId,
     oldestUnreadMessageId: messages.oldestUnreadMessageId,
@@ -440,7 +440,7 @@ const forwardRefResult = noop.forwardRef((messages, arg1) => {
     scrollToTopMessage,
     updateNativeRows,
     handleScrollPosition,
-  } = first(11245)({
+  } = first(11158)({
     chatRef: ref5,
     chatManager: first,
     chatUpdatesQueue,
@@ -514,7 +514,7 @@ const forwardRefResult = noop.forwardRef((messages, arg1) => {
     scrollToNewMessages,
     getChatRef,
   }));
-  let tmp17 = first(11245)({
+  let tmp17 = first(11158)({
     chatRef: ref5,
     chatManager: first,
     chatUpdatesQueue,
@@ -614,7 +614,7 @@ const forwardRefResult = noop.forwardRef((messages, arg1) => {
     scrollToTopMessage,
     useReducedMotion: messages.useReducedMotion,
   };
-  ({ updateRows: closure_33, scrollToMessageId: closure_34 } = first(11641)({
+  ({ updateRows: closure_33, scrollToMessageId: closure_34 } = first(11561)({
     chatManager: first,
     rowGenerator: first1(
       noop.useState(() => new first(hasJumpedToOriginalPost[16])()),
@@ -906,151 +906,158 @@ const forwardRefResult = noop.forwardRef((messages, arg1) => {
                                   tmp2.appDirectoryEmbedApplicationFetchStates
                                 ) {
                                   if (props.guildTemplates === tmp2.guildTemplates) {
-                                    if (props.buildOverrides === tmp2.buildOverrides) {
-                                      if (props.experimentEmbeds === tmp2.experimentEmbeds) {
-                                        if (props.quests === tmp2.quests) {
-                                          if (props.isFetchingCurrentQuests === tmp2.isFetchingCurrentQuests) {
-                                            if (props.participantsLength === tmp2.participantsLength) {
-                                              if (props.isMessagesReady === tmp2.isMessagesReady) {
-                                                if (props.channelThreadsVersion === tmp2.channelThreadsVersion) {
-                                                  if (props.rsvpVersion === tmp2.rsvpVersion) {
-                                                    if (props.repliedIds === tmp2.repliedIds) {
-                                                      if (props.hasLoadedExperiments === tmp2.hasLoadedExperiments) {
-                                                        if (props.isMessageRequest === tmp2.isMessageRequest) {
-                                                          if (
-                                                            props.isSpamMessageRequest === tmp2.isSpamMessageRequest
-                                                          ) {
+                                    if (props.gameOrganizationInvites === tmp2.gameOrganizationInvites) {
+                                      if (props.buildOverrides === tmp2.buildOverrides) {
+                                        if (props.experimentEmbeds === tmp2.experimentEmbeds) {
+                                          if (props.quests === tmp2.quests) {
+                                            if (props.isFetchingCurrentQuests === tmp2.isFetchingCurrentQuests) {
+                                              if (props.participantsLength === tmp2.participantsLength) {
+                                                if (props.isMessagesReady === tmp2.isMessagesReady) {
+                                                  if (props.channelThreadsVersion === tmp2.channelThreadsVersion) {
+                                                    if (props.rsvpVersion === tmp2.rsvpVersion) {
+                                                      if (props.repliedIds === tmp2.repliedIds) {
+                                                        if (props.hasLoadedExperiments === tmp2.hasLoadedExperiments) {
+                                                          if (props.isMessageRequest === tmp2.isMessageRequest) {
                                                             if (
-                                                              props.currentUserCommunicationDisabled ===
-                                                              tmp2.currentUserCommunicationDisabled
+                                                              props.isSpamMessageRequest === tmp2.isSpamMessageRequest
                                                             ) {
                                                               if (
-                                                                props.userSettingsLocale === tmp2.userSettingsLocale
+                                                                props.currentUserCommunicationDisabled ===
+                                                                tmp2.currentUserCommunicationDisabled
                                                               ) {
-                                                                if (props.selectedSummary === tmp2.selectedSummary) {
-                                                                  if (
-                                                                    props.selectedConversation ===
-                                                                    tmp2.selectedConversation
-                                                                  ) {
+                                                                if (
+                                                                  props.userSettingsLocale === tmp2.userSettingsLocale
+                                                                ) {
+                                                                  if (props.selectedSummary === tmp2.selectedSummary) {
                                                                     if (
-                                                                      props.showPushFeedback === tmp2.showPushFeedback
+                                                                      props.selectedConversation ===
+                                                                      tmp2.selectedConversation
                                                                     ) {
                                                                       if (
-                                                                        props.cacheStoreLoaded === tmp2.cacheStoreLoaded
+                                                                        props.showPushFeedback === tmp2.showPushFeedback
                                                                       ) {
-                                                                        if (!tmp55) {
-                                                                          if (!tmp38) {
-                                                                            if (!tmp39) {
-                                                                              if (!tmp40) {
-                                                                                if (
-                                                                                  props.forwardGuildsVersion ===
-                                                                                  tmp2.forwardGuildsVersion
-                                                                                ) {
-                                                                                  if (!tmp41) {
-                                                                                    if (tmp34) {
-                                                                                      if (!tmp37) {
-                                                                                        if (!tmp42) {
-                                                                                          if (null == jumpTargetId) {
-                                                                                            if (null == focusTargetId) {
+                                                                        if (
+                                                                          props.cacheStoreLoaded ===
+                                                                          tmp2.cacheStoreLoaded
+                                                                        ) {
+                                                                          if (!tmp55) {
+                                                                            if (!tmp38) {
+                                                                              if (!tmp39) {
+                                                                                if (!tmp40) {
+                                                                                  if (
+                                                                                    props.forwardGuildsVersion ===
+                                                                                    tmp2.forwardGuildsVersion
+                                                                                  ) {
+                                                                                    if (!tmp41) {
+                                                                                      if (tmp34) {
+                                                                                        if (!tmp37) {
+                                                                                          if (!tmp42) {
+                                                                                            if (null == jumpTargetId) {
                                                                                               if (
-                                                                                                props.androidKeyboardHeight ===
-                                                                                                tmp2.androidKeyboardHeight
+                                                                                                null == focusTargetId
                                                                                               ) {
                                                                                                 if (
-                                                                                                  props.mediaPostPreviewEmbeds ===
-                                                                                                  tmp2.mediaPostPreviewEmbeds
+                                                                                                  props.androidKeyboardHeight ===
+                                                                                                  tmp2.androidKeyboardHeight
                                                                                                 ) {
                                                                                                   if (
-                                                                                                    props.shouldObscureSpoiler ===
-                                                                                                    tmp2.shouldObscureSpoiler
+                                                                                                    props.mediaPostPreviewEmbeds ===
+                                                                                                    tmp2.mediaPostPreviewEmbeds
                                                                                                   ) {
                                                                                                     if (
-                                                                                                      props.shouldDisableInteractiveComponents ===
-                                                                                                      tmp2.shouldDisableInteractiveComponents
+                                                                                                      props.shouldObscureSpoiler ===
+                                                                                                      tmp2.shouldObscureSpoiler
                                                                                                     ) {
-                                                                                                      if (!tmp35) {
-                                                                                                        if (!tmp36) {
-                                                                                                          if (!tmp43) {
+                                                                                                      if (
+                                                                                                        props.shouldDisableInteractiveComponents ===
+                                                                                                        tmp2.shouldDisableInteractiveComponents
+                                                                                                      ) {
+                                                                                                        if (!tmp35) {
+                                                                                                          if (!tmp36) {
                                                                                                             if (
-                                                                                                              props.threadStartingReferenceMessage ===
-                                                                                                              tmp2.threadStartingReferenceMessage
+                                                                                                              !tmp43
                                                                                                             ) {
                                                                                                               if (
-                                                                                                                !tmp44
+                                                                                                                props.threadStartingReferenceMessage ===
+                                                                                                                tmp2.threadStartingReferenceMessage
                                                                                                               ) {
                                                                                                                 if (
-                                                                                                                  result2
+                                                                                                                  !tmp44
                                                                                                                 ) {
                                                                                                                   if (
-                                                                                                                    !tmp52
+                                                                                                                    result2
                                                                                                                   ) {
                                                                                                                     if (
-                                                                                                                      !tmp53
+                                                                                                                      !tmp52
                                                                                                                     ) {
                                                                                                                       if (
-                                                                                                                        props.guildEmojis ===
-                                                                                                                        tmp2.guildEmojis
+                                                                                                                        !tmp53
                                                                                                                       ) {
                                                                                                                         if (
-                                                                                                                          !tmp54
+                                                                                                                          props.guildEmojis ===
+                                                                                                                          tmp2.guildEmojis
                                                                                                                         ) {
                                                                                                                           if (
-                                                                                                                            !tmp57
+                                                                                                                            !tmp54
                                                                                                                           ) {
                                                                                                                             if (
-                                                                                                                              !tmp58
+                                                                                                                              !tmp57
                                                                                                                             ) {
                                                                                                                               if (
-                                                                                                                                props.displayNameStylesEnabled ===
-                                                                                                                                tmp2.displayNameStylesEnabled
+                                                                                                                                !tmp58
                                                                                                                               ) {
                                                                                                                                 if (
-                                                                                                                                  !tmp62
+                                                                                                                                  props.displayNameStylesEnabled ===
+                                                                                                                                  tmp2.displayNameStylesEnabled
                                                                                                                                 ) {
                                                                                                                                   if (
-                                                                                                                                    !tmp56
+                                                                                                                                    !tmp62
                                                                                                                                   ) {
                                                                                                                                     if (
-                                                                                                                                      !tmp65
+                                                                                                                                      !tmp56
                                                                                                                                     ) {
                                                                                                                                       if (
-                                                                                                                                        result4
+                                                                                                                                        !tmp65
                                                                                                                                       ) {
-                                                                                                                                        ({
-                                                                                                                                          channelId:
-                                                                                                                                            channelId2,
-                                                                                                                                          messages,
-                                                                                                                                        } =
-                                                                                                                                          tmp2);
-                                                                                                                                        let obj8 =
-                                                                                                                                          first(
-                                                                                                                                            hasJumpedToOriginalPost[11],
-                                                                                                                                          );
-                                                                                                                                        const mapped =
-                                                                                                                                          messages.map(
-                                                                                                                                            (
-                                                                                                                                              id,
-                                                                                                                                            ) =>
-                                                                                                                                              id.id,
-                                                                                                                                          );
-                                                                                                                                        let hasFetched =
-                                                                                                                                          messages.hasFetched;
                                                                                                                                         if (
-                                                                                                                                          !hasFetched
+                                                                                                                                          result4
                                                                                                                                         ) {
-                                                                                                                                          hasFetched =
-                                                                                                                                            messages.ready &&
-                                                                                                                                            !messages.cached;
-                                                                                                                                          const tmp69 =
-                                                                                                                                            messages.ready &&
-                                                                                                                                            !messages.cached;
+                                                                                                                                          ({
+                                                                                                                                            channelId:
+                                                                                                                                              channelId2,
+                                                                                                                                            messages,
+                                                                                                                                          } =
+                                                                                                                                            tmp2);
+                                                                                                                                          let obj8 =
+                                                                                                                                            first(
+                                                                                                                                              hasJumpedToOriginalPost[11],
+                                                                                                                                            );
+                                                                                                                                          const mapped =
+                                                                                                                                            messages.map(
+                                                                                                                                              (
+                                                                                                                                                id,
+                                                                                                                                              ) =>
+                                                                                                                                                id.id,
+                                                                                                                                            );
+                                                                                                                                          let hasFetched =
+                                                                                                                                            messages.hasFetched;
+                                                                                                                                          if (
+                                                                                                                                            !hasFetched
+                                                                                                                                          ) {
+                                                                                                                                            hasFetched =
+                                                                                                                                              messages.ready &&
+                                                                                                                                              !messages.cached;
+                                                                                                                                            const tmp69 =
+                                                                                                                                              messages.ready &&
+                                                                                                                                              !messages.cached;
+                                                                                                                                          }
+                                                                                                                                          obj8.recordMessageRender(
+                                                                                                                                            channelId2,
+                                                                                                                                            mapped,
+                                                                                                                                            hasFetched,
+                                                                                                                                            messages.hasMoreAfter,
+                                                                                                                                          );
                                                                                                                                         }
-                                                                                                                                        obj8.recordMessageRender(
-                                                                                                                                          channelId2,
-                                                                                                                                          mapped,
-                                                                                                                                          hasFetched,
-                                                                                                                                          messages.hasMoreAfter,
-                                                                                                                                        );
                                                                                                                                       }
                                                                                                                                     }
                                                                                                                                   }
@@ -1266,7 +1273,7 @@ const forwardRefResult = noop.forwardRef((messages, arg1) => {
               if (closure_5) {
                 const interactionComponentStates = props.interactionComponentStates;
                 const interactionComponentStates2 = props.interactionComponentStates;
-                const value3 = interactionComponentStates.get(author.id);
+                value3 = interactionComponentStates.get(author.id);
                 if (value3 !== interactionComponentStates2.get(author.id)) {
                   set.add(author.id);
                 }
@@ -1509,7 +1516,7 @@ const forwardRefResult = noop.forwardRef((messages, arg1) => {
   });
   let obj6 = { children: null };
   const items4 = [
-    findMessageIndex(first(11586), {
+    findMessageIndex(first(11506), {
       ref: ref5,
       style: messages.style,
       inverted: true,

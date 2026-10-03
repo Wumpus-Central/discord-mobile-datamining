@@ -6,7 +6,7 @@ import CollectiblesWishlistItemRecord from "CollectiblesWishlistItemRecord.tsx";
 import PremiumWishlistItemRecord from "PremiumWishlistItemRecord.tsx";
 import SKUWishlistItemRecord from "SKUWishlistItemRecord.tsx";
 
-const SKUProductLines = fn(1074).SKUProductLines;
+const SKUProductLines = fn(1085).SKUProductLines;
 const prototype = function WishlistRecord(arg0) {
   const tmp = new prototype(new.target, new.target, arg0);
   ({ id: tmp.id, userId: tmp.userId, items: tmp.items, applications } = arg0);
@@ -53,8 +53,8 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/records/WishlistRecord.tsx");
 
 export default prototype;
-export const getWishlistSkuIds = function getWishlistSkuIds(items) {
-  items = items.items;
+export const getWishlistSkuIds = function getWishlistSkuIds(first1) {
+  const items = first1.items;
   return items.map((skuId) => skuId.skuId);
 };
 export const wishlistHasSkuId = function wishlistHasSkuId(items, arg1) {

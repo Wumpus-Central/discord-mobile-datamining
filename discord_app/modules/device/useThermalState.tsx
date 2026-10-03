@@ -1,6 +1,8 @@
 // discord_app/modules/device/useThermalState.tsx
+import c from "../../../_runtime/00576_c.js";
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import ThermalUtilsDefault from "ThermalUtils.native.tsx";
+import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const ThermalStates = {
@@ -15,7 +17,7 @@ const ThermalStates = {
   CRITICAL: 3,
   [3]: "CRITICAL",
 };
-const obj2 = {
+let obj2 = {
   NONE: 0,
   [0]: "NONE",
   LIGHT: 1,
@@ -33,45 +35,91 @@ const obj2 = {
 };
 const result = size.fileFinishedImporting("modules/device/useThermalState.tsx");
 
-export default function useThermalState() {
-  const obj = ThermalUtilsDefault;
-  const rawThermalState = obj.useRawThermalState();
-  if (null == rawThermalState) {
-    let UNHANDLED = obj.UNHANDLED;
-  } else {
-    UNHANDLED = rawThermalState;
-    if (!obj3.isIOS()) {
-      if (tmp11Result.isAndroid()) {
-        if (obj2.NONE === rawThermalState) {
-          UNHANDLED = obj.NOMINAL;
+export default ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const obj = c;
+      const cResult = obj.c(2);
+      obj2 = ThermalUtilsDefault;
+      const rawThermalState = obj2.useRawThermalState();
+      if (cResult[0] !== rawThermalState) {
+        if (null == rawThermalState) {
+          let FAIR = obj.UNHANDLED;
         } else {
-          if (obj2.LIGHT !== rawThermalState) {
-            if (obj2.MODERATE !== rawThermalState) {
-              if (obj2.SEVERE === rawThermalState) {
-                UNHANDLED = obj.SERIOUS;
-              } else {
-                if (obj2.CRITICAL !== rawThermalState) {
-                  if (obj2.EMERGENCY !== rawThermalState) {
-                    if (obj2.SHUTDOWN !== rawThermalState) {
-                      UNHANDLED = obj.UNHANDLED;
+          FAIR = rawThermalState;
+          if (!tmpResult.isIOS()) {
+            if (!tmpResult2.isAndroid()) {
+              FAIR = obj.UNHANDLED;
+            }
+            tmpResult2 = PlatformUtils;
+          }
+          if (obj2.NONE === rawThermalState) {
+            FAIR = obj.NOMINAL;
+          } else {
+            if (tmp7.LIGHT !== rawThermalState) {
+              if (tmp7.MODERATE !== rawThermalState) {
+                if (tmp7.SEVERE === rawThermalState) {
+                  FAIR = obj.SERIOUS;
+                } else {
+                  if (tmp7.CRITICAL !== rawThermalState) {
+                    if (tmp7.EMERGENCY !== rawThermalState) {
+                      if (tmp7.SHUTDOWN !== rawThermalState) {
+                        FAIR = obj.UNHANDLED;
+                      }
                     }
                   }
+                  FAIR = obj.CRITICAL;
                 }
-                UNHANDLED = obj.CRITICAL;
               }
             }
+            FAIR = obj.FAIR;
           }
-          UNHANDLED = obj.FAIR;
+          tmpResult = PlatformUtils;
         }
+        cResult[0] = rawThermalState;
+        cResult[1] = FAIR;
       } else {
-        UNHANDLED = obj.UNHANDLED;
+        return cResult[1];
       }
-      tmp11Result = PlatformUtils;
     }
-    obj3 = PlatformUtils;
-  }
-  return UNHANDLED;
-}
+  : () => {
+      const obj = ThermalUtilsDefault;
+      const rawThermalState = obj.useRawThermalState();
+      if (null == rawThermalState) {
+        let UNHANDLED = obj.UNHANDLED;
+      } else {
+        UNHANDLED = rawThermalState;
+        if (!obj3.isIOS()) {
+          if (tmp11Result.isAndroid()) {
+            if (obj2.NONE === rawThermalState) {
+              UNHANDLED = obj.NOMINAL;
+            } else {
+              if (obj2.LIGHT !== rawThermalState) {
+                if (obj2.MODERATE !== rawThermalState) {
+                  if (obj2.SEVERE === rawThermalState) {
+                    UNHANDLED = obj.SERIOUS;
+                  } else {
+                    if (obj2.CRITICAL !== rawThermalState) {
+                      if (obj2.EMERGENCY !== rawThermalState) {
+                        if (obj2.SHUTDOWN !== rawThermalState) {
+                          UNHANDLED = obj.UNHANDLED;
+                        }
+                      }
+                    }
+                    UNHANDLED = obj.CRITICAL;
+                  }
+                }
+              }
+              UNHANDLED = obj.FAIR;
+            }
+          } else {
+            UNHANDLED = obj.UNHANDLED;
+          }
+          tmp11Result = PlatformUtils;
+        }
+        obj3 = PlatformUtils;
+      }
+      return UNHANDLED;
+    };
 export { ThermalStates };
 export const AndroidThermalStates = obj2;
 export const getThermalState = function getThermalState() {

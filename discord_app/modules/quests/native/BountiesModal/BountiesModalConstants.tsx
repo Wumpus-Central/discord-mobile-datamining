@@ -1,8 +1,8 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesModalConstants.tsx
 import size from "../../../../../_runtime/metro/00002__.js";
 
-function getBountyVideoEndPeekScale(value, memo1) {
-  return 1 + (memo1 - 1) * value;
+function getBountyVideoEndPeekScale(value, c14) {
+  return 1 + (c14 - 1) * value;
 }
 getBountyVideoEndPeekScale.__closure = {};
 getBountyVideoEndPeekScale.__workletHash = 16304629459688;

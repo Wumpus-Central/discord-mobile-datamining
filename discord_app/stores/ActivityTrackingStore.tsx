@@ -78,7 +78,7 @@ function updateActivity(applicationId) {
   ActivitiesActionCreatorsDefault.updateActivity(obj3);
   applicationId.updatedAt = timestamp;
   if (null == dependencyMap[applicationId.applicationId]) {
-    const interval = new tmp3(2039).Interval();
+    const interval = new tmp3(2046).Interval();
     tmp11[applicationId.applicationId] = interval;
     interval.start(closure_12, () => {
       updateActivity(closure_0);
@@ -138,7 +138,7 @@ function handleLogout() {
   c16 = false;
   tmp2 = keys[Symbol.iterator]();
 }
-const Distributors = fn(1074).Distributors;
+const Distributors = fn(1085).Distributors;
 const ActivityTrackingStore = "ActivityTrackingStore";
 let closure_12 = 30 * DurationsDefault.Millis.MINUTE;
 let closure_13 = 5 * DurationsDefault.Millis.MINUTE;

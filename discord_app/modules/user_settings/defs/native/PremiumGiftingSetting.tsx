@@ -1,4 +1,5 @@
 // discord_app/modules/user_settings/defs/native/PremiumGiftingSetting.tsx
+import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import BillingPlatformUtils from "../../../device/BillingPlatformUtils.tsx";
@@ -9,35 +10,91 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11215);
+fn(558);
+const ReactCompilerGating = fn(558);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = c.c(1);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const fn = function t() {
+          const isPaymentsBlocked = BlockedPaymentsCountryExperiment.getIsPaymentsBlocked();
+          let flag = !isPaymentsBlocked;
+          if (isPaymentsBlocked) {
+            openBlockedPaymentsCountryActionSheetDefault();
+            flag = false;
+          }
+          return flag;
+        };
+        cResult[0] = fn;
+        let first = fn;
+      } else {
+        first = cResult[0];
+      }
+      return first;
+    }
+  : () =>
+      noop.useCallback(() => {
+        const isPaymentsBlocked = BlockedPaymentsCountryExperiment.getIsPaymentsBlocked();
+        let flag = !isPaymentsBlocked;
+        if (isPaymentsBlocked) {
+          openBlockedPaymentsCountryActionSheetDefault();
+          flag = false;
+        }
+        return flag;
+      }, []);
+const SettingBuilders = fn(11129);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = c.c(2);
+      const unseenOutboundPromotions = PromotionsHooks.useUnseenOutboundPromotions();
+      if (cResult[0] !== unseenOutboundPromotions.length) {
+        const obj3 = { value: unseenOutboundPromotions.length };
+        const tmp6 = jsx(native.Badge, { value: unseenOutboundPromotions.length });
+        cResult[0] = unseenOutboundPromotions.length;
+        cResult[1] = tmp6;
+        let tmp4 = tmp6;
+      } else {
+        tmp4 = cResult[1];
+      }
+      return tmp4;
+    }
+  : () => {
+      const unseenOutboundPromotions = PromotionsHooks.useUnseenOutboundPromotions();
+      return jsx(native.Badge, { value: unseenOutboundPromotions.length });
+    };
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["jcSP+g"]);
   },
   parent: null,
-  IconComponent: fn(10695).GiftIcon,
+  IconComponent: fn(10766).GiftIcon,
   usePredicate() {
     return BillingPlatformUtils.isPremiumGiftingSupported();
   },
-  usePreNavigationAction: function useCanNavigateToPaymentSetting() {
-    return noop.useCallback(() => {
-      const isPaymentsBlocked = BlockedPaymentsCountryExperiment.getIsPaymentsBlocked();
-      let flag = !isPaymentsBlocked;
-      if (isPaymentsBlocked) {
-        openBlockedPaymentsCountryActionSheetDefault();
-        flag = false;
+  usePreNavigationAction: tmp2,
+  useTrailing: ReactCompilerGating.isReactCompilerEnabled()
+    ? () => {
+        const cResult = c.c(2);
+        const unseenOutboundPromotions = PromotionsHooks.useUnseenOutboundPromotions();
+        if (cResult[0] !== unseenOutboundPromotions.length) {
+          const obj3 = { value: unseenOutboundPromotions.length };
+          const tmp6 = jsx(native.Badge, { value: unseenOutboundPromotions.length });
+          cResult[0] = unseenOutboundPromotions.length;
+          cResult[1] = tmp6;
+          let tmp4 = tmp6;
+        } else {
+          tmp4 = cResult[1];
+        }
+        return tmp4;
       }
-      return flag;
-    }, []);
-  },
-  useTrailing: function usePremiumGiftingSettingTrailing() {
-    const unseenOutboundPromotions = PromotionsHooks.useUnseenOutboundPromotions();
-    return jsx(native.Badge, { value: unseenOutboundPromotions.length });
-  },
+    : () => {
+        const unseenOutboundPromotions = PromotionsHooks.useUnseenOutboundPromotions();
+        return jsx(native.Badge, { value: unseenOutboundPromotions.length });
+      },
   unsearchable: true,
   screen: {
-    route: fn(1074).UserSettingsSections.PREMIUM_GIFTING,
+    route: fn(1085).UserSettingsSections.PREMIUM_GIFTING,
     getComponent() {
       return require("UserSettingsPremiumGifting").default;
     },

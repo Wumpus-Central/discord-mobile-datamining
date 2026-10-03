@@ -1,13 +1,13 @@
 // discord_app/modules/application_commands/native/ApplicationCommandUtils.tsx
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
-import _modDef1969 from "../../../../_runtime/metro/01969__.js";
-import DraftStore from "../../../stores/DraftStore.tsx";
+import _modDef1975 from "../../../../_runtime/metro/01975__.js";
 import ApplicationCommandConstants from "../ApplicationCommandConstants.tsx";
+import DraftStore from "../../../stores/DraftStore.tsx";
 import ApplicationCommandTypes from "../ApplicationCommandTypes.tsx";
 import UploadAttachmentActionCreatorsDefault from "../../../actions/UploadAttachmentActionCreators.tsx";
 import showUploadPreviewActionSheetDefault from "../../media_uploads/native/showUploadPreviewActionSheet.tsx";
-import _modDef11924 from "../../../../_runtime/metro/11924__.js";
-import _modDef11925 from "../../../../_runtime/metro/11925__.js";
+import _modDef11861 from "../../../../_runtime/metro/11861__.js";
+import _modDef11862 from "../../../../_runtime/metro/11862__.js";
 import UploadAttachmentStore from "../../../stores/UploadAttachmentStore.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -21,9 +21,9 @@ export const getApplicationCommandsIconSource = function getApplicationCommandsI
   } else {
     const id = section.id;
     if (BuiltInSectionId.BUILT_IN === id) {
-      return AvatarUtilsDefault.makeSource(_modDef11924);
+      return AvatarUtilsDefault.makeSource(_modDef11861);
     } else if (tmp10.FRECENCY === id) {
-      return AvatarUtilsDefault.makeSource(_modDef11925);
+      return AvatarUtilsDefault.makeSource(_modDef11862);
     } else {
       if (section.type === ApplicationCommandTypes.ApplicationCommandSectionType.APPLICATION) {
         const obj5 = { id: null, icon: null, bot: null, botIconFirst: true, guildMember: null };
@@ -36,7 +36,7 @@ export const getApplicationCommandsIconSource = function getApplicationCommandsI
         obj5.guildMember = stateFromStores;
         let applicationIconSource = AvatarUtilsDefault.getApplicationIconSource(obj5);
       } else {
-        applicationIconSource = _modDef1969;
+        applicationIconSource = _modDef1975;
       }
       return applicationIconSource;
     }
@@ -62,7 +62,7 @@ export const openCommandAttachmentPreview = function openCommandAttachmentPrevie
         if (applicationCommandManager != null) {
           const activeCommand = applicationCommandManager.props.activeCommand;
           if (activeCommand != null) {
-            const options = activeCommand.options;
+            options = activeCommand.options;
             if (options != null) {
               found = options.find((name) => name.name === name);
             }

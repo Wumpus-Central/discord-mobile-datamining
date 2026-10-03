@@ -12,8 +12,8 @@ function getCreationDefaultFormatter() {
   time.month = intl.string(util.t["nBNJ/L"]);
   return time;
 }
-const ForumTimestampFormats = fn(6878).ForumTimestampFormats;
-const ChannelFlags = fn(2051).ChannelFlags;
+const ForumTimestampFormats = fn(6776).ForumTimestampFormats;
+const ChannelFlags = fn(2058).ChannelFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forums/ForumUtils.tsx");
 
@@ -49,7 +49,7 @@ export const getForumPostReadStatesById = function getForumPostReadStatesById(it
   if (null == channel) {
     return null;
   } else {
-    const guild = obj2.getGuild(channel.guild_id);
+    guild = obj2.getGuild(channel.guild_id);
     let tmp11 = null;
     if (null != guild) {
       const items1 = [tmp5];

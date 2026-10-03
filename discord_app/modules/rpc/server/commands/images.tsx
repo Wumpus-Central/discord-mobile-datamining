@@ -6,14 +6,14 @@ import createRpcJoiSchemaObjectDefault from "../../helpers/createRpcJoiSchemaObj
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 const RPCErrors = Constants.RPCErrors;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/server/commands/images.tsx");
 
 export default {
   [Constants.RPCCommands.GET_IMAGE]: {
-    scope: fn(5270).RPC_LOCAL_SCOPE,
+    scope: fn(5316).RPC_LOCAL_SCOPE,
     validation(string) {
       const obj = createRpcJoiSchemaObjectDefault(string);
       const obj2 = { type: null, id: null, format: null, size: null };

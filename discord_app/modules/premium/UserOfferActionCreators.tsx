@@ -33,7 +33,7 @@ let closure_12 = async function _fetchUserOffer(arg0) {
       const obj5 = { value, done: true };
       return obj5;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -61,7 +61,7 @@ let closure_12 = async function _fetchUserOffer(arg0) {
           closure_136_1 = flag;
           let obj8 = closure_2;
           if (closure_2 === undefined) {
-            obj8 = { offerId: "Array", paymentGatewayOverride: "paddingHorizontal" };
+            obj8 = { offerId: "Symbol", paymentGatewayOverride: "current" };
           }
           closure_136_2 = obj8;
           closure_136_3 = closure_3;
@@ -77,7 +77,7 @@ let closure_12 = async function _fetchUserOffer(arg0) {
           closure_136_13 = undefined;
           c12 = 1;
           c13 = 1;
-          return { value: "flex", done: null };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -245,7 +245,7 @@ let closure_13 = async function _fetchExistingChurnDiscountOffer() {
   const HTTP = require("HTTPUtils").HTTP;
   await HTTP.get({ url: constants.CHURN_USER_OFFER, rejectWithError: true });
   closure_130_1(closure_130_2[7]).dispatch({ type: "BILLING_USER_OFFER_FETCH_FAIL" });
-  await "HermesInternal";
+  await "IconComponent";
   const offer = value.body.offer;
   c0 = offer;
   if (offer == null) {
@@ -293,8 +293,8 @@ let closure_14 = async function _fetchChurnDiscountOffer() {
   }
   return value;
 };
-let closure_7 = fn(1374).PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID;
-const Constants = fn(1074);
+let closure_7 = fn(1379).PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID;
+const Constants = fn(1085);
 ({ AnalyticEvents: closure_8, Endpoints: closure_9, PaymentGateways: c10 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/UserOfferActionCreators.tsx");
@@ -416,7 +416,7 @@ export const triggerUserOffer = function triggerUserOffer(triggerType, trigger_l
       if (postResultResult.isIOS()) {
         GOOGLE = constants2.APPLE;
       }
-      postResultResult = postResult(1364);
+      postResultResult = postResult(1369);
     }
     const obj5 = {
       payment_gateway: GOOGLE,
@@ -428,7 +428,7 @@ export const triggerUserOffer = function triggerUserOffer(triggerType, trigger_l
     _JSON = JSON;
     obj5.trigger_metadata = JSON.stringify(tmp5);
     obj5.trigger_uptime_app = UserOfferStore.getUptimeForTrigger();
-    const HTTP = postResult(1271).HTTP;
+    const HTTP = postResult(1282).HTTP;
     const request = { url: constants.USER_OFFER_TRIGGER, body: obj5, rejectWithError: true };
     postResult = HTTP.post(request);
     then = postResult.then;

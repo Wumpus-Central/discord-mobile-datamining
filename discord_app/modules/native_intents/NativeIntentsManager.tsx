@@ -62,7 +62,7 @@ function makeSearchItem(channel, guild) {
   if (id == null) {
     id = closure_1_10;
   }
-  const CHANNELResult = closure_1_14.CHANNEL(id, channel.id);
+  const CHANNELResult = state.CHANNEL(id, channel.id);
   const obj3 = {
     id: CHANNELResult,
     relatedUniqueIdentifier: CHANNELResult,
@@ -125,7 +125,7 @@ function makeGuildDomain(guild1) {
   if (flag === undefined) {
     flag = false;
   }
-  const CHANNELResult = closure_1_14.CHANNEL(guild1.id);
+  const CHANNELResult = state.CHANNEL(guild1.id);
   const obj = {
     id: CHANNELResult,
     relatedUniqueIdentifier: CHANNELResult,
@@ -170,7 +170,7 @@ function setChannelActivity(channelId) {
       channel = ChannelStore.getChannel(channelId);
     }
     if (null != channel) {
-      const guild = GuildStore.getGuild(channel.guild_id);
+      guild = GuildStore.getGuild(channel.guild_id);
       const obj5 = useChannelName;
       const channelName = obj5.computeChannelName(channel, UserStore, RelationshipStore, true);
       let str2 = "";
@@ -218,7 +218,7 @@ function setChannelActivity(channelId) {
       const set = new Set(items);
       const items3 = [];
       HermesBuiltin.arraySpread(set, 0);
-      const CHANNELResult = closure_1_14.CHANNEL(channel.guild_id, channel.id);
+      const CHANNELResult = state.CHANNEL(channel.guild_id, channel.id);
       const obj4 = {
         webpageURL: null,
         relatedUniqueIdentifier: null,
@@ -253,7 +253,7 @@ function indexChannelUpdates(items) {
     while (iter !== undefined) {
       let tmp7 = nextResult;
       if (PermissionStore.can(constants3.VIEW_CHANNEL, nextResult)) {
-        let guild = GuildStore.getGuild(tmp7.guild_id);
+        guild = GuildStore.getGuild(tmp7.guild_id);
         let tmp15 = guild;
         id = undefined;
         if (guild != null) {
@@ -290,7 +290,7 @@ function indexChannelUpdates(items) {
     }
   }
 }
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ ME: c10, ChannelTypes: closure_11, Links: closure_12, Permissions: map1, Routes: closure_14 } = Constants);
 const constants4 = { GUILD: 100, [100]: "GUILD", DM: 75, [75]: "DM", OTHER_CHANNEL: 50, [50]: "OTHER_CHANNEL" };
 class NativeIntentsManager extends tmp3 {
@@ -370,7 +370,7 @@ prototype["handleChannelCreate"] = function handleChannelCreate(channel) {
   obj2.disable = !IntentsBindingsDefault.hasSearch();
   if (obj.getCurrentConfig({ location: "NativeIntentsManager" }, obj2).searchEnabled) {
     if (PermissionStore.can(constants3.VIEW_CHANNEL, channel)) {
-      const guild = GuildStore.getGuild(channel.guild_id);
+      guild = GuildStore.getGuild(channel.guild_id);
       if (null != guild) {
         if (null == guild) {
           id = undefined;

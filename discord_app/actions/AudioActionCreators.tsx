@@ -61,10 +61,10 @@ function trackDeviceChanged(inputDevices, inputDeviceId, found, Video) {
     AnalyticsUtilsDefault.track(constants2.MEDIA_DEVICE_CHANGED, obj);
   }
 }
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ InputModes: c10, AnalyticEvents: closure_11 } = Constants);
-const SoundOutputChannel = fn(9299).SoundOutputChannel;
-const MediaEngineContextTypes = fn(4870).MediaEngineContextTypes;
+const SoundOutputChannel = fn(9308).SoundOutputChannel;
+const MediaEngineContextTypes = fn(4915).MediaEngineContextTypes;
 let obj = new LoggerDefault("AudioActionCreators");
 obj.enableNativeLogger(true);
 let closure_15 = debounceDefault((target_user_id, context, volume) => {
@@ -263,17 +263,13 @@ export default {
     closure_15(userId, DEFAULT, snapVolumeToDefaultResult);
     const obj3 = { type: "AUDIO_SET_LOCAL_VOLUME", context: DEFAULT, userId, volume: snapVolumeToDefaultResult };
   },
-  setAudioMixerSettings(audioMixerSettings) {
+  setAudioMixerSettings(settings) {
     let DEFAULT = arg1;
     if (arg1 === undefined) {
       DEFAULT = MediaEngineContextTypes.DEFAULT;
     }
-    DispatcherDefault.dispatch({
-      type: "AUDIO_SET_AUDIO_MIXER_SETTINGS",
-      context: DEFAULT,
-      settings: audioMixerSettings,
-    });
-    const obj2 = { type: "AUDIO_SET_AUDIO_MIXER_SETTINGS", context: DEFAULT, settings: audioMixerSettings };
+    DispatcherDefault.dispatch({ type: "AUDIO_SET_AUDIO_MIXER_SETTINGS", context: DEFAULT, settings });
+    const obj2 = { type: "AUDIO_SET_AUDIO_MIXER_SETTINGS", context: DEFAULT, settings };
   },
   setSpatialAudio(enabled, arg1) {
     if (typeof isNotSupported === "function") {
@@ -679,7 +675,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -698,7 +694,7 @@ export default {
               v1 = 1;
               dependencyMap = 1;
               const obj4 = {
-                value: v1(9302)("debug_logging_enabled", closure_0, debugLogging.getDebugLogging()),
+                value: v1(9311)("debug_logging_enabled", closure_0, debugLogging.getDebugLogging()),
                 done: false,
               };
               return obj4;
@@ -712,9 +708,9 @@ export default {
             return obj5;
           } else {
             const obj6 = { type: "AUDIO_SET_DEBUG_LOGGING", enabled: closure_128_0 };
-            v1(573).dispatch(obj6);
+            v1(584).dispatch(obj6);
             dependencyMap = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp18) {
           dependencyMap = tmp;
@@ -771,7 +767,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -790,7 +786,7 @@ export default {
               v1 = 1;
               dependencyMap = 1;
               const obj4 = {
-                value: v1(9302)("audio_subsystem", closure_0, audioSubsystem.getAudioSubsystem()),
+                value: v1(9311)("audio_subsystem", closure_0, audioSubsystem.getAudioSubsystem()),
                 done: false,
               };
               return obj4;
@@ -804,9 +800,9 @@ export default {
             return obj5;
           } else {
             const obj6 = { type: "AUDIO_SET_SUBSYSTEM", subsystem: closure_128_0 };
-            v1(573).dispatch(obj6);
+            v1(584).dispatch(obj6);
             dependencyMap = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp18) {
           dependencyMap = tmp;
@@ -816,8 +812,11 @@ export default {
     })();
   },
   setVideoEnabled(enabled) {
-    const result = applyBackgroundOption.applyInitialVideoBackgroundOption();
+    if (enabled) {
+      const result = applyBackgroundOption.applyInitialVideoBackgroundOption();
+    }
     DispatcherDefault.dispatch({ type: "MEDIA_ENGINE_SET_VIDEO_ENABLED", enabled });
+    const obj3 = { type: "MEDIA_ENGINE_SET_VIDEO_ENABLED", enabled };
   },
   setGoLiveSource(qualityOptions) {
     qualityOptions = undefined;

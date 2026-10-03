@@ -1,104 +1,37 @@
 // discord_app/modules/global_discovery_servers/GlobalDiscoveryServersUtils.tsx
 import util from "../../intl/index.native.tsx";
-import v1 from "../../../_runtime/01255_v1.js";
+import v1 from "../../../_runtime/01266_v1.js";
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import LocaleStore from "../user_settings/LocaleStore.tsx";
 
 require = fn;
-let closure_13 = async function _navigateToGuild(arg0) {
-  if (c4 === 2) {
-    c4 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c4 = 2;
-      if (0 === c3) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          closure_2 = tmp5;
-          closure_1 = tmp2;
-          closure_129_0 = undefined;
-          closure_129_1 = undefined;
-          closure_129_2 = undefined;
-          closure_129_3 = undefined;
-          closure_129_4 = undefined;
-          closure_129_5 = undefined;
-          ({
-            loadId: closure_129_0,
-            guildId: closure_129_1,
-            index: closure_129_2,
-            categoryId: closure_129_3,
-            analyticsLocation: closure_129_4,
-            options: closure_129_5,
-          } = closure_0);
-          closure_129_6 = undefined;
-          c3 = 1;
-          c4 = 1;
-          return { value: "flex", done: null };
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          const obj6 = {};
-          const merged = Object.assign(closure_129_5);
-          obj6.loadId = closure_129_0;
-          closure_129_6 = obj6;
-          c3 = 2;
-          c4 = 1;
-          const obj7 = {
-            value: closure_130_2(closure_130_3[6]).startLurking(closure_129_1, closure_129_4, closure_129_6),
-            done: false,
-          };
-          return obj7;
-        }
-      } else if (arg0 === 1) {
-        c4 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c4 = 3;
-        const obj8 = { value, done: true };
-        return obj8;
-      } else {
-        const obj9 = {
-          guild_id: closure_129_1,
-          load_id: closure_129_0,
-          card_index: closure_129_2,
-          category_id: closure_129_3,
-          location: closure_129_4,
-        };
-        closure_130_1(closure_130_3[7]).track(closure_130_12.GUILD_DISCOVERY_GUILD_SELECTED, obj9);
-        c4 = 3;
-        return { value: "HermesInternal", done: null };
-      }
-    } catch (tmp28) {
-      c4 = tmp;
-      throw tmp28;
-    }
-  }
+let closure_13 = async function _navigateToGuild() {
+  const obj6 = {};
+  const merged = Object.assign(closure_129_5);
+  obj6.loadId = closure_129_0;
+  closure_129_6 = obj6;
+  await closure_130_2(closure_130_3[6]).startLurking(closure_129_1, closure_129_4, closure_129_6);
+  closure_130_1(closure_130_3[7]).track(closure_130_12.GUILD_DISCOVERY_GUILD_SELECTED, {
+    guild_id: closure_129_1,
+    load_id: closure_129_0,
+    card_index: closure_129_2,
+    category_id: closure_129_3,
+    location: closure_129_4,
+  });
+  await "IconComponent";
+  closure_1 = tmp2;
+  ({
+    loadId: closure_129_0,
+    guildId: closure_129_1,
+    index: closure_129_2,
+    categoryId: closure_129_3,
+    analyticsLocation: closure_129_4,
+    options: closure_129_5,
+  } = closure_0);
+  return "Reflect";
 };
-const GlobalDiscoveryServersConstants = fn(9243);
+const GlobalDiscoveryServersConstants = fn(9249);
 ({
   GlobalDiscoveryServerTab: metroRequire,
   FEATURED_GUILDS_CACHE_DURATION: closure_7,
@@ -107,7 +40,7 @@ const GlobalDiscoveryServersConstants = fn(9243);
   getLanguageOptions: c10,
   HUBS_CATEGORY_ID: closure_11,
 } = GlobalDiscoveryServersConstants);
-const AnalyticEvents = fn(1074).AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/global_discovery_servers/GlobalDiscoveryServersUtils.tsx");
 
@@ -218,17 +151,17 @@ export const getGlobalDiscoveryServersTabSectionTitle = function getGlobalDiscov
 };
 export const getCategoryIdFromServerTab = function getCategoryIdFromServerTab(type) {
   if (constants.FEATURED === type) {
-    return React7;
+    return options;
   } else if (constants.GAMING === type) {
-    return React6.Activity;
+    return closure_1_8.Activity;
   } else if (constants.MUSIC === type) {
-    return React6.Music;
+    return closure_1_8.Music;
   } else if (constants.ENTERTAINMENT === type) {
-    return React6.Television;
+    return closure_1_8.Television;
   } else if (constants.TECH === type) {
-    return React6.Science;
+    return closure_1_8.Science;
   } else if (constants.EDUCATION === type) {
-    return React6.Education;
+    return closure_1_8.Education;
   } else if (constants.HUBS === type) {
     return closure_1_11;
   } else {
@@ -283,16 +216,15 @@ export const fromDiscoverableGuildSearchResult = function fromDiscoverableGuildS
     presenceCount: null,
     memberCount: null,
     premiumSubscriptionCount: "r",
-    preferredLocale: "isArray",
-    discoverySplash: "scalar",
-    emojis: 9,
+    preferredLocale: "ix",
+    discoverySplash: null,
+    emojis: [],
   };
   ({
     approximate_presence_count: obj.presenceCount,
     approximate_member_count: obj.memberCount,
     discovery_splash: obj.discoverySplash,
   } = id);
-  obj.emojis = [];
   return obj;
 };
 export const getLanguageCodeFallback = function getLanguageCodeFallback() {
@@ -302,7 +234,7 @@ export const getLanguageCodeFallback = function getLanguageCodeFallback() {
     tmp = items;
   }
   [tmp3] = tmp;
-  const arr2 = closure_1_10();
+  const arr2 = v65535();
   locale = tmp3.locale;
   let found = arr2.find((code) => code.code === locale);
   if (found == null) {

@@ -12,7 +12,7 @@ export const extractActivityBookmarkParams = function extractActivityBookmarkPar
     value = searchParams.get("referrer_id");
   }
   const obj2 = { referrerId: value, customId: null, linkId: null };
-  let value3;
+  value3 = undefined;
   if (toURLSafeResult != null) {
     const searchParams2 = toURLSafeResult.searchParams;
     value3 = searchParams2.get("custom_id");

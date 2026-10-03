@@ -6,7 +6,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const React4 = [];
 let c5 = false;
-let result = size.fileFinishedImporting("../discord_common/js/packages/flux/Store.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/flux/Store.tsx");
 class Store {
   constructor(arg0, arg1, arg2) {
     obj = require;
@@ -52,11 +52,11 @@ class Store {
     obj1.removeReactChangeListener = obj1._reactChangeCallbacks.remove;
     obj1._dispatcher = global;
     _dispatcher = obj1._dispatcher;
-    obj1._dispatchToken = _dispatcher.createToken();
+    name = obj1.getName();
     if (require == null) {
       obj = {};
     }
-    result = obj1.registerActionHandlers(obj, importDefault);
+    obj1._dispatchToken = _dispatcher.register(name, obj, obj1.doEmitChanges, importDefault);
     arr = closure_4.push(obj1);
     if (c5) {
       initializeIfNeededResult = obj1.initializeIfNeeded();
@@ -88,10 +88,6 @@ Store["removeAllConditionalListeners"] = function removeAllConditionalListeners(
   const item = closure_4.forEach((_changeCallbacks) => {
     _changeCallbacks._changeCallbacks.removeAllConditional();
   });
-};
-prototype["registerActionHandlers"] = function registerActionHandlers(arg0, arg1) {
-  const _dispatcher = this._dispatcher;
-  _dispatcher.register(this.getName(), arg0, this.doEmitChanges, arg1, this._dispatchToken);
 };
 prototype["getName"] = function getName() {
   let name = this.constructor.displayName;

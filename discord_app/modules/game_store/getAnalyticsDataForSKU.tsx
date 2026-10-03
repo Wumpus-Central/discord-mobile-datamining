@@ -1,7 +1,7 @@
 // discord_app/modules/game_store/getAnalyticsDataForSKU.tsx
 import ApplicationStore from "../applications/ApplicationStore.tsx";
 
-const SKUFeatureTypes = fn(1074).SKUFeatureTypes;
+const SKUFeatureTypes = fn(1085).SKUFeatureTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_store/getAnalyticsDataForSKU.tsx");
 

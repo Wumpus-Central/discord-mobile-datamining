@@ -1,4 +1,5 @@
 // discord_app/modules/user_settings/defs/native/ContrastModeSetting.tsx
+import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import CirclePlusIcon from "../../../../design/components/Icon/native/redesign/generated/CirclePlusIcon.tsx";
@@ -9,30 +10,83 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11215);
+const ReactCompilerGating = fn(558);
+const SettingBuilders = fn(11129);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = c.c(1);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const obj2 = {
+          value: AccessibilityStore.contrast,
+          onSlidingComplete: AccessibilityActionCreators.setContrast,
+          minimumValue: 0,
+          maximumValue: 2,
+          step: 0.1,
+          startIcon: jsx(CircleMinusIcon.CircleMinusIcon, {}),
+          endIcon: jsx(CirclePlusIcon.CirclePlusIcon, {}),
+        };
+        cResult[0] = obj2;
+        let first = obj2;
+      } else {
+        first = cResult[0];
+      }
+      return first;
+    }
+  : () =>
+      noop.useMemo(
+        () => ({
+          value: contrast.contrast,
+          onSlidingComplete: AccessibilityActionCreators.setContrast,
+          minimumValue: 0,
+          maximumValue: 2,
+          step: 0.1,
+          startIcon: jsx(CircleMinusIcon.CircleMinusIcon, {}),
+          endIcon: jsx(CirclePlusIcon.CirclePlusIcon, {}),
+        }),
+        [],
+      );
 const slider = SettingBuilders.createSlider({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["TYyfO/"]);
   },
-  parent: fn(7590).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(7634).MobileUserSettings.ACCESSIBILITY,
   useTrailing() {
     return jsx(native.BetaTag, { size: native.BetaSizes.SMALL });
   },
-  useProps: function useContrastSettingProps() {
-    return noop.useMemo(
-      () => ({
-        value: contrast.contrast,
-        onSlidingComplete: AccessibilityActionCreators.setContrast,
-        minimumValue: 0,
-        maximumValue: 2,
-        step: 0.1,
-        startIcon: jsx(CircleMinusIcon.CircleMinusIcon, {}),
-        endIcon: jsx(CirclePlusIcon.CirclePlusIcon, {}),
-      }),
-      [],
-    );
-  },
+  useProps: ReactCompilerGating.isReactCompilerEnabled()
+    ? () => {
+        const cResult = c.c(1);
+        if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+          const obj2 = {
+            value: AccessibilityStore.contrast,
+            onSlidingComplete: AccessibilityActionCreators.setContrast,
+            minimumValue: 0,
+            maximumValue: 2,
+            step: 0.1,
+            startIcon: jsx(CircleMinusIcon.CircleMinusIcon, {}),
+            endIcon: jsx(CirclePlusIcon.CirclePlusIcon, {}),
+          };
+          cResult[0] = obj2;
+          let first = obj2;
+        } else {
+          first = cResult[0];
+        }
+        return first;
+      }
+    : () =>
+        noop.useMemo(
+          () => ({
+            value: contrast.contrast,
+            onSlidingComplete: AccessibilityActionCreators.setContrast,
+            minimumValue: 0,
+            maximumValue: 2,
+            step: 0.1,
+            startIcon: jsx(CircleMinusIcon.CircleMinusIcon, {}),
+            endIcon: jsx(CirclePlusIcon.CirclePlusIcon, {}),
+          }),
+          [],
+        ),
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/ContrastModeSetting.tsx");

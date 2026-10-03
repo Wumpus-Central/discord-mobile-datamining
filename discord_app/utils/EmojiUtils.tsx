@@ -54,7 +54,7 @@ function getEmojiUnavailableReason(forceIncludeExternalGuilds) {
           }
           DISALLOW_EXTERNAL = EmojiDisabledReasons.DISALLOW_EXTERNAL;
         } else {
-          if (!closure_1_14(intention)) {
+          if (!state(intention)) {
             let tmp19 = null != emoji && null != guildId;
             if (tmp19) {
               const tmp20 = emoji.type === EmojiTypes.EmojiTypes.GUILD || null != emoji.guildId;
@@ -131,10 +131,10 @@ let closure_19 = async function _getEmojiColors() {
   await EmojiUtilsPlatformedDefault.getEmojiColors(closure_0);
   return value;
 };
-const ChannelRecord = fn(2048);
+const ChannelRecord = fn(2055);
 ({ isGuildTextChannelType: closure_4, isGuildVocalChannelType: hasOwnProperty } = ChannelRecord);
-const Permissions = fn(1074).Permissions;
-const EmojiConstants = fn(1375);
+const Permissions = fn(1085).Permissions;
+const EmojiConstants = fn(1380);
 ({ EMOJI_MAX_FILESIZE: closure_9, EMOJI_MAX_LENGTH: c10, EMOJI_RE: closure_11, EmojiDisabledReasons } = EmojiConstants);
 ({ EmojiIntention: map1, isExternalEmojiAllowedForIntention: closure_14 } = EmojiConstants);
 const items = [,];
@@ -161,7 +161,7 @@ export default {
   sanitizeEmojiName(str) {
     let length;
     const replaced = str.replace(closure_1_11, "");
-    const substr = replaced.slice(0, closure_1_10);
+    const substr = replaced.slice(0, v65535);
     let tmp = substr;
     let tmp2 = substr;
     if (substr.length < 2) {
@@ -273,7 +273,7 @@ export default {
     return size.size > 2097152;
   },
   isDataTooBig(base64) {
-    return ImageUtils.dataUriFileSize(base64) > React7;
+    return ImageUtils.dataUriFileSize(base64) > options;
   },
 };
 export const countEmoji = function countEmoji(arr, arg1) {

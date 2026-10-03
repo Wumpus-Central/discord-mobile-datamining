@@ -79,7 +79,7 @@ let closure_7 = async function _fetchAgeVerificationMethodsV2SuspendedUser() {
   await HTTP.post(request);
   return _require(value.body);
 };
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/AgeVerificationMethodsV2.tsx");
 

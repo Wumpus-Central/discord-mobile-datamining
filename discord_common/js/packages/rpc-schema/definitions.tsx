@@ -975,7 +975,7 @@ export const RPCCommandSchemas = {
       obj.content = string.string().min(0).max(1024);
       return obj;
     },
-    response: "Array",
+    response: "a",
   },
   [helpers.RPCCommand.GET_USER]: {
     request(string) {
@@ -984,8 +984,8 @@ export const RPCCommandSchemas = {
       obj.id = string.string().max(64).required();
       return obj;
     },
-    response(arg0) {
-      return User(arg0).allow(null);
+    response(string) {
+      return User(string).allow(null);
     },
   },
   [helpers.RPCCommand.GET_QUEST_ENROLLMENT_STATUS]: {

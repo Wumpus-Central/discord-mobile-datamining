@@ -8,18 +8,18 @@ import EmojiPickerCategoriesItemDefault from "EmojiPickerCategoriesItem.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const EmojiCategoryTypes = fn(5961).EmojiCategoryTypes;
-const Constants = fn(1074);
+const EmojiCategoryTypes = fn(5642).EmojiCategoryTypes;
+const Constants = fn(1085);
 ({
   AnalyticEvents: hasOwnProperty,
   AnalyticsPages: metroRequire,
   CATEGORY_ICON_SIZE,
   EXPRESSION_FOOTER_HEIGHT,
 } = Constants);
-let ExpressionPickerViewType = fn(1218).ExpressionPickerViewType;
+let ExpressionPickerViewType = fn(1229).ExpressionPickerViewType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj = {
   list: { flex: 1, height: EXPRESSION_FOOTER_HEIGHT },
   listPlaceholder: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED },
@@ -36,7 +36,7 @@ let closure_13 = {
   code: "function EmojiPickerCategoriesTsx1(){const{categoryIndexActive}=this.__closure;return categoryIndexActive.get();}",
 };
 let __initData = {
-  code: "function EmojiPickerCategoriesTsx2(categoryIndex,categoryIndexPrev){const{blockRef,EXPRESSION_FOOTER_HEIGHT,runOnJS,scrollToCategoryIndex}=this.__closure;const ref=blockRef.get();if(categoryIndexPrev==null||categoryIndex===categoryIndexPrev||ref==null){return;}const categoryScrollPos=categoryIndex*EXPRESSION_FOOTER_HEIGHT;if(categoryScrollPos>ref.end||categoryScrollPos<ref.start){runOnJS(scrollToCategoryIndex)(categoryIndex);}}",
+  code: "function EmojiPickerCategoriesTsx2(categoryIndex_0,categoryIndexPrev){const{blockRef,EXPRESSION_FOOTER_HEIGHT,runOnJS,scrollToCategoryIndex}=this.__closure;const ref=blockRef.get();if(categoryIndexPrev==null||categoryIndex_0===categoryIndexPrev||ref==null){return;}const categoryScrollPos=categoryIndex_0*EXPRESSION_FOOTER_HEIGHT;if(categoryScrollPos>ref.end||categoryScrollPos<ref.start){runOnJS(scrollToCategoryIndex)(categoryIndex_0);}}",
 };
 let __initData2 = {
   code: "function EmojiPickerCategoriesTsx3(){const{inPortalKeyboard,bottomSheetIndex}=this.__closure;return inPortalKeyboard?bottomSheetIndex.get()===1:bottomSheetIndex.get()===0;}",
@@ -140,7 +140,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
     runOnJS: bottomSheetRef(categories[7]).runOnJS,
     scrollToCategoryIndex,
   };
-  fn2.__workletHash = 7148256102464;
+  fn2.__workletHash = 14214555212704;
   fn2.__initData = __initData;
   const animatedReaction = obj2.useAnimatedReaction(fn, fn2);
   let items1 = [sharedValue];
@@ -254,7 +254,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
   const items4 = [callback2];
   callback3 = categoryIndexActive.useCallback((arg0, type) => {
     if (type.type === EmojiCategoryTypes.GUILD) {
-      const guild = type.guild;
+      guild = type.guild;
       if (null != guild) {
         const obj2 = { location: null, tab: null, guild_id: null };
         const obj3 = { page: constants2.EXPRESSION_PICKER };
@@ -297,7 +297,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
   }, items6);
   const callback6 = categoryIndexActive.useCallback(
     (arg0, index) =>
-      React7(EmojiPickerCategoriesItemDefault, {
+      options(EmojiPickerCategoriesItemDefault, {
         category: categories[index],
         categoryIndexActive,
         index,

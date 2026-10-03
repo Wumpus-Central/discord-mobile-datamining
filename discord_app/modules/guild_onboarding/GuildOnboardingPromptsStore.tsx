@@ -79,8 +79,8 @@ function handleUpdate(arg0) {
   obj.prompts = mapped;
   dependencyMap[guildId] = obj;
 }
-const GuildOnboardingStatus = fn(6703).GuildOnboardingStatus;
-const GuildOnboardingMode = fn(6708).GuildOnboardingMode;
+const GuildOnboardingStatus = fn(6591).GuildOnboardingStatus;
+const GuildOnboardingMode = fn(6596).GuildOnboardingMode;
 const dependencyMap = {};
 const dependencyMap2 = {};
 const dependencyMap3 = {};
@@ -150,7 +150,7 @@ prototype["getOnboardingResponsesForPrompt"] = function getOnboardingResponsesFo
       let intersectionResult = closure_13;
     } else {
       const self = this;
-      const options = found.options;
+      options = found.options;
       const mapped = options.map((id) => id.id);
       intersectionResult = _modDef12.intersection(mapped, this.getOnboardingResponses(guildId));
     }
@@ -181,9 +181,9 @@ prototype["getEnabledOnboardingPrompts"] = function getEnabledOnboardingPrompts(
   }
   return tmp2;
 };
-prototype["getDefaultChannelIds"] = function getDefaultChannelIds(id) {
+prototype["getDefaultChannelIds"] = function getDefaultChannelIds(guildId) {
   let defaultChannelIds;
-  if (dependencyMap[id] != null) {
+  if (dependencyMap[guildId] != null) {
     defaultChannelIds = tmp.defaultChannelIds;
   }
   if (defaultChannelIds == null) {
@@ -205,8 +205,8 @@ prototype["getEnabled"] = function getEnabled(id) {
   }
   return flag;
 };
-prototype["getOnboardingPrompt"] = function getOnboardingPrompt(targetId13) {
-  closure_0 = targetId13;
+prototype["getOnboardingPrompt"] = function getOnboardingPrompt(promptId) {
+  closure_0 = promptId;
   const values = Object.values(closure_8);
   const mapped = values.map((prompts) => prompts.prompts);
   return mapped.flat().find((id) => id.id === closure_0);

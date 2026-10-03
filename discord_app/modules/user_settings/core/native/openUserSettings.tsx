@@ -8,7 +8,15 @@ import size from "../../../../../_runtime/metro/00002__.js";
 const UserSettingsSections = Constants.UserSettingsSections;
 const result = size.fileFinishedImporting("modules/user_settings/core/native/openUserSettings.tsx");
 
-export const openUserSettings = (screen, fn) => {
+export const openUserSettings = (screen, fn, arg2) => {
+  let obj = arg2;
+  if (arg2 === undefined) {
+    obj = {};
+  }
+  let flag = obj.pop;
+  if (flag === undefined) {
+    flag = true;
+  }
   const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
   if (tmp2) {
     screen = undefined;
@@ -18,9 +26,10 @@ export const openUserSettings = (screen, fn) => {
     if (screen == null) {
       screen = UserSettingsSections.OVERVIEW;
     }
-    const obj2 = { type: "USER_SETTINGS_MODAL_INIT", section: screen };
-    DispatcherDefault.dispatch(obj2);
-    rootNavigationRef.navigate("settings", screen, { pop: true });
+    const obj3 = { type: "USER_SETTINGS_MODAL_INIT", section: screen };
+    DispatcherDefault.dispatch(obj3);
+    const obj5 = { pop: flag };
+    rootNavigationRef.navigate("settings", screen, obj5);
     if (fn != null) {
       fn();
     }

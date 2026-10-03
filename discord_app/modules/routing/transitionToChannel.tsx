@@ -7,7 +7,7 @@ import ChannelRTCActionCreatorsDefault from "../../actions/ChannelRTCActionCreat
 import ChannelStore from "../../stores/ChannelStore.tsx";
 
 require = fn;
-const Routes = fn(1074).Routes;
+const Routes = fn(1085).Routes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/routing/transitionToChannel.tsx");
 

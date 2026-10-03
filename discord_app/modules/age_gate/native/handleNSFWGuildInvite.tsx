@@ -9,8 +9,8 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const GuildNSFWContentLevel = fn(1074).GuildNSFWContentLevel;
-let closure_4 = fn(9424).TINY_BRONCO_NSFW_SERVER_LOCATION;
+const GuildNSFWContentLevel = fn(1085).GuildNSFWContentLevel;
+let closure_4 = fn(9421).TINY_BRONCO_NSFW_SERVER_LOCATION;
 const items = [,];
 ({ EXPLICIT: arr[0], AGE_RESTRICTED: arr[1] } = GuildNSFWContentLevel);
 const set = new Set(items);
@@ -34,7 +34,7 @@ export const handleNSFWGuildInvite = function handleNSFWGuildInvite(invite, arg1
   ({ onConfirm: require, onCancel } = arg1);
   c2 = undefined;
   if (invite != null) {
-    const guild = invite.guild;
+    guild = invite.guild;
     if (guild != null) {
       const id = guild.id;
     }

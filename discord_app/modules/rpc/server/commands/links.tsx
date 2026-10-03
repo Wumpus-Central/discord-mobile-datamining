@@ -1,10 +1,10 @@
 // discord_app/modules/rpc/server/commands/links.tsx
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
+import EmbeddedSurfaceUtils from "../../../applications/utils/EmbeddedSurfaceUtils.tsx";
 import embeddedActivityLocationUtils from "../../../activities/utils/embeddedActivityLocationUtils.tsx";
 import CrossPlatformNativeUtilsDefault from "../../../../utils/CrossPlatformNativeUtils.native.tsx";
 import openUserSettings from "../../../user_settings/core/native/openUserSettings.tsx";
-import ApplicationFlagUtils from "../../../applications/utils/ApplicationFlagUtils.tsx";
 import RPCErrorDefault from "../../RPCError.tsx";
 import createRpcJoiSchemaObjectDefault from "../../helpers/createRpcJoiSchemaObject.tsx";
 import RPCHelpers from "../../RPCHelpers.tsx";
@@ -18,7 +18,7 @@ import EmbeddedActivitiesStore from "../../../activities/EmbeddedActivitiesStore
 import ApplicationStore from "../../../applications/ApplicationStore.tsx";
 
 require = fn;
-let closure_13 = async function _openExternalLink(arg0) {
+let closure_12 = async function _openExternalLink(arg0) {
   closure_0 = arg0;
   c6 = 0;
   c7 = 0;
@@ -34,7 +34,7 @@ let closure_13 = async function _openExternalLink(arg0) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -118,7 +118,7 @@ let closure_13 = async function _openExternalLink(arg0) {
           }
         } else if (1 === tmp8) {
           c5 = 0;
-          const obj8 = { errorCode: closure_131_8.INVALID_COMMAND };
+          const obj8 = { errorCode: closure_131_7.INVALID_COMMAND };
           const _HermesInternal = HermesInternal;
           const tmp312 = new closure_131_1(closure_131_2[17])(obj8, "Invalid URL: " + closure_130_1);
           throw tmp312;
@@ -139,13 +139,13 @@ let closure_13 = async function _openExternalLink(arg0) {
               id3 = application.id;
             }
             const obj11 = { application_id: id3, url: closure_130_2, opened: true };
-            closure_131_1(closure_131_2[10]).track(closure_131_10.RPC_OPEN_EXTERNAL_LINK_CALLED, obj11);
+            closure_131_1(closure_131_2[10]).track(closure_131_9.RPC_OPEN_EXTERNAL_LINK_CALLED, obj11);
             const resolved = Promise.resolve({ opened: true });
             let obj = closure_131_1(closure_131_2[10]);
           } else {
             new Promise((arg0) => {
               closure_0 = arg0;
-              let obj = closure_1_0(8002);
+              let obj = closure_1_0(8047);
               const obj2 = {
                 href: dependencyMap,
                 shouldConfirm: true,
@@ -153,19 +153,19 @@ let closure_13 = async function _openExternalLink(arg0) {
                   return false;
                 },
                 onConfirm() {
-                  closure_1(4548)(dependencyMap);
+                  closure_1(4559)(dependencyMap);
                   application = closure_2_0.application;
                   let id;
                   if (application != null) {
                     id = application.id;
                   }
-                  closure_1(1241).track(constants.RPC_OPEN_EXTERNAL_LINK_CALLED, {
+                  closure_1(1252).track(constants.RPC_OPEN_EXTERNAL_LINK_CALLED, {
                     application_id: id,
                     url: dependencyMap,
                     opened: true,
                   });
                   closure_0({ opened: true });
-                  const obj = closure_1(1241);
+                  const obj = closure_1(1252);
                 },
                 onCancel() {
                   application = closure_2_0.application;
@@ -173,7 +173,7 @@ let closure_13 = async function _openExternalLink(arg0) {
                   if (application != null) {
                     id = application.id;
                   }
-                  closure_1(1241).track(constants.RPC_OPEN_EXTERNAL_LINK_CALLED, {
+                  closure_1(1252).track(constants.RPC_OPEN_EXTERNAL_LINK_CALLED, {
                     application_id: id,
                     url: dependencyMap,
                     opened: false,
@@ -185,7 +185,7 @@ let closure_13 = async function _openExternalLink(arg0) {
                 obj2,
                 undefined,
                 undefined,
-                closure_1_0(14255).getActivitiesModalContextKey({ application, channelId }),
+                closure_1_0(14323).getActivitiesModalContextKey({ application, channelId }),
               );
             });
           }
@@ -204,18 +204,17 @@ let closure_13 = async function _openExternalLink(arg0) {
     }
   })();
 };
-let Constants = fn(5270);
+let Constants = fn(5316);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG, RPC_EMBEDDED_APP_SCOPE } = Constants);
-Constants = fn(1074);
+Constants = fn(1085);
 ({
-  ApplicationFlags: metroRequire,
-  PopoutWindowKeys: closure_7,
+  PopoutWindowKeys: metroRequire,
   RPCCommands,
-  RPCErrors: closure_8,
-  UserSettingsSections: closure_9,
-  AnalyticEvents: c10,
+  RPCErrors: closure_7,
+  UserSettingsSections: closure_8,
+  AnalyticEvents: closure_9,
 } = Constants);
-Constants = fn(2005);
+Constants = fn(2011);
 const items = [,];
 ({ AM_HARMONY_PRD_APPLICATION_ID: arr[0], AM_HARMONY_STG_APPLICATION_ID: arr[1] } = Constants);
 const set = new Set(items);
@@ -244,7 +243,7 @@ obj2 = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -278,7 +277,7 @@ obj2 = {
                   const obj4 = {
                     value: (function openExternalLink() {
                       const self = this;
-                      const apply = closure_1_13.apply;
+                      const apply = closure_1_12.apply;
                       if (typeof apply === "unknown") {
                         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
                       } else {
@@ -345,10 +344,10 @@ obj3 = {
     socket = socket.socket;
     const result = RPCHelpers.validatePostMessageTransport(socket.transport);
     if (set.has(obj2.validateApplication(socket.application))) {
-      const obj3 = { screen: constants3.CONNECTIONS };
+      const obj3 = { screen: constants2.CONNECTIONS };
       openUserSettings.openUserSettings(obj3);
     } else {
-      const obj4 = { errorCode: constants2.UNAUTHORIZED_FOR_APPLICATION };
+      const obj4 = { errorCode: constants.UNAUTHORIZED_FOR_APPLICATION };
       const tmp9 = new RPCErrorDefault(obj4, "Command not available for this application");
       throw tmp9;
     }
@@ -357,7 +356,7 @@ obj3 = {
 };
 const items2 = [RPC_AUTHENTICATED_SCOPE];
 obj3.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
-const CONTEXT_MENU_ICON_NAMES = fn(14247);
+const CONTEXT_MENU_ICON_NAMES = fn(14315);
 let obj5 = {
   scope: null,
   handler(arg0) {
@@ -367,11 +366,11 @@ let obj5 = {
     const validateApplicationResult = RPCHelpers.validateApplication(socket.application);
     c3 = validateApplicationResult;
     if (null == validateApplicationResult) {
-      const obj3 = { errorCode: constants2.INVALID_COMMAND };
+      const obj3 = { errorCode: constants.INVALID_COMMAND };
       const tmp22 = new RPCErrorDefault(obj3, "No application.");
       throw tmp22;
     } else {
-      if (tmpResult.hasApplicationFlag(socket.application, constants.EMBEDDED)) {
+      if (tmpResult.isEmbeddedApplication(socket.application)) {
         const promise = new Promise((arg0) => {
           closure_0 = arg0;
           const result = openActivityShareLinkModal.openActivityShareLinkModal({
@@ -391,11 +390,11 @@ let obj5 = {
         });
         return promise;
       } else {
-        const obj4 = { errorCode: constants2.INVALID_COMMAND };
+        const obj4 = { errorCode: constants.INVALID_COMMAND };
         const tmp10 = new RPCErrorDefault(obj4, "This application cannot access this API");
         throw tmp10;
       }
-      tmpResult = ApplicationFlagUtils;
+      tmpResult = EmbeddedSurfaceUtils;
     }
   },
 };

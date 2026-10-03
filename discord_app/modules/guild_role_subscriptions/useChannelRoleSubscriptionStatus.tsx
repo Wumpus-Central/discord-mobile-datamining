@@ -43,19 +43,48 @@ function getChannelRoleSubscriptionStatus(id) {
   }
   return obj3;
 }
-const Permissions = fn(1074).Permissions;
+const Permissions = fn(1085).Permissions;
 let closure_6 = { needSubscriptionToAccess: false, isSubscriptionGated: false };
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx");
 
-export default function useChannelRoleSubscriptionStatus(arg0) {
-  _require = arg0;
-  const items = [ChannelStore, GatedChannelStore, PermissionStore];
-  const items1 = [arg0];
-  return require("initialize").useStateFromStoresObject(
-    items,
-    () => getChannelRoleSubscriptionStatus(closure_0, ChannelStore, GatedChannelStore, PermissionStore),
-    items1,
-  );
-}
+export default ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      _require = arg0;
+      const cResult = require("c").c(4);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const items = [ChannelStore, GatedChannelStore, PermissionStore];
+        cResult[0] = items;
+        let first = items;
+      } else {
+        first = cResult[0];
+      }
+      if (cResult[1] !== arg0) {
+        const fn = function c() {
+          return getChannelRoleSubscriptionStatus(closure_0, ChannelStore, GatedChannelStore, PermissionStore);
+        };
+        const items1 = [arg0];
+        cResult[1] = arg0;
+        cResult[2] = fn;
+        cResult[3] = items1;
+        let tmp9 = items1;
+        let tmp8 = fn;
+      } else {
+        tmp8 = cResult[2];
+        tmp9 = cResult[3];
+      }
+      const obj = require("c");
+      return require("initialize").useStateFromStoresObject(first, tmp8, tmp9);
+    }
+  : (arg0) => {
+      _require = arg0;
+      const items = [ChannelStore, GatedChannelStore, PermissionStore];
+      const items1 = [arg0];
+      return require("initialize").useStateFromStoresObject(
+        items,
+        () => getChannelRoleSubscriptionStatus(closure_0, ChannelStore, GatedChannelStore, PermissionStore),
+        items1,
+      );
+    };
 export { getChannelRoleSubscriptionStatus };

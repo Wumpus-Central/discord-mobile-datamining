@@ -7,15 +7,15 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 import GuildScheduledEventStore from "../GuildScheduledEventStore.tsx";
 
 require = fn;
-const GuildScheduledEventsConstants = fn(2050);
+const GuildScheduledEventsConstants = fn(2057);
 ({ GuildScheduledEventUserResponses: closure_4, GuildScheduledEventStatusDone: hasOwnProperty } =
   GuildScheduledEventsConstants);
 const ResponseOptions = { SERIES: 0, [0]: "SERIES", RECURRENCE: 1, [1]: "RECURRENCE" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/utils/GuildEventRsvpUtils.tsx");
 
-export const getExistingRsvp = function getExistingRsvp(id, c1) {
-  return GuildScheduledEventStore.getRsvp(id, c1, AuthenticationStore.getId());
+export const getExistingRsvp = function getExistingRsvp(id, nextRecurrenceIdInEvent) {
+  return GuildScheduledEventStore.getRsvp(id, nextRecurrenceIdInEvent, AuthenticationStore.getId());
 };
 export { ResponseOptions };
 export const getResponseOptions = function getResponseOptions() {

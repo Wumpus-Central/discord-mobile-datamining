@@ -7,11 +7,11 @@ import GuildStore from "../../stores/GuildStore.tsx";
 
 const require = globalThis.__r;
 
-const TrackedHTTPUtilsDefault = tmp4(5038);
+const TrackedHTTPUtilsDefault = tmp4(5083);
 require = fn;
-let Constants = fn(7328);
+let Constants = fn(7226);
 ({ InviteTargetTypes: hasOwnProperty, InviteTypes: metroRequire } = Constants);
-Constants = fn(1074);
+Constants = fn(1085);
 ({ Endpoints: closure_7, AnalyticEvents: closure_8, LoggingInviteTypes: closure_9, AbortCodes: c10 } = Constants);
 const map = new Map();
 const size = fn(2);
@@ -69,7 +69,7 @@ export default function resolveInvite(inviteKey, _location, inviteInstanceId) {
       rejectWithError: false,
     };
     const obj6 = {
-      event: tmp(1249).NetworkActionNames.INVITE_RESOLVE,
+      event: tmp(1260).NetworkActionNames.INVITE_RESOLVE,
       properties(ok) {
         let body1 = null;
         if (ok.ok) {
@@ -99,7 +99,7 @@ export default function resolveInvite(inviteKey, _location, inviteInstanceId) {
         };
         let id;
         if (body1 != null) {
-          const guild = body1.guild;
+          guild = body1.guild;
           if (guild != null) {
             id = guild.id;
           }
@@ -270,7 +270,7 @@ export default function resolveInvite(inviteKey, _location, inviteInstanceId) {
             obj.invite_type = STREAM;
             let id4;
             if (body != null) {
-              const guild = body.guild;
+              guild = body.guild;
               if (guild != null) {
                 id4 = guild.id;
               }

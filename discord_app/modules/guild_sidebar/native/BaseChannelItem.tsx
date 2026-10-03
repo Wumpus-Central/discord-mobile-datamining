@@ -1,59 +1,25 @@
 // discord_app/modules/guild_sidebar/native/BaseChannelItem.tsx
+import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../design/void/native.tsx";
-import utils_PlatformUtils from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
-import Text_Text from "../../../design/components/Text/native/Text.tsx";
+import native2 from "../../../design/components/experimental/native.tsx";
+import StaticChannelIndicatorDefault from "../../channel_list_v2/native/components/StaticChannelIndicator.tsx";
+import TouchableBackgroundDefault from "../../../components_native/common/TouchableBackground.tsx";
+import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
+const utils_PlatformUtils = Text(1370);
+const Text_Text = Text(4886);
 require = fn;
-class BaseChannelSubtitle {
-  constructor(arg0) {
-    ({ mode, subtitle } = global);
-    tmp = closure_11;
-    if (mode !== closure_11.UNREAD_IMPORTANT) {
-      if (mode !== tmp.RELEVANT) {
-        if (mode !== tmp.SELECTED) {
-          MUTED = tmp.MUTED;
-          obj = { variant: null, color: "text-muted" };
-          tmp2 = closure_5;
-          obj.variant = closure_5;
-        }
-        tmp4Result = null;
-        if (null != subtitle) {
-          tmp5 = closure_0;
-          tmp6 = closure_2;
-          tmp4 = jsx;
-          obj3 = closure_0(closure_2[8]);
-          isAndroidResult = obj3.isAndroid();
-          tmp8 = !isAndroidResult;
-          if (!isAndroidResult) {
-            tmp8 = typeof subtitle === "string";
-          }
-          obj1 = { experimental_useNativeText: null, lineClamp: 1 };
-          obj1.experimental_useNativeText = tmp8;
-          tmp9 = obj1;
-          tmp10 = obj;
-          merged = Object.assign(obj);
-          obj1.children = subtitle;
-          tmp4Result = tmp4(closure_0(closure_2[7]).Text, obj1);
-        }
-        return tmp4Result;
-      }
-    }
-    obj5 = { variant: closure_5, color: "redesign-channel-name-text" };
-    obj = obj5;
-    return;
-  }
-}
+let closure_3 = ["icon", "name", "mode", "hideIcon", "disableHighlightOnPress", "channelInfo", "children", "unread"];
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(9770);
-({ CHANNEL_SUBTITLE_TEXT_VARIANT: hasOwnProperty, CHANNEL_TITLE_LINE_HEIGHT: metroRequire } =
-  RedesignChannelListConstants);
-const UnreadSetting = fn(5027).UnreadSetting;
+const RedesignChannelListConstants = fn(11697);
+({ CHANNEL_SUBTITLE_TEXT_VARIANT: closure_7, CHANNEL_TITLE_LINE_HEIGHT: closure_8 } = RedesignChannelListConstants);
+const UnreadSetting = fn(5072).UnreadSetting;
 const jsxProd = fn(21);
-({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4845);
-let closure_10 = createStyles.createStyles((arg0) => {
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(4890);
+let closure_12 = createStyles.createStyles((arg0) => {
   const obj = {
     rowPaddingNoIcon: { paddingHorizontal: 6 },
     rowSelected: null,
@@ -115,136 +81,353 @@ let obj2 = {
   UNREAD_IMPORTANT: "UnreadImportant",
   DEFAULT: "Default",
 };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/guild_sidebar/native/BaseChannelItem.tsx");
-
-export default function BaseChannelItem(mode) {
-  mode = mode.mode;
-  const hideIcon = mode.hideIcon;
-  let flag = mode.disableHighlightOnPress;
-  ({ icon, name } = mode);
-  if (flag === undefined) {
-    flag = false;
-  }
-  ({ unread, channelInfo, children } = mode);
-  if (unread === undefined) {
-    unread = false;
-  }
-  const merged = Object.assign(
-    mode,
-    Object.assign({
-      icon: 0,
-      name: 0,
-      mode: 0,
-      hideIcon: 0,
-      disableHighlightOnPress: 0,
-      channelInfo: 0,
-      children: 0,
-      unread: 0,
-    }),
-  );
-  const tmp2 = closure_10(mode);
-  dependencyMap = tmp2;
-  let items = [hideIcon, mode, tmp2];
-  const obj = {
-    style: noop.useMemo(() => {
-      const items = [channel.channel, ,];
-      let rowPaddingNoIcon = hideIcon;
-      if (hideIcon) {
-        rowPaddingNoIcon = channel.rowPaddingNoIcon;
-      }
-      items[1] = rowPaddingNoIcon;
-      items[2] = mode === obj2.SELECTED && channel.rowSelected;
-      return items;
-    }, items),
-    children: null,
-  };
-  if (hideIcon) {
-    const items1 = [tmp5, , ,];
-    let tmp14 = !hideIcon;
-    if (!hideIcon) {
-      tmp14 = icon;
-    }
-    items1[1] = tmp14;
-    items1[2] = name;
-    items1[3] = channelInfo;
-    obj.children = items1;
-    if (flag) {
-      let AnimatedPressableHighlight = hideIcon(12082);
-    } else {
-      AnimatedPressableHighlight = mode(8561).AnimatedPressableHighlight;
-    }
-    obj2 = {};
-    const merged1 = Object.assign(merged);
-    const items2 = [closure_9(tmp4, obj), children];
-    obj2.children = items2;
-    return closure_9(AnimatedPressableHighlight, obj2);
-  } else {
-    const obj3 = { style: tmp2.unreadIndicator, unread, resolvedUnreadSetting: null };
-    if (mode === obj2.UNREAD_LESS_IMPORTANT) {
-      let ALL_MESSAGES = UnreadSetting.ONLY_MENTIONS;
-    } else {
-      ALL_MESSAGES = UnreadSetting.ALL_MESSAGES;
-    }
-    obj3.resolvedUnreadSetting = ALL_MESSAGES;
-    closure_8(hideIcon(9818), obj3);
-    const tmp9 = hideIcon(9818);
-  }
-}
-export const ChannelModes = obj2;
-export { BaseChannelSubtitle };
-export const BaseChannelIcon = function BaseChannelIcon(arg0) {
-  ({ disableColor, mode, IconComponent, style } = arg0);
-  ({ source, isChannelLive } = arg0);
-  const tmp = closure_10(mode);
-  const items = [tmp.channelIcon];
-  if (true === disableColor) {
-    if (null != style) {
-      items.push(style);
-    }
-    if (null != IconComponent) {
-      obj2 = { size: "sm", style: tmp.redesignedChannelIcon, color: null };
-      let str = "status-positive";
-      if (!isChannelLive) {
-        let str2 = "icon-muted";
-        if (!tmp2) {
-          if (tmp3) {
-            let str3 = "interactive-text-active";
-          } else {
-            str3 = "channel-icon";
+let ReactCompilerGating = fn(558);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      let Text = require;
+      let tmp = dependencyMap;
+      const cResult = c.c(8);
+      ({ mode, subtitle } = arg0);
+      if (cResult[0] !== mode) {
+        if (mode !== obj2.UNREAD_IMPORTANT) {
+          if (mode !== tmp4.RELEVANT) {
+            if (mode !== tmp4.SELECTED) {
+              const MUTED = tmp4.MUTED;
+              obj2 = { variant, color: "text-muted" };
+            }
+            cResult[0] = mode;
+            cResult[1] = obj2;
           }
-          str2 = str3;
         }
-        str = str2;
+        const obj3 = { variant, color: "redesign-channel-name-text" };
+        obj2 = obj3;
+      } else if (null == subtitle) {
+        return null;
+      } else {
+        if (cResult[2] !== subtitle) {
+          const isAndroidResult = utils_PlatformUtils.isAndroid();
+          let tmp11 = !isAndroidResult;
+          if (!isAndroidResult) {
+            tmp11 = typeof subtitle === "string";
+          }
+          cResult[2] = subtitle;
+          cResult[3] = tmp11;
+          let tmp9 = tmp11;
+          const TextResult = utils_PlatformUtils;
+        } else {
+          tmp9 = cResult[3];
+        }
+        if (cResult[4] === tmp3) {
+          if (cResult[5] === subtitle) {
+          }
+        }
+        Text = Text_Text.Text;
+        const obj4 = { experimental_useNativeText: tmp9, lineClamp: 1 };
+        const merged = Object.assign(tmp3);
+        obj4.children = subtitle;
+        tmp = v65535(Text, obj4);
+        cResult[4] = tmp3;
+        cResult[5] = subtitle;
+        cResult[6] = tmp9;
+        cResult[7] = tmp;
       }
-      obj2.color = str;
-      let tmp12Result = React6(IconComponent, obj2);
-    } else {
-      const obj = { disableColor, size: native.Icon.Sizes.CUSTOM, style: items, source };
-      tmp12Result = React6(native.Icon, obj);
     }
-    return tmp12Result;
-  } else {
-    if (tmp2) {
-      let channelIconUnread = tmp.channelIconMuted;
-    } else {
-      if (!tmp3) {
-        if (!tmp4) {
-          channelIconUnread = tmp.channelIconNormal;
+  : (arg0) => {
+      ({ mode, subtitle } = arg0);
+      if (mode !== obj2.UNREAD_IMPORTANT) {
+        if (mode !== tmp.RELEVANT) {
+          if (mode !== tmp.SELECTED) {
+            const MUTED = tmp.MUTED;
+            let obj = { variant, color: "text-muted" };
+          }
+          let tmp4Result = null;
+          if (null != subtitle) {
+            const isAndroidResult = utils_PlatformUtils.isAndroid();
+            let tmp8 = !isAndroidResult;
+            if (!isAndroidResult) {
+              tmp8 = typeof subtitle === "string";
+            }
+            obj2 = { experimental_useNativeText: tmp8, lineClamp: 1 };
+            const merged = Object.assign(obj);
+            obj2.children = subtitle;
+            tmp4Result = v65535(Text_Text.Text, obj2);
+          }
+          return tmp4Result;
         }
       }
-      channelIconUnread = tmp.channelIconUnread;
+      obj = { variant, color: "redesign-channel-name-text" };
+      const obj4 = { variant, color: "redesign-channel-name-text" };
+    };
+let closure_14 = tmp4;
+fn(558);
+ReactCompilerGating = fn(558);
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      const cResult = c.c(20);
+      ({ disableColor, mode, source, IconComponent, style, isChannelLive } = arg0);
+      let redesignedChannelIcon = closure_12(mode);
+      if (cResult[0] === disableColor) {
+        if (cResult[1] === tmp4) {
+          if (cResult[2] === tmp6) {
+            if (cResult[3] === style) {
+              if (cResult[4] === redesignedChannelIcon.channelIcon) {
+                if (cResult[5] === redesignedChannelIcon.channelIconMuted) {
+                  if (cResult[6] === redesignedChannelIcon.channelIconNormal) {
+                    if (cResult[7] === redesignedChannelIcon.channelIconUnread) {
+                      if (cResult[8] === tmp5) {
+                        let tmp7 = cResult[9];
+                      }
+                      if (cResult[10] === IconComponent) {
+                        if (cResult[11] === disableColor) {
+                          if (cResult[12] === tmp7) {
+                            if (cResult[13] === isChannelLive) {
+                              if (cResult[14] === tmp4) {
+                                if (cResult[15] === tmp6) {
+                                  if (cResult[16] === source) {
+                                    if (cResult[17] === redesignedChannelIcon.redesignedChannelIcon) {
+                                      if (cResult[18] === tmp5) {
+                                        return cResult[19];
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                      if (null != IconComponent) {
+                        obj2 = { size: "sm", style: redesignedChannelIcon.redesignedChannelIcon, color: null };
+                        let str = "status-positive";
+                        if (!isChannelLive) {
+                          let str2 = "icon-muted";
+                          if (!tmp4) {
+                            if (tmp5) {
+                              let str3 = "interactive-text-active";
+                            } else {
+                              str3 = "channel-icon";
+                            }
+                            str2 = str3;
+                          }
+                          str = str2;
+                        }
+                        obj2.color = str;
+                        let tmp14Result = v65535(IconComponent, obj2);
+                      } else {
+                        const obj3 = { disableColor, size: native.Icon.Sizes.CUSTOM, style: tmp7, source };
+                        tmp14Result = v65535(native.Icon, obj3);
+                      }
+                      cResult[10] = IconComponent;
+                      cResult[11] = disableColor;
+                      cResult[12] = tmp7;
+                      cResult[13] = isChannelLive;
+                      cResult[14] = tmp4;
+                      cResult[15] = tmp6;
+                      cResult[16] = source;
+                      redesignedChannelIcon = redesignedChannelIcon.redesignedChannelIcon;
+                      cResult[17] = redesignedChannelIcon;
+                      cResult[18] = tmp5;
+                      cResult[19] = tmp14Result;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      const items = [redesignedChannelIcon.channelIcon];
+      if (true === disableColor) {
+        if (null != style) {
+          items.push(style);
+        }
+        cResult[0] = disableColor;
+        cResult[1] = tmp4;
+        cResult[2] = tmp6;
+        cResult[3] = style;
+        cResult[4] = redesignedChannelIcon.channelIcon;
+        cResult[5] = redesignedChannelIcon.channelIconMuted;
+        cResult[6] = redesignedChannelIcon.channelIconNormal;
+        cResult[7] = redesignedChannelIcon.channelIconUnread;
+        cResult[8] = tmp5;
+        cResult[9] = items;
+        tmp7 = items;
+      } else {
+        if (tmp4) {
+          let channelIconUnread = redesignedChannelIcon.channelIconMuted;
+        } else {
+          if (!tmp5) {
+            if (!tmp6) {
+              channelIconUnread = redesignedChannelIcon.channelIconNormal;
+            }
+          }
+          channelIconUnread = redesignedChannelIcon.channelIconUnread;
+        }
+        items.push(channelIconUnread);
+      }
     }
-    items.push(channelIconUnread);
-  }
-  tmp4 = mode === obj2.SELECTED;
-};
-export const useChannelNameTextProps = function useChannelNameTextProps(channelMode) {
+  : (arg0) => {
+      ({ disableColor, mode, IconComponent, style } = arg0);
+      ({ source, isChannelLive } = arg0);
+      const tmp = closure_12(mode);
+      const items = [tmp.channelIcon];
+      if (true === disableColor) {
+        if (null != style) {
+          items.push(style);
+        }
+        if (null != IconComponent) {
+          obj2 = { size: "sm", style: tmp.redesignedChannelIcon, color: null };
+          let str = "status-positive";
+          if (!isChannelLive) {
+            let str2 = "icon-muted";
+            if (!tmp2) {
+              if (tmp3) {
+                let str3 = "interactive-text-active";
+              } else {
+                str3 = "channel-icon";
+              }
+              str2 = str3;
+            }
+            str = str2;
+          }
+          obj2.color = str;
+          let tmp12Result = v65535(IconComponent, obj2);
+        } else {
+          const obj = { disableColor, size: native.Icon.Sizes.CUSTOM, style: items, source };
+          tmp12Result = v65535(native.Icon, obj);
+        }
+        return tmp12Result;
+      } else {
+        if (tmp2) {
+          let channelIconUnread = tmp.channelIconMuted;
+        } else {
+          if (!tmp3) {
+            if (!tmp4) {
+              channelIconUnread = tmp.channelIconNormal;
+            }
+          }
+          channelIconUnread = tmp.channelIconUnread;
+        }
+        items.push(channelIconUnread);
+      }
+      tmp4 = mode === obj2.SELECTED;
+    };
+ReactCompilerGating = fn(558);
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      const cResult = c.c(14);
+      ({ mode, name, subtitle, textStyle } = arg0);
+      const tmp4 = closure_12(mode);
+      if (mode !== obj2.UNREAD_IMPORTANT) {
+        if (mode !== tmp6.RELEVANT) {
+          if (mode === tmp6.UNREAD_LESS_IMPORTANT) {
+            obj2 = { variant: "text-md/medium", color: "redesign-channel-name-muted-text" };
+          } else if (mode === tmp6.MUTED) {
+            obj2 = { variant: "text-md/medium", color: "text-muted" };
+          } else {
+            obj2 =
+              mode === tmp6.SELECTED
+                ? { variant: "text-md/medium", color: "redesign-channel-name-text" }
+                : { variant: "text-md/medium", color: "redesign-channel-name-muted-text" };
+          }
+        }
+        if (cResult[0] === tmp4.channelName) {
+          if (cResult[1] === textStyle) {
+            let tmp7 = cResult[2];
+          }
+          if (cResult[3] === name) {
+            if (cResult[4] === obj2) {
+              if (cResult[5] === tmp7) {
+                let tmp8 = cResult[6];
+              }
+              if (cResult[7] === mode) {
+                if (cResult[8] === subtitle) {
+                  let tmp14 = cResult[9];
+                }
+                if (cResult[10] === tmp4.channelNameContainer) {
+                  if (cResult[11] === tmp8) {
+                    if (cResult[12] === tmp14) {
+                      let tmp18 = cResult[13];
+                    }
+                    return tmp18;
+                  }
+                }
+                const obj3 = { style: tmp5, children: null };
+                const items = [tmp8, tmp14];
+                obj3.children = items;
+                const tmp21 = closure_1_11(View, obj3);
+                cResult[10] = tmp4.channelNameContainer;
+                cResult[11] = tmp8;
+                cResult[12] = tmp14;
+                cResult[13] = tmp21;
+                tmp18 = tmp21;
+              }
+              const obj4 = { mode, subtitle };
+              const tmp17 = v65535(closure_14, obj4);
+              cResult[7] = mode;
+              cResult[8] = subtitle;
+              cResult[9] = tmp17;
+              tmp14 = tmp17;
+            }
+          }
+          const obj5 = { experimental_useNativeText: true };
+          const merged = Object.assign(obj2);
+          obj5.lineClamp = 1;
+          obj5.style = tmp7;
+          obj5.children = name;
+          const tmp13 = v65535(Text_Text.Text, obj5);
+          cResult[3] = name;
+          cResult[4] = obj2;
+          cResult[5] = tmp7;
+          cResult[6] = tmp13;
+          tmp8 = tmp13;
+        }
+        const items1 = [tmp4.channelName, textStyle];
+        cResult[0] = tmp4.channelName;
+        cResult[1] = textStyle;
+        cResult[2] = items1;
+        tmp7 = items1;
+      }
+      obj2 = { variant: "text-md/semibold", color: "redesign-channel-name-text" };
+    }
+  : (mode) => {
+      mode = mode.mode;
+      ({ name, subtitle, textStyle } = mode);
+      const tmp = closure_12(mode);
+      const obj = { style: tmp.channelNameContainer, children: null };
+      if (mode !== obj2.UNREAD_IMPORTANT) {
+        if (mode !== tmp6.RELEVANT) {
+          if (mode === tmp6.UNREAD_LESS_IMPORTANT) {
+            obj2 = { variant: "text-md/medium", color: "redesign-channel-name-muted-text" };
+          } else if (mode === tmp6.MUTED) {
+            obj2 = { variant: "text-md/medium", color: "text-muted" };
+          } else {
+            obj2 =
+              mode === tmp6.SELECTED
+                ? { variant: "text-md/medium", color: "redesign-channel-name-text" }
+                : { variant: "text-md/medium", color: "redesign-channel-name-muted-text" };
+          }
+        }
+        const obj3 = { experimental_useNativeText: true };
+        const merged = Object.assign(obj2);
+        obj3.lineClamp = 1;
+        const items = [tmp.channelName, textStyle];
+        obj3.style = items;
+        obj3.children = name;
+        const items1 = [v65535(tmp5, obj3)];
+        const obj4 = { mode, subtitle };
+        items1[1] = v65535(closure_14, obj4);
+        obj.children = items1;
+        return closure_1_11(View, obj);
+      }
+      obj2 = { variant: "text-md/semibold", color: "redesign-channel-name-text" };
+    };
+function useChannelNameTextProps(channelMode) {
   if (channelMode !== obj2.UNREAD_IMPORTANT) {
     return { variant: "text-md/semibold", color: "redesign-channel-name-text" };
   }
-};
-export const getChannelSubtitleTextProps = function getChannelSubtitleTextProps(channelMode) {
+}
+function getChannelSubtitleTextProps(channelMode) {
   if (channelMode !== obj2.UNREAD_IMPORTANT) {
     if (channelMode !== tmp.RELEVANT) {
       if (channelMode !== tmp.SELECTED) {
@@ -256,36 +439,219 @@ export const getChannelSubtitleTextProps = function getChannelSubtitleTextProps(
   }
   obj2 = { variant, color: "redesign-channel-name-text" };
   obj = obj2;
-};
-export const BaseChannelName = function BaseChannelName(mode) {
-  mode = mode.mode;
-  ({ name, subtitle, textStyle } = mode);
-  const tmp = closure_10(mode);
-  const obj = { style: tmp.channelNameContainer, children: null };
-  if (mode !== obj2.UNREAD_IMPORTANT) {
-    if (mode !== tmp6.RELEVANT) {
-      if (mode === tmp6.UNREAD_LESS_IMPORTANT) {
-        obj2 = { variant: "text-md/medium", color: "redesign-channel-name-muted-text" };
-      } else if (mode === tmp6.MUTED) {
-        obj2 = { variant: "text-md/medium", color: "text-muted" };
+}
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_sidebar/native/BaseChannelItem.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      let tmp34Result = dependencyMap;
+      const cResult = c.c(30);
+      if (cResult[0] !== arg0) {
+        ({ icon, name, mode, hideIcon, disableHighlightOnPress, channelInfo, children, unread } = arg0);
+        const tmp15 = _objectWithoutProperties(arg0, closure_3);
+        cResult[0] = arg0;
+        cResult[1] = channelInfo;
+        cResult[2] = children;
+        cResult[3] = hideIcon;
+        cResult[4] = icon;
+        cResult[5] = mode;
+        cResult[6] = name;
+        cResult[7] = tmp15;
+        cResult[8] = disableHighlightOnPress;
+        cResult[9] = unread;
+        let tmp10 = tmp15;
+        let tmp9 = name;
+        let tmp8 = mode;
+        let tmp7 = icon;
+        let tmp6 = hideIcon;
+        let tmp5 = children;
+        let tmp4 = channelInfo;
       } else {
-        obj2 =
-          mode === tmp6.SELECTED
-            ? { variant: "text-md/medium", color: "redesign-channel-name-text" }
-            : { variant: "text-md/medium", color: "redesign-channel-name-muted-text" };
+        tmp4 = cResult[1];
+        tmp5 = cResult[2];
+        tmp6 = cResult[3];
+        tmp7 = cResult[4];
+        tmp8 = cResult[5];
+        tmp9 = cResult[6];
+        tmp10 = cResult[7];
       }
+      const tmp18 = closure_12(tmp8);
+      let rowPaddingNoIcon = tmp6;
+      if (tmp6) {
+        rowPaddingNoIcon = tmp18.rowPaddingNoIcon;
+      }
+      let rowSelected = tmp8 === obj2.SELECTED;
+      if (rowSelected) {
+        rowSelected = tmp18.rowSelected;
+      }
+      if (cResult[10] === tmp18.channel) {
+        if (cResult[11] === rowPaddingNoIcon) {
+          if (cResult[12] === rowSelected) {
+            let tmp20 = cResult[13];
+          }
+          if (cResult[14] === tmp6) {
+            if (cResult[15] === tmp8) {
+              if (cResult[16] === tmp18.unreadIndicator) {
+                if (cResult[17] === tmp17) {
+                  let tmp21 = cResult[18];
+                }
+                let tmp29 = !tmp6;
+                if (!tmp6) {
+                  tmp29 = tmp7;
+                }
+                if (cResult[19] === tmp4) {
+                  if (cResult[20] === tmp9) {
+                    if (cResult[21] === tmp20) {
+                      if (cResult[22] === tmp21) {
+                        if (cResult[23] === tmp29) {
+                          let tmp30 = cResult[24];
+                        }
+                        if (cResult[25] === tmp30) {
+                          if (cResult[26] === tmp5) {
+                            if (cResult[27] === tmp16) {
+                              if (cResult[28] === tmp10) {
+                                return cResult[29];
+                              }
+                            }
+                          }
+                        }
+                        if (tmp16) {
+                          let AnimatedPressableHighlight = TouchableBackgroundDefault;
+                        } else {
+                          AnimatedPressableHighlight = native2.AnimatedPressableHighlight;
+                        }
+                        obj2 = {};
+                        const merged = Object.assign(tmp10);
+                        const items = [tmp30, tmp5];
+                        obj2.children = items;
+                        tmp34Result = closure_1_11(AnimatedPressableHighlight, obj2);
+                        cResult[25] = tmp30;
+                        cResult[26] = tmp5;
+                        cResult[27] = tmp16;
+                        cResult[28] = tmp10;
+                        cResult[29] = tmp34Result;
+                      }
+                    }
+                  }
+                }
+                const obj3 = { style: tmp20, children: null };
+                const items1 = [tmp21, tmp29, tmp9, tmp4];
+                obj3.children = items1;
+                const tmp33 = closure_1_11(View, obj3);
+                cResult[19] = tmp4;
+                cResult[20] = tmp9;
+                cResult[21] = tmp20;
+                cResult[22] = tmp21;
+                cResult[23] = tmp29;
+                cResult[24] = tmp33;
+                tmp30 = tmp33;
+              }
+            }
+          }
+          if (tmp6) {
+            cResult[14] = tmp6;
+            cResult[15] = tmp8;
+            cResult[16] = tmp18.unreadIndicator;
+            cResult[17] = tmp17;
+            cResult[18] = tmp22;
+            tmp21 = tmp22;
+          } else {
+            const obj4 = { style: tmp18.unreadIndicator, unread: tmp17, resolvedUnreadSetting: null };
+            if (tmp8 === tmp19.UNREAD_LESS_IMPORTANT) {
+              let ALL_MESSAGES = UnreadSetting.ONLY_MENTIONS;
+            } else {
+              ALL_MESSAGES = UnreadSetting.ALL_MESSAGES;
+            }
+            obj4.resolvedUnreadSetting = ALL_MESSAGES;
+            v65535(StaticChannelIndicatorDefault, obj4);
+          }
+        }
+      }
+      const items2 = [tmp18.channel, rowPaddingNoIcon, rowSelected];
+      cResult[10] = tmp18.channel;
+      cResult[11] = rowPaddingNoIcon;
+      cResult[12] = rowSelected;
+      cResult[13] = items2;
+      tmp20 = items2;
+      tmp19 = obj2;
     }
-    const obj3 = { experimental_useNativeText: true };
-    const merged = Object.assign(obj2);
-    obj3.lineClamp = 1;
-    const items = [tmp.channelName, textStyle];
-    obj3.style = items;
-    obj3.children = name;
-    const items1 = [React6(tmp5, obj3)];
-    const obj4 = { mode, subtitle };
-    items1[1] = React6(BaseChannelSubtitle, obj4);
-    obj.children = items1;
-    return React7(View, obj);
-  }
-  obj2 = { variant: "text-md/semibold", color: "redesign-channel-name-text" };
-};
+  : (mode) => {
+      mode = mode.mode;
+      const hideIcon = mode.hideIcon;
+      let flag = mode.disableHighlightOnPress;
+      ({ icon, name } = mode);
+      if (flag === undefined) {
+        flag = false;
+      }
+      ({ unread, channelInfo, children } = mode);
+      if (unread === undefined) {
+        unread = false;
+      }
+      const merged = Object.assign(
+        mode,
+        Object.assign({
+          icon: 0,
+          name: 0,
+          mode: 0,
+          hideIcon: 0,
+          disableHighlightOnPress: 0,
+          channelInfo: 0,
+          children: 0,
+          unread: 0,
+        }),
+      );
+      const tmp2 = closure_12(mode);
+      dependencyMap = tmp2;
+      let items = [hideIcon, mode, tmp2];
+      const obj = {
+        style: noop.useMemo(() => {
+          const items = [channel.channel, ,];
+          let rowPaddingNoIcon = hideIcon;
+          if (hideIcon) {
+            rowPaddingNoIcon = channel.rowPaddingNoIcon;
+          }
+          items[1] = rowPaddingNoIcon;
+          items[2] = mode === obj2.SELECTED && channel.rowSelected;
+          return items;
+        }, items),
+        children: null,
+      };
+      if (hideIcon) {
+        const items1 = [tmp5, , ,];
+        let tmp14 = !hideIcon;
+        if (!hideIcon) {
+          tmp14 = icon;
+        }
+        items1[1] = tmp14;
+        items1[2] = name;
+        items1[3] = channelInfo;
+        obj.children = items1;
+        if (flag) {
+          let AnimatedPressableHighlight = hideIcon(12018);
+        } else {
+          AnimatedPressableHighlight = mode(8567).AnimatedPressableHighlight;
+        }
+        obj2 = {};
+        const merged1 = Object.assign(merged);
+        const items2 = [closure_11(tmp4, obj), children];
+        obj2.children = items2;
+        return closure_11(AnimatedPressableHighlight, obj2);
+      } else {
+        const obj3 = { style: tmp2.unreadIndicator, unread, resolvedUnreadSetting: null };
+        if (mode === obj2.UNREAD_LESS_IMPORTANT) {
+          let ALL_MESSAGES = UnreadSetting.ONLY_MENTIONS;
+        } else {
+          ALL_MESSAGES = UnreadSetting.ALL_MESSAGES;
+        }
+        obj3.resolvedUnreadSetting = ALL_MESSAGES;
+        closure_10(hideIcon(12017), obj3);
+        const tmp9 = hideIcon(12017);
+      }
+    };
+export const ChannelModes = obj2;
+export const BaseChannelSubtitle = tmp4;
+export const BaseChannelIcon = tmp5;
+export { useChannelNameTextProps };
+export { getChannelSubtitleTextProps };
+export const BaseChannelName = tmp6;

@@ -1,10 +1,10 @@
 // discord_app/modules/panels/morphable/native/SafeAreaDisabledStore.tsx
-import 00560__ from "../../../../../_runtime/metro/00560__.js";
+import 00570__ from "../../../../../_runtime/metro/00570__.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/panels/morphable/native/SafeAreaDisabledStore.tsx");
 
-export default module_560.create((arg0, arg1) => {
+export default module_570.create((arg0, arg1) => {
   closure_0 = arg0;
   dependencyMap = arg1;
   let obj = {
@@ -14,7 +14,7 @@ export default module_560.create((arg0, arg1) => {
     },
     requestSafeAreaDisableLock(arg0) {
       ({ key: closure_0, lockEnabled: closure_1 } = arg0);
-      closure_0(1248).batchUpdates(() => {
+      closure_0(1259).batchUpdates(() => {
         closure_0((lockKeys) => {
           lockKeys = lockKeys.lockKeys;
           const hasItem = lockKeys.has(closure_1_0);

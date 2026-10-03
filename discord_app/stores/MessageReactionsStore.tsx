@@ -29,7 +29,7 @@ function handleReaction(userId) {
   }
 }
 const dependencyMap = {};
-const items = [fn(7355).ReactionTypes.NORMAL, fn(7355).ReactionTypes.BURST];
+const items = [fn(7259).ReactionTypes.NORMAL, fn(7259).ReactionTypes.BURST];
 const prototype = function Reaction() {
   const obj = Object.create(new.target.prototype);
   obj.fetched = false;

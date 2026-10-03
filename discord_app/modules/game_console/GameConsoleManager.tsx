@@ -7,7 +7,7 @@ import Timers from "../../../discord_common/js/packages/timers/Timers.tsx";
 import AudioActionCreatorsDefault from "../../actions/AudioActionCreators.tsx";
 import GameConsoleActionCreators from "GameConsoleActionCreators.tsx";
 import GameConsoleAlertUtilsDefault from "GameConsoleAlertUtils.tsx";
-import _modDef17384 from "getErrorMessageForCommandResult.tsx";
+import _modDef17476 from "getErrorMessageForCommandResult.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
@@ -43,7 +43,7 @@ let closure_15 = async function _syncLocalState(arg0) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -82,7 +82,7 @@ let closure_15 = async function _syncLocalState(arg0) {
           const obj2 = closure_130_1(closure_130_2[11]);
         }
         c4 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       } catch (tmp16) {
         c4 = tmp;
         throw tmp16;
@@ -90,9 +90,9 @@ let closure_15 = async function _syncLocalState(arg0) {
     }
   })();
 };
-const GameConsoleConstants = fn(8736);
+const GameConsoleConstants = fn(8749);
 ({ GAME_CONSOLE_SESSIONS: c10, USER_ACTION_REQUIRED_ERROR_CODES: closure_11 } = GameConsoleConstants);
-const MediaEngineContextTypes = fn(4870).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(4915).MediaEngineContextTypes;
 let closure_13 = new LoggerDefault("GameConsoleManager");
 const prototype = function GameConsoleManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -226,14 +226,14 @@ const prototype = function GameConsoleManager() {
   applyArgumentsResult.handleWaitForRemoteSession = function handleWaitForRemoteSession() {
     const awaitRemoteTimeout = applyArgumentsResult.awaitRemoteTimeout;
     awaitRemoteTimeout.start(60000, () => {
-      closure_1_0(9438).disconnectRemote();
-      const obj = closure_1_0(9438);
+      closure_1_0(9448).disconnectRemote();
+      const obj = closure_1_0(9448);
       const obj3 = { title: null, body: null };
-      const intl = closure_1_0(1115).intl;
-      obj3.title = intl.string(closure_1_0(1115).t.wGMxr3);
-      const intl2 = closure_1_0(1115).intl;
-      obj3.body = intl2.string(closure_1_0(1115).t.i5k8b5);
-      closure_1_1(5387).show(obj3);
+      const intl = closure_1_0(1126).intl;
+      obj3.title = intl.string(closure_1_0(1126).t.wGMxr3);
+      const intl2 = closure_1_0(1126).intl;
+      obj3.body = intl2.string(closure_1_0(1126).t.i5k8b5);
+      closure_1_1(5707).show(obj3);
     });
   };
   applyArgumentsResult.handleConsoleCommandUpdate = function handleConsoleCommandUpdate(arg0) {
@@ -260,7 +260,7 @@ const prototype = function GameConsoleManager() {
             obj.name = intl2.string(util.t["UQMV/E"]);
             device = obj;
           }
-          const tmp8Result = _modDef17384(device, result, error);
+          const tmp8Result = _modDef17476(device, result, error);
           if (null != tmp8Result) {
             const obj2 = { title: null, body: null, errorCodeMessage: null, reconnectPlatformType: null };
             ({ title: obj3.title, body: obj3.body, errorCodeMessage: obj3.errorCodeMessage } = tmp8Result);

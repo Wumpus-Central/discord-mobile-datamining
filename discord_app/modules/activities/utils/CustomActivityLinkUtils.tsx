@@ -26,7 +26,7 @@ let closure_7 = async function _fetchCustomActivityLink(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -115,7 +115,7 @@ let closure_8 = async function _getCustomActivityLinkParams(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -201,7 +201,7 @@ let closure_10 = async function _loadCustomActivityLink() {
     return Promise.reject("fetchCustomActivityLink body is null");
   }
   closure_131_1(closure_131_2[5]).dispatch({ type: "CUSTOM_ACTIVITY_LINK_FETCH_SUCCESS", applicationId: closure_130_0, link: closure_130_1 });
-  await "HermesInternal";
+  await "IconComponent";
   closure_3 = tmp5;
   closure_2 = tmp2;
   closure_130_0 = closure_0;
@@ -214,7 +214,7 @@ let closure_10 = async function _loadCustomActivityLink() {
   }
   return Promise.reject("appId or linkId null");
 };
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 const set = new Set();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/utils/CustomActivityLinkUtils.tsx");
@@ -229,14 +229,6 @@ export const getCustomActivityLinkParams = function getCustomActivityLinkParams(
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const getQuickLinkImage = function getQuickLinkImage(assetPath) {
-  if (null != assetPath) {
-    const _location = location;
-    const _window = window;
-    const _HermesInternal = HermesInternal;
-    return "" + location.protocol + "//" + window.GLOBAL_ENV.CDN_HOST + "/attachments-quick-links/" + assetPath;
-  }
 };
 export { loadCustomActivityLink };
 export const getOrFetchCustomActivityLink = function getOrFetchCustomActivityLink(id, linkId) {

@@ -1,38 +1,80 @@
 // discord_app/modules/guild_tag/useUserAvailableGuildsWithTags.tsx
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import c from "../../../_runtime/00576_c.js";
 import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 
 require = fn;
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_tag/useUserAvailableGuildsWithTags.tsx");
 
-export const useUserAvailableGuildsWithTags = function useUserAvailableGuildsWithTags() {
-  const items = [GuildStore, GuildMemberStore];
-  return initialize.useStateFromStoresArray(items, () => {
-    guildsArray = guildsArray.getGuildsArray();
-    return guildsArray.filter((id) => {
-      selfMember = selfMember.getSelfMember(id.id);
-      let guildSupportsTagsResult = closure_1_0(closure_1_1[3]).guildSupportsTags(id);
-      if (guildSupportsTagsResult) {
-        let joinedAt;
-        if (selfMember != null) {
-          joinedAt = selfMember.joinedAt;
-        }
-        guildSupportsTagsResult = null != joinedAt;
+export const useUserAvailableGuildsWithTags = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = c.c(2);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const items = [GuildStore, GuildMemberStore];
+        const fn = function u() {
+          guildsArray = guildsArray.getGuildsArray();
+          return guildsArray.filter((id) => {
+            selfMember = selfMember.getSelfMember(id.id);
+            let guildSupportsTagsResult = closure_1_0(closure_1_1[4]).guildSupportsTags(id);
+            if (guildSupportsTagsResult) {
+              let joinedAt;
+              if (selfMember != null) {
+                joinedAt = selfMember.joinedAt;
+              }
+              guildSupportsTagsResult = null != joinedAt;
+            }
+            if (guildSupportsTagsResult) {
+              guildSupportsTagsResult = true !== selfMember.isPending;
+            }
+            if (guildSupportsTagsResult) {
+              const profile = id.profile;
+              let tag;
+              if (profile != null) {
+                tag = profile.tag;
+              }
+              guildSupportsTagsResult = null != tag;
+            }
+            return guildSupportsTagsResult;
+          });
+        };
+        cResult[0] = items;
+        cResult[1] = fn;
+        tmp4 = items;
+        tmp5 = fn;
+      } else {
+        [tmp4, tmp5] = cResult;
       }
-      if (guildSupportsTagsResult) {
-        guildSupportsTagsResult = true !== selfMember.isPending;
-      }
-      if (guildSupportsTagsResult) {
-        const profile = id.profile;
-        let tag;
-        if (profile != null) {
-          tag = profile.tag;
-        }
-        guildSupportsTagsResult = null != tag;
-      }
-      return guildSupportsTagsResult;
-    });
-  });
-};
+      return initialize.useStateFromStoresArray(tmp4, tmp5);
+    }
+  : () => {
+      const items = [GuildStore, GuildMemberStore];
+      return initialize.useStateFromStoresArray(items, () => {
+        guildsArray = guildsArray.getGuildsArray();
+        return guildsArray.filter((id) => {
+          selfMember = selfMember.getSelfMember(id.id);
+          let guildSupportsTagsResult = closure_1_0(closure_1_1[4]).guildSupportsTags(id);
+          if (guildSupportsTagsResult) {
+            let joinedAt;
+            if (selfMember != null) {
+              joinedAt = selfMember.joinedAt;
+            }
+            guildSupportsTagsResult = null != joinedAt;
+          }
+          if (guildSupportsTagsResult) {
+            guildSupportsTagsResult = true !== selfMember.isPending;
+          }
+          if (guildSupportsTagsResult) {
+            const profile = id.profile;
+            let tag;
+            if (profile != null) {
+              tag = profile.tag;
+            }
+            guildSupportsTagsResult = null != tag;
+          }
+          return guildSupportsTagsResult;
+        });
+      });
+    };

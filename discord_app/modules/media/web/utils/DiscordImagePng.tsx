@@ -1,5 +1,5 @@
 // discord_app/modules/media/web/utils/DiscordImagePng.tsx
-import decodeImageDefault from "../../../../../_runtime/01977_decodeImage.js";
+import decodeImageDefault from "../../../../../_runtime/01983_decodeImage.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = fn;
@@ -59,7 +59,7 @@ prototype["hasSrgbIccProfile"] = function hasSrgbIccProfile() {
         const obj = { value, done: true };
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       while (true) {

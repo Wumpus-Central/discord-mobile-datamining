@@ -2,10 +2,10 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01981_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
+import _modDef4807 from "../../../../../_runtime/metro/04807__.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import _modDef6095 from "../../../../../_runtime/metro/06095__.js";
 import GuildSettingsActionCreatorsDefault from "../../GuildSettingsActionCreators.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -13,16 +13,16 @@ import GuildRoleMemberCountStore from "../../GuildRoleMemberCountStore.tsx";
 
 require = fn;
 function onMembersLoadFail() {
-  const obj2 = { key: "ERROR_OCCURRED_TRY_AGAIN", icon: _modDef6095, content: null };
+  const obj2 = { key: "ERROR_OCCURRED_TRY_AGAIN", icon: _modDef4807, content: null };
   const intl = util.intl;
   obj2.content = intl.string(util.t.fEptJP);
   ToastActionCreatorsDefault.open(obj2);
 }
 const View = fn(17).View;
-const AnalyticEvents = fn(1074).AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = {
   container: { paddingHorizontal: nativeDefault.space.PX_12, flex: 1 },
   containerSearchBar: null,
@@ -113,10 +113,10 @@ export default function GuildSettingsRoleMembers(guild) {
         const items = [role.id];
         GuildSettingsActionCreatorsDefault.updateMemberRoles(guild.id, name.id, found, [], items).catch(() => {
           const obj2 = { key: "ERROR_OCCURRED_TRY_AGAIN", content: null, icon: null };
-          const intl = name(1115).intl;
-          obj2.content = intl.string(name(1115).t.fEptJP);
-          obj2.icon = found(6095);
-          found(4557).open(obj2);
+          const intl = name(1126).intl;
+          obj2.content = intl.string(name(1126).t.fEptJP);
+          obj2.icon = found(4807);
+          found(4568).open(obj2);
         });
       };
       obj2.confirmColor = guild(locked[16]).ButtonColors.RED;
@@ -133,7 +133,7 @@ export default function GuildSettingsRoleMembers(guild) {
       location_section: "Members",
     });
     const obj2 = ActionSheetActionCreatorsDefault;
-    obj2.openLazy(asyncRequireImpl(17674, dependencyMap.paths), "role-add-members-" + guild.id + "-" + role.id, {
+    obj2.openLazy(asyncRequireImpl(17762, dependencyMap.paths), "role-add-members-" + guild.id + "-" + role.id, {
       guild,
       role,
     });

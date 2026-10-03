@@ -4,7 +4,7 @@ import util from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import FlagUtils from "../../../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import MediaFormatTesters from "../../MediaFormatTesters.tsx";
-import noConflictDefault from "../../../../../_runtime/05633_noConflict.js";
+import noConflictDefault from "../../../../../_runtime/07271_noConflict.js";
 import RowGeneratorConstants from "RowGeneratorConstants.tsx";
 import sanitizeMediaDimension from "sanitizeMediaDimension.tsx";
 import RowGeneratorUtilsDefault from "RowGeneratorUtils.tsx";
@@ -54,15 +54,22 @@ export default function transformMessageAttachments(arg0) {
     if (tmp9) {
       const size2 = length[index];
     }
-    FlagUtils;
+    const isWebPlayerVideoFileResult = MediaFormatTesters.isWebPlayerVideoFile(filename);
+    tmp9 = null != length && index < length.length;
+    let num = flags;
+    if (flags == null) {
+      num = 0;
+    }
+    const tmpResult = FlagUtils;
+    MediaFormatTesters;
     if (isImageFileResult) {
       if (null != width) {
         if (null != height) {
-          const obj6 = RowGeneratorUtilsDefault;
-          let imageSrc = obj6.getImageSrc(proxy_url, width, height, !dependencyMap);
+          const obj7 = RowGeneratorUtilsDefault;
+          let imageSrc = obj7.getImageSrc(proxy_url, width, height, !dependencyMap);
         }
         let str4 = "default";
-        if (tmpResult8.isAndroid()) {
+        if (tmpResult10.isAndroid()) {
           str4 = "default";
           if (isVideoFileResult) {
             str4 = "cronet";
@@ -82,7 +89,7 @@ export default function transformMessageAttachments(arg0) {
             height2 = size2.height;
           }
         }
-        tmpResult8 = PlatformUtils;
+        tmpResult10 = PlatformUtils;
         let num4 = 0;
         if (closure_1_1) {
           num4 = 0;
@@ -94,7 +101,7 @@ export default function transformMessageAttachments(arg0) {
           }
         }
         const result1 = sanitizeMediaDimension.sanitizeMediaDimension(num4);
-        const tmpResult9 = sanitizeMediaDimension;
+        const tmpResult11 = sanitizeMediaDimension;
         let num5 = 0;
         if (closure_1_1) {
           num5 = 0;
@@ -106,25 +113,25 @@ export default function transformMessageAttachments(arg0) {
           }
         }
         const result2 = sanitizeMediaDimension.sanitizeMediaDimension(num5);
-        const tmpResult10 = sanitizeMediaDimension;
+        const tmpResult12 = sanitizeMediaDimension;
         if (flags == null) {
           flags = 0;
         }
-        let tmp28;
-        if (tmpResult11.hasFlag(flags, MessageAttachmentFlags.IS_CLIP)) {
-          const obj7 = {
+        let tmp29;
+        if (tmpResult13.hasFlag(flags, MessageAttachmentFlags.IS_CLIP)) {
+          const obj6 = {
             attachmentTagText: null,
             attachmentTagIconType: "clip",
             attachmentTagBackgroundColor: null,
             attachmentTagTextColor: null,
           };
           const intl = util.intl;
-          obj7.attachmentTagText = intl.string(util.t.gESDiU);
+          obj6.attachmentTagText = intl.string(util.t.gESDiU);
           ({
-            clipTagBackgroundColor: obj11.attachmentTagBackgroundColor,
-            clipTagTextColor: obj11.attachmentTagTextColor,
+            clipTagBackgroundColor: obj12.attachmentTagBackgroundColor,
+            clipTagTextColor: obj12.attachmentTagTextColor,
           } = closure_1_9);
-          tmp28 = obj7;
+          tmp29 = obj6;
         }
         let localUri = imageSrc;
         if (null != size2) {
@@ -157,7 +164,7 @@ export default function transformMessageAttachments(arg0) {
         }
         if (result3) {
           result3 = PlaintextFilePreviewHelpers.isPlaintextPreviewableFile(filename);
-          const tmpResult12 = PlaintextFilePreviewHelpers;
+          const tmpResult14 = PlaintextFilePreviewHelpers;
         }
         const size1 = {
           url: localUri,
@@ -195,12 +202,12 @@ export default function transformMessageAttachments(arg0) {
           srcIsAnimated: null,
           inlinePlaybackDisabled: null,
         };
-        let tmp31 = null != localUri;
-        if (tmp31) {
-          tmp31 = null != SuspiciousDownloadUtils.isSuspiciousDownload(localUri);
-          const tmpResult13 = SuspiciousDownloadUtils;
+        let tmp32 = null != localUri;
+        if (tmp32) {
+          tmp32 = null != SuspiciousDownloadUtils.isSuspiciousDownload(localUri);
+          const tmpResult15 = SuspiciousDownloadUtils;
         }
-        size1.isSuspiciousDownload = tmp31;
+        size1.isSuspiciousDownload = tmp32;
         let stringResult;
         if (result3) {
           const intl2 = util.intl;
@@ -213,9 +220,9 @@ export default function transformMessageAttachments(arg0) {
           stringResult1 = intl3.string(util.t["0PQYk3"]);
         }
         size1.textPreviewHint = stringResult1;
-        size1.videoUrl = tmp16;
+        size1.videoUrl = tmp17;
         size1.filename = getDisplayFilenameDefault(attachment);
-        tmpResult11 = FlagUtils;
+        tmpResult13 = FlagUtils;
         size1.size = noConflictDefault.filesize(size);
         size1.description = description;
         const intl4 = util.intl;
@@ -241,6 +248,8 @@ export default function transformMessageAttachments(arg0) {
         const t2 = util.t;
         if (isVideoFileResult) {
           let string2Result = string2(t2["/SCpvi"]);
+        } else if (tmp13) {
+          string2Result = string2(t2.OBp3V3);
         } else {
           string2Result = string2(t2.fKyfca);
         }
@@ -271,40 +280,39 @@ export default function transformMessageAttachments(arg0) {
         size1.placeholder = placeholder;
         size1.placeholderVersion = placeholder_version;
         size1.mediaViewerHttpEngine = str4;
-        size1.srcIsAnimated = tmp12;
+        size1.srcIsAnimated = hasFlagResult;
         size1.inlinePlaybackDisabled = isWebPlayerVideoFileResult;
         const str6 = intl4.string(util.t.jCV1Tz);
         const obj8 = { attachment, shouldObscureSpoiler, enabledContentHarmTypeFlags, shouldAgeVerify };
         const merged = Object.assign(ExplicitMediaUtils.getAttachmentObscurityProps(obj8));
-        const merged1 = Object.assign(tmp28);
+        const merged1 = Object.assign(tmp29);
         return size1;
       }
     }
-    let tmp13 = isVideoFileResult;
+    let tmp14 = isVideoFileResult;
     if (isVideoFileResult) {
-      let tmp14 = closure_1_1;
+      let tmp15 = closure_1_1;
       if (!closure_1_1) {
-        tmp14 = null != size2;
+        tmp15 = null != size2;
       }
-      tmp13 = tmp14;
+      tmp14 = tmp15;
     }
     imageSrc = url;
-    if (tmp13) {
+    if (tmp14) {
       let text = url;
       if (null != proxy_url) {
         text = `${proxy_url}?format=webp`;
       }
-      let tmp18 = url;
+      let tmp19 = url;
       if (null != proxy_url) {
-        tmp18 = url;
+        tmp19 = url;
         if ("" !== proxy_url) {
-          tmp18 = proxy_url;
+          tmp19 = proxy_url;
         }
       }
       imageSrc = text;
-      tmp16 = tmp18;
+      tmp17 = tmp19;
     }
-    isWebPlayerVideoFileResult = MediaFormatTesters.isWebPlayerVideoFile(filename);
-    tmp9 = null != length && index < length.length;
+    hasFlagResult = FlagUtils.hasFlag(num, MessageAttachmentFlags.IS_ANIMATED);
   });
 }

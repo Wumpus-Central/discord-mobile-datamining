@@ -1,10 +1,10 @@
 // discord_app/stores/GuildStore.tsx
 import SnowflakeUtilsDefault from "../utils/SnowflakeUtils.tsx";
+import libdiscoreExperiments from "../modules/libdiscore/libdiscoreExperiments.tsx";
 import FavoritesConstants from "../modules/favorites/FavoritesConstants.tsx";
 import GuildRecordUtilsAll from "../utils/GuildRecordUtils.tsx";
 import SetUtils from "../../discord_common/js/shared/utils/SetUtils.tsx";
 import LibdiscoreStore2 from "../modules/libdiscore/stores/LibdiscoreStore.tsx";
-import libdiscoreExperiments from "../modules/libdiscore/libdiscoreExperiments.tsx";
 import PlainRecord from "../lib/PlainRecord.tsx";
 import GuildRecord from "../records/GuildRecord.tsx";
 import AuthenticationStore from "AuthenticationStore.tsx";
@@ -229,7 +229,7 @@ const guildStore = new GuildStore(
       guildId = guildId.guildId;
       value = get.get(guildId);
       if (null != value) {
-        const result = get.set(guildId, React6(value, guildId.gameApplicationIds));
+        const result = get.set(guildId, closure_1_8(value, guildId.gameApplicationIds));
       }
     },
   },

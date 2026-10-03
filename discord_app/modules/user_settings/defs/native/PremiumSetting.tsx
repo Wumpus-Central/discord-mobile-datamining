@@ -1,4 +1,5 @@
 // discord_app/modules/user_settings/defs/native/PremiumSetting.tsx
+import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
 import PremiumUtils from "../../../../utils/PremiumUtils.tsx";
 import BlockedPaymentsCountryExperiment from "../../../billing/experiments/BlockedPaymentsCountryExperiment.tsx";
@@ -11,7 +12,52 @@ import SubscriptionStore from "../../../../stores/billing/SubscriptionStore.tsx"
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11215);
+fn(558);
+const ReactCompilerGating = fn(558);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = c.c(1);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const fn = function t() {
+          const isPaymentsBlocked = BlockedPaymentsCountryExperiment.getIsPaymentsBlocked();
+          let flag = !isPaymentsBlocked;
+          if (isPaymentsBlocked) {
+            openBlockedPaymentsCountryActionSheetDefault();
+            flag = false;
+          }
+          return flag;
+        };
+        cResult[0] = fn;
+        let first = fn;
+      } else {
+        first = cResult[0];
+      }
+      return first;
+    }
+  : () =>
+      noop.useCallback(() => {
+        const isPaymentsBlocked = BlockedPaymentsCountryExperiment.getIsPaymentsBlocked();
+        let flag = !isPaymentsBlocked;
+        if (isPaymentsBlocked) {
+          openBlockedPaymentsCountryActionSheetDefault();
+          flag = false;
+        }
+        return flag;
+      }, []);
+const SettingBuilders = fn(11129);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = c.c(1);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const tmp6 = jsx(PremiumTabBadgeDefault, {});
+        cResult[0] = tmp6;
+        let first = tmp6;
+      } else {
+        first = cResult[0];
+      }
+      return first;
+    }
+  : () => jsx(PremiumTabBadgeDefault, {});
 const route = SettingBuilders.createRoute({
   useTitle: function getPremiumSettingTitle() {
     const mobileNitroManageSubscriptionsSettingsExperiment =
@@ -38,23 +84,23 @@ const route = SettingBuilders.createRoute({
     }
   },
   parent: null,
-  IconComponent: fn(8309).NitroWheelIcon,
-  usePreNavigationAction: function useCanNavigateToPaymentSetting() {
-    return noop.useCallback(() => {
-      const isPaymentsBlocked = BlockedPaymentsCountryExperiment.getIsPaymentsBlocked();
-      let flag = !isPaymentsBlocked;
-      if (isPaymentsBlocked) {
-        openBlockedPaymentsCountryActionSheetDefault();
-        flag = false;
+  IconComponent: fn(8313).NitroWheelIcon,
+  usePreNavigationAction: tmp2,
+  useTrailing: ReactCompilerGating.isReactCompilerEnabled()
+    ? () => {
+        const cResult = c.c(1);
+        if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+          const tmp6 = jsx(PremiumTabBadgeDefault, {});
+          cResult[0] = tmp6;
+          let first = tmp6;
+        } else {
+          first = cResult[0];
+        }
+        return first;
       }
-      return flag;
-    }, []);
-  },
-  useTrailing: function usePremiumSettingTrailing() {
-    return jsx(PremiumTabBadgeDefault, {});
-  },
+    : () => jsx(PremiumTabBadgeDefault, {}),
   screen: {
-    route: fn(1074).UserSettingsSections.PREMIUM,
+    route: fn(1085).UserSettingsSections.PREMIUM,
     getComponent() {
       return require("PremiumSettingScreen").default;
     },

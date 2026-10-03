@@ -3,7 +3,7 @@ import LoggerDefault from "../../debug/Logger.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 const NativeModules = fn(17).NativeModules;
-const MessageSendLocation = fn(4838).MessageSendLocation;
+const MessageSendLocation = fn(4883).MessageSendLocation;
 let closure_5 = new LoggerDefault("DirectReply");
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/headless_tasks/android/DirectReply.tsx");
@@ -27,7 +27,7 @@ export default (arg0) => {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -78,7 +78,7 @@ export default (arg0) => {
               }
               closure_0(true);
               c4 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } catch (tmp20) {
             c4 = tmp;

@@ -6,8 +6,8 @@ import ThreadMessageStore from "../threads/ThreadMessageStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
 require = fn;
-const THREAD_CHANNEL_TYPES = fn(2048).THREAD_CHANNEL_TYPES;
-const Permissions = fn(1074).Permissions;
+const THREAD_CHANNEL_TYPES = fn(2055).THREAD_CHANNEL_TYPES;
+const Permissions = fn(1085).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_analytics/ThreadAnalyticsUtils.tsx");
 

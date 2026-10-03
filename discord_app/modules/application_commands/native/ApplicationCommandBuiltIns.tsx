@@ -10,9 +10,9 @@ let obj = {
   id: "-15",
   untranslatedName: "leave",
   displayName: "leave",
-  type: fn(1979).ApplicationCommandType.CHAT,
-  inputType: fn(7131).ApplicationCommandInputType.BUILT_IN,
-  applicationId: fn(5489).BuiltInSectionId.BUILT_IN,
+  type: fn(1985).ApplicationCommandType.CHAT,
+  inputType: fn(7034).ApplicationCommandInputType.BUILT_IN,
+  applicationId: fn(5788).BuiltInSectionId.BUILT_IN,
 };
 Object.defineProperty(obj, "untranslatedDescription", {
   get: () => {
@@ -35,23 +35,23 @@ obj.predicate = function predicate(channel) {
 obj.execute = function execute(arg0, channel) {
   channel = channel.channel;
   if (null != channel) {
-    const channelName = channel(4998).computeChannelName(channel, UserStore, RelationshipStore);
-    const intl5 = channel(1115).intl;
+    const channelName = channel(5043).computeChannelName(channel, UserStore, RelationshipStore);
+    const intl5 = channel(1126).intl;
     let obj2 = { name: channelName };
-    const obj5 = channel(4998);
-    const intl6 = channel(1115).intl;
+    const obj5 = channel(5043);
+    const intl6 = channel(1126).intl;
     const obj4 = { name: channelName };
-    let formatResult = intl6.format(channel(1115).t.SSIVOu, obj4);
-    let formatToPlainStringResult1 = intl5.formatToPlainString(channel(1115).t.hJ5Ap4, obj2);
+    let formatResult = intl6.format(channel(1126).t.SSIVOu, obj4);
+    let formatToPlainStringResult1 = intl5.formatToPlainString(channel(1126).t.hJ5Ap4, obj2);
     if (channel.isManaged()) {
-      let intl = tmp5(1115).intl;
+      let intl = tmp5(1126).intl;
       let obj = { name: channelName };
-      formatToPlainStringResult1 = intl.formatToPlainString(tmp5(1115).t.hVGjEW, obj);
-      const intl2 = tmp5(1115).intl;
+      formatToPlainStringResult1 = intl.formatToPlainString(tmp5(1126).t.hVGjEW, obj);
+      const intl2 = tmp5(1126).intl;
       const obj6 = { name: channelName };
-      formatResult = intl2.format(tmp5(1115).t.IK1Qvs, obj6);
+      formatResult = intl2.format(tmp5(1126).t.IK1Qvs, obj6);
     }
-    const formatToPlainStringResult = intl5.formatToPlainString(channel(1115).t.hJ5Ap4, obj2);
+    const formatToPlainStringResult = intl5.formatToPlainString(channel(1126).t.hJ5Ap4, obj2);
     const obj7 = {
       title: formatToPlainStringResult1,
       body: formatResult,
@@ -59,10 +59,10 @@ obj.execute = function execute(arg0, channel) {
       cancelText: null,
       onConfirm: null,
     };
-    const intl3 = tmp5(1115).intl;
-    obj7.confirmText = intl3.string(channel(1115).t["26C4oi"]);
-    const intl4 = tmp5(1115).intl;
-    obj7.cancelText = intl4.string(channel(1115).t["ETE/oC"]);
+    const intl3 = tmp5(1126).intl;
+    obj7.confirmText = intl3.string(channel(1126).t["26C4oi"]);
+    const intl4 = tmp5(1126).intl;
+    obj7.cancelText = intl4.string(channel(1126).t["ETE/oC"]);
     obj7.onConfirm = function onConfirm() {
       try {
         ChannelActionCreatorsDefault.closePrivateChannel(channel.id);

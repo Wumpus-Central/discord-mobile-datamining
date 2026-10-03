@@ -5,7 +5,7 @@ import AVErrorContext from "../AVErrorContext.tsx";
 import StreamRTCConnectionStore from "../../../../stores/StreamRTCConnectionStore.tsx";
 
 require = fn;
-const RTCConnectionQuality = fn(1074).RTCConnectionQuality;
+const RTCConnectionQuality = fn(1085).RTCConnectionQuality;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamBadNetworkQuality.tsx");
 

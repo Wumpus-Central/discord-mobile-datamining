@@ -1,5 +1,6 @@
 // discord_app/modules/user_settings/defs/native/UseDataToCustomizeDiscordSetting.tsx
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
+import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
 import AlertActionCreatorsDefault from "../../../../actions/AlertActionCreators.tsx";
 import common_AlertDefault from "../../../../components_native/common/Alert.tsx";
@@ -9,18 +10,60 @@ import showDataPrivacyRateLimitAlert from "../../privacy_and_safety/native/showD
 import ConsentStore from "../../../../stores/ConsentStore.tsx";
 
 require = fn;
-const Consents = fn(1074).Consents;
-const SettingBuilders = fn(11215);
+const Consents = fn(1085).Consents;
+let ReactCompilerGating = fn(558);
+ReactCompilerGating.isReactCompilerEnabled();
+ReactCompilerGating = fn(558);
+fn = () => useParentalControlSettings.useIsParentallyControlled();
+const SettingBuilders = fn(11129);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = c.c(2);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const items = [ConsentStore];
+        const fn = function o() {
+          return ConsentStore.hasConsented(constants.PERSONALIZATION);
+        };
+        cResult[0] = items;
+        cResult[1] = fn;
+        tmp4 = items;
+        tmp5 = fn;
+      } else {
+        [tmp4, tmp5] = cResult;
+      }
+      return initialize.useStateFromStores(tmp4, tmp5);
+    }
+  : () => {
+      const items = [ConsentStore];
+      return initialize.useStateFromStores(items, () => ConsentStore.hasConsented(constants.PERSONALIZATION));
+    };
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.MNKzyg);
   },
-  parent: fn(7590).MobileUserSettings.DATA_AND_PRIVACY,
-  useValue: function useDataToCustomizeDiscordSettingValue() {
-    const items = [ConsentStore];
-    return initialize.useStateFromStores(items, () => ConsentStore.hasConsented(constants.PERSONALIZATION));
-  },
+  parent: fn(7634).MobileUserSettings.DATA_AND_PRIVACY,
+  useValue: ReactCompilerGating.isReactCompilerEnabled()
+    ? () => {
+        const cResult = c.c(2);
+        if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+          const items = [ConsentStore];
+          const fn = function o() {
+            return ConsentStore.hasConsented(constants.PERSONALIZATION);
+          };
+          cResult[0] = items;
+          cResult[1] = fn;
+          tmp4 = items;
+          tmp5 = fn;
+        } else {
+          [tmp4, tmp5] = cResult;
+        }
+        return initialize.useStateFromStores(tmp4, tmp5);
+      }
+    : () => {
+        const items = [ConsentStore];
+        return initialize.useStateFromStores(items, () => ConsentStore.hasConsented(constants.PERSONALIZATION));
+      },
   onValueChange: function handlePersonalizationChange(arg0) {
     if (arg0) {
       let items = [Consents.PERSONALIZATION];
@@ -53,11 +96,9 @@ const toggle = SettingBuilders.createToggle({
       AlertActionCreatorsDefault.show(obj2);
     }
   },
-  useIsDisabled() {
-    return useParentalControlSettings.useIsParentallyControlled();
-  },
+  useIsDisabled: fn,
 });
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_settings/defs/native/UseDataToCustomizeDiscordSetting.tsx");
+const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/UseDataToCustomizeDiscordSetting.tsx");
 
 export default toggle;

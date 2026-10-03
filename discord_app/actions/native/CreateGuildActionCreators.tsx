@@ -2,7 +2,7 @@
 import GuildChannelStore from "../../stores/GuildChannelStore.tsx";
 
 const require = fn;
-const InstantInviteSources = fn(1074).InstantInviteSources;
+const InstantInviteSources = fn(1085).InstantInviteSources;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/native/CreateGuildActionCreators.tsx");
 

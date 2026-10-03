@@ -31,6 +31,6 @@ export const loadInviteSuggestions = function loadInviteSuggestions(arg0) {
     });
   });
 };
-export const searchInviteSuggestions = function searchInviteSuggestions(query) {
-  DispatcherDefault.dispatch({ type: "INVITE_SUGGESTIONS_SEARCH", query });
+export const searchInviteSuggestions = function searchInviteSuggestions(current) {
+  DispatcherDefault.dispatch({ type: "INVITE_SUGGESTIONS_SEARCH", query: current });
 };

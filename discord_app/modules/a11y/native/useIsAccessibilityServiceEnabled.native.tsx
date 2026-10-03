@@ -1,13 +1,14 @@
 // discord_app/modules/a11y/native/useIsAccessibilityServiceEnabled.native.tsx
 import NativeDeviceAccessibilityModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceAccessibilityModule.tsx";
 import useIsScreenReaderEnabled from "useIsScreenReaderEnabled.native.tsx";
-import 00560__ from "../../../../_runtime/metro/00560__.js";
+import 00570__ from "../../../../_runtime/metro/00570__.js";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 function ACCESSIBILITY_SERVICE_ENABLED_GETTER(accessibilityServiceEnabled) {
   return accessibilityServiceEnabled.accessibilityServiceEnabled;
 }
-const state = module_560.create((arg0) => {
+const state = module_570.create((arg0) => {
   closure_0 = arg0;
   const result = NativeDeviceAccessibilityModuleDefault.onAccessibilityServiceEnabledChanged((accessibilityServiceEnabled) => {
     closure_0({ accessibilityServiceEnabled });
@@ -25,10 +26,16 @@ export const getIsAccessibilityServiceEnabled = function getIsAccessibilityServi
   }
   return accessibilityServiceEnabled;
 };
-export const useIsAccessibilityServiceEnabled = function useIsAccessibilityServiceEnabled() {
+export const useIsAccessibilityServiceEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   let isScreenReaderEnabled = useIsScreenReaderEnabled.useIsScreenReaderEnabled();
   if (!isScreenReaderEnabled) {
     isScreenReaderEnabled = state(ACCESSIBILITY_SERVICE_ENABLED_GETTER);
   }
   return isScreenReaderEnabled;
-};
+}) : (() => {
+  let isScreenReaderEnabled = useIsScreenReaderEnabled.useIsScreenReaderEnabled();
+  if (!isScreenReaderEnabled) {
+    isScreenReaderEnabled = state(ACCESSIBILITY_SERVICE_ENABLED_GETTER);
+  }
+  return isScreenReaderEnabled;
+});

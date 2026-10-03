@@ -10,11 +10,11 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/showReportModalForUserWidget.tsx");
 
 export const USER_PROFILE_WIDGET_REPORT_ENTRYPOINT = "user_profile_widget";
-export const showReportModalForUserWidget = function showReportModalForUserWidget(user_id, applicationId) {
-  _require = user_id;
-  importDefault = applicationId;
-  if (applicationId instanceof require("UserProfileApplicationWidgetTypes").ApplicationWidget) {
-    applicationId = applicationId.applicationId;
+export const showReportModalForUserWidget = function showReportModalForUserWidget(userId, widget) {
+  _require = userId;
+  importDefault = widget;
+  if (widget instanceof require("UserProfileApplicationWidgetTypes").ApplicationWidget) {
+    applicationId = widget.applicationId;
     if (ApplicationStore.isHydrated(applicationId)) {
       let application = ApplicationStore.getApplication(applicationId);
       let prop;
@@ -26,7 +26,7 @@ export const showReportModalForUserWidget = function showReportModalForUserWidge
         let result = tmp(tmp2[2]).showReportModalForApp(obj);
         const tmpResult = tmp(tmp2[2]);
       } else {
-        let result1 = tmp(tmp2[2]).showReportModalForWidget(user_id, applicationId);
+        let result1 = tmp(tmp2[2]).showReportModalForWidget(userId, widget);
         const tmpResult3 = tmp(tmp2[2]);
       }
     } else {
@@ -62,7 +62,7 @@ export const showReportModalForUserWidget = function showReportModalForUserWidge
       });
     }
   } else {
-    const result2 = tmp(tmp2[2]).showReportModalForWidget(user_id, applicationId);
+    const result2 = tmp(tmp2[2]).showReportModalForWidget(userId, widget);
     const tmpResult4 = tmp(tmp2[2]);
   }
 };

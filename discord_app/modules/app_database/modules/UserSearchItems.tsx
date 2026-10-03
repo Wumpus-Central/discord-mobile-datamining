@@ -9,7 +9,7 @@ import RelationshipStore from "../../../stores/RelationshipStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-const RelationshipTypes = fn(1074).RelationshipTypes;
+const RelationshipTypes = fn(1085).RelationshipTypes;
 let closure_9 = new LoggerDefault("UserSearchItems");
 let c10 = false;
 class UserSearchItems {
@@ -38,7 +38,7 @@ prototype["getAll"] = function getAll() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {

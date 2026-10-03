@@ -16,11 +16,11 @@ import GuildSettingsAuditLogStore from "../GuildSettingsAuditLogStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, FlatList: closure_7 } = get_ActivityIndicator);
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ GuildSettingsSections: map1, AuditLogFilterTypes: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = {
   listView: { marginVertical: 12 },
   spinner: { marginTop: 40 },
@@ -169,7 +169,7 @@ export default function ConnectedGuildSettingsModalAuditLog(guildId) {
       lastAuditRow = closure_1.lastAuditRow;
     }
     items[1] = lastAuditRow;
-    return __initData(
+    return closure_2_15(
       AuditLogDefault,
       {
         containerStyle: items,

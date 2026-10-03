@@ -1,7 +1,7 @@
 // discord_app/modules/guild_member_verification/native/MemberVerificationModalActionCreators.tsx
 import Constants from "../../../Constants.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/01981_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import MemberVerificationActionCreatorsDefault from "../MemberVerificationActionCreators.tsx";
 import MemberVerificationConstants from "../MemberVerificationConstants.tsx";
@@ -14,13 +14,13 @@ const result = size.fileFinishedImporting(
 );
 
 export default {
-  openMemberVerificationModal(guildId, connect) {
+  openMemberVerificationModal(guildId, startCreateForumPostFlow) {
     const verificationForm = MemberVerificationActionCreatorsDefault.fetchVerificationForm(guildId);
     AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, { type, guild_id: guildId });
     const obj3 = { type, guild_id: guildId };
     ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(6069, dependencyMap.paths),
-      { guildId, onClose: connect },
+      asyncRequireImpl(5962, dependencyMap.paths),
+      { guildId, onClose: startCreateForumPostFlow },
       React4,
     );
   },

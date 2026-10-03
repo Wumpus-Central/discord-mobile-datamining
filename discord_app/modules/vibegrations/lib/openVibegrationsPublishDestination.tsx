@@ -3,14 +3,14 @@ import router_utils from "../../routing/router_utils.tsx";
 import ChannelActionCreatorsDefault from "../../../actions/ChannelActionCreators.tsx";
 import transitionToGuild from "../../routing/transitionToGuild.native.tsx";
 import FramesActionCreatorsDefault from "../../frames/FramesActionCreators.native.tsx";
-import canLaunchFrame from "../../frames/utils/canLaunchFrame.tsx";
+import canLaunchContextlessFrame from "../../frames/utils/canLaunchContextlessFrame.tsx";
 import ApplicationStore from "../../applications/ApplicationStore.tsx";
 import GuildChannelStore from "../../../stores/GuildChannelStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-const Routes = fn(1074).Routes;
-const MAIN_SURFACE = fn(8691).MAIN_SURFACE;
+const Routes = fn(1085).Routes;
+const MAIN_SURFACE = fn(8704).MAIN_SURFACE;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/vibegrations/lib/openVibegrationsPublishDestination.tsx");
 
@@ -31,12 +31,12 @@ export const openVibegrationsProductionDm = function openVibegrationsProductionD
 export const openVibegrationsPublishDestination = function openVibegrationsPublishDestination(destination, arg1) {
   ({ applicationId, guildId, appChannelId, openAutomodSettings } = arg1);
   if ("launch" === destination) {
-    if (obj.canLaunchFrame(ApplicationStore.getApplication(applicationId))) {
+    if (obj.canLaunchContextlessFrame(ApplicationStore.getApplication(applicationId))) {
       const obj6 = { applicationId, surface: MAIN_SURFACE };
       FramesActionCreatorsDefault.launchFrame(obj6).catch(() => {});
       return Promise.resolve();
     }
-    obj = canLaunchFrame;
+    obj = canLaunchContextlessFrame;
   } else if ("profile" === destination) {
     const currentUser = UserStore.getCurrentUser();
     let id;

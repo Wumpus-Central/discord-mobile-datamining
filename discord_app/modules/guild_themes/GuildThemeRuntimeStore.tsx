@@ -18,7 +18,7 @@ function snapshotSelectedGuildId(guildId) {
     }
     let flag = flag3;
   } else {
-    const guild = GuildStore.getGuild(guildId);
+    guild = GuildStore.getGuild(guildId);
     let guildTheme;
     if (guild != null) {
       guildTheme = guild.guildTheme;
@@ -58,7 +58,7 @@ function handleSavedGuildTheme(guildId) {
   let tmp = guildId === SelectedGuildStore.getGuildId();
   if (tmp) {
     const cloneGuildThemeResult = guildThemeSerialization.cloneGuildTheme(guildId.guildTheme);
-    const guild = GuildStore.getGuild(guildId);
+    guild = GuildStore.getGuild(guildId);
     let hasItem;
     if (guild != null) {
       const features = guild.features;
@@ -85,7 +85,7 @@ function handleSavedGuildTheme(guildId) {
   }
   return tmp;
 }
-const GuildFeatures = fn(1074).GuildFeatures;
+const GuildFeatures = fn(1085).GuildFeatures;
 let c6 = null;
 let c7 = null;
 const Store = initializeDefault.Store;

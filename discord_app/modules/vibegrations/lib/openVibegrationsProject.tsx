@@ -8,11 +8,11 @@ const Routes = Constants.Routes;
 const StaticChannelRoute = ChannelConstants.StaticChannelRoute;
 const result = size.fileFinishedImporting("modules/vibegrations/lib/openVibegrationsProject.tsx");
 
-export const openVibegrationsProject = function openVibegrationsProject(id, id2) {
-  if (null == id2) {
+export const openVibegrationsProject = function openVibegrationsProject(id, projectId) {
+  if (null == projectId) {
     let CHANNELResult = Routes.CHANNEL(id, StaticChannelRoute.VIBEGRATIONS);
   } else {
-    CHANNELResult = Routes.CHANNEL(id, StaticChannelRoute.VIBEGRATIONS, id2);
+    CHANNELResult = Routes.CHANNEL(id, StaticChannelRoute.VIBEGRATIONS, projectId);
   }
   router_utils.transitionTo(CHANNELResult);
 };

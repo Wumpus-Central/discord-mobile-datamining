@@ -8,20 +8,20 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
 
 require = fn;
-const EmojiInteractionPoint = fn(1375).EmojiInteractionPoint;
-const AnalyticEvents = fn(1074).AnalyticEvents;
+const EmojiInteractionPoint = fn(1380).EmojiInteractionPoint;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/emojis/useTrackOpenPopout.tsx");
 
-export const useTrackOpenPopout = (emojiId) => {
-  ({ currentGuildId, popoutData: require, nonce: importDefault, demoMode: dependencyMap } = emojiId);
+export const useTrackOpenPopout = (cResult) => {
+  ({ currentGuildId, popoutData: require, nonce: importDefault, demoMode: dependencyMap } = cResult);
   let current;
   let merged = Object.assign(
     AppAnalyticsUtils.collectChannelAnalyticsMetadata(
       ChannelStore.getChannel(SelectedChannelStore.getChannelId(currentGuildId)),
     ),
   );
-  current = current.useRef({ guild_id: currentGuildId, emoji_id: emojiId.emojiId }).current;
+  current = current.useRef({ guild_id: currentGuildId, emoji_id: cResult.emojiId }).current;
   useMountEffectDefault(() => {
     const result = emojis_EmojiActionCreators.initiateEmojiInteraction(EmojiInteractionPoint.TrackOpenPopoutUsed);
     if (!dependencyMap) {

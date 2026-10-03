@@ -30,7 +30,7 @@ export const getBrandSafetyContext = function getBrandSafetyContext(questContent
       if (undefined !== tmp4) {
         if (undefined !== tmp5) {
           const guildId = SelectedGuildStore.getGuildId();
-          let guild = null;
+          guild = null;
           if (null != guildId) {
             guild = GuildStore.getGuild(guildId);
           }

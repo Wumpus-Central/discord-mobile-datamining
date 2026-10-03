@@ -1,5 +1,5 @@
 // discord_app/modules/emojis/utils/EmojiColorUtils.tsx
-import _modDef672 from "../../../../_runtime/metro/00672__.js";
+import _modDef683 from "../../../../_runtime/metro/00683__.js";
 import ColorUtils from "../../../utils/ColorUtils.tsx";
 import utils_ColorDefault from "../../../utils/Color.tsx";
 import EmojiUtilsPlatformedDefault from "../../../utils/EmojiUtilsPlatformed.native.tsx";
@@ -29,10 +29,10 @@ function buildPlatformedThemedEmojiColorPalette(shouldProcessMobileColors) {
         const tmp2Result = ColorUtils;
         const obj3 = { foreground: null, background: null, ratio: 3, saturationFactor: null };
         const tmp2Result9 = ColorUtils;
-        const tmp5Result = _modDef672;
+        const tmp5Result = _modDef683;
         const colorLightnessAdjusted = ColorUtils.getColorLightnessAdjusted(color, 0.6, true);
         obj3.foreground = tmp5Result(colorLightnessAdjusted.toHexString());
-        obj3.background = _modDef672(c3);
+        obj3.background = _modDef683(c3);
         obj3.saturationFactor = saturationFactor;
         let accessibleForegroundColor = tmp2Result9.getAccessibleForegroundColor(obj3);
         if (accessibleForegroundColor == null) {
@@ -41,10 +41,10 @@ function buildPlatformedThemedEmojiColorPalette(shouldProcessMobileColors) {
         const tmp2Result10 = ColorUtils;
         const obj4 = { foreground: null, background: null, ratio: 5, saturationFactor: null };
         const tmp2Result11 = ColorUtils;
-        const tmp5Result2 = _modDef672;
+        const tmp5Result2 = _modDef683;
         const colorLightnessAdjusted1 = ColorUtils.getColorLightnessAdjusted(color, 0.6, false);
         obj4.foreground = tmp5Result2(colorLightnessAdjusted1.toHexString());
-        obj4.background = _modDef672(c4);
+        obj4.background = _modDef683(c4);
         obj4.saturationFactor = saturationFactor;
         let accessibleForegroundColor1 = tmp2Result11.getAccessibleForegroundColor(obj4);
         if (accessibleForegroundColor1 == null) {
@@ -52,16 +52,16 @@ function buildPlatformedThemedEmojiColorPalette(shouldProcessMobileColors) {
         }
         const tmp2Result12 = ColorUtils;
         const obj5 = {
-          foreground: _modDef672(findColorByHsvResult),
-          background: _modDef672(c3),
+          foreground: _modDef683(findColorByHsvResult),
+          background: _modDef683(c3),
           ratio: 7,
           saturationFactor,
         };
         const accessibleForegroundColor2 = ColorUtils.getAccessibleForegroundColor(obj5);
         const tmp2Result13 = ColorUtils;
         const obj6 = {
-          foreground: _modDef672(findColorByHsvResult),
-          background: _modDef672(c4),
+          foreground: _modDef683(findColorByHsvResult),
+          background: _modDef683(c4),
           ratio: 7,
           saturationFactor,
         };

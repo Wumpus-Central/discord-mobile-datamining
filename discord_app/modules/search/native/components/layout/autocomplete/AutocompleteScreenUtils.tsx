@@ -5,14 +5,14 @@ import LinkIcon from "../../../../../../design/components/Icon/native/redesign/g
 import ImageIcon from "../../../../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";
 import EmbedIcon from "../../../../../../design/components/Icon/native/redesign/generated/EmbedIcon.tsx";
 import RobotIcon from "../../../../../../design/components/Icon/native/redesign/generated/RobotIcon.tsx";
-import VideoIcon from "../../../../../../design/components/Icon/native/redesign/generated/VideoIcon.tsx";
-import AttachmentIcon from "../../../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
-import StickerIcon from "../../../../../../design/components/Icon/native/redesign/generated/StickerIcon.tsx";
 import PollsIcon from "../../../../../../design/components/Icon/native/redesign/generated/PollsIcon.tsx";
+import AttachmentIcon from "../../../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
+import VideoIcon from "../../../../../../design/components/Icon/native/redesign/generated/VideoIcon.tsx";
 import ForwardingIconDefault from "../../../../../forwarding/native/ForwardingIcon.tsx";
 import UserIcon from "../../../../../../design/components/Icon/native/redesign/generated/UserIcon.tsx";
 import SearchUtils from "../../../../SearchUtils.tsx";
 import SoundboardIcon from "../../../../../../design/components/Icon/native/redesign/generated/SoundboardIcon.tsx";
+import StickerIcon from "../../../../../../design/components/Icon/native/redesign/generated/StickerIcon.tsx";
 import WebhookIcon from "../../../../../../design/components/Icon/native/redesign/generated/WebhookIcon.tsx";
 import GuildMemberStore from "../../../../../../stores/GuildMemberStore.tsx";
 import RelationshipStore from "../../../../../../stores/RelationshipStore.tsx";
@@ -20,8 +20,8 @@ import UserStore from "../../../../../../stores/UserStore.tsx";
 import SearchQueryStore from "../../../stores/SearchQueryStore.tsx";
 
 require = fn;
-const SearchListItemTypes = fn(7477).SearchListItemTypes;
-const RelationshipTypes = fn(1074).RelationshipTypes;
+const SearchListItemTypes = fn(7513).SearchListItemTypes;
+const RelationshipTypes = fn(1085).RelationshipTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/search/native/components/layout/autocomplete/AutocompleteScreenUtils.tsx",
@@ -104,8 +104,8 @@ export const getSearchFilterAuthorTypeIcon = function getSearchFilterAuthorTypeI
     }
   }
 };
-export const toSearchListUserItem = function toSearchListUserItem(items, user, callback2) {
-  const guildIdFromSearchContext = SearchUtils.getGuildIdFromSearchContext(items);
+export const toSearchListUserItem = function toSearchListUserItem(searchContext, user, callback2) {
+  const guildIdFromSearchContext = SearchUtils.getGuildIdFromSearchContext(searchContext);
   if (null == user) {
     return null;
   } else {

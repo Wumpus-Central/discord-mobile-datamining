@@ -48,10 +48,10 @@ export default {
     const searchContextId = SearchUtils.getSearchContextId(searchContext);
     DispatcherDefault.dispatch({ type: "SEARCH_GUILD_CHANNEL_TAB_CLEANUP", id: searchContextId });
   },
-  addSearchHistoryItem(type, item) {
+  addSearchHistoryItem(type, channel) {
     if (type.type === SearchTypes.DMS) {
       const searchContextId = SearchUtils.getSearchContextId(type);
-      const obj3 = { type: "SEARCH_HISTORY_NATIVE_ADD_ITEM", id: searchContextId, item };
+      const obj3 = { type: "SEARCH_HISTORY_NATIVE_ADD_ITEM", id: searchContextId, item: channel };
       DispatcherDefault.dispatch(obj3);
     }
   },

@@ -218,7 +218,7 @@ function navigateAwayFromChannel(id, guild_id, id2) {
     tmp19 = tmp20;
   }
   if (tmp19) {
-    router_utils.replaceWith(__initData4.CHANNEL(tmp4, tmp11));
+    router_utils.replaceWith(closure_1_24.CHANNEL(tmp4, tmp11));
   }
   if (flag3) {
     const Storage = Storage3.Storage;
@@ -334,11 +334,11 @@ function navigateAwayFromSelectedIfInaccessible(guildId) {
 function handleGuildRoleChange(guildId) {
   return navigateAwayFromSelectedIfInaccessible(guildId.guildId);
 }
-const ChannelRecord = fn(2048);
+const ChannelRecord = fn(2055);
 ({ isGuildTextChannelType: closure_12, THREAD_CHANNEL_TYPES: map1 } = ChannelRecord);
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ ChannelTypes: closure_21, ME: closure_22, Permissions: closure_23, Routes: closure_24 } = Constants);
-const isGuildHomeChannel = fn(2051).isGuildHomeChannel;
+const isGuildHomeChannel = fn(2058).isGuildHomeChannel;
 const SelectedChannelStore = "SelectedChannelStore";
 let selectedChannelIds = {};
 const dependencyMap = {};
@@ -402,7 +402,7 @@ prototype["getChannelId"] = function getChannelId(arg0) {
   }
   let guildId = arg0;
   let tmp2 = null;
-  if (arg0 !== __initData2) {
+  if (arg0 !== closure_1_22) {
     if (guildId == null) {
       guildId = SelectedGuildStore.getGuildId();
     }
@@ -605,7 +605,7 @@ const selectedChannelStore = new SelectedChannelStore(DispatcherDefault, {
             const channel = ChannelStore.getChannel(channelId);
             let tmp10 = null != channel;
             if (tmp10) {
-              tmp10 = closure_1_12(channel.type);
+              tmp10 = __initData(channel.type);
             }
             if (channel != null) {
               const guildId1 = channel.getGuildId();
@@ -745,7 +745,7 @@ const selectedChannelStore = new SelectedChannelStore(DispatcherDefault, {
             const channel = ChannelStore.getChannel(id1);
             let tmp7 = null != channel;
             if (tmp7) {
-              tmp7 = closure_1_12(channel.type);
+              tmp7 = __initData(channel.type);
             }
             if (channel != null) {
               const guildId = channel.getGuildId();
@@ -973,7 +973,7 @@ const selectedChannelStore = new SelectedChannelStore(DispatcherDefault, {
             const values = closure_1_1(12)(selectedChannelIds).values();
             const obj2 = closure_1_1(12)(selectedChannelIds);
             const combined = values.concat(closure_1_1(12).values(mostRecentSelectedTextChannelIds));
-            const found = combined.filter(closure_1_0(1370).isNotNullish);
+            const found = combined.filter(closure_1_0(1375).isNotNullish);
             const obj4 = closure_1_1(12);
             const uniqResult = found.uniq();
             obj.knownThreadIds = found

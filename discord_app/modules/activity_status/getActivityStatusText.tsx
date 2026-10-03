@@ -3,10 +3,11 @@ import Constants from "../../Constants.tsx";
 import util from "../../intl/index.native.tsx";
 import isEmbeddedActivityDefault from "../activities/utils/isEmbeddedActivity.tsx";
 import isCrunchyrollActivityDefault from "../activities/utils/isCrunchyrollActivity.tsx";
-import StageChannelRichPresenceUtils from "../stage_channels/StageChannelRichPresenceUtils.tsx";
+import conjuringActivity from "../vibegrations/lib/conjuringActivity.tsx";
 import StatusDisplayTypes from "../../../discord_common/js/shared/shared-constants/StatusDisplayTypes.tsx";
 import getChannelCopyForEmbeddedActivityDefault from "../activities/utils/getChannelCopyForEmbeddedActivity.tsx";
 import isListeningOnSpotifyDefault from "../activities/utils/isListeningOnSpotify.tsx";
+import StageChannelRichPresenceUtils from "../stage_channels/StageChannelRichPresenceUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const ActivityTypes = Constants.ActivityTypes;
@@ -41,7 +42,7 @@ export default function getActivityStatusText(name) {
     }
     tmp5 = details1;
   }
-  let state;
+  state = undefined;
   if (name != null) {
     state = name.state;
   }
@@ -90,114 +91,115 @@ export default function getActivityStatusText(name) {
   } else {
     tmp17 = tmp2;
   }
-  if (isEmbeddedActivityDefault(name)) {
-    const tmp28 = getChannelCopyForEmbeddedActivityDefault(tmp2);
-    const obj = { text: tmp28, tooltip: tmp28 };
-    return obj;
-  } else {
-    let type1;
-    if (name != null) {
-      type1 = name.type;
-    }
-    if (type1 === ActivityTypes.PLAYING) {
-      if (null != tmp17) {
-        const obj2 = { text: tmp17, tooltip: null };
-        const intl8 = util.intl;
-        const obj3 = { game: tmp17 };
-        obj2.tooltip = intl8.formatToPlainString(util.t.lFApmz, obj3);
-        return obj2;
+  if (!isEmbeddedActivityDefault(name)) {
+    if (!tmp15Result.isConjuringActivity(name)) {
+      let type1;
+      if (name != null) {
+        type1 = name.type;
       }
-    }
-    if (isListeningOnSpotifyDefault(name)) {
-      if (flag) {
-        if (null != tmp8) {
-          const parts = tmp8.split("; ");
-          let joined;
-          if (parts != null) {
-            joined = parts.join(", ");
+      if (type1 === ActivityTypes.PLAYING) {
+        if (null != tmp17) {
+          const obj = { text: tmp17, tooltip: null };
+          const intl8 = util.intl;
+          const obj2 = { game: tmp17 };
+          obj.tooltip = intl8.formatToPlainString(util.t.lFApmz, obj2);
+          return obj;
+        }
+      }
+      if (isListeningOnSpotifyDefault(name)) {
+        if (flag) {
+          if (null != tmp8) {
+            const parts = tmp8.split("; ");
+            let joined;
+            if (parts != null) {
+              joined = parts.join(", ");
+            }
+            const obj3 = { text: joined, tooltip: null };
+            const intl7 = util.intl;
+            const obj4 = { name: joined };
+            obj3.tooltip = intl7.formatToPlainString(util.t.Vnuxue, obj4);
+            return obj3;
           }
-          const obj4 = { text: joined, tooltip: null };
-          const intl7 = util.intl;
-          const obj5 = { name: joined };
-          obj4.tooltip = intl7.formatToPlainString(util.t.Vnuxue, obj5);
-          return obj4;
         }
       }
-    }
-    if (tmp15Result.isStageActivity(name)) {
-      if (null != tmp2) {
-        const obj6 = { text: tmp2, tooltip: null };
-        const intl6 = util.intl;
-        const obj7 = { name: tmp2 };
-        obj6.tooltip = intl6.formatToPlainString(util.t.pW3Ip3, obj7);
-        let obj18 = obj6;
+      if (tmp15Result2.isStageActivity(name)) {
+        if (null != tmp2) {
+          const obj5 = { text: tmp2, tooltip: null };
+          const intl6 = util.intl;
+          const obj6 = { name: tmp2 };
+          obj5.tooltip = intl6.formatToPlainString(util.t.pW3Ip3, obj6);
+          let obj17 = obj5;
+        }
+        return obj17;
       }
-      return obj18;
-    }
-    let type2;
-    if (name != null) {
-      type2 = name.type;
-    }
-    if (type2 === ActivityTypes.LISTENING) {
-      if (null != tmp17) {
-        const obj8 = { text: tmp17, tooltip: null };
-        const intl5 = util.intl;
-        const obj9 = { name: tmp17 };
-        obj8.tooltip = intl5.formatToPlainString(util.t.Vnuxue, obj9);
-        obj18 = obj8;
+      let type2;
+      if (name != null) {
+        type2 = name.type;
       }
-    }
-    if (isCrunchyrollActivityDefault(name)) {
-      if (flag) {
-        if (null != tmp5) {
-          const obj10 = { text: tmp5, tooltip: null };
-          const intl4 = util.intl;
-          const obj11 = { name: tmp5 };
-          obj10.tooltip = intl4.formatToPlainString(util.t.pW3Ip3, obj11);
-          obj18 = obj10;
+      if (type2 === ActivityTypes.LISTENING) {
+        if (null != tmp17) {
+          const obj7 = { text: tmp17, tooltip: null };
+          const intl5 = util.intl;
+          const obj8 = { name: tmp17 };
+          obj7.tooltip = intl5.formatToPlainString(util.t.Vnuxue, obj8);
+          obj17 = obj7;
         }
       }
-    }
-    let type3;
-    if (name != null) {
-      type3 = name.type;
-    }
-    if (type3 === ActivityTypes.WATCHING) {
-      if (null != tmp17) {
-        const obj12 = { text: tmp17, tooltip: null };
-        const intl3 = util.intl;
-        const obj13 = { name: tmp17 };
-        obj12.tooltip = intl3.formatToPlainString(util.t.pW3Ip3, obj13);
-        obj18 = obj12;
+      if (isCrunchyrollActivityDefault(name)) {
+        if (flag) {
+          if (null != tmp5) {
+            const obj9 = { text: tmp5, tooltip: null };
+            const intl4 = util.intl;
+            const obj10 = { name: tmp5 };
+            obj9.tooltip = intl4.formatToPlainString(util.t.pW3Ip3, obj10);
+            obj17 = obj9;
+          }
+        }
       }
-    }
-    let type4;
-    if (name != null) {
-      type4 = name.type;
-    }
-    if (type4 === ActivityTypes.COMPETING) {
-      if (null != tmp17) {
-        const obj14 = { text: tmp17, tooltip: null };
-        const intl2 = util.intl;
-        const obj15 = { name: tmp17 };
-        obj14.tooltip = intl2.formatToPlainString(util.t.QQ2wVE, obj15);
-        obj18 = obj14;
+      let type3;
+      if (name != null) {
+        type3 = name.type;
       }
-    }
-    let type5;
-    if (name != null) {
-      type5 = name.type;
-    }
-    if (type5 === ActivityTypes.STREAMING) {
-      if (null != tmp17) {
-        const obj16 = { text: tmp17, tooltip: null };
-        const intl = util.intl;
-        const obj17 = { name: tmp17 };
-        obj16.tooltip = intl.formatToPlainString(util.t["0wJXSh"], obj17);
-        obj18 = obj16;
+      if (type3 === ActivityTypes.WATCHING) {
+        if (null != tmp17) {
+          const obj11 = { text: tmp17, tooltip: null };
+          const intl3 = util.intl;
+          const obj12 = { name: tmp17 };
+          obj11.tooltip = intl3.formatToPlainString(util.t.pW3Ip3, obj12);
+          obj17 = obj11;
+        }
       }
+      let type4;
+      if (name != null) {
+        type4 = name.type;
+      }
+      if (type4 === ActivityTypes.COMPETING) {
+        if (null != tmp17) {
+          const obj13 = { text: tmp17, tooltip: null };
+          const intl2 = util.intl;
+          const obj14 = { name: tmp17 };
+          obj13.tooltip = intl2.formatToPlainString(util.t.QQ2wVE, obj14);
+          obj17 = obj13;
+        }
+      }
+      let type5;
+      if (name != null) {
+        type5 = name.type;
+      }
+      if (type5 === ActivityTypes.STREAMING) {
+        if (null != tmp17) {
+          const obj15 = { text: tmp17, tooltip: null };
+          const intl = util.intl;
+          const obj16 = { name: tmp17 };
+          obj15.tooltip = intl.formatToPlainString(util.t["0wJXSh"], obj16);
+          obj17 = obj15;
+        }
+      }
+      obj17 = {};
+      tmp15Result2 = StageChannelRichPresenceUtils;
     }
-    obj18 = {};
-    tmp15Result = StageChannelRichPresenceUtils;
+    tmp15Result = conjuringActivity;
   }
+  const text = getChannelCopyForEmbeddedActivityDefault(tmp2);
+  return { text, tooltip: text };
 }

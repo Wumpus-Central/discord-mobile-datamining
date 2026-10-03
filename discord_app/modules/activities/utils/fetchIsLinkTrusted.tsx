@@ -20,7 +20,7 @@ let closure_6 = async function _requestIsLinkTrusted(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -93,7 +93,7 @@ let closure_7 = async function _fetchIsLinkTrusted(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -205,7 +205,7 @@ let closure_7 = async function _fetchIsLinkTrusted(arg0) {
     }
   }
 };
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 const map = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/utils/fetchIsLinkTrusted.tsx");

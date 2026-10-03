@@ -13,7 +13,7 @@ let closure_3 = async function _openURL(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -47,7 +47,7 @@ let closure_3 = async function _openURL(arg0) {
         const obj = { skipExtensionCheck: closure_130_1, analyticsLocations: [] };
         value.default(closure_130_0, obj);
         c4 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp15) {
       c4 = tmp;

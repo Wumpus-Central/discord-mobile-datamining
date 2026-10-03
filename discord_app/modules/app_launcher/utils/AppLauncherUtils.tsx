@@ -3,7 +3,9 @@ import util from "../../../intl/index.native.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
 import Server from "../../../flow/Server.tsx";
+import EmbeddedSurfaceUtils from "../../applications/utils/EmbeddedSurfaceUtils.tsx";
 import ApplicationCommandUtils from "../../application_commands/ApplicationCommandUtils.tsx";
+import EmbeddedSurfaceType from "../../../../discord_common/js/shared/shared-constants/EmbeddedSurfaceType.tsx";
 import ApplicationFlagUtils from "../../applications/utils/ApplicationFlagUtils.tsx";
 import AppLauncherTypes from "../AppLauncherTypes.tsx";
 import getPlatformDefault from "../../activities/utils/getPlatform.tsx";
@@ -20,35 +22,35 @@ require = fn;
 function getShelfBadgeTypeIfActive(application) {
   let tmp2 = null;
   if (application.id !== BuiltInSectionId.BUILT_IN) {
-    let hasApplicationFlagResult = application.id !== tmp.BUILT_IN;
-    if (hasApplicationFlagResult) {
-      hasApplicationFlagResult = ApplicationFlagUtils.hasApplicationFlag(application, ApplicationFlags.EMBEDDED);
+    let result = application.id !== tmp.BUILT_IN;
+    if (result) {
+      result = EmbeddedSurfaceUtils.supportsEmbeddedSurface(application, EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN);
     }
     tmp2 = null;
   }
-  let tmp9;
+  let tmp8;
   if (tmp2 != null) {
     const obj2 = PlatformUtils;
-    tmp9 = tmp2.client_platform_config[getPlatformDefault(undefined, obj2.getOS(obj2))];
+    tmp8 = tmp2.client_platform_config[getPlatformDefault(undefined, obj2.getOS(obj2))];
   }
   const timestamp = Date.now();
   let label_until;
-  if (tmp9 != null) {
-    label_until = tmp9.label_until;
+  if (tmp8 != null) {
+    label_until = tmp8.label_until;
   }
   if (null != label_until) {
     const _Date = Date;
-    if (timestamp < Date.parse(tmp9.label_until)) {
+    if (timestamp < Date.parse(tmp8.label_until)) {
       let label_from;
-      if (tmp9 != null) {
-        label_from = tmp9.label_from;
+      if (tmp8 != null) {
+        label_from = tmp8.label_from;
       }
       if (null != label_from) {
         const _Date2 = Date;
-        if (timestamp > Date.parse(tmp9.label_from)) {
+        if (timestamp > Date.parse(tmp8.label_from)) {
           let label_type;
-          if (tmp9 != null) {
-            label_type = tmp9.label_type;
+          if (tmp8 != null) {
+            label_type = tmp8.label_type;
           }
           if (label_type == null) {
             label_type = Server.EmbeddedActivityLabelTypes.NONE;
@@ -62,9 +64,9 @@ function getShelfBadgeTypeIfActive(application) {
   NONE = Server.EmbeddedActivityLabelTypes.NONE;
 }
 let closure_3 = ["fakeAppIconURL"];
-const ApplicationFlags = fn(1074).ApplicationFlags;
-const BuiltInSectionId = fn(5489).BuiltInSectionId;
-const MessageSendLocation = fn(4838).MessageSendLocation;
+const ApplicationFlags = fn(1085).ApplicationFlags;
+const BuiltInSectionId = fn(5788).BuiltInSectionId;
+const MessageSendLocation = fn(4883).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/utils/AppLauncherUtils.tsx");
 
@@ -81,21 +83,21 @@ export const getSectionName = function getSectionName(FAKE_BUILT_IN_APP) {
   }
   return name;
 };
-export const getSectionDescription = function getSectionDescription(FAKE_BUILT_IN_APP) {
-  if (FAKE_BUILT_IN_APP.id !== BuiltInSectionId.BUILT_IN) {
-    let description = FAKE_BUILT_IN_APP.description;
+export const getSectionDescription = function getSectionDescription(application) {
+  if (application.id !== BuiltInSectionId.BUILT_IN) {
+    let description = application.description;
   } else {
     const intl = util.intl;
     description = intl.string(util.t.X9fusn);
   }
   return description;
 };
-export const isEmbeddedApp = function isEmbeddedApp(application) {
-  let hasApplicationFlagResult = application.id !== BuiltInSectionId.BUILT_IN;
-  if (hasApplicationFlagResult) {
-    hasApplicationFlagResult = ApplicationFlagUtils.hasApplicationFlag(application, ApplicationFlags.EMBEDDED);
+export const isActivityApp = function isActivityApp(application) {
+  let result = application.id !== BuiltInSectionId.BUILT_IN;
+  if (result) {
+    result = EmbeddedSurfaceUtils.supportsEmbeddedSurface(application, EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN);
   }
-  return hasApplicationFlagResult;
+  return result;
 };
 export const isPartnerApplication = function isPartnerApplication(application) {
   let hasApplicationFlagResult = application.id !== BuiltInSectionId.BUILT_IN;
@@ -125,9 +127,9 @@ export const getShelfBadgeNameIfActive = function getShelfBadgeNameIfActive(appl
 export const getEmbeddedActivityConfig = function getEmbeddedActivityConfig(id) {
   let tmp2 = null;
   if (id.id !== BuiltInSectionId.BUILT_IN) {
-    let hasApplicationFlagResult = id.id !== tmp.BUILT_IN;
-    if (hasApplicationFlagResult) {
-      hasApplicationFlagResult = ApplicationFlagUtils.hasApplicationFlag(id, ApplicationFlags.EMBEDDED);
+    let result = id.id !== tmp.BUILT_IN;
+    if (result) {
+      result = EmbeddedSurfaceUtils.supportsEmbeddedSurface(id, EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN);
     }
     tmp2 = null;
   }
@@ -156,7 +158,7 @@ export const executeAppLauncherCommand = function executeAppLauncherCommand(arg0
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -215,7 +217,7 @@ export const executeAppLauncherCommand = function executeAppLauncherCommand(arg0
           return obj8;
         } else {
           closure_129_0 = value;
-          if (tts.inputType === closure_0(context[13]).ApplicationCommandInputType.BUILT_IN_TEXT) {
+          if (tts.inputType === closure_0(context[15]).ApplicationCommandInputType.BUILT_IN_TEXT) {
             if (null != closure_129_0) {
               if (null != context.channel) {
                 closure_129_1 = require("MessageParser").parse(channel, closure_129_0.content);
@@ -233,7 +235,7 @@ export const executeAppLauncherCommand = function executeAppLauncherCommand(arg0
           }
           maxSizeCallback = 0;
           commandOrigin = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp39) {
         commandTargetId = tmp39;
@@ -293,16 +295,16 @@ export const isApplicationMonetizedWithIAP = function isApplicationMonetizedWith
 export const isApplicationAdSupported = function isApplicationAdSupported(application) {
   let tmp2 = null;
   if (application.id !== BuiltInSectionId.BUILT_IN) {
-    let hasApplicationFlagResult = application.id !== tmp.BUILT_IN;
-    if (hasApplicationFlagResult) {
-      hasApplicationFlagResult = ApplicationFlagUtils.hasApplicationFlag(application, ApplicationFlags.EMBEDDED);
+    let result = application.id !== tmp.BUILT_IN;
+    if (result) {
+      result = EmbeddedSurfaceUtils.supportsEmbeddedSurface(application, EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN);
     }
     tmp2 = null;
   }
   return null != tmp2 && tmp2.displays_advertisements;
 };
-export const appLauncherShowsRecommendations = function appLauncherShowsRecommendations(initialSearchQuery) {
-  return initialSearchQuery === AppLauncherTypes.AppLauncherEntrypoint.TEXT;
+export const appLauncherShowsRecommendations = function appLauncherShowsRecommendations(entrypoint) {
+  return entrypoint === AppLauncherTypes.AppLauncherEntrypoint.TEXT;
 };
 export const formatPrimaryEntryPointCommandName = function formatPrimaryEntryPointCommandName(displayName) {
   let str = "";
@@ -315,9 +317,9 @@ export const formatPrimaryEntryPointCommandName = function formatPrimaryEntryPoi
   return str;
 };
 export const ensureRecommendationSectionsOnlyContainActivities =
-  function ensureRecommendationSectionsOnlyContainActivities(entrypoint) {
+  function ensureRecommendationSectionsOnlyContainActivities(stateFromStores) {
     const items = [];
-    const iter = entrypoint[Symbol.iterator]();
+    const iter = stateFromStores[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
       let prop = nextResult.application_directory_collection_items;
@@ -328,15 +330,15 @@ export const ensureRecommendationSectionsOnlyContainActivities =
           require("ApplicationDirectoryCollectionItemType").ApplicationDirectoryCollectionItemType.APPLICATION;
         if (tmp3) {
           const application = type.application;
-          let hasApplicationFlagResult = application.id !== constants2.BUILT_IN;
-          if (hasApplicationFlagResult) {
-            hasApplicationFlagResult = require("ApplicationFlagUtils").hasApplicationFlag(
+          let result = application.id !== constants.BUILT_IN;
+          if (result) {
+            result = require("EmbeddedSurfaceUtils").supportsEmbeddedSurface(
               application,
-              constants.EMBEDDED,
+              require("EmbeddedSurfaceType").EmbeddedSurfaceType.MAIN,
             );
-            const tmpResult = require("ApplicationFlagUtils");
+            const tmpResult = require("EmbeddedSurfaceUtils");
           }
-          tmp3 = hasApplicationFlagResult;
+          tmp3 = result;
         }
         return tmp3;
       });

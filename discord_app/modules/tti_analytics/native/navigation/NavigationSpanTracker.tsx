@@ -1,6 +1,6 @@
 // discord_app/modules/tti_analytics/native/navigation/NavigationSpanTracker.tsx
 import LoggerDefault from "../../../debug/Logger.tsx";
-import v1 from "../../../../../_runtime/01255_v1.js";
+import v1 from "../../../../../_runtime/01266_v1.js";
 import NavigationSpanTypes from "NavigationSpanTypes.tsx";
 import NavigationTTIAnalytics from "NavigationTTIAnalytics.tsx";
 import NavigationTTIDebugFreeze from "debug/NavigationTTIDebugFreeze.tsx";

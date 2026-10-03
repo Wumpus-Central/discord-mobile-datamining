@@ -62,7 +62,7 @@ let closure_2 = [
 ];
 let closure_3 = ["features"];
 let closure_4 = ["threads", "guild_scheduled_events"];
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AnalyticEvents: closure_7, ChannelTypes: closure_8 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/gateway/GatewaySocketAnalytics.tsx");

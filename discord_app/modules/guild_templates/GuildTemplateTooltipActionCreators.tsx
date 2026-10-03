@@ -3,7 +3,7 @@ import DispatcherDefault from "../../Dispatcher.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
-const Permissions = fn(1074).Permissions;
+const Permissions = fn(1085).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_templates/GuildTemplateTooltipActionCreators.tsx");
 
@@ -21,7 +21,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -53,7 +53,7 @@ export default {
             return obj;
           }
           guildId = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         } catch (tmp7) {
           guildId = tmp;
           throw tmp7;

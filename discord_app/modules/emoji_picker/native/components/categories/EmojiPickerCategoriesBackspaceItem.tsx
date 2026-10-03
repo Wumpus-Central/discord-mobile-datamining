@@ -6,7 +6,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const Pressable = fn(17).Pressable;
-const NODE_MARGIN = fn(1074).NODE_MARGIN;
+const NODE_MARGIN = fn(1085).NODE_MARGIN;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting(

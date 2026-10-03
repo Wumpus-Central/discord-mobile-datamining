@@ -7,7 +7,7 @@ import VoiceStateStore from "../../../../../stores/VoiceStateStore.tsx";
 const _modDef12 = _mod12;
 
 require = fn;
-const HappeningNowConstants = fn(15053);
+const HappeningNowConstants = fn(15110);
 ({
   HAPPENING_NOW_CARD_WIDTH_NORMAL_WITH_MARGIN: hasOwnProperty,
   HAPPENING_NOW_CARD_WIDTH_SMALL_WITH_MARGIN: metroRequire,
@@ -61,8 +61,8 @@ export const HappeningNowWeights = {
   Base: 1,
 };
 export const HAPPENING_NOW_OFFLINE_PENALTY = -1000;
-export const filterHappeningNowCards = function filterHappeningNowCards(arr) {
-  return arr.filter((voiceState) => {
+export const filterHappeningNowCards = function filterHappeningNowCards(length) {
+  return length.filter((voiceState) => {
     let flag = false;
     if ("voiceState" in voiceState) {
       flag = false;

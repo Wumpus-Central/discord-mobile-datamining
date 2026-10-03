@@ -79,7 +79,7 @@ function canFulfillStreamRequest(channel_id) {
     const tmp16Result = tmp16(tmp17[10]);
   }
 }
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ ActivityGamePlatforms: c10, ActivityTypes: closure_11 } = Constants);
 const StreamRequestUnfulfillableReason = {
   NOT_IN_VOICE_CHANNEL: "NOT_IN_VOICE_CHANNEL",
@@ -89,37 +89,100 @@ const StreamRequestUnfulfillableReason = {
   PENDING_REQUEST: "PENDING_REQUEST",
   EXPIRED: "EXPIRED",
 };
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/request_to_stream/useCanFulfillStreamRequest.tsx");
 
-export default function useCanFulfillStreamRequest(arg0) {
-  _require = arg0;
-  let flag = arg1;
-  if (arg1 === undefined) {
-    flag = false;
-  }
-  const items = [
-    ApplicationStreamingStore,
-    ChannelStore,
-    PresenceStore,
-    RunningGameStore,
-    RTCConnectionStore,
-    GuildStore,
-    PermissionStore,
-  ];
-  return require("initialize").useStateFromStores(items, () =>
-    canFulfillStreamRequest(
-      closure_0,
-      flag,
-      ApplicationStreamingStore,
-      ChannelStore,
-      PresenceStore,
-      RunningGameStore,
-      RTCConnectionStore,
-      GuildStore,
-      PermissionStore,
-    ),
-  );
-}
+export default ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0, arg1) => {
+      _require = arg0;
+      const cResult = require("c").c(4);
+      dependencyMap = tmp4;
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const items = [
+          ApplicationStreamingStore,
+          ChannelStore,
+          PresenceStore,
+          RunningGameStore,
+          RTCConnectionStore,
+          GuildStore,
+          PermissionStore,
+        ];
+        cResult[0] = items;
+        class R {
+          constructor() {
+            return canFulfillStreamRequest(
+              closure_0,
+              closure_1,
+              closure_3,
+              closure_5,
+              closure_8,
+              closure_2,
+              closure_9,
+              closure_6,
+              closure_7,
+            );
+          }
+        }
+      } else {
+        const first = cResult[0];
+      }
+      if (cResult[1] === (undefined !== arg1 && arg1)) {
+        if (cResult[2] === arg0) {
+          let tmp13 = cResult[3];
+        }
+        return tmp(504).useStateFromStores(first, tmp13);
+      }
+      class R {
+        constructor() {
+          return canFulfillStreamRequest(
+            closure_0,
+            closure_1,
+            closure_3,
+            closure_5,
+            closure_8,
+            closure_2,
+            closure_9,
+            closure_6,
+            closure_7,
+          );
+        }
+      }
+      cResult[1] = undefined !== arg1 && arg1;
+      cResult[2] = arg0;
+      cResult[3] = R;
+      tmp13 = R;
+      const obj = require("c");
+      tmp = _require;
+    }
+  : (arg0) => {
+      _require = arg0;
+      let flag = arg1;
+      if (arg1 === undefined) {
+        flag = false;
+      }
+      const items = [
+        ApplicationStreamingStore,
+        ChannelStore,
+        PresenceStore,
+        RunningGameStore,
+        RTCConnectionStore,
+        GuildStore,
+        PermissionStore,
+      ];
+      return require("initialize").useStateFromStores(items, () =>
+        canFulfillStreamRequest(
+          closure_0,
+          flag,
+          ApplicationStreamingStore,
+          ChannelStore,
+          PresenceStore,
+          RunningGameStore,
+          RTCConnectionStore,
+          GuildStore,
+          PermissionStore,
+        ),
+      );
+    };
 export { StreamRequestUnfulfillableReason };
 export { canFulfillStreamRequest };

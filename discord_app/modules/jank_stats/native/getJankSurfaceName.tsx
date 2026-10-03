@@ -28,14 +28,14 @@ function composeJankSurfaceName(getBaseScreenName) {
       componentDisplayName = getJankScreenName.getComponentDisplayName(tmp3.content.type);
     }
     if (null == componentDisplayName) {
-      let combined = React6;
+      let combined = closure_1_8;
     } else {
       let key = componentDisplayName;
       if (set.has(componentDisplayName)) {
         key = tmp3.key;
       }
       const _HermesInternal = HermesInternal;
-      combined = "" + React6 + ":" + key;
+      combined = "" + closure_1_8 + ":" + key;
     }
   }
   if (null != tmp2) {
@@ -67,7 +67,7 @@ function composeJankSurfaceName(getBaseScreenName) {
     obj4 = getJankScreenName;
   }
 }
-const JankScreenConstants = fn(15855);
+const JankScreenConstants = fn(15931);
 ({
   CHANNEL_DETAILS_SCREEN: hasOwnProperty,
   INTERACTION_NONE: metroRequire,
@@ -99,14 +99,14 @@ export const recordJankChannelDetailsOpen = function recordJankChannelDetailsOpe
   }
   return flag;
 };
-export const setJankChannelDetailsOpen = function setJankChannelDetailsOpen(memo1, arg1) {
-  let flag = arg1 !== set1.has(memo1);
+export const setJankChannelDetailsOpen = function setJankChannelDetailsOpen(constants, arg1) {
+  let flag = arg1 !== set1.has(constants);
   if (flag) {
     if (arg1) {
-      set1.add(memo1);
+      set1.add(constants);
       flag = true;
     } else {
-      set1.delete(memo1);
+      set1.delete(constants);
       flag = true;
     }
   }

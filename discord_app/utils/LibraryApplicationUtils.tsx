@@ -5,7 +5,7 @@ import UserStore from "../stores/UserStore.tsx";
 import SKUStore from "../stores/game_store/SKUStore.tsx";
 
 require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({
   LibraryApplicationFlags: hasOwnProperty,
   LocalDispatchApplicationStates: metroRequire,

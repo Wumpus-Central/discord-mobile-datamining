@@ -2,11 +2,11 @@
 import Constants from "../../../Constants.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import getDeviceMediaPhotosDefault from "getDeviceMediaPhotos.tsx";
-import 00560__ from "../../../../_runtime/metro/00560__.js";
+import 00570__ from "../../../../_runtime/metro/00570__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const AnalyticEvents = Constants.AnalyticEvents;
-let state = module_560.create(() => ({ assets: null, page: 0, hasReachedEnd: false, lastAssetIndex: 0 }));
+let state = module_570.create(() => ({ assets: null, page: 0, hasReachedEnd: false, lastAssetIndex: 0 }));
 const result = size.fileFinishedImporting("modules/device/native/DeviceMedia.tsx");
 
 export default {
@@ -90,9 +90,9 @@ export default {
                     lastAssetIndex(page[2]).track(constants.MEDIA_PICKER_INFINITE_SCROLL_PAGED, { page, has_reached_end: tmp12 });
                   }
           };
-          lastAssetIndex(10301)(obj2);
+          lastAssetIndex(10376)(obj2);
         }
-        obj = assets(1364);
+        obj = assets(1369);
       }
     }
   },
@@ -149,7 +149,7 @@ export default {
           obj2.num_assets = length;
           AnalyticsUtilsDefault.track(constants.MEDIA_PICKER_ASSETS_DEBUG, obj2);
         }
-        batchSize(1248).batchUpdates(() => {
+        batchSize(1259).batchUpdates(() => {
           const obj = { assets, page: 0, lastAssetIndex: batchSize, endCursor: null, hasReachedEnd: null };
           let end_cursor;
           if (assets != null) {
@@ -172,7 +172,7 @@ export default {
           obj.hasReachedEnd = !num;
           state.setState(obj);
         });
-        const obj3 = batchSize(1248);
+        const obj3 = batchSize(1259);
       }
     });
   },

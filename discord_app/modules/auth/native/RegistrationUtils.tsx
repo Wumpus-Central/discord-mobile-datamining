@@ -74,7 +74,7 @@ function trackRegTransition(overrideRegistrationOptions) {
   obj2.invite_channel_type = type;
   let id1;
   if (invite != null) {
-    const guild = invite.guild;
+    guild = invite.guild;
     if (guild != null) {
       id1 = guild.id;
     }
@@ -92,12 +92,13 @@ function trackRegTransition(overrideRegistrationOptions) {
   obj2.to_step = toStep;
   AnalyticsUtilsDefault.track(AnalyticEvents.REGISTER_TRANSITION, obj2);
 }
-const RegistrationUIStore = fn(15786);
+const RegistrationUIStore = fn(15863);
 ({ clearRegistrationErrorMessage: metroRequire, useRegistrationUIStore: closure_7 } = RegistrationUIStore);
-const RegistrationConstants = fn(15787);
+const RegistrationConstants = fn(15864);
 ({ RegisterTransitionSteps: closure_8, RegistrationTransitionActionTypes: closure_9 } = RegistrationConstants);
-const AnalyticEvents = fn(1074).AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/RegistrationUtils.tsx");
 
@@ -152,21 +153,65 @@ export function getTrackRegTransition(arg0) {
     return tmp9;
   };
 }
-export const BackButtonWithTracking = function BackButtonWithTracking(arg0) {
-  _require = noop.useContext(require("Auth").TrackRegistrationContext);
-  ({ destinationStep: importDefault, onPress: dependencyMap } = arg0);
-  let obj = {};
-  const merged = Object.assign(arg0);
-  obj.onPress = function onPress() {
-    if (null != dependencyMap) {
-      timestampProducer();
-      const obj = { step, actionType: constants2.VIEWED };
-      closure_0(obj);
-      tmp();
+export const BackButtonWithTracking = ReactCompilerGating.isReactCompilerEnabled()
+  ? (destinationStep) => {
+      const cResult = context(onPress[9]).c(7);
+      context = noop.useContext(context(onPress[10]).TrackRegistrationContext);
+      destinationStep = destinationStep.destinationStep;
+      onPress = destinationStep.onPress;
+      if (cResult[0] === destinationStep) {
+        if (cResult[1] === onPress) {
+          if (cResult[2] === context) {
+            let tmp5 = cResult[3];
+          }
+          if (cResult[4] === tmp5) {
+            if (cResult[5] === destinationStep) {
+              let tmp6 = cResult[6];
+            }
+            return tmp6;
+          }
+          const obj2 = {};
+          const merged = Object.assign(destinationStep);
+          obj2.onPress = tmp5;
+          const tmp11 = jsx(tmp(tmp2[11]).HeaderBackButton, {});
+          cResult[4] = tmp5;
+          cResult[5] = destinationStep;
+          cResult[6] = tmp11;
+          tmp6 = tmp11;
+        }
+      }
+      const fn = function o() {
+        if (null != onPress) {
+          timestampProducer();
+          const obj = { step: destinationStep, actionType: constants2.VIEWED };
+          context(obj);
+          tmp();
+        }
+      };
+      cResult[0] = destinationStep;
+      cResult[1] = onPress;
+      cResult[2] = context;
+      cResult[3] = fn;
+      tmp5 = fn;
+      let obj = context(onPress[9]);
+      tmp = context;
+      tmp2 = onPress;
     }
-  };
-  return jsx(require("../../../../_runtime/metro/06129__.js").HeaderBackButton, {});
-};
+  : (arg0) => {
+      _require = noop.useContext(require("Auth").TrackRegistrationContext);
+      ({ destinationStep: importDefault, onPress: dependencyMap } = arg0);
+      let obj = {};
+      const merged = Object.assign(arg0);
+      obj.onPress = function onPress() {
+        if (null != dependencyMap) {
+          timestampProducer();
+          const obj = { step, actionType: constants2.VIEWED };
+          closure_0(obj);
+          tmp();
+        }
+      };
+      return jsx(require("../../../../_runtime/metro/06019__.js").HeaderBackButton, {});
+    };
 export const getCommonErrorDetails = function getCommonErrorDetails(error_code) {
   if (-1 === error_code) {
     const _HermesInternal7 = HermesInternal;

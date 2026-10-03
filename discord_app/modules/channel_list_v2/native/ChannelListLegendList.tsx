@@ -8,7 +8,7 @@ require = fn;
 const jsxProd = fn(21);
 ({ Fragment: closure_4, jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let closure_7 = [];
-let closure_8 = { item: "disabled", positionPercentage: false };
+let closure_8 = { item: "done", positionPercentage: false };
 let closure_9 = { zIndex: 5 };
 let closure_10 = {
   code: "function ChannelListLegendListTsx1(event){const{scrollPosValue,onScrollWorklet,onScroll,runOnJS}=this.__closure;scrollPosValue.set(event.contentOffset.y);onScrollWorklet(event.contentOffset.y,event.contentSize.height,event.layoutMeasurement.height);if(onScroll!=null){runOnJS(onScroll)();}}",
@@ -82,7 +82,7 @@ export default noop.memo(
         return Math.max(0, Math.min(diff, contentSize + footerSize + insetEnd - listViewportHeight));
       }
     }, []);
-    const sharedValue = footerSize(4595).useSharedValue(memo);
+    const sharedValue = footerSize(4612).useSharedValue(memo);
     const ref1 = insetEnd.useRef(tmp3);
     ref1.current = tmp3;
     const ref2 = insetEnd.useRef(0);
@@ -107,7 +107,7 @@ export default noop.memo(
       obj.scrollPosValue = sharedValue;
       obj.getItems = function getItems() {
         const current = ref.current;
-        let state;
+        state = undefined;
         if (current != null) {
           state = current.getState();
         }
@@ -297,7 +297,7 @@ export default noop.memo(
     }, items);
     const items1 = [memo1];
     const imperativeHandle = insetEnd.useImperativeHandle(arg1, () => memo1, items1);
-    let obj = footerSize(4595);
+    let obj = footerSize(4612);
     const tmp5 = footerSize;
     class Q {
       constructor(arg0) {
@@ -316,12 +316,12 @@ export default noop.memo(
         return;
       }
     }
-    let obj2 = footerSize(4595);
-    Q.__closure = { scrollPosValue: sharedValue, onScrollWorklet, onScroll, runOnJS: footerSize(4595).runOnJS };
+    let obj2 = footerSize(4612);
+    Q.__closure = { scrollPosValue: sharedValue, onScrollWorklet, onScroll, runOnJS: footerSize(4612).runOnJS };
     Q.__workletHash = 11450141164730;
     Q.__initData = renderSectionHeader;
     const items2 = [renderItem, renderSectionFooter, renderSectionHeader];
-    const obj3 = { scrollPosValue: sharedValue, onScrollWorklet, onScroll, runOnJS: footerSize(4595).runOnJS };
+    const obj3 = { scrollPosValue: sharedValue, onScrollWorklet, onScroll, runOnJS: footerSize(4612).runOnJS };
     const callback = insetEnd.useCallback((item) => {
       item = item.item;
       const type = item.type;
@@ -349,7 +349,7 @@ export default noop.memo(
     const obj4 = { children: null };
     const animatedScrollHandler = obj2.useAnimatedScrollHandler(Q);
     const items6 = [
-      onScroll(tmp5(15948).AnimatedLegendList, {
+      onScroll(tmp5(16020).AnimatedLegendList, {
         ref,
         contentContainerStyle: memo3,
         data: tmp3.listData,
@@ -364,6 +364,7 @@ export default noop.memo(
         onEndReached,
         onEndReachedThreshold: num,
         onScroll: obj2.useAnimatedScrollHandler(Q),
+        recycleItems: true,
         renderItem: callback,
         scrollIndicatorInsets: memo4,
       }),

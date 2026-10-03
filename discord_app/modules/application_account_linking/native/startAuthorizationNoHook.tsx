@@ -15,7 +15,7 @@ let closure_5 = async function _startAuthorizationNoHook(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -78,7 +78,7 @@ let closure_5 = async function _startAuthorizationNoHook(arg0) {
     }
   }
 };
-const AnalyticEvents = fn(1074).AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_account_linking/native/startAuthorizationNoHook.tsx");
 

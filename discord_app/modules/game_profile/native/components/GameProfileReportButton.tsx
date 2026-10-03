@@ -1,5 +1,5 @@
 // discord_app/modules/game_profile/native/components/GameProfileReportButton.tsx
-import asyncRequireImpl from "../../../../../_runtime/01981_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import GameProfileAnalyticUtils from "../../GameProfileAnalyticUtils.tsx";
@@ -20,11 +20,11 @@ export default function GameProfileReportButton(applicationId) {
     trackAction(GameProfileAnalyticUtils.GameProfileTrackActionActions.Feedback);
     const obj2 = ModalActionCreatorsDefault;
     const obj3 = { applicationId };
-    obj2.pushLazy(asyncRequireImpl(8557, dependencyMap.paths), obj3, GameDetectionReportModal.MODAL_KEY);
+    obj2.pushLazy(asyncRequireImpl(8563, dependencyMap.paths), obj3, GameDetectionReportModal.MODAL_KEY);
   }, items);
   let obj = { variant: "secondary", size: "md", text: null, onPress: null };
-  const intl = applicationId(1115).intl;
-  obj.text = intl.string(applicationId(1115).t.qP2cXd);
+  const intl = applicationId(1126).intl;
+  obj.text = intl.string(applicationId(1126).t.qP2cXd);
   obj.onPress = callback;
-  return jsx(applicationId(5465).Button, { variant: "secondary", size: "md", text: null, onPress: null });
+  return jsx(applicationId(5594).Button, { variant: "secondary", size: "md", text: null, onPress: null });
 }

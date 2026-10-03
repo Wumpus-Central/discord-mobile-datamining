@@ -17,7 +17,7 @@ let result = size.fileFinishedImporting(
 
 export const receiveLocalNotification = function receiveLocalNotification(getData) {
   if (null != getData.getData) {
-    data(7083).trackAppOpened("notification");
+    data(6984).trackAppOpened("notification");
     data = getData.getData();
     let type = data.type;
     function dispatch() {
@@ -37,27 +37,27 @@ export const receiveLocalNotification = function receiveLocalNotification(getDat
         const result = GuildActionCreatorsDefault.transitionToGuildSync(data.guildId);
         const tmpResult = GuildActionCreatorsDefault;
       } else if (constants.CALL_RING === type) {
-        data(1981)(12655, dependencyMap.paths).then((result) => result.default(channelId.channelId));
-        const promise2 = data(1981)(12655, dependencyMap.paths);
+        data(1987)(12695, dependencyMap.paths).then((result) => result.default(channelId.channelId));
+        const promise2 = data(1987)(12695, dependencyMap.paths);
       } else if (constants.MESSAGE_SEND_FAILED === type) {
-        data(1981)(4856, dependencyMap.paths).then((transitionToMessage) => {
+        data(1987)(4901, dependencyMap.paths).then((transitionToMessage) => {
           ({ channelId, messageId } = closure_1_0);
           return transitionToMessage.transitionToMessage(channelId, messageId, {
-            jumpType: data(4772).JumpType.INSTANT,
+            jumpType: data(4787).JumpType.INSTANT,
           });
         });
-        const promise = data(1981)(4856, dependencyMap.paths);
+        const promise = data(1987)(4901, dependencyMap.paths);
       } else if (constants.VIBEGRATIONS === type) {
         if (null != data.guildId) {
           ({ guildId: data, projectId: closure_1 } = data);
-          data(1981)(1101, dependencyMap.paths).then((transitionTo) =>
+          data(1987)(1112, dependencyMap.paths).then((transitionTo) =>
             transitionTo.transitionTo(hasOwnProperty.CHANNEL(channelId, StaticChannelRoute.VIBEGRATIONS, closure_1_1)),
           );
-          const promise3 = data(1981)(1101, dependencyMap.paths);
+          const promise3 = data(1987)(1112, dependencyMap.paths);
         }
       }
     }
-    let obj2 = data(7083);
+    let obj2 = data(6984);
     if (obj.isDispatching()) {
       const _setImmediate = setImmediate;
       setImmediate(dispatch);

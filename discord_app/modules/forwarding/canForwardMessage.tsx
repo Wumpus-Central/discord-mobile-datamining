@@ -66,7 +66,7 @@ function canForwardMessage(state) {
       }
       let tmp8 = null == guild_id;
       if (!tmp8) {
-        const guild = obj4.getGuild(guild_id);
+        guild = obj4.getGuild(guild_id);
         let hasItem;
         if (guild != null) {
           const features = guild.features;
@@ -94,7 +94,7 @@ function canForwardMessage(state) {
     }
   }
 }
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({
   GuildFeatures: metroRequire,
   MessageFlags,
@@ -117,14 +117,39 @@ let closure_10 =
   MessageFlags.IS_COMPONENTS_V2 |
   MessageFlags.IS_GUILD_OFFICIAL |
   MessageFlags.IS_SCHEDULED;
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forwarding/canForwardMessage.tsx");
 
 export { canForwardMessage };
-export const useCanForwardMessage = function useCanForwardMessage(message) {
-  _require = message;
-  const items = [PermissionStore, GatedChannelStore, ChannelStore, GuildStore];
-  return require("initialize").useStateFromStores(items, () =>
-    canForwardMessage(closure_0, PermissionStore, GatedChannelStore, ChannelStore, GuildStore),
-  );
-};
+export const useCanForwardMessage = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      _require = arg0;
+      const cResult = require("c").c(3);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const items = [PermissionStore, GatedChannelStore, ChannelStore, GuildStore];
+        cResult[0] = items;
+        let first = items;
+      } else {
+        first = cResult[0];
+      }
+      if (cResult[1] !== arg0) {
+        const fn = function u() {
+          return canForwardMessage(closure_0, PermissionStore, GatedChannelStore, ChannelStore, GuildStore);
+        };
+        cResult[1] = arg0;
+        cResult[2] = fn;
+        let tmp9 = fn;
+      } else {
+        tmp9 = cResult[2];
+      }
+      const obj = require("c");
+      return require("initialize").useStateFromStores(first, tmp9);
+    }
+  : (arg0) => {
+      _require = arg0;
+      const items = [PermissionStore, GatedChannelStore, ChannelStore, GuildStore];
+      return require("initialize").useStateFromStores(items, () =>
+        canForwardMessage(closure_0, PermissionStore, GatedChannelStore, ChannelStore, GuildStore),
+      );
+    };

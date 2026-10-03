@@ -2,8 +2,8 @@
 import StatusConstants from "Status/native/StatusConstants.tsx";
 import BadgeConstants from "BadgeConstants/native/BadgeConstants.tsx";
 import Button_Button from "Button/native/Button.tsx";
-import OverlayView from "OverlayView/native/OverlayView.tsx";
 import Icon from "Icon/native/Icon.tsx";
+import OverlayView from "OverlayView/native/OverlayView.tsx";
 import Pressables from "Pressables/native/Pressables.tsx";
 import Form from "Form/native/index.tsx";
 import CardSectionDefault from "CardSection/native/CardSection.tsx";
@@ -51,8 +51,8 @@ import RefreshEmptyState from "RefreshEmptyState/native/RefreshEmptyState.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const Button_ButtonDefault = Button_Button;
-const OverlayViewDefault = OverlayView;
 const IconDefault = Icon;
+const OverlayViewDefault = OverlayView;
 const CutoutableAvatarImageDefault = CutoutableAvatarImage;
 const BetaTagDefault = BetaTag;
 const HelpMessageDefault = HelpMessage;

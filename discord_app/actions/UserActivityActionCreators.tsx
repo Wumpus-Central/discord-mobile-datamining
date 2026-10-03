@@ -47,7 +47,7 @@ let closure_6 = async function _getMetadata(arg0, arg1) {
     return body;
   })();
 };
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/UserActivityActionCreators.tsx");
 

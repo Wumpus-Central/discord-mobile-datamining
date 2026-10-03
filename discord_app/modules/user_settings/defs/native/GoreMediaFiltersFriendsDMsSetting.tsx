@@ -1,4 +1,5 @@
 // discord_app/modules/user_settings/defs/native/GoreMediaFiltersFriendsDMsSetting.tsx
+import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
 import SensitiveMediaGoreRedactionSettingsUtils from "../../../explicit_media_redaction/SensitiveMediaGoreRedactionSettingsUtils.tsx";
 import ExplicitMediaRedactionUtils from "../../../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
@@ -6,21 +7,61 @@ import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import useExplicitContentSettingsOrDefault from "../../../explicit_media_redaction/hooks/useExplicitContentSettingsOrDefault.tsx";
 import ExplicitMediaRedactionNativeUtils from "../../../explicit_media_redaction/native/ExplicitMediaRedactionNativeUtils.tsx";
 import useSensitiveMediaSettingDisabled from "../../../explicit_media_redaction/hooks/useSensitiveMediaSettingDisabled.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
+function getTitle() {
+  const intl = util.intl;
+  return intl.string(util.t["+uI23H"]);
+}
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = c.c(2);
+      const goreContentFriendDm =
+        useExplicitContentSettingsOrDefault.useGoreContentSettingOrDefault().goreContentFriendDm;
+      if (cResult[0] !== goreContentFriendDm) {
+        const tmp5 = ExplicitMediaRedactionUtils.redactionSettingToRenderedString(goreContentFriendDm)();
+        cResult[0] = goreContentFriendDm;
+        cResult[1] = tmp5;
+        let tmp4 = tmp5;
+        const tmpResult = ExplicitMediaRedactionUtils;
+      } else {
+        tmp4 = cResult[1];
+      }
+      return tmp4;
+    }
+  : () => {
+      const obj = useExplicitContentSettingsOrDefault;
+      return ExplicitMediaRedactionUtils.redactionSettingToRenderedString(
+        obj.useGoreContentSettingOrDefault().goreContentFriendDm,
+      )();
+    };
 const pressable = SettingBuilders.createPressable({
-  useTitle: function getTitle() {
-    const intl = util.intl;
-    return intl.string(util.t["+uI23H"]);
-  },
+  useTitle: getTitle,
   parent: SettingsConstants.MobileUserSettings.SENSITIVE_CONTENT_FILTERS,
-  useTrailing: function useGoreContentFriendsDmSettingValue() {
-    const obj = useExplicitContentSettingsOrDefault;
-    return ExplicitMediaRedactionUtils.redactionSettingToRenderedString(
-      obj.useGoreContentSettingOrDefault().goreContentFriendDm,
-    )();
-  },
+  useTrailing: ReactCompilerGating.isReactCompilerEnabled()
+    ? () => {
+        const cResult = c.c(2);
+        const goreContentFriendDm =
+          useExplicitContentSettingsOrDefault.useGoreContentSettingOrDefault().goreContentFriendDm;
+        if (cResult[0] !== goreContentFriendDm) {
+          const tmp5 = ExplicitMediaRedactionUtils.redactionSettingToRenderedString(goreContentFriendDm)();
+          cResult[0] = goreContentFriendDm;
+          cResult[1] = tmp5;
+          let tmp4 = tmp5;
+          const tmpResult = ExplicitMediaRedactionUtils;
+        } else {
+          tmp4 = cResult[1];
+        }
+        return tmp4;
+      }
+    : () => {
+        const obj = useExplicitContentSettingsOrDefault;
+        return ExplicitMediaRedactionUtils.redactionSettingToRenderedString(
+          obj.useGoreContentSettingOrDefault().goreContentFriendDm,
+        )();
+      },
   onPress: function onGoreContentFriendsDmOnPress() {
     const obj = SensitiveMediaGoreRedactionSettingsUtils;
     const obj3 = { title: null, subtitle: null, handlePress: null, currentValue: null };

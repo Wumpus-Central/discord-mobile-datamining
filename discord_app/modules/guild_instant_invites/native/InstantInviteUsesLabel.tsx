@@ -1,26 +1,52 @@
 // discord_app/modules/guild_instant_invites/native/InstantInviteUsesLabel.tsx
+import c from "../../../../_runtime/00576_c.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsxs = fn(21).jsxs;
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_instant_invites/native/InstantInviteUsesLabel.tsx");
 
-export default function InstantInviteUsesLabel(style) {
-  ({ uses, maxUses } = style);
-  let combined = uses;
-  if (0 !== maxUses) {
-    const _HermesInternal = HermesInternal;
-    combined = "" + uses + "/" + maxUses;
-  }
-  const obj = { variant: "text-md/semibold", color: "text-default", style: style.style, children: null };
-  const items = ["Uses: ", combined];
-  obj.children = items;
-  return jsxs(Text_Text.Text, {
-    variant: "text-md/semibold",
-    color: "text-default",
-    style: style.style,
-    children: null,
-  });
-}
+export default ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      const cResult = c.c(3);
+      ({ uses, maxUses, style } = arg0);
+      let combined = uses;
+      if (0 !== maxUses) {
+        const _HermesInternal = HermesInternal;
+        combined = "" + uses + "/" + maxUses;
+      }
+      if (cResult[0] === combined) {
+        if (cResult[1] === style) {
+          let tmp6 = cResult[2];
+        }
+        return tmp6;
+      }
+      const obj2 = { variant: "text-md/semibold", color: "text-default", style, children: null };
+      const items = ["Uses: ", combined];
+      obj2.children = items;
+      const tmp7 = jsxs(Text_Text.Text, { variant: "text-md/semibold", color: "text-default", style, children: null });
+      cResult[0] = combined;
+      cResult[1] = style;
+      cResult[2] = tmp7;
+      tmp6 = tmp7;
+    }
+  : (style) => {
+      ({ uses, maxUses } = style);
+      let combined = uses;
+      if (0 !== maxUses) {
+        const _HermesInternal = HermesInternal;
+        combined = "" + uses + "/" + maxUses;
+      }
+      const obj = { variant: "text-md/semibold", color: "text-default", style: style.style, children: null };
+      const items = ["Uses: ", combined];
+      obj.children = items;
+      return jsxs(Text_Text.Text, {
+        variant: "text-md/semibold",
+        color: "text-default",
+        style: style.style,
+        children: null,
+      });
+    };

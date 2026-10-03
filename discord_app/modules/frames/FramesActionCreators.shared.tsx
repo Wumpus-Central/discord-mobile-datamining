@@ -18,7 +18,7 @@ let closure_11 = async function _launchFrame(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -55,7 +55,7 @@ let closure_11 = async function _launchFrame(arg0) {
           closure_129_10 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "flex", done: null };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -257,7 +257,7 @@ let closure_16 = async function _refreshProxyTicket() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -398,7 +398,7 @@ let closure_16 = async function _refreshProxyTicket() {
     }
   })();
 };
-const FramesConstants = fn(8691);
+const FramesConstants = fn(8704);
 ({
   FrameIntent: hasOwnProperty,
   FrameLayoutModes: metroRequire,
@@ -406,7 +406,7 @@ const FramesConstants = fn(8691);
   getFrameIntentForSurface: closure_8,
   makeFrameId: closure_9,
 } = FramesConstants);
-const ActivityPanelModes = fn(8693).ActivityPanelModes;
+const ActivityPanelModes = fn(8705).ActivityPanelModes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/frames/FramesActionCreators.shared.tsx");
 
@@ -447,8 +447,8 @@ export const resetFrameLayoutModes = function resetFrameLayoutModes(frameId) {
   DispatcherDefault.dispatch({ type: "FRAME_SET_PANEL_MODE", frameId, activityPanelMode: ActivityPanelModes.PANEL });
   const obj4 = { type: "FRAME_SET_PANEL_MODE", frameId, activityPanelMode: ActivityPanelModes.PANEL };
 };
-export const attachFrameIframe = function attachFrameIframe(frameId, iframeId) {
-  DispatcherDefault.dispatch({ type: "FRAME_IFRAME_MOUNT", frameId, iframeId });
+export const attachFrameIframe = function attachFrameIframe(id, first1) {
+  DispatcherDefault.dispatch({ type: "FRAME_IFRAME_MOUNT", frameId: id, iframeId: first1 });
 };
 export const detachFrameIframe = function detachFrameIframe(frameId, iframeId) {
   DispatcherDefault.dispatch({ type: "FRAME_IFRAME_UNMOUNT", frameId, iframeId });

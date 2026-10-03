@@ -149,7 +149,7 @@ function syncAllExperimentFlags() {
     let tmp28 = evaluatedExperiments == null;
     let tmp29;
     if (!tmp28) {
-      const guild = evaluatedExperiments.guild;
+      guild = evaluatedExperiments.guild;
       tmp28 = guild == null;
       if (!tmp28) {
         tmp29 = guild[guildId];

@@ -12,10 +12,8 @@ const result = size.fileFinishedImporting("modules/quests/utils/QuestOrbMultipli
 
 export const QuestOrbMultiplierEligibilityType = obj;
 export const QuestOrbMultiplierSource = obj2;
-export const shouldReceiveQuestOrbMultiplier = function shouldReceiveQuestOrbMultiplier(
-  questOrbMultiplierEligibilityForUser,
-) {
-  return items.includes(questOrbMultiplierEligibilityForUser);
+export const shouldReceiveQuestOrbMultiplier = function shouldReceiveQuestOrbMultiplier(orbMultiplierEligibility) {
+  return items.includes(orbMultiplierEligibility);
 };
 export const getQuestOrbMultiplierSource = function getQuestOrbMultiplierSource(perks) {
   if (obj.canUseMoreQuestOrbs(perks)) {

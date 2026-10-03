@@ -5,56 +5,104 @@ import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore.t
 const require = globalThis.__r;
 
 const require = fn;
-const ContentDismissActionType = fn(2041).ContentDismissActionType;
+const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/dismissible_content/useSelectedDismissibleContentShared.tsx");
 
-export const useSelectedDismissibleContentShared = function useSelectedDismissibleContentShared(arg0, arg1) {
+export const useSelectedDismissibleContentShared = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2, arg3) => {
   _require = arg0;
   dependencyMap = arg1;
-  if (flag === undefined) {
+  noop = arg3;
+  const cResult = require("c").c(9);
+  if (cResult[0] === (undefined !== arg2 && arg2)) {
+    if (cResult[1] === arg0) {
+      let tmp5 = cResult[2];
+    }
+    closure_3 = tmp5;
+    if (cResult[3] === arg3) {
+      if (cResult[4] === arg1) {
+        if (cResult[5] === tmp5) {
+          if (cResult[6] === arg0) {
+            let tmp7 = cResult[7];
+            let tmp8 = cResult[8];
+          }
+          const effect = noop.useEffect(tmp7, tmp8);
+          class D {
+            constructor() {
+              return () => { ... };
+            }
+          }
+        }
+      }
+    }
+    class D {
+      constructor() {
+        return () => { ... };
+      }
+    }
+    const items = [tmp5, arg1, arg0, arg3];
+    cResult[3] = arg3;
+    cResult[4] = arg1;
+    cResult[5] = tmp5;
+    cResult[6] = arg0;
+    cResult[7] = D;
+    cResult[8] = items;
+    tmp8 = items;
+    tmp7 = D;
+  }
+  let tmp6 = null != arg0 && !tmp4;
+  if (tmp6) {
+    const CONTENT_TYPES_WITH_BYPASS_FATIGUE = require("DismissibleContentFatigueConfig").CONTENT_TYPES_WITH_BYPASS_FATIGUE;
+    tmp6 = !CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(arg0);
+  }
+  cResult[0] = undefined !== arg2 && arg2;
+  cResult[1] = arg0;
+  cResult[2] = tmp6;
+  tmp5 = tmp6;
+}) : ((arg0, arg1) => {
+  _require = arg0;
+  dependencyMap = arg1;
+  let flag = arg2;
+  if (arg2 === undefined) {
     flag = false;
   }
-  noop = id;
+  noop = arg3;
   closure_3 = undefined;
   let tmp = null != arg0 && !flag;
   if (tmp) {
-    const CONTENT_TYPES_WITH_BYPASS_FATIGUE =
-      require("DismissibleContentFatigueConfig").CONTENT_TYPES_WITH_BYPASS_FATIGUE;
+    const CONTENT_TYPES_WITH_BYPASS_FATIGUE = require("DismissibleContentFatigueConfig").CONTENT_TYPES_WITH_BYPASS_FATIGUE;
     tmp = !CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(arg0);
   }
   closure_3 = tmp;
-  const items = [tmp, arg1, arg0, id];
-  const effect = noop.useEffect(
-    () => () => {
-      let tmp = closure_1_3;
-      if (closure_1_3) {
-        lastDismissed = lastDismissed.lastDismissed;
-        let content;
-        if (lastDismissed != null) {
-          content = lastDismissed.content;
-        }
-        let tmp6 = content !== closure_1_0;
-        if (!tmp6) {
-          let result = closure_0(2030).isGuildDismissibleContent(tmp5);
-          if (result) {
-            const lastDismissed2 = tmp2.lastDismissed;
-            let guildId;
-            if (lastDismissed2 != null) {
-              guildId = lastDismissed2.guildId;
-            }
-            result = guildId !== id;
+  const items = [tmp, arg1, arg0, arg3];
+  const effect = noop.useEffect(() => () => {
+    let tmp = closure_1_3;
+    if (closure_1_3) {
+      lastDismissed = lastDismissed.lastDismissed;
+      let content;
+      if (lastDismissed != null) {
+        content = lastDismissed.content;
+      }
+      let tmp6 = content !== closure_1_0;
+      if (!tmp6) {
+        let result = closure_0(2037).isGuildDismissibleContent(tmp5);
+        if (result) {
+          const lastDismissed2 = tmp2.lastDismissed;
+          let guildId;
+          if (lastDismissed2 != null) {
+            guildId = lastDismissed2.guildId;
           }
-          tmp6 = result;
-          const obj = closure_0(2030);
+          result = guildId !== closure_1_2;
         }
-        tmp = tmp6;
-        tmp2 = lastDismissed;
+        tmp6 = result;
+        const obj = closure_0(2037);
       }
-      if (tmp) {
-        dependencyMap(constants.AUTO_DISMISS, true);
-      }
-    },
-    items,
-  );
-};
+      tmp = tmp6;
+      tmp2 = lastDismissed;
+    }
+    if (tmp) {
+      dependencyMap(constants.AUTO_DISMISS, true);
+    }
+  }, items);
+});

@@ -1,6 +1,8 @@
 // discord_app/modules/collectibles/experiments/OneDayFractionalNitroExperiment.tsx
+import c from "../../../../_runtime/00576_c.js";
 import PremiumGroupExperimentDefault from "../../premium/experiments/PremiumGroupExperiment.tsx";
 import ApexExperiment from "../../experiments/apex/index.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const apexExperiment = ApexExperiment.createApexExperiment({
@@ -12,11 +14,31 @@ const apexExperiment = ApexExperiment.createApexExperiment({
 const result = size.fileFinishedImporting("modules/collectibles/experiments/OneDayFractionalNitroExperiment.tsx");
 
 export default apexExperiment;
-export const useOneDayFractionalNitroEnabled = function useOneDayFractionalNitroEnabled(product_card) {
-  const obj = { location: product_card };
-  const obj2 = { location: product_card };
-  const tmp = PremiumGroupExperimentDefault({ location: product_card });
-  return (
-    apexExperiment.useConfig({ location: product_card }) && !PremiumGroupExperimentDefault({ location: product_card })
-  );
-};
+export const useOneDayFractionalNitroEnabled = ReactCompilerGating.isReactCompilerEnabled()
+  ? (location) => {
+      const cResult = c.c(4);
+      if (cResult[0] !== location) {
+        const obj2 = { location };
+        cResult[0] = location;
+        cResult[1] = obj2;
+        let tmp3 = obj2;
+      } else {
+        tmp3 = cResult[1];
+      }
+      if (cResult[2] !== location) {
+        const obj3 = { location };
+        cResult[2] = location;
+        cResult[3] = obj3;
+        let tmp5 = obj3;
+      } else {
+        tmp5 = cResult[3];
+      }
+      const tmp4 = PremiumGroupExperimentDefault(tmp3);
+      return apexExperiment.useConfig(tmp5) && !PremiumGroupExperimentDefault(tmp3);
+    }
+  : (location) => {
+      const obj = { location };
+      const obj2 = { location };
+      const tmp = PremiumGroupExperimentDefault({ location });
+      return apexExperiment.useConfig({ location }) && !PremiumGroupExperimentDefault({ location });
+    };

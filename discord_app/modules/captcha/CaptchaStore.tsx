@@ -7,8 +7,8 @@ import _slicedToArray from "../../../_runtime/metro/00032__.js";
 const require = globalThis.__r;
 
 require = fn;
-const module_560 = fn(560);
-let obj3 = module_560.create(() => ({ captchaServeVolume: {} }));
+const module_570 = fn(570);
+let obj3 = module_570.create(() => ({ captchaServeVolume: {} }));
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/captcha/CaptchaStore.tsx");
 

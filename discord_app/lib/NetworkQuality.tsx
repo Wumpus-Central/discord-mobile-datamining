@@ -3,7 +3,7 @@ import TimeUtils from "../../discord_common/js/packages/time-utils/TimeUtils.tsx
 import NetworkStore from "../stores/NetworkStore.tsx";
 
 require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ NetworkConnectionTypes: c3, NetworkConnectionSpeeds: closure_4 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("lib/NetworkQuality.tsx");

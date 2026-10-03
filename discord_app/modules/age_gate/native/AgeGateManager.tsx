@@ -8,9 +8,9 @@ import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const AgeGateConstants = fn(1099);
+const AgeGateConstants = fn(1110);
 ({ EXISTING_USER_AGE_GATE_MODAL_KEY: closure_7, AgeGateSource: closure_8 } = AgeGateConstants);
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ ChannelTypes: closure_9, GuildNSFWContentLevel: c10 } = Constants);
 class AgeGateManager extends tmp4 {
   constructor() {

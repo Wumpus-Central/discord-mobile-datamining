@@ -2,7 +2,7 @@
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
-const Permissions = fn(1074).Permissions;
+const Permissions = fn(1085).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_sorting/canManageChannelList.tsx");
 

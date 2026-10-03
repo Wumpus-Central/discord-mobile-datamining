@@ -5,9 +5,9 @@ import NativePermissionUtilsDefault from "../../../native_permissions/NativePerm
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-const NativePermissionTypes = fn(5054).NativePermissionTypes;
+const NativePermissionTypes = fn(5099).NativePermissionTypes;
 const apply = fn(12);
-const SettingBuilders = fn(11215);
+const SettingBuilders = fn(11129);
 const debounceResult = apply.debounce(
   asyncGeneratorStep(async () => {
     if (c3 === 2) {
@@ -20,7 +20,7 @@ const debounceResult = apply.debounce(
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -88,7 +88,7 @@ const pressable = SettingBuilders.createPressable({
     return intl.string(util.t.RC0kJz);
   },
   parent: null,
-  IconComponent: fn(14630).QrCodeIcon,
+  IconComponent: fn(14686).QrCodeIcon,
   onPress: apply.debounce(
     asyncGeneratorStep(async () => {
       if (c3 === 2) {
@@ -101,7 +101,7 @@ const pressable = SettingBuilders.createPressable({
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {

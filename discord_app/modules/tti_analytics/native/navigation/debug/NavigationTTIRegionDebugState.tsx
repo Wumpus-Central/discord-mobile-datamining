@@ -25,11 +25,11 @@ export const recordNavigationTTIRegionDebugMeasurement = function recordNavigati
 };
 export const getNavigationTTIRegionDebugMeasurement = function getNavigationTTIRegionDebugMeasurement(
   activeTraceId,
-  navTTISurface,
+  regionId,
 ) {
   let tmp = null;
   if (activeTraceId === global) {
-    value = map.get(navTTISurface);
+    value = map.get(regionId);
     if (value == null) {
       value = null;
     }

@@ -14,7 +14,7 @@ let closure_6 = async function _openSafetyFlow() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -40,7 +40,7 @@ let closure_6 = async function _openSafetyFlow() {
           closure_130_2 = undefined;
           c6 = 1;
           c7 = 1;
-          return { value: "flex", done: null };
+          return { value: "Reflect", done: true };
         }
       } else {
         if (1 === tmp7) {
@@ -94,7 +94,7 @@ let closure_6 = async function _openSafetyFlow() {
                 if (null == closure_130_1) {
                   c5 = 0;
                   c7 = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 }
               }
             } else if (4 === tmp7) {
@@ -125,7 +125,7 @@ let closure_6 = async function _openSafetyFlow() {
               if (null == value) {
                 c5 = 0;
                 c7 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             }
             closure_130_2 = (function getInitialScreenForTask(task_type) {
@@ -170,7 +170,7 @@ let closure_6 = async function _openSafetyFlow() {
     }
   }
 };
-const UserRequiredActions = fn(1074).UserRequiredActions;
+const UserRequiredActions = fn(1085).UserRequiredActions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_flows/openSafetyFlow.native.tsx");
 

@@ -56,7 +56,7 @@ let closure_11 = async function _buildOverride(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       while (true) {
@@ -224,18 +224,18 @@ let closure_11 = async function _buildOverride(arg0) {
   })();
 };
 const Image = fn(17).Image;
-const FrameOverrideConstants = fn(7831);
+const FrameOverrideConstants = fn(7875);
 ({ MANIFEST_NAME: hasOwnProperty, OVERRIDE_DIR: metroRequire } = FrameOverrideConstants);
 let closure_7 = new LoggerDefault("FramePreviewOverrideStore");
 let closure_8 = 0;
-const module_560 = fn(560);
+const module_570 = fn(570);
 const tmp3 = new LoggerDefault("FramePreviewOverrideStore");
 let size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/collectibles/profile_frames/native/tooling/FramePreviewOverrideStore.tsx",
 );
 
-export const useFramePreviewOverrideStore = module_560.create((arg0) => {
+export const useFramePreviewOverrideStore = module_570.create((arg0) => {
   closure_0 = arg0;
   let obj = { override: null, status: "idle", error: null, loadFromDevice: null, clear: null };
   closure_1 = asyncGeneratorStep(async () => {
@@ -249,7 +249,7 @@ export const useFramePreviewOverrideStore = module_560.create((arg0) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -296,7 +296,7 @@ export const useFramePreviewOverrideStore = module_560.create((arg0) => {
           closure_128_5 = closure_2;
           if (closure_128_1()) {
             c5 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           } else {
             const _Error = Error;
             if (closure_128_5 instanceof Error) {
@@ -324,7 +324,7 @@ export const useFramePreviewOverrideStore = module_560.create((arg0) => {
             if (closure_128_1()) {
               c3 = 0;
               c5 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             } else if (null == closure_128_2) {
               closure_129_0({
                 status: "error",
@@ -371,7 +371,7 @@ export const useFramePreviewOverrideStore = module_560.create((arg0) => {
           }
           c3 = 0;
           c5 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp44) {
         closure_2 = tmp44;

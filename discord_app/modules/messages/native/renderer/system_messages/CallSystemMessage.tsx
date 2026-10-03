@@ -10,8 +10,8 @@ import AuthenticationStore from "../../../../../stores/AuthenticationStore.tsx";
 import VoiceStateStore from "../../../../../stores/VoiceStateStore.tsx";
 
 require = fn;
-const ME = fn(1074).ME;
-const ParticipantTypes = fn(4866).ParticipantTypes;
+const ME = fn(1085).ME;
+const ParticipantTypes = fn(4911).ParticipantTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/CallSystemMessage.tsx");
 

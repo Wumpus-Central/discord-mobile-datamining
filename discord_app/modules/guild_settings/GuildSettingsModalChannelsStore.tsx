@@ -122,16 +122,16 @@ function buildSortedChannels() {
   const arr3 = getFlattedChannelListDefault(_null._categories, _null);
 }
 let closure_3 = ["lock_permissions", "id"];
-const ChannelRecord = fn(2048);
+const ChannelRecord = fn(2055);
 ({
   castChannelRecord: hasOwnProperty,
   isGuildSelectableChannelType: metroRequire,
   isGuildVocalChannelType: closure_7,
 } = ChannelRecord);
-let GuildChannelStore = fn(4496);
+let GuildChannelStore = fn(4507);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: closure_8, GUILD_VOCAL_CHANNELS_KEY: closure_9 } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ ChannelTypes: closure_12, Permissions: map1 } = Constants);
 let c14 = null;
 let closure_15 = null;

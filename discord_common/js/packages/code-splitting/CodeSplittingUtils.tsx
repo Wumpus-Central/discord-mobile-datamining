@@ -1,4 +1,6 @@
 // discord_common/js/packages/code-splitting/CodeSplittingUtils.tsx
+import ReactCompilerGating from "../../../../discord_app/modules/react_compiler/ReactCompilerGating.tsx";
+import c from "../../../../_runtime/00576_c.js";
 import importWithRetry from "importWithRetry.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -32,37 +34,58 @@ export const makeLazy = function makeLazy(memo) {
     flag = false;
   }
   closure_4 = name.lazy(() => importWithRetry.importWithRetry({ createPromise, webpackId, name }));
-  class Wrapper {
-    constructor(arg0) {
-      tmp = jsx;
-      if (null != renderLoader) {
-        tmp2Result = tmp2();
-      } else {
-        tmp3 = loaderMaker;
-        if (typeof loaderMaker === "function") {
-          str = "transparent";
-          transparent = "transparent";
-          obj = { style: null };
-          size = { position: "absolute", width: "100%", height: "100%", backgroundColor: null };
-          size.backgroundColor = "transparent";
-          obj.style = size;
-          str2 = "div";
-          tmp2Result = tmp("div", obj);
+  const tmp = ReactCompilerGating.isReactCompilerEnabled()
+    ? (arg0) => {
+        const cResult = c.c(3);
+        if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+          if (null != _slicedToArray) {
+            let tmp6 = _slicedToArray();
+          } else if (typeof loaderMaker === "function") {
+            const transparent = "transparent";
+            const obj2 = { style: null };
+            const size = { position: "absolute", width: "100%", height: "100%", backgroundColor: "transparent" };
+            obj2.style = size;
+            tmp6 = React4("div", obj2);
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+          cResult[0] = tmp6;
         } else {
-          str3 = "Trying to call a non-function";
-          throw new TypeError("Trying to call a non-function");
+          if (cResult[1] !== arg0) {
+            const obj3 = { fallback: tmp2, children: null };
+            const obj4 = {};
+            const merged = Object.assign(arg0);
+            obj3.children = React4(closure_4, obj4);
+            const tmp16 = React4(noop.Suspense, obj3);
+            cResult[1] = arg0;
+            cResult[2] = tmp16;
+            let tmp9 = tmp16;
+          } else {
+            tmp9 = cResult[2];
+          }
+          return tmp9;
         }
       }
-      obj1 = { fallback: tmp2Result, children: null };
-      obj5 = {};
-      merged = Object.assign(memo);
-      obj1.children = tmp(closure_4, obj5);
-      return tmp(closure_3.Suspense, obj1);
-    }
-  }
-  let memoResult = Wrapper;
+    : (arg0) => {
+        if (null != _slicedToArray) {
+          let tmpResult = tmp2();
+        } else if (typeof loaderMaker === "function") {
+          const transparent = "transparent";
+          const obj = { style: null };
+          const size = { position: "absolute", width: "100%", height: "100%", backgroundColor: "transparent" };
+          obj.style = size;
+          tmpResult = React4("div", obj);
+        } else {
+          throw new TypeError("Trying to call a non-function");
+        }
+        const obj2 = { fallback: tmpResult, children: null };
+        const merged = Object.assign(arg0);
+        obj2.children = React4(closure_4, {});
+        return React4(noop.Suspense, obj2);
+      };
+  let memoResult = tmp;
   if (flag) {
-    memoResult = name.memo(Wrapper);
+    memoResult = name.memo(tmp);
   }
   if (!name) {
     name = "Unknown";
@@ -88,56 +111,94 @@ export const makeLazyWithPreload = function makeLazyWithPreload(arg0) {
     }
     return closure_3;
   });
-  class Wrapper {
-    constructor(arg0) {
-      tmp = closure_3;
-      first = closure_2(
-        closure_3.useState(() => closure_1_4),
-        1,
-      )[0];
-      if (null != first) {
-        tmp10 = jsx;
-        obj1 = {};
-        tmp11 = obj1;
-        tmp12 = arg0;
-        merged = Object.assign(arg0);
-        tmp14Result1 = jsx(first, obj1);
-      } else {
-        tmp14 = jsx;
-        if (null != renderLoader) {
-          tmp14Result = renderLoader();
+  const tmp = ReactCompilerGating.isReactCompilerEnabled()
+    ? (arg0) => {
+        const cResult = c.c(7);
+        if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+          const fn = function c() {
+            return closure_1_4;
+          };
+          cResult[0] = fn;
+          let first = fn;
         } else {
-          tmp3 = loaderMaker;
-          if (typeof loaderMaker === "function") {
-            str = "transparent";
-            transparent = "transparent";
-            obj = { style: null };
-            size = { position: "absolute", width: "100%", height: "100%", backgroundColor: null };
-            size.backgroundColor = "transparent";
-            obj.style = size;
-            str2 = "div";
-            tmp14Result = tmp14("div", obj);
+          first = cResult[0];
+        }
+        let num2 = 1;
+        const first1 = _slicedToArray(noop.useState(first), 1)[0];
+        if (null != first1) {
+          if (cResult[1] === first1) {
+          }
+          const obj2 = {};
+          const merged = Object.assign(arg0);
+          const tmp22 = React4(first1, obj2);
+          cResult[num2] = first1;
+          cResult[2] = arg0;
+          num2 = 3;
+          cResult[3] = tmp22;
+        } else {
+          const _Symbol = Symbol;
+          if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+            if (null != closure_1_2) {
+              let tmp8 = closure_1_2();
+            } else if (typeof loaderMaker === "function") {
+              const transparent = "transparent";
+              const obj3 = { style: null };
+              const size = { position: "absolute", width: "100%", height: "100%", backgroundColor: "transparent" };
+              obj3.style = size;
+              tmp8 = React4("div", obj3);
+            } else {
+              throw new TypeError("Trying to call a non-function");
+            }
+            cResult[4] = tmp8;
           } else {
-            str3 = "Trying to call a non-function";
-            throw new TypeError("Trying to call a non-function");
+            if (cResult[5] !== arg0) {
+              const obj4 = { fallback: tmp5, children: null };
+              const obj5 = {};
+              const merged1 = Object.assign(arg0);
+              obj4.children = React4(closure_5, obj5);
+              const tmp16 = React4(noop.Suspense, obj4);
+              cResult[5] = arg0;
+              cResult[6] = tmp16;
+              let tmp10 = tmp16;
+            } else {
+              tmp10 = cResult[6];
+            }
+            return tmp10;
           }
         }
-        obj6 = { fallback: null, children: null };
-        obj6.fallback = tmp14Result;
-        tmp5 = closure_5;
-        obj7 = {};
-        tmp6 = obj7;
-        tmp7 = arg0;
-        merged1 = Object.assign(arg0);
-        obj6.children = tmp14(closure_5, obj7);
-        tmp14Result1 = tmp14(tmp.Suspense, obj6);
       }
-      return tmp14Result1;
-    }
-  }
-  let memoResult = Wrapper;
+    : (arg0) => {
+        const first = _slicedToArray(
+          noop.useState(() => closure_1_4),
+          1,
+        )[0];
+        if (null != first) {
+          const obj2 = {};
+          const merged = Object.assign(arg0);
+          let tmp14Result2 = React4(first, obj2);
+        } else {
+          if (null != closure_1_2) {
+            let tmp14Result = closure_1_2();
+          } else if (typeof loaderMaker === "function") {
+            const transparent = "transparent";
+            const obj = { style: null };
+            const size = { position: "absolute", width: "100%", height: "100%", backgroundColor: "transparent" };
+            obj.style = size;
+            tmp14Result = React4("div", obj);
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+          const obj3 = { fallback: tmp14Result, children: null };
+          const obj4 = {};
+          const merged1 = Object.assign(arg0);
+          obj3.children = React4(closure_5, obj4);
+          tmp14Result2 = React4(noop.Suspense, obj3);
+        }
+        return tmp14Result2;
+      };
+  let memoResult = tmp;
   if (memo) {
-    memoResult = noop.memo(Wrapper);
+    memoResult = noop.memo(tmp);
   }
   if (!name) {
     name = "Unknown";

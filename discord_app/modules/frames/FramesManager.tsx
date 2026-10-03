@@ -6,9 +6,9 @@ import FramesStore from "FramesStore.tsx";
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AnalyticEvents: closure_4, RPCCloseCodes: hasOwnProperty } = Constants);
-const TransportTypes = fn(5270).TransportTypes;
+const TransportTypes = fn(5316).TransportTypes;
 class FramesManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -19,14 +19,14 @@ class FramesManager extends tmp3 {
       },
       FRAME_LAUNCH(arg0) {
         ({ applicationId, analyticsContext } = arg0);
-        const result = applyArgumentsResult(8947).trackFrameSessionStart(applicationId, analyticsContext);
+        const result = applyArgumentsResult(8981).trackFrameSessionStart(applicationId, analyticsContext);
       },
       FRAME_LAUNCH_FAIL(arg0) {
         ({ applicationId, error, analyticsContext } = arg0);
-        const result = applyArgumentsResult(8947).trackFrameSessionStartFailed(applicationId, error, analyticsContext);
+        const result = applyArgumentsResult(8981).trackFrameSessionStartFailed(applicationId, error, analyticsContext);
       },
       FRAME_STOP(applicationId) {
-        applyArgumentsResult(8947).trackFrameSessionEnd(applicationId.applicationId);
+        applyArgumentsResult(8981).trackFrameSessionEnd(applicationId.applicationId);
       },
       VOICE_CHANNEL_SELECT(arg0) {
         const result = applyArgumentsResult.handleVoiceChannelSelect(arg0);
@@ -36,6 +36,22 @@ class FramesManager extends tmp3 {
         for (const item10010 of framesForChannel) {
           let leaveFrameResult = applyArgumentsResult.leaveFrame(item10010.id);
           continue;
+        }
+      },
+      GUILD_DELETE(guild) {
+        guild = guild.guild;
+        if (!("unavailable" in guild)) {
+          const allFrames = FramesStore.getAllFrames();
+          for (const item10014 of allFrames) {
+            let tmp8 = item10014.surface.type !== EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN;
+            if (tmp8) {
+              tmp8 = item10014.surface.guildId === guild.id;
+            }
+            if (tmp8) {
+              let leaveFrameResult = applyArgumentsResult.leaveFrame(item10014.id);
+            }
+            continue;
+          }
         }
       },
       CHANNEL_UPDATES(arg0) {

@@ -32,7 +32,7 @@ let closure_5 = async function _mintTicket() {
     return obj7;
   })();
 };
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsWorkerTickets.tsx");
 

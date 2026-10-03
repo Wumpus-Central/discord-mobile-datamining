@@ -1,6 +1,7 @@
 // discord_app/modules/user_settings/defs/native/SafetyGuildSettingGuildSelect.tsx
+import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01981_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import useDMPermissionsOverrideCount from "../../privacy_and_safety/useDMPermissionsOverrideCount.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -8,51 +9,135 @@ import SortedGuildStore from "../../../../stores/SortedGuildStore.tsx";
 import UserSettingSearchStore from "../../UserSettingSearchStore.tsx";
 
 require = fn;
-const UserSettingsSafetySelectedGuildStore = fn(15711);
+const UserSettingsSafetySelectedGuildStore = fn(15774);
 ({
   getSelectedGuildId: metroRequire,
   GUILD_SELECT_ALL_SERVERS_OPTION_ID: closure_7,
   setSelectedGuildId: closure_8,
   useUserSafetySettingsSelectedGuildStore: closure_9,
 } = UserSettingsSafetySelectedGuildStore);
-const MobileUserSettings = fn(7590).MobileUserSettings;
+const MobileUserSettings = fn(7634).MobileUserSettings;
 let items = [,];
 ({ GUILD_SETTING_ACTIVITY_STATUS: arr[0], GUILD_SETTING_ACTIVITY_JOINING: arr[1] } = MobileUserSettings);
-const SettingBuilders = fn(11215);
-const guildSelector = SettingBuilders.createGuildSelector({
-  unsearchable: true,
-  useSelectedGuildId() {
-    const field = UserSettingSearchStore.useField("selected");
-    items = [field];
-    const effect = noop.useEffect(() => {
-      const first = SortedGuildStore.getFlattenedGuildIds()[0];
-      let hasItem = items.includes(field);
-      if (hasItem) {
-        hasItem = null != first;
+fn(558);
+const ReactCompilerGating = fn(558);
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = field(576).c(3);
+      field = UserSettingSearchStore.useField("selected");
+      if (cResult[0] !== field) {
+        const fn = function s() {
+          const first = SortedGuildStore.getFlattenedGuildIds()[0];
+          let hasItem = items.includes(field);
+          if (hasItem) {
+            hasItem = null != first;
+          }
+          if (hasItem) {
+            hasItem = timestampProducer() === React5;
+          }
+          if (hasItem) {
+            closure_2_8(first);
+          }
+        };
+        items = [field];
+        cResult[0] = field;
+        cResult[1] = fn;
+        cResult[2] = items;
+        let tmp4 = items;
+        let tmp3 = fn;
+      } else {
+        tmp3 = cResult[1];
+        tmp4 = cResult[2];
       }
-      if (hasItem) {
-        hasItem = timestampProducer() === React5;
-      }
-      if (hasItem) {
-        React6(first);
-      }
-    }, items);
-    return closure_9().selectedGuildId;
-  },
-  useDescription() {
-    const dMPermissionsOverrideCount = useDMPermissionsOverrideCount.useDMPermissionsOverrideCount();
-    if (React7().selectedGuildId === React5) {
-      if (0 !== dMPermissionsOverrideCount) {
-        const intl = util.intl;
-        const obj2 = { count: dMPermissionsOverrideCount };
-        return intl.format(util.t.eugFxh, obj2);
+      const effect = noop.useEffect(tmp3, tmp4);
+      return closure_9().selectedGuildId;
+    }
+  : () => {
+      const field = UserSettingSearchStore.useField("selected");
+      items = [field];
+      const effect = noop.useEffect(() => {
+        const first = SortedGuildStore.getFlattenedGuildIds()[0];
+        let hasItem = items.includes(field);
+        if (hasItem) {
+          hasItem = null != first;
+        }
+        if (hasItem) {
+          hasItem = timestampProducer() === React5;
+        }
+        if (hasItem) {
+          closure_2_8(first);
+        }
+      }, items);
+      return closure_9().selectedGuildId;
+    };
+const SettingBuilders = fn(11129);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = c.c(2);
+      const dMPermissionsOverrideCount = useDMPermissionsOverrideCount.useDMPermissionsOverrideCount();
+      if (options().selectedGuildId === React5) {
+        if (0 !== dMPermissionsOverrideCount) {
+          if (cResult[0] !== dMPermissionsOverrideCount) {
+            const intl = util.intl;
+            const obj3 = { count: dMPermissionsOverrideCount };
+            const formatResult = intl.format(util.t.eugFxh, obj3);
+            cResult[0] = dMPermissionsOverrideCount;
+            cResult[1] = formatResult;
+            let tmp5 = formatResult;
+          } else {
+            tmp5 = cResult[1];
+          }
+          return tmp5;
+        }
       }
     }
-  },
+  : () => {
+      const dMPermissionsOverrideCount = useDMPermissionsOverrideCount.useDMPermissionsOverrideCount();
+      if (options().selectedGuildId === React5) {
+        if (0 !== dMPermissionsOverrideCount) {
+          const intl = util.intl;
+          const obj2 = { count: dMPermissionsOverrideCount };
+          return intl.format(util.t.eugFxh, obj2);
+        }
+      }
+    };
+const guildSelector = SettingBuilders.createGuildSelector({
+  unsearchable: true,
+  useSelectedGuildId: tmp3,
+  useDescription: ReactCompilerGating.isReactCompilerEnabled()
+    ? () => {
+        const cResult = c.c(2);
+        const dMPermissionsOverrideCount = useDMPermissionsOverrideCount.useDMPermissionsOverrideCount();
+        if (options().selectedGuildId === React5) {
+          if (0 !== dMPermissionsOverrideCount) {
+            if (cResult[0] !== dMPermissionsOverrideCount) {
+              const intl = util.intl;
+              const obj3 = { count: dMPermissionsOverrideCount };
+              const formatResult = intl.format(util.t.eugFxh, obj3);
+              cResult[0] = dMPermissionsOverrideCount;
+              cResult[1] = formatResult;
+              let tmp5 = formatResult;
+            } else {
+              tmp5 = cResult[1];
+            }
+            return tmp5;
+          }
+        }
+      }
+    : () => {
+        const dMPermissionsOverrideCount = useDMPermissionsOverrideCount.useDMPermissionsOverrideCount();
+        if (options().selectedGuildId === React5) {
+          if (0 !== dMPermissionsOverrideCount) {
+            const intl = util.intl;
+            const obj2 = { count: dMPermissionsOverrideCount };
+            return intl.format(util.t.eugFxh, obj2);
+          }
+        }
+      },
   parent: MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   onPress: function onGuildSelectPress() {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(15712, dependencyMap.paths),
+      asyncRequireImpl(15775, dependencyMap.paths),
       "SettingsPrivacyAndSafetyGuildSelectActionSheet",
     );
   },

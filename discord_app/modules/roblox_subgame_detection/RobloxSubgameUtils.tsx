@@ -12,7 +12,7 @@ let closure_6 = async function _openRobloxURLWithRootPlaceId() {
   await closure_130_1(closure_130_2[5])(closure_129_0);
   return value;
 };
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ DistributorNames: closure_4, Distributors: hasOwnProperty } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/roblox_subgame_detection/RobloxSubgameUtils.tsx");

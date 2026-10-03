@@ -11,7 +11,7 @@ import getTagPropertiesDefault from "../getTagProperties.tsx";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 
 require = fn;
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 const nativeStyleProperties = createStyles.createNativeStyleProperties({
   automodUsernameColor: nativeDefault.colors.TEXT_BRAND,
 });
@@ -65,7 +65,7 @@ export const createGuildAlertModeDisabledSystemMessage = function createGuildAle
   let automodUsernameColor = nativeStyleProperties(theme).automodUsernameColor;
   const tmp2 = resolveMessageContentColorsDefault(theme);
   const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
-  const obj3 = { message, channel: "HermesInternal", isSystemDM: null, colors: tmp2 };
+  const obj3 = { message, channel: "IconComponent", isSystemDM: null, colors: tmp2 };
   const obj2 = {
     username: messageAuthorWithProcessedColor.nick,
     usernameOnClick: formatUsernameOnClickDefault({

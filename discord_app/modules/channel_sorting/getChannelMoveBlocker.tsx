@@ -15,7 +15,7 @@ export default function getChannelMoveBlocker(getGuildId, guildId) {
   if (obj.isFavoritesGuildId(guildId)) {
     return null;
   } else {
-    const guild = GuildStore.getGuild(getGuildId.getGuildId());
+    guild = GuildStore.getGuild(getGuildId.getGuildId());
     if (null != guild) {
       const tmp8 = canManageChannelListDefault;
       if (tmp8(tmpResult.getContainingCategory(getGuildId), guild)) {

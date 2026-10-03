@@ -3,7 +3,7 @@ import GuildRoleStore from "../../stores/GuildRoleStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 import BigFlagUtils from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ ChannelTypes, Permissions } = Constants);
 let items = [, , , , , ,];
 ({
@@ -22,7 +22,7 @@ const result = size.fileFinishedImporting("modules/channel/getConnectionsRoles.t
 export default function getConnectionsRoles(type) {
   if (null != type) {
     if (items.includes(type.type)) {
-      const guild = GuildStore.getGuild(type.guild_id);
+      guild = GuildStore.getGuild(type.guild_id);
       if (null == guild) {
         items = [];
       } else {

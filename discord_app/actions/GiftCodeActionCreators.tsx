@@ -29,7 +29,7 @@ let closure_11 = async function _resolveGiftCode(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -62,7 +62,7 @@ let closure_11 = async function _resolveGiftCode(arg0) {
           let product;
           c7 = 1;
           c8 = 1;
-          return { value: "flex", done: null };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp9) {
         if (arg0 === 1) {
@@ -223,11 +223,11 @@ let closure_12 = async function _deliverGiftCodes() {
     return value.body;
   })();
 };
-let closure_6 = fn(7158).isUnknownCollectiblesItemRecord;
-const Constants = fn(1074);
+let closure_6 = fn(7061).isUnknownCollectiblesItemRecord;
+const Constants = fn(1085);
 ({ COLLECTIBLES_APPLICATION_ID: closure_7, Endpoints: closure_8, RPCCommands: closure_9 } = Constants);
-let closure_10 = fn(1374).PREMIUM_SUBSCRIPTION_APPLICATION;
-const merged = Object.assign(fn(11185).default);
+let closure_10 = fn(1379).PREMIUM_SUBSCRIPTION_APPLICATION;
+const merged = Object.assign(fn(11091).default);
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/GiftCodeActionCreators.tsx");
 
@@ -304,7 +304,7 @@ export default {
         skuId: closure_129_0,
         subscriptionPlanId: closure_129_1,
       });
-      await "HermesInternal";
+      await "IconComponent";
       closure_128_0 = value;
       tmp3(gift_style[6]).dispatch({ type: "GIFT_CODE_CREATE_SUCCESS", giftCode: closure_128_0.body });
       return closure_128_0.body;

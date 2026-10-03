@@ -517,12 +517,15 @@ export const preloadReadyPayloadData = function preloadReadyPayloadData() {
   });
 };
 export const hydrateReadyPayloadPrioritized = function hydrateReadyPayloadPrioritized(
-  arg0,
+  pinotReadyAction,
   identifyStartTime,
   databaseOk,
 ) {
-  ({ users, private_channels, merged_members: require, guilds } = arg0);
-  const merged = Object.assign(arg0, Object.assign({ users: 0, private_channels: 0, merged_members: 0, guilds: 0 }));
+  ({ users, private_channels, merged_members: require, guilds } = pinotReadyAction);
+  const merged = Object.assign(
+    pinotReadyAction,
+    Object.assign({ users: 0, private_channels: 0, merged_members: 0, guilds: 0 }),
+  );
   const obj = DatabaseDaosDefault;
   let tmp4 = null != obj.database();
   if (tmp4) {

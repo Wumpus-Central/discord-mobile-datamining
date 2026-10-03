@@ -1,9 +1,9 @@
 // discord_common/js/packages/design/components/Toast/toastUtils.shared.tsx
-import 04572__ from "../../../../../../_runtime/metro/04572__.js";
+import 04571__ from "../../../../../../_runtime/metro/04571__.js";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 let c2 = 1;
-const useToastStore = module_4572.create(() => {
+const useToastStore = module_4571.create(() => {
   const obj = { currentToastMap: new Map(), queuedToastsMap: null };
   const map = new Map();
   obj.queuedToastsMap = new Map();
@@ -12,15 +12,15 @@ const useToastStore = module_4572.create(() => {
 let result = size.fileFinishedImporting("../discord_common/js/packages/design/components/Toast/toastUtils.shared.tsx");
 
 export { useToastStore };
-export const showToast = function showToast(surface) {
+export const showToast = function showToast(toManaToastResult) {
   let str;
-  if (surface != null) {
-    str = surface.surface;
+  if (toManaToastResult != null) {
+    str = toManaToastResult.surface;
   }
   if (str == null) {
     str = "app";
   }
-  let obj = { toast: surface, key: null };
+  let obj = { toast: toManaToastResult, key: null };
   closure_2 = tmp + 1;
   obj.key = +closure_2;
   str(obj[1]).batchUpdates(() => {
@@ -56,7 +56,7 @@ export const popToast = function popToast(arg0) {
   if (arg0 === undefined) {
     str = "app";
   }
-  str(1248).batchUpdates(() => {
+  str(1259).batchUpdates(() => {
     obj.setState((queuedToastsMap) => {
       queuedToastsMap = queuedToastsMap.queuedToastsMap;
       let items = queuedToastsMap.get(str);
@@ -73,7 +73,7 @@ export const popToast = function popToast(arg0) {
         return obj2;
       } else {
         const _Map2 = Map;
-        map1 = new Map(queuedToastsMap.currentToastMap);
+        const map1 = new Map(queuedToastsMap.currentToastMap);
         const _Map3 = Map;
         const map2 = new Map(queuedToastsMap.queuedToastsMap);
         value2 = map2.get(str);

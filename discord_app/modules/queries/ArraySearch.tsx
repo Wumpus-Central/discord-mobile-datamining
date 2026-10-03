@@ -2,7 +2,7 @@
 import size from "../../../_runtime/metro/00002__.js";
 
 function sortGroup(arr, arg1) {
-  dependencyMap = arg1;
+  const dependencyMap = arg1;
   return arr.sort((arg0, arg1) => {
     const iter = dependencyMap[Symbol.iterator]();
     while (iter !== undefined) {

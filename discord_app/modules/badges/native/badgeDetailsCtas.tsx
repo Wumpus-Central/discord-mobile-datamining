@@ -28,7 +28,7 @@ obj[BadgeId.BadgeId.QUEST_COMPLETED] = {
   },
   ctaAction() {
     obj = QuestUtils;
-    return obj.openQuestHome({ fromContent: QuestContent.QuestContent.QUEST_BADGE });
+    return obj.openQuestHome({ fromContent: QuestContent.QuestContent.QUEST_BADGE, pop: false });
   },
   isAvailable: QuestsEligibility.getIsEligibleForQuests,
 };

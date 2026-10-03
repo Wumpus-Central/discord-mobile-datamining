@@ -2,9 +2,9 @@
 import DurationsDefault from "../../../utils/Durations.tsx";
 import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
-import QuestsEligibility from "../lib/QuestsEligibility.tsx";
 import QuestActionCreators from "../QuestActionCreators.tsx";
 import DiscordAppStateDefault from "../../app_state/DiscordAppState.native.tsx";
+import QuestsEligibility from "../lib/QuestsEligibility.tsx";
 import QuestFetchReconnectJitterExperiment from "../experiments/QuestFetchReconnectJitterExperiment.tsx";
 import QuestStore from "../QuestStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
@@ -115,7 +115,7 @@ class QuestFetchManager extends tmp2 {
     return applyArgumentsResult;
   }
 }
-QuestFetchManager.prototype["_fetch"] = function _fetch(callerSource) {
+QuestFetchManager.prototype["_fetch"] = function _fetch(post_connect_initial) {
   let isEligibleForQuests = QuestsEligibility.getIsEligibleForQuests();
   if (isEligibleForQuests) {
     isEligibleForQuests = !QuestStore.isFetchingCurrentQuests;
@@ -123,7 +123,7 @@ QuestFetchManager.prototype["_fetch"] = function _fetch(callerSource) {
   if (isEligibleForQuests) {
     const obj3 = { category: "quests.fetch", message: "QuestFetchManager._fetch triggered", data: null };
     const obj4 = {
-      callerSource,
+      callerSource: post_connect_initial,
       storeSize: QuestStore.quests.size,
       lastFetchedCurrentQuests: QuestStore.lastFetchedCurrentQuests,
       msSinceLastFetch: null,
@@ -137,7 +137,7 @@ QuestFetchManager.prototype["_fetch"] = function _fetch(callerSource) {
     const currentQuests = QuestActionCreators.fetchCurrentQuests();
     const tmpResult = QuestActionCreators;
     if (tmpResult2.isMac()) {
-      const state = DiscordAppStateDefault.getState();
+      state = DiscordAppStateDefault.getState();
       const tmp6Result = DiscordAppStateDefault;
     }
     tmpResult2 = PlatformUtils;

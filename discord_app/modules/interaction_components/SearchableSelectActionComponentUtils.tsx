@@ -43,10 +43,10 @@ export const queryMentionables = function queryMentionables(type, query, channel
       checkRecentlyTalkedOnEmptyQuery: false,
       limit: 15,
     };
-    const obj = channel(5940);
-    ({ users, roles } = channel(5940).queryMentionResults(obj2));
+    const obj = channel(5621);
+    ({ users, roles } = channel(5621).queryMentionResults(obj2));
     const items = [];
-    const queryMentionResultsResult = channel(5940).queryMentionResults(obj2);
+    const queryMentionResultsResult = channel(5621).queryMentionResults(obj2);
     HermesBuiltin.arraySpread(
       roles.map((id) => ({ type: channelId(dependencyMap[10]).SelectOptionType.ROLE, value: id.id, label: id.name })),
       HermesBuiltin.arraySpread(
@@ -97,13 +97,13 @@ export const getInitialSnowflakeSelectOptions = function getInitialSnowflakeSele
   );
   const defaultValues = selectActionComponent.defaultValues;
   let channelTypes;
-  if (selectActionComponent.type === channelTypes(1979).ComponentType.CHANNEL_SELECT) {
+  if (selectActionComponent.type === channelTypes(1985).ComponentType.CHANNEL_SELECT) {
     channelTypes = selectActionComponent.channelTypes;
   }
   if (channelTypes === undefined) {
     channelTypes = [];
   }
-  let guild;
+  guild = undefined;
   if (null != defaultValues) {
     guild = GuildStore.getGuild(guildId);
     const mapped = defaultValues.map((type) => {
@@ -166,23 +166,23 @@ export const getInitialSnowflakeSelectOptions = function getInitialSnowflakeSele
         }
       }
     });
-    let found = mapped.filter(tmp2(1370).isNotNullish);
+    let found = mapped.filter(tmp2(1375).isNotNullish);
   }
   let type;
   if (interactionComponentState != null) {
     type = interactionComponentState.type;
   }
-  if (type !== channelTypes(1979).ComponentType.USER_SELECT) {
+  if (type !== channelTypes(1985).ComponentType.USER_SELECT) {
     let type1;
     if (interactionComponentState != null) {
       type1 = interactionComponentState.type;
     }
-    if (type1 !== tmp2(1979).ComponentType.ROLE_SELECT) {
+    if (type1 !== tmp2(1985).ComponentType.ROLE_SELECT) {
       let type2;
       if (interactionComponentState != null) {
         type2 = interactionComponentState.type;
       }
-      if (type2 !== tmp2(1979).ComponentType.MENTIONABLE_SELECT) {
+      if (type2 !== tmp2(1985).ComponentType.MENTIONABLE_SELECT) {
         let type3;
         if (interactionComponentState != null) {
           type3 = interactionComponentState.type;
@@ -201,7 +201,7 @@ export const getSnowflakeSelectDefaultValues = function getSnowflakeSelectDefaul
   if (arg2 === undefined) {
     items = [];
   }
-  let guild;
+  guild = undefined;
   if (null != defaultValues) {
     guild = GuildStore.getGuild(guild_id);
     const mapped = defaultValues.map((type) => {
@@ -264,6 +264,6 @@ export const getSnowflakeSelectDefaultValues = function getSnowflakeSelectDefaul
         }
       }
     });
-    return mapped.filter(items(1370).isNotNullish);
+    return mapped.filter(items(1375).isNotNullish);
   }
 };

@@ -1149,9 +1149,9 @@ function handleGuildStickersFetchSuccess(stickers) {
     return tmp;
   }, false);
 }
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ UserFlags: closure_7, MessageFlags: closure_8, ChannelTypes: closure_9 } = Constants);
-let closure_10 = fn(1374).UNSELECTED_PREMIUM_TYPE_OVERRIDE;
+let closure_10 = fn(1379).UNSELECTED_PREMIUM_TYPE_OVERRIDE;
 let users = {};
 let closure_12 = 0;
 let c13 = "47835198259242069";

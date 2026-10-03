@@ -16,7 +16,7 @@ let closure_6 = async function _handlePollGifAttachmentAdd(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -50,7 +50,7 @@ let closure_6 = async function _handlePollGifAttachmentAdd(arg0) {
       } else if (1 === tmp8) {
         c6 = 0;
         c8 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       } else if (2 === tmp8) {
         if (arg0 === 1) {
           c8 = 3;
@@ -65,7 +65,7 @@ let closure_6 = async function _handlePollGifAttachmentAdd(arg0) {
           if (null == closure_131_3) {
             c6 = 0;
             c8 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           } else {
             filePathForGif = closure_132_0(closure_132_2[3]).getFilePathForGif(fileNameFromGifUrl);
             const obj9 = closure_132_0(closure_132_2[4]);
@@ -89,7 +89,7 @@ let closure_6 = async function _handlePollGifAttachmentAdd(arg0) {
           if (null == closure_131_5) {
             c6 = 0;
             c8 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           } else {
             c7 = 4;
             c8 = 1;
@@ -131,10 +131,10 @@ let closure_6 = async function _handlePollGifAttachmentAdd(arg0) {
           height = closure_131_6.height;
         }
         size.height = height;
-        size.platform = closure_132_0(closure_132_2[6]).UploadPlatform.REACT_NATIVE;
+        size.platform = closure_132_0(closure_132_2[7]).UploadPlatform.REACT_NATIVE;
         closure_131_7 = size;
         const obj13 = { file: closure_131_7, channelId: closure_131_0, draftType: closure_132_4.Poll };
-        closure_132_1(closure_132_2[7]).addFile(obj13);
+        closure_132_1(closure_132_2[8]).addFile(obj13);
         c6 = 0;
         c8 = 3;
         const obj14 = { value: closure_131_5, done: true };
@@ -179,8 +179,8 @@ let closure_8 = async function _removeAllPollUploadAttachments(arg0) {
   }
   return value;
 };
-const DraftType = fn(5384).DraftType;
-const POLL_ATTACHMENT_FOLDER = fn(7421).POLL_ATTACHMENT_FOLDER;
+const DraftType = fn(7031).DraftType;
+const POLL_ATTACHMENT_FOLDER = fn(7457).POLL_ATTACHMENT_FOLDER;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/polls/PollUploadAttachmentActionCreators.native.tsx");
 

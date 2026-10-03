@@ -169,7 +169,7 @@ prototype["getGuildFolders"] = function getGuildFolders() {
       if (guildIds.id != null) {
         value = iter.value;
       }
-      let value3;
+      value3 = undefined;
       if (guildIds.color != null) {
         value3 = iter2.value;
       }

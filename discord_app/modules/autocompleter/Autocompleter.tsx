@@ -1,7 +1,7 @@
 // discord_app/modules/autocompleter/Autocompleter.tsx
 import _modDef12 from "../../../_runtime/metro/00012__.js";
 import URLUtilsDefault from "../../utils/URLUtils.tsx";
-import _modDef1930 from "../../../_runtime/metro/01930__.js";
+import _modDef1936 from "../../../_runtime/metro/01936__.js";
 import StringUtils from "../../utils/StringUtils.tsx";
 import findCodedLinks from "../coded_links/findCodedLinks.tsx";
 import CodedLink from "../coded_links/CodedLink.tsx";
@@ -25,9 +25,9 @@ function getAutocompleterBoosterMap(USER, options) {
   }
   return boosterMap;
 }
-const GUILD_VOCAL_CHANNELS_KEY = fn(4496).GUILD_VOCAL_CHANNELS_KEY;
-fn(6013).AutocompleterResultTypes;
-const React7 = Object.freeze({});
+const GUILD_VOCAL_CHANNELS_KEY = fn(4507).GUILD_VOCAL_CHANNELS_KEY;
+fn(5700).AutocompleterResultTypes;
+let options = Object.freeze({});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/autocompleter/Autocompleter.tsx");
 class Autocompleter {
@@ -181,11 +181,11 @@ prototype["setRefetchForSingleCategoryLimit"] = function setRefetchForSingleCate
 ) {
   this._refetchForSingleCategoryLimit = _refetchForSingleCategoryLimit;
 };
-prototype["setResultTypes"] = function setResultTypes(items) {
+prototype["setResultTypes"] = function setResultTypes(resultTypes) {
   let set = null;
-  if (null != items) {
+  if (null != resultTypes) {
     const _Set = Set;
-    set = new Set(items);
+    set = new Set(resultTypes);
   }
   const self = this;
   this.resultTypes = set;
@@ -603,7 +603,7 @@ prototype["queryLink"] = function queryLink(query) {
       const items = [obj2];
       return items;
     } else {
-      const sanitizeUrlResult = _modDef1930.sanitizeUrl(query);
+      const sanitizeUrlResult = _modDef1936.sanitizeUrl(query);
       try {
         const _URL = URL;
         const uRL = new URL(sanitizeUrlResult);

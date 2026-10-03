@@ -8,10 +8,10 @@ import PermissionStore from "../../stores/PermissionStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let GuildChannelStore = fn(4496);
+let GuildChannelStore = fn(4507);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: c3, GUILD_VOCAL_CHANNELS_KEY: closure_4 } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
-const Permissions = fn(1074).Permissions;
+const Permissions = fn(1085).Permissions;
 let closure_129_0 = () => {
   const intl = util.intl;
   return intl.string(util.t.PqEzn8);
@@ -176,6 +176,7 @@ const obj18 = { value: 100 };
 Object.defineProperty(obj18, "label", { get: () => require(), set: undefined });
 Object.defineProperty(obj18, "descriptiveLabel", { get: () => dependencyMap(), set: undefined });
 let items1 = [obj12, obj13, obj14, obj15, obj16, obj17, obj18];
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("utils/native/InstantInviteUtils.tsx");
 
@@ -260,43 +261,158 @@ export const shouldRenderInvite = function shouldRenderInvite(channels, guild) {
   }
   return tmp6;
 };
-export const useShouldShowInviteInActionBar = function useShouldShowInviteInActionBar(id) {
-  _require = id;
-  const items = [GuildChannelStore];
-  const items1 = [id.id];
-  const stateFromStoresObject = require("initialize").useStateFromStoresObject(
-    items,
-    () => GuildChannelStore.getChannels(id.id),
-    items1,
-  );
-  let vanityURLCode;
-  if (id != null) {
-    vanityURLCode = id.vanityURLCode;
-  }
-  let tmp5 = null == vanityURLCode;
-  if (!tmp5) {
-    tmp5 = !require("canViewInviteModal").canViewInviteModal(PermissionStore, id);
-    const tmpResult = require("canViewInviteModal");
-  }
-  let tmp7 = !tmp5;
-  if (tmp5) {
-    let tmp8 = null == stateFromStoresObject;
-    if (!tmp8) {
-      let tmp10 =
-        null !=
-        stateFromStoresObject[closure_3].find((channel) =>
-          PermissionStore.can(constants.CREATE_INSTANT_INVITE, channel.channel),
-        );
-      if (!tmp10) {
-        tmp10 =
-          null !=
-          stateFromStoresObject[closure_4].find((channel) =>
-            PermissionStore.can(constants.CREATE_INSTANT_INVITE, channel.channel),
-          );
+export const useShouldShowInviteInActionBar = ReactCompilerGating.isReactCompilerEnabled()
+  ? (id) => {
+      const _require = id;
+      const cResult = require("c").c(7);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const items = [GuildChannelStore];
+        cResult[0] = items;
+        let first = items;
+      } else {
+        first = cResult[0];
       }
-      tmp8 = tmp10;
+      if (cResult[1] !== id.id) {
+        class N {
+          constructor() {
+            return closure_5.getChannels(closure_0.id);
+          }
+        }
+        const items1 = [id.id];
+        cResult[1] = id.id;
+        cResult[2] = N;
+        cResult[3] = items1;
+        let tmp7 = items1;
+      } else {
+        class N {
+          constructor() {
+            return closure_5.getChannels(closure_0.id);
+          }
+        }
+        tmp7 = cResult[3];
+      }
+      const obj = require("c");
+      const stateFromStoresObject = require("initialize").useStateFromStoresObject(first, N, tmp7);
+      if (id != null) {
+        class N {
+          constructor() {
+            return closure_5.getChannels(closure_0.id);
+          }
+        }
+      }
+      if (null != undefined) {
+        class N {
+          constructor() {
+            return closure_5.getChannels(closure_0.id);
+          }
+        }
+        if (obj3.canViewInviteModal(PermissionStore, id)) {
+          class N {
+            constructor() {
+              return closure_5.getChannels(closure_0.id);
+            }
+          }
+          return true;
+        }
+      }
+      if (null == stateFromStoresObject) {
+        class N {
+          constructor() {
+            return closure_5.getChannels(closure_0.id);
+          }
+        }
+        return true;
+      } else {
+        class N {
+          constructor() {
+            return closure_5.getChannels(closure_0.id);
+          }
+        }
+        if (null != arr4.find((channel) => PermissionStore.can(constants.CREATE_INSTANT_INVITE, channel.channel))) {
+          class N {
+            constructor() {
+              return closure_5.getChannels(closure_0.id);
+            }
+          }
+          return true;
+        } else {
+          class N {
+            constructor() {
+              return closure_5.getChannels(closure_0.id);
+            }
+          }
+          if (cResult[4] !== stateFromStoresObject[closure_4]) {
+            class N {
+              constructor() {
+                return closure_5.getChannels(closure_0.id);
+              }
+            }
+            if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
+              class N {
+                constructor() {
+                  return closure_5.getChannels(closure_0.id);
+                }
+              }
+              cResult[6] = tmp11;
+            } else {
+              class N {
+                constructor() {
+                  return closure_5.getChannels(closure_0.id);
+                }
+              }
+            }
+            const found = arr3.find(tmp11);
+            cResult[4] = arr3;
+            cResult[5] = found;
+          } else {
+            class N {
+              constructor() {
+                return closure_5.getChannels(closure_0.id);
+              }
+            }
+          }
+        }
+        arr4 = stateFromStoresObject[closure_3];
+      }
+      const tmpResult = require("initialize");
     }
-    tmp7 = tmp8;
-  }
-  return tmp7;
-};
+  : (id) => {
+      const _require = id;
+      const items = [GuildChannelStore];
+      const items1 = [id.id];
+      const stateFromStoresObject = require("initialize").useStateFromStoresObject(
+        items,
+        () => GuildChannelStore.getChannels(id.id),
+        items1,
+      );
+      let vanityURLCode;
+      if (id != null) {
+        vanityURLCode = id.vanityURLCode;
+      }
+      let tmp5 = null == vanityURLCode;
+      if (!tmp5) {
+        tmp5 = !require("canViewInviteModal").canViewInviteModal(PermissionStore, id);
+        const tmpResult = require("canViewInviteModal");
+      }
+      let tmp7 = !tmp5;
+      if (tmp5) {
+        let tmp8 = null == stateFromStoresObject;
+        if (!tmp8) {
+          let tmp10 =
+            null !=
+            stateFromStoresObject[closure_3].find((channel) =>
+              PermissionStore.can(constants.CREATE_INSTANT_INVITE, channel.channel),
+            );
+          if (!tmp10) {
+            tmp10 =
+              null !=
+              stateFromStoresObject[closure_4].find((channel) =>
+                PermissionStore.can(constants.CREATE_INSTANT_INVITE, channel.channel),
+              );
+          }
+          tmp8 = tmp10;
+        }
+        tmp7 = tmp8;
+      }
+      return tmp7;
+    };

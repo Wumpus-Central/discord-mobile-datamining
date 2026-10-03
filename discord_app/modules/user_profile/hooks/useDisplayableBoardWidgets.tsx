@@ -1,7 +1,8 @@
 // discord_app/modules/user_profile/hooks/useDisplayableBoardWidgets.tsx
+import c from "../../../../_runtime/00576_c.js";
 import UserProfileGameWidgetTypes from "../UserProfileGameWidgetTypes.tsx";
-import UserProfilePersonalWidget from "../UserProfilePersonalWidget.tsx";
 import UserProfileApplicationWidgetTypes from "../UserProfileApplicationWidgetTypes.tsx";
+import UserProfilePersonalWidget from "../UserProfilePersonalWidget.tsx";
 import useUserProfileWidgetsDefault from "useUserProfileWidgets.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -22,12 +23,27 @@ function isNonEmptyBoardWidget(games) {
   }
   return tmp3;
 }
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useDisplayableBoardWidgets.tsx");
 
-export const useDisplayableBoardWidgets = function useDisplayableBoardWidgets(id) {
-  const tmp = useUserProfileWidgetsDefault(id);
-  closure_0 = tmp;
-  const items = [tmp];
-  return noop.useMemo(() => closure_0.filter(isNonEmptyBoardWidget), items);
-};
+export const useDisplayableBoardWidgets = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      const cResult = c.c(2);
+      const arr = useUserProfileWidgetsDefault(arg0);
+      if (cResult[0] !== arr) {
+        const found = arr.filter(isNonEmptyBoardWidget);
+        cResult[0] = arr;
+        cResult[1] = found;
+        let tmp2 = found;
+      } else {
+        tmp2 = cResult[1];
+      }
+      return tmp2;
+    }
+  : (arg0) => {
+      const tmp = useUserProfileWidgetsDefault(arg0);
+      closure_0 = tmp;
+      const items = [tmp];
+      return noop.useMemo(() => closure_0.filter(isNonEmptyBoardWidget), items);
+    };

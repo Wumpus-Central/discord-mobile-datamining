@@ -23,7 +23,7 @@ function handleLibraryApplicationUpdate(libraryApplication) {
   closure_9[comboId] = fromServer;
   set.delete(comboId);
 }
-const LibraryApplicationFlags = fn(1074).LibraryApplicationFlags;
+const LibraryApplicationFlags = fn(1085).LibraryApplicationFlags;
 const LibraryApplicationStore = "LibraryApplicationStore";
 let c8 = false;
 const dependencyMap = {};
@@ -43,7 +43,7 @@ prototype["initialize"] = function initialize() {
     if (null == value.activeLaunchOptionIds) {
       const Storage2 = Storage6.Storage;
       const Storage3 = Storage6.Storage;
-      let value3 = Storage3.get(LibraryApplicationStore);
+      value3 = Storage3.get(LibraryApplicationStore);
       if (value3 == null) {
         value3 = {};
       }

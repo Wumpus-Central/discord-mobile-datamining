@@ -3,7 +3,7 @@ import TimeUtils from "../../../discord_common/js/packages/time-utils/TimeUtils.
 import ApplicationStreamingSettingsStore from "../../stores/ApplicationStreamingSettingsStore.tsx";
 
 require = fn;
-const StreamLayouts = fn(1074).StreamLayouts;
+const StreamLayouts = fn(1085).StreamLayouts;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/go_live/VideoStreamStats.tsx");
 class VideoStreamStats {
@@ -24,7 +24,7 @@ class VideoStreamStats {
       _layoutBuckets[_lastLayout] = _layoutBuckets[_lastLayout] + arg1;
     };
     obj._sampleStats = function _sampleStats() {
-      const state = ApplicationStreamingSettingsStore.getState();
+      state = ApplicationStreamingSettingsStore.getState();
       obj._streamSettingsChanged = state.resolution !== obj._targetResolution || tmp2 !== obj._targetFPS;
     };
     obj._isSender = fn;
@@ -37,7 +37,7 @@ class VideoStreamStats {
 }
 const prototype = VideoStreamStats.prototype;
 prototype["start"] = function start() {
-  const state = ApplicationStreamingSettingsStore.getState();
+  state = ApplicationStreamingSettingsStore.getState();
   ({ resolution: this._targetResolution, fps: this._targetFPS } = state);
   const _statInterval = this._statInterval;
   _statInterval.start(1000, this._sampleStats);

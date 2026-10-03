@@ -5,7 +5,7 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import GuildStore from "../../../stores/GuildStore.tsx";
 
 function calculateAppliedBoosts(guildId) {
-  const guild = GuildStore.getGuild(guildId);
+  guild = GuildStore.getGuild(guildId);
   let hasItem;
   if (guild != null) {
     const features = guild.features;
@@ -66,10 +66,10 @@ function calculateAppliedBoosts(guildId) {
   }
   return sum;
 }
-const GuildPowerupsConstants = fn(4753);
+const GuildPowerupsConstants = fn(4768);
 ({ GUILD_POWERUP_TIER_3_OVERRIDDEN_PURCHASABLE_FEATURES: c2, PURCHASABLE_PREMIUM_FEATURES_BOOST_INFO: c3 } =
   GuildPowerupsConstants);
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({
   AppliedGuildBoostsRequiredForBoostedGuildTier: closure_4,
   BoostedGuildTiers: hasOwnProperty,

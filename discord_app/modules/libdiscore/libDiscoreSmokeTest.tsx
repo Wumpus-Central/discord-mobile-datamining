@@ -1,8 +1,8 @@
 // discord_app/modules/libdiscore/libDiscoreSmokeTest.tsx
 import LoggerDefault from "../debug/Logger.tsx";
-import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
-import initLibdiscore from "../../../discord_common/js/packages/libdiscore/js_shim/js/initLibdiscore.native.tsx";
 import libdiscoreExperiments from "libdiscoreExperiments.tsx";
+import initLibdiscore from "../../../discord_common/js/packages/libdiscore/js_shim/js/initLibdiscore.native.tsx";
+import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
@@ -27,7 +27,7 @@ let closure_7 = async function _libDiscoreSmokeTest() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -122,7 +122,7 @@ function trackLibdiscoreFailure(arg0) {
   }
   AnalyticsUtilsDefault.track(AnalyticEvents.LIBDISCORE_LOADED, { success: false, error: combined });
 }
-const AnalyticEvents = fn(1074).AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 const logger = new LoggerDefault("libdiscore");
 let c6 = false;
 const size = fn(2);

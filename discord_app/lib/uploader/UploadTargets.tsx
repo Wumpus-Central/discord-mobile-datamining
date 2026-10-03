@@ -7,7 +7,7 @@ import ICYMIAttachmentUploadTargetDefault from "../../modules/icymi/ICYMIAttachm
 import ChannelStore from "../../stores/ChannelStore.tsx";
 
 require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ Endpoints: hasOwnProperty, MAX_UPLOAD_COUNT: metroRequire } = Constants);
 class MessageAttachmentUploadTarget {}
 const prototype = MessageAttachmentUploadTarget.prototype;

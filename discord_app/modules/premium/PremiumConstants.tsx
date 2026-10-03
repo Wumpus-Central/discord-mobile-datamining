@@ -978,6 +978,7 @@ export const PremiumUpsellTypes = {
   EMOJI_IN_BURST_REACTION_HOVER: "emoji_in_burst_reaction_hover",
   EMOJI_IN_BURST_REACTION_HOVER_UPSELL: "emoji_in_burst_reaction_hover_upsell",
   EMOJI_PICKER_FLOATING_UPSELL: "emoji_picker_floating_upsell",
+  STICKER_PICKER_FLOATING_UPSELL: "sticker_picker_floating_upsell",
   STICKER_IN_MESSAGE_HOVER: "sticker_in_message_hover",
   EMPTY_STICKER_PICKER_UPSELL: "empty_sticker_picker_upsell",
   STREAM_QUALITY_INDICATOR: "stream_quality_indicator",

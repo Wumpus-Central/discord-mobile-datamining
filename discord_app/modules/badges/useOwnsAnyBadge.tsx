@@ -4,40 +4,100 @@ import UserStore from "../../stores/UserStore.tsx";
 import BadgeDirectoryStore from "BadgeDirectoryStore.tsx";
 
 const require = fn;
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/useOwnsAnyBadge.tsx");
 
-export default function useOwnsAnyBadge() {
-  const items = [UserStore];
-  stateFromStores = stateFromStores(504).useStateFromStores(items, () => {
-    currentUser = currentUser.getCurrentUser();
-    let id;
-    if (currentUser != null) {
-      id = currentUser.id;
-    }
-    return id;
-  });
-  const obj = stateFromStores(504);
-  const items1 = [BadgeDirectoryStore];
-  const items2 = [stateFromStores];
-  let stateFromStores1 = stateFromStores(504).useStateFromStores(
-    items1,
-    () => {
-      let someResult = null;
-      if (null != stateFromStores) {
-        someResult = null;
-        if (BadgeDirectoryStore.hasCatalogFor(stateFromStores)) {
-          const badges = BadgeDirectoryStore.getBadges(stateFromStores);
-          someResult = badges.some((owned) => owned.owned);
-        }
+export default ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = stateFromStores(576).c(6);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const items = [UserStore];
+        const fn = function s() {
+          currentUser = currentUser.getCurrentUser();
+          let id;
+          if (currentUser != null) {
+            id = currentUser.id;
+          }
+          return id;
+        };
+        cResult[0] = items;
+        cResult[1] = fn;
+        tmp4 = items;
+        tmp5 = fn;
+      } else {
+        [tmp4, tmp5] = cResult;
       }
-      return someResult;
-    },
-    items2,
-  );
-  const obj2 = stateFromStores(504);
-  if (stateFromStores1 == null) {
-    stateFromStores1 = useBadgesDefault(tmp3).length > 0;
-  }
-  return stateFromStores1;
-}
+      const obj = stateFromStores(576);
+      stateFromStores = stateFromStores(504).useStateFromStores(tmp4, tmp5);
+      if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+        const items1 = [BadgeDirectoryStore];
+        cResult[2] = items1;
+        let tmp8 = items1;
+      } else {
+        tmp8 = cResult[2];
+      }
+      if (cResult[3] !== stateFromStores) {
+        const fn2 = function c() {
+          let someResult = null;
+          if (null != stateFromStores) {
+            someResult = null;
+            if (BadgeDirectoryStore.hasCatalogFor(stateFromStores)) {
+              const badges = BadgeDirectoryStore.getBadges(stateFromStores);
+              someResult = badges.some((owned) => owned.owned);
+            }
+          }
+          return someResult;
+        };
+        const items2 = [stateFromStores];
+        cResult[3] = stateFromStores;
+        cResult[4] = fn2;
+        cResult[5] = items2;
+        let tmp11 = items2;
+        let tmp10 = fn2;
+      } else {
+        tmp10 = cResult[4];
+        tmp11 = cResult[5];
+      }
+      const tmpResult = stateFromStores(504);
+      let stateFromStores1 = stateFromStores(504).useStateFromStores(tmp8, tmp10, tmp11);
+      const tmpResult2 = stateFromStores(504);
+      if (stateFromStores1 == null) {
+        stateFromStores1 = useBadgesDefault(tmp13).length > 0;
+      }
+      return stateFromStores1;
+    }
+  : () => {
+      const items = [UserStore];
+      stateFromStores = stateFromStores(504).useStateFromStores(items, () => {
+        currentUser = currentUser.getCurrentUser();
+        let id;
+        if (currentUser != null) {
+          id = currentUser.id;
+        }
+        return id;
+      });
+      const obj = stateFromStores(504);
+      const items1 = [BadgeDirectoryStore];
+      const items2 = [stateFromStores];
+      let stateFromStores1 = stateFromStores(504).useStateFromStores(
+        items1,
+        () => {
+          let someResult = null;
+          if (null != stateFromStores) {
+            someResult = null;
+            if (BadgeDirectoryStore.hasCatalogFor(stateFromStores)) {
+              const badges = BadgeDirectoryStore.getBadges(stateFromStores);
+              someResult = badges.some((owned) => owned.owned);
+            }
+          }
+          return someResult;
+        },
+        items2,
+      );
+      const obj2 = stateFromStores(504);
+      if (stateFromStores1 == null) {
+        stateFromStores1 = useBadgesDefault(tmp3).length > 0;
+      }
+      return stateFromStores1;
+    };

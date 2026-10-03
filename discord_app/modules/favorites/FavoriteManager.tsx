@@ -84,9 +84,9 @@ function handleThreadMemberUpdate(joinTimestamp) {
     result.catch(NOOP);
   }
 }
-const FavoritesGuildSuggestionsStore = fn(16049);
+const FavoritesGuildSuggestionsStore = fn(16123);
 ({ NO_SUGGESTIONS: c3, setFavoritesGuildSuggestions: closure_4 } = FavoritesGuildSuggestionsStore);
-const NOOP = fn(1074).NOOP;
+const NOOP = fn(1085).NOOP;
 const prototype = function FavoriteManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = {

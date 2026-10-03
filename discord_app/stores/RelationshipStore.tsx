@@ -22,7 +22,7 @@ function upsertRelationship(id, type) {
   value = map.get(id);
   if (value !== type) {
     if (null != value) {
-      const value3 = map1.get(value);
+      value3 = map1.get(value);
       if (value3 != null) {
         value3.delete(id);
       }
@@ -83,7 +83,7 @@ function recountPending() {
   closure_16 = Math.max(num - size - size, 0);
   closure_14 = closure_14 + 1;
 }
-const RelationshipTypes = fn(1074).RelationshipTypes;
+const RelationshipTypes = fn(1085).RelationshipTypes;
 const map = new Map();
 let set = new Set();
 const set1 = new Set();
@@ -92,7 +92,7 @@ let closure_14 = 0;
 const dependencyMap = {};
 let closure_16 = 0;
 let size = 0;
-let closure_19 = { friends: "unicodeVersion", blocked: "disabled", ignored: "isArray", blockedOrIgnored: "current" };
+let closure_19 = { friends: "Array", blocked: "Symbol", ignored: "y", blockedOrIgnored: "IconComponent" };
 const set3 = new Set();
 const map1 = new Map();
 const Store = initializeDefault.Store;
@@ -477,7 +477,7 @@ const relationshipStore = new RelationshipStore(DispatcherDefault, {
     value = map.get(id);
     if (null != value) {
       map.delete(id);
-      const value3 = map1.get(value);
+      value3 = map1.get(value);
       if (value3 != null) {
         value3.delete(id);
       }

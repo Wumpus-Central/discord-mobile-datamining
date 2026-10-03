@@ -1,7 +1,7 @@
 // discord_app/modules/libdiscore/DispatcherBridge.tsx
 import LoggerDefault from "../debug/Logger.tsx";
-import SentryUtilsDefault from "../../utils/SentryUtils.native.tsx";
 import libdiscoreExperiments from "libdiscoreExperiments.tsx";
+import SentryUtilsDefault from "../../utils/SentryUtils.native.tsx";
 import DevSettingsStore from "../devtools/dev_settings/DevSettingsStore.tsx";
 import RawGuildEmojiStore from "../emojis/RawGuildEmojiStore.tsx";
 import GuildStickersStore from "../stickers/GuildStickersStore.tsx";
@@ -11,7 +11,7 @@ import GuildRoleStore from "../../stores/GuildRoleStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 
 require = fn;
-const AnalyticEvents = fn(1074).AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 const timestampProducer = new LoggerDefault("DispatcherBridge");
 let items = [NoteStore, GuildStore, GuildRoleStore, RawGuildEmojiStore, GuildStickersStore];
 let closure_7 = {

@@ -8,7 +8,10 @@ import noop from "../../../_runtime/metro/00019__.js";
 import subscribeToKeyboardUIStore from "../../modules/keyboard/native/subscribeToKeyboardUIStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
+const require = globalThis.__r;
+
 require = fn;
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/chat/getMessageJumpData.tsx");
 
@@ -107,23 +110,61 @@ export default function getMessageJumpData(messages, isAtBottom, messages2) {
     messages2.androidKeyboardHeight < messages.androidKeyboardHeight &&
     null != messages.replyingMessageId;
 }
-export const useMessageJumpAndroidKeyboardHeight = function useMessageJumpAndroidKeyboardHeight() {
-  let num = 0;
-  if (obj2.isAndroid()) {
-    num = useSystemKeyboardHeight.getSystemKeyboardHeight();
-    const tmpResult = useSystemKeyboardHeight;
-  }
-  obj2 = PlatformUtils;
-  [tmp4, require] = noop.useState(num);
-  const effect = noop.useEffect(
-    () =>
-      subscribeToKeyboardUIStore((keyboardHeight) => {
-        if (obj.isAndroid()) {
-          closure_1_0(keyboardHeight.keyboardHeight);
+export const useMessageJumpAndroidKeyboardHeight = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = require("c").c(3);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        let num2 = 0;
+        if (tmpResult.isAndroid()) {
+          num2 = tmp(1884).getSystemKeyboardHeight();
+          const tmpResult2 = tmp(1884);
         }
-        obj = PlatformUtils;
-      }),
-    [],
-  );
-  return tmp4;
-};
+        cResult[0] = num2;
+        let first = num2;
+        tmpResult = tmp(1369);
+      } else {
+        first = cResult[0];
+      }
+      const tmp5 = _slicedToArray(noop.useState(first), 2);
+      _require = tmp5[1];
+      if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
+        const fn = function l() {
+          return subscribeToKeyboardUIStore((keyboardHeight) => {
+            if (obj.isAndroid()) {
+              closure_1_0(keyboardHeight.keyboardHeight);
+            }
+            obj = closure_0(dependencyMap[6]);
+          });
+        };
+        const items = [];
+        cResult[1] = fn;
+        cResult[2] = items;
+        let tmp7 = items;
+        let tmp6 = fn;
+      } else {
+        tmp6 = cResult[1];
+        tmp7 = cResult[2];
+      }
+      const effect = noop.useEffect(tmp6, tmp7);
+      return tmp5[0];
+    }
+  : () => {
+      let num = 0;
+      if (obj2.isAndroid()) {
+        num = useSystemKeyboardHeight.getSystemKeyboardHeight();
+        const tmpResult = useSystemKeyboardHeight;
+      }
+      obj2 = PlatformUtils;
+      [tmp4, require] = noop.useState(num);
+      const effect = noop.useEffect(
+        () =>
+          subscribeToKeyboardUIStore((keyboardHeight) => {
+            if (obj.isAndroid()) {
+              closure_1_0(keyboardHeight.keyboardHeight);
+            }
+            obj = require("PlatformUtils");
+          }),
+        [],
+      );
+      return tmp4;
+    };

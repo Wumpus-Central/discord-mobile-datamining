@@ -7,7 +7,7 @@ import ApplicationIntegrationType from "../../discord_common/js/shared/shared-co
 import Record from "../lib/Record.tsx";
 
 require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ MessageFlags: c3, MessageStates: closure_4, MessageTypes: hasOwnProperty } = Constants);
 class MinimalMessageRecord extends tmp2 {
   constructor(arg0) {

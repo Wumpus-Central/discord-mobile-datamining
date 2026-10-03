@@ -113,7 +113,7 @@ function handleFavoriteChannelAppeared() {
   }
   return flag;
 }
-const ME = fn(1074).ME;
+const ME = fn(1085).ME;
 const frozen = Object.freeze([]);
 const dependencyMap = {};
 let c14 = null;

@@ -23,7 +23,7 @@ let closure_36 = async function _migrateDefaultStorage() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -218,7 +218,7 @@ function trackClipMessage(message) {
         if (items1 == null) {
           items1 = [];
         }
-        let value3 = map2.get(message_id1);
+        value3 = map2.get(message_id1);
         if (value3 == null) {
           value3 = [];
         }
@@ -239,7 +239,7 @@ function trackClipMessage(message) {
   }
   obj = DistributedClipsExperimentDefault;
 }
-const ClipsConstants = fn(5630);
+const ClipsConstants = fn(7231);
 ({
   CLIPS_HARDWARE_CLASSIFICATION_VERSION: metroRequire,
   ClipSaveTypes: closure_7,
@@ -251,9 +251,9 @@ const ClipsConstants = fn(5630);
   ClipsLengthSettings,
   DEFAULT_CLIPS_BITRATE_PERCENT,
 } = ClipsConstants);
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ MessageAttachmentFlags: map1, MessageReferenceTypes: closure_14, VoiceFlags: closure_15 } = Constants);
-const StreamSettingsConstants = fn(4892);
+const StreamSettingsConstants = fn(4937);
 let c16 = "default";
 let c17 = "Discord Clips";
 const dependencyMap = {};
@@ -287,7 +287,7 @@ let obj = {
   maxAutoClips: 20,
   clipSignals: { enableDistributedSignals: true, enableGameSignals: true },
   debugTooltipsEnabled: false,
-  enableAutoclipping: "flex",
+  enableAutoclipping: "Reflect",
   showPovClipsInGallery: true,
 };
 obj = {
@@ -385,7 +385,7 @@ prototype["getHardwareClassificationVersion"] = function getHardwareClassificati
   return obj.hardwareClassificationVersion;
 };
 prototype["getIsAtMaxSaveClipOperations"] = function getIsAtMaxSaveClipOperations() {
-  return closure_21 >= closure_1_10;
+  return closure_21 >= v65535;
 };
 prototype["getLastClipsError"] = function getLastClipsError() {
   return c26;

@@ -1,4 +1,5 @@
 // discord_app/modules/search/native/hooks/usePlaceholderStyles.tsx
+import c from "../../../../../_runtime/00576_c.js";
 import native from "../../../../design/void/native.tsx";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
@@ -8,92 +9,143 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const duration = fn(7477).FADE_LAYOUT_ANIMATION_DURATION;
+const FADE_LAYOUT_ANIMATION_DURATION = fn(7513).FADE_LAYOUT_ANIMATION_DURATION;
+fn(558);
 const __initData = {
   code: "function usePlaceholderStylesTsx1(){const{useReducedMotion,visible,withRepeat,withSequence,withTiming,STANDARD_EASING,FADE_LAYOUT_ANIMATION_DURATION}=this.__closure;if(useReducedMotion){return{opacity:visible?1:0};}if(visible){return{opacity:withRepeat(withSequence(withTiming(0.5,{duration:0}),withTiming(1,{duration:1300,easing:STANDARD_EASING}),withTiming(0.5,{duration:1300,easing:STANDARD_EASING})),-1)};}return{opacity:withTiming(0,{duration:FADE_LAYOUT_ANIMATION_DURATION})};}",
 };
+const __initData2 = {
+  code: "function usePlaceholderStylesTsx2(){const{useReducedMotion,visible,withRepeat,withSequence,withTiming,STANDARD_EASING,FADE_LAYOUT_ANIMATION_DURATION}=this.__closure;if(useReducedMotion){return{opacity:visible?1:0};}if(visible){return{opacity:withRepeat(withSequence(withTiming(0.5,{duration:0}),withTiming(1,{duration:1300,easing:STANDARD_EASING}),withTiming(0.5,{duration:1300,easing:STANDARD_EASING})),-1)};}return{opacity:withTiming(0,{duration:FADE_LAYOUT_ANIMATION_DURATION})};}",
+};
+const ReactCompilerGating = fn(558);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      const cResult = c.c(1);
+      ({ placeholderHeight, numColumns } = arg0);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const obj2 = { ignoreKeyboard: true };
+        cResult[0] = obj2;
+        let first = obj2;
+      } else {
+        first = cResult[0];
+      }
+      return Math.ceil(useWindowDimensionsDefault(first).height / placeholderHeight) * numColumns;
+    }
+  : (arg0) => {
+      ({ placeholderHeight, numColumns } = arg0);
+      return Math.ceil(useWindowDimensionsDefault({ ignoreKeyboard: true }).height / placeholderHeight) * numColumns;
+    };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/hooks/usePlaceholderStyles.tsx");
 
-export const useFullscreenPlaceholderCount = function useFullscreenPlaceholderCount(arg0) {
-  ({ placeholderHeight, numColumns } = arg0);
-  return Math.ceil(useWindowDimensionsDefault({ ignoreKeyboard: true }).height / placeholderHeight) * numColumns;
-};
-export const usePlaceholderAnimatedStyle = function usePlaceholderAnimatedStyle(visible) {
-  _require = visible;
-  const items = [AccessibilityStore];
-  const stateFromStores = require("initialize").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  let obj = require("initialize");
-  class A {
-    constructor() {
-      obj = { opacity: null };
-      tmp = closure_0;
-      if (closure_1) {
-        num5 = 0;
-        if (tmp) {
-          num5 = 1;
-        }
-        obj.opacity = num5;
-        tmp5 = obj;
+export const useFullscreenPlaceholderCount = tmp2;
+export const usePlaceholderAnimatedStyle = ReactCompilerGating.isReactCompilerEnabled()
+  ? (visible) => {
+      _require = visible;
+      const cResult = require("c").c(2);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const items = [AccessibilityStore];
+        const fn = function c() {
+          return useReducedMotion.useReducedMotion;
+        };
+        cResult[0] = items;
+        cResult[1] = fn;
+        tmp4 = items;
+        tmp5 = fn;
       } else {
-        tmp2 = closure_0;
-        tmp3 = closure_2;
-        if (tmp) {
-          tmp2Result = tmp2(tmp3[4]);
-          tmp6 = closure_0;
-          tmp7 = closure_2;
-          obj5 = closure_0(closure_2[4]);
-          tmp8 = closure_0;
-          tmp9 = closure_2;
-          obj6 = closure_0(closure_2[5]);
-          num2 = 0.5;
-          tmp11 = closure_0;
-          tmp12 = closure_2;
-          withTimingResult = obj6.withTiming(0.5, { duration: 0 });
-          obj7 = closure_0(closure_2[5]);
-          obj1 = { duration: 1300, easing: null };
-          tmp13 = closure_0;
-          tmp14 = closure_2;
-          obj1.easing = closure_0(closure_2[6]).STANDARD_EASING;
-          num3 = 1;
-          tmp16 = closure_0;
-          tmp17 = closure_2;
-          withTimingResult1 = obj7.withTiming(1, obj1);
-          obj9 = closure_0(closure_2[5]);
-          obj11 = { duration: 1300, easing: null };
-          tmp18 = closure_0;
-          tmp19 = closure_2;
-          obj11.easing = closure_0(closure_2[6]).STANDARD_EASING;
-          num4 = -1;
+        [tmp4, tmp5] = cResult;
+      }
+      let obj = require("c");
+      const stateFromStores = require("initialize").useStateFromStores(tmp4, tmp5);
+      const tmpResult = require("initialize");
+      const fn2 = function s() {
+        const obj = { opacity: null };
+        if (stateFromStores) {
+          let num5 = 0;
+          if (closure_0) {
+            num5 = 1;
+          }
+          obj.opacity = num5;
+          let tmp5 = obj;
+        } else if (closure_0) {
+          const tmp2Result = ReanimatedRexport;
+          const obj5 = ReanimatedRexport;
+          const withTimingResult = timing.withTiming(0.5, { duration: 0 });
+          const obj2 = { duration: 1300, easing: native.STANDARD_EASING };
+          const withTimingResult1 = timing.withTiming(1, obj2);
+          const obj3 = { duration: 1300, easing: native.STANDARD_EASING };
           obj.opacity = tmp2Result.withRepeat(
-            obj5.withSequence(withTimingResult, withTimingResult1, obj9.withTiming(0.5, obj11)),
+            obj5.withSequence(withTimingResult, withTimingResult1, timing.withTiming(0.5, obj3)),
             -1,
           );
           tmp5 = obj;
         } else {
-          tmp2Result1 = tmp2(tmp3[5]);
-          obj12 = { duration: null };
-          tmp4 = closure_4;
-          obj12.duration = closure_4;
-          num = 0;
-          obj.opacity = tmp2Result1.withTiming(0, obj12);
+          const obj4 = { duration };
+          obj.opacity = timing.withTiming(0, obj4);
           tmp5 = obj;
+          const tmp2Result2 = timing;
         }
-      }
-      return tmp5;
+        return tmp5;
+      };
+      const tmpResult2 = require("ReanimatedRexport");
+      fn2.__closure = {
+        useReducedMotion: stateFromStores,
+        visible,
+        withRepeat: require("ReanimatedRexport").withRepeat,
+        withSequence: require("ReanimatedRexport").withSequence,
+        withTiming: require("timing").withTiming,
+        STANDARD_EASING: require("native").STANDARD_EASING,
+        FADE_LAYOUT_ANIMATION_DURATION,
+      };
+      fn2.__workletHash = 9750536800906;
+      fn2.__initData = __initData;
+      return tmpResult2.useAnimatedStyle(fn2);
     }
-  }
-  let obj2 = require("ReanimatedRexport");
-  A.__closure = {
-    useReducedMotion: stateFromStores,
-    visible,
-    withRepeat: require("ReanimatedRexport").withRepeat,
-    withSequence: require("ReanimatedRexport").withSequence,
-    withTiming: require("timing").withTiming,
-    STANDARD_EASING: require("native").STANDARD_EASING,
-    FADE_LAYOUT_ANIMATION_DURATION: duration,
-  };
-  A.__workletHash = 9750536800906;
-  A.__initData = __initData;
-  return obj2.useAnimatedStyle(A);
-};
+  : (visible) => {
+      _require = visible;
+      const items = [AccessibilityStore];
+      const stateFromStores = require("initialize").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+      let obj = require("initialize");
+      const fn = function u() {
+        const obj = { opacity: null };
+        if (stateFromStores) {
+          let num5 = 0;
+          if (closure_0) {
+            num5 = 1;
+          }
+          obj.opacity = num5;
+          let tmp5 = obj;
+        } else if (closure_0) {
+          const tmp2Result = ReanimatedRexport;
+          const obj5 = ReanimatedRexport;
+          const withTimingResult = timing.withTiming(0.5, { duration: 0 });
+          const obj2 = { duration: 1300, easing: native.STANDARD_EASING };
+          const withTimingResult1 = timing.withTiming(1, obj2);
+          const obj3 = { duration: 1300, easing: native.STANDARD_EASING };
+          obj.opacity = tmp2Result.withRepeat(
+            obj5.withSequence(withTimingResult, withTimingResult1, timing.withTiming(0.5, obj3)),
+            -1,
+          );
+          tmp5 = obj;
+        } else {
+          const obj4 = { duration };
+          obj.opacity = timing.withTiming(0, obj4);
+          tmp5 = obj;
+          const tmp2Result2 = timing;
+        }
+        return tmp5;
+      };
+      let obj2 = require("ReanimatedRexport");
+      fn.__closure = {
+        useReducedMotion: stateFromStores,
+        visible,
+        withRepeat: require("ReanimatedRexport").withRepeat,
+        withSequence: require("ReanimatedRexport").withSequence,
+        withTiming: require("timing").withTiming,
+        STANDARD_EASING: require("native").STANDARD_EASING,
+        FADE_LAYOUT_ANIMATION_DURATION,
+      };
+      fn.__workletHash = 11204424128649;
+      fn.__initData = __initData2;
+      return obj2.useAnimatedStyle(fn);
+    };

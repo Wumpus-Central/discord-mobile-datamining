@@ -1,9 +1,14 @@
 // discord_app/modules/toast/native/ToastUtils.tsx
 import Constants from "../../../Constants.tsx";
 import util from "../../../intl/index.native.tsx";
-import v1 from "../../../../_runtime/01255_v1.js";
+import v1 from "../../../../_runtime/01266_v1.js";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
 import ToastActionCreatorsDefault from "ToastActionCreators.tsx";
+import DesignSystemsNotificationComponentsExperiment from "../../design/DesignSystemsNotificationComponentsExperiment.tsx";
+import CheckmarkLargeIcon from "../../../design/components/Icon/native/redesign/generated/CheckmarkLargeIcon.tsx";
+import CircleCheckIcon from "../../../design/components/Icon/native/redesign/generated/CircleCheckIcon.tsx";
+import XLargeIcon2 from "../../../design/components/Icon/native/redesign/generated/XLargeIcon.tsx";
+import CircleInformationIcon from "../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
 import FriendsIcon from "../../../design/components/Icon/native/redesign/generated/FriendsIcon.tsx";
 import UserPlatformIcon from "../../../design/components/Icon/native/redesign/generated/UserPlatformIcon.tsx";
 import UserMinusIcon from "../../../design/components/Icon/native/redesign/generated/UserMinusIcon.tsx";
@@ -11,11 +16,7 @@ import LinkIcon from "../../../design/components/Icon/native/redesign/generated/
 import SendMessageIcon from "../../../design/components/Icon/native/redesign/generated/SendMessageIcon.tsx";
 import CopyIcon from "../../../design/components/Icon/native/redesign/generated/CopyIcon.tsx";
 import DownloadIcon from "../../../design/components/Icon/native/redesign/generated/DownloadIcon.tsx";
-import CheckmarkLargeIcon from "../../../design/components/Icon/native/redesign/generated/CheckmarkLargeIcon.tsx";
-import XLargeIcon2 from "../../../design/components/Icon/native/redesign/generated/XLargeIcon.tsx";
-import CircleInformationIcon from "../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
 import TrashIcon from "../../../design/components/Icon/native/redesign/generated/TrashIcon.tsx";
-import CircleCheckIcon from "../../../design/components/Icon/native/redesign/generated/CircleCheckIcon.tsx";
 import ClockIcon from "../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -29,28 +30,28 @@ export const presentAddedFriendToast = function presentAddedFriendToast() {
   obj2.IconComponent = FriendsIcon.FriendsIcon;
   ToastActionCreatorsDefault.open(obj2);
 };
-export const presentFriendRequestAcceptedToast = function presentFriendRequestAcceptedToast(dependencyMap) {
-  if (null == dependencyMap) {
+export const presentFriendRequestAcceptedToast = function presentFriendRequestAcceptedToast(username) {
+  if (null == username) {
     const intl2 = util.intl;
     let stringResult = intl2.string(util.t.UhJna5);
     let tmp2 = require;
   } else {
     tmp2 = require;
     const intl = util.intl;
-    const obj2 = { username: dependencyMap.username };
+    const obj2 = { username: username.username };
     stringResult = intl.formatToPlainString(util.t.b3eoD4, obj2);
   }
   const obj = ToastActionCreatorsDefault;
   obj.open({
     key: "TOAST_FRIEND_REQUEST_ACCEPTED",
     content: stringResult,
-    IconComponent: tmp2(4778).UserPlusIcon,
+    IconComponent: tmp2(4833).UserPlusIcon,
     iconColor: "status-positive",
   });
   const obj3 = {
     key: "TOAST_FRIEND_REQUEST_ACCEPTED",
     content: stringResult,
-    IconComponent: tmp2(4778).UserPlusIcon,
+    IconComponent: tmp2(4833).UserPlusIcon,
     iconColor: "status-positive",
   };
 };
@@ -170,8 +171,28 @@ export const presentFeedbackSent = function presentFeedbackSent() {
 export const presentEmoji = function presentEmoji(id) {
   const emojiURL = AvatarUtilsDefault.getEmojiURL({ id: id.id, animated: id.animated, size: 48 });
   const obj2 = { id: id.id, animated: id.animated, size: 48 };
-  const obj3 = ToastActionCreatorsDefault;
-  obj3.open({ key: "PRESENT_EMOJI-" + id.id, content: ":" + id.name + ":", icon: { uri: emojiURL } });
+  const designSystemsNotificationComponents =
+    DesignSystemsNotificationComponentsExperiment.getDesignSystemsNotificationComponents("presentEmoji");
+  const obj4 = ToastActionCreatorsDefault;
+  if (designSystemsNotificationComponents) {
+    const _HermesInternal3 = HermesInternal;
+    const obj5 = { text: null, icon: null };
+    const _HermesInternal4 = HermesInternal;
+    const combined = "PRESENT_EMOJI-" + id.id;
+    obj5.text = ":" + id.name + ":";
+    const obj6 = { type: "emoji", src: emojiURL, alt: id.name };
+    obj5.icon = obj6;
+    obj4.openMana(combined, obj5);
+  } else {
+    const obj7 = { key: null, content: null, icon: null };
+    const _HermesInternal = HermesInternal;
+    obj7.key = "PRESENT_EMOJI-" + id.id;
+    const _HermesInternal2 = HermesInternal;
+    obj7.content = ":" + id.name + ":";
+    const obj8 = { uri: emojiURL };
+    obj7.icon = obj8;
+    obj4.open(obj7);
+  }
 };
 export const presentNoiseCancellation = function presentNoiseCancellation(arg0) {
   const intl = util.intl;
@@ -186,9 +207,9 @@ export const presentNoiseCancellation = function presentNoiseCancellation(arg0) 
   }
   const obj2 = { key: "NOISE_CANCELLATION_TOGGLE", content: stringResult, IconComponent: null, iconColor: null };
   if (arg0) {
-    let XLargeIcon = tmp4(4792).CheckmarkLargeIcon;
+    let XLargeIcon = tmp4(4577).CheckmarkLargeIcon;
   } else {
-    XLargeIcon = tmp4(4794).XLargeIcon;
+    XLargeIcon = tmp4(4795).XLargeIcon;
   }
   obj2.IconComponent = XLargeIcon;
   let str = "icon-feedback-critical";
@@ -453,10 +474,10 @@ export const showTransferOwnershipSuccess = function showTransferOwnershipSucces
   obj2.IconComponent = CheckmarkLargeIcon.CheckmarkLargeIcon;
   ToastActionCreatorsDefault.open(obj2);
 };
-export const showSafetySuccess = function showSafetySuccess(BLOCK_SUCCESS, safetyToastTypeContent) {
+export const showSafetySuccess = function showSafetySuccess(IAR_SHARE_WITH_PARENT_SUCCESS, safetyToastTypeContent) {
   const obj = ToastActionCreatorsDefault;
   obj.open({
-    key: BLOCK_SUCCESS,
+    key: IAR_SHARE_WITH_PARENT_SUCCESS,
     content: safetyToastTypeContent,
     IconComponent: CircleCheckIcon.CircleCheckIcon,
     iconColor: "status-positive",

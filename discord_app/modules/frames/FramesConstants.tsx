@@ -54,14 +54,14 @@ export const getChannelIdForSurface = function getChannelIdForSurface(type) {
   }
 };
 export const isLaunched = function isLaunched(mainFrame) {
-  let state;
+  state = undefined;
   if (mainFrame != null) {
     state = mainFrame.state;
   }
   return "launched" === state;
 };
 export const asLaunched = function asLaunched(frameByIframeId) {
-  let state;
+  state = undefined;
   if (frameByIframeId != null) {
     state = frameByIframeId.state;
   }

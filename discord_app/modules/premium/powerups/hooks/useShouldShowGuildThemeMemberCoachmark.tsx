@@ -5,44 +5,82 @@ import ServerThemeExperiment from "../experiments/ServerThemeExperiment.tsx";
 import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount.tsx";
 import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission.tsx";
 import useIsGuildThemePerkEnabledDefault from "useIsGuildThemePerkEnabled.tsx";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 let closure_3 = GuildPowerupsConstants.GUILD_THEME_POWERUP_BOOST_PRICE;
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useShouldShowGuildThemeMemberCoachmark.tsx");
 
-export default function useShouldShowGuildThemeMemberCoachmark(guildId) {
-  const tmp = useHasAllocateBoostPermissionDefault(guildId);
-  let serverThemeEnabled = ServerThemeExperiment.useServerThemeEnabled(
-    guildId,
-    "useShouldShowGuildThemeMemberCoachmark",
-  );
-  const serverThemeUserEnabled = ServerThemeUserExperiment.useServerThemeUserEnabled(
-    "useShouldShowGuildThemeMemberCoachmark",
-  );
-  const serverThemeRollbackEnabled = ServerThemeExperiment.useServerThemeRollbackEnabled(
-    guildId,
-    "useShouldShowGuildThemeMemberCoachmark",
-  );
-  const tmp5 = useIsGuildThemePerkEnabledDefault(guildId);
-  const isLoading = useGuildPowerupsBoostCountDefault(guildId).isLoading;
-  let tmp8 = !isLoading;
-  if (!isLoading) {
-    if (serverThemeEnabled) {
-      serverThemeEnabled = serverThemeUserEnabled;
+export default ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      const tmp = useHasAllocateBoostPermissionDefault(arg0);
+      let serverThemeEnabled = ServerThemeExperiment.useServerThemeEnabled(
+        arg0,
+        "useShouldShowGuildThemeMemberCoachmark",
+      );
+      const serverThemeUserEnabled = ServerThemeUserExperiment.useServerThemeUserEnabled(
+        "useShouldShowGuildThemeMemberCoachmark",
+      );
+      const serverThemeRollbackEnabled = ServerThemeExperiment.useServerThemeRollbackEnabled(
+        arg0,
+        "useShouldShowGuildThemeMemberCoachmark",
+      );
+      const tmp5 = useIsGuildThemePerkEnabledDefault(arg0);
+      const isLoading = useGuildPowerupsBoostCountDefault(arg0).isLoading;
+      let tmp8 = !isLoading;
+      if (!isLoading) {
+        if (serverThemeEnabled) {
+          serverThemeEnabled = serverThemeUserEnabled;
+        }
+        if (serverThemeEnabled) {
+          serverThemeEnabled = !serverThemeRollbackEnabled;
+        }
+        if (serverThemeEnabled) {
+          serverThemeEnabled = tmp7 < closure_3;
+        }
+        if (serverThemeEnabled) {
+          serverThemeEnabled = !tmp5;
+        }
+        if (serverThemeEnabled) {
+          serverThemeEnabled = false === tmp;
+        }
+        tmp8 = serverThemeEnabled;
+      }
+      return tmp8;
     }
-    if (serverThemeEnabled) {
-      serverThemeEnabled = !serverThemeRollbackEnabled;
-    }
-    if (serverThemeEnabled) {
-      serverThemeEnabled = tmp7 < closure_3;
-    }
-    if (serverThemeEnabled) {
-      serverThemeEnabled = !tmp5;
-    }
-    if (serverThemeEnabled) {
-      serverThemeEnabled = false === tmp;
-    }
-    tmp8 = serverThemeEnabled;
-  }
-  return tmp8;
-}
+  : (arg0) => {
+      const tmp = useHasAllocateBoostPermissionDefault(arg0);
+      let serverThemeEnabled = ServerThemeExperiment.useServerThemeEnabled(
+        arg0,
+        "useShouldShowGuildThemeMemberCoachmark",
+      );
+      const serverThemeUserEnabled = ServerThemeUserExperiment.useServerThemeUserEnabled(
+        "useShouldShowGuildThemeMemberCoachmark",
+      );
+      const serverThemeRollbackEnabled = ServerThemeExperiment.useServerThemeRollbackEnabled(
+        arg0,
+        "useShouldShowGuildThemeMemberCoachmark",
+      );
+      const tmp5 = useIsGuildThemePerkEnabledDefault(arg0);
+      const isLoading = useGuildPowerupsBoostCountDefault(arg0).isLoading;
+      let tmp8 = !isLoading;
+      if (!isLoading) {
+        if (serverThemeEnabled) {
+          serverThemeEnabled = serverThemeUserEnabled;
+        }
+        if (serverThemeEnabled) {
+          serverThemeEnabled = !serverThemeRollbackEnabled;
+        }
+        if (serverThemeEnabled) {
+          serverThemeEnabled = tmp7 < closure_3;
+        }
+        if (serverThemeEnabled) {
+          serverThemeEnabled = !tmp5;
+        }
+        if (serverThemeEnabled) {
+          serverThemeEnabled = false === tmp;
+        }
+        tmp8 = serverThemeEnabled;
+      }
+      return tmp8;
+    };

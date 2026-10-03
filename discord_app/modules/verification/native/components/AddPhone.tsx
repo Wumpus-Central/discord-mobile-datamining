@@ -13,11 +13,11 @@ const require = globalThis.__r;
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const UserFlags = fn(1074).UserFlags;
-const NOOP_NULL = fn(1085).NOOP_NULL;
+const UserFlags = fn(1085).UserFlags;
+const NOOP_NULL = fn(1096).NOOP_NULL;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = {
   background: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   container: { padding: 16, flex: 1 },
@@ -55,7 +55,7 @@ export default function AddPhone(reason) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {

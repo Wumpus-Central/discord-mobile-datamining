@@ -32,8 +32,8 @@ prototype["getStageInstanceByChannel"] = function getStageInstanceByChannel(id) 
     return closure_2[id];
   }
 };
-prototype["isLive"] = function isLive(id) {
-  return null != this.getStageInstanceByChannel(id);
+prototype["isLive"] = function isLive(first1) {
+  return null != this.getStageInstanceByChannel(first1);
 };
 prototype["isPublic"] = function isPublic(id) {
   const stageInstanceByChannel = this.getStageInstanceByChannel(id);

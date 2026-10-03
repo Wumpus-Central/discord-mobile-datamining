@@ -1,5 +1,5 @@
 // discord_app/modules/guild_automod/native/ModerateUserActionSheet.tsx
-import asyncRequireImpl from "../../../../_runtime/01981_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import useCanToggleCommunicationDisableOnUser from "../../guild_communication_disabled/useCanToggleCommunicationDisableOnUser.tsx";
 import GuildMemberUtils from "../../guild_member/GuildMemberUtils.tsx";
@@ -13,10 +13,10 @@ import PermissionStore from "../../../stores/PermissionStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-const Permissions = fn(1074).Permissions;
+const Permissions = fn(1085).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let closure_11 = createStyles.createStyles({
   container: { padding: 16, gap: 16 },
   memberRoles: { justifyContent: "flex-start" },
@@ -26,7 +26,7 @@ let result = size.fileFinishedImporting("modules/guild_automod/native/ModerateUs
 
 export default noop.memo((user) => {
   user = user.user;
-  const guild = user.guild;
+  guild = user.guild;
   let stateFromStores;
   let hideActionSheet;
   c4 = undefined;
@@ -118,7 +118,7 @@ export default noop.memo((user) => {
         obj2.icon = closure_9(tmp2(tmp3[13]).ActionSheetRow.Icon, obj3);
         obj2.onPress = function onPress() {
           hideActionSheet();
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11527, dependencyMap.paths), {
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11447, dependencyMap.paths), {
             userId: user.id,
             guildId: guild.id,
             onClose() {

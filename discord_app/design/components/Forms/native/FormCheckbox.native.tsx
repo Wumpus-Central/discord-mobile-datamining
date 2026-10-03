@@ -1,14 +1,17 @@
 // discord_app/design/components/Forms/native/FormCheckbox.native.tsx
+import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import spring from "../../../animation/reanimated/spring/spring.tsx";
+import AccessibilityPreferencesContext from "../../../../../discord_common/js/packages/design/components/AccessibilityPreferencesContext/AccessibilityPreferencesContext.tsx";
 import IconDefault from "../../../void/Icon/native/Icon.tsx";
+import spring from "../../../animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../animation/reanimated/spring/springPresets.tsx";
+import _modDef5992 from "../../../../../_runtime/metro/05992__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = { checkbox: null, unselected: null, selected: null, checkmark: null };
 let size = {
   width: nativeDefault.modules.mobile.CONTROL_CHECKBOX_SIZE_DEFAULT,
@@ -41,95 +44,231 @@ const obj4 = {
 obj2.checkmark = { tintColor: nativeDefault.colors.CHECKBOX_ICON_ACTIVE };
 let closure_5 = createStyles.createStyles(obj2);
 const Icon = ReanimatedRexport.createAnimatedComponent(IconDefault);
+fn(558);
 const __initData = {
-  code: "function FormCheckboxNativeTsx1(){const{withSpring,checked,selected,unselected,SUBTLE_SPRING}=this.__closure;const defaultAnimation={borderColor:withSpring(checked?selected.borderColor:unselected.borderColor,SUBTLE_SPRING,'animate-always'),backgroundColor:withSpring(checked?selected.backgroundColor:unselected.backgroundColor,SUBTLE_SPRING,'animate-always')};return defaultAnimation;}",
+  code: 'function FormCheckboxNativeTsx1(){const{withSpring,checked,selected,unselected,SUBTLE_SPRING}=this.__closure;const defaultAnimation={borderColor:withSpring(checked?selected.borderColor:unselected.borderColor,SUBTLE_SPRING,"animate-always"),backgroundColor:withSpring(checked?selected.backgroundColor:unselected.backgroundColor,SUBTLE_SPRING,"animate-always")};return defaultAnimation;}',
 };
 const __initData2 = {
-  code: "function FormCheckboxNativeTsx2(){const{useReducedMotion,withSpring,checked,SUBTLE_SPRING}=this.__closure;const uncheckedScale=useReducedMotion?1:0.5;return{opacity:withSpring(checked?1:0,SUBTLE_SPRING,'animate-always'),transform:[{scale:withSpring(checked?1:uncheckedScale,SUBTLE_SPRING)}]};}",
+  code: "function FormCheckboxNativeTsx2(){const{withSpring,checked,selected,unselected,SUBTLE_SPRING}=this.__closure;const defaultAnimation={borderColor:withSpring(checked?selected.borderColor:unselected.borderColor,SUBTLE_SPRING,'animate-always'),backgroundColor:withSpring(checked?selected.backgroundColor:unselected.backgroundColor,SUBTLE_SPRING,'animate-always')};return defaultAnimation;}",
 };
+const obj5 = { tintColor: nativeDefault.colors.CHECKBOX_ICON_ACTIVE };
+let ReactCompilerGating = fn(558);
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (checked) => {
+      _require = checked;
+      const tmp = closure_5();
+      const selected = tmp.selected;
+      const unselected = tmp.unselected;
+      const fn = function t() {
+        if (closure_0) {
+          let borderColor = selected.borderColor;
+        } else {
+          borderColor = unselected.borderColor;
+        }
+        const obj2 = {
+          borderColor: spring.withSpring(borderColor, springPresets.SUBTLE_SPRING, "animate-always"),
+          backgroundColor: null,
+        };
+        if (closure_0) {
+          let backgroundColor = selected.backgroundColor;
+        } else {
+          backgroundColor = unselected.backgroundColor;
+        }
+        obj2.backgroundColor = spring.withSpring(backgroundColor, springPresets.SUBTLE_SPRING, "animate-always");
+        return obj2;
+      };
+      let obj = require("ReanimatedRexport");
+      fn.__closure = {
+        withSpring: require("spring").withSpring,
+        checked,
+        selected,
+        unselected,
+        SUBTLE_SPRING: require("springPresets").SUBTLE_SPRING,
+      };
+      fn.__workletHash = 4459088483670;
+      fn.__initData = __initData;
+      return obj.useAnimatedStyle(fn);
+    }
+  : (checked) => {
+      _require = checked;
+      const tmp = closure_5();
+      const selected = tmp.selected;
+      const unselected = tmp.unselected;
+      const fn = function t() {
+        if (closure_0) {
+          let borderColor = selected.borderColor;
+        } else {
+          borderColor = unselected.borderColor;
+        }
+        const obj2 = {
+          borderColor: spring.withSpring(borderColor, springPresets.SUBTLE_SPRING, "animate-always"),
+          backgroundColor: null,
+        };
+        if (closure_0) {
+          let backgroundColor = selected.backgroundColor;
+        } else {
+          backgroundColor = unselected.backgroundColor;
+        }
+        obj2.backgroundColor = spring.withSpring(backgroundColor, springPresets.SUBTLE_SPRING, "animate-always");
+        return obj2;
+      };
+      let obj = require("ReanimatedRexport");
+      fn.__closure = {
+        withSpring: require("spring").withSpring,
+        checked,
+        selected,
+        unselected,
+        SUBTLE_SPRING: require("springPresets").SUBTLE_SPRING,
+      };
+      fn.__workletHash = 9962611822165;
+      fn.__initData = __initData2;
+      return obj.useAnimatedStyle(fn);
+    };
+const __initData3 = {
+  code: 'function FormCheckboxNativeTsx3(){const{useReducedMotion,withSpring,checked,SUBTLE_SPRING}=this.__closure;const uncheckedScale=useReducedMotion?1:0.5;return{opacity:withSpring(checked?1:0,SUBTLE_SPRING,"animate-always"),transform:[{scale:withSpring(checked?1:uncheckedScale,SUBTLE_SPRING)}]};}',
+};
+const __initData4 = {
+  code: "function FormCheckboxNativeTsx4(){const{useReducedMotion,withSpring,checked,SUBTLE_SPRING}=this.__closure;const uncheckedScale=useReducedMotion?1:0.5;return{opacity:withSpring(checked?1:0,SUBTLE_SPRING,'animate-always'),transform:[{scale:withSpring(checked?1:uncheckedScale,SUBTLE_SPRING)}]};}",
+};
+ReactCompilerGating = fn(558);
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (useReducedMotion, checked) => {
+      _require = useReducedMotion;
+      closure_1 = checked;
+      const fn = function c() {
+        let num = 0.5;
+        if (closure_0) {
+          num = 1;
+        }
+        let num2 = 0;
+        if (closure_1) {
+          num2 = 1;
+        }
+        const obj2 = {
+          opacity: spring.withSpring(num2, springPresets.SUBTLE_SPRING, "animate-always"),
+          transform: null,
+        };
+        let num3 = 1;
+        if (!closure_1) {
+          num3 = num;
+        }
+        const tmpResult = spring;
+        const items = [{ scale: spring.withSpring(num3, springPresets.SUBTLE_SPRING) }];
+        obj2.transform = items;
+        return obj2;
+      };
+      let obj = require("ReanimatedRexport");
+      fn.__closure = {
+        useReducedMotion,
+        withSpring: require("spring").withSpring,
+        checked,
+        SUBTLE_SPRING: require("springPresets").SUBTLE_SPRING,
+      };
+      fn.__workletHash = 12934307330610;
+      fn.__initData = __initData3;
+      return obj.useAnimatedStyle(fn);
+    }
+  : (useReducedMotion, checked) => {
+      _require = useReducedMotion;
+      closure_1 = checked;
+      const fn = function c() {
+        let num = 0.5;
+        if (closure_0) {
+          num = 1;
+        }
+        let num2 = 0;
+        if (closure_1) {
+          num2 = 1;
+        }
+        const obj2 = {
+          opacity: spring.withSpring(num2, springPresets.SUBTLE_SPRING, "animate-always"),
+          transform: null,
+        };
+        let num3 = 1;
+        if (!closure_1) {
+          num3 = num;
+        }
+        const tmpResult = spring;
+        const items = [{ scale: spring.withSpring(num3, springPresets.SUBTLE_SPRING) }];
+        obj2.transform = items;
+        return obj2;
+      };
+      let obj = require("ReanimatedRexport");
+      fn.__closure = {
+        useReducedMotion,
+        withSpring: require("spring").withSpring,
+        checked,
+        SUBTLE_SPRING: require("springPresets").SUBTLE_SPRING,
+      };
+      fn.__workletHash = 16476605648149;
+      fn.__initData = __initData4;
+      return obj.useAnimatedStyle(fn);
+    };
 size = fn(2);
 const result = size.fileFinishedImporting("design/components/Forms/native/FormCheckbox.native.tsx");
 
-export const FormCheckbox = function FormCheckbox(checked) {
-  checked = checked.checked;
-  const tmp = closure_5();
-  const enabled = noop.useContext(checked(unselected[6]).AccessibilityPreferencesContext).reducedMotion.enabled;
-  const tmp2 = closure_5();
-  const selected = tmp2.selected;
-  unselected = tmp2.unselected;
-  const fn = function _() {
-    if (checked) {
-      let borderColor = selected.borderColor;
-    } else {
-      borderColor = unselected.borderColor;
+export const FormCheckbox = ReactCompilerGating.isReactCompilerEnabled()
+  ? (checked) => {
+      const cResult = c.c(9);
+      checked = checked.checked;
+      const tmp3 = closure_5();
+      const tmp4 = closure_9(checked);
+      const tmp5 = closure_12(
+        noop.useContext(AccessibilityPreferencesContext.AccessibilityPreferencesContext).reducedMotion.enabled,
+        checked,
+      );
+      if (cResult[0] === tmp4) {
+        if (cResult[1] === tmp3.checkbox) {
+          let tmp6 = cResult[2];
+        }
+        if (cResult[3] === tmp5) {
+          if (cResult[4] === tmp3.checkmark) {
+            let tmp7 = cResult[5];
+          }
+          if (cResult[6] === tmp6) {
+            if (cResult[7] === tmp7) {
+              let tmp12 = cResult[8];
+            }
+            return tmp12;
+          }
+          const obj2 = { style: tmp6, children: tmp7 };
+          const tmp15 = jsx(ReanimatedRexport.View, { style: tmp6, children: tmp7 });
+          cResult[6] = tmp6;
+          cResult[7] = tmp7;
+          cResult[8] = tmp15;
+          tmp12 = tmp15;
+        }
+        const obj3 = { source: _modDef5992, size: IconDefault.Sizes.SMALL_20, style: null };
+        const items = [tmp3.checkmark, tmp5];
+        obj3.style = items;
+        const tmp11 = <Icon source={_modDef5992} size={IconDefault.Sizes.SMALL_20} style={null} />;
+        cResult[3] = tmp5;
+        cResult[4] = tmp3.checkmark;
+        cResult[5] = tmp11;
+        tmp7 = tmp11;
+      }
+      const items1 = [tmp3.checkbox, tmp4];
+      cResult[0] = tmp4;
+      cResult[1] = tmp3.checkbox;
+      cResult[2] = items1;
+      tmp6 = items1;
     }
-    const obj2 = {
-      borderColor: spring.withSpring(borderColor, springPresets.SUBTLE_SPRING, "animate-always"),
-      backgroundColor: null,
+  : (checked) => {
+      checked = checked.checked;
+      const tmp = closure_5();
+      const tmp2 = closure_9(checked);
+      const obj = { style: null, children: null };
+      const items = [tmp.checkbox, tmp2];
+      obj.style = items;
+      const obj2 = { source: _modDef5992, size: IconDefault.Sizes.SMALL_20, style: null };
+      const items1 = [
+        tmp.checkmark,
+        closure_12(
+          noop.useContext(AccessibilityPreferencesContext.AccessibilityPreferencesContext).reducedMotion.enabled,
+          checked,
+        ),
+      ];
+      obj2.style = items1;
+      obj.children = <Icon source={_modDef5992} size={IconDefault.Sizes.SMALL_20} style={null} />;
+      return jsx(ReanimatedRexport.View, { style: null, children: null });
     };
-    if (checked) {
-      let backgroundColor = selected.backgroundColor;
-    } else {
-      backgroundColor = unselected.backgroundColor;
-    }
-    obj2.backgroundColor = spring.withSpring(backgroundColor, springPresets.SUBTLE_SPRING, "animate-always");
-    return obj2;
-  };
-  let obj = checked(unselected[4]);
-  fn.__closure = {
-    withSpring: checked(unselected[8]).withSpring,
-    checked,
-    selected,
-    unselected,
-    SUBTLE_SPRING: checked(unselected[9]).SUBTLE_SPRING,
-  };
-  fn.__workletHash = 11278373524374;
-  fn.__initData = __initData;
-  closure_129_0 = enabled;
-  closure_129_1 = checked;
-  const animatedStyle = obj.useAnimatedStyle(fn);
-  let obj2 = {
-    withSpring: checked(unselected[8]).withSpring,
-    checked,
-    selected,
-    unselected,
-    SUBTLE_SPRING: checked(unselected[9]).SUBTLE_SPRING,
-  };
-  const fn2 = function c() {
-    let num = 0.5;
-    if (checked) {
-      num = 1;
-    }
-    let num2 = 0;
-    if (selected) {
-      num2 = 1;
-    }
-    const obj2 = { opacity: spring.withSpring(num2, springPresets.SUBTLE_SPRING, "animate-always"), transform: null };
-    let num3 = 1;
-    if (!selected) {
-      num3 = num;
-    }
-    const tmpResult = spring;
-    const items = [{ scale: spring.withSpring(num3, springPresets.SUBTLE_SPRING) }];
-    obj2.transform = items;
-    return obj2;
-  };
-  const obj3 = checked(unselected[4]);
-  fn2.__closure = {
-    useReducedMotion: enabled,
-    withSpring: checked(unselected[8]).withSpring,
-    checked,
-    SUBTLE_SPRING: checked(unselected[9]).SUBTLE_SPRING,
-  };
-  fn2.__workletHash = 13939484082835;
-  fn2.__initData = __initData2;
-  const animatedStyle1 = obj3.useAnimatedStyle(fn2);
-  const obj5 = { style: null, children: null };
-  let items = [tmp.checkbox, animatedStyle];
-  obj5.style = items;
-  const obj6 = { source: selected(unselected[7]), size: selected(unselected[5]).Sizes.SMALL_20, style: null };
-  const items1 = [tmp.checkmark, animatedStyle1];
-  obj6.style = items1;
-  obj5.children = <Icon source={selected(unselected[7])} size={selected(unselected[5]).Sizes.SMALL_20} style={null} />;
-  return jsx(selected(unselected[4]).View, { style: null, children: null });
-};

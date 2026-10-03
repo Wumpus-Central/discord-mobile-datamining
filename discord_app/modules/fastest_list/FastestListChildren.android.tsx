@@ -5,7 +5,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let closure_6 = createStyles.createStyles({ portal: { position: "absolute", opacity: 0, height: 0, top: 0 } });
 let obj = { items: [], keys: new Map(), keyIndex: 0 };
 let map = new Map();
@@ -128,7 +128,7 @@ export default noop.memo(
         const _Map = Map;
         const map = new Map(ref.current.keys);
         const _Map2 = Map;
-        map1 = new Map();
+        const map1 = new Map();
         const items = [];
         const items1 = [];
         const tmp95 = estimatedListSize(horizontal[7])(listId, tmp4, sections);
@@ -167,7 +167,7 @@ export default noop.memo(
                   }
                   let _HermesInternal2 = HermesInternal;
                   let combined = "" + listId + "-" + first1;
-                  let value3 = map.get(combined);
+                  value3 = map.get(combined);
                   if (null != value3) {
                     let result = map1.set(combined, value3);
                     let deleteResult = map.delete(combined);

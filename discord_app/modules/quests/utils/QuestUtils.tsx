@@ -27,14 +27,14 @@ function isSponsoredPlayQuest(quest) {
 function hasVariant(nextResult, MOBILE_ACTIVITY_QUEST) {
   return new Set(nextResult.config.features).has(MOBILE_ACTIVITY_QUEST);
 }
-const QuestConstants = fn(5942);
+const QuestConstants = fn(5623);
 ({ DISCORD_APPLICATION_ID: closure_8, QuestVariants: closure_9, RewardFilterTypes: c10 } = QuestConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/utils/QuestUtils.tsx");
 
 export { isSponsoredPlayQuest };
 export const isPlayAnyActivityQuest = function isPlayAnyActivityQuest(quest) {
-  return QuestTaskUtils.getPlayActivityApplicationId(quest) === React6;
+  return QuestTaskUtils.getPlayActivityApplicationId(quest) === closure_1_8;
 };
 export { hasVariant };
 export const canLaunchActivity = function canLaunchActivity(quest) {
@@ -122,7 +122,7 @@ export const shouldShowBountiesGivenFilters = function shouldShowBountiesGivenFi
 };
 export const setQuestHomeUtmContext = function setQuestHomeUtmContext(arg0) {
   ({ questId, fromContent, utmSource, utmMedium } = arg0);
-  const state = QuestUtmStore.getState();
+  state = QuestUtmStore.getState();
   const obj = {
     utmSourceCurrent: utmSource,
     utmMediumCurrent: utmMedium,

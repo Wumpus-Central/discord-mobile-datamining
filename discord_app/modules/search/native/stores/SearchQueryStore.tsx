@@ -8,10 +8,10 @@ import RelationshipStore from "../../../../stores/RelationshipStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-const SearchConstants = fn(7477);
+const SearchConstants = fn(7513);
 ({ EMPTY_SEARCH_QUERY_STRING: metroRequire, SearchQueryTagTypes: closure_7 } = SearchConstants);
-const SearchFilterAddLocations = fn(7476).SearchFilterAddLocations;
-const Constants = fn(1074);
+const SearchFilterAddLocations = fn(7512).SearchFilterAddLocations;
+const Constants = fn(1085);
 ({ SearchTokenTypes: closure_9, SearchTypes: c10 } = Constants);
 const prototype = function SearchQueryStateManager(type) {
   const obj = Object.create(new.target.prototype);
@@ -171,8 +171,8 @@ const prototype = function SearchQueryStateManager(type) {
   } else {
     let channelName;
     if (null != channel) {
-      channelName = obj(4998).computeChannelName(channel, UserStore, RelationshipStore);
-      const obj2 = obj(4998);
+      channelName = obj(5043).computeChannelName(channel, UserStore, RelationshipStore);
+      const obj2 = obj(5043);
     }
     if (null == channelName) {
       let items1 = [];
@@ -184,20 +184,20 @@ const prototype = function SearchQueryStateManager(type) {
         channelId: null,
         location: null,
       };
-      const intl = obj(1115).intl;
-      const stringResult = intl.string(obj(1115).t.WNpFHa);
+      const intl = obj(1126).intl;
+      const stringResult = intl.string(obj(1126).t.WNpFHa);
       let _HermesInternal = HermesInternal;
-      obj3.text = "" + stringResult + ": " + obj(12033).quoteChannelName(channelName);
+      obj3.text = "" + stringResult + ": " + obj(11968).quoteChannelName(channelName);
       obj3.channelId = type.channelId;
       obj3.location = SearchFilterAddLocations.CLIENT_AUTO_ADD;
       items1 = [obj3];
-      const obj4 = obj(12033);
+      const obj4 = obj(11968);
     }
     items = items1;
   }
 }.prototype;
 const map = new Map();
-const FunctionUtils = fn(2019);
+const FunctionUtils = fn(2026);
 let closure_13 = FunctionUtils.cachedFunction((arg0) => new prototype(arg0));
 const Store = initializeDefault.Store;
 class NativeSearchQueryStore extends Store {}

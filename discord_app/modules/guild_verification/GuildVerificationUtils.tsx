@@ -5,7 +5,7 @@ import MemberVerificationModalActionCreators from "../guild_member_verification/
 import UserGuildJoinRequestStore from "../guild_member_verification/UserGuildJoinRequestStore.tsx";
 
 require = fn;
-const GuildFeatures = fn(1074).GuildFeatures;
+const GuildFeatures = fn(1085).GuildFeatures;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_verification/GuildVerificationUtils.tsx");
 

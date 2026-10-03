@@ -1,10 +1,10 @@
 // discord_app/modules/panels/morphable/AppFreezeStore.tsx
-import 00560__ from "../../../../_runtime/metro/00560__.js";
+import 00570__ from "../../../../_runtime/metro/00570__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/panels/morphable/AppFreezeStore.tsx");
 
-export default module_560.create((arg0) => {
+export default module_570.create((arg0) => {
   closure_0 = arg0;
   let obj = {
     lockKeys: new Set(),

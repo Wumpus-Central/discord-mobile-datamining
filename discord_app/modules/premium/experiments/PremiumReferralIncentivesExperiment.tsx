@@ -1,9 +1,11 @@
 // discord_app/modules/premium/experiments/PremiumReferralIncentivesExperiment.tsx
+import c from "../../../../_runtime/00576_c.js";
 import ApexExperiment from "../../experiments/apex/index.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const obj = { ORBS: "orbs", DISCOUNT: "discount" };
-const obj2 = {
+let obj2 = {
   name: "2026-07-premium-referral-incentives",
   kind: "user",
   defaultConfig: { referralRewardType: null, useAltReferralCardArt: false },
@@ -20,11 +22,42 @@ const result = size.fileFinishedImporting("modules/premium/experiments/PremiumRe
 
 export default apexExperiment;
 export const ReferralRewardType = obj;
-export const usePremiumReferralIncentivesVariant = function usePremiumReferralIncentivesVariant(location) {
-  const config = apexExperiment.useConfig({ location });
-  return {
-    referralRewardType: config.referralRewardType,
-    useAltReferralCardArt: config.useAltReferralCardArt,
-    isInReferralIncentivesTreatment: null != config.referralRewardType,
-  };
-};
+export const usePremiumReferralIncentivesVariant = ReactCompilerGating.isReactCompilerEnabled()
+  ? (location) => {
+      const cResult = c.c(6);
+      if (cResult[0] !== location) {
+        const obj2 = { location };
+        cResult[0] = location;
+        cResult[1] = obj2;
+        let tmp2 = obj2;
+      } else {
+        tmp2 = cResult[1];
+      }
+      const config = apexExperiment.useConfig(tmp2);
+      if (cResult[2] === config.referralRewardType) {
+        if (cResult[3] === config.useAltReferralCardArt) {
+          if (cResult[4] === tmp4) {
+            let tmp5 = cResult[5];
+          }
+          return tmp5;
+        }
+      }
+      const obj3 = {
+        referralRewardType: config.referralRewardType,
+        useAltReferralCardArt: config.useAltReferralCardArt,
+        isInReferralIncentivesTreatment: null != config.referralRewardType,
+      };
+      cResult[2] = config.referralRewardType;
+      cResult[3] = config.useAltReferralCardArt;
+      cResult[4] = null != config.referralRewardType;
+      cResult[5] = obj3;
+      tmp5 = obj3;
+    }
+  : (location) => {
+      const config = apexExperiment.useConfig({ location });
+      return {
+        referralRewardType: config.referralRewardType,
+        useAltReferralCardArt: config.useAltReferralCardArt,
+        isInReferralIncentivesTreatment: null != config.referralRewardType,
+      };
+    };

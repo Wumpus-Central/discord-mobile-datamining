@@ -7,7 +7,7 @@ import sortByMatchScoreDefault from "../../../autocompleter/index.tsx";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
 const require = fn;
-const Permissions = fn(1074).Permissions;
+const Permissions = fn(1085).Permissions;
 let closure_6 = [];
 class GuildMemberSearchManager {
   constructor() {
@@ -158,7 +158,7 @@ const searchGuildMemberTabStoreImpl = new SearchGuildMemberTabStoreImpl(Dispatch
             searchGuildMemberTabStoreImpl.emitChange();
           }
         };
-        let items = [obj2(9485).AutocompleterResultTypes.USER];
+        let items = [obj2(9496).AutocompleterResultTypes.USER];
         const tmp42 = new sortByMatchScoreDefault(obj2.onAutocompleterResultsChange, items, 50);
         obj2.autocompleter = tmp42;
         const autocompleter = obj2.autocompleter;

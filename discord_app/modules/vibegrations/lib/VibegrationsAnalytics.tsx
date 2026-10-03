@@ -42,7 +42,7 @@ function vibegrationLocation(project_id, isPreview) {
   obj.channel_id = result;
   return obj;
 }
-const AnalyticEvents = fn(1074).AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsAnalytics.tsx");
 

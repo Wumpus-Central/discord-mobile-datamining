@@ -5,8 +5,8 @@ import createCommonMessageDefault from "createCommonMessage.tsx";
 import ReferencedMessageStore from "../../../../replies/ReferencedMessageStore.tsx";
 
 require = fn;
-const ReferencedMessageState = fn(7199).ReferencedMessageState;
-const MessageTypes = fn(1074).MessageTypes;
+const ReferencedMessageState = fn(7102).ReferencedMessageState;
+const MessageTypes = fn(1085).MessageTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/ThreadStarterSystemMessage.tsx",

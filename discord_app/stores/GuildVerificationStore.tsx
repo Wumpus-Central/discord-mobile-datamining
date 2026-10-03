@@ -17,7 +17,7 @@ function recomputeGuild(guildId) {
   _require = guildId;
   clearGuild(guildId);
   set.add(guildId);
-  const guild = GuildStore.getGuild(guildId);
+  guild = GuildStore.getGuild(guildId);
   const currentUser = UserStore.getCurrentUser();
   let tmp4 = null != guild;
   if (tmp4) {

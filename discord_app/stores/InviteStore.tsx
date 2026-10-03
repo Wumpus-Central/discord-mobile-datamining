@@ -22,7 +22,7 @@ function updateInvite(code, fn) {
   fn(obj3);
   map = new Map(map);
   const result1 = map.set(str, obj3);
-  const guild = obj3.guild;
+  guild = obj3.guild;
   let id;
   if (guild != null) {
     id = guild.id;

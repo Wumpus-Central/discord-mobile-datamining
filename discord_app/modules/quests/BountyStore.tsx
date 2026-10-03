@@ -42,7 +42,7 @@ Object.defineProperty(prototype, "questHomeBounties", {
 prototype["isBountyCompleted"] = function isBountyCompleted(id) {
   return set.has(id);
 };
-prototype["getCompletedBountyCount"] = function getCompletedBountyCount(arg0) {
+prototype["getCompletedBountyCount"] = function getCompletedBountyCount(first1) {
   let num = 0;
   while (tmp !== undefined) {
     if (set.has(tmp2.id)) {

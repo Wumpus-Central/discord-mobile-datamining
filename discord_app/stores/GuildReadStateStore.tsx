@@ -93,7 +93,7 @@ function isCountableChannel(channel) {
         let tmp11 = null != channel.guild_id;
         if (tmp11) {
           if (result1) {
-            let result2 = React7(channel.type);
+            let result2 = options(channel.type);
             if (!result2) {
               result2 = UserGuildSettingsStore.isChannelRecordOrParentOptedIn(channel);
             }
@@ -514,7 +514,7 @@ function recountGuild(guildId, hasItem) {
             tmp32 = tmp29;
           }
           if (tmp32) {
-            let tmp35 = React6(obj12.type);
+            let tmp35 = closure_1_8(obj12.type);
             let tmp36 = !tmp35;
             if (tmp35) {
               tmp36 = 0 !== mentionCount;
@@ -526,7 +526,7 @@ function recountGuild(guildId, hasItem) {
                 if (tmp40) {
                   let tmp41 = result;
                   if (result) {
-                    let result1 = React7(obj12.type);
+                    let result1 = options(obj12.type);
                     if (!result1) {
                       result1 = UserGuildSettingsStore.isChannelRecordOrParentOptedIn(obj12);
                     }
@@ -1028,12 +1028,12 @@ function handleRecentMentionsSuccess(messages) {
     }
   });
 }
-const ChannelRecord = fn(2048);
+const ChannelRecord = fn(2055);
 ({ getBasicAccessPermissions: closure_7, isGuildVocalChannelType: closure_8, isThread: closure_9 } = ChannelRecord);
-const ChannelFlags = fn(2051).ChannelFlags;
-const ReadStateConstants = fn(5027);
+const ChannelFlags = fn(2058).ChannelFlags;
+const ReadStateConstants = fn(5072);
 ({ ReadStateTypes: closure_19, UnreadSetting: closure_20 } = ReadStateConstants);
-const NULL_STRING_GUILD_ID = fn(1074).NULL_STRING_GUILD_ID;
+const NULL_STRING_GUILD_ID = fn(1085).NULL_STRING_GUILD_ID;
 let guilds = {};
 let set = new Set();
 let closure_24 = 0;

@@ -3,7 +3,7 @@ import utils_PlatformUtils from "../../../discord_common/js/shared/utils/Platfor
 import GenericIAPStore from "../billing/native/GenericIAPStore.tsx";
 
 require = fn;
-const PaymentGateways = fn(1074).PaymentGateways;
+const PaymentGateways = fn(1085).PaymentGateways;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/slayer_storefront/getStorefrontSkuFetchOptions.native.tsx");
 

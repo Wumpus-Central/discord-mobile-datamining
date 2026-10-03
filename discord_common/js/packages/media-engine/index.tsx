@@ -1,8 +1,8 @@
 // discord_common/js/packages/media-engine/index.tsx
 import destroy from "native/index.tsx";
+import MediaEngineEvent from "MediaEngineEvent.tsx";
 import BaseConnection from "BaseConnection.tsx";
 import MediaEngineDummy from "MediaEngineDummy.tsx";
-import MediaEngineEvent from "MediaEngineEvent.tsx";
 import Constants from "Constants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 

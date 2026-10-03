@@ -340,7 +340,7 @@ function buildSubCommands(arg0) {
   if (null == command.options) {
     return items2;
   } else {
-    const options = command.options;
+    options = command.options;
     const found = options.filter((type) => type.type === Server.ApplicationCommandOptionType.SUB_COMMAND_GROUP);
     for (let num3 = 0; num3 < found.length; num3 = num3 + 1) {
       let push = items2.push;
@@ -474,16 +474,16 @@ export const getMatchingGroupCommands = function getMatchingGroupCommands(contex
   });
   return items.slice(0, arg3);
 };
-export const getApplicationCommandOptionQueryOptions = function getApplicationCommandOptionQueryOptions(activeOption) {
-  let tmp3 = activeOption.type === Server.ApplicationCommandOptionType.USER;
+export const getApplicationCommandOptionQueryOptions = function getApplicationCommandOptionQueryOptions(option) {
+  let tmp3 = option.type === Server.ApplicationCommandOptionType.USER;
   if (!tmp3) {
-    tmp3 = activeOption.type === Server.ApplicationCommandOptionType.MENTIONABLE;
+    tmp3 = option.type === Server.ApplicationCommandOptionType.MENTIONABLE;
   }
-  let tmp4 = activeOption.type === Server.ApplicationCommandOptionType.ROLE;
+  let tmp4 = option.type === Server.ApplicationCommandOptionType.ROLE;
   if (!tmp4) {
-    tmp4 = activeOption.type === Server.ApplicationCommandOptionType.MENTIONABLE;
+    tmp4 = option.type === Server.ApplicationCommandOptionType.MENTIONABLE;
   }
-  const tmp5 = activeOption.type === Server.ApplicationCommandOptionType.STRING;
+  const tmp5 = option.type === Server.ApplicationCommandOptionType.STRING;
   let tmp6 = tmp5;
   if (!tmp5) {
     tmp6 = tmp4;
@@ -491,7 +491,7 @@ export const getApplicationCommandOptionQueryOptions = function getApplicationCo
   const obj = { canMentionEveryone: tmp6, canMentionHere: tmp5, canMentionChannels: null, canMentionUsers: null, canMentionRoles: null, canMentionAnyGuildUser: null, canMentionNonMentionableRoles: null, canMentionOtherGlobals: null };
   let tmp7 = tmp5;
   if (!tmp5) {
-    tmp7 = activeOption.type === Server.ApplicationCommandOptionType.CHANNEL;
+    tmp7 = option.type === Server.ApplicationCommandOptionType.CHANNEL;
   }
   obj.canMentionChannels = tmp7;
   let tmp8 = tmp5;

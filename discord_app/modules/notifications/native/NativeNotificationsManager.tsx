@@ -29,7 +29,7 @@ let closure_11 = async function _getDeliveredNotifications() {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -90,7 +90,7 @@ let closure_13 = async function _updateAndClearStaleNotifications() {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -167,7 +167,7 @@ let closure_13 = async function _updateAndClearStaleNotifications() {
           obj = closure_1_0(dependencyMap[6]);
         })();
         c2 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp8) {
       c2 = tmp;
@@ -176,7 +176,7 @@ let closure_13 = async function _updateAndClearStaleNotifications() {
   }
 };
 const NativeModules = fn(17).NativeModules;
-const AnalyticEvents = fn(1074).AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 let closure_8 = new LoggerDefault("NativeNotificationsManager");
 let closure_9 = [];
 const prototype = function NativeNotificationsManager() {
@@ -192,7 +192,7 @@ const prototype = function NativeNotificationsManager() {
         const result1 = DCDNotificationManager.clearNotificationsForChannel(channelId);
       }
     }
-    obj = applyArgumentsResult(1364);
+    obj = applyArgumentsResult(1369);
   };
   require = applyArgumentsResult;
   applyArgumentsResult.handlePostConnectionOpen = asyncGeneratorStep(async () => {
@@ -206,7 +206,7 @@ const prototype = function NativeNotificationsManager() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -303,7 +303,7 @@ const prototype = function NativeNotificationsManager() {
                 return rounded;
               }
             };
-            obj14 = applyArgumentsResult(1364);
+            obj14 = applyArgumentsResult(1369);
             let str2 = "cache";
             if (obj8.isIOS()) {
               str2 = "shared";
@@ -337,7 +337,7 @@ const prototype = function NativeNotificationsManager() {
                 if (null == closure_131_3) {
                   c6 = 0;
                   logger = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 } else {
                   const _Map = Map;
                   const map = new Map();
@@ -354,7 +354,7 @@ const prototype = function NativeNotificationsManager() {
                     applyArgumentsResult = closure_131_6[Symbol.iterator]();
                     const str = closure_131_3.trim();
                   }
-                  obj13 = applyArgumentsResult(1364);
+                  obj13 = applyArgumentsResult(1369);
                 }
               }
             } else if (3 === tmp9) {
@@ -387,7 +387,7 @@ const prototype = function NativeNotificationsManager() {
                   const obj9 = { value, done: true };
                   return obj9;
                 } else {
-                  applyArgumentsResult(1364);
+                  applyArgumentsResult(1369);
                 }
               } else if (arg0 === 1) {
                 logger = 3;
@@ -407,7 +407,7 @@ const prototype = function NativeNotificationsManager() {
           }
           c7 = 6;
           logger = 1;
-          const obj11 = { value: applyArgumentsResult(7832).removeFile(closure_131_0, closure_131_2), done: false };
+          const obj11 = { value: applyArgumentsResult(7876).removeFile(closure_131_0, closure_131_2), done: false };
           return obj11;
         }
       } catch (tmp41) {
@@ -436,7 +436,7 @@ const prototype = function NativeNotificationsManager() {
         const result1 = setShowFullscreenCallUI(true);
       }
     }
-    obj = applyArgumentsResult(1364);
+    obj = applyArgumentsResult(1369);
   };
   applyArgumentsResult.updateAndClearStaleNotifications = function updateAndClearStaleNotifications() {
     updateAndClearStaleNotifications();

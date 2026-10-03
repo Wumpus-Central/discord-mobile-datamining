@@ -45,15 +45,23 @@ let closure_8 = async function _getEmojiSourceData(arg0) {
       if (type1 === closure_130_6.APPLICATION) {
         closure_129_0 = { application: closure_130_10.createFromServer(body.application), type: body.type };
         { application: closure_130_10.createFromServer(body.application), type: body.type };
+      } else {
+        let type2;
+        if (body != null) {
+          type2 = body.type;
+        }
+        if (type2 === closure_130_6.PACK) {
+          closure_129_0 = { type: body.type };
+        }
       }
     }
     c3 = 0;
   }
   return value;
 };
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ Endpoints: closure_4, GuildFeatures: hasOwnProperty } = Constants);
-const EmojiSourceDataTypes = { GUILD: "GUILD", APPLICATION: "APPLICATION" };
+const EmojiSourceDataTypes = { GUILD: "GUILD", APPLICATION: "APPLICATION", PACK: "PACK" };
 let ExpressionSourceGuildRecord;
 class ExpressionSourceGuildRecord extends tmp2 {
   constructor(arg0) {
@@ -72,10 +80,11 @@ prototype["getIconURL"] = function getIconURL(size) {
 };
 prototype["getIconSource"] = function getIconSource(size) {
   const self = this;
-  if (flag === undefined) {
+  let flag = hasItem;
+  if (hasItem === undefined) {
     flag = false;
   }
-  return self(1397).getAnimatableSourceWithFallback(flag, (canAnimate) => AvatarUtilsDefault.getGuildIconSource({ id: self.id, size, icon: self.icon, canAnimate }));
+  return self(1402).getAnimatableSourceWithFallback(flag, (canAnimate) => AvatarUtilsDefault.getGuildIconSource({ id: self.id, size, icon: self.icon, canAnimate }));
 };
 prototype["hasFeature"] = function hasFeature(arg0) {
   const features = this.features;
@@ -91,7 +100,7 @@ ExpressionSourceGuildRecord["getGuildFromEmojiId"] = function getGuildFromEmojiI
     closure_0 = tmp2;
     await closure_1_7(closure_0);
     closure_128_0 = value;
-    let guild = null;
+    guild = null;
     if (null != closure_128_0) {
       let type;
       if (closure_128_0 != null) {

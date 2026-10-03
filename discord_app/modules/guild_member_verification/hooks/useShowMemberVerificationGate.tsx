@@ -17,7 +17,7 @@ function shouldShowMembershipVerificationGate(guildId) {
   if (null == guildId) {
     return false;
   } else {
-    const guild = obj.getGuild(guildId);
+    guild = obj.getGuild(guildId);
     const currentUser = obj2.getCurrentUser();
     let flag = false;
     if (null != currentUser) {
@@ -37,24 +37,58 @@ function shouldShowMembershipVerificationGate(guildId) {
     return flag;
   }
 }
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/hooks/useShowMemberVerificationGate.tsx");
 
 export { shouldShowMembershipVerificationGate };
-export const useShowMemberVerificationGate = function useShowMemberVerificationGate(guild_id) {
-  _require = guild_id;
-  let items = [GuildStore, UserStore, GuildMemberStore];
-  const items1 = [guild_id];
-  return require("initialize").useStateFromStores(
-    items,
-    () => {
-      let tmp2 = null != closure_0;
-      if (tmp2) {
-        const items = [GuildStore, UserStore, GuildMemberStore];
-        tmp2 = shouldShowMembershipVerificationGate(tmp, items);
+export const useShowMemberVerificationGate = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      _require = arg0;
+      const cResult = require("c").c(4);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        let items = [GuildStore, UserStore, GuildMemberStore];
+        cResult[0] = items;
+        let first = items;
+      } else {
+        first = cResult[0];
       }
-      return tmp2;
-    },
-    items1,
-  );
-};
+      if (cResult[1] !== arg0) {
+        const fn = function l() {
+          let tmp2 = null != closure_0;
+          if (tmp2) {
+            const items = [GuildStore, UserStore, GuildMemberStore];
+            tmp2 = shouldShowMembershipVerificationGate(tmp, items);
+          }
+          return tmp2;
+        };
+        const items1 = [arg0];
+        cResult[1] = arg0;
+        cResult[2] = fn;
+        cResult[3] = items1;
+        let tmp9 = items1;
+        let tmp8 = fn;
+      } else {
+        tmp8 = cResult[2];
+        tmp9 = cResult[3];
+      }
+      const obj = require("c");
+      return require("initialize").useStateFromStores(first, tmp8, tmp9);
+    }
+  : (arg0) => {
+      _require = arg0;
+      let items = [GuildStore, UserStore, GuildMemberStore];
+      const items1 = [arg0];
+      return require("initialize").useStateFromStores(
+        items,
+        () => {
+          let tmp2 = null != closure_0;
+          if (tmp2) {
+            const items = [GuildStore, UserStore, GuildMemberStore];
+            tmp2 = shouldShowMembershipVerificationGate(tmp, items);
+          }
+          return tmp2;
+        },
+        items1,
+      );
+    };

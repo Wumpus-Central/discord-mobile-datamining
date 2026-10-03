@@ -1,4 +1,5 @@
 // discord_app/components_native/premium/PremiumSubscriptionDetails.tsx
+import c from "../../../_runtime/00576_c.js";
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../intl/index.native.tsx";
 import PremiumUtilsDefault from "../../utils/PremiumUtils.tsx";
@@ -6,39 +7,39 @@ import Text_Text from "../../design/components/Text/native/Text.tsx";
 import useAnalyticsLocationsDefault from "../../modules/app_analytics/useAnalyticsLocations.tsx";
 import AnalyticsLocationDefault from "../../modules/app_analytics/AnalyticsLocation.tsx";
 import PremiumBundledPlansUtils from "../../modules/premium/native/PremiumBundledPlansUtils.tsx";
-import _modDef7694 from "../../../_runtime/metro/07694__.js";
-import _modDef8879 from "../../../_runtime/metro/08879__.js";
+import _modDef6942 from "../../../_runtime/metro/06942__.js";
+import _modDef7738 from "../../../_runtime/metro/07738__.js";
 import PremiumAnalyticsUtils from "../../modules/premium/native/PremiumAnalyticsUtils.tsx";
-import _modDef10367 from "../../../_runtime/metro/10367__.js";
-import _modDef10368 from "../../../_runtime/metro/10368__.js";
-import _modDef10369 from "../../../_runtime/metro/10369__.js";
-import _modDef10370 from "../../../_runtime/metro/10370__.js";
-import _modDef10371 from "../../../_runtime/metro/10371__.js";
-import _modDef10373 from "../../../_runtime/metro/10373__.js";
-import _modDef10376 from "../../../_runtime/metro/10376__.js";
-import _modDef13097 from "../../../_runtime/metro/13097__.js";
-import _modDef13098 from "../../../_runtime/metro/13098__.js";
-import _modDef13099 from "../../../_runtime/metro/13099__.js";
-import _modDef13100 from "../../../_runtime/metro/13100__.js";
-import _modDef13101 from "../../../_runtime/metro/13101__.js";
-import _modDef13102 from "../../../_runtime/metro/13102__.js";
-import _modDef13103 from "../../../_runtime/metro/13103__.js";
-import _modDef13104 from "../../../_runtime/metro/13104__.js";
-import _modDef13105 from "../../../_runtime/metro/13105__.js";
-import _modDef13106 from "../../../_runtime/metro/13106__.js";
-import _modDef13107 from "../../../_runtime/metro/13107__.js";
-import _modDef13108 from "../../../_runtime/metro/13108__.js";
-import _modDef13109 from "../../../_runtime/metro/13109__.js";
-import _modDef13110 from "../../../_runtime/metro/13110__.js";
-import _modDef13111 from "../../../_runtime/metro/13111__.js";
-import _modDef13112 from "../../../_runtime/metro/13112__.js";
-import _modDef13113 from "../../../_runtime/metro/13113__.js";
-import _modDef13114 from "../../../_runtime/metro/13114__.js";
-import _modDef13115 from "../../../_runtime/metro/13115__.js";
-import _modDef13116 from "../../../_runtime/metro/13116__.js";
-import _modDef13117 from "../../../_runtime/metro/13117__.js";
-import _modDef13118 from "../../../_runtime/metro/13118__.js";
-import _modDef13119 from "../../../_runtime/metro/13119__.js";
+import _modDef10442 from "../../../_runtime/metro/10442__.js";
+import _modDef10443 from "../../../_runtime/metro/10443__.js";
+import _modDef10444 from "../../../_runtime/metro/10444__.js";
+import _modDef10445 from "../../../_runtime/metro/10445__.js";
+import _modDef10446 from "../../../_runtime/metro/10446__.js";
+import _modDef10447 from "../../../_runtime/metro/10447__.js";
+import _modDef10450 from "../../../_runtime/metro/10450__.js";
+import _modDef13156 from "../../../_runtime/metro/13156__.js";
+import _modDef13157 from "../../../_runtime/metro/13157__.js";
+import _modDef13158 from "../../../_runtime/metro/13158__.js";
+import _modDef13159 from "../../../_runtime/metro/13159__.js";
+import _modDef13160 from "../../../_runtime/metro/13160__.js";
+import _modDef13161 from "../../../_runtime/metro/13161__.js";
+import _modDef13162 from "../../../_runtime/metro/13162__.js";
+import _modDef13163 from "../../../_runtime/metro/13163__.js";
+import _modDef13164 from "../../../_runtime/metro/13164__.js";
+import _modDef13165 from "../../../_runtime/metro/13165__.js";
+import _modDef13166 from "../../../_runtime/metro/13166__.js";
+import _modDef13167 from "../../../_runtime/metro/13167__.js";
+import _modDef13168 from "../../../_runtime/metro/13168__.js";
+import _modDef13169 from "../../../_runtime/metro/13169__.js";
+import _modDef13170 from "../../../_runtime/metro/13170__.js";
+import _modDef13171 from "../../../_runtime/metro/13171__.js";
+import _modDef13172 from "../../../_runtime/metro/13172__.js";
+import _modDef13173 from "../../../_runtime/metro/13173__.js";
+import _modDef13174 from "../../../_runtime/metro/13174__.js";
+import _modDef13175 from "../../../_runtime/metro/13175__.js";
+import _modDef13176 from "../../../_runtime/metro/13176__.js";
+import _modDef13177 from "../../../_runtime/metro/13177__.js";
+import _modDef13178 from "../../../_runtime/metro/13178__.js";
 import PremiumPlanWhatYouLoseActionSheet from "../../modules/premium/native/PremiumPlanWhatYouLoseActionSheet.tsx";
 import PremiumSubscriptionInvoice from "../../modules/premium/PremiumSubscriptionInvoice.tsx";
 import SubscriptionRenewalMutationsNoticeDefault from "../../modules/premium/native/SubscriptionRenewalMutationsNotice.tsx";
@@ -49,9 +50,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 import UserStore from "../../stores/UserStore.tsx";
 import IAPStore from "../../stores/native/IAPStore.android.tsx";
 
-const require = globalThis.__r;
-
-const openPremiumPlanWhatYouLoseActionSheetDefault = tmp4(13120);
+const openPremiumPlanWhatYouLoseActionSheetDefault = tmp4(13179);
 require = fn;
 function handleCancelSubscription() {
   const self = this;
@@ -77,7 +76,7 @@ let closure_29 = async function _handleCancelSubscription() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -136,7 +135,7 @@ let closure_29 = async function _handleCancelSubscription() {
           return obj;
         }
         c3 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       } catch (tmp9) {
         c3 = tmp;
         throw tmp9;
@@ -253,7 +252,7 @@ let closure_32 = async function _onResubscribeClick(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -324,7 +323,7 @@ let closure_32 = async function _onResubscribeClick(arg0) {
           return obj;
         }
         c3 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       } catch (tmp19) {
         c3 = tmp;
         throw tmp19;
@@ -496,7 +495,7 @@ class PremiumSubscriptionHeader {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else {
             try {
@@ -535,7 +534,7 @@ class PremiumSubscriptionHeader {
                 c3 = 0;
                 closure_128_2(false);
                 c4 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             } catch (tmp23) {
               closure_2 = tmp23;
@@ -662,7 +661,7 @@ class PremiumSubscriptionHeader {
 }
 get_ActivityIndicator = fn(17);
 ({ Image: metroRequire, ImageBackground: closure_7, Linking: closure_8, View: closure_9 } = get_ActivityIndicator);
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({
   AnalyticsPages: closure_12,
   AnalyticsSections: map1,
@@ -670,7 +669,7 @@ const Constants = fn(1074);
   SubscriptionStatusTypes: closure_15,
   USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING,
 } = Constants);
-const PremiumConstants = fn(1374);
+const PremiumConstants = fn(1379);
 ({ SubscriptionIntervalTypes: closure_16, SubscriptionPlanInfo: closure_17 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
@@ -678,7 +677,7 @@ let size = { height: 35, width: 49 };
 const size1 = { height: 36, width: 51 };
 const size2 = { width: 51, height: 36 };
 let obj = { fontSize: 14, marginTop: 10, color: nativeDefault.unsafe_rawColors.WHITE };
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj3 = {
   title: { paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING },
   header: { padding: 16 },
@@ -715,62 +714,62 @@ let closure_20 = createStyles.createStyles(obj3);
 let obj7 = { ACTIVE: "active", RESUB: "resub", ERROR: "error" };
 let obj8 = {};
 let obj9 = {};
-obj9[obj7.ACTIVE] = _modDef10370;
-obj9[obj7.ERROR] = _modDef13097;
-obj9[obj7.RESUB] = _modDef13098;
-obj8[fn(4517).Branding.BUNDLE] = obj9;
+obj9[obj7.ACTIVE] = _modDef10445;
+obj9[obj7.ERROR] = _modDef13156;
+obj9[obj7.RESUB] = _modDef13157;
+obj8[fn(4528).Branding.BUNDLE] = obj9;
 let obj10 = {};
-obj10[obj7.ACTIVE] = _modDef10367;
-obj10[obj7.ERROR] = _modDef13097;
-obj10[obj7.RESUB] = _modDef13098;
-obj8[fn(4517).Branding.TIER_0] = obj10;
+obj10[obj7.ACTIVE] = _modDef10442;
+obj10[obj7.ERROR] = _modDef13156;
+obj10[obj7.RESUB] = _modDef13157;
+obj8[fn(4528).Branding.TIER_0] = obj10;
 let obj11 = {};
-obj11[obj7.ACTIVE] = _modDef10368;
-obj11[obj7.ERROR] = _modDef13097;
-obj11[obj7.RESUB] = _modDef13098;
-obj8[fn(4517).Branding.TIER_1] = obj11;
+obj11[obj7.ACTIVE] = _modDef10443;
+obj11[obj7.ERROR] = _modDef13156;
+obj11[obj7.RESUB] = _modDef13157;
+obj8[fn(4528).Branding.TIER_1] = obj11;
 let obj12 = {};
-obj12[obj7.ACTIVE] = _modDef10369;
-obj12[obj7.ERROR] = _modDef13097;
-obj12[obj7.RESUB] = _modDef13098;
-obj8[fn(4517).Branding.TIER_2] = obj12;
+obj12[obj7.ACTIVE] = _modDef10444;
+obj12[obj7.ERROR] = _modDef13156;
+obj12[obj7.RESUB] = _modDef13157;
+obj8[fn(4528).Branding.TIER_2] = obj12;
 let obj13 = {};
-obj13[obj7.ACTIVE] = _modDef10371;
-obj13[obj7.ERROR] = _modDef13099;
-obj13[obj7.RESUB] = _modDef13100;
-obj8[fn(4517).Branding.PREMIUM_GUILD] = obj13;
+obj13[obj7.ACTIVE] = _modDef10446;
+obj13[obj7.ERROR] = _modDef13158;
+obj13[obj7.RESUB] = _modDef13159;
+obj8[fn(4528).Branding.PREMIUM_GUILD] = obj13;
 let obj14 = {};
 let obj15 = {};
-obj15[obj7.ACTIVE] = _modDef13101;
-obj15[obj7.ERROR] = _modDef13101;
-obj15[obj7.RESUB] = _modDef13101;
-obj14[fn(4517).Branding.BUNDLE] = obj15;
+obj15[obj7.ACTIVE] = _modDef13160;
+obj15[obj7.ERROR] = _modDef13160;
+obj15[obj7.RESUB] = _modDef13160;
+obj14[fn(4528).Branding.BUNDLE] = obj15;
 let obj16 = {};
-obj16[obj7.ACTIVE] = _modDef8879;
-obj16[obj7.ERROR] = _modDef13102;
-obj16[obj7.RESUB] = _modDef13103;
-obj14[fn(4517).Branding.TIER_0] = obj16;
+obj16[obj7.ACTIVE] = _modDef6942;
+obj16[obj7.ERROR] = _modDef13161;
+obj16[obj7.RESUB] = _modDef13162;
+obj14[fn(4528).Branding.TIER_0] = obj16;
 let obj17 = {};
-obj17[obj7.ACTIVE] = _modDef13104;
-obj17[obj7.ERROR] = _modDef13105;
-obj17[obj7.RESUB] = _modDef13106;
-obj14[fn(4517).Branding.TIER_1] = obj17;
+obj17[obj7.ACTIVE] = _modDef13163;
+obj17[obj7.ERROR] = _modDef13164;
+obj17[obj7.RESUB] = _modDef13165;
+obj14[fn(4528).Branding.TIER_1] = obj17;
 let obj18 = {};
-obj18[obj7.ACTIVE] = _modDef10373;
-obj18[obj7.ERROR] = _modDef13107;
-obj18[obj7.RESUB] = _modDef13108;
-obj14[fn(4517).Branding.TIER_2] = obj18;
+obj18[obj7.ACTIVE] = _modDef10447;
+obj18[obj7.ERROR] = _modDef13166;
+obj18[obj7.RESUB] = _modDef13167;
+obj14[fn(4528).Branding.TIER_2] = obj18;
 let obj19 = {};
-obj19[obj7.ACTIVE] = _modDef13109;
-obj19[obj7.ERROR] = _modDef13110;
-obj19[obj7.RESUB] = _modDef13111;
-obj14[fn(4517).Branding.PREMIUM_GUILD] = obj19;
-const __initData4 = {
-  [fn(4517).Branding.BUNDLE]: { [obj7.ACTIVE]: size, [obj7.ERROR]: size, [obj7.RESUB]: size },
-  [fn(4517).Branding.TIER_0]: { [obj7.ACTIVE]: { height: 35, width: 29 }, [obj7.ERROR]: size1, [obj7.RESUB]: size1 },
-  [fn(4517).Branding.TIER_1]: { [obj7.ACTIVE]: { height: 35, width: 49 }, [obj7.ERROR]: size1, [obj7.RESUB]: size1 },
-  [fn(4517).Branding.TIER_2]: { [obj7.ACTIVE]: { height: 37, width: 49 }, [obj7.ERROR]: size1, [obj7.RESUB]: size1 },
-  [fn(4517).Branding.PREMIUM_GUILD]: {
+obj19[obj7.ACTIVE] = _modDef13168;
+obj19[obj7.ERROR] = _modDef13169;
+obj19[obj7.RESUB] = _modDef13170;
+obj14[fn(4528).Branding.PREMIUM_GUILD] = obj19;
+let closure_24 = {
+  [fn(4528).Branding.BUNDLE]: { [obj7.ACTIVE]: size, [obj7.ERROR]: size, [obj7.RESUB]: size },
+  [fn(4528).Branding.TIER_0]: { [obj7.ACTIVE]: { height: 35, width: 29 }, [obj7.ERROR]: size1, [obj7.RESUB]: size1 },
+  [fn(4528).Branding.TIER_1]: { [obj7.ACTIVE]: { height: 35, width: 49 }, [obj7.ERROR]: size1, [obj7.RESUB]: size1 },
+  [fn(4528).Branding.TIER_2]: { [obj7.ACTIVE]: { height: 37, width: 49 }, [obj7.ERROR]: size1, [obj7.RESUB]: size1 },
+  [fn(4528).Branding.PREMIUM_GUILD]: {
     [obj7.ACTIVE]: { width: 51, height: 36 },
     [obj7.ERROR]: size2,
     [obj7.RESUB]: size2,
@@ -778,95 +777,51 @@ const __initData4 = {
 };
 let obj20 = {};
 let obj21 = {};
-obj21[obj7.ACTIVE] = _modDef13112;
-obj21[obj7.ERROR] = _modDef13112;
-obj21[obj7.RESUB] = _modDef13113;
-obj20[fn(4517).Branding.BUNDLE] = obj21;
+obj21[obj7.ACTIVE] = _modDef13171;
+obj21[obj7.ERROR] = _modDef13171;
+obj21[obj7.RESUB] = _modDef13172;
+obj20[fn(4528).Branding.BUNDLE] = obj21;
 let obj22 = {};
-obj22[obj7.ACTIVE] = _modDef10376;
-obj22[obj7.ERROR] = _modDef10376;
-obj22[obj7.RESUB] = _modDef13114;
-obj20[fn(4517).Branding.TIER_0] = obj22;
+obj22[obj7.ACTIVE] = _modDef10450;
+obj22[obj7.ERROR] = _modDef10450;
+obj22[obj7.RESUB] = _modDef13173;
+obj20[fn(4528).Branding.TIER_0] = obj22;
 let obj23 = {};
-obj23[obj7.ACTIVE] = _modDef13115;
-obj23[obj7.ERROR] = _modDef13115;
-obj23[obj7.RESUB] = _modDef13116;
-obj20[fn(4517).Branding.TIER_1] = obj23;
+obj23[obj7.ACTIVE] = _modDef13174;
+obj23[obj7.ERROR] = _modDef13174;
+obj23[obj7.RESUB] = _modDef13175;
+obj20[fn(4528).Branding.TIER_1] = obj23;
 let obj24 = {};
-obj24[obj7.ACTIVE] = _modDef7694;
-obj24[obj7.ERROR] = _modDef7694;
-obj24[obj7.RESUB] = _modDef13117;
-obj20[fn(4517).Branding.TIER_2] = obj24;
+obj24[obj7.ACTIVE] = _modDef7738;
+obj24[obj7.ERROR] = _modDef7738;
+obj24[obj7.RESUB] = _modDef13176;
+obj20[fn(4528).Branding.TIER_2] = obj24;
 let obj25 = {};
-obj25[obj7.ACTIVE] = _modDef13118;
-obj25[obj7.ERROR] = _modDef13118;
-obj25[obj7.RESUB] = _modDef13119;
-obj20[fn(4517).Branding.PREMIUM_GUILD] = obj25;
+obj25[obj7.ACTIVE] = _modDef13177;
+obj25[obj7.ERROR] = _modDef13177;
+obj25[obj7.RESUB] = _modDef13178;
+obj20[fn(4528).Branding.PREMIUM_GUILD] = obj25;
 let dependencyMap = {
-  [fn(4517).Branding.BUNDLE]: { height: 33, width: 205 },
-  [fn(4517).Branding.TIER_0]: { height: 32, width: 59 },
-  [fn(4517).Branding.TIER_1]: { height: 16, width: 156 },
-  [fn(4517).Branding.TIER_2]: { height: 32, width: 78 },
-  [fn(4517).Branding.PREMIUM_GUILD]: { height: 17, width: 184 },
+  [fn(4528).Branding.BUNDLE]: { height: 33, width: 205 },
+  [fn(4528).Branding.TIER_0]: { height: 32, width: 59 },
+  [fn(4528).Branding.TIER_1]: { height: 16, width: 156 },
+  [fn(4528).Branding.TIER_2]: { height: 32, width: 78 },
+  [fn(4528).Branding.PREMIUM_GUILD]: { height: 17, width: 184 },
 };
-const __initData5 = { [obj7.ACTIVE]: obj, [obj7.ERROR]: obj, [obj7.RESUB]: obj2 };
-size = fn(2);
-let result = size.fileFinishedImporting("components_native/premium/PremiumSubscriptionDetails.tsx");
-
-export default function PremiumSubscriptionDetails(subscription) {
-  subscription = subscription.subscription;
-  ({ style, onClickManagePremiumGuild } = subscription);
-  const tmp = closure_20();
-  const obj = PremiumSubscriptionInvoice;
-  const first = _slicedToArray(
-    obj.useFetchSubscriptionInvoicePreview({
-      subscriptionId: subscription.id,
-      renewal: true,
-      analyticsLocations: useAnalyticsLocationsDefault().analyticsLocations,
-      analyticsLocation: AnalyticsLocationDefault.PREMIUM_SUBSCRIPTION_DETAILS,
-    }),
-    1,
-  )[0];
-  let tmp7Result = null;
-  if (null != first) {
-    const obj3 = { style, children: null };
-    const obj4 = {
-      style: tmp.title,
-      accessibilityRole: "header",
-      variant: "eyebrow",
-      color: "text-default",
-      children: null,
-    };
-    const intl = util.intl;
-    obj4.children = intl.string(util.t.ITurwY);
-    const items = [collapsedCategories(Text_Text.Text, obj4), , , ,];
-    let tmp9Result = null != subscription.renewalMutations;
-    if (tmp9Result) {
-      tmp9Result = subscription.status !== constants4.CANCELED;
-    }
-    if (tmp9Result) {
-      const obj5 = { subscription, renewalMutations: subscription.renewalMutations };
-      tmp9Result = collapsedCategories(SubscriptionRenewalMutationsNoticeDefault, obj5);
-    }
-    items[1] = tmp9Result;
-    let tmp9Result2 = subscription.status === constants4.ACCOUNT_HOLD;
-    if (tmp9Result2) {
-      const obj6 = { subscription };
-      tmp9Result2 = collapsedCategories(SubscriptionAccountHoldNoticeDefault, obj6);
-    }
-    items[2] = tmp9Result2;
-    obj7 = { subscription, renewalInvoicePreview: first, onClickManagePremiumGuild };
-    items[3] = collapsedCategories(PremiumSubscriptionHeader, obj7);
-    obj8 = { style: tmp.desktopSubtext, variant: "text-sm/medium", children: null };
-    const intl2 = util.intl;
-    obj8.children = intl2.string(util.t["MTG+3O"]);
-    items[4] = collapsedCategories(Text_Text.Text, obj8);
-    obj3.children = items;
-    tmp7Result = closure_1_19(React7, obj3);
-  }
-  return tmp7Result;
-}
-export const onCancelClick = function onCancelClick(subscription, analyticsLocations) {
+let closure_27 = { [obj7.ACTIVE]: obj, [obj7.ERROR]: obj, [obj7.RESUB]: obj2 };
+const ReactCompilerGating = fn(558);
+let obj5 = {
+  alignSelf: "stretch",
+  flexDirection: "row",
+  alignItems: "flex-start",
+  gap: nativeDefault.space.PX_8,
+  margin: nativeDefault.space.PX_16,
+  padding: nativeDefault.space.PX_12,
+  borderWidth: 1,
+  borderColor: nativeDefault.colors.BORDER_FEEDBACK_WARNING,
+  borderRadius: nativeDefault.radii.lg,
+};
+function onCancelClick(subscription, analyticsLocations) {
   _require = subscription;
   importDefault = analyticsLocations;
   const result = require("PremiumAnalyticsUtils").trackPremiumSubscriptionCancellationStarted(
@@ -880,7 +835,7 @@ export const onCancelClick = function onCancelClick(subscription, analyticsLocat
   } else {
     const obj3 = {
       subscription,
-      mode: tmp(13121).WhatYouLoseMode.CANCEL,
+      mode: tmp(13180).WhatYouLoseMode.CANCEL,
       onContinue(arg0) {
         return handleCancelSubscription(closure_0, closure_1, arg0);
       },
@@ -889,7 +844,201 @@ export const onCancelClick = function onCancelClick(subscription, analyticsLocat
     const tmp4Result = openPremiumPlanWhatYouLoseActionSheetDefault;
   }
   return tmp4ResultResult;
-};
+}
+size = fn(2);
+let result = size.fileFinishedImporting("components_native/premium/PremiumSubscriptionDetails.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      const cResult = c.c(24);
+      ({ style, onClickManagePremiumGuild, subscription } = arg0);
+      const tmp4 = closure_20();
+      const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
+      if (cResult[0] === analyticsLocations) {
+        if (cResult[1] === subscription.id) {
+          let tmp6 = cResult[2];
+        }
+        const first = _slicedToArray(PremiumSubscriptionInvoice.useFetchSubscriptionInvoicePreview(tmp6), 1)[0];
+        if (null == first) {
+          return null;
+        } else {
+          const _Symbol2 = Symbol;
+          if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+            const intl = util.intl;
+            const stringResult = intl.string(util.t.ITurwY);
+            cResult[3] = stringResult;
+            let tmp10 = stringResult;
+          } else {
+            tmp10 = cResult[3];
+          }
+          if (cResult[4] !== tmp4.title) {
+            const obj2 = {
+              style: tmp4.title,
+              accessibilityRole: "header",
+              variant: "eyebrow",
+              color: "text-default",
+              children: tmp10,
+            };
+            const tmp14 = collapsedCategories(Text_Text.Text, obj2);
+            cResult[4] = tmp4.title;
+            cResult[5] = tmp14;
+            let tmp12 = tmp14;
+          } else {
+            tmp12 = cResult[5];
+          }
+          if (cResult[6] !== subscription) {
+            let tmp16 = null != subscription.renewalMutations;
+            if (tmp16) {
+              tmp16 = subscription.status !== constants4.CANCELED;
+            }
+            if (tmp16) {
+              const obj3 = { subscription, renewalMutations: subscription.renewalMutations };
+              tmp16 = collapsedCategories(SubscriptionRenewalMutationsNoticeDefault, obj3);
+            }
+            cResult[6] = subscription;
+            cResult[7] = tmp16;
+            let tmp15 = tmp16;
+          } else {
+            tmp15 = cResult[7];
+          }
+          if (cResult[8] !== subscription) {
+            let tmp21 = subscription.status === constants4.ACCOUNT_HOLD;
+            if (tmp21) {
+              const obj4 = { subscription };
+              tmp21 = collapsedCategories(SubscriptionAccountHoldNoticeDefault, obj4);
+            }
+            cResult[8] = subscription;
+            cResult[9] = tmp21;
+            let tmp19 = tmp21;
+          } else {
+            tmp19 = cResult[9];
+          }
+          if (cResult[10] === onClickManagePremiumGuild) {
+            if (cResult[11] === first) {
+              if (cResult[12] === subscription) {
+                let tmp23 = cResult[13];
+              }
+              const _Symbol = Symbol;
+              if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
+                const intl2 = util.intl;
+                const stringResult1 = intl2.string(util.t["MTG+3O"]);
+                cResult[14] = stringResult1;
+                let tmp27 = stringResult1;
+              } else {
+                tmp27 = cResult[14];
+              }
+              if (cResult[15] !== tmp4.desktopSubtext) {
+                const obj5 = { style: tmp4.desktopSubtext, variant: "text-sm/medium", children: tmp27 };
+                const tmp31 = collapsedCategories(Text_Text.Text, obj5);
+                cResult[15] = tmp4.desktopSubtext;
+                cResult[16] = tmp31;
+                let tmp29 = tmp31;
+              } else {
+                tmp29 = cResult[16];
+              }
+              if (cResult[17] === style) {
+                if (cResult[18] === tmp29) {
+                  if (cResult[19] === tmp12) {
+                    if (cResult[20] === tmp15) {
+                      if (cResult[21] === tmp19) {
+                        if (cResult[22] === tmp23) {
+                          let tmp32 = cResult[23];
+                        }
+                        return tmp32;
+                      }
+                    }
+                  }
+                }
+              }
+              const obj6 = { style, children: null };
+              const items = [tmp12, tmp15, tmp19, tmp23, tmp29];
+              obj6.children = items;
+              const tmp35 = closure_1_19(options, obj6);
+              cResult[17] = style;
+              cResult[18] = tmp29;
+              cResult[19] = tmp12;
+              cResult[20] = tmp15;
+              cResult[21] = tmp19;
+              cResult[22] = tmp23;
+              cResult[23] = tmp35;
+              tmp32 = tmp35;
+            }
+          }
+          obj7 = { subscription, renewalInvoicePreview: first, onClickManagePremiumGuild };
+          const tmp26 = collapsedCategories(PremiumSubscriptionHeader, obj7);
+          cResult[10] = onClickManagePremiumGuild;
+          cResult[11] = first;
+          cResult[12] = subscription;
+          cResult[13] = tmp26;
+          tmp23 = tmp26;
+        }
+        const tmpResult = PremiumSubscriptionInvoice;
+      }
+      obj8 = {
+        subscriptionId: subscription.id,
+        renewal: true,
+        analyticsLocations,
+        analyticsLocation: AnalyticsLocationDefault.PREMIUM_SUBSCRIPTION_DETAILS,
+      };
+      cResult[0] = analyticsLocations;
+      cResult[1] = subscription.id;
+      cResult[2] = obj8;
+      tmp6 = obj8;
+    }
+  : (subscription) => {
+      subscription = subscription.subscription;
+      ({ style, onClickManagePremiumGuild } = subscription);
+      const tmp = closure_20();
+      const obj = PremiumSubscriptionInvoice;
+      const first = _slicedToArray(
+        obj.useFetchSubscriptionInvoicePreview({
+          subscriptionId: subscription.id,
+          renewal: true,
+          analyticsLocations: useAnalyticsLocationsDefault().analyticsLocations,
+          analyticsLocation: AnalyticsLocationDefault.PREMIUM_SUBSCRIPTION_DETAILS,
+        }),
+        1,
+      )[0];
+      let tmp7Result = null;
+      if (null != first) {
+        const obj3 = { style, children: null };
+        const obj4 = {
+          style: tmp.title,
+          accessibilityRole: "header",
+          variant: "eyebrow",
+          color: "text-default",
+          children: null,
+        };
+        const intl = util.intl;
+        obj4.children = intl.string(util.t.ITurwY);
+        const items = [collapsedCategories(Text_Text.Text, obj4), , , ,];
+        let tmp9Result = null != subscription.renewalMutations;
+        if (tmp9Result) {
+          tmp9Result = subscription.status !== constants4.CANCELED;
+        }
+        if (tmp9Result) {
+          const obj5 = { subscription, renewalMutations: subscription.renewalMutations };
+          tmp9Result = collapsedCategories(SubscriptionRenewalMutationsNoticeDefault, obj5);
+        }
+        items[1] = tmp9Result;
+        let tmp9Result2 = subscription.status === constants4.ACCOUNT_HOLD;
+        if (tmp9Result2) {
+          const obj6 = { subscription };
+          tmp9Result2 = collapsedCategories(SubscriptionAccountHoldNoticeDefault, obj6);
+        }
+        items[2] = tmp9Result2;
+        obj7 = { subscription, renewalInvoicePreview: first, onClickManagePremiumGuild };
+        items[3] = collapsedCategories(PremiumSubscriptionHeader, obj7);
+        obj8 = { style: tmp.desktopSubtext, variant: "text-sm/medium", children: null };
+        const intl2 = util.intl;
+        obj8.children = intl2.string(util.t["MTG+3O"]);
+        items[4] = collapsedCategories(Text_Text.Text, obj8);
+        obj3.children = items;
+        tmp7Result = closure_1_19(options, obj3);
+      }
+      return tmp7Result;
+    };
+export { onCancelClick };
 export { handleManageSubscription };
 export { onResubscribeClick };
 export { PremiumSubscriptionHeader };

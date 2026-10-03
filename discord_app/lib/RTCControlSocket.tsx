@@ -11,7 +11,7 @@ import TypedEventEmitter from "../../discord_common/js/shared/utils/TypedEventEm
 
 require = fn;
 function noop() {}
-const Constants = fn(4870);
+const Constants = fn(4915);
 ({
   Features: hasOwnProperty,
   MediaEngineContextTypes: metroRequire,
@@ -106,7 +106,7 @@ let obj2 = {
   DAVE_DOWNGRADE_REFUSED: 4804,
   [4804]: "DAVE_DOWNGRADE_REFUSED",
 };
-const constants3 = {
+const __initData = {
   DISCONNECTED: 0,
   [0]: "DISCONNECTED",
   CONNECTING: 1,
@@ -204,7 +204,7 @@ prototype["createWebSocket"] = function createWebSocket() {
     logger2.error("Connect called with already existing websocket");
     self.cleanupWebSocket((close) => close.close(4000));
   }
-  self.connectionStartTime = self(4874).now();
+  self.connectionStartTime = self(4919).now();
   self.helloTimeout = setTimeout(() => {
     self.handleClose(
       false,
@@ -215,8 +215,8 @@ prototype["createWebSocket"] = function createWebSocket() {
         " ms - did not receive OP_HELLO in time.",
     );
   }, closure_13);
-  let obj = self(4874);
-  obj2 = self(13825);
+  let obj = self(4919);
+  obj2 = self(13891);
   const webSocket = new WebSocket(
     "" +
       self.url +
@@ -532,7 +532,7 @@ prototype["handleHello"] = function handleHello(d) {
       tmp4 = require;
     }
   }
-  const diff = tmp4(4874).now() - self.connectionStartTime;
+  const diff = tmp4(4919).now() - self.connectionStartTime;
   ({ logger, heartbeatInterval } = self);
   if (heartbeatInterval == null) {
     heartbeatInterval = "??";
@@ -541,7 +541,7 @@ prototype["handleHello"] = function handleHello(d) {
     "[HELLO] heartbeat interval: " + heartbeatInterval + ", version: " + self.serverVersion + ", took " + diff + " ms",
   );
   self.startHeartbeater();
-  const tmp4Result = tmp4(4874);
+  const tmp4Result = tmp4(4919);
 };
 prototype["handleReady"] = function handleReady(experiments) {
   const self = this;

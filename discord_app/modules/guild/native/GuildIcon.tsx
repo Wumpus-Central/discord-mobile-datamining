@@ -4,10 +4,10 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-let closure_5 = fn(6083).ExpressionSourceGuildRecord;
-const GuildRecord = fn(2062);
+let closure_5 = fn(5972).ExpressionSourceGuildRecord;
+const GuildRecord = fn(2070);
 ({ getGuildIconSource: metroRequire, getGuildAcronym: closure_7 } = GuildRecord);
-const Fonts = fn(1074).Fonts;
+const Fonts = fn(1085).Fonts;
 const jsx = fn(21).jsx;
 const GuildIconSizes = {
   XXXSMALL: "XXXSMALL",
@@ -51,7 +51,7 @@ let obj2 = {
   [GuildIconSizes.XLARGE]: 64,
   [GuildIconSizes.XXLARGE]: 80,
 };
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj3 = { guildIcon: { justifyContent: "center", alignItems: "center", overflow: "hidden" } };
 obj3[GuildIconSizes.XXXSMALL] = { width: 10, height: 10, borderRadius: 3.3333333333333335 };
 obj3[GuildIconSizes.XXSMALL_12] = { width: 12, height: 12, borderRadius: 4 };
@@ -221,9 +221,10 @@ export default noop.memo(function GuildIconInner(guild) {
       if (closure_13) {
         if (preloadAnimation) {
           if (typeof tmp11 === "string") {
+            const obj4 = { uri: tmp11 };
             const obj3 = icon(flag[10]);
             icon(flag[10])
-              .preload(tmp11)
+              .preload(obj4)
               .then(() => {
                 const timerId = setTimeout(() => {
                   if (ref.current) {
@@ -232,7 +233,7 @@ export default noop.memo(function GuildIconInner(guild) {
                   }
                 }, 0);
               });
-            const preloadResult = icon(flag[10]).preload(tmp11);
+            const preloadResult = icon(flag[10]).preload(obj4);
           }
         }
       }
@@ -316,7 +317,7 @@ export default noop.memo(function GuildIconInner(guild) {
   }, items1);
   const wrapperStyle = memo.wrapperStyle;
   if (null == tmp15) {
-    const obj4 = { shouldRasterizeIOS: true, style: wrapperStyle, collapsable: false, children: null };
+    let obj4 = { shouldRasterizeIOS: true, style: wrapperStyle, collapsable: false, children: null };
     const obj5 = {
       numberOfLines: 1,
       ellipsizeMode: "tail",
@@ -327,9 +328,9 @@ export default noop.memo(function GuildIconInner(guild) {
       style: tmp39,
       children: acronym,
     };
-    obj4.children = tmp40(guild(tmp14[12]).NativeText, obj5);
-    let tmp40Result = tmp40(tmp13(tmp14[11]), obj4);
-    const tmp13Result = tmp13(tmp14[11]);
+    obj4.children = tmp40(guild(tmp14[13]).NativeText, obj5);
+    let tmp40Result = tmp40(tmp13(tmp14[12]), obj4);
+    const tmp13Result = tmp13(tmp14[12]);
   } else {
     const obj6 = {
       style: wrapperStyle,
@@ -343,8 +344,8 @@ export default noop.memo(function GuildIconInner(guild) {
       tmp42 = tmp38;
     }
     obj6.onLoadEnd = tmp42;
-    tmp40Result = tmp40(tmp13(tmp14[10]), obj6);
-    const tmp13Result2 = tmp13(tmp14[10]);
+    tmp40Result = tmp40(tmp13(tmp14[11]), obj6);
+    const tmp13Result2 = tmp13(tmp14[11]);
   }
   return tmp40Result;
 });

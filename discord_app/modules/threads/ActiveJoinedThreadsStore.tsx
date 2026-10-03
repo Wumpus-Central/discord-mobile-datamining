@@ -137,7 +137,7 @@ function recountParent(guild_id, id) {
       dependencyMap6[guild_id][id] = 0;
       if (null != dependencyMap3[guild_id]) {
         if (null != dependencyMap3[guild_id][id]) {
-          const guild = GuildStore.getGuild(guild_id);
+          guild = GuildStore.getGuild(guild_id);
           if (null != guild) {
             let trackedAckMessageId = ReadStateStore.getTrackedAckMessageId(id);
             if (null == trackedAckMessageId) {
@@ -823,8 +823,8 @@ prototype["getActiveJoinedUnreadThreadsForGuild"] = function getActiveJoinedUnre
   }
   return tmp;
 };
-prototype["getActiveJoinedUnreadThreadsForParent"] = function getActiveJoinedUnreadThreadsForParent(channel, id) {
-  let tmp = this.getActiveJoinedUnreadThreadsForGuild(channel)[id];
+prototype["getActiveJoinedUnreadThreadsForParent"] = function getActiveJoinedUnreadThreadsForParent(guild_id, id) {
+  let tmp = this.getActiveJoinedUnreadThreadsForGuild(guild_id)[id];
   if (tmp == null) {
     tmp = closure_33;
   }
@@ -851,18 +851,15 @@ prototype["getActiveUnjoinedThreadsForGuild"] = function getActiveUnjoinedThread
   }
   return tmp;
 };
-prototype["getActiveUnjoinedUnreadThreadsForGuild"] = function getActiveUnjoinedUnreadThreadsForGuild(channel) {
-  let tmp = dependencyMap4[channel];
+prototype["getActiveUnjoinedUnreadThreadsForGuild"] = function getActiveUnjoinedUnreadThreadsForGuild(arg0) {
+  let tmp = dependencyMap4[arg0];
   if (tmp == null) {
     tmp = obj;
   }
   return tmp;
 };
-prototype["getActiveUnjoinedUnreadThreadsForParent"] = function getActiveUnjoinedUnreadThreadsForParent(
-  channel,
-  importDefault,
-) {
-  let tmp = this.getActiveUnjoinedUnreadThreadsForGuild(channel)[importDefault];
+prototype["getActiveUnjoinedUnreadThreadsForParent"] = function getActiveUnjoinedUnreadThreadsForParent(arg0, arg1) {
+  let tmp = this.getActiveUnjoinedUnreadThreadsForGuild(arg0)[arg1];
   if (tmp == null) {
     tmp = closure_33;
   }

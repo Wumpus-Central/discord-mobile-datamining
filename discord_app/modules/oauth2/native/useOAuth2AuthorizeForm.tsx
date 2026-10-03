@@ -24,13 +24,13 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let Constants = fn(8706);
+let Constants = fn(8718);
 ({ EMOJI_POINTING_DOWN_CODE_POINT: map1, OAuth2Steps: closure_14 } = Constants);
-Constants = fn(1074);
+Constants = fn(1085);
 ({ AnalyticEvents: closure_15, Endpoints: closure_16 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, Fragment: closure_18, jsxs: closure_19 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let closure_20 = createStyles.createStyles({ loading: { flex: 1, alignSelf: "center", justifyContent: "center" } });
 let __initData = { code: "function useOAuth2AuthorizeFormTsx1(){const{shouldReduceMotion,withSequence,withTiming,Easing,withRepeat}=this.__closure;const TOTAL=500;if(shouldReduceMotion)return{};return{transform:[{translateY:withSequence(withTiming(-5,{duration:TOTAL/2,easing:Easing.inOut(Easing.quad)}),withRepeat(withTiming(5,{duration:TOTAL,easing:Easing.inOut(Easing.quad)}),-1,true))}]};}" };
 const size = fn(2);
@@ -43,7 +43,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
   let redirectUri = clientId.redirectUri;
   let codeChallenge = clientId.codeChallenge;
   let codeChallengeMethod = clientId.codeChallengeMethod;
-  let state = clientId.state;
+  state = clientId.state;
   let text1 = state;
   let nonce = clientId.nonce;
   const _prompt = clientId.prompt;
@@ -378,7 +378,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -494,7 +494,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -518,7 +518,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
             let body;
             state = 1;
             nonce = 1;
-            return { value: "flex", done: null };
+            return { value: "Reflect", done: true };
           }
         } else {
           if (1 === tmp8) {
@@ -712,13 +712,13 @@ export default function useOAuth2AuthorizeForm(clientId) {
     if (first9) {
       const result = responseType(codeChallenge[22]).showConnectionDisclaimer();
       const obj2 = responseType(codeChallenge[22]);
-      const nextPromise = result.then(() => responseType(8709).getAccountUrlAndAuthCode());
-      const nextPromise1 = result.then(() => responseType(8709).getAccountUrlAndAuthCode()).then((result) => {
+      const nextPromise = result.then(() => responseType(8721).getAccountUrlAndAuthCode());
+      const nextPromise1 = result.then(() => responseType(8721).getAccountUrlAndAuthCode()).then((result) => {
         [tmp, tmp2] = result;
         const items = [tmp2, isAuthorized(codeChallenge[27]).startSamsungAuthorization(isAuthorized, requestedScopes, responseType, tmp, text1)];
         return Promise.all(items);
       });
-      const nextPromise2 = result.then(() => responseType(8709).getAccountUrlAndAuthCode()).then((result) => {
+      const nextPromise2 = result.then(() => responseType(8721).getAccountUrlAndAuthCode()).then((result) => {
         [tmp, tmp2] = result;
         const items = [tmp2, isAuthorized(codeChallenge[27]).startSamsungAuthorization(isAuthorized, requestedScopes, responseType, tmp, text1)];
         return Promise.all(items);
@@ -727,7 +727,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
         const items = [tmp, callback2(closure_0)];
         return Promise.all(items);
       });
-      const nextPromise3 = result.then(() => responseType(8709).getAccountUrlAndAuthCode()).then((result) => {
+      const nextPromise3 = result.then(() => responseType(8721).getAccountUrlAndAuthCode()).then((result) => {
         [tmp, tmp2] = result;
         const items = [tmp2, isAuthorized(codeChallenge[27]).startSamsungAuthorization(isAuthorized, requestedScopes, responseType, tmp, text1)];
         return Promise.all(items);
@@ -739,7 +739,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
         [tmp, tmp2] = result;
         return responseType(codeChallenge[22]).finishSamsungAuthorization(tmp, tmp2, text1);
       });
-      result.then(() => responseType(8709).getAccountUrlAndAuthCode()).then((result) => {
+      result.then(() => responseType(8721).getAccountUrlAndAuthCode()).then((result) => {
         [tmp, tmp2] = result;
         const items = [tmp2, isAuthorized(codeChallenge[27]).startSamsungAuthorization(isAuthorized, requestedScopes, responseType, tmp, text1)];
         return Promise.all(items);
@@ -757,9 +757,9 @@ export default function useOAuth2AuthorizeForm(clientId) {
         }
         return tmp;
       }).catch((error) => {
-        responseType(1231).captureException(error);
+        responseType(1242).captureException(error);
       });
-      const nextPromise4 = result.then(() => responseType(8709).getAccountUrlAndAuthCode()).then((result) => {
+      const nextPromise4 = result.then(() => responseType(8721).getAccountUrlAndAuthCode()).then((result) => {
         [tmp, tmp2] = result;
         const items = [tmp2, isAuthorized(codeChallenge[27]).startSamsungAuthorization(isAuthorized, requestedScopes, responseType, tmp, text1)];
         return Promise.all(items);
@@ -795,7 +795,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -926,7 +926,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
     if (first1 !== ref2.current) {
       ref2.current = first1;
       const obj2 = { step: first1, application_id, integration_type: first6, scopes: requestedScopes, permissions: memo4.toString() };
-      AppAnalyticsUtils.trackWithMetadata(__initData.OAUTH2_AUTHORIZE_STEP_VIEWED, obj2);
+      AppAnalyticsUtils.trackWithMetadata(closure_2_15.OAUTH2_AUTHORIZE_STEP_VIEWED, obj2);
     }
   }, items18);
   const items19 = [memo5, first8, memo1, integrationType, first1, connectedAccountProvider, null == connectedAccountProvider || null != stateFromStores1];

@@ -63,7 +63,7 @@ let closure_19 = async function _fetchCollectiblesCategories(arg0) {
   closure_132_0 = _require;
   closure_132_1 = closure_1;
   closure_132_2 = dependencyMap;
-  let options = _require;
+  options = _require;
   if (_require == null) {
     options = {};
   }
@@ -185,7 +185,7 @@ let closure_20 = async function _fetchCollectiblesPurchases() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -367,7 +367,7 @@ let closure_23 = async function _maybeFetchCollectiblesProduct(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -401,7 +401,7 @@ let closure_23 = async function _maybeFetchCollectiblesProduct(arg0) {
         return obj;
       }
       c2 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     } catch (tmp9) {
       c2 = tmp;
       throw tmp9;
@@ -429,7 +429,7 @@ let closure_24 = async function _claimPremiumCollectiblesProduct(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -488,7 +488,7 @@ let closure_24 = async function _claimPremiumCollectiblesProduct(arg0) {
         closure_130_1(closure_130_2[17]).dispatch(obj11);
         c4 = 0;
         c6 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp29) {
       closure_3 = tmp29;
@@ -516,7 +516,7 @@ let closure_25 = async function _validateCollectiblesRecipient() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -590,7 +590,7 @@ let closure_26 = async function _validateCollectiblesRecipientsBatch() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -656,41 +656,102 @@ let closure_27 = async function _fetchCollectiblesMarketings(arg0) {
   c6 = 0;
   c4 = 0;
   let iter = (async (arg0) => {
-    closure_2 = tmp3;
-    let PROD = release.release;
-    if (PROD === undefined) {
-      PROD = CollectiblesMarketingReleaseType.CollectiblesMarketingReleaseType.PROD;
-    }
-    closure_129_0 = PROD;
-    await "flex";
-    closure_130_1(closure_130_2[17]).dispatch({ type: "COLLECTIBLES_MARKETING_FETCH" });
-    closure_129_1 = { platform: closure_130_0(closure_130_2[27]).CollectiblesMarketingPlatform.MOBILE };
-    if (closure_129_0 !== closure_130_0(closure_130_2[26]).CollectiblesMarketingReleaseType.PROD) {
-      closure_129_1.release = closure_129_0;
-    }
-    const HTTP = closure_130_0(closure_130_2[21]).HTTP;
-    const request = { url: closure_130_16.COLLECTIBLES_MARKETING, query: closure_129_1, rejectWithError: true };
-    await HTTP.get(request);
-    if (2 === tmp7) {
-      c4 = 0;
-      closure_129_3 = closure_3;
-      const aPIError = new closure_130_0(closure_130_2[22]).APIError(closure_129_3);
-      const result = closure_130_0(closure_130_2[23]).captureOrIgnoreApiError(aPIError);
-      closure_130_0(closure_130_2[23]);
-      closure_130_1(closure_130_2[17]).dispatch({ type: "COLLECTIBLES_MARKETING_FETCH_FAILURE" });
+    if (c6 === 2) {
       c6 = 3;
-      closure_130_1(closure_130_2[17]);
-    } else if (arg0 === 1) {
-      c6 = 3;
-      throw value;
-    } else if (arg0 !== 2) {
-      closure_129_2 = value;
-      closure_130_1(closure_130_2[17]).dispatch({ type: "COLLECTIBLES_MARKETING_FETCH_SUCCESS", marketings: closure_130_11.fromServer(closure_129_2.body) });
-      c4 = 0;
-      closure_130_1(closure_130_2[17]);
-      { type: "COLLECTIBLES_MARKETING_FETCH_SUCCESS", marketings: closure_130_11.fromServer(closure_129_2.body) };
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "IconComponent", done: "IconComponent" };
+      }
+    } else {
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            closure_2 = tmp3;
+            closure_1 = tmp7;
+            closure_129_0 = undefined;
+            let PROD = release.release;
+            if (PROD === undefined) {
+              PROD = CollectiblesMarketingReleaseType.CollectiblesMarketingReleaseType.PROD;
+            }
+            closure_129_0 = PROD;
+            closure_129_1 = undefined;
+            closure_129_2 = undefined;
+            c5 = 1;
+            c6 = 1;
+            return { value: "Reflect", done: true };
+          }
+        } else if (1 === tmp7) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj6 = { value, done: true };
+            return obj6;
+          } else {
+            closure_130_1(closure_130_2[17]).dispatch({ type: "COLLECTIBLES_MARKETING_FETCH" });
+            const obj7 = { platform: closure_130_0(closure_130_2[27]).CollectiblesMarketingPlatform.MOBILE };
+            closure_129_1 = obj7;
+            if (closure_129_0 !== closure_130_0(closure_130_2[26]).CollectiblesMarketingReleaseType.PROD) {
+              closure_129_1.release = closure_129_0;
+            }
+            c4 = 1;
+            const HTTP = closure_130_0(closure_130_2[21]).HTTP;
+            const request = { url: closure_130_16.COLLECTIBLES_MARKETING, query: closure_129_1, rejectWithError: true };
+            c5 = 3;
+            c6 = 1;
+            const obj8 = { value: HTTP.get(request), done: false };
+            return obj8;
+          }
+        } else {
+          if (2 === tmp7) {
+            c4 = 0;
+            closure_129_3 = closure_3;
+            const aPIError = new closure_130_0(closure_130_2[22]).APIError(closure_129_3);
+            const result = closure_130_0(closure_130_2[23]).captureOrIgnoreApiError(aPIError);
+            const obj4 = closure_130_0(closure_130_2[23]);
+            closure_130_1(closure_130_2[17]).dispatch({ type: "COLLECTIBLES_MARKETING_FETCH_FAILURE" });
+            c6 = 3;
+            const obj5 = closure_130_1(closure_130_2[17]);
+          } else if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            closure_129_2 = value;
+            const obj9 = { type: "COLLECTIBLES_MARKETING_FETCH_SUCCESS", marketings: closure_130_11.fromServer(closure_129_2.body) };
+            closure_130_1(closure_130_2[17]).dispatch(obj9);
+            c4 = 0;
+            const obj = closure_130_1(closure_130_2[17]);
+          }
+          c4 = 0;
+          c6 = 3;
+          const obj10 = { value, done: true };
+          return obj10;
+        }
+      } catch (tmp44) {
+        closure_3 = tmp44;
+        if (tmp4 === c4) {
+          c6 = tmp2;
+          throw tmp44;
+        } else {
+          c5 = tmp;
+        }
+      }
     }
-    return value;
   })();
   iter.next();
   return iter;
@@ -796,68 +857,121 @@ let closure_28 = async function _fetchCollectiblesShopHome() {
   })();
 };
 let closure_29 = async function _maybeFetchCollectiblesShopTabLayout(arg0) {
-  closure_2 = tmp3;
-  ({ tab: closure_129_0, abortSignal: closure_129_1 } = closure_0);
-  await "flex";
-  if (1 === tmp7) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
     if (arg0 === 1) {
-      c6 = 3;
       throw value;
     } else if (arg0 === 2) {
-      c6 = 3;
-      return { value, done: true };
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
-      if (!closure_130_9.isFetchingLayout(closure_129_0)) {
-        const layoutFetchError = closure_130_9.getLayoutFetchError(closure_129_0);
-        let status;
-        if (layoutFetchError != null) {
-          status = layoutFetchError.status;
-        }
-        if (404 !== status) {
-          let status1;
-          if (layoutFetchError != null) {
-            status1 = layoutFetchError.status;
-          }
-          if (429 !== status1) {
-            c4 = 1;
-            closure_130_1(closure_130_2[17]).dispatch({ type: "COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH", tab: closure_129_0 });
-            const HTTP = closure_130_0(closure_130_2[21]).HTTP;
-            c5 = 3;
-            c6 = 1;
-            { url: closure_130_16.COLLECTIBLES_SHOP_TAB_LAYOUT(closure_129_0), rejectWithError: true, signal: closure_129_1 };
-            return { value: HTTP.get({ url: closure_130_16.COLLECTIBLES_SHOP_TAB_LAYOUT(closure_129_0), rejectWithError: true, signal: closure_129_1 }), done: false };
-          }
-        }
-      }
-      c6 = 3;
+      return { value: "IconComponent", done: "IconComponent" };
     }
-  } else if (2 === tmp7) {
-    c4 = 0;
-    closure_129_5 = closure_3;
-    const aPIError = new closure_130_0(closure_130_2[22]).APIError(closure_129_5);
-    closure_129_4 = aPIError;
-    closure_130_1(closure_130_2[17]).dispatch({ type: "COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_FAILURE", tab: closure_129_0, apiError: closure_129_4 });
-    throw closure_129_4;
-  } else if (arg0 === 1) {
-    c6 = 3;
-    throw value;
-  } else if (arg0 !== 2) {
-    closure_129_3 = value;
-    closure_130_1(closure_130_2[17]).dispatch({ type: "COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_SUCCESS", tab: closure_129_0, layoutId: closure_129_3.body.layout_id });
-    c4 = 0;
-    closure_130_1(closure_130_2[17]);
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_2 = tmp3;
+          closure_1 = tmp7;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          ({ tab: closure_129_0, abortSignal: closure_129_1 } = closure_0);
+          let layoutFetchError;
+          closure_129_3 = undefined;
+          closure_129_4 = undefined;
+          c5 = 1;
+          c6 = 1;
+          return { value: "Reflect", done: true };
+        }
+      } else {
+        if (1 === tmp7) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj5 = { value, done: true };
+            return obj5;
+          } else {
+            if (!closure_130_9.isFetchingLayout(closure_129_0)) {
+              layoutFetchError = closure_130_9.getLayoutFetchError(closure_129_0);
+              let status;
+              if (layoutFetchError != null) {
+                status = layoutFetchError.status;
+              }
+              if (404 !== status) {
+                let status1;
+                if (layoutFetchError != null) {
+                  status1 = layoutFetchError.status;
+                }
+                if (429 !== status1) {
+                  c4 = 1;
+                  const obj6 = { type: "COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH", tab: closure_129_0 };
+                  closure_130_1(closure_130_2[17]).dispatch(obj6);
+                  const HTTP = closure_130_0(closure_130_2[21]).HTTP;
+                  const obj7 = { url: closure_130_16.COLLECTIBLES_SHOP_TAB_LAYOUT(closure_129_0), rejectWithError: true, signal: closure_129_1 };
+                  c5 = 3;
+                  c6 = 1;
+                  const obj8 = { value: HTTP.get(obj7), done: false };
+                  return obj8;
+                }
+              }
+            }
+            c6 = 3;
+          }
+        } else if (2 === tmp7) {
+          c4 = 0;
+          closure_129_5 = closure_3;
+          const aPIError = new closure_130_0(closure_130_2[22]).APIError(closure_129_5);
+          closure_129_4 = aPIError;
+          const obj9 = { type: "COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_FAILURE", tab: closure_129_0, apiError: closure_129_4 };
+          closure_130_1(closure_130_2[17]).dispatch(obj9);
+          throw closure_129_4;
+        } else if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 !== 2) {
+          closure_129_3 = value;
+          const obj11 = { type: "COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_SUCCESS", tab: closure_129_0, layoutId: closure_129_3.body.layout_id };
+          closure_130_1(closure_130_2[17]).dispatch(obj11);
+          c4 = 0;
+          const obj = closure_130_1(closure_130_2[17]);
+        }
+        c4 = 0;
+        c6 = 3;
+        const obj12 = { value, done: true };
+        return obj12;
+      }
+    } catch (tmp39) {
+      closure_3 = tmp39;
+      if (tmp4 === c4) {
+        c6 = tmp2;
+        throw tmp39;
+      } else {
+        c5 = tmp;
+      }
+    }
   }
-  return value;
 };
-const addDebugLog = fn(7164).addDebugLog;
-let closure_10 = fn(7167).CollectiblesCategoriesRecord;
-let closure_11 = fn(7171).CollectiblesMarketingsRecord;
-let closure_14 = fn(7178).CollectiblesShopHomeRecord;
-const constants = fn(1076).CollectiblesMobileShopScreen;
-const Constants = fn(1074);
+const addDebugLog = fn(7067).addDebugLog;
+let closure_10 = fn(7070).CollectiblesCategoriesRecord;
+let closure_11 = fn(7074).CollectiblesMarketingsRecord;
+let closure_14 = fn(7081).CollectiblesShopHomeRecord;
+const constants = fn(1087).CollectiblesMobileShopScreen;
+const Constants = fn(1085);
 ({ Endpoints: closure_16, Routes, UserSettingsSections: closure_17 } = Constants);
-const CollectiblesMarketingsStore = fn(7191);
-const CollectiblesShopHomeStore = fn(7192);
+const CollectiblesMarketingsStore = fn(7094);
+const CollectiblesShopHomeStore = fn(7095);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/CollectiblesActionCreators.tsx");
 
@@ -865,7 +979,7 @@ export default { openCollectiblesShop, closeCollectiblesShop, fetchCollectiblesP
 export { openCollectiblesShop };
 export { openCollectiblesShopMobile };
 export const isCollectiblesShopOpen = function isCollectiblesShopOpen() {
-  const rootNavigationRef = isCollectiblesShopRoute(4722).getRootNavigationRef();
+  const rootNavigationRef = isCollectiblesShopRoute(4737).getRootNavigationRef();
   const tmp = null == rootNavigationRef || !rootNavigationRef.isReady();
   let tmp2 = !tmp;
   if (!tmp) {
@@ -900,7 +1014,7 @@ export const isCollectiblesShopOpen = function isCollectiblesShopOpen() {
             iter.return();
             return tmp2;
           } else {
-            let state = tmp2.state;
+            state = tmp2.state;
             routes = undefined;
             if (state != null) {
               routes = state.routes;

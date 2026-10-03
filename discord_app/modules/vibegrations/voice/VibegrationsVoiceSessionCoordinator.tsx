@@ -12,8 +12,8 @@ import UserStore from "../../../stores/UserStore.tsx";
 import VoiceStateStore from "../../../stores/VoiceStateStore.tsx";
 
 let obj2 = fn;
-const RPCErrors = fn(1074).RPCErrors;
-const Constants = fn(4870);
+const RPCErrors = fn(1085).RPCErrors;
+const Constants = fn(4915);
 ({ Features: closure_11, MediaEngineContextTypes: closure_12 } = Constants);
 let closure_13 = { x: 0, y: 0, z: -1 };
 class VibegrationsVoiceSessionCoordinator {
@@ -190,7 +190,7 @@ prototype["start"] = function start(id) {
           appliedUserIds: null,
           updateTimer: null,
         };
-        obj2.id = obj2(1255).v4();
+        obj2.id = obj2(1266).v4();
         obj2.socketId = id.id;
         obj2.frameId = frameId;
         obj2.applicationId = applicationId;
@@ -216,7 +216,7 @@ prototype["start"] = function start(id) {
           const tmp19 = new RPCErrorDefault(obj5, "The voice connection is unavailable");
           throw tmp19;
         }
-        const obj3 = obj2(1255);
+        const obj3 = obj2(1266);
       }
     }
   }
@@ -348,7 +348,7 @@ prototype["update"] = function update(id, id, arg2, arr) {
             if (!set.has(user_id)) {
               set.add(user_id);
               obj2 = { userId: user_id, position: null };
-              obj2.position = obj2(14231).toListenerRelativePosition(closure_0, user_id.position);
+              obj2.position = obj2(14299).toListenerRelativePosition(closure_0, user_id.position);
               return obj2;
             }
           }

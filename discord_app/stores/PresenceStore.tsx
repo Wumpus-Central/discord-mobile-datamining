@@ -3,7 +3,7 @@ import SnowflakeUtilsDefault from "../utils/SnowflakeUtils.tsx";
 import _modDef12 from "../../_runtime/metro/00012__.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
-import _modDef1331 from "../../_runtime/metro/01331__.js";
+import _modDef1342 from "../../_runtime/metro/01342__.js";
 import hasRichActivityDefault from "../modules/activities/utils/hasRichActivity.tsx";
 import AuthenticationStore from "AuthenticationStore.tsx";
 import UserStore from "UserStore.tsx";
@@ -188,7 +188,7 @@ function flattenPresence(id) {
       HermesBuiltin.arraySpread(flatMapResult1, 0);
       const reversed1 = items2.reverse();
       const _Map2 = Map;
-      map1 = new Map(
+      const map1 = new Map(
         reversed1.map((party) => {
           party = party.party;
           let id;
@@ -299,7 +299,7 @@ function updatePresence(arg0) {
       let activities2 = sorted;
       if (null != tmp7[guildId]) {
         activities2 = sorted;
-        if (_modDef1331(tmp25.activities, sorted)) {
+        if (_modDef1342(tmp25.activities, sorted)) {
           activities2 = tmp25.activities;
         }
       }
@@ -394,7 +394,7 @@ function clearPresences(id) {
   }
   tmp2 = keys[Symbol.iterator]();
 }
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({
   StatusTypes: closure_4,
   ActivityTypes: hasOwnProperty,
@@ -570,7 +570,7 @@ prototype["getApplicationActivity"] = function getApplicationActivity(arg0, arg1
   }
   return this.findActivity(arg0, (application_id) => application_id.application_id === closure_0, tmp, true);
 };
-prototype["findActivity"] = function findActivity(arg0, _messages) {
+prototype["findActivity"] = function findActivity(arg0, cResult) {
   let tmp = arg2;
   if (arg2 === undefined) {
     tmp = null;
@@ -588,7 +588,7 @@ prototype["findActivity"] = function findActivity(arg0, _messages) {
   if (flag) {
     combined = activities.concat(self.getHiddenActivities(arg0, tmp));
   }
-  return combined.find(_messages);
+  return combined.find(cResult);
 };
 prototype["getActivityMetadata"] = function getActivityMetadata(arg0) {
   return activityMetadata[arg0];

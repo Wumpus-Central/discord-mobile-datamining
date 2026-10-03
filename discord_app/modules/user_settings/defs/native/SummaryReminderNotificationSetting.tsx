@@ -2,10 +2,14 @@
 import util from "../../../../intl/index.native.tsx";
 import UserSettings from "../../UserSettings.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
+import SummaryReminderNotificationExperiment from "../../../notifications/summary_reminder/SummaryReminderNotificationExperiment.tsx";
 import SummaryReminderNotificationUtils from "../../../notifications/summary_reminder/SummaryReminderNotificationUtils.tsx";
+import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
+let ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -18,10 +22,9 @@ const toggle = SettingBuilders.createToggle({
   parent: SettingsConstants.MobileUserSettings.NOTIFICATIONS,
   useValue: UserSettings.EnableSummaryReminderNotifications.useSetting,
   onValueChange: SummaryReminderNotificationUtils.onSummaryReminderNotificationSettingsChanged,
-  usePredicate() {
-    return false;
-  },
+  usePredicate: () =>
+    SummaryReminderNotificationExperiment.useSummaryReminderNotificationExperiment("tabsV2Settings").showSettingsToggle,
 });
-const result = size.fileFinishedImporting("modules/user_settings/defs/native/SummaryReminderNotificationSetting.tsx");
+const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/SummaryReminderNotificationSetting.tsx");
 
 export default toggle;

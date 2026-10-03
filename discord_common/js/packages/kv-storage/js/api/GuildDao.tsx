@@ -179,7 +179,7 @@ prototype2["putWithGeneration"] = function putWithGeneration(arg0, arg1, data, g
   if (arg4 === undefined) {
     Replace = TableId.ConflictOptions.Replace;
   }
-  const state = this.state;
+  state = this.state;
   const obj = { key: null, data, generation };
   const items = [arg0, arg1];
   obj.key = items;
@@ -196,13 +196,13 @@ prototype2["delete"] = function delete(arg0, arg1) {
     const items = [arg0];
     state2.delete(items);
   } else {
-    const state = self.state;
+    state = self.state;
     const items1 = [arg0, arg1];
     state.delete(items1);
   }
 };
 prototype2["deleteGeneration"] = function deleteGeneration(arg0, arg1) {
-  const state = this.state;
+  state = this.state;
   return state.deleteGeneration([], arg0, arg1);
 };
 const result = size.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/GuildDao.tsx");

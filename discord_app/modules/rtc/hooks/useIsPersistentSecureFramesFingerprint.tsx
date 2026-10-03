@@ -4,7 +4,7 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-let closure_5 = fn(9358).SECURE_FRAMES_PUBLIC_KEY_VERSION;
+let closure_5 = fn(9366).SECURE_FRAMES_PUBLIC_KEY_VERSION;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/hooks/useIsPersistentSecureFramesFingerprint.tsx");
 
@@ -29,7 +29,7 @@ export const useIsPersistentSecureFramesFingerprint = function useIsPersistentSe
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {

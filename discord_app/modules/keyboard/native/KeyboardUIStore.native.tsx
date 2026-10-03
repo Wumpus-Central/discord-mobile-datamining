@@ -9,10 +9,10 @@ import KeyboardTypes from "KeyboardTypes.tsx";
 import ChatInputFocused from "ChatInputFocused.tsx";
 import useSafeAreaInsets from "../../safe_area/useSafeAreaInsets.native.tsx";
 import NativeSafeAreaInsetsModuleDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeSafeAreaInsetsModule.tsx";
-import KeyboardChatScrollView from "../../../../_runtime/01627_KeyboardChatScrollView.js";
+import KeyboardChatScrollView from "../../../../_runtime/01632_KeyboardChatScrollView.js";
 import KeyboardStateDebuggingDefault from "../KeyboardStateDebugging.tsx";
 import PlatformUtils_mod from "../../../utils/PlatformUtils.tsx";
-import 00560__ from "../../../../_runtime/metro/00560__.js";
+import 00570__ from "../../../../_runtime/metro/00570__.js";
 import SafeAreaStore from "../../safe_area/SafeAreaStore.native.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -180,9 +180,11 @@ function createInitialEntryState(main) {
   }
   const SYSTEM4 = KeyboardTypes.KeyboardTypes.SYSTEM;
   obj.customKeyboardHeightExcludingSafeAreaInsets = num2 - useSafeAreaInsets.getSafeAreaInsets(main).bottom;
+  obj.keyboardContexts = { [KeyboardTypes.KeyboardTypes.SYSTEM]: { keyboardWillOpen: false }, [KeyboardTypes.KeyboardTypes.EXPRESSION]: { type: ExpressionPickerViewType.EMOJI }, [KeyboardTypes.KeyboardTypes.MEDIA]: { target: MediaKeyboardTarget.CHAT }, [KeyboardTypes.KeyboardTypes.APP_LAUNCHER]: { initialRouteName: AppLauncherRouteName.HOME } };
+  const obj2 = { type: ExpressionPickerViewType.EMOJI };
+  const obj3 = { target: MediaKeyboardTarget.CHAT };
+  const obj4 = { initialRouteName: AppLauncherRouteName.HOME };
   const tmpResult = useSafeAreaInsets;
-  obj.keyboardContexts = { [KeyboardTypes.KeyboardTypes.SYSTEM]: { keyboardWillOpen: false }, [KeyboardTypes.KeyboardTypes.EXPRESSION]: ExpressionPickerViewType.EMOJI, [KeyboardTypes.KeyboardTypes.MEDIA]: obj3, [KeyboardTypes.KeyboardTypes.APP_LAUNCHER]: obj4 };
-  const obj2 = { [KeyboardTypes.KeyboardTypes.SYSTEM]: { keyboardWillOpen: false }, [KeyboardTypes.KeyboardTypes.EXPRESSION]: ExpressionPickerViewType.EMOJI, [KeyboardTypes.KeyboardTypes.MEDIA]: obj3, [KeyboardTypes.KeyboardTypes.APP_LAUNCHER]: obj4 };
   let num3 = 0;
   if (tmpResult3.isAndroid()) {
     num3 = NativeSafeAreaInsetsModuleDefault.getImeInsets(false, main);
@@ -215,7 +217,7 @@ let str2 = "keyboardWillHide";
 if (PlatformUtils.isAndroid()) {
   str2 = "keyboardDidHide";
 }
-let keyboardContexts = module_560.create(() => {
+let keyboardContexts = module_570.create(() => {
   const obj = { byAppEntry: { main: createInitialEntryState("main"), share: createInitialEntryState("share") } };
   return obj;
 });

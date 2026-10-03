@@ -7,7 +7,7 @@ import ProfileFrameRecord from "ProfileFrameRecord.tsx";
 import UnknownCollectiblesItemRecord from "UnknownCollectiblesItemRecord.tsx";
 
 require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ SKUProductLines: closure_7, SKUTypes: closure_8 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/records/CollectiblesItemRecord.tsx");

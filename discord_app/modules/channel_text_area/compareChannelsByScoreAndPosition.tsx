@@ -1,7 +1,7 @@
 // discord_app/modules/channel_text_area/compareChannelsByScoreAndPosition.tsx
 import ChannelStore from "../../stores/ChannelStore.tsx";
 
-const ChannelTypes = fn(1074).ChannelTypes;
+const ChannelTypes = fn(1085).ChannelTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_text_area/compareChannelsByScoreAndPosition.tsx");
 

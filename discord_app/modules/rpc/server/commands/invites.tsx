@@ -4,15 +4,15 @@ import EmbeddedActivitiesStore from "../../../activities/EmbeddedActivitiesStore
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
 const require = fn;
-const InstantInviteSources = fn(1074).InstantInviteSources;
-const Constants = fn(1085);
+const InstantInviteSources = fn(1085).InstantInviteSources;
+const Constants = fn(1096);
 ({ RPCCommands, RPCErrors: metroRequire } = Constants);
 let obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(14247);
+const CONTEXT_MENU_ICON_NAMES = fn(14315);
 let obj3 = { scope: null, handler: null };
 let obj4 = {};
-const items = [fn(7969).OAuth2Scopes.DM_CHANNELS_MESSAGES_WRITE, fn(7969).OAuth2Scopes.ACTIVITIES_INVITES_WRITE];
-obj4[fn(5270).RPC_SCOPE_CONFIG.ANY] = items;
+const items = [fn(8015).OAuth2Scopes.DM_CHANNELS_MESSAGES_WRITE, fn(8015).OAuth2Scopes.ACTIVITIES_INVITES_WRITE];
+obj4[fn(5316).RPC_SCOPE_CONFIG.ANY] = items;
 obj3.scope = obj4;
 obj3.handler = function handler(arg0) {
   ({ socket: require, args } = arg0);
@@ -28,7 +28,7 @@ obj3.handler = function handler(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -45,36 +45,36 @@ obj3.handler = function handler(arg0) {
             const id = application.application.id;
             if (null == id) {
               const obj4 = { errorCode: constants2.INVALID_COMMAND };
-              const rPCError = new tmp3(8963).RPCError(obj4, "No application.");
+              const rPCError = new tmp3(9027).RPCError(obj4, "No application.");
               throw rPCError;
             } else {
               connectedActivityLocation = connectedActivityLocation.getConnectedActivityLocation();
               if (null == connectedActivityLocation) {
                 const obj7 = { errorCode: constants2.NO_ELIGIBLE_ACTIVITY };
-                const rPCError1 = new tmp3(8963).RPCError(
+                const rPCError1 = new tmp3(9027).RPCError(
                   obj7,
                   "No eligible activity for application. Ensure an activity was set using setActivity.",
                 );
                 throw rPCError1;
               } else {
                 const kind = connectedActivityLocation.kind;
-                if (tmp3(8978).EmbeddedActivityLocationKind.GUILD_CHANNEL !== kind) {
-                  if (tmp3(8978).EmbeddedActivityLocationKind.GUILD_CHANNEL_MESSAGE !== kind) {
-                    if (tmp3(8978).EmbeddedActivityLocationKind.PRIVATE_CHANNEL !== kind) {
-                      if (tmp3(8978).EmbeddedActivityLocationKind.PRIVATE_CHANNEL_MESSAGE !== kind) {
+                if (tmp3(8997).EmbeddedActivityLocationKind.GUILD_CHANNEL !== kind) {
+                  if (tmp3(8997).EmbeddedActivityLocationKind.GUILD_CHANNEL_MESSAGE !== kind) {
+                    if (tmp3(8997).EmbeddedActivityLocationKind.PRIVATE_CHANNEL !== kind) {
+                      if (tmp3(8997).EmbeddedActivityLocationKind.PRIVATE_CHANNEL_MESSAGE !== kind) {
                         const obj8 = { errorCode: constants2.NO_ELIGIBLE_ACTIVITY };
-                        const rPCError2 = new tmp3(8963).RPCError(obj8, "Unsupported activity location");
+                        const rPCError2 = new tmp3(9027).RPCError(obj8, "Unsupported activity location");
                         throw rPCError2;
                       }
                     }
                     channel = channel.getChannel(connectedActivityLocation.channel_id);
                     if (null == channel) {
                       const obj9 = { errorCode: constants2.INVALID_CHANNEL };
-                      const rPCError3 = new tmp3(8963).RPCError(obj9, "Invalid channel");
+                      const rPCError3 = new tmp3(9027).RPCError(obj9, "Invalid channel");
                       throw rPCError3;
-                    } else if (channel.type === tmp3(1095).ChannelTypes.DM) {
+                    } else if (channel.type === tmp3(1106).ChannelTypes.DM) {
                       const obj10 = { errorCode: constants2.INVALID_CHANNEL };
-                      const rPCError4 = new tmp3(8963).RPCError(obj10, "Cannot send invite to a DM");
+                      const rPCError4 = new tmp3(9027).RPCError(obj10, "Cannot send invite to a DM");
                       throw rPCError4;
                     }
                   }
@@ -91,18 +91,18 @@ obj3.handler = function handler(arg0) {
                   obj11.inviteAnalyticsMetadata = obj12;
                   dependencyMap = 2;
                   connectedActivityLocation = 1;
-                  const obj13 = { value: tmp3(8974).sendEmbeddedActivityInviteUser(obj11), done: false };
+                  const obj13 = { value: tmp3(8993).sendEmbeddedActivityInviteUser(obj11), done: false };
                   return obj13;
                 }
-                channel = tmp3(14251).validateOpenInviteDialog(tmp68).channel;
-                const obj5 = tmp3(14251);
+                channel = tmp3(14319).validateOpenInviteDialog(tmp68).channel;
+                const obj5 = tmp3(14319);
               }
             }
           }
         } else if (1 === tmp7) {
           c2 = 0;
           const obj14 = { errorCode: constants2.UNKNOWN_ERROR };
-          const rPCError5 = new tmp3(8963).RPCError(obj14, "Failed to invite user");
+          const rPCError5 = new tmp3(9027).RPCError(obj14, "Failed to invite user");
           throw rPCError5;
         } else if (arg0 === 1) {
           connectedActivityLocation = 3;
@@ -115,7 +115,7 @@ obj3.handler = function handler(arg0) {
         } else {
           c2 = 0;
           connectedActivityLocation = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp61) {
         if (tmp4 === c2) {

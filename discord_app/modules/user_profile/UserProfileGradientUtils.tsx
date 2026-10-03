@@ -1,19 +1,19 @@
 // discord_app/modules/user_profile/UserProfileGradientUtils.tsx
 import _mod12 from "../../../_runtime/metro/00012__.js";
-import _modDef672 from "../../../_runtime/metro/00672__.js";
+import _modDef683 from "../../../_runtime/metro/00683__.js";
 import utils_ColorUtils from "../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import utils_ColorDefault from "../../utils/Color.tsx";
 import shared from "../../design/shared.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
 require = fn;
-const ThemeTypes = fn(1074).ThemeTypes;
+const ThemeTypes = fn(1085).ThemeTypes;
 fn(12);
 const apply = fn(12);
 const memoizeResult = apply.memoize(
-  (memo) => {
+  (primaryColor) => {
     const obj = shared;
-    const contrastingColor = obj.getContrastingColor(memo, {
+    const contrastingColor = obj.getContrastingColor(primaryColor, {
       base: "#ffffff",
       contrastRatio: shared.WCAGContrastRatios.HighContrastText,
     });
@@ -25,11 +25,11 @@ const memoizeResult = apply.memoize(
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/UserProfileGradientUtils.tsx");
 
-export const getProfileTheme = function getProfileTheme(tmp4Result8) {
-  if (null == tmp4Result8) {
+export const getProfileTheme = function getProfileTheme(first1) {
+  if (null == first1) {
     return null;
   } else {
-    if (obj.getDarkness(tmp4Result8) > 0.5) {
+    if (obj.getDarkness(first1) > 0.5) {
       let LIGHT = ThemeTypes.DARK;
     } else {
       LIGHT = ThemeTypes.LIGHT;
@@ -86,16 +86,16 @@ export const calculateModalV2BackgroundColor = apply.memoize(
         obj = utils_ColorUtils;
       }
     }
-    const obj2 = _modDef672;
-    const mixResult = obj2.mix(_modDef672(hex2intResult), _modDef672(arg1), 0.5, "lab");
+    const obj2 = _modDef683;
+    const mixResult = obj2.mix(_modDef683(hex2intResult), _modDef683(arg1), 0.5, "lab");
     const result = Math.round(100 * mixResult.get("hsl.l")) / 100;
     if (tmp !== ThemeTypes.LIGHT) {
       let clampResult = _mod12.clamp(result, 0, 0.1);
     } else {
       clampResult = _mod12.clamp(result, 0.8, 1);
     }
-    const tmp10 = _modDef672(hex2intResult);
-    const result1 = _modDef672(mixResult).set("hsl.l", clampResult);
+    const tmp10 = _modDef683(hex2intResult);
+    const result1 = _modDef683(mixResult).set("hsl.l", clampResult);
     return result1.num();
   },
   (arg0, arg1, arg2) => "" + arg0 + "-" + arg1 + "-" + arg2,

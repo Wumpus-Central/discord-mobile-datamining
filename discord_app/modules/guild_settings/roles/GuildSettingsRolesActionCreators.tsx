@@ -107,7 +107,7 @@ let closure_7 = async function _saveRoleSettings(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -146,7 +146,7 @@ let closure_7 = async function _saveRoleSettings(arg0) {
               closure_145_14 = undefined;
               c20 = 1;
               c21 = 1;
-              return { value: "flex", done: null };
+              return { value: "Reflect", done: true };
             }
             break;
           case 1:
@@ -213,7 +213,7 @@ let closure_7 = async function _saveRoleSettings(arg0) {
             ComponentDispatch.dispatch(closure_144_4.EMPHASIZE_NOTICE);
             if (!closure_145_5.throwErr) {
               c21 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             } else {
               throw closure_145_15;
             }
@@ -662,7 +662,7 @@ let closure_7 = async function _saveRoleSettings(arg0) {
   iter.next();
   return iter;
 };
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ ComponentActions: closure_4, DEFAULT_ROLE_COLOR: hasOwnProperty } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/roles/GuildSettingsRolesActionCreators.tsx");

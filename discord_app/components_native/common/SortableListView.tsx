@@ -1,4 +1,5 @@
 // discord_app/components_native/common/SortableListView.tsx
+import c from "../../../_runtime/00576_c.js";
 import DeprecatedLayoutAnimation from "../../modules/animations/native/DeprecatedLayoutAnimation.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
@@ -14,7 +15,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let height = Dimensions.get("window").height;
-let c10 = -5;
+const v65535 = -5;
 let closure_11 = { x: 0, y: 0 };
 let closure_12 = noop.memo((current) => {
   ({ hovering, rowData, active, renderActiveDivider, hideContent, renderRow, onPressOut } = current);
@@ -84,36 +85,110 @@ let closure_12 = noop.memo((current) => {
     }),
   });
   obj2.children = items;
-  return React6(React3, obj2);
+  return closure_1_8(React3, obj2);
 });
-let closure_13 = noop.memo((listPageY) => {
-  ({ rowData, pan, frameHeight } = listPageY);
-  listPageY = listPageY.listPageY;
-  const wrapperPageY = listPageY.wrapperPageY;
-  const items = [frameHeight, listPageY, wrapperPageY];
-  ({ sortRowStyle, renderRow } = listPageY);
-  const obj = { style: null, children: null };
-  const items1 = [
-    noop.useMemo(() => {
-      const rect = {
-        position: "absolute",
-        left: 0,
-        right: 0,
-        opacity: 0.25,
-        overflow: "hidden",
-        backgroundColor: "transparent",
-        height: frameHeight,
-        marginTop: listPageY - wrapperPageY,
-      };
-      return rect;
-    }, items),
-    sortRowStyle,
-    pan.getLayout(),
-  ];
-  obj.style = items1;
-  obj.children = renderRow(rowData.item, rowData.index, true);
-  return React5(RN.View, obj);
-});
+const ReactCompilerGating = fn(558);
+let closure_13 = noop.memo(
+  ReactCompilerGating.isReactCompilerEnabled()
+    ? (listPageY) => {
+        const cResult = c.c(16);
+        ({ sortRowStyle, rowData, renderRow, pan, frameHeight } = listPageY);
+        const diff = listPageY.listPageY - listPageY.wrapperPageY;
+        if (cResult[0] === frameHeight) {
+          if (cResult[1] === diff) {
+            let tmp3 = cResult[2];
+          }
+          if (cResult[3] !== pan) {
+            const layout = pan.getLayout();
+            cResult[3] = pan;
+            cResult[4] = layout;
+            let tmp4 = layout;
+          } else {
+            tmp4 = cResult[4];
+          }
+          if (cResult[5] === sortRowStyle) {
+            if (cResult[6] === tmp3) {
+              if (cResult[7] === tmp4) {
+                let tmp6 = cResult[8];
+              }
+              if (cResult[9] === renderRow) {
+                if (cResult[10] === rowData.index) {
+                  if (cResult[11] === rowData.item) {
+                    let tmp7 = cResult[12];
+                  }
+                  if (cResult[13] === tmp6) {
+                    if (cResult[14] === tmp7) {
+                      let tmp9 = cResult[15];
+                    }
+                    return tmp9;
+                  }
+                  const obj2 = { style: tmp6, children: tmp7 };
+                  const tmp12 = React5(RN.View, obj2);
+                  cResult[13] = tmp6;
+                  cResult[14] = tmp7;
+                  cResult[15] = tmp12;
+                  tmp9 = tmp12;
+                }
+              }
+              const renderRowResult = renderRow(rowData.item, rowData.index, true);
+              cResult[9] = renderRow;
+              cResult[10] = rowData.index;
+              cResult[11] = rowData.item;
+              cResult[12] = renderRowResult;
+              tmp7 = renderRowResult;
+            }
+          }
+          const items = [tmp3, sortRowStyle, tmp4];
+          cResult[5] = sortRowStyle;
+          cResult[6] = tmp3;
+          cResult[7] = tmp4;
+          cResult[8] = items;
+          tmp6 = items;
+        }
+        const rect = {
+          position: "absolute",
+          left: 0,
+          right: 0,
+          opacity: 0.25,
+          overflow: "hidden",
+          backgroundColor: "transparent",
+          height: frameHeight,
+          marginTop: diff,
+        };
+        cResult[0] = frameHeight;
+        cResult[1] = diff;
+        cResult[2] = rect;
+        tmp3 = rect;
+      }
+    : (listPageY) => {
+        ({ rowData, pan, frameHeight } = listPageY);
+        listPageY = listPageY.listPageY;
+        const wrapperPageY = listPageY.wrapperPageY;
+        const items = [frameHeight, listPageY, wrapperPageY];
+        ({ sortRowStyle, renderRow } = listPageY);
+        const obj = { style: null, children: null };
+        const items1 = [
+          noop.useMemo(() => {
+            const rect = {
+              position: "absolute",
+              left: 0,
+              right: 0,
+              opacity: 0.25,
+              overflow: "hidden",
+              backgroundColor: "transparent",
+              height: frameHeight,
+              marginTop: listPageY - wrapperPageY,
+            };
+            return rect;
+          }, items),
+          sortRowStyle,
+          pan.getLayout(),
+        ];
+        obj.style = items1;
+        obj.children = renderRow(rowData.item, rowData.index, true);
+        return React5(RN.View, obj);
+      },
+);
 const Component = noop.Component;
 class SortableListView extends Component {
   constructor(arg0) {
@@ -562,7 +637,7 @@ prototype["render"] = function render() {
   obj3.extraData = "" + props.disableSorting + ":" + index + ":" + self.state.hoverIndex;
   const items1 = [React5(timestampProducer, obj3), self.renderActive()];
   obj.children = items1;
-  return React6(React3, obj);
+  return closure_1_8(React3, obj);
 };
 SortableListView.defaultProps = { disableSorting: false };
 let size = fn(2);

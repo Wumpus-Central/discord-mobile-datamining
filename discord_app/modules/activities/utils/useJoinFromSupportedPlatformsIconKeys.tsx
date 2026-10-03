@@ -1,6 +1,8 @@
 // discord_app/modules/activities/utils/useJoinFromSupportedPlatformsIconKeys.tsx
+import c from "../../../../_runtime/00576_c.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
+require = fn;
 function getJoinFromSupportedPlatformsIconKeys(isGameLaunchable) {
   ({ platforms, currentPlatform } = isGameLaunchable);
   const set = new Set(platforms);
@@ -39,9 +41,9 @@ function getJoinFromSupportedPlatformsIconKeys(isGameLaunchable) {
       }
     }
   }
-  tmp15 = closure_3;
+  tmp15 = closure_5;
 }
-const ActivityGamePlatforms = fn(1074).ActivityGamePlatforms;
+const ActivityGamePlatforms = fn(1085).ActivityGamePlatforms;
 const IconKey = {
   DESKTOP: "desktop",
   MOBILE: "mobile",
@@ -51,7 +53,8 @@ const IconKey = {
   XBOX: "xbox",
   VR: "vr",
 };
-let closure_3 = [];
+let closure_5 = [];
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/useJoinFromSupportedPlatformsIconKeys.tsx");
 
@@ -68,13 +71,32 @@ export const ACTIVITY_GAME_PLATFORM_TO_ICON_KEY = {
   [ActivityGamePlatforms.META_QUEST]: IconKey.VR,
 };
 export { getJoinFromSupportedPlatformsIconKeys };
-export const useJoinFromSupportedPlatformsIconKeys = function useJoinFromSupportedPlatformsIconKeys(platforms) {
-  platforms = platforms.platforms;
-  const currentPlatform = platforms.currentPlatform;
-  const isGameLaunchable = platforms.isGameLaunchable;
-  const items = [currentPlatform, platforms, isGameLaunchable];
-  return platforms.useMemo(
-    () => getJoinFromSupportedPlatformsIconKeys({ platforms, currentPlatform, isGameLaunchable }),
-    items,
-  );
-};
+export const useJoinFromSupportedPlatformsIconKeys = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      const cResult = c.c(4);
+      ({ platforms, currentPlatform, isGameLaunchable } = arg0);
+      if (cResult[0] === currentPlatform) {
+        if (cResult[1] === isGameLaunchable) {
+          if (cResult[2] === platforms) {
+            let tmp2 = cResult[3];
+          }
+          return tmp2;
+        }
+      }
+      const tmp3 = getJoinFromSupportedPlatformsIconKeys({ platforms, currentPlatform, isGameLaunchable });
+      cResult[0] = currentPlatform;
+      cResult[1] = isGameLaunchable;
+      cResult[2] = platforms;
+      cResult[3] = tmp3;
+      tmp2 = tmp3;
+    }
+  : (platforms) => {
+      platforms = platforms.platforms;
+      const currentPlatform = platforms.currentPlatform;
+      const isGameLaunchable = platforms.isGameLaunchable;
+      const items = [currentPlatform, platforms, isGameLaunchable];
+      return isGameLaunchable.useMemo(
+        () => getJoinFromSupportedPlatformsIconKeys({ platforms, currentPlatform, isGameLaunchable }),
+        items,
+      );
+    };

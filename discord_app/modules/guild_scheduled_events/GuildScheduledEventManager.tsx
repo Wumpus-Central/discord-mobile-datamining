@@ -26,7 +26,7 @@ let closure_10 = async function _getGuildEventsForCurrentUser(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -175,7 +175,7 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       while (true) {
@@ -203,7 +203,7 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen() {
               _self = guildScheduledEventsForGuild[Symbol.iterator]();
             }
             c7 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else if (1 === tmp4) {
           c5 = 0;
@@ -267,7 +267,7 @@ prototype["handleGuildDelete"] = function handleGuildDelete(guild) {
 };
 prototype["handleInviteResolveSuccess"] = function handleInviteResolveSuccess(invite) {
   invite = invite.invite;
-  const guild = invite.guild;
+  guild = invite.guild;
   let id;
   if (guild != null) {
     id = guild.id;
@@ -291,7 +291,7 @@ prototype["handleChannelSelect"] = function handleChannelSelect(guildId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       while (true) {
@@ -314,7 +314,7 @@ prototype["handleChannelSelect"] = function handleChannelSelect(guildId) {
               guildId = guildScheduledEventsForGuild[Symbol.iterator]();
             }
             c9 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else if (1 === tmp4) {
           c6 = 0;

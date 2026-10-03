@@ -1,7 +1,8 @@
 // discord_app/modules/collectibles/native/HeroBlock.tsx
+import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import CollectiblesShopCardV2 from "CollectiblesShopCardV2.tsx";
+import CollectiblesShopCardV2Default from "CollectiblesShopCardV2.tsx";
 import CollectiblesAnalyticsContext from "../CollectiblesAnalyticsContext.tsx";
 import SkeletonCardDefault from "SkeletonCard.tsx";
 import FeaturedFirstCardCoachmarkAnchorDefault from "FeaturedFirstCardCoachmarkAnchor.tsx";
@@ -9,29 +10,15 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import CollectiblesCategoryStore from "../CollectiblesCategoryStore.tsx";
 
 require = fn;
-function SkeletonLoading(accessibilityLabel) {
-  let obj = {
-    style: closure_14().skeletonContainer,
-    accessibilityRole: "list",
-    accessibilityLabel: accessibilityLabel.accessibilityLabel,
-    accessibilityState: { busy: true },
-    accessible: true,
-    children: Array.from({ length: 10 }).map((item, index) => {
-      const obj = { width: CollectiblesShopCardV2.COLLECTIBLES_SHOP_CARD_WIDTH };
-      return closure_1_11(SkeletonCardDefault, obj, index);
-    }),
-  };
-  return closure_1_11(hasOwnProperty, obj);
-}
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const constants = fn(1076).CollectiblesMobileShopScreen;
-const Constants = fn(1074);
+const constants = fn(1087).CollectiblesMobileShopScreen;
+const Constants = fn(1085);
 ({ AnalyticEvents: closure_8, UserSettingsSections: closure_9, VerticalGradient: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, Fragment: closure_12, jsxs: map1 } = jsxProd);
-const result = 0.75 * fn(8414).COLLECTIBLES_SHOP_CARD_WIDTH;
-const createStyles = fn(4845);
+const result = 0.75 * fn(8418).COLLECTIBLES_SHOP_CARD_WIDTH;
+const createStyles = fn(4890);
 let obj2 = {
   heroContainer: { width: "100%" },
   heroBannerContainer: null,
@@ -99,301 +86,1019 @@ obj2.skeletonContainer = {
   paddingHorizontal: nativeDefault.space.PX_16,
 };
 let closure_14 = createStyles.createStyles(obj2);
+let ReactCompilerGating = fn(558);
+let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (accessibilityLabel) => {
+      const cResult = c.c(5);
+      accessibilityLabel = accessibilityLabel.accessibilityLabel;
+      const tmp2 = closure_14();
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const obj2 = { busy: true };
+        cResult[0] = obj2;
+        let first = obj2;
+      } else {
+        first = cResult[0];
+      }
+      if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
+        const _Array = Array;
+        const mapped = Array.from({ length: 10 }).map((item, index) => {
+          const obj = { width: require("CollectiblesShopCardV2").COLLECTIBLES_SHOP_CARD_WIDTH };
+          return closure_1_11(SkeletonCardDefault, obj, index);
+        });
+        cResult[1] = mapped;
+        let tmp4 = mapped;
+        const arr = Array.from({ length: 10 });
+      } else {
+        tmp4 = cResult[1];
+      }
+      if (cResult[2] === accessibilityLabel) {
+        if (cResult[3] === tmp2.skeletonContainer) {
+          let tmp6 = cResult[4];
+        }
+        return tmp6;
+      }
+      const tmp7 = closure_1_11(hasOwnProperty, {
+        style: tmp2.skeletonContainer,
+        accessibilityRole: "list",
+        accessibilityLabel,
+        accessibilityState: first,
+        accessible: true,
+        children: tmp4,
+      });
+      cResult[2] = accessibilityLabel;
+      cResult[3] = tmp2.skeletonContainer;
+      cResult[4] = tmp7;
+      tmp6 = tmp7;
+    }
+  : (accessibilityLabel) => {
+      let obj = {
+        style: closure_14().skeletonContainer,
+        accessibilityRole: "list",
+        accessibilityLabel: accessibilityLabel.accessibilityLabel,
+        accessibilityState: { busy: true },
+        accessible: true,
+        children: Array.from({ length: 10 }).map((item, index) => {
+          const obj = { width: require("CollectiblesShopCardV2").COLLECTIBLES_SHOP_CARD_WIDTH };
+          return closure_1_11(SkeletonCardDefault, obj, index);
+        }),
+      };
+      return closure_1_11(hasOwnProperty, obj);
+    };
+ReactCompilerGating = fn(558);
+let obj5 = { flexDirection: "row", gap: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };
 size = fn(2);
 const result1 = size.fileFinishedImporting("modules/collectibles/native/HeroBlock.tsx");
 
-export default function _default(heroBlock) {
-  heroBlock = heroBlock.heroBlock;
-  const preferVCPrice = heroBlock.preferVCPrice;
-  let stateFromStores;
-  closure_5 = undefined;
-  closure_6 = undefined;
-  let obj = heroBlock(15649);
-  dependencyMap = heroBlock(1485).useNavigation();
-  let obj2 = heroBlock(1485);
-  noop = heroBlock(8417).useCollectiblesAnalyticsContext();
-  let heroBannerUrl = heroBlock.mobileHeroUrl;
-  if (heroBannerUrl == null) {
-    heroBannerUrl = heroBlock.heroBannerUrl;
-  }
-  const heroLogoUrl = heroBlock.heroLogoUrl;
-  let obj3 = heroBlock(8417);
-  const items = [closure_6];
-  stateFromStores = heroBlock(504).useStateFromStores(items, () =>
-    CollectiblesCategoryStore.getCategory(heroBlock.categorySkuId),
-  );
-  let tmpResult = heroBlock(504);
-  let isEligibleForQuests = heroBlock(10887).getIsEligibleForQuests();
-  const tmpResult9 = heroBlock(10887);
-  const tmp7 = preferVCPrice(4776)();
-  const tmp8 = closure_14();
-  const tmpResult10 = heroBlock(15650);
-  const token = heroBlock(4560).useToken(preferVCPrice(576).colors.BACKGROUND_BASE_LOW);
-  const tmpResult11 = heroBlock(4560);
-  const tmpResult12 = heroBlock(4712);
-  const tmpResult13 = heroBlock(4712);
-  const hexToRgbaStringResult = tmpResult12.hexToRgbaString(heroBlock(4712).hexWithOpacity(token, 0));
-  const token1 = heroBlock(4560).useToken(preferVCPrice(576).colors.BACKGROUND_BASE_LOWEST);
-  const tmp12 = preferVCPrice(15651)();
-  closure_5 = tmp12;
-  const items1 = [heroBlock.rankedSkuIds, tmp12];
-  const memo = noop.useMemo(() => closure_5(heroBlock.rankedSkuIds), items1);
-  const tmpResult14 = heroBlock(4560);
-  const filteredAndSortedProducts = heroBlock(14816).useFilteredAndSortedProducts({
-    products: memo,
-    bypassAndroidUnsyncedFilter: tmp4,
-  });
-  closure_6 = tmp14;
-  const tmpResult15 = heroBlock(14816);
-  let unpublishedAt;
-  if (stateFromStores != null) {
-    unpublishedAt = stateFromStores.unpublishedAt;
-  }
-  const items2 = [unpublishedAt, preferVCPrice, heroBlock.screen === constants.FEATURED_PAGE];
-  if (undefined === stateFromStores) {
-    return null;
-  } else {
-    const tmp18 = null != heroBlock.mobileTitle ? heroBlock.mobileTitle : heroBlock.title;
-    const tmp19 = null != heroBlock.mobileSummary ? heroBlock.mobileSummary : heroBlock.summary;
-    if (!tmp4) {
-      const obj4 = { value: tmp15(preferVCPrice(6789).COLLECTIBLES_SHOP_HERO).analyticsLocations, children: null };
-      const obj5 = {
-        onChange: tmpResult10.useTrackProductCardImpression(
-          heroBlock.categoryStoreListingId,
-          "mobile_home",
-          "hero_block",
-        ).handleCardVisibilityChange,
-        resetKey: heroBlock.categoryStoreListingId,
-        children: null,
-      };
-      const obj6 = { style: tmp8.heroContainer, children: null };
-      const obj7 = { style: tmp8.heroBannerContainer, children: null };
-      let tmp24Result = null != heroBannerUrl;
-      if (tmp24Result) {
-        let tmp22Result = tmp4;
-        if (tmp4) {
-          const obj8 = { colors: ["rgba(39, 30, 173, 0.3)", "transparent"], start: null, end: null, style: null };
-          ({ START: obj17.start, END: obj17.end } = closure_10);
-          obj8.style = tmp8.orbsBackgroundGradient;
-          tmp22Result = closure_11(tmp6(5477), obj8);
-        }
-        const obj9 = { children: null };
-        const items3 = [tmp22Result, ,];
-        const obj10 = { style: null, source: null };
-        const items4 = [tmp8.heroBannerImage];
-        obj10.style = items4;
-        const obj11 = { uri: heroBannerUrl };
-        obj10.source = obj11;
-        items3[1] = closure_11(stateFromStores, obj10);
-        const obj12 = { colors: null, start: null, end: null, style: null };
-        const items5 = [hexToRgbaStringResult, token1];
-        obj12.colors = items5;
-        ({ START: obj21.start, END: obj21.end } = closure_10);
-        obj12.style = tmp8.fadeOutGradient;
-        items3[2] = closure_11(tmp6(5477), obj12);
-        obj9.children = items3;
-        tmp24Result = closure_13(closure_12, obj9);
+export default ReactCompilerGating.isReactCompilerEnabled()
+  ? (heroBlock) => {
+      const cResult = heroBlock(navigation[10]).c(70);
+      heroBlock = heroBlock.heroBlock;
+      const preferVCPrice = heroBlock.preferVCPrice;
+      let obj = heroBlock(navigation[10]);
+      const handleDismissCoachmarkOnScroll = heroBlock(navigation[12]).useCollectiblesCoachmarkScrollDismissContext()
+        .handleDismissCoachmarkOnScroll;
+      let obj2 = heroBlock(navigation[12]);
+      navigation = heroBlock(navigation[13]).useNavigation();
+      let obj3 = heroBlock(navigation[13]);
+      const collectiblesAnalyticsContext = heroBlock(navigation[14]).useCollectiblesAnalyticsContext();
+      let heroBannerUrl = heroBlock.mobileHeroUrl;
+      if (heroBannerUrl == null) {
+        heroBannerUrl = heroBlock.heroBannerUrl;
       }
-      obj7.children = tmp24Result;
-      const items6 = [closure_11(closure_5, obj7), ,];
-      const obj13 = { style: tmp8.heroInfoContainer, children: null };
-      if (tmp4) {
-        const obj14 = { style: tmp8.orbsInnerContainer, children: null };
-        let tmp22Result6 = null != tmp18;
-        if (tmp22Result6) {
-          const obj15 = {
-            variant: "display-md",
-            color: "mobile-text-heading-primary",
-            style: tmp8.orbsTitle,
-            children: tmp18,
-          };
-          tmp22Result6 = closure_11(tmp(4841).Text, obj15);
-        }
-        const items7 = [tmp22Result6];
-        let tmp22Result7 = null != tmp19;
-        if (tmp22Result7) {
-          tmp22Result7 = "" !== tmp19;
-        }
-        if (tmp22Result7) {
-          const obj16 = { variant: "text-md/medium", children: tmp19 };
-          tmp22Result7 = closure_11(tmp(4841).Text, obj16);
-        }
-        const obj18 = { children: null };
-        items7[1] = tmp22Result7;
-        obj18.children = items7;
-        const items8 = [closure_13(tmp25, obj18)];
-        if (isEligibleForQuests) {
-          const obj19 = { variant: "tertiary", shrink: true, grow: false, size: "sm", text: null, onPress: null };
-          const intl3 = tmp(1115).intl;
-          obj19.text = intl3.string(tmp(1115).t.ynollq);
-          obj19.onPress = function onPress() {
-            const obj = heroBlock(navigation[33]);
-            obj.openQuestHome({
-              mergeExistingRoutes: true,
-              fromContent: heroBlock(navigation[34]).QuestContent.ORBS_SHOP_HERO_CTA,
-            });
-          };
-          isEligibleForQuests = closure_11(tmp(5465).Button, obj19);
-        }
-        items8[1] = isEligibleForQuests;
-        obj14.children = items8;
-        let tmp24Result2 = closure_13(tmp25, obj14);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const items = [CollectiblesCategoryStore];
+        cResult[0] = items;
+        let first = items;
       } else {
-        const obj20 = {
-          accessibilityRole: "button",
-          accessibilityLabel: null,
-          accessibilityHint: null,
-          activeOpacity: 0.6,
-          androidRippleConfig: null,
-          hitSlop: 8,
-          onPress: null,
-          children: null,
-        };
-        const intl = tmp(1115).intl;
-        const obj22 = { category: stateFromStores.name };
-        obj20.accessibilityLabel = intl.formatToPlainString(tmp(1115).t.FNtLb3, obj22);
-        const intl2 = tmp(1115).intl;
-        obj20.accessibilityHint = intl2.string(tmp(1115).t.F8ma9x);
-        const obj23 = { radius: tmp6(576).radii.lg };
-        obj20.androidRippleConfig = obj23;
-        obj20.onPress = function onPress() {
-          let sessionId;
-          if (analyticsContext != null) {
-            sessionId = analyticsContext.sessionId;
-          }
-          const obj2 = {
-            collectibles_shop_session_id: sessionId,
-            sku_id: heroBlock.categoryStoreListingId,
-            page_type: "mobile_home",
-            page_section: null,
-            page_category: null,
-            tile_type: "HERO_BLOCK",
-            tile_position: null,
-            cta_name: null,
-          };
-          let pageSection;
-          if (analyticsContext != null) {
-            pageSection = analyticsContext.pageSection;
-          }
-          obj2.page_section = pageSection;
-          let pageCategory;
-          if (analyticsContext != null) {
-            pageCategory = analyticsContext.pageCategory;
-          }
-          obj2.page_category = pageCategory;
-          let tilePosition;
-          if (analyticsContext != null) {
-            tilePosition = analyticsContext.tilePosition;
-          }
-          obj2.tile_position = String(tilePosition);
-          AnalyticsUtilsDefault.track(constants2.COLLECTIBLES_SHOP_ELEMENT_CLICKED, obj2);
-          navigation.navigate(constants3.COLLECTIBLES_SHOP_VIEW_ALL_CATEGORY_ITEMS, {
-            category: stateFromStores,
-            analyticsContext,
-          });
-        };
-        const obj24 = { style: tmp8.innerContainer, children: null };
-        let tmp22Result8 = null != heroLogoUrl;
-        if (tmp22Result8) {
-          const obj25 = { style: tmp8.heroLogoContainer, children: null };
-          const obj26 = { style: tmp8.heroLogo, source: null };
-          const obj27 = { uri: heroLogoUrl };
-          obj26.source = obj27;
-          obj25.children = closure_11(stateFromStores, obj26);
-          tmp22Result8 = closure_11(tmp25, obj25);
-        }
-        const items9 = [tmp22Result8];
-        const obj28 = {
-          style: tmp8.heroViewAllIcon,
-          children: closure_11(tmp(6816).ChevronSmallRightIcon, { size: "sm", color: "white" }),
-        };
-        items9[1] = closure_11(tmp25, obj28);
-        obj24.children = items9;
-        obj20.children = closure_13(tmp25, obj24);
-        tmp24Result2 = closure_11(tmp(5621).PressableOpacity, obj20, stateFromStores.storeListingId);
+        first = cResult[0];
       }
-      obj13.children = tmp24Result2;
-      items6[1] = closure_11(closure_5, obj13);
-      const obj29 = { style: tmp8.productCardsContainer, children: null };
-      if (tmp4) {
-        const obj30 = {
-          products: filteredAndSortedProducts,
-          loadingCardsNum: null,
-          preferVCPrice: null,
-          accessibilityLabel: null,
+      if (cResult[1] !== heroBlock.categorySkuId) {
+        const fn = function h() {
+          return CollectiblesCategoryStore.getCategory(heroBlock.categorySkuId);
         };
-        let num = 4;
-        if (0 !== filteredAndSortedProducts.length) {
-          num = filteredAndSortedProducts.length;
-        }
-        obj30.loadingCardsNum = num;
-        obj30.preferVCPrice = preferVCPrice;
-        const intl5 = tmp(1115).intl;
-        const obj31 = { category: stateFromStores.name };
-        obj30.accessibilityLabel = intl5.formatToPlainString(tmp(1115).t.FNtLb3, obj31);
-        let tmp22Result9 = closure_11(tmp6(15666), obj30);
-        const tmp6Result3 = tmp6(15666);
+        cResult[1] = heroBlock.categorySkuId;
+        cResult[2] = fn;
+        let tmp8 = fn;
       } else {
-        if (0 === filteredAndSortedProducts.length) {
-          const obj32 = { accessibilityLabel: null };
-          const intl4 = tmp(1115).intl;
-          const obj33 = { category: stateFromStores.name };
-          obj32.accessibilityLabel = intl4.formatToPlainString(tmp(1115).t.FNtLb3, obj33);
-          let tmp22Result10 = closure_11(SkeletonLoading, obj32);
-        } else {
-          const obj34 = {
-            horizontal: true,
-            accessibilityLabel: null,
-            accessibilityRole: "list",
-            data: null,
-            onScroll: null,
-            renderItem: null,
-            decelerationRate: "fast",
-            snapToInterval: null,
-            showsHorizontalScrollIndicator: false,
-            ListHeaderComponent: null,
-            ListFooterComponent: null,
-            ItemSeparatorComponent: null,
-          };
-          const intl6 = tmp(1115).intl;
-          const obj35 = { category: stateFromStores.name };
-          obj34.accessibilityLabel = intl6.formatToPlainString(tmp(1115).t.FNtLb3, obj35);
-          obj34.data = filteredAndSortedProducts;
-          obj34.onScroll = obj.useCollectiblesCoachmarkScrollDismissContext().handleDismissCoachmarkOnScroll;
-          obj34.renderItem = tmp17;
-          obj34.snapToInterval = tmp(8414).COLLECTIBLES_SHOP_CARD_WIDTH + tmp6(576).space.PX_12;
-          obj34.ListHeaderComponent = function ListHeaderComponent() {
-            const obj = { style: { width: preferVCPrice(navigation[8]).space.PX_16 } };
-            return closure_1_11(closure_5, obj);
-          };
-          obj34.ListFooterComponent = function ListFooterComponent() {
-            const obj = { style: { width: preferVCPrice(navigation[8]).space.PX_16 } };
-            return closure_1_11(closure_5, obj);
-          };
-          obj34.ItemSeparatorComponent = function ItemSeparatorComponent() {
-            const obj = { style: { width: preferVCPrice(navigation[8]).space.PX_12 } };
-            return closure_1_11(closure_5, obj);
-          };
-          tmp22Result10 = closure_11(tmp(8367).FlashList, obj34);
-        }
-        const obj36 = { children: tmp22Result10 };
-        tmp22Result9 = closure_11(closure_12, obj36);
+        tmp8 = cResult[2];
       }
-      const obj37 = { children: tmp22Result9 };
-      obj29.children = closure_11(tmp(6763).LayerScope, obj37);
-      items6[2] = closure_11(closure_5, obj29);
-      obj6.children = items6;
-      obj5.children = closure_13(closure_5, obj6);
-      obj4.children = closure_11(tmp6(15665), obj5);
-      return closure_11(tmp(6769).AnalyticsLocationProvider, obj4);
-    } else {
-      if (tmpResult16.isThemeDark(tmp7)) {
-        let tmp6Result4 = tmp6(15663);
+      const obj4 = heroBlock(navigation[14]);
+      const stateFromStores = heroBlock(navigation[15]).useStateFromStores(first, tmp8);
+      if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+        const isEligibleForQuests = tmp(tmp2[16]).getIsEligibleForQuests();
+        cResult[3] = isEligibleForQuests;
+        const tmpResult9 = tmp(tmp2[16]);
+      }
+      preferVCPrice(navigation[17])();
+      let tmpResult = heroBlock(navigation[15]);
+      const handleCardVisibilityChange = heroBlock(navigation[18]).useTrackProductCardImpression(
+        heroBlock.categoryStoreListingId,
+        "mobile_home",
+        "hero_block",
+      ).handleCardVisibilityChange;
+      const tmp15 = closure_14();
+      const tmpResult10 = heroBlock(navigation[18]);
+      const token = heroBlock(navigation[19]).useToken(preferVCPrice(tmp2[8]).colors.BACKGROUND_BASE_LOW);
+      if (cResult[4] !== token) {
+        const tmpResult12 = tmp(tmp2[20]);
+        const hexToRgbaStringResult = tmpResult12.hexToRgbaString(tmp(tmp2[20]).hexWithOpacity(token, 0));
+        cResult[4] = token;
+        cResult[5] = hexToRgbaStringResult;
+        let tmp17 = hexToRgbaStringResult;
+        const tmpResult13 = tmp(tmp2[20]);
       } else {
-        tmp6Result4 = tmp6(15664);
+        tmp17 = cResult[5];
       }
-      tmpResult16 = tmp(4714);
+      const tmpResult11 = heroBlock(navigation[19]);
+      const token1 = heroBlock(navigation[19]).useToken(tmp13(tmp2[8]).colors.BACKGROUND_BASE_LOWEST);
+      const tmp20 = preferVCPrice(navigation[21])();
+      const rankedSkuIds = heroBlock.rankedSkuIds;
+      if (cResult[6] === tmp20) {
+        if (cResult[7] === rankedSkuIds) {
+          let tmp21 = cResult[8];
+        }
+        if (cResult[9] === tmp21) {
+          if (cResult[10] === tmp10) {
+            let tmp23 = cResult[11];
+          }
+          const filteredAndSortedProducts = tmp(tmp2[22]).useFilteredAndSortedProducts(tmp23);
+          closure_5 = tmp26;
+          const tmpResult15 = tmp(tmp2[22]);
+          const analyticsLocations = tmp13(tmp2[23])(tmp13(tmp2[24]).COLLECTIBLES_SHOP_HERO).analyticsLocations;
+          let unpublishedAt;
+          if (stateFromStores != null) {
+            unpublishedAt = stateFromStores.unpublishedAt;
+          }
+          if (cResult[12] === unpublishedAt) {
+            if (cResult[13] === tmp26) {
+              if (undefined === stateFromStores) {
+                return null;
+              } else {
+                if (cResult[16] === collectiblesAnalyticsContext) {
+                  if (cResult[17] === heroBlock.categoryStoreListingId) {
+                    class J {
+                      constructor(arg0) {
+                        obj = closure_1(closure_2[26]);
+                        tmp = closure_3;
+                        sessionId = undefined;
+                        if (closure_3 != null) {
+                          sessionId = tmp.sessionId;
+                        }
+                        obj1 = {
+                          collectibles_shop_session_id: sessionId,
+                          sku_id: heroBlock.categoryStoreListingId,
+                          page_type: "mobile_home",
+                          page_section: null,
+                          page_category: null,
+                          tile_type: "HERO_BLOCK",
+                          tile_position: null,
+                          cta_name: null,
+                        };
+                        pageSection = undefined;
+                        if (tmp != null) {
+                          pageSection = tmp.pageSection;
+                        }
+                        obj1.page_section = pageSection;
+                        pageCategory = undefined;
+                        if (tmp != null) {
+                          pageCategory = tmp.pageCategory;
+                        }
+                        obj1.page_category = pageCategory;
+                        tilePosition = undefined;
+                        if (tmp != null) {
+                          tilePosition = tmp.tilePosition;
+                        }
+                        obj1.tile_position = String(tilePosition);
+                        trackResult = obj.track(AnalyticEvents.COLLECTIBLES_SHOP_ELEMENT_CLICKED, obj1);
+                        obj4 = { category: heroBlock, analyticsContext: tmp };
+                        navigateResult = closure_2.navigate(
+                          UserSettingsSections.COLLECTIBLES_SHOP_VIEW_ALL_CATEGORY_ITEMS,
+                          obj4,
+                        );
+                        return;
+                      }
+                    }
+                    const _Symbol = Symbol;
+                    if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
+                      const fn2 = function $() {
+                        const obj = heroBlock(navigation[27]);
+                        obj.openQuestHome({
+                          mergeExistingRoutes: true,
+                          fromContent: heroBlock(navigation[28]).QuestContent.ORBS_SHOP_HERO_CTA,
+                        });
+                      };
+                      class J {
+                        constructor(arg0) {
+                          obj = closure_1(closure_2[26]);
+                          tmp = closure_3;
+                          sessionId = undefined;
+                          if (closure_3 != null) {
+                            sessionId = tmp.sessionId;
+                          }
+                          obj1 = {
+                            collectibles_shop_session_id: sessionId,
+                            sku_id: heroBlock.categoryStoreListingId,
+                            page_type: "mobile_home",
+                            page_section: null,
+                            page_category: null,
+                            tile_type: "HERO_BLOCK",
+                            tile_position: null,
+                            cta_name: null,
+                          };
+                          pageSection = undefined;
+                          if (tmp != null) {
+                            pageSection = tmp.pageSection;
+                          }
+                          obj1.page_section = pageSection;
+                          pageCategory = undefined;
+                          if (tmp != null) {
+                            pageCategory = tmp.pageCategory;
+                          }
+                          obj1.page_category = pageCategory;
+                          tilePosition = undefined;
+                          if (tmp != null) {
+                            tilePosition = tmp.tilePosition;
+                          }
+                          obj1.tile_position = String(tilePosition);
+                          trackResult = obj.track(AnalyticEvents.COLLECTIBLES_SHOP_ELEMENT_CLICKED, obj1);
+                          obj4 = { category: heroBlock, analyticsContext: tmp };
+                          navigateResult = closure_2.navigate(
+                            UserSettingsSections.COLLECTIBLES_SHOP_VIEW_ALL_CATEGORY_ITEMS,
+                            obj4,
+                          );
+                          return;
+                        }
+                      }
+                      cResult[20] = fn2;
+                    }
+                    if (!tmp10) {
+                      if (cResult[21] === token1) {
+                        if (cResult[22] === tmp17) {
+                          if (cResult[23] === heroBannerUrl) {
+                            if (cResult[24] === tmp10) {
+                              if (cResult[25] === tmp15.fadeOutGradient) {
+                                if (cResult[26] === tmp15.heroBannerImage) {
+                                  if (cResult[27] === tmp15.orbsBackgroundGradient) {
+                                    let tmp38 = cResult[28];
+                                  }
+                                  class J {
+                                    constructor(arg0) {
+                                      obj = closure_1(closure_2[26]);
+                                      tmp = closure_3;
+                                      sessionId = undefined;
+                                      if (closure_3 != null) {
+                                        sessionId = tmp.sessionId;
+                                      }
+                                      obj1 = {
+                                        collectibles_shop_session_id: sessionId,
+                                        sku_id: heroBlock.categoryStoreListingId,
+                                        page_type: "mobile_home",
+                                        page_section: null,
+                                        page_category: null,
+                                        tile_type: "HERO_BLOCK",
+                                        tile_position: null,
+                                        cta_name: null,
+                                      };
+                                      pageSection = undefined;
+                                      if (tmp != null) {
+                                        pageSection = tmp.pageSection;
+                                      }
+                                      obj1.page_section = pageSection;
+                                      pageCategory = undefined;
+                                      if (tmp != null) {
+                                        pageCategory = tmp.pageCategory;
+                                      }
+                                      obj1.page_category = pageCategory;
+                                      tilePosition = undefined;
+                                      if (tmp != null) {
+                                        tilePosition = tmp.tilePosition;
+                                      }
+                                      obj1.tile_position = String(tilePosition);
+                                      trackResult = obj.track(AnalyticEvents.COLLECTIBLES_SHOP_ELEMENT_CLICKED, obj1);
+                                      obj4 = { category: heroBlock, analyticsContext: tmp };
+                                      navigateResult = closure_2.navigate(
+                                        UserSettingsSections.COLLECTIBLES_SHOP_VIEW_ALL_CATEGORY_ITEMS,
+                                        obj4,
+                                      );
+                                      return;
+                                    }
+                                  }
+                                  const obj5 = { style: tmp15.heroBannerContainer, children: tmp38 };
+                                  cResult[29] = tmp15.heroBannerContainer;
+                                  cResult[30] = tmp38;
+                                  cResult[31] = closure_11(closure_5, obj5);
+                                  class Q {
+                                    constructor(arg0) {
+                                      index = heroBlock.index;
+                                      tmp = jsx;
+                                      tmp3 = closure_2;
+                                      tmp2 = closure_1;
+                                      obj = {
+                                        solidBackground: true,
+                                        product: heroBlock.item,
+                                        unpublishedAt: null,
+                                        preferVCPrice: null,
+                                      };
+                                      unpublishedAt = undefined;
+                                      tmp4 = closure_1(closure_2[6]);
+                                      if (closure_4 != null) {
+                                        unpublishedAt = closure_4.unpublishedAt;
+                                      }
+                                      obj.unpublishedAt = unpublishedAt;
+                                      obj.preferVCPrice = preferVCPrice;
+                                      tmpResult = tmp(tmp4, obj);
+                                      obj1 = { newValue: { tilePosition: index }, children: null };
+                                      tmpResult1 = tmpResult;
+                                      if (0 === index) {
+                                        tmp8 = closure_5;
+                                        tmpResult1 = tmpResult;
+                                        if (closure_5) {
+                                          obj4 = { children: null };
+                                          obj4.children = tmpResult;
+                                          tmpResult1 = tmp(tmp2(tmp3[25]), obj4);
+                                        }
+                                      }
+                                      obj1.children = tmpResult1;
+                                      return tmp(closure_0(tmp3[14]).CollectiblesAnalyticsProvider, obj1);
+                                    }
+                                  }
+                                  const tmp51 = closure_11(closure_5, obj5);
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                      class J {
+                        constructor(arg0) {
+                          obj = closure_1(closure_2[26]);
+                          tmp = closure_3;
+                          sessionId = undefined;
+                          if (closure_3 != null) {
+                            sessionId = tmp.sessionId;
+                          }
+                          obj1 = {
+                            collectibles_shop_session_id: sessionId,
+                            sku_id: heroBlock.categoryStoreListingId,
+                            page_type: "mobile_home",
+                            page_section: null,
+                            page_category: null,
+                            tile_type: "HERO_BLOCK",
+                            tile_position: null,
+                            cta_name: null,
+                          };
+                          pageSection = undefined;
+                          if (tmp != null) {
+                            pageSection = tmp.pageSection;
+                          }
+                          obj1.page_section = pageSection;
+                          pageCategory = undefined;
+                          if (tmp != null) {
+                            pageCategory = tmp.pageCategory;
+                          }
+                          obj1.page_category = pageCategory;
+                          tilePosition = undefined;
+                          if (tmp != null) {
+                            tilePosition = tmp.tilePosition;
+                          }
+                          obj1.tile_position = String(tilePosition);
+                          trackResult = obj.track(AnalyticEvents.COLLECTIBLES_SHOP_ELEMENT_CLICKED, obj1);
+                          obj4 = { category: heroBlock, analyticsContext: tmp };
+                          navigateResult = closure_2.navigate(
+                            UserSettingsSections.COLLECTIBLES_SHOP_VIEW_ALL_CATEGORY_ITEMS,
+                            obj4,
+                          );
+                          return;
+                        }
+                      }
+                      if (tmp40Result) {
+                        let tmp42 = tmp10;
+                        class J {
+                          constructor(arg0) {
+                            obj = closure_1(closure_2[26]);
+                            tmp = closure_3;
+                            sessionId = undefined;
+                            if (closure_3 != null) {
+                              sessionId = tmp.sessionId;
+                            }
+                            obj1 = {
+                              collectibles_shop_session_id: sessionId,
+                              sku_id: heroBlock.categoryStoreListingId,
+                              page_type: "mobile_home",
+                              page_section: null,
+                              page_category: null,
+                              tile_type: "HERO_BLOCK",
+                              tile_position: null,
+                              cta_name: null,
+                            };
+                            pageSection = undefined;
+                            if (tmp != null) {
+                              pageSection = tmp.pageSection;
+                            }
+                            obj1.page_section = pageSection;
+                            pageCategory = undefined;
+                            if (tmp != null) {
+                              pageCategory = tmp.pageCategory;
+                            }
+                            obj1.page_category = pageCategory;
+                            tilePosition = undefined;
+                            if (tmp != null) {
+                              tilePosition = tmp.tilePosition;
+                            }
+                            obj1.tile_position = String(tilePosition);
+                            trackResult = obj.track(AnalyticEvents.COLLECTIBLES_SHOP_ELEMENT_CLICKED, obj1);
+                            obj4 = { category: heroBlock, analyticsContext: tmp };
+                            navigateResult = closure_2.navigate(
+                              UserSettingsSections.COLLECTIBLES_SHOP_VIEW_ALL_CATEGORY_ITEMS,
+                              obj4,
+                            );
+                            return;
+                          }
+                        }
+                        if (tmp10) {
+                          class J {
+                            constructor(arg0) {
+                              obj = closure_1(closure_2[26]);
+                              tmp = closure_3;
+                              sessionId = undefined;
+                              if (closure_3 != null) {
+                                sessionId = tmp.sessionId;
+                              }
+                              obj1 = {
+                                collectibles_shop_session_id: sessionId,
+                                sku_id: heroBlock.categoryStoreListingId,
+                                page_type: "mobile_home",
+                                page_section: null,
+                                page_category: null,
+                                tile_type: "HERO_BLOCK",
+                                tile_position: null,
+                                cta_name: null,
+                              };
+                              pageSection = undefined;
+                              if (tmp != null) {
+                                pageSection = tmp.pageSection;
+                              }
+                              obj1.page_section = pageSection;
+                              pageCategory = undefined;
+                              if (tmp != null) {
+                                pageCategory = tmp.pageCategory;
+                              }
+                              obj1.page_category = pageCategory;
+                              tilePosition = undefined;
+                              if (tmp != null) {
+                                tilePosition = tmp.tilePosition;
+                              }
+                              obj1.tile_position = String(tilePosition);
+                              trackResult = obj.track(AnalyticEvents.COLLECTIBLES_SHOP_ELEMENT_CLICKED, obj1);
+                              obj4 = { category: heroBlock, analyticsContext: tmp };
+                              navigateResult = closure_2.navigate(
+                                UserSettingsSections.COLLECTIBLES_SHOP_VIEW_ALL_CATEGORY_ITEMS,
+                                obj4,
+                              );
+                              return;
+                            }
+                          }
+                          tmp44[0] = ["rgba(39, 30, 173, 0.3)", "transparent"];
+                          ({ START: tmp44[1], END: tmp44[2] } = closure_10);
+                          tmp44[3] = tmp15.orbsBackgroundGradient;
+                          tmp42 = closure_11(tmp13(tmp2[32]), tmp44);
+                        }
+                        const obj6 = { children: null };
+                        const items1 = [tmp42, ,];
+                        const obj7 = { style: null, source: null };
+                        const items2 = [tmp15.heroBannerImage];
+                        obj7.style = items2;
+                        class Q {
+                          constructor(arg0) {
+                            index = heroBlock.index;
+                            tmp = jsx;
+                            tmp3 = closure_2;
+                            tmp2 = closure_1;
+                            obj = {
+                              solidBackground: true,
+                              product: heroBlock.item,
+                              unpublishedAt: null,
+                              preferVCPrice: null,
+                            };
+                            unpublishedAt = undefined;
+                            tmp4 = closure_1(closure_2[6]);
+                            if (closure_4 != null) {
+                              unpublishedAt = closure_4.unpublishedAt;
+                            }
+                            obj.unpublishedAt = unpublishedAt;
+                            obj.preferVCPrice = preferVCPrice;
+                            tmpResult = tmp(tmp4, obj);
+                            obj1 = { newValue: { tilePosition: index }, children: null };
+                            tmpResult1 = tmpResult;
+                            if (0 === index) {
+                              tmp8 = closure_5;
+                              tmpResult1 = tmpResult;
+                              if (closure_5) {
+                                obj4 = { children: null };
+                                obj4.children = tmpResult;
+                                tmpResult1 = tmp(tmp2(tmp3[25]), obj4);
+                              }
+                            }
+                            obj1.children = tmpResult1;
+                            return tmp(closure_0(tmp3[14]).CollectiblesAnalyticsProvider, obj1);
+                          }
+                        }
+                        obj7.source = { uri: null };
+                        items1[1] = closure_11(stateFromStores, obj7);
+                        const obj9 = { colors: null, start: null, end: null, style: null };
+                        const items3 = [tmp17, token1];
+                        obj9.colors = items3;
+                        ({ START: obj17.start, END: obj17.end } = closure_10);
+                        obj9.style = tmp15.fadeOutGradient;
+                        items1[2] = closure_11(tmp13(tmp2[32]), obj9);
+                        obj6.children = items1;
+                        tmp40Result = tmp40(closure_12, obj6);
+                        const obj8 = { uri: null };
+                      }
+                      cResult[21] = token1;
+                      cResult[22] = tmp17;
+                      cResult[23] = heroBannerUrl;
+                      cResult[24] = tmp10;
+                      cResult[25] = tmp15.fadeOutGradient;
+                      class Q {
+                        constructor(arg0) {
+                          index = heroBlock.index;
+                          tmp = jsx;
+                          tmp3 = closure_2;
+                          tmp2 = closure_1;
+                          obj = {
+                            solidBackground: true,
+                            product: heroBlock.item,
+                            unpublishedAt: null,
+                            preferVCPrice: null,
+                          };
+                          unpublishedAt = undefined;
+                          tmp4 = closure_1(closure_2[6]);
+                          if (closure_4 != null) {
+                            unpublishedAt = closure_4.unpublishedAt;
+                          }
+                          obj.unpublishedAt = unpublishedAt;
+                          obj.preferVCPrice = preferVCPrice;
+                          tmpResult = tmp(tmp4, obj);
+                          obj1 = { newValue: { tilePosition: index }, children: null };
+                          tmpResult1 = tmpResult;
+                          if (0 === index) {
+                            tmp8 = closure_5;
+                            tmpResult1 = tmpResult;
+                            if (closure_5) {
+                              obj4 = { children: null };
+                              obj4.children = tmpResult;
+                              tmpResult1 = tmp(tmp2(tmp3[25]), obj4);
+                            }
+                          }
+                          obj1.children = tmpResult1;
+                          return tmp(closure_0(tmp3[14]).CollectiblesAnalyticsProvider, obj1);
+                        }
+                      }
+                      cResult[27] = tmp15.orbsBackgroundGradient;
+                      cResult[28] = tmp40Result;
+                      tmp38 = tmp40Result;
+                    } else {
+                      tmp(tmp2[29]);
+                      class J {
+                        constructor(arg0) {
+                          obj = closure_1(closure_2[26]);
+                          tmp = closure_3;
+                          sessionId = undefined;
+                          if (closure_3 != null) {
+                            sessionId = tmp.sessionId;
+                          }
+                          obj1 = {
+                            collectibles_shop_session_id: sessionId,
+                            sku_id: heroBlock.categoryStoreListingId,
+                            page_type: "mobile_home",
+                            page_section: null,
+                            page_category: null,
+                            tile_type: "HERO_BLOCK",
+                            tile_position: null,
+                            cta_name: null,
+                          };
+                          pageSection = undefined;
+                          if (tmp != null) {
+                            pageSection = tmp.pageSection;
+                          }
+                          obj1.page_section = pageSection;
+                          pageCategory = undefined;
+                          if (tmp != null) {
+                            pageCategory = tmp.pageCategory;
+                          }
+                          obj1.page_category = pageCategory;
+                          tilePosition = undefined;
+                          if (tmp != null) {
+                            tilePosition = tmp.tilePosition;
+                          }
+                          obj1.tile_position = String(tilePosition);
+                          trackResult = obj.track(AnalyticEvents.COLLECTIBLES_SHOP_ELEMENT_CLICKED, obj1);
+                          obj4 = { category: heroBlock, analyticsContext: tmp };
+                          navigateResult = closure_2.navigate(
+                            UserSettingsSections.COLLECTIBLES_SHOP_VIEW_ALL_CATEGORY_ITEMS,
+                            obj4,
+                          );
+                          return;
+                        }
+                      }
+                    }
+                  }
+                }
+                class J {
+                  constructor(arg0) {
+                    obj = closure_1(closure_2[26]);
+                    tmp = closure_3;
+                    sessionId = undefined;
+                    if (closure_3 != null) {
+                      sessionId = tmp.sessionId;
+                    }
+                    obj1 = {
+                      collectibles_shop_session_id: sessionId,
+                      sku_id: heroBlock.categoryStoreListingId,
+                      page_type: "mobile_home",
+                      page_section: null,
+                      page_category: null,
+                      tile_type: "HERO_BLOCK",
+                      tile_position: null,
+                      cta_name: null,
+                    };
+                    pageSection = undefined;
+                    if (tmp != null) {
+                      pageSection = tmp.pageSection;
+                    }
+                    obj1.page_section = pageSection;
+                    pageCategory = undefined;
+                    if (tmp != null) {
+                      pageCategory = tmp.pageCategory;
+                    }
+                    obj1.page_category = pageCategory;
+                    tilePosition = undefined;
+                    if (tmp != null) {
+                      tilePosition = tmp.tilePosition;
+                    }
+                    obj1.tile_position = String(tilePosition);
+                    trackResult = obj.track(AnalyticEvents.COLLECTIBLES_SHOP_ELEMENT_CLICKED, obj1);
+                    obj4 = { category: heroBlock, analyticsContext: tmp };
+                    navigateResult = closure_2.navigate(
+                      UserSettingsSections.COLLECTIBLES_SHOP_VIEW_ALL_CATEGORY_ITEMS,
+                      obj4,
+                    );
+                    return;
+                  }
+                }
+                cResult[16] = collectiblesAnalyticsContext;
+                cResult[17] = heroBlock.categoryStoreListingId;
+                cResult[18] = navigation;
+                cResult[19] = J;
+              }
+            }
+          }
+          let unpublishedAt1;
+          if (stateFromStores != null) {
+            unpublishedAt1 = stateFromStores.unpublishedAt;
+          }
+          class Q {
+            constructor(arg0) {
+              index = heroBlock.index;
+              tmp = jsx;
+              tmp3 = closure_2;
+              tmp2 = closure_1;
+              obj = { solidBackground: true, product: heroBlock.item, unpublishedAt: null, preferVCPrice: null };
+              unpublishedAt = undefined;
+              tmp4 = closure_1(closure_2[6]);
+              if (closure_4 != null) {
+                unpublishedAt = closure_4.unpublishedAt;
+              }
+              obj.unpublishedAt = unpublishedAt;
+              obj.preferVCPrice = preferVCPrice;
+              tmpResult = tmp(tmp4, obj);
+              obj1 = { newValue: { tilePosition: index }, children: null };
+              tmpResult1 = tmpResult;
+              if (0 === index) {
+                tmp8 = closure_5;
+                tmpResult1 = tmpResult;
+                if (closure_5) {
+                  obj4 = { children: null };
+                  obj4.children = tmpResult;
+                  tmpResult1 = tmp(tmp2(tmp3[25]), obj4);
+                }
+              }
+              obj1.children = tmpResult1;
+              return tmp(closure_0(tmp3[14]).CollectiblesAnalyticsProvider, obj1);
+            }
+          }
+          cResult[12] = unpublishedAt1;
+          cResult[13] = heroBlock.screen === constants.FEATURED_PAGE;
+          cResult[14] = preferVCPrice;
+          cResult[15] = Q;
+          const tmp13Result = tmp13(tmp2[23]);
+        }
+        const obj10 = { products: tmp21, bypassAndroidUnsyncedFilter: tmp10 };
+        cResult[9] = tmp21;
+        cResult[10] = tmp10;
+        cResult[11] = obj10;
+        tmp23 = obj10;
+      }
+      const tmp20Result = tmp20(rankedSkuIds);
+      cResult[6] = tmp20;
+      cResult[7] = rankedSkuIds;
+      cResult[8] = tmp20Result;
+      tmp21 = tmp20Result;
+      const tmpResult14 = heroBlock(navigation[19]);
     }
-  }
-  tmp15 = preferVCPrice(6769);
-}
+  : (heroBlock) => {
+      heroBlock = heroBlock.heroBlock;
+      const preferVCPrice = heroBlock.preferVCPrice;
+      let stateFromStores;
+      closure_5 = undefined;
+      closure_6 = undefined;
+      let obj = heroBlock(15712);
+      dependencyMap = heroBlock(1490).useNavigation();
+      let obj2 = heroBlock(1490);
+      noop = heroBlock(8421).useCollectiblesAnalyticsContext();
+      let heroBannerUrl = heroBlock.mobileHeroUrl;
+      if (heroBannerUrl == null) {
+        heroBannerUrl = heroBlock.heroBannerUrl;
+      }
+      const heroLogoUrl = heroBlock.heroLogoUrl;
+      let obj3 = heroBlock(8421);
+      const items = [closure_6];
+      stateFromStores = heroBlock(504).useStateFromStores(items, () =>
+        CollectiblesCategoryStore.getCategory(heroBlock.categorySkuId),
+      );
+      let tmpResult = heroBlock(504);
+      let isEligibleForQuests = heroBlock(10912).getIsEligibleForQuests();
+      const tmpResult9 = heroBlock(10912);
+      const tmp7 = preferVCPrice(4791)();
+      const tmp8 = closure_14();
+      const tmpResult10 = heroBlock(15713);
+      const token = heroBlock(4580).useToken(preferVCPrice(587).colors.BACKGROUND_BASE_LOW);
+      const tmpResult11 = heroBlock(4580);
+      const tmpResult12 = heroBlock(4727);
+      const tmpResult13 = heroBlock(4727);
+      const hexToRgbaStringResult = tmpResult12.hexToRgbaString(heroBlock(4727).hexWithOpacity(token, 0));
+      const token1 = heroBlock(4580).useToken(preferVCPrice(587).colors.BACKGROUND_BASE_LOWEST);
+      const tmp12 = preferVCPrice(15714)();
+      closure_5 = tmp12;
+      const items1 = [heroBlock.rankedSkuIds, tmp12];
+      const memo = noop.useMemo(() => closure_5(heroBlock.rankedSkuIds), items1);
+      const tmpResult14 = heroBlock(4580);
+      const filteredAndSortedProducts = heroBlock(14872).useFilteredAndSortedProducts({
+        products: memo,
+        bypassAndroidUnsyncedFilter: tmp4,
+      });
+      closure_6 = tmp14;
+      const tmpResult15 = heroBlock(14872);
+      let unpublishedAt;
+      if (stateFromStores != null) {
+        unpublishedAt = stateFromStores.unpublishedAt;
+      }
+      const items2 = [unpublishedAt, preferVCPrice, heroBlock.screen === constants.FEATURED_PAGE];
+      if (undefined === stateFromStores) {
+        return null;
+      } else {
+        const tmp18 = null != heroBlock.mobileTitle ? heroBlock.mobileTitle : heroBlock.title;
+        const tmp19 = null != heroBlock.mobileSummary ? heroBlock.mobileSummary : heroBlock.summary;
+        if (!tmp4) {
+          const obj4 = { value: tmp15(preferVCPrice(6681).COLLECTIBLES_SHOP_HERO).analyticsLocations, children: null };
+          const obj5 = {
+            onChange: tmpResult10.useTrackProductCardImpression(
+              heroBlock.categoryStoreListingId,
+              "mobile_home",
+              "hero_block",
+            ).handleCardVisibilityChange,
+            resetKey: heroBlock.categoryStoreListingId,
+            children: null,
+          };
+          const obj6 = { style: tmp8.heroContainer, children: null };
+          const obj7 = { style: tmp8.heroBannerContainer, children: null };
+          let tmp24Result = null != heroBannerUrl;
+          if (tmp24Result) {
+            let tmp22Result = tmp4;
+            if (tmp4) {
+              const obj8 = { colors: ["rgba(39, 30, 173, 0.3)", "transparent"], start: null, end: null, style: null };
+              ({ START: obj17.start, END: obj17.end } = closure_10);
+              obj8.style = tmp8.orbsBackgroundGradient;
+              tmp22Result = closure_11(tmp6(5605), obj8);
+            }
+            const obj9 = { children: null };
+            const items3 = [tmp22Result, ,];
+            const obj10 = { style: null, source: null };
+            const items4 = [tmp8.heroBannerImage];
+            obj10.style = items4;
+            const obj11 = { uri: heroBannerUrl };
+            obj10.source = obj11;
+            items3[1] = closure_11(stateFromStores, obj10);
+            const obj12 = { colors: null, start: null, end: null, style: null };
+            const items5 = [hexToRgbaStringResult, token1];
+            obj12.colors = items5;
+            ({ START: obj21.start, END: obj21.end } = closure_10);
+            obj12.style = tmp8.fadeOutGradient;
+            items3[2] = closure_11(tmp6(5605), obj12);
+            obj9.children = items3;
+            tmp24Result = closure_13(closure_12, obj9);
+          }
+          obj7.children = tmp24Result;
+          const items6 = [closure_11(closure_5, obj7), ,];
+          const obj13 = { style: tmp8.heroInfoContainer, children: null };
+          if (tmp4) {
+            const obj14 = { style: tmp8.orbsInnerContainer, children: null };
+            let tmp22Result6 = null != tmp18;
+            if (tmp22Result6) {
+              const obj15 = {
+                variant: "display-md",
+                color: "mobile-text-heading-primary",
+                style: tmp8.orbsTitle,
+                children: tmp18,
+              };
+              tmp22Result6 = closure_11(tmp(4886).Text, obj15);
+            }
+            const items7 = [tmp22Result6];
+            let tmp22Result7 = null != tmp19;
+            if (tmp22Result7) {
+              tmp22Result7 = "" !== tmp19;
+            }
+            if (tmp22Result7) {
+              const obj16 = { variant: "text-md/medium", children: tmp19 };
+              tmp22Result7 = closure_11(tmp(4886).Text, obj16);
+            }
+            const obj18 = { children: null };
+            items7[1] = tmp22Result7;
+            obj18.children = items7;
+            const items8 = [closure_13(tmp25, obj18)];
+            if (isEligibleForQuests) {
+              const obj19 = { variant: "tertiary", shrink: true, grow: false, size: "sm", text: null, onPress: null };
+              const intl3 = tmp(1126).intl;
+              obj19.text = intl3.string(tmp(1126).t.ynollq);
+              obj19.onPress = function onPress() {
+                const obj = heroBlock(navigation[27]);
+                obj.openQuestHome({
+                  mergeExistingRoutes: true,
+                  fromContent: heroBlock(navigation[28]).QuestContent.ORBS_SHOP_HERO_CTA,
+                });
+              };
+              isEligibleForQuests = closure_11(tmp(5594).Button, obj19);
+            }
+            items8[1] = isEligibleForQuests;
+            obj14.children = items8;
+            let tmp24Result2 = closure_13(tmp25, obj14);
+          } else {
+            const obj20 = {
+              accessibilityRole: "button",
+              accessibilityLabel: null,
+              accessibilityHint: null,
+              activeOpacity: 0.6,
+              androidRippleConfig: null,
+              hitSlop: 8,
+              onPress: null,
+              children: null,
+            };
+            const intl = tmp(1126).intl;
+            const obj22 = { category: stateFromStores.name };
+            obj20.accessibilityLabel = intl.formatToPlainString(tmp(1126).t.FNtLb3, obj22);
+            const intl2 = tmp(1126).intl;
+            obj20.accessibilityHint = intl2.string(tmp(1126).t.F8ma9x);
+            const obj23 = { radius: tmp6(587).radii.lg };
+            obj20.androidRippleConfig = obj23;
+            obj20.onPress = function onPress() {
+              let sessionId;
+              if (analyticsContext != null) {
+                sessionId = analyticsContext.sessionId;
+              }
+              const obj2 = {
+                collectibles_shop_session_id: sessionId,
+                sku_id: heroBlock.categoryStoreListingId,
+                page_type: "mobile_home",
+                page_section: null,
+                page_category: null,
+                tile_type: "HERO_BLOCK",
+                tile_position: null,
+                cta_name: null,
+              };
+              let pageSection;
+              if (analyticsContext != null) {
+                pageSection = analyticsContext.pageSection;
+              }
+              obj2.page_section = pageSection;
+              let pageCategory;
+              if (analyticsContext != null) {
+                pageCategory = analyticsContext.pageCategory;
+              }
+              obj2.page_category = pageCategory;
+              let tilePosition;
+              if (analyticsContext != null) {
+                tilePosition = analyticsContext.tilePosition;
+              }
+              obj2.tile_position = String(tilePosition);
+              AnalyticsUtilsDefault.track(constants2.COLLECTIBLES_SHOP_ELEMENT_CLICKED, obj2);
+              navigation.navigate(constants3.COLLECTIBLES_SHOP_VIEW_ALL_CATEGORY_ITEMS, {
+                category: stateFromStores,
+                analyticsContext,
+              });
+            };
+            const obj24 = { style: tmp8.innerContainer, children: null };
+            let tmp22Result8 = null != heroLogoUrl;
+            if (tmp22Result8) {
+              const obj25 = { style: tmp8.heroLogoContainer, children: null };
+              const obj26 = { style: tmp8.heroLogo, source: null };
+              const obj27 = { uri: heroLogoUrl };
+              obj26.source = obj27;
+              obj25.children = closure_11(stateFromStores, obj26);
+              tmp22Result8 = closure_11(tmp25, obj25);
+            }
+            const items9 = [tmp22Result8];
+            const obj28 = {
+              style: tmp8.heroViewAllIcon,
+              children: closure_11(tmp(6708).ChevronSmallRightIcon, { size: "sm", color: "white" }),
+            };
+            items9[1] = closure_11(tmp25, obj28);
+            obj24.children = items9;
+            obj20.children = closure_13(tmp25, obj24);
+            tmp24Result2 = closure_11(tmp(5909).PressableOpacity, obj20, stateFromStores.storeListingId);
+          }
+          obj13.children = tmp24Result2;
+          items6[1] = closure_11(closure_5, obj13);
+          const obj29 = { style: tmp8.productCardsContainer, children: null };
+          if (tmp4) {
+            const obj30 = {
+              products: filteredAndSortedProducts,
+              loadingCardsNum: null,
+              preferVCPrice: null,
+              accessibilityLabel: null,
+            };
+            let num = 4;
+            if (0 !== filteredAndSortedProducts.length) {
+              num = filteredAndSortedProducts.length;
+            }
+            obj30.loadingCardsNum = num;
+            obj30.preferVCPrice = preferVCPrice;
+            const intl5 = tmp(1126).intl;
+            const obj31 = { category: stateFromStores.name };
+            obj30.accessibilityLabel = intl5.formatToPlainString(tmp(1126).t.FNtLb3, obj31);
+            let tmp22Result9 = closure_11(tmp6(15728), obj30);
+            const tmp6Result3 = tmp6(15728);
+          } else {
+            if (0 === filteredAndSortedProducts.length) {
+              const obj32 = { accessibilityLabel: null };
+              const intl4 = tmp(1126).intl;
+              const obj33 = { category: stateFromStores.name };
+              obj32.accessibilityLabel = intl4.formatToPlainString(tmp(1126).t.FNtLb3, obj33);
+              let tmp22Result10 = closure_11(closure_15, obj32);
+            } else {
+              const obj34 = {
+                horizontal: true,
+                accessibilityLabel: null,
+                accessibilityRole: "list",
+                data: null,
+                onScroll: null,
+                renderItem: null,
+                decelerationRate: "fast",
+                snapToInterval: null,
+                showsHorizontalScrollIndicator: false,
+                ListHeaderComponent: null,
+                ListFooterComponent: null,
+                ItemSeparatorComponent: null,
+              };
+              const intl6 = tmp(1126).intl;
+              const obj35 = { category: stateFromStores.name };
+              obj34.accessibilityLabel = intl6.formatToPlainString(tmp(1126).t.FNtLb3, obj35);
+              obj34.data = filteredAndSortedProducts;
+              obj34.onScroll = obj.useCollectiblesCoachmarkScrollDismissContext().handleDismissCoachmarkOnScroll;
+              obj34.renderItem = tmp17;
+              obj34.snapToInterval = tmp(8418).COLLECTIBLES_SHOP_CARD_WIDTH + tmp6(587).space.PX_12;
+              obj34.ListHeaderComponent = function ListHeaderComponent() {
+                const obj = { style: { width: preferVCPrice(navigation[8]).space.PX_16 } };
+                return closure_1_11(closure_5, obj);
+              };
+              obj34.ListFooterComponent = function ListFooterComponent() {
+                const obj = { style: { width: preferVCPrice(navigation[8]).space.PX_16 } };
+                return closure_1_11(closure_5, obj);
+              };
+              obj34.ItemSeparatorComponent = function ItemSeparatorComponent() {
+                const obj = { style: { width: preferVCPrice(navigation[8]).space.PX_12 } };
+                return closure_1_11(closure_5, obj);
+              };
+              tmp22Result10 = closure_11(tmp(8371).FlashList, obj34);
+            }
+            const obj36 = { children: tmp22Result10 };
+            tmp22Result9 = closure_11(closure_12, obj36);
+          }
+          const obj37 = { children: tmp22Result9 };
+          obj29.children = closure_11(tmp(6651).LayerScope, obj37);
+          items6[2] = closure_11(closure_5, obj29);
+          obj6.children = items6;
+          obj5.children = closure_13(closure_5, obj6);
+          obj4.children = closure_11(tmp6(15731), obj5);
+          return closure_11(tmp(6657).AnalyticsLocationProvider, obj4);
+        } else {
+          if (tmpResult16.isThemeDark(tmp7)) {
+            let tmp6Result4 = tmp6(15726);
+          } else {
+            tmp6Result4 = tmp6(15727);
+          }
+          tmpResult16 = tmp(4729);
+        }
+      }
+      tmp15 = preferVCPrice(6657);
+    };

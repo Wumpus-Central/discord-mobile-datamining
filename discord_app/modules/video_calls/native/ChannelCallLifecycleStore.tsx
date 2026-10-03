@@ -1,10 +1,10 @@
 // discord_app/modules/video_calls/native/ChannelCallLifecycleStore.tsx
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
-import _modDef1331 from "../../../../_runtime/metro/01331__.js";
+import _modDef1342 from "../../../../_runtime/metro/01342__.js";
 import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
 
-const VoiceCallOverlayType = fn(9023).VoiceCallOverlayType;
+const VoiceCallOverlayType = fn(9051).VoiceCallOverlayType;
 let c4 = false;
 let c5 = false;
 let c6 = false;
@@ -12,23 +12,23 @@ let visible = false;
 let obj = {};
 let size = {
   x: "Array",
-  y: "PX_8",
+  y: "Symbol",
   width: "y",
-  height: "HermesInternal",
-  screenOrientation: fn(7962).OrientationType.PORTRAIT,
-  hasUserInteractedSinceOrientationChange: true,
-  isInitialized: true,
+  height: "IconComponent",
+  screenOrientation: fn(8008).OrientationType.PORTRAIT,
+  hasUserInteractedSinceOrientationChange: false,
+  isInitialized: null,
   isVisible: null,
 };
 obj[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON] = size;
 const size1 = {
   x: "Array",
-  y: "PX_8",
+  y: "Symbol",
   width: "y",
-  height: "HermesInternal",
-  screenOrientation: fn(7962).OrientationType.PORTRAIT,
-  hasUserInteractedSinceOrientationChange: true,
-  isInitialized: true,
+  height: "IconComponent",
+  screenOrientation: fn(8008).OrientationType.PORTRAIT,
+  hasUserInteractedSinceOrientationChange: false,
+  isInitialized: null,
   isVisible: null,
 };
 obj[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE] = size1;

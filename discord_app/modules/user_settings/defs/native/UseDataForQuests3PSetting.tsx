@@ -5,31 +5,49 @@ import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import useParentalControlSettings from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
 import useAdPersonalizationTogglesDisabled from "../../../ads/hooks/useAdPersonalizationTogglesDisabled.tsx";
 import AdTopicOptOutClientExperiment from "../../../ads/AdTopicOptOutClientExperiment.tsx";
+import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
 import SettingBuilders_mod from "../../../settings/native/renderer/SettingBuilders.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-function useDataToSupportQuests3PSettingValue() {
-  const Quests3PDataOptedOut = UserSettings.Quests3PDataOptedOut;
-  return !Quests3PDataOptedOut.useSetting();
-}
-function useDataToSupportQuests3PSettingIsDisabled() {
-  let adPersonalizationTogglesDisabled = useAdPersonalizationTogglesDisabled.useAdPersonalizationTogglesDisabled();
-  const DropsOptedOut = UserSettings.DropsOptedOut;
-  const setting = DropsOptedOut.useSetting();
-  const isParentallyControlled = useParentalControlSettings.useIsParentallyControlled();
-  if (!adPersonalizationTogglesDisabled) {
-    adPersonalizationTogglesDisabled = setting;
-  }
-  if (!adPersonalizationTogglesDisabled) {
-    adPersonalizationTogglesDisabled = isParentallyControlled;
-  }
-  return adPersonalizationTogglesDisabled;
-}
+const MobileUserSettings = SettingsConstants.MobileUserSettings;
+let ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating.isReactCompilerEnabled();
+let ReactCompilerGating = ReactCompilerGating_mod;
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      let adPersonalizationTogglesDisabled = useAdPersonalizationTogglesDisabled.useAdPersonalizationTogglesDisabled();
+      const DropsOptedOut = UserSettings.DropsOptedOut;
+      const setting = DropsOptedOut.useSetting();
+      const isParentallyControlled = useParentalControlSettings.useIsParentallyControlled();
+      if (!adPersonalizationTogglesDisabled) {
+        adPersonalizationTogglesDisabled = setting;
+      }
+      if (!adPersonalizationTogglesDisabled) {
+        adPersonalizationTogglesDisabled = isParentallyControlled;
+      }
+      return adPersonalizationTogglesDisabled;
+    }
+  : () => {
+      let adPersonalizationTogglesDisabled = useAdPersonalizationTogglesDisabled.useAdPersonalizationTogglesDisabled();
+      const DropsOptedOut = UserSettings.DropsOptedOut;
+      const setting = DropsOptedOut.useSetting();
+      const isParentallyControlled = useParentalControlSettings.useIsParentallyControlled();
+      if (!adPersonalizationTogglesDisabled) {
+        adPersonalizationTogglesDisabled = setting;
+      }
+      if (!adPersonalizationTogglesDisabled) {
+        adPersonalizationTogglesDisabled = isParentallyControlled;
+      }
+      return adPersonalizationTogglesDisabled;
+    };
 function onDataToSupportQuests3PSettingValueChange(arg0) {
   const Quests3PDataOptedOut = UserSettings.Quests3PDataOptedOut;
   Quests3PDataOptedOut.updateSetting(!arg0);
 }
-const MobileUserSettings = SettingsConstants.MobileUserSettings;
+const fn = () => {
+  const Quests3PDataOptedOut = UserSettings.Quests3PDataOptedOut;
+  return !Quests3PDataOptedOut.useSetting();
+};
 let SettingBuilders = SettingBuilders_mod;
 const toggle = SettingBuilders.createToggle({
   useTitle() {
@@ -40,9 +58,9 @@ const toggle = SettingBuilders.createToggle({
   usePredicate() {
     return !AdTopicOptOutClientExperiment.useIsAdTopicOptOutClientEnabled();
   },
-  useValue: useDataToSupportQuests3PSettingValue,
+  useValue: fn,
   onValueChange: onDataToSupportQuests3PSettingValueChange,
-  useIsDisabled: useDataToSupportQuests3PSettingIsDisabled,
+  useIsDisabled: tmp3,
 });
 let SettingBuilders = SettingBuilders_mod;
 const toggle1 = SettingBuilders.createToggle({
@@ -52,11 +70,11 @@ const toggle1 = SettingBuilders.createToggle({
   },
   parent: MobileUserSettings.SPONSORED_CONTENT_PREFERENCES,
   usePredicate: AdTopicOptOutClientExperiment.useIsAdTopicOptOutClientEnabled,
-  useValue: useDataToSupportQuests3PSettingValue,
+  useValue: fn,
   onValueChange: onDataToSupportQuests3PSettingValueChange,
-  useIsDisabled: useDataToSupportQuests3PSettingIsDisabled,
+  useIsDisabled: tmp3,
 });
-const result = size.fileFinishedImporting("modules/user_settings/defs/native/UseDataForQuests3PSetting.tsx");
+const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/UseDataForQuests3PSetting.tsx");
 
 export default toggle;
 export const UseDataForQuests3PSponsoredContentSetting = toggle1;

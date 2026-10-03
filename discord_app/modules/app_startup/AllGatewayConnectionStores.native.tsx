@@ -132,6 +132,7 @@ import LocaleStore from "../user_settings/LocaleStore.tsx";
 import ThemeStore from "../user_settings/ThemeStore.tsx";
 import UserSettingsProtoStore from "../user_settings/UserSettingsProtoStore.tsx";
 import EmailSettingsStore from "../user_settings/notifications/EmailSettingsStore.tsx";
+import VibegrationsRichPresenceStore from "../vibegrations/stores/VibegrationsRichPresenceStore.tsx";
 import ActivityTrackingStore from "../../stores/ActivityTrackingStore.tsx";
 import AnalyticsTrackingStore from "../../stores/AnalyticsTrackingStore.tsx";
 import ApplicationStreamPreviewStore from "../../stores/ApplicationStreamPreviewStore.tsx";

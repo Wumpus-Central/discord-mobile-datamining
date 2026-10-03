@@ -14,7 +14,7 @@ let closure_5 = async function _showReportModal(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -42,7 +42,7 @@ let closure_5 = async function _showReportModal(arg0) {
           closure_131_4 = undefined;
           c6 = 1;
           c7 = 1;
-          return { value: "flex", done: null };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

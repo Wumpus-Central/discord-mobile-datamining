@@ -1,7 +1,7 @@
 // discord_app/modules/vibegrations/native/useVibegrationsAppSettingsForm.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3714 from "../intl/VibegrationsUntranslated.messages.js";
+import _modDef3723 from "../intl/VibegrationsUntranslated.messages.js";
 import ActionSheetActionCreators from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import VibegrationsUtils from "../lib/VibegrationsUtils.tsx";
 import ChannelPickerActionSheetDefault from "../../channel/native/ChannelPickerActionSheet.tsx";
@@ -17,92 +17,8 @@ import VibegrationsConnectionStore_mod from "../stores/VibegrationsConnectionSto
 import VibegrationsProjectStore from "../stores/VibegrationsProjectStore.tsx";
 
 require = fn;
-function VibegrationsChannelSettingRow(projectId) {
-  projectId = projectId.projectId;
-  const isPreview = projectId.isPreview;
-  const def = projectId.def;
-  ({ value: asyncGeneratorStep, onChange: _slicedToArray } = projectId);
-  c6 = undefined;
-  let found;
-  ({ hint, disabled, fallback } = projectId);
-  const items = [VibegrationsProjectStore];
-  const items1 = [isPreview, projectId];
-  const stateFromStores = projectId(def[14]).useStateFromStores(
-    items,
-    () => VibegrationsUtils.vibegrationsSettingsGuildId(VibegrationsProjectStore.getProject(projectId), isPreview),
-    items1,
-  );
-  let obj = projectId(def[14]);
-  const items2 = [found];
-  const items3 = [stateFromStores];
-  const stateFromStores1 = projectId(def[14]).useStateFromStores(
-    items2,
-    () => {
-      channels = null;
-      if (null != stateFromStores) {
-        channels = GuildChannelStore.getChannels(tmp);
-      }
-      return channels;
-    },
-    items3,
-  );
-  if (null != stateFromStores) {
-    if (null != stateFromStores1) {
-      const result = tmp(tmp2[25]).vibegrationsSettingChannels(stateFromStores1, def.channel_filter);
-      c6 = result;
-      found = result.find((id) => id.id === asyncGeneratorStep);
-      if (found == null) {
-        found = null;
-      }
-      let obj3 = { label: def.label, subLabel: hint, arrow: true, disabled, trailing: null, onPress: null };
-      if (null != found) {
-        const tmpResult2 = tmp(tmp2[28]);
-        let channelName = tmpResult2.computeChannelName(found, UserStore, RelationshipStore, true);
-      } else {
-        let intl = tmp(tmp2[15]).intl;
-        channelName = intl.string(isPreview(tmp2[16]).grukkJ);
-      }
-      let obj4 = { hasIcons: false, children: null };
-      const obj5 = { text: channelName };
-      obj3.trailing = closure_17(tmp(tmp2[27]).TableRowTrailingText, obj5);
-      obj3.onPress = function onPress() {
-        const obj2 = { content: null, key: "VibegrationsSettingsChannelSheet", stackingBehavior: "stack" };
-        const obj3 = {
-          header: { title: def.label },
-          guild: null,
-          channels: null,
-          selectedChannel: null,
-          noChannelOptionLabel: null,
-          onSelect: null,
-        };
-        const obj = ActionSheetActionCreators;
-        const obj4 = { title: def.label };
-        obj3.guild = GuildStore.getGuild(stateFromStores);
-        obj3.channels = channels;
-        obj3.selectedChannel = found;
-        const intl = util.intl;
-        obj3.noChannelOptionLabel = intl.string(_modDef3714.aO4AM6);
-        obj3.onSelect = function onSelect(id) {
-          let str;
-          if (id != null) {
-            str = id.id;
-          }
-          if (str == null) {
-            str = "";
-          }
-          return closure_1_4(str);
-        };
-        obj2.content = closure_2_17(ChannelPickerActionSheetDefault, obj3);
-        obj.showActionSheet(obj2);
-      };
-      obj4.children = closure_17(tmp(tmp2[26]).TableRow, obj3);
-      return closure_17(tmp(tmp2[20]).TableRowGroup, obj4);
-    }
-  }
-  return fallback;
-}
 const View = fn(17).View;
-let VibegrationsConnectionStore = fn(12851);
+let VibegrationsConnectionStore = fn(12904);
 ({
   requestProjectRebuild: closure_12,
   sendUserMessage: map1,
@@ -111,7 +27,8 @@ let VibegrationsConnectionStore = fn(12851);
 let VibegrationsConnectionStore = VibegrationsConnectionStore_mod;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
-const createStyles = fn(4845);
+const VibegrationsSettingsChannelSheet = "VibegrationsSettingsChannelSheet";
+const createStyles = fn(4890);
 let obj2 = { section: { gap: nativeDefault.space.PX_16 }, secretRow: null, secretRowInfo: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.secretRow = {
@@ -127,7 +44,465 @@ let obj4 = {
   gap: nativeDefault.space.PX_8,
 };
 obj2.secretRowInfo = { flex: 1, gap: nativeDefault.space.PX_4 };
-let closure_20 = createStyles.createStyles(obj2);
+let closure_21 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
+  ? function VibegrationsChannelSettingRow(projectId) {
+      let tmp2 = def;
+      const cResult = projectId(def[26]).c(47);
+      projectId = projectId.projectId;
+      const isPreview = projectId.isPreview;
+      def = projectId.def;
+      ({ hint, value } = projectId);
+      asyncGeneratorStep = value;
+      ({ disabled, onChange } = projectId);
+      const fallback = projectId.fallback;
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const items = [VibegrationsProjectStore];
+        cResult[0] = items;
+        let first = items;
+      } else {
+        first = cResult[0];
+      }
+      if (cResult[1] === isPreview) {
+        if (cResult[2] === projectId) {
+          let tmp6 = cResult[3];
+          let tmp7 = cResult[4];
+        }
+        const stateFromStores = tmp(tmp2[14]).useStateFromStores(first, tmp6, tmp7);
+        const _Symbol = Symbol;
+        if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
+          const items1 = [found];
+          cResult[5] = items1;
+          let tmp9 = items1;
+        } else {
+          tmp9 = cResult[5];
+        }
+        if (cResult[6] !== stateFromStores) {
+          const fn2 = function j() {
+            channels = null;
+            if (null != stateFromStores) {
+              channels = GuildChannelStore.getChannels(tmp);
+            }
+            return channels;
+          };
+          const items2 = [stateFromStores];
+          cResult[6] = stateFromStores;
+          cResult[7] = fn2;
+          cResult[8] = items2;
+          let tmp12 = items2;
+          let tmp11 = fn2;
+        } else {
+          tmp11 = cResult[7];
+          tmp12 = cResult[8];
+        }
+        const tmpResult = tmp(tmp2[14]);
+        label = tmp(tmp2[14]).useStateFromStores(tmp9, tmp11, tmp12);
+        let tmp14 = fallback;
+        if (null != stateFromStores) {
+          tmp14 = fallback;
+          if (null != label) {
+            if (cResult[9] === label) {
+              if (cResult[10] === def.channel_filter) {
+                if (cResult[11] === def.label) {
+                  if (cResult[12] === disabled) {
+                    if (cResult[13] === hint) {
+                      if (cResult[14] === value) {
+                        found = tmp19;
+                        if (cResult[26] === cResult[15]) {
+                          if (cResult[27] === tmp23) {
+                            let tmp43 = cResult[28];
+                          }
+                          if (cResult[29] === tmp18) {
+                            if (cResult[30] === def.label) {
+                              if (cResult[31] === stateFromStores) {
+                                if (cResult[32] === onChange) {
+                                  if (cResult[33] === tmp19) {
+                                    let tmp46 = cResult[34];
+                                  }
+                                  if (cResult[35] === tmp16) {
+                                    if (cResult[36] === tmp20) {
+                                      if (cResult[37] === tmp21) {
+                                        if (cResult[38] === tmp43) {
+                                          if (cResult[39] === tmp46) {
+                                            if (cResult[40] === tmp24) {
+                                              if (cResult[41] === tmp25) {
+                                                let tmp47 = cResult[42];
+                                              }
+                                              if (cResult[43] === tmp17) {
+                                                if (cResult[44] === tmp22) {
+                                                }
+                                              }
+                                              class N {
+                                                constructor() {
+                                                  obj = closure_0(closure_2[31]);
+                                                  obj1 = { content: null, key: null, stackingBehavior: "stack" };
+                                                  obj5 = {
+                                                    header: null,
+                                                    guild: null,
+                                                    channels: null,
+                                                    selectedChannel: null,
+                                                    noChannelOptionLabel: null,
+                                                    onSelect: null,
+                                                  };
+                                                  obj6 = { title: def.label };
+                                                  obj5.header = obj6;
+                                                  tmp = closure_1(closure_2[32]);
+                                                  obj5.guild = closure_8.getGuild(closure_5);
+                                                  obj5.channels = closure_6;
+                                                  obj5.selectedChannel = c7;
+                                                  intl = closure_0(closure_2[15]).intl;
+                                                  obj5.noChannelOptionLabel = intl.string(
+                                                    closure_1(closure_2[16]).aO4AM6,
+                                                  );
+                                                  obj5.onSelect = function onSelect(id) {
+                                                    let str;
+                                                    if (id != null) {
+                                                      str = id.id;
+                                                    }
+                                                    if (str == null) {
+                                                      str = "";
+                                                    }
+                                                    return onChange(str);
+                                                  };
+                                                  obj1.content = jsx(tmp, obj5);
+                                                  obj1.key = VibegrationsSettingsChannelSheet;
+                                                  showActionSheetResult = obj.showActionSheet(obj1);
+                                                  return;
+                                                }
+                                              }
+                                              let obj2 = { hasIcons: tmp22, children: tmp47 };
+                                              const tmp50 = closure_17(tmp17, obj2);
+                                              cResult[43] = tmp17;
+                                              cResult[44] = tmp22;
+                                              cResult[45] = tmp47;
+                                              cResult[46] = tmp50;
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                  class N {
+                                    constructor() {
+                                      obj = closure_0(closure_2[31]);
+                                      obj1 = { content: null, key: null, stackingBehavior: "stack" };
+                                      obj5 = {
+                                        header: null,
+                                        guild: null,
+                                        channels: null,
+                                        selectedChannel: null,
+                                        noChannelOptionLabel: null,
+                                        onSelect: null,
+                                      };
+                                      obj6 = { title: def.label };
+                                      obj5.header = obj6;
+                                      tmp = closure_1(closure_2[32]);
+                                      obj5.guild = closure_8.getGuild(closure_5);
+                                      obj5.channels = closure_6;
+                                      obj5.selectedChannel = c7;
+                                      intl = closure_0(closure_2[15]).intl;
+                                      obj5.noChannelOptionLabel = intl.string(closure_1(closure_2[16]).aO4AM6);
+                                      obj5.onSelect = function onSelect(id) {
+                                        let str;
+                                        if (id != null) {
+                                          str = id.id;
+                                        }
+                                        if (str == null) {
+                                          str = "";
+                                        }
+                                        return onChange(str);
+                                      };
+                                      obj1.content = jsx(tmp, obj5);
+                                      obj1.key = VibegrationsSettingsChannelSheet;
+                                      showActionSheetResult = obj.showActionSheet(obj1);
+                                      return;
+                                    }
+                                  }
+                                  let obj3 = {
+                                    label: tmp24,
+                                    subLabel: tmp25,
+                                    arrow: tmp20,
+                                    disabled: tmp21,
+                                    trailing: tmp43,
+                                    onPress: tmp46,
+                                  };
+                                  const tmp48 = closure_17(tmp16, obj3);
+                                  cResult[35] = tmp16;
+                                  cResult[36] = tmp20;
+                                  cResult[37] = tmp21;
+                                  cResult[38] = tmp43;
+                                  cResult[39] = tmp46;
+                                  cResult[40] = tmp24;
+                                  cResult[41] = tmp25;
+                                  cResult[42] = tmp48;
+                                  tmp47 = tmp48;
+                                }
+                              }
+                            }
+                          }
+                          class N {
+                            constructor() {
+                              obj = closure_0(closure_2[31]);
+                              obj1 = { content: null, key: null, stackingBehavior: "stack" };
+                              obj5 = {
+                                header: null,
+                                guild: null,
+                                channels: null,
+                                selectedChannel: null,
+                                noChannelOptionLabel: null,
+                                onSelect: null,
+                              };
+                              obj6 = { title: def.label };
+                              obj5.header = obj6;
+                              tmp = closure_1(closure_2[32]);
+                              obj5.guild = closure_8.getGuild(closure_5);
+                              obj5.channels = closure_6;
+                              obj5.selectedChannel = c7;
+                              intl = closure_0(closure_2[15]).intl;
+                              obj5.noChannelOptionLabel = intl.string(closure_1(closure_2[16]).aO4AM6);
+                              obj5.onSelect = function onSelect(id) {
+                                let str;
+                                if (id != null) {
+                                  str = id.id;
+                                }
+                                if (str == null) {
+                                  str = "";
+                                }
+                                return onChange(str);
+                              };
+                              obj1.content = jsx(tmp, obj5);
+                              obj1.key = VibegrationsSettingsChannelSheet;
+                              showActionSheetResult = obj.showActionSheet(obj1);
+                              return;
+                            }
+                          }
+                          cResult[29] = tmp18;
+                          cResult[30] = def.label;
+                          cResult[31] = stateFromStores;
+                          cResult[32] = onChange;
+                          cResult[33] = tmp19;
+                          cResult[34] = N;
+                          tmp46 = N;
+                        }
+                        let obj4 = { text: cResult[23] };
+                        const tmp45 = closure_17(cResult[15], obj4);
+                        cResult[26] = cResult[15];
+                        cResult[27] = cResult[23];
+                        cResult[28] = tmp45;
+                        tmp43 = tmp45;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            tmp(tmp2[27]);
+            found = arr5.find((id) => id.id === value);
+            if (found == null) {
+              found = null;
+            }
+            const TableRowGroup = tmp(tmp2[20]).TableRowGroup;
+            const TableRow = tmp(tmp2[28]).TableRow;
+            const label2 = def.label;
+            const TableRowTrailingText = tmp(tmp2[29]).TableRowTrailingText;
+            if (null != found) {
+              tmp2 = tmp2[30];
+              const tmpResult6 = tmp(tmp2);
+              class N {
+                constructor() {
+                  obj = closure_0(closure_2[31]);
+                  obj1 = { content: null, key: null, stackingBehavior: "stack" };
+                  obj5 = {
+                    header: null,
+                    guild: null,
+                    channels: null,
+                    selectedChannel: null,
+                    noChannelOptionLabel: null,
+                    onSelect: null,
+                  };
+                  obj6 = { title: def.label };
+                  obj5.header = obj6;
+                  tmp = closure_1(closure_2[32]);
+                  obj5.guild = closure_8.getGuild(closure_5);
+                  obj5.channels = closure_6;
+                  obj5.selectedChannel = c7;
+                  intl = closure_0(closure_2[15]).intl;
+                  obj5.noChannelOptionLabel = intl.string(closure_1(closure_2[16]).aO4AM6);
+                  obj5.onSelect = function onSelect(id) {
+                    let str;
+                    if (id != null) {
+                      str = id.id;
+                    }
+                    if (str == null) {
+                      str = "";
+                    }
+                    return onChange(str);
+                  };
+                  obj1.content = jsx(tmp, obj5);
+                  obj1.key = VibegrationsSettingsChannelSheet;
+                  showActionSheetResult = obj.showActionSheet(obj1);
+                  return;
+                }
+              }
+              let channelName = tmpResult6.computeChannelName(found, UserStore, RelationshipStore, true);
+            } else {
+              class N {
+                constructor() {
+                  obj = closure_0(closure_2[31]);
+                  obj1 = { content: null, key: null, stackingBehavior: "stack" };
+                  obj5 = {
+                    header: null,
+                    guild: null,
+                    channels: null,
+                    selectedChannel: null,
+                    noChannelOptionLabel: null,
+                    onSelect: null,
+                  };
+                  obj6 = { title: def.label };
+                  obj5.header = obj6;
+                  tmp = closure_1(closure_2[32]);
+                  obj5.guild = closure_8.getGuild(closure_5);
+                  obj5.channels = closure_6;
+                  obj5.selectedChannel = c7;
+                  intl = closure_0(closure_2[15]).intl;
+                  obj5.noChannelOptionLabel = intl.string(closure_1(closure_2[16]).aO4AM6);
+                  obj5.onSelect = function onSelect(id) {
+                    let str;
+                    if (id != null) {
+                      str = id.id;
+                    }
+                    if (str == null) {
+                      str = "";
+                    }
+                    return onChange(str);
+                  };
+                  obj1.content = jsx(tmp, obj5);
+                  obj1.key = VibegrationsSettingsChannelSheet;
+                  showActionSheetResult = obj.showActionSheet(obj1);
+                  return;
+                }
+              }
+              channelName = tmp28(isPreview(tmp2[16]).grukkJ);
+            }
+            cResult[9] = label;
+            ({ channel_filter: tmp3[10], label } = def);
+            cResult[11] = label;
+            cResult[12] = disabled;
+            cResult[13] = hint;
+            cResult[14] = value;
+            cResult[15] = TableRowTrailingText;
+            cResult[16] = TableRow;
+            cResult[17] = TableRowGroup;
+            cResult[18] = arr5;
+            cResult[19] = found;
+            cResult[20] = true;
+            cResult[21] = disabled;
+            cResult[22] = false;
+            cResult[23] = channelName;
+            cResult[24] = label2;
+            cResult[25] = hint;
+          }
+        }
+        return tmp14;
+      }
+      const fn = function l() {
+        return VibegrationsUtils.vibegrationsSettingsGuildId(VibegrationsProjectStore.getProject(projectId), isPreview);
+      };
+      const items3 = [isPreview, projectId];
+      cResult[1] = isPreview;
+      cResult[2] = projectId;
+      cResult[3] = fn;
+      cResult[4] = items3;
+      tmp7 = items3;
+      tmp6 = fn;
+      let obj = projectId(def[26]);
+    }
+  : function VibegrationsChannelSettingRow(projectId) {
+      projectId = projectId.projectId;
+      const isPreview = projectId.isPreview;
+      const def = projectId.def;
+      ({ value: asyncGeneratorStep, onChange: _slicedToArray } = projectId);
+      c6 = undefined;
+      let found;
+      ({ hint, disabled, fallback } = projectId);
+      const items = [VibegrationsProjectStore];
+      const items1 = [isPreview, projectId];
+      const stateFromStores = projectId(def[14]).useStateFromStores(
+        items,
+        () => VibegrationsUtils.vibegrationsSettingsGuildId(VibegrationsProjectStore.getProject(projectId), isPreview),
+        items1,
+      );
+      let obj = projectId(def[14]);
+      const items2 = [found];
+      const items3 = [stateFromStores];
+      const stateFromStores1 = projectId(def[14]).useStateFromStores(
+        items2,
+        () => {
+          channels = null;
+          if (null != stateFromStores) {
+            channels = GuildChannelStore.getChannels(tmp);
+          }
+          return channels;
+        },
+        items3,
+      );
+      if (null != stateFromStores) {
+        if (null != stateFromStores1) {
+          const result = tmp(tmp2[27]).vibegrationsSettingChannels(stateFromStores1, def.channel_filter);
+          c6 = result;
+          found = result.find((id) => id.id === asyncGeneratorStep);
+          if (found == null) {
+            found = null;
+          }
+          let obj3 = { label: def.label, subLabel: hint, arrow: true, disabled, trailing: null, onPress: null };
+          if (null != found) {
+            const tmpResult2 = tmp(tmp2[30]);
+            let channelName = tmpResult2.computeChannelName(found, UserStore, RelationshipStore, true);
+          } else {
+            let intl = tmp(tmp2[15]).intl;
+            channelName = intl.string(isPreview(tmp2[16]).grukkJ);
+          }
+          let obj4 = { hasIcons: false, children: null };
+          const obj5 = { text: channelName };
+          obj3.trailing = closure_17(tmp(tmp2[29]).TableRowTrailingText, obj5);
+          obj3.onPress = function onPress() {
+            const obj2 = { content: null, key: null, stackingBehavior: "stack" };
+            const obj3 = {
+              header: { title: def.label },
+              guild: null,
+              channels: null,
+              selectedChannel: null,
+              noChannelOptionLabel: null,
+              onSelect: null,
+            };
+            const obj = ActionSheetActionCreators;
+            const obj4 = { title: def.label };
+            obj3.guild = GuildStore.getGuild(stateFromStores);
+            obj3.channels = channels;
+            obj3.selectedChannel = found;
+            const intl = util.intl;
+            obj3.noChannelOptionLabel = intl.string(_modDef3723.aO4AM6);
+            obj3.onSelect = function onSelect(id) {
+              let str;
+              if (id != null) {
+                str = id.id;
+              }
+              if (str == null) {
+                str = "";
+              }
+              return closure_1_4(str);
+            };
+            obj2.content = constants(ChannelPickerActionSheetDefault, obj3);
+            obj2.key = VibegrationsSettingsChannelSheet;
+            obj.showActionSheet(obj2);
+          };
+          obj4.children = closure_17(tmp(tmp2[28]).TableRow, obj3);
+          return closure_17(tmp(tmp2[20]).TableRowGroup, obj4);
+        }
+      }
+      return fallback;
+    };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/vibegrations/native/useVibegrationsAppSettingsForm.tsx");
 
@@ -288,7 +663,7 @@ export default function useVibegrationsAppSettingsForm(projectId) {
         };
         obj11.disabled = first2;
         obj5.fallback = map(projectId(flag[22]).TextInput, obj11, found.key);
-        let tmp12Result = map(renderSecret, obj5, found.key);
+        let tmp12Result = map(closure_1_22, obj5, found.key);
       } else {
         closure_129_0 = found;
         let tmp11 = first[found.key];
@@ -447,7 +822,7 @@ export default function useVibegrationsAppSettingsForm(projectId) {
     obj.disabled = first2;
     tmp12Result = map(projectId(flag[22]).TextInput, obj, value.name);
   }
-  let tmp = renderValueSetting();
+  let tmp = renderSecret();
   asyncGeneratorStep = tmp;
   let items = [memo1];
   const stateFromStores = projectId(flag[14]).useStateFromStores(items, () =>
@@ -601,7 +976,7 @@ export default function useVibegrationsAppSettingsForm(projectId) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -667,9 +1042,9 @@ export default function useVibegrationsAppSettingsForm(projectId) {
                   if (application_id == null) {
                     _null = null;
                   }
-                  _null2(12662)(_null);
+                  _null2(8977)(_null);
                   let prop;
-                  const tmp19 = _null2(12662);
+                  const tmp19 = _null2(8977);
                   if (project2 != null) {
                     prop = project2.preview_application_id;
                   }
@@ -677,8 +1052,8 @@ export default function useVibegrationsAppSettingsForm(projectId) {
                   if (prop == null) {
                     _null2 = null;
                   }
-                  _null2(12662)(_null2);
-                  const tmp27 = _null2(12662);
+                  _null2(8977)(_null2);
+                  const tmp27 = _null2(8977);
                 }
                 c5 = 0;
                 closure_131_12(false);
@@ -686,8 +1061,8 @@ export default function useVibegrationsAppSettingsForm(projectId) {
               }
               closure_1_12(closure_131_0);
             }
-            const intl = _null(1115).intl;
-            closure_1_13(closure_131_0, intl.string(_null2(3714).gqJFu0));
+            const intl = _null(1126).intl;
+            closure_1_13(closure_131_0, intl.string(_null2(3723).gqJFu0));
           }
         } catch (tmp67) {
           closure_4 = tmp67;

@@ -3,7 +3,7 @@ import DispatcherDefault from "../../Dispatcher.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import SoundpackStore from "SoundpackStore.tsx";
 
-const AnalyticEvents = fn(1074).AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundpacks/SoundpackActions.tsx");
 

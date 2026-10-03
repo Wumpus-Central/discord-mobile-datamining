@@ -29,7 +29,7 @@ function handleQuickSwitcherUpdate() {
   });
   closure_24 = found.map((record) => record.record.id);
 }
-const SUMMARY_POLL_INTERVAL = fn(11097).SUMMARY_POLL_INTERVAL;
+const SUMMARY_POLL_INTERVAL = fn(9766).SUMMARY_POLL_INTERVAL;
 let obj = { FETCHING: "fetching", OK: "ok", ERROR: "error" };
 const dependencyMap2 = {};
 const dependencyMap3 = {};
@@ -106,11 +106,11 @@ prototype["findSummary"] = function findSummary(channelId, summaryId) {
   }
   return found;
 };
-prototype["selectedSummary"] = function selectedSummary(channel_id) {
+prototype["selectedSummary"] = function selectedSummary(id) {
   let findSummaryResult = null;
   if (null != obj) {
     findSummaryResult = null;
-    if (obj.channelId === channel_id) {
+    if (obj.channelId === id) {
       findSummaryResult = null;
       if (null != obj.summaryId) {
         let summaryId;
@@ -118,7 +118,7 @@ prototype["selectedSummary"] = function selectedSummary(channel_id) {
         if (obj != null) {
           summaryId = obj.summaryId;
         }
-        findSummaryResult = this.findSummary(channel_id, summaryId);
+        findSummaryResult = this.findSummary(id, summaryId);
       }
     }
   }
@@ -570,18 +570,18 @@ obj2 = {
       const first = tmp[0];
       obj = error(12);
       const chainResult = error(12).chain(
-        tmp[1].map((item) => lastReceivedAt(11099).createSummaryFromServer(item, first)),
+        tmp[1].map((item) => lastReceivedAt(9768).createSummaryFromServer(item, first)),
       );
       const sortByResult = error(12)
-        .chain(tmp[1].map((item) => lastReceivedAt(11099).createSummaryFromServer(item, first)))
+        .chain(tmp[1].map((item) => lastReceivedAt(9768).createSummaryFromServer(item, first)))
         .sortBy((startId) => error(11).extractTimestamp(startId.startId));
       const reversed = error(12)
-        .chain(tmp[1].map((item) => lastReceivedAt(11099).createSummaryFromServer(item, first)))
+        .chain(tmp[1].map((item) => lastReceivedAt(9768).createSummaryFromServer(item, first)))
         .sortBy((startId) => error(11).extractTimestamp(startId.startId))
         .takeRight(75)
         .reverse();
       const takeRightResult = error(12)
-        .chain(tmp[1].map((item) => lastReceivedAt(11099).createSummaryFromServer(item, first)))
+        .chain(tmp[1].map((item) => lastReceivedAt(9768).createSummaryFromServer(item, first)))
         .sortBy((startId) => error(11).extractTimestamp(startId.startId))
         .takeRight(75);
       acc[first] = reversed.filter((item) => Object.keys(item).length > 0).value();

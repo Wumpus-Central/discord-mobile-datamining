@@ -3,7 +3,7 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import GuildMemberStore from "../../../../stores/GuildMemberStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 
-const EMPTY_STRING_SNOWFLAKE_ID = fn(1074).EMPTY_STRING_SNOWFLAKE_ID;
+const EMPTY_STRING_SNOWFLAKE_ID = fn(1085).EMPTY_STRING_SNOWFLAKE_ID;
 const prototype = function KvMessage() {
   return Object.create(new.target.prototype);
 }.prototype;

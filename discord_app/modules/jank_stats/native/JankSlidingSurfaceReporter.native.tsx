@@ -5,91 +5,214 @@ import getJankSurfaceName from "getJankSurfaceName.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const JankScreenConstants = fn(15855);
+const JankScreenConstants = fn(15931);
 ({ INTERACTION_NONE: closure_4, INTERACTION_TRANSITION: hasOwnProperty } = JankScreenConstants);
 let __initData = {
   code: "function JankSlidingSurfaceReporterNativeTsx1(){const{position}=this.__closure;return position.get();}",
 };
 let closure_7 = {
-  code: "function JankSlidingSurfaceReporterNativeTsx2(current){const{openAt,closedAt,OPEN_SETTLED,CLOSED_SETTLED,MOVING,lastState,runOnJS,report,INTERACTION_NONE,INTERACTION_TRANSITION}=this.__closure;const openIsLower=openAt<closedAt;const atOpen=openIsLower?current<=openAt:current>=openAt;const atClosed=openIsLower?current>=closedAt:current<=closedAt;const state=atOpen?OPEN_SETTLED:atClosed?CLOSED_SETTLED:MOVING;const prevState=lastState.get();if(state===prevState)return;lastState.set(state);if(state===OPEN_SETTLED){runOnJS(report)(true,INTERACTION_NONE);}else if(state===CLOSED_SETTLED){runOnJS(report)(false,INTERACTION_NONE);}else if(prevState===OPEN_SETTLED){runOnJS(report)(false,INTERACTION_TRANSITION);}else if(prevState===CLOSED_SETTLED){runOnJS(report)(true,INTERACTION_TRANSITION);}}",
+  code: "function JankSlidingSurfaceReporterNativeTsx2(current){const{openAt,closedAt,OPEN_SETTLED,CLOSED_SETTLED,MOVING,lastState,runOnJS,report,INTERACTION_NONE,INTERACTION_TRANSITION}=this.__closure;const openIsLower=openAt<closedAt;const atOpen=openIsLower?current<=openAt:current>=openAt;const atClosed=openIsLower?current>=closedAt:current<=closedAt;const state=atOpen?OPEN_SETTLED:atClosed?CLOSED_SETTLED:MOVING;const prevState=lastState.get();if(state===prevState){return;}lastState.set(state);if(state===OPEN_SETTLED){runOnJS(report)(true,INTERACTION_NONE);}else{if(state===CLOSED_SETTLED){runOnJS(report)(false,INTERACTION_NONE);}else{if(prevState===OPEN_SETTLED){runOnJS(report)(false,INTERACTION_TRANSITION);}else{if(prevState===CLOSED_SETTLED){runOnJS(report)(true,INTERACTION_TRANSITION);}}}}}",
 };
+let closure_8 = {
+  code: "function JankSlidingSurfaceReporterNativeTsx3(){const{position}=this.__closure;return position.get();}",
+};
+const __initData2 = {
+  code: "function JankSlidingSurfaceReporterNativeTsx4(current){const{openAt,closedAt,OPEN_SETTLED,CLOSED_SETTLED,MOVING,lastState,runOnJS,report,INTERACTION_NONE,INTERACTION_TRANSITION}=this.__closure;const openIsLower=openAt<closedAt;const atOpen=openIsLower?current<=openAt:current>=openAt;const atClosed=openIsLower?current>=closedAt:current<=closedAt;const state=atOpen?OPEN_SETTLED:atClosed?CLOSED_SETTLED:MOVING;const prevState=lastState.get();if(state===prevState)return;lastState.set(state);if(state===OPEN_SETTLED){runOnJS(report)(true,INTERACTION_NONE);}else if(state===CLOSED_SETTLED){runOnJS(report)(false,INTERACTION_NONE);}else if(prevState===OPEN_SETTLED){runOnJS(report)(false,INTERACTION_TRANSITION);}else if(prevState===CLOSED_SETTLED){runOnJS(report)(true,INTERACTION_TRANSITION);}}",
+};
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/jank_stats/native/JankSlidingSurfaceReporter.native.tsx");
 
-export default function JankSlidingSurfaceReporter(position) {
-  position = position.position;
-  const openAt = position.openAt;
-  const closedAt = position.closedAt;
-  const resolveOpenName = position.resolveOpenName;
-  const resolveClosedName = position.resolveClosedName;
-  const onCoveringChange = position.onCoveringChange;
-  resolveOpenName.useRef({ resolveOpenName, resolveClosedName, onCoveringChange });
-  const items = [resolveOpenName, resolveClosedName, onCoveringChange];
-  const effect = resolveOpenName.useEffect(() => {
-    closure_6.current = { resolveOpenName, resolveClosedName, onCoveringChange };
-  }, items);
-  __initData = resolveOpenName.useCallback((arg0, arg1) => {
-    const current = ref.current;
-    ({ resolveClosedName, onCoveringChange } = current);
-    if (onCoveringChange != null) {
-      onCoveringChange(arg0);
-    }
-    const obj = NativeJankStatsModuleDefault;
-    if (obj != null) {
-      if (arg0) {
-        resolveClosedName = current.resolveOpenName;
+export default ReactCompilerGating.isReactCompilerEnabled()
+  ? (position) => {
+      const cResult = position(closedAt[3]).c(9);
+      position = position.position;
+      const openAt = position.openAt;
+      closedAt = position.closedAt;
+      const resolveOpenName = position.resolveOpenName;
+      const resolveClosedName = position.resolveClosedName;
+      const onCoveringChange = position.onCoveringChange;
+      if (cResult[0] === onCoveringChange) {
+        if (cResult[1] === resolveClosedName) {
+          if (cResult[2] === resolveOpenName) {
+            let tmp4 = cResult[3];
+          }
+          __initData = resolveOpenName.useRef(tmp4);
+          if (cResult[4] === onCoveringChange) {
+            if (cResult[5] === resolveClosedName) {
+              if (cResult[6] === resolveOpenName) {
+                let tmp5 = cResult[7];
+                let tmp6 = cResult[8];
+              }
+              const effect = obj3.useEffect(tmp5, tmp6);
+              function report(arg0, arg1) {
+                const current = ref.current;
+                ({ resolveClosedName, onCoveringChange } = current);
+                if (onCoveringChange != null) {
+                  onCoveringChange(arg0);
+                }
+                const obj = NativeJankStatsModuleDefault;
+                if (obj != null) {
+                  if (arg0) {
+                    resolveClosedName = current.resolveOpenName;
+                  }
+                  obj.setScreenContext(getJankSurfaceName.composeJankSurfaceName(resolveClosedName), arg1);
+                }
+              }
+              class I {
+                constructor() {
+                  obj = { resolveOpenName, resolveClosedName, onCoveringChange };
+                  closure_6.current = obj;
+                  return;
+                }
+              }
+              const sharedValue = obj4.useSharedValue(0);
+              const fn = function f() {
+                return position.get();
+              };
+              let obj2 = { position };
+              fn.__closure = obj2;
+              fn.__workletHash = 6255198126313;
+              fn.__initData = __initData;
+              const fn2 = function v(arg0) {
+                let num = 1;
+                if (!(openAt < closedAt ? arg0 <= openAt : arg0 >= openAt)) {
+                  let num2 = 3;
+                  if (tmp3 ? arg0 >= closedAt : arg0 <= closedAt) {
+                    num2 = 2;
+                  }
+                  num = num2;
+                }
+                value = sharedValue.get();
+                if (num !== value) {
+                  const result = sharedValue.set(num);
+                  if (1 === num) {
+                    ReanimatedRexport.runOnJS(report)(true, React4);
+                  } else if (2 === num) {
+                    ReanimatedRexport.runOnJS(report)(false, React4);
+                  } else if (1 === value) {
+                    ReanimatedRexport.runOnJS(report)(false, hasOwnProperty);
+                  } else if (2 === value) {
+                    ReanimatedRexport.runOnJS(report)(true, hasOwnProperty);
+                  }
+                }
+              };
+              let obj5 = {
+                openAt,
+                closedAt,
+                OPEN_SETTLED: 1,
+                CLOSED_SETTLED: 2,
+                MOVING: 3,
+                lastState: sharedValue,
+                runOnJS: tmp(tmp2[6]).runOnJS,
+                report,
+                INTERACTION_NONE: resolveClosedName,
+                INTERACTION_TRANSITION: onCoveringChange,
+              };
+              fn2.__closure = obj5;
+              fn2.__workletHash = 7165168414551;
+              fn2.__initData = report;
+              const animatedReaction = tmp(tmp2[6]).useAnimatedReaction(fn, fn2);
+              return null;
+            }
+          }
+          class I {
+            constructor() {
+              obj = { resolveOpenName, resolveClosedName, onCoveringChange };
+              closure_6.current = obj;
+              return;
+            }
+          }
+          const items = [resolveOpenName, resolveClosedName, onCoveringChange];
+          cResult[4] = onCoveringChange;
+          cResult[5] = resolveClosedName;
+          cResult[6] = resolveOpenName;
+          cResult[7] = I;
+          cResult[8] = items;
+          tmp6 = items;
+          tmp5 = I;
+          obj3 = resolveOpenName;
+        }
       }
-      obj.setScreenContext(getJankSurfaceName.composeJankSurfaceName(resolveClosedName), arg1);
+      const obj6 = { resolveOpenName, resolveClosedName, onCoveringChange };
+      cResult[0] = onCoveringChange;
+      cResult[1] = resolveClosedName;
+      cResult[2] = resolveOpenName;
+      cResult[3] = obj6;
+      tmp4 = obj6;
     }
-  }, []);
-  const sharedValue = position(closedAt[4]).useSharedValue(0);
-  let obj = position(closedAt[4]);
-  class I {
-    constructor() {
-      return position.get();
-    }
-  }
-  I.__closure = { position };
-  I.__workletHash = 6255198126313;
-  I.__initData = __initData;
-  const fn = function _(arg0) {
-    let num = 1;
-    if (!(openAt < closedAt ? arg0 <= openAt : arg0 >= openAt)) {
-      let num2 = 3;
-      if (tmp3 ? arg0 >= closedAt : arg0 <= closedAt) {
-        num2 = 2;
-      }
-      num = num2;
-    }
-    value = sharedValue.get();
-    if (num !== value) {
-      const result = sharedValue.set(num);
-      if (1 === num) {
-        ReanimatedRexport.runOnJS(callback)(true, React4);
-      } else if (2 === num) {
-        ReanimatedRexport.runOnJS(callback)(false, React4);
-      } else if (1 === value) {
-        ReanimatedRexport.runOnJS(callback)(false, hasOwnProperty);
-      } else if (2 === value) {
-        ReanimatedRexport.runOnJS(callback)(true, hasOwnProperty);
-      }
-    }
-  };
-  let obj2 = position(closedAt[4]);
-  fn.__closure = {
-    openAt,
-    closedAt,
-    OPEN_SETTLED: 1,
-    CLOSED_SETTLED: 2,
-    MOVING: 3,
-    lastState: sharedValue,
-    runOnJS: position(closedAt[4]).runOnJS,
-    report: __initData,
-    INTERACTION_NONE: resolveClosedName,
-    INTERACTION_TRANSITION: onCoveringChange,
-  };
-  fn.__workletHash = 3128845092759;
-  fn.__initData = __initData;
-  const animatedReaction = obj2.useAnimatedReaction(I, fn);
-  return null;
-}
+  : (position) => {
+      position = position.position;
+      const openAt = position.openAt;
+      const closedAt = position.closedAt;
+      const resolveOpenName = position.resolveOpenName;
+      const resolveClosedName = position.resolveClosedName;
+      const onCoveringChange = position.onCoveringChange;
+      resolveOpenName.useRef({ resolveOpenName, resolveClosedName, onCoveringChange });
+      const items = [resolveOpenName, resolveClosedName, onCoveringChange];
+      const effect = resolveOpenName.useEffect(() => {
+        closure_6.current = { resolveOpenName, resolveClosedName, onCoveringChange };
+      }, items);
+      const report = resolveOpenName.useCallback((arg0, arg1) => {
+        const current = ref.current;
+        ({ resolveClosedName, onCoveringChange } = current);
+        if (onCoveringChange != null) {
+          onCoveringChange(arg0);
+        }
+        const obj = NativeJankStatsModuleDefault;
+        if (obj != null) {
+          if (arg0) {
+            resolveClosedName = current.resolveOpenName;
+          }
+          obj.setScreenContext(getJankSurfaceName.composeJankSurfaceName(resolveClosedName), arg1);
+        }
+      }, []);
+      const sharedValue = position(closedAt[6]).useSharedValue(0);
+      let obj = position(closedAt[6]);
+      const fn = function p() {
+        return position.get();
+      };
+      fn.__closure = { position };
+      fn.__workletHash = 4424338084843;
+      fn.__initData = sharedValue;
+      const fn2 = function _(arg0) {
+        let num = 1;
+        if (!(openAt < closedAt ? arg0 <= openAt : arg0 >= openAt)) {
+          let num2 = 3;
+          if (tmp3 ? arg0 >= closedAt : arg0 <= closedAt) {
+            num2 = 2;
+          }
+          num = num2;
+        }
+        value = sharedValue.get();
+        if (num !== value) {
+          const result = sharedValue.set(num);
+          if (1 === num) {
+            ReanimatedRexport.runOnJS(callback)(true, React4);
+          } else if (2 === num) {
+            ReanimatedRexport.runOnJS(callback)(false, React4);
+          } else if (1 === value) {
+            ReanimatedRexport.runOnJS(callback)(false, hasOwnProperty);
+          } else if (2 === value) {
+            ReanimatedRexport.runOnJS(callback)(true, hasOwnProperty);
+          }
+        }
+      };
+      let obj2 = position(closedAt[6]);
+      fn2.__closure = {
+        openAt,
+        closedAt,
+        OPEN_SETTLED: 1,
+        CLOSED_SETTLED: 2,
+        MOVING: 3,
+        lastState: sharedValue,
+        runOnJS: position(closedAt[6]).runOnJS,
+        report,
+        INTERACTION_NONE: resolveClosedName,
+        INTERACTION_TRANSITION: onCoveringChange,
+      };
+      fn2.__workletHash = 13786531289489;
+      fn2.__initData = __initData2;
+      const animatedReaction = obj2.useAnimatedReaction(fn, fn2);
+      return null;
+    };

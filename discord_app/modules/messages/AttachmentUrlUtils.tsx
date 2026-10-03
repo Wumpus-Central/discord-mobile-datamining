@@ -242,7 +242,7 @@ let closure_14 = async function _maybeRefreshAttachmentUrl() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -311,8 +311,8 @@ let closure_14 = async function _maybeRefreshAttachmentUrl() {
     }
   })();
 };
-const ATTACHMENT_PATH_PREFIXES = fn(5501).ATTACHMENT_PATH_PREFIXES;
-const Endpoints = fn(1074).Endpoints;
+const ATTACHMENT_PATH_PREFIXES = fn(5800).ATTACHMENT_PATH_PREFIXES;
+const Endpoints = fn(1085).Endpoints;
 const HOUR = DurationsDefault.Millis.HOUR;
 let items = [window.GLOBAL_ENV.CDN_HOST];
 let substr;
@@ -376,7 +376,7 @@ function getSignedAttachmentExpiration(searchParams) {
   }
   return result;
 }
-const mapped = items.map(fn(2016).getHostWithoutPort);
+const mapped = items.map(fn(2023).getHostWithoutPort);
 let closure_7 = mapped.filter((item) => {
   let tmp = null != item;
   if (tmp) {

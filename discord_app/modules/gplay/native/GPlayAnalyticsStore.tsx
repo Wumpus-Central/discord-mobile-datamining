@@ -1,11 +1,11 @@
 // discord_app/modules/gplay/native/GPlayAnalyticsStore.tsx
-import 00560__ from "../../../../_runtime/metro/00560__.js";
+import 00570__ from "../../../../_runtime/metro/00570__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 
 let closure_2 = Object.freeze({ analyticsByProductId: {} });
-const useGPlayAnalyticsStore = module_560.create(() => closure_2);
+const useGPlayAnalyticsStore = module_570.create(() => closure_2);
 const result = size.fileFinishedImporting("modules/gplay/native/GPlayAnalyticsStore.tsx");
 
 export const setGPlayAnalytics = function setGPlayAnalytics(arg0, arg1) {

@@ -7,7 +7,7 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import ConsentStore from "../../../stores/ConsentStore.tsx";
 
 require = fn;
-const Consents = fn(1074).Consents;
+const Consents = fn(1085).Consents;
 let closure_6 = { detected: false, lastScannedAt: "a" };
 let closure_7 = { apps: {} };
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;

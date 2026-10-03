@@ -93,7 +93,7 @@ function dismissOutboundPromotionNotice() {
   const lastDismissedOutboundPromotionStartDate = PromotionsStore.lastDismissedOutboundPromotionStartDate;
   if (null != lastDismissedOutboundPromotionStartDate) {
     const PreloadedUserSettingsActionCreators =
-      lastDismissedOutboundPromotionStartDate(2026).PreloadedUserSettingsActionCreators;
+      lastDismissedOutboundPromotionStartDate(2033).PreloadedUserSettingsActionCreators;
     PreloadedUserSettingsActionCreators.updateAsync(
       "userContent",
       async (arg0) => {
@@ -102,7 +102,7 @@ function dismissOutboundPromotionNotice() {
           value: lastDismissedOutboundPromotionStartDate,
         });
       },
-      lastDismissedOutboundPromotionStartDate(2026).UserSettingsDelay.INFREQUENT_USER_ACTION,
+      lastDismissedOutboundPromotionStartDate(2033).UserSettingsDelay.INFREQUENT_USER_ACTION,
     );
   }
 }
@@ -127,7 +127,7 @@ let closure_11 = async function _fetchClaimedOutboundPromotionCodes() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -198,8 +198,8 @@ let closure_11 = async function _fetchClaimedOutboundPromotionCodes() {
 function addClaimedOutboundPromotionCode(claimedOutboundPromotionCode) {
   DispatcherDefault.dispatch({ type: "CLAIMED_OUTBOUND_PROMOTION_CODE_ADD", claimedOutboundPromotionCode });
 }
-let closure_7 = fn(1374).PREMIUM_SUBSCRIPTION_APPLICATION;
-const Endpoints = fn(1074).Endpoints;
+let closure_7 = fn(1379).PREMIUM_SUBSCRIPTION_APPLICATION;
+const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/promotions/PromotionsActionCreators.tsx");
 

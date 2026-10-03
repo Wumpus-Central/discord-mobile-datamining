@@ -45,4 +45,6 @@ export const ItemPurchaseType = {
 export const OrderClientErrorCode = {
   SMITE_TOKEN_AUTHORIZATION_REQUIRED: 1003,
   [1003]: "SMITE_TOKEN_AUTHORIZATION_REQUIRED",
+  UNKNOWN_ERROR_CODE: 9999,
+  [9999]: "UNKNOWN_ERROR_CODE",
 };

@@ -5,7 +5,7 @@ import UserProfileAnalyticsUtils from "../user_profile/UserProfileAnalyticsUtils
 import ChannelStore from "../../stores/ChannelStore.tsx";
 
 require = fn;
-const AnalyticEvents = fn(1074).AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/SecureFramesTracking.tsx");
 

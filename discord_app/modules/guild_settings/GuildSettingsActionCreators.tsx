@@ -14,7 +14,7 @@ import GuildStore from "../../stores/GuildStore.tsx";
 import GuildSettingsStore from "GuildSettingsStore.tsx";
 
 require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({
   Endpoints: c10,
   Layers,
@@ -44,7 +44,7 @@ let body = {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -80,7 +80,7 @@ let body = {
             const obj5 = { type: "GUILD_SETTINGS_OPEN", guildId, section: SAFETY, subsection };
             SAFETY(closure_1_2[9]).dispatch(obj5);
             c0 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp26) {
           c0 = tmp;
@@ -98,7 +98,7 @@ let body = {
   setSection(arg0, arg1) {
     const guildId = GuildSettingsStore.getGuildId();
     if (null != guildId) {
-      const guild = GuildStore.getGuild(guildId);
+      guild = GuildStore.getGuild(guildId);
       let hasItem;
       if (guild != null) {
         const features = guild.features;
@@ -149,7 +149,7 @@ let body = {
     ({ guildId, level } = arg0);
     const HTTP = HTTPUtils.HTTP;
     const request = {
-      url: closure_1_10.GUILD_MFA(guildId),
+      url: v65535.GUILD_MFA(guildId),
       body: { level },
       oldFormErrors: true,
       rejectWithError: HTTPUtils.rejectWithMigratedError(),
@@ -275,10 +275,10 @@ let body = {
     obj2.moderator_reporting_enabled = moderatorReportingEnabled;
     obj2.official_message_color = officialMessageColor;
     obj2.verification_role_id = verificationRoleId;
-    obj(573).dispatch({ type: "GUILD_SETTINGS_SUBMIT" });
+    obj(584).dispatch({ type: "GUILD_SETTINGS_SUBMIT" });
     const pendingOriginalMd5s = GuildSettingsStore.getPendingOriginalMd5s();
-    const obj5 = obj(573);
-    const obj6 = obj(5668);
+    const obj5 = obj(584);
+    const obj6 = obj(6478);
     const headersForMd5 = obj6.buildHeadersForMd5({
       [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_ICON]: pendingOriginalMd5s.icon,
       [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_BANNER]: pendingOriginalMd5s.banner,
@@ -348,7 +348,7 @@ let body = {
       tmp2 = null;
     }
     const request = {
-      url: closure_1_10.GUILD(id),
+      url: v65535.GUILD(id),
       body: { owner_id: id2, code: tmp2 },
       oldFormErrors: true,
       trackedActionData: null,
@@ -371,12 +371,7 @@ let body = {
     if (arg1 === undefined) {
       flag = false;
     }
-    const obj2 = {
-      url: closure_1_10.GUILD_PINCODE(id),
-      oldFormErrors: true,
-      trackedActionData: null,
-      rejectWithError: null,
-    };
+    const obj2 = { url: v65535.GUILD_PINCODE(id), oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     const obj = TrackedHTTPUtilsDefault;
     obj2.trackedActionData = {
       event: discord_common_AnalyticsUtils.NetworkActionNames.GUILD_TRANSFER_OWNERSHIP_SEND_CODE,
@@ -392,7 +387,7 @@ let body = {
   deleteGuild(arg0) {
     const HTTP = HTTPUtils.HTTP;
     const obj = {
-      url: closure_1_10.GUILD_DELETE(arg0),
+      url: v65535.GUILD_DELETE(arg0),
       oldFormErrors: true,
       rejectWithError: HTTPUtils.rejectWithMigratedError(),
     };
@@ -417,7 +412,7 @@ let body = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -435,7 +430,7 @@ let body = {
               closure_128_0 = undefined;
               const isLurkingResult = lurking.isLurking(tmp2);
               closure_128_0 = isLurkingResult;
-              const HTTP = tmp2(1271).HTTP;
+              const HTTP = tmp2(1282).HTTP;
               const request = {
                 url: closure_1_10.GUILD_LEAVE(tmp2),
                 body: null,
@@ -448,15 +443,15 @@ let body = {
               }
               const obj5 = { lurking: isCurrentUserGuestResult };
               request.body = obj5;
-              request.rejectWithError = tmp2(1271).rejectWithMigratedError();
-              const obj4 = tmp2(1271);
+              request.rejectWithError = tmp2(1282).rejectWithMigratedError();
+              const obj4 = tmp2(1282);
               dependencyMap = 1;
               c3 = 1;
               const obj6 = {
                 value: HTTP.del(request).then(() => {
-                  const AccessibilityAnnouncer = closure_1_0(4715).AccessibilityAnnouncer;
-                  const intl = closure_1_0(1115).intl;
-                  AccessibilityAnnouncer.announce(intl.string(closure_1_0(1115).t["7iPyVW"]));
+                  const AccessibilityAnnouncer = closure_1_0(4730).AccessibilityAnnouncer;
+                  const intl = closure_1_0(1126).intl;
+                  AccessibilityAnnouncer.announce(intl.string(closure_1_0(1126).t["7iPyVW"]));
                 }),
                 done: false,
               };
@@ -476,11 +471,11 @@ let body = {
               tmp10 = closure_128_0;
             }
             if (tmp10) {
-              tmp2(1101).transitionTo(constants.GUILD_DISCOVERY);
-              const obj = tmp2(1101);
+              tmp2(1112).transitionTo(constants.GUILD_DISCOVERY);
+              const obj = tmp2(1112);
             }
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp21) {
           c3 = tmp;
@@ -506,7 +501,7 @@ let body = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -549,10 +544,10 @@ let body = {
             throw value;
           } else if (arg0 !== 2) {
             const item = closure_129_3.forEach((roleId) =>
-              userId(573).dispatch({ type: "GUILD_ROLE_MEMBER_ADD", guildId, roleId, userId }),
+              userId(584).dispatch({ type: "GUILD_ROLE_MEMBER_ADD", guildId, roleId, userId }),
             );
             const item1 = closure_129_4.forEach((roleId) =>
-              userId(573).dispatch({ type: "GUILD_ROLE_MEMBER_REMOVE", guildId, roleId, userId }),
+              userId(584).dispatch({ type: "GUILD_ROLE_MEMBER_REMOVE", guildId, roleId, userId }),
             );
           }
           c3 = 3;
@@ -584,7 +579,7 @@ let body = {
   enableIntegration(id, type, id2) {
     const HTTP = HTTPUtils.HTTP;
     const request = {
-      url: closure_1_10.GUILD_INTEGRATIONS(id),
+      url: v65535.GUILD_INTEGRATIONS(id),
       body: null,
       oldFormErrors: true,
       rejectWithError: HTTPUtils.rejectWithMigratedError(),
@@ -596,7 +591,7 @@ let body = {
   disableIntegration(id, id2) {
     const HTTP = HTTPUtils.HTTP;
     const obj = {
-      url: closure_1_10.GUILD_INTEGRATION(id, id2),
+      url: v65535.GUILD_INTEGRATION(id, id2),
       oldFormErrors: true,
       rejectWithError: HTTPUtils.rejectWithMigratedError(),
     };
@@ -605,7 +600,7 @@ let body = {
   updateIntegration(guildId, id, expire_behavior, expire_grace_period, enable_emoticons) {
     const HTTP = HTTPUtils.HTTP;
     const request = {
-      url: closure_1_10.GUILD_INTEGRATION(guildId, id),
+      url: v65535.GUILD_INTEGRATION(guildId, id),
       body: null,
       oldFormErrors: true,
       rejectWithError: HTTPUtils.rejectWithMigratedError(),
@@ -617,7 +612,7 @@ let body = {
   syncIntegration(guildId, id) {
     const HTTP = HTTPUtils.HTTP;
     const obj = {
-      url: closure_1_10.GUILD_INTEGRATION_SYNC(guildId, id),
+      url: v65535.GUILD_INTEGRATION_SYNC(guildId, id),
       oldFormErrors: true,
       rejectWithError: HTTPUtils.rejectWithMigratedError(),
     };
@@ -636,7 +631,7 @@ let body = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -650,13 +645,13 @@ let body = {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              const HTTP = v3(1271).HTTP;
+              const HTTP = v3(1282).HTTP;
               const obj4 = { url: closure_1_10.GUILD_MIGRATE_PIN_PERMISSION(guildId), rejectWithError: true };
               c1 = 1;
               v3 = 1;
               const obj5 = {
                 value: HTTP.post(obj4).then(() =>
-                  c1(573).dispatch({ type: "GUILD_SETTINGS_PIN_PERMISSION_MIGRATED", guildId }),
+                  c1(584).dispatch({ type: "GUILD_SETTINGS_PIN_PERMISSION_MIGRATED", guildId }),
                 ),
                 done: false,
               };
@@ -671,7 +666,7 @@ let body = {
             return obj;
           } else {
             v3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp9) {
           v3 = tmp;
@@ -693,7 +688,7 @@ let body = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -707,13 +702,13 @@ let body = {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              const HTTP = v3(1271).HTTP;
+              const HTTP = v3(1282).HTTP;
               const obj4 = { url: closure_1_10.GUILD_MIGRATE_SLOWMODE_PERMISSION(guildId), rejectWithError: true };
               c1 = 1;
               v3 = 1;
               const obj5 = {
                 value: HTTP.post(obj4).then(() =>
-                  c1(573).dispatch({ type: "GUILD_SETTINGS_SLOWMODE_PERMISSION_MIGRATED", guildId }),
+                  c1(584).dispatch({ type: "GUILD_SETTINGS_SLOWMODE_PERMISSION_MIGRATED", guildId }),
                 ),
                 done: false,
               };
@@ -728,7 +723,7 @@ let body = {
             return obj;
           } else {
             v3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp9) {
           v3 = tmp;
@@ -751,7 +746,7 @@ let body = {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -792,7 +787,7 @@ let body = {
               return obj;
             }
             c2 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
           if (closure_128_2) {
             c1 = 2;

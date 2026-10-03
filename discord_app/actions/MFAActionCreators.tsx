@@ -6,7 +6,7 @@ import MFAStore from "../stores/MFAStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/MFAActionCreators.tsx");
 

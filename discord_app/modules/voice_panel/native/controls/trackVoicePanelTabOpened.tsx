@@ -2,7 +2,7 @@
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import ReadStateStore from "../../../../stores/ReadStateStore.tsx";
 
-const AnalyticEvents = fn(1074).AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/trackVoicePanelTabOpened.tsx");
 

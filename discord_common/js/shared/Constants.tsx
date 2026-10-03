@@ -528,11 +528,11 @@ obj8.QUEST_BAR_PREVIEW = function QUEST_BAR_PREVIEW(arg0) {
   return "" + sum + "/quest-bar-preview?ad_creative_ids=" + arg0;
 };
 const frozen7 = Object.freeze(obj8);
-fn(1083);
+fn(1094);
 const obj7 = {
   TWITTER: Object.freeze({ default: "https://twitter.com/discord", ja: "https://twitter.com/discord_jp" }),
 };
-const PathUtils = fn(1083);
+const PathUtils = fn(1094);
 const wrapPathsResult = PathUtils.wrapPaths(frozen7);
 const frozen8 = Object.freeze({
   FACEBOOK_URL: "https://www.facebook.com/discord/",
@@ -543,8 +543,8 @@ const frozen8 = Object.freeze({
 const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/shared/Constants.tsx");
 
-export const ThemeExtends = fn(1087).ThemeExtends;
-export const ThemeTypes = fn(1087).ThemeTypes;
+export const ThemeExtends = fn(1098).ThemeExtends;
+export const ThemeTypes = fn(1098).ThemeTypes;
 export const APP_URL_PREFIX = sum;
 export const VANITY_URL_PREFIX = text;
 export const PRIMARY_DOMAIN = "discord.com";
@@ -632,6 +632,8 @@ export const SubscriptionTypes = {
   [3]: "APPLICATION",
   GAME_SERVER: 4,
   [4]: "GAME_SERVER",
+  GIFT: 5,
+  [5]: "GIFT",
 };
 export const BraintreeErrors = {
   PAYPAL_POPUP_CLOSED: "PAYPAL_POPUP_CLOSED",
@@ -659,10 +661,10 @@ export const BasicPermissions = {
   [1048576]: "CONNECT",
 };
 export const Permissions = frozen5;
-export const NOOP = fn(1088).NOOP;
-export const NOOP_NULL = fn(1088).NOOP_NULL;
-export const NOOP_PROMISE = fn(1088).NOOP_PROMISE;
-export const NOOP_TRUE = fn(1088).NOOP_TRUE;
+export const NOOP = fn(1099).NOOP;
+export const NOOP_NULL = fn(1099).NOOP_NULL;
+export const NOOP_PROMISE = fn(1099).NOOP_PROMISE;
+export const NOOP_TRUE = fn(1099).NOOP_TRUE;
 export const ElevatedPermissionsList = items23;
 export const ElevatedPermissions = applyResult;
 export const RPC_VERSION = 1;
@@ -1283,7 +1285,7 @@ export const SKUFeatureTypes = {
   SECURE_NETWORKING: 13,
   [13]: "SECURE_NETWORKING",
 };
-export const GameGenres = fn(1089).GameGenres;
+export const GameGenres = fn(1100).GameGenres;
 export const PriceTierTypes = {
   GUILD_ROLE_SUBSCRIPTIONS: 1,
   [1]: "GUILD_ROLE_SUBSCRIPTIONS",

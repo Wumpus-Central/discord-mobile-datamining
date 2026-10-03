@@ -2,8 +2,8 @@
 import nativeDefault from "../../discord_common/js/packages/tokens/native.tsx";
 import VisualEffectViewDefault from "../modules/visual_effect_view/native/VisualEffectView.tsx";
 import VisualEffectViewThemedDefault from "../modules/visual_effect_view/native/VisualEffectViewThemed.tsx";
-import QRCodeDefault from "../../_runtime/09515_QRCode.js";
-import _mod9529 from "../../_runtime/metro/09529__.js";
+import QRCodeDefault from "../../_runtime/09526_QRCode.js";
+import _mod9540 from "../../_runtime/metro/09540__.js";
 import _objectWithoutProperties from "../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../_runtime/metro/00019__.js";
 
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire, StyleSheet: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = {
   qrCode: {
     display: "flex",
@@ -56,17 +56,17 @@ QRCode.prototype["render"] = function render() {
   const obj3 = { value: text, level: "M" };
   const tmp = closure_10(this.context);
   const merged = Object.assign(tmp2);
-  const items1 = [React6(QRCodeDefault, obj3)];
+  const items1 = [closure_1_8(QRCodeDefault, obj3)];
   if (blur) {
     obj4 = { style: React5.absoluteFill, blurTheme: "dark" };
-    tmp3Result = React6(VisualEffectViewDefault, obj4);
+    tmp3Result = closure_1_8(VisualEffectViewDefault, obj4);
   }
   items1[1] = tmp3Result;
   obj2.children = items1;
-  obj.children = React7(hasOwnProperty, obj2);
-  return React6(hasOwnProperty, obj);
+  obj.children = options(hasOwnProperty, obj2);
+  return closure_1_8(hasOwnProperty, obj);
 };
-QRCode.contextType = fn(4569).ThemeContext;
+QRCode.contextType = fn(4589).ThemeContext;
 QRCode.defaultProps = { size: 128, bgColor: "#ffffff", fgColor: "#000000" };
 const PureComponent2 = noop.PureComponent;
 class QRCodeWithOverlay extends PureComponent2 {}
@@ -81,23 +81,23 @@ QRCodeWithOverlay.prototype["render"] = function render() {
   const obj2 = {};
   const merged = Object.assign(this.props);
   obj2.blur = false;
-  const items = [React6(QRCode, obj2), ,];
+  const items = [closure_1_8(QRCode, obj2), ,];
   const obj3 = { style: null, children: null };
   const items1 = [tmp.qrCodeOverlay, React5.absoluteFill];
   obj3.style = items1;
-  obj4 = { style: tmp[frozen[SIZE_40]], source: _mod9529 };
-  obj3.children = React6(timestampProducer, obj4);
-  items[1] = React6(hasOwnProperty, obj3);
+  obj4 = { style: tmp[frozen[SIZE_40]], source: _mod9540 };
+  obj3.children = closure_1_8(timestampProducer, obj4);
+  items[1] = closure_1_8(hasOwnProperty, obj3);
   let tmp6Result = null;
   if (props.blur) {
     const obj5 = { style: React5.absoluteFill };
-    tmp6Result = React6(VisualEffectViewThemedDefault, obj5);
+    tmp6Result = closure_1_8(VisualEffectViewThemedDefault, obj5);
   }
   items[2] = tmp6Result;
   obj.children = items;
-  return React7(hasOwnProperty, obj);
+  return options(hasOwnProperty, obj);
 };
-QRCodeWithOverlay.contextType = fn(4569).ThemeContext;
+QRCodeWithOverlay.contextType = fn(4589).ThemeContext;
 QRCodeWithOverlay.defaultProps = { size: 144, bgColor: "#ffffff", fgColor: "#000000" };
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/QRCode.tsx");

@@ -14,7 +14,7 @@ let closure_5 = async function _saveGuildIdentityChanges(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -57,7 +57,7 @@ let closure_5 = async function _saveGuildIdentityChanges(arg0) {
           let body;
           c7 = 1;
           c8 = 1;
-          return { value: "flex", done: null };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp9) {
         if (arg0 === 1) {
@@ -218,7 +218,7 @@ let closure_5 = async function _saveGuildIdentityChanges(arg0) {
     }
   }
 };
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_identity/GuildIdentityActionCreators.tsx");
 

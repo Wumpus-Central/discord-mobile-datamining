@@ -1,9 +1,9 @@
 // discord_app/modules/libdiscore/timerUtils.tsx
 import LoggerDefault from "../debug/Logger.tsx";
 import debounceDefault from "../../../_runtime/00551_debounce.js";
+import timersAll from "../../../discord_common/js/packages/libdiscore/mobile/js/timers.tsx";
 import Constants from "../../Constants.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
-import timersAll from "../../../discord_common/js/packages/libdiscore/mobile/js/timers.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 function onTimersDelayCallback(timerId, expectedDelay, actualDelay, executionTime) {

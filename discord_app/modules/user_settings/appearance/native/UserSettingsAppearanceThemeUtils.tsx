@@ -12,15 +12,15 @@ import CustomThemeMobileStore from "../../../client_themes/native/CustomThemeMob
 import ThemeStore from "../../ThemeStore.tsx";
 
 require = fn;
-const SystemThemeState = fn(1185).SystemThemeState;
-const AnalyticEvents = fn(1074).AnalyticEvents;
-let closure_7 = fn(1229).BACKGROUND_GRADIENT_PRESETS_MOBILE;
-const constants = fn(1374).AnalyticsPremiumFeatureNames;
+const SystemThemeState = fn(1196).SystemThemeState;
+const AnalyticEvents = fn(1085).AnalyticEvents;
+let closure_7 = fn(1240).BACKGROUND_GRADIENT_PRESETS_MOBILE;
+const constants = fn(1379).AnalyticsPremiumFeatureNames;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/appearance/native/UserSettingsAppearanceThemeUtils.tsx");
 
-export const handleSaveTheme = function handleSaveTheme(mobileThemes, analyticsLocations, isSynced) {
-  if (mobileThemes.type === ClientThemesTypes.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
+export const handleSaveTheme = function handleSaveTheme(found, analyticsLocations, isSynced) {
+  if (found.type === ClientThemesTypes.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
     const obj2 = {
       feature_name: constants.CLIENT_THEME,
       theme_name: "custom theme",
@@ -29,29 +29,29 @@ export const handleSaveTheme = function handleSaveTheme(mobileThemes, analyticsL
       location_stack: analyticsLocations,
     };
     AnalyticsUtilsDefault.track(AnalyticEvents.CLIENT_THEME_UPDATED, obj2);
-    if ("system" === mobileThemes.theme) {
+    if ("system" === found.theme) {
       const result = ClientThemesBackgroundActionCreators.resetBackgroundGradientPreset();
       const tmpResult = ClientThemesBackgroundActionCreators;
       CustomThemeMobileActionCreators.resetCustomTheme();
       const tmpResult13 = CustomThemeMobileActionCreators;
-      const obj3 = { theme: mobileThemes.theme };
+      const obj3 = { theme: found.theme };
       return UserSettingsActionCreators.saveClientTheme(obj3);
-    } else if (mobileThemes.type === ClientThemesTypes.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
-      const customThemeBaseTheme = ClientThemesUtils.getCustomThemeBaseTheme(mobileThemes.theme);
+    } else if (found.type === ClientThemesTypes.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
+      const customThemeBaseTheme = ClientThemesUtils.getCustomThemeBaseTheme(found.theme);
       const tmpResult15 = ClientThemesUtils;
       const result1 = ClientThemesBackgroundActionCreators.resetBackgroundGradientPreset();
       const tmpResult16 = ClientThemesBackgroundActionCreators;
-      CustomThemeMobileActionCreators.updateCustomTheme(mobileThemes.customThemeSettings, customThemeBaseTheme);
+      CustomThemeMobileActionCreators.updateCustomTheme(found.customThemeSettings, customThemeBaseTheme);
       const tmpResult17 = CustomThemeMobileActionCreators;
-      const obj4 = { customUserThemeSettings: mobileThemes.customThemeSettings, theme: customThemeBaseTheme };
+      const obj4 = { customUserThemeSettings: found.customThemeSettings, theme: customThemeBaseTheme };
       return UserSettingsActionCreators.saveClientTheme(obj4);
     } else {
-      if (mobileThemes.type === ClientThemesTypes.ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
-        const result2 = ClientThemesBackgroundActionCreators.updateBackgroundGradientPreset(mobileThemes.id);
+      if (found.type === ClientThemesTypes.ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
+        const result2 = ClientThemesBackgroundActionCreators.updateBackgroundGradientPreset(found.id);
         const tmpResult19 = ClientThemesBackgroundActionCreators;
         CustomThemeMobileActionCreators.resetCustomTheme();
         const tmpResult20 = CustomThemeMobileActionCreators;
-        ({ id: obj10.backgroundGradientPresetId, theme: obj10.theme } = mobileThemes);
+        ({ id: obj10.backgroundGradientPresetId, theme: obj10.theme } = found);
         let saveClientThemeResult = UserSettingsActionCreators.saveClientTheme({
           backgroundGradientPresetId: null,
           theme: null,
@@ -63,17 +63,17 @@ export const handleSaveTheme = function handleSaveTheme(mobileThemes, analyticsL
         const tmpResult22 = ClientThemesBackgroundActionCreators;
         CustomThemeMobileActionCreators.resetCustomTheme();
         const tmpResult23 = CustomThemeMobileActionCreators;
-        const obj6 = { theme: mobileThemes.theme };
+        const obj6 = { theme: found.theme };
         saveClientThemeResult = UserSettingsActionCreators.saveClientTheme(obj6);
         const tmpResult24 = UserSettingsActionCreators;
       }
       return saveClientThemeResult;
     }
-  } else if (mobileThemes.type === ClientThemesTypes.ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
-    let combined = preloaded_user_settings.BackgroundGradientPresetId[mobileThemes.id];
+  } else if (found.type === ClientThemesTypes.ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
+    let combined = preloaded_user_settings.BackgroundGradientPresetId[found.id];
   } else {
     const _HermesInternal = HermesInternal;
-    combined = "default " + mobileThemes.theme;
+    combined = "default " + found.theme;
   }
 };
 export const handleSaveSyncedModeTheme = function handleSaveSyncedModeTheme(
@@ -122,8 +122,8 @@ export const handleSaveSyncedModeTheme = function handleSaveSyncedModeTheme(
     }
   }
 };
-export const getSyncedModeThemeIndex = function getSyncedModeThemeIndex(memo2, systemTheme) {
-  const syncedClientTheme = ThemeStore.getSyncedClientTheme(systemTheme);
+export const getSyncedModeThemeIndex = function getSyncedModeThemeIndex(memo2, stateFromStores) {
+  const syncedClientTheme = ThemeStore.getSyncedClientTheme(stateFromStores);
   let prop;
   if (syncedClientTheme != null) {
     prop = syncedClientTheme.customUserThemeSettings;
@@ -152,7 +152,7 @@ export const getSyncedModeThemeIndex = function getSyncedModeThemeIndex(memo2, s
       return findIndexResult1;
     }
   }
-  closure_1 = ThemeStore.themePreferenceForSystemTheme(systemTheme);
+  closure_1 = ThemeStore.themePreferenceForSystemTheme(stateFromStores);
   const findIndexResult2 = memo2.findIndex((theme) => theme.theme === closure_1);
   let num3 = 0;
   if (findIndexResult2 >= 0) {
@@ -180,7 +180,7 @@ export const trackClientThemeUpdated = function trackClientThemeUpdated(arg0) {
 export const getUserThemeIndex = function getUserThemeIndex(userPreset, c1, memo1, c3, c4) {
   if (null != userPreset) {
     const findIndexResult = memo1.findIndex(
-      (type) => type.type === userPreset(1230).ClientThemeType.BACKGROUND_GRADIENT_PRESET,
+      (type) => type.type === userPreset(1241).ClientThemeType.BACKGROUND_GRADIENT_PRESET,
     );
     const findIndexResult1 = closure_7.findIndex((id) => id.id === userPreset.id);
     let num4 = 0;
@@ -194,7 +194,7 @@ export const getUserThemeIndex = function getUserThemeIndex(userPreset, c1, memo
   } else {
     if (c4) {
       if (tmp >= 0) {
-        return memo1.findIndex((type) => type.type === userPreset(1230).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT);
+        return memo1.findIndex((type) => type.type === userPreset(1241).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT);
       }
     }
     const findIndexResult2 = memo1.findIndex((theme) => theme.theme === str);

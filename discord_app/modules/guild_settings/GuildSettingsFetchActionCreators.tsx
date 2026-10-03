@@ -44,8 +44,8 @@ let closure_7 = async function _fetchGuildIntegrationsApplications() {
   });
   return closure_129_1;
 };
-const BasicApplicationRecord = fn(2003).BasicApplicationRecord;
-const Endpoints = fn(1074).Endpoints;
+const BasicApplicationRecord = fn(2009).BasicApplicationRecord;
+const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/GuildSettingsFetchActionCreators.tsx");
 

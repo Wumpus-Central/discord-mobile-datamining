@@ -6,7 +6,7 @@ import ICYMIExperiment from "ICYMIExperiment.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/icymi/ICYMIActionCreators.tsx");
 
@@ -25,7 +25,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -107,7 +107,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -208,7 +208,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -238,7 +238,7 @@ export default {
                 }
               }
               c5 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else if (1 === tmp7) {
             c3 = 0;
@@ -284,7 +284,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -344,7 +344,7 @@ export default {
             }
             c3 = 0;
             c5 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
           c5 = 3;
         } catch (tmp26) {
@@ -380,7 +380,7 @@ export default {
           const obj5 = { value, done: true };
           return obj5;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -490,7 +490,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -564,7 +564,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -638,7 +638,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -767,13 +767,8 @@ export default {
     }
     DispatcherDefault.dispatch({ type: "ICYMI_TAKE_SURVEY", takenAt: timestamp });
   },
-  itemInteracted(id, hotwheels_gaming_activity, open_profile) {
-    DispatcherDefault.dispatch({
-      type: "ICYMI_ITEM_INTERACTED",
-      itemId: id,
-      itemType: hotwheels_gaming_activity,
-      actionType: open_profile,
-    });
+  itemInteracted(id, type, open_profile) {
+    DispatcherDefault.dispatch({ type: "ICYMI_ITEM_INTERACTED", itemId: id, itemType: type, actionType: open_profile });
   },
   feedItemActioned(arg0) {
     const merged = Object.assign(arg0);

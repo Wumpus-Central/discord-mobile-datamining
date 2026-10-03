@@ -14,11 +14,11 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ GuildFeatures: closure_11, JoinGuildSources: closure_12, AnalyticEvents: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = {
   card: {
     backgroundColor: nativeDefault.colors.BG_SURFACE_RAISED,
@@ -191,7 +191,7 @@ export default function GameCommunityMultiGuildUpsellCard(guild) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -283,7 +283,7 @@ export default function GameCommunityMultiGuildUpsellCard(guild) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {

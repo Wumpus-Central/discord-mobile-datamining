@@ -143,7 +143,7 @@ let closure_16 = async function _updateAutomodRule() {
   importDefault = _transformApiRuletoClientRule;
   const HTTP = require("HTTPUtils").HTTP;
   const request = {
-    url: React6.GUILD_AUTOMOD_RULE(_require.guildId, _require.id),
+    url: closure_2_8.GUILD_AUTOMOD_RULE(_require.guildId, _require.id),
     body: _transformClientRuleToApiRule(_require),
     rejectWithError: null,
   };
@@ -171,7 +171,7 @@ let closure_18 = async function _fetchAutomodRules(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -190,7 +190,7 @@ let closure_18 = async function _fetchAutomodRules(arg0) {
           closure_129_0 = undefined;
           const HTTP = require("HTTPUtils").HTTP;
           const obj4 = {
-            url: React6.GUILD_AUTOMOD_RULES(closure_0),
+            url: closure_2_8.GUILD_AUTOMOD_RULES(closure_0),
             rejectWithError: require("HTTPUtils").rejectWithMigratedError(),
           };
           c3 = 1;
@@ -237,7 +237,7 @@ let closure_19 = async function _executeAlertAction() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -274,7 +274,7 @@ let closure_19 = async function _executeAlertAction() {
           return obj;
         }
         c3 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       } catch (tmp8) {
         c3 = tmp;
         throw tmp8;
@@ -282,7 +282,7 @@ let closure_19 = async function _executeAlertAction() {
     }
   })();
 };
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AnalyticEvents: closure_7, Endpoints: closure_8, Permissions: closure_9 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_automod/GuildAutomodActionCreators.tsx");
@@ -354,7 +354,7 @@ export const removeMentionRaidRestrictionWithFeedback = function removeMentionRa
 ) {
   _require = arg0;
   dependencyMap = arg2;
-  const guild = GuildStore.getGuild(arg0);
+  guild = GuildStore.getGuild(arg0);
   let canResult = null != guild;
   if (canResult) {
     canResult = PermissionStore.can(constants2.MANAGE_GUILD, guild);
@@ -368,7 +368,7 @@ export const removeMentionRaidRestrictionWithFeedback = function removeMentionRa
       });
       const HTTP = HTTPUtils.HTTP;
       const obj2 = { feedback_type: AutomodFeedback.Feedback.MENTION_RAID_REMOVE_RESTRICTION, decision_id };
-      HTTP.post({ url: React6.GUILD_AUTOMOD_CLEAR_MENTION_RAID(closure_0), rejectWithError: true });
+      HTTP.post({ url: closure_2_8.GUILD_AUTOMOD_CLEAR_MENTION_RAID(closure_0), rejectWithError: true });
       closure_2();
     });
     let obj = require("GuildAutomodActionActionCreators");

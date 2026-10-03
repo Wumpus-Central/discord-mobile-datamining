@@ -27,22 +27,22 @@ let closure_8 = async function _fetchAndUpdateSavedMessages() {
   const HTTP = HTTPUtils.HTTP;
   await HTTP.get({ url: constants.GET_SAVED_MESSAGES, rejectWithError: HTTPUtils.rejectWithMigratedError() });
   await closure_129_1(closure_129_2[5]).dispatch({ type: "SAVED_MESSAGES_UPDATE", savedMessages: [] });
-  await "HermesInternal";
+  await "IconComponent";
   closure_128_0 = value;
   const results = closure_128_0.body.results;
   closure_128_1 = results.map((message) => {
     let messageRecord = null;
     if (null != message.message) {
-      messageRecord = closure_1_0(5067).createMessageRecord(message.message);
-      const obj = closure_1_0(5067);
+      messageRecord = closure_1_0(5112).createMessageRecord(message.message);
+      const obj = closure_1_0(5112);
     }
-    const obj2 = { message: messageRecord, saveData: closure_1_0(7459).savedMessageDataToClient(message.save_data) };
+    const obj2 = { message: messageRecord, saveData: closure_1_0(7495).savedMessageDataToClient(message.save_data) };
     return obj2;
   });
   await closure_129_1(closure_129_2[5]).dispatch({ type: "SAVED_MESSAGES_UPDATE", savedMessages: closure_128_1 });
   { url: constants.GET_SAVED_MESSAGES, rejectWithError: HTTPUtils.rejectWithMigratedError() };
 };
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/saved_messages/SavedMessagesActions.tsx");
 

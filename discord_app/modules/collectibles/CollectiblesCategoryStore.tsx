@@ -87,7 +87,7 @@ Object.defineProperty(prototype, "isFetchingCategories", {
 prototype["isFetchingProduct"] = function isFetchingProduct(arg0) {
   let tmp = null != arg0;
   if (tmp) {
-    let state;
+    state = undefined;
     if (dependencyMap2[arg0] != null) {
       state = tmp3.state;
     }

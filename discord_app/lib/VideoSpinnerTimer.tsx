@@ -9,7 +9,7 @@ import RTCConnectionStore from "../stores/RTCConnectionStore.tsx";
 import VoiceStateStore from "../stores/VoiceStateStore.tsx";
 
 require = fn;
-const AnalyticEvents = fn(1074).AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 const map = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("lib/VideoSpinnerTimer.tsx");

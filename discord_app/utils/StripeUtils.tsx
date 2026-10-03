@@ -1,8 +1,9 @@
 // discord_app/utils/StripeUtils.tsx
 import LoggerDefault from "../modules/debug/Logger.tsx";
 import initialize from "../../discord_common/js/packages/flux/index.tsx";
+import c from "../../_runtime/00576_c.js";
 import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import _mod5374 from "../../_runtime/metro/05374__.js";
+import _mod5420 from "../../_runtime/metro/05420__.js";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../_runtime/metro/00032__.js";
 import LocaleStore from "../modules/user_settings/LocaleStore.tsx";
@@ -12,7 +13,7 @@ function getStripe() {
   if (null != React2) {
     let resolved = Promise.resolve(React2);
   } else {
-    const stripe = _mod5374.loadStripe(constants.STRIPE.KEY);
+    const stripe = _mod5420.loadStripe(constants.STRIPE.KEY);
     resolved = stripe.then((result) => {
       closure_2 = result;
       return result;
@@ -31,7 +32,7 @@ let closure_11 = async function _authenticatePaymentIntentForPaymentId(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -202,7 +203,7 @@ let closure_11 = async function _authenticatePaymentIntentForPaymentId(arg0) {
     }
   }
 };
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ Endpoints: metroRequire, PaymentSettings: closure_7 } = Constants);
 const logger = new LoggerDefault("StripeUtils");
 let closure_9 = {
@@ -214,6 +215,15 @@ let closure_9 = {
   SUCCEEDED: "succeeded",
 };
 let closure_12 = { "en-US": "en", "zh-CN": "zh", "sv-SE": "sv" };
+const ReactCompilerGating = fn(558);
+const tmp3 = new LoggerDefault("StripeUtils");
+function getStripeElementLocale(arg0) {
+  let tmp = closure_12[arg0];
+  if (tmp == null) {
+    tmp = arg0;
+  }
+  return tmp;
+}
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/StripeUtils.tsx");
 
@@ -389,21 +399,37 @@ export const authenticatePaymentIntentForPaymentId = function authenticatePaymen
   }
   return applyArgumentsResult;
 };
-export const getStripeElementLocale = function getStripeElementLocale(arg0) {
-  let tmp = closure_12[arg0];
-  if (tmp == null) {
-    tmp = arg0;
-  }
-  return tmp;
-};
-export const useStripeLocale = function useStripeLocale() {
-  const items = [LocaleStore];
-  return initialize.useStateFromStores(items, () => {
-    locale = locale.locale;
-    let tmp = closure_1_12[locale];
-    if (tmp == null) {
-      tmp = locale;
+export { getStripeElementLocale };
+export const useStripeLocale = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = c.c(2);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const items = [LocaleStore];
+        const fn = function t() {
+          locale = locale.locale;
+          let tmp = closure_1_12[locale];
+          if (tmp == null) {
+            tmp = locale;
+          }
+          return tmp;
+        };
+        cResult[0] = items;
+        cResult[1] = fn;
+        tmp4 = items;
+        tmp5 = fn;
+      } else {
+        [tmp4, tmp5] = cResult;
+      }
+      return initialize.useStateFromStores(tmp4, tmp5);
     }
-    return tmp;
-  });
-};
+  : () => {
+      const items = [LocaleStore];
+      return initialize.useStateFromStores(items, () => {
+        locale = locale.locale;
+        let tmp = closure_1_12[locale];
+        if (tmp == null) {
+          tmp = locale;
+        }
+        return tmp;
+      });
+    };

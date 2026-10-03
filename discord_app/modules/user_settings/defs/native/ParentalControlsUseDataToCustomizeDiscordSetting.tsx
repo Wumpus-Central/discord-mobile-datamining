@@ -5,17 +5,17 @@ import useParentalControlSettings from "../../../parent_tools/hooks/useParentalC
 import FamilyCenterStore from "../../../parent_tools/FamilyCenterStore.tsx";
 
 require = fn;
-const Consents = fn(1074).Consents;
-const SettingBuilders = fn(11215);
+const Consents = fn(1085).Consents;
+let ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
+const SettingBuilders = fn(11129);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.MNKzyg);
   },
-  parent: fn(7590).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
-  useValue: function useDataToCustomizeDiscordSettingValue() {
-    return useParentalControlSettings.useParentalControlledConsent(Consents.PERSONALIZATION).hasConsented;
-  },
+  parent: fn(7634).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  useValue: () => useParentalControlSettings.useParentalControlledConsent(Consents.PERSONALIZATION).hasConsented,
   onValueChange: function handlePersonalizationChange(arg0) {
     const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
     if (null != selectedTeenId) {
@@ -35,7 +35,7 @@ const toggle = SettingBuilders.createToggle({
   },
 });
 const size = fn(2);
-const result = size.fileFinishedImporting(
+const result1 = size.fileFinishedImporting(
   "modules/user_settings/defs/native/ParentalControlsUseDataToCustomizeDiscordSetting.tsx",
 );
 

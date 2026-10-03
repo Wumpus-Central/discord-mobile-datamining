@@ -1,6 +1,6 @@
 // discord_app/modules/guild_onboarding/GuildOnboardingPromptsConstants.tsx
 import util from "../../intl/index.native.tsx";
-import _modDef1331 from "../../../_runtime/metro/01331__.js";
+import _modDef1342 from "../../../_runtime/metro/01342__.js";
 import StringUtils from "../../utils/StringUtils.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -17,7 +17,7 @@ function serverPromptToClientPrompt(id) {
     inOnboarding: id.in_onboarding,
     type: id.type,
   };
-  const options = id.options;
+  options = id.options;
   obj.options = options.map((id) => {
     const obj = {
       id: id.id,
@@ -75,7 +75,7 @@ function validateOnboardingConnection(connection_type) {
 }
 let closure_3 = ["id"];
 let closure_4 = ["id"];
-const PlatformTypes = fn(1074).PlatformTypes;
+const PlatformTypes = fn(1085).PlatformTypes;
 const OnboardingPromptType = { MULTIPLE_CHOICE: 0, [0]: "MULTIPLE_CHOICE", DROPDOWN: 1, [1]: "DROPDOWN" };
 let obj2 = { APPLICATION: 0, [0]: "APPLICATION", PROVIDER_CONNECTED_ACCOUNT: 1, [1]: "PROVIDER_CONNECTED_ACCOUNT" };
 let items = [, , , , , , ,];
@@ -139,7 +139,7 @@ export const isDefaultPrompt = function isDefaultPrompt(options) {
     const id = obj.id;
     const id2 = options.id;
     const tmp7 = _objectWithoutProperties(obj, closure_3);
-    return _modDef1331(tmp7, _objectWithoutProperties(options, closure_4));
+    return _modDef1342(tmp7, _objectWithoutProperties(options, closure_4));
   }
 };
 export const getDefaultPrompt = function getDefaultPrompt() {
@@ -181,7 +181,7 @@ export const clientPromptToServerPrompt = function clientPromptToServerPrompt(id
     in_onboarding: id.inOnboarding,
     type: id.type,
   };
-  const options = id.options;
+  options = id.options;
   obj.options = options.map((id) => {
     const obj = {
       id: id.id,

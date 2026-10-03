@@ -2,7 +2,7 @@
 import _modDef12 from "../../_runtime/metro/00012__.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
-import _modDef1331 from "../../_runtime/metro/01331__.js";
+import _modDef1342 from "../../_runtime/metro/01342__.js";
 import FlagUtils from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 import UserSettings from "../modules/user_settings/UserSettings.tsx";
 import LibraryApplicationUtils from "../utils/LibraryApplicationUtils.tsx";
@@ -139,7 +139,7 @@ function handleUpdate() {
       found = activities.filter(shouldShowActivity);
     }
     let flag = false;
-    if (!_modDef1331(found, found)) {
+    if (!_modDef1342(found, found)) {
       closure_21 = filterPlayingActivities(found);
       flag = true;
     }
@@ -178,8 +178,8 @@ function handleConnectionOpen() {
   handleUpdate();
   const result = PresenceStore.setCurrentUserOnConnectionOpen(IDLE, valueResult);
 }
-const sortActivity = fn(4885).sortActivity;
-const Constants = fn(1074);
+const sortActivity = fn(4930).sortActivity;
+const Constants = fn(1085);
 const StatusTypes = Constants.StatusTypes;
 ({ ActivityFlags: map1, ActivityTypes: closure_14, AppStates: closure_15 } = Constants);
 let c16 = false;
@@ -246,13 +246,13 @@ prototype["getApplicationActivity"] = function getApplicationActivity(arg0) {
   }
   return this.findActivity((application_id) => application_id.application_id === closure_0, flag);
 };
-prototype["findActivity"] = function findActivity(_messages) {
+prototype["findActivity"] = function findActivity(cResult) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = true;
   }
   activities = this.getActivities(flag);
-  return activities.find(_messages);
+  return activities.find(cResult);
 };
 SelfPresenceStore.displayName = "SelfPresenceStore";
 const selfPresenceStore = new SelfPresenceStore(DispatcherDefault, {

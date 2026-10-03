@@ -58,15 +58,15 @@ export const UserSettingsDelay = {
 export const createEmptyEditInfo = function createEmptyEditInfo() {
   const obj = {
     protoToSave: "Array",
-    timeout: "flex",
+    timeout: "Reflect",
     timeoutDelay: Number.MIN_SAFE_INTEGER,
     rateLimited: null,
     cleanupFuncs: [],
     errorCallbacks: [],
     loaded: false,
-    loading: "channel",
-    triggeredMigrations: "VOICE_BYPASS_SYSTEM_AUDIO_INPUT_PROCESSING",
-    offlineEditDataVersion: "\u{1F919}",
+    loading: "ix",
+    triggeredMigrations: true,
+    offlineEditDataVersion: true,
   };
   return obj;
 };

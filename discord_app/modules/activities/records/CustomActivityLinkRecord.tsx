@@ -1,6 +1,5 @@
 // discord_app/modules/activities/records/CustomActivityLinkRecord.tsx
 import ApplicationAssetUtils from "../../../utils/ApplicationAssetUtils.tsx";
-import CustomActivityLinkUtils from "../utils/CustomActivityLinkUtils.tsx";
 import utils_CustomActivityLinkUtils from "../../../../discord_common/js/shared/activities/utils/CustomActivityLinkUtils.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -39,8 +38,15 @@ CustomActivityLinkRecord.prototype["getAssetURL"] = function getAssetURL() {
     let assetImage = ApplicationAssetUtils.getAssetImage(self.applicationId, self.assetId, 512);
     const tmpResult = ApplicationAssetUtils;
   } else if (self.type === utils_CustomActivityLinkUtils.CustomLinkType.QUICK) {
-    assetImage = CustomActivityLinkUtils.getQuickLinkImage(self.assetPath);
-    const tmpResult2 = CustomActivityLinkUtils;
+    const assetPath = self.assetPath;
+    let combined;
+    if (null != assetPath) {
+      const _location = location;
+      const _window = window;
+      const _HermesInternal = HermesInternal;
+      combined = "" + location.protocol + "//" + window.GLOBAL_ENV.CDN_HOST + "/attachments-quick-links/" + assetPath;
+    }
+    assetImage = combined;
   }
   return assetImage;
 };

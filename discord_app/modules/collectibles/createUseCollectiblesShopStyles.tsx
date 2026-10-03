@@ -1,6 +1,6 @@
 // discord_app/modules/collectibles/createUseCollectiblesShopStyles.tsx
 import useStateFromStores from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import tinycolorDefault from "../../../_runtime/07160_tinycolor.js";
+import tinycolorDefault from "../../../_runtime/07063_tinycolor.js";
 import UserProfileGradientUtils from "../user_profile/UserProfileGradientUtils.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import AccessibilityStore from "../a11y/AccessibilityStore.tsx";

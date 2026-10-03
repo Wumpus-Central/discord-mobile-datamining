@@ -1,13 +1,16 @@
 // discord_app/modules/user_settings/defs/native/DismissibleBadgeUtils.tsx
+import c from "../../../../../_runtime/00576_c.js";
 import DismissiblePremiumNewBadgeDefault from "DismissiblePremiumNewBadge.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const require = fn;
+const require = globalThis.__r;
+
+require = fn;
 function useAlwaysShow() {
   return true;
 }
-const ContentDismissActionType = fn(2041).ContentDismissActionType;
+const ContentDismissActionType = fn(2048).ContentDismissActionType;
 const jsx = fn(21).jsx;
 let closure_7 = [];
 const size = fn(2);
@@ -40,14 +43,26 @@ export function createDismissibleBadgePreNavigationAction(TINY_BRONCO_SETTINGS) 
     }, items1);
   };
 }
-export function createDismissibleBadgeRouteProps(CUSTOM_APP_ICONS_NEW_BADGE) {
-  const dismissibleContent = CUSTOM_APP_ICONS_NEW_BADGE;
+export const createDismissibleBadgeRouteProps = function createDismissibleBadgeRouteProps(CUSTOM_APP_ICONS_NEW_BADGE) {
+  _require = CUSTOM_APP_ICONS_NEW_BADGE;
+  const obj = require("ReactCompilerGating");
   closure_129_0 = CUSTOM_APP_ICONS_NEW_BADGE;
   closure_129_1 = useAlwaysShow;
   return {
-    useTrailing() {
-      return jsx(DismissiblePremiumNewBadgeDefault, { dismissibleContent, newPremiumStyle: true });
-    },
+    useTrailing: require("ReactCompilerGating").isReactCompilerEnabled()
+      ? () => {
+          const cResult = c.c(1);
+          if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+            const obj2 = { dismissibleContent, newPremiumStyle: true };
+            const tmp7 = jsx(DismissiblePremiumNewBadgeDefault, { dismissibleContent, newPremiumStyle: true });
+            cResult[0] = tmp7;
+            let first = tmp7;
+          } else {
+            first = cResult[0];
+          }
+          return first;
+        }
+      : () => jsx(DismissiblePremiumNewBadgeDefault, { dismissibleContent, newPremiumStyle: true }),
     usePreNavigationAction: () => {
       const tmp = closure_1();
       if (tmp) {
@@ -68,4 +83,4 @@ export function createDismissibleBadgeRouteProps(CUSTOM_APP_ICONS_NEW_BADGE) {
       }, items1);
     },
   };
-}
+};

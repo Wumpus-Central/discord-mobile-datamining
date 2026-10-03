@@ -1,5 +1,5 @@
 // discord_common/js/shared/utils/TypedEventEmitter.tsx
-import _mod568 from "../../../../_runtime/metro/00568__.js";
+import _mod580 from "../../../../_runtime/metro/00580__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/utils/TypedEventEmitter.tsx");

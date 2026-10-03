@@ -1,7 +1,7 @@
 // discord_app/modules/feedback/FeedbackOverrideStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
-import feedback_FeedbackManager from "FeedbackManager.tsx";
+import FeedbackConfig from "FeedbackConfig.tsx";
 
 require = fn;
 let closure_2 = {};
@@ -19,7 +19,7 @@ const hotspotStore = new HotspotStore(DispatcherDefault, {
     feedbackType = feedbackType.feedbackType;
     const obj = {};
     ({ cooldown, chance } = feedbackType);
-    const merged = Object.assign(feedback_FeedbackManager.FeedbackConfig[feedbackType]);
+    const merged = Object.assign(FeedbackConfig.FeedbackConfig[feedbackType]);
     obj.cooldown = cooldown;
     obj.chance = chance;
     closure_2[feedbackType] = obj;

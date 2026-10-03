@@ -10,18 +10,86 @@ const items = [
       "A Priority toggle arrives in the model picker: on models that offer it, replies come back sooner for more runes, and the Speedrun stop now runs it by default.",
   },
   {
-    date: "2026-09-28",
-    time: "19:34",
-    platforms: ["desktop", "mobile"],
-    summary:
-      "A clone of another project, or one you link to another app, goes straight to building instead of asking you to approve a plan.",
-  },
-  {
     date: "2026-09-11",
     time: "00:00",
     platforms: ["desktop", "mobile"],
     summary:
-      "A new Rust Sphere recipe: a spinning, lit 3D globe drawn by Rust running as WebAssembly, ready to clone into your own renderer.",
+      "A new Rust Sphere recipe: a spinning, lit 3D globe drawn by Rust running as WebAssembly, ready to remix into your own renderer.",
+  },
+  {
+    date: "2026-09-28",
+    time: "19:34",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "A remix of another project, or one you link to another app, goes straight to building instead of asking you to approve a plan.",
+  },
+  {
+    date: "2026-10-02",
+    time: "07:34",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "AutoMod plans show an AutoMod Rule badge and, in place of a wireframe, a few sample messages grouped under Blocked, Alerts mods and Allowed; the rule is named for what it enforces.",
+  },
+  {
+    date: "2026-10-01",
+    time: "00:00",
+    platforms: ["desktop", "mobile"],
+    summary: "Clone is called Remix again: same button, same copy of the app to make your own.",
+  },
+  {
+    date: "2026-09-06",
+    time: "00:01",
+    platforms: ["desktop"],
+    summary:
+      "Collaborators on an app shared with their server can now remix it into a copy of their own, with no need for the owner to turn sharing on first.",
+  },
+  {
+    date: "2026-10-02",
+    time: "01:08",
+    platforms: ["desktop", "mobile"],
+    summary:
+      'Key cards say "Keys received" once your keys are saved, and an older card folds away when Conjure asks for them again.',
+  },
+  {
+    date: "2026-09-15",
+    time: "00:00",
+    platforms: ["mobile"],
+    summary:
+      "On phones, a project has the same menu as desktop: remix it, export or import it, get its coding tool link, browse version history and rewind its data from the chat menu, and copy its link or ID, open its settings or delete it from the landing.",
+  },
+  {
+    date: "2026-09-12",
+    time: "00:00",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "Plans for an app you imported or remixed no longer invent a wireframe sketch: the sketch is reserved for brand-new apps that have no screens yet.",
+  },
+  {
+    date: "2026-10-01",
+    time: "23:37",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "Reminders to update your live app or ask for ideas now wait for a quiet minute, show one at a time, and stay out of the way while you keep building.",
+  },
+  {
+    date: "2026-09-03",
+    time: "00:01",
+    platforms: ["desktop"],
+    summary: "Remix an app and Conjure builds your copy first, so the ideas it suggests are ones you can try.",
+  },
+  {
+    date: "2026-09-06",
+    time: "00:00",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "Remixed an app? When the original improves, Conjure offers to update your copy while keeping every change you made, only checking with you on the rare spot it cannot keep both. You can also ask it to inherit updates from another app by its project id, even for a project you imported rather than remixed.",
+  },
+  {
+    date: "2026-09-25",
+    time: "15:51",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "Remixing an app shows your copy running in a few seconds, before Conjure has even finished looking it over.",
   },
   {
     date: "2026-09-29",
@@ -147,38 +215,11 @@ const items = [
       "Claude Opus 5.5 now powers the Big Brain effort stop, and each effort stop runs the same models in every project.",
   },
   {
-    date: "2026-09-03",
-    time: "00:01",
-    platforms: ["desktop"],
-    summary: "Clone an app and Conjure builds your copy first, so the ideas it suggests are ones you can try.",
-  },
-  {
-    date: "2026-09-06",
-    time: "00:00",
-    platforms: ["desktop", "mobile"],
-    summary:
-      "Cloned an app? When the original improves, Conjure offers to update your copy while keeping every change you made, only checking with you on the rare spot it cannot keep both. You can also ask it to inherit updates from another app by its project id, even for a project you imported rather than cloned.",
-  },
-  {
     date: "2026-09-27",
     time: "09:51",
     platforms: ["desktop", "mobile"],
     summary:
       "Coding tools you connect to an app can now search and script its files, read the Mana docs, set its settings, public pages and icon, use your uploads, and bring in updates from the original, and a broken manifest edit is caught before it deploys.",
-  },
-  {
-    date: "2026-09-25",
-    time: "15:51",
-    platforms: ["desktop", "mobile"],
-    summary:
-      "Cloning an app shows your copy running in a few seconds, before Conjure has even finished looking it over.",
-  },
-  {
-    date: "2026-09-06",
-    time: "00:01",
-    platforms: ["desktop"],
-    summary:
-      "Collaborators on an app shared with their server can now clone it for themselves, with no need for the owner to turn sharing on first.",
   },
   {
     date: "2026-09-28",
@@ -218,6 +259,12 @@ const items = [
     platforms: ["desktop", "mobile"],
     summary:
       "Conjure now tells you when it finishes or needs your answer, even after you step away, and marks those projects in your list, calling out the ones waiting on you.",
+  },
+  {
+    date: "2026-10-02",
+    time: "01:29",
+    platforms: ["desktop", "mobile"],
+    summary: "Conjure sometimes reacts to your messages with an emoji when something you say lands.",
   },
   {
     date: "2026-09-26",
@@ -263,6 +310,13 @@ const items = [
     time: "01:17",
     platforms: ["desktop"],
     summary: "Drop images and files anywhere on the chat to bring them along, not just onto the message box.",
+  },
+  {
+    date: "2026-10-01",
+    time: "05:02",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "Each call Conjure makes to a connected tool service names the tool and service again, under its plain-words label.",
   },
   {
     date: "2026-09-30",
@@ -321,6 +375,12 @@ const items = [
     time: "00:00",
     platforms: ["desktop", "mobile"],
     summary: "Hand a project to a whole role in settings, rather than adding one person at a time.",
+  },
+  {
+    date: "2026-10-02",
+    time: "01:33",
+    platforms: ["desktop", "mobile"],
+    summary: "Helpers join a build only when you ask for them, and up to six can work side by side.",
   },
   {
     date: "2026-09-10",
@@ -397,6 +457,20 @@ const items = [
     summary: "Moderation Bot now starts with a short wizard, builds straight away, then tells you how to test it.",
   },
   {
+    date: "2026-10-03",
+    time: "00:37",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "Multiplayer games you build can keep every player in sync, with the match running live on a server while people play.",
+  },
+  {
+    date: "2026-10-01",
+    time: "14:16",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "Mute a project from its menu to stop its unread badges and notifications; right-click it on desktop or hold it on phones.",
+  },
+  {
     date: "2026-09-25",
     time: "17:34",
     platforms: ["desktop"],
@@ -449,13 +523,6 @@ const items = [
     platforms: ["mobile"],
     summary:
       "On phones, a conjured card on your own profile has a refresh button, so a fresh build shows up without waiting.",
-  },
-  {
-    date: "2026-09-15",
-    time: "00:00",
-    platforms: ["mobile"],
-    summary:
-      "On phones, a project has the same menu as desktop: clone it, export or import it, get its coding tool link, browse version history and rewind its data from the chat menu, and copy its link or ID, open its settings or delete it from the landing.",
   },
   {
     date: "2026-09-18",
@@ -622,6 +689,13 @@ const items = [
       "Once your app is live, a small tip under Conjure's latest reply says when the live version is out of date, with a link to update it.",
   },
   {
+    date: "2026-10-01",
+    time: "18:25",
+    platforms: ["desktop"],
+    summary:
+      "Once your server app is live, the builder\u2019s Open button shows its channel\u2019s own icon in place of the #.",
+  },
+  {
     date: "2026-09-02",
     time: "00:04",
     platforms: ["desktop", "mobile"],
@@ -690,17 +764,17 @@ const items = [
       "Plan cards now say Conjure it! on the button, with a reminder beside it that you can tell Conjure what to change.",
   },
   {
+    date: "2026-10-01",
+    time: "18:28",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "Plan feedback gets you a fresh plan card that says what changed, and the older plan folds up so you can still open it.",
+  },
+  {
     date: "2026-08-31",
     time: "00:03",
     platforms: ["desktop", "mobile"],
     summary: "Plan proposals come with a wireframe sketch, so you can see the shape of the app before you say go.",
-  },
-  {
-    date: "2026-09-12",
-    time: "00:00",
-    platforms: ["desktop", "mobile"],
-    summary:
-      "Plans for an app you imported or cloned no longer invent a wireframe sketch: the sketch is reserved for brand-new apps that have no screens yet.",
   },
   {
     date: "2026-09-27",
@@ -722,6 +796,13 @@ const items = [
     platforms: ["desktop", "mobile"],
     summary:
       "Publish now tells you which server permissions you're missing when you can't publish an app into its server.",
+  },
+  {
+    date: "2026-10-01",
+    time: "16:44",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "Published apps in app channels get the same app view, chat, and Edit App controls as other published apps.",
   },
   {
     date: "2026-09-01",
@@ -748,6 +829,13 @@ const items = [
     time: "20:30",
     platforms: ["desktop"],
     summary: "Restore this version is in the More menu when you hover a Conjure reply, as well as on right-click.",
+  },
+  {
+    date: "2026-10-02",
+    time: "18:36",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "Select to edit has new art: a fresh header button and, on desktop, a pointer that stays clear on light and dark apps.",
   },
   {
     date: "2026-09-25",
@@ -806,6 +894,13 @@ const items = [
       "The Conjuring MCP panel now gives you an Authorization header to add alongside the link, so the link itself no longer carries your key.",
   },
   {
+    date: "2026-10-01",
+    time: "01:21",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "The agent can batch several workspace and MCP tool calls into one short script, so multi-step checks and lookups finish in a single step.",
+  },
+  {
     date: "2026-09-09",
     time: "00:00",
     platforms: ["desktop"],
@@ -844,6 +939,12 @@ const items = [
     time: "00:00",
     platforms: ["desktop"],
     summary: "The create screen greets you with a little more magic.",
+  },
+  {
+    date: "2026-09-29",
+    time: "20:59",
+    platforms: ["desktop", "mobile"],
+    summary: "The create screen shows how many app slots you have left.",
   },
   {
     date: "2026-09-28",
@@ -901,6 +1002,13 @@ const items = [
     time: "00:00",
     platforms: ["desktop", "mobile"],
     summary: "The rune usage panel now shows Deciding, the quick checks that keep an eye on your builds.",
+  },
+  {
+    date: "2026-10-01",
+    time: "05:13",
+    platforms: ["desktop"],
+    summary:
+      "The settings form above the chat box now matches the question panel, and its channel list opens in full instead of being cut off.",
   },
   {
     date: "2026-09-18",
@@ -986,10 +1094,23 @@ const items = [
       "While Conjure is using your Frame, it now says why your clicks are paused and offers to open your published app, which stays yours to play.",
   },
   {
+    date: "2026-10-01",
+    time: "04:39",
+    platforms: ["desktop", "mobile"],
+    summary:
+      "While Conjure tests your app, its bar now sits above the Frame instead of over it, so your app\u2019s header stays in view. On phones and narrow windows the bar stays on one line, with Stop on the right.",
+  },
+  {
     date: "2026-09-16",
     time: "00:01",
     platforms: ["mobile"],
     summary: "While Conjure works on your phone, a side quest may be offered when a video quest is available.",
+  },
+  {
+    date: "2026-09-29",
+    time: "20:42",
+    platforms: ["desktop", "mobile"],
+    summary: "While you have a project open, your status shows Conjuring so friends can see what you are up to.",
   },
   {
     date: "2026-09-12",

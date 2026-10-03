@@ -6,7 +6,7 @@ require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rich_presence/PresenceActivityFiltering.tsx");
 
-export const doesGameHaveRichPresence = function doesGameHaveRichPresence(visibleGame, items2) {
+export const doesGameHaveRichPresence = function doesGameHaveRichPresence(visibleGame, items3) {
   if (null !== visibleGame.id) {
     if (undefined !== visibleGame.id) {
       const application = ApplicationStore.getApplication(visibleGame.id);
@@ -22,7 +22,7 @@ export const doesGameHaveRichPresence = function doesGameHaveRichPresence(visibl
             let tmp = type.type === Server.GameLinkTypes.LINKED;
             if (tmp) {
               const id = type.id;
-              tmp = null != items2.find((application_id) => application_id.application_id === id);
+              tmp = null != items3.find((application_id) => application_id.application_id === id);
             }
             return tmp;
           });

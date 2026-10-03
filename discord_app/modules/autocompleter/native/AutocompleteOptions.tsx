@@ -13,20 +13,20 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 import apply from "../../../../_runtime/metro/00012__.js";
 
 require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AutoCompleteResultTypes: c10, MAX_AUTOCOMPLETE_RESULTS: closure_11 } = Constants);
-const ChannelAutocompleteConstants = fn(5490);
+const ChannelAutocompleteConstants = fn(5789);
 ({
   MENTION_SENTINEL: closure_12,
   EMOJI_SENTINEL: map1,
   CHANNEL_SENTINEL: closure_14,
   COMMAND_SENTINEL: closure_15,
 } = ChannelAutocompleteConstants);
-const AutocompleteTypes = fn(10080).AutocompleteTypes;
-const EmojiConstants = fn(1375);
+const AutocompleteTypes = fn(10153).AutocompleteTypes;
+const EmojiConstants = fn(1380);
 ({ EmojiIntention: closure_17, EMOJI_MAX_LENGTH: closure_18, EMOJI_URL_BASE_SIZE: closure_19 } = EmojiConstants);
 let c20 = false;
-const executeCommand = apply.debounce(executeCommandDefault, fn(5489).AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, {
+const executeCommand = apply.debounce(executeCommandDefault, fn(5788).AUTOCOMPLETE_OPTION_DEBOUNCE_TIME, {
   leading: true,
   trailing: true,
 });
@@ -268,7 +268,7 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
         const isPrivateResult = channel.isPrivate();
         let matchSentinelResult = !isPrivateResult;
         if (!isPrivateResult) {
-          matchSentinelResult = AutocompleteUtilsDefault.matchSentinel(arg0, arg1, closure_2_14);
+          matchSentinelResult = AutocompleteUtilsDefault.matchSentinel(arg0, arg1, state);
         }
         return matchSentinelResult;
       },
@@ -307,7 +307,7 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
                 const stickerPacks = StickersActionCreators.fetchStickerPacks();
               }
               const items2 = [query];
-              const items3 = [channel, (arg0, arg1) => arg1 === channel(6942).StickerSendability.SENDABLE];
+              const items3 = [channel, (arg0, arg1) => arg1 === channel(6840).StickerSendability.SENDABLE];
               items1 = AutocompleteUtilsDefault.queryStickers(items2, true, items3);
               const tmp2Result = AutocompleteUtilsDefault;
             }
@@ -322,8 +322,8 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
                     const obj4 = { id: null, animated: null, size: null };
                     ({ id: obj3.id, animated: obj3.animated } = name);
                     obj4.size = size;
-                    let url = flag(1397).getEmojiURL(obj4);
-                    const obj2 = flag(1397);
+                    let url = flag(1402).getEmojiURL(obj4);
+                    const obj2 = flag(1402);
                   } else {
                     url = name.url;
                   }
@@ -374,7 +374,7 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
       matches(arg0, arg1, arg2) {
         let tmp = 0 === arg2;
         if (tmp) {
-          tmp = arg0 === __initData;
+          tmp = arg0 === closure_2_15;
         }
         if (tmp) {
           let tmp4 = flag;
@@ -396,7 +396,7 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
           tmp = 0 === arg2;
         }
         if (tmp) {
-          tmp = arg0 === __initData;
+          tmp = arg0 === closure_2_15;
         }
         if (tmp) {
           tmp = 0 === arg1.length;

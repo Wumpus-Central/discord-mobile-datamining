@@ -71,7 +71,7 @@ function _maybeFetchDefaultSounds() {
   }
 }
 function _maybeFetchGuildSoundboardSounds() {
-  const guildIdsToFetchSoundsFor = SOUNDBOARD_SOUNDS_RECEIVED(6945).getGuildIdsToFetchSoundsFor();
+  const guildIdsToFetchSoundsFor = SOUNDBOARD_SOUNDS_RECEIVED(6843).getGuildIdsToFetchSoundsFor();
   if (0 === guildIdsToFetchSoundsFor.length) {
     return Promise.resolve();
   } else {
@@ -89,7 +89,7 @@ function _maybeFetchGuildSoundboardSounds() {
     DispatcherDefault.dispatch(obj4);
     return promise;
   }
-  const obj = SOUNDBOARD_SOUNDS_RECEIVED(6945);
+  const obj = SOUNDBOARD_SOUNDS_RECEIVED(6843);
 }
 let closure_14 = async function _maybeFetchSoundboardSounds(arg0) {
   let disableAnalytics = arg0;
@@ -130,53 +130,198 @@ let closure_14 = async function _maybeFetchSoundboardSounds(arg0) {
     return closure_130_2;
   })();
 };
-let closure_15 = async function _uploadSound() {
-  closure_1 = tmp2;
-  ({
-    guildId: closure_129_0,
-    name: closure_129_1,
-    sound: closure_129_2,
-    volume: closure_129_3,
-    emojiId: closure_129_4,
-    emojiName: closure_129_5,
-  } = closure_0);
-  await "flex";
-  const HTTP = closure_130_0(closure_130_2[5]).HTTP;
-  const request = {
-    url: closure_130_6.GUILD_SOUNDBOARD_SOUNDS(closure_129_0),
-    body: {
-      name: closure_129_1,
-      sound: closure_129_2,
-      volume: closure_129_3,
-      emoji_id: closure_129_4,
-      emoji_name: closure_129_5,
-    },
-    rejectWithError: closure_130_0(closure_130_2[5]).rejectWithMigratedError(),
-  };
-  await HTTP.post(request);
-  closure_129_6 = value;
-  return closure_130_0(closure_130_2[6]).soundboardSoundFromAPI(closure_129_6.body, closure_129_0);
+let closure_15 = async function _uploadSound(arg0) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: "IconComponent" };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_2 = tmp5;
+          closure_1 = tmp2;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          closure_129_3 = undefined;
+          closure_129_4 = undefined;
+          closure_129_5 = undefined;
+          ({
+            guildId: closure_129_0,
+            name: closure_129_1,
+            sound: closure_129_2,
+            volume: closure_129_3,
+            emojiId: closure_129_4,
+            emojiName: closure_129_5,
+          } = closure_0);
+          closure_129_6 = undefined;
+          c3 = 1;
+          c4 = 1;
+          return { value: "Reflect", done: true };
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          const HTTP = closure_130_0(closure_130_2[5]).HTTP;
+          const request = {
+            url: closure_130_6.GUILD_SOUNDBOARD_SOUNDS(closure_129_0),
+            body: null,
+            rejectWithError: null,
+          };
+          const obj5 = {
+            name: closure_129_1,
+            sound: closure_129_2,
+            volume: closure_129_3,
+            emoji_id: closure_129_4,
+            emoji_name: closure_129_5,
+          };
+          request.body = obj5;
+          request.rejectWithError = closure_130_0(closure_130_2[5]).rejectWithMigratedError();
+          c3 = 2;
+          c4 = 1;
+          const obj6 = { value: HTTP.post(request), done: false };
+          return obj6;
+        }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        const obj7 = { value, done: true };
+        return obj7;
+      } else {
+        closure_129_6 = value;
+        c4 = 3;
+        const obj8 = {
+          value: closure_130_0(closure_130_2[6]).soundboardSoundFromAPI(closure_129_6.body, closure_129_0),
+          done: true,
+        };
+        return obj8;
+      }
+    } catch (tmp12) {
+      c4 = tmp;
+      throw tmp12;
+    }
+  }
 };
-let closure_16 = async function _updateSound() {
-  closure_1 = tmp2;
-  ({
-    guildId: closure_129_0,
-    soundId: closure_129_1,
-    name: closure_129_2,
-    volume: closure_129_3,
-    emojiId: closure_129_4,
-    emojiName: closure_129_5,
-  } = closure_0);
-  await "flex";
-  const HTTP = closure_130_0(closure_130_2[5]).HTTP;
-  const request = {
-    url: closure_130_6.GUILD_SOUNDBOARD_SOUND(closure_129_0, closure_129_1),
-    body: { name: closure_129_2, volume: closure_129_3, emoji_id: closure_129_4, emoji_name: closure_129_5 },
-    rejectWithError: closure_130_0(closure_130_2[5]).rejectWithMigratedError(),
-  };
-  await HTTP.patch(request);
-  closure_129_6 = value;
-  return closure_130_0(closure_130_2[6]).soundboardSoundFromAPI(closure_129_6.body, closure_129_0);
+let closure_16 = async function _updateSound(arg0) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: "IconComponent" };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_2 = tmp5;
+          closure_1 = tmp2;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          closure_129_3 = undefined;
+          closure_129_4 = undefined;
+          closure_129_5 = undefined;
+          ({
+            guildId: closure_129_0,
+            soundId: closure_129_1,
+            name: closure_129_2,
+            volume: closure_129_3,
+            emojiId: closure_129_4,
+            emojiName: closure_129_5,
+          } = closure_0);
+          closure_129_6 = undefined;
+          c3 = 1;
+          c4 = 1;
+          return { value: "Reflect", done: true };
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          const HTTP = closure_130_0(closure_130_2[5]).HTTP;
+          const request = {
+            url: closure_130_6.GUILD_SOUNDBOARD_SOUND(closure_129_0, closure_129_1),
+            body: null,
+            rejectWithError: null,
+          };
+          const obj5 = {
+            name: closure_129_2,
+            volume: closure_129_3,
+            emoji_id: closure_129_4,
+            emoji_name: closure_129_5,
+          };
+          request.body = obj5;
+          request.rejectWithError = closure_130_0(closure_130_2[5]).rejectWithMigratedError();
+          c3 = 2;
+          c4 = 1;
+          const obj6 = { value: HTTP.patch(request), done: false };
+          return obj6;
+        }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        const obj7 = { value, done: true };
+        return obj7;
+      } else {
+        closure_129_6 = value;
+        c4 = 3;
+        const obj8 = {
+          value: closure_130_0(closure_130_2[6]).soundboardSoundFromAPI(closure_129_6.body, closure_129_0),
+          done: true,
+        };
+        return obj8;
+      }
+    } catch (tmp12) {
+      c4 = tmp;
+      throw tmp12;
+    }
+  }
 };
 let closure_17 = async function _deleteSound(arg0) {
   if (c2 === 2) {
@@ -189,7 +334,7 @@ let closure_17 = async function _deleteSound(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -223,7 +368,7 @@ let closure_17 = async function _deleteSound(arg0) {
         return obj;
       } else {
         c2 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp5) {
       c2 = tmp;
@@ -242,7 +387,7 @@ let closure_18 = async function _fetchSoundGuildData(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -306,10 +451,10 @@ let closure_18 = async function _fetchSoundGuildData(arg0) {
     }
   }
 };
-const DEFAULT_SOUND_GUILD_ID = fn(5505).DEFAULT_SOUND_GUILD_ID;
-const Constants = fn(1074);
+const DEFAULT_SOUND_GUILD_ID = fn(5682).DEFAULT_SOUND_GUILD_ID;
+const Constants = fn(1085);
 ({ Endpoints: metroRequire, AnalyticEvents: closure_7 } = Constants);
-const UserSettingsConstants = fn(1084);
+const UserSettingsConstants = fn(1095);
 ({ MAX_FAVORITES: closure_8, UserSettingsDelay: closure_9 } = UserSettingsConstants);
 let c10 = false;
 const size = fn(2);
@@ -362,8 +507,8 @@ export const addFavoriteSound = function addFavoriteSound(soundId) {
   FrecencyUserSettingsActionCreators.updateAsync(
     "favoriteSoundboardSounds",
     async (soundIds) => {
-      if (obj.size(soundIds.soundIds) < React6) {
-        if (tmpResult.size(soundIds.orderedSoundIds) < React6) {
+      if (obj.size(soundIds.soundIds) < count) {
+        if (tmpResult.size(soundIds.orderedSoundIds) < count) {
           const soundIds2 = soundIds.soundIds;
           const hasItem = soundIds2.includes(closure_0);
           let flag = !hasItem;
@@ -391,7 +536,7 @@ export const addFavoriteSound = function addFavoriteSound(soundId) {
       const intl = util.intl;
       obj2.title = intl.string(util.t["+XYXtZ"]);
       const intl2 = util.intl;
-      obj2.body = intl2.formatToPlainString(util.t.JaIyFi, { count: React6 });
+      obj2.body = intl2.formatToPlainString(util.t.JaIyFi, { count });
       AlertActionCreatorsDefault.show(obj2);
       flag = false;
       const tmpResult2 = AlertActionCreatorsDefault;

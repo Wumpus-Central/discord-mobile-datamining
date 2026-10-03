@@ -8,7 +8,7 @@ import GuildStore from "../../../../../stores/GuildStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
 
 const require = fn;
-const RelationshipTypes = fn(1074).RelationshipTypes;
+const RelationshipTypes = fn(1085).RelationshipTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting(

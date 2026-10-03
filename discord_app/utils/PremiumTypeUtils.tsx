@@ -29,10 +29,10 @@ function isPremium(premiumType, TIER_2) {
   }
   return tmp;
 }
-function isPremiumExactly(currentUser, TIER_2) {
-  let tmp = null != currentUser;
+function isPremiumExactly(stateFromStores, TIER_2) {
+  let tmp = null != stateFromStores;
   if (tmp) {
-    tmp = currentUser.premiumType === TIER_2;
+    tmp = stateFromStores.premiumType === TIER_2;
   }
   return tmp;
 }

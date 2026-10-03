@@ -83,15 +83,15 @@ const prototype = VoiceChannelBlockedUserStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(RelationshipStore, VoiceStateStore);
 };
-prototype["getBlockedUsersForVoiceChannel"] = function getBlockedUsersForVoiceChannel(channelId) {
-  let tmp = dependencyMap[channelId];
+prototype["getBlockedUsersForVoiceChannel"] = function getBlockedUsersForVoiceChannel(voiceStatesForChannelAlt) {
+  let tmp = dependencyMap[voiceStatesForChannelAlt];
   if (tmp == null) {
     tmp = set;
   }
   return tmp;
 };
-prototype["getIgnoredUsersForVoiceChannel"] = function getIgnoredUsersForVoiceChannel(channelId) {
-  let tmp = dependencyMap2[channelId];
+prototype["getIgnoredUsersForVoiceChannel"] = function getIgnoredUsersForVoiceChannel(voiceStatesForChannelAlt) {
+  let tmp = dependencyMap2[voiceStatesForChannelAlt];
   if (tmp == null) {
     tmp = set;
   }

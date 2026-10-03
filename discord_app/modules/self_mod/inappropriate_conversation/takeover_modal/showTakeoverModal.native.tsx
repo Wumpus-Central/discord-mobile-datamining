@@ -1,8 +1,8 @@
 // discord_app/modules/self_mod/inappropriate_conversation/takeover_modal/showTakeoverModal.native.tsx
-import asyncRequireImpl from "../../../../../_runtime/01981_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
-import SelfModInappropriateConversationExperiment from "../SelfModInappropriateConversationExperiment.tsx";
 import Constants from "../../Constants.tsx";
+import SelfModInappropriateConversationExperiment from "../SelfModInappropriateConversationExperiment.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const TAKEOVER_MODAL_KEY = Constants.TAKEOVER_MODAL_KEY;
@@ -14,7 +14,7 @@ export const showTakeoverModal = function showTakeoverModal(arg0) {
   ({ warningId, warningType, senderId, channelId } = arg0);
   if (obj.isEligibleForInappropriateConversationWarning({ location: "takeover-modal" })) {
     const obj3 = { warningId, warningType, senderId, channelId };
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15536, dependencyMap.paths), obj3, TAKEOVER_MODAL_KEY);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15598, dependencyMap.paths), obj3, TAKEOVER_MODAL_KEY);
   }
   obj = SelfModInappropriateConversationExperiment;
 };

@@ -1,10 +1,10 @@
 // discord_app/modules/media_viewer/native/MediaPlayerMuteManager.tsx
 import get_ActivityIndicator from "../../../../_runtime/metro/00017__.js";
-import 00560__ from "../../../../_runtime/metro/00560__.js";
+import 00570__ from "../../../../_runtime/metro/00570__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 ({ NativeEventEmitter, NativeModules } = get_ActivityIndicator);
-const useMediaPlayerMutedStore = module_560.create(() => ({ isMuted: false }));
+const useMediaPlayerMutedStore = module_570.create(() => ({ isMuted: false }));
 const nativeEventEmitter = new NativeEventEmitter(NativeModules.MediaPlayerManager);
 class MediaPlayerMuteManager {
   constructor() {

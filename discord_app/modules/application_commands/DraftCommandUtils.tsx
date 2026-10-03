@@ -1,6 +1,6 @@
 // discord_app/modules/application_commands/DraftCommandUtils.tsx
-import DraftCommand from "DraftCommand.tsx";
 import ChannelAutocompleteConstants from "../channel_autocomplete/ChannelAutocompleteConstants.tsx";
+import DraftCommand from "DraftCommand.tsx";
 import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 

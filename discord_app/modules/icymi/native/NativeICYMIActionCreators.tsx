@@ -2,7 +2,7 @@
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = fn;
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/icymi/native/NativeICYMIActionCreators.tsx");
 
@@ -20,7 +20,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {

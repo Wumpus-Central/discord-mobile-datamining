@@ -1,8 +1,8 @@
 // discord_app/modules/collectibles/CollectiblesDebugStore.tsx
-import 00560__ from "../../../_runtime/metro/00560__.js";
+import 00570__ from "../../../_runtime/metro/00570__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
-const useCollectiblesDebugStore = module_560.create((arg0) => {
+const useCollectiblesDebugStore = module_570.create((arg0) => {
   closure_0 = arg0;
   return {
     logs: [],
@@ -27,6 +27,6 @@ const result = size.fileFinishedImporting("modules/collectibles/CollectiblesDebu
 export { useCollectiblesDebugStore };
 export const addDebugLog = function addDebugLog(arg0) {
   const date = new Date();
-  const state = obj.getState();
+  state = obj.getState();
   state.addLog("[" + new Date().toLocaleTimeString("en-US", { hour12: false }) + "] " + arg0);
 };

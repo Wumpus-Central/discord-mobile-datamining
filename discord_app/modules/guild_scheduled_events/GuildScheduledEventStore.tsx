@@ -173,7 +173,7 @@ function handleGuildScheduledEventExceptionCreateOrUpdate(eventException) {
     return true;
   }
 }
-const GuildScheduledEventsConstants = fn(2050);
+const GuildScheduledEventsConstants = fn(2057);
 ({
   GuildScheduledEventStatus: closure_4,
   GuildScheduledEventStatusDone: hasOwnProperty,
@@ -189,8 +189,8 @@ const StaticGuildEventIndexes = {
   GUILD_EVENT_ACTIVE(guild_id) {
     return "" + guild_id + "-" + obj.EVENT_ACTIVE;
   },
-  GUILD_EVENT_UPCOMING(guild_id) {
-    return "" + guild_id + "-" + obj.EVENT_UPCOMING;
+  GUILD_EVENT_UPCOMING(id) {
+    return "" + id + "-" + obj.EVENT_UPCOMING;
   },
   CHANNEL_EVENT(channel_id) {
     return "" + channel_id + "-" + obj.EVENT;
@@ -202,7 +202,7 @@ const StaticGuildEventIndexes = {
     return "" + channel_id + "-" + obj.EVENT_UPCOMING;
   },
 };
-const secondaryIndexMap = new fn(4493).SecondaryIndexMap(function scheduledEventIndex(status) {
+const secondaryIndexMap = new fn(4504).SecondaryIndexMap(function scheduledEventIndex(status) {
   ({ guild_id, entity_id, channel_id } = status);
   const items = [guild_id];
   if (null != entity_id) {
@@ -276,12 +276,12 @@ prototype["getGuildScheduledEventsByIndex"] = function getGuildScheduledEventsBy
 prototype["getRsvpVersion"] = function getRsvpVersion() {
   return closure_9;
 };
-prototype["getRsvp"] = function getRsvp(id, c1, id2) {
+prototype["getRsvp"] = function getRsvp(id, nextRecurrenceIdInEvent, id2) {
   if (null == id) {
     return null;
   } else {
-    let tmp = c1;
-    if (c1 == null) {
+    let tmp = nextRecurrenceIdInEvent;
+    if (nextRecurrenceIdInEvent == null) {
       tmp = SERIES;
     }
     let tmp4;
@@ -293,10 +293,10 @@ prototype["getRsvp"] = function getRsvp(id, c1, id2) {
     return tmp4;
   }
 };
-prototype["isInterestedInEventRecurrence"] = function isInterestedInEventRecurrence(id, c1) {
+prototype["isInterestedInEventRecurrence"] = function isInterestedInEventRecurrence(id, nextRecurrenceIdInEvent) {
   id = AuthenticationStore.getId();
   const rsvp = this.getRsvp(id, null, id);
-  const rsvp1 = this.getRsvp(id, c1, id);
+  const rsvp1 = this.getRsvp(id, nextRecurrenceIdInEvent, id);
   let response;
   if (rsvp != null) {
     response = rsvp.response;

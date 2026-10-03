@@ -23,7 +23,7 @@ socket.handleIdentify = () => {
   if (null == token) {
     return null;
   } else {
-    const state = DiscordAppStateDefault.getState();
+    state = DiscordAppStateDefault.getState();
     const installationForTracking = AuthenticationStore.getInstallationForTracking();
     const obj3 = { token, userId: null, properties: null, presence: null };
     let id = AuthenticationStore.getId();
@@ -50,7 +50,7 @@ socket.handleIdentify = () => {
   }
   const obj2 = { hasToken: null != token };
 };
-const PlatformUtils = fn(1364);
+const PlatformUtils = fn(1369);
 if (PlatformUtils.isDesktop()) {
   const powerMonitor = DiscordNativeDefault.powerMonitor;
   powerMonitor.on("resume", () => {

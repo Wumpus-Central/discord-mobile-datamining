@@ -36,7 +36,7 @@ export default function VerifyPhone(phone) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -91,7 +91,7 @@ export default function VerifyPhone(phone) {
           } else if (value) {
             c4 = 0;
             c6 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
           c4 = 0;
           c6 = 3;
@@ -137,7 +137,7 @@ export default function VerifyPhone(phone) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -168,7 +168,7 @@ export default function VerifyPhone(phone) {
         } else {
           closure_1_4(false);
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp12) {
         c3 = tmp;

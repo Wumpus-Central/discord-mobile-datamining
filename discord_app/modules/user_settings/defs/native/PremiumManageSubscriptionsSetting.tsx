@@ -1,4 +1,5 @@
 // discord_app/modules/user_settings/defs/native/PremiumManageSubscriptionsSetting.tsx
+import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
 import PremiumUtils from "../../../../utils/PremiumUtils.tsx";
 import BlockedPaymentsCountryExperiment from "../../../billing/experiments/BlockedPaymentsCountryExperiment.tsx";
@@ -6,36 +7,99 @@ import openBlockedPaymentsCountryActionSheetDefault from "../../../billing/nativ
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const SettingBuilders = fn(11215);
+fn(558);
+const ReactCompilerGating = fn(558);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = c.c(1);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const fn = function t() {
+          const isPaymentsBlocked = BlockedPaymentsCountryExperiment.getIsPaymentsBlocked();
+          let flag = !isPaymentsBlocked;
+          if (isPaymentsBlocked) {
+            openBlockedPaymentsCountryActionSheetDefault();
+            flag = false;
+          }
+          return flag;
+        };
+        cResult[0] = fn;
+        let first = fn;
+      } else {
+        first = cResult[0];
+      }
+      return first;
+    }
+  : () =>
+      noop.useCallback(() => {
+        const isPaymentsBlocked = BlockedPaymentsCountryExperiment.getIsPaymentsBlocked();
+        let flag = !isPaymentsBlocked;
+        if (isPaymentsBlocked) {
+          openBlockedPaymentsCountryActionSheetDefault();
+          flag = false;
+        }
+        return flag;
+      }, []);
+const SettingBuilders = fn(11129);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = c.c(1);
+      let hasPremiumSubscriptionToDisplay = PremiumUtils.useHasPremiumSubscriptionToDisplay();
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const obj3 = { location: "useShowManageSubscriptionsSetting" };
+        cResult[0] = obj3;
+        let first = obj3;
+      } else {
+        first = cResult[0];
+      }
+      if (hasPremiumSubscriptionToDisplay) {
+        hasPremiumSubscriptionToDisplay = tmpResult.useMobileNitroManageSubscriptionsSettingsExperiment(first);
+      }
+      return hasPremiumSubscriptionToDisplay;
+    }
+  : () => {
+      let hasPremiumSubscriptionToDisplay = PremiumUtils.useHasPremiumSubscriptionToDisplay();
+      if (hasPremiumSubscriptionToDisplay) {
+        hasPremiumSubscriptionToDisplay = obj2.useMobileNitroManageSubscriptionsSettingsExperiment({
+          location: "useShowManageSubscriptionsSetting",
+        });
+      }
+      return hasPremiumSubscriptionToDisplay;
+    };
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["z5YcJ+"]);
   },
   parent: null,
-  IconComponent: fn(14736).SubscriptionIcon,
-  usePreNavigationAction: function useCanNavigateToPaymentSetting() {
-    return noop.useCallback(() => {
-      const isPaymentsBlocked = BlockedPaymentsCountryExperiment.getIsPaymentsBlocked();
-      let flag = !isPaymentsBlocked;
-      if (isPaymentsBlocked) {
-        openBlockedPaymentsCountryActionSheetDefault();
-        flag = false;
+  IconComponent: fn(14792).SubscriptionIcon,
+  usePreNavigationAction: tmp2,
+  usePredicate: ReactCompilerGating.isReactCompilerEnabled()
+    ? () => {
+        const cResult = c.c(1);
+        let hasPremiumSubscriptionToDisplay = PremiumUtils.useHasPremiumSubscriptionToDisplay();
+        if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+          const obj3 = { location: "useShowManageSubscriptionsSetting" };
+          cResult[0] = obj3;
+          let first = obj3;
+        } else {
+          first = cResult[0];
+        }
+        if (hasPremiumSubscriptionToDisplay) {
+          hasPremiumSubscriptionToDisplay = tmpResult.useMobileNitroManageSubscriptionsSettingsExperiment(first);
+        }
+        return hasPremiumSubscriptionToDisplay;
       }
-      return flag;
-    }, []);
-  },
-  usePredicate: function useShowManageSubscriptionsSetting() {
-    let hasPremiumSubscriptionToDisplay = PremiumUtils.useHasPremiumSubscriptionToDisplay();
-    if (hasPremiumSubscriptionToDisplay) {
-      hasPremiumSubscriptionToDisplay = obj2.useMobileNitroManageSubscriptionsSettingsExperiment({
-        location: "useShowManageSubscriptionsSetting",
-      });
-    }
-    return hasPremiumSubscriptionToDisplay;
-  },
+    : () => {
+        let hasPremiumSubscriptionToDisplay = PremiumUtils.useHasPremiumSubscriptionToDisplay();
+        if (hasPremiumSubscriptionToDisplay) {
+          hasPremiumSubscriptionToDisplay = obj2.useMobileNitroManageSubscriptionsSettingsExperiment({
+            location: "useShowManageSubscriptionsSetting",
+          });
+        }
+        return hasPremiumSubscriptionToDisplay;
+      },
   screen: {
-    route: fn(1074).UserSettingsSections.PREMIUM_MANAGE_PLAN,
+    route: fn(1085).UserSettingsSections.PREMIUM_MANAGE_PLAN,
     getComponent() {
       return require("PremiumManagePlanScreen").default;
     },

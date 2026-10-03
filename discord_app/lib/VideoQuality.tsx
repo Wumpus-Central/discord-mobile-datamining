@@ -7,6 +7,7 @@ import BaseConnectionEvent from "../../discord_common/js/packages/media-engine/i
 import VideoQualityStats from "VideoQualityStats.tsx";
 import Histogram from "Histogram.tsx";
 import NetworkQualityDefault from "NetworkQuality.tsx";
+import VideoBackgroundStore from "../modules/video_backgrounds/VideoBackgroundStore.tsx";
 import TypedEventEmitter from "../../discord_common/js/shared/utils/TypedEventEmitter.tsx";
 
 require = fn;
@@ -25,11 +26,11 @@ class VideoQuality extends tmp2 {
     if (fn === undefined) {
       tmp5 = closure_0;
       tmp6 = closure_2;
-      TimeStampProducer = closure_0(closure_2[2]).TimeStampProducer;
+      TimeStampProducer = closure_0(closure_2[3]).TimeStampProducer;
     }
     tmp7 = new VideoQuality(tmp4, tmp3, tmp2, tmp, TimeStampProducer, new.target);
     closure_0 = tmp7;
-    tmp8 = new closure_1(closure_2[1])();
+    tmp8 = new closure_1(closure_2[2])();
     tmp7.networkQuality = tmp8;
     tmp7.pausedCount = 0;
     tmp7.simulcastQualityChanges = 0;
@@ -58,43 +59,45 @@ class VideoQuality extends tmp2 {
     };
     tmp7.connection = global;
     tmp7.timestampProducer = TimeStampProducer;
-    durationEnabled = new closure_0(closure_2[2]).DurationEnabled(false, TimeStampProducer);
+    durationEnabled = new closure_0(closure_2[3]).DurationEnabled(false, TimeStampProducer);
     tmp7.paused = durationEnabled;
-    durationEnabled1 = new closure_0(closure_2[2]).DurationEnabled(false, TimeStampProducer);
+    durationEnabled1 = new closure_0(closure_2[3]).DurationEnabled(false, TimeStampProducer);
     tmp7.zeroReceivers = durationEnabled1;
-    durationEnabled2 = new closure_0(closure_2[2]).DurationEnabled(false, TimeStampProducer);
+    durationEnabled2 = new closure_0(closure_2[3]).DurationEnabled(false, TimeStampProducer);
     tmp7.videoStopped = durationEnabled2;
-    durationEnabled3 = new closure_0(closure_2[2]).DurationEnabled(false, TimeStampProducer);
+    durationEnabled3 = new closure_0(closure_2[3]).DurationEnabled(false, TimeStampProducer);
     tmp7.videoEffectDuration = durationEnabled3;
-    durationEnabled4 = new closure_0(closure_2[2]).DurationEnabled(false, TimeStampProducer);
+    durationEnabled4 = new closure_0(closure_2[3]).DurationEnabled(false, TimeStampProducer);
     tmp7.hqSimulcastStreamEncoded = durationEnabled4;
-    durationEnabled5 = new closure_0(closure_2[2]).DurationEnabled(false, TimeStampProducer);
+    durationEnabled5 = new closure_0(closure_2[3]).DurationEnabled(false, TimeStampProducer);
     tmp7.lqSimulcastStreamEncoded = durationEnabled5;
-    durationEnabled6 = new closure_0(closure_2[2]).DurationEnabled(false, TimeStampProducer);
+    durationEnabled6 = new closure_0(closure_2[3]).DurationEnabled(false, TimeStampProducer);
     tmp7.bothSimulcastStreamsEncoded = durationEnabled6;
-    durationEnabled7 = new closure_0(closure_2[2]).DurationEnabled(false, TimeStampProducer);
+    durationEnabled7 = new closure_0(closure_2[3]).DurationEnabled(false, TimeStampProducer);
     tmp7.hqSimulcastStreamWatched = durationEnabled7;
-    durationEnabled8 = new closure_0(closure_2[2]).DurationEnabled(false, TimeStampProducer);
+    durationEnabled8 = new closure_0(closure_2[3]).DurationEnabled(false, TimeStampProducer);
     tmp7.lqSimulcastStreamWatched = durationEnabled8;
-    durationEnabled9 = new closure_0(closure_2[2]).DurationEnabled(false, TimeStampProducer);
+    durationEnabled9 = new closure_0(closure_2[3]).DurationEnabled(false, TimeStampProducer);
     tmp7.hqSimulcastStreamEligible = durationEnabled9;
-    durationEnabled10 = new closure_0(closure_2[2]).DurationEnabled(false, TimeStampProducer);
+    durationEnabled10 = new closure_0(closure_2[3]).DurationEnabled(false, TimeStampProducer);
     tmp7.lqSimulcastStreamEligible = durationEnabled10;
-    durationEnabled11 = new closure_0(closure_2[2]).DurationEnabled(false, TimeStampProducer);
+    durationEnabled11 = new closure_0(closure_2[3]).DurationEnabled(false, TimeStampProducer);
     tmp7.windowOccluded = durationEnabled11;
-    durationEnabled12 = new closure_0(closure_2[2]).DurationEnabled(false, TimeStampProducer);
+    durationEnabled12 = new closure_0(closure_2[3]).DurationEnabled(false, TimeStampProducer);
     tmp7.videoStoppedForOcclusion = durationEnabled12;
-    durationEnabled13 = new closure_0(closure_2[2]).DurationEnabled(false, TimeStampProducer);
+    durationEnabled13 = new closure_0(closure_2[3]).DurationEnabled(false, TimeStampProducer);
     tmp7.bandwidthLimitedFramerate = durationEnabled13;
-    durationEnabled14 = new closure_0(closure_2[2]).DurationEnabled(false, TimeStampProducer);
+    durationEnabled14 = new closure_0(closure_2[3]).DurationEnabled(false, TimeStampProducer);
     tmp7.bandwidthLimitedResolution = durationEnabled14;
-    durationEnabled15 = new closure_0(closure_2[2]).DurationEnabled(false, TimeStampProducer);
+    durationEnabled15 = new closure_0(closure_2[3]).DurationEnabled(false, TimeStampProducer);
     tmp7.cameraDuration = durationEnabled15;
-    durationEnabled16 = new closure_0(closure_2[2]).DurationEnabled(false, TimeStampProducer);
+    durationEnabled16 = new closure_0(closure_2[3]).DurationEnabled(false, TimeStampProducer);
     tmp7.cameraOpportunityDuration = durationEnabled16;
-    durationEnabled17 = new closure_0(closure_2[2]).DurationEnabled(false, TimeStampProducer);
+    durationEnabled17 = new closure_0(closure_2[3]).DurationEnabled(false, TimeStampProducer);
     tmp7.cameraSendDuration = durationEnabled17;
-    histogram = new closure_0(closure_2[3]).Histogram();
+    durationEnabled18 = new closure_0(closure_2[3]).DurationEnabled(false, TimeStampProducer);
+    tmp7.videoBackgroundEnabledDuration = durationEnabled18;
+    histogram = new closure_0(closure_2[4]).Histogram();
     tmp7.videoEntropy = histogram;
     return tmp7;
   }
@@ -217,7 +220,7 @@ prototype["getEncoderUsageStats"] = function getEncoderUsageStats() {
     let _Map = Map;
     let tmp7 = new.target;
     let tmp8 = new.target;
-    map1 = new Map();
+    let map1 = new Map();
     let obj3 = self.outboundStats[key10011];
     let codecsUsed = obj3.getCodecsUsed();
     for (const item10013 of codecsUsed) {
@@ -237,7 +240,7 @@ prototype["getDecoderUsageStats"] = function getDecoderUsageStats() {
     let _Map = Map;
     let tmp7 = new.target;
     let tmp8 = new.target;
-    map1 = new Map();
+    let map1 = new Map();
     let obj3 = self.inboundStats[key10011];
     let codecsUsed = obj3.getCodecsUsed();
     for (const item10013 of codecsUsed) {
@@ -354,6 +357,7 @@ prototype["getCameraDurationStats"] = function getCameraDurationStats() {
     camera_send_opportunity_duration: null,
     camera_send_duration: null,
     num_camera_on_toggles: this.cameraToggles,
+    video_background_enabled_duration: null,
   };
   const cameraDuration = this.cameraDuration;
   obj.camera_enabled_duration = Math.round(cameraDuration.totalDurationSeconds());
@@ -361,6 +365,8 @@ prototype["getCameraDurationStats"] = function getCameraDurationStats() {
   obj.camera_send_opportunity_duration = Math.round(cameraOpportunityDuration.totalDurationSeconds());
   const cameraSendDuration = this.cameraSendDuration;
   obj.camera_send_duration = Math.round(cameraSendDuration.totalDurationSeconds());
+  const videoBackgroundEnabledDuration = this.videoBackgroundEnabledDuration;
+  obj.video_background_enabled_duration = Math.round(videoBackgroundEnabledDuration.totalDurationSeconds());
   return obj;
 };
 prototype["getOutboundStats"] = function getOutboundStats() {
@@ -1488,6 +1494,7 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
   const self = this;
   importDefault = nowResult;
   dependencyMap = transport;
+  VideoBackgroundStore = streamParameters;
   transport = transport.transport;
   let num = 1;
   if (!obj.isWeb()) {
@@ -1504,12 +1511,12 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
   const set = new Set();
   const set1 = new Set();
   self.updateSendState({ receivers: num });
-  let tmp7 = self.connection.context === tmp(4900).MediaEngineContextTypes.DEFAULT;
+  let tmp7 = self.connection.context === tmp(4945).MediaEngineContextTypes.DEFAULT;
   if (tmp7) {
     tmp7 = null != transport.camera;
   }
   self.cameraDuration.value = tmp7;
-  let tmp9 = self.connection.context === tmp(4900).MediaEngineContextTypes.DEFAULT;
+  let tmp9 = self.connection.context === tmp(4945).MediaEngineContextTypes.DEFAULT;
   if (tmp9) {
     tmp9 = null != transport.camera;
   }
@@ -1517,7 +1524,7 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
     tmp9 = self.callUserIdsCount > 1;
   }
   self.cameraOpportunityDuration.value = tmp9;
-  let tmp11 = self.connection.context === tmp(4900).MediaEngineContextTypes.DEFAULT;
+  let tmp11 = self.connection.context === tmp(4945).MediaEngineContextTypes.DEFAULT;
   if (tmp11) {
     tmp11 = null != transport.camera;
   }
@@ -1528,7 +1535,15 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
   if (tmp13) {
     self.cameraToggles = self.cameraToggles + 1;
   }
-  obj = videoEntropy(1364);
+  let liveBackgroundEnabled = self.connection.context === tmp(4945).MediaEngineContextTypes.DEFAULT;
+  if (liveBackgroundEnabled) {
+    liveBackgroundEnabled = null != transport.camera;
+  }
+  if (liveBackgroundEnabled) {
+    liveBackgroundEnabled = VideoBackgroundStore.liveBackgroundEnabled;
+  }
+  self.videoBackgroundEnabledDuration.value = liveBackgroundEnabled;
+  obj = videoEntropy(1369);
   tmp13 = self.cameraDuration.value && !self.cameraDuration.value;
   closure_7 = _modDef12.max(streamParameters.map((quality) => quality.quality));
   const outbound = transport.rtp.outbound;
@@ -1834,15 +1849,15 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
         tmp27 = null == obj.timeToFirstFrame && found.framesDecoded > 0;
       }
     });
-    const tmp14Result = _modDef12;
+    const tmp16Result = _modDef12;
   }
-  if (tmp19) {
+  if (tmp21) {
     if (tmpResult.areSetsEqual(set, set1)) {
       self.symmetricCodecUpdates = self.symmetricCodecUpdates + 1;
     } else {
       self.asymmetricCodecUpdates = self.asymmetricCodecUpdates + 1;
     }
-    tmpResult = tmp(2061);
+    tmpResult = tmp(2069);
   }
 };
 prototype["updateSystemResourceStats"] = function updateSystemResourceStats() {

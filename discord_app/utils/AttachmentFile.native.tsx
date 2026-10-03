@@ -1,7 +1,7 @@
 // discord_app/utils/AttachmentFile.native.tsx
 import LoggerDefault from "../modules/debug/Logger.tsx";
 import _modDef38 from "../../_runtime/metro/00038__.js";
-import Upload from "../lib/uploader/Upload.tsx";
+import UploadPlatform from "../modules/media_uploads/UploadPlatform.tsx";
 import utils_UploadUtils from "native/UploadUtils.tsx";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 
@@ -23,7 +23,7 @@ let closure_5 = async function _getAttachmentFile(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -45,7 +45,7 @@ let closure_5 = async function _getAttachmentFile(arg0, arg1) {
             closure_131_3 = undefined;
             let attachmentPayload;
             _modDef38(
-              item.item.platform === Upload.UploadPlatform.REACT_NATIVE,
+              item.item.platform === UploadPlatform.UploadPlatform.REACT_NATIVE,
               "Upload must be in the React Native format",
             );
             c6 = 1;
@@ -135,7 +135,7 @@ let closure_6 = async function _cancelGetAttachmentFile(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -163,7 +163,7 @@ let closure_6 = async function _cancelGetAttachmentFile(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp8) {
       c1 = tmp;

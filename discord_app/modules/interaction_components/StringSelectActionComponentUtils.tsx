@@ -21,7 +21,7 @@ export const getInitialStringSelectOptions = function getInitialStringSelectOpti
   if (type === Server.ComponentType.STRING_SELECT) {
     let mapped = interactionComponentState.values;
   } else {
-    const options = selectionActionComponent.options;
+    options = selectionActionComponent.options;
     const found = options.filter((item) => item.default);
     mapped = found.map((value) => value.value);
   }

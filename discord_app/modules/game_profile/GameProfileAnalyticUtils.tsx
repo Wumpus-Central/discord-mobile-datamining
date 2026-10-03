@@ -1,12 +1,12 @@
 // discord_app/modules/game_profile/GameProfileAnalyticUtils.tsx
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
-import v1 from "../../../_runtime/01255_v1.js";
+import v1 from "../../../_runtime/01266_v1.js";
 import ContentInventoryStore from "../content_inventory/ContentInventoryStore.tsx";
 
 require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AnalyticEvents: closure_4, GuildFeatures: hasOwnProperty } = Constants);
-const ContentInventoryFeedKey = fn(7981).ContentInventoryFeedKey;
+const ContentInventoryFeedKey = fn(8027).ContentInventoryFeedKey;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/GameProfileAnalyticUtils.tsx");
 
@@ -92,6 +92,10 @@ export const GameProfileTrackActionActions = {
   [38]: "XboxGamePassStoreLink",
   CopyLink: 39,
   [39]: "CopyLink",
+  Overview: 40,
+  [40]: "Overview",
+  Communities: 41,
+  [41]: "Communities",
 };
 export const GameProfileSources = {
   ActivityCard: "activity_card",
@@ -131,7 +135,7 @@ export const GameProfileTypes = { FullProfile: "full_profile", MiniProfile: "min
 export const getGuildIdAndVerifiedFromInvite = function getGuildIdAndVerifiedFromInvite(current) {
   let id;
   if (current != null) {
-    const guild = current.guild;
+    guild = current.guild;
     if (guild != null) {
       id = guild.id;
     }

@@ -41,7 +41,7 @@ prototype["handleSelectedGuildChange"] = function handleSelectedGuildChange() {
   const guildId = SelectedGuildStore.getGuildId();
   if (null != guildId) {
     if (!obj10.isFavoritesGuildId(guildId)) {
-      const guild = GuildStore.getGuild(guildId);
+      guild = GuildStore.getGuild(guildId);
       if (null != guild) {
         const GameServerExperiment = GameServerExperiment2.GameServerExperiment;
         const obj = { guildId: guild.id, location: "GuildPowerupsManager" };

@@ -1,7 +1,9 @@
 // discord_app/modules/voice_panel/native/controls/buttons/VoicePanelStyles.tsx
+import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import useStateFromSharedValue from "../../../../reanimated/native/useStateFromSharedValue.tsx";
 import createStyles from "../../../../../design/components/Styles/native/createStyles.tsx";
+import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 let closure_3 = createStyles.createStyles((arg0) => {
@@ -39,8 +41,19 @@ let closure_3 = createStyles.createStyles((arg0) => {
 });
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelStyles.tsx");
 
-export const useVoicePanelButtonStyles = function useVoicePanelButtonStyles(wrapperSpecs) {
-  return closure_3(
-    useStateFromSharedValue.useDerivedStateFromSharedValue(wrapperSpecs, (drawerMode) => drawerMode.drawerMode),
-  );
-};
+export const useVoicePanelButtonStyles = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      const cResult = c.c(1);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const fn = function c(drawerMode) {
+          return drawerMode.drawerMode;
+        };
+        cResult[0] = fn;
+        let first = fn;
+      } else {
+        first = cResult[0];
+      }
+      return closure_3(useStateFromSharedValue.useDerivedStateFromSharedValue(arg0, first));
+    }
+  : (arg0) =>
+      closure_3(useStateFromSharedValue.useDerivedStateFromSharedValue(arg0, (drawerMode) => drawerMode.drawerMode));

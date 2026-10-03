@@ -64,7 +64,7 @@ prototype["getMaxSinkValue"] = function getMaxSinkValue(videoParticipantCount, a
     }
   }
 };
-prototype["getResolution"] = function getResolution(localWant) {
+prototype["getResolution"] = function getResolution(arg0) {
   let tmp2 = null;
   for (const item10010 of tmp3) {
     if (arg0 >= item10010.wantValue) {

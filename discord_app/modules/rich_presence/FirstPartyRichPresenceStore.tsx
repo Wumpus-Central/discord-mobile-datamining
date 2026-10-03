@@ -1,8 +1,9 @@
 // discord_app/modules/rich_presence/FirstPartyRichPresenceStore.tsx
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
-import _modDef1331 from "../../../_runtime/metro/01331__.js";
+import _modDef1342 from "../../../_runtime/metro/01342__.js";
 import StageChannelSelfRichPresenceStoreDefault from "../stage_channels/StageChannelSelfRichPresenceStore.tsx";
+import VibegrationsRichPresenceStoreDefault from "../vibegrations/stores/VibegrationsRichPresenceStore.tsx";
 
 function updateActivities() {
   items = [];
@@ -14,14 +15,14 @@ function updateActivities() {
     }
     continue;
   }
-  const tmp6 = _modDef1331(items, items);
+  const tmp6 = _modDef1342(items, items);
   let flag = !tmp6;
   if (!tmp6) {
     flag = true;
   }
   return flag;
 }
-let items = [StageChannelSelfRichPresenceStoreDefault];
+let items = [StageChannelSelfRichPresenceStoreDefault, VibegrationsRichPresenceStoreDefault];
 items = [];
 const Store = initializeDefault.Store;
 class FirstPartyRichPresenceStore extends Store {}

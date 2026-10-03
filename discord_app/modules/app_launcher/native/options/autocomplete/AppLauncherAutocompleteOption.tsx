@@ -1,7 +1,7 @@
 // discord_app/modules/app_launcher/native/options/autocomplete/AppLauncherAutocompleteOption.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import KeyboardManagerUtils from "../../../../../utils/native/KeyboardManagerUtils.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/01981_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/01987_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../../design/void/Pressables/native/Pressables.tsx";
@@ -11,7 +11,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = {
   container: {
     width: "100%",
@@ -41,7 +41,7 @@ const obj4 = { borderColor: nativeDefault.colors.BORDER_FEEDBACK_CRITICAL, paddi
 obj2.inputText = {
   fontSize: 16,
   alignSelf: "center",
-  fontFamily: fn(1074).Fonts.PRIMARY_MEDIUM,
+  fontFamily: fn(1085).Fonts.PRIMARY_MEDIUM,
   color: nativeDefault.colors.TEXT_DEFAULT,
 };
 let closure_6 = createStyles.createStyles(obj2);
@@ -70,7 +70,7 @@ export default function AppLauncherAutocompleteOption(arg0) {
     }
     const result = KeyboardManagerUtils.dismissGlobalKeyboard();
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(11864, dependencyMap.paths),
+      asyncRequireImpl(11795, dependencyMap.paths),
       "AppLauncherAutocompleteActionSheet",
       {
         option,

@@ -1,16 +1,16 @@
 // discord_app/modules/checkout/native/gifting/UnifiedGiftModalSuccessScreen.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01981_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import openUserSettings from "../../../user_settings/core/native/openUserSettings.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const Image = fn(17).Image;
-const UserSettingsSections = fn(1074).UserSettingsSections;
+const UserSettingsSections = fn(1085).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = {
   alertContainer: {
     paddingHorizontal: nativeDefault.space.PX_24,
@@ -50,7 +50,7 @@ export default function UnifiedGiftModalSuccessScreen(giftBadgeProgress) {
     if (tmp2) {
       const obj2 = { giftBadgeProgress };
       ModalActionCreatorsDefault.pushLazy(
-        asyncRequireImpl(10692, dependencyMap.paths),
+        asyncRequireImpl(10763, dependencyMap.paths),
         obj2,
         "collectibles_shop_gift_badge_modal",
       );
@@ -62,14 +62,14 @@ export default function UnifiedGiftModalSuccessScreen(giftBadgeProgress) {
     openUserSettings.openUserSettings({ screen: UserSettingsSections.PREMIUM_GIFTING, params: {} });
   }, items1);
   let obj = { onClose: callback, noDefaultButtons: true, style: tmp.alertContainer, children: null };
-  let obj2 = { source: giftBadgeProgress(enabled[6]).GIFT_STYLE_IMG[giftBadgeProgress.giftStyle], style: tmp.image };
-  const items2 = [closure_6(Image, obj2), , ,];
+  const tmp4 = giftBadgeProgress(enabled[6]).GIFT_STYLE_IMG[giftBadgeProgress.giftStyle];
+  const items2 = [closure_6(Image, { source: tmp4, style: tmp.image }), , ,];
   const obj3 = { variant: "heading-lg/bold", style: tmp.title, children: null };
-  const intl = giftBadgeProgress(enabled[14]).intl;
+  const intl = tmp2(tmp3[14]).intl;
   obj3.children = intl.string(giftBadgeProgress(enabled[14]).t.MqZXbv);
   items2[1] = closure_6(giftBadgeProgress(enabled[13]).Text, obj3);
   const obj4 = { variant: "text-md/medium", style: tmp.description, children: null };
-  const intl2 = giftBadgeProgress(enabled[14]).intl;
+  const intl2 = tmp2(tmp3[14]).intl;
   obj4.children = intl2.format(giftBadgeProgress(enabled[14]).t.YS2J4S, { onClick: callback1 });
   items2[2] = closure_6(giftBadgeProgress(enabled[13]).Text, obj4);
   const obj5 = { onPress: callback, text: null, textVariant: "text-md/semibold", grow: true };
@@ -77,11 +77,12 @@ export default function UnifiedGiftModalSuccessScreen(giftBadgeProgress) {
     if (null != giftBadgeProgress) {
       let cpT0Cq = tmp2(tmp3[14]).t.PDTjLN;
     }
-    obj5.text = tmp9(cpT0Cq);
-    items2[3] = closure_6(giftBadgeProgress(enabled[15]).BaseTextButton, obj5);
+    obj5.text = tmp11(cpT0Cq);
+    items2[3] = closure_6(tmp2(tmp3[15]).BaseTextButton, obj5);
     obj.children = items2;
-    return closure_7(tmp7, obj);
+    return closure_7(tmp8, obj);
   }
   cpT0Cq = tmp2(tmp3[14]).t.cpT0Cq;
-  tmp7 = onClose(enabled[12]);
+  let obj2 = { source: tmp4, style: tmp.image };
+  tmp8 = onClose(enabled[12]);
 }

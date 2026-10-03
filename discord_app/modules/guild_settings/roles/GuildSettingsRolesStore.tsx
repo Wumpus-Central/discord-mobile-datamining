@@ -32,7 +32,7 @@ function handleInit() {
   if (arg0 === undefined) {
     flag = true;
   }
-  const guild = GuildSettingsStore.getProps().guild;
+  guild = GuildSettingsStore.getProps().guild;
   c23 = false;
   c24 = false;
   c6 = undefined;
@@ -58,7 +58,7 @@ function handleInit() {
       const obj2 = {};
       const obj3 = { primary_color, secondary_color: null, tertiary_color: null };
       obj2[tmp.SOLID] = obj3;
-      ({ primary_color: obj4.primary_color, secondary_color: obj4.secondary_color } = closure_2_17);
+      ({ primary_color: obj4.primary_color, secondary_color: obj4.secondary_color } = constants);
       obj2[tmp.GRADIENT] = { primary_color: null, secondary_color: null, tertiary_color: null };
       ({
         primary_color: obj5.primary_color,
@@ -108,7 +108,7 @@ function syncGuildChanges(guildId) {
   guildId = guildId.guildId;
   items = undefined;
   map = undefined;
-  const guild = GuildSettingsStore.getProps().guild;
+  guild = GuildSettingsStore.getProps().guild;
   if (null != guild) {
     if (guildId === guild.id) {
       if (OPEN !== FormStates.SUBMITTING) {
@@ -153,7 +153,7 @@ function syncGuildChanges(guildId) {
             const obj2 = {};
             const obj3 = { primary_color, secondary_color: null, tertiary_color: null };
             obj2[tmp.SOLID] = obj3;
-            ({ primary_color: obj4.primary_color, secondary_color: obj4.secondary_color } = closure_2_17);
+            ({ primary_color: obj4.primary_color, secondary_color: obj4.secondary_color } = constants);
             obj2[tmp.GRADIENT] = { primary_color: null, secondary_color: null, tertiary_color: null };
             ({
               primary_color: obj5.primary_color,
@@ -739,7 +739,7 @@ const guildSettingsRolesStore = new GuildSettingsRolesStore(DispatcherDefault, {
             const obj2 = {};
             const obj3 = { primary_color, secondary_color: null, tertiary_color: null };
             obj2[tmp.SOLID] = obj3;
-            ({ primary_color: obj4.primary_color, secondary_color: obj4.secondary_color } = closure_2_17);
+            ({ primary_color: obj4.primary_color, secondary_color: obj4.secondary_color } = constants);
             obj2[tmp.GRADIENT] = { primary_color: null, secondary_color: null, tertiary_color: null };
             ({
               primary_color: obj5.primary_color,
@@ -922,7 +922,7 @@ const guildSettingsRolesStore = new GuildSettingsRolesStore(DispatcherDefault, {
         const obj2 = {};
         const obj3 = { primary_color, secondary_color: null, tertiary_color: null };
         obj2[tmp.SOLID] = obj3;
-        ({ primary_color: obj4.primary_color, secondary_color: obj4.secondary_color } = closure_2_17);
+        ({ primary_color: obj4.primary_color, secondary_color: obj4.secondary_color } = constants);
         obj2[tmp.GRADIENT] = { primary_color: null, secondary_color: null, tertiary_color: null };
         ({
           primary_color: obj5.primary_color,

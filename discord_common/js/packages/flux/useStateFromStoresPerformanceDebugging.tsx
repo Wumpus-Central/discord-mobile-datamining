@@ -168,10 +168,10 @@ export function getUseStateFromStoresDebuggingEnabled() {
   }
   return flag;
 }
-export const setUseStateFromStoresDebuggingEnabled = function setUseStateFromStoresDebuggingEnabled(arg0) {
-  global = arg0;
+export const setUseStateFromStoresDebuggingEnabled = function setUseStateFromStoresDebuggingEnabled(first1) {
+  global = first1;
   const Storage = Storage2.Storage;
-  const result = Storage.set("useStateFromStoresDebuggingEnabled", arg0);
+  const result = Storage.set("useStateFromStoresDebuggingEnabled", first1);
   if (global) {
     const _setInterval = setInterval;
     let interval = setInterval(flushViolators, global);

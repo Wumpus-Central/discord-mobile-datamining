@@ -34,12 +34,12 @@ function updateState() {
           } else if (tmp9.CONNECTING === UNKNOWN) {
             const obj4 = { state: tmp13.WAITING_FOR_NETWORK, delayMs: null };
             if (CacheStore.hasCache()) {
-              let num2 = state(13436).getConfig({ location: "ConnectivityIndicatorStateStore" }).timeoutMs;
+              let num2 = state(13496).getConfig({ location: "ConnectivityIndicatorStateStore" }).timeoutMs;
               if (num2 == null) {
                 num2 = 10000;
               }
               let tmp23 = num2;
-              const obj16 = state(13436);
+              const obj16 = state(13496);
             } else {
               tmp23 = delayMs2;
             }
@@ -62,12 +62,12 @@ function updateState() {
           } else if (tmp9.CONNECTING === UNKNOWN) {
             const obj8 = { state: tmp13.WAITING_FOR_NETWORK, delayMs: null };
             if (CacheStore.hasCache()) {
-              let num = state(13436).getConfig({ location: "ConnectivityIndicatorStateStore" }).timeoutMs;
+              let num = state(13496).getConfig({ location: "ConnectivityIndicatorStateStore" }).timeoutMs;
               if (num == null) {
                 num = 10000;
               }
               let tmp18 = num;
-              const obj11 = state(13436);
+              const obj11 = state(13496);
             } else {
               tmp18 = delayMs2;
             }
@@ -230,7 +230,7 @@ function handleAppStateUpdate() {
   updateState();
   return false;
 }
-const AppStates = fn(1074).AppStates;
+const AppStates = fn(1085).AppStates;
 let closure_8 = new LoggerDefault("ConnectivityIndicatorStateStore");
 const ConnectivityIndicatorState = {
   HIDDEN: "hidden",

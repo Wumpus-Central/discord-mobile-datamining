@@ -5,33 +5,18 @@ import ForumPostMediaUtils from "../forums/ForumPostMediaUtils.tsx";
 import ContentInventoryEntryType from "../../../discord_common/js/shared/shared-constants/ContentInventoryEntryType.tsx";
 import ICYMITypes from "ICYMITypes.tsx";
 import ICYMIActionCreatorsDefault from "ICYMIActionCreators.tsx";
+import generateHydrationId from "generateHydrationId.tsx";
 import ContentInventoryAuthorType from "../../../discord_common/js/shared/shared-constants/ContentInventoryAuthorType.tsx";
-import ICYMIItemTypes from "ICYMIItemTypes.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import GuildScheduledEventStore from "../guild_scheduled_events/GuildScheduledEventStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
-import MessageStore from "../../stores/MessageStore.tsx";
-import ReadStateStore from "../../stores/ReadStateStore.tsx";
-import ICYMIStore from "ICYMIStore.tsx";
 import ICYMIUnreadStateStore from "ICYMIUnreadStateStore.tsx";
 
-const require = globalThis.__r;
-
 require = fn;
-function hydrateItems() {
-  const self = this;
-  const apply = closure_16.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-let closure_16 = async function _hydrateItems(arg0) {
-  if (c3 === 2) {
-    c3 = 3;
+let closure_12 = async function _hydrateItems(arg0) {
+  if (c4 === 2) {
+    c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
   } else if (tmp3 === 3) {
     if (arg0 === 1) {
@@ -40,35 +25,35 @@ let closure_16 = async function _hydrateItems(arg0) {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
-      c3 = 2;
-      if (0 === c4) {
+      c4 = 2;
+      if (0 === c5) {
         if (arg0 === 1) {
-          c3 = 3;
+          c4 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c3 = 3;
+          c4 = 3;
           const obj6 = { value, done: true };
           return obj6;
         } else {
-          dependencyMap = hydratedItems.getHydratedItems();
+          dependencyMap = closure_3;
           const substr = dependencyMap.slice(closure_1, dependencyMap2);
           if (0 !== substr.length) {
             let obj2 = ICYMIActionCreatorsDefault;
             const hydratedAttempt = obj2.loadHydratedAttempt(
-              require("generateHydrationId").generateHydrationId(closure_1, dependencyMap2),
+              generateHydrationId.generateHydrationId(closure_1, dependencyMap2),
             );
             const found = substr.filter((item) => null == dependencyMap[item.id]);
-            const found1 = found.filter((type) => type.type === dependencyMap(7978).ICYMIItemTypes.MESSAGE);
+            const found1 = found.filter((type) => type.type === dependencyMap(8024).ICYMIItemTypes.MESSAGE);
             const mapped = found1.map((channel_id) => ({
               channel_id: channel_id.data.channel_id,
               message_id: channel_id.data.message_id,
             }));
             const mapped1 = found.map((type) => {
-              if (type.type === dependencyMap(7978).ICYMIItemTypes.MESSAGE) {
+              if (type.type === dependencyMap(8024).ICYMIItemTypes.MESSAGE) {
                 const message_context = type.data.message_context;
                 let reply_message_id;
                 if (message_context != null) {
@@ -111,10 +96,9 @@ let closure_16 = async function _hydrateItems(arg0) {
                 return [];
               }
             });
-            let obj3 = require("generateHydrationId");
             const _Boolean = Boolean;
             const found2 = mapped1.flat().filter(Boolean);
-            const found3 = found.filter((type) => type.type === dependencyMap(7978).ICYMIItemTypes.ACTIVITY);
+            const found3 = found.filter((type) => type.type === dependencyMap(8024).ICYMIItemTypes.ACTIVITY);
             const mapped2 = found3.map((data) => ({ user_id: data.data.user_id, content_id: data.data.content_id }));
             const flatResult = mapped1.flat();
             const obj7 = { messageItems: null, activityItems: null };
@@ -122,8 +106,8 @@ let closure_16 = async function _hydrateItems(arg0) {
             HermesBuiltin.arraySpread(found2, HermesBuiltin.arraySpread(mapped, 0));
             obj7.messageItems = items;
             obj7.activityItems = mapped2;
+            c5 = 1;
             c4 = 1;
-            c3 = 1;
             const obj8 = {
               value: ICYMIActionCreatorsDefault.fetchHydrated(closure_1, dependencyMap2, obj7),
               done: false,
@@ -132,234 +116,24 @@ let closure_16 = async function _hydrateItems(arg0) {
           }
         }
       } else if (arg0 === 1) {
-        c3 = 3;
+        c4 = 3;
         throw value;
       } else if (arg0 === 2) {
-        c3 = 3;
+        c4 = 3;
         let obj = { value, done: true };
         return obj;
       }
-      c3 = 3;
-      return { value: "HermesInternal", done: null };
+      c4 = 3;
+      return { value: "IconComponent", done: "IconComponent" };
     } catch (tmp17) {
-      c3 = tmp;
+      c4 = tmp;
       throw tmp17;
     }
   }
 };
-let closure_17 = async function _hydrateNextPage() {
-  if (c0 === 2) {
-    c0 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp3 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      const obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c0 = 2;
-      if (0 === c1) {
-        if (arg0 === 1) {
-          c0 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c0 = 3;
-          const obj3 = { value, done: true };
-          return obj3;
-        } else {
-          const unreadDisplayItems = ICYMIStore.getUnreadDisplayItems();
-          const readDisplayItems = ICYMIStore.getReadDisplayItems();
-          const nextIndexToHydrate = ICYMIStore.getNextIndexToHydrate();
-          const items = [];
-          HermesBuiltin.arraySpread(readDisplayItems, HermesBuiltin.arraySpread(unreadDisplayItems, 0));
-          c1 = 1;
-          c0 = 1;
-          const obj4 = {
-            value: hydrateItems(items, nextIndexToHydrate, nextIndexToHydrate + require("ICYMITypes").ICYMI_PAGE_SIZE),
-            done: false,
-          };
-          return obj4;
-        }
-      } else if (arg0 === 1) {
-        c0 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c0 = 3;
-        const obj = { value, done: true };
-        return obj;
-      } else {
-        c0 = 3;
-        return { value: "HermesInternal", done: null };
-      }
-    } catch (tmp5) {
-      c0 = tmp;
-      throw tmp5;
-    }
-  }
-};
-let closure_18 = async function _regenerateFeedAndClearReadStates(arg0) {
-  if (c4 === 2) {
-    c4 = 3;
-    throw new TypeError("Generator functions may not be called on executing generators");
-  } else if (tmp4 === 3) {
-    if (arg0 === 1) {
-      throw value;
-    } else if (arg0 === 2) {
-      let obj2 = { value, done: true };
-      return obj2;
-    } else {
-      return { value: "HermesInternal", done: null };
-    }
-  } else {
-    try {
-      c4 = 2;
-      if (0 === c3) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          constants = tmp2;
-          closure_1 = tmp5;
-          closure_129_0 = object;
-          let ack;
-          let AnalyticsObjectTypes;
-          c3 = 1;
-          c4 = 1;
-          const obj5 = { value: require("asyncRequireImpl")(paths[20], paths.paths), done: false };
-          return obj5;
-        }
-      } else if (1 === tmp5) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj7 = { value, done: true };
-          return obj7;
-        } else {
-          ack = value.ack;
-          c3 = 2;
-          c4 = 1;
-          const obj8 = { value: closure_130_0(closure_130_2[21])(closure_130_2[22], closure_130_2.paths), done: false };
-          return obj8;
-        }
-      } else if (2 === tmp5) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj10 = { value, done: true };
-          return obj10;
-        } else {
-          AnalyticsObjectTypes = value.AnalyticsObjectTypes;
-          const dehydratedItems = closure_130_10.getDehydratedItems();
-          const item = dehydratedItems.forEach((type) => {
-            let tmp2 = type.type === object(constants[10]).ICYMIItemTypes.MESSAGE;
-            if (tmp2) {
-              tmp2 = type.data.channel_type === constants.GUILD_ANNOUNCEMENT;
-            }
-            if (tmp2) {
-              tmp2 =
-                closure_1(constants[23]).compare(
-                  closure_2_9.ackMessageId(type.data.channel_id),
-                  type.data.message_id,
-                ) >= 0;
-              const obj = closure_1(constants[23]);
-            }
-            if (tmp2) {
-              const channel_id = type.data.channel_id;
-              const obj2 = { object, objectType: constants.ACK_SEMI_AUTOMATIC };
-              closure_1_1(
-                channel_id,
-                obj2,
-                true,
-                true,
-                closure_1(constants[23]).atPreviousMillisecond(type.data.message_id),
-              );
-              const obj3 = closure_1(constants[23]);
-            }
-          });
-          c3 = 3;
-          c4 = 1;
-          const obj11 = { value: closure_130_1(closure_130_2[11]).clearReadStates(), done: false };
-          return obj11;
-        }
-      } else if (3 === tmp5) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj13 = { value, done: true };
-          return obj13;
-        } else {
-          c3 = 4;
-          c4 = 1;
-          const obj14 = {
-            value: closure_130_1(closure_130_2[11]).fetchDehydrated({ isReloading: true, forceRefresh: true }),
-            done: false,
-          };
-          return obj14;
-        }
-      } else if (4 === tmp5) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj15 = { value, done: true };
-          return obj15;
-        } else {
-          c3 = 5;
-          c4 = 1;
-          const obj16 = { value: closure_130_1(closure_130_2[11]).reloadICYMITab(), done: false };
-          return obj16;
-        }
-      } else if (5 === tmp5) {
-        if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj17 = { value, done: true };
-          return obj17;
-        } else {
-          c3 = 6;
-          c4 = 1;
-          const obj18 = { value: closure_130_1(closure_130_2[11]).getGuildChannelScores(), done: false };
-          return obj18;
-        }
-      } else if (arg0 === 1) {
-        c4 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c4 = 3;
-        const obj19 = { value, done: true };
-        return obj19;
-      } else {
-        const recommendedGuilds = closure_130_1(closure_130_2[11]).getRecommendedGuilds();
-        c4 = 3;
-        return { value: "HermesInternal", done: null };
-      }
-    } catch (tmp36) {
-      c4 = tmp;
-      throw tmp36;
-    }
-  }
-};
-const ThreadChannelRecord = fn(2048).ThreadChannelRecord;
-const Constants = fn(1074);
-({ ChannelTypes: closure_12, GuildNSFWContentLevel: map1 } = Constants);
+const ThreadChannelRecord = fn(2055).ThreadChannelRecord;
+const Constants = fn(1085);
+({ ChannelTypes: closure_9, GuildNSFWContentLevel: c10 } = Constants);
 const ICYMICustomScore = {
   UNKNOWN: 0,
   [0]: "UNKNOWN",
@@ -414,10 +188,9 @@ export const customScoreToNumber = function customScoreToNumber(DEFAULT) {
     return 0;
   }
 };
-export { hydrateItems };
-export const hydrateNextPage = function hydrateNextPage() {
+export const hydrateItems = function hydrateItems() {
   const self = this;
-  const apply = closure_17.apply;
+  const apply = closure_12.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -435,62 +208,6 @@ export const createGravityMessageFromServer = function createGravityMessageFromS
   }
   obj.threadChannel = fromServerResult;
   return obj;
-};
-export const useGravityMessage = function useGravityMessage(message) {
-  _require = message;
-  const items = [MessageStore, ICYMIStore];
-  const items1 = [message];
-  return require("initialize").useStateFromStores(
-    items,
-    () => {
-      message = MessageStore.getMessage(message.getChannelId(), message.id);
-      if (message == null) {
-        const hydratedItem = ICYMIStore.getHydratedItem(tmp.id);
-        let message1;
-        if (hydratedItem != null) {
-          message1 = hydratedItem.message;
-        }
-        message = message1;
-      }
-      if (message == null) {
-        message = tmp;
-      }
-      return message;
-    },
-    items1,
-  );
-};
-export const useGravityMessageItem = function useGravityMessageItem(id) {
-  _require = id;
-  const items = [ICYMIStore];
-  const items1 = [id.id];
-  return require("initialize").useStateFromStores(items, () => ICYMIStore.getHydratedItem(id.id), items1);
-};
-export const useICYMIMessage = function useICYMIMessage(id, before_message_id) {
-  _require = id;
-  closure_1 = before_message_id;
-  const items = [MessageStore, ICYMIStore];
-  const items1 = [id, before_message_id];
-  return require("initialize").useStateFromStores(
-    items,
-    () => {
-      let tmp2 = null;
-      if (null != closure_1) {
-        let message = MessageStore.getMessage(closure_0, closure_1);
-        if (message == null) {
-          const hydratedItem = ICYMIStore.getHydratedItem(closure_1);
-          let message1;
-          if (hydratedItem != null) {
-            message1 = hydratedItem.message;
-          }
-          message = message1;
-        }
-        tmp2 = message;
-      }
-      return tmp2;
-    },
-    items1,
-  );
 };
 export const customStatusToContentInventoryEntry = function customStatusToContentInventoryEntry(notificationItem) {
   const obj = {
@@ -557,39 +274,6 @@ export const compareGravityUnreadIds = function compareGravityUnreadIds(id, id2,
   }
   return num;
 };
-export const getViewableFeedItemsArray = function getViewableFeedItemsArray(viewableItems) {
-  let tmp3;
-  const items = [...ICYMIStore.getUnreadDisplayItems(), ...ICYMIStore.getReadDisplayItems()];
-  let id = null;
-  let diff = viewableItems.length - 1;
-  let tmp2 = null;
-  if (0 <= diff) {
-    while (true) {
-      tmp3 = viewableItems[diff];
-      if (null != tmp3) {
-        let NON_ELIGIBLE_SCROLL_ITEMS = ICYMIItemTypes.NON_ELIGIBLE_SCROLL_ITEMS;
-        if (!NON_ELIGIBLE_SCROLL_ITEMS.has(tmp3.item.data.kind)) {
-          break;
-        }
-      }
-      diff = diff - 1;
-      tmp2 = null;
-    }
-    id = tmp3.item.id;
-    tmp2 = id;
-  }
-  if (null == tmp2) {
-    return [];
-  } else {
-    const findIndexResult = items.findIndex((id) => id.id === id);
-    if (findIndexResult < 0) {
-      let items1 = [];
-    } else {
-      items1 = items.slice(0, findIndexResult + 1);
-    }
-    return items1;
-  }
-};
 export const isItemNSFW = function isItemNSFW(data) {
   const kind = data.data.kind;
   if ("message" === kind) {
@@ -619,7 +303,7 @@ export const isItemNSFW = function isItemNSFW(data) {
     if (guild_id1 == null) {
       guild_id1 = guild_id;
     }
-    let guild = null;
+    guild = null;
     if (null != guild_id1) {
       guild = GuildStore.getGuild(guild_id1);
     }
@@ -732,36 +416,36 @@ export const determineContentType = function determineContentType(channel, messa
     }
   }
 };
-export const contentTypeToText = function contentTypeToText(arg0) {
-  let flag = arg1;
-  if (arg1 === undefined) {
+export const contentTypeToText = function contentTypeToText(ANNOUNCEMENT) {
+  let flag = mentioned;
+  if (mentioned === undefined) {
     flag = false;
   }
-  if (ICYMITypes.ContentType.POPULAR_MESSAGE === arg0) {
+  if (ICYMITypes.ContentType.POPULAR_MESSAGE === ANNOUNCEMENT) {
     const intl10 = util.intl;
     return intl10.string(util.t["H/2+cl"]);
-  } else if (ICYMITypes.ContentType.IMAGE === arg0) {
+  } else if (ICYMITypes.ContentType.IMAGE === ANNOUNCEMENT) {
     const intl9 = util.intl;
     return intl9.string(util.t.gmOWAo);
-  } else if (ICYMITypes.ContentType.VIDEO === arg0) {
+  } else if (ICYMITypes.ContentType.VIDEO === ANNOUNCEMENT) {
     const intl8 = util.intl;
     return intl8.string(util.t.swhcPM);
-  } else if (ICYMITypes.ContentType.LINK === arg0) {
+  } else if (ICYMITypes.ContentType.LINK === ANNOUNCEMENT) {
     const intl7 = util.intl;
     return intl7.string(util.t.oj5yvD);
-  } else if (ICYMITypes.ContentType.THREAD === arg0) {
+  } else if (ICYMITypes.ContentType.THREAD === ANNOUNCEMENT) {
     const intl6 = util.intl;
     return intl6.string(util.t.DwLrLK);
-  } else if (ICYMITypes.ContentType.FORUM_POST === arg0) {
+  } else if (ICYMITypes.ContentType.FORUM_POST === ANNOUNCEMENT) {
     const intl5 = util.intl;
     return intl5.string(util.t["Q9/6BS"]);
-  } else if (ICYMITypes.ContentType.CHANGED_STATUS === arg0) {
+  } else if (ICYMITypes.ContentType.CHANGED_STATUS === ANNOUNCEMENT) {
     const intl4 = util.intl;
     return intl4.string(util.t.TGrUmi);
-  } else if (ICYMITypes.ContentType.INTERESTING === arg0) {
+  } else if (ICYMITypes.ContentType.INTERESTING === ANNOUNCEMENT) {
     const intl3 = util.intl;
     return intl3.string(util.t["TahE/i"]);
-  } else if (ICYMITypes.ContentType.ANNOUNCEMENT === arg0) {
+  } else if (ICYMITypes.ContentType.ANNOUNCEMENT === ANNOUNCEMENT) {
     const intl2 = util.intl;
     const string = intl2.string;
     const t = util.t;
@@ -771,18 +455,8 @@ export const contentTypeToText = function contentTypeToText(arg0) {
       stringResult = string(t["2ih63V"]);
     }
     return stringResult;
-  } else if (ICYMITypes.ContentType.FILE === arg0) {
+  } else if (ICYMITypes.ContentType.FILE === ANNOUNCEMENT) {
     const intl = util.intl;
     return intl.string(util.t.pYrnTY);
   }
-};
-export const regenerateFeedAndClearReadStates = function regenerateFeedAndClearReadStates() {
-  const self = this;
-  const apply = closure_18.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
 };

@@ -9,12 +9,6 @@ prototype["initialize"] = function initialize() {};
 prototype["isHandoffAvailable"] = function isHandoffAvailable() {
   return false;
 };
-Object.defineProperty(prototype, "user", {
-  get: function user() {
-    return null;
-  },
-  set: undefined,
-});
 Object.defineProperty(prototype, "key", {
   get: function key() {
     return null;

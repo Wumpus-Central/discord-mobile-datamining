@@ -3,7 +3,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import user from "../../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
 import CustomTypingIndicatorTypes from "../CustomTypingIndicatorTypes.tsx";
-import asyncRequireImpl from "../../../../_runtime/01981_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import openPremiumModalDefault from "../../../components_native/premium/openPremiumModal.tsx";
 import CustomTypingIndicatorUtils from "../CustomTypingIndicatorUtils.tsx";
@@ -15,11 +15,11 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AnalyticEvents: closure_9, AnalyticsSections: c10, HelpdeskArticles: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = {
   screen: { flex: 1 },
   container: { padding: nativeDefault.space.PX_16, rowGap: nativeDefault.space.PX_24 },
@@ -130,14 +130,14 @@ export default function CustomTypingIndicatorEditScreen() {
   const items5 = [memo, first3];
   const callback1 = first1.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(15119, dependencyMap.paths),
+      asyncRequireImpl(15176, dependencyMap.paths),
       "CustomTypingIndicatorTypingSuggestionPickerSheet",
       { initialValue: first2, onChange },
     );
   }, items4);
   const callback2 = first1.useCallback(() => {
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(15120, dependencyMap.paths),
+      asyncRequireImpl(15177, dependencyMap.paths),
       "CustomTypingIndicatorAnimationPickerSheet",
       { emojis: memo, initialAnimation: first3, onChange: onChange2 },
     );
@@ -175,7 +175,7 @@ export default function CustomTypingIndicatorEditScreen() {
           const obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -221,7 +221,7 @@ export default function CustomTypingIndicatorEditScreen() {
                 }
               }
               c4 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else if (arg0 === 1) {
             c4 = 3;

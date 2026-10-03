@@ -11,7 +11,7 @@ import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 import GuildStore from "../../../../../stores/GuildStore.tsx";
 
 require = fn;
-const SystemChannelFlags = fn(1074).SystemChannelFlags;
+const SystemChannelFlags = fn(1085).SystemChannelFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/UserJoinSystemMessage.tsx");
 
@@ -27,7 +27,7 @@ export const createUserJoinSystemMessage = function createUserJoinSystemMessage(
   let transformStickerResult;
   if (null != guildId) {
     if (null != channel) {
-      const guild = GuildStore.getGuild(guildId);
+      guild = GuildStore.getGuild(guildId);
       let tmp10 = null != guild;
       if (tmp10) {
         tmp10 = !(guild.systemChannelFlags & SystemChannelFlags.SUPPRESS_JOIN_NOTIFICATION_REPLIES);

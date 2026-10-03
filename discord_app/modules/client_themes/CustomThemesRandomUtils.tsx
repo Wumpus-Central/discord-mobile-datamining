@@ -1,5 +1,5 @@
 // discord_app/modules/client_themes/CustomThemesRandomUtils.tsx
-import _modDef672 from "../../../_runtime/metro/00672__.js";
+import _modDef683 from "../../../_runtime/metro/00683__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 let items = [
@@ -74,38 +74,38 @@ export const generateRandomColorOptions = function generateRandomColorOptions() 
       type: obj.GRADIENT,
       colors: (function generateColorHarmony(items, items1) {
         try {
-          let obj = _modDef672(items);
+          let obj = _modDef683(items);
           value = obj.get("hsl.h");
-          const value3 = obj.get("hsl.s");
+          value3 = obj.get("hsl.s");
           const value4 = obj.get("hsl.l");
           if (constants.ANALOGOUS === items1) {
             return (function generateAnalogousColors(items, value3, value4, value) {
-              const obj = closure_1_0(672);
+              const obj = closure_1_0(683);
               items = [
-                closure_1_0(672)
+                closure_1_0(683)
                   .hsl(value - 30, value3, value4)
                   .hex(),
                 ,
               ];
               items[1] = items;
-              const hslResult = closure_1_0(672).hsl(value - 30, value3, value4);
-              const obj3 = closure_1_0(672);
-              items[2] = closure_1_0(672)
+              const hslResult = closure_1_0(683).hsl(value - 30, value3, value4);
+              const obj3 = closure_1_0(683);
+              items[2] = closure_1_0(683)
                 .hsl(value + 30, value3, value4)
                 .hex();
               return items;
             })(items, value3, value4, value);
           } else if (constants.COMPLEMENTARY === items1) {
             return (function generateComplementaryColors(items, value3, value4, value) {
-              const obj = closure_1_0(672);
-              const hexResult = closure_1_0(672)
+              const obj = closure_1_0(683);
+              const hexResult = closure_1_0(683)
                 .hsl((value + 180) % 360, value3, value4)
                 .hex();
               items = [, ,];
               items[0] = items;
-              const hslResult = closure_1_0(672).hsl((value + 180) % 360, value3, value4);
-              const obj3 = closure_1_0(672);
-              items[1] = closure_1_0(672).mix(items, hexResult, 0.5).hex();
+              const hslResult = closure_1_0(683).hsl((value + 180) % 360, value3, value4);
+              const obj3 = closure_1_0(683);
+              items[1] = closure_1_0(683).mix(items, hexResult, 0.5).hex();
               items[2] = hexResult;
               return items;
             })(items, value3, value4, value);
@@ -113,13 +113,13 @@ export const generateRandomColorOptions = function generateRandomColorOptions() 
             return (function generateSplitComplementaryColors(items, value3, value4, value) {
               items = [, ,];
               items[0] = items;
-              const obj = closure_1_0(672);
-              items[1] = closure_1_0(672)
+              const obj = closure_1_0(683);
+              items[1] = closure_1_0(683)
                 .hsl((value + 150) % 360, value3, value4)
                 .hex();
-              const hslResult = closure_1_0(672).hsl((value + 150) % 360, value3, value4);
-              const obj3 = closure_1_0(672);
-              items[2] = closure_1_0(672)
+              const hslResult = closure_1_0(683).hsl((value + 150) % 360, value3, value4);
+              const obj3 = closure_1_0(683);
+              items[2] = closure_1_0(683)
                 .hsl((value + 210) % 360, value3, value4)
                 .hex();
               return items;
@@ -128,13 +128,13 @@ export const generateRandomColorOptions = function generateRandomColorOptions() 
             return (function generateTriadicColors(items, value3, value4, value) {
               items = [, ,];
               items[0] = items;
-              const obj = closure_1_0(672);
-              items[1] = closure_1_0(672)
+              const obj = closure_1_0(683);
+              items[1] = closure_1_0(683)
                 .hsl((value + 120) % 360, value3, value4)
                 .hex();
-              const hslResult = closure_1_0(672).hsl((value + 120) % 360, value3, value4);
-              const obj3 = closure_1_0(672);
-              items[2] = closure_1_0(672)
+              const hslResult = closure_1_0(683).hsl((value + 120) % 360, value3, value4);
+              const obj3 = closure_1_0(683);
+              items[2] = closure_1_0(683)
                 .hsl((value + 240) % 360, value3, value4)
                 .hex();
               return items;

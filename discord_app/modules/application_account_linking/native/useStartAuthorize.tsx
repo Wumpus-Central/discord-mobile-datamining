@@ -7,19 +7,19 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-const AuthorizeFlow = fn(6773).AuthorizeFlow;
-const AnalyticEvents = fn(1074).AnalyticEvents;
+const AuthorizeFlow = fn(6661).AuthorizeFlow;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_account_linking/native/useStartAuthorize.tsx");
 
-export default function useStartAuthorize(getOfficialApplicationId) {
+export default function useStartAuthorize(arg0) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
   }
   _require = undefined;
   const debug = obj.debug;
-  const authorizationApp = require("useAuthorizationApp").useAuthorizationApp(getOfficialApplicationId);
+  const authorizationApp = require("useAuthorizationApp").useAuthorizationApp(arg0);
   _require = authorizationApp;
   let prop;
   if (authorizationApp != null) {
@@ -55,7 +55,7 @@ export default function useStartAuthorize(getOfficialApplicationId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -116,7 +116,7 @@ export default function useStartAuthorize(getOfficialApplicationId) {
           };
           AnalyticsUtilsDefault.track(constants2.ON_PLATFORM_ACCOUNT_LINK_FLOW_STARTED, obj8);
           const obj9 = { onSuccess: closure_129_0.onSuccess, onError: closure_129_0.onError };
-          const result = closure_0(6778).accountLinkAuthorizationStarted(closure_0.id, obj9);
+          const result = closure_0(6666).accountLinkAuthorizationStarted(closure_0.id, obj9);
           c4 = 0;
           c6 = 3;
           return { value: true, done: true };

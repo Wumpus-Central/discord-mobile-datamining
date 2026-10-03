@@ -1,79 +1,200 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/xbox/XboxLinkLanding.tsx
+import util from "../../../../../../intl/index.native.tsx";
 import HelpdeskUtilsDefault from "../../../../../../utils/HelpdeskUtils.tsx";
-import _modDef8727 from "../../../../../../../discord_assets/assets/connections/xbox_link_landing.png.js";
+import GroupIcon from "../../../../../../design/components/Icon/native/redesign/generated/GroupIcon.tsx";
+import VoiceNormalIcon from "../../../../../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
+import ScreenStreamIcon from "../../../../../../design/components/Icon/native/redesign/generated/ScreenStreamIcon.tsx";
+import GameControllerIcon from "../../../../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
+import _modDef8740 from "../../../../../../../discord_assets/assets/connections/xbox_link_landing.png.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
-const require = fn;
-const XboxLinkModalScenes = fn(8722).XboxLinkModalScenes;
-const Constants = fn(1074);
+require = fn;
+function getXboxValueProps() {
+  const obj = { label: null, icon: null };
+  const intl = util.intl;
+  obj.label = intl.string(util.t.ihQXsb);
+  obj.icon = VoiceNormalIcon.VoiceNormalIcon;
+  const items = [obj, , ,];
+  const obj2 = { label: null, icon: null };
+  const intl2 = util.intl;
+  obj2.label = intl2.string(util.t.Xt1n4P);
+  obj2.icon = ScreenStreamIcon.ScreenStreamIcon;
+  items[1] = obj2;
+  const obj3 = { label: null, icon: null };
+  const intl3 = util.intl;
+  obj3.label = intl3.string(util.t.xqVY3p);
+  obj3.icon = GroupIcon.GroupIcon;
+  items[2] = obj3;
+  const obj4 = { label: null, icon: null };
+  const intl4 = util.intl;
+  obj4.label = intl4.string(util.t.iQsKVW);
+  obj4.icon = GameControllerIcon.GameControllerIcon;
+  items[3] = obj4;
+  return items;
+}
+const XboxLinkModalScenes = fn(8735).XboxLinkModalScenes;
+const Constants = fn(1085);
 ({ HelpdeskArticles: hasOwnProperty, PlatformTypes: metroRequire } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let closure_8 = createStyles.createStyles({ image: { width: 230, height: 160 } });
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/user_settings/connections/native/two_way_link/xbox/XboxLinkLanding.tsx",
 );
 
-export default function XboxLinkLanding() {
-  const tmp = closure_8();
-  navigation = navigation(1485).useNavigation();
-  let obj = navigation(1485);
-  const articleURL = HelpdeskUtilsDefault.getArticleURL(constants.XBOX_CONNECTION);
-  let intl = navigation(1115).intl;
-  let items = [navigation];
-  const memo = noop.useMemo(() => {
-    const obj = { label: null, icon: null };
-    const intl = navigation(1115).intl;
-    obj.label = intl.string(navigation(1115).t.ihQXsb);
-    obj.icon = navigation(5599).VoiceNormalIcon;
-    const items = [obj, , ,];
-    const obj2 = { label: null, icon: null };
-    const intl2 = navigation(1115).intl;
-    obj2.label = intl2.string(navigation(1115).t.Xt1n4P);
-    obj2.icon = navigation(8724).ScreenStreamIcon;
-    items[1] = obj2;
-    const obj3 = { label: null, icon: null };
-    const intl3 = navigation(1115).intl;
-    obj3.label = intl3.string(navigation(1115).t.xqVY3p);
-    obj3.icon = navigation(5587).GroupIcon;
-    items[2] = obj3;
-    const obj4 = { label: null, icon: null };
-    const intl4 = navigation(1115).intl;
-    obj4.label = intl4.string(navigation(1115).t.iQsKVW);
-    obj4.icon = navigation(8726).GameControllerIcon;
-    items[3] = obj4;
-    return items;
-  }, []);
-  const callback = noop.useCallback(() => {
-    navigation.push(XboxLinkModalScenes.PRE_CONNECT);
-  }, items);
-  const memo1 = noop.useMemo(() => ({ uri: _modDef8727 }), []);
-  let obj3 = {
-    platformType: constants2.XBOX,
-    img: memo1,
-    imgStyle: tmp.image,
-    headerConnect: null,
-    headerReconnect: null,
-    body: null,
-    onNext: null,
-    valueProps: null,
-  };
-  let intl2 = navigation(1115).intl;
-  obj3.headerConnect = intl2.string(navigation(1115).t.m8aahn);
-  let intl3 = navigation(1115).intl;
-  obj3.headerReconnect = intl3.string(navigation(1115).t.z3rAhq);
-  obj3.body = intl.format(navigation(1115).t.CIc3IN, { helpdeskArticleUrl: articleURL });
-  obj3.onNext = callback;
-  obj3.valueProps = memo;
-  return jsx(navigation(8728).TwoWayLinkLanding, {
-    platformType: constants2.XBOX,
-    img: memo1,
-    imgStyle: tmp.image,
-    headerConnect: null,
-    headerReconnect: null,
-    body: null,
-    onNext: null,
-    valueProps: null,
-  });
-}
+export default ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = navigation(576).c(10);
+      const tmp4 = closure_8();
+      const obj = navigation(576);
+      navigation = navigation(1490).useNavigation();
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const articleURL = HelpdeskUtilsDefault.getArticleURL(constants.XBOX_CONNECTION);
+        const intl = tmp(1126).intl;
+        const obj4 = { helpdeskArticleUrl: articleURL };
+        const formatResult = intl.format(tmp(1126).t.CIc3IN, obj4);
+        cResult[0] = formatResult;
+        let first = formatResult;
+      } else {
+        first = cResult[0];
+      }
+      if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
+        const tmp13 = getXboxValueProps();
+        cResult[1] = tmp13;
+        let tmp11 = tmp13;
+      } else {
+        tmp11 = cResult[1];
+      }
+      if (cResult[2] !== navigation) {
+        class N {
+          constructor() {
+            arr = closure_0.push(XboxLinkModalScenes.PRE_CONNECT);
+            return;
+          }
+        }
+        cResult[2] = navigation;
+        cResult[3] = N;
+      } else {
+        class N {
+          constructor() {
+            arr = closure_0.push(XboxLinkModalScenes.PRE_CONNECT);
+            return;
+          }
+        }
+      }
+      if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+        class N {
+          constructor() {
+            arr = closure_0.push(XboxLinkModalScenes.PRE_CONNECT);
+            return;
+          }
+        }
+        tmp16[0] = _modDef8740;
+        cResult[4] = tmp16;
+      } else {
+        class N {
+          constructor() {
+            arr = closure_0.push(XboxLinkModalScenes.PRE_CONNECT);
+            return;
+          }
+        }
+      }
+      if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
+        class N {
+          constructor() {
+            arr = closure_0.push(XboxLinkModalScenes.PRE_CONNECT);
+            return;
+          }
+        }
+        const stringResult = obj5.string(tmp(1126).t.m8aahn);
+        const intl2 = tmp(1126).intl;
+        const stringResult1 = intl2.string(tmp(1126).t.z3rAhq);
+        cResult[5] = stringResult;
+        cResult[6] = stringResult1;
+        let tmp19 = stringResult1;
+        const tmp18 = stringResult;
+      } else {
+        class N {
+          constructor() {
+            arr = closure_0.push(XboxLinkModalScenes.PRE_CONNECT);
+            return;
+          }
+        }
+        tmp19 = cResult[6];
+      }
+      if (cResult[7] === N) {
+        class N {
+          constructor() {
+            arr = closure_0.push(XboxLinkModalScenes.PRE_CONNECT);
+            return;
+          }
+        }
+        return tmp22;
+      }
+      tmp22 = jsx(navigation(8741).TwoWayLinkLanding, {
+        platformType: constants2.XBOX,
+        img: tmp16,
+        imgStyle: tmp4.image,
+        headerConnect: tmp18,
+        headerReconnect: tmp19,
+        body: first,
+        onNext: N,
+        valueProps: tmp11,
+      });
+      cResult[7] = N;
+      cResult[8] = tmp4.image;
+      cResult[9] = tmp22;
+      const obj2 = navigation(1490);
+      const obj6 = {
+        platformType: constants2.XBOX,
+        img: tmp16,
+        imgStyle: tmp4.image,
+        headerConnect: tmp18,
+        headerReconnect: tmp19,
+        body: first,
+        onNext: N,
+        valueProps: tmp11,
+      };
+    }
+  : () => {
+      const tmp = closure_8();
+      navigation = navigation(1490).useNavigation();
+      const obj = navigation(1490);
+      const articleURL = HelpdeskUtilsDefault.getArticleURL(constants.XBOX_CONNECTION);
+      const intl = navigation(1126).intl;
+      const items = [navigation];
+      const memo = noop.useMemo(() => getXboxValueProps(), []);
+      const callback = noop.useCallback(() => {
+        navigation.push(XboxLinkModalScenes.PRE_CONNECT);
+      }, items);
+      const memo1 = noop.useMemo(() => ({ uri: _modDef8740 }), []);
+      const obj3 = {
+        platformType: constants2.XBOX,
+        img: memo1,
+        imgStyle: tmp.image,
+        headerConnect: null,
+        headerReconnect: null,
+        body: null,
+        onNext: null,
+        valueProps: null,
+      };
+      const intl2 = navigation(1126).intl;
+      obj3.headerConnect = intl2.string(navigation(1126).t.m8aahn);
+      const intl3 = navigation(1126).intl;
+      obj3.headerReconnect = intl3.string(navigation(1126).t.z3rAhq);
+      obj3.body = intl.format(navigation(1126).t.CIc3IN, { helpdeskArticleUrl: articleURL });
+      obj3.onNext = callback;
+      obj3.valueProps = memo;
+      return jsx(navigation(8741).TwoWayLinkLanding, {
+        platformType: constants2.XBOX,
+        img: memo1,
+        imgStyle: tmp.image,
+        headerConnect: null,
+        headerReconnect: null,
+        body: null,
+        onNext: null,
+        valueProps: null,
+      });
+    };

@@ -85,9 +85,9 @@ function handleRelationshipAddError(error, SHOW_ALWAYS, userTag) {
   }
   throw error;
 }
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ Endpoints: metroRequire, AbortCodes: closure_7, RelationshipTypes: closure_8 } = Constants);
-const ClearFriendRequestFilters = fn(9389).ClearFriendRequestFilters;
+const ClearFriendRequestFilters = fn(9435).ClearFriendRequestFilters;
 const RelationshipErrorUXConfig = {
   SHOW_ALWAYS: 0,
   [0]: "SHOW_ALWAYS",
@@ -103,7 +103,7 @@ let obj2 = {
       errorUxConfig = body.SHOW_ALWAYS;
     }
     [tmp3, tmp4] = str.split("#");
-    const HTTP = str(1271).HTTP;
+    const HTTP = str(1282).HTTP;
     const request = {
       url: closure_6.USER_RELATIONSHIPS(),
       body: null,
@@ -116,8 +116,8 @@ let obj2 = {
     request.body = body;
     request.context = context;
     const tmp2 = _slicedToArray(str.split("#"), 2);
-    request.rejectWithError = str(1271).rejectWithMigratedError();
-    const obj3 = str(1271);
+    request.rejectWithError = str(1282).rejectWithMigratedError();
+    const obj3 = str(1282);
     return HTTP.post(request).catch((error) => {
       handleRelationshipAddError(error, errorUxConfig, str);
     });
@@ -209,9 +209,9 @@ let obj2 = {
         }
       })
       .catch(() => {
-        const AccessibilityAnnouncer = closure_0(4714).AccessibilityAnnouncer;
-        const intl = closure_0(1115).intl;
-        AccessibilityAnnouncer.announce(intl.string(closure_0(1115).t.n6Jo3E));
+        const AccessibilityAnnouncer = closure_0(4729).AccessibilityAnnouncer;
+        const intl = closure_0(1126).intl;
+        AccessibilityAnnouncer.announce(intl.string(closure_0(1126).t.n6Jo3E));
       });
   },
   updateRelationship(userId, c0) {
@@ -282,15 +282,15 @@ let obj2 = {
         AccessibilityAnnouncer.announce(intl.string(require("util").t.n6Jo3E));
       });
   },
-  ignoreUser(id, IGNORE_CONFIRMATION_ACTION_SHEET, channelId) {
+  ignoreUser(id, mobile_iar_ignore_user_element, channelId) {
     const _require = id;
     const HTTP = require("HTTPUtils").HTTP;
     obj = {
       url: closure_6.IGNORE_USER(id),
-      context: { location: IGNORE_CONFIRMATION_ACTION_SHEET },
+      context: { location: mobile_iar_ignore_user_element },
       rejectWithError: require("HTTPUtils").rejectWithMigratedError(),
     };
-    obj2 = { location: IGNORE_CONFIRMATION_ACTION_SHEET };
+    obj2 = { location: mobile_iar_ignore_user_element };
     const obj3 = require("HTTPUtils");
     const putResult = HTTP.put(obj);
     return HTTP.put(obj)
@@ -303,10 +303,10 @@ let obj2 = {
         obj2.dispatch({ type: "RELATIONSHIP_IGNORE_USER_SUCCESS", userId, timestamp: Date.now() });
       })
       .catch(() => {
-        channelId(8036).showFailedToast();
-        const AccessibilityAnnouncer = userId(4714).AccessibilityAnnouncer;
-        const intl = userId(1115).intl;
-        AccessibilityAnnouncer.announce(intl.string(userId(1115).t.n6Jo3E));
+        channelId(8080).showFailedToast();
+        const AccessibilityAnnouncer = userId(4729).AccessibilityAnnouncer;
+        const intl = userId(1126).intl;
+        AccessibilityAnnouncer.announce(intl.string(userId(1126).t.n6Jo3E));
       });
   },
   unignoreUser(id, UserProfileRemediatedNotice, channelId) {
@@ -328,10 +328,10 @@ let obj2 = {
         AccessibilityAnnouncer.announce(intl.string(util.t.QlH5w6));
       })
       .catch(() => {
-        channelId(8036).showFailedToast();
-        const AccessibilityAnnouncer = id(4714).AccessibilityAnnouncer;
-        const intl = id(1115).intl;
-        AccessibilityAnnouncer.announce(intl.string(id(1115).t.n6Jo3E));
+        channelId(8080).showFailedToast();
+        const AccessibilityAnnouncer = id(4729).AccessibilityAnnouncer;
+        const intl = id(1126).intl;
+        AccessibilityAnnouncer.announce(intl.string(id(1126).t.n6Jo3E));
       });
   },
 };

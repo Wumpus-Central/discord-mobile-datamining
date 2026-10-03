@@ -1,7 +1,9 @@
 // discord_app/modules/guild_mod_dash_member_safety/MemberSafetySupplementalUtils.tsx
+import c from "../../../_runtime/00576_c.js";
 import util from "../../intl/index.native.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import shared from "../../design/shared.tsx";
+import useThemeDefault from "../../hooks/useTheme.tsx";
 import PlatformsDefault from "../../lib/Platforms.tsx";
 import ConnectionsHooks from "../connections/ConnectionsHooks.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -40,7 +42,7 @@ let closure_13 = async function _fetchMemberSupplemental(arg0) {
       obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -140,7 +142,7 @@ let closure_13 = async function _fetchMemberSupplemental(arg0) {
     }
   }
 };
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 let closure_5 = {};
 let closure_6 = {
   FAILED: 0,
@@ -175,6 +177,7 @@ const JoinSourceType = {
   [8]: "SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL",
 };
 let obj2 = { DISCORD: "discord", TWITCH: "twitch", YOUTUBE: "youtube", GUILD_SUBSCRIPTION: "guild_subscription" };
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_mod_dash_member_safety/MemberSafetySupplementalUtils.tsx");
 
@@ -244,24 +247,58 @@ export const getIntegrationLabel = function getIntegrationLabel(arg0) {
     return intl.string(util.t.gmCUFw);
   }
 };
-export const useGetIntegrationIconString = function useGetIntegrationIconString(arg0) {
-  obj2 = ConnectionsHooks;
-  value = PlatformsDefault.get(obj2.useLegacyPlatformType(arg0));
-  let tmp5 = null;
-  if (null != value) {
-    const items = [,];
-    ({ TWITCH: arr[0], YOUTUBE: arr[1] } = obj2);
-    tmp5 = null;
-    if (items.includes(arg0)) {
-      const _HermesInternal = HermesInternal;
-      const tmp2Result = shared;
-      const str = "url('";
-      const combined = "url('" + shared.isThemeDark(tmp4) ? str.darkSVG : str.lightSVG + "')";
-      const tmp7 = shared.isThemeDark(tmp4) ? str.darkSVG : str.lightSVG;
+export const useGetIntegrationIconString = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      let str2 = c.c(4);
+      obj2 = PlatformsDefault;
+      let lightSVG = obj2.get(ConnectionsHooks.useLegacyPlatformType(arg0));
+      const tmp2 = useThemeDefault();
+      let tmp3 = null;
+      if (null != lightSVG) {
+        const items = [,];
+        ({ TWITCH: arr[0], YOUTUBE: arr[1] } = obj2);
+        tmp3 = null;
+        if (items.includes(arg0)) {
+          if (str2[0] === lightSVG.icon.darkSVG) {
+            if (str2[1] === lightSVG.icon.lightSVG) {
+              if (str2[2] === tmp2) {
+                const _HermesInternal = HermesInternal;
+                str2 = "')";
+                const combined = "url('" + str2[3] + "')";
+              }
+            }
+          }
+          let darkSVG = lightSVG.icon;
+          const tmp5 = shared.isThemeDark(tmp2) ? darkSVG.darkSVG : darkSVG.lightSVG;
+          darkSVG = lightSVG.icon.darkSVG;
+          str2[0] = darkSVG;
+          lightSVG = lightSVG.icon.lightSVG;
+          str2[1] = lightSVG;
+          str2[2] = tmp2;
+          str2[3] = tmp5;
+          const tmpResult = shared;
+        }
+      }
+      return tmp3;
     }
-  }
-  return tmp5;
-};
+  : (arg0) => {
+      obj2 = ConnectionsHooks;
+      value = PlatformsDefault.get(obj2.useLegacyPlatformType(arg0));
+      let tmp5 = null;
+      if (null != value) {
+        const items = [,];
+        ({ TWITCH: arr[0], YOUTUBE: arr[1] } = obj2);
+        tmp5 = null;
+        if (items.includes(arg0)) {
+          const _HermesInternal = HermesInternal;
+          const tmp2Result = shared;
+          const str = "url('";
+          const combined = "url('" + shared.isThemeDark(tmp4) ? str.darkSVG : str.lightSVG + "')";
+          const tmp7 = shared.isThemeDark(tmp4) ? str.darkSVG : str.lightSVG;
+        }
+      }
+      return tmp5;
+    };
 export const fetchMemberSupplemental = function fetchMemberSupplemental() {
   const self = this;
   const apply = closure_13.apply;

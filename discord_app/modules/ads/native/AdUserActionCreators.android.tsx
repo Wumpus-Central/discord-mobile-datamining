@@ -16,7 +16,7 @@ let closure_6 = async function _fetchAdUser(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -139,7 +139,7 @@ let closure_6 = async function _fetchAdUser(arg0) {
     }
   }
 };
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AnalyticEvents: closure_4, Platforms: hasOwnProperty } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/ads/native/AdUserActionCreators.android.tsx");

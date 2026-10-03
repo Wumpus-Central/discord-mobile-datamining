@@ -253,6 +253,7 @@ const obj = {
       "VOICE_CHANNEL_SELECT",
       "CHANNEL_DELETE",
       "CHANNEL_UPDATES",
+      "GUILD_DELETE",
     ],
     inlineRequire() {
       return require("FramesNativeManager").default;
@@ -316,23 +317,6 @@ const obj = {
       return require("GuildRoomManager").default;
     },
     neverLoadBeforeConnectionOpen: true,
-  },
-  GuildRoomSpatialAudioManager: {
-    actions: [
-      "AUDIO_SET_AUDIO_MIXER_SETTINGS",
-      "RTC_CONNECTION_STATE",
-      "RTC_CONNECTION_USERS_MERGED",
-      "MEDIA_SESSION_JOINED",
-      "GUILD_ROOM_CONNECT",
-      "GUILD_ROOM_UPDATE",
-      "GUILD_ROOM_LOCAL_UPDATE",
-      "GUILD_ROOM_DISCONNECT",
-    ],
-    inlineRequire() {
-      return require("GuildRoomSpatialAudioManager").default;
-    },
-    neverLoadBeforeConnectionOpen: true,
-    hasStoreChangeListeners: true,
   },
   GuildScheduledEventManager: {
     actions: ["POST_CONNECTION_OPEN", "GUILD_DELETE", "GUILD_UNAVAILABLE", "INVITE_RESOLVE_SUCCESS", "CHANNEL_SELECT"],
@@ -520,7 +504,7 @@ const obj = {
     },
   },
   RedesignNewUserManager: {
-    actions: ["POST_CONNECTION_OPEN", "ONBOARDING_START"],
+    actions: ["POST_CONNECTION_OPEN", "ONBOARDING_START", "USER_REQUIRED_ACTION_UPDATE"],
     inlineRequire() {
       return require("RedesignNewUserManager").default;
     },

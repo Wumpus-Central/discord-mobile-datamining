@@ -73,14 +73,9 @@ function resolveGoreSettingWithDefaults(isFriend) {
   }
   obj = RegionalFeatureConfigUtils;
 }
-const HelpdeskArticles = fn(1074).HelpdeskArticles;
-const size = fn(2);
-const result = size.fileFinishedImporting(
-  "modules/explicit_media_redaction/SensitiveMediaGoreRedactionSettingsUtils.tsx",
-);
-
-export { resolveGoreSettingWithDefaults };
-export const resolveGoreSettingWithDefaultsForTeen = function resolveGoreSettingWithDefaultsForTeen(isDm) {
+const HelpdeskArticles = fn(1085).HelpdeskArticles;
+const ReactCompilerGating = fn(558);
+function resolveGoreSettingWithDefaultsForTeen(isDm) {
   let flag = isDm.isDm;
   if (flag === undefined) {
     flag = false;
@@ -97,8 +92,8 @@ export const resolveGoreSettingWithDefaultsForTeen = function resolveGoreSetting
   }
   const ExplicitContentRedaction = preloaded_user_settings.ExplicitContentRedaction;
   BLUR = flag ? ExplicitContentRedaction.BLOCK : ExplicitContentRedaction.BLUR;
-};
-export const getGoreContentSettingOrDefault = function getGoreContentSettingOrDefault(arg0) {
+}
+function getGoreContentSettingOrDefault(arg0) {
   let setting = arg0;
   if (arg0 == null) {
     const GoreContentSettings = UserSettings.GoreContentSettings;
@@ -128,7 +123,15 @@ export const getGoreContentSettingOrDefault = function getGoreContentSettingOrDe
     isFriend: true,
   });
   return obj;
-};
+}
+const size = fn(2);
+const result = size.fileFinishedImporting(
+  "modules/explicit_media_redaction/SensitiveMediaGoreRedactionSettingsUtils.tsx",
+);
+
+export { resolveGoreSettingWithDefaults };
+export { resolveGoreSettingWithDefaultsForTeen };
+export { getGoreContentSettingOrDefault };
 export const updateGoreContentSetting = function updateGoreContentSetting(arg0) {
   const GoreContentSettings = UserSettings.GoreContentSettings;
   const setting = GoreContentSettings.getSetting();
@@ -161,6 +164,6 @@ export const updateGoreContentSetting = function updateGoreContentSetting(arg0) 
   GoreContentSettings2.updateSetting({});
   const obj2 = {};
 };
-export const useSensitiveContentFilterHelpArticle = function useSensitiveContentFilterHelpArticle() {
-  return noop.useMemo(() => constants.EXPLICIT_MEDIA_REDACTION, []);
-};
+export const useSensitiveContentFilterHelpArticle = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => HelpdeskArticles.EXPLICIT_MEDIA_REDACTION
+  : () => noop.useMemo(() => constants.EXPLICIT_MEDIA_REDACTION, []);

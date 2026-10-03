@@ -45,7 +45,7 @@ function ensureGuildLoaded(guild_id, Full, getBasicChannel) {
               );
             } else {
               [arr, tmp41] = result;
-              tmp4(2095)(arr);
+              tmp4(2100)(arr);
               if (Full !== tmp2.Basic) {
                 closure_34 = closure_34 + 1;
               }
@@ -389,7 +389,7 @@ function deleteChannel(guild_id) {
         dependencyMap8[guild_id.guild_id] = num + 1;
       }
     }
-    if (React6(guild_id.type)) {
+    if (closure_1_8(guild_id.type)) {
       closure_26 = closure_26 + 1;
     }
   }
@@ -506,7 +506,7 @@ function guildChannelCount(id) {
   }
   return length;
 }
-const ChannelRecord = fn(2048);
+const ChannelRecord = fn(2055);
 ({
   createChannelRecordFromServer: closure_7,
   isPrivate: closure_8,
@@ -515,7 +515,7 @@ const ChannelRecord = fn(2048);
   ALL_CHANNEL_TYPES: closure_11,
   castChannelRecord: closure_12,
 } = ChannelRecord);
-const ChannelTypes = fn(1074).ChannelTypes;
+const ChannelTypes = fn(1085).ChannelTypes;
 let closure_17 = new LoggerDefault("ChannelStore");
 let closure_18 = {};
 let dependencyMap2 = {};
@@ -555,7 +555,7 @@ prototype["loadGuildFromChannelId"] = function loadGuildFromChannelId(channel_id
   return guildIds;
 };
 prototype["loadGuildIds"] = function loadGuildIds(items) {
-  found = items.filter(found(1370).isNotNullish);
+  found = items.filter(found(1375).isNotNullish);
   if (0 === found.length) {
     return null;
   } else {
@@ -565,7 +565,7 @@ prototype["loadGuildIds"] = function loadGuildIds(items) {
       return null;
     } else if (found.some((item) => !set.has(item))) {
       dependencyMap = closure_31;
-      return tmp(2093).tryLoadOrResetCacheGatewayAsync(
+      return tmp(2098).tryLoadOrResetCacheGatewayAsync(
         "loadChannels",
         asyncGeneratorStep(async () => {
           if (c7 === 2) {
@@ -578,7 +578,7 @@ prototype["loadGuildIds"] = function loadGuildIds(items) {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else {
             while (true) {
@@ -616,7 +616,7 @@ prototype["loadGuildIds"] = function loadGuildIds(items) {
                       return obj2;
                     }
                   });
-                  found = mapped.filter(closure_0(1370).isNotNullish);
+                  found = mapped.filter(closure_0(1375).isNotNullish);
                   closure_130_0 = found;
                   c5 = 1;
                   let _Promise = Promise;
@@ -663,7 +663,7 @@ prototype["loadGuildIds"] = function loadGuildIds(items) {
                     return { value: null, done: true };
                   } else {
                     closure_130_2 = closure_130_1.filter((guildId) => !set.has(guildId.guildId));
-                    let obj2 = databaseResult(573);
+                    let obj2 = databaseResult(584);
                     let obj7 = { type: "LOAD_CHANNELS", channels: null };
                     obj7.channels = closure_130_2;
                     c6 = 3;
@@ -969,7 +969,7 @@ const channelStore = new ChannelStore(DispatcherDefault, {
       );
       let addResult = set.add(tmp5);
       for (const item10036 of arr) {
-        let tmp14 = setChannel(closure_1_12(item10036));
+        let tmp14 = setChannel(__initData(item10036));
         continue;
       }
       continue;
@@ -985,7 +985,7 @@ const channelStore = new ChannelStore(DispatcherDefault, {
     while (iter !== undefined) {
       for (const item10021 of nextResult) {
         let obj = deserializeChannels;
-        let tmp8 = setChannel(obj.deserializeChannel(closure_1_12(item10021)));
+        let tmp8 = setChannel(obj.deserializeChannel(__initData(item10021)));
         continue;
       }
       continue;
@@ -1146,7 +1146,7 @@ const channelStore = new ChannelStore(DispatcherDefault, {
       for (const item10033 of channels) {
         let _Object = Object;
         if (!Object.hasOwn(closure_19, item10033.id)) {
-          let tmp18 = setGuildChannel(closure_1_12(item10033));
+          let tmp18 = setGuildChannel(__initData(item10033));
         }
         continue;
       }
@@ -1174,7 +1174,7 @@ const channelStore = new ChannelStore(DispatcherDefault, {
   OVERLAY_INITIALIZE: function handleInitialize(arg0) {
     while (tmp !== undefined) {
       let obj = deserializeChannels;
-      let tmp7 = setChannel(obj.deserializeChannel(closure_1_12(tmp2)));
+      let tmp7 = setChannel(obj.deserializeChannel(__initData(tmp2)));
       continue;
     }
     tmp = arg0.channels[Symbol.iterator]();

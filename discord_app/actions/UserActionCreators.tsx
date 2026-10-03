@@ -23,7 +23,7 @@ let closure_9 = async function _fetchProfile(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -69,7 +69,7 @@ let closure_9 = async function _fetchProfile(arg0) {
           closure_131_12 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "flex", done: null };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -199,7 +199,7 @@ let closure_9 = async function _fetchProfile(arg0) {
         }
         c6 = 0;
         c8 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp91) {
       closure_5 = tmp91;
@@ -227,7 +227,7 @@ let closure_10 = async function _fetchMutualFriends() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -295,7 +295,7 @@ let closure_10 = async function _fetchMutualFriends() {
           closure_131_1(closure_131_2[7]).dispatch(obj11);
           c5 = 0;
           c7 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp32) {
         closure_4 = tmp32;
@@ -309,8 +309,8 @@ let closure_10 = async function _fetchMutualFriends() {
     }
   })();
 };
-const Endpoints = fn(1074).Endpoints;
-const PSEUDO_GUILD_IDS = fn(1075).PSEUDO_GUILD_IDS;
+const Endpoints = fn(1085).Endpoints;
+const PSEUDO_GUILD_IDS = fn(1086).PSEUDO_GUILD_IDS;
 let closure_8 = new LoggerDefault("UserProfileModalActionCreators");
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/UserActionCreators.tsx");

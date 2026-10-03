@@ -3,7 +3,7 @@ import AutomodMessageUtils from "../guild_automod/AutomodMessageUtils.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ UserFlags: c3, ChannelTypes: closure_4 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/isSpam.tsx");

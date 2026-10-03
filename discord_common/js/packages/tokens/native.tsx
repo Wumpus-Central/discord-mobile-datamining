@@ -1,14 +1,14 @@
 // discord_common/js/packages/tokens/native.tsx
 import ThemeTypes from "themes/generated/generated-definitions.tsx";
-import _mod578 from "colors/generated/native/generated-definitions.tsx";
-import _mod579 from "colors/generated/native/experiment-definitions.tsx";
-import _mod580 from "colors/generated/raw-color-definitions.tsx";
-import _mod581 from "modules/generated/generated-definitions.tsx";
-import _mod582 from "shadows/generated/shared/generated-definitions.tsx";
-import mapValuesDefault from "../../../../_runtime/00583_mapValues.js";
+import _mod589 from "colors/generated/native/generated-definitions.tsx";
+import _mod590 from "colors/generated/native/experiment-definitions.tsx";
+import _mod591 from "colors/generated/raw-color-definitions.tsx";
+import _mod592 from "modules/generated/generated-definitions.tsx";
+import _mod593 from "shadows/generated/shared/generated-definitions.tsx";
+import mapValuesDefault from "../../../../_runtime/00594_mapValues.js";
 import Radius from "radii/generated/generated-definitions.tsx";
 import Layout from "layout/generated/generated-definitions.tsx";
-import _modDef672 from "../../../../_runtime/metro/00672__.js";
+import _modDef683 from "../../../../_runtime/metro/00683__.js";
 import transforms from "transforms.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -22,10 +22,10 @@ function sanitizeTheme(theme) {
     throw error;
   }
 }
-const SemanticColors = _mod578._private.SemanticColors;
-const SemanticColorExperiments = _mod579._private.SemanticColorExperiments;
-const RawColors = _mod580._private.RawColors;
-const Shadows = _mod582._private.Shadows;
+const SemanticColors = _mod589._private.SemanticColors;
+const SemanticColorExperiments = _mod590._private.SemanticColorExperiments;
+const RawColors = _mod591._private.RawColors;
+const Shadows = _mod593._private.Shadows;
 let closure_6 = Symbol("semanticColor");
 const set = new Set(Object.values(ThemeTypes._private.Themes));
 let result = size.fileFinishedImporting("../discord_common/js/packages/tokens/native.tsx");
@@ -35,48 +35,48 @@ export default {
   colors: mapValuesDefault(SemanticColors, (arg0, arg1) => ({ [closure_1_6]: arg1 })),
   unsafe_rawColors: RawColors,
   shadows: mapValuesDefault(Shadows, (arg0) => {
-    let f72120 = (shadowOffset, arg1) => {
+    let f81383 = (shadowOffset, arg1) => {
       shadowOffset = undefined;
       if (!arg1) {
         shadowOffset = shadowOffset.shadowOffset;
       }
       return shadowOffset;
     };
-    f72120 = (shadowColorAndroid, arg1) =>
+    f81383 = (shadowColorAndroid, arg1) =>
       arg1 ? shadowColorAndroid.shadowColorAndroid : shadowColorAndroid.shadowColor;
-    f72120 = (shadowOpacity) => shadowOpacity.shadowOpacity;
-    f72120 = (shadowRadius) => shadowRadius.shadowRadius;
-    f72120 = (elevation) => elevation.elevation;
+    f81383 = (shadowOpacity) => shadowOpacity.shadowOpacity;
+    f81383 = (shadowRadius) => shadowRadius.shadowRadius;
+    f81383 = (elevation) => elevation.elevation;
     return {
       shadowOffset: {
         resolve(isAndroid) {
-          return f72120(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+          return f81383(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
         },
       },
       shadowColor: {
         resolve(isAndroid) {
-          return f72120(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+          return f81383(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
         },
       },
       shadowOpacity: {
         resolve(isAndroid) {
-          return f72120(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+          return f81383(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
         },
       },
       shadowRadius: {
         resolve(isAndroid) {
-          return f72120(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+          return f81383(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
         },
       },
       elevation: {
         resolve(isAndroid) {
-          return f72120(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+          return f81383(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
         },
       },
     };
   }),
   radii: Radius.Radius,
-  modules: mapValuesDefault(_mod581._private.Modules, (arg0) =>
+  modules: mapValuesDefault(_mod592._private.Modules, (arg0) =>
     mapValuesDefault(arg0, (arg0) => {
       closure_0 = arg0;
       return {
@@ -97,13 +97,13 @@ export default {
   ),
   space: Layout.SpacePx,
   internal: {
-    isSemanticColor(backgroundColor) {
-      let tmp = typeof backgroundColor === "object";
-      if (typeof backgroundColor === "object") {
-        tmp = null !== backgroundColor;
+    isSemanticColor(BACKGROUND_BASE_LOW) {
+      let tmp = typeof BACKGROUND_BASE_LOW === "object";
+      if (typeof BACKGROUND_BASE_LOW === "object") {
+        tmp = null !== BACKGROUND_BASE_LOW;
       }
       if (tmp) {
-        tmp = closure_6 in backgroundColor;
+        tmp = closure_6 in BACKGROUND_BASE_LOW;
       }
       return tmp;
     },
@@ -188,9 +188,9 @@ export default {
         if (1 === opacity) {
           let hexResult = result;
         } else {
-          const obj8 = _modDef672(result);
-          hexResult = _modDef672(result).alpha(opacity).hex();
-          const alphaResult = _modDef672(result).alpha(opacity);
+          const obj8 = _modDef683(result);
+          hexResult = _modDef683(result).alpha(opacity).hex();
+          const alphaResult = _modDef683(result).alpha(opacity);
         }
         return hexResult;
       }
@@ -244,7 +244,7 @@ export default {
           } else if (semanticColorContextFromThemeContext != null) {
             tmp38 = semanticColorContextFromThemeContext.gradient.colors[tmp36.color];
           }
-          const tmp61Result = _modDef672(tmp38);
+          const tmp61Result = _modDef683(tmp38);
           let result1 = tmp61Result;
           if ("saturation" in tmp36) {
             result1 = tmp61Result.set("hsl.s", tmp36.saturation);

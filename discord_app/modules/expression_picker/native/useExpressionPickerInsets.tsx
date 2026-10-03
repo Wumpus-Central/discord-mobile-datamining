@@ -1,25 +1,65 @@
 // discord_app/modules/expression_picker/native/useExpressionPickerInsets.tsx
+import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const EXPRESSION_FOOTER_HEIGHT = fn(1074).EXPRESSION_FOOTER_HEIGHT;
+require = fn;
+const EXPRESSION_FOOTER_HEIGHT = fn(1085).EXPRESSION_FOOTER_HEIGHT;
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/expression_picker/native/useExpressionPickerInsets.tsx");
 
-export default function useExpressionPickerInsets(hasCategories) {
-  const bottom = useSafeAreaInsetsDefault().bottom;
-  const obj = { safeAreaStyle: null, safeAreaBottomKeyboardAware: null };
-  const items = [bottom];
-  obj.safeAreaStyle = noop.useMemo(() => ({ paddingBottom: bottom }), items);
-  let num = 0;
-  if (hasCategories.hasCategories) {
-    num = EXPRESSION_FOOTER_HEIGHT;
-  }
-  const sum =
-    useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true, includeCustomKeyboardHeight: false }).insets
-      .bottom + num;
-  obj.safeAreaBottomKeyboardAware = sum + nativeDefault.space.PX_16;
-  return obj;
-}
+export default ReactCompilerGating.isReactCompilerEnabled()
+  ? (hasCategories) => {
+      const cResult = c.c(6);
+      const bottom = useSafeAreaInsetsDefault().bottom;
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const obj2 = { includeKeyboardHeight: true, includeCustomKeyboardHeight: false };
+        cResult[0] = obj2;
+        let first = obj2;
+      } else {
+        first = cResult[0];
+      }
+      if (cResult[1] !== bottom) {
+        const obj3 = { paddingBottom: bottom };
+        cResult[1] = bottom;
+        cResult[2] = obj3;
+        let tmp5 = obj3;
+      } else {
+        tmp5 = cResult[2];
+      }
+      let num4 = 0;
+      if (hasCategories.hasCategories) {
+        num4 = EXPRESSION_FOOTER_HEIGHT;
+      }
+      const sum = useSafeAreaInsetsKeyboardAwareDefault(first).insets.bottom + num4;
+      const sum1 = sum + nativeDefault.space.PX_16;
+      if (cResult[3] === tmp5) {
+        if (cResult[4] === sum1) {
+          let tmp8 = cResult[5];
+        }
+        return tmp8;
+      }
+      const obj4 = { safeAreaStyle: tmp5, safeAreaBottomKeyboardAware: sum1 };
+      cResult[3] = tmp5;
+      cResult[4] = sum1;
+      cResult[5] = obj4;
+      tmp8 = obj4;
+    }
+  : (hasCategories) => {
+      const bottom = useSafeAreaInsetsDefault().bottom;
+      const obj = { safeAreaStyle: null, safeAreaBottomKeyboardAware: null };
+      const items = [bottom];
+      obj.safeAreaStyle = noop.useMemo(() => ({ paddingBottom: bottom }), items);
+      let num = 0;
+      if (hasCategories.hasCategories) {
+        num = EXPRESSION_FOOTER_HEIGHT;
+      }
+      const sum =
+        useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true, includeCustomKeyboardHeight: false })
+          .insets.bottom + num;
+      obj.safeAreaBottomKeyboardAware = sum + nativeDefault.space.PX_16;
+      return obj;
+    };

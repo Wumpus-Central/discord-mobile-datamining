@@ -120,7 +120,7 @@ let closure_23 = async function _trackAppUIViewedAsync(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -192,7 +192,7 @@ let closure_23 = async function _trackAppUIViewedAsync(arg0) {
               closure_1_1(9).setTTICallback(() => true);
               closure_1_27();
               c25 = null;
-            }, 15 * closure_1_1(1091).Millis.SECOND);
+            }, 15 * closure_1_1(1102).Millis.SECOND);
             closure_1_1(9).setTTICallback(() => {
               const tmp = closure_1_21();
               let flag = false;
@@ -236,7 +236,7 @@ let closure_23 = async function _trackAppUIViewedAsync(arg0) {
           }
         })();
         c6 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp6) {
       c6 = tmp;
@@ -255,7 +255,7 @@ let closure_24 = async function _logLegacyAppUiViewed(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -312,7 +312,7 @@ let closure_24 = async function _logLegacyAppUiViewed(arg0) {
         const merged2 = Object.assign(closure_133_0);
         closure_134_1(closure_134_2[19]).track(closure_134_10.APP_UI_VIEWED, obj9, { logEventProperties: true });
         c8 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp7) {
       c8 = tmp;
@@ -341,7 +341,7 @@ let closure_28 = async function _trackAppUIViewed() {
       const obj7 = { value, done: true };
       return obj7;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -516,7 +516,7 @@ let closure_28 = async function _trackAppUIViewed() {
           })(closure_131_6);
         }
         c6 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp57) {
       c6 = tmp;
@@ -556,7 +556,7 @@ let closure_30 = async function _trackAppLaunchCompletedAsync(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -594,7 +594,7 @@ let closure_30 = async function _trackAppLaunchCompletedAsync(arg0) {
           logEventProperties: true,
         });
         c8 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp21) {
       c8 = tmp;
@@ -602,11 +602,11 @@ let closure_30 = async function _trackAppLaunchCompletedAsync(arg0) {
     }
   }
 };
-const AnalyticEvents = fn(1074).AnalyticEvents;
-const ACCEPT_INVITE_MODAL_KEY = fn(7257).ACCEPT_INVITE_MODAL_KEY;
-const StaticChannelRoutes = fn(2051).StaticChannelRoutes;
+const AnalyticEvents = fn(1085).AnalyticEvents;
+const ACCEPT_INVITE_MODAL_KEY = fn(7155).ACCEPT_INVITE_MODAL_KEY;
+const StaticChannelRoutes = fn(2058).StaticChannelRoutes;
 const jsx = fn(21).jsx;
-const v1 = fn(1255);
+const v1 = fn(1266);
 const load_id = v1.v4();
 const Manifest = ClientInfoUtils.getConstants().Manifest;
 let c18 = false;

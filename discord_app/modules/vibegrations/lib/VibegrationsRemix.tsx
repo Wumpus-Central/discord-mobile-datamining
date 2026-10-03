@@ -20,7 +20,7 @@ let closure_9 = async function _remixVibegrationsProjectInto(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -134,7 +134,7 @@ let closure_9 = async function _remixVibegrationsProjectInto(arg0) {
     }
   })();
 };
-const VibegrationsConnectionStore = fn(12851);
+const VibegrationsConnectionStore = fn(12904);
 ({ VibegrationsRemixError: closure_4, ensureConnection: hasOwnProperty, remixProjectWorkspace: metroRequire, sendUserMessage: closure_7 } = VibegrationsConnectionStore);
 let c8 = " (Remix)";
 const size = fn(2);

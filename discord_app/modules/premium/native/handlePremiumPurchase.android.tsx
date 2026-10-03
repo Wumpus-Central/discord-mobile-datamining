@@ -30,7 +30,7 @@ let closure_15 = async function _validatePurchase(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -62,7 +62,7 @@ let closure_15 = async function _validatePurchase(arg0) {
           } = closure_0);
           c5 = 1;
           c6 = 1;
-          return { value: "flex", done: null };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {
@@ -114,7 +114,7 @@ let closure_15 = async function _validatePurchase(arg0) {
       } else {
         c4 = 0;
         c6 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp25) {
       closure_3 = tmp25;
@@ -128,10 +128,10 @@ let closure_15 = async function _validatePurchase(arg0) {
   }
 };
 let closure_3 = ["succeededOnlyFields"];
-const setGPlayAnalytics = fn(8860).setGPlayAnalytics;
-const Constants = fn(1074);
+const setGPlayAnalytics = fn(8873).setGPlayAnalytics;
+const Constants = fn(1085);
 ({ AnalyticEvents: closure_11, Endpoints: closure_12 } = Constants);
-const PaymentGateways = fn(1085).PaymentGateways;
+const PaymentGateways = fn(1096).PaymentGateways;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/native/handlePremiumPurchase.android.tsx");
 
@@ -145,7 +145,7 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
   const premiumTrialOffer = require("usePremiumTrialOffer").usePremiumTrialOffer();
   let obj2 = require("usePremiumTrialOffer");
   premiumDiscountOffer = require("hooks/usePremiumDiscountOffer").usePremiumDiscountOffer();
-  let obj3 = require("hooks/usePremiumDiscountOffer");
+  const obj3 = require("hooks/usePremiumDiscountOffer");
   const isEligibleForBogoOffer = require("useIsEligibleForBogoOffer").useIsEligibleForBogoOffer();
   closure_4 = tmp5;
   let id;
@@ -161,374 +161,304 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
     prop = stateFromStores.paymentGatewaySubscriptionId;
   }
   _require = id(function* (premiumSubscription) {
-    if (c7 === 2) {
-      c7 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp9 === 3) {
+    if (1 === tmp10) {
       if (premiumSubscription === 1) {
+        c7 = 3;
         throw value;
       } else if (premiumSubscription === 2) {
-        const obj3 = { value, done: true };
-        return obj3;
+        c7 = 3;
+        return { value, done: true };
       } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c7 = 2;
-        if (0 === c6) {
-          if (premiumSubscription === 1) {
-            c7 = 3;
-            throw value;
-          } else if (premiumSubscription === 2) {
-            c7 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            closure_3 = tmp4;
-            dependencyMap = tmp10;
-            closure_130_0 = undefined;
-            closure_130_1 = undefined;
-            closure_130_2 = undefined;
-            closure_130_3 = undefined;
-            closure_130_4 = undefined;
-            closure_130_5 = undefined;
-            closure_130_6 = undefined;
-            closure_130_7 = undefined;
-            closure_130_8 = undefined;
-            closure_130_9 = undefined;
-            closure_130_10 = undefined;
-            closure_130_11 = undefined;
-            closure_130_12 = undefined;
-            ({
-              productId: closure_130_0,
-              skuId: closure_130_1,
-              analyticsLoadId: closure_130_2,
-              analyticsLocation: closure_130_3,
-              analyticsLocations: closure_130_4,
-              analyticsData: closure_130_5,
-              isGift,
-            } = premiumSubscription);
-            if (isGift === undefined) {
-              isGift = false;
-            }
-            closure_130_6 = isGift;
-            let flag = premiumSubscription.isOneTimePurchase;
-            if (flag === undefined) {
-              flag = false;
-            }
-            closure_130_7 = flag;
-            let flag2 = premiumSubscription.allowPlanChange;
-            if (flag2 === undefined) {
-              flag2 = true;
-            }
-            closure_130_8 = flag2;
-            ({
-              applicationId: closure_130_9,
-              giftInfoOptions: closure_130_10,
-              onPurchaseComplete: closure_130_11,
-              onPurchaseError: closure_130_12,
-            } = premiumSubscription);
-            let id2;
-            let product2;
-            let basePurchaseFlowAnalyticsFields;
-            closure_130_16 = undefined;
-            let succeededOnlyFields;
-            closure_130_18 = undefined;
-            closure_130_19 = undefined;
-            closure_130_20 = undefined;
-            closure_130_21 = undefined;
-            c6 = 1;
-            c7 = 1;
-            return { value: "flex", done: null };
+        const id2 = id.getId();
+        const product2 = product.getProduct(closure_130_0);
+        const basePurchaseFlowAnalyticsFields = premiumSubscription(
+          premiumDiscountOffer[21],
+        ).getBasePurchaseFlowAnalyticsFields({
+          isGift: closure_130_6,
+          analyticsLoadId: closure_130_2,
+          analyticsLocation: closure_130_3,
+          analyticsLocations: closure_130_4,
+        });
+        closure_1 = closure_130_5;
+        if (closure_130_5 == null) {
+          closure_1 = {};
+        }
+        closure_130_16 = closure_1;
+        const succeededOnlyFields = closure_130_16.succeededOnlyFields;
+        closure_130_18 = tmp172(closure_130_16, isEligibleForBogoOffer);
+        const obj8 = {};
+        const merged = Object.assign(basePurchaseFlowAnalyticsFields);
+        obj8.subscription_plan_gateway_plan_id = closure_130_0;
+        obj8.sku_id = closure_130_1;
+        let price;
+        if (product2 != null) {
+          price = product2.price;
+        }
+        obj8.price = price;
+        let price1;
+        if (product2 != null) {
+          price1 = product2.price;
+        }
+        obj8.regular_price = price1;
+        let formatted;
+        if (product2 != null) {
+          formatted = product2.currencyCode.toLowerCase();
+        }
+        obj8.currency = formatted;
+        obj8.application_id = closure_130_9;
+        const merged1 = Object.assign(closure_130_18);
+        closure_130_19 = obj8;
+        const obj11 = {};
+        const merged2 = Object.assign(closure_130_19);
+        obj11.succeededOnlyFields = succeededOnlyFields;
+        prop(closure_130_0, obj11);
+        closure_130_20 = (function getOfferId(arg0, arg1, arg2, dependencyMap, offerIds) {
+          offerIds = undefined;
+          if (offerIds != null) {
+            offerIds = offerIds.offerIds;
           }
-        } else {
-          if (1 === tmp10) {
-            if (premiumSubscription === 1) {
-              c7 = 3;
-              throw value;
-            } else if (premiumSubscription === 2) {
-              c7 = 3;
-              const obj5 = { value, done: true };
-              return obj5;
-            } else {
-              id2 = id.getId();
-              product2 = product.getProduct(closure_130_0);
-              const obj7 = {
-                isGift: closure_130_6,
-                analyticsLoadId: closure_130_2,
-                analyticsLocation: closure_130_3,
-                analyticsLocations: closure_130_4,
-              };
-              basePurchaseFlowAnalyticsFields = premiumSubscription(
-                premiumDiscountOffer[21],
-              ).getBasePurchaseFlowAnalyticsFields(obj7);
-              closure_1 = closure_130_5;
-              if (closure_130_5 == null) {
-                closure_1 = {};
+          if (null != offerIds) {
+            if (null != arg2) {
+              const tmp13 = premiumSubscription(6742).TrialIdToProductOfferId[arg2.trialId];
+              let tmp14;
+              if (tmp13 != null) {
+                tmp14 = tmp13[arg0];
               }
-              closure_130_16 = closure_1;
-              succeededOnlyFields = closure_130_16.succeededOnlyFields;
-              closure_130_18 = tmp172(closure_130_16, isEligibleForBogoOffer);
-              const obj8 = {};
-              const merged = Object.assign(basePurchaseFlowAnalyticsFields);
-              obj8.subscription_plan_gateway_plan_id = closure_130_0;
-              obj8.sku_id = closure_130_1;
-              let price;
-              if (product2 != null) {
-                price = product2.price;
+              return tmp14;
+            } else if (null != dependencyMap) {
+              const tmp9 = premiumSubscription(6742).DiscountIdToProductOfferId[dependencyMap.discountId];
+              let tmp10;
+              if (tmp9 != null) {
+                tmp10 = tmp9[arg0];
               }
-              obj8.price = price;
-              let price1;
-              if (product2 != null) {
-                price1 = product2.price;
-              }
-              obj8.regular_price = price1;
-              let formatted;
-              if (product2 != null) {
-                formatted = product2.currencyCode.toLowerCase();
-              }
-              obj8.currency = formatted;
-              obj8.application_id = closure_130_9;
-              const merged1 = Object.assign(closure_130_18);
-              closure_130_19 = obj8;
-              const obj11 = {};
-              const merged2 = Object.assign(closure_130_19);
-              obj11.succeededOnlyFields = succeededOnlyFields;
-              prop(closure_130_0, obj11);
-              closure_130_20 = (function getOfferId(arg0, arg1, arg2, dependencyMap, offerIds) {
-                offerIds = undefined;
-                if (offerIds != null) {
-                  offerIds = offerIds.offerIds;
-                }
-                if (null != offerIds) {
-                  if (null != arg2) {
-                    const tmp13 = premiumSubscription(6848).TrialIdToProductOfferId[arg2.trialId];
-                    let tmp14;
-                    if (tmp13 != null) {
-                      tmp14 = tmp13[arg0];
-                    }
-                    return tmp14;
-                  } else if (null != dependencyMap) {
-                    const tmp9 = premiumSubscription(6848).DiscountIdToProductOfferId[dependencyMap.discountId];
-                    let tmp10;
-                    if (tmp9 != null) {
-                      tmp10 = tmp9[arg0];
-                    }
-                    return tmp10;
-                  }
-                }
-                let BOGO_OFFER_ID = null;
-                if (arg1) {
-                  BOGO_OFFER_ID = null;
-                  if (arg0 === premiumSubscription(6848).ProductIds.PREMIUM_TIER_2_MONTHLY) {
-                    BOGO_OFFER_ID = premiumSubscription(6848).BOGO_OFFER_ID;
-                  }
-                }
-                return BOGO_OFFER_ID;
-              })(closure_130_0, closure_3, closure_1, dependencyMap, product2);
-              c5 = 1;
-              if (!closure_130_6) {
-                if (!closure_130_7) {
-                  let tmp101 = tmp172;
-                  if (tmp172) {
-                    tmp101 = !closure_130_8;
-                  }
-                  if (tmp101) {
-                    if (closure_130_11 != null) {
-                      const obj13 = { paymentGateway: constants2.GOOGLE };
-                      tmp127(obj13);
-                    }
-                    c5 = 0;
-                  } else {
-                    let tmp105 = null != c6;
-                    if (tmp105) {
-                      tmp105 = null != c7;
-                    }
-                    if (tmp105) {
-                      tmp105 = null != c5;
-                    }
-                    if (tmp105) {
-                      const obj15 = premiumSubscription(premiumDiscountOffer[25]);
-                      let result = obj15.updatePendingDowngrade(closure_130_0, c6, c7, c5);
-                    }
-                    const obj14 = { productId: closure_130_0, premiumSubscription, offerId: closure_130_20 };
-                    c6 = 6;
-                    c7 = 1;
-                    const obj16 = { value: validatePurchase(obj14), done: false };
-                    return obj16;
-                  }
-                }
-              }
-              let tmp131 = closure_130_6;
-              if (closure_130_6) {
-                tmp131 = null != closure_130_10;
-              }
-              if (tmp131) {
-                let tmp136 = null != premiumTrialOffer(premiumDiscountOffer[22]).giftInfoOptionsCache;
-                if (tmp136) {
-                  tmp136 = null != premiumTrialOffer(premiumDiscountOffer[22]).giftInfoOptionsCache[closure_130_0];
-                }
-                if (tmp136) {
-                  const giftInfoOptionsCache = premiumTrialOffer(premiumDiscountOffer[22]).giftInfoOptionsCache;
-                  delete tmp7[tmp6];
-                }
-                const obj17 = {};
-                const merged3 = Object.assign(closure_130_10);
-                premiumTrialOffer(premiumDiscountOffer[22]).giftInfoOptionsCache[closure_130_0] = obj17;
-              }
-              closure_130_21 = null;
-              if (null != product2) {
-                c5 = 2;
-                closure_130_21 = premiumSubscription(premiumDiscountOffer[23]).convertToMinorCurrencyUnits(
-                  product2.price / 100,
-                  product2.currencyCode,
-                );
-                c5 = 1;
-                const obj20 = premiumSubscription(premiumDiscountOffer[23]);
-              }
-              const obj18 = {
-                productId: closure_130_0,
-                premiumSubscription,
-                offerId: null,
-                currency: null,
-                price: null,
-                isGift: null,
-              };
-              let formatted1;
-              if (product2 != null) {
-                if (product2.currencyCode != null) {
-                  formatted1 = str2.toLowerCase();
-                }
-              }
-              obj18.currency = formatted1;
-              obj18.price = closure_130_21;
-              obj18.isGift = closure_130_6;
-              c6 = 4;
-              c7 = 1;
-              const obj19 = { value: validatePurchase(obj18), done: false };
-              return obj19;
+              return tmp10;
             }
-          } else if (2 === tmp10) {
-            c5 = 0;
-            closure_130_23 = tmp172;
-            const obj21 = {};
-            const merged4 = Object.assign(closure_130_19);
-            obj21.payment_gateway = constants2.GOOGLE;
-            obj21.error_message = closure_130_23.message;
-            premiumTrialOffer(premiumDiscountOffer[26]).track(constants.PAYMENT_FLOW_FAILED, obj21);
-            if (closure_130_12 != null) {
-              closure_130_12();
+          }
+          let BOGO_OFFER_ID = null;
+          if (arg1) {
+            BOGO_OFFER_ID = null;
+            if (arg0 === premiumSubscription(6742).ProductIds.PREMIUM_TIER_2_MONTHLY) {
+              BOGO_OFFER_ID = premiumSubscription(6742).BOGO_OFFER_ID;
             }
-            const obj10 = premiumTrialOffer(premiumDiscountOffer[26]);
-            const result1 = premiumSubscription(premiumDiscountOffer[24]).captureBillingException(closure_130_23);
-            (function showPurchaseErrorModal(combined) {
-              let billingError = combined;
-              if (!(combined instanceof premiumSubscription(5266).BillingError)) {
-                billingError = new premiumSubscription(5266).BillingError(combined);
-              }
-              if (tmpResult.isSpendingLimitError(billingError)) {
-                const result = premiumSubscription(10362).showSpendingLimitReachedAlert();
-                const tmpResult2 = premiumSubscription(10362);
-              } else {
-                const intl = premiumSubscription(1115).intl;
-                let tmp8 = billingError.code !== premiumSubscription(4539).ErrorCodes.UNKNOWN;
-                if (tmp8) {
-                  tmp8 = -1 !== billingError.code;
-                }
-                if (tmp8) {
-                  tmp8 = null != billingError.message;
-                }
-                let message = intl.string(premiumSubscription(1115).t.LFFx5G);
-                if (tmp8) {
-                  message = billingError.message;
-                }
-                const stringResult = intl.string(premiumSubscription(1115).t.LFFx5G);
-                const obj = { title: null, body: null, isDismissable: true };
-                const intl2 = premiumSubscription(1115).intl;
-                obj.title = intl2.string(premiumSubscription(1115).t["U+H+kd"]);
-                obj.body = message;
-                closure_1_1(5387).show(obj);
-                const obj2 = closure_1_1(5387);
-              }
-              tmpResult = premiumSubscription(10362);
-            })(closure_130_23);
-            if (closure_130_23 instanceof premiumTrialOffer(premiumDiscountOffer[10])) {
-              throw closure_130_23;
+          }
+          return BOGO_OFFER_ID;
+        })(closure_130_0, closure_3, closure_1, dependencyMap, product2);
+        c5 = 1;
+        if (!closure_130_6) {
+          if (!closure_130_7) {
+            let tmp101 = tmp172;
+            if (tmp172) {
+              tmp101 = !closure_130_8;
             }
-            const obj12 = premiumSubscription(premiumDiscountOffer[24]);
-          } else if (3 === tmp10) {
-            c5 = 1;
-            closure_130_22 = tmp172;
-            const result2 = premiumSubscription(premiumDiscountOffer[24]).captureBillingException(closure_130_22);
-            const obj9 = premiumSubscription(premiumDiscountOffer[24]);
-          } else if (4 === tmp10) {
-            if (premiumSubscription === 1) {
-              c7 = 3;
-              throw value;
-            } else if (premiumSubscription === 2) {
+            if (tmp101) {
+              if (closure_130_11 != null) {
+                tmp127({ paymentGateway: constants2.GOOGLE });
+              }
               c5 = 0;
-              c7 = 3;
-              const obj22 = { value, done: true };
-              return obj22;
             } else {
-              c6 = 5;
+              let tmp105 = null != c6;
+              if (tmp105) {
+                tmp105 = null != c7;
+              }
+              if (tmp105) {
+                tmp105 = null != c5;
+              }
+              if (tmp105) {
+                let result = premiumSubscription(premiumDiscountOffer[25]).updatePendingDowngrade(
+                  closure_130_0,
+                  c6,
+                  c7,
+                  c5,
+                );
+                premiumSubscription(premiumDiscountOffer[25]);
+              }
+              c6 = 6;
               c7 = 1;
-              const obj23 = {
-                value: premiumSubscription(premiumDiscountOffer[25]).purchase(closure_130_0, id2),
+              return {
+                value: validatePurchase({ productId: closure_130_0, premiumSubscription, offerId: closure_130_20 }),
                 done: false,
               };
-              return obj23;
             }
-          } else if (5 === tmp10) {
-            if (premiumSubscription === 1) {
-              c7 = 3;
-              throw value;
-            } else if (premiumSubscription === 2) {
-              c5 = 0;
-              c7 = 3;
-              const obj24 = { value, done: true };
-              return obj24;
-            }
-          } else if (6 === tmp10) {
-            if (premiumSubscription === 1) {
-              c7 = 3;
-              throw value;
-            } else if (premiumSubscription === 2) {
-              c5 = 0;
-              c7 = 3;
-              const obj25 = { value, done: true };
-              return obj25;
-            } else {
-              let obj2 = premiumSubscription(premiumDiscountOffer[25]);
-              c6 = 7;
-              c7 = 1;
-              const obj27 = { value: obj2.subscribe(closure_130_0, id2, c6, c7, closure_130_20), done: false };
-              return obj27;
-            }
-          } else if (premiumSubscription === 1) {
-            c7 = 3;
-            throw value;
-          } else if (premiumSubscription === 2) {
-            c5 = 0;
-            c7 = 3;
-            let obj = { value, done: true };
-            return obj;
           }
-          c7 = 3;
-          return { value: "HermesInternal", done: null };
         }
-      } catch (tmp172) {
-        if (tmp5 === c5) {
-          c7 = tmp3;
-          throw tmp172;
-        } else if (tmp2 === tmp174) {
-          c6 = tmp;
-        } else {
-          c6 = tmp3;
+        let tmp131 = closure_130_6;
+        if (closure_130_6) {
+          tmp131 = null != closure_130_10;
         }
+        if (tmp131) {
+          let tmp136 = null != premiumTrialOffer(premiumDiscountOffer[22]).giftInfoOptionsCache;
+          if (tmp136) {
+            tmp136 = null != premiumTrialOffer(premiumDiscountOffer[22]).giftInfoOptionsCache[closure_130_0];
+          }
+          if (tmp136) {
+            const giftInfoOptionsCache = premiumTrialOffer(premiumDiscountOffer[22]).giftInfoOptionsCache;
+            delete tmp7[tmp6];
+          }
+          const merged3 = Object.assign(closure_130_10);
+          premiumTrialOffer(premiumDiscountOffer[22]).giftInfoOptionsCache[closure_130_0] = {};
+        }
+        closure_130_21 = null;
+        if (null != product2) {
+          closure_130_21 = premiumSubscription(premiumDiscountOffer[23]).convertToMinorCurrencyUnits(
+            product2.price / 100,
+            product2.currencyCode,
+          );
+          c5 = 1;
+          premiumSubscription(premiumDiscountOffer[23]);
+        }
+        const obj18 = {
+          productId: closure_130_0,
+          premiumSubscription,
+          offerId: null,
+          currency: null,
+          price: null,
+          isGift: null,
+        };
+        let formatted1;
+        if (product2 != null) {
+          if (product2.currencyCode != null) {
+            formatted1 = str2.toLowerCase();
+          }
+        }
+        obj18.currency = formatted1;
+        obj18.price = closure_130_21;
+        obj18.isGift = closure_130_6;
+        c6 = 4;
+        c7 = 1;
+        return { value: validatePurchase(obj18), done: false };
       }
+    } else if (2 === tmp10) {
+      c5 = 0;
+      closure_130_23 = tmp172;
+      const obj21 = {};
+      const merged4 = Object.assign(closure_130_19);
+      obj21.payment_gateway = constants2.GOOGLE;
+      obj21.error_message = closure_130_23.message;
+      premiumTrialOffer(premiumDiscountOffer[26]).track(constants.PAYMENT_FLOW_FAILED, obj21);
+      if (closure_130_12 != null) {
+        closure_130_12();
+      }
+      premiumTrialOffer(premiumDiscountOffer[26]);
+      const result1 = premiumSubscription(premiumDiscountOffer[24]).captureBillingException(closure_130_23);
+      (function showPurchaseErrorModal(combined) {
+        let billingError = combined;
+        if (!(combined instanceof premiumSubscription(5312).BillingError)) {
+          billingError = new premiumSubscription(5312).BillingError(combined);
+        }
+        if (tmpResult.isSpendingLimitError(billingError)) {
+          const result = premiumSubscription(10437).showSpendingLimitReachedAlert();
+          const tmpResult2 = premiumSubscription(10437);
+        } else {
+          const intl = premiumSubscription(1126).intl;
+          let tmp8 = billingError.code !== premiumSubscription(4550).ErrorCodes.UNKNOWN;
+          if (tmp8) {
+            tmp8 = -1 !== billingError.code;
+          }
+          if (tmp8) {
+            tmp8 = null != billingError.message;
+          }
+          let message = intl.string(premiumSubscription(1126).t.LFFx5G);
+          if (tmp8) {
+            message = billingError.message;
+          }
+          const stringResult = intl.string(premiumSubscription(1126).t.LFFx5G);
+          const obj = { title: null, body: null, isDismissable: true };
+          const intl2 = premiumSubscription(1126).intl;
+          obj.title = intl2.string(premiumSubscription(1126).t["U+H+kd"]);
+          obj.body = message;
+          closure_1_1(5707).show(obj);
+          const obj2 = closure_1_1(5707);
+        }
+        tmpResult = premiumSubscription(10437);
+      })(closure_130_23);
+      if (closure_130_23 instanceof premiumTrialOffer(premiumDiscountOffer[10])) {
+        throw closure_130_23;
+      }
+      premiumSubscription(premiumDiscountOffer[24]);
+    } else if (3 === tmp10) {
+      c5 = 1;
+      closure_130_22 = tmp172;
+      const result2 = premiumSubscription(premiumDiscountOffer[24]).captureBillingException(closure_130_22);
+      premiumSubscription(premiumDiscountOffer[24]);
+    } else if (4 === tmp10) {
+      if (premiumSubscription === 1) {
+        c7 = 3;
+        throw value;
+      } else if (premiumSubscription === 2) {
+        c5 = 0;
+        c7 = 3;
+        return { value, done: true };
+      } else {
+        c6 = 5;
+        c7 = 1;
+        return { value: premiumSubscription(premiumDiscountOffer[25]).purchase(closure_130_0, id2), done: false };
+      }
+    } else if (5 === tmp10) {
+      if (premiumSubscription === 1) {
+        c7 = 3;
+        throw value;
+      } else if (premiumSubscription === 2) {
+        c5 = 0;
+        c7 = 3;
+        return { value, done: true };
+      }
+    } else if (6 === tmp10) {
+      if (premiumSubscription === 1) {
+        c7 = 3;
+        throw value;
+      } else if (premiumSubscription === 2) {
+        c5 = 0;
+        c7 = 3;
+        return { value, done: true };
+      } else {
+        c6 = 7;
+        c7 = 1;
+        premiumSubscription(premiumDiscountOffer[25]);
+        return {
+          value: premiumSubscription(premiumDiscountOffer[25]).subscribe(closure_130_0, id2, c6, c7, closure_130_20),
+          done: false,
+        };
+      }
+    } else if (premiumSubscription === 1) {
+      c7 = 3;
+      throw value;
+    } else if (premiumSubscription === 2) {
+      c5 = 0;
+      c7 = 3;
+      return { value, done: true };
     }
+    yield "IconComponent";
+    closure_3 = tmp4;
+    ({
+      productId: closure_130_0,
+      skuId: closure_130_1,
+      analyticsLoadId: closure_130_2,
+      analyticsLocation: closure_130_3,
+      analyticsLocations: closure_130_4,
+      analyticsData: closure_130_5,
+      isGift,
+    } = premiumSubscription);
+    if (isGift === undefined) {
+      isGift = false;
+    }
+    closure_130_6 = isGift;
+    let flag = premiumSubscription.isOneTimePurchase;
+    if (flag === undefined) {
+      flag = false;
+    }
+    closure_130_7 = flag;
+    let flag2 = premiumSubscription.allowPlanChange;
+    if (flag2 === undefined) {
+      flag2 = true;
+    }
+    closure_130_8 = flag2;
+    ({
+      applicationId: closure_130_9,
+      giftInfoOptions: closure_130_10,
+      onPurchaseComplete: closure_130_11,
+      onPurchaseError: closure_130_12,
+    } = premiumSubscription);
+    return "Reflect";
   });
   const items1 = [
     null != stateFromStores,

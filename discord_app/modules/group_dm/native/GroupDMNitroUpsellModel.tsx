@@ -1,20 +1,17 @@
 // discord_app/modules/group_dm/native/GroupDMNitroUpsellModel.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
+import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
 import PremiumTypeUtils from "../../../utils/PremiumTypeUtils.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-const MAX_GROUP_DM_PARTICIPANTS = fn(1074).MAX_GROUP_DM_PARTICIPANTS;
-const PremiumTypes = fn(1374).PremiumTypes;
+const MAX_GROUP_DM_PARTICIPANTS = fn(1085).MAX_GROUP_DM_PARTICIPANTS;
+const PremiumTypes = fn(1379).PremiumTypes;
 const GroupDMNitroAcquisitionStrategy = { MARKETING: "marketing", CHECKOUT: "checkout" };
 let obj2 = { NONE: "none", MANAGE: "manage", MARKETING: "marketing", CHECKOUT: "checkout" };
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/group_dm/native/GroupDMNitroUpsellModel.tsx");
-
-export { GroupDMNitroAcquisitionStrategy };
-export const GroupDMNitroUpsellRoute = obj2;
-export const getGroupDMNitroAudience = function getGroupDMNitroAudience(premiumType) {
+const ReactCompilerGating = fn(558);
+function getGroupDMNitroAudience(premiumType) {
   if (flag === undefined) {
     flag = false;
   }
@@ -32,47 +29,98 @@ export const getGroupDMNitroAudience = function getGroupDMNitroAudience(premiumT
     obj = PremiumTypeUtils;
   }
   return str;
-};
-export const useGroupDMNitroAudience = function useGroupDMNitroAudience() {
-  const items = [UserStore];
-  return initialize.useStateFromStores(items, () => {
-    currentUser = currentUser.getCurrentUser();
-    if (currentUser != null) {
-      const premiumType = currentUser.premiumType;
-    }
-    let flag;
-    if (currentUser != null) {
-      flag = currentUser.isStaff();
-    }
-    if (flag == null) {
-      flag = false;
-    }
-    if (flag === undefined) {
-      flag = false;
-    }
-    let str = "staff";
-    if (!flag) {
-      let str2 = "entitled";
-      if (!obj2.isPremiumAtLeast(premiumType, TIER_2.TIER_2)) {
-        let str3 = "acquire";
-        if (null != premiumType) {
-          str3 = "upgrade";
-        }
-        str2 = str3;
-      }
-      str = str2;
-      obj2 = PremiumTypeUtils;
-    }
-    return str;
-  });
-};
-export function isGroupDMNitroUpsellAudience(groupDMNitroAudience) {
+}
+function isGroupDMNitroUpsellAudience(groupDMNitroAudience) {
   let tmp = "upgrade" === groupDMNitroAudience;
   if (!tmp) {
     tmp = "acquire" === groupDMNitroAudience;
   }
   return tmp;
 }
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/group_dm/native/GroupDMNitroUpsellModel.tsx");
+
+export { GroupDMNitroAcquisitionStrategy };
+export const GroupDMNitroUpsellRoute = obj2;
+export { getGroupDMNitroAudience };
+export const useGroupDMNitroAudience = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = c.c(2);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const items = [UserStore];
+        const fn = function o() {
+          currentUser = currentUser.getCurrentUser();
+          if (currentUser != null) {
+            const premiumType = currentUser.premiumType;
+          }
+          let flag;
+          if (currentUser != null) {
+            flag = currentUser.isStaff();
+          }
+          if (flag == null) {
+            flag = false;
+          }
+          if (flag === undefined) {
+            flag = false;
+          }
+          let str = "staff";
+          if (!flag) {
+            let str2 = "entitled";
+            if (!obj2.isPremiumAtLeast(premiumType, TIER_2.TIER_2)) {
+              let str3 = "acquire";
+              if (null != premiumType) {
+                str3 = "upgrade";
+              }
+              str2 = str3;
+            }
+            str = str2;
+            obj2 = PremiumTypeUtils;
+          }
+          return str;
+        };
+        cResult[0] = items;
+        cResult[1] = fn;
+        tmp4 = items;
+        tmp5 = fn;
+      } else {
+        [tmp4, tmp5] = cResult;
+      }
+      return initialize.useStateFromStores(tmp4, tmp5);
+    }
+  : () => {
+      const items = [UserStore];
+      return initialize.useStateFromStores(items, () => {
+        currentUser = currentUser.getCurrentUser();
+        if (currentUser != null) {
+          const premiumType = currentUser.premiumType;
+        }
+        let flag;
+        if (currentUser != null) {
+          flag = currentUser.isStaff();
+        }
+        if (flag == null) {
+          flag = false;
+        }
+        if (flag === undefined) {
+          flag = false;
+        }
+        let str = "staff";
+        if (!flag) {
+          let str2 = "entitled";
+          if (!obj2.isPremiumAtLeast(premiumType, TIER_2.TIER_2)) {
+            let str3 = "acquire";
+            if (null != premiumType) {
+              str3 = "upgrade";
+            }
+            str2 = str3;
+          }
+          str = str2;
+          obj2 = PremiumTypeUtils;
+        }
+        return str;
+      });
+    };
+export { isGroupDMNitroUpsellAudience };
 export const shouldUseGroupDMParticipantLimitUI = function shouldUseGroupDMParticipantLimitUI(enabled, arg1) {
   let tmp = enabled;
   if (!enabled) {

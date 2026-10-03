@@ -18,7 +18,7 @@ function getMatchingActivity(author_type) {
   if (!obj.isEntryExpired(author_type)) {
     let found;
     if (tmpResult.isEntryActive(author_type)) {
-      if (author_type.author_type === tmp(7989).ContentInventoryAuthorType.USER) {
+      if (author_type.author_type === tmp(8035).ContentInventoryAuthorType.USER) {
         const activities = PresenceStore.getActivities(author_type.author_id);
         found = activities.find((type) => {
           if (type.type === ActivityTypes.PLAYING) {
@@ -40,7 +40,7 @@ function getMatchingActivity(author_type) {
       }
     }
     tmp3 = found;
-    tmpResult = tmp(7774);
+    tmpResult = tmp(7818);
   }
   return tmp3;
 }
@@ -106,8 +106,8 @@ function handlePresenceUpdates() {
   }
   set = new Set();
 }
-const ActivityTypes = fn(1074).ActivityTypes;
-let items = [fn(7769).ContentInventoryEntryType.LISTENED_SESSION];
+const ActivityTypes = fn(1085).ActivityTypes;
+let items = [fn(7813).ContentInventoryEntryType.LISTENED_SESSION];
 let set = new Set(items);
 const map = new Map();
 const Store = initializeDefault.Store;

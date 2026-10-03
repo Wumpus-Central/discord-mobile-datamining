@@ -11,6 +11,7 @@ import ClipsExperiment from "ClipsExperiment.tsx";
 import isClientClipsCapableDefault from "isClientClipsCapable.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
+import ChannelStore from "../../stores/ChannelStore.tsx";
 import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
 import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
 import StreamRTCConnectionStore from "../../stores/StreamRTCConnectionStore.tsx";
@@ -20,18 +21,18 @@ import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 const StreamKeyUtilsAll = StreamKeyUtils;
 
 require = fn;
-const getSystemAnalyticsInfo = fn(4890).getSystemAnalyticsInfo;
-const ClipsConstants = fn(5630);
+const getSystemAnalyticsInfo = fn(4935).getSystemAnalyticsInfo;
+const ClipsConstants = fn(7231);
 ({
-  WINDOWS_HARDWARE_AUTO_ENABLE_GPU_REGEX: closure_11,
-  WINDOWS_HARDWARE_MINIMUM_GPU_REGEX: closure_12,
-  CLIPS_HARDWARE_CLASSIFICATION_VERSION: map1,
-  ClipsHardwareClassification: closure_14,
-  CLIP_RUNTIME: closure_15,
+  WINDOWS_HARDWARE_AUTO_ENABLE_GPU_REGEX: closure_12,
+  WINDOWS_HARDWARE_MINIMUM_GPU_REGEX: map1,
+  CLIPS_HARDWARE_CLASSIFICATION_VERSION: closure_14,
+  ClipsHardwareClassification: closure_15,
+  CLIP_RUNTIME: closure_16,
 } = ClipsConstants);
-const Constants = fn(1074);
-({ AnalyticEvents: closure_16, RTCConnectionStates: closure_17 } = Constants);
-const StreamTypes = fn(4887).StreamTypes;
+const Constants = fn(1085);
+({ AnalyticEvents: closure_17, RTCConnectionStates: closure_18 } = Constants);
+const StreamTypes = fn(4932).StreamTypes;
 class ClipsManager extends tmp4 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -179,7 +180,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
       let tmp7 =
         null != ClipsStore.getHardwareClassification() && null != ClipsStore.getHardwareClassificationForDecoupled();
       if (tmp7) {
-        tmp7 = ClipsStore.getHardwareClassificationVersion() === map1;
+        tmp7 = ClipsStore.getHardwareClassificationVersion() === state;
       }
       if (!tmp7) {
         const result1 = self.classifyHardwareAndTrack();
@@ -224,7 +225,7 @@ prototype["classifyHardwareAndTrack"] = function classifyHardwareAndTrack() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -264,7 +265,7 @@ prototype["classifyHardwareAndTrack"] = function classifyHardwareAndTrack() {
                   });
                   return { gpuModels: closure_128_1, classification: tmp2.classifyHardware(closure_128_1) };
                 }
-                const processUtils = tmp3(closure_2_3[18]).processUtils;
+                const processUtils = tmp3(closure_2_3[19]).processUtils;
                 await processUtils.getSystemInfo();
                 const gpus2 = value.gpus;
                 closure_128_2 = gpus2.map((model) => model.model);
@@ -292,7 +293,7 @@ prototype["classifyHardwareAndTrack"] = function classifyHardwareAndTrack() {
           gpuModels = closure_128_0.gpuModels;
           classification = closure_128_0.classification;
           const obj8 = { classification, version, gpu_models: gpuModels, clip_runtime };
-          tmp3(c3[14]).track(constants2.CLIPS_HARDWARE_CLASSIFICATION, obj8);
+          tmp3(c3[15]).track(constants2.CLIPS_HARDWARE_CLASSIFICATION, obj8);
           c3 = 0;
           c5 = 3;
           const obj = { value: classification, done: true };
@@ -337,7 +338,14 @@ prototype["applyUserVoiceRecording"] = function applyUserVoiceRecording(id) {
   if (isClientClipsCapableDefault(MediaEngineStore)) {
     const rTCConnection = RTCConnectionStore.getRTCConnection();
     if (null != rTCConnection) {
-      if (id !== AuthenticationStore.getId()) {
+      const channel = ChannelStore.getChannel(RTCConnectionStore.getChannelId());
+      let isGuildStageVoiceResult;
+      if (channel != null) {
+        isGuildStageVoiceResult = channel.isGuildStageVoice();
+      }
+      if (isGuildStageVoiceResult) {
+        rTCConnection.setClipRecordUser(id, "audio", false);
+      } else if (id !== AuthenticationStore.getId()) {
         rTCConnection.setClipRecordUser(id, "audio", ClipsStore.isVoiceRecordingAllowedForUser(id));
       } else {
         rTCConnection.setClipRecordUser(id, "audio", isClipsEnabled.isClipsEnabled());

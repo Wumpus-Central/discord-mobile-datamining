@@ -5,7 +5,7 @@ import SortedGuildStore from "../../../stores/SortedGuildStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const AnalyticsSections = fn(1074).AnalyticsSections;
+const AnalyticsSections = fn(1085).AnalyticsSections;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarFolderMenuItems.tsx");
 
@@ -26,7 +26,7 @@ export const getGuildFolderMenuItems = function getGuildFolderMenuItems(id) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -84,7 +84,7 @@ export const getGuildFolderMenuItems = function getGuildFolderMenuItems(id) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -113,7 +113,7 @@ export const getGuildFolderMenuItems = function getGuildFolderMenuItems(id) {
           } else {
             const result = value.showGuildsBarFolderModal(closure_128_0);
             c2 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp10) {
           c2 = tmp;

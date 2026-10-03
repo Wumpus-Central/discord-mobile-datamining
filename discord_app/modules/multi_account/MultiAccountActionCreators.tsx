@@ -9,7 +9,7 @@ import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import MultiAccountStore from "MultiAccountStore.tsx";
 
 const require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AnalyticEvents: closure_7, Endpoints: closure_8 } = Constants);
 const logger = new LoggerDefault("MultiAccountActionCreators");
 const size = fn(2);
@@ -19,91 +19,148 @@ export const validateMultiAccountTokens = function validateMultiAccountTokens() 
   AuthenticationStore.getId();
   const users = MultiAccountStore.getUsers();
   let id = asyncGeneratorStep(async (arg0) => {
-    closure_3 = tmp3;
-    const id2 = closure_0.id;
-    await "flex";
-    if (1 === tmp7) {
+    if (c7 === 2) {
+      c7 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
       if (arg0 === 1) {
-        c7 = 3;
         throw value;
       } else if (arg0 === 2) {
-        c7 = 3;
-        return { value, done: true };
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        const token = TokenManagerAll.getToken(id2);
-        if (null != token) {
-          if ("" !== token) {
-            DispatcherDefault.dispatch({ type: "MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST", userId: id2 });
-            c5 = 1;
-            const HTTP = closure_0(1271).HTTP;
-            const obj9 = { url: constants2.ME, headers: null, retries: 3, rejectWithError: false };
-            obj9.headers = { authorization: token };
-            c6 = 3;
-            c7 = 1;
-            return { value: HTTP.get(obj9), done: false };
-          }
-        }
-        TokenManagerAll;
-        DispatcherDefault.dispatch({ type: "MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE", userId: id2 });
-        c7 = 3;
-        DispatcherDefault;
+        return { value: "IconComponent", done: "IconComponent" };
       }
-    } else if (2 === tmp7) {
-      c5 = 0;
-      closure_130_6 = closure_4;
-      let status;
-      if (closure_130_6 != null) {
-        status = closure_130_6.status;
-      }
-      let tmp48 = 401 === status;
-      if (!tmp48) {
-        let status1;
-        if (closure_130_6 != null) {
-          status1 = closure_130_6.status;
-        }
-        tmp48 = 403 === status1;
-      }
-      closure_130_3 = tmp48;
-      let str = "MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS";
-      if (closure_130_3) {
-        str = "MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE";
-      }
-      DispatcherDefault.dispatch({ type: str, userId: id2 });
-      c7 = 3;
-      return { value: undefined, done: true };
-    } else if (arg0 === 1) {
-      c7 = 3;
-      throw value;
-    } else if (arg0 === 2) {
-      c5 = 0;
-      c7 = 3;
-      return { value, done: true };
     } else {
-      closure_130_2 = value;
-      c5 = 0;
-      const body = closure_130_2.body;
-      let id;
-      if (body != null) {
-        id = body.id;
-      }
-      c1 = id;
-      if (id == null) {
-        c1 = null;
-      }
-      closure_130_4 = c1;
-      if (null == closure_130_4) {
-        if (closure_0 !== id2) {
-          DispatcherDefault.dispatch({ type: "USER_UPDATE", user: closure_130_2.body });
-          DispatcherDefault;
+      try {
+        c7 = 2;
+        if (0 === c6) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            closure_3 = tmp3;
+            closure_2 = tmp7;
+            let id2;
+            id2 = closure_0.id;
+            let token;
+            closure_130_2 = undefined;
+            closure_130_3 = undefined;
+            closure_130_4 = undefined;
+            closure_130_5 = undefined;
+            c6 = 1;
+            c7 = 1;
+            return { value: "Reflect", done: true };
+          }
+        } else {
+          if (1 === tmp7) {
+            if (arg0 === 1) {
+              c7 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c7 = 3;
+              const obj5 = { value, done: true };
+              return obj5;
+            } else {
+              token = TokenManagerAll.getToken(id2);
+              if (null != token) {
+                if ("" !== token) {
+                  const obj8 = { type: "MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST", userId: id2 };
+                  DispatcherDefault.dispatch(obj8);
+                  c5 = 1;
+                  const HTTP = closure_0(1282).HTTP;
+                  const obj9 = { url: constants2.ME, headers: null, retries: 3, rejectWithError: false };
+                  const obj10 = { authorization: token };
+                  obj9.headers = obj10;
+                  c6 = 3;
+                  c7 = 1;
+                  const obj12 = { value: HTTP.get(obj9), done: false };
+                  return obj12;
+                }
+              }
+              const obj13 = { type: "MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE", userId: id2 };
+              DispatcherDefault.dispatch(obj13);
+              c7 = 3;
+            }
+          } else if (2 === tmp7) {
+            c5 = 0;
+            closure_130_6 = closure_4;
+            let status;
+            if (closure_130_6 != null) {
+              status = closure_130_6.status;
+            }
+            let tmp48 = 401 === status;
+            if (!tmp48) {
+              let status1;
+              if (closure_130_6 != null) {
+                status1 = closure_130_6.status;
+              }
+              tmp48 = 403 === status1;
+            }
+            closure_130_3 = tmp48;
+            let str = "MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS";
+            if (closure_130_3) {
+              str = "MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE";
+            }
+            const obj15 = { type: str, userId: id2 };
+            DispatcherDefault.dispatch(obj15);
+            c7 = 3;
+            const obj17 = { value: undefined, done: true };
+            return obj17;
+          } else if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 0;
+            c7 = 3;
+            const obj18 = { value, done: true };
+            return obj18;
+          } else {
+            closure_130_2 = value;
+            c5 = 0;
+            const body = closure_130_2.body;
+            let id;
+            if (body != null) {
+              id = body.id;
+            }
+            c1 = id;
+            if (id == null) {
+              c1 = null;
+            }
+            closure_130_4 = c1;
+            if (null == closure_130_4) {
+              if (closure_0 !== id2) {
+                const obj19 = { type: "USER_UPDATE", user: closure_130_2.body };
+                DispatcherDefault.dispatch(obj19);
+              }
+              const obj20 = { type: "MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS", userId: id2 };
+              DispatcherDefault.dispatch(obj20);
+            }
+          }
+          const obj21 = { expected_user_id: id2, actual_user_id: closure_130_4 };
+          closure_130_5 = obj21;
+          logger.log("Found per-user token authentication mismatch", closure_130_5);
+          AnalyticsUtilsDefault.track(constants.MULTI_ACCOUNT_VALIDATE_TOKEN_USER_MISMATCH, closure_130_5);
+          const obj22 = { type: "MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE", userId: id2 };
+          DispatcherDefault.dispatch(obj22);
+          c7 = 3;
+          const obj23 = { value: undefined, done: true };
+          return obj23;
         }
-        DispatcherDefault.dispatch({ type: "MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS", userId: id2 });
-        DispatcherDefault;
+      } catch (tmp79) {
+        closure_4 = tmp79;
+        if (tmp4 === c5) {
+          c7 = tmp2;
+          throw tmp79;
+        } else {
+          c6 = tmp;
+        }
       }
     }
-    closure_130_5 = { expected_user_id: id2, actual_user_id: closure_130_4 };
-    logger.log("Found per-user token authentication mismatch", closure_130_5);
-    AnalyticsUtilsDefault.track(constants.MULTI_ACCOUNT_VALIDATE_TOKEN_USER_MISMATCH, closure_130_5);
-    DispatcherDefault.dispatch({ type: "MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE", userId: id2 });
   });
   const item = users.forEach(function () {
     const self = this;

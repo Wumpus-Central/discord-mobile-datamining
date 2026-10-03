@@ -1,5 +1,5 @@
 // discord_app/modules/guild_automod/native/components/ApplicationTriggerFields.tsx
-import asyncRequireImpl from "../../../../../_runtime/01981_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -52,8 +52,8 @@ export default function ApplicationTriggerFields(rule) {
       const obj2 = {
         applications: tmp,
         selectedApplicationId: applicationId,
-        onSelectApplication(applicationId) {
-          closure_0 = applicationId;
+        onSelectApplication(dependencyMap) {
+          closure_0 = dependencyMap;
           const obj = {};
           const merged = Object.assign(rule);
           const found = guildBotApplications.find((id) => id.id === closure_0);
@@ -65,12 +65,12 @@ export default function ApplicationTriggerFields(rule) {
             name = rule.name;
           }
           obj.name = name;
-          obj.triggerMetadata = { applicationId };
+          obj.triggerMetadata = { applicationId: dependencyMap };
           return onChangeRule(obj);
         },
       };
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(17591, dependencyMap.paths),
+        asyncRequireImpl(17679, dependencyMap.paths),
         "AutomodSelectApplication",
         obj2,
       );

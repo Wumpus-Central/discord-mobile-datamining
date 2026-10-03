@@ -1,8 +1,10 @@
 // discord_app/modules/user_settings/appearance/native/SettingsAppearancePickerUtils.tsx
+import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import getSystemThemeDefault from "../../../themes/getSystemTheme.native.tsx";
 import ClientThemesTypes from "../../../client_themes/ClientThemesTypes.tsx";
+import useToken from "../../../../design/tokens/native/useToken.tsx";
 import ColorUtils from "../../../../utils/ColorUtils.tsx";
 import utils_ColorDefault from "../../../../utils/Color.tsx";
 import MobileThemesUtils from "../../../client_themes/native/MobileThemesUtils.tsx";
@@ -146,8 +148,8 @@ function convertCustomBackgroundGradientToAnimatedTheme(theme, prop, prop1) {
     const obj2 = { hex: null, stop: null };
     const hexToRgbResult = ColorUtils.hexToRgb(item);
     const tmp16Result = ColorUtils;
-    const tmp18 = new tmp12(4713)(r, g, b, num8);
-    obj2.hex = tmp16Result.mixColors(tmp72, new tmp12(4713)(r, g, b, num8)).toHexString();
+    const tmp18 = new tmp12(4728)(r, g, b, num8);
+    obj2.hex = tmp16Result.mixColors(tmp72, new tmp12(4728)(r, g, b, num8)).toHexString();
     let num9 = 0;
     if (theme.customThemeSettings.colors.length > 1) {
       num9 = index * (100 / (theme.customThemeSettings.colors.length - 1));
@@ -171,7 +173,8 @@ function convertCustomBackgroundGradientToAnimatedTheme(theme, prop, prop1) {
   obj.colors = items;
   return obj;
 }
-const ThemeTypes = fn(1085).ThemeTypes;
+const ThemeTypes = fn(1096).ThemeTypes;
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearancePickerUtils.tsx");
 
@@ -184,8 +187,8 @@ export const convertThemesToAnimatedThemes = function convertThemesToAnimatedThe
   if (prop1 === undefined) {
     num2 = 0.8;
   }
-  let items = memo;
-  if (memo === undefined) {
+  let items = cResult;
+  if (cResult === undefined) {
     items = [];
   }
   if (BACKGROUND_SURFACE_HIGH === undefined) {
@@ -208,35 +211,88 @@ export const convertThemesToAnimatedThemes = function convertThemesToAnimatedThe
   }
   return items1;
 };
-export const useLaunchWelcomeSystemTheme = function useLaunchWelcomeSystemTheme() {
-  const tmp4 = getSystemThemeDefault() === ThemeTypes.LIGHT ? ThemeTypes.LIGHT : ThemeTypes.DARK;
-  token = token(4560).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW, tmp4);
-  let items = [token];
-  return noop.useMemo(() => {
-    const obj = { theme: "system", name: null, midpointPercentage: 50, angle: 0, colors: null };
-    const intl = util.intl;
-    obj.name = intl.string(util.t.zlvNOj);
-    const items = [
-      { hex: token, stop: 20 },
-      { hex: token, stop: 40 },
-      { hex: token, stop: 60 },
-      { hex: token, stop: 80 },
-      { hex: token, stop: 100 },
-    ];
-    let num = getMaxColors();
-    if (num === undefined) {
-      num = 5;
-    }
-    const items1 = [];
-    for (let num2 = 0; num2 < num; num2 = num2 + 1) {
-      if (num2 < items.length) {
-        let arr = items1.push(items[num2]);
+export const useLaunchWelcomeSystemTheme = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = c.c(5);
+      const tmp6 = getSystemThemeDefault() === ThemeTypes.LIGHT ? ThemeTypes.LIGHT : ThemeTypes.DARK;
+      const token = useToken.useToken(nativeDefault.colors.BACKGROUND_BASE_LOW, tmp6);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const intl = util.intl;
+        const stringResult = intl.string(util.t.zlvNOj);
+        cResult[0] = stringResult;
+        let first = stringResult;
       } else {
-        let obj3 = { hex: items[items.length - 1].hex, stop: 100 };
-        let arr2 = items1.push(obj3);
+        first = cResult[0];
       }
+      if (cResult[1] !== token) {
+        const obj2 = { hex: token, stop: 20 };
+        const items = [obj2, , , ,];
+        const obj3 = { hex: token, stop: 40 };
+        items[1] = obj3;
+        const obj4 = { hex: token, stop: 60 };
+        items[2] = obj4;
+        const obj5 = { hex: token, stop: 80 };
+        items[3] = obj5;
+        const obj6 = { hex: token, stop: 100 };
+        items[4] = obj6;
+        let num3 = getMaxColors();
+        if (num3 === undefined) {
+          num3 = 5;
+        }
+        const items1 = [];
+        for (let num5 = 0; num5 < num3; num5 = num5 + 1) {
+          if (num5 < items.length) {
+            let arr = items1.push(items[num5]);
+          } else {
+            let obj7 = { hex: items[items.length - 1].hex, stop: 100 };
+            let arr2 = items1.push(obj7);
+          }
+        }
+        cResult[1] = token;
+        cResult[2] = items1;
+        let tmp10 = items1;
+      } else {
+        tmp10 = cResult[2];
+      }
+      if (cResult[3] !== tmp10) {
+        const obj8 = { theme: "system", name: first, midpointPercentage: 50, angle: 0, colors: tmp10 };
+        cResult[3] = tmp10;
+        cResult[4] = obj8;
+        let tmp15 = obj8;
+      } else {
+        tmp15 = cResult[4];
+      }
+      return tmp15;
     }
-    obj.colors = items1;
-    return obj;
-  }, items);
-};
+  : () => {
+      const tmp4 = getSystemThemeDefault() === ThemeTypes.LIGHT ? ThemeTypes.LIGHT : ThemeTypes.DARK;
+      token = token(4580).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW, tmp4);
+      let items = [token];
+      return noop.useMemo(() => {
+        const obj = { theme: "system", name: null, midpointPercentage: 50, angle: 0, colors: null };
+        const intl = util.intl;
+        obj.name = intl.string(util.t.zlvNOj);
+        const items = [
+          { hex: token, stop: 20 },
+          { hex: token, stop: 40 },
+          { hex: token, stop: 60 },
+          { hex: token, stop: 80 },
+          { hex: token, stop: 100 },
+        ];
+        let num = getMaxColors();
+        if (num === undefined) {
+          num = 5;
+        }
+        const items1 = [];
+        for (let num2 = 0; num2 < num; num2 = num2 + 1) {
+          if (num2 < items.length) {
+            let arr = items1.push(items[num2]);
+          } else {
+            let obj3 = { hex: items[items.length - 1].hex, stop: 100 };
+            let arr2 = items1.push(obj3);
+          }
+        }
+        obj.colors = items1;
+        return obj;
+      }, items);
+    };

@@ -1,11 +1,10 @@
 // discord_app/modules/icymi/ICYMIAnalytics.tsx
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import ContentInventoryEntryType from "../../../discord_common/js/shared/shared-constants/ContentInventoryEntryType.tsx";
-import ICYMITypes from "ICYMITypes.tsx";
 import ICYMIStore from "ICYMIStore.tsx";
 
 require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ ChannelTypes: closure_4, AnalyticEvents: hasOwnProperty } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/icymi/ICYMIAnalytics.tsx");
@@ -126,72 +125,6 @@ export const ICYMIAnalytics = {
       feed_version: stateFromStores,
       version: 3,
     });
-  },
-  trackFeedLoaded(unreadFeedItems) {
-    const items = [];
-    const items1 = [];
-    const items2 = [];
-    const items3 = [];
-    unreadFeedItems = unreadFeedItems.unreadFeedItems;
-    const item = unreadFeedItems.forEach((id) => {
-      items.push(id.id);
-      const type = id.type;
-      if (ICYMITypes.ICYMIItemTypes.MESSAGE === type) {
-        let str2 = "message";
-        if (id.data.channel_type === constants.GUILD_ANNOUNCEMENT) {
-          str2 = "announcement";
-        }
-        let str = str2;
-      } else {
-        str = "hotwheels_gaming_activity";
-        if (ICYMITypes.ICYMIItemTypes.ACTIVITY !== type) {
-          str = "hotwheels_custom_status";
-          if (ICYMITypes.ICYMIItemTypes.CUSTOM_STATUS !== type) {
-            str = "guild_event";
-            if (ICYMITypes.ICYMIItemTypes.GUILD_EVENT !== type) {
-              if (ICYMITypes.ICYMIItemTypes.RECOMMENDED_GUILDS === type) {
-                str = "recommended_guilds";
-              }
-            }
-          }
-        }
-      }
-      items2.push(str);
-    });
-    const readFeedItems = unreadFeedItems.readFeedItems;
-    const item1 = readFeedItems.forEach((id) => {
-      items1.push(id.id);
-      const type = id.type;
-      if (ICYMITypes.ICYMIItemTypes.MESSAGE === type) {
-        let str2 = "message";
-        if (id.data.channel_type === constants.GUILD_ANNOUNCEMENT) {
-          str2 = "announcement";
-        }
-        let str = str2;
-      } else {
-        str = "hotwheels_gaming_activity";
-        if (ICYMITypes.ICYMIItemTypes.ACTIVITY !== type) {
-          str = "hotwheels_custom_status";
-          if (ICYMITypes.ICYMIItemTypes.CUSTOM_STATUS !== type) {
-            str = "guild_event";
-            if (ICYMITypes.ICYMIItemTypes.GUILD_EVENT !== type) {
-              if (ICYMITypes.ICYMIItemTypes.RECOMMENDED_GUILDS === type) {
-                str = "recommended_guilds";
-              }
-            }
-          }
-        }
-      }
-      items3.push(str);
-    });
-    const obj3 = {};
-    const merged = Object.assign(unreadFeedItems.newTrackingProps);
-    ({ homeSessionId: obj2.home_session_id, hasNewContent: obj2.tab_badged } = unreadFeedItems);
-    obj3.unread_feed_item_ids = items;
-    obj3.read_feed_item_ids = items1;
-    obj3.unread_feed_item_types = items2;
-    obj3.read_feed_item_types = items3;
-    items1(items2[4]).track(constants.FEED_LOADED, obj3);
   },
   trackFeedShown(homeSessionId) {
     const obj = AnalyticsUtilsDefault;

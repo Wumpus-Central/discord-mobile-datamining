@@ -10,11 +10,11 @@ let c5 = "utf-8";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media/useDownloadedFile.tsx");
 
-export const getBytesLeftNotice = function getBytesLeftNotice(MAX_STICKER_FILE_SIZE) {
+export const getBytesLeftNotice = function getBytesLeftNotice(bytesLeft) {
   let str = "";
-  if (MAX_STICKER_FILE_SIZE > 0) {
+  if (bytesLeft > 0) {
     const intl = util.intl;
-    const obj = { formattedBytes: FileSizeUtils.formatKbSize(MAX_STICKER_FILE_SIZE) };
+    const obj = { formattedBytes: FileSizeUtils.formatKbSize(bytesLeft) };
     const _HermesInternal = HermesInternal;
     str = "... " + intl.formatToPlainString(util.t["1+gGcK"], obj);
   }

@@ -2,7 +2,7 @@
 import SKURecord from "../../skus/SKURecord.tsx";
 import BaseWishlistItemRecord from "BaseWishlistItemRecord.tsx";
 
-const SKUProductLines = fn(1074).SKUProductLines;
+const SKUProductLines = fn(1085).SKUProductLines;
 const prototype = function PremiumWishlistItemRecord(sku) {
   const tmp = new prototype(sku, new.target, new.target);
   tmp.skuProductLine = SKUProductLines.PREMIUM;

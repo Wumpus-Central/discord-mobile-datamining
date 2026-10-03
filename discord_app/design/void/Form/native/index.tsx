@@ -1,12 +1,12 @@
 // discord_app/design/void/Form/native/index.tsx
 import FormCheckboxRowDefault from "FormCheckboxRow.tsx";
+import Form_FormCheckboxDefault from "FormCheckbox.tsx";
 import FormRowDefault from "FormRow.tsx";
 import Form_FormDefault from "Form.tsx";
 import FormLabelDefault from "FormLabel.tsx";
 import FormSubLabelDefault from "FormSubLabel.tsx";
 import FormArrowDefault from "FormArrow.tsx";
 import Form_FormRadioDefault from "FormRadio.tsx";
-import Form_FormCheckboxDefault from "FormCheckbox.tsx";
 import FormCheckmarkDefault from "FormCheckmark.tsx";
 import FormIconDefault from "FormIcon.tsx";
 import FormCTADefault from "FormCTA.tsx";

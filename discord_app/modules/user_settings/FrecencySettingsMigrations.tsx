@@ -120,7 +120,7 @@ let items = [
           obj = { usageHistory: {}, favorites: [] };
         },
       ];
-      const state = PersistedStore.migrateAndReadStoreState("StickersPersistedStore", items).state;
+      state = PersistedStore.migrateAndReadStoreState("StickersPersistedStore", items).state;
       if (null == state) {
         return false;
       } else {
@@ -161,7 +161,7 @@ let items = [
           return { usageHistory };
         },
       ];
-      const state = PersistedStore.migrateAndReadStoreState("EmojiStore", items).state;
+      state = PersistedStore.migrateAndReadStoreState("EmojiStore", items).state;
       if (null == state) {
         return false;
       } else {
@@ -276,7 +276,7 @@ let items = [
     version: 7,
     run(applicationCommandFrecency) {
       const PersistedStore = initializeDefault.PersistedStore;
-      const state = PersistedStore.migrateAndReadStoreState("ApplicationCommandFrecency", []).state;
+      state = PersistedStore.migrateAndReadStoreState("ApplicationCommandFrecency", []).state;
       if (null == state) {
         return false;
       } else {
@@ -301,7 +301,7 @@ let items = [
     run(arg0) {
       closure_0 = arg0;
       const PersistedStore = initializeDefault.PersistedStore;
-      const state = PersistedStore.migrateAndReadStoreState("SoundboardFavoriteStore", []).state;
+      state = PersistedStore.migrateAndReadStoreState("SoundboardFavoriteStore", []).state;
       if (null == state) {
         return false;
       } else {

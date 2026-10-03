@@ -1,8 +1,10 @@
 // discord_app/modules/display_name_styles/native/useDisplayNameStylesFont.tsx
+import c from "../../../../_runtime/00576_c.js";
 import DisplayNameStylesConstants from "../DisplayNameStylesConstants.tsx";
 import DisplayNameFont from "../../../../discord_common/js/shared/shared-constants/DisplayNameFont.tsx";
 import useDisplayNameStylesEnabled from "../hooks/useDisplayNameStylesEnabled.tsx";
 import DisplayNameStylesFlywheelExperiment from "../DisplayNameStylesFlywheelExperiment.tsx";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const FLYWHEEL_FONTS = DisplayNameStylesConstants.FLYWHEEL_FONTS;
@@ -22,17 +24,38 @@ const DISPLAY_NAME_STYLES_FONT_FAMILY_MAP = {
 const result = size.fileFinishedImporting("modules/display_name_styles/native/useDisplayNameStylesFont.tsx");
 
 export { DISPLAY_NAME_STYLES_FONT_FAMILY_MAP };
-export const useDisplayNameStylesFont = function useDisplayNameStylesFont(arg0) {
-  ({ displayNameStyles, ignoreDisabledStylesSetting } = arg0);
-  if (ignoreDisabledStylesSetting === undefined) {
-    ignoreDisabledStylesSetting = false;
-  }
-  const obj = useDisplayNameStylesEnabled;
-  const displayNameStylesEnabled = obj.useDisplayNameStylesEnabled({ location: "useDisplayNameStylesFont-native" });
-  DisplayNameStylesFlywheelExperiment;
-  if (displayNameStylesEnabled) {
-    if (null != displayNameStyles) {
-      return obj[displayNameStyles.fontId];
+export const useDisplayNameStylesFont = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      const obj = c;
+      const cResult = obj.c(1);
+      ({ displayNameStyles, ignoreDisabledStylesSetting } = arg0);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const obj2 = { location: "useDisplayNameStylesFont-native" };
+        cResult[0] = obj2;
+        let first = obj2;
+      } else {
+        first = cResult[0];
+      }
+      const displayNameStylesEnabled = useDisplayNameStylesEnabled.useDisplayNameStylesEnabled(first);
+      DisplayNameStylesFlywheelExperiment;
+      if (displayNameStylesEnabled) {
+        if (null != displayNameStyles) {
+          return obj[displayNameStyles.fontId];
+        }
+      }
+      const tmpResult = useDisplayNameStylesEnabled;
     }
-  }
-};
+  : (arg0) => {
+      ({ displayNameStyles, ignoreDisabledStylesSetting } = arg0);
+      if (ignoreDisabledStylesSetting === undefined) {
+        ignoreDisabledStylesSetting = false;
+      }
+      const obj = useDisplayNameStylesEnabled;
+      const displayNameStylesEnabled = obj.useDisplayNameStylesEnabled({ location: "useDisplayNameStylesFont-native" });
+      DisplayNameStylesFlywheelExperiment;
+      if (displayNameStylesEnabled) {
+        if (null != displayNameStyles) {
+          return obj[displayNameStyles.fontId];
+        }
+      }
+    };

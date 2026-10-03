@@ -5,8 +5,8 @@ import UserStore from "../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const ContactPermissions = fn(12388).ContactPermissions;
-const PlatformTypes = fn(1074).PlatformTypes;
+const ContactPermissions = fn(12327).ContactPermissions;
+const PlatformTypes = fn(1085).PlatformTypes;
 const ContactSyncModes = {
   NORMAL: 0,
   [0]: "NORMAL",
@@ -15,8 +15,8 @@ const ContactSyncModes = {
   ONBOARDING_INVITE: 2,
   [2]: "ONBOARDING_INVITE",
 };
-const module_560 = fn(560);
-const obj4 = module_560.create(() => {
+const module_570 = fn(570);
+const obj5 = module_570.create(() => {
   obj = {
     mode: obj.NORMAL,
     permissionState: ContactPermissions.NOT_DETERMINED,
@@ -32,11 +32,12 @@ const obj4 = module_560.create(() => {
   };
   return obj;
 });
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/contact_sync/native/ContactSyncModalStore.tsx");
 
 export { ContactSyncModes };
-export const useContactSyncModalStore = obj4;
+export const useContactSyncModalStore = obj5;
 export const initialize = function initialize(arg0) {
   _require = arg0;
   const localAccount = phone.getLocalAccount(PlatformTypes.CONTACTS);
@@ -50,7 +51,7 @@ export const initialize = function initialize(arg0) {
     phone = currentUser.phone;
   }
   require("ReactBatchUpdates").batchUpdates(() =>
-    obj4.setState(() => {
+    obj5.setState(() => {
       const obj = {};
       const merged = Object.assign({
         mode: constants2.NORMAL,
@@ -75,7 +76,7 @@ export const initialize = function initialize(arg0) {
 export const setAllowSync = function setAllowSync(arg0) {
   _require = arg0;
   require("ReactBatchUpdates").batchUpdates(() => {
-    obj4.setState((arg0) => {
+    obj5.setState((arg0) => {
       const obj = {};
       const merged = Object.assign(arg0);
       obj.allowPhone = allowEmail;
@@ -87,7 +88,7 @@ export const setAllowSync = function setAllowSync(arg0) {
 export const setAllowPhone = function setAllowPhone(arg0) {
   _require = arg0;
   require("ReactBatchUpdates").batchUpdates(() => {
-    obj4.setState((arg0) => {
+    obj5.setState((arg0) => {
       const obj = {};
       const merged = Object.assign(arg0);
       obj.allowPhone = allowPhone;
@@ -98,7 +99,7 @@ export const setAllowPhone = function setAllowPhone(arg0) {
 export const setAllowEmail = function setAllowEmail(arg0) {
   _require = arg0;
   require("ReactBatchUpdates").batchUpdates(() => {
-    obj4.setState((arg0) => {
+    obj5.setState((arg0) => {
       const obj = {};
       const merged = Object.assign(arg0);
       obj.allowEmail = allowEmail;
@@ -110,7 +111,7 @@ export const setSuggestions = function setSuggestions(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   require("ReactBatchUpdates").batchUpdates(() => {
-    obj4.setState((arg0) => {
+    obj5.setState((arg0) => {
       const obj = {};
       const merged = Object.assign(arg0);
       obj.suggestions = suggestions;
@@ -122,7 +123,7 @@ export const setSuggestions = function setSuggestions(arg0, arg1) {
 export const setPhone = function setPhone(arg0) {
   _require = arg0;
   require("ReactBatchUpdates").batchUpdates(() => {
-    obj4.setState((arg0) => {
+    obj5.setState((arg0) => {
       const obj = {};
       const merged = Object.assign(arg0);
       obj.phone = phone;
@@ -133,7 +134,7 @@ export const setPhone = function setPhone(arg0) {
 export const setPhoneToken = function setPhoneToken(arg0) {
   _require = arg0;
   require("ReactBatchUpdates").batchUpdates(() => {
-    obj4.setState((arg0) => {
+    obj5.setState((arg0) => {
       const obj = {};
       const merged = Object.assign(arg0);
       obj.phoneToken = phoneToken;
@@ -148,7 +149,7 @@ export const setName = function setName(arg0) {
     flag = false;
   }
   require("ReactBatchUpdates").batchUpdates(() => {
-    obj4.setState((arg0) => {
+    obj5.setState((arg0) => {
       const obj = {};
       const merged = Object.assign(arg0);
       obj.name = name;
@@ -160,7 +161,7 @@ export const setName = function setName(arg0) {
 export const setPermissionState = function setPermissionState(arg0) {
   _require = arg0;
   require("ReactBatchUpdates").batchUpdates(() => {
-    obj4.setState((arg0) => {
+    obj5.setState((arg0) => {
       const obj = {};
       const merged = Object.assign(arg0);
       obj.permissionState = permissionState;
@@ -171,7 +172,7 @@ export const setPermissionState = function setPermissionState(arg0) {
 export const setError = function setError(arg0) {
   _require = arg0;
   require("ReactBatchUpdates").batchUpdates(() => {
-    obj4.setState((arg0) => {
+    obj5.setState((arg0) => {
       const obj = {};
       const merged = Object.assign(arg0);
       obj.error = error;
@@ -179,11 +180,16 @@ export const setError = function setError(arg0) {
     });
   });
 };
-export const useIsOnboarding = function useIsOnboarding() {
-  const mode = obj4().mode;
-  return mode === obj.ONBOARDING || mode === obj.ONBOARDING_INVITE;
-};
+export const useIsOnboarding = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const mode = obj5().mode;
+      return mode === obj.ONBOARDING || mode === obj.ONBOARDING_INVITE;
+    }
+  : () => {
+      const mode = obj5().mode;
+      return mode === obj.ONBOARDING || mode === obj.ONBOARDING_INVITE;
+    };
 export const getIsOnboarding = function getIsOnboarding() {
-  const mode = obj4.getState().mode;
+  const mode = obj5.getState().mode;
   return mode === obj.ONBOARDING || mode === obj.ONBOARDING_INVITE;
 };

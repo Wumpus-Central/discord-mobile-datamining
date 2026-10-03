@@ -6,15 +6,15 @@ const re1 = /^[-() \d]+$/;
 const result = size.fileFinishedImporting("modules/phone/PhoneOrEmailUtils.tsx");
 
 export { PhoneOrEmailSelectorForceMode };
-export const shouldShowCountryCodeSelector = function shouldShowCountryCodeSelector(forceMode, value) {
+export const shouldShowCountryCodeSelector = function shouldShowCountryCodeSelector(forceMode, cResult) {
   if (forceMode === obj.PHONE) {
-    let tmp2 = !value.startsWith("+");
+    let tmp2 = !cResult.startsWith("+");
   } else {
     tmp2 = forceMode !== tmp.EMAIL;
     if (tmp2) {
-      let isMatch = value.length >= 3;
+      let isMatch = cResult.length >= 3;
       if (isMatch) {
-        isMatch = re1.test(value);
+        isMatch = re1.test(cResult);
       }
       tmp2 = isMatch;
     }

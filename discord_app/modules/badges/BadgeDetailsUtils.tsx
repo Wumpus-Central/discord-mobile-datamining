@@ -72,7 +72,7 @@ export const getBadgeTitle = function getBadgeTitle(badge, displayTier) {
     name2 = badge.name;
   }
   if (tmp3) {
-    const obj2 = { isNitro: tmp3, eyebrow: "Array", displayName: false };
+    const obj2 = { isNitro: tmp3, eyebrow: "Array", displayName: -1 };
     let combined = name2;
     if (null != name) {
       const _HermesInternal = HermesInternal;
@@ -235,30 +235,30 @@ export const getBadgeProgressDisplay = function getBadgeProgressDisplay(badge, v
     threshold = null;
   }
   obj3.threshold = threshold;
-  let prop;
+  let simple_icon_url;
   if (findTierResult != null) {
-    prop = findTierResult.complex_icon_static_url;
+    simple_icon_url = findTierResult.simple_icon_url;
   }
-  if (prop == null) {
-    let simple_icon_url;
+  if (simple_icon_url == null) {
+    let prop;
     if (findTierResult != null) {
-      simple_icon_url = findTierResult.simple_icon_url;
+      prop = findTierResult.complex_icon_static_url;
     }
-    prop = simple_icon_url;
+    simple_icon_url = prop;
   }
-  obj3.currentArtUrl = prop;
-  let prop1;
+  obj3.currentArtUrl = simple_icon_url;
+  let simple_icon_url1;
   if (findTierResult1 != null) {
-    prop1 = findTierResult1.complex_icon_static_url;
+    simple_icon_url1 = findTierResult1.simple_icon_url;
   }
-  if (prop1 == null) {
-    let simple_icon_url1;
+  if (simple_icon_url1 == null) {
+    let prop1;
     if (findTierResult1 != null) {
-      simple_icon_url1 = findTierResult1.simple_icon_url;
+      prop1 = findTierResult1.complex_icon_static_url;
     }
-    prop1 = simple_icon_url1;
+    simple_icon_url1 = prop1;
   }
-  obj3.nextArtUrl = prop1;
+  obj3.nextArtUrl = simple_icon_url1;
   let progress_helper_text;
   if (first != null) {
     progress_helper_text = first.progress_helper_text;

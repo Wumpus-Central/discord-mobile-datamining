@@ -17,7 +17,7 @@ let closure_4 = async function _testCaptcha() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -49,7 +49,7 @@ let closure_4 = async function _testCaptcha() {
           return obj;
         } else {
           c2 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp10) {
         c2 = tmp;
@@ -58,7 +58,7 @@ let closure_4 = async function _testCaptcha() {
     }
   })();
 };
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/captcha/tooling/CaptchaTestActionCreators.tsx");
 

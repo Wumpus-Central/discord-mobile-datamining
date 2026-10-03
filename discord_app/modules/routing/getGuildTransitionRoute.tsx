@@ -1,8 +1,8 @@
 // discord_app/modules/routing/getGuildTransitionRoute.tsx
 import FavoritesUtils from "../favorites/FavoritesUtils.tsx";
-import VibegrationsUtils from "../vibegrations/lib/VibegrationsUtils.tsx";
 import OnboardingHomeUtils from "../guild_onboarding_home/OnboardingHomeUtils.tsx";
 import SlayerStorefrontUtils from "../slayer_storefront/SlayerStorefrontUtils.tsx";
+import VibegrationsUtils from "../vibegrations/lib/VibegrationsUtils.tsx";
 import FavoriteStore from "../favorites/FavoriteStore.tsx";
 import GuildOnboardingStore from "../guild_onboarding/GuildOnboardingStore.tsx";
 import VibegrationsBuilderRouteStore from "../vibegrations/stores/VibegrationsBuilderRouteStore.tsx";
@@ -13,15 +13,15 @@ import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
 import PrivateChannelSortStore from "../../stores/views/PrivateChannelSortStore.tsx";
 
 require = fn;
-const ME = fn(1074).ME;
-const StaticChannelRoute = fn(2051).StaticChannelRoute;
+const ME = fn(1085).ME;
+const StaticChannelRoute = fn(2058).StaticChannelRoute;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/routing/getGuildTransitionRoute.tsx");
 
 export const getGuildTransitionRoute = function getGuildTransitionRoute(guildId) {
   const lastProjectId = VibegrationsBuilderRouteStore.getLastProjectId(guildId);
   if (null != lastProjectId) {
-    const guild = GuildStore.getGuild(guildId);
+    guild = GuildStore.getGuild(guildId);
     let result = null != guild;
     if (result) {
       result = VibegrationsUtils.canAccessVibegrations(guild, "getChannelIdForGuildTransition");

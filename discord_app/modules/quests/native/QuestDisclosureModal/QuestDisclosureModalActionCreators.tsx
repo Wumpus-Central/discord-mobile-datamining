@@ -1,5 +1,5 @@
 // discord_app/modules/quests/native/QuestDisclosureModal/QuestDisclosureModalActionCreators.tsx
-import asyncRequireImpl from "../../../../../_runtime/01981_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import AdCreativeType from "../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import AnalyticsActions from "../../lib/analytics/AnalyticsActions.tsx";
@@ -7,7 +7,7 @@ import QuestTaskUtils from "../../utils/QuestTaskUtils.tsx";
 import captureAdUserAction from "../../../ads/analytics/captureAdUserAction.tsx";
 import captureAdUserActionTypes from "../../../ads/analytics/captureAdUserActionTypes.tsx";
 import AdAnalyticsInterfaceExperiment from "../../experiments/AdAnalyticsInterfaceExperiment.tsx";
-import QuestDockCreativeContext from "../QuestDock/QuestDockCreativeContext.tsx";
+import AdCreativeUtils from "../../../ads/utils/AdCreativeUtils.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const QUEST_DISCLOSURE_MODAL = "QUEST_DISCLOSURE_MODAL";
@@ -18,7 +18,7 @@ let result = size.fileFinishedImporting(
 export default {
   showModal(isTargetedDisclosure) {
     ({ creative, trackingCtx } = isTargetedDisclosure);
-    const creativeAnalyticsParams = QuestDockCreativeContext.getCreativeAnalyticsParams(creative);
+    const creativeAnalyticsParams = AdCreativeUtils.getCreativeAnalyticsParams(creative);
     if (
       obj2.shouldMigrateToAdAnalyticsInterface(
         AdAnalyticsInterfaceExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL,
@@ -111,8 +111,8 @@ export default {
     const obj12 = {};
     const merged1 = Object.assign(tmp11);
     obj12.isTargetedDisclosure = isTargetedDisclosure.isTargetedDisclosure;
-    obj9.pushLazy(asyncRequireImpl(14855, dependencyMap.paths), obj12, QUEST_DISCLOSURE_MODAL);
-    const tmp10 = asyncRequireImpl(14855, dependencyMap.paths);
+    obj9.pushLazy(asyncRequireImpl(14911, dependencyMap.paths), obj12, QUEST_DISCLOSURE_MODAL);
+    const tmp10 = asyncRequireImpl(14911, dependencyMap.paths);
   },
   hideModal() {
     ModalActionCreatorsDefault.popWithKey(QUEST_DISCLOSURE_MODAL);

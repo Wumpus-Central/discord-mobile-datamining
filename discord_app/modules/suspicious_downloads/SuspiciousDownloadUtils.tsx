@@ -1,8 +1,8 @@
 // discord_app/modules/suspicious_downloads/SuspiciousDownloadUtils.tsx
 import URLUtilsDefault from "../../utils/URLUtils.tsx";
-import _modDef7767 from "../../../_runtime/metro/07767__.js";
+import _modDef7811 from "../../../_runtime/metro/07811__.js";
 
-const set = new Set(_modDef7767);
+const set = new Set(_modDef7811);
 let obj = { "github.com": null, "bitbucket.org": null, "gitlab.com": null };
 const regExp = new RegExp("/releases\\S*/download|archive/refs/\\S*|/i/raw/i/\\S*|/user-attachments\\S*");
 obj["github.com"] = regExp;
@@ -13,9 +13,9 @@ obj["gitlab.com"] = regExp2;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/suspicious_downloads/SuspiciousDownloadUtils.tsx");
 
-export const isSuspiciousDownload = function isSuspiciousDownload(localUri) {
+export const isSuspiciousDownload = function isSuspiciousDownload(url) {
   obj = URLUtilsDefault;
-  let toURLSafeResult = obj.toURLSafe(localUri);
+  let toURLSafeResult = obj.toURLSafe(url);
   if (toURLSafeResult == null) {
     toURLSafeResult = {};
   }

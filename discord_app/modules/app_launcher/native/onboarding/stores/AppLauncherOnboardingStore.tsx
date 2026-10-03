@@ -33,7 +33,7 @@ const appLauncherOnboardingStore = new AppLauncherOnboardingStore(DispatcherDefa
       const _Date = Date;
       obj.timeMs = Date.now();
       obj.applicationId = command.applicationId;
-      const guild = context.guild;
+      guild = context.guild;
       let id;
       if (guild != null) {
         id = guild.id;

@@ -1,13 +1,16 @@
 // discord_app/modules/parent_tools/hooks/useAgeSpecificText.tsx
 import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup.tsx";
+import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const result = size.fileFinishedImporting("modules/parent_tools/hooks/useAgeSpecificText.tsx");
+let ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
+const result1 = size.fileFinishedImporting("modules/parent_tools/hooks/useAgeSpecificText.tsx");
 
-export const useAgeSpecificText = function useAgeSpecificText(stringResult, intl2) {
-  let tmp = stringResult;
+export const useAgeSpecificText = (cResult, cResult2) => {
+  let tmp = cResult;
   if (useIsInAdultAgeGroupDefault()) {
-    tmp = intl2;
+    tmp = cResult2;
   }
   return tmp;
 };

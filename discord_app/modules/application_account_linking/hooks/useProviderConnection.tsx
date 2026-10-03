@@ -10,8 +10,8 @@ const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_account_linking/hooks/useProviderConnection.tsx");
 
-export const useProviderConnection = function useProviderConnection(provider_id) {
-  _require = provider_id;
+export const useProviderConnection = function useProviderConnection(arg0) {
+  _require = arg0;
   const items = [ConnectedAccountsStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let account = null;
@@ -38,7 +38,7 @@ export const useProviderConnection = function useProviderConnection(provider_id)
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -108,12 +108,12 @@ export const useProviderConnection = function useProviderConnection(provider_id)
       }
     }
   });
-  const items2 = [provider_id];
+  const items2 = [arg0];
   let obj2 = require("initialize");
   return {
     loading: stateFromStores1,
     hasConnection: tmp3,
-    canConnect: null != provider_id,
+    canConnect: null != arg0,
     startConnection: noop.useCallback(function () {
       const self = this;
       const apply = closure_0.apply;

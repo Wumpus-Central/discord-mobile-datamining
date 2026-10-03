@@ -3,11 +3,11 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import mergeProps from "../../../../design/utils/native/mergeProps.native.tsx";
-import AppsIcon from "../../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
 import ImageIcon from "../../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";
+import AppsIcon from "../../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
 import ImagePickerUtils from "../../../image/native/ImagePickerUtils.tsx";
-import AttachmentIcon from "../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
 import PollsIcon from "../../../../design/components/Icon/native/redesign/generated/PollsIcon.tsx";
+import AttachmentIcon from "../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
 import CameraIcon from "../../../../design/components/Icon/native/redesign/generated/CameraIcon.tsx";
 import CalendarPlusIcon from "../../../../design/components/Icon/native/redesign/generated/CalendarPlusIcon.tsx";
 import ThreadPlusIcon from "../../../../design/components/Icon/native/redesign/generated/ThreadPlusIcon.tsx";
@@ -17,12 +17,12 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const ChatInputConstants = fn(11655);
+const ChatInputConstants = fn(11576);
 ({ ChatInputActionType: hasOwnProperty, ChatInputOmniButtonActionType: metroRequire } = ChatInputConstants);
-const AnalyticEvents = fn(1074).AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj = {
   actions: { flexDirection: "row", alignItems: "center" },
   themedChatInput: { backgroundColor: nativeDefault.colors.CARD_SECONDARY_BG },
@@ -30,8 +30,8 @@ let obj = {
   activeBrand: null,
 };
 let obj3 = { backgroundColor: nativeDefault.colors.CARD_SECONDARY_BG };
-obj.buttonWrapper = { maxHeight: fn(5470).SMALL_BUTTON_HEIGHT + fn(5470).SMALL_BUTTON_PADDING };
-let obj4 = { maxHeight: fn(5470).SMALL_BUTTON_HEIGHT + fn(5470).SMALL_BUTTON_PADDING };
+obj.buttonWrapper = { maxHeight: fn(5600).SMALL_BUTTON_HEIGHT + fn(5600).SMALL_BUTTON_PADDING };
+let obj4 = { maxHeight: fn(5600).SMALL_BUTTON_HEIGHT + fn(5600).SMALL_BUTTON_PADDING };
 obj.activeBrand = { tintColor: nativeDefault.colors.CHAT_INPUT_ACTION_ICON_ACTIVE_TINT };
 let closure_10 = createStyles.createStyles(obj);
 let __initData = { code: "function ChatInputActionsTsx1(){return{opacity:1};}" };
@@ -211,16 +211,16 @@ const forwardRefResult = noop.forwardRef((canStartThreads, arg1) => {
   const tmp11 =
     keyboardType === canStartThreads(isAppLauncherEnabled[12]).KeyboardTypes.MEDIA ||
     keyboardType === canStartThreads(isAppLauncherEnabled[12]).KeyboardTypes.APP_LAUNCHER;
-  class X {
+  class Q {
     constructor() {
       return { opacity: 1 };
     }
   }
-  X.__closure = {};
-  X.__workletHash = 13622805272332;
-  X.__initData = __initData;
+  Q.__closure = {};
+  Q.__workletHash = 13622805272332;
+  Q.__initData = __initData;
   let obj6 = { children: null };
-  const animatedStyle = canStartThreads(isAppLauncherEnabled[28]).useAnimatedStyle(X);
+  const animatedStyle = canStartThreads(isAppLauncherEnabled[28]).useAnimatedStyle(Q);
   let obj7 = {
     style: null,
     children: items2.map((item, index) => {
@@ -266,7 +266,7 @@ const forwardRefResult = noop.forwardRef((canStartThreads, arg1) => {
               obj.onPress = function onPress(arg0) {
                 return closure_1_3(arg0, constants.PHOTOS);
               };
-              return React6(tmp, obj);
+              return closure_3_8(tmp, obj);
             },
           };
           let tmp44Result = onAttachPress(canStartThreads(isAppLauncherEnabled[29]).ContextMenu, obj2, index);

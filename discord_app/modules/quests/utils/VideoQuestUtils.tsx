@@ -10,7 +10,7 @@ import QuestStore from "../QuestStore.tsx";
 import VideoQuestUIStore from "../VideoQuestUIStore.tsx";
 
 require = fn;
-const AnalyticEvents = fn(1074).AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 const portrait = "portrait";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/utils/VideoQuestUtils.tsx");
@@ -110,7 +110,7 @@ export const getVideoQuestEndCardCtaText = function getVideoQuestEndCardCtaText(
 };
 export const handleVideoQuestModalClose = function handleVideoQuestModalClose(arg0) {
   ({ questId, sourceQuestContent, videoSessionId } = arg0);
-  const state = VideoQuestUIStore.getState();
+  state = VideoQuestUIStore.getState();
   state.setTranscriptEnabled(false);
   const state1 = VideoQuestUIStore.getState();
   const videoProgress = state1.getVideoProgress(questId);

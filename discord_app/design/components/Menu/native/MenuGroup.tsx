@@ -6,7 +6,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_1 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c2, jsxs: c3 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj = {
   divider: {
     marginLeft: 0,
@@ -36,13 +36,13 @@ export const MenuGroup = noop.forwardRef((arg0, ref) => {
   }
   const items = [tmp4];
   const Children = noop.Children;
-  items[1] = Children.map(children, (icon, arg1) => {
-    let cloneElementResult = icon;
+  items[1] = Children.map(children, (label, arg1) => {
+    let cloneElementResult = label;
     if (0 === arg1) {
-      cloneElementResult = icon;
-      if (noop.isValidElement(icon)) {
+      cloneElementResult = label;
+      if (noop.isValidElement(label)) {
         const obj2 = { ref };
-        cloneElementResult = noop.cloneElement(icon, obj2);
+        cloneElementResult = noop.cloneElement(label, obj2);
       }
     }
     return cloneElementResult;

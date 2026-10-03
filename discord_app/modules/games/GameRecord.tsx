@@ -7,7 +7,7 @@ import Record from "../../lib/Record.tsx";
 import ApplicationRecord from "../../records/ApplicationRecord.tsx";
 
 require = fn;
-const createExecutable = fn(2003).createExecutable;
+const createExecutable = fn(2009).createExecutable;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/games/GameRecord.tsx");
 class GameRecord extends tmp2 {
@@ -166,7 +166,7 @@ prototype["getBannerURL"] = function getBannerURL(size) {
   }
   return getGameMediaRefURLDefault(this.id, banner, { keepAspectRatio: true, size });
 };
-prototype["getCoverURL"] = function getCoverURL(size) {
+prototype["getCoverURL"] = function getCoverURL(c9) {
   const media = this.media;
   let cover;
   if (media != null) {
@@ -197,11 +197,11 @@ prototype["getArtworkURLs"] = function getArtworkURLs(size) {
   );
   return mapped.filter(str(self[5]).isNotNullish);
 };
-prototype["getScreenshotURL"] = function getScreenshotURL(index, size) {
+prototype["getScreenshotURL"] = function getScreenshotURL(_Math, size) {
   const screenshotUrls = this.screenshotUrls;
   let tmp;
   if (screenshotUrls != null) {
-    tmp = screenshotUrls[index];
+    tmp = screenshotUrls[_Math];
   }
   let tmp7Result = null;
   if (null != tmp) {

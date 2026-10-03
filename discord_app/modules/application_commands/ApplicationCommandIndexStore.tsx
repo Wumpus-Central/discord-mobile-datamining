@@ -1,11 +1,12 @@
 // discord_app/modules/application_commands/ApplicationCommandIndexStore.tsx
 import LoggerDefault from "../debug/Logger.tsx";
 import _modDef38 from "../../../_runtime/metro/00038__.js";
-import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
+import initialize from "../../../discord_common/js/packages/flux/index.tsx";
+import c from "../../../_runtime/00576_c.js";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import Server from "../../flow/Server.tsx";
-import fuzzysearchDefault from "../../../_runtime/06015_fuzzysearch.js";
+import fuzzysearchDefault from "../../../_runtime/05702_fuzzysearch.js";
 import GuildActionCreatorsDefault from "../../actions/GuildActionCreators.tsx";
 import ApplicationCommandUtils from "ApplicationCommandUtils.tsx";
 import ApplicationCommandTypes from "ApplicationCommandTypes.tsx";
@@ -27,6 +28,7 @@ import UserStore from "../../stores/UserStore.tsx";
 import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore.tsx";
 
 const require = globalThis.__r;
+const initializeDefault = initialize;
 const CommandPermissionUtilsAll = CommandPermissionUtils;
 
 require = fn;
@@ -42,19 +44,20 @@ function getIndexKey(type) {
     return "application" === type ? type.applicationId : undefined;
   }
 }
-function updateIndex(target, arg1) {
-  if (flag === undefined) {
+function updateIndex(type, arg1) {
+  let flag = arg2;
+  if (arg2 === undefined) {
     flag = false;
   }
-  const type = target.type;
+  type = type.type;
   if ("guild" === type) {
-    let applicationId = target.guildId;
+    let applicationId = type.guildId;
   } else if ("channel" === type) {
-    applicationId = target.channelId;
+    applicationId = type.channelId;
   } else if ("user" === type) {
     applicationId = closure_20;
   } else if ("application" === type) {
-    applicationId = target.applicationId;
+    applicationId = type.applicationId;
   }
   if (null != applicationCommandIndexStore.indices[applicationId]) {
     if (tmp8) {
@@ -73,7 +76,7 @@ function updateIndex(target, arg1) {
   }
   if (undefined !== tmp3) {
     applicationCommandIndexStore.indices[applicationId] = tmp3;
-    if ("application" === target.type) {
+    if ("application" === type.type) {
       const applicationIndices = applicationCommandIndexStore.applicationIndices;
       const result = applicationIndices.set(applicationId, tmp3);
       applicationCommandIndexStore.applicationIndicesVersion =
@@ -104,7 +107,7 @@ let closure_32 = async function _getOrFetchApplicationCommandIndexForTarget(arg0
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -203,7 +206,7 @@ let closure_34 = async function _updateIndexAndFetchApplicationCommandIndex(arg0
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -243,7 +246,7 @@ let closure_34 = async function _updateIndexAndFetchApplicationCommandIndex(arg0
         return obj;
       } else {
         c1 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp5) {
       c1 = tmp;
@@ -252,7 +255,8 @@ let closure_34 = async function _updateIndexAndFetchApplicationCommandIndex(arg0
   }
 };
 function handleFetchSuccess(arg0) {
-  if (flag === undefined) {
+  let flag = arg1;
+  if (arg1 === undefined) {
     flag = false;
   }
   ({ target, index } = arg0);
@@ -287,11 +291,11 @@ function handleFetchSuccess(arg0) {
           }
           let obj = {};
           let tmp19 = id;
-          let obj2 = id(7129);
+          let obj2 = id(7030);
           let merged = Object.assign(obj2.getApplicationCommandSection(toApplication(tmp6), false));
           let keyPermissionsResult;
           if (null != tmp6.permissions) {
-            let tmp19Result = tmp19(7130);
+            let tmp19Result = tmp19(7033);
             keyPermissionsResult = tmp19Result.keyPermissions(toServerPermissions(tmp6.permissions, id));
           }
           let obj7 = { descriptor: null, commands: null };
@@ -313,7 +317,7 @@ function handleFetchSuccess(arg0) {
       const membersById = GuildActionCreatorsDefault.requestMembersById(target.guildId, items);
     }
     const application_commands = index.application_commands;
-    const applicationCommands = id(7129).buildApplicationCommands(
+    const applicationCommands = id(7030).buildApplicationCommands(
       application_commands.map((description_default) => {
         const obj = {};
         const merged = Object.assign(description_default);
@@ -330,7 +334,7 @@ function handleFetchSuccess(arg0) {
           name_default = description_default.name;
         }
         obj.name = name_default;
-        const options = description_default.options;
+        options = description_default.options;
         let mapped;
         if (options != null) {
           mapped = options.map(toServerOption);
@@ -375,7 +379,7 @@ function handleFetchSuccess(arg0) {
     obj8.result = obj9;
     obj8.fetchState = { fetching: false };
     updateIndex(target, obj8, flag);
-    const obj6 = id(7129);
+    const obj6 = id(7030);
     tmp32 = "guild" === target.type && set.size > 0;
     tmp64 = set;
   }
@@ -428,282 +432,10 @@ function updateGuildBotMembers(guildId, members) {
 function handleStaleUserIndex() {
   updateIndex({ type: "user" }, { serverVersion: SymbolResult });
 }
-function useQueryState(type, commandTypes, allowFetch) {
-  _require = type;
-  let channel;
-  if ("channel" === type.type) {
-    channel = type.channel;
-  }
-  permissionContext = require("CommandPermissionContext").usePermissionContext(channel, commandTypes.commandTypes);
-  _slicedToArray = tmp3;
-  allowFetch = allowFetch.allowFetch;
-  closure_129_0 = type;
-  closure_129_1 = tmp3;
-  closure_129_2 = allowFetch;
-  closure_129_4 = undefined;
-  [first, closure_129_4] = stateFromStoresObject1.useState(true);
-  closure_129_3 = first;
-  let obj = require("CommandPermissionContext");
-  const items = [applicationCommandIndexStore];
-  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
-    if ("channel" === type.type) {
-      let contextState = applicationCommandIndexStore.getContextState(tmp);
-    } else {
-      contextState = applicationCommandIndexStore.getUserState();
-    }
-    return contextState;
-  });
-  closure_129_5 = stateFromStoresObject;
-  const items1 = [stateFromStoresObject, allowFetch, type, false !== commandTypes.applicationCommands, first];
-  const effect = stateFromStoresObject1.useEffect(() => {
-    if (permissionContext) {
-      let guild_id = type;
-      if ("contextless" !== type.type) {
-        if (closure_2) {
-          let tmp13 = closure_1;
-          if (closure_1) {
-            const channel = guild_id.channel;
-            let guild_id1;
-            if (channel != null) {
-              guild_id1 = channel.guild_id;
-            }
-            let tmp16 = null != guild_id1;
-            if (!tmp16) {
-              type = undefined;
-              if (channel != null) {
-                type = channel.type;
-              }
-              let tmp19 = type === constants3.DM;
-              if (tmp19) {
-                const user = UserStore.getUser(channel.getRecipientId());
-                let bot;
-                if (user != null) {
-                  bot = user.bot;
-                }
-                tmp19 = true === bot;
-              }
-              tmp16 = tmp19;
-            }
-            tmp13 = tmp16;
-          }
-          if (tmp13) {
-            const obj3 = { miss: null == stateFromStoresObject.result, size: null };
-            const _Object = Object;
-            obj3.size = Object.keys(applicationCommandIndexStore.indices).length;
-            AnalyticsUtilsDefault.track(constants2.APPLICATION_COMMAND_CACHE_FETCH, obj3);
-            const result2 = stateFromStoresObject.result;
-            let version;
-            if (result2 != null) {
-              version = result2.version;
-            }
-            let fetching2 = !tmp33;
-            if (version !== stateFromStoresObject.serverVersion) {
-              fetching2 = stateFromStoresObject.fetchState.fetching;
-            }
-            let tmp34 = !fetching2;
-            if (!fetching2) {
-              let tmp35 = null == stateFromStoresObject.fetchState.retryAfter;
-              if (!tmp35) {
-                const _Date2 = Date;
-                tmp35 = Date.now() >= stateFromStoresObject.fetchState.retryAfter;
-              }
-              tmp34 = tmp35;
-            }
-            if (tmp34) {
-              if (null == guild_id.channel.guild_id) {
-                const obj5 = { type: "channel", channelId: guild_id.channel.id };
-                const applicationCommandIndex =
-                  ApplicationCommandIndexActionCreators.requestApplicationCommandIndex(obj5);
-              }
-            }
-            const obj7 = { type: "guild", guildId: null };
-            guild_id = guild_id.channel.guild_id;
-            obj7.guildId = guild_id;
-            const applicationCommandIndex1 = ApplicationCommandIndexActionCreators.requestApplicationCommandIndex(obj7);
-          }
-        }
-        allowApplicationCommands(false);
-      } else {
-        let tmp8 = closure_2;
-        if (closure_2) {
-          const result = stateFromStoresObject.result;
-          let version1;
-          if (result != null) {
-            version1 = result.version;
-          }
-          let fetching = !tmp4;
-          if (version1 !== stateFromStoresObject.serverVersion) {
-            fetching = stateFromStoresObject.fetchState.fetching;
-          }
-          let tmp5 = !fetching;
-          if (!fetching) {
-            let tmp6 = null == stateFromStoresObject.fetchState.retryAfter;
-            if (!tmp6) {
-              const _Date = Date;
-              tmp6 = Date.now() >= stateFromStoresObject.fetchState.retryAfter;
-            }
-            tmp5 = tmp6;
-          }
-          tmp8 = tmp5;
-        }
-        if (tmp8) {
-          const applicationCommandIndex2 = ApplicationCommandIndexActionCreators.requestApplicationCommandIndex({
-            type: "user",
-          });
-        }
-      }
-    }
-  }, items1);
-  const allowFetch2 = allowFetch.allowFetch;
-  closure_130_0 = tmp3;
-  closure_130_1 = allowFetch2;
-  closure_130_3 = undefined;
-  [first1, closure_130_3] = stateFromStoresObject1.useState(true);
-  closure_130_2 = first1;
-  let obj2 = require("initialize");
-  const items2 = [applicationCommandIndexStore];
-  stateFromStoresObject1 = require("initialize").useStateFromStoresObject(items2, () => authStore.getUserState());
-  closure_130_4 = stateFromStoresObject1;
-  const items3 = [stateFromStoresObject1, allowFetch2, false !== commandTypes.applicationCommands, first1];
-  const effect1 = stateFromStoresObject1.useEffect(() => {
-    if (closure_2) {
-      let tmp = closure_1;
-      if (closure_1) {
-        const result = allowApplicationCommands.result;
-        let version;
-        if (result != null) {
-          version = result.version;
-        }
-        let fetching = !tmp5;
-        if (version !== allowApplicationCommands.serverVersion) {
-          fetching = allowApplicationCommands.fetchState.fetching;
-        }
-        let tmp6 = !fetching;
-        if (!fetching) {
-          let tmp7 = null == allowApplicationCommands.fetchState.retryAfter;
-          if (!tmp7) {
-            const _Date = Date;
-            tmp7 = Date.now() >= allowApplicationCommands.fetchState.retryAfter;
-          }
-          tmp6 = tmp7;
-        }
-        tmp = tmp6;
-      }
-      if (tmp) {
-        tmp = closure_0;
-      }
-      if (tmp) {
-        const applicationCommandIndex = ApplicationCommandIndexActionCreators.requestApplicationCommandIndex({
-          type: "user",
-        });
-      }
-      permissionContext(false);
-    }
-  }, items3);
-  let obj3 = require("initialize");
-  const items4 = [applicationCommandIndexStore];
-  const stateFromStores = require("initialize").useStateFromStores(items4, () => authStore.getApplicationStates());
-  let obj4 = require("initialize");
-  const items5 = [applicationCommandIndexStore];
-  ({ applicationId, allowFetch: allowFetch3 } = allowFetch);
-  closure_131_0 = applicationId;
-  closure_131_1 = allowFetch3;
-  closure_131_3 = undefined;
-  const stateFromStores1 = require("initialize").useStateFromStores(items5, () => authStore.applicationIndicesVersion);
-  [first2, closure_131_3] = stateFromStoresObject1.useState(true);
-  closure_131_2 = first2;
-  let obj5 = require("initialize");
-  const items6 = [applicationCommandIndexStore];
-  const stateFromStores2 = require("initialize").useStateFromStores(items6, () =>
-    applicationCommandIndexStore.getApplicationState(closure_0),
-  );
-  closure_131_4 = stateFromStores2;
-  const items7 = [allowFetch3, applicationId, stateFromStores2, first2];
-  const effect2 = stateFromStoresObject1.useEffect(() => {
-    if (closure_2) {
-      let tmp = closure_1;
-      if (closure_1) {
-        const result = allowApplicationCommands.result;
-        let version;
-        if (result != null) {
-          version = result.version;
-        }
-        let fetching = !tmp5;
-        if (version !== allowApplicationCommands.serverVersion) {
-          fetching = allowApplicationCommands.fetchState.fetching;
-        }
-        let tmp6 = !fetching;
-        if (!fetching) {
-          let tmp7 = null == allowApplicationCommands.fetchState.retryAfter;
-          if (!tmp7) {
-            const _Date = Date;
-            tmp7 = Date.now() >= allowApplicationCommands.fetchState.retryAfter;
-          }
-          tmp6 = tmp7;
-        }
-        tmp = tmp6;
-      }
-      if (tmp) {
-        tmp = null != type;
-      }
-      if (tmp) {
-        const obj2 = { type: "application", applicationId: type };
-        const applicationCommandIndex = ApplicationCommandIndexActionCreators.requestApplicationCommandIndex(obj2);
-      }
-      permissionContext(false);
-    }
-  }, items7);
-  const items8 = [permissionContext, , , , , , , , , , , , , ,];
-  ({ text: arr9[1], builtIns: arr9[2] } = commandTypes);
-  items8[3] = false !== commandTypes.applicationCommands;
-  ({
-    scoreMethod: arr9[4],
-    allowEmptySections: arr9[5],
-    sortOptions: arr9[6],
-    allowApplicationState: arr9[7],
-    applicationId: arr9[8],
-    installOnDemand: arr9[9],
-  } = allowFetch);
-  items8[10] = stateFromStoresObject;
-  items8[11] = stateFromStoresObject1;
-  items8[12] = type;
-  items8[13] = stateFromStores;
-  items8[14] = stateFromStores1;
-  return stateFromStoresObject1.useMemo(() => {
-    const obj = {
-      permissionContext,
-      text: commandTypes.text,
-      allowApplicationCommands,
-      builtIns: commandTypes.builtIns,
-      scoreMethod: allowFetch.scoreMethod,
-      allowEmptySections: allowFetch.allowEmptySections,
-      contextState: stateFromStoresObject,
-      userState: stateFromStoresObject1,
-      launcherContext: type,
-      applicationStates: null,
-      sortOptions: null,
-      singleApplicationId: null,
-      installOnDemand: null,
-    };
-    if (allowFetch.allowApplicationState) {
-      let map = stateFromStores;
-    } else {
-      const _Map = Map;
-      map = new Map();
-    }
-    obj.applicationStates = map;
-    ({
-      sortOptions: obj.sortOptions,
-      applicationId: obj.singleApplicationId,
-      installOnDemand: obj.installOnDemand,
-    } = allowFetch);
-    return queryIndex(obj);
-  }, items8);
-}
 function queryIndex(allowApplicationCommands) {
   ({ permissionContext, contextState, userState, applicationStates, text, builtIns } = allowApplicationCommands);
   if (builtIns === undefined) {
-    builtIns = NONE(8790).BuiltInCommandFilter.ALLOW;
+    builtIns = NONE(8803).BuiltInCommandFilter.ALLOW;
   }
   let flag = allowApplicationCommands.allowApplicationCommands;
   if (flag === undefined) {
@@ -715,11 +447,11 @@ function queryIndex(allowApplicationCommands) {
   }
   NONE = allowApplicationCommands.scoreMethod;
   if (NONE === undefined) {
-    NONE = NONE(8790).ScoreMethod.NONE;
+    NONE = NONE(8803).ScoreMethod.NONE;
   }
   let sortOptions = allowApplicationCommands.sortOptions;
   if (sortOptions === undefined) {
-    sortOptions = closure_38;
+    sortOptions = closure_43;
   }
   let flag2 = allowApplicationCommands.installOnDemand;
   if (flag2 === undefined) {
@@ -734,10 +466,10 @@ function queryIndex(allowApplicationCommands) {
   if (formatted != null) {
     parts = formatted.split(" ");
   }
-  if (builtIns !== NONE(8790).BuiltInCommandFilter.DENY) {
-    const tmp12 = builtIns === NONE(8790).BuiltInCommandFilter.ONLY_TEXT;
-    let builtInCommands = tmp9(8792).getBuiltInCommands(permissionContext.commandTypes, true, tmp12);
-    const tmp9Result = tmp9(8792);
+  if (builtIns !== NONE(8803).BuiltInCommandFilter.DENY) {
+    const tmp12 = builtIns === NONE(8803).BuiltInCommandFilter.ONLY_TEXT;
+    let builtInCommands = tmp9(8805).getBuiltInCommands(permissionContext.commandTypes, true, tmp12);
+    const tmp9Result = tmp9(8805);
   } else {
     builtInCommands = [];
   }
@@ -873,7 +605,7 @@ function queryIndex(allowApplicationCommands) {
     }
   }
   if (sortOptions.applications.useFrecency) {
-    const FrecencyUserSettingsActionCreators = NONE(2026).FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators = NONE(2033).FrecencyUserSettingsActionCreators;
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
   }
   const sorted = items.sort((section, section2) => {
@@ -913,7 +645,7 @@ function queryIndex(allowApplicationCommands) {
     return collator.compare(section.section.name, section2.section.name);
   });
   if (builtInCommands.length > 0) {
-    const tmp87 = queryIndexSection(NONE(8792).BUILT_IN_SECTIONS[constants.BUILT_IN], builtInCommands, true, true, obj);
+    const tmp87 = queryIndexSection(NONE(8805).BUILT_IN_SECTIONS[constants.BUILT_IN], builtInCommands, true, true, obj);
     if (null != tmp87) {
       items.push(tmp87);
     }
@@ -927,7 +659,7 @@ function queryIndex(allowApplicationCommands) {
       return obj;
     });
   });
-  if (NONE === NONE(8790).ScoreMethod.COMMAND_ONLY) {
+  if (NONE === NONE(8803).ScoreMethod.COMMAND_ONLY) {
     const context = permissionContext.context;
     let guild_id;
     if (permissionContext != null) {
@@ -936,9 +668,9 @@ function queryIndex(allowApplicationCommands) {
         guild_id = context2.guild_id;
       }
     }
-    const guild = GuildStore.getGuild(guild_id);
+    guild = GuildStore.getGuild(guild_id);
     if (tmp96) {
-      const FrecencyUserSettingsActionCreators2 = NONE(2026).FrecencyUserSettingsActionCreators;
+      const FrecencyUserSettingsActionCreators2 = NONE(2033).FrecencyUserSettingsActionCreators;
       const ifNecessary1 = FrecencyUserSettingsActionCreators2.loadIfNecessary();
     }
     let tmp98;
@@ -1159,6 +891,7 @@ function toApplication(description) {
     name: description.name,
     bot: description.bot,
     flags: description.flags,
+    embedded_surfaces: description.embedded_surfaces,
   };
 }
 function toServerOption(choices) {
@@ -1180,7 +913,7 @@ function toServerOption(choices) {
     name = choices.name;
   }
   obj.name = name;
-  const options = choices.options;
+  options = choices.options;
   let mapped1;
   if (options != null) {
     mapped1 = options.map(toServerOption);
@@ -1279,7 +1012,7 @@ function scoreCommand(untranslatedName, arg1, arg2, arg3) {
         }
         if (!hasItem) {
           let flag = false;
-          let options = untranslatedName.options;
+          options = untranslatedName.options;
           if (options == null) {
             options = [];
           }
@@ -1366,9 +1099,9 @@ function scoreCommand(untranslatedName, arg1, arg2, arg3) {
   }
   return constants4.COMMAND_NAME_STARTS_WITH;
 }
-const ApplicationCommandConstants = fn(5489);
+const ApplicationCommandConstants = fn(5788);
 ({ BuiltInSectionId: closure_15, DISCOVERY_COMMANDS_FRECENCY_LIMIT: closure_16 } = ApplicationCommandConstants);
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AnalyticEvents: closure_17, ChannelTypes: closure_18 } = Constants);
 const logger = new LoggerDefault("ApplicationCommandIndexStore");
 let closure_20 = Symbol("currentUser");
@@ -1529,16 +1262,16 @@ prototype["getApplicationStates"] = function getApplicationStates() {
 prototype["hasApplicationState"] = function hasApplicationState(applicationId) {
   return applicationId in this.indices;
 };
-prototype["query"] = function query(withAffinitySuggestions, commandTypes, applicationId) {
+prototype["query"] = function query(dependencyMap, commandTypes, applicationId) {
   if (null == UserStore.getCurrentUser()) {
     return closure_23;
   } else {
     let channel;
-    if ("channel" === withAffinitySuggestions.type) {
-      channel = withAffinitySuggestions.channel;
+    if ("channel" === dependencyMap.type) {
+      channel = dependencyMap.channel;
     }
     const self = this;
-    const contextState = this.getContextState(withAffinitySuggestions);
+    const contextState = this.getContextState(dependencyMap);
     const userState = this.getUserState();
     const applicationState = this.getApplicationState(applicationId.applicationId);
     let applicationStates = this.getApplicationStates();
@@ -1911,10 +1644,1165 @@ const applicationCommandIndexStore = new ApplicationCommandIndexStore(Dispatcher
     return flag;
   },
 });
-let closure_38 = Object.freeze({
+let ReactCompilerGating = fn(558);
+let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (channel, arg1, arg2) => {
+      _require = channel;
+      importDefault = arg1;
+      closure_2 = arg2;
+      const cResult = require("c").c(16);
+      [first, _slicedToArray] = noop.useState(true);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const items = [applicationCommandIndexStore];
+        cResult[0] = items;
+        let first1 = items;
+      } else {
+        first1 = cResult[0];
+      }
+      if (cResult[1] !== channel) {
+        const fn = function c() {
+          if ("channel" === channel.type) {
+            let contextState = applicationCommandIndexStore.getContextState(tmp);
+          } else {
+            contextState = applicationCommandIndexStore.getUserState();
+          }
+          return contextState;
+        };
+        cResult[1] = channel;
+        cResult[2] = fn;
+        let tmp8 = fn;
+      } else {
+        tmp8 = cResult[2];
+      }
+      let obj = require("c");
+      const stateFromStoresObject = require("initialize").useStateFromStoresObject(first1, tmp8);
+      if (cResult[3] === arg1) {
+        if (cResult[4] === arg2) {
+          if (cResult[5] === first) {
+            if (cResult[6] === channel.channel) {
+              if (cResult[7] === channel.type) {
+                if (cResult[8] === stateFromStoresObject) {
+                  let tmp10 = cResult[9];
+                }
+                if (cResult[10] === arg1) {
+                  if (cResult[11] === arg2) {
+                    if (cResult[12] === first) {
+                      if (cResult[13] === channel) {
+                        if (cResult[14] === stateFromStoresObject) {
+                          let tmp11 = cResult[15];
+                        }
+                        const effect = noop.useEffect(tmp10, tmp11);
+                        return stateFromStoresObject;
+                      }
+                    }
+                  }
+                }
+                const items1 = [stateFromStoresObject, arg2, channel, arg1, first];
+                cResult[10] = arg1;
+                cResult[11] = arg2;
+                cResult[12] = first;
+                cResult[13] = channel;
+                cResult[14] = stateFromStoresObject;
+                cResult[15] = items1;
+                tmp11 = items1;
+              }
+            }
+          }
+        }
+      }
+      class C {
+        constructor() {
+          if (closure_3) {
+            guild_id = closure_0;
+            str = "contextless";
+            if ("contextless" !== closure_0.type) {
+              tmp12 = closure_2;
+              if (closure_2) {
+                tmp13 = closure_1;
+                if (closure_1) {
+                  channel = guild_id.channel;
+                  tmp14 = null;
+                  guild_id1 = undefined;
+                  if (channel != null) {
+                    guild_id1 = channel.guild_id;
+                  }
+                  tmp16 = null != guild_id1;
+                  if (!tmp16) {
+                    type = undefined;
+                    if (channel != null) {
+                      type = channel.type;
+                    }
+                    tmp18 = ChannelTypes;
+                    tmp19 = type === ChannelTypes.DM;
+                    if (tmp19) {
+                      tmp20 = closure_13;
+                      user = closure_13.getUser(channel.getRecipientId());
+                      bot = undefined;
+                      if (user != null) {
+                        bot = user.bot;
+                      }
+                      flag = true;
+                      tmp19 = true === bot;
+                    }
+                    tmp16 = tmp19;
+                  }
+                  tmp13 = tmp16;
+                }
+                if (tmp13) {
+                  tmp23 = closure_1;
+                  tmp24 = closure_3;
+                  tmp25 = undefined;
+                  obj2 = closure_1(closure_3[22]);
+                  tmp26 = AnalyticEvents;
+                  obj1 = { miss: null, size: null };
+                  tmp27 = closure_5;
+                  tmp28 = null;
+                  obj1.miss = null == closure_5.result;
+                  tmp29 = globalThis;
+                  _Object = Object;
+                  tmp30 = closure_37;
+                  obj1.size = Object.keys(closure_37.indices).length;
+                  trackResult = obj2.track(AnalyticEvents.APPLICATION_COMMAND_CACHE_FETCH, obj1);
+                  result2 = closure_5.result;
+                  version = undefined;
+                  if (result2 != null) {
+                    version = result2.version;
+                  }
+                  tmp33 = version !== tmp27.serverVersion;
+                  fetching2 = !tmp33;
+                  if (tmp33) {
+                    fetching2 = tmp27.fetchState.fetching;
+                  }
+                  tmp34 = !fetching2;
+                  if (!fetching2) {
+                    tmp35 = null == tmp27.fetchState.retryAfter;
+                    if (!tmp35) {
+                      _Date2 = Date;
+                      tmp35 = Date.now() >= tmp27.fetchState.retryAfter;
+                    }
+                    tmp34 = tmp35;
+                  }
+                  if (tmp34) {
+                    if (null == guild_id.channel.guild_id) {
+                      tmp36 = closure_0;
+                      tmp37 = closure_3;
+                      obj4 = closure_0(closure_3[15]);
+                      obj8 = { type: "channel", channelId: null };
+                      obj8.channelId = guild_id.channel.id;
+                      applicationCommandIndex = obj4.requestApplicationCommandIndex(obj8);
+                    }
+                  }
+                  tmp39 = closure_0;
+                  tmp40 = closure_3;
+                  obj6 = closure_0(closure_3[15]);
+                  obj9 = { type: "guild", guildId: null };
+                  guild_id = guild_id.channel.guild_id;
+                  obj9.guildId = guild_id;
+                  applicationCommandIndex1 = obj6.requestApplicationCommandIndex(obj9);
+                }
+              }
+              tmp42 = closure_4;
+              flag2 = false;
+              tmp43 = closure_4(false);
+            } else {
+              tmp8 = closure_2;
+              if (closure_2) {
+                tmp = closure_5;
+                result = closure_5.result;
+                tmp2 = null;
+                version1 = undefined;
+                if (result != null) {
+                  version1 = result.version;
+                }
+                tmp4 = version1 !== tmp.serverVersion;
+                fetching = !tmp4;
+                if (tmp4) {
+                  fetching = tmp.fetchState.fetching;
+                }
+                tmp5 = !fetching;
+                if (!fetching) {
+                  tmp6 = null == tmp.fetchState.retryAfter;
+                  if (!tmp6) {
+                    tmp7 = globalThis;
+                    _Date = Date;
+                    tmp6 = Date.now() >= tmp.fetchState.retryAfter;
+                  }
+                  tmp5 = tmp6;
+                }
+                tmp8 = tmp5;
+              }
+              if (tmp8) {
+                tmp9 = closure_0;
+                tmp10 = closure_3;
+                obj = closure_0(closure_3[15]);
+                applicationCommandIndex2 = obj.requestApplicationCommandIndex({ type: "user" });
+              }
+            }
+          }
+          return;
+        }
+      }
+      cResult[3] = arg1;
+      cResult[4] = arg2;
+      cResult[5] = first;
+      cResult[6] = channel.channel;
+      cResult[7] = channel.type;
+      cResult[8] = stateFromStoresObject;
+      cResult[9] = C;
+      tmp10 = C;
+      const tmpResult = require("initialize");
+    }
+  : (arg0, arg1, arg2) => {
+      _require = arg0;
+      closure_1 = arg1;
+      closure_2 = arg2;
+      [first, _slicedToArray] = noop.useState(true);
+      const items = [applicationCommandIndexStore];
+      const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
+        if ("channel" === closure_0.type) {
+          let contextState = applicationCommandIndexStore.getContextState(tmp);
+        } else {
+          contextState = applicationCommandIndexStore.getUserState();
+        }
+        return contextState;
+      });
+      const items1 = [stateFromStoresObject, arg2, arg0, arg1, first];
+      const effect = noop.useEffect(() => {
+        if (first) {
+          let guild_id = closure_0;
+          if ("contextless" !== closure_0.type) {
+            if (closure_2) {
+              let tmp13 = closure_1;
+              if (closure_1) {
+                const channel = guild_id.channel;
+                let guild_id1;
+                if (channel != null) {
+                  guild_id1 = channel.guild_id;
+                }
+                let tmp16 = null != guild_id1;
+                if (!tmp16) {
+                  let type;
+                  if (channel != null) {
+                    type = channel.type;
+                  }
+                  let tmp19 = type === constants3.DM;
+                  if (tmp19) {
+                    const user = UserStore.getUser(channel.getRecipientId());
+                    let bot;
+                    if (user != null) {
+                      bot = user.bot;
+                    }
+                    tmp19 = true === bot;
+                  }
+                  tmp16 = tmp19;
+                }
+                tmp13 = tmp16;
+              }
+              if (tmp13) {
+                const obj3 = { miss: null == stateFromStoresObject.result, size: null };
+                const _Object = Object;
+                obj3.size = Object.keys(applicationCommandIndexStore.indices).length;
+                AnalyticsUtilsDefault.track(constants2.APPLICATION_COMMAND_CACHE_FETCH, obj3);
+                const result2 = stateFromStoresObject.result;
+                let version;
+                if (result2 != null) {
+                  version = result2.version;
+                }
+                let fetching2 = !tmp33;
+                if (version !== stateFromStoresObject.serverVersion) {
+                  fetching2 = stateFromStoresObject.fetchState.fetching;
+                }
+                let tmp34 = !fetching2;
+                if (!fetching2) {
+                  let tmp35 = null == stateFromStoresObject.fetchState.retryAfter;
+                  if (!tmp35) {
+                    const _Date2 = Date;
+                    tmp35 = Date.now() >= stateFromStoresObject.fetchState.retryAfter;
+                  }
+                  tmp34 = tmp35;
+                }
+                if (tmp34) {
+                  if (null == guild_id.channel.guild_id) {
+                    const obj5 = { type: "channel", channelId: guild_id.channel.id };
+                    const applicationCommandIndex =
+                      ApplicationCommandIndexActionCreators.requestApplicationCommandIndex(obj5);
+                  }
+                }
+                const obj7 = { type: "guild", guildId: null };
+                guild_id = guild_id.channel.guild_id;
+                obj7.guildId = guild_id;
+                const applicationCommandIndex1 =
+                  ApplicationCommandIndexActionCreators.requestApplicationCommandIndex(obj7);
+              }
+            }
+            closure_4(false);
+          } else {
+            let tmp8 = closure_2;
+            if (closure_2) {
+              const result = stateFromStoresObject.result;
+              let version1;
+              if (result != null) {
+                version1 = result.version;
+              }
+              let fetching = !tmp4;
+              if (version1 !== stateFromStoresObject.serverVersion) {
+                fetching = stateFromStoresObject.fetchState.fetching;
+              }
+              let tmp5 = !fetching;
+              if (!fetching) {
+                let tmp6 = null == stateFromStoresObject.fetchState.retryAfter;
+                if (!tmp6) {
+                  const _Date = Date;
+                  tmp6 = Date.now() >= stateFromStoresObject.fetchState.retryAfter;
+                }
+                tmp5 = tmp6;
+              }
+              tmp8 = tmp5;
+            }
+            if (tmp8) {
+              const applicationCommandIndex2 = ApplicationCommandIndexActionCreators.requestApplicationCommandIndex({
+                type: "user",
+              });
+            }
+          }
+        }
+      }, items1);
+      return stateFromStoresObject;
+    };
+let closure_38 = tmp8;
+fn(558);
+let obj = {
+  serverVersion: SymbolResult1,
+  fetchState: { fetching: false },
+  result: { sections: {}, sectionIdsByBotId: {}, version: SymbolResult1 },
+};
+let obj2 = {
+  LOGOUT: handleReset,
+  CONNECTION_OPEN: function handleConnectionOpen() {
+    const values = Object.values(applicationCommandIndexStore.indices);
+    for (const item10010 of values) {
+      item10010.serverVersion = SymbolResult;
+      continue;
+    }
+    (function flushCommandsFetchSuccessQueue() {
+      for (const item10005 of closure_28) {
+        let tmp2 = handleFetchSuccess(item10005);
+        continue;
+      }
+      closure_28 = [];
+    })();
+    c27 = true;
+  },
+  APPLICATION_COMMAND_INDEX_FETCH_REQUEST: function handleFetchRequest(target) {
+    target = target.target;
+    const type = target.type;
+    if ("guild" === type) {
+      let applicationId = target.guildId;
+    } else if ("channel" === type) {
+      applicationId = target.channelId;
+    } else if ("user" === type) {
+      applicationId = closure_20;
+    } else if ("application" === type) {
+      applicationId = target.applicationId;
+    }
+    let tmp = applicationCommandIndexStore.indices[applicationId];
+    if (tmp == null) {
+      tmp = closure_25;
+    }
+    const result = tmp.result;
+    let version;
+    if (result != null) {
+      version = result.version;
+    }
+    let fetching = !tmp3;
+    if (version !== tmp.serverVersion) {
+      fetching = tmp.fetchState.fetching;
+    }
+    let tmp4 = !fetching;
+    if (!fetching) {
+      let tmp5 = null == tmp.fetchState.retryAfter;
+      if (!tmp5) {
+        const _Date = Date;
+        tmp5 = Date.now() >= tmp.fetchState.retryAfter;
+      }
+      tmp4 = tmp5;
+    }
+    if (tmp4) {
+      updateIndexAndFetchApplicationCommandIndex(target);
+    }
+  },
+  APPLICATION_COMMAND_INDEX_FETCH_SUCCESS: handleFetchSuccess,
+  APPLICATION_COMMAND_INDEX_FETCH_FAILURE: function handleFetchFailure(target) {
+    const obj = { fetchState: { fetching: false, retryAfter: Date.now() + 5000 } };
+    updateIndex(target.target, obj);
+  },
+  APPLICATION_COMMAND_EXECUTE_BAD_VERSION: function handleStaleCommand(arg0) {
+    ({ applicationId, channelId, guildId } = arg0);
+    if (!applicationCommandIndexStore.hasContextStateApplication({ applicationId, channelId, guildId })) {
+      if (applicationCommandIndexStore.hasUserStateApplication(applicationId)) {
+        const obj2 = { serverVersion: SymbolResult };
+        updateIndex({ type: "user" }, obj2);
+      }
+      if (applicationCommandIndexStore.hasApplicationState(applicationId)) {
+        const obj3 = { type: "application", applicationId };
+        const obj4 = { serverVersion: SymbolResult };
+        updateIndex(obj3, obj4);
+      }
+    } else {
+      if (null != guildId) {
+        const obj5 = { type: "guild", guildId };
+        let obj6 = obj5;
+      } else {
+        obj6 = { type: "channel", channelId };
+      }
+      const obj7 = { serverVersion: null };
+      guildId = SymbolResult;
+      obj7.serverVersion = SymbolResult;
+      updateIndex(obj6, obj7);
+    }
+  },
+  CHANNEL_DELETE: function handleDeletedChannelIndex(channel) {
+    const obj = { type: "channel", channelId: channel.channel.id };
+    const type = obj.type;
+    if ("guild" === type) {
+      let applicationId = obj.guildId;
+    } else if ("channel" === type) {
+      applicationId = obj.channelId;
+    } else if ("user" === type) {
+      applicationId = closure_20;
+    } else if ("application" === type) {
+      applicationId = obj.applicationId;
+    }
+    let fetching;
+    if (applicationCommandIndexStore.indices[applicationId] != null) {
+      fetching = tmp4.fetchState.fetching;
+    }
+    if (fetching) {
+      const abort = tmp4.fetchState.abort;
+      abort.abort();
+    }
+    delete tmp[tmp2];
+  },
+  GUILD_DELETE: function handleDeletedGuildIndex(guild) {
+    const obj = { type: "guild", guildId: guild.guild.id };
+    const type = obj.type;
+    if ("guild" === type) {
+      let applicationId = obj.guildId;
+    } else if ("channel" === type) {
+      applicationId = obj.channelId;
+    } else if ("user" === type) {
+      applicationId = closure_20;
+    } else if ("application" === type) {
+      applicationId = obj.applicationId;
+    }
+    let fetching;
+    if (applicationCommandIndexStore.indices[applicationId] != null) {
+      fetching = tmp4.fetchState.fetching;
+    }
+    if (fetching) {
+      const abort = tmp4.fetchState.abort;
+      abort.abort();
+    }
+    delete tmp[tmp2];
+  },
+  USER_APPLICATION_UPDATE: handleStaleUserIndex,
+  USER_APPLICATION_REMOVE: handleStaleUserIndex,
+  GUILD_APPLICATION_COMMAND_INDEX_UPDATE: function handleGuildCommandIndexUpdate(guildId) {
+    let version = guildId.version;
+    if (version == null) {
+      version = SymbolResult;
+    }
+    const tmpResult = updateIndex({ type: "guild", guildId: guildId.guildId }, { serverVersion: version });
+    let sectionIdsByBotId;
+    if (tmpResult != null) {
+      const result = tmpResult.result;
+      if (result != null) {
+        sectionIdsByBotId = result.sectionIdsByBotId;
+      }
+    }
+    if (null != sectionIdsByBotId) {
+      for (const key10016 in sectionIdsByBotId) {
+        let dMFromUserId = ChannelStore.getDMFromUserId(key10016);
+        if (null == dMFromUserId) {
+          continue;
+        } else {
+          let obj2 = { type: "channel", channelId: dMFromUserId };
+          let obj3 = { serverVersion: SymbolResult };
+          let tmp7 = updateIndex(obj2, obj3);
+          continue;
+        }
+        continue;
+      }
+    }
+    const obj = { type: "guild", guildId: guildId.guildId };
+  },
+  GUILD_MEMBERS_CHUNK_BATCH: function handleGuildMembersChunkBatch(arg0) {
+    let flag = false;
+    const iter = arg0.chunks[Symbol.iterator]();
+    const nextResult = iter.next();
+    while (iter !== undefined) {
+      let tmp3 = updateGuildBotMembers(nextResult.guildId, nextResult.members) || flag;
+      flag = tmp3;
+      continue;
+    }
+    return flag;
+  },
+};
+let tmp4 = new LoggerDefault("ApplicationCommandIndexStore");
+ReactCompilerGating = fn(558);
+let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0, arg1) => {
+      _require = arg0;
+      closure_1 = arg1;
+      const cResult = require("c").c(8);
+      const tmp4 = stateFromStoresObject(noop.useState(true), 2);
+      const first = tmp4[0];
+      dependencyMap = tmp4[1];
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const items = [applicationCommandIndexStore];
+        const fn = function l() {
+          return userState.getUserState();
+        };
+        cResult[0] = items;
+        cResult[1] = fn;
+        tmp6 = items;
+        tmp7 = fn;
+      } else {
+        [tmp6, tmp7] = cResult;
+      }
+      let obj = require("c");
+      stateFromStoresObject = require("initialize").useStateFromStoresObject(tmp6, tmp7);
+      if (cResult[2] === arg0) {
+        if (cResult[3] === arg1) {
+          if (cResult[4] === first) {
+            if (cResult[5] === stateFromStoresObject) {
+              let tmp10 = cResult[6];
+              let tmp11 = cResult[7];
+            }
+            const effect = noop.useEffect(tmp10, tmp11);
+            return stateFromStoresObject;
+          }
+        }
+      }
+      class S {
+        constructor() {
+          if (closure_2) {
+            tmp = closure_1;
+            if (closure_1) {
+              tmp2 = closure_4;
+              result = closure_4.result;
+              tmp3 = null;
+              version = undefined;
+              if (result != null) {
+                version = result.version;
+              }
+              tmp5 = version !== tmp2.serverVersion;
+              fetching = !tmp5;
+              if (tmp5) {
+                fetching = tmp2.fetchState.fetching;
+              }
+              tmp6 = !fetching;
+              if (!fetching) {
+                tmp7 = null == tmp2.fetchState.retryAfter;
+                if (!tmp7) {
+                  tmp8 = globalThis;
+                  _Date = Date;
+                  tmp7 = Date.now() >= tmp2.fetchState.retryAfter;
+                }
+                tmp6 = tmp7;
+              }
+              tmp = tmp6;
+            }
+            if (tmp) {
+              tmp = closure_0;
+            }
+            if (tmp) {
+              tmp9 = closure_0;
+              tmp10 = closure_3;
+              obj = closure_0(closure_3[15]);
+              applicationCommandIndex = obj.requestApplicationCommandIndex({ type: "user" });
+            }
+            tmp12 = closure_3;
+            flag = false;
+            tmp13 = closure_3(false);
+          }
+          return;
+        }
+      }
+      const items1 = [stateFromStoresObject, arg1, arg0, first];
+      cResult[2] = arg0;
+      cResult[3] = arg1;
+      cResult[4] = first;
+      cResult[5] = stateFromStoresObject;
+      cResult[6] = S;
+      cResult[7] = items1;
+      tmp11 = items1;
+      tmp10 = S;
+      const tmpResult = require("initialize");
+    }
+  : (arg0, arg1) => {
+      _require = arg0;
+      closure_1 = arg1;
+      let tmp = stateFromStoresObject(noop.useState(true), 2);
+      const first = tmp[0];
+      dependencyMap = tmp[1];
+      const items = [applicationCommandIndexStore];
+      stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => userState.getUserState());
+      const items1 = [stateFromStoresObject, arg1, arg0, first];
+      const effect = noop.useEffect(() => {
+        if (first) {
+          let tmp = closure_1;
+          if (closure_1) {
+            const result = stateFromStoresObject.result;
+            let version;
+            if (result != null) {
+              version = result.version;
+            }
+            let fetching = !tmp5;
+            if (version !== stateFromStoresObject.serverVersion) {
+              fetching = stateFromStoresObject.fetchState.fetching;
+            }
+            let tmp6 = !fetching;
+            if (!fetching) {
+              let tmp7 = null == stateFromStoresObject.fetchState.retryAfter;
+              if (!tmp7) {
+                const _Date = Date;
+                tmp7 = Date.now() >= stateFromStoresObject.fetchState.retryAfter;
+              }
+              tmp6 = tmp7;
+            }
+            tmp = tmp6;
+          }
+          if (tmp) {
+            tmp = closure_0;
+          }
+          if (tmp) {
+            const applicationCommandIndex = ApplicationCommandIndexActionCreators.requestApplicationCommandIndex({
+              type: "user",
+            });
+          }
+          closure_3(false);
+        }
+      }, items1);
+      return stateFromStoresObject;
+    };
+let closure_39 = tmp10;
+ReactCompilerGating = fn(558);
+let closure_40 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (applicationId, arg1) => {
+      _require = applicationId;
+      closure_1 = arg1;
+      const cResult = require("c").c(9);
+      const tmp4 = stateFromStores(noop.useState(true), 2);
+      const first = tmp4[0];
+      dependencyMap = tmp4[1];
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const items = [applicationCommandIndexStore];
+        cResult[0] = items;
+        let first1 = items;
+      } else {
+        first1 = cResult[0];
+      }
+      if (cResult[1] !== applicationId) {
+        const fn = function l() {
+          return applicationCommandIndexStore.getApplicationState(closure_0);
+        };
+        cResult[1] = applicationId;
+        cResult[2] = fn;
+        let tmp8 = fn;
+      } else {
+        tmp8 = cResult[2];
+      }
+      let obj = require("c");
+      stateFromStores = require("initialize").useStateFromStores(first1, tmp8);
+      if (cResult[3] === arg1) {
+        if (cResult[4] === applicationId) {
+          if (cResult[5] === stateFromStores) {
+            if (cResult[6] === first) {
+              let tmp10 = cResult[7];
+              let tmp11 = cResult[8];
+            }
+            const effect = noop.useEffect(tmp10, tmp11);
+          }
+        }
+      }
+      class S {
+        constructor() {
+          if (closure_2) {
+            tmp = closure_1;
+            if (closure_1) {
+              tmp2 = closure_4;
+              result = closure_4.result;
+              tmp3 = null;
+              version = undefined;
+              if (result != null) {
+                version = result.version;
+              }
+              tmp5 = version !== tmp2.serverVersion;
+              fetching = !tmp5;
+              if (tmp5) {
+                fetching = tmp2.fetchState.fetching;
+              }
+              tmp6 = !fetching;
+              if (!fetching) {
+                tmp7 = null == tmp2.fetchState.retryAfter;
+                if (!tmp7) {
+                  tmp8 = globalThis;
+                  _Date = Date;
+                  tmp7 = Date.now() >= tmp2.fetchState.retryAfter;
+                }
+                tmp6 = tmp7;
+              }
+              tmp = tmp6;
+            }
+            if (tmp) {
+              tmp9 = closure_0;
+              tmp10 = null;
+              tmp = null != closure_0;
+            }
+            if (tmp) {
+              tmp11 = closure_0;
+              tmp12 = closure_3;
+              obj = closure_0(closure_3[15]);
+              obj1 = { type: "application", applicationId: null };
+              tmp13 = closure_0;
+              obj1.applicationId = closure_0;
+              applicationCommandIndex = obj.requestApplicationCommandIndex(obj1);
+            }
+            tmp15 = closure_3;
+            flag = false;
+            tmp16 = closure_3(false);
+          }
+          return;
+        }
+      }
+      const items1 = [arg1, applicationId, stateFromStores, first];
+      cResult[3] = arg1;
+      cResult[4] = applicationId;
+      cResult[5] = stateFromStores;
+      cResult[6] = first;
+      cResult[7] = S;
+      cResult[8] = items1;
+      tmp11 = items1;
+      tmp10 = S;
+      const tmpResult = require("initialize");
+    }
+  : (applicationId, arg1) => {
+      _require = applicationId;
+      closure_1 = arg1;
+      let tmp = stateFromStores(noop.useState(true), 2);
+      const first = tmp[0];
+      dependencyMap = tmp[1];
+      const items = [applicationCommandIndexStore];
+      stateFromStores = require("initialize").useStateFromStores(items, () =>
+        applicationCommandIndexStore.getApplicationState(closure_0),
+      );
+      const items1 = [arg1, applicationId, stateFromStores, first];
+      const effect = noop.useEffect(() => {
+        if (first) {
+          let tmp = closure_1;
+          if (closure_1) {
+            const result = stateFromStores.result;
+            let version;
+            if (result != null) {
+              version = result.version;
+            }
+            let fetching = !tmp5;
+            if (version !== stateFromStores.serverVersion) {
+              fetching = stateFromStores.fetchState.fetching;
+            }
+            let tmp6 = !fetching;
+            if (!fetching) {
+              let tmp7 = null == stateFromStores.fetchState.retryAfter;
+              if (!tmp7) {
+                const _Date = Date;
+                tmp7 = Date.now() >= stateFromStores.fetchState.retryAfter;
+              }
+              tmp6 = tmp7;
+            }
+            tmp = tmp6;
+          }
+          if (tmp) {
+            tmp = null != applicationId;
+          }
+          if (tmp) {
+            const obj2 = { type: "application", applicationId };
+            const applicationCommandIndex = ApplicationCommandIndexActionCreators.requestApplicationCommandIndex(obj2);
+          }
+          closure_3(false);
+        }
+      }, items1);
+    };
+ReactCompilerGating = fn(558);
+let closure_41 = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = c.c(2);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const items = [applicationCommandIndexStore];
+        const fn = function n() {
+          return applicationStates.getApplicationStates();
+        };
+        cResult[0] = items;
+        cResult[1] = fn;
+        tmp4 = items;
+        tmp5 = fn;
+      } else {
+        [tmp4, tmp5] = cResult;
+      }
+      return initialize.useStateFromStores(tmp4, tmp5);
+    }
+  : () => {
+      const items = [applicationCommandIndexStore];
+      return initialize.useStateFromStores(items, () => applicationStates.getApplicationStates());
+    };
+ReactCompilerGating = fn(558);
+let closure_42 = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = c.c(2);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const items = [applicationCommandIndexStore];
+        const fn = function n() {
+          return applicationCommandIndexStore.applicationIndicesVersion;
+        };
+        cResult[0] = items;
+        cResult[1] = fn;
+        tmp4 = items;
+        tmp5 = fn;
+      } else {
+        [tmp4, tmp5] = cResult;
+      }
+      return initialize.useStateFromStores(tmp4, tmp5);
+    }
+  : () => {
+      const items = [applicationCommandIndexStore];
+      return initialize.useStateFromStores(items, () => applicationCommandIndexStore.applicationIndicesVersion);
+    };
+ReactCompilerGating = fn(558);
+let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (guildId, arg1) => {
+      _require = guildId;
+      importDefault = arg1;
+      const cResult = require("c").c(9);
+      const tmp4 = stateFromStoresObject(noop.useState(true), 2);
+      const first = tmp4[0];
+      dependencyMap = tmp4[1];
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const items = [applicationCommandIndexStore];
+        cResult[0] = items;
+        let first1 = items;
+      } else {
+        first1 = cResult[0];
+      }
+      if (cResult[1] !== guildId) {
+        const fn = function l() {
+          let tmp = applicationCommandIndexStore.indices[closure_0];
+          if (tmp == null) {
+            tmp = closure_25;
+          }
+          return tmp;
+        };
+        cResult[1] = guildId;
+        cResult[2] = fn;
+        let tmp8 = fn;
+      } else {
+        tmp8 = cResult[2];
+      }
+      let obj = require("c");
+      stateFromStoresObject = require("initialize").useStateFromStoresObject(first1, tmp8);
+      if (cResult[3] === arg1) {
+        if (cResult[4] === first) {
+          if (cResult[5] === guildId) {
+            if (cResult[6] === stateFromStoresObject) {
+              let tmp10 = cResult[7];
+              let tmp11 = cResult[8];
+            }
+            const effect = noop.useEffect(tmp10, tmp11);
+            return stateFromStoresObject;
+          }
+        }
+      }
+      class S {
+        constructor() {
+          tmp = closure_2;
+          if (closure_2) {
+            tmp2 = closure_0;
+            tmp3 = null;
+            tmp = null != closure_0;
+          }
+          if (tmp) {
+            tmp4 = closure_1;
+            if (closure_1) {
+              tmp5 = closure_1;
+              tmp6 = closure_3;
+              obj = closure_1(closure_3[22]);
+              tmp7 = AnalyticEvents;
+              obj1 = { miss: null, size: null };
+              tmp8 = closure_4;
+              tmp9 = null;
+              obj1.miss = null == closure_4.result;
+              tmp10 = globalThis;
+              _Object = Object;
+              tmp11 = closure_37;
+              obj1.size = Object.keys(closure_37.indices).length;
+              trackResult = obj.track(AnalyticEvents.APPLICATION_COMMAND_CACHE_FETCH, obj1);
+              result = closure_4.result;
+              version = undefined;
+              if (result != null) {
+                version = result.version;
+              }
+              tmp14 = version !== tmp8.serverVersion;
+              fetching = !tmp14;
+              if (tmp14) {
+                fetching = tmp8.fetchState.fetching;
+              }
+              tmp15 = !fetching;
+              if (!fetching) {
+                tmp16 = null == tmp8.fetchState.retryAfter;
+                if (!tmp16) {
+                  _Date = Date;
+                  tmp16 = Date.now() >= tmp8.fetchState.retryAfter;
+                }
+                tmp15 = tmp16;
+              }
+              if (tmp15) {
+                tmp17 = closure_0;
+                obj3 = closure_0(tmp6[15]);
+                obj5 = { type: "guild", guildId: null };
+                tmp18 = closure_0;
+                obj5.guildId = closure_0;
+                applicationCommandIndex = obj3.requestApplicationCommandIndex(obj5);
+              }
+            }
+            tmp20 = closure_3;
+            flag = false;
+            tmp21 = closure_3(false);
+          }
+          return;
+        }
+      }
+      const items1 = [stateFromStoresObject, arg1, guildId, first];
+      cResult[3] = arg1;
+      cResult[4] = first;
+      cResult[5] = guildId;
+      cResult[6] = stateFromStoresObject;
+      cResult[7] = S;
+      cResult[8] = items1;
+      tmp11 = items1;
+      tmp10 = S;
+      const tmpResult = require("initialize");
+    }
+  : (guildId, arg1) => {
+      _require = guildId;
+      closure_1 = arg1;
+      let tmp = stateFromStoresObject(noop.useState(true), 2);
+      const first = tmp[0];
+      dependencyMap = tmp[1];
+      const items = [applicationCommandIndexStore];
+      stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
+        let tmp = applicationCommandIndexStore.indices[closure_0];
+        if (tmp == null) {
+          tmp = closure_25;
+        }
+        return tmp;
+      });
+      const items1 = [stateFromStoresObject, arg1, guildId, first];
+      const effect = noop.useEffect(() => {
+        let tmp = first;
+        if (first) {
+          tmp = null != guildId;
+        }
+        if (tmp) {
+          if (closure_1) {
+            const obj2 = { miss: null == stateFromStoresObject.result, size: null };
+            const _Object = Object;
+            obj2.size = Object.keys(applicationCommandIndexStore.indices).length;
+            AnalyticsUtilsDefault.track(constants2.APPLICATION_COMMAND_CACHE_FETCH, obj2);
+            const result = stateFromStoresObject.result;
+            let version;
+            if (result != null) {
+              version = result.version;
+            }
+            let fetching = !tmp14;
+            if (version !== stateFromStoresObject.serverVersion) {
+              fetching = stateFromStoresObject.fetchState.fetching;
+            }
+            let tmp15 = !fetching;
+            if (!fetching) {
+              let tmp16 = null == stateFromStoresObject.fetchState.retryAfter;
+              if (!tmp16) {
+                const _Date = Date;
+                tmp16 = Date.now() >= stateFromStoresObject.fetchState.retryAfter;
+              }
+              tmp15 = tmp16;
+            }
+            if (tmp15) {
+              const obj4 = { type: "guild", guildId };
+              const applicationCommandIndex =
+                ApplicationCommandIndexActionCreators.requestApplicationCommandIndex(obj4);
+            }
+          }
+          closure_3(false);
+        }
+      }, items1);
+      return stateFromStoresObject;
+    };
+let closure_43 = Object.freeze({
   applications: { useFrecency: false, useScore: false },
   commands: { useFrecency: true, useScore: true },
 });
+ReactCompilerGating = fn(558);
+let tmp12 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (launcherContext, commandTypes, allowFetch) => {
+      const cResult = c.c(15);
+      let channel;
+      if ("channel" === launcherContext.type) {
+        channel = launcherContext.channel;
+      }
+      const permissionContext = CommandPermissionContext.usePermissionContext(channel, commandTypes.commandTypes);
+      const tmp7 = closure_38(launcherContext, false !== commandTypes.applicationCommands, allowFetch.allowFetch);
+      const tmp8 = closure_39(false !== commandTypes.applicationCommands, allowFetch.allowFetch);
+      const tmp9 = closure_41();
+      closure_42();
+      closure_40(allowFetch.applicationId, allowFetch.allowFetch);
+      if ((cResult[0] === false) !== commandTypes.applicationCommands) {
+        if (cResult[1] === tmp9) {
+          if (cResult[2] === launcherContext) {
+            if (cResult[3] === tmp7) {
+              if (cResult[4] === commandTypes.builtIns) {
+                if (cResult[5] === commandTypes.text) {
+                  if (cResult[6] === allowFetch.allowApplicationState) {
+                    if (cResult[7] === allowFetch.allowEmptySections) {
+                      if (cResult[8] === allowFetch.applicationId) {
+                        if (cResult[9] === allowFetch.installOnDemand) {
+                          if (cResult[10] === allowFetch.scoreMethod) {
+                            if (cResult[11] === allowFetch.sortOptions) {
+                              if (cResult[12] === permissionContext) {
+                                if (cResult[13] === tmp8) {
+                                  let tmp12 = cResult[14];
+                                }
+                                return tmp12;
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      const obj2 = {
+        permissionContext,
+        text: commandTypes.text,
+        allowApplicationCommands: false !== commandTypes.applicationCommands,
+        builtIns: commandTypes.builtIns,
+        scoreMethod: allowFetch.scoreMethod,
+        allowEmptySections: allowFetch.allowEmptySections,
+        contextState: tmp7,
+        userState: tmp8,
+        launcherContext,
+        applicationStates: null,
+        sortOptions: null,
+        singleApplicationId: null,
+        installOnDemand: null,
+      };
+      let map = tmp9;
+      if (!allowFetch.allowApplicationState) {
+        const _Map = Map;
+        map = new Map();
+      }
+      obj2.applicationStates = map;
+      ({
+        sortOptions: obj3.sortOptions,
+        applicationId: obj3.singleApplicationId,
+        installOnDemand: obj3.installOnDemand,
+      } = allowFetch);
+      const tmp13Result = queryIndex(obj2);
+      cResult[0] = false !== commandTypes.applicationCommands;
+      cResult[1] = tmp9;
+      cResult[2] = launcherContext;
+      cResult[3] = tmp7;
+      cResult[4] = commandTypes.builtIns;
+      cResult[5] = commandTypes.text;
+      cResult[6] = allowFetch.allowApplicationState;
+      cResult[7] = allowFetch.allowEmptySections;
+      cResult[8] = allowFetch.applicationId;
+      cResult[9] = allowFetch.installOnDemand;
+      cResult[10] = allowFetch.scoreMethod;
+      cResult[11] = allowFetch.sortOptions;
+      cResult[12] = permissionContext;
+      cResult[13] = tmp8;
+      cResult[14] = tmp13Result;
+      tmp12 = tmp13Result;
+      const tmpResult = CommandPermissionContext;
+    }
+  : (type, commandTypes, allowFetch) => {
+      _require = type;
+      let channel;
+      if ("channel" === type.type) {
+        channel = type.channel;
+      }
+      permissionContext = require("CommandPermissionContext").usePermissionContext(channel, commandTypes.commandTypes);
+      const allowApplicationCommands = tmp3;
+      const tmp4 = closure_38(type, false !== commandTypes.applicationCommands, allowFetch.allowFetch);
+      const contextState = tmp4;
+      const tmp5 = closure_39(false !== commandTypes.applicationCommands, allowFetch.allowFetch);
+      noop = tmp5;
+      const tmp6 = closure_41();
+      closure_7 = tmp6;
+      let obj = require("CommandPermissionContext");
+      closure_40(allowFetch.applicationId, allowFetch.allowFetch);
+      const items = [permissionContext, , , , , , , , , , , , , ,];
+      ({ text: arr[1], builtIns: arr[2] } = commandTypes);
+      items[3] = false !== commandTypes.applicationCommands;
+      ({
+        scoreMethod: arr[4],
+        allowEmptySections: arr[5],
+        sortOptions: arr[6],
+        allowApplicationState: arr[7],
+        applicationId: arr[8],
+        installOnDemand: arr[9],
+      } = allowFetch);
+      items[10] = tmp4;
+      items[11] = tmp5;
+      items[12] = type;
+      items[13] = tmp6;
+      items[14] = closure_42();
+      return noop.useMemo(() => {
+        const obj = {
+          permissionContext,
+          text: commandTypes.text,
+          allowApplicationCommands,
+          builtIns: commandTypes.builtIns,
+          scoreMethod: allowFetch.scoreMethod,
+          allowEmptySections: allowFetch.allowEmptySections,
+          contextState,
+          userState,
+          launcherContext,
+          applicationStates: null,
+          sortOptions: null,
+          singleApplicationId: null,
+          installOnDemand: null,
+        };
+        if (allowFetch.allowApplicationState) {
+          let map = closure_7;
+        } else {
+          const _Map = Map;
+          map = new Map();
+        }
+        obj.applicationStates = map;
+        ({
+          sortOptions: obj.sortOptions,
+          applicationId: obj.singleApplicationId,
+          installOnDemand: obj.installOnDemand,
+        } = allowFetch);
+        return queryIndex(obj);
+      }, items);
+    };
+let closure_44 = tmp12;
 const constants4 = {
   COMMAND_NAME_STARTS_WITH: 0,
   [0]: "COMMAND_NAME_STARTS_WITH",
@@ -1943,6 +2831,14 @@ const constants4 = {
   COMMAND_DESCRIPTION_FUZZY_MATCHES: 12,
   [12]: "COMMAND_DESCRIPTION_FUZZY_MATCHES",
 };
+function isStale(result) {
+  result = result.result;
+  let version;
+  if (result != null) {
+    version = result.version;
+  }
+  return version !== result.serverVersion;
+}
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandIndexStore.tsx");
 
@@ -1957,282 +2853,249 @@ export const getOrFetchApplicationCommandIndexForTarget = function getOrFetchApp
   }
   return applyArgumentsResult;
 };
-export const useContextIndexState = function useContextIndexState(arg0, arg1, arg2) {
-  _require = arg0;
-  closure_1 = arg1;
-  closure_2 = arg2;
-  [first, _slicedToArray] = noop.useState(true);
-  const items = [applicationCommandIndexStore];
-  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
-    if ("channel" === type.type) {
-      let contextState = applicationCommandIndexStore.getContextState(tmp);
-    } else {
-      contextState = applicationCommandIndexStore.getUserState();
-    }
-    return contextState;
-  });
-  const items1 = [stateFromStoresObject, arg2, arg0, arg1, first];
-  const effect = noop.useEffect(() => {
-    if (permissionContext) {
-      let guild_id = type;
-      if ("contextless" !== type.type) {
-        if (closure_2) {
-          let tmp13 = closure_1;
-          if (closure_1) {
-            const channel = guild_id.channel;
-            let guild_id1;
-            if (channel != null) {
-              guild_id1 = channel.guild_id;
-            }
-            let tmp16 = null != guild_id1;
-            if (!tmp16) {
-              type = undefined;
-              if (channel != null) {
-                type = channel.type;
-              }
-              let tmp19 = type === constants3.DM;
-              if (tmp19) {
-                const user = UserStore.getUser(channel.getRecipientId());
-                let bot;
-                if (user != null) {
-                  bot = user.bot;
+export const useContextIndexState = tmp8;
+export const useGuildIndexState = tmp9;
+export const useUserIndexState = tmp10;
+export const useDiscoveryState = ReactCompilerGating.isReactCompilerEnabled()
+  ? (channel, arg1, arg2, arg3) => {
+      let includeFrecency = arg3;
+      const cResult = require("c").c(33);
+      const obj = require("c");
+      ({ descriptors, commands, sectionedCommands, loading } = closure_44(channel, arg2, arg3));
+      if (cResult[0] === channel.channel) {
+        if (cResult[1] === channel.type) {
+          if (cResult[2] === arg1) {
+            let tmp5 = cResult[3];
+          }
+          _require = tmp5;
+          const topCommands = tmp(8804).useTopCommands(tmp5);
+          if (cResult[4] === tmp5) {
+            if (cResult[5] === commands) {
+              if (cResult[6] === descriptors) {
+                if (cResult[7] === loading) {
+                  if (cResult[8] === includeFrecency.includeFrecency) {
+                    if (cResult[9] === sectionedCommands) {
+                      if (cResult[10] === topCommands) {
+                        return cResult[11];
+                      }
+                    }
+                  }
                 }
-                tmp19 = true === bot;
-              }
-              tmp16 = tmp19;
-            }
-            tmp13 = tmp16;
-          }
-          if (tmp13) {
-            const obj3 = { miss: null == stateFromStoresObject.result, size: null };
-            const _Object = Object;
-            obj3.size = Object.keys(applicationCommandIndexStore.indices).length;
-            AnalyticsUtilsDefault.track(constants2.APPLICATION_COMMAND_CACHE_FETCH, obj3);
-            const result2 = stateFromStoresObject.result;
-            let version;
-            if (result2 != null) {
-              version = result2.version;
-            }
-            let fetching2 = !tmp33;
-            if (version !== stateFromStoresObject.serverVersion) {
-              fetching2 = stateFromStoresObject.fetchState.fetching;
-            }
-            let tmp34 = !fetching2;
-            if (!fetching2) {
-              let tmp35 = null == stateFromStoresObject.fetchState.retryAfter;
-              if (!tmp35) {
-                const _Date2 = Date;
-                tmp35 = Date.now() >= stateFromStoresObject.fetchState.retryAfter;
-              }
-              tmp34 = tmp35;
-            }
-            if (tmp34) {
-              if (null == guild_id.channel.guild_id) {
-                const obj5 = { type: "channel", channelId: guild_id.channel.id };
-                const applicationCommandIndex =
-                  ApplicationCommandIndexActionCreators.requestApplicationCommandIndex(obj5);
               }
             }
-            const obj7 = { type: "guild", guildId: null };
-            guild_id = guild_id.channel.guild_id;
-            obj7.guildId = guild_id;
-            const applicationCommandIndex1 = ApplicationCommandIndexActionCreators.requestApplicationCommandIndex(obj7);
           }
-        }
-        allowApplicationCommands(false);
-      } else {
-        let tmp8 = closure_2;
-        if (closure_2) {
-          const result = stateFromStoresObject.result;
-          let version1;
-          if (result != null) {
-            version1 = result.version;
-          }
-          let fetching = !tmp4;
-          if (version1 !== stateFromStoresObject.serverVersion) {
-            fetching = stateFromStoresObject.fetchState.fetching;
-          }
-          let tmp5 = !fetching;
-          if (!fetching) {
-            let tmp6 = null == stateFromStoresObject.fetchState.retryAfter;
-            if (!tmp6) {
-              const _Date = Date;
-              tmp6 = Date.now() >= stateFromStoresObject.fetchState.retryAfter;
+          if (!includeFrecency.includeFrecency) {
+            if (cResult[12] === commands) {
+              if (cResult[13] === descriptors) {
+                if (cResult[14] === loading) {
+                  if (cResult[15] === sectionedCommands) {
+                    let tmp9 = cResult[16];
+                  }
+                  cResult[4] = tmp5;
+                  cResult[5] = commands;
+                  cResult[6] = descriptors;
+                  cResult[7] = loading;
+                  includeFrecency = includeFrecency.includeFrecency;
+                  cResult[8] = includeFrecency;
+                  cResult[9] = sectionedCommands;
+                  cResult[10] = topCommands;
+                  let num = 11;
+                  cResult[11] = tmp9;
+                }
+              }
             }
-            tmp5 = tmp6;
+            const obj2 = { descriptors, commands, sectionedCommands, loading };
+            cResult[12] = commands;
+            cResult[13] = descriptors;
+            cResult[14] = loading;
+            cResult[15] = sectionedCommands;
+            cResult[16] = obj2;
+            tmp9 = obj2;
+          } else {
+            num = 0;
           }
-          tmp8 = tmp5;
-        }
-        if (tmp8) {
-          const applicationCommandIndex2 = ApplicationCommandIndexActionCreators.requestApplicationCommandIndex({
-            type: "user",
-          });
-        }
-      }
-    }
-  }, items1);
-  return stateFromStoresObject;
-};
-export const useGuildIndexState = function useGuildIndexState(guildId, arg1) {
-  _require = guildId;
-  closure_1 = arg1;
-  let tmp = stateFromStoresObject(noop.useState(true), 2);
-  const first = tmp[0];
-  dependencyMap = tmp[1];
-  const items = [applicationCommandIndexStore];
-  stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
-    let tmp = applicationCommandIndexStore.indices[closure_0];
-    if (tmp == null) {
-      tmp = closure_25;
-    }
-    return tmp;
-  });
-  const items1 = [stateFromStoresObject, arg1, guildId, first];
-  const effect = noop.useEffect(() => {
-    let tmp = first;
-    if (first) {
-      tmp = null != guildId;
-    }
-    if (tmp) {
-      if (closure_1) {
-        const obj2 = { miss: null == stateFromStoresObject.result, size: null };
-        const _Object = Object;
-        obj2.size = Object.keys(applicationCommandIndexStore.indices).length;
-        AnalyticsUtilsDefault.track(constants2.APPLICATION_COMMAND_CACHE_FETCH, obj2);
-        const result = stateFromStoresObject.result;
-        let version;
-        if (result != null) {
-          version = result.version;
-        }
-        let fetching = !tmp14;
-        if (version !== stateFromStoresObject.serverVersion) {
-          fetching = stateFromStoresObject.fetchState.fetching;
-        }
-        let tmp15 = !fetching;
-        if (!fetching) {
-          let tmp16 = null == stateFromStoresObject.fetchState.retryAfter;
-          if (!tmp16) {
-            const _Date = Date;
-            tmp16 = Date.now() >= stateFromStoresObject.fetchState.retryAfter;
+          if (cResult[17] !== topCommands) {
+            class O {
+              constructor(arg0) {
+                return closure_1.includes(channel.id);
+              }
+            }
+            cResult[17] = topCommands;
+            cResult[18] = O;
+          } else {
+            class O {
+              constructor(arg0) {
+                return closure_1.includes(channel.id);
+              }
+            }
           }
-          tmp15 = tmp16;
-        }
-        if (tmp15) {
-          const obj4 = { type: "guild", guildId };
-          const applicationCommandIndex = ApplicationCommandIndexActionCreators.requestApplicationCommandIndex(obj4);
-        }
-      }
-      closure_3(false);
-    }
-  }, items1);
-  return stateFromStoresObject;
-};
-export const useUserIndexState = function useUserIndexState(arg0, arg1) {
-  _require = arg0;
-  closure_1 = arg1;
-  const tmp = stateFromStoresObject(noop.useState(true), 2);
-  const first = tmp[0];
-  dependencyMap = tmp[1];
-  const items = [applicationCommandIndexStore];
-  stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => authStore.getUserState());
-  const items1 = [stateFromStoresObject, arg1, arg0, first];
-  const effect = noop.useEffect(() => {
-    if (closure_2) {
-      let tmp = closure_1;
-      if (closure_1) {
-        const result = allowApplicationCommands.result;
-        let version;
-        if (result != null) {
-          version = result.version;
-        }
-        let fetching = !tmp5;
-        if (version !== allowApplicationCommands.serverVersion) {
-          fetching = allowApplicationCommands.fetchState.fetching;
-        }
-        let tmp6 = !fetching;
-        if (!fetching) {
-          let tmp7 = null == allowApplicationCommands.fetchState.retryAfter;
-          if (!tmp7) {
-            const _Date = Date;
-            tmp7 = Date.now() >= allowApplicationCommands.fetchState.retryAfter;
+          if (cResult[19] !== tmp5) {
+            class T {
+              constructor(arg0, arg1) {
+                scoreWithoutLoadingLatest = closure_14.getScoreWithoutLoadingLatest(closure_0, channel);
+                return closure_14.getScoreWithoutLoadingLatest(closure_0, arg1) - scoreWithoutLoadingLatest;
+              }
+            }
+            cResult[19] = tmp5;
+            cResult[20] = T;
+          } else {
+            class T {
+              constructor(arg0, arg1) {
+                scoreWithoutLoadingLatest = closure_14.getScoreWithoutLoadingLatest(closure_0, channel);
+                return closure_14.getScoreWithoutLoadingLatest(closure_0, arg1) - scoreWithoutLoadingLatest;
+              }
+            }
           }
-          tmp6 = tmp7;
+          const found = commands.filter(O);
+          const sorted = found.sort(T);
+          const spliceResult = sorted.splice(num, closure_16);
+          if (num !== spliceResult.length) {
+            class T {
+              constructor(arg0, arg1) {
+                scoreWithoutLoadingLatest = closure_14.getScoreWithoutLoadingLatest(closure_0, channel);
+                return closure_14.getScoreWithoutLoadingLatest(closure_0, arg1) - scoreWithoutLoadingLatest;
+              }
+            }
+            if (cResult[28] !== spliceResult) {
+              class T {
+                constructor(arg0, arg1) {
+                  scoreWithoutLoadingLatest = closure_14.getScoreWithoutLoadingLatest(closure_0, channel);
+                  return closure_14.getScoreWithoutLoadingLatest(closure_0, arg1) - scoreWithoutLoadingLatest;
+                }
+              }
+              tmp16[0] = tmp(8805).BUILT_IN_SECTIONS[constants.FRECENCY];
+              tmp16[1] = spliceResult;
+              cResult[28] = spliceResult;
+              cResult[29] = tmp16;
+            } else {
+              class T {
+                constructor(arg0, arg1) {
+                  scoreWithoutLoadingLatest = closure_14.getScoreWithoutLoadingLatest(closure_0, channel);
+                  return closure_14.getScoreWithoutLoadingLatest(closure_0, arg1) - scoreWithoutLoadingLatest;
+                }
+              }
+            }
+            if (cResult[30] === sectionedCommands) {
+              class T {
+                constructor(arg0, arg1) {
+                  scoreWithoutLoadingLatest = closure_14.getScoreWithoutLoadingLatest(closure_0, channel);
+                  return closure_14.getScoreWithoutLoadingLatest(closure_0, arg1) - scoreWithoutLoadingLatest;
+                }
+              }
+              const obj3 = { descriptors: combined, commands: null, sectionedCommands: null, loading: null };
+              combined = spliceResult.concat(commands);
+              obj3.commands = combined;
+              obj3.sectionedCommands = tmp18;
+              obj3.loading = loading;
+            }
+            const items = [tmp16];
+            HermesBuiltin.arraySpread(sectionedCommands, 1);
+            cResult[30] = sectionedCommands;
+            cResult[31] = tmp16;
+            cResult[32] = items;
+            tmp18 = items;
+          } else {
+            class T {
+              constructor(arg0, arg1) {
+                scoreWithoutLoadingLatest = closure_14.getScoreWithoutLoadingLatest(closure_0, channel);
+                return closure_14.getScoreWithoutLoadingLatest(closure_0, arg1) - scoreWithoutLoadingLatest;
+              }
+            }
+            const obj4 = { descriptors, commands, sectionedCommands, loading };
+            cResult[21] = commands;
+            cResult[22] = descriptors;
+            cResult[23] = loading;
+            cResult[24] = sectionedCommands;
+            cResult[25] = obj4;
+          }
+          const tmpResult = tmp(8804);
         }
-        tmp = tmp6;
       }
-      if (tmp) {
-        tmp = closure_0;
-      }
-      if (tmp) {
-        const applicationCommandIndex = ApplicationCommandIndexActionCreators.requestApplicationCommandIndex({
-          type: "user",
-        });
-      }
-      permissionContext(false);
-    }
-  }, items1);
-  return stateFromStoresObject;
-};
-export const useDiscoveryState = function useDiscoveryState(type, guild, commandTypes, includeFrecency) {
-  _require = type;
-  const tmp = useQueryState(type, commandTypes, includeFrecency);
-  const descriptors = tmp.descriptors;
-  const commands = tmp.commands;
-  const sectionedCommands = tmp.sectionedCommands;
-  const loading = tmp.loading;
-  let items = [type, guild];
-  const memo = loading.useMemo(() => {
-    let tmp2;
-    if ("channel" === type.type) {
-      const obj = { channel: tmp.channel, guild };
-      tmp2 = obj;
-    }
-    return tmp2;
-  }, items);
-  const topCommands = require("ApplicationCommandFrecencyHooks").useTopCommands(memo);
-  let items1 = [loading, includeFrecency.includeFrecency, topCommands, commands, descriptors, sectionedCommands, memo];
-  return loading.useMemo(() => {
-    if (includeFrecency.includeFrecency) {
-      if (0 !== topCommands.length) {
-        const found = commands.filter((id) => topCommands.includes(id.id));
-        const sorted = found.sort((arg0, arg1) => {
-          const scoreWithoutLoadingLatest = ApplicationCommandFrecencyStore.getScoreWithoutLoadingLatest(memo, arg0);
-          return ApplicationCommandFrecencyStore.getScoreWithoutLoadingLatest(memo, arg1) - scoreWithoutLoadingLatest;
-        });
-        const spliceResult = sorted.splice(0, value2);
-        if (0 === spliceResult.length) {
-          const obj = { descriptors, commands, sectionedCommands, loading };
-          let obj2 = obj;
-        } else {
-          obj2 = { descriptors: null, commands: null, sectionedCommands: null, loading: null };
-          const items = [ApplicationCommandBuiltIns.BUILT_IN_SECTIONS[constants.FRECENCY]];
-          HermesBuiltin.arraySpread(descriptors, 1);
-          obj2.descriptors = items;
-          obj2.commands = spliceResult.concat(commands);
-          const obj3 = {
-            section: ApplicationCommandBuiltIns.BUILT_IN_SECTIONS[constants.FRECENCY],
-            data: spliceResult,
-          };
-          const items1 = [obj3];
-          HermesBuiltin.arraySpread(sectionedCommands, 1);
-          obj2.sectionedCommands = items1;
-          obj2.loading = loading;
+      let tmp6;
+      if ("channel" === channel.type) {
+        class T {
+          constructor(arg0, arg1) {
+            scoreWithoutLoadingLatest = closure_14.getScoreWithoutLoadingLatest(closure_0, channel);
+            return closure_14.getScoreWithoutLoadingLatest(closure_0, arg1) - scoreWithoutLoadingLatest;
+          }
         }
-        return obj2;
+        tmp7[0] = channel.channel;
+        tmp7[1] = arg1;
+        tmp6 = tmp7;
       }
+      cResult[0] = channel.channel;
+      cResult[1] = channel.type;
+      cResult[2] = arg1;
+      cResult[3] = tmp6;
+      tmp5 = tmp6;
+      const tmp4 = closure_44(channel, arg2, arg3);
     }
-    return { descriptors, commands, sectionedCommands, loading };
-  }, items1);
-};
-export { useQueryState };
-export const isStale = function isStale(result) {
-  result = result.result;
-  let version;
-  if (result != null) {
-    version = result.version;
-  }
-  return version !== result.serverVersion;
-};
+  : (arg0, guild, arg2, includeFrecency) => {
+      _require = arg0;
+      const tmp = closure_44(arg0, arg2, includeFrecency);
+      const descriptors = tmp.descriptors;
+      const commands = tmp.commands;
+      const sectionedCommands = tmp.sectionedCommands;
+      const loading = tmp.loading;
+      let items = [arg0, guild];
+      const memo = loading.useMemo(() => {
+        let tmp2;
+        if ("channel" === type.type) {
+          const obj = { channel: tmp.channel, guild };
+          tmp2 = obj;
+        }
+        return tmp2;
+      }, items);
+      const topCommands = require("ApplicationCommandFrecencyHooks").useTopCommands(memo);
+      let items1 = [
+        loading,
+        includeFrecency.includeFrecency,
+        topCommands,
+        commands,
+        descriptors,
+        sectionedCommands,
+        memo,
+      ];
+      return loading.useMemo(() => {
+        if (includeFrecency.includeFrecency) {
+          if (0 !== topCommands.length) {
+            const found = commands.filter((id) => topCommands.includes(id.id));
+            const sorted = found.sort((arg0, arg1) => {
+              const scoreWithoutLoadingLatest = ApplicationCommandFrecencyStore.getScoreWithoutLoadingLatest(
+                memo,
+                arg0,
+              );
+              return (
+                ApplicationCommandFrecencyStore.getScoreWithoutLoadingLatest(memo, arg1) - scoreWithoutLoadingLatest
+              );
+            });
+            const spliceResult = sorted.splice(0, value2);
+            if (0 === spliceResult.length) {
+              const obj = { descriptors, commands, sectionedCommands, loading };
+              let obj2 = obj;
+            } else {
+              obj2 = { descriptors: null, commands: null, sectionedCommands: null, loading: null };
+              const items = [ApplicationCommandBuiltIns.BUILT_IN_SECTIONS[constants.FRECENCY]];
+              HermesBuiltin.arraySpread(descriptors, 1);
+              obj2.descriptors = items;
+              obj2.commands = spliceResult.concat(commands);
+              const obj3 = {
+                section: ApplicationCommandBuiltIns.BUILT_IN_SECTIONS[constants.FRECENCY],
+                data: spliceResult,
+              };
+              const items1 = [obj3];
+              HermesBuiltin.arraySpread(sectionedCommands, 1);
+              obj2.sectionedCommands = items1;
+              obj2.loading = loading;
+            }
+            return obj2;
+          }
+        }
+        return { descriptors, commands, sectionedCommands, loading };
+      }, items1);
+    };
+export const useQueryState = tmp12;
+export { isStale };
 export const appLauncherOnlyCompareNames = function appLauncherOnlyCompareNames(arg0, arg1) {
   const collator = applicationCommandIndexStore.collator;
   return collator.compare(arg0, arg1);

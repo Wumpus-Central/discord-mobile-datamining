@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardEmbeddedActivity.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/01981_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/01987_asyncRequireImpl.js";
 import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
 import AnalyticsLocationDefault from "../../../../app_analytics/AnalyticsLocation.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
@@ -10,12 +10,12 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const HappeningNowConstants = fn(15053);
+const HappeningNowConstants = fn(15110);
 ({ HAPPENING_NOW_CONTENT_HEIGHT, HappeningNowCardTrackingType: closure_7 } = HappeningNowConstants);
-const AnalyticEvents = fn(1074).AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = {
   content: { flexShrink: 1, gap: 2 },
   cardImage: { height: HAPPENING_NOW_CONTENT_HEIGHT, minWidth: HAPPENING_NOW_CONTENT_HEIGHT, marginRight: 12 },
@@ -33,7 +33,7 @@ obj2.activityBackground = size;
 obj2.cardTitle = { marginTop: 2 };
 let closure_11 = createStyles.createStyles(obj2);
 const __initData = {
-  code: "function HappeningNowCardEmbeddedActivityTsx1(){const{viewableCardKeys,cardKey}=this.__closure;return viewableCardKeys.get().find(function(key){return key===cardKey;})!=null;}",
+  code: "function HappeningNowCardEmbeddedActivityTsx1(){const{viewableCardKeys,cardKey}=this.__closure;return viewableCardKeys.get().find(function(key_1){return key_1===cardKey;})!=null;}",
 };
 const __initData2 = {
   code: "function HappeningNowCardEmbeddedActivityTsx2(isViewable,previous){const{runOnJS,setHasViewed}=this.__closure;if(!isViewable||isViewable===previous)return;runOnJS(setHasViewed)(true);}",
@@ -105,7 +105,7 @@ export default function HappeningNowCardEmbeddedActivity(guildId) {
     const obj2 = {
       order: index,
       guild_id: guildId,
-      type: constants.EMBEDDED_ACTIVITY_CARD,
+      type: React5.EMBEDDED_ACTIVITY_CARD,
       location_stack: null,
       application_id: null,
       activity_session_id: null,
@@ -128,12 +128,12 @@ export default function HappeningNowCardEmbeddedActivity(guildId) {
     const items1 = [userId];
     obj2.highlighted_user_ids = items1;
     AnalyticsUtilsDefault.track(AnalyticEvents.ACTIVITY_CARD_CLICKED, obj2);
-    asyncRequireImpl(12655, dependencyMap.paths).then((result) => {
+    asyncRequireImpl(12695, dependencyMap.paths).then((result) => {
       if (null != channelId) {
         tmp(tmp2, true);
       }
     });
-    const promise = asyncRequireImpl(12655, dependencyMap.paths);
+    const promise = asyncRequireImpl(12695, dependencyMap.paths);
   }, items3);
   context = obj4.useContext(tmp2(tmp3[16]).ViewableHappeningNowCardKeysContext);
   cardKey.useRef(cardKey);
@@ -154,14 +154,16 @@ export default function HappeningNowCardEmbeddedActivity(guildId) {
     }
   }, items4);
   const tmp6 = index(activity[11]);
-  const fn = function b() {
-    value = context.get();
-    return null != value.find((item) => item === cardKey);
-  };
-  fn.__closure = { viewableCardKeys: context, cardKey };
-  fn.__workletHash = 3043999664691;
-  fn.__initData = __initData;
   class T {
+    constructor() {
+      value = closure_7.get();
+      return null != value.find((item) => item === cardKey);
+    }
+  }
+  T.__closure = { viewableCardKeys: context, cardKey };
+  T.__workletHash = 16153422262707;
+  T.__initData = __initData;
+  class H {
     constructor(arg0, arg1) {
       tmp = guildId;
       if (guildId) {
@@ -180,10 +182,10 @@ export default function HappeningNowCardEmbeddedActivity(guildId) {
     }
   }
   const tmp2Result = guildId(activity[17]);
-  T.__closure = { runOnJS: guildId(activity[17]).runOnJS, setHasViewed: tmp8Result[1] };
-  T.__workletHash = 17292462926115;
-  T.__initData = __initData2;
-  const animatedReaction = tmp2Result.useAnimatedReaction(fn, T);
+  H.__closure = { runOnJS: guildId(activity[17]).runOnJS, setHasViewed: tmp8Result[1] };
+  H.__workletHash = 17292462926115;
+  H.__initData = __initData2;
+  const animatedReaction = tmp2Result.useAnimatedReaction(T, H);
   const obj3 = { runOnJS: guildId(activity[17]).runOnJS, setHasViewed: tmp8Result[1] };
   if (tmp8Result[0]) {
     const obj5 = {

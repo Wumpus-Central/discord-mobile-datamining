@@ -3,22 +3,31 @@ import useIsStaffOrDeveloperSettingPredicate from "../../dev_tools/native/useIsS
 import MobileNativeUpdateStore from "../../../mobile_native_updater/MobileNativeUpdateStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(11215);
-const obj2 = {
+const ReactCompilerGating = fn(558);
+const SettingBuilders = fn(11129);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+  ? () =>
+      MobileNativeUpdateStore.hasUpdatesConfigured &&
+      useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate()
+  : () =>
+      MobileNativeUpdateStore.hasUpdatesConfigured &&
+      useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
+const obj3 = {
   useTitle() {
     return "Internal Build Active";
   },
   parent: null,
-  IconComponent: fn(15325).MobilePhoneSettingsIcon,
+  IconComponent: fn(15382).MobilePhoneSettingsIcon,
   useDescription: function useInternalBuildActiveDescription() {
     return "Build installed from builds.discord.tools";
   },
-  usePredicate: function useHasCheckNativeUpdateSetting() {
-    return (
-      MobileNativeUpdateStore.hasUpdatesConfigured &&
-      useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate()
-    );
-  },
+  usePredicate: ReactCompilerGating.isReactCompilerEnabled()
+    ? () =>
+        MobileNativeUpdateStore.hasUpdatesConfigured &&
+        useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate()
+    : () =>
+        MobileNativeUpdateStore.hasUpdatesConfigured &&
+        useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate(),
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/InternalBuildActiveSetting.tsx");
@@ -28,14 +37,15 @@ export default SettingBuilders.createStatic({
     return "Internal Build Active";
   },
   parent: null,
-  IconComponent: fn(15325).MobilePhoneSettingsIcon,
+  IconComponent: fn(15382).MobilePhoneSettingsIcon,
   useDescription: function useInternalBuildActiveDescription() {
     return "Build installed from builds.discord.tools";
   },
-  usePredicate: function useHasCheckNativeUpdateSetting() {
-    return (
-      MobileNativeUpdateStore.hasUpdatesConfigured &&
-      useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate()
-    );
-  },
+  usePredicate: ReactCompilerGating.isReactCompilerEnabled()
+    ? () =>
+        MobileNativeUpdateStore.hasUpdatesConfigured &&
+        useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate()
+    : () =>
+        MobileNativeUpdateStore.hasUpdatesConfigured &&
+        useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate(),
 });

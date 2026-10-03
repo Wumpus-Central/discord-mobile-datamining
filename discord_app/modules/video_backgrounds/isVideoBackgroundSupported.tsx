@@ -1,9 +1,7 @@
 // discord_app/modules/video_backgrounds/isVideoBackgroundSupported.tsx
-import VirtualBackgroundsIosExperimentDefault from "VirtualBackgroundsIosExperiment.tsx";
 import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
 
-const require = fn;
-const Features = fn(4870).Features;
+const Features = fn(4915).Features;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_backgrounds/isVideoBackgroundSupported.tsx");
 
@@ -17,14 +15,5 @@ export default function isVideoBackgroundSupported() {
     const _Object = Object;
     supportsResult = Object.values(obj.getVideoDevices()).length > 0;
   }
-  let tmp4 = supportsResult;
-  if (obj2.isIOS()) {
-    tmp4 =
-      VirtualBackgroundsIosExperimentDefault.getConfig({ location: "isVideoBackgroundSupported" }).enabled &&
-      supportsResult;
-    const tmp6 =
-      VirtualBackgroundsIosExperimentDefault.getConfig({ location: "isVideoBackgroundSupported" }).enabled &&
-      supportsResult;
-  }
-  return tmp4;
+  return supportsResult;
 }

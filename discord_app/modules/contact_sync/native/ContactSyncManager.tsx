@@ -18,7 +18,7 @@ let closure_11 = async function _requestAndSyncContacts() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -95,7 +95,7 @@ let closure_11 = async function _requestAndSyncContacts() {
           if (null == phone) {
             c4 = 0;
             c6 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           } else {
             c5 = 2;
             c6 = 1;
@@ -115,14 +115,14 @@ let closure_11 = async function _requestAndSyncContacts() {
     }
   }
 };
-const ContactSyncPersistedStore = fn(12389);
+const ContactSyncPersistedStore = fn(12328);
 ({
   setStoredContacts: hasOwnProperty,
   deleteStoredContacts: metroRequire,
   useContactSyncStore: closure_7,
 } = ContactSyncPersistedStore);
-const ContactPermissions = fn(12388).ContactPermissions;
-const PlatformTypes = fn(1074).PlatformTypes;
+const ContactPermissions = fn(12327).ContactPermissions;
+const PlatformTypes = fn(1085).PlatformTypes;
 const LAST_USER_CONTACTS_REQUEST_TIMESTAMP_KEY = "LAST_USER_CONTACTS_REQUEST_TIMESTAMP_KEY";
 const prototype = function ContactSyncLifecycleManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

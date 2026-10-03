@@ -6,13 +6,15 @@ import TwoFASetupModalActionCreatorsDefault from "../../account/native/mfa_modal
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-const SettingBuilders = fn(11215);
+let ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
+const SettingBuilders = fn(11129);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.cDgKte);
   },
-  parent: fn(7590).MobileUserSettings.ACCOUNT,
+  parent: fn(7634).MobileUserSettings.ACCOUNT,
   onPress: function onAccountEnable2FASettingPress() {
     const currentUser = UserStore.getCurrentUser();
     let verified;
@@ -32,11 +34,9 @@ const pressable = SettingBuilders.createPressable({
     AlertActionCreatorsDefault.show(obj3);
   },
   withArrow: true,
-  usePredicate: function useHasAccountEnable2FASetting() {
-    return !SettingsAccountUtils.useIsTOTPEnabled();
-  },
+  usePredicate: () => !SettingsAccountUtils.useIsTOTPEnabled(),
 });
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountEnable2faSetting.tsx");
+const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/AccountEnable2faSetting.tsx");
 
 export default pressable;

@@ -92,7 +92,7 @@ let closure_19 = async function _fetchStreamPreview() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -127,7 +127,7 @@ let closure_19 = async function _fetchStreamPreview() {
               const obj7 = { type: "STREAM_PREVIEW_FETCH_START", streamKey: HTTPResult };
               DispatcherDefault.dispatch(obj7);
               c6 = 1;
-              HTTP = obj6(1271).HTTP;
+              HTTP = obj6(1282).HTTP;
               const request = {
                 url: closure_2_13.STREAM_PREVIEW(HTTPResult),
                 query: null,
@@ -138,7 +138,7 @@ let closure_19 = async function _fetchStreamPreview() {
               timestamp = Date.now();
               obj9.version = timestamp;
               request.query = obj9;
-              obj6 = obj6(1271);
+              obj6 = obj6(1282);
               result = obj6.rejectWithMigratedError();
               request.rejectWithError = result;
               value = HTTP.get(request);
@@ -206,9 +206,9 @@ let closure_20 = async function _notifyStreamStart(arg0) {
   }
   return value;
 };
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ Endpoints: map1, AppContext: closure_14, PopoutWindowKeys: closure_15 } = Constants);
-const StreamTypes = fn(4887).StreamTypes;
+const StreamTypes = fn(4932).StreamTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/StreamActionCreators.tsx");
 
@@ -316,7 +316,7 @@ export const updateStreamSettings = function updateStreamSettings(noTrack) {
 export const changeStreamRegion = function changeStreamRegion(encodeStreamKeyResult, preferredRegion) {
   const HTTP = HTTPUtils.HTTP;
   const request = {
-    url: map1.STREAM(encodeStreamKeyResult),
+    url: __initData2.STREAM(encodeStreamKeyResult),
     body: { region: preferredRegion },
     oldFormErrors: true,
     rejectWithError: true,
@@ -365,15 +365,15 @@ export const joinPrivateChannelAndWatchStream = function joinPrivateChannelAndWa
           windowOpen = voiceChannelId.getVoiceChannelId() === channelId;
         }
         if (!windowOpen) {
-          closure_1(5047)(closure_1_1);
+          closure_1(5092)(closure_1_1);
         }
       } else {
         channel = channel.getChannel(channelId);
         closure_1(38)(null != channel, "Cannot join a null voice channel");
         const isInChannelResult = inChannel.isInChannel(channelId);
         if (!isInChannelResult) {
-          closure_0(4990).isChannelFull(channel, inChannel, GuildStore);
-          const obj = closure_0(4990);
+          closure_0(5035).isChannelFull(channel, inChannel, GuildStore);
+          const obj = closure_0(5035);
         }
       }
     };

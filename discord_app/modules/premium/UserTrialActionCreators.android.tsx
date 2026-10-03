@@ -3,7 +3,7 @@ import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import UserTrialOfferRecord from "../user_offers/records/UserTrialOfferRecord.tsx";
 
 const require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ Endpoints: hasOwnProperty, PaymentGateways: metroRequire } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/UserTrialActionCreators.android.tsx");
@@ -21,7 +21,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {

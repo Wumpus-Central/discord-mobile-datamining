@@ -8,7 +8,7 @@ import createCommonMessageDefault from "createCommonMessage.tsx";
 import ApplicationStore from "../../../../applications/ApplicationStore.tsx";
 
 require = fn;
-const HelpdeskArticles = fn(1074).HelpdeskArticles;
+const HelpdeskArticles = fn(1085).HelpdeskArticles;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/messages/native/renderer/system_messages/InGameMessageNuxSystemMessage.tsx",

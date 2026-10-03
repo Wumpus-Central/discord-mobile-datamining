@@ -1,13 +1,15 @@
 // discord_app/design/void/IconPill/native/IconPill.tsx
+import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import IconDefault from "../../Icon/native/Icon.tsx";
 import LegacyText_LegacyTextDefault from "../../LegacyText/native/LegacyText.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4845);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4890);
 let obj2 = {
   pillContainer: {
     flexDirection: "row",
@@ -31,36 +33,118 @@ let obj3 = {
 obj2.pillIcon = { tintColor: nativeDefault.colors.TEXT_SUBTLE, marginRight: 4 };
 let obj4 = { tintColor: nativeDefault.colors.TEXT_SUBTLE, marginRight: 4 };
 obj2.pillText = {
-  fontFamily: fn(1085).Fonts.PRIMARY_NORMAL,
+  fontFamily: fn(1096).Fonts.PRIMARY_NORMAL,
   color: nativeDefault.colors.TEXT_SUBTLE,
   fontSize: 14,
   lineHeight: 18,
 };
-let closure_5 = createStyles.createStyles(obj2);
+let closure_6 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj5 = {
+  fontFamily: fn(1096).Fonts.PRIMARY_NORMAL,
+  color: nativeDefault.colors.TEXT_SUBTLE,
+  fontSize: 14,
+  lineHeight: 18,
+};
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/IconPill/native/IconPill.tsx");
 
-export default function IconPill(IconComponent) {
-  IconComponent = IconComponent.IconComponent;
-  ({ text, source, style, textStyle, accessibilityLabel } = IconComponent);
-  const tmp = closure_5();
-  const obj = { style: null, children: null };
-  const items = [tmp.pillContainer, style];
-  obj.style = items;
-  if (null != IconComponent) {
-    const obj2 = { size: "xxs", style: tmp.pillIcon };
-    let tmp9 = React3(IconComponent, obj2);
-    let tmp8 = React3;
-  } else {
-    const obj3 = { source, size: IconDefault.Sizes.EXTRA_SMALL, style: tmp.pillIcon };
-    tmp8 = React3;
-    tmp9 = React3(IconDefault, obj3);
-  }
-  const items1 = [tmp9];
-  const obj4 = { style: null, numberOfLines: 1, accessibilityLabel, children: text };
-  const items2 = [tmp.pillText, textStyle];
-  obj4.style = items2;
-  items1[1] = tmp8(LegacyText_LegacyTextDefault, obj4);
-  obj.children = items1;
-  return React4(View, obj);
-}
+export default ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      const cResult = c.c(18);
+      ({ text, source, IconComponent, style, textStyle, accessibilityLabel } = arg0);
+      const tmp3 = closure_6();
+      if (cResult[0] === style) {
+        if (cResult[1] === tmp3.pillContainer) {
+          let tmp4 = cResult[2];
+        }
+        if (cResult[3] === IconComponent) {
+          if (cResult[4] === source) {
+            if (cResult[5] === tmp3.pillIcon) {
+              if (cResult[7] === tmp3.pillText) {
+                if (cResult[8] === textStyle) {
+                  let tmp13 = cResult[9];
+                }
+                if (cResult[10] === accessibilityLabel) {
+                  if (cResult[11] === tmp13) {
+                    if (cResult[12] === text) {
+                      let tmp14 = cResult[13];
+                    }
+                    if (cResult[14] === tmp4) {
+                      if (cResult[15] === tmp5) {
+                        if (cResult[16] === tmp14) {
+                          let tmp18 = cResult[17];
+                        }
+                        return tmp18;
+                      }
+                    }
+                    const obj2 = { style: tmp4, children: null };
+                    const items = [tmp5, tmp14];
+                    obj2.children = items;
+                    const tmp21 = hasOwnProperty(View, obj2);
+                    cResult[14] = tmp4;
+                    cResult[15] = tmp5;
+                    cResult[16] = tmp14;
+                    cResult[17] = tmp21;
+                    tmp18 = tmp21;
+                  }
+                }
+                const obj3 = { style: tmp13, numberOfLines: 1, accessibilityLabel, children: text };
+                const tmp17 = React4(LegacyText_LegacyTextDefault, obj3);
+                cResult[10] = accessibilityLabel;
+                cResult[11] = tmp13;
+                cResult[12] = text;
+                cResult[13] = tmp17;
+                tmp14 = tmp17;
+              }
+              const items1 = [tmp3.pillText, textStyle];
+              cResult[7] = tmp3.pillText;
+              cResult[8] = textStyle;
+              cResult[9] = items1;
+              tmp13 = items1;
+            }
+          }
+        }
+        if (null != IconComponent) {
+          const obj4 = { size: "xxs", style: tmp3.pillIcon };
+          let tmp10 = React4(IconComponent, obj4);
+        } else {
+          const obj5 = { source, size: IconDefault.Sizes.EXTRA_SMALL, style: tmp3.pillIcon };
+          tmp10 = React4(IconDefault, obj5);
+        }
+        cResult[3] = IconComponent;
+        cResult[4] = source;
+        source = tmp3.pillIcon;
+        cResult[5] = source;
+        cResult[6] = tmp10;
+      }
+      const items2 = [tmp3.pillContainer, style];
+      cResult[0] = style;
+      cResult[1] = tmp3.pillContainer;
+      cResult[2] = items2;
+      tmp4 = items2;
+    }
+  : (IconComponent) => {
+      IconComponent = IconComponent.IconComponent;
+      ({ text, source, style, textStyle, accessibilityLabel } = IconComponent);
+      const tmp = closure_6();
+      const obj = { style: null, children: null };
+      const items = [tmp.pillContainer, style];
+      obj.style = items;
+      if (null != IconComponent) {
+        const obj2 = { size: "xxs", style: tmp.pillIcon };
+        let tmp9 = React4(IconComponent, obj2);
+        let tmp8 = React4;
+      } else {
+        const obj3 = { source, size: IconDefault.Sizes.EXTRA_SMALL, style: tmp.pillIcon };
+        tmp8 = React4;
+        tmp9 = React4(IconDefault, obj3);
+      }
+      const items1 = [tmp9];
+      const obj4 = { style: null, numberOfLines: 1, accessibilityLabel, children: text };
+      const items2 = [tmp.pillText, textStyle];
+      obj4.style = items2;
+      items1[1] = tmp8(LegacyText_LegacyTextDefault, obj4);
+      obj.children = items1;
+      return hasOwnProperty(View, obj);
+    };

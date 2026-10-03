@@ -1,13 +1,13 @@
 // discord_common/js/packages/flux/LoggingUtils.tsx
 import logger_Logger from "../logger/Logger.tsx";
-import _mod568 from "../../../../_runtime/metro/00568__.js";
+import _mod580 from "../../../../_runtime/metro/00580__.js";
 import u from "../performance-utils/index.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 
 const logger = new logger_Logger.Logger("Flux");
-const EventEmitter = _mod568.EventEmitter;
+const EventEmitter = _mod580.EventEmitter;
 class ActionLogger extends EventEmitter {
   constructor() {
     obj = global;

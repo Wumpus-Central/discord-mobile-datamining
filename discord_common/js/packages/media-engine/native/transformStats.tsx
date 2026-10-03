@@ -696,6 +696,13 @@ export default function transformStats(mediaEngineConnectionId, str, id, arg3) {
         pttQueueLatencyMicrosSamples: null,
         sampleRateMismatchPercent: null,
         currentSampleRate: null,
+        captureProcessingDelayMs: null,
+        captureProcessingFrameCount: null,
+        apmProcessTimeMs: null,
+        apmFrameCount: null,
+        sendDelayMs: null,
+        sendPacketCount: null,
+        totalPacketSendDelayMs: null,
       };
       let obj2 = require("transformStatsUtils");
       obj.sinkWantAsInt = require("transformStatsUtils").formatSinkWantAsInt(id, audio.ssrc);
@@ -725,6 +732,13 @@ export default function transformStats(mediaEngineConnectionId, str, id, arg3) {
         pttQueueLatencyMicrosSamples: obj.pttQueueLatencyMicrosSamples,
         sampleRateMismatchPercent: obj.sampleRateMismatchPercent,
         currentSampleRate: obj.currentSampleRate,
+        captureProcessingDelayMs: obj.captureProcessingDelayMs,
+        captureProcessingFrameCount: obj.captureProcessingFrameCount,
+        apmProcessTimeMs: obj.apmProcessTimeMs,
+        apmFrameCount: obj.apmFrameCount,
+        sendDelayMs: obj.sendDelayMs,
+        sendPacketCount: obj.sendPacketCount,
+        totalPacketSendDelayMs: obj.totalPacketSendDelayMs,
       } = audio);
       items.push(obj);
       let obj3 = require("transformStatsUtils");
@@ -774,13 +788,13 @@ export default function transformStats(mediaEngineConnectionId, str, id, arg3) {
           });
         } else if (null != video) {
           let num7 = closure_2;
-          const tmp14 = transformInboundVideoStats(video, id, playout, playout);
+          const tmp16 = transformInboundVideoStats(video, id, playout, playout);
           if (closure_2 == null) {
             num7 = 0;
           }
           closure_2 = num7 + closure_3(video.rtpStats);
-          obj7[id].push(tmp14);
-          const tmp16 = closure_3(video.rtpStats);
+          obj7[id].push(tmp16);
+          const tmp18 = closure_3(video.rtpStats);
         }
       } else {
         let num = closure_2;
@@ -791,7 +805,7 @@ export default function transformStats(mediaEngineConnectionId, str, id, arg3) {
         let obj5 = {
           type: "audio",
           ssrc: audio.ssrc,
-          sinkWant: id(4963).formatSinkWantStat(id, audio.ssrc, false),
+          sinkWant: id(5009).formatSinkWantStat(id, audio.ssrc, false),
           sinkWantAsInt: null,
           codec: null,
           bytesReceived: null,
@@ -832,10 +846,12 @@ export default function transformStats(mediaEngineConnectionId, str, id, arg3) {
           decryptAttempts: null,
           decryptMissingKeyCount: null,
           decryptInvalidNonceCount: null,
+          audioReceiverDelayMs: null,
+          audioReceiverPacketCount: null,
         };
         const arr = obj7[id];
-        const obj2 = id(4963);
-        obj5.sinkWantAsInt = id(4963).formatSinkWantAsInt(id, audio.ssrc);
+        const obj2 = id(5009);
+        obj5.sinkWantAsInt = id(5009).formatSinkWantAsInt(id, audio.ssrc);
         ({ codecPayloadType: obj4.id, codecName: obj4.name } = audio);
         obj5.codec = { id: null, name: null };
         ({
@@ -881,6 +897,16 @@ export default function transformStats(mediaEngineConnectionId, str, id, arg3) {
           decryptMissingKeyCount: obj.decryptMissingKeyCount,
           decryptInvalidNonceCount: obj.decryptInvalidNonceCount,
         } = audio);
+        let audioReceiverDelayMs;
+        if (playout != null) {
+          audioReceiverDelayMs = playout.audioReceiverDelayMs;
+        }
+        obj5.audioReceiverDelayMs = audioReceiverDelayMs;
+        let prop;
+        if (playout != null) {
+          prop = playout.audioReceiverPacketCount;
+        }
+        obj5.audioReceiverPacketCount = prop;
         if (null != playout) {
           ({
             audioJitterBuffer: obj6.audioJitterBuffer,
@@ -920,7 +946,7 @@ export default function transformStats(mediaEngineConnectionId, str, id, arg3) {
         }
         const merged = Object.assign(obj11);
         obj5 = arr.push(obj5);
-        const obj3 = id(4963);
+        const obj3 = id(5009);
         const obj9 = { id: null, name: null };
       }
     });
@@ -953,6 +979,7 @@ export default function transformStats(mediaEngineConnectionId, str, id, arg3) {
     if (null != transport.secureFramesProtocolVersion) {
       obj13.secureFramesProtocolVersion = transport.secureFramesProtocolVersion;
     }
+    ({ transportDelayMs: obj6.transportDelayMs, transportPacketCount: obj6.transportPacketCount } = transport);
   }
   let bytesReceived;
   if (transport != null) {

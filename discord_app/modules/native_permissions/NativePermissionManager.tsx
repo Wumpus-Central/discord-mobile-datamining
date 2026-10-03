@@ -3,8 +3,8 @@ import DispatcherDefault from "../../Dispatcher.tsx";
 import Constants from "../../Constants.tsx";
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import NativePermissionConstants from "NativePermissionConstants.tsx";
-import NativePermissionUtils from "NativePermissionUtils.tsx";
 import ProcessArgs2 from "../../utils/ProcessArgs.tsx";
+import NativePermissionUtils from "NativePermissionUtils.tsx";
 import LifecycleManager from "../../lib/LifecycleManager.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 

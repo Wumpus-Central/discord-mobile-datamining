@@ -2,7 +2,7 @@
 import _modDef12 from "../../../_runtime/metro/00012__.js";
 import DurationsDefault from "../../utils/Durations.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import UrlDefault from "../../../_runtime/01368_Url.js";
+import UrlDefault from "../../../_runtime/01373_Url.js";
 import MarkupUtilsDefault from "../markup/MarkupUtils.tsx";
 import NicknameUtilsDefault from "../../utils/NicknameUtils.tsx";
 import useMessageAuthor from "../messages/useMessageAuthor.tsx";
@@ -149,7 +149,7 @@ let closure_31 = async function _validateSocketApplication(arg0, arg1, arg2) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -177,6 +177,7 @@ let closure_31 = async function _validateSocketApplication(arg0, arg1, arg2) {
             let coverImage;
             let flags;
             let parentId;
+            let embeddedSurfaces;
             application2 = application.getApplication(closure_1);
             if (typeof closure_2 === "string") {
               if (transport.transport === constants.POST_MESSAGE) {
@@ -185,8 +186,8 @@ let closure_31 = async function _validateSocketApplication(arg0, arg1, arg2) {
                   const items = [tmp21];
                 }
                 const obj4 = { closeCode: constants2.INVALID_ORIGIN };
-                const tmp52 = new RPCErrorDefault(obj4, "Invalid Origin");
-                throw tmp52;
+                const tmp54 = new RPCErrorDefault(obj4, "Invalid Origin");
+                throw tmp54;
               } else {
                 c7 = 1;
                 c8 = 1;
@@ -209,7 +210,8 @@ let closure_31 = async function _validateSocketApplication(arg0, arg1, arg2) {
               coverImage = closure_134_5.coverImage;
               flags = closure_134_5.flags;
               parentId = closure_134_5.parentId;
-              const obj7 = { id, parentId, name, icon, coverImage, flags };
+              embeddedSurfaces = closure_134_5.embeddedSurfaces;
+              const obj7 = { id, parentId, name, icon, coverImage, flags, embeddedSurfaces };
               closure_134_0.application = obj7;
               c8 = 3;
             }
@@ -240,9 +242,9 @@ let closure_31 = async function _validateSocketApplication(arg0, arg1, arg2) {
         c8 = 3;
         const obj = { value, done: true };
         return obj;
-      } catch (tmp54) {
+      } catch (tmp56) {
         c8 = tmp;
-        throw tmp54;
+        throw tmp56;
       }
     }
   })();
@@ -258,7 +260,7 @@ let closure_32 = async function _processSocketThrottlers(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -305,7 +307,7 @@ let closure_32 = async function _processSocketThrottlers(arg0) {
       } else {
         c6 = 0;
         c7 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp26) {
       closure_5 = tmp26;
@@ -318,10 +320,10 @@ let closure_32 = async function _processSocketThrottlers(arg0) {
     }
   }
 };
-const GUILD_VOCAL_CHANNEL_TYPES = fn(2048).GUILD_VOCAL_CHANNEL_TYPES;
-let Constants = fn(5270);
+const GUILD_VOCAL_CHANNEL_TYPES = fn(2055).GUILD_VOCAL_CHANNEL_TYPES;
+let Constants = fn(5316);
 ({ RPC_LOCAL_SCOPE: closure_15, TransportTypes: closure_16 } = Constants);
-Constants = fn(1074);
+Constants = fn(1085);
 ({
   ActivityActionTypes: closure_17,
   ChannelTypes: closure_18,
@@ -463,7 +465,7 @@ export const transformChannel = function transformChannel(channel, arg1) {
           throw error;
         } else {
           const obj = {
-            nick: closure_1(4997).getName(dependencyMap, id.id, user),
+            nick: closure_1(5042).getName(dependencyMap, id.id, user),
             mute: MediaEngineStore.isLocalMute(user.id),
             volume: MediaEngineStore.getLocalVolume(user.id),
             pan: MediaEngineStore.getLocalPan(user.id),
@@ -472,7 +474,7 @@ export const transformChannel = function transformChannel(channel, arg1) {
           };
           const obj3 = { mute, deaf, self_mute: selfMute, self_deaf: selfDeaf, suppress };
           obj.voice_state = obj3;
-          obj.user = closure_1(8968)(user);
+          obj.user = closure_1(9032)(user);
           return obj;
         }
       });
@@ -548,7 +550,7 @@ export const isMatchingOrigin = function isMatchingOrigin(str) {
   }
 };
 export const hasMessageReadPermission = function hasMessageReadPermission(channel, id, scopes) {
-  const guild = GuildStore.getGuild(channel.getGuildId());
+  guild = GuildStore.getGuild(channel.getGuildId());
   if (null != guild) {
     let application_id = guild.application_id;
   } else {
@@ -603,7 +605,7 @@ export const processSocketThrottlers = function processSocketThrottlers() {
 };
 export const validateOriginAndUpdateSocket = function validateOriginAndUpdateSocket(authorization, arg1) {
   if (null == arg1) {
-    const items = [__initData];
+    const items = [closure_1_15];
     authorization.authorization.scopes = items;
   }
 };

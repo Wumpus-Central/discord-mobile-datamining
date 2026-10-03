@@ -53,17 +53,17 @@ export default {
       stateFromStores1 === UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_VERIFIED_PHONE
     );
   },
-  isFullScreenVerification(action) {
+  isFullScreenVerification(requiredAction) {
     let result =
-      action === UserRequiredActions.REQUIRE_CAPTCHA ||
-      action === UserRequiredActions.REQUIRE_VERIFIED_EMAIL ||
-      action === UserRequiredActions.REQUIRE_VERIFIED_PHONE ||
-      action === UserRequiredActions.REQUIRE_REVERIFIED_PHONE ||
-      action === UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE ||
-      action === UserRequiredActions.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE;
+      requiredAction === UserRequiredActions.REQUIRE_CAPTCHA ||
+      requiredAction === UserRequiredActions.REQUIRE_VERIFIED_EMAIL ||
+      requiredAction === UserRequiredActions.REQUIRE_VERIFIED_PHONE ||
+      requiredAction === UserRequiredActions.REQUIRE_REVERIFIED_PHONE ||
+      requiredAction === UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE ||
+      requiredAction === UserRequiredActions.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE;
     if (!result) {
       const self = this;
-      result = this.isEmailReverification(action);
+      result = this.isEmailReverification(requiredAction);
     }
     return result;
   },

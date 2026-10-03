@@ -6,14 +6,14 @@ import PermissionStore from "../../../stores/PermissionStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ GuildNSFWContentLevel: hasOwnProperty, Permissions: metroRequire } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_gate/native/AgeGateUtils.tsx");
 
 export const shouldNSFWGateGuild = function shouldNSFWGateGuild(guildId) {
   if (obj.isIOS()) {
-    const guild = GuildStore.getGuild(guildId);
+    guild = GuildStore.getGuild(guildId);
     const currentUser = UserStore.getCurrentUser();
     if (null != guild) {
       if (null != currentUser) {

@@ -12,7 +12,7 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 import AppStateStore from "../../../stores/native/AppStateStore.tsx";
 
 require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AnalyticEvents: hasOwnProperty, AppStates: metroRequire } = Constants);
 let closure_7 = new LoggerDefault("index.native.tsx");
 const size = fn(2);

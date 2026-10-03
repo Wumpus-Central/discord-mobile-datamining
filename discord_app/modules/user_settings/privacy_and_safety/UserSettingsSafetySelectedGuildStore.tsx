@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/privacy_and_safety/UserSettingsSafetySelectedGuildStore.tsx
-import 00560__ from "../../../../_runtime/metro/00560__.js";
+import 00570__ from "../../../../_runtime/metro/00570__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 let closure_0 = { selectedGuildId: "0" };
-const useUserSafetySettingsSelectedGuildStore = module_560.create((arg0) => {
+const useUserSafetySettingsSelectedGuildStore = module_570.create((arg0) => {
   closure_0 = arg0;
   const obj = {};
   const merged = Object.assign(closure_0);

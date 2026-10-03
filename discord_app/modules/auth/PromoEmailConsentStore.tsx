@@ -1,10 +1,10 @@
 // discord_app/modules/auth/PromoEmailConsentStore.tsx
-import 00560__ from "../../../_runtime/metro/00560__.js";
+import 00570__ from "../../../_runtime/metro/00570__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 
-const usePromoEmailConsentStore = module_560.create(() => ({ required: false, checked: false, preChecked: false }));
+const usePromoEmailConsentStore = module_570.create(() => ({ required: false, checked: false, preChecked: false }));
 const result = size.fileFinishedImporting("modules/auth/PromoEmailConsentStore.tsx");
 
 export const setPromoEmailConsentState = function setPromoEmailConsentState(arg0) {

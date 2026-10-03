@@ -14,7 +14,7 @@ const prototype = StorefrontCollectionStore.prototype;
 prototype["getFetchState"] = function getFetchState(arg0) {
   let tmp;
   if (null != arg0) {
-    let state;
+    state = undefined;
     if (dependencyMap[arg0] != null) {
       state = tmp3.state;
     }
@@ -25,7 +25,7 @@ prototype["getFetchState"] = function getFetchState(arg0) {
 prototype["getFetchStateForApplication"] = function getFetchStateForApplication(arg0) {
   let tmp;
   if (null != arg0) {
-    let state;
+    state = undefined;
     if (dependencyMap2[arg0] != null) {
       state = tmp3.state;
     }
@@ -84,7 +84,7 @@ prototype["getCollection"] = function getCollection(item10006) {
   }
   let collection = null;
   if (null != tmp) {
-    let state;
+    state = undefined;
     if (tmp != null) {
       state = tmp.state;
     }
@@ -114,7 +114,7 @@ prototype["getFetchParamsForApplication"] = function getFetchParamsForApplicatio
   if (null != arg0) {
     tmp = dependencyMap2[arg0];
   }
-  let state;
+  state = undefined;
   if (tmp != null) {
     state = tmp.state;
   }
@@ -144,7 +144,7 @@ prototype["getCollectionsForApplication"] = function getCollectionsForApplicatio
   return collections;
 };
 prototype["getCollectionPageFetchState"] = function getCollectionPageFetchState(arg0) {
-  let state;
+  state = undefined;
   if (dependencyMap3[arg0] != null) {
     state = tmp.state;
   }
@@ -174,7 +174,7 @@ prototype["getCollectionListTotal"] = function getCollectionListTotal(arg0) {
   return closure_3[arg0];
 };
 prototype["getCollectionsAfterFetchState"] = function getCollectionsAfterFetchState(arg0) {
-  let state;
+  state = undefined;
   if (dependencyMap4[arg0] != null) {
     state = tmp.state;
   }
@@ -248,7 +248,7 @@ const storefrontCollectionStore = new StorefrontCollectionStore(DispatcherDefaul
     const item = collections.forEach((collection) => {
       set.add(collection.id);
       if (!dependencyMap) {
-        let state;
+        state = undefined;
         if (tmp2 != null) {
           state = tmp2.state;
         }

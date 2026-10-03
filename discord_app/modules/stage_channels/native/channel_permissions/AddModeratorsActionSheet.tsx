@@ -7,9 +7,9 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const RowType = fn(8033).RowType;
+const RowType = fn(8077).RowType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -31,20 +31,20 @@ export default function AddModeratorsActionSheet(channel) {
         row = row.row;
         if (row.rowType === constants.ROLE) {
           closure_1 = closure_1 + 1;
-          let moderatorOverwrite = channel(5913).createModeratorOverwrite(
+          let moderatorOverwrite = channel(5572).createModeratorOverwrite(
             row.id,
-            channel(1979).PermissionOverwriteType.ROLE,
+            channel(1985).PermissionOverwriteType.ROLE,
             closure_0,
           );
-          const obj2 = channel(5913);
+          const obj2 = channel(5572);
         } else {
           closure_0 = closure_0 + 1;
-          moderatorOverwrite = channel(5913).createModeratorOverwrite(
+          moderatorOverwrite = channel(5572).createModeratorOverwrite(
             row.id,
-            channel(1979).PermissionOverwriteType.MEMBER,
+            channel(1985).PermissionOverwriteType.MEMBER,
             closure_0,
           );
-          const obj = channel(5913);
+          const obj = channel(5572);
         }
         return moderatorOverwrite;
       });
@@ -84,7 +84,7 @@ export default function AddModeratorsActionSheet(channel) {
     }
     return GuildStore.getGuild(guildId);
   });
-  let str = pendingAdditions(4998)(channel, true);
+  let str = pendingAdditions(5043)(channel, true);
   if (str == null) {
     str = "";
   }
@@ -94,14 +94,14 @@ export default function AddModeratorsActionSheet(channel) {
     let _Object = Object;
     const tmp11 = 0 === Object.keys(pendingAdditions).length;
     let obj2 = { title: null, subtitle: null, trailing: null };
-    const intl3 = tmp4(1115).intl;
-    obj2.title = intl3.string(tmp4(1115).t.n3bcy8);
+    const intl3 = tmp4(1126).intl;
+    obj2.title = intl3.string(tmp4(1126).t.n3bcy8);
     obj2.subtitle = str;
     if (channel.canSkip) {
       if (tmp11) {
         const obj3 = { size: "sm", text: null, onPress: null };
-        const intl2 = tmp4(1115).intl;
-        obj3.text = intl2.string(tmp4(1115).t["5Wxrcd"]);
+        const intl2 = tmp4(1126).intl;
+        obj3.text = intl2.string(tmp4(1126).t["5Wxrcd"]);
         obj3.onPress = function handleSkip() {
           first(closure_2[15]).hideActionSheet();
         };
@@ -109,30 +109,30 @@ export default function AddModeratorsActionSheet(channel) {
       }
       const obj4 = { scrollable: true, header: null, startExpanded: true, children: null };
       obj2.trailing = <tmp13 {...obj7} />;
-      obj4.header = jsx(tmp4(6756).BottomSheetTitleHeader, obj2);
+      obj4.header = jsx(tmp4(6644).BottomSheetTitleHeader, obj2);
       const obj5 = { style: tmp.container, children: null };
       const obj6 = {
         inActionSheet: true,
         channel,
         guild: stateFromStores,
-        permission: tmp4(2052).MODERATE_STAGE_CHANNEL_PERMISSIONS,
+        permission: tmp4(2060).MODERATE_STAGE_CHANNEL_PERMISSIONS,
         pendingAdditions,
         setPendingAdditions: tmp2[1],
       };
-      obj5.children = jsx(tmp7(9238), {
+      obj5.children = jsx(tmp7(9244), {
         inActionSheet: true,
         channel,
         guild: stateFromStores,
-        permission: tmp4(2052).MODERATE_STAGE_CHANNEL_PERMISSIONS,
+        permission: tmp4(2060).MODERATE_STAGE_CHANNEL_PERMISSIONS,
         pendingAdditions,
         setPendingAdditions: tmp2[1],
       });
       obj4.children = <View style={tmp.container}>{null}</View>;
-      return jsx(tmp4(6757).BottomSheet, { scrollable: true, header: null, startExpanded: true, children: null });
+      return jsx(tmp4(6645).BottomSheet, { scrollable: true, header: null, startExpanded: true, children: null });
     }
     obj7 = { size: "sm", disabled: tmp11, text: null, onPress: null };
-    const intl = tmp4(1115).intl;
-    obj7.text = intl.string(tmp4(1115).t.OYkgVk);
+    const intl = tmp4(1126).intl;
+    obj7.text = intl.string(tmp4(1126).t.OYkgVk);
     obj7.onPress = function handleAddModeratorsPressed() {
       const self = this;
       const apply = closure_2.apply;

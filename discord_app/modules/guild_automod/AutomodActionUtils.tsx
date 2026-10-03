@@ -29,12 +29,12 @@ export const getRuleActionsInOrder = function getRuleActionsInOrder(rule) {
   });
   return mapped.filter(GlobalUtils.isNotNullish);
 };
-export const setRuleAction = function setRuleAction(actions, BLOCK_MESSAGE, arg2) {
+export const setRuleAction = function setRuleAction(rule, BLOCK_MESSAGE, arg2) {
   closure_0 = BLOCK_MESSAGE;
-  actions = actions.actions;
+  const actions = rule.actions;
   const found = actions.filter((type) => type.type !== closure_0);
   const obj = {};
-  const merged = Object.assign(actions);
+  const merged = Object.assign(rule);
   let tmp3 = found;
   if (null != arg2) {
     const items = [];

@@ -21,7 +21,7 @@ let closure_8 = async function _fetchBasicGuild() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -99,7 +99,7 @@ let closure_8 = async function _fetchBasicGuild() {
     }
   })();
 };
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 const set = new Set();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild/BasicGuildActionCreators.tsx");

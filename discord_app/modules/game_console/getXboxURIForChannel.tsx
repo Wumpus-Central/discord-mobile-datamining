@@ -8,9 +8,9 @@ import RelationshipStore from "../../stores/RelationshipStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const GameConsoleConstants = fn(8736);
+const GameConsoleConstants = fn(8749);
 ({ XBOX_HANDOFF_SEARCH_PARAMS: metroRequire, XBOX_URL_BASE: closure_7 } = GameConsoleConstants);
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ Endpoints: closure_8, ZERO_STRING_GUILD_ID: closure_9 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_console/getXboxURIForChannel.tsx");
@@ -18,10 +18,10 @@ const result = size.fileFinishedImporting("modules/game_console/getXboxURIForCha
 export default function getXboxURIForChannel(channelId, arg1) {
   ({ nonce, forQRCode } = arg1);
   const guildId = channelId.getGuildId();
-  const guild = GuildStore.getGuild(guildId);
+  guild = GuildStore.getGuild(guildId);
   let tmp4 = guildId;
   if (guildId == null) {
-    tmp4 = React7;
+    tmp4 = options;
   }
   const obj = {
     guildId: tmp4,

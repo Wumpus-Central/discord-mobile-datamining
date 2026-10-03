@@ -22,9 +22,9 @@ function createExecutable(os) {
   }
   return obj;
 }
-const Constants = fn(2005);
+const Constants = fn(2011);
 ({ END_GAME_APPLICATION_ID, POKER_NIGHT_APPLICATION_ID } = Constants);
-const ApplicationTypes = fn(1349).ApplicationTypes;
+const ApplicationTypes = fn(1360).ApplicationTypes;
 let closure_7 = { [POKER_NIGHT_APPLICATION_ID]: 7, [END_GAME_APPLICATION_ID]: 12 };
 let BasicApplicationRecord;
 class BasicApplicationRecord extends tmp2 {
@@ -242,6 +242,11 @@ class ApplicationRecord extends BasicApplicationRecord {
       embedded_activity_config = global.embeddedActivityConfig;
     }
     tmp2.embeddedActivityConfig = embedded_activity_config;
+    embeddedSurfaces = global.embedded_surfaces;
+    if (embeddedSurfaces == null) {
+      embeddedSurfaces = global.embeddedSurfaces;
+    }
+    tmp2.embeddedSurfaces = embeddedSurfaces;
     ({
       team: tmp2.team,
       integrationTypesConfig: tmp2.integrationTypesConfig,
@@ -360,6 +365,7 @@ ApplicationRecord["createFromServer"] = function createFromServer(bot) {
     max_participants: obj.maxParticipants,
     tags: obj.tags,
     embedded_activity_config: obj.embeddedActivityConfig,
+    embedded_surfaces: obj.embeddedSurfaces,
   } = bot);
   let fromEntriesResult;
   if (null != bot.integration_types_config) {
@@ -470,6 +476,7 @@ prototype2["mergeFromApplicationUpdate"] = function mergeFromApplicationUpdate(i
     maxParticipants: null,
     tags: null,
     embeddedActivityConfig: null,
+    embeddedSurfaces: null,
     type: null,
     team: null,
     roleConnectionsVerificationUrl: null,
@@ -567,7 +574,7 @@ prototype2["mergeFromApplicationUpdate"] = function mergeFromApplicationUpdate(i
     guildId = self.guildId;
   }
   obj.guildId = guildId;
-  let guild = id.guild;
+  guild = id.guild;
   if (guild == null) {
     guild = self.guild;
   }
@@ -633,6 +640,11 @@ prototype2["mergeFromApplicationUpdate"] = function mergeFromApplicationUpdate(i
     embeddedActivityConfig = tmp2;
   }
   obj.embeddedActivityConfig = embeddedActivityConfig;
+  let embeddedSurfaces = id.embeddedSurfaces;
+  if (embeddedSurfaces == null) {
+    embeddedSurfaces = self.embeddedSurfaces;
+  }
+  obj.embeddedSurfaces = embeddedSurfaces;
   let type = id.type;
   if (type == null) {
     type = self.type;
@@ -773,6 +785,15 @@ prototype2["getMaxParticipants"] = function getMaxParticipants() {
     num = 0;
   }
   return num;
+};
+Object.defineProperty(prototype2, "isEmbedded", {
+  get: function isEmbedded() {
+    return require("EmbeddedSurfaceUtils").isEmbeddedApplication(this);
+  },
+  set: undefined,
+});
+prototype2["supportsEmbeddedSurface"] = function supportsEmbeddedSurface(MAIN) {
+  return require("EmbeddedSurfaceUtils").supportsEmbeddedSurface(this, MAIN);
 };
 prototype2["supportsIntegrationTypes"] = function supportsIntegrationTypes() {
   const items = [...arguments];

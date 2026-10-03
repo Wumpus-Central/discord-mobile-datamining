@@ -1,101 +1,20 @@
 // discord_app/modules/stage_channels/native/StageChannelAgeVerificationNoticeForEvent.tsx
+import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
+import native from "../../../design/void/native.tsx";
+import WarningIcon2 from "../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
+import CircleInformationIcon from "../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
+import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import AgeVerificationUtils from "../../age_assurance/AgeVerificationUtils.tsx";
 import useStageSpeakingForCurrentUser from "../useStageSpeakingForCurrentUser.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const native = Text(1177);
-const CircleInformationIcon = Text(4796);
-const Text_Text = Text(4841);
-const WarningIcon2 = Text(8234);
 require = fn;
-function StageChannelAgeVerificationNoticeContent(onConfirmPress) {
-  onConfirmPress = onConfirmPress.onConfirmPress;
-  closure_1 = closure_8();
-  const isVerifiedTeen = onConfirmPress(5057).useIsVerifiedTeen();
-  const intl = onConfirmPress(1115).intl;
-  const format = intl.format;
-  const t = onConfirmPress(1115).t;
-  if (isVerifiedTeen) {
-    const obj2 = {
-      hook(children) {
-        return hasOwnProperty(Text_Text.Text, {
-          variant: "text-sm/medium",
-          color: "text-default",
-          style: closure_1.linkText,
-          onPress() {
-            const tmp = closure_1(4548);
-            tmp(closure_1(2110).getArticleURL(constants.TIGGER_PAWTECT_LEARN_MORE));
-            if (onConfirmPress != null) {
-              onConfirmPress();
-            }
-          },
-          children,
-        });
-      },
-    };
-    let formatResult = format(t.iWGjcg, obj2);
-  } else {
-    const obj3 = {
-      hook(children) {
-        return hasOwnProperty(Text_Text.Text, {
-          variant: "text-sm/medium",
-          color: "text-default",
-          style: closure_1.linkText,
-          onPress() {
-            const obj = closure_1(8043);
-            const result = obj.showAgeVerificationGetStartedModal({
-              entryPoint: onConfirmPress(8045).AgeVerificationModalEntryPoint.START_STAGE_PROMPT,
-            });
-            if (closure_1_0 != null) {
-              closure_1_0();
-            }
-          },
-          children,
-        });
-      },
-    };
-    formatResult = format(t.edpbxy, obj3);
-  }
-  return formatResult;
-}
-function StageChannelAgeVerificationNoticeWrapper(onConfirmPress) {
-  onConfirmPress = onConfirmPress.onConfirmPress;
-  let tmp = closure_8();
-  let Text = require;
-  let tmp8Result = dependencyMap;
-  const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
-  if (onConfirmPress.noBackground) {
-    const obj2 = { style: tmp.noticeContainer, children: null };
-    if (isVerifiedTeen) {
-      let WarningIcon = CircleInformationIcon.CircleInformationIcon;
-    } else {
-      WarningIcon = WarningIcon2.WarningIcon;
-    }
-    const obj3 = { size: "refresh_sm", color: nativeDefault.colors.TEXT_DEFAULT, style: tmp.icon };
-    const items = [hasOwnProperty(WarningIcon, obj3)];
-    Text = Text_Text.Text;
-    const obj4 = { variant: "text-sm/medium", color: "text-subtle", style: tmp.contentText, children: null };
-    tmp = StageChannelAgeVerificationNoticeContent;
-    const obj5 = { onConfirmPress };
-    obj4.children = hasOwnProperty(StageChannelAgeVerificationNoticeContent, obj5);
-    tmp8Result = hasOwnProperty(Text, obj4);
-    items[1] = tmp8Result;
-    obj2.children = items;
-    timestampProducer(View, obj2);
-  } else {
-    const HelpMessageTypes = native.HelpMessageTypes;
-    const obj6 = { messageType: isVerifiedTeen ? HelpMessageTypes.INFO : HelpMessageTypes.WARNING, children: null };
-    obj7 = { onConfirmPress };
-    obj6.children = hasOwnProperty(StageChannelAgeVerificationNoticeContent, obj7);
-    return hasOwnProperty(native.HelpMessage, obj6);
-  }
-}
 const View = fn(17).View;
-const HelpdeskArticles = fn(1074).HelpdeskArticles;
+const HelpdeskArticles = fn(1085).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = {
   container: { marginTop: nativeDefault.space.PX_16 },
   containerWithDivider: null,
@@ -120,48 +39,393 @@ obj2.icon = { flexShrink: 0 };
 obj2.linkText = { textDecorationLine: "underline" };
 obj2.contentText = { flex: 1 };
 let closure_8 = createStyles.createStyles(obj2);
-let obj7 = { TOP: 0, [0]: "TOP", BOTTOM: 1, [1]: "BOTTOM" };
+let ReactCompilerGating = fn(558);
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (onConfirmPress) => {
+      const cResult = onConfirmPress(576).c(4);
+      onConfirmPress = onConfirmPress.onConfirmPress;
+      const tmp4 = closure_8();
+      closure_1 = tmp4;
+      let obj = onConfirmPress(576);
+      const isVerifiedTeen = onConfirmPress(5102).useIsVerifiedTeen();
+      if (cResult[0] === isVerifiedTeen) {
+        if (cResult[1] === onConfirmPress) {
+          if (cResult[2] === tmp4) {
+            return cResult[3];
+          }
+        }
+      }
+      const intl = tmp(1126).intl;
+      const format = intl.format;
+      let t = tmp(1126).t;
+      if (isVerifiedTeen) {
+        t = {
+          hook(children) {
+            return hasOwnProperty(Text_Text.Text, {
+              variant: "text-sm/medium",
+              color: "text-default",
+              style: closure_1.linkText,
+              onPress() {
+                const tmp = closure_1(4559);
+                tmp(closure_1(2115).getArticleURL(constants.TIGGER_PAWTECT_LEARN_MORE));
+                if (onConfirmPress != null) {
+                  onConfirmPress();
+                }
+              },
+              children,
+            });
+          },
+        };
+        let formatResult = format(t.iWGjcg, t);
+      } else {
+        const obj3 = {
+          hook(children) {
+            return hasOwnProperty(Text_Text.Text, {
+              variant: "text-sm/medium",
+              color: "text-default",
+              style: closure_1.linkText,
+              onPress() {
+                const obj = closure_1(8084);
+                const result = obj.showAgeVerificationGetStartedModal({
+                  entryPoint: onConfirmPress(8086).AgeVerificationModalEntryPoint.START_STAGE_PROMPT,
+                });
+                if (closure_1_0 != null) {
+                  closure_1_0();
+                }
+              },
+              children,
+            });
+          },
+        };
+        formatResult = format(t.edpbxy, obj3);
+      }
+      cResult[0] = isVerifiedTeen;
+      cResult[1] = onConfirmPress;
+      cResult[2] = tmp4;
+      cResult[3] = formatResult;
+      const obj2 = onConfirmPress(5102);
+    }
+  : (onConfirmPress) => {
+      onConfirmPress = onConfirmPress.onConfirmPress;
+      closure_1 = closure_8();
+      const isVerifiedTeen = onConfirmPress(5102).useIsVerifiedTeen();
+      const intl = onConfirmPress(1126).intl;
+      const format = intl.format;
+      const t = onConfirmPress(1126).t;
+      if (isVerifiedTeen) {
+        const obj2 = {
+          hook(children) {
+            return hasOwnProperty(Text_Text.Text, {
+              variant: "text-sm/medium",
+              color: "text-default",
+              style: closure_1.linkText,
+              onPress() {
+                const tmp = closure_1(4559);
+                tmp(closure_1(2115).getArticleURL(constants.TIGGER_PAWTECT_LEARN_MORE));
+                if (onConfirmPress != null) {
+                  onConfirmPress();
+                }
+              },
+              children,
+            });
+          },
+        };
+        let formatResult = format(t.iWGjcg, obj2);
+      } else {
+        const obj3 = {
+          hook(children) {
+            return hasOwnProperty(Text_Text.Text, {
+              variant: "text-sm/medium",
+              color: "text-default",
+              style: closure_1.linkText,
+              onPress() {
+                const obj = closure_1(8084);
+                const result = obj.showAgeVerificationGetStartedModal({
+                  entryPoint: onConfirmPress(8086).AgeVerificationModalEntryPoint.START_STAGE_PROMPT,
+                });
+                if (closure_1_0 != null) {
+                  closure_1_0();
+                }
+              },
+              children,
+            });
+          },
+        };
+        formatResult = format(t.edpbxy, obj3);
+      }
+      return formatResult;
+    };
+ReactCompilerGating = fn(558);
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (onConfirmPress) => {
+      const cResult = c.c(17);
+      onConfirmPress = onConfirmPress.onConfirmPress;
+      const tmp4 = closure_8();
+      let icon = AgeVerificationUtils.useIsVerifiedTeen();
+      if (onConfirmPress.noBackground) {
+        if (cResult[0] === icon) {
+          if (cResult[1] === tmp4.icon) {
+            if (cResult[3] !== onConfirmPress) {
+              const obj3 = { onConfirmPress };
+              const tmp21 = hasOwnProperty(closure_9, obj3);
+              cResult[3] = onConfirmPress;
+              cResult[4] = tmp21;
+              let tmp18 = tmp21;
+            } else {
+              tmp18 = cResult[4];
+            }
+            if (cResult[5] === tmp4.contentText) {
+              if (cResult[6] === tmp18) {
+                let tmp22 = cResult[7];
+              }
+              if (cResult[8] === tmp4.noticeContainer) {
+                if (cResult[9] === tmp13) {
+                  if (cResult[10] === tmp22) {
+                    let tmp25 = cResult[11];
+                  }
+                  return tmp25;
+                }
+              }
+              const obj4 = { style: tmp4.noticeContainer, children: null };
+              const items = [tmp13, tmp22];
+              obj4.children = items;
+              const tmp28 = timestampProducer(View, obj4);
+              cResult[8] = tmp4.noticeContainer;
+              cResult[9] = tmp13;
+              cResult[10] = tmp22;
+              cResult[11] = tmp28;
+              tmp25 = tmp28;
+            }
+            const obj5 = { variant: "text-sm/medium", color: "text-subtle", style: tmp4.contentText, children: tmp18 };
+            const tmp24 = hasOwnProperty(Text_Text.Text, obj5);
+            cResult[5] = tmp4.contentText;
+            cResult[6] = tmp18;
+            cResult[7] = tmp24;
+            tmp22 = tmp24;
+          }
+        }
+        if (icon) {
+          let WarningIcon = CircleInformationIcon.CircleInformationIcon;
+        } else {
+          WarningIcon = WarningIcon2.WarningIcon;
+        }
+        const obj6 = { size: "refresh_sm", color: nativeDefault.colors.TEXT_DEFAULT, style: tmp4.icon };
+        const tmp14Result = hasOwnProperty(WarningIcon, obj6);
+        cResult[0] = icon;
+        icon = tmp4.icon;
+        cResult[1] = icon;
+        cResult[2] = tmp14Result;
+      } else {
+        const HelpMessageTypes = native.HelpMessageTypes;
+        const tmp5 = icon ? HelpMessageTypes.INFO : HelpMessageTypes.WARNING;
+        if (cResult[12] !== onConfirmPress) {
+          const obj7 = { onConfirmPress };
+          const tmp9 = hasOwnProperty(closure_9, obj7);
+          cResult[12] = onConfirmPress;
+          cResult[13] = tmp9;
+          let tmp6 = tmp9;
+        } else {
+          tmp6 = cResult[13];
+        }
+        if (cResult[14] === tmp5) {
+          if (cResult[15] === tmp6) {
+            let tmp10 = cResult[16];
+          }
+          return tmp10;
+        }
+        const obj8 = { messageType: tmp5, children: tmp6 };
+        const tmp12 = hasOwnProperty(native.HelpMessage, obj8);
+        cResult[14] = tmp5;
+        cResult[15] = tmp6;
+        cResult[16] = tmp12;
+        tmp10 = tmp12;
+      }
+    }
+  : (onConfirmPress) => {
+      onConfirmPress = onConfirmPress.onConfirmPress;
+      let tmp = closure_8();
+      let Text = require;
+      let tmp8Result = dependencyMap;
+      const isVerifiedTeen = AgeVerificationUtils.useIsVerifiedTeen();
+      if (onConfirmPress.noBackground) {
+        const obj2 = { style: tmp.noticeContainer, children: null };
+        if (isVerifiedTeen) {
+          let WarningIcon = CircleInformationIcon.CircleInformationIcon;
+        } else {
+          WarningIcon = WarningIcon2.WarningIcon;
+        }
+        const obj3 = { size: "refresh_sm", color: nativeDefault.colors.TEXT_DEFAULT, style: tmp.icon };
+        const items = [hasOwnProperty(WarningIcon, obj3)];
+        Text = Text_Text.Text;
+        const obj4 = { variant: "text-sm/medium", color: "text-subtle", style: tmp.contentText, children: null };
+        tmp = closure_9;
+        const obj5 = { onConfirmPress };
+        obj4.children = hasOwnProperty(closure_9, obj5);
+        tmp8Result = hasOwnProperty(Text, obj4);
+        items[1] = tmp8Result;
+        obj2.children = items;
+        timestampProducer(View, obj2);
+      } else {
+        const HelpMessageTypes = native.HelpMessageTypes;
+        const obj6 = { messageType: isVerifiedTeen ? HelpMessageTypes.INFO : HelpMessageTypes.WARNING, children: null };
+        const obj7 = { onConfirmPress };
+        obj6.children = hasOwnProperty(closure_9, obj7);
+        return hasOwnProperty(native.HelpMessage, obj6);
+      }
+    };
+const obj9 = { TOP: 0, [0]: "TOP", BOTTOM: 1, [1]: "BOTTOM" };
+ReactCompilerGating = fn(558);
+let obj6 = {
+  flexDirection: "row",
+  alignItems: "center",
+  gap: nativeDefault.space.PX_8,
+  borderRadius: nativeDefault.radii.sm,
+};
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/stage_channels/native/StageChannelAgeVerificationNoticeForEvent.tsx");
 
-export default function StageChannelAgeVerificationNoticeForEvent(divider) {
-  divider = divider.divider;
-  ({ noBackground, onConfirmPress, style } = divider);
-  const tmp = closure_8();
-  if (obj.useShouldShowAgeVerificationForEvent()) {
-    const _Array = Array;
-    if (Array.isArray(divider)) {
-      const hasItem = divider.includes(obj7.TOP);
-      let tmp11 = hasItem;
-      if (hasItem) {
-        const obj2 = { style: tmp.divider };
-        tmp11 = hasOwnProperty(View, obj2);
+export default ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      const cResult = c.c(21);
+      ({ noBackground, onConfirmPress, style, divider } = arg0);
+      const tmp2 = closure_8();
+      if (obj2.useShouldShowAgeVerificationForEvent()) {
+        if (cResult[0] !== divider) {
+          const _Array = Array;
+          if (Array.isArray(divider)) {
+            cResult[0] = divider;
+            cResult[1] = divider;
+            let arr = divider;
+          } else if (null != divider) {
+            const items = [divider];
+            let items1 = items;
+          } else {
+            items1 = [];
+          }
+        } else {
+          arr = cResult[1];
+        }
+        if (cResult[2] === arr) {
+          if (cResult[3] === tmp2.divider) {
+            let tmp8 = cResult[4];
+          }
+          const tmp13 = arr.length > 0 ? tmp2.containerWithDivider : tmp2.container;
+          if (cResult[5] === style) {
+            if (cResult[6] === tmp13) {
+              let tmp14 = cResult[7];
+            }
+            if (cResult[8] === noBackground) {
+              if (cResult[9] === onConfirmPress) {
+                let tmp15 = cResult[10];
+              }
+              if (cResult[11] === tmp14) {
+                if (cResult[12] === tmp15) {
+                  let tmp19 = cResult[13];
+                }
+                if (cResult[14] === arr) {
+                  if (cResult[15] === tmp2.divider) {
+                    let tmp23 = cResult[16];
+                  }
+                  if (cResult[17] === tmp8) {
+                    if (cResult[18] === tmp19) {
+                      if (cResult[19] === tmp23) {
+                        let tmp28 = cResult[20];
+                      }
+                      return tmp28;
+                    }
+                  }
+                  const obj3 = { children: null };
+                  const items2 = [tmp8, tmp19, tmp23];
+                  obj3.children = items2;
+                  const tmp31 = timestampProducer(React5, obj3);
+                  cResult[17] = tmp8;
+                  cResult[18] = tmp19;
+                  cResult[19] = tmp23;
+                  cResult[20] = tmp31;
+                  tmp28 = tmp31;
+                }
+                let hasItem = arr.includes(obj9.BOTTOM);
+                if (hasItem) {
+                  const obj4 = { style: tmp2.divider };
+                  hasItem = hasOwnProperty(View, obj4);
+                }
+                cResult[14] = arr;
+                cResult[15] = tmp2.divider;
+                cResult[16] = hasItem;
+                tmp23 = hasItem;
+              }
+              const obj5 = { style: tmp14, children: tmp15 };
+              const tmp22 = hasOwnProperty(View, obj5);
+              cResult[11] = tmp14;
+              cResult[12] = tmp15;
+              cResult[13] = tmp22;
+              tmp19 = tmp22;
+            }
+            const obj6 = { noBackground, onConfirmPress };
+            const tmp18 = hasOwnProperty(closure_10, obj6);
+            cResult[8] = noBackground;
+            cResult[9] = onConfirmPress;
+            cResult[10] = tmp18;
+            tmp15 = tmp18;
+          }
+          const items3 = [tmp13, style];
+          cResult[5] = style;
+          cResult[6] = tmp13;
+          cResult[7] = items3;
+          tmp14 = items3;
+        }
+        let hasItem1 = arr.includes(obj9.TOP);
+        if (hasItem1) {
+          const obj7 = { style: tmp2.divider };
+          hasItem1 = hasOwnProperty(View, obj7);
+        }
+        cResult[2] = arr;
+        cResult[3] = tmp2.divider;
+        cResult[4] = hasItem1;
+        tmp8 = hasItem1;
+      } else {
+        return null;
       }
-      const items = [tmp11, ,];
-      const obj3 = { style: null, children: null };
-      const items1 = [arr.length > 0 ? tmp.containerWithDivider : tmp.container, style];
-      obj3.style = items1;
-      const obj4 = { noBackground, onConfirmPress };
-      obj3.children = hasOwnProperty(StageChannelAgeVerificationNoticeWrapper, obj4);
-      items[1] = hasOwnProperty(View, obj3);
-      let hasItem1 = arr.includes(obj7.BOTTOM);
-      if (hasItem1) {
-        const obj5 = { style: tmp.divider };
-        hasItem1 = hasOwnProperty(View, obj5);
-      }
-      const obj6 = { children: null };
-      items[2] = hasItem1;
-      obj6.children = items;
-      return timestampProducer(React5, obj6);
-    } else if (null != divider) {
-      const items2 = [divider];
-      let items3 = items2;
-    } else {
-      items3 = [];
+      obj2 = useStageSpeakingForCurrentUser;
     }
-  } else {
-    return null;
-  }
-  obj = useStageSpeakingForCurrentUser;
-}
-export const DividerPosition = obj7;
+  : (divider) => {
+      divider = divider.divider;
+      ({ noBackground, onConfirmPress, style } = divider);
+      const tmp = closure_8();
+      if (obj.useShouldShowAgeVerificationForEvent()) {
+        const _Array = Array;
+        if (Array.isArray(divider)) {
+          const hasItem = divider.includes(obj9.TOP);
+          let tmp11 = hasItem;
+          if (hasItem) {
+            const obj2 = { style: tmp.divider };
+            tmp11 = hasOwnProperty(View, obj2);
+          }
+          const items = [tmp11, ,];
+          const obj3 = { style: null, children: null };
+          const items1 = [arr.length > 0 ? tmp.containerWithDivider : tmp.container, style];
+          obj3.style = items1;
+          const obj4 = { noBackground, onConfirmPress };
+          obj3.children = hasOwnProperty(closure_10, obj4);
+          items[1] = hasOwnProperty(View, obj3);
+          let hasItem1 = arr.includes(obj9.BOTTOM);
+          if (hasItem1) {
+            const obj5 = { style: tmp.divider };
+            hasItem1 = hasOwnProperty(View, obj5);
+          }
+          const obj6 = { children: null };
+          items[2] = hasItem1;
+          obj6.children = items;
+          return timestampProducer(React5, obj6);
+        } else if (null != divider) {
+          const items2 = [divider];
+          let items3 = items2;
+        } else {
+          items3 = [];
+        }
+      } else {
+        return null;
+      }
+      obj = useStageSpeakingForCurrentUser;
+    };
+export const DividerPosition = obj9;

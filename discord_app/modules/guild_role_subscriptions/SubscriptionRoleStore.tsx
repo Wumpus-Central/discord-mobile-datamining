@@ -13,7 +13,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 function computeRolesForGuild(guildId) {
   const currentUser = UserStore.getCurrentUser();
-  const guild = GuildStore.getGuild(guildId);
+  guild = GuildStore.getGuild(guildId);
   if (null != guild) {
     if (null != currentUser) {
       const _Set = Set;

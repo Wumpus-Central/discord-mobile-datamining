@@ -24,7 +24,7 @@ function computeAlertSettings() {
   }
 }
 function updateGuildIncident(id) {
-  const guild = GuildStore.getGuild(id);
+  guild = GuildStore.getGuild(id);
   let incidentsData;
   if (guild != null) {
     incidentsData = guild.incidentsData;

@@ -7,7 +7,7 @@ import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.ts
 
 let require = fn;
 const NativeModules = fn(17).NativeModules;
-const AnalyticEvents = fn(1074).AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 let closure_7 = {
   APP_TRANSACTION_UNAVAILABLE: "native_unavailable",
   APP_TRANSACTION_CANCELLED: "native_cancelled",
@@ -42,7 +42,7 @@ prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -85,7 +85,7 @@ prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
           return obj;
         }
         v3 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       } catch (tmp9) {
         v3 = tmp;
         throw tmp9;
@@ -106,7 +106,7 @@ prototype["syncAppTransactionId"] = function syncAppTransactionId() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {

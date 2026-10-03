@@ -52,7 +52,7 @@ export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2(
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -83,8 +83,8 @@ export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2(
             tmp75(true);
             v0(false);
             v0 = 2;
-            const result = closure_0(8051).isCurrentUserSuspended();
-            const obj7 = closure_0(8072);
+            const result = closure_0(8092).isCurrentUserSuspended();
+            const obj7 = closure_0(8113);
             if (result) {
               c5 = 4;
               c6 = 1;
@@ -96,7 +96,7 @@ export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2(
               const obj9 = { value: obj7.fetchAgeVerificationMethodsV2(), done: false };
               return obj9;
             }
-            const obj6 = closure_0(8051);
+            const obj6 = closure_0(8092);
           }
         } else if (1 === tmp9) {
           v0 = 0;
@@ -156,7 +156,7 @@ export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2(
             tmp75(false);
           }
           c6 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp75) {
         if (tmp5 === v0) {

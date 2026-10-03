@@ -13,7 +13,7 @@ import PermissionStore from "../../../stores/PermissionStore.tsx";
 require = fn;
 function getAttachmentsRestriction(type) {
   if (type instanceof React5) {
-    if (React6(type.type)) {
+    if (closure_1_8(type.type)) {
       let tmp4;
       if (!PermissionStore.can(constants.ATTACH_FILES, type)) {
         const obj = { label: null };
@@ -26,27 +26,27 @@ function getAttachmentsRestriction(type) {
   }
 }
 const View = fn(17).View;
-const ChannelRecord = fn(2048);
+const ChannelRecord = fn(2055);
 ({ ChannelRecordBase: closure_7, isGuildChannelType: closure_8 } = ChannelRecord);
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AnalyticEvents: closure_11, Permissions: closure_12, MAX_UPLOAD_COUNT: map1 } = Constants);
-const MAX_DESTINATION_COUNT = fn(11392).MAX_DESTINATION_COUNT;
-const UserRowModes = fn(10515).UserRowModes;
+const MAX_DESTINATION_COUNT = fn(11309).MAX_DESTINATION_COUNT;
+const UserRowModes = fn(10592).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   headerLeftContainer: null,
   headerRightContainer: null,
 };
-let PlatformUtils = fn(1364);
+let PlatformUtils = fn(1369);
 let num = 0;
 if (PlatformUtils.isIOS()) {
   num = nativeDefault.space.PX_16;
 }
 obj2.headerLeftContainer = { paddingLeft: num };
-PlatformUtils = fn(1364);
+PlatformUtils = fn(1369);
 let num2 = 0;
 if (PlatformUtils.isIOS()) {
   num2 = nativeDefault.space.PX_16;
@@ -127,7 +127,7 @@ export default function ShareScreen(appEntryKey) {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -220,7 +220,7 @@ export default function ShareScreen(appEntryKey) {
                               const obj2 = { value, done: true };
                               return obj2;
                             } else {
-                              return { value: "HermesInternal", done: null };
+                              return { value: "IconComponent", done: "IconComponent" };
                             }
                           } else {
                             try {
@@ -242,7 +242,7 @@ export default function ShareScreen(appEntryKey) {
                                   let channel2;
                                   c5 = 1;
                                   c6 = 1;
-                                  return { value: "flex", done: null };
+                                  return { value: "Reflect", done: true };
                                 }
                               } else if (1 === tmp7) {
                                 if (arg0 === 1) {
@@ -392,7 +392,7 @@ export default function ShareScreen(appEntryKey) {
               closure_129_8(false);
               closure_129_9.current = false;
               React = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else if (arg0 === 1) {
             React = 3;
@@ -447,7 +447,7 @@ export default function ShareScreen(appEntryKey) {
       const obj3 = { embed, isLoadingEmbed: isLoading, isRevamp: true };
       items[1] = value2(ShareEmbedDefault, obj3);
       obj2.children = items;
-      let tmp4Result = collapsedCategories(closure_2_17, obj2);
+      let tmp4Result = collapsedCategories(constants, obj2);
     } else {
       tmp4Result = null;
     }

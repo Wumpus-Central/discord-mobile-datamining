@@ -1,21 +1,24 @@
 // discord_app/modules/user_settings/defs/native/ProfilePrivacySetting.tsx
 import util from "../../../../intl/index.native.tsx";
 import preloaded_user_settings from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import asyncRequireImpl from "../../../../../_runtime/01981_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01987_asyncRequireImpl.js";
 import UserSettings from "../../UserSettings.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import ActivityPrivacyUpsellUtils from "../../../activity_privacy/ActivityPrivacyUpsellUtils.tsx";
+import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
+let ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.Qnf32C);
   },
   parent: SettingsConstants.MobileUserSettings.DATA_AND_PRIVACY,
-  useValue() {
+  useValue: () => {
     const ProfileVisibility = UserSettings.ProfileVisibility;
     return ProfileVisibility.useSetting();
   },
@@ -34,7 +37,7 @@ const radio = SettingBuilders.createRadio({
         mappedActivityValue: obj3.mappedActivityValue,
       } = profileToActivityUpsell);
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(14600, dependencyMap.paths),
+        asyncRequireImpl(14656, dependencyMap.paths),
         "ProfileToActivityPrivacyUpsellActionSheet",
         { direction: null, affectedGuildIds: null, settingName: null, mappedActivityValue: null },
       );
@@ -66,6 +69,6 @@ const radio = SettingBuilders.createRadio({
     return items;
   },
 });
-const result = size.fileFinishedImporting("modules/user_settings/defs/native/ProfilePrivacySetting.tsx");
+const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/ProfilePrivacySetting.tsx");
 
 export default radio;

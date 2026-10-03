@@ -18,8 +18,8 @@ export const getBenefitKey = function getBenefitKey(id) {
   }
   return combined;
 };
-export const formatPlanInterval = function formatPlanInterval(first2) {
-  const interval = first2.interval;
+export const formatPlanInterval = function formatPlanInterval(merged) {
+  const interval = merged.interval;
   const intl = util.intl;
   if (SubscriptionIntervalTypes.DAY === interval) {
     let cuSp8Q = util.t["3rUmPQ"];
@@ -28,7 +28,7 @@ export const formatPlanInterval = function formatPlanInterval(first2) {
   } else if (SubscriptionIntervalTypes.YEAR === interval) {
     cuSp8Q = util.t.cuSp8Q;
   }
-  return intl.format(cuSp8Q, { count: first2.interval_count });
+  return intl.format(cuSp8Q, { count: merged.interval_count });
 };
 export const formatPlanIntervalDuration = function formatPlanIntervalDuration(interval) {
   ({ interval, interval_count } = interval);

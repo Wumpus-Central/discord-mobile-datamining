@@ -1,6 +1,7 @@
 // discord_app/modules/guild_profile/native/GuildProfileUtils.tsx
+import c from "../../../../_runtime/00576_c.js";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
-import tinycolorDefault from "../../../../_runtime/07160_tinycolor.js";
+import tinycolorDefault from "../../../../_runtime/07063_tinycolor.js";
 import useAvatarColor from "../../avatar/useAvatarColor.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
@@ -8,29 +9,59 @@ import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 const useAvatarColorDefault = useAvatarColor;
 
 require = fn;
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_profile/native/GuildProfileUtils.tsx");
 
-export const useProfilePrimaryColor = function useProfilePrimaryColor(guildProfile, token) {
-  let guildIconURL = null;
-  if (null != guildProfile) {
-    guildIconURL = null;
-    if (null == guildProfile.brandColorPrimary) {
-      ({ id: obj2.id, icon: obj2.icon } = guildProfile);
-      guildIconURL = AvatarUtilsDefault.getGuildIconURL({ id: null, icon: null, size: 64 });
-      const obj3 = { id: null, icon: null, size: 64 };
+export const useProfilePrimaryColor = ReactCompilerGating.isReactCompilerEnabled()
+  ? (brandColorPrimary, arg1) => {
+      const cResult = c.c(2);
+      if (cResult[0] !== brandColorPrimary) {
+        let guildIconURL = null;
+        if (null != brandColorPrimary) {
+          guildIconURL = null;
+          if (null == brandColorPrimary.brandColorPrimary) {
+            ({ id: obj3.id, icon: obj3.icon } = brandColorPrimary);
+            guildIconURL = AvatarUtilsDefault.getGuildIconURL({ id: null, icon: null, size: 64 });
+            const obj4 = { id: null, icon: null, size: 64 };
+          }
+        }
+        cResult[0] = brandColorPrimary;
+        cResult[1] = guildIconURL;
+        let tmp3 = guildIconURL;
+      } else {
+        tmp3 = cResult[1];
+      }
+      brandColorPrimary = useAvatarColorDefault(tmp3, arg1);
+      let brandColorPrimary1;
+      if (brandColorPrimary != null) {
+        brandColorPrimary1 = brandColorPrimary.brandColorPrimary;
+      }
+      if (null != brandColorPrimary1) {
+        brandColorPrimary = brandColorPrimary.brandColorPrimary;
+      }
+      return brandColorPrimary;
     }
-  }
-  let brandColorPrimary = useAvatarColorDefault(guildIconURL, token);
-  let brandColorPrimary1;
-  if (guildProfile != null) {
-    brandColorPrimary1 = guildProfile.brandColorPrimary;
-  }
-  if (null != brandColorPrimary1) {
-    brandColorPrimary = guildProfile.brandColorPrimary;
-  }
-  return brandColorPrimary;
-};
+  : (brandColorPrimary, arg1) => {
+      let guildIconURL = null;
+      if (null != brandColorPrimary) {
+        guildIconURL = null;
+        if (null == brandColorPrimary.brandColorPrimary) {
+          ({ id: obj2.id, icon: obj2.icon } = brandColorPrimary);
+          guildIconURL = AvatarUtilsDefault.getGuildIconURL({ id: null, icon: null, size: 64 });
+          const obj3 = { id: null, icon: null, size: 64 };
+        }
+      }
+      brandColorPrimary = useAvatarColorDefault(guildIconURL, arg1);
+      let brandColorPrimary1;
+      if (brandColorPrimary != null) {
+        brandColorPrimary1 = brandColorPrimary.brandColorPrimary;
+      }
+      if (null != brandColorPrimary1) {
+        brandColorPrimary = brandColorPrimary.brandColorPrimary;
+      }
+      return brandColorPrimary;
+    };
 export const getProfilePrimaryColor = function getProfilePrimaryColor(guildProfileFromInvite) {
   if (null == guildProfileFromInvite) {
     return null;

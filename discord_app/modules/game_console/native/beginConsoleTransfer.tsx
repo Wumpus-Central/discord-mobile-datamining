@@ -15,7 +15,7 @@ let closure_5 = async function _beginConsoleTransfer(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -94,7 +94,7 @@ let closure_5 = async function _beginConsoleTransfer(arg0) {
         return obj;
       }
       c5 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     } catch (tmp35) {
       c5 = tmp;
       throw tmp35;
@@ -102,7 +102,7 @@ let closure_5 = async function _beginConsoleTransfer(arg0) {
   }
 };
 const items = [,];
-({ PLAYSTATION: arr[0], PLAYSTATION_STAGING: arr[1] } = fn(1074).PlatformTypes);
+({ PLAYSTATION: arr[0], PLAYSTATION_STAGING: arr[1] } = fn(1085).PlatformTypes);
 const set = new Set(items);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_console/native/beginConsoleTransfer.tsx");

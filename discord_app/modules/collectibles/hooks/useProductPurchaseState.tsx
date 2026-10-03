@@ -1,6 +1,6 @@
 // discord_app/modules/collectibles/hooks/useProductPurchaseState.tsx
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import compactDefault from "../../../../_runtime/08492_compact.js";
+import compactDefault from "../../../../_runtime/08497_compact.js";
 import CollectiblesPurchaseStore from "../CollectiblesPurchaseStore.tsx";
 
 const require = globalThis.__r;
@@ -57,14 +57,39 @@ function getProductPurchaseState(CollectiblesPurchaseStore, skuId) {
     return obj;
   }
 }
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useProductPurchaseState.tsx");
 
 export { getProductPurchaseState };
-export const useProductPurchaseState = function useProductPurchaseState(product) {
-  _require = product;
-  const items = [CollectiblesPurchaseStore];
-  return require("initialize").useStateFromStoresObject(items, () =>
-    getProductPurchaseState(CollectiblesPurchaseStore, closure_0),
-  );
-};
+export const useProductPurchaseState = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      _require = arg0;
+      const cResult = require("c").c(3);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const items = [CollectiblesPurchaseStore];
+        cResult[0] = items;
+        let first = items;
+      } else {
+        first = cResult[0];
+      }
+      if (cResult[1] !== arg0) {
+        const fn = function l() {
+          return getProductPurchaseState(CollectiblesPurchaseStore, closure_0);
+        };
+        cResult[1] = arg0;
+        cResult[2] = fn;
+        let tmp6 = fn;
+      } else {
+        tmp6 = cResult[2];
+      }
+      const obj = require("c");
+      return require("initialize").useStateFromStoresObject(first, tmp6);
+    }
+  : (arg0) => {
+      _require = arg0;
+      const items = [CollectiblesPurchaseStore];
+      return require("initialize").useStateFromStoresObject(items, () =>
+        getProductPurchaseState(CollectiblesPurchaseStore, closure_0),
+      );
+    };

@@ -1,4 +1,5 @@
 // discord_common/js/packages/design/components/Rive/native/generated/CheckpointIntroRive.tsx
+import c from "../../../../../../../../_runtime/00576_c.js";
 import BaseRive from "../BaseRive.tsx";
 import RiveErrorBoundary from "../RiveErrorBoundary.tsx";
 import _objectWithoutProperties from "../../../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -6,6 +7,14 @@ import noop from "../../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 let closure_3 = [
+  "fallback",
+  "artboard",
+  "stateMachine",
+  "defaultViewModelInstance",
+  "dataBinding",
+  "onDataBindingChange",
+];
+let closure_4 = [
   "fallback",
   "artboard",
   "stateMachine",
@@ -36,132 +45,377 @@ const artboardViewModelInstances = {
   "Globe Single Line": [],
   "Start Button": ["default", "reducedMotion"],
 };
-let closure_9 = {
-  "Checkpoint Intro Desktop": function CheckpointIntroDesktopBindings(reducedMotionEnabled) {
-    ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
-    const booleanBinding = BaseRive.useBooleanBinding(
-      "reducedMotion",
-      instance,
-      reducedMotionEnabled.reducedMotionEnabled,
-      undefined,
-      playIfNeeded,
-    );
-    let Subtitle;
-    if (dataBinding != null) {
-      Subtitle = dataBinding.Subtitle;
-    }
-    let Subtitle1;
-    if (onDataBindingChange != null) {
-      Subtitle1 = onDataBindingChange.Subtitle;
-    }
-    const stringBinding = BaseRive.useStringBinding("Subtitle", instance, Subtitle, Subtitle1, playIfNeeded);
-    let prop;
-    if (dataBinding != null) {
-      prop = dataBinding["StartButton Pressed"];
-    }
-    let prop1;
-    if (onDataBindingChange != null) {
-      prop1 = onDataBindingChange["StartButton Pressed"];
-    }
-    const booleanBinding1 = BaseRive.useBooleanBinding("StartButton Pressed", instance, prop, prop1, playIfNeeded);
-    const tmpResult = BaseRive;
-    let StartButton;
-    if (dataBinding != null) {
-      StartButton = dataBinding.StartButton;
-    }
-    let StartButton1;
-    if (onDataBindingChange != null) {
-      StartButton1 = onDataBindingChange.StartButton;
-    }
-    const stringBinding1 = BaseRive.useStringBinding("StartButton", instance, StartButton, StartButton1, playIfNeeded);
-    return null;
-  },
-  "Start Button": function StartButtonBindings(reducedMotionEnabled) {
-    ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
-    const booleanBinding = BaseRive.useBooleanBinding(
-      "reducedMotion",
-      instance,
-      reducedMotionEnabled.reducedMotionEnabled,
-      undefined,
-      playIfNeeded,
-    );
-    let Subtitle;
-    if (dataBinding != null) {
-      Subtitle = dataBinding.Subtitle;
-    }
-    let Subtitle1;
-    if (onDataBindingChange != null) {
-      Subtitle1 = onDataBindingChange.Subtitle;
-    }
-    const stringBinding = BaseRive.useStringBinding("Subtitle", instance, Subtitle, Subtitle1, playIfNeeded);
-    let prop;
-    if (dataBinding != null) {
-      prop = dataBinding["StartButton Pressed"];
-    }
-    let prop1;
-    if (onDataBindingChange != null) {
-      prop1 = onDataBindingChange["StartButton Pressed"];
-    }
-    const booleanBinding1 = BaseRive.useBooleanBinding("StartButton Pressed", instance, prop, prop1, playIfNeeded);
-    const tmpResult = BaseRive;
-    let StartButton;
-    if (dataBinding != null) {
-      StartButton = dataBinding.StartButton;
-    }
-    let StartButton1;
-    if (onDataBindingChange != null) {
-      StartButton1 = onDataBindingChange.StartButton;
-    }
-    const stringBinding1 = BaseRive.useStringBinding("StartButton", instance, StartButton, StartButton1, playIfNeeded);
-    return null;
-  },
+let ReactCompilerGating = fn(558);
+let obj = {
+  "Checkpoint Intro Desktop": ReactCompilerGating.isReactCompilerEnabled()
+    ? (reducedMotionEnabled) => {
+        ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
+        const booleanBinding = BaseRive.useBooleanBinding(
+          "reducedMotion",
+          instance,
+          reducedMotionEnabled.reducedMotionEnabled,
+          undefined,
+          playIfNeeded,
+        );
+        let Subtitle;
+        if (dataBinding != null) {
+          Subtitle = dataBinding.Subtitle;
+        }
+        let Subtitle1;
+        if (onDataBindingChange != null) {
+          Subtitle1 = onDataBindingChange.Subtitle;
+        }
+        const stringBinding = BaseRive.useStringBinding("Subtitle", instance, Subtitle, Subtitle1, playIfNeeded);
+        let prop;
+        if (dataBinding != null) {
+          prop = dataBinding["StartButton Pressed"];
+        }
+        let prop1;
+        if (onDataBindingChange != null) {
+          prop1 = onDataBindingChange["StartButton Pressed"];
+        }
+        const booleanBinding1 = BaseRive.useBooleanBinding("StartButton Pressed", instance, prop, prop1, playIfNeeded);
+        const tmpResult = BaseRive;
+        let StartButton;
+        if (dataBinding != null) {
+          StartButton = dataBinding.StartButton;
+        }
+        let StartButton1;
+        if (onDataBindingChange != null) {
+          StartButton1 = onDataBindingChange.StartButton;
+        }
+        const stringBinding1 = BaseRive.useStringBinding(
+          "StartButton",
+          instance,
+          StartButton,
+          StartButton1,
+          playIfNeeded,
+        );
+        return null;
+      }
+    : (reducedMotionEnabled) => {
+        ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
+        const booleanBinding = BaseRive.useBooleanBinding(
+          "reducedMotion",
+          instance,
+          reducedMotionEnabled.reducedMotionEnabled,
+          undefined,
+          playIfNeeded,
+        );
+        let Subtitle;
+        if (dataBinding != null) {
+          Subtitle = dataBinding.Subtitle;
+        }
+        let Subtitle1;
+        if (onDataBindingChange != null) {
+          Subtitle1 = onDataBindingChange.Subtitle;
+        }
+        const stringBinding = BaseRive.useStringBinding("Subtitle", instance, Subtitle, Subtitle1, playIfNeeded);
+        let prop;
+        if (dataBinding != null) {
+          prop = dataBinding["StartButton Pressed"];
+        }
+        let prop1;
+        if (onDataBindingChange != null) {
+          prop1 = onDataBindingChange["StartButton Pressed"];
+        }
+        const booleanBinding1 = BaseRive.useBooleanBinding("StartButton Pressed", instance, prop, prop1, playIfNeeded);
+        const tmpResult = BaseRive;
+        let StartButton;
+        if (dataBinding != null) {
+          StartButton = dataBinding.StartButton;
+        }
+        let StartButton1;
+        if (onDataBindingChange != null) {
+          StartButton1 = onDataBindingChange.StartButton;
+        }
+        const stringBinding1 = BaseRive.useStringBinding(
+          "StartButton",
+          instance,
+          StartButton,
+          StartButton1,
+          playIfNeeded,
+        );
+        return null;
+      },
+  "Start Button": null,
 };
-let closure_10 = noop.forwardRef(function CheckpointIntroRiveInner(defaultViewModelInstance, ref) {
-  ({ fallback, artboard } = defaultViewModelInstance);
-  let str = "Checkpoint Intro Desktop";
-  if (undefined !== artboard) {
-    str = artboard;
-  }
-  defaultViewModelInstance = defaultViewModelInstance.defaultViewModelInstance;
-  let str2 = "default";
-  if (undefined !== defaultViewModelInstance) {
-    str2 = defaultViewModelInstance;
-  }
-  const dataBinding = defaultViewModelInstance.dataBinding;
-  const onDataBindingChange = defaultViewModelInstance.onDataBindingChange;
-  const items = [str, dataBinding, onDataBindingChange];
-  const callback = noop.useCallback((arg0) => {
-    let tmp2 = null;
-    if (null != closure_9[str]) {
-      const obj = {};
-      const merged = Object.assign(arg0);
-      obj.dataBinding = dataBinding;
-      obj.onDataBindingChange = onDataBindingChange;
-      tmp2 = <tmp />;
+ReactCompilerGating = fn(558);
+obj["Start Button"] = ReactCompilerGating.isReactCompilerEnabled()
+  ? (reducedMotionEnabled) => {
+      ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
+      const booleanBinding = BaseRive.useBooleanBinding(
+        "reducedMotion",
+        instance,
+        reducedMotionEnabled.reducedMotionEnabled,
+        undefined,
+        playIfNeeded,
+      );
+      let Subtitle;
+      if (dataBinding != null) {
+        Subtitle = dataBinding.Subtitle;
+      }
+      let Subtitle1;
+      if (onDataBindingChange != null) {
+        Subtitle1 = onDataBindingChange.Subtitle;
+      }
+      const stringBinding = BaseRive.useStringBinding("Subtitle", instance, Subtitle, Subtitle1, playIfNeeded);
+      let prop;
+      if (dataBinding != null) {
+        prop = dataBinding["StartButton Pressed"];
+      }
+      let prop1;
+      if (onDataBindingChange != null) {
+        prop1 = onDataBindingChange["StartButton Pressed"];
+      }
+      const booleanBinding1 = BaseRive.useBooleanBinding("StartButton Pressed", instance, prop, prop1, playIfNeeded);
+      const tmpResult = BaseRive;
+      let StartButton;
+      if (dataBinding != null) {
+        StartButton = dataBinding.StartButton;
+      }
+      let StartButton1;
+      if (onDataBindingChange != null) {
+        StartButton1 = onDataBindingChange.StartButton;
+      }
+      const stringBinding1 = BaseRive.useStringBinding(
+        "StartButton",
+        instance,
+        StartButton,
+        StartButton1,
+        playIfNeeded,
+      );
+      return null;
     }
-    return tmp2;
-  }, items);
-  const tmp = _objectWithoutProperties(defaultViewModelInstance, closure_3);
-  let merged = Object.assign(tmp);
-  return jsx(str(onDataBindingChange[3]).BaseRive, {
-    ref,
-    src: dataBinding(onDataBindingChange[4]),
-    artboard: str,
-    artboardProperties,
-    artboardViewModelInstances,
-    defaultViewModelInstance: str2,
-    stateMachine: defaultViewModelInstance.stateMachine,
-    renderDataBinding: callback,
-  });
-});
+  : (reducedMotionEnabled) => {
+      ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
+      const booleanBinding = BaseRive.useBooleanBinding(
+        "reducedMotion",
+        instance,
+        reducedMotionEnabled.reducedMotionEnabled,
+        undefined,
+        playIfNeeded,
+      );
+      let Subtitle;
+      if (dataBinding != null) {
+        Subtitle = dataBinding.Subtitle;
+      }
+      let Subtitle1;
+      if (onDataBindingChange != null) {
+        Subtitle1 = onDataBindingChange.Subtitle;
+      }
+      const stringBinding = BaseRive.useStringBinding("Subtitle", instance, Subtitle, Subtitle1, playIfNeeded);
+      let prop;
+      if (dataBinding != null) {
+        prop = dataBinding["StartButton Pressed"];
+      }
+      let prop1;
+      if (onDataBindingChange != null) {
+        prop1 = onDataBindingChange["StartButton Pressed"];
+      }
+      const booleanBinding1 = BaseRive.useBooleanBinding("StartButton Pressed", instance, prop, prop1, playIfNeeded);
+      const tmpResult = BaseRive;
+      let StartButton;
+      if (dataBinding != null) {
+        StartButton = dataBinding.StartButton;
+      }
+      let StartButton1;
+      if (onDataBindingChange != null) {
+        StartButton1 = onDataBindingChange.StartButton;
+      }
+      const stringBinding1 = BaseRive.useStringBinding(
+        "StartButton",
+        instance,
+        StartButton,
+        StartButton1,
+        playIfNeeded,
+      );
+      return null;
+    };
+ReactCompilerGating = fn(558);
+let closure_11 = noop.forwardRef(
+  ReactCompilerGating.isReactCompilerEnabled()
+    ? (arg0, ref) => {
+        const cResult = require("c").c(18);
+        if (cResult[0] !== arg0) {
+          ({ fallback, artboard, stateMachine, defaultViewModelInstance, dataBinding, onDataBindingChange } = arg0);
+          const tmp12 = _objectWithoutProperties(arg0, closure_3);
+          _require = dataBinding;
+          importDefault = onDataBindingChange;
+          cResult[0] = arg0;
+          cResult[1] = dataBinding;
+          cResult[2] = onDataBindingChange;
+          cResult[3] = tmp12;
+          cResult[4] = stateMachine;
+          cResult[5] = artboard;
+          cResult[6] = defaultViewModelInstance;
+          let tmp9 = defaultViewModelInstance;
+          let tmp8 = artboard;
+          let tmp7 = stateMachine;
+          let tmp6 = tmp12;
+        } else {
+          _require = cResult[1];
+          importDefault = cResult[2];
+          tmp6 = cResult[3];
+          tmp7 = cResult[4];
+          tmp8 = cResult[5];
+          tmp9 = cResult[6];
+        }
+        str = "Checkpoint Intro Desktop";
+        if (undefined !== tmp8) {
+          str = tmp8;
+        }
+        let str2 = "default";
+        if (undefined !== tmp9) {
+          str2 = tmp9;
+        }
+        if (cResult[7] === str) {
+          if (cResult[8] === dataBinding) {
+            if (cResult[9] === onDataBindingChange) {
+              let tmp13 = cResult[10];
+            }
+            if (cResult[11] === str) {
+              if (cResult[12] === str2) {
+                if (cResult[13] === ref) {
+                  if (cResult[14] === tmp13) {
+                    if (cResult[15] === tmp6) {
+                      if (cResult[16] === tmp7) {
+                        let tmp15 = cResult[17];
+                      }
+                      return tmp15;
+                    }
+                  }
+                }
+              }
+            }
+            const obj2 = {
+              ref,
+              src: require("../../../../../../../../discord_assets/assets/mana/rive/native/CheckpointIntro.riv.js"),
+              artboard: str,
+              artboardProperties,
+              artboardViewModelInstances,
+              defaultViewModelInstance: str2,
+              stateMachine: tmp7,
+              renderDataBinding: tmp13,
+            };
+            let merged = Object.assign(tmp6);
+            const tmp23 = jsx(tmp(tmp2[4]).BaseRive, {
+              ref,
+              src: require("../../../../../../../../discord_assets/assets/mana/rive/native/CheckpointIntro.riv.js"),
+              artboard: str,
+              artboardProperties,
+              artboardViewModelInstances,
+              defaultViewModelInstance: str2,
+              stateMachine: tmp7,
+              renderDataBinding: tmp13,
+            });
+            cResult[11] = str;
+            cResult[12] = str2;
+            cResult[13] = ref;
+            cResult[14] = tmp13;
+            cResult[15] = tmp6;
+            cResult[16] = tmp7;
+            cResult[17] = tmp23;
+            tmp15 = tmp23;
+          }
+        }
+        const fn = function w(arg0) {
+          let tmp2 = null;
+          if (null != obj[str]) {
+            obj = {};
+            const merged = Object.assign(arg0);
+            obj.dataBinding = dataBinding;
+            obj.onDataBindingChange = onDataBindingChange;
+            tmp2 = <tmp />;
+          }
+          return tmp2;
+        };
+        cResult[7] = str;
+        cResult[8] = dataBinding;
+        cResult[9] = onDataBindingChange;
+        cResult[10] = fn;
+        tmp13 = fn;
+        obj = require("c");
+        tmp = _require;
+      }
+    : (defaultViewModelInstance, ref) => {
+        ({ fallback, artboard } = defaultViewModelInstance);
+        let str = "Checkpoint Intro Desktop";
+        if (undefined !== artboard) {
+          str = artboard;
+        }
+        defaultViewModelInstance = defaultViewModelInstance.defaultViewModelInstance;
+        let str2 = "default";
+        if (undefined !== defaultViewModelInstance) {
+          str2 = defaultViewModelInstance;
+        }
+        const dataBinding = defaultViewModelInstance.dataBinding;
+        const onDataBindingChange = defaultViewModelInstance.onDataBindingChange;
+        const items = [str, dataBinding, onDataBindingChange];
+        const callback = noop.useCallback((arg0) => {
+          let tmp2 = null;
+          if (null != obj[str]) {
+            obj = {};
+            const merged = Object.assign(arg0);
+            obj.dataBinding = dataBinding;
+            obj.onDataBindingChange = onDataBindingChange;
+            tmp2 = <tmp />;
+          }
+          return tmp2;
+        }, items);
+        const tmp = _objectWithoutProperties(defaultViewModelInstance, closure_4);
+        let merged = Object.assign(tmp);
+        return jsx(str(onDataBindingChange[4]).BaseRive, {
+          ref,
+          src: dataBinding(onDataBindingChange[6]),
+          artboard: str,
+          artboardProperties,
+          artboardViewModelInstances,
+          defaultViewModelInstance: str2,
+          stateMachine: defaultViewModelInstance.stateMachine,
+          renderDataBinding: callback,
+        });
+      },
+);
+ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "../discord_common/js/packages/design/components/Rive/native/generated/CheckpointIntroRive.tsx",
 );
 
-export const CheckpointIntroRive = noop.forwardRef(function CheckpointIntroRiveWithBoundary(fallback, ref) {
-  const obj = { fallback: fallback.fallback, children: null };
-  const merged = Object.assign(fallback);
-  obj.children = <closure_10 ref={ref} />;
-  return jsx(RiveErrorBoundary.RiveErrorBoundary, { fallback: fallback.fallback, children: null });
-});
+export const CheckpointIntroRive = noop.forwardRef(
+  ReactCompilerGating.isReactCompilerEnabled()
+    ? (fallback, ref) => {
+        const cResult = c.c(6);
+        if (cResult[0] === fallback) {
+          if (cResult[1] === ref) {
+            let tmp4 = cResult[2];
+          }
+          if (cResult[3] === fallback.fallback) {
+            if (cResult[4] === tmp4) {
+              let tmp7 = cResult[5];
+            }
+            return tmp7;
+          }
+          const obj2 = { fallback: fallback.fallback, children: tmp4 };
+          const tmp9 = jsx(RiveErrorBoundary.RiveErrorBoundary, { fallback: fallback.fallback, children: tmp4 });
+          cResult[3] = fallback.fallback;
+          cResult[4] = tmp4;
+          cResult[5] = tmp9;
+          tmp7 = tmp9;
+        }
+        const merged = Object.assign(fallback);
+        const tmp6 = <closure_11 ref={ref} />;
+        cResult[0] = fallback;
+        cResult[1] = ref;
+        cResult[2] = tmp6;
+        tmp4 = tmp6;
+        const obj3 = { ref };
+      }
+    : (fallback, ref) => {
+        obj = { fallback: fallback.fallback, children: null };
+        const merged = Object.assign(fallback);
+        obj.children = <closure_11 ref={ref} />;
+        return jsx(RiveErrorBoundary.RiveErrorBoundary, { fallback: fallback.fallback, children: null });
+      },
+);

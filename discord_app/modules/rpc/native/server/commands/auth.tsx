@@ -1,13 +1,13 @@
 // discord_app/modules/rpc/native/server/commands/auth.tsx
 import ComponentDispatchUtils from "../../../../../utils/ComponentDispatchUtils.tsx";
-import ApplicationFlagUtils from "../../../../applications/utils/ApplicationFlagUtils.tsx";
+import EmbeddedSurfaceUtils from "../../../../applications/utils/EmbeddedSurfaceUtils.tsx";
 import RPCErrorDefault from "../../../RPCError.tsx";
 import AuthCommandsFactoryDefault from "../../../server/commands/AuthCommandsFactory.tsx";
 import ApplicationStore from "../../../../applications/ApplicationStore.tsx";
 
 require = fn;
-const Constants = fn(1074);
-({ ComponentActions: closure_4, ApplicationFlags: hasOwnProperty, RPCErrors: metroRequire } = Constants);
+const Constants = fn(1085);
+({ ComponentActions: closure_4, RPCErrors: hasOwnProperty } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/native/server/commands/auth.tsx");
 
@@ -90,12 +90,12 @@ export default AuthCommandsFactoryDefault(
         if (null != location.location) {
           closure_0(location.location);
         } else {
-          const obj = { errorCode: codeChallenge.OAUTH2_ERROR };
+          const obj = { errorCode: redirectUri.OAUTH2_ERROR };
           const tmp8 = new RPCErrorDefault(obj, "User cancelled authorization");
           closure_1(tmp8);
         }
       };
-      obj2.isEmbeddedFlow = ApplicationFlagUtils.hasApplicationFlag(application, constants.EMBEDDED);
+      obj2.isEmbeddedFlow = EmbeddedSurfaceUtils.isEmbeddedApplication(application);
       obj2.disclosures = disclosures;
       obj2.integrationType = integrationType;
       const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;

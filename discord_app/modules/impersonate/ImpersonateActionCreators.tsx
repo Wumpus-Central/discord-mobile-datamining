@@ -35,7 +35,7 @@ function updateImpersonating(guildId, type) {
       if (!PermissionStore.can(constants.VIEW_CHANNEL, tmp21)) {
         const defaultChannel = GuildChannelStore.getDefaultChannel(guildId);
         if (null != defaultChannel) {
-          router_utils.transitionTo(closure_1_12.CHANNEL(guildId, defaultChannel.id));
+          router_utils.transitionTo(__initData.CHANNEL(guildId, defaultChannel.id));
           const tmp7Result = router_utils;
         }
       }
@@ -43,9 +43,9 @@ function updateImpersonating(guildId, type) {
   }
   tmp2 = null != data && data.type === type.type;
 }
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ Permissions: closure_11, Routes: closure_12, AnalyticEvents: map1 } = Constants);
-const isStaticChannelRoute = fn(2051).isStaticChannelRoute;
+const isStaticChannelRoute = fn(2058).isStaticChannelRoute;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/impersonate/ImpersonateActionCreators.tsx");
 
@@ -61,7 +61,7 @@ export const startImpersonating = function startImpersonating(guildId, data) {
     if (!PermissionStore.can(constants.VIEW_CHANNEL, tmp7)) {
       const defaultChannel = GuildChannelStore.getDefaultChannel(guildId);
       if (null != defaultChannel) {
-        router_utils.transitionTo(closure_1_12.CHANNEL(guildId, defaultChannel.id));
+        router_utils.transitionTo(__initData.CHANNEL(guildId, defaultChannel.id));
         const tmp2Result = router_utils;
       }
     }

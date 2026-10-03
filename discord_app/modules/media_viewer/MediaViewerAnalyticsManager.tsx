@@ -2,7 +2,7 @@
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AnalyticEvents: c3, AnalyticsSections: closure_4 } = Constants);
 let obj = {
   VIEWER_SWIPE: "number_viewer_swipes",
@@ -21,13 +21,13 @@ let obj = {
   CONTEXT_MENU_OPENED: "number_context_menu_opened",
 };
 let obj2 = {
-  guildId: "disabled",
-  channelId: "isArray",
-  channelType: "isArray",
+  guildId: "done",
+  channelId: "toCharArray$esjava$1",
+  channelType: "toCharArray$esjava$1",
   numMediaItems: "Array",
-  hasMediaOptions: "channel",
-  source: true,
-  incrementableActions: true,
+  hasMediaOptions: "ix",
+  source: 15177101197783992000000000000000000000000000000000000000000000000000000000000000000,
+  incrementableActions: -1133368975806797500000000,
 };
 const values = Object.values(obj);
 obj2.incrementableActions = Object.fromEntries(
@@ -36,8 +36,8 @@ obj2.incrementableActions = Object.fromEntries(
     return items;
   }),
 );
-const module_560 = fn(560);
-let closure_6 = module_560.create(() => obj2);
+const module_570 = fn(570);
+let closure_6 = module_570.create(() => obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/media_viewer/MediaViewerAnalyticsManager.tsx");
 
@@ -80,7 +80,7 @@ export const MediaViewerAnalytics = {
     closure_6.setState(obj3);
   },
   markSessionCompleted() {
-    const state = closure_6.getState();
+    state = closure_6.getState();
     obj2 = {
       source: state.source,
       guild_id: state.guildId,
@@ -107,25 +107,25 @@ export const MediaViewerAnalytics = {
   },
   trackMediaViewerImageSaved(arg0) {
     ({ url, success } = arg0);
-    const state = closure_6.getState();
+    state = closure_6.getState();
     AnalyticsUtilsDefault.track(constants.MEDIA_VIEWER_IMAGE_SAVED, { url, success, channel_id: state.channelId });
   },
   trackMediaViewerImageCopied(arg0) {
     ({ url, success } = arg0);
-    const state = closure_6.getState();
+    state = closure_6.getState();
     AnalyticsUtilsDefault.track(constants.MEDIA_VIEWER_IMAGE_COPIED, { url, success, channel_id: state.channelId });
   },
   trackMediaViewerLinkCopied(arg0) {
     ({ href, success } = arg0);
-    const state = closure_6.getState();
+    state = closure_6.getState();
     AnalyticsUtilsDefault.track(constants.MEDIA_VIEWER_LINK_COPIED, { href, success, channel_id: state.channelId });
   },
   trackMediaViewerLinkOpened(href) {
-    const state = closure_6.getState();
+    state = closure_6.getState();
     AnalyticsUtilsDefault.track(constants.MEDIA_VIEWER_LINK_OPENED, { href: href.href, channel_id: state.channelId });
   },
   trackMediaViewerDownloadButtonTapped() {
-    const state = closure_6.getState();
+    state = closure_6.getState();
     AnalyticsUtilsDefault.track(constants.MEDIA_VIEWER_DOWNLOAD_BUTTON_TAPPED, {
       guild_id: state.guildId,
       channel_id: state.channelId,
@@ -133,7 +133,7 @@ export const MediaViewerAnalytics = {
     });
   },
   trackMediaViewerShareButtonTapped() {
-    const state = closure_6.getState();
+    state = closure_6.getState();
     AnalyticsUtilsDefault.track(constants.MEDIA_VIEWER_SHARE_BUTTON_TAPPED, {
       guild_id: state.guildId,
       channel_id: state.channelId,

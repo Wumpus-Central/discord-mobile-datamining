@@ -4,7 +4,7 @@ import discord_common_shallowEqual from "../../../discord_common/js/packages/sha
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import ReanimatedRexport2 from "../../modules/reanimated/ReanimatedRexport.tsx";
 import NativeViewDefault from "../../modules/core/native/NativeView.tsx";
-import BottomSheetModal from "../../../_runtime/06231_BottomSheetModal.js";
+import BottomSheetModal from "../../../_runtime/06112_BottomSheetModal.js";
 import refObjectUnionAsPropDefault from "../../modules/typescript/refObjectUnionAsProp.tsx";
 import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
@@ -18,45 +18,6 @@ function renderDefaultEmpty() {
   return null;
 }
 function defaultRecyclerKey() {}
-function FastListScrollWorklet(scrollViewRef) {
-  scrollViewRef = scrollViewRef.scrollViewRef;
-  const scrollPosValue = scrollViewRef.scrollPosValue;
-  const horizontal = scrollViewRef.horizontal;
-  const onScrollWorklet = scrollViewRef.onScrollWorklet;
-  const mutable = scrollViewRef(horizontal[10]).makeMutable(false);
-  obj = scrollViewRef(horizontal[10]);
-  const fn = function l(contentOffset) {
-    contentOffset = contentOffset.contentOffset;
-    const tmp2 = horizontal ? contentOffset.x : contentOffset.y;
-    const contentSize = contentOffset.contentSize;
-    const tmp3 = horizontal ? contentSize.width : contentSize.height;
-    if (0 !== tmp3) {
-      const result = mutable.set(true);
-      const _Math = Math;
-      const result1 = scrollPosValue.set(Math.min(tmp2, tmp3));
-      if (null != onScrollWorklet) {
-        const layoutMeasurement = contentOffset.layoutMeasurement;
-        tmp10(tmp2, tmp3, horizontal ? layoutMeasurement.width : layoutMeasurement.height);
-      }
-    }
-  };
-  fn.__closure = { horizontal, workletMounted: mutable, scrollPosValue, onScrollWorklet };
-  fn.__workletHash = 16225357996403;
-  fn.__initData = __initData2;
-  const event = scrollViewRef(horizontal[10]).useEvent(fn, ["onScroll"]);
-  const items = [event, scrollViewRef];
-  const effect = noop.useEffect(() => {
-    const tmp = closure_1_9(scrollViewRef.current);
-    scrollViewRef = tmp;
-    if (null != tmp) {
-      event.workletEventHandler.registerForEvents(tmp);
-      return () => {
-        event.workletEventHandler.unregisterFromEvents(closure_0);
-      };
-    }
-  }, items);
-  return null;
-}
 let closure_3 = [
   "manualRef",
   "onScroll",
@@ -1146,121 +1107,293 @@ prototype2["getSize"] = function getSize() {
 prototype2["isDirty"] = function isDirty() {
   return this.dirty;
 };
+let ReactCompilerGating = fn(558);
+ReactCompilerGating.isReactCompilerEnabled();
 const __initData = {
   code: "function FastListTsx1(){const{scrollPosValue,interpolate,inputRange,outputRange,horizontal}=this.__closure;const interpolatedValue=scrollPosValue!=null?interpolate(scrollPosValue.get(),inputRange,outputRange):null;return{transform:interpolatedValue!=null?[horizontal?{translateX:interpolatedValue}:{translateY:interpolatedValue}]:undefined};}",
 };
-let closure_20 = noop.memo(function FastListStickySectionRendererComponent(children) {
-  ({ layoutStart, layoutSize, horizontal } = children);
-  ({ nextSectionLayoutPosition, scrollPosValue } = children);
-  ({ fastListInstance, section, debug, recyclerKey } = children);
-  let items = [-1, 0];
-  const items1 = [0, 0];
-  items.push(layoutStart);
-  items1.push(0);
-  if (nextSectionLayoutPosition == null) {
-    nextSectionLayoutPosition = 0;
-  }
-  const diff = nextSectionLayoutPosition - layoutSize;
-  if (diff >= layoutStart) {
-    let num2 = 0;
-    if (obj.isAndroid()) {
-      num2 = -1;
-    }
-    items.push(diff, diff + 1);
-    items1.push(diff - layoutStart + num2, diff - layoutStart + num2);
-    obj = horizontal(items[9]);
-  } else {
-    items.push(layoutStart + 1);
-    items1.push(1);
-  }
-  class I {
-    constructor() {
-      obj = scrollPosValue;
-      interpolateResult = null;
-      if (null != scrollPosValue) {
-        tmp2 = closure_0;
-        tmp3 = closure_2;
-        obj2 = closure_0(closure_2[10]);
-        tmp4 = closure_2;
-        tmp5 = closure_3;
-        interpolateResult = obj2.interpolate(obj.get(), closure_2, closure_3);
-      }
-      if (null == interpolateResult) {
-        obj1 = { transform: null };
-        obj1.transform = undefined;
-        return obj1;
-      } else {
-        tmp6 = horizontal;
-        if (horizontal) {
-          obj6 = { translateX: null };
-          obj6.translateX = interpolateResult;
-          obj7 = obj6;
-        } else {
-          obj7 = { translateY: null };
-          obj7.translateY = interpolateResult;
+const __initData2 = {
+  code: "function FastListTsx2(){const{scrollPosValue,interpolate,inputRange,outputRange,horizontal}=this.__closure;const interpolatedValue=scrollPosValue!=null?interpolate(scrollPosValue.get(),inputRange,outputRange):null;return{transform:interpolatedValue!=null?[horizontal?{translateX:interpolatedValue}:{translateY:interpolatedValue}]:undefined};}",
+};
+ReactCompilerGating = fn(558);
+let closure_21 = noop.memo(
+  ReactCompilerGating.isReactCompilerEnabled()
+    ? (arg0) => {
+        const cResult = horizontal(items[8]).c(24);
+        ({ layoutStart, layoutSize, horizontal } = arg0);
+        ({ nextSectionLayoutPosition, scrollPosValue } = arg0);
+        ({ fastListInstance, section, children, debug, recyclerKey } = arg0);
+        items = [-1, 0];
+        const items1 = [0, 0];
+        items.push(layoutStart);
+        items1.push(0);
+        if (nextSectionLayoutPosition == null) {
+          nextSectionLayoutPosition = 0;
         }
-        items = [];
-        items[0] = obj7;
-        tmp7 = items;
+        const diff = nextSectionLayoutPosition - layoutSize;
+        if (diff >= layoutStart) {
+          let num2 = 0;
+          if (tmpResult.isAndroid()) {
+            num2 = -1;
+          }
+          items.push(diff, diff + 1);
+          items1.push(diff - layoutStart + num2, diff - layoutStart + num2);
+          tmpResult = horizontal(tmp2[11]);
+        } else {
+          items.push(layoutStart + 1);
+          items1.push(1);
+        }
+        obj = horizontal(items[8]);
+        const fn = function k() {
+          let interpolateResult = null;
+          if (null != scrollPosValue) {
+            interpolateResult = ReanimatedRexport2.interpolate(scrollPosValue.get(), items, items1);
+          }
+          if (null == interpolateResult) {
+            const obj3 = { transform: undefined };
+            return obj3;
+          } else {
+            if (horizontal) {
+              const obj4 = { translateX: interpolateResult };
+              let obj5 = obj4;
+            } else {
+              obj5 = { translateY: interpolateResult };
+            }
+            items = [obj5];
+          }
+        };
+        const tmpResult2 = horizontal(items[12]);
+        fn.__closure = {
+          scrollPosValue,
+          interpolate: horizontal(items[12]).interpolate,
+          inputRange: items,
+          outputRange: items1,
+          horizontal,
+        };
+        fn.__workletHash = 699810682881;
+        fn.__initData = __initData;
+        const animatedStyle = tmpResult2.useAnimatedStyle(fn);
+        if (cResult[0] === children) {
+          if (cResult[1] === fastListInstance) {
+            if (cResult[2] === layoutStart) {
+              if (cResult[3] === scrollPosValue) {
+                if (cResult[4] === section) {
+                  let tmp12 = cResult[5];
+                }
+                if (null != tmp12) {
+                  if ("props" in tmp12) {
+                    const style = tmp12.props.style;
+                  }
+                }
+                let tmp14;
+                if (!horizontal) {
+                  tmp14 = layoutSize;
+                }
+                let tmp15;
+                if (horizontal) {
+                  tmp15 = layoutSize;
+                }
+                if (cResult[6] === tmp14) {
+                  if (cResult[7] === tmp15) {
+                    let tmp16 = cResult[8];
+                  }
+                  if (cResult[9] === animatedStyle) {
+                    if (cResult[10] === style) {
+                      if (cResult[11] === tmp16) {
+                        let tmp17 = cResult[12];
+                      }
+                      if (cResult[13] !== tmp12) {
+                        let cloneElementResult;
+                        if (null != tmp12) {
+                          let obj3 = { style: { flex: 1 } };
+                          cloneElementResult = noop.cloneElement(tmp12, obj3);
+                        }
+                        cResult[13] = tmp12;
+                        cResult[14] = cloneElementResult;
+                        let tmp18 = cloneElementResult;
+                      } else {
+                        tmp18 = cResult[14];
+                      }
+                      if (cResult[15] === debug) {
+                        if (cResult[16] === layoutSize) {
+                          if (cResult[17] === recyclerKey) {
+                            if (cResult[18] === section) {
+                              let flag = cResult[19];
+                            }
+                            if (cResult[20] === tmp17) {
+                              if (cResult[21] === tmp18) {
+                                if (cResult[22] === flag) {
+                                  let tmp21 = cResult[23];
+                                }
+                                return tmp21;
+                              }
+                            }
+                            let obj4 = { style: tmp17, collapsable: false, children: null };
+                            const items2 = [tmp18, flag];
+                            obj4.children = items2;
+                            const tmp24 = closure_10(scrollPosValue(tmp2[13]), obj4);
+                            cResult[20] = tmp17;
+                            cResult[21] = tmp18;
+                            cResult[22] = flag;
+                            cResult[23] = tmp24;
+                            tmp21 = tmp24;
+                          }
+                        }
+                      }
+                      cResult[15] = debug;
+                      cResult[16] = layoutSize;
+                      cResult[17] = recyclerKey;
+                      cResult[18] = section;
+                      cResult[19] = false;
+                      flag = false;
+                    }
+                  }
+                  const items3 = [style, tmp16, animatedStyle];
+                  cResult[9] = animatedStyle;
+                  cResult[10] = style;
+                  cResult[11] = tmp16;
+                  cResult[12] = items3;
+                  tmp17 = items3;
+                }
+                const size = { zIndex: 10, position: "relative", height: tmp14, width: tmp15 };
+                cResult[6] = tmp14;
+                cResult[7] = tmp15;
+                cResult[8] = size;
+                tmp16 = size;
+              }
+            }
+          }
+        }
+        const Children = noop.Children;
+        const onlyResult = Children.only(children(section, fastListInstance, scrollPosValue, layoutStart));
+        cResult[0] = children;
+        cResult[1] = fastListInstance;
+        cResult[2] = layoutStart;
+        cResult[3] = scrollPosValue;
+        cResult[4] = section;
+        cResult[5] = onlyResult;
+        tmp12 = onlyResult;
+        let obj2 = {
+          scrollPosValue,
+          interpolate: horizontal(items[12]).interpolate,
+          inputRange: items,
+          outputRange: items1,
+          horizontal,
+        };
       }
-      return;
-    }
-  }
-  let obj2 = horizontal(items[10]);
-  I.__closure = {
-    scrollPosValue,
-    interpolate: horizontal(items[10]).interpolate,
-    inputRange: items,
-    outputRange: items1,
-    horizontal,
-  };
-  I.__workletHash = 699810682881;
-  I.__initData = __initData;
-  const Children = noop.Children;
-  const animatedStyle = obj2.useAnimatedStyle(I);
-  const onlyResult = Children.only(children.children(section, fastListInstance, scrollPosValue, layoutStart));
-  let style;
-  let obj3 = {
-    scrollPosValue,
-    interpolate: horizontal(items[10]).interpolate,
-    inputRange: items,
-    outputRange: items1,
-    horizontal,
-  };
-  if (null != onlyResult) {
-    if ("props" in onlyResult) {
-      style = onlyResult.props.style;
-    }
-  }
-  const items2 = [style, ,];
-  let tmp15;
-  if (!horizontal) {
-    tmp15 = layoutSize;
-  }
-  const size = { zIndex: 10, position: "relative", height: tmp15, width: null };
-  let tmp16;
-  if (horizontal) {
-    tmp16 = layoutSize;
-  }
-  let obj5 = { style: items2, collapsable: false, children: null };
-  size.width = tmp16;
-  items2[1] = size;
-  items2[2] = animatedStyle;
-  let cloneElementResult;
-  if (null != onlyResult) {
-    const obj6 = { style: { flex: 1 } };
-    cloneElementResult = noop.cloneElement(onlyResult, obj6);
-  }
-  const items3 = [cloneElementResult, false];
-  obj5.children = items3;
-  return closure_10(scrollPosValue(items[11]), obj5);
-});
-let closure_21 = noop.memo(function _FastListSectionRenderer(disableWrapper) {
+    : (children) => {
+        ({ layoutStart, layoutSize, horizontal } = children);
+        ({ nextSectionLayoutPosition, scrollPosValue } = children);
+        ({ fastListInstance, section, debug, recyclerKey } = children);
+        let items = [-1, 0];
+        const items1 = [0, 0];
+        items.push(layoutStart);
+        items1.push(0);
+        if (nextSectionLayoutPosition == null) {
+          nextSectionLayoutPosition = 0;
+        }
+        const diff = nextSectionLayoutPosition - layoutSize;
+        if (diff >= layoutStart) {
+          let num2 = 0;
+          if (obj.isAndroid()) {
+            num2 = -1;
+          }
+          items.push(diff, diff + 1);
+          items1.push(diff - layoutStart + num2, diff - layoutStart + num2);
+          obj = horizontal(items[11]);
+        } else {
+          items.push(layoutStart + 1);
+          items1.push(1);
+        }
+        class E {
+          constructor() {
+            obj = scrollPosValue;
+            interpolateResult = null;
+            if (null != scrollPosValue) {
+              tmp2 = closure_0;
+              tmp3 = closure_2;
+              obj2 = closure_0(closure_2[12]);
+              tmp4 = closure_2;
+              tmp5 = closure_3;
+              interpolateResult = obj2.interpolate(obj.get(), closure_2, closure_3);
+            }
+            if (null == interpolateResult) {
+              obj1 = { transform: null };
+              obj1.transform = undefined;
+              return obj1;
+            } else {
+              tmp6 = horizontal;
+              if (horizontal) {
+                obj6 = { translateX: null };
+                obj6.translateX = interpolateResult;
+                obj7 = obj6;
+              } else {
+                obj7 = { translateY: null };
+                obj7.translateY = interpolateResult;
+              }
+              items = [];
+              items[0] = obj7;
+              tmp7 = items;
+            }
+            return;
+          }
+        }
+        let obj2 = horizontal(items[12]);
+        E.__closure = {
+          scrollPosValue,
+          interpolate: horizontal(items[12]).interpolate,
+          inputRange: items,
+          outputRange: items1,
+          horizontal,
+        };
+        E.__workletHash = 338400247426;
+        E.__initData = __initData2;
+        const Children = noop.Children;
+        const animatedStyle = obj2.useAnimatedStyle(E);
+        const onlyResult = Children.only(children.children(section, fastListInstance, scrollPosValue, layoutStart));
+        let style;
+        let obj3 = {
+          scrollPosValue,
+          interpolate: horizontal(items[12]).interpolate,
+          inputRange: items,
+          outputRange: items1,
+          horizontal,
+        };
+        if (null != onlyResult) {
+          if ("props" in onlyResult) {
+            style = onlyResult.props.style;
+          }
+        }
+        const items2 = [style, ,];
+        let tmp15;
+        if (!horizontal) {
+          tmp15 = layoutSize;
+        }
+        const size = { zIndex: 10, position: "relative", height: tmp15, width: null };
+        let tmp16;
+        if (horizontal) {
+          tmp16 = layoutSize;
+        }
+        let obj5 = { style: items2, collapsable: false, children: null };
+        size.width = tmp16;
+        items2[1] = size;
+        items2[2] = animatedStyle;
+        let cloneElementResult;
+        if (null != onlyResult) {
+          const obj6 = { style: { flex: 1 } };
+          cloneElementResult = noop.cloneElement(onlyResult, obj6);
+        }
+        const items3 = [cloneElementResult, false];
+        obj5.children = items3;
+        return closure_10(scrollPosValue(items[13]), obj5);
+      },
+);
+let closure_22 = noop.memo(function _FastListSectionRenderer(disableWrapper) {
   ({ layoutSize, children, fastListInstance, section, recyclerKey, horizontal } = disableWrapper);
   if (disableWrapper.disableWrapper) {
     if (!disableWrapper.debug) {
       obj = { children: children(section, fastListInstance) };
-      return closure_1_11(closure_1_12, obj);
+      return closure_1_11(__initData, obj);
     }
   }
   if (horizontal) {
@@ -1273,14 +1406,14 @@ let closure_21 = noop.memo(function _FastListSectionRenderer(disableWrapper) {
   fastListInstance = children(section, fastListInstance);
   section = [fastListInstance, false];
   obj4.children = section;
-  closure_1_10(NativeViewDefault, obj4);
+  v65535(NativeViewDefault, obj4);
 });
-let closure_22 = noop.memo(function _FastListSectionFooterRenderer(disableWrapper) {
+let closure_23 = noop.memo(function _FastListSectionFooterRenderer(disableWrapper) {
   ({ layoutSize, fastListInstance, children, section, recyclerKey, horizontal } = disableWrapper);
   if (disableWrapper.disableWrapper) {
     if (!disableWrapper.debug) {
       obj = { children: children(section, fastListInstance) };
-      return closure_1_11(closure_1_12, obj);
+      return closure_1_11(__initData, obj);
     }
   }
   if (horizontal) {
@@ -1293,9 +1426,9 @@ let closure_22 = noop.memo(function _FastListSectionFooterRenderer(disableWrappe
   children = children(section, fastListInstance);
   section = [children, false];
   obj4.children = section;
-  closure_1_10(NativeViewDefault, obj4);
+  v65535(NativeViewDefault, obj4);
 });
-let closure_23 = noop.memo(function _FastListItemRenderer(disableWrapper) {
+let closure_24 = noop.memo(function _FastListItemRenderer(disableWrapper) {
   ({ layoutSize, children, section, fastListInstance, item, recyclerKey, horizontal } = disableWrapper);
   if (disableWrapper.disableWrapper) {
     if (!disableWrapper.debug) {
@@ -1318,14 +1451,14 @@ let closure_23 = noop.memo(function _FastListItemRenderer(disableWrapper) {
   }
   const items = [childrenResult1, false];
   obj3.children = items;
-  childrenResult = closure_1_10(NativeViewDefault, obj3);
+  childrenResult = v65535(NativeViewDefault, obj3);
 });
-let closure_24 = noop.memo(function _FastListHeaderFooterRenderer(disableWrapper) {
+let closure_25 = noop.memo(function _FastListHeaderFooterRenderer(disableWrapper) {
   ({ layoutSize, children, fastListInstance, recyclerKey, horizontal } = disableWrapper);
   if (disableWrapper.disableWrapper) {
     if (!disableWrapper.debug) {
       obj = { children: children(fastListInstance) };
-      return closure_1_11(closure_1_12, obj);
+      return closure_1_11(__initData, obj);
     }
   }
   if (horizontal) {
@@ -1338,9 +1471,9 @@ let closure_24 = noop.memo(function _FastListHeaderFooterRenderer(disableWrapper
   children = children(fastListInstance);
   fastListInstance = [children, false];
   obj4.children = fastListInstance;
-  closure_1_10(NativeViewDefault, obj4);
+  v65535(NativeViewDefault, obj4);
 });
-let closure_25 = noop.memo(function _FastListSpacer(layoutSize) {
+let closure_26 = noop.memo(function _FastListSpacer(layoutSize) {
   layoutSize = layoutSize.layoutSize;
   if (layoutSize.horizontal) {
     obj = { width: layoutSize };
@@ -1350,8 +1483,8 @@ let closure_25 = noop.memo(function _FastListSpacer(layoutSize) {
   }
   return closure_1_11(NativeViewDefault, { collapsable: false, style });
 });
-let c26 = 1000;
-let c27 = 0.5;
+let c27 = 1000;
+let c28 = 0.5;
 class FastListScrollAnchor {
   constructor(arg0) {
     merged = Object.assign({ isCustomAnchor: false });
@@ -1439,7 +1572,7 @@ class FastList extends PureComponent {
     closure_0 = tmp1;
     tmp1.containerSize = 0;
     tmp1.scrollPos = 0;
-    obj2 = closure_0(closure_2[12]);
+    obj2 = closure_0(closure_2[14]);
     tmp1.scrollPosValue = obj2.createFakeSharedValue(0);
     manualRef = tmp1.props.manualRef;
     if (manualRef == null) {
@@ -2140,7 +2273,7 @@ prototype4["getViewabilityConfig"] = function getViewabilityConfig() {
     minimumViewTime = viewabilityConfig.minimumViewTime;
   }
   if (minimumViewTime == null) {
-    minimumViewTime = c26;
+    minimumViewTime = c27;
   }
   obj = { minimumViewTime, visibilityThreshold: null };
   let visibilityThreshold;
@@ -2148,7 +2281,7 @@ prototype4["getViewabilityConfig"] = function getViewabilityConfig() {
     visibilityThreshold = viewabilityConfig.visibilityThreshold;
   }
   if (visibilityThreshold == null) {
-    visibilityThreshold = c27;
+    visibilityThreshold = c28;
   }
   obj.visibilityThreshold = visibilityThreshold;
   return obj;
@@ -2165,7 +2298,7 @@ prototype4["queueViewabilityChange"] = function queueViewabilityChange() {
 prototype4["reset"] = function reset() {
   const self = this;
   let num = this.props.chunkBase;
-  const state = this.state;
+  state = this.state;
   ({ fastListComputer, items } = state);
   if (!state.isFirstLayout) {
     ({ setState, getInitialState } = self);
@@ -2290,7 +2423,7 @@ prototype4["clampInitialScrollPosition"] = function clampInitialScrollPosition()
 prototype4["computeBlocks"] = function computeBlocks() {
   const self = this;
   ({ batchesToRender, chunkBase } = this.props);
-  const state = this.state;
+  state = this.state;
   const fastListComputer = state.fastListComputer;
   ({ isFirstLayout, items } = state);
   if (chunkBase == null) {
@@ -2373,7 +2506,7 @@ prototype4["renderItems"] = function renderItems() {
       if (obj.SPACER === type) {
         let obj2 = { horizontal: flag, layoutSize };
         let _HermesInternal7 = HermesInternal;
-        let arr = items2.push(closure_11(closure_25, obj2, "" + key));
+        let arr = items2.push(closure_11(closure_26, obj2, "" + key));
       } else if (tmp45.HEADER === type) {
         let obj3 = {
           recyclerKey,
@@ -2390,7 +2523,7 @@ prototype4["renderItems"] = function renderItems() {
         }
         obj3.children = fn6;
         let _HermesInternal6 = HermesInternal;
-        let arr2 = items2.push(closure_11(closure_24, obj3, "" + key));
+        let arr2 = items2.push(closure_11(closure_25, obj3, "" + key));
       } else if (tmp45.FOOTER === type) {
         let obj4 = {
           recyclerKey,
@@ -2407,7 +2540,7 @@ prototype4["renderItems"] = function renderItems() {
         }
         obj4.children = fn5;
         let _HermesInternal5 = HermesInternal;
-        let arr3 = items2.push(closure_11(closure_24, obj4, "" + key));
+        let arr3 = items2.push(closure_11(closure_25, obj4, "" + key));
       } else if (tmp45.SECTION === type) {
         let arr11 = items1.shift();
         if ("default" !== str) {
@@ -2428,7 +2561,7 @@ prototype4["renderItems"] = function renderItems() {
           }
           obj5.children = fn4;
           let _HermesInternal4 = HermesInternal;
-          let arr12 = items2.push(closure_11(closure_21, obj5, "" + key));
+          let arr12 = items2.push(closure_11(closure_22, obj5, "" + key));
         } else {
           let obj6 = {
             recyclerKey,
@@ -2449,7 +2582,7 @@ prototype4["renderItems"] = function renderItems() {
           }
           obj6.children = fn3;
           let _HermesInternal3 = HermesInternal;
-          let arr13 = items2.push(closure_11(closure_20, obj6, "" + key));
+          let arr13 = items2.push(closure_11(closure_21, obj6, "" + key));
         }
       } else if (tmp45.ITEM === type) {
         obj = {
@@ -2469,7 +2602,7 @@ prototype4["renderItems"] = function renderItems() {
         }
         obj.children = fn2;
         let _HermesInternal2 = HermesInternal;
-        let arr14 = items2.push(closure_11(closure_23, obj, "" + key));
+        let arr14 = items2.push(closure_11(closure_24, obj, "" + key));
       } else if (tmp45.SECTION_FOOTER === type) {
         let obj7 = {
           recyclerKey,
@@ -2487,7 +2620,7 @@ prototype4["renderItems"] = function renderItems() {
         }
         obj7.children = fn;
         let _HermesInternal = HermesInternal;
-        let arr15 = items2.push(closure_11(closure_22, obj7, "" + key));
+        let arr15 = items2.push(closure_11(closure_23, obj7, "" + key));
       }
     }
     continue;
@@ -2554,7 +2687,7 @@ prototype4["render"] = function render() {
   if (props.inActionSheet) {
     let BottomSheetScrollView = BottomSheetModal.BottomSheetScrollView;
   } else {
-    BottomSheetScrollView = React6;
+    BottomSheetScrollView = closure_1_8;
   }
   const obj3 = {};
   const merged = Object.assign(_objectWithoutProperties(props, closure_3));
@@ -2583,13 +2716,13 @@ prototype4["render"] = function render() {
   }
   obj5.horizontal = flag;
   obj5.onScrollWorklet = props.onScrollWorklet;
-  children[1] = closure_1_11(FastListScrollWorklet, obj5);
+  children[1] = closure_1_11(closure_32, obj5);
   let renderAccessoryResult = null;
   if (null != renderAccessory) {
     renderAccessoryResult = renderAccessory(self);
   }
   children[2] = renderAccessoryResult;
-  return closure_1_10(closure_1_12, { children });
+  return v65535(__initData, { children });
 };
 FastList.defaultProps = {
   batchesToRender: 12,
@@ -2598,12 +2731,137 @@ FastList.defaultProps = {
   disableRecyclingOnFullCompute: false,
   stickyHeaderFooter: false,
 };
-const __initData2 = {
-  code: "function FastListTsx2(event){const{horizontal,workletMounted,scrollPosValue,onScrollWorklet}=this.__closure;const scrollPosition=!horizontal?event.contentOffset.y:event.contentOffset.x;const contentSize=!horizontal?event.contentSize.height:event.contentSize.width;if(contentSize===0&&!workletMounted.get())return;workletMounted.set(true);scrollPosValue.set(Math.min(scrollPosition,contentSize));if(onScrollWorklet!=null){const layoutSize=!horizontal?event.layoutMeasurement.height:event.layoutMeasurement.width;onScrollWorklet(scrollPosition,contentSize,layoutSize);}}",
+const __initData3 = {
+  code: "function FastListTsx3(event){const{horizontal,workletMounted,scrollPosValue,onScrollWorklet}=this.__closure;const scrollPosition=!horizontal?event.contentOffset.y:event.contentOffset.x;const contentSize=!horizontal?event.contentSize.height:event.contentSize.width;if(contentSize===0&&!workletMounted.get()){return;}workletMounted.set(true);scrollPosValue.set(Math.min(scrollPosition,contentSize));if(onScrollWorklet!=null){const layoutSize=!horizontal?event.layoutMeasurement.height:event.layoutMeasurement.width;onScrollWorklet(scrollPosition,contentSize,layoutSize);}}",
 };
+const __initData4 = {
+  code: "function FastListTsx4(event){const{horizontal,workletMounted,scrollPosValue,onScrollWorklet}=this.__closure;const scrollPosition=!horizontal?event.contentOffset.y:event.contentOffset.x;const contentSize=!horizontal?event.contentSize.height:event.contentSize.width;if(contentSize===0&&!workletMounted.get())return;workletMounted.set(true);scrollPosValue.set(Math.min(scrollPosition,contentSize));if(onScrollWorklet!=null){const layoutSize=!horizontal?event.layoutMeasurement.height:event.layoutMeasurement.width;onScrollWorklet(scrollPosition,contentSize,layoutSize);}}",
+};
+ReactCompilerGating = fn(558);
+let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (scrollViewRef) => {
+      const cResult = scrollViewRef(horizontal[8]).c(10);
+      scrollViewRef = scrollViewRef.scrollViewRef;
+      const scrollPosValue = scrollViewRef.scrollPosValue;
+      horizontal = scrollViewRef.horizontal;
+      const onScrollWorklet = scrollViewRef.onScrollWorklet;
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const mutable = tmp(tmp2[12]).makeMutable(false);
+        cResult[0] = mutable;
+        let workletMounted = mutable;
+        const tmpResult = tmp(tmp2[12]);
+      } else {
+        workletMounted = cResult[0];
+      }
+      if (cResult[1] === horizontal) {
+        if (cResult[2] === onScrollWorklet) {
+          if (cResult[3] === scrollPosValue) {
+            let tmp6 = cResult[4];
+          }
+          const _Symbol = Symbol;
+          if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
+            const items = ["onScroll"];
+            cResult[5] = items;
+            let tmp7 = items;
+          } else {
+            tmp7 = cResult[5];
+          }
+          const event = tmp(tmp2[12]).useEvent(tmp6, tmp7);
+          if (cResult[6] === event) {
+            if (cResult[7] === scrollViewRef) {
+              let tmp9 = cResult[8];
+              let tmp10 = cResult[9];
+            }
+            const effect = noop.useEffect(tmp9, tmp10);
+            return null;
+          }
+          const fn2 = function v() {
+            const tmp = closure_1_9(scrollViewRef.current);
+            scrollViewRef = tmp;
+            if (null != tmp) {
+              event.workletEventHandler.registerForEvents(tmp);
+              return () => {
+                event.workletEventHandler.unregisterFromEvents(closure_0);
+              };
+            }
+          };
+          const items1 = [event, scrollViewRef];
+          cResult[6] = event;
+          cResult[7] = scrollViewRef;
+          cResult[8] = fn2;
+          cResult[9] = items1;
+          tmp10 = items1;
+          tmp9 = fn2;
+          const tmpResult2 = tmp(tmp2[12]);
+        }
+      }
+      const fn = function y(contentOffset) {
+        contentOffset = contentOffset.contentOffset;
+        const tmp2 = horizontal ? contentOffset.x : contentOffset.y;
+        const contentSize = contentOffset.contentSize;
+        const tmp3 = horizontal ? contentSize.width : contentSize.height;
+        if (0 !== tmp3) {
+          const result = first.set(true);
+          const _Math = Math;
+          const result1 = scrollPosValue.set(Math.min(tmp2, tmp3));
+          if (null != onScrollWorklet) {
+            const layoutMeasurement = contentOffset.layoutMeasurement;
+            tmp10(tmp2, tmp3, horizontal ? layoutMeasurement.width : layoutMeasurement.height);
+          }
+        }
+      };
+      fn.__closure = { horizontal, workletMounted, scrollPosValue, onScrollWorklet };
+      fn.__workletHash = 9004791510548;
+      fn.__initData = __initData3;
+      cResult[1] = horizontal;
+      cResult[2] = onScrollWorklet;
+      cResult[3] = scrollPosValue;
+      cResult[4] = fn;
+      tmp6 = fn;
+      obj = scrollViewRef(horizontal[8]);
+    }
+  : (scrollViewRef) => {
+      scrollViewRef = scrollViewRef.scrollViewRef;
+      const scrollPosValue = scrollViewRef.scrollPosValue;
+      const horizontal = scrollViewRef.horizontal;
+      const onScrollWorklet = scrollViewRef.onScrollWorklet;
+      const mutable = scrollViewRef(horizontal[12]).makeMutable(false);
+      obj = scrollViewRef(horizontal[12]);
+      const fn = function l(contentOffset) {
+        contentOffset = contentOffset.contentOffset;
+        const tmp2 = horizontal ? contentOffset.x : contentOffset.y;
+        const contentSize = contentOffset.contentSize;
+        const tmp3 = horizontal ? contentSize.width : contentSize.height;
+        if (0 !== tmp3) {
+          const result = mutable.set(true);
+          const _Math = Math;
+          const result1 = scrollPosValue.set(Math.min(tmp2, tmp3));
+          if (null != onScrollWorklet) {
+            const layoutMeasurement = contentOffset.layoutMeasurement;
+            tmp10(tmp2, tmp3, horizontal ? layoutMeasurement.width : layoutMeasurement.height);
+          }
+        }
+      };
+      fn.__closure = { horizontal, workletMounted: mutable, scrollPosValue, onScrollWorklet };
+      fn.__workletHash = 891241611509;
+      fn.__initData = __initData4;
+      const event = scrollViewRef(horizontal[12]).useEvent(fn, ["onScroll"]);
+      const items = [event, scrollViewRef];
+      const effect = noop.useEffect(() => {
+        const tmp = closure_1_9(scrollViewRef.current);
+        scrollViewRef = tmp;
+        if (null != tmp) {
+          event.workletEventHandler.registerForEvents(tmp);
+          return () => {
+            event.workletEventHandler.unregisterFromEvents(closure_0);
+          };
+        }
+      }, items);
+      return null;
+    };
 const animatedComponent = ReanimatedRexport.createAnimatedComponent(FastList);
 let size = fn(2);
-let result = size.fileFinishedImporting("lib/native/FastList.tsx");
+let result1 = size.fileFinishedImporting("lib/native/FastList.tsx");
 
 export default FastList;
 export const DEFAULT_BATCHES_TO_RENDER = 12;

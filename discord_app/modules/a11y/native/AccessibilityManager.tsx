@@ -12,8 +12,8 @@ import AccessibilityStore from "../AccessibilityStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ AccessibilityInfo: closure_4, Appearance: hasOwnProperty } = get_ActivityIndicator);
-const AnalyticEvents = fn(1074).AnalyticEvents;
-const SystemTheme = fn(1185).SystemTheme;
+const AnalyticEvents = fn(1085).AnalyticEvents;
+const SystemTheme = fn(1196).SystemTheme;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/a11y/native/AccessibilityManager.tsx");
 
@@ -59,7 +59,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -92,7 +92,7 @@ export default {
             closure_128_0 = value;
             const result = closure_129_0.updateScreenReaderEnabled(closure_128_0);
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp12) {
           c3 = tmp;

@@ -1,13 +1,13 @@
 // discord_app/modules/search/SearchUtils.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import _modDef12 from "../../../_runtime/metro/00012__.js";
+import DispatcherDefault from "../../Dispatcher.tsx";
 import util from "../../intl/index.native.tsx";
-import _modDef4450 from "../../../_runtime/metro/04450__.js";
+import _modDef4461 from "../../../_runtime/metro/04461__.js";
 import UserUtilsDefault from "../../utils/UserUtils.tsx";
 import useChannelName from "../channel/useChannelName.tsx";
 import SearchTokens from "tokens/SearchTokens.tsx";
 import QueryTokenizerDefault from "../../lib/QueryTokenizer.tsx";
-import SearchActionCreatorsDefault from "SearchActionCreators.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import ConsentStore from "../../stores/ConsentStore.tsx";
@@ -21,8 +21,8 @@ import UserStore from "../../stores/UserStore.tsx";
 const SearchTokensDefault = SearchTokens;
 
 require = fn;
-const SearchTabs = fn(7477).SearchTabs;
-const Constants = fn(1074);
+const SearchTabs = fn(7513).SearchTabs;
+const Constants = fn(1085);
 ({ SearchTypes: closure_12, SearchTokenTypes } = Constants);
 ({
   SearchPopoutModes: closure_14,
@@ -79,7 +79,7 @@ export const getSearchHistoryStateId = function getSearchHistoryStateId(type) {
   }
   return channelId;
 };
-export const getSearchTabFetchId = function getSearchTabFetchId(searchContext, MESSAGES, searchResultsQuery) {
+export const getSearchTabFetchId = function getSearchTabFetchId(searchContext, tab, searchResultsQuery) {
   const type = searchContext.type;
   if (constants.GUILD === type) {
     let channelId = searchContext.guildId;
@@ -95,10 +95,10 @@ export const getSearchTabFetchId = function getSearchTabFetchId(searchContext, M
     }
     channelId = searchContext.channelId;
   }
-  return "" + channelId + "-" + MESSAGES + "-" + searchResultsQuery;
+  return "" + channelId + "-" + tab + "-" + searchResultsQuery;
 };
-export const getChannelActiveAgoTimestamp = function getChannelActiveAgoTimestamp(arg0) {
-  const diffResult = _modDef4450().diff(_modDef4450(arg0), "s");
+export const getChannelActiveAgoTimestamp = function getChannelActiveAgoTimestamp(cResult) {
+  const diffResult = _modDef4461().diff(_modDef4461(cResult), "s");
   if (diffResult > c21) {
     const _Math5 = Math;
     const rounded = Math.round(diffResult / tmp3);
@@ -136,7 +136,7 @@ export const getChannelActiveAgoTimestamp = function getChannelActiveAgoTimestam
     const intl = util.intl;
     return intl.string(util.t["5Ldpkc"]);
   }
-  const obj = _modDef4450();
+  const obj = _modDef4461();
 };
 export const getIndexingErrorText = function getIndexingErrorText(searchContext) {
   const type = searchContext.type;
@@ -604,7 +604,7 @@ export const refreshSearchTokens = function refreshSearchTokens() {
     return navigation2.addRule({ type });
   });
   const obj4 = _modDef12(crossDMSearchTokensConfig);
-  const result1 = SearchActionCreatorsDefault.markSearchTokensRefreshed();
+  DispatcherDefault.dispatch({ type: "SEARCH_TOKENS_REFRESHED" });
 };
 export const getChannelDisplayName = function getChannelDisplayName(isDM) {
   const channelName = useChannelName.computeChannelName(isDM, UserStore, RelationshipStore);
@@ -681,7 +681,7 @@ export const removeInvalidPrivateChannelSearchTokens = function removeInvalidPri
 export const getSearchAnalyticsIds = function getSearchAnalyticsIds(guildId, getSessionId) {
   if (obj.isGuildLikeSearchContext(guildId)) {
     if (ConsentStore.hasConsented(constants4.USAGE_STATISTICS)) {
-      const guild = GuildStore.getGuild(guildId.guildId);
+      guild = GuildStore.getGuild(guildId.guildId);
       let hasItem;
       if (guild != null) {
         const features = guild.features;

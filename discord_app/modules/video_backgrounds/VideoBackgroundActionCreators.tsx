@@ -19,7 +19,7 @@ let closure_7 = async function _fetchVideoFilterAssets() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -94,7 +94,7 @@ let closure_8 = async function _uploadVideoFilterAsset() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -175,7 +175,7 @@ let closure_9 = async function _deleteVideoFilterAsset(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -223,7 +223,7 @@ let closure_9 = async function _deleteVideoFilterAsset(arg0) {
           const obj9 = { type: "VIDEO_FILTER_ASSET_DELETE_SUCCESS", videoFilterAsset: closure_129_0 };
           closure_130_1(closure_130_2[5]).dispatch(obj9);
           c4 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp20) {
         c4 = tmp;
@@ -256,7 +256,7 @@ let closure_11 = async function _saveLastUsedBackgroundOption() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -308,7 +308,7 @@ let closure_11 = async function _saveLastUsedBackgroundOption() {
     }
   })();
 };
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/video_backgrounds/VideoBackgroundActionCreators.tsx");
 

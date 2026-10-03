@@ -11,8 +11,8 @@ function throttleStateFn(arg0) {
 function useThrottledFunction(callback4, arg1) {
   _require = callback4;
   dependencyMap = arg1;
-  let items = items4;
-  if (items4 === undefined) {
+  let items = cResult;
+  if (cResult === undefined) {
     items = [];
   }
   noop = sharedValue;
@@ -32,24 +32,24 @@ function useThrottledFunction(callback4, arg1) {
 const size = fn(2);
 const result = size.fileFinishedImporting("hooks/useThrottle.tsx");
 
-export const useThrottledState = (memo, throttleDurationForChannel) => {
+export const useThrottledState = (memo, arg1) => {
   let current = memo;
   _require = memo;
-  let items = items5;
-  if (items5 === undefined) {
+  let items = cResult;
+  if (cResult === undefined) {
     items = [];
   }
   let current2;
   let ref1;
   if (typeof useThrottledFunction === "function") {
     _require = tmp;
-    current2 = throttleDurationForChannel;
+    current2 = arg1;
     if (items === undefined) {
       items = [];
     }
     ref1 = arg3;
-    const ref = ref1.useRef(require("../../_runtime/metro/00012__.js").throttle(tmp, throttleDurationForChannel, arg3));
-    const items1 = [tmp, throttleDurationForChannel, arg3];
+    const ref = ref1.useRef(require("../../_runtime/metro/00012__.js").throttle(tmp, arg1, arg3));
+    const items1 = [tmp, arg1, arg3];
     HermesBuiltin.arraySpread(items, 3);
     const effect = ref1.useEffect(() => {
       ref.current = _mod12.throttle(closure_0, current2, ref1);
@@ -66,7 +66,7 @@ export const useThrottledState = (memo, throttleDurationForChannel) => {
     const effect1 = ref1.useEffect(() => {
       ref1.current = current2(closure_0);
     }, items2);
-    if (0 !== throttleDurationForChannel) {
+    if (0 !== arg1) {
       current = ref1.current;
     }
     return current;

@@ -1,12 +1,12 @@
 // discord_app/modules/quests/managers/QuestMobileEmbedVisibilityManager.native.tsx
 import ConstantsIOS from "../../../ConstantsIOS.tsx";
 import ChannelTypes from "../../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
-import privDefault from "../../../../_runtime/01439_priv.js";
+import privDefault from "../../../../_runtime/01444_priv.js";
 import NavigationRouteUtils from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import RootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
-import useAlertStore2 from "../../../design/components/AlertModal/native/useAlertStore.native.tsx";
 import QuestTypes from "../QuestTypes.tsx";
 import AdCreativeType from "../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
+import useAlertStore2 from "../../../design/components/AlertModal/native/useAlertStore.native.tsx";
 import getQuestLogger from "../lib/getQuestLogger.tsx";
 import AnalyticsTypes from "../lib/analytics/AnalyticsTypes.tsx";
 import ContentImpressionTracker from "../lib/analytics/ContentImpressionTracker.tsx";
@@ -22,11 +22,11 @@ import QuestStore from "../QuestStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const ChannelDetailsStore = fn(7475);
+const ChannelDetailsStore = fn(7511);
 ({ useChannelDetailsStore: closure_7, getIsChannelDetailsSearchActive: closure_8 } = ChannelDetailsStore);
-const isTextChannel = fn(2048).isTextChannel;
-let closure_16 = fn(7319).MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE;
-const MessageStates = fn(1074).MessageStates;
+const isTextChannel = fn(2055).isTextChannel;
+let closure_16 = fn(7217).MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE;
+const MessageStates = fn(1085).MessageStates;
 function log() {
   if (questLogger == null) {
     questLogger = getQuestLogger.getQuestLogger({ location: "QuestMobileEmbedVisibilityManager" });
@@ -80,7 +80,7 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
       const set = new Set();
       codedLinks = codedLinks.codedLinks;
       const item = codedLinks.forEach((type, questContentPosition) => {
-        if (type.type === applyArgumentsResult(4830).CodedLinkType.QUESTS_EMBED) {
+        if (type.type === applyArgumentsResult(4875).CodedLinkType.QUESTS_EMBED) {
           const code = type.code;
           if (!set.has(code)) {
             const obj3 = { questId: code, questContentPosition, messageId: null, channelId: null };
@@ -215,8 +215,8 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
       return { channelId: tmp[0], messageId: tmp[1], questId: tmp[2] };
     };
     applyArgumentsResult.isOnChannelNavigationRoute = function isOnChannelNavigationRoute() {
-      let isChannelFocusedResult = applyArgumentsResult(9744).isChannelFocused();
-      applyArgumentsResult(4721);
+      let isChannelFocusedResult = applyArgumentsResult(11825).isChannelFocused();
+      applyArgumentsResult(4736);
       if (isChannelFocusedResult) {
         isChannelFocusedResult = "channel" === tmp3;
       }
@@ -225,7 +225,7 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
     applyArgumentsResult.isSearchShowing = function isSearchShowing() {
       let tmp2 = null != applyArgumentsResult.chatChannelId;
       if (tmp2) {
-        tmp2 = React6(tmp.chatChannelId);
+        tmp2 = closure_2_8(tmp.chatChannelId);
       }
       return tmp2;
     };
@@ -237,7 +237,7 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
         log();
         return false;
       } else {
-        const state = AppStateStore.getState();
+        state = AppStateStore.getState();
         if (state !== ConstantsIOS.AppStates.ACTIVE) {
           log();
           return false;
@@ -466,7 +466,7 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
     };
     applyArgumentsResult.handleAppStateStoreChanged = function handleAppStateStoreChanged() {
       log();
-      const state = AppStateStore.getState();
+      state = AppStateStore.getState();
       const tmp4 = state === ConstantsIOS.AppStates.ACTIVE;
       if (applyArgumentsResult.wasAppActive !== tmp4) {
         log();
@@ -476,7 +476,7 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
     };
     applyArgumentsResult.handleVoicePanelStoreChanged = function handleVoicePanelStoreChanged() {
       log();
-      const state = VoicePanelStore.getState();
+      state = VoicePanelStore.getState();
       const isAnyVoicePanelOpenResult = state.isAnyVoicePanelOpen();
       if (isAnyVoicePanelOpenResult !== applyArgumentsResult.wasAnyVoicePanelOpen) {
         log();

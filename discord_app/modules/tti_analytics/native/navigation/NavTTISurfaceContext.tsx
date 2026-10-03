@@ -2,10 +2,10 @@
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const context = noop.createContext(null);
+let ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/tti_analytics/native/navigation/NavTTISurfaceContext.tsx");
+const result1 = size.fileFinishedImporting("modules/tti_analytics/native/navigation/NavTTISurfaceContext.tsx");
 
 export const NavTTISurfaceContext = context;
-export const useNavTTISurface = function useNavTTISurface() {
-  return noop.useContext(context);
-};
+export const useNavTTISurface = () => noop.useContext(context);

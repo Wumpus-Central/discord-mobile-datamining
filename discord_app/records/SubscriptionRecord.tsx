@@ -9,16 +9,16 @@ require = fn;
 function createSubscriptionItemFromServer(id) {
   return { id: id.id, planId: id.plan_id, quantity: id.quantity };
 }
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({
   PaymentGateways: hasOwnProperty,
   SubscriptionStatusTypes: metroRequire,
   SubscriptionStatusTypesSets: closure_7,
   SubscriptionTypes: closure_8,
 } = Constants);
-const BillingConstants = fn(4528);
+const BillingConstants = fn(4539);
 ({ SubscriptionPauseReason: closure_9, SubscriptionPauseReasonSets: c10 } = BillingConstants);
-const PremiumConstants = fn(1374);
+const PremiumConstants = fn(1379);
 ({ PREMIUM_PLANS: closure_11, SubscriptionPlanInfo: closure_12, SubscriptionPlans: map1 } = PremiumConstants);
 let SubscriptionRecord;
 class SubscriptionRecord extends tmp2 {
@@ -246,7 +246,7 @@ Object.defineProperty(prototype, "planIdForCurrencies", {
 });
 Object.defineProperty(prototype, "planIdFromItems", {
   get: function planIdFromItems() {
-    return this.getCurrentSubscriptionPlanIdForGroup(Object.values(map1));
+    return this.getCurrentSubscriptionPlanIdForGroup(Object.values(__initData2));
   },
   set: undefined,
 });

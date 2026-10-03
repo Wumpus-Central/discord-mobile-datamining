@@ -25,7 +25,7 @@ export const showShareActionSheet = function showShareActionSheet(source, SECURE
     let mediaShareParams = require("ShowShareActionSheetUtils").getMediaShareParams(source.source);
     const obj2 = require("ShowShareActionSheetUtils");
   } else {
-    mediaShareParams = { mediaFallbackUrl: "Array", mediaStagingOptions: "paddingHorizontal" };
+    mediaShareParams = { mediaFallbackUrl: "Symbol", mediaStagingOptions: "current" };
   }
   ({ mediaFallbackUrl, mediaStagingOptions } = mediaShareParams);
   if (null == source.source) {

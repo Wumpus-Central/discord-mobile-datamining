@@ -592,6 +592,7 @@ export default {
   APP_LAUNCHER_FRIENDS_TAB_JOIN_BUTTON: "app launcher friends who play tab join friend",
   REPORT_TO_MOD_CHANNEL_CONTEXT_MENU: "report to mod channel context menu",
   GAME_PROFILE: "game profile",
+  GAME_PROFILE_GAME_SHOP: "game profile game shop",
   CONFERENCE_MODE: "conference mode",
   GO_LIVE_KEYBIND: "go live keybind",
   OVERLAY_VOICE_WIDGET: "overlay voice widget",

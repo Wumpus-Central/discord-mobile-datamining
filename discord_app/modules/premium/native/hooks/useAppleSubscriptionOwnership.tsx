@@ -6,87 +6,275 @@ import AppStateStore from "../../../../stores/native/AppStateStore.tsx";
 import IAPStore from "../../../../stores/native/IAPStore.android.tsx";
 
 const require = fn;
-const AppStates = fn(1074).AppStates;
+const AppStates = fn(1085).AppStates;
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/hooks/useAppleSubscriptionOwnership.tsx");
 
-export const useAppleSubscriptionOwnership = function useAppleSubscriptionOwnership(subscription) {
-  const items = [IAPStore];
-  const stateFromStores = stateFromStores1(prop[6]).useStateFromStores(items, () => ready.isReady());
-  const obj = stateFromStores1(prop[6]);
-  const items1 = [state];
-  stateFromStores1 = stateFromStores1(prop[6]).useStateFromStores(items1, () => state.getState());
-  prop = undefined;
-  if (subscription != null) {
-    prop = subscription.paymentGatewaySubscriptionId;
-  }
-  const obj2 = stateFromStores1(prop[6]);
-  const items2 = [closure_4];
-  const items3 = [prop];
-  const stateFromStores2 = stateFromStores1(prop[6]).useStateFromStores(
-    items2,
-    () => ApplePurchasesStore.hasOwnership(prop),
-    items3,
-  );
-  const tmpResult = stateFromStores1(prop[6]);
-  let isIOSResult = stateFromStores1(prop[7]).isIOS();
-  if (isIOSResult) {
-    let isPurchasedViaApple;
-    if (subscription != null) {
-      isPurchasedViaApple = subscription.isPurchasedViaApple;
-    }
-    isIOSResult = true === isPurchasedViaApple;
-  }
-  if (isIOSResult) {
-    isIOSResult = null != prop;
-  }
-  if (isIOSResult) {
-    isIOSResult = "" !== prop;
-  }
-  if (isIOSResult) {
-    isIOSResult = stateFromStores;
-  }
-  noop = isIOSResult;
-  const tmp9 = stateFromStores2(noop.useState(null), 2);
-  closure_4 = tmp9[1];
-  state = tmp10;
-  const items4 = [isIOSResult, prop, stateFromStores1];
-  const effect = obj5.useEffect(() => {
-    if (closure_3) {
-      if (null != prop) {
-        if (c0 === constants.ACTIVE) {
-          c0 = false;
-          const applePurchases = stateFromStores1(prop[8]).fetchApplePurchases();
-          applePurchases.then((result) => {
-            let tmp = !c0;
-            if (!c0) {
-              tmp = result;
+export const useAppleSubscriptionOwnership = ReactCompilerGating.isReactCompilerEnabled()
+  ? (paymentGatewaySubscriptionId) => {
+      const cResult = stateFromStores1(prop[7]).c(21);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const items = [IAPStore];
+        class S {
+          constructor() {
+            return closure_1_6.isReady();
+          }
+        }
+        cResult[0] = items;
+        cResult[1] = S;
+        tmp4 = items;
+      } else {
+        [tmp4, tmp5] = cResult;
+      }
+      const obj = stateFromStores1(prop[7]);
+      const stateFromStores = stateFromStores1(prop[8]).useStateFromStores(tmp4, S);
+      if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+        const items1 = [state];
+        class S {
+          constructor() {
+            return closure_1_6.isReady();
+          }
+        }
+        cResult[2] = items1;
+        cResult[3] = tmp11;
+        let tmp9 = tmp11;
+        let tmp8 = items1;
+      } else {
+        tmp8 = cResult[2];
+        tmp9 = cResult[3];
+      }
+      const tmpResult = stateFromStores1(prop[8]);
+      stateFromStores1 = stateFromStores1(prop[8]).useStateFromStores(tmp8, tmp9);
+      prop = undefined;
+      if (paymentGatewaySubscriptionId != null) {
+        prop = paymentGatewaySubscriptionId.paymentGatewaySubscriptionId;
+      }
+      if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+        const items2 = [closure_4];
+        class S {
+          constructor() {
+            return closure_1_6.isReady();
+          }
+        }
+        cResult[4] = items2;
+        let tmp14 = items2;
+      } else {
+        tmp14 = cResult[4];
+      }
+      if (cResult[5] !== prop) {
+        const fn = function _() {
+          return ApplePurchasesStore.hasOwnership(prop);
+        };
+        const items3 = [prop];
+        class S {
+          constructor() {
+            return closure_1_6.isReady();
+          }
+        }
+        cResult[5] = prop;
+        cResult[6] = fn;
+        cResult[7] = items3;
+        let tmp17 = items3;
+        let tmp16 = fn;
+      } else {
+        tmp16 = cResult[6];
+        tmp17 = cResult[7];
+      }
+      const tmpResult4 = stateFromStores1(prop[8]);
+      const stateFromStores2 = stateFromStores1(prop[8]).useStateFromStores(tmp14, tmp16, tmp17);
+      if (cResult[8] === prop) {
+        if (cResult[9] === stateFromStores) {
+          if (paymentGatewaySubscriptionId != null) {
+            const isPurchasedViaApple = paymentGatewaySubscriptionId.isPurchasedViaApple;
+          }
+          class S {
+            constructor() {
+              return closure_1_6.isReady();
             }
-            if (tmp) {
-              closure_4(prop);
+          }
+          noop = tmp20;
+          const tmp24 = stateFromStores2(noop.useState(null), 2);
+          closure_4 = tmp24[1];
+          state = tmp25;
+          if (cResult[12] === stateFromStores1) {
+            if (cResult[13] === prop) {
+              if (cResult[14] === tmp20) {
+                let tmp26 = cResult[15];
+                let tmp27 = cResult[16];
+              }
+              const effect = obj6.useEffect(tmp26, tmp27);
+              if (cResult[17] === tmp25) {
+                if (cResult[18] === stateFromStores2) {
+                  if (cResult[19] === tmp20) {
+                    let tmp29 = cResult[20];
+                  }
+                  return tmp29;
+                }
+              }
+              class S {
+                constructor() {
+                  return closure_1_6.isReady();
+                }
+              }
+              tmp30[0] = function isMismatch() {
+                let tmp = closure_5;
+                if (closure_5) {
+                  tmp = closure_3;
+                }
+                if (tmp) {
+                  tmp = !stateFromStores2;
+                }
+                return tmp;
+              };
+              cResult[17] = tmp25;
+              cResult[18] = stateFromStores2;
+              cResult[19] = tmp20;
+              cResult[20] = tmp30;
+              tmp29 = tmp30;
             }
-          });
-          return () => {
-            c0 = true;
+          }
+          const fn2 = function w() {
+            if (closure_3) {
+              if (null != prop) {
+                if (c0 === constants.ACTIVE) {
+                  c0 = false;
+                  const applePurchases = stateFromStores1(prop[10]).fetchApplePurchases();
+                  applePurchases.then((result) => {
+                    let tmp = !c0;
+                    if (!c0) {
+                      tmp = result;
+                    }
+                    if (tmp) {
+                      closure_4(prop);
+                    }
+                  });
+                  return () => {
+                    c0 = true;
+                  };
+                }
+              }
+            }
           };
+          const items4 = [tmp20, prop, stateFromStores1];
+          cResult[12] = stateFromStores1;
+          cResult[13] = prop;
+          cResult[14] = tmp20;
+          cResult[15] = fn2;
+          cResult[16] = items4;
+          tmp27 = items4;
+          tmp26 = fn2;
+          obj6 = noop;
         }
       }
+      const tmpResult5 = stateFromStores1(prop[8]);
+      let isIOSResult = stateFromStores1(prop[9]).isIOS();
+      if (isIOSResult) {
+        if (paymentGatewaySubscriptionId != null) {
+          const isPurchasedViaApple2 = paymentGatewaySubscriptionId.isPurchasedViaApple;
+        }
+        class S {
+          constructor() {
+            return closure_1_6.isReady();
+          }
+        }
+      }
+      if (isIOSResult) {
+        isIOSResult = null != prop;
+      }
+      if (isIOSResult) {
+        isIOSResult = "" !== prop;
+      }
+      if (isIOSResult) {
+        isIOSResult = stateFromStores;
+      }
+      cResult[8] = prop;
+      cResult[9] = stateFromStores;
+      let isPurchasedViaApple1;
+      if (paymentGatewaySubscriptionId != null) {
+        isPurchasedViaApple1 = paymentGatewaySubscriptionId.isPurchasedViaApple;
+      }
+      cResult[10] = isPurchasedViaApple1;
+      cResult[11] = isIOSResult;
+      const tmpResult6 = stateFromStores1(prop[9]);
     }
-  }, items4);
-  const items5 = [null != prop && tmp9[0] === prop, isIOSResult, stateFromStores2];
-  return noop.useMemo(
-    () => ({
-      isMismatch() {
-        let tmp = state;
-        if (state) {
-          tmp = closure_1_3;
+  : (paymentGatewaySubscriptionId) => {
+      const items = [IAPStore];
+      const stateFromStores = stateFromStores1(prop[8]).useStateFromStores(items, () => ready.isReady());
+      const obj = stateFromStores1(prop[8]);
+      const items1 = [state];
+      stateFromStores1 = stateFromStores1(prop[8]).useStateFromStores(items1, () => state.getState());
+      prop = undefined;
+      if (paymentGatewaySubscriptionId != null) {
+        prop = paymentGatewaySubscriptionId.paymentGatewaySubscriptionId;
+      }
+      const obj2 = stateFromStores1(prop[8]);
+      const items2 = [closure_4];
+      const items3 = [prop];
+      const stateFromStores2 = stateFromStores1(prop[8]).useStateFromStores(
+        items2,
+        () => ApplePurchasesStore.hasOwnership(prop),
+        items3,
+      );
+      const tmpResult = stateFromStores1(prop[8]);
+      let isIOSResult = stateFromStores1(prop[9]).isIOS();
+      if (isIOSResult) {
+        let isPurchasedViaApple;
+        if (paymentGatewaySubscriptionId != null) {
+          isPurchasedViaApple = paymentGatewaySubscriptionId.isPurchasedViaApple;
         }
-        if (tmp) {
-          tmp = !stateFromStores2;
+        isIOSResult = true === isPurchasedViaApple;
+      }
+      if (isIOSResult) {
+        isIOSResult = null != prop;
+      }
+      if (isIOSResult) {
+        isIOSResult = "" !== prop;
+      }
+      if (isIOSResult) {
+        isIOSResult = stateFromStores;
+      }
+      noop = isIOSResult;
+      const tmp9 = stateFromStores2(noop.useState(null), 2);
+      closure_4 = tmp9[1];
+      state = tmp10;
+      const items4 = [isIOSResult, prop, stateFromStores1];
+      const effect = obj5.useEffect(() => {
+        if (closure_3) {
+          if (null != prop) {
+            if (c0 === constants.ACTIVE) {
+              c0 = false;
+              const applePurchases = stateFromStores1(prop[10]).fetchApplePurchases();
+              applePurchases.then((result) => {
+                let tmp = !c0;
+                if (!c0) {
+                  tmp = result;
+                }
+                if (tmp) {
+                  closure_4(prop);
+                }
+              });
+              return () => {
+                c0 = true;
+              };
+            }
+          }
         }
-        return tmp;
-      },
-    }),
-    items5,
-  );
-};
+      }, items4);
+      const items5 = [null != prop && tmp9[0] === prop, isIOSResult, stateFromStores2];
+      return noop.useMemo(
+        () => ({
+          isMismatch() {
+            let tmp = state;
+            if (state) {
+              tmp = closure_1_3;
+            }
+            if (tmp) {
+              tmp = !stateFromStores2;
+            }
+            return tmp;
+          },
+        }),
+        items5,
+      );
+    };

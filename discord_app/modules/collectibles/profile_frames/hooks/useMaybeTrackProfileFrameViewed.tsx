@@ -41,7 +41,7 @@ export default function useMaybeTrackProfileFrameViewed(skuId) {
         if (ref.current == null) {
           ref.current = timestamp - openedAt;
         }
-        let state;
+        state = undefined;
         if (stateFromStores != null) {
           state = stateFromStores.state;
         }

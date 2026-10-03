@@ -11,7 +11,7 @@ let closure_5 = async function _fetchWelcomeScreen() {
   const HTTP = HTTPUtils.HTTP;
   await HTTP.get({ url: Endpoints.GUILD_WELCOME_SCREEN(closure_0), oldFormErrors: true, rejectWithError: true });
   closure_130_1(closure_130_2[2]).dispatch({ type: "WELCOME_SCREEN_FETCH_FAIL" });
-  await "HermesInternal";
+  await "IconComponent";
   closure_129_1 = value;
   closure_130_1(closure_130_2[2]).dispatch({
     type: "WELCOME_SCREEN_FETCH_SUCCESS",
@@ -53,7 +53,7 @@ let closure_6 = async function _saveWelcomeScreen(arg0) {
   }
   return value;
 };
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/welcome_screen/WelcomeScreenActionCreators.tsx");
 

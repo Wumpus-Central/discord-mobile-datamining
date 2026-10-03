@@ -24,7 +24,7 @@ const gameOrganizationInviteStore = new GameOrganizationInviteStore(DispatcherDe
   GAME_ORGANIZATION_INVITE_RESOLVE: function handleResolve(code) {
     code = code.code;
     value = map.get(code);
-    let state;
+    state = undefined;
     if (value != null) {
       state = value.state;
     }
@@ -69,7 +69,7 @@ const gameOrganizationInviteStore = new GameOrganizationInviteStore(DispatcherDe
   GAME_ORGANIZATION_INVITE_RESOLVE_FAILURE: function handleResolveFailure(code) {
     code = code.code;
     value = map.get(code);
-    let state;
+    state = undefined;
     if (value != null) {
       state = value.state;
     }

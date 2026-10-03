@@ -6,10 +6,10 @@ import UploadTargets from "UploadTargets.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-const AbortCodes = fn(1074).AbortCodes;
-const FileUploadErrorTypes = fn(4838).FileUploadErrorTypes;
+const AbortCodes = fn(1085).AbortCodes;
+const FileUploadErrorTypes = fn(4883).FileUploadErrorTypes;
 const logger = new LoggerDefault("UploaderBase.tsx");
-const EventEmitter = fn(568).EventEmitter;
+const EventEmitter = fn(580).EventEmitter;
 class UploaderBase extends EventEmitter {
   constructor() {
     tmp3 = new UploaderBase(tmp2, new.target, new.target, tmp);
@@ -20,7 +20,7 @@ class UploaderBase extends EventEmitter {
     tmp3._lastUpdate = 0;
     tmp3._loaded = 0;
     tmp3.alreadyStarted = false;
-    tmp3._handleStart = function _handleStart(_cancel) {
+    tmp3._handleStart = function _handleStart(c5) {
       closure_0._cancel = _cancel;
       if (!closure_0.alreadyStarted) {
         closure_0.emit("start", closure_0._file);
@@ -89,7 +89,7 @@ class UploaderBase extends EventEmitter {
       hasImage: false,
       hasVideo: false,
       attachmentsCount: 0,
-      items: "channel",
+      items: "filter",
     };
     return tmp3;
   }
@@ -126,7 +126,7 @@ prototype["compressAndCheckFileSize"] = function compressAndCheckFileSize() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -406,7 +406,7 @@ prototype["cancelItem"] = function cancelItem(itemId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {

@@ -18,8 +18,8 @@ import ReadStateStore from "../stores/ReadStateStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_6 = fn(2048).createChannelRecordFromServer;
-const Constants = fn(1074);
+let closure_6 = fn(2055).createChannelRecordFromServer;
+const Constants = fn(1085);
 ({
   AnalyticEvents: closure_9,
   AbortCodes: c10,
@@ -58,7 +58,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -188,7 +188,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -304,7 +304,7 @@ export default {
     closure_0 = id;
     const self = this;
     return (async () => {
-      const HTTP = tmp2(1271).HTTP;
+      const HTTP = tmp2(1282).HTTP;
       const request = {
         url: constants.USER_CHANNELS,
         body: { recipients: self._getRecipients(tmp2) },
@@ -312,11 +312,11 @@ export default {
         rejectWithError: null,
       };
       self._getRecipients(tmp2);
-      request.rejectWithError = tmp2(1271).rejectWithMigratedError();
+      request.rejectWithError = tmp2(1282).rejectWithMigratedError();
       await HTTP.post(request);
       closure_128_0 = value;
       closure_128_1 = closure_1_6(closure_128_0.body);
-      tmp5(573).dispatch({ type: "CHANNEL_CREATE", channel: closure_128_1 });
+      tmp5(584).dispatch({ type: "CHANNEL_CREATE", channel: closure_128_1 });
       return closure_128_1.id;
     })();
   },
@@ -334,7 +334,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -377,14 +377,14 @@ export default {
       }
     })();
   },
-  getDMChannel(arr) {
-    closure_0 = arr;
+  getDMChannel(id) {
+    closure_0 = id;
     return (async () => {
-      const HTTP = tmp5(1271).HTTP;
+      const HTTP = tmp5(1282).HTTP;
       await HTTP.get({ url: closure_1_11.DM_CHANNEL(tmp5), rejectWithError: true });
       closure_128_0 = value;
       closure_128_1 = closure_1_6(closure_128_0.body);
-      tmp2(573).dispatch({ type: "CHANNEL_CREATE", channel: closure_128_1 });
+      tmp2(584).dispatch({ type: "CHANNEL_CREATE", channel: closure_128_1 });
       return closure_128_1.id;
     })();
   },
@@ -433,7 +433,7 @@ export default {
     }
     DispatcherDefault.dispatch({
       type: "CHANNEL_DELETE",
-      channel: { id, guild_id: "Array", parent_id: "isArray" },
+      channel: { id, guild_id: "Array", parent_id: "cursor" },
       silent: flag2,
     });
     if (flag) {
@@ -446,7 +446,7 @@ export default {
       oldFormErrors: true,
       rejectWithError: null,
     };
-    const obj2 = { type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "isArray" }, silent: flag2 };
+    const obj2 = { type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "cursor" }, silent: flag2 };
     const tmpResult2 = DispatcherDefault;
     request.rejectWithError = HTTPUtils.rejectWithMigratedError();
     const delResult = HTTP.del(request);
@@ -477,16 +477,16 @@ export default {
     closure_1 = arr3;
     return (async () => {
       const body = tmp2;
-      const HTTP = tmp5(1271).HTTP;
+      const HTTP = tmp5(1282).HTTP;
       const request = {
         url: closure_1_11.CHANNEL_PERMISSIONS_OVERWRITE(tmp5, body.id),
         body,
         oldFormErrors: true,
-        rejectWithError: tmp5(1271).rejectWithMigratedError(),
+        rejectWithError: tmp5(1282).rejectWithMigratedError(),
       };
       await HTTP.put(request);
       closure_128_0 = value;
-      body(573).dispatch({
+      body(584).dispatch({
         type: "CHANNEL_PERMISSIONS_PUT_OVERWRITE_SUCCESS",
         channelId: closure_129_0,
         overwrite: closure_129_1,
@@ -498,14 +498,14 @@ export default {
     closure_0 = channelId;
     closure_1 = id;
     return (async () => {
-      const HTTP = tmp5(1271).HTTP;
+      const HTTP = tmp5(1282).HTTP;
       await HTTP.del({
         url: closure_1_11.CHANNEL_PERMISSIONS_OVERWRITE(tmp5, tmp2),
         oldFormErrors: true,
-        rejectWithError: tmp5(1271).rejectWithMigratedError(),
+        rejectWithError: tmp5(1282).rejectWithMigratedError(),
       });
       closure_128_0 = value;
-      tmp2(573).dispatch({
+      tmp2(584).dispatch({
         type: "CHANNEL_PERMISSIONS_DELETE_OVERWRITE_SUCCESS",
         channelId: closure_129_0,
         overwriteId: closure_129_1,
@@ -572,7 +572,7 @@ export default {
     return (async () => {
       const name = tmp3;
       const channel2 = channel.getChannel(tmp2);
-      const HTTP = tmp2(1271).HTTP;
+      const HTTP = tmp2(1282).HTTP;
       const request = { url: closure_1_11.CHANNEL(tmp2), body: { name }, oldFormErrors: true, rejectWithError: true };
       await HTTP.patch(request);
       closure_128_1 = value;
@@ -590,8 +590,8 @@ export default {
         obj = channel2;
       }
       if (!tmp10) {
-        const result = name(6928).checkGuildTemplateDirty(closure_128_2);
-        name(6928);
+        const result = name(6826).checkGuildTemplateDirty(closure_128_2);
+        name(6826);
       }
       return closure_128_1;
     })();
@@ -611,7 +611,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -755,7 +755,7 @@ export default {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -896,7 +896,7 @@ export default {
   },
   preload(arg0, channelId) {
     let tmp = null;
-    if (arg0 !== map1) {
+    if (arg0 !== __initData2) {
       tmp = arg0;
     }
     DispatcherDefault.dispatch({ type: "CHANNEL_PRELOAD", guildId: tmp, channelId, context });
@@ -954,7 +954,7 @@ export default {
     return (async () => {
       await self.fetchChannel(closure_0);
       c2 = 0;
-      await "HermesInternal";
+      await "IconComponent";
       closure_128_0 = value;
       closure_128_1 = closure_1_6(closure_128_0);
       tmp3(c2[13]).dispatch({ type: "CHANNEL_CREATE", channel: closure_128_1 });

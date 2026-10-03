@@ -21,7 +21,7 @@ let closure_9 = async function _handleForwardBreadcrumb(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -69,7 +69,7 @@ let closure_9 = async function _handleForwardBreadcrumb(arg0) {
               }
             }
             c5 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else if (1 === tmp7) {
           c3 = 0;
@@ -136,7 +136,7 @@ let closure_9 = async function _handleForwardBreadcrumb(arg0) {
     }
   })();
 };
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AnalyticEvents: metroRequire, AnalyticsObjects: closure_7, Routes: closure_8 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forwarding/handleForwardBreadcrumb.tsx");

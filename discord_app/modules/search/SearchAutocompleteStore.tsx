@@ -2,7 +2,7 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import UserUtilsDefault from "../../utils/UserUtils.tsx";
-import _modDef4964 from "../../../_runtime/metro/04964__.js";
+import _modDef5010 from "../../../_runtime/metro/05010__.js";
 import AutocompleteUtils from "../../utils/AutocompleteUtils.tsx";
 import GuildUtilsDefault from "../../utils/GuildUtils.tsx";
 import UserSearchManagerDefault from "../autocompleter/UserSearchManager.tsx";
@@ -22,7 +22,7 @@ require = fn;
 function handleUserSearchResults(searchContext, results) {
   const searchContextId = SearchUtils.getSearchContextId(searchContext);
   value = map1.get(searchContextId);
-  const value3 = map.get(searchContextId);
+  value3 = map.get(searchContextId);
   if (null != value) {
     if (null != value3) {
       const mode1 = value3.mode;
@@ -226,10 +226,10 @@ function rebuildAutocompleteResults(c13) {
     const tmpResult = SearchUtils;
   }
 }
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ SearchPopoutModes: closure_9, SearchTokenTypes } = Constants);
 const ME = Constants.ME;
-fn(6013).AutocompleterResultTypes;
+fn(5700).AutocompleterResultTypes;
 let c13 = null;
 let closure_14 = [];
 const map = new Map();
@@ -263,7 +263,7 @@ SearchAutocompleteStoreClass.displayName = "SearchAutocompleteStore";
 const searchAutocompleteStoreClass = new SearchAutocompleteStoreClass(DispatcherDefault, {
   SEARCH_AUTOCOMPLETE_INITIALIZE: function handleSearchAutocompleteInitialize(searchContext) {
     searchContext = searchContext.searchContext;
-    if (!_modDef4964(c13, searchContext)) {
+    if (!_modDef5010(c13, searchContext)) {
       c13 = searchContext;
       SearchUtils.clearTokenCache();
     }
@@ -271,7 +271,7 @@ const searchAutocompleteStoreClass = new SearchAutocompleteStoreClass(Dispatcher
   },
   SEARCH_AUTOCOMPLETE_QUERY_UPDATE: function handleSearchAutocompleteQueryUpdate(arg0) {
     ({ searchContext, tokens, cursorScope } = arg0);
-    if (!_modDef4964(c13, searchContext)) {
+    if (!_modDef5010(c13, searchContext)) {
       c13 = searchContext;
       SearchUtils.clearTokenCache();
     }

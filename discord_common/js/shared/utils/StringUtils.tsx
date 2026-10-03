@@ -1,5 +1,5 @@
 // discord_common/js/shared/utils/StringUtils.tsx
-import _mod2013 from "../../../../_runtime/metro/02013__.js";
+import _mod2020 from "../../../../_runtime/metro/02020__.js";
 import DOMUtils from "DOMUtils.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -18,7 +18,7 @@ if (null == String.prototype.normalize) {
   let fullNormalize = (arg0) => arg0;
 } else {
   fullNormalize = function fullNormalize(str) {
-    closure_0 = _mod2013;
+    closure_0 = _mod2020;
     dependencyMap = "";
     const items = [...str.normalize("NFD")];
     const item = items.forEach((item) => {
@@ -44,7 +44,7 @@ export const upperCaseFirstChar = function upperCaseFirstChar(item) {
   }
   return str;
 };
-export const truncateText = (name, React6) => {
+export const truncateText = (name, arg1) => {
   let str = arg2;
   if (arg2 === undefined) {
     str = "\u2026";
@@ -53,17 +53,17 @@ export const truncateText = (name, React6) => {
   let str2 = "";
   if (null != name) {
     str2 = "";
-    if (null != React6) {
-      if (concat.length <= React6) {
+    if (null != arg1) {
+      if (concat.length <= arg1) {
         str2 = concat;
       } else {
         if (re3.test(concat)) {
           const items = [];
           HermesBuiltin.arraySpread(concat, 0);
-          const substr = items.slice(0, React6 - str.length);
+          const substr = items.slice(0, arg1 - str.length);
           let str3 = substr.join("");
         } else {
-          str3 = concat.substring(0, React6 - str.length);
+          str3 = concat.substring(0, arg1 - str.length);
         }
         const _HermesInternal = HermesInternal;
         concat = HermesInternal.concat;

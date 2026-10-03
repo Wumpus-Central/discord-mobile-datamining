@@ -9,7 +9,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 import PendingReplyStore from "../PendingReplyStore.tsx";
 
 require = fn;
-const AnalyticEvents = fn(1074).AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/replies/native/replyToMessage.tsx");
 

@@ -4,8 +4,8 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 let result = size.fileFinishedImporting("modules/media_viewer/native/getMediaViewerStateForScreen.tsx");
 
-export default function getMediaViewerStateForScreen(width, height, arr) {
-  const size = MediaSourceUtil.flattenSource(arr, true);
+export default function getMediaViewerStateForScreen(width, height, cResult) {
+  const size = MediaSourceUtil.flattenSource(cResult, true);
   if (null == size) {
     const size1 = { maximumZoomScale: 1, width, height };
     return size1;

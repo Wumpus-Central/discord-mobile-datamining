@@ -1,11 +1,12 @@
 // discord_app/modules/media_viewer/native/components/overlay/MediaModalOverlayAltText.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import useSafeAreaInsetsDefault from "../../../../safe_area/useSafeAreaInsets.native.tsx";
 import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let closure_4 = createStyles.createStyles((arg0) => {
   const obj = {
     container: {
@@ -21,48 +22,123 @@ let closure_4 = createStyles.createStyles((arg0) => {
   };
   return obj;
 });
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/media_viewer/native/components/overlay/MediaModalOverlayAltText.tsx",
 );
 
-export default noop.memo(function MediaModalOverlayAltTextButton(description) {
-  let str;
-  if (str == null) {
-    str = "";
-  }
-  const ViewImageDescriptions = str(2021).ViewImageDescriptions;
-  let tmp4 = null;
-  if (ViewImageDescriptions.useSetting()) {
-    tmp4 = null;
-    if (0 !== str.length) {
-      const obj = {
-        style: tmp2.container,
-        onPress() {
-          if (str == null) {
-            str = "";
+export default noop.memo(
+  ReactCompilerGating.isReactCompilerEnabled()
+    ? (description) => {
+        let PressableOpacity = str;
+        let tmp = dependencyMap;
+        const cResult = str(576).c(7);
+        str = description.description;
+        let container = closure_4(useSafeAreaInsetsDefault().right);
+        if (str == null) {
+          str = "";
+        }
+        const ViewImageDescriptions = PressableOpacity(2028).ViewImageDescriptions;
+        let tmp3 = null;
+        if (ViewImageDescriptions.useSetting()) {
+          tmp3 = null;
+          if (0 !== str.length) {
+            if (cResult[0] !== str) {
+              const fn = function l() {
+                if (str == null) {
+                  str = "";
+                }
+                openMediaModalOverlayAltTextSheetDefault({ description: str });
+              };
+              cResult[0] = str;
+              cResult[1] = fn;
+              let tmp4 = fn;
+            } else {
+              tmp4 = cResult[1];
+            }
+            const _Symbol = Symbol;
+            if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+              const rect = { top: 6, bottom: 6, left: 6, right: 6 };
+              cResult[2] = rect;
+              let tmp6 = rect;
+            } else {
+              tmp6 = cResult[2];
+            }
+            const _Symbol2 = Symbol;
+            if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+              const obj2 = { variant: "text-xs/semibold", color: "text-overlay-light", children: null };
+              const intl = PressableOpacity(1126).intl;
+              obj2.children = intl.string(PressableOpacity(1126).t.Q5VqrN);
+              const tmp9 = jsx(PressableOpacity(4886).Text, {
+                variant: "text-xs/semibold",
+                color: "text-overlay-light",
+                children: null,
+              });
+              cResult[3] = tmp9;
+              let tmp7 = tmp9;
+            } else {
+              tmp7 = cResult[3];
+            }
+            if (cResult[4] === container.container) {
+            }
+            PressableOpacity = PressableOpacity(5909).PressableOpacity;
+            const obj3 = { style: container.container, onPress: tmp4, hitSlop: tmp6, children: tmp7 };
+            tmp = (
+              <PressableOpacity style={container.container} onPress={tmp4} hitSlop={tmp6}>
+                {tmp7}
+              </PressableOpacity>
+            );
+            container = container.container;
+            cResult[4] = container;
+            cResult[5] = tmp4;
+            cResult[6] = tmp;
           }
-          openMediaModalOverlayAltTextSheetDefault({ description: str });
-        },
-        hitSlop: { top: 6, bottom: 6, left: 6, right: 6 },
-        children: null,
-      };
-      const obj2 = { variant: "text-xs/semibold", color: "text-overlay-light", children: null };
-      const intl = tmp3(1115).intl;
-      obj2.children = intl.string(tmp3(1115).t.Q5VqrN);
-      obj.children = jsx(tmp3(4841).Text, { variant: "text-xs/semibold", color: "text-overlay-light", children: null });
-      tmp4 = jsx(tmp3(5621).PressableOpacity, {
-        style: tmp2.container,
-        onPress() {
-          if (str == null) {
-            str = "";
+        }
+        return tmp3;
+      }
+    : (description) => {
+        let str;
+        if (str == null) {
+          str = "";
+        }
+        const ViewImageDescriptions = str(2028).ViewImageDescriptions;
+        let tmp4 = null;
+        if (ViewImageDescriptions.useSetting()) {
+          tmp4 = null;
+          if (0 !== str.length) {
+            const obj = {
+              style: tmp2.container,
+              onPress() {
+                if (str == null) {
+                  str = "";
+                }
+                openMediaModalOverlayAltTextSheetDefault({ description: str });
+              },
+              hitSlop: { top: 6, bottom: 6, left: 6, right: 6 },
+              children: null,
+            };
+            const obj2 = { variant: "text-xs/semibold", color: "text-overlay-light", children: null };
+            const intl = tmp3(1126).intl;
+            obj2.children = intl.string(tmp3(1126).t.Q5VqrN);
+            obj.children = jsx(tmp3(4886).Text, {
+              variant: "text-xs/semibold",
+              color: "text-overlay-light",
+              children: null,
+            });
+            tmp4 = jsx(tmp3(5909).PressableOpacity, {
+              style: tmp2.container,
+              onPress() {
+                if (str == null) {
+                  str = "";
+                }
+                openMediaModalOverlayAltTextSheetDefault({ description: str });
+              },
+              hitSlop: { top: 6, bottom: 6, left: 6, right: 6 },
+              children: null,
+            });
           }
-          openMediaModalOverlayAltTextSheetDefault({ description: str });
-        },
-        hitSlop: { top: 6, bottom: 6, left: 6, right: 6 },
-        children: null,
-      });
-    }
-  }
-  return tmp4;
-});
+        }
+        return tmp4;
+      },
+);

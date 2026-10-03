@@ -1,18 +1,18 @@
 // discord_app/modules/vibegrations/intl/VibegrationsUntranslated.messages.js
 import AssetJsonUtils from "../../asset_json/native/AssetJsonUtils.tsx";
-import _mod3715 from "../../../../_runtime/metro/03715__.js";
-import module_1154_mod from "../../../../_runtime/metro/01154__.js";
+import _mod3724 from "../../../../_runtime/metro/03724__.js";
+import module_1165_mod from "../../../../_runtime/metro/01165__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
-let module_1154 = module_1154_mod;
-const loader = module_1154.createLoader({
+let module_1165 = module_1165_mod;
+const loader = module_1165.createLoader({
   () => {
-    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3715);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3724);
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");
-let module_1154 = module_1154_mod;
-const messagesProxy = module_1154.makeMessagesProxy(loader);
+let module_1165 = module_1165_mod;
+const messagesProxy = module_1165.makeMessagesProxy(loader);
 const result = size.fileFinishedImporting("modules/vibegrations/intl/VibegrationsUntranslated.messages.js");
 
 export default messagesProxy;

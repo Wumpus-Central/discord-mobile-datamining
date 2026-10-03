@@ -40,8 +40,8 @@ function handleConnectionOpen(user) {
   sessionId = user.sessionId;
   c14 = null;
 }
-const Permissions = fn(1074).Permissions;
-const Constants = fn(4870);
+const Permissions = fn(1085).Permissions;
+const Constants = fn(4915);
 ({ SpeakingFlags: closure_9, MediaEngineContextTypes: c10 } = Constants);
 let map = new Map();
 let id = null;
@@ -110,7 +110,8 @@ prototype["getSpeakers"] = function getSpeakers() {
   });
 };
 prototype["isSpeaking"] = function isSpeaking(id) {
-  if (DEFAULT === undefined) {
+  let DEFAULT = context;
+  if (context === undefined) {
     DEFAULT = constants2.DEFAULT;
   }
   const VOICE = constants.VOICE;
@@ -171,7 +172,8 @@ prototype["isAnyoneElseSpeaking"] = function isAnyoneElseSpeaking() {
   return anyoneHasFlagInContext(DEFAULT, constants.VOICE, true);
 };
 prototype["isCurrentUserSpeaking"] = function isCurrentUserSpeaking() {
-  if (DEFAULT === undefined) {
+  let DEFAULT = context;
+  if (context === undefined) {
     DEFAULT = constants2.DEFAULT;
   }
   let isSpeakingResult = null != id;
@@ -202,7 +204,8 @@ prototype["isCurrentUserPrioritySpeaker"] = function isCurrentUserPrioritySpeake
   return isPrioritySpeakerResult;
 };
 prototype["isCurrentUserPrioritySpeaking"] = function isCurrentUserPrioritySpeaking() {
-  if (DEFAULT === undefined) {
+  let DEFAULT = context;
+  if (context === undefined) {
     DEFAULT = constants2.DEFAULT;
   }
   const self = this;

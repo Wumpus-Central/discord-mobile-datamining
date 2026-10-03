@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/panels/PanelsNavigationUtils.tsx
-import v1 from "../../../../../_runtime/01255_v1.js";
-import CommonActions2 from "../../../../../_runtime/01490_CommonActions.js";
+import v1 from "../../../../../_runtime/01266_v1.js";
+import CommonActions2 from "../../../../../_runtime/01495_CommonActions.js";
 import NavigationRouteUtils from "../../helpers/NavigationRouteUtils.native.tsx";
 import RootNavigationRef from "../../RootNavigationRef.native.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
@@ -23,7 +23,7 @@ export const convertPortraitToLandscapeScreens = function convertPortraitToLands
                 const state3 = coerceTabsRouteResult.state;
                 let tmp4;
                 if (state3 != null) {
-                  const state = coerceTabsRouteResult.state;
+                  state = coerceTabsRouteResult.state;
                   let index;
                   if (state != null) {
                     index = state.index;
@@ -83,7 +83,7 @@ export const convertLandscapeToPortraitScreens = function convertLandscapeToPort
             const state3 = coerceTabsRouteResult.state;
             let tmp5;
             if (state3 != null) {
-              const state = coerceTabsRouteResult.state;
+              state = coerceTabsRouteResult.state;
               let index;
               if (state != null) {
                 index = state.index;

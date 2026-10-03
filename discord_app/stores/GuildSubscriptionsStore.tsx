@@ -57,8 +57,8 @@ function handleConnectionOpenOrResumed(type) {
     });
     if (!obj2.isEmpty(subscriptions)) {
       const obj3 = { type: "GUILD_SUBSCRIPTIONS_FLUSH", subscriptions };
-      tmp3(573).dispatch(obj3);
-      const tmp3Result = tmp3(573);
+      tmp3(584).dispatch(obj3);
+      const tmp3Result = tmp3(584);
     }
     obj2 = set(12);
     tmp3 = set;
@@ -82,7 +82,7 @@ function handleConnectionOpenOrResumed(type) {
       }
     }
     closure_20.subscribeToGuild(tmp11);
-    obj5 = obj4(2069);
+    obj5 = obj4(2077);
   }
   obj4 = {};
   set = new Set(LurkingStore.lurkingGuildIds());
@@ -102,8 +102,8 @@ function handleConnectionOpenOrResumed(type) {
   });
   if (!obj8.isEmpty(obj4)) {
     const obj6 = { type: "GUILD_SUBSCRIPTIONS_FLUSH", subscriptions: obj4 };
-    tmp18(573).dispatch(obj6);
-    const tmp18Result = tmp18(573);
+    tmp18(584).dispatch(obj6);
+    const tmp18Result = tmp18(584);
   }
   obj8 = set(12);
   tmp18 = set;
@@ -184,8 +184,8 @@ function handleSpotifyUpdate() {
   }
   return false;
 }
-const EVERYONE_CHANNEL_ID = fn(6884).EVERYONE_CHANNEL_ID;
-const Constants = fn(1074);
+const EVERYONE_CHANNEL_ID = fn(6782).EVERYONE_CHANNEL_ID;
+const Constants = fn(1085);
 ({ ChannelSections, ChannelTypes: closure_19 } = Constants);
 let closure_20 = new GuildSubscriptionsDefault((subscriptions) => {
   for (const key10004 in arg0) {

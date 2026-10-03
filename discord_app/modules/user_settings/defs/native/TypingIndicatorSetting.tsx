@@ -2,7 +2,7 @@
 import Constants from "../../../../Constants.tsx";
 import util from "../../../../intl/index.native.tsx";
 import dismissible_content from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import _modDef3716 from "../../../custom_typing_indicator/intl/CustomTypingIndicator.messages.js";
+import _modDef3725 from "../../../custom_typing_indicator/intl/CustomTypingIndicator.messages.js";
 import CustomTypingIndicatorExperiment from "../../../custom_typing_indicator/CustomTypingIndicatorExperiment.tsx";
 import ChatDotsIcon from "../../../../design/components/Icon/native/redesign/generated/ChatDotsIcon.tsx";
 import DismissibleBadgeUtils from "DismissibleBadgeUtils.tsx";
@@ -18,7 +18,7 @@ const dismissibleBadgeRouteProps = DismissibleBadgeUtils.createDismissibleBadgeR
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef3716["pT+BVM"]);
+    return intl.string(_modDef3725["pT+BVM"]);
   },
   parent: null,
   IconComponent: ChatDotsIcon.ChatDotsIcon,

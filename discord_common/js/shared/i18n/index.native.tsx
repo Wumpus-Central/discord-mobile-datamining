@@ -6,85 +6,85 @@ const require = globalThis.__r;
 const require = fn;
 let closure_2 = {
   bg() {
-    return require("../../../../_runtime/metro/01933__.js");
+    return require("../../../../_runtime/metro/01939__.js");
   },
   cs() {
-    return require("../../../../_runtime/metro/01934__.js");
+    return require("../../../../_runtime/metro/01940__.js");
   },
   da() {
-    return require("../../../../_runtime/metro/01935__.js");
+    return require("../../../../_runtime/metro/01941__.js");
   },
   de() {
-    return require("../../../../_runtime/metro/01936__.js");
-  },
-  el() {
-    return require("../../../../_runtime/metro/01937__.js");
-  },
-  () => require("../../../../_runtime/metro/01938__.js"),
-  () => require("../../../../_runtime/metro/01939__.js"),
-  () => require("../../../../_runtime/metro/01940__.js"),
-  () => require("../../../../_runtime/metro/01941__.js"),
-  fi() {
     return require("../../../../_runtime/metro/01942__.js");
   },
-  fr() {
+  el() {
     return require("../../../../_runtime/metro/01943__.js");
   },
-  hi() {
-    return require("../../../../_runtime/metro/01944__.js");
-  },
-  hr() {
-    return require("../../../../_runtime/metro/01945__.js");
-  },
-  hu() {
-    return require("../../../../_runtime/metro/01946__.js");
-  },
-  id() {
-    return require("../../../../_runtime/metro/01947__.js");
-  },
-  it() {
+  () => require("../../../../_runtime/metro/01944__.js"),
+  () => require("../../../../_runtime/metro/01945__.js"),
+  () => require("../../../../_runtime/metro/01946__.js"),
+  () => require("../../../../_runtime/metro/01947__.js"),
+  fi() {
     return require("../../../../_runtime/metro/01948__.js");
   },
-  ja() {
+  fr() {
     return require("../../../../_runtime/metro/01949__.js");
   },
-  ko() {
+  hi() {
     return require("../../../../_runtime/metro/01950__.js");
   },
-  lt() {
+  hr() {
     return require("../../../../_runtime/metro/01951__.js");
   },
-  nl() {
+  hu() {
     return require("../../../../_runtime/metro/01952__.js");
   },
-  no() {
+  id() {
     return require("../../../../_runtime/metro/01953__.js");
   },
-  pl() {
+  it() {
     return require("../../../../_runtime/metro/01954__.js");
   },
-  () => require("../../../../_runtime/metro/01955__.js"),
-  ro() {
+  ja() {
+    return require("../../../../_runtime/metro/01955__.js");
+  },
+  ko() {
     return require("../../../../_runtime/metro/01956__.js");
   },
-  ru() {
+  lt() {
     return require("../../../../_runtime/metro/01957__.js");
   },
-  () => require("../../../../_runtime/metro/01958__.js"),
-  th() {
+  nl() {
+    return require("../../../../_runtime/metro/01958__.js");
+  },
+  no() {
     return require("../../../../_runtime/metro/01959__.js");
   },
-  tr() {
+  pl() {
     return require("../../../../_runtime/metro/01960__.js");
   },
-  uk() {
-    return require("../../../../_runtime/metro/01961__.js");
-  },
-  vi() {
+  () => require("../../../../_runtime/metro/01961__.js"),
+  ro() {
     return require("../../../../_runtime/metro/01962__.js");
   },
-  () => require("../../../../_runtime/metro/01963__.js"),
-  () => require("../../../../_runtime/metro/01964__.js")
+  ru() {
+    return require("../../../../_runtime/metro/01963__.js");
+  },
+  () => require("../../../../_runtime/metro/01964__.js"),
+  th() {
+    return require("../../../../_runtime/metro/01965__.js");
+  },
+  tr() {
+    return require("../../../../_runtime/metro/01966__.js");
+  },
+  uk() {
+    return require("../../../../_runtime/metro/01967__.js");
+  },
+  vi() {
+    return require("../../../../_runtime/metro/01968__.js");
+  },
+  () => require("../../../../_runtime/metro/01969__.js"),
+  () => require("../../../../_runtime/metro/01970__.js")
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/shared/i18n/index.native.tsx");
@@ -101,6 +101,6 @@ export default new i18nDefault({
     }
   },
   getLanguages() {
-    return require("../../../../_runtime/metro/01965__.js");
+    return require("../../../../_runtime/metro/01971__.js");
   }
 });

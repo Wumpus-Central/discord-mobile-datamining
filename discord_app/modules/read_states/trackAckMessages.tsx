@@ -6,7 +6,7 @@ import GuildStore from "../../stores/GuildStore.tsx";
 import UserGuildSettingsStore from "../../stores/UserGuildSettingsStore.tsx";
 
 require = fn;
-const AnalyticEvents = fn(1074).AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/read_states/trackAckMessages.tsx");
 

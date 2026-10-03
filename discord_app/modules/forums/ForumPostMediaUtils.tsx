@@ -1,5 +1,6 @@
 // discord_app/modules/forums/ForumPostMediaUtils.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
+import c from "../../../_runtime/00576_c.js";
 import URLUtilsDefault from "../../utils/URLUtils.tsx";
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import FlagUtils from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
@@ -148,350 +149,868 @@ function getForumPostMedia(attachments) {
     return [];
   }
 }
-function useForumPostEmbeds(embeds, flag) {
-  _require = flag;
-  const InlineEmbedMedia = require("UserSettings").InlineEmbedMedia;
-  const setting = InlineEmbedMedia.useSetting();
-  const RenderEmbeds = require("UserSettings").RenderEmbeds;
-  if (null == embeds) {
-    return [];
-  } else {
-    const first = embeds.messageSnapshots[0];
-    let moderatorReport;
-    if (first != null) {
-      moderatorReport = first.moderatorReport;
-    }
-    if (null != moderatorReport) {
-      const first1 = embeds.messageSnapshots[0];
-      embeds = undefined;
-      if (first1 != null) {
-        embeds = first1.message.embeds;
-      }
-      let embeds1 = embeds;
-    } else {
-      embeds1 = embeds.embeds;
-    }
-    if (setting) {
-      if (tmp4) {
-        if (null != embeds1) {
-          const mapped = embeds1.map((image, mediaIndex) => {
-            let thumbnail = image.image;
-            if (thumbnail == null) {
-              thumbnail = image.thumbnail;
-            }
-            if (tmp) {
-              thumbnail = image.images[0];
-            }
-            if (null != thumbnail) {
-              if (null != thumbnail.url) {
-                ({ proxyURL, url, flags } = thumbnail);
-                let isVideoUrlResult = null != proxyURL;
-                ({ height, width } = thumbnail);
-                if (isVideoUrlResult) {
-                  const obj = MediaFormatTesters;
-                  isVideoUrlResult = obj.isVideoUrl(proxyURL);
-                }
-                const size = {
-                  type: obj.EMBED,
-                  src: null,
-                  height: null,
-                  width: null,
-                  spoiler: null,
-                  flags: null,
-                  contentScanVersion: null,
-                  isVideo: null,
-                  mediaIndex: null,
-                  srcIsAnimated: null,
-                };
-                let tmp6 = url;
-                if (null != proxyURL) {
-                  tmp6 = url;
-                  if ("" !== proxyURL) {
-                    tmp6 = proxyURL;
-                  }
-                }
-                size.src = tmp6;
-                size.height = height;
-                size.width = width;
-                size.spoiler = spoiler;
-                ({ flags: obj2.flags, contentScanVersion: obj2.contentScanVersion } = image);
-                size.isVideo = isVideoUrlResult;
-                size.mediaIndex = mediaIndex;
-                if (flags == null) {
-                  flags = 0;
-                }
-                size.srcIsAnimated = FlagUtils.hasFlag(flags, constants.IS_ANIMATED);
-                return size;
-              }
-            }
-            tmp = null == thumbnail && null != image.images;
-          });
-          let found = mapped.filter(tmp(1370).isNotNullish);
-        }
-        return found;
-      }
-    }
-    found = [];
-  }
-  tmp = _require;
-}
-function useForumPostMediaProperties(firstResult, flag) {
-  const InlineAttachmentMedia = UserSettings.InlineAttachmentMedia;
-  const items = [
-    ...getForumPostMedia(firstResult, InlineAttachmentMedia.useSetting()),
-    ...useForumPostEmbeds(firstResult, flag),
-  ];
-  const InlineEmbedMedia = UserSettings.InlineEmbedMedia;
-  if (null == firstResult) {
-    let items1 = [];
-  } else {
-    const components = firstResult.components;
-    if (tmp4) {
-      if (null != components) {
-        const _Array = Array;
-        const tmpResult = InteractionComponentUtils;
-        const flattenComponentsResult = InteractionComponentUtils.flattenComponents(components);
-        const arr = Array.from(InteractionComponentUtils.flattenComponents(components).values());
-        items1 = Array.from(InteractionComponentUtils.flattenComponents(components).values())
-          .flatMap((type) => {
-            type = type.type;
-            if (require("Server").ComponentType.THUMBNAIL === type) {
-              ({ media, spoiler } = type);
-              if (spoiler == null) {
-                spoiler = false;
-              }
-              let unfurledMediaItemType = require("MediaTypes").getUnfurledMediaItemType(media);
-              let tmp6 = null;
-              if ("INVALID" !== unfurledMediaItemType) {
-                let size = {
-                  type: constants.COMPONENT,
-                  src: null,
-                  height: null,
-                  width: null,
-                  spoiler: null,
-                  contentScanVersion: null,
-                  flags: 0,
-                  srcIsAnimated: null,
-                  isVideo: null,
-                  mediaIndex: 0,
-                  srcUnfurledMediaItem: null,
-                };
-                ({ proxyUrl: obj3.src, height } = media);
-                if (height == null) {
-                  height = 0;
-                }
-                size.height = height;
-                let num = media.width;
-                if (num == null) {
-                  num = 0;
-                }
-                size.width = num;
-                size.spoiler = spoiler;
-                let contentScanMetadata = media.contentScanMetadata;
-                let version;
-                if (contentScanMetadata != null) {
-                  version = contentScanMetadata.version;
-                }
-                size.contentScanVersion = version;
-                size.srcIsAnimated = require("FlagUtils").hasFlag(
-                  media.flags,
-                  require("MediaTypes").UnfurledMediaItemFlags.IS_ANIMATED,
-                );
-                size.isVideo = "VIDEO" === unfurledMediaItemType;
-                size.srcUnfurledMediaItem = media;
-                tmp6 = size;
-                const tmpResult2 = require("FlagUtils");
-              }
-              return tmp6;
-            } else if (require("Server").ComponentType.MEDIA_GALLERY === type) {
-              const items = type.items;
-              return items.map((item) => {
-                ({ media, spoiler } = item);
-                if (spoiler == null) {
-                  spoiler = false;
-                }
-                const unfurledMediaItemType = closure_1_0(dependencyMap[13]).getUnfurledMediaItemType(media);
-                let tmp4 = null;
-                if ("INVALID" !== unfurledMediaItemType) {
-                  const size = {
-                    type: constants.COMPONENT,
-                    src: null,
-                    height: null,
-                    width: null,
-                    spoiler: null,
-                    contentScanVersion: null,
-                    flags: 0,
-                    srcIsAnimated: null,
-                    isVideo: null,
-                    mediaIndex: 0,
-                    srcUnfurledMediaItem: null,
-                  };
-                  ({ proxyUrl: obj3.src, height } = media);
-                  if (height == null) {
-                    height = 0;
-                  }
-                  size.height = height;
-                  let num = media.width;
-                  if (num == null) {
-                    num = 0;
-                  }
-                  size.width = num;
-                  size.spoiler = spoiler;
-                  const contentScanMetadata = media.contentScanMetadata;
-                  let version;
-                  if (contentScanMetadata != null) {
-                    version = contentScanMetadata.version;
-                  }
-                  size.contentScanVersion = version;
-                  size.srcIsAnimated = closure_1_0(dependencyMap[8]).hasFlag(
-                    media.flags,
-                    closure_1_0(dependencyMap[13]).UnfurledMediaItemFlags.IS_ANIMATED,
-                  );
-                  size.isVideo = "VIDEO" === unfurledMediaItemType;
-                  size.srcUnfurledMediaItem = media;
-                  tmp4 = size;
-                  const tmpResult = closure_1_0(dependencyMap[8]);
-                }
-                return tmp4;
-              });
-            } else {
-              return null;
-            }
-          })
-          .filter(GlobalUtils.isNotNullish);
-        const flatMapResult = Array.from(InteractionComponentUtils.flattenComponents(components).values()).flatMap(
-          (type) => {
-            type = type.type;
-            if (require("Server").ComponentType.THUMBNAIL === type) {
-              ({ media, spoiler } = type);
-              if (spoiler == null) {
-                spoiler = false;
-              }
-              let unfurledMediaItemType = require("MediaTypes").getUnfurledMediaItemType(media);
-              let tmp6 = null;
-              if ("INVALID" !== unfurledMediaItemType) {
-                let size = {
-                  type: constants.COMPONENT,
-                  src: null,
-                  height: null,
-                  width: null,
-                  spoiler: null,
-                  contentScanVersion: null,
-                  flags: 0,
-                  srcIsAnimated: null,
-                  isVideo: null,
-                  mediaIndex: 0,
-                  srcUnfurledMediaItem: null,
-                };
-                ({ proxyUrl: obj3.src, height } = media);
-                if (height == null) {
-                  height = 0;
-                }
-                size.height = height;
-                let num = media.width;
-                if (num == null) {
-                  num = 0;
-                }
-                size.width = num;
-                size.spoiler = spoiler;
-                let contentScanMetadata = media.contentScanMetadata;
-                let version;
-                if (contentScanMetadata != null) {
-                  version = contentScanMetadata.version;
-                }
-                size.contentScanVersion = version;
-                size.srcIsAnimated = require("FlagUtils").hasFlag(
-                  media.flags,
-                  require("MediaTypes").UnfurledMediaItemFlags.IS_ANIMATED,
-                );
-                size.isVideo = "VIDEO" === unfurledMediaItemType;
-                size.srcUnfurledMediaItem = media;
-                tmp6 = size;
-                const tmpResult2 = require("FlagUtils");
-              }
-              return tmp6;
-            } else if (require("Server").ComponentType.MEDIA_GALLERY === type) {
-              const items = type.items;
-              return items.map((item) => {
-                ({ media, spoiler } = item);
-                if (spoiler == null) {
-                  spoiler = false;
-                }
-                const unfurledMediaItemType = closure_1_0(dependencyMap[13]).getUnfurledMediaItemType(media);
-                let tmp4 = null;
-                if ("INVALID" !== unfurledMediaItemType) {
-                  const size = {
-                    type: constants.COMPONENT,
-                    src: null,
-                    height: null,
-                    width: null,
-                    spoiler: null,
-                    contentScanVersion: null,
-                    flags: 0,
-                    srcIsAnimated: null,
-                    isVideo: null,
-                    mediaIndex: 0,
-                    srcUnfurledMediaItem: null,
-                  };
-                  ({ proxyUrl: obj3.src, height } = media);
-                  if (height == null) {
-                    height = 0;
-                  }
-                  size.height = height;
-                  let num = media.width;
-                  if (num == null) {
-                    num = 0;
-                  }
-                  size.width = num;
-                  size.spoiler = spoiler;
-                  const contentScanMetadata = media.contentScanMetadata;
-                  let version;
-                  if (contentScanMetadata != null) {
-                    version = contentScanMetadata.version;
-                  }
-                  size.contentScanVersion = version;
-                  size.srcIsAnimated = closure_1_0(dependencyMap[8]).hasFlag(
-                    media.flags,
-                    closure_1_0(dependencyMap[13]).UnfurledMediaItemFlags.IS_ANIMATED,
-                  );
-                  size.isVideo = "VIDEO" === unfurledMediaItemType;
-                  size.srcUnfurledMediaItem = media;
-                  tmp4 = size;
-                  const tmpResult = closure_1_0(dependencyMap[8]);
-                }
-                return tmp4;
-              });
-            } else {
-              return null;
-            }
-          },
-        );
-      }
-    }
-    items1 = [];
-  }
-  HermesBuiltin.arraySpread(items1, tmp3);
-  return items;
-}
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ MessageAttachmentFlags: closure_8, MessageEmbedMediaFlags: closure_9 } = Constants);
 const ForumPostMediaTypes = { EMBED: "embed", ATTACHMENT: "attachment", COMPONENT: "component" };
-let size = fn(2);
-const result = size.fileFinishedImporting("modules/forums/ForumPostMediaUtils.tsx");
-
-export const getEmbedColor = function getEmbedColor(firstResult, flag) {
-  if (null != firstResult) {
-    if (null != firstResult.embeds[0]) {
-      if (null == firstResult.embeds[0].color) {
-        if (!flag) {
-          const tmp = str;
+let ReactCompilerGating = fn(558);
+let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (attachments) => {
+      const cResult = c.c(3);
+      const InlineAttachmentMedia = UserSettings.InlineAttachmentMedia;
+      const setting = InlineAttachmentMedia.useSetting();
+      if (cResult[0] === setting) {
+        if (cResult[1] === attachments) {
+          let tmp3 = cResult[2];
+        }
+        return tmp3;
+      }
+      const tmp4 = getForumPostMedia(attachments, setting);
+      cResult[0] = setting;
+      cResult[1] = attachments;
+      cResult[2] = tmp4;
+      tmp3 = tmp4;
+    }
+  : (attachments) => {
+      const InlineAttachmentMedia = UserSettings.InlineAttachmentMedia;
+      return getForumPostMedia(attachments, InlineAttachmentMedia.useSetting());
+    };
+ReactCompilerGating = fn(558);
+let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (embeds, spoiler) => {
+      _require = spoiler;
+      let found = dependencyMap;
+      const cResult = require("c").c(7);
+      const InlineEmbedMedia = require("UserSettings").InlineEmbedMedia;
+      const setting = InlineEmbedMedia.useSetting();
+      const RenderEmbeds = require("UserSettings").RenderEmbeds;
+      if (null == embeds) {
+        const _Symbol2 = Symbol;
+        if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+          const items = [];
+          cResult[0] = items;
+          let first = items;
+        } else {
+          first = cResult[0];
+        }
+        return first;
+      } else {
+        const first1 = embeds.messageSnapshots[0];
+        let moderatorReport;
+        if (first1 != null) {
+          moderatorReport = first1.moderatorReport;
+        }
+        if (null != moderatorReport) {
+          const first2 = embeds.messageSnapshots[0];
+          embeds = undefined;
+          if (first2 != null) {
+            embeds = first2.message.embeds;
+          }
+          let embeds1 = embeds;
+        } else {
+          embeds1 = embeds.embeds;
+        }
+        if (setting) {
+          if (tmp5) {
+            if (null != embeds1) {
+              if (cResult[2] === embeds1) {
+                if (cResult[3] === spoiler) {
+                  return cResult[4];
+                }
+              }
+              if (cResult[5] !== spoiler) {
+                const fn = function p(image, mediaIndex) {
+                  let thumbnail = image.image;
+                  if (thumbnail == null) {
+                    thumbnail = image.thumbnail;
+                  }
+                  if (tmp) {
+                    thumbnail = image.images[0];
+                  }
+                  if (null != thumbnail) {
+                    if (null != thumbnail.url) {
+                      ({ proxyURL, url, flags } = thumbnail);
+                      let isVideoUrlResult = null != proxyURL;
+                      ({ height, width } = thumbnail);
+                      if (isVideoUrlResult) {
+                        const obj = MediaFormatTesters;
+                        isVideoUrlResult = obj.isVideoUrl(proxyURL);
+                      }
+                      const size = {
+                        type: obj.EMBED,
+                        src: null,
+                        height: null,
+                        width: null,
+                        spoiler: null,
+                        flags: null,
+                        contentScanVersion: null,
+                        isVideo: null,
+                        mediaIndex: null,
+                        srcIsAnimated: null,
+                      };
+                      let tmp6 = url;
+                      if (null != proxyURL) {
+                        tmp6 = url;
+                        if ("" !== proxyURL) {
+                          tmp6 = proxyURL;
+                        }
+                      }
+                      size.src = tmp6;
+                      size.height = height;
+                      size.width = width;
+                      size.spoiler = spoiler;
+                      ({ flags: obj2.flags, contentScanVersion: obj2.contentScanVersion } = image);
+                      size.isVideo = isVideoUrlResult;
+                      size.mediaIndex = mediaIndex;
+                      if (flags == null) {
+                        flags = 0;
+                      }
+                      size.srcIsAnimated = FlagUtils.hasFlag(flags, constants.IS_ANIMATED);
+                      return size;
+                    }
+                  }
+                  tmp = null == thumbnail && null != image.images;
+                };
+                cResult[5] = spoiler;
+                cResult[6] = fn;
+                let tmp9 = fn;
+              } else {
+                tmp9 = cResult[6];
+              }
+              const mapped = embeds1.map(tmp9);
+              found = mapped.filter(tmp(1375).isNotNullish);
+              cResult[2] = embeds1;
+              cResult[3] = spoiler;
+              cResult[4] = found;
+            }
+          }
+        }
+        const _Symbol = Symbol;
+        if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
+          const items1 = [];
+          cResult[1] = items1;
+          let tmp12 = items1;
+        } else {
+          tmp12 = cResult[1];
+        }
+        return tmp12;
+      }
+      let obj = require("c");
+      tmp = _require;
+    }
+  : (embeds, spoiler) => {
+      _require = spoiler;
+      const InlineEmbedMedia = require("UserSettings").InlineEmbedMedia;
+      const setting = InlineEmbedMedia.useSetting();
+      const RenderEmbeds = require("UserSettings").RenderEmbeds;
+      if (null == embeds) {
+        return [];
+      } else {
+        const first = embeds.messageSnapshots[0];
+        let moderatorReport;
+        if (first != null) {
+          moderatorReport = first.moderatorReport;
+        }
+        if (null != moderatorReport) {
+          const first1 = embeds.messageSnapshots[0];
+          embeds = undefined;
+          if (first1 != null) {
+            embeds = first1.message.embeds;
+          }
+          let embeds1 = embeds;
+        } else {
+          embeds1 = embeds.embeds;
+        }
+        if (setting) {
+          if (tmp4) {
+            if (null != embeds1) {
+              const mapped = embeds1.map((image, mediaIndex) => {
+                let thumbnail = image.image;
+                if (thumbnail == null) {
+                  thumbnail = image.thumbnail;
+                }
+                if (tmp) {
+                  thumbnail = image.images[0];
+                }
+                if (null != thumbnail) {
+                  if (null != thumbnail.url) {
+                    ({ proxyURL, url, flags } = thumbnail);
+                    let isVideoUrlResult = null != proxyURL;
+                    ({ height, width } = thumbnail);
+                    if (isVideoUrlResult) {
+                      const obj = MediaFormatTesters;
+                      isVideoUrlResult = obj.isVideoUrl(proxyURL);
+                    }
+                    const size = {
+                      type: obj.EMBED,
+                      src: null,
+                      height: null,
+                      width: null,
+                      spoiler: null,
+                      flags: null,
+                      contentScanVersion: null,
+                      isVideo: null,
+                      mediaIndex: null,
+                      srcIsAnimated: null,
+                    };
+                    let tmp6 = url;
+                    if (null != proxyURL) {
+                      tmp6 = url;
+                      if ("" !== proxyURL) {
+                        tmp6 = proxyURL;
+                      }
+                    }
+                    size.src = tmp6;
+                    size.height = height;
+                    size.width = width;
+                    size.spoiler = spoiler;
+                    ({ flags: obj2.flags, contentScanVersion: obj2.contentScanVersion } = image);
+                    size.isVideo = isVideoUrlResult;
+                    size.mediaIndex = mediaIndex;
+                    if (flags == null) {
+                      flags = 0;
+                    }
+                    size.srcIsAnimated = FlagUtils.hasFlag(flags, constants.IS_ANIMATED);
+                    return size;
+                  }
+                }
+                tmp = null == thumbnail && null != image.images;
+              });
+              let found = mapped.filter(tmp(1375).isNotNullish);
+            }
+            return found;
+          }
+        }
+        found = [];
+      }
+      tmp = _require;
+    };
+ReactCompilerGating = fn(558);
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (components) => {
+      let found = dependencyMap;
+      const cResult = c.c(4);
+      const InlineEmbedMedia = UserSettings.InlineEmbedMedia;
+      if (null == components) {
+        const _Symbol2 = Symbol;
+        if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+          let items = [];
+          cResult[0] = items;
+          let first = items;
+        } else {
+          first = cResult[0];
+        }
+        return first;
+      } else {
+        components = components.components;
+        if (tmp4) {
+          if (null != components) {
+            if (cResult[2] !== components) {
+              const _Array = Array;
+              let tmpResult = InteractionComponentUtils;
+              const flattenComponentsResult = InteractionComponentUtils.flattenComponents(components);
+              const arr = Array.from(InteractionComponentUtils.flattenComponents(components).values());
+              found = Array.from(InteractionComponentUtils.flattenComponents(components).values())
+                .flatMap((type) => {
+                  type = type.type;
+                  if (require("Server").ComponentType.THUMBNAIL === type) {
+                    ({ media, spoiler } = type);
+                    if (spoiler == null) {
+                      spoiler = false;
+                    }
+                    let unfurledMediaItemType = require("MediaTypes").getUnfurledMediaItemType(media);
+                    let tmp6 = null;
+                    if ("INVALID" !== unfurledMediaItemType) {
+                      let size = {
+                        type: constants.COMPONENT,
+                        src: null,
+                        height: null,
+                        width: null,
+                        spoiler: null,
+                        contentScanVersion: null,
+                        flags: 0,
+                        srcIsAnimated: null,
+                        isVideo: null,
+                        mediaIndex: 0,
+                        srcUnfurledMediaItem: null,
+                      };
+                      ({ proxyUrl: obj3.src, height } = media);
+                      if (height == null) {
+                        height = 0;
+                      }
+                      size.height = height;
+                      let num = media.width;
+                      if (num == null) {
+                        num = 0;
+                      }
+                      size.width = num;
+                      size.spoiler = spoiler;
+                      let contentScanMetadata = media.contentScanMetadata;
+                      let version;
+                      if (contentScanMetadata != null) {
+                        version = contentScanMetadata.version;
+                      }
+                      size.contentScanVersion = version;
+                      size.srcIsAnimated = require("FlagUtils").hasFlag(
+                        media.flags,
+                        require("MediaTypes").UnfurledMediaItemFlags.IS_ANIMATED,
+                      );
+                      size.isVideo = "VIDEO" === unfurledMediaItemType;
+                      size.srcUnfurledMediaItem = media;
+                      tmp6 = size;
+                      const tmpResult2 = require("FlagUtils");
+                    }
+                    return tmp6;
+                  } else if (require("Server").ComponentType.MEDIA_GALLERY === type) {
+                    const items = type.items;
+                    return items.map((item) => {
+                      ({ media, spoiler } = item);
+                      if (spoiler == null) {
+                        spoiler = false;
+                      }
+                      const unfurledMediaItemType = closure_1_0(dependencyMap[15]).getUnfurledMediaItemType(media);
+                      let tmp4 = null;
+                      if ("INVALID" !== unfurledMediaItemType) {
+                        const size = {
+                          type: constants.COMPONENT,
+                          src: null,
+                          height: null,
+                          width: null,
+                          spoiler: null,
+                          contentScanVersion: null,
+                          flags: 0,
+                          srcIsAnimated: null,
+                          isVideo: null,
+                          mediaIndex: 0,
+                          srcUnfurledMediaItem: null,
+                        };
+                        ({ proxyUrl: obj3.src, height } = media);
+                        if (height == null) {
+                          height = 0;
+                        }
+                        size.height = height;
+                        let num = media.width;
+                        if (num == null) {
+                          num = 0;
+                        }
+                        size.width = num;
+                        size.spoiler = spoiler;
+                        const contentScanMetadata = media.contentScanMetadata;
+                        let version;
+                        if (contentScanMetadata != null) {
+                          version = contentScanMetadata.version;
+                        }
+                        size.contentScanVersion = version;
+                        size.srcIsAnimated = closure_1_0(dependencyMap[8]).hasFlag(
+                          media.flags,
+                          closure_1_0(dependencyMap[15]).UnfurledMediaItemFlags.IS_ANIMATED,
+                        );
+                        size.isVideo = "VIDEO" === unfurledMediaItemType;
+                        size.srcUnfurledMediaItem = media;
+                        tmp4 = size;
+                        const tmpResult = closure_1_0(dependencyMap[8]);
+                      }
+                      return tmp4;
+                    });
+                  } else {
+                    return null;
+                  }
+                })
+                .filter(GlobalUtils.isNotNullish);
+              cResult[2] = components;
+              cResult[3] = found;
+              const flatMapResult = Array.from(
+                InteractionComponentUtils.flattenComponents(components).values(),
+              ).flatMap((type) => {
+                type = type.type;
+                if (require("Server").ComponentType.THUMBNAIL === type) {
+                  ({ media, spoiler } = type);
+                  if (spoiler == null) {
+                    spoiler = false;
+                  }
+                  let unfurledMediaItemType = require("MediaTypes").getUnfurledMediaItemType(media);
+                  let tmp6 = null;
+                  if ("INVALID" !== unfurledMediaItemType) {
+                    let size = {
+                      type: constants.COMPONENT,
+                      src: null,
+                      height: null,
+                      width: null,
+                      spoiler: null,
+                      contentScanVersion: null,
+                      flags: 0,
+                      srcIsAnimated: null,
+                      isVideo: null,
+                      mediaIndex: 0,
+                      srcUnfurledMediaItem: null,
+                    };
+                    ({ proxyUrl: obj3.src, height } = media);
+                    if (height == null) {
+                      height = 0;
+                    }
+                    size.height = height;
+                    let num = media.width;
+                    if (num == null) {
+                      num = 0;
+                    }
+                    size.width = num;
+                    size.spoiler = spoiler;
+                    let contentScanMetadata = media.contentScanMetadata;
+                    let version;
+                    if (contentScanMetadata != null) {
+                      version = contentScanMetadata.version;
+                    }
+                    size.contentScanVersion = version;
+                    size.srcIsAnimated = require("FlagUtils").hasFlag(
+                      media.flags,
+                      require("MediaTypes").UnfurledMediaItemFlags.IS_ANIMATED,
+                    );
+                    size.isVideo = "VIDEO" === unfurledMediaItemType;
+                    size.srcUnfurledMediaItem = media;
+                    tmp6 = size;
+                    const tmpResult2 = require("FlagUtils");
+                  }
+                  return tmp6;
+                } else if (require("Server").ComponentType.MEDIA_GALLERY === type) {
+                  const items = type.items;
+                  return items.map((item) => {
+                    ({ media, spoiler } = item);
+                    if (spoiler == null) {
+                      spoiler = false;
+                    }
+                    const unfurledMediaItemType = closure_1_0(dependencyMap[15]).getUnfurledMediaItemType(media);
+                    let tmp4 = null;
+                    if ("INVALID" !== unfurledMediaItemType) {
+                      const size = {
+                        type: constants.COMPONENT,
+                        src: null,
+                        height: null,
+                        width: null,
+                        spoiler: null,
+                        contentScanVersion: null,
+                        flags: 0,
+                        srcIsAnimated: null,
+                        isVideo: null,
+                        mediaIndex: 0,
+                        srcUnfurledMediaItem: null,
+                      };
+                      ({ proxyUrl: obj3.src, height } = media);
+                      if (height == null) {
+                        height = 0;
+                      }
+                      size.height = height;
+                      let num = media.width;
+                      if (num == null) {
+                        num = 0;
+                      }
+                      size.width = num;
+                      size.spoiler = spoiler;
+                      const contentScanMetadata = media.contentScanMetadata;
+                      let version;
+                      if (contentScanMetadata != null) {
+                        version = contentScanMetadata.version;
+                      }
+                      size.contentScanVersion = version;
+                      size.srcIsAnimated = closure_1_0(dependencyMap[8]).hasFlag(
+                        media.flags,
+                        closure_1_0(dependencyMap[15]).UnfurledMediaItemFlags.IS_ANIMATED,
+                      );
+                      size.isVideo = "VIDEO" === unfurledMediaItemType;
+                      size.srcUnfurledMediaItem = media;
+                      tmp4 = size;
+                      const tmpResult = closure_1_0(dependencyMap[8]);
+                    }
+                    return tmp4;
+                  });
+                } else {
+                  return null;
+                }
+              });
+            }
+          }
+        }
+        const _Symbol = Symbol;
+        if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
+          const items1 = [];
+          cResult[1] = items1;
+          let tmp6 = items1;
+        } else {
+          tmp6 = cResult[1];
+        }
+        return tmp6;
+      }
+    }
+  : (components) => {
+      const InlineEmbedMedia = UserSettings.InlineEmbedMedia;
+      if (null == components) {
+        return [];
+      } else {
+        components = components.components;
+        if (tmp3) {
+          if (null != components) {
+            const _Array = Array;
+            let tmpResult = InteractionComponentUtils;
+            const flattenComponentsResult = InteractionComponentUtils.flattenComponents(components);
+            const arr = Array.from(InteractionComponentUtils.flattenComponents(components).values());
+            let found = Array.from(InteractionComponentUtils.flattenComponents(components).values())
+              .flatMap((type) => {
+                type = type.type;
+                if (require("Server").ComponentType.THUMBNAIL === type) {
+                  ({ media, spoiler } = type);
+                  if (spoiler == null) {
+                    spoiler = false;
+                  }
+                  let unfurledMediaItemType = require("MediaTypes").getUnfurledMediaItemType(media);
+                  let tmp6 = null;
+                  if ("INVALID" !== unfurledMediaItemType) {
+                    let size = {
+                      type: constants.COMPONENT,
+                      src: null,
+                      height: null,
+                      width: null,
+                      spoiler: null,
+                      contentScanVersion: null,
+                      flags: 0,
+                      srcIsAnimated: null,
+                      isVideo: null,
+                      mediaIndex: 0,
+                      srcUnfurledMediaItem: null,
+                    };
+                    ({ proxyUrl: obj3.src, height } = media);
+                    if (height == null) {
+                      height = 0;
+                    }
+                    size.height = height;
+                    let num = media.width;
+                    if (num == null) {
+                      num = 0;
+                    }
+                    size.width = num;
+                    size.spoiler = spoiler;
+                    let contentScanMetadata = media.contentScanMetadata;
+                    let version;
+                    if (contentScanMetadata != null) {
+                      version = contentScanMetadata.version;
+                    }
+                    size.contentScanVersion = version;
+                    size.srcIsAnimated = require("FlagUtils").hasFlag(
+                      media.flags,
+                      require("MediaTypes").UnfurledMediaItemFlags.IS_ANIMATED,
+                    );
+                    size.isVideo = "VIDEO" === unfurledMediaItemType;
+                    size.srcUnfurledMediaItem = media;
+                    tmp6 = size;
+                    const tmpResult2 = require("FlagUtils");
+                  }
+                  return tmp6;
+                } else if (require("Server").ComponentType.MEDIA_GALLERY === type) {
+                  const items = type.items;
+                  return items.map((item) => {
+                    ({ media, spoiler } = item);
+                    if (spoiler == null) {
+                      spoiler = false;
+                    }
+                    const unfurledMediaItemType = closure_1_0(dependencyMap[15]).getUnfurledMediaItemType(media);
+                    let tmp4 = null;
+                    if ("INVALID" !== unfurledMediaItemType) {
+                      const size = {
+                        type: constants.COMPONENT,
+                        src: null,
+                        height: null,
+                        width: null,
+                        spoiler: null,
+                        contentScanVersion: null,
+                        flags: 0,
+                        srcIsAnimated: null,
+                        isVideo: null,
+                        mediaIndex: 0,
+                        srcUnfurledMediaItem: null,
+                      };
+                      ({ proxyUrl: obj3.src, height } = media);
+                      if (height == null) {
+                        height = 0;
+                      }
+                      size.height = height;
+                      let num = media.width;
+                      if (num == null) {
+                        num = 0;
+                      }
+                      size.width = num;
+                      size.spoiler = spoiler;
+                      const contentScanMetadata = media.contentScanMetadata;
+                      let version;
+                      if (contentScanMetadata != null) {
+                        version = contentScanMetadata.version;
+                      }
+                      size.contentScanVersion = version;
+                      size.srcIsAnimated = closure_1_0(dependencyMap[8]).hasFlag(
+                        media.flags,
+                        closure_1_0(dependencyMap[15]).UnfurledMediaItemFlags.IS_ANIMATED,
+                      );
+                      size.isVideo = "VIDEO" === unfurledMediaItemType;
+                      size.srcUnfurledMediaItem = media;
+                      tmp4 = size;
+                      const tmpResult = closure_1_0(dependencyMap[8]);
+                    }
+                    return tmp4;
+                  });
+                } else {
+                  return null;
+                }
+              })
+              .filter(GlobalUtils.isNotNullish);
+            const flatMapResult = Array.from(InteractionComponentUtils.flattenComponents(components).values()).flatMap(
+              (type) => {
+                type = type.type;
+                if (require("Server").ComponentType.THUMBNAIL === type) {
+                  ({ media, spoiler } = type);
+                  if (spoiler == null) {
+                    spoiler = false;
+                  }
+                  let unfurledMediaItemType = require("MediaTypes").getUnfurledMediaItemType(media);
+                  let tmp6 = null;
+                  if ("INVALID" !== unfurledMediaItemType) {
+                    let size = {
+                      type: constants.COMPONENT,
+                      src: null,
+                      height: null,
+                      width: null,
+                      spoiler: null,
+                      contentScanVersion: null,
+                      flags: 0,
+                      srcIsAnimated: null,
+                      isVideo: null,
+                      mediaIndex: 0,
+                      srcUnfurledMediaItem: null,
+                    };
+                    ({ proxyUrl: obj3.src, height } = media);
+                    if (height == null) {
+                      height = 0;
+                    }
+                    size.height = height;
+                    let num = media.width;
+                    if (num == null) {
+                      num = 0;
+                    }
+                    size.width = num;
+                    size.spoiler = spoiler;
+                    let contentScanMetadata = media.contentScanMetadata;
+                    let version;
+                    if (contentScanMetadata != null) {
+                      version = contentScanMetadata.version;
+                    }
+                    size.contentScanVersion = version;
+                    size.srcIsAnimated = require("FlagUtils").hasFlag(
+                      media.flags,
+                      require("MediaTypes").UnfurledMediaItemFlags.IS_ANIMATED,
+                    );
+                    size.isVideo = "VIDEO" === unfurledMediaItemType;
+                    size.srcUnfurledMediaItem = media;
+                    tmp6 = size;
+                    const tmpResult2 = require("FlagUtils");
+                  }
+                  return tmp6;
+                } else if (require("Server").ComponentType.MEDIA_GALLERY === type) {
+                  const items = type.items;
+                  return items.map((item) => {
+                    ({ media, spoiler } = item);
+                    if (spoiler == null) {
+                      spoiler = false;
+                    }
+                    const unfurledMediaItemType = closure_1_0(dependencyMap[15]).getUnfurledMediaItemType(media);
+                    let tmp4 = null;
+                    if ("INVALID" !== unfurledMediaItemType) {
+                      const size = {
+                        type: constants.COMPONENT,
+                        src: null,
+                        height: null,
+                        width: null,
+                        spoiler: null,
+                        contentScanVersion: null,
+                        flags: 0,
+                        srcIsAnimated: null,
+                        isVideo: null,
+                        mediaIndex: 0,
+                        srcUnfurledMediaItem: null,
+                      };
+                      ({ proxyUrl: obj3.src, height } = media);
+                      if (height == null) {
+                        height = 0;
+                      }
+                      size.height = height;
+                      let num = media.width;
+                      if (num == null) {
+                        num = 0;
+                      }
+                      size.width = num;
+                      size.spoiler = spoiler;
+                      const contentScanMetadata = media.contentScanMetadata;
+                      let version;
+                      if (contentScanMetadata != null) {
+                        version = contentScanMetadata.version;
+                      }
+                      size.contentScanVersion = version;
+                      size.srcIsAnimated = closure_1_0(dependencyMap[8]).hasFlag(
+                        media.flags,
+                        closure_1_0(dependencyMap[15]).UnfurledMediaItemFlags.IS_ANIMATED,
+                      );
+                      size.isVideo = "VIDEO" === unfurledMediaItemType;
+                      size.srcUnfurledMediaItem = media;
+                      tmp4 = size;
+                      const tmpResult = closure_1_0(dependencyMap[8]);
+                    }
+                    return tmp4;
+                  });
+                } else {
+                  return null;
+                }
+              },
+            );
+          }
+          return found;
+        }
+        found = [];
+      }
+    };
+let closure_15 = tmp3;
+fn(558);
+ReactCompilerGating = fn(558);
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0, arg1) => {
+      const cResult = c.c(4);
+      const tmp2 = closure_13(arg0);
+      const tmp3 = closure_14(arg0, arg1);
+      const tmp4 = closure_15(arg0);
+      if (cResult[0] === tmp4) {
+        if (cResult[1] === tmp3) {
+          if (cResult[2] === tmp2) {
+            let tmp5 = cResult[3];
+          }
+          return tmp5;
         }
       }
-      return tmp;
+      const items = [...tmp4];
+      cResult[0] = tmp4;
+      cResult[1] = tmp3;
+      cResult[2] = tmp2;
+      cResult[3] = items;
+      tmp5 = items;
     }
-  }
-};
-export const isValidImageAttachment = function isValidImageAttachment(filename) {
+  : (arg0, arg1) => {
+      const items = [...closure_13(arg0), ...closure_14(arg0, arg1), ...closure_15(arg0)];
+      return items;
+    };
+let closure_16 = tmp5;
+ReactCompilerGating = fn(558);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0, isMediaChannel, arg2) => {
+      const cResult = c.c(7);
+      let tmp3 = undefined !== arg2;
+      if (tmp3) {
+        tmp3 = arg2;
+      }
+      const tmp2Result = closure_16(arg0, tmp3);
+      if (null != isMediaChannel) {
+        let first = tmp2Result;
+        if (isMediaChannel.isMediaChannel()) {
+          if (cResult[1] !== tmp2Result) {
+            const _Symbol2 = Symbol;
+            if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+              const fn = function h(isThumbnail) {
+                return isThumbnail.isThumbnail;
+              };
+              cResult[3] = fn;
+              let tmp8 = fn;
+            } else {
+              tmp8 = cResult[3];
+            }
+            const found = tmp2Result.find(tmp8);
+            cResult[1] = tmp2Result;
+            cResult[2] = found;
+          } else {
+            if (cResult[4] === tmp2Result) {
+            }
+            let tmp12 = tmp2Result;
+            if (null != cResult[2]) {
+              const items = [tmp6];
+              tmp12 = items;
+            }
+            cResult[4] = tmp2Result;
+            cResult[5] = cResult[2];
+            cResult[6] = tmp12;
+          }
+        }
+      } else {
+        const _Symbol = Symbol;
+        if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+          const items1 = [];
+          cResult[0] = items1;
+          first = items1;
+        } else {
+          first = cResult[0];
+        }
+      }
+      return first;
+    }
+  : (arg0, arg1) => {
+      const mediaChannel = arg1;
+      let flag = arg2;
+      if (arg2 === undefined) {
+        flag = false;
+      }
+      const tmp = closure_16(arg0, flag);
+      closure_1 = tmp;
+      let items = [arg1, tmp];
+      return noop.useMemo(() => {
+        if (null == mediaChannel) {
+          return [];
+        } else {
+          let arr = closure_1;
+          if (mediaChannel.isMediaChannel()) {
+            const found = arr.find((isThumbnail) => isThumbnail.isThumbnail);
+            if (null != found) {
+              const items = [found];
+              arr = items;
+            }
+            return arr;
+          } else {
+            return arr;
+          }
+        }
+      }, items);
+    };
+ReactCompilerGating = fn(558);
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0, arg1) => {
+      const tmp = closure_13(arg0);
+      let first = tmp[0];
+      const tmp2 = closure_14(arg0, arg1);
+      if (first == null) {
+        first = tmp2[0];
+      }
+      if (first == null) {
+        first = tmp3[0];
+      }
+      if (first == null) {
+        first = null;
+      }
+      return first;
+    }
+  : (arg0, arg1) => {
+      const tmp = closure_13(arg0);
+      let first = tmp[0];
+      const tmp2 = closure_14(arg0, arg1);
+      if (first == null) {
+        first = tmp2[0];
+      }
+      if (first == null) {
+        first = tmp3[0];
+      }
+      if (first == null) {
+        first = null;
+      }
+      return first;
+    };
+function isValidImageAttachment(filename) {
   if (null == filename) {
     return false;
   } else {
@@ -508,8 +1027,8 @@ export const isValidImageAttachment = function isValidImageAttachment(filename) 
     }
     return tmp3;
   }
-};
-export const isValidVideoAttachment = function isValidVideoAttachment(filename) {
+}
+function isValidVideoAttachment(filename) {
   let tmp = null != filename;
   if (tmp) {
     let isVideoFileResult = null != filename;
@@ -522,748 +1041,42 @@ export const isValidVideoAttachment = function isValidVideoAttachment(filename) 
     tmp = isVideoFileResult;
   }
   return tmp;
+}
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/forums/ForumPostMediaUtils.tsx");
+
+export const getEmbedColor = function getEmbedColor(firstResult, flag) {
+  if (null != firstResult) {
+    if (null != firstResult.embeds[0]) {
+      if (null == firstResult.embeds[0].color) {
+        if (!flag) {
+          const tmp = str;
+        }
+      }
+      return tmp;
+    }
+  }
 };
+export { isValidImageAttachment };
+export { isValidVideoAttachment };
 export { isMediaAttachment };
 export { ForumPostMediaTypes };
 export { getForumPostMedia };
-export const useForumPostComponentsMedia = function useForumPostComponentsMedia(components) {
-  const InlineEmbedMedia = UserSettings.InlineEmbedMedia;
-  if (null == components) {
-    return [];
-  } else {
-    components = components.components;
-    if (tmp3) {
-      if (null != components) {
-        const _Array = Array;
-        const tmpResult = InteractionComponentUtils;
-        const flattenComponentsResult = InteractionComponentUtils.flattenComponents(components);
-        const arr = Array.from(InteractionComponentUtils.flattenComponents(components).values());
-        let found = Array.from(InteractionComponentUtils.flattenComponents(components).values())
-          .flatMap((type) => {
-            type = type.type;
-            if (require("Server").ComponentType.THUMBNAIL === type) {
-              ({ media, spoiler } = type);
-              if (spoiler == null) {
-                spoiler = false;
-              }
-              let unfurledMediaItemType = require("MediaTypes").getUnfurledMediaItemType(media);
-              let tmp6 = null;
-              if ("INVALID" !== unfurledMediaItemType) {
-                let size = {
-                  type: constants.COMPONENT,
-                  src: null,
-                  height: null,
-                  width: null,
-                  spoiler: null,
-                  contentScanVersion: null,
-                  flags: 0,
-                  srcIsAnimated: null,
-                  isVideo: null,
-                  mediaIndex: 0,
-                  srcUnfurledMediaItem: null,
-                };
-                ({ proxyUrl: obj3.src, height } = media);
-                if (height == null) {
-                  height = 0;
-                }
-                size.height = height;
-                let num = media.width;
-                if (num == null) {
-                  num = 0;
-                }
-                size.width = num;
-                size.spoiler = spoiler;
-                let contentScanMetadata = media.contentScanMetadata;
-                let version;
-                if (contentScanMetadata != null) {
-                  version = contentScanMetadata.version;
-                }
-                size.contentScanVersion = version;
-                size.srcIsAnimated = require("FlagUtils").hasFlag(
-                  media.flags,
-                  require("MediaTypes").UnfurledMediaItemFlags.IS_ANIMATED,
-                );
-                size.isVideo = "VIDEO" === unfurledMediaItemType;
-                size.srcUnfurledMediaItem = media;
-                tmp6 = size;
-                const tmpResult2 = require("FlagUtils");
-              }
-              return tmp6;
-            } else if (require("Server").ComponentType.MEDIA_GALLERY === type) {
-              const items = type.items;
-              return items.map((item) => {
-                ({ media, spoiler } = item);
-                if (spoiler == null) {
-                  spoiler = false;
-                }
-                const unfurledMediaItemType = closure_1_0(dependencyMap[13]).getUnfurledMediaItemType(media);
-                let tmp4 = null;
-                if ("INVALID" !== unfurledMediaItemType) {
-                  const size = {
-                    type: constants.COMPONENT,
-                    src: null,
-                    height: null,
-                    width: null,
-                    spoiler: null,
-                    contentScanVersion: null,
-                    flags: 0,
-                    srcIsAnimated: null,
-                    isVideo: null,
-                    mediaIndex: 0,
-                    srcUnfurledMediaItem: null,
-                  };
-                  ({ proxyUrl: obj3.src, height } = media);
-                  if (height == null) {
-                    height = 0;
-                  }
-                  size.height = height;
-                  let num = media.width;
-                  if (num == null) {
-                    num = 0;
-                  }
-                  size.width = num;
-                  size.spoiler = spoiler;
-                  const contentScanMetadata = media.contentScanMetadata;
-                  let version;
-                  if (contentScanMetadata != null) {
-                    version = contentScanMetadata.version;
-                  }
-                  size.contentScanVersion = version;
-                  size.srcIsAnimated = closure_1_0(dependencyMap[8]).hasFlag(
-                    media.flags,
-                    closure_1_0(dependencyMap[13]).UnfurledMediaItemFlags.IS_ANIMATED,
-                  );
-                  size.isVideo = "VIDEO" === unfurledMediaItemType;
-                  size.srcUnfurledMediaItem = media;
-                  tmp4 = size;
-                  const tmpResult = closure_1_0(dependencyMap[8]);
-                }
-                return tmp4;
-              });
-            } else {
-              return null;
-            }
-          })
-          .filter(GlobalUtils.isNotNullish);
-        const flatMapResult = Array.from(InteractionComponentUtils.flattenComponents(components).values()).flatMap(
-          (type) => {
-            type = type.type;
-            if (require("Server").ComponentType.THUMBNAIL === type) {
-              ({ media, spoiler } = type);
-              if (spoiler == null) {
-                spoiler = false;
-              }
-              let unfurledMediaItemType = require("MediaTypes").getUnfurledMediaItemType(media);
-              let tmp6 = null;
-              if ("INVALID" !== unfurledMediaItemType) {
-                let size = {
-                  type: constants.COMPONENT,
-                  src: null,
-                  height: null,
-                  width: null,
-                  spoiler: null,
-                  contentScanVersion: null,
-                  flags: 0,
-                  srcIsAnimated: null,
-                  isVideo: null,
-                  mediaIndex: 0,
-                  srcUnfurledMediaItem: null,
-                };
-                ({ proxyUrl: obj3.src, height } = media);
-                if (height == null) {
-                  height = 0;
-                }
-                size.height = height;
-                let num = media.width;
-                if (num == null) {
-                  num = 0;
-                }
-                size.width = num;
-                size.spoiler = spoiler;
-                let contentScanMetadata = media.contentScanMetadata;
-                let version;
-                if (contentScanMetadata != null) {
-                  version = contentScanMetadata.version;
-                }
-                size.contentScanVersion = version;
-                size.srcIsAnimated = require("FlagUtils").hasFlag(
-                  media.flags,
-                  require("MediaTypes").UnfurledMediaItemFlags.IS_ANIMATED,
-                );
-                size.isVideo = "VIDEO" === unfurledMediaItemType;
-                size.srcUnfurledMediaItem = media;
-                tmp6 = size;
-                const tmpResult2 = require("FlagUtils");
-              }
-              return tmp6;
-            } else if (require("Server").ComponentType.MEDIA_GALLERY === type) {
-              const items = type.items;
-              return items.map((item) => {
-                ({ media, spoiler } = item);
-                if (spoiler == null) {
-                  spoiler = false;
-                }
-                const unfurledMediaItemType = closure_1_0(dependencyMap[13]).getUnfurledMediaItemType(media);
-                let tmp4 = null;
-                if ("INVALID" !== unfurledMediaItemType) {
-                  const size = {
-                    type: constants.COMPONENT,
-                    src: null,
-                    height: null,
-                    width: null,
-                    spoiler: null,
-                    contentScanVersion: null,
-                    flags: 0,
-                    srcIsAnimated: null,
-                    isVideo: null,
-                    mediaIndex: 0,
-                    srcUnfurledMediaItem: null,
-                  };
-                  ({ proxyUrl: obj3.src, height } = media);
-                  if (height == null) {
-                    height = 0;
-                  }
-                  size.height = height;
-                  let num = media.width;
-                  if (num == null) {
-                    num = 0;
-                  }
-                  size.width = num;
-                  size.spoiler = spoiler;
-                  const contentScanMetadata = media.contentScanMetadata;
-                  let version;
-                  if (contentScanMetadata != null) {
-                    version = contentScanMetadata.version;
-                  }
-                  size.contentScanVersion = version;
-                  size.srcIsAnimated = closure_1_0(dependencyMap[8]).hasFlag(
-                    media.flags,
-                    closure_1_0(dependencyMap[13]).UnfurledMediaItemFlags.IS_ANIMATED,
-                  );
-                  size.isVideo = "VIDEO" === unfurledMediaItemType;
-                  size.srcUnfurledMediaItem = media;
-                  tmp4 = size;
-                  const tmpResult = closure_1_0(dependencyMap[8]);
-                }
-                return tmp4;
-              });
-            } else {
-              return null;
-            }
-          },
-        );
-      }
-      return found;
+export const useForumPostComponentsMedia = tmp3;
+export const useForumPostMediaThumbnail = tmp4;
+export const useForumPostMediaProperties = tmp5;
+export const useFindFirstMediaProperties = tmp6;
+export const useFirstMediaIsEmbed = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0, arg1) => {
+      const tmp = closure_13(arg0);
+      const tmp2 = closure_14(arg0, arg1);
+      return null == tmp[0] && null == closure_15(arg0)[0] && null != closure_14(arg0, arg1)[0];
     }
-    found = [];
-  }
-};
-export const useForumPostMediaThumbnail = function useForumPostMediaThumbnail(firstMessage, stateFromStores1) {
-  let flag = hasSpoilerEmbeds;
-  if (hasSpoilerEmbeds === undefined) {
-    flag = false;
-  }
-  const tmp = useForumPostMediaProperties(firstMessage, flag);
-  closure_1 = tmp;
-  let items = [stateFromStores1, tmp];
-  return noop.useMemo(() => {
-    if (null == stateFromStores1) {
-      return [];
-    } else {
-      let arr = closure_1;
-      if (stateFromStores1.isMediaChannel()) {
-        const found = arr.find((isThumbnail) => isThumbnail.isThumbnail);
-        if (null != found) {
-          const items = [found];
-          arr = items;
-        }
-        return arr;
-      } else {
-        return arr;
-      }
-    }
-  }, items);
-};
-export { useForumPostMediaProperties };
-export const useFindFirstMediaProperties = function useFindFirstMediaProperties(firstMessage, hasSpoilerEmbeds) {
-  const InlineAttachmentMedia = UserSettings.InlineAttachmentMedia;
-  const tmp3 = getForumPostMedia(firstMessage, InlineAttachmentMedia.useSetting());
-  const InlineEmbedMedia = UserSettings.InlineEmbedMedia;
-  if (null == firstMessage) {
-    let items = [];
-  } else {
-    const components = firstMessage.components;
-    if (tmp5) {
-      if (null != components) {
-        const _Array = Array;
-        const tmpResult = InteractionComponentUtils;
-        const flattenComponentsResult = InteractionComponentUtils.flattenComponents(components);
-        const arr = Array.from(InteractionComponentUtils.flattenComponents(components).values());
-        items = Array.from(InteractionComponentUtils.flattenComponents(components).values())
-          .flatMap((type) => {
-            type = type.type;
-            if (require("Server").ComponentType.THUMBNAIL === type) {
-              ({ media, spoiler } = type);
-              if (spoiler == null) {
-                spoiler = false;
-              }
-              let unfurledMediaItemType = require("MediaTypes").getUnfurledMediaItemType(media);
-              let tmp6 = null;
-              if ("INVALID" !== unfurledMediaItemType) {
-                let size = {
-                  type: constants.COMPONENT,
-                  src: null,
-                  height: null,
-                  width: null,
-                  spoiler: null,
-                  contentScanVersion: null,
-                  flags: 0,
-                  srcIsAnimated: null,
-                  isVideo: null,
-                  mediaIndex: 0,
-                  srcUnfurledMediaItem: null,
-                };
-                ({ proxyUrl: obj3.src, height } = media);
-                if (height == null) {
-                  height = 0;
-                }
-                size.height = height;
-                let num = media.width;
-                if (num == null) {
-                  num = 0;
-                }
-                size.width = num;
-                size.spoiler = spoiler;
-                let contentScanMetadata = media.contentScanMetadata;
-                let version;
-                if (contentScanMetadata != null) {
-                  version = contentScanMetadata.version;
-                }
-                size.contentScanVersion = version;
-                size.srcIsAnimated = require("FlagUtils").hasFlag(
-                  media.flags,
-                  require("MediaTypes").UnfurledMediaItemFlags.IS_ANIMATED,
-                );
-                size.isVideo = "VIDEO" === unfurledMediaItemType;
-                size.srcUnfurledMediaItem = media;
-                tmp6 = size;
-                const tmpResult2 = require("FlagUtils");
-              }
-              return tmp6;
-            } else if (require("Server").ComponentType.MEDIA_GALLERY === type) {
-              const items = type.items;
-              return items.map((item) => {
-                ({ media, spoiler } = item);
-                if (spoiler == null) {
-                  spoiler = false;
-                }
-                const unfurledMediaItemType = closure_1_0(dependencyMap[13]).getUnfurledMediaItemType(media);
-                let tmp4 = null;
-                if ("INVALID" !== unfurledMediaItemType) {
-                  const size = {
-                    type: constants.COMPONENT,
-                    src: null,
-                    height: null,
-                    width: null,
-                    spoiler: null,
-                    contentScanVersion: null,
-                    flags: 0,
-                    srcIsAnimated: null,
-                    isVideo: null,
-                    mediaIndex: 0,
-                    srcUnfurledMediaItem: null,
-                  };
-                  ({ proxyUrl: obj3.src, height } = media);
-                  if (height == null) {
-                    height = 0;
-                  }
-                  size.height = height;
-                  let num = media.width;
-                  if (num == null) {
-                    num = 0;
-                  }
-                  size.width = num;
-                  size.spoiler = spoiler;
-                  const contentScanMetadata = media.contentScanMetadata;
-                  let version;
-                  if (contentScanMetadata != null) {
-                    version = contentScanMetadata.version;
-                  }
-                  size.contentScanVersion = version;
-                  size.srcIsAnimated = closure_1_0(dependencyMap[8]).hasFlag(
-                    media.flags,
-                    closure_1_0(dependencyMap[13]).UnfurledMediaItemFlags.IS_ANIMATED,
-                  );
-                  size.isVideo = "VIDEO" === unfurledMediaItemType;
-                  size.srcUnfurledMediaItem = media;
-                  tmp4 = size;
-                  const tmpResult = closure_1_0(dependencyMap[8]);
-                }
-                return tmp4;
-              });
-            } else {
-              return null;
-            }
-          })
-          .filter(GlobalUtils.isNotNullish);
-        const flatMapResult = Array.from(InteractionComponentUtils.flattenComponents(components).values()).flatMap(
-          (type) => {
-            type = type.type;
-            if (require("Server").ComponentType.THUMBNAIL === type) {
-              ({ media, spoiler } = type);
-              if (spoiler == null) {
-                spoiler = false;
-              }
-              let unfurledMediaItemType = require("MediaTypes").getUnfurledMediaItemType(media);
-              let tmp6 = null;
-              if ("INVALID" !== unfurledMediaItemType) {
-                let size = {
-                  type: constants.COMPONENT,
-                  src: null,
-                  height: null,
-                  width: null,
-                  spoiler: null,
-                  contentScanVersion: null,
-                  flags: 0,
-                  srcIsAnimated: null,
-                  isVideo: null,
-                  mediaIndex: 0,
-                  srcUnfurledMediaItem: null,
-                };
-                ({ proxyUrl: obj3.src, height } = media);
-                if (height == null) {
-                  height = 0;
-                }
-                size.height = height;
-                let num = media.width;
-                if (num == null) {
-                  num = 0;
-                }
-                size.width = num;
-                size.spoiler = spoiler;
-                let contentScanMetadata = media.contentScanMetadata;
-                let version;
-                if (contentScanMetadata != null) {
-                  version = contentScanMetadata.version;
-                }
-                size.contentScanVersion = version;
-                size.srcIsAnimated = require("FlagUtils").hasFlag(
-                  media.flags,
-                  require("MediaTypes").UnfurledMediaItemFlags.IS_ANIMATED,
-                );
-                size.isVideo = "VIDEO" === unfurledMediaItemType;
-                size.srcUnfurledMediaItem = media;
-                tmp6 = size;
-                const tmpResult2 = require("FlagUtils");
-              }
-              return tmp6;
-            } else if (require("Server").ComponentType.MEDIA_GALLERY === type) {
-              const items = type.items;
-              return items.map((item) => {
-                ({ media, spoiler } = item);
-                if (spoiler == null) {
-                  spoiler = false;
-                }
-                const unfurledMediaItemType = closure_1_0(dependencyMap[13]).getUnfurledMediaItemType(media);
-                let tmp4 = null;
-                if ("INVALID" !== unfurledMediaItemType) {
-                  const size = {
-                    type: constants.COMPONENT,
-                    src: null,
-                    height: null,
-                    width: null,
-                    spoiler: null,
-                    contentScanVersion: null,
-                    flags: 0,
-                    srcIsAnimated: null,
-                    isVideo: null,
-                    mediaIndex: 0,
-                    srcUnfurledMediaItem: null,
-                  };
-                  ({ proxyUrl: obj3.src, height } = media);
-                  if (height == null) {
-                    height = 0;
-                  }
-                  size.height = height;
-                  let num = media.width;
-                  if (num == null) {
-                    num = 0;
-                  }
-                  size.width = num;
-                  size.spoiler = spoiler;
-                  const contentScanMetadata = media.contentScanMetadata;
-                  let version;
-                  if (contentScanMetadata != null) {
-                    version = contentScanMetadata.version;
-                  }
-                  size.contentScanVersion = version;
-                  size.srcIsAnimated = closure_1_0(dependencyMap[8]).hasFlag(
-                    media.flags,
-                    closure_1_0(dependencyMap[13]).UnfurledMediaItemFlags.IS_ANIMATED,
-                  );
-                  size.isVideo = "VIDEO" === unfurledMediaItemType;
-                  size.srcUnfurledMediaItem = media;
-                  tmp4 = size;
-                  const tmpResult = closure_1_0(dependencyMap[8]);
-                }
-                return tmp4;
-              });
-            } else {
-              return null;
-            }
-          },
-        );
-      }
-    }
-    items = [];
-  }
-  let first = tmp3[0];
-  if (first == null) {
-    first = tmp4[0];
-  }
-  if (first == null) {
-    first = items[0];
-  }
-  if (first == null) {
-    first = null;
-  }
-  return first;
-};
-export const useFirstMediaIsEmbed = function useFirstMediaIsEmbed(firstMessage, hasSpoilerEmbeds) {
-  const InlineAttachmentMedia = UserSettings.InlineAttachmentMedia;
-  const tmp3 = getForumPostMedia(firstMessage, InlineAttachmentMedia.useSetting());
-  const InlineEmbedMedia = UserSettings.InlineEmbedMedia;
-  if (null == firstMessage) {
-    let items = [];
-  } else {
-    const components = firstMessage.components;
-    if (tmp5) {
-      if (null != components) {
-        const _Array = Array;
-        let tmpResult = InteractionComponentUtils;
-        const flattenComponentsResult = InteractionComponentUtils.flattenComponents(components);
-        const arr = Array.from(InteractionComponentUtils.flattenComponents(components).values());
-        items = Array.from(InteractionComponentUtils.flattenComponents(components).values())
-          .flatMap((type) => {
-            type = type.type;
-            if (require("Server").ComponentType.THUMBNAIL === type) {
-              ({ media, spoiler } = type);
-              if (spoiler == null) {
-                spoiler = false;
-              }
-              let unfurledMediaItemType = require("MediaTypes").getUnfurledMediaItemType(media);
-              let tmp6 = null;
-              if ("INVALID" !== unfurledMediaItemType) {
-                let size = {
-                  type: constants.COMPONENT,
-                  src: null,
-                  height: null,
-                  width: null,
-                  spoiler: null,
-                  contentScanVersion: null,
-                  flags: 0,
-                  srcIsAnimated: null,
-                  isVideo: null,
-                  mediaIndex: 0,
-                  srcUnfurledMediaItem: null,
-                };
-                ({ proxyUrl: obj3.src, height } = media);
-                if (height == null) {
-                  height = 0;
-                }
-                size.height = height;
-                let num = media.width;
-                if (num == null) {
-                  num = 0;
-                }
-                size.width = num;
-                size.spoiler = spoiler;
-                let contentScanMetadata = media.contentScanMetadata;
-                let version;
-                if (contentScanMetadata != null) {
-                  version = contentScanMetadata.version;
-                }
-                size.contentScanVersion = version;
-                size.srcIsAnimated = require("FlagUtils").hasFlag(
-                  media.flags,
-                  require("MediaTypes").UnfurledMediaItemFlags.IS_ANIMATED,
-                );
-                size.isVideo = "VIDEO" === unfurledMediaItemType;
-                size.srcUnfurledMediaItem = media;
-                tmp6 = size;
-                const tmpResult2 = require("FlagUtils");
-              }
-              return tmp6;
-            } else if (require("Server").ComponentType.MEDIA_GALLERY === type) {
-              const items = type.items;
-              return items.map((item) => {
-                ({ media, spoiler } = item);
-                if (spoiler == null) {
-                  spoiler = false;
-                }
-                const unfurledMediaItemType = closure_1_0(dependencyMap[13]).getUnfurledMediaItemType(media);
-                let tmp4 = null;
-                if ("INVALID" !== unfurledMediaItemType) {
-                  const size = {
-                    type: constants.COMPONENT,
-                    src: null,
-                    height: null,
-                    width: null,
-                    spoiler: null,
-                    contentScanVersion: null,
-                    flags: 0,
-                    srcIsAnimated: null,
-                    isVideo: null,
-                    mediaIndex: 0,
-                    srcUnfurledMediaItem: null,
-                  };
-                  ({ proxyUrl: obj3.src, height } = media);
-                  if (height == null) {
-                    height = 0;
-                  }
-                  size.height = height;
-                  let num = media.width;
-                  if (num == null) {
-                    num = 0;
-                  }
-                  size.width = num;
-                  size.spoiler = spoiler;
-                  const contentScanMetadata = media.contentScanMetadata;
-                  let version;
-                  if (contentScanMetadata != null) {
-                    version = contentScanMetadata.version;
-                  }
-                  size.contentScanVersion = version;
-                  size.srcIsAnimated = closure_1_0(dependencyMap[8]).hasFlag(
-                    media.flags,
-                    closure_1_0(dependencyMap[13]).UnfurledMediaItemFlags.IS_ANIMATED,
-                  );
-                  size.isVideo = "VIDEO" === unfurledMediaItemType;
-                  size.srcUnfurledMediaItem = media;
-                  tmp4 = size;
-                  const tmpResult = closure_1_0(dependencyMap[8]);
-                }
-                return tmp4;
-              });
-            } else {
-              return null;
-            }
-          })
-          .filter(GlobalUtils.isNotNullish);
-        const flatMapResult = Array.from(InteractionComponentUtils.flattenComponents(components).values()).flatMap(
-          (type) => {
-            type = type.type;
-            if (require("Server").ComponentType.THUMBNAIL === type) {
-              ({ media, spoiler } = type);
-              if (spoiler == null) {
-                spoiler = false;
-              }
-              let unfurledMediaItemType = require("MediaTypes").getUnfurledMediaItemType(media);
-              let tmp6 = null;
-              if ("INVALID" !== unfurledMediaItemType) {
-                let size = {
-                  type: constants.COMPONENT,
-                  src: null,
-                  height: null,
-                  width: null,
-                  spoiler: null,
-                  contentScanVersion: null,
-                  flags: 0,
-                  srcIsAnimated: null,
-                  isVideo: null,
-                  mediaIndex: 0,
-                  srcUnfurledMediaItem: null,
-                };
-                ({ proxyUrl: obj3.src, height } = media);
-                if (height == null) {
-                  height = 0;
-                }
-                size.height = height;
-                let num = media.width;
-                if (num == null) {
-                  num = 0;
-                }
-                size.width = num;
-                size.spoiler = spoiler;
-                let contentScanMetadata = media.contentScanMetadata;
-                let version;
-                if (contentScanMetadata != null) {
-                  version = contentScanMetadata.version;
-                }
-                size.contentScanVersion = version;
-                size.srcIsAnimated = require("FlagUtils").hasFlag(
-                  media.flags,
-                  require("MediaTypes").UnfurledMediaItemFlags.IS_ANIMATED,
-                );
-                size.isVideo = "VIDEO" === unfurledMediaItemType;
-                size.srcUnfurledMediaItem = media;
-                tmp6 = size;
-                const tmpResult2 = require("FlagUtils");
-              }
-              return tmp6;
-            } else if (require("Server").ComponentType.MEDIA_GALLERY === type) {
-              const items = type.items;
-              return items.map((item) => {
-                ({ media, spoiler } = item);
-                if (spoiler == null) {
-                  spoiler = false;
-                }
-                const unfurledMediaItemType = closure_1_0(dependencyMap[13]).getUnfurledMediaItemType(media);
-                let tmp4 = null;
-                if ("INVALID" !== unfurledMediaItemType) {
-                  const size = {
-                    type: constants.COMPONENT,
-                    src: null,
-                    height: null,
-                    width: null,
-                    spoiler: null,
-                    contentScanVersion: null,
-                    flags: 0,
-                    srcIsAnimated: null,
-                    isVideo: null,
-                    mediaIndex: 0,
-                    srcUnfurledMediaItem: null,
-                  };
-                  ({ proxyUrl: obj3.src, height } = media);
-                  if (height == null) {
-                    height = 0;
-                  }
-                  size.height = height;
-                  let num = media.width;
-                  if (num == null) {
-                    num = 0;
-                  }
-                  size.width = num;
-                  size.spoiler = spoiler;
-                  const contentScanMetadata = media.contentScanMetadata;
-                  let version;
-                  if (contentScanMetadata != null) {
-                    version = contentScanMetadata.version;
-                  }
-                  size.contentScanVersion = version;
-                  size.srcIsAnimated = closure_1_0(dependencyMap[8]).hasFlag(
-                    media.flags,
-                    closure_1_0(dependencyMap[13]).UnfurledMediaItemFlags.IS_ANIMATED,
-                  );
-                  size.isVideo = "VIDEO" === unfurledMediaItemType;
-                  size.srcUnfurledMediaItem = media;
-                  tmp4 = size;
-                  const tmpResult = closure_1_0(dependencyMap[8]);
-                }
-                return tmp4;
-              });
-            } else {
-              return null;
-            }
-          },
-        );
-      }
-    }
-    items = [];
-  }
-  let tmp4 = useForumPostEmbeds(firstMessage, hasSpoilerEmbeds);
-  return null == tmp3[0] && null == items[0] && null != useForumPostEmbeds(firstMessage, hasSpoilerEmbeds)[0];
-};
+  : (arg0, arg1) => {
+      const tmp = closure_13(arg0);
+      const tmp2 = closure_14(arg0, arg1);
+      return null == tmp[0] && null == closure_15(arg0)[0] && null != closure_14(arg0, arg1)[0];
+    };
 export const shouldShowAddMediaToOriginalPostModal = function shouldShowAddMediaToOriginalPostModal(uploads, id) {
   const channel = ChannelStore.getChannel(id);
   if (null == channel) {

@@ -13,8 +13,8 @@ import ForumSearchStore from "../ForumSearchStore.tsx";
 const AppAnalyticsUtilsDefault = AppAnalyticsUtils;
 
 require = fn;
-const DraftType = fn(5384).DraftType;
-const Constants = fn(1074);
+const DraftType = fn(7031).DraftType;
+const Constants = fn(1085);
 ({ AnalyticEvents: closure_8, AnalyticsSections: closure_9 } = Constants);
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/forums/tracking/Tracking.tsx");

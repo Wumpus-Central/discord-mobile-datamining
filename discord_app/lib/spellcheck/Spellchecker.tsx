@@ -2,7 +2,7 @@
 import LoggerDefault from "../../modules/debug/Logger.tsx";
 import DOMUtils from "../../../discord_common/js/shared/utils/DOMUtils.tsx";
 import fallbackLocalesDefault from "fallbackLocales.tsx";
-import _mod6059 from "../../../_runtime/metro/06059__.js";
+import _mod5952 from "../../../_runtime/metro/05952__.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import LocaleStore from "../../modules/user_settings/LocaleStore.tsx";
@@ -57,7 +57,7 @@ class Spellchecker {
       if (str2 == null) {
         str2 = str;
       }
-      obj = _mod6059;
+      obj = _mod5952;
       const parsed = obj.parse(str2.replace(/[_-]/g, "-"));
       if (null != parsed) {
         if (null != parsed.langtag.language) {
@@ -220,7 +220,7 @@ prototype["applyLanguages"] = function applyLanguages(locale) {
     if (str2 == null) {
       str2 = str;
     }
-    const parsed = _mod6059.parse(str2.replace(/[_-]/g, "-"));
+    const parsed = _mod5952.parse(str2.replace(/[_-]/g, "-"));
     if (null != parsed) {
       if (null != parsed.langtag.language) {
         if (null != parsed.langtag.region) {
@@ -245,7 +245,7 @@ prototype["applyLanguages"] = function applyLanguages(locale) {
     }
     logger.error("" + str2 + " is not a valid locale.");
   });
-  const arr = Array.from(new Set(mapped.filter(mapped1(1370).isNotNullish)));
+  const arr = Array.from(new Set(mapped.filter(mapped1(1375).isNotNullish)));
   if (0 !== arr.length) {
     mapped1 = arr.map((item) => {
       let tmp = self.rawLocaleByNormalized[item];
@@ -278,7 +278,7 @@ prototype["applyLanguages"] = function applyLanguages(locale) {
     let _HermesInternal = HermesInternal;
     logger.info("No spellcheck languages resolved from candidates: " + items.join(", "));
   }
-  const set = new Set(mapped.filter(mapped1(1370).isNotNullish));
+  const set = new Set(mapped.filter(mapped1(1375).isNotNullish));
 };
 prototype["buildLanguageIndex"] = function buildLanguageIndex(items) {
   const obj = {};

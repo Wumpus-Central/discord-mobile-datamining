@@ -23,7 +23,7 @@ let closure_4 = async function _updatePermission(arg0, arg1, arg2, arg3) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -79,7 +79,7 @@ let closure_4 = async function _updatePermission(arg0, arg1, arg2, arg3) {
         };
         closure_133_1(closure_133_2[2]).dispatch(obj7);
         c7 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       } catch (tmp16) {
         c7 = tmp;
         throw tmp16;

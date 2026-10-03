@@ -71,7 +71,7 @@ function handlePaymentSourceChange() {
 function handleReferralTrialStoreUpdate() {
   return false;
 }
-const PremiumConstants = fn(1374);
+const PremiumConstants = fn(1379);
 ({
   ANNUAL_DISCOUNT_IDS: c10,
   CHURN_DISCOUNT_IDS: closure_11,
@@ -80,13 +80,13 @@ const PremiumConstants = fn(1374);
   SubscriptionTrials: closure_14,
   TRIAL_OFFERS_REQUIRES_REMINDER_ROLLOUT: closure_15,
 } = PremiumConstants);
-const OfferTriggerTypes = fn(1085).OfferTriggerTypes;
+const OfferTriggerTypes = fn(1096).OfferTriggerTypes;
 let closure_17 = performance.now();
 let cooldownExpirationTimestamps = {
   userOffersLastFetchedAtDate: "r",
   userTrialOffers: {},
   userDiscountOffers: {},
-  userDiscounts: "\u{1F471}\u{1F3FE}\u200D\u2640\uFE0F",
+  userDiscounts: "\u270A\u{1F3FB}",
   isFetching: true,
   lastFetchSuccessful: null,
   shouldTriggerOffer: 8,
@@ -221,7 +221,7 @@ prototype["shouldFetchReferralOffer"] = function shouldFetchReferralOffer(tmp9Re
   }
 };
 prototype["shouldShowTrialOfferReminder"] = function shouldShowTrialOfferReminder(trialId) {
-  const hasItem = __initData.includes(trialId.trialId);
+  const hasItem = closure_1_15.includes(trialId.trialId);
   let result = !hasItem;
   if (hasItem) {
     result = PremiumOfferReminderExperiment.isPremiumOfferReminderExperimentEnabled({ location: "user_offer_store" });
@@ -265,7 +265,7 @@ prototype["getAlmostExpiringTrialOffersForReminder"] = function getAlmostExpirin
   });
 };
 prototype["shouldShowDiscountOfferReminder"] = function shouldShowDiscountOfferReminder(discountId) {
-  const hasItem = closure_1_12.includes(discountId.discountId);
+  const hasItem = __initData.includes(discountId.discountId);
   let result = !hasItem;
   if (hasItem) {
     result = PremiumOfferReminderExperiment.isPremiumOfferReminderExperimentEnabled({ location: "user_offer_store" });

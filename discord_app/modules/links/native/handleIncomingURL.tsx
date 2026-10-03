@@ -22,7 +22,7 @@ let closure_11 = async function _handleIncomingURL(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -138,17 +138,17 @@ let closure_11 = async function _handleIncomingURL(arg0) {
                   }
                 }
                 c8 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               } else {
                 const parts = url.split("voice/");
                 if (2 !== parts.length) {
                   c8 = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 } else {
                   const parts1 = parts[1].split("/");
                   if (0 === parts1.length) {
                     c8 = 3;
-                    return { value: "HermesInternal", done: null };
+                    return { value: "IconComponent", done: "IconComponent" };
                   } else if ("user" !== parts1[0]) {
                     if ("invite" === parts1[0]) {
                       const obj14 = { payload: null };
@@ -322,7 +322,7 @@ let closure_11 = async function _handleIncomingURL(arg0) {
     }
   }
 };
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AppStates: closure_7, AnalyticEvents: closure_8, LinkingTypes: closure_9 } = Constants);
 let closure_10 = new LoggerDefault("index.native.tsx");
 const size = fn(2);

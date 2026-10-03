@@ -1,6 +1,6 @@
 // discord_app/modules/ads/analytics/captureAdUserAction.tsx
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import v1 from "../../../../_runtime/01255_v1.js";
+import v1 from "../../../../_runtime/01266_v1.js";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import AdCreativeType from "../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import getDeviceMetadataDefault from "../../device/getDeviceMetadata.native.tsx";
@@ -37,7 +37,7 @@ let closure_7 = async function _emitClickEventWithCreative(arg0) {
       const obj5 = { value, done: true };
       return obj5;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -188,7 +188,7 @@ let closure_8 = async function _handleClickInternalAction(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -255,7 +255,7 @@ let closure_8 = async function _handleClickInternalAction(arg0) {
           return obj;
         }
         c3 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       } catch (tmp9) {
         c3 = tmp;
         throw tmp9;
@@ -274,7 +274,7 @@ let closure_9 = async function _handleClickExternalAdvertiserCtaAction(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -302,7 +302,7 @@ let closure_9 = async function _handleClickExternalAdvertiserCtaAction(arg0) {
         return obj;
       } else {
         c1 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp7) {
       c1 = tmp;
@@ -423,7 +423,7 @@ let closure_11 = async function _handleViewInternalSurfaceImpressionAction(arg0)
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -504,7 +504,7 @@ function reportCaptureAdUserActionError(arg0) {
   const questLogger = getQuestLogger.getQuestLogger();
   questLogger.error("captureAdUserAction failed to report an ad user action", arg0);
 }
-const AnalyticEvents = fn(1074).AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/ads/analytics/captureAdUserAction.tsx");
 

@@ -16,7 +16,7 @@ function updateExistingSettings() {
   }
   obj = { gifAutoPlay: value, animateEmoji: null, animateStickers: null };
   const textAndImages2 = settings.textAndImages;
-  let value3;
+  value3 = undefined;
   if (textAndImages2 != null) {
     if (textAndImages2.animateEmoji != null) {
       value3 = iter2.value;
@@ -87,7 +87,7 @@ obj = {
     }
     obj = { gifAutoPlay: value, animateEmoji: null, animateStickers: null };
     const textAndImages2 = settings.textAndImages;
-    let value3;
+    value3 = undefined;
     if (textAndImages2 != null) {
       if (textAndImages2.animateEmoji != null) {
         value3 = iter2.value;

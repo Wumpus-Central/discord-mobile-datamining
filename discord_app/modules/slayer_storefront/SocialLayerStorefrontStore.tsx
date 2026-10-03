@@ -148,7 +148,7 @@ prototype["getStorefrontGuildIds"] = function getStorefrontGuildIds() {
   return set1;
 };
 prototype["getSKUEligibility"] = function getSKUEligibility(skuId) {
-  let state;
+  state = undefined;
   if (obj[skuId] != null) {
     state = tmp.state;
   }
@@ -158,7 +158,7 @@ prototype["getSKUEligibilityEntry"] = function getSKUEligibilityEntry(arg0) {
   return obj[arg0];
 };
 prototype["getNormalizedSKUEligibility"] = function getNormalizedSKUEligibility(arg0) {
-  let state;
+  state = undefined;
   if (obj[arg0] != null) {
     state = tmp.state;
   }
@@ -478,7 +478,7 @@ obj = {
   },
   SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_CREATE: function handleSKUPurchaseEligibilityCheckCreate(arg0) {
     ({ skuId, interactionId } = arg0);
-    let state;
+    state = undefined;
     if (obj[skuId] != null) {
       state = tmp.state;
     }
@@ -498,7 +498,7 @@ obj = {
     if (reason === undefined) {
       reason = "http_error";
     }
-    let state;
+    state = undefined;
     if (obj[skuId] != null) {
       state = tmp.state;
     }

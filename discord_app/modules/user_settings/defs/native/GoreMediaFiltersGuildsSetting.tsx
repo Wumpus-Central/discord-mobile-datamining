@@ -1,4 +1,5 @@
 // discord_app/modules/user_settings/defs/native/GoreMediaFiltersGuildsSetting.tsx
+import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
 import preloaded_user_settings from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
 import SensitiveMediaGoreRedactionSettingsUtils from "../../../explicit_media_redaction/SensitiveMediaGoreRedactionSettingsUtils.tsx";
@@ -7,21 +8,76 @@ import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import useUserIsTeen from "../../../self_mod/hooks/useUserIsTeen.tsx";
 import useExplicitContentSettingsOrDefault from "../../../explicit_media_redaction/hooks/useExplicitContentSettingsOrDefault.tsx";
 import ExplicitMediaRedactionNativeUtils from "../../../explicit_media_redaction/native/ExplicitMediaRedactionNativeUtils.tsx";
+import "ReactCompilerGating";
+import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      let userIsTeen = useUserIsTeen.useUserIsTeen();
+      if (!userIsTeen) {
+        userIsTeen = obj2.useIsParentallyControlled();
+      }
+      return userIsTeen;
+    }
+  : () => {
+      let userIsTeen = useUserIsTeen.useUserIsTeen();
+      if (!userIsTeen) {
+        userIsTeen = obj2.useIsParentallyControlled();
+      }
+      return userIsTeen;
+    };
+function getTitle() {
+  const intl = util.intl;
+  return intl.string(util.t["FP+a42"]);
+}
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = c.c(2);
+      const goreContentGuilds = useExplicitContentSettingsOrDefault.useGoreContentSettingOrDefault().goreContentGuilds;
+      if (cResult[0] !== goreContentGuilds) {
+        const tmp5 = ExplicitMediaRedactionUtils.redactionSettingToRenderedString(goreContentGuilds)();
+        cResult[0] = goreContentGuilds;
+        cResult[1] = tmp5;
+        let tmp4 = tmp5;
+        const tmpResult = ExplicitMediaRedactionUtils;
+      } else {
+        tmp4 = cResult[1];
+      }
+      return tmp4;
+    }
+  : () => {
+      const obj = useExplicitContentSettingsOrDefault;
+      return ExplicitMediaRedactionUtils.redactionSettingToRenderedString(
+        obj.useGoreContentSettingOrDefault().goreContentGuilds,
+      )();
+    };
 const pressable = SettingBuilders.createPressable({
-  useTitle: function getTitle() {
-    const intl = util.intl;
-    return intl.string(util.t["FP+a42"]);
-  },
+  useTitle: getTitle,
   parent: SettingsConstants.MobileUserSettings.SENSITIVE_CONTENT_FILTERS,
-  useTrailing: function useGoreContentGuildsSettingValue() {
-    const obj = useExplicitContentSettingsOrDefault;
-    return ExplicitMediaRedactionUtils.redactionSettingToRenderedString(
-      obj.useGoreContentSettingOrDefault().goreContentGuilds,
-    )();
-  },
+  useTrailing: ReactCompilerGating.isReactCompilerEnabled()
+    ? () => {
+        const cResult = c.c(2);
+        const goreContentGuilds =
+          useExplicitContentSettingsOrDefault.useGoreContentSettingOrDefault().goreContentGuilds;
+        if (cResult[0] !== goreContentGuilds) {
+          const tmp5 = ExplicitMediaRedactionUtils.redactionSettingToRenderedString(goreContentGuilds)();
+          cResult[0] = goreContentGuilds;
+          cResult[1] = tmp5;
+          let tmp4 = tmp5;
+          const tmpResult = ExplicitMediaRedactionUtils;
+        } else {
+          tmp4 = cResult[1];
+        }
+        return tmp4;
+      }
+    : () => {
+        const obj = useExplicitContentSettingsOrDefault;
+        return ExplicitMediaRedactionUtils.redactionSettingToRenderedString(
+          obj.useGoreContentSettingOrDefault().goreContentGuilds,
+        )();
+      },
   onPress: function onGoreContentGuildsOnPress() {
     const obj = SensitiveMediaGoreRedactionSettingsUtils;
     const obj3 = { title: null, subtitle: null, handlePress: null, excluded: null, currentValue: null };
@@ -37,13 +93,7 @@ const pressable = SettingBuilders.createPressable({
     obj3.currentValue = obj.getGoreContentSettingOrDefault().goreContentGuilds;
     const result = ExplicitMediaRedactionNativeUtils.handleSensitiveMediaFilterPress(obj3);
   },
-  useIsDisabled() {
-    let userIsTeen = useUserIsTeen.useUserIsTeen();
-    if (!userIsTeen) {
-      userIsTeen = obj2.useIsParentallyControlled();
-    }
-    return userIsTeen;
-  },
+  useIsDisabled: tmp2,
   useSearchTerms() {
     const intl = util.intl;
     const items = [intl.string(util.t["N/oRI+"]), ,];

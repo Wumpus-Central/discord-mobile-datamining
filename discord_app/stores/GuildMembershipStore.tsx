@@ -93,7 +93,7 @@ let obj = {
 let tmp2 = new tmp(
   Dispatcher,
   obj,
-  fn(573).DispatchBand.Early,
+  fn(584).DispatchBand.Early,
   GuildMembershipStore,
   tmp,
   Dispatcher,

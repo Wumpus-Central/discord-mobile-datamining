@@ -1,17 +1,17 @@
 // discord_app/modules/custom_status/native/CustomStatusPreview.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequireImpl from "../../../../_runtime/01981_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
 import ChatInputUtils from "../../../utils/native/ChatInputUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(6815);
+const Constants = fn(6707);
 ({ PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: hasOwnProperty, UserProfileThemeTypes: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = {
     flex: 1,
@@ -33,8 +33,8 @@ let closure_9 = createStyles.createStyles((arg0) => {
   }
   const obj2 = { profileContainer: null, profileEffect: null };
   obj.borderColor = BACKGROUND_SURFACE_HIGH;
-  obj.borderRadius = tmp4(576).radii.lg;
-  const merged = Object.assign(tmp4(576).shadows.SHADOW_HIGH);
+  obj.borderRadius = tmp4(587).radii.lg;
+  const merged = Object.assign(tmp4(587).shadows.SHADOW_HIGH);
   obj2.profileContainer = obj;
   obj2.profileEffect = { zIndex: 1 };
   return obj2;
@@ -59,7 +59,7 @@ export default function CustomStatusPreview(user) {
   const callback = noop.useCallback(() => {
     ChatInputUtils.dismissKeyboard();
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(10811, dependencyMap.paths),
+      asyncRequireImpl(10839, dependencyMap.paths),
       "UserProfileCustomStatusActionSheet",
       { user, previewText: pendingStatusText, previewEmoji: pendingStatusEmoji },
       "stack",

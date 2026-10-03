@@ -10,7 +10,7 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const IN_APP_REPORTS_NODE = fn(8281).IN_APP_REPORTS_NODE;
+const IN_APP_REPORTS_NODE = fn(8285).IN_APP_REPORTS_NODE;
 let jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportModal.tsx");
@@ -54,7 +54,7 @@ export default function InAppReportModal(arg0) {
   [c12, c13] = noop.useState([]);
   const tmp4 = _slicedToArray(noop.useState([]), 2);
   [c14, c15] = noop.useState([]);
-  menu(5482)(() => {
+  menu(5590)(() => {
     const orFetchLinkedUsers = FamilyCenterUtils.getOrFetchLinkedUsers();
   });
   let items = [closeModal, first];
@@ -70,7 +70,7 @@ export default function InAppReportModal(arg0) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -124,7 +124,7 @@ export default function InAppReportModal(arg0) {
               addOnCloseCallback(closure_2);
             }
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp32) {
           c4 = tmp;
@@ -178,7 +178,7 @@ export default function InAppReportModal(arg0) {
       const obj6 = {};
       const obj7 = {
         headerRight() {
-          const obj = { source: menu(6599), onPress, accessibilityLabel: null };
+          const obj = { source: menu(4809), onPress, accessibilityLabel: null };
           const intl = util.intl;
           obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
           return addOnCloseCallback(HeaderActionButton2.HeaderActionButton, obj);

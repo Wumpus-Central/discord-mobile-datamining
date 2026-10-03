@@ -1,6 +1,6 @@
 // discord_app/modules/auth/native/RegistrationStepsUtils.tsx
 import discord_common_AnalyticsUtils from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import Link from "../../../../_runtime/01486_Link.js";
+import Link from "../../../../_runtime/01491_Link.js";
 import LoginDefault from "components/Login.tsx";
 import WelcomeDefault from "components/Welcome.tsx";
 import RegistrationUtils from "RegistrationUtils.tsx";
@@ -42,7 +42,7 @@ let closure_19 = async function _handleNextOrSubmitRegistration(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -56,10 +56,10 @@ let closure_19 = async function _handleNextOrSubmitRegistration(arg0) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          React7();
+          options();
           const tmp22 = getNextAuthState(closure_0);
           if (null != tmp22) {
-            const obj4 = { step: closure_2_10(closure_0), toStep: closure_2_10(tmp22), actionType: constants.SUCCESS };
+            const obj4 = { step: v65535(closure_0), toStep: v65535(tmp22), actionType: constants.SUCCESS };
             dependencyMap(obj4);
             const StackActions = Link.StackActions;
             importDefault.dispatch(StackActions.push(tmp22));
@@ -79,7 +79,7 @@ let closure_19 = async function _handleNextOrSubmitRegistration(arg0) {
         return obj;
       }
       c3 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     } catch (tmp12) {
       c3 = tmp;
       throw tmp12;
@@ -133,7 +133,7 @@ let closure_21 = async function _handleRegistrationSubmit(arg0) {
       closure_132_0(closure_132_2[28]);
     } else {
       c8 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else if (arg0 === 1) {
     c8 = 3;
@@ -146,12 +146,12 @@ let closure_21 = async function _handleRegistrationSubmit(arg0) {
   }
   return value;
 };
-const usePromoEmailConsentStore = fn(6197).usePromoEmailConsentStore;
-const RegistrationUIStore = fn(15786);
+const usePromoEmailConsentStore = fn(6083).usePromoEmailConsentStore;
+const RegistrationUIStore = fn(15863);
 ({ setRegistrationErrors: metroRequire, setSubmitting: closure_7, useRegistrationUIStore: closure_8, clearRegistrationErrorMessage: closure_9 } = RegistrationUIStore);
-const RegistrationConstants = fn(15787);
+const RegistrationConstants = fn(15864);
 ({ authStateToRegisterTransitionStep: c10, RegisterTransitionSteps: closure_11, RegistrationSteps: closure_12, RegistrationTransitionActionTypes: map1 } = RegistrationConstants);
-const AuthStates = fn(1074).AuthStates;
+const AuthStates = fn(1085).AuthStates;
 const jsx = fn(21).jsx;
 const items = [, , , , ];
 ({ WELCOME: arr[0], REGISTER_IDENTITY: arr[1], REGISTER_DISPLAY_NAME: arr[2], REGISTER_ACCOUNT_INFORMATION: arr[3], AGE_GATE: arr[4] } = AuthStates);
@@ -303,7 +303,7 @@ export const getAllAuthScreens = function getAllAuthScreens() {
     headerTitle,
     render(arg0, arg1) {
       closure_0 = arg1;
-      return closure_15(closure_1(6655), {
+      return closure_15(closure_1(6545), {
         onClose() {
           return closure_0.pop();
         },
@@ -420,7 +420,7 @@ export const getPreviousRegistrationTransitionStep = function getPreviousRegistr
     }
   }
   if (null != tmp3) {
-    return closure_1_10(tmp3);
+    return v65535(tmp3);
   }
 };
 export const getNextRegistrationTransitionStep = function getNextRegistrationTransitionStep(arg0) {
@@ -432,7 +432,7 @@ export const getNextRegistrationTransitionStep = function getNextRegistrationTra
     }
   }
   if (null != tmp2) {
-    return closure_1_10(tmp2);
+    return v65535(tmp2);
   }
 };
 export const handleNextOrSubmitRegistration = function handleNextOrSubmitRegistration() {

@@ -113,49 +113,86 @@ function AgeVerifyScreen(uri) {
       "\n  window.open = function(url) {\n    window.ReactNativeWebView.postMessage(JSON.stringify({type: 'AGEKEY_BREAKOUT', url: url}));\n    return null;\n  };\n",
   });
 }
-let closure_4 = fn(8044).AGE_VERIFICATION_MODAL_KEY;
+let closure_4 = fn(8085).AGE_VERIFICATION_MODAL_KEY;
 let jsx = fn(21).jsx;
 const constants = { VERIFY_AGE: "VERIFY_AGE" };
-const createStyles = fn(4845);
-const obj2 = { headerStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
+const createStyles = fn(4890);
+let obj2 = { headerStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
 let closure_9 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/native/AgeVerificationModal.tsx");
 
-export default function AgeVerificationModal(webviewUrl) {
-  webviewUrl = webviewUrl.webviewUrl;
-  const onComplete = webviewUrl.onComplete;
-  const onClose = webviewUrl.onClose;
-  let flag = webviewUrl.isExpressiveModalV2;
-  if (flag === undefined) {
-    flag = false;
-  }
-  const tmp = closure_9();
-  const headerStyle = tmp;
-  let intl = webviewUrl(onClose[11]).intl;
-  const stringResult = intl.string(webviewUrl(onClose[11]).t.wJVyYR);
-  jsx = stringResult;
-  const items = [tmp, webviewUrl, onComplete, onClose, stringResult, flag];
-  const memo = flag.useMemo(() => {
-    closure_2 = onClose;
-    const isExpressiveModalV2 = flag;
-    function handleClose() {
-      closure_2();
-      onComplete(onClose[9]).pop();
-    }
-    function handleCloseAfterCompletion() {
-      closure_2();
-      onComplete(onClose[9]).pop();
-      if (closure_3) {
-        onComplete(onClose[9]).pop();
-        const tmp2Result = onComplete(onClose[9]);
+export default ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      const cResult = webviewUrl(onClose[13]).c(10);
+      ({ webviewUrl, onComplete, onClose, isExpressiveModalV2 } = arg0);
+      const tmp5 = closure_9();
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const intl = webviewUrl(onClose[11]).intl;
+        const stringResult = intl.string(webviewUrl(onClose[11]).t.wJVyYR);
+        cResult[0] = stringResult;
+        let first = stringResult;
+      } else {
+        first = cResult[0];
       }
-      const arr = onComplete(onClose[9]);
-    }
-    return {
-      [closure_2_7.VERIFY_AGE]: {
-        headerStyle: headerStyle.headerStyle,
-        headerTitle,
+      if (cResult[1] === (undefined !== isExpressiveModalV2 && isExpressiveModalV2)) {
+        if (cResult[2] === onClose) {
+          if (cResult[3] === onComplete) {
+            if (cResult[4] === tmp5) {
+              if (cResult[5] === webviewUrl) {
+                let tmp8 = cResult[6];
+              }
+              const _Symbol = Symbol;
+              if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
+                const intl2 = webviewUrl(onClose[11]).intl;
+                const stringResult1 = intl2.string(webviewUrl(onClose[11]).t["13/7kX"]);
+                cResult[7] = stringResult1;
+                let tmp9 = stringResult1;
+              } else {
+                tmp9 = cResult[7];
+              }
+              if (cResult[8] !== tmp8) {
+                const obj2 = { screens: tmp8, initialRouteName: constants.VERIFY_AGE, headerBackTitle: tmp9 };
+                const tmp14 = handleCloseAfterCompletion(webviewUrl(onClose[14]).Navigator, obj2);
+                cResult[8] = tmp8;
+                cResult[9] = tmp14;
+                let tmp11 = tmp14;
+              } else {
+                tmp11 = cResult[9];
+              }
+              return tmp11;
+            }
+          }
+        }
+      }
+      closure_3 = tmp4;
+      function handleClose() {
+        closure_2();
+        onComplete(onClose[9]).pop();
+      }
+      handleCloseAfterCompletion = function handleCloseAfterCompletion() {
+        closure_2();
+        onComplete(onClose[9]).pop();
+        if (closure_3) {
+          onComplete(onClose[9]).pop();
+          const tmp2Result = onComplete(onClose[9]);
+        }
+        const arr = onComplete(onClose[9]);
+      };
+      const obj3 = { [closure_7.VERIFY_AGE]: obj4 };
+      cResult[1] = undefined !== isExpressiveModalV2 && isExpressiveModalV2;
+      cResult[2] = onClose;
+      cResult[3] = onComplete;
+      cResult[4] = tmp5;
+      cResult[5] = webviewUrl;
+      cResult[6] = obj3;
+      tmp8 = obj3;
+      const obj = webviewUrl(onClose[13]);
+      obj4 = {
+        headerStyle: tmp5.headerStyle,
+        headerTitle: first,
         headerLeft() {
           const obj = { onPress: handleClose, text: null };
           const intl = webviewUrl(onClose[11]).intl;
@@ -170,15 +207,65 @@ export default function AgeVerificationModal(webviewUrl) {
             isExpressiveModalV2,
           });
         },
-      },
+      };
+    }
+  : (webviewUrl) => {
+      webviewUrl = webviewUrl.webviewUrl;
+      const onComplete = webviewUrl.onComplete;
+      const onClose = webviewUrl.onClose;
+      let flag = webviewUrl.isExpressiveModalV2;
+      if (flag === undefined) {
+        flag = false;
+      }
+      const tmp = closure_9();
+      const headerStyle = tmp;
+      let intl = webviewUrl(onClose[11]).intl;
+      const stringResult = intl.string(webviewUrl(onClose[11]).t.wJVyYR);
+      jsx = stringResult;
+      const items = [tmp, webviewUrl, onComplete, onClose, stringResult, flag];
+      const memo = flag.useMemo(() => {
+        closure_2 = onClose;
+        const isExpressiveModalV2 = flag;
+        function handleClose() {
+          closure_2();
+          onComplete(onClose[9]).pop();
+        }
+        function handleCloseAfterCompletion() {
+          closure_2();
+          onComplete(onClose[9]).pop();
+          if (closure_3) {
+            onComplete(onClose[9]).pop();
+            const tmp2Result = onComplete(onClose[9]);
+          }
+          const arr = onComplete(onClose[9]);
+        }
+        return {
+          [closure_2_7.VERIFY_AGE]: {
+            headerStyle: headerStyle.headerStyle,
+            headerTitle,
+            headerLeft() {
+              const obj = { onPress: handleClose, text: null };
+              const intl = webviewUrl(onClose[11]).intl;
+              obj.text = intl.string(webviewUrl(onClose[11]).t.cpT0Cq);
+              return handleCloseAfterCompletion(webviewUrl(onClose[10]).HeaderActionButton, obj);
+            },
+            render() {
+              return handleCloseAfterCompletion(AgeVerifyScreen, {
+                webviewUrl,
+                onComplete,
+                onClose: handleCloseAfterCompletion,
+                isExpressiveModalV2,
+              });
+            },
+          },
+        };
+      }, items);
+      let obj = { screens: memo, initialRouteName: constants.VERIFY_AGE, headerBackTitle: null };
+      const intl2 = webviewUrl(onClose[11]).intl;
+      obj.headerBackTitle = intl2.string(webviewUrl(onClose[11]).t["13/7kX"]);
+      return jsx(webviewUrl(onClose[14]).Navigator, {
+        screens: memo,
+        initialRouteName: constants.VERIFY_AGE,
+        headerBackTitle: null,
+      });
     };
-  }, items);
-  let obj = { screens: memo, initialRouteName: constants.VERIFY_AGE, headerBackTitle: null };
-  const intl2 = webviewUrl(onClose[11]).intl;
-  obj.headerBackTitle = intl2.string(webviewUrl(onClose[11]).t["13/7kX"]);
-  return jsx(webviewUrl(onClose[12]).Navigator, {
-    screens: memo,
-    initialRouteName: constants.VERIFY_AGE,
-    headerBackTitle: null,
-  });
-}

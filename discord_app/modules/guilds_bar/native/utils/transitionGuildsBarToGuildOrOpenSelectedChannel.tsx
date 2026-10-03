@@ -7,7 +7,7 @@ import SelectedChannelStore from "../../../../stores/SelectedChannelStore.tsx";
 import SelectedGuildStore from "../../../../stores/SelectedGuildStore.tsx";
 
 require = fn;
-const ME = fn(1074).ME;
+const ME = fn(1085).ME;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/guilds_bar/native/utils/transitionGuildsBarToGuildOrOpenSelectedChannel.tsx",

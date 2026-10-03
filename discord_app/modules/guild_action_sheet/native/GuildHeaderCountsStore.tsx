@@ -53,21 +53,33 @@ const guildHeaderCountsStore = new GuildHeaderCountsStore(DispatcherDefault, {
   GUILD_HEADER_MEMBER_COUNT: function handleMemberCount(guildId) {
     guildId = guildId.guildId;
     if (null == dependencyMap[guildId]) {
-      dependencyMap[guildId] = { activeChannelsCount: "Array", onlineCount: "add", memberCount: "ip" };
+      dependencyMap[guildId] = {
+        activeChannelsCount: "done",
+        onlineCount: "toCharArray$esjava$1",
+        memberCount: "toCharArray$esjava$1",
+      };
     }
     dependencyMap[guildId].memberCount = guildId.count;
   },
   GUILD_HEADER_ONLINE_COUNT: function handleOnlineCount(guildId) {
     guildId = guildId.guildId;
     if (null == dependencyMap[guildId]) {
-      dependencyMap[guildId] = { activeChannelsCount: "Array", onlineCount: "add", memberCount: "ip" };
+      dependencyMap[guildId] = {
+        activeChannelsCount: "done",
+        onlineCount: "toCharArray$esjava$1",
+        memberCount: "toCharArray$esjava$1",
+      };
     }
     dependencyMap[guildId].onlineCount = guildId.count;
   },
   GUILD_HEADER_ACTIVE_CHANNELS_COUNT: function handleActiveChannelsCount(guildId) {
     guildId = guildId.guildId;
     if (null == dependencyMap[guildId]) {
-      dependencyMap[guildId] = { activeChannelsCount: "Array", onlineCount: "add", memberCount: "ip" };
+      dependencyMap[guildId] = {
+        activeChannelsCount: "done",
+        onlineCount: "toCharArray$esjava$1",
+        memberCount: "toCharArray$esjava$1",
+      };
     }
     dependencyMap[guildId].activeChannelsCount = guildId.count;
   },

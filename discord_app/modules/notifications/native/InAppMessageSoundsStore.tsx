@@ -1,7 +1,9 @@
 // discord_app/modules/notifications/native/InAppMessageSoundsStore.tsx
 import Storage2 from "../../../../discord_common/js/packages/storage/Storage.tsx";
-import _mod4481 from "../../../../_runtime/metro/04481__.js";
-import identity from "../../../../_runtime/metro/01243__.js";
+import c from "../../../../_runtime/00576_c.js";
+import _mod4492 from "../../../../_runtime/metro/04492__.js";
+import identity from "../../../../_runtime/metro/01254__.js";
+import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const InAppMessageSoundsEnabled = "InAppMessageSoundsEnabled";
@@ -23,6 +25,18 @@ export const setInAppMessageSoundsEnabled = function setInAppMessageSoundsEnable
   const result = Storage.set(InAppMessageSoundsEnabled, isEnabled);
   closure_3.setState({ isEnabled });
 };
-export const useInAppMessageSoundsEnabled = function useInAppMessageSoundsEnabled() {
-  return closure_3((isEnabled) => isEnabled.isEnabled, _mod4481.shallow);
-};
+export const useInAppMessageSoundsEnabled = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = c.c(1);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const fn = function n(isEnabled) {
+          return isEnabled.isEnabled;
+        };
+        cResult[0] = fn;
+        let first = fn;
+      } else {
+        first = cResult[0];
+      }
+      return closure_3(first, _mod4492.shallow);
+    }
+  : () => closure_3((isEnabled) => isEnabled.isEnabled, _mod4492.shallow);

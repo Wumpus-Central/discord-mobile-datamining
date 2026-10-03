@@ -14,7 +14,7 @@ let closure_6 = async function _redirectToSlayerStorefrontWeb(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -37,7 +37,7 @@ let closure_6 = async function _redirectToSlayerStorefrontWeb(arg0) {
           closure_129_3 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "flex", done: null };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -108,7 +108,7 @@ let closure_6 = async function _redirectToSlayerStorefrontWeb(arg0) {
     }
   }
 };
-const Routes = fn(1074).Routes;
+const Routes = fn(1085).Routes;
 let closure_5 = new LoggerDefault("redirectToSlayerStorefrontWeb");
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/slayer_storefront/native/redirectToSlayerStorefrontWeb.tsx");

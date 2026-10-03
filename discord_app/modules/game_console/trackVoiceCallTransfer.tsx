@@ -4,7 +4,7 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
 import SessionsStore from "../../stores/SessionsStore.tsx";
 
-const AnalyticEvents = fn(1074).AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_console/trackVoiceCallTransfer.tsx");
 

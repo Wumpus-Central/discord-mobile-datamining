@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/notes/NoteStore.tsx
-import LibdiscoreStore2 from "../../libdiscore/stores/LibdiscoreStore.tsx";
 import libdiscoreExperiments from "../../libdiscore/libdiscoreExperiments.tsx";
+import LibdiscoreStore2 from "../../libdiscore/stores/LibdiscoreStore.tsx";
 import PlainRecord from "../../../lib/PlainRecord.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 

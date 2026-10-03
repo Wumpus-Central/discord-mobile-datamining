@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/native/UserProfileOverflowMenu.tsx
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import discord_common_AnalyticsUtils from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/01981_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01987_asyncRequireImpl.js";
 import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import UserUtilsDefault from "../../../utils/UserUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -29,22 +29,21 @@ import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const UserProfileThemeTypes = fn(6815).UserProfileThemeTypes;
-const Constants = fn(1074);
+const UserProfileThemeTypes = fn(6707).UserProfileThemeTypes;
+const Constants = fn(1085);
 ({
   AnalyticEvents: closure_11,
-  ApplicationFlags: closure_12,
-  AVATAR_MAX_SIZE: map1,
-  ChannelTypesSets: closure_14,
-  NOOP: closure_15,
-  RelationshipTypes: closure_16,
+  AVATAR_MAX_SIZE: closure_12,
+  ChannelTypesSets: map1,
+  NOOP: closure_14,
+  RelationshipTypes: closure_15,
 } = Constants);
-const ParticipantTypes = fn(4866).ParticipantTypes;
-const RestrictionConfirmationConstants = fn(11135);
-({ BLOCK_CONFIRMATION_ACTION_SHEET_KEY: closure_18, IGNORE_CONFIRMATION_ACTION_SHEET_KEY: closure_19 } =
+const ParticipantTypes = fn(4911).ParticipantTypes;
+const RestrictionConfirmationConstants = fn(9816);
+({ BLOCK_CONFIRMATION_ACTION_SHEET_KEY: closure_17, IGNORE_CONFIRMATION_ACTION_SHEET_KEY: closure_18 } =
   RestrictionConfirmationConstants);
 const jsxProd = fn(21);
-({ jsx: closure_20, jsxs: closure_21 } = jsxProd);
+({ jsx: closure_19, jsxs: closure_20 } = jsxProd);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileOverflowMenu.tsx");
 
@@ -61,7 +60,7 @@ export default function UserProfileOverflowMenu(user) {
   let guildId;
   let canRing;
   let userIsInCall;
-  constants2 = undefined;
+  let showUserProfile;
   let id;
   let guildId1;
   closure_17 = undefined;
@@ -161,7 +160,7 @@ export default function UserProfileOverflowMenu(user) {
   items4[1] = id1;
   items4[2] = context;
   items4[3] = analyticsLocations;
-  constants2 = channel.useCallback((showGuildProfile) => {
+  showUserProfile = channel.useCallback((showGuildProfile) => {
     const obj = {};
     const merged = Object.assign(context);
     obj.showGuildProfile = showGuildProfile;
@@ -316,8 +315,8 @@ export default function UserProfileOverflowMenu(user) {
             };
             obj2.onSuccess = onSuccess;
             obj2.impressionName = discord_common_AnalyticsUtils.ImpressionNames.BLOCK_USER_CONFIRMATION;
-            obj.openLazy(asyncRequireImpl(11136, dependencyMap.paths), collapsedCategories, obj2, "stack");
-            const tmp3 = asyncRequireImpl(11136, dependencyMap.paths);
+            obj.openLazy(asyncRequireImpl(9817, dependencyMap.paths), constants, obj2, "stack");
+            const tmp3 = asyncRequireImpl(9817, dependencyMap.paths);
           };
           push(obj10);
           if (result) {
@@ -330,7 +329,7 @@ export default function UserProfileOverflowMenu(user) {
                 trackUserProfileAction({ action: "REPORT", analyticsLocations });
                 if (user.bot) {
                   const obj4 = ActionSheetActionCreatorsDefault;
-                  const tmp18 = asyncRequireImpl(12771, dependencyMap.paths);
+                  const tmp18 = asyncRequireImpl(12807, dependencyMap.paths);
                   const BOT_REPORT_CHOOSER_KEY = BotReportChooser.BOT_REPORT_CHOOSER_KEY;
                   const obj5 = {
                     user,
@@ -384,7 +383,7 @@ export default function UserProfileOverflowMenu(user) {
           }
         }
       }
-      if (relationshipType !== guildId1.BLOCKED) {
+      if (relationshipType !== id.BLOCKED) {
         const obj14 = { label: null, action: null };
         const intl7 = tmp(tmp2[28]).intl;
         obj14.label = intl7.string(tmp(tmp2[28]).t.ytCpKs);
@@ -411,8 +410,8 @@ export default function UserProfileOverflowMenu(user) {
           };
           obj2.onSuccess = onSuccess;
           obj2.impressionName = discord_common_AnalyticsUtils.ImpressionNames.IGNORE_USER_CONFIRMATION;
-          obj.openLazy(asyncRequireImpl(11137, dependencyMap.paths), closure_2_19, obj2, "stack");
-          const tmp3 = asyncRequireImpl(11137, dependencyMap.paths);
+          obj.openLazy(asyncRequireImpl(9818, dependencyMap.paths), collapsedCategories, obj2, "stack");
+          const tmp3 = asyncRequireImpl(9818, dependencyMap.paths);
         };
         items6.push(obj14);
       }
@@ -429,7 +428,7 @@ export default function UserProfileOverflowMenu(user) {
         label: stringResult,
         action() {
           trackUserProfileAction({ action: "PRESS_SET_FRIEND_NICKNAME", analyticsLocations });
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12770, dependencyMap.paths), {
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12806, dependencyMap.paths), {
             userId: id,
             showUserProfile,
           });
@@ -474,9 +473,9 @@ export default function UserProfileOverflowMenu(user) {
     }
     if (user.bot) {
       if (null != application) {
-        closure_18 = tmp(tmp2[50]).hasApplicationFlag(application, canRing.EMBEDDED);
+        closure_18 = tmp(tmp2[50]).supportsEmbeddedSurface(application, tmp(tmp2[51]).EmbeddedSurfaceType.MAIN);
         const tmpResult17 = tmp(tmp2[50]);
-        installAppPropsFromProfileApplication = tmp(tmp2[51]).getInstallAppPropsFromProfileApplication(application);
+        installAppPropsFromProfileApplication = tmp(tmp2[52]).getInstallAppPropsFromProfileApplication(application);
         const obj17 = { label: null, action: null };
         const intl17 = tmp(tmp2[28]).intl;
         obj17.label = intl17.string(tmp(tmp2[28]).t.WqhZss);
@@ -496,7 +495,7 @@ export default function UserProfileOverflowMenu(user) {
           ToastUtils.presentLinkCopied();
         };
         items5.push(obj17);
-        const tmpResult18 = tmp(tmp2[51]);
+        const tmpResult18 = tmp(tmp2[52]);
       }
     }
     if (setting) {
@@ -552,7 +551,7 @@ export default function UserProfileOverflowMenu(user) {
               if (guildId != null) {
                 guildId = guildId.guildId;
               }
-              const avatarURL = bannerURL.getAvatarURL(guildId, userIsInCall, true);
+              const avatarURL = bannerURL.getAvatarURL(guildId, canRing, true);
               if (null != avatarURL) {
                 user(application[47]).copy(avatarURL);
                 const obj2 = user(application[47]);
@@ -564,7 +563,7 @@ export default function UserProfileOverflowMenu(user) {
             items.push(obj4);
           }
           if (null != displayProfile) {
-            const obj6 = { canAnimate: true, size: userIsInCall };
+            const obj6 = { canAnimate: true, size: canRing };
             bannerURL = displayProfile.getBannerURL(obj6);
             if (null != bannerURL) {
               const obj7 = { label: null, onPress: null };
@@ -584,9 +583,9 @@ export default function UserProfileOverflowMenu(user) {
           const intl5 = user(application[28]).intl;
           obj9.title = intl5.string(user(application[28]).t.QvQeLv);
           obj8.header = obj9;
-          let result = user(application[53]).showSimpleActionSheet(obj8);
+          let result = user(application[54]).showSimpleActionSheet(obj8);
           obj3 = bannerURL;
-          const tmpResult = user(application[53]);
+          const tmpResult = user(application[54]);
         };
         push2(obj18);
       } else {
@@ -602,7 +601,7 @@ export default function UserProfileOverflowMenu(user) {
     }
     let hasItem1 = null != channel && null != selectedChannel;
     if (hasItem1) {
-      const TEXTUAL = constants2.TEXTUAL;
+      const TEXTUAL = userIsInCall.TEXTUAL;
       hasItem1 = TEXTUAL.has(selectedChannel.type);
     }
     if (hasItem1) {
@@ -637,19 +636,19 @@ export default function UserProfileOverflowMenu(user) {
         obj.variant = "secondary-overlay";
         const intl = user(application[28]).intl;
         obj.accessibilityLabel = intl.string(user(application[28]).t["+zofAD"]);
-        obj.icon = closure_1_20(user(application[59]).MoreHorizontalIcon, {
+        obj.icon = closure_19(user(application[60]).MoreHorizontalIcon, {
           size: "sm",
-          color: currentUser(application[60]).colors.WHITE,
+          color: currentUser(application[61]).colors.WHITE,
         });
-        return closure_1_20(user(application[58]).IconButton, obj);
+        return closure_19(user(application[59]).IconButton, obj);
       };
-      obj22.children = closure_20(tmp(tmp2[56]).ContextMenu, obj23);
-      obj21.children = closure_20(tmp7(tmp2[55]).View, obj22);
-      const items8 = [closure_20(selectedChannel, obj21)];
+      obj22.children = installAppPropsFromProfileApplication(tmp(tmp2[57]).ContextMenu, obj23);
+      obj21.children = installAppPropsFromProfileApplication(tmp7(tmp2[56]).View, obj22);
+      const items8 = [installAppPropsFromProfileApplication(selectedChannel, obj21)];
       const obj24 = { targetRef: ref, visible: isVisible, onDismiss: markAsDismissed, onPress: callback };
-      items8[1] = closure_20(tmp7(tmp2[61]), obj24);
+      items8[1] = installAppPropsFromProfileApplication(tmp7(tmp2[62]), obj24);
       obj20.children = items8;
-      let tmp59 = closure_21(tmp(tmp2[17]).AnalyticsLocationProvider, obj20);
+      let tmp59 = closure_20(tmp(tmp2[17]).AnalyticsLocationProvider, obj20);
     } else {
       tmp59 = null;
     }
@@ -684,6 +683,6 @@ export default function UserProfileOverflowMenu(user) {
     };
     t3 = items5.push(obj25);
   }
-  tmp27 = guildId1;
+  tmp27 = id;
   const tmpResult15 = user(tmp2[12]);
 }

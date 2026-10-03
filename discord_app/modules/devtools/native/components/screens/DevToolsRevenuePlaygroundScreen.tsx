@@ -1,8 +1,9 @@
 // discord_app/modules/devtools/native/components/screens/DevToolsRevenuePlaygroundScreen.tsx
 import useStateFromStores from "../../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../../design/void/native.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/01981_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/01987_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowArrow from "../../../../../design/components/TableRow/native/TableRowArrow.native.tsx";
@@ -205,7 +206,7 @@ function FriendAnniversary() {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -303,7 +304,7 @@ function FriendAnniversary() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -418,7 +419,7 @@ function FriendAnniversary() {
   );
   new Set(arr.map((userId) => userId.userId));
   const items7 = [...Object.keys(stateFromStores1), ...Array.from(map.keys())];
-  map1 = new Map(
+  const map1 = new Map(
     items6.map((userId) => {
       items = [userId.userId, userId];
       return items;
@@ -732,7 +733,7 @@ function FriendAnniversary() {
   return closure_18(closure_19, obj16);
 }
 function TrialOfferSheetExample() {
-  premiumTrialOffer = premiumTrialOffer(7055).usePremiumTrialOffer();
+  premiumTrialOffer = premiumTrialOffer(6956).usePremiumTrialOffer();
   let obj2 = {
     label: "Trial Offer Nitro Basic",
     subLabel: "No trial offer in store",
@@ -745,16 +746,16 @@ function TrialOfferSheetExample() {
           markAsDismissed() {},
         };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(15500, dependencyMap.paths),
+          asyncRequireImpl(15561, dependencyMap.paths),
           "PremiumTrialOfferActionSheet",
           obj2,
         );
       }
     },
   };
-  items = [closure_17(premiumTrialOffer(6103).TableRow, obj2)];
+  items = [closure_17(premiumTrialOffer(5993).TableRow, obj2)];
   const obj3 = { title: "Trial Offers", hasIcons: false, children: null };
-  items[1] = closure_17(premiumTrialOffer(6103).TableRow, {
+  items[1] = closure_17(premiumTrialOffer(5993).TableRow, {
     label: "Trial Offer Nitro",
     subLabel: "No trial offer in store",
     disabled: null == premiumTrialOffer,
@@ -766,7 +767,7 @@ function TrialOfferSheetExample() {
           markAsDismissed() {},
         };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(15500, dependencyMap.paths),
+          asyncRequireImpl(15561, dependencyMap.paths),
           "PremiumTrialOfferActionSheet",
           obj2,
         );
@@ -774,141 +775,82 @@ function TrialOfferSheetExample() {
     },
   });
   obj3.children = items;
-  return closure_18(premiumTrialOffer(6185).TableRowGroup, obj3);
-}
-function PremiumToggles() {
-  items = [DevSettingsStore];
-  const stateFromStores = useStateFromStores.useStateFromStores(
-    items,
-    () =>
-      DevSettingsStore.allByCategory(constants.PREMIUM).filter((item) => {
-        [tmp] = item;
-        return "force_mock_iap" !== tmp;
-      }),
-    [],
-    useStateFromStores.statesWillNeverBeEqual,
-  );
-  return closure_1_17(TableRowGroup.TableRowGroup, {
-    title: "Premium Toggles",
-    hasIcons: false,
-    children: stateFromStores.map((item) => {
-      [tmp, tmp2] = item;
-      return closure_17(
-        closure_0(6807).TableSwitchRow,
-        {
-          label: tmp3,
-          subLabel: tmp,
-          value: tmp2,
-          onValueChange(flag) {
-            return require("DevSettingsActions").toggle(closure_1_0, flag);
-          },
-        },
-        tmp,
-      );
-    }),
-  });
-}
-function ForceMockIAP() {
-  items = [DevSettingsStore];
-  const stateFromStores = useStateFromStores.useStateFromStores(items, () => DevSettingsStore.get("force_mock_iap"));
-  let result = IAPUtils.shouldMockIAPForceEnable();
-  let str = "Replaces StoreKit with hardcoded fixture data. App will restart when toggled.";
-  if (result) {
-    str = "Forced on - the current device can't fetch real StoreKit products.";
-  }
-  const obj3 = { label: "Force mock IAP products", subLabel: str, value: null, disabled: null, onValueChange: null };
-  let tmp4 = result;
-  if (!result) {
-    tmp4 = stateFromStores;
-  }
-  obj3.value = tmp4;
-  obj3.disabled = result;
-  obj3.onValueChange = function onValueChange(flag) {
-    require("DevSettingsActions").toggle("force_mock_iap", flag);
-    DevSettingsStore.persist();
-    const obj = require("DevSettingsActions");
-    const result = BundleUpdaterDefault.checkForUpdateAndReload();
-  };
-  return closure_1_17(TableRowGroup.TableRowGroup, {
-    title: "iOS IAP Mock",
-    hasIcons: false,
-    children: closure_1_17(TableSwitchRow.TableSwitchRow, obj3),
-  });
+  return closure_18(premiumTrialOffer(6074).TableRowGroup, obj3);
 }
 function PaymentFlowTest() {
   const obj = {
     title: "Payment Flow Test",
     hasIcons: false,
-    children: closure_1_17(TableRow.TableRow, {
+    children: constants(TableRow.TableRow, {
       label: "Test Payment Flow",
       onPress() {
-        require("ModalActionCreators").pushLazy(require("asyncRequireImpl")(paths[35], paths.paths));
+        require("ModalActionCreators").pushLazy(require("asyncRequireImpl")(paths[37], paths.paths));
       },
-      trailing: closure_1_17(TableRowArrow.TableRowArrow, {}),
+      trailing: constants(TableRowArrow.TableRowArrow, {}),
     }),
   };
-  return closure_1_17(TableRowGroup.TableRowGroup, obj);
+  return constants(TableRowGroup.TableRowGroup, obj);
 }
 function Orbs() {
   const obj = {
     title: "Orbs",
     hasIcons: false,
-    children: closure_1_17(TableRow.TableRow, {
+    children: constants(TableRow.TableRow, {
       label: "Test Orbs Flow",
       onPress() {
-        require("ModalActionCreators").pushLazy(require("asyncRequireImpl")(paths[36], paths.paths));
+        require("ModalActionCreators").pushLazy(require("asyncRequireImpl")(paths[38], paths.paths));
       },
-      trailing: closure_1_17(TableRowArrow.TableRowArrow, {}),
+      trailing: constants(TableRowArrow.TableRowArrow, {}),
     }),
   };
-  return closure_1_17(TableRowGroup.TableRowGroup, obj);
+  return constants(TableRowGroup.TableRowGroup, obj);
 }
 function RevenueSmokeTests() {
   const obj = {
     title: "Revenue Smoke Tests",
     hasIcons: false,
-    children: closure_1_17(TableRow.TableRow, {
+    children: constants(TableRow.TableRow, {
       label: "Test all purchasing flows",
       onPress() {
-        require("ModalActionCreators").pushLazy(require("asyncRequireImpl")(paths[37], paths.paths));
+        require("ModalActionCreators").pushLazy(require("asyncRequireImpl")(paths[39], paths.paths));
       },
-      trailing: closure_1_17(TableRowArrow.TableRowArrow, {}),
+      trailing: constants(TableRowArrow.TableRowArrow, {}),
     }),
   };
-  return closure_1_17(TableRowGroup.TableRowGroup, obj);
+  return constants(TableRowGroup.TableRowGroup, obj);
 }
 function GuildPowerups() {
   const obj = {
     title: "Guild Powerups",
     hasIcons: false,
-    children: closure_1_17(TableRow.TableRow, {
+    children: constants(TableRow.TableRow, {
       label: "Guild Powerups",
       onPress() {
-        require("ModalActionCreators").pushLazy(require("asyncRequireImpl")(paths[38], paths.paths));
+        require("ModalActionCreators").pushLazy(require("asyncRequireImpl")(paths[40], paths.paths));
       },
-      trailing: closure_1_17(TableRowArrow.TableRowArrow, {}),
+      trailing: constants(TableRowArrow.TableRowArrow, {}),
     }),
   };
-  return closure_1_17(TableRowGroup.TableRowGroup, obj);
+  return constants(TableRowGroup.TableRowGroup, obj);
 }
 function GuildTagBadges() {
   const obj = {
     title: "Guild Tag Badges",
     hasIcons: false,
-    children: closure_1_17(TableRow.TableRow, {
+    children: constants(TableRow.TableRow, {
       label: "Badge gallery",
       subLabel: "Preview all native badge kinds across sizes and tints",
       onPress() {
-        require("ModalActionCreators").pushLazy(require("asyncRequireImpl")(paths[39], paths.paths));
+        require("ModalActionCreators").pushLazy(require("asyncRequireImpl")(paths[41], paths.paths));
       },
-      trailing: closure_1_17(TableRowArrow.TableRowArrow, {}),
+      trailing: constants(TableRowArrow.TableRowArrow, {}),
     }),
   };
-  return closure_1_17(TableRowGroup.TableRowGroup, obj);
+  return constants(TableRowGroup.TableRowGroup, obj);
 }
 const ScrollView = fn(17).ScrollView;
-const DevSettingsCategory = fn(4844).DevSettingsCategory;
-const PremiumConstants = fn(1374);
+const DevSettingsCategory = fn(4889).DevSettingsCategory;
+const PremiumConstants = fn(1379);
 ({ GiftIntentType: closure_15, PremiumTypes: closure_16 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
@@ -924,58 +866,377 @@ let items = [
 ];
 let c21 = "/users/@me/gift-intents/dismissals";
 const FRIEND_ANNIVERSARY = "FRIEND_ANNIVERSARY";
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, scrollContainer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.scrollContainer = { padding: nativeDefault.space.PX_16 };
 let closure_25 = createStyles.createStyles(obj2);
+let ReactCompilerGating = fn(558);
+let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = c.c(8);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        items = [DevSettingsStore];
+        const fn = function n() {
+          return DevSettingsStore.allByCategory(constants.PREMIUM).filter(
+            (item) => "force_mock_iap" !== closure_1_4(item, 1)[0],
+          );
+        };
+        const items1 = [];
+        cResult[0] = items;
+        cResult[1] = fn;
+        cResult[2] = items1;
+        tmp4 = items;
+        tmp5 = fn;
+        tmp6 = items1;
+      } else {
+        [tmp4, tmp5, tmp6] = cResult;
+      }
+      const stateFromStores = useStateFromStores.useStateFromStores(
+        tmp4,
+        tmp5,
+        tmp6,
+        useStateFromStores.statesWillNeverBeEqual,
+      );
+      if (cResult[3] !== stateFromStores) {
+        const _Symbol = Symbol;
+        if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
+          const fn2 = function u(arg0) {
+            const tmp = closure_4(arg0, 3);
+            const subLabel = tmp[0];
+            return closure_17(
+              subLabel(6698).TableSwitchRow,
+              {
+                label: tmp[2].label,
+                subLabel,
+                value: tmp[1],
+                onValueChange(flag) {
+                  return require("DevSettingsActions").toggle(first, flag);
+                },
+              },
+              subLabel,
+            );
+          };
+          cResult[5] = fn2;
+          let tmp9 = fn2;
+        } else {
+          tmp9 = cResult[5];
+        }
+        const mapped = stateFromStores.map(tmp9);
+        cResult[3] = stateFromStores;
+        cResult[4] = mapped;
+      } else {
+        if (cResult[6] !== cResult[4]) {
+          const obj2 = { title: "Premium Toggles", hasIcons: false, children: tmp8 };
+          const tmp14 = constants(TableRowGroup.TableRowGroup, obj2);
+          cResult[6] = tmp8;
+          cResult[7] = tmp14;
+          let tmp12 = tmp14;
+        } else {
+          tmp12 = cResult[7];
+        }
+        return tmp12;
+      }
+      const tmpResult = useStateFromStores;
+    }
+  : () => {
+      items = [DevSettingsStore];
+      const stateFromStores = useStateFromStores.useStateFromStores(
+        items,
+        () =>
+          DevSettingsStore.allByCategory(constants.PREMIUM).filter((item) => {
+            [tmp] = item;
+            return "force_mock_iap" !== tmp;
+          }),
+        [],
+        useStateFromStores.statesWillNeverBeEqual,
+      );
+      return constants(TableRowGroup.TableRowGroup, {
+        title: "Premium Toggles",
+        hasIcons: false,
+        children: stateFromStores.map((item) => {
+          [tmp, tmp2] = item;
+          return closure_17(
+            closure_0(6698).TableSwitchRow,
+            {
+              label: tmp3,
+              subLabel: tmp,
+              value: tmp2,
+              onValueChange(flag) {
+                return require("DevSettingsActions").toggle(closure_1_0, flag);
+              },
+            },
+            tmp,
+          );
+        }),
+      });
+    };
+ReactCompilerGating = fn(558);
+let closure_28 = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = c.c(6);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        items = [DevSettingsStore];
+        const fn = function s() {
+          return DevSettingsStore.get("force_mock_iap");
+        };
+        cResult[0] = items;
+        cResult[1] = fn;
+        tmp4 = items;
+        tmp5 = fn;
+      } else {
+        [tmp4, tmp5] = cResult;
+      }
+      const stateFromStores = useStateFromStores.useStateFromStores(tmp4, tmp5);
+      if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+        let result = IAPUtils.shouldMockIAPForceEnable();
+        cResult[2] = result;
+        let tmp8 = result;
+        const tmpResult2 = IAPUtils;
+      } else {
+        tmp8 = cResult[2];
+      }
+      let tmp10 = tmp8;
+      if (!tmp8) {
+        tmp10 = stateFromStores;
+      }
+      if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+        const fn2 = function c(flag) {
+          require("DevSettingsActions").toggle("force_mock_iap", flag);
+          DevSettingsStore.persist();
+          const obj = require("DevSettingsActions");
+          const result = BundleUpdaterDefault.checkForUpdateAndReload();
+        };
+        cResult[3] = fn2;
+        let tmp11 = fn2;
+      } else {
+        tmp11 = cResult[3];
+      }
+      if (cResult[4] !== tmp10) {
+        let str = "Replaces StoreKit with hardcoded fixture data. App will restart when toggled.";
+        if (tmp8) {
+          str = "Forced on - the current device can't fetch real StoreKit products.";
+        }
+        const obj2 = { title: "iOS IAP Mock", hasIcons: false, children: null };
+        const obj3 = {
+          label: "Force mock IAP products",
+          subLabel: str,
+          value: tmp10,
+          disabled: tmp8,
+          onValueChange: tmp11,
+        };
+        obj2.children = constants(TableSwitchRow.TableSwitchRow, obj3);
+        const tmp13Result = constants(TableRowGroup.TableRowGroup, obj2);
+        cResult[4] = tmp10;
+        cResult[5] = tmp13Result;
+        let tmp12 = tmp13Result;
+      } else {
+        tmp12 = cResult[5];
+      }
+      return tmp12;
+    }
+  : () => {
+      items = [DevSettingsStore];
+      const stateFromStores = useStateFromStores.useStateFromStores(items, () =>
+        DevSettingsStore.get("force_mock_iap"),
+      );
+      let result = IAPUtils.shouldMockIAPForceEnable();
+      let str = "Replaces StoreKit with hardcoded fixture data. App will restart when toggled.";
+      if (result) {
+        str = "Forced on - the current device can't fetch real StoreKit products.";
+      }
+      const obj3 = {
+        label: "Force mock IAP products",
+        subLabel: str,
+        value: null,
+        disabled: null,
+        onValueChange: null,
+      };
+      let tmp4 = result;
+      if (!result) {
+        tmp4 = stateFromStores;
+      }
+      obj3.value = tmp4;
+      obj3.disabled = result;
+      obj3.onValueChange = function onValueChange(flag) {
+        require("DevSettingsActions").toggle("force_mock_iap", flag);
+        DevSettingsStore.persist();
+        const obj = require("DevSettingsActions");
+        const result = BundleUpdaterDefault.checkForUpdateAndReload();
+      };
+      return constants(TableRowGroup.TableRowGroup, {
+        title: "iOS IAP Mock",
+        hasIcons: false,
+        children: constants(TableSwitchRow.TableSwitchRow, obj3),
+      });
+    };
+ReactCompilerGating = fn(558);
+let obj4 = { padding: nativeDefault.space.PX_16 };
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/devtools/native/components/screens/DevToolsRevenuePlaygroundScreen.tsx",
 );
 
-export default function DevToolsRevenuePlaygroundScreen() {
-  const tmp = closure_25();
-  const obj = { style: tmp.container, contentContainerStyle: tmp.scrollContainer, children: null };
-  items = [
-    closure_1_17(TrialOfferSheetExample, {}),
-    closure_1_17(native.Spacer, { size: nativeDefault.space.PX_16 }),
-    closure_1_17(PremiumToggles, {}),
-    ,
-    ,
-    ,
-    ,
-    ,
-    ,
-    ,
-    ,
-    ,
-    ,
-    ,
-    ,
-    ,
-  ];
-  const obj2 = { size: nativeDefault.space.PX_16 };
-  items[3] = closure_1_17(native.Spacer, { size: nativeDefault.space.PX_16 });
-  items[4] = closure_1_17(ForceMockIAP, {});
-  const obj3 = { size: nativeDefault.space.PX_16 };
-  items[5] = closure_1_17(native.Spacer, { size: nativeDefault.space.PX_16 });
-  items[6] = closure_1_17(PaymentFlowTest, {});
-  const obj4 = { size: nativeDefault.space.PX_16 };
-  items[7] = closure_1_17(native.Spacer, { size: nativeDefault.space.PX_16 });
-  items[8] = closure_1_17(Orbs, {});
-  const obj5 = { size: nativeDefault.space.PX_16 };
-  items[9] = closure_1_17(native.Spacer, { size: nativeDefault.space.PX_16 });
-  items[10] = closure_1_17(RevenueSmokeTests, {});
-  const obj6 = { size: nativeDefault.space.PX_16 };
-  items[11] = closure_1_17(native.Spacer, { size: nativeDefault.space.PX_16 });
-  items[12] = closure_1_17(GuildPowerups, {});
-  const obj7 = { size: nativeDefault.space.PX_16 };
-  items[13] = closure_1_17(native.Spacer, { size: nativeDefault.space.PX_16 });
-  items[14] = closure_1_17(GuildTagBadges, {});
-  const obj8 = { size: nativeDefault.space.PX_16 };
-  items[15] = closure_1_17(native.Spacer, { size: nativeDefault.space.PX_16 });
-  items[16] = closure_1_17(FriendAnniversary, {});
-  obj.children = items;
-  return collapsedCategories(ScrollView, obj);
-}
+export default ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      const cResult = c.c(20);
+      const tmp4 = closure_25();
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const tmp24 = constants(TrialOfferSheetExample, {});
+        const obj2 = { size: nativeDefault.space.PX_16 };
+        const tmp26 = constants(native.Spacer, obj2);
+        const tmp28 = constants(closure_27, {});
+        const obj3 = { size: nativeDefault.space.PX_16 };
+        const tmp29 = constants(native.Spacer, obj3);
+        const tmp31 = constants(closure_28, {});
+        const obj4 = { size: nativeDefault.space.PX_16 };
+        const tmp32 = constants(native.Spacer, obj4);
+        const tmp34 = constants(PaymentFlowTest, {});
+        const obj5 = { size: nativeDefault.space.PX_16 };
+        const tmp35 = constants(native.Spacer, obj5);
+        const tmp37 = constants(Orbs, {});
+        const obj6 = { size: nativeDefault.space.PX_16 };
+        const tmp38 = constants(native.Spacer, obj6);
+        const tmp40 = constants(RevenueSmokeTests, {});
+        const obj7 = { size: nativeDefault.space.PX_16 };
+        const tmp41 = constants(native.Spacer, obj7);
+        const tmp43 = constants(GuildPowerups, {});
+        const obj8 = { size: nativeDefault.space.PX_16 };
+        const tmp44 = constants(native.Spacer, obj8);
+        const tmp46 = constants(GuildTagBadges, {});
+        const obj9 = { size: nativeDefault.space.PX_16 };
+        const tmp47 = constants(native.Spacer, obj9);
+        const tmp49 = constants(FriendAnniversary, {});
+        cResult[0] = tmp24;
+        cResult[1] = tmp26;
+        cResult[2] = tmp40;
+        cResult[3] = tmp41;
+        cResult[4] = tmp43;
+        cResult[5] = tmp44;
+        cResult[6] = tmp46;
+        cResult[7] = tmp47;
+        cResult[8] = tmp49;
+        cResult[9] = tmp28;
+        cResult[10] = tmp29;
+        cResult[11] = tmp31;
+        cResult[12] = tmp32;
+        cResult[13] = tmp34;
+        cResult[14] = tmp35;
+        cResult[15] = tmp37;
+        cResult[16] = tmp38;
+        tmp10 = tmp44;
+        tmp11 = tmp46;
+        tmp12 = tmp47;
+        tmp13 = tmp49;
+        tmp14 = tmp28;
+        tmp15 = tmp29;
+        tmp16 = tmp31;
+        tmp17 = tmp32;
+        tmp18 = tmp34;
+        tmp19 = tmp35;
+        tmp20 = tmp37;
+        tmp21 = tmp38;
+        tmp5 = tmp24;
+        tmp6 = tmp26;
+        tmp7 = tmp40;
+        tmp8 = tmp41;
+        tmp9 = tmp43;
+      } else {
+        [
+          tmp5,
+          tmp6,
+          tmp7,
+          tmp8,
+          tmp9,
+          tmp10,
+          tmp11,
+          tmp12,
+          tmp13,
+          tmp14,
+          tmp15,
+          tmp16,
+          tmp17,
+          tmp18,
+          tmp19,
+          tmp20,
+          tmp21,
+        ] = cResult;
+      }
+      if (cResult[17] === tmp4.container) {
+        if (cResult[18] === tmp4.scrollContainer) {
+          let tmp50 = cResult[19];
+        }
+        return tmp50;
+      }
+      const obj10 = { style: tmp4.container, contentContainerStyle: tmp4.scrollContainer, children: null };
+      items = [
+        tmp5,
+        tmp6,
+        tmp14,
+        tmp15,
+        tmp16,
+        tmp17,
+        tmp18,
+        tmp19,
+        tmp20,
+        tmp21,
+        tmp7,
+        tmp8,
+        tmp9,
+        tmp10,
+        tmp11,
+        tmp12,
+        tmp13,
+      ];
+      obj10.children = items;
+      const tmp51 = collapsedCategories(ScrollView, obj10);
+      cResult[17] = tmp4.container;
+      cResult[18] = tmp4.scrollContainer;
+      cResult[19] = tmp51;
+      tmp50 = tmp51;
+    }
+  : () => {
+      const tmp = closure_25();
+      const obj = { style: tmp.container, contentContainerStyle: tmp.scrollContainer, children: null };
+      items = [
+        constants(TrialOfferSheetExample, {}),
+        constants(native.Spacer, { size: nativeDefault.space.PX_16 }),
+        constants(closure_27, {}),
+        ,
+        ,
+        ,
+        ,
+        ,
+        ,
+        ,
+        ,
+        ,
+        ,
+        ,
+        ,
+        ,
+      ];
+      const obj2 = { size: nativeDefault.space.PX_16 };
+      items[3] = constants(native.Spacer, { size: nativeDefault.space.PX_16 });
+      items[4] = constants(closure_28, {});
+      const obj3 = { size: nativeDefault.space.PX_16 };
+      items[5] = constants(native.Spacer, { size: nativeDefault.space.PX_16 });
+      items[6] = constants(PaymentFlowTest, {});
+      const obj4 = { size: nativeDefault.space.PX_16 };
+      items[7] = constants(native.Spacer, { size: nativeDefault.space.PX_16 });
+      items[8] = constants(Orbs, {});
+      const obj5 = { size: nativeDefault.space.PX_16 };
+      items[9] = constants(native.Spacer, { size: nativeDefault.space.PX_16 });
+      items[10] = constants(RevenueSmokeTests, {});
+      const obj6 = { size: nativeDefault.space.PX_16 };
+      items[11] = constants(native.Spacer, { size: nativeDefault.space.PX_16 });
+      items[12] = constants(GuildPowerups, {});
+      const obj7 = { size: nativeDefault.space.PX_16 };
+      items[13] = constants(native.Spacer, { size: nativeDefault.space.PX_16 });
+      items[14] = constants(GuildTagBadges, {});
+      const obj8 = { size: nativeDefault.space.PX_16 };
+      items[15] = constants(native.Spacer, { size: nativeDefault.space.PX_16 });
+      items[16] = constants(FriendAnniversary, {});
+      obj.children = items;
+      return collapsedCategories(ScrollView, obj);
+    };

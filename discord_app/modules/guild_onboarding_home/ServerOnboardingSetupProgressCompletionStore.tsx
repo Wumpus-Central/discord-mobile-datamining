@@ -35,6 +35,7 @@ const serverOnboardingSetupProgressCompletionStore = new ServerOnboardingSetupPr
     },
   },
 );
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/guild_onboarding_home/ServerOnboardingSetupProgressCompletionStore.tsx",
@@ -47,13 +48,41 @@ export const markServerOnboardingSetupProgressComplete = function markServerOnbo
     DispatcherDefault.dispatch(obj2);
   }
 };
-export const useIsServerOnboardingSetupProgressComplete = function useIsServerOnboardingSetupProgressComplete(arg0) {
-  _require = arg0;
-  const items = [serverOnboardingSetupProgressCompletionStore];
-  const items1 = [arg0];
-  return require("initialize").useStateFromStores(
-    items,
-    () => serverOnboardingSetupProgressCompletionStore.isComplete(closure_0),
-    items1,
-  );
-};
+export const useIsServerOnboardingSetupProgressComplete = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0) => {
+      _require = arg0;
+      const cResult = require("c").c(4);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const items = [serverOnboardingSetupProgressCompletionStore];
+        cResult[0] = items;
+        let first = items;
+      } else {
+        first = cResult[0];
+      }
+      if (cResult[1] !== arg0) {
+        const fn = function s() {
+          return serverOnboardingSetupProgressCompletionStore.isComplete(closure_0);
+        };
+        const items1 = [arg0];
+        cResult[1] = arg0;
+        cResult[2] = fn;
+        cResult[3] = items1;
+        let tmp7 = items1;
+        let tmp6 = fn;
+      } else {
+        tmp6 = cResult[2];
+        tmp7 = cResult[3];
+      }
+      const obj = require("c");
+      return require("initialize").useStateFromStores(first, tmp6, tmp7);
+    }
+  : (arg0) => {
+      _require = arg0;
+      const items = [serverOnboardingSetupProgressCompletionStore];
+      const items1 = [arg0];
+      return require("initialize").useStateFromStores(
+        items,
+        () => serverOnboardingSetupProgressCompletionStore.isComplete(closure_0),
+        items1,
+      );
+    };

@@ -15,7 +15,7 @@ let closure_6 = async function _saveEmail(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -111,7 +111,7 @@ let closure_6 = async function _saveEmail(arg0) {
     }
   }
 };
-const ChangeEmailStore = fn(6121);
+const ChangeEmailStore = fn(6009);
 ({ setChangeEmailError: closure_4, ChangeEmailFields: hasOwnProperty } = ChangeEmailStore);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/verification/native/ChangeEmailUtils.tsx");

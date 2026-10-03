@@ -88,9 +88,9 @@ function handleUserSettingsProtoStoreUpdate() {
     _undefined = undefined;
   }
 }
-const isGuildTextChannelType = fn(2048).isGuildTextChannelType;
-const dependencyMap = fn(1229).BACKGROUND_GRADIENT_PRESETS_MAP;
-const SystemThemeState = fn(1185).SystemThemeState;
+const isGuildTextChannelType = fn(2055).isGuildTextChannelType;
+const dependencyMap = fn(1240).BACKGROUND_GRADIENT_PRESETS_MAP;
+const SystemThemeState = fn(1196).SystemThemeState;
 let closure_14 = true;
 let c15 = false;
 let c16 = false;

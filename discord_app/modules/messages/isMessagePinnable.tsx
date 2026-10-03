@@ -4,7 +4,7 @@ import isSystemMessageDefault from "isSystemMessage.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
 require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ ChannelTypes: closure_4, Permissions: hasOwnProperty } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/isMessagePinnable.tsx");

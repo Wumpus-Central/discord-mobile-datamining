@@ -44,8 +44,6 @@ const items = [
   dismissible_content.DismissibleContent.XBOX_PERKS_RECONNECT_UPSELL,
   dismissible_content.DismissibleContent.APP_WIDGET_V2_PROFILE_UPSELL_COACHMARK,
   dismissible_content.DismissibleContent.APP_WIDGET_V2_PROFILE_UPSELL_SUGGESTED,
-  dismissible_content.DismissibleContent.MONTHLY_TO_YEARLY_UPSELL_STICKY_BAR,
-  dismissible_content.DismissibleContent.MONTHLY_TO_YEARLY_UPSELL_NITRO_TAB_POPOVER,
   dismissible_content.DismissibleContent.COLLECTIBLES_SHOP_GAME_SERVER_HOSTING_BANNER,
   dismissible_content.DismissibleContent.COD_3PP_POPOVER,
   dismissible_content.DismissibleContent.USER_PROFILE_PERSONAL_WIDGET_COACHMARK,

@@ -22,6 +22,10 @@ import AccountRemove2faSettingDefault from "../../defs/native/AccountRemove2faSe
 import AccountViewBackupCodesSettingDefault from "../../defs/native/AccountViewBackupCodesSetting.tsx";
 import AccountSmsBackupSettingDefault from "../../defs/native/AccountSmsBackupSetting.tsx";
 import AccountWebAuthnViewSettingDefault from "../../defs/native/AccountWebAuthnViewSetting.tsx";
+import AccountWebAuthnRegisterSettingDefault from "../../defs/native/AccountWebAuthnRegisterSetting.tsx";
+import AccountWebAuthnNameSettingDefault from "../../defs/native/AccountWebAuthnNameSetting.tsx";
+import AccountWebAuthnEditSettingDefault from "../../defs/native/AccountWebAuthnEditSetting.tsx";
+import AccountWebAuthnSuccessSettingDefault from "../../defs/native/AccountWebAuthnSuccessSetting.tsx";
 import AccountBlockedUsersSettingDefault from "../../defs/native/AccountBlockedUsersSetting.tsx";
 import AccountIgnoredUsersSettingDefault from "../../defs/native/AccountIgnoredUsersSetting.tsx";
 import AccountDeleteSettingDefault from "../../defs/native/AccountDeleteSetting.tsx";
@@ -298,6 +302,10 @@ const MobileUserSettings = SettingsConstants.MobileUserSettings;
   ACCOUNT_VIEW_BACKUP_CODES,
   ACCOUNT_SMS_BACKUP,
   ACCOUNT_WEB_AUTHN_VIEW,
+  ACCOUNT_WEB_AUTHN_REGISTER,
+  ACCOUNT_WEB_AUTHN_NAME,
+  ACCOUNT_WEB_AUTHN_EDIT,
+  ACCOUNT_WEB_AUTHN_SUCCESS,
   ACCOUNT_BLOCKED_USERS_V2,
   ACCOUNT_IGNORED_USERS,
   ACCOUNT_DELETE,
@@ -538,10 +546,6 @@ const MobileUserSettings = SettingsConstants.MobileUserSettings;
   PARENTAL_CONTROLS_EXPLICIT_MEDIA_FILTERS_FRIENDS_DMS,
   PARENTAL_CONTROLS_EXPLICIT_MEDIA_FILTERS_NON_FRIENDS_DMS,
   PARENTAL_CONTROLS_GORE_MEDIA_FILTERS_FRIENDS_DMS,
-  PARENTAL_CONTROLS_GORE_MEDIA_FILTERS_NON_FRIENDS_DMS,
-  PARENTAL_CONTROLS_DATA_USAGE_STATISTICS,
-  PARENTAL_CONTROLS_DATA_USAGE_PERSONALIZATION,
-  PARENTAL_CONTROLS_DATA_USAGE_QUESTS,
 } = MobileUserSettings);
 const merged = Object.assign(MobileNotifSettingsRendererConfig.MOBILE_NOTIF_SETTINGS_RENDERER_CONFIG);
 const frozen = Object.freeze({
@@ -566,6 +570,10 @@ const frozen = Object.freeze({
   [ACCOUNT_VIEW_BACKUP_CODES]: AccountViewBackupCodesSettingDefault,
   [ACCOUNT_SMS_BACKUP]: AccountSmsBackupSettingDefault,
   [ACCOUNT_WEB_AUTHN_VIEW]: AccountWebAuthnViewSettingDefault,
+  [ACCOUNT_WEB_AUTHN_REGISTER]: AccountWebAuthnRegisterSettingDefault,
+  [ACCOUNT_WEB_AUTHN_NAME]: AccountWebAuthnNameSettingDefault,
+  [ACCOUNT_WEB_AUTHN_EDIT]: AccountWebAuthnEditSettingDefault,
+  [ACCOUNT_WEB_AUTHN_SUCCESS]: AccountWebAuthnSuccessSettingDefault,
   [ACCOUNT_BLOCKED_USERS_V2]: AccountBlockedUsersSettingDefault,
   [ACCOUNT_IGNORED_USERS]: AccountIgnoredUsersSettingDefault,
   [ACCOUNT_DELETE]: AccountDeleteSettingDefault,
@@ -809,10 +817,12 @@ const frozen = Object.freeze({
   [PARENTAL_CONTROLS_EXPLICIT_MEDIA_FILTERS_NON_FRIENDS_DMS]:
     ParentalControlsExplicitMediaFiltersNonFriendsDMsSettingDefault,
   [PARENTAL_CONTROLS_GORE_MEDIA_FILTERS_FRIENDS_DMS]: ParentalControlsGoreMediaFiltersFriendsDMsSettingDefault,
-  [PARENTAL_CONTROLS_GORE_MEDIA_FILTERS_NON_FRIENDS_DMS]: ParentalControlsGoreMediaFiltersNonFriendsDMsSettingDefault,
-  [PARENTAL_CONTROLS_DATA_USAGE_STATISTICS]: ParentalControlsUseDataToImproveDiscordSettingDefault,
-  [PARENTAL_CONTROLS_DATA_USAGE_PERSONALIZATION]: ParentalControlsUseDataToCustomizeDiscordSettingDefault,
-  [PARENTAL_CONTROLS_DATA_USAGE_QUESTS]: ParentalControlsUseDataForQuestsSettingDefault,
+  [MobileUserSettings.PARENTAL_CONTROLS_GORE_MEDIA_FILTERS_NON_FRIENDS_DMS]:
+    ParentalControlsGoreMediaFiltersNonFriendsDMsSettingDefault,
+  [MobileUserSettings.PARENTAL_CONTROLS_DATA_USAGE_STATISTICS]: ParentalControlsUseDataToImproveDiscordSettingDefault,
+  [MobileUserSettings.PARENTAL_CONTROLS_DATA_USAGE_PERSONALIZATION]:
+    ParentalControlsUseDataToCustomizeDiscordSettingDefault,
+  [MobileUserSettings.PARENTAL_CONTROLS_DATA_USAGE_QUESTS]: ParentalControlsUseDataForQuestsSettingDefault,
   [MobileUserSettings.PARENTAL_CONTROLS_DATA_USAGE_QUESTS_3P]: ParentalControlsUseDataForQuests3PSettingDefault,
   [MobileUserSettings.ACTIVITY_PRIVACY_SHARE_MY_ACTIVITY]: ActivityPrivacyShareMyActivitySettingDefault,
   [MobileUserSettings.ACTIVITY_PRIVACY_DEFAULT_SHARING]: ActivityPrivacyDefaultSharingSettingDefault,

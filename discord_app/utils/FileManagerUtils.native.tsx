@@ -15,7 +15,7 @@ let closure_5 = async function _readFile(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -37,16 +37,16 @@ let closure_5 = async function _readFile(arg0) {
           const tmp41 = (function getBaseDirectory(arg0) {
             if ("shared" === arg0) {
               if (!obj.isAndroid()) {
-                return closure_1_1(1151).getConstants().SharedDirPath;
+                return closure_1_1(1162).getConstants().SharedDirPath;
               }
-              obj = closure_1_0(1364);
+              obj = closure_1_0(1369);
             }
             if ("cache" === arg0) {
-              let DocumentsDirPath = closure_1_1(1151).getConstants().CacheDirPath;
-              const obj4 = closure_1_1(1151);
+              let DocumentsDirPath = closure_1_1(1162).getConstants().CacheDirPath;
+              const obj4 = closure_1_1(1162);
             } else {
-              DocumentsDirPath = closure_1_1(1151).getConstants().DocumentsDirPath;
-              const obj3 = closure_1_1(1151);
+              DocumentsDirPath = closure_1_1(1162).getConstants().DocumentsDirPath;
+              const obj3 = closure_1_1(1162);
             }
           })(closure_0);
           closure_131_2 = tmp41;
@@ -121,8 +121,8 @@ let closure_4 = new LoggerDefault("FileManagerUtils");
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/FileManagerUtils.native.tsx");
 
-export const writeFile = function writeFile(cache, combined, arg2, utf8) {
-  return NativeFileModuleDefault.writeFile(cache, combined, arg2, utf8).then((result) => {
+export const writeFile = function writeFile(cache, combined2, arg2, utf8) {
+  return NativeFileModuleDefault.writeFile(cache, combined2, arg2, utf8).then((result) => {
     let combined = result;
     if (obj.isAndroid()) {
       const _HermesInternal = HermesInternal;
@@ -137,8 +137,8 @@ export const moveFile = function moveFile(arg0, arg1, arg2) {
 export const removeFile = function removeFile(cache, filePathForGif) {
   return NativeFileModuleDefault.removeFile(cache, filePathForGif);
 };
-export const clearFolder = function clearFolder(cache, POLL_ATTACHMENT_FOLDER) {
-  return NativeFileModuleDefault.clearFolder(cache, POLL_ATTACHMENT_FOLDER);
+export const clearFolder = function clearFolder(cache, c5) {
+  return NativeFileModuleDefault.clearFolder(cache, c5);
 };
 export const readFile = function readFile() {
   const self = this;

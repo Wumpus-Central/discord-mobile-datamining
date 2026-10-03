@@ -4,7 +4,7 @@ import GatewaySocketOpcode from "GatewaySocketOpcode.tsx";
 import RTCRegionStore from "../../stores/RTCRegionStore.tsx";
 
 require = fn;
-const EventEmitter = fn(568).EventEmitter;
+const EventEmitter = fn(580).EventEmitter;
 class GatewaySocketOpCodes extends EventEmitter {}
 const prototype = GatewaySocketOpCodes.prototype;
 prototype["presenceUpdate"] = function presenceUpdate(status, since, activities, afk) {
@@ -192,4 +192,4 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/gateway/GatewaySocketOpCodes.tsx");
 
 export default GatewaySocketOpCodes;
-export const Opcode = fn(1991).Opcode;
+export const Opcode = fn(1997).Opcode;

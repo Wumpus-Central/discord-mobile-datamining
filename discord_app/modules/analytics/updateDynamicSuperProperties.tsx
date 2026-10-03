@@ -21,7 +21,7 @@ export const updateDynamicSuperProperties = function updateDynamicSuperPropertie
   if (uuid !== prop) {
     obj3.client_heartbeat_session_id = uuid;
   }
-  const state = DiscordAppStateDefault.getState();
+  state = DiscordAppStateDefault.getState();
   let client_app_state;
   if (superProperties != null) {
     client_app_state = superProperties.client_app_state;

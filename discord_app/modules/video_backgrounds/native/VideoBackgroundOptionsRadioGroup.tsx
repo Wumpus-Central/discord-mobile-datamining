@@ -7,51 +7,150 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const NOOP = fn(1074).NOOP;
+const NOOP = fn(1085).NOOP;
 const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/video_backgrounds/native/VideoBackgroundOptionsRadioGroup.tsx");
 
-export default function VideoBackgroundOptionsRadioGroup(title) {
-  _require = undefined;
-  _require = require("analytics").useAnalyticsContext();
-  let obj = require("analytics");
-  const lastUsedVideoBackgroundOption = require("LastUsedVideoBackgroundOption").useLastUsedVideoBackgroundOption();
-  let obj2 = require("LastUsedVideoBackgroundOption");
-  const videoBackgroundRadioOptions = require("VideoBackgroundOptions").useVideoBackgroundRadioOptions();
-  const obj4 = {
-    hasIcons: true,
-    title: title.title,
-    value: null,
-    onChange: null,
-    accessibilityLabel: null,
-    children: null,
-  };
-  let obj3 = require("VideoBackgroundOptions");
-  obj4.value = require("VideoBackgroundOptions").toVideoBackgroundRadioValue(lastUsedVideoBackgroundOption);
-  obj4.onChange = function onChange(arg0) {
-    const result = VideoBackgroundOptions.fromVideoBackgroundRadioValue(arg0);
-    const result1 = applyBackgroundOption.applyBackgroundOptionLive(result, { location: closure_0.location });
-    result1.catch(NOOP);
-    const obj3 = { location: closure_0.location };
-    const result2 = VideoBackgroundActionCreators.saveLastUsedBackgroundOption(result);
-    result2.catch(NOOP);
-  };
-  const intl = require("util").intl;
-  obj4.accessibilityLabel = intl.string(require("util").t.lZTUPs);
-  obj4.children = videoBackgroundRadioOptions.map((value) =>
-    jsx(
-      closure_0(dependencyMap[10]).TableRadioRow,
-      { value: value.value, label: value.label, icon: value.icon },
-      value.value,
-    ),
-  );
-  return jsx(require("TableRadioGroup").TableRadioGroup, {
-    hasIcons: true,
-    title: title.title,
-    value: null,
-    onChange: null,
-    accessibilityLabel: null,
-    children: null,
-  });
-}
+export default ReactCompilerGating.isReactCompilerEnabled()
+  ? (title) => {
+      const cResult = analyticsContext(576).c(13);
+      title = title.title;
+      let obj = analyticsContext(576);
+      analyticsContext = analyticsContext(9101).useAnalyticsContext();
+      let obj2 = analyticsContext(9101);
+      const lastUsedVideoBackgroundOption = analyticsContext(9316).useLastUsedVideoBackgroundOption();
+      let obj3 = analyticsContext(9316);
+      const videoBackgroundRadioOptions = analyticsContext(9681).useVideoBackgroundRadioOptions();
+      if (cResult[0] !== analyticsContext.location) {
+        const fn = function l(arg0) {
+          const result = VideoBackgroundOptions.fromVideoBackgroundRadioValue(arg0);
+          const result1 = applyBackgroundOption.applyBackgroundOptionLive(result, {
+            location: analyticsContext.location,
+          });
+          result1.catch(NOOP);
+          const obj3 = { location: analyticsContext.location };
+          const result2 = VideoBackgroundActionCreators.saveLastUsedBackgroundOption(result);
+          result2.catch(NOOP);
+        };
+        cResult[0] = analyticsContext.location;
+        cResult[1] = fn;
+        let tmp6 = fn;
+      } else {
+        tmp6 = cResult[1];
+      }
+      if (cResult[2] !== lastUsedVideoBackgroundOption) {
+        let result = tmp(9681).toVideoBackgroundRadioValue(lastUsedVideoBackgroundOption);
+        cResult[2] = lastUsedVideoBackgroundOption;
+        cResult[3] = result;
+        let tmp7 = result;
+        const tmpResult = tmp(9681);
+      } else {
+        tmp7 = cResult[3];
+      }
+      if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+        const intl = tmp(1126).intl;
+        const stringResult = intl.string(tmp(1126).t.lZTUPs);
+        cResult[4] = stringResult;
+        let tmp9 = stringResult;
+      } else {
+        tmp9 = cResult[4];
+      }
+      if (cResult[5] !== videoBackgroundRadioOptions) {
+        const _Symbol = Symbol;
+        if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
+          const fn2 = function h(value) {
+            return jsx(
+              analyticsContext(dependencyMap[11]).TableRadioRow,
+              { value: value.value, label: value.label, icon: value.icon },
+              value.value,
+            );
+          };
+          cResult[7] = fn2;
+          let tmp12 = fn2;
+        } else {
+          tmp12 = cResult[7];
+        }
+        const mapped = videoBackgroundRadioOptions.map(tmp12);
+        cResult[5] = videoBackgroundRadioOptions;
+        cResult[6] = mapped;
+      } else {
+        if (cResult[8] === tmp6) {
+          if (cResult[9] === tmp7) {
+            if (cResult[10] === tmp11) {
+              if (cResult[11] === title) {
+                let tmp15 = cResult[12];
+              }
+              return tmp15;
+            }
+          }
+        }
+        const obj5 = {
+          hasIcons: true,
+          title,
+          value: tmp7,
+          onChange: tmp6,
+          accessibilityLabel: tmp9,
+          children: cResult[6],
+        };
+        const tmp17 = jsx(tmp(6072).TableRadioGroup, {
+          hasIcons: true,
+          title,
+          value: tmp7,
+          onChange: tmp6,
+          accessibilityLabel: tmp9,
+          children: cResult[6],
+        });
+        cResult[8] = tmp6;
+        cResult[9] = tmp7;
+        cResult[10] = cResult[6];
+        cResult[11] = title;
+        cResult[12] = tmp17;
+        tmp15 = tmp17;
+      }
+      const obj4 = analyticsContext(9681);
+    }
+  : (title) => {
+      _require = undefined;
+      _require = require("analytics").useAnalyticsContext();
+      let obj = require("analytics");
+      const lastUsedVideoBackgroundOption = require("LastUsedVideoBackgroundOption").useLastUsedVideoBackgroundOption();
+      let obj2 = require("LastUsedVideoBackgroundOption");
+      const videoBackgroundRadioOptions = require("VideoBackgroundOptions").useVideoBackgroundRadioOptions();
+      const obj4 = {
+        hasIcons: true,
+        title: title.title,
+        value: null,
+        onChange: null,
+        accessibilityLabel: null,
+        children: null,
+      };
+      let obj3 = require("VideoBackgroundOptions");
+      obj4.value = require("VideoBackgroundOptions").toVideoBackgroundRadioValue(lastUsedVideoBackgroundOption);
+      obj4.onChange = function onChange(arg0) {
+        const result = VideoBackgroundOptions.fromVideoBackgroundRadioValue(arg0);
+        const result1 = applyBackgroundOption.applyBackgroundOptionLive(result, { location: closure_0.location });
+        result1.catch(NOOP);
+        const obj3 = { location: closure_0.location };
+        const result2 = VideoBackgroundActionCreators.saveLastUsedBackgroundOption(result);
+        result2.catch(NOOP);
+      };
+      const intl = require("util").intl;
+      obj4.accessibilityLabel = intl.string(require("util").t.lZTUPs);
+      obj4.children = videoBackgroundRadioOptions.map((value) =>
+        jsx(
+          closure_0(dependencyMap[11]).TableRadioRow,
+          { value: value.value, label: value.label, icon: value.icon },
+          value.value,
+        ),
+      );
+      return jsx(require("TableRadioGroup").TableRadioGroup, {
+        hasIcons: true,
+        title: title.title,
+        value: null,
+        onChange: null,
+        accessibilityLabel: null,
+        children: null,
+      });
+    };

@@ -6,7 +6,6 @@ import flux_EmitterDefault from "Emitter.tsx";
 import LastFewActionsAll from "LastFewActions.tsx";
 import LoggingUtils from "LoggingUtils.tsx";
 import profiling from "../../shared/utils/profiling.tsx";
-import DepGraph from "../../../../_runtime/00572_DepGraph.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 function setDisplayName(arg0, displayName) {
@@ -29,17 +28,30 @@ let set = new Set([
   "WRITE_CACHES",
 ]);
 const logger = new logger_Logger.Logger("Flux");
+const DispatchBand = { Early: 0, [0]: "Early", Database: 1, [1]: "Database", Default: 2, [2]: "Default" };
+let items = [, ,];
+({ Early: arr[0], Database: arr[1], Default: arr[2] } = DispatchBand);
 class ActionHandlersGraph {
   constructor() {
     merged = Object.assign({
+      _nodes: null,
       _orderedActionHandlers: null,
-      _orderedCallbackTokens: null,
+      _tokensByBand: null,
+      _tokensByActionType: null,
+      _callbackTokenPositions: null,
       _lastID: 1,
-      _dependencyGraph: null,
     });
-    merged[0] = {};
-    depGraph = new closure_0(closure_3[7]).DepGraph();
-    merged[3] = depGraph;
+    map = new Map();
+    merged[0] = map;
+    merged[1] = {};
+    map1 = new Map(
+      closure_7.map((item) => {
+        items = [item, []];
+        return items;
+      }),
+    );
+    merged[2] = map1;
+    merged[3] = {};
     return merged;
   }
 }
@@ -54,129 +66,199 @@ prototype["getOrderedActionHandlers"] = function getOrderedActionHandlers(type) 
 };
 prototype["register"] = function register(name, obj, storeDidChange, band) {
   const self = this;
-  if (token === undefined) {
-    token = self.createToken();
-  }
-  let isIntegerResult = band >= 0;
-  if (isIntegerResult) {
-    const _Number = Number;
-    isIntegerResult = Number.isInteger(band);
-  }
-  _modDef38(isIntegerResult, "band must be a non-negative integer.");
-  obj = {};
-  for (const key10024 in arg1) {
-    closure_0 = arg1[key10024];
+  _modDef38(items.includes(band), "band must be a DispatchBand, got %s.", band);
+  this._lastID = +this._lastID + 1;
+  const text = `ID_${tmp3}`;
+  const actionHandler = {};
+  for (const key10026 in arg1) {
+    let _tokensByActionType = self._tokensByActionType;
+    let arr2 = _tokensByActionType[key10026];
+    if (arr2 == null) {
+      items = [];
+      _tokensByActionType[key10026] = items;
+      arr2 = items;
+    }
+    let arr = arr2.push(text);
+    closure_0 = arg1[key10026];
     function wrapper(arg0) {
       return closure_0(arg0);
     }
     let _HermesInternal = HermesInternal;
-    wrapper.displayName = "" + arg0 + "_" + key10024;
-    obj[key10024] = wrapper;
+    wrapper.displayName = "" + arg0 + "_" + key10026;
+    actionHandler[key10026] = wrapper;
     continue;
   }
-  const _dependencyGraph = self._dependencyGraph;
-  _dependencyGraph.addNode(token, { name, band, actionHandler: obj, storeDidChange });
-  self._addToBand(token, band);
+  const _nodes = self._nodes;
+  const result = _nodes.set(text, { name, band, actionHandler, storeDidChange, dependencies: [] });
+  const _tokensByBand = self._tokensByBand;
+  value = _tokensByBand.get(band);
+  value.push(text);
   self._invalidateCaches();
-  return token;
-};
-prototype["createToken"] = function createToken() {
-  this._lastID = +this._lastID + 1;
-  return "ID_" + +this._lastID;
+  return text;
 };
 prototype["addDependencies"] = function addDependencies(arg0, arg1) {
   const self = this;
-  const result = this._validateDependencies(arg0, arg1);
-  while (tmp2 !== undefined) {
-    let _dependencyGraph = self._dependencyGraph;
-    let addDependencyResult = _dependencyGraph.addDependency(arg0, tmp3);
-    continue;
-  }
-  self._invalidateCaches();
-};
-prototype["_validateDependencies"] = function _validateDependencies(arg0, arg1) {};
-prototype["_invalidateCaches"] = function _invalidateCaches() {
-  this._orderedCallbackTokens = null;
-  this._orderedActionHandlers = {};
-};
-prototype["_bandToken"] = function _bandToken(band) {
-  const self = this;
-  const combined = "band." + band;
-  const _dependencyGraph = this._dependencyGraph;
-  if (!_dependencyGraph.hasNode(combined)) {
-    const _dependencyGraph2 = self._dependencyGraph;
-    const obj = {
-      name: combined,
-      band,
-      actionHandler: {},
-      storeDidChange() {},
-    };
-    _dependencyGraph2.addNode(combined, obj);
-    if (band > 0) {
-      const _dependencyGraph3 = self._dependencyGraph;
-      _dependencyGraph3.addDependency(combined, self._bandToken(band - 1));
+  const _nodes = this._nodes;
+  value = _nodes.get(arg0);
+  if (null == value) {
+    const _Error4 = Error;
+    const _HermesInternal4 = HermesInternal;
+    const error = new Error("cannot add dependencies to " + arg0 + " because " + arg0 + " is not registered.");
+    throw error;
+  } else {
+    const iter = arg1[Symbol.iterator]();
+    const nextResult = iter.next();
+    while (iter !== undefined) {
+      let tmp5 = nextResult;
+      if (nextResult === arg0) {
+        let tmp19 = globalThis;
+        let _Error3 = Error;
+        let _HermesInternal3 = HermesInternal;
+        let str13 = " because a store cannot wait for itself.";
+        let str14 = " \u2192 ";
+        let str15 = "cannot add dependency ";
+        let tmp20 = new.target;
+        let tmp21 = new.target;
+        let error1 = new Error(
+          "cannot add dependency " + value.name + " \u2192 " + value.name + " because a store cannot wait for itself.",
+        );
+        throw error1;
+      } else {
+        let _nodes2 = self._nodes;
+        value2 = _nodes2.get(tmp5);
+        if (null == value2) {
+          let tmp11 = globalThis;
+          let _Error2 = Error;
+          let _HermesInternal2 = HermesInternal;
+          let str9 = " is not registered.";
+          let str10 = " because ";
+          let str11 = " \u2192 ";
+          let str12 = "cannot add dependency ";
+          let tmp15 = new.target;
+          let tmp16 = new.target;
+          let error2 = new Error(
+            "cannot add dependency " +
+              value.name +
+              " \u2192 " +
+              nextResult +
+              " because " +
+              nextResult +
+              " is not registered.",
+          );
+          throw error2;
+        } else if (tmp43.band > value.band) {
+          let tmp6 = globalThis;
+          let _Error = Error;
+          let _HermesInternal = HermesInternal;
+          let str = ").";
+          let str2 = " (band ";
+          let str3 = ") will never execute before ";
+          let str4 = " because ";
+          let str5 = " \u2192 ";
+          let str6 = "cannot add dependency ";
+          let str7 = " (band ";
+          let str8 = " (band ";
+          let tmp7 = new.target;
+          let tmp8 = new.target;
+          let error3 = new Error(
+            "cannot add dependency " +
+              value.name +
+              " \u2192 " +
+              value2.name +
+              " because " +
+              value2.name +
+              " (band " +
+              value2.band +
+              ") will never execute before " +
+              value.name +
+              " (band " +
+              value.band +
+              ").",
+          );
+          throw error3;
+        }
+      }
     }
+    const dependencies = value.dependencies;
+    const push = dependencies.push;
+    items = [];
+    HermesBuiltin.arraySpread(arg1, 0);
+    HermesBuiltin.apply(items, dependencies);
+    self._invalidateCaches();
   }
-  return combined;
 };
-prototype["_addToBand"] = function _addToBand(token, band) {
-  const self = this;
-  const _dependencyGraph = this._dependencyGraph;
-  _dependencyGraph.addDependency(this._bandToken(band), token);
-  if (band > 0) {
-    const _dependencyGraph2 = self._dependencyGraph;
-    _dependencyGraph2.addDependency(token, self._bandToken(band - 1));
-  }
+prototype["_invalidateCaches"] = function _invalidateCaches() {
+  this._callbackTokenPositions = null;
+  this._orderedActionHandlers = {};
 };
 prototype["_computeOrderedActionHandlers"] = function _computeOrderedActionHandlers(type) {
   const self = this;
-  let prop = this._orderedCallbackTokens;
-  if (prop == null) {
-    prop = self._computeOrderedCallbackTokens();
+  items = this._tokensByActionType[type];
+  if (items == null) {
+    items = [];
   }
-  const items = [];
+  const substr = items.slice();
+  if (substr.length > 1) {
+    let _callbackTokenPositions = self._callbackTokenPositions;
+    if (_callbackTokenPositions == null) {
+      _callbackTokenPositions = self._computeCallbackTokenPositions();
+    }
+    const sorted = substr.sort((arg0, arg1) => {
+      value = _callbackTokenPositions.get(arg0);
+      return value - _callbackTokenPositions.get(arg1);
+    });
+  }
+  const items1 = [];
   for (let num = 0; num < length; num = num + 1) {
-    let _dependencyGraph = self._dependencyGraph;
-    let nodeData = _dependencyGraph.getNodeData(prop[num]);
-    let tmp4 = nodeData.actionHandler[type];
-    if (null != tmp4) {
-      let obj = { name: tmp2, actionHandler: tmp4, storeDidChange: tmp3 };
-      let arr = items.push(obj);
+    let _nodes = self._nodes;
+    value = _nodes.get(substr[num]);
+    let tmp5 = value.actionHandler[type];
+    if (null != tmp5) {
+      obj = { name: tmp3, actionHandler: tmp5, storeDidChange: tmp4 };
+      let arr = items1.push(obj);
     }
   }
-  self._orderedActionHandlers[type] = items;
-  return items;
+  self._orderedActionHandlers[type] = items1;
+  return items1;
 };
-prototype["_computeOrderedCallbackTokens"] = function _computeOrderedCallbackTokens() {
+prototype["_computeCallbackTokenPositions"] = function _computeCallbackTokenPositions() {
   const self = this;
-  try {
-    let _dependencyGraph = self._dependencyGraph;
-    const overallOrderResult = _dependencyGraph.overallOrder();
-    self._orderedCallbackTokens = overallOrderResult;
-    return overallOrderResult;
-  } catch (tmp2) {
-    if (null != tmp2.cyclePath) {
-      const cyclePath = tmp2.cyclePath;
-      const mapped = cyclePath.map((item) => {
-        const _dependencyGraph = self._dependencyGraph;
-        return "" + _dependencyGraph.getNodeData(item).name + "(" + item + ")";
-      });
-      const _Error = Error;
-      const _HermesInternal = HermesInternal;
-      const error = new Error("Dependency Cycle Found: " + mapped.join(" -> "));
-      throw error;
-    } else {
-      throw tmp2;
+  const map = new Map();
+  set = new Set();
+  function visit(arg0) {
+    if (!map.has(arg0)) {
+      if (set.has(arg0)) {
+        items = [];
+        items[HermesBuiltin.arraySpread(set, 0)] = arg0;
+        const mapped = items.map((item) => {
+          _nodes = _nodes._nodes;
+          return "" + _nodes.get(item).name + "(" + item + ")";
+        });
+        const _Error = Error;
+        const _HermesInternal = HermesInternal;
+        const error = new Error("Dependency Cycle Found: " + mapped.join(" -> "));
+        throw error;
+      } else {
+        set.add(arg0);
+        let _nodes = self._nodes;
+        const dependencies = _nodes.get(arg0).dependencies;
+        const item = dependencies.forEach(visit);
+        set.delete(arg0);
+        const result = map.set(arg0, map.size);
+      }
     }
   }
+  let item = items.forEach((item) => {
+    const _tokensByBand = self._tokensByBand;
+    value = _tokensByBand.get(item);
+    return value.forEach(visit);
+  });
+  this._callbackTokenPositions = map;
+  return map;
 };
 let result = size.fileFinishedImporting("../discord_common/js/packages/flux/Dispatcher.tsx");
 class Dispatcher {
-  constructor() {
-    num = global;
-    if (global === undefined) {
-      num = 0;
-    }
+  constructor(arg0, arg1) {
     merged = Object.assign({
       _interceptors: null,
       _subscriptions: null,
@@ -185,37 +267,53 @@ class Dispatcher {
       _currentDispatchActionType: null,
       _actionHandlers: null,
       _sentryUtils: "Array",
-      functionCache: false,
+      functionCache: "a",
     });
     merged[0] = [];
     merged[1] = {};
     merged[2] = [];
     if (typeof ActionHandlersGraph === "function") {
-      actionLogger1 = require;
-      tmp4 = importDefault;
+      actionLogger1 = global;
+      tmp4 = require;
       merged1 = Object.assign({
+        _nodes: null,
         _orderedActionHandlers: null,
-        _orderedCallbackTokens: null,
+        _tokensByBand: null,
+        _tokensByActionType: null,
+        _callbackTokenPositions: null,
         _lastID: 1,
-        _dependencyGraph: null,
       });
-      merged1[0] = {};
-      tmp6 = closure_0;
-      tmp7 = closure_3;
+      tmp6 = globalThis;
+      _Map = Map;
+      tmp7 = new.target;
       tmp8 = new.target;
-      tmp9 = new.target;
-      depGraph = new closure_0(closure_3[7]).DepGraph();
-      tmp11 = depGraph;
-      merged1[3] = depGraph;
+      map = new Map();
+      tmp10 = map;
+      merged1[0] = map;
+      merged1[1] = {};
+      _Map2 = Map;
+      tmp11 = closure_7;
+      tmp12 = new.target;
+      tmp13 = new.target;
+      map1 = new Map(
+        closure_7.map((item) => {
+          items = [item, []];
+          return items;
+        }),
+      );
+      tmp15 = map1;
+      merged1[2] = map1;
+      merged1[3] = {};
       merged[5] = merged1;
       merged[7] = {};
-      merged._defaultBand = num;
-      merged._sentryUtils = importDefault;
-      tmp12 = null;
-      if (null == require) {
-        tmp13 = new.target;
-        tmp14 = new.target;
-        actionLogger1 = new tmp6(tmp7[1]).ActionLogger();
+      merged._sentryUtils = require;
+      tmp16 = null;
+      if (null == global) {
+        tmp17 = closure_0;
+        tmp18 = closure_3;
+        tmp19 = new.target;
+        tmp20 = new.target;
+        actionLogger1 = new closure_0(closure_3[1]).ActionLogger();
       }
       merged.actionLogger = actionLogger1;
       actionLogger = merged.actionLogger;
@@ -300,7 +398,7 @@ prototype2["flushWaitQueue"] = function flushWaitQueue() {
             } while (length > 0);
           }
           tmp4 = importDefault;
-          let obj = flux_EmitterDefault;
+          obj = flux_EmitterDefault;
           let emitResult = obj.emit();
         }
         const serializer = LastFewActionsAll;
@@ -416,7 +514,7 @@ prototype2["wait"] = function wait(arg0) {
   this.flushWaitQueue();
 };
 prototype2["subscribe"] = function subscribe(arg0, arg1) {
-  let obj = this._subscriptions[arg0];
+  obj = this._subscriptions[arg0];
   if (null == obj) {
     const _Set = Set;
     set = new Set();
@@ -434,18 +532,16 @@ prototype2["unsubscribe"] = function unsubscribe(arg0, arg1) {
     }
   }
 };
-prototype2["register"] = function register(arg0, arg1, arg2, arg3, arg4) {
-  let _defaultBand = arg3;
+prototype2["register"] = function register(arg0, arg1, arg2, arg3) {
+  let Default = arg3;
   if (arg3 == null) {
-    _defaultBand = this._defaultBand;
+    Default = obj.Default;
   }
-  return this._actionHandlers.register(arg0, arg1, arg2, _defaultBand, arg4);
-};
-prototype2["createToken"] = function createToken() {
-  return this._actionHandlers.createToken();
+  return this._actionHandlers.register(arg0, arg1, arg2, Default);
 };
 prototype2["addDependencies"] = function addDependencies(arg0, arg1) {
   this._actionHandlers.addDependencies(arg0, arg1);
 };
 
+export { DispatchBand };
 export { Dispatcher };

@@ -158,10 +158,10 @@ export default function maybeFetchUserProfile(id, guildIconURL, arg2) {
     }
     obj5.connectionsRoleId = tmp34;
     if (flag3) {
-      obj5(573).wait(() => UserActionCreators.fetchProfile(closure_0, obj5, preloadUserBannerImageDefault));
+      obj5(584).wait(() => UserActionCreators.fetchProfile(closure_0, obj5, preloadUserBannerImageDefault));
       return Promise.resolve();
     } else {
-      const profile = require("UserActionCreators").fetchProfile(id, obj5, obj5(7815));
+      const profile = require("UserActionCreators").fetchProfile(id, obj5, obj5(7859));
       let resolved = profile;
       if (tmp18) {
         resolved = profile;

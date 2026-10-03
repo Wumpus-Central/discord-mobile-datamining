@@ -8,7 +8,7 @@ import ChannelStore from "../stores/ChannelStore.tsx";
 import MediaEngineStore from "../stores/MediaEngineStore.tsx";
 
 require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ ME: closure_7, PopoutWindowKeys, Routes: closure_8 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/SelectedChannelActionCreators.tsx");
@@ -37,7 +37,7 @@ export default {
     });
   },
   selectPrivateChannel(id) {
-    router_utils.transitionTo(React6.CHANNEL(React5, id));
+    router_utils.transitionTo(closure_1_8.CHANNEL(React5, id));
   },
   selectVoiceChannel(id) {
     let flag = MediaEngineStore;

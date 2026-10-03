@@ -8,7 +8,7 @@ import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 function handleInviteData(invite) {
-  const guild = invite.invite.guild;
+  guild = invite.invite.guild;
   let num = invite.invite.flags;
   if (num == null) {
     num = 0;

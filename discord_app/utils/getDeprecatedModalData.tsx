@@ -1,7 +1,7 @@
 // discord_app/utils/getDeprecatedModalData.tsx
 import AccessibilityStore from "../modules/a11y/AccessibilityStore.tsx";
 
-const ModalAnimation = fn(1074).ModalAnimation;
+const ModalAnimation = fn(1085).ModalAnimation;
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/getDeprecatedModalData.tsx");
 
