@@ -1,7 +1,7 @@
 // === Module 13591: ? ===
 
 // Module 13591
-import registerAsset from "module_1121" /* 1121 */;
+import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "ebf39623cd7d642af1c5756d58046968", name: "SignPostIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 230, height: 110, scales: [2, 3], hash: "13bbd5c08cf3fa23ae993ffb532d6b29", name: "empty_voice_channel", type: "png" });

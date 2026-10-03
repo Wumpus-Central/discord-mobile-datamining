@@ -1,26 +1,44 @@
 // === Module 12638: ? ===
 
 // Module 12638
-import _mod12526 from "module_12526" /* 12526 */;
-import _mod12639 from "module_12639" /* 12639 */;
+import _mod12565 from "module_12565" /* 12565 */;
+import _mod12579 from "module_12579" /* 12579 */;
+import _mod12592 from "module_12592" /* 12592 */;
 
 require = arg1;
 const dependencyMap = arg6;
 
-export const isBrowser = function isBrowser() {
-  let tmp = typeof window !== "undefined";
-  if (typeof window !== "undefined") {
-    const isNodeEnvResult = _mod12639.isNodeEnv();
-    let tmp3 = !isNodeEnvResult;
-    if (isNodeEnvResult) {
-      const _process = _mod12526.GLOBAL_OBJ.process;
-      let tmp2 = _process;
-      if (tmp2) {
-        tmp2 = "renderer" === _process.type;
-      }
-      tmp3 = tmp2;
+export const addBreadcrumb = function addBreadcrumb(arg0, arg1) {
+  closure_0 = arg1;
+  const client = _mod12592.getClient();
+  const isolationScope = _mod12592.getIsolationScope();
+  if (client) {
+    options = client.getOptions();
+    let beforeBreadcrumb = options.beforeBreadcrumb;
+    let tmp5 = null;
+    if (undefined !== beforeBreadcrumb) {
+      tmp5 = beforeBreadcrumb;
     }
-    tmp = tmp3;
+    beforeBreadcrumb = tmp5;
+    const maxBreadcrumbs = options.maxBreadcrumbs;
+    let num = 100;
+    if (undefined !== maxBreadcrumbs) {
+      num = maxBreadcrumbs;
+    }
+    if (num > 0) {
+      let obj2 = { timestamp: _mod12579.dateTimestampInSeconds() };
+      const merged = Object.assign(arg0);
+      if (tmp5) {
+        obj2 = _mod12565.consoleSandbox(() => beforeBreadcrumb(obj2, closure_0));
+        const tmpResult2 = _mod12565;
+      }
+      if (null !== obj2) {
+        if (client.emit) {
+          client.emit("beforeAddBreadcrumb", obj2, arg1);
+        }
+        isolationScope.addBreadcrumb(obj2, num);
+      }
+      const tmpResult = _mod12579;
+    }
   }
-  return tmp;
 };

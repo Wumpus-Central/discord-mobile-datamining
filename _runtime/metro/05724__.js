@@ -1,28 +1,39 @@
 // === Module 5724: ? ===
 
 // Module 5724
-import findOffsets from "findOffsets" /* 5721 */;
+import RNSLog2 from "RNSLog" /* 5720 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-const dependencyMap = arg6;
+require = fn;
+const findNodeHandle = fn(17).findNodeHandle;
 
-export default {
-  isAvifFile(getUint32) {
-    if (getUint32) {
-      try {
-        let parseBoxResult = findOffsets.parseBox(getUint32, 0);
-        if (parseBoxResult) {
-          parseBoxResult = "avif" === parseBoxResult.majorBrand;
-        }
-        return parseBoxResult;
-      } catch (err) {
-        return false;
+export const useTabsHost = function useTabsHost(arg0) {
+  ({ componentNodeRef: require, onTabSelected } = arg0);
+  noop = undefined;
+  noop = noop.useRef(-1);
+  const effect = noop.useEffect(() => {
+    if (null != ref.current) {
+      let num2 = findNodeHandle(tmp.current);
+      if (num2 == null) {
+        num2 = -1;
       }
+      closure_2.current = num2;
     } else {
-      return false;
+      closure_2.current = -1;
     }
-  },
-  findAvifOffsets(byteLength) {
-    return findOffsets.findOffsets(byteLength);
-  }
+  }, []);
+  const obj = { onTabSelected: null };
+  const items = [onTabSelected];
+  obj.onTabSelected = noop.useCallback((nativeEvent) => {
+    const RNSLog = RNSLog2.RNSLog;
+    let num = ref2.current;
+    if (num == null) {
+      num = -1;
+    }
+    RNSLog.log("TabsHost [" + num + "] onTabSelected: " + JSON.stringify(nativeEvent.nativeEvent));
+    if (onTabSelected != null) {
+      onTabSelected(nativeEvent);
+    }
+  }, items);
+  return obj;
 };

@@ -1,31 +1,18 @@
 // === Module 925: ? ===
 
 // Module 925
-import _mod904 from "module_904" /* 904 */;
-
-const require = globalThis.__r;
-
-require = arg1;
-const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+const weakMap = new WeakMap();
 
-export const onHidden = (arg0) => {
-  _require = arg0;
-  function onHiddenOrPageHide(type) {
-    let tmp = "pagehide" !== type.type;
-    if (tmp) {
-      const _document = _mod904.WINDOW.document;
-      let visibilityState;
-      if (_document != null) {
-        visibilityState = _document.visibilityState;
-      }
-      tmp = "hidden" !== visibilityState;
+export const initUnique = function initUnique(visibilityWatcher, InteractionManager) {
+  try {
+    if (!weakMap.get(visibilityWatcher)) {
+      const tmp5 = new InteractionManager();
+      const result = weakMap.set(visibilityWatcher, tmp5);
     }
-    if (!tmp) {
-      closure_0(type);
-    }
+    return weakMap.get(visibilityWatcher);
+  } catch (err) {
+    const tmp7 = new tmp();
+    return tmp7;
   }
-  require("module_906").addPageListener("visibilitychange", onHiddenOrPageHide, { capture: true, once: true });
-  const obj = require("module_906");
-  require("module_906").addPageListener("pagehide", onHiddenOrPageHide, { capture: true, once: true });
 };

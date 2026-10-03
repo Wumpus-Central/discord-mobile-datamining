@@ -1,8 +1,8 @@
 // === Module 4223: ? ===
 
 // Module 4223
-import _typeof_mod from "module_3947" /* 3947 */;
-import requiredArgs_mod from "requiredArgs" /* 3948 */;
+import _typeof_mod from "module_3958" /* 3958 */;
+import requiredArgs_mod from "requiredArgs" /* 3959 */;
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -21,8 +21,14 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function getMonth(arg0) {
+export default function getDaysInMonth(arg0) {
   requiredArgs.default(1, arguments);
-  return _typeof.default(arg0).getMonth();
+  const defaultResult1 = _typeof.default(arg0);
+  const fullYear = defaultResult1.getFullYear();
+  const month = defaultResult1.getMonth();
+  const date = new Date(0);
+  date.setFullYear(fullYear, month + 1, 0);
+  date.setHours(0, 0, 0, 0);
+  return date.getDate();
 };
 export default exports.default;

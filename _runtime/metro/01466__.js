@@ -2,19 +2,19 @@
 
 // Module 1466
 
-export default {
-  reachabilityUrl: "https://clients3.google.com/generate_204",
-  reachabilityMethod: "HEAD",
-  reachabilityHeaders: {},
-  reachabilityTest(status) {
-    return Promise.resolve(204 === status.status);
-  },
-  reachabilityShortTimeout: 5000,
-  reachabilityLongTimeout: 60000,
-  reachabilityRequestTimeout: 15000,
-  reachabilityShouldRun() {
-    return true;
-  },
-  shouldFetchWiFiSSID: false,
-  useNativeReachability: true
+export default function isBuffer(copy) {
+  let tmp = copy;
+  if (copy) {
+    tmp = typeof copy === "object";
+  }
+  if (tmp) {
+    tmp = typeof copy.copy === "function";
+  }
+  if (tmp) {
+    tmp = typeof copy.fill === "function";
+  }
+  if (tmp) {
+    tmp = typeof copy.readUInt8 === "function";
+  }
+  return tmp;
 };

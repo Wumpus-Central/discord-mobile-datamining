@@ -1,9 +1,8 @@
 // === Module 647: ? ===
 
 // Module 647
+import _mod524 from "module_524" /* 524 */;
+import module_612 from "module_612" /* 612 */;
 
-export default function setCacheAdd(arg0) {
-  const __data__ = this.__data__;
-  const result = __data__.set(arg0, "__lodash_hash_undefined__");
-  return this;
-};
+
+export default module_612(_mod524, "Promise");

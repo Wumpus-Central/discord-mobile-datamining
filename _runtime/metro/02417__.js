@@ -1,7 +1,7 @@
 // === Module 2417: ? ===
 
 // Module 2417
-import registerAsset from "module_1121" /* 1121 */;
+import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_rooms", scales: [1], hash: "ba2c65822693400e26b3312ce422a7e4", name: "GuildRooms.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9ndWlsZF9yb29tcw==", scales: [1], hash: "ceb9e4b68e6ae66e7bbcf287027ad01e", name: "sv-SE.messages.ceb9e4b68e6ae66e7bbcf287027ad01e.compiled.messages", type: "jsona" });

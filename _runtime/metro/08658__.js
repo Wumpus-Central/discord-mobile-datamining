@@ -1,8 +1,7 @@
 // === Module 8658: ? ===
 
 // Module 8658
-import _mod8590 from "module_8590" /* 8590 */;
-import _mod8656 from "module_8656" /* 8656 */;
+import _mod8607 from "module_8607" /* 8607 */;
 
 const self = this;
 let self2 = this;
@@ -55,49 +54,139 @@ if (self2) {
       };
     }
     const _Object3 = Object;
-    exports.ZodISODateTime = undefined;
-    exports.ZodISODate = undefined;
-    exports.ZodISOTime = undefined;
-    exports.ZodISODuration = undefined;
-    exports.datetime = function datetime(message) {
-      return fnResult._isoDateTime(exports.ZodISODateTime, message);
+    exports.default = function default_1() {
+      if (typeof error === "function") {
+        const obj = { localeError: null };
+        const obj2 = { string: { unit: "belgi", verb: "bo\u2018lishi kerak" }, file: { unit: "bayt", verb: "bo\u2018lishi kerak" }, array: { unit: "element", verb: "bo\u2018lishi kerak" }, set: { unit: "element", verb: "bo\u2018lishi kerak" } };
+        closure_1 = { regex: "kirish", email: "elektron pochta manzili", url: "URL", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "ISO sana va vaqti", date: "ISO sana", time: "ISO vaqt", duration: "ISO davomiylik", ipv4: "IPv4 manzil", ipv6: "IPv6 manzil", mac: "MAC manzil", cidrv4: "IPv4 diapazon", cidrv6: "IPv6 diapazon", base64: "base64 kodlangan satr", base64url: "base64url kodlangan satr", json_string: "JSON satr", e164: "E.164 raqam", jwt: "JWT", template_literal: "kirish" };
+        closure_2 = { nan: "NaN", number: "raqam", array: "massiv" };
+        obj.localeError = (code) => {
+          switch (code.code) {
+            case "invalid_type":
+              let expected = closure_2[code.expected];
+              if (expected == null) {
+                expected = code.expected;
+              }
+              const parsedTypeResult = closure_2.parsedType(code.input);
+              let tmp45 = closure_2[parsedTypeResult];
+              if (tmp45 == null) {
+                tmp45 = parsedTypeResult;
+              }
+              if (obj.test(code.expected)) {
+                const _HermesInternal17 = HermesInternal;
+                let combined = "Noto\u2018g\u2018ri kirish: kutilgan instanceof " + code.expected + ", qabul qilingan " + tmp45;
+              } else {
+                const _HermesInternal16 = HermesInternal;
+                combined = "Noto\u2018g\u2018ri kirish: kutilgan " + expected + ", qabul qilingan " + tmp45;
+              }
+              return combined;
+            case "invalid_value":
+              if (1 === code.values.length) {
+                const _HermesInternal15 = HermesInternal;
+                let combined1 = "Noto\u2018g\u2018ri kirish: kutilgan " + closure_2.stringifyPrimitive(code.values[0]);
+              } else {
+                const _HermesInternal14 = HermesInternal;
+                combined1 = "Noto\u2018g\u2018ri variant: quyidagilardan biri kutilgan " + closure_2.joinValues(code.values, "|");
+              }
+              return combined1;
+            case "too_big":
+              let str30 = "<";
+              if (code.inclusive) {
+                str30 = "<=";
+              }
+              let tmp27 = obj2[code.origin];
+              if (tmp27 == null) {
+                tmp27 = null;
+              }
+              let str31 = code.origin;
+              if (tmp27) {
+                if (str31 == null) {
+                  str31 = "qiymat";
+                }
+                const _HermesInternal13 = HermesInternal;
+                let combined2 = "Juda katta: kutilgan " + str31 + " " + str30 + code.maximum.toString() + " " + tmp27.unit + " " + tmp27.verb;
+              } else {
+                let str32 = str31;
+                if (str31 == null) {
+                  str32 = "qiymat";
+                }
+                const _HermesInternal12 = HermesInternal;
+                combined2 = "Juda katta: kutilgan " + str32 + " " + str30 + code.maximum.toString();
+              }
+              return combined2;
+            case "too_small":
+              let str22 = ">";
+              if (code.inclusive) {
+                str22 = ">=";
+              }
+              let tmp15 = obj2[code.origin];
+              if (tmp15 == null) {
+                tmp15 = null;
+              }
+              ({ origin, minimum } = code);
+              const str1 = minimum.toString();
+              if (tmp15) {
+                const _HermesInternal11 = HermesInternal;
+                let combined3 = "Juda kichik: kutilgan " + origin + " " + str22 + str1 + " " + tmp15.unit + " " + tmp15.verb;
+              } else {
+                const _HermesInternal10 = HermesInternal;
+                combined3 = "Juda kichik: kutilgan " + origin + " " + str22 + str1;
+              }
+              return combined3;
+            case "invalid_format":
+              if ("starts_with" === code.format) {
+                const _HermesInternal9 = HermesInternal;
+                let combined4 = "Noto\u2018g\u2018ri satr: \"" + code.prefix + "\" bilan boshlanishi kerak";
+              } else if ("ends_with" === code.format) {
+                const _HermesInternal8 = HermesInternal;
+                combined4 = "Noto\u2018g\u2018ri satr: \"" + code.suffix + "\" bilan tugashi kerak";
+              } else if ("includes" === code.format) {
+                const _HermesInternal7 = HermesInternal;
+                combined4 = "Noto\u2018g\u2018ri satr: \"" + code.includes + "\" ni o\u2018z ichiga olishi kerak";
+              } else if ("regex" === code.format) {
+                const _HermesInternal6 = HermesInternal;
+                combined4 = "Noto\u2018g\u2018ri satr: " + code.pattern + " shabloniga mos kelishi kerak";
+              } else {
+                let format = closure_1[code.format];
+                if (format == null) {
+                  format = code.format;
+                }
+                const _HermesInternal5 = HermesInternal;
+                combined4 = "Noto\u2018g\u2018ri " + format;
+              }
+              return combined4;
+            case "not_multiple_of":
+              const _HermesInternal4 = HermesInternal;
+              return "Noto\u2018g\u2018ri raqam: " + code.divisor + " ning karralisi bo\u2018lishi kerak";
+            case "unrecognized_keys":
+              let str5 = "";
+              if (code.keys.length > 1) {
+                str5 = "lar";
+              }
+              const _HermesInternal3 = HermesInternal;
+              return "Noma\u2019lum kalit" + str5 + ": " + closure_2.joinValues(code.keys, ", ");
+            case "invalid_key":
+              const _HermesInternal2 = HermesInternal;
+              return "" + code.origin + " dagi kalit noto\u2018g\u2018ri";
+            case "invalid_union":
+              return "Noto\u2018g\u2018ri kirish";
+            case "invalid_element":
+              const _HermesInternal = HermesInternal;
+              return "" + code.origin + " da noto\u2018g\u2018ri qiymat";
+            default:
+              return "Noto\u2018g\u2018ri kirish";
+          }
+        };
+        return obj;
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
     };
-    exports.date = function date(message) {
-      return fnResult._isoDate(exports.ZodISODate, message);
-    };
-    exports.time = function time(message) {
-      return fnResult._isoTime(exports.ZodISOTime, message);
-    };
-    exports.duration = function duration(message) {
-      return fnResult._isoDuration(exports.ZodISODuration, message);
-    };
-    const fnResult = fn(_mod8590);
-    let c3 = fnResult;
-    let closure_4 = fn(_mod8656);
-    exports.ZodISODateTime = fnResult.$constructor("ZodISODateTime", (arg0, arg1) => {
-      const $ZodISODateTime = fnResult.$ZodISODateTime;
-      $ZodISODateTime.init(arg0, arg1);
-      const ZodStringFormat = closure_4.ZodStringFormat;
-      ZodStringFormat.init(arg0, arg1);
-    });
-    exports.ZodISODate = fnResult.$constructor("ZodISODate", (arg0, arg1) => {
-      const $ZodISODate = fnResult.$ZodISODate;
-      $ZodISODate.init(arg0, arg1);
-      const ZodStringFormat = closure_4.ZodStringFormat;
-      ZodStringFormat.init(arg0, arg1);
-    });
-    exports.ZodISOTime = fnResult.$constructor("ZodISOTime", (arg0, arg1) => {
-      const $ZodISOTime = fnResult.$ZodISOTime;
-      $ZodISOTime.init(arg0, arg1);
-      const ZodStringFormat = closure_4.ZodStringFormat;
-      ZodStringFormat.init(arg0, arg1);
-    });
-    exports.ZodISODuration = fnResult.$constructor("ZodISODuration", (arg0, arg1) => {
-      const $ZodISODuration = fnResult.$ZodISODuration;
-      $ZodISODuration.init(arg0, arg1);
-      const ZodStringFormat = closure_4.ZodStringFormat;
-      ZodStringFormat.init(arg0, arg1);
-    });
+    let closure_2 = fn(_mod8607);
+    function error() {
+
+    }
+    module.exports = exports.default;
   } else {
     const _Object2 = Object;
   }

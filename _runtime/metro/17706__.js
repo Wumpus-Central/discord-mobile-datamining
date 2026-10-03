@@ -1,7 +1,7 @@
 // === Module 17706: ? ===
 
 // Module 17706
-import registerAsset from "module_1121" /* 1121 */;
+import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 165, height: 178, scales: [2, 3], hash: "b685c2aca3ddb21997a856f7601ff6ad", name: "img_vanity_urls", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 272, height: 130, scales: [2, 3], hash: "5caead087954d63c5b0957a35bf9e208", name: "empty_server_settings_audit_log_darker", type: "png" });

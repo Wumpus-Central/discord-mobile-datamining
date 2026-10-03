@@ -1,14 +1,7 @@
 // === Module 5479: ? ===
 
 // Module 5479
-import _modDef5480 from "module_5480" /* 5480 */;
+import registerAsset from "module_1132" /* 1132 */;
 
-const require = globalThis.__r;
 
-for (const key10016 in require("module_5480")) {
-  arg5[key10016] = require("module_5480")[key10016];
-  continue;
-}
-
-export default _modDef5480;
-export const LinearGradient = _modDef5480;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 24, height: 24, scales: [1], hash: "eee65ba7b1514e4ac5eb13df20b9cde9", name: "img_account_sync_reddit_light_and_dark", type: "svg" });

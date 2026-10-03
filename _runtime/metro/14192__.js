@@ -1,43 +1,52 @@
 // === Module 14192: ? ===
 
 // Module 14192
-import _mod518 from "module_518" /* 518 */;
-import baseKeys from "baseKeys" /* 544 */;
-import _mod545 from "module_545" /* 545 */;
-import _mod634 from "module_634" /* 634 */;
+import noop from "module_19" /* 19 */;
+import module_14174_mod from "module_14174" /* 14174 */;
+import _isNativeReflectConstruct_mod from "module_14193" /* 14193 */;
+import jsxProd from "jsxProd" /* 21 */;
 
+if (noop) {
+  const __esModule = noop.__esModule;
+}
+let module_14174 = module_14174_mod;
+if (!module_14174) {
+  let obj = { default: module_14174 };
+  let tmp4 = obj;
+} else {
+  tmp4 = module_14174;
+}
+module_14174 = tmp4;
+let _isNativeReflectConstruct = _isNativeReflectConstruct_mod;
+if (!_isNativeReflectConstruct) {
+  const obj2 = { default: _isNativeReflectConstruct };
+  let tmp6 = obj2;
+} else {
+  tmp6 = _isNativeReflectConstruct;
+}
+_isNativeReflectConstruct = tmp6;
 
-export default function isEmpty(size) {
-  if (null == size) {
-    return true;
-  } else {
-    if (_mod518(size)) {
-      return !size.length;
-    }
-    const tmp = _mod634(size);
-    if ("[object Map]" != tmp) {
-      if ("[object Set]" != tmp) {
-        if (_mod545(size)) {
-          return !baseKeys(size).length;
-        } else {
-          for (const key10021 in arg0) {
-            let call = hasOwnProperty.call;
-            if (typeof call === "unknown") {
-              let callResult = hasOwnProperty(key10021);
-            } else {
-              callResult = call(arg0, key10021);
-            }
-            if (!callResult) {
-              continue;
-            } else {
-              let flag = false;
-              return false;
-            }
-          }
-          return true;
-        }
+export default () => () => {
+  closure_0 = closure_0.default();
+  return {
+    onCommand(type) {
+      if ("storybook" === type.type) {
+        closure_0.emit("storybook", type.payload);
+      }
+    },
+    features: {
+      storybookSwitcher(arg0) {
+        closure_0 = arg0;
+        return (arg0) => {
+          closure_0 = arg0;
+          return function StorybookSwitcherContainer(arg0) {
+            const obj = { storybookUi: emitter, emitter, children: null };
+            const merged = Object.assign(arg0);
+            obj.children = <emitter />;
+            return <_isNativeReflectConstruct.default storybookUi={emitter} emitter={emitter}>{null}</_isNativeReflectConstruct.default>;
+          };
+        };
       }
     }
-    return !size.size;
-  }
+  };
 };

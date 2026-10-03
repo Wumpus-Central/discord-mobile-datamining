@@ -1,7 +1,7 @@
 // === Module 8823: ? ===
 
 // Module 8823
-import registerAsset from "module_1121" /* 1121 */;
+import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/BrandDarkIcon", width: 60, height: 60, scales: [2, 3], hash: "9104de6131b604f4e10e9192c73c75ed", name: "BrandDarkIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/upsell", width: 120, height: 80, scales: [2, 3], hash: "ff5825c454c175379e6be98cbe46511a", name: "img_nitro_badge", type: "png" });

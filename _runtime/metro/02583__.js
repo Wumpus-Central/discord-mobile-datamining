@@ -1,7 +1,7 @@
 // === Module 2583: ? ===
 
 // Module 2583
-import registerAsset from "module_1121" /* 1121 */;
+import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/gifting", scales: [1], hash: "9ecc6a7c078e9a754077d5562ee83e47", name: "GiftingBadge.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL2dpZnRpbmc=", scales: [1], hash: "e8046a02d0c297d6077cbf4fd5135051", name: "tr.messages.e8046a02d0c297d6077cbf4fd5135051.compiled.messages", type: "jsona" });

@@ -1,68 +1,109 @@
 // === Module 1835: ? ===
 
 // Module 1835
-import _mod1830 from "module_1830" /* 1830 */;
-import _slicedToArray from "module_32" /* 32 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-require = fn;
-const noop = fn(19);
-({ useEffect: c3, useState: closure_4 } = noop);
-let closure_5 = ["keyboardWillShow", "keyboardDidHide"];
-function getLatestState() {
-
-}
-function defaultSelector(arg0) {
-  return arg0;
-}
-
-export const useKeyboardState = function useKeyboardState(arg0) {
-  let tmp = arg0;
-  if (arg0 === undefined) {
-    tmp = defaultSelector;
-  }
-  closure_0 = tmp;
-  const tmp2 = _slicedToArray(closure_4(() => {
-    if (typeof getLatestState === "function") {
-      const obj = {};
-      const KeyboardController = _mod1830.KeyboardController;
-      const merged = Object.assign(KeyboardController.state());
-      const KeyboardController2 = _mod1830.KeyboardController;
-      obj.isVisible = KeyboardController2.isVisible();
-      return tmp(obj);
+let c2 = true;
+let obj = { height: 0, duration: 0, timestamp: null, target: -1, type: "default", appearance: "light" };
+obj.timestamp = new Date().getTime();
+let global = obj;
+let KeyboardEvents = fn(1633).KeyboardEvents;
+KeyboardEvents.addListener("keyboardDidHide", (arg0) => {
+  c2 = true;
+  global = arg0;
+});
+const KeyboardEvents2 = fn(1633).KeyboardEvents;
+KeyboardEvents2.addListener("keyboardWillShow", (arg0) => {
+  c2 = false;
+  global = arg0;
+});
+let closure_0 = asyncGeneratorStep(async (arg0) => {
+  if (c3 === 2) {
+    c3 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
     } else {
-      throw new TypeError("Trying to call a non-function");
+      return { value: "IconComponent", done: "IconComponent" };
     }
-  }), 2);
-  dependencyMap = tmp2[1];
-  closure_3(() => {
-    closure_0 = closure_1_5.map((item) => {
-      const KeyboardEvents = closure_0(1628).KeyboardEvents;
-      return KeyboardEvents.addListener(item, () => {
-        if (typeof closure_2_6 === "function") {
-          const obj = {};
-          const KeyboardController = closure_0(1830).KeyboardController;
-          const merged = Object.assign(KeyboardController.state());
-          const KeyboardController2 = closure_0(1830).KeyboardController;
-          obj.isVisible = KeyboardController2.isVisible();
-          return tmp(tmp2(obj));
-        } else {
-          throw new TypeError("Trying to call a non-function");
+  } else {
+    try {
+      c3 = 2;
+      if (arg0 === 1) {
+        c3 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c3 = 3;
+        const obj3 = { value, done: true };
+        return obj3;
+      } else {
+        let keepFocus;
+        if (closure_0 != null) {
+          keepFocus = tmp18.keepFocus;
         }
-      });
-    });
-    if (typeof getLatestState === "function") {
-      let obj = {};
-      let KeyboardController = closure_0(1830).KeyboardController;
-      let merged = Object.assign(KeyboardController.state());
-      let KeyboardController2 = closure_0(1830).KeyboardController;
-      obj.isVisible = KeyboardController2.isVisible();
-      tmp(tmp2(obj));
-      return () => {
-        const item = closure_0.forEach((remove) => remove.remove());
-      };
-    } else {
-      throw new TypeError("Trying to call a non-function");
+        c1 = keepFocus;
+        if (keepFocus == null) {
+          c1 = false;
+        }
+        closure_0 = c1;
+        let animated;
+        if (closure_0 != null) {
+          animated = tmp18.animated;
+        }
+        c2 = animated;
+        if (animated == null) {
+          c2 = true;
+        }
+        dependencyMap = c2;
+        const promise = new Promise((fn) => {
+          closure_0 = fn;
+          if (c2) {
+            fn();
+          } else {
+            const KeyboardEvents = closure_0(1633).KeyboardEvents;
+            closure_1 = KeyboardEvents.addListener("keyboardDidHide", () => {
+              closure_0(undefined);
+              closure_1.remove();
+            });
+            const KeyboardControllerNative = closure_0(1633).KeyboardControllerNative;
+            KeyboardControllerNative.dismiss(closure_0, closure_1);
+          }
+        });
+        c3 = 3;
+        const obj = { value: promise, done: true };
+        return obj;
+      }
+    } catch (tmp13) {
+      c3 = tmp;
+      throw tmp13;
     }
-  }, []);
-  return tmp2[0];
+  }
+});
+const date = new Date();
+
+export const KeyboardController = {
+  setDefaultMode: fn(1633).KeyboardControllerNative.setDefaultMode,
+  setInputMode: fn(1633).KeyboardControllerNative.setInputMode,
+  setFocusTo: fn(1633).KeyboardControllerNative.setFocusTo,
+  preload: fn(1633).KeyboardControllerNative.preload,
+  dismiss(arg0) {
+    const self = this;
+    const apply = closure_0.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
+  },
+  isVisible() {
+    return !c2;
+  },
+  state() {
+    return global;
+  }
 };

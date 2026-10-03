@@ -1,7 +1,7 @@
 // === Module 5522: ? ===
 
 // Module 5522
-import registerAsset from "module_1121" /* 1121 */;
+import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "8aacc7898585bec38aca6cf682c01533", name: "FolderIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 24, height: 24, scales: [1], hash: "8ce2f7584220a9c90fe76fd89217537a", name: "img_account_sync_riot_light_and_dark", type: "svg" });

@@ -1,96 +1,74 @@
 // === Module 6330: ? ===
 
 // Module 6330
-import _mod19 from "module_19" /* 19 */;
-import TouchEventType from "TouchEventType" /* 6267 */;
-import _mod6280 from "module_6280" /* 6280 */;
+import _mod17 from "module_17" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import value2 from "value2" /* 6113 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6140 */;
+import noop_mod from "module_19" /* 19 */;
+import cancelAnimation from "cancelAnimation" /* 1643 */;
 
-const useMemo = _mod19.useMemo;
-function getHandler(arg0, onBegin) {
-  if (_mod6280.CALLBACK_TYPE.BEGAN === arg0) {
-    return onBegin.onBegin;
-  } else if (_mod6280.CALLBACK_TYPE.START === arg0) {
-    return onBegin.onActivate;
-  } else if (_mod6280.CALLBACK_TYPE.UPDATE === arg0) {
-    return onBegin.onUpdate;
-  } else if (_mod6280.CALLBACK_TYPE.END === arg0) {
-    return onBegin.onDeactivate;
-  } else if (_mod6280.CALLBACK_TYPE.FINALIZE === arg0) {
-    return onBegin.onFinalize;
-  } else if (_mod6280.CALLBACK_TYPE.TOUCHES_DOWN === arg0) {
-    return onBegin.onTouchesDown;
-  } else if (_mod6280.CALLBACK_TYPE.TOUCHES_MOVE === arg0) {
-    return onBegin.onTouchesMove;
-  } else if (_mod6280.CALLBACK_TYPE.TOUCHES_UP === arg0) {
-    return onBegin.onTouchesUp;
-  } else if (_mod6280.CALLBACK_TYPE.TOUCHES_CANCEL === arg0) {
-    return onBegin.onTouchesCancel;
+let noop = noop_mod;
+({ useContext: c2, useMemo: c3, memo } = noop);
+let noop = noop_mod;
+const jsx = jsxProd.jsx;
+let closure_5 = cancelAnimation.createAnimatedComponent(_mod17.RefreshControl);
+const __initData = { code: "function pnpm_BottomSheetRefreshControlAndroidTsx1(){const{animatedScrollableState,SCROLLABLE_STATE}=this.__closure;return{enabled:animatedScrollableState.value===SCROLLABLE_STATE.UNLOCKED};}" };
+const memoResult = memo(function BottomSheetRefreshControlComponent(arg0) {
+  ({ onRefresh, scrollableGesture } = arg0);
+  const merged = Object.assign(arg0, Object.assign({ onRefresh: 0, scrollableGesture: 0 }));
+  let iter;
+  const tmp4 = iter(scrollableGesture(6124).BottomSheetDraggableContext);
+  dependencyMap = tmp4;
+  const bottomSheetInternal = scrollableGesture(6117).useBottomSheetInternal();
+  iter = bottomSheetInternal.animatedScrollableState;
+  if (!tmp4) {
+    if (bottomSheetInternal.enableContentPanningGesture) {
+      throw "'BottomSheetRefreshControl' cannot be used out of the BottomSheet!";
+    }
   }
-}
-getHandler.__closure = { CALLBACK_TYPE: _mod6280.CALLBACK_TYPE };
-getHandler.__workletHash = 8647314057396;
-getHandler.__initData = { code: "function getHandler_Pnpm_eventHandlersUtilsTs1(type,callbacks){const{CALLBACK_TYPE}=this.__closure;switch(type){case CALLBACK_TYPE.BEGAN:return callbacks.onBegin;case CALLBACK_TYPE.START:return callbacks.onActivate;case CALLBACK_TYPE.UPDATE:return callbacks.onUpdate;case CALLBACK_TYPE.END:return callbacks.onDeactivate;case CALLBACK_TYPE.FINALIZE:return callbacks.onFinalize;case CALLBACK_TYPE.TOUCHES_DOWN:return callbacks.onTouchesDown;case CALLBACK_TYPE.TOUCHES_MOVE:return callbacks.onTouchesMove;case CALLBACK_TYPE.TOUCHES_UP:return callbacks.onTouchesUp;case CALLBACK_TYPE.TOUCHES_CANCEL:return callbacks.onTouchesCancel;}}" };
-function touchEventTypeToCallbackType(arg0) {
-  if (TouchEventType.TouchEventType.TOUCHES_DOWN === arg0) {
-    return _mod6280.CALLBACK_TYPE.TOUCHES_DOWN;
-  } else if (TouchEventType.TouchEventType.TOUCHES_MOVE === arg0) {
-    return _mod6280.CALLBACK_TYPE.TOUCHES_MOVE;
-  } else if (TouchEventType.TouchEventType.TOUCHES_UP === arg0) {
-    return _mod6280.CALLBACK_TYPE.TOUCHES_UP;
-  } else if (TouchEventType.TouchEventType.TOUCHES_CANCEL === arg0) {
-    return _mod6280.CALLBACK_TYPE.TOUCHES_CANCEL;
+  const obj = scrollableGesture(6117);
+  const fn = function f() {
+    return { enabled: iter.value === value2.SCROLLABLE_STATE.UNLOCKED };
+  };
+  const tmp2Result = scrollableGesture(1643);
+  fn.__closure = { animatedScrollableState: iter, SCROLLABLE_STATE: scrollableGesture(6113).SCROLLABLE_STATE };
+  fn.__workletHash = 8403038560398;
+  fn.__initData = __initData;
+  let items = [iter.value];
+  const animatedProps = tmp2Result.useAnimatedProps(fn, items);
+  const items1 = [tmp4, scrollableGesture];
+  const tmp7 = closure_3(() => {
+    let result;
+    if (closure_1) {
+      const Gesture = LegacyBaseButton.Gesture;
+      const NativeResult = Gesture.Native();
+      const simultaneousWithExternalGesture = NativeResult.simultaneousWithExternalGesture;
+      const items = [];
+      HermesBuiltin.arraySpread(scrollableGesture.toGestureArray(), HermesBuiltin.arraySpread(closure_1.toGestureArray(), 0));
+      const arraySpreadResult = HermesBuiltin.arraySpread(closure_1.toGestureArray(), 0);
+      result = HermesBuiltin.apply(items, NativeResult).shouldCancelWhenOutside(true);
+      const applyResult = HermesBuiltin.apply(items, NativeResult);
+    }
+    return result;
+  }, items1);
+  if (tmp7) {
+    const obj3 = { gesture: tmp7, children: null };
+    const obj4 = {};
+    const merged1 = Object.assign(merged);
+    obj4.onRefresh = onRefresh;
+    obj4.animatedProps = animatedProps;
+    obj3.children = <closure_5 />;
+    let tmp8Result = jsx(scrollableGesture(6140).GestureDetector, { gesture: tmp7, children: null });
   } else {
-    return _mod6280.CALLBACK_TYPE.UNDEFINED;
+    const obj5 = {};
+    const merged2 = Object.assign(merged);
+    obj5.onRefresh = onRefresh;
+    obj5.animatedProps = animatedProps;
+    tmp8Result = <closure_5 />;
   }
-}
-let obj = { CALLBACK_TYPE: _mod6280.CALLBACK_TYPE };
-touchEventTypeToCallbackType.__closure = { TouchEventType: TouchEventType.TouchEventType, CALLBACK_TYPE: _mod6280.CALLBACK_TYPE };
-touchEventTypeToCallbackType.__workletHash = 2066229974382;
-touchEventTypeToCallbackType.__initData = { code: "function touchEventTypeToCallbackType_Pnpm_eventHandlersUtilsTs2(eventType){const{TouchEventType,CALLBACK_TYPE}=this.__closure;switch(eventType){case TouchEventType.TOUCHES_DOWN:return CALLBACK_TYPE.TOUCHES_DOWN;case TouchEventType.TOUCHES_MOVE:return CALLBACK_TYPE.TOUCHES_MOVE;case TouchEventType.TOUCHES_UP:return CALLBACK_TYPE.TOUCHES_UP;case TouchEventType.TOUCHES_CANCEL:return CALLBACK_TYPE.TOUCHES_CANCEL;}return CALLBACK_TYPE.UNDEFINED;}" };
-function runCallback(arg0, arg1, arg2) {
-  const tmp = getHandler(arg0, arg1);
-  if (tmp) {
-    tmp(arg2);
-  }
-}
-runCallback.__closure = { getHandler };
-runCallback.__workletHash = 9892811129293;
-runCallback.__initData = { code: "function runCallback_Pnpm_eventHandlersUtilsTs3(type,callbacks,event){const{getHandler}=this.__closure;const handler=getHandler(type,callbacks);if(!handler){return;}handler(event);}" };
+  return tmp8Result;
+});
+memoResult.displayName = "BottomSheetRefreshControl";
 
-export const useMemoizedGestureCallbacks = function useMemoizedGestureCallbacks(disableReanimated) {
-  const items = [, , , , , , , , ];
-  ({ onActivate: arr[0], onBegin: arr[1], onDeactivate: arr[2], onFinalize: arr[3], onTouchesCancel: arr[4], onTouchesDown: arr[5], onTouchesMove: arr[6], onTouchesUp: arr[7], onUpdate: arr[8] } = disableReanimated);
-  return useMemo(() => {
-    const obj = {};
-    if (disableReanimated.onBegin) {
-      obj.onBegin = disableReanimated.onBegin;
-    }
-    if (disableReanimated.onActivate) {
-      obj.onActivate = disableReanimated.onActivate;
-    }
-    if (disableReanimated.onDeactivate) {
-      obj.onDeactivate = disableReanimated.onDeactivate;
-    }
-    if (disableReanimated.onFinalize) {
-      obj.onFinalize = disableReanimated.onFinalize;
-    }
-    if (disableReanimated.onUpdate) {
-      obj.onUpdate = disableReanimated.onUpdate;
-    }
-    if (disableReanimated.onTouchesDown) {
-      obj.onTouchesDown = disableReanimated.onTouchesDown;
-    }
-    if (disableReanimated.onTouchesMove) {
-      obj.onTouchesMove = disableReanimated.onTouchesMove;
-    }
-    if (disableReanimated.onTouchesUp) {
-      obj.onTouchesUp = disableReanimated.onTouchesUp;
-    }
-    if (disableReanimated.onTouchesCancel) {
-      obj.onTouchesCancel = disableReanimated.onTouchesCancel;
-    }
-    return obj;
-  }, items);
-};
-export { touchEventTypeToCallbackType };
-export { runCallback };
+export default memoResult;

@@ -1,47 +1,28 @@
 // === Module 4211: ? ===
 
 // Module 4211
-import _typeof_mod from "module_3947" /* 3947 */;
-import startOfYear_mod from "startOfYear" /* 4166 */;
-import differenceInCalendarDays_mod from "differenceInCalendarDays" /* 4109 */;
-import requiredArgs_mod from "requiredArgs" /* 3948 */;
+import module_4209_mod from "module_4209" /* 4209 */;
+import requiredArgs_mod from "requiredArgs" /* 3959 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let module_4209 = module_4209_mod;
+if (!module_4209) {
+  const obj = { default: module_4209 };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = module_4209;
 }
-_typeof = tmp3;
-let startOfYear = startOfYear_mod;
-if (!startOfYear) {
-  const obj2 = { default: startOfYear };
-  let tmp5 = obj2;
-} else {
-  tmp5 = startOfYear;
-}
-startOfYear = tmp5;
-let differenceInCalendarDays = differenceInCalendarDays_mod;
-if (!differenceInCalendarDays) {
-  const obj3 = { default: differenceInCalendarDays };
-  let tmp7 = obj3;
-} else {
-  tmp7 = differenceInCalendarDays;
-}
-differenceInCalendarDays = tmp7;
+module_4209 = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp9 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp9;
+requiredArgs = tmp5;
 
-export default function getDayOfYear(arg0) {
+export default function formatDistanceToNowStrict(arg0, arg1) {
   requiredArgs.default(1, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  return differenceInCalendarDays.default(defaultResult1, startOfYear.default(defaultResult1)) + 1;
+  return module_4209.default(arg0, Date.now(), arg1);
 };
 export default exports.default;

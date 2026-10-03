@@ -1,89 +1,105 @@
 // === Module 1718: ? ===
 
 // Module 1718
-const require = fn;
-const dependencyMap = arg6;
-let closure_2 = { code: "function pnpm_repeatTs2(){const{_nextAnimation,numberOfReps,reverse,callback,getReduceMotionForAnimation,reduceMotion}=this.__closure;const nextAnimation=typeof _nextAnimation==='function'?_nextAnimation():_nextAnimation;function repeat(animation,now){const finished=nextAnimation.onFrame(nextAnimation,now);animation.current=nextAnimation.current;if(finished){animation.reps+=1;if(nextAnimation.callback){nextAnimation.callback(true,animation.current);}if(animation.reduceMotion||numberOfReps>0&&animation.reps>=numberOfReps){return true;}const startValue=reverse?nextAnimation.current:animation.startValue;if(reverse){nextAnimation.toValue=animation.startValue;animation.startValue=startValue;}nextAnimation.onStart(nextAnimation,startValue,now,nextAnimation.previousAnimation);return false;}return false;}const repCallback=function(finished){if(callback){callback(finished);}if(!finished&&nextAnimation.callback){nextAnimation.callback(false);}};function onStart(animation,value,now,previousAnimation){animation.startValue=value;animation.reps=0;if(nextAnimation.reduceMotion===undefined){nextAnimation.reduceMotion=animation.reduceMotion;}if(animation.reduceMotion&&reverse&&(numberOfReps<=0||numberOfReps%2===0)){animation.current=animation.startValue;animation.onFrame=function(){return true;};}else{nextAnimation.onStart(nextAnimation,value,now,previousAnimation);}}return{isHigherOrder:true,onFrame:repeat,onStart:onStart,reps:0,current:nextAnimation.current,callback:repCallback,startValue:0,reduceMotion:getReduceMotionForAnimation(reduceMotion)};}" };
-fn = function n(tmp6Result2, arg1, arg2) {
-  _require = tmp6Result2;
-  let num = arg1;
-  if (arg1 === undefined) {
-    num = 2;
-  }
-  let flag = arg2;
-  if (arg2 === undefined) {
-    flag = false;
-  }
-  closure_4 = reduceMotion;
-  const fn = function l() {
-    let tmpResult = tmp6Result2;
-    if (typeof tmp6Result2 === "function") {
-      tmpResult = tmp();
-    }
-    const obj = {
-      isHigherOrder: true,
-      onFrame: function repeat(reps, arg1) {
-        reps.current = closure_0.current;
-        if (closure_0.onFrame(closure_0, arg1)) {
-          reps.reps = reps.reps + 1;
-          if (closure_0.callback) {
-            closure_0.callback(true, reps.current);
-          }
-          if (!reps.reduceMotion) {
-            const tmp3 = flag ? closure_0.current : reps.startValue;
-            if (flag) {
-              closure_0.toValue = reps.startValue;
-              reps.startValue = tmp3;
-            }
-            closure_0.onStart(closure_0, tmp3, arg1, closure_0.previousAnimation);
-            return false;
-          }
-          return true;
-        } else {
-          return false;
-        }
-      },
-      onStart(reduceMotion, startValue, arg2, arg3) {
-        reduceMotion.startValue = startValue;
-        reduceMotion.reps = 0;
-        if (undefined === closure_0.reduceMotion) {
-          closure_0.reduceMotion = reduceMotion.reduceMotion;
-        }
-        if (reduceMotion.reduceMotion) {
-          if (flag) {
-            reduceMotion.current = reduceMotion.startValue;
-            reduceMotion.onFrame = () => true;
-          }
-        }
-        closure_0.onStart(closure_0, startValue, arg2, arg3);
-      },
-      reps: 0,
-      current: tmpResult.current,
-      callback(arg0) {
-        if (closure_3) {
-          tmp(arg0);
-        }
-        callback = !arg0;
-        if (!arg0) {
-          callback = closure_0.callback;
-        }
-        if (callback) {
-          closure_0.callback(false);
-        }
-      },
-      startValue: 0,
-      reduceMotion: tmpResult(num[0]).getReduceMotionForAnimation(closure_4)
-    };
-    return obj;
-  };
-  let obj = require("module_1678");
-  fn.__closure = { _nextAnimation: tmp6Result2, numberOfReps: num, reverse: flag, callback, getReduceMotionForAnimation: require("module_1678").getReduceMotionForAnimation, reduceMotion };
-  fn.__workletHash = 11413099333511;
-  fn.__initData = flag;
-  return obj.defineAnimation(tmp6Result2, fn);
-};
-fn.__closure = { defineAnimation: fn(1678).defineAnimation, getReduceMotionForAnimation: fn(1678).getReduceMotionForAnimation };
-fn.__workletHash = 13638828150427;
-fn.__initData = { code: "function pnpm_repeatTs1(_nextAnimation,numberOfReps=2,reverse=false,callback,reduceMotion){const{defineAnimation,getReduceMotionForAnimation}=this.__closure;return defineAnimation(_nextAnimation,function(){'worklet';const nextAnimation=typeof _nextAnimation==='function'?_nextAnimation():_nextAnimation;function repeat(animation,now){const finished=nextAnimation.onFrame(nextAnimation,now);animation.current=nextAnimation.current;if(finished){animation.reps+=1;if(nextAnimation.callback){nextAnimation.callback(true,animation.current);}if(animation.reduceMotion||numberOfReps>0&&animation.reps>=numberOfReps){return true;}const startValue=reverse?nextAnimation.current:animation.startValue;if(reverse){nextAnimation.toValue=animation.startValue;animation.startValue=startValue;}nextAnimation.onStart(nextAnimation,startValue,now,nextAnimation.previousAnimation);return false;}return false;}const repCallback=function(finished){if(callback){callback(finished);}if(!finished&&nextAnimation.callback){nextAnimation.callback(false);}};function onStart(animation,value,now,previousAnimation){animation.startValue=value;animation.reps=0;if(nextAnimation.reduceMotion===undefined){nextAnimation.reduceMotion=animation.reduceMotion;}if(animation.reduceMotion&&reverse&&(numberOfReps<=0||numberOfReps%2===0)){animation.current=animation.startValue;animation.onFrame=function(){return true;};}else{nextAnimation.onStart(nextAnimation,value,now,previousAnimation);}}return{isHigherOrder:true,onFrame:repeat,onStart:onStart,reps:0,current:nextAnimation.current,callback:repCallback,startValue:0,reduceMotion:getReduceMotionForAnimation(reduceMotion)};});}" };
+import _mod1654 from "module_1654" /* 1654 */;
+import rubberBandDecay from "rubberBandDecay" /* 1720 */;
+import rigidDecay from "rigidDecay" /* 1721 */;
 
-export const withRepeat = fn;
+require = fn;
+let dependencyMap = arg6;
+function validateConfig(clamp) {
+  if (clamp.clamp) {
+    const _Array = Array;
+    if (Array.isArray(clamp.clamp)) {
+      if (2 !== clamp.clamp.length) {
+        const _HermesInternal3 = HermesInternal;
+        const reanimatedError = new _mod1654.ReanimatedError("`clamp array` must contain 2 items but is given " + clamp.clamp.length + ".");
+        throw reanimatedError;
+      }
+    } else {
+      const _HermesInternal = HermesInternal;
+      const reanimatedError1 = new _mod1654.ReanimatedError("`config.clamp` must be an array but is " + typeof clamp.clamp + ".");
+      throw reanimatedError1;
+    }
+  }
+  if (clamp.velocityFactor <= 0) {
+    const _HermesInternal2 = HermesInternal;
+    const reanimatedError2 = new _mod1654.ReanimatedError("`config.velocityFactor` must be greater then 0 but is " + clamp.velocityFactor + ".");
+    throw reanimatedError2;
+  } else if (clamp.rubberBandEffect) {
+    if (!clamp.clamp) {
+      const reanimatedError3 = new _mod1654.ReanimatedError("You need to set `clamp` property when using `rubberBandEffect`.");
+      throw reanimatedError3;
+    }
+  }
+}
+validateConfig.__closure = {};
+validateConfig.__workletHash = 14532293098342;
+validateConfig.__initData = { code: "function validateConfig_Pnpm_decayTs1(config){if(config.clamp){if(!Array.isArray(config.clamp)){throw new ReanimatedError(\"`config.clamp` must be an array but is \"+typeof config.clamp+\".\");}if(config.clamp.length!==2){throw new ReanimatedError(\"`clamp array` must contain 2 items but is given \"+config.clamp.length+\".\");}}if(config.velocityFactor<=0){throw new ReanimatedError(\"`config.velocityFactor` must be greater then 0 but is \"+config.velocityFactor+\".\");}if(config.rubberBandEffect&&!config.clamp){throw new ReanimatedError('You need to set `clamp` property when using `rubberBandEffect`.');}}" };
+const __initData = { code: "function pnpm_decayTs3(){const{userConfig,isValidRubberBandConfig,rubberBandDecay,rigidDecay,validateConfig,callback,getReduceMotionForAnimation}=this.__closure;var _config$velocity;const config={deceleration:0.998,velocityFactor:1,velocity:0,rubberBandFactor:0.6};if(userConfig){Object.keys(userConfig).forEach(function(key){return config[key]=userConfig[key];});}const decay=isValidRubberBandConfig(config)?function(animation,now){return rubberBandDecay(animation,now,config);}:function(animation,now){return rigidDecay(animation,now,config);};function onStart(animation,value,now){const initialVelocity=config.velocity;animation.current=value;animation.lastTimestamp=now;animation.startTimestamp=now;animation.initialVelocity=initialVelocity;animation.velocity=initialVelocity;validateConfig(config);if(animation.reduceMotion&&config.clamp){if(value<config.clamp[0]){animation.current=config.clamp[0];}else if(value>config.clamp[1]){animation.current=config.clamp[1];}}}return{onFrame:decay,onStart:onStart,callback:callback,velocity:(_config$velocity=config.velocity)!==null&&_config$velocity!==void 0?_config$velocity:0,initialVelocity:0,current:undefined,lastTimestamp:0,startTimestamp:0,reduceMotion:getReduceMotionForAnimation(config.reduceMotion)};}" };
+fn = function n(userConfig, fn) {
+  _require = userConfig;
+  dependencyMap = fn;
+  fn = function c() {
+    let obj = { deceleration: 0.998, velocityFactor: 1, velocity: 0, rubberBandFactor: 0.6 };
+    if (obj) {
+      const _Object = Object;
+      const keys = Object.keys(tmp);
+      const item = keys.forEach((item) => {
+        obj[item] = closure_0[item];
+        return closure_0[item];
+      });
+    }
+    const obj3 = {
+      onFrame: userConfig(callback[2]).isValidRubberBandConfig(obj) ? ((current, lastTimestamp) => {
+        obj = rubberBandDecay;
+        return obj.rubberBandDecay(current, lastTimestamp, obj);
+      }) : ((initialVelocity, lastTimestamp) => {
+        obj = rigidDecay;
+        return obj.rigidDecay(initialVelocity, lastTimestamp, obj);
+      }),
+      onStart(reduceMotion, current, lastTimestamp) {
+        const velocity = obj.velocity;
+        reduceMotion.current = current;
+        reduceMotion.lastTimestamp = lastTimestamp;
+        reduceMotion.startTimestamp = lastTimestamp;
+        reduceMotion.initialVelocity = velocity;
+        reduceMotion.velocity = velocity;
+        validateConfig(obj);
+        if (tmp3) {
+          if (current < obj.clamp[0]) {
+            reduceMotion.current = obj.clamp[0];
+          } else if (current > obj.clamp[1]) {
+            reduceMotion.current = obj.clamp[1];
+          }
+        }
+        tmp3 = reduceMotion.reduceMotion && obj.clamp;
+      },
+      callback,
+      velocity: null,
+      initialVelocity: 0,
+      current: "duration",
+      lastTimestamp: null,
+      startTimestamp: 458.02,
+      reduceMotion: 93.949
+    };
+    let num = obj.velocity;
+    if (num == null) {
+      num = 0;
+    }
+    obj3.velocity = num;
+    const obj2 = userConfig(callback[2]);
+    obj3.reduceMotion = userConfig(callback[1]).getReduceMotionForAnimation(obj.reduceMotion);
+    return obj3;
+  };
+  let obj = require("module_1683");
+  fn.__closure = { userConfig, isValidRubberBandConfig: require("module_1719").isValidRubberBandConfig, rubberBandDecay: require("rubberBandDecay").rubberBandDecay, rigidDecay: require("rigidDecay").rigidDecay, validateConfig, callback: fn, getReduceMotionForAnimation: require("module_1683").getReduceMotionForAnimation };
+  fn.__workletHash = 17099614658252;
+  fn.__initData = __initData;
+  return obj.defineAnimation(0, fn);
+};
+fn.__closure = { defineAnimation: fn(1683).defineAnimation, isValidRubberBandConfig: fn(1719).isValidRubberBandConfig, rubberBandDecay: fn(1720).rubberBandDecay, rigidDecay: fn(1721).rigidDecay, validateConfig, getReduceMotionForAnimation: fn(1683).getReduceMotionForAnimation };
+fn.__workletHash = 3913201228611;
+fn.__initData = { code: "function pnpm_decayTs2(userConfig,callback){const{defineAnimation,isValidRubberBandConfig,rubberBandDecay,rigidDecay,validateConfig,getReduceMotionForAnimation}=this.__closure;return defineAnimation(0,function(){'worklet';var _config$velocity;const config={deceleration:0.998,velocityFactor:1,velocity:0,rubberBandFactor:0.6};if(userConfig){Object.keys(userConfig).forEach(function(key){return config[key]=userConfig[key];});}const decay=isValidRubberBandConfig(config)?function(animation,now){return rubberBandDecay(animation,now,config);}:function(animation,now){return rigidDecay(animation,now,config);};function onStart(animation,value,now){const initialVelocity=config.velocity;animation.current=value;animation.lastTimestamp=now;animation.startTimestamp=now;animation.initialVelocity=initialVelocity;animation.velocity=initialVelocity;validateConfig(config);if(animation.reduceMotion&&config.clamp){if(value<config.clamp[0]){animation.current=config.clamp[0];}else if(value>config.clamp[1]){animation.current=config.clamp[1];}}}return{onFrame:decay,onStart:onStart,callback:callback,velocity:(_config$velocity=config.velocity)!==null&&_config$velocity!==void 0?_config$velocity:0,initialVelocity:0,current:undefined,lastTimestamp:0,startTimestamp:0,reduceMotion:getReduceMotionForAnimation(config.reduceMotion)};});}" };
+
+export const withDecay = fn;

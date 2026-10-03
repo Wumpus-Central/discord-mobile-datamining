@@ -1,0 +1,96 @@
+// === Module 737: logSpanEnd ===
+
+// Module 737 (logSpanEnd)
+import spanToJSON from "spanToJSON" /* 695 */;
+import _mod699 from "module_699" /* 699 */;
+import consoleSandbox from "consoleSandbox" /* 700 */;
+
+require = arg1;
+const dependencyMap = arg6;
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+
+export const logSpanEnd = function logSpanEnd(spanContext) {
+  if (_mod699.DEBUG_BUILD) {
+    const spanToJSONResult = spanToJSON.spanToJSON(spanContext);
+    const description = spanToJSONResult.description;
+    let str = "< unknown name >";
+    if (undefined !== description) {
+      str = description;
+    }
+    const op = spanToJSONResult.op;
+    let str2 = "< unknown op >";
+    if (undefined !== op) {
+      str2 = op;
+    }
+    const spanId = spanContext.spanContext().spanId;
+    const tmpResult = spanToJSON;
+    let str3 = "";
+    if (tmpResult2.getRootSpan(spanContext) === spanContext) {
+      str3 = "root ";
+    }
+    const _HermesInternal = HermesInternal;
+    const combined = "[Tracing] Finishing \"" + str2 + "\" " + str3 + "span \"" + str + "\" with ID " + spanId;
+    const debug = consoleSandbox.debug;
+    debug.log(combined);
+    tmpResult2 = spanToJSON;
+  }
+};
+export const logSpanStart = function logSpanStart(spanContext) {
+  if (_mod699.DEBUG_BUILD) {
+    const spanToJSONResult = spanToJSON.spanToJSON(spanContext);
+    const description = spanToJSONResult.description;
+    let str = "< unknown name >";
+    if (undefined !== description) {
+      str = description;
+    }
+    const op = spanToJSONResult.op;
+    let str2 = "< unknown op >";
+    if (undefined !== op) {
+      str2 = op;
+    }
+    const parent_span_id = spanToJSONResult.parent_span_id;
+    const tmpResult = spanToJSON;
+    const tmpResult4 = spanToJSON;
+    const spanIsSampledResult = spanToJSON.spanIsSampled(spanContext);
+    const rootSpan = spanToJSON.getRootSpan(spanContext);
+    let str3 = "unsampled";
+    if (spanIsSampledResult) {
+      str3 = "sampled";
+    }
+    let str5 = "";
+    if (rootSpan === spanContext) {
+      str5 = "root ";
+    }
+    const _HermesInternal = HermesInternal;
+    const _HermesInternal2 = HermesInternal;
+    const combined = "[Tracing] Starting " + str3 + " " + str5 + "span";
+    const items = ["op: " + str2, , ];
+    const _HermesInternal3 = HermesInternal;
+    items[1] = "name: " + str;
+    const _HermesInternal4 = HermesInternal;
+    items[2] = "ID: " + spanContext.spanContext().spanId;
+    if (parent_span_id) {
+      const _HermesInternal5 = HermesInternal;
+      items.push("parent ID: " + parent_span_id);
+    }
+    if (rootSpan !== spanContext) {
+      const tmpResult6 = spanToJSON;
+      ({ op: op2, description: description2 } = spanToJSON.spanToJSON(rootSpan));
+      const _HermesInternal6 = HermesInternal;
+      items.push("root ID: " + rootSpan.spanContext().spanId);
+      if (op2) {
+        const _HermesInternal7 = HermesInternal;
+        items.push("root op: " + op2);
+      }
+      if (description2) {
+        const _HermesInternal8 = HermesInternal;
+        items.push("root description: " + description2);
+      }
+      const spanToJSONResult1 = spanToJSON.spanToJSON(rootSpan);
+    }
+    const debug = consoleSandbox.debug;
+    const _HermesInternal9 = HermesInternal;
+    debug.log("" + combined + "\n  " + items.join("\n  "));
+    const tmpResult5 = spanToJSON;
+  }
+};

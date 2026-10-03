@@ -1,13 +1,11 @@
 // === Module 1508: ? ===
 
 // Module 1508
+import NavigationIndependentTreeContext from "NavigationIndependentTreeContext" /* 1509 */;
 import noop from "module_19" /* 19 */;
 
+require = arg1;
 
-export const useLazyValue = function useLazyValue(fn) {
-  const ref = noop.useRef(undefined);
-  if (undefined === ref.current) {
-    ref.current = fn();
-  }
-  return ref.current;
+export const useNavigationIndependentTree = function useNavigationIndependentTree() {
+  return noop.useContext(NavigationIndependentTreeContext.NavigationIndependentTreeContext);
 };

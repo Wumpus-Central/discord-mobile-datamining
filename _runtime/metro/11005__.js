@@ -1,8 +1,7 @@
 // === Module 11005: ? ===
 
 // Module 11005
-import _mod17 from "module_17" /* 17 */;
+import registerAsset from "module_1132" /* 1132 */;
 
-const TurboModuleRegistry = _mod17.TurboModuleRegistry;
 
-export const NativeDocumentPicker = TurboModuleRegistry.getEnforcing("RNDocumentPicker");
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties", scales: [1], hash: "6ab310fc9336bead9d2a9726051f2397", name: "SpendEarnOrbsLightTheme", type: "lottie" });

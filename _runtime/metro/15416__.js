@@ -1,7 +1,7 @@
 // === Module 15416: ? ===
 
 // Module 15416
-import registerAsset from "module_1121" /* 1121 */;
+import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRs", scales: [1], hash: "425df9420548222a7512beb569adb5f8", name: "sv-SE.messages.425df9420548222a7512beb569adb5f8.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "3e998a340948f95ab4885c3644b255dc", name: "AchievementsIcon", type: "png" });

@@ -1,19 +1,42 @@
 // === Module 6352: ? ===
 
 // Module 6352
-import ComposedGestureName from "ComposedGestureName" /* 6318 */;
-import DEFAULT_PROPS_TRANSFORMER from "DEFAULT_PROPS_TRANSFORMER" /* 6327 */;
-import _mod6342 from "module_6342" /* 6342 */;
+import _mod6353 from "module_6353" /* 6353 */;
 
-require = arg1;
-const dependencyMap = arg6;
-let closure_2 = {};
 
-export const useManualGesture = function useManualGesture() {
-  let tmp = gestureHandlerProps;
-  if (gestureHandlerProps === undefined) {
-    tmp = closure_2;
+export default function _createClass(arg0, arg1, arg2) {
+  if (arg1) {
+    for (let num = 0; num < arg1.length; num = num + 1) {
+      let tmp3 = arg1[num];
+      let flag2 = tmp3.enumerable;
+      if (!flag2) {
+        flag2 = false;
+      }
+      tmp3.enumerable = flag2;
+      tmp3.configurable = true;
+      if ("value" in tmp3) {
+        tmp3.writable = true;
+      }
+      let _Object = Object;
+      let definePropertyResult = Object.defineProperty(tmp, _mod6353(tmp3.key), tmp3);
+    }
   }
-  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp);
-  return _mod6342.useGesture(ComposedGestureName.SingleGestureName.Manual, clonedAndRemappedConfig);
+  if (arg2) {
+    for (let num3 = 0; num3 < arg2.length; num3 = num3 + 1) {
+      let tmp9 = arg2[num3];
+      let flag4 = tmp9.enumerable;
+      if (!flag4) {
+        flag4 = false;
+      }
+      tmp9.enumerable = flag4;
+      tmp9.configurable = true;
+      if ("value" in tmp9) {
+        tmp9.writable = true;
+      }
+      let _Object2 = Object;
+      let definePropertyResult1 = Object.defineProperty(arg0, _mod6353(tmp9.key), tmp9);
+    }
+  }
+  Object.defineProperty(arg0, "prototype", { writable: false });
+  return arg0;
 };

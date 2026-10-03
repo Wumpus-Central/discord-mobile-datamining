@@ -1,7 +1,7 @@
 // === Module 13344: ? ===
 
 // Module 13344
-import registerAsset from "module_1121" /* 1121 */;
+import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/guild_boosting/perks", width: 34, height: 34, scales: [2, 3], hash: "36d299b9a20b89def78675ec02a95049", name: "badge_2", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/logos", width: 106, height: 26, scales: [2, 3], hash: "cb40a06625eace58731dea1b5da68381", name: "img_logo_nitro_dark", type: "png" });

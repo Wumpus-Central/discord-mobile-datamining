@@ -1,7 +1,7 @@
 // === Module 2811: ? ===
 
 // Module 2811
-import registerAsset from "module_1121" /* 1121 */;
+import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/safety_flows", scales: [1], hash: "f614c08c76b02de5adb2fd79d588a060", name: "SafetyFlows.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==", scales: [1], hash: "ca50e415acaa593cc73802146ba0eded", name: "sv-SE.messages.ca50e415acaa593cc73802146ba0eded.compiled.messages", type: "jsona" });

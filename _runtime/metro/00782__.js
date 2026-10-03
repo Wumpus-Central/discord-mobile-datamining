@@ -3,44 +3,86 @@
 // Module 782
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const parseCookie = function parseCookie(arr) {
-  const obj = {};
-  let num = 0;
-  if (0 < arr.length) {
-    let index = arr.indexOf("=", num);
-    while (-1 !== index) {
-      let length = arr.indexOf(";", num);
-      if (-1 === length) {
-        length = arr.length;
-      } else if (length < index) {
-        let sum = arr.lastIndexOf(";", index - 1) + 1;
-        num = sum;
-        if (sum >= arr.length) {
-          break;
-        }
-      }
-      let str = arr.slice(num, index);
-      let trimmed = str.trim();
-      if (undefined === obj[trimmed]) {
-        let str2 = arr.slice(index + 1, length);
-        let trimmed1 = str2.trim();
-        index = trimmed1;
-        if (34 === trimmed1.charCodeAt(0)) {
-          index = trimmed1.slice(1, -1);
-        }
-        try {
-          let decodeURIComponentResult = index;
-          if (-1 !== index.indexOf("%")) {
-            let _decodeURIComponent = decodeURIComponent;
-            decodeURIComponentResult = decodeURIComponent(index);
-          }
-          obj[trimmed] = decodeURIComponentResult;
-        } catch (err) {
-          obj[trimmed] = index;
-        }
-      }
-      let sum1 = length + 1;
+export const debounce = function debounce(arg0, arg1, maxWait) {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  function invokeFunc() {
+    if (undefined !== c3) {
+      const _clearTimeout = clearTimeout;
+      clearTimeout(c3);
     }
+    if (undefined !== c4) {
+      const _clearTimeout2 = clearTimeout;
+      clearTimeout(c4);
+    }
+    c4 = undefined;
+    c3 = undefined;
+    const tmp7 = closure_0();
+    closure_2 = tmp7;
+    return tmp7;
   }
-  return obj;
+  maxWait = undefined;
+  if (maxWait != null) {
+    maxWait = maxWait.maxWait;
+  }
+  if (maxWait) {
+    const _Math = Math;
+    const num = Math.max(maxWait.maxWait, arg1);
+  }
+  let setTimeoutImpl;
+  if (maxWait != null) {
+    setTimeoutImpl = maxWait.setTimeoutImpl;
+  }
+  if (!setTimeoutImpl) {
+    setTimeoutImpl = setTimeout;
+  }
+  function debounced() {
+    if (c3) {
+      const _clearTimeout = clearTimeout;
+      clearTimeout(c3);
+    }
+    c3 = setTimeoutImpl(invokeFunc, closure_1);
+    let tmp7 = num;
+    if (num) {
+      tmp7 = undefined === c4;
+    }
+    if (tmp7) {
+      c4 = setTimeoutImpl(invokeFunc, num);
+    }
+    return closure_2;
+  }
+  debounced.cancel = function cancelTimers() {
+    if (undefined !== c3) {
+      const _clearTimeout = clearTimeout;
+      clearTimeout(c3);
+    }
+    if (undefined !== c4) {
+      const _clearTimeout2 = clearTimeout;
+      clearTimeout(c4);
+    }
+    c4 = undefined;
+    c3 = undefined;
+  };
+  debounced.flush = function flush() {
+    if (undefined === c3) {
+      if (undefined === c4) {
+        let tmp3 = closure_2;
+      }
+      return tmp3;
+    }
+    if (undefined !== c3) {
+      const _clearTimeout = clearTimeout;
+      clearTimeout(c3);
+    }
+    if (undefined !== c4) {
+      const _clearTimeout2 = clearTimeout;
+      clearTimeout(c4);
+    }
+    c4 = undefined;
+    c3 = undefined;
+    const tmp10 = closure_0();
+    closure_2 = tmp10;
+    tmp3 = tmp10;
+  };
+  return debounced;
 };

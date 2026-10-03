@@ -2,38 +2,38 @@
 
 // Module 1922
 globalThis.IntlMessageFormat.__addLocaleData({
-  locale: "hi",
+  locale: "sv",
   pluralRuleFunction(arg0, arg1) {
+    const parts = String(arg0).split(".");
+    let substr1 = Number(parts[0]) == arg0;
+    let substr = substr1;
+    if (substr1) {
+      const first = parts[0];
+      substr = first.slice(-1);
+    }
+    if (substr1) {
+      const first1 = parts[0];
+      substr1 = first1.slice(-2);
+    }
     if (arg1) {
-      let str3 = "one";
-      if (1 != arg0) {
-        let str5 = "two";
-        if (2 != arg0) {
-          str5 = "two";
-          if (3 != arg0) {
-            let str6 = "few";
-            if (4 != arg0) {
-              let str7 = "other";
-              if (6 == arg0) {
-                str7 = "many";
-              }
-              str6 = str7;
-            }
-            str5 = str6;
-          }
+      if (1 == substr) {
+        if (11 != substr1) {
+          let str4 = "one";
         }
-        str3 = str5;
+        let str3 = str4;
       }
-      let str2 = str3;
+      str4 = "other";
     } else {
-      str2 = "other";
-      if (arg0 >= 0) {
-        str2 = "other";
-        if (arg0 <= 1) {
-          str2 = "one";
+      str3 = "other";
+      if (1 == arg0) {
+        str3 = "other";
+        if (!parts[1]) {
+          str3 = "one";
         }
       }
     }
-    return str2;
+    return str3;
   }
 });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "sv-AX", parentLocale: "sv" });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "sv-FI", parentLocale: "sv" });

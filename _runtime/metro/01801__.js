@@ -1,114 +1,60 @@
 // === Module 1801: ? ===
 
 // Module 1801
+import runOnRuntime from "runOnRuntime" /* 1687 */;
 import noop from "module_19" /* 19 */;
-import module_1641 from "module_1641" /* 1641 */;
 
 const require = globalThis.__r;
 
-function getWebScrollableElement(getScrollableNode) {
-  let scrollableNode;
-  if (getScrollableNode != null) {
-    scrollableNode = getScrollableNode.getScrollableNode();
-  }
-  if (scrollableNode == null) {
-    scrollableNode = getScrollableNode;
-  }
-  return scrollableNode;
-}
-({ useCallback: c2, useEffect: c3, useRef: closure_4 } = noop);
-let c5 = "animatedRef is not initialized in useScrollViewOffset. Make sure to pass the animated ref to the scrollable component to get scroll offset updates.";
-const __initData = { code: "function pnpm_useScrollViewOffsetTs1(){const{animatedRef,getWebScrollableElement,offset}=this.__closure;if(animatedRef){const element=getWebScrollableElement(animatedRef.current);offset.value=element.scrollLeft===0?element.scrollTop:element.scrollLeft;}}" };
-const __initData2 = { code: "function pnpm_useScrollViewOffsetTs2(event){const{offset}=this.__closure;offset.value=event.contentOffset.x===0?event.contentOffset.y:event.contentOffset.x;}" };
-let closure_9 = ["onScroll", "onScrollBeginDrag", "onScrollEndDrag", "onMomentumScrollBegin", "onMomentumScrollEnd"];
+({ useEffect: c2, useRef: c3 } = noop);
+let closure_4 = { code: "function pnpm_useDerivedValueTs1(){const{sharedValue,updater}=this.__closure;sharedValue.value=updater();}" };
 
-export const useScrollViewOffset = module_1641.isWeb() ? (function useScrollViewOffsetWeb(animatedRef, arg1) {
-  _require = animatedRef;
-  let sharedValue = arg1;
-  if (arg1 == null) {
-    sharedValue = obj.useSharedValue(0);
+export const useDerivedValue = function useDerivedValue(fn, items) {
+  _require = fn;
+  const tmp = closure_3(null);
+  let __closure = fn.__closure;
+  if (__closure == null) {
+    __closure = {};
   }
-  let current = closure_4(sharedValue).current;
-  const fn = function _() {
-    if (closure_0) {
-      current = tmp.current;
-      let scrollableNode;
-      if (current != null) {
-        scrollableNode = current.getScrollableNode();
-      }
-      if (scrollableNode == null) {
-        scrollableNode = current;
-      }
-      current.value = 0 === scrollableNode.scrollLeft ? scrollableNode.scrollTop : scrollableNode.scrollLeft;
+  let values = Object.values(__closure);
+  let arr2 = values;
+  let tmp4 = require("module_1646").shouldBeUseWeb() && !values.length;
+  arr2 = items;
+  if (tmp4) {
+    let length;
+    if (arr2 != null) {
+      length = arr2.length;
     }
-  };
-  fn.__closure = { animatedRef, getWebScrollableElement, offset: current };
-  fn.__workletHash = 2244034762234;
-  fn.__initData = __initData;
-  const items = [animatedRef, current];
-  const tmp3 = closure_2(fn, items);
-  closure_2 = tmp3;
-  const items1 = [animatedRef, tmp3];
-  closure_3(() => {
-    if (animatedRef) {
-      return animatedRef.observe((arg0) => {
-        if (arg0) {
-          current = scrollableNode.current;
-          scrollableNode = undefined;
-          if (current != null) {
-            scrollableNode = current.getScrollableNode();
-          }
-          if (scrollableNode == null) {
-            scrollableNode = current;
-          }
-          const listener = scrollableNode.addEventListener("scroll", closure_2);
-          return () => {
-            const removed = scrollableNode.removeEventListener("scroll", closure_2_2);
-          };
-        } else {
-          const logger = animatedRef(closure_1_1[3]).logger;
-          logger.warn(closure_1_5);
-        }
-      });
-    }
-  }, items1);
-  return current;
-}) : (function useScrollViewOffsetNative(arg0, arg1) {
-  _require = arg0;
-  let sharedValue = arg1;
-  if (arg1 == null) {
-    sharedValue = obj.useSharedValue(0);
+    tmp4 = length;
   }
-  const current = closure_4(sharedValue).current;
-  obj = require("module_1790");
-  const fn = function _(contentOffset) {
-    if (0 === contentOffset.contentOffset.x) {
-      let x = contentOffset.contentOffset.y;
-    } else {
-      x = contentOffset.contentOffset.x;
-    }
-    current.value = x;
-  };
-  fn.__closure = { offset: current };
-  fn.__workletHash = 17316000082767;
-  fn.__initData = __initData2;
-  const event = require("module_1785").useEvent(fn, closure_9);
-  const items = [arg0, event];
-  closure_3(() => {
-    if (closure_0) {
-      return closure_0.observe((arg0) => {
-        closure_0 = arg0;
-        if (arg0) {
-          workletEventHandler.workletEventHandler.registerForEvents(arg0);
-          return () => {
-            event.workletEventHandler.unregisterFromEvents(closure_0);
-          };
-        } else {
-          const logger = closure_1_0(current[3]).logger;
-          logger.warn(closure_1_5);
-        }
-      });
-    }
-  }, items);
+  if (tmp4) {
+    values = arr2;
+  }
+  if (undefined === arr2) {
+    items = [];
+    items[HermesBuiltin.arraySpread(values, 0)] = fn.__workletHash;
+    arr2 = items;
+  } else {
+    arr2.push(fn.__workletHash);
+  }
+  if (null === tmp.current) {
+    const tmp2Result = tmp2(tmp3[2]);
+    tmp.current = tmp2Result.makeMutable(tmp2(tmp3[3]).initialUpdaterRun(fn));
+    const tmp2Result2 = tmp2(tmp3[3]);
+  }
+  const current = tmp.current;
+  current(() => {
+    const fn = function t() {
+      current.value = closure_0();
+    };
+    fn.__closure = { sharedValue: current, updater };
+    fn.__workletHash = 1316501239615;
+    fn.__initData = __initData;
+    const items = [current];
+    updater = updater(arr2[2]).startMapper(fn, arr2, items);
+    return () => {
+      runOnRuntime.stopMapper(closure_0);
+    };
+  }, arr2);
   return current;
-});
+};

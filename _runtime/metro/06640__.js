@@ -1,18 +1,7 @@
 // === Module 6640: ? ===
 
 // Module 6640
-import CardAnimationContext from "CardAnimationContext" /* 6634 */;
-import noop from "module_19" /* 19 */;
+import registerAsset from "module_1132" /* 1132 */;
 
-require = arg1;
 
-export const useCardAnimation = function useCardAnimation() {
-  const context = noop.useContext(CardAnimationContext.CardAnimationContext);
-  if (undefined === context) {
-    const _Error = Error;
-    const error = new Error("Couldn't find values for card animation. Are you inside a screen in Stack?");
-    throw error;
-  } else {
-    return context;
-  }
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 24, height: 24, scales: [1, 2, 3], hash: "6c6de524d332332b9f4c75238dadd0f8", name: "ic_selection_checked_24px", type: "png" });

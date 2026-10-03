@@ -119,16 +119,16 @@ const entry = {
     let tmp8 = tmp2;
     if (tmp2) {
       const obj2 = { style: drawerSubview.drawerStatusBar };
-      tmp8 = React7(ViewDefault, obj2);
+      tmp8 = options(ViewDefault, obj2);
     }
     items1[1] = tmp8;
     obj.children = items1;
     const obj3 = { style: drawerSubview.mainSubview, collapsable: false, children: null };
     let tmp12 = tmp2;
-    const tmp3Result = closure_1_10(ViewDefault, obj);
+    const tmp3Result = v65535(ViewDefault, obj);
     if (tmp2) {
       const obj4 = { translucent: true, backgroundColor: self.props.statusBarBackgroundColor };
-      tmp12 = React7(_modDef304, obj4);
+      tmp12 = options(_modDef304, obj4);
     }
     const items2 = [tmp12, , ];
     if (tmp2) {
@@ -137,14 +137,14 @@ const entry = {
       const obj6 = { backgroundColor: self.props.statusBarBackgroundColor };
       items3[1] = obj6;
       obj5.style = items3;
-      tmp2 = React7(ViewDefault, obj5);
+      tmp2 = options(ViewDefault, obj5);
     }
     items2[1] = tmp2;
     items2[2] = self.props.children;
     obj3.children = items2;
     const tmp4Result = ViewDefault;
     const obj13 = {};
-    const tmp3Result2 = closure_1_10(ViewDefault, obj3);
+    const tmp3Result2 = v65535(ViewDefault, obj3);
     const merged = Object.assign(tmp);
     obj13.ref = self._nativeRef;
     obj13.drawerBackgroundColor = str;
@@ -156,7 +156,7 @@ const entry = {
     ({ _onDrawerSlide: obj7.onDrawerSlide, _onDrawerOpen: obj7.onDrawerOpen, _onDrawerClose: obj7.onDrawerClose, _onDrawerStateChanged: obj7.onDrawerStateChanged } = self);
     const items5 = [tmp3Result2, tmp3Result];
     obj13.children = items5;
-    return closure_1_10(_modDef309, obj13);
+    return v65535(_modDef309, obj13);
   }
 };
 let items = [

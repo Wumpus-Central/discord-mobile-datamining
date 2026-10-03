@@ -1,17 +1,17 @@
 // === Module 4307: ? ===
 
 // Module 4307
-import module_4299_mod from "module_4299" /* 4299 */;
-import requiredArgs_mod from "requiredArgs" /* 3948 */;
+import startOfISOWeekYear_mod from "startOfISOWeekYear" /* 4119 */;
+import requiredArgs_mod from "requiredArgs" /* 3959 */;
 
-let module_4299 = module_4299_mod;
-if (!module_4299) {
-  const obj = { default: module_4299 };
+let startOfISOWeekYear = startOfISOWeekYear_mod;
+if (!startOfISOWeekYear) {
+  const obj = { default: startOfISOWeekYear };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4299;
+  tmp3 = startOfISOWeekYear;
 }
-module_4299 = tmp3;
+startOfISOWeekYear = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -21,8 +21,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisQuarter(arg0) {
-  requiredArgs.default(1, arguments);
-  return module_4299.default(Date.now(), arg0);
+export default function isSameISOWeekYear(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = startOfISOWeekYear.default(arg0);
+  const time = defaultResult1.getTime();
+  return time === startOfISOWeekYear.default(arg1).getTime();
 };
 export default exports.default;

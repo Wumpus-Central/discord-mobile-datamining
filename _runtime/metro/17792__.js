@@ -1,7 +1,7 @@
 // === Module 17792: ? ===
 
 // Module 17792
-import registerAsset from "module_1121" /* 1121 */;
+import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_role_subscriptions/native/guild_settings/welcome/images", width: 159, height: 105.5, scales: [2, 3], hash: "deeeb1ec32f8166fcc70387b3490f426", name: "role_subscription_lanyard_illo", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 165, height: 178, scales: [2, 3], hash: "b685c2aca3ddb21997a856f7601ff6ad", name: "img_vanity_urls", type: "png" });

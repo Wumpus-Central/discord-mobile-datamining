@@ -1,7 +1,7 @@
 // === Module 9602: ? ===
 
 // Module 9602
-import registerAsset from "module_1121" /* 1121 */;
+import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons/voice_calls", width: 24, height: 24, scales: [2, 3], hash: "c902e6fcc190a5ea75515cf2b526309d", name: "video", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 16, height: 16, scales: [1, 2, 3], hash: "87c2408460473066b05c992e498cb968", name: "header_arrow_right", type: "png" });

@@ -1,9 +1,21 @@
 // === Module 1621: ? ===
 
 // Module 1621
-import module_65 from "module_65" /* 65 */;
+const require = globalThis.__r;
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNCSafeAreaView", validAttributes: { mode: true, edges: true } };
-
-export default module_65.get("RNCSafeAreaView", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+for (const key10013 in require("module_1622")) {
+  arg5[key10013] = require("module_1622")[key10013];
+  continue;
+}
+for (const key10017 in require("SafeAreaView")) {
+  arg5[key10017] = require("SafeAreaView")[key10017];
+  continue;
+}
+for (const key10021 in require("initialWindowMetrics")) {
+  arg5[key10021] = require("initialWindowMetrics")[key10021];
+  continue;
+}
+for (const key10025 in require("module_1629")) {
+  arg5[key10025] = require("module_1629")[key10025];
+  continue;
+}

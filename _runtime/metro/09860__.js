@@ -1,7 +1,7 @@
 // === Module 9860: ? ===
 
 // Module 9860
-import registerAsset from "module_1121" /* 1121 */;
+import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 32, scales: [1, 2, 3], hash: "5740634dc33de72534d208b361b37df5", name: "ic_file_small_sketch", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/wumpus", width: 84, height: 66, scales: [1], hash: "540091c70b333c8b8937ba1627138192", name: "wumpus-pikachu", type: "png" });

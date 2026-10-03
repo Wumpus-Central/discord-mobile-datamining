@@ -1,7 +1,7 @@
 // === Module 5844: ? ===
 
 // Module 5844
-import registerAsset from "module_1121" /* 1121 */;
+import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 228, height: 60, scales: [1], hash: "5297c54e8d9a10bee3a01f60b91ba3ae", name: "img_account_sync_samsung_white", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "7dca654a69aa65c531edd1e710ff1525", name: "ExperimentalLfgIcon", type: "png" });

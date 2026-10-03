@@ -1,9 +1,7 @@
 // === Module 8128: ? ===
 
 // Module 8128
-import module_65 from "module_65" /* 65 */;
+import registerAsset from "module_1132" /* 1132 */;
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGDefs", validAttributes: { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true } };
 
-export default module_65.get("RNSVGDefs", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "a568e12daf3f479ad26c9db6582fe1a2", name: "CreditCardIcon", type: "png" });

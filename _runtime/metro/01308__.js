@@ -2,4 +2,4 @@
 
 // Module 1308
 
-export default Math.max;
+export default Function.prototype.call;

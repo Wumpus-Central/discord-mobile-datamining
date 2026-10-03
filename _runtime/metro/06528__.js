@@ -1,21 +1,14 @@
 // === Module 6528: ? ===
 
 // Module 6528
-import _mod19 from "module_19" /* 19 */;
-import _mod6480 from "module_6480" /* 6480 */;
 
-_mod19.useCallback;
-
-export const useMappingHelper = () => {
-  const recyclerViewContext = _mod6480.useRecyclerViewContext();
-  const obj2 = { getMappingKey: null };
-  const items = [recyclerViewContext];
-  obj2.getMappingKey = useCallback((arg0, arg1) => {
-    let tmp = arg0;
-    if (recyclerViewContext) {
-      tmp = arg1;
+export const findLastIndex = function findLastIndex(arg0, fn) {
+  let diff = arg0.length - 1;
+  if (0 <= diff) {
+    while (!fn(arg0[diff])) {
+      diff = diff - 1;
     }
-    return tmp;
-  }, items);
-  return obj2;
+    return diff;
+  }
+  return -1;
 };

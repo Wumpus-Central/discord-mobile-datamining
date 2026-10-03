@@ -1,17 +1,17 @@
 // === Module 4306: ? ===
 
 // Module 4306
-import module_4298_mod from "module_4298" /* 4298 */;
-import requiredArgs_mod from "requiredArgs" /* 3948 */;
+import startOfWeek_mod from "startOfWeek" /* 4117 */;
+import requiredArgs_mod from "requiredArgs" /* 3959 */;
 
-let module_4298 = module_4298_mod;
-if (!module_4298) {
-  const obj = { default: module_4298 };
+let startOfWeek = startOfWeek_mod;
+if (!startOfWeek) {
+  const obj = { default: startOfWeek };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4298;
+  tmp3 = startOfWeek;
 }
-module_4298 = tmp3;
+startOfWeek = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -21,8 +21,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisMonth(arg0) {
-  requiredArgs.default(1, arguments);
-  return module_4298.default(Date.now(), arg0);
+export default function isSameWeek(arg0, arg1, arg2) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = startOfWeek.default(arg0, arg2);
+  const time = defaultResult1.getTime();
+  return time === startOfWeek.default(arg1, arg2).getTime();
 };
 export default exports.default;

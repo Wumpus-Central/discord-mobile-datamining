@@ -1,23 +1,8 @@
 // === Module 6309: ? ===
 
 // Module 6309
-import _mod19 from "module_19" /* 19 */;
-import _modDef6294 from "module_6294" /* 6294 */;
+import _mod17 from "module_17" /* 17 */;
 
-_mod19.useCallback;
+const StyleSheet = _mod17.StyleSheet;
 
-export const useViewRefHandler = function useViewRefHandler(current, detectorUpdater) {
-  const previousViewTag = current;
-  const items = [current, detectorUpdater];
-  return useCallback((viewRef) => {
-    if (null !== viewRef) {
-      previousViewTag.viewRef = viewRef;
-      if (-1 === previousViewTag.previousViewTag) {
-        previousViewTag.previousViewTag = _modDef6294(previousViewTag.viewRef);
-      }
-      if (!previousViewTag.firstRender) {
-        detectorUpdater(true);
-      }
-    }
-  }, items);
-};
+export const styles = StyleSheet.create({ container: { position: "absolute", top: 0, left: 0, right: 0, zIndex: 9999, pointerEvents: "box-none" } });

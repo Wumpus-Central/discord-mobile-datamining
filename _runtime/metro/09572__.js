@@ -1,7 +1,7 @@
 // === Module 9572: ? ===
 
 // Module 9572
-import registerAsset from "module_1121" /* 1121 */;
+import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "c00f2cf86b7ac758e128c274c6adc688", name: "MicrophoneArrowRightIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "d1dac949a0f852ec9c729a240d5758b0", name: "MusicIcon", type: "png" });

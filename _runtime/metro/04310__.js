@@ -1,17 +1,17 @@
 // === Module 4310: ? ===
 
 // Module 4310
-import module_4302_mod from "module_4302" /* 4302 */;
-import requiredArgs_mod from "requiredArgs" /* 3948 */;
+import startOfQuarter_mod from "startOfQuarter" /* 4170 */;
+import requiredArgs_mod from "requiredArgs" /* 3959 */;
 
-let module_4302 = module_4302_mod;
-if (!module_4302) {
-  const obj = { default: module_4302 };
+let startOfQuarter = startOfQuarter_mod;
+if (!startOfQuarter) {
+  const obj = { default: startOfQuarter };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4302;
+  tmp3 = startOfQuarter;
 }
-module_4302 = tmp3;
+startOfQuarter = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -21,8 +21,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisYear(arg0) {
-  requiredArgs.default(1, arguments);
-  return module_4302.default(arg0, Date.now());
+export default function isSameQuarter(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = startOfQuarter.default(arg0);
+  const time = defaultResult1.getTime();
+  return time === startOfQuarter.default(arg1).getTime();
 };
 export default exports.default;

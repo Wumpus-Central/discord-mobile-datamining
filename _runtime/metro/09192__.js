@@ -1,37 +1,7 @@
 // === Module 9192: ? ===
 
 // Module 9192
-import _mod9193 from "module_9193" /* 9193 */;
-import get_ActivityIndicator from "module_17" /* 17 */;
+import registerAsset from "module_1132" /* 1132 */;
 
-({ NativeModules: c3, Platform, TurboModuleRegistry: closure_4, requireNativeComponent: hasOwnProperty } = get_ActivityIndicator);
 
-export const getNativeComponent = () => {
-  try {
-    return hasOwnProperty("RNDatePicker");
-  } catch (err) {
-    if (global.ignoreDatePickerWarning) {
-      return null;
-    } else {
-      const _Error = Error;
-      throw Error(_mod9193.getInstallationErrorMessage());
-    }
-  }
-};
-export const getNativeModule = () => {
-  try {
-    if (React4) {
-      RNDatePicker = React4.get("RNDatePicker");
-    } else {
-      RNDatePicker = RNDatePicker.RNDatePicker;
-    }
-    return RNDatePicker;
-  } catch (err) {
-    if (global.ignoreDatePickerWarning) {
-      return null;
-    } else {
-      const _Error = Error;
-      throw Error(_mod9193.getInstallationErrorMessage());
-    }
-  }
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "be0495259d7800ba5ff04ac01243104d", name: "LocationIcon", type: "png" });

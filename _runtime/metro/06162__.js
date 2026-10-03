@@ -1,7 +1,9 @@
 // === Module 6162: ? ===
 
 // Module 6162
-import _modDef6163 from "module_6163" /* 6163 */;
+let closure_0 = 1;
 
-
-export default _modDef6163;
+export const getNextHandlerTag = function getNextHandlerTag() {
+  closure_0 = tmp + 1;
+  return +closure_0;
+};

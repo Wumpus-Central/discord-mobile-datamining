@@ -1,186 +1,384 @@
 // === Module 895: ? ===
 
 // Module 895
-import _mod682 from "module_682" /* 682 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _get from "_get" /* 96 */;
-import _inherits from "_inherits" /* 98 */;
+function noop() {
 
-let BrowserClient = require;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
 }
-Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
-class BrowserClient {
+class Promise {
   constructor(arg0) {
     self = this;
-    tmp = BrowserClient;
-    tmp2 = c2(this, BrowserClient);
-    if (typeof globalThis.__SENTRY_RELEASE__ === "string") {
-      id = globalThis.__SENTRY_RELEASE__;
+    if (typeof this !== "object") {
+      tmp8 = globalThis;
+      _TypeError2 = TypeError;
+      tmp9 = new.target;
+      str2 = "Promises must be constructed via new";
+      tmp10 = new.target;
+      typeError = new TypeError("Promises must be constructed via new");
+      tmp12 = typeError;
+      throw typeError;
     } else {
-      tmp16 = closure_0;
-      tmp17 = closure_1;
-      SENTRY_RELEASE = closure_0(closure_1[6]).WINDOW.SENTRY_RELEASE;
-      tmp18 = null;
-      if (SENTRY_RELEASE != null) {
-        id = SENTRY_RELEASE.id;
+      tmp13 = global;
+      if (typeof global !== "function") {
+        tmp3 = globalThis;
+        _TypeError = TypeError;
+        tmp4 = new.target;
+        str = "Promise constructor's argument is not a function";
+        tmp5 = new.target;
+        typeError1 = new TypeError("Promise constructor's argument is not a function");
+        tmp7 = typeError1;
+        throw typeError1;
+      } else {
+        num = 0;
+        self._40 = 0;
+        self._65 = 0;
+        tmp14 = null;
+        self._55 = null;
+        self._72 = null;
+        tmp15 = noop;
+        if (global !== noop) {
+          tmp = doResolve;
+          tmp2 = doResolve(global, self);
+        }
+        return;
       }
     }
-    obj = { release: id, sendClientReports: true, parentSpanIsAlwaysRootSpan: true };
-    merged = Object.assign(global);
-    tmp4 = closure_0;
-    tmp5 = closure_1;
-    SENTRY_SDK_SOURCE = closure_0(closure_1[6]).WINDOW.SENTRY_SDK_SOURCE;
-    if (!SENTRY_SDK_SOURCE) {
-      tmp4Result = tmp4(tmp5[7]);
-      SENTRY_SDK_SOURCE = tmp4Result.getSDKSource();
-    }
-    tmp4Result1 = tmp4(tmp5[7]);
-    applySdkMetadataResult = tmp4Result1.applySdkMetadata(obj, "browser", ["browser"], SENTRY_SDK_SOURCE);
-    _metadata = obj._metadata;
-    sdk = undefined;
-    if (_metadata != null) {
-      sdk = _metadata.sdk;
-    }
-    if (sdk) {
-      str = "never";
-      if (obj.sendDefaultPii) {
-        str = "auto";
-      }
-      obj1 = { infer_ip: null };
-      obj1.infer_ip = str;
-      tmp8 = obj1;
-      merged1 = Object.assign(obj._metadata.sdk.settings);
-      obj._metadata.sdk.settings = obj1;
-    }
-    items = [];
-    items[0] = obj;
-    tmp10 = closure_4;
-    obj5 = closure_4(tmp);
-    tmp11 = closure_3;
-    if (metroRequire()) {
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj5, items, tmp10(self).constructor);
-    } else {
-      constructResult = obj5.apply(self, items);
-    }
-    tmp11Result = tmp11(self, constructResult);
-    closure_0 = tmp11Result;
-    _options = tmp11Result._options;
-    sendClientReports = _options.sendClientReports;
-    enableLogs = _options.enableLogs;
-    ({ _experiments, enableMetrics, sendDefaultPii } = _options);
-    if (enableMetrics == null) {
-      enableMetrics1 = undefined;
-      if (_experiments != null) {
-        enableMetrics1 = _experiments.enableMetrics;
-      }
-      enableMetrics = enableMetrics1;
-    }
-    if (enableMetrics == null) {
-      enableMetrics = true;
-    }
-    c3 = enableMetrics;
-    _document = tmp4(tmp5[6]).WINDOW.document;
-    if (_document) {
-      if (!sendClientReports) {
-        sendClientReports = enableLogs;
-      }
-      if (!sendClientReports) {
-        sendClientReports = enableMetrics;
-      }
-      _document = sendClientReports;
-    }
-    if (_document) {
-      _document2 = tmp4(tmp5[6]).WINDOW.document;
-      str2 = "visibilitychange";
-      listener = _document2.addEventListener("visibilitychange", () => {
-        if ("hidden" === BrowserClient(893).WINDOW.document.visibilityState) {
-          if (sendClientReports) {
-            closure_0._flushOutcomes();
+  }
+  then(arg0, arg1) {
+    self = this;
+    if (this.constructor !== Promise) {
+      closure_1 = global;
+      closure_2 = require;
+      tmp13 = new.target;
+      tmp14 = new.target;
+      constructor = new self.constructor((arg0, arg1) => {
+        const obj3 = Object.create(Promise.prototype);
+        if (typeof obj3 !== "object") {
+          const _TypeError = TypeError;
+          const typeError = new TypeError("Promises must be constructed via new");
+          throw typeError;
+        } else {
+          obj3._40 = 0;
+          obj3._65 = 0;
+          obj3._55 = null;
+          obj3._72 = null;
+          // // eliminated: always false
+          obj3.then(arg0, arg1);
+          Object.create(Handler.prototype);
+          const obj = {};
+          let tmp11 = null;
+          if (typeof closure_1 === "function") {
+            tmp11 = closure_1;
           }
-          if (enableLogs) {
-            const result = BrowserClient(682)._INTERNAL_flushLogsBuffer(closure_0);
-            const tmpResult = BrowserClient(682);
+          obj.onFulfilled = tmp11;
+          let tmp12 = null;
+          if (typeof closure_2 === "function") {
+            tmp12 = closure_2;
           }
-          if (enableMetrics) {
-            const result1 = BrowserClient(682)._INTERNAL_flushMetricsBuffer(closure_0);
-            const tmpResult2 = BrowserClient(682);
-          }
+          obj.onRejected = tmp12;
+          obj.promise = obj3;
+          handle(self, obj);
         }
       });
+      tmp16 = constructor;
+      return constructor;
+    } else {
+      tmp17 = self;
+      obj1 = Object.create(tmp.prototype);
+      if (typeof obj1 !== "object") {
+        tmp8 = globalThis;
+        _TypeError = TypeError;
+        tmp9 = new.target;
+        str = "Promises must be constructed via new";
+        tmp10 = new.target;
+        typeError = new TypeError("Promises must be constructed via new");
+        tmp12 = typeError;
+        throw typeError;
+      } else {
+        num = 0;
+        obj1._40 = 0;
+        obj1._65 = 0;
+        tmp19 = null;
+        obj1._55 = null;
+        obj1._72 = null;
+        // // eliminated: always false
+        tmp3 = Handler;
+        tmp2 = handle;
+        obj2 = Object.create(Handler.prototype);
+        obj = {};
+        tmp5 = null;
+        if (typeof global === "function") {
+          tmp5 = global;
+        }
+        obj.onFulfilled = tmp5;
+        tmp6 = null;
+        if (typeof require === "function") {
+          tmp6 = require;
+        }
+        obj.onRejected = tmp6;
+        obj.promise = obj1;
+        tmp2Result = tmp2(self, obj);
+        return obj1;
+      }
     }
-    if (sendDefaultPii) {
-      str3 = "beforeSendSession";
-      onResult = tmp11Result.on("beforeSendSession", tmp4(tmp5[7]).addAutoIpAddressToSession);
-    }
-    return tmp11Result;
   }
 }
-_inherits(BrowserClient, _mod682.Client);
-const entry = {
-  key: "eventFromException",
-  value: function eventFromException(arg0, arg1) {
-    return BrowserClient(896).eventFromException(this._options.stackParser, arg0, arg1, this._options.attachStacktrace);
+function handle(_65, _72) {
+  let tmp = _65;
+  let tmp2 = _65;
+  if (3 === _65._65) {
+    do {
+      _55 = tmp._55;
+      tmp = _55;
+      tmp2 = _55;
+      _65 = _55._65;
+    } while (3 === _65);
   }
-};
-let items = [
-  entry,
-  {
-    key: "eventFromMessage",
-    value: function eventFromMessage(arg0) {
-      let str = arg1;
-      if (arg1 === undefined) {
-        str = "info";
-      }
-      return BrowserClient(896).eventFromMessage(this._options.stackParser, arg0, str, arg2, this._options.attachStacktrace);
-    }
-  },
-  {
-    key: "_prepareEvent",
-    value: function _prepareEvent(platform, arg1, arg2, arg3) {
-      platform.platform = platform.platform || "javascript";
-      const self = this;
-      let fn = hasOwnProperty(_getPrototypeOf(BrowserClient.prototype), "_prepareEvent", this);
-      if (typeof fn === "function") {
-        fn = (items) => fn.apply(self, items);
-      }
-      const items = [platform, arg1, arg2, arg3];
-      return fn(items);
-    }
+  if (Promise._37) {
+    Promise._37(tmp2);
   }
-];
-
-export const BrowserClient = _createClass(BrowserClient, items);
-export const applyDefaultOptions = function applyDefaultOptions(arg0) {
-  if (typeof globalThis.__SENTRY_RELEASE__ === "string") {
-    let id = globalThis.__SENTRY_RELEASE__;
+  if (0 === tmp2._65) {
+    if (0 === tmp2._40) {
+      tmp2._40 = 1;
+      tmp2._72 = _72;
+    } else if (1 === tmp2._40) {
+      tmp2._40 = 2;
+      const items = [tmp2._72, _72];
+      tmp2._72 = items;
+    } else {
+      _72 = tmp2._72;
+      _72.push(_72);
+    }
+    return tmp7;
   } else {
-    const SENTRY_RELEASE = BrowserClient(893).WINDOW.SENTRY_RELEASE;
-    if (SENTRY_RELEASE != null) {
-      id = SENTRY_RELEASE.id;
+    _55 = _72;
+    const _setImmediate = setImmediate;
+    setImmediate(() => {
+      let length;
+      let length2;
+      if (1 === _55._65) {
+        let onRejected = _55.onFulfilled;
+        let tmp2 = _55;
+      } else {
+        tmp2 = _55;
+        onRejected = _55.onRejected;
+      }
+      if (null !== onRejected) {
+        const tmp11 = (function tryCallOne(onRejected, _55) {
+          try {
+            return onRejected(_55);
+          } catch (tmp3) {
+            closure_1 = tmp3;
+            return closure_1_2;
+          }
+        })(onRejected, tmp._55);
+        if (tmp11 === closure_2) {
+          tmp2.promise._65 = 2;
+          tmp2.promise._55 = _55;
+          if (Promise._87) {
+            Promise._87(promise, tmp15);
+          }
+          if (1 === tmp2.promise._40) {
+            handle(promise, promise._72);
+            promise._72 = null;
+          }
+          if (2 === tmp2.promise._40) {
+            let num6 = 0;
+            if (0 < promise._72.length) {
+              do {
+                let tmp20 = handle(promise, promise._72[num6]);
+                num6 = num6 + 1;
+                length2 = promise._72.length;
+              } while (num6 < length2);
+            }
+            promise._72 = null;
+          }
+        } else {
+          resolve(tmp2.promise, tmp11);
+        }
+      } else if (1 === tmp._65) {
+        resolve(tmp2.promise, tmp._55);
+      } else {
+        _55 = tmp._55;
+        tmp2.promise._65 = 2;
+        tmp2.promise._55 = _55;
+        if (Promise._87) {
+          Promise._87(promise2, _55);
+        }
+        if (1 === tmp2.promise._40) {
+          handle(promise2, promise2._72);
+          promise2._72 = null;
+        }
+        if (2 === tmp2.promise._40) {
+          let num2 = 0;
+          if (0 < promise2._72.length) {
+            do {
+              let tmp8 = handle(promise2, promise2._72[num2]);
+              num2 = num2 + 1;
+              length = promise2._72.length;
+            } while (num2 < length);
+          }
+          promise2._72 = null;
+        }
+      }
+    });
+  }
+}
+function resolve(_40, _55) {
+  let length;
+  let length2;
+  let length3;
+  let length4;
+  if (_55 === _40) {
+    const _TypeError = TypeError;
+    const typeError = new TypeError("A promise cannot be resolved with itself.");
+    _40._65 = 2;
+    _40._55 = typeError;
+    if (Promise._87) {
+      Promise._87(_40, typeError);
+    }
+    if (1 === _40._40) {
+      handle(_40, _40._72);
+      _40._72 = null;
+    }
+    if (2 === _40._40) {
+      let num18 = 0;
+      if (0 < _40._72.length) {
+        do {
+          let tmp35 = handle(_40, _40._72[num18]);
+          num18 = num18 + 1;
+          length4 = _40._72.length;
+        } while (num18 < length4);
+      }
+      _40._72 = null;
+    }
+  } else {
+    if (_55) {
+      if (typeof _55 === "object") {
+        const obj = (function getThen(_55) {
+          try {
+            return _55.then;
+          } catch (tmp2) {
+            closure_1 = tmp2;
+            return closure_1_2;
+          }
+        })(_55);
+        if (obj === closure_2) {
+          _40._65 = 2;
+          _40._55 = _55;
+          if (Promise._87) {
+            Promise._87(_40, tmp17);
+          }
+          if (1 === _40._40) {
+            handle(_40, _40._72);
+            _40._72 = null;
+          }
+          if (2 === _40._40) {
+            let num13 = 0;
+            if (0 < _40._72.length) {
+              do {
+                let tmp23 = handle(_40, _40._72[num13]);
+                num13 = num13 + 1;
+                length3 = _40._72.length;
+              } while (num13 < length3);
+            }
+            _40._72 = null;
+          }
+        } else {
+          if (obj === _40.then) {
+            if (_55 instanceof Promise) {
+              _40._65 = 3;
+              _40._55 = _55;
+              if (1 === _40._40) {
+                handle(_40, _40._72);
+                _40._72 = null;
+              }
+              if (2 === _40._40) {
+                let num10 = 0;
+                if (0 < _40._72.length) {
+                  do {
+                    let tmp15 = handle(_40, _40._72[num10]);
+                    num10 = num10 + 1;
+                    length2 = _40._72.length;
+                  } while (num10 < length2);
+                }
+                _40._72 = null;
+              }
+            }
+          }
+          if (typeof obj === "function") {
+            doResolve(obj.bind(_55), _40);
+          }
+        }
+      }
+    }
+    _40._65 = 1;
+    _40._55 = _55;
+    if (1 === _40._40) {
+      handle(_40, _40._72);
+      _40._72 = null;
+    }
+    if (2 === _40._40) {
+      let num6 = 0;
+      if (0 < _40._72.length) {
+        do {
+          let tmp7 = handle(_40, _40._72[num6]);
+          num6 = num6 + 1;
+          length = _40._72.length;
+        } while (num6 < length);
+      }
+      _40._72 = null;
     }
   }
-  const merged = Object.assign(arg0);
-  return { release: id, sendClientReports: true, parentSpanIsAlwaysRootSpan: true };
-};
+}
+function Handler(fn, fn2, promise) {
+  const obj = {};
+  let tmp = null;
+  if (typeof fn === "function") {
+    tmp = fn;
+  }
+  obj.onFulfilled = tmp;
+  let tmp2 = null;
+  if (typeof fn2 === "function") {
+    tmp2 = fn2;
+  }
+  obj.onRejected = tmp2;
+  obj.promise = promise;
+}
+function doResolve(arg0, _40) {
+  let length;
+  _55 = false;
+  let tmp2 = _55;
+  if (!_55) {
+    tmp2 = tmp !== closure_2;
+  }
+  if (!tmp2) {
+    _55 = true;
+    _40._65 = 2;
+    _40._55 = _55;
+    if (Promise._87) {
+      Promise._87(_40, tmp4);
+    }
+    if (1 === _40._40) {
+      handle(_40, _40._72);
+      _40._72 = null;
+    }
+    if (2 === _40._40) {
+      let num3 = 0;
+      if (0 < _40._72.length) {
+        do {
+          let tmp10 = handle(_40, _40._72[num3]);
+          num3 = num3 + 1;
+          length = _40._72.length;
+        } while (num3 < length);
+      }
+      _40._72 = null;
+    }
+  }
+}
+let c1 = null;
+let closure_2 = {};
+Promise._37 = null;
+Promise._87 = null;
+Promise._61 = noop;
+
+export default Promise;

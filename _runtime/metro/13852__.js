@@ -1,7 +1,7 @@
 // === Module 13852: ? ===
 
 // Module 13852
-import registerAsset from "module_1121" /* 1121 */;
+import _mod13843 from "module_13843" /* 13843 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/status", width: 16, height: 16, scales: [2, 3], hash: "12a800ef241b26f28e2697e2835bd1ab", name: "StatusStreaming", type: "png" });
+export default (arg0, arg1, arg2) => 0 !== _mod13843(arg0, arg1, arg2);

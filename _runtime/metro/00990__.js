@@ -1,181 +1,119 @@
 // === Module 990: ? ===
 
 // Module 990
-const require = arg1;
+import _mod878 from "module_878" /* 878 */;
+
+require = arg1;
 const dependencyMap = arg6;
-function processEvent(arg0, arg1, arg2) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  closure_2 = arg2;
-  return closure_2(this, undefined, undefined, function*() {
-    if (c4 === 2) {
-      c4 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c4 = 2;
-        if (0 === c3) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            closure_129_0 = undefined;
-            const exception = value.exception;
-            let values;
-            if (null !== exception) {
-              if (undefined !== exception) {
-                values = exception.values;
-              }
-            }
-            if (values) {
-              if (value.exception.values.length > 0) {
-                options = tmp5.getOptions();
-                const beforeScreenshot = options.beforeScreenshot;
-                if (null !== beforeScreenshot) {
-                  if (undefined !== beforeScreenshot) {
-                    const call = beforeScreenshot.call;
-                    if (typeof call === "unknown") {
-                      let beforeScreenshotResult = beforeScreenshot(tmp25, tmp2);
-                    } else {
-                      beforeScreenshotResult = call(tmp24, tmp25, tmp2);
-                    }
-                    tmp24 = options;
-                  }
-                }
-                if (false !== undefined) {
-                  const NATIVE = value(tmp2[0]).NATIVE;
-                  c3 = 1;
-                  c4 = 1;
-                  const obj4 = { value: NATIVE.captureScreenshot(), done: false };
-                  return obj4;
-                }
-              }
-            }
-            c4 = 3;
-            const obj5 = { value, done: true };
-            return obj5;
-          }
-        } else if (arg0 === 1) {
-          c4 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 3;
-          const obj6 = { value, done: true };
-          return obj6;
-        } else {
-          closure_129_0 = value;
-          let tmp7 = closure_129_0;
-          if (closure_129_0) {
-            tmp7 = closure_129_0.length > 0;
-          }
-          if (tmp7) {
-            value = 0;
-            const items = [];
-            value = HermesBuiltin.arraySpread(closure_129_0, 0);
-            let attachments;
-            if (null != closure_130_1) {
-              attachments = closure_130_1.attachments;
-            }
-            if (!attachments) {
-              attachments = [];
-            }
-            value = HermesBuiltin.arraySpread(attachments, value);
-            closure_130_1.attachments = items;
-          }
-          c4 = 3;
-          const obj = { value: closure_130_0, done: true };
-          return obj;
-        }
-      } catch (tmp31) {
-        c4 = tmp;
-        throw tmp31;
-      }
+function processEvent(tags, originalException) {
+  originalException = undefined;
+  if (null != originalException) {
+    originalException = originalException.originalException;
+  }
+  let tmp2;
+  if (originalException) {
+    let originalException1;
+    if (null != originalException) {
+      originalException1 = originalException.originalException;
     }
-  });
-}
-let fn = this;
-if (this) {
-  fn = this.__awaiter;
-}
-if (!fn) {
-  fn = (arg0, arg1, arg2, arg3) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    let _Promise = arg2;
-    closure_3 = arg3;
-    if (!arg2) {
-      _Promise = Promise;
+    tmp2 = originalException1;
+  }
+  const obj = { turbo_module: _mod878.isTurboModuleEnabled(), fabric: null, react_native_version: null, expo: null };
+  obj.fabric = _mod878.isFabricEnabled();
+  obj.react_native_version = _mod878.getReactNativeVersion();
+  obj.expo = _mod878.isExpo();
+  if (obj6.isHermesEnabled()) {
+    obj.js_engine = "hermes";
+    const hermesVersion = _mod878.getHermesVersion();
+    if (hermesVersion) {
+      obj.hermes_version = hermesVersion;
     }
-    return new _Promise((fn, arg1) => {
-      closure_0 = fn;
-      closure_1 = arg1;
-      function fulfilled(result) {
-        try {
-          step(iter.next(result));
-        } catch (tmp5) {
-          closure_1(tmp5);
+    obj.hermes_debug_info = !(function isEventWithHermesBytecodeFrames(exception) {
+      exception = exception.exception;
+      let items;
+      if (null !== exception) {
+        if (undefined !== exception) {
+          items = exception.values;
         }
       }
-      function rejected(arg0) {
-        try {
-          step(iter.throw(arg0));
-        } catch (tmp5) {
-          closure_1(tmp5);
-        }
-      }
-      let iter = rejected;
-      function step(done) {
-        if (done.done) {
-          closure_0(done.value);
-        } else {
-          let tmp1 = done.value;
-          closure_0 = tmp1;
-          if (!(tmp1 instanceof Promise)) {
-            tmp1 = new tmp((fn) => {
-              fn(value);
-            });
+      if (!items) {
+        const threads = exception.threads;
+        let values2;
+        if (null !== threads) {
+          if (undefined !== threads) {
+            values2 = threads.values;
           }
-          tmp1.then(fulfilled, iter);
         }
+        items = values2;
       }
-      let items = closure_1;
-      if (!closure_1) {
+      if (!items) {
         items = [];
       }
-      iter = iter.apply(closure_0, items);
-      const iter2 = iter.next();
-      value = iter2.value;
-      if (iter2.done) {
-        fn(value);
-      } else {
-        closure_0 = value;
-        let tmp32 = value;
-        if (!(value instanceof fulfilled)) {
-          tmp32 = new tmp3((fn) => {
-            fn(value);
-          });
+      const iter = items[Symbol.iterator]();
+      while (iter !== undefined) {
+        let stacktrace = iter.next().stacktrace;
+        let tmp2 = stacktrace;
+        let frames;
+        if (null !== stacktrace) {
+          if (undefined !== tmp2) {
+            frames = tmp2.frames;
+          }
         }
-        tmp32.then(fulfilled, rejected);
+        if (!frames) {
+          frames = [];
+        }
+        for (const item10023 of frames) {
+          if (undefined === item10023.platform) {
+            if (1 === tmp7.lineno) {
+              obj.return();
+              iter.return();
+              let flag = true;
+              return true;
+            }
+          }
+          continue;
+        }
+        continue;
       }
-    });
-  };
+      return false;
+    })(tags);
+    const tmp4Result = _mod878;
+  } else {
+    let jsEngine;
+    if (null != tmp2) {
+      jsEngine = tmp2.jsEngine;
+    }
+    if (jsEngine) {
+      obj.js_engine = tmp2.jsEngine;
+    }
+  }
+  if ("hermes" === obj.js_engine) {
+    const _Object = Object;
+    tags.tags = Object.assign({ hermes: true }, tags.tags);
+  }
+  let componentStack;
+  if (null != tmp2) {
+    componentStack = tmp2.componentStack;
+  }
+  if (componentStack) {
+    obj.component_stack = tmp2.componentStack;
+  }
+  obj6 = _mod878;
+  const expoGoVersion = _mod878.getExpoGoVersion();
+  if (expoGoVersion) {
+    obj.expo_go_version = expoGoVersion;
+  }
+  const tmp4Result3 = _mod878;
+  const expoSdkVersion = _mod878.getExpoSdkVersion();
+  if (expoSdkVersion) {
+    obj.expo_sdk_version = expoSdkVersion;
+  }
+  tags.contexts = Object.assign({ react_native_context: obj }, tags.contexts);
+  return tags;
 }
 
 export () => ({
-  name: "Screenshot",
+  name: "ReactNativeInfo",
   setupOnce() {
 
   },

@@ -1,7 +1,7 @@
 // === Module 9099: ? ===
 
 // Module 9099
-import registerAsset from "module_1121" /* 1121 */;
+import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "fbf405dd501ff5f4ce99f5ceed43f6b1", name: "ic_headset_deafened_24px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 300, height: 120, scales: [2, 3], hash: "a5f6ed280bfa7452913e665fb649bb9c", name: "img_stream_ended_darker", type: "png" });

@@ -1,23 +1,7 @@
 // === Module 6627: ? ===
 
 // Module 6627
+import registerAsset from "module_1132" /* 1132 */;
 
-export function getInvertedMultiplier(gestureDirection, arg1) {
-  if ("vertical" === gestureDirection) {
-    return 1;
-  } else if ("vertical-inverted" === gestureDirection) {
-    return -1;
-  } else if ("horizontal" === gestureDirection) {
-    let num2 = 1;
-    if (arg1) {
-      num2 = -1;
-    }
-    return num2;
-  } else if ("horizontal-inverted" === gestureDirection) {
-    let num = -1;
-    if (arg1) {
-      num = 1;
-    }
-    return num;
-  }
-}
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 30, height: 30, scales: [2, 3], hash: "b845947570ae5a0cc8ded11809e80b37", name: "ic_loading_emoji_light", type: "png" });

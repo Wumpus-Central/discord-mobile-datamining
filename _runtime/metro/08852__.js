@@ -1,7 +1,7 @@
 // === Module 8852: ? ===
 
 // Module 8852
-import registerAsset from "module_1121" /* 1121 */;
+import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 80, height: 80, scales: [2, 3], hash: "d6c65250c1813722d34dd286c312a88f", name: "img_nitro_classic_icon_white_80px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/MangaIcon", width: 60, height: 60, scales: [2, 3], hash: "c95dda79dd2256b3ff93ba5baa549fb1", name: "MangaIcon", type: "png" });

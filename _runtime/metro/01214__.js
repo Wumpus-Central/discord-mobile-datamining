@@ -1,86 +1,59 @@
 // === Module 1214: ? ===
 
 // Module 1214
-import _slicedToArray from "module_32" /* 32 */;
 
-function isEnumObject(obj) {
-  if (typeof obj === "object") {
-    if (null !== obj) {
-      if (obj.hasOwnProperty(0)) {
-        const _Object = Object;
-        const keys = Object.keys(obj);
-        for (const item10014 of keys) {
-          let _parseInt = parseInt;
-          let parsed = parseInt(item10014);
-          let tmp7 = parsed;
-          let _Number = Number;
-          if (Number.isNaN(parsed)) {
-            let tmp16 = arg0[item10014];
-            let tmp17 = tmp16;
-            if (undefined === tmp16) {
-              obj.return();
-              let flag6 = false;
-              return false;
-            } else if (typeof tmp17 !== "number") {
-              obj.return();
-              let flag5 = false;
-              return false;
-            } else if (undefined === arg0[tmp17]) {
-              obj.return();
-              let flag4 = false;
-              return false;
-            }
-          } else {
-            let tmp9 = arg0[tmp7];
-            if (undefined === tmp9) {
-              obj.return();
-              let flag3 = false;
-              return false;
-            } else if (arg0[tmp10] !== tmp7) {
-              obj.return();
-              let flag2 = false;
-              return false;
-            }
+export const isOneofGroup = function isOneofGroup(oneofKind) {
+  if (typeof oneofKind === "object") {
+    if (null !== oneofKind) {
+      if (oneofKind.hasOwnProperty("oneofKind")) {
+        if ("string" === typeof oneofKind.oneofKind) {
+          let tmp3 = undefined !== oneofKind[oneofKind.oneofKind];
+          if (tmp3) {
+            const _Object2 = Object;
+            tmp3 = 2 == Object.keys(oneofKind).length;
           }
-          continue;
+          return tmp3;
+        } else if ("undefined" === tmp) {
+          const _Object = Object;
+          return 1 == Object.keys(oneofKind).length;
+        } else {
+          return false;
         }
-        return true;
-      } else {
-        return false;
       }
     }
   }
   return false;
-}
-function listEnumValues(arg0) {
-  if (isEnumObject(arg0)) {
-    const items = [];
-    const _Object = Object;
-    const entries = Object.entries(arg0);
-    const tmp7 = entries[Symbol.iterator]();
-    while (tmp7 !== undefined) {
-      let tmp12 = _slicedToArray(tmp9, 2);
-      [tmp13, tmp14] = tmp12;
-      if (typeof tmp14 === "number") {
-        let obj = { name: tmp13, number: tmp15 };
-        let arr = items.push(obj);
-      }
-      continue;
-    }
-    return items;
-  } else {
-    const _Error = Error;
-    const error = new Error("not a typescript enum object");
-    throw error;
-  }
-}
-
-export { isEnumObject };
-export { listEnumValues };
-export const listEnumNames = function listEnumNames(arg0) {
-  return listEnumValues(arg0).map((name) => name.name);
 };
-export const listEnumNumbers = function listEnumNumbers(arg0) {
-  const mapped = listEnumValues(arg0).map((number) => number.number);
-  return mapped.filter((item, index, arr) => arr.indexOf(item) == index);
+export const getOneofValue = function getOneofValue(arg0, arg1) {
+  return arg0[arg1];
+};
+export const setOneofValue = function setOneofValue(oneofKind, oneofKind2, arg2) {
+  if (undefined !== oneofKind.oneofKind) {
+    oneofKind = oneofKind.oneofKind;
+    delete tmp2[tmp];
+  }
+  oneofKind.oneofKind = oneofKind2;
+  if (undefined !== arg2) {
+    oneofKind[oneofKind2] = arg2;
+  }
+};
+export const setUnknownOneofValue = function setUnknownOneofValue(oneofKind, oneofKind2, arg2) {
+  if (undefined !== oneofKind.oneofKind) {
+    oneofKind = oneofKind.oneofKind;
+    delete tmp2[tmp];
+  }
+  oneofKind.oneofKind = oneofKind2;
+  if (tmp3) {
+    oneofKind[oneofKind2] = arg2;
+  }
+};
+export const clearOneofValue = function clearOneofValue(oneofKind) {
+  if (undefined !== oneofKind.oneofKind) {
+    oneofKind = oneofKind.oneofKind;
+    delete tmp[tmp2];
+  }
+  oneofKind.oneofKind = undefined;
+};
+export const getSelectedOneofValue = function getSelectedOneofValue(oneofKind) {
+  return undefined !== oneofKind.oneofKind ? oneofKind[oneofKind.oneofKind] : undefined;
 };

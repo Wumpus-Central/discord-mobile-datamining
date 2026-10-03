@@ -1,46 +1,68 @@
 // === Module 4103: ? ===
 
 // Module 4103
-import module_3951_mod from "module_3951" /* 3951 */;
-import module_4104_mod from "module_4104" /* 4104 */;
-import module_4107_mod from "module_4107" /* 4107 */;
-import requiredArgs_mod from "requiredArgs" /* 3948 */;
+import _mod4104 from "module_4104" /* 4104 */;
+import module_3960_mod from "module_3960" /* 3960 */;
 
-let module_3951 = module_3951_mod;
-if (!module_3951) {
-  const obj = { default: module_3951 };
+let module_3960 = module_3960_mod;
+if (!module_3960) {
+  const obj = { default: module_3960 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_3951;
+  tmp3 = module_3960;
 }
-module_3951 = tmp3;
-let module_4104 = module_4104_mod;
-if (!module_4104) {
-  const obj2 = { default: module_4104 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4104;
-}
-module_4104 = tmp5;
-let module_4107 = module_4107_mod;
-if (!module_4107) {
-  const obj3 = { default: module_4107 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4107;
-}
-module_4107 = tmp7;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
-} else {
-  tmp9 = requiredArgs;
-}
-requiredArgs = tmp9;
+module_3960 = tmp3;
+const dependencyMap = ["\u043D\u0435\u0434\u0456\u043B\u044E", "\u043F\u043E\u043D\u0435\u0434\u0456\u043B\u043E\u043A", "\u0432\u0456\u0432\u0442\u043E\u0440\u043E\u043A", "\u0441\u0435\u0440\u0435\u0434\u0443", "\u0447\u0435\u0442\u0432\u0435\u0440", "\u043F\u2019\u044F\u0442\u043D\u0438\u0446\u044E", "\u0441\u0443\u0431\u043E\u0442\u0443"];
+let closure_4 = {
+  lastWeek: function lastWeekFormat(arg0, arg1, arg2) {
+    const toDateResult = _mod4104.toDate(arg0);
+    const uTCDay = toDateResult.getUTCDay();
+    if (module_3960.default(toDateResult, arg1, arg2)) {
+      let text = `${"'\u0443 " + tmp2} о' p`;
+    } else {
+      if (0 !== uTCDay) {
+        if (3 !== uTCDay) {
+          if (5 !== uTCDay) {
+            if (6 !== uTCDay) {
+              text = `${"'\u0443 \u043C\u0438\u043D\u0443\u043B\u0438\u0439 " + tmp2} о' p`;
+            }
+          }
+        }
+      }
+      text = `${"'\u0443 \u043C\u0438\u043D\u0443\u043B\u0443 " + tmp2} о' p`;
+    }
+    return text;
+  },
+  yesterday: "'\u0432\u0447\u043E\u0440\u0430 \u043E' p",
+  today: "'\u0441\u044C\u043E\u0433\u043E\u0434\u043D\u0456 \u043E' p",
+  tomorrow: "'\u0437\u0430\u0432\u0442\u0440\u0430 \u043E' p",
+  nextWeek: function nextWeekFormat(arg0, arg1, arg2) {
+    const toDateResult = _mod4104.toDate(arg0);
+    const uTCDay = toDateResult.getUTCDay();
+    if (module_3960.default(toDateResult, arg1, arg2)) {
+      let text = `${"'\u0443 " + tmp2} о' p`;
+    } else {
+      if (0 !== uTCDay) {
+        if (3 !== uTCDay) {
+          if (5 !== uTCDay) {
+            if (6 !== uTCDay) {
+              text = `${"'\u0443 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u0438\u0439 " + tmp2} о' p`;
+            }
+          }
+        }
+      }
+      text = `${"'\u0443 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u0443 " + tmp2} о' p`;
+    }
+    return text;
+  },
+  other: "P"
+};
 
-export default function addISOWeekYears(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  return module_4107.default(arg0, module_4104.default(arg0) + module_3951.default(arg1));
+export default function formatRelative(arg0, arg1, arg2, arg3) {
+  let tmpResult = tmp;
+  if (typeof closure_4[arg0] === "function") {
+    tmpResult = tmp(arg1, arg2, arg3);
+  }
+  return tmpResult;
 };
 export default exports.default;

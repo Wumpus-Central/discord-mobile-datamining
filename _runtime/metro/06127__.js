@@ -1,7 +1,17 @@
 // === Module 6127: ? ===
 
 // Module 6127
-import registerAsset from "module_1121" /* 1121 */;
+import _mod19 from "module_19" /* 19 */;
+import BottomSheetContext from "BottomSheetContext" /* 6123 */;
 
+const useContext = _mod19.useContext;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "24def842b7fc85d108b018aef0f23eb6", name: "ArrowLargeLeftIcon", type: "png" });
+export const useBottomSheetModalInternal = function useBottomSheetModalInternal(arg0) {
+  const tmp = useContext(BottomSheetContext.BottomSheetModalInternalContext);
+  if (true !== arg0) {
+    if (null === tmp) {
+      throw "'BottomSheetModalInternalContext' cannot be null!";
+    }
+  }
+  return tmp;
+};

@@ -1,16 +1,23 @@
 // === Module 5739: ? ===
 
 // Module 5739
-import _mod5737 from "module_5737" /* 5737 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
 
-require = arg1;
-const dependencyMap = arg6;
-const obj = { 1: "InteroperabilityIndex", 2: null, 4096: "RelatedImageFileFormat", 4097: "RelatedImageWidth", 4098: "RelatedImageHeight" };
-obj[2] = {
-  name: "InteroperabilityVersion",
-  description(value) {
-    return _mod5737.getStringValue(value);
-  }
+({ BackHandler: closure_0, Platform } = get_ActivityIndicator);
+const items = ["ios", "android"];
+
+export const isSearchBarAvailableForCurrentPlatform = items.includes("android");
+export const isHeaderBarButtonsAvailableForCurrentPlatform = false;
+export const executeNativeBackPress = function executeNativeBackPress() {
+  React.exitApp();
+  return true;
 };
-
-export default obj;
+export function parseBooleanToOptionalBooleanNativeProp(fullScreenSwipeEnabled) {
+  if (undefined === fullScreenSwipeEnabled) {
+    return "undefined";
+  } else if (true === fullScreenSwipeEnabled) {
+    return "true";
+  } else if (false === fullScreenSwipeEnabled) {
+    return "false";
+  }
+}

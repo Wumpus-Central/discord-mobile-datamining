@@ -1,7 +1,7 @@
 // === Module 8832: ? ===
 
 // Module 8832
-import registerAsset from "module_1121" /* 1121 */;
+import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/CherryBlossomIcon", width: 60, height: 60, scales: [2, 3], hash: "0958a3140b1354fdc2a2c5ce3e4f3233", name: "CherryBlossomIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/MidnightPrismIcon", width: 60, height: 60, scales: [2, 3], hash: "44efb56cf36c8202533bcbc557ebf8e5", name: "MidnightPrismIcon", type: "png" });

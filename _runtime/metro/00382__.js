@@ -29,7 +29,7 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-function flatAnimatedNodes(icon) {
+function flatAnimatedNodes(label) {
   if (items === undefined) {
     items = [];
   }
@@ -40,21 +40,21 @@ function flatAnimatedNodes(icon) {
   if (num >= 5) {
     return items;
   } else {
-    if (icon instanceof AnimatedObject(367)) {
-      items.push(icon);
+    if (label instanceof AnimatedObject(367)) {
+      items.push(label);
     } else {
       const _Array = Array;
-      if (Array.isArray(icon)) {
+      if (Array.isArray(label)) {
         for (let num7 = 0; num7 < length2; num7 = num7 + 1) {
-          let tmp12 = flatAnimatedNodes(icon[num7], items, tmp10);
+          let tmp12 = flatAnimatedNodes(label[num7], items, tmp10);
         }
-        length2 = icon.length;
+        length2 = label.length;
       } else {
         let prototypeOf;
-        if (null !== icon) {
-          if (typeof icon === "object") {
+        if (null !== label) {
+          if (typeof label === "object") {
             const _Object3 = Object;
-            prototypeOf = Object.getPrototypeOf(icon);
+            prototypeOf = Object.getPrototypeOf(label);
           }
         }
         let tmp4 = undefined !== prototypeOf;
@@ -65,15 +65,15 @@ function flatAnimatedNodes(icon) {
             isPrototypeOfResult = prototypeOf.isPrototypeOf(Object);
           }
           if (isPrototypeOfResult) {
-            isPrototypeOfResult = !isValidElement(icon);
+            isPrototypeOfResult = !isValidElement(label);
           }
           tmp4 = isPrototypeOfResult;
         }
         if (tmp4) {
           const _Object2 = Object;
-          const keys = Object.keys(icon);
+          const keys = Object.keys(label);
           for (let num4 = 0; num4 < length; num4 = num4 + 1) {
-            let tmp9 = flatAnimatedNodes(icon[keys[num4]], items, tmp7);
+            let tmp9 = flatAnimatedNodes(label[keys[num4]], items, tmp7);
           }
           length = keys.length;
         }
@@ -264,12 +264,12 @@ const entry1 = {
 const items1 = [entry1];
 
 export default _createClass(AnimatedObject, items, items1);
-export const isPlainObject = function isPlainObject(icon) {
+export const isPlainObject = function isPlainObject(label) {
   let prototypeOf;
-  if (null !== icon) {
-    if (typeof icon === "object") {
+  if (null !== label) {
+    if (typeof label === "object") {
       const _Object2 = Object;
-      prototypeOf = Object.getPrototypeOf(icon);
+      prototypeOf = Object.getPrototypeOf(label);
     }
   }
   let tmp2 = undefined !== prototypeOf;
@@ -280,7 +280,7 @@ export const isPlainObject = function isPlainObject(icon) {
       isPrototypeOfResult = prototypeOf.isPrototypeOf(Object);
     }
     if (isPrototypeOfResult) {
-      isPrototypeOfResult = !isValidElement(icon);
+      isPrototypeOfResult = !isValidElement(label);
     }
     tmp2 = isPrototypeOfResult;
   }

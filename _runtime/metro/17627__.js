@@ -1,7 +1,7 @@
 // === Module 17627: ? ===
 
 // Module 17627
-import registerAsset from "module_1121" /* 1121 */;
+import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "e34464fbaad016de0cccce358d754f22", name: "ic_overflow_android", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/verification", width: 180, height: 160, scales: [1], hash: "8bacf7b488464e86cb440cbf88ee8d5d", name: "img_verify_phone_light_theme", type: "png" });

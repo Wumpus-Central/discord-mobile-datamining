@@ -1,7 +1,7 @@
 // === Module 5852: ? ===
 
 // Module 5852
-import registerAsset from "module_1121" /* 1121 */;
+import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "269225999db4429a7f3e74da6725c7b9", name: "img_account_sync_playstation_white", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "9f19e3d7e93bc823e490a582e66b0758", name: "LockIcon", type: "png" });

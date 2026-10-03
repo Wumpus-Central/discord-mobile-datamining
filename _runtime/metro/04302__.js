@@ -1,8 +1,8 @@
 // === Module 4302: ? ===
 
 // Module 4302
-import _typeof_mod from "module_3947" /* 3947 */;
-import requiredArgs_mod from "requiredArgs" /* 3948 */;
+import _typeof_mod from "module_3958" /* 3958 */;
+import requiredArgs_mod from "requiredArgs" /* 3959 */;
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -21,10 +21,9 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isSameYear(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const fullYear = defaultResult1.getFullYear();
-  return fullYear === _typeof.default(arg1).getFullYear();
+export default function isPast(date) {
+  requiredArgs.default(1, arguments);
+  const time = _typeof.default(date).getTime();
+  return time < Date.now();
 };
 export default exports.default;

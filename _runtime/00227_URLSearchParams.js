@@ -138,7 +138,7 @@ let items = [
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else {
             while (true) {
@@ -160,7 +160,7 @@ let items = [
                   closure_1 = values[Symbol.iterator]();
                   if (closure_1 === undefined) {
                     c9 = 3;
-                    return { value: "HermesInternal", done: null };
+                    return { value: "IconComponent", done: "IconComponent" };
                   } else {
                     c8 = 1;
                     closure_133_0 = tmp14;
@@ -209,7 +209,7 @@ let items = [
     key: "entries",
     value: function entries() {
       return (function generateEntries(_searchParams) {
-        dependencyMap = _searchParams;
+        const dependencyMap = _searchParams;
         c9 = 0;
         c10 = 0;
         c8 = 0;
@@ -224,7 +224,7 @@ let items = [
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else {
             while (true) {
@@ -250,7 +250,7 @@ let items = [
                   closure_1 = dependencyMap[Symbol.iterator]();
                   if (closure_1 === undefined) {
                     c10 = 3;
-                    return { value: "HermesInternal", done: null };
+                    return { value: "IconComponent", done: "IconComponent" };
                   } else {
                     c8 = 1;
                     closure_133_0 = tmp16;

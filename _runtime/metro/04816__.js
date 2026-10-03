@@ -1,52 +1,7 @@
 // === Module 4816: ? ===
 
 // Module 4816
-import _mod19 from "module_19" /* 19 */;
-import _modDef4813 from "module_4813" /* 4813 */;
+import registerAsset from "module_1132" /* 1132 */;
 
-const useMemo = _mod19.useMemo;
 
-export const useHaptics = function useHaptics(enableVibrateFallback) {
-  closure_0 = enableVibrateFallback;
-  let prop;
-  if (enableVibrateFallback != null) {
-    prop = enableVibrateFallback.enableVibrateFallback;
-  }
-  let prop1;
-  if (enableVibrateFallback != null) {
-    prop1 = enableVibrateFallback.ignoreAndroidSystemSettings;
-  }
-  const items = [prop, prop1];
-  return useMemo(() => ({
-    trigger(arg0, arg1) {
-      const merged = Object.assign(enableVibrateFallback);
-      const merged1 = Object.assign(arg1);
-      _modDef4813.trigger(arg0, {});
-    },
-    triggerPattern(arg0, arg1) {
-      const merged = Object.assign(enableVibrateFallback);
-      const merged1 = Object.assign(arg1);
-      _modDef4813.triggerPattern(arg0, {});
-    },
-    stop() {
-      closure_1_1(4813).stop();
-    },
-    isSupported() {
-      return closure_1_1(4813).isSupported();
-    },
-    playHaptic(arg0, arg1, arg2) {
-      const merged = Object.assign(enableVibrateFallback);
-      const merged1 = Object.assign(arg2);
-      return closure_0(4817).playHaptic(arg0, arg1, {});
-    },
-    impact(arg0, arg1, arg2) {
-      const merged = Object.assign(enableVibrateFallback);
-      const merged1 = Object.assign(arg2);
-      _modDef4813.impact(arg0, arg1, {});
-    },
-    setEnabled: _modDef4813.setEnabled,
-    isEnabled: _modDef4813.isEnabled,
-    getSystemHapticStatus: _modDef4813.getSystemHapticStatus,
-    playAHAP: _modDef4813.playAHAP
-  }), items);
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "31fe21f79423d8afd3dcadd61d04938b", name: "ic_mail", type: "png" });

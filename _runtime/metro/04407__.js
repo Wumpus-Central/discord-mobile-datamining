@@ -1,14 +1,9 @@
 // === Module 4407: ? ===
 
 // Module 4407
-import module_2116 from "module_2116" /* 2116 */;
+let closure_0 = { lastWeek: "eeee 'tu\u1EA7n tr\u01B0\u1EDBc v\u00E0o l\u00FAc' p", yesterday: "'h\u00F4m qua v\u00E0o l\u00FAc' p", today: "'h\u00F4m nay v\u00E0o l\u00FAc' p", tomorrow: "'ng\u00E0y mai v\u00E0o l\u00FAc' p", nextWeek: "eeee 't\u1EDBi v\u00E0o l\u00FAc' p", other: "P" };
 
-if (!module_2116) {
-  const obj2 = { default: module_2116 };
-  let obj = obj2;
-} else {
-  obj = module_2116;
-}
-
-export default { date: obj.default({ formats: { full: "y'\u5E74'M'\u6708'd'\u65E5' EEEE", long: "y'\u5E74'M'\u6708'd'\u65E5'", medium: "yyyy-MM-dd", short: "yy-MM-dd" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "zzzz a h:mm:ss", long: "z a h:mm:ss", medium: "a h:mm:ss", short: "a h:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} {{time}}", long: "{{date}} {{time}}", medium: "{{date}} {{time}}", short: "{{date}} {{time}}" }, defaultWidth: "full" }) };
+export default function formatRelative(arg0, arg1, arg2, arg3) {
+  return closure_0[arg0];
+};
 export default exports.default;

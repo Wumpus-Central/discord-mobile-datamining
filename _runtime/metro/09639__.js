@@ -1,7 +1,7 @@
 // === Module 9639: ? ===
 
 // Module 9639
-import registerAsset from "module_1121" /* 1121 */;
+import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "b749a15e15191bd4c7ec2a36a9470ea1", name: "VoiceXIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "623eff85d27fd4ffd7a4c28c327682e8", name: "SpeedometerIcon", type: "png" });

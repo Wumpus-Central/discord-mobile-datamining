@@ -1,7 +1,7 @@
 // === Module 5420: ? ===
 
 // Module 5420
-import noop from "module_19" /* 19 */;
+import _mod5421 from "module_5421" /* 5421 */;
 
 
-export default noop.createContext(undefined);
+export default _mod5421;

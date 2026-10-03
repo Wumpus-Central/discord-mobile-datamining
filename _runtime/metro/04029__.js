@@ -1,44 +1,37 @@
 // === Module 4029: ? ===
 
 // Module 4029
-import translateSeconds from "translateSeconds" /* 4030 */;
-import module_4031 from "module_4031" /* 4031 */;
-import module_4032 from "module_4032" /* 4032 */;
-import date_mod from "module_4033" /* 4033 */;
-import date_mod from "module_4034" /* 4034 */;
+let closure_0 = { lessThanXSeconds: { one: "1\u79D2\u672A\u6E80", other: "{{count}}\u79D2\u672A\u6E80", oneWithSuffix: "\u7D041\u79D2", otherWithSuffix: "\u7D04{{count}}\u79D2" }, xSeconds: { one: "1\u79D2", other: "{{count}}\u79D2" }, halfAMinute: "30\u79D2", lessThanXMinutes: { one: "1\u5206\u672A\u6E80", other: "{{count}}\u5206\u672A\u6E80", oneWithSuffix: "\u7D041\u5206", otherWithSuffix: "\u7D04{{count}}\u5206" }, xMinutes: { one: "1\u5206", other: "{{count}}\u5206" }, aboutXHours: { one: "\u7D041\u6642\u9593", other: "\u7D04{{count}}\u6642\u9593" }, xHours: { one: "1\u6642\u9593", other: "{{count}}\u6642\u9593" }, xDays: { one: "1\u65E5", other: "{{count}}\u65E5" }, aboutXWeeks: { one: "\u7D041\u9031\u9593", other: "\u7D04{{count}}\u9031\u9593" }, xWeeks: { one: "1\u9031\u9593", other: "{{count}}\u9031\u9593" }, aboutXMonths: { one: "\u7D041\u304B\u6708", other: "\u7D04{{count}}\u304B\u6708" }, xMonths: { one: "1\u304B\u6708", other: "{{count}}\u304B\u6708" }, aboutXYears: { one: "\u7D041\u5E74", other: "\u7D04{{count}}\u5E74" }, xYears: { one: "1\u5E74", other: "{{count}}\u5E74" }, overXYears: { one: "1\u5E74\u4EE5\u4E0A", other: "{{count}}\u5E74\u4EE5\u4E0A" }, almostXYears: { one: "1\u5E74\u8FD1\u304F", other: "{{count}}\u5E74\u8FD1\u304F" } };
 
-if (!translateSeconds) {
-  const obj = { default: translateSeconds };
-  let tmp3 = obj;
-} else {
-  tmp3 = translateSeconds;
-}
-if (!module_4031) {
-  const obj2 = { default: module_4031 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4031;
-}
-if (!module_4032) {
-  const obj3 = { default: module_4032 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4032;
-}
-let date = date_mod;
-if (!date) {
-  const obj4 = { default: date };
-  let tmp9 = obj4;
-} else {
-  tmp9 = date;
-}
-let date = date_mod;
-if (!date) {
-  const obj5 = { default: date };
-  let tmp11 = obj5;
-} else {
-  tmp11 = date;
-}
-
-export default { code: "lt", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
+export default function formatDistance(arg0, arg1, arg2) {
+  let obj = arg2;
+  if (!arg2) {
+    obj = {};
+  }
+  if (typeof closure_0[arg0] === "string") {
+    if (!obj.addSuffix) {
+      return tmp2;
+    } else {
+      if (!obj.comparison) {
+        let text = `${tmp}前`;
+      }
+      text = `${tmp}後`;
+    }
+  } else {
+    if (1 !== arg1) {
+      if (obj.addSuffix) {
+        if (tmp.otherWithSuffix) {
+          const _String2 = String;
+          let replaced = tmp.otherWithSuffix.replace("{{count}}", String(arg1));
+        }
+      }
+      const _String = String;
+      replaced = tmp.other.replace("{{count}}", String(arg1));
+    }
+    if (!obj.addSuffix) {
+      const one = tmp.one;
+    }
+    const oneWithSuffix = tmp.oneWithSuffix;
+  }
+};
 export default exports.default;

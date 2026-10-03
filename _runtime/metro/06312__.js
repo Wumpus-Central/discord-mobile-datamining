@@ -1,47 +1,69 @@
 // === Module 6312: ? ===
 
 // Module 6312
-import _mod19 from "module_19" /* 19 */;
-import transformIntoHandlerTags from "transformIntoHandlerTags" /* 6290 */;
-import MountRegistry2 from "MountRegistry" /* 6293 */;
+import _mod6314 from "module_6314" /* 6314 */;
+import noop_mod from "module_19" /* 19 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-function shouldUpdateDetector(blocksHandlers, handlerTag) {
-  if (undefined === blocksHandlers) {
-    return false;
-  } else {
-    const result = transformIntoHandlerTags.transformIntoHandlerTags(blocksHandlers);
-    for (const item10012 of result) {
-      if (item10012 === arg1.handlerTag) {
-        obj2.return();
-        let flag = true;
-        return true;
-      }
-    }
-    return false;
+let noop = noop_mod;
+const useMemo = noop.useMemo;
+let noop = noop_mod;
+({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const memoResult = noop.memo(function BottomSheetHandleComponent(style) {
+  style = style.style;
+  const indicatorStyle = style.indicatorStyle;
+  let DEFAULT_ACCESSIBLE = style.accessible;
+  if (DEFAULT_ACCESSIBLE === undefined) {
+    DEFAULT_ACCESSIBLE = style(indicatorStyle[3]).DEFAULT_ACCESSIBLE;
   }
-}
-const useEffect = _mod19.useEffect;
-
-export const useMountReactions = function useMountReactions(detectorUpdater, current2) {
-  closure_0 = detectorUpdater;
-  closure_1 = current2;
-  const items = [detectorUpdater, current2];
-  useEffect(() => {
-    const MountRegistry = MountRegistry2.MountRegistry;
-    return MountRegistry.addMountListener((handlerTag) => {
-      if (current2.isMounted) {
-        const attachedGestures = current2.attachedGestures;
-        const iter = attachedGestures[Symbol.iterator]();
-        const nextResult = iter.next();
-        while (iter !== undefined) {
-          let requireToFail = nextResult.config.requireToFail;
-          let simultaneousWith = nextResult.config.simultaneousWith;
-          if (!shouldUpdateDetector(nextResult.config.blocksHandlers, handlerTag)) {
-          }
-          let tmp9 = detectorUpdater();
-          iter.return();
-        }
-      }
-    });
+  let DEFAULT_ACCESSIBILITY_ROLE = style.accessibilityRole;
+  if (DEFAULT_ACCESSIBILITY_ROLE === undefined) {
+    DEFAULT_ACCESSIBILITY_ROLE = style(indicatorStyle[3]).DEFAULT_ACCESSIBILITY_ROLE;
+  }
+  let DEFAULT_ACCESSIBILITY_LABEL = style.accessibilityLabel;
+  if (DEFAULT_ACCESSIBILITY_LABEL === undefined) {
+    DEFAULT_ACCESSIBILITY_LABEL = style(indicatorStyle[3]).DEFAULT_ACCESSIBILITY_LABEL;
+  }
+  let DEFAULT_ACCESSIBILITY_HINT = style.accessibilityHint;
+  if (DEFAULT_ACCESSIBILITY_HINT === undefined) {
+    DEFAULT_ACCESSIBILITY_HINT = style(indicatorStyle[3]).DEFAULT_ACCESSIBILITY_HINT;
+  }
+  let items = [style];
+  const items1 = [indicatorStyle];
+  const obj = {
+    style: useMemo(() => {
+      const items = [_mod6314.styles.container, React3.flatten(style)];
+      return items;
+    }, items),
+    accessible: null,
+    accessibilityRole: null,
+    accessibilityLabel: null,
+    accessibilityHint: null,
+    collapsable: true,
+    children: null
+  };
+  const tmp9 = useMemo(() => {
+    const items = [_mod6314.styles.container, React3.flatten(style)];
+    return items;
   }, items);
-};
+  obj.accessible = DEFAULT_ACCESSIBLE;
+  obj.accessibilityRole = DEFAULT_ACCESSIBILITY_ROLE;
+  obj.accessibilityLabel = DEFAULT_ACCESSIBILITY_LABEL;
+  obj.accessibilityHint = DEFAULT_ACCESSIBILITY_HINT;
+  const items2 = [
+    closure_5(closure_4, {
+      style: useMemo(() => {
+        const items = [_mod6314.styles.indicator, React3.flatten(indicatorStyle)];
+        return items;
+      }, items1)
+    }),
+    style.children
+  ];
+  obj.children = items2;
+  return closure_6(closure_4, obj);
+});
+memoResult.displayName = "BottomSheetHandle";
+
+export default memoResult;

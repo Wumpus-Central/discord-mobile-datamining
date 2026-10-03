@@ -1,164 +1,127 @@
 // === Module 1593: ? ===
 
 // Module 1593
-import extractPathFromURL from "extractPathFromURL" /* 1594 */;
+import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const require = globalThis.__r;
+const require = fn;
+const I18nManager = fn(17).I18nManager;
+const jsx = fn(21).jsx;
+const weakMap = new WeakMap();
+globalThis.REACT_NAVIGATION_DEVTOOLS = weakMap;
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ Linking: c3, Platform } = get_ActivityIndicator);
-
-export const useLinking = function useLinking(ref, enabled) {
-  _require = ref;
-  let flag = enabled.enabled;
-  if (flag === undefined) {
-    flag = true;
-  }
-  const prefixes = enabled.prefixes;
-  let filter = enabled.filter;
-  const config = enabled.config;
-  let current = enabled.getInitialURL;
-  if (current === undefined) {
-    current = function f() {
-      const items = [
-        filter.getInitialURL(),
-        new Promise((arg0) => {
-          const timerId = setTimeout(arg0, 150);
-        })
-      ];
-      return Promise.race(items);
-    };
-  }
-  let fn2 = enabled.subscribe;
-  if (fn2 === undefined) {
-    fn2 = function l(arg0) {
-      closure_0 = arg0;
-      callback = function callback(event) {
-        return closure_0(event.url);
-      };
-      closure_2 = filter.addEventListener("url", callback);
-      const removeEventListener = filter.removeEventListener;
-      let bindResult;
-      if (removeEventListener != null) {
-        bindResult = removeEventListener.bind(filter);
-      }
-      filter = bindResult;
-      return () => {
-        let remove;
-        if (closure_2 != null) {
-          remove = closure_2.remove;
-        }
-        if (remove) {
-          closure_2.remove();
-        } else if (bindResult != null) {
-          tmp2("url", callback);
-        }
-      };
-    };
-  }
-  let getStateFromPath = enabled.getStateFromPath;
-  if (getStateFromPath === undefined) {
-    getStateFromPath = require("BaseNavigationContainer").getStateFromPath;
-  }
-  let getActionFromState = enabled.getActionFromState;
-  if (getActionFromState === undefined) {
-    getActionFromState = require("BaseNavigationContainer").getActionFromState;
-  }
-  let items = [flag, require("BaseNavigationContainer").useNavigationIndependentTree()];
-  const effect = prefixes.useEffect(() => {
-
-  }, items);
-  ref = prefixes.useRef(flag);
-  prefixes.useRef(prefixes);
-  prefixes.useRef(filter);
-  prefixes.useRef(config);
-  prefixes.useRef(current);
-  prefixes.useRef(getStateFromPath);
-  closure_15 = prefixes.useRef(getActionFromState);
-  const effect1 = prefixes.useEffect(() => {
-    closure_9.current = flag;
-    closure_10.current = prefixes;
-    closure_11.current = filter;
-    closure_12.current = config;
-    closure_13.current = current;
-    closure_14.current = getStateFromPath;
-    closure_15.current = getActionFromState;
-  });
-  let callback = prefixes.useCallback((AUTO_DISMISS) => {
-    if (AUTO_DISMISS) {
-      if (!ref3.current) {
-        const extractPathFromURLResult = extractPathFromURL.extractPathFromURL(ref2.current, AUTO_DISMISS);
-        if (undefined !== extractPathFromURLResult) {
-          try {
-            return ref6.current(extractPathFromURLResult, ref4.current);
-          } catch (tmp7) {
-            const _console = console;
-            console.error(tmp7);
-          }
-        }
-      }
+export const NavigationContainer = noop.forwardRef(function NavigationContainerInner(direction, arg1) {
+  direction = direction.direction;
+  if (direction === undefined) {
+    let str = "ltr";
+    if (I18nManager.getConstants().isRTL) {
+      str = "rtl";
     }
-  }, []);
-  const items1 = [callback];
-  const items2 = [flag, callback, ref, fn2];
-  const getInitialState = prefixes.useCallback(() => {
+    direction = str;
+  }
+  let DefaultTheme = direction.theme;
+  if (DefaultTheme === undefined) {
+    DefaultTheme = linking(1594).DefaultTheme;
+  }
+  linking = direction.linking;
+  let fallback = direction.fallback;
+  if (fallback === undefined) {
+    fallback = null;
+  }
+  let merged = Object.assign(direction, Object.assign({ direction: 0, theme: 0, linking: 0, fallback: 0, documentTitle: 0 }));
+  dependencyMap = undefined;
+  let ref;
+  let tmp6 = linking;
+  if (tmp6) {
+    tmp6 = false !== linking.enabled;
+  }
+  dependencyMap = tmp6;
+  let config;
+  if (linking != null) {
+    config = linking.config;
+  }
+  if (config) {
+    linking(1493).validatePathConfig(linking.config);
+    let obj = linking(1493);
+  }
+  ref = noop.useRef(null);
+  const backButton = linking(1596).useBackButton(ref);
+  const obj2 = linking(1596);
+  const documentTitle = linking(1597).useDocumentTitle(ref, direction.documentTitle);
+  const obj3 = linking(1597);
+  const merged1 = Object.assign(linking);
+  const items = [linking];
+  const memo = noop.useMemo(() => ({ options: linking }), items);
+  const effect = noop.useEffect(() => {
     if (ref.current) {
-      const currentResult = ref5.current();
-      if (null != currentResult) {
-        if (typeof currentResult !== "string") {
-          return currentResult.then((result) => callback(result));
-        }
-      }
-      closure_0 = callback(currentResult);
-    }
-    return {
-      then(fn) {
-        if (fn) {
-          let tmp2 = fn(closure_0);
-        } else {
-          tmp2 = closure_0;
-        }
-        return Promise.resolve(tmp2);
-      },
-      catch() {
-        return obj;
-      }
-    };
-  }, items1);
-  const effect2 = prefixes.useEffect(() => fn2((arg0) => {
-    if (flag) {
-      current = ref.current;
-      if (current) {
-        const tmp4 = callback(arg0);
-      }
-      if (current) {
-        if (tmp4) {
-          const currentResult = ref3.current(tmp4, ref2.current);
-          if (undefined !== currentResult) {
-            try {
-              current.dispatch(currentResult);
-            } catch (tmp11) {
-              let message = tmp11;
-              if (typeof tmp11 === "object") {
-                message = tmp11;
-                if (null != tmp11) {
-                  message = tmp11;
-                  if ("message" in tmp11) {
-                    message = tmp11.message;
-                  }
-                }
-              }
-              const _HermesInternal = HermesInternal;
-              console.warn("An error occurred when trying to handle the link '" + tmp + "': " + message);
+      let obj = {};
+      Object.defineProperty(obj, "linking", {
+        get: () => {
+            const obj = {};
+            const merged = Object.assign(closure_1_0);
+            obj.enabled = enabled;
+            let prefixes;
+            if (closure_1_0 != null) {
+              prefixes = closure_1_0.prefixes;
             }
-          } else {
-            current.resetRoot(tmp4);
-          }
-        }
-      }
+            if (prefixes == null) {
+              prefixes = [];
+            }
+            obj.prefixes = prefixes;
+            let getStateFromPath;
+            if (closure_1_0 != null) {
+              getStateFromPath = closure_1_0.getStateFromPath;
+            }
+            if (getStateFromPath == null) {
+              getStateFromPath = linking(enabled[5]).getStateFromPath;
+            }
+            obj.getStateFromPath = getStateFromPath;
+            let getPathFromState;
+            if (closure_1_0 != null) {
+              getPathFromState = closure_1_0.getPathFromState;
+            }
+            if (getPathFromState == null) {
+              getPathFromState = linking(enabled[5]).getPathFromState;
+            }
+            obj.getPathFromState = getPathFromState;
+            let getActionFromState;
+            if (closure_1_0 != null) {
+              getActionFromState = closure_1_0.getActionFromState;
+            }
+            if (getActionFromState == null) {
+              getActionFromState = linking(enabled[5]).getActionFromState;
+            }
+            obj.getActionFromState = getActionFromState;
+            return obj;
+          },
+        set: undefined
+      });
+      const result = globalThis.REACT_NAVIGATION_DEVTOOLS.set(tmp.current, obj);
     }
-  }), items2);
-  return { getInitialState };
-};
+  });
+  const obj4 = linking(1598);
+  const obj5 = { enabled: tmp6, prefixes: [] };
+  const obj6 = linking(1600);
+  [tmp20, initialState] = ref(linking(1600).useThenable(obj4.useLinking(ref, obj5).getInitialState), 2);
+  const imperativeHandle = noop.useImperativeHandle(arg1, () => ref.current);
+  const obj7 = { value: direction, children: null };
+  if (tmp22) {
+    const obj8 = { value: memo, children: null };
+    const obj9 = {};
+    const merged2 = Object.assign(merged);
+    obj9.theme = DefaultTheme;
+    if (null != merged.initialState) {
+      initialState = merged.initialState;
+    }
+    obj9.initialState = initialState;
+    obj9.ref = ref;
+    obj8.children = jsx(tmp12(1493).BaseNavigationContainer, {});
+    obj7.children = jsx(tmp12(1590).LinkingContext.Provider, { value: memo, children: null });
+    let tmp24 = obj7;
+  } else {
+    const obj10 = { value: DefaultTheme, children: fallback };
+    obj7.children = jsx(tmp12(1493).ThemeProvider, { value: DefaultTheme, children: fallback });
+    tmp24 = obj7;
+  }
+  return jsx(linking(1601).LocaleDirContext.Provider, tmp24);
+});

@@ -1,33 +1,7 @@
 // === Module 6457: ? ===
 
 // Module 6457
-import _mod17 from "module_17" /* 17 */;
+import registerAsset from "module_1132" /* 1132 */;
 
-const Platform = _mod17.Platform;
 
-export const isNewArch = function isNewArch() {
-  if (undefined !== c1) {
-    return c1;
-  } else {
-    try {
-      let prop;
-      if (global != null) {
-        prop = global.nativeFabricUIManager;
-      }
-      let flag = Boolean(prop);
-      if (global != null) {
-        const __turboModuleProxy = global.__turboModuleProxy;
-      }
-      if (!flag) {
-        flag = Boolean(__turboModuleProxy);
-      }
-      if (!flag) {
-        flag = false;
-      }
-      c1 = flag;
-      return c1;
-    } catch (err) {
-      c1 = true;
-    }
-  }
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "14a4fdad987e2761599ba055042fdafa", name: "EyeSlashIcon", type: "png" });

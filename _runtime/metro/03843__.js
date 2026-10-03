@@ -1,7 +1,7 @@
 // === Module 3843: ? ===
 
 // Module 3843
-import registerAsset from "module_1121" /* 1121 */;
+import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/voice_channel_apps", scales: [1], hash: "3f0bebcb3d9b49b71bd5a1c0cee8f16f", name: "VoiceChannelApps.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==", scales: [1], hash: "9c20349429f8c97d7fdc8aca54783ca1", name: "ro.messages.9c20349429f8c97d7fdc8aca54783ca1.compiled.messages", type: "jsona" });

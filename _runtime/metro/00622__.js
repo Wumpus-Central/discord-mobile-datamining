@@ -1,17 +1,8 @@
 // === Module 622: ? ===
 
 // Module 622
+import _mod524 from "module_524" /* 524 */;
+import module_612 from "module_612" /* 612 */;
 
-export default function isKeyable(str) {
-  if (typeof str !== "string") {
-    if (typeof str !== "number") {
-      if (typeof str !== "symbol") {
-        if (typeof str !== "boolean") {
-          let tmp = null === str;
-        }
-        return tmp;
-      }
-    }
-  }
-  tmp = "__proto__" !== str;
-};
+
+export default module_612(_mod524, "Map");

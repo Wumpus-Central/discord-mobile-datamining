@@ -1,7 +1,8 @@
 // === Module 11023: ? ===
 
 // Module 11023
-import registerAsset from "module_1121" /* 1121 */;
+import _mod17 from "module_17" /* 17 */;
 
+const TurboModuleRegistry = _mod17.TurboModuleRegistry;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "9d92aa1c45b82a477ca0857bf43b0863", name: "PencilSparkleIcon", type: "png" });
+export const NativeDocumentPicker = TurboModuleRegistry.getEnforcing("RNDocumentPicker");

@@ -1,128 +1,159 @@
 // === Module 897: ? ===
 
 // Module 897
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop_mod from "module_895" /* 895 */;
 
-const require = globalThis.__r;
-
-Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
-
-export const makeFetchTransport = function makeFetchTransport(bufferSize) {
-  _require = bufferSize;
-  let nativeImplementation = arg1;
-  if (arg1 === undefined) {
-    nativeImplementation = require("triggerHandlers").getNativeImplementation("fetch");
-    let obj = require("triggerHandlers");
-  }
-  closure_4 = async function _makeRequest(arg0) {
-    if (c6 === 2) {
-      c6 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp8 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
+function valuePromise(_55) {
+  const tmp2 = new noop(noop._61);
+  tmp2._65 = 1;
+  tmp2._55 = _55;
+  return tmp2;
+}
+let noop = noop_mod;
+const _module6 = new noop(noop._61);
+_module6._65 = 1;
+_module6._55 = true;
+let noop = noop_mod;
+const _module11 = new noop(noop._61);
+_module11._65 = 1;
+_module11._55 = false;
+let noop = noop_mod;
+const _module21 = new noop(noop._61);
+_module21._65 = 1;
+_module21._55 = null;
+let noop = noop_mod;
+const _module31 = new noop(noop._61);
+_module31._65 = 1;
+_module31._55 = undefined;
+let noop = noop_mod;
+const _module41 = new noop(noop._61);
+_module41._65 = 1;
+_module41._55 = 0;
+let noop = noop_mod;
+const _module51 = new noop(noop._61);
+_module51._65 = 1;
+_module51._55 = "";
+noop.resolve = (self) => {
+  if (self instanceof noop) {
+    return self;
+  } else if (null === self) {
+    return _module21;
+  } else if (undefined === self) {
+    return _module31;
+  } else if (true === self) {
+    return _module6;
+  } else if (false === self) {
+    return _module11;
+  } else if (0 === self) {
+    return _module41;
+  } else if ("" === self) {
+    return _module51;
+  } else {
+    if (typeof self === "object") {
       try {
-        c6 = 2;
-        if (0 === c5) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            closure_2 = tmp4;
-            closure_129_0 = undefined;
-            closure_129_1 = undefined;
-            closure_129_0 = length;
-            closure_2 = closure_2 + length;
-            closure_3 = closure_3 + 1;
-            const request = { body: bufferSize.body, method: "POST", referrerPolicy: "strict-origin", headers: headers.headers, keepalive: null };
-            let tmp31 = closure_2 <= 60000;
-            if (tmp31) {
-              tmp31 = closure_3 < 15;
-            }
-            request.keepalive = tmp31;
-            const merged = Object.assign(tmp54.fetchOptions);
-            c4 = 2;
-            c5 = 3;
-            c6 = 1;
-            const obj5 = { value: nativeImplementation(headers.url, request), done: false };
-            return obj5;
-          }
-        } else if (1 === tmp9) {
-          c4 = 0;
-          closure_130_2 = closure_130_2 - closure_129_0;
-          closure_130_3 = closure_130_3 - 1;
-          throw closure_3;
-        } else if (2 === tmp9) {
-          c4 = 1;
-          closure_129_2 = closure_3;
-          const result = bufferSize(tmp6[1]).clearCachedImplementation("fetch");
-          throw closure_129_2;
-        } else if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 0;
-          closure_130_2 = closure_130_2 - closure_129_0;
-          closure_130_3 = closure_130_3 - 1;
-          c6 = 3;
-          const obj6 = { value, done: true };
-          return obj6;
-        } else {
-          closure_129_1 = value;
-          const response = { statusCode: closure_129_1.status, headers: null };
-          const obj7 = { "x-sentry-rate-limits": null, "retry-after": null };
-          headers = closure_129_1.headers;
-          obj7["x-sentry-rate-limits"] = headers.get("X-Sentry-Rate-Limits");
-          const headers2 = closure_129_1.headers;
-          obj7["retry-after"] = headers2.get("Retry-After");
-          response.headers = obj7;
-          c4 = 0;
-          closure_130_2 = closure_130_2 - closure_129_0;
-          closure_130_3 = closure_130_3 - 1;
-          c6 = 3;
-          const obj = { value: response, done: true };
-          return obj;
+        const then = self.then;
+        if (typeof then === "function") {
+          const tmp4Result1 = new noop(obj.bind(self));
+          return tmp4Result1;
         }
-      } catch (tmp35) {
-        closure_3 = tmp35;
-        if (tmp5 === c4) {
-          c6 = tmp3;
-          throw tmp35;
-        } else if (tmp2 === tmp37) {
-          c5 = tmp2;
-        } else {
-          c5 = tmp;
-        }
+        obj = then;
+      } catch (tmp14) {
+        const require = tmp14;
+        const tmp17 = new tmp2(tmp[0])((arg0, fn) => {
+          fn(closure_0);
+        });
+        return tmp17;
       }
     }
-  };
-  c2 = 0;
-  c3 = 0;
-  let obj2 = require("module_682");
-  let num = bufferSize.bufferSize;
-  if (!num) {
-    num = 40;
+    return valuePromise(self);
   }
-  function makeRequest(arg0) {
-    const self = this;
-    const apply = closure_4.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
-  }
-  return obj2.createTransport(bufferSize, makeRequest, require("module_682").makePromiseBuffer(num));
 };
+noop.all = (arg0) => {
+  const call = slice.call;
+  _require = typeof call === "unknown" ? slice() : call(arg0);
+  return new require("module_895")((fn, arg1) => {
+    closure_0 = fn;
+    closure_1 = arg1;
+    function res(arg0, _65) {
+      closure_0 = arg0;
+      if (_65) {
+        if (typeof _65 === "object") {
+          if (_65 instanceof closure_0(dependencyMap[0])) {
+            if (_65.then === tmp(dependencyMap[0]).prototype.then) {
+              let tmp13 = _65;
+              let promise2 = _65;
+              if (3 === _65._65) {
+                do {
+                  let _55 = tmp13._55;
+                  tmp13 = _55;
+                  promise2 = _55;
+                  _65 = _55._65;
+                } while (3 === _65);
+              }
+              if (1 === promise2._65) {
+                const tmp18 = res(arg0, promise2._55);
+              } else {
+                if (2 === promise2._65) {
+                  closure_1(promise2._55);
+                }
+                promise2.then((result) => {
+                  res(closure_0, result);
+                }, closure_1);
+              }
+              return tmp18;
+            }
+          }
+          const then = _65.then;
+          if (typeof then === "function") {
+            const tmpResult1 = new tmp(dependencyMap[0])(then.bind(_65));
+            tmpResult1.then((result) => {
+              res(closure_0, result);
+            }, closure_1);
+            const tmpResult = tmp(dependencyMap[0]);
+          }
+        }
+      }
+      closure_0[arg0] = _65;
+      const diff = length - 1;
+      if (0 == diff) {
+        closure_0(tmp3);
+      }
+      length = diff;
+    }
+    if (0 === closure_0.length) {
+      return fn([]);
+    } else {
+      let length = arr.length;
+      let num2 = 0;
+      if (0 < arr.length) {
+        do {
+          let resResult = res(num2, closure_0[num2]);
+          num2 = num2 + 1;
+          length = closure_0.length;
+        } while (num2 < length);
+      }
+    }
+  });
+};
+noop.reject = (arg0) => {
+  closure_0 = arg0;
+  return new noop((arg0, fn) => {
+    fn(closure_0);
+  });
+};
+noop.race = (arg0) => {
+  _require = arg0;
+  return new require("module_895")((arg0, arg1) => {
+    closure_0 = arg0;
+    closure_1 = arg1;
+    const item = closure_0.forEach((item) => {
+      const obj = closure_0(dependencyMap[0]);
+      closure_0(dependencyMap[0]).resolve(item).then(closure_0, closure_1);
+    });
+  });
+};
+noop.prototype.catch = function(arg0) {
+  return this.then(null, arg0);
+};
+
+export default noop;

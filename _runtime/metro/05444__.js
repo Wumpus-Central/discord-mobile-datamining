@@ -1,11 +1,7 @@
 // === Module 5444: ? ===
 
 // Module 5444
-import _mod17 from "module_17" /* 17 */;
-import module_65 from "module_65" /* 65 */;
+import registerAsset from "module_1132" /* 1132 */;
 
-const codegenNativeComponent = _mod17.codegenNativeComponent;
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSFullWindowOverlay", validAttributes: { accessibilityContainerViewIsModal: true } };
 
-export default module_65.get("RNSFullWindowOverlay", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "e9fce92f06bbfad622591815c7f5f9ac", name: "img_account_sync_twitch_white", type: "png" });

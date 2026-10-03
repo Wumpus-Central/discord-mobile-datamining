@@ -1,5 +1,7 @@
 // === Module 7961: ? ===
 
 // Module 7961
+import registerAsset from "module_1132" /* 1132 */;
 
-export default { SRT: "application/x-subrip", TTML: "application/ttml+xml", VTT: "text/vtt" };
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/media_viewer/native/images", width: 16, height: 16, scales: [2, 3], hash: "4d6296c901620eb3ce6d9e0093bbc96e", name: "scrubber", type: "png" });

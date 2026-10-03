@@ -1,229 +1,199 @@
 // === Module 1062: ? ===
 
 // Module 1062
-import c2 from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
+import debugSymbolicatorIntegration from "debugSymbolicatorIntegration" /* 687 */;
+import _mod878 from "module_878" /* 878 */;
+import feedbackAsyncIntegration from "feedbackAsyncIntegration" /* 900 */;
+import reactNativeTracingIntegration from "reactNativeTracingIntegration" /* 1063 */;
 
-let ScreenshotButtonManager = arg1;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-function NOOP_SET_VISIBILITY() {
+require = arg1;
+const dependencyMap = arg6;
 
-}
-class FeedbackManager {
-  constructor() {
-    tmp = closure_4(this, ScreenshotButtonManager);
-    return;
-  }
-}
-ScreenshotButtonManager = FeedbackManager;
-const items = [
-  {
-    key: "_feedbackComponentName",
-    get() {
-      const error = new Error("Subclasses must override feedbackComponentName");
-      throw error;
-    }
-  },
-  {
-    key: "initialize",
-    value: function initialize(_setVisibility) {
-      this._setVisibility = _setVisibility;
-    }
-  },
-  {
-    key: "reset",
-    value: function reset() {
-
-    }
-  },
-  {
-    key: "show",
-    value: function show() {
-      const self = this;
-      if (this._setVisibility !== NOOP_SET_VISIBILITY) {
-        self._isVisible = true;
-        self._setVisibility(true);
-      } else {
-        const _console = console;
-        const _HermesInternal = HermesInternal;
-        console.warn("[Sentry] " + self._feedbackComponentName + " requires 'Sentry.wrap(RootComponent)' to be called before 'show" + self._feedbackComponentName + "()'.");
-      }
-    }
-  },
-  {
-    key: "hide",
-    value: function hide() {
-      const self = this;
-      if (this._setVisibility !== NOOP_SET_VISIBILITY) {
-        self._isVisible = false;
-        self._setVisibility(false);
-      } else {
-        const _console = console;
-        const _HermesInternal = HermesInternal;
-        console.warn("[Sentry] " + self._feedbackComponentName + " requires 'Sentry.wrap(RootComponent)' before interacting with the widget.");
-      }
-    }
-  },
-  {
-    key: "isFormVisible",
-    value: function isFormVisible() {
-      return this._isVisible;
-    }
-  }
-];
-const importDefaultResult1Result = _createClass(FeedbackManager, null, items);
-importDefaultResult1Result._isVisible = false;
-class FeedbackWidgetManager {
-  constructor() {
-    self = this;
-    tmp = closure_4(this, ScreenshotButtonManager);
-    tmp2 = closure_3;
-    obj = closure_3(ScreenshotButtonManager);
-    tmp3 = c2;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
-}
-ScreenshotButtonManager = FeedbackWidgetManager;
-_inherits(FeedbackWidgetManager, importDefaultResult1Result);
-const items1 = [
-  {
-    key: "_feedbackComponentName",
-    get() {
-      return "FeedbackWidget";
-    }
-  }
-];
-const importDefaultResult1Result1 = _createClass(FeedbackWidgetManager, null, items1);
-class FeedbackButtonManager {
-  constructor() {
-    self = this;
-    tmp = closure_4(this, ScreenshotButtonManager);
-    tmp2 = closure_3;
-    obj = closure_3(ScreenshotButtonManager);
-    tmp3 = c2;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
-}
-ScreenshotButtonManager = FeedbackButtonManager;
-_inherits(FeedbackButtonManager, importDefaultResult1Result);
-const items2 = [
-  {
-    key: "_feedbackComponentName",
-    get() {
-      return "FeedbackButton";
-    }
-  }
-];
-const importDefaultResult1Result2 = _createClass(FeedbackButtonManager, null, items2);
-class ScreenshotButtonManager {
-  constructor() {
-    self = this;
-    tmp = closure_4(this, ScreenshotButtonManager);
-    tmp2 = closure_3;
-    obj = closure_3(ScreenshotButtonManager);
-    tmp3 = c2;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
-}
-_inherits(ScreenshotButtonManager, importDefaultResult1Result);
-const items3 = [
-  {
-    key: "_feedbackComponentName",
-    get() {
-      return "ScreenshotButton";
-    }
-  }
-];
-const importDefaultResult1Result3 = _createClass(ScreenshotButtonManager, null, items3);
-
-export const PULL_DOWN_CLOSE_THRESHOLD = 200;
-export const SLIDE_ANIMATION_DURATION = 200;
-export const BACKGROUND_ANIMATION_DURATION = 200;
-export const FeedbackWidgetManager = importDefaultResult1Result1;
-export const FeedbackButtonManager = importDefaultResult1Result2;
-export const ScreenshotButtonManager = importDefaultResult1Result3;
-export const showFeedbackButton = () => {
-  const result = ScreenshotButtonManager(1063).lazyLoadAutoInjectFeedbackButtonIntegration();
-  importDefaultResult1Result2.show();
-};
-export const hideFeedbackButton = () => {
-  importDefaultResult1Result2.hide();
-};
-export const showFeedbackWidget = () => {
-  const result = ScreenshotButtonManager(1063).lazyLoadAutoInjectFeedbackIntegration();
-  importDefaultResult1Result1.show();
-};
-export const showScreenshotButton = () => {
-  if (obj.isWeb()) {
-    const debug = ScreenshotButtonManager(682).debug;
-    debug.warn("ScreenshotButton is not supported on Web.");
+export const getDefaultIntegrations = function getDefaultIntegrations(patchGlobalPromise) {
+  const items = [];
+  const push = items.push;
+  const obj2 = debugSymbolicatorIntegration;
+  if (notWebResult) {
+    const obj3 = { patchGlobalPromise: patchGlobalPromise.patchGlobalPromise };
+    push(obj2.reactNativeErrorHandlersIntegration(obj3));
+    items.push(debugSymbolicatorIntegration.nativeLinkedErrorsIntegration());
+    const tmpResult = debugSymbolicatorIntegration;
   } else {
-    const result = ScreenshotButtonManager(1063).lazyLoadAutoInjectScreenshotButtonIntegration();
-    importDefaultResult1Result3.show();
-    const tmpResult = ScreenshotButtonManager(1063);
+    push(obj2.browserApiErrorsIntegration());
+    items.push(debugSymbolicatorIntegration.browserGlobalHandlersIntegration());
+    const tmpResult34 = debugSymbolicatorIntegration;
+    items.push(debugSymbolicatorIntegration.browserLinkedErrorsIntegration());
+    if (patchGlobalPromise.enableAutoSessionTracking) {
+      items.push(feedbackAsyncIntegration.browserSessionIntegration());
+      const tmpResult36 = feedbackAsyncIntegration;
+    }
+    const tmpResult35 = debugSymbolicatorIntegration;
   }
-  obj = ScreenshotButtonManager(867);
-};
-export const hideScreenshotButton = () => {
-  importDefaultResult1Result3.hide();
-};
-export const resetFeedbackButtonManager = () => {
-  importDefaultResult1Result2.reset();
-};
-export const resetFeedbackWidgetManager = () => {
-  importDefaultResult1Result1.reset();
-};
-export const resetScreenshotButtonManager = () => {
-  importDefaultResult1Result3.reset();
+  notWebResult = _mod878.notWeb();
+  items.push(debugSymbolicatorIntegration.inboundFiltersIntegration());
+  const tmpResult37 = debugSymbolicatorIntegration;
+  items.push(debugSymbolicatorIntegration.functionToStringIntegration());
+  const tmpResult38 = debugSymbolicatorIntegration;
+  items.push(debugSymbolicatorIntegration.breadcrumbsIntegration());
+  const tmpResult39 = debugSymbolicatorIntegration;
+  items.push(debugSymbolicatorIntegration.dedupeIntegration());
+  const tmpResult40 = debugSymbolicatorIntegration;
+  items.push(debugSymbolicatorIntegration.httpContextIntegration());
+  const tmpResult41 = debugSymbolicatorIntegration;
+  items.push(debugSymbolicatorIntegration.nativeReleaseIntegration());
+  const tmpResult42 = debugSymbolicatorIntegration;
+  items.push(debugSymbolicatorIntegration.eventOriginIntegration());
+  const tmpResult43 = debugSymbolicatorIntegration;
+  items.push(debugSymbolicatorIntegration.sdkInfoIntegration());
+  const tmpResult44 = debugSymbolicatorIntegration;
+  items.push(debugSymbolicatorIntegration.reactNativeInfoIntegration());
+  const tmpResult45 = debugSymbolicatorIntegration;
+  items.push(debugSymbolicatorIntegration.createReactNativeRewriteFrames());
+  if (patchGlobalPromise.enableNative) {
+    items.push(debugSymbolicatorIntegration.deviceContextIntegration());
+    const tmpResult47 = debugSymbolicatorIntegration;
+    items.push(debugSymbolicatorIntegration.modulesLoaderIntegration());
+    let enableLogs = patchGlobalPromise.enableLogs;
+    if (enableLogs) {
+      enableLogs = "native" !== patchGlobalPromise.logsOrigin;
+    }
+    if (enableLogs) {
+      items.push(debugSymbolicatorIntegration.logEnricherIntegration());
+      const tmpResult49 = debugSymbolicatorIntegration;
+      items.push(feedbackAsyncIntegration.consoleLoggingIntegration());
+      const tmpResult50 = feedbackAsyncIntegration;
+    }
+    if (patchGlobalPromise.attachScreenshot) {
+      items.push(debugSymbolicatorIntegration.screenshotIntegration());
+      const tmpResult51 = debugSymbolicatorIntegration;
+    }
+    if (patchGlobalPromise.attachViewHierarchy) {
+      items.push(debugSymbolicatorIntegration.viewHierarchyIntegration());
+      const tmpResult52 = debugSymbolicatorIntegration;
+    }
+    if (typeof patchGlobalPromise.profilesSampleRate === "number") {
+      items.push(debugSymbolicatorIntegration.hermesProfilingIntegration());
+      const tmpResult53 = debugSymbolicatorIntegration;
+    }
+    const tmpResult48 = debugSymbolicatorIntegration;
+  }
+  const tracesSampleRate = patchGlobalPromise.tracesSampleRate;
+  let tmp26 = typeof tracesSampleRate === "number";
+  if (typeof tracesSampleRate !== "number") {
+    tmp26 = typeof patchGlobalPromise.tracesSampler === "function";
+  }
+  let enableNative = tmp26;
+  if (tmp26) {
+    enableNative = patchGlobalPromise.enableAppStartTracking;
+  }
+  if (enableNative) {
+    enableNative = patchGlobalPromise.enableNative;
+  }
+  if (enableNative) {
+    items.push(debugSymbolicatorIntegration.appStartIntegration());
+    const tmpResult54 = debugSymbolicatorIntegration;
+  }
+  const tmpResult46 = debugSymbolicatorIntegration;
+  let enableNative2 = tmp26;
+  if (tmp26) {
+    enableNative2 = patchGlobalPromise.enableNativeFramesTracking;
+  }
+  if (enableNative2) {
+    enableNative2 = patchGlobalPromise.enableNative;
+  }
+  const nativeFramesIntegrations = debugSymbolicatorIntegration.createNativeFramesIntegrations(enableNative2);
+  if (nativeFramesIntegrations) {
+    items.push(nativeFramesIntegrations);
+  }
+  let enableStallTracking = tmp26;
+  if (tmp26) {
+    enableStallTracking = patchGlobalPromise.enableStallTracking;
+  }
+  if (enableStallTracking) {
+    items.push(debugSymbolicatorIntegration.stallTrackingIntegration());
+    const tmpResult56 = debugSymbolicatorIntegration;
+  }
+  let enableUserInteractionTracing = tmp26;
+  if (tmp26) {
+    enableUserInteractionTracing = patchGlobalPromise.enableUserInteractionTracing;
+  }
+  if (enableUserInteractionTracing) {
+    items.push(debugSymbolicatorIntegration.userInteractionIntegration());
+    const tmpResult57 = debugSymbolicatorIntegration;
+  }
+  let enableAutoPerformanceTracing = tmp26;
+  if (tmp26) {
+    enableAutoPerformanceTracing = patchGlobalPromise.enableAutoPerformanceTracing;
+  }
+  if (enableAutoPerformanceTracing) {
+    items.push(debugSymbolicatorIntegration.appRegistryIntegration());
+    const tmpResult58 = debugSymbolicatorIntegration;
+    items.push(reactNativeTracingIntegration.reactNativeTracingIntegration());
+    const tmpResult59 = reactNativeTracingIntegration;
+  }
+  if (tmp26) {
+    items.push(debugSymbolicatorIntegration.timeToDisplayIntegration());
+    const tmpResult60 = debugSymbolicatorIntegration;
+  }
+  if (patchGlobalPromise.enableCaptureFailedRequests) {
+    items.push(debugSymbolicatorIntegration.httpClientIntegration());
+    const tmpResult61 = debugSymbolicatorIntegration;
+  }
+  const tmpResult55 = debugSymbolicatorIntegration;
+  items.push(debugSymbolicatorIntegration.expoContextIntegration());
+  if (patchGlobalPromise.spotlight) {
+    let spotlight;
+    if (typeof patchGlobalPromise.spotlight === "string") {
+      spotlight = patchGlobalPromise.spotlight;
+    }
+    const obj4 = { sidecarUrl: spotlight };
+    items.push(debugSymbolicatorIntegration.spotlightIntegration(obj4));
+    const tmpResult63 = debugSymbolicatorIntegration;
+  }
+  const replaysOnErrorSampleRate = patchGlobalPromise.replaysOnErrorSampleRate;
+  let notWebResult1 = typeof replaysOnErrorSampleRate === "number";
+  if (typeof replaysOnErrorSampleRate !== "number") {
+    notWebResult1 = typeof patchGlobalPromise.replaysSessionSampleRate === "number";
+  }
+  let tmp40 = patchGlobalPromise._experiments && typeof patchGlobalPromise._experiments.replaysOnErrorSampleRate === "number";
+  if (!tmp40) {
+    tmp40 = patchGlobalPromise._experiments && typeof patchGlobalPromise._experiments.replaysSessionSampleRate === "number";
+    const tmp41 = patchGlobalPromise._experiments && typeof patchGlobalPromise._experiments.replaysSessionSampleRate === "number";
+  }
+  let tmp42 = !notWebResult1;
+  if (!notWebResult1) {
+    tmp42 = tmp40;
+  }
+  if (tmp42) {
+    const _experiments = patchGlobalPromise._experiments;
+    let prop;
+    if (null !== _experiments) {
+      if (undefined !== _experiments) {
+        prop = _experiments.replaysOnErrorSampleRate;
+      }
+    }
+    patchGlobalPromise.replaysOnErrorSampleRate = prop;
+    const _experiments2 = patchGlobalPromise._experiments;
+    let prop1;
+    if (null !== _experiments2) {
+      if (undefined !== _experiments2) {
+        prop1 = _experiments2.replaysSessionSampleRate;
+      }
+    }
+    patchGlobalPromise.replaysSessionSampleRate = prop1;
+  }
+  if (!notWebResult1) {
+    notWebResult1 = tmp40;
+  }
+  if (notWebResult1) {
+    notWebResult1 = _mod878.notWeb();
+    const tmpResult64 = _mod878;
+  }
+  if (notWebResult1) {
+    items.push(debugSymbolicatorIntegration.mobileReplayIntegration());
+    const tmpResult65 = debugSymbolicatorIntegration;
+  }
+  const tmpResult62 = debugSymbolicatorIntegration;
+  items.push(debugSymbolicatorIntegration.primitiveTagIntegration());
+  return items;
 };

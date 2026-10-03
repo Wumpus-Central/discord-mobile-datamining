@@ -1,7 +1,7 @@
 // === Module 5531: ? ===
 
 // Module 5531
-import registerAsset from "module_1121" /* 1121 */;
+import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "38f7d2f2d427a5f45efdf121101c72d6", name: "VoiceLockIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "e0fcff705b60ad228f8934b127b63657", name: "img_account_sync_paypal_light_and_dark", type: "png" });

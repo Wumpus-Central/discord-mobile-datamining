@@ -1,12 +1,7 @@
 // === Module 13399: ? ===
 
 // Module 13399
-import _mod13413 from "module_13413" /* 13413 */;
-import assign from "module_13400" /* 13400 */;
-import Deflate from "Deflate" /* 13401 */;
-import Inflate from "Inflate" /* 13409 */;
+import registerAsset from "module_1132" /* 1132 */;
 
-const obj = {};
-assign.assign(obj, Deflate, Inflate, _mod13413);
 
-export default obj;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_boosting/native/images", width: 18, height: 15, scales: [2, 3], hash: "dc018ce302b0357451a31422d7180d84", name: "sparkle_star_pointed", type: "png" });

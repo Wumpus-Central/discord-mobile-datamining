@@ -1,0 +1,148 @@
+// === Module 1019: ? ===
+
+// Module 1019
+import _mod693 from "module_693" /* 693 */;
+
+require = arg1;
+const dependencyMap = arg6;
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+let obj = {
+  attachReduxState: true,
+  actionTransformer(arg0) {
+    return arg0;
+  },
+  stateTransformer(arg0) {
+    let tmp = arg0;
+    if (!arg0) {
+      tmp = null;
+    }
+    return tmp;
+  }
+};
+
+export const createReduxEnhancer = function createReduxEnhancer(arg0) {
+  obj = {};
+  const merged = Object.assign(obj);
+  const merged1 = Object.assign(arg0);
+  return (arg0) => {
+    closure_0 = arg0;
+    return (arg0, arg1) => {
+      if (obj.attachReduxState) {
+        obj = _mod693;
+        const globalScope = obj.getGlobalScope();
+        globalScope.addEventProcessor((type, attachments) => {
+          try {
+            let tmp = undefined === type.type;
+            if (tmp) {
+              tmp = "redux" === type.contexts.state.state.type;
+            }
+            if (tmp) {
+              attachments = attachments.attachments;
+              if (!attachments) {
+                attachments = [];
+              }
+              const items = [];
+              obj = { filename: "redux_state.json", data: null };
+              const _JSON = JSON;
+              obj.data = JSON.stringify(type.contexts.state.state.value);
+              items[HermesBuiltin.arraySpread(attachments, 0)] = obj;
+              attachments.attachments = items;
+              const arraySpreadResult = HermesBuiltin.arraySpread(attachments, 0);
+            }
+            return type;
+          } catch (err) {
+          }
+        });
+      }
+      closure_0 = arg0;
+      const tmp4 = closure_0((arg0, arg1) => {
+        const tmp = closure_0(arg0, arg1);
+        const currentScope = closure_0(dependencyMap[0]).getCurrentScope();
+        const actionTransformerResult = closure_0.actionTransformer(arg1);
+        if (null != actionTransformerResult) {
+          const obj2 = { category: "redux.action", data: actionTransformerResult, type: "info" };
+          closure_0(dependencyMap[0]).addBreadcrumb(obj2);
+          const tmp2Result = closure_0(dependencyMap[0]);
+        }
+        const stateTransformerResult = closure_0.stateTransformer(tmp);
+        if (null != stateTransformerResult) {
+          const client = closure_0(dependencyMap[0]).getClient();
+          options = undefined;
+          if (client != null) {
+            options = client.getOptions();
+          }
+          let num;
+          if (options != null) {
+            num = options.normalizeDepth;
+          }
+          if (!num) {
+            num = 3;
+          }
+          const obj4 = { state: null };
+          const obj5 = { type: "redux", value: stateTransformerResult };
+          obj4.state = obj5;
+          const tmp2Result3 = closure_0(dependencyMap[0]);
+          const result = closure_0(dependencyMap[0]).addNonEnumerableProperty(obj4, "__sentry_override_normalization_depth__", 3 + num);
+          currentScope.setContext("state", obj4);
+          const tmp2Result4 = closure_0(dependencyMap[0]);
+        } else {
+          currentScope.setContext("state", null);
+        }
+        const configureScopeWithState = closure_0.configureScopeWithState;
+        if (typeof configureScopeWithState === "function") {
+          const result1 = configureScopeWithState(currentScope, tmp);
+        }
+        return tmp;
+      }, arg1);
+      const proxy = new Proxy(tmp4.replaceReducer, {
+        apply(apply, arg1, arg2) {
+          closure_0 = arg2[0];
+          const items = [
+            (arg0, arg1) => {
+              const tmp = closure_0(arg0, arg1);
+              const currentScope = closure_0(dependencyMap[0]).getCurrentScope();
+              const actionTransformerResult = closure_0.actionTransformer(arg1);
+              if (null != actionTransformerResult) {
+                const obj2 = { category: "redux.action", data: actionTransformerResult, type: "info" };
+                closure_0(dependencyMap[0]).addBreadcrumb(obj2);
+                const tmp2Result = closure_0(dependencyMap[0]);
+              }
+              const stateTransformerResult = closure_0.stateTransformer(tmp);
+              if (null != stateTransformerResult) {
+                const client = closure_0(dependencyMap[0]).getClient();
+                options = undefined;
+                if (client != null) {
+                  options = client.getOptions();
+                }
+                let num;
+                if (options != null) {
+                  num = options.normalizeDepth;
+                }
+                if (!num) {
+                  num = 3;
+                }
+                const obj4 = { state: null };
+                const obj5 = { type: "redux", value: stateTransformerResult };
+                obj4.state = obj5;
+                const tmp2Result3 = closure_0(dependencyMap[0]);
+                const result = closure_0(dependencyMap[0]).addNonEnumerableProperty(obj4, "__sentry_override_normalization_depth__", 3 + num);
+                currentScope.setContext("state", obj4);
+                const tmp2Result4 = closure_0(dependencyMap[0]);
+              } else {
+                currentScope.setContext("state", null);
+              }
+              const configureScopeWithState = closure_0.configureScopeWithState;
+              if (typeof configureScopeWithState === "function") {
+                const result1 = configureScopeWithState(currentScope, tmp);
+              }
+              return tmp;
+            }
+          ];
+          apply.apply(arg1, items);
+        }
+      });
+      tmp4.replaceReducer = proxy;
+      return tmp4;
+    };
+  };
+};

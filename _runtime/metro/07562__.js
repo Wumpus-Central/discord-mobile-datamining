@@ -1,7 +1,18 @@
 // === Module 7562: ? ===
 
 // Module 7562
-import registerAsset from "module_1121" /* 1121 */;
+import noop from "module_19" /* 19 */;
 
+let context = noop.createContext(undefined);
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 16, height: 16, scales: [1, 2, 3], hash: "a340f3b58cfcad04aa087b4d005eb5bd", name: "ic_archived_thread_embed_16px", type: "png" });
+export const AnimatedHeaderHeightContext = context;
+export const useAnimatedHeaderHeight = function useAnimatedHeaderHeight() {
+  context = noop.useContext(context);
+  if (undefined === context) {
+    const _Error = Error;
+    const error = new Error("Couldn't find the header height. Are you inside a screen in a native stack navigator?");
+    throw error;
+  } else {
+    return context;
+  }
+};

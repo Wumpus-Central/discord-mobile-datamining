@@ -1,0 +1,95 @@
+// === Module 788: aggregateExceptionsFromError ===
+
+// Module 788 (aggregateExceptionsFromError)
+import _mod703 from "module_703" /* 703 */;
+
+require = arg1;
+let dependencyMap = arg6;
+function aggregateExceptionsFromError(fn, arg1, arg2, errors, source, arg5, mechanism, exception_id) {
+  _require = fn;
+  dependencyMap = arg1;
+  aggregateExceptionsFromError = arg2;
+  closure_3 = source;
+  if (arg5.length >= arg2 + 1) {
+    return arg5;
+  } else {
+    let items = [];
+    HermesBuiltin.arraySpread(arg5, 0);
+    length = items;
+    const _Error = Error;
+    if (obj3.isInstanceOf(errors[source], Error)) {
+      let obj = { handled: true, type: "auto.core.linked_errors" };
+      let merged = Object.assign(mechanism.mechanism);
+      const tmp3 = "AggregateError" === mechanism.type && { is_exception_group: true };
+      let merged1 = Object.assign(tmp3);
+      obj.exception_id = exception_id;
+      mechanism.mechanism = obj;
+      const tmp7 = fn(arg1, errors[source]);
+      length = length.length;
+      let obj2 = { handled: true };
+      let merged2 = Object.assign(tmp7.mechanism);
+      obj2.type = "chained";
+      obj2.source = source;
+      obj2.exception_id = length;
+      obj2.parent_id = exception_id;
+      tmp7.mechanism = obj2;
+      const items1 = [tmp7];
+      HermesBuiltin.arraySpread(length, 1);
+      length = aggregateExceptionsFromError(fn, arg1, arg2, errors[source], source, items1, tmp7, length);
+    }
+    const _Array = Array;
+    if (Array.isArray(errors.errors)) {
+      errors = errors.errors;
+      const item = errors.forEach((item, index) => {
+        if (obj.isInstanceOf(item, Error)) {
+          const obj2 = { handled: true, type: "auto.core.linked_errors" };
+          const merged = Object.assign(mechanism.mechanism);
+          const tmp5 = "AggregateError" === mechanism.type && { is_exception_group: true };
+          const merged1 = Object.assign(tmp5);
+          obj2.exception_id = exception_id;
+          mechanism.mechanism = obj2;
+          const tmp12 = closure_0(closure_1, item);
+          length = length.length;
+          const _HermesInternal = HermesInternal;
+          const obj3 = { handled: true };
+          const combined = "errors[" + index + "]";
+          const merged2 = Object.assign(tmp12.mechanism);
+          obj3.type = "chained";
+          obj3.source = combined;
+          obj3.exception_id = length;
+          obj3.parent_id = exception_id;
+          tmp12.mechanism = obj3;
+          const items = [tmp12];
+          HermesBuiltin.arraySpread(length, 1);
+          length = aggregateExceptionsFromError(closure_0, closure_1, closure_2, item, closure_3, items, tmp12, length);
+        }
+        obj = _mod703;
+      });
+    }
+    return length;
+  }
+}
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+
+export const applyAggregateErrorsToEvent = function applyAggregateErrorsToEvent(exceptionFromError, stackParser, arg2, arg3, exception, originalException) {
+  exception = exception.exception;
+  let values;
+  if (exception != null) {
+    values = exception.values;
+  }
+  if (values) {
+    if (originalException) {
+      const _Error = Error;
+      if (obj.isInstanceOf(originalException.originalException, Error)) {
+        let tmp6;
+        if (exception.exception.values.length > 0) {
+          tmp6 = exception.exception.values[exception.exception.values.length - 1];
+        }
+        if (tmp6) {
+          exception.exception.values = aggregateExceptionsFromError(exceptionFromError, stackParser, arg3, originalException.originalException, arg2, exception.exception.values, tmp6, 0);
+        }
+      }
+      obj = _mod703;
+    }
+  }
+};

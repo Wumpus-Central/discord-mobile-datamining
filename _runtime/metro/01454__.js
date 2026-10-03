@@ -1,86 +1,57 @@
 // === Module 1454: ? ===
 
 // Module 1454
-import _mod1455 from "module_1455" /* 1455 */;
+import _mod1294 from "module_1294" /* 1294 */;
+import _mod1325 from "module_1325" /* 1325 */;
+import callBoundIntrinsic from "callBoundIntrinsic" /* 1326 */;
 
-
-export default function forEach(str, call, arg2) {
-  if (_mod1455(call)) {
-    call = toString.call;
-    if ("[object Array]" === (typeof call === "unknown" ? toString() : call(str))) {
-      let num4 = 0;
-      if (0 < str.length) {
-        do {
-          let call4 = hasOwnProperty.call;
-          let tmp20 = num4;
-          if (typeof call4 === "unknown" ? hasOwnProperty(num4) : call4(str, num4)) {
-            if (null == tmp6) {
-              let tmp23 = call(str[num4], num4, str);
-            } else {
-              let call5 = call.call;
-              let tmp21 = str[num4];
-              if (typeof call5 === "unknown") {
-                let tmp22 = call(tmp21, num4, str);
-              } else {
-                let call5Result = call5(tmp6, tmp21, tmp20, str);
-              }
+if (tmp) {
+  let closure_2 = callBoundIntrinsic("RegExp.prototype.exec");
+  let closure_3 = {};
+  function throwRegexMarker() {
+    throw closure_3;
+  }
+  const obj = { toString: throwRegexMarker, valueOf: throwRegexMarker };
+  const _Symbol = Symbol;
+  if (typeof Symbol.toPrimitive === "symbol") {
+    const _Symbol2 = Symbol;
+    obj[Symbol.toPrimitive] = throwRegexMarker;
+  }
+  function isRegex(obj) {
+    if (obj) {
+      if (typeof obj === "object") {
+        const tmp8 = _mod1294(obj, "lastIndex");
+        if (tmp8) {
+          if (_mod1325(tmp8, "value")) {
+            try {
+              closure_2(obj, obj);
+            } catch (tmp4) {
+              return tmp4 === closure_3;
             }
           }
-          num4 = num4 + 1;
-        } while (num4 < length2);
-      }
-    } else if (typeof str === "string") {
-      let num2 = 0;
-      if (0 < str.length) {
-        do {
-          if (null == tmp6) {
-            let tmp17 = call(str.charAt(num2), num2, str);
-          } else {
-            let call3 = call.call;
-            let charAtResult = str.charAt(num2);
-            if (typeof call3 === "unknown") {
-              let tmp16 = call(charAtResult, num2, str);
-            } else {
-              let call3Result = call3(tmp6, charAtResult, tmp14, str);
-            }
-          }
-          num2 = num2 + 1;
-        } while (num2 < length);
-      }
-    } else {
-      for (const key10024 in arg0) {
-        let call6 = hasOwnProperty.call;
-        if (typeof call6 === "unknown") {
-          let call6Result = hasOwnProperty(key10024);
-        } else {
-          call6Result = call6(arg0, key10024);
         }
-        if (!call6Result) {
-          continue;
-        } else {
-          if (null == tmp6) {
-            let tmp12 = arg1(arg0[key10024], key10024, arg0);
-            continue;
-          } else {
-            let call2 = arg1.call;
-            let tmp10 = arg0[key10024];
-            if (typeof call2 === "unknown") {
-              let tmp11 = arg1(tmp10, key10024, arg0);
-              continue;
-            } else {
-              let call2Result = call2(tmp6, tmp10, key10024, arg0);
-              continue;
-            }
-            continue;
-          }
-          continue;
-        }
-        continue;
+        return false;
       }
     }
-  } else {
-    const _TypeError = TypeError;
-    const typeError = new TypeError("iterator must be a function");
-    throw typeError;
+    return false;
   }
-};
+} else {
+  let closure_5 = callBoundIntrinsic("Object.prototype.toString");
+  isRegex = function isRegex(obj) {
+    let tmp = !obj;
+    if (obj) {
+      let tmp2 = typeof obj !== "object";
+      if (typeof obj !== "object") {
+        tmp2 = typeof obj !== "function";
+      }
+      tmp = tmp2;
+    }
+    let tmp3 = !tmp;
+    if (!tmp) {
+      tmp3 = "[object RegExp]" === closure_5(obj);
+    }
+    return tmp3;
+  };
+}
+
+export default isRegex;

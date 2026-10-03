@@ -1,44 +1,11 @@
 // === Module 5764: ? ===
 
 // Module 5764
-const require = globalThis.__r;
+import _mod17 from "module_17" /* 17 */;
+import module_65 from "module_65" /* 65 */;
 
-const require = arg1;
-const dependencyMap = arg6;
-let closure_2 = [6, 7, 99];
+const codegenNativeComponent = _mod17.codegenNativeComponent;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSFullWindowOverlay", validAttributes: { accessibilityContainerViewIsModal: true } };
 
-export default {
-  get(buffer, Compression, arg2) {
-    let prop = Compression;
-    if (Compression) {
-      let hasItem = undefined === Compression.Compression;
-      if (!hasItem) {
-        hasItem = closure_2.includes(Compression.Compression.value);
-      }
-      prop = hasItem;
-    }
-    if (prop) {
-      prop = Compression.JPEGInterchangeFormat;
-    }
-    if (prop) {
-      prop = Compression.JPEGInterchangeFormat.value;
-    }
-    if (prop) {
-      prop = Compression.JPEGInterchangeFormatLength;
-    }
-    if (prop) {
-      prop = Compression.JPEGInterchangeFormatLength.value;
-    }
-    if (prop) {
-      Compression.type = "image/jpeg";
-      const sum = arg2 + Compression.JPEGInterchangeFormat.value;
-      buffer = buffer.buffer;
-      Compression.image = buffer.slice(sum, sum + Compression.JPEGInterchangeFormatLength.value);
-      require("module_5712").deferInit(Compression, "base64", function() {
-        return require("module_5712").getBase64Image(this.image);
-      });
-      const obj = require("module_5712");
-    }
-    return Compression;
-  }
-};
+export default module_65.get("RNSFullWindowOverlay", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

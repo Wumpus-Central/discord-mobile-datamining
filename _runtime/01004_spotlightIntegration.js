@@ -1,0 +1,114 @@
+// === Module 1004: spotlightIntegration ===
+
+// Module 1004 (spotlightIntegration)
+import TurboModuleRegistry from "TurboModuleRegistry" /* 873 */;
+
+require = arg1;
+const dependencyMap = arg6;
+function getDefaultSidecarUrl() {
+  try {
+    const Devtools = TurboModuleRegistry.ReactNativeLibraries.Devtools;
+    let devServer;
+    if (null !== Devtools) {
+      if (undefined !== obj) {
+        devServer = obj.getDevServer();
+      }
+    }
+    if (null !== devServer) {
+      if (undefined !== tmp7) {
+        let obj2 = devServer;
+      }
+      const url = obj2.url;
+      if (url) {
+        const _HermesInternal = HermesInternal;
+        let combined = "http://" + (function getHostnameFromString(str) {
+          const match = str.match(/^(?:\w+:)?\/\/([^/:]+)(:\d+)?(.*)$/);
+          let tmp2;
+          if (null != match) {
+            tmp2 = match[1];
+          }
+          let tmp3 = null;
+          if (tmp2) {
+            tmp3 = match[1];
+          }
+          return tmp3;
+        })(tmp9) + ":8969/stream";
+      } else {
+        combined = c2;
+      }
+      return combined;
+    }
+    obj2 = {};
+  } catch (err) {
+    return c2;
+  }
+}
+let c2 = "http://localhost:8969/stream";
+
+export const spotlightIntegration = function spotlightIntegration(arg0) {
+  let obj = arg0;
+  if (arg0 === undefined) {
+    obj = {};
+  }
+  let sidecarUrl = obj.sidecarUrl;
+  if (sidecarUrl === undefined) {
+    sidecarUrl = getDefaultSidecarUrl();
+  }
+  let debug = sidecarUrl(693).debug;
+  debug.log("[Spotlight] Using Sidecar URL", sidecarUrl);
+  return {
+    name: "Spotlight",
+    setupOnce() {
+
+    },
+    setup(on) {
+      closure_0 = sidecarUrl;
+      if (on.on) {
+        on.on("beforeEnvelope", (arg0) => {
+          const items = [...arg0];
+          const items1 = [...arg0[1]];
+          items[1] = items1.filter((item) => {
+            const content_type = item[0].content_type;
+            let tmp = typeof content_type !== "string";
+            if (typeof content_type === "string") {
+              const content_type2 = item[0].content_type;
+              tmp = !content_type2.startsWith("image");
+            }
+            return tmp;
+          });
+          const stealthXhr = sidecarUrl(dependencyMap[1]).createStealthXhr();
+          if (stealthXhr) {
+            stealthXhr.open("POST", stealthXhr, true);
+            stealthXhr.setRequestHeader("Content-Type", "application/x-sentry-envelope");
+            stealthXhr.onreadystatechange = () => {
+              if (stealthXhr.readyState === stealthXhr(dependencyMap[1]).XHR_READYSTATE_DONE) {
+                const status = stealthXhr.status;
+                let tmp4 = 0 === status;
+                if (!tmp4) {
+                  let tmp5 = status >= 200;
+                  if (tmp5) {
+                    tmp5 = status < 400;
+                  }
+                  tmp4 = tmp5;
+                }
+                if (!tmp4) {
+                  const debug = stealthXhr(dependencyMap[0]).debug;
+                  const _Error = Error;
+                  const error = new Error(stealthXhr.statusText);
+                  debug.error("[Spotlight] Sentry SDK can't connect to Spotlight is it running? See https://spotlightjs.com to download it.", error);
+                }
+              }
+            };
+            stealthXhr.send(sidecarUrl(dependencyMap[0]).serializeEnvelope(items));
+            const tmpResult = sidecarUrl(dependencyMap[0]);
+          } else {
+            let debug = sidecarUrl(dependencyMap[0]).debug;
+            debug.error("[Spotlight] Sentry SDK can not create XHR object");
+          }
+          const obj = sidecarUrl(dependencyMap[1]);
+        });
+      }
+    }
+  };
+};
+export { getDefaultSidecarUrl };

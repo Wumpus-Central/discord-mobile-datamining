@@ -1,7 +1,7 @@
 // === Module 12833: ? ===
 
 // Module 12833
-import registerAsset from "module_1121" /* 1121 */;
+import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "ef42f58d92ae3022fbec5decb610cbf2", name: "ThreadMinusIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "5caaadc4fb41849c36d80e2425141f40", name: "NewUserIcon", type: "png" });

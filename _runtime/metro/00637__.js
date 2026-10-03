@@ -1,8 +1,13 @@
 // === Module 637: ? ===
 
 // Module 637
-import _mod524 from "module_524" /* 524 */;
-import module_601 from "module_601" /* 601 */;
+import _mod638 from "module_638" /* 638 */;
 
 
-export default module_601(_mod524, "Set");
+export default function toString(arg0) {
+  let str = "";
+  if (null != arg0) {
+    str = _mod638(arg0);
+  }
+  return str;
+};

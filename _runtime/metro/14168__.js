@@ -1,7 +1,10 @@
 // === Module 14168: ? ===
 
 // Module 14168
-import registerAsset from "module_1121" /* 1121 */;
+import _mod14169 from "module_14169" /* 14169 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties", scales: [1], hash: "3b38f8bf8ac6605b344df2f05c37673a", name: "NitroGem9", type: "lottie" });
+export default function getReactNativeVersion() {
+  return _mod14169.getReactNativeVersionWithModules(get_ActivityIndicator.Platform.constants);
+};

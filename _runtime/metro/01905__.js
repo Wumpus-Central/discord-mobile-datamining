@@ -2,21 +2,17 @@
 
 // Module 1905
 globalThis.IntlMessageFormat.__addLocaleData({
-  locale: "hu",
+  locale: "el",
   pluralRuleFunction(arg0, arg1) {
-    if (arg1) {
-      if (1 == arg0) {
-        let str2 = "one";
-      } else {
-        str2 = "other";
-      }
-      let str = str2;
-    } else {
-      str = "other";
+    let str = "other";
+    let str2 = "other";
+    if (!arg1) {
       if (1 == arg0) {
         str = "one";
       }
+      str2 = str;
     }
-    return str;
+    return str2;
   }
 });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "el-CY", parentLocale: "el" });

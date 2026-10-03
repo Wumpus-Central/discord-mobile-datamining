@@ -1,7 +1,16 @@
 // === Module 605: ? ===
 
 // Module 605
-import _mod524 from "module_524" /* 524 */;
+import memoize from "memoize" /* 606 */;
 
 
-export default _mod524["__core-js_shared__"];
+export default function memoizeCapped(arg0) {
+  const tmp = memoize(arg0, (arg0) => {
+    if (500 === cache.size) {
+      cache.clear();
+    }
+    return arg0;
+  });
+  const cache = tmp.cache;
+  return tmp;
+};

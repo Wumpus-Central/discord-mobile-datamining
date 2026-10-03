@@ -283,7 +283,7 @@ const memoResult = memo(function Pressable(ref) {
   }
   const items2 = [childrenResult, null];
   obj4.children = items2;
-  return React6(ViewDefault, obj4);
+  return closure_1_8(ViewDefault, obj4);
 });
 memoResult.displayName = "Pressable";
 

@@ -1,73 +1,31 @@
 // === Module 12633: ? ===
 
 // Module 12633
-import _mod12552 from "module_12552" /* 12552 */;
-import _flush from "_flush" /* 12573 */;
-import _mod12598 from "module_12598" /* 12598 */;
 
-require = arg1;
-const dependencyMap = arg6;
-function getCurrentHubShim() {
-  return {
-    bindClient(arg0) {
-      const currentScope = _mod12552.getCurrentScope();
-      currentScope.setClient(arg0);
-    },
-    withScope: _mod12552.withScope,
-    getClient() {
-      return _mod12552.getClient();
-    },
-    getScope: _mod12552.getCurrentScope,
-    getIsolationScope: _mod12552.getIsolationScope,
-    captureException(arg0, arg1) {
-      const currentScope = _mod12552.getCurrentScope();
-      return currentScope.captureException(arg0, arg1);
-    },
-    captureMessage(arg0, arg1, arg2) {
-      const currentScope = _mod12552.getCurrentScope();
-      return currentScope.captureMessage(arg0, arg1, arg2);
-    },
-    captureEvent: _flush.captureEvent,
-    addBreadcrumb: _mod12598.addBreadcrumb,
-    setUser: _flush.setUser,
-    setTags: _flush.setTags,
-    setTag: _flush.setTag,
-    setExtra: _flush.setExtra,
-    setExtras: _flush.setExtras,
-    setContext: _flush.setContext,
-    getIntegration(id) {
-      const client = _mod12552.getClient();
-      let integrationByName = client;
-      if (client) {
-        integrationByName = client.getIntegrationByName(id.id);
+export const isSentryRequestUrl = function isSentryRequestUrl(arr, getDsn) {
+  let dsn = getDsn;
+  if (getDsn) {
+    dsn = getDsn.getDsn();
+  }
+  let tunnel = getDsn;
+  if (getDsn) {
+    tunnel = getDsn.getOptions().tunnel;
+  }
+  let tmp2 = dsn && arr.includes(dsn.host);
+  if (!tmp2) {
+    let flag = false;
+    if (tunnel) {
+      let substr = arr;
+      if ("/" === arr[arr.length - 1]) {
+        substr = arr.slice(0, -1);
       }
-      if (!integrationByName) {
-        integrationByName = null;
+      let substr1 = tunnel;
+      if ("/" === tunnel[tunnel.length - 1]) {
+        substr1 = tunnel.slice(0, -1);
       }
-      return integrationByName;
-    },
-    startSession: _flush.startSession,
-    endSession: _flush.endSession,
-    captureSession(arg0) {
-      if (arg0) {
-        return _flush.endSession();
-      } else {
-        const currentScope = _mod12552.getCurrentScope();
-        const tmpResult3 = _mod12552;
-        const client = _mod12552.getClient();
-        const session = currentScope.getSession();
-        let tmp4 = client;
-        if (client) {
-          tmp4 = session;
-        }
-        if (tmp4) {
-          client.captureSession(session);
-        }
-        const tmpResult4 = _mod12552;
-      }
+      flag = substr === substr1;
     }
-  };
-}
-
-export const getCurrentHub = getCurrentHubShim;
-export { getCurrentHubShim };
+    tmp2 = flag;
+  }
+  return tmp2;
+};

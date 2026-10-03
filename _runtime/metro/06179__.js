@@ -1,7 +1,15 @@
 // === Module 6179: ? ===
 
 // Module 6179
-import registerAsset from "module_1121" /* 1121 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
 
+const NativeModules = get_ActivityIndicator.NativeModules;
+let PlatformConstants;
+if (NativeModules != null) {
+  PlatformConstants = NativeModules.PlatformConstants;
+}
+if (PlatformConstants == null) {
+  PlatformConstants = get_ActivityIndicator.Platform.constants;
+}
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "1998c882c99c2bfa1f4c01d3c0fdc31d", name: "XSmallIcon", type: "png" });
+export default PlatformConstants;

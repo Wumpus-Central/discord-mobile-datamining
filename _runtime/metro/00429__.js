@@ -321,7 +321,7 @@ let items = [
       const merged1 = Object.assign(_objectWithoutProperties(eventHandlers, closure_2));
       const items1 = [self.props.children, null];
       obj3.children = items1;
-      return React6(TouchableOpacity(397).View, obj3);
+      return closure_1_8(TouchableOpacity(397).View, obj3);
     }
   },
   {

@@ -1,7 +1,21 @@
 // === Module 6222: ? ===
 
 // Module 6222
-import registerAsset from "module_1121" /* 1121 */;
+import ComposedGestureName from "ComposedGestureName" /* 6199 */;
+import DEFAULT_PROPS_TRANSFORMER from "DEFAULT_PROPS_TRANSFORMER" /* 6208 */;
+import _mod6223 from "module_6223" /* 6223 */;
 
+require = arg1;
+const dependencyMap = arg6;
+const items = [["maxDistance", "maxDist"], ["maxDuration", "maxDurationMs"], ["maxDelay", "maxDelayMs"]];
+const map = new Map(items);
+let closure_3 = {};
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "737159bf8222c1bab03c6bbf25897f2f", name: "CircleXIcon-primary", type: "png" });
+export const useTapGesture = function useTapGesture() {
+  let tmp = cResult;
+  if (cResult === undefined) {
+    tmp = closure_3;
+  }
+  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp, map);
+  return _mod6223.useGesture(ComposedGestureName.SingleGestureName.Tap, clonedAndRemappedConfig);
+};

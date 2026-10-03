@@ -1,7 +1,7 @@
 // === Module 16420: ? ===
 
 // Module 16420
-import registerAsset from "module_1121" /* 1121 */;
+import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images", width: 18, height: 18, scales: [2, 3], hash: "ac1d1ee38d369222a757b30c5d2c8ed6", name: "arrow", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "2bf7738cbb1d2827663b492fedbd65fb", name: "MedalIcon", type: "png" });

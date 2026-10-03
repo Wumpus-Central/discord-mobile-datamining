@@ -1,7 +1,7 @@
 // === Module 16369: ? ===
 
 // Module 16369
-import _mod17 from "module_17" /* 17 */;
+import registerAsset from "module_1132" /* 1132 */;
 
 
-export default _mod17.NativeModules.RNViewShot;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 40, height: 23, scales: [1, 2], hash: "f508ffa8fec7b43f0c7e1765658cd955", name: "ic_message", type: "png" });

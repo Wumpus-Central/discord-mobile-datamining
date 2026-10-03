@@ -1,35 +1,39 @@
 // === Module 760: ? ===
 
 // Module 760
-import _mod688 from "module_688" /* 688 */;
-import consoleSandbox from "consoleSandbox" /* 689 */;
 import _mod713 from "module_713" /* 713 */;
+import forEachEnvelopeItem from "forEachEnvelopeItem" /* 740 */;
 
 require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const initAndBind = function initAndBind(arg0, debug) {
-  if (true === debug.debug) {
-    const obj = consoleSandbox;
-    if (_mod688.DEBUG_BUILD) {
-      debug = obj.debug;
-      debug.enable();
-    } else {
-      obj.consoleSandbox(() => {
-        console.warn("[Sentry] Cannot initialize SDK with `debug` option using a non-debug bundle.");
-      });
-    }
-  }
-  const currentScope = _mod713.getCurrentScope();
-  currentScope.update(debug.initialScope);
-  const obj4 = new arg0(debug);
-  const currentScope1 = _mod713.getCurrentScope();
-  currentScope1.setClient(obj4);
-  obj4.init();
-  return obj4;
+export const createLogContainerEnvelopeItem = function createLogContainerEnvelopeItem(items) {
+  items = [, ];
+  items[0] = { type: "log", item_count: items.length, content_type: "application/vnd.sentry.items.log+json" };
+  items[1] = { items };
+  return items;
 };
-export const setCurrentClient = function setCurrentClient(arg0) {
-  const currentScope = _mod713.getCurrentScope();
-  currentScope.setClient(arg0);
+export const createLogEnvelope = function createLogEnvelope(items, _metadata, tunnel, dsn) {
+  let sdk;
+  if (_metadata != null) {
+    sdk = _metadata.sdk;
+  }
+  const obj = {};
+  if (sdk) {
+    const obj2 = { name: _metadata.sdk.name, version: _metadata.sdk.version };
+    obj.sdk = obj2;
+  }
+  let tmp2 = tunnel;
+  if (tunnel) {
+    tmp2 = dsn;
+  }
+  if (tmp2) {
+    obj.dsn = _mod713.dsnToString(dsn);
+  }
+  items = [, ];
+  items[0] = { type: "log", item_count: items.length, content_type: "application/vnd.sentry.items.log+json" };
+  items[1] = { items };
+  const items1 = [items];
+  return forEachEnvelopeItem.createEnvelope(obj, items1);
 };

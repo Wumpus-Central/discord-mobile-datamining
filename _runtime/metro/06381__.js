@@ -1,12 +1,12 @@
 // === Module 6381: ? ===
 
 // Module 6381
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _get from "_get" /* 96 */;
-import _inherits from "_inherits" /* 98 */;
+import _modDef6370 from "module_6370" /* 6370 */;
+import _classCallCheck_mod from "module_6351" /* 6351 */;
+import _createClass from "module_6352" /* 6352 */;
+import _getPrototypeOf from "module_6372" /* 6372 */;
+import _get from "module_6373" /* 6373 */;
+import _inherits from "module_6375" /* 6375 */;
 
 function _isNativeReflectConstruct() {
   try {
@@ -28,178 +28,217 @@ function _isNativeReflectConstruct() {
   }
 }
 let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturnDefault;
-function changeEventCalculator(translationX, translationX2) {
-  if (undefined === translationX2) {
-    ({ translationX: obj2.changeX, translationY: obj2.changeY } = translationX);
-    let obj = { changeX: null, changeY: null };
-    const obj3 = { changeX: null, changeY: null };
-  } else {
-    obj = { changeX: translationX.translationX - translationX2.translationX, changeY: translationX.translationY - translationX2.translationY };
-  }
-  const merged = Object.assign(translationX);
-  const merged1 = Object.assign(obj);
-  return {};
-}
-changeEventCalculator.__closure = {};
-changeEventCalculator.__workletHash = 1947784830943;
-changeEventCalculator.__initData = { code: "function changeEventCalculator_Pnpm_panGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={changeX:current.translationX,changeY:current.translationY};}else{changePayload={changeX:current.translationX-previous.translationX,changeY:current.translationY-previous.translationY};}return{...current,...changePayload};}" };
-class PanGesture {
-  constructor() {
+_modDef6370;
+class RVLinearLayoutManagerImpl {
+  constructor(arg0, arg1) {
     self = this;
-    tmp = closure_0(this, PanGesture);
+    tmp = closure_0(this, RVLinearLayoutManagerImpl);
+    items = [, ];
+    items[0] = global;
+    items[1] = fn;
     tmp2 = c2;
-    obj = c2(PanGesture);
+    obj = c2(RVLinearLayoutManagerImpl);
     tmp3 = closure_1;
     if (closure_4()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, undefined);
+      constructResult = obj.apply(self, items);
     }
     tmp3Result = tmp3(self, constructResult);
-    tmp3Result.config = {};
-    tmp3Result.handlerName = "PanGestureHandler";
+    tmp3Result.hasSize = false;
+    tmp3Result.tallestItemHeight = 0;
+    windowSize = global.windowSize;
+    tmp3Result.boundedSize = tmp3Result.horizontal ? windowSize.height : windowSize.width;
+    tmp3Result.hasSize = tmp3Result.boundedSize > 0;
     return tmp3Result;
   }
 }
-_classCallCheck = PanGesture;
-_inherits(PanGesture, fn(6280).ContinousBaseGesture);
+_classCallCheck = RVLinearLayoutManagerImpl;
+_inherits(RVLinearLayoutManagerImpl, fn(6377).RVLayoutManager);
 const entry = {
-  key: "activeOffsetY",
-  value: function activeOffsetY(items) {
+  key: "updateLayoutParams",
+  value: function updateLayoutParams(windowSize) {
     const self = this;
-    if (Array.isArray(items)) {
-      [self.config.activeOffsetYStart, self.config.activeOffsetYEnd] = items;
-    } else if (items < 0) {
-      self.config.activeOffsetYStart = items;
-    } else {
-      self.config.activeOffsetYEnd = items;
+    let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "updateLayoutParams", this);
+    if (typeof fn === "function") {
+      fn = (items) => fn.apply(self, items);
     }
-    return self;
+    const items = [windowSize];
+    !fn(items);
+    windowSize = windowSize.windowSize;
+    self.boundedSize = self.horizontal ? windowSize.height : windowSize.width;
+    if (!tmp2) {
+      if (self.layouts.length > 0) {
+        self.recomputeLayouts(0, self.layouts.length - 1);
+        self.requiresRepaint = true;
+      }
+    }
   }
 };
 let items = [
   entry,
   {
-    key: "activeOffsetX",
-    value: function activeOffsetX(items) {
+    key: "processLayoutInfo",
+    value: function processLayoutInfo(arg0, arg1) {
       const self = this;
-      if (Array.isArray(items)) {
-        [self.config.activeOffsetXStart, self.config.activeOffsetXEnd] = items;
-      } else if (items < 0) {
-        self.config.activeOffsetXStart = items;
+      const iter = arg0[Symbol.iterator]();
+      const nextResult = iter.next();
+      while (iter !== undefined) {
+        let dimensions = nextResult.dimensions;
+        let tmp2 = self.layouts[nextResult.index];
+        let tmp3 = tmp2;
+        if (self.horizontal) {
+          let boundedSize = dimensions.width;
+        } else {
+          boundedSize = self.boundedSize;
+        }
+        tmp2.width = boundedSize;
+        tmp3.isHeightMeasured = true;
+        tmp3.isWidthMeasured = true;
+        tmp3.height = dimensions.height;
+        continue;
+      }
+      if (tmp7) {
+        const result = self.normalizeLayoutHeights(arg0);
+      }
+    }
+  },
+  {
+    key: "estimateLayout",
+    value: function estimateLayout(arg0) {
+      const self = this;
+      if (this.horizontal) {
+        let boundedSize = self.getEstimatedWidth(arg0);
       } else {
-        self.config.activeOffsetXEnd = items;
+        boundedSize = self.boundedSize;
       }
-      return self;
+      this.layouts[arg0].width = boundedSize;
+      this.layouts[arg0].height = self.getEstimatedHeight(arg0);
+      this.layouts[arg0].isWidthMeasured = !self.horizontal;
+      this.layouts[arg0].enforcedWidth = !self.horizontal;
     }
   },
   {
-    key: "failOffsetY",
-    value: function failOffsetY(GestureDetector) {
+    key: "getLayoutSize",
+    value: function getLayoutSize() {
       const self = this;
-      if (Array.isArray(GestureDetector)) {
-        [self.config.failOffsetYStart, self.config.failOffsetYEnd] = GestureDetector;
-      } else if (GestureDetector < 0) {
-        self.config.failOffsetYStart = GestureDetector;
+      if (0 === this.layouts.length) {
+        return { width: 0, height: 0 };
       } else {
-        self.config.failOffsetYEnd = GestureDetector;
+        const size = self.layouts[self.layouts.length - 1];
+        if (self.horizontal) {
+          let boundedSize = size.x + size.width;
+        } else {
+          boundedSize = self.boundedSize;
+        }
+        const size1 = { width: boundedSize, height: null };
+        if (self.horizontal) {
+          const tallestItem = self.tallestItem;
+          let height;
+          if (tallestItem != null) {
+            height = tallestItem.height;
+          }
+          if (height == null) {
+            height = self.boundedSize;
+          }
+          let sum = height;
+        } else {
+          sum = size.y + size.height;
+        }
+        size1.height = sum;
+        return size1;
       }
-      return self;
     }
   },
   {
-    key: "failOffsetX",
-    value: function failOffsetX(items1) {
+    key: "normalizeLayoutHeights",
+    value: function normalizeLayoutHeights(arg0) {
       const self = this;
-      if (Array.isArray(items1)) {
-        [self.config.failOffsetXStart, self.config.failOffsetXEnd] = items1;
-      } else if (items1 < 0) {
-        self.config.failOffsetXStart = items1;
-      } else {
-        self.config.failOffsetXEnd = items1;
+      let tmp;
+      const iter = arg0[Symbol.iterator]();
+      while (iter !== undefined) {
+        let tmp2 = self.layouts[iter.next().index];
+        let num = tmp2.minHeight;
+        let tmp3 = tmp2;
+        if (num == null) {
+          num = 0;
+        }
+        let tmp4 = tmp2.height > num;
+        if (tmp4) {
+          let num2;
+          if (tmp != null) {
+            num2 = tmp.height;
+          }
+          if (num2 == null) {
+            num2 = 0;
+          }
+          tmp4 = tmp3.height > num2;
+        }
+        if (tmp4) {
+          tmp = tmp2;
+        }
+        continue;
       }
-      return self;
+      if (tmp) {
+        if (tmp.height !== self.tallestItemHeight) {
+          let num3 = tmp.height;
+          if (tmp.height < self.tallestItemHeight) {
+            self.requiresRepaint = true;
+            num3 = 0;
+          }
+          const layouts = self.layouts;
+          for (const item10035 of layouts) {
+            if (num3 > 0) {
+              item10035.height = tmp.height;
+            }
+            item10035.minHeight = num3;
+            continue;
+          }
+          tmp.minHeight = 0;
+          self.tallestItem = tmp;
+          self.tallestItemHeight = tmp.height;
+        }
+      }
     }
   },
   {
-    key: "minPointers",
-    value: function minPointers(minPointers) {
-      this.config.minPointers = minPointers;
-      return this;
-    }
-  },
-  {
-    key: "maxPointers",
-    value: function maxPointers(maxPointers) {
-      this.config.maxPointers = maxPointers;
-      return this;
-    }
-  },
-  {
-    key: "minDistance",
-    value: function minDistance(minDist) {
-      this.config.minDist = minDist;
-      return this;
-    }
-  },
-  {
-    key: "minVelocity",
-    value: function minVelocity(minVelocity) {
-      this.config.minVelocity = minVelocity;
-      return this;
-    }
-  },
-  {
-    key: "minVelocityX",
-    value: function minVelocityX(minVelocityX) {
-      this.config.minVelocityX = minVelocityX;
-      return this;
-    }
-  },
-  {
-    key: "minVelocityY",
-    value: function minVelocityY(minVelocityY) {
-      this.config.minVelocityY = minVelocityY;
-      return this;
-    }
-  },
-  {
-    key: "averageTouches",
-    value: function averageTouches(avgTouches) {
-      this.config.avgTouches = avgTouches;
-      return this;
-    }
-  },
-  {
-    key: "enableTrackpadTwoFingerGesture",
-    value: function enableTrackpadTwoFingerGesture(enableTrackpadTwoFingerGesture) {
-      this.config.enableTrackpadTwoFingerGesture = enableTrackpadTwoFingerGesture;
-      return this;
-    }
-  },
-  {
-    key: "activateAfterLongPress",
-    value: function activateAfterLongPress(activateAfterLongPress) {
-      this.config.activateAfterLongPress = activateAfterLongPress;
-      return this;
-    }
-  },
-  {
-    key: "onChange",
-    value: function onChange(arg0) {
-      this.handlers.changeEventCalculator = hasOwnProperty;
+    key: "recomputeLayouts",
+    value: function recomputeLayouts(arg0, arg1) {
       const self = this;
-      let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
-      if (typeof fn === "function") {
-        fn = (items) => fn.apply(self, items);
+      let sum = arg0;
+      if (arg0 <= arg1) {
+        do {
+          let layout = self.getLayout(sum);
+          if (0 === sum) {
+            layout.x = 0;
+            layout.y = 0;
+          } else {
+            let size = self.getLayout(sum - 1);
+            let num = 0;
+            if (self.horizontal) {
+              num = size.x + size.width;
+            }
+            layout.x = num;
+            let num2 = 0;
+            if (!self.horizontal) {
+              num2 = size.y + size.height;
+            }
+            layout.y = num2;
+          }
+          if (self.horizontal) {
+            if (self.hasSize) {
+              layout.minHeight = self.boundedSize;
+            }
+          } else {
+            layout.width = self.boundedSize;
+          }
+          sum = sum + 1;
+        } while (sum <= arg1);
       }
-      const items = [arg0];
-      return fn(items);
     }
   }
 ];
 
-export const PanGesture = _createClass(PanGesture, items);
+export const RVLinearLayoutManagerImpl = _createClass(RVLinearLayoutManagerImpl, items);

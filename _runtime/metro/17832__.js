@@ -1,7 +1,17 @@
 // === Module 17832: ? ===
 
 // Module 17832
-import registerAsset from "module_1121" /* 1121 */;
+import arrayReduce from "arrayReduce" /* 5013 */;
+import words from "words" /* 17833 */;
+import deburr from "deburr" /* 17837 */;
 
+let closure_2 = RegExp("['\u2019]", "g");
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images", width: 24, height: 24, scales: [2, 3], hash: "4e2695064a96facdf08d029a4fb1d275", name: "ic_add_perk_24px", type: "png" });
+export default function createCompounder(arg0) {
+  closure_0 = arg0;
+  return (arg0) => {
+    const tmp = arrayReduce;
+    const tmp2 = words;
+    return tmp(tmp2(deburr(arg0).replace(closure_2, "")), closure_0, "");
+  };
+};

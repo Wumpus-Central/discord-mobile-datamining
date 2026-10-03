@@ -1,7 +1,12 @@
 // === Module 11024: ? ===
 
 // Module 11024
-import registerAsset from "module_1121" /* 1121 */;
+import _mod11023 from "module_11023" /* 11023 */;
 
+require = arg1;
+const dependencyMap = arg6;
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 16, height: 16, scales: [2, 3], hash: "e71bfb9b43d4bbd3706e078113315f40", name: "ic_image", type: "png" });
+export const keepLocalCopy = function keepLocalCopy(arg0) {
+  const NativeDocumentPicker = _mod11023.NativeDocumentPicker;
+  return NativeDocumentPicker.keepLocalCopy(arg0);
+};

@@ -1,7 +1,7 @@
 // === Module 16271: ? ===
 
 // Module 16271
-import registerAsset from "module_1121" /* 1121 */;
+import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/notifications/images", width: 24, height: 24, scales: [1], hash: "0ca8431ba26e114a3e93aa8dc5cdf521", name: "ic_bell_on", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "a6bdad4cfb0f8a1449a3c7f935d8448d", name: "ic_guild_video_24px", type: "png" });

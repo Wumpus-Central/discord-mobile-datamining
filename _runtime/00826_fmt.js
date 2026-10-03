@@ -1,0 +1,51 @@
+// === Module 826: fmt ===
+
+// Module 826 (fmt)
+import _INTERNAL_captureSerializedLog from "_INTERNAL_captureSerializedLog" /* 756 */;
+import parameterize from "parameterize" /* 777 */;
+
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+
+export const fmt = parameterize.fmt;
+export const debug = function debug(message, attributes) {
+  let obj = arg2;
+  if (arg2 === undefined) {
+    obj = {};
+  }
+  _INTERNAL_captureSerializedLog._INTERNAL_captureLog({ level: "debug", message, attributes, severityNumber: "application" }, obj.scope);
+};
+export const error = function error(message, attributes) {
+  let obj = arg2;
+  if (arg2 === undefined) {
+    obj = {};
+  }
+  _INTERNAL_captureSerializedLog._INTERNAL_captureLog({ level: "error", message, attributes, severityNumber: "IconComponent" }, obj.scope);
+};
+export const fatal = function fatal(message, attributes) {
+  let obj = arg2;
+  if (arg2 === undefined) {
+    obj = {};
+  }
+  _INTERNAL_captureSerializedLog._INTERNAL_captureLog({ level: "fatal", message, attributes, severityNumber: "e" }, obj.scope);
+};
+export const info = function info(message, attributes) {
+  let obj = arg2;
+  if (arg2 === undefined) {
+    obj = {};
+  }
+  _INTERNAL_captureSerializedLog._INTERNAL_captureLog({ level: "info", message, attributes, severityNumber: "application" }, obj.scope);
+};
+export const trace = function trace(message, attributes) {
+  let obj = arg2;
+  if (arg2 === undefined) {
+    obj = {};
+  }
+  _INTERNAL_captureSerializedLog._INTERNAL_captureLog({ level: "trace", message, attributes, severityNumber: "application" }, obj.scope);
+};
+export const warn = function warn(message, attributes) {
+  let obj = arg2;
+  if (arg2 === undefined) {
+    obj = {};
+  }
+  _INTERNAL_captureSerializedLog._INTERNAL_captureLog({ level: "warn", message, attributes, severityNumber: "color" }, obj.scope);
+};

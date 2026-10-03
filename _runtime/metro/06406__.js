@@ -1,27 +1,24 @@
 // === Module 6406: ? ===
 
 // Module 6406
-import noop from "module_19" /* 19 */;
 
-({ useCallback: closure_0, useEffect: closure_1, useLayoutEffect: c2, useRef: c3 } = noop);
-
-export const useStableCallback = function useStableCallback(current) {
-  React3(undefined);
-  React2(() => {
-    closure_1.current = current;
-  });
-  framebus(() => () => {
-    ref.current = undefined;
-  }, []);
-  return React(() => {
-    const items = [...arguments];
-    current = ref.current;
-    let applyResult;
-    if (current != null) {
-      const items1 = [];
-      HermesBuiltin.arraySpread(items, 0);
-      applyResult = HermesBuiltin.apply(items1, ref);
+export const useDataMultiplier = function useDataMultiplier(arg0, arg1) {
+  const array = new Array(arg1);
+  let flag = false;
+  if (typeof arg0[0] === "object") {
+    flag = true;
+  }
+  for (let num = 0; num < arg1; num = num + 1) {
+    let tmp3 = arg0[num % tmp];
+    if (flag) {
+      let obj = {};
+      let merged = Object.assign(tmp3);
+      let tmp5 = obj;
+    } else {
+      tmp5 = tmp3;
     }
-    return applyResult;
-  }, []);
+    array[num] = tmp5;
+  }
+  const items = [array];
+  return items;
 };

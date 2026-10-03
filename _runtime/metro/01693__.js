@@ -1,157 +1,59 @@
 // === Module 1693: ? ===
 
 // Module 1693
-import _mod1642 from "module_1642" /* 1642 */;
-import _mod1663 from "module_1663" /* 1663 */;
-import linear from "linear" /* 1690 */;
-import TransitionType from "TransitionType" /* 1694 */;
-import maybeModifyStyleForKeyframe from "maybeModifyStyleForKeyframe" /* 1707 */;
-import BaseAnimationBuilder from "BaseAnimationBuilder" /* 1708 */;
-import _mod1724 from "module_1724" /* 1724 */;
-import findDescendantWithExitingAnimation from "findDescendantWithExitingAnimation" /* 1725 */;
-import TransitionGenerator from "TransitionGenerator" /* 1726 */;
+import overrideLogFunctionImplementation from "overrideLogFunctionImplementation" /* 1645 */;
+import _mod1647 from "module_1647" /* 1647 */;
+import ReanimatedModule2 from "ReanimatedModule" /* 1651 */;
+import _mod1654 from "module_1654" /* 1654 */;
+import _mod1668 from "module_1668" /* 1668 */;
+import freezeObjectInDev from "freezeObjectInDev" /* 1673 */;
+import module_1646 from "module_1646" /* 1646 */;
 
-require = arg1;
-const dependencyMap = arg6;
-function startWebLayoutAnimation(props, _componentDOMRef, ENTERING, easingY) {
-  if (ENTERING === _mod1663.LayoutAnimationType.ENTERING) {
-    let entering = props.entering;
-  } else if (ENTERING === _mod1663.LayoutAnimationType.EXITING) {
-    entering = props.exiting;
-  } else {
-    entering = null;
-    if (ENTERING === _mod1663.LayoutAnimationType.LAYOUT) {
-      entering = props.layout;
-    }
-  }
-  let processedConfig = null;
-  if (entering) {
-    const tmp5 = entering instanceof BaseAnimationBuilder.Keyframe;
-    if (tmp5) {
-      let presetName = TransitionGenerator.createCustomKeyFrameAnimation(entering.definitions);
-      const tmpResult = TransitionGenerator;
-    } else if (typeof entering === "function") {
-      presetName = entering.presetName;
-    } else {
-      presetName = entering.constructor.presetName;
-    }
-    let animationWithInitialValues = presetName;
-    if (undefined !== entering.initialValues) {
-      animationWithInitialValues = TransitionGenerator.createAnimationWithInitialValues(presetName, entering.initialValues);
-      const tmpResult8 = TransitionGenerator;
-    }
-    let flag = !(animationWithInitialValues in TransitionType.Animations) && !(ENTERING === _mod1663.LayoutAnimationType.LAYOUT || tmp5 || undefined !== entering.initialValues);
-    if (flag) {
-      let logger = _mod1642.logger;
-      logger.warn("Couldn't load entering/exiting animation. Current version supports only predefined animations with modifiers: duration, delay, easing, randomizeDelay, withCallback, reducedMotion.");
-      flag = true;
-    }
-    processedConfig = null;
-    if (!flag) {
-      if (tmp5) {
-        const _Object = Object;
-        const keys = Object.keys(entering.definitions);
-        let hasItem = keys.includes("100");
-        if (!hasItem) {
-          hasItem = keys.includes("to");
-        }
-        if (!hasItem) {
-          const logger2 = _mod1642.logger;
-          logger2.warn("Neither '100' nor 'to' was specified in Keyframe definition. This may result in wrong final position of your component. One possible solution is to duplicate last timestamp in definition as '100' (or 'to')");
-        }
-      }
-      processedConfig = maybeModifyStyleForKeyframe.getProcessedConfig(animationWithInitialValues, ENTERING, entering);
-      const tmpResult9 = maybeModifyStyleForKeyframe;
-    }
-    const tmp8 = ENTERING === _mod1663.LayoutAnimationType.LAYOUT || tmp5 || undefined !== entering.initialValues;
-  }
-  const result = maybeModifyStyleForKeyframe.maybeModifyStyleForKeyframe(_componentDOMRef, props.entering);
-  let animationName;
-  if (processedConfig != null) {
-    animationName = processedConfig.animationName;
-  }
-  if (animationName in TransitionType.Animations) {
-    let animationName1;
-    if (processedConfig != null) {
-      animationName1 = processedConfig.animationName;
-    }
-    (function maybeReportOverwrittenProperties(style, style2) {
-      const set = new Set();
-      for (const item10014 of matchAllResult) {
-        let addResult = set.add(item10014[1]);
-        continue;
-      }
-      const matchAllResult = style.matchAll(/([a-zA-Z-]+)(?=:)/g);
-      const found = Array.from(style2).filter((item) => set.has(item));
-      if (0 !== found.length) {
-        const logger = _mod1642.logger;
-        let str = "Properties";
-        if (1 === found.length) {
-          str = "Property";
-        }
-        const _HermesInternal = HermesInternal;
-        logger.warn("" + str + " [" + found.join(", ") + "] may be overwritten by a layout animation. Please wrap your component with an animated view and apply the layout animation on the wrapper.");
-      }
-      const arr = Array.from(style2);
-    })(TransitionType.Animations[animationName1].style, _componentDOMRef.style);
-  }
-  if (processedConfig) {
-    if (_mod1663.LayoutAnimationType.ENTERING === ENTERING) {
-      maybeModifyStyleForKeyframe.setElementAnimation(_componentDOMRef, processedConfig, true);
-      const tmpResult11 = maybeModifyStyleForKeyframe;
-    } else if (_mod1663.LayoutAnimationType.LAYOUT === ENTERING) {
-      easingY.reversed = processedConfig.reversed;
-      const result1 = maybeModifyStyleForKeyframe.handleLayoutTransition(_componentDOMRef, processedConfig, easingY);
-      const tmpResult12 = maybeModifyStyleForKeyframe;
-    } else if (_mod1663.LayoutAnimationType.EXITING === ENTERING) {
-      const result2 = maybeModifyStyleForKeyframe.handleExitingAnimation(_componentDOMRef, processedConfig);
-      const tmpResult13 = maybeModifyStyleForKeyframe;
-    }
-  } else {
-    const elementVisible = _mod1724.makeElementVisible(_componentDOMRef, 0);
-    const tmpResult14 = _mod1724;
-  }
-  const tmpResult10 = maybeModifyStyleForKeyframe;
+const __initData = { code: "function pnpm_runtimesTs1(){const{registerReanimatedError,registerLoggerConfig,config,setupCallGuard,setupConsole,initializer}=this.__closure;var _initializer;registerReanimatedError();registerLoggerConfig(config);setupCallGuard();setupConsole();(_initializer=initializer)===null||_initializer===void 0||_initializer();}" };
+let closure_4 = { code: "function pnpm_runtimesTs3(){const{worklet,args}=this.__closure;worklet(...args);}" };
+let closure_5 = { code: "function pnpm_runtimesTs4(){const{worklet,args}=this.__closure;worklet(...args);}" };
+function runOnRuntime(arg0, worklet) {
+  closure_0 = arg0;
+  return globalThis._WORKLET ? (() => {
+    const items = [...arguments];
+    const fn = function u() {
+      closure_1(...items);
+    };
+    fn.__closure = { worklet, args: items };
+    fn.__workletHash = 1376644884193;
+    fn.__initData = __initData;
+    return closure_0._scheduleOnRuntime(items, worklet(1673).makeShareableCloneOnUIRecursive(fn));
+  }) : (() => {
+    const items = [...arguments];
+    const ReanimatedModule = worklet(1651).ReanimatedModule;
+    const fn = function l() {
+      closure_1(...items);
+    };
+    fn.__closure = { worklet, args: items };
+    fn.__workletHash = 10918069222950;
+    fn.__initData = __initData2;
+    return ReanimatedModule.scheduleOnRuntime(items, worklet(1673).makeShareableCloneRecursive(fn));
+  });
 }
+runOnRuntime.__closure = { __DEV__: false, SHOULD_BE_USE_WEB: module_1646.shouldBeUseWeb(), isWorkletFunction: _mod1668.isWorkletFunction, makeShareableCloneOnUIRecursive: freezeObjectInDev.makeShareableCloneOnUIRecursive, ReanimatedModule: ReanimatedModule2.ReanimatedModule, makeShareableCloneRecursive: freezeObjectInDev.makeShareableCloneRecursive };
+runOnRuntime.__workletHash = 14671185280560;
+runOnRuntime.__initData = { code: "function runOnRuntime_Pnpm_runtimesTs2(workletRuntime,worklet){const{__DEV__,SHOULD_BE_USE_WEB,isWorkletFunction,makeShareableCloneOnUIRecursive,ReanimatedModule,makeShareableCloneRecursive}=this.__closure;if(__DEV__&&!SHOULD_BE_USE_WEB&&!isWorkletFunction(worklet)){throw new ReanimatedError('The function passed to `runOnRuntime` is not a worklet.'+(_WORKLET?' Please make sure that `processNestedWorklets` option in Reanimated Babel plugin is enabled.':''));}if(_WORKLET){return function(...args){return global._scheduleOnRuntime(workletRuntime,makeShareableCloneOnUIRecursive(function(){'worklet';worklet(...args);}));};}return function(...args){return ReanimatedModule.scheduleOnRuntime(workletRuntime,makeShareableCloneRecursive(function(){'worklet';worklet(...args);}));};}" };
 
-export { startWebLayoutAnimation };
-export const tryActivateLayoutTransition = function tryActivateLayoutTransition(props, _componentDOMRef, arg2) {
-  if (props.layout) {
-    const size = _componentDOMRef.getBoundingClientRect();
-    if (!obj.areDOMRectsEqual(size, arg2)) {
-      const enteringV = props.layout.enteringV;
-      let presetName;
-      if (enteringV != null) {
-        presetName = enteringV.presetName;
-      }
-      const exitingV = props.layout.exitingV;
-      let presetName1;
-      if (exitingV != null) {
-        presetName1 = exitingV.presetName;
-      }
-      const obj2 = { translateX: arg2.x - size.x + (arg2.width - size.width) / 2, translateY: arg2.y - size.y + (arg2.height - size.height) / 2, scaleX: arg2.width / size.width, scaleY: arg2.height / size.height, reversed: false, easingX: null, easingY: null, entering: null, exiting: null };
-      const easingXV = props.layout.easingXV;
-      let str;
-      if (easingXV != null) {
-        str = easingXV[linear.EasingNameSymbol];
-      }
-      if (str == null) {
-        str = "ease";
-      }
-      obj2.easingX = str;
-      const easingYV = props.layout.easingYV;
-      let str2;
-      if (easingYV != null) {
-        str2 = easingYV[linear.EasingNameSymbol];
-      }
-      if (str2 == null) {
-        str2 = "ease";
-      }
-      obj2.easingY = str2;
-      obj2.entering = presetName;
-      obj2.exiting = presetName1;
-      startWebLayoutAnimation(props, _componentDOMRef, _mod1663.LayoutAnimationType.LAYOUT, obj2);
+export const createWorkletRuntime = function createWorkletRuntime(arg0, initializer) {
+  const ReanimatedModule = __reanimatedLoggerConfig(1651).ReanimatedModule;
+  const fn = function l() {
+    const result = _mod1654.registerReanimatedError();
+    _mod1647.registerLoggerConfig(__reanimatedLoggerConfig);
+    overrideLogFunctionImplementation.setupCallGuard();
+    overrideLogFunctionImplementation.setupConsole();
+    if (initializer != null) {
+      initializer();
     }
-    obj = findDescendantWithExitingAnimation;
-  }
+  };
+  let obj = __reanimatedLoggerConfig(1673);
+  fn.__closure = { registerReanimatedError: __reanimatedLoggerConfig(1654).registerReanimatedError, registerLoggerConfig: __reanimatedLoggerConfig(1647).registerLoggerConfig, config: globalThis.__reanimatedLoggerConfig, setupCallGuard: __reanimatedLoggerConfig(1645).setupCallGuard, setupConsole: __reanimatedLoggerConfig(1645).setupConsole, initializer };
+  fn.__workletHash = 8531807001072;
+  fn.__initData = __initData;
+  return ReanimatedModule.createWorkletRuntime(arg0, obj.makeShareableCloneRecursive(fn));
 };
+export { runOnRuntime };

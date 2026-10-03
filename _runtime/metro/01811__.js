@@ -1,512 +1,283 @@
 // === Module 1811: ? ===
 
 // Module 1811
-import _mod1649 from "module_1649" /* 1649 */;
-import module_1641 from "module_1641" /* 1641 */;
+import _mod1654 from "module_1654" /* 1654 */;
+import _mod1686 from "module_1686" /* 1686 */;
+import runOnRuntime from "runOnRuntime" /* 1687 */;
+import _mod1795 from "module_1795" /* 1795 */;
+import _mod1812 from "module_1812" /* 1812 */;
+import convertLrgbToOklabDefault from "convertLrgbToOklab" /* 1813 */;
 
-const require = globalThis.__r;
-
-let obj = { fps: 60 };
-function getStylesFromObject(jestInlineStyle) {
-  if (undefined === jestInlineStyle) {
-    let fromEntriesResult = {};
-  } else {
-    const _Object = Object;
-    const _Object2 = Object;
-    const entries = Object.entries(jestInlineStyle);
-    fromEntriesResult = Object.fromEntries(entries.map((item) => {
-      [tmp, iter] = item;
-      const items = [tmp, ];
-      value = iter;
-      if (iter._isReanimatedSharedValue) {
-        value = iter.value;
-      }
-      items[1] = value;
-      return items;
-    }));
-  }
-  return fromEntriesResult;
-}
-function getCurrentStyle(props) {
-  const style = props.props.style;
-  obj = {};
-  if (Array.isArray(style)) {
-    const item = style.forEach((item) => {
-      obj = {};
-      const merged = Object.assign(obj);
-      const merged1 = Object.assign(item);
-    });
-  }
-  const jestInlineStyle = props.props.jestInlineStyle;
-  if (props.props.jestAnimatedStyle != null) {
-    value = iter.value;
-  }
-  if (Array.isArray(jestInlineStyle)) {
-    const iter2 = jestInlineStyle[Symbol.iterator]();
-    const nextResult = iter2.next();
-    while (iter2 !== undefined) {
-      if (!("jestAnimatedValues" in nextResult)) {
-        let tmp18 = getStylesFromObject(tmp15);
-        let obj2 = {};
-        let merged = Object.assign(obj);
-        let merged1 = Object.assign(tmp18);
-        obj = obj2;
-      }
-      continue;
+const interpolateColorsHSV = function o(arg0, items, h, useCorrectedHSVInterpolation) {
+  useCorrectedHSVInterpolation = useCorrectedHSVInterpolation.useCorrectedHSVInterpolation;
+  if (undefined !== useCorrectedHSVInterpolation) {
+    if (!useCorrectedHSVInterpolation) {
+      const obj = _mod1812;
+      let interpolateResult = obj.interpolate(arg0, items, h.h, _mod1812.Extrapolation.CLAMP);
     }
-    const obj3 = {};
-    const merged2 = Object.assign(obj);
-    const merged3 = Object.assign(value);
-    obj = obj3;
-    return obj3;
-  } else {
-    const tmp3 = getStylesFromObject(jestInlineStyle);
-    obj = {};
-    if (((value) => {
-      let tmp = !value;
-      if (value) {
-        const _Object = Object;
-        tmp = 0 === Object.keys(value).length;
-      }
-      return tmp;
-    })(value)) {
-      const merged4 = Object.assign(tmp3);
-      let tmp7 = obj;
-    } else {
-      const merged5 = Object.assign(value);
-      tmp7 = obj;
-    }
-    obj = tmp7;
-    return tmp7;
+    const tmpResult = _mod1812;
+    const interpolateResult1 = tmpResult.interpolate(arg0, items, h.s, _mod1812.Extrapolation.CLAMP);
+    const tmpResult4 = _mod1812;
+    const interpolateResult2 = tmpResult4.interpolate(arg0, items, h.v, _mod1812.Extrapolation.CLAMP);
+    const tmpResult5 = _mod1812;
+    const tmpResult6 = _mod1686;
+    return tmpResult6.hsvToColor(interpolateResult, interpolateResult1, interpolateResult2, tmpResult5.interpolate(arg0, items, h.a, _mod1812.Extrapolation.CLAMP));
   }
-}
-function checkEqual(arr2, arr3) {
-  if (Array.isArray(arr3)) {
-    const _Array = Array;
-    if (Array.isArray(arr2)) {
-      if (arr3.length === arr2.length) {
-        let num4 = 0;
-        if (0 < arr2.length) {
-          while (checkEqual(arr2[num4], arr3[num4])) {
-            num4 = num4 + 1;
-          }
-          return false;
-        }
-      }
-    }
-    return false;
-  } else {
-    if (typeof arr2 === "object") {
-      if (arr2) {
-        if (typeof arr3 === "object") {
-          if (arr3) {
-            for (const key10009 in arg1) {
-              if (checkEqual(arg0[key10009], arg1[key10009])) {
-                continue;
-              } else {
-                let flag = false;
-                return false;
-              }
-            }
+  items = [];
+  items[0] = items[0];
+  h = h.h;
+  const items1 = [h[0]];
+  let num = 1;
+  if (1 < h.length) {
+    while (true) {
+      let diff = num - 1;
+      let diff1 = h[num] - h[diff];
+      if (h[num] > h[diff]) {
+        if (diff1 > 0.5) {
+          let arr = items.push(items[num]);
+          let arr2 = items.push(items[num] + 0.00001);
+          let arr3 = items1.push(h[num] - 1);
+          let arr13 = items1.push(h[num]);
+          num = num + 1;
+          if (num >= h.length) {
+            break;
           }
         }
-        return false;
       }
+      if (h[num] < h[diff]) {
+        if (diff1 < -0.5) {
+          let arr14 = items.push(items[num]);
+          let arr15 = items.push(items[num] + 0.00001);
+          let arr16 = items1.push(h[num] + 1);
+          let arr17 = items1.push(h[num]);
+        }
+      }
+      let arr18 = items.push(items[num]);
+      let arr19 = items1.push(h[num]);
     }
-    return arr2 === arr3;
   }
-  return true;
-}
-function compareAndFormatDifferences(currentStyle, arg1) {
-  let flag = shouldMatchAllProps;
-  if (shouldMatchAllProps === undefined) {
-    flag = false;
+  interpolateResult = (_mod1812.interpolate(arg0, items, items1, _mod1812.Extrapolation.CLAMP) + 1) % 1;
+};
+interpolateColorsHSV.__closure = { interpolate: _mod1812.interpolate, Extrapolation: _mod1812.Extrapolation, hsvToColor: _mod1686.hsvToColor };
+interpolateColorsHSV.__workletHash = 1574790978150;
+interpolateColorsHSV.__initData = { code: "function pnpm_interpolateColorTs1(value,inputRange,colors,options){const{interpolate,Extrapolation,hsvToColor}=this.__closure;let h=0;const{useCorrectedHSVInterpolation=true}=options;if(useCorrectedHSVInterpolation){const correctedInputRange=[inputRange[0]];const originalH=colors.h;const correctedH=[originalH[0]];for(let i=1;i<originalH.length;++i){const d=originalH[i]-originalH[i-1];if(originalH[i]>originalH[i-1]&&d>0.5){correctedInputRange.push(inputRange[i]);correctedInputRange.push(inputRange[i]+0.00001);correctedH.push(originalH[i]-1);correctedH.push(originalH[i]);}else if(originalH[i]<originalH[i-1]&&d<-0.5){correctedInputRange.push(inputRange[i]);correctedInputRange.push(inputRange[i]+0.00001);correctedH.push(originalH[i]+1);correctedH.push(originalH[i]);}else{correctedInputRange.push(inputRange[i]);correctedH.push(originalH[i]);}}h=(interpolate(value,correctedInputRange,correctedH,Extrapolation.CLAMP)+1)%1;}else{h=interpolate(value,inputRange,colors.h,Extrapolation.CLAMP);}const s=interpolate(value,inputRange,colors.s,Extrapolation.CLAMP);const v=interpolate(value,inputRange,colors.v,Extrapolation.CLAMP);const a=interpolate(value,inputRange,colors.a,Extrapolation.CLAMP);return hsvToColor(h,s,v,a);}" };
+const fn2 = function t(arr, arg1) {
+  closure_0 = arg1;
+  return arr.map((item) => Math.pow(item / 255, num));
+};
+fn2.__closure = {};
+fn2.__workletHash = 16826369876333;
+fn2.__initData = { code: "function pnpm_interpolateColorTs2(x,gamma){return x.map(function(v){return Math.pow(v/255,gamma);});}" };
+const fn3 = function r(sum, arg1) {
+  return Math.round(255 * Math.pow(sum, 1 / arg1));
+};
+fn3.__closure = {};
+fn3.__workletHash = 5856560656141;
+fn3.__initData = { code: "function pnpm_interpolateColorTs3(x,gamma){return Math.round(Math.pow(x,1/gamma)*255);}" };
+const fn4 = function a(arg0, items, arg2, gamma) {
+  gamma = gamma.gamma;
+  let num = 2.2;
+  if (undefined !== gamma) {
+    num = gamma;
   }
-  closure_0 = undefined;
-  closure_1 = undefined;
-  closure_2 = undefined;
-  const items = [];
-  let flag2 = true;
-  let flag3 = true;
-  const keys = Object.keys();
-  if (keys !== undefined) {
-    flag3 = flag2;
-    while (keys[tmp] !== undefined) {
-      let arr4 = currentStyle[tmp4];
-      let arr5 = arg1[tmp4];
-      if (typeof checkEqual === "function") {
-        let _Array = Array;
-        if (Array.isArray(arr5)) {
-          let _Array4 = Array;
-          let flag4 = false;
-          if (Array.isArray(arr4)) {
-            flag4 = false;
-            if (arr5.length === arr4.length) {
-              let num3 = 0;
-              flag4 = true;
-              if (0 < arr4.length) {
-                let arr2 = arr4[num3];
-                let arr3 = arr5[num3];
-                let sum1 = num3;
-                while (typeof checkEqual === "function") {
-                  let _Array5 = Array;
-                  if (Array.isArray(arr3)) {
-                    let _Array6 = Array;
-                    let flag6 = false;
-                    if (Array.isArray(arr2)) {
-                      flag6 = false;
-                      if (arr3.length === arr2.length) {
-                        let num2 = 0;
-                        flag6 = true;
-                        if (0 < arr2.length) {
-                          let sum = num2;
-                          flag6 = false;
-                          while (checkEqual(arr2[num2], arr3[num2])) {
-                            sum = sum + 1;
-                            num2 = sum;
-                            flag6 = true;
-                            if (sum >= arr2.length) {
-                              break;
-                            }
-                          }
-                        }
-                      }
-                    }
-                  } else {
-                    if (typeof arr2 === "object") {
-                      if (arr2) {
-                        flag6 = false;
-                        if (typeof arr3 === "object") {
-                          flag6 = false;
-                          if (arr3) {
-                            flag6 = true;
-                            let keys1 = Object.keys();
-                            if (keys1 !== undefined) {
-                              flag6 = true;
-                              let tmp17 = keys1[sum];
-                              while (tmp17 !== undefined) {
-                                flag6 = false;
-                                if (checkEqual(arr2[tmp17], arr3[tmp17])) {
-                                  continue;
-                                } else {
-                                  break;
-                                }
-                                break;
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                    flag6 = arr2 === arr3;
-                  }
-                  flag4 = false;
-                  if (flag6) {
-                    sum1 = sum1 + 1;
-                    num3 = sum1;
-                    flag4 = true;
-                  }
-                  continue;
-                }
-                let str4 = "Trying to call a non-function";
-                throw new TypeError("Trying to call a non-function");
-              }
-            }
-          }
+  ({ r, g, b } = arg2);
+  let mapped = b;
+  let tmp2 = g;
+  let tmp3 = r;
+  if (1 !== num) {
+    if (typeof fn2 === "function") {
+      if (typeof fn2 === "function") {
+        if (typeof fn2 === "function") {
+          mapped = b.map((item) => Math.pow(item / 255, num));
+          tmp2 = tmp5;
+          tmp3 = tmp4;
         } else {
-          if (typeof arr4 === "object") {
-            if (arr4) {
-              flag4 = false;
-              if (typeof arr5 === "object") {
-                flag4 = false;
-                if (arr5) {
-                  flag4 = true;
-                  let keys2 = Object.keys();
-                  if (keys2 !== undefined) {
-                    flag4 = true;
-                    let tmp7 = keys2[sum1];
-                    while (tmp7 !== undefined) {
-                      let arr6 = arr4[tmp7];
-                      let arr7 = arr5[tmp7];
-                      if (typeof checkEqual === "function") {
-                        let _Array2 = Array;
-                        if (Array.isArray(arr7)) {
-                          let _Array3 = Array;
-                          let flag5 = false;
-                          if (Array.isArray(arr6)) {
-                            flag5 = false;
-                            if (arr7.length === arr6.length) {
-                              let num = 0;
-                              flag5 = true;
-                              if (0 < arr6.length) {
-                                sum = num;
-                                flag5 = false;
-                                while (checkEqual(arr6[num], arr7[num])) {
-                                  sum = sum + 1;
-                                  num = sum;
-                                  flag5 = true;
-                                  if (sum >= arr6.length) {
-                                    break;
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        } else {
-                          if (typeof arr6 === "object") {
-                            if (arr6) {
-                              flag5 = false;
-                              if (typeof arr7 === "object") {
-                                flag5 = false;
-                                if (arr7) {
-                                  flag5 = true;
-                                  let keys3 = Object.keys();
-                                  if (keys3 !== undefined) {
-                                    flag5 = true;
-                                    let tmp10 = keys3[sum];
-                                    while (tmp10 !== undefined) {
-                                      flag5 = false;
-                                      if (checkEqual(arr6[tmp10], arr7[tmp10])) {
-                                        continue;
-                                      } else {
-                                        break;
-                                      }
-                                      break;
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                          flag5 = arr6 === arr7;
-                        }
-                        flag4 = false;
-                        if (flag5) {
-                          continue;
-                        } else {
-                          break;
-                        }
-                        break;
-                      } else {
-                        let str3 = "Trying to call a non-function";
-                        throw new TypeError("Trying to call a non-function");
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-          flag4 = arr4 === arr5;
+          throw new TypeError("Trying to call a non-function");
         }
-        if (flag4) {
-          continue;
-        } else {
-          obj = { property: tmp4, current: currentStyle[tmp4], expect: arg1[tmp4] };
-          let arr = items.push(obj);
-          flag2 = false;
-          continue;
-        }
-        continue;
       } else {
-        let str2 = "Trying to call a non-function";
         throw new TypeError("Trying to call a non-function");
       }
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
   }
-  let flag7 = flag3;
-  if (flag) {
-    const _Object = Object;
-    const _Object2 = Object;
-    flag7 = flag3;
-    if (Object.keys(currentStyle).length !== Object.keys(arg1).length) {
-      flag7 = false;
-      const keys4 = Object.keys();
-      if (keys4 !== undefined) {
-        flag7 = false;
-        const first = keys4[0];
-        while (first !== undefined) {
-          if (undefined !== arg1[first]) {
-            continue;
-          } else {
-            let obj2 = { property: first, current: currentStyle[first], expect: arg1[first] };
-            let arr9 = items.push(obj2);
-            continue;
-          }
-          continue;
-        }
-      }
-    }
-  }
-  if (flag7) {
-    const obj3 = {
-      message() {
-          return "ok";
-        },
-      pass: true
-    };
-    return obj3;
+  const interpolateResult = _mod1812.interpolate(arg0, items, tmp3, _mod1812.Extrapolation.CLAMP);
+  const interpolateResult1 = _mod1812.interpolate(arg0, items, tmp2, _mod1812.Extrapolation.CLAMP);
+  const interpolateResult2 = _mod1812.interpolate(arg0, items, mapped, _mod1812.Extrapolation.CLAMP);
+  const interpolateResult3 = _mod1812.interpolate(arg0, items, arg2.a, _mod1812.Extrapolation.CLAMP);
+  if (1 === num) {
+    const tmp6Result = _mod1686;
+    let rgbaColorResult = tmp6Result.rgbaColor(interpolateResult, interpolateResult1, interpolateResult2, interpolateResult3);
   } else {
-    const _JSON = JSON;
-    closure_0 = JSON.stringify(currentStyle);
-    const _JSON2 = JSON;
-    closure_1 = JSON.stringify(arg1);
-    const mapped = items.map((expect) => {
-      const json = JSON.stringify(expect.expect);
-      return "- '" + expect.property + "' should be " + json + ", but is " + JSON.stringify(expect.current);
-    });
-    closure_2 = mapped.join("\n");
-    const obj4 = {
-      message() {
-          return "Expected: " + closure_1 + "\nReceived: " + closure_0 + "\n\nDifferences:\n" + closure_2;
-        },
-      pass: false
-    };
-    return obj4;
+    if (typeof fn3 === "function") {
+      const _Math = Math;
+      const _Math2 = Math;
+      const rounded = Math.round(255 * Math.pow(interpolateResult, 1 / num));
+      if (typeof fn3 === "function") {
+        const _Math3 = Math;
+        const _Math4 = Math;
+        const rounded1 = Math.round(255 * Math.pow(interpolateResult1, 1 / num));
+        if (typeof fn3 === "function") {
+          const _Math5 = Math;
+          const _Math6 = Math;
+          rgbaColorResult = tmp27(rounded, rounded1, Math.round(255 * Math.pow(interpolateResult2, 1 / num)), interpolateResult3);
+        } else {
+          throw new TypeError("Trying to call a non-function");
+        }
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+    const tmp6Result2 = _mod1686;
   }
-}
-let closure_8 = Math.round(1000 / obj.fps);
-if (!module_1641.isJest()) {
-  require = () => {
-    const reanimatedError = new _mod1649.ReanimatedError("`setUpTests` is available only in Jest environment.");
-    throw reanimatedError;
-  };
-}
-
-export const withReanimatedTimer = (fn) => {
-  console.warn("This method is deprecated, you should define your own before and after test hooks to enable jest.useFakeTimers(). Check out the documentation for details on testing");
-  const fakeTimers = globalThis.jest.useFakeTimers();
-  fn();
-  globalThis.jest.runOnlyPendingTimers();
-  const realTimers = globalThis.jest.useRealTimers();
+  return rgbaColorResult;
 };
-export const advanceAnimationByTime = () => {
-  let tmp = arg0;
-  if (arg0 === undefined) {
-    tmp = closure_8;
+let obj = { interpolate: _mod1812.interpolate, Extrapolation: _mod1812.Extrapolation, hsvToColor: _mod1686.hsvToColor };
+fn4.__closure = { toLinearSpace: fn2, interpolate: _mod1812.interpolate, Extrapolation: _mod1812.Extrapolation, rgbaColor: _mod1686.rgbaColor, toGammaSpace: fn3 };
+fn4.__workletHash = 13883480600753;
+fn4.__initData = { code: "function pnpm_interpolateColorTs4(value,inputRange,colors,options){const{toLinearSpace,interpolate,Extrapolation,rgbaColor,toGammaSpace}=this.__closure;const{gamma=2.2}=options;let{r:outputR,g:outputG,b:outputB}=colors;if(gamma!==1){outputR=toLinearSpace(outputR,gamma);outputG=toLinearSpace(outputG,gamma);outputB=toLinearSpace(outputB,gamma);}const r=interpolate(value,inputRange,outputR,Extrapolation.CLAMP);const g=interpolate(value,inputRange,outputG,Extrapolation.CLAMP);const b=interpolate(value,inputRange,outputB,Extrapolation.CLAMP);const a=interpolate(value,inputRange,colors.a,Extrapolation.CLAMP);if(gamma===1){return rgbaColor(r,g,b,a);}return rgbaColor(toGammaSpace(r,gamma),toGammaSpace(g,gamma),toGammaSpace(b,gamma),a);}" };
+const fn5 = function n(arg0, items, l, arg3) {
+  const interpolateResult = _mod1812.interpolate(arg0, items, l.l, _mod1812.Extrapolation.CLAMP);
+  const interpolateResult1 = _mod1812.interpolate(arg0, items, l.a, _mod1812.Extrapolation.CLAMP);
+  const interpolateResult2 = _mod1812.interpolate(arg0, items, l.b, _mod1812.Extrapolation.CLAMP);
+  const convert = convertLrgbToOklabDefault.oklab.convert;
+  const interpolateResult3 = _mod1812.interpolate(arg0, items, l.alpha, _mod1812.Extrapolation.CLAMP);
+  ({ r, g, b, alpha } = convert.toRgb({ l: interpolateResult, a: interpolateResult1, b: interpolateResult2, alpha: _mod1812.interpolate(arg0, items, l.alpha, _mod1812.Extrapolation.CLAMP) }));
+  const toRgbResult = convert.toRgb({ l: interpolateResult, a: interpolateResult1, b: interpolateResult2, alpha: _mod1812.interpolate(arg0, items, l.alpha, _mod1812.Extrapolation.CLAMP) });
+  return _mod1686.rgbaColor(r, g, b, alpha);
+};
+let obj2 = { toLinearSpace: fn2, interpolate: _mod1812.interpolate, Extrapolation: _mod1812.Extrapolation, rgbaColor: _mod1686.rgbaColor, toGammaSpace: fn3 };
+fn5.__closure = { interpolate: _mod1812.interpolate, Extrapolation: _mod1812.Extrapolation, culori: convertLrgbToOklabDefault, rgbaColor: _mod1686.rgbaColor };
+fn5.__workletHash = 7788654685113;
+fn5.__initData = { code: "function pnpm_interpolateColorTs5(value,inputRange,colors,_options){const{interpolate,Extrapolation,culori,rgbaColor}=this.__closure;const l=interpolate(value,inputRange,colors.l,Extrapolation.CLAMP);const a=interpolate(value,inputRange,colors.a,Extrapolation.CLAMP);const b=interpolate(value,inputRange,colors.b,Extrapolation.CLAMP);const alpha=interpolate(value,inputRange,colors.alpha,Extrapolation.CLAMP);const{r:_r,g:_g,b:_b,alpha:_alpha}=culori.oklab.convert.toRgb({l:l,a:a,b:b,alpha:alpha});return rgbaColor(_r,_g,_b,_alpha);}" };
+const fn6 = function l(arg0, fn) {
+  const ch1 = [];
+  const ch2 = [];
+  const ch3 = [];
+  const alpha = [];
+  for (let num = 0; num < arg0.length; num = num + 1) {
+    let obj = _mod1686;
+    let processColorResult = obj.processColor(arg0[num]);
+    if (typeof processColorResult === "number") {
+      let obj2 = { r: null, g: null, b: null };
+      let tmpResult = _mod1686;
+      obj2.r = tmpResult.red(processColorResult);
+      let tmpResult4 = _mod1686;
+      obj2.g = tmpResult4.green(processColorResult);
+      let tmpResult5 = _mod1686;
+      obj2.b = tmpResult5.blue(processColorResult);
+      let tmp5 = fn(obj2);
+      let arr = ch1.push(tmp5.ch1);
+      let arr2 = ch2.push(tmp5.ch2);
+      let arr3 = ch3.push(tmp5.ch3);
+      let tmpResult6 = _mod1686;
+      let arr4 = alpha.push(tmpResult6.opacity(processColorResult));
+    }
   }
-  console.warn("This method is deprecated, use jest.advanceTimersByTime directly");
-  globalThis.jest.advanceTimersByTime(tmp);
-  globalThis.jest.runOnlyPendingTimers();
+  return { ch1, ch2, ch3, alpha };
 };
-export const advanceAnimationByFrame = (arg0) => {
-  console.warn("This method is deprecated, use jest.advanceTimersByTime directly");
-  globalThis.jest.advanceTimersByTime(arg0 * closure_8);
-  globalThis.jest.runOnlyPendingTimers();
+const color = { processColor: _mod1686.processColor, red: _mod1686.red, green: _mod1686.green, blue: _mod1686.blue, opacity: _mod1686.opacity };
+fn6.__closure = color;
+fn6.__workletHash = 8764168362190;
+fn6.__initData = { code: "function pnpm_interpolateColorTs6(colors,convFromRgb){const{processColor,red,green,blue,opacity}=this.__closure;const ch1=[];const ch2=[];const ch3=[];const alpha=[];for(let i=0;i<colors.length;i++){const color=colors[i];const processedColor=processColor(color);if(typeof processedColor==='number'){const convertedColor=convFromRgb({r:red(processedColor),g:green(processedColor),b:blue(processedColor)});ch1.push(convertedColor.ch1);ch2.push(convertedColor.ch2);ch3.push(convertedColor.ch3);alpha.push(opacity(processedColor));}}return{ch1:ch1,ch2:ch2,ch3:ch3,alpha:alpha};}" };
+const fn7 = function c(arg0) {
+  const tmp = fn6(arg0, (ch1) => ({ ch1: ch1.r, ch2: ch1.g, ch3: ch1.b }));
+  return { r: tmp.ch1, g: tmp.ch2, b: tmp.ch3, a: tmp.alpha };
 };
-export const setUpTests = () => {
-  obj = arg0;
-  if (arg0 === undefined) {
+fn7.__closure = { _splitColorsIntoChannels: fn6 };
+fn7.__workletHash = 937749076324;
+fn7.__initData = { code: "function pnpm_interpolateColorTs7(colors){const{_splitColorsIntoChannels}=this.__closure;const{ch1:ch1,ch2:ch2,ch3:ch3,alpha:alpha}=_splitColorsIntoChannels(colors,function(color){return{ch1:color.r,ch2:color.g,ch3:color.b};});return{r:ch1,g:ch2,b:ch3,a:alpha};}" };
+const fn8 = function p(arg0) {
+  const tmp = fn6(arg0, (arg0) => {
+    const RGBtoHSVResult = _mod1686.RGBtoHSV(arg0.r, arg0.g, arg0.b);
+    return { ch1: RGBtoHSVResult.h, ch2: RGBtoHSVResult.s, ch3: RGBtoHSVResult.v };
+  });
+  return { h: tmp.ch1, s: tmp.ch2, v: tmp.ch3, a: tmp.alpha };
+};
+let obj3 = { interpolate: _mod1812.interpolate, Extrapolation: _mod1812.Extrapolation, culori: convertLrgbToOklabDefault, rgbaColor: _mod1686.rgbaColor };
+fn8.__closure = { _splitColorsIntoChannels: fn6, RGBtoHSV: _mod1686.RGBtoHSV };
+fn8.__workletHash = 11798906675452;
+fn8.__initData = { code: "function pnpm_interpolateColorTs8(colors){const{_splitColorsIntoChannels,RGBtoHSV}=this.__closure;const{ch1:ch1,ch2:ch2,ch3:ch3,alpha:alpha}=_splitColorsIntoChannels(colors,function(color){const hsvColor=RGBtoHSV(color.r,color.g,color.b);return{ch1:hsvColor.h,ch2:hsvColor.s,ch3:hsvColor.v};});return{h:ch1,s:ch2,v:ch3,a:alpha};}" };
+const fn9 = function i(arg0) {
+  const tmp = fn6(arg0, (arg0) => {
+    const convert = convertLrgbToOklabDefault.oklab.convert;
+    const fromRgbResult = convert.fromRgb(arg0);
+    return { ch1: fromRgbResult.l, ch2: fromRgbResult.a, ch3: fromRgbResult.b };
+  });
+  return { l: tmp.ch1, a: tmp.ch2, b: tmp.ch3, alpha: tmp.alpha };
+};
+let obj4 = { _splitColorsIntoChannels: fn6, RGBtoHSV: _mod1686.RGBtoHSV };
+fn9.__closure = { _splitColorsIntoChannels: fn6, culori: convertLrgbToOklabDefault };
+fn9.__workletHash = 11214827752418;
+fn9.__initData = { code: "function pnpm_interpolateColorTs9(colors){const{_splitColorsIntoChannels,culori}=this.__closure;const{ch1:ch1,ch2:ch2,ch3:ch3,alpha:alpha}=_splitColorsIntoChannels(colors,function(color){const labColor=culori.oklab.convert.fromRgb(color);return{ch1:labColor.l,ch2:labColor.a,ch3:labColor.b};});return{l:ch1,a:ch2,b:ch3,alpha:alpha};}" };
+function interpolateColor(arg0, arg1, arg2) {
+  let str = arg3;
+  if (arg3 === undefined) {
+    str = "RGB";
+  }
+  let obj = arg4;
+  if (arg4 === undefined) {
     obj = {};
   }
-  let _default = global.expect;
-  if (undefined === _default) {
-    const tmp2 = require("expect");
-    _default = tmp2;
-    if (!tmp3) {
-      _default = tmp2.default;
+  if ("HSV" === str) {
+    if (typeof fn8 === "function") {
+      const obj7 = { h: null, s: null, v: null, a: null };
+      ({ ch1: obj4.h, ch2: obj4.s, ch3: obj4.v, alpha: obj4.a } = fn6(arg2, (arg0) => {
+        const RGBtoHSVResult = _mod1686.RGBtoHSV(arg0.r, arg0.g, arg0.b);
+        return { ch1: RGBtoHSVResult.h, ch2: RGBtoHSVResult.s, ch3: RGBtoHSVResult.v };
+      }));
+      return tmp24(arg0, arg1, obj7, obj);
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    tmp3 = undefined !== tmp2 && undefined !== tmp2.extend;
+  } else if ("RGB" === str) {
+    if (typeof fn7 === "function") {
+      const obj8 = { r: null, g: null, b: null, a: null };
+      ({ ch1: obj3.r, ch2: obj3.g, ch3: obj3.b, alpha: obj3.a } = fn6(arg2, (ch1) => ({ ch1: ch1.r, ch2: ch1.g, ch3: ch1.b })));
+      return tmp16(arg0, arg1, obj8, obj);
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  } else if ("LAB" === str) {
+    if (typeof fn9 === "function") {
+      const obj9 = { l: null, a: null, b: null, alpha: null };
+      ({ ch1: obj2.l, ch2: obj2.a, ch3: obj2.b, alpha: obj2.alpha } = fn6(arg2, (arg0) => {
+        const convert = convertLrgbToOklabDefault.oklab.convert;
+        const fromRgbResult = convert.fromRgb(arg0);
+        return { ch1: fromRgbResult.l, ch2: fromRgbResult.a, ch3: fromRgbResult.b };
+      }));
+      return tmp8(arg0, arg1, obj9, obj);
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  } else {
+    const _HermesInternal = HermesInternal;
+    const reanimatedError = new _mod1654.ReanimatedError("Invalid color space provided: " + str + ". Supported values are: ['RGB', 'HSV', 'LAB'].");
+    throw reanimatedError;
   }
-  let merged = Object.assign(obj);
-  const merged1 = Object.assign(obj);
-  closure_8 = Math.round(1000 / {}.fps);
-  _default.extend({
-    toHaveAnimatedProps(props, arg1) {
-      if (props.props.jestAnimatedProps) {
-        const _Object = Object;
-        if (0 === Object.keys(props.props.jestAnimatedProps.value).length) {
-          const obj2 = {
-            message() {
-                  return "Component doesn't have props.";
-                },
-            pass: false
-          };
-          let tmp7 = obj2;
-        }
-        return tmp7;
-      }
-      value = undefined;
-      if (props.props.jestAnimatedProps != null) {
-        value = iter.value;
-      }
-      obj = {};
-      if (value) {
-        const merged = Object.assign(value);
-        let tmp3 = obj;
-      } else {
-        tmp3 = obj;
-      }
-      tmp7 = compareAndFormatDifferences(tmp3, arg1);
-    }
-  });
-  _default.extend({
-    toHaveAnimatedStyle(props, arg1) {
-      obj = arg2;
-      if (arg2 === undefined) {
-        obj = {};
-      }
-      if (props.props.style) {
-        let obj2 = compareAndFormatDifferences(getCurrentStyle(props), arg1, obj.shouldMatchAllProps);
-      } else {
-        obj2 = {
-          message() {
-              return "Component doesn't have a style.";
-            },
-          pass: false
-        };
-      }
-      return obj2;
-    }
-  });
-  let obj2 = {};
-  const obj3 = {
-    toHaveAnimatedProps(props, arg1) {
-      if (props.props.jestAnimatedProps) {
-        const _Object = Object;
-        if (0 === Object.keys(props.props.jestAnimatedProps.value).length) {
-          const obj2 = {
-            message() {
-                  return "Component doesn't have props.";
-                },
-            pass: false
-          };
-          let tmp7 = obj2;
-        }
-        return tmp7;
-      }
-      value = undefined;
-      if (props.props.jestAnimatedProps != null) {
-        value = iter.value;
-      }
-      obj = {};
-      if (value) {
-        const merged = Object.assign(value);
-        let tmp3 = obj;
-      } else {
-        tmp3 = obj;
-      }
-      tmp7 = compareAndFormatDifferences(tmp3, arg1);
-    }
-  };
-  const obj4 = {
-    toHaveAnimatedStyle(props, arg1) {
-      obj = arg2;
-      if (arg2 === undefined) {
-        obj = {};
-      }
-      if (props.props.style) {
-        let obj2 = compareAndFormatDifferences(getCurrentStyle(props), arg1, obj.shouldMatchAllProps);
-      } else {
-        obj2 = {
-          message() {
-              return "Component doesn't have a style.";
-            },
-          pass: false
-        };
-      }
-      return obj2;
-    }
-  };
+}
+interpolateColor.__closure = { interpolateColorsHSV, getInterpolateHSV: fn8, interpolateColorsRGB: fn4, getInterpolateRGB: fn7, interpolateColorsLAB: fn5, getInterpolateLAB: fn9 };
+interpolateColor.__workletHash = 10004340589678;
+interpolateColor.__initData = { code: "function interpolateColor_Pnpm_interpolateColorTs10(value,inputRange,outputRange,colorSpace='RGB',options={}){const{interpolateColorsHSV,getInterpolateHSV,interpolateColorsRGB,getInterpolateRGB,interpolateColorsLAB,getInterpolateLAB}=this.__closure;if(colorSpace==='HSV'){return interpolateColorsHSV(value,inputRange,getInterpolateHSV(outputRange),options);}else if(colorSpace==='RGB'){return interpolateColorsRGB(value,inputRange,getInterpolateRGB(outputRange),options);}else if(colorSpace==='LAB'){return interpolateColorsLAB(value,inputRange,getInterpolateLAB(outputRange),options);}throw new ReanimatedError(\"Invalid color space provided: \"+colorSpace+\". Supported values are: ['RGB', 'HSV', 'LAB'].\");}" };
+const obj6 = { RGB: 0, [0]: "RGB", HSV: 1, [1]: "HSV", LAB: 2, [2]: "LAB" };
+
+export const Extrapolate = _mod1812.Extrapolation;
+export { interpolateColor };
+export const ColorSpace = obj6;
+export const useInterpolateConfig = function useInterpolateConfig(inputRange, outputRange) {
+  let RGB = arg2;
+  if (arg2 === undefined) {
+    RGB = obj6.RGB;
+  }
+  let obj = arg3;
+  if (arg3 === undefined) {
+    obj = {};
+  }
+  const obj3 = { inputRange, outputRange, colorSpace: RGB, cache: null, options: null };
+  const obj2 = _mod1795;
+  obj3.cache = runOnRuntime.makeMutable(null);
+  obj3.options = obj;
+  return obj2.useSharedValue(obj3);
 };
-export const getAnimatedStyle = (props) => getCurrentStyle(props);
