@@ -1,16 +1,17 @@
 // _runtime/metro/01580__.js
-import PreventRemoveContext from "../01555_PreventRemoveContext.js";
+import CurrentRenderContext from "../01539_CurrentRenderContext.js";
 import noop from "00019__.js";
 
 require = arg1;
 
-export const usePreventRemoveContext = function usePreventRemoveContext() {
-  const context = noop.useContext(PreventRemoveContext.PreventRemoveContext);
-  if (null == context) {
-    const _Error = Error;
-    const error = new Error("Couldn't find the prevent remove context. Is your component inside NavigationContent?");
-    throw error;
-  } else {
-    return context;
+export const useCurrentRender = function useCurrentRender(arg0) {
+  ({ state, navigation } = arg0);
+  const context = noop.useContext(CurrentRenderContext.CurrentRenderContext);
+  let isFocusedResult = context;
+  if (context) {
+    isFocusedResult = navigation.isFocused();
+  }
+  if (isFocusedResult) {
+    context.options = arg0.descriptors[state.routes[state.index].key].options;
   }
 };

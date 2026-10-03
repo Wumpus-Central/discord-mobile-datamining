@@ -1,13 +1,13 @@
 // _runtime/metro/14846__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/quests/native/images",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
-  scales: [1, 2, 3],
-  hash: "d34103fd5e89ba1cd4ca70f2429c1570",
-  name: "ic_wreath",
+  scales: [2, 3],
+  hash: "f8bf13e5289aa31d46196df3283f80c3",
+  name: "FullscreenEnterIcon",
   type: "png",
 });

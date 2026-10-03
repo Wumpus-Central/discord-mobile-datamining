@@ -1,15 +1,15 @@
 // _runtime/metro/04310__.js
-import module_4302_mod from "04302__.js";
-import requiredArgs_mod from "../03948_requiredArgs.js";
+import startOfQuarter_mod from "../04170_startOfQuarter.js";
+import requiredArgs_mod from "../03959_requiredArgs.js";
 
-let module_4302 = module_4302_mod;
-if (!module_4302) {
-  const obj = { default: module_4302 };
+let startOfQuarter = startOfQuarter_mod;
+if (!startOfQuarter) {
+  const obj = { default: startOfQuarter };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4302;
+  tmp3 = startOfQuarter;
 }
-module_4302 = tmp3;
+startOfQuarter = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -19,8 +19,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisYear(arg0) {
-  requiredArgs.default(1, arguments);
-  return module_4302.default(arg0, Date.now());
+export default function isSameQuarter(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = startOfQuarter.default(arg0);
+  const time = defaultResult1.getTime();
+  return time === startOfQuarter.default(arg1).getTime();
 };
 export default exports.default;

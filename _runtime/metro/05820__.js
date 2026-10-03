@@ -1,13 +1,13 @@
 // _runtime/metro/05820__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
-  scales: [1],
-  hash: "322f5aec10ee0e2c3d6aad9844b5f00f",
-  name: "img_account_sync_facebook_light_and_dark",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "36842ff43e56d815a37333dfec1ce713",
+  name: "AnnouncementsIcon",
   type: "png",
 });

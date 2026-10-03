@@ -1,15 +1,14 @@
 // _runtime/metro/08176__.js
 import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _modDef8119 from "08119__.js";
-import unitsDefault from "../08173_units.js";
-import _modDef8178 from "08178__.js";
+import _modDef8175 from "08175__.js";
+import _modDef8177 from "08177__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const Mask = fn;
+const FeColorMatrix = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,12 +29,12 @@ function _isNativeReflectConstruct() {
 }
 _possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class Mask {
+class FeColorMatrix {
   constructor() {
     self = this;
-    tmp = closure_3(this, Mask);
+    tmp = closure_3(this, FeColorMatrix);
     tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(Mask);
+    obj = hasOwnProperty(FeColorMatrix);
     tmp3 = closure_4;
     if (closure_7()) {
       tmp7 = globalThis;
@@ -50,57 +49,23 @@ class Mask {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Mask, _modDef8119);
+_inherits(FeColorMatrix, _modDef8175);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
-    const props = this.props;
-    ({ maskUnits, maskContentUnits, style } = props);
-    const size = {
-      x: props.x,
-      y: props.y,
-      width: props.width,
-      height: props.height,
-      maskUnits: null,
-      maskContentUnits: null,
-      maskType: null,
-    };
-    let num = 0;
-    if (undefined !== maskUnits) {
-      num = unitsDefault[maskUnits];
-    }
-    size.maskUnits = num;
-    let num2 = 1;
-    if (undefined !== maskContentUnits) {
-      num2 = unitsDefault[maskContentUnits];
-    }
-    size.maskContentUnits = num2;
-    let str;
-    if (props != null) {
-      str = props.maskType;
-    }
-    if (!str) {
-      let maskType;
-      if (style != null) {
-        maskType = style.maskType;
-      }
-      str = maskType;
-    }
-    if (!str) {
-      str = "luminance";
-    }
-    size.maskType = Mask(8177).maskType[str];
     const obj = {
       ref(arg0) {
         return self.refMethod(arg0);
       },
     };
-    const merged = Object.assign(Mask(8110).withoutXY(this, props));
-    const merged1 = Object.assign(size);
-    obj.children = props.children;
+    const merged = Object.assign(FeColorMatrix(8174).extractFilter(this.props));
+    const obj2 = FeColorMatrix(8174);
+    const merged1 = Object.assign(FeColorMatrix(8174).extractIn(this.props));
+    const obj3 = FeColorMatrix(8174);
+    const merged2 = Object.assign(FeColorMatrix(8174).extractFeColorMatrix(this.props));
     return (
-      <tmp8
+      <tmp
         ref={function ref(arg0) {
           return self.refMethod(arg0);
         }}
@@ -109,8 +74,12 @@ const entry = {
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Mask, items);
-importDefaultResultResult.displayName = "Mask";
-importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
+const importDefaultResultResult = _createClass(FeColorMatrix, items);
+importDefaultResultResult.displayName = "FeColorMatrix";
+let obj = {};
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+obj.type = "matrix";
+obj.values = "";
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

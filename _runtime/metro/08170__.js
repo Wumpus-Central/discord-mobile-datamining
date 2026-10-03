@@ -1,13 +1,14 @@
 // _runtime/metro/08170__.js
-import _modDef8119 from "08119__.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _modDef8160 from "08160__.js";
+import _modDef8171 from "08171__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const LinearGradient = importDefault;
+const Ellipse = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,15 +27,16 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
+_possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class LinearGradient {
+class Ellipse {
   constructor() {
     self = this;
-    tmp = c2(this, LinearGradient);
-    tmp2 = closure_4;
-    obj = closure_4(LinearGradient);
-    tmp3 = closure_3;
-    if (metroRequire()) {
+    tmp = closure_3(this, Ellipse);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(Ellipse);
+    tmp3 = closure_4;
+    if (closure_7()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -47,15 +49,27 @@ class LinearGradient {
     return tmp3(self, constructResult);
   }
 }
-_inherits(LinearGradient, _modDef8119);
+_inherits(Ellipse, _modDef8160);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
     const props = this.props;
-    const merged = Object.assign({ x1: props.x1, y1: props.y1, x2: props.x2, y2: props.y2 });
-    const merged1 = Object.assign(LinearGradient(8172)(props, this));
-    return jsx(LinearGradient(8171), {
+    const obj = {};
+    ({ cx, cy, rx, ry } = props);
+    const merged = Object.assign(Ellipse(8151).extract(this, props));
+    obj.cx = cx;
+    obj.cy = cy;
+    obj.rx = rx;
+    obj.ry = ry;
+    const obj2 = Ellipse(8151);
+    const obj3 = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      },
+    };
+    const merged1 = Object.assign(obj);
+    return jsx(_modDef8171, {
       ref(arg0) {
         return self.refMethod(arg0);
       },
@@ -63,8 +77,8 @@ const entry = {
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(LinearGradient, items);
-importDefaultResultResult.displayName = "LinearGradient";
-importDefaultResultResult.defaultProps = { x1: "0%", y1: "0%", x2: "100%", y2: "0%" };
+const importDefaultResultResult = _createClass(Ellipse, items);
+importDefaultResultResult.displayName = "Ellipse";
+importDefaultResultResult.defaultProps = { cx: 0, cy: 0, rx: 0, ry: 0 };
 
 export default importDefaultResultResult;

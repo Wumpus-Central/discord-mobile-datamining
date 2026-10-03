@@ -1,19 +1,33 @@
 // _runtime/metro/00770__.js
-import _mod769 from "00769__.js";
+import _mod713 from "00713__.js";
+import forEachEnvelopeItem from "../00740_forEachEnvelopeItem.js";
 
 require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const getTraceMetaTags = function getTraceMetaTags(arg0) {
-  let traceData = arg0;
-  if (!arg0) {
-    traceData = _mod769.getTraceData();
+export const createCheckInEnvelope = function createCheckInEnvelope(arg0, trace, sdk, arg3, url) {
+  const obj = { sent_at: new Date().toISOString() };
+  sdk = undefined;
+  if (sdk != null) {
+    sdk = sdk.sdk;
   }
-  const entries = Object.entries(traceData);
-  const mapped = entries.map((item) => {
-    [tmp, tmp2] = item;
-    return '<meta name="' + tmp + '" content="' + tmp2 + '"/>';
-  });
-  return mapped.join("\n");
+  if (sdk) {
+    const obj2 = { name: sdk.sdk.name, version: sdk.sdk.version };
+    obj.sdk = obj2;
+  }
+  let tmp2 = arg3;
+  if (arg3) {
+    tmp2 = url;
+  }
+  if (tmp2) {
+    obj.dsn = _mod713.dsnToString(url);
+  }
+  if (trace) {
+    obj.trace = trace;
+  }
+  const items = [{ type: "check_in" }, arg0];
+  const date = new Date();
+  const items1 = [items];
+  return forEachEnvelopeItem.createEnvelope(obj, items1);
 };

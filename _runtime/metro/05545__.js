@@ -1,13 +1,13 @@
 // _runtime/metro/05545__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "d71daeef64b152476fb485143e6c3f6e",
-  name: "TextLockIcon",
-  type: "png",
+  httpServerLocation: "/assets/images/platforms",
+  width: 1005,
+  height: 1005,
+  scales: [1],
+  hash: "3810c84a1fa3c892d5176145d44c5346",
+  name: "img_account_sync_instagram_light_and_dark",
+  type: "svg",
 });

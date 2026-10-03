@@ -1,138 +1,177 @@
 // _runtime/metro/01815__.js
-import _mod1642 from "01642__.js";
-import module_1641_mod from "01641__.js";
+const channelFromLrgb = function r() {
+  let num = arg0;
+  if (arg0 === undefined) {
+    num = 0;
+  }
+  const absolute = Math.abs(num);
+  if (absolute > 0.0031308) {
+    const _Math = Math;
+    const _Math2 = Math;
+    let result = (Math.sign(num) || 1) * (1.055 * Math.pow(absolute, 0.4166666666666667) - 0.055);
+    const tmp3 = Math.sign(num) || 1;
+  } else {
+    result = 12.92 * num;
+  }
+  return result;
+};
+channelFromLrgb.__closure = {};
+channelFromLrgb.__workletHash = 9046778946531;
+channelFromLrgb.__initData = {
+  code: "function pnpm_lrgbTs1(c=0){const abs=Math.abs(c);if(abs>0.0031308){return(Math.sign(c)||1)*(1.055*Math.pow(abs,1/2.4)-0.055);}return c*12.92;}",
+};
+const fn2 = function n(arg0) {
+  ({ r, g, b } = arg0);
+  if (typeof fn === "function") {
+    if (r === undefined) {
+      r = 0;
+    }
+    const _Math = Math;
+    const absolute = Math.abs(r);
+    if (absolute > 0.0031308) {
+      const _Math2 = Math;
+      const _Math3 = Math;
+      let result = (Math.sign(r) || 1) * (1.055 * Math.pow(absolute, 0.4166666666666667) - 0.055);
+      const tmp7 = Math.sign(r) || 1;
+    } else {
+      result = 12.92 * r;
+    }
+    const obj = { r: result, g: null, b: null, alpha: null };
+    if (typeof fn === "function") {
+      if (g === undefined) {
+        g = 0;
+      }
+      const _Math4 = Math;
+      const absolute1 = Math.abs(g);
+      if (absolute1 > 0.0031308) {
+        const _Math5 = Math;
+        const _Math6 = Math;
+        let result1 = (Math.sign(g) || 1) * (1.055 * Math.pow(absolute1, 0.4166666666666667) - 0.055);
+        const tmp11 = Math.sign(g) || 1;
+      } else {
+        result1 = 12.92 * g;
+      }
+      obj.g = result1;
+      if (typeof fn === "function") {
+        if (b === undefined) {
+          b = 0;
+        }
+        const _Math7 = Math;
+        const absolute2 = Math.abs(b);
+        if (absolute2 > 0.0031308) {
+          const _Math8 = Math;
+          const _Math9 = Math;
+          let result2 = (Math.sign(b) || 1) * (1.055 * Math.pow(absolute2, 0.4166666666666667) - 0.055);
+          const tmp15 = Math.sign(b) || 1;
+        } else {
+          result2 = 12.92 * b;
+        }
+        obj.b = result2;
+        obj.alpha = tmp;
+        return obj;
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+};
+fn2.__closure = { channelFromLrgb };
+fn2.__workletHash = 2514333579516;
+fn2.__initData = {
+  code: "function pnpm_lrgbTs2({r:r,g:g,b:b,alpha:alpha}){const{channelFromLrgb}=this.__closure;return{r:channelFromLrgb(r),g:channelFromLrgb(g),b:channelFromLrgb(b),alpha:alpha};}",
+};
+const fn3 = function t() {
+  let num = arg0;
+  if (arg0 === undefined) {
+    num = 0;
+  }
+  const absolute = Math.abs(num);
+  if (absolute <= 0.04045) {
+    let result = num / 12.92;
+  } else {
+    const _Math = Math;
+    const _Math2 = Math;
+    result = (Math.sign(num) || 1) * Math.pow((absolute + 0.055) / 1.055, 2.4);
+    const tmp2 = Math.sign(num) || 1;
+  }
+  return result;
+};
+fn3.__closure = {};
+fn3.__workletHash = 7878321042954;
+fn3.__initData = {
+  code: "function pnpm_lrgbTs3(c=0){const abs=Math.abs(c);if(abs<=0.04045){return c/12.92;}return(Math.sign(c)||1)*Math.pow((abs+0.055)/1.055,2.4);}",
+};
+let obj = { convert: null };
+const obj2 = { fromRgb: null, toRgb: fn2 };
+const fn4 = function o(arg0) {
+  ({ r, g, b } = arg0);
+  if (typeof fn3 === "function") {
+    if (r === undefined) {
+      r = 0;
+    }
+    const _Math = Math;
+    const absolute = Math.abs(r);
+    if (absolute <= 0.04045) {
+      let result = r / 12.92;
+    } else {
+      const _Math2 = Math;
+      const _Math3 = Math;
+      result = (Math.sign(r) || 1) * Math.pow((absolute + 0.055) / 1.055, 2.4);
+      const tmp5 = Math.sign(r) || 1;
+    }
+    const obj = { r: result, g: null, b: null, alpha: null };
+    if (typeof fn3 === "function") {
+      if (g === undefined) {
+        g = 0;
+      }
+      const _Math4 = Math;
+      const absolute1 = Math.abs(g);
+      if (absolute1 <= 0.04045) {
+        let result1 = g / 12.92;
+      } else {
+        const _Math5 = Math;
+        const _Math6 = Math;
+        result1 = (Math.sign(g) || 1) * Math.pow((absolute1 + 0.055) / 1.055, 2.4);
+        const tmp9 = Math.sign(g) || 1;
+      }
+      obj.g = result1;
+      if (typeof fn3 === "function") {
+        if (b === undefined) {
+          b = 0;
+        }
+        const _Math7 = Math;
+        const absolute2 = Math.abs(b);
+        if (absolute2 <= 0.04045) {
+          let result2 = b / 12.92;
+        } else {
+          const _Math8 = Math;
+          const _Math9 = Math;
+          result2 = (Math.sign(b) || 1) * Math.pow((absolute2 + 0.055) / 1.055, 2.4);
+          const tmp12 = Math.sign(b) || 1;
+        }
+        obj.b = result2;
+        obj.alpha = tmp;
+        return obj;
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+};
+fn4.__closure = { channelToLrgb: fn3 };
+fn4.__workletHash = 7438857771706;
+fn4.__initData = {
+  code: "function pnpm_lrgbTs4({r:r,g:g,b:b,alpha:alpha}){const{channelToLrgb}=this.__closure;return{r:channelToLrgb(r),g:channelToLrgb(g),b:channelToLrgb(b),alpha:alpha};}",
+};
+obj2.fromRgb = fn4;
+obj.convert = obj2;
 
-function measureFabric(fn) {
-  if (globalThis._WORKLET) {
-    const tmp3 = fn();
-    if (-1 === tmp3) {
-      const logger4 = _mod1642.logger;
-      const _HermesInternal = HermesInternal;
-      logger4.warn(
-        "The view with tag " +
-          tmp3 +
-          " is not a valid argument for measure(). This may be because the view is not currently rendered, which may not be a bug (e.g. an off-screen FlatList item).",
-      );
-      return null;
-    } else {
-      let _measureFabricResult = global._measureFabric(tmp3);
-      if (null === _measureFabricResult) {
-        const logger3 = _mod1642.logger;
-        logger3.warn(
-          "The view has some undefined, not-yet-computed or meaningless value of `LayoutMetrics` type. This may be because the view is not currently rendered, which may not be a bug (e.g. an off-screen FlatList item).",
-        );
-        _measureFabricResult = null;
-      } else if (-1234567 === _measureFabricResult.x) {
-        const logger2 = _mod1642.logger;
-        logger2.warn(
-          "The view returned an invalid measurement response. Please make sure the view is currently rendered.",
-        );
-        _measureFabricResult = null;
-      } else {
-        const _isNaN = isNaN;
-        if (isNaN(_measureFabricResult.x)) {
-          const logger = _mod1642.logger;
-          logger.warn(
-            "The view gets view-flattened on Android. To disable view-flattening, set `collapsable={false}` on this component.",
-          );
-          _measureFabricResult = null;
-        }
-      }
-      return _measureFabricResult;
-    }
-  } else {
-    return null;
-  }
-}
-measureFabric.__closure = { logger: _mod1642.logger };
-measureFabric.__workletHash = 11588690892656;
-measureFabric.__initData = {
-  code: 'function measureFabric_Pnpm_measureTs1(animatedRef){const{logger}=this.__closure;if(!_WORKLET){return null;}const viewTag=animatedRef();if(viewTag===-1){logger.warn("The view with tag "+viewTag+" is not a valid argument for measure(). This may be because the view is not currently rendered, which may not be a bug (e.g. an off-screen FlatList item).");return null;}const measured=global._measureFabric(viewTag);if(measured===null){logger.warn("The view has some undefined, not-yet-computed or meaningless value of `LayoutMetrics` type. This may be because the view is not currently rendered, which may not be a bug (e.g. an off-screen FlatList item).");return null;}else if(measured.x===-1234567){logger.warn("The view returned an invalid measurement response. Please make sure the view is currently rendered.");return null;}else if(isNaN(measured.x)){logger.warn("The view gets view-flattened on Android. To disable view-flattening, set `collapsable={false}` on this component.");return null;}else{return measured;}}',
-};
-function measurePaper(fn) {
-  if (globalThis._WORKLET) {
-    const tmp3 = fn();
-    if (-1 === tmp3) {
-      const logger4 = _mod1642.logger;
-      const _HermesInternal4 = HermesInternal;
-      logger4.warn(
-        "The view with tag " +
-          tmp3 +
-          " is not a valid argument for measure(). This may be because the view is not currently rendered, which may not be a bug (e.g. an off-screen FlatList item).",
-      );
-      return null;
-    } else {
-      let _measurePaperResult = global._measurePaper(tmp3);
-      if (null === _measurePaperResult) {
-        const logger3 = _mod1642.logger;
-        const _HermesInternal3 = HermesInternal;
-        logger3.warn(
-          "The view with tag " +
-            tmp3 +
-            " has some undefined, not-yet-computed or meaningless value of `LayoutMetrics` type. This may be because the view is not currently rendered, which may not be a bug (e.g. an off-screen FlatList item).",
-        );
-        _measurePaperResult = null;
-      } else if (-1234567 === _measurePaperResult.x) {
-        const logger2 = _mod1642.logger;
-        const _HermesInternal2 = HermesInternal;
-        logger2.warn(
-          "The view with tag " +
-            tmp3 +
-            " returned an invalid measurement response. Please make sure the view is currently rendered.",
-        );
-        _measurePaperResult = null;
-      } else {
-        const _isNaN = isNaN;
-        if (isNaN(_measurePaperResult.x)) {
-          const logger = _mod1642.logger;
-          const _HermesInternal = HermesInternal;
-          logger.warn(
-            "The view with tag " +
-              tmp3 +
-              " gets view-flattened on Android. To disable view-flattening, set `collapsable={false}` on this component.",
-          );
-          _measurePaperResult = null;
-        }
-      }
-      return _measurePaperResult;
-    }
-  } else {
-    return null;
-  }
-}
-const obj = { logger: _mod1642.logger };
-measurePaper.__closure = { logger: _mod1642.logger };
-measurePaper.__workletHash = 12497864483036;
-measurePaper.__initData = {
-  code: 'function measurePaper_Pnpm_measureTs2(animatedRef){const{logger}=this.__closure;if(!_WORKLET){return null;}const viewTag=animatedRef();if(viewTag===-1){logger.warn("The view with tag "+viewTag+" is not a valid argument for measure(). This may be because the view is not currently rendered, which may not be a bug (e.g. an off-screen FlatList item).");return null;}const measured=global._measurePaper(viewTag);if(measured===null){logger.warn("The view with tag "+viewTag+" has some undefined, not-yet-computed or meaningless value of `LayoutMetrics` type. This may be because the view is not currently rendered, which may not be a bug (e.g. an off-screen FlatList item).");return null;}else if(measured.x===-1234567){logger.warn("The view with tag "+viewTag+" returned an invalid measurement response. Please make sure the view is currently rendered.");return null;}else if(isNaN(measured.x)){logger.warn("The view with tag "+viewTag+" gets view-flattened on Android. To disable view-flattening, set `collapsable={false}` on this component.");return null;}else{return measured;}}',
-};
-let module_1641 = module_1641_mod;
-module_1641.shouldBeUseWeb();
-let module_1641 = module_1641_mod;
-if (module_1641) {
-  if (module_1641.isJest()) {
-    function measureJest() {
-      const logger = _mod1642.logger;
-      logger.warn("measure() cannot be used with Jest.");
-      return null;
-    }
-  } else {
-    const _module2 = module_1641;
-    measureJest = _module2.isChromeDebugger()
-      ? function measureChromeDebugger() {
-          const logger = _mod1642.logger;
-          logger.warn("measure() cannot be used with Chrome Debugger.");
-          return null;
-        }
-      : function measureDefault() {
-          const logger = _mod1642.logger;
-          logger.warn("measure() is not supported on this configuration.");
-          return null;
-        };
-  }
-} else {
-  if (module_1641.isFabric()) {
-    measurePaper = measureFabric;
-  }
-  exports.measure = measurePaper;
-}
+export default obj;

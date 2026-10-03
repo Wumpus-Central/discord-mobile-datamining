@@ -1,16 +1,4 @@
 // _runtime/metro/06136__.js
-import Link from "../01486_Link.js";
-import noop from "00019__.js";
+import _mod17 from "00017__.js";
 
-require = fn;
-const Animated = fn(17).Animated;
-const jsx = fn(21).jsx;
-
-export const Background = function Background(style) {
-  const merged = Object.assign(style, Object.assign({ style: 0 }));
-  const obj2 = {};
-  const merged1 = Object.assign(merged);
-  const items = [{ flex: 1, backgroundColor: Link.useTheme().colors.background }, style.style];
-  obj2.style = items;
-  return <Animated.View />;
-};
+export const findNodeHandle = _mod17.findNodeHandle;

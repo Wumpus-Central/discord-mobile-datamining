@@ -1,6 +1,10 @@
 // _runtime/metro/00637__.js
-import _mod524 from "00524__.js";
-import 00601__ from "00601__.js";
+import _mod638 from "00638__.js";
 
-
-export default module_601(_mod524, "Set");
+export default function toString(arg0) {
+  let str = "";
+  if (null != arg0) {
+    str = _mod638(arg0);
+  }
+  return str;
+}

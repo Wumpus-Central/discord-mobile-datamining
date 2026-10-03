@@ -1,13 +1,13 @@
 // _runtime/metro/05520__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "e06e2e681624b5a052b477a4af8dc512",
-  name: "ThreadLockIcon",
+  httpServerLocation: "/assets/images/platforms",
+  width: 255,
+  height: 255,
+  scales: [1],
+  hash: "eb232cce91e81121373a2c7b4cc58581",
+  name: "img_account_sync_riot_light_and_dark",
   type: "png",
 });

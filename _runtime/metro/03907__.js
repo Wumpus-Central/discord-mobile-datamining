@@ -1,11 +1,11 @@
 // _runtime/metro/03907__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/game_mode",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9nYW1lX21vZGU=",
   scales: [1],
-  hash: "7ca9d9ba3c0a8e3beaa96f49add49046",
-  name: "GameMode.compiled.messages",
+  hash: "3446f8f377f1ee1b53549b21c354b82a",
+  name: "ro.messages.3446f8f377f1ee1b53549b21c354b82a.compiled.messages",
   type: "jsona",
 });

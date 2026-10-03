@@ -1,13 +1,71 @@
 // _runtime/metro/13834__.js
-import registerAsset from "01121__.js";
+const re0 = /^[0-9]+$/;
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "727899a26eec90f323c88c339b15535a",
-  name: "ic_radio_square_24px",
-  type: "png",
-});
+export default {
+  compareIdentifiers(major, major2) {
+    const isMatch = re0.test(major);
+    const isMatch1 = re0.test(major2);
+    let tmp3 = isMatch;
+    if (isMatch) {
+      tmp3 = isMatch1;
+    }
+    let tmp4 = major2;
+    let tmp5 = major;
+    if (tmp3) {
+      tmp5 = +major;
+      tmp4 = +major2;
+    }
+    let num = 0;
+    if (tmp5 !== tmp4) {
+      if (!isMatch) {
+        if (!isMatch1) {
+          let num4 = 1;
+          if (tmp5 < tmp4) {
+            num4 = -1;
+          }
+          let num3 = num4;
+        } else {
+          num3 = 1;
+        }
+        let num2 = num3;
+      } else {
+        num2 = -1;
+      }
+      num = num2;
+    }
+    return num;
+  },
+  rcompareIdentifiers(arg0, arg1) {
+    const isMatch = re0.test(arg1);
+    const isMatch1 = re0.test(arg0);
+    let tmp3 = isMatch;
+    if (isMatch) {
+      tmp3 = isMatch1;
+    }
+    let tmp4 = arg0;
+    let tmp5 = arg1;
+    if (tmp3) {
+      tmp5 = +arg1;
+      tmp4 = +arg0;
+    }
+    let num = 0;
+    if (tmp5 !== tmp4) {
+      if (!isMatch) {
+        if (!isMatch1) {
+          let num4 = 1;
+          if (tmp5 < tmp4) {
+            num4 = -1;
+          }
+          let num3 = num4;
+        } else {
+          num3 = 1;
+        }
+        let num2 = num3;
+      } else {
+        num2 = -1;
+      }
+      num = num2;
+    }
+    return num;
+  },
+};

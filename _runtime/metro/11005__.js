@@ -1,6 +1,11 @@
 // _runtime/metro/11005__.js
-import _mod17 from "00017__.js";
+import registerAsset from "01132__.js";
 
-const TurboModuleRegistry = _mod17.TurboModuleRegistry;
-
-export const NativeDocumentPicker = TurboModuleRegistry.getEnforcing("RNDocumentPicker");
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties",
+  scales: [1],
+  hash: "6ab310fc9336bead9d2a9726051f2397",
+  name: "SpendEarnOrbsLightTheme",
+  type: "lottie",
+});

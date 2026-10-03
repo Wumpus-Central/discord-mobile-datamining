@@ -1,7 +1,7 @@
 // _runtime/metro/04129__.js
 import _typeof_mod from "04130__.js";
-import _typeof_mod from "03947__.js";
-import requiredArgs_mod from "../03948_requiredArgs.js";
+import _typeof_mod from "04131__.js";
+import requiredArgs_mod from "../03959_requiredArgs.js";
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -24,13 +24,11 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp7;
 
-export default function isValid(num) {
-  requiredArgs.default(1, arguments);
-  if (!_typeof.default(num)) {
-    if (typeof num !== "number") {
-      return false;
-    }
-  }
-  return !isNaN(Number(_typeof.default(num)));
+export default function clamp(arg0, arg1) {
+  ({ start, end } = arg1);
+  requiredArgs.default(2, arguments);
+  const items = [arg0, start];
+  const items1 = [_typeof.default(items), end];
+  return _typeof.default(items1);
 };
 export default exports.default;

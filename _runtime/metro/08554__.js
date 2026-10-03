@@ -1,5 +1,5 @@
 // _runtime/metro/08554__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "f707107902b0c142d4942c459b0a28b3",
-  name: "TwitchNeutralIcon",
+  hash: "856ae0fb80fb3c5e7cc40888f4bebb2b",
+  name: "YoutubeNeutralIcon",
   type: "png",
 });

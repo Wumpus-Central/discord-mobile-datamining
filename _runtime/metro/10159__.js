@@ -1,11 +1,13 @@
 // _runtime/metro/10159__.js
-import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
-import _mod10106 from "10106__.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
+import _mod10160 from "10160__.js";
+import AbstractParserWithWordBoundaryChecking from "../10168_AbstractParserWithWordBoundaryChecking.js";
+import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
+const ENTimeUnitWithinFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -24,51 +26,77 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
-    } else {
-      tmp = __esModule;
-    }
-    return tmp;
-  };
-}
-class JPMergeDateRangeRefiner {
-  constructor() {
+const regExp = new RegExp(
+  "(?:(?:within|in|for)\\s*)?(?:(?:about|around|roughly|approximately|just)\\s*(?:~\\s*)?)?(" +
+    _mod10160.TIME_UNITS_PATTERN +
+    ")(?=\\W|$)",
+  "i",
+);
+const regExp1 = new RegExp(
+  "(?:within|in|for)\\s*(?:(?:about|around|roughly|approximately|just)\\s*(?:~\\s*)?)?(" +
+    _mod10160.TIME_UNITS_PATTERN +
+    ")(?=\\W|$)",
+  "i",
+);
+const regExp2 = new RegExp(
+  "(?:within|in|for)\\s*(?:(?:about|around|roughly|approximately|just)\\s*(?:~\\s*)?)?(" +
+    _mod10160.TIME_UNITS_NO_ABBR_PATTERN +
+    ")(?=\\W|$)",
+  "i",
+);
+class ENTimeUnitWithinFormatParser {
+  constructor(arg0) {
     self = this;
-    tmp = closure_0(this, JPMergeDateRangeRefiner);
-    tmp2 = c2;
-    obj = c2(JPMergeDateRangeRefiner);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp7 = globalThis;
+    tmp = c2(this, ENTimeUnitWithinFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(ENTimeUnitWithinFormatParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, undefined);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.strictMode = global;
+    return tmp3Result;
   }
 }
-_classCallCheck = JPMergeDateRangeRefiner;
-_inherits(JPMergeDateRangeRefiner, fn(_mod10106).default);
+_inherits(ENTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "patternBetween",
-  value: function patternBetween() {
-    return /^\s*(から|－|ー|-|～|~)\s*$/i;
+  key: "innerPattern",
+  value: function innerPattern(option) {
+    if (this.strictMode) {
+      let tmp2 = regExp2;
+    } else {
+      tmp2 = option.option.forwardDate ? regExp : regExp1;
+    }
+    return tmp2;
   },
 };
-const items = [entry];
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(reference, arg1) {
+      if (str.match(/^for\s*the\s*\w+/)) {
+        return null;
+      } else {
+        const parseDurationResult = ENTimeUnitWithinFormatParser(10160).parseDuration(arg1[1]);
+        let relativeFromReference = null;
+        if (parseDurationResult) {
+          const ParsingComponents = ENTimeUnitWithinFormatParser(10164).ParsingComponents;
+          relativeFromReference = ParsingComponents.createRelativeFromReference(
+            reference.reference,
+            parseDurationResult,
+          );
+        }
+        return relativeFromReference;
+      }
+      str = arg1[0];
+    },
+  },
+];
 
-export default _createClass(JPMergeDateRangeRefiner, items);
+export default _createClass(ENTimeUnitWithinFormatParser, items);

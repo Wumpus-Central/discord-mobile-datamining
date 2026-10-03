@@ -1,13 +1,13 @@
 // _runtime/metro/13331__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/guild_boosting/tier_icons/simple",
-  width: 32,
-  height: 32,
+  httpServerLocation: "/assets/images/native/premium/guild_boosting/perks",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "1b3ea47fa559c5b08fa13d985346d3b8",
-  name: "tier_3_32px",
+  hash: "6ce9cfa41f5b080fb1f9fac04190337a",
+  name: "emoji",
   type: "png",
 });

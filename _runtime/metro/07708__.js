@@ -1,13 +1,13 @@
 // _runtime/metro/07708__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "dfdac2dbaa2d7bb47146e9074e36688f",
-  name: "GiftIcon",
+  httpServerLocation: "/assets/images/public_guilds",
+  width: 240,
+  height: 240,
+  scales: [1],
+  hash: "409ea8be644aaa2b6a1519af84a7b604",
+  name: "system-user-avatar",
   type: "png",
 });

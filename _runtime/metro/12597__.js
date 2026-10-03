@@ -1,14 +1,34 @@
 // _runtime/metro/12597__.js
-import _mod12596 from "12596__.js";
+import _mod12592 from "12592__.js";
 
 require = arg1;
 const dependencyMap = arg6;
 
-export const getTraceMetaTags = function getTraceMetaTags() {
-  const entries = Object.entries(_mod12596.getTraceData());
-  const mapped = entries.map((item) => {
-    [tmp, tmp2] = item;
-    return '<meta name="' + tmp + '" content="' + tmp2 + '"/>';
-  });
-  return mapped.join("\n");
+export const hasTracingEnabled = function hasTracingEnabled(tracesSampler) {
+  if (typeof globalThis.__SENTRY_TRACING__ === "boolean") {
+    if (!globalThis.__SENTRY_TRACING__) {
+      return false;
+    }
+  }
+  let tmp = tracesSampler;
+  const client = _mod12592.getClient();
+  if (!tracesSampler) {
+    options = client;
+    if (client) {
+      options = client.getOptions();
+    }
+    tmp = options;
+  }
+  let tmp3 = tmp;
+  if (tmp3) {
+    let enableTracing = tmp.enableTracing;
+    if (!enableTracing) {
+      enableTracing = "tracesSampleRate" in tmp;
+    }
+    if (!enableTracing) {
+      enableTracing = "tracesSampler" in tmp;
+    }
+    tmp3 = enableTracing;
+  }
+  return tmp3;
 };

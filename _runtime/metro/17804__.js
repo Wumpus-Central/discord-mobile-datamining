@@ -1,13 +1,13 @@
 // _runtime/metro/17804__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/guild_settings/welcome/images",
-  width: 375,
-  height: 187,
+  httpServerLocation: "/assets/images/native/empties",
+  width: 250,
+  height: 200,
   scales: [2, 3],
-  hash: "a089de21c15f6e03808f87d787c28c08",
-  name: "role_subscription_settings_hero",
+  hash: "3c95b7ec7d2eb4c8fde35f37e918dd98",
+  name: "img_bans_empty_light",
   type: "png",
 });

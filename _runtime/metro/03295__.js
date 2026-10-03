@@ -1,11 +1,11 @@
 // _runtime/metro/03295__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/tenure_reward",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3RlbnVyZV9yZXdhcmQ=",
   scales: [1],
-  hash: "4ce7db81a29e051a11be32b72852c173",
-  name: "TenureReward.compiled.messages",
+  hash: "03f81cfebef2ce78319a23994cc3230c",
+  name: "sv-SE.messages.03f81cfebef2ce78319a23994cc3230c.compiled.messages",
   type: "jsona",
 });

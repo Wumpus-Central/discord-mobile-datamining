@@ -1,134 +1,147 @@
 // _runtime/metro/06315__.js
-import ComposedGestureName from "../06318_ComposedGestureName.js";
-import DEFAULT_PROPS_TRANSFORMER from "../06327_DEFAULT_PROPS_TRANSFORMER.js";
-import _mod6331 from "06331__.js";
-import _slicedToArray from "00032__.js";
+import jsxProd from "../react/00021_jsxProd.js";
+import LegacyBaseButton from "../06140_LegacyBaseButton.js";
+import noop_mod from "00019__.js";
 
-const require = globalThis.__r;
-
-require = fn;
-function isSupportedGesture(gestures) {
-  if (obj.isComposedGesture(gestures)) {
-    gestures = gestures.gestures;
-    return gestures.some(isSupportedGesture);
-  } else {
-    const type = gestures.type;
-    if (ComposedGestureName.SingleGestureName.Tap !== type) {
-      if (ComposedGestureName.SingleGestureName.LongPress !== type) {
-        if (ComposedGestureName.SingleGestureName.Fling !== type) {
-          if (ComposedGestureName.SingleGestureName.Native !== type) {
-            if (ComposedGestureName.SingleGestureName.Hover !== type) {
-              return false;
-            }
-          }
-        }
-      }
-    }
-    return true;
+let noop = noop_mod;
+({ useCallback: c3, useMemo: closure_4, useRef: hasOwnProperty, memo } = noop);
+let noop = noop_mod;
+const jsx = jsxProd.jsx;
+const memoResult = memo(function BottomSheetHandleContainerComponent(simultaneousHandlers) {
+  simultaneousHandlers = simultaneousHandlers.simultaneousHandlers;
+  let DEFAULT_ENABLE_HANDLE_PANNING_GESTURE = simultaneousHandlers.enableHandlePanningGesture;
+  ({ animatedIndex, animatedPosition } = simultaneousHandlers);
+  if (DEFAULT_ENABLE_HANDLE_PANNING_GESTURE === undefined) {
+    DEFAULT_ENABLE_HANDLE_PANNING_GESTURE = simultaneousHandlers(handleHeight[2]).DEFAULT_ENABLE_HANDLE_PANNING_GESTURE;
   }
-  obj = DEFAULT_PROPS_TRANSFORMER;
-}
-const noop = fn(19);
-({ use: c3, useCallback: closure_4, useEffect: hasOwnProperty, useRef: metroRequire, useState: closure_7 } = noop);
-let closure_8 = fn(6316).SHARED_VALUE_OFFSET + 0.5;
-let closure_10 = {
-  code: "function pnpm_useJSResponderHandlerTs1(sharedValues,id,notify){const{runOnJS}=this.__closure;const listener=runOnJS(notify);for(const sharedValue of sharedValues){sharedValue.addListener(id,listener);}}",
-};
-let closure_11 = {
-  code: "function pnpm_useJSResponderHandlerTs2(sharedValues,id){for(const sharedValue of sharedValues){sharedValue.removeListener(id);}}",
-};
-
-export const useJSResponderHandler = function useJSResponderHandler(gesture) {
-  _require = gesture;
-  let tmp = closure_3(require("06331__.js").JSResponderContext);
-  dependencyMap = tmp;
-  const tmp2 = _slicedToArray(closure_7(0), 2);
-  _slicedToArray = tmp2[1];
-  const tmp3 = closure_6(null);
-  closure_3 = tmp3;
-  if (null === tmp3.current) {
-    closure_8 = tmp5 + 1;
-    tmp3.current = +closure_8;
-  }
-  const items = [gesture];
-  closure_5(() => {
-    const Reanimated = gesture(6302).Reanimated;
-    const enabledSharedValues = gesture(6316).getEnabledSharedValues(Reanimated);
-    if (undefined !== Reanimated) {
-      if (0 !== enabledSharedValues.length) {
-        const current = runOnJS.current;
-        if (null !== current) {
-          runOnJS = Reanimated.runOnJS;
-          const fn = function o(arg0, arg1, arg2) {
-            const iter = arg0[Symbol.iterator]();
-            const tmp = runOnJS(arg2);
-            while (iter !== undefined) {
-              let addListenerResult = nextResult.addListener(arg1, tmp);
-              continue;
-            }
-          };
-          const obj2 = { runOnJS };
-          fn.__closure = obj2;
-          fn.__workletHash = 3030529712101;
-          fn.__initData = __initData;
-          const fn2 = function l(arg0, arg1) {
-            const iter = arg0[Symbol.iterator]();
-            while (iter !== undefined) {
-              let removeListenerResult = nextResult.removeListener(arg1);
-              continue;
-            }
-          };
-          fn2.__closure = {};
-          fn2.__workletHash = 3663767498079;
-          fn2.__initData = __initData2;
-          Reanimated.runOnUI(fn)(enabledSharedValues, current, () => {
-            current((arg0) => arg0 + 1);
-          });
-          return () => {
-            Reanimated.runOnUI(fn2)(enabledSharedValues, current);
-          };
-        }
-      }
+  handleHeight = simultaneousHandlers.handleHeight;
+  let handleComponent = simultaneousHandlers.handleComponent;
+  let failOffsetX;
+  ({ handleStyle, handleIndicatorStyle } = simultaneousHandlers);
+  const tmp3 = failOffsetX(null);
+  const bottomSheetInternal = simultaneousHandlers(handleHeight[3]).useBottomSheetInternal();
+  const activeOffsetX = bottomSheetInternal.activeOffsetX;
+  const activeOffsetY = bottomSheetInternal.activeOffsetY;
+  failOffsetX = bottomSheetInternal.failOffsetX;
+  const failOffsetY = bottomSheetInternal.failOffsetY;
+  const waitFor = bottomSheetInternal.waitFor;
+  const simultaneousHandlers2 = bottomSheetInternal.simultaneousHandlers;
+  const obj = simultaneousHandlers(handleHeight[3]);
+  const tmp4 = simultaneousHandlers;
+  const handlePanGestureHandler = simultaneousHandlers(handleHeight[3]).useBottomSheetGestureHandlers()
+    .handlePanGestureHandler;
+  let items = [simultaneousHandlers2, simultaneousHandlers];
+  const tmp7 = activeOffsetY(() => {
+    const items = [];
+    if (simultaneousHandlers) {
+      items.push(tmp);
     }
-    const obj = gesture(6316);
-  }, items);
-  const items1 = [tmp2[0], gesture];
-  const tmp7 = closure_4(() => {
-    let some = closure_0;
-    const isGestureEnabledResult = DEFAULT_PROPS_TRANSFORMER.isGestureEnabled(closure_0);
-    if (!isGestureEnabledResult) {
-      return isGestureEnabledResult;
-    } else {
-      if (tmpResult.isComposedGesture(some)) {
-        const gestures = some.gestures;
-        some = gestures.some;
-        let flag = some(isSupportedGesture);
+    if (simultaneousHandlers2) {
+      const _Array = Array;
+      const push = items.push;
+      if (Array.isArray(simultaneousHandlers2)) {
+        const items1 = [];
+        HermesBuiltin.arraySpread(simultaneousHandlers2, 0);
+        HermesBuiltin.apply(items1, items);
       } else {
-        const type = some.type;
-        if (ComposedGestureName.SingleGestureName.Tap !== type) {
-          if (ComposedGestureName.SingleGestureName.LongPress !== type) {
-            if (ComposedGestureName.SingleGestureName.Fling !== type) {
-              if (ComposedGestureName.SingleGestureName.Native !== type) {
-                flag = false;
-              }
-            }
-          }
-        }
-        flag = true;
+        push(simultaneousHandlers2);
       }
-      tmpResult = DEFAULT_PROPS_TRANSFORMER;
     }
+    return items;
+  }, items);
+  closure_10 = tmp7;
+  let items1 = [
+    activeOffsetX,
+    activeOffsetY,
+    DEFAULT_ENABLE_HANDLE_PANNING_GESTURE,
+    failOffsetX,
+    failOffsetY,
+    tmp7,
+    waitFor,
+    ,
+    ,
+    ,
+  ];
+  ({
+    handleOnChange: arr2[7],
+    handleOnEnd: arr2[8],
+    handleOnFinalize: arr2[9],
+    handleOnStart: arr2[10],
+  } = handlePanGestureHandler);
+  const items2 = [handleHeight];
+  const obj2 = simultaneousHandlers(handleHeight[3]);
+  const items3 = [handleHeight];
+  const tmp8 = activeOffsetY(() => {
+    const Gesture = LegacyBaseButton.Gesture;
+    const PanResult = Gesture.Pan();
+    const result = Gesture.Pan().enabled(DEFAULT_ENABLE_HANDLE_PANNING_GESTURE).shouldCancelWhenOutside(false);
+    const enabledResult = Gesture.Pan().enabled(DEFAULT_ENABLE_HANDLE_PANNING_GESTURE);
+    const runOnJSResult = result.runOnJS(false);
+    const onStartResult = result.runOnJS(false).onStart(handlePanGestureHandler.handleOnStart);
+    const onChangeResult = result
+      .runOnJS(false)
+      .onStart(handlePanGestureHandler.handleOnStart)
+      .onChange(handlePanGestureHandler.handleOnChange);
+    const onFinalizeResult = result
+      .runOnJS(false)
+      .onStart(handlePanGestureHandler.handleOnStart)
+      .onChange(handlePanGestureHandler.handleOnChange)
+      .onEnd(handlePanGestureHandler.handleOnEnd)
+      .onFinalize(handlePanGestureHandler.handleOnFinalize);
+    let result1 = onFinalizeResult;
+    if (waitFor) {
+      result1 = onFinalizeResult.requireExternalGestureToFail(tmp);
+    }
+    let result2 = result1;
+    if (closure_10) {
+      result2 = result1.simultaneousWithExternalGesture(tmp2);
+    }
+    let activeOffsetXResult = result2;
+    if (activeOffsetX) {
+      activeOffsetXResult = result2.activeOffsetX(tmp3);
+    }
+    let activeOffsetYResult = activeOffsetXResult;
+    if (activeOffsetY) {
+      activeOffsetYResult = activeOffsetXResult.activeOffsetY(tmp4);
+    }
+    let failOffsetXResult = activeOffsetYResult;
+    if (failOffsetX) {
+      failOffsetXResult = activeOffsetYResult.failOffsetX(tmp5);
+    }
+    let failOffsetYResult = failOffsetXResult;
+    if (failOffsetY) {
+      failOffsetYResult = failOffsetXResult.failOffsetY(tmp6);
+    }
+    return failOffsetYResult;
   }, items1);
-  closure_4 = tmp7;
-  const items2 = [tmp, tmp7];
-  let handleStartShouldSetResponder = closure_4(() => {
-    if (closure_4()) {
-      const result = _mod6331.updateResponderEventValue(closure_1, true);
-    }
-    return false;
+  const tmp9 = activeOffsetX(function handleContainerLayout(nativeEvent) {
+    handleHeight.value = nativeEvent.nativeEvent.layout.height;
   }, items2);
-  if (null == tmp) {
-    handleStartShouldSetResponder = () => false;
+  const tmp10 = activeOffsetX((height) => {
+    handleHeight.value = height.height;
+  }, items3);
+  const boundingClientRect = simultaneousHandlers(handleHeight[3]).useBoundingClientRect(tmp3, tmp10);
+  if (handleComponent == null) {
+    handleComponent = DEFAULT_ENABLE_HANDLE_PANNING_GESTURE(tmp5[5]);
   }
-  return { handleStartShouldSetResponder };
-};
+  const obj4 = { gesture: tmp8, children: null };
+  const obj3 = simultaneousHandlers(handleHeight[3]);
+  obj4.children = failOffsetY(
+    DEFAULT_ENABLE_HANDLE_PANNING_GESTURE(handleHeight[6]).View,
+    {
+      ref: tmp3,
+      onLayout: tmp9,
+      children: failOffsetY(handleComponent, {
+        animatedIndex,
+        animatedPosition,
+        style: handleStyle,
+        indicatorStyle: handleIndicatorStyle,
+      }),
+    },
+    "BottomSheetHandleContainer",
+  );
+  return failOffsetY(tmp4(handleHeight[4]).GestureDetector, obj4);
+});
+memoResult.displayName = "BottomSheetHandleContainer";
+
+export default memoResult;

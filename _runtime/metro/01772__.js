@@ -5,7 +5,7 @@ import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const SequencedTransition = fn;
+let CurvedTransition = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,17 +25,17 @@ function _isNativeReflectConstruct() {
   } catch (err) {}
 }
 let closure_6 = {
-  code: "function pnpm_SequencedTransitionTs1(values){const{delayFunction,delay,withSequence,withTiming,reverse,config,callback}=this.__closure;return{initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight},animations:{originX:delayFunction(delay,withSequence(withTiming(reverse?values.currentOriginX:values.targetOriginX,config),withTiming(values.targetOriginX,config))),originY:delayFunction(delay,withSequence(withTiming(reverse?values.targetOriginY:values.currentOriginY,config),withTiming(values.targetOriginY,config))),width:delayFunction(delay,withSequence(withTiming(reverse?values.currentWidth:values.targetWidth,config),withTiming(values.targetWidth,config))),height:delayFunction(delay,withSequence(withTiming(reverse?values.targetHeight:values.currentHeight,config),withTiming(values.targetHeight,config)))},callback:callback};}",
+  code: "function pnpm_CurvedTransitionTs1(values){const{delayFunction,delay,withTiming,duration,easing,callback}=this.__closure;return{initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight},animations:{originX:delayFunction(delay,withTiming(values.targetOriginX,{duration:duration,easing:easing.easingX})),originY:delayFunction(delay,withTiming(values.targetOriginY,{duration:duration,easing:easing.easingY})),width:delayFunction(delay,withTiming(values.targetWidth,{duration:duration,easing:easing.easingWidth})),height:delayFunction(delay,withTiming(values.targetHeight,{duration:duration,easing:easing.easingHeight}))},callback:callback};}",
 };
-class SequencedTransition {
+class CurvedTransition {
   constructor() {
     self = this;
     items = [...arguments];
     closure_0 = undefined;
-    tmp = c2(this, SequencedTransition);
+    tmp = c2(this, CurvedTransition);
     items1 = [...items];
     tmp2 = closure_4;
-    obj = closure_4(SequencedTransition);
+    obj = closure_4(CurvedTransition);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp5 = globalThis;
@@ -46,18 +46,29 @@ class SequencedTransition {
     }
     tmp3Result = tmp3(self, constructResult);
     closure_0 = tmp3Result;
-    tmp3Result.reversed = false;
+    Easing = closure_0(closure_1[5]).Easing;
+    tmp3Result.easingXV = Easing.in(closure_0(closure_1[5]).Easing.ease);
+    Easing2 = closure_0(closure_1[5]).Easing;
+    tmp3Result.easingYV = Easing2.out(closure_0(closure_1[5]).Easing.ease);
+    Easing3 = closure_0(closure_1[5]).Easing;
+    tmp3Result.easingWidthV = Easing3.in(closure_0(closure_1[5]).Easing.exp);
+    Easing4 = closure_0(closure_1[5]).Easing;
+    tmp3Result.easingHeightV = Easing4.out(closure_0(closure_1[5]).Easing.exp);
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
       const callbackV = delayFunction.callbackV;
       const delay = delayFunction.getDelay();
       let num = delayFunction.durationV;
       if (num == null) {
-        num = 500;
+        num = 300;
       }
-      const config = { duration: num / 2 };
-      const reversed = delayFunction.reversed;
-      const fn = function e(originX) {
+      const easing = {
+        easingX: tmp.easingXV,
+        easingY: tmp.easingYV,
+        easingWidth: tmp.easingWidthV,
+        easingHeight: tmp.easingHeightV,
+      };
+      const fn = function n(originX) {
         const obj = {
           initialValues: {
             originX: originX.currentOriginX,
@@ -68,49 +79,32 @@ class SequencedTransition {
           animations: null,
           callback: null,
         };
-        const obj2 = delayFunction(1710);
-        const size = { originX: null, originY: null, width: null, height: null };
-        const obj3 = delayFunction(1710);
-        const withTimingResult = delayFunction(1710).withTiming(
-          reversed ? originX.currentOriginX : originX.targetOriginX,
-          obj,
-        );
-        size.originX = delayFunction(
-          delay,
-          obj2.withSequence(withTimingResult, delayFunction(1710).withTiming(originX.targetOriginX, obj)),
-        );
-        const tmp3Result = delayFunction(1710);
-        const tmp3Result10 = delayFunction(1710);
-        const tmp3Result11 = delayFunction(1710);
-        const withTimingResult1 = delayFunction(1710).withTiming(
-          reversed ? originX.targetOriginY : originX.currentOriginY,
-          obj,
-        );
+        const size = {
+          originX: delayFunction(
+            delay,
+            delayFunction(1715).withTiming(originX.targetOriginX, { duration: num, easing: obj.easingX }),
+          ),
+          originY: null,
+          width: null,
+          height: null,
+        };
+        const obj2 = { duration: num, easing: obj.easingX };
+        const obj3 = delayFunction(1715);
         size.originY = delayFunction(
           delay,
-          tmp3Result10.withSequence(withTimingResult1, delayFunction(1710).withTiming(originX.targetOriginY, obj)),
+          delayFunction(1715).withTiming(originX.targetOriginY, { duration: num, easing: obj.easingY }),
         );
-        const tmp3Result12 = delayFunction(1710);
-        const tmp3Result13 = delayFunction(1710);
-        const tmp3Result14 = delayFunction(1710);
-        const withTimingResult2 = delayFunction(1710).withTiming(
-          reversed ? originX.currentWidth : originX.targetWidth,
-          obj,
-        );
+        const obj4 = { duration: num, easing: obj.easingY };
+        const obj5 = delayFunction(1715);
         size.width = delayFunction(
           delay,
-          tmp3Result13.withSequence(withTimingResult2, delayFunction(1710).withTiming(originX.targetWidth, obj)),
+          delayFunction(1715).withTiming(originX.targetWidth, { duration: num, easing: obj.easingWidth }),
         );
-        const tmp3Result15 = delayFunction(1710);
-        const tmp3Result16 = delayFunction(1710);
-        const tmp3Result17 = delayFunction(1710);
-        const withTimingResult3 = delayFunction(1710).withTiming(
-          reversed ? originX.targetHeight : originX.currentHeight,
-          obj,
-        );
+        const obj6 = { duration: num, easing: obj.easingWidth };
+        const obj7 = delayFunction(1715);
         size.height = delayFunction(
           delay,
-          tmp3Result16.withSequence(withTimingResult3, delayFunction(1710).withTiming(originX.targetHeight, obj)),
+          delayFunction(1715).withTiming(originX.targetHeight, { duration: num, easing: obj.easingHeight }),
         );
         obj.animations = size;
         obj.callback = callbackV;
@@ -119,45 +113,88 @@ class SequencedTransition {
       fn.__closure = {
         delayFunction,
         delay,
-        withSequence: SequencedTransition(1710).withSequence,
-        withTiming: SequencedTransition(1710).withTiming,
-        reverse: reversed,
-        config,
+        withTiming: CurvedTransition(1715).withTiming,
+        duration: num,
+        easing,
         callback: callbackV,
       };
-      fn.__workletHash = 255577740024;
+      fn.__workletHash = 8113645568730;
       fn.__initData = __initData;
       return fn;
     };
     return tmp3Result;
   }
 }
-_inherits(SequencedTransition, fn(1708).BaseAnimationBuilder);
+_inherits(CurvedTransition, fn(1713).BaseAnimationBuilder);
 const entry = {
-  key: "reverse",
-  value: function reverse() {
-    this.reversed = !this.reversed;
+  key: "easingX",
+  value: function easingX(easingXV) {
+    this.easingXV = easingXV;
     return this;
   },
 };
-let items = [entry];
+let items = [
+  entry,
+  {
+    key: "easingY",
+    value: function easingY(easingYV) {
+      this.easingYV = easingYV;
+      return this;
+    },
+  },
+  {
+    key: "easingWidth",
+    value: function easingWidth(easingWidthV) {
+      this.easingWidthV = easingWidthV;
+      return this;
+    },
+  },
+  {
+    key: "easingHeight",
+    value: function easingHeight(easingHeightV) {
+      this.easingHeightV = easingHeightV;
+      return this;
+    },
+  },
+];
 const entry1 = {
   key: "createInstance",
   value: function createInstance() {
-    return SequencedTransition();
+    return CurvedTransition();
   },
 };
 let items1 = [
   entry1,
   {
-    key: "reverse",
-    value: function reverse() {
-      const instance = SequencedTransition.createInstance();
-      return instance.reverse();
+    key: "easingX",
+    value: function easingX(arg0) {
+      const instance = this.createInstance();
+      return instance.easingX(arg0);
+    },
+  },
+  {
+    key: "easingY",
+    value: function easingY(arg0) {
+      const instance = this.createInstance();
+      return instance.easingY(arg0);
+    },
+  },
+  {
+    key: "easingWidth",
+    value: function easingWidth(arg0) {
+      const instance = this.createInstance();
+      return instance.easingWidth(arg0);
+    },
+  },
+  {
+    key: "easingHeight",
+    value: function easingHeight(arg0) {
+      const instance = this.createInstance();
+      return instance.easingHeight(arg0);
     },
   },
 ];
-const importDefaultResultResult = _createClass(SequencedTransition, items, items1);
-importDefaultResultResult.presetName = "SequencedTransition";
+const importDefaultResultResult = _createClass(CurvedTransition, items, items1);
+importDefaultResultResult.presetName = "CurvedTransition";
 
-export const SequencedTransition = importDefaultResultResult;
+export const CurvedTransition = importDefaultResultResult;

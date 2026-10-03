@@ -1,13 +1,13 @@
 // _runtime/metro/05840__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
-  scales: [1],
-  hash: "71e7a705f0fc76c9ae279a3ce8454ef4",
-  name: "img_account_sync_xbox_light",
-  type: "svg",
+  scales: [2, 3],
+  hash: "e0c0be280ef4e57b36ea99cdd95bd9e8",
+  name: "AppsSpoilerIcon",
+  type: "png",
 });

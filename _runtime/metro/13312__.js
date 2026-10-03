@@ -1,13 +1,13 @@
 // _runtime/metro/13312__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/logos",
-  width: 158,
-  height: 32,
-  scales: [1, 2, 3],
-  hash: "18951c7ea15f41ff544471dfa4f446f0",
-  name: "img_logo_premium_tier_0_full",
+  httpServerLocation: "/assets/images/native/premium/guild_boosting/tier_icons/colored",
+  width: 48,
+  height: 48,
+  scales: [2, 3],
+  hash: "61da0f232b2cca239e867e8e10712e2b",
+  name: "tier_0_48px_dark",
   type: "png",
 });

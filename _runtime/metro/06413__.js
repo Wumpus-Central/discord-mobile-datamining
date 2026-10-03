@@ -1,50 +1,67 @@
 // _runtime/metro/06413__.js
-import cancelAnimation from "../01638_cancelAnimation.js";
-import value2 from "../06232_value2.js";
-import _mod6236 from "06236__.js";
-import BottomSheetContext from "../06242_BottomSheetContext.js";
-import noop from "00019__.js";
+import _mod17 from "00017__.js";
+import jsxProd from "../react/00021_jsxProd.js";
+import value2 from "../06113_value2.js";
+import _mod6414 from "06414__.js";
+import noop_mod from "00019__.js";
 
-require = fn;
-const useMemo = fn(19).useMemo;
-const jsx = fn(21).jsx;
-
-export default function _default(children) {
-  let useGestureEventsHandlersDefault = children.gestureEventsHandlersHook;
-  if (useGestureEventsHandlersDefault === undefined) {
-    useGestureEventsHandlersDefault = _mod6236.useGestureEventsHandlersDefault;
+let noop = noop_mod;
+({ useEffect: c2, useCallback: c3, useMemo: closure_4 } = noop);
+let noop = noop_mod;
+const View = _mod17.View;
+const jsx = jsxProd.jsx;
+const memoResult = noop.memo(function BottomSheetViewComponent(focusHook) {
+  focusHook = focusHook.focusHook;
+  if (focusHook === undefined) {
+    focusHook = animatedScrollableType;
   }
-  const sharedValue = cancelAnimation.useSharedValue(value2.GESTURE_SOURCE.UNDETERMINED);
-  const bottomSheetInternal = _mod6236.useBottomSheetInternal();
-  ({ animatedHandleGestureState, animatedContentGestureState } = bottomSheetInternal);
-  ({ handleOnStart, handleOnChange, handleOnEnd, handleOnFinalize } = useGestureEventsHandlersDefault());
-  const gestureEventsHandlersDefault = useGestureEventsHandlersDefault();
-  const gestureHandler = _mod6236.useGestureHandler(
-    value2.GESTURE_SOURCE.CONTENT,
-    animatedContentGestureState,
-    sharedValue,
-    handleOnStart,
-    handleOnChange,
-    handleOnEnd,
-    handleOnFinalize,
+  let flag = focusHook.enableFooterMarginAdjustment;
+  if (flag === undefined) {
+    flag = false;
+  }
+  const onLayout = focusHook.onLayout;
+  ({ style, children } = focusHook);
+  const merged = Object.assign(
+    focusHook,
+    Object.assign({ focusHook: 0, enableFooterMarginAdjustment: 0, onLayout: 0, style: 0, children: 0 }),
   );
-  const gestureHandler1 = _mod6236.useGestureHandler(
-    value2.GESTURE_SOURCE.HANDLE,
-    animatedHandleGestureState,
-    sharedValue,
-    handleOnStart,
-    handleOnChange,
-    handleOnEnd,
-    handleOnFinalize,
-  );
-  const items = [gestureHandler, gestureHandler1, sharedValue];
-  value = useMemo(
-    () => ({
-      contentPanGestureHandler: gestureHandler,
-      handlePanGestureHandler: gestureHandler1,
-      animatedGestureSource: sharedValue,
-    }),
-    items,
-  );
-  return jsx(BottomSheetContext.BottomSheetGestureHandlersContext.Provider, { value, children: children.children });
-}
+  let animatedScrollableContentOffsetY;
+  const bottomSheetInternal = onLayout(animatedScrollableContentOffsetY[3]).useBottomSheetInternal();
+  animatedScrollableContentOffsetY = bottomSheetInternal.animatedScrollableContentOffsetY;
+  animatedScrollableType = bottomSheetInternal.animatedScrollableType;
+  const enableDynamicSizing = bottomSheetInternal.enableDynamicSizing;
+  const animatedContentHeight = bottomSheetInternal.animatedContentHeight;
+  const obj = onLayout(animatedScrollableContentOffsetY[3]);
+  const bottomSheetContentContainerStyle = onLayout(
+    animatedScrollableContentOffsetY[3],
+  ).useBottomSheetContentContainerStyle(flag, style);
+  let items = [bottomSheetContentContainerStyle];
+  const items1 = [animatedScrollableContentOffsetY, animatedScrollableType];
+  const obj2 = onLayout(animatedScrollableContentOffsetY[3]);
+  const items2 = [onLayout, animatedContentHeight, enableDynamicSizing];
+  const tmp4 = animatedContentHeight(() => {
+    const items = [bottomSheetContentContainerStyle, _mod6414.styles.container];
+    return items;
+  }, items);
+  const tmp5 = enableDynamicSizing(() => {
+    animatedScrollableContentOffsetY.value = 0;
+    animatedScrollableType.value = value2.SCROLLABLE_TYPE.VIEW;
+  }, items1);
+  focusHook(tmp5);
+  const obj3 = {};
+  const merged1 = Object.assign(merged);
+  obj3.onLayout = enableDynamicSizing((nativeEvent) => {
+    if (enableDynamicSizing) {
+      const result = animatedContentHeight.set(nativeEvent.nativeEvent.layout.height);
+    }
+    if (onLayout) {
+      tmp3(nativeEvent);
+    }
+  }, items2);
+  obj3.style = tmp4;
+  obj3.children = children;
+  return <bottomSheetContentContainerStyle />;
+});
+memoResult.displayName = "BottomSheetView";
+
+export default memoResult;

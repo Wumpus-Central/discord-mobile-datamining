@@ -1,11 +1,11 @@
 // _runtime/metro/03430__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL2xvZ2l0ZWNoXzNwcA==",
+  httpServerLocation: "/assets/modules/premium/call_of_duty_3pp",
   scales: [1],
-  hash: "90ee38b4ce91ffbba0c8111e191e8869",
-  name: "en-GB.messages.90ee38b4ce91ffbba0c8111e191e8869.compiled.messages",
+  hash: "11d34bfaf58dae63618b0f9e7cb2f98a",
+  name: "CallOfDuty3PP.compiled.messages",
   type: "jsona",
 });

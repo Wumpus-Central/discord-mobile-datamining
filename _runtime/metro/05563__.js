@@ -1,13 +1,13 @@
 // _runtime/metro/05563__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "0e8c9cd01e5a3da643cc71e6763376dc",
-  name: "ExperimentalLfgLockIcon",
-  type: "png",
+  httpServerLocation: "/assets/images/platforms",
+  width: 256,
+  height: 256,
+  scales: [1],
+  hash: "fe74ca7646b268434faf18f4ad85990b",
+  name: "img_meta_quest_light",
+  type: "svg",
 });

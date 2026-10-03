@@ -1,15 +1,15 @@
 // _runtime/metro/04303__.js
-import module_4292_mod from "04292__.js";
-import requiredArgs_mod from "../03948_requiredArgs.js";
+import startOfHour_mod from "../04304_startOfHour.js";
+import requiredArgs_mod from "../03959_requiredArgs.js";
 
-let module_4292 = module_4292_mod;
-if (!module_4292) {
-  const obj = { default: module_4292 };
+let startOfHour = startOfHour_mod;
+if (!startOfHour) {
+  const obj = { default: startOfHour };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4292;
+  tmp3 = startOfHour;
 }
-module_4292 = tmp3;
+startOfHour = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -19,8 +19,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisHour(arg0) {
-  requiredArgs.default(1, arguments);
-  return module_4292.default(Date.now(), arg0);
+export default function isSameHour(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = startOfHour.default(arg0);
+  const time = defaultResult1.getTime();
+  return time === startOfHour.default(arg1).getTime();
 };
 export default exports.default;

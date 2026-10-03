@@ -1,12 +1,13 @@
 // _runtime/metro/17745__.js
-import _mod17746 from "17746__.js";
-import capitalize from "../17754_capitalize.js";
+import registerAsset from "01132__.js";
 
-export default _mod17746((arg0, str, arg2) => {
-  const formatted = str.toLowerCase();
-  let tmp2 = formatted;
-  if (arg2) {
-    tmp2 = capitalize(formatted);
-  }
-  return arg0 + tmp2;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "f8d71a087b50ca9ab07431463764cd8d",
+  name: "ic_sync_24px",
+  type: "png",
 });

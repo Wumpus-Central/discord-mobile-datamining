@@ -1,16 +1,13 @@
 // _runtime/metro/06641__.js
-import GestureHandlerRefContext from "../06614_GestureHandlerRefContext.js";
-import noop from "00019__.js";
+import registerAsset from "01132__.js";
 
-require = arg1;
-
-export const useGestureHandlerRef = function useGestureHandlerRef() {
-  const context = noop.useContext(GestureHandlerRefContext.GestureHandlerRefContext);
-  if (undefined === context) {
-    const _Error = Error;
-    const error = new Error("Couldn't find a ref for gesture handler. Are you inside a screen in Stack?");
-    throw error;
-  } else {
-    return context;
-  }
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "6b87bd10c997f01ea0ccd2cea57f04c5",
+  name: "ic_selection_none_24px",
+  type: "png",
+});

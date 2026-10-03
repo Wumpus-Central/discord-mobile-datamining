@@ -1,11 +1,11 @@
 // _runtime/metro/03884__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9nYW1lX21vZGU=",
+  httpServerLocation: "/assets/modules/premium/riot_credit_campaign",
   scales: [1],
-  hash: "a939f386d36ae4c1a27310edfbd4acac",
-  name: "es-ES.messages.a939f386d36ae4c1a27310edfbd4acac.compiled.messages",
+  hash: "562e5850b1a8debc0b2f374ca26bd962",
+  name: "RiotCreditCampaign.compiled.messages",
   type: "jsona",
 });

@@ -1,11 +1,11 @@
 // _runtime/metro/03494__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wYXJ0bmVyX3BlcmtzL3hib3gvcGFydG5lcl9wYXNz",
+  httpServerLocation: "/assets/modules/premium/youtube_3pp",
   scales: [1],
-  hash: "4e9485a94f89e886a77bfdd1d02dc14d",
-  name: "en-GB.messages.4e9485a94f89e886a77bfdd1d02dc14d.compiled.messages",
+  hash: "bc5d8722845596a5352afd760a9336a0",
+  name: "Youtube3PP.compiled.messages",
   type: "jsona",
 });

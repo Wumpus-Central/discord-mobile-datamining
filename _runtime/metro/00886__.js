@@ -1,157 +1,114 @@
 // _runtime/metro/00886__.js
-import noop_mod from "00884__.js";
 
-function valuePromise(_55) {
-  const tmp2 = new noop(noop._61);
-  tmp2._65 = 1;
-  tmp2._55 = _55;
-  return tmp2;
-}
-let noop = noop_mod;
-const _module6 = new noop(noop._61);
-_module6._65 = 1;
-_module6._55 = true;
-let noop = noop_mod;
-const _module11 = new noop(noop._61);
-_module11._65 = 1;
-_module11._55 = false;
-let noop = noop_mod;
-const _module21 = new noop(noop._61);
-_module21._65 = 1;
-_module21._55 = null;
-let noop = noop_mod;
-const _module31 = new noop(noop._61);
-_module31._65 = 1;
-_module31._55 = undefined;
-let noop = noop_mod;
-const _module41 = new noop(noop._61);
-_module41._65 = 1;
-_module41._55 = 0;
-let noop = noop_mod;
-const _module51 = new noop(noop._61);
-_module51._65 = 1;
-_module51._55 = "";
-noop.resolve = (self) => {
-  if (self instanceof noop) {
-    return self;
-  } else if (null === self) {
-    return _module21;
-  } else if (undefined === self) {
-    return _module31;
-  } else if (true === self) {
-    return _module6;
-  } else if (false === self) {
-    return _module11;
-  } else if (0 === self) {
-    return _module41;
-  } else if ("" === self) {
-    return _module51;
-  } else {
-    if (typeof self === "object") {
-      try {
-        const then = self.then;
-        if (typeof then === "function") {
-          const tmp4Result1 = new noop(obj.bind(self));
-          return tmp4Result1;
-        }
-        obj = then;
-      } catch (tmp14) {
-        const require = tmp14;
-        const tmp17 = new tmp2(tmp[0])((arg0, fn) => {
-          fn(closure_0);
-        });
-        return tmp17;
-      }
-    }
-    return valuePromise(self);
+export const utf8ToBytes = function utf8ToBytes(str, arg1) {
+  let num = arg1;
+  if (!arg1) {
+    num = Infinity;
   }
-};
-noop.all = (arg0) => {
-  const call = slice.call;
-  _require = typeof call === "unknown" ? slice() : call(arg0);
-  return new require("00884__.js")((fn, arg1) => {
-    closure_0 = fn;
-    closure_1 = arg1;
-    function res(arg0, _65) {
-      closure_0 = arg0;
-      if (_65) {
-        if (typeof _65 === "object") {
-          if (_65 instanceof closure_0(dependencyMap[0])) {
-            if (_65.then === tmp(dependencyMap[0]).prototype.then) {
-              let tmp13 = _65;
-              let promise2 = _65;
-              if (3 === _65._65) {
-                do {
-                  let _55 = tmp13._55;
-                  tmp13 = _55;
-                  promise2 = _55;
-                  _65 = _55._65;
-                } while (3 === _65);
+  const items = [];
+  let num2 = 0;
+  let tmp = null;
+  if (0 < str.length) {
+    while (true) {
+      let charCodeAtResult = str.charCodeAt(num2);
+      if (charCodeAtResult > 55295) {
+        if (charCodeAtResult < 57344) {
+          if (tmp) {
+            if (charCodeAtResult < 56320) {
+              let diff = num - 3;
+              let tmp12 = charCodeAtResult;
+              let tmp13 = diff;
+              if (-1 < diff) {
+                let arr = items.push(239, 191, 189);
+                tmp12 = charCodeAtResult;
+                tmp13 = diff;
               }
-              if (1 === promise2._65) {
-                const tmp18 = res(arg0, promise2._55);
-              } else {
-                if (2 === promise2._65) {
-                  closure_1(promise2._55);
-                }
-                promise2.then((result) => {
-                  res(closure_0, result);
-                }, closure_1);
+            } else {
+              let sum = 65536 + (((tmp - 55296) << 10) | (charCodeAtResult - 56320));
+              let tmp10 = num;
+            }
+            if (sum < 128) {
+              let diff1 = tmp10 - 1;
+              if (diff1 >= 0) {
+                let arr9 = items.push(sum);
+                tmp12 = null;
+                tmp13 = diff1;
               }
-              return tmp18;
+            } else if (sum < 2048) {
+              let diff2 = tmp10 - 2;
+              if (diff2 >= 0) {
+                let arr10 = items.push((sum >> 6) | 192, (63 & sum) | 128);
+                tmp12 = null;
+                tmp13 = diff2;
+              }
+            } else if (sum < 65536) {
+              let diff3 = tmp10 - 3;
+              if (diff3 >= 0) {
+                let arr11 = items.push((sum >> 12) | 224, ((sum >> 6) & 63) | 128, (63 & sum) | 128);
+                tmp12 = null;
+                tmp13 = diff3;
+              }
+            } else if (sum >= 1114112) {
+              break;
+            } else {
+              let diff4 = tmp10 - 4;
+              if (diff4 >= 0) {
+                let arr12 = items.push(
+                  (sum >> 18) | 240,
+                  ((sum >> 12) & 63) | 128,
+                  ((sum >> 6) & 63) | 128,
+                  (63 & sum) | 128,
+                );
+                tmp12 = null;
+                tmp13 = diff4;
+              }
+            }
+          } else if (charCodeAtResult > 56319) {
+            let diff5 = num - 3;
+            tmp12 = tmp;
+            tmp13 = diff5;
+            if (-1 < diff5) {
+              let arr13 = items.push(239, 191, 189);
+              tmp12 = tmp;
+              tmp13 = diff5;
+            }
+          } else {
+            tmp12 = charCodeAtResult;
+            tmp13 = num;
+            if (num2 + 1 === length) {
+              let diff6 = num - 3;
+              tmp12 = tmp;
+              tmp13 = diff6;
+              if (-1 < diff6) {
+                let arr14 = items.push(239, 191, 189);
+                tmp12 = tmp;
+                tmp13 = diff6;
+              }
             }
           }
-          const then = _65.then;
-          if (typeof then === "function") {
-            const tmpResult1 = new tmp(dependencyMap[0])(then.bind(_65));
-            tmpResult1.then((result) => {
-              res(closure_0, result);
-            }, closure_1);
-            const tmpResult = tmp(dependencyMap[0]);
-          }
+          num2 = num2 + 1;
+          tmp = tmp12;
+          num = tmp13;
         }
       }
-      closure_0[arg0] = _65;
-      const diff = length - 1;
-      if (0 == diff) {
-        closure_0(tmp3);
+      let tmp6 = tmp;
+      let tmp7 = num;
+      if (tmp) {
+        let diff7 = num - 3;
+        tmp6 = diff7 > -1;
+        tmp7 = diff7;
       }
-      length = diff;
-    }
-    if (0 === closure_0.length) {
-      return fn([]);
-    } else {
-      let length = arr.length;
-      let num2 = 0;
-      if (0 < arr.length) {
-        do {
-          let resResult = res(num2, closure_0[num2]);
-          num2 = num2 + 1;
-          length = closure_0.length;
-        } while (num2 < length);
+      sum = charCodeAtResult;
+      tmp10 = tmp7;
+      if (tmp6) {
+        let arr15 = items.push(239, 191, 189);
+        sum = charCodeAtResult;
+        tmp10 = tmp7;
       }
     }
-  });
+    const _Error = Error;
+    const error = new Error("Invalid code point");
+    throw error;
+  }
+  return items;
 };
-noop.reject = (arg0) => {
-  closure_0 = arg0;
-  return new noop((arg0, fn) => {
-    fn(closure_0);
-  });
-};
-noop.race = (arg0) => {
-  _require = arg0;
-  return new require("00884__.js")((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    const item = closure_0.forEach((item) => {
-      const obj = closure_0(dependencyMap[0]);
-      closure_0(dependencyMap[0]).resolve(item).then(closure_0, closure_1);
-    });
-  });
-};
-noop.prototype.catch = function (arg0) {
-  return this.then(null, arg0);
-};
-
-export default noop;

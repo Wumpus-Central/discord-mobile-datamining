@@ -1,15 +1,15 @@
 // _runtime/metro/04306__.js
-import module_4298_mod from "04298__.js";
-import requiredArgs_mod from "../03948_requiredArgs.js";
+import startOfWeek_mod from "../04117_startOfWeek.js";
+import requiredArgs_mod from "../03959_requiredArgs.js";
 
-let module_4298 = module_4298_mod;
-if (!module_4298) {
-  const obj = { default: module_4298 };
+let startOfWeek = startOfWeek_mod;
+if (!startOfWeek) {
+  const obj = { default: startOfWeek };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4298;
+  tmp3 = startOfWeek;
 }
-module_4298 = tmp3;
+startOfWeek = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -19,8 +19,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisMonth(arg0) {
-  requiredArgs.default(1, arguments);
-  return module_4298.default(Date.now(), arg0);
+export default function isSameWeek(arg0, arg1, arg2) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = startOfWeek.default(arg0, arg2);
+  const time = defaultResult1.getTime();
+  return time === startOfWeek.default(arg1, arg2).getTime();
 };
 export default exports.default;

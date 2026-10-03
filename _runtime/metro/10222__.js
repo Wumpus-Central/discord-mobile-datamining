@@ -1,12 +1,14 @@
 // _runtime/metro/10222__.js
-import _mod10219 from "10219__.js";
+import repeatedTimeunitPattern from "../10161_repeatedTimeunitPattern.js";
+import AbstractParserWithWordBoundaryChecking from "../10168_AbstractParserWithWordBoundaryChecking.js";
+import _mod10223 from "10223__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const RUTimeUnitAgoFormatParser = require;
+const FRWeekdayParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,12 +27,18 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class RUTimeUnitAgoFormatParser {
+const regExp = new RegExp(
+  "(?:(?:\\,|\\(|\\\uFF08)\\s*)?(?:(?:ce)\\s*)?(" +
+    repeatedTimeunitPattern.matchAnyPattern(_mod10223.WEEKDAY_DICTIONARY) +
+    ")(?:\\s*(?:\\,|\\)|\\\uFF09))?(?:\\s*(dernier|prochain)\\s*)?(?=\\W|\\d|$)",
+  "i",
+);
+class FRWeekdayParser {
   constructor() {
     self = this;
-    tmp = c2(this, RUTimeUnitAgoFormatParser);
+    tmp = c2(this, FRWeekdayParser);
     tmp2 = closure_4;
-    obj = closure_4(RUTimeUnitAgoFormatParser);
+    obj = closure_4(FRWeekdayParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -45,13 +53,11 @@ class RUTimeUnitAgoFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(RUTimeUnitAgoFormatParser, _mod10219.AbstractParserWithLeftBoundaryChecking);
+_inherits(FRWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "innerPatternString",
-  value: function innerPatternString(arg0) {
-    return (
-      "(" + RUTimeUnitAgoFormatParser(10217).TIME_UNITS_PATTERN + ")\\s{0,5}\u043D\u0430\u0437\u0430\u0434(?=(?:\\W|$))"
-    );
+  key: "innerPattern",
+  value: function innerPattern() {
+    return regExp;
   },
 };
 const items = [
@@ -59,14 +65,23 @@ const items = [
   {
     key: "innerExtract",
     value: function innerExtract(reference, arg1) {
-      const parseDurationResult = RUTimeUnitAgoFormatParser(10217).parseDuration(arg1[1]);
-      const ParsingComponents = RUTimeUnitAgoFormatParser(10091).ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(
-        reference.reference,
-        RUTimeUnitAgoFormatParser(10090).reverseDuration(RUTimeUnitAgoFormatParser(10217).parseDuration(arg1[1])),
-      );
+      const formatted = arg1[1].toLowerCase();
+      const tmp4 = FRWeekdayParser(10223).WEEKDAY_DICTIONARY[formatted];
+      if (undefined === tmp4) {
+        return null;
+      } else {
+        const formatted1 = arg1[2] || "".toLowerCase();
+        let str4 = "last";
+        if ("dernier" != formatted1) {
+          str4 = null;
+          if ("prochain" == formatted1) {
+            str4 = "next";
+          }
+        }
+        return FRWeekdayParser(10188).createParsingComponentsAtWeekday(reference.reference, tmp4, str4);
+      }
     },
   },
 ];
 
-export default _createClass(RUTimeUnitAgoFormatParser, items);
+export default _createClass(FRWeekdayParser, items);

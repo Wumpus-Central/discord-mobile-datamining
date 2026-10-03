@@ -1,13 +1,13 @@
 // _runtime/metro/10053__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 12,
-  height: 12,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "91cf7e45c8979413a0ad2486eb772598",
-  name: "ic_nitro_wheel",
+  hash: "a97ebd26f28acc69dba8dec170283378",
+  name: "ChatMarkUnreadIcon",
   type: "png",
 });

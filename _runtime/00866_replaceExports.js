@@ -1,0 +1,23 @@
+// _runtime/00866_replaceExports.js
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+
+export const replaceExports = function replaceExports(arg0, arg1, arg2) {
+  if (typeof arg0[arg1] === "function") {
+    try {
+      arg0[arg1] = arg2;
+      if (arg0.default === tmp4) {
+        try {
+          arg0.default = arg2;
+        } catch (err) {
+          const _Object2 = Object;
+          const obj2 = { value: tmp, writable: true, configurable: true, enumerable: true };
+          Object.defineProperty(tmp2, "default", obj2);
+        }
+      }
+    } catch (err) {
+      const _Object = Object;
+      const obj = { value: tmp, writable: true, configurable: true, enumerable: true };
+      Object.defineProperty(tmp2, tmp3, obj);
+    }
+  }
+};

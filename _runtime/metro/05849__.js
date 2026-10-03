@@ -1,13 +1,13 @@
 // _runtime/metro/05849__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
-  scales: [1],
-  hash: "18792494d95a201efe70aee5f49c4a4a",
-  name: "img_account_sync_github_light",
-  type: "svg",
+  scales: [2, 3],
+  hash: "d9312bb32f25ade901c17406f7f53267",
+  name: "ImageLockIcon",
+  type: "png",
 });

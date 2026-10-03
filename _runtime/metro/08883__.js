@@ -1,13 +1,13 @@
 // _runtime/metro/08883__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 189,
-  height: 163,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "b5d60c4f52c2e5640ed435ba1b0b3fc3",
-  name: "img_tier_2_clouds",
+  hash: "26d707b294c340a6d911d79614dfcf77",
+  name: "UserSquareIcon",
   type: "png",
 });

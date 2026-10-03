@@ -1,13 +1,13 @@
 // _runtime/metro/09691__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/video_calls/native/images",
-  width: 20,
-  height: 20,
+  httpServerLocation: "/assets/images/native/icons/voice_calls/light_theme",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "680bf4fd0485a160338f41e352ddc0a6",
-  name: "grid",
+  hash: "a9eb64c7670ac900f200e86de988df53",
+  name: "voice_bar_mute_on",
   type: "png",
 });

@@ -1,128 +1,320 @@
 // _runtime/metro/04462__.js
-import _mod4450 from "04450__.js";
+import _mod4461 from "04461__.js";
 
 const fn = function t(moment) {
-  const obj = {
-    eras: null,
-    eraYearOrdinalRegex: /(元|\d+)年/,
-    eraYearOrdinalParse(match, match) {
-      let num = 1;
-      if ("\u5143" !== match[1]) {
-        let tmp2 = match[1];
-        if (!tmp2) {
-          tmp2 = match;
+  function translate(arg0, arg1, arg2, arg3) {
+    const text = `${arg0} `;
+    switch (arg2) {
+      case "s":
+        if (arg1) {
+          let str20 = "p\u00E1r sekund";
+        } else {
+          str20 = "p\u00E1r sekundami";
         }
-        num = parseInt(tmp2, 10);
-      }
-      return num;
-    },
-    months: "1\u6708_2\u6708_3\u6708_4\u6708_5\u6708_6\u6708_7\u6708_8\u6708_9\u6708_10\u6708_11\u6708_12\u6708".split(
-      "_",
-    ),
-    monthsShort:
-      "1\u6708_2\u6708_3\u6708_4\u6708_5\u6708_6\u6708_7\u6708_8\u6708_9\u6708_10\u6708_11\u6708_12\u6708".split("_"),
-    weekdays:
-      "\u65E5\u66DC\u65E5_\u6708\u66DC\u65E5_\u706B\u66DC\u65E5_\u6C34\u66DC\u65E5_\u6728\u66DC\u65E5_\u91D1\u66DC\u65E5_\u571F\u66DC\u65E5".split(
+        return str20;
+      case "ss":
+        if (!arg1) {
+          if (!arg3) {
+            let text1 = `${tmp}sekundami`;
+          }
+          return text1;
+        }
+        let tmp13 = arg0 > 1;
+        if (tmp13) {
+          tmp13 = arg0 < 5;
+        }
+        if (tmp13) {
+          tmp13 = 1 !== ~~arg0 / 10;
+        }
+        let str19 = "sekund";
+        if (tmp13) {
+          str19 = "sekundy";
+        }
+        text1 = text + str19;
+        break;
+      case "m":
+        let str16 = "minuta";
+        if (!arg1) {
+          let str17 = "minutou";
+          if (arg3) {
+            str17 = "minutu";
+          }
+          str16 = str17;
+        }
+        return str16;
+      case "mm":
+        if (!arg1) {
+          if (!arg3) {
+            let text2 = `${tmp}minutami`;
+          }
+          return text2;
+        }
+        let tmp11 = arg0 > 1;
+        if (tmp11) {
+          tmp11 = arg0 < 5;
+        }
+        if (tmp11) {
+          tmp11 = 1 !== ~~arg0 / 10;
+        }
+        let str15 = "minut";
+        if (tmp11) {
+          str15 = "minuty";
+        }
+        text2 = text + str15;
+        break;
+      case "h":
+        let str12 = "hodina";
+        if (!arg1) {
+          let str13 = "hodinou";
+          if (arg3) {
+            str13 = "hodinu";
+          }
+          str12 = str13;
+        }
+        return str12;
+      case "hh":
+        if (!arg1) {
+          if (!arg3) {
+            let text3 = `${tmp}hodinami`;
+          }
+          return text3;
+        }
+        let tmp9 = arg0 > 1;
+        if (tmp9) {
+          tmp9 = arg0 < 5;
+        }
+        if (tmp9) {
+          tmp9 = 1 !== ~~arg0 / 10;
+        }
+        let str11 = "hodin";
+        if (tmp9) {
+          str11 = "hodiny";
+        }
+        text3 = text + str11;
+        break;
+      case "d":
+        if (arg1) {
+          let str9 = "den";
+        } else {
+          str9 = "dnem";
+        }
+        return str9;
+      case "dd":
+        if (!arg1) {
+          if (!arg3) {
+            let text4 = `${tmp}dny`;
+          }
+          return text4;
+        }
+        let tmp7 = arg0 > 1;
+        if (tmp7) {
+          tmp7 = arg0 < 5;
+        }
+        if (tmp7) {
+          tmp7 = 1 !== ~~arg0 / 10;
+        }
+        let str8 = "dn\u00ED";
+        if (tmp7) {
+          str8 = "dny";
+        }
+        text4 = text + str8;
+        break;
+      case "M":
+        if (arg1) {
+          let str6 = "m\u011Bs\u00EDc";
+        } else {
+          str6 = "m\u011Bs\u00EDcem";
+        }
+        return str6;
+      case "MM":
+        if (!arg1) {
+          if (!arg3) {
+            let text5 = `${tmp}měsíci`;
+          }
+          return text5;
+        }
+        let tmp5 = arg0 > 1;
+        if (tmp5) {
+          tmp5 = arg0 < 5;
+        }
+        if (tmp5) {
+          tmp5 = 1 !== ~~arg0 / 10;
+        }
+        let str5 = "m\u011Bs\u00EDc\u016F";
+        if (tmp5) {
+          str5 = "m\u011Bs\u00EDce";
+        }
+        text5 = text + str5;
+        break;
+      case "y":
+        if (arg1) {
+          let str3 = "rok";
+        } else {
+          str3 = "rokem";
+        }
+        return str3;
+      case "yy":
+        if (!arg1) {
+          if (!arg3) {
+            let text6 = `${tmp}lety`;
+          }
+          return text6;
+        }
+        let tmp3 = arg0 > 1;
+        if (tmp3) {
+          tmp3 = arg0 < 5;
+        }
+        if (tmp3) {
+          tmp3 = 1 !== ~~arg0 / 10;
+        }
+        let str2 = "let";
+        if (tmp3) {
+          str2 = "roky";
+        }
+        text6 = text + str2;
+        break;
+      default:
+    }
+  }
+  const items = [
+    /^led/i,
+    /^úno/i,
+    /^bře/i,
+    /^dub/i,
+    /^kvě/i,
+    /^(čvn|červen$|června)/i,
+    /^(čvc|červenec|července)/i,
+    /^srp/i,
+    /^zář/i,
+    /^říj/i,
+    /^lis/i,
+    /^pro/i,
+  ];
+  const tmp =
+    /^(leden|únor|březen|duben|květen|červenec|července|červen|června|srpen|září|říjen|listopad|prosinec|led|úno|bře|dub|kvě|čvn|čvc|srp|zář|říj|lis|pro)/i;
+  const obj = {
+    standalone:
+      "leden_\u00FAnor_b\u0159ezen_duben_kv\u011Bten_\u010Derven_\u010Dervenec_srpen_z\u00E1\u0159\u00ED_\u0159\u00EDjen_listopad_prosinec".split(
         "_",
       ),
-    weekdaysShort: "\u65E5_\u6708_\u706B_\u6C34_\u6728_\u91D1_\u571F".split("_"),
-    weekdaysMin: "\u65E5_\u6708_\u706B_\u6C34_\u6728_\u91D1_\u571F".split("_"),
+    format:
+      "ledna_\u00FAnora_b\u0159ezna_dubna_kv\u011Btna_\u010Dervna_\u010Dervence_srpna_z\u00E1\u0159\u00ED_\u0159\u00EDjna_listopadu_prosince".split(
+        "_",
+      ),
+    isFormat: /DD?[o.]?(\[[^\[\]]*\]|\s)+MMMM/,
+  };
+  ({ split, split: split2 } = "ne_po_\u00FAt_st_\u010Dt_p\u00E1_so");
+  return moment.defineLocale("cs", {
+    months: {
+      standalone:
+        "leden_\u00FAnor_b\u0159ezen_duben_kv\u011Bten_\u010Derven_\u010Dervenec_srpen_z\u00E1\u0159\u00ED_\u0159\u00EDjen_listopad_prosinec".split(
+          "_",
+        ),
+      format:
+        "ledna_\u00FAnora_b\u0159ezna_dubna_kv\u011Btna_\u010Dervna_\u010Dervence_srpna_z\u00E1\u0159\u00ED_\u0159\u00EDjna_listopadu_prosince".split(
+          "_",
+        ),
+      isFormat: /DD?[o.]?(\[[^\[\]]*\]|\s)+MMMM/,
+    },
+    monthsShort: "led_\u00FAno_b\u0159e_dub_kv\u011B_\u010Dvn_\u010Dvc_srp_z\u00E1\u0159_\u0159\u00EDj_lis_pro".split(
+      "_",
+    ),
+    monthsRegex: tmp,
+    monthsShortRegex: tmp,
+    monthsStrictRegex:
+      /^(leden|ledna|února|únor|březen|března|duben|dubna|květen|května|červenec|července|červen|června|srpen|srpna|září|říjen|října|listopadu|listopad|prosinec|prosince)/i,
+    monthsShortStrictRegex: /^(led|úno|bře|dub|kvě|čvn|čvc|srp|zář|říj|lis|pro)/i,
+    monthsParse: items,
+    longMonthsParse: items,
+    shortMonthsParse: items,
+    weekdays: "ned\u011Ble_pond\u011Bl\u00ED_\u00FAter\u00FD_st\u0159eda_\u010Dtvrtek_p\u00E1tek_sobota".split("_"),
+    weekdaysShort: "ne_po_\u00FAt_st_\u010Dt_p\u00E1_so".split("_"),
+    weekdaysMin: "ne_po_\u00FAt_st_\u010Dt_p\u00E1_so".split("_"),
     longDateFormat: {
-      LT: "HH:mm",
-      LTS: "HH:mm:ss",
-      L: "YYYY/MM/DD",
-      LL: "YYYY\u5E74M\u6708D\u65E5",
-      LLL: "YYYY\u5E74M\u6708D\u65E5 HH:mm",
-      LLLL: "YYYY\u5E74M\u6708D\u65E5 dddd HH:mm",
-      l: "YYYY/MM/DD",
-      ll: "YYYY\u5E74M\u6708D\u65E5",
-      lll: "YYYY\u5E74M\u6708D\u65E5 HH:mm",
-      llll: "YYYY\u5E74M\u6708D\u65E5(ddd) HH:mm",
-    },
-    meridiemParse: /午前|午後/i,
-    isPM(arg0) {
-      return "\u5348\u5F8C" === arg0;
-    },
-    meridiem(arg0, arg1, arg2) {
-      let str = "\u5348\u5F8C";
-      if (arg0 < 12) {
-        str = "\u5348\u524D";
-      }
-      return str;
+      LT: "H:mm",
+      LTS: "H:mm:ss",
+      L: "DD.MM.YYYY",
+      LL: "D. MMMM YYYY",
+      LLL: "D. MMMM YYYY H:mm",
+      LLLL: "dddd D. MMMM YYYY H:mm",
+      l: "D. M. YYYY",
     },
     calendar: {
-      sameDay: "[\u4ECA\u65E5] LT",
-      nextDay: "[\u660E\u65E5] LT",
-      nextWeek(week) {
-        let str = "dddd LT";
-        if (weekResult !== this.week()) {
-          str = "[\u6765\u9031]dddd LT";
+      sameDay: "[dnes v] LT",
+      nextDay: "[z\u00EDtra v] LT",
+      nextWeek() {
+        const dayResult = this.day();
+        if (0 === dayResult) {
+          return "[v ned\u011Bli v] LT";
+        } else {
+          if (1 !== dayResult) {
+            if (2 !== dayResult) {
+              if (3 === dayResult) {
+                return "[ve st\u0159edu v] LT";
+              } else if (4 === dayResult) {
+                return "[ve \u010Dtvrtek v] LT";
+              } else if (5 === dayResult) {
+                return "[v p\u00E1tek v] LT";
+              } else if (6 === dayResult) {
+                return "[v sobotu v] LT";
+              }
+            }
+          }
+          return "[v] dddd [v] LT";
         }
-        return str;
       },
-      lastDay: "[\u6628\u65E5] LT",
-      lastWeek(week) {
-        let str = "dddd LT";
-        if (weekResult !== week.week()) {
-          str = "[\u5148\u9031]dddd LT";
+      lastDay: "[v\u010Dera v] LT",
+      lastWeek() {
+        const dayResult = this.day();
+        if (0 === dayResult) {
+          return "[minulou ned\u011Bli v] LT";
+        } else {
+          if (1 !== dayResult) {
+            if (2 !== dayResult) {
+              if (3 === dayResult) {
+                return "[minulou st\u0159edu v] LT";
+              } else {
+                if (4 !== dayResult) {
+                  if (5 !== dayResult) {
+                    if (6 === dayResult) {
+                      return "[minulou sobotu v] LT";
+                    }
+                  }
+                }
+                return "[minul\u00FD] dddd [v] LT";
+              }
+            }
+          }
+          return "[minul\u00E9] dddd [v] LT";
         }
-        return str;
       },
       sameElse: "L",
     },
-    dayOfMonthOrdinalParse: /\d{1,2}日/,
-    ordinal(arg0, arg1) {
-      if ("y" === arg1) {
-        let str5 = "\u5143\u5E74";
-        if (1 !== arg0) {
-          str5 = `${arg0}年`;
-        }
-        return str5;
-      } else {
-        if ("d" !== arg1) {
-          if ("D" !== arg1) {
-            if ("DDD" !== arg1) {
-              return arg0;
-            }
-          }
-        }
-        return arg0 + "\u65E5";
-      }
-    },
     relativeTime: {
-      future: "%s\u5F8C",
-      past: "%s\u524D",
-      s: "\u6570\u79D2",
-      ss: "%d\u79D2",
-      m: "1\u5206",
-      mm: "%d\u5206",
-      h: "1\u6642\u9593",
-      hh: "%d\u6642\u9593",
-      d: "1\u65E5",
-      dd: "%d\u65E5",
-      M: "1\u30F6\u6708",
-      MM: "%d\u30F6\u6708",
-      y: "1\u5E74",
-      yy: "%d\u5E74",
+      future: "za %s",
+      past: "p\u0159ed %s",
+      s: translate,
+      ss: translate,
+      m: translate,
+      mm: translate,
+      h: translate,
+      hh: translate,
+      d: translate,
+      dd: translate,
+      M: translate,
+      MM: translate,
+      y: translate,
+      yy: translate,
     },
-  };
-  const items = [
-    { since: "2019-05-01", offset: 1, name: "\u4EE4\u548C", narrow: "\u32FF", abbr: "R" },
-    { since: "1989-01-08", until: "2019-04-30", offset: 1, name: "\u5E73\u6210", narrow: "\u337B", abbr: "H" },
-    { since: "1926-12-25", until: "1989-01-07", offset: 1, name: "\u662D\u548C", narrow: "\u337C", abbr: "S" },
-    { since: "1912-07-30", until: "1926-12-24", offset: 1, name: "\u5927\u6B63", narrow: "\u337D", abbr: "T" },
-    { since: "1873-01-01", until: "1912-07-29", offset: 6, name: "\u660E\u6CBB", narrow: "\u337E", abbr: "M" },
-    { since: "0001-01-01", until: "1873-12-31", offset: 1, name: "\u897F\u66A6", narrow: "AD", abbr: "AD" },
-    { since: "0000-12-31", until: -Infinity, offset: 1, name: "\u7D00\u5143\u524D", narrow: "BC", abbr: "BC" },
-  ];
-  obj.eras = items;
-  ({ split, split: split2 } = "\u65E5_\u6708_\u706B_\u6C34_\u6728_\u91D1_\u571F");
-  return moment.defineLocale("ja", obj);
+    dayOfMonthOrdinalParse: /\d{1,2}\./,
+    ordinal: "%d.",
+    week: { dow: 1, doy: 4 },
+  });
 };
 if (typeof exports === "object") {
   if (undefined !== module) {
     if (typeof require === "function") {
-      fn(_mod4450);
+      fn(_mod4461);
     }
   }
 }

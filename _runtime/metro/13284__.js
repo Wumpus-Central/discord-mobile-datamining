@@ -1,13 +1,13 @@
 // _runtime/metro/13284__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/premium/logos",
-  width: 45.5,
-  height: 8.5,
+  width: 51,
+  height: 13,
   scales: [2, 3],
-  hash: "8d16389f341b45c184ca21d1deb5fd2e",
-  name: "img_logo_discord",
+  hash: "224e933808a00a22a9d03c8af389d91f",
+  name: "img_logo_basic_small_dark",
   type: "png",
 });

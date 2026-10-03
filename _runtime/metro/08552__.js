@@ -1,5 +1,5 @@
 // _runtime/metro/08552__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "dcae1df15663c479951183ad5f2fe3dd",
-  name: "RedditNeutralIcon",
+  hash: "1d8ebef8a3957ec5bd51e54121ce2c75",
+  name: "GlobeEarthIcon",
   type: "png",
 });

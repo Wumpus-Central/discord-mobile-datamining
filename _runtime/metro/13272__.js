@@ -1,13 +1,13 @@
 // _runtime/metro/13272__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/guild_boosting/perks",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/premium/logos",
+  width: 134,
+  height: 56,
   scales: [2, 3],
-  hash: "6ce9cfa41f5b080fb1f9fac04190337a",
-  name: "emoji",
+  hash: "5491d41ca2212b1f11c074c452801d84",
+  name: "img_discord_nitro_logo_centered_dark",
   type: "png",
 });

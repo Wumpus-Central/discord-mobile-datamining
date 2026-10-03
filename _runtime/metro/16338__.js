@@ -1,13 +1,13 @@
 // _runtime/metro/16338__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/icymi/native/images",
-  width: 77,
-  height: 95.5,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "ebbb7db0461de915440e3bdd6a8249c9",
-  name: "flash",
+  hash: "0c1dfbd9df935becc793861dc2d441bd",
+  name: "ConnectionFineIcon",
   type: "png",
 });

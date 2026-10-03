@@ -1,17 +1,17 @@
 // _runtime/metro/05351__.js
-import _mod5334 from "05334__.js";
+import callBoundIntrinsic from "../01326_callBoundIntrinsic.js";
+import RequireObjectCoercible from "../05338_RequireObjectCoercible.js";
+import ToString from "../05352_ToString.js";
 
-export default function isFullyPopulatedPropertyDescriptor(IsAccessorDescriptor, arg1) {
-  let tmp = _mod5334(arg1);
-  if (tmp) {
-    tmp = "[[Enumerable]]" in arg1;
-  }
-  if (tmp) {
-    tmp = "[[Configurable]]" in arg1;
-  }
-  if (tmp) {
-    tmp = IsAccessorDescriptor.IsAccessorDescriptor(arg1) || IsAccessorDescriptor.IsDataDescriptor(arg1);
-    const tmp3 = IsAccessorDescriptor.IsAccessorDescriptor(arg1) || IsAccessorDescriptor.IsDataDescriptor(arg1);
-  }
-  return tmp;
+let closure_2 = callBoundIntrinsic("String.prototype.replace");
+const isMatch = /^\s$/.test("\u180E");
+let closure_3 = isMatch
+  ? /^[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u180E\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+/
+  : /^[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+/;
+let closure_4 = isMatch
+  ? /[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u180E\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+$/
+  : /[\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028\u2029\uFEFF]+$/;
+
+export default function trim() {
+  return closure_2(closure_2(ToString(RequireObjectCoercible(this)), closure_3, ""), closure_4, "");
 }

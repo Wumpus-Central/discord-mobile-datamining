@@ -1,13 +1,13 @@
 // _runtime/metro/13337__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/premium/guild_boosting",
+  width: 177.5,
+  height: 112,
   scales: [2, 3],
-  hash: "b0762f0f9ef3f22f62e92b1be981b656",
-  name: "ChevronLargeUpIcon",
+  hash: "d63f711157bc9a870f14f2f22d76c3fb",
+  name: "guild_subscription_no_guilds_dark",
   type: "png",
 });

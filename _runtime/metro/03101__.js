@@ -1,11 +1,11 @@
 // _runtime/metro/03101__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/tiny_bronco",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==",
   scales: [1],
-  hash: "85ba830fae837ab85e6c8206c1f0235a",
-  name: "TinyBronco.compiled.messages",
+  hash: "77f3e6c78baa221d87253f4fc5c7af70",
+  name: "sv-SE.messages.77f3e6c78baa221d87253f4fc5c7af70.compiled.messages",
   type: "jsona",
 });

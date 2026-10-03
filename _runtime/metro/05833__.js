@@ -1,13 +1,13 @@
 // _runtime/metro/05833__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
-  scales: [1],
-  hash: "11d22afa82357c17306bb835b9fe7074",
-  name: "img_account_sync_x_white",
-  type: "svg",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "97a83fa92aca73b91331f0f57ecb4c27",
+  name: "ForumIcon",
+  type: "png",
 });

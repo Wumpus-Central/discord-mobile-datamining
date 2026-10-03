@@ -1,5 +1,6 @@
 // _runtime/metro/04130__.js
-import requiredArgs_mod from "../03948_requiredArgs.js";
+import _typeof_mod from "03958__.js";
+import requiredArgs_mod from "../03959_requiredArgs.js";
 
 function _typeof(arg0) {
   if (typeof Symbol === "function") {
@@ -26,30 +27,53 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj = { default: requiredArgs };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = requiredArgs;
+  tmp3 = _typeof;
 }
-requiredArgs = tmp3;
+_typeof = tmp3;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
+} else {
+  tmp5 = requiredArgs;
+}
+requiredArgs = tmp5;
 
-export default function isDate(arg0) {
+export default function max(arg0) {
   requiredArgs.default(1, arguments);
-  let tmp2 = arg0 instanceof Date;
-  if (!tmp2) {
-    const tmp4 = "object" === _typeof(arg0);
-    if (!tmp4) {
-      tmp2 = tmp4;
-    } else {
-      const _Object = Object;
-      let str2 = Object.prototype.toString;
-      const call = str2.call;
-      str2 = "[object Date]";
-      const tmp5 = typeof call === "unknown" ? str2() : call(arg0);
+  if (!arg0) {
+    if ("object" === _typeof(arg0)) {
+      if (null !== arg0) {
+        const _Array = Array;
+        const call = slice.call;
+        let arr = typeof call === "unknown" ? slice() : call(arg0);
+      }
     }
+    const _Date = Date;
+    const date = new Date(NaN);
+    return date;
+  } else {
+    arr = arg0;
   }
-  return tmp2;
+  const item = arr.forEach((item) => {
+    defaultResult = _typeof.default(item);
+    let isNaNResult = undefined === defaultResult || defaultResult < defaultResult;
+    if (!isNaNResult) {
+      const _isNaN = isNaN;
+      const _Number = Number;
+      isNaNResult = isNaN(Number(defaultResult));
+    }
+  });
+  let date1 = _typeof;
+  if (!_typeof) {
+    const _Date2 = Date;
+    date1 = new Date(NaN);
+  }
+  return date1;
 };
 export default exports.default;

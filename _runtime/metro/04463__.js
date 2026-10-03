@@ -1,10 +1,10 @@
 // _runtime/metro/04463__.js
-import _mod4450 from "04450__.js";
+import _mod4461 from "04461__.js";
 
 if (typeof exports === "object") {
   if (undefined !== module) {
     if (typeof require === "function") {
-      const _module = _mod4450;
+      const _module = _mod4461;
       const obj2 = {
         months: null,
         monthsShort: null,
@@ -15,350 +15,187 @@ if (typeof exports === "object") {
         calendar: null,
         relativeTime: null,
         dayOfMonthOrdinalParse: null,
-        ordinal: null,
-        meridiemParse: null,
-        isPM: null,
-        meridiem: null,
+        ordinal: "%d.",
+        week: null,
       };
-      const split3 =
-        "1\uC6D4_2\uC6D4_3\uC6D4_4\uC6D4_5\uC6D4_6\uC6D4_7\uC6D4_8\uC6D4_9\uC6D4_10\uC6D4_11\uC6D4_12\uC6D4".split;
-      obj2.months =
-        "1\uC6D4_2\uC6D4_3\uC6D4_4\uC6D4_5\uC6D4_6\uC6D4_7\uC6D4_8\uC6D4_9\uC6D4_10\uC6D4_11\uC6D4_12\uC6D4".split("_");
-      const split4 =
-        "1\uC6D4_2\uC6D4_3\uC6D4_4\uC6D4_5\uC6D4_6\uC6D4_7\uC6D4_8\uC6D4_9\uC6D4_10\uC6D4_11\uC6D4_12\uC6D4".split;
-      obj2.monthsShort =
-        "1\uC6D4_2\uC6D4_3\uC6D4_4\uC6D4_5\uC6D4_6\uC6D4_7\uC6D4_8\uC6D4_9\uC6D4_10\uC6D4_11\uC6D4_12\uC6D4".split("_");
-      const split5 =
-        "\uC77C\uC694\uC77C_\uC6D4\uC694\uC77C_\uD654\uC694\uC77C_\uC218\uC694\uC77C_\uBAA9\uC694\uC77C_\uAE08\uC694\uC77C_\uD1A0\uC694\uC77C"
-          .split;
-      obj2.weekdays =
-        "\uC77C\uC694\uC77C_\uC6D4\uC694\uC77C_\uD654\uC694\uC77C_\uC218\uC694\uC77C_\uBAA9\uC694\uC77C_\uAE08\uC694\uC77C_\uD1A0\uC694\uC77C".split(
-          "_",
-        );
-      const split6 = "\uC77C_\uC6D4_\uD654_\uC218_\uBAA9_\uAE08_\uD1A0".split;
-      obj2.weekdaysShort = "\uC77C_\uC6D4_\uD654_\uC218_\uBAA9_\uAE08_\uD1A0".split("_");
-      const split7 = "\uC77C_\uC6D4_\uD654_\uC218_\uBAA9_\uAE08_\uD1A0".split;
-      obj2.weekdaysMin = "\uC77C_\uC6D4_\uD654_\uC218_\uBAA9_\uAE08_\uD1A0".split("_");
+      const split = "januar_februar_marts_april_maj_juni_juli_august_september_oktober_november_december".split;
+      obj2.months = "januar_februar_marts_april_maj_juni_juli_august_september_oktober_november_december".split("_");
+      const split2 = "jan_feb_mar_apr_maj_jun_jul_aug_sep_okt_nov_dec".split;
+      obj2.monthsShort = "jan_feb_mar_apr_maj_jun_jul_aug_sep_okt_nov_dec".split("_");
+      const split3 = "s\u00F8ndag_mandag_tirsdag_onsdag_torsdag_fredag_l\u00F8rdag".split;
+      obj2.weekdays = "s\u00F8ndag_mandag_tirsdag_onsdag_torsdag_fredag_l\u00F8rdag".split("_");
+      const split4 = "s\u00F8n_man_tir_ons_tor_fre_l\u00F8r".split;
+      obj2.weekdaysShort = "s\u00F8n_man_tir_ons_tor_fre_l\u00F8r".split("_");
+      const split5 = "s\u00F8_ma_ti_on_to_fr_l\u00F8".split;
+      obj2.weekdaysMin = "s\u00F8_ma_ti_on_to_fr_l\u00F8".split("_");
       obj2.longDateFormat = {
-        LT: "A h:mm",
-        LTS: "A h:mm:ss",
-        L: "YYYY.MM.DD.",
-        LL: "YYYY\uB144 MMMM D\uC77C",
-        LLL: "YYYY\uB144 MMMM D\uC77C A h:mm",
-        LLLL: "YYYY\uB144 MMMM D\uC77C dddd A h:mm",
-        l: "YYYY.MM.DD.",
-        ll: "YYYY\uB144 MMMM D\uC77C",
-        lll: "YYYY\uB144 MMMM D\uC77C A h:mm",
-        llll: "YYYY\uB144 MMMM D\uC77C dddd A h:mm",
+        LT: "HH:mm",
+        LTS: "HH:mm:ss",
+        L: "DD.MM.YYYY",
+        LL: "D. MMMM YYYY",
+        LLL: "D. MMMM YYYY HH:mm",
+        LLLL: "dddd [d.] D. MMMM YYYY [kl.] HH:mm",
       };
       obj2.calendar = {
-        sameDay: "\uC624\uB298 LT",
-        nextDay: "\uB0B4\uC77C LT",
-        nextWeek: "dddd LT",
-        lastDay: "\uC5B4\uC81C LT",
-        lastWeek: "\uC9C0\uB09C\uC8FC dddd LT",
+        sameDay: "[i dag kl.] LT",
+        nextDay: "[i morgen kl.] LT",
+        nextWeek: "p\u00E5 dddd [kl.] LT",
+        lastDay: "[i g\u00E5r kl.] LT",
+        lastWeek: "[i] dddd[s kl.] LT",
         sameElse: "L",
       };
       obj2.relativeTime = {
-        future: "%s \uD6C4",
-        past: "%s \uC804",
-        s: "\uBA87 \uCD08",
-        ss: "%d\uCD08",
-        m: "1\uBD84",
-        mm: "%d\uBD84",
-        h: "\uD55C \uC2DC\uAC04",
-        hh: "%d\uC2DC\uAC04",
-        d: "\uD558\uB8E8",
-        dd: "%d\uC77C",
-        M: "\uD55C \uB2EC",
-        MM: "%d\uB2EC",
-        y: "\uC77C \uB144",
-        yy: "%d\uB144",
+        future: "om %s",
+        past: "%s siden",
+        s: "f\u00E5 sekunder",
+        ss: "%d sekunder",
+        m: "et minut",
+        mm: "%d minutter",
+        h: "en time",
+        hh: "%d timer",
+        d: "en dag",
+        dd: "%d dage",
+        M: "en m\u00E5ned",
+        MM: "%d m\u00E5neder",
+        y: "et \u00E5r",
+        yy: "%d \u00E5r",
       };
-      obj2.dayOfMonthOrdinalParse = /\d{1,2}(일|월|주)/;
-      obj2.ordinal = function ordinal(arg0, arg1) {
-        if ("d" !== arg1) {
-          if ("D" !== arg1) {
-            if ("DDD" !== arg1) {
-              if ("M" === arg1) {
-                return arg0 + "\uC6D4";
-              } else {
-                if ("w" !== arg1) {
-                  if ("W" !== arg1) {
-                    return arg0;
-                  }
-                }
-                return arg0 + "\uC8FC";
-              }
-            }
-          }
-        }
-        return arg0 + "\uC77C";
-      };
-      obj2.meridiemParse = /오전|오후/;
-      obj2.isPM = function isPM(arg0) {
-        return "\uC624\uD6C4" === arg0;
-      };
-      obj2.meridiem = function meridiem(arg0, arg1, arg2) {
-        let str = "\uC624\uD6C4";
-        if (arg0 < 12) {
-          str = "\uC624\uC804";
-        }
-        return str;
-      };
-      _module.defineLocale("ko", obj2);
+      obj2.dayOfMonthOrdinalParse = /\d{1,2}\./;
+      obj2.week = { dow: 1, doy: 4 };
+      _module.defineLocale("da", obj2);
     }
   }
 }
 if (typeof globalThis.define === "function") {
   if (globalThis.define.amd) {
-    globalThis.define(["../moment"], function t(defineLocale) {
-      ({ split, split: split2 } = "\uC77C_\uC6D4_\uD654_\uC218_\uBAA9_\uAE08_\uD1A0");
-      return defineLocale.defineLocale("ko", {
-        months:
-          "1\uC6D4_2\uC6D4_3\uC6D4_4\uC6D4_5\uC6D4_6\uC6D4_7\uC6D4_8\uC6D4_9\uC6D4_10\uC6D4_11\uC6D4_12\uC6D4".split(
-            "_",
-          ),
-        monthsShort:
-          "1\uC6D4_2\uC6D4_3\uC6D4_4\uC6D4_5\uC6D4_6\uC6D4_7\uC6D4_8\uC6D4_9\uC6D4_10\uC6D4_11\uC6D4_12\uC6D4".split(
-            "_",
-          ),
-        weekdays:
-          "\uC77C\uC694\uC77C_\uC6D4\uC694\uC77C_\uD654\uC694\uC77C_\uC218\uC694\uC77C_\uBAA9\uC694\uC77C_\uAE08\uC694\uC77C_\uD1A0\uC694\uC77C".split(
-            "_",
-          ),
-        weekdaysShort: "\uC77C_\uC6D4_\uD654_\uC218_\uBAA9_\uAE08_\uD1A0".split("_"),
-        weekdaysMin: "\uC77C_\uC6D4_\uD654_\uC218_\uBAA9_\uAE08_\uD1A0".split("_"),
+    globalThis.define(["../moment"], function n(defineLocale) {
+      return defineLocale.defineLocale("da", {
+        months: "januar_februar_marts_april_maj_juni_juli_august_september_oktober_november_december".split("_"),
+        monthsShort: "jan_feb_mar_apr_maj_jun_jul_aug_sep_okt_nov_dec".split("_"),
+        weekdays: "s\u00F8ndag_mandag_tirsdag_onsdag_torsdag_fredag_l\u00F8rdag".split("_"),
+        weekdaysShort: "s\u00F8n_man_tir_ons_tor_fre_l\u00F8r".split("_"),
+        weekdaysMin: "s\u00F8_ma_ti_on_to_fr_l\u00F8".split("_"),
         longDateFormat: {
-          LT: "A h:mm",
-          LTS: "A h:mm:ss",
-          L: "YYYY.MM.DD.",
-          LL: "YYYY\uB144 MMMM D\uC77C",
-          LLL: "YYYY\uB144 MMMM D\uC77C A h:mm",
-          LLLL: "YYYY\uB144 MMMM D\uC77C dddd A h:mm",
-          l: "YYYY.MM.DD.",
-          ll: "YYYY\uB144 MMMM D\uC77C",
-          lll: "YYYY\uB144 MMMM D\uC77C A h:mm",
-          llll: "YYYY\uB144 MMMM D\uC77C dddd A h:mm",
+          LT: "HH:mm",
+          LTS: "HH:mm:ss",
+          L: "DD.MM.YYYY",
+          LL: "D. MMMM YYYY",
+          LLL: "D. MMMM YYYY HH:mm",
+          LLLL: "dddd [d.] D. MMMM YYYY [kl.] HH:mm",
         },
         calendar: {
-          sameDay: "\uC624\uB298 LT",
-          nextDay: "\uB0B4\uC77C LT",
-          nextWeek: "dddd LT",
-          lastDay: "\uC5B4\uC81C LT",
-          lastWeek: "\uC9C0\uB09C\uC8FC dddd LT",
+          sameDay: "[i dag kl.] LT",
+          nextDay: "[i morgen kl.] LT",
+          nextWeek: "p\u00E5 dddd [kl.] LT",
+          lastDay: "[i g\u00E5r kl.] LT",
+          lastWeek: "[i] dddd[s kl.] LT",
           sameElse: "L",
         },
         relativeTime: {
-          future: "%s \uD6C4",
-          past: "%s \uC804",
-          s: "\uBA87 \uCD08",
-          ss: "%d\uCD08",
-          m: "1\uBD84",
-          mm: "%d\uBD84",
-          h: "\uD55C \uC2DC\uAC04",
-          hh: "%d\uC2DC\uAC04",
-          d: "\uD558\uB8E8",
-          dd: "%d\uC77C",
-          M: "\uD55C \uB2EC",
-          MM: "%d\uB2EC",
-          y: "\uC77C \uB144",
-          yy: "%d\uB144",
+          future: "om %s",
+          past: "%s siden",
+          s: "f\u00E5 sekunder",
+          ss: "%d sekunder",
+          m: "et minut",
+          mm: "%d minutter",
+          h: "en time",
+          hh: "%d timer",
+          d: "en dag",
+          dd: "%d dage",
+          M: "en m\u00E5ned",
+          MM: "%d m\u00E5neder",
+          y: "et \u00E5r",
+          yy: "%d \u00E5r",
         },
-        dayOfMonthOrdinalParse: /\d{1,2}(일|월|주)/,
-        ordinal(arg0, arg1) {
-          if ("d" !== arg1) {
-            if ("D" !== arg1) {
-              if ("DDD" !== arg1) {
-                if ("M" === arg1) {
-                  return arg0 + "\uC6D4";
-                } else {
-                  if ("w" !== arg1) {
-                    if ("W" !== arg1) {
-                      return arg0;
-                    }
-                  }
-                  return arg0 + "\uC8FC";
-                }
-              }
-            }
-          }
-          return arg0 + "\uC77C";
-        },
-        meridiemParse: /오전|오후/,
-        isPM(arg0) {
-          return "\uC624\uD6C4" === arg0;
-        },
-        meridiem(arg0, arg1, arg2) {
-          let str = "\uC624\uD6C4";
-          if (arg0 < 12) {
-            str = "\uC624\uC804";
-          }
-          return str;
-        },
+        dayOfMonthOrdinalParse: /\d{1,2}\./,
+        ordinal: "%d.",
+        week: { dow: 1, doy: 4 },
       });
     });
   }
 }
 const moment = this.moment;
-({ split, split: split2 } = "\uC77C_\uC6D4_\uD654_\uC218_\uBAA9_\uAE08_\uD1A0");
-moment.defineLocale("ko", {
-  months: "1\uC6D4_2\uC6D4_3\uC6D4_4\uC6D4_5\uC6D4_6\uC6D4_7\uC6D4_8\uC6D4_9\uC6D4_10\uC6D4_11\uC6D4_12\uC6D4".split(
-    "_",
-  ),
-  monthsShort:
-    "1\uC6D4_2\uC6D4_3\uC6D4_4\uC6D4_5\uC6D4_6\uC6D4_7\uC6D4_8\uC6D4_9\uC6D4_10\uC6D4_11\uC6D4_12\uC6D4".split("_"),
-  weekdays:
-    "\uC77C\uC694\uC77C_\uC6D4\uC694\uC77C_\uD654\uC694\uC77C_\uC218\uC694\uC77C_\uBAA9\uC694\uC77C_\uAE08\uC694\uC77C_\uD1A0\uC694\uC77C".split(
-      "_",
-    ),
-  weekdaysShort: "\uC77C_\uC6D4_\uD654_\uC218_\uBAA9_\uAE08_\uD1A0".split("_"),
-  weekdaysMin: "\uC77C_\uC6D4_\uD654_\uC218_\uBAA9_\uAE08_\uD1A0".split("_"),
+moment.defineLocale("da", {
+  months: "januar_februar_marts_april_maj_juni_juli_august_september_oktober_november_december".split("_"),
+  monthsShort: "jan_feb_mar_apr_maj_jun_jul_aug_sep_okt_nov_dec".split("_"),
+  weekdays: "s\u00F8ndag_mandag_tirsdag_onsdag_torsdag_fredag_l\u00F8rdag".split("_"),
+  weekdaysShort: "s\u00F8n_man_tir_ons_tor_fre_l\u00F8r".split("_"),
+  weekdaysMin: "s\u00F8_ma_ti_on_to_fr_l\u00F8".split("_"),
   longDateFormat: {
-    LT: "A h:mm",
-    LTS: "A h:mm:ss",
-    L: "YYYY.MM.DD.",
-    LL: "YYYY\uB144 MMMM D\uC77C",
-    LLL: "YYYY\uB144 MMMM D\uC77C A h:mm",
-    LLLL: "YYYY\uB144 MMMM D\uC77C dddd A h:mm",
-    l: "YYYY.MM.DD.",
-    ll: "YYYY\uB144 MMMM D\uC77C",
-    lll: "YYYY\uB144 MMMM D\uC77C A h:mm",
-    llll: "YYYY\uB144 MMMM D\uC77C dddd A h:mm",
+    LT: "HH:mm",
+    LTS: "HH:mm:ss",
+    L: "DD.MM.YYYY",
+    LL: "D. MMMM YYYY",
+    LLL: "D. MMMM YYYY HH:mm",
+    LLLL: "dddd [d.] D. MMMM YYYY [kl.] HH:mm",
   },
   calendar: {
-    sameDay: "\uC624\uB298 LT",
-    nextDay: "\uB0B4\uC77C LT",
-    nextWeek: "dddd LT",
-    lastDay: "\uC5B4\uC81C LT",
-    lastWeek: "\uC9C0\uB09C\uC8FC dddd LT",
+    sameDay: "[i dag kl.] LT",
+    nextDay: "[i morgen kl.] LT",
+    nextWeek: "p\u00E5 dddd [kl.] LT",
+    lastDay: "[i g\u00E5r kl.] LT",
+    lastWeek: "[i] dddd[s kl.] LT",
     sameElse: "L",
   },
   relativeTime: {
-    future: "%s \uD6C4",
-    past: "%s \uC804",
-    s: "\uBA87 \uCD08",
-    ss: "%d\uCD08",
-    m: "1\uBD84",
-    mm: "%d\uBD84",
-    h: "\uD55C \uC2DC\uAC04",
-    hh: "%d\uC2DC\uAC04",
-    d: "\uD558\uB8E8",
-    dd: "%d\uC77C",
-    M: "\uD55C \uB2EC",
-    MM: "%d\uB2EC",
-    y: "\uC77C \uB144",
-    yy: "%d\uB144",
+    future: "om %s",
+    past: "%s siden",
+    s: "f\u00E5 sekunder",
+    ss: "%d sekunder",
+    m: "et minut",
+    mm: "%d minutter",
+    h: "en time",
+    hh: "%d timer",
+    d: "en dag",
+    dd: "%d dage",
+    M: "en m\u00E5ned",
+    MM: "%d m\u00E5neder",
+    y: "et \u00E5r",
+    yy: "%d \u00E5r",
   },
-  dayOfMonthOrdinalParse: /\d{1,2}(일|월|주)/,
-  ordinal(arg0, arg1) {
-    if ("d" !== arg1) {
-      if ("D" !== arg1) {
-        if ("DDD" !== arg1) {
-          if ("M" === arg1) {
-            return arg0 + "\uC6D4";
-          } else {
-            if ("w" !== arg1) {
-              if ("W" !== arg1) {
-                return arg0;
-              }
-            }
-            return arg0 + "\uC8FC";
-          }
-        }
-      }
-    }
-    return arg0 + "\uC77C";
-  },
-  meridiemParse: /오전|오후/,
-  isPM(arg0) {
-    return "\uC624\uD6C4" === arg0;
-  },
-  meridiem(arg0, arg1, arg2) {
-    let str = "\uC624\uD6C4";
-    if (arg0 < 12) {
-      str = "\uC624\uC804";
-    }
-    return str;
-  },
+  dayOfMonthOrdinalParse: /\d{1,2}\./,
+  ordinal: "%d.",
+  week: { dow: 1, doy: 4 },
 });
 const obj = {
-  months: "1\uC6D4_2\uC6D4_3\uC6D4_4\uC6D4_5\uC6D4_6\uC6D4_7\uC6D4_8\uC6D4_9\uC6D4_10\uC6D4_11\uC6D4_12\uC6D4".split(
-    "_",
-  ),
-  monthsShort:
-    "1\uC6D4_2\uC6D4_3\uC6D4_4\uC6D4_5\uC6D4_6\uC6D4_7\uC6D4_8\uC6D4_9\uC6D4_10\uC6D4_11\uC6D4_12\uC6D4".split("_"),
-  weekdays:
-    "\uC77C\uC694\uC77C_\uC6D4\uC694\uC77C_\uD654\uC694\uC77C_\uC218\uC694\uC77C_\uBAA9\uC694\uC77C_\uAE08\uC694\uC77C_\uD1A0\uC694\uC77C".split(
-      "_",
-    ),
-  weekdaysShort: "\uC77C_\uC6D4_\uD654_\uC218_\uBAA9_\uAE08_\uD1A0".split("_"),
-  weekdaysMin: "\uC77C_\uC6D4_\uD654_\uC218_\uBAA9_\uAE08_\uD1A0".split("_"),
+  months: "januar_februar_marts_april_maj_juni_juli_august_september_oktober_november_december".split("_"),
+  monthsShort: "jan_feb_mar_apr_maj_jun_jul_aug_sep_okt_nov_dec".split("_"),
+  weekdays: "s\u00F8ndag_mandag_tirsdag_onsdag_torsdag_fredag_l\u00F8rdag".split("_"),
+  weekdaysShort: "s\u00F8n_man_tir_ons_tor_fre_l\u00F8r".split("_"),
+  weekdaysMin: "s\u00F8_ma_ti_on_to_fr_l\u00F8".split("_"),
   longDateFormat: {
-    LT: "A h:mm",
-    LTS: "A h:mm:ss",
-    L: "YYYY.MM.DD.",
-    LL: "YYYY\uB144 MMMM D\uC77C",
-    LLL: "YYYY\uB144 MMMM D\uC77C A h:mm",
-    LLLL: "YYYY\uB144 MMMM D\uC77C dddd A h:mm",
-    l: "YYYY.MM.DD.",
-    ll: "YYYY\uB144 MMMM D\uC77C",
-    lll: "YYYY\uB144 MMMM D\uC77C A h:mm",
-    llll: "YYYY\uB144 MMMM D\uC77C dddd A h:mm",
+    LT: "HH:mm",
+    LTS: "HH:mm:ss",
+    L: "DD.MM.YYYY",
+    LL: "D. MMMM YYYY",
+    LLL: "D. MMMM YYYY HH:mm",
+    LLLL: "dddd [d.] D. MMMM YYYY [kl.] HH:mm",
   },
   calendar: {
-    sameDay: "\uC624\uB298 LT",
-    nextDay: "\uB0B4\uC77C LT",
-    nextWeek: "dddd LT",
-    lastDay: "\uC5B4\uC81C LT",
-    lastWeek: "\uC9C0\uB09C\uC8FC dddd LT",
+    sameDay: "[i dag kl.] LT",
+    nextDay: "[i morgen kl.] LT",
+    nextWeek: "p\u00E5 dddd [kl.] LT",
+    lastDay: "[i g\u00E5r kl.] LT",
+    lastWeek: "[i] dddd[s kl.] LT",
     sameElse: "L",
   },
   relativeTime: {
-    future: "%s \uD6C4",
-    past: "%s \uC804",
-    s: "\uBA87 \uCD08",
-    ss: "%d\uCD08",
-    m: "1\uBD84",
-    mm: "%d\uBD84",
-    h: "\uD55C \uC2DC\uAC04",
-    hh: "%d\uC2DC\uAC04",
-    d: "\uD558\uB8E8",
-    dd: "%d\uC77C",
-    M: "\uD55C \uB2EC",
-    MM: "%d\uB2EC",
-    y: "\uC77C \uB144",
-    yy: "%d\uB144",
+    future: "om %s",
+    past: "%s siden",
+    s: "f\u00E5 sekunder",
+    ss: "%d sekunder",
+    m: "et minut",
+    mm: "%d minutter",
+    h: "en time",
+    hh: "%d timer",
+    d: "en dag",
+    dd: "%d dage",
+    M: "en m\u00E5ned",
+    MM: "%d m\u00E5neder",
+    y: "et \u00E5r",
+    yy: "%d \u00E5r",
   },
-  dayOfMonthOrdinalParse: /\d{1,2}(일|월|주)/,
-  ordinal(arg0, arg1) {
-    if ("d" !== arg1) {
-      if ("D" !== arg1) {
-        if ("DDD" !== arg1) {
-          if ("M" === arg1) {
-            return arg0 + "\uC6D4";
-          } else {
-            if ("w" !== arg1) {
-              if ("W" !== arg1) {
-                return arg0;
-              }
-            }
-            return arg0 + "\uC8FC";
-          }
-        }
-      }
-    }
-    return arg0 + "\uC77C";
-  },
-  meridiemParse: /오전|오후/,
-  isPM(arg0) {
-    return "\uC624\uD6C4" === arg0;
-  },
-  meridiem(arg0, arg1, arg2) {
-    let str = "\uC624\uD6C4";
-    if (arg0 < 12) {
-      str = "\uC624\uC804";
-    }
-    return str;
-  },
+  dayOfMonthOrdinalParse: /\d{1,2}\./,
+  ordinal: "%d.",
+  week: { dow: 1, doy: 4 },
 };

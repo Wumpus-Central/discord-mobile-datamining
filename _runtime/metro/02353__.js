@@ -1,11 +1,11 @@
 // _runtime/metro/02353__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/go_live",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9nb19saXZl",
   scales: [1],
-  hash: "f6e3c365e8a3adf05325d11d5ed6a02b",
-  name: "MobileGoLiveActionSheet.compiled.messages",
+  hash: "1a77414ba00ac86aee99ec47bc70592a",
+  name: "tr.messages.1a77414ba00ac86aee99ec47bc70592a.compiled.messages",
   type: "jsona",
 });

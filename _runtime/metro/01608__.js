@@ -1,13 +1,11 @@
 // _runtime/metro/01608__.js
-import registerAsset from "01121__.js";
+import noop from "00019__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 64,
-  height: 64,
-  scales: [2, 3],
-  hash: "bf72a3c3e6e6f62a6b213dc37c4f0f29",
-  name: "ic_application_command_built_in",
-  type: "png",
-});
+const obj = {
+  lastUnhandledLink: "Array",
+  setLastUnhandledLink() {},
+};
+const context = noop.createContext(obj);
+context.displayName = "UnhandledLinkingContext";
+
+export const UnhandledLinkingContext = context;

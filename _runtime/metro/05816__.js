@@ -1,13 +1,13 @@
 // _runtime/metro/05816__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
-  scales: [1],
-  hash: "6d22344f328170a77fc1da6d56f802d8",
-  name: "img_account_sync_reddit_light_and_dark",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "fee15a76bef55eb0f2b368d5439c39b9",
+  name: "TextIcon",
   type: "png",
 });

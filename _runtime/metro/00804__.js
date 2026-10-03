@@ -1,40 +1,83 @@
 // _runtime/metro/00804__.js
-Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-const weakMap = new WeakMap();
+import _mod697 from "00697__.js";
+import _mod708 from "00708__.js";
+import _mod724 from "00724__.js";
+import _mod784 from "00784__.js";
+import severityLevelFromString from "../00796_severityLevelFromString.js";
+import setupIntegration from "../00763_setupIntegration.js";
 
-export const cleanupSessionDataForTransport = function cleanupSessionDataForTransport(arg0) {
-  weakMap.delete(arg0);
-};
-export const getClientInfoForTransport = function getClientInfoForTransport(transport) {
-  value = weakMap.get(transport);
-  let clientInfo;
-  if (value != null) {
-    clientInfo = value.clientInfo;
+function addConsoleBreadcrumb(level, args) {
+  const obj = {
+    category: "console",
+    data: { arguments: args, logger: "console" },
+    level: severityLevelFromString.severityLevelFromString(level),
+    message: null,
+  };
+  if ("util" in _mod697.GLOBAL_OBJ) {
+    if (typeof _mod697.GLOBAL_OBJ.util.format === "function") {
+      const util = _mod697.GLOBAL_OBJ.util;
+      const format = util.format;
+      const items = [];
+      HermesBuiltin.arraySpread(args, 0);
+      let applyResult = HermesBuiltin.apply(items, util);
+    }
+    obj.message = applyResult;
+    if ("assert" === level) {
+      if (false === args[0]) {
+        const substr = args.slice(1);
+        if (substr.length <= 0) {
+          obj.message = "Assertion failed";
+          obj.data.arguments = substr;
+        } else {
+          if (!("util" in _mod697.GLOBAL_OBJ)) {
+            let safeJoinResult = _mod708.safeJoin(substr, " ");
+            const _HermesInternal = HermesInternal;
+            const combined = "Assertion failed: " + safeJoinResult;
+            const tmpResult = _mod708;
+          }
+          const util2 = _mod697.GLOBAL_OBJ.util;
+          const format2 = util2.format;
+          const items1 = [];
+          HermesBuiltin.arraySpread(substr, 0);
+          safeJoinResult = HermesBuiltin.apply(items1, util2);
+        }
+      }
+    }
+    const obj3 = { input: args, level };
+    _mod784.addBreadcrumb(obj, obj3);
+    const tmpResult3 = _mod784;
   }
-  return clientInfo;
-};
-export const getProtocolVersionForTransport = function getProtocolVersionForTransport(transport) {
-  value = weakMap.get(transport);
-  let protocolVersion;
-  if (value != null) {
-    protocolVersion = value.protocolVersion;
+  applyResult = _mod708.safeJoin(args, " ");
+  const tmpResult4 = _mod708;
+}
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+
+export { addConsoleBreadcrumb };
+export const consoleIntegration = setupIntegration.defineIntegration(() => {
+  let obj = arg0;
+  if (arg0 === undefined) {
+    obj = {};
   }
-  return protocolVersion;
-};
-export const getSessionDataForTransport = function getSessionDataForTransport(transport) {
-  return weakMap.get(transport);
-};
-export const storeSessionDataForTransport = function storeSessionDataForTransport(self, result) {
-  if (self.sessionId) {
-    result = weakMap.set(self, result);
+  let set;
+  let CONSOLE_LEVELS = obj.levels;
+  if (!CONSOLE_LEVELS) {
+    CONSOLE_LEVELS = set(700).CONSOLE_LEVELS;
   }
-};
-export const updateSessionDataForTransport = function updateSessionDataForTransport(sessionId, arg1) {
-  if (sessionId.sessionId) {
-    const tmp = weakMap.get(sessionId) || {};
-    const obj2 = {};
-    const merged = Object.assign(tmp);
-    const merged1 = Object.assign(arg1);
-    const result = weakMap.set(sessionId, obj2);
-  }
-};
+  set = new Set(CONSOLE_LEVELS);
+  return {
+    name: "Console",
+    setup(arg0) {
+      closure_0 = arg0;
+      const result = set(dependencyMap[2]).addConsoleInstrumentationHandler((level) => {
+        level = level.level;
+        let hasItem = _mod724.getClient() === closure_0;
+        if (hasItem) {
+          hasItem = set.has(level);
+        }
+        if (hasItem) {
+          addConsoleBreadcrumb(level, level.args);
+        }
+      });
+    },
+  };
+});

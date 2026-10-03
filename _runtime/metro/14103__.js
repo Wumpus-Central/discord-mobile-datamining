@@ -1,32 +1,38 @@
 // _runtime/metro/14103__.js
+import _mod14064 from "14064__.js";
+import _mod14066 from "14066__.js";
+import _mod14082 from "14082__.js";
+import _mod14104 from "14104__.js";
+import _mod14105 from "14105__.js";
 
-export const getReactNativeDimensionsWithDimensions = function getReactNativeDimensionsWithDimensions(width, value) {
-  try {
-    let obj = {};
-    let obj2 = {};
-    if (width) {
-      const obj5 = { screenWidth: null, screenHeight: null, screenScale: null, screenFontScale: null };
-      const _Math = Math;
-      obj5.screenWidth = Math.ceil(width.width);
-      const _Math2 = Math;
-      obj5.screenHeight = Math.ceil(width.height);
-      ({ scale: obj3.screenScale, fontScale: obj3.screenFontScale } = width);
-      obj = obj5;
+let closure_2 = _mod14066([].push);
+
+export default (arg0, arg1) => {
+  const tmp = _mod14064(arg0);
+  const items = [];
+  for (const key10010 in tmp) {
+    let tmp14 = _mod14082;
+    let tmp14Result = tmp14(_mod14104, key10010);
+    let tmp2 = !tmp14Result;
+    if (!tmp14Result) {
+      tmp2 = _mod14082(tmp, key10010);
     }
-    if (value) {
-      const obj9 = { windowWidth: null, windowHeight: null, windowScale: null, windowFontScale: null };
-      const _Math3 = Math;
-      obj9.windowWidth = Math.ceil(value.width);
-      const _Math4 = Math;
-      obj9.windowHeight = Math.ceil(value.height);
-      ({ scale: obj4.windowScale, fontScale: obj4.windowFontScale } = value);
-      obj2 = obj9;
+    if (!tmp2) {
+      continue;
+    } else {
+      let tmp4 = closure_2(items, key10010);
+      continue;
     }
-    const obj10 = {};
-    const merged = Object.assign(obj);
-    const merged1 = Object.assign(obj2);
-    return obj10;
-  } catch (err) {
-    return null;
+    continue;
   }
+  for (let num = 0; arg1.length > num; num = num + 1) {
+    let tmp7 = arg1[num];
+    if (_mod14082(tmp, tmp7)) {
+      let tmp5Result = _mod14105;
+      if (!~tmp5Result.indexOf(items, tmp7)) {
+        let tmp10 = closure_2(items, tmp7);
+      }
+    }
+  }
+  return items;
 };

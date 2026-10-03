@@ -1,85 +1,209 @@
 // _runtime/metro/01871__.js
-import _mod19 from "00019__.js";
-import cancelAnimation from "../01638_cancelAnimation.js";
-import _mod1868 from "01868__.js";
+import _mod17 from "00017__.js";
+import noop_mod from "00019__.js";
+import jsxProd from "../react/00021_jsxProd.js";
+import cancelAnimation_mod from "../01643_cancelAnimation.js";
 
-const useMemo = _mod19.useMemo;
-let closure_3 = {
-  code: "function pnpm_useEndVisibleTs1(){const{layout,size,isScrollAtEnd,scroll,inverted}=this.__closure;if(layout.value.height===0||size.value.height===0){return null;}return isScrollAtEnd(scroll.value,layout.value.height,size.value.height,inverted);}",
+let noop = noop_mod;
+({ useCallback: c3, useMemo: closure_4, forwardRef } = noop);
+let noop = noop_mod;
+const StyleSheet = _mod17.StyleSheet;
+({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+let cancelAnimation = cancelAnimation_mod;
+let closure_8 = cancelAnimation.makeMutable(0);
+let cancelAnimation = cancelAnimation_mod;
+let closure_9 = cancelAnimation.makeMutable(0);
+const __initData = {
+  code: 'function pnpm_indexTsx1(){const{freeze}=this.__closure;return typeof freeze==="boolean"?freeze:freeze.value;}',
 };
-let closure_4 = { code: "function pnpm_useEndVisibleTs2(){const{isAtEnd}=this.__closure;return isAtEnd.value;}" };
-let __initData = {
-  code: "function pnpm_useEndVisibleTs3(current,previous){const{onEndVisible,isWorklet,runOnJS}=this.__closure;if(current===null||current===previous||!onEndVisible){return;}if(isWorklet){onEndVisible(current);}else{runOnJS(onEndVisible)(current);}}",
+const __initData2 = {
+  code: "function pnpm_indexTsx2(){const{blankSpace,padding,extraContentPadding}=this.__closure;return Math.max(blankSpace.value,padding.value+extraContentPadding.value);}",
 };
+const __initData3 = {
+  code: "function pnpm_indexTsx3(){const{padding,extraContentPadding}=this.__closure;return padding.value+extraContentPadding.value;}",
+};
+const __initData4 = {
+  code: "function pnpm_indexTsx4(){const{currentHeight}=this.__closure;return{transform:[{translateY:-currentHeight.value}]};}",
+};
+const styles = StyleSheet.create({ commitView: { display: "none", position: "absolute" } });
 
-export const useEndVisible = (scroll) => {
-  scroll = scroll.scroll;
-  const layout = scroll.layout;
-  const size = scroll.size;
-  const inverted = scroll.inverted;
-  const onEndVisible = scroll.onEndVisible;
-  const items = [onEndVisible];
-  let tmp = size(() => {
-    let __workletHash = typeof onEndVisible === "function";
-    if (typeof onEndVisible === "function") {
-      __workletHash = onEndVisible.__workletHash;
-    }
-    return __workletHash;
-  }, items);
-  __initData = tmp;
-  const fn = function v() {
-    let isScrollAtEndResult = null;
-    if (0 !== layout.value.height) {
-      isScrollAtEndResult = null;
-      if (0 !== size.value.height) {
-        const obj = _mod1868;
-        isScrollAtEndResult = obj.isScrollAtEnd(scroll.value, iter.value.height, iter2.value.height, inverted);
+export default forwardRef((onEndVisible, arg1) => {
+  let ScrollView = onEndVisible.ScrollViewComponent;
+  if (ScrollView === undefined) {
+    ScrollView = extraContentPadding(blankSpace[3]).ScrollView;
+  }
+  let flag = onEndVisible.inverted;
+  if (flag === undefined) {
+    flag = false;
+  }
+  let str = onEndVisible.keyboardLiftBehavior;
+  if (str === undefined) {
+    str = "always";
+  }
+  let flag2 = onEndVisible.freeze;
+  if (flag2 === undefined) {
+    flag2 = false;
+  }
+  let num = onEndVisible.offset;
+  if (num === undefined) {
+    num = 0;
+  }
+  extraContentPadding = onEndVisible.extraContentPadding;
+  if (extraContentPadding === undefined) {
+    extraContentPadding = onContentSizeChange2;
+  }
+  blankSpace = onEndVisible.blankSpace;
+  if (blankSpace === undefined) {
+    blankSpace = animatedStyle;
+  }
+  let flag3 = onEndVisible.applyWorkaroundForContentInsetHitTestBug;
+  if (flag3 === undefined) {
+    flag3 = false;
+  }
+  const onLayout = onEndVisible.onLayout;
+  const onContentSizeChange = onEndVisible.onContentSizeChange;
+  const merged = Object.assign(
+    onEndVisible,
+    Object.assign({
+      children: 0,
+      ScrollViewComponent: 0,
+      inverted: 0,
+      keyboardLiftBehavior: 0,
+      freeze: 0,
+      offset: 0,
+      extraContentPadding: 0,
+      blankSpace: 0,
+      applyWorkaroundForContentInsetHitTestBug: 0,
+      onLayout: 0,
+      onContentSizeChange: 0,
+      onEndVisible: 0,
+    }),
+  );
+  let padding;
+  let currentHeight;
+  onLayout2 = undefined;
+  onContentSizeChange2 = undefined;
+  animatedStyle = undefined;
+  const animatedRef = flag2(blankSpace[3]).useAnimatedRef();
+  let obj = flag2(blankSpace[3]);
+  const tmp5 = extraContentPadding(blankSpace[4])(arg1, animatedRef);
+  class M {
+    constructor() {
+      value = c0;
+      if (typeof c0 !== "boolean") {
+        value = c0.value;
       }
-    }
-    return isScrollAtEndResult;
-  };
-  let obj = scroll(layout[1]);
-  fn.__closure = { layout, size, isScrollAtEnd: scroll(layout[2]).isScrollAtEnd, scroll, inverted };
-  fn.__workletHash = 9190864194226;
-  fn.__initData = inverted;
-  const derivedValue = obj.useDerivedValue(fn);
-  const obj2 = { layout, size, isScrollAtEnd: scroll(layout[2]).isScrollAtEnd, scroll, inverted };
-  const fn2 = function f() {
-    return derivedValue.value;
-  };
-  fn2.__closure = { isAtEnd: derivedValue };
-  fn2.__workletHash = 3323533137377;
-  fn2.__initData = onEndVisible;
-  class E {
-    constructor(arg0, arg1) {
-      tmp = null !== scroll;
-      if (tmp) {
-        tmp2 = arg1;
-        tmp = scroll !== arg1;
-      }
-      if (tmp) {
-        tmp = onEndVisible;
-      }
-      if (tmp) {
-        tmp3 = closure_5;
-        if (closure_5) {
-          tmp8 = onEndVisible;
-          tmp9 = onEndVisible(scroll);
-        } else {
-          tmp4 = closure_0;
-          tmp5 = closure_1;
-          obj = closure_0(closure_1[1]);
-          tmp6 = onEndVisible;
-          tmp7 = obj.runOnJS(onEndVisible)(scroll);
-        }
-      }
-      return;
+      return value;
     }
   }
-  const obj3 = scroll(layout[1]);
-  E.__closure = { onEndVisible, isWorklet: tmp, runOnJS: scroll(layout[1]).runOnJS };
-  E.__workletHash = 2507987378306;
-  E.__initData = __initData;
-  const items1 = [onEndVisible, tmp, inverted];
-  const animatedReaction = obj3.useAnimatedReaction(fn2, E, items1);
-};
+  M.__closure = { freeze: flag2 };
+  M.__workletHash = 1441280506731;
+  M.__initData = __initData;
+  const derivedValue = flag2(blankSpace[3]).useDerivedValue(M);
+  const obj2 = flag2(blankSpace[3]);
+  const chatKeyboard = flag2(blankSpace[5]).useChatKeyboard(animatedRef, {
+    inverted: flag,
+    keyboardLiftBehavior: str,
+    freeze: derivedValue,
+    offset: num,
+    blankSpace,
+    extraContentPadding,
+  });
+  padding = chatKeyboard.padding;
+  currentHeight = chatKeyboard.currentHeight;
+  ({ contentOffsetY, scroll, layout, size, onLayout: onLayout2 } = chatKeyboard);
+  onContentSizeChange2 = chatKeyboard.onContentSizeChange;
+  const obj3 = flag2(blankSpace[5]);
+  const extraContentPadding1 = flag2(blankSpace[6]).useExtraContentPadding({
+    scrollViewRef: animatedRef,
+    extraContentPadding,
+    keyboardPadding: padding,
+    blankSpace,
+    scroll,
+    layout,
+    size,
+    contentOffsetY,
+    inverted: flag,
+    keyboardLiftBehavior: str,
+    freeze: derivedValue,
+  });
+  const obj4 = flag2(blankSpace[6]);
+  const endVisible = flag2(blankSpace[7]).useEndVisible({
+    scroll,
+    layout,
+    size,
+    inverted: flag,
+    onEndVisible: onEndVisible.onEndVisible,
+  });
+  const obj5 = flag2(blankSpace[7]);
+  const fn = function q() {
+    return Math.max(blankSpace.value, padding.value + extraContentPadding.value);
+  };
+  fn.__closure = { blankSpace, padding, extraContentPadding };
+  fn.__workletHash = 5812718828105;
+  fn.__initData = __initData2;
+  const derivedValue1 = flag2(blankSpace[3]).useDerivedValue(fn);
+  const obj6 = flag2(blankSpace[3]);
+  class G {
+    constructor() {
+      return padding.value + closure_1.value;
+    }
+  }
+  G.__closure = { padding, extraContentPadding };
+  G.__workletHash = 17005251423398;
+  G.__initData = __initData3;
+  let items = [onLayout2, onLayout];
+  const derivedValue2 = flag2(blankSpace[3]).useDerivedValue(G);
+  const items1 = [onContentSizeChange2, onContentSizeChange];
+  const obj7 = flag2(blankSpace[3]);
+  const tmp12 = onLayout((arg0) => {
+    onLayout2(arg0);
+    if (onLayout != null) {
+      onLayout(arg0);
+    }
+  }, items);
+  const tmp13 = onLayout((arg0, arg1) => {
+    onContentSizeChange2(arg0, arg1);
+    if (onContentSizeChange != null) {
+      onContentSizeChange(arg0, arg1);
+    }
+  }, items1);
+  class J {
+    constructor() {
+      obj = { transform: null };
+      obj1 = { translateY: -currentHeight.value };
+      items = [];
+      items[0] = obj1;
+      obj.transform = items;
+      return obj;
+    }
+  }
+  J.__closure = { currentHeight };
+  J.__workletHash = 2509855764315;
+  J.__initData = __initData4;
+  animatedStyle = flag2(blankSpace[3]).useAnimatedStyle(J, []);
+  const items2 = [animatedStyle];
+  const obj9 = { children: null };
+  const obj8 = flag2(blankSpace[3]);
+  const obj10 = { ref: tmp5 };
+  const tmp15 = onContentSizeChange(() => {
+    const items = [commitView.commitView, animatedStyle];
+    return items;
+  }, items2);
+  const merged1 = Object.assign(merged);
+  obj10.applyWorkaroundForContentInsetHitTestBug = flag3;
+  obj10.bottomPadding = derivedValue1;
+  obj10.contentOffsetY = contentOffsetY;
+  obj10.inverted = flag;
+  obj10.scrollIndicatorPadding = derivedValue2;
+  obj10.ScrollViewComponent = ScrollView;
+  obj10.onContentSizeChange = tmp13;
+  obj10.onLayout = tmp12;
+  obj10.children = onEndVisible.children;
+  const items3 = [
+    padding(extraContentPadding(blankSpace[8]), obj10),
+    padding(extraContentPadding(blankSpace[3]).View, { style: tmp15 }),
+  ];
+  obj9.children = items3;
+  return onLayout2(currentHeight, obj9);
+});

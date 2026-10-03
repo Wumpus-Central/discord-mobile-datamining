@@ -1,116 +1,114 @@
 // _runtime/metro/01587__.js
-import BaseNavigationContainer from "../01488_BaseNavigationContainer.js";
-import noop from "00019__.js";
-
-require = fn;
-const jsx = fn(21).jsx;
-
-export const createStaticNavigation = function createStaticNavigation(getComponent) {
-  const component = getComponent.getComponent();
-  return noop.forwardRef(function Navigation(linking, ref) {
-    linking = linking.linking;
-    let merged = Object.assign(linking, Object.assign({ linking: 0 }));
-    let memo;
-    let enabled;
-    if (linking != null) {
-      enabled = linking.enabled;
-    }
-    const items = [enabled, ,];
-    let path;
-    if (linking != null) {
-      let config = linking.config;
-      if (config != null) {
-        path = config.path;
-      }
-    }
-    items[1] = path;
-    let initialRouteName;
-    if (linking != null) {
-      let config2 = linking.config;
-      if (config2 != null) {
-        initialRouteName = config2.initialRouteName;
-      }
-    }
-    items[2] = initialRouteName;
-    memo = React.useMemo(() => {
-      let initialRouteName;
-      if (linking != null) {
-        const config = linking.config;
-        if (config != null) {
-          initialRouteName = config.initialRouteName;
-        }
-      }
-      let enabled;
-      if (linking != null) {
-        enabled = linking.enabled;
-      }
-      const pathConfigForStaticNavigation = BaseNavigationContainer.createPathConfigForStaticNavigation(
-        closure_0,
-        { initialRouteName },
-        "auto" === enabled,
-      );
-      if (pathConfigForStaticNavigation) {
-        let path;
-        if (linking != null) {
-          const config2 = linking.config;
-          if (config2 != null) {
-            path = config2.path;
+function formatToList(arg0) {}
+function validatePathConfig(config) {
+  closure_0 = config;
+  let flag = arg1;
+  if (arg1 === undefined) {
+    flag = true;
+  }
+  let obj2;
+  let obj = null;
+  if (!flag) {
+    obj = { alias: "array", exact: "boolean", stringify: "object", parse: "object" };
+  }
+  obj2 = { path: "string", initialRouteName: "string", screens: "object" };
+  const merged = Object.assign(obj);
+  if (typeof config === "object") {
+    if (null !== config) {
+      const _Object4 = Object;
+      const _Object5 = Object;
+      const keys = Object.keys(config);
+      const mapped = keys.map((item) => {
+        if (item in obj2) {
+          if (undefined !== closure_0[item]) {
+            if ("array" === tmp) {
+              const _Array = Array;
+              if (!Array.isArray(tmp3)) {
+                const items = [item];
+                const _HermesInternal2 = HermesInternal;
+                items[1] = "expected 'Array', got '" + typeof tmp3 + "'";
+                return items;
+              }
+            } else if (typeof tmp3 !== tmp) {
+              const items1 = [item];
+              const _HermesInternal = HermesInternal;
+              items1[1] = "expected '" + tmp + "', got '" + tmp4 + "'";
+              return items1;
+            }
           }
-        }
-        const obj2 = { path, initialRouteName: null, screens: null };
-        let initialRouteName1;
-        if (linking != null) {
-          const config3 = linking.config;
-          if (config3 != null) {
-            initialRouteName1 = config3.initialRouteName;
-          }
-        }
-        obj2.initialRouteName = initialRouteName1;
-        obj2.screens = pathConfigForStaticNavigation;
-        return obj2;
-      }
-    }, items);
-    const items1 = [linking, memo];
-    let enabled1;
-    const memo1 = React.useMemo(() => {
-      if (linking) {
-        if (typeof linking.enabled === "boolean") {
-          let enabled = linking.enabled;
+          return null;
         } else {
-          let screens;
-          if (memo != null) {
-            screens = memo.screens;
-          }
-          enabled = null != screens;
+          const items2 = [item, "extraneous"];
+          return items2;
         }
-        const obj = {};
-        const merged = Object.assign(linking);
-        obj.enabled = enabled;
-        obj.config = memo;
-        return obj;
+      });
+      const _Boolean = Boolean;
+      const fromEntriesResult = Object.fromEntries(mapped.filter(Boolean));
+      const _Object6 = Object;
+      if (Object.keys(fromEntriesResult).length) {
+        if (typeof closure_0 === "function") {
+          const _Object2 = Object;
+          const entries = Object.entries(fromEntriesResult);
+          const mapped1 = entries.map((item) => {
+            [tmp, tmp2] = item;
+            return "- " + tmp + " (" + tmp2 + ")";
+          });
+          const joined = mapped1.join("\n");
+          if (typeof tmp9 === "function") {
+            const _Object3 = Object;
+            const entries1 = Object.entries(obj2);
+            const mapped2 = entries1.map((item) => {
+              [tmp, tmp2] = item;
+              return "- " + tmp + " (" + tmp2 + ")";
+            });
+            let _HermesInternal2 = HermesInternal;
+            const tmp82 = new tmp8(
+              "Found invalid properties in the configuration:\n" +
+                joined +
+                "\n\nYou can only specify the following properties:\n" +
+                mapped2.join("\n") +
+                "\n\nIf you want to specify configuration for screens, you need to specify them under a 'screens' property.\n\nSee https://reactnavigation.org/docs/configuring-links for more details on how to specify a linking configuration.",
+            );
+            throw tmp82;
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+        } else {
+          throw new TypeError("Trying to call a non-function");
+        }
+      } else {
+        if (flag) {
+          if ("path" in config) {
+            if (typeof config.path === "string") {
+              const path = config.path;
+              if (path.includes(":")) {
+                const _Error = Error;
+                let _HermesInternal = HermesInternal;
+                const error = new Error(
+                  "Found invalid path '" +
+                    config.path +
+                    "'. The 'path' in the top-level configuration cannot contain patterns for params.",
+                );
+                throw error;
+              }
+            }
+          }
+        }
+        if (tmp2) {
+          const _Object = Object;
+          const entries2 = Object.entries(config.screens);
+          const item = entries2.forEach((item) => {
+            [, tmp] = item;
+            if (typeof tmp !== "string") {
+              obj2(tmp, false);
+            }
+          });
+        }
       }
-    }, items1);
-    if (linking != null) {
-      enabled1 = linking.enabled;
     }
-    if (true === enabled1) {
-      let screens;
-      if (memo != null) {
-        screens = memo.screens;
-      }
-      if (null == screens) {
-        const _Error = Error;
-        const error = new Error(
-          "Linking is enabled but no linking configuration was found for the screens.\n\nTo solve this:\n- Specify a 'linking' property for the screens you want to link to.\n- Or set 'linking.enabled' to 'auto' to generate paths automatically.\n\nSee usage guide: https://reactnavigation.org/docs/static-configuration#linking",
-        );
-        throw error;
-      }
-    }
-    let obj2 = {};
-    const merged1 = Object.assign(merged);
-    obj2.ref = ref;
-    obj2.linking = memo1;
-    obj2.children = <memo />;
-    return jsx(getComponent(closure_1[3]).NavigationContainer, {});
-  });
-};
+  }
+  const error1 = new Error("Expected the configuration to be an object, but got " + JSON.stringify(config) + ".");
+  throw error1;
+}
+
+export { validatePathConfig };

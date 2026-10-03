@@ -1,14 +1,22 @@
 // _runtime/metro/05350__.js
-import _mod5282 from "05282__.js";
+import _mod5351 from "05351__.js";
 
-export default function Type(arg0) {
-  let str = "Symbol";
-  if (typeof arg0 !== "symbol") {
-    let str2 = "BigInt";
-    if (typeof arg0 !== "bigint") {
-      str2 = _mod5282(arg0);
+export default function getPolyfill() {
+  if (String.prototype.trim) {
+    const trim = "\u200B".trim;
+    if ("\u200B" === "\u200B".trim()) {
+      const trim2 = "\u180E".trim;
+      if ("\u180E" === "\u180E".trim()) {
+        const trim3 = "_\u180E".trim;
+        if ("_\u180E" === "_\u180E".trim()) {
+          const trim4 = "\u180E_".trim;
+          if ("\u180E_" === "\u180E_".trim()) {
+            const _String = String;
+          }
+          return trim5;
+        }
+      }
     }
-    str = str2;
   }
-  return str;
+  trim5 = _mod5351;
 }

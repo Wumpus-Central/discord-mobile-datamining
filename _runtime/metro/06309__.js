@@ -1,21 +1,8 @@
 // _runtime/metro/06309__.js
-import _mod19 from "00019__.js";
-import _modDef6294 from "06294__.js";
+import _mod17 from "00017__.js";
 
-_mod19.useCallback;
+const StyleSheet = _mod17.StyleSheet;
 
-export const useViewRefHandler = function useViewRefHandler(current, detectorUpdater) {
-  const previousViewTag = current;
-  const items = [current, detectorUpdater];
-  return useCallback((viewRef) => {
-    if (null !== viewRef) {
-      previousViewTag.viewRef = viewRef;
-      if (-1 === previousViewTag.previousViewTag) {
-        previousViewTag.previousViewTag = _modDef6294(previousViewTag.viewRef);
-      }
-      if (!previousViewTag.firstRender) {
-        detectorUpdater(true);
-      }
-    }
-  }, items);
-};
+export const styles = StyleSheet.create({
+  container: { position: "absolute", top: 0, left: 0, right: 0, zIndex: 9999, pointerEvents: "box-none" },
+});

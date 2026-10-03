@@ -1,11 +1,14 @@
 // _runtime/metro/14170__.js
-import registerAsset from "01121__.js";
+import _mod14171 from "14171__.js";
+import get_ActivityIndicator from "00017__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties",
-  scales: [1],
-  hash: "5f77547974eb8f3f02aedbb78b4b73bc",
-  name: "NitroGem12",
-  type: "lottie",
-});
+export default function getReactNativeDimensions() {
+  try {
+    const Dimensions = get_ActivityIndicator.Dimensions;
+    try {
+      const Dimensions2 = get_ActivityIndicator.Dimensions;
+      value = Dimensions2.get("window");
+      return _mod14171.getReactNativeDimensionsWithDimensions(tmp2, value);
+    } catch (err) {}
+  } catch (err) {}
+}

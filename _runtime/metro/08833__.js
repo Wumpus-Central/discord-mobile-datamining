@@ -1,13 +1,13 @@
 // _runtime/metro/08833__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/BeanieIcon",
+  httpServerLocation: "/assets/images/native/custom_app_icons/ColorWaveIcon",
   width: 60,
   height: 60,
   scales: [2, 3],
-  hash: "5ed4f057d69445a6e4a7fd8ca936d32a",
-  name: "BeanieIcon",
+  hash: "c1f01c1cb21b1b0825a7707e0be435be",
+  name: "ColorWaveIcon",
   type: "png",
 });

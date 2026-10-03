@@ -1,42 +1,30 @@
 // _runtime/metro/03979__.js
-import 02114__ from "02114__.js";
-import 02117__ from "02117__.js";
-import date_mod from "02118__.js";
-import date_mod from "02120__.js";
-import 03980__ from "03980__.js";
+const obj = { lessThanXSeconds: { standalone: { one: "weniger als 1 Sekunde", other: "weniger als {{count}} Sekunden" }, withPreposition: { one: "weniger als 1 Sekunde", other: "weniger als {{count}} Sekunden" } }, xSeconds: { standalone: { one: "1 Sekunde", other: "{{count}} Sekunden" }, withPreposition: { one: "1 Sekunde", other: "{{count}} Sekunden" } }, halfAMinute: { standalone: "halbe Minute", withPreposition: "halben Minute" }, lessThanXMinutes: { standalone: { one: "weniger als 1 Minute", other: "weniger als {{count}} Minuten" }, withPreposition: { one: "weniger als 1 Minute", other: "weniger als {{count}} Minuten" } }, xMinutes: { standalone: { one: "1 Minute", other: "{{count}} Minuten" }, withPreposition: { one: "1 Minute", other: "{{count}} Minuten" } }, aboutXHours: { standalone: { one: "etwa 1 Stunde", other: "etwa {{count}} Stunden" }, withPreposition: { one: "etwa 1 Stunde", other: "etwa {{count}} Stunden" } }, xHours: { standalone: { one: "1 Stunde", other: "{{count}} Stunden" }, withPreposition: { one: "1 Stunde", other: "{{count}} Stunden" } }, xDays: { standalone: { one: "1 Tag", other: "{{count}} Tage" }, withPreposition: { one: "1 Tag", other: "{{count}} Tagen" } }, aboutXWeeks: { standalone: { one: "etwa 1 Woche", other: "etwa {{count}} Wochen" }, withPreposition: { one: "etwa 1 Woche", other: "etwa {{count}} Wochen" } }, xWeeks: { standalone: { one: "1 Woche", other: "{{count}} Wochen" }, withPreposition: { one: "1 Woche", other: "{{count}} Wochen" } }, aboutXMonths: { standalone: { one: "etwa 1 Monat", other: "etwa {{count}} Monate" }, withPreposition: { one: "etwa 1 Monat", other: "etwa {{count}} Monaten" } }, xMonths: { standalone: { one: "1 Monat", other: "{{count}} Monate" }, withPreposition: { one: "1 Monat", other: "{{count}} Monaten" } }, aboutXYears: { standalone: { one: "etwa 1 Jahr", other: "etwa {{count}} Jahre" }, withPreposition: { one: "etwa 1 Jahr", other: "etwa {{count}} Jahren" } }, xYears: { standalone: { one: "1 Jahr", other: "{{count}} Jahre" }, withPreposition: { one: "1 Jahr", other: "{{count}} Jahren" } }, overXYears: { standalone: { one: "mehr als 1 Jahr", other: "mehr als {{count}} Jahre" }, withPreposition: { one: "mehr als 1 Jahr", other: "mehr als {{count}} Jahren" } }, almostXYears: { standalone: { one: "fast 1 Jahr", other: "fast {{count}} Jahre" }, withPreposition: { one: "fast 1 Jahr", other: "fast {{count}} Jahren" } } };
 
-if (!module_2114) {
-  const obj = { default: module_2114 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_2114;
-}
-if (!module_2117) {
-  const obj2 = { default: module_2117 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_2117;
-}
-let date = date_mod;
-if (!date) {
-  const obj3 = { default: date };
-  let tmp7 = obj3;
-} else {
-  tmp7 = date;
-}
-let date = date_mod;
-if (!date) {
-  const obj4 = { default: date };
-  let tmp9 = obj4;
-} else {
-  tmp9 = date;
-}
-if (!module_3980) {
-  const obj5 = { default: module_3980 };
-  let tmp11 = obj5;
-} else {
-  tmp11 = module_3980;
-}
-
-export default { code: "en-GB", formatDistance: tmp3.default, formatLong: tmp11.default, formatRelative: tmp5.default, localize: tmp7.default, match: tmp9.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
+export default function formatDistance(arg0, arg1, addSuffix) {
+  if (null != addSuffix) {
+    if (addSuffix.addSuffix) {
+      let standalone = obj[arg0].withPreposition;
+    }
+    if (typeof standalone === "string") {
+      let tmp5 = standalone;
+      if (null != addSuffix) {
+        tmp5 = standalone;
+        if (addSuffix.addSuffix) {
+          if (!addSuffix.comparison) {
+            let text = `vor ${standalone}`;
+          }
+          text = `in ${standalone}`;
+        }
+      }
+      return tmp5;
+    } else if (1 === arg1) {
+      let one = standalone.one;
+    } else {
+      const _String = String;
+      one = standalone.other.replace("{{count}}", String(arg1));
+    }
+  }
+  standalone = obj[arg0].standalone;
+};
 export default exports.default;

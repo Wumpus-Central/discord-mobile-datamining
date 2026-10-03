@@ -1,18 +1,13 @@
 // _runtime/metro/04818__.js
-import PATTERN_CHARS_mod from "../04819_PATTERN_CHARS.js";
+import registerAsset from "01132__.js";
 
-const obj = { success: null, error: null, warning: null, heartbeat: null, tripleClick: null, notification: null };
-let PATTERN_CHARS = PATTERN_CHARS_mod;
-obj.success = PATTERN_CHARS.pattern("oO.O");
-let PATTERN_CHARS = PATTERN_CHARS_mod;
-obj.error = PATTERN_CHARS.pattern("OO.OO");
-let PATTERN_CHARS = PATTERN_CHARS_mod;
-obj.warning = PATTERN_CHARS.pattern("O.O");
-let PATTERN_CHARS = PATTERN_CHARS_mod;
-obj.heartbeat = PATTERN_CHARS.pattern("oO--oO");
-let PATTERN_CHARS = PATTERN_CHARS_mod;
-obj.tripleClick = PATTERN_CHARS.pattern("o.o.o");
-let PATTERN_CHARS = PATTERN_CHARS_mod;
-obj.notification = PATTERN_CHARS.pattern("o-O=o");
-
-export const Patterns = obj;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "cb57655a680893ff0ad8eb9c16157cda",
+  name: "EnvelopeIcon",
+  type: "png",
+});

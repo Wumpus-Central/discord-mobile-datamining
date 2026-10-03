@@ -1,11 +1,11 @@
 // _runtime/metro/02585__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/gifting",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL2dpZnRpbmc=",
   scales: [1],
-  hash: "567fc188c37481444191c0dbf1996c76",
-  name: "GiftingBadgeTier.compiled.messages",
+  hash: "767c2f8b54216f777c40f5a97523e655",
+  name: "vi.messages.767c2f8b54216f777c40f5a97523e655.compiled.messages",
   type: "jsona",
 });

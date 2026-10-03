@@ -1,66 +1,28 @@
 // _runtime/metro/04092__.js
-import _mod4093 from "04093__.js";
-import module_3949_mod from "03949__.js";
+import 02124__ from "02124__.js";
 
-let module_3949 = module_3949_mod;
-if (!module_3949) {
-  const obj = { default: module_3949 };
-  let tmp3 = obj;
+if (!module_2124) {
+  const obj2 = { default: module_2124 };
+  let obj = obj2;
 } else {
-  tmp3 = module_3949;
+  obj = module_2124;
 }
-module_3949 = tmp3;
-const dependencyMap = ["\u043D\u0435\u0434\u0456\u043B\u044E", "\u043F\u043E\u043D\u0435\u0434\u0456\u043B\u043E\u043A", "\u0432\u0456\u0432\u0442\u043E\u0440\u043E\u043A", "\u0441\u0435\u0440\u0435\u0434\u0443", "\u0447\u0435\u0442\u0432\u0435\u0440", "\u043F\u2019\u044F\u0442\u043D\u0438\u0446\u044E", "\u0441\u0443\u0431\u043E\u0442\u0443"];
-let closure_4 = {
-  lastWeek: function lastWeekFormat(arg0, arg1, arg2) {
-    const toDateResult = _mod4093.toDate(arg0);
-    const uTCDay = toDateResult.getUTCDay();
-    if (module_3949.default(toDateResult, arg1, arg2)) {
-      let text = `${"'\u0443 " + tmp2} о' p`;
-    } else {
-      if (0 !== uTCDay) {
-        if (3 !== uTCDay) {
-          if (5 !== uTCDay) {
-            if (6 !== uTCDay) {
-              text = `${"'\u0443 \u043C\u0438\u043D\u0443\u043B\u0438\u0439 " + tmp2} о' p`;
-            }
-          }
-        }
-      }
-      text = `${"'\u0443 \u043C\u0438\u043D\u0443\u043B\u0443 " + tmp2} о' p`;
-    }
-    return text;
+const date = {
+  ordinalNumber(arg0, arg1) {
+    return String(arg0);
   },
-  yesterday: "'\u0432\u0447\u043E\u0440\u0430 \u043E' p",
-  today: "'\u0441\u044C\u043E\u0433\u043E\u0434\u043D\u0456 \u043E' p",
-  tomorrow: "'\u0437\u0430\u0432\u0442\u0440\u0430 \u043E' p",
-  nextWeek: function nextWeekFormat(arg0, arg1, arg2) {
-    const toDateResult = _mod4093.toDate(arg0);
-    const uTCDay = toDateResult.getUTCDay();
-    if (module_3949.default(toDateResult, arg1, arg2)) {
-      let text = `${"'\u0443 " + tmp2} о' p`;
-    } else {
-      if (0 !== uTCDay) {
-        if (3 !== uTCDay) {
-          if (5 !== uTCDay) {
-            if (6 !== uTCDay) {
-              text = `${"'\u0443 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u0438\u0439 " + tmp2} о' p`;
-            }
-          }
-        }
-      }
-      text = `${"'\u0443 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u0443 " + tmp2} о' p`;
+  era: obj.default({ values: { narrow: ["B", "\u0E04\u0E28"], abbreviated: ["BC", "\u0E04.\u0E28."], wide: ["\u0E1B\u0E35\u0E01\u0E48\u0E2D\u0E19\u0E04\u0E23\u0E34\u0E2A\u0E15\u0E01\u0E32\u0E25", "\u0E04\u0E23\u0E34\u0E2A\u0E15\u0E4C\u0E28\u0E31\u0E01\u0E23\u0E32\u0E0A"] }, defaultWidth: "wide" }),
+  quarter: obj.default({
+    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["Q1", "Q2", "Q3", "Q4"], wide: ["\u0E44\u0E15\u0E23\u0E21\u0E32\u0E2A\u0E41\u0E23\u0E01", "\u0E44\u0E15\u0E23\u0E21\u0E32\u0E2A\u0E17\u0E35\u0E48\u0E2A\u0E2D\u0E07", "\u0E44\u0E15\u0E23\u0E21\u0E32\u0E2A\u0E17\u0E35\u0E48\u0E2A\u0E32\u0E21", "\u0E44\u0E15\u0E23\u0E21\u0E32\u0E2A\u0E17\u0E35\u0E48\u0E2A\u0E35\u0E48"] },
+    defaultWidth: "wide",
+    argumentCallback(arg0) {
+      return arg0 - 1;
     }
-    return text;
-  },
-  other: "P"
+  }),
+  month: obj.default({ values: { narrow: ["\u0E21.\u0E04.", "\u0E01.\u0E1E.", "\u0E21\u0E35.\u0E04.", "\u0E40\u0E21.\u0E22.", "\u0E1E.\u0E04.", "\u0E21\u0E34.\u0E22.", "\u0E01.\u0E04.", "\u0E2A.\u0E04.", "\u0E01.\u0E22.", "\u0E15.\u0E04.", "\u0E1E.\u0E22.", "\u0E18.\u0E04."], abbreviated: ["\u0E21.\u0E04.", "\u0E01.\u0E1E.", "\u0E21\u0E35.\u0E04.", "\u0E40\u0E21.\u0E22.", "\u0E1E.\u0E04.", "\u0E21\u0E34.\u0E22.", "\u0E01.\u0E04.", "\u0E2A.\u0E04.", "\u0E01.\u0E22.", "\u0E15.\u0E04.", "\u0E1E.\u0E22.", "\u0E18.\u0E04."], wide: ["\u0E21\u0E01\u0E23\u0E32\u0E04\u0E21", "\u0E01\u0E38\u0E21\u0E20\u0E32\u0E1E\u0E31\u0E19\u0E18\u0E4C", "\u0E21\u0E35\u0E19\u0E32\u0E04\u0E21", "\u0E40\u0E21\u0E29\u0E32\u0E22\u0E19", "\u0E1E\u0E24\u0E29\u0E20\u0E32\u0E04\u0E21", "\u0E21\u0E34\u0E16\u0E38\u0E19\u0E32\u0E22\u0E19", "\u0E01\u0E23\u0E01\u0E0E\u0E32\u0E04\u0E21", "\u0E2A\u0E34\u0E07\u0E2B\u0E32\u0E04\u0E21", "\u0E01\u0E31\u0E19\u0E22\u0E32\u0E22\u0E19", "\u0E15\u0E38\u0E25\u0E32\u0E04\u0E21", "\u0E1E\u0E24\u0E28\u0E08\u0E34\u0E01\u0E32\u0E22\u0E19", "\u0E18\u0E31\u0E19\u0E27\u0E32\u0E04\u0E21"] }, defaultWidth: "wide" }),
+  day: obj.default({ values: { narrow: ["\u0E2D\u0E32.", "\u0E08.", "\u0E2D.", "\u0E1E.", "\u0E1E\u0E24.", "\u0E28.", "\u0E2A."], short: ["\u0E2D\u0E32.", "\u0E08.", "\u0E2D.", "\u0E1E.", "\u0E1E\u0E24.", "\u0E28.", "\u0E2A."], abbreviated: ["\u0E2D\u0E32.", "\u0E08.", "\u0E2D.", "\u0E1E.", "\u0E1E\u0E24.", "\u0E28.", "\u0E2A."], wide: ["\u0E2D\u0E32\u0E17\u0E34\u0E15\u0E22\u0E4C", "\u0E08\u0E31\u0E19\u0E17\u0E23\u0E4C", "\u0E2D\u0E31\u0E07\u0E04\u0E32\u0E23", "\u0E1E\u0E38\u0E18", "\u0E1E\u0E24\u0E2B\u0E31\u0E2A\u0E1A\u0E14\u0E35", "\u0E28\u0E38\u0E01\u0E23\u0E4C", "\u0E40\u0E2A\u0E32\u0E23\u0E4C"] }, defaultWidth: "wide" }),
+  dayPeriod: obj.default({ values: { narrow: { am: "\u0E01\u0E48\u0E2D\u0E19\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07", pm: "\u0E2B\u0E25\u0E31\u0E07\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07", midnight: "\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07\u0E04\u0E37\u0E19", noon: "\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07", morning: "\u0E40\u0E0A\u0E49\u0E32", afternoon: "\u0E1A\u0E48\u0E32\u0E22", evening: "\u0E40\u0E22\u0E47\u0E19", night: "\u0E01\u0E25\u0E32\u0E07\u0E04\u0E37\u0E19" }, abbreviated: { am: "\u0E01\u0E48\u0E2D\u0E19\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07", pm: "\u0E2B\u0E25\u0E31\u0E07\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07", midnight: "\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07\u0E04\u0E37\u0E19", noon: "\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07", morning: "\u0E40\u0E0A\u0E49\u0E32", afternoon: "\u0E1A\u0E48\u0E32\u0E22", evening: "\u0E40\u0E22\u0E47\u0E19", night: "\u0E01\u0E25\u0E32\u0E07\u0E04\u0E37\u0E19" }, wide: { am: "\u0E01\u0E48\u0E2D\u0E19\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07", pm: "\u0E2B\u0E25\u0E31\u0E07\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07", midnight: "\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07\u0E04\u0E37\u0E19", noon: "\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07", morning: "\u0E40\u0E0A\u0E49\u0E32", afternoon: "\u0E1A\u0E48\u0E32\u0E22", evening: "\u0E40\u0E22\u0E47\u0E19", night: "\u0E01\u0E25\u0E32\u0E07\u0E04\u0E37\u0E19" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "\u0E01\u0E48\u0E2D\u0E19\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07", pm: "\u0E2B\u0E25\u0E31\u0E07\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07", midnight: "\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07\u0E04\u0E37\u0E19", noon: "\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07", morning: "\u0E15\u0E2D\u0E19\u0E40\u0E0A\u0E49\u0E32", afternoon: "\u0E15\u0E2D\u0E19\u0E01\u0E25\u0E32\u0E07\u0E27\u0E31\u0E19", evening: "\u0E15\u0E2D\u0E19\u0E40\u0E22\u0E47\u0E19", night: "\u0E15\u0E2D\u0E19\u0E01\u0E25\u0E32\u0E07\u0E04\u0E37\u0E19" }, abbreviated: { am: "\u0E01\u0E48\u0E2D\u0E19\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07", pm: "\u0E2B\u0E25\u0E31\u0E07\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07", midnight: "\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07\u0E04\u0E37\u0E19", noon: "\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07", morning: "\u0E15\u0E2D\u0E19\u0E40\u0E0A\u0E49\u0E32", afternoon: "\u0E15\u0E2D\u0E19\u0E01\u0E25\u0E32\u0E07\u0E27\u0E31\u0E19", evening: "\u0E15\u0E2D\u0E19\u0E40\u0E22\u0E47\u0E19", night: "\u0E15\u0E2D\u0E19\u0E01\u0E25\u0E32\u0E07\u0E04\u0E37\u0E19" }, wide: { am: "\u0E01\u0E48\u0E2D\u0E19\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07", pm: "\u0E2B\u0E25\u0E31\u0E07\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07", midnight: "\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07\u0E04\u0E37\u0E19", noon: "\u0E40\u0E17\u0E35\u0E48\u0E22\u0E07", morning: "\u0E15\u0E2D\u0E19\u0E40\u0E0A\u0E49\u0E32", afternoon: "\u0E15\u0E2D\u0E19\u0E01\u0E25\u0E32\u0E07\u0E27\u0E31\u0E19", evening: "\u0E15\u0E2D\u0E19\u0E40\u0E22\u0E47\u0E19", night: "\u0E15\u0E2D\u0E19\u0E01\u0E25\u0E32\u0E07\u0E04\u0E37\u0E19" } }, defaultFormattingWidth: "wide" })
 };
 
-export default function formatRelative(arg0, arg1, arg2, arg3) {
-  let tmpResult = tmp;
-  if (typeof closure_4[arg0] === "function") {
-    tmpResult = tmp(arg1, arg2, arg3);
-  }
-  return tmpResult;
-};
+export default date;
 export default exports.default;

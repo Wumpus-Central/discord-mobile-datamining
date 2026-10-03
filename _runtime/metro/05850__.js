@@ -1,13 +1,13 @@
 // _runtime/metro/05850__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
-  scales: [1],
-  hash: "1e0df3230db3924611b6f5b8d19fe029",
-  name: "img_account_sync_github_white",
-  type: "svg",
+  scales: [2, 3],
+  hash: "4f2842b39c98933e8b7bea806132028f",
+  name: "ForumLockIcon",
+  type: "png",
 });

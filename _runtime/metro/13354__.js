@@ -1,13 +1,13 @@
 // _runtime/metro/13354__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/guild_boosting",
-  width: 160,
-  height: 82,
-  scales: [2, 3],
-  hash: "0d2c2c590995b34f0429dc331d39457b",
-  name: "subscribe_confirm",
+  httpServerLocation: "/assets/images/native/premium/plan_selection",
+  width: 64,
+  height: 64,
+  scales: [1],
+  hash: "7820559d802b687a2589b1c9f32203ab",
+  name: "img_wumpus_nitro_boost",
   type: "png",
 });

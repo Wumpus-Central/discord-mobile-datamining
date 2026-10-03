@@ -1,37 +1,9 @@
 // _runtime/metro/05745__.js
-import _modDef5746 from "05746__.js";
+import _mod17 from "00017__.js";
+import 00065__ from "00065__.js";
 
-importDefault = arg2;
-const dependencyMap = arg6;
+const codegenNativeComponent = _mod17.codegenNativeComponent;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSScreenStackHeaderSubview", validAttributes: { type: true, hidesSharedBackground: true, synchronousShadowStateUpdatesEnabled: true } };
 
-export default {
-  decode(arg0, buffer) {
-    value = _modDef5746.get();
-    if (undefined !== value) {
-      if (undefined !== arg0) {
-        try {
-          const decoder = new value(arg0);
-          const _DataView = DataView;
-          if (buffer instanceof DataView) {
-            buffer = buffer.buffer;
-          } else {
-            const _Uint8Array = Uint8Array;
-            buffer = Uint8Array.from(buffer);
-          }
-          decoder.decode(buffer);
-        } catch (err) {}
-      }
-    }
-    const mapped = buffer.map((item) => String.fromCharCode(item));
-    return (function decodeAsciiValue(arg0) {
-      try {
-        const _decodeURIComponent = decodeURIComponent;
-        const _escape = escape;
-        return decodeURIComponent(escape(arg0));
-      } catch (err) {
-        return tmp;
-      }
-    })(mapped.join(""));
-  },
-  TAG_HEADER_SIZE: 5,
-};
+export default module_65.get("RNSScreenStackHeaderSubview", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

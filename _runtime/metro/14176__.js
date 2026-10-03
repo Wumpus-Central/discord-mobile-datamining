@@ -1,11 +1,32 @@
 // _runtime/metro/14176__.js
-import registerAsset from "01121__.js";
+let closure_0 = { url: "http://localhost:8081" };
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties",
-  scales: [1],
-  hash: "2c315f321285573a3e0f3421e17e59ea",
-  name: "NitroGem24",
-  type: "lottie",
-});
+export default () => {
+  if (arg0 === undefined) {
+    let obj = {};
+  }
+  return () => {
+    url = Object.assign({}, url, obj);
+    obj = {
+      onCommand(type) {
+        if ("editor.open" === type.type) {
+          const payload = type.payload;
+          let num = payload.lineNumber;
+          const _HermesInternal = HermesInternal;
+          obj = { file: payload.file, lineNumber: null };
+          const combined = "" + url.url + "/open-stack-frame";
+          if (!num) {
+            num = 1;
+          }
+          obj.lineNumber = num;
+          const _fetch = fetch;
+          const request = { method: "POST", body: null };
+          const _JSON = JSON;
+          request.body = JSON.stringify(obj);
+          const response = fetch(combined, request);
+        }
+      },
+    };
+    return obj;
+  };
+};

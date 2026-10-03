@@ -1,13 +1,13 @@
 // _runtime/metro/08835__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/CircuitIcon",
+  httpServerLocation: "/assets/images/native/custom_app_icons/BrandInvertedIcon",
   width: 60,
   height: 60,
   scales: [2, 3],
-  hash: "68832d737c55ed046c40e8d11571a54e",
-  name: "CircuitIcon",
+  hash: "d3530007d60b5d4f6a3d08cddf26f42c",
+  name: "BrandInvertedIcon",
   type: "png",
 });

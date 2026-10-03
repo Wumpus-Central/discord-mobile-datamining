@@ -1,35 +1,99 @@
 // _runtime/metro/01291__.js
-import _mod1283 from "01283__.js";
-import callBindBasic from "../01292_callBindBasic.js";
+import _mod1292 from "01292__.js";
+import _mod1293 from "01293__.js";
+import callBoundIntrinsic from "../01326_callBoundIntrinsic.js";
+import _mod1327 from "01327__.js";
+import _mod1329 from "01329__.js";
 
-try {
-  const _Array = Array;
-  let _module = [].__proto__ === Array.prototype;
-  if (_module) {
-    _module = _mod1283;
-  }
-  if (_module) {
-    const _Object = Object;
-    _module = _mod1283(Object.prototype, "__proto__");
-  }
-  const _Object2 = Object;
-  if (_module) {
-    if (typeof _module.get === "function") {
-      const items = [_module.get];
-      let getDunder = callBindBasic(items);
-    }
-    module.exports = getDunder;
-  }
-  getDunder = typeof getPrototypeOf === "function";
-  if (typeof getPrototypeOf === "function") {
-    getDunder = function getDunder(arg0) {
-      let tmp2 = arg0;
-      if (null != arg0) {
-        tmp2 = Object(arg0);
-      }
-      return getPrototypeOf(tmp2);
+const tmp = _mod1292("%WeakMap%", true);
+let closure_2 = tmp;
+let closure_3 = callBoundIntrinsic("WeakMap.prototype.get", true);
+let closure_4 = callBoundIntrinsic("WeakMap.prototype.set", true);
+let closure_5 = callBoundIntrinsic("WeakMap.prototype.has", true);
+let closure_6 = callBoundIntrinsic("WeakMap.prototype.delete", true);
+if (tmp) {
+  function getSideChannelWeakMap() {
+    let obj = {
+      assert(arg0) {
+        if (!obj.has(arg0)) {
+          const tmp32 = new _mod1293("Side channel does not contain " + _mod1327(arg0));
+          throw tmp32;
+        }
+      },
+      delete(obj) {
+        if (closure_2) {
+          if (obj) {
+            if (closure_0) {
+              return closure_6(tmp, obj);
+            }
+          }
+          return false;
+        }
+        if (_mod1329) {
+          if (set) {
+            return set.delete(obj);
+          }
+        }
+      },
+      get(obj) {
+        if (closure_2) {
+          if (obj) {
+            if (typeof obj === "object") {
+              if (closure_0) {
+                value = closure_3(tmp, obj);
+              }
+              return value;
+            }
+          }
+        }
+        value = set;
+        if (set) {
+          value = set.get(obj);
+        }
+      },
+      has(obj) {
+        if (closure_2) {
+          if (obj) {
+            if (typeof obj === "object") {
+              if (closure_0) {
+                let hasItem = closure_5(tmp, obj);
+              }
+              return hasItem;
+            }
+          }
+        }
+        hasItem = set;
+        if (hasItem) {
+          hasItem = set.has(obj);
+        }
+      },
+      set(obj, arg1) {
+        if (closure_2) {
+          if (obj) {
+            let tmp6 = closure_0;
+            if (!closure_0) {
+              const tmp5 = new tmp();
+              closure_0 = tmp5;
+              tmp6 = tmp5;
+            }
+            closure_4(tmp6, obj, arg1);
+          }
+        }
+        if (_mod1329) {
+          obj = closure_1;
+          if (!closure_1) {
+            const tmp4 = _mod1329();
+            closure_1 = tmp4;
+            obj = tmp4;
+          }
+          const result = obj.set(obj, arg1);
+        }
+      },
     };
+    return obj;
   }
-} catch (tmp2) {
-  throw tmp2;
+} else {
+  getSideChannelWeakMap = _mod1329;
 }
+
+export default getSideChannelWeakMap;

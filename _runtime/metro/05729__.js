@@ -1,57 +1,23 @@
 // _runtime/metro/05729__.js
-import _modDef5717 from "05717__.js";
+import _mod17 from "00017__.js";
+import resolveAssetSource_mod from "../00081_resolveAssetSource.js";
+import weakSet from "../00106_weakSet.js";
+import 00065__ from "00065__.js";
 
-importDefault = arg2;
-const dependencyMap = arg6;
-const typeSizes = { 1: 1, 2: 1, 3: 2, 4: 4, 5: 8, 7: 1, 9: 4, 10: 8, 13: 4 };
-const obj2 = { BYTE: 1, ASCII: 2, SHORT: 3, LONG: 4, RATIONAL: 5, UNDEFINED: 7, SLONG: 9, SRATIONAL: 10, IFD: 13 };
+const codegenNativeComponent = _mod17.codegenNativeComponent;
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSTabsScreenAndroid", directEventTypes: { topWillAppear: { registrationName: "onWillAppear" }, topDidAppear: { registrationName: "onDidAppear" }, topWillDisappear: { registrationName: "onWillDisappear" }, topDidDisappear: { registrationName: "onDidDisappear" } }, validAttributes: null };
+let resolveAssetSource = resolveAssetSource_mod;
+if ("default" in resolveAssetSource) {
+  resolveAssetSource = resolveAssetSource.default;
+}
+const obj2 = { screenKey: true, preventNativeSelection: true, title: true, badgeValue: true, tabBarItemTestID: true, tabBarItemAccessibilityLabel: true, specialEffects: true, drawableIconResourceName: true, imageIconResource: { process: resolveAssetSource }, selectedDrawableIconResourceName: true, selectedImageIconResource: null, standardAppearance: true };
+let resolveAssetSource = resolveAssetSource_mod;
+if ("default" in resolveAssetSource) {
+  resolveAssetSource = resolveAssetSource.default;
+}
+obj2.selectedImageIconResource = { process: resolveAssetSource };
+const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onWillAppear: true, onDidAppear: true, onWillDisappear: true, onDidDisappear: true }));
+__INTERNAL_VIEW_CONFIG.validAttributes = obj2;
 
-export default {
-  getAsciiValue(items) {
-    return items.map((item) => String.fromCharCode(item));
-  },
-  getByteAt(getUint8, sum) {
-    return getUint8.getUint8(sum);
-  },
-  getAsciiAt(getUint8, sum) {
-    return getUint8.getUint8(sum);
-  },
-  getShortAt(dataView, sum, byteOrder) {
-    return dataView.getUint16(sum, byteOrder === _modDef5717.LITTLE_ENDIAN);
-  },
-  getLongAt(dataView, sum, byteOrder) {
-    return dataView.getUint32(sum, byteOrder === _modDef5717.LITTLE_ENDIAN);
-  },
-  getRationalAt(getUint32, sum, arg2) {
-    const items = [getUint32.getUint32(sum, arg2 === _modDef5717.LITTLE_ENDIAN)];
-    sum = sum + 4;
-    items[1] = getUint32.getUint32(sum, arg2 === _modDef5717.LITTLE_ENDIAN);
-    return items;
-  },
-  getUndefinedAt(getUint8, sum) {
-    return getUint8.getUint8(sum);
-  },
-  getSlongAt(getInt32, sum, arg2) {
-    return getInt32.getInt32(sum, arg2 === _modDef5717.LITTLE_ENDIAN);
-  },
-  getSrationalAt(getInt32, sum, arg2) {
-    const items = [getInt32.getInt32(sum, arg2 === _modDef5717.LITTLE_ENDIAN)];
-    sum = sum + 4;
-    items[1] = getInt32.getInt32(sum, arg2 === _modDef5717.LITTLE_ENDIAN);
-    return items;
-  },
-  getIfdPointerAt(getUint32, sum, arg2) {
-    return getUint32.getUint32(sum, arg2 === _modDef5717.LITTLE_ENDIAN);
-  },
-  typeSizes,
-  tagTypes: obj2,
-  getTypeSize(LONG) {
-    if (undefined === obj2[LONG]) {
-      const _Error = Error;
-      const error = new Error("No such type found.");
-      throw error;
-    } else {
-      return obj[tmp[LONG]];
-    }
-  },
-};
+export default module_65.get("RNSTabsScreenAndroid", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

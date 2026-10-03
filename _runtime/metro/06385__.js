@@ -1,76 +1,36 @@
 // _runtime/metro/06385__.js
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
-
-function _isNativeReflectConstruct() {
+function asyncGeneratorStep(arg0, fn, fn2, arg3, arg4, arg5, arg6) {
   try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
+    const iter = arg0[arg5](arg6);
+    value = iter.value;
+    if (iter.done) {
+      fn(value);
     } else {
-      callResult = call(constructResult);
+      const resolved = Promise.resolve(value);
+      resolved.then(arg3, arg4);
     }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturnDefault;
-class LongPressGesture {
-  constructor() {
-    self = this;
-    tmp = closure_0(this, LongPressGesture);
-    tmp2 = c2;
-    obj = c2(LongPressGesture);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, undefined);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.config = {};
-    tmp3Result.handlerName = "LongPressGestureHandler";
-    result = tmp3Result.shouldCancelWhenOutside(true);
-    return tmp3Result;
+  } catch (tmp13) {
+    fn2(tmp13);
   }
 }
-_classCallCheck = LongPressGesture;
-_inherits(LongPressGesture, fn(6280).BaseGesture);
-const entry = {
-  key: "minDuration",
-  value: function minDuration(CONTEXT_MENU_LONG_PRESS_DURATION_MS) {
-    this.config.minDurationMs = CONTEXT_MENU_LONG_PRESS_DURATION_MS;
-    return this;
-  },
-};
-const items = [
-  entry,
-  {
-    key: "maxDistance",
-    value: function maxDistance(maxDist) {
-      this.config.maxDist = maxDist;
-      return this;
-    },
-  },
-  {
-    key: "numberOfPointers",
-    value: function numberOfPointers(numberOfPointers) {
-      this.config.numberOfPointers = numberOfPointers;
-      return this;
-    },
-  },
-];
 
-export const LongPressGesture = _createClass(LongPressGesture, items);
+export default function _asyncToGenerator(arg0) {
+  closure_0 = arg0;
+  return function () {
+    const self = this;
+    closure_1 = arguments;
+    return new Promise((arg0, arg1) => {
+      _self = arg0;
+      closure_1 = arg1;
+      function _next(arg0) {
+        self(applyResult, closure_0, closure_1, _next, _throw, "next", arg0);
+      }
+      function _throw(arg0) {
+        self(applyResult, closure_0, closure_1, _next, _throw, "throw", arg0);
+      }
+      const applyResult = _self.apply(self, closure_1);
+      closure_2 = applyResult;
+      asyncGeneratorStep(applyResult, arg0, arg1, _next, _throw, "next", undefined);
+    });
+  };
+}

@@ -1,13 +1,13 @@
 // _runtime/metro/11267__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
+  width: 48,
+  height: 48,
   scales: [2, 3],
-  hash: "2f45b451ee0748e991b61a955627143c",
-  name: "ic_check_24px",
+  hash: "4b534b4720ff304cea2a2b72b308859f",
+  name: "feedback-modal-happy-desaturated_darker",
   type: "png",
 });

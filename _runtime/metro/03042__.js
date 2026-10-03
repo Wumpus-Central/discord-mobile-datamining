@@ -1,11 +1,11 @@
 // _runtime/metro/03042__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==",
+  httpServerLocation: "/assets/modules/checkpoint",
   scales: [1],
-  hash: "c0b6fc6f74e801dbe3ddaf5f1eb1e005",
-  name: "de.messages.c0b6fc6f74e801dbe3ddaf5f1eb1e005.compiled.messages",
+  hash: "b12f864e6ef57f14618e22f2b6960161",
+  name: "Checkpoint.compiled.messages",
   type: "jsona",
 });

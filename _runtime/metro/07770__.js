@@ -1,5 +1,5 @@
 // _runtime/metro/07770__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "f008a1e156929bb73f7856d4125be1de",
-  name: "UnknownGameIcon",
+  hash: "06dd03fc60ccef8d12f4f7cb6c5d239c",
+  name: "XNeutralIcon",
   type: "png",
 });

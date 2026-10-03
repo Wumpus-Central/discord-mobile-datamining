@@ -1,3 +1,3 @@
 // _runtime/metro/01301__.js
 
-export default RangeError;
+export default Object;

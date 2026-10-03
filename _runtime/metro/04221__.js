@@ -1,6 +1,6 @@
 // _runtime/metro/04221__.js
-import _typeof_mod from "03947__.js";
-import requiredArgs_mod from "../03948_requiredArgs.js";
+import _typeof_mod from "03958__.js";
+import requiredArgs_mod from "../03959_requiredArgs.js";
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -19,8 +19,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function getMilliseconds(arg0) {
+export default function getDay(arg0) {
   requiredArgs.default(1, arguments);
-  return _typeof.default(arg0).getMilliseconds();
+  return _typeof.default(arg0).getDay();
 };
 export default exports.default;

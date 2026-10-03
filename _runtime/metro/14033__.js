@@ -1,19 +1,71 @@
 // _runtime/metro/14033__.js
-import _mod13999 from "13999__.js";
-import _mod14020 from "14020__.js";
-import f2 from "../14034_f.js";
-import _mod14044 from "14044__.js";
-import _mod14045 from "14045__.js";
+import e from "../01172_e.js";
+import calendars from "../14034_calendars.js";
+import hourCycles from "../14035_hourCycles.js";
+import timezones from "../14036_timezones.js";
+import weekData from "../14037_weekData.js";
 
-let closure_2 = _mod13999([].concat);
+require = arg1;
+const dependencyMap = arg6;
 
-export default _mod14020("Reflect", "ownKeys") ||
-  function ownKeys(arg0) {
-    const fResult = f2.f(_mod14044(arg0));
-    const f = _mod14045.f;
-    let tmp2 = fResult;
-    if (f) {
-      tmp2 = closure_2(fResult, f(arg0));
-    }
-    return tmp2;
-  };
+export const getCalendarPreferenceDataForRegion = function getCalendarPreferenceDataForRegion(region) {
+  let str = null;
+  if (region) {
+    str = region.toUpperCase();
+  }
+  if (!str) {
+    str = "";
+  }
+  return (
+    calendars.calendars[str] ||
+    calendars.calendars["001"].map((item) => {
+      let str = "gregory";
+      if ("gregorian" !== item) {
+        let str2 = "islamicc";
+        if ("islamic-civil" !== item) {
+          str2 = item;
+        }
+        str = str2;
+      }
+      return str;
+    })
+  );
+};
+export const getHourCyclesPreferenceDataForLocaleOrRegion = function getHourCyclesPreferenceDataForLocaleOrRegion(
+  locale,
+  region,
+) {
+  const formatted = locale.toLowerCase();
+  let str = "";
+  if (region) {
+    str = region.toUpperCase();
+  }
+  let v001 = hourCycles.hourCycles[formatted] || hourCycles.hourCycles[str];
+  if (!v001) {
+    const concat = "".concat;
+    v001 = hourCycles.hourCycles["".concat("", formatted, "-001")];
+  }
+  if (!v001) {
+    v001 = hourCycles.hourCycles["001"];
+  }
+  return e.__spreadArray([], v001, true);
+};
+export const getTimeZonePreferenceForRegion = function getTimeZonePreferenceForRegion(region) {
+  const formatted = region.toLowerCase();
+  const items = [];
+  if (timezones.timezones[formatted]) {
+    return e.__spreadArray(items, timezones.timezones[formatted], true);
+  } else {
+    return items;
+  }
+};
+export const getWeekDataForRegion = function getWeekDataForRegion(region) {
+  let str = "";
+  if (region) {
+    str = region.toUpperCase();
+  }
+  if (!str) {
+    str = "001";
+  }
+  return weekData.weekData[str] || weekData.weekData["001"];
+};

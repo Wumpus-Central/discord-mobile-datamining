@@ -1,13 +1,13 @@
 // _runtime/metro/09091__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/modules/video_calls/native/images",
-  width: 24,
-  height: 24,
+  width: 130,
+  height: 82,
   scales: [2, 3],
-  hash: "a2b44ab2faf9e7aa1dac11a1e1d9c4d6",
-  name: "fullscreen",
+  hash: "3c9f06960d8f7bccd426e0e87c7d7947",
+  name: "screenshare_splash",
   type: "png",
 });

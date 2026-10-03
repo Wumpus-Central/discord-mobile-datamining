@@ -72,7 +72,7 @@ if (result) {
       obj[items[num3]] = () => {
         const items = [closure_0, ...HermesBuiltin.copyRestArgs()];
         c10.push.apply(items);
-        if (value) {
+        if (value2) {
           const _clearImmediate = clearImmediate;
           clearImmediate(immediate);
           const _setImmediate = setImmediate;
@@ -96,7 +96,7 @@ if (result) {
         closure_1 = tmp;
         if (!closure_8) {
           if (0 === closure_9.length) {
-            if (value) {
+            if (value2) {
               closure_9.push(() => closure_1(...items));
               const _clearImmediate = clearImmediate;
               clearImmediate(immediate);

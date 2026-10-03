@@ -1,13 +1,31 @@
 // _runtime/metro/06215__.js
-import registerAsset from "01121__.js";
+import traverseAndConfigureRelations from "../06214_traverseAndConfigureRelations.js";
+import noop from "00019__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "80a1b67e775ddb8de80fde27e63a5302",
-  name: "CircleErrorIcon-secondary",
-  type: "png",
-});
+({ useEffect: c2, useMemo: c3 } = noop);
+
+export const useGestureRelationsUpdater = function useGestureRelationsUpdater(gesture) {
+  closure_0 = gesture;
+  const items = [gesture];
+  const tmp = closure_3(() => {
+    let configureRelationsResult = null;
+    if (closure_0) {
+      configureRelationsResult = traverseAndConfigureRelations.configureRelations(tmp);
+    }
+    return configureRelationsResult;
+  }, items);
+  closure_1 = tmp;
+  const items1 = [tmp];
+  closure_2(() => {
+    if (closure_1) {
+      const _requestAnimationFrame = requestAnimationFrame;
+      closure_0 = requestAnimationFrame(() => {
+        const item = closure_1_1.forEach((item, index) => {
+          const NativeProxy = closure_1_0(closure_1_1[2]).NativeProxy;
+          NativeProxy.configureRelations(index, item);
+        });
+      });
+      return () => cancelAnimationFrame(closure_0);
+    }
+  }, items1);
+};

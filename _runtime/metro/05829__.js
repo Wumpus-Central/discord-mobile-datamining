@@ -1,13 +1,13 @@
 // _runtime/metro/05829__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
-  scales: [1],
-  hash: "e94b8b952ebeea94014c9e671ef91d08",
-  name: "img_account_sync_x_dark",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "9ca1aab40b1d1dec8d5caf0688317d98",
+  name: "TextSpoilerIcon",
   type: "png",
 });

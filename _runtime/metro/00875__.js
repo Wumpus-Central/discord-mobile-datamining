@@ -1,114 +1,27 @@
 // _runtime/metro/00875__.js
+import _modDef82 from "00082__.js";
 
-export const utf8ToBytes = function utf8ToBytes(str, arg1) {
-  let num = arg1;
-  if (!arg1) {
-    num = Infinity;
-  }
-  const items = [];
-  let num2 = 0;
-  let tmp = null;
-  if (0 < str.length) {
-    while (true) {
-      let charCodeAtResult = str.charCodeAt(num2);
-      if (charCodeAtResult > 55295) {
-        if (charCodeAtResult < 57344) {
-          if (tmp) {
-            if (charCodeAtResult < 56320) {
-              let diff = num - 3;
-              let tmp12 = charCodeAtResult;
-              let tmp13 = diff;
-              if (-1 < diff) {
-                let arr = items.push(239, 191, 189);
-                tmp12 = charCodeAtResult;
-                tmp13 = diff;
-              }
-            } else {
-              let sum = 65536 + (((tmp - 55296) << 10) | (charCodeAtResult - 56320));
-              let tmp10 = num;
-            }
-            if (sum < 128) {
-              let diff1 = tmp10 - 1;
-              if (diff1 >= 0) {
-                let arr9 = items.push(sum);
-                tmp12 = null;
-                tmp13 = diff1;
-              }
-            } else if (sum < 2048) {
-              let diff2 = tmp10 - 2;
-              if (diff2 >= 0) {
-                let arr10 = items.push((sum >> 6) | 192, (63 & sum) | 128);
-                tmp12 = null;
-                tmp13 = diff2;
-              }
-            } else if (sum < 65536) {
-              let diff3 = tmp10 - 3;
-              if (diff3 >= 0) {
-                let arr11 = items.push((sum >> 12) | 224, ((sum >> 6) & 63) | 128, (63 & sum) | 128);
-                tmp12 = null;
-                tmp13 = diff3;
-              }
-            } else if (sum >= 1114112) {
-              break;
-            } else {
-              let diff4 = tmp10 - 4;
-              if (diff4 >= 0) {
-                let arr12 = items.push(
-                  (sum >> 18) | 240,
-                  ((sum >> 12) & 63) | 128,
-                  ((sum >> 6) & 63) | 128,
-                  (63 & sum) | 128,
-                );
-                tmp12 = null;
-                tmp13 = diff4;
-              }
-            }
-          } else if (charCodeAtResult > 56319) {
-            let diff5 = num - 3;
-            tmp12 = tmp;
-            tmp13 = diff5;
-            if (-1 < diff5) {
-              let arr13 = items.push(239, 191, 189);
-              tmp12 = tmp;
-              tmp13 = diff5;
-            }
-          } else {
-            tmp12 = charCodeAtResult;
-            tmp13 = num;
-            if (num2 + 1 === length) {
-              let diff6 = num - 3;
-              tmp12 = tmp;
-              tmp13 = diff6;
-              if (-1 < diff6) {
-                let arr14 = items.push(239, 191, 189);
-                tmp12 = tmp;
-                tmp13 = diff6;
-              }
-            }
-          }
-          num2 = num2 + 1;
-          tmp = tmp12;
-          num = tmp13;
-        }
-      }
-      let tmp6 = tmp;
-      let tmp7 = num;
-      if (tmp) {
-        let diff7 = num - 3;
-        tmp6 = diff7 > -1;
-        tmp7 = diff7;
-      }
-      sum = charCodeAtResult;
-      tmp10 = tmp7;
-      if (tmp6) {
-        let arr15 = items.push(239, 191, 189);
-        sum = charCodeAtResult;
-        tmp10 = tmp7;
-      }
+importDefault = arg2;
+const dependencyMap = arg6;
+
+export default function getDevServer() {
+  let str = first;
+  if (undefined === first) {
+    str2 = _modDef82.getConstants().scriptURL;
+    const match = str2.match(/^https?:\/\/.*?\//);
+    first = null;
+    if (match) {
+      first = match[0];
     }
-    const _Error = Error;
-    const error = new Error("Invalid code point");
-    throw error;
+    let tmp5 = null;
+    if (match) {
+      tmp5 = str2;
+    }
+    str2 = tmp5;
+    str = first;
   }
-  return items;
-};
+  if (str == null) {
+    str = "http://localhost:8081/";
+  }
+  return { url: str, fullBundleUrl: str2, bundleLoadedFromServer: null !== first };
+}

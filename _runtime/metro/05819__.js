@@ -1,13 +1,13 @@
 // _runtime/metro/05819__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
-  scales: [1],
-  hash: "5f8b57af5ab5fdfa6cf52708c91c3adb",
-  name: "img_account_sync_reddit_white",
-  type: "svg",
+  scales: [2, 3],
+  hash: "3cca2566d6ada925d540d64d7940bca5",
+  name: "AtIcon",
+  type: "png",
 });

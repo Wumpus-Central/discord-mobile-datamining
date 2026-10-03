@@ -182,7 +182,7 @@ function createCompositeKeyForArray(arg0) {
   }
   return tmp2;
 }
-function createCompositeKeyForObject(arr2, D) {
+function createCompositeKeyForObject(arr2, style) {
   const keys = Object.keys(arr2);
   let num = 0;
   let tmp = null;
@@ -190,7 +190,7 @@ function createCompositeKeyForObject(arr2, D) {
   if (0 < keys.length) {
     do {
       let tmp3 = keys[num];
-      if (null == D) {
+      if (null == style) {
         arr2 = arr2[tmp3];
         let tmp10 = arr2;
         if (!(arr2 instanceof _assertNativeAnimatedModuleDefault)) {
@@ -297,23 +297,23 @@ function createCompositeKeyForObject(arr2, D) {
   }
   return tmp2;
 }
-function areCompositeKeysEqual(arg0, D, arg2) {
-  if (arg0 === D) {
+function areCompositeKeysEqual(arg0, arg1, arg2) {
+  if (arg0 === arg1) {
     return true;
   } else {
     if (null !== arg0) {
-      if (null !== D) {
+      if (null !== arg1) {
         const _Object = Object;
         const keys = Object.keys(arg0);
         const _Object2 = Object;
-        if (keys.length !== Object.keys(D).length) {
+        if (keys.length !== Object.keys(arg1).length) {
           return false;
         } else {
           let num = 0;
           if (0 < length) {
-            while (fn(D, keys[num])) {
+            while (fn(arg1, keys[num])) {
               let tmp4 = arg0[tmp];
-              let tmp5 = D[tmp];
+              let tmp5 = arg1[tmp];
               if ("style" === tmp) {
                 if (!areCompositeKeyComponentsEqual(tmp4, tmp5)) {
                   let flag5 = false;
@@ -349,22 +349,22 @@ function areCompositeKeysEqual(arg0, D, arg2) {
     return false;
   }
 }
-function areCompositeKeyComponentsEqual(icon, icon) {
-  if (icon === icon) {
+function areCompositeKeyComponentsEqual(subLabel, subLabel) {
+  if (subLabel === subLabel) {
     return true;
-  } else if (icon instanceof _assertNativeAnimatedModuleDefault) {
+  } else if (subLabel instanceof _assertNativeAnimatedModuleDefault) {
     return tmp;
   } else {
     const _Array = Array;
-    if (Array.isArray(icon)) {
+    if (Array.isArray(subLabel)) {
       const _Array2 = Array;
-      if (Array.isArray(icon)) {
-        if (icon.length !== icon.length) {
+      if (Array.isArray(subLabel)) {
+        if (subLabel.length !== subLabel.length) {
           return false;
         } else {
           let num6 = 0;
           if (0 < length2) {
-            while (areCompositeKeyComponentsEqual(icon[num6], icon[num6])) {
+            while (areCompositeKeyComponentsEqual(subLabel[num6], subLabel[num6])) {
               num6 = num6 + 1;
             }
             return false;
@@ -375,18 +375,18 @@ function areCompositeKeyComponentsEqual(icon, icon) {
         return false;
       }
     } else {
-      if (obj.isPlainObject(icon)) {
-        if (tmp5Result.isPlainObject(icon)) {
+      if (obj.isPlainObject(subLabel)) {
+        if (tmp5Result.isPlainObject(subLabel)) {
           const _Object = Object;
-          const keys = Object.keys(icon);
+          const keys = Object.keys(subLabel);
           const _Object2 = Object;
-          if (keys.length !== Object.keys(icon).length) {
+          if (keys.length !== Object.keys(subLabel).length) {
             return false;
           } else {
             let num3 = 0;
             if (0 < length) {
-              while (fn(nullthrowsDefault(icon), keys[num3])) {
-                if (!areCompositeKeyComponentsEqual(icon[tmp6], icon[tmp6])) {
+              while (fn(nullthrowsDefault(subLabel), keys[num3])) {
+                if (!areCompositeKeyComponentsEqual(subLabel[tmp6], subLabel[tmp6])) {
                   break;
                 } else {
                   num3 = num3 + 1;

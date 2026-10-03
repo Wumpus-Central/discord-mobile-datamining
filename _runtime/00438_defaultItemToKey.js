@@ -96,11 +96,11 @@ export const createVirtualCollectionView = function createVirtualCollectionView(
       let tmp6 = null;
       if (null != _modDef439) {
         const obj2 = { nativeID: tmp };
-        tmp6 = React6(_modDef439, obj2);
+        tmp6 = closure_3_8(_modDef439, obj2);
       }
       items = [tmp6, closure_0(arg0, tmp)];
       obj.children = items;
-      return React7(defaultHiddenStyleDefault, obj, tmp);
+      return options(defaultHiddenStyleDefault, obj, tmp);
     }, items1);
     closure_0 = tmp3;
     const items2 = [tmp3];
@@ -138,7 +138,7 @@ export const createVirtualCollectionView = function createVirtualCollectionView(
           closure_0 = arg0;
           closure_1_5((arg0) => arg0 + closure_0);
         };
-        tmp3Result = React6(VirtualCollectionSpacer, obj);
+        tmp3Result = closure_3_8(VirtualCollectionSpacer, obj);
       }
       return tmp3Result;
     }, items3);

@@ -1,13 +1,13 @@
 // _runtime/metro/05525__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "45e56b0ad20f9774b74dbe6cbb00fca0",
-  name: "GroupIcon",
+  httpServerLocation: "/assets/images/platforms",
+  width: 256,
+  height: 256,
+  scales: [1],
+  hash: "5de31cd2c9db12c0dfd39e4c1dd0eb1f",
+  name: "img_roblox_light",
   type: "png",
 });

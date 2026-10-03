@@ -103,7 +103,7 @@ let items = [
       obj2.ref = imageRef;
       const items1 = [React5(ImageBackground(328), obj2), children];
       obj.children = items1;
-      return React6(tmp3, obj);
+      return closure_1_8(tmp3, obj);
     },
   },
 ];

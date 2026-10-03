@@ -1,3 +1,3 @@
 // _runtime/metro/01309__.js
 
-export default Math.min;
+export default Function.prototype.apply;

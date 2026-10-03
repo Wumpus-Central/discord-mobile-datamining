@@ -1,11 +1,11 @@
 // _runtime/metro/03334__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9jYWxsX2ZlZWRiYWNrX3R1dG9yaWFscy93ZWI=",
+  httpServerLocation: "/assets/modules/hangout_window",
   scales: [1],
-  hash: "08dbebdb555056ae8ca12124b554054a",
-  name: "en-GB.messages.08dbebdb555056ae8ca12124b554054a.compiled.messages",
+  hash: "0ffaf58e78768b3ade273f3634f7892a",
+  name: "HangoutWindow.compiled.messages",
   type: "jsona",
 });

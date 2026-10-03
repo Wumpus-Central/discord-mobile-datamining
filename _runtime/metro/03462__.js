@@ -1,11 +1,11 @@
 // _runtime/metro/03462__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3lvdXR1YmVfM3Bw",
+  httpServerLocation: "/assets/modules/premium/logitech_3pp",
   scales: [1],
-  hash: "41fa03317d71feafa26829ac5a03a29b",
-  name: "en-GB.messages.41fa03317d71feafa26829ac5a03a29b.compiled.messages",
+  hash: "74d114c91c81530f2c73cdb12ed764ee",
+  name: "Logitech3PP.compiled.messages",
   type: "jsona",
 });

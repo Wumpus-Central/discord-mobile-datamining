@@ -1,15 +1,15 @@
 // _runtime/metro/04316__.js
-import _typeof_mod from "03947__.js";
-import requiredArgs_mod from "../03948_requiredArgs.js";
+import module_4308_mod from "04308__.js";
+import requiredArgs_mod from "../03959_requiredArgs.js";
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let module_4308 = module_4308_mod;
+if (!module_4308) {
+  const obj = { default: module_4308 };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = module_4308;
 }
-_typeof = tmp3;
+module_4308 = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -19,20 +19,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isWithinInterval(arg0, start) {
-  requiredArgs.default(2, arguments);
-  const time = _typeof.default(arg0).getTime();
-  const defaultResult1 = _typeof.default(arg0);
-  const time1 = _typeof.default(start.start).getTime();
-  const defaultResult2 = _typeof.default(start.start);
-  const time2 = _typeof.default(start.end).getTime();
-  if (time1 <= time2) {
-    return time >= time1 && time <= time2;
-  } else {
-    const _RangeError = RangeError;
-    const rangeError = new RangeError("Invalid interval");
-    throw rangeError;
-  }
-  const defaultResult3 = _typeof.default(start.end);
+export default function isThisMinute(arg0) {
+  requiredArgs.default(1, arguments);
+  return module_4308.default(Date.now(), arg0);
 };
 export default exports.default;

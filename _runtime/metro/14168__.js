@@ -1,11 +1,7 @@
 // _runtime/metro/14168__.js
-import registerAsset from "01121__.js";
+import _mod14169 from "14169__.js";
+import get_ActivityIndicator from "00017__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties",
-  scales: [1],
-  hash: "3b38f8bf8ac6605b344df2f05c37673a",
-  name: "NitroGem9",
-  type: "lottie",
-});
+export default function getReactNativeVersion() {
+  return _mod14169.getReactNativeVersionWithModules(get_ActivityIndicator.Platform.constants);
+}

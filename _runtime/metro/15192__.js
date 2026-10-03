@@ -1,13 +1,13 @@
 // _runtime/metro/15192__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/../discord_common/js/shared/images/flags",
-  width: 70,
-  height: 47,
-  scales: [1],
-  hash: "6bf3cf5d375d7561cb3b9bf74212ed45",
-  name: "en-GB",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "581f8c52f7fbe4b74bb81eae47db1969",
+  name: "EmojiFaceWithMonocleIcon",
   type: "png",
 });

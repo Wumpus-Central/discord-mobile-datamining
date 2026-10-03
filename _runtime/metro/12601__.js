@@ -1,28 +1,123 @@
 // _runtime/metro/12601__.js
-import eventFromMessage from "../12585_eventFromMessage.js";
+import spanTimeInputToSeconds from "../12570_spanTimeInputToSeconds.js";
+import _mod12571 from "12571__.js";
+import BAGGAGE_HEADER_NAME from "../12578_BAGGAGE_HEADER_NAME.js";
+import _mod12580 from "12580__.js";
+import _mod12592 from "12592__.js";
 import _mod12602 from "12602__.js";
-import setupIntegration from "12581__.js";
 
-export const linkedErrorsIntegration = setupIntegration.defineIntegration(() => {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
+require = arg1;
+const dependencyMap = arg6;
+function getDynamicSamplingContextFromSpan(spanContext) {
+  const client = _mod12592.getClient();
+  if (client) {
+    const rootSpan = spanTimeInputToSeconds.getRootSpan(spanContext);
+    if (rootSpan[_frozenDsc]) {
+      return tmp5;
+    } else {
+      const traceState = rootSpan.spanContext().traceState;
+      value = traceState;
+      if (traceState) {
+        value = traceState.get("sentry.dsc");
+      }
+      let result = value;
+      if (value) {
+        result = BAGGAGE_HEADER_NAME.baggageHeaderToDynamicSamplingContext(value);
+        const tmpResult6 = BAGGAGE_HEADER_NAME;
+      }
+      if (result) {
+        return result;
+      } else {
+        options = client.getOptions();
+        const tmp9 = client.getDsn() || {};
+        let DEFAULT_ENVIRONMENT = options.environment;
+        if (!DEFAULT_ENVIRONMENT) {
+          DEFAULT_ENVIRONMENT = _mod12602.DEFAULT_ENVIRONMENT;
+        }
+        const obj2 = {
+          environment: DEFAULT_ENVIRONMENT,
+          release: options.release,
+          public_key: tmp9.publicKey,
+          trace_id: spanContext.spanContext().traceId,
+        };
+        const dropUndefinedKeysResult = _mod12571.dropUndefinedKeys(obj2);
+        client.emit("createDsc", dropUndefinedKeysResult);
+        const tmpResult7 = _mod12571;
+        const spanToJSONResult = spanTimeInputToSeconds.spanToJSON(rootSpan);
+        const tmp13 = spanToJSONResult.data || {};
+        const tmp14 = tmp13[_mod12580.SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE];
+        if (null != tmp14) {
+          const _HermesInternal = HermesInternal;
+          dropUndefinedKeysResult.sample_rate = "" + tmp14;
+        }
+        const description = spanToJSONResult.description;
+        const tmpResult8 = spanTimeInputToSeconds;
+        if (tmp17) {
+          dropUndefinedKeysResult.transaction = description;
+        }
+        tmp17 = "url" !== tmp13[_mod12580.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] && description;
+        if (tmpResult9.hasTracingEnabled()) {
+          const _String = String;
+          dropUndefinedKeysResult.sampled = String(spanTimeInputToSeconds.spanIsSampled(rootSpan));
+          const tmpResult10 = spanTimeInputToSeconds;
+        }
+        client.emit("createDsc", dropUndefinedKeysResult, rootSpan);
+        return dropUndefinedKeysResult;
+      }
+    }
+    const tmpResult = spanTimeInputToSeconds;
+  } else {
+    return {};
   }
-  closure_0 = obj.limit || 5;
-  closure_1 = obj.key || "cause";
-  return {
-    name: "LinkedErrors",
-    preprocessEvent(exception, originalException, getOptions) {
-      const options = getOptions.getOptions();
-      const result = _mod12602.applyAggregateErrorsToEvent(
-        eventFromMessage.exceptionFromError,
-        options.stackParser,
-        options.maxValueLength,
-        closure_1,
-        closure_0,
-        exception,
-        originalException,
-      );
-    },
-  };
-});
+}
+const _frozenDsc = "_frozenDsc";
+
+export const freezeDscOnSpan = function freezeDscOnSpan(arg0, dsc) {
+  const result = _mod12571.addNonEnumerableProperty(arg0, _frozenDsc, dsc);
+};
+export const getDynamicSamplingContextFromClient = function getDynamicSamplingContextFromClient(trace_id, getOptions) {
+  options = getOptions.getOptions();
+  const tmp2 = getOptions.getDsn() || {};
+  let DEFAULT_ENVIRONMENT = options.environment;
+  if (!DEFAULT_ENVIRONMENT) {
+    DEFAULT_ENVIRONMENT = _mod12602.DEFAULT_ENVIRONMENT;
+  }
+  const dropUndefinedKeysResult = _mod12571.dropUndefinedKeys({
+    environment: DEFAULT_ENVIRONMENT,
+    release: options.release,
+    public_key: tmp2.publicKey,
+    trace_id,
+  });
+  getOptions.emit("createDsc", dropUndefinedKeysResult);
+  return dropUndefinedKeysResult;
+};
+export const getDynamicSamplingContextFromScope = function getDynamicSamplingContextFromScope(
+  getOptions,
+  getPropagationContext,
+) {
+  const propagationContext = getPropagationContext.getPropagationContext();
+  let dsc = propagationContext.dsc;
+  if (!dsc) {
+    options = getOptions.getOptions();
+    const tmp4 = getOptions.getDsn() || {};
+    let DEFAULT_ENVIRONMENT = options.environment;
+    if (!DEFAULT_ENVIRONMENT) {
+      DEFAULT_ENVIRONMENT = _mod12602.DEFAULT_ENVIRONMENT;
+    }
+    const obj2 = {
+      environment: DEFAULT_ENVIRONMENT,
+      release: options.release,
+      public_key: tmp4.publicKey,
+      trace_id: propagationContext.traceId,
+    };
+    const dropUndefinedKeysResult = _mod12571.dropUndefinedKeys(obj2);
+    getOptions.emit("createDsc", dropUndefinedKeysResult);
+    dsc = dropUndefinedKeysResult;
+  }
+  return dsc;
+};
+export { getDynamicSamplingContextFromSpan };
+export const spanToBaggageHeader = function spanToBaggageHeader(arg0) {
+  const tmp = getDynamicSamplingContextFromSpan(arg0);
+  return BAGGAGE_HEADER_NAME.dynamicSamplingContextToSentryBaggageHeader(tmp);
+};

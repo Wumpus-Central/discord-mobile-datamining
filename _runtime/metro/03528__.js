@@ -1,11 +1,11 @@
 // _runtime/metro/03528__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wYXJ0bmVyX3BlcmtzL3hib3gvZ2FtZV9wYXNzX3Blcmtz",
+  httpServerLocation: "/assets/modules/partner_perks/xbox/partner_pass",
   scales: [1],
-  hash: "c72dfe06d6abcd4d21f5b861835c2c79",
-  name: "es-ES.messages.c72dfe06d6abcd4d21f5b861835c2c79.compiled.messages",
+  hash: "af399233cf0437cbc649d89eb97e72fd",
+  name: "XboxPartnerPass.compiled.messages",
   type: "jsona",
 });

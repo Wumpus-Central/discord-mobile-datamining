@@ -1,13 +1,13 @@
 // _runtime/metro/09972__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 80,
-  height: 64,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "5f09a79d208de30c6568041c7b77048f",
-  name: "img_search_empty_dark",
+  hash: "e482df76bca128861506eefe107fb633",
+  name: "BackspaceIcon",
   type: "png",
 });

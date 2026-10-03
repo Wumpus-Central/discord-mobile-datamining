@@ -1,39 +1,26 @@
 // _runtime/metro/06527__.js
-import _mod6479 from "06479__.js";
-import _slicedToArray from "06461__.js";
 
-require = fn;
-const noop = fn(19);
-({ useCallback: c3, useMemo: closure_4, useRef: hasOwnProperty } = noop);
-
-export const useRecyclingState = function useRecyclingState(arg0, arg1, arg2) {
-  closure_0 = arg0;
-  closure_1 = arg2;
-  let tmp = hasOwnProperty(undefined);
-  [r10015, tmp3] = _mod6479.useLayoutState(0);
-  React4(() => {
-    let tmpResult = closure_0;
-    if (typeof closure_0 === "function") {
-      tmpResult = tmp();
+export const getModalRouteKeys = (arr, arg1) => {
+  closure_0 = arg1;
+  return arr.reduce((arr, key) => {
+    options = undefined;
+    if (closure_0[key.key] != null) {
+      options = tmp.options;
     }
-    closure_2.current = tmpResult;
-    if (closure_1 != null) {
-      tmp3();
+    if (options == null) {
+      options = {};
     }
-  }, arg1);
-  const items = [tmp3];
-  const items1 = [
-    tmp.current,
-    React3((fn, arg1) => {
-      let tmp = fn;
-      if (typeof fn === "function") {
-        tmp = fn(ref.current);
-      }
-      if (tmp !== ref.current) {
-        tmp2.current = tmp;
-        arg1((arg0) => arg0 + 1, arg1);
-      }
-    }, items),
-  ];
-  return items1;
+    const presentation = options.presentation;
+    let tmp2 = arr.length && !presentation;
+    if (!tmp2) {
+      tmp2 = "modal" === presentation;
+    }
+    if (!tmp2) {
+      tmp2 = "transparentModal" === presentation;
+    }
+    if (tmp2) {
+      arr = arr.push(key.key);
+    }
+    return arr;
+  }, []);
 };

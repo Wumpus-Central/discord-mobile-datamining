@@ -1,13 +1,12 @@
 // _runtime/metro/10192__.js
-import AbstractParserWithWordBoundaryChecking from "../10095_AbstractParserWithWordBoundaryChecking.js";
-import _mod10182 from "10182__.js";
+import Filter from "../10180_Filter.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const NLTimeUnitAgoFormatParser = require;
+const ENMergeRelativeAfterDateRefiner = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,47 +25,67 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-const regExp = new RegExp("(" + _mod10182.TIME_UNITS_PATTERN + ")(?:geleden|voor|eerder)(?=(?:\\W|$))", "i");
-const regExp1 = new RegExp("(" + _mod10182.TIME_UNITS_PATTERN + ")geleden(?=(?:\\W|$))", "i");
-class NLTimeUnitAgoFormatParser {
-  constructor(arg0) {
+class ENMergeRelativeAfterDateRefiner {
+  constructor() {
     self = this;
-    tmp = c2(this, NLTimeUnitAgoFormatParser);
+    tmp = c2(this, ENMergeRelativeAfterDateRefiner);
     tmp2 = closure_4;
-    obj = closure_4(NLTimeUnitAgoFormatParser);
+    obj = closure_4(ENMergeRelativeAfterDateRefiner);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, undefined);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.strictMode = global;
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_inherits(NLTimeUnitAgoFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(ENMergeRelativeAfterDateRefiner, Filter.MergingRefiner);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return this.strictMode ? regExp1 : regExp;
+  key: "shouldMergeResults",
+  value: function shouldMergeResults(str, arg1, text) {
+    let match = str.match(/^\s*$/i);
+    if (match) {
+      let tmp4 = null != str.match(/^[+-]/i);
+      if (!tmp4) {
+        tmp4 = null != text.text.match(/^-/i);
+      }
+      match = tmp4;
+    }
+    return match;
   },
 };
 const items = [
   entry,
   {
-    key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const parseDurationResult = NLTimeUnitAgoFormatParser(10182).parseDuration(arg1[1]);
-      const ParsingComponents = NLTimeUnitAgoFormatParser(10091).ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(
-        reference.reference,
-        NLTimeUnitAgoFormatParser(10090).reverseDuration(NLTimeUnitAgoFormatParser(10182).parseDuration(arg1[1])),
+    key: "mergeResults",
+    value: function mergeResults(arg0, start, text, arg3) {
+      const parseDurationResult = ENMergeRelativeAfterDateRefiner(10160).parseDuration(text.text);
+      let reverseDurationResult = parseDurationResult;
+      if (null != str.match(/^-/i)) {
+        reverseDurationResult = ENMergeRelativeAfterDateRefiner(10163).reverseDuration(parseDurationResult);
+      }
+      const ParsingComponents = ENMergeRelativeAfterDateRefiner(10164).ParsingComponents;
+      const ReferenceWithTimezone = ENMergeRelativeAfterDateRefiner(10164).ReferenceWithTimezone;
+      start = start.start;
+      const relativeFromReference = ParsingComponents.createRelativeFromReference(
+        ReferenceWithTimezone.fromDate(start.date()),
+        reverseDurationResult,
+      );
+      ({ reference, index } = start);
+      return new ENMergeRelativeAfterDateRefiner(10164).ParsingResult(
+        reference,
+        index,
+        "" + start.text + arg0 + text.text,
+        relativeFromReference,
       );
     },
   },
 ];
 
-export default _createClass(NLTimeUnitAgoFormatParser, items);
+export default _createClass(ENMergeRelativeAfterDateRefiner, items);

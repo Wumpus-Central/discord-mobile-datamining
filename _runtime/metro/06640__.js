@@ -1,16 +1,13 @@
 // _runtime/metro/06640__.js
-import CardAnimationContext from "../06634_CardAnimationContext.js";
-import noop from "00019__.js";
+import registerAsset from "01132__.js";
 
-require = arg1;
-
-export const useCardAnimation = function useCardAnimation() {
-  const context = noop.useContext(CardAnimationContext.CardAnimationContext);
-  if (undefined === context) {
-    const _Error = Error;
-    const error = new Error("Couldn't find values for card animation. Are you inside a screen in Stack?");
-    throw error;
-  } else {
-    return context;
-  }
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native",
+  width: 24,
+  height: 24,
+  scales: [1, 2, 3],
+  hash: "6c6de524d332332b9f4c75238dadd0f8",
+  name: "ic_selection_checked_24px",
+  type: "png",
+});

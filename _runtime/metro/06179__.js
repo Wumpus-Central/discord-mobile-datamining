@@ -1,13 +1,13 @@
 // _runtime/metro/06179__.js
-import registerAsset from "01121__.js";
+import get_ActivityIndicator from "00017__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "1998c882c99c2bfa1f4c01d3c0fdc31d",
-  name: "XSmallIcon",
-  type: "png",
-});
+const NativeModules = get_ActivityIndicator.NativeModules;
+let PlatformConstants;
+if (NativeModules != null) {
+  PlatformConstants = NativeModules.PlatformConstants;
+}
+if (PlatformConstants == null) {
+  PlatformConstants = get_ActivityIndicator.Platform.constants;
+}
+
+export default PlatformConstants;

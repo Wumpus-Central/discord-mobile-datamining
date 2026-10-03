@@ -1,0 +1,767 @@
+// _runtime/00845_instrumentAnthropicAiClient.js
+import SPAN_STATUS_ERROR from "00716_SPAN_STATUS_ERROR.js";
+import captureCheckIn from "00745_captureCheckIn.js";
+import ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE from "00834_ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.js";
+import messagesFromParams from "00846_messagesFromParams.js";
+import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
+
+const require = globalThis.__r;
+
+function addPrivateRequestAttributes(setAttributes, prompt) {
+  const messagesFromParamsResult = messagesFromParams.messagesFromParams(prompt);
+  messagesFromParams.setMessagesAttribute(setAttributes, messagesFromParamsResult);
+  if ("prompt" in prompt) {
+    const obj3 = {};
+    const _JSON = JSON;
+    obj3[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_PROMPT_ATTRIBUTE] = JSON.stringify(prompt.prompt);
+    setAttributes.setAttributes(obj3);
+  }
+}
+function handleStreamingError(error, isRecording, function) {
+  const obj2 = { mechanism: null };
+  const obj3 = { handled: false, type: "auto.ai.anthropic", data: { function: _function } };
+  obj2.mechanism = obj3;
+  captureCheckIn.captureException(error, obj2);
+  if (isRecording.isRecording()) {
+    const obj5 = { code: SPAN_STATUS_ERROR.SPAN_STATUS_ERROR, message: "internal_error" };
+    isRecording.setStatus(obj5);
+    isRecording.end();
+  }
+  throw error;
+}
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+
+export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(arg0, arg1) {
+  const client = require("metro/00724__.js").getClient();
+  let sendDefaultPii;
+  if (client != null) {
+    sendDefaultPii = client.getOptions().sendDefaultPii;
+  }
+  const BooleanResult = Boolean(sendDefaultPii);
+  obj2 = { recordInputs: BooleanResult, recordOutputs: BooleanResult };
+  const merged = Object.assign(arg1);
+  _require = "";
+  const proxy = new Proxy(arg0, {
+    get(self, arg1) {
+      let methodPath = closure_2_0(closure_2_1[2]).buildMethodPath(closure_1_0, String(arg1));
+      if (typeof self[arg1] === "function") {
+        if (tmpResult.shouldInstrument(methodPath)) {
+          dependencyMap = methodPath;
+          _self = self;
+          closure_3 = closure_1_1;
+          let _Proxy2 = Proxy;
+          let obj3 = {
+            apply(arr, arg1, dependencyMap) {
+                  closure_0 = arr;
+                  let obj = { [closure_1_0(closure_1_1[1]).GEN_AI_SYSTEM_ATTRIBUTE]: "anthropic" };
+                  let tmp2 = str;
+                  let startSpanManual = dependencyMap;
+                  obj[str(dependencyMap[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = str(dependencyMap[2]).getFinalOperationName(dependencyMap);
+                  obj[str(dependencyMap[3]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.anthropic";
+                  if (dependencyMap.length > 0) {
+                    if (typeof dependencyMap[0] === "object") {
+                      if (null !== dependencyMap[0]) {
+                        const first = dependencyMap[0];
+                        let tools = first.tools;
+                        if (tools) {
+                          let _Array = Array;
+                          tools = Array.isArray(first.tools);
+                        }
+                        if (tools) {
+                          let _JSON = JSON;
+                          obj[tmp2(startSpanManual[1]).GEN_AI_REQUEST_AVAILABLE_TOOLS_ATTRIBUTE] = JSON.stringify(first.tools);
+                        }
+                        let str3 = first.model;
+                        if (str3 == null) {
+                          str3 = "unknown";
+                        }
+                        obj[tmp2(startSpanManual[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str3;
+                        if ("temperature" in first) {
+                          obj[tmp2(startSpanManual[1]).GEN_AI_REQUEST_TEMPERATURE_ATTRIBUTE] = first.temperature;
+                        }
+                        if ("top_p" in first) {
+                          obj[tmp2(startSpanManual[1]).GEN_AI_REQUEST_TOP_P_ATTRIBUTE] = first.top_p;
+                        }
+                        if ("stream" in first) {
+                          obj[tmp2(startSpanManual[1]).GEN_AI_REQUEST_STREAM_ATTRIBUTE] = first.stream;
+                        }
+                        if ("top_k" in first) {
+                          obj[tmp2(startSpanManual[1]).GEN_AI_REQUEST_TOP_K_ATTRIBUTE] = first.top_k;
+                        }
+                        if ("frequency_penalty" in first) {
+                          obj[tmp2(startSpanManual[1]).GEN_AI_REQUEST_FREQUENCY_PENALTY_ATTRIBUTE] = first.frequency_penalty;
+                        }
+                        if ("max_tokens" in first) {
+                          obj[tmp2(startSpanManual[1]).GEN_AI_REQUEST_MAX_TOKENS_ATTRIBUTE] = first.max_tokens;
+                        }
+                      }
+                      let str10 = obj[tmp2(undefined, startSpanManual[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE];
+                      if (str10 == null) {
+                        str10 = "unknown";
+                      }
+                      const finalOperationName = tmp2(startSpanManual[2]).getFinalOperationName(tmp);
+                      let first1;
+                      if (typeof dependencyMap[0] === "object") {
+                        first1 = dependencyMap[0];
+                      }
+                      _self = first1;
+                      let stream;
+                      if (first1 != null) {
+                        stream = first1.stream;
+                      }
+                      const BooleanResult = Boolean(stream);
+                      if (!BooleanResult) {
+                        if (!tmp12) {
+                          let obj3 = { name: null, op: null, attributes: null };
+                          const _HermesInternal = HermesInternal;
+                          obj3.name = "" + finalOperationName + " " + str10;
+                          const tmp2Result5 = tmp2(startSpanManual[7]);
+                          obj3.op = tmp2(startSpanManual[2]).getSpanOperation(tmp);
+                          obj3.attributes = obj;
+                          return tmp2Result5.startSpan(obj3, (setAttributes) => {
+                            if (tmp) {
+                              let obj = str(_function[4]);
+                              let tmp3 = str;
+                              const messagesFromParamsResult = str(_function[4]).messagesFromParams(_prompt);
+                              str(_function[4]).setMessagesAttribute(setAttributes, messagesFromParamsResult);
+                              if ("prompt" in _prompt) {
+                                let obj3 = {};
+                                let _JSON = JSON;
+                                obj3[tmp3(_function[1]).GEN_AI_PROMPT_ATTRIBUTE] = JSON.stringify(_prompt.prompt);
+                                setAttributes.setAttributes(obj3);
+                              }
+                              let obj2 = str(_function[4]);
+                            }
+                            return str(_function[9]).handleCallbackErrors(() => setAttributes.apply(closure_2, _function), (arg0) => {
+                              const obj2 = { mechanism: null };
+                              const obj3 = { handled: false, type: "auto.ai.anthropic", data: { function: _function } };
+                              obj2.mechanism = obj3;
+                              setAttributes(_function[5]).captureException(arg0, obj2);
+                            }, () => {
+
+                            }, (type) => {
+                              let tmp = type;
+                              if (type) {
+                                tmp = typeof type === "object";
+                              }
+                              if (tmp) {
+                                if ("type" in type) {
+                                  if ("error" === type.type) {
+                                    closure_4_0(closure_4_1[4]).handleResponseError(setAttributes, type);
+                                    const obj8 = closure_4_0(closure_4_1[4]);
+                                  }
+                                }
+                                if (recordOutputs.recordOutputs) {
+                                  (function addContentAttributes() { ... })(setAttributes, type);
+                                }
+                                let tmp3 = "id" in type;
+                                if (tmp3) {
+                                  tmp3 = "model" in type;
+                                }
+                                if (tmp3) {
+                                  ({ id: obj2[closure_4_0(undefined, closure_4_1[1]).GEN_AI_RESPONSE_ID_ATTRIBUTE], model: obj2[closure_4_0(undefined, closure_4_1[1]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] } = type);
+                                  setAttributes.setAttributes({});
+                                  if (tmp7) {
+                                    let obj4 = {};
+                                    const _Date = Date;
+                                    const date = new Date(1000 * type.created);
+                                    obj4[closure_4_0(closure_4_1[1]).ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE] = date.toISOString();
+                                    setAttributes.setAttributes(obj4);
+                                  }
+                                  if (tmp13) {
+                                    const obj5 = {};
+                                    const _Date2 = Date;
+                                    const date1 = new Date(1000 * type.created_at);
+                                    obj5[closure_4_0(closure_4_1[1]).ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE] = date1.toISOString();
+                                    setAttributes.setAttributes(obj5);
+                                  }
+                                  if (tmp19) {
+                                    const tmp4Result = closure_4_0(closure_4_1[2]);
+                                    const result = tmp4Result.setTokenUsageAttributes(setAttributes, type.usage.input_tokens, type.usage.output_tokens, type.usage.cache_creation_input_tokens, type.usage.cache_read_input_tokens);
+                                  }
+                                  let obj3 = {};
+                                  tmp13 = "created_at" in type && typeof type.created_at === "number";
+                                  tmp19 = "usage" in type && type.usage;
+                                  tmp7 = "created" in type && typeof type.created === "number";
+                                }
+                              }
+                            });
+                          });
+                        }
+                      }
+                      dependencyMap = arr;
+                      closure_4 = tmp;
+                      let recordInputs = dependencyMap;
+                      let str14 = obj[tmp2(undefined, startSpanManual[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE];
+                      if (str14 == null) {
+                        str14 = "unknown";
+                      }
+                      let obj4 = { name: null, op: null, attributes: null };
+                      const _HermesInternal2 = HermesInternal;
+                      obj4.name = "" + finalOperationName + " " + str14 + " stream-response";
+                      const tmp2Result = tmp2(startSpanManual[2]);
+                      obj4.op = tmp2(startSpanManual[2]).getSpanOperation(tmp);
+                      obj4.attributes = obj;
+                      if (BooleanResult) {
+                        if (!tmp12) {
+                          closure_0 = _self(function*(arg0) {
+                            if (c7 === 2) {
+                              c7 = 3;
+                              throw new TypeError("Generator functions may not be called on executing generators");
+                            } else if (tmp6 === 3) {
+                              if (arg0 === 1) {
+                                throw value;
+                              } else if (arg0 === 2) {
+                                const obj2 = { value, done: true };
+                                return obj2;
+                              } else {
+                                return { value: "IconComponent", done: "IconComponent" };
+                              }
+                            } else {
+                              try {
+                                c7 = 2;
+                                let tmp7 = c6;
+                                if (0 !== c6) {
+                                  if (1 === tmp7) {
+                                    c5 = 0;
+                                    tmp7 = tmp31(tmp31, closure_130_0, tmp31);
+                                  } else if (arg0 === 1) {
+                                    c7 = 3;
+                                    throw value;
+                                  } else if (arg0 === 2) {
+                                    c5 = 0;
+                                    c7 = 3;
+                                    const obj3 = { value, done: true };
+                                    return obj3;
+                                  } else {
+                                    closure_130_1 = value;
+                                    const recordOutputs = c6.recordOutputs;
+                                    c1 = recordOutputs;
+                                    if (recordOutputs == null) {
+                                      c1 = false;
+                                    }
+                                    c5 = 0;
+                                    c7 = 3;
+                                    const obj4 = { value: closure_0(closure_1[8]).instrumentAsyncIterableStream(closure_130_1, closure_130_0, c1), done: true };
+                                    return obj4;
+                                  }
+                                }
+                                if (arg0 === 1) {
+                                  c7 = 3;
+                                  throw value;
+                                } else if (arg0 === 2) {
+                                  c7 = 3;
+                                  const obj5 = { value, done: true };
+                                  return obj5;
+                                } else {
+                                  closure_2 = tmp7;
+                                  closure_130_0 = closure_0;
+                                  closure_130_1 = undefined;
+                                  c5 = 1;
+                                  recordInputs = c6.recordInputs;
+                                  if (recordInputs) {
+                                    recordInputs = c5;
+                                  }
+                                  if (recordInputs) {
+                                    tmp3(closure_0, c5);
+                                  }
+                                  c6 = 2;
+                                  c7 = 1;
+                                  const obj6 = { value: closure_0.apply(closure_2, tmp3), done: false };
+                                  return obj6;
+                                }
+                              } catch (tmp31) {
+                                if (tmp4 === c5) {
+                                  c7 = tmp2;
+                                  throw tmp31;
+                                } else {
+                                  c6 = tmp;
+                                }
+                              }
+                            }
+                          });
+                          let startSpanManualResult = tmp2(startSpanManual[7]).startSpanManual(obj4, function(arg0) {
+                            const self = this;
+                            const apply = closure_0.apply;
+                            if (typeof apply === "unknown") {
+                              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                            } else {
+                              applyArgumentsResult = apply(self, arguments);
+                            }
+                            return applyArgumentsResult;
+                          });
+                          const tmp2Result8 = tmp2(startSpanManual[7]);
+                        }
+                      }
+                      tmp2 = tmp2(startSpanManual[7]);
+                      startSpanManual = tmp2.startSpanManual;
+                      startSpanManualResult = startSpanManual(obj4, (arg0) => {
+                        try {
+                          recordInputs = recordInputs.recordInputs;
+                          if (recordInputs) {
+                            recordInputs = first1;
+                          }
+                          if (recordInputs) {
+                            dependencyMap(arg0, first1);
+                          }
+                          const applyResult = closure_1.apply(closure_2, dependencyMap);
+                          const tmp2 = recordInputs;
+                          let flag = tmp2.recordOutputs;
+                          if (flag == null) {
+                            flag = false;
+                          }
+                          return str(closure_1[8]).instrumentMessageStream(applyResult, arg0, flag);
+                        } catch (tmp13) {
+                          closure_2_4(tmp13, tmp, closure_4);
+                        }
+                      });
+                      const tmp2Result7 = tmp2(startSpanManual[2]);
+                    }
+                  }
+                  if ("models.retrieve" === dependencyMap) {
+                    str = dependencyMap[0];
+                  } else {
+                    str = "unknown";
+                  }
+                  obj[tmp2(startSpanManual[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str;
+                }
+          };
+          let proxy = new Proxy(obj, obj3);
+        }
+        return proxy;
+      }
+      if (typeof self[arg1] === "function") {
+        proxy = obj.bind(self);
+      } else {
+        proxy = obj;
+        if (obj) {
+          proxy = obj;
+          if (typeof obj === "object") {
+            dependencyMap = closure_1_1;
+            let _Proxy = Proxy;
+            let obj4 = {
+              get(self, arg1) {
+                      let methodPath = closure_2_0(closure_2_1[2]).buildMethodPath(closure_1_0, String(arg1));
+                      if (typeof self[arg1] === "function") {
+                        if (tmpResult.shouldInstrument(methodPath)) {
+                          dependencyMap = methodPath;
+                          _self = self;
+                          closure_3 = closure_1_1;
+                          let _Proxy2 = Proxy;
+                          let obj3 = {
+                            apply(arr, arg1, dependencyMap) {
+                                  closure_0 = arr;
+                                  let obj = { [closure_1_0(closure_1_1[1]).GEN_AI_SYSTEM_ATTRIBUTE]: "anthropic" };
+                                  let tmp2 = str;
+                                  let startSpanManual = dependencyMap;
+                                  obj[str(dependencyMap[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = str(dependencyMap[2]).getFinalOperationName(dependencyMap);
+                                  obj[str(dependencyMap[3]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.anthropic";
+                                  if (dependencyMap.length > 0) {
+                                    if (typeof dependencyMap[0] === "object") {
+                                      if (null !== dependencyMap[0]) {
+                                        const first = dependencyMap[0];
+                                        let tools = first.tools;
+                                        if (tools) {
+                                          let _Array = Array;
+                                          tools = Array.isArray(first.tools);
+                                        }
+                                        if (tools) {
+                                          let _JSON = JSON;
+                                          obj[tmp2(startSpanManual[1]).GEN_AI_REQUEST_AVAILABLE_TOOLS_ATTRIBUTE] = JSON.stringify(first.tools);
+                                        }
+                                        let str3 = first.model;
+                                        if (str3 == null) {
+                                          str3 = "unknown";
+                                        }
+                                        obj[tmp2(startSpanManual[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str3;
+                                        if ("temperature" in first) {
+                                          obj[tmp2(startSpanManual[1]).GEN_AI_REQUEST_TEMPERATURE_ATTRIBUTE] = first.temperature;
+                                        }
+                                        if ("top_p" in first) {
+                                          obj[tmp2(startSpanManual[1]).GEN_AI_REQUEST_TOP_P_ATTRIBUTE] = first.top_p;
+                                        }
+                                        if ("stream" in first) {
+                                          obj[tmp2(startSpanManual[1]).GEN_AI_REQUEST_STREAM_ATTRIBUTE] = first.stream;
+                                        }
+                                        if ("top_k" in first) {
+                                          obj[tmp2(startSpanManual[1]).GEN_AI_REQUEST_TOP_K_ATTRIBUTE] = first.top_k;
+                                        }
+                                        if ("frequency_penalty" in first) {
+                                          obj[tmp2(startSpanManual[1]).GEN_AI_REQUEST_FREQUENCY_PENALTY_ATTRIBUTE] = first.frequency_penalty;
+                                        }
+                                        if ("max_tokens" in first) {
+                                          obj[tmp2(startSpanManual[1]).GEN_AI_REQUEST_MAX_TOKENS_ATTRIBUTE] = first.max_tokens;
+                                        }
+                                      }
+                                      let str10 = obj[tmp2(undefined, startSpanManual[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE];
+                                      if (str10 == null) {
+                                        str10 = "unknown";
+                                      }
+                                      const finalOperationName = tmp2(startSpanManual[2]).getFinalOperationName(tmp);
+                                      let first1;
+                                      if (typeof dependencyMap[0] === "object") {
+                                        first1 = dependencyMap[0];
+                                      }
+                                      _self = first1;
+                                      let stream;
+                                      if (first1 != null) {
+                                        stream = first1.stream;
+                                      }
+                                      const BooleanResult = Boolean(stream);
+                                      if (!BooleanResult) {
+                                        if (!tmp12) {
+                                          let obj3 = { name: null, op: null, attributes: null };
+                                          const _HermesInternal = HermesInternal;
+                                          obj3.name = "" + finalOperationName + " " + str10;
+                                          const tmp2Result5 = tmp2(startSpanManual[7]);
+                                          obj3.op = tmp2(startSpanManual[2]).getSpanOperation(tmp);
+                                          obj3.attributes = obj;
+                                          return tmp2Result5.startSpan(obj3, (setAttributes) => {
+                                            if (tmp) {
+                                              let obj = str(_function[4]);
+                                              let tmp3 = str;
+                                              const messagesFromParamsResult = str(_function[4]).messagesFromParams(_prompt);
+                                              str(_function[4]).setMessagesAttribute(setAttributes, messagesFromParamsResult);
+                                              if ("prompt" in _prompt) {
+                                                let obj3 = {};
+                                                let _JSON = JSON;
+                                                obj3[tmp3(_function[1]).GEN_AI_PROMPT_ATTRIBUTE] = JSON.stringify(_prompt.prompt);
+                                                setAttributes.setAttributes(obj3);
+                                              }
+                                              let obj2 = str(_function[4]);
+                                            }
+                                            return str(_function[9]).handleCallbackErrors(() => { ... }, () => { ... }, /* F149532 */ function() { ... }, () => { ... });
+                                          });
+                                        }
+                                      }
+                                      dependencyMap = arr;
+                                      closure_4 = tmp;
+                                      let recordInputs = dependencyMap;
+                                      let str14 = obj[tmp2(undefined, startSpanManual[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE];
+                                      if (str14 == null) {
+                                        str14 = "unknown";
+                                      }
+                                      let obj4 = { name: null, op: null, attributes: null };
+                                      const _HermesInternal2 = HermesInternal;
+                                      obj4.name = "" + finalOperationName + " " + str14 + " stream-response";
+                                      const tmp2Result = tmp2(startSpanManual[2]);
+                                      obj4.op = tmp2(startSpanManual[2]).getSpanOperation(tmp);
+                                      obj4.attributes = obj;
+                                      if (BooleanResult) {
+                                        if (!tmp12) {
+                                          closure_0 = _self(function*(arg0) {
+                                            if (c7 === 2) {
+                                              c7 = 3;
+                                              throw new TypeError("Generator functions may not be called on executing generators");
+                                            } else if (tmp6 === 3) {
+                                              if (arg0 === 1) {
+                                                throw value;
+                                              } else if (arg0 === 2) {
+                                                const obj2 = { value, done: true };
+                                                return obj2;
+                                              } else {
+                                                return { value: "IconComponent", done: "IconComponent" };
+                                              }
+                                            } else {
+                                              try {
+                                                c7 = 2;
+                                                let tmp7 = c6;
+                                                if (0 !== c6) {
+                                                  if (1 === tmp7) {
+                                                    c5 = 0;
+                                                    tmp7 = tmp31(tmp31, closure_130_0, tmp31);
+                                                  } else if (arg0 === 1) {
+                                                    c7 = 3;
+                                                    throw value;
+                                                  } else if (arg0 === 2) {
+                                                    c5 = 0;
+                                                    c7 = 3;
+                                                    const obj3 = { value, done: true };
+                                                    return obj3;
+                                                  } else {
+                                                    closure_130_1 = value;
+                                                    const recordOutputs = c6.recordOutputs;
+                                                    c1 = recordOutputs;
+                                                    if (recordOutputs == null) {
+                                                      c1 = false;
+                                                    }
+                                                    c5 = 0;
+                                                    c7 = 3;
+                                                    const obj4 = { value: closure_0(closure_1[8]).instrumentAsyncIterableStream(closure_130_1, closure_130_0, c1), done: true };
+                                                    return obj4;
+                                                  }
+                                                }
+                                                if (arg0 === 1) {
+                                                  c7 = 3;
+                                                  throw value;
+                                                } else if (arg0 === 2) {
+                                                  c7 = 3;
+                                                  const obj5 = { value, done: true };
+                                                  return obj5;
+                                                } else {
+                                                  closure_2 = tmp7;
+                                                  closure_130_0 = closure_0;
+                                                  closure_130_1 = undefined;
+                                                  c5 = 1;
+                                                  recordInputs = c6.recordInputs;
+                                                  if (recordInputs) {
+                                                    recordInputs = c5;
+                                                  }
+                                                  if (recordInputs) {
+                                                    tmp3(closure_0, c5);
+                                                  }
+                                                  c6 = 2;
+                                                  c7 = 1;
+                                                  const obj6 = { value: closure_0.apply(closure_2, tmp3), done: false };
+                                                  return obj6;
+                                                }
+                                              } catch (tmp31) {
+                                                if (tmp4 === c5) {
+                                                  c7 = tmp2;
+                                                  throw tmp31;
+                                                } else {
+                                                  c6 = tmp;
+                                                }
+                                              }
+                                            }
+                                          });
+                                          let startSpanManualResult = tmp2(startSpanManual[7]).startSpanManual(obj4, function(arg0) {
+                                            const self = this;
+                                            const apply = closure_0.apply;
+                                            if (typeof apply === "unknown") {
+                                              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                                            } else {
+                                              applyArgumentsResult = apply(self, arguments);
+                                            }
+                                            return applyArgumentsResult;
+                                          });
+                                          const tmp2Result8 = tmp2(startSpanManual[7]);
+                                        }
+                                      }
+                                      tmp2 = tmp2(startSpanManual[7]);
+                                      startSpanManual = tmp2.startSpanManual;
+                                      startSpanManualResult = startSpanManual(obj4, (arg0) => {
+                                        try {
+                                          recordInputs = recordInputs.recordInputs;
+                                          if (recordInputs) {
+                                            recordInputs = first1;
+                                          }
+                                          if (recordInputs) {
+                                            dependencyMap(arg0, first1);
+                                          }
+                                          const applyResult = closure_1.apply(closure_2, dependencyMap);
+                                          const tmp2 = recordInputs;
+                                          let flag = tmp2.recordOutputs;
+                                          if (flag == null) {
+                                            flag = false;
+                                          }
+                                          return str(closure_1[8]).instrumentMessageStream(applyResult, arg0, flag);
+                                        } catch (tmp13) {
+                                          closure_2_4(tmp13, tmp, closure_4);
+                                        }
+                                      });
+                                      const tmp2Result7 = tmp2(startSpanManual[2]);
+                                    }
+                                  }
+                                  if ("models.retrieve" === dependencyMap) {
+                                    str = dependencyMap[0];
+                                  } else {
+                                    str = "unknown";
+                                  }
+                                  obj[tmp2(startSpanManual[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str;
+                                }
+                          };
+                          let proxy = new Proxy(obj, obj3);
+                        }
+                        return proxy;
+                      }
+                      if (typeof self[arg1] === "function") {
+                        proxy = obj.bind(self);
+                      } else {
+                        proxy = obj;
+                        if (obj) {
+                          proxy = obj;
+                          if (typeof obj === "object") {
+                            dependencyMap = closure_1_1;
+                            let _Proxy = Proxy;
+                            let obj4 = {
+                              get(self, arg1) {
+                                      let methodPath = closure_2_0(closure_2_1[2]).buildMethodPath(closure_1_0, String(arg1));
+                                      if (typeof self[arg1] === "function") {
+                                        if (tmpResult.shouldInstrument(methodPath)) {
+                                          dependencyMap = methodPath;
+                                          _self = self;
+                                          closure_3 = closure_1_1;
+                                          let _Proxy2 = Proxy;
+                                          let obj3 = {
+                                            apply(arr, arg1, dependencyMap) {
+                                                  closure_0 = arr;
+                                                  let obj = { [closure_1_0(closure_1_1[1]).GEN_AI_SYSTEM_ATTRIBUTE]: "anthropic" };
+                                                  let tmp2 = str;
+                                                  let startSpanManual = dependencyMap;
+                                                  obj[str(dependencyMap[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = str(dependencyMap[2]).getFinalOperationName(dependencyMap);
+                                                  obj[str(dependencyMap[3]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.anthropic";
+                                                  if (dependencyMap.length > 0) {
+                                                    if (typeof dependencyMap[0] === "object") {
+                                                      if (null !== dependencyMap[0]) {
+                                                        const first = dependencyMap[0];
+                                                        let tools = first.tools;
+                                                        if (tools) {
+                                                          let _Array = Array;
+                                                          tools = Array.isArray(first.tools);
+                                                        }
+                                                        if (tools) {
+                                                          let _JSON = JSON;
+                                                          obj[tmp2(startSpanManual[1]).GEN_AI_REQUEST_AVAILABLE_TOOLS_ATTRIBUTE] = JSON.stringify(first.tools);
+                                                        }
+                                                        let str3 = first.model;
+                                                        if (str3 == null) {
+                                                          str3 = "unknown";
+                                                        }
+                                                        obj[tmp2(startSpanManual[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str3;
+                                                        if ("temperature" in first) {
+                                                          obj[tmp2(startSpanManual[1]).GEN_AI_REQUEST_TEMPERATURE_ATTRIBUTE] = first.temperature;
+                                                        }
+                                                        if ("top_p" in first) {
+                                                          obj[tmp2(startSpanManual[1]).GEN_AI_REQUEST_TOP_P_ATTRIBUTE] = first.top_p;
+                                                        }
+                                                        if ("stream" in first) {
+                                                          obj[tmp2(startSpanManual[1]).GEN_AI_REQUEST_STREAM_ATTRIBUTE] = first.stream;
+                                                        }
+                                                        if ("top_k" in first) {
+                                                          obj[tmp2(startSpanManual[1]).GEN_AI_REQUEST_TOP_K_ATTRIBUTE] = first.top_k;
+                                                        }
+                                                        if ("frequency_penalty" in first) {
+                                                          obj[tmp2(startSpanManual[1]).GEN_AI_REQUEST_FREQUENCY_PENALTY_ATTRIBUTE] = first.frequency_penalty;
+                                                        }
+                                                        if ("max_tokens" in first) {
+                                                          obj[tmp2(startSpanManual[1]).GEN_AI_REQUEST_MAX_TOKENS_ATTRIBUTE] = first.max_tokens;
+                                                        }
+                                                      }
+                                                      let str10 = obj[tmp2(undefined, startSpanManual[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE];
+                                                      if (str10 == null) {
+                                                        str10 = "unknown";
+                                                      }
+                                                      const finalOperationName = tmp2(startSpanManual[2]).getFinalOperationName(tmp);
+                                                      let first1;
+                                                      if (typeof dependencyMap[0] === "object") {
+                                                        first1 = dependencyMap[0];
+                                                      }
+                                                      _self = first1;
+                                                      let stream;
+                                                      if (first1 != null) {
+                                                        stream = first1.stream;
+                                                      }
+                                                      const BooleanResult = Boolean(stream);
+                                                      if (!BooleanResult) {
+                                                        if (!tmp12) {
+                                                          let obj3 = { name: null, op: null, attributes: null };
+                                                          const _HermesInternal = HermesInternal;
+                                                          obj3.name = "" + finalOperationName + " " + str10;
+                                                          const tmp2Result5 = tmp2(startSpanManual[7]);
+                                                          obj3.op = tmp2(startSpanManual[2]).getSpanOperation(tmp);
+                                                          obj3.attributes = obj;
+                                                          return tmp2Result5.startSpan(obj3, () => { ... });
+                                                        }
+                                                      }
+                                                      dependencyMap = arr;
+                                                      closure_4 = tmp;
+                                                      let recordInputs = dependencyMap;
+                                                      let str14 = obj[tmp2(undefined, startSpanManual[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE];
+                                                      if (str14 == null) {
+                                                        str14 = "unknown";
+                                                      }
+                                                      let obj4 = { name: null, op: null, attributes: null };
+                                                      const _HermesInternal2 = HermesInternal;
+                                                      obj4.name = "" + finalOperationName + " " + str14 + " stream-response";
+                                                      const tmp2Result = tmp2(startSpanManual[2]);
+                                                      obj4.op = tmp2(startSpanManual[2]).getSpanOperation(tmp);
+                                                      obj4.attributes = obj;
+                                                      if (BooleanResult) {
+                                                        if (!tmp12) {
+                                                          closure_0 = _self(/* F153767 */ function() { ... });
+                                                          let startSpanManualResult = tmp2(startSpanManual[7]).startSpanManual(obj4, () => { ... });
+                                                          const tmp2Result8 = tmp2(startSpanManual[7]);
+                                                        }
+                                                      }
+                                                      tmp2 = tmp2(startSpanManual[7]);
+                                                      startSpanManual = tmp2.startSpanManual;
+                                                      startSpanManualResult = startSpanManual(obj4, () => { ... });
+                                                      const tmp2Result7 = tmp2(startSpanManual[2]);
+                                                    }
+                                                  }
+                                                  if ("models.retrieve" === dependencyMap) {
+                                                    str = dependencyMap[0];
+                                                  } else {
+                                                    str = "unknown";
+                                                  }
+                                                  obj[tmp2(startSpanManual[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str;
+                                                }
+                                          };
+                                          let proxy = new Proxy(obj, obj3);
+                                        }
+                                        return proxy;
+                                      }
+                                      if (typeof self[arg1] === "function") {
+                                        proxy = obj.bind(self);
+                                      } else {
+                                        proxy = obj;
+                                        if (obj) {
+                                          proxy = obj;
+                                          if (typeof obj === "object") {
+                                            dependencyMap = closure_1_1;
+                                            let _Proxy = Proxy;
+                                            let obj4 = {
+                                              get(self, arg1) {
+                                                      let methodPath = closure_2_0(closure_2_1[2]).buildMethodPath(closure_1_0, String(arg1));
+                                                      if (typeof self[arg1] === "function") {
+                                                        if (tmpResult.shouldInstrument(methodPath)) {
+                                                          dependencyMap = methodPath;
+                                                          _self = self;
+                                                          closure_3 = closure_1_1;
+                                                          let _Proxy2 = Proxy;
+                                                          let obj3 = { apply() { ... } };
+                                                          let proxy = new Proxy(obj, obj3);
+                                                        }
+                                                        return proxy;
+                                                      }
+                                                      if (typeof self[arg1] === "function") {
+                                                        proxy = obj.bind(self);
+                                                      } else {
+                                                        proxy = obj;
+                                                        if (obj) {
+                                                          proxy = obj;
+                                                          if (typeof obj === "object") {
+                                                            dependencyMap = closure_1_1;
+                                                            let _Proxy = Proxy;
+                                                            let obj4 = { get() { ... } };
+                                                            proxy = new Proxy(obj, obj4);
+                                                          }
+                                                        }
+                                                      }
+                                                      let obj2 = closure_2_0(closure_2_1[2]);
+                                                    }
+                                            };
+                                            proxy = new Proxy(obj, obj4);
+                                          }
+                                        }
+                                      }
+                                      let obj2 = closure_2_0(closure_2_1[2]);
+                                    }
+                            };
+                            proxy = new Proxy(obj, obj4);
+                          }
+                        }
+                      }
+                      let obj2 = closure_2_0(closure_2_1[2]);
+                    }
+            };
+            proxy = new Proxy(obj, obj4);
+          }
+        }
+      }
+      let obj2 = closure_2_0(closure_2_1[2]);
+    }
+  });
+  return proxy;
+};

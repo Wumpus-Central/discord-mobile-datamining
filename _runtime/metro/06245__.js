@@ -1,7 +1,11 @@
 // _runtime/metro/06245__.js
-import _mod19 from "00019__.js";
+const require = globalThis.__r;
 
-const context = _mod19.createContext(null);
-
-export const BottomSheetModalInternalContext = context;
-export const BottomSheetModalInternalProvider = context.Provider;
+for (const key10013 in require("06246__.js")) {
+  arg5[key10013] = require("06246__.js")[key10013];
+  continue;
+}
+for (const key10017 in require("transformLongPressProps")) {
+  arg5[key10017] = require("transformLongPressProps")[key10017];
+  continue;
+}

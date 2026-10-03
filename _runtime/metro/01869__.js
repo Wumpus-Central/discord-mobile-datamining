@@ -1,117 +1,70 @@
 // _runtime/metro/01869__.js
-import _mod17 from "00017__.js";
-import _mod19 from "00019__.js";
-import cancelAnimation from "../01638_cancelAnimation.js";
-import _mod1868 from "01868__.js";
+import _mod1835 from "01835__.js";
+import disabledDefault from "../01862_disabled.js";
+import _modDef1863 from "01863__.js";
+import noop from "00019__.js";
 
-_mod19.useCallback;
-const Platform = _mod17.Platform;
-let closure_4 = {
-  code: 'function pnpm_indexTs1(target){const{contentOffsetY,IS_FABRIC,Platform,scrollTo,scrollViewRef}=this.__closure;if(contentOffsetY&&IS_FABRIC){contentOffsetY.value=target;}else if(Platform.OS==="android"){requestAnimationFrame(function(){scrollTo(scrollViewRef,0,target,false);});}else{scrollTo(scrollViewRef,0,target,false);}}',
-};
-let closure_5 = {
-  code: "function pnpm_indexTs2(){const{extraContentPadding}=this.__closure;return extraContentPadding.value;}",
-};
-let closure_6 = {
-  code: 'function pnpm_indexTs3(current,previous){const{freeze,blankSpace,keyboardPadding,isScrollAtEnd,scroll,layout,size,inverted,keyboardLiftBehavior,shouldShiftContent,scrollToTarget}=this.__closure;if(freeze.value||previous===null){return;}const rawDelta=current-previous;if(rawDelta===0){return;}const previousTotal=Math.max(blankSpace.value,keyboardPadding.value+previous);const currentTotal=Math.max(blankSpace.value,keyboardPadding.value+current);const effectiveDelta=currentTotal-previousTotal;if(effectiveDelta===0){return;}const atEnd=isScrollAtEnd(scroll.value,layout.value.height,size.value.height,inverted);if(keyboardLiftBehavior==="persistent"&&effectiveDelta<0&&!atEnd){return;}if(!shouldShiftContent(keyboardLiftBehavior,atEnd)){return;}if(inverted){const target=Math.max(scroll.value-effectiveDelta,-currentTotal);scrollToTarget(target);}else{const maxScroll=Math.max(size.value.height-layout.value.height+currentTotal,0);const target=Math.min(scroll.value+effectiveDelta,maxScroll);scrollToTarget(target);}}',
-};
+require = fn;
+fn(19).useCallback;
+const jsx = fn(21).jsx;
 
-export const useExtraContentPadding = function useExtraContentPadding(scrollViewRef) {
-  scrollViewRef = scrollViewRef.scrollViewRef;
-  const extraContentPadding = scrollViewRef.extraContentPadding;
-  const keyboardPadding = scrollViewRef.keyboardPadding;
-  const blankSpace = scrollViewRef.blankSpace;
-  const scroll = scrollViewRef.scroll;
-  const layout = scrollViewRef.layout;
-  const size = scrollViewRef.size;
-  const contentOffsetY = scrollViewRef.contentOffsetY;
-  const inverted = scrollViewRef.inverted;
-  const keyboardLiftBehavior = scrollViewRef.keyboardLiftBehavior;
-  const freeze = scrollViewRef.freeze;
-  const fn = function u(value) {
-    closure_0 = value;
-    if (contentOffsetY) {
-      if (scrollViewRef(extraContentPadding[2]).IS_FABRIC) {
-        tmp.value = value;
-      }
+export default function _default(icon) {
+  ({ children, onPress } = icon);
+  ({ disabled, button } = icon);
+  ({ rippleRadius, style } = icon);
+  if (button === undefined) {
+    button = disabledDefault;
+  }
+  icon = icon.icon;
+  if (icon === undefined) {
+    icon = _modDef1863;
+  }
+  const toolbarContext = onPress(1868).useToolbarContext();
+  const theme = toolbarContext.theme;
+  if (disabled == null) {
+    disabled = toolbarContext.isNextDisabled;
+  }
+  const items = [onPress];
+  const obj2 = {
+    accessibilityHint: "Moves focus to the next field",
+    accessibilityLabel: "Next",
+    disabled,
+    rippleRadius,
+    style,
+    testID: null,
+    theme: null,
+    onPress: null,
+    children: null,
+  };
+  const obj = onPress(1868);
+  obj2.testID = onPress(1861).TEST_ID_KEYBOARD_TOOLBAR_NEXT;
+  obj2.theme = theme;
+  obj2.onPress = useCallback((isDefaultPrevented) => {
+    if (onPress != null) {
+      tmp(isDefaultPrevented);
     }
-    const animationFrame = requestAnimationFrame(() => {
-      cancelAnimation.scrollTo(scrollViewRef, 0, closure_0, false);
-    });
-  };
-  fn.__closure = {
-    contentOffsetY,
-    IS_FABRIC: scrollViewRef(extraContentPadding[2]).IS_FABRIC,
-    Platform: blankSpace,
-    scrollTo: scrollViewRef(extraContentPadding[3]).scrollTo,
-    scrollViewRef,
-  };
-  fn.__workletHash = 2925167321956;
-  fn.__initData = scroll;
-  const items = [scrollViewRef, contentOffsetY];
-  const tmp = keyboardPadding(fn, items);
-  closure_11 = tmp;
-  const obj = {
-    contentOffsetY,
-    IS_FABRIC: scrollViewRef(extraContentPadding[2]).IS_FABRIC,
-    Platform: blankSpace,
-    scrollTo: scrollViewRef(extraContentPadding[3]).scrollTo,
-    scrollViewRef,
-  };
-  const fn2 = function v() {
-    return extraContentPadding.value;
-  };
-  fn2.__closure = { extraContentPadding };
-  fn2.__workletHash = 6627638143453;
-  fn2.__initData = layout;
-  const fn3 = function f(arg0, arg1) {
-    if (!freeze.value) {
-      if (null !== arg1) {
-        if (0 != arg0 - arg1) {
-          const _Math3 = Math;
-          const _Math4 = Math;
-          const bound = Math.max(blankSpace.value, keyboardPadding.value + arg1);
-          const bound1 = Math.max(blankSpace.value, keyboardPadding.value + arg0);
-          const diff = bound1 - bound;
-          if (0 !== diff) {
-            const obj2 = _mod1868;
-            const isScrollAtEndResult = obj2.isScrollAtEnd(
-              scroll.value,
-              layout.value.height,
-              size.value.height,
-              inverted,
-            );
-            if (tmp14Result.shouldShiftContent(keyboardLiftBehavior, isScrollAtEndResult)) {
-              const _Math = Math;
-              if (inverted) {
-                closure_11(max(scroll.value - diff, -bound1));
-              } else {
-                const _Math2 = Math;
-                closure_11(Math.min(scroll.value + diff, max(size.value.height - layout.value.height + bound1, 0)));
-              }
-            }
-            tmp14Result = _mod1868;
-          }
-        }
-      }
+    if (!isDefaultPrevented.isDefaultPrevented()) {
+      const KeyboardController = _mod1835.KeyboardController;
+      KeyboardController.setFocusTo("next");
     }
-  };
-  let obj2 = scrollViewRef(extraContentPadding[3]);
-  fn3.__closure = {
-    freeze,
-    blankSpace,
-    keyboardPadding,
-    isScrollAtEnd: scrollViewRef(extraContentPadding[4]).isScrollAtEnd,
-    scroll,
-    layout,
-    size,
-    inverted,
-    keyboardLiftBehavior,
-    shouldShiftContent: scrollViewRef(extraContentPadding[4]).shouldShiftContent,
-    scrollToTarget: tmp,
-  };
-  fn3.__workletHash = 14660760767987;
-  fn3.__initData = size;
-  const items1 = [inverted, keyboardLiftBehavior];
-  const animatedReaction = obj2.useAnimatedReaction(fn2, fn3, items1);
-};
+  }, items);
+  if (children == null) {
+    const obj3 = { disabled, theme, type: "next" };
+    children = <icon disabled={disabled} theme={theme} type="next" />;
+  }
+  obj2.children = children;
+  return (
+    <button
+      accessibilityHint="Moves focus to the next field"
+      accessibilityLabel="Next"
+      disabled={disabled}
+      rippleRadius={rippleRadius}
+      style={style}
+      testID={null}
+      theme={null}
+      onPress={null}
+    >
+      {null}
+    </button>
+  );
+}

@@ -1,13 +1,15 @@
 // _runtime/metro/06127__.js
-import registerAsset from "01121__.js";
+import _mod19 from "00019__.js";
+import BottomSheetContext from "../06123_BottomSheetContext.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "24def842b7fc85d108b018aef0f23eb6",
-  name: "ArrowLargeLeftIcon",
-  type: "png",
-});
+const useContext = _mod19.useContext;
+
+export const useBottomSheetModalInternal = function useBottomSheetModalInternal(arg0) {
+  const tmp = useContext(BottomSheetContext.BottomSheetModalInternalContext);
+  if (true !== arg0) {
+    if (null === tmp) {
+      throw "'BottomSheetModalInternalContext' cannot be null!";
+    }
+  }
+  return tmp;
+};

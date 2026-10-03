@@ -1,60 +1,45 @@
 // _runtime/metro/04224__.js
-import _typeof_mod from "03947__.js";
-import requiredArgs_mod from "../03948_requiredArgs.js";
+import _typeof_mod from "03958__.js";
+import module_4225_mod from "04225__.js";
+import requiredArgs_mod from "../03959_requiredArgs.js";
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
-  let obj = { default: _typeof };
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  let obj2 = { default: requiredArgs };
+let module_4225 = module_4225_mod;
+if (!module_4225) {
+  const obj2 = { default: module_4225 };
   let tmp5 = obj2;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = module_4225;
 }
-requiredArgs = tmp5;
-let c2 = 86400000;
+module_4225 = tmp5;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
 
-export default function getOverlappingDaysInIntervals(arg0, arg1) {
-  let obj = arg0;
-  requiredArgs.default(2, arguments);
-  if (!arg0) {
-    obj = {};
-  }
-  let obj2 = arg1;
-  if (!arg1) {
-    obj2 = {};
-  }
-  const time = _typeof.default(obj.start).getTime();
-  const defaultResult1 = _typeof.default(obj.start);
-  const time1 = _typeof.default(obj.end).getTime();
-  const defaultResult2 = _typeof.default(obj.end);
-  let time2 = _typeof.default(obj2.start).getTime();
-  const defaultResult3 = _typeof.default(obj2.start);
-  let time3 = _typeof.default(obj2.end).getTime();
-  if (time <= time1) {
-    if (time2 <= time3) {
-      if (time < time3) {
-        if (time2 < time1) {
-          if (time3 > time1) {
-            time3 = time1;
-          }
-          if (time2 < time) {
-            time2 = time;
-          }
-          const _Math = Math;
-          return Math.ceil((time3 - time2) / c2);
-        }
-      }
-      return 0;
+export default function getDaysInYear(arg0) {
+  requiredArgs.default(1, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  if ("Invalid Date" === String(date)) {
+    return NaN;
+  } else {
+    let num = 365;
+    if (module_4225.default(defaultResult1)) {
+      num = 366;
     }
+    return num;
   }
-  const rangeError = new RangeError("Invalid interval");
-  throw rangeError;
+  date = new Date(defaultResult1);
 };
 export default exports.default;

@@ -1,13 +1,13 @@
 // _runtime/metro/05532__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "55dfae0c7ba72f2b92f72dd1258be0b7",
-  name: "VoiceWarningIcon",
+  httpServerLocation: "/assets/images/platforms",
+  width: 255,
+  height: 255,
+  scales: [1],
+  hash: "267a8dd66b567343016eb7bda7db7c01",
+  name: "img_account_sync_paypal_white",
   type: "png",
 });

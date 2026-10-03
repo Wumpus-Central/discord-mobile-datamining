@@ -1,13 +1,13 @@
 // _runtime/metro/08848__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/upsell",
-  width: 240,
-  height: 152,
+  httpServerLocation: "/assets/images/native/custom_app_icons/CircuitIcon",
+  width: 60,
+  height: 60,
   scales: [2, 3],
-  hash: "99a0c83db7ec93ecc4f9138bd68cba05",
-  name: "img_guild_cap_upsell_dark",
+  hash: "68832d737c55ed046c40e8d11571a54e",
+  name: "CircuitIcon",
   type: "png",
 });

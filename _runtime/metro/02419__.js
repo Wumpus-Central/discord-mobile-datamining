@@ -1,11 +1,11 @@
 // _runtime/metro/02419__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_space",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9ndWlsZF9yb29tcw==",
   scales: [1],
-  hash: "85499f2a375239c99bc89ee0f47c9e07",
-  name: "GuildSpace.compiled.messages",
+  hash: "59cca8dab9331e304c458b2fef06c851",
+  name: "tr.messages.59cca8dab9331e304c458b2fef06c851.compiled.messages",
   type: "jsona",
 });

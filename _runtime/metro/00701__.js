@@ -1,27 +1,46 @@
 // _runtime/metro/00701__.js
+import _mod697 from "00697__.js";
+import SDK_VERSION2 from "../00702_SDK_VERSION.js";
+
+require = arg1;
+const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const parseSampleRate = function parseSampleRate(flag) {
-  if (typeof flag === "boolean") {
-    const _Number = Number;
-    return Number(flag);
-  } else {
-    let parsed = flag;
-    if (typeof flag === "string") {
-      const _parseFloat = parseFloat;
-      parsed = parseFloat(flag);
-    }
-    let tmp;
-    if (typeof parsed === "number") {
-      const _isNaN = isNaN;
-      if (!isNaN(parsed)) {
-        if (parsed >= 0) {
-          if (parsed <= 1) {
-            tmp = parsed;
-          }
-        }
-      }
-    }
-    return tmp;
+export const getGlobalSingleton = function getGlobalSingleton(clientToLogBufferMap, fn) {
+  let GLOBAL_OBJ = arg2;
+  if (arg2 === undefined) {
+    GLOBAL_OBJ = _mod697.GLOBAL_OBJ;
   }
+  const tmp3 = GLOBAL_OBJ.__SENTRY__ || {};
+  GLOBAL_OBJ.__SENTRY__ = tmp3;
+  const tmp4 = tmp3[SDK_VERSION2.SDK_VERSION] || {};
+  tmp3[SDK_VERSION2.SDK_VERSION] = tmp4;
+  let tmp5 = tmp4[clientToLogBufferMap];
+  if (!tmp5) {
+    const tmp7 = fn();
+    tmp4[clientToLogBufferMap] = tmp7;
+    tmp5 = tmp7;
+  }
+  return tmp5;
+};
+export const getMainCarrier = function getMainCarrier() {
+  const GLOBAL_OBJ = _mod697.GLOBAL_OBJ;
+  const tmp3 = GLOBAL_OBJ.__SENTRY__ || {};
+  GLOBAL_OBJ.__SENTRY__ = tmp3;
+  tmp3.version = tmp3.version || SDK_VERSION2.SDK_VERSION;
+  const tmp4 = tmp3.version || SDK_VERSION2.SDK_VERSION;
+  tmp3[SDK_VERSION2.SDK_VERSION] = tmp3[SDK_VERSION2.SDK_VERSION] || {};
+  return _mod697.GLOBAL_OBJ;
+};
+export const getSentryCarrier = function getSentryCarrier(__SENTRY__) {
+  const tmp = __SENTRY__.__SENTRY__ || {};
+  __SENTRY__.__SENTRY__ = tmp;
+  let SDK_VERSION = tmp.version;
+  if (!SDK_VERSION) {
+    SDK_VERSION = SDK_VERSION2.SDK_VERSION;
+  }
+  tmp.version = SDK_VERSION;
+  const tmp4 = tmp[SDK_VERSION2.SDK_VERSION] || {};
+  tmp[SDK_VERSION2.SDK_VERSION] = tmp4;
+  return tmp4;
 };

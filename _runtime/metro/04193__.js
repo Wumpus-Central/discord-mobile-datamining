@@ -1,12 +1,31 @@
 // _runtime/metro/04193__.js
-import code from "02113__.js";
+import _typeof_mod from "03958__.js";
+import requiredArgs_mod from "../03959_requiredArgs.js";
 
-if (!code) {
-  const obj = { default: code };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = code;
+  tmp3 = _typeof;
 }
+_typeof = tmp3;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
+} else {
+  tmp5 = requiredArgs;
+}
+requiredArgs = tmp5;
+let c2 = 86400000;
 
-export default tmp3.default;
+export default function getUTCDayOfYear(arg0) {
+  requiredArgs.default(1, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const time = defaultResult1.getTime();
+  defaultResult1.setUTCMonth(0, 1);
+  defaultResult1.setUTCHours(0, 0, 0, 0);
+  return Math.floor((time - defaultResult1.getTime()) / c2) + 1;
+};
 export default exports.default;

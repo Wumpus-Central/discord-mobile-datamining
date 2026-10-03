@@ -1,15 +1,6 @@
 // _runtime/metro/00622__.js
+import _mod524 from "00524__.js";
+import 00612__ from "00612__.js";
 
-export default function isKeyable(str) {
-  if (typeof str !== "string") {
-    if (typeof str !== "number") {
-      if (typeof str !== "symbol") {
-        if (typeof str !== "boolean") {
-          let tmp = null === str;
-        }
-        return tmp;
-      }
-    }
-  }
-  tmp = "__proto__" !== str;
-}
+
+export default module_612(_mod524, "Map");

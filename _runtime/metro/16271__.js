@@ -1,13 +1,13 @@
 // _runtime/metro/16271__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/notifications/images",
+  httpServerLocation: "/assets/images/native/icons",
   width: 24,
   height: 24,
-  scales: [1],
-  hash: "0ca8431ba26e114a3e93aa8dc5cdf521",
-  name: "ic_bell_on",
+  scales: [2, 3],
+  hash: "a6bdad4cfb0f8a1449a3c7f935d8448d",
+  name: "ic_guild_video_24px",
   type: "png",
 });

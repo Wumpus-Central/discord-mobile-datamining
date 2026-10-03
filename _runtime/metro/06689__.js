@@ -1,13 +1,7 @@
 // _runtime/metro/06689__.js
-import registerAsset from "01121__.js";
+import _mod6691 from "06691__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "cb57655a680893ff0ad8eb9c16157cda",
-  name: "EnvelopeIcon",
-  type: "png",
-});
+const require = globalThis.__r;
+
+export const useClipboard = require("06690__.js").useClipboard;
+export default _mod6691.Clipboard;

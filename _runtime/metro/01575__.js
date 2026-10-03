@@ -1,17 +1,54 @@
 // _runtime/metro/01575__.js
-import CurrentRenderContext from "../01534_CurrentRenderContext.js";
 import noop from "00019__.js";
 
-require = arg1;
+const require = arg1;
 
-export const useCurrentRender = function useCurrentRender(arg0) {
-  ({ state, navigation } = arg0);
-  const context = noop.useContext(CurrentRenderContext.CurrentRenderContext);
-  let isFocusedResult = context;
+export const useOnGetState = function useOnGetState(getState) {
+  getState = getState.getState;
+  const getStateListeners = getState.getStateListeners;
+  let addKeyedListener;
+  let callback;
+  addKeyedListener = addKeyedListener.useContext(
+    getState(getStateListeners[1]).NavigationBuilderContext,
+  ).addKeyedListener;
+  const context = addKeyedListener.useContext(getState(getStateListeners[2]).NavigationRouteContext);
+  let str = "root";
   if (context) {
-    isFocusedResult = navigation.isFocused();
+    str = context.key;
   }
-  if (isFocusedResult) {
-    context.options = arg0.descriptors[state.routes[state.index].key].options;
-  }
+  const items = [getState, getStateListeners];
+  callback = obj.useCallback(() => {
+    const tmp = getState();
+    const routes = tmp.routes;
+    const mapped = routes.map((state) => {
+      let tmpResult;
+      if (getStateListeners[state.key] != null) {
+        tmpResult = tmp();
+      }
+      let tmp3 = state;
+      if (state.state !== tmpResult) {
+        const obj = {};
+        const merged = Object.assign(state);
+        obj.state = tmpResult;
+        tmp3 = obj;
+      }
+      return tmp3;
+    });
+    let tmp3 = tmp;
+    if (!obj.isArrayEqual(tmp.routes, mapped)) {
+      const obj2 = {};
+      let merged = Object.assign(tmp);
+      obj2.routes = mapped;
+      tmp3 = obj2;
+    }
+    return tmp3;
+  }, items);
+  const items1 = [addKeyedListener, callback, str];
+  const effect = obj.useEffect(() => {
+    let tmpResult;
+    if (addKeyedListener != null) {
+      tmpResult = tmp("getState", str, callback);
+    }
+    return tmpResult;
+  }, items1);
 };

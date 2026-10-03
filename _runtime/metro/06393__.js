@@ -1,117 +1,26 @@
 // _runtime/metro/06393__.js
-import _modDef6392 from "06392__.js";
-import _objectWithoutProperties from "00109__objectWithoutProperties.js";
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import hasOwnProperty from "00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const TouchableNativeFeedback = importDefault;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
+export const isComponentClass = (renderScrollComponent) => {
+  let BooleanResult = typeof renderScrollComponent === "function";
+  if (typeof renderScrollComponent === "function") {
+    const prototype = renderScrollComponent.prototype;
+    let isReactComponent;
+    if (prototype != null) {
+      isReactComponent = prototype.isReactComponent;
     }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-let closure_2 = ["style"];
-const Platform = fn(17).Platform;
-const jsx = fn(21).jsx;
-class TouchableNativeFeedback {
-  constructor() {
-    self = this;
-    tmp = closure_4(this, TouchableNativeFeedback);
-    tmp2 = metroRequire;
-    obj = metroRequire(TouchableNativeFeedback);
-    tmp3 = hasOwnProperty;
-    if (closure_9()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
+    BooleanResult = Boolean(isReactComponent);
   }
-}
-_inherits(TouchableNativeFeedback, fn(19).Component);
-const entry = {
-  key: "getExtraButtonProps",
-  value: function getExtraButtonProps() {
-    const obj = {};
-    let rippleRadius = this.props.background;
-    if (!rippleRadius) {
-      obj.foreground = this.props.useForeground;
-      return obj;
-    } else {
-      if ("RippleAndroid" === rippleRadius.type) {
-        ({ borderless: obj.borderless, color: obj.rippleColor } = rippleRadius);
-      } else if ("ThemeAttrAndroid" === rippleRadius.type) {
-        obj.borderless = "selectableItemBackgroundBorderless" === rippleRadius.attribute;
-      }
-      rippleRadius = rippleRadius.rippleRadius;
-      obj.rippleRadius = rippleRadius;
-    }
-  },
+  return BooleanResult;
 };
-const items = [
-  entry,
-  {
-    key: "render",
-    value: function render() {
-      const self = this;
-      const props = this.props;
-      let style = props.style;
-      if (undefined === style) {
-        style = {};
-      }
-      const obj = {};
-      const tmp = _objectWithoutProperties(props, closure_2);
-      const merged = Object.assign(tmp);
-      obj.style = style;
-      obj.extraButtonProps = self.getExtraButtonProps();
-      return jsx(TouchableNativeFeedback(6392), {});
-    },
-  },
-];
-const importDefaultResultResult = _createClass(TouchableNativeFeedback, items);
-let obj = {};
-let merged = Object.assign(_modDef6392.defaultProps);
-obj.useForeground = true;
-obj.extraButtonProps = { rippleColor: null };
-importDefaultResultResult.defaultProps = obj;
-importDefaultResultResult.SelectableBackground = (rippleRadius) => ({
-  type: "ThemeAttrAndroid",
-  attribute: "selectableItemBackground",
-  rippleRadius,
-});
-importDefaultResultResult.SelectableBackgroundBorderless = (rippleRadius) => ({
-  type: "ThemeAttrAndroid",
-  attribute: "selectableItemBackgroundBorderless",
-  rippleRadius,
-});
-importDefaultResultResult.Ripple = (color, borderless, rippleRadius) => ({
-  type: "RippleAndroid",
-  color,
-  borderless,
-  rippleRadius,
-});
-importDefaultResultResult.canUseNativeForeground = () => Platform.Version >= 23;
-
-export default importDefaultResultResult;
+export const getValidComponent = (backdropComponent1) => {
+  let tmp = backdropComponent1;
+  if (!noop.isValidElement(backdropComponent1)) {
+    let element = null;
+    if (null != backdropComponent1) {
+      element = <backdropComponent1 />;
+    }
+    tmp = element;
+  }
+  return tmp;
+};

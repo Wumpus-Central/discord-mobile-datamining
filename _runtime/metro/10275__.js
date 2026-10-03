@@ -1,14 +1,12 @@
 // _runtime/metro/10275__.js
-import repeatedTimeunitPattern from "../10088_repeatedTimeunitPattern.js";
-import AbstractParserWithWordBoundaryChecking from "../10095_AbstractParserWithWordBoundaryChecking.js";
-import _mod10276 from "10276__.js";
+import AbstractParserWithWordBoundaryChecking from "../10168_AbstractParserWithWordBoundaryChecking.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const SVWeekdayParser = require;
+const ZHHantDateParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,18 +25,12 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-const regExp = new RegExp(
-  "(?:(?:\\,|\\(|\\\uFF08)\\s*)?(?:p\u00E5\\s*?)?(?:(f\u00F6rra|senaste|n\u00E4sta|kommande)\\s*)?(" +
-    repeatedTimeunitPattern.matchAnyPattern(_mod10276.WEEKDAY_DICTIONARY) +
-    ")(?:\\s*(?:\\,|\\)|\\\uFF09))?(?:\\s*(f\u00F6rra|senaste|n\u00E4sta|kommande)\\s*vecka)?(?=\\W|$)",
-  "i",
-);
-class SVWeekdayParser {
+class ZHHantDateParser {
   constructor() {
     self = this;
-    tmp = c2(this, SVWeekdayParser);
+    tmp = c2(this, ZHHantDateParser);
     tmp2 = closure_4;
-    obj = closure_4(SVWeekdayParser);
+    obj = closure_4(ZHHantDateParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -53,10 +45,20 @@ class SVWeekdayParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(SVWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(ZHHantDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
+    const keys = Object.keys(ZHHantDateParser(10276).NUMBER);
+    const text = `(\\d{2,4}|[${obj.join("")}`;
+    const keys1 = Object.keys(ZHHantDateParser(10276).NUMBER);
+    const text1 = `${`(\\d{2,4}|[${obj.join("")}`}]{4}|[${obj2.join("")}`;
+    const keys2 = Object.keys(ZHHantDateParser(10276).NUMBER);
+    const text2 = `${tmp2}]{2})?(?:\\s*)(?:年)?(?:[\\s|,|，]*)(\\d{1,2}|[${obj3.join("")}`;
+    const keys3 = Object.keys(ZHHantDateParser(10276).NUMBER);
+    const regExp = new RegExp(
+      text2 + "]{1,2})(?:\\s*)(?:\u6708)(?:\\s*)(\\d{1,2}|[" + keys3.join("") + "]{1,2})?(?:\\s*)(?:\u65E5|\u865F)?",
+    );
     return regExp;
   },
 };
@@ -64,30 +66,47 @@ const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const formatted = arg1[2].toLowerCase();
-      let str2 = arg1[1];
-      if (!str2) {
-        str2 = arg1[3];
+    value: function innerExtract(createParsingResult, index) {
+      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
+      const parsed = parseInt(index[2]);
+      let zhStringToNumberResult = parsed;
+      if (isNaN(parsed)) {
+        zhStringToNumberResult = ZHHantDateParser(10276).zhStringToNumber(index[2]);
       }
-      if (!str2) {
-        str2 = "";
-      }
-      const str3 = str2.toLowerCase();
-      let str4 = "last";
-      if (!str3.match(/förra|senaste/)) {
-        str4 = null;
-        if (str3.match(/nästa|kommande/)) {
-          str4 = "next";
+      const start = parsingResult.start;
+      start.assign("month", zhStringToNumberResult);
+      if (index[3]) {
+        const _parseInt = parseInt;
+        const parsed1 = parseInt(index[3]);
+        const _isNaN = isNaN;
+        let zhStringToNumberResult1 = parsed1;
+        if (isNaN(parsed1)) {
+          zhStringToNumberResult1 = ZHHantDateParser(10276).zhStringToNumber(index[3]);
         }
+        const start3 = parsingResult.start;
+        start3.assign("day", zhStringToNumberResult1);
+      } else {
+        const start2 = parsingResult.start;
+        const refDate = createParsingResult.refDate;
+        start2.imply("day", refDate.getDate());
       }
-      return SVWeekdayParser(10115).createParsingComponentsAtWeekday(
-        reference.reference,
-        SVWeekdayParser(10276).WEEKDAY_DICTIONARY[formatted],
-        str4,
-      );
+      if (index[1]) {
+        const _parseInt2 = parseInt;
+        let parsed2 = parseInt(index[1]);
+        const _isNaN2 = isNaN;
+        if (isNaN(parsed2)) {
+          parsed2 = ZHHantDateParser(10276).zhStringToYear(index[1]);
+        }
+        const start5 = parsingResult.start;
+        start5.assign("year", parsed2);
+      } else {
+        const start4 = parsingResult.start;
+        const refDate2 = createParsingResult.refDate;
+        start4.imply("year", refDate2.getFullYear());
+      }
+      return parsingResult;
     },
   },
 ];
 
-export default _createClass(SVWeekdayParser, items);
+export default _createClass(ZHHantDateParser, items);

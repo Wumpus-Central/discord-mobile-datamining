@@ -1,21 +1,11 @@
 // _runtime/metro/01604__.js
-import BaseNavigationContainer from "../01488_BaseNavigationContainer.js";
-import _mod1584 from "01584__.js";
+import equalDefault from "../01566_equal.js";
 import noop from "00019__.js";
 
-require = arg1;
-
-export const useLinkTo = function useLinkTo() {
-  const context = noop.useContext(BaseNavigationContainer.NavigationContainerRefContext);
-  const buildAction = _mod1584.useBuildAction();
-  const items = [buildAction, context];
-  return noop.useCallback((arg0) => {
-    if (undefined === context) {
-      const _Error = Error;
-      const error = new Error("Couldn't find a navigation object. Is your component inside NavigationContainer?");
-      throw error;
-    } else {
-      context.dispatch(buildAction(arg0));
-    }
-  }, items);
+export const useDeepStableValue = function useDeepStableValue(current) {
+  const ref = noop.useRef(current);
+  if (!equalDefault(ref.current, current)) {
+    ref.current = current;
+  }
+  return ref.current;
 };

@@ -1,13 +1,13 @@
 // _runtime/metro/09861__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 32,
-  scales: [1, 2, 3],
-  hash: "d51dcd36c49102cc28f65e2bcdf9f203",
-  name: "ic_file_small_spreadsheet",
+  httpServerLocation: "/assets/images/native/wumpus",
+  width: 84,
+  height: 66,
+  scales: [1],
+  hash: "18d0a2a6cf6cc6fa0358c3bbfd2bce6e",
+  name: "wumpus-mario",
   type: "png",
 });

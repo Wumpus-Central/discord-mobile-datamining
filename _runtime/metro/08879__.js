@@ -1,13 +1,13 @@
 // _runtime/metro/08879__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 88,
-  height: 106,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "acbb98adccf298ebfe7faeca9c938eda",
-  name: "img_tier_0_mobile",
+  hash: "67f86c057cc3cdebb258af63ee3c92db",
+  name: "UploadIcon",
   type: "png",
 });

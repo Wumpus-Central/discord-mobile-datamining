@@ -374,7 +374,7 @@ let items = [
         null,
       ];
       obj2.children = items;
-      return closure_1_10(tmp17, obj2);
+      return v65535(tmp17, obj2);
     },
   },
   {

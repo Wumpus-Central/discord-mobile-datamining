@@ -1,13 +1,13 @@
 // _runtime/metro/08822__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/BrandInvertedIcon",
-  width: 60,
-  height: 60,
+  httpServerLocation: "/assets/images/native/premium/upsell",
+  width: 120,
+  height: 80,
   scales: [2, 3],
-  hash: "d3530007d60b5d4f6a3d08cddf26f42c",
-  name: "BrandInvertedIcon",
+  hash: "17353b23aadfbe0d3f7b9982ef6491bf",
+  name: "img_nitro_file_upload",
   type: "png",
 });

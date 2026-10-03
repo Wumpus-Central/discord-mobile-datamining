@@ -1,91 +1,223 @@
 // _runtime/metro/01799__.js
-import runWorkletOnJS from "../01645_runWorkletOnJS.js";
+import runWorkletOnJS from "../01650_runWorkletOnJS.js";
+import _mod1668 from "01668__.js";
+import runOnRuntime from "../01687_runOnRuntime.js";
+import noop from "00019__.js";
 
-const fn = function t() {
-  let obj = {
-    frameCallbackRegistry: new Map(),
-    activeFrameCallbacks: null,
-    previousFrameTimestamp: null,
-    nextCallId: 0,
-    runCallbacks: null,
-    registerFrameCallback: null,
-    unregisterFrameCallback: null,
-    manageStateFrameCallback: null,
+const require = globalThis.__r;
+
+({ useEffect: c2, useMemo: c3, useRef: closure_4 } = noop);
+function eulerToQuaternion(arg0, arg1, arg2) {
+  const cosResult = Math.cos(arg0 / 2);
+  const sinResult = Math.sin(arg0 / 2);
+  const cosResult1 = Math.cos(arg1 / 2);
+  const sinResult1 = Math.sin(arg1 / 2);
+  const cosResult2 = Math.cos(arg2 / 2);
+  const sinResult2 = Math.sin(arg2 / 2);
+  const items = [
+    sinResult * cosResult1 * cosResult2 - cosResult * sinResult1 * sinResult2,
+    cosResult * sinResult1 * cosResult2 + sinResult * cosResult1 * sinResult2,
+    cosResult * cosResult1 * sinResult2 + sinResult * sinResult1 * cosResult2,
+    cosResult * cosResult1 * cosResult2 - sinResult * sinResult1 * sinResult2,
+  ];
+  return items;
+}
+eulerToQuaternion.__closure = {};
+eulerToQuaternion.__workletHash = 14525486759705;
+eulerToQuaternion.__initData = {
+  code: "function eulerToQuaternion_Pnpm_useAnimatedSensorTs1(pitch,roll,yaw){const c1=Math.cos(pitch/2);const s1=Math.sin(pitch/2);const c2=Math.cos(roll/2);const s2=Math.sin(roll/2);const c3=Math.cos(yaw/2);const s3=Math.sin(yaw/2);return[s1*c2*c3-c1*s2*s3,c1*s2*c3+s1*c2*s3,c1*c2*s3+s1*s2*c3,c1*c2*c3-s1*s2*s3];}",
+};
+function adjustRotationToInterfaceOrientation(pitch) {
+  ({ interfaceOrientation, pitch, roll, yaw } = pitch);
+  if (interfaceOrientation === _mod1668.InterfaceOrientation.ROTATION_90) {
+    pitch.pitch = roll;
+    pitch.roll = -pitch;
+    const _Math2 = Math;
+    pitch.yaw = yaw - Math.PI / 2;
+  } else if (interfaceOrientation === _mod1668.InterfaceOrientation.ROTATION_270) {
+    pitch.pitch = -roll;
+    pitch.roll = pitch;
+    const _Math = Math;
+    pitch.yaw = yaw + Math.PI / 2;
+  } else if (interfaceOrientation === _mod1668.InterfaceOrientation.ROTATION_180) {
+    pitch.pitch = pitch.pitch * -1;
+    pitch.roll = pitch.roll * -1;
+    pitch.yaw = pitch.yaw * -1;
+  }
+  ({ pitch: pitch2, roll: roll2, yaw: yaw2 } = pitch);
+  if (typeof eulerToQuaternion === "function") {
+    const _Math3 = Math;
+    const cosResult = Math.cos(pitch2 / 2);
+    const _Math4 = Math;
+    const sinResult = Math.sin(pitch2 / 2);
+    const _Math5 = Math;
+    const cosResult1 = Math.cos(roll2 / 2);
+    const _Math6 = Math;
+    const sinResult1 = Math.sin(roll2 / 2);
+    const _Math7 = Math;
+    const cosResult2 = Math.cos(yaw2 / 2);
+    const _Math8 = Math;
+    const sinResult2 = Math.sin(yaw2 / 2);
+    const items = [
+      sinResult * cosResult1 * cosResult2 - cosResult * sinResult1 * sinResult2,
+      cosResult * sinResult1 * cosResult2 + sinResult * cosResult1 * sinResult2,
+      cosResult * cosResult1 * sinResult2 + sinResult * sinResult1 * cosResult2,
+      cosResult * cosResult1 * cosResult2 - sinResult * sinResult1 * sinResult2,
+    ];
+    [pitch.qx, pitch.qy, pitch.qz, pitch.qw] = items;
+    return pitch;
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+}
+adjustRotationToInterfaceOrientation.__closure = {
+  InterfaceOrientation: _mod1668.InterfaceOrientation,
+  eulerToQuaternion,
+};
+adjustRotationToInterfaceOrientation.__workletHash = 16635654688360;
+adjustRotationToInterfaceOrientation.__initData = {
+  code: "function adjustRotationToInterfaceOrientation_Pnpm_useAnimatedSensorTs2(data){const{InterfaceOrientation,eulerToQuaternion}=this.__closure;const{interfaceOrientation:interfaceOrientation,pitch:pitch,roll:roll,yaw:yaw}=data;if(interfaceOrientation===InterfaceOrientation.ROTATION_90){data.pitch=roll;data.roll=-pitch;data.yaw=yaw-Math.PI/2;}else if(interfaceOrientation===InterfaceOrientation.ROTATION_270){data.pitch=-roll;data.roll=pitch;data.yaw=yaw+Math.PI/2;}else if(interfaceOrientation===InterfaceOrientation.ROTATION_180){data.pitch*=-1;data.roll*=-1;data.yaw*=-1;}const q=eulerToQuaternion(data.pitch,data.roll,data.yaw);data.qx=q[0];data.qy=q[1];data.qz=q[2];data.qw=q[3];return data;}",
+};
+function adjustVectorToInterfaceOrientation(arg0) {
+  ({ interfaceOrientation, x, y } = arg0);
+  if (interfaceOrientation === _mod1668.InterfaceOrientation.ROTATION_90) {
+    arg0.x = -y;
+    arg0.y = x;
+  } else if (interfaceOrientation === _mod1668.InterfaceOrientation.ROTATION_270) {
+    arg0.x = y;
+    arg0.y = -x;
+  } else if (interfaceOrientation === _mod1668.InterfaceOrientation.ROTATION_180) {
+    arg0.x = arg0.x * -1;
+    arg0.y = arg0.y * -1;
+  }
+  return arg0;
+}
+let obj = { InterfaceOrientation: _mod1668.InterfaceOrientation, eulerToQuaternion };
+adjustVectorToInterfaceOrientation.__closure = { InterfaceOrientation: _mod1668.InterfaceOrientation };
+adjustVectorToInterfaceOrientation.__workletHash = 5352466445526;
+adjustVectorToInterfaceOrientation.__initData = {
+  code: "function adjustVectorToInterfaceOrientation_Pnpm_useAnimatedSensorTs3(data){const{InterfaceOrientation}=this.__closure;const{interfaceOrientation:interfaceOrientation,x:x,y:y}=data;if(interfaceOrientation===InterfaceOrientation.ROTATION_90){data.x=-y;data.y=x;}else if(interfaceOrientation===InterfaceOrientation.ROTATION_270){data.x=y;data.y=-x;}else if(interfaceOrientation===InterfaceOrientation.ROTATION_180){data.x*=-1;data.y*=-1;}return data;}",
+};
+let closure_8 = {
+  code: "function pnpm_useAnimatedSensorTs4(data){const{adjustToInterfaceOrientation,sensorType,SensorType,adjustRotationToInterfaceOrientation,adjustVectorToInterfaceOrientation,sensorData,callMicrotasks}=this.__closure;if(adjustToInterfaceOrientation){if(sensorType===SensorType.ROTATION){data=adjustRotationToInterfaceOrientation(data);}else{data=adjustVectorToInterfaceOrientation(data);}}sensorData.value=data;callMicrotasks();}",
+};
+
+export const useAnimatedSensor = function useAnimatedSensor(arg0, adjustToInterfaceOrientation) {
+  _require = arg0;
+  const tmp2 = closure_4(adjustToInterfaceOrientation);
+  dependencyMap = tmp2;
+  let current = tmp2.current;
+  let prop;
+  if (current != null) {
+    prop = current.adjustToInterfaceOrientation;
+  }
+  let prop1;
+  if (adjustToInterfaceOrientation != null) {
+    prop1 = adjustToInterfaceOrientation.adjustToInterfaceOrientation;
+  }
+  let tmp5 = prop !== prop1;
+  if (!tmp5) {
+    const current2 = tmp2.current;
+    let interval;
+    if (current2 != null) {
+      interval = current2.interval;
+    }
+    let interval1;
+    if (adjustToInterfaceOrientation != null) {
+      interval1 = adjustToInterfaceOrientation.interval;
+    }
+    tmp5 = interval !== interval1;
+  }
+  if (!tmp5) {
+    const current3 = tmp2.current;
+    let iosReferenceFrame;
+    if (current3 != null) {
+      iosReferenceFrame = current3.iosReferenceFrame;
+    }
+    let iosReferenceFrame1;
+    if (adjustToInterfaceOrientation != null) {
+      iosReferenceFrame1 = adjustToInterfaceOrientation.iosReferenceFrame;
+    }
+    tmp5 = iosReferenceFrame !== iosReferenceFrame1;
+  }
+  if (tmp5) {
+    let obj = {};
+    let merged = Object.assign(adjustToInterfaceOrientation);
+    tmp2.current = obj;
+  }
+  const items = [tmp2.current];
+  const tmp13 = tmpResult(() => {
+    const merged = Object.assign(ref.current);
+    return { interval: "auto", adjustToInterfaceOrientation: true, iosReferenceFrame: _mod1668.IOSReferenceFrame.Auto };
+  }, items);
+  let config = tmp13;
+  let obj2 = {
+    sensor: require("runOnRuntime").initializeSensor(arg0, tmp13),
+    unregister() {},
+    isAvailable: false,
+    config: tmp13,
   };
-  const map = new Map();
-  obj.activeFrameCallbacks = new Set();
-  obj.runCallbacks = function runCallbacks(nextCallId) {
-    const self = this;
-    closure_1 = nextCallId;
-    function loop(previousFrameTimestamp) {
-      if (timeSincePreviousFrame === self.nextCallId) {
-        if (null === self.previousFrameTimestamp) {
-          self.previousFrameTimestamp = previousFrameTimestamp;
-        }
-        timeSincePreviousFrame = previousFrameTimestamp - self.previousFrameTimestamp;
-        const item = self.activeFrameCallbacks.forEach((item) => {
-          value = self.frameCallbackRegistry.get(item);
-          const startTime = value.startTime;
-          if (null === startTime) {
-            value.startTime = previousFrameTimestamp;
-            const obj = { timestamp: previousFrameTimestamp, timeSincePreviousFrame: null, timeSinceFirstFrame: 0 };
-            value.callback(obj);
-          } else {
-            const obj2 = {
-              timestamp: previousFrameTimestamp,
-              timeSincePreviousFrame,
-              timeSinceFirstFrame: previousFrameTimestamp - startTime,
-            };
-            value.callback(obj2);
+  tmpResult = closure_4(obj2);
+  const items1 = [arg0, tmp13];
+  config(() => {
+    let obj = {
+      sensor: closure_0(ref[2]).initializeSensor(sensor, config),
+      unregister() {},
+      isAvailable: false,
+      config,
+    };
+    ref2.current = obj;
+    sensor = ref2.current.sensor;
+    const adjustToInterfaceOrientation = ref2.current.config.adjustToInterfaceOrientation;
+    const obj2 = closure_0(ref[2]);
+    const fn = function n(pitch) {
+      if (adjustToInterfaceOrientation) {
+        if (closure_0 === _mod1668.SensorType.ROTATION) {
+          adjustRotationToInterfaceOrientation(pitch);
+        } else if (typeof adjustVectorToInterfaceOrientation === "function") {
+          ({ interfaceOrientation, x, y } = pitch);
+          if (interfaceOrientation === _mod1668.InterfaceOrientation.ROTATION_90) {
+            pitch.x = -y;
+            pitch.y = x;
+          } else if (interfaceOrientation === _mod1668.InterfaceOrientation.ROTATION_270) {
+            pitch.x = y;
+            pitch.y = -x;
+          } else if (interfaceOrientation === _mod1668.InterfaceOrientation.ROTATION_180) {
+            pitch.x = pitch.x * -1;
+            pitch.y = pitch.y * -1;
           }
-          const frameCallbackRegistry = self.frameCallbackRegistry;
-        });
-        if (self.activeFrameCallbacks.size > 0) {
-          self.previousFrameTimestamp = previousFrameTimestamp;
-          const _requestAnimationFrame = requestAnimationFrame;
-          const animationFrame = requestAnimationFrame(previousFrameTimestamp);
         } else {
-          self.previousFrameTimestamp = null;
+          throw new TypeError("Trying to call a non-function");
         }
-        const activeFrameCallbacks = self.activeFrameCallbacks;
       }
+      sensor.value = pitch;
+      runWorkletOnJS.callMicrotasks();
+    };
+    const obj3 = closure_0(ref[2]);
+    fn.__closure = {
+      adjustToInterfaceOrientation,
+      sensorType: sensor,
+      SensorType: closure_0(ref[1]).SensorType,
+      adjustRotationToInterfaceOrientation,
+      adjustVectorToInterfaceOrientation,
+      sensorData: sensor,
+      callMicrotasks: closure_0(ref[3]).callMicrotasks,
+    };
+    fn.__workletHash = 6807952122364;
+    fn.__initData = __initData;
+    const registerSensorResult = obj3.registerSensor(sensor, config, fn);
+    config = registerSensorResult;
+    if (-1 !== registerSensorResult) {
+      ref2.current.unregister = () => runOnRuntime.unregisterSensor(registerSensorResult);
+      ref2.current.isAvailable = true;
+    } else {
+      ref2.current.unregister = () => {};
+      ref2.current.isAvailable = false;
     }
-    if (tmp) {
-      let _requestAnimationFrame = requestAnimationFrame;
-      let animationFrame = requestAnimationFrame(loop);
-    }
-  };
-  obj.registerFrameCallback = function registerFrameCallback(callback, arg1) {
-    const result = this.frameCallbackRegistry.set(arg1, { callback, startTime: null });
-  };
-  obj.unregisterFrameCallback = function unregisterFrameCallback(arg0) {
-    const result = this.manageStateFrameCallback(arg0, false);
-    this.frameCallbackRegistry.delete(arg0);
-  };
-  obj.manageStateFrameCallback = function manageStateFrameCallback(arg0, arg1) {
-    if (-1 !== arg0) {
-      const self = this;
-      if (arg1) {
-        self.activeFrameCallbacks.add(arg0);
-        self.runCallbacks(self.nextCallId);
-        const activeFrameCallbacks2 = self.activeFrameCallbacks;
-      } else {
-        self.frameCallbackRegistry.get(arg0).startTime = null;
-        self.activeFrameCallbacks.delete(arg0);
-        if (0 === self.activeFrameCallbacks.size) {
-          self.nextCallId = self.nextCallId + 1;
-        }
-        const activeFrameCallbacks = self.activeFrameCallbacks;
-        const frameCallbackRegistry = self.frameCallbackRegistry;
-      }
-    }
-  };
-  global._frameCallbackRegistry = obj;
+    return () => {
+      const current = ref.current;
+      current.unregister();
+    };
+  }, items1);
+  return tmpResult.current;
 };
-fn.__closure = {};
-fn.__workletHash = 12487935997347;
-fn.__initData = {
-  code: "function pnpm_FrameCallbackRegistryUITs1(){const frameCallbackRegistry={frameCallbackRegistry:new Map(),activeFrameCallbacks:new Set(),previousFrameTimestamp:null,nextCallId:0,runCallbacks:function(callId){var _this=this;const loop=function(timestamp){if(callId!==_this.nextCallId){return;}if(_this.previousFrameTimestamp===null){_this.previousFrameTimestamp=timestamp;}const delta=timestamp-_this.previousFrameTimestamp;_this.activeFrameCallbacks.forEach(function(callbackId){const callbackDetails=_this.frameCallbackRegistry.get(callbackId);const{startTime:startTime}=callbackDetails;if(startTime===null){callbackDetails.startTime=timestamp;callbackDetails.callback({timestamp:timestamp,timeSincePreviousFrame:null,timeSinceFirstFrame:0});}else{callbackDetails.callback({timestamp:timestamp,timeSincePreviousFrame:delta,timeSinceFirstFrame:timestamp-startTime});}});if(_this.activeFrameCallbacks.size>0){_this.previousFrameTimestamp=timestamp;requestAnimationFrame(loop);}else{_this.previousFrameTimestamp=null;}};if(this.activeFrameCallbacks.size===1&&callId===this.nextCallId){requestAnimationFrame(loop);}},registerFrameCallback:function(callback,callbackId){this.frameCallbackRegistry.set(callbackId,{callback:callback,startTime:null});},unregisterFrameCallback:function(callbackId){this.manageStateFrameCallback(callbackId,false);this.frameCallbackRegistry.delete(callbackId);},manageStateFrameCallback:function(callbackId,state){if(callbackId===-1){return;}if(state){this.activeFrameCallbacks.add(callbackId);this.runCallbacks(this.nextCallId);}else{const callback=this.frameCallbackRegistry.get(callbackId);callback.startTime=null;this.activeFrameCallbacks.delete(callbackId);if(this.activeFrameCallbacks.size===0){this.nextCallId+=1;}}}};global._frameCallbackRegistry=frameCallbackRegistry;}",
-};
-
-export const prepareUIRegistry = runWorkletOnJS.runOnUIImmediately(fn);

@@ -1,63 +1,50 @@
 // _runtime/metro/01919__.js
 globalThis.IntlMessageFormat.__addLocaleData({
-  locale: "uk",
+  locale: "pt",
   pluralRuleFunction(arg0, arg1) {
-    const parts = String(arg0).split(".");
-    [arr, tmp2] = parts;
-    let substr1 = Number(parts[0]) == arg0;
-    let substr = substr1;
-    if (substr1) {
-      const first = parts[0];
-      substr = first.slice(-1);
-    }
-    if (substr1) {
-      const first1 = parts[0];
-      substr1 = first1.slice(-2);
-    }
-    const substr2 = arr.slice(-1);
-    const substr3 = arr.slice(-2);
-    if (arg1) {
-      let str8 = "other";
-      if (3 == substr) {
-        str8 = "other";
-        if (13 != substr1) {
-          str8 = "few";
-        }
-      }
-      let str2 = str8;
-    } else {
-      if (!tmp2) {
-        if (1 == substr2) {
-          str2 = "one";
-        }
-      }
-      if (!tmp2) {
-        if (substr2 >= 2) {
-          if (substr2 <= 4) {
-            let str4 = "few";
-            if (substr3 >= 12) {
-              str4 = "few";
+    String(arg0);
+    let str = "other";
+    if (!arg1) {
+      let str2 = "other";
+      if (tmp2) {
+        str2 = "other";
+        if (arg0 >= 0) {
+          str2 = "other";
+          if (arg0 <= 2) {
+            str2 = "other";
+            if (2 != arg0) {
+              str2 = "one";
             }
           }
-          str2 = str4;
         }
       }
-      if (tmp2) {
-        if (!tmp2) {
-          if (substr2 >= 5) {
-            str4 = str6;
-          }
-        }
-        str6 = "other";
-        if (!tmp2) {
-          str6 = "other";
-          if (substr3 >= 11) {
-            str6 = "other";
-          }
+      str = str2;
+    }
+    return str;
+  },
+});
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "pt-AO", parentLocale: "pt-PT" });
+globalThis.IntlMessageFormat.__addLocaleData({
+  locale: "pt-PT",
+  parentLocale: "pt",
+  pluralRuleFunction(arg0, arg1) {
+    let str2 = "other";
+    if (!arg1) {
+      let str3 = "other";
+      if (1 == arg0) {
+        str3 = "other";
+        if (!str.split(".")[1]) {
+          str3 = "one";
         }
       }
-      str6 = "many";
+      str2 = str3;
     }
     return str2;
   },
 });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "pt-CV", parentLocale: "pt-PT" });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "pt-GW", parentLocale: "pt-PT" });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "pt-MO", parentLocale: "pt-PT" });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "pt-MZ", parentLocale: "pt-PT" });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "pt-ST", parentLocale: "pt-PT" });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "pt-TL", parentLocale: "pt-PT" });

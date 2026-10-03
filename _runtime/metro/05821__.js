@@ -1,13 +1,13 @@
 // _runtime/metro/05821__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
-  scales: [1],
-  hash: "58031e8cd71ba255d9d80c351eb0d4d4",
-  name: "img_account_sync_facebook_white",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "38e1b93a52067f9cce24c90cbb1af007",
+  name: "StageIcon",
   type: "png",
 });

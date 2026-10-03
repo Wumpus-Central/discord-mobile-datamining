@@ -1,199 +1,255 @@
 // _runtime/metro/07952__.js
-import emptyFunction_mod from "04692__.js";
+import _mod32 from "00032__.js";
+import _objectWithoutProperties2 from "00109__objectWithoutProperties.js";
+import _mod7954 from "07954__.js";
+import _mod7956 from "07956__.js";
+import _mod7957 from "07957__.js";
+import 07953__ from "07953__.js";
+import noop from "00019__.js";
+import get_ActivityIndicator from "00017__.js";
+import jsxProd from "../react/00021_jsxProd.js";
 
-const size = {
-  display: null,
-  width: null,
-  height: null,
-  start: null,
-  end: null,
-  top: null,
-  left: null,
-  right: null,
-  bottom: null,
-  minWidth: null,
-  maxWidth: null,
-  minHeight: null,
-  maxHeight: null,
-  margin: null,
-  marginVertical: null,
-  marginHorizontal: null,
-  marginTop: null,
-  marginBottom: null,
-  marginLeft: null,
-  marginRight: null,
-  marginStart: null,
-  marginEnd: null,
-  padding: null,
-  paddingVertical: null,
-  paddingHorizontal: null,
-  paddingTop: null,
-  paddingBottom: null,
-  paddingLeft: null,
-  paddingRight: null,
-  paddingStart: null,
-  paddingEnd: null,
-  borderWidth: null,
-  borderTopWidth: null,
-  borderStartWidth: null,
-  borderEndWidth: null,
-  borderRightWidth: null,
-  borderBottomWidth: null,
-  borderLeftWidth: null,
-  position: null,
-  flexDirection: null,
-  flexWrap: null,
-  justifyContent: null,
-  alignItems: null,
-  alignSelf: null,
-  alignContent: null,
-  overflow: null,
-  flex: null,
-  flexGrow: null,
-  flexShrink: null,
-  flexBasis: null,
-  aspectRatio: null,
-  zIndex: null,
-  direction: null,
-};
-let emptyFunction = emptyFunction_mod;
-size.display = emptyFunction.oneOf(["none", "flex"]);
-let emptyFunction = emptyFunction_mod;
-const items = [emptyFunction.number, emptyFunction.string];
-size.width = emptyFunction.oneOfType(items);
-let emptyFunction = emptyFunction_mod;
-const items1 = [emptyFunction.number, emptyFunction.string];
-size.height = emptyFunction.oneOfType(items1);
-let emptyFunction = emptyFunction_mod;
-const items2 = [emptyFunction.number, emptyFunction.string];
-size.start = emptyFunction.oneOfType(items2);
-let emptyFunction = emptyFunction_mod;
-const items3 = [emptyFunction.number, emptyFunction.string];
-size.end = emptyFunction.oneOfType(items3);
-let emptyFunction = emptyFunction_mod;
-const items4 = [emptyFunction.number, emptyFunction.string];
-size.top = emptyFunction.oneOfType(items4);
-let emptyFunction = emptyFunction_mod;
-const items5 = [emptyFunction.number, emptyFunction.string];
-size.left = emptyFunction.oneOfType(items5);
-let emptyFunction = emptyFunction_mod;
-const items6 = [emptyFunction.number, emptyFunction.string];
-size.right = emptyFunction.oneOfType(items6);
-let emptyFunction = emptyFunction_mod;
-const items7 = [emptyFunction.number, emptyFunction.string];
-size.bottom = emptyFunction.oneOfType(items7);
-let emptyFunction = emptyFunction_mod;
-const items8 = [emptyFunction.number, emptyFunction.string];
-size.minWidth = emptyFunction.oneOfType(items8);
-let emptyFunction = emptyFunction_mod;
-const items9 = [emptyFunction.number, emptyFunction.string];
-size.maxWidth = emptyFunction.oneOfType(items9);
-let emptyFunction = emptyFunction_mod;
-const items10 = [emptyFunction.number, emptyFunction.string];
-size.minHeight = emptyFunction.oneOfType(items10);
-let emptyFunction = emptyFunction_mod;
-const items11 = [emptyFunction.number, emptyFunction.string];
-size.maxHeight = emptyFunction.oneOfType(items11);
-let emptyFunction = emptyFunction_mod;
-const items12 = [emptyFunction.number, emptyFunction.string];
-size.margin = emptyFunction.oneOfType(items12);
-let emptyFunction = emptyFunction_mod;
-const items13 = [emptyFunction.number, emptyFunction.string];
-size.marginVertical = emptyFunction.oneOfType(items13);
-let emptyFunction = emptyFunction_mod;
-const items14 = [emptyFunction.number, emptyFunction.string];
-size.marginHorizontal = emptyFunction.oneOfType(items14);
-let emptyFunction = emptyFunction_mod;
-const items15 = [emptyFunction.number, emptyFunction.string];
-size.marginTop = emptyFunction.oneOfType(items15);
-let emptyFunction = emptyFunction_mod;
-const items16 = [emptyFunction.number, emptyFunction.string];
-size.marginBottom = emptyFunction.oneOfType(items16);
-let emptyFunction = emptyFunction_mod;
-const items17 = [emptyFunction.number, emptyFunction.string];
-size.marginLeft = emptyFunction.oneOfType(items17);
-let emptyFunction = emptyFunction_mod;
-const items18 = [emptyFunction.number, emptyFunction.string];
-size.marginRight = emptyFunction.oneOfType(items18);
-let emptyFunction = emptyFunction_mod;
-const items19 = [emptyFunction.number, emptyFunction.string];
-size.marginStart = emptyFunction.oneOfType(items19);
-let emptyFunction = emptyFunction_mod;
-const items20 = [emptyFunction.number, emptyFunction.string];
-size.marginEnd = emptyFunction.oneOfType(items20);
-let emptyFunction = emptyFunction_mod;
-const items21 = [emptyFunction.number, emptyFunction.string];
-size.padding = emptyFunction.oneOfType(items21);
-let emptyFunction = emptyFunction_mod;
-const items22 = [emptyFunction.number, emptyFunction.string];
-size.paddingVertical = emptyFunction.oneOfType(items22);
-let emptyFunction = emptyFunction_mod;
-const items23 = [emptyFunction.number, emptyFunction.string];
-size.paddingHorizontal = emptyFunction.oneOfType(items23);
-let emptyFunction = emptyFunction_mod;
-const items24 = [emptyFunction.number, emptyFunction.string];
-size.paddingTop = emptyFunction.oneOfType(items24);
-let emptyFunction = emptyFunction_mod;
-const items25 = [emptyFunction.number, emptyFunction.string];
-size.paddingBottom = emptyFunction.oneOfType(items25);
-let emptyFunction = emptyFunction_mod;
-const items26 = [emptyFunction.number, emptyFunction.string];
-size.paddingLeft = emptyFunction.oneOfType(items26);
-let emptyFunction = emptyFunction_mod;
-const items27 = [emptyFunction.number, emptyFunction.string];
-size.paddingRight = emptyFunction.oneOfType(items27);
-let emptyFunction = emptyFunction_mod;
-const items28 = [emptyFunction.number, emptyFunction.string];
-size.paddingStart = emptyFunction.oneOfType(items28);
-let emptyFunction = emptyFunction_mod;
-const items29 = [emptyFunction.number, emptyFunction.string];
-size.paddingEnd = emptyFunction.oneOfType(items29);
-size.borderWidth = emptyFunction.number;
-size.borderTopWidth = emptyFunction.number;
-size.borderStartWidth = emptyFunction.number;
-size.borderEndWidth = emptyFunction.number;
-size.borderRightWidth = emptyFunction.number;
-size.borderBottomWidth = emptyFunction.number;
-size.borderLeftWidth = emptyFunction.number;
-let emptyFunction = emptyFunction_mod;
-size.position = emptyFunction.oneOf(["absolute", "relative"]);
-let emptyFunction = emptyFunction_mod;
-size.flexDirection = emptyFunction.oneOf(["row", "row-reverse", "column", "column-reverse"]);
-let emptyFunction = emptyFunction_mod;
-size.flexWrap = emptyFunction.oneOf(["wrap", "nowrap", "wrap-reverse"]);
-let emptyFunction = emptyFunction_mod;
-size.justifyContent = emptyFunction.oneOf([
-  "flex-start",
-  "flex-end",
-  "center",
-  "space-between",
-  "space-around",
-  "space-evenly",
-]);
-let emptyFunction = emptyFunction_mod;
-size.alignItems = emptyFunction.oneOf(["flex-start", "flex-end", "center", "stretch", "baseline"]);
-let emptyFunction = emptyFunction_mod;
-size.alignSelf = emptyFunction.oneOf(["auto", "flex-start", "flex-end", "center", "stretch", "baseline"]);
-let emptyFunction = emptyFunction_mod;
-size.alignContent = emptyFunction.oneOf([
-  "flex-start",
-  "flex-end",
-  "center",
-  "stretch",
-  "space-between",
-  "space-around",
-]);
-let emptyFunction = emptyFunction_mod;
-size.overflow = emptyFunction.oneOf(["visible", "hidden", "scroll"]);
-size.flex = emptyFunction.number;
-size.flexGrow = emptyFunction.number;
-size.flexShrink = emptyFunction.number;
-let emptyFunction = emptyFunction_mod;
-const items30 = [emptyFunction.number, emptyFunction.string];
-size.flexBasis = emptyFunction.oneOfType(items30);
-size.aspectRatio = emptyFunction.number;
-size.zIndex = emptyFunction.number;
-let emptyFunction = emptyFunction_mod;
-size.direction = emptyFunction.oneOf(["inherit", "ltr", "rtl"]);
+const _slicedToArray = module_7953(_mod32);
+const _objectWithoutProperties = module_7953(_objectWithoutProperties2);
+if (typeof WeakMap === "function") {
+  const _WeakMap = WeakMap;
+  const weakMap = new WeakMap();
+  const _WeakMap2 = WeakMap;
+  const weakMap1 = new WeakMap();
+}
+if (!noop) {
+  const merged = Object.assign({ default: null });
+  merged[0] = noop;
+  let value = merged;
+  if (null !== noop) {
+    if (typeof noop === "object") {
+      if (!weakMap) {
+        value = merged;
+        const keys = Object.keys();
+        if (keys !== undefined) {
+          value = merged;
+          while (keys[tmp] !== undefined) {
+            let tmp20 = "default" !== tmp11;
+            if (!tmp20) {
+              if (!tmp20) {
+                continue;
+              } else {
+                let _Object = Object;
+                let ownPropertyDescriptor = defineProperty;
+                if (defineProperty) {
+                  let _Object2 = Object;
+                  ownPropertyDescriptor = Object.getOwnPropertyDescriptor(noop, tmp11);
+                }
+                if (!ownPropertyDescriptor) {
+                  merged[tmp11] = noop[tmp11];
+                  continue;
+                } else {
+                  let definePropertyResult1 = defineProperty(merged, tmp11, ownPropertyDescriptor);
+                  continue;
+                }
+                continue;
+              }
+              continue;
+            } else {
+              let hasOwnProperty = {}.hasOwnProperty;
+              let call = hasOwnProperty.call;
+              let tmp12 = typeof call === "unknown" ? hasOwnProperty(tmp11) : call(noop, tmp11);
+            }
+          }
+        }
+      } else if (weakMap.has(noop)) {
+        value = weakMap.get(noop);
+      } else {
+        let result = weakMap.set(noop, merged);
+      }
+    } else {
+      value = merged;
+    }
+  }
+} else {
+  value = noop;
+}
+const __INTERNAL_VIEW_CONFIG = module_7953(_mod7954);
+let closure_8 = ["onValueChange", "onSlidingStart", "onSlidingComplete", "onAccessibilityAction", "value", "minimumValue", "maximumValue", "step", "inverted", "tapToSeek", "lowerLimit", "upperLimit"];
 
-export default size;
+export default value.default.forwardRef(function SliderComponent(onSlidingComplete, ref) {
+  ({ onValueChange: require, onSlidingStart } = onSlidingComplete);
+  onSlidingComplete = onSlidingComplete.onSlidingComplete;
+  const onAccessibilityAction = onSlidingComplete.onAccessibilityAction;
+  let SLIDER_DEFAULT_INITIAL_VALUE = onSlidingComplete.value;
+  if (undefined === SLIDER_DEFAULT_INITIAL_VALUE) {
+    SLIDER_DEFAULT_INITIAL_VALUE = _mod7956.constants.SLIDER_DEFAULT_INITIAL_VALUE;
+  }
+  const minimumValue = onSlidingComplete.minimumValue;
+  let num = 0;
+  if (undefined !== minimumValue) {
+    num = minimumValue;
+  }
+  const maximumValue = onSlidingComplete.maximumValue;
+  let num2 = 1;
+  if (undefined !== maximumValue) {
+    num2 = maximumValue;
+  }
+  const step = onSlidingComplete.step;
+  let num3 = 0;
+  if (undefined !== step) {
+    num3 = step;
+  }
+  const inverted = onSlidingComplete.inverted;
+  const tapToSeek = onSlidingComplete.tapToSeek;
+  let lowerLimit = onSlidingComplete.lowerLimit;
+  if (undefined === lowerLimit) {
+    const Platform = get_ActivityIndicator.Platform;
+    const obj = { web: num, default: _mod7956.constants.LIMIT_MIN_VALUE };
+    lowerLimit = Platform.select(obj);
+  }
+  let upperLimit = onSlidingComplete.upperLimit;
+  if (undefined === upperLimit) {
+    const Platform2 = get_ActivityIndicator.Platform;
+    const obj2 = { web: num2, default: _mod7956.constants.LIMIT_MAX_VALUE };
+    upperLimit = Platform2.select(obj2);
+  }
+  const defaultResult = _objectWithoutProperties.default(onSlidingComplete, closure_8);
+  let SLIDER_DEFAULT_INITIAL_VALUE2 = num;
+  if (null != SLIDER_DEFAULT_INITIAL_VALUE) {
+    SLIDER_DEFAULT_INITIAL_VALUE2 = SLIDER_DEFAULT_INITIAL_VALUE;
+  }
+  if (null == SLIDER_DEFAULT_INITIAL_VALUE2) {
+    SLIDER_DEFAULT_INITIAL_VALUE2 = _mod7956.constants.SLIDER_DEFAULT_INITIAL_VALUE;
+  }
+  [tmp15, jsxProd] = _slicedToArray.default(value.useState(SLIDER_DEFAULT_INITIAL_VALUE2), 2);
+  const defaultResult1 = _slicedToArray.default(value.useState(SLIDER_DEFAULT_INITIAL_VALUE2), 2);
+  const tmp4 = undefined !== tapToSeek && tapToSeek;
+  [tmp17, closure_8] = _slicedToArray.default(value.useState(0), 2);
+  let DEFAULT_STEP_RESOLUTION = num3;
+  if (!num3) {
+    DEFAULT_STEP_RESOLUTION = _mod7956.constants.DEFAULT_STEP_RESOLUTION;
+  }
+  let result = (num2 - num) / DEFAULT_STEP_RESOLUTION;
+  let tmp21 = num3;
+  if (!num3) {
+    tmp21 = result;
+  }
+  result = tmp21;
+  if (num3) {
+    DEFAULT_STEP_RESOLUTION = result;
+  }
+  const defaultResult2 = _slicedToArray.default(value.useState(0), 2);
+  const obj4 = { length: DEFAULT_STEP_RESOLUTION + 1 };
+  if ("ios" === get_ActivityIndicator.Platform.OS) {
+    let defaultSlider = _mod7957.styles.defaultSlideriOS;
+    let tmp24 = require;
+  } else {
+    tmp24 = require;
+    defaultSlider = _mod7957.styles.defaultSlider;
+  }
+  const items = [defaultSlider, defaultResult.style];
+  if (typeof defaultResult.disabled === "boolean") {
+    let disabled = defaultResult.disabled;
+  } else {
+    const accessibilityState2 = defaultResult.accessibilityState;
+    let disabled1;
+    if (null != accessibilityState2) {
+      disabled1 = accessibilityState2.disabled;
+    }
+    disabled = true === disabled1;
+  }
+  if (typeof defaultResult.disabled === "boolean") {
+    const _Object = Object;
+    const obj5 = { disabled: defaultResult.disabled };
+    let accessibilityState = Object.assign({}, defaultResult.accessibilityState, obj5);
+  } else {
+    accessibilityState = defaultResult.accessibilityState;
+  }
+  let fn = null;
+  if (onSlidingStart) {
+    fn = (nativeEvent) => {
+      onSlidingStart(nativeEvent.nativeEvent.value);
+    };
+  }
+  let fn2 = null;
+  if (onSlidingComplete) {
+    fn2 = (nativeEvent) => {
+      onSlidingComplete(nativeEvent.nativeEvent.value);
+    };
+  }
+  let fn3 = null;
+  if (onAccessibilityAction) {
+    fn3 = (arg0) => {
+      onAccessibilityAction(arg0);
+    };
+  }
+  let tmp29;
+  if (!Number.isNaN(SLIDER_DEFAULT_INITIAL_VALUE)) {
+    if (SLIDER_DEFAULT_INITIAL_VALUE) {
+      tmp29 = SLIDER_DEFAULT_INITIAL_VALUE;
+    }
+  }
+  const items1 = [lowerLimit, upperLimit];
+  const effect = value.useEffect(() => {
+    if (lowerLimit >= upperLimit) {
+      const _console = console;
+      console.warn("Invalid configuration: lower limit is supposed to be smaller than upper limit");
+    }
+  }, items1);
+  const obj7 = {
+    onLayout(nativeEvent) {
+      closure_1_8(nativeEvent.nativeEvent.layout.width);
+    },
+    style: null,
+    children: null
+  };
+  const items2 = [items, { justifyContent: "center" }];
+  obj7.style = items2;
+  if (defaultResult.StepMarker) {
+    const obj9 = { options: arr, sliderWidth: tmp17, currentValue: tmp15, renderStepNumber: null, thumbImage: null, StepMarker: null, isLTR: null };
+    ({ renderStepNumber: obj8.renderStepNumber, thumbImage: obj8.thumbImage, StepMarker: obj8.StepMarker } = defaultResult);
+    obj9.isLTR = tmp3;
+    let jsxResult = jsxProd.jsx(tmp24(7958).StepsIndicator, { options: arr, sliderWidth: tmp17, currentValue: tmp15, renderStepNumber: null, thumbImage: null, StepMarker: null, isLTR: null });
+  } else {
+    jsxResult = null;
+  }
+  const items3 = [jsxResult, ];
+  const obj15 = { minimumValue: num, maximumValue: num2, step: num3, inverted: undefined !== inverted && inverted, tapToSeek: tmp4, value: tmp29, lowerLimit, upperLimit, accessibilityState, thumbImage: null, ref: null, style: null, onChange: null, onRNCSliderSlidingStart: null, onRNCSliderSlidingComplete: null, onRNCSliderValueChange: null, disabled: null, onStartShouldSetResponder: null, onResponderTerminationRequest: null, onRNCSliderAccessibilityAction: null, thumbTintColor: null };
+  if ("web" === get_ActivityIndicator.Platform.OS) {
+    let thumbImage = defaultResult.thumbImage;
+  } else if (!defaultResult.StepMarker) {
+    if (defaultResult.thumbImage) {
+      const Image = get_ActivityIndicator.Image;
+      thumbImage = Image.resolveAssetSource(defaultResult.thumbImage);
+    }
+  }
+  function onValueChangeEvent(nativeEvent) {
+    if (require) {
+      tmp(nativeEvent.nativeEvent.value);
+    }
+    jsxProd(nativeEvent.nativeEvent.value);
+  }
+  obj15.thumbImage = thumbImage;
+  obj15.ref = ref;
+  const items4 = [{ zIndex: 1, width: tmp17 }, defaultSlider, { alignContent: "center", alignItems: "center" }];
+  obj15.style = items4;
+  obj15.onChange = onValueChangeEvent;
+  obj15.onRNCSliderSlidingStart = fn;
+  obj15.onRNCSliderSlidingComplete = fn2;
+  obj15.onRNCSliderValueChange = onValueChangeEvent;
+  obj15.disabled = disabled;
+  obj15.onStartShouldSetResponder = function onStartShouldSetResponder() {
+    return true;
+  };
+  obj15.onResponderTerminationRequest = function onResponderTerminationRequest() {
+    return false;
+  };
+  obj15.onRNCSliderAccessibilityAction = fn3;
+  if (!defaultResult.thumbImage) {
+    let str = defaultResult.thumbTintColor;
+  } else {
+    str = "transparent";
+  }
+  obj15.thumbTintColor = str;
+  items3[1] = <__INTERNAL_VIEW_CONFIG.default {...Object.assign({}, defaultResult, obj15)} />;
+  obj7.children = items3;
+  return <get ActivityIndicator.View onLayout={function onLayout(nativeEvent) {
+    closure_1_8(nativeEvent.nativeEvent.layout.width);
+  }} style={null}>{null}</get ActivityIndicator.View>;
+});

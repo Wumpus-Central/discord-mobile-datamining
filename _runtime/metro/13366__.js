@@ -1,13 +1,13 @@
 // _runtime/metro/13366__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
-  width: 215,
-  height: 128,
+  httpServerLocation: "/assets/images/native/premium/illustrations",
+  width: 250,
+  height: 125,
   scales: [2, 3],
-  hash: "91b8f5f85a023591658822c0d3091e54",
-  name: "guild_subscription_removal_darker",
+  hash: "055ef15e97264c0633986165b3aae3ac",
+  name: "img_outbound_promotion_redemption",
   type: "png",
 });

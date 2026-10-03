@@ -1,12 +1,21 @@
 // _runtime/metro/03969__.js
-import 02116__ from "02116__.js";
+let closure_0 = ["ned\u011Bli", "pond\u011Bl\u00ED", "\u00FAter\u00FD", "st\u0159edu", "\u010Dtvrtek", "p\u00E1tek", "sobotu"];
+let closure_1 = {
+  lastWeek: "'posledn\u00ED' eeee 've' p",
+  yesterday: "'v\u010Dera v' p",
+  today: "'dnes v' p",
+  tomorrow: "'z\u00EDtra v' p",
+  nextWeek(arg0) {
+    return "'v " + closure_0[arg0.getUTCDay(arg0)] + " o' p";
+  },
+  other: "P"
+};
 
-if (!module_2116) {
-  const obj2 = { default: module_2116 };
-  let obj = obj2;
-} else {
-  obj = module_2116;
-}
-
-export default { date: obj.default({ formats: { full: "EEEE, do MMMM y", long: "do MMMM y", medium: "do MMM y", short: "dd.MM.y" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "HH:mm:ss zzzz", long: "HH:mm:ss z", medium: "HH:mm:ss", short: "HH:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} 'um' {{time}}", long: "{{date}} 'um' {{time}}", medium: "{{date}} {{time}}", short: "{{date}} {{time}}" }, defaultWidth: "full" }) };
+export default function formatRelative(arg0, arg1) {
+  let tmpResult = tmp;
+  if (typeof closure_1[arg0] === "function") {
+    tmpResult = tmp(arg1);
+  }
+  return tmpResult;
+};
 export default exports.default;

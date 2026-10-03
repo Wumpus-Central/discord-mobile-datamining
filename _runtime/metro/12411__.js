@@ -1,13 +1,13 @@
 // _runtime/metro/12411__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/contact_sync/native/images",
-  width: 156.5,
-  height: 118,
+  httpServerLocation: "/assets/modules/hub/native/images",
+  width: 120,
+  height: 80,
   scales: [2, 3],
-  hash: "273d7cc721dbd2991c78c1e8d926e220",
-  name: "empty-suggestions-header",
+  hash: "8a1b4cbcf69c94f39bb256787c4e1df8",
+  name: "search_empty_state",
   type: "png",
 });

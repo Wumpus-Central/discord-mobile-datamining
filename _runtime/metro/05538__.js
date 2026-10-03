@@ -1,13 +1,13 @@
 // _runtime/metro/05538__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "ed1b3f98404fd7110fcc027f7d70e0e9",
-  name: "AnnouncementsSpoilerIcon",
-  type: "png",
+  httpServerLocation: "/assets/images/platforms",
+  width: 255,
+  height: 255,
+  scales: [1],
+  hash: "8d6755adef39a79b94cc758161d8de0c",
+  name: "img_account_sync_ebay_white",
+  type: "svg",
 });

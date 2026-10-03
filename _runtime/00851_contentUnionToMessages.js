@@ -1,0 +1,58 @@
+// _runtime/00851_contentUnionToMessages.js
+import CHATS_CREATE_METHOD from "00850_CHATS_CREATE_METHOD.js";
+
+require = arg1;
+const dependencyMap = arg6;
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+function contentUnionToMessages(contents) {
+  let str = user;
+  if (user === undefined) {
+    str = "user";
+  }
+  if (typeof contents === "string") {
+    const obj2 = { role: str, content: contents };
+    const items = [obj2];
+    let flatMapResult = items;
+  } else {
+    const _Array = Array;
+    if (Array.isArray(contents)) {
+      flatMapResult = contents.flatMap((item) => contentUnionToMessages(item, str));
+    } else {
+      if (typeof contents === "object") {
+        if (contents) {
+          if (!("role" in contents)) {
+            if ("parts" in contents) {
+              const obj3 = {};
+              const merged = Object.assign(contents);
+              obj3.role = str;
+              const items1 = [obj3];
+              let items2 = items1;
+            } else {
+              const obj = { role: str, content: contents };
+              items2 = [obj];
+            }
+          }
+          const items3 = [contents];
+          items2 = items3;
+        }
+      }
+      flatMapResult = [];
+    }
+  }
+  return flatMapResult;
+}
+
+export { contentUnionToMessages };
+export const isStreamingMethod = function isStreamingMethod(arr) {
+  return arr.includes("Stream");
+};
+export const shouldInstrument = function shouldInstrument(str) {
+  const GOOGLE_GENAI_INSTRUMENTED_METHODS = CHATS_CREATE_METHOD.GOOGLE_GENAI_INSTRUMENTED_METHODS;
+  if (GOOGLE_GENAI_INSTRUMENTED_METHODS.includes(str)) {
+    return true;
+  } else {
+    const parts = str.split(".");
+    const GOOGLE_GENAI_INSTRUMENTED_METHODS2 = CHATS_CREATE_METHOD.GOOGLE_GENAI_INSTRUMENTED_METHODS;
+    return GOOGLE_GENAI_INSTRUMENTED_METHODS2.includes(parts.pop());
+  }
+};

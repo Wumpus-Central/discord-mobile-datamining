@@ -1,13 +1,23 @@
 // _runtime/metro/06222__.js
-import registerAsset from "01121__.js";
+import ComposedGestureName from "../06199_ComposedGestureName.js";
+import DEFAULT_PROPS_TRANSFORMER from "../06208_DEFAULT_PROPS_TRANSFORMER.js";
+import _mod6223 from "06223__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "737159bf8222c1bab03c6bbf25897f2f",
-  name: "CircleXIcon-primary",
-  type: "png",
-});
+require = arg1;
+const dependencyMap = arg6;
+const items = [
+  ["maxDistance", "maxDist"],
+  ["maxDuration", "maxDurationMs"],
+  ["maxDelay", "maxDelayMs"],
+];
+const map = new Map(items);
+let closure_3 = {};
+
+export const useTapGesture = function useTapGesture() {
+  let tmp = cResult;
+  if (cResult === undefined) {
+    tmp = closure_3;
+  }
+  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp, map);
+  return _mod6223.useGesture(ComposedGestureName.SingleGestureName.Tap, clonedAndRemappedConfig);
+};

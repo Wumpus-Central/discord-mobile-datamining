@@ -1,15 +1,13 @@
 // _runtime/metro/15659__.js
-import _mod637 from "00637__.js";
-import _mod654 from "00654__.js";
-import noop_mod from "15660__.js";
+import registerAsset from "01132__.js";
 
-if (_mod637) {
-  const _module = _mod654;
-  const items = [, -0];
-  const tmp5 = new _mod637(items);
-  if (1 / _module(tmp5)[1] === Infinity) {
-    let noop = (arg0) => new _mod637(arg0);
-  }
-  module.exports = noop;
-}
-let noop = noop_mod;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "a252d183eacce43fd0ee5d8aedb6e162",
+  name: "ic_download_24px",
+  type: "png",
+});

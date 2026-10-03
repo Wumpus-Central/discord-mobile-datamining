@@ -1,13 +1,13 @@
 // _runtime/metro/08365__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "80a1b67e775ddb8de80fde27e63a5302",
-  name: "CirclePlayIcon-secondary",
+  httpServerLocation: "/assets/modules/guilds_bar/native/images",
+  width: 59,
+  height: 55,
+  scales: [3],
+  hash: "31b62f25cfc0f3a2d3cb5b6aaaef4788",
+  name: "wumpus_wave",
   type: "png",
 });

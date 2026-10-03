@@ -1,5 +1,5 @@
 // _runtime/metro/15555__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "5ec77c8acc74b99b6106b4203580cb98",
-  name: "BugIcon",
+  hash: "04c46d63a9ed0af066e3c9c84ab9d498",
+  name: "ArrowLargeRightIcon",
   type: "png",
 });

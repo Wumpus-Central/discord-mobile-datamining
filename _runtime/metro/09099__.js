@@ -1,13 +1,13 @@
 // _runtime/metro/09099__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
+  width: 300,
+  height: 120,
   scales: [2, 3],
-  hash: "fbf405dd501ff5f4ce99f5ceed43f6b1",
-  name: "ic_headset_deafened_24px",
+  hash: "a5f6ed280bfa7452913e665fb649bb9c",
+  name: "img_stream_ended_darker",
   type: "png",
 });

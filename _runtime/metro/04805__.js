@@ -1,13 +1,13 @@
 // _runtime/metro/04805__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "d43523873b246ea97ff723dd8970498f",
-  name: "ClockIcon",
+  httpServerLocation: "/assets/images/native/icons",
+  width: 16,
+  height: 16,
+  scales: [1, 2, 3],
+  hash: "cda3a003be131c8b7dcff249dd205483",
+  name: "Check",
   type: "png",
 });

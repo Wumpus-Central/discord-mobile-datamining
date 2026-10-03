@@ -1,13 +1,13 @@
 // _runtime/metro/05534__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "cb3e9c62b8b2529f17e6e1b9b76c6ce0",
-  name: "StageLockIcon",
-  type: "png",
+  httpServerLocation: "/assets/images/platforms",
+  width: 255,
+  height: 255,
+  scales: [1],
+  hash: "6cc805e0c42759b2e2dd9cbde8874a15",
+  name: "img_account_sync_paypal_white",
+  type: "svg",
 });

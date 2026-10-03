@@ -1,13 +1,13 @@
 // _runtime/metro/05547__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "e0c0be280ef4e57b36ea99cdd95bd9e8",
-  name: "AppsSpoilerIcon",
+  httpServerLocation: "/assets/images/platforms",
+  width: 255,
+  height: 255,
+  scales: [1],
+  hash: "c7326c633c855d160a4c15850754cc11",
+  name: "img_account_sync_mastodon_light_and_dark",
   type: "png",
 });

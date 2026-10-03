@@ -1,4 +1,16 @@
 // _runtime/metro/04924__.js
-import _mod547 from "00547__.js";
+import _mod4925 from "04925__.js";
 
-export default _mod547(Object.getPrototypeOf, Object);
+export default function toInteger(arg0) {
+  const tmp = _mod4925(arg0);
+  const result = tmp % 1;
+  let num = 0;
+  if (tmp == tmp) {
+    let diff = tmp;
+    if (result) {
+      diff = tmp - result;
+    }
+    num = diff;
+  }
+  return num;
+}

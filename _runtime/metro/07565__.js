@@ -1,13 +1,41 @@
 // _runtime/metro/07565__.js
-import registerAsset from "01121__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/media_channel/native/images",
-  width: 49,
-  height: 50,
-  scales: [2, 3],
-  hash: "83d9ad6473cb40e1d6825c7dbdb7f70f",
-  name: "ic_media_post_share_prompt",
-  type: "png",
-});
+export const getModalRouteKeys = (arr, arg1) => {
+  closure_0 = arg1;
+  return arr.reduce((arr, key) => {
+    options = undefined;
+    if (closure_0[key.key] != null) {
+      options = tmp.options;
+    }
+    if (options == null) {
+      options = {};
+    }
+    const presentation = options.presentation;
+    let tmp2 = arr.length && !presentation;
+    if (!tmp2) {
+      tmp2 = "modal" === presentation;
+    }
+    if (!tmp2) {
+      tmp2 = "transparentModal" === presentation;
+    }
+    if (!tmp2) {
+      tmp2 = "containedModal" === presentation;
+    }
+    if (!tmp2) {
+      tmp2 = "containedTransparentModal" === presentation;
+    }
+    if (!tmp2) {
+      tmp2 = "fullScreenModal" === presentation;
+    }
+    if (!tmp2) {
+      tmp2 = "formSheet" === presentation;
+    }
+    if (!tmp2) {
+      tmp2 = "pageSheet" === presentation;
+    }
+    if (tmp2) {
+      arr = arr.push(key.key);
+    }
+    return arr;
+  }, []);
+};

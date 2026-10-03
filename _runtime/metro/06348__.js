@@ -1,32 +1,29 @@
 // _runtime/metro/06348__.js
-import ComposedGestureName from "../06318_ComposedGestureName.js";
-import DEFAULT_PROPS_TRANSFORMER from "../06327_DEFAULT_PROPS_TRANSFORMER.js";
-import _mod6342 from "06342__.js";
+import _mod6349 from "06349__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-function transformLongPressProps(shouldCancelWhenOutside) {
-  if (undefined === shouldCancelWhenOutside.shouldCancelWhenOutside) {
-    shouldCancelWhenOutside.shouldCancelWhenOutside = true;
+export default function _objectWithoutProperties(arg0, arr) {
+  if (null == arg0) {
+    return {};
+  } else {
+    const tmp8 = _mod6349(arg0, arr);
+    const _Object2 = Object;
+    if (Object.getOwnPropertySymbols) {
+      const _Object = Object;
+      const ownPropertySymbols = Object.getOwnPropertySymbols(arg0);
+      let num = 0;
+      if (0 < ownPropertySymbols.length) {
+        const tmp2 = -1 === arr.indexOf(ownPropertySymbols[num]);
+        while (!tmp2) {
+          if (tmp2) {
+            tmp8[tmp] = arg0[tmp];
+          }
+          num = num + 1;
+        }
+        const propertyIsEnumerable = {}.propertyIsEnumerable;
+        const call = propertyIsEnumerable.call;
+        typeof call === "unknown" ? propertyIsEnumerable(ownPropertySymbols[num]) : call(arg0, ownPropertySymbols[num]);
+      }
+    }
+    return tmp8;
   }
-  return shouldCancelWhenOutside;
 }
-const items = [
-  ["minDuration", "minDurationMs"],
-  ["maxDistance", "maxDist"],
-];
-const map = new Map(items);
-let closure_4 = {};
-
-export const useLongPressGesture = function useLongPressGesture() {
-  let tmp = gestureHandlerProps;
-  if (gestureHandlerProps === undefined) {
-    tmp = closure_4;
-  }
-  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(
-    tmp,
-    map,
-    transformLongPressProps,
-  );
-  return _mod6342.useGesture(ComposedGestureName.SingleGestureName.LongPress, clonedAndRemappedConfig);
-};

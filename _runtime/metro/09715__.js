@@ -1,13 +1,13 @@
 // _runtime/metro/09715__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/application_streaming",
-  width: 300,
-  height: 120,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "af3947e9ef22aa54f0b32942d9a564e5",
-  name: "img_preview_not_available_dark",
+  hash: "97b88511d0fe85beb9ea20d66572b94a",
+  name: "GroupPlusIcon",
   type: "png",
 });

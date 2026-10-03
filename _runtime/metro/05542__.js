@@ -1,13 +1,13 @@
 // _runtime/metro/05542__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "50398ad483a7c69d1d35b3cb9c9b7bde",
-  name: "ForumSpoilerIcon",
-  type: "png",
+  httpServerLocation: "/assets/images/platforms",
+  width: 255,
+  height: 255,
+  scales: [1],
+  hash: "659ba58a5945e0a8efee29d8d7d906ca",
+  name: "img_account_sync_tiktok_dark",
+  type: "svg",
 });

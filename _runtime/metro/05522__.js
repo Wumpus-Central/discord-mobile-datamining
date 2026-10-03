@@ -1,13 +1,13 @@
 // _runtime/metro/05522__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  httpServerLocation: "/assets/images/platforms",
   width: 24,
   height: 24,
-  scales: [2, 3],
-  hash: "8aacc7898585bec38aca6cf682c01533",
-  name: "FolderIcon",
-  type: "png",
+  scales: [1],
+  hash: "8ce2f7584220a9c90fe76fd89217537a",
+  name: "img_account_sync_riot_light_and_dark",
+  type: "svg",
 });

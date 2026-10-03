@@ -1,13 +1,13 @@
 // _runtime/metro/09685__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_home/native/images",
+  httpServerLocation: "/assets/modules/video_calls/native/images",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "993926a8b2d3f46d31ad06ea07adc917",
-  name: "ic_feed_more",
+  hash: "db76c9ef21a10a502ae95ae16e345521",
+  name: "add",
   type: "png",
 });

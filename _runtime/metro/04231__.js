@@ -1,120 +1,38 @@
 // _runtime/metro/04231__.js
-import _mod3952 from "03952__.js";
-import module_4209_mod from "04209__.js";
-import module_4210_mod from "04210__.js";
-import startOfMonth_mod from "../04163_startOfMonth.js";
-import requiredArgs_mod from "../03948_requiredArgs.js";
-import module_3951_mod from "03951__.js";
+import startOfISOWeekYear_mod from "../04119_startOfISOWeekYear.js";
+import module_4126_mod from "04126__.js";
+import requiredArgs_mod from "../03959_requiredArgs.js";
 
-let module_4209 = module_4209_mod;
-if (!module_4209) {
-  const obj = { default: module_4209 };
+let startOfISOWeekYear = startOfISOWeekYear_mod;
+if (!startOfISOWeekYear) {
+  const obj = { default: startOfISOWeekYear };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4209;
+  tmp3 = startOfISOWeekYear;
 }
-module_4209 = tmp3;
-let module_4210 = module_4210_mod;
-if (!module_4210) {
-  const obj2 = { default: module_4210 };
+startOfISOWeekYear = tmp3;
+let module_4126 = module_4126_mod;
+if (!module_4126) {
+  const obj2 = { default: module_4126 };
   let tmp5 = obj2;
 } else {
-  tmp5 = module_4210;
+  tmp5 = module_4126;
 }
-module_4210 = tmp5;
-let startOfMonth = startOfMonth_mod;
-if (!startOfMonth) {
-  const obj3 = { default: startOfMonth };
-  let tmp7 = obj3;
-} else {
-  tmp7 = startOfMonth;
-}
-startOfMonth = tmp7;
+module_4126 = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
 } else {
-  tmp9 = requiredArgs;
+  tmp7 = requiredArgs;
 }
-requiredArgs = tmp9;
-let module_3951 = module_3951_mod;
-if (!module_3951) {
-  const obj5 = { default: module_3951 };
-  let tmp11 = obj5;
-} else {
-  tmp11 = module_3951;
-}
-module_3951 = tmp11;
+requiredArgs = tmp7;
+let c3 = 604800000;
 
-export default function getWeekOfMonth(arg0, weekStartsOn) {
+export default function getISOWeeksInYear(arg0) {
   requiredArgs.default(1, arguments);
-  const defaultOptions = _mod3952.getDefaultOptions();
-  weekStartsOn = undefined;
-  if (null != weekStartsOn) {
-    weekStartsOn = weekStartsOn.weekStartsOn;
-  }
-  if (null === weekStartsOn) {
-    let weekStartsOn1;
-    if (null != weekStartsOn) {
-      locale = weekStartsOn.locale;
-      if (null !== locale) {
-        if (undefined !== locale) {
-          const options = locale.options;
-          if (null !== options) {
-            if (undefined !== options) {
-              weekStartsOn1 = options.weekStartsOn;
-            }
-          }
-        }
-      }
-    }
-    weekStartsOn = weekStartsOn1;
-  }
-  if (null === weekStartsOn) {
-    weekStartsOn = defaultOptions.weekStartsOn;
-  }
-  if (null === weekStartsOn) {
-    const locale2 = defaultOptions.locale;
-    let weekStartsOn2;
-    if (null !== locale2) {
-      if (undefined !== locale2) {
-        const options2 = locale2.options;
-        if (null !== options2) {
-          if (undefined !== options2) {
-            weekStartsOn2 = options2.weekStartsOn;
-          }
-        }
-      }
-    }
-    weekStartsOn = weekStartsOn2;
-  }
-  let num = 0;
-  if (null !== weekStartsOn) {
-    num = 0;
-    if (undefined !== weekStartsOn) {
-      num = weekStartsOn;
-    }
-  }
-  const defaultResult1 = module_3951.default(num);
-  if (defaultResult1 >= 0) {
-    if (defaultResult1 <= 6) {
-      const defaultResult2 = module_4209.default(arg0);
-      const _isNaN = isNaN;
-      if (isNaN(defaultResult2)) {
-        return NaN;
-      } else {
-        const diff = defaultResult1 - module_4210.default(startOfMonth.default(arg0));
-        let sum = diff;
-        if (diff <= 0) {
-          sum = diff + 7;
-        }
-        const _Math = Math;
-        return Math.ceil((defaultResult2 - sum) / 7) + 1;
-      }
-    }
-  }
-  const rangeError = new RangeError("weekStartsOn must be between 0 and 6 inclusively");
-  throw rangeError;
+  const defaultResult1 = startOfISOWeekYear.default(arg0);
+  const defaultResult2 = startOfISOWeekYear.default(module_4126.default(defaultResult1, 60));
+  return Math.round((startOfISOWeekYear.default(module_4126.default(defaultResult1, 60)).valueOf() - defaultResult1.valueOf()) / c3);
 };
 export default exports.default;

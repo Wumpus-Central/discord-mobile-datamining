@@ -1,12 +1,11 @@
 // _runtime/metro/10243__.js
-import _mod10244 from "10244__.js";
-import _classCallCheck from "00041__classCallCheck.js";
+import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
+import AbstractTimeExpressionParser from "../10175_AbstractTimeExpressionParser.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const UKMonthNameLittleEndianParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,14 +24,16 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class UKMonthNameLittleEndianParser {
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturn;
+class PTTimeExpressionParser {
   constructor() {
     self = this;
-    tmp = c2(this, UKMonthNameLittleEndianParser);
-    tmp2 = closure_4;
-    obj = closure_4(UKMonthNameLittleEndianParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    tmp = closure_0(this, PTTimeExpressionParser);
+    tmp2 = c2;
+    obj = c2(PTTimeExpressionParser);
+    tmp3 = closure_1;
+    if (closure_3()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -45,64 +46,22 @@ class UKMonthNameLittleEndianParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(UKMonthNameLittleEndianParser, _mod10244.AbstractParserWithLeftRightBoundaryChecking);
+_classCallCheck = PTTimeExpressionParser;
+_inherits(PTTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
 const entry = {
-  key: "innerPatternString",
-  value: function innerPatternString(arg0) {
-    return (
-      "(?:\u0437|\u0456\u0437)?\\s*(" +
-      UKMonthNameLittleEndianParser(10242).ORDINAL_NUMBER_PATTERN +
-      ")(?:\\s{0,3}(?:\u043F\u043E|-|\u2013|\u0434\u043E)?\\s{0,3}(" +
-      UKMonthNameLittleEndianParser(10242).ORDINAL_NUMBER_PATTERN +
-      "))?(?:-|\\/|\\s{0,3}(?:of)?\\s{0,3})(" +
-      UKMonthNameLittleEndianParser(10088).matchAnyPattern(UKMonthNameLittleEndianParser(10242).MONTH_DICTIONARY) +
-      ")(?:(?:-|\\/|,?\\s{0,3})(" +
-      UKMonthNameLittleEndianParser(10242).YEAR_PATTERN +
-      "(?![^\\s]\\d)))?"
-    );
+  key: "primaryPrefix",
+  value: function primaryPrefix() {
+    return "(?:(?:ao?|\u00E0s?|das|da|de|do)\\s*)?";
   },
 };
 const items = [
   entry,
   {
-    key: "innerExtract",
-    value: function innerExtract(createParsingResult, index) {
-      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
-      const tmp4 = UKMonthNameLittleEndianParser(10242).MONTH_DICTIONARY[index[3].toLowerCase(index[3])];
-      const result = UKMonthNameLittleEndianParser(10242).parseOrdinalNumberPattern(index[1]);
-      if (result > 31) {
-        index.index = index.index + index[1].length;
-        return null;
-      } else {
-        const start4 = parsingResult.start;
-        start4.assign("month", tmp4);
-        const start5 = parsingResult.start;
-        start5.assign("day", result);
-        if (index[4]) {
-          const start2 = parsingResult.start;
-          start2.assign("year", UKMonthNameLittleEndianParser(10242).parseYearPattern(index[4]));
-        } else {
-          const start = parsingResult.start;
-          start.imply(
-            "year",
-            UKMonthNameLittleEndianParser(10089).findYearClosestToRef(
-              createParsingResult.reference.instant,
-              result,
-              tmp4,
-            ),
-          );
-        }
-        if (index[2]) {
-          const start3 = parsingResult.start;
-          const result1 = UKMonthNameLittleEndianParser(10242).parseOrdinalNumberPattern(index[2]);
-          parsingResult.end = start3.clone();
-          const end = parsingResult.end;
-          end.assign("day", result1);
-        }
-        return parsingResult;
-      }
+    key: "followingPhase",
+    value: function followingPhase() {
+      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|a(?:o)?|\\?)\\s*";
     },
   },
 ];
 
-export default _createClass(UKMonthNameLittleEndianParser, items);
+export default _createClass(PTTimeExpressionParser, items);

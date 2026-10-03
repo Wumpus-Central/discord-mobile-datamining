@@ -1,11 +1,13 @@
 // _runtime/metro/15420__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRs",
-  scales: [1],
-  hash: "ec62a0adb2a6736a93fafc0b9d7dfef7",
-  name: "vi.messages.ec62a0adb2a6736a93fafc0b9d7dfef7.compiled.messages",
-  type: "jsona",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "83020ea8b4c0b0d88670e8fd546ddc69",
+  name: "CompassIcon",
+  type: "png",
 });

@@ -1,35 +1,26 @@
 // _runtime/metro/04317__.js
-import module_4128_mod from "04128__.js";
-import subDays_mod from "../04318_subDays.js";
-import requiredArgs_mod from "../03948_requiredArgs.js";
+import module_4309_mod from "04309__.js";
+import requiredArgs_mod from "../03959_requiredArgs.js";
 
-let module_4128 = module_4128_mod;
-if (!module_4128) {
-  const obj = { default: module_4128 };
+let module_4309 = module_4309_mod;
+if (!module_4309) {
+  const obj = { default: module_4309 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4128;
+  tmp3 = module_4309;
 }
-module_4128 = tmp3;
-let subDays = subDays_mod;
-if (!subDays) {
-  const obj2 = { default: subDays };
-  let tmp5 = obj2;
-} else {
-  tmp5 = subDays;
-}
-subDays = tmp5;
+module_4309 = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp7 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp7;
+requiredArgs = tmp5;
 
-export default function isYesterday(arg0) {
+export default function isThisMonth(arg0) {
   requiredArgs.default(1, arguments);
-  return module_4128.default(arg0, subDays.default(Date.now(), 1));
+  return module_4309.default(Date.now(), arg0);
 };
 export default exports.default;

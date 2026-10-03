@@ -1,13 +1,13 @@
 // _runtime/metro/08819__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/MidnightPrismIcon",
-  width: 60,
-  height: 60,
+  httpServerLocation: "/assets/images/native/premium/upsell",
+  width: 120,
+  height: 80,
   scales: [2, 3],
-  hash: "44efb56cf36c8202533bcbc557ebf8e5",
-  name: "MidnightPrismIcon",
+  hash: "e92f31ca34ceaeec68c2321f683014ca",
+  name: "img_nitro_global_emoji",
   type: "png",
 });

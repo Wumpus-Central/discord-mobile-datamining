@@ -1,10 +1,13 @@
 // _runtime/metro/13399__.js
-import _mod13413 from "13413__.js";
-import assign from "13400__.js";
-import Deflate from "../13401_Deflate.js";
-import Inflate from "../13409_Inflate.js";
+import registerAsset from "01132__.js";
 
-const obj = {};
-assign.assign(obj, Deflate, Inflate, _mod13413);
-
-export default obj;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/modules/guild_boosting/native/images",
+  width: 18,
+  height: 15,
+  scales: [2, 3],
+  hash: "dc018ce302b0357451a31422d7180d84",
+  name: "sparkle_star_pointed",
+  type: "png",
+});

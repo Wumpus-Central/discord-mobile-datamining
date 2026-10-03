@@ -1,5 +1,5 @@
 // _runtime/metro/09639__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "b749a15e15191bd4c7ec2a36a9470ea1",
-  name: "VoiceXIcon",
+  hash: "623eff85d27fd4ffd7a4c28c327682e8",
+  name: "SpeedometerIcon",
   type: "png",
 });

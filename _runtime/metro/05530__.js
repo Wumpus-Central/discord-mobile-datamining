@@ -1,13 +1,13 @@
 // _runtime/metro/05530__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "e3a50d090de2ca1d8928677d5f100909",
-  name: "HubIcon",
-  type: "png",
+  httpServerLocation: "/assets/images/platforms",
+  width: 267,
+  height: 267,
+  scales: [1],
+  hash: "898dc79e0285b8e9855531eeca36bf84",
+  name: "img_roblox_white",
+  type: "svg",
 });

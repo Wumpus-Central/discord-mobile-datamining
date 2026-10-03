@@ -1,7 +1,19 @@
 // _runtime/metro/01621__.js
-import 00065__ from "00065__.js";
+const require = globalThis.__r;
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNCSafeAreaView", validAttributes: { mode: true, edges: true } };
-
-export default module_65.get("RNCSafeAreaView", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+for (const key10013 in require("01622__.js")) {
+  arg5[key10013] = require("01622__.js")[key10013];
+  continue;
+}
+for (const key10017 in require("SafeAreaView")) {
+  arg5[key10017] = require("SafeAreaView")[key10017];
+  continue;
+}
+for (const key10021 in require("initialWindowMetrics")) {
+  arg5[key10021] = require("initialWindowMetrics")[key10021];
+  continue;
+}
+for (const key10025 in require("01629__.js")) {
+  arg5[key10025] = require("01629__.js")[key10025];
+  continue;
+}

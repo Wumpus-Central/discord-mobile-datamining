@@ -1,67 +1,42 @@
 // _runtime/metro/04028__.js
-import 02121__ from "02121__.js";
-import 02122__ from "02122__.js";
+import 04029__ from "04029__.js";
+import 04030__ from "04030__.js";
+import 04031__ from "04031__.js";
+import date_mod from "04032__.js";
+import date_mod from "04033__.js";
 
-if (!module_2121) {
-  const obj2 = { default: module_2121 };
-  let obj = obj2;
+if (!module_4029) {
+  const obj = { default: module_4029 };
+  let tmp3 = obj;
 } else {
-  obj = module_2121;
+  tmp3 = module_4029;
 }
-if (!module_2122) {
-  const obj4 = { default: module_2122 };
-  let obj3 = obj4;
+if (!module_4030) {
+  const obj2 = { default: module_4030 };
+  let tmp5 = obj2;
 } else {
-  obj3 = module_2122;
+  tmp5 = module_4030;
 }
-const date = {
-  ordinalNumber: obj3.default({
-    matchPattern: /^(\d+)(일|번째)?/i,
-    parsePattern: /\d+/i,
-    valueCallback(match) {
-      return parseInt(match, 10);
-    }
-  }),
-  era: null,
-  quarter: null,
-  month: null,
-  day: null,
-  dayPeriod: null
-};
-const obj6 = { matchPatterns: { narrow: /^(b\.?\s?c\.?|b\.?\s?c\.?\s?e\.?|a\.?\s?d\.?|c\.?\s?e\.?)/i, abbreviated: /^(b\.?\s?c\.?|b\.?\s?c\.?\s?e\.?|a\.?\s?d\.?|c\.?\s?e\.?)/i, wide: /^(기원전|서기)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj7 = { any: null };
-const items = [/^(bc|기원전)/i, /^(ad|서기)/i];
-obj7.any = items;
-obj6.parsePatterns = obj7;
-date.era = obj.default(obj6);
-const obj8 = {
-  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^q[1234]/i, wide: /^[1234]사?분기/i },
-  defaultMatchWidth: "wide",
-  parsePatterns: null,
-  defaultParseWidth: "any",
-  valueCallback(arg0) {
-    return arg0 + 1;
-  }
-};
-const obj9 = { any: null };
-const items1 = [/1/i, /2/i, /3/i, /4/i];
-obj9.any = items1;
-obj8.parsePatterns = obj9;
-date.quarter = obj.default(obj8);
-const obj10 = { matchPatterns: { narrow: /^(1[012]|[123456789])/, abbreviated: /^(1[012]|[123456789])월/i, wide: /^(1[012]|[123456789])월/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj11 = { any: null };
-const items2 = [/^1월?$/, /^2/, /^3/, /^4/, /^5/, /^6/, /^7/, /^8/, /^9/, /^10/, /^11/, /^12/];
-obj11.any = items2;
-obj10.parsePatterns = obj11;
-date.month = obj.default(obj10);
-const obj12 = { matchPatterns: { narrow: /^[일월화수목금토]/, short: /^[일월화수목금토]/, abbreviated: /^[일월화수목금토]/, wide: /^[일월화수목금토]요일/ }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj13 = { any: null };
-const items3 = [/^일/, /^월/, /^화/, /^수/, /^목/, /^금/, /^토/];
-obj13.any = items3;
-obj12.parsePatterns = obj13;
-date.day = obj.default(obj12);
-const obj14 = { matchPatterns: { any: /^(am|pm|오전|오후|자정|정오|아침|저녁|밤)/i }, defaultMatchWidth: "any", parsePatterns: { any: { am: /^(am|오전)/i, pm: /^(pm|오후)/i, midnight: /^자정/i, noon: /^정오/i, morning: /^아침/i, afternoon: /^오후/i, evening: /^저녁/i, night: /^밤/i } }, defaultParseWidth: "any" };
-date.dayPeriod = obj.default(obj14);
+if (!module_4031) {
+  const obj3 = { default: module_4031 };
+  let tmp7 = obj3;
+} else {
+  tmp7 = module_4031;
+}
+let date = date_mod;
+if (!date) {
+  const obj4 = { default: date };
+  let tmp9 = obj4;
+} else {
+  tmp9 = date;
+}
+let date = date_mod;
+if (!date) {
+  const obj5 = { default: date };
+  let tmp11 = obj5;
+} else {
+  tmp11 = date;
+}
 
-export default date;
+export default { code: "ja", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 0, firstWeekContainsDate: 1 } };
 export default exports.default;

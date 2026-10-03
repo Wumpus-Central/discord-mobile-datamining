@@ -1,14 +1,16 @@
 // _runtime/metro/06130__.js
-import registerAsset from "01121__.js";
+const fn = function n(item, value) {
+  let result = item;
+  if (typeof item === "string") {
+    const _Number = Number;
+    result = (Number(item.split("%")[0]) * value) / 100;
+  }
+  return Math.max(0, value - result);
+};
+fn.__closure = {};
+fn.__workletHash = 14612470006791;
+fn.__initData = {
+  code: "function pnpm_normalizeSnapPointTs1(snapPoint,containerHeight){let normalizedSnapPoint=snapPoint;if(typeof normalizedSnapPoint==='string'){normalizedSnapPoint=Number(normalizedSnapPoint.split('%')[0])*containerHeight/100;}return Math.max(0,containerHeight-normalizedSnapPoint);}",
+};
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation:
-    "/assets/../node_modules/.pnpm/@react-navigation+elements@2.9.34_ogrwmflqwrxbxbb3hpokpwnsgq/node_modules/@react-navigation/elements/lib/module/assets",
-  width: 24,
-  height: 24,
-  scales: [1, 2, 3, 4],
-  hash: "dbc3af23c3cbbe45d326afc1d31c2e92",
-  name: "back-icon",
-  type: "png",
-});
+export const normalizeSnapPoint = fn;

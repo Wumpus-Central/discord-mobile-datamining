@@ -1,13 +1,7 @@
 // _runtime/metro/06216__.js
-import registerAsset from "01121__.js";
+import noop from "00019__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "db11ea9da81d79144310eac53428fbe9",
-  name: "CircleErrorIcon-primary",
-  type: "png",
-});
+({ useEffect, useRef } = noop);
+new Map();
+
+export function useDetectorAttachmentGuard(tmp8Result5) {}

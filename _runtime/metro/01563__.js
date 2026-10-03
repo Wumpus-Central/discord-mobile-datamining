@@ -1,14 +1,50 @@
 // _runtime/metro/01563__.js
+import _mod1533 from "01533__.js";
 import noop from "00019__.js";
 
-if (typeof document !== "undefined") {
-  let useEffect = noop.useLayoutEffect;
-} else {
-  const _navigator = navigator;
-  if (typeof navigator !== "undefined") {
-    const _navigator2 = navigator;
-  }
-  useEffect = noop.useEffect;
-}
+require = arg1;
 
-export const useClientLayoutEffect = useEffect;
+export const useFocusEffect = function useFocusEffect(cResult) {
+  let navigation = _mod1533.useNavigation();
+  if (undefined !== arguments[1]) {
+    const _console = console;
+    console.error(
+      "You passed a second argument to 'useFocusEffect', but it only accepts one argument. If you want to pass a dependency array, you can use 'React.useCallback':\n\nuseFocusEffect(\n  React.useCallback(() => {\n    // Your code here\n  }, [depA, depB])\n);\n\nSee usage guide: https://reactnavigation.org/docs/use-focus-effect",
+    );
+  }
+  const items = [cResult, navigation];
+  const effect = noop.useEffect(() => {
+    navigation = false;
+    if (navigation.isFocused()) {
+      const tmp2 = cResult();
+      navigation = true;
+    }
+    closure_2 = obj.addListener("focus", () => {
+      if (!c1) {
+        if (undefined !== _undefined) {
+          _undefined();
+        }
+        const tmp3 = _undefined();
+        if (undefined === tmp3) {
+          const tmp4 = tmp3;
+        }
+        _undefined = tmp4;
+        c1 = true;
+      }
+    });
+    closure_3 = obj.addListener("blur", () => {
+      if (undefined !== _undefined) {
+        _undefined();
+      }
+      _undefined = undefined;
+      c1 = false;
+    });
+    return () => {
+      if (undefined !== _undefined) {
+        _undefined();
+      }
+      closure_2();
+      closure_3();
+    };
+  }, items);
+};

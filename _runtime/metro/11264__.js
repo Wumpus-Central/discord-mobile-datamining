@@ -1,13 +1,13 @@
 // _runtime/metro/11264__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/opt_in_channels/native/images",
-  width: 192,
-  height: 108,
-  scales: [2, 3],
-  hash: "980015ffe7387bf43c649905ee978399",
-  name: "nux",
+  httpServerLocation: "/assets/images/native/stream_feedback",
+  width: 72,
+  height: 72,
+  scales: [1, 2, 3],
+  hash: "8c3b8fc66cebe540d123e4c535f8a6d7",
+  name: "feedback-modal-happy",
   type: "png",
 });

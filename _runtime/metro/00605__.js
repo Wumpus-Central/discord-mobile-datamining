@@ -1,4 +1,13 @@
 // _runtime/metro/00605__.js
-import _mod524 from "00524__.js";
+import memoize from "../00606_memoize.js";
 
-export default _mod524["__core-js_shared__"];
+export default function memoizeCapped(arg0) {
+  const tmp = memoize(arg0, (arg0) => {
+    if (500 === cache.size) {
+      cache.clear();
+    }
+    return arg0;
+  });
+  const cache = tmp.cache;
+  return tmp;
+}

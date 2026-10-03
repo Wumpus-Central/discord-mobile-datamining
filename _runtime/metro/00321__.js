@@ -133,7 +133,7 @@ let items = [
       const self = this;
       if (ListItemComponent) {
         const obj2 = { item, index, separators: self._separators };
-        let tmp7 = React6(ListItemComponent, obj2);
+        let tmp7 = closure_1_8(ListItemComponent, obj2);
       } else if (renderItem) {
         const obj = { item, index, separators: self._separators };
         tmp7 = renderItem(obj);
@@ -160,7 +160,7 @@ let items = [
         if (ItemSeparatorComponent) {
           const obj = {};
           const merged = Object.assign(self.state.separatorProps);
-          tmp3 = React6(ItemSeparatorComponent, obj);
+          tmp3 = closure_1_8(ItemSeparatorComponent, obj);
         }
         tmp2 = tmp3;
       }
@@ -189,7 +189,7 @@ let items = [
           const merged1 = Object.assign(onCellLayout);
           const items3 = [_renderElementResult, tmp2];
           obj2.children = items3;
-          let tmp10Result = React7(CellRendererComponent, obj2);
+          let tmp10Result = options(CellRendererComponent, obj2);
         } else {
           const obj4 = { style: tmp7, onFocusCapture: self._onCellFocusCapture };
           let tmp12 = onCellLayout;
@@ -200,10 +200,10 @@ let items = [
           const merged2 = Object.assign(tmp12);
           const items4 = [_renderElementResult, tmp2];
           obj4.children = items4;
-          tmp10Result = React7(React5, obj4);
+          tmp10Result = options(React5, obj4);
         }
         const obj6 = { cellKey: self.props.cellKey, children: tmp10Result };
-        return React6(CellRenderer(322).VirtualizedListCellContextProvider, obj6);
+        return closure_1_8(CellRenderer(322).VirtualizedListCellContextProvider, obj6);
       }
     },
   },

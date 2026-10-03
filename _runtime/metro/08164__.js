@@ -1,6 +1,6 @@
 // _runtime/metro/08164__.js
 import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _modDef8109 from "08109__.js";
+import _modDef8160 from "08160__.js";
 import _modDef8165 from "08165__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
@@ -8,7 +8,7 @@ import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const ForeignObject = fn;
+const Circle = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,12 +29,12 @@ function _isNativeReflectConstruct() {
 }
 _possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class ForeignObject {
+class Circle {
   constructor() {
     self = this;
-    tmp = closure_3(this, ForeignObject);
+    tmp = closure_3(this, Circle);
     tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(ForeignObject);
+    obj = hasOwnProperty(Circle);
     tmp3 = closure_4;
     if (closure_7()) {
       tmp7 = globalThis;
@@ -49,33 +49,35 @@ class ForeignObject {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ForeignObject, _modDef8109);
+_inherits(Circle, _modDef8160);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
     const props = this.props;
-    const size = { x: props.x, y: props.y, width: props.width, height: props.height };
-    const obj = {
+    const obj = {};
+    ({ cx, cy, r } = props);
+    const merged = Object.assign(Circle(8151).extract(this, props));
+    obj.cx = cx;
+    obj.cy = cy;
+    obj.r = r;
+    const obj2 = Circle(8151);
+    const obj3 = {
       ref(arg0) {
         return self.refMethod(arg0);
       },
     };
-    const merged = Object.assign(ForeignObject(8110).withoutXY(this, props));
-    const merged1 = Object.assign(size);
-    obj.children = props.children;
-    return (
-      <tmp
-        ref={function ref(arg0) {
-          return self.refMethod(arg0);
-        }}
-      />
-    );
+    const merged1 = Object.assign(obj);
+    return jsx(_modDef8165, {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      },
+    });
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(ForeignObject, items);
-importDefaultResultResult.displayName = "ForeignObject";
-importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
+const importDefaultResultResult = _createClass(Circle, items);
+importDefaultResultResult.displayName = "Circle";
+importDefaultResultResult.defaultProps = { cx: 0, cy: 0, r: 0 };
 
 export default importDefaultResultResult;

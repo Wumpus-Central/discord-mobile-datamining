@@ -1,5 +1,5 @@
 // _runtime/metro/15428__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "aa6654f8bc64e9c09fd740f0157dd47b",
-  name: "ClipboardCheckIcon",
+  hash: "ca990f51cd6cd3877a91c6ff3ddaf3f5",
+  name: "InventoryIcon",
   type: "png",
 });

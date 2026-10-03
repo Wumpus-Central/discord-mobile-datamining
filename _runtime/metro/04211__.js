@@ -1,45 +1,26 @@
 // _runtime/metro/04211__.js
-import _typeof_mod from "03947__.js";
-import startOfYear_mod from "../04166_startOfYear.js";
-import differenceInCalendarDays_mod from "../04109_differenceInCalendarDays.js";
-import requiredArgs_mod from "../03948_requiredArgs.js";
+import module_4209_mod from "04209__.js";
+import requiredArgs_mod from "../03959_requiredArgs.js";
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let module_4209 = module_4209_mod;
+if (!module_4209) {
+  const obj = { default: module_4209 };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = module_4209;
 }
-_typeof = tmp3;
-let startOfYear = startOfYear_mod;
-if (!startOfYear) {
-  const obj2 = { default: startOfYear };
-  let tmp5 = obj2;
-} else {
-  tmp5 = startOfYear;
-}
-startOfYear = tmp5;
-let differenceInCalendarDays = differenceInCalendarDays_mod;
-if (!differenceInCalendarDays) {
-  const obj3 = { default: differenceInCalendarDays };
-  let tmp7 = obj3;
-} else {
-  tmp7 = differenceInCalendarDays;
-}
-differenceInCalendarDays = tmp7;
+module_4209 = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp9 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp9;
+requiredArgs = tmp5;
 
-export default function getDayOfYear(arg0) {
+export default function formatDistanceToNowStrict(arg0, arg1) {
   requiredArgs.default(1, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  return differenceInCalendarDays.default(defaultResult1, startOfYear.default(defaultResult1)) + 1;
+  return module_4209.default(arg0, Date.now(), arg1);
 };
 export default exports.default;

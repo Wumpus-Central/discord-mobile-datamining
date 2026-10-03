@@ -1,6 +1,6 @@
 // _runtime/metro/04302__.js
-import _typeof_mod from "03947__.js";
-import requiredArgs_mod from "../03948_requiredArgs.js";
+import _typeof_mod from "03958__.js";
+import requiredArgs_mod from "../03959_requiredArgs.js";
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -19,10 +19,9 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isSameYear(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const fullYear = defaultResult1.getFullYear();
-  return fullYear === _typeof.default(arg1).getFullYear();
+export default function isPast(date) {
+  requiredArgs.default(1, arguments);
+  const time = _typeof.default(date).getTime();
+  return time < Date.now();
 };
 export default exports.default;

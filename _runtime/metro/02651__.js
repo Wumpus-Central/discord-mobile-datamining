@@ -1,11 +1,11 @@
 // _runtime/metro/02651__.js
-import registerAsset from "01121__.js";
+import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/overlay/web/v3",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9vdmVybGF5L3dlYi92Mw==",
   scales: [1],
-  hash: "6c39ef1bf213cec6bbd51be68d36c0f1",
-  name: "OverlayWidgets.compiled.messages",
+  hash: "401ba87d9383ca91cd410123fdae65ba",
+  name: "sv-SE.messages.401ba87d9383ca91cd410123fdae65ba.compiled.messages",
   type: "jsona",
 });
