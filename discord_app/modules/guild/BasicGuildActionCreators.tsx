@@ -1,11 +1,11 @@
-// === Module 17912: BasicGuildActionCreators ===
+// === Module 17998: BasicGuildActionCreators ===
 
-// Module 17912 (BasicGuildActionCreators)
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import HTTPUtils from "HTTPUtils" /* 1271 */;
+// Module 17998 (BasicGuildActionCreators)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import BasicGuildStore from "BasicGuildStore" /* 7570 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import BasicGuildStore from "BasicGuildStore" /* 7614 */;
 
 require = fn;
 let closure_8 = async function _fetchBasicGuild() {
@@ -23,7 +23,7 @@ let closure_8 = async function _fetchBasicGuild() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -101,7 +101,7 @@ let closure_8 = async function _fetchBasicGuild() {
     }
   })();
 };
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 const set = new Set();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild/BasicGuildActionCreators.tsx");

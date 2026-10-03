@@ -1,8 +1,8 @@
-// === Module 2052: StageChannelPermissions ===
+// === Module 2060: StageChannelPermissions ===
 
-// Module 2052 (StageChannelPermissions)
-import Constants from "Constants" /* 1074 */;
-import BigFlagUtils_mod from "BigFlagUtils" /* 1086 */;
+// Module 2060 (StageChannelPermissions)
+import Constants from "Constants" /* 1085 */;
+import BigFlagUtils_mod from "BigFlagUtils" /* 1097 */;
 import "BigFlagUtils";
 import size from "module_2" /* 2 */;
 

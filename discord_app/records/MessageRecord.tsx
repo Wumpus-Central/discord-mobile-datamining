@@ -1,15 +1,15 @@
-// === Module 4509: MessageRecord ===
+// === Module 4520: MessageRecord ===
 
-// Module 4509 (MessageRecord)
-import FlagUtils from "FlagUtils" /* 1385 */;
-import ReactionUtils from "ReactionUtils" /* 4510 */;
-import isForwardMessageDefault from "isForwardMessage" /* 6907 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 7355 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 8696 */;
-import Record from "Record" /* 1387 */;
+// Module 4520 (MessageRecord)
+import FlagUtils from "FlagUtils" /* 1390 */;
+import ReactionUtils from "ReactionUtils" /* 4521 */;
+import isForwardMessageDefault from "isForwardMessage" /* 6805 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7259 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 8708 */;
+import Record from "Record" /* 1392 */;
 
 require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ MessageFlags: c3, MessageStates: closure_4, MessageTypes: hasOwnProperty } = Constants);
 class MinimalMessageRecord extends tmp2 {
   constructor(arg0) {

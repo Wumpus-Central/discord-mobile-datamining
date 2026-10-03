@@ -1,8 +1,8 @@
-// === Module 15099: DisplayNameStylesSeenStore ===
+// === Module 15156: DisplayNameStylesSeenStore ===
 
-// Module 15099 (DisplayNameStylesSeenStore)
+// Module 15156 (DisplayNameStylesSeenStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
 
 let obj = { seenFontIds: new Set(), seenEffectIds: null, newFontsBadgeDismissed: false, newEffectsBadgeDismissed: false };
 let set = new Set();

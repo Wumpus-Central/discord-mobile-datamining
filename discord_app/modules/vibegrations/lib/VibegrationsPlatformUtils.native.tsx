@@ -1,18 +1,18 @@
-// === Module 8689: VibegrationsPlatformUtils ===
+// === Module 8702: VibegrationsPlatformUtils ===
 
-// Module 8689 (VibegrationsPlatformUtils)
-import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 8696 */;
-import ApplicationUtils from "ApplicationUtils" /* 8697 */;
-import PushNotificationDefault from "PushNotification" /* 8938 */;
-import vibegrationsPreviewCall from "vibegrationsPreviewCall" /* 8942 */;
-import vibegrationsPreviewControlLease2 from "vibegrationsPreviewControlLease" /* 12658 */;
-import vibegrationsPreviewNativeSurfaces from "vibegrationsPreviewNativeSurfaces" /* 12659 */;
-import restartVibegrationsAppFramesDefault from "restartVibegrationsAppFrames" /* 12662 */;
+// Module 8702 (VibegrationsPlatformUtils)
+import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 8708 */;
+import ApplicationUtils from "ApplicationUtils" /* 8709 */;
+import PushNotificationDefault from "PushNotification" /* 8966 */;
+import vibegrationsPreviewCall from "vibegrationsPreviewCall" /* 8970 */;
+import vibegrationsPreviewControlLease2 from "vibegrationsPreviewControlLease" /* 8973 */;
+import vibegrationsPreviewNativeSurfaces from "vibegrationsPreviewNativeSurfaces" /* 8974 */;
+import restartVibegrationsAppFramesDefault from "restartVibegrationsAppFrames" /* 8977 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import FramesStore from "FramesStore" /* 8690 */;
-import AppStateStore from "AppStateStore" /* 1980 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 8686 */;
+import FramesStore from "FramesStore" /* 8703 */;
+import AppStateStore from "AppStateStore" /* 1986 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 8699 */;
 
 require = fn;
 function previewFrameIdentity(arg0) {
@@ -24,9 +24,9 @@ function previewFrameIdentity(arg0) {
   if (null == prop) {
     return null;
   } else {
-    const frame = FramesStore.getFrame(closure_1_10(prop, React7));
+    const frame = FramesStore.getFrame(v65535(prop, options));
     let iframeId = null;
-    if (React6(frame)) {
+    if (closure_1_8(frame)) {
       iframeId = frame.data.iframeId;
     }
     return iframeId;
@@ -40,99 +40,97 @@ function previewFrameHeld(arg0) {
   }
   let tmp3 = null;
   if (null != prop) {
-    const frame = FramesStore.getFrame(closure_1_10(prop, React7));
+    const frame = FramesStore.getFrame(v65535(prop, options));
     let tmp8 = null;
     if (null != frame) {
-      const obj = { applicationId: prop, launched: React6(frame) };
+      const obj = { applicationId: prop, launched: closure_1_8(frame) };
       tmp8 = obj;
     }
     tmp3 = tmp8;
   }
   return null != tmp3;
 }
-function launchedPreviewFrame(arg0) {
-  const project = VibegrationsProjectStore.getProject(arg0);
+function waitForPreviewFrameIdentity(arg0, PREVIEW_FRAME_WAIT_MS) {
+  closure_0 = arg0;
+  closure_1 = PREVIEW_FRAME_WAIT_MS;
+  let project = VibegrationsProjectStore.getProject(arg0);
   let prop;
   if (project != null) {
     prop = project.preview_application_id;
   }
   let tmp3 = null;
   if (null != prop) {
-    const frame = FramesStore.getFrame(closure_1_10(prop, React7));
-    let tmp8 = null;
-    if (null != frame) {
-      const obj = { applicationId: prop, launched: React6(frame) };
-      tmp8 = obj;
+    let frame = FramesStore.getFrame(closure_10(prop, closure_9));
+    let iframeId = null;
+    if (closure_8(frame)) {
+      iframeId = frame.data.iframeId;
     }
-    tmp3 = tmp8;
+    tmp3 = iframeId;
   }
-  let launched;
-  if (tmp3 != null) {
-    launched = tmp3.launched;
-  }
-  let tmp11 = null;
-  if (true === launched) {
-    const obj2 = { applicationId: tmp3.applicationId };
-    tmp11 = obj2;
-  }
-  return tmp11;
-}
-function waitForPreviewFrame(value, arg1, fn) {
-  closure_0 = value;
-  closure_1 = arg1;
-  closure_2 = fn;
-  const tmp = fn(value);
-  if (null != tmp) {
-    let resolved = Promise.resolve(tmp);
+  if (null != tmp3) {
+    let resolved = Promise.resolve(tmp3);
   } else {
-    let project = VibegrationsProjectStore.getProject(value);
-    let prop;
-    if (project != null) {
-      prop = project.preview_application_id;
+    let project1 = VibegrationsProjectStore.getProject(arg0);
+    let prop1;
+    if (project1 != null) {
+      prop1 = project1.preview_application_id;
     }
-    let tmp3 = null;
-    if (null != prop) {
-      let frame = FramesStore.getFrame(closure_10(prop, closure_9));
-      let tmp8 = null;
-      if (null != frame) {
-        let obj = { applicationId: prop, launched: closure_8(frame) };
-        tmp8 = obj;
+    let tmp11 = null;
+    if (null != prop1) {
+      let frame1 = FramesStore.getFrame(closure_10(prop1, closure_9));
+      let tmp16 = null;
+      if (null != frame1) {
+        const obj2 = { applicationId: prop1, launched: closure_8(frame1) };
+        tmp16 = obj2;
       }
-      tmp3 = tmp8;
+      tmp11 = tmp16;
     }
-    if (null != tmp3) {
+    if (null != tmp11) {
       resolved = new Promise((arg0) => {
         closure_0 = arg0;
         closure_1 = Date.now() + closure_1;
         const interval = setInterval(() => {
-          const tmp2 = closure_2(closure_0);
-          let tmp3 = null != tmp2;
-          if (!tmp3) {
+          project = project.getProject(closure_0);
+          let prop;
+          if (project != null) {
+            prop = project.preview_application_id;
+          }
+          let tmp4 = null;
+          if (null != prop) {
+            frame = frame.getFrame(closure_1_10(prop, closure_1_9));
+            let iframeId = null;
+            if (closure_1_8(frame)) {
+              iframeId = frame.data.iframeId;
+            }
+            tmp4 = iframeId;
+          }
+          let tmp11 = null != tmp4;
+          if (!tmp11) {
             const _Date = Date;
-            tmp3 = Date.now() >= closure_1;
+            tmp11 = Date.now() >= closure_1;
           }
-          if (!tmp3) {
-            const project = VibegrationsProjectStore.getProject(closure_0);
-            let prop;
-            if (project != null) {
-              prop = project.preview_application_id;
+          if (!tmp11) {
+            const project1 = VibegrationsProjectStore.getProject(closure_0);
+            let prop1;
+            if (project1 != null) {
+              prop1 = project1.preview_application_id;
             }
-            let tmp9 = null;
-            if (null != prop) {
-              const frame = FramesStore.getFrame(closure_3_10(prop, React7));
-              let tmp14 = null;
-              if (null != frame) {
-                const obj = { applicationId: prop, launched: React6(frame) };
-                tmp14 = obj;
+            let tmp17 = null;
+            if (null != prop1) {
+              const frame1 = FramesStore.getFrame(v65535(prop1, options));
+              let tmp22 = null;
+              if (null != frame1) {
+                const obj = { applicationId: prop1, launched: closure_3_8(frame1) };
+                tmp22 = obj;
               }
-              tmp9 = tmp14;
+              tmp17 = tmp22;
             }
-            tmp3 = null == tmp9;
+            tmp11 = null == tmp17;
           }
-          if (tmp3) {
+          if (tmp11) {
             const _clearInterval = clearInterval;
             clearInterval(closure_2);
-            closure_0(tmp2);
+            closure_0(tmp4);
           }
         }, 100);
       });
@@ -142,7 +140,7 @@ function waitForPreviewFrame(value, arg1, fn) {
   }
   return resolved;
 }
-function callNativePreviewFrame(control, result, id) {
+function callNativePreviewFrame(iframeId, control, result, id) {
   _require = control;
   closure_1 = id;
   const previewCallTypesResult = require("vibegrationsPreviewCall").previewCallTypes(control);
@@ -150,11 +148,12 @@ function callNativePreviewFrame(control, result, id) {
   obj2 = { type: previewCallTypesResult.request, id: id.id };
   const merged = Object.assign(result);
   const obj = require("vibegrationsPreviewCall");
-  const webViewProxy = require("WebView").getWebViewProxy(require("FramesNativeManager").FRAME_WEB_VIEW_KEY);
+  const webViewProxy = require("WebView").getWebViewProxy(iframeId);
   const timestamp = Date.now();
   const obj3 = require("WebView");
   return new Promise((arg0, arg1) => {
     closure_0 = arg0;
+    closure_1 = arg1;
     function cleanup() {
       clearTimeout(closure_3);
       if (null != c2) {
@@ -170,43 +169,44 @@ function callNativePreviewFrame(control, result, id) {
         clearInterval(c2);
       }
       closure_4.remove();
-      const previewFrameCallTimeout = new vibegrationsPreviewCall.PreviewFrameCallTimeout(c0, obj3.timeoutMs);
+      const previewFrameCallTimeout = new vibegrationsPreviewCall.PreviewFrameCallTimeout(c0, obj.timeoutMs);
       closure_1(previewFrameCallTimeout);
-    }, obj3.timeoutMs);
+    }, closure_1.timeoutMs);
     closure_4 = closure_4.addOnMessageListener((data) => {
       try {
         const _JSON = JSON;
         const parsed = JSON.parse(data.data);
-        if (obj.isResultEnvelope(parsed, _null.ack, obj3.id)) {
+        obj = vibegrationsPreviewCall;
+        if (obj.isResultEnvelope(parsed, _null.ack, obj.id)) {
           if (null != _null) {
             const _clearInterval = clearInterval;
             clearInterval(_null);
           }
           _null = null;
         } else {
-          if (tmp5Result.isResultEnvelope(parsed, tmp8.result, obj3.id)) {
+          if (tmp5Result.isResultEnvelope(parsed, tmp8.result, tmp9.id)) {
             cleanup();
             closure_0(parsed);
           }
           tmp5Result = vibegrationsPreviewCall;
         }
-        obj = vibegrationsPreviewCall;
         tmp8 = _null;
+        tmp9 = obj;
       } catch (err) {
         return tmp;
       }
     });
-    closure_4.injectJavaScript(require("getPostMessageJavaScript")(timeout)).catch(() => {
+    closure_4.injectJavaScript(obj(obj3[13])(timeout)).catch(() => {
 
     });
     const interval = setInterval(function post() {
-      closure_4.injectJavaScript(obj3(obj5[14])(closure_3)).catch(() => {
+      closure_4.injectJavaScript(obj(obj3[13])(closure_3)).catch(() => {
 
       });
-    }, obj3.retryMs);
+    }, closure_1.retryMs);
   });
 }
-let closure_18 = async function _relayPreviewCapture(arg0) {
+let closure_17 = async function _relayPreviewCapture(arg0) {
   if (c9 === 2) {
     c9 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -217,7 +217,7 @@ let closure_18 = async function _relayPreviewCapture(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -238,29 +238,25 @@ let closure_18 = async function _relayPreviewCapture(arg0) {
           closure_132_2 = undefined;
           closure_132_3 = undefined;
           closure_132_4 = undefined;
+          closure_132_5 = undefined;
           let probe = closure_2;
           if (closure_2 == null) {
             probe = {};
           }
           ({ spec: closure_132_1, onAccepted: closure_132_2 } = probe);
           if (true === probe.probe) {
-            let str = "unavailable";
+            let str2 = "unavailable";
             if (previewFrameHeld(closure_0)) {
-              str = "accepted";
+              str2 = "accepted";
             }
-            const obj4 = { status: str };
+            const obj4 = { status: str2 };
             c9 = 3;
             const obj5 = { value: obj4, done: true };
             return obj5;
           } else {
             c8 = 1;
             c9 = 1;
-            const obj6 = {
-              value: (function waitForLaunchedPreviewFrame(arg0, PREVIEW_FRAME_WAIT_MS) {
-                          return closure_1_16(arg0, PREVIEW_FRAME_WAIT_MS, closure_1_15);
-                        })(closure_0, require("vibegrationsPreviewCall").PREVIEW_FRAME_WAIT_MS),
-              done: false
-            };
+            const obj6 = { value: waitForPreviewFrameIdentity(closure_0, require("vibegrationsPreviewCall").PREVIEW_FRAME_WAIT_MS), done: false };
             return obj6;
           }
         }
@@ -273,17 +269,20 @@ let closure_18 = async function _relayPreviewCapture(arg0) {
             c9 = 3;
             const obj7 = { value, done: true };
             return obj7;
-          } else if (null == value) {
-            c9 = 3;
-            const obj8 = { value: { status: "unavailable" }, done: true };
-            return obj8;
-          } else if (null == closure_132_2) {
-            let obj9 = { uploadToken: "r" };
           } else {
-            c8 = 2;
-            c9 = 1;
-            const obj10 = { value: closure_132_2(), done: false };
-            return obj10;
+            closure_132_3 = value;
+            if (null == closure_132_3) {
+              c9 = 3;
+              const obj8 = { value: { status: "unavailable" }, done: true };
+              return obj8;
+            } else if (null == closure_132_2) {
+              let obj9 = { uploadToken: "r" };
+            } else {
+              c8 = 2;
+              c9 = 1;
+              const obj10 = { value: closure_132_2(), done: false };
+              return obj10;
+            }
           }
         } else if (2 === tmp7) {
           if (arg0 === 1) {
@@ -309,15 +308,15 @@ let closure_18 = async function _relayPreviewCapture(arg0) {
           const obj14 = { value, done: true };
           return obj14;
         } else {
-          closure_132_4 = value;
-          if ("accepted" !== closure_132_4.phase) {
-            const obj = { status: "failed", code: closure_132_4.code, message: closure_132_4.error };
+          closure_132_5 = value;
+          if ("accepted" !== closure_132_5.phase) {
+            const obj = { status: "failed", code: closure_132_5.code, message: closure_132_5.error };
           }
           c7 = 0;
           c9 = 3;
         }
-        closure_132_3 = obj9;
-        if (null == closure_132_3) {
+        closure_132_4 = obj9;
+        if (null == closure_132_4) {
           c9 = 3;
           const obj16 = { value: { status: "unavailable" }, done: true };
           return obj16;
@@ -330,32 +329,32 @@ let closure_18 = async function _relayPreviewCapture(arg0) {
           }
           let obj18 = {};
           const merged = Object.assign(obj17);
-          if (null == closure_132_3.uploadToken) {
+          if (null == closure_132_4.uploadToken) {
             let obj19 = {};
           } else {
-            obj19 = { uploadToken: closure_132_3.uploadToken };
+            obj19 = { uploadToken: closure_132_4.uploadToken };
           }
           const merged1 = Object.assign(obj19);
           const obj20 = { id: closure_132_0, timeoutMs: closure_133_0(closure_133_3[11]).CAPTURE_NOW_ACCEPT_TIMEOUT_MS, retryMs: closure_133_0(closure_133_3[11]).CAPTURE_NOW_RETRY_MS };
-          obj18 = closure_133_17("capture-now", obj18, obj20);
+          obj18 = closure_133_16(tmp64, "capture-now", obj18, obj20);
           c8 = 4;
           c9 = 1;
         }
       }
-    } catch (tmp45) {
-      closure_6 = tmp45;
+    } catch (tmp49) {
+      closure_6 = tmp49;
       if (tmp3 === c7) {
         c9 = tmp;
-        throw tmp45;
+        throw tmp49;
       } else {
         c8 = tmp;
       }
     }
   }
 };
-let closure_20 = async function _inspectVibegrationsPreviewPoint(arg0) {
-  if (c5 === 2) {
-    c5 = 3;
+let closure_19 = async function _inspectVibegrationsPreviewPoint(arg0) {
+  if (c6 === 2) {
+    c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
   } else if (tmp6 === 3) {
     if (arg0 === 1) {
@@ -364,68 +363,75 @@ let closure_20 = async function _inspectVibegrationsPreviewPoint(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
-      c5 = 2;
-      if (0 === c4) {
+      c6 = 2;
+      if (0 === c5) {
         if (arg0 === 1) {
-          c5 = 3;
+          c6 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c5 = 3;
+          c6 = 3;
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          closure_2 = tmp3;
-          closure_1 = tmp7;
-          closure_129_0 = undefined;
-          c3 = 1;
-          const obj4 = { id: null, timeoutMs: null, retryMs: null };
-          sum = sum + 1;
-          const _Date = Date;
-          const result = require("vibegrationsInspectPoint").inspectPreviewPointRequest(closure_0);
-          const _HermesInternal = HermesInternal;
-          obj4.id = "inspect-" + sum + "-" + Date.now();
-          obj4.timeoutMs = require("vibegrationsPreviewCall").INSPECT_ANSWER_TIMEOUT_MS;
-          obj4.retryMs = require("vibegrationsPreviewCall").CONTROL_RETRY_MS;
-          c4 = 2;
-          c5 = 1;
-          const obj5 = { value: callNativePreviewFrame("control", result, obj4), done: false };
-          return obj5;
+          closure_3 = tmp3;
+          closure_2 = tmp7;
+          closure_130_0 = undefined;
+          const tmp24 = previewFrameIdentity(closure_0);
+          if (null == tmp24) {
+            c6 = 3;
+            const obj4 = { value: { status: "failed" }, done: true };
+            return obj4;
+          } else {
+            c4 = 1;
+            const result = require("vibegrationsInspectPoint").inspectPreviewPointRequest(closure_1);
+            const obj5 = { id: null, timeoutMs: null, retryMs: null };
+            sum = sum + 1;
+            const _Date = Date;
+            const _HermesInternal = HermesInternal;
+            obj5.id = "inspect-" + sum + "-" + Date.now();
+            obj5.timeoutMs = require("vibegrationsPreviewCall").INSPECT_ANSWER_TIMEOUT_MS;
+            obj5.retryMs = require("vibegrationsPreviewCall").CONTROL_RETRY_MS;
+            c5 = 2;
+            c6 = 1;
+            const obj6 = { value: callNativePreviewFrame(tmp24, "control", result, obj5), done: false };
+            return obj6;
+          }
         }
       } else if (1 === tmp7) {
-        c3 = 0;
-        c5 = 3;
-        const obj6 = { value: { status: "failed" }, done: true };
-        return obj6;
+        c4 = 0;
+        c6 = 3;
+        const obj7 = { value: { status: "failed" }, done: true };
+        return obj7;
       } else if (arg0 === 1) {
-        c5 = 3;
+        c6 = 3;
         throw value;
       } else if (arg0 === 2) {
-        c3 = 0;
-        c5 = 3;
-        const obj7 = { value, done: true };
-        return obj7;
+        c4 = 0;
+        c6 = 3;
+        const obj8 = { value, done: true };
+        return obj8;
       } else {
-        closure_129_0 = value;
-        c3 = 0;
-        c5 = 3;
-        const obj9 = { value: closure_130_0(closure_130_3[15]).inspectResultFromResponse(closure_129_0), done: true };
-        return obj9;
+        closure_130_0 = value;
+        c4 = 0;
+        c6 = 3;
+        const obj10 = { value: closure_131_0(closure_131_3[14]).inspectResultFromResponse(closure_130_0), done: true };
+        return obj10;
       }
     } catch (tmp13) {
-      if (tmp4 === c3) {
-        c5 = tmp2;
+      if (tmp4 === c4) {
+        c6 = tmp2;
         throw tmp13;
       } else {
-        c4 = tmp;
+        c5 = tmp;
       }
     }
   }
 };
-let closure_21 = async function _relayPreviewControl(arg0) {
+let closure_20 = async function _relayPreviewControl(arg0) {
   if (c10 === 2) {
     c10 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -436,7 +442,7 @@ let closure_21 = async function _relayPreviewControl(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -466,12 +472,7 @@ let closure_21 = async function _relayPreviewControl(arg0) {
             c8 = 2;
             c9 = 3;
             c10 = 1;
-            const obj4 = {
-              value: (function waitForPreviewFrameIdentity(arg0, PREVIEW_FRAME_WAIT_MS) {
-                          return closure_1_16(arg0, PREVIEW_FRAME_WAIT_MS, closure_1_13);
-                        })(closure_0, require("vibegrationsPreviewCall").PREVIEW_FRAME_WAIT_MS),
-              done: false
-            };
+            const obj4 = { value: waitForPreviewFrameIdentity(closure_0, require("vibegrationsPreviewCall").PREVIEW_FRAME_WAIT_MS), done: false };
             return obj4;
           } else {
             c10 = 3;
@@ -540,15 +541,15 @@ let closure_21 = async function _relayPreviewControl(arg0) {
           const obj13 = { value: { status: "failed", message: "the phone preview has no desktop lens" }, done: true };
           return obj13;
         } else {
-          closure_133_6 = closure_134_0(closure_134_3[17]).beginNativeSurfaceSessionForFrame(closure_133_5, closure_133_2.native);
+          closure_133_6 = closure_134_0(closure_134_3[16]).beginNativeSurfaceSessionForFrame(closure_133_5, closure_133_2.native);
           c8 = 3;
           const obj15 = { id: closure_133_1, timeoutMs: null, retryMs: null };
-          const obj18 = closure_134_0(closure_134_3[17]);
+          const obj18 = closure_134_0(closure_134_3[16]);
           obj15.timeoutMs = closure_134_0(closure_134_3[11]).controlAnswerTimeoutMs(closure_133_2);
           obj15.retryMs = closure_134_0(closure_134_3[11]).CONTROL_RETRY_MS;
           c9 = 6;
           c10 = 1;
-          const obj16 = { value: closure_134_17("control", closure_133_2, obj15), done: false };
+          const obj16 = { value: closure_134_16(closure_133_5, "control", closure_133_2, obj15), done: false };
           return obj16;
         }
       } else if (5 === tmp10) {
@@ -573,7 +574,7 @@ let closure_21 = async function _relayPreviewControl(arg0) {
           if (Array.isArray(closure_133_7.results)) {
             closure_4 = 0;
             items = [];
-            closure_4 = HermesBuiltin.arraySpread(closure_134_23.drain(closure_133_0), closure_4);
+            closure_4 = HermesBuiltin.arraySpread(closure_134_22.drain(closure_133_0), closure_4);
             closure_4 = HermesBuiltin.arraySpread(closure_133_6.drain(), closure_4);
             closure_133_8 = items;
             if (0 === closure_133_8.length) {
@@ -599,14 +600,14 @@ let closure_21 = async function _relayPreviewControl(arg0) {
         const obj19 = { value: { status: "failed", message: "the preview frame returned a malformed control result" }, done: true };
         return obj19;
       }
-    } catch (tmp86) {
-      closure_7 = tmp86;
+    } catch (tmp87) {
+      closure_7 = tmp87;
       if (tmp5 === c8) {
         c10 = tmp3;
-        throw tmp86;
-      } else if (tmp2 === tmp88) {
+        throw tmp87;
+      } else if (tmp2 === tmp89) {
         c9 = tmp2;
-      } else if (tmp === tmp88) {
+      } else if (tmp === tmp89) {
         c9 = tmp;
       } else {
         c9 = tmp6;
@@ -614,13 +615,13 @@ let closure_21 = async function _relayPreviewControl(arg0) {
     }
   }
 };
-const FramesConstants = fn(8691);
+const FramesConstants = fn(8704);
 ({ isLaunched: closure_8, MAIN_SURFACE: closure_9, makeFrameId: c10 } = FramesConstants);
-const LocalNotificationTypes = fn(8695).LocalNotificationTypes;
-let items = [fn(7969).OAuth2Scopes.BOT, fn(7969).OAuth2Scopes.APPLICATIONS_COMMANDS];
-let c19 = 0;
-let c22 = 0;
-const vibegrationsPreviewControlLease = fn(12658);
+const LocalNotificationTypes = fn(8707).LocalNotificationTypes;
+let items = [fn(8015).OAuth2Scopes.BOT, fn(8015).OAuth2Scopes.APPLICATIONS_COMMANDS];
+let c18 = 0;
+let c21 = 0;
+const vibegrationsPreviewControlLease = fn(8973);
 let result = vibegrationsPreviewControlLease.subscribeVibegrationsControlReleased((arg0) => {
   const project = VibegrationsProjectStore.getProject(arg0);
   let prop;
@@ -630,43 +631,34 @@ let result = vibegrationsPreviewControlLease.subscribeVibegrationsControlRelease
   let tmp3 = null;
   if (null != prop) {
     const frame = FramesStore.getFrame(closure_10(prop, closure_9));
-    let tmp8 = null;
-    if (null != frame) {
-      let obj = { applicationId: prop, launched: closure_8(frame) };
-      tmp8 = obj;
+    let iframeId = null;
+    if (closure_8(frame)) {
+      iframeId = frame.data.iframeId;
     }
-    tmp3 = tmp8;
+    tmp3 = iframeId;
   }
-  let launched;
-  if (tmp3 != null) {
-    launched = tmp3.launched;
-  }
-  let tmp11 = null;
-  if (true === launched) {
-    const obj2 = { applicationId: tmp3.applicationId };
-    tmp11 = obj2;
-  }
-  if (null != tmp11) {
-    const obj3 = { id: null, timeoutMs: null, retryMs: null };
-    const sum = c22 + 1;
-    c22 = sum;
+  if (null != tmp3) {
+    let obj = { id: null, timeoutMs: null, retryMs: null };
+    const sum = c21 + 1;
+    c21 = sum;
     const _Date = Date;
     const _HermesInternal = HermesInternal;
-    obj3.id = "control-end-" + sum + "-" + Date.now();
-    obj3.timeoutMs = require("vibegrationsPreviewCall").CONTROL_END_TIMEOUT_MS;
-    obj3.retryMs = require("vibegrationsPreviewCall").CONTROL_RETRY_MS;
+    obj.id = "control-end-" + sum + "-" + Date.now();
+    obj.timeoutMs = require("vibegrationsPreviewCall").CONTROL_END_TIMEOUT_MS;
+    obj.retryMs = require("vibegrationsPreviewCall").CONTROL_RETRY_MS;
     _require = "control-end";
-    obj5 = undefined;
+    obj3 = undefined;
     const previewCallTypesResult = require("vibegrationsPreviewCall").previewCallTypes("control-end");
     c2 = previewCallTypesResult;
-    obj5 = { type: previewCallTypesResult.request, id: obj3.id };
+    obj3 = { type: previewCallTypesResult.request, id: obj.id };
     const merged = Object.assign({});
-    const obj4 = require("vibegrationsPreviewCall");
-    const webViewProxy = require("WebView").getWebViewProxy(require("FramesNativeManager").FRAME_WEB_VIEW_KEY);
+    const obj2 = require("vibegrationsPreviewCall");
+    const webViewProxy = require("WebView").getWebViewProxy(tmp3);
     const _Date2 = Date;
     const timestamp = Date.now();
     const promise = new Promise((arg0, arg1) => {
       closure_0 = arg0;
+      closure_1 = arg1;
       function cleanup() {
         clearTimeout(closure_3);
         if (null != c2) {
@@ -682,49 +674,50 @@ let result = vibegrationsPreviewControlLease.subscribeVibegrationsControlRelease
           clearInterval(c2);
         }
         closure_4.remove();
-        const previewFrameCallTimeout = new vibegrationsPreviewCall.PreviewFrameCallTimeout(c0, obj3.timeoutMs);
+        const previewFrameCallTimeout = new vibegrationsPreviewCall.PreviewFrameCallTimeout(c0, obj.timeoutMs);
         closure_1(previewFrameCallTimeout);
-      }, obj3.timeoutMs);
+      }, closure_1.timeoutMs);
       closure_4 = closure_4.addOnMessageListener((data) => {
         try {
           const _JSON = JSON;
           const parsed = JSON.parse(data.data);
-          if (obj.isResultEnvelope(parsed, _null.ack, obj3.id)) {
+          obj = vibegrationsPreviewCall;
+          if (obj.isResultEnvelope(parsed, _null.ack, obj.id)) {
             if (null != _null) {
               const _clearInterval = clearInterval;
               clearInterval(_null);
             }
             _null = null;
           } else {
-            if (tmp5Result.isResultEnvelope(parsed, tmp8.result, obj3.id)) {
+            if (tmp5Result.isResultEnvelope(parsed, tmp8.result, tmp9.id)) {
               cleanup();
               closure_0(parsed);
             }
             tmp5Result = vibegrationsPreviewCall;
           }
-          obj = vibegrationsPreviewCall;
           tmp8 = _null;
+          tmp9 = obj;
         } catch (err) {
           return tmp;
         }
       });
-      closure_4.injectJavaScript(require("getPostMessageJavaScript")(timeout)).catch(() => {
+      closure_4.injectJavaScript(obj(obj3[13])(timeout)).catch(() => {
 
       });
       const interval = setInterval(function post() {
-        closure_4.injectJavaScript(obj3(obj5[14])(closure_3)).catch(() => {
+        closure_4.injectJavaScript(obj(obj3[13])(closure_3)).catch(() => {
 
         });
-      }, obj3.retryMs);
+      }, closure_1.retryMs);
     });
     promise.catch(() => {
 
     });
-    const obj6 = require("WebView");
+    const obj4 = require("WebView");
   }
 });
-const vibegrationsPreviewOperationSurfaces = fn(12661);
-let closure_23 = vibegrationsPreviewOperationSurfaces.createPreviewOperationSurfaces((arg0) => {
+const vibegrationsPreviewOperationSurfaces = fn(8976);
+let closure_22 = vibegrationsPreviewOperationSurfaces.createPreviewOperationSurfaces((arg0) => {
   const project = VibegrationsProjectStore.getProject(arg0);
   let prop;
   if (project != null) {
@@ -851,7 +844,7 @@ export default {
   },
   relayPreviewCapture() {
     const self = this;
-    const apply = closure_18.apply;
+    const apply = closure_17.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -861,7 +854,7 @@ export default {
   },
   relayPreviewControl() {
     const self = this;
-    const apply = closure_21.apply;
+    const apply = closure_20.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -873,10 +866,10 @@ export default {
     const result = vibegrationsPreviewControlLease2.releaseVibegrationsControlLeases(projectId);
   },
   beginPreviewOperation(projectId) {
-    closure_23.begin(projectId);
+    closure_22.begin(projectId);
   },
   endPreviewOperation(projectId) {
-    closure_23.end(projectId);
+    closure_22.end(projectId);
   },
   reloadAppFrames(application_id) {
     restartVibegrationsAppFramesDefault(application_id);
@@ -884,7 +877,7 @@ export default {
 };
 export const inspectVibegrationsPreviewPoint = function inspectVibegrationsPreviewPoint() {
   const self = this;
-  const apply = closure_20.apply;
+  const apply = closure_19.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

@@ -1,19 +1,68 @@
-// === Module 11278: ConnectionMetadataVanityItems ===
+// === Module 11192: ConnectionMetadataVanityItems ===
 
-// Module 11278 (ConnectionMetadataVanityItems)
+// Module 11192 (ConnectionMetadataVanityItems)
 import _modDef12 from "module_12" /* 12 */;
-import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1115 */;
-import native from "native" /* 1177 */;
-import NumberUtils from "NumberUtils" /* 1882 */;
-import Text_Text from "Text/Text" /* 4841 */;
-import ConnectionsUtils from "ConnectionsUtils" /* 5905 */;
-import _modDef11279 from "module_11279" /* 11279 */;
-import _modDef11280 from "module_11280" /* 11280 */;
+import c from "c" /* 576 */;
+import nativeDefault from "native" /* 587 */;
+import util from "util" /* 1126 */;
+import native from "native" /* 1188 */;
+import NumberUtils from "NumberUtils" /* 1888 */;
+import Text_Text from "Text/Text" /* 4886 */;
+import ConnectionsUtils from "ConnectionsUtils" /* 6678 */;
+import _modDef11193 from "module_11193" /* 11193 */;
+import _modDef11194 from "module_11194" /* 11194 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-function PaypalVanityTag(style) {
+const View = fn(17).View;
+const Constants = fn(6679);
+({ MetadataFields: closure_4, MetadataItemTypes: hasOwnProperty } = Constants);
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4890);
+let obj2 = { connectedAccountVanityMetadata: { marginTop: 4, paddingRight: 8 }, connectedAccountVanityMetadataItem: { flexDirection: "row", alignItems: "center" }, connectedAccountVanityMetadataItemIcon: { height: 18, width: 18, marginRight: 8 }, connectedAccountVanityMetadataTag: { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, paddingHorizontal: 8, paddingVertical: 1, marginRight: 8 }, paypalVerifiedTag: null, paypalVerifiedTagText: null };
+let obj3 = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, paddingHorizontal: 8, paddingVertical: 1, marginRight: 8 };
+obj2.paypalVerifiedTag = { backgroundColor: nativeDefault.colors.STATUS_POSITIVE_BACKGROUND };
+let obj4 = { backgroundColor: nativeDefault.colors.STATUS_POSITIVE_BACKGROUND };
+obj2.paypalVerifiedTagText = { color: nativeDefault.colors.WHITE };
+let closure_8 = createStyles.createStyles(obj2);
+let ReactCompilerGating = fn(558);
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
+  const cResult = c.c(7);
+  style = style.style;
+  const tmp4 = closure_8();
+  if (cResult[0] === style) {
+    if (cResult[1] === tmp4.paypalVerifiedTag) {
+      let tmp5 = cResult[2];
+    }
+    const _Symbol = Symbol;
+    if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+      const intl = util.intl;
+      const stringResult = intl.string(util.t.IhXLyx);
+      cResult[3] = stringResult;
+      let tmp7 = stringResult;
+    } else {
+      tmp7 = cResult[3];
+    }
+    if (cResult[4] === tmp4.paypalVerifiedTagText) {
+      if (cResult[5] === tmp5) {
+        let tmp9 = cResult[6];
+      }
+      return tmp9;
+    }
+    const obj2 = { style: tmp5, label: tmp7, textStyle: tmp4.paypalVerifiedTagText };
+    const tmp13 = timestampProducer(closure_12, obj2, constants.PAYPAL_VERIFIED);
+    cResult[4] = tmp4.paypalVerifiedTagText;
+    cResult[5] = tmp5;
+    cResult[6] = tmp13;
+    tmp9 = tmp13;
+  }
+  const items = [tmp4.paypalVerifiedTag, style];
+  cResult[0] = style;
+  cResult[1] = tmp4.paypalVerifiedTag;
+  cResult[2] = items;
+  tmp5 = items;
+}) : ((style) => {
   const tmp = closure_8();
   const obj = { style: null, label: null, textStyle: null };
   const items = [tmp.paypalVerifiedTag, style.style];
@@ -21,9 +70,66 @@ function PaypalVanityTag(style) {
   const intl = util.intl;
   obj.label = intl.string(util.t.IhXLyx);
   obj.textStyle = tmp.paypalVerifiedTagText;
-  return timestampProducer(VanityTag, obj, constants.PAYPAL_VERIFIED);
-}
-function VanityMetric(label) {
+  return timestampProducer(closure_12, obj, constants.PAYPAL_VERIFIED);
+});
+ReactCompilerGating = fn(558);
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(12);
+  ({ label, style } = arg0);
+  ({ count, percent } = arg0);
+  const tmp4 = closure_8();
+  let str = "";
+  const result = NumberUtils.shortenAndLocalizeNumber(count);
+  if (percent) {
+    str = "%";
+  }
+  const sum = result + str;
+  if (typeof label === "string") {
+    if (cResult[0] === label) {
+    }
+    const intl2 = util.intl;
+    const obj3 = { name: label, value: sum };
+    const formatResult = intl2.format(util.t.HLoinF, obj3);
+    cResult[0] = label;
+    cResult[1] = sum;
+    cResult[2] = formatResult;
+  } else {
+    if (cResult[3] === label) {
+      if (cResult[4] === sum) {
+        let tmp7 = cResult[5];
+      }
+      if (cResult[6] === style) {
+        if (cResult[7] === tmp4.connectedAccountVanityMetadata) {
+          let tmp12 = cResult[8];
+        }
+        if (cResult[9] === tmp12) {
+          if (cResult[10] === tmp7) {
+            let tmp13 = cResult[11];
+          }
+          return tmp13;
+        }
+        const obj4 = { variant: "text-xs/normal", color: "text-muted", style: tmp12, children: tmp7 };
+        const tmp15 = timestampProducer(Text_Text.Text, obj4);
+        cResult[9] = tmp12;
+        cResult[10] = tmp7;
+        cResult[11] = tmp15;
+        tmp13 = tmp15;
+      }
+      const items = [tmp4.connectedAccountVanityMetadata, style];
+      cResult[6] = style;
+      cResult[7] = tmp4.connectedAccountVanityMetadata;
+      cResult[8] = items;
+      tmp12 = items;
+    }
+    const intl = util.intl;
+    const obj5 = { value: sum };
+    const formatResult1 = intl.format(label, obj5);
+    cResult[3] = label;
+    cResult[4] = sum;
+    cResult[5] = formatResult1;
+    tmp7 = formatResult1;
+  }
+}) : ((label) => {
   label = label.label;
   ({ count, style, percent } = label);
   const tmp = closure_8();
@@ -46,8 +152,70 @@ function VanityMetric(label) {
   const items = [tmp.connectedAccountVanityMetadata, style];
   obj4.style = items;
   return timestampProducer(Text_Text.Text, obj4);
-}
-function VanityItem(style) {
+});
+ReactCompilerGating = fn(558);
+let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(15);
+  ({ label, imageSrc, imageAlt, style } = arg0);
+  const tmp4 = closure_8();
+  if (cResult[0] === style) {
+    if (cResult[1] === tmp4.connectedAccountVanityMetadata) {
+      if (cResult[2] === tmp4.connectedAccountVanityMetadataItem) {
+        let tmp5 = cResult[3];
+      }
+      if (cResult[4] === imageAlt) {
+        if (cResult[5] === imageSrc) {
+          if (cResult[6] === tmp4.connectedAccountVanityMetadataItemIcon) {
+            let tmp6 = cResult[7];
+          }
+          if (cResult[8] === label) {
+            if (cResult[9] === style) {
+              let tmp9 = cResult[10];
+            }
+            if (cResult[11] === tmp5) {
+              if (cResult[12] === tmp6) {
+                if (cResult[13] === tmp9) {
+                  let tmp12 = cResult[14];
+                }
+                return tmp12;
+              }
+            }
+            const obj2 = { style: tmp5, children: null };
+            const items = [tmp6, tmp9];
+            obj2.children = items;
+            const tmp15 = React5(View, obj2);
+            cResult[11] = tmp5;
+            cResult[12] = tmp6;
+            cResult[13] = tmp9;
+            cResult[14] = tmp15;
+            tmp12 = tmp15;
+          }
+          const obj3 = { variant: "text-xs/normal", color: "text-muted", style, children: label };
+          const tmp11 = timestampProducer(Text_Text.Text, obj3);
+          cResult[8] = label;
+          cResult[9] = style;
+          cResult[10] = tmp11;
+          tmp9 = tmp11;
+        }
+      }
+      const obj4 = { source: imageSrc, accessibilityLabel: imageAlt, style: tmp4.connectedAccountVanityMetadataItemIcon, disableColor: true };
+      const tmp8 = timestampProducer(native.Icon, obj4);
+      cResult[4] = imageAlt;
+      cResult[5] = imageSrc;
+      cResult[6] = tmp4.connectedAccountVanityMetadataItemIcon;
+      cResult[7] = tmp8;
+      tmp6 = tmp8;
+    }
+  }
+  const items1 = [, , ];
+  ({ connectedAccountVanityMetadata: arr[0], connectedAccountVanityMetadataItem: arr[1] } = tmp4);
+  items1[2] = style;
+  cResult[0] = style;
+  cResult[1] = tmp4.connectedAccountVanityMetadata;
+  cResult[2] = tmp4.connectedAccountVanityMetadataItem;
+  cResult[3] = items1;
+  tmp5 = items1;
+}) : ((style) => {
   style = style.style;
   ({ label, imageSrc, imageAlt } = style);
   const tmp = closure_8();
@@ -59,8 +227,51 @@ function VanityItem(style) {
   const items1 = [timestampProducer(native.Icon, { source: imageSrc, accessibilityLabel: imageAlt, style: tmp.connectedAccountVanityMetadataItemIcon, disableColor: true }), timestampProducer(Text_Text.Text, { variant: "text-xs/normal", color: "text-muted", style, children: label })];
   obj.children = items1;
   return React5(View, obj);
-}
-function VanityTag(arg0) {
+});
+ReactCompilerGating = fn(558);
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(10);
+  ({ label, style, textStyle } = arg0);
+  const tmp4 = closure_8();
+  if (cResult[0] === style) {
+    if (cResult[1] === tmp4.connectedAccountVanityMetadata) {
+      if (cResult[2] === tmp4.connectedAccountVanityMetadataTag) {
+        let tmp5 = cResult[3];
+      }
+      if (cResult[4] === label) {
+        if (cResult[5] === textStyle) {
+          let tmp6 = cResult[6];
+        }
+        if (cResult[7] === tmp5) {
+          if (cResult[8] === tmp6) {
+            let tmp9 = cResult[9];
+          }
+          return tmp9;
+        }
+        const obj2 = { style: tmp5, children: tmp6 };
+        const tmp12 = timestampProducer(View, obj2);
+        cResult[7] = tmp5;
+        cResult[8] = tmp6;
+        cResult[9] = tmp12;
+        tmp9 = tmp12;
+      }
+      const obj3 = { variant: "text-xs/normal", color: "text-muted", style: textStyle, children: label };
+      const tmp8 = timestampProducer(Text_Text.Text, obj3);
+      cResult[4] = label;
+      cResult[5] = textStyle;
+      cResult[6] = tmp8;
+      tmp6 = tmp8;
+    }
+  }
+  const items = [, , ];
+  ({ connectedAccountVanityMetadata: arr[0], connectedAccountVanityMetadataTag: arr[1] } = tmp4);
+  items[2] = style;
+  cResult[0] = style;
+  cResult[1] = tmp4.connectedAccountVanityMetadata;
+  cResult[2] = tmp4.connectedAccountVanityMetadataTag;
+  cResult[3] = items;
+  tmp5 = items;
+}) : ((arg0) => {
   ({ label, style, textStyle } = arg0);
   const obj = { style: null, children: timestampProducer(Text_Text.Text, { variant: "text-xs/normal", color: "text-muted", style: textStyle, children: label }) };
   const items = [, , ];
@@ -68,8 +279,51 @@ function VanityTag(arg0) {
   items[2] = style;
   obj.style = items;
   return timestampProducer(View, obj);
-}
-function VanityDate(arg0) {
+});
+ReactCompilerGating = fn(558);
+let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(10);
+  ({ date, label, locale, style } = arg0);
+  const tmp4 = closure_8();
+  if (cResult[0] === style) {
+    if (cResult[1] === tmp4.connectedAccountVanityMetadata) {
+      let tmp5 = cResult[2];
+    }
+    if (cResult[3] === date) {
+      if (cResult[4] === label) {
+        if (cResult[5] === locale) {
+          let tmp6 = cResult[6];
+        }
+        if (cResult[7] === tmp5) {
+          if (cResult[8] === tmp6) {
+            let tmp8 = cResult[9];
+          }
+          return tmp8;
+        }
+        const obj2 = { variant: "text-xs/normal", color: "text-muted", style: tmp5, children: tmp6 };
+        const tmp10 = timestampProducer(Text_Text.Text, obj2);
+        cResult[7] = tmp5;
+        cResult[8] = tmp6;
+        cResult[9] = tmp10;
+        tmp8 = tmp10;
+      }
+    }
+    const intl = util.intl;
+    const obj3 = { value: ConnectionsUtils.getCreatedAtDate(date, locale), name: label };
+    const formatResult = intl.format(util.t.HLoinF, obj3);
+    cResult[3] = date;
+    cResult[4] = label;
+    cResult[5] = locale;
+    cResult[6] = formatResult;
+    tmp6 = formatResult;
+    const tmpResult = ConnectionsUtils;
+  }
+  const items = [tmp4.connectedAccountVanityMetadata, style];
+  cResult[0] = style;
+  cResult[1] = tmp4.connectedAccountVanityMetadata;
+  cResult[2] = items;
+  tmp5 = items;
+}) : ((arg0) => {
   ({ date, label, locale, style } = arg0);
   const obj = { variant: "text-xs/normal", color: "text-muted", style: null, children: null };
   const items = [closure_8().connectedAccountVanityMetadata, style];
@@ -81,19 +335,7 @@ function VanityDate(arg0) {
   obj2.name = label;
   obj.children = intl.format(util.t.HLoinF, obj2);
   return timestampProducer(Text_Text.Text, obj);
-}
-const View = fn(17).View;
-const Constants = fn(5906);
-({ MetadataFields: closure_4, MetadataItemTypes: hasOwnProperty } = Constants);
-const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4845);
-let obj2 = { connectedAccountVanityMetadata: { marginTop: 4, paddingRight: 8 }, connectedAccountVanityMetadataItem: { flexDirection: "row", alignItems: "center" }, connectedAccountVanityMetadataItemIcon: { height: 18, width: 18, marginRight: 8 }, connectedAccountVanityMetadataTag: { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, paddingHorizontal: 8, paddingVertical: 1, marginRight: 8 }, paypalVerifiedTag: null, paypalVerifiedTagText: null };
-let obj3 = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, paddingHorizontal: 8, paddingVertical: 1, marginRight: 8 };
-obj2.paypalVerifiedTag = { backgroundColor: nativeDefault.colors.STATUS_POSITIVE_BACKGROUND };
-let obj4 = { backgroundColor: nativeDefault.colors.STATUS_POSITIVE_BACKGROUND };
-obj2.paypalVerifiedTagText = { color: nativeDefault.colors.WHITE };
-let closure_8 = createStyles.createStyles(obj2);
+});
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/connections/native/ConnectionMetadataVanityItems.tsx");
 
@@ -106,19 +348,19 @@ export const generateRedditMetadataItems = function generateRedditMetadataItems(
   const NumberResult = Number(num);
   if (NumberResult > -1) {
     const obj = { style: tmp, count: NumberResult, label: util.t.SbCNox };
-    items.push(timestampProducer(VanityMetric, obj, constants.REDDIT_TOTAL_KARMA));
+    items.push(timestampProducer(closure_10, obj, constants.REDDIT_TOTAL_KARMA));
   }
   if ("1" === metadata[constants.REDDIT_GOLD]) {
     const obj2 = { style: tmp, label: null };
     const intl = util.intl;
     obj2.label = intl.string(util.t["06rDHU"]);
-    items.push(timestampProducer(VanityTag, obj2, constants.REDDIT_GOLD));
+    items.push(timestampProducer(closure_12, obj2, constants.REDDIT_GOLD));
   }
   if ("1" === metadata[constants.REDDIT_MOD]) {
     const obj3 = { style: tmp, label: null };
     const intl2 = util.intl;
     obj3.label = intl2.string(util.t.oWM95M);
-    items.push(timestampProducer(VanityTag, obj3, constants.REDDIT_MOD));
+    items.push(timestampProducer(closure_12, obj3, constants.REDDIT_MOD));
   }
   return items;
 };
@@ -136,11 +378,11 @@ export const generateTwitterMetadataItems = function generateTwitterMetadataItem
   const NumberResult1 = Number(num2);
   if (NumberResult > -1) {
     const obj = { style: tmp, count: NumberResult, label: util.t.llwqqe };
-    items.push(timestampProducer(VanityMetric, obj, constants.TWITTER_STATUSES_COUNT));
+    items.push(timestampProducer(closure_10, obj, constants.TWITTER_STATUSES_COUNT));
   }
   if (NumberResult1 > -1) {
     const obj2 = { style: tmp, count: NumberResult1, label: util.t.LMNOUQ };
-    items.push(timestampProducer(VanityMetric, obj2, constants.TWITTER_FOLLOWERS_COUNT));
+    items.push(timestampProducer(closure_10, obj2, constants.TWITTER_FOLLOWERS_COUNT));
   }
   return items;
 };
@@ -158,11 +400,11 @@ export const generateBlueskyMetadataItems = function generateBlueskyMetadataItem
   const NumberResult1 = Number(num2);
   if (NumberResult > -1) {
     const obj = { style: tmp, count: NumberResult, label: util.t.thA2ir };
-    items.push(timestampProducer(VanityMetric, obj, constants.BLUESKY_STATUSES_COUNT));
+    items.push(timestampProducer(closure_10, obj, constants.BLUESKY_STATUSES_COUNT));
   }
   if (NumberResult1 > -1) {
     const obj2 = { style: tmp, count: NumberResult1, label: util.t.RQath2 };
-    items.push(timestampProducer(VanityMetric, obj2, constants.BLUESKY_FOLLOWERS_COUNT));
+    items.push(timestampProducer(closure_10, obj2, constants.BLUESKY_FOLLOWERS_COUNT));
   }
   return items;
 };
@@ -185,27 +427,27 @@ export const generateSteamMetadataItems = function generateSteamMetadataItems(me
   const NumberResult2 = Number(num3);
   if (NumberResult > -1) {
     const obj = { style: tmp, count: NumberResult, label: util.t["ppXMu/"] };
-    items.push(timestampProducer(VanityMetric, obj, constants.STEAM_GAME_COUNT));
+    items.push(timestampProducer(closure_10, obj, constants.STEAM_GAME_COUNT));
   }
   if (NumberResult1 > -1) {
     const obj2 = { style: tmp, label: null, imageSrc: null, imageAlt: null };
     const intl = util.intl;
     const obj3 = { count: NumberResult1 };
     obj2.label = intl.format(util.t.Y88M5x, obj3);
-    obj2.imageSrc = _modDef11279;
+    obj2.imageSrc = _modDef11193;
     const intl2 = util.intl;
     obj2.imageAlt = intl2.string(util.t.HKUEZo);
-    items.push(timestampProducer(VanityItem, obj2, constants.STEAM_ITEM_COUNT_DOTA2));
+    items.push(timestampProducer(closure_11, obj2, constants.STEAM_ITEM_COUNT_DOTA2));
   }
   if (NumberResult2 > -1) {
     const obj4 = { style: tmp, label: null, imageSrc: null, imageAlt: null };
     const intl3 = util.intl;
     const obj5 = { count: NumberResult2 };
     obj4.label = intl3.format(util.t.Y88M5x, obj5);
-    obj4.imageSrc = _modDef11280;
+    obj4.imageSrc = _modDef11194;
     const intl4 = util.intl;
     obj4.imageAlt = intl4.string(util.t.C8p1Sh);
-    items.push(timestampProducer(VanityItem, obj4, constants.STEAM_ITEM_COUNT_TF2));
+    items.push(timestampProducer(closure_11, obj4, constants.STEAM_ITEM_COUNT_TF2));
   }
   return items;
 };
@@ -213,7 +455,7 @@ export const generatePaypalMetadataItems = function generatePaypalMetadataItems(
   const items = [];
   if ("1" === metadata[constants.PAYPAL_VERIFIED]) {
     const obj = { style: metadataItem };
-    items.push(timestampProducer(PaypalVanityTag, obj));
+    items.push(timestampProducer(closure_9, obj));
   }
   return items;
 };
@@ -226,13 +468,13 @@ export const generateEbayMetadataItems = function generateEbayMetadataItems(meta
   const NumberResult = Number(num);
   if (NumberResult > 0) {
     const obj = { style: tmp, count: NumberResult, label: util.t.YmL22d, percent: true };
-    items.push(timestampProducer(VanityMetric, obj, constants.EBAY_POSITIVE_FEEDBACK_PERCENTAGE));
+    items.push(timestampProducer(closure_10, obj, constants.EBAY_POSITIVE_FEEDBACK_PERCENTAGE));
   }
   if ("1" === metadata[constants.EBAY_TOP_RATED_SELLER]) {
     const obj2 = { style: tmp, label: null };
     const intl = util.intl;
     obj2.label = intl.string(util.t.TEEYwa);
-    items.push(timestampProducer(VanityTag, obj2, constants.EBAY_TOP_RATED_SELLER));
+    items.push(timestampProducer(closure_12, obj2, constants.EBAY_TOP_RATED_SELLER));
   }
   return items;
 };
@@ -255,21 +497,21 @@ export const generateTikTokMetadataItems = function generateTikTokMetadataItems(
   const NumberResult2 = Number(num3);
   if (NumberResult > -1) {
     const obj = { style: tmp, count: NumberResult, label: util.t["Mpm/Bc"] };
-    items.push(timestampProducer(VanityMetric, obj, constants.TIKTOK_FOLLOWER_COUNT));
+    items.push(timestampProducer(closure_10, obj, constants.TIKTOK_FOLLOWER_COUNT));
   }
   if (NumberResult1 > -1) {
     const obj2 = { style: tmp, count: NumberResult1, label: util.t.ftf12v };
-    items.push(timestampProducer(VanityMetric, obj2, constants.TIKTOK_FOLLOWING_COUNT));
+    items.push(timestampProducer(closure_10, obj2, constants.TIKTOK_FOLLOWING_COUNT));
   }
   if (NumberResult2 > -1) {
     const obj3 = { style: tmp, count: NumberResult2, label: util.t.Qwhe5j };
-    items.push(timestampProducer(VanityMetric, obj3, constants.TIKTOK_LIKES_COUNT));
+    items.push(timestampProducer(closure_10, obj3, constants.TIKTOK_LIKES_COUNT));
   }
   if ("1" === metadata[constants.TIKTOK_VERIFIED]) {
     const obj4 = { style: tmp, label: null };
     const intl = util.intl;
     obj4.label = intl.string(util.t.QHHwRR);
-    items.push(timestampProducer(VanityTag, obj4, constants.TIKTOK_VERIFIED));
+    items.push(timestampProducer(closure_12, obj4, constants.TIKTOK_VERIFIED));
   }
   return items;
 };
@@ -305,11 +547,11 @@ export const generateRoleConnectionMetadataItems = function generateRoleConnecti
                     const _Number = Number;
                     obj.count = Number(tmp36);
                     obj.label = tmp8.name;
-                    items.push(timestampProducer(VanityMetric, obj, tmp8.key));
+                    items.push(timestampProducer(closure_10, obj, tmp8.key));
                   }
                 }
                 const obj2 = { style: tmp, date: tmp36, locale, label: tmp8.name };
-                items.push(timestampProducer(VanityDate, obj2, tmp8.key));
+                items.push(timestampProducer(closure_13, obj2, tmp8.key));
               }
             }
             let tmp22 = tmp8.type === constants2.BOOLEAN_EQUAL;
@@ -325,7 +567,7 @@ export const generateRoleConnectionMetadataItems = function generateRoleConnecti
             }
             if (tmp22) {
               const obj3 = { style: tmp, label: tmp8.name };
-              items.push(timestampProducer(VanityTag, obj3, tmp8.key));
+              items.push(timestampProducer(closure_12, obj3, tmp8.key));
             }
           } catch (err) {
           }

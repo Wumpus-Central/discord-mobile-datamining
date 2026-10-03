@@ -1,7 +1,7 @@
-// === Module 11215: SettingBuilders ===
+// === Module 11129: SettingBuilders ===
 
-// Module 11215 (SettingBuilders)
-import SettingRendererConstants from "SettingRendererConstants" /* 11216 */;
+// Module 11129 (SettingBuilders)
+import SettingRendererConstants from "SettingRendererConstants" /* 11130 */;
 import size from "module_2" /* 2 */;
 
 const NodeType = SettingRendererConstants.NodeType;
@@ -39,8 +39,8 @@ export const createRadio = function createRadio(arg0) {
   const merged = Object.assign(arg0);
   return { type: NodeType.RADIO };
 };
-export const createList = function createList(arg0) {
-  const merged = Object.assign(arg0);
+export const createList = function createList(list) {
+  const merged = Object.assign(list);
   return { type: NodeType.LIST };
 };
 export const createSegmentedControl = function createSegmentedControl(arg0) {

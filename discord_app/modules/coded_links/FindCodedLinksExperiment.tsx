@@ -1,7 +1,7 @@
-// === Module 13595: FindCodedLinksExperiment ===
+// === Module 13657: FindCodedLinksExperiment ===
 
-// Module 13595 (FindCodedLinksExperiment)
-import ApexExperiment from "ApexExperiment" /* 1435 */;
+// Module 13657 (FindCodedLinksExperiment)
+import ApexExperiment from "ApexExperiment" /* 1440 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-08-find-coded-links-regex", kind: "user", defaultConfig: { enabled: false }, variations: null };

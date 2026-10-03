@@ -1,20 +1,41 @@
-// === Module 5260: useDisplayNameStylesEnabled ===
+// === Module 5306: useDisplayNameStylesEnabled ===
 
-// Module 5260 (useDisplayNameStylesEnabled)
+// Module 5306 (useDisplayNameStylesEnabled)
 import _mod19 from "module_19" /* 19 */;
 import initialize from "initialize" /* 504 */;
-import DisplayNameStylesContext from "DisplayNameStylesContext" /* 5261 */;
-import AccessibilityStore from "AccessibilityStore" /* 4834 */;
+import c from "c" /* 576 */;
+import DisplayNameStylesContext from "DisplayNameStylesContext" /* 5307 */;
+import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const useContext = _mod19.useContext;
 const result = size.fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesEnabled.tsx");
 
-export const useDisplayNameStylesEnabled = function useDisplayNameStylesEnabled() {
+export const useDisplayNameStylesEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(2);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [AccessibilityStore];
+    const fn = function n() {
+      return AccessibilityStore.displayNameStylesEnabled;
+    };
+    cResult[0] = items;
+    cResult[1] = fn;
+    tmp4 = items;
+    tmp5 = fn;
+  } else {
+    [tmp4, tmp5] = cResult;
+  }
+  let overrideSettings = initialize.useStateFromStores(tmp4, tmp5);
+  if (!overrideSettings) {
+    overrideSettings = useContext(DisplayNameStylesContext.DisplayNameStylesContext).overrideSettings;
+  }
+  return overrideSettings;
+}) : (() => {
   const items = [AccessibilityStore];
   let overrideSettings = initialize.useStateFromStores(items, () => AccessibilityStore.displayNameStylesEnabled);
   if (!overrideSettings) {
     overrideSettings = useContext(DisplayNameStylesContext.DisplayNameStylesContext).overrideSettings;
   }
   return overrideSettings;
-};
+});

@@ -1,9 +1,9 @@
-// === Module 9488: LinkRecord ===
+// === Module 9499: LinkRecord ===
 
-// Module 9488 (LinkRecord)
-import Record from "Record" /* 1387 */;
+// Module 9499 (LinkRecord)
+import Record from "Record" /* 1392 */;
 
-const Routes = fn(1074).Routes;
+const Routes = fn(1085).Routes;
 const prototype = function LinkRecord(arg0) {
   const tmp = new prototype(new.target, new.target);
   ({ id: tmp.id, path: tmp.path, inviteCode: tmp.inviteCode } = arg0);

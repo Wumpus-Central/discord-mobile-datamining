@@ -1,15 +1,15 @@
-// === Module 7621: UserPremiumGuildSubscriptionTierAchievedSystemMessage ===
+// === Module 7665: UserPremiumGuildSubscriptionTierAchievedSystemMessage ===
 
-// Module 7621 (UserPremiumGuildSubscriptionTierAchievedSystemMessage)
-import util from "util" /* 1115 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7575 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7577 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7579 */;
-import UserPremiumGuildSubscriptionSystemMessage from "UserPremiumGuildSubscriptionSystemMessage" /* 7619 */;
-import getNumSubscriptionsPurchasedFromSystemMessageDefault from "getNumSubscriptionsPurchasedFromSystemMessage" /* 7620 */;
-import GuildBoostingUtils from "GuildBoostingUtils" /* 7622 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildStore from "GuildStore" /* 2066 */;
+// Module 7665 (UserPremiumGuildSubscriptionTierAchievedSystemMessage)
+import util from "util" /* 1126 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7619 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7621 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7623 */;
+import UserPremiumGuildSubscriptionSystemMessage from "UserPremiumGuildSubscriptionSystemMessage" /* 7663 */;
+import getNumSubscriptionsPurchasedFromSystemMessageDefault from "getNumSubscriptionsPurchasedFromSystemMessage" /* 7664 */;
+import GuildBoostingUtils from "GuildBoostingUtils" /* 7666 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import GuildStore from "GuildStore" /* 2074 */;
 
 require = fn;
 const size = fn(2);
@@ -21,7 +21,7 @@ export const createUserPremiumGuildSubscriptionTierAchievedSystemMessage = funct
   if (null == channel) {
     return UserPremiumGuildSubscriptionSystemMessage.createUserPremiumGuildSubscriptionSystemMessage(message);
   } else {
-    const guild = GuildStore.getGuild(channel.getGuildId());
+    guild = GuildStore.getGuild(channel.getGuildId());
     if (null == guild) {
       return UserPremiumGuildSubscriptionSystemMessage.createUserPremiumGuildSubscriptionSystemMessage(message);
     } else {

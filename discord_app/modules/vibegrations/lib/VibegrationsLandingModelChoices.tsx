@@ -1,8 +1,8 @@
-// === Module 16473: VibegrationsLandingModelChoices ===
+// === Module 16551: VibegrationsLandingModelChoices ===
 
-// Module 16473 (VibegrationsLandingModelChoices)
-import VibegrationsTypes from "VibegrationsTypes" /* 5555 */;
-import vibegrationsLocalDev from "vibegrationsLocalDev" /* 12854 */;
+// Module 16551 (VibegrationsLandingModelChoices)
+import VibegrationsTypes from "VibegrationsTypes" /* 6747 */;
+import vibegrationsLocalDev from "vibegrationsLocalDev" /* 12908 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsLandingModelChoices.tsx");

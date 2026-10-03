@@ -1,7 +1,7 @@
-// === Module 17980: ManagerRegistryShared ===
+// === Module 18066: ManagerRegistryShared ===
 
-// Module 17980 (ManagerRegistryShared)
-import DispatcherDefault from "Dispatcher" /* 573 */;
+// Module 18066 (ManagerRegistryShared)
+import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
 
 function populateMap(actions) {

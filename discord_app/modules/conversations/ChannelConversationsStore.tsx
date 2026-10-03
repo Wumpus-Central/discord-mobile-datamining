@@ -1,18 +1,18 @@
-// === Module 7200: ChannelConversationsStore ===
+// === Module 7103: ChannelConversationsStore ===
 
-// Module 7200 (ChannelConversationsStore)
+// Module 7103 (ChannelConversationsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import privDefault from "priv" /* 1439 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5067 */;
-import ConversationMessageCacheUtils from "ConversationMessageCacheUtils" /* 7203 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import privDefault from "priv" /* 1444 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5112 */;
+import ConversationMessageCacheUtils from "ConversationMessageCacheUtils" /* 7106 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import RelationshipStore from "RelationshipStore" /* 4508 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
-import UserStore from "UserStore" /* 1372 */;
-import ConversationVisibilityStore from "ConversationVisibilityStore" /* 7201 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import RelationshipStore from "RelationshipStore" /* 4519 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
+import UserStore from "UserStore" /* 1377 */;
+import ConversationVisibilityStore from "ConversationVisibilityStore" /* 7104 */;
 
 require = fn;
 function removePendingListFetch(channelId, requestKey) {
@@ -219,7 +219,7 @@ function evictChannel(arg0) {
   }
   return hasItem;
 }
-const ConversationConstants = fn(7202);
+const ConversationConstants = fn(7105);
 ({ CONVERSATION_COLORS: closure_9, CONVERSATION_FEEDBACK_RATINGS_CACHE_MAX: c10, MAX_CONVERSATIONS_PER_CHANNEL: closure_11, MAX_CHANNELS_WITH_CONVERSATIONS } = ConversationConstants);
 const navigation = new privDefault({
   max: MAX_CHANNELS_WITH_CONVERSATIONS,
@@ -561,8 +561,8 @@ const channelConversationsStore = new ChannelConversationsStore(DispatcherDefaul
     ({ channelId, rawConversations, direction, anchor, isJump, fullyHydrated } = requestKey);
     let set;
     if (removePendingListFetch(channelId, requestKey.requestKey)) {
-      const mapped = rawConversations.map(set(7204).mapConversation);
-      const found = mapped.filter(set(1370).isNotNullish);
+      const mapped = rawConversations.map(set(7107).mapConversation);
+      const found = mapped.filter(set(1375).isNotNullish);
       const peekResult = navigation.peek(channelId);
       if (isJump) {
         let prop;

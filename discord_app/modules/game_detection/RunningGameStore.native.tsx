@@ -1,12 +1,13 @@
-// === Module 2000: RunningGameStore ===
+// === Module 2006: RunningGameStore ===
 
-// Module 2000 (RunningGameStore)
+// Module 2006 (RunningGameStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import OverlayTypes from "OverlayTypes" /* 13739 */;
-import GameStore from "GameStore" /* 2001 */;
-import DetectableGameStore from "DetectableGameStore" /* 2017 */;
-import LibraryApplicationStore from "LibraryApplicationStore" /* 7004 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import SocialSdkGameResolver from "SocialSdkGameResolver" /* 11121 */;
+import OverlayTypes from "OverlayTypes" /* 13805 */;
+import GameStore from "GameStore" /* 2007 */;
+import DetectableGameStore from "DetectableGameStore" /* 2024 */;
+import LibraryApplicationStore from "LibraryApplicationStore" /* 6902 */;
 
 require = fn;
 const Store = initializeDefault.Store;
@@ -48,6 +49,9 @@ prototype["getRunningVerifiedApplicationIds"] = function getRunningVerifiedAppli
 };
 prototype["getGameForPID"] = function getGameForPID() {
   return null;
+};
+prototype["getSdkResolutionForPID"] = function getSdkResolutionForPID() {
+  return { type: SocialSdkGameResolver.SdkCanonicalGameResolutionType.UNRESOLVED };
 };
 prototype["getGameForName"] = function getGameForName() {
   return null;

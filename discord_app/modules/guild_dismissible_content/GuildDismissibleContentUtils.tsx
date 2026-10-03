@@ -1,28 +1,61 @@
-// === Module 12203: GuildDismissibleContentUtils ===
+// === Module 12153: GuildDismissibleContentUtils ===
 
-// Module 12203 (GuildDismissibleContentUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import Uint8ArrayUtils from "Uint8ArrayUtils" /* 2028 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
+// Module 12153 (GuildDismissibleContentUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import Uint8ArrayUtils from "Uint8ArrayUtils" /* 2035 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const AnalyticEvents = fn(1074).AnalyticEvents;
-const ContentDismissActionType = fn(2041).ContentDismissActionType;
-const UserSettingsDelay = fn(1084).UserSettingsDelay;
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/guild_dismissible_content/GuildDismissibleContentUtils.tsx");
-
-export const isContentDismissed = function isContentDismissed(GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK, guildId) {
+const AnalyticEvents = fn(1085).AnalyticEvents;
+const ContentDismissActionType = fn(2048).ContentDismissActionType;
+const UserSettingsDelay = fn(1095).UserSettingsDelay;
+const ReactCompilerGating = fn(558);
+function isContentDismissed(GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK, guildId) {
   const dismissedGuildContent = UserSettingsProtoStore.getDismissedGuildContent(guildId);
   let hasBitResult = null != dismissedGuildContent;
   if (hasBitResult) {
     hasBitResult = Uint8ArrayUtils.hasBit(dismissedGuildContent, GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK);
   }
   return hasBitResult;
-};
-export const useIsContentDismissed = function useIsContentDismissed(arg0, arg1) {
+}
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_dismissible_content/GuildDismissibleContentUtils.tsx");
+
+export { isContentDismissed };
+export const useIsContentDismissed = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+  _require = arg0;
+  closure_1 = arg1;
+  const cResult = require("c").c(4);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [UserSettingsProtoStore];
+    cResult[0] = items;
+    let first = items;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] === arg0) {
+    if (cResult[2] === arg1) {
+      let tmp6 = cResult[3];
+    }
+    return tmp(504).useStateFromStores(first, tmp6);
+  }
+  const fn = function u() {
+    const dismissedGuildContent = UserSettingsProtoStore.getDismissedGuildContent(closure_1);
+    let hasBitResult = null != dismissedGuildContent;
+    if (hasBitResult) {
+      hasBitResult = Uint8ArrayUtils.hasBit(dismissedGuildContent, closure_0);
+    }
+    return hasBitResult;
+  };
+  cResult[1] = arg0;
+  cResult[2] = arg1;
+  cResult[3] = fn;
+  tmp6 = fn;
+  let obj = require("c");
+  tmp = _require;
+}) : ((arg0, arg1) => {
   _require = arg0;
   closure_1 = arg1;
   const items = [UserSettingsProtoStore];
@@ -34,10 +67,10 @@ export const useIsContentDismissed = function useIsContentDismissed(arg0, arg1) 
     }
     return hasBitResult;
   });
-};
-export const markContentAsDismissed = function markContentAsDismissed(GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK, guildId, arg2, AUTO_DISMISS) {
+});
+export const markContentAsDismissed = function markContentAsDismissed(dc, guildId, arg2, AUTO_DISMISS) {
   _require = true;
-  importDefault = GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK;
+  importDefault = dc;
   dependencyMap = guildId;
   const result = require("UserSettingsProtoActionCreators").updateUserGuildSettings(guildId, (dismissedGuildContent) => {
     dismissedGuildContent = UserSettingsProtoStore.getDismissedGuildContent(closure_2);
@@ -53,7 +86,7 @@ export const markContentAsDismissed = function markContentAsDismissed(GAME_SERVE
   }, UserSettingsDelay.INFREQUENT_USER_ACTION);
   if (arg2) {
     let UNKNOWN = AUTO_DISMISS;
-    const obj3 = { type: tmp(2029).DismissibleGuildContent[GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK], guild_id: guildId, action: null };
+    const obj3 = { type: tmp(2036).DismissibleGuildContent[dc], guild_id: guildId, action: null };
     if (AUTO_DISMISS == null) {
       UNKNOWN = ContentDismissActionType.UNKNOWN;
     }

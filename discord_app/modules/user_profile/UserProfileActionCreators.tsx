@@ -1,18 +1,18 @@
-// === Module 7794: UserProfileActionCreators ===
+// === Module 7838: UserProfileActionCreators ===
 
-// Module 7794 (UserProfileActionCreators)
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
-import util from "util" /* 1115 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import HTTPUtils from "HTTPUtils" /* 1271 */;
-import shared from "shared" /* 4714 */;
-import InlineUploaderDefault from "InlineUploader" /* 5668 */;
-import safetyScannedUploadSurfaces from "safetyScannedUploadSurfaces" /* 6592 */;
-import MessageParserDefault from "MessageParser" /* 7268 */;
-import useShouldConvertBioEmoji from "useShouldConvertBioEmoji" /* 7795 */;
+// Module 7838 (UserProfileActionCreators)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
+import util from "util" /* 1126 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import shared from "shared" /* 4729 */;
+import InlineUploaderDefault from "InlineUploader" /* 6478 */;
+import safetyScannedUploadSurfaces from "safetyScannedUploadSurfaces" /* 6482 */;
+import MessageParserDefault from "MessageParser" /* 7166 */;
+import useShouldConvertBioEmoji from "useShouldConvertBioEmoji" /* 7839 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserStore from "UserStore" /* 1372 */;
+import UserStore from "UserStore" /* 1377 */;
 
 require = fn;
 let closure_11 = async function _saveProfileChanges(arg0) {
@@ -26,7 +26,7 @@ let closure_11 = async function _saveProfileChanges(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -68,10 +68,10 @@ let closure_11 = async function _saveProfileChanges(arg0) {
             const obj4 = { type: "USER_PROFILE_UPDATE_START", userId: id, guildId: bannerSurface };
             DispatcherDefault.dispatch(obj4);
             if (null != bannerSurface) {
-              const obj6 = { url: React5.USER_GUILD_PROFILE(bannerSurface, React6), bannerSurface: safetyScannedUploadSurfaces.SafetyScannedUploadSurface.USER_GUILD_PROFILE_BANNER };
+              const obj6 = { url: React5.USER_GUILD_PROFILE(bannerSurface, closure_2_8), bannerSurface: safetyScannedUploadSurfaces.SafetyScannedUploadSurface.USER_GUILD_PROFILE_BANNER };
               let obj7 = obj6;
             } else {
-              obj7 = { url: React5.USER_PROFILE(React6), bannerSurface: safetyScannedUploadSurfaces.SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_BANNER };
+              obj7 = { url: React5.USER_PROFILE(closure_2_8), bannerSurface: safetyScannedUploadSurfaces.SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_BANNER };
             }
             bannerSurface = obj7.bannerSurface;
             const HTTP = HTTPUtils.HTTP;
@@ -85,7 +85,7 @@ let closure_11 = async function _saveProfileChanges(arg0) {
             c9 = 1;
           } else {
             c9 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         }
       } else if (1 === tmp7) {
@@ -136,9 +136,9 @@ let closure_11 = async function _saveProfileChanges(arg0) {
     }
   }
 };
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ ComponentActions: hasOwnProperty, AnalyticEvents: metroRequire, Endpoints: closure_7, ME: closure_8 } = Constants);
-const PremiumConstants = fn(1374);
+const PremiumConstants = fn(1379);
 ({ AnalyticsPremiumFeatureTiers: closure_9, AnalyticsPremiumFeatureNames: c10 } = PremiumConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/UserProfileActionCreators.tsx");

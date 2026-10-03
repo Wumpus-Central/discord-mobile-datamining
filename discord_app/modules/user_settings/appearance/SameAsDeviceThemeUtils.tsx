@@ -1,15 +1,15 @@
-// === Module 14920: SameAsDeviceThemeUtils ===
+// === Module 14977: SameAsDeviceThemeUtils ===
 
-// Module 14920 (SameAsDeviceThemeUtils)
-import ClientThemesUtils from "ClientThemesUtils" /* 1228 */;
-import ThemeActionCreators from "ThemeActionCreators" /* 4711 */;
-import shared from "shared" /* 4714 */;
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 8850 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4682 */;
-import ThemeStore from "ThemeStore" /* 1182 */;
+// Module 14977 (SameAsDeviceThemeUtils)
+import ClientThemesUtils from "ClientThemesUtils" /* 1239 */;
+import ThemeActionCreators from "ThemeActionCreators" /* 4726 */;
+import shared from "shared" /* 4729 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 8863 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4697 */;
+import ThemeStore from "ThemeStore" /* 1193 */;
 
 require = fn;
-const ThemeConstants = fn(1185);
+const ThemeConstants = fn(1196);
 ({ SystemTheme: hasOwnProperty, SystemThemeState: metroRequire } = ThemeConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/appearance/SameAsDeviceThemeUtils.tsx");

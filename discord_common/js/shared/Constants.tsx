@@ -1,7 +1,7 @@
-// === Module 1085: Constants ===
+// === Module 1096: Constants ===
 
-// Module 1085 (Constants)
-import BigFlagUtils_mod from "BigFlagUtils" /* 1086 */;
+// Module 1096 (Constants)
+import BigFlagUtils_mod from "BigFlagUtils" /* 1097 */;
 
 let str = "";
 if (typeof location !== "undefined") {
@@ -272,16 +272,16 @@ obj8.QUEST_BAR_PREVIEW = function QUEST_BAR_PREVIEW(arg0) {
   return "" + sum + "/quest-bar-preview?ad_creative_ids=" + arg0;
 };
 const frozen7 = Object.freeze(obj8);
-fn(1083);
+fn(1094);
 const obj7 = { TWITTER: Object.freeze({ default: "https://twitter.com/discord", ja: "https://twitter.com/discord_jp" }) };
-const PathUtils = fn(1083);
+const PathUtils = fn(1094);
 const wrapPathsResult = PathUtils.wrapPaths(frozen7);
 const frozen8 = Object.freeze({ FACEBOOK_URL: "https://www.facebook.com/discord/", INSTAGRAM_URL: "https://www.instagram.com/discord/", YOUTUBE_URL: "https://www.youtube.com/discord/", TIKTOK_URL: "https://www.tiktok.com/@discord" });
 const size = fn(2);
 const result = size.fileFinishedImporting("../discord_common/js/shared/Constants.tsx");
 
-export const ThemeExtends = fn(1087).ThemeExtends;
-export const ThemeTypes = fn(1087).ThemeTypes;
+export const ThemeExtends = fn(1098).ThemeExtends;
+export const ThemeTypes = fn(1098).ThemeTypes;
 export const APP_URL_PREFIX = sum;
 export const VANITY_URL_PREFIX = text;
 export const PRIMARY_DOMAIN = "discord.com";
@@ -314,7 +314,7 @@ export const DELAYED_PAYMENTS = set4;
 export const PROACTIVE_FULFILLMENT = set5;
 export const PaymentSourceFlags = { NEW: 1, [1]: "NEW", FAILED_ADDRESS: 16, [16]: "FAILED_ADDRESS" };
 export const PaymentStatusTypes = { PENDING: 0, [0]: "PENDING", COMPLETED: 1, [1]: "COMPLETED", FAILED: 2, [2]: "FAILED", REVERSED: 3, [3]: "REVERSED", REFUNDED: 4, [4]: "REFUNDED", CANCELED: 5, [5]: "CANCELED" };
-export const SubscriptionTypes = { PREMIUM: 1, [1]: "PREMIUM", GUILD: 2, [2]: "GUILD", APPLICATION: 3, [3]: "APPLICATION", GAME_SERVER: 4, [4]: "GAME_SERVER" };
+export const SubscriptionTypes = { PREMIUM: 1, [1]: "PREMIUM", GUILD: 2, [2]: "GUILD", APPLICATION: 3, [3]: "APPLICATION", GAME_SERVER: 4, [4]: "GAME_SERVER", GIFT: 5, [5]: "GIFT" };
 export const BraintreeErrors = { PAYPAL_POPUP_CLOSED: "PAYPAL_POPUP_CLOSED", VENMO_APP_CANCELED: "VENMO_APP_CANCELED", VENMO_DESKTOP_CANCELED: "VENMO_DESKTOP_CANCELED", VENMO_CANCELED: "VENMO_CANCELED" };
 export const ExternalSKUStrategyTypes = frozen3;
 export const RevenueSurfaces = { DISCOVERY: 0, [0]: "DISCOVERY", CHECKOUT: 1, [1]: "CHECKOUT" };
@@ -323,10 +323,10 @@ export const PurchaseTypeToAnalyticsPaymentType = frozen4;
 export const OfferTriggerTypes = { PREMIUM_UPSELL_VIEWED: "premium_upsell_viewed", VIDEO_STREAM_ENDED: "video_stream_ended", USER_PROFILE_ACTION: "user_profile_action", JOIN_VOICE_CHANNEL: "join_voice_channel", CHANNEL_OPENED: "channel_opened" };
 export const BasicPermissions = { VIEW_CHANNEL: 1024, [1024]: "VIEW_CHANNEL", READ_MESSAGE_HISTORY: 65536, [65536]: "READ_MESSAGE_HISTORY", CONNECT: 1048576, [1048576]: "CONNECT" };
 export const Permissions = frozen5;
-export const NOOP = fn(1088).NOOP;
-export const NOOP_NULL = fn(1088).NOOP_NULL;
-export const NOOP_PROMISE = fn(1088).NOOP_PROMISE;
-export const NOOP_TRUE = fn(1088).NOOP_TRUE;
+export const NOOP = fn(1099).NOOP;
+export const NOOP_NULL = fn(1099).NOOP_NULL;
+export const NOOP_PROMISE = fn(1099).NOOP_PROMISE;
+export const NOOP_TRUE = fn(1099).NOOP_TRUE;
 export const ElevatedPermissionsList = items23;
 export const ElevatedPermissions = applyResult;
 export const RPC_VERSION = 1;
@@ -356,7 +356,7 @@ export const CurrencyCodes = { AED: "aed", AFN: "afn", ALL: "all", AMD: "amd", A
 export const FallbackCurrencyCountry = "US";
 export const MobilePaymentDefault = { COUNTRY: "US", CURRENCY: "usd" };
 export const SKUFeatureTypes = { SINGLE_PLAYER: 1, [1]: "SINGLE_PLAYER", ONLINE_MULTIPLAYER: 2, [2]: "ONLINE_MULTIPLAYER", LOCAL_MULTIPLAYER: 3, [3]: "LOCAL_MULTIPLAYER", PVP: 4, [4]: "PVP", LOCAL_COOP: 5, [5]: "LOCAL_COOP", CROSS_PLATFORM: 6, [6]: "CROSS_PLATFORM", RICH_PRESENCE: 7, [7]: "RICH_PRESENCE", DISCORD_GAME_INVITES: 8, [8]: "DISCORD_GAME_INVITES", SPECTATOR_MODE: 9, [9]: "SPECTATOR_MODE", CONTROLLER_SUPPORT: 10, [10]: "CONTROLLER_SUPPORT", CLOUD_SAVES: 11, [11]: "CLOUD_SAVES", ONLINE_COOP: 12, [12]: "ONLINE_COOP", SECURE_NETWORKING: 13, [13]: "SECURE_NETWORKING" };
-export const GameGenres = fn(1089).GameGenres;
+export const GameGenres = fn(1100).GameGenres;
 export const PriceTierTypes = { GUILD_ROLE_SUBSCRIPTIONS: 1, [1]: "GUILD_ROLE_SUBSCRIPTIONS", GUILD_PRODUCTS: 2, [2]: "GUILD_PRODUCTS" };
 export const UserMediaErrors = { PERMISSION_DENIED: "PERMISSION_DENIED", PERMISSION_DISMISSED: "PERMISSION_DISMISSED", NO_DEVICES_FOUND: "NO_DEVICES_FOUND" };
 export const NavigateEventSource = { SWIPE: "SWIPE", BROWSER: "BROWSER", KEYBIND: "KEYBIND" };

@@ -1,20 +1,98 @@
-// === Module 11386: useExplicitMediaAttachmentsForMessage ===
+// === Module 11302: useExplicitMediaAttachmentsForMessage ===
 
-// Module 11386 (useExplicitMediaAttachmentsForMessage)
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 6897 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 6902 */;
-import MessageStore from "MessageStore" /* 5065 */;
+// Module 11302 (useExplicitMediaAttachmentsForMessage)
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 6795 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 6800 */;
+import MessageStore from "MessageStore" /* 5110 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/explicit_media_redaction/hooks/useExplicitMediaAttachmentsForMessage.tsx");
-
-export const useRedactableMediaAttachmentsForMessage = function useRedactableMediaAttachmentsForMessage(channelId, messageId, attachmentId) {
-  _require = channelId;
-  dependencyMap = messageId;
-  closure_2 = attachmentId;
+fn(558);
+const ReactCompilerGating = fn(558);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) => {
+  _require = arg0;
+  dependencyMap = arg1;
+  closure_2 = arg2;
+  const cResult = require("c").c(11);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [closure_2];
+    cResult[0] = items;
+    let first = items;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] === arg0) {
+    if (cResult[2] === arg1) {
+      let tmp6 = cResult[3];
+    }
+    const stateFromStores = tmp(573).useStateFromStores(first, tmp6);
+    const tmpResult = tmp(573);
+    const enabledHarmTypesBitmaskForMessage = tmp(11303).useEnabledHarmTypesBitmaskForMessage(stateFromStores);
+    if (null == stateFromStores) {
+      const _Symbol = Symbol;
+      if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+        const items1 = [];
+        cResult[4] = items1;
+        let tmp16 = items1;
+      } else {
+        tmp16 = cResult[4];
+      }
+      return tmp16;
+    } else {
+      if (cResult[5] === enabledHarmTypesBitmaskForMessage) {
+        if (cResult[6] === arg2) {
+          if (cResult[8] === cResult[7]) {
+            let attachments;
+            if (stateFromStores != null) {
+              attachments = stateFromStores.attachments;
+            }
+            if (cResult[9] === attachments) {
+              let tmp14 = cResult[10];
+            }
+            return tmp14;
+          }
+          let found;
+          if (stateFromStores != null) {
+            const attachments1 = stateFromStores.attachments;
+            if (attachments1 != null) {
+              found = attachments1.filter(tmp10);
+            }
+          }
+          if (found == null) {
+            found = [];
+          }
+          cResult[8] = cResult[7];
+          let attachments2;
+          if (stateFromStores != null) {
+            attachments2 = stateFromStores.attachments;
+          }
+          cResult[9] = attachments2;
+          cResult[10] = found;
+          tmp14 = found;
+        }
+      }
+      const tmp11 = undefined !== arg2 ? ((url) => url.url === closure_2 || url.id === tmp) : ((media) => {
+        const obj = ObscuredMediaUtils;
+        return obj.isMediaObscuredForHarmTypes({ type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Attachment, media }, enabledHarmTypesBitmaskForMessage);
+      });
+      cResult[5] = enabledHarmTypesBitmaskForMessage;
+      cResult[6] = arg2;
+      cResult[7] = tmp11;
+    }
+    const tmpResult2 = tmp(11303);
+  }
+  const fn = function u() {
+    return MessageStore.getMessage(closure_0, closure_1);
+  };
+  cResult[1] = arg0;
+  cResult[2] = arg1;
+  cResult[3] = fn;
+  tmp6 = fn;
+}) : ((arg0, arg1, arg2) => {
+  _require = arg0;
+  dependencyMap = arg1;
+  closure_2 = arg2;
   const items = [closure_2];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => MessageStore.getMessage(closure_0, closure_1));
   let obj = require("useStateFromStores");
@@ -35,11 +113,94 @@ export const useRedactableMediaAttachmentsForMessage = function useRedactableMed
     return found;
   }
   const obj2 = require("useContentHarmTypes");
-};
-export const useRedactableMediaEmbedsForMessage = function useRedactableMediaEmbedsForMessage(channelId, messageId, embedId) {
-  _require = channelId;
-  dependencyMap = messageId;
-  closure_2 = embedId;
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/explicit_media_redaction/hooks/useExplicitMediaAttachmentsForMessage.tsx");
+
+export const useRedactableMediaAttachmentsForMessage = tmp2;
+export const useRedactableMediaEmbedsForMessage = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) => {
+  _require = arg0;
+  dependencyMap = arg1;
+  closure_2 = arg2;
+  const cResult = require("c").c(11);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [closure_2];
+    cResult[0] = items;
+    let first = items;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] === arg0) {
+    if (cResult[2] === arg1) {
+      let tmp6 = cResult[3];
+    }
+    const stateFromStores = tmp(573).useStateFromStores(first, tmp6);
+    const tmpResult = tmp(573);
+    const enabledHarmTypesBitmaskForMessage = tmp(11303).useEnabledHarmTypesBitmaskForMessage(stateFromStores);
+    if (null == stateFromStores) {
+      const _Symbol = Symbol;
+      if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+        const items1 = [];
+        cResult[4] = items1;
+        let tmp16 = items1;
+      } else {
+        tmp16 = cResult[4];
+      }
+      return tmp16;
+    } else {
+      if (cResult[5] === arg2) {
+        if (cResult[6] === enabledHarmTypesBitmaskForMessage) {
+          if (cResult[8] === cResult[7]) {
+            let embeds;
+            if (stateFromStores != null) {
+              embeds = stateFromStores.embeds;
+            }
+            if (cResult[9] === embeds) {
+              let tmp14 = cResult[10];
+            }
+            return tmp14;
+          }
+          let found;
+          if (stateFromStores != null) {
+            const embeds1 = stateFromStores.embeds;
+            if (embeds1 != null) {
+              found = embeds1.filter(tmp10);
+            }
+          }
+          if (found == null) {
+            found = [];
+          }
+          cResult[8] = cResult[7];
+          let embeds2;
+          if (stateFromStores != null) {
+            embeds2 = stateFromStores.embeds;
+          }
+          cResult[9] = embeds2;
+          cResult[10] = found;
+          tmp14 = found;
+        }
+      }
+      const tmp11 = undefined !== arg2 ? ((id) => id.id === closure_2) : ((media) => {
+        const obj = ObscuredMediaUtils;
+        return obj.isMediaObscuredForHarmTypes({ type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Embed, media }, enabledHarmTypesBitmaskForMessage);
+      });
+      cResult[5] = arg2;
+      cResult[6] = enabledHarmTypesBitmaskForMessage;
+      cResult[7] = tmp11;
+    }
+    const tmpResult2 = tmp(11303);
+  }
+  const fn = function u() {
+    return MessageStore.getMessage(closure_0, closure_1);
+  };
+  cResult[1] = arg0;
+  cResult[2] = arg1;
+  cResult[3] = fn;
+  tmp6 = fn;
+}) : ((arg0, arg1, arg2) => {
+  _require = arg0;
+  dependencyMap = arg1;
+  closure_2 = arg2;
   const items = [closure_2];
   const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => MessageStore.getMessage(closure_0, closure_1));
   let obj = require("useStateFromStores");
@@ -60,4 +221,4 @@ export const useRedactableMediaEmbedsForMessage = function useRedactableMediaEmb
     return found;
   }
   const obj2 = require("useContentHarmTypes");
-};
+});

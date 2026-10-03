@@ -1,6 +1,6 @@
-// === Module 6201: SignalHelpers ===
+// === Module 6087: SignalHelpers ===
 
-// Module 6201 (SignalHelpers)
+// Module 6087 (SignalHelpers)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -23,7 +23,7 @@ prototype["signalAllAcceptedCredentials"] = function signalAllAcceptedCredential
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -37,13 +37,13 @@ prototype["signalAllAcceptedCredentials"] = function signalAllAcceptedCredential
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            const result = credentials(6202).encodeUserIdForWebAuthn(closure_1);
+            const result = credentials(6088).encodeUserIdForWebAuthn(closure_1);
             const mapped = credentials.map((cred_id) => cred_id.cred_id);
             const found = mapped.filter((item) => "" !== item);
             const obj4 = { rpId, encodedId: result, allAcceptedCredentialIds: found, credentials };
             logger.info("signalAllAcceptedCredentials", obj4);
-            const obj5 = credentials(6202);
-            const result1 = v1(6203).signalAllAcceptedCredentials(rpId, result, found);
+            const obj5 = credentials(6088);
+            const result1 = v1(6089).signalAllAcceptedCredentials(rpId, result, found);
             v1 = 1;
             credentials = 1;
             const obj6 = { value: result1.catch(logger.warn), done: false };
@@ -58,7 +58,7 @@ prototype["signalAllAcceptedCredentials"] = function signalAllAcceptedCredential
           return obj;
         } else {
           credentials = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp5) {
         credentials = tmp;
@@ -80,7 +80,7 @@ prototype["signalCurrentUserDetails"] = function signalCurrentUserDetails(user) 
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -123,7 +123,7 @@ prototype["signalCurrentUserDetails"] = function signalCurrentUserDetails(user) 
           return obj;
         } else {
           dependencyMap = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp16) {
         dependencyMap = tmp;
@@ -145,7 +145,7 @@ prototype["signalUnknownCredential"] = function signalUnknownCredential(credenti
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -186,7 +186,7 @@ prototype["signalUnknownCredential"] = function signalUnknownCredential(credenti
           return obj;
         } else {
           c0 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp12) {
         c0 = tmp;

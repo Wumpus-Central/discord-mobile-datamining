@@ -1,19 +1,20 @@
-// === Module 11989: NewBadge ===
+// === Module 11924: NewBadge ===
 
-// Module 11989 (NewBadge)
-import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1115 */;
-import PlatformUtils from "PlatformUtils" /* 1364 */;
-import shared from "shared" /* 4714 */;
-import useThemeDefault from "useTheme" /* 4776 */;
-import Text_Text from "Text/Text" /* 4841 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 7472 */;
+// Module 11924 (NewBadge)
+import c from "c" /* 576 */;
+import nativeDefault from "native" /* 587 */;
+import util from "util" /* 1126 */;
+import PlatformUtils from "PlatformUtils" /* 1369 */;
+import shared from "shared" /* 4729 */;
+import useThemeDefault from "useTheme" /* 4791 */;
+import Text_Text from "Text/Text" /* 4886 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 7508 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let closure_5 = createStyles.createStyles((arg0, arg1) => {
   let num = 0;
   if (obj.isIOS()) {
@@ -33,10 +34,53 @@ let closure_5 = createStyles.createStyles((arg0, arg1) => {
   MOBILE_TOAST_BACKGROUND_DEFAULT = nativeDefault.colors.MOBILE_TOAST_BACKGROUND_DEFAULT;
   tmpResult = shared;
 });
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_list_v2/native/components/NewBadge.tsx");
 
-export default function NewBadge() {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(7);
+  const tmp5 = useThemeDefault();
+  const tmp6 = closure_5(useIsUsingClientThemeDefault(), tmp5);
+  ({ base, text } = tmp6);
+  const tmp4 = useIsUsingClientThemeDefault();
+  if (obj2.isThemeLight(tmp5)) {
+    let str = "text-overlay-light";
+  } else {
+    str = "text-brand";
+  }
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const intl = util.intl;
+    const stringResult = intl.string(util.t.y2b7CA);
+    cResult[0] = stringResult;
+    let first = stringResult;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] === tmp6.text) {
+    if (cResult[2] === str) {
+      let tmp9 = cResult[3];
+    }
+    if (cResult[4] === tmp6.base) {
+      if (cResult[5] === tmp9) {
+        let tmp11 = cResult[6];
+      }
+      return tmp11;
+    }
+    const obj3 = { style: base, children: tmp9 };
+    const tmp14 = <View style={base}>{tmp9}</View>;
+    cResult[4] = tmp6.base;
+    cResult[5] = tmp9;
+    cResult[6] = tmp14;
+    tmp11 = tmp14;
+  }
+  const tmp10 = jsx(Text_Text.Text, { variant: "text-xxs/bold", style: text, color: str, children: first });
+  cResult[1] = tmp6.text;
+  cResult[2] = str;
+  cResult[3] = tmp10;
+  tmp9 = tmp10;
+  obj2 = shared;
+}) : (() => {
   const tmp3 = useThemeDefault();
   const tmp4 = closure_5(useIsUsingClientThemeDefault(), tmp3);
   const obj = { style: tmp4.base, children: null };
@@ -52,4 +96,4 @@ export default function NewBadge() {
   obj2.children = intl.string(util.t.y2b7CA);
   obj.children = jsx(Text_Text.Text, { variant: "text-xxs/bold", style: tmp4.text, color: null, children: null });
   return <View style={tmp4.base}>{null}</View>;
-};
+});

@@ -1,24 +1,153 @@
-// === Module 15949: MessagesFlashList ===
+// === Module 16021: MessagesFlashList ===
 
-// Module 15949 (MessagesFlashList)
-import MessagesItemChannel from "MessagesItemChannel" /* 15879 */;
-import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 15889 */;
-import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 15891 */;
-import useMessagesData from "useMessagesData" /* 15894 */;
-import MessagesItemHappeningNowDefault from "MessagesItemHappeningNow" /* 15906 */;
-import MessagesItemEmptyStateDefault from "MessagesItemEmptyState" /* 15943 */;
-import MessagesItemSeparatorDefault from "MessagesItemSeparator" /* 15944 */;
-import MessagesItemSuggestedFriendsHeaderDefault from "MessagesItemSuggestedFriendsHeader" /* 15945 */;
-import MessagesItemAddFriendsWidgetDefault from "MessagesItemAddFriendsWidget" /* 15946 */;
+// Module 16021 (MessagesFlashList)
+import MessagesItemChannel from "MessagesItemChannel" /* 15953 */;
+import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 15963 */;
+import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 15965 */;
+import useMessagesData from "useMessagesData" /* 15968 */;
+import MessagesItemHappeningNowDefault from "MessagesItemHappeningNow" /* 15978 */;
+import MessagesItemEmptyStateDefault from "MessagesItemEmptyState" /* 16015 */;
+import MessagesItemSeparatorDefault from "MessagesItemSeparator" /* 16016 */;
+import MessagesItemSuggestedFriendsHeaderDefault from "MessagesItemSuggestedFriendsHeader" /* 16017 */;
+import MessagesItemAddFriendsWidgetDefault from "MessagesItemAddFriendsWidget" /* 16018 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesFlashList.tsx");
 
-export default noop.memo(noop.forwardRef(function MessagesFlashList(listItemHeight, arg1) {
+export default noop.memo(noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((listItemSuggestedFriendHeight, arg1) => {
+  const cResult = listItemHeight(listLeft[4]).c(45);
+  ({ accessibilityLabel, data, handleScrollAnimated, insetEnd, listItemHeight } = listItemSuggestedFriendHeight);
+  listItemSuggestedFriendHeight = listItemSuggestedFriendHeight.listItemSuggestedFriendHeight;
+  listLeft = listItemSuggestedFriendHeight.listLeft;
+  ({ listRefHappeningNow, listTop } = listItemSuggestedFriendHeight);
+  ({ scrollIndicatorInsetBottom, scrollPosition } = listItemSuggestedFriendHeight);
+  const friendSuggestions = data.friendSuggestions;
+  ({ renderHeader, renderFooter, setAddedFriendSuggestions } = data);
+  scrollPosition.useRef(null);
+  if (cResult[0] !== listItemHeight) {
+    let obj3 = { listItemHeight };
+    cResult[0] = listItemHeight;
+    cResult[1] = obj3;
+    let tmp4 = obj3;
+  } else {
+    tmp4 = cResult[1];
+  }
+  const tmp5 = listItemSuggestedFriendHeight(listLeft[5])(data, tmp4);
+  const listData = tmp5.listData;
+  ({ friendsHeaderIndex, friendsHeaderOffset } = tmp5);
+  const listHeaderHeight = tmp5.listHeaderHeight;
+  if (cResult[2] !== listHeaderHeight) {
+    class A {
+      constructor() {
+        obj = { scrollToTop() { ... } };
+        return obj;
+      }
+    }
+    const items = [listHeaderHeight];
+    cResult[2] = listHeaderHeight;
+    cResult[3] = A;
+    cResult[4] = items;
+    let tmp7 = items;
+  } else {
+    class A {
+      constructor() {
+        obj = { scrollToTop() { ... } };
+        return obj;
+      }
+    }
+    tmp7 = cResult[4];
+  }
+  const imperativeHandle = scrollPosition.useImperativeHandle(arg1, A, tmp7);
+  if (cResult[5] === friendSuggestions) {
+    class A {
+      constructor() {
+        obj = { scrollToTop() { ... } };
+        return obj;
+      }
+    }
+  }
+  class E {
+    constructor(arg0) {
+      item = listItemSuggestedFriendHeight.item;
+      kind = item.kind;
+      if ("favorite" !== kind) {
+        str2 = "channel";
+        if ("channel" !== kind) {
+          str3 = "separator";
+          if ("separator" === kind) {
+            tmp18 = jsx;
+            tmp19 = closure_1;
+            tmp20 = closure_2;
+            return jsx(closure_1(closure_2[7]), {});
+          } else {
+            str4 = "friendsHeader";
+            if ("friendsHeader" === kind) {
+              tmp11 = jsx;
+              tmp12 = closure_1;
+              tmp13 = closure_2;
+              obj1 = { scrollPosition: null, stickyAt: null, stickyTop: null, stickyLeft: null };
+              tmp14 = scrollPosition;
+              obj1.scrollPosition = scrollPosition;
+              tmp15 = friendsHeaderOffset;
+              obj1.stickyAt = friendsHeaderOffset;
+              tmp16 = listTop;
+              obj1.stickyTop = listTop;
+              tmp17 = listLeft;
+              obj1.stickyLeft = listLeft;
+              return jsx(closure_1(closure_2[8]), obj1);
+            } else {
+              str5 = "suggestedFriend";
+              if ("suggestedFriend" === kind) {
+                tmp5 = jsx;
+                tmp6 = closure_0;
+                tmp7 = closure_2;
+                obj5 = { height: null, suggestedFriend: null, onAddFriendSuggestions: null };
+                tmp8 = closure_1;
+                obj5.height = closure_1;
+                tmp9 = friendSuggestions;
+                obj5.suggestedFriend = friendSuggestions[item.row];
+                tmp10 = setAddedFriendSuggestions;
+                obj5.onAddFriendSuggestions = setAddedFriendSuggestions;
+                return jsx(closure_0(closure_2[9]).MessagesItemSuggestedFriendFlash, obj5);
+              } else {
+                str = "placeholder";
+                if ("placeholder" === kind) {
+                  tmp = jsx;
+                  tmp2 = closure_1;
+                  tmp3 = closure_2;
+                  obj = { row: null, height: null };
+                  obj.row = item.row;
+                  tmp4 = listItemHeight;
+                  obj.height = listItemHeight;
+                  return jsx(closure_1(closure_2[10]), obj);
+                } else {
+                  return;
+                }
+              }
+            }
+          }
+        }
+      }
+      obj6 = { channelId: item.channelId, placeholderHeight: listItemHeight, row: item.row };
+      return jsx(closure_0(closure_2[6]).MessagesItemChannelFlash, obj6);
+    }
+  }
+  cResult[5] = friendSuggestions;
+  cResult[6] = friendsHeaderOffset;
+  cResult[7] = listItemHeight;
+  cResult[8] = listItemSuggestedFriendHeight;
+  cResult[9] = listLeft;
+  cResult[10] = listTop;
+  cResult[11] = scrollPosition;
+  cResult[12] = setAddedFriendSuggestions;
+  cResult[13] = E;
+  let obj = listItemHeight(listLeft[4]);
+}) : ((listItemHeight, arg1) => {
   ({ data, insetEnd } = listItemHeight);
   listItemHeight = listItemHeight.listItemHeight;
   const listItemSuggestedFriendHeight = listItemHeight.listItemSuggestedFriendHeight;
@@ -33,7 +162,7 @@ export default noop.memo(noop.forwardRef(function MessagesFlashList(listItemHeig
   const setAddedFriendSuggestions = data.setAddedFriendSuggestions;
   ({ accessibilityLabel, handleScrollAnimated } = listItemHeight);
   const ref = listRefHappeningNow.useRef(null);
-  const tmp2 = listItemHeight(listItemSuggestedFriendHeight[3])(data, { listItemHeight });
+  const tmp2 = listItemHeight(listItemSuggestedFriendHeight[5])(data, { listItemHeight });
   const data2 = tmp2.listData;
   const friendsHeaderIndex = tmp2.friendsHeaderIndex;
   const extraData = tmp2.friendsHeaderOffset;
@@ -142,5 +271,5 @@ export default noop.memo(noop.forwardRef(function MessagesFlashList(listItemHeig
   const items8 = [scrollIndicatorInsetBottom];
   const contentContainerStyle = listRefHappeningNow.useMemo(() => ({ paddingBottom: insetEnd }), items7);
   const scrollIndicatorInsets = listRefHappeningNow.useMemo(() => ({ bottom: scrollIndicatorInsetBottom }), items8);
-  return listTop(insetEnd(listItemSuggestedFriendHeight[13]).AnimatedFlashList, { ref, accessibilityLabel, contentContainerStyle, data: data2, extraData, getItemType, keyExtractor, ListFooterComponent, ListHeaderComponent, onCommitLayoutEffect, onLoad: onCommitLayoutEffect, onScroll, renderItem, scrollIndicatorInsets, stickyHeaderIndices });
-}));
+  return listTop(insetEnd(listItemSuggestedFriendHeight[15]).AnimatedFlashList, { ref, accessibilityLabel, contentContainerStyle, data: data2, extraData, getItemType, keyExtractor, ListFooterComponent, ListHeaderComponent, onCommitLayoutEffect, onLoad: onCommitLayoutEffect, onScroll, renderItem, scrollIndicatorInsets, stickyHeaderIndices });
+})));

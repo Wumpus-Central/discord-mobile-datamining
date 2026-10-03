@@ -1,7 +1,7 @@
-// === Module 4497: createFavoritesGuildChannelRecord ===
+// === Module 4508: createFavoritesGuildChannelRecord ===
 
-// Module 4497 (createFavoritesGuildChannelRecord)
-import Constants from "Constants" /* 1074 */;
+// Module 4508 (createFavoritesGuildChannelRecord)
+import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
 const ChannelTypes = Constants.ChannelTypes;

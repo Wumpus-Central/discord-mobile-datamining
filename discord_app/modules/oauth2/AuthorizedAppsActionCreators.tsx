@@ -1,11 +1,11 @@
-// === Module 6777: AuthorizedAppsActionCreators ===
+// === Module 6665: AuthorizedAppsActionCreators ===
 
-// Module 6777 (AuthorizedAppsActionCreators)
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import HTTPUtils from "HTTPUtils" /* 1271 */;
-import Timers from "Timers" /* 2039 */;
+// Module 6665 (AuthorizedAppsActionCreators)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import Timers from "Timers" /* 2046 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6714 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6602 */;
 
 require = fn;
 function tokensToAppTokensMap(arg0, arr) {
@@ -52,7 +52,7 @@ let closure_10 = async function _fetchAuthorizedApps() {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -75,7 +75,7 @@ let closure_10 = async function _fetchAuthorizedApps() {
             c1 = 1;
             const obj5 = {
               value: value.then((body) => {
-                        const obj = c1(573);
+                        const obj = c1(584);
                         return obj.dispatch({ type: "USER_AUTHORIZED_APPS_UPDATE", isFullFetch: null == closure_0, tokens: closure_2_8(body.body, closure_0) });
                       }, () => {
                         if (null == closure_0) {
@@ -83,7 +83,7 @@ let closure_10 = async function _fetchAuthorizedApps() {
                         } else {
                           obj2 = { type: "partial", applicationIds: tmp };
                         }
-                        return c1(573).dispatch({ type: "USER_AUTHORIZED_APPS_REQUEST_FAILED", request: obj2 });
+                        return c1(584).dispatch({ type: "USER_AUTHORIZED_APPS_REQUEST_FAILED", request: obj2 });
                       }),
               done: false
             };
@@ -98,7 +98,7 @@ let closure_10 = async function _fetchAuthorizedApps() {
           return obj;
         } else {
           c1 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp5) {
         c1 = tmp;
@@ -107,9 +107,9 @@ let closure_10 = async function _fetchAuthorizedApps() {
     }
   })();
 };
-const FetchState = fn(6714).FetchState;
-const Endpoints = fn(1074).Endpoints;
-const batchInvocationManager = new fn(2039).BatchInvocationManager(fetchAuthorizedApps, {
+const FetchState = fn(6602).FetchState;
+const Endpoints = fn(1085).Endpoints;
+const batchInvocationManager = new fn(2046).BatchInvocationManager(fetchAuthorizedApps, {
   predicate(arg0) {
     return AuthorizedAppsStore.getFetchStateForApplication(arg0) !== FetchState.FETCHING;
   },

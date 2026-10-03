@@ -1,23 +1,23 @@
-// === Module 4498: PermissionStore ===
+// === Module 4509: PermissionStore ===
 
-// Module 4498 (PermissionStore)
+// Module 4509 (PermissionStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 2058 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4503 */;
-import ThreadActionUtils from "ThreadActionUtils" /* 4506 */;
-import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 4507 */;
-import ImpersonateStore from "ImpersonateStore" /* 2100 */;
-import LurkingStore from "LurkingStore" /* 4499 */;
-import StageInstanceStore from "StageInstanceStore" /* 2049 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4500 */;
-import UserRecord from "UserRecord" /* 1386 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildMemberStore from "GuildMemberStore" /* 2107 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import UserStore from "UserStore" /* 1372 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 2066 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4514 */;
+import ThreadActionUtils from "ThreadActionUtils" /* 4517 */;
+import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 4518 */;
+import ImpersonateStore from "ImpersonateStore" /* 2105 */;
+import LurkingStore from "LurkingStore" /* 4510 */;
+import StageInstanceStore from "StageInstanceStore" /* 2056 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4511 */;
+import UserRecord from "UserRecord" /* 1391 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import GuildMemberStore from "GuildMemberStore" /* 2112 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import UserStore from "UserStore" /* 1377 */;
 
 require = fn;
 function getUncachedChannelPermissions(id, arg1) {
@@ -57,7 +57,7 @@ function getUncachedChannelPermissions(id, arg1) {
                 if (null == currentUser1) {
                   NONE2 = PermissionUtilsAll.NONE;
                 } else {
-                  const guild = GuildStore.getGuild(guildId);
+                  guild = GuildStore.getGuild(guildId);
                   if (null == guild) {
                     let NONE = PermissionUtilsAll.NONE;
                   } else {
@@ -188,7 +188,7 @@ function handleImpersonateUpdate(guildId) {
 }
 function computePermissions(context, overwrites, roles, excludeGuildPermissions) {
   let NONE = PermissionUtilsAll.NONE;
-  if (context instanceof React6) {
+  if (context instanceof closure_1_8) {
     if (set.has(context.type)) {
       const channel = ChannelStore.getChannel(context.parent_id);
       if (null == channel) {
@@ -219,7 +219,7 @@ function computePermissions(context, overwrites, roles, excludeGuildPermissions)
         if (null == currentUser) {
           NONE2 = PermissionUtilsAll.NONE;
         } else {
-          const guild = GuildStore.getGuild(id);
+          guild = GuildStore.getGuild(id);
           if (null == guild) {
             let NONE3 = PermissionUtilsAll.NONE;
           } else {
@@ -242,12 +242,12 @@ function computePermissions(context, overwrites, roles, excludeGuildPermissions)
   NONE = tmpResult4.computePermissions({ user: UserStore.getCurrentUser(), context, overwrites, roles, checkElevated: true, excludeGuildPermissions });
   const obj3 = { user: UserStore.getCurrentUser(), context, overwrites, roles, checkElevated: true, excludeGuildPermissions };
 }
-const ChannelRecord = fn(2048);
+const ChannelRecord = fn(2055);
 ({ ChannelRecordBase: closure_8, THREAD_CHANNEL_TYPES: closure_9 } = ChannelRecord);
-const GuildRecord = fn(2062);
+const GuildRecord = fn(2070);
 ({ isGuildOwner: c10, isGuildOwnerWithRequiredMfaLevel: closure_11 } = GuildRecord);
-const Permissions = fn(1074).Permissions;
-let closure_18 = fn(4502).MemberSafetyPagePermissions;
+const Permissions = fn(1085).Permissions;
+let closure_18 = fn(4513).MemberSafetyPagePermissions;
 const dependencyMap = {};
 const dependencyMap2 = {};
 const dependencyMap3 = {};
@@ -300,7 +300,7 @@ prototype["getGuildPermissionProps"] = function getGuildPermissionProps(guild) {
   const obj = { canManageGuild: this.can(Permissions.MANAGE_GUILD, guild), canManageChannels: this.can(Permissions.MANAGE_CHANNELS, guild), canManageRoles: this.can(Permissions.MANAGE_ROLES, guild), canManageBans: this.can(Permissions.BAN_MEMBERS, guild), canManageNicknames: this.can(Permissions.MANAGE_NICKNAMES, guild), canManageGuildExpressions: this.can(Permissions.MANAGE_GUILD_EXPRESSIONS, guild) || self.can(Permissions.CREATE_GUILD_EXPRESSIONS, guild), canViewAuditLog: self.can(Permissions.VIEW_AUDIT_LOG, guild), canViewAuditLogV2: self.can(Permissions.VIEW_AUDIT_LOG, guild), canManageWebhooks: self.can(Permissions.MANAGE_WEBHOOKS, guild), canViewGuildAnalytics: self.can(Permissions.VIEW_GUILD_ANALYTICS, guild), canAccessMembersPage: self.canAccessMemberSafetyPage(guild), isGuildAdmin: self.can(Permissions.ADMINISTRATOR, guild), isOwner: null, isOwnerWithRequiredMfaLevel: null, guild: null };
   let tmp4 = null != currentUser;
   if (tmp4) {
-    tmp4 = closure_1_10(guild, currentUser);
+    tmp4 = v65535(guild, currentUser);
   }
   obj.isOwner = tmp4;
   let tmp6 = null != currentUser;
@@ -319,7 +319,7 @@ prototype["canAccessMemberSafetyPage"] = function canAccessMemberSafetyPage(id) 
     if (null == currentUser) {
       NONE = PermissionUtilsAll.NONE;
     } else {
-      const guild = GuildStore.getGuild(id);
+      guild = GuildStore.getGuild(id);
       if (null == guild) {
         let NONE2 = PermissionUtilsAll.NONE;
       } else {
@@ -355,17 +355,17 @@ prototype["canAccessGuildSettings"] = function canAccessGuildSettings(guild) {
   }
   return BigFlagUtilsAll.hasAny(NONE, PermissionUtilsAll.VIEW_GUILD_SETTINGS);
 };
-prototype["canWithPartialContext"] = function canWithPartialContext(MANAGE_MESSAGES, channelId) {
+prototype["canWithPartialContext"] = function canWithPartialContext(MANAGE_CHANNELS, channelId) {
   const self = this;
   if ("channelId" in channelId) {
     if (typeof channelId.channelId === "string") {
-      let canResult = self.can(MANAGE_MESSAGES, ChannelStore.getChannel(channelId.channelId));
+      let canResult = self.can(MANAGE_CHANNELS, ChannelStore.getChannel(channelId.channelId));
     }
     return canResult;
   }
   canResult = "guildId" in channelId && typeof channelId.guildId === "string";
   if (canResult) {
-    canResult = self.can(MANAGE_MESSAGES, GuildStore.getGuild(channelId.guildId));
+    canResult = self.can(MANAGE_CHANNELS, GuildStore.getGuild(channelId.guildId));
   }
 };
 prototype["can"] = function can(VIEW_CHANNEL, arg1, arg2, arg3, arg4) {
@@ -398,7 +398,7 @@ prototype["canManageUser"] = function canManageUser(BAN_MEMBERS, user, stateFrom
   if (user instanceof UserRecord) {
     id = user.id;
   }
-  if (closure_1_10(stateFromStores, id)) {
+  if (v65535(stateFromStores, id)) {
     return false;
   } else {
     const self = this;

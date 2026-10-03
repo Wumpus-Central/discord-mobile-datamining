@@ -1,13 +1,14 @@
-// === Module 15303: UploadIntlDataSetting ===
+// === Module 15360: UploadIntlDataSetting ===
 
-// Module 15303 (UploadIntlDataSetting)
-import AssetJsonUtils from "AssetJsonUtils" /* 1119 */;
-import _mod1153 from "module_1153" /* 1153 */;
-import PlatformUtils from "PlatformUtils" /* 1364 */;
+// Module 15360 (UploadIntlDataSetting)
+import c from "c" /* 576 */;
+import AssetJsonUtils from "AssetJsonUtils" /* 1130 */;
+import _mod1164 from "module_1164" /* 1164 */;
+import PlatformUtils from "PlatformUtils" /* 1369 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-let closure_10 = async function _serializeIntlData() {
+let closure_11 = async function _serializeIntlData() {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -18,7 +19,7 @@ let closure_10 = async function _serializeIntlData() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -43,7 +44,7 @@ let closure_10 = async function _serializeIntlData() {
           c3 = 1;
           c4 = 2;
           c5 = 1;
-          const obj4 = { value: AssetJsonUtils.loadJsonAsset(_mod1153), done: false };
+          const obj4 = { value: AssetJsonUtils.loadJsonAsset(_mod1164), done: false };
           return obj4;
         }
       } else if (1 === tmp7) {
@@ -62,15 +63,15 @@ let closure_10 = async function _serializeIntlData() {
         return obj7;
       } else {
         closure_128_0 = value;
-        const obj8 = { currentLocale: closure_129_0(closure_129_3[9]).intl.currentLocale, systemLocale: closure_129_0(closure_129_3[9]).systemLocale, initialLocale: closure_129_0(closure_129_3[9]).initialLocale, messagesFromIntl: null, messagesFromFile: null, metadata: null };
+        const obj8 = { currentLocale: closure_129_0(closure_129_3[11]).intl.currentLocale, systemLocale: closure_129_0(closure_129_3[11]).systemLocale, initialLocale: closure_129_0(closure_129_3[11]).initialLocale, messagesFromIntl: null, messagesFromFile: null, metadata: null };
         const obj9 = {};
         const _Object3 = Object;
         const _Object4 = Object;
-        const keys = Object.keys(closure_129_0(closure_129_3[9]).t);
+        const keys = Object.keys(closure_129_0(closure_129_3[11]).t);
         const merged = Object.assign(Object.fromEntries(keys.map((item) => {
           const items = [item, ];
-          const intl = closure_1_0(1115).intl;
-          items[1] = intl.reserialize(closure_1_0(1115).t[item]);
+          const intl = closure_1_0(1126).intl;
+          items[1] = intl.reserialize(closure_1_0(1126).t[item]);
           return items;
         })));
         obj8.messagesFromIntl = obj9;
@@ -86,8 +87,8 @@ let closure_10 = async function _serializeIntlData() {
           str = "iOS";
         }
         obj11.platform = str;
-        obj15 = closure_129_0(closure_129_3[10]);
-        constants = closure_129_2(closure_129_3[6]).getConstants();
+        obj15 = closure_129_0(closure_129_3[12]);
+        constants = closure_129_2(closure_129_3[8]).getConstants();
         let str3 = "N/A";
         if (str2.trim().length > 0) {
           str3 = constants.Manifest;
@@ -100,7 +101,7 @@ let closure_10 = async function _serializeIntlData() {
         const _Object = Object;
         obj11.messagesFromFileKeys = Object.keys(closure_128_0).length;
         const _Object2 = Object;
-        obj11.messagesFromIntlKeys = Object.keys(closure_129_0(closure_129_3[9]).t).length;
+        obj11.messagesFromIntlKeys = Object.keys(closure_129_0(closure_129_3[11]).t).length;
         obj8.metadata = obj11;
         closure_128_1 = obj8;
         const _JSON = JSON;
@@ -120,7 +121,7 @@ let closure_10 = async function _serializeIntlData() {
     }
   }
 };
-let closure_11 = async function _handleUploadIntlDataSettingPress() {
+let closure_12 = async function _handleUploadIntlDataSettingPress() {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -131,7 +132,7 @@ let closure_11 = async function _handleUploadIntlDataSettingPress() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -151,7 +152,7 @@ let closure_11 = async function _handleUploadIntlDataSettingPress() {
           closure_128_1 = undefined;
           closure_128_2 = undefined;
           (function onUploadIntlDataRequestStart() {
-            closure_1_0(1248).batchUpdates(() => state.setState({ isDisabled: true, isUploading: true }));
+            closure_1_0(1259).batchUpdates(() => state.setState({ isDisabled: true, isUploading: true }));
           })();
           if (obj11.isIOS()) {
             let ANDROID_APP = constants.IOS_APP;
@@ -162,7 +163,7 @@ let closure_11 = async function _handleUploadIntlDataSettingPress() {
           c3 = 2;
           (function serializeIntlData() {
             const self = this;
-            const apply = closure_1_10.apply;
+            const apply = closure_1_11.apply;
             if (typeof apply === "unknown") {
               let applyArgumentsResult = HermesBuiltin.applyArguments(self);
             } else {
@@ -177,22 +178,22 @@ let closure_11 = async function _handleUploadIntlDataSettingPress() {
       } else if (1 === tmp9) {
         c3 = 0;
         (function onUploadIntlDataRequestFinish() {
-          closure_1_0(1248).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
+          closure_1_0(1259).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
           const timerId = setTimeout(() => closure_1_0(dependencyMap[5]).batchUpdates(() => state.setState({ isDisabled: false })), 5000);
         })();
         throw closure_2;
       } else {
         if (2 === tmp9) {
           c3 = 1;
-          const obj4 = { key: "USER_SETTINGS_INTL_DATA_UPLOAD_FAILED", IconComponent: closure_129_0(closure_129_3[13]).CircleInformationIcon, content: "Failed to upload internationalization data." };
-          closure_129_1(closure_129_3[12]).open(obj4);
+          const obj4 = { key: "USER_SETTINGS_INTL_DATA_UPLOAD_FAILED", IconComponent: closure_129_0(closure_129_3[15]).CircleInformationIcon, content: "Failed to upload internationalization data." };
+          closure_129_1(closure_129_3[14]).open(obj4);
           c3 = 0;
           (function onUploadIntlDataRequestFinish() {
-            closure_1_0(1248).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
+            closure_1_0(1259).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
             const timerId = setTimeout(() => closure_1_0(dependencyMap[5]).batchUpdates(() => state.setState({ isDisabled: false })), 5000);
           })();
           c5 = 3;
-          const obj6 = closure_129_1(closure_129_3[12]);
+          const obj6 = closure_129_1(closure_129_3[14]);
         } else if (3 === tmp9) {
           if (arg0 === 1) {
             c5 = 3;
@@ -200,7 +201,7 @@ let closure_11 = async function _handleUploadIntlDataSettingPress() {
           } else if (arg0 === 2) {
             c3 = 0;
             (function onUploadIntlDataRequestFinish() {
-              closure_1_0(1248).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
+              closure_1_0(1259).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
               const timerId = setTimeout(() => closure_1_0(dependencyMap[5]).batchUpdates(() => state.setState({ isDisabled: false })), 5000);
             })();
             c5 = 3;
@@ -209,7 +210,7 @@ let closure_11 = async function _handleUploadIntlDataSettingPress() {
           } else {
             closure_128_1 = value;
             closure_128_2 = closure_129_7.DEBUG_LOG(closure_128_0, "intl_data");
-            const HTTP = closure_129_0(closure_129_3[11]).HTTP;
+            const HTTP = closure_129_0(closure_129_3[13]).HTTP;
             const request = { url: closure_128_2, body: closure_128_1, retries: 3, headers: { "Content-Type": "application/json" }, oldFormErrors: true, rejectWithError: true };
             c4 = 4;
             c5 = 1;
@@ -220,14 +221,14 @@ let closure_11 = async function _handleUploadIntlDataSettingPress() {
           c5 = 3;
           throw value;
         } else if (arg0 !== 2) {
-          const obj8 = { key: "USER_SETTINGS_INTL_DATA_UPLOADED", IconComponent: closure_129_0(closure_129_3[13]).CircleInformationIcon, content: "Internationalization data uploaded successfully." };
-          closure_129_1(closure_129_3[12]).open(obj8);
+          const obj8 = { key: "USER_SETTINGS_INTL_DATA_UPLOADED", IconComponent: closure_129_0(closure_129_3[15]).CircleInformationIcon, content: "Internationalization data uploaded successfully." };
+          closure_129_1(closure_129_3[14]).open(obj8);
           c3 = 1;
-          const obj = closure_129_1(closure_129_3[12]);
+          const obj = closure_129_1(closure_129_3[14]);
         }
         c3 = 0;
         (function onUploadIntlDataRequestFinish() {
-          closure_1_0(1248).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
+          closure_1_0(1259).batchUpdates(() => state.setState({ isDisabled: true, isUploading: false }));
           const timerId = setTimeout(() => closure_1_0(dependencyMap[5]).batchUpdates(() => state.setState({ isDisabled: false })), 5000);
         })();
         c5 = 3;
@@ -248,21 +249,60 @@ let closure_11 = async function _handleUploadIntlDataSettingPress() {
   }
 };
 const ActivityIndicator = fn(17).ActivityIndicator;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ DebugLogCategory: metroRequire, Endpoints: closure_7 } = Constants);
 const jsx = fn(21).jsx;
-const module_560 = fn(560);
-let closure_9 = module_560.create(() => ({ isDisabled: false, isUploading: false }));
-const SettingBuilders = fn(11215);
+const module_570 = fn(570);
+let closure_9 = module_570.create(() => ({ isDisabled: false, isUploading: false }));
+let ReactCompilerGating = fn(558);
+ReactCompilerGating.isReactCompilerEnabled();
+const f70357 = () => {
+
+};
+ReactCompilerGating = fn(558);
+ReactCompilerGating.isReactCompilerEnabled();
+ReactCompilerGating = fn(558);
+fn = () => closure_9().isDisabled;
+const SettingBuilders = fn(11129);
+const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(2);
+  if (typeof f70357 === "function") {
+    const isUploading = closure_9().isUploading;
+    if (cResult[0] !== isUploading) {
+      let tmp4 = null;
+      if (isUploading) {
+        tmp4 = <ActivityIndicator />;
+      }
+      cResult[0] = isUploading;
+      cResult[1] = tmp4;
+      let tmp3 = tmp4;
+    } else {
+      tmp3 = cResult[1];
+    }
+    return tmp3;
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+}) : (() => {
+  if (typeof f70357 === "function") {
+    let tmp2 = null;
+    if (closure_9().isUploading) {
+      tmp2 = <ActivityIndicator />;
+    }
+    return tmp2;
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+});
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     return "Upload i18n data";
   },
   parent: null,
-  IconComponent: fn(15304).FileUpIcon,
+  IconComponent: fn(15361).FileUpIcon,
   onPress: function handleUploadIntlDataSettingPress() {
     const self = this;
-    const apply = closure_11.apply;
+    const apply = closure_12.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -270,19 +310,40 @@ const pressable = SettingBuilders.createPressable({
     }
     return applyArgumentsResult;
   },
-  usePredicate: fn(14590).useStaffOrDeveloperSettingPredicate,
-  useTrailing: function useUploadIntlDataTrailing() {
-    let tmp = null;
-    if (closure_9().isUploading) {
-      tmp = <ActivityIndicator />;
+  usePredicate: fn(14646).useStaffOrDeveloperSettingPredicate,
+  useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+    const cResult = c.c(2);
+    if (typeof f70357 === "function") {
+      const isUploading = closure_9().isUploading;
+      if (cResult[0] !== isUploading) {
+        let tmp4 = null;
+        if (isUploading) {
+          tmp4 = <ActivityIndicator />;
+        }
+        cResult[0] = isUploading;
+        cResult[1] = tmp4;
+        let tmp3 = tmp4;
+      } else {
+        tmp3 = cResult[1];
+      }
+      return tmp3;
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    return tmp;
-  },
-  useIsDisabled: function useIsUploadIntlDataDisabled() {
-    return closure_9().isDisabled;
-  }
+  }) : (() => {
+    if (typeof f70357 === "function") {
+      let tmp2 = null;
+      if (closure_9().isUploading) {
+        tmp2 = <ActivityIndicator />;
+      }
+      return tmp2;
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  }),
+  useIsDisabled: fn
 });
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_settings/defs/native/UploadIntlDataSetting.tsx");
+const result2 = size.fileFinishedImporting("modules/user_settings/defs/native/UploadIntlDataSetting.tsx");
 
 export default pressable;

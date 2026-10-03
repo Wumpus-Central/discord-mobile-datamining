@@ -1,8 +1,9 @@
-// === Module 8249: FormTitle ===
+// === Module 8903: FormTitle ===
 
-// Module 8249 (FormTitle)
-import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1177 */;
+// Module 8903 (FormTitle)
+import c from "c" /* 576 */;
+import nativeDefault from "native" /* 587 */;
+import native from "native" /* 1188 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -10,25 +11,116 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, Platform } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-let PlatformUtils = fn(1364);
+let PlatformUtils = fn(1369);
 let num = 58;
 if (PlatformUtils.isAndroid()) {
   num = 48;
 }
-PlatformUtils = fn(1364);
+PlatformUtils = fn(1369);
 let num2 = 48;
 if (PlatformUtils.isAndroid()) {
   num2 = 56;
 }
-const createStyles = fn(4845);
-const obj4 = { titleWrapper: { flexDirection: "row", justifyContent: "space-between", paddingTop: 16, paddingBottom: 16 }, horizontalPadding: { paddingHorizontal: 16 }, thinTitle: { paddingTop: 26 }, titleText: { fontFamily: fn(1074).Fonts.PRIMARY_SEMIBOLD, fontSize: 13, color: nativeDefault.colors.TEXT_SUBTLE }, error: null };
-const obj5 = { fontFamily: fn(1074).Fonts.PRIMARY_SEMIBOLD, fontSize: 13, color: nativeDefault.colors.TEXT_SUBTLE };
+const createStyles = fn(4890);
+const obj4 = { titleWrapper: { flexDirection: "row", justifyContent: "space-between", paddingTop: 16, paddingBottom: 16 }, horizontalPadding: { paddingHorizontal: 16 }, thinTitle: { paddingTop: 26 }, titleText: { fontFamily: fn(1085).Fonts.PRIMARY_SEMIBOLD, fontSize: 13, color: nativeDefault.colors.TEXT_SUBTLE }, error: null };
+const obj5 = { fontFamily: fn(1085).Fonts.PRIMARY_SEMIBOLD, fontSize: 13, color: nativeDefault.colors.TEXT_SUBTLE };
 obj4.error = { color: nativeDefault.unsafe_rawColors.RED_400 };
 let closure_5 = createStyles.createStyles(obj4);
+const ReactCompilerGating = fn(558);
+const obj6 = { color: nativeDefault.unsafe_rawColors.RED_400 };
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/Form/native/FormTitle.tsx");
 
-export default function FormTitle(thinTitle) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(20);
+  ({ title, icon, numberOfLines, uppercaseTitle, thinTitle, error, inset, viewStyle, textStyle } = arg0);
+  let thinTitle2 = undefined !== thinTitle && thinTitle;
+  let error2 = undefined !== error && error;
+  const tmp6 = closure_5();
+  if (thinTitle2) {
+    thinTitle2 = tmp6.thinTitle;
+  }
+  let horizontalPadding = !tmp5;
+  if (!(undefined !== inset && inset)) {
+    horizontalPadding = tmp6.horizontalPadding;
+  }
+  if (cResult[0] === tmp6.titleWrapper) {
+    if (cResult[1] === thinTitle2) {
+      if (cResult[2] === horizontalPadding) {
+        if (cResult[3] === viewStyle) {
+          let tmp7 = cResult[4];
+        }
+        if (error2) {
+          error2 = tmp6.error;
+        }
+        if (cResult[5] === tmp6.titleText) {
+          if (cResult[6] === error2) {
+            if (cResult[7] === textStyle) {
+              let tmp8 = cResult[8];
+            }
+            if (cResult[9] === title) {
+              if (cResult[10] === tmp4) {
+                let tmp9 = cResult[11];
+              }
+              if (cResult[12] === numberOfLines) {
+                if (cResult[13] === tmp9) {
+                  if (cResult[14] === tmp8) {
+                    let tmp11 = cResult[15];
+                  }
+                  if (cResult[16] === icon) {
+                    if (cResult[17] === tmp11) {
+                      if (cResult[18] === tmp7) {
+                        let tmp14 = cResult[19];
+                      }
+                      return tmp14;
+                    }
+                  }
+                  const obj2 = { style: tmp7, children: null };
+                  const items = [tmp11, icon];
+                  obj2.children = items;
+                  const tmp17 = React4(React2, obj2);
+                  cResult[16] = icon;
+                  cResult[17] = tmp11;
+                  cResult[18] = tmp7;
+                  cResult[19] = tmp17;
+                  tmp14 = tmp17;
+                }
+              }
+              const obj3 = { style: tmp8, numberOfLines, accessibilityRole: "header", children: tmp9 };
+              const tmp13 = React3(native.LegacyText, obj3);
+              cResult[12] = numberOfLines;
+              cResult[13] = tmp9;
+              cResult[14] = tmp8;
+              cResult[15] = tmp13;
+              tmp11 = tmp13;
+            }
+            let formatted = title;
+            if (tmp4) {
+              formatted = title.toUpperCase();
+            }
+            cResult[9] = title;
+            cResult[10] = tmp4;
+            cResult[11] = formatted;
+            tmp9 = formatted;
+          }
+        }
+        const items1 = [tmp6.titleText, textStyle, error2];
+        cResult[5] = tmp6.titleText;
+        cResult[6] = error2;
+        cResult[7] = textStyle;
+        cResult[8] = items1;
+        tmp8 = items1;
+      }
+    }
+  }
+  const items2 = [tmp6.titleWrapper, thinTitle2, horizontalPadding, viewStyle];
+  cResult[0] = tmp6.titleWrapper;
+  cResult[1] = thinTitle2;
+  cResult[2] = horizontalPadding;
+  cResult[3] = viewStyle;
+  cResult[4] = items2;
+  tmp7 = items2;
+}) : ((thinTitle) => {
   ({ title, uppercaseTitle } = thinTitle);
   ({ icon, numberOfLines } = thinTitle);
   if (uppercaseTitle === undefined) {
@@ -74,6 +166,6 @@ export default function FormTitle(thinTitle) {
   const items2 = [React3(native.LegacyText, obj2), icon];
   obj.children = items2;
   return React4(React2, obj);
-};
+});
 export const FORM_TITLE_HEIGHT = num;
 export const THIN_FORM_TITLE_HEIGHT = num2;

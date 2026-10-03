@@ -1,6 +1,6 @@
-// === Module 1989: NativeTelemetryRingModule ===
+// === Module 1995: NativeTelemetryRingModule ===
 
-// Module 1989 (NativeTelemetryRingModule)
+// Module 1995 (NativeTelemetryRingModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

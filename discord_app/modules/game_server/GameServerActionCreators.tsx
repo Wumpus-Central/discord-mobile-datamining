@@ -1,23 +1,23 @@
-// === Module 12191: GameServerActionCreators ===
+// === Module 12141: GameServerActionCreators ===
 
-// Module 12191 (GameServerActionCreators)
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import HTTPUtils from "HTTPUtils" /* 1271 */;
-import StoreUtils from "StoreUtils" /* 5276 */;
-import gameServerResponseToInstanceDefault from "gameServerResponseToInstance" /* 7630 */;
-import GameServerMocks from "GameServerMocks" /* 12193 */;
-import GameServerStatus from "GameServerStatus" /* 12194 */;
-import regionResponseToRegionDefault from "regionResponseToRegion" /* 12196 */;
-import LocaleStore from "LocaleStore" /* 2111 */;
-import UserStore from "UserStore" /* 1372 */;
-import OwnedGameServersStore from "OwnedGameServersStore" /* 12192 */;
+// Module 12141 (GameServerActionCreators)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import StoreUtils from "StoreUtils" /* 5322 */;
+import gameServerResponseToInstanceDefault from "gameServerResponseToInstance" /* 7674 */;
+import GameServerMocks from "GameServerMocks" /* 12143 */;
+import GameServerStatus from "GameServerStatus" /* 12144 */;
+import regionResponseToRegionDefault from "regionResponseToRegion" /* 12146 */;
+import LocaleStore from "LocaleStore" /* 2116 */;
+import UserStore from "UserStore" /* 1377 */;
+import OwnedGameServersStore from "OwnedGameServersStore" /* 12142 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GAME_SERVER_COLLECTION_ID = fn(4754).GAME_SERVER_COLLECTION_ID;
-const Constants = fn(1074);
+const GAME_SERVER_COLLECTION_ID = fn(4769).GAME_SERVER_COLLECTION_ID;
+const Constants = fn(1085);
 ({ AnalyticEvents: closure_7, Endpoints: closure_8 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_server/GameServerActionCreators.tsx");
@@ -74,7 +74,7 @@ export const fetchGameServerGlobalCatalog = function fetchGameServerGlobalCatalo
   if (flag == null) {
     flag = false;
   }
-  const request = { url: React6.STOREFRONT_COLLECTION_WITH_PRODUCTS(GAME_SERVER_COLLECTION_ID), query: { locale: LocaleStore.locale, include_unpublished_products: flag, include_unpublished_collection: flag }, oldFormErrors: true, rejectWithError: null, retries: 2 };
+  const request = { url: closure_1_8.STOREFRONT_COLLECTION_WITH_PRODUCTS(GAME_SERVER_COLLECTION_ID), query: { locale: LocaleStore.locale, include_unpublished_products: flag, include_unpublished_collection: flag }, oldFormErrors: true, rejectWithError: null, retries: 2 };
   const obj = { locale: LocaleStore.locale, include_unpublished_products: flag, include_unpublished_collection: flag };
   const obj2 = StoreUtils;
   request.rejectWithError = HTTPUtils.rejectWithMigratedError();
@@ -169,22 +169,22 @@ export const updateGameServerRegionPingState = function updateGameServerRegionPi
 };
 export const enableGameServerForGuild = function enableGameServerForGuild(arg0, arg1, game_server_name, game_server_region) {
   const HTTP = HTTPUtils.HTTP;
-  const request = { url: React6.GUILD_POWERUP_TOGGLE(arg0, arg1), body: { game_server_name, game_server_region }, rejectWithError: true, oldFormErrors: true };
+  const request = { url: closure_1_8.GUILD_POWERUP_TOGGLE(arg0, arg1), body: { game_server_name, game_server_region }, rejectWithError: true, oldFormErrors: true };
   return HTTP.post(request);
 };
 export const updateGameServerForGuild = function updateGameServerForGuild(arg0, arg1, sku_id, game_server_name) {
   const HTTP = HTTPUtils.HTTP;
-  const request = { url: React6.GUILD_POWERUP_UPDATE(arg0, arg1), body: { game_server_name, sku_id }, rejectWithError: true, oldFormErrors: true };
+  const request = { url: closure_1_8.GUILD_POWERUP_UPDATE(arg0, arg1), body: { game_server_name, sku_id }, rejectWithError: true, oldFormErrors: true };
   return HTTP.patch(request);
 };
 export const disableGameServerForGuild = function disableGameServerForGuild(arg0, arg1, entitlement_id) {
   const HTTP = HTTPUtils.HTTP;
-  const request = { url: React6.GUILD_POWERUP_TOGGLE(arg0, arg1), query: { entitlement_id }, rejectWithError: true, oldFormErrors: true };
+  const request = { url: closure_1_8.GUILD_POWERUP_TOGGLE(arg0, arg1), query: { entitlement_id }, rejectWithError: true, oldFormErrors: true };
   return HTTP.del(request);
 };
 export const fetchGameServerRegions = function fetchGameServerRegions(arg0) {
   const HTTP = HTTPUtils.HTTP;
-  value = HTTP.get({ url: React6.GAME_SERVER_REGIONS(arg0), rejectWithError: true, oldFormErrors: true, retries: 3 });
+  value = HTTP.get({ url: closure_1_8.GAME_SERVER_REGIONS(arg0), rejectWithError: true, oldFormErrors: true, retries: 3 });
   return value.then((body) => {
     const obj2 = { type: "GAME_SERVER_FETCH_REGIONS_SUCCESS", regions: null };
     body = body.body;
@@ -198,7 +198,7 @@ export const fetchGameServerRegions = function fetchGameServerRegions(arg0) {
 };
 export const fetchMyGameServerRegions = function fetchMyGameServerRegions() {
   const HTTP = HTTPUtils.HTTP;
-  value = HTTP.get({ url: React6.GAME_SERVER_MY_REGIONS, rejectWithError: true, oldFormErrors: true, retries: 3 });
+  value = HTTP.get({ url: closure_1_8.GAME_SERVER_MY_REGIONS, rejectWithError: true, oldFormErrors: true, retries: 3 });
   return value.then((body) => {
     const obj2 = { type: "GAME_SERVER_FETCH_REGIONS_SUCCESS", regions: null, creationDisabled: null };
     const regions = body.body.regions;
@@ -213,7 +213,7 @@ export const fetchMyGameServerRegions = function fetchMyGameServerRegions() {
 };
 export const fetchMyGameServers = function fetchMyGameServers() {
   const HTTP = HTTPUtils.HTTP;
-  value = HTTP.get({ url: React6.GAME_SERVERS_ME, rejectWithError: true, oldFormErrors: true, retries: 3 });
+  value = HTTP.get({ url: closure_1_8.GAME_SERVERS_ME, rejectWithError: true, oldFormErrors: true, retries: 3 });
   return value.then((body) => {
     body = body.body;
     let game_servers = body.game_servers;
@@ -228,7 +228,7 @@ export const optimisticallyMarkGameServerResizing = function optimisticallyMarkG
   const gameServers = OwnedGameServersStore.getGameServers();
   const found = gameServers.find((subscription_id) => subscription_id.subscription_id === closure_0);
   if (null != found) {
-    const obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "INVALID_USE_OF_INTERNAL_FUNCTION" };
+    const obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: 720 };
     const obj3 = {};
     const merged = Object.assign(found);
     obj3.status = GameServerStatus.GameServerStatus.STARTING;
@@ -243,7 +243,7 @@ export const updateMyGameServerName = function updateMyGameServerName(arg0, name
   if (null == found) {
     let resolved = Promise.resolve();
   } else {
-    const obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "INVALID_USE_OF_INTERNAL_FUNCTION" };
+    const obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: 720 };
     const obj3 = {};
     const merged = Object.assign(found);
     obj3.name = name;
@@ -255,7 +255,7 @@ export const updateMyGameServerName = function updateMyGameServerName(arg0, name
     request.body = obj4;
     const patchResult = HTTP.patch(request);
     resolved = HTTP.patch(request).then(() => {
-      const HTTP = closure_0(1271).HTTP;
+      const HTTP = closure_0(1282).HTTP;
       value = HTTP.get({ url: constants.GAME_SERVERS_ME, rejectWithError: true, oldFormErrors: true, retries: 3 });
       value.then((body) => {
         body = body.body;
@@ -268,7 +268,7 @@ export const updateMyGameServerName = function updateMyGameServerName(arg0, name
 
       });
     }).catch((error) => {
-      const HTTP = closure_0(1271).HTTP;
+      const HTTP = closure_0(1282).HTTP;
       value = HTTP.get({ url: constants.GAME_SERVERS_ME, rejectWithError: true, oldFormErrors: true, retries: 3 });
       value.then((body) => {
         body = body.body;
@@ -283,7 +283,7 @@ export const updateMyGameServerName = function updateMyGameServerName(arg0, name
       throw error;
     });
     const nextPromise = HTTP.patch(request).then(() => {
-      const HTTP = closure_0(1271).HTTP;
+      const HTTP = closure_0(1282).HTTP;
       value = HTTP.get({ url: constants.GAME_SERVERS_ME, rejectWithError: true, oldFormErrors: true, retries: 3 });
       value.then((body) => {
         body = body.body;
@@ -304,7 +304,7 @@ export const wakeMyGameServer = function wakeMyGameServer(arg0) {
   const gameServers = OwnedGameServersStore.getGameServers();
   const found = gameServers.find((id) => id.id === closure_0);
   if (null != found) {
-    let obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "INVALID_USE_OF_INTERNAL_FUNCTION" };
+    let obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: 720 };
     let obj3 = {};
     let merged = Object.assign(found);
     obj3.status = require("GameServerStatus").GameServerStatus.STARTING;
@@ -317,16 +317,16 @@ export const wakeMyGameServer = function wakeMyGameServer(arg0) {
   return HTTP.post({ url: constants.GAME_SERVER_ME_WAKE(arg0), rejectWithError: true }).then((body) => {
     body = body.body;
     let tmp3 = body;
-    if (body.status === closure_0(12194).GameServerStatus.SLEEPING) {
+    if (body.status === closure_0(12144).GameServerStatus.SLEEPING) {
       const obj2 = {};
       const merged = Object.assign(body);
-      obj2.status = closure_0(12194).GameServerStatus.STARTING;
+      obj2.status = closure_0(12144).GameServerStatus.STARTING;
       tmp3 = obj2;
     }
     const obj3 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: tmp3 };
     DispatcherDefault.dispatch(obj3);
   }).catch((error) => {
-    const HTTP = closure_0(1271).HTTP;
+    const HTTP = closure_0(1282).HTTP;
     value = HTTP.get({ url: constants.GAME_SERVERS_ME, rejectWithError: true, oldFormErrors: true, retries: 3 });
     value.then((body) => {
       body = body.body;

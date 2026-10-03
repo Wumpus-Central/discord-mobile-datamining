@@ -1,16 +1,158 @@
-// === Module 16490: VibegrationsSettingsSheet ===
+// === Module 16568: VibegrationsSettingsSheet ===
 
-// Module 16490 (VibegrationsSettingsSheet)
-import nativeDefault from "native" /* 576 */;
-import _modDef3714 from "module_3714" /* 3714 */;
+// Module 16568 (VibegrationsSettingsSheet)
+import nativeDefault from "native" /* 587 */;
+import _modDef3723 from "module_3723" /* 3723 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6471 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VibegrationsConnectionStore from "VibegrationsConnectionStore" /* 12851 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 8686 */;
+import VibegrationsConnectionStore from "VibegrationsConnectionStore" /* 12904 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 8699 */;
 
+const useVibegrationsProjectSettingsFormDefault = tmp5(16569);
 const require = fn;
-function SettingsTabStrip(tabs) {
+const View = fn(17).View;
+let isProjectOwner = fn(8699).isProjectOwner;
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+const VibegrationsSettingsSheet = "VibegrationsSettingsSheet";
+let obj = { project: _modDef3723.wo1EUp, app: _modDef3723["8drwHu"], secrets: _modDef3723.iD7xfZ, model: _modDef3723.aMTBSX };
+const createStyles = fn(4890);
+let closure_14 = createStyles.createStyles((paddingBottom) => {
+  obj = { container: { gap: nativeDefault.space.PX_16, paddingBottom } };
+  return obj;
+});
+fn(558);
+const ReactCompilerGating = fn(558);
+let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((tabs) => {
+  let Tabs = tabs;
+  obj = dependencyMap;
+  const cResult = tabs(576).c(18);
+  tabs = tabs.tabs;
+  ({ selected, onSelect } = tabs);
+  const obj2 = tabs(576);
+  [tmp3, dependencyMap] = noop.useState(0);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const fn = function o(nativeEvent) {
+      dependencyMap(nativeEvent.nativeEvent.layout.width);
+    };
+    cResult[0] = fn;
+    let first = fn;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] !== tabs) {
+    const _Symbol = Symbol;
+    if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+      const fn2 = function x(id) {
+        obj = { id, label: null, page: null };
+        const intl = tabs(1126).intl;
+        obj.label = intl.string(closure_1_13[id]);
+        return obj;
+      };
+      cResult[3] = fn2;
+      let tmp6 = fn2;
+    } else {
+      tmp6 = cResult[3];
+    }
+    const mapped = tabs.map(tmp6);
+    cResult[1] = tabs;
+    cResult[2] = mapped;
+  } else {
+    if (cResult[4] === selected) {
+      if (cResult[5] === tabs) {
+        let tmp9 = cResult[6];
+      }
+      const _Math = Math;
+      const bound = Math.max(0, tmp9);
+      if (cResult[7] === onSelect) {
+        if (cResult[8] === tabs) {
+          let tmp12 = cResult[9];
+        }
+        if (cResult[10] === tmp5) {
+          if (cResult[11] === tmp3) {
+            if (cResult[12] === bound) {
+              if (cResult[13] === tmp12) {
+                let tmp13 = cResult[14];
+              }
+              const segmentedControlState = Tabs(9282).useSegmentedControlState(tmp13);
+              if (cResult[15] === segmentedControlState) {
+                if (cResult[16] === tabs.length) {
+                  return cResult[17];
+                }
+              }
+              class P {
+                constructor(arg0) {
+                  tmp = tabs[tabs];
+                  if (null != tmp) {
+                    tmp2 = onSelect;
+                    tmp3 = onSelect(tmp);
+                  }
+                  return;
+                }
+              }
+              let obj3 = { onLayout: first, children: null };
+              if (tabs.length > 3) {
+                Tabs = Tabs(12282).Tabs;
+                obj = { state: segmentedControlState };
+                let tmp15Result = tmp15(Tabs, obj);
+              } else {
+                const obj4 = { state: segmentedControlState };
+                tmp15Result = tmp15(Tabs(9283).SegmentedControl, obj4);
+              }
+              obj3.children = tmp15Result;
+              obj3 = tmp15(View, obj3);
+              cResult[15] = segmentedControlState;
+              tabs = tabs.length;
+              cResult[16] = tabs;
+              cResult[17] = obj3;
+              const TabsResult = Tabs(9282);
+            }
+          }
+        }
+        const obj5 = { items: tmp5, pageWidth: null, defaultIndex: null, onSetActiveIndex: null };
+        class P {
+          constructor(arg0) {
+            tmp = tabs[tabs];
+            if (null != tmp) {
+              tmp2 = onSelect;
+              tmp3 = onSelect(tmp);
+            }
+            return;
+          }
+        }
+        obj5.defaultIndex = bound;
+        obj5.onSetActiveIndex = tmp12;
+        cResult[10] = tmp5;
+        cResult[11] = tmp3;
+        cResult[12] = bound;
+        cResult[13] = tmp12;
+        cResult[14] = obj5;
+        tmp13 = obj5;
+      }
+      class P {
+        constructor(arg0) {
+          tmp = tabs[tabs];
+          if (null != tmp) {
+            tmp2 = onSelect;
+            tmp3 = onSelect(tmp);
+          }
+          return;
+        }
+      }
+      cResult[7] = onSelect;
+      cResult[8] = tabs;
+      cResult[9] = P;
+      tmp12 = P;
+    }
+    const index = tabs.indexOf(selected);
+    cResult[5] = tabs;
+    cResult[6] = index;
+    tmp9 = index;
+  }
+  const tmp2 = _slicedToArray(noop.useState(0), 2);
+}) : ((tabs) => {
   tabs = tabs.tabs;
   const onSelect = tabs.onSelect;
   dependencyMap = undefined;
@@ -21,12 +163,12 @@ function SettingsTabStrip(tabs) {
   }, []);
   const memo = noop.useMemo(() => tabs.map((id) => {
     obj = { id, label: null, page: null };
-    const intl = tabs(_undefined[16]).intl;
+    const intl = tabs(_undefined[17]).intl;
     obj.label = intl.string(closure_1_13[id]);
     return obj;
   }), items);
   const tmp = _slicedToArray(noop.useState(0), 2);
-  obj = tabs(9276);
+  obj = tabs(9282);
   const segmentedControlState = obj.useSegmentedControlState({
     items: memo,
     pageWidth: tmp2,
@@ -40,29 +182,209 @@ function SettingsTabStrip(tabs) {
   const obj3 = { onLayout: callback, children: null };
   if (tabs.length > 3) {
     const obj4 = { state: segmentedControlState };
-    let tmp8Result = closure_10(tmp5(12326).Tabs, obj4);
+    let tmp8Result = closure_10(tmp5(12282).Tabs, obj4);
   } else {
     const obj5 = { state: segmentedControlState };
-    tmp8Result = closure_10(tmp5(9277).SegmentedControl, obj5);
+    tmp8Result = closure_10(tmp5(9283).SegmentedControl, obj5);
   }
   obj3.children = tmp8Result;
   return closure_10(View, obj3);
-}
-const View = fn(17).View;
-let isProjectOwner = fn(8686).isProjectOwner;
-const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const VibegrationsSettingsSheet = "VibegrationsSettingsSheet";
-let obj = { project: _modDef3714.wo1EUp, app: _modDef3714["8drwHu"], secrets: _modDef3714.iD7xfZ, model: _modDef3714.aMTBSX };
-const createStyles = fn(4845);
-let closure_14 = createStyles.createStyles((paddingBottom) => {
-  obj = { container: { gap: nativeDefault.space.PX_16, paddingBottom } };
-  return obj;
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/vibegrations/native/VibegrationsSettingsSheet.tsx");
 
-export default function VibegrationsSettingsSheet(projectId) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
+  const cResult = projectId(576).c(74);
+  projectId = projectId.projectId;
+  ({ initialTab, scopeKeys, note, notifyAgent, isPreview } = projectId);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    let obj2 = { includeKeyboardHeight: true };
+    cResult[0] = obj2;
+    let first = obj2;
+  } else {
+    first = cResult[0];
+  }
+  closure_14(useSafeAreaInsetsKeyboardAwareDefault(first).insets.bottom);
+  if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
+    let items = [VibegrationsProjectStore];
+    cResult[1] = items;
+    let tmp7 = items;
+  } else {
+    tmp7 = cResult[1];
+  }
+  if (cResult[2] !== projectId) {
+    class E {
+      constructor() {
+        return closure_8.getProject(closure_0);
+      }
+    }
+    const items1 = [projectId];
+    cResult[2] = projectId;
+    cResult[3] = E;
+    cResult[4] = items1;
+    let tmp10 = items1;
+  } else {
+    class E {
+      constructor() {
+        return closure_8.getProject(closure_0);
+      }
+    }
+    tmp10 = cResult[4];
+  }
+  obj = projectId(576);
+  const stateFromStores = projectId(504).useStateFromStores(tmp7, E, tmp10);
+  if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
+    class E {
+      constructor() {
+        return closure_8.getProject(closure_0);
+      }
+    }
+    const items2 = [VibegrationsConnectionStore];
+    cResult[5] = items2;
+    const tmp12 = items2;
+  } else {
+    class E {
+      constructor() {
+        return closure_8.getProject(closure_0);
+      }
+    }
+  }
+  if (cResult[6] !== projectId) {
+    class K {
+      constructor() {
+        modelSettings = closure_7.getModelSettings(closure_0);
+        tierSettings = undefined;
+        if (modelSettings != null) {
+          tierSettings = modelSettings.tierSettings;
+        }
+        return null != tierSettings;
+      }
+    }
+    const items3 = [projectId];
+    cResult[6] = projectId;
+    cResult[7] = K;
+    cResult[8] = items3;
+    let tmp14 = items3;
+  } else {
+    class K {
+      constructor() {
+        modelSettings = closure_7.getModelSettings(closure_0);
+        tierSettings = undefined;
+        if (modelSettings != null) {
+          tierSettings = modelSettings.tierSettings;
+        }
+        return null != tierSettings;
+      }
+    }
+    tmp14 = cResult[8];
+  }
+  const tmpResult = projectId(504);
+  const stateFromStores1 = projectId(504).useStateFromStores(tmp12, K, tmp14);
+  if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
+    class K {
+      constructor() {
+        modelSettings = closure_7.getModelSettings(closure_0);
+        tierSettings = undefined;
+        if (modelSettings != null) {
+          tierSettings = modelSettings.tierSettings;
+        }
+        return null != tierSettings;
+      }
+    }
+    const items4 = [VibegrationsConnectionStore];
+    cResult[9] = items4;
+    const tmp16 = items4;
+  } else {
+    class K {
+      constructor() {
+        modelSettings = closure_7.getModelSettings(closure_0);
+        tierSettings = undefined;
+        if (modelSettings != null) {
+          tierSettings = modelSettings.tierSettings;
+        }
+        return null != tierSettings;
+      }
+    }
+  }
+  if (cResult[10] !== projectId) {
+    class O {
+      constructor() {
+        return "open" === closure_7.getConnState(closure_0);
+      }
+    }
+    const items5 = [projectId];
+    cResult[10] = projectId;
+    cResult[11] = items5;
+    cResult[12] = O;
+    let tmp18 = O;
+    const tmp17 = items5;
+  } else {
+    class O {
+      constructor() {
+        return "open" === closure_7.getConnState(closure_0);
+      }
+    }
+    tmp18 = cResult[12];
+  }
+  const tmpResult3 = projectId(504);
+  const stateFromStores2 = projectId(504).useStateFromStores(tmp16, tmp18, tmp17);
+  if (cResult[13] !== stateFromStores) {
+    class O {
+      constructor() {
+        return "open" === closure_7.getConnState(closure_0);
+      }
+    }
+    let tmp21 = null != stateFromStores;
+    if (tmp21) {
+      class O {
+        constructor() {
+          return "open" === closure_7.getConnState(closure_0);
+        }
+      }
+      tmp21 = isProjectOwner(stateFromStores);
+    }
+    cResult[13] = stateFromStores;
+    cResult[14] = tmp21;
+  } else {
+    class O {
+      constructor() {
+        return "open" === closure_7.getConnState(closure_0);
+      }
+    }
+  }
+  const tmpResult4 = projectId(504);
+  if (stateFromStores != null) {
+    class O {
+      constructor() {
+        return "open" === closure_7.getConnState(closure_0);
+      }
+    }
+  }
+  if (undefined == null) {
+    class O {
+      constructor() {
+        return "open" === closure_7.getConnState(closure_0);
+      }
+    }
+  }
+  const tmp5Result = useVibegrationsProjectSettingsFormDefault;
+  importDefault = useVibegrationsProjectSettingsFormDefault(projectId, undefined);
+  if (cResult[15] === isPreview) {
+    class O {
+      constructor() {
+        return "open" === closure_7.getConnState(closure_0);
+      }
+    }
+  }
+  cResult[15] = isPreview;
+  cResult[16] = note;
+  cResult[17] = notifyAgent;
+  cResult[18] = projectId;
+  cResult[19] = scopeKeys;
+  cResult[20] = { projectId, scopeKeys, note, notifyAgent, isPreview };
+  let obj3 = { projectId, scopeKeys, note, notifyAgent, isPreview };
+  const tmp5ResultResult = useVibegrationsProjectSettingsFormDefault(projectId, undefined);
+}) : ((projectId) => {
   projectId = projectId.projectId;
   let stateFromStores1;
   dependencyMap = undefined;
@@ -77,7 +399,7 @@ export default function VibegrationsSettingsSheet(projectId) {
   closure_11 = undefined;
   let canSave;
   ({ guildId, initialTab, scopeKeys, note, notifyAgent, isPreview } = projectId);
-  const tmp3 = closure_14(stateFromStores1(6588)({ includeKeyboardHeight: true }).insets.bottom);
+  const tmp3 = closure_14(stateFromStores1(6471)({ includeKeyboardHeight: true }).insets.bottom);
   let items = [memo];
   const items1 = [projectId];
   const stateFromStores = projectId(504).useStateFromStores(items, () => VibegrationsProjectStore.getProject(projectId), items1);
@@ -109,9 +431,9 @@ export default function VibegrationsSettingsSheet(projectId) {
   if (guild_id == null) {
     guild_id = guildId;
   }
-  const tmpResultResult = stateFromStores1(16491)(projectId, guild_id);
+  const tmpResultResult = stateFromStores1(16569)(projectId, guild_id);
   asyncGeneratorStep = tmpResultResult;
-  const tmp13 = stateFromStores1(16493)({ projectId, scopeKeys, note, notifyAgent, isPreview });
+  const tmp13 = stateFromStores1(16571)({ projectId, scopeKeys, note, notifyAgent, isPreview });
   _slicedToArray = tmp13;
   isScoped = tmp13.isScoped;
   loaded = tmp13.loaded;
@@ -171,7 +493,7 @@ export default function VibegrationsSettingsSheet(projectId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -219,8 +541,8 @@ export default function VibegrationsSettingsSheet(projectId) {
           closure_128_3 = closure_128_1[1];
           if (closure_128_2) {
             if (closure_128_3) {
-              tmp3(dependencyMap[14]).hideActionSheet(closure_1_12);
-              obj = tmp3(dependencyMap[14]);
+              tmp3(dependencyMap[16]).hideActionSheet(closure_1_12);
+              obj = tmp3(dependencyMap[16]);
             }
           }
           if (!closure_128_2) {
@@ -241,12 +563,12 @@ export default function VibegrationsSettingsSheet(projectId) {
     }
   }), items8);
   let obj5 = { startExpanded: true, dismissAccessibilityLabel: null, header: null, children: null };
-  const intl = tmp4(1115).intl;
-  obj5.dismissAccessibilityLabel = intl.string(stateFromStores1(3714).Wzi4Jd);
-  const intl2 = tmp4(1115).intl;
-  const tmpResult2 = stateFromStores1(3714);
-  const tmpResult = stateFromStores1(16491);
-  obj5.header = found(projectId(6756).BottomSheetTitleHeader, { title: intl2.string(isScoped ? tmpResult2.wgDhiQ : tmpResult2.cWmjzs) });
+  const intl = tmp4(1126).intl;
+  obj5.dismissAccessibilityLabel = intl.string(stateFromStores1(3723).Wzi4Jd);
+  const intl2 = tmp4(1126).intl;
+  const tmpResult2 = stateFromStores1(3723);
+  const tmpResult = stateFromStores1(16569);
+  obj5.header = found(projectId(6644).BottomSheetTitleHeader, { title: intl2.string(isScoped ? tmpResult2.wgDhiQ : tmpResult2.cWmjzs) });
   const obj7 = { style: tmp3.container, children: null };
   let tmp21Result = null;
   if (!isScoped) {
@@ -255,7 +577,7 @@ export default function VibegrationsSettingsSheet(projectId) {
       tmp21Result = null;
       if (null != found) {
         const obj8 = { tabs: memo, selected: found, onSelect: tmp17 };
-        tmp21Result = tmp21(SettingsTabStrip, obj8, memo.join(","));
+        tmp21Result = tmp21(closure_15, obj8, memo.join(","));
       }
     }
   }
@@ -287,7 +609,7 @@ export default function VibegrationsSettingsSheet(projectId) {
     tmp21Result3 = null;
     if ("model" === found) {
       const obj9 = { projectId };
-      tmp21Result3 = tmp21(tmp4(16494).VibegrationsModelSettingsContent, obj9);
+      tmp21Result3 = tmp21(tmp4(16572).VibegrationsModelSettingsContent, obj9);
     }
   }
   items9[4] = tmp21Result3;
@@ -297,27 +619,27 @@ export default function VibegrationsSettingsSheet(projectId) {
     if (null == found) {
       if (stateFromStores2) {
         const obj10 = { variant: "text-sm/normal", color: "text-muted", children: null };
-        const intl3 = tmp4(1115).intl;
-        obj10.children = intl3.string(tmp(3714).URnN4B);
-        let tmp21Result4 = tmp21(tmp4(4841).Text, obj10);
+        const intl3 = tmp4(1126).intl;
+        obj10.children = intl3.string(tmp(3723).URnN4B);
+        let tmp21Result4 = tmp21(tmp4(4886).Text, obj10);
       } else {
-        tmp21Result4 = tmp21(tmp4(6075).ActivityIndicator, {});
+        tmp21Result4 = tmp21(tmp4(5968).ActivityIndicator, {});
       }
     }
   }
   items9[5] = tmp31;
-  const intl4 = tmp4(1115).intl;
+  const intl4 = tmp4(1126).intl;
   if (isScoped) {
-    let Tuz9vw = tmp(3714).Tuz9vw;
+    let Tuz9vw = tmp(3723).Tuz9vw;
   } else {
-    Tuz9vw = tmp4(1115).t["R3BPH+"];
+    Tuz9vw = tmp4(1126).t["R3BPH+"];
   }
   const obj6 = { title: intl2.string(isScoped ? tmpResult2.wgDhiQ : tmpResult2.cWmjzs) };
   const tmp23 = closure_11;
   const tmp24 = loaded;
-  items9[6] = found(projectId(5465).Button, { text: intl4.string(Tuz9vw), variant: "primary", loading: tmpResultResult.saving || tmp13.saving, disabled: !canSave, onPress: callback });
+  items9[6] = found(projectId(5594).Button, { text: intl4.string(Tuz9vw), variant: "primary", loading: tmpResultResult.saving || tmp13.saving, disabled: !canSave, onPress: callback });
   obj7.children = items9;
   obj5.children = tmp23(tmp24, obj7);
-  return found(projectId(6804).ActionSheet, obj5);
-};
+  return found(projectId(6701).ActionSheet, obj5);
+});
 export const VIBEGRATIONS_SETTINGS_SHEET_KEY = "VibegrationsSettingsSheet";

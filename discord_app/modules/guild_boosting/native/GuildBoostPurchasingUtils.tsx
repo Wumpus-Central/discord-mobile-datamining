@@ -1,8 +1,8 @@
-// === Module 7011: GuildBoostPurchasingUtils ===
+// === Module 6909: GuildBoostPurchasingUtils ===
 
-// Module 7011 (GuildBoostPurchasingUtils)
+// Module 6909 (GuildBoostPurchasingUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SubscriptionStore from "SubscriptionStore" /* 4523 */;
+import SubscriptionStore from "SubscriptionStore" /* 4534 */;
 
 const require = fn;
 let closure_10 = async function _launchGuildBoostFlowOrAlert(arg0) {
@@ -16,7 +16,7 @@ let closure_10 = async function _launchGuildBoostFlowOrAlert(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -46,7 +46,7 @@ let closure_10 = async function _launchGuildBoostFlowOrAlert(arg0) {
           closure_130_10 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "flex", done: null };
+          return { value: "Reflect", done: true };
         }
       } else {
         if (1 === tmp6) {
@@ -63,12 +63,12 @@ let closure_10 = async function _launchGuildBoostFlowOrAlert(arg0) {
             if (null != externalManagementMessage) {
               (function alertUnableToManageSub(body, source) {
                 const obj2 = { title: null, body: null };
-                const intl = closure_1_0(1115).intl;
-                obj2.title = intl.string(closure_1_0(1115).t["8P7MX0"]);
+                const intl = closure_1_0(1126).intl;
+                obj2.title = intl.string(closure_1_0(1126).t["8P7MX0"]);
                 obj2.body = body;
-                closure_1_1(5388).show(obj2);
-                const obj = closure_1_1(5388);
-                closure_1_1(1241).track(constants.OPEN_MODAL, { type: closure_1_6.IOS_CANNOT_MANAGE_SUBSCRIPTION, source });
+                closure_1_1(5708).show(obj2);
+                const obj = closure_1_1(5708);
+                closure_1_1(1252).track(constants.OPEN_MODAL, { type: closure_1_6.IOS_CANNOT_MANAGE_SUBSCRIPTION, source });
               })(externalManagementMessage, closure_130_0);
             } else {
               closure_130_8 = null;
@@ -137,10 +137,10 @@ let closure_10 = async function _launchGuildBoostFlowOrAlert(arg0) {
                     let num3 = 0;
                     const sum = interval.numPremiumGuild + num2;
                     if (null != closure_1_6) {
-                      const numPremiumGuildSubscriptions = closure_0(4517).getNumPremiumGuildSubscriptions(closure_1_6.additionalPlans);
-                      const obj = closure_0(4517);
-                      num3 = numPremiumGuildSubscriptions + c1(4517).getNumIncludedPremiumGuildSubscriptionSlots(closure_1_6.planId);
-                      const obj2 = c1(4517);
+                      const numPremiumGuildSubscriptions = closure_0(4528).getNumPremiumGuildSubscriptions(closure_1_6.additionalPlans);
+                      const obj = closure_0(4528);
+                      num3 = numPremiumGuildSubscriptions + c1(4528).getNumIncludedPremiumGuildSubscriptionSlots(closure_1_6.planId);
+                      const obj2 = c1(4528);
                     }
                     tmp = sum > num3;
                   }
@@ -166,9 +166,9 @@ let closure_10 = async function _launchGuildBoostFlowOrAlert(arg0) {
     }
   }
 };
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsSections: metroRequire } = Constants);
-const PremiumConstants = fn(1374);
+const PremiumConstants = fn(1379);
 ({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_7, PremiumTypes: closure_8, SubscriptionIntervalTypes: closure_9 } = PremiumConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_boosting/native/GuildBoostPurchasingUtils.tsx");

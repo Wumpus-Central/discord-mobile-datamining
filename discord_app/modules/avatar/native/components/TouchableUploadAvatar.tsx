@@ -1,20 +1,21 @@
-// === Module 17470: TouchableUploadAvatar ===
+// === Module 17556: TouchableUploadAvatar ===
 
-// Module 17470 (TouchableUploadAvatar)
-import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1115 */;
-import native from "native" /* 1177 */;
-import Pressables from "Pressables" /* 5621 */;
-import FastImageDefault from "FastImage" /* 6085 */;
-import _modDef12501 from "module_12501" /* 12501 */;
-import _modDef13611 from "module_13611" /* 13611 */;
+// Module 17556 (TouchableUploadAvatar)
+import c from "c" /* 576 */;
+import nativeDefault from "native" /* 587 */;
+import util from "util" /* 1126 */;
+import native from "native" /* 1188 */;
+import Pressables from "Pressables" /* 5909 */;
+import FastImageDefault from "FastImage" /* 5974 */;
+import _modDef12442 from "module_12442" /* 12442 */;
+import _modDef13673 from "module_13673" /* 13673 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = { avatarContainer: { display: "flex", paddingTop: 24 }, defaultLogoStyle: { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, width: 96 }, uploadedAvatarStyle: { width: 200, height: 200, borderRadius: 100, position: "relative" }, avatarWrapper: null, uploadAvatarWrapper: null, uploadAvatarIcon: null };
 let size = { borderColor: nativeDefault.colors.BORDER_MUTED, borderStyle: "dashed", borderWidth: 2, borderRadius: nativeDefault.radii.round, width: 200, height: 200, justifyContent: "center", alignItems: "center", position: "relative", overflow: "visible" };
 obj2.avatarWrapper = size;
@@ -23,17 +24,113 @@ obj2.uploadAvatarWrapper = size1;
 let obj3 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, width: 96 };
 obj2.uploadAvatarIcon = { tintColor: nativeDefault.colors.WHITE, alignSelf: "center" };
 let closure_6 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj4 = { tintColor: nativeDefault.colors.WHITE, alignSelf: "center" };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/avatar/native/components/TouchableUploadAvatar.tsx");
 
-export default function TouchableUploadAvatar(onSelectAvatar) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(19);
+  ({ avatarSource, showPendingAvatar, onSelectAvatar } = arg0);
+  const tmp5 = closure_6();
+  if (!(undefined !== showPendingAvatar && showPendingAvatar)) {
+    let tmp7 = _modDef13673;
+  } else {
+    tmp7 = avatarSource;
+  }
+  if (undefined !== showPendingAvatar && showPendingAvatar) {
+    if (null != avatarSource) {
+      let defaultLogoStyle = tmp5.uploadedAvatarStyle;
+    }
+    const _Symbol = Symbol;
+    if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+      const intl = util.intl;
+      const stringResult = intl.string(util.t["70lEQe"]);
+      cResult[0] = stringResult;
+      let first = stringResult;
+    } else {
+      first = cResult[0];
+    }
+    if (cResult[1] === tmp7) {
+      if (cResult[2] === defaultLogoStyle) {
+        let tmp13 = cResult[3];
+      }
+      if (cResult[4] !== tmp5.uploadAvatarIcon) {
+        const obj2 = { size: native.Icon.Sizes.MEDIUM, source: _modDef12442, style: tmp5.uploadAvatarIcon };
+        const tmp20 = React4(native.Icon, obj2);
+        cResult[4] = tmp5.uploadAvatarIcon;
+        cResult[5] = tmp20;
+        let tmp17 = tmp20;
+      } else {
+        tmp17 = cResult[5];
+      }
+      if (cResult[6] === tmp5.uploadAvatarWrapper) {
+        if (cResult[7] === tmp17) {
+          let tmp21 = cResult[8];
+        }
+        if (cResult[9] === tmp5.avatarWrapper) {
+          if (cResult[10] === tmp13) {
+            if (cResult[11] === tmp21) {
+              let tmp25 = cResult[12];
+            }
+            if (cResult[13] === onSelectAvatar) {
+              if (cResult[14] === tmp25) {
+                let tmp29 = cResult[15];
+              }
+              if (cResult[16] === tmp5.avatarContainer) {
+                if (cResult[17] === tmp29) {
+                  let tmp32 = cResult[18];
+                }
+                return tmp32;
+              }
+              const obj3 = { style: tmp5.avatarContainer, children: tmp29 };
+              const tmp35 = React4(View, obj3);
+              cResult[16] = tmp5.avatarContainer;
+              cResult[17] = tmp29;
+              cResult[18] = tmp35;
+              tmp32 = tmp35;
+            }
+            const obj4 = { onPress: onSelectAvatar, accessibilityRole: "button", accessibilityLabel: first, children: tmp25 };
+            const tmp31 = React4(Pressables.PressableOpacity, obj4);
+            cResult[13] = onSelectAvatar;
+            cResult[14] = tmp25;
+            cResult[15] = tmp31;
+            tmp29 = tmp31;
+          }
+        }
+        const obj5 = { style: tmp5.avatarWrapper, children: null };
+        const items = [tmp13, tmp21];
+        obj5.children = items;
+        const tmp28 = hasOwnProperty(View, obj5);
+        cResult[9] = tmp5.avatarWrapper;
+        cResult[10] = tmp13;
+        cResult[11] = tmp21;
+        cResult[12] = tmp28;
+        tmp25 = tmp28;
+      }
+      const obj6 = { style: tmp5.uploadAvatarWrapper, children: tmp17 };
+      const tmp24 = React4(View, obj6);
+      cResult[6] = tmp5.uploadAvatarWrapper;
+      cResult[7] = tmp17;
+      cResult[8] = tmp24;
+      tmp21 = tmp24;
+    }
+    const obj7 = { resizeMode: "contain", style: defaultLogoStyle, source: tmp7 };
+    const tmp16 = React4(FastImageDefault, obj7);
+    cResult[1] = tmp7;
+    cResult[2] = defaultLogoStyle;
+    cResult[3] = tmp16;
+    tmp13 = tmp16;
+  }
+  defaultLogoStyle = tmp5.defaultLogoStyle;
+}) : ((onSelectAvatar) => {
   ({ avatarSource, showPendingAvatar } = onSelectAvatar);
   if (showPendingAvatar === undefined) {
     showPendingAvatar = false;
   }
   const tmp = closure_6();
   if (!showPendingAvatar) {
-    let tmp3 = _modDef13611;
+    let tmp3 = _modDef13673;
   } else {
     tmp3 = avatarSource;
   }
@@ -49,7 +146,7 @@ export default function TouchableUploadAvatar(onSelectAvatar) {
     const obj4 = { resizeMode: "contain", style: defaultLogoStyle, source: tmp3 };
     const items = [React4(FastImageDefault, obj4), ];
     const obj5 = { style: tmp.uploadAvatarWrapper, children: null };
-    const obj6 = { size: native.Icon.Sizes.MEDIUM, source: _modDef12501, style: tmp.uploadAvatarIcon };
+    const obj6 = { size: native.Icon.Sizes.MEDIUM, source: _modDef12442, style: tmp.uploadAvatarIcon };
     obj5.children = React4(native.Icon, obj6);
     items[1] = React4(View, obj5);
     obj3.children = items;
@@ -58,4 +155,4 @@ export default function TouchableUploadAvatar(onSelectAvatar) {
     return React4(View, obj);
   }
   defaultLogoStyle = tmp.defaultLogoStyle;
-};
+});

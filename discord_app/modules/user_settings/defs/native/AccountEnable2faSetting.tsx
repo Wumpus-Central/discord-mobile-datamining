@@ -1,20 +1,22 @@
-// === Module 14526: AccountEnable2faSetting ===
+// === Module 14561: AccountEnable2faSetting ===
 
-// Module 14526 (AccountEnable2faSetting)
-import util from "util" /* 1115 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5387 */;
-import SettingsAccountUtils from "SettingsAccountUtils" /* 14455 */;
-import TwoFASetupModalActionCreatorsDefault from "TwoFASetupModalActionCreators" /* 14527 */;
-import UserStore from "UserStore" /* 1372 */;
+// Module 14561 (AccountEnable2faSetting)
+import util from "util" /* 1126 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5707 */;
+import SettingsAccountUtils from "SettingsAccountUtils" /* 14490 */;
+import TwoFASetupModalActionCreatorsDefault from "TwoFASetupModalActionCreators" /* 14562 */;
+import UserStore from "UserStore" /* 1377 */;
 
 require = fn;
-const SettingBuilders = fn(11215);
+let ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
+const SettingBuilders = fn(11129);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.cDgKte);
   },
-  parent: fn(7590).MobileUserSettings.ACCOUNT,
+  parent: fn(7634).MobileUserSettings.ACCOUNT,
   onPress: function onAccountEnable2FASettingPress() {
     const currentUser = UserStore.getCurrentUser();
     let verified;
@@ -34,11 +36,9 @@ const pressable = SettingBuilders.createPressable({
     AlertActionCreatorsDefault.show(obj3);
   },
   withArrow: true,
-  usePredicate: function useHasAccountEnable2FASetting() {
-    return !SettingsAccountUtils.useIsTOTPEnabled();
-  }
+  usePredicate: () => !SettingsAccountUtils.useIsTOTPEnabled()
 });
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountEnable2faSetting.tsx");
+const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/AccountEnable2faSetting.tsx");
 
 export default pressable;

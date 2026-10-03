@@ -1,17 +1,17 @@
-// === Module 12026: CreateGuildContainer ===
+// === Module 11961: CreateGuildContainer ===
 
-// Module 12026 (CreateGuildContainer)
+// Module 11961 (CreateGuildContainer)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 4496 */;
-import UserStore from "UserStore" /* 1372 */;
+import GuildChannelStore from "GuildChannelStore" /* 4507 */;
+import UserStore from "UserStore" /* 1377 */;
 
 const require = fn;
-const UPLOAD_MEDIUM_SIZE = fn(1074).UPLOAD_MEDIUM_SIZE;
+const UPLOAD_MEDIUM_SIZE = fn(1085).UPLOAD_MEDIUM_SIZE;
 const jsx = fn(21).jsx;
-const createStyles = fn(4845);
-let obj2 = { flex: { flex: 1 }, contentContainer: { marginTop: fn(6180).NAV_BAR_HEIGHT } };
+const createStyles = fn(4890);
+let obj2 = { flex: { flex: 1 }, contentContainer: { marginTop: fn(6068).NAV_BAR_HEIGHT } };
 let closure_10 = createStyles.createStyles(obj2);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/create_guild/native/components/CreateGuildContainer.tsx");
@@ -63,7 +63,7 @@ export default function CreateGuildContainer(onCreate) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -98,7 +98,7 @@ export default function CreateGuildContainer(onCreate) {
             closure_129_6(base64);
           }
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp17) {
         c3 = tmp;
@@ -118,7 +118,7 @@ export default function CreateGuildContainer(onCreate) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {

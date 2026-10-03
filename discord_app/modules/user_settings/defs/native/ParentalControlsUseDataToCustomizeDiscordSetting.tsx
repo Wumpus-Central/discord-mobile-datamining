@@ -1,23 +1,23 @@
-// === Module 15746: ParentalControlsUseDataToCustomizeDiscordSetting ===
+// === Module 15809: ParentalControlsUseDataToCustomizeDiscordSetting ===
 
-// Module 15746 (ParentalControlsUseDataToCustomizeDiscordSetting)
-import util from "util" /* 1115 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7147 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14565 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7145 */;
+// Module 15809 (ParentalControlsUseDataToCustomizeDiscordSetting)
+import util from "util" /* 1126 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7050 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14621 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7048 */;
 
 require = fn;
-const Consents = fn(1074).Consents;
-const SettingBuilders = fn(11215);
+const Consents = fn(1085).Consents;
+let ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
+const SettingBuilders = fn(11129);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.MNKzyg);
   },
-  parent: fn(7590).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
-  useValue: function useDataToCustomizeDiscordSettingValue() {
-    return useParentalControlSettings.useParentalControlledConsent(Consents.PERSONALIZATION).hasConsented;
-  },
+  parent: fn(7634).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  useValue: () => useParentalControlSettings.useParentalControlledConsent(Consents.PERSONALIZATION).hasConsented,
   onValueChange: function handlePersonalizationChange(arg0) {
     const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
     if (null != selectedTeenId) {
@@ -37,6 +37,6 @@ const toggle = SettingBuilders.createToggle({
   }
 });
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsUseDataToCustomizeDiscordSetting.tsx");
+const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsUseDataToCustomizeDiscordSetting.tsx");
 
 export default toggle;

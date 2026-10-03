@@ -1,11 +1,11 @@
-// === Module 1231: SentryUtils ===
+// === Module 1242: SentryUtils ===
 
-// Module 1231 (SentryUtils)
+// Module 1242 (SentryUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import _mod17 from "module_17" /* 17 */;
-import addSentryBreadcrumbDefault from "addSentryBreadcrumb" /* 674 */;
-import _modAll675 from "module_675" /* 675 */;
-import SentryInitUtils_mod from "SentryInitUtils" /* 1232 */;
+import addSentryBreadcrumbDefault from "addSentryBreadcrumb" /* 685 */;
+import _modAll686 from "module_686" /* 686 */;
+import SentryInitUtils_mod from "SentryInitUtils" /* 1243 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -19,30 +19,30 @@ let result = size.fileFinishedImporting("utils/SentryUtils.native.tsx");
 export default {
   setUser(id, username, email, staff) {
     const user = { id, username, email, staff };
-    const currentScope = _modAll675.getCurrentScope();
+    const currentScope = _modAll686.getCurrentScope();
     currentScope.setUser(user);
     const CrashReportingManager = NativeModules.CrashReportingManager;
     CrashReportingManager.setUser(user);
   },
   clearUser() {
-    const currentScope = _modAll675.getCurrentScope();
+    const currentScope = _modAll686.getCurrentScope();
     currentScope.setUser(null);
     const CrashReportingManager = NativeModules.CrashReportingManager;
     CrashReportingManager.setUser({ staff: false });
   },
   setTags(arg0) {
-    const currentScope = _modAll675.getCurrentScope();
+    const currentScope = _modAll686.getCurrentScope();
     currentScope.setTags(arg0);
   },
   setExtra(arg0) {
-    const currentScope = _modAll675.getCurrentScope();
+    const currentScope = _modAll686.getCurrentScope();
     currentScope.setExtras(arg0);
   },
   captureException(arg0, extra) {
     _require = arg0;
     importAll = require("ErrorCommonUtils").getUpdatedOptions(extra);
     let obj = require("ErrorCommonUtils");
-    _modAll675.withScope((setTags) => {
+    _modAll686.withScope((setTags) => {
       if (null != closure_2) {
         if (null != closure_2.tags) {
           setTags.setTags(closure_2.tags);
@@ -51,7 +51,7 @@ export default {
           setTags.setExtras(closure_2.extra);
         }
       }
-      closure_1 = _modAll675.captureException(closure_0);
+      closure_1 = _modAll686.captureException(closure_0);
     });
     return closure_1;
   },
@@ -70,7 +70,7 @@ export default {
     }
     dependencyMap = Object.assign({ crash: "true" }, {});
     let obj = require("ErrorCommonUtils");
-    updatedOptions(675).withScope((setExtras) => {
+    updatedOptions(686).withScope((setExtras) => {
       if (tmp2) {
         setExtras.setExtras(updatedOptions.extra);
       }
@@ -93,7 +93,7 @@ export default {
         }
         return exception;
       });
-      closure_1 = _modAll675.captureException(closure_0);
+      closure_1 = _modAll686.captureException(closure_0);
       tmp2 = null != updatedOptions && null != updatedOptions.extra;
     });
     return closure_1;
@@ -103,7 +103,7 @@ export default {
     closure_1 = arg2;
     importAll = require("ErrorCommonUtils").getUpdatedOptions(extra);
     let obj = require("ErrorCommonUtils");
-    _modAll675.withScope((setExtras) => {
+    _modAll686.withScope((setExtras) => {
       if (tmp2) {
         setExtras.setExtras(closure_2.extra);
       }
@@ -117,14 +117,14 @@ export default {
           return arg0;
         });
       }
-      _modAll675.captureMessage(closure_0, closure_1);
+      _modAll686.captureMessage(closure_0, closure_1);
       tmp2 = null != closure_2 && null != closure_2.extra;
       tmp4 = null != closure_2 && null != closure_2.tags;
       tmp6 = null != closure_2 && null != closure_2.fingerprint;
     });
   },
   addFeatureFlag(arg0, arg1) {
-    const getClient = _modAll675.getClient;
+    const getClient = _modAll686.getClient;
     let client;
     if (getClient != null) {
       client = getClient();
@@ -150,8 +150,8 @@ export default {
   profiledRootComponent(displayName) {
     let withProfilerResult = displayName;
     if ("canaryRelease" === obj.getConstants().ReleaseChannel) {
-      withProfilerResult = _modAll675.withProfiler(displayName, { includeRender: true, includeUpdates: true });
-      const tmpResult = _modAll675;
+      withProfilerResult = _modAll686.withProfiler(displayName, { includeRender: true, includeUpdates: true });
+      const tmpResult = _modAll686;
     }
     return withProfilerResult;
   },
@@ -210,7 +210,7 @@ export default {
                 if (str != null) {
                   formatted = str.toLowerCase();
                 }
-                const obj = { type: "y", event_id: timestamp.event_id, timestamp: result, level: formatted, tags: "transport" };
+                const obj = { type: "y", event_id: timestamp.event_id, timestamp: result, level: formatted, tags: "This credit card already exists in the merchant's vault." };
                 const origin = timestamp.origin;
                 let tmp3 = typeof origin === "string";
                 if (typeof origin === "string") {

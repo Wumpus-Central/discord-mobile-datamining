@@ -1,7 +1,7 @@
-// === Module 4722: RootNavigationRef ===
+// === Module 4737: RootNavigationRef ===
 
-// Module 4722 (RootNavigationRef)
-import Link from "Link" /* 1486 */;
+// Module 4737 (RootNavigationRef)
+import Link from "Link" /* 1491 */;
 import size from "module_2" /* 2 */;
 
 let closure_0 = Link.createNavigationContainerRef();

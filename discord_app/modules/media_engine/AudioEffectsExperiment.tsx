@@ -1,7 +1,7 @@
-// === Module 13816: AudioEffectsExperiment ===
+// === Module 13882: AudioEffectsExperiment ===
 
-// Module 13816 (AudioEffectsExperiment)
-import ApexExperiment from "ApexExperiment" /* 1435 */;
+// Module 13882 (AudioEffectsExperiment)
+import ApexExperiment from "ApexExperiment" /* 1440 */;
 import size from "module_2" /* 2 */;
 
 const obj = { probeAudioEffects: false };

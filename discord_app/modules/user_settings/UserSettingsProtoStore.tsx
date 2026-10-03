@@ -1,17 +1,17 @@
-// === Module 1220: UserSettingsProtoStore ===
+// === Module 1231: UserSettingsProtoStore ===
 
-// Module 1220 (UserSettingsProtoStore)
+// Module 1231 (UserSettingsProtoStore)
 import _modDef12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
-import timestamp from "timestamp" /* 1216 */;
-import frecency_user_settings from "frecency_user_settings" /* 1221 */;
-import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1222 */;
-import UserSettingsMigrationsByTypeDefault from "UserSettingsMigrationsByType" /* 1224 */;
-import GuildThemeSourcePreferenceUtils from "GuildThemeSourcePreferenceUtils" /* 1225 */;
-import UserSettingsConstants from "UserSettingsConstants" /* 1084 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
+import timestamp from "timestamp" /* 1227 */;
+import frecency_user_settings from "frecency_user_settings" /* 1232 */;
+import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1233 */;
+import UserSettingsMigrationsByTypeDefault from "UserSettingsMigrationsByType" /* 1235 */;
+import GuildThemeSourcePreferenceUtils from "GuildThemeSourcePreferenceUtils" /* 1236 */;
+import UserSettingsConstants from "UserSettingsConstants" /* 1095 */;
 import size from "module_2" /* 2 */;
 
 function handleConnectionClosedOrResumed() {
@@ -163,7 +163,7 @@ prototype["getGuildFolders"] = function getGuildFolders() {
       if (guildIds.id != null) {
         value = iter.value;
       }
-      let value3;
+      value3 = undefined;
       if (guildIds.color != null) {
         value3 = iter2.value;
       }

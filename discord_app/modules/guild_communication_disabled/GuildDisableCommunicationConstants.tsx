@@ -1,33 +1,33 @@
-// === Module 2109: GuildDisableCommunicationConstants ===
+// === Module 2114: GuildDisableCommunicationConstants ===
 
-// Module 2109 (GuildDisableCommunicationConstants)
-import util from "util" /* 1115 */;
-import HelpdeskUtils from "HelpdeskUtils" /* 2110 */;
+// Module 2114 (GuildDisableCommunicationConstants)
+import util from "util" /* 1126 */;
+import HelpdeskUtils from "HelpdeskUtils" /* 2115 */;
 
 require = fn;
-function getFriendlyDurationString(DisableCommunicationDuration) {
-  if (obj.DURATION_60_SEC === DisableCommunicationDuration) {
+function getFriendlyDurationString(timeout_seconds) {
+  if (obj.DURATION_60_SEC === timeout_seconds) {
     const intl6 = util.intl;
     return intl6.formatToPlainString(util.t["4zv/jq"], { secs: 60 });
-  } else if (obj.DURATION_5_MIN === DisableCommunicationDuration) {
+  } else if (obj.DURATION_5_MIN === timeout_seconds) {
     const intl5 = util.intl;
     return intl5.formatToPlainString(util.t.opVZ9q, { mins: 5 });
-  } else if (obj.DURATION_10_MIN === DisableCommunicationDuration) {
+  } else if (obj.DURATION_10_MIN === timeout_seconds) {
     const intl4 = util.intl;
     return intl4.formatToPlainString(util.t.opVZ9q, { mins: 10 });
-  } else if (obj.DURATION_1_HOUR === DisableCommunicationDuration) {
+  } else if (obj.DURATION_1_HOUR === timeout_seconds) {
     const intl3 = util.intl;
     return intl3.formatToPlainString(util.t.xCjYxK, { hours: 1 });
-  } else if (obj.DURATION_1_DAY === DisableCommunicationDuration) {
+  } else if (obj.DURATION_1_DAY === timeout_seconds) {
     const intl2 = util.intl;
     return intl2.formatToPlainString(util.t["k2UNz+"], { days: 1 });
-  } else if (obj.DURATION_1_WEEK === DisableCommunicationDuration) {
+  } else if (obj.DURATION_1_WEEK === timeout_seconds) {
     const intl = util.intl;
     return intl.formatToPlainString(util.t.EmoBD2, { weeks: 1 });
   }
 }
 const DisableCommunicationDuration = { DURATION_60_SEC: 60, [60]: "DURATION_60_SEC", DURATION_5_MIN: 300, [300]: "DURATION_5_MIN", DURATION_10_MIN: 600, [600]: "DURATION_10_MIN", DURATION_1_HOUR: 3600, [3600]: "DURATION_1_HOUR", DURATION_1_DAY: 86400, [86400]: "DURATION_1_DAY", DURATION_1_WEEK: 604800, [604800]: "DURATION_1_WEEK" };
-const articleURL = HelpdeskUtils.getArticleURL(fn(1074).HelpdeskArticles.DISABLE_GUILD_COMMUNICATION);
+const articleURL = HelpdeskUtils.getArticleURL(fn(1085).HelpdeskArticles.DISABLE_GUILD_COMMUNICATION);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_communication_disabled/GuildDisableCommunicationConstants.tsx");
 

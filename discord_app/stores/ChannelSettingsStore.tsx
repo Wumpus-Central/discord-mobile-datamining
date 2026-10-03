@@ -1,21 +1,21 @@
-// === Module 8272: ChannelSettingsStore ===
+// === Module 10063: ChannelSettingsStore ===
 
-// Module 8272 (ChannelSettingsStore)
+// Module 10063 (ChannelSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import ThreadConstants from "ThreadConstants" /* 1114 */;
-import HTTPUtils from "HTTPUtils" /* 1271 */;
-import ChannelRecord from "ChannelRecord" /* 2048 */;
-import ThreadSortOrder from "ThreadSortOrder" /* 2053 */;
-import ForumLayout from "ForumLayout" /* 2054 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 2058 */;
-import _modDef4450 from "module_4450" /* 4450 */;
-import ReactionUtils from "ReactionUtils" /* 4510 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4512 */;
-import InviteRecord from "InviteRecord" /* 8012 */;
-import UserRecord from "UserRecord" /* 1386 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import Constants from "Constants" /* 1074 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import ThreadConstants from "ThreadConstants" /* 1125 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import ChannelRecord from "ChannelRecord" /* 2055 */;
+import ThreadSortOrder from "ThreadSortOrder" /* 2061 */;
+import ForumLayout from "ForumLayout" /* 2062 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 2066 */;
+import _modDef4461 from "module_4461" /* 4461 */;
+import ReactionUtils from "ReactionUtils" /* 4521 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4523 */;
+import InviteRecord from "InviteRecord" /* 8056 */;
+import UserRecord from "UserRecord" /* 1391 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import Constants from "Constants" /* 1085 */;
 import apply from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
 
@@ -99,7 +99,7 @@ function _createInvite(code) {
   }
   obj.guild = fromInviteGuildResult;
   ({ uses: obj.uses, max_uses: obj.maxUses, max_age: obj.maxAge } = code);
-  obj.createdAt = _modDef4450(code.created_at);
+  obj.createdAt = _modDef4461(code.created_at);
   ({ type: obj.type, roles: obj.roles } = code);
   return new InviteRecord(obj);
 }
@@ -275,7 +275,7 @@ invites = {
       if (tmp15) {
         c21 = true;
         const HTTP = HTTPUtils.HTTP;
-        const obj2 = { url: __initData.INSTANT_INVITES(channel.id), oldFormErrors: true, rejectWithError: true };
+        const obj2 = { url: closure_1_15.INSTANT_INVITES(channel.id), oldFormErrors: true, rejectWithError: true };
         value = HTTP.get(obj2);
         value.then((body) => {
           c21 = false;
@@ -423,7 +423,7 @@ invites = {
     if (tmp) {
       c21 = true;
       const HTTP = HTTPUtils.HTTP;
-      const obj = { url: __initData.INSTANT_INVITES(channel.id), oldFormErrors: true, rejectWithError: true };
+      const obj = { url: closure_1_15.INSTANT_INVITES(channel.id), oldFormErrors: true, rejectWithError: true };
       value = HTTP.get(obj);
       value.then((body) => {
         c21 = false;

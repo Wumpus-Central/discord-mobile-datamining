@@ -1,30 +1,30 @@
-// === Module 7761: NativeSearchableSelectActionComponentUtils ===
+// === Module 7805: NativeSearchableSelectActionComponentUtils ===
 
-// Module 7761 (NativeSearchableSelectActionComponentUtils)
-import nativeDefault from "native" /* 576 */;
-import utils_ColorUtils from "utils/ColorUtils" /* 1092 */;
-import utils_AvatarUtils from "utils/AvatarUtils" /* 1400 */;
-import InteractionComponentTypes from "InteractionComponentTypes" /* 5076 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5519 */;
-import RoleIconUtils from "RoleIconUtils" /* 6794 */;
-import _modDef7762 from "module_7762" /* 7762 */;
-import _modDef7763 from "module_7763" /* 7763 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildRoleStore from "GuildRoleStore" /* 2101 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import UserStore from "UserStore" /* 1372 */;
+// Module 7805 (NativeSearchableSelectActionComponentUtils)
+import nativeDefault from "native" /* 587 */;
+import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
+import utils_AvatarUtils from "utils/AvatarUtils" /* 1405 */;
+import InteractionComponentTypes from "InteractionComponentTypes" /* 5122 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5812 */;
+import RoleIconUtils from "RoleIconUtils" /* 6686 */;
+import _modDef7806 from "module_7806" /* 7806 */;
+import _modDef7807 from "module_7807" /* 7807 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import GuildRoleStore from "GuildRoleStore" /* 2106 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import UserStore from "UserStore" /* 1377 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ ChannelTypes: closure_7, DEFAULT_ROLE_COLOR: closure_8 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/interaction_components/native/NativeSearchableSelectActionComponentUtils.tsx");
 
 export const transformSearchableSelectOptions = function transformSearchableSelectOptions(initialSnowflakeSelectOptions, guildId) {
   _require = guildId;
-  const guild = GuildStore.getGuild(guildId);
+  guild = GuildStore.getGuild(guildId);
   const mapped = initialSnowflakeSelectOptions.map((type) => {
     type = type.type;
     if (InteractionComponentTypes.SelectOptionType.USER === type) {
@@ -55,12 +55,12 @@ export const transformSearchableSelectOptions = function transformSearchableSele
           if (null == roleIconData) {
             const obj2 = {};
             const merged1 = Object.assign(type);
-            obj2.iconSrc = utils_AvatarUtils.ensureAvatarSource(_modDef7762).uri;
+            obj2.iconSrc = utils_AvatarUtils.ensureAvatarSource(_modDef7806).uri;
             if (null != role.colorString) {
               let hex2intResult = utils_ColorUtils.hex2int(role.colorString);
               const tmpResult10 = utils_ColorUtils;
             } else {
-              hex2intResult = React6;
+              hex2intResult = closure_2_8;
             }
             obj2.iconColor = 4278190080 | hex2intResult;
             tmp18 = obj2;
@@ -95,7 +95,7 @@ export const transformSearchableSelectOptions = function transformSearchableSele
         let tmpResult11 = utils_AvatarUtils;
         let hex2int = tmpResult11.ensureAvatarSource;
         if (channel.type === constants.GUILD_CATEGORY) {
-          let channelIconWithGuild = _modDef7763;
+          let channelIconWithGuild = _modDef7807;
         } else {
           channelIconWithGuild = utils_ChannelUtils.getChannelIconWithGuild(channel, id);
           const tmpResult12 = utils_ChannelUtils;
@@ -113,7 +113,7 @@ export const transformSearchableSelectOptions = function transformSearchableSele
 };
 export const getChannelIconData = function getChannelIconData(channel, guild) {
   if (channel.type === constants.GUILD_CATEGORY) {
-    let channelIconWithGuild = _modDef7763;
+    let channelIconWithGuild = _modDef7807;
   } else {
     channelIconWithGuild = utils_ChannelUtils.getChannelIconWithGuild(channel, guild);
   }

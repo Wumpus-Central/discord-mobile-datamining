@@ -1,10 +1,10 @@
-// === Module 12962: ConnectionsRoleTag ===
+// === Module 13021: ConnectionsRoleTag ===
 
-// Module 12962 (ConnectionsRoleTag)
+// Module 13021 (ConnectionsRoleTag)
 import _mod17 from "module_17" /* 17 */;
-import nativeDefault from "native" /* 576 */;
-import Constants from "Constants" /* 1074 */;
-import utils_ColorUtils from "utils/ColorUtils" /* 1092 */;
+import nativeDefault from "native" /* 587 */;
+import Constants from "Constants" /* 1085 */;
+import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
 import size from "module_2" /* 2 */;
 
 const processColor = _mod17.processColor;

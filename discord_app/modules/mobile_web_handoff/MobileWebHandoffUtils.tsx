@@ -1,8 +1,8 @@
-// === Module 6925: MobileWebHandoffUtils ===
+// === Module 6823: MobileWebHandoffUtils ===
 
-// Module 6925 (MobileWebHandoffUtils)
-import v1 from "v1" /* 1255 */;
-import HTTPUtils from "HTTPUtils" /* 1271 */;
+// Module 6823 (MobileWebHandoffUtils)
+import v1 from "v1" /* 1266 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -17,7 +17,7 @@ let closure_4 = async function _createHandoffToken(key) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -67,7 +67,7 @@ let closure_4 = async function _createHandoffToken(key) {
     }
   }
 };
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/mobile_web_handoff/MobileWebHandoffUtils.tsx");
 

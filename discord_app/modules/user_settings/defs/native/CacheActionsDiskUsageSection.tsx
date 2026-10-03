@@ -1,20 +1,78 @@
-// === Module 15336: CacheActionsDiskUsageSection ===
+// === Module 15393: CacheActionsDiskUsageSection ===
 
-// Module 15336 (CacheActionsDiskUsageSection)
-import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4841 */;
-import FileSizeUtils from "FileSizeUtils" /* 5271 */;
-import Stack_Stack from "Stack/Stack" /* 5463 */;
-import Card from "Card" /* 6105 */;
-import DiskUsageManagerDefault from "DiskUsageManager" /* 15337 */;
-import CacheActionsStorageDiagnosticsDefault from "CacheActionsStorageDiagnostics" /* 15338 */;
+// Module 15393 (CacheActionsDiskUsageSection)
+import c from "c" /* 576 */;
+import nativeDefault from "native" /* 587 */;
+import util from "util" /* 1126 */;
+import Text_Text from "Text/Text" /* 4886 */;
+import FileSizeUtils from "FileSizeUtils" /* 5317 */;
+import Stack_Stack from "Stack/Stack" /* 5593 */;
+import Card from "Card" /* 5995 */;
+import DiskUsageManagerDefault from "DiskUsageManager" /* 15394 */;
+import CacheActionsStorageDiagnosticsDefault from "CacheActionsStorageDiagnostics" /* 15395 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-function SizeRow(bytes) {
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4890);
+let closure_8 = createStyles.createStyles({ label: { flex: 1 }, value: { flexShrink: 1 } });
+let ReactCompilerGating = fn(558);
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function SizeRow(arg0) {
+  const cResult = c.c(11);
+  ({ label, bytes } = arg0);
+  const iter = closure_8();
+  if (cResult[0] === label) {
+    if (cResult[1] === iter.label) {
+      let tmp4 = cResult[2];
+    }
+    if (cResult[3] !== bytes) {
+      if (null != bytes) {
+        let formatKbSizeResult = FileSizeUtils.formatKbSize(bytes);
+        const tmpResult = FileSizeUtils;
+      } else {
+        const intl = util.intl;
+        formatKbSizeResult = intl.string(util.t.Yrz9rv);
+      }
+      cResult[3] = bytes;
+      cResult[4] = formatKbSizeResult;
+    } else {
+      if (cResult[5] === iter.value) {
+        if (cResult[6] === tmp6) {
+          let tmp10 = cResult[7];
+        }
+        if (cResult[8] === tmp4) {
+          if (cResult[9] === tmp10) {
+            let tmp13 = cResult[10];
+          }
+          return tmp13;
+        }
+        const obj2 = { direction: "horizontal", justify: "space-between", spacing: nativeDefault.space.PX_16, children: null };
+        const items = [tmp4, tmp10];
+        obj2.children = items;
+        const tmp16 = React5(Stack_Stack.Stack, obj2);
+        cResult[8] = tmp4;
+        cResult[9] = tmp10;
+        cResult[10] = tmp16;
+        tmp13 = tmp16;
+      }
+      const obj3 = { variant: "text-sm/semibold", tabularNumbers: true, style: iter.value, children: cResult[4] };
+      const tmp12 = timestampProducer(Text_Text.Text, obj3);
+      cResult[5] = iter.value;
+      cResult[6] = cResult[4];
+      cResult[7] = tmp12;
+      tmp10 = tmp12;
+    }
+  }
+  const tmp5 = timestampProducer(Text_Text.Text, { variant: "text-sm/normal", color: "text-subtle", style: iter.label, children: label });
+  cResult[0] = label;
+  cResult[1] = iter.label;
+  cResult[2] = tmp5;
+  tmp4 = tmp5;
+  const obj4 = { variant: "text-sm/normal", color: "text-subtle", style: iter.label, children: label };
+}) : (function SizeRow(bytes) {
   bytes = bytes.bytes;
   const iter = closure_8();
   const obj = { direction: "horizontal", justify: "space-between", spacing: nativeDefault.space.PX_16, children: null };
@@ -31,49 +89,209 @@ function SizeRow(bytes) {
   items[1] = timestampProducer(Text_Text.Text, obj3);
   obj.children = items;
   return React5(Stack_Stack.Stack, obj);
-}
-function DiskUsageResults(report) {
+});
+ReactCompilerGating = fn(558);
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function DiskUsageResults(arg0) {
+  const cResult = first(576).c(22);
+  ({ report, metricKitSize } = arg0);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const obj2 = { caches: null, documents: null, tmp: null, application_support: null, webkit: null, library_other: null, container_other: null, app_group: null, share_extension: null, notification_service_extension: null, broadcast_upload_extension: null, lockscreen_widget_extension: null };
+    const intl = tmp(1126).intl;
+    obj2.caches = intl.string(tmp(1126).t["2CKnsF"]);
+    const intl2 = tmp(1126).intl;
+    obj2.documents = intl2.string(tmp(1126).t.aE3Wbw);
+    const intl3 = tmp(1126).intl;
+    obj2.tmp = intl3.string(tmp(1126).t.UQsNEK);
+    const intl4 = tmp(1126).intl;
+    obj2.application_support = intl4.string(tmp(1126).t.DGQvlY);
+    const intl5 = tmp(1126).intl;
+    obj2.webkit = intl5.string(tmp(1126).t.aIcsfw);
+    const intl6 = tmp(1126).intl;
+    obj2.library_other = intl6.string(tmp(1126).t.U2f1ef);
+    const intl7 = tmp(1126).intl;
+    obj2.container_other = intl7.string(tmp(1126).t.ZduI7f);
+    const intl8 = tmp(1126).intl;
+    obj2.app_group = intl8.string(tmp(1126).t.rManeQ);
+    const intl9 = tmp(1126).intl;
+    obj2.share_extension = intl9.string(tmp(1126).t.BEL9MJ);
+    const intl10 = tmp(1126).intl;
+    obj2.notification_service_extension = intl10.string(tmp(1126).t.V46Edz);
+    const intl11 = tmp(1126).intl;
+    obj2.broadcast_upload_extension = intl11.string(tmp(1126).t.BhYGtj);
+    const intl12 = tmp(1126).intl;
+    obj2.lockscreen_widget_extension = intl12.string(tmp(1126).t.toGFBn);
+    cResult[0] = obj2;
+    first = obj2;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
+    const intl13 = tmp(1126).intl;
+    const stringResult = intl13.string(tmp(1126).t.O20zQi);
+    cResult[1] = stringResult;
+    let tmp5 = stringResult;
+  } else {
+    tmp5 = cResult[1];
+  }
+  if (cResult[2] !== report.totalMeasuredBytes) {
+    const obj3 = { label: tmp5, bytes: report.totalMeasuredBytes };
+    const tmp10 = closure_6(closure_9, obj3);
+    cResult[2] = report.totalMeasuredBytes;
+    cResult[3] = tmp10;
+    let tmp7 = tmp10;
+  } else {
+    tmp7 = cResult[3];
+  }
+  if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+    const intl14 = tmp(1126).intl;
+    const stringResult1 = intl14.string(tmp(1126).t.VQKK5O);
+    cResult[4] = stringResult1;
+    let tmp11 = stringResult1;
+  } else {
+    tmp11 = cResult[4];
+  }
+  if (cResult[5] !== metricKitSize) {
+    const obj4 = { label: tmp11, bytes: metricKitSize };
+    const tmp16 = closure_6(closure_9, obj4);
+    cResult[5] = metricKitSize;
+    cResult[6] = tmp16;
+    let tmp13 = tmp16;
+  } else {
+    tmp13 = cResult[6];
+  }
+  if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
+    const obj5 = { variant: "heading-sm/semibold", children: null };
+    const intl15 = tmp(1126).intl;
+    obj5.children = intl15.string(tmp(1126).t.CoudPr);
+    const tmp19 = closure_6(tmp(4886).Heading, obj5);
+    cResult[7] = tmp19;
+    let tmp17 = tmp19;
+  } else {
+    tmp17 = cResult[7];
+  }
+  if (cResult[8] !== report.roots) {
+    const _Symbol = Symbol;
+    if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
+      const fn = function v(bytes) {
+        const root = bytes.root;
+        let label = first[root];
+        if (label == null) {
+          label = root;
+        }
+        return timestampProducer(closure_9, { label, bytes: bytes.bytes }, root);
+      };
+      cResult[10] = fn;
+      let tmp21 = fn;
+    } else {
+      tmp21 = cResult[10];
+    }
+    const roots = report.roots;
+    const mapped = roots.map(tmp21);
+    cResult[8] = report.roots;
+    cResult[9] = mapped;
+  } else {
+    if (cResult[11] === report.complete) {
+      if (cResult[12] === report.errorCount) {
+        if (cResult[13] === report.unmeasuredRootCount) {
+          let tmp24 = cResult[14];
+        }
+        if (cResult[15] === tmp20) {
+          if (cResult[16] === tmp24) {
+            let tmp27 = cResult[17];
+          }
+          if (cResult[18] === tmp7) {
+            if (cResult[19] === tmp13) {
+              if (cResult[20] === tmp27) {
+                let tmp30 = cResult[21];
+              }
+              return tmp30;
+            }
+          }
+          const obj6 = { spacing: nativeDefault.space.PX_16, children: null };
+          const items = [tmp7, tmp13, tmp27];
+          obj6.children = items;
+          const tmp33 = closure_7(tmp(5593).Stack, obj6);
+          cResult[18] = tmp7;
+          cResult[19] = tmp13;
+          cResult[20] = tmp27;
+          cResult[21] = tmp33;
+          tmp30 = tmp33;
+        }
+        const obj8 = { children: null };
+        const items1 = [tmp17, tmp20, tmp24];
+        obj8.children = items1;
+        const tmp29 = closure_7(tmp(5593).Stack, obj8);
+        cResult[15] = tmp20;
+        cResult[16] = tmp24;
+        cResult[17] = tmp29;
+        tmp27 = tmp29;
+      }
+    }
+    const complete = report.complete;
+    let tmp25 = !complete;
+    if (complete) {
+      tmp25 = report.errorCount > 0;
+    }
+    if (!tmp25) {
+      tmp25 = report.unmeasuredRootCount > 0;
+    }
+    if (tmp25) {
+      const obj9 = { variant: "text-sm/normal", color: "text-feedback-warning", children: null };
+      const intl16 = tmp(1126).intl;
+      ({ errorCount: obj7.errors, unmeasuredRootCount: obj7.unavailable } = report);
+      obj9.children = intl16.formatToPlainString(tmp(1126).t.kt7tAT, { errors: null, unavailable: null });
+      tmp25 = closure_6(tmp(4886).Text, obj9);
+      const obj17 = { errors: null, unavailable: null };
+    }
+    cResult[11] = report.complete;
+    cResult[12] = report.errorCount;
+    cResult[13] = report.unmeasuredRootCount;
+    cResult[14] = tmp25;
+    tmp24 = tmp25;
+  }
+  const obj = first(576);
+}) : (function DiskUsageResults(report) {
   report = report.report;
   const obj = { caches: null, documents: null, tmp: null, application_support: null, webkit: null, library_other: null, container_other: null, app_group: null, share_extension: null, notification_service_extension: null, broadcast_upload_extension: null, lockscreen_widget_extension: null };
-  const intl = obj(1115).intl;
-  obj.caches = intl.string(obj(1115).t["2CKnsF"]);
-  const intl2 = obj(1115).intl;
-  obj.documents = intl2.string(obj(1115).t.aE3Wbw);
-  const intl3 = obj(1115).intl;
-  obj.tmp = intl3.string(obj(1115).t.UQsNEK);
-  const intl4 = obj(1115).intl;
-  obj.application_support = intl4.string(obj(1115).t.DGQvlY);
-  const intl5 = obj(1115).intl;
-  obj.webkit = intl5.string(obj(1115).t.aIcsfw);
-  const intl6 = obj(1115).intl;
-  obj.library_other = intl6.string(obj(1115).t.U2f1ef);
-  const intl7 = obj(1115).intl;
-  obj.container_other = intl7.string(obj(1115).t.ZduI7f);
-  const intl8 = obj(1115).intl;
-  obj.app_group = intl8.string(obj(1115).t.rManeQ);
-  const intl9 = obj(1115).intl;
-  obj.share_extension = intl9.string(obj(1115).t.BEL9MJ);
-  const intl10 = obj(1115).intl;
-  obj.notification_service_extension = intl10.string(obj(1115).t.V46Edz);
-  const intl11 = obj(1115).intl;
-  obj.broadcast_upload_extension = intl11.string(obj(1115).t.BhYGtj);
-  const intl12 = obj(1115).intl;
-  obj.lockscreen_widget_extension = intl12.string(obj(1115).t.toGFBn);
+  const intl = obj(1126).intl;
+  obj.caches = intl.string(obj(1126).t["2CKnsF"]);
+  const intl2 = obj(1126).intl;
+  obj.documents = intl2.string(obj(1126).t.aE3Wbw);
+  const intl3 = obj(1126).intl;
+  obj.tmp = intl3.string(obj(1126).t.UQsNEK);
+  const intl4 = obj(1126).intl;
+  obj.application_support = intl4.string(obj(1126).t.DGQvlY);
+  const intl5 = obj(1126).intl;
+  obj.webkit = intl5.string(obj(1126).t.aIcsfw);
+  const intl6 = obj(1126).intl;
+  obj.library_other = intl6.string(obj(1126).t.U2f1ef);
+  const intl7 = obj(1126).intl;
+  obj.container_other = intl7.string(obj(1126).t.ZduI7f);
+  const intl8 = obj(1126).intl;
+  obj.app_group = intl8.string(obj(1126).t.rManeQ);
+  const intl9 = obj(1126).intl;
+  obj.share_extension = intl9.string(obj(1126).t.BEL9MJ);
+  const intl10 = obj(1126).intl;
+  obj.notification_service_extension = intl10.string(obj(1126).t.V46Edz);
+  const intl11 = obj(1126).intl;
+  obj.broadcast_upload_extension = intl11.string(obj(1126).t.BhYGtj);
+  const intl12 = obj(1126).intl;
+  obj.lockscreen_widget_extension = intl12.string(obj(1126).t.toGFBn);
   const obj2 = { spacing: nativeDefault.space.PX_16, children: null };
   const obj3 = { label: null, bytes: null };
-  const intl13 = obj(1115).intl;
-  obj3.label = intl13.string(obj(1115).t.O20zQi);
+  const intl13 = obj(1126).intl;
+  obj3.label = intl13.string(obj(1126).t.O20zQi);
   obj3.bytes = report.totalMeasuredBytes;
-  const items = [closure_6(SizeRow, obj3), , ];
+  const items = [closure_6(closure_9, obj3), , ];
   const obj4 = { label: null, bytes: null };
-  const intl14 = obj(1115).intl;
-  obj4.label = intl14.string(obj(1115).t.VQKK5O);
+  const intl14 = obj(1126).intl;
+  obj4.label = intl14.string(obj(1126).t.VQKK5O);
   obj4.bytes = report.metricKitSize;
-  items[1] = closure_6(SizeRow, obj4);
+  items[1] = closure_6(closure_9, obj4);
   const obj5 = { variant: "heading-sm/semibold", children: null };
-  const intl15 = obj(1115).intl;
-  obj5.children = intl15.string(obj(1115).t.CoudPr);
-  const items1 = [closure_6(obj(4841).Heading, obj5), , ];
+  const intl15 = obj(1126).intl;
+  obj5.children = intl15.string(obj(1126).t.CoudPr);
+  const items1 = [closure_6(obj(4886).Heading, obj5), , ];
   const roots = report.roots;
   items1[1] = roots.map((bytes) => {
     const root = bytes.root;
@@ -81,7 +299,7 @@ function DiskUsageResults(report) {
     if (label == null) {
       label = root;
     }
-    return timestampProducer(SizeRow, { label, bytes: bytes.bytes }, root);
+    return timestampProducer(closure_9, { label, bytes: bytes.bytes }, root);
   });
   const complete = report.complete;
   let tmp4Result = !complete;
@@ -93,25 +311,128 @@ function DiskUsageResults(report) {
   }
   if (tmp4Result) {
     const obj6 = { variant: "text-sm/normal", color: "text-feedback-warning", children: null };
-    const intl16 = tmp(1115).intl;
+    const intl16 = tmp(1126).intl;
     ({ errorCount: obj7.errors, unmeasuredRootCount: obj7.unavailable } = report);
-    obj6.children = intl16.formatToPlainString(tmp(1115).t.kt7tAT, { errors: null, unavailable: null });
-    tmp4Result = closure_6(tmp(4841).Text, obj6);
+    obj6.children = intl16.formatToPlainString(tmp(1126).t.kt7tAT, { errors: null, unavailable: null });
+    tmp4Result = closure_6(tmp(4886).Text, obj6);
     const obj13 = { errors: null, unavailable: null };
   }
   items1[2] = tmp4Result;
-  items[2] = closure_7(obj(5463).Stack, { children: items1 });
+  items[2] = closure_7(obj(5593).Stack, { children: items1 });
   obj2.children = items;
-  return closure_7(obj(5463).Stack, obj2);
-}
-const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4845);
-let closure_8 = createStyles.createStyles({ label: { flex: 1 }, value: { flexShrink: 1 } });
+  return closure_7(obj(5593).Stack, obj2);
+});
+ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/CacheActionsDiskUsageSection.tsx");
 
-export default function CacheActionsDiskUsageSection(state) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (function CacheActionsDiskUsageSection(arg0) {
+  const cResult = c.c(19);
+  ({ state, onDiagnosticsBusyChange } = arg0);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const obj2 = { variant: "heading-md/semibold", children: null };
+    const intl = util.intl;
+    obj2.children = intl.string(util.t.m8BOpo);
+    const tmp6 = timestampProducer(Text_Text.Heading, obj2);
+    cResult[0] = tmp6;
+    let first = tmp6;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] !== state.status) {
+    let tmp8 = "loading" === state.status;
+    if (tmp8) {
+      const obj3 = { variant: "text-sm/normal", children: null };
+      const intl2 = util.intl;
+      obj3.children = intl2.string(util.t.Ynmbie);
+      tmp8 = timestampProducer(Text_Text.Text, obj3);
+    }
+    cResult[1] = state.status;
+    cResult[2] = tmp8;
+    let tmp7 = tmp8;
+  } else {
+    tmp7 = cResult[2];
+  }
+  if (cResult[3] !== state.status) {
+    let tmp11 = "error" === state.status;
+    if (tmp11) {
+      const obj4 = { variant: "text-sm/normal", color: "text-feedback-critical", children: null };
+      const intl3 = util.intl;
+      obj4.children = intl3.string(util.t["hj/3qI"]);
+      tmp11 = timestampProducer(Text_Text.Text, obj4);
+    }
+    cResult[3] = state.status;
+    cResult[4] = tmp11;
+    let tmp10 = tmp11;
+  } else {
+    tmp10 = cResult[4];
+  }
+  if (cResult[5] === state.metricKitSize) {
+    if (cResult[6] === state.report) {
+      if (cResult[7] === state.status) {
+        let tmp13 = cResult[8];
+      }
+      if (cResult[9] === tmp7) {
+        if (cResult[10] === tmp10) {
+          if (cResult[11] === tmp13) {
+            let tmp17 = cResult[12];
+          }
+          if (cResult[13] === onDiagnosticsBusyChange) {
+            if (cResult[14] === state.status) {
+              let tmp20 = cResult[15];
+            }
+            if (cResult[16] === tmp17) {
+              if (cResult[17] === tmp20) {
+                let tmp26 = cResult[18];
+              }
+              return tmp26;
+            }
+            const obj6 = { children: null };
+            const items = [first, tmp17, tmp20];
+            obj6.children = items;
+            const tmp28 = React5(Stack_Stack.Stack, obj6);
+            cResult[16] = tmp17;
+            cResult[17] = tmp20;
+            cResult[18] = tmp28;
+            tmp26 = tmp28;
+          }
+          let tmp21 = "success" === state.status;
+          if (tmp21) {
+            tmp21 = null != DiskUsageManagerDefault.uploadStorageDiagnostics;
+          }
+          if (tmp21) {
+            const obj7 = { onBusyChange: onDiagnosticsBusyChange };
+            tmp21 = timestampProducer(CacheActionsStorageDiagnosticsDefault, obj7);
+          }
+          cResult[13] = onDiagnosticsBusyChange;
+          cResult[14] = state.status;
+          cResult[15] = tmp21;
+          tmp20 = tmp21;
+        }
+      }
+      const obj8 = { children: null };
+      const items1 = [tmp7, tmp10, tmp13];
+      obj8.children = items1;
+      const tmp19 = React5(Card.Card, obj8);
+      cResult[9] = tmp7;
+      cResult[10] = tmp10;
+      cResult[11] = tmp13;
+      cResult[12] = tmp19;
+      tmp17 = tmp19;
+    }
+  }
+  let tmp14 = "success" === state.status;
+  if (tmp14) {
+    ({ report: obj5.report, metricKitSize: obj5.metricKitSize } = state);
+    tmp14 = timestampProducer(closure_10, { report: null, metricKitSize: null });
+    const obj15 = { report: null, metricKitSize: null };
+  }
+  cResult[5] = state.metricKitSize;
+  cResult[6] = state.report;
+  cResult[7] = state.status;
+  cResult[8] = tmp14;
+  tmp13 = tmp14;
+}) : (function CacheActionsDiskUsageSection(state) {
   state = state.state;
   const obj = { variant: "heading-md/semibold", children: null };
   const intl = util.intl;
@@ -136,7 +457,7 @@ export default function CacheActionsDiskUsageSection(state) {
   let tmp4Result5 = "success" === state.status;
   if (tmp4Result5) {
     ({ report: obj4.report, metricKitSize: obj4.metricKitSize } = state);
-    tmp4Result5 = timestampProducer(DiskUsageResults, { report: null, metricKitSize: null });
+    tmp4Result5 = timestampProducer(closure_10, { report: null, metricKitSize: null });
     const obj5 = { report: null, metricKitSize: null };
   }
   items1[2] = tmp4Result5;
@@ -151,7 +472,7 @@ export default function CacheActionsDiskUsageSection(state) {
   }
   children[2] = tmp4Result6;
   return React5(Stack_Stack.Stack, { children });
-};
+});
 export const useDiskUsageMeasurement = function useDiskUsageMeasurement() {
   closure_2 = async function _handleCalculateSize() {
     if (c5 === 2) {
@@ -164,7 +485,7 @@ export const useDiskUsageMeasurement = function useDiskUsageMeasurement() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {

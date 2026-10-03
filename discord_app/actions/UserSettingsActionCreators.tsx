@@ -1,20 +1,20 @@
-// === Module 8850: UserSettingsActionCreators ===
+// === Module 8863: UserSettingsActionCreators ===
 
-// Module 8850 (UserSettingsActionCreators)
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
-import wrappers from "wrappers" /* 1217 */;
-import UserSettings from "UserSettings" /* 2021 */;
+// Module 8863 (UserSettingsActionCreators)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
+import wrappers from "wrappers" /* 1228 */;
+import UserSettings from "UserSettings" /* 2028 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4682 */;
-import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1183 */;
-import ThemeStore from "ThemeStore" /* 1182 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4697 */;
+import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1194 */;
+import ThemeStore from "ThemeStore" /* 1193 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ThemeTypes = fn(1074).ThemeTypes;
-const ThemeConstants = fn(1185);
+const ThemeTypes = fn(1085).ThemeTypes;
+const ThemeConstants = fn(1196);
 ({ SystemTheme, SystemThemeState: closure_8 } = ThemeConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/UserSettingsActionCreators.tsx");
@@ -64,7 +64,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -79,26 +79,26 @@ export default {
               return obj4;
             } else if (tmp3) {
               dependencyMap = 1;
-              const PreloadedUserSettingsActionCreators = tmp3(2026).PreloadedUserSettingsActionCreators;
+              const PreloadedUserSettingsActionCreators = tmp3(2033).PreloadedUserSettingsActionCreators;
               v2 = 2;
               c3 = 1;
               const obj5 = {
                 value: PreloadedUserSettingsActionCreators.updateAsync("appearance", async (arg0) => {
                           theme = theme.theme;
                           if (constants.ASH === theme) {
-                            let DARK = closure_1_0(1186).Theme.DARK;
+                            let DARK = closure_1_0(1197).Theme.DARK;
                             let tmp4 = closure_1_0;
                           } else if (constants.LIGHT === theme) {
-                            DARK = closure_1_0(1186).Theme.LIGHT;
+                            DARK = closure_1_0(1197).Theme.LIGHT;
                             tmp4 = closure_1_0;
                           } else if (constants.DARK === theme) {
-                            DARK = closure_1_0(1186).Theme.DARKER;
+                            DARK = closure_1_0(1197).Theme.DARKER;
                             tmp4 = closure_1_0;
                           } else if (constants.ONYX === theme) {
-                            DARK = closure_1_0(1186).Theme.MIDNIGHT;
+                            DARK = closure_1_0(1197).Theme.MIDNIGHT;
                             tmp4 = closure_1_0;
                           } else {
-                            DARK = closure_1_0(1186).Theme.DARK;
+                            DARK = closure_1_0(1197).Theme.DARK;
                             tmp4 = closure_1_0;
                           }
                           arg0.theme = DARK;
@@ -107,7 +107,7 @@ export default {
                           if (gradientPreset != null) {
                             id = gradientPreset.id;
                           }
-                          const ClientThemeSettings = tmp4(2021).ClientThemeSettings;
+                          const ClientThemeSettings = tmp4(2028).ClientThemeSettings;
                           const setting = ClientThemeSettings.getSetting();
                           let prop;
                           if (setting != null) {
@@ -115,7 +115,7 @@ export default {
                           }
                           let obj2;
                           if (null != id) {
-                            const UInt32Value = tmp4(1217).UInt32Value;
+                            const UInt32Value = tmp4(1228).UInt32Value;
                             const obj = { value: id };
                             obj2 = UInt32Value.create(obj);
                           }
@@ -128,7 +128,7 @@ export default {
                           }
                           obj6.customUserThemeSettings = tmp17;
                           arg0.clientThemeSettings = obj6;
-                        }, tmp3(2026).UserSettingsDelay.INFREQUENT_USER_ACTION),
+                        }, tmp3(2033).UserSettingsDelay.INFREQUENT_USER_ACTION),
                 done: false
               };
               return obj5;
@@ -136,7 +136,7 @@ export default {
           } else if (1 === tmp7) {
             dependencyMap = 0;
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           } else if (arg0 === 1) {
             c3 = 3;
             throw value;
@@ -159,10 +159,10 @@ export default {
               id = gradientPreset.id;
             }
             const obj8 = { backgroundGradientPresetId: id, customUserThemeSettings: null };
-            let ClientThemeSettings = tmp3(2021).ClientThemeSettings;
+            let ClientThemeSettings = tmp3(2028).ClientThemeSettings;
             obj8.customUserThemeSettings = ClientThemeSettings.getSetting().customUserThemeSettings;
             obj7.clientThemeSettings = obj8;
-            const DeveloperMode = tmp3(2021).DeveloperMode;
+            const DeveloperMode = tmp3(2028).DeveloperMode;
             obj7.developerMode = DeveloperMode.getSetting();
           }
           const obj9 = { type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE", changes: null };
@@ -170,9 +170,9 @@ export default {
           obj6.settings = obj7;
           obj10.appearance = obj6;
           obj9.changes = obj10;
-          v2(573).dispatch(obj9);
+          v2(584).dispatch(obj9);
           c3 = 3;
-          let obj2 = v2(573);
+          let obj2 = v2(584);
         } catch (tmp27) {
           if (tmp4 === dependencyMap) {
             c3 = tmp2;
@@ -310,7 +310,7 @@ export const saveClientTheme = function saveClientTheme(backgroundGradientPreset
       arg0.theme = DARK;
       let obj2;
       if (null != backgroundGradientPresetId) {
-        const UInt32Value = tmp3(1217).UInt32Value;
+        const UInt32Value = tmp3(1228).UInt32Value;
         const obj = { value: tmp13 };
         obj2 = UInt32Value.create(obj);
       }

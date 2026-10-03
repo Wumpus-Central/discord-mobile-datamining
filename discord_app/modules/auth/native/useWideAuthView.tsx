@@ -1,13 +1,17 @@
-// === Module 6549: useWideAuthView ===
+// === Module 6432: useWideAuthView ===
 
-// Module 6549 (useWideAuthView)
-import MetaQuestUtils from "MetaQuestUtils" /* 1610 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 6550 */;
+// Module 6432 (useWideAuthView)
+import MetaQuestUtils from "MetaQuestUtils" /* 1615 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 6433 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/auth/native/useWideAuthView.tsx");
 
-export default function useWideAuthView() {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const tmp = useIsWindowLargeDefault();
   return MetaQuestUtils.isMetaQuest() || tmp;
-};
+}) : (() => {
+  const tmp = useIsWindowLargeDefault();
+  return MetaQuestUtils.isMetaQuest() || tmp;
+});

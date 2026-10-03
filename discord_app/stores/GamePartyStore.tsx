@@ -1,12 +1,12 @@
-// === Module 13007: GamePartyStore ===
+// === Module 13068: GamePartyStore ===
 
-// Module 13007 (GamePartyStore)
+// Module 13068 (GamePartyStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RelationshipStore from "RelationshipStore" /* 4508 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5777 */;
+import RelationshipStore from "RelationshipStore" /* 4519 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5438 */;
 
 function updateParty(id, id2, activities, status) {
   const found = activities.find((party) => {
@@ -63,7 +63,7 @@ function updateParty(id, id2, activities, status) {
       tmp19[id] = id;
       if (!RelationshipStore.isBlocked(id2)) {
         if (!RelationshipStore.isIgnored(id2)) {
-          let value3 = map.get(id);
+          value3 = map.get(id);
           if (value3 == null) {
             const _Set = Set;
             value3 = new Set();
@@ -138,7 +138,7 @@ function handleRelationshipAddOrUpdate(relationship) {
     }
   }
 }
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ StatusTypes: hasOwnProperty, ME: metroRequire } = Constants);
 const dependencyMap = {};
 let map = new Map();

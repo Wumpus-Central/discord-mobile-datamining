@@ -1,24 +1,25 @@
-// === Module 9012: userSettingToActivity ===
+// === Module 10826: userSettingToActivity ===
 
-// Module 9012 (userSettingToActivity)
+// Module 10826 (userSettingToActivity)
 import _mod19 from "module_19" /* 19 */;
-import Constants from "Constants" /* 1074 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4512 */;
-import EmojiStore from "EmojiStore" /* 5957 */;
+import Constants from "Constants" /* 1085 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4523 */;
+import EmojiStore from "EmojiStore" /* 5638 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
-function _activityFromSetting(emojiName, stateFromStores) {
+function _activityFromSetting(setting, stateFromStores) {
   if (null != stateFromStores) {
     ({ id: obj2.id, name: obj2.name, animated: obj2.animated } = stateFromStores);
     let tmp = { id: null, name: null, animated: null };
     const obj3 = { id: null, name: null, animated: null };
   } else {
     tmp = null;
-    if (null != emojiName.emojiName) {
+    if (null != setting.emojiName) {
       tmp = null;
-      if ("" !== emojiName.emojiName) {
+      if ("" !== setting.emojiName) {
         const obj5 = UnicodeEmojisDefault;
-        const byName = obj5.getByName(UnicodeEmojisDefault.convertSurrogateToName(emojiName.emojiName, false));
+        const byName = obj5.getByName(UnicodeEmojisDefault.convertSurrogateToName(setting.emojiName, false));
         let tmp2 = null;
         if (null != byName) {
           const obj = { id: null, name: byName.surrogates, animated: false };
@@ -28,15 +29,15 @@ function _activityFromSetting(emojiName, stateFromStores) {
       }
     }
   }
-  const NumberResult = Number(emojiName.expiresAtMs);
+  const NumberResult = Number(setting.expiresAtMs);
   value = undefined;
-  if (emojiName.label != null) {
+  if (setting.label != null) {
     value = iter.value;
   }
   const obj4 = { name: "Custom Status", type: ActivityTypes.CUSTOM_STATUS, state: null, timestamps: null, emoji: null, details: null, metadata: null };
   let text;
-  if (emojiName.text.length > 0) {
-    text = emojiName.text;
+  if (setting.text.length > 0) {
+    text = setting.text;
   }
   obj4.state = text;
   let tmp6;
@@ -65,8 +66,61 @@ export const getActivityFromCustomStatus = function getActivityFromCustomStatus(
   }
   return _activityFromSetting(setting, usableCustomEmojiById);
 };
-export const useCustomStatusActivity = function useCustomStatusActivity() {
-  const CustomStatusSetting = setting(stateFromStores[4]).CustomStatusSetting;
+export const useCustomStatusActivity = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = emojiId(576).c(7);
+  const CustomStatusSetting = emojiId(2028).CustomStatusSetting;
+  const setting = CustomStatusSetting.useSetting();
+  emojiId = undefined;
+  if (setting != null) {
+    emojiId = setting.emojiId;
+  }
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [EmojiStore];
+    cResult[0] = items;
+    let first = items;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] !== emojiId) {
+    const fn = function n() {
+      let usableCustomEmojiById = null;
+      if (null != emojiId) {
+        usableCustomEmojiById = null;
+        if ("0" !== emojiId) {
+          usableCustomEmojiById = EmojiStore.getUsableCustomEmojiById(emojiId);
+        }
+      }
+      return usableCustomEmojiById;
+    };
+    const items1 = [emojiId];
+    cResult[1] = emojiId;
+    cResult[2] = fn;
+    cResult[3] = items1;
+    let tmp9 = items1;
+    let tmp8 = fn;
+  } else {
+    tmp8 = cResult[2];
+    tmp9 = cResult[3];
+  }
+  const obj = emojiId(576);
+  const stateFromStores = emojiId(504).useStateFromStores(first, tmp8, tmp9);
+  if (cResult[4] === stateFromStores) {
+    if (cResult[5] === setting) {
+      let tmp11 = cResult[6];
+    }
+    return tmp11;
+  }
+  let tmp12 = null;
+  if (null != setting) {
+    tmp12 = _activityFromSetting(setting, stateFromStores);
+  }
+  cResult[4] = stateFromStores;
+  cResult[5] = setting;
+  cResult[6] = tmp12;
+  tmp11 = tmp12;
+  const tmpResult = emojiId(504);
+}) : (() => {
+  const CustomStatusSetting = setting(stateFromStores[6]).CustomStatusSetting;
   setting = CustomStatusSetting.useSetting();
   let emojiId;
   if (setting != null) {
@@ -74,7 +128,7 @@ export const useCustomStatusActivity = function useCustomStatusActivity() {
   }
   const items = [EmojiStore];
   const items1 = [emojiId];
-  stateFromStores = setting(stateFromStores[5]).useStateFromStores(items, () => {
+  stateFromStores = setting(stateFromStores[7]).useStateFromStores(items, () => {
     let usableCustomEmojiById = null;
     if (null != emojiId) {
       usableCustomEmojiById = null;
@@ -92,4 +146,4 @@ export const useCustomStatusActivity = function useCustomStatusActivity() {
     }
     return tmp2;
   }, items2);
-};
+});

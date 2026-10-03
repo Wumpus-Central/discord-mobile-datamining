@@ -1,8 +1,8 @@
-// === Module 11511: GuildRoleConnectionEligibilityStore ===
+// === Module 11430: GuildRoleConnectionEligibilityStore ===
 
-// Module 11511 (GuildRoleConnectionEligibilityStore)
+// Module 11430 (GuildRoleConnectionEligibilityStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
 
 const map = new Map();
 const Store = initializeDefault.Store;

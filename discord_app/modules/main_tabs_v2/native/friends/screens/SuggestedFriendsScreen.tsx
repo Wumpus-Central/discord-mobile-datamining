@@ -1,38 +1,169 @@
-// === Module 16837: SuggestedFriendsScreen ===
+// === Module 16925: SuggestedFriendsScreen ===
 
-// Module 16837 (SuggestedFriendsScreen)
-import nativeDefault from "native" /* 576 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7806 */;
-import ContactSuggestionRow from "ContactSuggestionRow" /* 16834 */;
+// Module 16925 (SuggestedFriendsScreen)
+import nativeDefault from "native" /* 587 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7850 */;
+import ContactSuggestionRow from "ContactSuggestionRow" /* 16922 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsSections: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 const obj2 = { emptyContainer: { flex: 1, paddingTop: nativeDefault.space.PX_32 }, container: { flex: 1 } };
 let closure_9 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj3 = { flex: 1, paddingTop: nativeDefault.space.PX_32 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/SuggestedFriendsScreen.tsx");
 
-export default function SuggestedFriendsScreen() {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = analyticsLocations(setAdded[7]).c(26);
+  closure_9();
+  const obj = analyticsLocations(setAdded[7]);
+  const tmp5 = added;
+  analyticsLocations = added(setAdded[8])(added(setAdded[9]).SUGGESTED_FRIENDS).analyticsLocations;
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const fn = function s() {
+      added(setAdded[10]).track(userRowWithSubLabelHeight1.FRIEND_ADD_VIEWED, { friend_add_type: constants.FRIENDS_SUGGESTED_FRIENDS_MODAL });
+    };
+    let items = [];
+    cResult[0] = fn;
+    cResult[1] = items;
+    tmp7 = fn;
+    tmp8 = items;
+  } else {
+    [tmp7, tmp8] = cResult;
+  }
+  const effect = friendSuggestions.useEffect(tmp7, tmp8);
+  const tmp10 = tmp5(setAdded[11])();
+  added = tmp10.added;
+  setAdded = tmp10.setAdded;
+  friendSuggestions = tmp10.friendSuggestions;
+  const tmp6 = added(setAdded[8]);
+  const userRowWithSubLabelHeight = analyticsLocations(setAdded[12]).useUserRowWithSubLabelHeight(1);
+  const tmpResult = analyticsLocations(setAdded[12]);
+  const userRowWithSubLabelHeight1 = analyticsLocations(setAdded[12]).useUserRowWithSubLabelHeight(2);
+  if (cResult[2] !== analyticsLocations) {
+    const fn2 = function h(id) {
+      showUserProfileActionSheetDefault({ userId: id.id, localUser: id, sourceAnalyticsLocations: analyticsLocations });
+    };
+    cResult[2] = analyticsLocations;
+    cResult[3] = fn2;
+    let tmp13 = fn2;
+  } else {
+    tmp13 = cResult[3];
+  }
+  constants = tmp13;
+  if (cResult[4] === added) {
+    if (cResult[5] === friendSuggestions) {
+      if (cResult[6] === tmp13) {
+        const _Symbol = Symbol;
+        if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
+          class A {
+            constructor() {
+              return;
+            }
+          }
+          cResult[9] = A;
+        } else {
+          class A {
+            constructor() {
+              return;
+            }
+          }
+        }
+        if (cResult[10] === friendSuggestions) {
+          class A {
+            constructor() {
+              return;
+            }
+          }
+        }
+        class M {
+          constructor(arg0, arg1) {
+            tmp = friendSuggestions[arg1];
+            mutualFriendsCount = undefined;
+            if (tmp != null) {
+              mutualFriendsCount = tmp.mutualFriendsCount;
+            }
+            tmp3 = null != mutualFriendsCount;
+            if (tmp3) {
+              mutualFriendsCount1 = undefined;
+              if (tmp != null) {
+                mutualFriendsCount1 = tmp.mutualFriendsCount;
+              }
+              num = 0;
+              tmp3 = mutualFriendsCount1 > 0;
+            }
+            return tmp3 ? closure_5 : closure_4;
+          }
+        }
+        cResult[10] = friendSuggestions;
+        cResult[11] = userRowWithSubLabelHeight;
+        cResult[12] = userRowWithSubLabelHeight1;
+        cResult[13] = M;
+      }
+    }
+  }
+  class I {
+    constructor(arg0, arg1) {
+      closure_0 = arg1;
+      tmp = friendSuggestions[arg1];
+      closure_1 = tmp;
+      closure_2 = arg1 === friendSuggestions.length - 1;
+      mutualFriendsCount = undefined;
+      if (tmp != null) {
+        mutualFriendsCount = tmp.mutualFriendsCount;
+      }
+      tmp3 = null != mutualFriendsCount;
+      if (tmp3) {
+        mutualFriendsCount1 = undefined;
+        if (tmp != null) {
+          mutualFriendsCount1 = tmp.mutualFriendsCount;
+        }
+        num = 0;
+        tmp3 = mutualFriendsCount1 > 0;
+      }
+      str = "contactSuggestionNoMutualCount";
+      if (tmp3) {
+        str = "contactSuggestionMutualCount";
+      }
+      obj = {
+        type: "custom",
+        itemType: str,
+        key: tmp.user.id,
+        component() {
+              return React5(ContactSuggestionRow.ContactSuggestionRow, { added: added.includes(suggestedFriend), suggestedFriend, start: 0 === closure_0, end, onPress, onAddSuggestion() { ... }, location: constants.FRIENDS_SUGGESTED_FRIENDS_MODAL });
+            }
+      };
+      return obj;
+    }
+  }
+  cResult[4] = added;
+  cResult[5] = friendSuggestions;
+  cResult[6] = tmp13;
+  cResult[7] = setAdded;
+  cResult[8] = I;
+  const tmpResult2 = analyticsLocations(setAdded[12]);
+}) : (() => {
   const tmp = closure_9();
-  const analyticsLocations = added(setAdded[6])(added(setAdded[7]).SUGGESTED_FRIENDS).analyticsLocations;
+  const analyticsLocations = added(setAdded[8])(added(setAdded[9]).SUGGESTED_FRIENDS).analyticsLocations;
   const effect = friendSuggestions.useEffect(() => {
-    added(setAdded[8]).track(userRowWithSubLabelHeight1.FRIEND_ADD_VIEWED, { friend_add_type: callback.FRIENDS_SUGGESTED_FRIENDS_MODAL });
+    added(setAdded[10]).track(userRowWithSubLabelHeight1.FRIEND_ADD_VIEWED, { friend_add_type: callback.FRIENDS_SUGGESTED_FRIENDS_MODAL });
   }, []);
-  const tmp6 = added(setAdded[9])();
+  const tmp6 = added(setAdded[11])();
   added = tmp6.added;
   setAdded = tmp6.setAdded;
   friendSuggestions = tmp6.friendSuggestions;
   const tmp2 = added;
-  const tmp4 = added(setAdded[6]);
-  const userRowWithSubLabelHeight = analyticsLocations(setAdded[10]).useUserRowWithSubLabelHeight(1);
-  const obj = analyticsLocations(setAdded[10]);
-  const userRowWithSubLabelHeight1 = analyticsLocations(setAdded[10]).useUserRowWithSubLabelHeight(2);
+  const tmp4 = added(setAdded[8]);
+  const userRowWithSubLabelHeight = analyticsLocations(setAdded[12]).useUserRowWithSubLabelHeight(1);
+  const obj = analyticsLocations(setAdded[12]);
+  const userRowWithSubLabelHeight1 = analyticsLocations(setAdded[12]).useUserRowWithSubLabelHeight(2);
   let items = [analyticsLocations];
   const onPress = friendSuggestions.useCallback((id) => {
     showUserProfileActionSheetDefault({ userId: id.id, localUser: id, sourceAnalyticsLocations: analyticsLocations });
@@ -101,7 +232,7 @@ export default function SuggestedFriendsScreen() {
     return tmp3 ? userRowWithSubLabelHeight1 : userRowWithSubLabelHeight;
   }, items2);
   const obj3 = { value: analyticsLocations, children: null };
-  const items3 = [closure_7(added(setAdded[13]), { absolute: true }), ];
+  const items3 = [closure_7(added(setAdded[15]), { absolute: true }), ];
   const obj4 = { style: tmp.container, children: null };
   if (0 !== friendSuggestions.length) {
     const obj5 = { sections: null, getItemProps: null, getSectionProps: null, getItemSize: null, insetStart: 8 };
@@ -110,18 +241,18 @@ export default function SuggestedFriendsScreen() {
     obj5.getItemProps = callback1;
     obj5.getSectionProps = callback2;
     obj5.getItemSize = callback3;
-    let tmp15Result = closure_7(tmp7(tmp3[14]).UsersFastList, obj5);
+    let tmp15Result = closure_7(tmp7(tmp3[16]).UsersFastList, obj5);
   } else {
     const obj6 = { style: tmp.emptyContainer, children: null };
     const obj7 = { title: null, disableBackgroundOverlay: true };
-    const intl = tmp7(tmp3[16]).intl;
-    obj7.title = intl.string(tmp7(tmp3[16]).t.pxFW8V);
-    obj6.children = closure_7(tmp2(tmp3[15]), obj7);
+    const intl = tmp7(tmp3[18]).intl;
+    obj7.title = intl.string(tmp7(tmp3[18]).t.pxFW8V);
+    obj6.children = closure_7(tmp2(tmp3[17]), obj7);
     tmp15Result = closure_7(tmp16, obj6);
-    const tmp2Result = tmp2(tmp3[15]);
+    const tmp2Result = tmp2(tmp3[17]);
   }
   obj4.children = tmp15Result;
   items3[1] = closure_7(userRowWithSubLabelHeight, obj4);
   obj3.children = items3;
-  return closure_8(analyticsLocations(setAdded[6]).AnalyticsLocationProvider, obj3);
-};
+  return closure_8(analyticsLocations(setAdded[8]).AnalyticsLocationProvider, obj3);
+});

@@ -1,8 +1,8 @@
-// === Module 5680: webpConversion ===
+// === Module 7313: webpConversion ===
 
-// Module 5680 (webpConversion)
+// Module 7313 (webpConversion)
 import LoggerDefault from "Logger" /* 3 */;
-import MurmurHashV3Default from "MurmurHashV3" /* 1240 */;
+import MurmurHashV3Default from "MurmurHashV3" /* 1251 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -32,7 +32,7 @@ let closure_7 = async function _shouldConvertToWebP2(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -217,7 +217,7 @@ let closure_9 = async function _performWebPConversion(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -440,7 +440,7 @@ let closure_10 = async function _maybeConvertToWebP(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {

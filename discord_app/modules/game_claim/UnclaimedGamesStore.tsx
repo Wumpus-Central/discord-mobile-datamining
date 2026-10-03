@@ -1,8 +1,8 @@
-// === Module 16040: UnclaimedGamesStore ===
+// === Module 16114: UnclaimedGamesStore ===
 
-// Module 16040 (UnclaimedGamesStore)
+// Module 16114 (UnclaimedGamesStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
 
 let guildIdToGameIds = null;
 const Store = initializeDefault.Store;

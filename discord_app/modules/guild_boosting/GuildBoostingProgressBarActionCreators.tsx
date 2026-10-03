@@ -1,7 +1,7 @@
-// === Module 16075: GuildBoostingProgressBarActionCreators ===
+// === Module 16150: GuildBoostingProgressBarActionCreators ===
 
-// Module 16075 (GuildBoostingProgressBarActionCreators)
-import DispatcherDefault from "Dispatcher" /* 573 */;
+// Module 16150 (GuildBoostingProgressBarActionCreators)
+import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_boosting/GuildBoostingProgressBarActionCreators.tsx");

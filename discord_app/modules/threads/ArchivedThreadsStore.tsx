@@ -1,18 +1,18 @@
-// === Module 7358: ArchivedThreadsStore ===
+// === Module 7262: ArchivedThreadsStore ===
 
-// Module 7358 (ArchivedThreadsStore)
+// Module 7262 (ArchivedThreadsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import ThreadSortOrder from "ThreadSortOrder" /* 2053 */;
-import ThreadSearchTagSetting from "ThreadSearchTagSetting" /* 2055 */;
-import ForumUtils from "ForumUtils" /* 6912 */;
-import tracking_Tracking from "tracking/Tracking" /* 7359 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import ThreadSortOrder from "ThreadSortOrder" /* 2061 */;
+import ThreadSearchTagSetting from "ThreadSearchTagSetting" /* 2063 */;
+import ForumUtils from "ForumUtils" /* 6810 */;
+import tracking_Tracking from "tracking/Tracking" /* 7263 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import ReadStateStore from "ReadStateStore" /* 4860 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4500 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import ReadStateStore from "ReadStateStore" /* 4905 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4511 */;
 
 require = fn;
 function listKey(channelId, sortOrder, tagFilter, tagSetting) {
@@ -106,14 +106,14 @@ function resortListState(value) {
     const tmp7Result = _modDef12(ChannelStore.getAllThreadsForParent(value.channelId));
     value.threads = mapped.reverse().value();
     let iter = mapped.reverse();
-  } else if (sortOrder === sortOrder(2053).ThreadSortOrder.LATEST_ACTIVITY) {
+  } else if (sortOrder === sortOrder(2061).ThreadSortOrder.LATEST_ACTIVITY) {
     id = id.id;
     let id2 = ReadStateStore.lastMessageId(id);
   } else {
     id2 = id.id;
   }
 }
-const ALL_CHANNEL_TYPES = fn(2048).ALL_CHANNEL_TYPES;
+const ALL_CHANNEL_TYPES = fn(2055).ALL_CHANNEL_TYPES;
 const map = new Map();
 let closure_12 = [];
 const Store = initializeDefault.Store;

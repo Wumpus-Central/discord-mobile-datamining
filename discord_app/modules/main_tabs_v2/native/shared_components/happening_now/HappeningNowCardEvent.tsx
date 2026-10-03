@@ -1,23 +1,24 @@
-// === Module 15936: HappeningNowCardEvent ===
+// === Module 16008: HappeningNowCardEvent ===
 
-// Module 15936 (HappeningNowCardEvent)
-import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import guild_scheduled_events_GuildScheduledEventModalActionCreators from "guild_scheduled_events/GuildScheduledEventModalActionCreators" /* 9273 */;
+// Module 16008 (HappeningNowCardEvent)
+import c from "c" /* 576 */;
+import nativeDefault from "native" /* 587 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import guild_scheduled_events_GuildScheduledEventModalActionCreators from "guild_scheduled_events/GuildScheduledEventModalActionCreators" /* 9279 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2111 */;
-import UserStore from "UserStore" /* 1372 */;
+import LocaleStore from "LocaleStore" /* 2116 */;
+import UserStore from "UserStore" /* 1377 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
-const HappeningNowConstants = fn(15053);
+const HappeningNowConstants = fn(15110);
 const HAPPENING_NOW_CONTENT_HEIGHT = HappeningNowConstants.HAPPENING_NOW_CONTENT_HEIGHT;
 ({ HappeningNowCardTrackingType: closure_9, HAPPENING_NOW_CARD_HEIGHT: c10, HAPPENING_NOW_EVENT_BANNER_WIDTH } = HappeningNowConstants);
-const AnalyticEvents = fn(1074).AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj = { info: { alignSelf: "center", flexShrink: 1, marginLeft: 12, gap: 2 }, infoNoImage: { alignSelf: "center", justifyContent: "center", flexShrink: 1, flexGrow: 1, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, height: HAPPENING_NOW_CONTENT_HEIGHT, gap: 2, marginRight: -4, paddingLeft: 8, paddingRight: 8, borderTopRightRadius: nativeDefault.radii.sm, borderBottomRightRadius: nativeDefault.radii.sm }, decorationImage: null, dottedLineContainer: null, shortDottedLineSegment: null, dottedLineSegment: null, interestedUsersContainer: null, interestedUsersIcon: null, ticketContainer: null, avatarContainer: null };
 let size = { borderTopRightRadius: nativeDefault.radii.sm, borderBottomRightRadius: nativeDefault.radii.sm, alignSelf: "center", width: HAPPENING_NOW_EVENT_BANNER_WIDTH, height: HAPPENING_NOW_CONTENT_HEIGHT };
 obj.decorationImage = size;
@@ -32,24 +33,166 @@ obj.interestedUsersIcon = { tintColor: nativeDefault.colors.TEXT_SUBTLE };
 let obj4 = { tintColor: nativeDefault.colors.TEXT_SUBTLE };
 obj.ticketContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, flexDirection: "column", justifyContent: "space-between", alignItems: "center", height: HAPPENING_NOW_CONTENT_HEIGHT, padding: 6, borderTopLeftRadius: nativeDefault.radii.sm, borderBottomLeftRadius: nativeDefault.radii.sm };
 let obj5 = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, flexDirection: "column", justifyContent: "space-between", alignItems: "center", height: HAPPENING_NOW_CONTENT_HEIGHT, padding: 6, borderTopLeftRadius: nativeDefault.radii.sm, borderBottomLeftRadius: nativeDefault.radii.sm };
-obj.avatarContainer = { width: fn(1177).AVATAR_SIZE_MAP[fn(undefined, 1177).AvatarSizes.XSMALL_20] };
+obj.avatarContainer = { width: fn(1188).AVATAR_SIZE_MAP[fn(undefined, 1188).AvatarSizes.XSMALL_20] };
 let closure_14 = createStyles.createStyles(obj);
-const point = { shape: fn(8464).CutoutShape.Circle, x: -8, y: HAPPENING_NOW_CONTENT_HEIGHT / 2 - 8, size: 16 };
+const point = { shape: fn(8469).CutoutShape.Circle, x: -8, y: HAPPENING_NOW_CONTENT_HEIGHT / 2 - 8, size: 16 };
 let items = [point];
-let closure_16 = noop.memo(() => {
+let ReactCompilerGating = fn(558);
+let closure_16 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(2);
+  const tmp2 = closure_14();
+  if (cResult[0] !== tmp2) {
+    items = [];
+    for (let num3 = 0; num3 <= HAPPENING_NOW_CONTENT_HEIGHT; num3 = num3 + 8) {
+      let obj2 = { style: 0 === num3 ? tmp2.shortDottedLineSegment : tmp2.dottedLineSegment };
+      let arr = items.push(__initData(React4, obj2, num3));
+    }
+    cResult[0] = tmp2;
+    cResult[1] = items;
+    let tmp3 = items;
+  } else {
+    tmp3 = cResult[1];
+  }
+  return tmp3;
+}) : (() => {
   const tmp = closure_14();
   items = [];
   for (let num = 0; num <= HAPPENING_NOW_CONTENT_HEIGHT; num = num + 8) {
     let obj = { style: 0 === num ? tmp.shortDottedLineSegment : tmp.dottedLineSegment };
-    let arr = items.push(closure_1_12(React4, obj, num));
+    let arr = items.push(__initData(React4, obj, num));
   }
   return items;
-});
-let obj6 = { width: fn(1177).AVATAR_SIZE_MAP[fn(undefined, 1177).AvatarSizes.XSMALL_20] };
+}));
+ReactCompilerGating = fn(558);
+let obj6 = { width: fn(1188).AVATAR_SIZE_MAP[fn(undefined, 1188).AvatarSizes.XSMALL_20] };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardEvent.tsx");
 
-export default noop.memo((event) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((event) => {
+  const cResult = event(creator_id[12]).c(65);
+  event = event.event;
+  const index = event.index;
+  ({ isLive, panelVariant } = event);
+  let tmp4 = undefined !== panelVariant;
+  if (tmp4) {
+    tmp4 = panelVariant;
+  }
+  closure_14();
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    items = [LocaleStore];
+    const fn = function c() {
+      return locale.locale;
+    };
+    cResult[0] = items;
+    cResult[1] = fn;
+    tmp6 = items;
+    tmp7 = fn;
+  } else {
+    [tmp6, tmp7] = cResult;
+  }
+  let obj = event(creator_id[12]);
+  const stateFromStores = event(creator_id[13]).useStateFromStores(tmp6, tmp7);
+  creator_id = event.host_id;
+  if (creator_id == null) {
+    creator_id = event.creator_id;
+  }
+  if (cResult[2] !== creator_id) {
+    if (null != creator_id) {
+      const items1 = [creator_id];
+      let items2 = items1;
+    } else {
+      items2 = [];
+    }
+    cResult[2] = creator_id;
+    cResult[3] = items2;
+  } else {
+    const ensureHydratedGuildUsers = tmp(tmp2[14]).useEnsureHydratedGuildUsers(event.guild_id, cResult[3]);
+    const _Symbol = Symbol;
+    if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+      const items3 = [UserStore];
+      cResult[4] = items3;
+      let tmp12 = items3;
+    } else {
+      tmp12 = cResult[4];
+    }
+    if (cResult[5] !== creator_id) {
+      class A {
+        constructor() {
+          return closure_7.getUser(creator_id);
+        }
+      }
+      cResult[5] = creator_id;
+      cResult[6] = A;
+    } else {
+      class A {
+        constructor() {
+          return closure_7.getUser(creator_id);
+        }
+      }
+    }
+    const tmpResult3 = tmp(tmp2[14]);
+    const stateFromStores1 = tmp(tmp2[13]).useStateFromStores(tmp12, A);
+    if (cResult[7] !== event) {
+      class A {
+        constructor() {
+          return closure_7.getUser(creator_id);
+        }
+      }
+      if (null != event) {
+        class A {
+          constructor() {
+            return closure_7.getUser(creator_id);
+          }
+        }
+        const nextRecurrenceIdInEvent = obj5.getNextRecurrenceIdInEvent(event);
+      }
+      cResult[7] = event;
+      cResult[8] = nextRecurrenceIdInEvent;
+      const tmp16 = nextRecurrenceIdInEvent;
+    } else {
+      class A {
+        constructor() {
+          return closure_7.getUser(creator_id);
+        }
+      }
+    }
+    index(tmp2[16])(event.guild_id, event.id, tmp16);
+    if (cResult[9] === event) {
+      class A {
+        constructor() {
+          return closure_7.getUser(creator_id);
+        }
+      }
+    }
+    class H {
+      constructor() {
+        tmp = closure_2;
+        obj = closure_1(closure_2[17]);
+        obj1 = { order: index, guild_id: event.guild_id, type: closure_9.GUILD_EVENT_CARD, highlighted_user_ids: null, destination_channel_id: null };
+        tmp2 = event;
+        tmp4 = null;
+        if (null != creator_id) {
+          items = [];
+          items[0] = tmp3;
+          tmp4 = items;
+        }
+        obj1.highlighted_user_ids = tmp4;
+        obj1.destination_channel_id = tmp2.channel_id;
+        trackResult = obj.track(AnalyticEvents.ACTIVITY_CARD_CLICKED, obj1);
+        obj3 = closure_0(tmp[18]);
+        obj5 = { eventId: tmp2.id, event: tmp2 };
+        result = obj3.openGuildEventDetails(obj5);
+        return;
+      }
+    }
+    cResult[9] = event;
+    cResult[10] = index;
+    cResult[11] = creator_id;
+    cResult[12] = H;
+    const tmpResult4 = tmp(tmp2[13]);
+  }
+  const tmpResult = event(creator_id[13]);
+}) : ((event) => {
   event = event.event;
   const index = event.index;
   ({ isLive, panelVariant } = event);
@@ -59,27 +202,27 @@ export default noop.memo((event) => {
   const tmp = closure_14();
   items = [LocaleStore];
   let creator_id = event.host_id;
-  const stateFromStores = event(creator_id[11]).useStateFromStores(items, () => locale.locale);
+  const stateFromStores = event(creator_id[13]).useStateFromStores(items, () => locale.locale);
   if (creator_id == null) {
     creator_id = event.creator_id;
   }
-  let obj = event(creator_id[11]);
+  let obj = event(creator_id[13]);
   if (null != creator_id) {
     const items1 = [creator_id];
     let items2 = items1;
   } else {
     items2 = [];
   }
-  const ensureHydratedGuildUsers = event(creator_id[12]).useEnsureHydratedGuildUsers(event.guild_id, items2);
-  const tmp2Result = event(creator_id[12]);
+  const ensureHydratedGuildUsers = event(creator_id[14]).useEnsureHydratedGuildUsers(event.guild_id, items2);
+  const tmp2Result = event(creator_id[14]);
   const items3 = [UserStore];
-  const stateFromStores1 = event(creator_id[11]).useStateFromStores(items3, () => UserStore.getUser(creator_id));
+  const stateFromStores1 = event(creator_id[13]).useStateFromStores(items3, () => UserStore.getUser(creator_id));
   let nextRecurrenceIdInEvent = null;
   if (null != event) {
-    nextRecurrenceIdInEvent = tmp2(tmp3[13]).getNextRecurrenceIdInEvent(event);
-    const tmp2Result6 = tmp2(tmp3[13]);
+    nextRecurrenceIdInEvent = tmp2(tmp3[15]).getNextRecurrenceIdInEvent(event);
+    const tmp2Result6 = tmp2(tmp3[15]);
   }
-  const tmp9 = index(creator_id[14])(event.guild_id, event.id, nextRecurrenceIdInEvent);
+  const tmp9 = index(creator_id[16])(event.guild_id, event.id, nextRecurrenceIdInEvent);
   const items4 = [event, index, creator_id];
   let source = null;
   const callback = noop.useCallback(() => {
@@ -96,12 +239,12 @@ export default noop.memo((event) => {
     const obj4 = { eventId: event.id, event };
   }, items4);
   if (null != event.image) {
-    source = tmp2(tmp3[17]).makeSource(tmp8(tmp3[18])(event, 200));
-    const tmp2Result7 = tmp2(tmp3[17]);
+    source = tmp2(tmp3[19]).makeSource(tmp8(tmp3[20])(event, 200));
+    const tmp2Result7 = tmp2(tmp3[19]);
   }
-  const tmp2Result5 = event(creator_id[11]);
+  const tmp2Result5 = event(creator_id[13]);
   tmp8 = index;
-  let startDateTimeString = event(creator_id[13]).getEventTimeData(event.scheduled_start_time).startDateTimeString;
+  let startDateTimeString = event(creator_id[15]).getEventTimeData(event.scheduled_start_time).startDateTimeString;
   const items5 = [];
   for (let num2 = 0; num2 < closure_10; num2 = num2 + 8) {
     let obj2 = { style: tmp.dottedLineSegment };
@@ -110,7 +253,7 @@ export default noop.memo((event) => {
   let obj3 = { onPress: callback, width: null, panelVariant: null, children: null };
   let str = "stretchy";
   const tmp17 = index;
-  const tmp2Result8 = event(creator_id[13]);
+  const tmp2Result8 = event(creator_id[15]);
   if (event.fullwidth) {
     str = "full";
   }
@@ -120,7 +263,7 @@ export default noop.memo((event) => {
   const obj5 = { style: tmp.ticketContainer, children: null };
   const obj6 = { style: tmp.avatarContainer, children: null };
   let tmp22Result = null != stateFromStores1;
-  const tmp19 = index(creator_id[19]);
+  const tmp19 = index(creator_id[24]);
   if (tmp22Result) {
     const obj7 = { user: stateFromStores1, avatarDecoration: stateFromStores1.avatarDecoration, guildId: event.guild_id, size: event(tmp18[9]).AvatarSizes.XSMALL_20 };
     tmp22Result = closure_12(event(tmp18[9]).Avatar, obj7);
@@ -128,12 +271,12 @@ export default noop.memo((event) => {
   obj6.children = tmp22Result;
   const items6 = [closure_12(closure_4, obj6), ];
   const obj8 = { style: tmp.interestedUsersContainer, children: null };
-  const items7 = [closure_12(event(creator_id[20]).GroupIcon, { style: tmp.interestedUsersIcon, size: "xxs" }), ];
+  const items7 = [closure_12(event(creator_id[21]).GroupIcon, { style: tmp.interestedUsersIcon, size: "xxs" }), ];
   let tmp22Result4 = tmp9 > 0;
   if (tmp22Result4) {
-    const obj10 = { color: "mobile-text-heading-primary", variant: "text-xs/semibold", children: tmp25(tmp18[22]).humanizeValue(tmp9, stateFromStores) };
-    tmp22Result4 = closure_12(tmp25(tmp18[21]).Text, obj10);
-    const tmp25Result = tmp25(tmp18[22]);
+    const obj10 = { color: "mobile-text-heading-primary", variant: "text-xs/semibold", children: tmp25(tmp18[23]).humanizeValue(tmp9, stateFromStores) };
+    tmp22Result4 = closure_12(tmp25(tmp18[22]).Text, obj10);
+    const tmp25Result = tmp25(tmp18[23]);
   }
   items7[1] = tmp22Result4;
   obj8.children = items7;
@@ -155,7 +298,7 @@ export default noop.memo((event) => {
   }
   items9[1] = tmp22Result6;
   const obj13 = { style: null == source ? tmp.infoNoImage : tmp.info, children: null };
-  const items10 = [closure_12(event(creator_id[19]).HappeningNowCardHeader, { lineClamp: 3, noMargin: true, children: event.name }), ];
+  const items10 = [closure_12(event(creator_id[24]).HappeningNowCardHeader, { lineClamp: 3, noMargin: true, children: event.name }), ];
   let str2;
   if (isLive) {
     str2 = "text-feedback-positive";
@@ -167,15 +310,15 @@ export default noop.memo((event) => {
   }
   obj15.variant = str3;
   if (isLive) {
-    const intl = tmp25(tmp18[23]).intl;
+    const intl = tmp25(tmp18[25]).intl;
     const _HermesInternal = HermesInternal;
-    startDateTimeString = "\u00B7 " + intl.string(tmp25(tmp18[23]).t.dI3q4h).toUpperCase();
-    const str4 = intl.string(tmp25(tmp18[23]).t.dI3q4h);
+    startDateTimeString = "\u00B7 " + intl.string(tmp25(tmp18[25]).t.dI3q4h).toUpperCase();
+    const str4 = intl.string(tmp25(tmp18[25]).t.dI3q4h);
   }
   obj15.children = startDateTimeString;
-  items10[1] = closure_12(event(creator_id[19]).HappeningNowCardSubtitle, obj15);
+  items10[1] = closure_12(event(creator_id[24]).HappeningNowCardSubtitle, obj15);
   obj13.children = items10;
   items9[2] = closure_13(closure_4, obj13);
   obj3.children = items9;
   return closure_13(tmp19, obj3);
-});
+}));

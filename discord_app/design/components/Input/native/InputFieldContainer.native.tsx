@@ -1,17 +1,67 @@
-// === Module 6225: InputFieldContainer ===
+// === Module 6105: InputFieldContainer ===
 
-// Module 6225 (InputFieldContainer)
-import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4560 */;
-import Text_Text from "Text/Text" /* 4841 */;
-import spring from "spring" /* 5464 */;
-import InputTypes from "InputTypes" /* 6226 */;
+// Module 6105 (InputFieldContainer)
+import c from "c" /* 576 */;
+import nativeDefault from "native" /* 587 */;
+import useToken from "useToken" /* 4580 */;
+import Text_Text from "Text/Text" /* 4886 */;
+import spring from "spring" /* 5597 */;
+import InputTypes from "InputTypes" /* 6106 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-function useInputStyles(size) {
+get_ActivityIndicator = fn(17);
+({ Platform, StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const RING_SPRING_CONFIG = { mass: 0.5, damping: 15, stiffness: 200, overshootClamping: true };
+let ReactCompilerGating = fn(558);
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(4);
+  ({ size, round, disabled, grow } = arg0);
+  let str = "lg";
+  if (undefined !== size) {
+    str = size;
+  }
+  if (cResult[0] !== str) {
+    if ("sm" === str) {
+      let INPUT_FIELD_RADIUS_MD = nativeDefault.modules.mobile.INPUT_FIELD_RADIUS_SM;
+      cResult[0] = str;
+      cResult[1] = INPUT_FIELD_RADIUS_MD;
+    } else if ("md" !== str) {
+      if ("lg" === str) {
+        INPUT_FIELD_RADIUS_MD = nativeDefault.modules.mobile.INPUT_FIELD_RADIUS_LG;
+      }
+    }
+    INPUT_FIELD_RADIUS_MD = nativeDefault.modules.mobile.INPUT_FIELD_RADIUS_MD;
+  } else {
+    let token = useToken.useToken(cResult[1]);
+    const tmpResult = useToken;
+    if (tmp4) {
+      token = tmpResult4.useToken(nativeDefault.modules.mobile.INPUT_FIELD_ROUND_RADIUS);
+    }
+    if (cResult[2] !== str) {
+      if ("sm" === str) {
+        let INPUT_FIELD_TEXT_STYLE_MD = nativeDefault.modules.mobile.INPUT_FIELD_TEXT_STYLE_SM;
+        cResult[2] = str;
+        cResult[3] = INPUT_FIELD_TEXT_STYLE_MD;
+      } else if ("md" !== str) {
+        if ("lg" === str) {
+          INPUT_FIELD_TEXT_STYLE_MD = nativeDefault.modules.mobile.INPUT_FIELD_TEXT_STYLE_LG;
+        }
+      }
+      INPUT_FIELD_TEXT_STYLE_MD = nativeDefault.modules.mobile.INPUT_FIELD_TEXT_STYLE_MD;
+    } else {
+      const token1 = useToken.useToken(cResult[3]);
+      const tmpResult5 = useToken;
+      return closure_9(str, tmp5, tmp6, token, token1, useToken.useToken(nativeDefault.modules.mobile.INPUT_FIELD_PADDING_VERTICAL_SM_IOS));
+    }
+    tmpResult4 = useToken;
+  }
+  tmp4 = undefined !== round && round;
+}) : ((size) => {
   let str = size.size;
   if (str === undefined) {
     str = "lg";
@@ -50,13 +100,9 @@ function useInputStyles(size) {
   const token1 = useToken.useToken(INPUT_FIELD_TEXT_STYLE_LG);
   const tmpResult3 = useToken;
   return closure_9(str, flag2, flag3, token, token1, useToken.useToken(nativeDefault.modules.mobile.INPUT_FIELD_PADDING_VERTICAL_SM_IOS));
-}
-get_ActivityIndicator = fn(17);
-({ Platform, StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const RING_SPRING_CONFIG = { mass: 0.5, damping: 15, stiffness: 200, overshootClamping: true };
-let createStyles = fn(4845);
+});
+let closure_8 = tmp5;
+let createStyles = fn(4890);
 let closure_9 = createStyles.createStyles(() => {
   let str = arg0;
   if (arg0 === undefined) {
@@ -140,14 +186,191 @@ let closure_9 = createStyles.createStyles(() => {
   obj9.splitBorder = obj15;
   return obj9;
 });
-createStyles = fn(4845);
+createStyles = fn(4890);
 let closure_10 = createStyles.createStyleProperties({ error: nativeDefault.colors.INPUT_BORDER_ERROR_DEFAULT, default: "transparent", focused: nativeDefault.colors.INPUT_BORDER_ACTIVE });
-const __initData = { code: "function InputFieldContainerNativeTsx1(){const{status,ringColors,isFocused,withSpring,RING_SPRING_CONFIG}=this.__closure;let borderWidth=0;let borderColor='transparent';if(status!=='default'){borderWidth=2;borderColor=ringColors.error;}else if(isFocused){borderWidth=1;borderColor=ringColors.focused;}return{borderWidth:withSpring(borderWidth,RING_SPRING_CONFIG),borderColor:withSpring(borderColor,RING_SPRING_CONFIG),left:-borderWidth,right:-borderWidth,top:-borderWidth,bottom:-borderWidth};}" };
+const __initData = { code: "function InputFieldContainerNativeTsx1(){const{status,ringColors,isFocused,withSpring,RING_SPRING_CONFIG}=this.__closure;let borderWidth=0;let borderColor=\"transparent\";if(status!==\"default\"){borderWidth=2;borderColor=ringColors.error;}else{if(isFocused){borderWidth=1;borderColor=ringColors.focused;}}return{borderWidth:withSpring(borderWidth,RING_SPRING_CONFIG),borderColor:withSpring(borderColor,RING_SPRING_CONFIG),left:-borderWidth,right:-borderWidth,top:-borderWidth,bottom:-borderWidth};}" };
+const __initData2 = { code: "function InputFieldContainerNativeTsx2(){const{status,ringColors,isFocused,withSpring,RING_SPRING_CONFIG}=this.__closure;let borderWidth=0;let borderColor='transparent';if(status!=='default'){borderWidth=2;borderColor=ringColors.error;}else if(isFocused){borderWidth=1;borderColor=ringColors.focused;}return{borderWidth:withSpring(borderWidth,RING_SPRING_CONFIG),borderColor:withSpring(borderColor,RING_SPRING_CONFIG),left:-borderWidth,right:-borderWidth,top:-borderWidth,bottom:-borderWidth};}" };
+ReactCompilerGating = fn(558);
+let obj4 = { error: nativeDefault.colors.INPUT_BORDER_ERROR_DEFAULT, default: "transparent", focused: nativeDefault.colors.INPUT_BORDER_ACTIVE };
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Input/native/InputFieldContainer.native.tsx");
 
-export { useInputStyles };
-export const InputFieldContainer = function InputFieldContainer(isFocused) {
+export const useInputStyles = tmp5;
+export const InputFieldContainer = ReactCompilerGating.isReactCompilerEnabled() ? ((leadingIcon) => {
+  const cResult = require("c").c(18);
+  const tmp4 = closure_10();
+  _require = tmp4;
+  ({ isFocused, status, children, size, grow, round, disabled } = leadingIcon);
+  let tmp5 = undefined !== isFocused;
+  if (tmp5) {
+    tmp5 = isFocused;
+  }
+  isFocused = tmp5;
+  str = "default";
+  if (undefined !== status) {
+    str = status;
+  }
+  if (cResult[0] === (undefined !== disabled && disabled)) {
+    if (cResult[1] === grow) {
+      if (cResult[2] === tmp6) {
+        if (cResult[3] === size) {
+          if (cResult[4] === tmp8) {
+            let tmp9 = cResult[5];
+          }
+          const tmp11 = closure_8(tmp9);
+          class U {
+            constructor() {
+              if ("default" !== status) {
+                tmp3 = closure_0;
+                str = closure_0.error;
+                num = 2;
+              } else {
+                tmp = isFocused;
+                str = "transparent";
+                num = 0;
+                if (isFocused) {
+                  tmp2 = closure_0;
+                  str = closure_0.focused;
+                  num = 1;
+                }
+              }
+              rect = { borderWidth: null, borderColor: null, left: null, right: null, top: null, bottom: null };
+              obj2 = closure_0(closure_2[11]);
+              rect.borderWidth = obj2.withSpring(num, closure_7);
+              obj3 = closure_0(closure_2[11]);
+              rect.borderColor = obj3.withSpring(str, closure_7);
+              tmp4 = -num;
+              rect.left = tmp4;
+              rect.right = tmp4;
+              rect.top = tmp4;
+              rect.bottom = tmp4;
+              return rect;
+            }
+          }
+          let obj2 = { status: str, ringColors: tmp4, isFocused: tmp5, withSpring: tmp(tmp2[11]).withSpring, RING_SPRING_CONFIG };
+          U.__closure = obj2;
+          U.__workletHash = 1460330578504;
+          U.__initData = __initData;
+          const animatedStyle = tmp(tmp2[10]).useAnimatedStyle(U);
+          if (cResult[6] === tmp11.background) {
+            if (cResult[7] === tmp11.container) {
+              if (cResult[8] === tmp11.minHeight) {
+                if (cResult[9] === tmp11.radius) {
+                  let tmp15 = cResult[10];
+                }
+                if (cResult[11] === animatedStyle) {
+                  if (cResult[12] === tmp11.radius) {
+                    let tmp16 = cResult[13];
+                  }
+                  if (cResult[14] === children) {
+                    if (cResult[15] === tmp15) {
+                      if (cResult[16] === tmp16) {
+                        let tmp22 = cResult[17];
+                      }
+                      return tmp22;
+                    }
+                  }
+                  class U {
+                    constructor() {
+                      if ("default" !== status) {
+                        tmp3 = closure_0;
+                        str = closure_0.error;
+                        num = 2;
+                      } else {
+                        tmp = isFocused;
+                        str = "transparent";
+                        num = 0;
+                        if (isFocused) {
+                          tmp2 = closure_0;
+                          str = closure_0.focused;
+                          num = 1;
+                        }
+                      }
+                      rect = { borderWidth: null, borderColor: null, left: null, right: null, top: null, bottom: null };
+                      obj2 = closure_0(closure_2[11]);
+                      rect.borderWidth = obj2.withSpring(num, closure_7);
+                      obj3 = closure_0(closure_2[11]);
+                      rect.borderColor = obj3.withSpring(str, closure_7);
+                      tmp4 = -num;
+                      rect.left = tmp4;
+                      rect.right = tmp4;
+                      rect.top = tmp4;
+                      rect.bottom = tmp4;
+                      return rect;
+                    }
+                  }
+                  tmp25[0] = tmp15;
+                  const items = [tmp16, children];
+                  tmp25[1] = items;
+                  const tmp26 = closure_6(closure_4, tmp25);
+                  cResult[14] = children;
+                  cResult[15] = tmp15;
+                  cResult[16] = tmp16;
+                  cResult[17] = tmp26;
+                  tmp22 = tmp26;
+                }
+                class U {
+                  constructor() {
+                    if ("default" !== status) {
+                      tmp3 = closure_0;
+                      str = closure_0.error;
+                      num = 2;
+                    } else {
+                      tmp = isFocused;
+                      str = "transparent";
+                      num = 0;
+                      if (isFocused) {
+                        tmp2 = closure_0;
+                        str = closure_0.focused;
+                        num = 1;
+                      }
+                    }
+                    rect = { borderWidth: null, borderColor: null, left: null, right: null, top: null, bottom: null };
+                    obj2 = closure_0(closure_2[11]);
+                    rect.borderWidth = obj2.withSpring(num, closure_7);
+                    obj3 = closure_0(closure_2[11]);
+                    rect.borderColor = obj3.withSpring(str, closure_7);
+                    tmp4 = -num;
+                    rect.left = tmp4;
+                    rect.right = tmp4;
+                    rect.top = tmp4;
+                    rect.bottom = tmp4;
+                    return rect;
+                  }
+                }
+                const items1 = [closure_3.absoluteFill, tmp11.radius, animatedStyle];
+                tmp19[0] = items1;
+                const tmp21 = closure_5(isFocused(tmp2[10]).View, tmp19);
+                cResult[11] = animatedStyle;
+                cResult[12] = tmp11.radius;
+                cResult[13] = tmp21;
+                tmp16 = tmp21;
+              }
+            }
+          }
+          const items2 = [, , , ];
+          ({ container: arr[0], background: arr[1], radius: arr[2], minHeight: arr[3] } = tmp11);
+          cResult[6] = tmp11.background;
+          cResult[7] = tmp11.container;
+          cResult[8] = tmp11.minHeight;
+          cResult[9] = tmp11.radius;
+          cResult[10] = items2;
+          tmp15 = items2;
+          const tmpResult = tmp(tmp2[10]);
+        }
+      }
+    }
+  }
+  const obj3 = { size, round: undefined !== round && round, disabled: undefined !== disabled && disabled, grow, hasLeadingIcon: null != leadingIcon.leadingIcon };
+  cResult[0] = undefined !== disabled && disabled;
+  cResult[1] = grow;
+  cResult[2] = undefined !== round && round;
+  cResult[3] = size;
+  cResult[4] = null != leadingIcon.leadingIcon;
+  cResult[5] = obj3;
+  tmp9 = obj3;
+  const obj = require("c");
+}) : ((isFocused) => {
   const tmp = closure_10();
   _require = tmp;
   isFocused = isFocused.isFocused;
@@ -172,7 +395,7 @@ export const InputFieldContainer = function InputFieldContainer(isFocused) {
   obj.disabled = tmp5;
   obj.grow = grow;
   obj.hasLeadingIcon = null != leadingIcon;
-  const tmp4Result = useInputStyles(obj);
+  const tmp4Result = closure_8(obj);
   const fn = function s() {
     if ("default" !== str) {
       str = closure_0.error;
@@ -195,17 +418,17 @@ export const InputFieldContainer = function InputFieldContainer(isFocused) {
   };
   let obj2 = require("ReanimatedRexport");
   fn.__closure = { status: str, ringColors: tmp, isFocused: undefined !== isFocused && isFocused, withSpring: require("spring").withSpring, RING_SPRING_CONFIG };
-  fn.__workletHash = 1037178877006;
-  fn.__initData = __initData;
+  fn.__workletHash = 595281080365;
+  fn.__initData = __initData2;
   const obj4 = { style: null, children: null };
   const items = [, , , ];
   ({ container: arr[0], background: arr[1], radius: arr[2], minHeight: arr[3] } = tmp4Result);
   obj4.style = items;
   const animatedStyle = obj2.useAnimatedStyle(fn);
   const obj5 = { style: null };
-  const items1 = [absoluteFill.absoluteFill, tmp4Result.radius, animatedStyle];
+  const items1 = [closure_3.absoluteFill, tmp4Result.radius, animatedStyle];
   obj5.style = items1;
   const items2 = [closure_5(require("ReanimatedRexport").View, obj5), children];
   obj4.children = items2;
   return closure_6(closure_4, obj4);
-};
+});

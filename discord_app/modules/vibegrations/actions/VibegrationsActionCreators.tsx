@@ -1,14 +1,15 @@
-// === Module 8687: VibegrationsActionCreators ===
+// === Module 8700: VibegrationsActionCreators ===
 
-// Module 8687 (VibegrationsActionCreators)
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import HTTPUtils from "HTTPUtils" /* 1271 */;
-import VibegrationsTypes from "VibegrationsTypes" /* 5555 */;
-import VibegrationsAnalytics from "VibegrationsAnalytics" /* 8688 */;
-import VibegrationsPlatformUtilsDefault from "VibegrationsPlatformUtils" /* 8689 */;
+// Module 8700 (VibegrationsActionCreators)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import VibegrationsTypes from "VibegrationsTypes" /* 6747 */;
+import VibegrationsAnalytics from "VibegrationsAnalytics" /* 8701 */;
+import VibegrationsPlatformUtilsDefault from "VibegrationsPlatformUtils" /* 8702 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ReadStateStore from "ReadStateStore" /* 4860 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 8686 */;
+import ReadStateStore from "ReadStateStore" /* 4905 */;
+import UserStore from "UserStore" /* 1377 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 8699 */;
 
 require = fn;
 function reloadVibegrationsAppFrames(application_id) {
@@ -16,7 +17,7 @@ function reloadVibegrationsAppFrames(application_id) {
 }
 function listProjects() {
   const self = this;
-  const apply = closure_12.apply;
+  const apply = closure_13.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -24,7 +25,7 @@ function listProjects() {
   }
   return applyArgumentsResult;
 }
-let closure_12 = async function _listProjects() {
+let closure_13 = async function _listProjects() {
   c5 = 0;
   c6 = 0;
   c4 = 0;
@@ -39,7 +40,7 @@ let closure_12 = async function _listProjects() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -70,7 +71,7 @@ let closure_12 = async function _listProjects() {
               type = projectsFetchState.type;
             }
             if ("loading" !== type) {
-              closure_9 = tmp33;
+              closure_10 = tmp33;
               const obj5 = { type: "VIBEGRATIONS_PROJECTS_FETCH_START", guildId: tmp33 };
               DispatcherDefault.dispatch(obj5);
               c4 = 1;
@@ -89,10 +90,10 @@ let closure_12 = async function _listProjects() {
             } else {
               tmp7 = null != tmp33;
               if (tmp7) {
-                tmp7 = tmp33 !== closure_9;
+                tmp7 = tmp33 !== closure_10;
               }
               if (tmp7) {
-                closure_10 = tmp33;
+                closure_11 = tmp33;
               }
             }
           }
@@ -100,8 +101,8 @@ let closure_12 = async function _listProjects() {
           if (1 === tmp7) {
             c4 = 0;
             const obj9 = { type: "VIBEGRATIONS_PROJECTS_FETCH_FAIL", guildId: closure_130_0 };
-            closure_131_1(closure_131_2[5]).dispatch(obj9);
-            const obj4 = closure_131_1(closure_131_2[5]);
+            closure_131_1(closure_131_2[6]).dispatch(obj9);
+            const obj4 = closure_131_1(closure_131_2[6]);
           } else if (arg0 === 1) {
             c6 = 3;
             throw value;
@@ -113,10 +114,10 @@ let closure_12 = async function _listProjects() {
           } else {
             body = value.body;
             const obj11 = { type: "VIBEGRATIONS_PROJECTS_FETCH_SUCCESS", projects: body, guildId: closure_130_0 };
-            closure_131_1(closure_131_2[5]).dispatch(obj11);
+            closure_131_1(closure_131_2[6]).dispatch(obj11);
             (function forgetMissingProjects() {
               const self = this;
-              const apply = closure_1_14.apply;
+              const apply = closure_1_15.apply;
               if (typeof apply === "unknown") {
                 let applyArgumentsResult = HermesBuiltin.applyArguments(self);
               } else {
@@ -125,16 +126,16 @@ let closure_12 = async function _listProjects() {
               return applyArgumentsResult;
             })();
             c4 = 0;
-            const obj = closure_131_1(closure_131_2[5]);
+            const obj = closure_131_1(closure_131_2[6]);
           }
-          closure_130_2 = closure_131_10;
-          closure_131_10 = null;
+          closure_130_2 = closure_131_11;
+          closure_131_11 = null;
           tmp7 = null != closure_130_2;
           if (tmp7) {
             tmp7 = closure_130_2 !== closure_130_0;
           }
           if (tmp7) {
-            tmp7 = closure_131_11(closure_130_2);
+            tmp7 = closure_131_12(closure_130_2);
           }
         }
         c6 = 3;
@@ -149,7 +150,7 @@ let closure_12 = async function _listProjects() {
     }
   })();
 };
-let closure_14 = async function _forgetMissingProjects() {
+let closure_15 = async function _forgetMissingProjects() {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -160,7 +161,7 @@ let closure_14 = async function _forgetMissingProjects() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     while (true) {
@@ -179,29 +180,29 @@ let closure_14 = async function _forgetMissingProjects() {
           closure_2 = tmp4;
           closure_130_0 = undefined;
           closure_130_1 = undefined;
-          if (!c13) {
-            c13 = true;
+          if (!c14) {
+            c14 = true;
             resourceIds = resourceIds.getResourceIds(constants.CONJURING_PROJECT);
             _require = resourceIds[Symbol.iterator]();
             if (_require !== undefined) {
               c5 = 1;
               closure_130_0 = tmp36;
-              if (null == closure_131_5.getProject(closure_130_0)) {
-                if (0 !== closure_131_4.getMentionCount(closure_130_0, closure_131_7.CONJURING_PROJECT)) {
-                  let obj5 = closure_131_0(closure_131_2[9]);
+              if (null == closure_131_6.getProject(closure_130_0)) {
+                if (0 !== closure_131_4.getMentionCount(closure_130_0, closure_131_8.CONJURING_PROJECT)) {
+                  let obj5 = closure_131_0(closure_131_2[10]);
                   let _Math = Math;
                   c6 = 2;
                   c7 = 1;
                   let obj6 = { value: obj5.sleep(5000 * Math.random()), done: false };
                   return obj6;
                 } else {
-                  let tmp46 = closure_131_15(closure_130_0);
+                  let tmp46 = closure_131_16(closure_130_0);
                 }
               }
             }
           }
           c7 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else if (1 === tmp4) {
         c5 = 0;
@@ -217,24 +218,24 @@ let closure_14 = async function _forgetMissingProjects() {
           c7 = 3;
           let obj7 = { value, done: true };
           return obj7;
-        } else if (null == closure_131_5.getProject(closure_130_0)) {
+        } else if (null == closure_131_6.getProject(closure_130_0)) {
           c5 = 2;
           c6 = 4;
           c7 = 1;
-          let obj8 = { value: closure_131_16(closure_130_0), done: false };
+          let obj8 = { value: closure_131_19(closure_130_0), done: false };
           return obj8;
         }
       } else if (3 === tmp4) {
         c5 = 1;
         closure_130_2 = ReadStateStore;
-        let obj2 = closure_131_0(closure_131_2[10]);
+        let obj2 = closure_131_0(closure_131_2[11]);
         closure_130_1 = obj2.createFailureStatus(closure_130_2);
         let tmp14 = 403 !== closure_130_1;
         if (tmp14) {
           tmp14 = 404 !== closure_130_1;
         }
         if (!tmp14) {
-          let tmp21 = closure_131_15(closure_130_0);
+          let tmp21 = closure_131_16(closure_130_0);
         }
       } else if (arg0 === 1) {
         c7 = 3;
@@ -255,9 +256,105 @@ let closure_14 = async function _forgetMissingProjects() {
 function forgetProject(projectId) {
   DispatcherDefault.dispatch({ type: "VIBEGRATIONS_PROJECT_DELETE_SUCCESS", projectId });
 }
+let closure_18 = async function _fetchProjectLimit() {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: "IconComponent" };
+    }
+  } else {
+    try {
+      c5 = 2;
+      let dispatchResult = c4;
+      if (0 === c4) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_2 = tmp3;
+          closure_129_0 = undefined;
+          let max_projects;
+          currentUser = currentUser.getCurrentUser();
+          let id;
+          if (currentUser != null) {
+            id = currentUser.id;
+          }
+          c0 = id;
+          if (id == null) {
+            c0 = null;
+          }
+          closure_129_0 = c0;
+          if (null != c0) {
+            if (closure_17 !== tmp18) {
+              if (!VibegrationsProjectStore.hasFetchedProjectLimit()) {
+                closure_17 = tmp18;
+                max_projects = null;
+                c3 = 1;
+                const HTTP = HTTPUtils.HTTP;
+                const obj4 = { url: constants.VIBEGRATIONS_PROJECT_LIMIT, rejectWithError: true };
+                c4 = 2;
+                c5 = 1;
+                const obj5 = { value: HTTP.get(obj4), done: false };
+                return obj5;
+              }
+            }
+          }
+        }
+      } else {
+        if (1 === dispatchResult) {
+          c3 = 0;
+        } else if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c3 = 0;
+          c5 = 3;
+          const obj = { value, done: true };
+          return obj;
+        } else {
+          max_projects = value.body.max_projects;
+          c3 = 0;
+        }
+        if (closure_130_17 === closure_129_0) {
+          closure_130_17 = null;
+        }
+        const currentUser1 = closure_130_5.getCurrentUser();
+        let id1;
+        if (currentUser1 != null) {
+          id1 = currentUser1.id;
+        }
+        dispatchResult = closure_129_0;
+        if (id1 === closure_129_0) {
+          const obj7 = { type: "VIBEGRATIONS_PROJECT_LIMIT_FETCH_SETTLE", maxProjects: max_projects };
+          dispatchResult = closure_130_1(closure_130_2[6]).dispatch(obj7);
+          const obj6 = closure_130_1(closure_130_2[6]);
+        }
+      }
+      c5 = 3;
+    } catch (tmp23) {
+      if (tmp4 === c3) {
+        c5 = tmp2;
+        throw tmp23;
+      } else {
+        c4 = tmp;
+      }
+    }
+  }
+};
 function getProject() {
   const self = this;
-  const apply = closure_17.apply;
+  const apply = closure_20.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -265,7 +362,7 @@ function getProject() {
   }
   return applyArgumentsResult;
 }
-let closure_17 = async function _getProject(arg0) {
+let closure_20 = async function _getProject(arg0) {
   closure_0 = arg0;
   c4 = 0;
   c5 = 0;
@@ -285,16 +382,16 @@ let closure_17 = async function _getProject(arg0) {
       ok = closure_130_2.ok;
     }
     if (ok) {
-      closure_131_1(closure_131_2[5]).dispatch({ type: "VIBEGRATIONS_PROJECT_UPDATE_SUCCESS", project: closure_130_2.body.project });
+      closure_131_1(closure_131_2[6]).dispatch({ type: "VIBEGRATIONS_PROJECT_UPDATE_SUCCESS", project: closure_130_2.body.project });
       (function updateIntegrationStatus(projectId, integrationStatus) {
-        signal(closure_1_2[5]).dispatch({ type: "VIBEGRATIONS_PROJECT_INTEGRATION_STATUS_UPDATE", projectId, integrationStatus });
+        signal(closure_1_2[6]).dispatch({ type: "VIBEGRATIONS_PROJECT_INTEGRATION_STATUS_UPDATE", projectId, integrationStatus });
       })(closure_130_0, { bot_permissions_changed: closure_130_2.body.bot_permissions_changed, integration_installed: closure_130_2.body.integration_installed, preview_ready: closure_130_2.body.preview_ready, has_activity: closure_130_2.body.has_activity, owner_authorization_revoked: closure_130_2.body.owner_authorization_revoked });
-      closure_131_1(closure_131_2[5]);
+      closure_131_1(closure_131_2[6]);
     }
     return closure_130_2;
   })();
 };
-let closure_18 = async function _createProject(arg0) {
+let closure_21 = async function _createProject(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -305,7 +402,7 @@ let closure_18 = async function _createProject(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -336,9 +433,9 @@ let closure_18 = async function _createProject(arg0) {
       } else if (1 === tmp7) {
         c4 = 0;
         closure_129_1 = closure_3;
-        const result = closure_130_0(closure_130_2[10]).classifyCreateFailure(closure_129_1);
-        const obj5 = closure_130_0(closure_130_2[10]);
-        const vibegrationsCreateError = new closure_130_0(closure_130_2[10]).VibegrationsCreateError(result, closure_130_0(closure_130_2[10]).createFailureStatus(closure_129_1));
+        const result = closure_130_0(closure_130_2[11]).classifyCreateFailure(closure_129_1);
+        const obj5 = closure_130_0(closure_130_2[11]);
+        const vibegrationsCreateError = new closure_130_0(closure_130_2[11]).VibegrationsCreateError(result, closure_130_0(closure_130_2[11]).createFailureStatus(closure_129_1));
         throw vibegrationsCreateError;
       } else if (arg0 === 1) {
         c6 = 3;
@@ -352,7 +449,7 @@ let closure_18 = async function _createProject(arg0) {
         body = value.body;
         c4 = 0;
         const obj9 = { type: "VIBEGRATIONS_PROJECT_CREATE_SUCCESS", project: body };
-        closure_130_1(closure_130_2[5]).dispatch(obj9);
+        closure_130_1(closure_130_2[6]).dispatch(obj9);
         c6 = 3;
         const obj10 = { value: body.id, done: true };
         return obj10;
@@ -370,7 +467,7 @@ let closure_18 = async function _createProject(arg0) {
 };
 function patchProject() {
   const self = this;
-  const apply = closure_20.apply;
+  const apply = closure_23.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -378,7 +475,7 @@ function patchProject() {
   }
   return applyArgumentsResult;
 }
-let closure_20 = async function _patchProject(arg0) {
+let closure_23 = async function _patchProject(arg0) {
   closure_0 = arg0;
   c4 = 0;
   c5 = 0;
@@ -390,13 +487,13 @@ let closure_20 = async function _patchProject(arg0) {
     await HTTP.patch(request);
     closure_130_0 = value;
     if (closure_130_0.ok) {
-      closure_131_1(closure_131_2[5]).dispatch({ type: "VIBEGRATIONS_PROJECT_UPDATE_SUCCESS", project: closure_130_0.body });
-      closure_131_1(closure_131_2[5]);
+      closure_131_1(closure_131_2[6]).dispatch({ type: "VIBEGRATIONS_PROJECT_UPDATE_SUCCESS", project: closure_130_0.body });
+      closure_131_1(closure_131_2[6]);
     }
     return closure_130_0;
   })();
 };
-let closure_21 = async function _setProjectIcon(arg0) {
+let closure_24 = async function _setProjectIcon(arg0) {
   closure_0 = arg0;
   c5 = 0;
   c6 = 0;
@@ -412,7 +509,7 @@ let closure_21 = async function _setProjectIcon(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -453,7 +550,7 @@ let closure_21 = async function _setProjectIcon(arg0) {
                   c4 = 1;
                   c5 = 3;
                   c6 = 1;
-                  const obj8 = { value: closure_131_0(closure_131_2[12]).fetchApplication(closure_130_1), done: false };
+                  const obj8 = { value: closure_131_0(closure_131_2[13]).fetchApplication(closure_130_1), done: false };
                   return obj8;
                 }
               }
@@ -487,7 +584,7 @@ let closure_21 = async function _setProjectIcon(arg0) {
 };
 function deleteProject() {
   const self = this;
-  const apply = closure_23.apply;
+  const apply = closure_26.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -495,7 +592,7 @@ function deleteProject() {
   }
   return applyArgumentsResult;
 }
-let closure_23 = async function _deleteProject() {
+let closure_26 = async function _deleteProject() {
   c5 = 0;
   c6 = 0;
   c4 = 0;
@@ -510,7 +607,7 @@ let closure_23 = async function _deleteProject() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -542,7 +639,7 @@ let closure_23 = async function _deleteProject() {
           c4 = 0;
           closure_129_2 = closure_3;
           const obj8 = { type: "VIBEGRATIONS_PROJECT_DELETE_FAIL", projectId: closure_129_0 };
-          closure_130_1(closure_130_2[5]).dispatch(obj8);
+          closure_130_1(closure_130_2[6]).dispatch(obj8);
           throw closure_129_2;
         } else if (arg0 === 1) {
           c6 = 3;
@@ -560,7 +657,7 @@ let closure_23 = async function _deleteProject() {
             str = "VIBEGRATIONS_PROJECT_DELETE_SUCCESS";
           }
           const obj11 = { type: str, projectId: closure_129_0 };
-          closure_130_1(closure_130_2[5]).dispatch(obj11);
+          closure_130_1(closure_130_2[6]).dispatch(obj11);
           c6 = 3;
           const obj12 = { value: closure_129_1, done: true };
           return obj12;
@@ -577,89 +674,151 @@ let closure_23 = async function _deleteProject() {
     }
   })();
 };
-let closure_24 = async function _refreshPublishedProject(arg0, arg1) {
+let closure_27 = async function _refreshPublishedProject(arg0, arg1) {
   closure_0 = arg0;
   let isPreview = arg1;
   c4 = 0;
   c5 = 0;
   let iter = (async (arg0, value) => {
-    closure_2 = tmp2;
-    closure_130_0 = closure_0;
-    const isPreview2 = isPreview.isPreview;
-    await "flex";
-    await closure_131_16(closure_130_0);
-    if (2 === tmp5) {
-      if (arg0 === 1) {
-        c5 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c5 = 3;
-        return { value, done: true };
-      } else {
-        const body = value.body;
-        closure_130_3 = body.bot_permissions_changed;
-        closure_130_4 = body.integration_installed;
-        const project = body.project;
-        if (isPreview2) {
-          let application_id = tmp54.preview_application_id;
-        } else {
-          application_id = tmp54.application_id;
-        }
-        closure_130_6 = application_id;
-        if (null != closure_130_6) {
-          c4 = 3;
-          c5 = 1;
-          return { value: closure_131_0(closure_131_2[12]).fetchApplication(closure_130_6), done: false };
-        } else {
-          const result = closure_131_0(closure_131_2[6]).trackVibegrationDeployed(closure_130_0, { isPreview: isPreview2 });
-          c5 = 3;
-          closure_131_0(closure_131_2[6]);
-        }
-      }
-    } else if (3 === tmp5) {
-      if (arg0 === 1) {
-        c5 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c5 = 3;
-        return { value, done: true };
-      } else {
-        const widgetConfigs = closure_131_0(closure_131_2[13]).fetchWidgetConfigs(closure_130_6, { force: true });
-        c4 = 4;
-        c5 = 1;
-        return {
-          value: widgetConfigs.catch(() => {
-
-              }),
-          done: false
-        };
-      }
-    } else if (arg0 === 1) {
+    if (c5 === 2) {
       c5 = 3;
-      throw value;
-    } else if (arg0 !== 2) {
-      let tmp8 = !isPreview2;
-      if (isPreview2) {
-        let tmp10 = closure_130_4;
-        if (closure_130_4) {
-          tmp10 = !closure_130_3;
-        }
-        tmp8 = tmp10;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj3 = { value, done: true };
+        return obj3;
+      } else {
+        return { value: "IconComponent", done: "IconComponent" };
       }
-      if (tmp8) {
-        closure_131_8(closure_130_6);
+    } else {
+      try {
+        c5 = 2;
+        if (0 === c4) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            closure_3 = tmp5;
+            closure_2 = tmp2;
+            let isPreview2;
+            closure_130_0 = closure_0;
+            isPreview2 = isPreview.isPreview;
+            let body;
+            closure_130_3 = undefined;
+            closure_130_4 = undefined;
+            let project;
+            closure_130_6 = undefined;
+            c4 = 1;
+            c5 = 1;
+            return { value: "Reflect", done: true };
+          }
+        } else if (1 === tmp5) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            const obj6 = { value, done: true };
+            return obj6;
+          } else {
+            c4 = 2;
+            c5 = 1;
+            const obj8 = { value: closure_131_19(closure_130_0), done: false };
+            return obj8;
+          }
+        } else {
+          if (2 === tmp5) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              const obj9 = { value, done: true };
+              return obj9;
+            } else {
+              body = value.body;
+              closure_130_3 = body.bot_permissions_changed;
+              closure_130_4 = body.integration_installed;
+              project = body.project;
+              if (isPreview2) {
+                let application_id = tmp54.preview_application_id;
+              } else {
+                application_id = tmp54.application_id;
+              }
+              closure_130_6 = application_id;
+              if (null != closure_130_6) {
+                c4 = 3;
+                c5 = 1;
+                const obj10 = { value: closure_131_0(closure_131_2[13]).fetchApplication(closure_130_6), done: false };
+                return obj10;
+              } else {
+                const obj11 = { isPreview: isPreview2 };
+                const result = closure_131_0(closure_131_2[7]).trackVibegrationDeployed(closure_130_0, obj11);
+                c5 = 3;
+                const obj5 = closure_131_0(closure_131_2[7]);
+              }
+            }
+          } else if (3 === tmp5) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              const obj12 = { value, done: true };
+              return obj12;
+            } else {
+              const widgetConfigs = closure_131_0(closure_131_2[14]).fetchWidgetConfigs(closure_130_6, { force: true });
+              c4 = 4;
+              c5 = 1;
+              const obj13 = {
+                value: widgetConfigs.catch(() => {
+
+                          }),
+                done: false
+              };
+              return obj13;
+            }
+          } else if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            let tmp8 = !isPreview2;
+            if (isPreview2) {
+              let tmp10 = closure_130_4;
+              if (closure_130_4) {
+                tmp10 = !closure_130_3;
+              }
+              tmp8 = tmp10;
+            }
+            if (tmp8) {
+              closure_131_9(closure_130_6);
+            }
+          }
+          c5 = 3;
+          const obj = { value, done: true };
+          return obj;
+        }
+      } catch (tmp43) {
+        c5 = tmp;
+        throw tmp43;
       }
     }
-    return value;
   })();
   iter.next();
   return iter;
 };
-const Endpoints = fn(1074).Endpoints;
-const ReadStateTypes = fn(5027).ReadStateTypes;
-let c9 = null;
+const Endpoints = fn(1085).Endpoints;
+const ReadStateTypes = fn(5072).ReadStateTypes;
 let c10 = null;
-let c13 = false;
+let c11 = null;
+let c14 = false;
+let c17 = null;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/vibegrations/actions/VibegrationsActionCreators.tsx");
 
@@ -688,10 +847,20 @@ export const reloadVibegrationsProjectFrames = function reloadVibegrationsProjec
   }
 };
 export { listProjects };
+export const fetchProjectLimit = function fetchProjectLimit() {
+  const self = this;
+  const apply = closure_18.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
 export { getProject };
 export const createProject = function createProject() {
   const self = this;
-  const apply = closure_18.apply;
+  const apply = closure_21.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -707,7 +876,7 @@ export const updateProjectSettings = function updateProjectSettings(first1, arg1
 };
 export const setProjectIcon = function setProjectIcon() {
   const self = this;
-  const apply = closure_21.apply;
+  const apply = closure_24.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -732,7 +901,7 @@ export const setSelectedProjectForGuild = function setSelectedProjectForGuild(gu
 };
 export const refreshPublishedProject = function refreshPublishedProject() {
   const self = this;
-  const apply = closure_24.apply;
+  const apply = closure_27.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

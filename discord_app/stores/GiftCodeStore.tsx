@@ -1,12 +1,12 @@
-// === Module 11182: GiftCodeStore ===
+// === Module 11088: GiftCodeStore ===
 
-// Module 11182 (GiftCodeStore)
+// Module 11088 (GiftCodeStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import _modDef4450 from "module_4450" /* 4450 */;
-import GiftCodeUtils from "GiftCodeUtils" /* 5264 */;
-import GiftCodeActionCreatorsDefault from "GiftCodeActionCreators" /* 11183 */;
-import GiftCodeRecord from "GiftCodeRecord" /* 10356 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import _modDef4461 from "module_4461" /* 4461 */;
+import GiftCodeUtils from "GiftCodeUtils" /* 5310 */;
+import GiftCodeActionCreatorsDefault from "GiftCodeActionCreators" /* 11089 */;
+import GiftCodeRecord from "GiftCodeRecord" /* 10431 */;
 
 require = fn;
 function updateGiftCode(giftCode) {
@@ -18,14 +18,14 @@ function updateGiftCode(giftCode) {
   } else {
     const result1 = set(code, fromServer);
     if (null != fromServer.expiresAt) {
-      const timeout = new code(2039).Timeout();
+      const timeout = new code(2046).Timeout();
       dependencyMap[code] = timeout;
       value2 = map.get(code);
       if (null != value2) {
         if (null != value2.expiresAt) {
           const expiresAt = value2.expiresAt;
           const valueOfResult = expiresAt.valueOf();
-          const diff = valueOfResult - _modDef4450().valueOf();
+          const diff = valueOfResult - _modDef4461().valueOf();
           if (diff <= 0) {
             map.delete(code);
             delete tmp2[tmp];
@@ -110,7 +110,7 @@ function updateGiftCode(giftCode) {
               }
             });
           }
-          const obj4 = _modDef4450();
+          const obj4 = _modDef4461();
         }
       }
     }
@@ -157,11 +157,11 @@ function resolveMessageGiftCodes(message, arg1) {
           items = [];
           items[HermesBuiltin.arraySpread(items, 0)] = item;
         }
-        closure_1(573).wait(() => {
+        closure_1(584).wait(() => {
           const giftCode = GiftCodeActionCreatorsDefault.resolveGiftCode(closure_0, false, true);
           return giftCode.catch(closure_2_6);
         });
-        const obj = closure_1(573);
+        const obj = closure_1(584);
       }
     });
   }
@@ -190,7 +190,7 @@ function handleLoadThreadsSuccess(firstMessages) {
     });
   }
 }
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AbortCodes: closure_4, MAX_TIMEOUT_MS: hasOwnProperty, NOOP_NULL: metroRequire } = Constants);
 const dependencyMap = {};
 const map = new Map();

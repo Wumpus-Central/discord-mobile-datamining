@@ -1,19 +1,19 @@
-// === Module 14377: EditUserProfileAvatar ===
+// === Module 14431: EditUserProfileAvatar ===
 
-// Module 14377 (EditUserProfileAvatar)
-import asyncRequireImpl from "asyncRequireImpl" /* 1981 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4595 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4809 */;
-import timing from "timing" /* 4846 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 7793 */;
+// Module 14431 (EditUserProfileAvatar)
+import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
+import timing from "timing" /* 4891 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 7837 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4834 */;
+import AccessibilityStore from "AccessibilityStore" /* 4879 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let closure_8 = createStyles.createStyles({ editIcon: { position: "absolute", right: -3 }, editButton: { position: "absolute", top: -8, right: -8 } });
 let __initData = { code: "function EditUserProfileAvatarTsx1(){const{rotation}=this.__closure;return{transform:[{rotateZ:rotation.get()+\"deg\"}]};}" };
 const size = fn(2);
@@ -91,7 +91,7 @@ export default function EditUserProfileAvatar(user) {
       };
     }
     obj2.handleEditAvatarDecorationSelect = fn;
-    const tmp3 = asyncRequireImpl(14379, dependencyMap.paths);
+    const tmp3 = asyncRequireImpl(14433, dependencyMap.paths);
     obj2.showRemoveAvatar = ProfileCustomizationUtils.showRemoveAvatar(pendingAvatar, user.avatar);
     obj.openLazy(tmp3, "Change Avatar", obj2);
     const tmp2Result = ProfileCustomizationUtils;

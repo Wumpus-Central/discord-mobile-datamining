@@ -1,21 +1,21 @@
-// === Module 9950: age_gate/AgeGateUtils ===
+// === Module 9899: age_gate/AgeGateUtils ===
 
-// Module 9950 (age_gate/AgeGateUtils)
-import PlatformUtils from "PlatformUtils" /* 1364 */;
-import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 8788 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import PermissionStore from "PermissionStore" /* 4498 */;
-import UserStore from "UserStore" /* 1372 */;
+// Module 9899 (age_gate/AgeGateUtils)
+import PlatformUtils from "PlatformUtils" /* 1369 */;
+import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 8801 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import PermissionStore from "PermissionStore" /* 4509 */;
+import UserStore from "UserStore" /* 1377 */;
 
 require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ GuildNSFWContentLevel: hasOwnProperty, Permissions: metroRequire } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_gate/native/AgeGateUtils.tsx");
 
 export const shouldNSFWGateGuild = function shouldNSFWGateGuild(guildId) {
   if (obj.isIOS()) {
-    const guild = GuildStore.getGuild(guildId);
+    guild = GuildStore.getGuild(guildId);
     const currentUser = UserStore.getCurrentUser();
     if (null != guild) {
       if (null != currentUser) {

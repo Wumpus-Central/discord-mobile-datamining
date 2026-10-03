@@ -1,7 +1,7 @@
-// === Module 12661: vibegrationsPreviewOperationSurfaces ===
+// === Module 8976: vibegrationsPreviewOperationSurfaces ===
 
-// Module 12661 (vibegrationsPreviewOperationSurfaces)
-import vibegrationsPreviewControlLease from "vibegrationsPreviewControlLease" /* 12658 */;
+// Module 8976 (vibegrationsPreviewOperationSurfaces)
+import vibegrationsPreviewControlLease from "vibegrationsPreviewControlLease" /* 8973 */;
 import size from "module_2" /* 2 */;
 
 function bestEffort(arg0, fn) {

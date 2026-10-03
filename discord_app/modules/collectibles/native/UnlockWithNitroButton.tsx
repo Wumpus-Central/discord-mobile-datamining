@@ -1,24 +1,142 @@
-// === Module 12941: UnlockWithNitroButton ===
+// === Module 12996: UnlockWithNitroButton ===
 
-// Module 12941 (UnlockWithNitroButton)
+// Module 12996 (UnlockWithNitroButton)
 import initialize from "initialize" /* 504 */;
-import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4841 */;
-import BaseTextButton from "BaseTextButton" /* 5466 */;
-import ProductIds from "ProductIds" /* 6848 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8309 */;
-import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 12927 */;
+import util from "util" /* 1126 */;
+import Text_Text from "Text/Text" /* 4886 */;
+import BaseTextButton from "BaseTextButton" /* 5595 */;
+import ProductIds from "ProductIds" /* 6742 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8313 */;
+import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 12982 */;
 import noop from "module_19" /* 19 */;
-import IAPStore from "IAPStore" /* 6845 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7165 */;
+import IAPStore from "IAPStore" /* 6739 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7068 */;
 
 require = fn;
-const ShopCtaEnum = fn(1076).ShopCtaEnum;
+const ShopCtaEnum = fn(1087).ShopCtaEnum;
 const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/UnlockWithNitroButton.tsx");
 
-export const UnlockWithNitroButton = function UnlockWithNitroButton(shouldShrink) {
+export const UnlockWithNitroButton = ReactCompilerGating.isReactCompilerEnabled() ? ((text) => {
+  const cResult = onTrackPress(576).c(18);
+  ({ shouldShrink, onTrackPress } = text);
+  text = text.text;
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [CollectiblesPurchaseStore, IAPStore];
+    const fn = function u() {
+      let isPurchasingProductResult = null != isClaiming.isClaiming;
+      if (!isPurchasingProductResult) {
+        isPurchasingProductResult = purchasingProduct.isPurchasingProduct(onTrackPress(dependencyMap[7]).ProductIds.GENERIC_CONSUMABLE);
+      }
+      return isPurchasingProductResult;
+    };
+    cResult[0] = items;
+    cResult[1] = fn;
+    tmp5 = items;
+    tmp6 = fn;
+  } else {
+    [tmp5, tmp6] = cResult;
+  }
+  const obj = onTrackPress(576);
+  const stateFromStores = onTrackPress(504).useStateFromStores(tmp5, tmp6);
+  const tmp10 = useOpenNitroSubscribeActionSheetDefault();
+  importDefault = tmp10;
+  if (cResult[2] !== text) {
+    let stringResult = text;
+    if (text == null) {
+      const intl = onTrackPress(1126).intl;
+      stringResult = intl.string(onTrackPress(1126).t.sEAnVH);
+    }
+    cResult[2] = text;
+    cResult[3] = stringResult;
+    let tmp11 = stringResult;
+  } else {
+    tmp11 = cResult[3];
+  }
+  if (cResult[4] === tmp11) {
+    if (cResult[5] === tmp4) {
+      let tmp14 = cResult[6];
+    }
+    let str = "md";
+    if (tmp4) {
+      str = "sm";
+    }
+    const _Symbol = Symbol;
+    if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
+      const tmp20 = jsx(onTrackPress(8313).NitroWheelIcon, { size: "sm", color: "white" });
+      cResult[7] = tmp20;
+      let tmp18 = tmp20;
+    } else {
+      tmp18 = cResult[7];
+    }
+    if (cResult[8] === tmp10) {
+      if (cResult[9] === onTrackPress) {
+        let tmp21 = cResult[10];
+      }
+      if (cResult[11] === tmp11) {
+        if (cResult[12] === stateFromStores) {
+          if (cResult[13] === tmp14) {
+            if (cResult[14] === tmp17) {
+              if (cResult[15] === str) {
+                if (cResult[16] === tmp21) {
+                  let tmp22 = cResult[17];
+                }
+                return tmp22;
+              }
+            }
+          }
+        }
+      }
+      const obj2 = { textElement: tmp14, text: tmp17, accessibilityLabel: tmp11, variant: "primary", size: str, grow: true, icon: tmp18, onPress: null, disabled: null };
+      class T {
+        constructor() {
+          if (onTrackPress != null) {
+            tmp2 = ShopCtaEnum;
+            tmpResult = tmp(ShopCtaEnum.UNLOCK_WITH_NITRO);
+          }
+          tmp4 = closure_1();
+          return;
+        }
+      }
+      obj2.disabled = stateFromStores;
+      const tmp24 = jsx(onTrackPress(5595).BaseTextButton, { textElement: tmp14, text: tmp17, accessibilityLabel: tmp11, variant: "primary", size: str, grow: true, icon: tmp18, onPress: null, disabled: null });
+      cResult[11] = tmp11;
+      cResult[12] = stateFromStores;
+      cResult[13] = tmp14;
+      cResult[14] = tmp17;
+      cResult[15] = str;
+      cResult[16] = tmp21;
+      cResult[17] = tmp24;
+      tmp22 = tmp24;
+    }
+    class T {
+      constructor() {
+        if (onTrackPress != null) {
+          tmp2 = ShopCtaEnum;
+          tmpResult = tmp(ShopCtaEnum.UNLOCK_WITH_NITRO);
+        }
+        tmp4 = closure_1();
+        return;
+      }
+    }
+    cResult[8] = tmp10;
+    cResult[9] = onTrackPress;
+    cResult[10] = T;
+    tmp21 = T;
+  }
+  let tmp15;
+  if (undefined !== shouldShrink && shouldShrink) {
+    const obj3 = { variant: "text-xs/semibold", color: "text-overlay-light", allowFontScaling: false, children: tmp11 };
+    tmp15 = jsx(onTrackPress(4886).Text, { variant: "text-xs/semibold", color: "text-overlay-light", allowFontScaling: false, children: tmp11 });
+  }
+  cResult[4] = tmp11;
+  cResult[5] = undefined !== shouldShrink && shouldShrink;
+  cResult[6] = tmp15;
+  tmp14 = tmp15;
+  const tmpResult = onTrackPress(504);
+}) : ((shouldShrink) => {
   let flag = shouldShrink.shouldShrink;
   if (flag === undefined) {
     flag = false;
@@ -63,4 +181,4 @@ export const UnlockWithNitroButton = function UnlockWithNitroButton(shouldShrink
   };
   obj3.disabled = stateFromStores;
   return jsx(BaseTextButton.BaseTextButton, { textElement: tmp4Result, text: null, accessibilityLabel: null, variant: "primary", size: null, grow: true, icon: null, onPress: null, disabled: null });
-};
+});

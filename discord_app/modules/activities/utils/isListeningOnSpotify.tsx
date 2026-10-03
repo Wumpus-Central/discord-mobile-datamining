@@ -1,9 +1,9 @@
-// === Module 10545: isListeningOnSpotify ===
+// === Module 10625: isListeningOnSpotify ===
 
-// Module 10545 (isListeningOnSpotify)
-import PlatformsDefault from "Platforms" /* 5781 */;
-import SpotifyConstants from "SpotifyConstants" /* 7970 */;
-import Constants from "Constants" /* 1074 */;
+// Module 10625 (isListeningOnSpotify)
+import PlatformsDefault from "Platforms" /* 5442 */;
+import SpotifyConstants from "SpotifyConstants" /* 8016 */;
+import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
 ({ ActivityTypes: c2, PlatformTypes: c3 } = Constants);

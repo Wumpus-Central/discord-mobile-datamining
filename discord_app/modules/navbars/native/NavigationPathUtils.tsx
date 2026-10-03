@@ -1,25 +1,44 @@
-// === Module 12503: NavigationPathUtils ===
+// === Module 12457: NavigationPathUtils ===
 
-// Module 12503 (NavigationPathUtils)
-import Constants from "Constants" /* 1074 */;
-import _mod4695 from "module_4695" /* 4695 */;
+// Module 12457 (NavigationPathUtils)
+import c from "c" /* 576 */;
+import Constants from "Constants" /* 1085 */;
+import _mod4710 from "module_4710" /* 4710 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const Routes = Constants.Routes;
 const SpecialNavigationPath = { FRIENDS: 0, [0]: "FRIENDS" };
-const result = size.fileFinishedImporting("modules/navbars/native/NavigationPathUtils.tsx");
-
-export { SpecialNavigationPath };
-export const getSelectedSpecialNavigationPath = function getSelectedSpecialNavigationPath(pathname) {
+function getSelectedSpecialNavigationPath(pathname) {
   if (pathname.pathname === Routes.FRIENDS) {
     return obj.FRIENDS;
   }
-};
-export const useSelectedSpecialNavigationPath = function useSelectedSpecialNavigationPath() {
-  const obj = _mod4695;
+}
+const result = size.fileFinishedImporting("modules/navbars/native/NavigationPathUtils.tsx");
+
+export { SpecialNavigationPath };
+export { getSelectedSpecialNavigationPath };
+export const useSelectedSpecialNavigationPath = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const obj = c;
+  const cResult = obj.c(2);
+  const _location = _mod4710.useLocation();
+  if (cResult[0] !== _location) {
+    let FRIENDS;
+    if (_location.pathname === Routes.FRIENDS) {
+      FRIENDS = obj.FRIENDS;
+    }
+    cResult[0] = _location;
+    cResult[1] = FRIENDS;
+    let tmp3 = FRIENDS;
+  } else {
+    tmp3 = cResult[1];
+  }
+  return tmp3;
+}) : (() => {
+  const obj = _mod4710;
   let FRIENDS;
   if (obj.useLocation().pathname === Routes.FRIENDS) {
     FRIENDS = obj.FRIENDS;
   }
   return FRIENDS;
-};
+});

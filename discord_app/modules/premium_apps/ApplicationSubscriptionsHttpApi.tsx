@@ -1,8 +1,8 @@
-// === Module 8986: ApplicationSubscriptionsHttpApi ===
+// === Module 9005: ApplicationSubscriptionsHttpApi ===
 
-// Module 8986 (ApplicationSubscriptionsHttpApi)
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import APIErrorDefault from "APIError" /* 5267 */;
+// Module 9005 (ApplicationSubscriptionsHttpApi)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import APIErrorDefault from "APIError" /* 5313 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;
@@ -34,7 +34,7 @@ let closure_8 = async function _fetchEligibleApplicationSubscriptionGuilds() {
     return value.body;
   })();
 };
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium_apps/ApplicationSubscriptionsHttpApi.tsx");
 

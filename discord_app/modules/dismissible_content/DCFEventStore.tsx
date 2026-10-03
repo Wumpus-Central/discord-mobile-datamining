@@ -1,8 +1,8 @@
-// === Module 2032: DCFEventStore ===
+// === Module 2039: DCFEventStore ===
 
-// Module 2032 (DCFEventStore)
+// Module 2039 (DCFEventStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
 
 const DCFEventTypes = { DC_SHOWN: 0, [0]: "DC_SHOWN", DC_SHOW_REQUEST: 1, [1]: "DC_SHOW_REQUEST", DC_DISMISSED: 2, [2]: "DC_DISMISSED" };
 let closure_1 = [];

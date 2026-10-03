@@ -1,10 +1,10 @@
-// === Module 15301: SupportUtils ===
+// === Module 15358: SupportUtils ===
 
-// Module 15301 (SupportUtils)
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2110 */;
-import LinkingDefault from "Linking" /* 4554 */;
+// Module 15358 (SupportUtils)
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
+import LinkingDefault from "Linking" /* 4565 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LocaleStore from "LocaleStore" /* 2111 */;
+import LocaleStore from "LocaleStore" /* 2116 */;
 
 const require = fn;
 let closure_6 = async function _emailSupport() {
@@ -18,7 +18,7 @@ let closure_6 = async function _emailSupport() {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -64,7 +64,7 @@ let closure_6 = async function _emailSupport() {
       } else {
         openURL(value);
         c3 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp11) {
       c3 = tmp;

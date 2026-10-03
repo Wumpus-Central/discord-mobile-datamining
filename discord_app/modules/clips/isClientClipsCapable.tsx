@@ -1,9 +1,9 @@
-// === Module 13425: isClientClipsCapable ===
+// === Module 13485: isClientClipsCapable ===
 
-// Module 13425 (isClientClipsCapable)
-import PlatformUtilsAll from "PlatformUtils" /* 1364 */;
-import Constants from "Constants" /* 4870 */;
-import ClipsExperiment2 from "ClipsExperiment" /* 13424 */;
+// Module 13485 (isClientClipsCapable)
+import PlatformUtilsAll from "PlatformUtils" /* 1369 */;
+import Constants from "Constants" /* 4915 */;
+import ClipsExperiment2 from "ClipsExperiment" /* 13484 */;
 import size from "module_2" /* 2 */;
 
 const Features = Constants.Features;

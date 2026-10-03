@@ -1,7 +1,7 @@
-// === Module 13512: ReactiveCheckActionCreators ===
+// === Module 13573: ReactiveCheckActionCreators ===
 
-// Module 13512 (ReactiveCheckActionCreators)
-import HTTPUtils from "HTTPUtils" /* 1271 */;
+// Module 13573 (ReactiveCheckActionCreators)
+import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -16,7 +16,7 @@ let closure_5 = async function _fetchReactiveCheckResult() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -84,7 +84,7 @@ let closure_6 = async function _resetAgeVerification() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -116,7 +116,7 @@ let closure_6 = async function _resetAgeVerification() {
       } else {
         closure_128_1(closure_128_2[3]).dispatch({ type: "AGE_VERIFICATION_RESET" });
         c2 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp13) {
       c2 = tmp;
@@ -124,7 +124,7 @@ let closure_6 = async function _resetAgeVerification() {
     }
   }
 };
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/ReactiveCheckActionCreators.tsx");
 

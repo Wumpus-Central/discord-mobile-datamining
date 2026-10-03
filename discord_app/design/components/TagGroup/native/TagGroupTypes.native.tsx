@@ -1,8 +1,8 @@
-// === Module 14183: TagGroupTypes ===
+// === Module 14251: TagGroupTypes ===
 
-// Module 14183 (TagGroupTypes)
-import nativeDefault from "native" /* 576 */;
-import TagGroupShared from "TagGroupShared" /* 14184 */;
+// Module 14251 (TagGroupTypes)
+import nativeDefault from "native" /* 587 */;
+import TagGroupShared from "TagGroupShared" /* 14252 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/components/TagGroup/native/TagGroupTypes.native.tsx");

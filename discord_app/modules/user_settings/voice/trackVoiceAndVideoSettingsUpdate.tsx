@@ -1,8 +1,8 @@
-// === Module 9302: trackVoiceAndVideoSettingsUpdate ===
+// === Module 9311: trackVoiceAndVideoSettingsUpdate ===
 
-// Module 9302 (trackVoiceAndVideoSettingsUpdate)
-import Constants from "Constants" /* 1074 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+// Module 9311 (trackVoiceAndVideoSettingsUpdate)
+import Constants from "Constants" /* 1085 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

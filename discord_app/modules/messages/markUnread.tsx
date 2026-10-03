@@ -1,14 +1,14 @@
-// === Module 9903: markUnread ===
+// === Module 10055: markUnread ===
 
-// Module 9903 (markUnread)
+// Module 10055 (markUnread)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7357 */;
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7261 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4500 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import MessageStore from "MessageStore" /* 5065 */;
-import UserStore from "UserStore" /* 1372 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4511 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import MessageStore from "MessageStore" /* 5110 */;
+import UserStore from "UserStore" /* 1377 */;
 
 const require = fn;
 let closure_11 = async function _markUnread(arg0) {
@@ -22,7 +22,7 @@ let closure_11 = async function _markUnread(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -92,7 +92,7 @@ let closure_11 = async function _markUnread(arg0) {
             const toArrayResult = messages.toArray();
           }
           c5 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -123,8 +123,8 @@ let closure_11 = async function _markUnread(arg0) {
     }
   }
 };
-const shouldBadgeMessage = fn(4860).shouldBadgeMessage;
-const Endpoints = fn(1074).Endpoints;
+const shouldBadgeMessage = fn(4905).shouldBadgeMessage;
+const Endpoints = fn(1085).Endpoints;
 let closure_10 = new LoggerDefault("markUnread");
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/markUnread.tsx");

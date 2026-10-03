@@ -1,15 +1,15 @@
-// === Module 6007: FrecencyStore ===
+// === Module 5694: FrecencyStore ===
 
-// Module 6007 (FrecencyStore)
+// Module 5694 (FrecencyStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import FrecencyDefault from "Frecency" /* 4882 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4684 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import FrecencyDefault from "Frecency" /* 4927 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
 
 function handleChannelSelect(arg0) {
   ({ guildId, channelId } = arg0);
@@ -79,8 +79,8 @@ function initFrecency() {
     }), global.pendingUsages);
   }
 }
-const ID_REGEX = fn(1074).ID_REGEX;
-const UserSettingsTypes = fn(1084).UserSettingsTypes;
+const ID_REGEX = fn(1085).ID_REGEX;
+const UserSettingsTypes = fn(1095).UserSettingsTypes;
 let closure_9 = new FrecencyDefault({
   computeBonus() {
     return 100;
@@ -108,7 +108,7 @@ let closure_9 = new FrecencyDefault({
     return num;
   },
   lookupKey(id) {
-    let guild = GuildStore.getGuild(id);
+    guild = GuildStore.getGuild(id);
     if (guild == null) {
       guild = ChannelStore.getChannel(id);
     }

@@ -1,7 +1,7 @@
-// === Module 4994: MediaPostThumbnailUtils ===
+// === Module 5039: MediaPostThumbnailUtils ===
 
-// Module 4994 (MediaPostThumbnailUtils)
-import MediaFormatTesters from "MediaFormatTesters" /* 4995 */;
+// Module 5039 (MediaPostThumbnailUtils)
+import MediaFormatTesters from "MediaFormatTesters" /* 5040 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/media_channel/MediaPostThumbnailUtils.tsx");

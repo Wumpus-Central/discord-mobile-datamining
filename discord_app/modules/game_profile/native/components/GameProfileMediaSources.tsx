@@ -1,9 +1,9 @@
-// === Module 8363: GameProfileMediaSources ===
+// === Module 8367: GameProfileMediaSources ===
 
-// Module 8363 (GameProfileMediaSources)
-import ImageLoaderUtils from "ImageLoaderUtils" /* 1432 */;
-import ImageProxyUtils from "ImageProxyUtils" /* 2015 */;
-import StoreUtils from "StoreUtils" /* 5276 */;
+// Module 8367 (GameProfileMediaSources)
+import ImageLoaderUtils from "ImageLoaderUtils" /* 1437 */;
+import ImageProxyUtils from "ImageProxyUtils" /* 2022 */;
+import StoreUtils from "StoreUtils" /* 5322 */;
 import size from "module_2" /* 2 */;
 
 let c2 = 366;
@@ -47,9 +47,9 @@ export const buildMediaEntries = function buildMediaEntries(game) {
   }
   return items;
 };
-export const buildMediaViewerSources = function buildMediaViewerSources(memo1, memo) {
-  closure_0 = memo;
-  return memo1.map((originalUrl, mediaIndex) => {
+export const buildMediaViewerSources = function buildMediaViewerSources(arr2, cResult) {
+  closure_0 = cResult;
+  return arr2.map((originalUrl, mediaIndex) => {
     const obj = { uri: originalUrl.originalUrl, videoURI: null, mediaIndex: null };
     originalUrl = undefined;
     if ("trailer" === originalUrl.type) {

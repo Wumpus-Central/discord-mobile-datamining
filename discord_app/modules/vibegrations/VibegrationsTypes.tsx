@@ -1,6 +1,6 @@
-// === Module 5555: VibegrationsTypes ===
+// === Module 6747: VibegrationsTypes ===
 
-// Module 5555 (VibegrationsTypes)
+// Module 6747 (VibegrationsTypes)
 import size from "module_2" /* 2 */;
 
 const frozen = Object.freeze({ PUBLIC: 1, SHAREABLE: 2, NATIVE_APP_CHANNELS: 4 });
@@ -94,4 +94,4 @@ export const VIBEGRATIONS_MODEL_TIERS = ["simple", "balanced", "complex"];
 export const VIBEGRATIONS_FALLBACK_MODEL_CHOICES = obj;
 export const VIBEGRATIONS_DEV_FALLBACK_MODEL_CHOICES = { main: items1, subagent: items1, thinking: obj.thinking };
 export const VIBEGRATIONS_DEFAULT_TIER_SETTINGS = { tier: "balanced", provider: "openai" };
-export const VIBEGRATIONS_LANDING_TIER_SEATS = { simple: { model: "gpt-6-luna", thinking: "high" }, balanced: { model: "gpt-6.1-sol", thinking: "high" }, complex: { model: "claude-opus-5-5", thinking: "high" } };
+export const VIBEGRATIONS_LANDING_TIER_SEATS = { simple: { model: "gpt-6-luna", thinking: "high" }, balanced: { model: "claude-sonnet-5-5", thinking: "high" }, complex: { model: "claude-opus-5-5", thinking: "high" } };

@@ -1,21 +1,22 @@
-// === Module 16515: useInlineFrameOAuthNavigation ===
+// === Module 16587: useInlineFrameOAuthNavigation ===
 
-// Module 16515 (useInlineFrameOAuthNavigation)
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5048 */;
+// Module 16587 (useInlineFrameOAuthNavigation)
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 8690 */;
+import FramesStore from "FramesStore" /* 8703 */;
 
 require = fn;
-const isLaunched = fn(8691).isLaunched;
-const ComponentActions = fn(1074).ComponentActions;
-let closure_8 = fn(8698).OAUTH2_AUTHORIZE_MODAL_KEY;
+const isLaunched = fn(8704).isLaunched;
+const ComponentActions = fn(1085).ComponentActions;
+let closure_8 = fn(8710).OAUTH2_AUTHORIZE_MODAL_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/native/useInlineFrameOAuthNavigation.tsx");
 
-export default function useInlineFrameOAuthNavigation(applicationId) {
-  const items = [applicationId];
+export default function useInlineFrameOAuthNavigation(arg0) {
+  closure_0 = arg0;
+  const items = [arg0];
   const effect = noop.useEffect(() => {
     function dismissOAuthModal() {
       if (c1) {
@@ -48,7 +49,7 @@ export default function useInlineFrameOAuthNavigation(applicationId) {
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -101,7 +102,7 @@ export default function useInlineFrameOAuthNavigation(applicationId) {
     if (null != c0) {
       c0 = false;
       c1 = false;
-      let ComponentDispatch = applicationId(dependencyMap[9]).ComponentDispatch;
+      let ComponentDispatch = closure_0(dependencyMap[9]).ComponentDispatch;
       const subscription = ComponentDispatch.subscribe(SHOW_OAUTH2_MODAL.SHOW_OAUTH2_MODAL, showOAuth2Modal);
       return () => {
         c0 = true;

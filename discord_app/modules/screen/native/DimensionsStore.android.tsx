@@ -1,15 +1,15 @@
-// === Module 1480: DimensionsStore ===
+// === Module 1485: DimensionsStore ===
 
-// Module 1480 (DimensionsStore)
+// Module 1485 (DimensionsStore)
 import _mod17 from "module_17" /* 17 */;
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1248 */;
-import useSafeAreaInsets from "useSafeAreaInsets" /* 1613 */;
-import AppEntryKey from "AppEntryKey" /* 1626 */;
-import readAppEntryWindowMetrics from "readAppEntryWindowMetrics" /* 1878 */;
-import useSystemKeyboardHeight from "useSystemKeyboardHeight" /* 1879 */;
-import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1481 */;
-import module_560 from "module_560" /* 560 */;
-import SafeAreaStore from "SafeAreaStore" /* 1614 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
+import useSafeAreaInsets from "useSafeAreaInsets" /* 1618 */;
+import AppEntryKey from "AppEntryKey" /* 1631 */;
+import readAppEntryWindowMetrics from "readAppEntryWindowMetrics" /* 1883 */;
+import useSystemKeyboardHeight from "useSystemKeyboardHeight" /* 1884 */;
+import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1486 */;
+import module_570 from "module_570" /* 570 */;
+import SafeAreaStore from "SafeAreaStore" /* 1619 */;
 import size from "module_2" /* 2 */;
 
 function getDimensionsStoreStateForEntry(appEntryKey, arg1) {
@@ -116,7 +116,7 @@ function getDimensionsStoreState(arg0) {
   return tmp;
 }
 const Dimensions = _mod17.Dimensions;
-let byAppEntry = module_560.create(() => getDimensionsStoreState(undefined));
+let byAppEntry = module_570.create(() => getDimensionsStoreState(undefined));
 const subscription = SafeAreaStore.subscribe(() => {
   ReactBatchUpdates.batchUpdates(() => state.setState((arg0) => closure_1_4(arg0)));
 });

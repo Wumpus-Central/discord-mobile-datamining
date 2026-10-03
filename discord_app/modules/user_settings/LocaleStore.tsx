@@ -1,11 +1,11 @@
-// === Module 2111: LocaleStore ===
+// === Module 2116: LocaleStore ===
 
-// Module 2111 (LocaleStore)
+// Module 2116 (LocaleStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import DiscordNativeDefault from "DiscordNative" /* 4479 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import DiscordNativeDefault from "DiscordNative" /* 4490 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 
 const require = fn;
 let closure_6 = async function _getSystemLocale() {
@@ -19,7 +19,7 @@ let closure_6 = async function _getSystemLocale() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -101,9 +101,9 @@ function handleUpdate() {
   }
   return flag;
 }
-const setAppLocale = fn(2112).setAppLocale;
-let locale = fn(1115).intl.currentLocale;
-let global = fn(1115).systemLocale;
+const setAppLocale = fn(2117).setAppLocale;
+let locale = fn(1126).intl.currentLocale;
+let global = fn(1126).systemLocale;
 (function getSystemLocale() {
   const self = this;
   const apply = closure_6.apply;

@@ -1,8 +1,8 @@
-// === Module 1354: initLibdiscore ===
+// === Module 566: initLibdiscore ===
 
-// Module 1354 (initLibdiscore)
+// Module 566 (initLibdiscore)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import timers_mod from "timers" /* 1355 */;
+import timers_mod from "timers" /* 567 */;
 
 let closure_2 = async function _initLibdiscore() {
   if (c0 === 2) {
@@ -15,7 +15,7 @@ let closure_2 = async function _initLibdiscore() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -29,7 +29,7 @@ let closure_2 = async function _initLibdiscore() {
         return obj;
       } else {
         c0 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp4) {
       c0 = tmp;

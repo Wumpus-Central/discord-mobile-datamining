@@ -1,18 +1,18 @@
-// === Module 7356: ReactionActionCreators ===
+// === Module 7260: ReactionActionCreators ===
 
-// Module 7356 (ReactionActionCreators)
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import DurationsDefault from "Durations" /* 1091 */;
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
-import util from "util" /* 1115 */;
-import EmojiUtils from "EmojiUtils" /* 4516 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5387 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 7355 */;
-import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7357 */;
+// Module 7260 (ReactionActionCreators)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import DurationsDefault from "Durations" /* 1102 */;
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
+import util from "util" /* 1126 */;
+import EmojiUtils from "EmojiUtils" /* 4527 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5707 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7259 */;
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7261 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import MessageStore from "MessageStore" /* 5065 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import MessageStore from "MessageStore" /* 5110 */;
 
 require = fn;
 function checkReactionResponse(arg0, fn, isRetry) {
@@ -89,11 +89,11 @@ function makeURL(type) {
     name = emoji.name;
   }
   if (null == userId) {
-    let REACTIONSResult = closure_1_10.REACTIONS(channelId, messageId, name);
+    let REACTIONSResult = v65535.REACTIONS(channelId, messageId, name);
   } else if (useTypeEndpoint) {
-    REACTIONSResult = closure_1_10.REACTION_WITH_TYPE(channelId, messageId, name, userId, NORMAL);
+    REACTIONSResult = v65535.REACTION_WITH_TYPE(channelId, messageId, name, userId, NORMAL);
   } else {
-    REACTIONSResult = closure_1_10.REACTION(channelId, messageId, name, userId);
+    REACTIONSResult = v65535.REACTION(channelId, messageId, name, userId);
   }
   return REACTIONSResult;
 }
@@ -108,7 +108,7 @@ let closure_15 = async function _getReactors(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -136,7 +136,7 @@ let closure_15 = async function _getReactors(arg0) {
           closure_129_8 = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "flex", done: null };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -218,7 +218,7 @@ let closure_17 = async function _addReaction(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -250,7 +250,7 @@ let closure_17 = async function _addReaction(arg0) {
           closure_133_7 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "flex", done: null };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp6) {
         if (arg0 === 1) {
@@ -282,7 +282,7 @@ let closure_17 = async function _addReaction(arg0) {
               obj5.confirmText = intl3.string(closure_134_0(closure_134_2[7]).t["NX+WJN"]);
               closure_134_1(closure_134_2[6]).show(obj5);
               c8 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           }
           c7 = 2;
@@ -455,7 +455,7 @@ let closure_19 = async function _removeAllReactions(arg0, arg1, arg2) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -499,7 +499,7 @@ let closure_19 = async function _removeAllReactions(arg0, arg1, arg2) {
             closure_2_12(error, () => closure_2_18(closure_1_0, closure_1_1, { isRetry: true }), { isRetry });
           });
           c6 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp9) {
         c6 = tmp;
@@ -536,7 +536,7 @@ let closure_21 = async function _removeEmojiReactions(arg0, arg1, arg2, arg3) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -619,7 +619,7 @@ let closure_23 = async function _removeReaction(arg0) {
       obj = { value, done: true };
       return obj;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -651,7 +651,7 @@ let closure_23 = async function _removeReaction(arg0) {
           closure_130_7 = undefined;
           c4 = 1;
           c5 = 1;
-          return { value: "flex", done: null };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp6) {
         if (arg0 === 1) {
@@ -742,7 +742,7 @@ let closure_23 = async function _removeReaction(arg0) {
                 obj = { value, done: true };
                 return obj;
               } else {
-                return { value: "HermesInternal", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             } else {
               try {
@@ -786,11 +786,11 @@ let closure_23 = async function _removeReaction(arg0) {
                   if (burst != null) {
                     burst = burst.burst;
                   }
-                  const AccessibilityAnnouncer = channelId(4714).AccessibilityAnnouncer;
-                  intl = channelId(1115).intl;
+                  const AccessibilityAnnouncer = channelId(4729).AccessibilityAnnouncer;
+                  intl = channelId(1126).intl;
                   if (!burst) {
                     const obj6 = { name: tmp2.name };
-                    AccessibilityAnnouncer.announce(intl.formatToPlainString(channelId(1115).t["tD9+b+"], obj6));
+                    AccessibilityAnnouncer.announce(intl.formatToPlainString(channelId(1126).t["tD9+b+"], obj6));
                   }
                 }
                 const obj7 = { name: tmp2.name };
@@ -841,7 +841,7 @@ let closure_25 = async function _getOptimisticEmojiColors(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -899,7 +899,7 @@ function hasUserAlreadyReacted(arg0, arg1, arg2, arg3) {
   }
   return result;
 }
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AbortCodes: closure_7, AnalyticEvents: closure_8, ComponentActions: closure_9, Endpoints: c10 } = Constants);
 const ReactionLocations = { MESSAGE: "Message", FORUM_TOOLBAR: "Forum Toolbar", MOBILE_MEDIA_VIEWER: "Mobile Media Viewer", MESSAGE_HOVER_BAR: "Message Hover Bar", MESSAGE_INLINE_BUTTON: "Message Inline Button", MESSAGE_CONTEXT_MENU: "Message Context Menu", MESSAGE_REACTION_PICKER: "Message Reaction Picker", MESSAGE_SHORTCUT: "Message Shortcut", DOUBLE_TAP: "Double Tap", IN_APP_NOTIFICATION: "In App Notification" };
 const size = fn(2);

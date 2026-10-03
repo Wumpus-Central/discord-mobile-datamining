@@ -1,14 +1,14 @@
-// === Module 17497: ProximitySensorManager ===
+// === Module 17586: ProximitySensorManager ===
 
-// Module 17497 (ProximitySensorManager)
-import PlatformUtils2 from "PlatformUtils" /* 1364 */;
-import VoiceCallTypes from "VoiceCallTypes" /* 9292 */;
-import NativeProximitySensorManagerModuleDefault from "NativeProximitySensorManagerModule" /* 17498 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2043 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4867 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4868 */;
-import AudioRouteStore from "AudioRouteStore" /* 9291 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6725 */;
+// Module 17586 (ProximitySensorManager)
+import PlatformUtils2 from "PlatformUtils" /* 1369 */;
+import VoiceCallTypes from "VoiceCallTypes" /* 9301 */;
+import NativeProximitySensorManagerModuleDefault from "NativeProximitySensorManagerModule" /* 17587 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4912 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
+import AudioRouteStore from "AudioRouteStore" /* 9300 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
 
 require = fn;
 function handleChange() {
@@ -31,7 +31,7 @@ function handleChange() {
   const result = ProximitySensorManager.setProximityMonitoringEnabled(tmp8);
   tmp4 = ApplicationStreamingStore.getAllActiveStreams().length > 0;
 }
-const PlatformUtils = fn(1364);
+const PlatformUtils = fn(1369);
 if (PlatformUtils.isIOS()) {
   let ProximitySensorManager = fn(17).NativeModules.ProximitySensorManager;
 } else {

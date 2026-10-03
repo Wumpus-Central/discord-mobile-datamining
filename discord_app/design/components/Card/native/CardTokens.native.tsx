@@ -1,7 +1,7 @@
-// === Module 6106: CardTokens ===
+// === Module 5996: CardTokens ===
 
-// Module 6106 (CardTokens)
-import nativeDefault from "native" /* 576 */;
+// Module 5996 (CardTokens)
+import nativeDefault from "native" /* 587 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

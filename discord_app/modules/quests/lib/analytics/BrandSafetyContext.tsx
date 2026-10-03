@@ -1,14 +1,14 @@
-// === Module 7317: BrandSafetyContext ===
+// === Module 7215: BrandSafetyContext ===
 
-// Module 7317 (BrandSafetyContext)
-import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import ContentImpressionTrackerConstants from "ContentImpressionTrackerConstants" /* 7319 */;
-import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore" /* 7318 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import RelationshipStore from "RelationshipStore" /* 4508 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4684 */;
-import UserStore from "UserStore" /* 1372 */;
+// Module 7215 (BrandSafetyContext)
+import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
+import ContentImpressionTrackerConstants from "ContentImpressionTrackerConstants" /* 7217 */;
+import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore" /* 7216 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import RelationshipStore from "RelationshipStore" /* 4519 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
+import UserStore from "UserStore" /* 1377 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -32,7 +32,7 @@ export const getBrandSafetyContext = function getBrandSafetyContext(questContent
       if (undefined !== tmp4) {
         if (undefined !== tmp5) {
           const guildId = SelectedGuildStore.getGuildId();
-          let guild = null;
+          guild = null;
           if (null != guildId) {
             guild = GuildStore.getGuild(guildId);
           }

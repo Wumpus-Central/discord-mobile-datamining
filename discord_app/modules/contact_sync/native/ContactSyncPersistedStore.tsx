@@ -1,10 +1,10 @@
-// === Module 12389: ContactSyncPersistedStore ===
+// === Module 12328: ContactSyncPersistedStore ===
 
-// Module 12389 (ContactSyncPersistedStore)
+// Module 12328 (ContactSyncPersistedStore)
 import Storage4 from "Storage" /* 510 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1248 */;
-import module_560 from "module_560" /* 560 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
+import module_570 from "module_570" /* 570 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -29,7 +29,7 @@ Storage.asyncGet("V2_DCD_CONTACTS_STORAGE_KEY", async (arg0) => {
   let obj = require("ReactBatchUpdates");
   DispatcherDefault.wait(() => DispatcherDefault.dispatch({ type: "CONTACT_SYNC_STORED_CONTACTS", empty: "" === closure_0 }));
 });
-const useContactSyncStore = module_560.create(() => ({ loadedPolicyNotice: false, storedContacts: "", upsellCTADismissed: false, policyUpdateNoticeDismissed: false, dmListCTADismissed: false }));
+const useContactSyncStore = module_570.create(() => ({ loadedPolicyNotice: false, storedContacts: "", upsellCTADismissed: false, policyUpdateNoticeDismissed: false, dmListCTADismissed: false }));
 let Storage2 = Storage4.Storage;
 Storage2.asyncGet("ContactSyncDMListCTADismissed", async (arg0) => {
   _require = Boolean(arg0);

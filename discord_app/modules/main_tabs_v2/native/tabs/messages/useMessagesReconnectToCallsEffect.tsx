@@ -1,17 +1,67 @@
-// === Module 15898: useMessagesReconnectToCallsEffect ===
+// === Module 15972: useMessagesReconnectToCallsEffect ===
 
-// Module 15898 (useMessagesReconnectToCallsEffect)
-import DispatcherDefault from "Dispatcher" /* 573 */;
+// Module 15972 (useMessagesReconnectToCallsEffect)
+import c from "c" /* 576 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5775 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import PrivateChannelSortStore from "PrivateChannelSortStore" /* 6826 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5436 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import PrivateChannelSortStore from "PrivateChannelSortStore" /* 6719 */;
 
+require = fn;
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesReconnectToCallsEffect.tsx");
 
-export default function useMessagesReconnectToCallsEffect() {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(2);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const fn = function n() {
+      closure_0 = closure_5.isConnected();
+      function isGatewayConnectedListener() {
+        isConnectedResult = GatewayConnectionStore.isConnected();
+        if (isConnectedResult !== isConnectedResult) {
+          if (isConnectedResult) {
+            [r10011, arr] = sortedChannels.getSortedChannels();
+            const items = [];
+            const _Math = Math;
+            let num3 = 0;
+            if (0 < Math.min(20, arr.length)) {
+              do {
+                channel = channel.getChannel(arr[num3].channelId);
+                let isGroupDMResult = null != channel;
+                if (isGroupDMResult) {
+                  isGroupDMResult = channel.isGroupDM();
+                }
+                if (isGroupDMResult) {
+                  let arr2 = items.push(arr[num3].channelId);
+                }
+                num3 = num3 + 1;
+                let _Math2 = Math;
+              } while (num3 < Math.min(20, arr.length));
+            }
+            const tmp4 = _slicedToArray(sortedChannels.getSortedChannels(), 2);
+            const obj = { type: "CALL_CONNECT_MULTIPLE", channelIds: items };
+            DispatcherDefault.dispatch(obj);
+          }
+        }
+      }
+      closure_5.addChangeListener(isGatewayConnectedListener);
+      return () => {
+        GatewayConnectionStore.removeChangeListener(isGatewayConnectedListener);
+      };
+    };
+    let items = [];
+    cResult[0] = fn;
+    cResult[1] = items;
+    tmp2 = fn;
+    tmp3 = items;
+  } else {
+    [tmp2, tmp3] = cResult;
+  }
+  const effect = noop.useEffect(tmp2, tmp3);
+}) : (() => {
   const effect = noop.useEffect(() => {
     function isGatewayConnectedListener() {
       isConnectedResult = GatewayConnectionStore.isConnected();
@@ -41,10 +91,10 @@ export default function useMessagesReconnectToCallsEffect() {
         }
       }
     }
-    closure_0 = closure_4.isConnected();
-    closure_4.addChangeListener(isGatewayConnectedListener);
+    closure_0 = closure_5.isConnected();
+    closure_5.addChangeListener(isGatewayConnectedListener);
     return () => {
       GatewayConnectionStore.removeChangeListener(isGatewayConnectedListener);
     };
   }, []);
-};
+});

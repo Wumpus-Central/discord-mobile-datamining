@@ -1,7 +1,7 @@
-// === Module 9257: canViewInviteModal ===
+// === Module 9263: canViewInviteModal ===
 
-// Module 9257 (canViewInviteModal)
-import Constants from "Constants" /* 1074 */;
+// Module 9263 (canViewInviteModal)
+import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
 const Permissions = Constants.Permissions;

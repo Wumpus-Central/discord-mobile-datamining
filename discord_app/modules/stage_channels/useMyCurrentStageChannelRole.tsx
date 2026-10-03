@@ -1,17 +1,49 @@
-// === Module 9688: useMyCurrentStageChannelRole ===
+// === Module 9717: useMyCurrentStageChannelRole ===
 
-// Module 9688 (useMyCurrentStageChannelRole)
+// Module 9717 (useMyCurrentStageChannelRole)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 5919 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 5578 */;
 
 const require = globalThis.__r;
 
 const require = fn;
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useMyCurrentStageChannelRole.tsx");
 
-export default function useMyCurrentStageChannelRole(arg0) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  _require = arg0;
+  const cResult = require("c").c(4);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [AuthenticationStore, SelectedChannelStore, StageChannelRoleStore];
+    cResult[0] = items;
+    let first = items;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] !== arg0) {
+    const fn = function u() {
+      const id = AuthenticationStore.getId();
+      let permissionsForUser = null;
+      if (SelectedChannelStore.getVoiceChannelId() === closure_0) {
+        permissionsForUser = StageChannelRoleStore.getPermissionsForUser(id, tmp2);
+      }
+      return permissionsForUser;
+    };
+    const items1 = [arg0];
+    cResult[1] = arg0;
+    cResult[2] = fn;
+    cResult[3] = items1;
+    let tmp9 = items1;
+    let tmp8 = fn;
+  } else {
+    tmp8 = cResult[2];
+    tmp9 = cResult[3];
+  }
+  const obj = require("c");
+  return require("initialize").useStateFromStores(first, tmp8, tmp9);
+}) : ((arg0) => {
   _require = arg0;
   const items = [AuthenticationStore, SelectedChannelStore, StageChannelRoleStore];
   const items1 = [arg0];
@@ -23,4 +55,4 @@ export default function useMyCurrentStageChannelRole(arg0) {
     }
     return permissionsForUser;
   }, items1);
-};
+});

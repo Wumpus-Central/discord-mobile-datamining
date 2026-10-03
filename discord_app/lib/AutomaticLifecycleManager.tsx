@@ -1,7 +1,7 @@
-// === Module 6725: AutomaticLifecycleManager ===
+// === Module 6613: AutomaticLifecycleManager ===
 
-// Module 6725 (AutomaticLifecycleManager)
-import DispatcherDefault from "Dispatcher" /* 573 */;
+// Module 6613 (AutomaticLifecycleManager)
+import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("lib/AutomaticLifecycleManager.tsx");

@@ -1,9 +1,11 @@
-// === Module 11230: useDrawerWidth ===
+// === Module 11144: useDrawerWidth ===
 
-// Module 11230 (useDrawerWidth)
-import Constants from "Constants" /* 1074 */;
-import useChatLayout from "useChatLayout" /* 4724 */;
-import useBaseAppContainerDimensions from "useBaseAppContainerDimensions" /* 4726 */;
+// Module 11144 (useDrawerWidth)
+import c from "c" /* 576 */;
+import Constants from "Constants" /* 1085 */;
+import useChatLayout from "useChatLayout" /* 4739 */;
+import useBaseAppContainerDimensions from "useBaseAppContainerDimensions" /* 4741 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const useChatLayoutDefault = useChatLayout;
@@ -28,7 +30,25 @@ export const getDrawerWidth = function getDrawerWidth() {
     bound = Math.min(closure_4, width - 32);
   }
 };
-export const useDrawerWidth = function useDrawerWidth() {
+export const useDrawerWidth = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(3);
+  const width = useBaseAppContainerDimensionsDefault().width;
+  const tmp2 = useChatLayoutDefault();
+  const isChatLockedOpen = tmp2.isChatLockedOpen;
+  if (!tmp2.isChatBesideChannelList) {
+    return width;
+  } else {
+    if (isChatLockedOpen) {
+      let bound = sum;
+    } else {
+      const _Math = Math;
+      bound = Math.min(closure_4, width - 32);
+    }
+    cResult[0] = isChatLockedOpen;
+    cResult[1] = width;
+    cResult[2] = bound;
+  }
+}) : (() => {
   const width = useBaseAppContainerDimensionsDefault().width;
   if (!tmp.isChatBesideChannelList) {
     return width;
@@ -39,4 +59,4 @@ export const useDrawerWidth = function useDrawerWidth() {
     bound = Math.min(closure_4, width - 32);
   }
   tmp = useChatLayoutDefault();
-};
+});

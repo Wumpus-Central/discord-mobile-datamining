@@ -1,13 +1,13 @@
-// === Module 5359: BillingSharedActionCreators ===
+// === Module 5405: BillingSharedActionCreators ===
 
-// Module 5359 (BillingSharedActionCreators)
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import util from "util" /* 1115 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import HTTPUtils from "HTTPUtils" /* 1271 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 5266 */;
+// Module 5405 (BillingSharedActionCreators)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import util from "util" /* 1126 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 5312 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import PaymentSourceRecord from "PaymentSourceRecord" /* 4521 */;
+import PaymentSourceRecord from "PaymentSourceRecord" /* 4532 */;
 
 require = fn;
 let closure_8 = async function _validatePaymentSourceBillingAddress(arg0) {
@@ -21,7 +21,7 @@ let closure_8 = async function _validatePaymentSourceBillingAddress(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -89,7 +89,7 @@ let closure_9 = async function _popupBridgeState() {
   closure_129_0 = closure_0;
   const HTTP = HTTPUtils.HTTP;
   await HTTP.post({ url: closure_2_7.BILLING_POPUP_BRIDGE(closure_0), oldFormErrors: true, rejectWithError: true });
-  const state = value.body.state;
+  state = value.body.state;
   closure_130_1(closure_130_2[6]).dispatch({ type: "BILLING_POPUP_BRIDGE_STATE_UPDATE", state, paymentSourceType: closure_129_0 });
   return state;
 };
@@ -104,7 +104,7 @@ let closure_10 = async function _createPaymentSource(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -135,7 +135,7 @@ let closure_10 = async function _createPaymentSource(arg0) {
           closure_133_7 = undefined;
           c9 = 1;
           c10 = 1;
-          return { value: "flex", done: null };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -236,8 +236,8 @@ let closure_10 = async function _createPaymentSource(arg0) {
     }
   }
 };
-const StripeErrorTypes = fn(5360).StripeErrorTypes;
-const Constants = fn(1074);
+const StripeErrorTypes = fn(5406).StripeErrorTypes;
+const Constants = fn(1085);
 ({ AnalyticEvents: metroRequire, Endpoints: closure_7 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/billing/actions/BillingSharedActionCreators.tsx");
@@ -322,8 +322,8 @@ export const dispatchConfirmationError = function dispatchConfirmationError(type
     const merged2 = Object.assign(tmp12);
     const merged3 = Object.assign(obj.extra);
     obj9.extra = obj14;
-    const result = tmp15(4532).captureBillingException(error1, obj9);
-    const tmp15Result = tmp15(4532);
+    const result = tmp15(4543).captureBillingException(error1, obj9);
+    const tmp15Result = tmp15(4543);
   }
   return error1;
 };

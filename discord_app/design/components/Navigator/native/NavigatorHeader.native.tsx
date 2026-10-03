@@ -1,26 +1,158 @@
-// === Module 6122: NavigatorHeader ===
+// === Module 6010: NavigatorHeader ===
 
-// Module 6122 (NavigatorHeader)
-import nativeDefault from "native" /* 576 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
-import Text_Text from "Text/Text" /* 4841 */;
-import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 6123 */;
-import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 6126 */;
-import _mod6129 from "module_6129" /* 6129 */;
-import XSmallIcon from "XSmallIcon" /* 6178 */;
-import NavigatorConstants from "NavigatorConstants" /* 6180 */;
+// Module 6010 (NavigatorHeader)
+import c from "c" /* 576 */;
+import nativeDefault from "native" /* 587 */;
+import PlatformUtils from "PlatformUtils" /* 1369 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
+import Text_Text from "Text/Text" /* 4886 */;
+import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 6011 */;
+import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 6014 */;
+import XSmallIcon from "XSmallIcon" /* 6017 */;
+import _mod6019 from "module_6019" /* 6019 */;
+import NavigatorConstants from "NavigatorConstants" /* 6068 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-class HeaderBackImage {
-  constructor() {
-    tmp = closure_8();
-    obj = { size: "md", style: tmp.headerButtonIcon };
-    return jsx(closure_0(closure_2[9]).ArrowLargeLeftIcon, obj);
+let closure_3 = ["onPress"];
+let closure_4 = ["onPress"];
+let closure_5 = ["text", "labelStyle"];
+get_ActivityIndicator = fn(17);
+({ View: closure_8, ActivityIndicator: closure_9 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(4890);
+let obj2 = { fauxHeaderWrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden" }, headerTitle: null, headerBackTitleStyle: null, navigatorHeaderTitleContainer: null, navigatorHeaderContainer: null, navigatorHeaderSubtitle: null, headerButtonIcon: null, submittingIndicator: null };
+let obj4 = {};
+let merged = Object.assign(fn(4886).TextStyleSheet["redesign/heading-18/bold"]);
+obj4.color = nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY;
+obj2.headerTitle = obj4;
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden" };
+obj2.headerBackTitleStyle = { fontFamily: fn(1085).Fonts.PRIMARY_MEDIUM, fontSize: 16, letterSpacing: 0, lineHeight: 20, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+obj2.navigatorHeaderTitleContainer = { flexDirection: "row", justifyContent: "center", alignItems: "center" };
+obj2.navigatorHeaderContainer = { flexDirection: "column", justifyContent: "center", alignItems: "center" };
+obj2.navigatorHeaderSubtitle = { marginTop: -2 };
+let size = { width: 24, height: 24, tintColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+obj2.headerButtonIcon = size;
+const size1 = { width: 22, height: 22, color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+obj2.submittingIndicator = size1;
+const styles = createStyles.createStyles(obj2);
+fn(558);
+let obj5 = { fontFamily: fn(1085).Fonts.PRIMARY_MEDIUM, fontSize: 16, letterSpacing: 0, lineHeight: 20, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+let ReactCompilerGating = fn(558);
+let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(2);
+  const tmp4 = styles();
+  if (cResult[0] !== tmp4.headerButtonIcon) {
+    const obj2 = { size: "md", style: tmp4.headerButtonIcon };
+    const tmp7 = v65535(ArrowLargeLeftIcon.ArrowLargeLeftIcon, obj2);
+    cResult[0] = tmp4.headerButtonIcon;
+    cResult[1] = tmp7;
+    let tmp5 = tmp7;
+  } else {
+    tmp5 = cResult[1];
   }
-}
-function CloseButton(onPress) {
+  return tmp5;
+}) : (() => {
+  const tmp = styles();
+  return v65535(ArrowLargeLeftIcon.ArrowLargeLeftIcon, { size: "md", style: styles().headerButtonIcon });
+});
+let closure_13 = tmp8;
+ReactCompilerGating = fn(558);
+let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
+  const cResult = require("c").c(15);
+  if (cResult[0] !== onPress) {
+    onPress = onPress.onPress;
+    const tmp8 = _objectWithoutProperties(onPress, closure_3);
+    cResult[0] = onPress;
+    cResult[1] = onPress;
+    cResult[2] = tmp8;
+    let tmp5 = tmp8;
+    let tmp4 = onPress;
+  } else {
+    tmp4 = cResult[1];
+    tmp5 = cResult[2];
+  }
+  const tmp9 = styles();
+  _require = tmp9;
+  let obj = require("c");
+  const navigation = require("Link").useNavigation();
+  if (cResult[3] === navigation) {
+    if (cResult[4] === tmp4) {
+      let tmp11 = cResult[5];
+    }
+    dependencyMap = tmp11;
+    if (cResult[6] !== tmp11) {
+      const fn2 = function b() {
+        closure_2();
+        return true;
+      };
+      cResult[6] = tmp11;
+      cResult[7] = fn2;
+      let tmp12 = fn2;
+    } else {
+      tmp12 = cResult[7];
+    }
+    tmp(6016).useNavigatorBackPressHandler(tmp12);
+    const _Symbol = Symbol;
+    if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
+      const intl = tmp(1126).intl;
+      const stringResult = intl.string(tmp(1126).t.cpT0Cq);
+      cResult[8] = stringResult;
+      let tmp15 = stringResult;
+    } else {
+      tmp15 = cResult[8];
+    }
+    if (cResult[9] !== tmp9.headerButtonIcon) {
+      const fn3 = function p(tintColor) {
+        const obj = { size: "md", style: null };
+        const items = [headerButtonIcon.headerButtonIcon, { tintColor: tintColor.tintColor }];
+        obj.style = items;
+        return v65535(XSmallIcon.XSmallIcon, obj);
+      };
+      cResult[9] = tmp9.headerButtonIcon;
+      cResult[10] = fn3;
+      let tmp17 = fn3;
+    } else {
+      tmp17 = cResult[10];
+    }
+    if (cResult[11] === tmp11) {
+      if (cResult[12] === tmp5) {
+        if (cResult[13] === tmp17) {
+          let tmp18 = cResult[14];
+        }
+        return tmp18;
+      }
+    }
+    const obj2 = {};
+    const merged = Object.assign(tmp5);
+    obj2.onPress = tmp11;
+    obj2.label = tmp15;
+    obj2.displayMode = "minimal";
+    obj2.backImage = tmp17;
+    obj2.accessibilityLabel = tmp15;
+    const tmp23 = closure_10(tmp(6019).HeaderBackButton, obj2);
+    cResult[11] = tmp11;
+    cResult[12] = tmp5;
+    cResult[13] = tmp17;
+    cResult[14] = tmp23;
+    tmp18 = tmp23;
+    const tmpResult2 = tmp(6016);
+  }
+  let fn = tmp4;
+  if (tmp4 == null) {
+    fn = () => {
+      navigation.pop();
+    };
+  }
+  cResult[3] = navigation;
+  cResult[4] = tmp4;
+  cResult[5] = fn;
+  tmp11 = fn;
+  const tmpResult = require("Link");
+}) : ((onPress) => {
   onPress = onPress.onPress;
   const merged = Object.assign(onPress, Object.assign({ onPress: 0 }));
   onPress = undefined;
@@ -36,7 +168,7 @@ function CloseButton(onPress) {
     fn();
     return true;
   });
-  const intl = tmp2(tmp3[12]).intl;
+  const intl = tmp2(tmp3[15]).intl;
   const stringResult = intl.string(require("util").t.cpT0Cq);
   const obj2 = {};
   const merged1 = Object.assign(merged);
@@ -47,15 +179,71 @@ function CloseButton(onPress) {
     const obj = { size: "md", style: null };
     const items = [headerButtonIcon.headerButtonIcon, { tintColor: tintColor.tintColor }];
     obj.style = items;
-    return timestampProducer(XSmallIcon.XSmallIcon, obj);
+    return v65535(XSmallIcon.XSmallIcon, obj);
   };
   obj2.accessibilityLabel = stringResult;
-  return closure_6(require("module_6129").HeaderBackButton, obj2);
-}
-function CustomHeaderBackButton(onPress) {
+  return closure_10(require("module_6019").HeaderBackButton, obj2);
+});
+ReactCompilerGating = fn(558);
+let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
+  const cResult = require("c").c(9);
+  if (cResult[0] !== onPress) {
+    onPress = onPress.onPress;
+    _require = onPress;
+    const tmp8 = _objectWithoutProperties(onPress, closure_4);
+    cResult[0] = onPress;
+    cResult[1] = onPress;
+    cResult[2] = tmp8;
+    let tmp5 = tmp8;
+  } else {
+    _require = cResult[1];
+    tmp5 = cResult[2];
+  }
+  if (cResult[3] !== tmp4) {
+    const fn = function s() {
+      if (null != closure_0) {
+        tmp();
+      }
+      return null != closure_0;
+    };
+    cResult[3] = tmp4;
+    cResult[4] = fn;
+    let tmp9 = fn;
+  } else {
+    tmp9 = cResult[4];
+  }
+  const obj = require("c");
+  require("useNavigatorBackPressHandler").useNavigatorBackPressHandler(tmp9);
+  if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
+    const fn2 = function u() {
+      return closure_1_10(closure_1_13, {});
+    };
+    cResult[5] = fn2;
+    let tmp11 = fn2;
+  } else {
+    tmp11 = cResult[5];
+  }
+  if (cResult[6] === tmp4) {
+    if (cResult[7] === tmp5) {
+      let tmp12 = cResult[8];
+    }
+    return tmp12;
+  }
+  const obj2 = {};
+  const merged = Object.assign(tmp5);
+  obj2.onPress = tmp4;
+  obj2.displayMode = "minimal";
+  obj2.backImage = tmp11;
+  const tmp14 = closure_10(require("module_6019").HeaderBackButton, obj2);
+  cResult[6] = tmp4;
+  cResult[7] = tmp5;
+  cResult[8] = tmp14;
+  tmp12 = tmp14;
+  const tmpResult = require("useNavigatorBackPressHandler");
+}) : ((onPress) => {
   onPress = onPress.onPress;
   const merged = Object.assign(onPress, Object.assign({ onPress: 0 }));
-  onPress(6128).useNavigatorBackPressHandler(() => {
+  onPress(6016).useNavigatorBackPressHandler(() => {
     if (null != onPress) {
       tmp();
     }
@@ -66,11 +254,93 @@ function CustomHeaderBackButton(onPress) {
   obj2.onPress = onPress;
   obj2.displayMode = "minimal";
   obj2.backImage = function backImage() {
-    return closure_1_6(HeaderBackImage, {});
+    return closure_1_10(closure_1_13, {});
   };
-  return closure_6(onPress(6129).HeaderBackButton, obj2);
-}
-function HeaderTextButton(text) {
+  return closure_10(onPress(6019).HeaderBackButton, obj2);
+});
+ReactCompilerGating = fn(558);
+let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function HeaderTextButton(arg0) {
+  const cResult = c.c(15);
+  if (cResult[0] !== arg0) {
+    ({ text, labelStyle } = arg0);
+    const tmp9 = _objectWithoutProperties(arg0, closure_5);
+    cResult[0] = arg0;
+    cResult[1] = tmp9;
+    cResult[2] = labelStyle;
+    cResult[3] = text;
+    let tmp6 = text;
+    let tmp5 = labelStyle;
+    let tmp4 = tmp9;
+  } else {
+    tmp4 = cResult[1];
+    tmp5 = cResult[2];
+    tmp6 = cResult[3];
+  }
+  const tmp10 = styles();
+  if (cResult[4] !== tmp10.headerBackTitleStyle) {
+    const obj2 = {};
+    const merged = Object.assign(tmp10.headerBackTitleStyle);
+    obj2.marginHorizontal = 16;
+    cResult[4] = tmp10.headerBackTitleStyle;
+    cResult[5] = obj2;
+    let tmp11 = obj2;
+  } else {
+    tmp11 = cResult[5];
+  }
+  if (cResult[6] === tmp5) {
+    if (cResult[7] === tmp11) {
+      let tmp14 = cResult[8];
+    }
+    const _Symbol = Symbol;
+    if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
+      class B {
+        constructor() {
+          return null;
+        }
+      }
+      cResult[9] = B;
+    } else {
+      class B {
+        constructor() {
+          return null;
+        }
+      }
+    }
+    if (tmpResult.isAndroid()) {
+      class B {
+        constructor() {
+          return null;
+        }
+      }
+    }
+    if (cResult[10] === tmp14) {
+      class B {
+        constructor() {
+          return null;
+        }
+      }
+    }
+    const obj3 = {};
+    const merged1 = Object.assign(tmp4);
+    obj3.label = tmp6;
+    obj3.displayMode = "default";
+    obj3.labelStyle = tmp14;
+    obj3.backImage = B;
+    obj3.accessibilityLabel = undefined;
+    const tmp23 = v65535(_mod6019.HeaderBackButton, obj3);
+    cResult[10] = tmp14;
+    cResult[11] = tmp4;
+    cResult[12] = undefined;
+    cResult[13] = tmp6;
+    cResult[14] = tmp23;
+    tmpResult = PlatformUtils;
+  }
+  const items = [tmp11, tmp5];
+  cResult[6] = tmp5;
+  cResult[7] = tmp11;
+  cResult[8] = items;
+  tmp14 = items;
+}) : (function HeaderTextButton(text) {
   text = text.text;
   const merged = Object.assign(text, Object.assign({ text: 0, labelStyle: 0 }));
   const obj = {};
@@ -90,57 +360,160 @@ function HeaderTextButton(text) {
     tmp5 = text;
   }
   obj2.accessibilityLabel = tmp5;
-  return timestampProducer(_mod6129.HeaderBackButton, obj2);
-}
-get_ActivityIndicator = fn(17);
-({ View: closure_4, ActivityIndicator: hasOwnProperty } = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4845);
-let obj2 = { fauxHeaderWrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden" }, headerTitle: null, headerBackTitleStyle: null, navigatorHeaderTitleContainer: null, navigatorHeaderContainer: null, navigatorHeaderSubtitle: null, headerButtonIcon: null, submittingIndicator: null };
-let obj4 = {};
-let merged = Object.assign(fn(4841).TextStyleSheet["redesign/heading-18/bold"]);
-obj4.color = nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY;
-obj2.headerTitle = obj4;
-let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden" };
-obj2.headerBackTitleStyle = { fontFamily: fn(1074).Fonts.PRIMARY_MEDIUM, fontSize: 16, letterSpacing: 0, lineHeight: 20, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-obj2.navigatorHeaderTitleContainer = { flexDirection: "row", justifyContent: "center", alignItems: "center" };
-obj2.navigatorHeaderContainer = { flexDirection: "column", justifyContent: "center", alignItems: "center" };
-obj2.navigatorHeaderSubtitle = { marginTop: -2 };
-let size = { width: 24, height: 24, tintColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-obj2.headerButtonIcon = size;
-const size1 = { width: 22, height: 22, color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-obj2.submittingIndicator = size1;
-const styles = createStyles.createStyles(obj2);
-size = fn(2);
-const result = size.fileFinishedImporting("design/components/Navigator/native/NavigatorHeader.native.tsx");
-
-export const useStyles = styles;
-export const NavigatorHeader = function NavigatorHeader(subtitle) {
+  return v65535(_mod6019.HeaderBackButton, obj2);
+});
+ReactCompilerGating = fn(558);
+let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(14);
+  ({ title, subtitle, icon } = arg0);
+  const tmp4 = styles();
+  const tmp5 = HeaderDebugOverlayDefault("js-stack");
+  if (cResult[0] !== title) {
+    const obj2 = { accessibilityRole: "header", "aria-level": "1", lineClamp: 1, variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", children: title };
+    const tmp8 = v65535(Text_Text.Text, obj2);
+    cResult[0] = title;
+    cResult[1] = tmp8;
+    let tmp6 = tmp8;
+  } else {
+    tmp6 = cResult[1];
+  }
+  if (cResult[2] === icon) {
+    if (cResult[3] === tmp4.navigatorHeaderTitleContainer) {
+      if (cResult[4] === tmp6) {
+        let tmp9 = cResult[5];
+      }
+      if (cResult[6] === tmp4.navigatorHeaderSubtitle) {
+        if (cResult[7] === subtitle) {
+          let tmp11 = cResult[8];
+        }
+        if (cResult[9] === tmp5) {
+          if (cResult[10] === tmp4.navigatorHeaderContainer) {
+            if (cResult[11] === tmp9) {
+              if (cResult[12] === tmp11) {
+                let tmp15 = cResult[13];
+              }
+              return tmp15;
+            }
+          }
+        }
+        const obj3 = { style: tmp4.navigatorHeaderContainer, children: null };
+        const items = [tmp9, tmp11, tmp5];
+        obj3.children = items;
+        const tmp18 = closure_1_11(closure_1_8, obj3);
+        cResult[9] = tmp5;
+        cResult[10] = tmp4.navigatorHeaderContainer;
+        cResult[11] = tmp9;
+        cResult[12] = tmp11;
+        cResult[13] = tmp18;
+        tmp15 = tmp18;
+      }
+      let tmp13 = null != subtitle;
+      if (tmp13) {
+        tmp13 = "" !== subtitle;
+      }
+      if (tmp13) {
+        const obj4 = { lineClamp: 1, style: tmp4.navigatorHeaderSubtitle, variant: "text-xs/medium", color: "text-muted", children: subtitle };
+        tmp13 = v65535(Text_Text.Text, obj4);
+      }
+      cResult[6] = tmp4.navigatorHeaderSubtitle;
+      cResult[7] = subtitle;
+      cResult[8] = tmp13;
+      tmp11 = tmp13;
+    }
+  }
+  const obj5 = { style: tmp4.navigatorHeaderTitleContainer, children: null };
+  const items1 = [icon, tmp6];
+  obj5.children = items1;
+  const tmp10 = closure_1_11(closure_1_8, obj5);
+  cResult[2] = icon;
+  cResult[3] = tmp4.navigatorHeaderTitleContainer;
+  cResult[4] = tmp6;
+  cResult[5] = tmp10;
+  tmp9 = tmp10;
+}) : ((subtitle) => {
   subtitle = subtitle.subtitle;
   ({ title, icon } = subtitle);
   const tmp = styles();
   const obj = { style: tmp.navigatorHeaderContainer, children: null };
   const obj2 = { style: tmp.navigatorHeaderTitleContainer, children: null };
-  const items = [icon, timestampProducer(Text_Text.Text, { accessibilityRole: "header", "aria-level": "1", lineClamp: 1, variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", children: title })];
+  const items = [icon, v65535(Text_Text.Text, { accessibilityRole: "header", "aria-level": "1", lineClamp: 1, variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", children: title })];
   obj2.children = items;
-  const items1 = [React5(React4, obj2), , ];
+  const items1 = [closure_1_11(closure_1_8, obj2), , ];
   let tmp6Result = null != subtitle;
   if (tmp6Result) {
     tmp6Result = "" !== subtitle;
   }
   if (tmp6Result) {
     const obj3 = { lineClamp: 1, style: tmp.navigatorHeaderSubtitle, variant: "text-xs/medium", color: "text-muted", children: subtitle };
-    tmp6Result = timestampProducer(Text_Text.Text, obj3);
+    tmp6Result = v65535(Text_Text.Text, obj3);
   }
   items1[1] = tmp6Result;
   items1[2] = HeaderDebugOverlayDefault("js-stack");
   obj.children = items1;
-  return React5(React4, obj);
-};
-export { HeaderBackImage };
+  return closure_1_11(closure_1_8, obj);
+});
+ReactCompilerGating = fn(558);
+let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? (function FauxHeader(arg0) {
+  const cResult = c.c(10);
+  ({ children, style } = arg0);
+  const tmp2 = styles();
+  const top = useSafeAreaInsetsDefault().top;
+  const sum = top + NavigatorConstants.NAV_BAR_HEIGHT;
+  if (cResult[0] === top) {
+    if (cResult[1] === sum) {
+      let tmp4 = cResult[2];
+    }
+    if (cResult[3] === style) {
+      if (cResult[4] === tmp2.fauxHeaderWrapper) {
+        if (cResult[5] === tmp4) {
+          let tmp5 = cResult[6];
+        }
+        if (cResult[7] === children) {
+          if (cResult[8] === tmp5) {
+            let tmp6 = cResult[9];
+          }
+          return tmp6;
+        }
+        const obj2 = { style: tmp5, children };
+        const tmp9 = v65535(closure_1_8, obj2);
+        cResult[7] = children;
+        cResult[8] = tmp5;
+        cResult[9] = tmp9;
+        tmp6 = tmp9;
+      }
+    }
+    const items = [tmp2.fauxHeaderWrapper, tmp4, style];
+    cResult[3] = style;
+    cResult[4] = tmp2.fauxHeaderWrapper;
+    cResult[5] = tmp4;
+    cResult[6] = items;
+    tmp5 = items;
+  }
+  const obj3 = { paddingTop: top, height: sum };
+  cResult[0] = top;
+  cResult[1] = sum;
+  cResult[2] = obj3;
+  tmp4 = obj3;
+}) : (function FauxHeader(arg0) {
+  ({ children, style } = arg0);
+  const top = useSafeAreaInsetsDefault().top;
+  const obj = { style: null, children: null };
+  const items = [styles().fauxHeaderWrapper, , ];
+  const tmp = styles();
+  items[1] = { paddingTop: top, height: top + NavigatorConstants.NAV_BAR_HEIGHT };
+  items[2] = style;
+  obj.style = items;
+  obj.children = children;
+  return v65535(closure_1_8, obj);
+});
+size = fn(2);
+const result = size.fileFinishedImporting("design/components/Navigator/native/NavigatorHeader.native.tsx");
+
+export const useStyles = styles;
+export const NavigatorHeader = tmp7;
+export const HeaderBackImage = tmp8;
 export const renderBackImage = function renderBackImage() {
-  return timestampProducer(HeaderBackImage, {});
+  return v65535(closure_13, {});
 };
 export function getHeaderCloseButton(pop) {
   const onPress = pop;
@@ -148,7 +521,7 @@ export function getHeaderCloseButton(pop) {
     const obj = {};
     const merged = Object.assign(arg0);
     obj.onPress = onPress;
-    return timestampProducer(CloseButton, obj);
+    return v65535(closure_14, obj);
   };
 }
 export function getHeaderConditionalBackButton(callback1) {
@@ -166,7 +539,7 @@ export function getHeaderConditionalBackButton(callback1) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -199,7 +572,7 @@ export function getHeaderConditionalBackButton(callback1) {
               }
             }
             c2 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp10) {
           c2 = tmp;
@@ -219,7 +592,7 @@ export function getHeaderConditionalBackButton(callback1) {
       }
       return applyArgumentsResult;
     };
-    return closure_1_6(CustomHeaderBackButton, obj);
+    return closure_1_10(closure_1_15, obj);
   };
 }
 export function getHeaderBackButton(onClose, arg1) {
@@ -242,7 +615,7 @@ export function getHeaderBackButton(onClose, arg1) {
         }
       }
     };
-    return closure_1_6(CustomHeaderBackButton, obj);
+    return closure_1_10(closure_1_15, obj);
   };
 }
 export function getHeaderTextButton(intl, callback) {
@@ -253,25 +626,27 @@ export function getHeaderTextButton(intl, callback) {
     const merged = Object.assign(arg0);
     obj.text = text;
     obj.onPress = onPress;
-    return timestampProducer(HeaderTextButton, obj);
+    return v65535(closure_16, obj);
   };
 }
 export function getHeaderNoTitle() {
   return () => null;
 }
-export const FauxHeader = function FauxHeader(arg0) {
-  ({ children, style } = arg0);
-  const top = useSafeAreaInsetsDefault().top;
-  const obj = { style: null, children: null };
-  const items = [styles().fauxHeaderWrapper, , ];
+export const FauxHeader = tmp9;
+export const HeaderSubmittingIndicator = ReactCompilerGating.isReactCompilerEnabled() ? (function HeaderSubmittingIndicator() {
+  const cResult = c.c(2);
+  const tmp2 = styles();
+  if (cResult[0] !== tmp2.submittingIndicator) {
+    const obj2 = { animating: true, style: tmp2.submittingIndicator, color: tmp2.submittingIndicator.color };
+    const tmp6 = v65535(options, obj2);
+    cResult[0] = tmp2.submittingIndicator;
+    cResult[1] = tmp6;
+    let tmp3 = tmp6;
+  } else {
+    tmp3 = cResult[1];
+  }
+  return tmp3;
+}) : (function HeaderSubmittingIndicator() {
   const tmp = styles();
-  items[1] = { paddingTop: top, height: top + NavigatorConstants.NAV_BAR_HEIGHT };
-  items[2] = style;
-  obj.style = items;
-  obj.children = children;
-  return timestampProducer(React4, obj);
-};
-export const HeaderSubmittingIndicator = function HeaderSubmittingIndicator() {
-  const tmp = styles();
-  return timestampProducer(hasOwnProperty, { animating: true, style: tmp.submittingIndicator, color: tmp.submittingIndicator.color });
-};
+  return v65535(options, { animating: true, style: tmp.submittingIndicator, color: tmp.submittingIndicator.color });
+});

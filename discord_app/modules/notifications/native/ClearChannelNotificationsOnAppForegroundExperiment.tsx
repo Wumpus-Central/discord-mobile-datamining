@@ -1,7 +1,7 @@
-// === Module 17894: ClearChannelNotificationsOnAppForegroundExperiment ===
+// === Module 17980: ClearChannelNotificationsOnAppForegroundExperiment ===
 
-// Module 17894 (ClearChannelNotificationsOnAppForegroundExperiment)
-import ApexExperiment from "ApexExperiment" /* 1435 */;
+// Module 17980 (ClearChannelNotificationsOnAppForegroundExperiment)
+import ApexExperiment from "ApexExperiment" /* 1440 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2025-10-clear-channel-notifications-on-app-foreground-ios", kind: "user", defaultConfig: { enabled: false }, variations: null };

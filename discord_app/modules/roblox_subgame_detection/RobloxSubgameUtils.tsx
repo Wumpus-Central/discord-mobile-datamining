@@ -1,9 +1,9 @@
-// === Module 4975: RobloxSubgameUtils ===
+// === Module 5020: RobloxSubgameUtils ===
 
-// Module 4975 (RobloxSubgameUtils)
+// Module 5020 (RobloxSubgameUtils)
 import _modDef12 from "module_12" /* 12 */;
-import RobloxSubgameTypes from "RobloxSubgameTypes" /* 4976 */;
-import RobloxSubgamePlatformUtilsDefault from "RobloxSubgamePlatformUtils" /* 4977 */;
+import RobloxSubgameTypes from "RobloxSubgameTypes" /* 5021 */;
+import RobloxSubgamePlatformUtilsDefault from "RobloxSubgamePlatformUtils" /* 5022 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -14,7 +14,7 @@ let closure_6 = async function _openRobloxURLWithRootPlaceId() {
   await closure_130_1(closure_130_2[5])(closure_129_0);
   return value;
 };
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ DistributorNames: closure_4, Distributors: hasOwnProperty } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/roblox_subgame_detection/RobloxSubgameUtils.tsx");

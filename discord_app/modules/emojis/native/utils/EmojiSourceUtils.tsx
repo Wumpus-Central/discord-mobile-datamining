@@ -1,12 +1,12 @@
-// === Module 15926: EmojiSourceUtils ===
+// === Module 15998: EmojiSourceUtils ===
 
-// Module 15926 (EmojiSourceUtils)
+// Module 15998 (EmojiSourceUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
 let closure_4 = async function _getEmojiSource(arg0) {
-  if (c7 === 2) {
-    c7 = 3;
+  if (c8 === 2) {
+    c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
   } else if (tmp4 === 3) {
     if (arg0 === 1) {
@@ -15,89 +15,93 @@ let closure_4 = async function _getEmojiSource(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
-      c7 = 2;
-      if (0 === c6) {
+      c8 = 2;
+      if (0 === c7) {
         if (arg0 === 1) {
-          c7 = 3;
+          c8 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c7 = 3;
+          c8 = 3;
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          c5 = 0;
-          closure_4 = tmp2;
-          closure_132_1 = undefined;
-          closure_132_0 = closure_0;
+          c6 = 0;
+          closure_5 = tmp2;
+          closure_133_1 = undefined;
+          closure_133_0 = closure_0;
           let num11 = closure_1;
           if (closure_1 === undefined) {
             num11 = 32;
           }
-          closure_132_1 = num11;
-          closure_132_2 = undefined;
-          closure_132_3 = undefined;
-          c6 = 1;
+          closure_133_1 = num11;
+          closure_133_2 = undefined;
+          closure_133_3 = undefined;
           c7 = 1;
-          return { value: "flex", done: null };
+          c8 = 1;
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
-          c7 = 3;
+          c8 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c7 = 3;
+          c8 = 3;
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          let name = closure_132_0.name;
-          if (name == null) {
+          const name2 = closure_133_0.name;
+          let name = name2;
+          if (name2 == null) {
             name = "";
           }
-          const obj5 = { name, id: closure_132_0.id, animated: false };
-          const emojiUrl = closure_133_0(closure_133_1[2]).getEmojiUrl(obj5, closure_132_1);
+          const obj6 = { name, id: closure_133_0.id, animated: false };
+          const emojiUrl = closure_134_0(closure_134_2[1]).getEmojiUrl(obj6, closure_133_1);
           c2 = emojiUrl;
           if (emojiUrl == null) {
             c2 = "";
           }
-          closure_132_2 = c2;
-          if ("" !== closure_132_2) {
-            c7 = 3;
-            const obj7 = { value: closure_133_0(closure_133_1[3]).makeSource(closure_132_2), done: true };
-            return obj7;
-          } else {
-            const ImageManager = closure_133_3.ImageManager;
-            c6 = 2;
-            c7 = 1;
-            const obj8 = { value: ImageManager.getEmojiBase64(closure_132_0.name, closure_132_1), done: false };
+          closure_133_2 = c2;
+          if ("" !== closure_133_2) {
+            c8 = 3;
+            const obj8 = { value: closure_134_0(closure_134_2[2]).makeSource(closure_133_2), done: true };
             return obj8;
+          } else {
+            name = closure_133_0.name;
+            c4 = name;
+            if (name == null) {
+              c4 = "";
+            }
+            c7 = 2;
+            c8 = 1;
+            const obj9 = { value: closure_134_1(closure_134_2[3]).getEmojiBase64(c4, closure_133_1), done: false };
+            return obj9;
           }
-          const obj11 = closure_133_0(closure_133_1[2]);
+          const obj12 = closure_134_0(closure_134_2[1]);
         }
       } else if (arg0 === 1) {
-        c7 = 3;
+        c8 = 3;
         throw value;
       } else if (arg0 === 2) {
-        c7 = 3;
-        const obj9 = { value, done: true };
-        return obj9;
-      } else {
-        closure_132_3 = value;
-        const _HermesInternal = HermesInternal;
-        c7 = 3;
-        const obj10 = { value: closure_133_0(closure_133_1[3]).makeSource("data:image/png;base64," + closure_132_3), done: true };
+        c8 = 3;
+        const obj10 = { value, done: true };
         return obj10;
+      } else {
+        closure_133_3 = value;
+        const _HermesInternal = HermesInternal;
+        c8 = 3;
+        const obj11 = { value: closure_134_0(closure_134_2[2]).makeSource("data:image/png;base64," + closure_133_3), done: true };
+        return obj11;
       }
-    } catch (tmp29) {
-      c7 = tmp;
-      throw tmp29;
+    } catch (tmp32) {
+      c8 = tmp;
+      throw tmp32;
     }
   }
 };
-const NativeModules = fn(17).NativeModules;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/emojis/native/utils/EmojiSourceUtils.tsx");
 

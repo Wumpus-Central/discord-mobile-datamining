@@ -1,8 +1,8 @@
-// === Module 13494: GeoRestrictedGuildStore ===
+// === Module 13554: GeoRestrictedGuildStore ===
 
-// Module 13494 (GeoRestrictedGuildStore)
+// Module 13554 (GeoRestrictedGuildStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
 
 let found = [];
 const Store = initializeDefault.Store;

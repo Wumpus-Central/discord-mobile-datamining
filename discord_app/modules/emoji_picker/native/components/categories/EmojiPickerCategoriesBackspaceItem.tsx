@@ -1,14 +1,14 @@
-// === Module 10015: EmojiPickerCategoriesBackspaceItem ===
+// === Module 9970: EmojiPickerCategoriesBackspaceItem ===
 
-// Module 10015 (EmojiPickerCategoriesBackspaceItem)
-import util from "util" /* 1115 */;
-import Timers from "Timers" /* 2039 */;
-import BackspaceIcon from "BackspaceIcon" /* 10016 */;
+// Module 9970 (EmojiPickerCategoriesBackspaceItem)
+import util from "util" /* 1126 */;
+import Timers from "Timers" /* 2046 */;
+import BackspaceIcon from "BackspaceIcon" /* 9971 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Pressable = fn(17).Pressable;
-const NODE_MARGIN = fn(1074).NODE_MARGIN;
+const NODE_MARGIN = fn(1085).NODE_MARGIN;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/emoji_picker/native/components/categories/EmojiPickerCategoriesBackspaceItem.tsx");

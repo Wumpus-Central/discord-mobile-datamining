@@ -1,14 +1,14 @@
-// === Module 4708: StreamerModeStore ===
+// === Module 4723: StreamerModeStore ===
 
-// Module 4708 (StreamerModeStore)
+// Module 4723 (StreamerModeStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import OverlayV3Experiment from "OverlayV3Experiment" /* 4709 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import OverlayV3Experiment from "OverlayV3Experiment" /* 4724 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
-const AnalyticEvents = fn(1074).AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 let obj = { enabled: false, autoToggle: true, hideInstantInvites: true, hidePersonalInformation: true, disableSounds: true, disableNotifications: true, disabledOverlayWidgets: [], enableContentProtection: false };
 let closure_6 = {};
 let obj2 = {};

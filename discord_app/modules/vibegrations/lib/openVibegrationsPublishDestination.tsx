@@ -1,18 +1,18 @@
-// === Module 16532: openVibegrationsPublishDestination ===
+// === Module 16609: openVibegrationsPublishDestination ===
 
-// Module 16532 (openVibegrationsPublishDestination)
-import router_utils from "router_utils" /* 1101 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4858 */;
-import transitionToGuild from "transitionToGuild" /* 6947 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 8952 */;
-import canLaunchFrame from "canLaunchFrame" /* 8975 */;
-import ApplicationStore from "ApplicationStore" /* 5072 */;
-import GuildChannelStore from "GuildChannelStore" /* 4496 */;
-import UserStore from "UserStore" /* 1372 */;
+// Module 16609 (openVibegrationsPublishDestination)
+import router_utils from "router_utils" /* 1112 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4903 */;
+import transitionToGuild from "transitionToGuild" /* 6845 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 8986 */;
+import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 8994 */;
+import ApplicationStore from "ApplicationStore" /* 5118 */;
+import GuildChannelStore from "GuildChannelStore" /* 4507 */;
+import UserStore from "UserStore" /* 1377 */;
 
 require = fn;
-const Routes = fn(1074).Routes;
-const MAIN_SURFACE = fn(8691).MAIN_SURFACE;
+const Routes = fn(1085).Routes;
+const MAIN_SURFACE = fn(8704).MAIN_SURFACE;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/vibegrations/lib/openVibegrationsPublishDestination.tsx");
 
@@ -33,14 +33,14 @@ export const openVibegrationsProductionDm = function openVibegrationsProductionD
 export const openVibegrationsPublishDestination = function openVibegrationsPublishDestination(destination, arg1) {
   ({ applicationId, guildId, appChannelId, openAutomodSettings } = arg1);
   if ("launch" === destination) {
-    if (obj.canLaunchFrame(ApplicationStore.getApplication(applicationId))) {
+    if (obj.canLaunchContextlessFrame(ApplicationStore.getApplication(applicationId))) {
       const obj6 = { applicationId, surface: MAIN_SURFACE };
       FramesActionCreatorsDefault.launchFrame(obj6).catch(() => {
 
       });
       return Promise.resolve();
     }
-    obj = canLaunchFrame;
+    obj = canLaunchContextlessFrame;
   } else if ("profile" === destination) {
     const currentUser = UserStore.getCurrentUser();
     let id;

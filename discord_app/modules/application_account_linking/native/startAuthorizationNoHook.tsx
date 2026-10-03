@@ -1,8 +1,8 @@
-// === Module 11477: startAuthorizationNoHook ===
+// === Module 11396: startAuthorizationNoHook ===
 
-// Module 11477 (startAuthorizationNoHook)
-import LinkingDefault from "Linking" /* 4554 */;
-import useAuthorizationApp from "useAuthorizationApp" /* 6774 */;
+// Module 11396 (startAuthorizationNoHook)
+import LinkingDefault from "Linking" /* 4565 */;
+import useAuthorizationApp from "useAuthorizationApp" /* 6662 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -17,7 +17,7 @@ let closure_5 = async function _startAuthorizationNoHook(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -80,7 +80,7 @@ let closure_5 = async function _startAuthorizationNoHook(arg0) {
     }
   }
 };
-const AnalyticEvents = fn(1074).AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_account_linking/native/startAuthorizationNoHook.tsx");
 

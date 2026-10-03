@@ -1,23 +1,25 @@
-// === Module 12852: VibegrationsChatStore ===
+// === Module 12905: VibegrationsChatStore ===
 
-// Module 12852 (VibegrationsChatStore)
+// Module 12905 (VibegrationsChatStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import util from "util" /* 1115 */;
-import UserSettings from "UserSettings" /* 2021 */;
-import _modDef3714 from "module_3714" /* 3714 */;
-import VibegrationsUtils from "VibegrationsUtils" /* 5554 */;
-import VibegrationsPlatformUtilsDefault from "VibegrationsPlatformUtils" /* 8689 */;
-import SoundUtils from "SoundUtils" /* 9552 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import util from "util" /* 1126 */;
+import UserSettings from "UserSettings" /* 2028 */;
+import _modDef3723 from "module_3723" /* 3723 */;
+import VibegrationsUtils from "VibegrationsUtils" /* 6746 */;
+import VibegrationsPlatformUtilsDefault from "VibegrationsPlatformUtils" /* 8702 */;
+import SoundUtils from "SoundUtils" /* 9562 */;
+import vibegrationsProjectMute from "vibegrationsProjectMute" /* 12906 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7145 */;
-import NotificationSettingsStore from "NotificationSettingsStore" /* 9736 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4684 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5777 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 8686 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7048 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
+import NotificationSettingsStore from "NotificationSettingsStore" /* 12466 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5438 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 8699 */;
 
 require = fn;
 function newMessage(assistant, content, arg2) {
@@ -27,8 +29,8 @@ function newMessage(assistant, content, arg2) {
   }
   ({ ts, id, userId, turnId } = obj);
   if (id == null) {
-    const sum = c28 + 1;
-    c28 = sum;
+    const sum = c30 + 1;
+    c30 = sum;
     id = `m${tmp2}`;
   }
   const obj2 = { id, render_id: id, role: assistant, content };
@@ -63,7 +65,7 @@ function newMessageFromHistory(ts) {
   const tmp2 = (function snowflakeTimeOf(id) {
     let startsWithResult;
     if (id != null) {
-      startsWithResult = id.startsWith(closure_1_30);
+      startsWithResult = id.startsWith(closure_1_32);
     }
     let substr = id;
     if (true === startsWithResult) {
@@ -94,6 +96,16 @@ function newMessageFromHistory(ts) {
   if (!tmp3) {
     tmp.created_at = tmp2;
   }
+  if ("assistant" === ts.role) {
+    if (null != ts.ts) {
+      const _Date = Date;
+      const parsed = Date.parse(ts.ts);
+      let _Number = Number;
+      if (Number.isFinite(parsed)) {
+        tmp.settled_at = parsed;
+      }
+    }
+  }
   if (null != ts.kind) {
     tmp.kind = ts.kind;
   }
@@ -105,7 +117,7 @@ function newMessageFromHistory(ts) {
   if (null != ts.proposal) {
     tmp.proposal = ts.proposal;
   }
-  if (tmp5) {
+  if (tmp7) {
     tmp.ideas = ts.ideas;
   }
   if (null != ts.publish_cta) {
@@ -114,7 +126,7 @@ function newMessageFromHistory(ts) {
   if (null != ts.publish_notice) {
     tmp.publishNotice = ts.publish_notice;
   }
-  if (tmp6) {
+  if (tmp8) {
     tmp.clarification = ts.clarification;
   }
   if (null != ts.restore_proposal) {
@@ -123,7 +135,7 @@ function newMessageFromHistory(ts) {
   if (null != ts.source_sha) {
     tmp.sourceSha = ts.source_sha;
   }
-  if (tmp7) {
+  if (tmp9) {
     tmp.todos = ts.todos;
   }
   if (null != ts.steps) {
@@ -141,13 +153,13 @@ function newMessageFromHistory(ts) {
       return items1;
     });
   }
-  if (tmp9) {
+  if (tmp11) {
     tmp.secretRequest = ts.secret_request;
   }
   if (null != ts.settings_request) {
     tmp.settingsRequest = ts.settings_request;
   }
-  if (tmp10) {
+  if (tmp12) {
     tmp.intake = ts.intake;
   }
   let steps = ts.steps;
@@ -157,32 +169,42 @@ function newMessageFromHistory(ts) {
   const iter = steps[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tmp12 = nextResult;
-    let tmp13 = "awaiting_user" === nextResult.kind;
-    if (tmp13) {
-      tmp13 = "secrets" === tmp12.action;
+    let tmp14 = nextResult;
+    let tmp15 = "awaiting_user" === nextResult.kind;
+    if (tmp15) {
+      tmp15 = "secrets" === tmp14.action;
     }
-    if (tmp13) {
+    if (tmp15) {
       let obj2 = { action: null };
-      obj2.action = tmp12.action;
+      obj2.action = tmp14.action;
       tmp.awaitingUser = obj2;
     }
     continue;
   }
   return tmp;
 }
-function resolveTurnIndex(value, turnId) {
+function resolveTurnIndex(arr3, activeTurnId) {
   let num = -1;
-  if (null != turnId) {
-    let diff = value.length - 1;
+  if (null != activeTurnId) {
+    let diff = arr3.length - 1;
     num = -1;
     if (0 <= diff) {
-      num = diff;
-      while (value[diff].turn_id !== turnId) {
-        diff = diff - 1;
-        num = -1;
-        if (0 > diff) {
+      while (true) {
+        let tmp3 = arr3[diff];
+        let tmp4 = tmp3.turn_id === activeTurnId;
+        if (!tmp4) {
+          let _HermesInternal = HermesInternal;
+          tmp4 = tmp3.id === "" + c32 + activeTurnId;
+        }
+        num = diff;
+        if (tmp4) {
           break;
+        } else {
+          diff = diff - 1;
+          num = -1;
+          if (0 > diff) {
+            break;
+          }
         }
       }
     }
@@ -190,18 +212,18 @@ function resolveTurnIndex(value, turnId) {
   if (-1 !== num) {
     return num;
   } else {
-    let diff1 = value.length - 1;
+    let diff1 = arr3.length - 1;
     if (0 <= diff1) {
       while (true) {
-        let tmp3 = value[diff1];
-        if ("assistant" === tmp3.role) {
-          let someResult = true === tmp3.finished || true === tmp3.continued || "" !== tmp3.content || null != tmp3.proposal || null != tmp3.clarification || null != tmp3.intake;
+        let tmp7 = arr3[diff1];
+        if ("assistant" === tmp7.role) {
+          let someResult = true === tmp7.finished || true === tmp7.continued || "" !== tmp7.content || null != tmp7.proposal || null != tmp7.clarification || null != tmp7.intake;
           if (!someResult) {
-            let steps = tmp3.steps;
+            let steps = tmp7.steps;
             someResult = steps.some((kind) => set.has(kind.kind));
           }
           if (!someResult) {
-            if (null == tmp3.turn_id) {
+            if (null == tmp7.turn_id) {
               break;
             }
           }
@@ -211,6 +233,48 @@ function resolveTurnIndex(value, turnId) {
       return diff1;
     }
     return -1;
+  }
+}
+function patchTurn(projectId, turnId, fn) {
+  value = map.get(projectId);
+  if (null != value) {
+    const tmp22 = resolveTurnIndex(value, turnId);
+    if (-1 !== tmp22) {
+      let tmp7 = tmp6;
+      if (null != turnId) {
+        tmp7 = tmp6;
+        if (null == tmp6.turn_id) {
+          let tmp8 = tmp6.turn_id === turnId;
+          if (!tmp8) {
+            const _HermesInternal = HermesInternal;
+            tmp8 = tmp6.id === "" + c32 + turnId;
+          }
+          tmp7 = tmp6;
+          if (!tmp8) {
+            const obj2 = {};
+            const merged = Object.assign(tmp6);
+            obj2.turn_id = turnId;
+            tmp7 = obj2;
+          }
+        }
+      }
+      const items = [];
+      const arraySpreadResult = HermesBuiltin.arraySpread(value.slice(0, tmp22), 0);
+      items[arraySpreadResult] = fn(tmp7);
+      HermesBuiltin.arraySpread(value.slice(tmp22 + 1), arraySpreadResult + 1);
+      const result = map.set(projectId, items);
+    } else {
+      const items1 = [];
+      if (null != turnId) {
+        const obj3 = { turnId };
+        let obj4 = obj3;
+      } else {
+        obj4 = {};
+      }
+      items1[HermesBuiltin.arraySpread(value, 0)] = fn(newMessage("assistant", "", obj4));
+      const result1 = map.set(projectId, items1);
+      const arraySpreadResult4 = HermesBuiltin.arraySpread(value, 0);
+    }
   }
 }
 function hasOpenTurn(map) {
@@ -261,6 +325,66 @@ function hasOpenTurn(map) {
     return false;
   }
 }
+function notifyTurn(projectId, guildId, title, body, nonce) {
+  if (null != nonce) {
+    let num = map5.get(projectId);
+    if (num == null) {
+      num = 0;
+    }
+    if (nonce > num) {
+      const result = map5.set(projectId, nonce);
+    }
+  }
+  let result2 = VibegrationsPlatformUtilsDefault.areTurnNotificationsDisabled();
+  if (!result2) {
+    result2 = SelfPresenceStore.getStatus() === constants.DND;
+  }
+  if (!result2) {
+    const FocusMode = UserSettings.FocusMode;
+    result2 = FocusMode.getSetting();
+  }
+  if (!result2) {
+    result2 = FamilyCenterStore.isCurrentUserInRestrictedHours();
+  }
+  if (!result2) {
+    if (!obj3.isVibegrationsProjectMuted(UserSettingsProtoStore.settings, projectId)) {
+      const isSoundDisabledResult = NotificationSettingsStore.isSoundDisabled("message1");
+      guildId = SelectedGuildStore.getGuildId();
+      if (null != guildId) {
+        if (VibegrationsProjectStore.getSelectedProjectId(guildId) === projectId) {
+          if (SelectedChannelStore.getChannelId() === StaticChannelRoute.VIBEGRATIONS) {
+            if (tmpResult.isWindowFocused()) {
+              if (!isSoundDisabledResult) {
+                SoundUtils.playSound(bit_message1, 0.4);
+                const tmp8Result = SoundUtils;
+              }
+            }
+            tmpResult = VibegrationsPlatformUtilsDefault;
+          }
+        }
+      }
+      let vibegrationsWorkspaceGuildId = guildId;
+      if (guildId == null) {
+        vibegrationsWorkspaceGuildId = VibegrationsUtils.resolveVibegrationsWorkspaceGuildId("VibegrationsChatStore");
+        const tmp8Result2 = VibegrationsUtils;
+      }
+      const obj4 = { projectId, guildId: vibegrationsWorkspaceGuildId, title, body, route: null, sound: null, volume: 0.4 };
+      let CHANNELResult = null;
+      if (null != vibegrationsWorkspaceGuildId) {
+        CHANNELResult = closure_1_15.CHANNEL(vibegrationsWorkspaceGuildId, StaticChannelRoute.VIBEGRATIONS, projectId);
+      }
+      obj4.route = CHANNELResult;
+      let tmp24;
+      if (!isSoundDisabledResult) {
+        tmp24 = bit_message1;
+      }
+      obj4.sound = tmp24;
+      const result1 = VibegrationsPlatformUtilsDefault.presentTurnNotification(obj4);
+      const tmpResult2 = VibegrationsPlatformUtilsDefault;
+    }
+    obj3 = vibegrationsProjectMute;
+  }
+}
 function recordThinkingTransition(projectId) {
   let flag = map2.get(projectId);
   if (flag == null) {
@@ -269,11 +393,11 @@ function recordThinkingTransition(projectId) {
   const tmp = hasOpenTurn(map.get(projectId));
   if (flag !== tmp) {
     const result = map2.set(projectId, tmp);
-    const index = closure_22.indexOf(projectId);
+    const index = closure_23.indexOf(projectId);
     if (-1 !== index) {
-      closure_22.splice(index, 1);
+      closure_23.splice(index, 1);
     }
-    closure_22.unshift(projectId);
+    closure_23.unshift(projectId);
     if (tmp) {
       map1.delete(projectId);
     } else {
@@ -362,15 +486,15 @@ function recordThinkingTransition(projectId) {
 }
 function purgeProject(projectId) {
   let deleteResult = map.delete(projectId);
-  const deleteResult1 = map5.delete(projectId);
+  const deleteResult1 = map6.delete(projectId);
   const deleteResult2 = set2.delete(projectId);
   const deleteResult3 = map1.delete(projectId);
   const deleteResult4 = map2.delete(projectId);
   const deleteResult5 = map3.delete(projectId);
   const deleteResult6 = map4.delete(projectId);
-  const index = closure_22.indexOf(projectId);
+  const index = closure_23.indexOf(projectId);
   if (-1 !== index) {
-    closure_22.splice(index, 1);
+    closure_23.splice(index, 1);
   }
   if (!deleteResult) {
     deleteResult = deleteResult1;
@@ -397,6 +521,56 @@ function purgeProject(projectId) {
     deleteResult = tmp10;
   }
   return deleteResult;
+}
+function applyAgentReactions(items) {
+  map = new Map();
+  const iter = items[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    if ("assistant" === nextResult.role) {
+      let steps = tmp2.steps;
+      for (const item10022 of steps) {
+        let tmp5 = "reaction" === item10022.kind;
+        if (tmp5) {
+          tmp5 = null != item10022.message_id;
+        }
+        if (tmp5) {
+          tmp5 = null != item10022.emoji;
+        }
+        if (tmp5) {
+          tmp5 = "" !== item10022.emoji;
+        }
+        if (tmp5) {
+          let result = map.set(item10022.message_id, item10022.emoji);
+        }
+        continue;
+      }
+    }
+    continue;
+  }
+  let mapped = items;
+  if (0 !== map.size) {
+    mapped = items.map((role) => {
+      value = undefined;
+      if ("user" === role.role) {
+        if (null != role.id) {
+          value = map.get(role.id);
+        }
+      }
+      let tmp4 = role;
+      if (null != value) {
+        tmp4 = role;
+        if (role.agentReaction !== value) {
+          const obj = {};
+          const merged = Object.assign(role);
+          obj.agentReaction = value;
+          tmp4 = obj;
+        }
+      }
+      return tmp4;
+    });
+  }
+  return mapped;
 }
 function openTimeline() {
   let items = steps;
@@ -430,36 +604,36 @@ function openTimeline() {
   obj.steps = items1;
   return obj;
 }
-function pushStep(todosAt, step) {
-  if (null == step.turn_seq) {
-    if ("todos" === step.kind) {
-      if (null == step.task_id) {
+function pushStep(todosAt, turn_seq) {
+  if (null == turn_seq.turn_seq) {
+    if ("todos" === turn_seq.kind) {
+      if (null == turn_seq.task_id) {
         if (-1 === todosAt.todosAt) {
           todosAt.todosAt = todosAt.steps.length;
           const steps = todosAt.steps;
-          steps.push(step);
-          if (null != step.turn_seq) {
+          steps.push(turn_seq);
+          if (null != turn_seq.turn_seq) {
             const seenSeq4 = todosAt.seenSeq;
-            seenSeq4.add(step.turn_seq);
+            seenSeq4.add(turn_seq.turn_seq);
           }
         } else {
           if (null != todosAt.steps[todosAt.todosAt].turn_seq) {
             const seenSeq2 = todosAt.seenSeq;
             seenSeq2.delete(tmp.turn_seq);
           }
-          todosAt.steps[todosAt.todosAt] = step;
-          if (null != step.turn_seq) {
+          todosAt.steps[todosAt.todosAt] = turn_seq;
+          if (null != turn_seq.turn_seq) {
             const seenSeq3 = todosAt.seenSeq;
-            seenSeq3.add(step.turn_seq);
+            seenSeq3.add(turn_seq.turn_seq);
           }
         }
       }
     }
     const steps1 = todosAt.steps;
-    steps1.push(step);
-    if (null != step.turn_seq) {
+    steps1.push(turn_seq);
+    if (null != turn_seq.turn_seq) {
       const seenSeq5 = todosAt.seenSeq;
-      seenSeq5.add(step.turn_seq);
+      seenSeq5.add(turn_seq.turn_seq);
     }
   } else {
     const seenSeq = todosAt.seenSeq;
@@ -510,33 +684,34 @@ function stoppable(role) {
 let closure_3 = ["disposition"];
 let closure_4 = ["disposition"];
 let closure_5 = ["disposition"];
-const Constants = fn(1074);
-({ Routes: closure_14, StatusTypes: closure_15 } = Constants);
-const StaticChannelRoute = fn(2051).StaticChannelRoute;
+const Constants = fn(1085);
+({ Routes: closure_15, StatusTypes: closure_16 } = Constants);
+const StaticChannelRoute = fn(2058).StaticChannelRoute;
 const bit_message1 = "bit_message1";
 let set = new Set(["reply", "plan_proposed", "terminal_error"]);
-const map = new Map();
+let map = new Map();
 const map1 = new Map();
 const map2 = new Map();
-let closure_22 = [];
+let closure_23 = [];
 const map3 = new Map();
 const map4 = new Map();
 const set1 = new Set();
+const map5 = new Map();
 let width = 0;
-let closure_27 = [];
-let c28 = 0;
-let c30 = "turn:";
+let closure_29 = [];
+let c30 = 0;
+let c32 = "turn:";
 const Store = initializeDefault.Store;
 class VibegrationsChatStore extends Store {
 }
 const prototype = VibegrationsChatStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(FamilyCenterStore, NotificationSettingsStore, SelectedChannelStore, SelectedGuildStore, SelfPresenceStore, VibegrationsProjectStore);
+  this.waitFor(FamilyCenterStore, NotificationSettingsStore, SelectedChannelStore, SelectedGuildStore, SelfPresenceStore, UserSettingsProtoStore, VibegrationsProjectStore);
 };
 prototype["getMessages"] = function getMessages(arg0) {
   value = map.get(arg0);
   if (value == null) {
-    value = closure_27;
+    value = closure_29;
   }
   return value;
 };
@@ -551,11 +726,11 @@ prototype["hasPendingSettingsRequest"] = function hasPendingSettingsRequest(arg0
   }
   return tmp2;
 };
-prototype["isThinking"] = function isThinking(id) {
-  return hasOpenTurn(map.get(id));
+prototype["isThinking"] = function isThinking(projectId) {
+  return hasOpenTurn(map.get(projectId));
 };
 prototype["hasLoadedHistory"] = function hasLoadedHistory(projectId) {
-  return map5.has(projectId);
+  return map6.has(projectId);
 };
 prototype["isHistoryUnavailable"] = function isHistoryUnavailable(projectId) {
   return set2.has(projectId);
@@ -592,7 +767,7 @@ prototype["getSidebarWidth"] = function getSidebarWidth() {
   return width;
 };
 prototype["getActivityOrderedProjectIds"] = function getActivityOrderedProjectIds() {
-  return closure_22.slice();
+  return closure_23.slice();
 };
 prototype["isAnyThinking"] = function isAnyThinking() {
   const self = this;
@@ -606,19 +781,20 @@ prototype["isAnyThinking"] = function isAnyThinking() {
   }
   return false;
 };
-const map5 = new Map();
+const map6 = new Map();
 const set2 = new Set();
 const vibegrationsChatStore = new VibegrationsChatStore(DispatcherDefault, {
   LOGOUT: function handleLogout() {
+    map5.clear();
     if (0 === map.size) {
       if (0 === map1.size) {
         if (0 === map2.size) {
           if (0 === map3.size) {
             if (0 === map4.size) {
               if (0 === set1.size) {
-                if (0 === map5.size) {
+                if (0 === map6.size) {
                   if (0 === set2.size) {
-                    if (0 === closure_22.length) {
+                    if (0 === closure_23.length) {
                       if (0 === width) {
                         return false;
                       }
@@ -637,9 +813,9 @@ const vibegrationsChatStore = new VibegrationsChatStore(DispatcherDefault, {
     map3.clear();
     map4.clear();
     set1.clear();
-    map5.clear();
+    map6.clear();
     set2.clear();
-    closure_22.length = 0;
+    closure_23.length = 0;
     width = 0;
   },
   VIBEGRATIONS_CHAT_HISTORY_SET: function handleChatHistorySet(degraded) {
@@ -647,7 +823,7 @@ const vibegrationsChatStore = new VibegrationsChatStore(DispatcherDefault, {
     if (cursor == null) {
       cursor = null;
     }
-    const result = map5.set(projectId, cursor);
+    const result = map6.set(projectId, cursor);
     if (true === degraded.degraded) {
       set2.add(projectId);
     } else {
@@ -669,13 +845,13 @@ const vibegrationsChatStore = new VibegrationsChatStore(DispatcherDefault, {
       }
       return tmp;
     });
-    const result1 = map.set(projectId, found.map(newMessageFromHistory));
+    const result1 = map.set(projectId, applyAgentReactions(found.map(newMessageFromHistory)));
     recordThinkingTransition(projectId);
   },
   VIBEGRATIONS_CHAT_HISTORY_PREPEND: function handleChatHistoryPrepend(cursor) {
     ({ projectId, entries } = cursor);
     set = undefined;
-    const result = map5.set(projectId, cursor.cursor);
+    const result = map6.set(projectId, cursor.cursor);
     if (0 !== entries.length) {
       let items1 = map.get(projectId);
       if (items1 == null) {
@@ -699,7 +875,7 @@ const vibegrationsChatStore = new VibegrationsChatStore(DispatcherDefault, {
         }
         return tmp;
       }), 0));
-      const result1 = map.set(projectId, items);
+      const result1 = map.set(projectId, applyAgentReactions(items));
     }
   },
   VIBEGRATIONS_CHAT_MESSAGE_APPEND: function handleChatMessageAppend(optimisticId) {
@@ -766,51 +942,61 @@ const vibegrationsChatStore = new VibegrationsChatStore(DispatcherDefault, {
             let diff = arr3.length - 1;
             num5 = -1;
             if (0 <= diff) {
-              num5 = diff;
-              while (arr3[diff].turn_id !== activeTurnId) {
-                diff = diff - 1;
-                num5 = -1;
-                if (0 > diff) {
+              while (true) {
+                let tmp10 = arr3[diff];
+                let tmp11 = tmp10.turn_id === activeTurnId;
+                if (!tmp11) {
+                  let _HermesInternal = HermesInternal;
+                  tmp11 = tmp10.id === "" + c32 + activeTurnId;
+                }
+                num5 = diff;
+                if (tmp11) {
                   break;
+                } else {
+                  diff = diff - 1;
+                  num5 = -1;
+                  if (0 > diff) {
+                    break;
+                  }
                 }
               }
             }
           }
           num4 = num5;
         }
-        let tmp10 = num4;
+        let tmp14 = num4;
         let arr4 = arr3;
         if ("steered" === disposition) {
-          tmp10 = num4;
+          tmp14 = num4;
           arr4 = arr3;
           if (-1 === num4) {
-            tmp10 = num4;
+            tmp14 = num4;
             arr4 = arr3;
             if (null != activeTurnId) {
-              const tmp35 = resolveTurnIndex(arr3, activeTurnId);
-              tmp10 = num4;
+              const tmp39 = resolveTurnIndex(arr3, activeTurnId);
+              tmp14 = num4;
               arr4 = arr3;
-              if (-1 !== tmp35) {
-                tmp10 = num4;
+              if (-1 !== tmp39) {
+                tmp14 = num4;
                 arr4 = arr3;
-                if (tmp35 < findIndexResult) {
+                if (tmp39 < findIndexResult) {
                   const obj3 = {};
-                  const merged1 = Object.assign(arr3[tmp35]);
+                  const merged1 = Object.assign(arr3[tmp39]);
                   obj3.turn_id = activeTurnId;
                   if (0 === obj3.steps.length) {
                     const items1 = [];
-                    const arraySpreadResult12 = HermesBuiltin.arraySpread(arr3.slice(tmp35 + 1, findIndexResult + 1), HermesBuiltin.arraySpread(arr3.slice(0, tmp35), 0));
+                    const arraySpreadResult12 = HermesBuiltin.arraySpread(arr3.slice(tmp39 + 1, findIndexResult + 1), HermesBuiltin.arraySpread(arr3.slice(0, tmp39), 0));
                     items1[arraySpreadResult12] = obj3;
                     HermesBuiltin.arraySpread(arr3.slice(findIndexResult + 1), arraySpreadResult12 + 1);
                     const result = map.set(projectId, items1);
                     recordThinkingTransition(projectId);
-                    const arraySpreadResult11 = HermesBuiltin.arraySpread(arr3.slice(0, tmp35), 0);
+                    const arraySpreadResult11 = HermesBuiltin.arraySpread(arr3.slice(0, tmp39), 0);
                   } else {
                     const items2 = [];
-                    const arraySpreadResult14 = HermesBuiltin.arraySpread(arr3.slice(0, tmp35), 0);
+                    const arraySpreadResult14 = HermesBuiltin.arraySpread(arr3.slice(0, tmp39), 0);
                     items2[arraySpreadResult14] = obj3;
-                    HermesBuiltin.arraySpread(arr3.slice(tmp35 + 1), arraySpreadResult14 + 1);
-                    tmp10 = tmp35;
+                    HermesBuiltin.arraySpread(arr3.slice(tmp39 + 1), arraySpreadResult14 + 1);
+                    tmp14 = tmp39;
                     arr4 = items2;
                   }
                 }
@@ -818,21 +1004,21 @@ const vibegrationsChatStore = new VibegrationsChatStore(DispatcherDefault, {
             }
           }
         }
-        if (-1 !== tmp10) {
-          if (tmp10 <= findIndexResult) {
+        if (-1 !== tmp14) {
+          if (tmp14 <= findIndexResult) {
             const items3 = [, ];
-            const arraySpreadResult16 = HermesBuiltin.arraySpread(arr4.slice(0, tmp10), 0);
+            const arraySpreadResult16 = HermesBuiltin.arraySpread(arr4.slice(0, tmp14), 0);
             const obj4 = {};
-            const merged2 = Object.assign(arr4[tmp10]);
+            const merged2 = Object.assign(arr4[tmp14]);
             obj4.continued = true;
-            let finished_at = arr4[tmp10].finished_at;
+            let finished_at = arr4[tmp14].finished_at;
             if (finished_at == null) {
               const _Date = Date;
               finished_at = Date.now();
             }
             obj4.finished_at = finished_at;
             items3[arraySpreadResult16] = obj4;
-            const arraySpreadResult17 = HermesBuiltin.arraySpread(arr4.slice(tmp10 + 1, findIndexResult + 1), arraySpreadResult16 + 1);
+            const arraySpreadResult17 = HermesBuiltin.arraySpread(arr4.slice(tmp14 + 1, findIndexResult + 1), arraySpreadResult16 + 1);
             const obj5 = { turnId: activeTurnId };
             items3[arraySpreadResult17] = newMessage("assistant", "", obj5);
             HermesBuiltin.arraySpread(arr4.slice(findIndexResult + 1), arraySpreadResult17 + 1);
@@ -845,6 +1031,34 @@ const vibegrationsChatStore = new VibegrationsChatStore(DispatcherDefault, {
         }
         return arr4 !== value;
       }
+    }
+  },
+  VIBEGRATIONS_CHAT_MESSAGE_REACTION: function handleChatMessageReaction(arg0) {
+    ({ projectId, id: require, emoji } = arg0);
+    value = map.get(projectId);
+    if (null == value) {
+      return false;
+    } else {
+      const findIndexResult = value.findIndex((role) => {
+        let tmp = "user" === role.role;
+        if (tmp) {
+          tmp = role.id === require;
+        }
+        return tmp;
+      });
+      if (-1 !== findIndexResult) {
+        if (value[findIndexResult].agentReaction !== emoji) {
+          const items = [];
+          const arraySpreadResult = HermesBuiltin.arraySpread(value.slice(0, findIndexResult), 0);
+          const obj2 = {};
+          const merged = Object.assign(value[findIndexResult]);
+          obj2.agentReaction = emoji;
+          items[arraySpreadResult] = obj2;
+          HermesBuiltin.arraySpread(value.slice(findIndexResult + 1), arraySpreadResult + 1);
+          const result = map.set(projectId, items);
+        }
+      }
+      return false;
     }
   },
   VIBEGRATIONS_CHAT_SIDE_REPLY: function handleChatSideReply(inReplyTo) {
@@ -898,55 +1112,20 @@ const vibegrationsChatStore = new VibegrationsChatStore(DispatcherDefault, {
       const result = map.set(projectId, items);
     }
   },
-  VIBEGRATIONS_CHAT_STEP_APPEND: function handleChatStepAppend(arg0) {
-    ({ projectId, step, turnId } = arg0);
-    value = map.get(projectId);
-    if (null != value) {
-      const tmp29 = resolveTurnIndex(value, turnId);
-      if (-1 !== tmp29) {
-        let tmp11 = tmp10;
-        if (null != turnId) {
-          tmp11 = tmp10;
-          if (null == tmp10.turn_id) {
-            const obj2 = {};
-            const merged = Object.assign(tmp10);
-            obj2.turn_id = turnId;
-            tmp11 = obj2;
-          }
-        }
-        const items = [];
-        const arraySpreadResult = HermesBuiltin.arraySpread(value.slice(0, tmp29), 0);
-        const obj3 = {};
-        const merged1 = Object.assign(tmp11);
-        const tmp21 = openTimeline(tmp11.steps);
-        pushStep(tmp21, step);
-        obj3.steps = tmp21.steps;
-        items[arraySpreadResult] = obj3;
-        HermesBuiltin.arraySpread(value.slice(tmp29 + 1), arraySpreadResult + 1);
-        const result = map.set(projectId, items);
-      } else {
-        const items1 = [];
-        if (null != turnId) {
-          const obj4 = { turnId };
-          let obj5 = obj4;
-        } else {
-          obj5 = {};
-        }
-        const tmp = newMessage("assistant", "", obj5);
-        const obj6 = {};
-        const merged2 = Object.assign(tmp);
-        const tmp6 = openTimeline(tmp.steps);
-        pushStep(tmp6, step);
-        obj6.steps = tmp6.steps;
-        items1[HermesBuiltin.arraySpread(value, 0)] = obj6;
-        const result1 = map.set(projectId, items1);
-        const arraySpreadResult4 = HermesBuiltin.arraySpread(value, 0);
-      }
-    }
+  VIBEGRATIONS_CHAT_STEP_APPEND: function handleChatStepAppend(turnId) {
+    ({ projectId, step: require } = turnId);
+    patchTurn(projectId, turnId.turnId, (steps) => {
+      const obj = {};
+      const merged = Object.assign(steps);
+      const tmp2 = openTimeline(steps.steps);
+      pushStep(tmp2, require);
+      obj.steps = tmp2.steps;
+      return obj;
+    });
     recordThinkingTransition(projectId);
   },
-  VIBEGRATIONS_CHAT_TURN_FINISHED: function handleChatTurnFinished(arg0) {
-    ({ projectId, summary, turnId } = arg0);
+  VIBEGRATIONS_CHAT_TURN_FINISHED: function handleChatTurnFinished(turnId) {
+    ({ projectId, summary: require } = turnId);
     value = map.get(projectId);
     let someResult = null != value;
     if (someResult) {
@@ -962,68 +1141,23 @@ const vibegrationsChatStore = new VibegrationsChatStore(DispatcherDefault, {
         }
       }));
     }
-    value2 = map.get(projectId);
-    if (null != value2) {
-      let sum = resolveTurnIndex(value2, turnId);
-      if (-1 !== sum) {
-        let tmp10 = tmp9;
-        if (null != turnId) {
-          tmp10 = tmp9;
-          if (null == tmp9.turn_id) {
-            const obj2 = {};
-            const merged = Object.assign(tmp9);
-            obj2.turn_id = turnId;
-            tmp10 = obj2;
-          }
-        }
-        let items = [];
-        const arraySpreadResult = HermesBuiltin.arraySpread(value2.slice(0, sum), 0);
-        let obj3 = {};
-        const merged1 = Object.assign(tmp10);
-        obj3.finished = true;
-        const _Date2 = Date;
-        obj3.finished_at = Date.now();
-        obj3.provisionalTodo = undefined;
-        if ("" !== tmp10.content) {
-          summary = tmp10.content;
-        } else if (summary == null) {
-          summary = "";
-        }
-        obj3.content = summary;
-        items[arraySpreadResult] = obj3;
-        obj3 = value2.slice;
-        sum = sum + 1;
-        HermesBuiltin.arraySpread(obj3(sum), arraySpreadResult + 1);
-        items = map.set(projectId, items);
+    patchTurn(projectId, turnId.turnId, (content) => {
+      const obj = {};
+      const merged = Object.assign(content);
+      obj.finished = true;
+      obj.finished_at = Date.now();
+      obj.provisionalTodo = undefined;
+      if ("" !== content.content) {
+        let str = content.content;
       } else {
-        const items1 = [];
-        if (null != turnId) {
-          const obj4 = { turnId };
-          let obj5 = obj4;
-        } else {
-          obj5 = {};
+        str = require;
+        if (require == null) {
+          str = "";
         }
-        const tmp3 = newMessage("assistant", "", obj5);
-        const obj6 = {};
-        const merged2 = Object.assign(tmp3);
-        obj6.finished = true;
-        const _Date = Date;
-        obj6.finished_at = Date.now();
-        obj6.provisionalTodo = undefined;
-        if ("" !== tmp3.content) {
-          let str3 = tmp3.content;
-        } else {
-          str3 = summary;
-          if (summary == null) {
-            str3 = "";
-          }
-        }
-        obj6.content = str3;
-        items1[HermesBuiltin.arraySpread(value2, 0)] = obj6;
-        const result1 = map.set(projectId, items1);
-        const arraySpreadResult4 = HermesBuiltin.arraySpread(value2, 0);
       }
-    }
+      obj.content = str;
+      return obj;
+    });
     if (!hasOpenTurn(map.get(projectId))) {
       map4.delete(projectId);
       set1.delete(projectId);
@@ -1078,12 +1212,22 @@ const vibegrationsChatStore = new VibegrationsChatStore(DispatcherDefault, {
         let diff = value.length - 1;
         num2 = -1;
         if (0 <= diff) {
-          num2 = diff;
-          while (value[diff].turn_id !== turnId) {
-            diff = diff - 1;
-            num2 = -1;
-            if (0 > diff) {
+          while (true) {
+            let tmp3 = value[diff];
+            let tmp4 = tmp3.turn_id === turnId;
+            if (!tmp4) {
+              let _HermesInternal = HermesInternal;
+              tmp4 = tmp3.id === "" + c32 + turnId;
+            }
+            num2 = diff;
+            if (tmp4) {
               break;
+            } else {
+              diff = diff - 1;
+              num2 = -1;
+              if (0 > diff) {
+                break;
+              }
             }
           }
         }
@@ -1116,15 +1260,19 @@ const vibegrationsChatStore = new VibegrationsChatStore(DispatcherDefault, {
         if ("assistant" === role.role) {
           tmp = role;
           if (role.sourceSha !== importDefault) {
-            if (role.turn_id === require) {
+            let tmp4 = role.turn_id === require;
+            if (!tmp4) {
+              const _HermesInternal = HermesInternal;
+              tmp4 = role.id === "" + c32 + tmp3;
+            }
+            let tmp7 = role;
+            if (tmp4) {
               const obj = {};
               const merged = Object.assign(role);
               obj.sourceSha = tmp2;
-              tmp = obj;
-            } else {
-              const _HermesInternal = HermesInternal;
-              tmp = role;
+              tmp7 = obj;
             }
+            tmp = tmp7;
           }
         }
         return tmp;
@@ -1171,52 +1319,17 @@ const vibegrationsChatStore = new VibegrationsChatStore(DispatcherDefault, {
       return false;
     }
   },
-  VIBEGRATIONS_CHAT_TURN_PATCH: function handleChatTurnPatch(arg0) {
-    ({ projectId, patch, turnId } = arg0);
-    value = map.get(projectId);
-    if (null != value) {
-      const tmp29 = resolveTurnIndex(value, turnId);
-      if (-1 !== tmp29) {
-        let tmp12 = tmp11;
-        if (null != turnId) {
-          tmp12 = tmp11;
-          if (null == tmp11.turn_id) {
-            const obj2 = {};
-            const merged = Object.assign(tmp11);
-            obj2.turn_id = turnId;
-            tmp12 = obj2;
-          }
-        }
-        const items = [];
-        const arraySpreadResult = HermesBuiltin.arraySpread(value.slice(0, tmp29), 0);
-        const obj3 = {};
-        const merged1 = Object.assign(tmp12);
-        const merged2 = Object.assign(patch);
-        if ("todos" in patch) {
-          obj3.provisionalTodo = undefined;
-        }
-        items[arraySpreadResult] = obj3;
-        HermesBuiltin.arraySpread(value.slice(tmp29 + 1), arraySpreadResult + 1);
-        const result = map.set(projectId, items);
-      } else {
-        const items1 = [];
-        if (null != turnId) {
-          const obj4 = { turnId };
-          let obj5 = obj4;
-        } else {
-          obj5 = {};
-        }
-        const obj6 = {};
-        const merged3 = Object.assign(newMessage("assistant", "", obj5));
-        const merged4 = Object.assign(patch);
-        if ("todos" in patch) {
-          obj6.provisionalTodo = undefined;
-        }
-        items1[HermesBuiltin.arraySpread(value, 0)] = obj6;
-        const result1 = map.set(projectId, items1);
-        const arraySpreadResult4 = HermesBuiltin.arraySpread(value, 0);
+  VIBEGRATIONS_CHAT_TURN_PATCH: function handleChatTurnPatch(turnId) {
+    ({ projectId, patch: require } = turnId);
+    patchTurn(projectId, turnId.turnId, (arg0) => {
+      const obj = {};
+      const merged = Object.assign(arg0);
+      const merged1 = Object.assign(require);
+      if ("todos" in require) {
+        obj.provisionalTodo = undefined;
       }
-    }
+      return obj;
+    });
     recordThinkingTransition(projectId);
   },
   VIBEGRATIONS_CHAT_CONN_STATE: function handleChatConnState(arg0) {
@@ -1285,7 +1398,7 @@ const vibegrationsChatStore = new VibegrationsChatStore(DispatcherDefault, {
                 const items = [];
                 const obj2 = { type: "step", kind: "terminal_error", message: null };
                 const intl = util.intl;
-                obj2.message = intl.string(_modDef3714["wjWm+/"]);
+                obj2.message = intl.string(_modDef3723["wjWm+/"]);
                 items[HermesBuiltin.arraySpread(disposition.steps, 0)] = obj2;
                 obj.steps = items;
                 tmp2 = obj;
@@ -1306,10 +1419,10 @@ const vibegrationsChatStore = new VibegrationsChatStore(DispatcherDefault, {
   },
   VIBEGRATIONS_PROJECT_CREATE_SUCCESS: function handleProjectCreateSuccess(project) {
     project = project.project;
-    if (map5.has(project.id)) {
+    if (map6.has(project.id)) {
       return false;
     } else {
-      const result = map5.set(project.id, null);
+      const result = map6.set(project.id, null);
     }
   },
   VIBEGRATIONS_PROJECT_DELETE_SUCCESS: function handleProjectDeleteSuccess(projectId) {
@@ -1318,7 +1431,7 @@ const vibegrationsChatStore = new VibegrationsChatStore(DispatcherDefault, {
     }
   },
   VIBEGRATIONS_PROJECTS_FETCH_SUCCESS: function handleProjectsFetchSuccess() {
-    const items = [...map.keys(), ...map5.keys(), ...map1.keys(), ...map2.keys(), ...map3.keys()];
+    const items = [...map.keys(), ...map6.keys(), ...map1.keys(), ...map2.keys(), ...map3.keys()];
     let flag = false;
     const iter = new Set(items)[Symbol.iterator]();
     const nextResult = iter.next();
@@ -1335,55 +1448,24 @@ const vibegrationsChatStore = new VibegrationsChatStore(DispatcherDefault, {
     }
     return flag ? undefined : false;
   },
-  VIBEGRATIONS_TURN_SETTLED: function handleVibegrationsTurnSettled(arg0) {
-    ({ projectId, guildId } = arg0);
-    ({ title, body } = arg0);
-    let result1 = VibegrationsPlatformUtilsDefault.areTurnNotificationsDisabled();
-    if (!result1) {
-      result1 = SelfPresenceStore.getStatus() === constants.DND;
-    }
-    if (!result1) {
-      const FocusMode = UserSettings.FocusMode;
-      result1 = FocusMode.getSetting();
-    }
-    if (!result1) {
-      result1 = FamilyCenterStore.isCurrentUserInRestrictedHours();
-    }
-    if (result1) {
-      return false;
-    } else {
-      const isSoundDisabledResult = NotificationSettingsStore.isSoundDisabled("message1");
-      const guildId1 = SelectedGuildStore.getGuildId();
-      if (null != guildId1) {
-        if (VibegrationsProjectStore.getSelectedProjectId(guildId1) === projectId) {
-          if (SelectedChannelStore.getChannelId() === StaticChannelRoute.VIBEGRATIONS) {
-            if (tmpResult.isWindowFocused()) {
-              if (!isSoundDisabledResult) {
-                SoundUtils.playSound(bit_message1, 0.4);
-              }
-              return false;
-            }
-            tmpResult = VibegrationsPlatformUtilsDefault;
-          }
-        }
+  VIBEGRATIONS_TURN_SETTLED: function handleVibegrationsTurnSettled(projectId) {
+    notifyTurn(projectId.projectId, projectId.guildId, projectId.title, projectId.body, projectId.nonce);
+    return false;
+  },
+  VIBEGRATIONS_TURN_NOTIFICATION: function handleVibegrationsTurnNotification(arg0) {
+    ({ projectId, body, nonce } = arg0);
+    const project = VibegrationsProjectStore.getProject(projectId);
+    if (null != project) {
+      let guild_id = project.guild_id;
+      if (guild_id == null) {
+        guild_id = project.preview_guild_id;
       }
-      if (guildId == null) {
-        guildId = VibegrationsUtils.resolveVibegrationsWorkspaceGuildId("VibegrationsChatStore");
+      if (guild_id == null) {
+        guild_id = null;
       }
-      const obj2 = { projectId, guildId, title, body, route: null, sound: null, volume: 0.4 };
-      let CHANNELResult = null;
-      if (null != guildId) {
-        CHANNELResult = closure_1_14.CHANNEL(guildId, StaticChannelRoute.VIBEGRATIONS, projectId);
-      }
-      obj2.route = CHANNELResult;
-      let tmp21;
-      if (!isSoundDisabledResult) {
-        tmp21 = bit_message1;
-      }
-      obj2.sound = tmp21;
-      const result = VibegrationsPlatformUtilsDefault.presentTurnNotification(obj2);
-      return false;
+      notifyTurn(projectId, guild_id, project.name, body, nonce);
     }
+    return false;
   }
 });
 const size = fn(2);
@@ -1410,8 +1492,51 @@ export const turnSettled = function turnSettled(finished) {
   }
   return someResult;
 };
+export const isStrandedSegment = function isStrandedSegment(arg0, arg1) {
+  if (arg0[arg1] != null) {
+    const turn_id = tmp.turn_id;
+  }
+  if (null != arg0[arg1]) {
+    if ("assistant" === tmp.role) {
+      if (null != turn_id) {
+        if ("" === tmp.content) {
+          let someResult = true === tmp.finished || true === tmp.continued || "" !== tmp.content || null != tmp.proposal || null != tmp.clarification || null != tmp.intake;
+          if (!someResult) {
+            const steps = tmp.steps;
+            someResult = steps.some((kind) => set.has(kind.kind));
+          }
+          if (!someResult) {
+            let diff = arg1 - 1;
+            if (0 <= diff) {
+              while ("user" !== arg0[diff].role) {
+                let tmp8 = tmp5.turn_id === turn_id;
+                if (!tmp8) {
+                  let _HermesInternal = HermesInternal;
+                  tmp8 = tmp5.id === "" + c32 + turn_id;
+                }
+                if (tmp8) {
+                  let someResult1 = true === tmp5.finished || true === tmp5.continued || "" !== tmp5.content || null != tmp5.proposal || null != tmp5.clarification || null != tmp5.intake;
+                  if (!someResult1) {
+                    let steps2 = tmp5.steps;
+                    someResult1 = steps2.some((kind) => set.has(kind.kind));
+                  }
+                  return someResult1;
+                } else {
+                  diff = diff - 1;
+                }
+              }
+              return false;
+            }
+            return false;
+          }
+        }
+      }
+    }
+  }
+  return false;
+};
 export const getOlderHistoryCursor = function getOlderHistoryCursor(projectId) {
-  value = map5.get(projectId);
+  value = map6.get(projectId);
   if (value == null) {
     value = null;
   }

@@ -1,6 +1,6 @@
-// === Module 8212: NativeAppAttestModule ===
+// === Module 8253: NativeAppAttestModule ===
 
-// Module 8212 (NativeAppAttestModule)
+// Module 8253 (NativeAppAttestModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

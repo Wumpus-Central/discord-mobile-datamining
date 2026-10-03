@@ -1,8 +1,8 @@
-// === Module 12366: WelcomeScreenActionCreators ===
+// === Module 12451: WelcomeScreenActionCreators ===
 
-// Module 12366 (WelcomeScreenActionCreators)
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import HTTPUtils from "HTTPUtils" /* 1271 */;
+// Module 12451 (WelcomeScreenActionCreators)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -13,7 +13,7 @@ let closure_5 = async function _fetchWelcomeScreen() {
   const HTTP = HTTPUtils.HTTP;
   await HTTP.get({ url: Endpoints.GUILD_WELCOME_SCREEN(closure_0), oldFormErrors: true, rejectWithError: true });
   closure_130_1(closure_130_2[2]).dispatch({ type: "WELCOME_SCREEN_FETCH_FAIL" });
-  await "HermesInternal";
+  await "IconComponent";
   closure_129_1 = value;
   closure_130_1(closure_130_2[2]).dispatch({ type: "WELCOME_SCREEN_FETCH_SUCCESS", guildId: closure_129_0, welcomeScreen: closure_129_1.body });
   return closure_129_1.body;
@@ -42,7 +42,7 @@ let closure_6 = async function _saveWelcomeScreen(arg0) {
   }
   return value;
 };
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/welcome_screen/WelcomeScreenActionCreators.tsx");
 

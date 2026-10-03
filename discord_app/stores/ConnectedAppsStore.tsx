@@ -1,8 +1,8 @@
-// === Module 6715: ConnectedAppsStore ===
+// === Module 6603: ConnectedAppsStore ===
 
-// Module 6715 (ConnectedAppsStore)
+// Module 6603 (ConnectedAppsStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
 
 const require = globalThis.__r;
 

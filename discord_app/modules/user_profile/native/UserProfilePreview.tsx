@@ -1,11 +1,12 @@
-// === Module 10772: UserProfilePreview ===
+// === Module 10825: UserProfilePreview ===
 
-// Module 10772 (UserProfilePreview)
-import nativeDefault from "native" /* 576 */;
-import scaleProfileFrameDefault from "scaleProfileFrame" /* 7852 */;
+// Module 10825 (UserProfilePreview)
+import nativeDefault from "native" /* 587 */;
+import useDisplayProfileDefault from "useDisplayProfile" /* 7857 */;
+import scaleProfileFrameDefault from "scaleProfileFrame" /* 7896 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 7787 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 7831 */;
 
 const require = globalThis.__r;
 
@@ -14,11 +15,11 @@ function filterLayer(responsive) {
   return true !== responsive.responsive;
 }
 const View = fn(17).View;
-const Constants = fn(6815);
+const Constants = fn(6707);
 ({ PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: closure_7, UserProfileThemeTypes: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let closure_12 = createStyles.createStyles((arg0, arg1, arg2) => {
   let num = arg2;
   if (arg2 == null) {
@@ -35,17 +36,325 @@ let closure_12 = createStyles.createStyles((arg0, arg1, arg2) => {
     tmp4 = importDefault;
   }
   obj2.borderColor = BACKGROUND_SURFACE_HIGH;
-  obj2.borderRadius = tmp4(576).radii.lg;
+  obj2.borderRadius = tmp4(587).radii.lg;
   obj.profileContentContainer = obj2;
   obj.profileInnerContent = { flexGrow: 1 };
-  obj.aboutMeCard = { marginTop: tmp4(576).space.PX_12 };
+  obj.aboutMeCard = { marginTop: tmp4(587).space.PX_12 };
   obj.profileEffect = { zIndex: 1 };
   return obj;
 });
+const ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfilePreview.tsx");
 
-export default function UserProfilePreview(hideFrame) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = guildId(576).c(88);
+  ({ user, displayName, guildId } = arg0);
+  ({ avatarDecorationOverride, profileEffectOverride, profileEffectRestartKey, profileFrameOverride, displayNameStylesOverride, style, compact, hideFrame, additionalBadges } = arg0);
+  let tmp4 = undefined !== compact;
+  ({ accessibilityLabel, maxWidth } = arg0);
+  if (tmp4) {
+    tmp4 = compact;
+  }
+  if (undefined === additionalBadges) {
+    additionalBadges = [];
+  }
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [UserProfileSettingsStore];
+    cResult[0] = items;
+    let first = items;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] !== guildId) {
+    const fn = function v() {
+      return UserProfileSettingsStore.getPendingChanges(guildId);
+    };
+    cResult[1] = guildId;
+    cResult[2] = fn;
+    let tmp8 = fn;
+  } else {
+    tmp8 = cResult[2];
+  }
+  const obj = guildId(576);
+  const stateFromStoresObject = guildId(504).useStateFromStoresObject(first, tmp8);
+  ({ pendingAvatar, pendingBanner, pendingAccentColor, pendingThemeColors, pendingAvatarDecoration, pendingProfileEffect, pendingProfileFrame, pendingDisplayNameStyles, pendingPronouns } = stateFromStoresObject);
+  ({ pendingGlobalName, pendingLegacyUsernameDisabled } = stateFromStoresObject);
+  const tmp11 = useDisplayProfileDefault(user.id, guildId);
+  if (cResult[3] === tmp11) {
+    if (cResult[4] === pendingThemeColors) {
+      if (cResult[5] === user) {
+        let tmp12 = cResult[6];
+      }
+      ({ theme, primaryColor, secondaryColor } = tmp10(7899)(tmp12));
+      const tmp17 = closure_12(tmp4, null != primaryColor, maxWidth);
+      tmp10(7913)();
+      const tmp13 = tmp10(7899)(tmp12);
+      const tmp15 = null != primaryColor;
+      const customStatusActivity = guildId(10826).useCustomStatusActivity();
+      if (cResult[7] === primaryColor) {
+        if (cResult[8] === secondaryColor) {
+          if (cResult[9] === theme) {
+            let tmp21 = cResult[10];
+          }
+          const userProfileColors = guildId(7910).useUserProfileColors(tmp21);
+          ({ avatarBackground, containerBackground, gradientFallbackBackground } = userProfileColors);
+          if (undefined !== avatarDecorationOverride) {
+            pendingAvatarDecoration = avatarDecorationOverride;
+          }
+          if (undefined !== profileEffectOverride) {
+            pendingProfileEffect = profileEffectOverride;
+          }
+          if (undefined !== profileFrameOverride) {
+            pendingProfileFrame = profileFrameOverride;
+          }
+          if (undefined !== displayNameStylesOverride) {
+            pendingDisplayNameStyles = displayNameStylesOverride;
+          }
+          let profileEffect;
+          if (tmp11 != null) {
+            profileEffect = tmp11.profileEffect;
+          }
+          let profileEffect1;
+          if (tmp11 != null) {
+            const _guildMemberProfile = tmp11._guildMemberProfile;
+            if (_guildMemberProfile != null) {
+              profileEffect1 = _guildMemberProfile.profileEffect;
+            }
+          }
+          if (cResult[11] === pendingProfileEffect) {
+            if (cResult[12] === guildId) {
+              if (cResult[13] === profileEffect) {
+                let profileFrame;
+                if (tmp11 != null) {
+                  const _guildMemberProfile2 = tmp11._guildMemberProfile;
+                  if (_guildMemberProfile2 != null) {
+                    profileFrame = _guildMemberProfile2.profileFrame;
+                  }
+                }
+                if (cResult[16] === profileFrame) {
+                  let profileFrame1;
+                  if (tmp11 != null) {
+                    profileFrame1 = tmp11.profileFrame;
+                  }
+                  if (cResult[17] === profileFrame1) {
+                    if (cResult[18] === pendingProfileFrame) {
+                      if (cResult[19] === guildId) {
+                        if (cResult[20] === tmp5) {
+                          let tmp29 = cResult[21];
+                        }
+                        let skuId;
+                        if (tmp29 != null) {
+                          skuId = tmp29.skuId;
+                        }
+                        const tmp10ResultResult = tmp10(7872)(skuId);
+                        if (cResult[22] === pendingAvatar) {
+                          const arr2 = tmp10(7914)(tmp11, pendingLegacyUsernameDisabled);
+                          if (cResult[25] !== arr2) {
+                            const _Symbol = Symbol;
+                            if (cResult[27] === Symbol.for("react.memo_cache_sentinel")) {
+                              class Se {
+                                constructor(arg0) {
+                                  return arg0.id;
+                                }
+                              }
+                              cResult[27] = Se;
+                            } else {
+                              class Se {
+                                constructor(arg0) {
+                                  return arg0.id;
+                                }
+                              }
+                            }
+                            const _Set = Set;
+                            const set = new Set(arr2.map(Se));
+                            cResult[25] = arr2;
+                            cResult[26] = set;
+                          } else {
+                            class Se {
+                              constructor(arg0) {
+                                return arg0.id;
+                              }
+                            }
+                            importDefault = tmp42;
+                            if (cResult[28] !== tmp42) {
+                              class Oe {
+                                constructor(arg0) {
+                                  return !closure_1.has(arg0.id);
+                                }
+                              }
+                              cResult[28] = tmp42;
+                              cResult[29] = Oe;
+                            } else {
+                              class Oe {
+                                constructor(arg0) {
+                                  return !closure_1.has(arg0.id);
+                                }
+                              }
+                            }
+                            const items1 = [];
+                            HermesBuiltin.arraySpread(additionalBadges.filter(Oe), HermesBuiltin.arraySpread(arr2, 0));
+                            const _Symbol2 = Symbol;
+                            if (cResult[30] === Symbol.for("react.memo_cache_sentinel")) {
+                              class Oe {
+                                constructor(arg0) {
+                                  return !closure_1.has(arg0.id);
+                                }
+                              }
+                              cResult[30] = tmp56;
+                            } else {
+                              class Oe {
+                                constructor(arg0) {
+                                  return !closure_1.has(arg0.id);
+                                }
+                              }
+                            }
+                            const arraySpreadResult = HermesBuiltin.arraySpread(arr2, 0);
+                            [tmp60, dependencyMap] = noop.useState(tmp56);
+                            const _Symbol3 = Symbol;
+                            if (cResult[31] === Symbol.for("react.memo_cache_sentinel")) {
+                              class Oe {
+                                constructor(arg0) {
+                                  return !closure_1.has(arg0.id);
+                                }
+                              }
+                              cResult[31] = tmp62;
+                            } else {
+                              class Oe {
+                                constructor(arg0) {
+                                  return !closure_1.has(arg0.id);
+                                }
+                              }
+                            }
+                            if (null == tmp10ResultResult) {
+                              class Oe {
+                                constructor(arg0) {
+                                  return !closure_1.has(arg0.id);
+                                }
+                              }
+                              const items2 = [tmp17.profileContainer, undefined, style];
+                              cResult[39] = undefined;
+                              cResult[40] = style;
+                              cResult[41] = tmp17.profileContainer;
+                              cResult[42] = items2;
+                            } else {
+                              class Oe {
+                                constructor(arg0) {
+                                  return !closure_1.has(arg0.id);
+                                }
+                              }
+                              const tmp64 = tmp10(7896)(tmp10ResultResult, tmp60.width);
+                              cResult[32] = tmp60.width;
+                              cResult[33] = tmp10ResultResult;
+                              cResult[34] = tmp64;
+                            }
+                            const tmp59 = _slicedToArray(noop.useState(tmp56), 2);
+                          }
+                        }
+                        const tmp10Result = tmp10(7872);
+                        const obj2 = { userId: user.id, image: pendingAvatar };
+                        const pendingAvatarSrc = guildId(7840).getPendingAvatarSrc(obj2);
+                        cResult[22] = pendingAvatar;
+                        cResult[23] = user.id;
+                        cResult[24] = pendingAvatarSrc;
+                        const tmpResult7 = guildId(7840);
+                      }
+                    }
+                  }
+                }
+                let profilePreviewValue;
+                if (!tmp5) {
+                  class Oe {
+                    constructor(arg0) {
+                      return !closure_1.has(arg0.id);
+                    }
+                  }
+                  const obj3 = { pendingValue: pendingProfileFrame, userValue: null, guildValue: null, guildId: null };
+                  if (tmp11 != null) {
+                    class Oe {
+                      constructor(arg0) {
+                        return !closure_1.has(arg0.id);
+                      }
+                    }
+                  }
+                  obj3.userValue = undefined;
+                  if (tmp11 != null) {
+                    class Oe {
+                      constructor(arg0) {
+                        return !closure_1.has(arg0.id);
+                      }
+                    }
+                    if (tmp33 != null) {
+                      class Oe {
+                        constructor(arg0) {
+                          return !closure_1.has(arg0.id);
+                        }
+                      }
+                    }
+                  }
+                  obj3.guildValue = undefined;
+                  obj3.guildId = guildId;
+                  profilePreviewValue = obj9.getProfilePreviewValue(obj3);
+                }
+                if (tmp11 != null) {
+                  class Oe {
+                    constructor(arg0) {
+                      return !closure_1.has(arg0.id);
+                    }
+                  }
+                  if (tmp35 != null) {
+                    class Oe {
+                      constructor(arg0) {
+                        return !closure_1.has(arg0.id);
+                      }
+                    }
+                  }
+                }
+                cResult[16] = undefined;
+                if (tmp11 != null) {
+                  class Oe {
+                    constructor(arg0) {
+                      return !closure_1.has(arg0.id);
+                    }
+                  }
+                }
+                cResult[17] = undefined;
+                cResult[18] = pendingProfileFrame;
+                cResult[19] = guildId;
+                cResult[20] = tmp5;
+                cResult[21] = profilePreviewValue;
+                tmp29 = profilePreviewValue;
+              }
+            }
+          }
+          const tmpResult6 = guildId(7910);
+          const obj4 = { pendingValue: pendingProfileEffect, userValue: profileEffect, guildValue: profileEffect1, guildId };
+          const profilePreviewValue1 = guildId(7837).getProfilePreviewValue(obj4);
+          cResult[11] = pendingProfileEffect;
+          cResult[12] = guildId;
+          cResult[13] = profileEffect;
+          cResult[14] = profileEffect1;
+          cResult[15] = profilePreviewValue1;
+          const tmpResult8 = guildId(7837);
+        }
+      }
+      const obj5 = { theme, primaryColor, secondaryColor };
+      cResult[7] = primaryColor;
+      cResult[8] = secondaryColor;
+      cResult[9] = theme;
+      cResult[10] = obj5;
+      tmp21 = obj5;
+      const tmpResult5 = guildId(10826);
+    }
+  }
+  const obj6 = { user, displayProfile: tmp11, pendingThemeColors };
+  cResult[3] = tmp11;
+  cResult[4] = pendingThemeColors;
+  cResult[5] = user;
+  cResult[6] = obj6;
+  tmp12 = obj6;
+  const tmpResult = guildId(504);
+}) : ((hideFrame) => {
   ({ user, displayName, guildId } = hideFrame);
   ({ avatarDecorationOverride, profileEffectOverride, profileEffectRestartKey, profileFrameOverride, displayNameStylesOverride, compact } = hideFrame);
   ({ accessibilityLabel, style } = hideFrame);
@@ -65,19 +374,19 @@ export default function UserProfilePreview(hideFrame) {
   let first;
   noop = undefined;
   const items = [UserProfileSettingsStore];
-  const stateFromStoresObject = guildId(set[8]).useStateFromStoresObject(items, () => UserProfileSettingsStore.getPendingChanges(guildId));
+  const stateFromStoresObject = guildId(set[10]).useStateFromStoresObject(items, () => UserProfileSettingsStore.getPendingChanges(guildId));
   ({ pendingAccentColor, pendingThemeColors, pendingAvatarDecoration, pendingProfileEffect, pendingProfileFrame, pendingDisplayNameStyles, pendingPronouns } = stateFromStoresObject);
   ({ pendingAvatar, pendingBanner, pendingGlobalName, pendingLegacyUsernameDisabled } = stateFromStoresObject);
   const tmp5 = require("useDisplayProfile")(user.id, guildId);
-  let obj = guildId(set[8]);
+  let obj = guildId(set[10]);
   ({ theme, primaryColor, secondaryColor } = require("useProfileTheme")({ user, displayProfile: tmp5, pendingThemeColors }));
   const tmp8 = closure_12(compact, null != primaryColor, maxWidth);
   const tmp9 = require("UserProfileSharedStyles")();
   const tmp6 = require("useProfileTheme")({ user, displayProfile: tmp5, pendingThemeColors });
-  const customStatusActivity = guildId(set[12]).useCustomStatusActivity();
+  const customStatusActivity = guildId(set[14]).useCustomStatusActivity();
   let tmp27Result5 = null != customStatusActivity && !compact;
-  const obj2 = guildId(set[12]);
-  const userProfileColors = guildId(set[13]).useUserProfileColors({ theme, primaryColor, secondaryColor });
+  const obj2 = guildId(set[14]);
+  const userProfileColors = guildId(set[15]).useUserProfileColors({ theme, primaryColor, secondaryColor });
   ({ containerBackground, gradientFallbackBackground, avatarBackground } = userProfileColors);
   if (undefined !== avatarDecorationOverride) {
     pendingAvatarDecoration = avatarDecorationOverride;
@@ -91,7 +400,7 @@ export default function UserProfilePreview(hideFrame) {
   if (undefined !== displayNameStylesOverride) {
     pendingDisplayNameStyles = displayNameStylesOverride;
   }
-  const tmpResult = guildId(set[13]);
+  const tmpResult = guildId(set[15]);
   const obj3 = { pendingValue: pendingProfileEffect, userValue: null, guildValue: null, guildId: null };
   let profileEffect;
   if (tmp5 != null) {
@@ -107,7 +416,7 @@ export default function UserProfilePreview(hideFrame) {
   }
   obj3.guildValue = profileEffect1;
   obj3.guildId = guildId;
-  let str = guildId(set[14]).getProfilePreviewValue(obj3);
+  let str = guildId(set[16]).getProfilePreviewValue(obj3);
   let profilePreviewValue;
   if (!flag) {
     const obj4 = { pendingValue: pendingProfileFrame, userValue: null, guildValue: null, guildId: null };
@@ -125,18 +434,18 @@ export default function UserProfilePreview(hideFrame) {
     }
     obj4.guildValue = profileFrame1;
     obj4.guildId = guildId;
-    profilePreviewValue = guildId(tmp2[14]).getProfilePreviewValue(obj4);
-    const tmpResult5 = guildId(tmp2[14]);
+    profilePreviewValue = guildId(tmp2[16]).getProfilePreviewValue(obj4);
+    const tmpResult5 = guildId(tmp2[16]);
   }
   let skuId1;
-  const tmpResult4 = guildId(set[14]);
+  const tmpResult4 = guildId(set[16]);
   if (profilePreviewValue != null) {
     skuId1 = profilePreviewValue.skuId;
   }
   const tmp4ResultResult = require("useMaybeFetchProfileFrame")(skuId1);
   importDefault = tmp4ResultResult;
   const tmp4Result = require("useMaybeFetchProfileFrame");
-  const pendingAvatarSrc = guildId(set[16]).getPendingAvatarSrc({ userId: user.id, image: pendingAvatar });
+  const pendingAvatarSrc = guildId(set[18]).getPendingAvatarSrc({ userId: user.id, image: pendingAvatar });
   const arr2 = require("useBadges")(tmp5, pendingLegacyUsernameDisabled);
   let str2 = globalThis;
   set = new Set(arr2.map((id) => id.id));
@@ -187,17 +496,17 @@ export default function UserProfilePreview(hideFrame) {
   const obj8 = { importantForAccessibility: "no-hide-descendants", accessibilityElementsHidden: true, style: { flexShrink: 1 }, children: null };
   let tmp27Result = null != tmp4ResultResult;
   if (tmp27Result) {
-    const obj9 = { frame: tmp4ResultResult, filterLayer, profileThemeType: constants.PREVIEW, frameOrder: guildId(tmp2[21]).ProfileFrameLayerOrder.BACK, containerWidth: null, containerHeight: null };
+    const obj9 = { frame: tmp4ResultResult, filterLayer, profileThemeType: constants.PREVIEW, frameOrder: guildId(tmp2[22]).ProfileFrameLayerOrder.BACK, containerWidth: null, containerHeight: null };
     ({ width: obj13.containerWidth, height: obj13.containerHeight } = first);
-    tmp27Result = closure_9(tmp4(tmp2[20]), obj9);
-    const tmp4Result7 = tmp4(tmp2[20]);
+    tmp27Result = closure_9(tmp4(tmp2[21]), obj9);
+    const tmp4Result7 = tmp4(tmp2[21]);
   }
   const items4 = [tmp27Result, , ];
   const obj10 = { onLayout: callback, style: tmp8.profileContentContainer, children: null };
   const obj11 = { user, displayProfile: tmp5, bannerHeight: null, pendingBanner: null, pendingAvatarSrc: null, pendingAccentColor: null, pendingThemeColors: null, disableInteraction: true };
   const obj5 = { userId: user.id, image: pendingAvatar };
-  const tmpResult6 = guildId(set[16]);
-  obj11.bannerHeight = guildId(set[23]).PFX_MOBILE_ACTION_SHEET_BANNER_HEIGHT;
+  const tmpResult6 = guildId(set[18]);
+  obj11.bannerHeight = guildId(set[24]).PFX_MOBILE_ACTION_SHEET_BANNER_HEIGHT;
   obj11.pendingBanner = pendingBanner;
   obj11.pendingAvatarSrc = pendingAvatarSrc;
   let tmp35;
@@ -256,7 +565,7 @@ export default function UserProfilePreview(hideFrame) {
     const obj20 = { backgroundColor: containerBackground };
     items9[2] = obj20;
     obj18.style = items9;
-    tmp27Result6 = closure_9(tmp4(tmp2[28]), obj18);
+    tmp27Result6 = closure_9(tmp4(tmp2[27]), obj18);
   }
   items8[2] = tmp27Result6;
   obj14.children = items8;
@@ -269,16 +578,16 @@ export default function UserProfilePreview(hideFrame) {
     items4[1] = closure_10(View, obj10);
     let tmp27Result7 = null != tmp4ResultResult;
     if (tmp27Result7) {
-      const obj21 = { frame: tmp4ResultResult, filterLayer, profileThemeType: constants.PREVIEW, frameOrder: guildId(tmp2[21]).ProfileFrameLayerOrder.FRONT, containerWidth: null, containerHeight: null };
+      const obj21 = { frame: tmp4ResultResult, filterLayer, profileThemeType: constants.PREVIEW, frameOrder: guildId(tmp2[22]).ProfileFrameLayerOrder.FRONT, containerWidth: null, containerHeight: null };
       ({ width: obj24.containerWidth, height: obj24.containerHeight } = first);
-      tmp27Result7 = closure_9(tmp4(tmp2[20]), obj21);
-      const tmp4Result11 = tmp4(tmp2[20]);
+      tmp27Result7 = closure_9(tmp4(tmp2[21]), obj21);
+      const tmp4Result11 = tmp4(tmp2[21]);
     }
     items4[2] = tmp27Result7;
     obj8.children = items4;
     obj7.children = closure_10(View, obj8);
     obj6.children = closure_9(View, obj7);
-    return closure_9(guildId(tmp2[19]).ThemeContextProvider, obj6);
+    return closure_9(guildId(tmp2[29]).ThemeContextProvider, obj6);
   } else {
     const obj22 = { skuId: str.skuId, style: tmp8.profileEffect };
     if (null != profileEffectRestartKey) {
@@ -288,8 +597,8 @@ export default function UserProfilePreview(hideFrame) {
     } else {
       skuId = `-`.skuId;
     }
-    closure_9(tmp4(tmp2[29]), obj22, skuId);
-    const tmp4Result12 = tmp4(tmp2[29]);
+    closure_9(tmp4(tmp2[28]), obj22, skuId);
+    const tmp4Result12 = tmp4(tmp2[28]);
   }
   const tmp4Result10 = require("UserProfilePrimaryInfo");
-};
+});

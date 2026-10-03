@@ -1,20 +1,20 @@
-// === Module 4993: MediaPostEmbedUtils ===
+// === Module 5038: MediaPostEmbedUtils ===
 
-// Module 4993 (MediaPostEmbedUtils)
-import util from "util" /* 1115 */;
-import FlagUtils from "FlagUtils" /* 1385 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import findCodedLinks from "findCodedLinks" /* 4825 */;
-import MediaPostThumbnailUtils from "MediaPostThumbnailUtils" /* 4994 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4997 */;
-import useChannelName from "useChannelName" /* 4998 */;
-import LinkUtils from "LinkUtils" /* 4999 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import RelationshipStore from "RelationshipStore" /* 4508 */;
-import UserStore from "UserStore" /* 1372 */;
+// Module 5038 (MediaPostEmbedUtils)
+import util from "util" /* 1126 */;
+import FlagUtils from "FlagUtils" /* 1390 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
+import findCodedLinks from "findCodedLinks" /* 4870 */;
+import MediaPostThumbnailUtils from "MediaPostThumbnailUtils" /* 5039 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5042 */;
+import useChannelName from "useChannelName" /* 5043 */;
+import LinkUtils from "LinkUtils" /* 5044 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import RelationshipStore from "RelationshipStore" /* 4519 */;
+import UserStore from "UserStore" /* 1377 */;
 
 require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ GuildFeatures: metroRequire, MessageAttachmentFlags: closure_7 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_channel/MediaPostEmbedUtils.tsx");
@@ -158,7 +158,7 @@ export const getMediaPostEmbedChannelPath = function getMediaPostEmbedChannelPat
   }
 };
 export const canUseMediaPostEmbed = function canUseMediaPostEmbed(guildId, isMediaChannel) {
-  const guild = GuildStore.getGuild(guildId);
+  guild = GuildStore.getGuild(guildId);
   if (null != guild) {
     if (null != isMediaChannel) {
       const features = guild.features;

@@ -1,33 +1,27 @@
-// === Module 13604: AddFriendById ===
+// === Module 13666: AddFriendById ===
 
-// Module 13604 (AddFriendById)
-import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1115 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import ToastUtils from "ToastUtils" /* 4556 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4570 */;
-import Text_Text from "Text/Text" /* 4841 */;
-import TextField from "TextField" /* 6217 */;
-import FriendsUtils from "FriendsUtils" /* 9392 */;
-import FriendRequestMessageExperimentDefault from "FriendRequestMessageExperiment" /* 13605 */;
+// Module 13666 (AddFriendById)
+import c from "c" /* 576 */;
+import nativeDefault from "native" /* 587 */;
+import util from "util" /* 1126 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import ToastUtils from "ToastUtils" /* 4567 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4590 */;
+import Text_Text from "Text/Text" /* 4886 */;
+import TextField from "TextField" /* 6100 */;
+import FriendsUtils from "FriendsUtils" /* 9438 */;
+import FriendRequestMessageExperimentDefault from "FriendRequestMessageExperiment" /* 13667 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-function ErrorMessage(children) {
-  const obj = { variant: "text-xs/medium", color: "text-feedback-critical", style: null, children: children.errorMessage };
-  const items = [, ];
-  ({ inputAccessoryText: arr[0], errorStateText: arr[1] } = closure_12());
-  obj.style = items;
-  return React7(Text_Text.Text, obj);
-}
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Keyboard: metroRequire } = get_ActivityIndicator);
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ PLACEHOLDER_TAG: closure_7, AnalyticEvents: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, alignItems: "center", justifyContent: "center", paddingHorizontal: 16 }, textInputContainer: { alignSelf: "stretch" }, placeholderText: null, inputAccessoryText: null, redesignInputAccessoryText: null, inputHeaderText: null, redesignGrow: null, errorStateText: null, friendMessageContainer: null, messageLabel: null, messageFooterText: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, alignItems: "center", justifyContent: "center", paddingHorizontal: 16 };
 obj.placeholderText = { color: nativeDefault.colors.TEXT_MUTED };
@@ -47,8 +41,43 @@ obj.messageLabel = { marginBottom: nativeDefault.space.PX_4 };
 let obj10 = { marginBottom: nativeDefault.space.PX_4 };
 obj.messageFooterText = { marginTop: nativeDefault.space.PX_4 };
 let closure_12 = createStyles.createStyles(obj);
-const constants2 = { SUCCESS: 0, [0]: "SUCCESS", ERROR: 1, [1]: "ERROR", LOADING: 2, [2]: "LOADING", NONE: 3, [3]: "NONE" };
-const constants3 = { DISCORD_TAG: "DISCORD_TAG", MESSAGE: "MESSAGE" };
+const constants = { SUCCESS: 0, [0]: "SUCCESS", ERROR: 1, [1]: "ERROR", LOADING: 2, [2]: "LOADING", NONE: 3, [3]: "NONE" };
+const constants2 = { DISCORD_TAG: "DISCORD_TAG", MESSAGE: "MESSAGE" };
+let ReactCompilerGating = fn(558);
+let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((errorMessage) => {
+  const cResult = c.c(6);
+  errorMessage = errorMessage.errorMessage;
+  const tmp4 = closure_12();
+  if (cResult[0] === tmp4.errorStateText) {
+    if (cResult[1] === tmp4.inputAccessoryText) {
+      let tmp5 = cResult[2];
+    }
+    if (cResult[3] === errorMessage) {
+      if (cResult[4] === tmp5) {
+        let tmp6 = cResult[5];
+      }
+      return tmp6;
+    }
+    const obj2 = { variant: "text-xs/medium", color: "text-feedback-critical", style: tmp5, children: errorMessage };
+    const tmp8 = options(Text_Text.Text, obj2);
+    cResult[3] = errorMessage;
+    cResult[4] = tmp5;
+    cResult[5] = tmp8;
+    tmp6 = tmp8;
+  }
+  const items = [, ];
+  ({ inputAccessoryText: arr[0], errorStateText: arr[1] } = tmp4);
+  cResult[0] = tmp4.errorStateText;
+  cResult[1] = tmp4.inputAccessoryText;
+  cResult[2] = items;
+  tmp5 = items;
+}) : ((children) => {
+  const obj = { variant: "text-xs/medium", color: "text-feedback-critical", style: null, children: children.errorMessage };
+  const items = [, ];
+  ({ inputAccessoryText: arr[0], errorStateText: arr[1] } = closure_12());
+  obj.style = items;
+  return options(Text_Text.Text, obj);
+});
 let closure_16 = noop.forwardRef((headerTextStyle, ref) => {
   ({ validationState, headerText } = headerTextStyle);
   ({ textState, onChangeText, onSelectionChange, onKeyPress, onSubmitEditing, onFocus, autoFocus } = headerTextStyle);
@@ -59,8 +88,8 @@ let closure_16 = noop.forwardRef((headerTextStyle, ref) => {
   }
   const tmp3 = closure_12();
   let message;
-  if (validationState.status === constants2.ERROR) {
-    if (validationState.field === constants3.DISCORD_TAG) {
+  if (validationState.status === constants.ERROR) {
+    if (validationState.field === constants2.DISCORD_TAG) {
       message = validationState.message;
     }
   }
@@ -70,12 +99,12 @@ let closure_16 = noop.forwardRef((headerTextStyle, ref) => {
   ({ redesignInputAccessoryText: arr[0], inputHeaderText: arr[1] } = tmp3);
   items[2] = headerTextStyle.headerTextStyle;
   obj2.style = items;
-  const items1 = [React7(Text_Text.Text, obj2), , ];
+  const items1 = [options(Text_Text.Text, obj2), , ];
   const obj3 = { ref, value: textState.validatedText, accessibilityLabel: null, accessibilityHint: null, placeholder: null, placeholderTextColor: null, onChange: null, onSelectionChange: null, onKeyPress: null, onSubmitEditing: null, autoCapitalize: "none", returnKeyType: "send", keyboardType: "twitter", autoCorrect: false, blurOnSubmit: true, maxLength: 37, autoFocus: null, onFocus: null, status: null };
   const intl2 = util.intl;
   obj3.accessibilityLabel = intl2.string(util.t.qRaqel);
   let a11yMessage;
-  if (validationState.status === constants2.ERROR) {
+  if (validationState.status === constants.ERROR) {
     a11yMessage = validationState.a11yMessage;
   }
   obj3.accessibilityHint = a11yMessage;
@@ -93,21 +122,513 @@ let closure_16 = noop.forwardRef((headerTextStyle, ref) => {
     str2 = "error";
   }
   obj3.status = str2;
-  items1[1] = React7(TextField.TextField, obj3);
+  items1[1] = options(TextField.TextField, obj3);
   let tmp9Result = null;
   if (null != message) {
     const obj4 = { errorMessage: message };
-    tmp9Result = React7(ErrorMessage, obj4);
+    tmp9Result = options(closure_15, obj4);
   }
   items1[2] = tmp9Result;
   obj.children = items1;
-  return closure_1_10(hasOwnProperty, obj);
+  return v65535(hasOwnProperty, obj);
 });
+ReactCompilerGating = fn(558);
 let obj11 = { marginTop: nativeDefault.space.PX_4 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/AddFriendById.tsx");
 
-export default noop.forwardRef((arg0, ref) => {
+export default noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, ref) => {
+  const cResult = sourcePage(576).c(65);
+  ({ style, onFocus, autoFocusInput, headerText, headerTextStyle, sourcePage } = arg0);
+  let tmp3 = closure_12();
+  importDefault = noop.useRef(0);
+  dependencyMap = noop.useRef("");
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const fn = function c() {
+      const obj = { validatedText: "", hint: null };
+      const intl = sourcePage(1126).intl;
+      obj.hint = intl.string(sourcePage(1126).t["6p7Mhh"]);
+      return obj;
+    };
+    cResult[0] = fn;
+    let first = fn;
+  } else {
+    first = cResult[0];
+  }
+  const tmp6 = first1(noop.useState(first), 2);
+  first1 = tmp6[0];
+  noop = tmp6[1];
+  if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
+    let obj3 = { status: constants.NONE };
+    cResult[1] = obj3;
+    let tmp8 = obj3;
+  } else {
+    tmp8 = cResult[1];
+  }
+  const tmp5Result = first1(noop.useState(tmp8), 2);
+  const first2 = tmp5Result[0];
+  closure_6 = tmp5Result[1];
+  const tmp5Result2 = first1(noop.useState(""), 2);
+  const first3 = tmp5Result2[0];
+  closure_8 = tmp5Result2[1];
+  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+    let obj4 = { location: "AddFriendbyId" };
+    cResult[2] = obj4;
+    let tmp14 = obj4;
+  } else {
+    tmp14 = cResult[2];
+  }
+  let obj = sourcePage(576);
+  const enabled = FriendRequestMessageExperimentDefault.useConfig(tmp14).enabled;
+  if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+    class V {
+      constructor(arg0) {
+        closure_2.current = arg0.nativeEvent.key;
+        return;
+      }
+    }
+    cResult[3] = V;
+  } else {
+    class V {
+      constructor(arg0) {
+        closure_2.current = arg0.nativeEvent.key;
+        return;
+      }
+    }
+  }
+  if (cResult[4] === first2.field) {
+    class V {
+      constructor(arg0) {
+        closure_2.current = arg0.nativeEvent.key;
+        return;
+      }
+    }
+    if (cResult[7] === first2.field) {
+      class V {
+        constructor(arg0) {
+          closure_2.current = arg0.nativeEvent.key;
+          return;
+        }
+      }
+      const _Symbol = Symbol;
+      class J {
+        constructor(arg0) {
+          tmp = closure_8(arg0.replace(/\n/g, ""));
+          tmp3 = closure_5.status === closure_13.ERROR;
+          tmp2 = closure_13;
+          if (tmp3) {
+            tmp4 = closure_14;
+            tmp3 = closure_5.field === closure_14.MESSAGE;
+          }
+          if (tmp3) {
+            tmp5 = closure_6;
+            obj = { status: null };
+            obj.status = tmp2.NONE;
+            tmp6 = closure_6(obj);
+          }
+          return;
+        }
+      }
+      if (tmp18 === Symbol.for("react.memo_cache_sentinel")) {
+        class V {
+          constructor(arg0) {
+            closure_2.current = arg0.nativeEvent.key;
+            return;
+          }
+        }
+        class J {
+          constructor(arg0) {
+            tmp = closure_8(arg0.replace(/\n/g, ""));
+            tmp3 = closure_5.status === closure_13.ERROR;
+            tmp2 = closure_13;
+            if (tmp3) {
+              tmp4 = closure_14;
+              tmp3 = closure_5.field === closure_14.MESSAGE;
+            }
+            if (tmp3) {
+              tmp5 = closure_6;
+              obj = { status: null };
+              obj.status = tmp2.NONE;
+              tmp6 = closure_6(obj);
+            }
+            return;
+          }
+        }
+      } else {
+        class V {
+          constructor(arg0) {
+            closure_2.current = arg0.nativeEvent.key;
+            return;
+          }
+        }
+      }
+      if (cResult[11] === first3) {
+        class V {
+          constructor(arg0) {
+            closure_2.current = arg0.nativeEvent.key;
+            return;
+          }
+        }
+        if (cResult[14] !== sourcePage) {
+          class V {
+            constructor(arg0) {
+              closure_2.current = arg0.nativeEvent.key;
+              return;
+            }
+          }
+          const items = [];
+          class J {
+            constructor(arg0) {
+              tmp = closure_8(arg0.replace(/\n/g, ""));
+              tmp3 = closure_5.status === closure_13.ERROR;
+              tmp2 = closure_13;
+              if (tmp3) {
+                tmp4 = closure_14;
+                tmp3 = closure_5.field === closure_14.MESSAGE;
+              }
+              if (tmp3) {
+                tmp5 = closure_6;
+                obj = { status: null };
+                obj.status = tmp2.NONE;
+                tmp6 = closure_6(obj);
+              }
+              return;
+            }
+          }
+          cResult[14] = sourcePage;
+          cResult[15] = items;
+          cResult[16] = tmp24;
+        } else {
+          class V {
+            constructor(arg0) {
+              closure_2.current = arg0.nativeEvent.key;
+              return;
+            }
+          }
+        }
+        class J {
+          constructor(arg0) {
+            tmp = closure_8(arg0.replace(/\n/g, ""));
+            tmp3 = closure_5.status === closure_13.ERROR;
+            tmp2 = closure_13;
+            if (tmp3) {
+              tmp4 = closure_14;
+              tmp3 = closure_5.field === closure_14.MESSAGE;
+            }
+            if (tmp3) {
+              tmp5 = closure_6;
+              obj = { status: null };
+              obj.status = tmp2.NONE;
+              tmp6 = closure_6(obj);
+            }
+            return;
+          }
+        }
+        if (cResult[17] === first2.a11yMessage) {
+          class V {
+            constructor(arg0) {
+              closure_2.current = arg0.nativeEvent.key;
+              return;
+            }
+          }
+          if (cResult[20] !== first2) {
+            class V {
+              constructor(arg0) {
+                closure_2.current = arg0.nativeEvent.key;
+                return;
+              }
+            }
+            tmp27[0] = first2;
+            class J {
+              constructor(arg0) {
+                tmp = closure_8(arg0.replace(/\n/g, ""));
+                tmp3 = closure_5.status === closure_13.ERROR;
+                tmp2 = closure_13;
+                if (tmp3) {
+                  tmp4 = closure_14;
+                  tmp3 = closure_5.field === closure_14.MESSAGE;
+                }
+                if (tmp3) {
+                  tmp5 = closure_6;
+                  obj = { status: null };
+                  obj.status = tmp2.NONE;
+                  tmp6 = closure_6(obj);
+                }
+                return;
+              }
+            }
+            cResult[20] = first2;
+            cResult[21] = tmp27;
+          } else {
+            class V {
+              constructor(arg0) {
+                closure_2.current = arg0.nativeEvent.key;
+                return;
+              }
+            }
+          }
+          class J {
+            constructor(arg0) {
+              tmp = closure_8(arg0.replace(/\n/g, ""));
+              tmp3 = closure_5.status === closure_13.ERROR;
+              tmp2 = closure_13;
+              if (tmp3) {
+                tmp4 = closure_14;
+                tmp3 = closure_5.field === closure_14.MESSAGE;
+              }
+              if (tmp3) {
+                tmp5 = closure_6;
+                obj = { status: null };
+                obj.status = tmp2.NONE;
+                tmp6 = closure_6(obj);
+              }
+              return;
+            }
+          }
+          if (cResult[22] !== first1.validatedText) {
+            class V {
+              constructor(arg0) {
+                closure_2.current = arg0.nativeEvent.key;
+                return;
+              }
+            }
+            let trimmed = str.trim();
+            class J {
+              constructor(arg0) {
+                tmp = closure_8(arg0.replace(/\n/g, ""));
+                tmp3 = closure_5.status === closure_13.ERROR;
+                tmp2 = closure_13;
+                if (tmp3) {
+                  tmp4 = closure_14;
+                  tmp3 = closure_5.field === closure_14.MESSAGE;
+                }
+                if (tmp3) {
+                  tmp5 = closure_6;
+                  obj = { status: null };
+                  obj.status = tmp2.NONE;
+                  tmp6 = closure_6(obj);
+                }
+                return;
+              }
+            }
+            cResult[22] = first1.validatedText;
+            cResult[23] = trimmed;
+          } else {
+            class V {
+              constructor(arg0) {
+                closure_2.current = arg0.nativeEvent.key;
+                return;
+              }
+            }
+          }
+          if (cResult[24] === style) {
+            class V {
+              constructor(arg0) {
+                closure_2.current = arg0.nativeEvent.key;
+                return;
+              }
+            }
+            class J {
+              constructor(arg0) {
+                tmp = closure_8(arg0.replace(/\n/g, ""));
+                tmp3 = closure_5.status === closure_13.ERROR;
+                tmp2 = closure_13;
+                if (tmp3) {
+                  tmp4 = closure_14;
+                  tmp3 = closure_5.field === closure_14.MESSAGE;
+                }
+                if (tmp3) {
+                  tmp5 = closure_6;
+                  obj = { status: null };
+                  obj.status = tmp2.NONE;
+                  tmp6 = closure_6(obj);
+                }
+                return;
+              }
+            }
+            let obj6 = { textState: first1, onChangeText: tmp16, onSelectionChange: tmp20, onKeyPress: V, onSubmitEditing: tmp21, onFocus, validationState: first2, autoFocus: autoFocusInput, headerText, headerTextStyle, ref };
+            const tmp35 = closure_9(closure_16, obj6);
+            cResult[27] = autoFocusInput;
+            cResult[28] = tmp16;
+            cResult[29] = tmp21;
+            cResult[30] = headerText;
+            cResult[31] = headerTextStyle;
+            cResult[32] = onFocus;
+            cResult[33] = ref;
+            cResult[34] = first1;
+            cResult[35] = first2;
+            cResult[36] = tmp35;
+          }
+          const items1 = [tmp3.container, style];
+          cResult[24] = style;
+          cResult[25] = tmp3.container;
+          cResult[26] = items1;
+        }
+        function re() {
+          let tmp2 = first2.status === constants.ERROR;
+          if (tmp2) {
+            tmp2 = null != first2.a11yMessage;
+          }
+          if (tmp2) {
+            const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
+            AccessibilityAnnouncer.announce(first2.a11yMessage);
+          }
+        }
+        cResult[17] = first2.a11yMessage;
+        cResult[18] = first2.status;
+        cResult[19] = re;
+      }
+      function te() {
+        const trimmed = first1.validatedText.trim();
+        let substr = trimmed;
+        const trimmed1 = first3.trim();
+        if (trimmed.length <= 0) {
+          let obj2 = { status: constants.ERROR, field: constants2.DISCORD_TAG, message: null };
+          let intl = sourcePage(1126).intl;
+          obj2.message = intl.string(sourcePage(1126).t.mxnceg);
+          closure_6(obj2);
+        } else {
+          const hasItem = trimmed.includes("#");
+          let startsWithResult = !hasItem;
+          if (!hasItem) {
+            startsWithResult = trimmed.startsWith("@");
+          }
+          let tmp2 = trimmed;
+          if (startsWithResult) {
+            substr = trimmed.substring(1);
+            tmp2 = substr;
+          }
+          const validateDiscordTagResult = sourcePage(9438).validateDiscordTag(tmp2);
+          if (null != validateDiscordTagResult) {
+            let obj3 = { status: constants.ERROR, field: constants2.DISCORD_TAG, message: validateDiscordTagResult };
+            closure_6(obj3);
+          } else {
+            let obj4 = { status: constants.LOADING };
+            closure_6(obj4);
+            const obj6 = { discordTag: tmp2, context: { location: "Search - Add Friend Search" }, errorUxConfig: sourcePage(9434).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED, note: null };
+            let tmp9;
+            if (trimmed1.length > 0) {
+              tmp9 = trimmed1;
+            }
+            obj6.note = tmp9;
+            const obj5 = ref(9434);
+            ref(9434).sendRequest(obj6).then(() => {
+              const obj = { validatedText: "", hint: null };
+              const intl = util.intl;
+              obj.hint = intl.string(util.t["6p7Mhh"]);
+              closure_4(obj);
+              closure_8("");
+              const obj2 = { status: constants.SUCCESS, message: null };
+              const intl2 = util.intl;
+              obj2.message = intl2.format(util.t.Rtl1Ep, { discordTag: substr });
+              closure_6(obj2);
+              const result = ToastUtils.presentAddedFriendToast();
+              timestampProducer.dismiss();
+            }, (body) => {
+              let note;
+              if (body != null) {
+                body = body.body;
+                if (body != null) {
+                  note = body.note;
+                }
+              }
+              if (null != note) {
+                const obj2 = { status: constants.ERROR, field: constants2.MESSAGE, message: null, a11yMessage: null };
+                const intl = util.intl;
+                obj2.message = intl.string(util.t.ckHwck);
+                const intl2 = util.intl;
+                obj2.a11yMessage = intl2.string(util.t.ckHwck);
+                let obj3 = obj2;
+              } else {
+                obj3 = { status: constants.ERROR, field: constants2.DISCORD_TAG, message: null, a11yMessage: null };
+                let num;
+                if (body != null) {
+                  const body2 = body.body;
+                  if (body2 != null) {
+                    num = body2.code;
+                  }
+                }
+                if (num == null) {
+                  num = -1;
+                }
+                obj3.message = FriendsUtils.humanizeAbortCode(num, substr);
+                let num2;
+                if (body != null) {
+                  const body3 = body.body;
+                  if (body3 != null) {
+                    num2 = body3.code;
+                  }
+                }
+                if (num2 == null) {
+                  num2 = -1;
+                }
+                obj3.a11yMessage = FriendsUtils.humanizeAbortCodeForA11y(num2, substr);
+              }
+              closure_6(obj3);
+            });
+            const sendRequestResult = ref(9434).sendRequest(obj6);
+          }
+          let obj = sourcePage(9438);
+        }
+      }
+      cResult[11] = first3;
+      cResult[12] = first1.validatedText;
+      cResult[13] = te;
+    }
+    class J {
+      constructor(arg0) {
+        tmp = closure_8(arg0.replace(/\n/g, ""));
+        tmp3 = closure_5.status === closure_13.ERROR;
+        tmp2 = closure_13;
+        if (tmp3) {
+          tmp4 = closure_14;
+          tmp3 = closure_5.field === closure_14.MESSAGE;
+        }
+        if (tmp3) {
+          tmp5 = closure_6;
+          obj = { status: null };
+          obj.status = tmp2.NONE;
+          tmp6 = closure_6(obj);
+        }
+        return;
+      }
+    }
+    cResult[7] = first2.field;
+    cResult[8] = first2.status;
+    cResult[9] = J;
+  }
+  const fn2 = function j(validatedText) {
+    if (validatedText.length <= 0) {
+      const obj2 = { validatedText: "", hint: null };
+      const intl = util.intl;
+      obj2.hint = intl.string(util.t["6p7Mhh"]);
+      let obj = obj2;
+    } else {
+      const arr = _slicedToArray(validatedText.split("#"), 2)[1];
+      let str2 = "";
+      if (null != arr) {
+        let num2 = 0;
+        if (null != arr) {
+          num2 = arr.length + 1;
+        }
+        str2 = validatedText + React5.slice(num2);
+      }
+      obj = { validatedText, hint: str2 };
+    }
+    closure_4(obj);
+    let tmp9 = first2.status === constants.ERROR;
+    if (tmp9) {
+      tmp9 = first2.field === constants2.DISCORD_TAG;
+    }
+    if (tmp9) {
+      const obj3 = { status: constants.NONE };
+      closure_6(obj3);
+    }
+  };
+  cResult[4] = first2.field;
+  cResult[5] = first2.status;
+  cResult[6] = fn2;
+}) : ((arg0, ref) => {
   ({ headerTextStyle, sourcePage } = arg0);
   let textState;
   noop = undefined;
@@ -117,8 +638,8 @@ export default noop.forwardRef((arg0, ref) => {
     const trimmed1 = first2.trim();
     if (trimmed.length <= 0) {
       let obj2 = { status: constants.ERROR, field: constants2.DISCORD_TAG, message: null };
-      let intl = sourcePage(1115).intl;
-      obj2.message = intl.string(sourcePage(1115).t.mxnceg);
+      let intl = sourcePage(1126).intl;
+      obj2.message = intl.string(sourcePage(1126).t.mxnceg);
       closure_6(obj2);
     } else {
       const hasItem = trimmed.includes("#");
@@ -131,21 +652,21 @@ export default noop.forwardRef((arg0, ref) => {
         substr = trimmed.substring(1);
         tmp2 = substr;
       }
-      const validateDiscordTagResult = sourcePage(9392).validateDiscordTag(tmp2);
+      const validateDiscordTagResult = sourcePage(9438).validateDiscordTag(tmp2);
       if (null != validateDiscordTagResult) {
         let obj3 = { status: constants.ERROR, field: constants2.DISCORD_TAG, message: validateDiscordTagResult };
         closure_6(obj3);
       } else {
         let obj4 = { status: constants.LOADING };
         closure_6(obj4);
-        const obj6 = { discordTag: tmp2, context: { location: "Search - Add Friend Search" }, errorUxConfig: sourcePage(9388).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED, note: null };
+        const obj6 = { discordTag: tmp2, context: { location: "Search - Add Friend Search" }, errorUxConfig: sourcePage(9434).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED, note: null };
         let tmp9;
         if (trimmed1.length > 0) {
           tmp9 = trimmed1;
         }
         obj6.note = tmp9;
-        const obj5 = ref(9388);
-        ref(9388).sendRequest(obj6).then(() => {
+        const obj5 = ref(9434);
+        ref(9434).sendRequest(obj6).then(() => {
           const obj = { validatedText: "", hint: null };
           const intl = util.intl;
           obj.hint = intl.string(util.t["6p7Mhh"]);
@@ -199,9 +720,9 @@ export default noop.forwardRef((arg0, ref) => {
           }
           closure_6(obj3);
         });
-        const sendRequestResult = ref(9388).sendRequest(obj6);
+        const sendRequestResult = ref(9434).sendRequest(obj6);
       }
-      let obj = sourcePage(9392);
+      let obj = sourcePage(9438);
     }
   }
   ({ style, onFocus, autoFocusInput, headerText } = arg0);
@@ -210,13 +731,13 @@ export default noop.forwardRef((arg0, ref) => {
   dependencyMap = noop.useRef("");
   let tmp2 = textState(noop.useState(() => {
     const obj = { validatedText: "", hint: null };
-    const intl = sourcePage(1115).intl;
-    obj.hint = intl.string(sourcePage(1115).t["6p7Mhh"]);
+    const intl = sourcePage(1126).intl;
+    obj.hint = intl.string(sourcePage(1126).t["6p7Mhh"]);
     return obj;
   }), 2);
   textState = tmp2[0];
   noop = tmp2[1];
-  const tmp5 = textState(noop.useState({ status: constants2.NONE }), 2);
+  const tmp5 = textState(noop.useState({ status: constants.NONE }), 2);
   const first1 = tmp5[0];
   closure_6 = tmp5[1];
   const tmp7 = textState(noop.useState(""), 2);
@@ -266,7 +787,7 @@ export default noop.forwardRef((arg0, ref) => {
     }
   }, items1);
   const effect = noop.useEffect(() => {
-    AnalyticsUtilsDefault.track(constants.FRIEND_ADD_VIEWED, { friend_add_type: "Id", source_page: sourcePage });
+    AnalyticsUtilsDefault.track(closure_2_8.FRIEND_ADD_VIEWED, { friend_add_type: "Id", source_page: sourcePage });
   }, items2);
   const items3 = [first1];
   const effect1 = noop.useEffect(() => {
@@ -313,12 +834,12 @@ export default noop.forwardRef((arg0, ref) => {
     let obj6 = { style: tmp.redesignGrow };
     items6[1] = closure_9(tmp16, obj6);
     const obj7 = { size: "lg", text: null, disabled: null, onPress: null, loading: null, grow: false };
-    const intl3 = sourcePage(1115).intl;
-    obj7.text = intl3.string(sourcePage(1115).t["PMsq/b"]);
+    const intl3 = sourcePage(1126).intl;
+    obj7.text = intl3.string(sourcePage(1126).t["PMsq/b"]);
     obj7.disabled = str.trim().length <= 0;
     obj7.onPress = handleSubmitEditing;
-    obj7.loading = first1.status === constants2.LOADING;
-    items6[2] = closure_9(sourcePage(5465).Button, obj7);
+    obj7.loading = first1.status === constants.LOADING;
+    items6[2] = closure_9(sourcePage(5594).Button, obj7);
     obj5.children = items6;
     return closure_10(closure_11, obj5);
   } else {
@@ -328,31 +849,31 @@ export default noop.forwardRef((arg0, ref) => {
     ({ messageLabel: arr7[0], inputHeaderText: arr7[1] } = tmp);
     items7[2] = headerTextStyle;
     obj9.style = items7;
-    let intl = sourcePage(1115).intl;
-    obj9.children = intl.string(sourcePage(1115).t.Yi6Mpu);
-    const items8 = [closure_9(sourcePage(4841).Text, obj9), , ];
+    let intl = sourcePage(1126).intl;
+    obj9.children = intl.string(sourcePage(1126).t.Yi6Mpu);
+    const items8 = [closure_9(sourcePage(4886).Text, obj9), , ];
     const obj10 = { returnKeyType: "done", submitBehavior: "submit", value: first2, maxLength: 120, onSubmitEditing: handleSubmitEditing, onChange: callback1, status: null };
     let str2;
-    if (first1.field === constants3.MESSAGE) {
-      if (first1.status === constants2.ERROR) {
+    if (first1.field === constants2.MESSAGE) {
+      if (first1.status === constants.ERROR) {
         str2 = "error";
       }
     }
     obj10.status = str2;
-    items8[1] = closure_9(sourcePage(6692).TextArea, obj10);
-    if (first1.status !== constants2.ERROR) {
+    items8[1] = closure_9(sourcePage(6580).TextArea, obj10);
+    if (first1.status !== constants.ERROR) {
       const obj11 = { style: tmp.messageFooterText, variant: "text-xs/medium", color: "text-muted", children: null };
-      let intl2 = sourcePage(1115).intl;
-      obj11.children = intl2.string(sourcePage(1115).t.UtfQNw);
-      let tmp17Result = closure_9(sourcePage(4841).Text, obj11);
+      let intl2 = sourcePage(1126).intl;
+      obj11.children = intl2.string(sourcePage(1126).t.UtfQNw);
+      let tmp17Result = closure_9(sourcePage(4886).Text, obj11);
       items8[2] = tmp17Result;
       obj8.children = items8;
       closure_10(tmp16, obj8);
     }
     const obj12 = { errorMessage: first1.message };
-    tmp17Result = closure_9(ErrorMessage, obj12);
+    tmp17Result = closure_9(closure_15, obj12);
   }
-  let obj = { status: constants2.NONE };
+  let obj = { status: constants.NONE };
   let obj4 = {
     textState,
     onChangeText: callback,
@@ -374,4 +895,4 @@ export default noop.forwardRef((arg0, ref) => {
     ref
   };
   str = textState.validatedText;
-});
+}));

@@ -1,12 +1,12 @@
-// === Module 674: addSentryBreadcrumb ===
+// === Module 685: addSentryBreadcrumb ===
 
-// Module 674 (addSentryBreadcrumb)
-import _modAll675 from "module_675" /* 675 */;
+// Module 685 (addSentryBreadcrumb)
+import _modAll686 from "module_686" /* 686 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/sentry/addSentryBreadcrumb.native.tsx");
 
 export default function addSentryBreadcrumb(category) {
-  const obj = _modAll675;
+  const obj = _modAll686;
   obj.addBreadcrumb({ type: "default", level: "info", category: category.category, message: category.message, data: category.data, timestamp: Date.now() });
 };

@@ -1,11 +1,11 @@
-// === Module 4900: BaseConnectionEvent ===
+// === Module 4945: BaseConnectionEvent ===
 
-// Module 4900 (BaseConnectionEvent)
-import destroy from "destroy" /* 4901 */;
-import BaseConnection from "BaseConnection" /* 4912 */;
-import MediaEngineDummy from "MediaEngineDummy" /* 4972 */;
-import MediaEngineEvent from "MediaEngineEvent" /* 4973 */;
-import Constants from "Constants" /* 4870 */;
+// Module 4945 (BaseConnectionEvent)
+import destroy from "destroy" /* 4946 */;
+import MediaEngineEvent from "MediaEngineEvent" /* 4954 */;
+import BaseConnection from "BaseConnection" /* 4958 */;
+import MediaEngineDummy from "MediaEngineDummy" /* 5018 */;
+import Constants from "Constants" /* 4915 */;
 import size from "module_2" /* 2 */;
 
 const constants = Constants.MediaEngineImplementations;

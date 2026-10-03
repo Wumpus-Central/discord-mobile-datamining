@@ -1,15 +1,15 @@
-// === Module 14884: MobileMuxWrapper ===
+// === Module 14941: MobileMuxWrapper ===
 
-// Module 14884 (MobileMuxWrapper)
+// Module 14941 (MobileMuxWrapper)
 import logger_Logger from "logger/Logger" /* 4 */;
-import MobileCustomMuxIntegration from "MobileCustomMuxIntegration" /* 14885 */;
+import MobileCustomMuxIntegration from "MobileCustomMuxIntegration" /* 14942 */;
 import size from "module_2" /* 2 */;
 
 const logger = new logger_Logger.Logger("MobileMuxWrapper");
 let result = size.fileFinishedImporting("modules/video-qoe/MobileMuxWrapper.tsx");
 class MobileMuxWrapper {
   constructor(arg0) {
-    merged = Object.assign({ muxIntegration: null, seekingEmitted: false, seekTimeout: null });
+    merged = Object.assign({ muxIntegration: null, seekingEmitted: false, seeking: false, seekCompleted: false, rebufferStartedAt: null, seekTimeout: null });
     merged.config = global;
     return merged;
   }
@@ -77,6 +77,7 @@ prototype["onPlay"] = function onPlay() {
   }
 };
 prototype["onPause"] = function onPause() {
+  this.endRebuffer();
   const muxIntegration = this.muxIntegration;
   if (muxIntegration != null) {
     muxIntegration.emitPause();
@@ -94,14 +95,31 @@ prototype["onCanPlay"] = function onCanPlay() {
     muxIntegration.emitCanPlay();
   }
 };
-prototype["onSeek"] = function onSeek() {
+prototype["onSeekStart"] = function onSeekStart() {
   const self = this;
   if (null != this.muxIntegration) {
+    self.rebufferStartedAt = null;
+    self.seeking = true;
+    self.seekCompleted = false;
     if (!self.seekingEmitted) {
-      let muxIntegration = self.muxIntegration;
+      const muxIntegration = self.muxIntegration;
       muxIntegration.emitSeeking();
       self.seekingEmitted = true;
     }
+    if (null != self.seekTimeout) {
+      const _clearTimeout = clearTimeout;
+      clearTimeout(self.seekTimeout);
+      self.seekTimeout = null;
+    }
+  }
+};
+prototype["onSeek"] = function onSeek() {
+  const self = this;
+  if (null != this.muxIntegration) {
+    if (!self.seeking) {
+      self.onSeekStart();
+    }
+    self.seekCompleted = true;
     if (null != self.seekTimeout) {
       const _clearTimeout = clearTimeout;
       clearTimeout(self.seekTimeout);
@@ -118,6 +136,7 @@ prototype["onSeek"] = function onSeek() {
   }
 };
 prototype["onEnd"] = function onEnd() {
+  this.endRebuffer();
   const muxIntegration = this.muxIntegration;
   if (muxIntegration != null) {
     muxIntegration.emitEnded();
@@ -127,23 +146,44 @@ prototype["onEnd"] = function onEnd() {
     muxIntegration2.destroy();
   }
 };
-prototype["onError"] = function onError(arg0) {
+prototype["onError"] = function onError(error) {
+  this.endRebuffer();
   const muxIntegration = this.muxIntegration;
   if (muxIntegration != null) {
-    muxIntegration.emitError(arg0);
+    muxIntegration.emitError(error);
   }
 };
 prototype["onProgress"] = function onProgress(arg0) {
+  const result = this.finishSeekIfRecovered();
   this.updatePlayheadTime(arg0);
   const muxIntegration = this.muxIntegration;
   if (muxIntegration != null) {
     muxIntegration.emitTimeUpdate();
   }
 };
-prototype["onBuffer"] = function onBuffer(flag2) {
-  if (!flag2) {
-    const self = this;
-    const muxIntegration = this.muxIntegration;
+prototype["onBuffer"] = function onBuffer(nativeEvent) {
+  const self = this;
+  if (nativeEvent) {
+    const seeking = self.seeking;
+    let tmp6 = !seeking;
+    if (!seeking) {
+      tmp6 = null == self.rebufferStartedAt;
+    }
+    if (tmp6) {
+      const muxIntegration4 = self.muxIntegration;
+      let isPlayingResult;
+      if (muxIntegration4 != null) {
+        isPlayingResult = muxIntegration4.isPlaying();
+      }
+      tmp6 = isPlayingResult;
+    }
+    if (tmp6) {
+      const _Date = Date;
+      self.rebufferStartedAt = Date.now();
+    }
+  } else {
+    self.endRebuffer();
+    const muxIntegration = self.muxIntegration;
     if (muxIntegration != null) {
       muxIntegration.emitCanPlay();
     }
@@ -154,14 +194,35 @@ prototype["onBuffer"] = function onBuffer(flag2) {
     }
     if (hasPlayStartedResult) {
       const muxIntegration3 = self.muxIntegration;
-      if (muxIntegration3 != null) {
-        muxIntegration3.emitPlaying();
-      }
+      muxIntegration3.emitPlaying();
     }
+  }
+};
+prototype["endRebuffer"] = function endRebuffer() {
+  const self = this;
+  const rebufferStartedAt = this.rebufferStartedAt;
+  if (null != rebufferStartedAt) {
+    self.rebufferStartedAt = null;
+    const muxIntegration = self.muxIntegration;
+    if (muxIntegration != null) {
+      muxIntegration.emitRebufferStart(rebufferStartedAt);
+    }
+    const muxIntegration2 = self.muxIntegration;
+    if (muxIntegration2 != null) {
+      const _Date = Date;
+      muxIntegration2.emitRebufferEnd(Date.now());
+    }
+  }
+};
+prototype["finishSeekIfRecovered"] = function finishSeekIfRecovered() {
+  const self = this;
+  if (tmp) {
+    self.seeking = false;
   }
 };
 prototype["onReadyForDisplay"] = function onReadyForDisplay() {
   const self = this;
+  const result = this.finishSeekIfRecovered();
   const muxIntegration = this.muxIntegration;
   if (muxIntegration != null) {
     muxIntegration.emitPlayerReady();
@@ -192,6 +253,7 @@ prototype["onVideoTrackChange"] = function onVideoTrackChange(selectedVideoTrack
 prototype["destroy"] = function destroy() {
   try {
     const self = this;
+    this.endRebuffer();
     if (null != this.seekTimeout) {
       const _clearTimeout = clearTimeout;
       clearTimeout(self.seekTimeout);
@@ -202,8 +264,8 @@ prototype["destroy"] = function destroy() {
       muxIntegration.destroy();
     }
     self.muxIntegration = null;
-  } catch (tmp5) {
-    logger.error("Error destroying MobileMuxWrapper", tmp5);
+  } catch (tmp6) {
+    logger.error("Error destroying MobileMuxWrapper", tmp6);
   }
 };
 prototype["getSessionId"] = function getSessionId() {

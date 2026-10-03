@@ -1,25 +1,25 @@
-// === Module 14135: Menu ===
+// === Module 14203: Menu ===
 
-// Module 14135 (Menu)
-import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1115 */;
-import PlatformUtils from "PlatformUtils" /* 1364 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4570 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4595 */;
-import timing from "timing" /* 4846 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 5459 */;
-import spring from "spring" /* 5464 */;
+// Module 14203 (Menu)
+import nativeDefault from "native" /* 587 */;
+import util from "util" /* 1126 */;
+import PlatformUtils from "PlatformUtils" /* 1369 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4590 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
+import timing from "timing" /* 4891 */;
+import spring from "spring" /* 5597 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 5779 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const NOOP = fn(1074).NOOP;
+const NOOP = fn(1085).NOOP;
 const jsx = fn(21).jsx;
 let closure_8 = { mass: 1, stiffness: 300, damping: 25, restSpeedThreshold: 0.01, restDisplacementThreshold: 0.01 };
-let __closure = { duration: 250, easing: fn(13866).STANDARD_EASING };
-const createStyles = fn(4845);
+let __closure = { duration: 250, easing: fn(13933).STANDARD_EASING };
+const createStyles = fn(4890);
 let obj2 = { backdrop: null, menu: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -36,7 +36,7 @@ function measureButtonRef(arg0, arg1) {
   }
 }
 let obj5 = { position: "absolute", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm, width: 220 };
-measureButtonRef.__closure = { measure: fn(4595).measure, runOnJS: fn(4595).runOnJS };
+measureButtonRef.__closure = { measure: fn(4612).measure, runOnJS: fn(4612).runOnJS };
 measureButtonRef.__workletHash = 15651320687527;
 measureButtonRef.__initData = { code: "function measureButtonRef_MenuTsx1(ref,setDimensions){const{measure,runOnJS}=this.__closure;const measurements=measure(ref);if(measurements==null)return;runOnJS(setDimensions)(measurements);}" };
 let closure_13 = { code: "function MenuTsx2(){const{runOnJS,openMenuCallback}=this.__closure;return runOnJS(openMenuCallback)();}" };
@@ -328,13 +328,13 @@ export const Menu = function Menu(toggleButtonRef) {
   let obj7 = { children: null };
   let obj8 = { value: { menuClose: handleClose, menuDismiss: handleDismiss }, children: null };
   const Children = tmp2.Children;
-  obj8.children = Children.map(children, (icon, arg1) => {
-    let cloneElementResult = icon;
+  obj8.children = Children.map(children, (label, arg1) => {
+    let cloneElementResult = label;
     if (0 === arg1) {
-      cloneElementResult = icon;
-      if (noop.isValidElement(icon)) {
+      cloneElementResult = label;
+      if (noop.isValidElement(label)) {
         const obj2 = { ref };
-        cloneElementResult = noop.cloneElement(icon, obj2);
+        cloneElementResult = noop.cloneElement(label, obj2);
       }
     }
     return cloneElementResult;

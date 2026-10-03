@@ -1,60 +1,93 @@
-// === Module 9234: NoResultsAlt ===
+// === Module 9240: NoResultsAlt ===
 
-// Module 9234 (NoResultsAlt)
-import shared from "shared" /* 4714 */;
-import _mod7861 from "module_7861" /* 7861 */;
+// Module 9240 (NoResultsAlt)
+import c from "c" /* 576 */;
+import shared from "shared" /* 4729 */;
+import _mod7905 from "module_7905" /* 7905 */;
 import noop from "module_19" /* 19 */;
-
-const require = globalThis.__r;
 
 require = fn;
 const Image = fn(17).Image;
 const jsx = fn(21).jsx;
+let ReactCompilerGating = fn(558);
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(2);
+  const theme = shared.useThemeContext().theme;
+  if (cResult[0] !== theme) {
+    const obj3 = {
+      dark() {
+          return require("module_9241");
+        },
+      darker() {
+          return require("module_9242");
+        },
+      light() {
+          return require("module_6551");
+        }
+    };
+    const illustrationSource = _mod7905.getIllustrationSource(theme, obj3);
+    cResult[0] = theme;
+    cResult[1] = illustrationSource;
+    let tmp4 = illustrationSource;
+    const tmpResult = _mod7905;
+  } else {
+    tmp4 = cResult[1];
+  }
+  return tmp4;
+}) : (() => {
+  const obj = shared;
+  return _mod7905.getIllustrationSource(obj.useThemeContext().theme, {
+    dark() {
+      return require("module_9241");
+    },
+    darker() {
+      return require("module_9242");
+    },
+    light() {
+      return require("module_6551");
+    }
+  });
+});
+let closure_4 = tmp3;
+ReactCompilerGating = fn(558);
+function getNoResultsAltSource(theme) {
+  return _mod7905.getIllustrationSource(theme, {
+    dark() {
+      return require("module_9241");
+    },
+    darker() {
+      return require("module_9242");
+    },
+    light() {
+      return require("module_6551");
+    }
+  });
+}
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/NoResultsAlt.tsx");
 
-export const getNoResultsAltSource = function getNoResultsAltSource(theme) {
-  return _mod7861.getIllustrationSource(theme, {
-    dark() {
-      return require("module_9235");
-    },
-    darker() {
-      return require("module_9236");
-    },
-    light() {
-      return require("module_6661");
+export { getNoResultsAltSource };
+export const useNoResultsAltSource = tmp3;
+export const NoResultsAlt = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(3);
+  const tmp2 = closure_4();
+  if (cResult[0] === arg0) {
+    if (cResult[1] === tmp2) {
+      let tmp3 = cResult[2];
     }
-  });
-};
-export const useNoResultsAltSource = function useNoResultsAltSource() {
-  const obj = shared;
-  return _mod7861.getIllustrationSource(obj.useThemeContext().theme, {
-    dark() {
-      return require("module_9235");
-    },
-    darker() {
-      return require("module_9236");
-    },
-    light() {
-      return require("module_6661");
-    }
-  });
-};
-export const NoResultsAlt = function NoResultsAlt(arg0) {
-  const obj = shared;
-  const obj4 = {};
-  const illustrationSource = _mod7861.getIllustrationSource(obj.useThemeContext().theme, {
-    dark() {
-      return require("module_9235");
-    },
-    darker() {
-      return require("module_9236");
-    },
-    light() {
-      return require("module_6661");
-    }
-  });
+    return tmp3;
+  }
+  const obj2 = {};
   const merged = Object.assign(arg0);
-  obj4.source = illustrationSource;
+  obj2.source = tmp2;
+  const tmp5 = <Image />;
+  cResult[0] = arg0;
+  cResult[1] = tmp2;
+  cResult[2] = tmp5;
+  tmp3 = tmp5;
+}) : ((arg0) => {
+  const obj = {};
+  const merged = Object.assign(arg0);
+  obj.source = closure_4();
   return <Image />;
-};
+});

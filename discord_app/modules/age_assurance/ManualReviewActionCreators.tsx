@@ -1,10 +1,10 @@
-// === Module 8233: ManualReviewActionCreators ===
+// === Module 8274: ManualReviewActionCreators ===
 
-// Module 8233 (ManualReviewActionCreators)
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import DurationsDefault from "Durations" /* 1091 */;
-import HTTPUtils from "HTTPUtils" /* 1271 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 8051 */;
+// Module 8274 (ManualReviewActionCreators)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import DurationsDefault from "Durations" /* 1102 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 8092 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -32,7 +32,7 @@ let closure_14 = async function _handleManualReviewCta() {
       const obj5 = { value, done: true };
       return obj5;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -54,11 +54,11 @@ let closure_14 = async function _handleManualReviewCta() {
           } else {
             c11 = true;
             c3 = 2;
-            closure_128_0 = closure_2_12;
+            closure_128_0 = __initData;
             let tmp23 = null == closure_128_0;
             if (!tmp23) {
               const _Date2 = Date;
-              tmp23 = Date.now() - map1 >= MINUTE;
+              tmp23 = Date.now() - __initData2 >= MINUTE;
             }
             if (tmp23) {
               if (obj8.isCurrentUserSuspended()) {
@@ -152,8 +152,8 @@ let closure_14 = async function _handleManualReviewCta() {
     }
   }
 };
-const Endpoints = fn(1074).Endpoints;
-const SafetyToastType = fn(8031).SafetyToastType;
+const Endpoints = fn(1085).Endpoints;
+const SafetyToastType = fn(8075).SafetyToastType;
 const ManualReviewStatus = { IN_PROGRESS: "in_progress", SUBMITTED: "submitted", DECIDED_TEEN: "decided_teen" };
 const MINUTE = DurationsDefault.Millis.MINUTE;
 let c11 = false;

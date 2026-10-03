@@ -1,13 +1,13 @@
-// === Module 7635: ApplicationCommandSourceSystemMessage ===
+// === Module 7679: ApplicationCommandSourceSystemMessage ===
 
-// Module 7635 (ApplicationCommandSourceSystemMessage)
-import Constants from "Constants" /* 1074 */;
-import util from "util" /* 1115 */;
-import ChannelAutocompleteConstants from "ChannelAutocompleteConstants" /* 5490 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7575 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7577 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7579 */;
-import ApplicationCommands from "ApplicationCommands" /* 7636 */;
+// Module 7679 (ApplicationCommandSourceSystemMessage)
+import Constants from "Constants" /* 1085 */;
+import util from "util" /* 1126 */;
+import ChannelAutocompleteConstants from "ChannelAutocompleteConstants" /* 5789 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7619 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7621 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7623 */;
+import ApplicationCommands from "ApplicationCommands" /* 7680 */;
 import size from "module_2" /* 2 */;
 
 const MessageTypes = Constants.MessageTypes;

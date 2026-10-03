@@ -1,13 +1,13 @@
-// === Module 7796: RecentAvatarUtils ===
+// === Module 7840: RecentAvatarUtils ===
 
-// Module 7796 (RecentAvatarUtils)
-import Constants from "Constants" /* 1074 */;
-import util from "util" /* 1115 */;
-import GlobalUtils from "GlobalUtils" /* 1370 */;
-import AvatarUtils from "AvatarUtils" /* 1397 */;
-import ImageLoaderUtils from "ImageLoaderUtils" /* 1432 */;
-import _modDef1473 from "module_1473" /* 1473 */;
-import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 6596 */;
+// Module 7840 (RecentAvatarUtils)
+import Constants from "Constants" /* 1085 */;
+import util from "util" /* 1126 */;
+import GlobalUtils from "GlobalUtils" /* 1375 */;
+import AvatarUtils from "AvatarUtils" /* 1402 */;
+import ImageLoaderUtils from "ImageLoaderUtils" /* 1437 */;
+import _modDef1478 from "module_1478" /* 1478 */;
+import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 6486 */;
 import size from "module_2" /* 2 */;
 
 function getArchivedAvatarURL(allowWebp) {
@@ -59,7 +59,7 @@ function getArchivedAvatarURL(allowWebp) {
     }
     const ARCHIVED_AVATARResult = Endpoints.ARCHIVED_AVATAR(userId, avatarId, storageHash, str2);
     const _HermesInternal2 = HermesInternal;
-    return "" + combined + ARCHIVED_AVATARResult + "?" + _modDef1473.stringify(obj2);
+    return "" + combined + ARCHIVED_AVATARResult + "?" + _modDef1478.stringify(obj2);
   }
   str2 = "jpg";
   if (null != window.GLOBAL_ENV.CDN_HOST) {

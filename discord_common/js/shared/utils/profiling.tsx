@@ -1,6 +1,6 @@
-// === Module 571: profiling ===
+// === Module 583: profiling ===
 
-// Module 571 (profiling)
+// Module 583 (profiling)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/utils/profiling.tsx");

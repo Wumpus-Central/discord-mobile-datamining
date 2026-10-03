@@ -1,11 +1,12 @@
-// === Module 6601: useSettingNavigationRoute ===
+// === Module 6490: useSettingNavigationRoute ===
 
-// Module 6601 (useSettingNavigationRoute)
-import Link from "Link" /* 1486 */;
+// Module 6490 (useSettingNavigationRoute)
+import Link from "Link" /* 1491 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
-const result = size.fileFinishedImporting("modules/user_settings/core/native/useSettingNavigationRoute.tsx");
+let ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
+const result1 = size.fileFinishedImporting("modules/user_settings/core/native/useSettingNavigationRoute.tsx");
 
-export const useSettingNavigationRoute = function useSettingNavigationRoute() {
-  return Link.useRoute();
-};
+export const useSettingNavigationRoute = () => Link.useRoute();

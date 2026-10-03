@@ -1,11 +1,11 @@
-// === Module 14315: GameRelationshipManager ===
+// === Module 14383: GameRelationshipManager ===
 
-// Module 14315 (GameRelationshipManager)
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7244 */;
-import LifecycleManager from "LifecycleManager" /* 1983 */;
+// Module 14383 (GameRelationshipManager)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7142 */;
+import LifecycleManager from "LifecycleManager" /* 1989 */;
 
-const RelationshipTypes = fn(1074).RelationshipTypes;
+const RelationshipTypes = fn(1085).RelationshipTypes;
 class GameRelationshipManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

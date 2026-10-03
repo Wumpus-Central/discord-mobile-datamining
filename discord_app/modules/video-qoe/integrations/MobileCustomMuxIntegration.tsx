@@ -1,8 +1,8 @@
-// === Module 14885: MobileCustomMuxIntegration ===
+// === Module 14942: MobileCustomMuxIntegration ===
 
-// Module 14885 (MobileCustomMuxIntegration)
+// Module 14942 (MobileCustomMuxIntegration)
 import logger_Logger from "logger/Logger" /* 4 */;
-import UDefault from "U" /* 14883 */;
+import UDefault from "U" /* 14940 */;
 import size from "module_2" /* 2 */;
 
 const logger = new logger_Logger.Logger("MobileCustomMuxIntegration");
@@ -53,7 +53,7 @@ prototype["initialize"] = function initialize() {
         if (flag == null) {
           flag = false;
         }
-        const obj3 = { debug: flag, getPlayheadTime: null, getStateData: null, data: null };
+        const obj3 = { debug: flag, disablePlayheadRebufferTracking: true, getPlayheadTime: null, getStateData: null, data: null };
         ({ getPlayheadTime: obj2.getPlayheadTime, getStateData: obj2.getStateData } = self);
         obj3.data = self.mapConfigToMuxData(muxEnvKey);
         UDefault.init(self.playerId, obj3);
@@ -196,6 +196,26 @@ prototype["emitWaiting"] = function emitWaiting() {
     }
   }
 };
+prototype["emitRebufferStart"] = function emitRebufferStart(rebufferStartedAt) {
+  if (this.isInitialized) {
+    try {
+      const obj2 = { viewer_time: rebufferStartedAt };
+      UDefault.emit(tmp.playerId, "rebufferstart", obj2);
+    } catch (tmp6) {
+      logger.error("Error emitting rebufferstart event", tmp6);
+    }
+  }
+};
+prototype["emitRebufferEnd"] = function emitRebufferEnd(viewer_time) {
+  if (this.isInitialized) {
+    try {
+      const obj2 = { viewer_time };
+      UDefault.emit(tmp.playerId, "rebufferend", obj2);
+    } catch (tmp6) {
+      logger.error("Error emitting rebufferend event", tmp6);
+    }
+  }
+};
 prototype["emitCanPlay"] = function emitCanPlay() {
   this.emitPlayerReady();
 };
@@ -228,12 +248,85 @@ prototype["emitEnded"] = function emitEnded() {
     }
   }
 };
-prototype["emitError"] = function emitError(arg0) {
+prototype["emitError"] = function emitError(error) {
   if (this.isInitialized) {
     try {
-      UDefault.emit(tmp.playerId, "error", arg0);
-    } catch (tmp6) {
-      logger.error("Error emitting error event", tmp6);
+      error = undefined;
+      if (error != null) {
+        error = error.error;
+      }
+      let localizedDescription;
+      if (error != null) {
+        localizedDescription = error.localizedDescription;
+      }
+      const items = [localizedDescription, , ];
+      let errorString;
+      if (error != null) {
+        errorString = tmp5.errorString;
+      }
+      items[1] = errorString;
+      let errorException;
+      if (error != null) {
+        errorException = tmp5.errorException;
+      }
+      items[2] = errorException;
+      let domain;
+      const found = items.find((item) => {
+        let tmp = null != item;
+        if (tmp) {
+          tmp = item.length > 0;
+        }
+        return tmp;
+      });
+      if (error != null) {
+        domain = tmp5.domain;
+      }
+      let combined = null;
+      if (null != domain) {
+        const _HermesInternal = HermesInternal;
+        combined = "domain: " + tmp5.domain;
+      }
+      const items1 = [combined, , ];
+      let prop;
+      if (error != null) {
+        prop = tmp5.localizedFailureReason;
+      }
+      let combined1 = null;
+      if (null != prop) {
+        const _HermesInternal2 = HermesInternal;
+        combined1 = "reason: " + tmp5.localizedFailureReason;
+      }
+      items1[1] = combined1;
+      let errorException1;
+      if (error != null) {
+        errorException1 = tmp5.errorException;
+      }
+      let combined2 = null;
+      if (null != errorException1) {
+        const _HermesInternal3 = HermesInternal;
+        combined2 = "exception: " + tmp5.errorException;
+      }
+      items1[2] = combined2;
+      const found1 = items1.filter((item) => null != item);
+      const joined = found1.join("; ");
+      let code;
+      if (error != null) {
+        code = tmp5.code;
+      }
+      let StringResult;
+      if (null != code) {
+        const _String = String;
+        StringResult = String(error.code);
+      }
+      const obj = { player_error_code: StringResult, player_error_message: found, player_error_context: null };
+      let tmp34;
+      if (joined.length > 0) {
+        tmp34 = joined;
+      }
+      obj.player_error_context = tmp34;
+      UDefault.emit(tmp.playerId, "error", obj);
+    } catch (tmp36) {
+      logger.error("Error emitting error event", tmp36);
     }
   }
 };
@@ -241,11 +334,15 @@ prototype["emitTimeUpdate"] = function emitTimeUpdate() {
   const self = this;
   if (this.isInitialized) {
     try {
-      let playStarted = self.playStarted;
+      const playStarted = self.playStarted;
+      let player_is_paused = !playStarted;
       if (playStarted) {
-        playStarted = !self.playingEmitted;
+        player_is_paused = self.playingEmitted;
       }
-      if (playStarted) {
+      if (!player_is_paused) {
+        player_is_paused = self.videoState.player_is_paused;
+      }
+      if (!player_is_paused) {
         self.emitPlaying();
       }
       const obj2 = { player_playhead_time: self.currentPlayheadTime * c6 };
@@ -296,7 +393,10 @@ prototype["getSessionId"] = function getSessionId() {
   return this.sessionId;
 };
 prototype["hasPlayStarted"] = function hasPlayStarted() {
-  return this.playStarted;
+  return this.playStarted && !this.videoState.player_is_paused;
+};
+prototype["isPlaying"] = function isPlaying() {
+  return this.playingEmitted && !this.videoState.player_is_paused;
 };
 prototype["mapConfigToMuxData"] = function mapConfigToMuxData(muxEnvKey) {
   const self = this;

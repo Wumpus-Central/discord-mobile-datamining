@@ -1,19 +1,19 @@
-// === Module 14251: validateOpenInviteDialog ===
+// === Module 14319: validateOpenInviteDialog ===
 
-// Module 14251 (validateOpenInviteDialog)
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8692 */;
-import RPCErrorDefault from "RPCError" /* 8962 */;
-import canViewInviteModal from "canViewInviteModal" /* 9257 */;
-import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14238 */;
-import FramesStore from "FramesStore" /* 8690 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import PermissionStore from "PermissionStore" /* 4498 */;
+// Module 14319 (validateOpenInviteDialog)
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8514 */;
+import RPCErrorDefault from "RPCError" /* 9026 */;
+import canViewInviteModal from "canViewInviteModal" /* 9263 */;
+import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14306 */;
+import FramesStore from "FramesStore" /* 8703 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import PermissionStore from "PermissionStore" /* 4509 */;
 
 require = fn;
-const TransportTypes = fn(5270).TransportTypes;
-const RPCErrors = fn(1074).RPCErrors;
-const asLaunched = fn(8691).asLaunched;
+const TransportTypes = fn(5316).TransportTypes;
+const RPCErrors = fn(1085).RPCErrors;
+const asLaunched = fn(8704).asLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/helpers/validateOpenInviteDialog.tsx");
 
@@ -29,7 +29,7 @@ export const validateOpenInviteDialog = function validateOpenInviteDialog(socket
       const surface = tmp46.surface;
       const type = surface.type;
       if (EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN === type) {
-        const obj3 = { frame: tmp46, channel: "Array", guild: "isArray" };
+        const obj3 = { frame: tmp46, channel: "Array", guild: "cursor" };
         return obj3;
       } else {
         if (EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL !== type) {
@@ -49,7 +49,7 @@ export const validateOpenInviteDialog = function validateOpenInviteDialog(socket
         const tmp21 = new RPCErrorDefault(obj6, "Invalid channel");
         throw tmp21;
       } else {
-        const guild = GuildStore.getGuild(obj9.getGuildId());
+        guild = GuildStore.getGuild(obj9.getGuildId());
         if (null == guild) {
           const obj7 = { errorCode: RPCErrors.INVALID_CHANNEL };
           const _HermesInternal2 = HermesInternal;

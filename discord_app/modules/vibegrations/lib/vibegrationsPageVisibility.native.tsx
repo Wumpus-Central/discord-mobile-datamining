@@ -1,9 +1,9 @@
-// === Module 16580: vibegrationsPageVisibility ===
+// === Module 16660: vibegrationsPageVisibility ===
 
-// Module 16580 (vibegrationsPageVisibility)
-import AppStateStore from "AppStateStore" /* 1980 */;
+// Module 16660 (vibegrationsPageVisibility)
+import AppStateStore from "AppStateStore" /* 1986 */;
 
-const AppStates = fn(1074).AppStates;
+const AppStates = fn(1085).AppStates;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/vibegrations/lib/vibegrationsPageVisibility.native.tsx");
 

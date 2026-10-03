@@ -1,7 +1,7 @@
-// === Module 6892: GuildThreadSubscriptions ===
+// === Module 6790: GuildThreadSubscriptions ===
 
-// Module 6892 (GuildThreadSubscriptions)
-import privDefault from "priv" /* 1439 */;
+// Module 6790 (GuildThreadSubscriptions)
+import privDefault from "priv" /* 1444 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("lib/guild/GuildThreadSubscriptions.tsx");

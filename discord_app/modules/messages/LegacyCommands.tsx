@@ -1,19 +1,19 @@
-// === Module 11689: LegacyCommands ===
+// === Module 11610: LegacyCommands ===
 
-// Module 11689 (LegacyCommands)
-import UserSettings from "UserSettings" /* 2021 */;
-import ReactionUtils from "ReactionUtils" /* 4510 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5025 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7064 */;
-import ReactionActionCreators from "ReactionActionCreators" /* 7356 */;
-import ChangeNicknameActionCreatorsDefault from "ChangeNicknameActionCreators" /* 8795 */;
+// Module 11610 (LegacyCommands)
+import UserSettings from "UserSettings" /* 2028 */;
+import ReactionUtils from "ReactionUtils" /* 4521 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5070 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 6965 */;
+import ReactionActionCreators from "ReactionActionCreators" /* 7260 */;
+import ChangeNicknameActionCreatorsDefault from "ChangeNicknameActionCreators" /* 8808 */;
 import _slicedToArray from "module_32" /* 32 */;
-import EmojiStore from "EmojiStore" /* 5957 */;
-import MessageStore from "MessageStore" /* 5065 */;
-import t_mod from "module_1930" /* 1930 */;
+import EmojiStore from "EmojiStore" /* 5638 */;
+import MessageStore from "MessageStore" /* 5110 */;
+import t_mod from "module_1936" /* 1936 */;
 
 require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AnalyticEvents: metroRequire, MARKDOWN_SPOILER_WRAPPER: closure_7, ME: closure_8 } = Constants);
 const re9 = /\\([*?+/])/g;
 const COMMANDS = {
@@ -53,7 +53,7 @@ const COMMANDS = {
       channel = channel.channel;
       if (null != channel.guild_id) {
         const obj = ChangeNicknameActionCreatorsDefault;
-        obj.changeNickname(channel.guild_id, channel.id, React6, arg0);
+        obj.changeNickname(channel.guild_id, channel.id, closure_1_8, arg0);
         return { content: "" };
       }
     }

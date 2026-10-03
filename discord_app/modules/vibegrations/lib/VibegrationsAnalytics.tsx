@@ -1,10 +1,10 @@
-// === Module 8688: VibegrationsAnalytics ===
+// === Module 8701: VibegrationsAnalytics ===
 
-// Module 8688 (VibegrationsAnalytics)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import VibegrationsUtils from "VibegrationsUtils" /* 5554 */;
-import ApplicationStore from "ApplicationStore" /* 5072 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 8686 */;
+// Module 8701 (VibegrationsAnalytics)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import VibegrationsUtils from "VibegrationsUtils" /* 6746 */;
+import ApplicationStore from "ApplicationStore" /* 5118 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 8699 */;
 
 require = fn;
 function vibegrationLocation(project_id, isPreview) {
@@ -44,7 +44,7 @@ function vibegrationLocation(project_id, isPreview) {
   obj.channel_id = result;
   return obj;
 }
-const AnalyticEvents = fn(1074).AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsAnalytics.tsx");
 

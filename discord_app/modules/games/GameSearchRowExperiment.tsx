@@ -1,7 +1,7 @@
-// === Module 12090: GameSearchRowExperiment ===
+// === Module 12026: GameSearchRowExperiment ===
 
-// Module 12090 (GameSearchRowExperiment)
-import ApexExperiment from "ApexExperiment" /* 1435 */;
+// Module 12026 (GameSearchRowExperiment)
+import ApexExperiment from "ApexExperiment" /* 1440 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-09-game-search-row", kind: "user", defaultConfig: { extraChromeEnabled: false }, variations: null };

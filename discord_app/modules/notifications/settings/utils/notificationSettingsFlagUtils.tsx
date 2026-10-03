@@ -1,8 +1,8 @@
-// === Module 9801: notificationSettingsFlagUtils ===
+// === Module 9852: notificationSettingsFlagUtils ===
 
-// Module 9801 (notificationSettingsFlagUtils)
-import FlagUtilsAll from "FlagUtils" /* 1385 */;
-import UserSettingsConstants from "UserSettingsConstants" /* 1084 */;
+// Module 9852 (notificationSettingsFlagUtils)
+import FlagUtilsAll from "FlagUtils" /* 1390 */;
+import UserSettingsConstants from "UserSettingsConstants" /* 1095 */;
 import size from "module_2" /* 2 */;
 
 ({ GuildNotificationSettingsFlags: c2, ChannelNotificationSettingsFlags: c3 } = UserSettingsConstants);

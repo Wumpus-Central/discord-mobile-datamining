@@ -1,7 +1,7 @@
-// === Module 7807: UserProfileLinkFetchExperiment ===
+// === Module 7851: UserProfileLinkFetchExperiment ===
 
-// Module 7807 (UserProfileLinkFetchExperiment)
-import ApexExperiment from "ApexExperiment" /* 1435 */;
+// Module 7851 (UserProfileLinkFetchExperiment)
+import ApexExperiment from "ApexExperiment" /* 1440 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-09-profile-link-fetch", kind: "user", defaultConfig: { enabled: false }, variations: null };

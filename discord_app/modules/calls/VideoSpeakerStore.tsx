@@ -1,14 +1,14 @@
-// === Module 9042: VideoSpeakerStore ===
+// === Module 9070: VideoSpeakerStore ===
 
-// Module 9042 (VideoSpeakerStore)
+// Module 9070 (VideoSpeakerStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 4897 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4867 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 4942 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4912 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 1993 */;
-import SpeakingStore from "SpeakingStore" /* 5917 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4861 */;
+import MediaEngineStore from "MediaEngineStore" /* 1999 */;
+import SpeakingStore from "SpeakingStore" /* 5576 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4906 */;
 import apply from "module_12" /* 12 */;
 
 require = fn;
@@ -136,7 +136,7 @@ function handleChannelRTCUpdate() {
   closure_11();
   return false;
 }
-const ParticipantTypes = fn(4866).ParticipantTypes;
+const ParticipantTypes = fn(4911).ParticipantTypes;
 let closure_11 = apply.throttle(updateSpeaker, 300, { trailing: true });
 const Store = initializeDefault.Store;
 class VideoSpeakerStoreClass extends Store {
@@ -147,9 +147,9 @@ prototype["initialize"] = function initialize() {
   const items = [ChannelRTCStore, ApplicationStreamingStore];
   this.syncWith(items, handleChannelRTCUpdate);
 };
-prototype["getSpeaker"] = function getSpeaker(isActivityViewFocused) {
-  if (global !== isActivityViewFocused) {
-    global = isActivityViewFocused;
+prototype["getSpeaker"] = function getSpeaker(_undefined) {
+  if (global !== _undefined) {
+    global = _undefined;
     c3 = null;
     updateSpeaker(false);
   }

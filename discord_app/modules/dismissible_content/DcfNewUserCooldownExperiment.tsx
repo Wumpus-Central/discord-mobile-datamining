@@ -1,25 +1,36 @@
-// === Module 4706: DcfNewUserCooldownExperiment ===
+// === Module 4721: DcfNewUserCooldownExperiment ===
 
-// Module 4706 (DcfNewUserCooldownExperiment)
-import DurationsDefault from "Durations" /* 1091 */;
-import ApexExperiment from "ApexExperiment" /* 1435 */;
+// Module 4721 (DcfNewUserCooldownExperiment)
+import c from "c" /* 576 */;
+import DurationsDefault from "Durations" /* 1102 */;
+import ApexExperiment from "ApexExperiment" /* 1440 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-08-dcf-new-user-cooldown", kind: "user", defaultConfig: { newUserCooldownMs: DurationsDefault.Millis.DAY }, variations: null };
 const obj3 = { 1: null, 2: null, 3: null };
-const obj2 = { newUserCooldownMs: DurationsDefault.Millis.DAY };
+let obj2 = { newUserCooldownMs: DurationsDefault.Millis.DAY };
 obj3[1] = { newUserCooldownMs: 2 * DurationsDefault.Millis.DAY };
 const obj4 = { newUserCooldownMs: 2 * DurationsDefault.Millis.DAY };
 obj3[2] = { newUserCooldownMs: 3 * DurationsDefault.Millis.DAY };
 const obj5 = { newUserCooldownMs: 3 * DurationsDefault.Millis.DAY };
 obj3[3] = { newUserCooldownMs: 7 * DurationsDefault.Millis.DAY };
 obj.variations = obj3;
-let closure_0 = ApexExperiment.createApexExperiment(obj);
+let closure_2 = ApexExperiment.createApexExperiment(obj);
+const obj6 = { newUserCooldownMs: 7 * DurationsDefault.Millis.DAY };
 const result = size.fileFinishedImporting("modules/dismissible_content/DcfNewUserCooldownExperiment.tsx");
 
-export const useDcfNewUserCooldown = function useDcfNewUserCooldown() {
-  return closure_0.useConfig({ location: "useDcfNewUserCooldown" }).newUserCooldownMs;
-};
+export const useDcfNewUserCooldown = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(1);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const obj2 = { location: "useDcfNewUserCooldown" };
+    cResult[0] = obj2;
+    let first = obj2;
+  } else {
+    first = cResult[0];
+  }
+  return closure_2.useConfig(first).newUserCooldownMs;
+}) : (() => closure_2.useConfig({ location: "useDcfNewUserCooldown" }).newUserCooldownMs);
 export const getDcfNewUserCooldown = function getDcfNewUserCooldown() {
-  return closure_0.getConfig({ location: "getDcfNewUserCooldown" }).newUserCooldownMs;
+  return closure_2.getConfig({ location: "getDcfNewUserCooldown" }).newUserCooldownMs;
 };

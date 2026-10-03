@@ -1,14 +1,14 @@
-// === Module 14264: setOrientationLockState ===
+// === Module 14332: setOrientationLockState ===
 
-// Module 14264 (setOrientationLockState)
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import RPCErrorDefault from "RPCError" /* 8962 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8965 */;
-import FramesStore from "FramesStore" /* 8690 */;
+// Module 14332 (setOrientationLockState)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import RPCErrorDefault from "RPCError" /* 9026 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9029 */;
+import FramesStore from "FramesStore" /* 8703 */;
 
-const TransportTypes = fn(5270).TransportTypes;
-const OrientationLockState = fn(2005).OrientationLockState;
-const Constants = fn(1085);
+const TransportTypes = fn(5316).TransportTypes;
+const OrientationLockState = fn(2011).OrientationLockState;
+const Constants = fn(1096);
 const RPCErrors = Constants.RPCErrors;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/server/commands/setOrientationLockState.tsx");

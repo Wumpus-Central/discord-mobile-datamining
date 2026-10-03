@@ -1,15 +1,41 @@
-// === Module 4835: GameModeStore ===
+// === Module 4880: GameModeStore ===
 
-// Module 4835 (GameModeStore)
+// Module 4880 (GameModeStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import RunningGameStore from "RunningGameStore" /* 2000 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
+import RunningGameStore from "RunningGameStore" /* 2006 */;
 
 const require = fn;
-const DefaultGameModeSettings = fn(4836).DefaultGameModeSettings;
+function syncRunningGame() {
+  const visibleRunningGames = RunningGameStore.getVisibleRunningGames();
+  const someResult = visibleRunningGames.some((isLauncher) => true !== isLauncher.isLauncher);
+  let flag = someResult !== c6;
+  if (flag) {
+    c6 = someResult;
+    flag = true;
+    if (someResult) {
+      obj = {};
+      const merged = Object.assign(obj);
+      obj.hasDetectedGame = true;
+      const gameModeExperimentConfig = require("GameModeExperiment").getGameModeExperimentConfig({ location: "GameModeRunningGame" });
+      flag = true;
+      const obj3 = require("GameModeExperiment");
+    }
+  }
+  return flag;
+}
+function syncExperimentAssignment() {
+  if (c6) {
+    const gameModeExperimentConfig = require("GameModeExperiment").getGameModeExperimentConfig({ location: "GameModeExperimentAssignment" });
+    obj = require("GameModeExperiment");
+  }
+  return false;
+}
+const DefaultGameModeSettings = fn(4881).DefaultGameModeSettings;
 let obj = {};
 let merged = Object.assign(DefaultGameModeSettings);
-let c5 = false;
+let c6 = false;
 let focused = false;
 let hovered = false;
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
@@ -24,6 +50,7 @@ prototype["initialize"] = function initialize(enabled) {
   if (enabled == null) {
     enabled = DefaultGameModeSettings.enabled;
   }
+  obj = { enabled, promptSuppressedGameIds: null, hasDetectedGame: null };
   let prop;
   if (enabled != null) {
     prop = enabled.promptSuppressedGameIds;
@@ -31,18 +58,36 @@ prototype["initialize"] = function initialize(enabled) {
   if (prop == null) {
     prop = DefaultGameModeSettings.promptSuppressedGameIds;
   }
-  { enabled, promptSuppressedGameIds: null }.promptSuppressedGameIds = prop;
+  obj.promptSuppressedGameIds = prop;
+  let hasDetectedGame;
+  if (enabled != null) {
+    hasDetectedGame = enabled.hasDetectedGame;
+  }
+  if (hasDetectedGame == null) {
+    hasDetectedGame = DefaultGameModeSettings.hasDetectedGame;
+  }
+  obj.hasDetectedGame = hasDetectedGame;
   const items = [RunningGameStore];
-  this.syncWith(items, () => {
-    visibleRunningGames = visibleRunningGames.getVisibleRunningGames();
-    someResult = visibleRunningGames.some((isLauncher) => true !== isLauncher.isLauncher);
-    let flag = someResult !== someResult;
-    if (flag) {
+  this.syncWith(items, syncRunningGame);
+  const items1 = [ApexExperimentStore];
+  this.syncWith(items1, syncExperimentAssignment);
+  const visibleRunningGames = RunningGameStore.getVisibleRunningGames();
+  const someResult = visibleRunningGames.some((isLauncher) => true !== isLauncher.isLauncher);
+  let flag = someResult !== c6;
+  if (flag) {
+    c6 = someResult;
+    flag = true;
+    if (someResult) {
+      const obj2 = {};
+      const merged = Object.assign(obj);
+      obj2.hasDetectedGame = true;
+      obj = obj2;
+      const gameModeExperimentConfig = require("GameModeExperiment").getGameModeExperimentConfig({ location: "GameModeRunningGame" });
       flag = true;
+      const obj4 = require("GameModeExperiment");
     }
-    return flag;
-  });
-  obj = { enabled, promptSuppressedGameIds: null };
+  }
+  return flag;
 };
 prototype["getUserAgnosticState"] = function getUserAgnosticState() {
   return obj;
@@ -55,7 +100,13 @@ Object.defineProperty(prototype, "enabled", {
 });
 Object.defineProperty(prototype, "hasRunningGame", {
   get: function hasRunningGame() {
-    return c5;
+    return c6;
+  },
+  set: undefined
+});
+Object.defineProperty(prototype, "hasDetectedGame", {
+  get: function hasDetectedGame() {
+    return obj.hasDetectedGame;
   },
   set: undefined
 });
@@ -64,7 +115,7 @@ Object.defineProperty(prototype, "isActive", {
     const enabled = obj.enabled;
     let tmp = !enabled;
     if (enabled) {
-      tmp = !c5;
+      tmp = !c6;
     }
     let enabled2 = !tmp;
     if (!tmp) {

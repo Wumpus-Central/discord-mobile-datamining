@@ -1,8 +1,8 @@
-// === Module 7221: TieredTenureBadgeUtils ===
+// === Module 7119: TieredTenureBadgeUtils ===
 
-// Module 7221 (TieredTenureBadgeUtils)
-import _modDef4450 from "module_4450" /* 4450 */;
-import PremiumConstants from "PremiumConstants" /* 1374 */;
+// Module 7119 (TieredTenureBadgeUtils)
+import _modDef4461 from "module_4461" /* 4461 */;
+import PremiumConstants from "PremiumConstants" /* 1379 */;
 import size from "module_2" /* 2 */;
 
 ({ TENURE_BADGES: c2, TIERED_TENURE_BADGE_ORDER: c3 } = PremiumConstants);
@@ -18,13 +18,13 @@ export const getTieredTenureBadge = function getTieredTenureBadge(badgeId) {
   }
   return tmp;
 };
-export const getEarnedOnDate = function getEarnedOnDate(earnedTenureBadge, premiumSince) {
+export const getEarnedOnDate = function getEarnedOnDate(earnedOnDate2, premiumSince) {
   if (null == premiumSince) {
     return null;
-  } else if (null == dependencyMap[earnedTenureBadge]) {
+  } else if (null == dependencyMap[earnedOnDate2]) {
     return null;
   } else {
-    const obj = _modDef4450(premiumSince);
+    const obj = _modDef4461(premiumSince);
     obj.add(tmp3.tenureReqNumMonths, "months");
     obj.add(1, "days");
     return obj.toDate();
@@ -43,7 +43,7 @@ export const getEarnedTenureBadge = function getEarnedTenureBadge(premiumSince) 
           let tmp6 = dependencyMap[length[diff]];
           toDateResult = null;
           if (null != tmp6) {
-            let obj = _modDef4450(premiumSince);
+            let obj = _modDef4461(premiumSince);
             let addResult = obj.add(tmp6.tenureReqNumMonths, "months");
             let addResult1 = obj.add(1, "days");
             toDateResult = obj.toDate();

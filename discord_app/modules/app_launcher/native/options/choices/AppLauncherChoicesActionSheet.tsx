@@ -1,34 +1,22 @@
-// === Module 11858: AppLauncherChoicesActionSheet ===
+// === Module 11788: AppLauncherChoicesActionSheet ===
 
-// Module 11858 (AppLauncherChoicesActionSheet)
-import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4809 */;
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5940 */;
-import Form from "Form" /* 8239 */;
-import _mod8367 from "module_8367" /* 8367 */;
+// Module 11788 (AppLauncherChoicesActionSheet)
+import c from "c" /* 576 */;
+import nativeDefault from "native" /* 587 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5621 */;
+import _mod8371 from "module_8371" /* 8371 */;
+import Form from "Form" /* 8895 */;
 import _slicedToArray from "module_32" /* 32 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-function FlashListWrapper(scrollable) {
-  const merged = Object.assign(scrollable, Object.assign({ scrollable: 0 }));
-  const tmp3 = _mod8367;
-  if (scrollable.scrollable) {
-    const obj2 = { preserveScrollMomentum: true };
-    const merged1 = Object.assign(merged);
-    let tmp2Result = React5(tmp3.BottomSheetFlashList, obj2);
-  } else {
-    const obj = { scrollEnabled: false };
-    const merged2 = Object.assign(merged);
-    tmp2Result = React5(tmp3.FlashList, obj);
-  }
-  return tmp2Result;
-}
 const View = fn(17).View;
-const DEFAULT_CONTENT_PADDING = fn(1484).DEFAULT_CONTENT_PADDING;
+const DEFAULT_CONTENT_PADDING = fn(1489).DEFAULT_CONTENT_PADDING;
 const jsxProd = fn(21);
-({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4845);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+const createStyles = fn(4890);
 let obj2 = { listItemContainer: { overflow: "hidden" }, listItem: { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT }, firstItem: null, lastItem: null, divider: null };
 let obj3 = { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT };
 obj2.firstItem = { borderTopLeftRadius: nativeDefault.radii.xl, borderTopRightRadius: nativeDefault.radii.xl };
@@ -36,37 +24,214 @@ let obj4 = { borderTopLeftRadius: nativeDefault.radii.xl, borderTopRightRadius: 
 obj2.lastItem = { borderBottomLeftRadius: nativeDefault.radii.xl, borderBottomRightRadius: nativeDefault.radii.xl };
 let obj5 = { borderBottomLeftRadius: nativeDefault.radii.xl, borderBottomRightRadius: nativeDefault.radii.xl };
 obj2.divider = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginLeft: 16 };
-let closure_9 = createStyles.createStyles(obj2);
+let closure_11 = createStyles.createStyles(obj2);
+let ReactCompilerGating = fn(558);
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((scrollable) => {
+  const cResult = c.c(6);
+  if (cResult[0] !== scrollable) {
+    scrollable = scrollable.scrollable;
+    const tmp8 = _objectWithoutProperties(scrollable, closure_3);
+    cResult[0] = scrollable;
+    cResult[1] = tmp8;
+    cResult[2] = scrollable;
+    let tmp5 = scrollable;
+    let tmp4 = tmp8;
+  } else {
+    tmp4 = cResult[1];
+    tmp5 = cResult[2];
+  }
+  if (cResult[3] === tmp4) {
+    if (cResult[4] === tmp5) {
+      return cResult[5];
+    }
+  }
+  let obj2 = _mod8371;
+  if (tmp5) {
+    obj2 = { preserveScrollMomentum: true };
+    const merged = Object.assign(tmp4);
+    let tmp9Result = options(obj2.BottomSheetFlashList, obj2);
+  } else {
+    const obj3 = { scrollEnabled: false };
+    const merged1 = Object.assign(tmp4);
+    tmp9Result = options(obj2.FlashList, obj3);
+  }
+  cResult[3] = tmp4;
+  cResult[4] = tmp5;
+  cResult[5] = tmp9Result;
+}) : ((scrollable) => {
+  const merged = Object.assign(scrollable, Object.assign({ scrollable: 0 }));
+  const tmp3 = _mod8371;
+  if (scrollable.scrollable) {
+    const obj2 = { preserveScrollMomentum: true };
+    const merged1 = Object.assign(merged);
+    let tmp2Result = options(tmp3.BottomSheetFlashList, obj2);
+  } else {
+    const obj = { scrollEnabled: false };
+    const merged2 = Object.assign(merged);
+    tmp2Result = options(tmp3.FlashList, obj);
+  }
+  return tmp2Result;
+});
+ReactCompilerGating = fn(558);
+let obj6 = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginLeft: 16 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/options/choices/AppLauncherChoicesActionSheet.tsx");
 
-export default function AppLauncherChoicesActionSheet(option) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((option) => {
+  const cResult = option(576).c(32);
   option = option.option;
   const onChoiceSelect = option.onChoiceSelect;
-  let data;
+  const tmp4 = closure_11();
+  dependencyMap = tmp4;
+  const bottom = onChoiceSelect(1618)().bottom;
+  if (cResult[0] !== bottom) {
+    let sum = bottom;
+    if (!tmpResult.isIOS()) {
+      sum = bottom + DEFAULT_CONTENT_PADDING;
+    }
+    cResult[0] = bottom;
+    cResult[1] = sum;
+    tmpResult = tmp(1369);
+  }
+  if (cResult[2] !== option.choices) {
+    const fn = function f() {
+      let choices = option.choices;
+      if (choices == null) {
+        choices = [];
+      }
+      return choices.map((choice, originalIndex) => ({ choice, originalIndex }));
+    };
+    cResult[2] = option.choices;
+    cResult[3] = fn;
+    let tmp8 = fn;
+  } else {
+    tmp8 = cResult[3];
+  }
+  [first, _slicedToArray] = noop.useState(tmp8);
+  [first1, noop] = noop.useState(option.initChoiceIndex);
+  if (cResult[4] !== option.choices) {
+    class A {
+      constructor(arg0) {
+        obj = closure_1(closure_2[13]);
+        obj1 = { query: option, choices: null, limit: null };
+        choices = option.choices;
+        if (choices == null) {
+          choices = [];
+        }
+        obj1.choices = choices;
+        tmp = closure_4(obj.queryChoice(obj1));
+        return;
+      }
+    }
+    cResult[4] = option.choices;
+    cResult[5] = A;
+  } else {
+    class A {
+      constructor(arg0) {
+        obj = closure_1(closure_2[13]);
+        obj1 = { query: option, choices: null, limit: null };
+        choices = option.choices;
+        if (choices == null) {
+          choices = [];
+        }
+        obj1.choices = choices;
+        tmp = closure_4(obj.queryChoice(obj1));
+        return;
+      }
+    }
+  }
+  if (cResult[6] === first) {
+    class A {
+      constructor(arg0) {
+        obj = closure_1(closure_2[13]);
+        obj1 = { query: option, choices: null, limit: null };
+        choices = option.choices;
+        if (choices == null) {
+          choices = [];
+        }
+        obj1.choices = choices;
+        tmp = closure_4(obj.queryChoice(obj1));
+        return;
+      }
+    }
+  }
+  class N {
+    constructor(arg0) {
+      item = option.item;
+      index = option.index;
+      lastItem = null != closure_3;
+      if (lastItem) {
+        num = 1;
+        lastItem = index === closure_3.length - 1;
+      }
+      tmp2 = closure_1_9;
+      tmp4 = closure_2;
+      items = [, , ];
+      items[0] = closure_2.listItemContainer;
+      firstItem = 0 === index;
+      tmp = closure_5;
+      tmp3 = closure_1_7;
+      if (firstItem) {
+        firstItem = tmp4.firstItem;
+      }
+      items[1] = firstItem;
+      if (lastItem) {
+        lastItem = tmp4.lastItem;
+      }
+      obj = { style: items, children: null };
+      items[2] = lastItem;
+      tmp5 = tmp === item.originalIndex;
+      obj1 = {
+        style: null,
+        label: item.choice.displayName,
+        align: "right",
+        selected: tmp5,
+        onPress() {
+              closure_6(item.originalIndex);
+              onChoiceSelect(item.choice, item.originalIndex);
+              ActionSheetActionCreatorsDefault.hideActionSheet();
+            }
+      };
+      items1 = [];
+      items1[0] = tmp4.listItem;
+      obj1.style = items1;
+      obj.children = tmp2(option(closure_2[14]).FormRadioRow, obj1);
+      return tmp2(tmp3, obj);
+    }
+  }
+  cResult[6] = first;
+  cResult[7] = onChoiceSelect;
+  cResult[8] = first1;
+  cResult[9] = tmp4.firstItem;
+  cResult[10] = tmp4.lastItem;
+  cResult[11] = tmp4.listItem;
+  cResult[12] = tmp4.listItemContainer;
+  cResult[13] = N;
+  let obj = option(576);
+  tmp = option;
+}) : ((option) => {
+  option = option.option;
+  const onChoiceSelect = option.onChoiceSelect;
+  data = undefined;
+  _slicedToArray = undefined;
+  first1 = undefined;
   noop = undefined;
-  let first1;
-  closure_6 = undefined;
   ({ initChoiceIndex, onDismiss } = option);
-  const tmp = closure_9();
+  const tmp = closure_11();
   dependencyMap = tmp;
-  const bottom = onChoiceSelect(1613)().bottom;
+  const bottom = onChoiceSelect(1618)().bottom;
   let sum = bottom;
   if (!obj.isIOS()) {
-    sum = bottom + closure_6;
+    sum = bottom + DEFAULT_CONTENT_PADDING;
   }
-  const tmp6 = data(noop.useState(() => {
+  [data, _slicedToArray] = noop.useState(() => {
     let choices = option.choices;
     if (choices == null) {
       choices = [];
     }
     return choices.map((choice, originalIndex) => ({ choice, originalIndex }));
-  }), 2);
-  data = tmp6[0];
-  noop = tmp6[1];
-  const tmp7 = data(noop.useState(initChoiceIndex), 2);
-  first1 = tmp7[0];
-  closure_6 = tmp7[1];
+  });
+  [first1, noop] = noop.useState(initChoiceIndex);
   let items = [option.choices];
   let items1 = [onChoiceSelect, first1, tmp, data];
   const callback = noop.useCallback((query) => {
@@ -110,14 +275,14 @@ export default function AppLauncherChoicesActionSheet(option) {
     };
     const items1 = [closure_2.listItem];
     obj2.style = items1;
-    obj.children = closure_1_7(option(closure_2[11]).FormRadioRow, obj2);
-    return closure_1_7(first1, obj);
+    obj.children = closure_1_9(option(closure_2[14]).FormRadioRow, obj2);
+    return closure_1_9(View, obj);
   }, items1);
-  const callback2 = noop.useCallback(() => React5(Form.FormDivider, { style: closure_2.divider }), items2);
+  const callback2 = noop.useCallback(() => options(Form.FormDivider, { style: closure_2.divider }), items2);
   let tmp13 = null != option.choices;
   if (tmp13) {
     let choices = option.choices;
-    let length;
+    length = undefined;
     if (choices != null) {
       length = choices.length;
     }
@@ -131,11 +296,11 @@ export default function AppLauncherChoicesActionSheet(option) {
   let tmp16 = tmp13;
   if (tmp13) {
     const obj3 = { onChange: callback };
-    tmp16 = closure_7(tmp3(11860).AppLauncherListSearchBar, obj3);
+    tmp16 = closure_9(tmp3(11789).AppLauncherListSearchBar, obj3);
   }
   const items3 = [tmp16, ];
   if (0 === data.length) {
-    let tmp20 = closure_7(tmp3(11860).AppLauncherListEmptyState, {});
+    let tmp20 = closure_9(tmp3(11789).AppLauncherListEmptyState, {});
   } else {
     const obj4 = { scrollable: tmp13, contentContainerStyle: null, scrollIndicatorInsets: null, keyExtractor: null, data: null, renderItem: null, ItemSeparatorComponent: null, accessibilityRole: "radiogroup" };
     const obj5 = { paddingBottom: sum };
@@ -148,9 +313,9 @@ export default function AppLauncherChoicesActionSheet(option) {
     obj4.data = data;
     obj4.renderItem = callback1;
     obj4.ItemSeparatorComponent = callback2;
-    tmp20 = closure_7(FlashListWrapper, obj4);
+    tmp20 = closure_9(closure_12, obj4);
   }
   items3[1] = tmp20;
   obj2.children = items3;
-  return closure_8(option(11859).AppLauncherCommandOptionActionSheet, obj2);
-};
+  return closure_10(option(11791).AppLauncherCommandOptionActionSheet, obj2);
+});

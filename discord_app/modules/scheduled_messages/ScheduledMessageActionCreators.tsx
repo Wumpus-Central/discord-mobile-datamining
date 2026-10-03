@@ -1,8 +1,8 @@
-// === Module 7438: ScheduledMessageActionCreators ===
+// === Module 7474: ScheduledMessageActionCreators ===
 
-// Module 7438 (ScheduledMessageActionCreators)
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import HTTPUtils from "HTTPUtils" /* 1271 */;
+// Module 7474 (ScheduledMessageActionCreators)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -18,7 +18,7 @@ let closure_8 = async function _createScheduledMessage(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -42,7 +42,7 @@ let closure_8 = async function _createScheduledMessage(arg0) {
           closure_131_4 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "flex", done: null };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -131,7 +131,7 @@ let closure_9 = async function _updateScheduledMessage(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -160,7 +160,7 @@ let closure_9 = async function _updateScheduledMessage(arg0) {
           closure_131_9 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "flex", done: null };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -236,7 +236,7 @@ let closure_9 = async function _updateScheduledMessage(arg0) {
         obj.dispatch(obj13);
         c6 = 0;
         c8 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp63) {
       closure_5 = tmp63;
@@ -264,7 +264,7 @@ let closure_10 = async function _deleteScheduledMessage() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -324,7 +324,7 @@ let closure_10 = async function _deleteScheduledMessage() {
           closure_131_1(closure_131_2[4]).dispatch(obj11);
           c5 = 0;
           c7 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp39) {
         closure_4 = tmp39;
@@ -353,7 +353,7 @@ let closure_11 = async function _sendScheduledMessageNow() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -413,7 +413,7 @@ let closure_11 = async function _sendScheduledMessageNow() {
           closure_131_1(closure_131_2[4]).dispatch(obj11);
           c5 = 0;
           c7 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp39) {
         closure_4 = tmp39;
@@ -468,9 +468,9 @@ let closure_13 = async function _fetchScheduledMessages() {
   }
   return value;
 };
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ Endpoints: hasOwnProperty, MessageFlags: metroRequire } = Constants);
-const ContentDismissActionType = fn(2041).ContentDismissActionType;
+const ContentDismissActionType = fn(2048).ContentDismissActionType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/scheduled_messages/ScheduledMessageActionCreators.tsx");
 

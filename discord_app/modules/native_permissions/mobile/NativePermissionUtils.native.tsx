@@ -1,17 +1,18 @@
-// === Module 5644: mobile/NativePermissionUtils ===
+// === Module 7281: mobile/NativePermissionUtils ===
 
-// Module 5644 (mobile/NativePermissionUtils)
+// Module 7281 (mobile/NativePermissionUtils)
 import LoggerDefault from "Logger" /* 3 */;
-import util from "util" /* 1115 */;
-import useAlertStore from "useAlertStore" /* 5389 */;
-import openPrivacySettingsDefault from "openPrivacySettings" /* 5645 */;
+import util from "util" /* 1126 */;
+import useAlertStore from "useAlertStore" /* 5709 */;
+import openPrivacySettingsDefault from "openPrivacySettings" /* 7283 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
+import NativePermissionManagerModule_mod from "NativePermissionManagerModule" /* 7282 */;
 
 require = fn;
 function combineStatuses() {
   const self = this;
-  const apply = closure_9.apply;
+  const apply = closure_8.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -19,7 +20,7 @@ function combineStatuses() {
   }
   return applyArgumentsResult;
 }
-let closure_9 = async function _combineStatuses(arg0) {
+let closure_8 = async function _combineStatuses(arg0) {
   dependencyMap = arg0;
   c7 = 0;
   c8 = 0;
@@ -35,7 +36,7 @@ let closure_9 = async function _combineStatuses(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       while (true) {
@@ -71,7 +72,7 @@ let closure_9 = async function _combineStatuses(arg0) {
           return obj4;
         } else {
           closure_131_1 = value;
-          if (closure_131_1 !== closure_132_6.AUTHORIZED) {
+          if (closure_131_1 !== closure_132_5.AUTHORIZED) {
             c6 = 0;
             let tmp11 = closure_131_1;
             closure_1.return();
@@ -84,7 +85,7 @@ let closure_9 = async function _combineStatuses(arg0) {
         }
         if (closure_1 === undefined) {
           c8 = 3;
-          let obj5 = { value: closure_132_6.AUTHORIZED, done: true };
+          let obj5 = { value: closure_132_5.AUTHORIZED, done: true };
           return obj5;
         } else {
           c6 = 1;
@@ -98,50 +99,48 @@ let closure_9 = async function _combineStatuses(arg0) {
     }
   })();
 };
-get_ActivityIndicator = fn(17);
-const NativeModules = get_ActivityIndicator.NativeModules;
-const NativePermissionConstants = fn(5054);
-({ NativePermissionTypes, NativePermissionStatus: metroRequire } = NativePermissionConstants);
+const NativePermissionConstants = fn(5099);
+({ NativePermissionTypes, NativePermissionStatus: hasOwnProperty } = NativePermissionConstants);
 const jsx = fn(21).jsx;
-let PlatformUtils = fn(1364);
+let PlatformUtils = fn(1369);
 PlatformUtils = PlatformUtils.isAndroid();
 if (PlatformUtils) {
-  PlatformUtils = get_ActivityIndicator.Platform.constants.Version <= 28;
+  PlatformUtils = fn(17).Platform.constants.Version <= 28;
 }
-let MetaQuestUtils = fn(1610);
+let MetaQuestUtils = fn(1615);
 MetaQuestUtils = MetaQuestUtils.isMetaQuest();
 if (PlatformUtils) {
-  let items = [NativeModules.NativePermissionManager.requestExternalStorageAuthorization];
+  let items = [NativePermissionManagerModule.requestExternalStorageAuthorization];
   let items1 = items;
 } else {
   items1 = [];
 }
 const items2 = [...items1];
-const NativePermissionManager = NativeModules.NativePermissionManager;
+let NativePermissionManagerModule = NativePermissionManagerModule_mod;
 if (MetaQuestUtils) {
-  const items3 = [NativePermissionManager.requestAvatarCameraAuthorization];
+  const items3 = [NativePermissionManagerModule.requestAvatarCameraAuthorization];
   let items4 = items3;
 } else {
-  items4 = [NativePermissionManager.requestCameraAuthorization];
+  items4 = [NativePermissionManagerModule.requestCameraAuthorization];
 }
-HermesBuiltin.arraySpread(items4, tmp6);
+HermesBuiltin.arraySpread(items4, tmp5);
 if (PlatformUtils) {
-  const items5 = [NativeModules.NativePermissionManager.hasExternalStorageAuthorization];
+  const items5 = [NativePermissionManagerModule.hasExternalStorageAuthorization];
   let items6 = items5;
 } else {
   items6 = [];
 }
 const items7 = [...items6];
-const NativePermissionManager2 = NativeModules.NativePermissionManager;
+let NativePermissionManagerModule = NativePermissionManagerModule_mod;
 if (MetaQuestUtils) {
-  const items8 = [NativePermissionManager2.hasAvatarCameraAuthorization];
+  const items8 = [NativePermissionManagerModule.hasAvatarCameraAuthorization];
   let items9 = items8;
 } else {
-  items9 = [NativePermissionManager2.hasCameraAuthorization];
+  items9 = [NativePermissionManagerModule.hasCameraAuthorization];
 }
 HermesBuiltin.arraySpread(items9, tmp8);
 let NativePermissionIOSUtils;
-const NativePermissionBaseUtils = fn(5641).NativePermissionBaseUtils;
+const NativePermissionBaseUtils = fn(7278).NativePermissionBaseUtils;
 class NativePermissionIOSUtils extends NativePermissionBaseUtils {
 }
 const prototype = NativePermissionIOSUtils.prototype;
@@ -172,7 +171,7 @@ prototype["openSettings"] = function openSettings() {
 };
 prototype["openAlertModal"] = function openAlertModal(arg0) {
   ({ body, onConfirm } = arg0);
-  const lazyResult = noop.lazy(() => require("asyncRequireImpl")(paths[10], paths.paths));
+  const lazyResult = noop.lazy(() => require("asyncRequireImpl")(paths[11], paths.paths));
   const obj2 = { title: null, body: null, onConfirm: null };
   const intl = util.intl;
   obj2.title = intl.string(util.t.sMFVrS);
@@ -180,32 +179,34 @@ prototype["openAlertModal"] = function openAlertModal(arg0) {
   obj2.onConfirm = onConfirm;
   useAlertStore.openAlert("permission-denied", <lazyResult title={null} body={null} onConfirm={null} />);
 };
-let obj3 = { [NativePermissionTypes.CAMERA]: () => combineStatuses(items2), [NativePermissionTypes.HEADSET_CAMERA]: NativeModules.NativePermissionManager.requestHeadsetCameraAuthorization };
-PlatformUtils = fn(1364);
+let obj3 = { [NativePermissionTypes.CAMERA]: () => combineStatuses(items2), [HEADSET_CAMERA]: NativePermissionManagerModule.requestHeadsetCameraAuthorization };
+({ HEADSET_CAMERA, AUDIO } = NativePermissionTypes);
+PlatformUtils = fn(1369);
 if (PlatformUtils.isAndroid()) {
   fn = () => {
-    const items = [NativeModules.NativePermissionManager.requestMicrophoneAuthorization, NativeModules.NativePermissionManager.requestModifyAudioAuthorization];
+    const items = [NativePermissionManagerModule.requestMicrophoneAuthorization, NativePermissionManagerModule.requestModifyAudioAuthorization];
     return combineStatuses(items);
   };
 } else {
-  fn = NativeModules.NativePermissionManager.requestMicrophoneAuthorization;
+  fn = NativePermissionManagerModule.requestMicrophoneAuthorization;
 }
-obj3[NativePermissionTypes.AUDIO] = fn;
-obj3[NativePermissionTypes.PHOTOS] = NativeModules.NativePermissionManager.requestPhotoAuthorization;
-obj3[NativePermissionTypes.CONTACTS] = NativeModules.NativePermissionManager.requestContactsAuthorization;
+obj3[AUDIO] = fn;
+obj3[NativePermissionTypes.PHOTOS] = NativePermissionManagerModule.requestPhotoAuthorization;
+obj3[NativePermissionTypes.CONTACTS] = NativePermissionManagerModule.requestContactsAuthorization;
 obj3[NativePermissionTypes.INPUT_MONITORING] = () => Promise.resolve(constants.AUTHORIZED);
 NativePermissionIOSUtils.requestPermissionLookup = obj3;
-let obj5 = { [NativePermissionTypes.CAMERA]: () => combineStatuses(items7), [NativePermissionTypes.HEADSET_CAMERA]: NativeModules.NativePermissionManager.hasHeadsetCameraAuthorization };
-PlatformUtils = fn(1364);
+let obj5 = { [NativePermissionTypes.CAMERA]: () => combineStatuses(items7), [HEADSET_CAMERA2]: NativePermissionManagerModule.hasHeadsetCameraAuthorization };
+({ HEADSET_CAMERA: HEADSET_CAMERA2, AUDIO: AUDIO2 } = NativePermissionTypes);
+PlatformUtils = fn(1369);
 if (PlatformUtils.isAndroid()) {
   let fn2 = () => {
-    const items = [NativeModules.NativePermissionManager.hasMicrophoneAuthorization, NativeModules.NativePermissionManager.hasModifyAudioAuthorization];
+    const items = [NativePermissionManagerModule.hasMicrophoneAuthorization, NativePermissionManagerModule.hasModifyAudioAuthorization];
     return combineStatuses(items);
   };
 } else {
-  fn2 = NativeModules.NativePermissionManager.hasMicrophoneAuthorization;
+  fn2 = NativePermissionManagerModule.hasMicrophoneAuthorization;
 }
-obj5[NativePermissionTypes.AUDIO] = fn2;
+obj5[AUDIO2] = fn2;
 obj5[NativePermissionTypes.INPUT_MONITORING] = () => Promise.resolve(constants.AUTHORIZED);
 NativePermissionIOSUtils.hasPermissionLookup = obj5;
 const nativePermissionIOSUtils = new NativePermissionIOSUtils();

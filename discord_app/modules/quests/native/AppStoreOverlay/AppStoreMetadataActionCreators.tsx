@@ -1,16 +1,16 @@
 // === Module 10921: AppStoreMetadataActionCreators ===
 
 // Module 10921 (AppStoreMetadataActionCreators)
-import DurationsDefault from "Durations" /* 1091 */;
+import DurationsDefault from "Durations" /* 1102 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import Dispatcher from "Dispatcher" /* 573 */;
+import Dispatcher from "Dispatcher" /* 584 */;
 
 const require = fn;
 function clearRetryState(arg0) {
   map2.delete(arg0);
   map3.delete(arg0);
 }
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 let closure_5 = 10 * DurationsDefault.Millis.SECOND;
 let closure_6 = 5 * DurationsDefault.Millis.MINUTE;
 const map = new Map();
@@ -39,7 +39,7 @@ export const fetchAppStoreMetadata = function fetchAppStoreMetadata(os) {
     }
     return Promise.resolve(value);
   } else {
-    const value3 = map1.get(combined);
+    value3 = map1.get(combined);
     if (null != value3) {
       return value3;
     } else {
@@ -61,7 +61,7 @@ export const fetchAppStoreMetadata = function fetchAppStoreMetadata(os) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {

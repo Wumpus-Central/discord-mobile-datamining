@@ -1,9 +1,9 @@
-// === Module 8003: BlockedDomainStore ===
+// === Module 8048: BlockedDomainStore ===
 
-// Module 8003 (BlockedDomainStore)
-import Constants from "Constants" /* 1074 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import js_shim_shim from "js_shim/shim" /* 1350 */;
+// Module 8048 (BlockedDomainStore)
+import js_shim_shim from "js_shim/shim" /* 562 */;
+import Constants from "Constants" /* 1085 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

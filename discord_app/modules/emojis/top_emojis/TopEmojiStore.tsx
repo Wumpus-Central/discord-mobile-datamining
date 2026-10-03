@@ -1,8 +1,8 @@
-// === Module 5960: TopEmojiStore ===
+// === Module 5641: TopEmojiStore ===
 
-// Module 5960 (TopEmojiStore)
+// Module 5641 (TopEmojiStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
 
 const obj = { topEmojisByGuildId: {} };
 let closure_1 = obj;

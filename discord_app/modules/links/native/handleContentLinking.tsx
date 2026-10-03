@@ -1,6 +1,6 @@
-// === Module 11288: handleContentLinking ===
+// === Module 11202: handleContentLinking ===
 
-// Module 11288 (handleContentLinking)
+// Module 11202 (handleContentLinking)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -15,7 +15,7 @@ let closure_7 = async function _handleContentLinking(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -45,7 +45,7 @@ let closure_7 = async function _handleContentLinking(arg0) {
           let skipMessageFetch;
           c3 = 1;
           c4 = 1;
-          return { value: "flex", done: null };
+          return { value: "Reflect", done: true };
         }
       } else {
         if (1 === tmp5) {
@@ -122,7 +122,7 @@ let closure_7 = async function _handleContentLinking(arg0) {
             const obj5 = closure_130_1(closure_130_2[6]);
           }
           c4 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
         if (safe) {
           const obj9 = { navigationReplace: closure_129_7, openChannel: true, skipMessageFetch };
@@ -142,8 +142,8 @@ let closure_7 = async function _handleContentLinking(arg0) {
     }
   }
 };
-fn(6055).addPostConnectionCallback;
-const Routes = fn(1074).Routes;
+fn(5948).addPostConnectionCallback;
+const Routes = fn(1085).Routes;
 let c6 = null;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/links/native/handleContentLinking.tsx");

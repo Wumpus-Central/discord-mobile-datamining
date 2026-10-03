@@ -1,6 +1,6 @@
-// === Module 1392: DisplayNameFont ===
+// === Module 1397: DisplayNameFont ===
 
-// Module 1392 (DisplayNameFont)
+// Module 1397 (DisplayNameFont)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/DisplayNameFont.tsx");

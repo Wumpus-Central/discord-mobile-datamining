@@ -1,12 +1,12 @@
-// === Module 17944: LibdiscoreExperimentManager ===
+// === Module 18030: LibdiscoreExperimentManager ===
 
-// Module 17944 (LibdiscoreExperimentManager)
-import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
-import js_shim_shim from "js_shim/shim" /* 1350 */;
-import ApexExperiment from "ApexExperiment" /* 1435 */;
-import libdiscoreExperiments from "libdiscoreExperiments" /* 2070 */;
-import ApexExperimentStore from "ApexExperimentStore" /* 1235 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6725 */;
+// Module 18030 (LibdiscoreExperimentManager)
+import libdiscoreExperiments from "libdiscoreExperiments" /* 559 */;
+import js_shim_shim from "js_shim/shim" /* 562 */;
+import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
+import ApexExperiment from "ApexExperiment" /* 1440 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
 
 require = fn;
 function experimentStoreUpdateHandler() {
@@ -15,14 +15,16 @@ function experimentStoreUpdateHandler() {
       obj2 = {};
       const ALL_LIBDISCORE_EXPERIMENTS = libdiscoreExperiments.ALL_LIBDISCORE_EXPERIMENTS;
       for (const item10018 of ALL_LIBDISCORE_EXPERIMENTS) {
-        obj2[item10018.id] = item10018.getCurrentConfig();
+        let currentConfig = item10018.getCurrentConfig({ autoTrackExposure: false });
+        obj2[item10018.id] = currentConfig;
+        let result = item10018.trackExposureIfCachedConfigMatches(currentConfig);
         continue;
       }
-      let tmp7 = null != obj2;
-      if (tmp7) {
-        tmp7 = discord_common_shallowEqualDefault(obj2, obj2);
+      let tmp9 = null != obj2;
+      if (tmp9) {
+        tmp9 = discord_common_shallowEqualDefault(obj2, obj2);
       }
-      if (!tmp7) {
+      if (!tmp9) {
         const experimentCacher = js_shim_shim.getExperimentCacher();
         const _JSON = JSON;
         experimentCacher.flushToCache(JSON.stringify(obj2));
@@ -60,6 +62,6 @@ prototype["_terminate"] = function _terminate() {
 };
 const libdiscoreExperimentManager = new LibdiscoreExperimentManager();
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/libdiscore/LibdiscoreExperimentManager.tsx");
+let result = size.fileFinishedImporting("modules/libdiscore/LibdiscoreExperimentManager.tsx");
 
 export default libdiscoreExperimentManager;

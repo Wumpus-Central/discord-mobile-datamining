@@ -1,13 +1,13 @@
-// === Module 12044: SearchFetcher ===
+// === Module 12001: SearchFetcher ===
 
-// Module 12044 (SearchFetcher)
-import HTTPUtils from "HTTPUtils" /* 1271 */;
-import _modDef1473 from "module_1473" /* 1473 */;
+// Module 12001 (SearchFetcher)
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import _modDef1478 from "module_1478" /* 1478 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
 
 require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ SearchTypes: hasOwnProperty, Endpoints: metroRequire } = Constants);
 class SearchFetcher {
   constructor(arg0, arg1, arg2) {
@@ -35,7 +35,7 @@ prototype["fetch"] = function fetch(arg0, arg1, arg2) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -80,7 +80,7 @@ prototype["fetch"] = function fetch(arg0, arg1, arg2) {
             if (null == closure_129_0) {
               c4 = 0;
               c6 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             } else if (!closure_130_3.isCanceled) {
               if (200 === closure_129_0.status) {
                 closure_130_0(closure_129_0);
@@ -94,7 +94,7 @@ prototype["fetch"] = function fetch(arg0, arg1, arg2) {
                 if (closure_130_3.query.attempts > 5) {
                   c4 = 0;
                   c6 = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 } else {
                   const _parseInt = parseInt;
                   closure_129_1 = parseInt(closure_129_0.headers["retry-after"]);
@@ -116,7 +116,7 @@ prototype["fetch"] = function fetch(arg0, arg1, arg2) {
           }
           c4 = 0;
           c6 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
         c6 = 3;
       } catch (tmp49) {
@@ -192,7 +192,7 @@ prototype2["makeRequest"] = function makeRequest(rejectWithError) {
   value = null;
   if (null != endpoint) {
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: endpoint, query: _modDef1473.stringify(this.query), oldFormErrors: true, rejectWithError: rejectWithError.rejectWithError };
+    const request = { url: endpoint, query: _modDef1478.stringify(this.query), oldFormErrors: true, rejectWithError: rejectWithError.rejectWithError };
     value = HTTP.get(request);
   }
   return value;

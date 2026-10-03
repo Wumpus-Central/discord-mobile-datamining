@@ -1,7 +1,7 @@
-// === Module 11825: getApplicationInstallURL ===
+// === Module 11756: getApplicationInstallURL ===
 
-// Module 11825 (getApplicationInstallURL)
-import Constants from "Constants" /* 1074 */;
+// Module 11756 (getApplicationInstallURL)
+import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
 const Routes = Constants.Routes;

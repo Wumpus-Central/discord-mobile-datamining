@@ -1,10 +1,10 @@
-// === Module 4862: GameConsoleStore ===
+// === Module 4907: GameConsoleStore ===
 
-// Module 4862 (GameConsoleStore)
+// Module 4907 (GameConsoleStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import SessionsStore from "SessionsStore" /* 4863 */;
-import VoiceStateStore from "VoiceStateStore" /* 4864 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import SessionsStore from "SessionsStore" /* 4908 */;
+import VoiceStateStore from "VoiceStateStore" /* 4909 */;
 
 let c2 = null;
 let obj = null;
@@ -22,15 +22,15 @@ prototype["initialize"] = function initialize(lastSelectedDeviceByPlatform) {
 prototype["getUserAgnosticState"] = function getUserAgnosticState() {
   return { lastSelectedDeviceByPlatform: obj2 };
 };
-prototype["getDevicesForPlatform"] = function getDevicesForPlatform(require) {
-  let tmp = dependencyMap[require];
+prototype["getDevicesForPlatform"] = function getDevicesForPlatform(_require) {
+  let tmp = dependencyMap[_require];
   if (tmp == null) {
     tmp = closure_8;
   }
   return tmp;
 };
-prototype["getLastSelectedDeviceByPlatform"] = function getLastSelectedDeviceByPlatform(require) {
-  return obj2[require];
+prototype["getLastSelectedDeviceByPlatform"] = function getLastSelectedDeviceByPlatform(_require) {
+  return obj2[_require];
 };
 prototype["getDevice"] = function getDevice(arg0, arg1) {
   let tmp2;
@@ -39,8 +39,8 @@ prototype["getDevice"] = function getDevice(arg0, arg1) {
   }
   return tmp2;
 };
-prototype["getFetchingDevices"] = function getFetchingDevices(require) {
-  return set1.has(require);
+prototype["getFetchingDevices"] = function getFetchingDevices(_require) {
+  return set1.has(_require);
 };
 prototype["getPendingDeviceCommands"] = function getPendingDeviceCommands() {
   return set;

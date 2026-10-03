@@ -1,16 +1,16 @@
-// === Module 5384: DraftStore ===
+// === Module 7031: DraftStore ===
 
-// Module 5384 (DraftStore)
+// Module 7031 (DraftStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import GlobalUtils from "GlobalUtils" /* 1370 */;
-import DraftCommand from "DraftCommand" /* 5386 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import GlobalUtils from "GlobalUtils" /* 1375 */;
+import DraftCommand from "DraftCommand" /* 7032 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5385 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5618 */;
 
 require = fn;
 function handleChanged(type) {
@@ -136,7 +136,7 @@ function handleChannelDelete(arg0) {
   }
   return false;
 }
-let closure_7 = fn(1074).MAX_MESSAGE_LENGTH_PREMIUM + 500;
+let closure_7 = fn(1085).MAX_MESSAGE_LENGTH_PREMIUM + 500;
 const DraftType = { ChannelMessage: 0, [0]: "ChannelMessage", ThreadSettings: 1, [1]: "ThreadSettings", FirstThreadMessage: 2, [2]: "FirstThreadMessage", ApplicationLauncherCommand: 3, [3]: "ApplicationLauncherCommand", Poll: 4, [4]: "Poll", SlashCommand: 5, [5]: "SlashCommand", ForwardContextMessage: 6, [6]: "ForwardContextMessage", InteractionModal: 7, [7]: "InteractionModal", ScheduledMessage: 8, [8]: "ScheduledMessage" };
 const dependencyMap = {};
 const PersistedStore = initializeDefault.PersistedStore;
@@ -293,8 +293,8 @@ prototype["getDraftCommand"] = function getDraftCommand(id, ChannelMessage) {
     return command;
   }
 };
-prototype["getThreadSettings"] = function getThreadSettings(channelId) {
-  const id = AuthenticationStore.getId();
+prototype["getThreadSettings"] = function getThreadSettings(id) {
+  id = AuthenticationStore.getId();
   if (null == id) {
     return null;
   } else {
@@ -305,7 +305,7 @@ prototype["getThreadSettings"] = function getThreadSettings(channelId) {
       tmp3 = obj;
     }
     let tmp7 = null;
-    if (null != tmp3[channelId]) {
+    if (null != tmp3[id]) {
       tmp7 = tmp6[obj.ThreadSettings];
     }
     return tmp7;

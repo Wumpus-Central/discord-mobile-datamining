@@ -1,18 +1,19 @@
-// === Module 9744: isChannelFocused ===
+// === Module 11825: isChannelFocused ===
 
-// Module 9744 (isChannelFocused)
-import RootNavigationRef from "RootNavigationRef" /* 4722 */;
-import getInitialNavigationStateDefault from "getInitialNavigationState" /* 4723 */;
-import useChatLayout from "useChatLayout" /* 4724 */;
+// Module 11825 (isChannelFocused)
+import RootNavigationRef from "RootNavigationRef" /* 4737 */;
+import getInitialNavigationStateDefault from "getInitialNavigationState" /* 4738 */;
+import useChatLayout from "useChatLayout" /* 4739 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4861 */;
-import NavigationHistoryStore from "NavigationHistoryStore" /* 6933 */;
-import VoicePanelStore from "VoicePanelStore" /* 5053 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4906 */;
+import NavigationHistoryStore from "NavigationHistoryStore" /* 6831 */;
+import VoicePanelStore from "VoicePanelStore" /* 5098 */;
 
+const require = globalThis.__r;
 const useChatLayoutDefault = useChatLayout;
 
-const NavigationRouteUtils = params(4721);
+const NavigationRouteUtils = params(4736);
 require = fn;
 function getFocusedChannelId() {
   let params = require;
@@ -67,7 +68,7 @@ function getFocusedChannelId() {
     } else {
       routes2 = NavigationRouteUtils;
       if (!isChatLockedOpen) {
-        const state = num2.state;
+        state = num2.state;
         let tmp10;
         if (state != tmp2) {
           const routes3 = state.routes;
@@ -143,16 +144,75 @@ function getFocusedChannelId() {
     }
   }
 }
-const CHANNEL_PREFIX = fn(6933).CHANNEL_PREFIX;
+const CHANNEL_PREFIX = fn(6831).CHANNEL_PREFIX;
 let c9 = null;
+const ReactCompilerGating = fn(558);
+function isChannelFocused() {
+  return null != getFocusedChannelId();
+}
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/panels/isChannelFocused.native.tsx");
 
 export { getFocusedChannelId };
-export const isChannelFocused = function isChannelFocused() {
-  return null != getFocusedChannelId();
-};
-export const useIsChannelFocused = function useIsChannelFocused() {
+export { isChannelFocused };
+export const useIsChannelFocused = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = require("c").c(6);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const fn = function u() {
+      return null != getFocusedChannelId();
+    };
+    cResult[0] = fn;
+    let first = fn;
+  } else {
+    first = cResult[0];
+  }
+  const tmp4 = _slicedToArray(noop.useState(first), 2);
+  _require = tmp4[1];
+  const tmp5 = useChatLayoutDefault();
+  if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
+    const fn2 = function o() {
+      closure_0(null != getFocusedChannelId());
+    };
+    cResult[1] = fn2;
+    let tmp6 = fn2;
+  } else {
+    tmp6 = cResult[1];
+  }
+  if (cResult[2] !== tmp5) {
+    const items = [tmp5];
+    cResult[2] = tmp5;
+    cResult[3] = items;
+    let tmp7 = items;
+  } else {
+    tmp7 = cResult[3];
+  }
+  const effect = noop.useEffect(tmp6, tmp7);
+  if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+    const fn3 = function c() {
+      const rootNavigationRef = closure_0(dependencyMap[7]).getRootNavigationRef();
+      if (null != rootNavigationRef) {
+        function handleStateChange() {
+          rootNavigationRef(null != getFocusedChannelId());
+        }
+        rootNavigationRef.addListener("state", handleStateChange);
+        return () => {
+          rootNavigationRef.removeListener("state", handleStateChange);
+        };
+      }
+      const obj = closure_0(dependencyMap[7]);
+    };
+    const items1 = [];
+    cResult[4] = fn3;
+    cResult[5] = items1;
+    let tmp10 = items1;
+    let tmp9 = fn3;
+  } else {
+    tmp9 = cResult[4];
+    tmp10 = cResult[5];
+  }
+  const effect1 = noop.useEffect(tmp9, tmp10);
+  return tmp4[0];
+}) : (() => {
   const tmp = _slicedToArray(noop.useState(() => null != getFocusedChannelId()), 2);
   closure_0 = tmp[1];
   const items = [useChatLayoutDefault()];
@@ -173,12 +233,12 @@ export const useIsChannelFocused = function useIsChannelFocused() {
     const obj = closure_0(dependencyMap[7]);
   }, []);
   return tmp[0];
-};
+});
 export const isChannelFocusedForReadStateAck = function isChannelFocusedForReadStateAck(channelId, arg1) {
   if (ChannelRTCStore.getChatOpen(channelId)) {
     return true;
   } else {
-    const state = VoicePanelStore.getState();
+    state = VoicePanelStore.getState();
     if (state.isVoicePanelFullscreen()) {
       return false;
     } else if (getFocusedChannelId() === channelId) {

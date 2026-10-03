@@ -1,6 +1,6 @@
-// === Module 8283: MenuConstants ===
+// === Module 8287: MenuConstants ===
 
-// Module 8283 (MenuConstants)
+// Module 8287 (MenuConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/in_app_reports/MenuConstants.tsx");

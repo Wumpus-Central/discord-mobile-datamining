@@ -1,6 +1,6 @@
-// === Module 1385: FlagUtils ===
+// === Module 1390: FlagUtils ===
 
-// Module 1385 (FlagUtils)
+// Module 1390 (FlagUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/utils/FlagUtils.tsx");
@@ -11,8 +11,8 @@ export const hasFlag = function hasFlag(flags, IS_ANIMATED) {
 export const hasAnyFlag = function hasAnyFlag(flags, arg1) {
   return flags & arg1;
 };
-export const addFlag = function addFlag(flags, SUPPRESS_NOTIFICATIONS) {
-  return flags | SUPPRESS_NOTIFICATIONS;
+export const addFlag = function addFlag(setting, SUPPRESS_NOTIFICATIONS) {
+  return setting | SUPPRESS_NOTIFICATIONS;
 };
 export const removeFlag = function removeFlag(flags, OBFUSCATED) {
   return flags & ~OBFUSCATED;

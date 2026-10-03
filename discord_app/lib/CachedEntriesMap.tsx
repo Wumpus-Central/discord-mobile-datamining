@@ -1,7 +1,7 @@
-// === Module 2018: CachedEntriesMap ===
+// === Module 2025: CachedEntriesMap ===
 
-// Module 2018 (CachedEntriesMap)
-import FunctionUtils from "FunctionUtils" /* 2019 */;
+// Module 2025 (CachedEntriesMap)
+import FunctionUtils from "FunctionUtils" /* 2026 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("lib/CachedEntriesMap.tsx");

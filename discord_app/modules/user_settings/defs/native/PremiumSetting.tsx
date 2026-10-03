@@ -1,19 +1,60 @@
-// === Module 14729: PremiumSetting ===
+// === Module 14785: PremiumSetting ===
 
-// Module 14729 (PremiumSetting)
-import util from "util" /* 1115 */;
-import PremiumUtils from "PremiumUtils" /* 4517 */;
-import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7025 */;
-import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 11186 */;
-import MobileNitroManageSubscriptionsSettingsExperiment from "MobileNitroManageSubscriptionsSettingsExperiment" /* 13141 */;
-import PremiumTabBadgeDefault from "PremiumTabBadge" /* 14730 */;
+// Module 14785 (PremiumSetting)
+import c from "c" /* 576 */;
+import util from "util" /* 1126 */;
+import PremiumUtils from "PremiumUtils" /* 4528 */;
+import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 6923 */;
+import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 11092 */;
+import MobileNitroManageSubscriptionsSettingsExperiment from "MobileNitroManageSubscriptionsSettingsExperiment" /* 13200 */;
+import PremiumTabBadgeDefault from "PremiumTabBadge" /* 14786 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1372 */;
-import SubscriptionStore from "SubscriptionStore" /* 4523 */;
+import UserStore from "UserStore" /* 1377 */;
+import SubscriptionStore from "SubscriptionStore" /* 4534 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const SettingBuilders = fn(11215);
+fn(558);
+const ReactCompilerGating = fn(558);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(1);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const fn = function t() {
+      const isPaymentsBlocked = BlockedPaymentsCountryExperiment.getIsPaymentsBlocked();
+      let flag = !isPaymentsBlocked;
+      if (isPaymentsBlocked) {
+        openBlockedPaymentsCountryActionSheetDefault();
+        flag = false;
+      }
+      return flag;
+    };
+    cResult[0] = fn;
+    let first = fn;
+  } else {
+    first = cResult[0];
+  }
+  return first;
+}) : (() => noop.useCallback(() => {
+  const isPaymentsBlocked = BlockedPaymentsCountryExperiment.getIsPaymentsBlocked();
+  let flag = !isPaymentsBlocked;
+  if (isPaymentsBlocked) {
+    openBlockedPaymentsCountryActionSheetDefault();
+    flag = false;
+  }
+  return flag;
+}, []));
+const SettingBuilders = fn(11129);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(1);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const tmp6 = jsx(PremiumTabBadgeDefault, {});
+    cResult[0] = tmp6;
+    let first = tmp6;
+  } else {
+    first = cResult[0];
+  }
+  return first;
+}) : (() => jsx(PremiumTabBadgeDefault, {}));
 const route = SettingBuilders.createRoute({
   useTitle: function getPremiumSettingTitle() {
     const mobileNitroManageSubscriptionsSettingsExperiment = MobileNitroManageSubscriptionsSettingsExperiment.getMobileNitroManageSubscriptionsSettingsExperiment({ location: "PremiumSetting" });
@@ -34,23 +75,21 @@ const route = SettingBuilders.createRoute({
     }
   },
   parent: null,
-  IconComponent: fn(8309).NitroWheelIcon,
-  usePreNavigationAction: function useCanNavigateToPaymentSetting() {
-    return noop.useCallback(() => {
-      const isPaymentsBlocked = BlockedPaymentsCountryExperiment.getIsPaymentsBlocked();
-      let flag = !isPaymentsBlocked;
-      if (isPaymentsBlocked) {
-        openBlockedPaymentsCountryActionSheetDefault();
-        flag = false;
-      }
-      return flag;
-    }, []);
-  },
-  useTrailing: function usePremiumSettingTrailing() {
-    return jsx(PremiumTabBadgeDefault, {});
-  },
+  IconComponent: fn(8313).NitroWheelIcon,
+  usePreNavigationAction: tmp2,
+  useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+    const cResult = c.c(1);
+    if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+      const tmp6 = jsx(PremiumTabBadgeDefault, {});
+      cResult[0] = tmp6;
+      let first = tmp6;
+    } else {
+      first = cResult[0];
+    }
+    return first;
+  }) : (() => jsx(PremiumTabBadgeDefault, {})),
   screen: {
-    route: fn(1074).UserSettingsSections.PREMIUM,
+    route: fn(1085).UserSettingsSections.PREMIUM,
     getComponent() {
       return require("PremiumSettingScreen").default;
     }

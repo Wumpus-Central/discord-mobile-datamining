@@ -1,19 +1,19 @@
-// === Module 16286: getNotificationCenterItemBody ===
+// === Module 16360: getNotificationCenterItemBody ===
 
-// Module 16286 (getNotificationCenterItemBody)
+// Module 16360 (getNotificationCenterItemBody)
 import _modDef38 from "module_38" /* 38 */;
-import util from "util" /* 1115 */;
-import StringUtils from "StringUtils" /* 2011 */;
-import UserUtilsDefault from "UserUtils" /* 4707 */;
-import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 7227 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7134 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import RelationshipStore from "RelationshipStore" /* 4508 */;
-import UserStore from "UserStore" /* 1372 */;
+import util from "util" /* 1126 */;
+import StringUtils from "StringUtils" /* 2018 */;
+import UserUtilsDefault from "UserUtils" /* 4722 */;
+import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 7125 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7037 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import RelationshipStore from "RelationshipStore" /* 4519 */;
+import UserStore from "UserStore" /* 1377 */;
 
 require = fn;
-const isGuildEventEnded = fn(7134).isGuildEventEnded;
-const Constants = fn(1074);
+const isGuildEventEnded = fn(7037).isGuildEventEnded;
+const Constants = fn(1085);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_8, RelationshipTypes: closure_9 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notification_center/getNotificationCenterItemBody.tsx");
@@ -28,7 +28,7 @@ export default function getNotificationCenterItemBody(arg0) {
     id = other_user.id;
   }
   if (id == null) {
-    id = React6;
+    id = closure_1_8;
   }
   const other_user2 = item.other_user;
   let id1;
@@ -106,7 +106,7 @@ export default function getNotificationCenterItemBody(arg0) {
     if (guildScheduledEvent != null) {
       guild_id = guildScheduledEvent.guild_id;
     }
-    const guild = GuildStore.getGuild(guild_id);
+    guild = GuildStore.getGuild(guild_id);
     let name4;
     if (guild != null) {
       name4 = guild.name;

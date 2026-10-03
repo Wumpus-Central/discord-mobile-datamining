@@ -1,12 +1,12 @@
-// === Module 12201: GuildPowerupsNotificationStore ===
+// === Module 12151: GuildPowerupsNotificationStore ===
 
-// Module 12201 (GuildPowerupsNotificationStore)
+// Module 12151 (GuildPowerupsNotificationStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import getExpiringGuildEntitlements from "getExpiringGuildEntitlements" /* 12202 */;
-import GameServerStore from "GameServerStore" /* 7628 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 4752 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import getExpiringGuildEntitlements from "getExpiringGuildEntitlements" /* 12152 */;
+import GameServerStore from "GameServerStore" /* 7672 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4767 */;
 
 require = fn;
 let closure_5 = {};
@@ -43,7 +43,7 @@ GuildPowerupsNotificationStore.migrations = items;
 const guildPowerupsNotificationStore = new GuildPowerupsNotificationStore(DispatcherDefault, {
   GUILD_POWERUPS_ACK_NOTIFICATION: function handleAckNotification(guildId) {
     guildId = guildId.guildId;
-    const guild = GuildStore.getGuild(guildId);
+    guild = GuildStore.getGuild(guildId);
     let num;
     if (guild != null) {
       num = guild.premiumSubscriberCount;

@@ -1,11 +1,11 @@
-// === Module 13481: VoiceChannelBlockedUserStore ===
+// === Module 13541: VoiceChannelBlockedUserStore ===
 
-// Module 13481 (VoiceChannelBlockedUserStore)
+// Module 13541 (VoiceChannelBlockedUserStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import SharedSpacesWarningManagerDefault from "SharedSpacesWarningManager" /* 13482 */;
-import RelationshipStore from "RelationshipStore" /* 4508 */;
-import VoiceStateStore from "VoiceStateStore" /* 4864 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import SharedSpacesWarningManagerDefault from "SharedSpacesWarningManager" /* 13542 */;
+import RelationshipStore from "RelationshipStore" /* 4519 */;
+import VoiceStateStore from "VoiceStateStore" /* 4909 */;
 
 function init() {
   closure_4 = {};
@@ -83,15 +83,15 @@ const prototype = VoiceChannelBlockedUserStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(RelationshipStore, VoiceStateStore);
 };
-prototype["getBlockedUsersForVoiceChannel"] = function getBlockedUsersForVoiceChannel(channelId) {
-  let tmp = dependencyMap[channelId];
+prototype["getBlockedUsersForVoiceChannel"] = function getBlockedUsersForVoiceChannel(voiceStatesForChannelAlt) {
+  let tmp = dependencyMap[voiceStatesForChannelAlt];
   if (tmp == null) {
     tmp = set;
   }
   return tmp;
 };
-prototype["getIgnoredUsersForVoiceChannel"] = function getIgnoredUsersForVoiceChannel(channelId) {
-  let tmp = dependencyMap2[channelId];
+prototype["getIgnoredUsersForVoiceChannel"] = function getIgnoredUsersForVoiceChannel(voiceStatesForChannelAlt) {
+  let tmp = dependencyMap2[voiceStatesForChannelAlt];
   if (tmp == null) {
     tmp = set;
   }

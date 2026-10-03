@@ -1,19 +1,19 @@
-// === Module 12057: SmartSearchResultsStore ===
+// === Module 11987: SmartSearchResultsStore ===
 
-// Module 12057 (SmartSearchResultsStore)
+// Module 11987 (SmartSearchResultsStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import privDefault from "priv" /* 1439 */;
-import SmartSearchTypes from "SmartSearchTypes" /* 12059 */;
-import SmartSearchUtils from "SmartSearchUtils" /* 12060 */;
-import RelationshipStore from "RelationshipStore" /* 4508 */;
-import UserStore from "UserStore" /* 1372 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import privDefault from "priv" /* 1444 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5112 */;
+import SmartSearchTypes from "SmartSearchTypes" /* 11989 */;
+import RelationshipStore from "RelationshipStore" /* 4519 */;
+import UserStore from "UserStore" /* 1377 */;
 
 require = fn;
 function handleReset() {
   closure_6.reset();
 }
-const SmartSearchConstants = fn(12058);
+const SmartSearchConstants = fn(11988);
 ({ MAX_CACHED_ANSWERS_PER_GUILD: hasOwnProperty, MAX_CACHED_ANSWER_GUILDS } = SmartSearchConstants);
 let closure_6 = new privDefault({ max: MAX_CACHED_ANSWER_GUILDS });
 const Store = initializeDefault.Store;
@@ -81,22 +81,37 @@ let obj2 = {
   },
   SMART_SEARCH_FETCH_SUCCESS: function handleFetchSuccess(arg0) {
     ({ guildId, response } = arg0);
+    const message_citations = response.message_citations;
     ({ requestKey, channelIds } = arg0);
-    const result = SmartSearchUtils.hydrateAndFilterCitations(response);
+    const mapped = message_citations.map((sourceId) => {
+      const obj = { sourceId: sourceId.source_id, sourceType: sourceId.source_type, guildId: sourceId.guild_id, channelId: sourceId.channel_id, messageId: sourceId.message_id, message: MessageRecordUtils.createMessageRecord(sourceId.message) };
+      return obj;
+    });
+    const found = mapped.filter((message) => !blockedOrIgnoredForMessage.isBlockedOrIgnoredForMessage(message.message));
     value = closure_6.get(guildId);
     if (null == value) {
-      const obj3 = { max };
-      const tmp8 = new privDefault(obj3);
-      const result1 = closure_6.set(guildId, tmp8);
+      const obj2 = { max };
+      const tmp8 = new privDefault(obj2);
+      const result = closure_6.set(guildId, tmp8);
       value = tmp8;
     }
-    const obj4 = { status: null, queryText: null, answerText: null, citations: null, channelIds: null };
-    obj4.status = SmartSearchUtils.resolveSearchStatus(response, result.length);
-    ({ query_text: obj5.queryText, answer_text: obj5.answerText } = response);
-    obj4.citations = result;
-    obj4.channelIds = channelIds;
-    const result2 = value.set(requestKey, obj4);
-    const tmpResult = SmartSearchUtils;
+    const search_status = response.search_status;
+    if ("not_qualified" === search_status) {
+      let ERROR = SmartSearchTypes.SmartSearchStatus.NOT_QUALIFIED;
+    } else if ("no_results" === search_status) {
+      ERROR = SmartSearchTypes.SmartSearchStatus.EMPTY;
+    } else if ("success" === search_status) {
+      if (tmp11 > 0) {
+        let EMPTY = SmartSearchTypes.SmartSearchStatus.LOADED;
+      } else {
+        EMPTY = SmartSearchTypes.SmartSearchStatus.EMPTY;
+      }
+      ERROR = EMPTY;
+    } else {
+      ERROR = SmartSearchTypes.SmartSearchStatus.ERROR;
+    }
+    const result1 = value.set(requestKey, { status: ERROR, queryText: response.query_text, answerText: response.answer_text, citations: found, channelIds });
+    const obj3 = { status: ERROR, queryText: response.query_text, answerText: response.answer_text, citations: found, channelIds };
   },
   SMART_SEARCH_FETCH_FAILURE: function handleFetchFailure(guildId) {
     guildId = guildId.guildId;
@@ -175,22 +190,37 @@ export default new SmartSearchResultsStore(DispatcherDefault, {
   },
   SMART_SEARCH_FETCH_SUCCESS: function handleFetchSuccess(arg0) {
     ({ guildId, response } = arg0);
+    const message_citations = response.message_citations;
     ({ requestKey, channelIds } = arg0);
-    const result = SmartSearchUtils.hydrateAndFilterCitations(response);
+    const mapped = message_citations.map((sourceId) => {
+      const obj = { sourceId: sourceId.source_id, sourceType: sourceId.source_type, guildId: sourceId.guild_id, channelId: sourceId.channel_id, messageId: sourceId.message_id, message: MessageRecordUtils.createMessageRecord(sourceId.message) };
+      return obj;
+    });
+    const found = mapped.filter((message) => !blockedOrIgnoredForMessage.isBlockedOrIgnoredForMessage(message.message));
     value = closure_6.get(guildId);
     if (null == value) {
-      const obj3 = { max };
-      const tmp8 = new privDefault(obj3);
-      const result1 = closure_6.set(guildId, tmp8);
+      const obj2 = { max };
+      const tmp8 = new privDefault(obj2);
+      const result = closure_6.set(guildId, tmp8);
       value = tmp8;
     }
-    const obj4 = { status: null, queryText: null, answerText: null, citations: null, channelIds: null };
-    obj4.status = SmartSearchUtils.resolveSearchStatus(response, result.length);
-    ({ query_text: obj5.queryText, answer_text: obj5.answerText } = response);
-    obj4.citations = result;
-    obj4.channelIds = channelIds;
-    const result2 = value.set(requestKey, obj4);
-    const tmpResult = SmartSearchUtils;
+    const search_status = response.search_status;
+    if ("not_qualified" === search_status) {
+      let ERROR = SmartSearchTypes.SmartSearchStatus.NOT_QUALIFIED;
+    } else if ("no_results" === search_status) {
+      ERROR = SmartSearchTypes.SmartSearchStatus.EMPTY;
+    } else if ("success" === search_status) {
+      if (tmp11 > 0) {
+        let EMPTY = SmartSearchTypes.SmartSearchStatus.LOADED;
+      } else {
+        EMPTY = SmartSearchTypes.SmartSearchStatus.EMPTY;
+      }
+      ERROR = EMPTY;
+    } else {
+      ERROR = SmartSearchTypes.SmartSearchStatus.ERROR;
+    }
+    const result1 = value.set(requestKey, { status: ERROR, queryText: response.query_text, answerText: response.answer_text, citations: found, channelIds });
+    const obj3 = { status: ERROR, queryText: response.query_text, answerText: response.answer_text, citations: found, channelIds };
   },
   SMART_SEARCH_FETCH_FAILURE: function handleFetchFailure(guildId) {
     guildId = guildId.guildId;

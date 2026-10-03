@@ -1,9 +1,9 @@
-// === Module 5378: getAnalyticsDataForSKU ===
+// === Module 5424: getAnalyticsDataForSKU ===
 
-// Module 5378 (getAnalyticsDataForSKU)
-import ApplicationStore from "ApplicationStore" /* 5072 */;
+// Module 5424 (getAnalyticsDataForSKU)
+import ApplicationStore from "ApplicationStore" /* 5118 */;
 
-const SKUFeatureTypes = fn(1074).SKUFeatureTypes;
+const SKUFeatureTypes = fn(1085).SKUFeatureTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_store/getAnalyticsDataForSKU.tsx");
 

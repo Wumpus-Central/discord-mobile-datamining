@@ -1,27 +1,28 @@
-// === Module 17309: CaptchaModal ===
+// === Module 17402: CaptchaModal ===
 
-// Module 17309 (CaptchaModal)
-import util from "util" /* 1115 */;
-import Link from "Link" /* 1486 */;
-import Text_Text from "Text/Text" /* 4841 */;
-import SharedCaptchaUtils from "SharedCaptchaUtils" /* 5361 */;
-import Stack_Stack from "Stack/Stack" /* 5463 */;
-import components_Button_Button from "components/Button/Button" /* 5465 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6757 */;
-import RegistrationUtils from "RegistrationUtils" /* 15794 */;
-import DisguiseSpotIllustration from "DisguiseSpotIllustration" /* 17311 */;
-import CaptchaUtilsDefault from "CaptchaUtils" /* 17313 */;
+// Module 17402 (CaptchaModal)
+import util from "util" /* 1126 */;
+import Link from "Link" /* 1491 */;
+import Text_Text from "Text/Text" /* 4886 */;
+import SharedCaptchaUtils from "SharedCaptchaUtils" /* 5407 */;
+import Stack_Stack from "Stack/Stack" /* 5593 */;
+import components_Button_Button from "components/Button/Button" /* 5594 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6645 */;
+import CaptchaUtilsDefault from "CaptchaUtils" /* 17404 */;
+import DisguiseSpotIllustration from "DisguiseSpotIllustration" /* 17407 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Keyboard: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let closure_6 = fn(15786).doesRegistrationHaveIdentityType;
-const RegistrationConstants = fn(15787);
+let closure_6 = fn(15863).doesRegistrationHaveIdentityType;
+const RegistrationConstants = fn(15864);
 ({ RegisterTransitionSteps: closure_7, RegistrationTransitionActionTypes: closure_8 } = RegistrationConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let closure_11 = createStyles.createStyles((arg0) => {
   let num = 8;
   if (arg0) {
@@ -29,17 +30,115 @@ let closure_11 = createStyles.createStyles((arg0) => {
   }
   return { contentContainer: { alignItems: "center", paddingVertical: 8, paddingHorizontal: num }, description: { paddingBottom: 12, paddingTop: 4 } };
 });
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/captcha/native/CaptchaModal.tsx");
 
-export default function CaptchaModal(arg0) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((onCaptchaVerify) => {
+  const cResult = onCaptchaVerify(close[7]).c(36);
+  onCaptchaVerify = onCaptchaVerify.onCaptchaVerify;
+  const onReject = onCaptchaVerify.onReject;
+  close = onCaptchaVerify.close;
+  const sitekey = onCaptchaVerify.sitekey;
+  const captchaService = onCaptchaVerify.captchaService;
+  ({ headerText, bodyText, rqdata } = onCaptchaVerify);
+  const rqtoken = onCaptchaVerify.rqtoken;
+  const userflow = onCaptchaVerify.userflow;
+  closure_11(onReject(close[8])());
+  let obj = onCaptchaVerify(close[7]);
+  const tmp = close;
+  const tmp3 = onReject;
+  const navigation = onCaptchaVerify(close[9]).useNavigation();
+  state = navigation.getState();
+  let name;
+  if (state != null) {
+    let first = state.routes[0];
+    if (first != null) {
+      name = first.name;
+    }
+  }
+  let str = "Guild Join Captcha";
+  if ("auth" === name) {
+    str = "Guild Join Captcha";
+    if (rqtoken()) {
+      str = "User Registration Captcha";
+    }
+  }
+  if (cResult[0] === str) {
+    if (cResult[1] === onReject) {
+      let tmp9 = cResult[2];
+    }
+    const tmp10 = tmp3(tmp[10])(tmp9);
+    closure_9 = tmp10;
+    const _Symbol = Symbol;
+    if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+      class I {
+        constructor() {
+          dismissResult = captchaService.dismiss();
+          return;
+        }
+      }
+      const items = [];
+      cResult[3] = I;
+      cResult[4] = items;
+      let tmp13 = items;
+    } else {
+      class I {
+        constructor() {
+          dismissResult = captchaService.dismiss();
+          return;
+        }
+      }
+      tmp13 = cResult[4];
+    }
+    const effect = sitekey.useEffect(I, tmp13);
+    if (cResult[5] === captchaService) {
+      class I {
+        constructor() {
+          dismissResult = captchaService.dismiss();
+          return;
+        }
+      }
+    }
+    class P {
+      constructor() {
+        tmp = closure_9();
+        tmp2 = close();
+        obj = closure_0(closure_2[11]);
+        result = obj.emitCaptchaDistributionMetric(userflow);
+        obj2 = closure_1(closure_2[12]);
+        showCaptchaResult = obj2.showCaptcha(captchaService, sitekey, rqdata);
+        nextPromise = showCaptchaResult.then(() => { ... });
+        catchPromise = nextPromise.catch(() => { ... });
+        return;
+      }
+    }
+    cResult[5] = captchaService;
+    cResult[6] = close;
+    cResult[7] = navigation;
+    cResult[8] = tmp10;
+    cResult[9] = onCaptchaVerify;
+    cResult[10] = onReject;
+    cResult[11] = rqdata;
+    cResult[12] = rqtoken;
+    cResult[13] = sitekey;
+    cResult[14] = userflow;
+    cResult[15] = P;
+  }
+  let obj3 = { onReject, analyticsType: str };
+  cResult[0] = str;
+  cResult[1] = onReject;
+  cResult[2] = obj3;
+  tmp9 = obj3;
+  let obj2 = onCaptchaVerify(close[9]);
+}) : ((arg0) => {
   ({ onCaptchaVerify: require, onReject } = arg0);
   ({ close: dependencyMap, sitekey: noop, captchaService: closure_4, headerText, bodyText, rqdata: closure_5, rqtoken: closure_6, userflow: closure_7 } = arg0);
-  const tmp2 = closure_11(onReject(6549)());
+  const tmp2 = closure_11(onReject(6432)());
   const navigation = Link.useNavigation();
   const items = [navigation];
   const memo = noop.useMemo(() => {
-    const state = navigation.getState();
+    state = navigation.getState();
     let name;
     if (state != null) {
       const first = state.routes[0];
@@ -56,7 +155,7 @@ export default function CaptchaModal(arg0) {
     }
     return str;
   }, items);
-  closure_9 = onReject(17310)({ onReject, analyticsType: memo });
+  closure_9 = onReject(17403)({ onReject, analyticsType: memo });
   const effect = noop.useEffect(() => {
     closure_1_4.dismiss();
   }, []);
@@ -100,7 +199,8 @@ export default function CaptchaModal(arg0) {
         }
         if (tmp4) {
           const obj3 = { step: constants.CAPTCHA, actionType: navigation.SUBMITTED };
-          RegistrationUtils.trackRegTransition(obj3);
+          require("RegistrationUtils").trackRegTransition(obj3);
+          const obj2 = require("RegistrationUtils");
         }
         closure_1_0(result, closure_1_6);
         const state1 = state.getState();
@@ -117,7 +217,8 @@ export default function CaptchaModal(arg0) {
         }
         if (tmp15) {
           const obj5 = { step: constants.CAPTCHA, actionType: navigation.SUCCESS };
-          RegistrationUtils.trackRegTransition(obj5);
+          require("RegistrationUtils").trackRegTransition(obj5);
+          const obj4 = require("RegistrationUtils");
         }
       }).catch((error) => {
         if (onReject != null) {
@@ -133,4 +234,4 @@ export default function CaptchaModal(arg0) {
   obj2.children = items1;
   obj4.children = closure_10(Stack_Stack.Stack, obj2);
   return closure_9(Sheet_BottomSheet.BottomSheet, obj4);
-};
+});

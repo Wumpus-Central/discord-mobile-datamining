@@ -1,11 +1,11 @@
-// === Module 9514: components_native/QRCode ===
+// === Module 9525: components_native/QRCode ===
 
-// Module 9514 (components_native/QRCode)
-import nativeDefault from "native" /* 576 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5453 */;
-import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 7873 */;
-import QRCodeDefault from "QRCode" /* 9515 */;
-import _mod9529 from "module_9529" /* 9529 */;
+// Module 9525 (components_native/QRCode)
+import nativeDefault from "native" /* 587 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5773 */;
+import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 7917 */;
+import QRCodeDefault from "QRCode" /* 9526 */;
+import _mod9540 from "module_9540" /* 9540 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire, StyleSheet: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = { qrCode: { display: "flex", alignSelf: "flex-start", padding: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.xs }, qrCodeContainer: { display: "flex", alignSelf: "flex-start", alignItems: "center", justifyContent: "center", position: "relative" }, qrCodeOverlay: { display: "flex", alignItems: "center", justifyContent: "center" }, "size-40": { width: 40, height: 40 }, "size-60": { width: 60, height: 60 } };
 let closure_10 = createStyles.createLegacyClassComponentStyles(obj2);
 let obj4 = { SIZE_40: "SIZE_40", SIZE_60: "SIZE_60" };
@@ -36,17 +36,17 @@ QRCode.prototype["render"] = function render() {
   const obj3 = { value: text, level: "M" };
   const tmp = closure_10(this.context);
   const merged = Object.assign(tmp2);
-  const items1 = [React6(QRCodeDefault, obj3), ];
+  const items1 = [closure_1_8(QRCodeDefault, obj3), ];
   if (blur) {
     obj4 = { style: React5.absoluteFill, blurTheme: "dark" };
-    tmp3Result = React6(VisualEffectViewDefault, obj4);
+    tmp3Result = closure_1_8(VisualEffectViewDefault, obj4);
   }
   items1[1] = tmp3Result;
   obj2.children = items1;
-  obj.children = React7(hasOwnProperty, obj2);
-  return React6(hasOwnProperty, obj);
+  obj.children = options(hasOwnProperty, obj2);
+  return closure_1_8(hasOwnProperty, obj);
 };
-QRCode.contextType = fn(4569).ThemeContext;
+QRCode.contextType = fn(4589).ThemeContext;
 QRCode.defaultProps = { size: 128, bgColor: "#ffffff", fgColor: "#000000" };
 const PureComponent2 = noop.PureComponent;
 class QRCodeWithOverlay extends PureComponent2 {
@@ -62,23 +62,23 @@ QRCodeWithOverlay.prototype["render"] = function render() {
   const obj2 = {};
   const merged = Object.assign(this.props);
   obj2.blur = false;
-  const items = [React6(QRCode, obj2), , ];
+  const items = [closure_1_8(QRCode, obj2), , ];
   const obj3 = { style: null, children: null };
   const items1 = [tmp.qrCodeOverlay, React5.absoluteFill];
   obj3.style = items1;
-  obj4 = { style: tmp[frozen[SIZE_40]], source: _mod9529 };
-  obj3.children = React6(timestampProducer, obj4);
-  items[1] = React6(hasOwnProperty, obj3);
+  obj4 = { style: tmp[frozen[SIZE_40]], source: _mod9540 };
+  obj3.children = closure_1_8(timestampProducer, obj4);
+  items[1] = closure_1_8(hasOwnProperty, obj3);
   let tmp6Result = null;
   if (props.blur) {
     const obj5 = { style: React5.absoluteFill };
-    tmp6Result = React6(VisualEffectViewThemedDefault, obj5);
+    tmp6Result = closure_1_8(VisualEffectViewThemedDefault, obj5);
   }
   items[2] = tmp6Result;
   obj.children = items;
-  return React7(hasOwnProperty, obj);
+  return options(hasOwnProperty, obj);
 };
-QRCodeWithOverlay.contextType = fn(4569).ThemeContext;
+QRCodeWithOverlay.contextType = fn(4589).ThemeContext;
 QRCodeWithOverlay.defaultProps = { size: 144, bgColor: "#ffffff", fgColor: "#000000" };
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/QRCode.tsx");

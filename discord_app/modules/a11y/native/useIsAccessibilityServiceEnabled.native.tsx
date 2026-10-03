@@ -1,15 +1,16 @@
-// === Module 7567: useIsAccessibilityServiceEnabled ===
+// === Module 7611: useIsAccessibilityServiceEnabled ===
 
-// Module 7567 (useIsAccessibilityServiceEnabled)
-import NativeDeviceAccessibilityModuleDefault from "NativeDeviceAccessibilityModule" /* 5391 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5450 */;
-import module_560 from "module_560" /* 560 */;
+// Module 7611 (useIsAccessibilityServiceEnabled)
+import NativeDeviceAccessibilityModuleDefault from "NativeDeviceAccessibilityModule" /* 5711 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5770 */;
+import module_570 from "module_570" /* 570 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 function ACCESSIBILITY_SERVICE_ENABLED_GETTER(accessibilityServiceEnabled) {
   return accessibilityServiceEnabled.accessibilityServiceEnabled;
 }
-const state = module_560.create((arg0) => {
+const state = module_570.create((arg0) => {
   closure_0 = arg0;
   const result = NativeDeviceAccessibilityModuleDefault.onAccessibilityServiceEnabledChanged((accessibilityServiceEnabled) => {
     closure_0({ accessibilityServiceEnabled });
@@ -27,10 +28,16 @@ export const getIsAccessibilityServiceEnabled = function getIsAccessibilityServi
   }
   return accessibilityServiceEnabled;
 };
-export const useIsAccessibilityServiceEnabled = function useIsAccessibilityServiceEnabled() {
+export const useIsAccessibilityServiceEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   let isScreenReaderEnabled = useIsScreenReaderEnabled.useIsScreenReaderEnabled();
   if (!isScreenReaderEnabled) {
     isScreenReaderEnabled = state(ACCESSIBILITY_SERVICE_ENABLED_GETTER);
   }
   return isScreenReaderEnabled;
-};
+}) : (() => {
+  let isScreenReaderEnabled = useIsScreenReaderEnabled.useIsScreenReaderEnabled();
+  if (!isScreenReaderEnabled) {
+    isScreenReaderEnabled = state(ACCESSIBILITY_SERVICE_ENABLED_GETTER);
+  }
+  return isScreenReaderEnabled;
+});

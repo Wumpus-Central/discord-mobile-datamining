@@ -1,19 +1,19 @@
-// === Module 5919: StageChannelRoleStore ===
+// === Module 5578: StageChannelRoleStore ===
 
-// Module 5919 (StageChannelRoleStore)
+// Module 5578 (StageChannelRoleStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import StageChannelPermissions from "StageChannelPermissions" /* 2052 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4503 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4992 */;
-import useStageSpeakingForCurrentUser from "useStageSpeakingForCurrentUser" /* 5920 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildMemberStore from "GuildMemberStore" /* 2107 */;
-import GuildRoleStore from "GuildRoleStore" /* 2101 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import UserStore from "UserStore" /* 1372 */;
-import VoiceStateStore from "VoiceStateStore" /* 4864 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import StageChannelPermissions from "StageChannelPermissions" /* 2060 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4514 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 5037 */;
+import useStageSpeakingForCurrentUser from "useStageSpeakingForCurrentUser" /* 5579 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import GuildMemberStore from "GuildMemberStore" /* 2112 */;
+import GuildRoleStore from "GuildRoleStore" /* 2106 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import UserStore from "UserStore" /* 1377 */;
+import VoiceStateStore from "VoiceStateStore" /* 4909 */;
 
 require = fn;
 function buildStageChannelUserRoles(user, id2) {
@@ -31,7 +31,7 @@ function buildStageChannelUserRoles(user, id2) {
   if (channel != null) {
     guildId = channel.getGuildId();
   }
-  const guild = GuildStore.getGuild(guildId);
+  guild = GuildStore.getGuild(guildId);
   if (null != guild) {
     if (null != channel) {
       if (channel.isGuildStageVoice()) {
@@ -116,15 +116,15 @@ prototype["initialize"] = function initialize() {
 prototype["isSpeaker"] = function isSpeaker(id, channelId) {
   return this.getPermissionsForUser(id, channelId)[obj.SPEAKER];
 };
-prototype["isModerator"] = function isModerator(id, id2) {
-  let flag = this.getPermissionsForUser(id, id2, true)[obj.MODERATOR];
+prototype["isModerator"] = function isModerator(id, channelId) {
+  let flag = this.getPermissionsForUser(id, channelId, true)[obj.MODERATOR];
   if (flag == null) {
     flag = false;
   }
   return flag;
 };
-prototype["isAudienceMember"] = function isAudienceMember(userId, voiceChannelId) {
-  const permissionsForUser = this.getPermissionsForUser(userId, voiceChannelId);
+prototype["isAudienceMember"] = function isAudienceMember(id, id2) {
+  const permissionsForUser = this.getPermissionsForUser(id, id2);
   let tmp3 = !tmp2;
   if (!permissionsForUser[obj.SPEAKER]) {
     tmp3 = !permissionsForUser[obj.MODERATOR];

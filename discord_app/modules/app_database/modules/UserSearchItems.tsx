@@ -1,17 +1,17 @@
-// === Module 7243: UserSearchItems ===
+// === Module 7141: UserSearchItems ===
 
-// Module 7243 (UserSearchItems)
+// Module 7141 (UserSearchItems)
 import LoggerDefault from "Logger" /* 3 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 2073 */;
-import UserSearchUtils from "UserSearchUtils" /* 7247 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 2078 */;
+import UserSearchUtils from "UserSearchUtils" /* 7145 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7244 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7245 */;
-import RelationshipStore from "RelationshipStore" /* 4508 */;
-import UserStore from "UserStore" /* 1372 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7142 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7143 */;
+import RelationshipStore from "RelationshipStore" /* 4519 */;
+import UserStore from "UserStore" /* 1377 */;
 
 require = fn;
-const RelationshipTypes = fn(1074).RelationshipTypes;
+const RelationshipTypes = fn(1085).RelationshipTypes;
 let closure_9 = new LoggerDefault("UserSearchItems");
 let c10 = false;
 class UserSearchItems {
@@ -40,7 +40,7 @@ prototype["getAll"] = function getAll() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {

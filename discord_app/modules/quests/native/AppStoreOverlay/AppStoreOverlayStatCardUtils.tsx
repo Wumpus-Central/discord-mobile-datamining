@@ -13,9 +13,9 @@ export const formatAppStoreRatingCount = function formatAppStoreRatingCount(rati
   const numberFormat = new Intl.NumberFormat(currentLocale, { notation: "compact", compactDisplay: "short" });
   return numberFormat.format(ratingCount);
 };
-export const getAppStoreStarFillAmounts = function getAppStoreStarFillAmounts(rating, arg1) {
-  let num = arg1;
-  if (arg1 === undefined) {
+export const getAppStoreStarFillAmounts = function getAppStoreStarFillAmounts(rating) {
+  let num = stat;
+  if (stat === undefined) {
     num = 5;
   }
   const length = Math.max(1, num);

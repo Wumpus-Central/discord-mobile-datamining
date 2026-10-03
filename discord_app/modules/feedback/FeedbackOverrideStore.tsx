@@ -1,9 +1,9 @@
-// === Module 16548: FeedbackOverrideStore ===
+// === Module 16624: FeedbackOverrideStore ===
 
-// Module 16548 (FeedbackOverrideStore)
+// Module 16624 (FeedbackOverrideStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import feedback_FeedbackManager from "feedback/FeedbackManager" /* 16547 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import FeedbackConfig from "FeedbackConfig" /* 16625 */;
 
 require = fn;
 let closure_2 = {};
@@ -24,7 +24,7 @@ const hotspotStore = new HotspotStore(DispatcherDefault, {
     feedbackType = feedbackType.feedbackType;
     const obj = {};
     ({ cooldown, chance } = feedbackType);
-    const merged = Object.assign(feedback_FeedbackManager.FeedbackConfig[feedbackType]);
+    const merged = Object.assign(FeedbackConfig.FeedbackConfig[feedbackType]);
     obj.cooldown = cooldown;
     obj.chance = chance;
     closure_2[feedbackType] = obj;

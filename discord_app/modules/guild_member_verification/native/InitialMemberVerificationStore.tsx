@@ -1,8 +1,8 @@
-// === Module 6073: InitialMemberVerificationStore ===
+// === Module 5966: InitialMemberVerificationStore ===
 
-// Module 6073 (InitialMemberVerificationStore)
+// Module 5966 (InitialMemberVerificationStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
 
 const map = new Map();
 const Store = initializeDefault.Store;

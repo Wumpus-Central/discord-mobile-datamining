@@ -1,26 +1,52 @@
-// === Module 7025: BlockedPaymentsCountryExperiment ===
+// === Module 6923: BlockedPaymentsCountryExperiment ===
 
-// Module 7025 (BlockedPaymentsCountryExperiment)
-import ApexExperiment from "ApexExperiment" /* 1435 */;
+// Module 6923 (BlockedPaymentsCountryExperiment)
+import c from "c" /* 576 */;
+import ApexExperiment from "ApexExperiment" /* 1440 */;
+import "ReactCompilerGating";
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-03-block-purchases", kind: "user", defaultConfig: { enabled: false }, variations: null };
-const obj2 = { 1: null };
+let obj2 = { 1: null };
 obj2[1] = { enabled: true };
 obj.variations = obj2;
-let closure_2 = ApexExperiment.createApexExperiment(obj);
-const result = size.fileFinishedImporting("modules/billing/experiments/BlockedPaymentsCountryExperiment.tsx");
-
-export const useBlockedPaymentsConfig = function useBlockedPaymentsConfig() {
-  let enabled = closure_2.useConfig({ location: "c519a9_1" }).enabled;
+let closure_3 = ApexExperiment.createApexExperiment(obj);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(1);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const obj2 = { location: "c519a9_1" };
+    cResult[0] = obj2;
+    let first = obj2;
+  } else {
+    first = cResult[0];
+  }
+  let enabled = closure_3.useConfig(first).enabled;
+  if (!enabled) {
+    enabled = "RU" === tmp3;
+  }
+  return enabled;
+}) : (() => {
+  let enabled = closure_3.useConfig({ location: "c519a9_1" }).enabled;
   if (!enabled) {
     enabled = "RU" === tmp;
   }
   return enabled;
-};
-export const useIsPaymentsBlocked = function useIsPaymentsBlocked() {
-  return closure_2.useConfig({ location: "dc120b_3" }).enabled;
-};
+});
+const result = size.fileFinishedImporting("modules/billing/experiments/BlockedPaymentsCountryExperiment.tsx");
+
+export const useBlockedPaymentsConfig = tmp2;
+export const useIsPaymentsBlocked = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(1);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const obj2 = { location: "dc120b_3" };
+    cResult[0] = obj2;
+    let first = obj2;
+  } else {
+    first = cResult[0];
+  }
+  return closure_3.useConfig(first).enabled;
+}) : (() => closure_3.useConfig({ location: "dc120b_3" }).enabled);
 export const getIsPaymentsBlocked = function getIsPaymentsBlocked() {
-  return closure_2.getConfig({ location: "1ee357_1" }).enabled;
+  return closure_3.getConfig({ location: "1ee357_1" }).enabled;
 };

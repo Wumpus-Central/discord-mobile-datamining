@@ -1,11 +1,11 @@
-// === Module 16633: vibegrationsPendingPlan ===
+// === Module 16713: vibegrationsPendingPlan ===
 
-// Module 16633 (vibegrationsPendingPlan)
-import VibegrationsChatStore from "VibegrationsChatStore" /* 12852 */;
+// Module 16713 (vibegrationsPendingPlan)
+import VibegrationsChatStore from "VibegrationsChatStore" /* 12905 */;
 import size from "module_2" /* 2 */;
 
 const turnSettled = VibegrationsChatStore.turnSettled;
-const result = size.fileFinishedImporting("modules/vibegrations/lib/vibegrationsPendingPlan.tsx");
+let result = size.fileFinishedImporting("modules/vibegrations/lib/vibegrationsPendingPlan.tsx");
 
 export const pendingPlanRenderId = function pendingPlanRenderId(memo) {
   const atResult = memo.at(-1);
@@ -35,4 +35,51 @@ export const pendingPlanRenderId = function pendingPlanRenderId(memo) {
     }
     return null;
   }
+};
+export const planVersions = function planVersions(memo) {
+  const map = new Map();
+  let render_id = null;
+  let num = 0;
+  const iter = memo[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let tmp3 = nextResult;
+    if ("assistant" === nextResult.role) {
+      if ("plan_implemented" !== tmp3.kind) {
+        if (null != tmp3.proposal) {
+          if (null != render_id) {
+            let obj = { version: null, superseded: true };
+            obj.version = num;
+            let result = map.set(render_id, obj);
+          }
+          let sum = num + 1;
+          num = sum;
+          let obj2 = { version: sum, superseded: false };
+          let result1 = map.set(tmp3.render_id, obj2);
+          render_id = tmp3.render_id;
+        }
+      } else {
+        render_id = null;
+        num = 0;
+      }
+    }
+    continue;
+  }
+  return map;
+};
+export const planCardExpanded = function planCardExpanded(c19, render_id, arg2) {
+  value = c19.get(render_id);
+  if (value == null) {
+    value = !arg2;
+  }
+  return value;
+};
+export const togglePlanCard = function togglePlanCard(get, arg1, arg2) {
+  const map = new Map(get);
+  value = get.get(arg1);
+  if (value == null) {
+    value = !arg2;
+  }
+  const result = map.set(arg1, !value);
+  return map;
 };

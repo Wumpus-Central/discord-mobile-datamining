@@ -1,23 +1,23 @@
-// === Module 7238: GuildsRequiringChannelSync ===
+// === Module 7136: GuildsRequiringChannelSync ===
 
-// Module 7238 (GuildsRequiringChannelSync)
+// Module 7136 (GuildsRequiringChannelSync)
 import LoggerDefault from "Logger" /* 3 */;
-import Constants2 from "Constants" /* 1085 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import v1 from "v1" /* 1255 */;
-import FlagUtils from "FlagUtils" /* 1385 */;
-import ChannelConstants from "ChannelConstants" /* 2051 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 2073 */;
-import PremiumRoleUtils from "PremiumRoleUtils" /* 4488 */;
-import ChannelRecord from "ChannelRecord" /* 2048 */;
+import Constants2 from "Constants" /* 1096 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import v1 from "v1" /* 1266 */;
+import FlagUtils from "FlagUtils" /* 1390 */;
+import ChannelConstants from "ChannelConstants" /* 2058 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 2078 */;
+import PremiumRoleUtils from "PremiumRoleUtils" /* 4499 */;
+import ChannelRecord from "ChannelRecord" /* 2055 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildMemberStore from "GuildMemberStore" /* 2107 */;
-import GuildRoleStore from "GuildRoleStore" /* 2101 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import PermissionStore from "PermissionStore" /* 4498 */;
-import Constants from "Constants" /* 1074 */;
-import BigFlagUtils from "BigFlagUtils" /* 1086 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import GuildMemberStore from "GuildMemberStore" /* 2112 */;
+import GuildRoleStore from "GuildRoleStore" /* 2106 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import PermissionStore from "PermissionStore" /* 4509 */;
+import Constants from "Constants" /* 1085 */;
+import BigFlagUtils from "BigFlagUtils" /* 1097 */;
 import size from "module_2" /* 2 */;
 
 ({ createChannelRecordFromServer: closure_4, ChannelRecordBase: hasOwnProperty } = ChannelRecord);
@@ -202,7 +202,7 @@ prototype["handleBackgroundSyncGuild"] = function handleBackgroundSyncGuild(item
           }
         }
         const properties = item10008.properties;
-        const guild = GuildStore.getGuild(item10008.id);
+        guild = GuildStore.getGuild(item10008.id);
         let ownerId;
         if (guild != null) {
           ownerId = guild.ownerId;
@@ -263,7 +263,7 @@ prototype["handleGuild"] = function handleGuild(channels, database, BackgroundSy
   const self = this;
   if ("full_sync" !== channels.channels.op) {
     const id = AuthenticationStore.getId();
-    const guild = GuildStore.getGuild(channels.id);
+    guild = GuildStore.getGuild(channels.id);
     if (null != guild) {
       const properties = channels.properties;
       let owner_id;

@@ -1,15 +1,15 @@
-// === Module 13482: SharedSpacesWarningManager ===
+// === Module 13542: SharedSpacesWarningManager ===
 
-// Module 13482 (SharedSpacesWarningManager)
-import DurationsDefault from "Durations" /* 1091 */;
-import ConstantsIOS from "ConstantsIOS" /* 1094 */;
-import showGdmBlockedUserModal from "showGdmBlockedUserModal" /* 13484 */;
-import showVoiceChannelBlockedUserWarning from "showVoiceChannelBlockedUserWarning" /* 13488 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4868 */;
-import RelationshipStore from "RelationshipStore" /* 4508 */;
-import VoiceChannelBlockedUserStore from "VoiceChannelBlockedUserStore" /* 13481 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6725 */;
+// Module 13542 (SharedSpacesWarningManager)
+import DurationsDefault from "Durations" /* 1102 */;
+import ConstantsIOS from "ConstantsIOS" /* 1105 */;
+import showGdmBlockedUserModal from "showGdmBlockedUserModal" /* 13544 */;
+import showVoiceChannelBlockedUserWarning from "showVoiceChannelBlockedUserWarning" /* 13548 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
+import RelationshipStore from "RelationshipStore" /* 4519 */;
+import VoiceChannelBlockedUserStore from "VoiceChannelBlockedUserStore" /* 13541 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
 
 require = fn;
 function handleChannelSelect(channelId) {
@@ -49,7 +49,7 @@ function handleAppStateChanged(state) {
       const blockedUsersForVoiceChannel = VoiceChannelBlockedUserStore.getBlockedUsersForVoiceChannel(channelId);
       const ignoredUsersForVoiceChannel = VoiceChannelBlockedUserStore.getIgnoredUsersForVoiceChannel(channelId);
       if (blockedUsersForVoiceChannel.size > 0) {
-        if (React6()) {
+        if (closure_1_8()) {
           const _Set = Set;
           const items = [];
           HermesBuiltin.arraySpread(ignoredUsersForVoiceChannel, HermesBuiltin.arraySpread(blockedUsersForVoiceChannel, 0));
@@ -84,13 +84,13 @@ function handleAppStateChanged(state) {
           }
         }
       }
-      React7();
+      options();
     } else {
-      React7();
+      options();
     }
   }
 }
-const SharedSpacesWarningStore = fn(13483);
+const SharedSpacesWarningStore = fn(13543);
 ({ getChannelDismissTimestamp: hasOwnProperty, getUserDismissTimestamp: metroRequire, getGlobalDismissTimestamp: closure_7, isBlockedWarningQueued: closure_8, dequeueBlockWarning: closure_9 } = SharedSpacesWarningStore);
 let closure_11 = 3 * DurationsDefault.Millis.DAY;
 let closure_12 = 2 * DurationsDefault.Millis.DAY;

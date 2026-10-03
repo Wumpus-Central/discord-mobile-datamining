@@ -1,7 +1,7 @@
-// === Module 9563: StageMusicActionCreators ===
+// === Module 9573: StageMusicActionCreators ===
 
-// Module 9563 (StageMusicActionCreators)
-import DispatcherDefault from "Dispatcher" /* 573 */;
+// Module 9573 (StageMusicActionCreators)
+import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/stage_channels/StageMusicActionCreators.tsx");

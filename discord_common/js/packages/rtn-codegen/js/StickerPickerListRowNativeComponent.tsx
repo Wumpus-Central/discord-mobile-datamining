@@ -1,6 +1,6 @@
-// === Module 10057: StickerPickerListRowNativeComponent ===
+// === Module 10130: StickerPickerListRowNativeComponent ===
 
-// Module 10057 (StickerPickerListRowNativeComponent)
+// Module 10130 (StickerPickerListRowNativeComponent)
 import weakSet from "weakSet" /* 106 */;
 import module_65 from "module_65" /* 65 */;
 import size from "module_2" /* 2 */;

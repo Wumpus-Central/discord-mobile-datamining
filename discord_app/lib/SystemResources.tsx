@@ -1,9 +1,9 @@
-// === Module 7340: SystemResources ===
+// === Module 7239: SystemResources ===
 
-// Module 7340 (SystemResources)
-import ProcessUtilsDefault from "ProcessUtils" /* 1358 */;
-import Histogram from "Histogram" /* 7334 */;
-import DeviceState from "DeviceState" /* 7341 */;
+// Module 7239 (SystemResources)
+import ProcessUtilsDefault from "ProcessUtils" /* 1363 */;
+import Histogram from "Histogram" /* 7233 */;
+import DeviceState from "DeviceState" /* 7240 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -93,7 +93,7 @@ prototype["getCurrentBattery"] = function getCurrentBattery() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -156,7 +156,7 @@ prototype["setLastBattery"] = function setLastBattery() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -186,7 +186,7 @@ prototype["setLastBattery"] = function setLastBattery() {
         } else {
           closure_0.lastBattery = value;
           c2 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp7) {
         c2 = tmp;
@@ -208,7 +208,7 @@ prototype["getBatteryLevelStats"] = function getBatteryLevelStats() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {

@@ -1,21 +1,21 @@
-// === Module 4869: SortedVoiceStateStore ===
+// === Module 4914: SortedVoiceStateStore ===
 
-// Module 4869 (SortedVoiceStateStore)
+// Module 4914 (SortedVoiceStateStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
-import SecondaryIndexMap from "SecondaryIndexMap" /* 4493 */;
-import UserUtilsDefault from "UserUtils" /* 4707 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
+import SecondaryIndexMap from "SecondaryIndexMap" /* 4504 */;
+import UserUtilsDefault from "UserUtils" /* 4722 */;
 import _slicedToArray from "module_32" /* 32 */;
-import FavoriteStore from "FavoriteStore" /* 2047 */;
-import UserRecord from "UserRecord" /* 1386 */;
+import FavoriteStore from "FavoriteStore" /* 2054 */;
+import UserRecord from "UserRecord" /* 1391 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildMemberStore from "GuildMemberStore" /* 2107 */;
-import UserStore from "UserStore" /* 1372 */;
-import VoiceStateStore from "VoiceStateStore" /* 4864 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import GuildMemberStore from "GuildMemberStore" /* 2112 */;
+import UserStore from "UserStore" /* 1377 */;
+import VoiceStateStore from "VoiceStateStore" /* 4909 */;
 
 require = fn;
 function getVoiceStatesForGuild(guildId) {
@@ -105,7 +105,7 @@ function handleFavoriteChannelAppeared() {
   }
   return flag;
 }
-const ME = fn(1074).ME;
+const ME = fn(1085).ME;
 const frozen = Object.freeze([]);
 const dependencyMap = {};
 let c14 = null;

@@ -1,17 +1,17 @@
-// === Module 4760: createExperiment ===
+// === Module 4775: createExperiment ===
 
-// Module 4760 (createExperiment)
-import ExperimentManager from "ExperimentManager" /* 4766 */;
+// Module 4775 (createExperiment)
+import ExperimentManager from "ExperimentManager" /* 4781 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ExperimentStore from "ExperimentStore" /* 4761 */;
+import ExperimentStore from "ExperimentStore" /* 4776 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const noop = fn(19);
 ({ useState: closure_4, useEffect: hasOwnProperty } = noop);
-const ExperimentConstants = fn(4762);
+const ExperimentConstants = fn(4777);
 ({ ExperimentBuckets: closure_8, ExposureTypes: closure_9 } = ExperimentConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/experiments/createExperiment.tsx");
@@ -202,9 +202,9 @@ export default function createExperiment(config) {
     const tmpResult2 = tmp(tmp2[5]);
   }
   return {
-    useExperiment(guildId) {
-      let obj = arg1;
-      if (arg1 === undefined) {
+    useExperiment(cResult) {
+      let obj = cResult2;
+      if (cResult2 === undefined) {
         obj = { autoTrackExposure: true };
       }
       closure_1 = undefined;
@@ -220,7 +220,7 @@ export default function createExperiment(config) {
       closure_1 = tmp;
       const id = flag.id;
       if ("guild" === flag.kind) {
-        guildExperimentDescriptor = authStore.getGuildExperimentDescriptor(id, guildId.guildId);
+        guildExperimentDescriptor = authStore.getGuildExperimentDescriptor(id, cResult.guildId);
       } else {
         guildExperimentDescriptor = authStore.getUserExperimentDescriptor(id);
       }
@@ -274,7 +274,7 @@ export default function createExperiment(config) {
       }), 2);
       closure_5 = tmp9[1];
       [tmp11, tmp12, tmp13] = trackAutoExposure(tmp9[0], 3);
-      const tmp14 = map(result3[7])(guildId);
+      const tmp14 = map(result3[7])(cResult);
       closure_6 = tmp14;
       let items = [flag, false !== obj.autoTrackExposure, tmp14, tmp8Result, tmp12, tmp13, flag2];
       subscribe(() => {

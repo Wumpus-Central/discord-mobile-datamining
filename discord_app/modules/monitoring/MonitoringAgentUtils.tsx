@@ -1,7 +1,7 @@
-// === Module 5367: MonitoringAgentUtils ===
+// === Module 5413: MonitoringAgentUtils ===
 
-// Module 5367 (MonitoringAgentUtils)
-import DesignIds from "DesignIds" /* 1344 */;
+// Module 5413 (MonitoringAgentUtils)
+import DesignIds from "DesignIds" /* 1355 */;
 import size from "module_2" /* 2 */;
 
 const obj = { design_id: DesignIds.DesignIds.DESIGN_TABS_IA };

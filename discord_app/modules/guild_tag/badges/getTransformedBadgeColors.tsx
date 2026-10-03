@@ -1,7 +1,7 @@
-// === Module 13667: getTransformedBadgeColors ===
+// === Module 13729: getTransformedBadgeColors ===
 
-// Module 13667 (getTransformedBadgeColors)
-import _modDef672 from "module_672" /* 672 */;
+// Module 13729 (getTransformedBadgeColors)
+import _modDef683 from "module_683" /* 683 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_tag/badges/getTransformedBadgeColors.tsx");
@@ -16,7 +16,7 @@ export const getTransformedBadgeColors = function getTransformedBadgeColors(arg0
       } else {
         let map2 = dependencyMap;
         if (obj2.valid(secondaryTintColor)) {
-          secondaryTintColor = _modDef672(secondaryTintColor);
+          secondaryTintColor = _modDef683(secondaryTintColor);
           primaryTintColor = secondaryTintColor;
           closure_2 = secondaryTintColor.luminance();
           map2 = secondaryTintLuminances.map;
@@ -24,7 +24,7 @@ export const getTransformedBadgeColors = function getTransformedBadgeColors(arg0
         } else {
           map2Result = secondaryTintLuminances.map(() => "#000000");
         }
-        obj2 = _modDef672;
+        obj2 = _modDef683;
       }
     }
     const obj3 = { primaryColorsTransformed: tmp, secondaryColorsTransformed: items };
@@ -33,13 +33,13 @@ export const getTransformedBadgeColors = function getTransformedBadgeColors(arg0
     secondaryLuminanceWeights = tmp2;
     let map = dependencyMap;
     if (obj.valid(primaryTintColor)) {
-      primaryTintColor = _modDef672(primaryTintColor);
+      primaryTintColor = _modDef683(primaryTintColor);
       closure_2 = primaryTintColor.luminance();
       map = primaryTintLuminances.map;
       let mapped = map((arg0, arg1) => primaryTintColor.luminance((arg0 * secondaryLuminanceWeights[arg1].base + closure_2 * secondaryLuminanceWeights[arg1].tint) / (secondaryLuminanceWeights[arg1].base + secondaryLuminanceWeights[arg1].tint)).hex());
     } else {
       mapped = primaryTintLuminances.map(() => "#000000");
     }
-    obj = _modDef672;
+    obj = _modDef683;
   }
 };

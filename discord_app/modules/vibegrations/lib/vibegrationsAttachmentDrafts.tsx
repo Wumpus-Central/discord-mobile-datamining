@@ -1,11 +1,13 @@
-// === Module 16629: vibegrationsAttachmentDrafts ===
+// === Module 16715: vibegrationsAttachmentDrafts ===
 
-// Module 16629 (vibegrationsAttachmentDrafts)
-import util from "util" /* 1115 */;
-import _modDef3714 from "module_3714" /* 3714 */;
-import VibegrationsTypes from "VibegrationsTypes" /* 5555 */;
+// Module 16715 (vibegrationsAttachmentDrafts)
+import util from "util" /* 1126 */;
+import _modDef3723 from "module_3723" /* 3723 */;
+import VibegrationsTypes from "VibegrationsTypes" /* 6747 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import Dispatcher_mod from "Dispatcher" /* 573 */;
+import Dispatcher_mod from "Dispatcher" /* 584 */;
+
+const require = globalThis.__r;
 
 require = fn;
 function _toPropertyKey(obj) {
@@ -127,11 +129,12 @@ function takeVibegrationsAttachmentRefs(projectId, chat) {
     });
   }
 }
-const VibegrationsConnectionStore = fn(12851);
+const VibegrationsConnectionStore = fn(12904);
 ({ deleteStagedAttachment: closure_4, sendUserMessage: hasOwnProperty } = VibegrationsConnectionStore);
 let closure_7 = [];
 let c8 = 1;
-const zustandStore = fn(4734).createZustandStore(() => ({ draftsByProject: {} }));
+const zustandStore = fn(4749).createZustandStore(() => ({ draftsByProject: {} }));
+const ReactCompilerGating = fn(558);
 let Dispatcher = Dispatcher_mod;
 const subscription = Dispatcher.subscribe("LOGOUT", () => {
   const keys = Object.keys(zustandStore.getState().draftsByProject);
@@ -150,9 +153,34 @@ const result = size.fileFinishedImporting("modules/vibegrations/lib/vibegrations
 
 export const VibegrationsAttachmentDraftStore = zustandStore;
 export { getVibegrationsAttachmentDrafts };
-export const useVibegrationsAttachmentDraftList = function useVibegrationsAttachmentDraftList(projectId, chat) {
-  closure_0 = projectId;
-  closure_1 = chat;
+export const useVibegrationsAttachmentDraftList = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+  _require = arg0;
+  closure_1 = arg1;
+  const cResult = require("c").c(3);
+  if (cResult[0] === arg0) {
+    if (cResult[1] === arg1) {
+      let tmp2 = cResult[2];
+    }
+    return zustandStore.useState(tmp2);
+  }
+  const fn = function r(arg0) {
+    let tmp2;
+    if (arg0.draftsByProject[closure_0] != null) {
+      tmp2 = tmp[closure_1];
+    }
+    if (tmp2 == null) {
+      tmp2 = closure_7;
+    }
+    return tmp2;
+  };
+  cResult[0] = arg0;
+  cResult[1] = arg1;
+  cResult[2] = fn;
+  tmp2 = fn;
+  const obj = require("c");
+}) : ((arg0, arg1) => {
+  closure_0 = arg0;
+  closure_1 = arg1;
   return zustandStore.useState((arg0) => {
     let tmp2;
     if (arg0.draftsByProject[closure_0] != null) {
@@ -163,7 +191,7 @@ export const useVibegrationsAttachmentDraftList = function useVibegrationsAttach
     }
     return tmp2;
   });
-};
+});
 export const addVibegrationsAttachmentDrafts = function addVibegrationsAttachmentDrafts(projectId, chat, mapped) {
   closure_0 = projectId;
   closure_1 = chat;

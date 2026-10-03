@@ -1,8 +1,8 @@
-// === Module 7711: ApplicationCommandUserAppUtils ===
+// === Module 7755: ApplicationCommandUserAppUtils ===
 
-// Module 7711 (ApplicationCommandUserAppUtils)
-import util from "util" /* 1115 */;
-import EphemeralMessageReason from "EphemeralMessageReason" /* 7712 */;
+// Module 7755 (ApplicationCommandUserAppUtils)
+import util from "util" /* 1126 */;
+import EphemeralMessageReason from "EphemeralMessageReason" /* 7756 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandUserAppUtils.tsx");

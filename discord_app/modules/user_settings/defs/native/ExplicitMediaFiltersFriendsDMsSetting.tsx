@@ -1,29 +1,62 @@
-// === Module 14572: ExplicitMediaFiltersFriendsDMsSetting ===
+// === Module 14628: ExplicitMediaFiltersFriendsDMsSetting ===
 
-// Module 14572 (ExplicitMediaFiltersFriendsDMsSetting)
-import util from "util" /* 1115 */;
-import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 6903 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7206 */;
-import SettingsConstants from "SettingsConstants" /* 7590 */;
-import useExplicitContentSettingsOrDefault from "useExplicitContentSettingsOrDefault" /* 14573 */;
-import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 14574 */;
-import useSensitiveMediaSettingDisabled from "useSensitiveMediaSettingDisabled" /* 14576 */;
-import SettingBuilders from "SettingBuilders" /* 11215 */;
+// Module 14628 (ExplicitMediaFiltersFriendsDMsSetting)
+import c from "c" /* 576 */;
+import util from "util" /* 1126 */;
+import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 6801 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7109 */;
+import SettingsConstants from "SettingsConstants" /* 7634 */;
+import useExplicitContentSettingsOrDefault from "useExplicitContentSettingsOrDefault" /* 14629 */;
+import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 14630 */;
+import useSensitiveMediaSettingDisabled from "useSensitiveMediaSettingDisabled" /* 14632 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import SettingBuilders from "SettingBuilders" /* 11129 */;
 import size from "module_2" /* 2 */;
 
 const MobileUserSettings = SettingsConstants.MobileUserSettings;
+function getTitle() {
+  const intl = util.intl;
+  return intl.string(util.t["+uI23H"]);
+}
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(2);
+  const explicitContentFriendDm = useExplicitContentSettingsOrDefault.useExplicitContentSettingOrDefault().explicitContentFriendDm;
+  if (cResult[0] !== explicitContentFriendDm) {
+    const tmp5 = ExplicitMediaRedactionUtils.redactionSettingToRenderedString(explicitContentFriendDm)();
+    cResult[0] = explicitContentFriendDm;
+    cResult[1] = tmp5;
+    let tmp4 = tmp5;
+    const tmpResult = ExplicitMediaRedactionUtils;
+  } else {
+    tmp4 = cResult[1];
+  }
+  return tmp4;
+}) : (() => {
+  const obj = useExplicitContentSettingsOrDefault;
+  return ExplicitMediaRedactionUtils.redactionSettingToRenderedString(obj.useExplicitContentSettingOrDefault().explicitContentFriendDm)();
+});
 const pressable = SettingBuilders.createPressable({
-  useTitle: function getTitle() {
-    const intl = util.intl;
-    return intl.string(util.t["+uI23H"]);
-  },
+  useTitle: getTitle,
   parent() {
     return MobileUserSettings.SENSITIVE_CONTENT_FILTERS;
   },
-  useTrailing: function useObscuredContentFriendsDmSettingValue() {
+  useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+    const cResult = c.c(2);
+    const explicitContentFriendDm = useExplicitContentSettingsOrDefault.useExplicitContentSettingOrDefault().explicitContentFriendDm;
+    if (cResult[0] !== explicitContentFriendDm) {
+      const tmp5 = ExplicitMediaRedactionUtils.redactionSettingToRenderedString(explicitContentFriendDm)();
+      cResult[0] = explicitContentFriendDm;
+      cResult[1] = tmp5;
+      let tmp4 = tmp5;
+      const tmpResult = ExplicitMediaRedactionUtils;
+    } else {
+      tmp4 = cResult[1];
+    }
+    return tmp4;
+  }) : (() => {
     const obj = useExplicitContentSettingsOrDefault;
     return ExplicitMediaRedactionUtils.redactionSettingToRenderedString(obj.useExplicitContentSettingOrDefault().explicitContentFriendDm)();
-  },
+  }),
   onPress: function onObscuredContentFriendsDmOnPress() {
     const intl = util.intl;
     const obj = SensitiveMediaExplicitRedactionSettingsUtils;

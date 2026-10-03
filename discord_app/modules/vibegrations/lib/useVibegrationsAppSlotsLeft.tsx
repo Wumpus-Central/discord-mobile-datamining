@@ -1,0 +1,70 @@
+// === Module 16549: useVibegrationsAppSlotsLeft ===
+
+// Module 16549 (useVibegrationsAppSlotsLeft)
+import initialize from "initialize" /* 504 */;
+import c from "c" /* 576 */;
+import VibegrationsActionCreators from "VibegrationsActionCreators" /* 8700 */;
+import noop from "module_19" /* 19 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 8699 */;
+
+require = fn;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/vibegrations/lib/useVibegrationsAppSlotsLeft.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(4);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const fn = function o() {
+      const projectLimit = VibegrationsActionCreators.fetchProjectLimit();
+    };
+    const items = [];
+    cResult[0] = fn;
+    cResult[1] = items;
+    tmp4 = fn;
+    tmp5 = items;
+  } else {
+    [tmp4, tmp5] = cResult;
+  }
+  const effect = noop.useEffect(tmp4, tmp5);
+  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+    const items1 = [VibegrationsProjectStore];
+    const fn2 = function l() {
+      maxProjects = maxProjects.getMaxProjects();
+      let bound = null;
+      if (null != maxProjects) {
+        bound = null;
+        if (obj.hasFetchedOwnedProjects()) {
+          const _Math = Math;
+          bound = Math.max(0, maxProjects - obj.getOwnedProjects().length);
+        }
+      }
+      return bound;
+    };
+    cResult[2] = items1;
+    cResult[3] = fn2;
+    let tmp8 = fn2;
+    let tmp7 = items1;
+  } else {
+    tmp7 = cResult[2];
+    tmp8 = cResult[3];
+  }
+  return initialize.useStateFromStores(tmp7, tmp8);
+}) : (() => {
+  const effect = noop.useEffect(() => {
+    const projectLimit = VibegrationsActionCreators.fetchProjectLimit();
+  }, []);
+  const items = [VibegrationsProjectStore];
+  return initialize.useStateFromStores(items, () => {
+    maxProjects = maxProjects.getMaxProjects();
+    let bound = null;
+    if (null != maxProjects) {
+      bound = null;
+      if (obj.hasFetchedOwnedProjects()) {
+        const _Math = Math;
+        bound = Math.max(0, maxProjects - obj.getOwnedProjects().length);
+      }
+    }
+    return bound;
+  });
+});

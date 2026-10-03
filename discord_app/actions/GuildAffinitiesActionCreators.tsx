@@ -1,9 +1,9 @@
-// === Module 7976: GuildAffinitiesActionCreators ===
+// === Module 8022: GuildAffinitiesActionCreators ===
 
-// Module 7976 (GuildAffinitiesActionCreators)
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import Constants from "Constants" /* 1074 */;
-import HTTPUtils from "HTTPUtils" /* 1271 */;
+// Module 8022 (GuildAffinitiesActionCreators)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import Constants from "Constants" /* 1085 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
 import size from "module_2" /* 2 */;
 
 const Endpoints = Constants.Endpoints;

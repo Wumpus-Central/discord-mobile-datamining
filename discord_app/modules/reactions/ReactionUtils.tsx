@@ -1,17 +1,17 @@
-// === Module 4510: ReactionUtils ===
+// === Module 4521: ReactionUtils ===
 
-// Module 4510 (ReactionUtils)
-import util from "util" /* 1115 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import UserSettings from "UserSettings" /* 2021 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4512 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 7355 */;
+// Module 4521 (ReactionUtils)
+import util from "util" /* 1126 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import UserSettings from "UserSettings" /* 2028 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4523 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7259 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AnalyticsSections: closure_4, AnalyticEvents: hasOwnProperty } = Constants);
-const constants3 = fn(4511).NotificationSettingsUpdateType;
+const constants3 = fn(4522).NotificationSettingsUpdateType;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/reactions/ReactionUtils.tsx");
 
@@ -25,23 +25,23 @@ export const getReactionEmojiName = function getReactionEmojiName(emoji) {
   }
   return result;
 };
-export const getAccessibleEmojiDisplayName = function getAccessibleEmojiDisplayName(me, count, emoji, arg3) {
+export const getAccessibleEmojiDisplayName = function getAccessibleEmojiDisplayName(selected, count, emoji, arg3) {
   const t = util.t;
   if (arg3) {
-    if (me) {
+    if (selected) {
       let i9DXqM = t.i9DXqM;
     } else {
       i9DXqM = t["Z/l+qu"];
     }
   } else {
-    if (me) {
+    if (selected) {
       let PirBBE = t.CLuzw5;
       let tmp5 = require;
     } else {
       PirBBE = t.PirBBE;
       tmp5 = require;
     }
-    const intl = tmp5(1115).intl;
+    const intl = tmp5(1126).intl;
     const obj = { reactions: count, emojiName: null };
     if (null == emoji.id) {
       let str2 = UnicodeEmojisDefault.convertSurrogateToName(emoji.name);

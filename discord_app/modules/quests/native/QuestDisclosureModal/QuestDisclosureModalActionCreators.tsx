@@ -1,15 +1,15 @@
-// === Module 14854: QuestDisclosureModalActionCreators ===
+// === Module 14910: QuestDisclosureModalActionCreators ===
 
-// Module 14854 (QuestDisclosureModalActionCreators)
-import asyncRequireImpl from "asyncRequireImpl" /* 1981 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5048 */;
-import AdCreativeType from "AdCreativeType" /* 5949 */;
-import AnalyticsActions from "AnalyticsActions" /* 7304 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7310 */;
-import captureAdUserAction from "captureAdUserAction" /* 7315 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7325 */;
-import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 7326 */;
-import QuestDockCreativeContext from "QuestDockCreativeContext" /* 14843 */;
+// Module 14910 (QuestDisclosureModalActionCreators)
+import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
+import AdCreativeType from "AdCreativeType" /* 5630 */;
+import AnalyticsActions from "AnalyticsActions" /* 7202 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7208 */;
+import captureAdUserAction from "captureAdUserAction" /* 7213 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7223 */;
+import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 7224 */;
+import AdCreativeUtils from "AdCreativeUtils" /* 14899 */;
 import size from "module_2" /* 2 */;
 
 const QUEST_DISCLOSURE_MODAL = "QUEST_DISCLOSURE_MODAL";
@@ -18,7 +18,7 @@ let result = size.fileFinishedImporting("modules/quests/native/QuestDisclosureMo
 export default {
   showModal(isTargetedDisclosure) {
     ({ creative, trackingCtx } = isTargetedDisclosure);
-    const creativeAnalyticsParams = QuestDockCreativeContext.getCreativeAnalyticsParams(creative);
+    const creativeAnalyticsParams = AdCreativeUtils.getCreativeAnalyticsParams(creative);
     if (obj2.shouldMigrateToAdAnalyticsInterface(AdAnalyticsInterfaceExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "quest_disclosure_modal")) {
       const obj3 = { type: captureAdUserActionTypes.AdUserActionType.CLICK_INTERNAL };
       const merged = Object.assign(creativeAnalyticsParams);
@@ -62,8 +62,8 @@ export default {
     const obj12 = {};
     const merged1 = Object.assign(tmp11);
     obj12.isTargetedDisclosure = isTargetedDisclosure.isTargetedDisclosure;
-    obj9.pushLazy(asyncRequireImpl(14855, dependencyMap.paths), obj12, QUEST_DISCLOSURE_MODAL);
-    const tmp10 = asyncRequireImpl(14855, dependencyMap.paths);
+    obj9.pushLazy(asyncRequireImpl(14911, dependencyMap.paths), obj12, QUEST_DISCLOSURE_MODAL);
+    const tmp10 = asyncRequireImpl(14911, dependencyMap.paths);
   },
   hideModal() {
     ModalActionCreatorsDefault.popWithKey(QUEST_DISCLOSURE_MODAL);

@@ -1,26 +1,27 @@
-// === Module 11937: ChatInputActionButtonGiftOrThread ===
+// === Module 11875: ChatInputActionButtonGiftOrThread ===
 
-// Module 11937 (ChatInputActionButtonGiftOrThread)
-import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4560 */;
-import native from "native" /* 4569 */;
-import ChatInputActionButtonDefault from "ChatInputActionButton" /* 11931 */;
-import ChatInputActionButtonTransitionItemDefault from "ChatInputActionButtonTransitionItem" /* 11938 */;
-import ChatInputActionButtonGiftDefault from "ChatInputActionButtonGift" /* 11940 */;
+// Module 11875 (ChatInputActionButtonGiftOrThread)
+import c from "c" /* 576 */;
+import nativeDefault from "native" /* 587 */;
+import useToken from "useToken" /* 4580 */;
+import native from "native" /* 4589 */;
+import ChatInputActionButtonDefault from "ChatInputActionButton" /* 11868 */;
+import ChatInputActionButtonTransitionItemDefault from "ChatInputActionButtonTransitionItem" /* 11876 */;
+import ChatInputActionButtonGiftDefault from "ChatInputActionButtonGift" /* 11878 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-function renderChatInputActionButtonGiftAndThread(key, styleButton, state, cleanup) {
+function renderChatInputActionButtonGiftAndThread(id, styleButton, state, cleanup) {
   ({ accessible, onPress } = styleButton);
   styleButton = styleButton.styleButton;
   ({ canStartThreads, channel, shouldShowThread, styleButtonWrapper } = styleButton);
   const obj = { cleanup, state, children: null };
   if (shouldShowThread) {
     const obj2 = { accessible, accessibilityLabel: null, disabled: null, IconComponent: null, onPress: null, style: null };
-    const intl = onPress(1115).intl;
-    obj2.accessibilityLabel = intl.string(onPress(1115).t["4WNcpu"]);
+    const intl = onPress(1126).intl;
+    obj2.accessibilityLabel = intl.string(onPress(1126).t["4WNcpu"]);
     obj2.disabled = !canStartThreads;
-    obj2.IconComponent = onPress(11929).ThreadPlusIcon;
+    obj2.IconComponent = onPress(11866).ThreadPlusIcon;
     obj2.onPress = function onPress(arg0) {
       return onPress(arg0, ChatInputActionType.THREAD);
     };
@@ -32,7 +33,7 @@ function renderChatInputActionButtonGiftAndThread(key, styleButton, state, clean
     tmpResult = jsx(ChatInputActionButtonGiftDefault, { accessible, channel, onPress, style: styleButtonWrapper, styleButton });
   }
   obj.children = tmpResult;
-  return jsx(ChatInputActionButtonTransitionItemDefault, { cleanup, state, children: null }, key);
+  return jsx(ChatInputActionButtonTransitionItemDefault, { cleanup, state, children: null }, id);
 }
 function getChatInputActionButtonGiftAndThreadKey(shouldShowThread) {
   let str = "gift";
@@ -42,19 +43,53 @@ function getChatInputActionButtonGiftAndThreadKey(shouldShowThread) {
   return str;
 }
 const View = fn(17).View;
-const ChatInputActionType = fn(11655).ChatInputActionType;
+const ChatInputActionType = fn(11576).ChatInputActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let closure_7 = createStyles.createStyles((height, arg1) => {
   const obj = { container: null };
   const size = { width: height + 2 * arg1, height };
   obj.container = size;
   return obj;
 });
+const ReactCompilerGating = fn(558);
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/chat_input/native/action_buttons/ChatInputActionButtonGiftOrThread.tsx");
 
-export default noop.memo(function ChatInputActionButtonGiftOrThread(arg0) {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(7);
+  const token = useToken.useToken(nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
+  const tmp5 = closure_7(token, useToken.useToken(nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN));
+  if (cResult[0] !== arg0) {
+    const items = [arg0];
+    cResult[0] = arg0;
+    cResult[1] = items;
+    let tmp6 = items;
+  } else {
+    tmp6 = cResult[1];
+  }
+  if (cResult[2] !== tmp6) {
+    const obj4 = { items: tmp6, renderItem: renderChatInputActionButtonGiftAndThread, getItemKey: getChatInputActionButtonGiftAndThreadKey };
+    const tmp11 = jsx(native.TransitionGroup, { items: tmp6, renderItem: renderChatInputActionButtonGiftAndThread, getItemKey: getChatInputActionButtonGiftAndThreadKey });
+    cResult[2] = tmp6;
+    cResult[3] = tmp11;
+    let tmp7 = tmp11;
+  } else {
+    tmp7 = cResult[3];
+  }
+  if (cResult[4] === tmp5.container) {
+    if (cResult[5] === tmp7) {
+      let tmp12 = cResult[6];
+    }
+    return tmp12;
+  }
+  const tmp13 = <View style={tmp5.container}>{tmp7}</View>;
+  cResult[4] = tmp5.container;
+  cResult[5] = tmp7;
+  cResult[6] = tmp13;
+  tmp12 = tmp13;
+  const obj5 = { style: tmp5.container, children: tmp7 };
+}) : ((arg0) => {
   closure_0 = arg0;
   const token = useToken.useToken(nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
   let items = [arg0];
@@ -65,4 +100,4 @@ export default noop.memo(function ChatInputActionButtonGiftOrThread(arg0) {
   }, items);
   obj3.children = jsx(native.TransitionGroup, { items: memo, renderItem: renderChatInputActionButtonGiftAndThread, getItemKey: getChatInputActionButtonGiftAndThreadKey });
   return <View style={closure_7(token, useToken.useToken(nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN)).container}>{null}</View>;
-});
+}));

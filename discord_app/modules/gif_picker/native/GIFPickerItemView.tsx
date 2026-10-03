@@ -1,18 +1,19 @@
-// === Module 10033: GIFPickerItemView ===
+// === Module 10103: GIFPickerItemView ===
 
-// Module 10033 (GIFPickerItemView)
-import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1115 */;
-import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1876 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1981 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4809 */;
-import gif_picker_GIFPickerUtils from "gif_picker/GIFPickerUtils" /* 10023 */;
+// Module 10103 (GIFPickerItemView)
+import c from "c" /* 576 */;
+import nativeDefault from "native" /* 587 */;
+import util from "util" /* 1126 */;
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1881 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
+import gif_picker_GIFPickerUtils from "gif_picker/GIFPickerUtils" /* 10093 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let closure_6 = createStyles.createStyles((height) => {
   const obj = { container: null, gifImage: null, gifImageSelected: null };
   const size = { paddingBottom: gif_picker_GIFPickerUtils.GIF_PICKER_GUTTER_SPACING, paddingHorizontal: gif_picker_GIFPickerUtils.GIF_PICKER_GUTTER_SPACING / 2, borderRadius: nativeDefault.radii.xs, width: "100%", height, flex: 1 };
@@ -22,6 +23,7 @@ let closure_6 = createStyles.createStyles((height) => {
   obj.gifImageSelected = { borderWidth: 2, borderColor: nativeDefault.colors.BACKGROUND_BRAND };
   return obj;
 });
+const ReactCompilerGating = fn(558);
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/gif_picker/native/GIFPickerItemView.tsx");
 
@@ -39,7 +41,7 @@ export default function GIFPickerItemView(onPressGIF) {
   }, items);
   const items2 = [index, item.src];
   const callback1 = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10034, dependencyMap.paths), "GIFPickerItemActionSheet", { item }, "stack");
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10104, dependencyMap.paths), "GIFPickerItemActionSheet", { item }, "stack");
     const obj2 = { item };
     const result = KeyboardManagerUtils.dismissGlobalKeyboard();
   }, items1);
@@ -73,11 +75,35 @@ export default function GIFPickerItemView(onPressGIF) {
   } else {
     gifImage = tmp.gifImage;
   }
-  obj.children = jsx(item(index[12]), { style: gifImage, source: { uri: item.src } });
-  return jsx(onPressGIF(index[11]).PressableOpacity, { style: tmp.container, accessibilityRole: "button", accessibilityLabel: memo, accessibilityState: null, onPress: null, onLongPress: null, children: null });
+  obj.children = jsx(item(index[14]), { style: gifImage, source: { uri: item.src } });
+  return jsx(onPressGIF(index[13]).PressableOpacity, { style: tmp.container, accessibilityRole: "button", accessibilityLabel: memo, accessibilityState: null, onPress: null, onLongPress: null, children: null });
 };
-export const GIFPickerItemPlaceholder = noop.memo((height) => {
+export const GIFPickerItemPlaceholder = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((height) => {
+  const cResult = c.c(5);
+  const tmp2 = closure_6(height.height);
+  if (cResult[0] !== tmp2.gifImage) {
+    const obj2 = { style: tmp2.gifImage };
+    const tmp6 = <View style={tmp2.gifImage} />;
+    cResult[0] = tmp2.gifImage;
+    cResult[1] = tmp6;
+    let tmp3 = tmp6;
+  } else {
+    tmp3 = cResult[1];
+  }
+  if (cResult[2] === tmp2.container) {
+    if (cResult[3] === tmp3) {
+      let tmp7 = cResult[4];
+    }
+    return tmp7;
+  }
+  const tmp8 = <View style={tmp2.container}>{tmp3}</View>;
+  cResult[2] = tmp2.container;
+  cResult[3] = tmp3;
+  cResult[4] = tmp8;
+  tmp7 = tmp8;
+  const obj3 = { style: tmp2.container, children: tmp3 };
+}) : ((height) => {
   const tmp = closure_6(height.height);
   const obj = { style: tmp.container, children: <View style={tmp.gifImage} /> };
   return <View style={tmp.container}><View style={tmp.gifImage} /></View>;
-});
+}));

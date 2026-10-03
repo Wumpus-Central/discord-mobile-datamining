@@ -1,16 +1,75 @@
-// === Module 8318: useResolveGameForProfile ===
+// === Module 8323: useResolveGameForProfile ===
 
-// Module 8318 (useResolveGameForProfile)
-import RobloxSubgameUtils from "RobloxSubgameUtils" /* 4975 */;
-import RobloxSubgameTypes from "RobloxSubgameTypes" /* 4976 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6775 */;
-import useGame from "useGame" /* 6914 */;
-import useResolveGameDefault from "useResolveGame" /* 8319 */;
+// Module 8323 (useResolveGameForProfile)
+import c from "c" /* 576 */;
+import RobloxSubgameUtils from "RobloxSubgameUtils" /* 5020 */;
+import RobloxSubgameTypes from "RobloxSubgameTypes" /* 5021 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6663 */;
+import useGame from "useGame" /* 6812 */;
+import useResolveGameDefault from "useResolveGame" /* 8324 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/game_profile/hooks/useResolveGameForProfile.tsx");
 
-export default function useResolveGameForProfile(arg0) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(6);
+  ({ applicationId, gameId } = arg0);
+  let tmp4;
+  if (null == gameId) {
+    tmp4 = applicationId;
+  }
+  const getOrFetchApplication = useGetOrFetchApplications.useGetOrFetchApplication(tmp4);
+  let ROBLOX_GAME_ID = gameId;
+  if (null != getOrFetchApplication) {
+    ROBLOX_GAME_ID = gameId;
+    if (tmpResult.isRobloxSubgameApplication(getOrFetchApplication)) {
+      ROBLOX_GAME_ID = RobloxSubgameTypes.ROBLOX_GAME_ID;
+    }
+    tmpResult = RobloxSubgameUtils;
+  }
+  if (cResult[0] === applicationId) {
+    if (cResult[1] === ROBLOX_GAME_ID) {
+      let tmp6 = cResult[2];
+    }
+    const tmp8 = useResolveGameDefault(tmp6);
+    let isRobloxSubgameGameResult = null != tmp8.gameRecord;
+    if (isRobloxSubgameGameResult) {
+      isRobloxSubgameGameResult = RobloxSubgameUtils.isRobloxSubgameGame(tmp8.gameRecord);
+      const tmpResult3 = RobloxSubgameUtils;
+    }
+    let ROBLOX_GAME_ID1;
+    if (isRobloxSubgameGameResult) {
+      ROBLOX_GAME_ID1 = RobloxSubgameTypes.ROBLOX_GAME_ID;
+    }
+    const game = useGame.useGame(ROBLOX_GAME_ID1);
+    ({ data, isLoading } = game);
+    if (isRobloxSubgameGameResult) {
+      if (data == null) {
+        data = null;
+      }
+      if (cResult[3] === isLoading) {
+        if (cResult[4] === data) {
+          let tmp12 = cResult[5];
+        }
+        return tmp12;
+      }
+      const obj3 = { gameId: RobloxSubgameTypes.ROBLOX_GAME_ID, gameRecord: data, isLoading };
+      cResult[3] = isLoading;
+      cResult[4] = data;
+      cResult[5] = obj3;
+      tmp12 = obj3;
+    } else {
+      return tmp8;
+    }
+    const tmpResult4 = useGame;
+  }
+  const obj4 = { applicationId, gameId: ROBLOX_GAME_ID };
+  cResult[0] = applicationId;
+  cResult[1] = ROBLOX_GAME_ID;
+  cResult[2] = obj4;
+  tmp6 = obj4;
+}) : ((arg0) => {
   ({ applicationId, gameId } = arg0);
   let tmp3;
   if (null == gameId) {
@@ -49,4 +108,4 @@ export default function useResolveGameForProfile(arg0) {
     tmp6Result = obj3;
   }
   return tmp6Result;
-};
+});

@@ -1,12 +1,12 @@
-// === Module 13496: NowPlayingStore ===
+// === Module 13556: NowPlayingStore ===
 
-// Module 13496 (NowPlayingStore)
+// Module 13556 (NowPlayingStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import getApplicationIdForActivityDefault from "getApplicationIdForActivity" /* 13497 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7245 */;
-import PresenceStore from "PresenceStore" /* 4885 */;
-import UserStore from "UserStore" /* 1372 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import getApplicationIdForActivityDefault from "getApplicationIdForActivity" /* 13557 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7143 */;
+import PresenceStore from "PresenceStore" /* 4930 */;
+import UserStore from "UserStore" /* 1377 */;
 
 function _handlePresenceUpdate(user) {
   user = user.user;
@@ -131,7 +131,7 @@ function handleUserAffinitiesV2StoreUpdate() {
   closure_6 = !UserAffinitiesV2Store.shouldFetch();
   return flag;
 }
-const ActivityTypes = fn(1074).ActivityTypes;
+const ActivityTypes = fn(1085).ActivityTypes;
 let c6 = false;
 const Store = initializeDefault.Store;
 class NowPlayingStore extends Store {

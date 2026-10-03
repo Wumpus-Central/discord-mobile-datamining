@@ -1,8 +1,8 @@
-// === Module 8583: resolvedDisplayField ===
+// === Module 8596: resolvedDisplayField ===
 
-// Module 8583 (resolvedDisplayField)
-import resolvedValues from "resolvedValues" /* 8584 */;
-import ApplicationWidgetFieldPresentationType from "ApplicationWidgetFieldPresentationType" /* 8585 */;
+// Module 8596 (resolvedDisplayField)
+import resolvedValues from "resolvedValues" /* 8597 */;
+import ApplicationWidgetFieldPresentationType from "ApplicationWidgetFieldPresentationType" /* 8598 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/resolvedDisplayField.tsx");
@@ -73,7 +73,7 @@ export const resolveTextComponentValues = function resolveTextComponentValues(su
     return obj;
   }
 };
-export const resolveStatComponentValues = function resolveStatComponentValues(fields, fn, format, formatDurationNarrow, arg4) {
+export const resolveStatComponentValues = function resolveStatComponentValues(fields, resolveFieldValue, numberFormat, formatDurationNarrow, arg4) {
   let flag = arg4;
   if (arg4 === undefined) {
     flag = false;
@@ -87,11 +87,11 @@ export const resolveStatComponentValues = function resolveStatComponentValues(fi
     return tmp4;
   } else {
     const items = [resolvedValues.ResolvedValueType.STRING, resolvedValues.ResolvedValueType.NUMBER];
-    const iter = fn(fields.fields.value, items);
+    const iter = resolveFieldValue(fields.fields.value, items);
     const items1 = [resolvedValues.ResolvedValueType.STRING];
-    const iter2 = fn(fields.fields.label, items1);
+    const iter2 = resolveFieldValue(fields.fields.label, items1);
     const items2 = [resolvedValues.ResolvedValueType.MEDIA];
-    const tmp8 = fn(fields.fields.icon, items2);
+    const tmp8 = resolveFieldValue(fields.fields.icon, items2);
     if (null == iter) {
       let obj = { status: "skeleton" };
     } else {
@@ -100,7 +100,7 @@ export const resolveStatComponentValues = function resolveStatComponentValues(fi
       } else if (iter.presentationType === ApplicationWidgetFieldPresentationType.ApplicationWidgetFieldPresentationType.DURATION) {
         formatResult = formatDurationNarrow(iter.value);
       } else {
-        formatResult = format.format(iter.value);
+        formatResult = numberFormat.format(iter.value);
       }
       obj = { status: "value", text: formatResult, icon: null };
       let media;

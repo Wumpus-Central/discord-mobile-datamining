@@ -1,9 +1,9 @@
-// === Module 13717: GuildPopoutStore ===
+// === Module 13782: GuildPopoutStore ===
 
-// Module 13717 (GuildPopoutStore)
+// Module 13782 (GuildPopoutStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 6946 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 6844 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -24,7 +24,7 @@ prototype["isFetchingGuild"] = function isFetchingGuild(arg0) {
   return tmp2;
 };
 prototype["getGuild"] = function getGuild(arg0) {
-  let guild = null;
+  guild = null;
   if (null != closure_4.guilds[arg0]) {
     guild = tmp.guild;
   }

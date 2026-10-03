@@ -1,15 +1,69 @@
-// === Module 15502: NitroWumpusFlightRight3dIllustration ===
+// === Module 15563: NitroWumpusFlightRight3dIllustration ===
 
-// Module 15502 (NitroWumpusFlightRight3dIllustration)
+// Module 15563 (NitroWumpusFlightRight3dIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 6085 */;
-import _modDef15503 from "module_15503" /* 15503 */;
+import c from "c" /* 576 */;
+import FastImageDefault from "FastImage" /* 5974 */;
+import _modDef15564 from "module_15564" /* 15564 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/NitroWumpusFlightRight3dIllustration.native.tsx");
+let result = size.fileFinishedImporting("design/components/mana-assets/native/generated/NitroWumpusFlightRight3dIllustration.native.tsx");
 
-export const NitroWumpusFlightRight3dIllustration = function NitroWumpusFlightRight3dIllustration(width) {
+export const NitroWumpusFlightRight3dIllustration = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(9);
+  ({ accessible, accessibilityLabel, resizeMode, width, height, scale } = arg0);
+  let num = 288;
+  if (undefined !== width) {
+    num = width;
+  }
+  let num2 = 192;
+  if (undefined !== height) {
+    num2 = height;
+  }
+  let num3 = 1;
+  if (undefined !== scale) {
+    num3 = scale;
+  }
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const obj2 = { uri: _modDef15564 };
+    cResult[0] = obj2;
+    let first = obj2;
+  } else {
+    first = cResult[0];
+  }
+  const result = num * num3;
+  const result1 = num2 * num3;
+  if (cResult[1] === result) {
+    if (cResult[2] === result1) {
+      let tmp7 = cResult[3];
+    }
+    if (cResult[4] === accessibilityLabel) {
+      if (cResult[5] === accessible) {
+        if (cResult[6] === resizeMode) {
+          if (cResult[7] === tmp7) {
+            let tmp8 = cResult[8];
+          }
+          return tmp8;
+        }
+      }
+    }
+    const obj3 = { fadeDuration: 0, source: first, style: tmp7, accessible, accessibilityLabel, resizeMode };
+    const tmp11 = jsx(FastImageDefault, { fadeDuration: 0, source: first, style: tmp7, accessible, accessibilityLabel, resizeMode });
+    cResult[4] = accessibilityLabel;
+    cResult[5] = accessible;
+    cResult[6] = resizeMode;
+    cResult[7] = tmp7;
+    cResult[8] = tmp11;
+    tmp8 = tmp11;
+  }
+  const items = [{ width: result, height: result1 }];
+  cResult[1] = result;
+  cResult[2] = result1;
+  cResult[3] = items;
+  tmp7 = items;
+}) : ((width) => {
   let num = width.width;
   ({ accessible, accessibilityLabel, resizeMode } = width);
   if (num === undefined) {
@@ -24,7 +78,7 @@ export const NitroWumpusFlightRight3dIllustration = function NitroWumpusFlightRi
     num3 = 1;
   }
   const obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  const obj2 = { uri: _modDef15503 };
+  const obj2 = { uri: _modDef15564 };
   obj.source = obj2;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -33,4 +87,4 @@ export const NitroWumpusFlightRight3dIllustration = function NitroWumpusFlightRi
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
   return jsx(FastImageDefault, { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null });
-};
+});

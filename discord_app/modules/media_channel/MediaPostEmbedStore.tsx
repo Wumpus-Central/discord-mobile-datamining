@@ -1,8 +1,8 @@
-// === Module 11179: MediaPostEmbedStore ===
+// === Module 11085: MediaPostEmbedStore ===
 
-// Module 11179 (MediaPostEmbedStore)
+// Module 11085 (MediaPostEmbedStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
 
 const FetchState = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", FETCHING: 1, [1]: "FETCHING", FETCHED: 2, [2]: "FETCHED", FAILED: 3, [3]: "FAILED" };
 let closure_1 = {};

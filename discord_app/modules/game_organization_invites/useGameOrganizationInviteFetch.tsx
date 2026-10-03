@@ -1,20 +1,20 @@
-// === Module 17441: useGameOrganizationInviteFetch ===
+// === Module 17530: useGameOrganizationInviteFetch ===
 
-// Module 17441 (useGameOrganizationInviteFetch)
-import DurationsDefault from "Durations" /* 1091 */;
-import GameOrganizationInviteActionCreatorsDefault from "GameOrganizationInviteActionCreators" /* 17444 */;
+// Module 17530 (useGameOrganizationInviteFetch)
+import DurationsDefault from "Durations" /* 1102 */;
+import GameOrganizationInviteActionCreatorsDefault from "GameOrganizationInviteActionCreators" /* 17531 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GameOrganizationInviteStore from "GameOrganizationInviteStore" /* 17442 */;
+import GameOrganizationInviteStore from "GameOrganizationInviteStore" /* 11083 */;
 
-const constants = fn(17443).GameOrganizationInviteStates;
+const constants = fn(11084).GameOrganizationInviteStates;
 const initialize = fn(504);
 const obj2 = {
-  getQueryId: fn(1074).QueryIds.GAME_ORGANIZATION_INVITE,
+  getQueryId: fn(1085).QueryIds.GAME_ORGANIZATION_INVITE,
   staleAfter: 5 * DurationsDefault.Seconds.MINUTE,
   failureStaleAfter: 5 * DurationsDefault.Seconds.MINUTE,
   get(arg0) {
     const invite = GameOrganizationInviteStore.getInvite(arg0);
-    let state;
+    state = undefined;
     if (invite != null) {
       state = invite.state;
     }
@@ -37,7 +37,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -65,7 +65,7 @@ let closure_2 = asyncGeneratorStep(async (arg0) => {
         return obj;
       } else {
         c1 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp8) {
       c1 = tmp;

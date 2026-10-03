@@ -1,34 +1,54 @@
-// === Module 15748: ParentalControlsUseDataForQuests3PSetting ===
+// === Module 15811: ParentalControlsUseDataForQuests3PSetting ===
 
-// Module 15748 (ParentalControlsUseDataForQuests3PSetting)
-import util from "util" /* 1115 */;
-import useSelectedTeen from "useSelectedTeen" /* 8293 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14566 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7145 */;
+// Module 15811 (ParentalControlsUseDataForQuests3PSetting)
+import util from "util" /* 1126 */;
+import useSelectedTeen from "useSelectedTeen" /* 8297 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14622 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7048 */;
 
 require = fn;
-const SettingBuilders = fn(11215);
+fn(558);
+const ReactCompilerGating = fn(558);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const selectedTeenId = useSelectedTeen.useSelectedTeenId();
+  const ParentalControlledQuests3PDataOptedOut = ParentalControlledUserSettings.ParentalControlledQuests3PDataOptedOut;
+  return !ParentalControlledQuests3PDataOptedOut.useControlledSetting(selectedTeenId);
+}) : (() => {
+  const selectedTeenId = useSelectedTeen.useSelectedTeenId();
+  const ParentalControlledQuests3PDataOptedOut = ParentalControlledUserSettings.ParentalControlledQuests3PDataOptedOut;
+  return !ParentalControlledQuests3PDataOptedOut.useControlledSetting(selectedTeenId);
+});
+const SettingBuilders = fn(11129);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const selectedTeenId = useSelectedTeen.useSelectedTeenId();
+  const ParentalControlledDropsOptedOut = ParentalControlledUserSettings.ParentalControlledDropsOptedOut;
+  return ParentalControlledDropsOptedOut.useControlledSetting(selectedTeenId);
+}) : (() => {
+  const selectedTeenId = useSelectedTeen.useSelectedTeenId();
+  const ParentalControlledDropsOptedOut = ParentalControlledUserSettings.ParentalControlledDropsOptedOut;
+  return ParentalControlledDropsOptedOut.useControlledSetting(selectedTeenId);
+});
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.CyLYKZ);
   },
-  parent: fn(7590).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
-  useValue: function useDataToSupportQuests3PSettingValue() {
-    const selectedTeenId = useSelectedTeen.useSelectedTeenId();
-    const ParentalControlledQuests3PDataOptedOut = ParentalControlledUserSettings.ParentalControlledQuests3PDataOptedOut;
-    return !ParentalControlledQuests3PDataOptedOut.useControlledSetting(selectedTeenId);
-  },
+  parent: fn(7634).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  useValue: tmp2,
   onValueChange: function onDataToSupportQuests3PSettingValueChange(arg0) {
     const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
     const ParentalControlledQuests3PDataOptedOut = ParentalControlledUserSettings.ParentalControlledQuests3PDataOptedOut;
     const result = ParentalControlledQuests3PDataOptedOut.updateControlledSetting(selectedTeenId, !arg0);
   },
-  useIsDisabled: function useDataToSupportQuests3PSettingIsDisabled() {
+  useIsDisabled: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const selectedTeenId = useSelectedTeen.useSelectedTeenId();
     const ParentalControlledDropsOptedOut = ParentalControlledUserSettings.ParentalControlledDropsOptedOut;
     return ParentalControlledDropsOptedOut.useControlledSetting(selectedTeenId);
-  },
+  }) : (() => {
+    const selectedTeenId = useSelectedTeen.useSelectedTeenId();
+    const ParentalControlledDropsOptedOut = ParentalControlledUserSettings.ParentalControlledDropsOptedOut;
+    return ParentalControlledDropsOptedOut.useControlledSetting(selectedTeenId);
+  }),
   unsearchable: true
 });
 const size = fn(2);

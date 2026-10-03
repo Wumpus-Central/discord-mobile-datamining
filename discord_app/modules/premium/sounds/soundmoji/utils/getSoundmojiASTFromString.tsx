@@ -1,16 +1,16 @@
-// === Module 5502: getSoundmojiASTFromString ===
+// === Module 5801: getSoundmojiASTFromString ===
 
-// Module 5502 (getSoundmojiASTFromString)
-import AvatarUtils from "AvatarUtils" /* 1397 */;
-import SoundmojiRenderingExperiment from "SoundmojiRenderingExperiment" /* 5509 */;
-import isSoundValidDefault from "isSoundValid" /* 5510 */;
-import getSoundFromMessageDefault from "getSoundFromMessage" /* 5511 */;
-import getSoundStringDefault from "getSoundString" /* 5513 */;
-import SoundboardStore from "SoundboardStore" /* 5503 */;
-import MessageStore from "MessageStore" /* 5065 */;
+// Module 5801 (getSoundmojiASTFromString)
+import AvatarUtils from "AvatarUtils" /* 1402 */;
+import SoundmojiRenderingExperiment from "SoundmojiRenderingExperiment" /* 5802 */;
+import isSoundValidDefault from "isSoundValid" /* 5803 */;
+import getSoundFromMessageDefault from "getSoundFromMessage" /* 5804 */;
+import getSoundStringDefault from "getSoundString" /* 5806 */;
+import SoundboardStore from "SoundboardStore" /* 5680 */;
+import MessageStore from "MessageStore" /* 5110 */;
 
 require = fn;
-const MessageStates = fn(1074).MessageStates;
+const MessageStates = fn(1085).MessageStates;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/sounds/soundmoji/utils/getSoundmojiASTFromString.tsx");
 
@@ -28,7 +28,7 @@ export default function getSoundmojiASTFromString(soundId, guildId) {
           tmp5 = tmp16;
           if (null == tmp16) {
             const message = MessageStore.getMessage(channelId, messageId);
-            let state;
+            state = undefined;
             if (message != null) {
               state = message.state;
             }
@@ -102,7 +102,7 @@ export const getSoundmojiFromMessage = function getSoundmojiFromMessage(guildId,
         if (tmp9) {
           if (null == tmp16) {
             const message = MessageStore.getMessage(channelId, messageId);
-            let state;
+            state = undefined;
             if (message != null) {
               state = message.state;
             }

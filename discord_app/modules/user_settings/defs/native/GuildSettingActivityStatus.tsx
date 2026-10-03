@@ -1,15 +1,38 @@
-// === Module 15724: GuildSettingActivityStatus ===
+// === Module 15787: GuildSettingActivityStatus ===
 
-// Module 15724 (GuildSettingActivityStatus)
-import util from "util" /* 1115 */;
-import UserSettings from "UserSettings" /* 2021 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 6602 */;
-import SettingsConstants from "SettingsConstants" /* 7590 */;
-import UserSettingsSafetySelectedGuildStore from "UserSettingsSafetySelectedGuildStore" /* 15711 */;
-import SettingBuilders from "SettingBuilders" /* 11215 */;
+// Module 15787 (GuildSettingActivityStatus)
+import c from "c" /* 576 */;
+import util from "util" /* 1126 */;
+import UserSettings from "UserSettings" /* 2028 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 6491 */;
+import SettingsConstants from "SettingsConstants" /* 7634 */;
+import UserSettingsSafetySelectedGuildStore from "UserSettingsSafetySelectedGuildStore" /* 15774 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import SettingBuilders from "SettingBuilders" /* 11129 */;
 import size from "module_2" /* 2 */;
 
 ({ getSelectedGuildId: c2, useUserSafetySettingsSelectedGuildStore: c3 } = UserSettingsSafetySelectedGuildStore);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(3);
+  const selectedGuildId = React3().selectedGuildId;
+  const ActivityRestrictedGuilds = UserSettings.ActivityRestrictedGuilds;
+  const setting = ActivityRestrictedGuilds.useSetting();
+  if (cResult[0] === selectedGuildId) {
+    if (cResult[1] === setting) {
+      let tmp2 = cResult[2];
+    }
+    return !tmp2;
+  }
+  const hasItem = setting.includes(selectedGuildId);
+  cResult[0] = selectedGuildId;
+  cResult[1] = setting;
+  cResult[2] = hasItem;
+  tmp2 = hasItem;
+}) : (() => {
+  const ActivityRestrictedGuilds = UserSettings.ActivityRestrictedGuilds;
+  const setting = ActivityRestrictedGuilds.useSetting();
+  return !setting.includes(React3().selectedGuildId);
+});
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -20,11 +43,27 @@ const toggle = SettingBuilders.createToggle({
     return intl.string(util.t.TUKMak);
   },
   parent: SettingsConstants.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
-  useValue() {
+  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+    const cResult = c.c(3);
+    const selectedGuildId = React3().selectedGuildId;
+    const ActivityRestrictedGuilds = UserSettings.ActivityRestrictedGuilds;
+    const setting = ActivityRestrictedGuilds.useSetting();
+    if (cResult[0] === selectedGuildId) {
+      if (cResult[1] === setting) {
+        let tmp2 = cResult[2];
+      }
+      return !tmp2;
+    }
+    const hasItem = setting.includes(selectedGuildId);
+    cResult[0] = selectedGuildId;
+    cResult[1] = setting;
+    cResult[2] = hasItem;
+    tmp2 = hasItem;
+  }) : (() => {
     const ActivityRestrictedGuilds = UserSettings.ActivityRestrictedGuilds;
     const setting = ActivityRestrictedGuilds.useSetting();
     return !setting.includes(React3().selectedGuildId);
-  },
+  }),
   onValueChange(arg0) {
     const tmp = React2();
     const sanitizedActivityRestrictedGuilds = UserSettingsUtils.getSanitizedActivityRestrictedGuilds();

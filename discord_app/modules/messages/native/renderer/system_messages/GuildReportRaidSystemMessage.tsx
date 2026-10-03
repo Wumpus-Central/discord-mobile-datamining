@@ -1,17 +1,17 @@
-// === Module 7666: GuildReportRaidSystemMessage ===
+// === Module 7710: GuildReportRaidSystemMessage ===
 
-// Module 7666 (GuildReportRaidSystemMessage)
-import util from "util" /* 1115 */;
-import AvatarUtils from "AvatarUtils" /* 1397 */;
-import utils_AvatarUtils from "utils/AvatarUtils" /* 1400 */;
-import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 7568 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7575 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7577 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7579 */;
-import GuildAlertModeSystemMessage from "GuildAlertModeSystemMessage" /* 7659 */;
-import getTagPropertiesDefault from "getTagProperties" /* 7660 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildStore from "GuildStore" /* 2066 */;
+// Module 7710 (GuildReportRaidSystemMessage)
+import util from "util" /* 1126 */;
+import AvatarUtils from "AvatarUtils" /* 1402 */;
+import utils_AvatarUtils from "utils/AvatarUtils" /* 1405 */;
+import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 7612 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7619 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7621 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7623 */;
+import GuildAlertModeSystemMessage from "GuildAlertModeSystemMessage" /* 7703 */;
+import getTagPropertiesDefault from "getTagProperties" /* 7704 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import GuildStore from "GuildStore" /* 2074 */;
 
 require = fn;
 const size = fn(2);
@@ -24,7 +24,7 @@ export const createGuildReportRaidSystemMessage = function createGuildReportRaid
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  const guild = GuildStore.getGuild(guild_id);
+  guild = GuildStore.getGuild(guild_id);
   const tmp3 = resolveMessageContentColorsDefault(theme);
   const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
   let automodUsernameColor = GuildAlertModeSystemMessage.resolveAlertModeColors(theme).automodUsernameColor;

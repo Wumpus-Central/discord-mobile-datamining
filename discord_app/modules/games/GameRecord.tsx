@@ -1,15 +1,15 @@
-// === Module 2002: GameRecord ===
+// === Module 2008: GameRecord ===
 
-// Module 2002 (GameRecord)
-import GlobalUtils from "GlobalUtils" /* 1370 */;
-import AvatarUtils from "AvatarUtils" /* 1397 */;
-import Server from "Server" /* 1979 */;
-import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 2010 */;
-import Record from "Record" /* 1387 */;
-import ApplicationRecord from "ApplicationRecord" /* 2003 */;
+// Module 2008 (GameRecord)
+import GlobalUtils from "GlobalUtils" /* 1375 */;
+import AvatarUtils from "AvatarUtils" /* 1402 */;
+import Server from "Server" /* 1985 */;
+import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 2017 */;
+import Record from "Record" /* 1392 */;
+import ApplicationRecord from "ApplicationRecord" /* 2009 */;
 
 require = fn;
-const createExecutable = fn(2003).createExecutable;
+const createExecutable = fn(2009).createExecutable;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/games/GameRecord.tsx");
 class GameRecord extends tmp2 {
@@ -149,7 +149,7 @@ prototype["getBannerURL"] = function getBannerURL(size) {
   }
   return getGameMediaRefURLDefault(this.id, banner, { keepAspectRatio: true, size });
 };
-prototype["getCoverURL"] = function getCoverURL(size) {
+prototype["getCoverURL"] = function getCoverURL(c9) {
   const media = this.media;
   let cover;
   if (media != null) {
@@ -178,11 +178,11 @@ prototype["getArtworkURLs"] = function getArtworkURLs(size) {
   const mapped = artwork.map((item) => getGameMediaRefURLDefault(self.id, item, { size, format: str, keepAspectRatio: true }));
   return mapped.filter(str(self[5]).isNotNullish);
 };
-prototype["getScreenshotURL"] = function getScreenshotURL(index, size) {
+prototype["getScreenshotURL"] = function getScreenshotURL(_Math, size) {
   const screenshotUrls = this.screenshotUrls;
   let tmp;
   if (screenshotUrls != null) {
-    tmp = screenshotUrls[index];
+    tmp = screenshotUrls[_Math];
   }
   let tmp7Result = null;
   if (null != tmp) {

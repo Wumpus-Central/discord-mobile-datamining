@@ -1,7 +1,7 @@
-// === Module 14836: QuestDockConstants ===
+// === Module 14892: QuestDockConstants ===
 
-// Module 14836 (QuestDockConstants)
-import nativeDefault from "native" /* 576 */;
+// Module 14892 (QuestDockConstants)
+import nativeDefault from "native" /* 587 */;
 import size from "module_2" /* 2 */;
 
 const obj = { mass: 0.5, damping: 80, stiffness: 320 };

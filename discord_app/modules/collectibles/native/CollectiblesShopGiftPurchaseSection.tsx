@@ -1,27 +1,27 @@
-// === Module 10678: CollectiblesShopGiftPurchaseSection ===
+// === Module 10749: CollectiblesShopGiftPurchaseSection ===
 
-// Module 10678 (CollectiblesShopGiftPurchaseSection)
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import PlatformUtils from "PlatformUtils" /* 1364 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5048 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5388 */;
+// Module 10749 (CollectiblesShopGiftPurchaseSection)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import nativeDefault from "native" /* 587 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import PlatformUtils from "PlatformUtils" /* 1369 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5708 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7819 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7863 */;
 
 require = fn;
 const View = fn(17).View;
-const useNativeCheckoutStore = fn(7032).useNativeCheckoutStore;
-const Constants = fn(1074);
+const useNativeCheckoutStore = fn(6930).useNativeCheckoutStore;
+const Constants = fn(1085);
 ({ AnalyticEvents: closure_9, MarketingURLs: c10 } = Constants);
-const PremiumConstants = fn(1374);
+const PremiumConstants = fn(1379);
 ({ GiftingOrigin: closure_11, PremiumGiftStyles: closure_12 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let closure_15 = createStyles.createStyles((arg0) => {
   const obj = { container: null, disclaimer: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_TOP_HIGH);
@@ -188,7 +188,7 @@ export default function CollectiblesShopGiftPurchaseSection(disabled) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {

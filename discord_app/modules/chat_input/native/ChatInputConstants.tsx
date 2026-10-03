@@ -1,7 +1,7 @@
-// === Module 11655: ChatInputConstants ===
+// === Module 11576: ChatInputConstants ===
 
-// Module 11655 (ChatInputConstants)
-import native from "native" /* 1177 */;
+// Module 11576 (ChatInputConstants)
+import native from "native" /* 1188 */;
 import size from "module_2" /* 2 */;
 
 const obj = { easing: native.STANDARD_EASING, duration: 250 };

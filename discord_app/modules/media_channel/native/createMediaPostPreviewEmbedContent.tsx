@@ -1,23 +1,23 @@
-// === Module 13021: createMediaPostPreviewEmbedContent ===
+// === Module 13082: createMediaPostPreviewEmbedContent ===
 
-// Module 13021 (createMediaPostPreviewEmbedContent)
-import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1115 */;
-import MediaPostEmbedUtils from "MediaPostEmbedUtils" /* 4993 */;
-import MediaPostThumbnailUtils from "MediaPostThumbnailUtils" /* 4994 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 4995 */;
-import LinkUtils from "LinkUtils" /* 4999 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 5057 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7206 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7575 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7577 */;
-import MediaPostEmbedStore2 from "MediaPostEmbedStore" /* 11179 */;
+// Module 13082 (createMediaPostPreviewEmbedContent)
+import nativeDefault from "native" /* 587 */;
+import util from "util" /* 1126 */;
+import MediaPostEmbedUtils from "MediaPostEmbedUtils" /* 5038 */;
+import MediaPostThumbnailUtils from "MediaPostThumbnailUtils" /* 5039 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 5040 */;
+import LinkUtils from "LinkUtils" /* 5044 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 5102 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7109 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7619 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7621 */;
+import MediaPostEmbedStore2 from "MediaPostEmbedStore" /* 11085 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import DevSettingsStore from "DevSettingsStore" /* 4844 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4684 */;
-import UserStore from "UserStore" /* 1372 */;
+import DevSettingsStore from "DevSettingsStore" /* 4889 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
+import UserStore from "UserStore" /* 1377 */;
 import size from "module_2" /* 2 */;
 
 const MediaPostEmbedStore = MediaPostEmbedStore2;
@@ -45,7 +45,7 @@ export default function createMediaPostPreviewEmbedContent(message, roleStyle, u
     if (null == media) {
       return null;
     } else {
-      const guild = GuildStore.getGuild(media.guild_id);
+      guild = GuildStore.getGuild(media.guild_id);
       const user = UserStore.getUser(media.author_id);
       const channel = ChannelStore.getChannel(media.parent_channel_id);
       const channel1 = ChannelStore.getChannel(media.channel_id);
@@ -91,7 +91,7 @@ export default function createMediaPostPreviewEmbedContent(message, roleStyle, u
             if (mediaPostEmbedCommonData.shouldShowBlurredThumbnailImage) {
               const obj5 = {};
               const merged = Object.assign(mediaPostEmbedCommonData);
-              obj5.blurredCoverImage = React3.resolveAssetSource(tmp10(13022)).uri;
+              obj5.blurredCoverImage = React3.resolveAssetSource(tmp10(13083)).uri;
               obj5.footer = formatToPartsResult;
               obj5.ctaButtonColor = tmp11;
               return obj5;

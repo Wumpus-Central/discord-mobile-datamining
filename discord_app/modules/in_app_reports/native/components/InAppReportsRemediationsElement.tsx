@@ -1,21 +1,56 @@
-// === Module 12677: InAppReportsRemediationsElement ===
+// === Module 12711: InAppReportsRemediationsElement ===
 
-// Module 12677 (InAppReportsRemediationsElement)
-import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1115 */;
-import TableRowGroup from "TableRowGroup" /* 6185 */;
+// Module 12711 (InAppReportsRemediationsElement)
+import c from "c" /* 576 */;
+import nativeDefault from "native" /* 587 */;
+import util from "util" /* 1126 */;
+import TableRowGroup from "TableRowGroup" /* 6074 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_32 } };
 let closure_4 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+const obj3 = { paddingHorizontal: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_32 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsRemediationsElement.tsx");
 
-export default function RemediationsElement(children) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
+  const cResult = c.c(6);
+  children = children.children;
+  const tmp4 = closure_4();
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const intl = util.intl;
+    const stringResult = intl.string(util.t["k+QA9N"]);
+    cResult[0] = stringResult;
+    let first = stringResult;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] !== children) {
+    const obj2 = { title: first, hasIcons: true, children };
+    const tmp9 = jsx(TableRowGroup.TableRowGroup, { title: first, hasIcons: true, children });
+    cResult[1] = children;
+    cResult[2] = tmp9;
+    let tmp7 = tmp9;
+  } else {
+    tmp7 = cResult[2];
+  }
+  if (cResult[3] === tmp4.container) {
+    if (cResult[4] === tmp7) {
+      let tmp10 = cResult[5];
+    }
+    return tmp10;
+  }
+  const tmp11 = <View style={tmp4.container}>{tmp7}</View>;
+  cResult[3] = tmp4.container;
+  cResult[4] = tmp7;
+  cResult[5] = tmp11;
+  tmp10 = tmp11;
+}) : ((children) => {
   const obj = { style: closure_4().container, children: null };
   const obj2 = { title: null, hasIcons: true, children: null };
   const intl = util.intl;
@@ -23,4 +58,4 @@ export default function RemediationsElement(children) {
   obj2.children = children.children;
   obj.children = jsx(TableRowGroup.TableRowGroup, { title: null, hasIcons: true, children: null });
   return <View style={closure_4().container}>{null}</View>;
-};
+});

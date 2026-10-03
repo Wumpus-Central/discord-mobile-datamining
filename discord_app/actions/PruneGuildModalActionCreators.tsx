@@ -1,11 +1,11 @@
-// === Module 16454: PruneGuildModalActionCreators ===
+// === Module 16529: PruneGuildModalActionCreators ===
 
-// Module 16454 (PruneGuildModalActionCreators)
-import HTTPUtils from "HTTPUtils" /* 1271 */;
+// Module 16529 (PruneGuildModalActionCreators)
+import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/PruneGuildModalActionCreators.tsx");
 
@@ -14,8 +14,8 @@ export default {
     closure_0 = arg0;
     asyncGeneratorStep = arg2;
     return (async () => {
-      const HTTP = v3(1271).HTTP;
-      const request = { url: Endpoints.GUILD_PRUNE(closure_0), query: { days: num, include_roles }, oldFormErrors: true, rejectWithError: v3(1271).rejectWithMigratedError() };
+      const HTTP = v3(1282).HTTP;
+      const request = { url: Endpoints.GUILD_PRUNE(closure_0), query: { days: num, include_roles }, oldFormErrors: true, rejectWithError: v3(1282).rejectWithMigratedError() };
       await HTTP.get(request);
       return value.body.pruned;
     })();
@@ -34,7 +34,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -48,11 +48,11 @@ export default {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              const HTTP = v3(1271).HTTP;
+              const HTTP = v3(1282).HTTP;
               const request = { url: Endpoints.GUILD_PRUNE_V2(closure_0), query: null, oldFormErrors: true, rejectWithError: null };
               const obj4 = { days: num, include_roles };
               request.query = obj4;
-              request.rejectWithError = v3(1271).rejectWithMigratedError();
+              request.rejectWithError = v3(1282).rejectWithMigratedError();
               dependencyMap = 1;
               v3 = 1;
               const obj5 = { value: HTTP.get(request), done: false };
@@ -67,7 +67,7 @@ export default {
             return obj;
           } else {
             v3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp5) {
           v3 = tmp;

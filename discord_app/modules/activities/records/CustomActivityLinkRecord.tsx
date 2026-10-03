@@ -1,9 +1,8 @@
-// === Module 12709: CustomActivityLinkRecord ===
+// === Module 12745: CustomActivityLinkRecord ===
 
-// Module 12709 (CustomActivityLinkRecord)
-import ApplicationAssetUtils from "ApplicationAssetUtils" /* 7777 */;
-import CustomActivityLinkUtils from "CustomActivityLinkUtils" /* 12707 */;
-import utils_CustomActivityLinkUtils from "utils/CustomActivityLinkUtils" /* 12710 */;
+// Module 12745 (CustomActivityLinkRecord)
+import ApplicationAssetUtils from "ApplicationAssetUtils" /* 7821 */;
+import utils_CustomActivityLinkUtils from "utils/CustomActivityLinkUtils" /* 12746 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/activities/records/CustomActivityLinkRecord.tsx");
@@ -41,8 +40,15 @@ CustomActivityLinkRecord.prototype["getAssetURL"] = function getAssetURL() {
     let assetImage = ApplicationAssetUtils.getAssetImage(self.applicationId, self.assetId, 512);
     const tmpResult = ApplicationAssetUtils;
   } else if (self.type === utils_CustomActivityLinkUtils.CustomLinkType.QUICK) {
-    assetImage = CustomActivityLinkUtils.getQuickLinkImage(self.assetPath);
-    const tmpResult2 = CustomActivityLinkUtils;
+    const assetPath = self.assetPath;
+    let combined;
+    if (null != assetPath) {
+      const _location = location;
+      const _window = window;
+      const _HermesInternal = HermesInternal;
+      combined = "" + location.protocol + "//" + window.GLOBAL_ENV.CDN_HOST + "/attachments-quick-links/" + assetPath;
+    }
+    assetImage = combined;
   }
   return assetImage;
 };

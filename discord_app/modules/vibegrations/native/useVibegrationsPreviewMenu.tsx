@@ -1,32 +1,170 @@
-// === Module 16541: useVibegrationsPreviewMenu ===
+// === Module 16618: useVibegrationsPreviewMenu ===
 
-// Module 16541 (useVibegrationsPreviewMenu)
-import util from "util" /* 1115 */;
-import _modDef3714 from "module_3714" /* 3714 */;
-import ToastUtils from "ToastUtils" /* 4556 */;
-import vibegrationsExternalConnections from "vibegrationsExternalConnections" /* 12858 */;
-import vibegrationsProjectMenuItems from "vibegrationsProjectMenuItems" /* 16543 */;
+// Module 16618 (useVibegrationsPreviewMenu)
+import util from "util" /* 1126 */;
+import _modDef3723 from "module_3723" /* 3723 */;
+import ToastUtils from "ToastUtils" /* 4567 */;
+import vibegrationsExternalConnections from "vibegrationsExternalConnections" /* 12912 */;
+import vibegrationsProjectMenuItems from "vibegrationsProjectMenuItems" /* 16620 */;
 import noop from "module_19" /* 19 */;
-import VibegrationsConnectionStore from "VibegrationsConnectionStore" /* 12851 */;
+import VibegrationsConnectionStore from "VibegrationsConnectionStore" /* 12904 */;
 
 require = fn;
+const ReactCompilerGating = fn(558);
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/vibegrations/native/useVibegrationsPreviewMenu.tsx");
+let result = size.fileFinishedImporting("modules/vibegrations/native/useVibegrationsPreviewMenu.tsx");
 
-export default function useVibegrationsPreviewMenu(projectId) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
+  const cResult = projectId(connect[3]).c(18);
+  projectId = projectId.projectId;
+  const refreshApplicationId = projectId.refreshApplicationId;
+  let obj = projectId(connect[3]);
+  ({ pending, refresh } = refresh(connect[4])(refreshApplicationId));
+  const tmp4 = refresh(connect[4])(refreshApplicationId);
+  const vibegrationsConnectActions = projectId(connect[5]).useVibegrationsConnectActions(projectId, projectId(connect[6]).presentError);
+  ({ pending: pending2, connect } = vibegrationsConnectActions);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [VibegrationsConnectionStore];
+    cResult[0] = items;
+    let first = items;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] !== projectId) {
+    const fn = function o() {
+      return VibegrationsConnectionStore.getDeclaredConnections(projectId);
+    };
+    const items1 = [projectId];
+    cResult[1] = projectId;
+    cResult[2] = fn;
+    cResult[3] = items1;
+    let tmp9 = items1;
+    let tmp8 = fn;
+  } else {
+    tmp8 = cResult[2];
+    tmp9 = cResult[3];
+  }
+  const obj2 = projectId(connect[5]);
+  const stateFromStores = projectId(connect[7]).useStateFromStores(first, tmp8, tmp9);
+  if (cResult[4] !== stateFromStores) {
+    const result = tmp(connect[8]).externalConnectionOffers(stateFromStores);
+    cResult[4] = stateFromStores;
+    cResult[5] = result;
+    let tmp11 = result;
+    const tmpResult3 = tmp(connect[8]);
+  } else {
+    tmp11 = cResult[5];
+  }
+  if (cResult[6] === pending2) {
+    if (cResult[7] === tmp11) {
+      if (cResult[8] === pending) {
+        if (cResult[9] === tmp13) {
+          let tmp14 = cResult[10];
+        }
+        if (cResult[11] === connect) {
+          if (cResult[12] === stateFromStores) {
+            if (cResult[13] === refresh) {
+              let tmp16 = cResult[14];
+            }
+            if (cResult[15] === tmp14) {
+              if (cResult[16] === tmp16) {
+                let tmp17 = cResult[17];
+              }
+              return tmp17;
+            }
+            class S {
+              constructor(arg0) {
+                closure_0 = projectId;
+                if ("refresh" !== projectId.kind) {
+                  tmp3 = closure_3;
+                  found = closure_3.find((type) => type.type === kind.connectionType);
+                  tmp5 = null;
+                  if (null != found) {
+                    if (found.configured) {
+                      tmp10 = connect;
+                      tmp11 = connect(found);
+                    } else {
+                      tmp6 = closure_0;
+                      tmp7 = closure_2;
+                      obj = closure_0(closure_2[6]);
+                      intl = closure_0(closure_2[10]).intl;
+                      tmp8 = closure_1;
+                      presentErrorResult = obj.presentError(intl.string(closure_1(closure_2[11]).avu1u4));
+                    }
+                  }
+                } else {
+                  tmp = refresh;
+                  tmp2 = refresh();
+                }
+                return;
+              }
+            }
+            tmp18[0] = tmp14;
+            tmp18[1] = tmp16;
+            cResult[15] = tmp14;
+            cResult[16] = tmp16;
+            cResult[17] = tmp18;
+            tmp17 = tmp18;
+          }
+        }
+        class S {
+          constructor(arg0) {
+            closure_0 = projectId;
+            if ("refresh" !== projectId.kind) {
+              tmp3 = closure_3;
+              found = closure_3.find((type) => type.type === kind.connectionType);
+              tmp5 = null;
+              if (null != found) {
+                if (found.configured) {
+                  tmp10 = connect;
+                  tmp11 = connect(found);
+                } else {
+                  tmp6 = closure_0;
+                  tmp7 = closure_2;
+                  obj = closure_0(closure_2[6]);
+                  intl = closure_0(closure_2[10]).intl;
+                  tmp8 = closure_1;
+                  presentErrorResult = obj.presentError(intl.string(closure_1(closure_2[11]).avu1u4));
+                }
+              }
+            } else {
+              tmp = refresh;
+              tmp2 = refresh();
+            }
+            return;
+          }
+        }
+        cResult[11] = connect;
+        cResult[12] = stateFromStores;
+        cResult[13] = refresh;
+        cResult[14] = S;
+        tmp16 = S;
+      }
+    }
+  }
+  const tmpResult = projectId(connect[7]);
+  const previewMenuItemsResult = projectId(connect[9]).previewMenuItems({ canRefresh: null != refreshApplicationId, refreshPending: pending, offers: tmp11, connectPending: pending2 });
+  cResult[6] = pending2;
+  cResult[7] = tmp11;
+  cResult[8] = pending;
+  cResult[9] = null != refreshApplicationId;
+  cResult[10] = previewMenuItemsResult;
+  tmp14 = previewMenuItemsResult;
+  const tmpResult4 = projectId(connect[9]);
+}) : ((projectId) => {
   projectId = projectId.projectId;
   const refreshApplicationId = projectId.refreshApplicationId;
   let pending;
-  const tmp = refreshApplicationId(pending[2])(refreshApplicationId);
+  const tmp = refreshApplicationId(pending[4])(refreshApplicationId);
   pending = tmp.pending;
   const refresh = tmp.refresh;
-  const vibegrationsConnectActions = projectId(pending[3]).useVibegrationsConnectActions(projectId, projectId(pending[4]).presentError);
+  const vibegrationsConnectActions = projectId(pending[5]).useVibegrationsConnectActions(projectId, projectId(pending[6]).presentError);
   const pending2 = vibegrationsConnectActions.pending;
   const connect = vibegrationsConnectActions.connect;
-  let obj = projectId(pending[3]);
+  let obj = projectId(pending[5]);
   const items = [pending2];
   const items1 = [projectId];
-  const stateFromStores = projectId(pending[5]).useStateFromStores(items, () => VibegrationsConnectionStore.getDeclaredConnections(projectId), items1);
+  const stateFromStores = projectId(pending[7]).useStateFromStores(items, () => VibegrationsConnectionStore.getDeclaredConnections(projectId), items1);
   const items2 = [stateFromStores];
   const memo = refresh.useMemo(() => vibegrationsExternalConnections.externalConnectionOffers(stateFromStores), items2);
   const items3 = [pending2, memo, refreshApplicationId, pending];
@@ -40,7 +178,7 @@ export default function useVibegrationsPreviewMenu(projectId) {
           connect(found);
         } else {
           const intl = util.intl;
-          ToastUtils.presentError(intl.string(_modDef3714.avu1u4));
+          ToastUtils.presentError(intl.string(_modDef3723.avu1u4));
         }
       }
     } else {
@@ -49,4 +187,4 @@ export default function useVibegrationsPreviewMenu(projectId) {
   }, items4);
   const items5 = [memo1, onPress];
   return refresh.useMemo(() => ({ items: memo1, onPress }), items5);
-};
+});

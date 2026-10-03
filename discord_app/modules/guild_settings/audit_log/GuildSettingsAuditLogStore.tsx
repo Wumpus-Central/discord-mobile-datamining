@@ -1,20 +1,20 @@
-// === Module 17601: GuildSettingsAuditLogStore ===
+// === Module 17689: GuildSettingsAuditLogStore ===
 
-// Module 17601 (GuildSettingsAuditLogStore)
+// Module 17689 (GuildSettingsAuditLogStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import AuditLogRecord from "AuditLogRecord" /* 17602 */;
-import GuildMemberStore from "GuildMemberStore" /* 2107 */;
-import GuildRoleStore from "GuildRoleStore" /* 2101 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import BigFlagUtils from "BigFlagUtils" /* 1086 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import AuditLogRecord from "AuditLogRecord" /* 17690 */;
+import GuildMemberStore from "GuildMemberStore" /* 2112 */;
+import GuildRoleStore from "GuildRoleStore" /* 2106 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import BigFlagUtils from "BigFlagUtils" /* 1097 */;
 
 const require = globalThis.__r;
 
-const AuditLogChange = fn(17602).AuditLogChange;
-let closure_4 = fn(2048).isGuildSelectableChannelType;
-const hasAnyPermission = fn(2102).hasAnyPermission;
-const Constants = fn(1074);
+const AuditLogChange = fn(17690).AuditLogChange;
+let closure_4 = fn(2055).isGuildSelectableChannelType;
+const hasAnyPermission = fn(2107).hasAnyPermission;
+const Constants = fn(1085);
 const AuditLogActions = Constants.AuditLogActions;
 ({ AuditLogActionTypes: c10, AuditLogTargetTypes: closure_11, AuditLogChangeKeys: closure_12, AUDIT_LOG_PAGE_LIMIT: map1, GuildSettingsSections: closure_14, Permissions } = Constants);
 let closure_15 = BigFlagUtils.combine(Permissions.KICK_MEMBERS, Permissions.BAN_MEMBERS, Permissions.ADMINISTRATOR, Permissions.MANAGE_CHANNELS, Permissions.MANAGE_GUILD, Permissions.MANAGE_MESSAGES, Permissions.MANAGE_NICKNAMES, Permissions.MANAGE_ROLES, Permissions.MANAGE_WEBHOOKS, Permissions.MANAGE_GUILD_EXPRESSIONS, Permissions.MOVE_MEMBERS, Permissions.MUTE_MEMBERS, Permissions.DEAFEN_MEMBERS);
@@ -211,7 +211,7 @@ const guildSettingsAuditLogStore = new GuildSettingsAuditLogStore(DispatcherDefa
       }
       let tmp35 = id.action_type === AuditLogActions.AUTO_MODERATION_BLOCK_MESSAGE;
       if (tmp35) {
-        const options = id.options;
+        options = id.options;
         let prop;
         if (options != null) {
           prop = options.auto_moderation_rule_name;
@@ -414,7 +414,7 @@ const guildSettingsAuditLogStore = new GuildSettingsAuditLogStore(DispatcherDefa
         }
         let tmp35 = id.action_type === AuditLogActions.AUTO_MODERATION_BLOCK_MESSAGE;
         if (tmp35) {
-          const options = id.options;
+          options = id.options;
           let prop;
           if (options != null) {
             prop = options.auto_moderation_rule_name;

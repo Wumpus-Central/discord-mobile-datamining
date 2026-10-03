@@ -1,34 +1,79 @@
-// === Module 9918: autocompleter/AutocompleteUtils ===
+// === Module 10071: autocompleter/AutocompleteUtils ===
 
-// Module 9918 (autocompleter/AutocompleteUtils)
-import nativeDefault from "native" /* 576 */;
-import UserUtilsDefault from "UserUtils" /* 4707 */;
-import useChannelName from "useChannelName" /* 4998 */;
-import TimestampUtils from "TimestampUtils" /* 5514 */;
-import FormDividerDefault from "FormDivider" /* 8245 */;
+// Module 10071 (autocompleter/AutocompleteUtils)
+import c from "c" /* 576 */;
+import nativeDefault from "native" /* 587 */;
+import UserUtilsDefault from "UserUtils" /* 4722 */;
+import useChannelName from "useChannelName" /* 5043 */;
+import TimestampUtils from "TimestampUtils" /* 5807 */;
+import FormDividerDefault from "FormDivider" /* 8899 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 4496 */;
-import RelationshipStore from "RelationshipStore" /* 4508 */;
-import UserStore from "UserStore" /* 1372 */;
+import GuildChannelStore from "GuildChannelStore" /* 4507 */;
+import RelationshipStore from "RelationshipStore" /* 4519 */;
+import UserStore from "UserStore" /* 1377 */;
 
 require = fn;
-function AutocompleteFormDivider() {
-  const tmp = closure_17();
-  return jsx(FormDividerDefault, { style: closure_17().itemDivider });
-}
-let closure_3 = fn(2048).isGuildSelectableChannelType;
-const Constants = fn(1074);
+let closure_3 = fn(2055).isGuildSelectableChannelType;
+const Constants = fn(1085);
 ({ AutoCompleteResultTypes: closure_7, WHITESPACE_RE: closure_8 } = Constants);
-const ApplicationCommandsConstants = fn(9919);
+const ApplicationCommandsConstants = fn(10072);
 ({ AUTOCOMPLETE_EMOJI_ROW_HEIGHT: closure_9, AUTOCOMPLETE_ROW_HEIGHT: c10 } = ApplicationCommandsConstants);
-const ChannelAutocompleteConstants = fn(5490);
+const ChannelAutocompleteConstants = fn(5789);
 ({ CHANNEL_SENTINEL: closure_11, EMOJI_SENTINEL: closure_12, GAME_MENTION_SENTINEL: map1, MENTION_SENTINEL: closure_14 } = ChannelAutocompleteConstants);
 const jsx = fn(21).jsx;
 const hairlineWidth = fn(17).StyleSheet.hairlineWidth;
-const createStyles = fn(4845);
-const obj2 = { itemDivider: { marginLeft: 16, backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
+const createStyles = fn(4890);
+let obj2 = { itemDivider: { marginLeft: 16, backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
 let closure_17 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(2);
+  const tmp3 = closure_17();
+  if (cResult[0] !== tmp3.itemDivider) {
+    const obj2 = { style: tmp3.itemDivider };
+    const tmp7 = jsx(FormDividerDefault, { style: tmp3.itemDivider });
+    cResult[0] = tmp3.itemDivider;
+    cResult[1] = tmp7;
+    let tmp4 = tmp7;
+  } else {
+    tmp4 = cResult[1];
+  }
+  return tmp4;
+}) : (() => {
+  const tmp = closure_17();
+  return jsx(FormDividerDefault, { style: closure_17().itemDivider });
+});
 const re19 = /[\r\n]/;
+function getMentionTextWithUser(messageChannel, user) {
+  if (obj.hasSameRoleAsUsername(messageChannel, user)) {
+    const _HermesInternal2 = HermesInternal;
+    let combined = "" + state + user.tag;
+  } else {
+    const _HermesInternal = HermesInternal;
+    combined = "" + state + UserUtilsDefault.getUserTag(user);
+    const tmpResult = UserUtilsDefault;
+  }
+  return combined;
+}
+function findWordStart(arg0, arg1) {
+  let tmp = arg1;
+  if (arg1 > 0) {
+    let tmp4 = arg1;
+    tmp = arg1;
+    if (!regex.test(arg0[arg1 - 1])) {
+      const diff = tmp4 - 1;
+      tmp = diff;
+      while (diff > 0) {
+        tmp4 = diff;
+        tmp = diff;
+        if (regex.test(arg0[diff - 1])) {
+          break;
+        }
+      }
+    }
+  }
+  return tmp;
+}
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/autocompleter/native/AutocompleteUtils.tsx");
 
@@ -39,7 +84,7 @@ export const getItemLayout = function getItemLayout(arg0, index) {
       type = tmp2.type;
     }
   }
-  const tmp3 = type === constants.EMOJI ? React7 : closure_1_10;
+  const tmp3 = type === constants.EMOJI ? options : v65535;
   const obj = { length: tmp3, offset: null, index };
   const result = index * tmp3;
   obj.offset = result + Math.max(0, (index - 1) * hairlineWidth);
@@ -56,10 +101,10 @@ export const getAutocompleteResultText = function getAutocompleteResultText(type
     const user = type.user;
     if (obj6.hasSameRoleAsUsername(channel, user)) {
       const _HermesInternal9 = HermesInternal;
-      let combined = "" + closure_1_14 + user.tag;
+      let combined = "" + state + user.tag;
     } else {
       const _HermesInternal8 = HermesInternal;
-      combined = "" + closure_1_14 + UserUtilsDefault.getUserTag(user);
+      combined = "" + state + UserUtilsDefault.getUserTag(user);
       const tmp34Result = UserUtilsDefault;
     }
     return combined;
@@ -67,7 +112,7 @@ export const getAutocompleteResultText = function getAutocompleteResultText(type
     return type.text;
   } else if (constants.ROLE === type) {
     const _HermesInternal7 = HermesInternal;
-    return "" + closure_1_14 + type.name;
+    return "" + state + type.name;
   } else if (constants.CHANNEL === type) {
     channel = type.channel;
     if (channel.isThread()) {
@@ -96,12 +141,12 @@ export const getAutocompleteResultText = function getAutocompleteResultText(type
     }
   } else if (constants.GAME_MENTION === type) {
     const _HermesInternal3 = HermesInternal;
-    return "" + map1 + type.game.name;
+    return "" + __initData2 + type.game.name;
   } else if (constants.TIMESTAMP_MENTION === type) {
     return TimestampUtils.unparseTimestamp(type.mention.timestamp, type.mention.format);
   } else if (constants.EMOJI === type) {
     const _HermesInternal2 = HermesInternal;
-    return "" + closure_1_12 + type.name + ":";
+    return "" + __initData + type.name + ":";
   } else {
     if (constants.EMOJI_PREMIUM_UPSELL !== type) {
       if (constants.SLASH !== type) {
@@ -116,19 +161,9 @@ export const getAutocompleteResultText = function getAutocompleteResultText(type
     return "";
   }
 };
-export const getMentionTextWithUser = function getMentionTextWithUser(messageChannel, user) {
-  if (obj.hasSameRoleAsUsername(messageChannel, user)) {
-    const _HermesInternal2 = HermesInternal;
-    let combined = "" + closure_1_14 + user.tag;
-  } else {
-    const _HermesInternal = HermesInternal;
-    combined = "" + closure_1_14 + UserUtilsDefault.getUserTag(user);
-    const tmpResult = UserUtilsDefault;
-  }
-  return combined;
-};
+export { getMentionTextWithUser };
 export const getItemSeparator = function getItemSeparator() {
-  return <AutocompleteFormDivider />;
+  return <closure_18 />;
 };
 export const getPrefix = function getPrefix(substr1) {
   return substr1[0];
@@ -136,38 +171,20 @@ export const getPrefix = function getPrefix(substr1) {
 export const getQuery = function getQuery(arr) {
   return arr.slice(1).toLowerCase();
 };
-export const isWhitespaceSeparatingBoundary = function isWhitespaceSeparatingBoundary(seenText, lastIndexOfResult) {
+export const isWhitespaceSeparatingBoundary = function isWhitespaceSeparatingBoundary(text, lastIndexOfResult) {
   let isMatch = 0 === lastIndexOfResult;
   if (!isMatch) {
-    isMatch = regex.test(seenText[lastIndexOfResult - 1]);
+    isMatch = regex.test(text[lastIndexOfResult - 1]);
   }
   return isMatch;
 };
-export const isUnbrokenRun = function isUnbrokenRun(arr, sum, arg2) {
-  return !regex.test(arr.slice(sum, arg2));
+export const isUnbrokenRun = function isUnbrokenRun(arr, sum, selectionEnd) {
+  return !regex.test(arr.slice(sum, selectionEnd));
 };
-export const isSingleLineRun = function isSingleLineRun(arr, sum, arg2) {
-  return !re19.test(arr.slice(sum, arg2));
+export const isSingleLineRun = function isSingleLineRun(arr, sum, selectionEnd) {
+  return !re19.test(arr.slice(sum, selectionEnd));
 };
-export const findWordStart = function findWordStart(arg0, arg1) {
-  let tmp = arg1;
-  if (arg1 > 0) {
-    let tmp4 = arg1;
-    tmp = arg1;
-    if (!regex.test(arg0[arg1 - 1])) {
-      const diff = tmp4 - 1;
-      tmp = diff;
-      while (diff > 0) {
-        tmp4 = diff;
-        tmp = diff;
-        if (regex.test(arg0[diff - 1])) {
-          break;
-        }
-      }
-    }
-  }
-  return tmp;
-};
+export { findWordStart };
 export const isSpaceJustTypedAtCaret = function isSpaceJustTypedAtCaret(text, selectionEnd, c22, selectionEnd2) {
   let sum = selectionEnd2;
   if (selectionEnd2 === selectionEnd + 1) {

@@ -1,15 +1,15 @@
-// === Module 17518: SubscriptionManager ===
+// === Module 17607: SubscriptionManager ===
 
-// Module 17518 (SubscriptionManager)
+// Module 17607 (SubscriptionManager)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserStore from "UserStore" /* 1372 */;
-import BillingInfoStore from "BillingInfoStore" /* 4519 */;
-import SubscriptionStore from "SubscriptionStore" /* 4523 */;
-import EntitlementStore from "EntitlementStore" /* 7001 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6725 */;
+import UserStore from "UserStore" /* 1377 */;
+import BillingInfoStore from "BillingInfoStore" /* 4530 */;
+import SubscriptionStore from "SubscriptionStore" /* 4534 */;
+import EntitlementStore from "EntitlementStore" /* 6899 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
 
 let require = fn;
-const PremiumConstants = fn(1374);
+const PremiumConstants = fn(1379);
 ({ PREMIUM_SUBSCRIPTION_APPLICATION: closure_7, PremiumTypes: closure_8 } = PremiumConstants);
 const prototype = function SubscriptionManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -32,7 +32,7 @@ const prototype = function SubscriptionManager() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -57,12 +57,12 @@ const prototype = function SubscriptionManager() {
               if (!isSubscriptionFetching) {
                 c2 = 1;
                 currentUser = 1;
-                const obj6 = { value: tmp2(5358).fetchSubscriptions(), done: false };
+                const obj6 = { value: tmp2(5404).fetchSubscriptions(), done: false };
                 return obj6;
               }
             }
             currentUser = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {
@@ -94,7 +94,7 @@ const prototype = function SubscriptionManager() {
         if (!hasItem) {
           c2 = 2;
           currentUser = 1;
-          const obj8 = { value: tmp2(7007).fetchUserEntitlementsForApplication(closure_1_7), done: false };
+          const obj8 = { value: tmp2(6905).fetchUserEntitlementsForApplication(closure_1_7), done: false };
           return obj8;
         }
       } catch (tmp22) {
@@ -142,7 +142,7 @@ const prototype = function SubscriptionManager() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -178,7 +178,7 @@ const prototype = function SubscriptionManager() {
           return obj;
         }
         v3 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       } catch (tmp8) {
         v3 = tmp;
         throw tmp8;
@@ -196,7 +196,7 @@ const prototype = function SubscriptionManager() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -213,7 +213,7 @@ const prototype = function SubscriptionManager() {
             applyArgumentsResult = tmp4;
             dependencyMap = 1;
             c2 = 1;
-            const obj6 = { value: applyArgumentsResult(5358).fetchIpCountryCode(), done: false };
+            const obj6 = { value: applyArgumentsResult(5404).fetchIpCountryCode(), done: false };
             return obj6;
           }
         } else {
@@ -228,7 +228,7 @@ const prototype = function SubscriptionManager() {
             } else if (null != ipCountryCode.ipCountryCode) {
               dependencyMap = 2;
               c2 = 1;
-              const obj8 = { value: applyArgumentsResult(5358).fetchPaymentSources(), done: false };
+              const obj8 = { value: applyArgumentsResult(5404).fetchPaymentSources(), done: false };
               return obj8;
             }
           } else if (arg0 === 1) {
@@ -240,7 +240,7 @@ const prototype = function SubscriptionManager() {
             return obj;
           }
           c2 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp13) {
         c2 = tmp;

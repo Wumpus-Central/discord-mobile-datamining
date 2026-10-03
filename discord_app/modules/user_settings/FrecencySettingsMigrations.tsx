@@ -1,14 +1,14 @@
-// === Module 14226: FrecencySettingsMigrations ===
+// === Module 14294: FrecencySettingsMigrations ===
 
-// Module 14226 (FrecencySettingsMigrations)
+// Module 14294 (FrecencySettingsMigrations)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage4 from "Storage" /* 510 */;
-import Constants from "Constants" /* 1074 */;
-import frecency_user_settings from "frecency_user_settings" /* 1221 */;
-import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1222 */;
-import UserSettingsConstants from "UserSettingsConstants" /* 1084 */;
+import Constants from "Constants" /* 1085 */;
+import frecency_user_settings from "frecency_user_settings" /* 1232 */;
+import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1233 */;
+import UserSettingsConstants from "UserSettingsConstants" /* 1095 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -124,7 +124,7 @@ let items = [
           obj = { usageHistory: {}, favorites: [] };
         }
       ];
-      const state = PersistedStore.migrateAndReadStoreState("StickersPersistedStore", items).state;
+      state = PersistedStore.migrateAndReadStoreState("StickersPersistedStore", items).state;
       if (null == state) {
         return false;
       } else {
@@ -162,7 +162,7 @@ let items = [
           return { usageHistory };
         }
       ];
-      const state = PersistedStore.migrateAndReadStoreState("EmojiStore", items).state;
+      state = PersistedStore.migrateAndReadStoreState("EmojiStore", items).state;
       if (null == state) {
         return false;
       } else {
@@ -276,7 +276,7 @@ let items = [
     version: 7,
     run(applicationCommandFrecency) {
       const PersistedStore = initializeDefault.PersistedStore;
-      const state = PersistedStore.migrateAndReadStoreState("ApplicationCommandFrecency", []).state;
+      state = PersistedStore.migrateAndReadStoreState("ApplicationCommandFrecency", []).state;
       if (null == state) {
         return false;
       } else {
@@ -300,7 +300,7 @@ let items = [
     run(arg0) {
       closure_0 = arg0;
       const PersistedStore = initializeDefault.PersistedStore;
-      const state = PersistedStore.migrateAndReadStoreState("SoundboardFavoriteStore", []).state;
+      state = PersistedStore.migrateAndReadStoreState("SoundboardFavoriteStore", []).state;
       if (null == state) {
         return false;
       } else {

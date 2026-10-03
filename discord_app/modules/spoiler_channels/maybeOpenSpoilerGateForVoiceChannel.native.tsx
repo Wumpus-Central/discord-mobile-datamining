@@ -1,10 +1,10 @@
-// === Module 12699: maybeOpenSpoilerGateForVoiceChannel ===
+// === Module 12735: maybeOpenSpoilerGateForVoiceChannel ===
 
-// Module 12699 (maybeOpenSpoilerGateForVoiceChannel)
-import useAlertStore from "useAlertStore" /* 5389 */;
-import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6934 */;
-import VoicePanelSpoilerAlert from "VoicePanelSpoilerAlert" /* 12700 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
+// Module 12735 (maybeOpenSpoilerGateForVoiceChannel)
+import useAlertStore from "useAlertStore" /* 5709 */;
+import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6832 */;
+import VoicePanelSpoilerAlert from "VoicePanelSpoilerAlert" /* 12736 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
 
 const VoicePanelSpoilerAlertDefault = VoicePanelSpoilerAlert;
 

@@ -1,6 +1,6 @@
-// === Module 6046: GuildProfileLimits ===
+// === Module 5939: GuildProfileLimits ===
 
-// Module 6046 (GuildProfileLimits)
+// Module 5939 (GuildProfileLimits)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/GuildProfileLimits.tsx");

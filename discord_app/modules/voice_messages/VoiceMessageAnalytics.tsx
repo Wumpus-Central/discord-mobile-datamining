@@ -1,8 +1,8 @@
-// === Module 11565: VoiceMessageAnalytics ===
+// === Module 11485: VoiceMessageAnalytics ===
 
-// Module 11565 (VoiceMessageAnalytics)
-import Constants from "Constants" /* 1074 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
+// Module 11485 (VoiceMessageAnalytics)
+import Constants from "Constants" /* 1085 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

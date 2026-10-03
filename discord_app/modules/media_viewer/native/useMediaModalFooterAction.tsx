@@ -1,13 +1,13 @@
 // === Module 10931: useMediaModalFooterAction ===
 
 // Module 10931 (useMediaModalFooterAction)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1248 */;
-import module_560 from "module_560" /* 560 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
+import module_570 from "module_570" /* 570 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
-const useMediaModalFooterActionStore = module_560.create(() => ({}));
+const useMediaModalFooterActionStore = module_570.create(() => ({}));
 const result = size.fileFinishedImporting("modules/media_viewer/native/useMediaModalFooterAction.tsx");
 
 export { useMediaModalFooterActionStore };

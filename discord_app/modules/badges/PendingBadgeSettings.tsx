@@ -1,12 +1,12 @@
-// === Module 10865: PendingBadgeSettings ===
+// === Module 12921: PendingBadgeSettings ===
 
-// Module 10865 (PendingBadgeSettings)
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import BadgeIdResolution from "BadgeIdResolution" /* 7820 */;
-import BadgeUtils from "BadgeUtils" /* 10859 */;
+// Module 12921 (PendingBadgeSettings)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import BadgeIdResolution from "BadgeIdResolution" /* 7864 */;
+import BadgeUtils from "BadgeUtils" /* 10889 */;
 import _slicedToArray from "module_32" /* 32 */;
-import UserStore from "UserStore" /* 1372 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7819 */;
+import UserStore from "UserStore" /* 1377 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7863 */;
 
 require = fn;
 function getSavedBadgeSettings() {
@@ -81,11 +81,11 @@ function applyPendingBadgeSettingsToProfileBadges(items, arg1) {
     const map = new Map();
     for (const item10027 of found) {
       let tmp12 = set;
-      let obj = set(7820);
+      let obj = set(7864);
       let profileBadgeId = obj.resolveProfileBadgeId(item10027.id);
       let tmp15 = profileBadgeId;
       if (null != profileBadgeId) {
-        let tmp12Result = tmp12(10859);
+        let tmp12Result = tmp12(10889);
         if (!tmp12Result.isPinnedBadge(tmp15)) {
           if (!map.has(tmp15)) {
             let result = map.set(tmp15, item10027);
@@ -214,7 +214,7 @@ export const setPendingBadgeVisibility = function setPendingBadgeVisibility(badg
   DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeHiddenBadges: tmp20 });
 };
 export const resetPendingBadgeSettings = function resetPendingBadgeSettings() {
-  DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeDisplayOrder: "paddingHorizontal", pendingBadgeHiddenBadges: "View" });
+  DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", pendingBadgeDisplayOrder: "ix", pendingBadgeHiddenBadges: "width" });
 };
 export const hasPendingBadgeSettings = function hasPendingBadgeSettings(pendingBadgeDisplayOrder) {
   return undefined !== pendingBadgeDisplayOrder.pendingBadgeDisplayOrder || undefined !== pendingBadgeDisplayOrder.pendingBadgeHiddenBadges;
@@ -249,7 +249,7 @@ export const applyPendingBadgeSettings = function applyPendingBadgeSettings(stat
     const _Map = Map;
     const map = new Map();
     for (const item10026 of mapped) {
-      let obj = set(10859);
+      let obj = set(10889);
       if (obj.isPinnedBadge(item10026.badge_id)) {
         let arr = items1.push(item10026);
       } else {

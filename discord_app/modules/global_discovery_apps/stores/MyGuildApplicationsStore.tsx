@@ -1,9 +1,9 @@
-// === Module 11768: MyGuildApplicationsStore ===
+// === Module 11689: MyGuildApplicationsStore ===
 
-// Module 11768 (MyGuildApplicationsStore)
+// Module 11689 (MyGuildApplicationsStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import DurationsDefault from "Durations" /* 1091 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import DurationsDefault from "Durations" /* 1102 */;
 
 function addToApplicationIdToGuildIds(applicationId) {
   applicationId = applicationId.applicationId;

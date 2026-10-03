@@ -1,15 +1,15 @@
-// === Module 1227: CustomThemeMobileStore ===
+// === Module 1238: CustomThemeMobileStore ===
 
-// Module 1227 (CustomThemeMobileStore)
+// Module 1238 (CustomThemeMobileStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
-import ClientThemesUtils from "ClientThemesUtils" /* 1228 */;
-import isPerModeThemingActive from "isPerModeThemingActive" /* 4710 */;
-import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1183 */;
-import ThemeStore from "ThemeStore" /* 1182 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1184 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
+import ClientThemesUtils from "ClientThemesUtils" /* 1239 */;
+import isPerModeThemingActive from "isPerModeThemingActive" /* 4725 */;
+import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1194 */;
+import ThemeStore from "ThemeStore" /* 1193 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1195 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 
 require = fn;
 function reset() {
@@ -59,7 +59,7 @@ function handleSelectivelySyncedUserSettingsUpdate() {
     }
   }
 }
-const UserSettingsTypes = fn(1084).UserSettingsTypes;
+const UserSettingsTypes = fn(1095).UserSettingsTypes;
 const PersistedStore = initializeDefault.PersistedStore;
 class CustomThemeMobileStore extends PersistedStore {
 }
@@ -96,7 +96,7 @@ prototype["getState"] = function getState() {
     const obj2 = { theme, customTheme: prop };
     let obj = obj2;
   } else {
-    obj = { theme: "Array", customTheme: "paddingHorizontal" };
+    obj = { theme: "Symbol", customTheme: "current" };
   }
   return obj;
 };

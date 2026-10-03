@@ -1,29 +1,69 @@
-// === Module 15738: ParentalControlsFriendRequestsEveryoneSetting ===
+// === Module 15801: ParentalControlsFriendRequestsEveryoneSetting ===
 
-// Module 15738 (ParentalControlsFriendRequestsEveryoneSetting)
-import util from "util" /* 1115 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 6602 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14566 */;
+// Module 15801 (ParentalControlsFriendRequestsEveryoneSetting)
+import c from "c" /* 576 */;
+import util from "util" /* 1126 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 6491 */;
+import useSelectedTeen from "useSelectedTeen" /* 8297 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14622 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7145 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7048 */;
 
 require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AllFriendSourceFlags: closure_4, FriendSourceFlags: hasOwnProperty } = Constants);
-const SettingBuilders = fn(11215);
+const ReactCompilerGating = fn(558);
+const SettingBuilders = fn(11129);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(2);
+  const selectedTeenId = useSelectedTeen.useSelectedTeenId();
+  const ParentalControlledFriendSourceFlags = ParentalControlledUserSettings.ParentalControlledFriendSourceFlags;
+  const controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(selectedTeenId);
+  if (cResult[0] !== controlledSetting) {
+    const flags = UserSettingsUtils.computeFlags(controlledSetting);
+    cResult[0] = controlledSetting;
+    cResult[1] = flags;
+    let tmp6 = flags;
+    const tmpResult = UserSettingsUtils;
+  } else {
+    tmp6 = cResult[1];
+  }
+  return tmp6.all;
+}) : (() => {
+  const selectedTeenId = controlledSetting(8297).useSelectedTeenId();
+  const ParentalControlledFriendSourceFlags = controlledSetting(14622).ParentalControlledFriendSourceFlags;
+  controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(selectedTeenId);
+  const items = [controlledSetting];
+  return noop.useMemo(() => UserSettingsUtils.computeFlags(controlledSetting), items).all;
+});
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.mGr3CX);
   },
-  parent: fn(7590).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
-  useValue: function useFriendRequestsEveryoneSettingValue() {
-    const selectedTeenId = controlledSetting(8293).useSelectedTeenId();
-    const ParentalControlledFriendSourceFlags = controlledSetting(14566).ParentalControlledFriendSourceFlags;
+  parent: fn(7634).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+    const cResult = c.c(2);
+    const selectedTeenId = useSelectedTeen.useSelectedTeenId();
+    const ParentalControlledFriendSourceFlags = ParentalControlledUserSettings.ParentalControlledFriendSourceFlags;
+    const controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(selectedTeenId);
+    if (cResult[0] !== controlledSetting) {
+      const flags = UserSettingsUtils.computeFlags(controlledSetting);
+      cResult[0] = controlledSetting;
+      cResult[1] = flags;
+      let tmp6 = flags;
+      const tmpResult = UserSettingsUtils;
+    } else {
+      tmp6 = cResult[1];
+    }
+    return tmp6.all;
+  }) : (() => {
+    const selectedTeenId = controlledSetting(8297).useSelectedTeenId();
+    const ParentalControlledFriendSourceFlags = controlledSetting(14622).ParentalControlledFriendSourceFlags;
     controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(selectedTeenId);
     const items = [controlledSetting];
     return noop.useMemo(() => UserSettingsUtils.computeFlags(controlledSetting), items).all;
-  },
+  }),
   onValueChange: function onFriendRequestsEveryoneSettingValueChange(arg0) {
     const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
     if (null != selectedTeenId) {

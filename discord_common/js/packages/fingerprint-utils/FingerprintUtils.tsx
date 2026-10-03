@@ -1,6 +1,6 @@
-// === Module 1254: FingerprintUtils ===
+// === Module 1265: FingerprintUtils ===
 
-// Module 1254 (FingerprintUtils)
+// Module 1265 (FingerprintUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx");

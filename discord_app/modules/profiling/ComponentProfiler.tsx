@@ -1,8 +1,10 @@
-// === Module 9847: ComponentProfiler ===
+// === Module 12534: ComponentProfiler ===
 
-// Module 9847 (ComponentProfiler)
+// Module 12534 (ComponentProfiler)
+import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
+require = fn;
 const jsx = fn(21).jsx;
 class StatCollector {
   constructor() {
@@ -34,15 +36,68 @@ Object.defineProperty(prototype, "mean", {
   },
   set: undefined
 });
-let closure_3 = {};
-let c4 = true;
+let closure_5 = {};
+let c6 = true;
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/profiling/ComponentProfiler.tsx");
 
-export default function ComponentProfiler(arg0) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(4);
+  ({ id, children } = arg0);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const fn = function u(arg0, arg1, arg2) {
+      if (closure_1_6) {
+        if (!(arg0 in dependencyMap)) {
+          if (typeof StatCollector === "function") {
+            const obj = { mount: Object.assign({ totalMicroseconds: 0, count: 0, minMicroseconds: null, maxMicroseconds: null }), update: null, nestedUpdate: null };
+            if (typeof StatCollector === "function") {
+              obj.update = Object.assign({ totalMicroseconds: 0, count: 0, minMicroseconds: null, maxMicroseconds: null });
+              if (typeof StatCollector === "function") {
+                obj.nestedUpdate = Object.assign({ totalMicroseconds: 0, count: 0, minMicroseconds: null, maxMicroseconds: null });
+                tmp3[arg0] = obj;
+              } else {
+                throw new TypeError("Trying to call a non-function");
+              }
+            } else {
+              throw new TypeError("Trying to call a non-function");
+            }
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
+        }
+        if ("mount" === arg1) {
+          const mount = dependencyMap[arg0].mount;
+          mount.addValue(arg2);
+        } else if ("update" === arg1) {
+          const update = dependencyMap[arg0].update;
+          update.addValue(arg2);
+        } else if ("nested-update" === arg1) {
+          const nestedUpdate = dependencyMap[arg0].nestedUpdate;
+          nestedUpdate.addValue(arg2);
+        }
+      }
+    };
+    cResult[0] = fn;
+    let first = fn;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] === children) {
+    if (cResult[2] === id) {
+      let tmp3 = cResult[3];
+    }
+    return tmp3;
+  }
+  const tmp4 = <noop.Profiler id={id} onRender={first}>{children}</noop.Profiler>;
+  cResult[1] = children;
+  cResult[2] = id;
+  cResult[3] = tmp4;
+  tmp3 = tmp4;
+}) : ((arg0) => {
   ({ id, children } = arg0);
   return <noop.Profiler id={id} onRender={noop.useCallback((arg0, arg1, arg2) => {
-    if (closure_1_4) {
+    if (closure_1_6) {
       if (!(arg0 in dependencyMap)) {
         if (typeof StatCollector === "function") {
           const obj = { mount: Object.assign({ totalMicroseconds: 0, count: 0, minMicroseconds: null, maxMicroseconds: null }), update: null, nestedUpdate: null };
@@ -73,17 +128,17 @@ export default function ComponentProfiler(arg0) {
       }
     }
   }, [])}>{children}</noop.Profiler>;
-};
+});
 export { StatCollector };
 export function clearComponentRenderStats() {
-  closure_3 = {};
+  closure_5 = {};
 }
 export function getComponentRenderStats() {
-  return closure_3;
+  return closure_5;
 }
 export const serializeComponentRenderAverages = function serializeComponentRenderAverages() {
   let str = "";
-  if (0 !== Object.keys(closure_3).length) {
+  if (0 !== Object.keys(closure_5).length) {
     let num = 20;
     if ("id".length <= 20) {
       num = "id".length;
@@ -135,7 +190,7 @@ export const serializeComponentRenderAverages = function serializeComponentRende
     const _Object = Object;
     const text = `Component Render Stats (microseconds):
   ${"|" + tmp + "|" + tmp2 + "|" + tmp3 + "|" + tmp4 + "|" + tmp5 + "|" + tmp6 + "|" + obj7.padEnd(20, " ") + "|\n"}`;
-    const entries = Object.entries(closure_3);
+    const entries = Object.entries(closure_5);
     str = `Component Render Stats (microseconds):
   ${"|" + tmp + "|" + tmp2 + "|" + tmp3 + "|" + tmp4 + "|" + tmp5 + "|" + tmp6 + "|" + obj7.padEnd(20, " ") + "|\n"}${arr.map((item) => {
       [arr, tmp] = item;
@@ -192,14 +247,14 @@ export const serializeComponentRenderAverages = function serializeComponentRende
   return str;
 };
 export function resetComponentProfiler() {
-  closure_3 = {};
+  closure_5 = {};
 }
 export function pauseComponentProfiler() {
-  c4 = false;
+  c6 = false;
 }
 export function resumeComponentProfiler() {
-  c4 = true;
+  c6 = true;
 }
 export function dumpStats() {
-  return closure_3;
+  return closure_5;
 }

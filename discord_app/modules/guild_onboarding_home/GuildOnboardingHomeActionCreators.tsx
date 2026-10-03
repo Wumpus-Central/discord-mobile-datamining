@@ -1,16 +1,16 @@
-// === Module 11977: GuildOnboardingHomeActionCreators ===
+// === Module 7521: GuildOnboardingHomeActionCreators ===
 
-// Module 11977 (GuildOnboardingHomeActionCreators)
+// Module 7521 (GuildOnboardingHomeActionCreators)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import HTTPUtils from "HTTPUtils" /* 1271 */;
-import transitionToChannel from "transitionToChannel" /* 4856 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import transitionToChannel from "transitionToChannel" /* 4901 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ImpersonateStore from "ImpersonateStore" /* 2100 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 5032 */;
-import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 5033 */;
+import ImpersonateStore from "ImpersonateStore" /* 2105 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 5077 */;
+import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 5078 */;
 
 require = fn;
 let closure_10 = async function _fetchGuildHomeSettings() {
@@ -24,7 +24,7 @@ let closure_10 = async function _fetchGuildHomeSettings() {
     const HTTP = HTTPUtils.HTTP;
     await HTTP.get({ url: closure_2_9.GUILD_HOME_SETTINGS(guildId), oldFormErrors: true, rejectWithError: true });
     closure_130_1(closure_130_2[6]).dispatch({ type: "GUILD_HOME_SETTINGS_FETCH_FAIL", guildId: closure_129_0 });
-    await "HermesInternal";
+    await "IconComponent";
     closure_129_1 = value;
     closure_129_2 = closure_130_0(closure_130_2[8]).settingsFromServer(closure_129_1.body);
     closure_130_0(closure_130_2[8]);
@@ -47,7 +47,7 @@ let closure_11 = async function _fetchNewMemberActions() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -142,7 +142,7 @@ let closure_12 = async function _clearNewMemberActions() {
     return value;
   })();
 };
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AnalyticEvents: closure_8, Endpoints: closure_9 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/GuildOnboardingHomeActionCreators.tsx");
@@ -177,7 +177,7 @@ export const clearNewMemberActions = function clearNewMemberActions() {
   }
   return applyArgumentsResult;
 };
-export const selectHomeResourceChannel = function selectHomeResourceChannel(guildId, channelId) {
+export const selectHomeResourceChannel = function selectHomeResourceChannel(guildId, channelId, arg2) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = true;
@@ -255,7 +255,7 @@ export const completeNewMemberAction = function completeNewMemberAction(guildId,
       }
     }
     const HTTP = HTTPUtils.HTTP;
-    const obj5 = { url: React7.GUILD_MEMBER_ACTION_UPDATE(guildId, channelId), rejectWithError: true };
+    const obj5 = { url: options.GUILD_MEMBER_ACTION_UPDATE(guildId, channelId), rejectWithError: true };
     HTTP.post(obj5);
   }
   const obj2 = { type: "COMPLETE_NEW_MEMBER_ACTION", guildId, channelId };

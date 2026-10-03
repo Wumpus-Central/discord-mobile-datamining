@@ -1,39 +1,66 @@
-// === Module 6185: TableRowGroup ===
+// === Module 6074: TableRowGroup ===
 
-// Module 6185 (TableRowGroup)
-import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4560 */;
-import Text_Text from "Text/Text" /* 4841 */;
-import TableRowDivider from "TableRowDivider" /* 6100 */;
-import TableRowGroupContext from "TableRowGroupContext" /* 6104 */;
+// Module 6074 (TableRowGroup)
+import c from "c" /* 576 */;
+import nativeDefault from "native" /* 587 */;
+import useToken from "useToken" /* 4580 */;
+import Text_Text from "Text/Text" /* 4886 */;
+import TableRowDivider from "TableRowDivider" /* 5988 */;
+import TableRowGroupContext from "TableRowGroupContext" /* 5994 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-class TableRowGroupTitle {
-  constructor(arg0) {
-    ({ title, style, lineClamp } = global);
-    tmp = closure_8();
-    obj = { accessibilityRole: "header", variant: "text-md/medium", color: "text-subtle", style: null, lineClamp, children: title };
-    items = [, ];
-    items[0] = tmp.title;
-    items[1] = style;
-    obj.style = items;
-    return jsx(closure_0(closure_2[5]).Text, obj);
-  }
-}
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = { container: { flexShrink: 0 }, content: { borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, overflow: "hidden", flexGrow: 1, flexShrink: 0, padding: 0 }, title: { marginBottom: 8 }, description: { marginBottom: 8 }, hasTrailingText: null, helperText: null };
 let obj3 = { borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, overflow: "hidden", flexGrow: 1, flexShrink: 0, padding: 0 };
 obj2.hasTrailingText = { borderBottomLeftRadius: nativeDefault.radii.none, borderBottomRightRadius: nativeDefault.radii.none };
 obj2.helperText = { marginTop: 8 };
-const React6 = createStyles.createStyles(obj2);
+let closure_8 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(7);
+  ({ title, style, lineClamp } = arg0);
+  const tmp4 = closure_8();
+  if (cResult[0] === style) {
+    if (cResult[1] === tmp4.title) {
+      let tmp5 = cResult[2];
+    }
+    if (cResult[3] === lineClamp) {
+      if (cResult[4] === tmp5) {
+        if (cResult[5] === title) {
+          let tmp6 = cResult[6];
+        }
+        return tmp6;
+      }
+    }
+    const obj2 = { accessibilityRole: "header", variant: "text-md/medium", color: "text-subtle", style: tmp5, lineClamp, children: title };
+    const tmp8 = hasOwnProperty(Text_Text.Text, obj2);
+    cResult[3] = lineClamp;
+    cResult[4] = tmp5;
+    cResult[5] = title;
+    cResult[6] = tmp8;
+    tmp6 = tmp8;
+  }
+  const items = [tmp4.title, style];
+  cResult[0] = style;
+  cResult[1] = tmp4.title;
+  cResult[2] = items;
+  tmp5 = items;
+}) : ((arg0) => {
+  ({ title, style, lineClamp } = arg0);
+  const obj = { accessibilityRole: "header", variant: "text-md/medium", color: "text-subtle", style: null, lineClamp, children: title };
+  const items = [closure_8().title, style];
+  obj.style = items;
+  return hasOwnProperty(Text_Text.Text, obj);
+});
+let closure_9 = tmp3;
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/TableRow/native/TableRowGroup.native.tsx");
 
-export { TableRowGroupTitle };
+export const TableRowGroupTitle = tmp3;
 export const TableRowGroup = function TableRowGroup(accessibilityLabel) {
   ({ title, description, helperText, hasIcons: require, hasTrailingText } = accessibilityLabel);
   if (hasTrailingText === undefined) {
@@ -64,7 +91,7 @@ export const TableRowGroup = function TableRowGroup(accessibilityLabel) {
   let tmp6Result = null != title;
   if (tmp6Result) {
     const obj3 = { title };
-    tmp6Result = closure_5(TableRowGroupTitle, obj3);
+    tmp6Result = closure_5(closure_9, obj3);
   }
   let items = [tmp6Result, , , ];
   let tmp6Result3 = null != description;

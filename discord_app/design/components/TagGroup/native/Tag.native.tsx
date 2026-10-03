@@ -1,17 +1,18 @@
-// === Module 14185: Tag ===
+// === Module 14253: Tag ===
 
-// Module 14185 (Tag)
-import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4841 */;
-import TagGroupTypes from "TagGroupTypes" /* 14183 */;
-import TagGraphic from "TagGraphic" /* 14186 */;
+// Module 14253 (Tag)
+import c from "c" /* 576 */;
+import nativeDefault from "native" /* 587 */;
+import Text_Text from "Text/Text" /* 4886 */;
+import TagGroupTypes from "TagGroupTypes" /* 14251 */;
+import TagGraphic from "TagGraphic" /* 14254 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let closure_6 = createStyles.createStyles((arg0, arg1) => {
   const obj = { tag: null, inline: null, label: null };
   const obj2 = { flexDirection: "row", alignItems: "center", gap: TagGroupTypes.getTagGap(arg0), minHeight: null, paddingVertical: null, paddingHorizontal: null, borderWidth: null, borderRadius: null, borderColor: null, backgroundColor: null };
@@ -27,10 +28,82 @@ let closure_6 = createStyles.createStyles((arg0, arg1) => {
   obj.label = { flexShrink: 1, color: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT };
   return obj;
 });
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/TagGroup/native/Tag.native.tsx");
 
-export const Tag = function Tag(variant) {
+export const Tag = ReactCompilerGating.isReactCompilerEnabled() ? ((variant) => {
+  const cResult = c.c(16);
+  ({ item, size, inline } = variant);
+  const tmp4 = closure_6(size, variant.variant);
+  if (inline) {
+    inline = tmp4.inline;
+  }
+  if (cResult[0] === tmp4.tag) {
+    if (cResult[1] === inline) {
+      let tmp5 = cResult[2];
+    }
+    if (cResult[3] === item.icon) {
+      if (cResult[4] === size) {
+        let tmp6 = cResult[5];
+      }
+      if (cResult[6] !== size) {
+        const tagTextVariant = TagGroupTypes.getTagTextVariant(size);
+        cResult[6] = size;
+        cResult[7] = tagTextVariant;
+        let tmp9 = tagTextVariant;
+        const tmpResult = TagGroupTypes;
+      } else {
+        tmp9 = cResult[7];
+      }
+      if (cResult[8] === item.label) {
+        if (cResult[9] === tmp4.label) {
+          if (cResult[10] === tmp9) {
+            let tmp11 = cResult[11];
+          }
+          if (cResult[12] === tmp5) {
+            if (cResult[13] === tmp6) {
+              if (cResult[14] === tmp11) {
+                let tmp14 = cResult[15];
+              }
+              return tmp14;
+            }
+          }
+          const obj2 = { style: tmp5, children: null };
+          const items = [tmp6, tmp11];
+          obj2.children = items;
+          const tmp17 = hasOwnProperty(View, obj2);
+          cResult[12] = tmp5;
+          cResult[13] = tmp6;
+          cResult[14] = tmp11;
+          cResult[15] = tmp17;
+          tmp14 = tmp17;
+        }
+      }
+      const obj3 = { color: "none", variant: tmp9, style: tmp4.label, lineClamp: 1, children: item.label };
+      const tmp13 = React4(Text_Text.Text, obj3);
+      cResult[8] = item.label;
+      cResult[9] = tmp4.label;
+      cResult[10] = tmp9;
+      cResult[11] = tmp13;
+      tmp11 = tmp13;
+    }
+    let tmp7 = null;
+    if (null != item.icon) {
+      const obj4 = { graphic: item.icon, size };
+      tmp7 = React4(TagGraphic.TagGraphic, obj4);
+    }
+    cResult[3] = item.icon;
+    cResult[4] = size;
+    cResult[5] = tmp7;
+    tmp6 = tmp7;
+  }
+  const items1 = [tmp4.tag, inline];
+  cResult[0] = tmp4.tag;
+  cResult[1] = inline;
+  cResult[2] = items1;
+  tmp5 = items1;
+}) : ((variant) => {
   ({ item, size, inline } = variant);
   const tmp = closure_6(size, variant.variant);
   const items = [tmp.tag, ];
@@ -49,4 +122,4 @@ export const Tag = function Tag(variant) {
   items1[1] = React4(Text_Text.Text, obj3);
   obj.children = items1;
   return hasOwnProperty(View, obj);
-};
+});

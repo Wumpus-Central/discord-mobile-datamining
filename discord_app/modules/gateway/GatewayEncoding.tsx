@@ -1,8 +1,8 @@
-// === Module 13380: GatewayEncoding ===
+// === Module 13440: GatewayEncoding ===
 
-// Module 13380 (GatewayEncoding)
-import ProcessArgs2 from "ProcessArgs" /* 5639 */;
-import GatewayEncodingErlpackEncoding_mod from "GatewayEncodingErlpackEncoding" /* 13381 */;
+// Module 13440 (GatewayEncoding)
+import ProcessArgs2 from "ProcessArgs" /* 6714 */;
+import GatewayEncodingErlpackEncoding_mod from "GatewayEncodingErlpackEncoding" /* 13441 */;
 import size from "module_2" /* 2 */;
 
 let GatewayEncodingErlpackEncoding = GatewayEncodingErlpackEncoding_mod;

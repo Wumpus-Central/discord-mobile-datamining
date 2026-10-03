@@ -1,20 +1,337 @@
-// === Module 11446: DoubleTapEmojiEditNudge ===
+// === Module 11363: DoubleTapEmojiEditNudge ===
 
-// Module 11446 (DoubleTapEmojiEditNudge)
-import nativeDefault from "native" /* 576 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 7583 */;
+// Module 11363 (DoubleTapEmojiEditNudge)
+import c from "c" /* 576 */;
+import nativeDefault from "native" /* 587 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
+import UserSettings from "UserSettings" /* 2028 */;
+import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 7627 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4834 */;
-import DimensionsStore from "DimensionsStore" /* 1480 */;
+import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import DimensionsStore from "DimensionsStore" /* 1485 */;
 
 require = fn;
-function DoubleTapEmojiEditNudgeInner(location) {
+const View = fn(17).View;
+const AnalyticEvents = fn(1085).AnalyticEvents;
+const EmojiConstants = fn(1380);
+({ EMOJI_URL_BASE_SIZE: closure_9, EmojiIntention: c10 } = EmojiConstants);
+const jsxProd = fn(21);
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+const hitSlop = { left: 8, right: 8 };
+const createStyles = fn(4890);
+let closure_14 = createStyles.createStyles((arg0) => {
+  const obj = { doubleTapEmojiContainer: { marginHorizontal: nativeDefault.space.PX_4 }, doubleTapTextEmoji: null, doubleTapCustomEmoji: null, doubleTapEmojiEditNudgeContainer: null, editButton: null };
+  const obj2 = { marginHorizontal: nativeDefault.space.PX_4 };
+  obj.doubleTapTextEmoji = { fontSize: 12 * arg0, color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+  size = { height: 16 * arg0, width: 16 * arg0 };
+  obj.doubleTapCustomEmoji = size;
+  const obj3 = { fontSize: 12 * arg0, color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+  obj.doubleTapEmojiEditNudgeContainer = { marginTop: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center", justifyContent: "center", flexWrap: "wrap" };
+  const obj4 = { marginTop: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center", justifyContent: "center", flexWrap: "wrap" };
+  obj.editButton = { marginHorizontal: nativeDefault.space.PX_4 };
+  return obj;
+});
+fn(558);
+const ReactCompilerGating = fn(558);
+let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+  const cResult = _location(576).c(26);
+  _location = location.location;
+  const emoji = location.emoji;
+  const obj = _location(576);
+  const appEntryKey = _location(1487).useAppEntryKey();
+  if (cResult[0] !== appEntryKey) {
+    const fn = function c(arg0) {
+      return arg0.byAppEntry[appEntryKey].fontScale;
+    };
+    cResult[0] = appEntryKey;
+    cResult[1] = fn;
+    let tmp5 = fn;
+  } else {
+    tmp5 = cResult[1];
+  }
+  let obj2 = _location(1487);
+  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [AccessibilityStore];
+    const fn2 = function f() {
+      return useReducedMotion.useReducedMotion;
+    };
+    cResult[2] = items;
+    cResult[3] = fn2;
+    let tmp8 = fn2;
+    let tmp7 = items;
+  } else {
+    tmp7 = cResult[2];
+    tmp8 = cResult[3];
+  }
+  const tmp6 = DimensionsStore(tmp5);
+  const stateFromStores = _location(504).useStateFromStores(tmp7, tmp8);
+  const tmp11 = closure_14(tmp6);
+  if (cResult[4] === emoji.animated) {
+    if (cResult[5] === emoji.id) {
+      if (cResult[6] === emoji.url) {
+        if (cResult[7] === stateFromStores) {
+          if (cResult[9] !== _location) {
+            class R {
+              constructor() {
+                obj = location(closure_1_2[17]);
+                obj1 = { pickerIntention: closure_1_10.DEFAULT_REACT_EMOJI, onPressEmoji: null, startExpanded: true };
+                closure_0 = closure_1_3(async (_location) => {
+                  c3 = 0;
+                  c4 = 0;
+                  return (/* F152129 */ function*() { ... })();
+                });
+                obj1.onPressEmoji = function() {
+                  const self = this;
+                  const apply = closure_0.apply;
+                  if (typeof apply === "unknown") {
+                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                  } else {
+                    applyArgumentsResult = apply(self, arguments);
+                  }
+                  return applyArgumentsResult;
+                };
+                result = obj.openEmojiPickerActionSheet(obj1, "stack");
+                return;
+              }
+            }
+            cResult[9] = _location;
+            cResult[10] = R;
+          } else {
+            class R {
+              constructor() {
+                obj = location(closure_1_2[17]);
+                obj1 = { pickerIntention: closure_1_10.DEFAULT_REACT_EMOJI, onPressEmoji: null, startExpanded: true };
+                closure_0 = closure_1_3(async (_location) => {
+                  c3 = 0;
+                  c4 = 0;
+                  return (/* F152129 */ function*() { ... })();
+                });
+                obj1.onPressEmoji = function() {
+                  const self = this;
+                  const apply = closure_0.apply;
+                  if (typeof apply === "unknown") {
+                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                  } else {
+                    applyArgumentsResult = apply(self, arguments);
+                  }
+                  return applyArgumentsResult;
+                };
+                result = obj.openEmojiPickerActionSheet(obj1, "stack");
+                return;
+              }
+            }
+          }
+          const _Symbol = Symbol;
+          if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
+            class R {
+              constructor() {
+                obj = location(closure_1_2[17]);
+                obj1 = { pickerIntention: closure_1_10.DEFAULT_REACT_EMOJI, onPressEmoji: null, startExpanded: true };
+                closure_0 = closure_1_3(async (_location) => {
+                  c3 = 0;
+                  c4 = 0;
+                  return (/* F152129 */ function*() { ... })();
+                });
+                obj1.onPressEmoji = function() {
+                  const self = this;
+                  const apply = closure_0.apply;
+                  if (typeof apply === "unknown") {
+                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                  } else {
+                    applyArgumentsResult = apply(self, arguments);
+                  }
+                  return applyArgumentsResult;
+                };
+                result = obj.openEmojiPickerActionSheet(obj1, "stack");
+                return;
+              }
+            }
+            let obj3 = { color: "text-subtle", variant: "text-sm/normal", children: null };
+            const intl = tmp(1126).intl;
+            obj3.children = intl.string(tmp(1126).t["1EUr/W"]);
+            const tmp18 = closure_11(tmp(4886).Text, obj3);
+            cResult[11] = tmp18;
+          } else {
+            class R {
+              constructor() {
+                obj = location(closure_1_2[17]);
+                obj1 = { pickerIntention: closure_1_10.DEFAULT_REACT_EMOJI, onPressEmoji: null, startExpanded: true };
+                closure_0 = closure_1_3(async (_location) => {
+                  c3 = 0;
+                  c4 = 0;
+                  return (/* F152129 */ function*() { ... })();
+                });
+                obj1.onPressEmoji = function() {
+                  const self = this;
+                  const apply = closure_0.apply;
+                  if (typeof apply === "unknown") {
+                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                  } else {
+                    applyArgumentsResult = apply(self, arguments);
+                  }
+                  return applyArgumentsResult;
+                };
+                result = obj.openEmojiPickerActionSheet(obj1, "stack");
+                return;
+              }
+            }
+          }
+          if (null == emoji.id) {
+            class R {
+              constructor() {
+                obj = location(closure_1_2[17]);
+                obj1 = { pickerIntention: closure_1_10.DEFAULT_REACT_EMOJI, onPressEmoji: null, startExpanded: true };
+                closure_0 = closure_1_3(async (_location) => {
+                  c3 = 0;
+                  c4 = 0;
+                  return (/* F152129 */ function*() { ... })();
+                });
+                obj1.onPressEmoji = function() {
+                  const self = this;
+                  const apply = closure_0.apply;
+                  if (typeof apply === "unknown") {
+                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                  } else {
+                    applyArgumentsResult = apply(self, arguments);
+                  }
+                  return applyArgumentsResult;
+                };
+                result = obj.openEmojiPickerActionSheet(obj1, "stack");
+                return;
+              }
+            }
+          }
+          if (cResult[12] === cResult[8]) {
+            class R {
+              constructor() {
+                obj = location(closure_1_2[17]);
+                obj1 = { pickerIntention: closure_1_10.DEFAULT_REACT_EMOJI, onPressEmoji: null, startExpanded: true };
+                closure_0 = closure_1_3(async (_location) => {
+                  c3 = 0;
+                  c4 = 0;
+                  return (/* F152129 */ function*() { ... })();
+                });
+                obj1.onPressEmoji = function() {
+                  const self = this;
+                  const apply = closure_0.apply;
+                  if (typeof apply === "unknown") {
+                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                  } else {
+                    applyArgumentsResult = apply(self, arguments);
+                  }
+                  return applyArgumentsResult;
+                };
+                result = obj.openEmojiPickerActionSheet(obj1, "stack");
+                return;
+              }
+            }
+          }
+          const obj5 = { style: null, fastImageStyle: null, textEmojiStyle: null, src: null, name: null };
+          ({ doubleTapEmojiContainer: obj7.style, doubleTapCustomEmoji: obj7.fastImageStyle, doubleTapTextEmoji: obj7.textEmojiStyle } = tmp11);
+          obj5.src = cResult[8];
+          obj5.name = "";
+          const tmp23 = closure_11(appEntryKey(6625), obj5);
+          cResult[12] = cResult[8];
+          cResult[13] = tmp11.doubleTapCustomEmoji;
+          cResult[14] = tmp11.doubleTapEmojiContainer;
+          cResult[15] = tmp11.doubleTapTextEmoji;
+          cResult[16] = "";
+          cResult[17] = tmp23;
+        }
+      }
+    }
+  }
+  if (null != emoji.id) {
+    class R {
+      constructor() {
+        obj = location(closure_1_2[17]);
+        obj1 = { pickerIntention: closure_1_10.DEFAULT_REACT_EMOJI, onPressEmoji: null, startExpanded: true };
+        closure_0 = closure_1_3(async (_location) => {
+          c3 = 0;
+          c4 = 0;
+          return (/* F152129 */ function*() { ... })();
+        });
+        obj1.onPressEmoji = function() {
+          const self = this;
+          const apply = closure_0.apply;
+          if (typeof apply === "unknown") {
+            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+          } else {
+            applyArgumentsResult = apply(self, arguments);
+          }
+          return applyArgumentsResult;
+        };
+        result = obj.openEmojiPickerActionSheet(obj1, "stack");
+        return;
+      }
+    }
+    let obj6 = { id: emoji.id, size, animated: null };
+    if (!stateFromStores) {
+      class R {
+        constructor() {
+          obj = location(closure_1_2[17]);
+          obj1 = { pickerIntention: closure_1_10.DEFAULT_REACT_EMOJI, onPressEmoji: null, startExpanded: true };
+          closure_0 = closure_1_3(async (_location) => {
+            c3 = 0;
+            c4 = 0;
+            return (/* F152129 */ function*() { ... })();
+          });
+          obj1.onPressEmoji = function() {
+            const self = this;
+            const apply = closure_0.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          };
+          result = obj.openEmojiPickerActionSheet(obj1, "stack");
+          return;
+        }
+      }
+    }
+    obj6.animated = !stateFromStores;
+    const emojiURL = appEntryKey(1402).getEmojiURL(obj6);
+    let obj4 = appEntryKey(1402);
+    const tmp15 = !stateFromStores;
+  } else {
+    class R {
+      constructor() {
+        obj = location(closure_1_2[17]);
+        obj1 = { pickerIntention: closure_1_10.DEFAULT_REACT_EMOJI, onPressEmoji: null, startExpanded: true };
+        closure_0 = closure_1_3(async (_location) => {
+          c3 = 0;
+          c4 = 0;
+          return (/* F152129 */ function*() { ... })();
+        });
+        obj1.onPressEmoji = function() {
+          const self = this;
+          const apply = closure_0.apply;
+          if (typeof apply === "unknown") {
+            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+          } else {
+            applyArgumentsResult = apply(self, arguments);
+          }
+          return applyArgumentsResult;
+        };
+        result = obj.openEmojiPickerActionSheet(obj1, "stack");
+        return;
+      }
+    }
+  }
+  cResult[4] = emoji.animated;
+  cResult[5] = emoji.id;
+  cResult[6] = emoji.url;
+  cResult[7] = stateFromStores;
+  cResult[8] = emojiURL;
+  const tmpResult = _location(504);
+}) : ((location) => {
   let _location = location.location;
   const emoji = location.emoji;
-  dependencyMap = _location(1482).useAppEntryKey();
-  let obj = _location(1482);
+  dependencyMap = _location(1487).useAppEntryKey();
+  let obj = _location(1487);
   const tmp3 = DimensionsStore((arg0) => arg0.byAppEntry[closure_2].fontScale);
   const items = [AccessibilityStore];
   const stateFromStores = _location(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
@@ -52,7 +369,7 @@ function DoubleTapEmojiEditNudgeInner(location) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -72,8 +389,8 @@ function DoubleTapEmojiEditNudgeInner(location) {
                 const obj4 = { emoji_id: null, emoji_name: null, emoji_animated: null, recommended: false, location: null };
                 ({ id: obj8.emoji_id, name: obj8.emoji_name, animated: obj8.emoji_animated } = _location);
                 obj4.location = _location;
-                emoji(1241).track(constants.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj4);
-                const DoubleTapReactionEmoji = _location(2021).DoubleTapReactionEmoji;
+                emoji(1252).track(constants.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj4);
+                const DoubleTapReactionEmoji = _location(2028).DoubleTapReactionEmoji;
                 ({ id: obj9.emojiId, name: obj9.emojiName, animated: obj9.animated } = _location);
                 c3 = 1;
                 c4 = 1;
@@ -89,9 +406,9 @@ function DoubleTapEmojiEditNudgeInner(location) {
               return obj16;
             } else {
               const obj17 = { emoji: closure_129_0 };
-              const result = _location(10786).showDoubleTapEmojiUpdatedToast(obj17);
+              const result = _location(9879).showDoubleTapEmojiUpdatedToast(obj17);
               c4 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } catch (tmp12) {
             c4 = tmp;
@@ -110,12 +427,12 @@ function DoubleTapEmojiEditNudgeInner(location) {
       }
       return applyArgumentsResult;
     };
-    let result = _location(10783).openEmojiPickerActionSheet(obj2, "stack");
+    let result = _location(9866).openEmojiPickerActionSheet(obj2, "stack");
   }, items2);
   let obj4 = { color: "text-subtle", variant: "text-sm/normal", children: null };
-  const intl = _location(1115).intl;
-  obj4.children = intl.string(_location(1115).t["1EUr/W"]);
-  const items3 = [closure_11(_location(4841).Text, obj4), , ];
+  const intl = _location(1126).intl;
+  obj4.children = intl.string(_location(1126).t["1EUr/W"]);
+  const items3 = [closure_11(_location(4886).Text, obj4), , ];
   const obj5 = { style: tmp5.doubleTapEmojiContainer, fastImageStyle: tmp5.doubleTapCustomEmoji, textEmojiStyle: tmp5.doubleTapTextEmoji, src: memo, name: null };
   let str = "";
   let obj2 = _location(504);
@@ -123,47 +440,79 @@ function DoubleTapEmojiEditNudgeInner(location) {
     str = emoji.surrogates;
   }
   obj5.name = str;
-  items3[1] = closure_11(emoji(6737), obj5);
+  items3[1] = closure_11(emoji(6625), obj5);
   let obj6 = { accessibilityRole: "button", onPress: callback, hitSlop, style: tmp5.editButton, children: null };
   const obj7 = { color: "text-brand", variant: "text-sm/normal", children: null };
-  const intl2 = tmp(1115).intl;
-  obj7.children = intl2.string(_location(1115).t.bt75uw);
-  obj6.children = closure_11(_location(4841).Text, obj7);
-  items3[2] = closure_11(_location(5621).PressableOpacity, obj6);
+  const intl2 = tmp(1126).intl;
+  obj7.children = intl2.string(_location(1126).t.bt75uw);
+  obj6.children = closure_11(_location(4886).Text, obj7);
+  items3[2] = closure_11(_location(5909).PressableOpacity, obj6);
   obj3.children = items3;
   return closure_12(View, obj3);
-}
-const View = fn(17).View;
-const AnalyticEvents = fn(1074).AnalyticEvents;
-const EmojiConstants = fn(1375);
-({ EMOJI_URL_BASE_SIZE: closure_9, EmojiIntention: c10 } = EmojiConstants);
-const jsxProd = fn(21);
-({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const hitSlop = { left: 8, right: 8 };
-const createStyles = fn(4845);
-let closure_14 = createStyles.createStyles((arg0) => {
-  const obj = { doubleTapEmojiContainer: { marginHorizontal: nativeDefault.space.PX_4 }, doubleTapTextEmoji: null, doubleTapCustomEmoji: null, doubleTapEmojiEditNudgeContainer: null, editButton: null };
-  const obj2 = { marginHorizontal: nativeDefault.space.PX_4 };
-  obj.doubleTapTextEmoji = { fontSize: 12 * arg0, color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-  size = { height: 16 * arg0, width: 16 * arg0 };
-  obj.doubleTapCustomEmoji = size;
-  const obj3 = { fontSize: 12 * arg0, color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-  obj.doubleTapEmojiEditNudgeContainer = { marginTop: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center", justifyContent: "center", flexWrap: "wrap" };
-  const obj4 = { marginTop: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center", justifyContent: "center", flexWrap: "wrap" };
-  obj.editButton = { marginHorizontal: nativeDefault.space.PX_4 };
-  return obj;
 });
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/double_tap_to_react/native/DoubleTapEmojiEditNudge.tsx");
 
-export const DoubleTapEmojiEditNudge = function DoubleTapEmojiEditNudge(location) {
+export const DoubleTapEmojiEditNudge = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+  const cResult = c.c(8);
+  const _location = location.location;
+  const DoubleTapReactionEmoji = UserSettings.DoubleTapReactionEmoji;
+  const setting = DoubleTapReactionEmoji.useSetting();
+  if (cResult[0] !== setting) {
+    const result = DoubleTapToReactUtils.disambiguatedEmojiFromSettingsValue(setting);
+    cResult[0] = setting;
+    cResult[1] = result;
+    let tmp5 = result;
+    const tmpResult = DoubleTapToReactUtils;
+  } else {
+    tmp5 = cResult[1];
+  }
+  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+    const fallbackDoubleTapDisambiguatedEmoji = DoubleTapToReactUtils.getFallbackDoubleTapDisambiguatedEmoji();
+    cResult[2] = fallbackDoubleTapDisambiguatedEmoji;
+    let tmp7 = fallbackDoubleTapDisambiguatedEmoji;
+    const tmpResult2 = DoubleTapToReactUtils;
+  } else {
+    tmp7 = cResult[2];
+  }
+  ({ emojiId, emojiName } = setting);
+  let tmp9 = null;
+  if (true === setting.disableDoubleTap) {
+    return null;
+  } else {
+    if (tmp9 == emojiId) {
+      if (tmp9 == emojiName) {
+        if (tmp9 != tmp7) {
+          if (cResult[3] !== _location) {
+            const obj2 = { location: _location, emoji: tmp7 };
+            const tmp13 = closure_1_11(closure_15, obj2);
+            cResult[3] = _location;
+            cResult[4] = tmp13;
+          }
+        }
+      }
+    }
+    tmp9 = null;
+    if (!tmp14) {
+    } else {
+      if (cResult[5] === tmp5) {
+      }
+      const obj3 = { location: _location, emoji: tmp5 };
+      const tmp18 = closure_1_11(closure_15, obj3);
+      cResult[5] = tmp5;
+      cResult[6] = _location;
+      cResult[7] = tmp18;
+    }
+    tmp14 = tmp9 != tmp5;
+  }
+}) : ((location) => {
   const _location = location.location;
   let setting;
-  const DoubleTapReactionEmoji = setting(2021).DoubleTapReactionEmoji;
+  const DoubleTapReactionEmoji = setting(2028).DoubleTapReactionEmoji;
   setting = DoubleTapReactionEmoji.useSetting();
   const items = [setting];
   const memo = noop.useMemo(() => DoubleTapToReactUtils.disambiguatedEmojiFromSettingsValue(setting), items);
-  const memo1 = noop.useMemo(() => setting(dependencyMap[11]).getFallbackDoubleTapDisambiguatedEmoji(), []);
+  const memo1 = noop.useMemo(() => setting(dependencyMap[13]).getFallbackDoubleTapDisambiguatedEmoji(), []);
   [][0] = setting;
   let tmp5 = null;
   if (true === setting.disableDoubleTap) {
@@ -172,14 +521,14 @@ export const DoubleTapEmojiEditNudge = function DoubleTapEmojiEditNudge(location
     if (!tmp4) {
       if (tmp5 != memo1) {
         const obj = { location: _location, emoji: memo1 };
-        const tmp8 = closure_11(DoubleTapEmojiEditNudgeInner, obj);
+        const tmp8 = closure_11(closure_15, obj);
       }
     }
     tmp5 = null;
     if (tmp9) {
       const obj2 = { location: _location, emoji: memo };
-      tmp5 = closure_11(DoubleTapEmojiEditNudgeInner, obj2);
+      tmp5 = closure_11(closure_15, obj2);
     }
     tmp9 = tmp5 != memo;
   }
-};
+});

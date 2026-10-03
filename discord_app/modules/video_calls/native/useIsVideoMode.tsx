@@ -1,30 +1,17 @@
-// === Module 9455: useIsVideoMode ===
+// === Module 9465: useIsVideoMode ===
 
-// Module 9455 (useIsVideoMode)
+// Module 9465 (useIsVideoMode)
 import initialize from "initialize" /* 504 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4867 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import MediaEngineStore from "MediaEngineStore" /* 1993 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
-import VoiceStateStore from "VoiceStateStore" /* 4864 */;
+import c from "c" /* 576 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4912 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import MediaEngineStore from "MediaEngineStore" /* 1999 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
+import VoiceStateStore from "VoiceStateStore" /* 4909 */;
 
 require = fn;
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/video_calls/native/useIsVideoMode.tsx");
-
-export default function useIsVideoMode() {
-  const items = [ChannelStore, SelectedChannelStore, MediaEngineStore, VoiceStateStore, ApplicationStreamingStore];
-  return initialize.useStateFromStores(items, () => {
-    channel = channel.getChannel(voiceChannelId.getVoiceChannelId());
-    let tmp2 = null != channel;
-    if (tmp2) {
-      tmp2 = ApplicationStreamingStore.getAllActiveStreams().length > 0 || VoiceStateStore.hasVideo(channel.id) || MediaEngineStore.isVideoEnabled();
-      const tmp3 = ApplicationStreamingStore.getAllActiveStreams().length > 0 || VoiceStateStore.hasVideo(channel.id) || MediaEngineStore.isVideoEnabled();
-    }
-    return tmp2;
-  });
-};
-export const isVideoMode = function isVideoMode() {
+const ReactCompilerGating = fn(558);
+function isVideoMode() {
   let obj = ChannelStore;
   if (ChannelStore === undefined) {
     obj = ChannelStore;
@@ -52,4 +39,41 @@ export const isVideoMode = function isVideoMode() {
     const tmp3 = obj3.getAllActiveStreams().length > 0 || obj4.hasVideo(channel.id) || obj5.isVideoEnabled();
   }
   return tmp2;
-};
+}
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/native/useIsVideoMode.tsx");
+
+export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(2);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [ChannelStore, SelectedChannelStore, MediaEngineStore, VoiceStateStore, ApplicationStreamingStore];
+    const fn = function c() {
+      channel = channel.getChannel(voiceChannelId.getVoiceChannelId());
+      let tmp2 = null != channel;
+      if (tmp2) {
+        tmp2 = ApplicationStreamingStore.getAllActiveStreams().length > 0 || VoiceStateStore.hasVideo(channel.id) || MediaEngineStore.isVideoEnabled();
+        const tmp3 = ApplicationStreamingStore.getAllActiveStreams().length > 0 || VoiceStateStore.hasVideo(channel.id) || MediaEngineStore.isVideoEnabled();
+      }
+      return tmp2;
+    };
+    cResult[0] = items;
+    cResult[1] = fn;
+    tmp4 = items;
+    tmp5 = fn;
+  } else {
+    [tmp4, tmp5] = cResult;
+  }
+  return initialize.useStateFromStores(tmp4, tmp5);
+}) : (() => {
+  const items = [ChannelStore, SelectedChannelStore, MediaEngineStore, VoiceStateStore, ApplicationStreamingStore];
+  return initialize.useStateFromStores(items, () => {
+    channel = channel.getChannel(voiceChannelId.getVoiceChannelId());
+    let tmp2 = null != channel;
+    if (tmp2) {
+      tmp2 = ApplicationStreamingStore.getAllActiveStreams().length > 0 || VoiceStateStore.hasVideo(channel.id) || MediaEngineStore.isVideoEnabled();
+      const tmp3 = ApplicationStreamingStore.getAllActiveStreams().length > 0 || VoiceStateStore.hasVideo(channel.id) || MediaEngineStore.isVideoEnabled();
+    }
+    return tmp2;
+  });
+});
+export { isVideoMode };

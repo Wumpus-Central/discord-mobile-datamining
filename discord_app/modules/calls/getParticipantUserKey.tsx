@@ -1,6 +1,6 @@
-// === Module 5926: getParticipantUserKey ===
+// === Module 5585: getParticipantUserKey ===
 
-// Module 5926 (getParticipantUserKey)
+// Module 5585 (getParticipantUserKey)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/calls/getParticipantUserKey.tsx");

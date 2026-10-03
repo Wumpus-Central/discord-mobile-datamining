@@ -1,16 +1,16 @@
-// === Module 17957: SafetyFlowsUtils ===
+// === Module 18043: SafetyFlowsUtils ===
 
-// Module 17957 (SafetyFlowsUtils)
-import util from "util" /* 1115 */;
-import _modDef2780 from "module_2780" /* 2780 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4557 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5048 */;
-import _modDef9002 from "module_9002" /* 9002 */;
-import types from "types" /* 17951 */;
-import constants from "constants" /* 17952 */;
+// Module 18043 (SafetyFlowsUtils)
+import util from "util" /* 1126 */;
+import _modDef2787 from "module_2787" /* 2787 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4568 */;
+import _modDef4805 from "module_4805" /* 4805 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
+import types from "types" /* 18037 */;
+import constants from "constants" /* 18038 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1372 */;
+import UserStore from "UserStore" /* 1377 */;
 
 const require = globalThis.__r;
 
@@ -38,9 +38,9 @@ let closure_7 = async function _fetchAndUpdateTask() {
 function navigateToScreenForTask(arr, task_type) {
   if (null == task_type) {
     ModalActionCreatorsDefault.popWithKey(constants.SAFETY_FLOWS_MODAL_KEY);
-    const obj3 = { key: "SAFETY_FLOWS_VERIFY_EMAIL_SUCCESS", icon: _modDef9002, content: null };
+    const obj3 = { key: "SAFETY_FLOWS_VERIFY_EMAIL_SUCCESS", icon: _modDef4805, content: null };
     const intl = util.intl;
-    obj3.content = intl.string(_modDef2780["/fHz9S"]);
+    obj3.content = intl.string(_modDef2787["/fHz9S"]);
     ToastActionCreatorsDefault.open(obj3);
   } else {
     task_type = task_type.task_type;
@@ -69,10 +69,8 @@ function navigateToScreenForTask(arr, task_type) {
     }
   }
 }
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/safety_flows/native/SafetyFlowsUtils.tsx");
-
-export const getScreensForTaskType = function getScreensForTaskType(task_type) {
+const ReactCompilerGating = fn(558);
+function getScreensForTaskType(task_type) {
   const tmp3 = types.TASK_TYPE_TO_SCREENS[task_type];
   let tmp4 = null;
   if (null != tmp3) {
@@ -92,16 +90,32 @@ export const getScreensForTaskType = function getScreensForTaskType(task_type) {
     tmp4 = tmp5;
   }
   return tmp4;
-};
+}
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/safety_flows/native/SafetyFlowsUtils.tsx");
+
+export { getScreensForTaskType };
 export { fetchAndUpdateTask };
 export { navigateToScreenForTask };
-export const useOnTaskComplete = function useOnTaskComplete() {
+export const useOnTaskComplete = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = require("c").c(5);
+  let obj = require("c");
   const navigation = require("useNavigation").useNavigation();
   _require = navigation;
-  let obj = require("useNavigation");
+  let obj2 = require("useNavigation");
   const safetyFlowTask = require("SafetyFlowsTaskContext").useSafetyFlowTask();
   const task = safetyFlowTask.task;
   setTask = safetyFlowTask.setTask;
+  if (cResult[0] === navigation) {
+    if (cResult[1] === setTask) {
+      if (cResult[2] === task.flow_context.flow_id) {
+        if (cResult[3] === task.task_id) {
+          let tmp4 = cResult[4];
+        }
+        return tmp4;
+      }
+    }
+  }
   _require = asyncGeneratorStep(async (data) => {
     c3 = 0;
     c4 = 0;
@@ -116,7 +130,7 @@ export const useOnTaskComplete = function useOnTaskComplete() {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -164,7 +178,101 @@ export const useOnTaskComplete = function useOnTaskComplete() {
             closure_129_0 = value;
             navigateToScreenForTask(data, closure_129_0);
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
+          }
+        } catch (tmp15) {
+          c4 = tmp;
+          throw tmp15;
+        }
+      }
+    })();
+  });
+  const fn = function() {
+    const self = this;
+    const apply = closure_0.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
+  };
+  cResult[0] = navigation;
+  cResult[1] = setTask;
+  cResult[2] = task.flow_context.flow_id;
+  cResult[3] = task.task_id;
+  cResult[4] = fn;
+  tmp4 = fn;
+}) : (() => {
+  const navigation = require("useNavigation").useNavigation();
+  _require = navigation;
+  let obj = require("useNavigation");
+  const safetyFlowTask = require("SafetyFlowsTaskContext").useSafetyFlowTask();
+  const task = safetyFlowTask.task;
+  setTask = safetyFlowTask.setTask;
+  _require = asyncGeneratorStep(async (data) => {
+    c3 = 0;
+    c4 = 0;
+    return (async (arg0) => {
+      if (c4 === 2) {
+        c4 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          return { value: "IconComponent", done: "IconComponent" };
+        }
+      } else {
+        try {
+          c4 = 2;
+          if (0 === c3) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              const obj3 = { value, done: true };
+              return obj3;
+            } else {
+              closure_2 = tmp2;
+              closure_1 = tmp5;
+              closure_129_0 = undefined;
+              const obj4 = { task_id: closure_1.task_id, flow_id: closure_1.flow_context.flow_id, data };
+              c3 = 1;
+              c4 = 1;
+              const obj5 = { value: data(setTask[4]).completeTask(obj4), done: false };
+              return obj5;
+            }
+          } else if (1 === tmp5) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              const obj6 = { value, done: true };
+              return obj6;
+            } else {
+              c3 = 2;
+              c4 = 1;
+              const obj8 = { value: fetchAndUpdateTask(closure_2), done: false };
+              return obj8;
+            }
+          } else if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj = { value, done: true };
+            return obj;
+          } else {
+            closure_129_0 = value;
+            navigateToScreenForTask(data, closure_129_0);
+            c4 = 3;
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp15) {
           c4 = tmp;
@@ -184,4 +292,4 @@ export const useOnTaskComplete = function useOnTaskComplete() {
     }
     return applyArgumentsResult;
   }, items);
-};
+});

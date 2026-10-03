@@ -1,7 +1,7 @@
-// === Module 6837: SocialLayerStorefrontConstants ===
+// === Module 6730: SocialLayerStorefrontConstants ===
 
-// Module 6837 (SocialLayerStorefrontConstants)
-import UserStoreConstants from "UserStoreConstants" /* 1384 */;
+// Module 6730 (SocialLayerStorefrontConstants)
+import UserStoreConstants from "UserStoreConstants" /* 1389 */;
 import size from "module_2" /* 2 */;
 
 const Environments = UserStoreConstants.Environments;
@@ -22,6 +22,7 @@ export const SOCIAL_LAYER_CLAIM_PURCHASED_ITEM_MODAL_TYPE = "Social Layer Claim 
 export const SOCIAL_LAYER_GIFT_CODE_CLAIM_MODAL_TYPE = "Social Layer Gift Code Claim Modal";
 export const SOCIAL_LAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_TYPE = "Social Layer Storefront Product Details Modal";
 export const MARVEL_RIVALS_APPLICATION_ID = "1346069614634864772";
+export const RUST_APPLICATION_ID = "1288512934112264234";
 export const SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM = 14;
 export const SOCIAL_LAYER_COMMERCE_PARTNER_DOCUMENTATION_URL = "https://docs.discord.com/partners/commerce/overview";
 export const getChannelsGameShopPrefix = function getChannelsGameShopPrefix(arg0) {

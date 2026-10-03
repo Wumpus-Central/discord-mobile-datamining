@@ -1,19 +1,19 @@
-// === Module 7234: GuildBasicChannels ===
+// === Module 7132: GuildBasicChannels ===
 
-// Module 7234 (GuildBasicChannels)
+// Module 7132 (GuildBasicChannels)
 import LoggerDefault from "Logger" /* 3 */;
-import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 2073 */;
-import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 4507 */;
+import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 2078 */;
+import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 4518 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5775 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5436 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildRoleStore from "GuildRoleStore" /* 2101 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import PermissionStore from "PermissionStore" /* 4498 */;
-import BasicChannelCacheStore from "BasicChannelCacheStore" /* 2045 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import GuildRoleStore from "GuildRoleStore" /* 2106 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import PermissionStore from "PermissionStore" /* 4509 */;
+import BasicChannelCacheStore from "BasicChannelCacheStore" /* 2052 */;
 
 const require = fn;
 function hasBasicChannelChanged(basicChannel, nextResult) {
@@ -24,8 +24,8 @@ function hasBasicChannelChanged(basicChannel, nextResult) {
   }
   return tmp;
 }
-let closure_7 = fn(2048).createChannelRecordFromServer;
-const ChannelLoader = fn(2044).ChannelLoader;
+let closure_7 = fn(2055).createChannelRecordFromServer;
+const ChannelLoader = fn(2051).ChannelLoader;
 let closure_15 = new LoggerDefault("GuildBasicChannels");
 class GuildBasicChannels {
   constructor() {
@@ -81,9 +81,9 @@ prototype["getAsync"] = function getAsync(arg0) {
     closure_0 = tmp2;
     const _performance2 = performance;
     closure_128_0 = performance.now();
-    let items = [tmp3(2073).basicChannels(closure_0).getKvEntries(), ];
-    tmp3(2073).basicChannels(closure_0);
-    items[1] = tmp3(2073).syncedBasicChannels(closure_0).getKvEntries();
+    let items = [tmp3(2078).basicChannels(closure_0).getKvEntries(), ];
+    tmp3(2078).basicChannels(closure_0);
+    items[1] = tmp3(2078).syncedBasicChannels(closure_0).getKvEntries();
     await Promise.all(items);
     closure_128_1 = value;
     closure_128_2 = _slicedToArray(closure_128_1, 2);
@@ -204,7 +204,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -251,7 +251,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                           const obj2 = { value, done: true };
                           return obj2;
                         } else {
-                          return { value: "HermesInternal", done: null };
+                          return { value: "IconComponent", done: "IconComponent" };
                         }
                       } else {
                         try {
@@ -309,7 +309,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                               return obj6;
                             } else {
                               c6 = 3;
-                              return { value: "HermesInternal", done: null };
+                              return { value: "IconComponent", done: "IconComponent" };
                             }
                           } else if (3 === tmp7) {
                             if (arg0 === 1) {
@@ -369,7 +369,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
               }
             }
             c10 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else if (1 === tmp7) {
           c7 = 0;

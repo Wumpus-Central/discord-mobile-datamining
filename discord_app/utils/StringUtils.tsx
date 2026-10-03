@@ -1,15 +1,15 @@
-// === Module 2011: StringUtils ===
+// === Module 2018: StringUtils ===
 
-// Module 2011 (StringUtils)
-import utils_StringUtils from "utils/StringUtils" /* 2012 */;
+// Module 2018 (StringUtils)
+import utils_StringUtils from "utils/StringUtils" /* 2019 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/StringUtils.tsx");
 
-export const isNullOrEmpty = function isNullOrEmpty(application_id) {
-  let tmp = null == application_id;
+export const isNullOrEmpty = function isNullOrEmpty(id) {
+  let tmp = null == id;
   if (!tmp) {
-    tmp = 0 === application_id.length;
+    tmp = 0 === id.length;
   }
   return tmp;
 };

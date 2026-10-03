@@ -1,22 +1,206 @@
-// === Module 17059: shared/DMChannel ===
+// === Module 17382: shared/DMChannel ===
 
-// Module 17059 (shared/DMChannel)
-import nativeDefault from "native" /* 576 */;
-import transitionToChannel from "transitionToChannel" /* 4856 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10569 */;
+// Module 17382 (shared/DMChannel)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import c from "c" /* 576 */;
+import nativeDefault from "native" /* 587 */;
+import transitionToChannel from "transitionToChannel" /* 4901 */;
+import useChannelNameDefault from "useChannelName" /* 5043 */;
+import useFontScale from "useFontScale" /* 5602 */;
+import Pressables from "Pressables" /* 5909 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7514 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10651 */;
+import ChannelRowPreview from "ChannelRowPreview" /* 12488 */;
+import useMessagePreviewsDefault from "useMessagePreviews" /* 15133 */;
+import useChannelUnreadBadgeState from "useChannelUnreadBadgeState" /* 16281 */;
+import renderChannelItemDefault from "renderChannelItem" /* 16812 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 16813 */;
+import UnreadBadgeDefault from "UnreadBadge" /* 17374 */;
+import renderChannelPressableWrapperDefault from "renderChannelPressableWrapper" /* 17376 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const UnreadSetting = fn(5027).UnreadSetting;
+const UnreadSetting = fn(5072).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(4845);
+let ReactCompilerGating = fn(558);
+let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((id, navigationReplace) => {
+  _require = id;
+  const cResult = require("c").c(8);
+  if (cResult[0] === id.id) {
+    if (cResult[1] === navigationReplace) {
+      let tmp2 = cResult[2];
+    }
+    if (cResult[3] !== id.id) {
+      const fn2 = function s() {
+        return openChannelLongPressActionSheet.openChannelLongPressActionSheet(user.id);
+      };
+      cResult[3] = id.id;
+      cResult[4] = fn2;
+      let tmp3 = fn2;
+    } else {
+      tmp3 = cResult[4];
+    }
+    if (cResult[5] === tmp3) {
+      if (cResult[6] === tmp2) {
+        let tmp4 = cResult[7];
+      }
+      return tmp4;
+    }
+    const obj2 = { onPress: tmp2, onLongPress: tmp3 };
+    cResult[5] = tmp3;
+    cResult[6] = tmp2;
+    cResult[7] = obj2;
+    tmp4 = obj2;
+  }
+  const fn = function l() {
+    transitionToChannel.transitionToChannel(user.id, { navigationReplace });
+  };
+  cResult[0] = id.id;
+  cResult[1] = navigationReplace;
+  cResult[2] = fn;
+  tmp2 = fn;
+}) : ((id, navigationReplace) => {
+  const user = id;
+  const obj = { onPress: null, onLongPress: null };
+  const items = [id.id, navigationReplace];
+  obj.onPress = noop.useCallback(() => {
+    transitionToChannel.transitionToChannel(user.id, { navigationReplace });
+  }, items);
+  const items1 = [id.id];
+  obj.onLongPress = noop.useCallback(() => openChannelLongPressActionSheet.openChannelLongPressActionSheet(user.id), items1);
+  return obj;
+});
+const createStyles = fn(4890);
 let obj = { pressable: { flex: 1 }, pressableUnderlayColor: { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE } };
-let closure_6 = createStyles.createStyles(obj);
-let obj3 = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
+let closure_7 = createStyles.createStyles(obj);
+ReactCompilerGating = fn(558);
+let obj4 = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/launchpad/native/shared/DMChannel.tsx");
 
-export default noop.memo(function DMChannel(navigationReplace) {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(23);
+  ({ channel, muted, navigationReplace } = arg0);
+  const tmp6 = closure_7();
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const tmp9 = getLayoutStylesDefault();
+    cResult[0] = tmp9;
+    let first = tmp9;
+  } else {
+    first = cResult[0];
+  }
+  const tmp5 = undefined !== navigationReplace && navigationReplace;
+  const baseChannelUnreadBadgeState = useChannelUnreadBadgeState.useBaseChannelUnreadBadgeState(channel, tmp4);
+  ({ unread, mentionCount } = baseChannelUnreadBadgeState);
+  if (cResult[1] !== unread) {
+    const obj2 = { unread };
+    cResult[1] = unread;
+    cResult[2] = obj2;
+    let tmp11 = obj2;
+  } else {
+    tmp11 = cResult[2];
+  }
+  const tmp13 = useMessagePreviewsDefault(channel, tmp11);
+  if (null != tmp13) {
+    const tmp12Result = SnowflakeUtilsDefault;
+    const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(tmp13.id);
+  }
+  let str = "text-muted";
+  if (unread) {
+    str = "text-muted";
+    if (!tmp4) {
+      str = "text-default";
+    }
+  }
+  const tmpResult = useChannelUnreadBadgeState;
+  const fontScale = useFontScale.useFontScale();
+  const tmp12Result3 = renderChannelPressableWrapperDefault;
+  const PressableHighlight = Pressables.PressableHighlight;
+  if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+    const obj3 = { borderRadius: first.container.borderRadius };
+    cResult[3] = obj3;
+    let tmp17 = obj3;
+  } else {
+    tmp17 = cResult[3];
+  }
+  if (cResult[4] !== tmp6.pressable) {
+    const items = [tmp6.pressable, tmp17];
+    cResult[4] = tmp6.pressable;
+    cResult[5] = items;
+    let tmp18 = items;
+  } else {
+    tmp18 = cResult[5];
+  }
+  const tmp19 = closure_6(channel, tmp5);
+  if (cResult[6] === (undefined !== muted && muted)) {
+    if (cResult[7] === unread) {
+      let tmp20 = cResult[8];
+    }
+    if (cResult[9] === channel) {
+      if (cResult[10] === tmp13) {
+        if (cResult[11] === tmp4) {
+          if (cResult[12] === str) {
+            let tmp22 = cResult[13];
+          }
+          const obj4 = { channel, unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES, muted: tmp4, mentionCount, unreadBadge: tmp20, subtitle: tmp22, latestMessageTimestamp: extractTimestampResult, channelName: useChannelNameDefault(channel), fontScale };
+          const tmp12Result2Result = renderChannelItemDefault(obj4);
+          if (cResult[14] === PressableHighlight) {
+            if (cResult[15] === tmp6.pressableUnderlayColor.backgroundColor) {
+              if (cResult[16] === tmp12Result2Result) {
+                if (cResult[17] === tmp18) {
+                  if (cResult[18] === tmp19) {
+                    let tmp28 = cResult[19];
+                  }
+                  if (cResult[20] === tmp28) {
+                    if (cResult[21] === tmp12Result3) {
+                      let tmp34 = cResult[22];
+                    }
+                    return tmp34;
+                  }
+                  const tmp12Result1Result = tmp12Result3(tmp28);
+                  cResult[20] = tmp28;
+                  cResult[21] = tmp12Result3;
+                  cResult[22] = tmp12Result1Result;
+                  tmp34 = tmp12Result1Result;
+                }
+              }
+            }
+          }
+          const obj5 = { style: tmp18, underlayColor: tmp6.pressableUnderlayColor.backgroundColor };
+          const merged = Object.assign(tmp19);
+          obj5.children = tmp12Result2Result;
+          const tmp33 = <PressableHighlight style={tmp18} underlayColor={tmp6.pressableUnderlayColor.backgroundColor} />;
+          cResult[14] = PressableHighlight;
+          cResult[15] = tmp6.pressableUnderlayColor.backgroundColor;
+          cResult[16] = tmp12Result2Result;
+          cResult[17] = tmp18;
+          cResult[18] = tmp19;
+          cResult[19] = tmp33;
+          tmp28 = tmp33;
+          const tmp12Result4 = renderChannelItemDefault;
+        }
+      }
+    }
+    let tmp23 = null != tmp13;
+    if (tmp23) {
+      const obj6 = { channel, message: tmp13, color: str, muted: tmp4, layout: ChannelListLayoutTypes.ChannelListLayoutTypes.COMPACT };
+      tmp23 = jsx(ChannelRowPreview.ChannelRowPreview, { channel, message: tmp13, color: str, muted: tmp4, layout: ChannelListLayoutTypes.ChannelListLayoutTypes.COMPACT });
+    }
+    cResult[9] = channel;
+    cResult[10] = tmp13;
+    cResult[11] = tmp4;
+    cResult[12] = str;
+    cResult[13] = tmp23;
+    tmp22 = tmp23;
+  }
+  const tmp21 = jsx(UnreadBadgeDefault, { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES, muted: undefined !== muted && muted });
+  cResult[6] = undefined !== muted && muted;
+  cResult[7] = unread;
+  cResult[8] = tmp21;
+  tmp20 = tmp21;
+  const obj7 = { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES, muted: undefined !== muted && muted };
+  const tmpResult2 = useFontScale;
+}) : ((navigationReplace) => {
   ({ channel, muted } = navigationReplace);
   if (muted === undefined) {
     muted = false;
@@ -25,15 +209,15 @@ export default noop.memo(function DMChannel(navigationReplace) {
   if (flag === undefined) {
     flag = false;
   }
-  const tmp = closure_6();
-  const tmp4 = flag(16725)();
-  const baseChannelUnreadBadgeState = channel(16206).useBaseChannelUnreadBadgeState(channel, muted);
+  const tmp = closure_7();
+  const tmp4 = getLayoutStylesDefault();
+  const baseChannelUnreadBadgeState = useChannelUnreadBadgeState.useBaseChannelUnreadBadgeState(channel, muted);
   ({ unread, mentionCount } = baseChannelUnreadBadgeState);
-  const tmp7 = flag(15076)(channel, { unread });
+  const tmp7 = useMessagePreviewsDefault(channel, { unread });
   let extractTimestampResult;
   if (null != tmp7) {
-    extractTimestampResult = tmp2(11).extractTimestamp(tmp7.id);
-    const tmp2Result = tmp2(11);
+    extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(tmp7.id);
+    const tmp2Result = SnowflakeUtilsDefault;
   }
   let str = "text-muted";
   if (unread) {
@@ -42,32 +226,24 @@ export default noop.memo(function DMChannel(navigationReplace) {
       str = "text-default";
     }
   }
-  const obj = channel(16206);
-  const fontScale = channel(5472).useFontScale();
-  const tmp5Result = channel(5472);
+  const fontScale = useFontScale.useFontScale();
+  const tmp5Result = useFontScale;
   const obj2 = { style: null, underlayColor: tmp.pressableUnderlayColor.backgroundColor };
   const items = [tmp.pressable, { borderRadius: tmp4.container.borderRadius }];
   obj2.style = items;
-  const obj3 = { onPress: null, onLongPress: null };
-  const items1 = [channel.id, flag];
-  obj3.onPress = noop.useCallback(() => {
-    transitionToChannel.transitionToChannel(channel.id, { navigationReplace: flag });
-  }, items1);
-  const items2 = [channel.id];
-  obj3.onLongPress = noop.useCallback(() => openChannelLongPressActionSheet.openChannelLongPressActionSheet(channel.id), items2);
-  const merged = Object.assign(obj3);
-  const obj4 = { channel, unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES, muted, mentionCount, unreadBadge: null, subtitle: null, latestMessageTimestamp: null, channelName: null, fontScale: null };
-  const tmp2Result3 = flag(17051);
-  obj4.unreadBadge = jsx(flag(17052), { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES, muted });
+  const merged = Object.assign(closure_6(channel, flag));
+  const obj3 = { channel, unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES, muted, mentionCount, unreadBadge: null, subtitle: null, latestMessageTimestamp: null, channelName: null, fontScale: null };
+  const tmp2Result3 = renderChannelPressableWrapperDefault;
+  obj3.unreadBadge = jsx(UnreadBadgeDefault, { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES, muted });
   let tmp11Result = null != tmp7;
   if (tmp11Result) {
-    const obj6 = { channel, message: tmp7, color: str, muted, layout: channel(7478).ChannelListLayoutTypes.COMPACT };
-    tmp11Result = jsx(channel(9761).ChannelRowPreview, { channel, message: tmp7, color: str, muted, layout: channel(7478).ChannelListLayoutTypes.COMPACT });
+    const obj5 = { channel, message: tmp7, color: str, muted, layout: ChannelListLayoutTypes.ChannelListLayoutTypes.COMPACT };
+    tmp11Result = jsx(ChannelRowPreview.ChannelRowPreview, { channel, message: tmp7, color: str, muted, layout: ChannelListLayoutTypes.ChannelListLayoutTypes.COMPACT });
   }
-  obj4.subtitle = tmp11Result;
-  obj4.latestMessageTimestamp = extractTimestampResult;
-  obj4.channelName = flag(4998)(channel);
-  obj4.fontScale = fontScale;
-  obj2.children = flag(16724)(obj4);
-  return tmp2Result3(jsx(channel(5621).PressableHighlight, { style: null, underlayColor: tmp.pressableUnderlayColor.backgroundColor }));
-});
+  obj3.subtitle = tmp11Result;
+  obj3.latestMessageTimestamp = extractTimestampResult;
+  obj3.channelName = useChannelNameDefault(channel);
+  obj3.fontScale = fontScale;
+  obj2.children = renderChannelItemDefault(obj3);
+  return tmp2Result3(jsx(Pressables.PressableHighlight, { style: null, underlayColor: tmp.pressableUnderlayColor.backgroundColor }));
+}));

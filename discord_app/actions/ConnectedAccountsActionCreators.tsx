@@ -1,44 +1,26 @@
-// === Module 5904: ConnectedAccountsActionCreators ===
+// === Module 6677: ConnectedAccountsActionCreators ===
 
-// Module 5904 (ConnectedAccountsActionCreators)
+// Module 6677 (ConnectedAccountsActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1249 */;
-import HTTPUtils from "HTTPUtils" /* 1271 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5038 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5083 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5779 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5440 */;
 
 const require = globalThis.__r;
 
 require = fn;
-function callback(arg0, arg1) {
-  let flag = arg2;
-  if (arg2 === undefined) {
-    flag = false;
-  }
-  const HTTP = HTTPUtils.HTTP;
-  const request = { url: timestampProducer.CONNECTIONS_CALLBACK(arg0), body: null, oldFormErrors: true, rejectWithError: null };
-  const obj = {};
-  const merged = Object.assign(arg1);
-  obj.insecure = flag;
-  obj.friend_sync = set.has(arg0);
-  request.body = obj;
-  request.rejectWithError = HTTPUtils.rejectWithMigratedError();
-  return HTTP.post(request);
-}
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AbortCodes: hasOwnProperty, Endpoints: metroRequire, FRIEND_SYNC_PLATFORM_TYPES: closure_7, AnalyticEvents: closure_8 } = Constants);
 let closure_9 = new LoggerDefault("ConnectedAccounts");
+const tmp3 = new LoggerDefault("ConnectedAccounts");
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/ConnectedAccountsActionCreators.tsx");
 
 export default {
-  fetch() {
-    const HTTP = HTTPUtils.HTTP;
-    value = HTTP.get({ url: timestampProducer.CONNECTIONS, oldFormErrors: true, rejectWithError: true });
-    return value.then((accounts) => DispatcherDefault.dispatch({ type: "USER_CONNECTIONS_UPDATE", local: true, accounts: accounts.body }), () => DispatcherDefault.dispatch({ type: "USER_CONNECTIONS_UPDATE", local: true, accounts: [] }));
-  },
+  fetch: fn(5565).fetchConnectedAccounts,
   authorize(arg0) {
     closure_0 = arg0;
     let obj = arg1;
@@ -80,14 +62,14 @@ export default {
       if (url == null) {
         platform_type = "";
       }
-      const state = platform_type(tmp2[7]).getCallbackParamsFromURL(platform_type).state;
+      state = platform_type(tmp2[7]).getCallbackParamsFromURL(platform_type).state;
       if (null != state) {
         const result1 = c4.addPendingAuthorizedState(state);
       }
       return closure_129_0;
     })();
   },
-  callback,
+  callback: fn(5566).postConnectionCallback,
   connect(arg0, arg1, name, location, friend_sync) {
     const request = { url: timestampProducer.CONNECTION(arg0, arg1), body: null, context: null, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     const obj2 = { name, friend_sync: null };
@@ -129,7 +111,12 @@ export default {
     return this.update(type, id, { friend_sync: enabled });
   },
   setShowActivity(type, id, show_activity) {
-    return this.update(type, id, { show_activity });
+    const platformType = type;
+    const showActivity = show_activity;
+    return this.update(type, id, { show_activity }).then((result) => {
+      DispatcherDefault.dispatch({ type: "USER_CONNECTION_UPDATE", platformType, id, showActivity });
+      return result;
+    });
   },
   update(arg0, arg1, body) {
     const request = { url: timestampProducer.CONNECTION(arg0, arg1), body, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
@@ -181,7 +168,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -210,8 +197,8 @@ export default {
             closure_128_1 = tmp30;
             if (closure_128_1.body.code === constants.CONNECTION_REVOKED) {
               const obj7 = { type: "USER_CONNECTION_UPDATE", platformType: closure_129_0, id: closure_129_1, revoked: true };
-              tmp3(tmp30[5]).dispatch(obj7);
-              const obj5 = tmp3(tmp30[5]);
+              tmp3(tmp30[11]).dispatch(obj7);
+              const obj5 = tmp3(tmp30[11]);
             }
             throw closure_128_1;
           } else if (arg0 === 1) {
@@ -225,7 +212,7 @@ export default {
           } else {
             access_token = value.body.access_token;
             const obj9 = { type: "USER_CONNECTION_UPDATE", platformType: closure_129_0, id: closure_129_1, accessToken: access_token };
-            tmp3(tmp30[5]).dispatch(obj9);
+            tmp3(tmp30[11]).dispatch(obj9);
             c3 = 0;
             constants = 3;
             const obj10 = { value: access_token, done: true };
@@ -267,7 +254,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -281,21 +268,23 @@ export default {
               const obj4 = { value, done: true };
               return obj4;
             } else {
-              let obj7 = null;
+              let tmp12 = closure_1;
               if (null != closure_1) {
-                const callbackParamsFromURL = v3(code[7]).getCallbackParamsFromURL(closure_1);
+                const callbackParamsFromURL = v3(code[7]).getCallbackParamsFromURL(tmp12);
                 const error = callbackParamsFromURL.error;
-                if (obj7 == error) {
+                if (tmp13 == error) {
                   const obj5 = { code, state, two_way_link_code: tmp10, token_redirect_uri };
                   c1 = 1;
                   v3 = 1;
-                  const obj6 = { value: callback(closure_0, obj5), done: false };
+                  const obj6 = { value: tmp7(code[8]).postConnectionCallback(closure_0, obj5), done: false };
                   return obj6;
                 } else {
-                  obj7 = { error, errorDescription: tmp11 };
+                  tmp12 = logger;
+                  const obj7 = { error, errorDescription: tmp11 };
                   logger.error("Two-way link: missing authorize code", obj7);
                 }
                 const obj3 = v3(code[7]);
+                tmp7 = v3;
               } else {
                 logger.error("Two-way link: missing authorize location");
               }
@@ -313,9 +302,9 @@ export default {
             const obj = { value, done: true };
             return obj;
           }
-        } catch (tmp20) {
+        } catch (tmp19) {
           v3 = tmp;
-          throw tmp20;
+          throw tmp19;
         }
       }
     })();

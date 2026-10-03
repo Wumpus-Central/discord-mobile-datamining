@@ -1,42 +1,101 @@
-// === Module 12939: useHandleClaim ===
+// === Module 12994: useHandleClaim ===
 
-// Module 12939 (useHandleClaim)
+// Module 12994 (useHandleClaim)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
 let require = fn;
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/useHandleClaim.tsx");
 
-export const useHandleClaim = function useHandleClaim(product) {
+export const useHandleClaim = ReactCompilerGating.isReactCompilerEnabled() ? ((product) => {
+  const cResult = require("c").c(5);
   product = product.product;
-  require = product;
+  _require = product;
   const stageCollectibleChangeForEditProfile = product.stageCollectibleChangeForEditProfile;
-  const obj = { handleClaim: null };
-  const items = [product, stageCollectibleChangeForEditProfile];
-  obj.handleClaim = noop.useCallback(asyncGeneratorStep(async () => {
-    await tmp3(tmp20[2]).claimPremiumCollectiblesProduct(product.skuId);
+  if (cResult[0] === product) {
+    if (cResult[1] === stageCollectibleChangeForEditProfile) {
+      let tmp2 = cResult[2];
+    }
+    if (cResult[3] !== tmp2) {
+      const obj2 = { handleClaim: tmp2 };
+      cResult[3] = tmp2;
+      cResult[4] = obj2;
+      let tmp3 = obj2;
+    } else {
+      tmp3 = cResult[4];
+    }
+    return tmp3;
+  }
+  _require = asyncGeneratorStep(async () => {
+    const product = tmp3;
+    await product(7052).claimPremiumCollectiblesProduct(product.skuId);
     if (1 === tmp7) {
       c3 = 0;
       const obj7 = { key: "collectible shop claim error", content: null };
-      const intl = tmp3(tmp20[6]).intl;
-      obj7.content = intl.string(tmp3(tmp20[6]).t.CKsXk3);
-      v2(tmp20[5]).open(obj7);
+      const intl = product(1126).intl;
+      obj7.content = intl.string(product(1126).t.CKsXk3);
+      stageCollectibleChangeForEditProfile(4568).open(obj7);
       c4 = 3;
-      v2(tmp20[5]);
+      stageCollectibleChangeForEditProfile(4568);
     } else if (arg0 === 1) {
       c4 = 3;
       throw value;
     } else if (arg0 !== 2) {
-      v2(tmp20[3]).hideAllActionSheets();
-      v2(tmp20[3]);
-      v2(tmp20[4]).open({ product: closure_128_0, useCategoryImage: true, stageCollectibleChangeForEditProfile: closure_128_1 });
-      v2(tmp20[4]);
-      const collectiblesPurchases = tmp3(tmp20[2]).fetchCollectiblesPurchases();
+      stageCollectibleChangeForEditProfile(4854).hideAllActionSheets();
+      stageCollectibleChangeForEditProfile(4854);
+      stageCollectibleChangeForEditProfile(10813).open({ product, useCategoryImage: true, stageCollectibleChangeForEditProfile });
+      stageCollectibleChangeForEditProfile(10813);
+      const collectiblesPurchases = product(7052).fetchCollectiblesPurchases();
       c3 = 0;
-      tmp3(tmp20[2]);
+      product(7052);
+    }
+    return value;
+  });
+  const fn = function() {
+    const self = this;
+    const apply = closure_0.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
+  };
+  cResult[0] = product;
+  cResult[1] = stageCollectibleChangeForEditProfile;
+  cResult[2] = fn;
+  tmp2 = fn;
+}) : ((product) => {
+  product = product.product;
+  const require = product;
+  const stageCollectibleChangeForEditProfile = product.stageCollectibleChangeForEditProfile;
+  const obj = { handleClaim: null };
+  const items = [product, stageCollectibleChangeForEditProfile];
+  obj.handleClaim = noop.useCallback(asyncGeneratorStep(async () => {
+    await tmp3(tmp20[4]).claimPremiumCollectiblesProduct(product.skuId);
+    if (1 === tmp7) {
+      c3 = 0;
+      const obj7 = { key: "collectible shop claim error", content: null };
+      const intl = tmp3(tmp20[8]).intl;
+      obj7.content = intl.string(tmp3(tmp20[8]).t.CKsXk3);
+      v2(tmp20[7]).open(obj7);
+      c4 = 3;
+      v2(tmp20[7]);
+    } else if (arg0 === 1) {
+      c4 = 3;
+      throw value;
+    } else if (arg0 !== 2) {
+      v2(tmp20[5]).hideAllActionSheets();
+      v2(tmp20[5]);
+      v2(tmp20[6]).open({ product: closure_128_0, useCategoryImage: true, stageCollectibleChangeForEditProfile: closure_128_1 });
+      v2(tmp20[6]);
+      const collectiblesPurchases = tmp3(tmp20[4]).fetchCollectiblesPurchases();
+      c3 = 0;
+      tmp3(tmp20[4]);
     }
     return value;
   }), items);
   return obj;
-};
+});

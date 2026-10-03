@@ -1,8 +1,8 @@
-// === Module 7971: ContentInventoryTypes ===
+// === Module 8017: ContentInventoryTypes ===
 
-// Module 7971 (ContentInventoryTypes)
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 7769 */;
-import PlatformType from "PlatformType" /* 7972 */;
+// Module 8017 (ContentInventoryTypes)
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 7813 */;
+import PlatformType from "PlatformType" /* 8018 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/content_inventory/ContentInventoryTypes.tsx");
@@ -14,10 +14,10 @@ export const isPlayedGameEntry = function isPlayedGameEntry(content_type) {
   }
   return content_type === ContentInventoryEntryType.ContentInventoryEntryType.PLAYED_GAME;
 };
-export const isTopGameEntry = function isTopGameEntry(entry) {
+export const isTopGameEntry = function isTopGameEntry(badgeCell) {
   let content_type;
-  if (entry != null) {
-    content_type = entry.content_type;
+  if (badgeCell != null) {
+    content_type = badgeCell.content_type;
   }
   return content_type === ContentInventoryEntryType.ContentInventoryEntryType.TOP_GAME;
 };
@@ -51,17 +51,17 @@ export const isApplicationEntry = function isApplicationEntry(extra) {
   }
   return tmp2;
 };
-export const isListenedSessionEntry = function isListenedSessionEntry(entry) {
+export const isListenedSessionEntry = function isListenedSessionEntry(length) {
   let content_type;
-  if (entry != null) {
-    content_type = entry.content_type;
+  if (length != null) {
+    content_type = length.content_type;
   }
   return content_type === ContentInventoryEntryType.ContentInventoryEntryType.LISTENED_SESSION;
 };
-export const isTopArtistEntry = function isTopArtistEntry(entry) {
-  let content_type;
-  if (entry != null) {
-    content_type = entry.content_type;
+export const isTopArtistEntry = function isTopArtistEntry(content_type) {
+  content_type = undefined;
+  if (content_type != null) {
+    content_type = content_type.content_type;
   }
   return content_type === ContentInventoryEntryType.ContentInventoryEntryType.TOP_ARTIST;
 };
@@ -163,10 +163,10 @@ export const isConsoleEntry = function isConsoleEntry(content_type) {
   }
   return tmp6;
 };
-export const isLaunchedActivityEntry = function isLaunchedActivityEntry(entry) {
-  let content_type;
-  if (entry != null) {
-    content_type = entry.content_type;
+export const isLaunchedActivityEntry = function isLaunchedActivityEntry(content_type) {
+  content_type = undefined;
+  if (content_type != null) {
+    content_type = content_type.content_type;
   }
   return content_type === ContentInventoryEntryType.ContentInventoryEntryType.LAUNCHED_ACTIVITY;
 };

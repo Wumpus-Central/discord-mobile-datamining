@@ -1,14 +1,14 @@
-// === Module 17663: GuildSettingsModalRolesStore ===
+// === Module 17751: GuildSettingsModalRolesStore ===
 
-// Module 17663 (GuildSettingsModalRolesStore)
+// Module 17751 (GuildSettingsModalRolesStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
-import util from "util" /* 1115 */;
-import shared from "shared" /* 4714 */;
-import DragAndDropUtilsDefault from "DragAndDropUtils" /* 10661 */;
-import GuildRoleStore from "GuildRoleStore" /* 2101 */;
-import GuildStore from "GuildStore" /* 2066 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
+import util from "util" /* 1126 */;
+import shared from "shared" /* 4729 */;
+import DragAndDropUtilsDefault from "DragAndDropUtils" /* 10735 */;
+import GuildRoleStore from "GuildRoleStore" /* 2106 */;
+import GuildStore from "GuildStore" /* 2074 */;
 
 require = fn;
 function handleGuildRoleCreateOrUpdate(arg0) {
@@ -17,7 +17,7 @@ function handleGuildRoleCreateOrUpdate(arg0) {
     c9 = sortedRoles.map((id) => id.id);
   }
 }
-const FormStates = fn(1074).FormStates;
+const FormStates = fn(1085).FormStates;
 let OPEN = FormStates.CLOSED;
 let c8 = false;
 let c9 = null;
@@ -97,7 +97,7 @@ const guildSettingsModalRolesStore = new GuildSettingsModalRolesStore(Dispatcher
     c8 = true;
     const sortedRoles = GuildRoleStore.getSortedRoles(guildId);
     c9 = sortedRoles.map((id) => id.id);
-    const guild = GuildStore.getGuild(guildId);
+    guild = GuildStore.getGuild(guildId);
     clearTimeout(closure_15);
   },
   GUILD_SETTINGS_MODAL_ROLES_STOP_REORDER: function handleStopReorder() {
@@ -141,7 +141,7 @@ const guildSettingsModalRolesStore = new GuildSettingsModalRolesStore(Dispatcher
     }
   },
   GUILD_SETTINGS_MODAL_ROLES_PERMISSIONS_START_EDITING: function handleStartEditingPermissions(guildId) {
-    const guild = GuildStore.getGuild(guildId.guildId);
+    guild = GuildStore.getGuild(guildId.guildId);
     _null2 = guild;
     let role;
     if (null != guild) {

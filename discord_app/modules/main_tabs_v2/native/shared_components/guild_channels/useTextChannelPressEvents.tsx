@@ -1,30 +1,84 @@
-// === Module 17058: useTextChannelPressEvents ===
+// === Module 17381: useTextChannelPressEvents ===
 
-// Module 17058 (useTextChannelPressEvents)
-import transitionToChannel from "transitionToChannel" /* 4856 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4858 */;
-import showLongPressForumPostActionSheetDefault from "showLongPressForumPostActionSheet" /* 9874 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10569 */;
-import showThreadLongPressActionSheetDefault from "showThreadLongPressActionSheet" /* 15962 */;
+// Module 17381 (useTextChannelPressEvents)
+import transitionToChannel from "transitionToChannel" /* 4901 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4903 */;
+import showLongPressForumPostActionSheetDefault from "showLongPressForumPostActionSheet" /* 10032 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10651 */;
+import showThreadLongPressActionSheetDefault from "showThreadLongPressActionSheet" /* 16036 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+
+const require = globalThis.__r;
 
 require = fn;
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/useTextChannelPressEvents.tsx");
 
-export const useTextChannelPressEvents = function useTextChannelPressEvents(channel, flag2) {
-  const user = channel;
-  const navigationReplace = flag2;
+export const useTextChannelPressEvents = ReactCompilerGating.isReactCompilerEnabled() ? ((guild_id, navigationReplace) => {
+  _require = guild_id;
+  const cResult = require("c").c(9);
+  if (cResult[0] === guild_id.guild_id) {
+    if (cResult[1] === guild_id.id) {
+      if (cResult[2] === navigationReplace) {
+        let tmp2 = cResult[3];
+      }
+      if (cResult[4] !== guild_id) {
+        const fn2 = function u() {
+          const channel = ChannelStore.getChannel(guild_id.parent_id);
+          if (null != channel) {
+            if (channel.isForumLikeChannel()) {
+              if (guild_id.isForumPost()) {
+                showLongPressForumPostActionSheetDefault(guild_id, channel);
+              }
+            }
+          }
+          if (guild_id.isThread()) {
+            showThreadLongPressActionSheetDefault(guild_id.id);
+          } else {
+            const result = openChannelLongPressActionSheet.openChannelLongPressActionSheet(guild_id.id);
+          }
+        };
+        cResult[4] = guild_id;
+        cResult[5] = fn2;
+        let tmp3 = fn2;
+      } else {
+        tmp3 = cResult[5];
+      }
+      if (cResult[6] === tmp3) {
+        if (cResult[7] === tmp2) {
+          let tmp4 = cResult[8];
+        }
+        return tmp4;
+      }
+      const obj2 = { onPress: tmp2, onLongPress: tmp3, unstable_pressDelay: 32 };
+      cResult[6] = tmp3;
+      cResult[7] = tmp2;
+      cResult[8] = obj2;
+      tmp4 = obj2;
+    }
+  }
+  const fn = function t() {
+    ChannelActionCreatorsDefault.preload(guild_id.guild_id, guild_id.id);
+    transitionToChannel.transitionToChannel(guild_id.id, { navigationReplace });
+  };
+  cResult[0] = guild_id.guild_id;
+  cResult[1] = guild_id.id;
+  cResult[2] = navigationReplace;
+  cResult[3] = fn;
+  tmp2 = fn;
+}) : ((arg0, navigationReplace) => {
+  const user = arg0;
   let obj = { onPress: null, onLongPress: null, unstable_pressDelay: 32 };
   const items = [, , ];
-  ({ id: arr[0], guild_id: arr[1] } = channel);
-  items[2] = flag2;
+  ({ id: arr[0], guild_id: arr[1] } = arg0);
+  items[2] = navigationReplace;
   obj.onPress = noop.useCallback(() => {
     ChannelActionCreatorsDefault.preload(user.guild_id, user.id);
     transitionToChannel.transitionToChannel(user.id, { navigationReplace });
   }, items);
-  const items1 = [channel];
+  const items1 = [arg0];
   obj.onLongPress = noop.useCallback(() => {
     const channel = ChannelStore.getChannel(user.parent_id);
     if (null != channel) {
@@ -41,4 +95,4 @@ export const useTextChannelPressEvents = function useTextChannelPressEvents(chan
     }
   }, items1);
   return obj;
-};
+});

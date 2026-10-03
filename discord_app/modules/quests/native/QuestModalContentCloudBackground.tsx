@@ -1,10 +1,11 @@
-// === Module 14870: QuestModalContentCloudBackground ===
+// === Module 14927: QuestModalContentCloudBackground ===
 
-// Module 14870 (QuestModalContentCloudBackground)
-import themes from "themes" /* 4567 */;
-import useTheme from "useTheme" /* 4776 */;
-import LinearGradientDefault from "LinearGradient" /* 5477 */;
-import FastImageDefault from "FastImage" /* 6085 */;
+// Module 14927 (QuestModalContentCloudBackground)
+import c from "c" /* 576 */;
+import themes from "themes" /* 4587 */;
+import useTheme from "useTheme" /* 4791 */;
+import LinearGradientDefault from "LinearGradient" /* 5605 */;
+import FastImageDefault from "FastImage" /* 5974 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let closure_7 = createStyles.createStyles((arg0) => {
   const obj = {};
   const merged = Object.assign(absoluteFillObject.absoluteFillObject);
@@ -50,10 +51,106 @@ let closure_7 = createStyles.createStyles((arg0) => {
 let items = ["#292252FF", "#1E1F2200"];
 const substr = items.slice();
 let closure_9 = substr.reverse();
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestModalContentCloudBackground.tsx");
 
-export default function QuestModalContentCloudBackground(align) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(21);
+  ({ align, style, imgStyle, resizeMode } = arg0);
+  solidBackground = "bottom";
+  if (undefined !== align) {
+    solidBackground = align;
+  }
+  let str = "cover";
+  if (undefined !== resizeMode) {
+    str = resizeMode;
+  }
+  const tmp4 = closure_7("bottom" === solidBackground);
+  const theme = useTheme.useTheme();
+  if (cResult[0] !== theme) {
+    const isThemeDarkResult = themes.isThemeDark(theme);
+    cResult[0] = theme;
+    cResult[1] = isThemeDarkResult;
+    let tmp6 = isThemeDarkResult;
+    const tmpResult2 = themes;
+  } else {
+    tmp6 = cResult[1];
+  }
+  if (cResult[2] === style) {
+    if (cResult[3] === tmp4.wrapper) {
+      let tmp8 = cResult[4];
+    }
+    if (cResult[5] === solidBackground) {
+      if (cResult[6] === tmp6) {
+        if (cResult[7] === tmp4.gradient) {
+          if (cResult[8] === tmp4.solidBackground) {
+            const tmp16 = tmp6 ? tmp4.cloudsImage : tmp4.cloudsImageLight;
+            if (cResult[10] === imgStyle) {
+              if (cResult[11] === tmp16) {
+                let tmp17 = cResult[12];
+              }
+              const tmp18Result = importDefault(tmp6 ? 14928 : 14929);
+              if (cResult[13] === str) {
+                if (cResult[14] === tmp17) {
+                  if (cResult[15] === tmp18Result) {
+                    let tmp20 = cResult[16];
+                  }
+                  if (cResult[17] === tmp8) {
+                    if (cResult[18] === tmp9) {
+                      if (cResult[19] === tmp20) {
+                        let tmp23 = cResult[20];
+                      }
+                      return tmp23;
+                    }
+                  }
+                  const obj2 = { style: tmp8, children: null };
+                  items = [tmp9, tmp20];
+                  obj2.children = items;
+                  const tmp26 = timestampProducer(React3, obj2);
+                  cResult[17] = tmp8;
+                  cResult[18] = tmp9;
+                  cResult[19] = tmp20;
+                  cResult[20] = tmp26;
+                  tmp23 = tmp26;
+                }
+              }
+              const obj3 = { style: tmp17, source: tmp18Result, resizeMode: str };
+              const tmp22 = hasOwnProperty(FastImageDefault, obj3);
+              cResult[13] = str;
+              cResult[14] = tmp17;
+              cResult[15] = tmp18Result;
+              cResult[16] = tmp22;
+              tmp20 = tmp22;
+            }
+            const items1 = [tmp16, imgStyle];
+            cResult[10] = imgStyle;
+            cResult[11] = tmp16;
+            cResult[12] = items1;
+            tmp17 = items1;
+          }
+        }
+      }
+    }
+    if (!tmp6) {
+      const obj4 = { style: tmp4.solidBackground };
+      const tmp10Result = hasOwnProperty(React3, obj4);
+      cResult[5] = solidBackground;
+      cResult[6] = tmp6;
+      ({ gradient: tmp3[7], solidBackground } = tmp4);
+      cResult[8] = solidBackground;
+      cResult[9] = tmp10Result;
+    }
+    const obj5 = { colors: "top" === solidBackground ? items : closure_9, style: tmp4.gradient };
+    hasOwnProperty(LinearGradientDefault, obj5);
+  }
+  const items2 = [tmp4.wrapper, style];
+  cResult[2] = style;
+  cResult[3] = tmp4.wrapper;
+  cResult[4] = items2;
+  tmp8 = items2;
+  const tmpResult = useTheme;
+}) : ((align) => {
   align = align.align;
   let str = "bottom";
   if (undefined !== align) {
@@ -80,10 +177,10 @@ export default function QuestModalContentCloudBackground(align) {
     const obj6 = { style: null, source: null, resizeMode: null };
     const items2 = [isThemeDarkResult ? tmp.cloudsImage : tmp.cloudsImageLight, imgStyle];
     obj6.style = items2;
-    obj6.source = importDefault(isThemeDarkResult ? 14871 : 14872);
+    obj6.source = importDefault(isThemeDarkResult ? 14928 : 14929);
     obj6.resizeMode = str2;
     items1[1] = hasOwnProperty(FastImageDefault, obj6);
     obj3.children = items1;
     return tmp4(React3, obj3);
   }
-};
+});

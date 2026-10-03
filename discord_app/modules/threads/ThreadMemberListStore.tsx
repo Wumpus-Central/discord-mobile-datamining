@@ -1,19 +1,19 @@
-// === Module 9487: ThreadMemberListStore ===
+// === Module 9498: ThreadMemberListStore ===
 
-// Module 9487 (ThreadMemberListStore)
+// Module 9498 (ThreadMemberListStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import GlobalUtils from "GlobalUtils" /* 1370 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4503 */;
-import UserUtilsDefault from "UserUtils" /* 4707 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import GlobalUtils from "GlobalUtils" /* 1375 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4514 */;
+import UserUtilsDefault from "UserUtils" /* 4722 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildMemberStore from "GuildMemberStore" /* 2107 */;
-import GuildSubscriptionsStore from "GuildSubscriptionsStore" /* 6883 */;
-import PresenceStore from "PresenceStore" /* 4885 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5777 */;
-import UserStore from "UserStore" /* 1372 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import GuildMemberStore from "GuildMemberStore" /* 2112 */;
+import GuildSubscriptionsStore from "GuildSubscriptionsStore" /* 6781 */;
+import PresenceStore from "PresenceStore" /* 4930 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5438 */;
+import UserStore from "UserStore" /* 1377 */;
 
 require = fn;
 function handleUserUpdate(user) {
@@ -60,7 +60,7 @@ function handleGuildRoleUpdateOrDelete(arg0) {
   }
   return flag2;
 }
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ StatusTypes: closure_11, Permissions: closure_12 } = Constants);
 const dependencyMap = {};
 class MemberList {

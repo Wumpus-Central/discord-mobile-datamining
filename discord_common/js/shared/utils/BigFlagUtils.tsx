@@ -1,6 +1,6 @@
-// === Module 1086: BigFlagUtils ===
+// === Module 1097: BigFlagUtils ===
 
-// Module 1086 (BigFlagUtils)
+// Module 1097 (BigFlagUtils)
 import IntegerDefault from "Integer" /* 14 */;
 import _slicedToArray from "module_32" /* 32 */;
 
@@ -381,8 +381,8 @@ export const combine = function combine() {
   }
   return tmp2;
 };
-export const has = function has(deny, VIEW_CHANNEL) {
-  return closure_9(closure_6(deny, VIEW_CHANNEL), VIEW_CHANNEL);
+export const has = function has(permissions, VIEW_CHANNEL) {
+  return closure_9(closure_6(permissions, VIEW_CHANNEL), VIEW_CHANNEL);
 };
 export const hasAny = function hasAny(permissions, RESTRICTED_TO_ADULT) {
   return !closure_9(closure_6(permissions, RESTRICTED_TO_ADULT), closure_5);

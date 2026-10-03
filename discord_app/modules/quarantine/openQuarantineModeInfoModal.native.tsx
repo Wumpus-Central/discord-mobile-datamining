@@ -1,8 +1,8 @@
-// === Module 6020: openQuarantineModeInfoModal ===
+// === Module 5913: openQuarantineModeInfoModal ===
 
-// Module 6020 (openQuarantineModeInfoModal)
-import ChatInputUtils from "ChatInputUtils" /* 4730 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5388 */;
+// Module 5913 (openQuarantineModeInfoModal)
+import ChatInputUtils from "ChatInputUtils" /* 4745 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5708 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

@@ -1,8 +1,8 @@
-// === Module 17701: GuildConfigGatesStore ===
+// === Module 17787: GuildConfigGatesStore ===
 
-// Module 17701 (GuildConfigGatesStore)
+// Module 17787 (GuildConfigGatesStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
 
 const dependencyMap = {};
 const Store = initializeDefault.Store;

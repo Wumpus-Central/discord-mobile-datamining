@@ -1,7 +1,7 @@
-// === Module 7369: DraftActionCreators ===
+// === Module 7405: DraftActionCreators ===
 
-// Module 7369 (DraftActionCreators)
-import DispatcherDefault from "Dispatcher" /* 573 */;
+// Module 7405 (DraftActionCreators)
+import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("actions/DraftActionCreators.tsx");

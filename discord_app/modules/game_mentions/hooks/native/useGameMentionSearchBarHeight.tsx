@@ -1,16 +1,19 @@
-// === Module 12095: useGameMentionSearchBarHeight ===
+// === Module 12031: useGameMentionSearchBarHeight ===
 
-// Module 12095 (useGameMentionSearchBarHeight)
+// Module 12031 (useGameMentionSearchBarHeight)
 import _mod17 from "module_17" /* 17 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 9771 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10723 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const StyleSheet = _mod17.StyleSheet;
 let c3 = "text-sm/semibold";
 let c4 = "text-sm/medium";
-const result = size.fileFinishedImporting("modules/game_mentions/hooks/native/useGameMentionSearchBarHeight.tsx");
+let ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
+const result1 = size.fileFinishedImporting("modules/game_mentions/hooks/native/useGameMentionSearchBarHeight.tsx");
 
-export default function useGameMentionSearchBarHeight() {
+export default () => {
   const sum = 24 + useScaledTextLineHeight.useScaledTextLineHeight(c3);
   return sum + useScaledTextLineHeight.useScaledTextLineHeight(c4) + 12 + StyleSheet.hairlineWidth;
 };

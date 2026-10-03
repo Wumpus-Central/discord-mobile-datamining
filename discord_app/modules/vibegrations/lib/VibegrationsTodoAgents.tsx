@@ -1,7 +1,7 @@
-// === Module 16608: VibegrationsTodoAgents ===
+// === Module 16688: VibegrationsTodoAgents ===
 
-// Module 16608 (VibegrationsTodoAgents)
-import VibegrationsTimelineTree from "VibegrationsTimelineTree" /* 16581 */;
+// Module 16688 (VibegrationsTodoAgents)
+import VibegrationsTimelineTree from "VibegrationsTimelineTree" /* 16661 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsTodoAgents.tsx");
@@ -30,9 +30,9 @@ export const runningTodoAgents = function runningTodoAgents(tasks) {
   }
   return items;
 };
-export const groupAgentsByTodo = function groupAgentsByTodo(items) {
+export const groupAgentsByTodo = function groupAgentsByTodo(cResult) {
   const map = new Map();
-  const iter = items[Symbol.iterator]();
+  const iter = cResult[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp2 = nextResult;
@@ -43,7 +43,7 @@ export const groupAgentsByTodo = function groupAgentsByTodo(items) {
         if (null != value) {
           let arr2 = arr.push(tmp2);
         } else {
-          items = [tmp2];
+          let items = [tmp2];
           let result = map.set(tmp2.todoId, items);
         }
       }

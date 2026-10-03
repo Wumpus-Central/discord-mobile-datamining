@@ -1,8 +1,8 @@
-// === Module 4535: core/CodeSplittingUtils ===
+// === Module 4546: core/CodeSplittingUtils ===
 
-// Module 4535 (core/CodeSplittingUtils)
-import NetworkUtilsDefault from "NetworkUtils" /* 1463 */;
-import CodeSplittingUtils from "CodeSplittingUtils" /* 4536 */;
+// Module 4546 (core/CodeSplittingUtils)
+import NetworkUtilsDefault from "NetworkUtils" /* 1468 */;
+import CodeSplittingUtils from "CodeSplittingUtils" /* 4547 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

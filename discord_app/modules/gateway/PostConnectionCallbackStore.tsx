@@ -1,9 +1,9 @@
-// === Module 6055: PostConnectionCallbackStore ===
+// === Module 5948: PostConnectionCallbackStore ===
 
-// Module 6055 (PostConnectionCallbackStore)
-import NewUserStore from "NewUserStore" /* 6056 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5775 */;
-import Dispatcher_mod from "Dispatcher" /* 573 */;
+// Module 5948 (PostConnectionCallbackStore)
+import NewUserStore from "NewUserStore" /* 5949 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5436 */;
+import Dispatcher_mod from "Dispatcher" /* 584 */;
 
 function processCallbacks() {
   if (null == NewUserStore.getType()) {

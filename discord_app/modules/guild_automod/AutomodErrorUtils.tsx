@@ -1,8 +1,8 @@
-// === Module 7554: AutomodErrorUtils ===
+// === Module 7598: AutomodErrorUtils ===
 
-// Module 7554 (AutomodErrorUtils)
-import util from "util" /* 1115 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
+// Module 7598 (AutomodErrorUtils)
+import util from "util" /* 1126 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
 
 require = fn;
 function getAutomodErrorMessageFromErrorResponse(errorResponseBody, id) {
@@ -82,7 +82,7 @@ function getAutomodErrorMessageFromMessageData(message) {
   }
   return stringResult;
 }
-const AbortCodes = fn(1074).AbortCodes;
+const AbortCodes = fn(1085).AbortCodes;
 class InvalidKeywordError extends Error {
 }
 const prototype = function InvalidRegexPatternError() {

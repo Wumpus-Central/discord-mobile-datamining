@@ -1,6 +1,6 @@
-// === Module 5678: DetectedFileSize ===
+// === Module 7311: DetectedFileSize ===
 
-// Module 5678 (DetectedFileSize)
+// Module 7311 (DetectedFileSize)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 let closure_1 = async function _getDetectedFileSize(arg0) {
@@ -14,7 +14,7 @@ let closure_1 = async function _getDetectedFileSize(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {

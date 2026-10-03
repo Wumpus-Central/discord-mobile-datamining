@@ -1,9 +1,10 @@
-// === Module 8060: AgeVerificationAuthSession ===
+// === Module 8101: AgeVerificationAuthSession ===
 
-// Module 8060 (AgeVerificationAuthSession)
+// Module 8101 (AgeVerificationAuthSession)
 import LoggerDefault from "Logger" /* 3 */;
-import PlatformUtils from "PlatformUtils" /* 1364 */;
-import NativeBrowserManagerModuleIOSDefault from "NativeBrowserManagerModuleIOS" /* 4808 */;
+import c from "c" /* 576 */;
+import PlatformUtils from "PlatformUtils" /* 1369 */;
+import NativeBrowserManagerModuleIOSDefault from "NativeBrowserManagerModuleIOS" /* 4853 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -33,7 +34,7 @@ let closure_10 = async function _openAgeVerificationAuthSession(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -108,10 +109,15 @@ let closure_10 = async function _openAgeVerificationAuthSession(arg0) {
   }
 };
 let closure_4 = new LoggerDefault("AgeVerificationAuthSession");
-const module_560 = fn(560);
-let closure_5 = module_560.create(() => ({ isOpen: false }));
+const module_570 = fn(570);
+let closure_5 = module_570.create(() => ({ isOpen: false }));
 let c6 = false;
 let c7 = null;
+const ReactCompilerGating = fn(558);
+const tmp2 = new LoggerDefault("AgeVerificationAuthSession");
+function getIsAgeVerificationAuthSessionOpen() {
+  return closure_5.getState().isOpen;
+}
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/native/AgeVerificationAuthSession.tsx");
 
@@ -140,9 +146,17 @@ export const closeAgeVerificationAuthSession = function closeAgeVerificationAuth
 export function getIsAgeVerificationAuthSessionAwaitingResult() {
   return c6;
 }
-export const useIsAgeVerificationAuthSessionOpen = function useIsAgeVerificationAuthSessionOpen() {
-  return closure_5((isOpen) => isOpen.isOpen);
-};
-export const getIsAgeVerificationAuthSessionOpen = function getIsAgeVerificationAuthSessionOpen() {
-  return closure_5.getState().isOpen;
-};
+export const useIsAgeVerificationAuthSessionOpen = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(1);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const fn = function n(isOpen) {
+      return isOpen.isOpen;
+    };
+    cResult[0] = fn;
+    let first = fn;
+  } else {
+    first = cResult[0];
+  }
+  return closure_5(first);
+}) : (() => closure_5((isOpen) => isOpen.isOpen));
+export { getIsAgeVerificationAuthSessionOpen };

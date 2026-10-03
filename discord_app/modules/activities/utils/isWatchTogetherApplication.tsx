@@ -1,7 +1,7 @@
-// === Module 9061: isWatchTogetherApplication ===
+// === Module 9088: isWatchTogetherApplication ===
 
-// Module 9061 (isWatchTogetherApplication)
-import Constants from "Constants" /* 2005 */;
+// Module 9088 (isWatchTogetherApplication)
+import Constants from "Constants" /* 2011 */;
 import size from "module_2" /* 2 */;
 
 ({ WATCH_YOUTUBE_DEV_APP_ID: closure_0, WATCH_YOUTUBE_PROD_APP_ID: closure_1, WATCH_YOUTUBE_QA_APP_ID: c2 } = Constants);

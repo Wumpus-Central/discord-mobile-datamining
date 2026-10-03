@@ -1,15 +1,27 @@
-// === Module 16194: GuildMediaStateStoreExperiment ===
+// === Module 16269: GuildMediaStateStoreExperiment ===
 
-// Module 16194 (GuildMediaStateStoreExperiment)
-import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1436 */;
+// Module 16269 (GuildMediaStateStoreExperiment)
+import c from "c" /* 576 */;
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1441 */;
 
+require = fn;
 const obj = { HOOK: "hook", STORE: "store", SHADOW: "shadow" };
-const obj2 = { kind: "user", name: "2026-08-guilds-bar-media-state-store", defaultConfig: { source: obj.HOOK }, variations: { 0: { source: obj.HOOK }, 1: { source: obj.STORE }, 2: { source: obj.SHADOW } } };
-let closure_0 = apex_ApexExperimentDefault(obj2);
+let obj2 = { kind: "user", name: "2026-08-guilds-bar-media-state-store", defaultConfig: { source: obj.HOOK }, variations: { 0: { source: obj.HOOK }, 1: { source: obj.STORE }, 2: { source: obj.SHADOW } } };
+let closure_2 = apex_ApexExperimentDefault(obj2);
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/GuildMediaStateStoreExperiment.tsx");
 
 export const GuildMediaStateSource = obj;
-export const useGuildMediaStateSource = function useGuildMediaStateSource(GuildsBarGuild) {
-  return closure_0.useConfig({ location: GuildsBarGuild }).source;
-};
+export const useGuildMediaStateSource = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+  const cResult = c.c(2);
+  if (cResult[0] !== location) {
+    const obj2 = { location };
+    cResult[0] = location;
+    cResult[1] = obj2;
+    let tmp2 = obj2;
+  } else {
+    tmp2 = cResult[1];
+  }
+  return closure_2.useConfig(tmp2).source;
+}) : ((location) => closure_2.useConfig({ location }).source);

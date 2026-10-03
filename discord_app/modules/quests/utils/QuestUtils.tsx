@@ -1,17 +1,17 @@
-// === Module 7308: utils/QuestUtils ===
+// === Module 7206: utils/QuestUtils ===
 
-// Module 7308 (utils/QuestUtils)
-import QuestTaskUtils from "QuestTaskUtils" /* 7310 */;
-import QuestSharePolicy from "QuestSharePolicy" /* 7311 */;
-import StreamPermissionUtils from "StreamPermissionUtils" /* 7312 */;
-import QuestType2 from "QuestType" /* 7313 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7314 */;
+// Module 7206 (utils/QuestUtils)
+import QuestTaskUtils from "QuestTaskUtils" /* 7208 */;
+import QuestSharePolicy from "QuestSharePolicy" /* 7209 */;
+import StreamPermissionUtils from "StreamPermissionUtils" /* 7210 */;
+import QuestType2 from "QuestType" /* 7211 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7212 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GameConsoleStore from "GameConsoleStore" /* 4862 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import PermissionStore from "PermissionStore" /* 4498 */;
-import VoiceStateStore from "VoiceStateStore" /* 4864 */;
-import QuestUtmStore from "QuestUtmStore" /* 7309 */;
+import GameConsoleStore from "GameConsoleStore" /* 4907 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import PermissionStore from "PermissionStore" /* 4509 */;
+import VoiceStateStore from "VoiceStateStore" /* 4909 */;
+import QuestUtmStore from "QuestUtmStore" /* 7207 */;
 
 require = fn;
 function isSponsoredPlayQuest(quest) {
@@ -29,14 +29,14 @@ function isSponsoredPlayQuest(quest) {
 function hasVariant(nextResult, MOBILE_ACTIVITY_QUEST) {
   return new Set(nextResult.config.features).has(MOBILE_ACTIVITY_QUEST);
 }
-const QuestConstants = fn(5942);
+const QuestConstants = fn(5623);
 ({ DISCORD_APPLICATION_ID: closure_8, QuestVariants: closure_9, RewardFilterTypes: c10 } = QuestConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/utils/QuestUtils.tsx");
 
 export { isSponsoredPlayQuest };
 export const isPlayAnyActivityQuest = function isPlayAnyActivityQuest(quest) {
-  return QuestTaskUtils.getPlayActivityApplicationId(quest) === React6;
+  return QuestTaskUtils.getPlayActivityApplicationId(quest) === closure_1_8;
 };
 export { hasVariant };
 export const canLaunchActivity = function canLaunchActivity(quest) {
@@ -120,7 +120,7 @@ export const shouldShowBountiesGivenFilters = function shouldShowBountiesGivenFi
 };
 export const setQuestHomeUtmContext = function setQuestHomeUtmContext(arg0) {
   ({ questId, fromContent, utmSource, utmMedium } = arg0);
-  const state = QuestUtmStore.getState();
+  state = QuestUtmStore.getState();
   const obj = { utmSourceCurrent: utmSource, utmMediumCurrent: utmMedium, utmCampaignCurrent: questId, utmContentCurrent: AnalyticsTypes.getQuestContentName(fromContent) };
   state.setUtmCurrentContext(obj);
 };

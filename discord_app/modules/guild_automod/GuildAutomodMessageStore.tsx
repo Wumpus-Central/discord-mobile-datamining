@@ -1,15 +1,15 @@
-// === Module 7553: GuildAutomodMessageStore ===
+// === Module 7597: GuildAutomodMessageStore ===
 
-// Module 7553 (GuildAutomodMessageStore)
+// Module 7597 (GuildAutomodMessageStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5067 */;
-import AutomodMessageUtils from "AutomodMessageUtils" /* 7116 */;
-import MessageQueue from "MessageQueue" /* 7426 */;
-import AutomodErrorUtils from "AutomodErrorUtils" /* 7554 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import MessageStore from "MessageStore" /* 5065 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5112 */;
+import AutomodMessageUtils from "AutomodMessageUtils" /* 7017 */;
+import MessageQueue from "MessageQueue" /* 7462 */;
+import AutomodErrorUtils from "AutomodErrorUtils" /* 7598 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import MessageStore from "MessageStore" /* 5110 */;
 
 require = fn;
 function handleMessageSendFailedAutomod(messageData) {
@@ -62,7 +62,7 @@ function handleLoadMessages(messages) {
     return flag;
   }
 }
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AbortCodes: hasOwnProperty, MessageEmbedTypes: metroRequire, MessageTypes: closure_7 } = Constants);
 const automodFailedMessages = {};
 let closure_9 = 0;
@@ -150,7 +150,7 @@ const guildAutomodMessageStore = new GuildAutomodMessageStore(DispatcherDefault,
     message = message.message;
     let flag = null != message;
     if (flag) {
-      const obj = { id: message.id, messageData: "flex", isBlockedEdit: null, errorMessage: tmp };
+      const obj = { id: message.id, messageData: "Reflect", isBlockedEdit: null, errorMessage: tmp };
       closure_8[message.id] = obj;
       closure_9 = closure_9 + 1;
       flag = true;

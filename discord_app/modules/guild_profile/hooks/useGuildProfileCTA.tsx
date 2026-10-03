@@ -1,29 +1,420 @@
-// === Module 9417: useGuildProfileCTA ===
+// === Module 9414: useGuildProfileCTA ===
 
-// Module 9417 (useGuildProfileCTA)
-import FlagUtils from "FlagUtils" /* 1385 */;
-import GuildTagUtils from "GuildTagUtils" /* 7792 */;
-import GuildInviteFlags from "GuildInviteFlags" /* 8024 */;
-import usePendingFolderGuildIds from "usePendingFolderGuildIds" /* 9418 */;
+// Module 9414 (useGuildProfileCTA)
+import FlagUtils from "FlagUtils" /* 1390 */;
+import GuildTagUtils from "GuildTagUtils" /* 7836 */;
+import GuildInviteFlags from "GuildInviteFlags" /* 8068 */;
+import usePendingFolderGuildIds from "usePendingFolderGuildIds" /* 9415 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 2107 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import InviteStore from "InviteStore" /* 4826 */;
-import UserStore from "UserStore" /* 1372 */;
+import GuildMemberStore from "GuildMemberStore" /* 2112 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import InviteStore from "InviteStore" /* 4871 */;
+import UserStore from "UserStore" /* 1377 */;
 
 const require = globalThis.__r;
 const usePendingFolderGuildIdsDefault = usePendingFolderGuildIds;
 
 require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ InviteStates: closure_9, GuildFeatures: c10 } = Constants);
 const CTATypes = { IS_MEMBER: 0, [0]: "IS_MEMBER", ADOPT_TAG: 1, [1]: "ADOPT_TAG", HAS_APPLICATION: 2, [2]: "HAS_APPLICATION", APPLY_TO_JOIN: 3, [3]: "APPLY_TO_JOIN", LURK_DISCOVERABLE: 4, [4]: "LURK_DISCOVERABLE", JOIN_VIA_INVITE: 5, [5]: "JOIN_VIA_INVITE", ACCEPT_ROLES: 6, [6]: "ACCEPT_ROLES" };
 let obj2 = { INVITE: "INVITE" };
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_profile/hooks/useGuildProfileCTA.tsx");
 
-export default function useGuildProfileCTA(id, arg1, arg2) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1, arg2) => {
+  _require = arg2;
+  let obj = require("c");
+  const cResult = obj.c(23);
+  id = id.id;
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [AuthenticationStore];
+    class P {
+      constructor() {
+        return closure_1_4.getId();
+      }
+    }
+    cResult[0] = items;
+    cResult[1] = P;
+    tmp4 = items;
+  } else {
+    [tmp4, tmp5] = cResult;
+  }
+  stateFromStores = require("initialize").useStateFromStores(tmp4, P);
+  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+    const items1 = [GuildStore];
+    class P {
+      constructor() {
+        return closure_1_4.getId();
+      }
+    }
+    cResult[2] = items1;
+    let tmp8 = items1;
+  } else {
+    tmp8 = cResult[2];
+  }
+  if (cResult[3] !== id) {
+    class L {
+      constructor() {
+        return closure_6.getGuild(id);
+      }
+    }
+    cResult[3] = id;
+    class P {
+      constructor() {
+        return closure_1_4.getId();
+      }
+    }
+    cResult[4] = L;
+  } else {
+    class L {
+      constructor() {
+        return closure_6.getGuild(id);
+      }
+    }
+  }
+  const tmpResult = require("initialize");
+  const stateFromStores1 = require("initialize").useStateFromStores(tmp8, L);
+  if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
+    class L {
+      constructor() {
+        return closure_6.getGuild(id);
+      }
+    }
+    const items2 = [UserStore];
+    class P {
+      constructor() {
+        return closure_1_4.getId();
+      }
+    }
+    cResult[5] = items2;
+    const tmp12 = items2;
+  } else {
+    class L {
+      constructor() {
+        return closure_6.getGuild(id);
+      }
+    }
+  }
+  if (cResult[6] !== stateFromStores) {
+    class L {
+      constructor() {
+        return closure_6.getGuild(id);
+      }
+    }
+    const items3 = [stateFromStores];
+    class P {
+      constructor() {
+        return closure_1_4.getId();
+      }
+    }
+    cResult[6] = stateFromStores;
+    cResult[7] = tmp15;
+    cResult[8] = items3;
+    let tmp14 = items3;
+  } else {
+    class L {
+      constructor() {
+        return closure_6.getGuild(id);
+      }
+    }
+    tmp14 = cResult[8];
+  }
+  const tmpResult5 = require("initialize");
+  const stateFromStores2 = require("initialize").useStateFromStores(tmp12, tmp15, tmp14);
+  if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
+    class L {
+      constructor() {
+        return closure_6.getGuild(id);
+      }
+    }
+    const items4 = [GuildMemberStore];
+    class P {
+      constructor() {
+        return closure_1_4.getId();
+      }
+    }
+    cResult[9] = items4;
+  } else {
+    class L {
+      constructor() {
+        return closure_6.getGuild(id);
+      }
+    }
+  }
+  if (cResult[10] === stateFromStores) {
+    class L {
+      constructor() {
+        return closure_6.getGuild(id);
+      }
+    }
+    tmp(tmp2[9]);
+    const _Symbol = Symbol;
+    class P {
+      constructor() {
+        return closure_1_4.getId();
+      }
+    }
+    if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
+      class L {
+        constructor() {
+          return closure_6.getGuild(id);
+        }
+      }
+      const items5 = [InviteStore];
+      class P {
+        constructor() {
+          return closure_1_4.getId();
+        }
+      }
+      cResult[14] = items5;
+      const tmp20 = items5;
+    } else {
+      class L {
+        constructor() {
+          return closure_6.getGuild(id);
+        }
+      }
+    }
+    if (cResult[15] === id) {
+      class L {
+        constructor() {
+          return closure_6.getGuild(id);
+        }
+      }
+      const stateFromStoresObject = tmp(tmp2[9]).useStateFromStoresObject(tmp20, D, tmp22);
+      class P {
+        constructor() {
+          return closure_1_4.getId();
+        }
+      }
+      const inviteRoles = stateFromStoresObject.inviteRoles;
+      const isBypassInvite = stateFromStoresObject.isBypassInvite;
+      class D {
+        constructor() {
+          inviteKeyForGuildId = closure_0;
+          if (closure_0 == null) {
+            tmp2 = closure_7;
+            tmp3 = id;
+            inviteKeyForGuildId = closure_7.getInviteKeyForGuildId(id);
+          }
+          invite = null;
+          if (null != inviteKeyForGuildId) {
+            tmp5 = closure_7;
+            invite = closure_7.getInvite(inviteKeyForGuildId);
+          }
+          if (null != invite) {
+            if (invite.state !== InviteStates.BANNED) {
+              if (invite.state !== tmp8.EXPIRED) {
+                obj = { validInviteKey: null, isBypassInvite: null, inviteRoles: null };
+                obj.validInviteKey = inviteKeyForGuildId;
+                tmp6 = closure_0;
+                tmp7 = closure_2;
+                obj2 = closure_0(closure_2[10]);
+                num = invite.flags;
+                if (num == null) {
+                  num = 0;
+                }
+                obj.isBypassInvite = obj2.hasFlag(num, tmp6(tmp7[11]).GuildInviteFlags.IS_APPLICATION_BYPASS);
+                obj.inviteRoles = invite.roles;
+              }
+              return obj;
+            }
+          }
+          obj = { validInviteKey: null, isBypassInvite: false, inviteRoles: null };
+          return;
+        }
+      }
+      if (tmp19) {
+        class L {
+          constructor() {
+            return closure_6.getGuild(id);
+          }
+        }
+        if (arg1 === obj2.INVITE) {
+          class L {
+            constructor() {
+              return closure_6.getGuild(id);
+            }
+          }
+          if (null != inviteRoles) {
+            class L {
+              constructor() {
+                return closure_6.getGuild(id);
+              }
+            }
+            if (inviteRoles.length > 0) {
+              class L {
+                constructor() {
+                  return closure_6.getGuild(id);
+                }
+              }
+            }
+          }
+        }
+        class P {
+          constructor() {
+            return closure_1_4.getId();
+          }
+        }
+        if (stateFromStores2 != null) {
+          class L {
+            constructor() {
+              return closure_6.getGuild(id);
+            }
+          }
+        }
+        class D {
+          constructor() {
+            inviteKeyForGuildId = closure_0;
+            if (closure_0 == null) {
+              tmp2 = closure_7;
+              tmp3 = id;
+              inviteKeyForGuildId = closure_7.getInviteKeyForGuildId(id);
+            }
+            invite = null;
+            if (null != inviteKeyForGuildId) {
+              tmp5 = closure_7;
+              invite = closure_7.getInvite(inviteKeyForGuildId);
+            }
+            if (null != invite) {
+              if (invite.state !== InviteStates.BANNED) {
+                if (invite.state !== tmp8.EXPIRED) {
+                  obj = { validInviteKey: null, isBypassInvite: null, inviteRoles: null };
+                  obj.validInviteKey = inviteKeyForGuildId;
+                  tmp6 = closure_0;
+                  tmp7 = closure_2;
+                  obj2 = closure_0(closure_2[10]);
+                  num = invite.flags;
+                  if (num == null) {
+                    num = 0;
+                  }
+                  obj.isBypassInvite = obj2.hasFlag(num, tmp6(tmp7[11]).GuildInviteFlags.IS_APPLICATION_BYPASS);
+                  obj.inviteRoles = invite.roles;
+                }
+                return obj;
+              }
+            }
+            obj = { validInviteKey: null, isBypassInvite: false, inviteRoles: null };
+            return;
+          }
+        }
+        if (tmp29) {
+          class L {
+            constructor() {
+              return closure_6.getGuild(id);
+            }
+          }
+          if (tmp27 != null) {
+            class L {
+              constructor() {
+                return closure_6.getGuild(id);
+              }
+            }
+          }
+          class P {
+            constructor() {
+              return closure_1_4.getId();
+            }
+          }
+        }
+        if (arg1 !== tmp26.INVITE) {
+          class L {
+            constructor() {
+              return closure_6.getGuild(id);
+            }
+          }
+        }
+        const IS_MEMBER = obj.IS_MEMBER;
+        tmp26 = obj2;
+        tmp29 = undefined === id;
+      } else {
+        class L {
+          constructor() {
+            return closure_6.getGuild(id);
+          }
+        }
+      }
+      if (cResult[19] === IS_MEMBER) {
+        class L {
+          constructor() {
+            return closure_6.getGuild(id);
+          }
+        }
+      }
+      obj2 = { guildId: id, ctaType: IS_MEMBER, validInviteKey: tmp24 };
+      cResult[19] = IS_MEMBER;
+      cResult[20] = id;
+      cResult[21] = tmp24;
+      cResult[22] = obj2;
+      const tmpResult8 = tmp(tmp2[9]);
+    }
+    class D {
+      constructor() {
+        inviteKeyForGuildId = closure_0;
+        if (closure_0 == null) {
+          tmp2 = closure_7;
+          tmp3 = id;
+          inviteKeyForGuildId = closure_7.getInviteKeyForGuildId(id);
+        }
+        invite = null;
+        if (null != inviteKeyForGuildId) {
+          tmp5 = closure_7;
+          invite = closure_7.getInvite(inviteKeyForGuildId);
+        }
+        if (null != invite) {
+          if (invite.state !== InviteStates.BANNED) {
+            if (invite.state !== tmp8.EXPIRED) {
+              obj = { validInviteKey: null, isBypassInvite: null, inviteRoles: null };
+              obj.validInviteKey = inviteKeyForGuildId;
+              tmp6 = closure_0;
+              tmp7 = closure_2;
+              obj2 = closure_0(closure_2[10]);
+              num = invite.flags;
+              if (num == null) {
+                num = 0;
+              }
+              obj.isBypassInvite = obj2.hasFlag(num, tmp6(tmp7[11]).GuildInviteFlags.IS_APPLICATION_BYPASS);
+              obj.inviteRoles = invite.roles;
+            }
+            return obj;
+          }
+        }
+        obj = { validInviteKey: null, isBypassInvite: false, inviteRoles: null };
+        return;
+      }
+    }
+    const items6 = [id, arg2];
+    cResult[15] = id;
+    cResult[16] = arg2;
+    cResult[17] = D;
+    cResult[18] = items6;
+    tmp22 = items6;
+  }
+  class F {
+    constructor() {
+      member = null;
+      if (null != id) {
+        tmp3 = closure_5;
+        tmp4 = closure_2;
+        member = closure_5.getMember(tmp, closure_2);
+      }
+      joinedAt = undefined;
+      if (member != null) {
+        joinedAt = member.joinedAt;
+      }
+      return null != joinedAt;
+    }
+  }
+  const items7 = [id, stateFromStores];
+  cResult[10] = stateFromStores;
+  cResult[11] = id;
+  cResult[12] = F;
+  cResult[13] = items7;
+  const tmpResult6 = require("initialize");
+}) : ((id, arg1, arg2) => {
   _require = id;
   importDefault = arg1;
   dependencyMap = arg2;
@@ -187,7 +578,7 @@ export default function useGuildProfileCTA(id, arg1, arg2) {
     }, items8),
     validInviteKey
   };
-};
+});
 export { CTATypes };
 export const GuildProfileCTAContext = obj2;
 export const getGuildProfileCTAType = function getGuildProfileCTAType(guildProfileFromInvite, code) {

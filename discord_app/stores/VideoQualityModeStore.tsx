@@ -1,9 +1,9 @@
-// === Module 13746: VideoQualityModeStore ===
+// === Module 13812: VideoQualityModeStore ===
 
-// Module 13746 (VideoQualityModeStore)
+// Module 13812 (VideoQualityModeStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import Constants from "Constants" /* 1074 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
 let mode = Constants.VideoQualityMode.AUTO;

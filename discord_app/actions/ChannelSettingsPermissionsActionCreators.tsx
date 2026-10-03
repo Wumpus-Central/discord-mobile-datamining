@@ -1,9 +1,9 @@
-// === Module 9210: ChannelSettingsPermissionsActionCreators ===
+// === Module 9216: ChannelSettingsPermissionsActionCreators ===
 
-// Module 9210 (ChannelSettingsPermissionsActionCreators)
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4858 */;
-import DefaultChannelThresholdUtils from "DefaultChannelThresholdUtils" /* 9211 */;
+// Module 9216 (ChannelSettingsPermissionsActionCreators)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4903 */;
+import DefaultChannelThresholdUtils from "DefaultChannelThresholdUtils" /* 9217 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -25,7 +25,7 @@ let closure_4 = async function _updatePermission(arg0, arg1, arg2, arg3) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -69,7 +69,7 @@ let closure_4 = async function _updatePermission(arg0, arg1, arg2, arg3) {
         const obj7 = { type: "CHANNEL_SETTINGS_PERMISSIONS_UPDATE_PERMISSION", id: closure_132_0, allow: closure_132_1, deny: closure_132_2 };
         closure_133_1(closure_133_2[2]).dispatch(obj7);
         c7 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       } catch (tmp16) {
         c7 = tmp;
         throw tmp16;

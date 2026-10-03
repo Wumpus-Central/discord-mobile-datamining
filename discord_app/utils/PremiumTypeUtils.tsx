@@ -1,7 +1,7 @@
-// === Module 1970: PremiumTypeUtils ===
+// === Module 1976: PremiumTypeUtils ===
 
-// Module 1970 (PremiumTypeUtils)
-import PremiumConstants from "PremiumConstants" /* 1374 */;
+// Module 1976 (PremiumTypeUtils)
+import PremiumConstants from "PremiumConstants" /* 1379 */;
 import size from "module_2" /* 2 */;
 
 function isPremiumAtLeast(premiumType, TIER_2) {
@@ -31,10 +31,10 @@ function isPremium(premiumType, TIER_2) {
   }
   return tmp;
 }
-function isPremiumExactly(currentUser, TIER_2) {
-  let tmp = null != currentUser;
+function isPremiumExactly(stateFromStores, TIER_2) {
+  let tmp = null != stateFromStores;
   if (tmp) {
-    tmp = currentUser.premiumType === TIER_2;
+    tmp = stateFromStores.premiumType === TIER_2;
   }
   return tmp;
 }

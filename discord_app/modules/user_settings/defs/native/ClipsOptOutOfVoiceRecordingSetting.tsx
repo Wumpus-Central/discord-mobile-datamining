@@ -1,8 +1,8 @@
-// === Module 14724: ClipsOptOutOfVoiceRecordingSetting ===
+// === Module 14780: ClipsOptOutOfVoiceRecordingSetting ===
 
-// Module 14724 (ClipsOptOutOfVoiceRecordingSetting)
-import util from "util" /* 1115 */;
-import UserSettings from "UserSettings" /* 2021 */;
+// Module 14780 (ClipsOptOutOfVoiceRecordingSetting)
+import util from "util" /* 1126 */;
+import UserSettings from "UserSettings" /* 2028 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -17,7 +17,7 @@ let closure_4 = async function _updateClipsAllowVoiceRecording(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -48,7 +48,7 @@ let closure_4 = async function _updateClipsAllowVoiceRecording(arg0) {
       } else {
         closure_129_1(closure_129_2[3]).dispatch({ type: "CLIPS_ALLOW_VOICE_RECORDING_UPDATE" });
         c3 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp12) {
       c3 = tmp;
@@ -56,7 +56,7 @@ let closure_4 = async function _updateClipsAllowVoiceRecording(arg0) {
     }
   }
 };
-const SettingBuilders = fn(11215);
+const SettingBuilders = fn(11129);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -66,8 +66,8 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t["wW9/zQ"]);
   },
-  parent: fn(7590).MobileUserSettings.CLIPS,
-  useValue: fn(2021).ClipsAllowVoiceRecording.useSetting,
+  parent: fn(7634).MobileUserSettings.CLIPS,
+  useValue: fn(2028).ClipsAllowVoiceRecording.useSetting,
   onValueChange: function updateClipsAllowVoiceRecording() {
     const self = this;
     const apply = closure_4.apply;

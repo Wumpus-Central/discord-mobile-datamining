@@ -1,9 +1,9 @@
-// === Module 10617: MessageRequestActionCreators ===
+// === Module 9828: MessageRequestActionCreators ===
 
-// Module 10617 (MessageRequestActionCreators)
-import HTTPUtils from "HTTPUtils" /* 1271 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6196 */;
-import MessageRequestTypes from "MessageRequestTypes" /* 10618 */;
+// Module 9828 (MessageRequestActionCreators)
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6082 */;
+import MessageRequestTypes from "MessageRequestTypes" /* 9829 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -18,7 +18,7 @@ let closure_5 = async function _acceptMessageRequest(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -56,7 +56,7 @@ let closure_5 = async function _acceptMessageRequest(arg0) {
         const obj7 = { type: "MESSAGE_REQUEST_ACCEPT_OPTIMISTIC", channelId: closure_129_0 };
         closure_130_1(closure_130_2[4]).dispatch(obj7);
         c4 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp12) {
       c4 = tmp;
@@ -64,7 +64,7 @@ let closure_5 = async function _acceptMessageRequest(arg0) {
     }
   }
 };
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_request/MessageRequestActionCreators.tsx");
 

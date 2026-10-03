@@ -1,19 +1,19 @@
-// === Module 17382: FrecencyUserSettingsManager ===
+// === Module 17474: FrecencyUserSettingsManager ===
 
-// Module 17382 (FrecencyUserSettingsManager)
-import DurationsDefault from "Durations" /* 1091 */;
-import frecency_user_settings from "frecency_user_settings" /* 1221 */;
-import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1222 */;
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 2026 */;
+// Module 17474 (FrecencyUserSettingsManager)
+import DurationsDefault from "Durations" /* 1102 */;
+import frecency_user_settings from "frecency_user_settings" /* 1232 */;
+import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1233 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 2033 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore" /* 8784 */;
-import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 8783 */;
-import EmojiStore from "EmojiStore" /* 5957 */;
-import SoundboardStore from "SoundboardStore" /* 5503 */;
-import StickersPersistedStore from "StickersPersistedStore" /* 5999 */;
-import FrecencyStore from "FrecencyStore" /* 6007 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6725 */;
+import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore" /* 8797 */;
+import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 8796 */;
+import EmojiStore from "EmojiStore" /* 5638 */;
+import SoundboardStore from "SoundboardStore" /* 5680 */;
+import StickersPersistedStore from "StickersPersistedStore" /* 5686 */;
+import FrecencyStore from "FrecencyStore" /* 5694 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
 
 require = fn;
 function handleConnectionOpen() {
@@ -66,7 +66,7 @@ let closure_22 = async function _saveProtos(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -82,7 +82,7 @@ let closure_22 = async function _saveProtos(arg0) {
         } else {
           closure_2 = tmp2;
           closure_1 = tmp2;
-          resetTimer(__initData, false);
+          resetTimer(closure_2_15, false);
           if (!UserSettingsProtoStore.hasLoaded(constants.FRECENCY_AND_FAVORITES_SETTINGS)) {
             let hasPendingUsageResult = StickersPersistedStore.hasPendingUsage();
             if (!hasPendingUsageResult) {
@@ -126,7 +126,7 @@ let closure_22 = async function _saveProtos(arg0) {
         const result = markDirtyIfHasPendingChange.markDirtyIfHasPendingChange();
       });
       c4 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     } catch (tmp25) {
       c4 = tmp;
       throw tmp25;
@@ -141,9 +141,9 @@ function resetTimer(arg0, arg1) {
   }
   timeout = setTimeout(() => saveProtos(c0), arg0);
 }
-const MAX_NUM_SELECTED_ITEMS = fn(6007).MAX_NUM_SELECTED_ITEMS;
-const UserSettingsTypes = fn(1084).UserSettingsTypes;
-const FREQUENCY_ITEM_LIMIT = fn(1349).FREQUENCY_ITEM_LIMIT;
+const MAX_NUM_SELECTED_ITEMS = fn(5694).MAX_NUM_SELECTED_ITEMS;
+const UserSettingsTypes = fn(1095).UserSettingsTypes;
+const FREQUENCY_ITEM_LIMIT = fn(1360).FREQUENCY_ITEM_LIMIT;
 const random = Math.random();
 let closure_14 = 10 + random * (10 * DurationsDefault.Millis.SECOND);
 let result = 2 * DurationsDefault.Millis.HOUR;

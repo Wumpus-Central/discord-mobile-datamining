@@ -1,9 +1,11 @@
-// === Module 17252: VoicePanelStyles ===
+// === Module 17303: VoicePanelStyles ===
 
-// Module 17252 (VoicePanelStyles)
-import nativeDefault from "native" /* 576 */;
-import useStateFromSharedValue from "useStateFromSharedValue" /* 7897 */;
-import createStyles from "createStyles" /* 4845 */;
+// Module 17303 (VoicePanelStyles)
+import c from "c" /* 576 */;
+import nativeDefault from "native" /* 587 */;
+import useStateFromSharedValue from "useStateFromSharedValue" /* 7941 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 let closure_3 = createStyles.createStyles((arg0) => {
@@ -24,6 +26,16 @@ let closure_3 = createStyles.createStyles((arg0) => {
 });
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelStyles.tsx");
 
-export const useVoicePanelButtonStyles = function useVoicePanelButtonStyles(wrapperSpecs) {
-  return closure_3(useStateFromSharedValue.useDerivedStateFromSharedValue(wrapperSpecs, (drawerMode) => drawerMode.drawerMode));
-};
+export const useVoicePanelButtonStyles = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(1);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const fn = function c(drawerMode) {
+      return drawerMode.drawerMode;
+    };
+    cResult[0] = fn;
+    let first = fn;
+  } else {
+    first = cResult[0];
+  }
+  return closure_3(useStateFromSharedValue.useDerivedStateFromSharedValue(arg0, first));
+}) : ((arg0) => closure_3(useStateFromSharedValue.useDerivedStateFromSharedValue(arg0, (drawerMode) => drawerMode.drawerMode)));

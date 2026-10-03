@@ -1,11 +1,11 @@
-// === Module 6942: StickerSendability ===
+// === Module 6840: StickerSendability ===
 
-// Module 6942 (StickerSendability)
-import PermissionUtilsAll from "PermissionUtils" /* 4503 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4517 */;
-import StickersUtils from "StickersUtils" /* 5382 */;
-import GuildMemberStore from "GuildMemberStore" /* 2107 */;
-import StickersPackStore from "StickersPackStore" /* 6002 */;
+// Module 6840 (StickerSendability)
+import PermissionUtilsAll from "PermissionUtils" /* 4514 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4528 */;
+import StickersUtils from "StickersUtils" /* 5428 */;
+import GuildMemberStore from "GuildMemberStore" /* 2112 */;
+import StickersPackStore from "StickersPackStore" /* 5689 */;
 
 require = fn;
 function getStickerSendability(item10030, currentUser, channel) {
@@ -47,7 +47,7 @@ function getStickerSendability(item10030, currentUser, channel) {
     obj5 = StickersUtils;
   }
 }
-const Permissions = fn(1074).Permissions;
+const Permissions = fn(1085).Permissions;
 const StickerSendability = { SENDABLE: 0, [0]: "SENDABLE", SENDABLE_WITH_PREMIUM: 1, [1]: "SENDABLE_WITH_PREMIUM", NONSENDABLE: 2, [2]: "NONSENDABLE", SENDABLE_WITH_BOOSTED_GUILD: 3, [3]: "SENDABLE_WITH_BOOSTED_GUILD" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/stickers/StickerSendability.tsx");

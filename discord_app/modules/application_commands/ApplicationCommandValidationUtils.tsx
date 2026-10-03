@@ -1,11 +1,11 @@
-// === Module 11848: ApplicationCommandValidationUtils ===
+// === Module 11779: ApplicationCommandValidationUtils ===
 
-// Module 11848 (ApplicationCommandValidationUtils)
-import util from "util" /* 1115 */;
-import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5489 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7131 */;
-import ApplicationCommandOptionUtils from "ApplicationCommandOptionUtils" /* 8907 */;
-import ApplicationCommandValidatorsDefault from "ApplicationCommandValidators" /* 11849 */;
+// Module 11779 (ApplicationCommandValidationUtils)
+import util from "util" /* 1126 */;
+import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5788 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7034 */;
+import ApplicationCommandOptionUtils from "ApplicationCommandOptionUtils" /* 8935 */;
+import ApplicationCommandValidatorsDefault from "ApplicationCommandValidators" /* 11780 */;
 import size from "module_2" /* 2 */;
 
 function validateOptionContent(allowEmptyValues) {
@@ -65,7 +65,7 @@ const result = size.fileFinishedImporting("modules/application_commands/Applicat
 
 export const getValidationResults = function getValidationResults(activeCommand, optionValues, guild_id, id, allowEmptyValues) {
   const obj = {};
-  const options = activeCommand.options;
+  options = activeCommand.options;
   if (null == options) {
     return obj;
   } else {

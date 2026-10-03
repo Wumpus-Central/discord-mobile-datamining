@@ -1,19 +1,19 @@
-// === Module 7600: UserJoinSystemMessage ===
+// === Module 7644: UserJoinSystemMessage ===
 
-// Module 7600 (UserJoinSystemMessage)
-import util from "util" /* 1115 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7575 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7577 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7579 */;
-import SystemMessageUtilsDefault from "SystemMessageUtils" /* 7601 */;
-import useIsStickerReplyEnabled from "useIsStickerReplyEnabled" /* 7613 */;
-import transformSticker from "transformSticker" /* 7614 */;
-import WelcomeCTAUtils from "WelcomeCTAUtils" /* 7617 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildStore from "GuildStore" /* 2066 */;
+// Module 7644 (UserJoinSystemMessage)
+import util from "util" /* 1126 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7619 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7621 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7623 */;
+import SystemMessageUtilsDefault from "SystemMessageUtils" /* 7645 */;
+import useIsStickerReplyEnabled from "useIsStickerReplyEnabled" /* 7657 */;
+import transformSticker from "transformSticker" /* 7658 */;
+import WelcomeCTAUtils from "WelcomeCTAUtils" /* 7661 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import GuildStore from "GuildStore" /* 2074 */;
 
 require = fn;
-const SystemChannelFlags = fn(1074).SystemChannelFlags;
+const SystemChannelFlags = fn(1085).SystemChannelFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/UserJoinSystemMessage.tsx");
 
@@ -29,7 +29,7 @@ export const createUserJoinSystemMessage = function createUserJoinSystemMessage(
   let transformStickerResult;
   if (null != guildId) {
     if (null != channel) {
-      const guild = GuildStore.getGuild(guildId);
+      guild = GuildStore.getGuild(guildId);
       let tmp10 = null != guild;
       if (tmp10) {
         tmp10 = !(guild.systemChannelFlags & SystemChannelFlags.SUPPRESS_JOIN_NOTIFICATION_REPLIES);

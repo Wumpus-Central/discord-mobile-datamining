@@ -1,25 +1,25 @@
-// === Module 4983: getFrontierTuningConfigIfEligible ===
+// === Module 5028: getFrontierTuningConfigIfEligible ===
 
-// Module 4983 (getFrontierTuningConfigIfEligible)
-import PremiumUtilsDefault from "PremiumUtils" /* 4517 */;
-import FrontierTuningExperimentDefault from "FrontierTuningExperiment" /* 4984 */;
-import GuildStore from "GuildStore" /* 2066 */;
+// Module 5028 (getFrontierTuningConfigIfEligible)
+import PremiumUtilsDefault from "PremiumUtils" /* 4528 */;
+import FrontierTuningExperimentDefault from "FrontierTuningExperiment" /* 5029 */;
+import GuildStore from "GuildStore" /* 2074 */;
 
 const require = fn;
-const BoostedGuildTiers = fn(1074).BoostedGuildTiers;
+const BoostedGuildTiers = fn(1085).BoostedGuildTiers;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/go_live/utils/getFrontierTuningConfigIfEligible.tsx");
 
-export default function getFrontierTuningConfigIfEligible(location, currentUser, guildId) {
+export default function getFrontierTuningConfigIfEligible(location, user, guildId) {
   if (null != guildId) {
-    const guild = GuildStore.getGuild(guildId);
+    guild = GuildStore.getGuild(guildId);
     let premiumTier;
     if (guild != null) {
       premiumTier = guild.premiumTier;
     }
     if (premiumTier === BoostedGuildTiers.NONE) {
-      if (!obj4.isPremium(currentUser)) {
-        if (!obj.canStreamQuality(PremiumUtilsDefault.StreamQuality.MID, currentUser)) {
+      if (!obj4.isPremium(user)) {
+        if (!obj.canStreamQuality(PremiumUtilsDefault.StreamQuality.MID, user)) {
           const obj2 = { location, guildId };
           const config = FrontierTuningExperimentDefault.getConfig(obj2);
           let tmp6 = null;

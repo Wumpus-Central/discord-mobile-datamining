@@ -1,13 +1,13 @@
-// === Module 4499: LurkingStore ===
+// === Module 4510: LurkingStore ===
 
-// Module 4499 (LurkingStore)
+// Module 4510 (LurkingStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import GuildRecord from "GuildRecord" /* 2062 */;
-import GuildMemberStore from "GuildMemberStore" /* 2107 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import UserStore from "UserStore" /* 1372 */;
-import Constants from "Constants" /* 1074 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import GuildRecord from "GuildRecord" /* 2070 */;
+import GuildMemberStore from "GuildMemberStore" /* 2112 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import UserStore from "UserStore" /* 1377 */;
+import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
 const isGuildLurker = GuildRecord.isGuildLurker;
@@ -33,7 +33,7 @@ prototype["mostRecentLurkedGuildId"] = function mostRecentLurkedGuildId() {
   return tmp;
 };
 prototype["isLurking"] = function isLurking(guildId) {
-  const guild = GuildStore.getGuild(guildId);
+  guild = GuildStore.getGuild(guildId);
   if (null == guild) {
     return false;
   } else {

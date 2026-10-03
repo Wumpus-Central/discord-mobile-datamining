@@ -1,6 +1,6 @@
-// === Module 7834: ProfileFrameLayerOrder ===
+// === Module 7878: ProfileFrameLayerOrder ===
 
-// Module 7834 (ProfileFrameLayerOrder)
+// Module 7878 (ProfileFrameLayerOrder)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ProfileFrameLayerOrder.tsx");

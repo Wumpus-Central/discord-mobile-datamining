@@ -1,18 +1,18 @@
-// === Module 7370: ApplicationCommandActionCreators ===
+// === Module 7406: ApplicationCommandActionCreators ===
 
-// Module 7370 (ApplicationCommandActionCreators)
+// Module 7406 (ApplicationCommandActionCreators)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef38 from "module_38" /* 38 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import HTTPUtils from "HTTPUtils" /* 1271 */;
-import Server from "Server" /* 1979 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7129 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7131 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import Server from "Server" /* 1985 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7030 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7034 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 7371 */;
+import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 7407 */;
 
 require = fn;
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandActionCreators.tsx");
 
@@ -84,7 +84,7 @@ export const performAutocomplete = function performAutocomplete(applicationId, a
       const HTTP = HTTPUtils.HTTP;
       const request = { url: Endpoints.INTERACTIONS, body: null, timeout: 3000, rejectWithError: true };
       const obj4 = { type: Server.InteractionTypes.APPLICATION_COMMAND_AUTOCOMPLETE, application_id: applicationId.applicationId, guild_id: null, channel_id: null, session_id: null, data: null, nonce: null };
-      const guild = autocomplete.guild;
+      guild = autocomplete.guild;
       let id;
       if (guild != null) {
         id = guild.id;

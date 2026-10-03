@@ -1,7 +1,7 @@
-// === Module 10892: BountiesMobileQuestBarExperiment ===
+// === Module 9998: BountiesMobileQuestBarExperiment ===
 
-// Module 10892 (BountiesMobileQuestBarExperiment)
-import ApexExperiment from "ApexExperiment" /* 1435 */;
+// Module 9998 (BountiesMobileQuestBarExperiment)
+import ApexExperiment from "ApexExperiment" /* 1440 */;
 import size from "module_2" /* 2 */;
 
 const obj = { CONTROL: 0, [0]: "CONTROL", LOOP_SQUEEZED_BACK_APP_STORE_OVERLAY: 1, [1]: "LOOP_SQUEEZED_BACK_APP_STORE_OVERLAY", FIRST_TAP_APP_STORE_OVERLAY: 2, [2]: "FIRST_TAP_APP_STORE_OVERLAY", EVERY_PAUSE_APP_STORE_OVERLAY: 3, [3]: "EVERY_PAUSE_APP_STORE_OVERLAY" };

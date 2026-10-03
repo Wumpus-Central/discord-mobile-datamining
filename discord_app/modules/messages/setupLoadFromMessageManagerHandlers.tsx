@@ -1,9 +1,9 @@
-// === Module 17448: setupLoadFromMessageManagerHandlers ===
+// === Module 17535: setupLoadFromMessageManagerHandlers ===
 
-// Module 17448 (setupLoadFromMessageManagerHandlers)
-import DurationsDefault from "Durations" /* 1091 */;
-import ChannelSectionStore from "ChannelSectionStore" /* 6885 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
+// Module 17535 (setupLoadFromMessageManagerHandlers)
+import DurationsDefault from "Durations" /* 1102 */;
+import ChannelSectionStore from "ChannelSectionStore" /* 6783 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
 
 let closure_2 = 5 * DurationsDefault.Millis.SECOND;
 const size = fn(2);
@@ -127,7 +127,7 @@ export default function setupLoadFromMessageManagerHandlers(actions, arg1) {
   const onBeforeBatch = obj.onBeforeBatch;
   const set = new Set();
   let map = new Map();
-  map1 = new Map();
+  const map1 = new Map();
   const obj2 = {};
   const merged = Object.assign(actions.actions);
   obj2.POST_CONNECTION_OPEN = function POST_CONNECTION_OPEN() {

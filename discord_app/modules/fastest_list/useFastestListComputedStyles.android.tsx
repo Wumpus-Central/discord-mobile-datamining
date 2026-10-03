@@ -1,16 +1,180 @@
-// === Module 6664: useFastestListComputedStyles ===
+// === Module 6554: useFastestListComputedStyles ===
 
-// Module 6664 (useFastestListComputedStyles)
+// Module 6554 (useFastestListComputedStyles)
+import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
+require = fn;
 const StyleSheet = fn(17).StyleSheet;
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/fastest_list/useFastestListComputedStyles.android.tsx");
 
-export default function useFastestListComputedStyles(style) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
+  const cResult = c.c(6);
+  style = style.style;
+  if (cResult[0] !== style) {
+    if (null != style) {
+      let obj2 = style;
+      if (style == null) {
+        obj2 = { flex: 1 };
+      }
+      const items = [obj2];
+      let obj3 = items;
+    } else {
+      obj3 = { flex: 1 };
+    }
+    const flattenResult = StyleSheet.flatten(obj3);
+    cResult[0] = style;
+    cResult[1] = flattenResult;
+  } else {
+    let num3;
+    if (cResult[1] != null) {
+      num3 = tmp2.marginStart;
+    }
+    if (num3 == null) {
+      let marginLeft;
+      if (tmp2 != null) {
+        marginLeft = tmp2.marginLeft;
+      }
+      num3 = marginLeft;
+    }
+    if (num3 == null) {
+      let marginHorizontal;
+      if (tmp2 != null) {
+        marginHorizontal = tmp2.marginHorizontal;
+      }
+      num3 = marginHorizontal;
+    }
+    if (num3 == null) {
+      let margin;
+      if (tmp2 != null) {
+        margin = tmp2.margin;
+      }
+      num3 = margin;
+    }
+    if (num3 == null) {
+      num3 = 0;
+    }
+    let num4;
+    if (cResult[1] != null) {
+      num4 = tmp2.paddingStart;
+    }
+    if (num4 == null) {
+      let paddingLeft;
+      if (tmp2 != null) {
+        paddingLeft = tmp2.paddingLeft;
+      }
+      num4 = paddingLeft;
+    }
+    if (num4 == null) {
+      let paddingHorizontal;
+      if (tmp2 != null) {
+        paddingHorizontal = tmp2.paddingHorizontal;
+      }
+      num4 = paddingHorizontal;
+    }
+    if (num4 == null) {
+      let padding;
+      if (tmp2 != null) {
+        padding = tmp2.padding;
+      }
+      num4 = padding;
+    }
+    if (num4 == null) {
+      num4 = 0;
+    }
+    if (typeof num3 === "number") {
+      if (typeof num4 === "number") {
+        let num5;
+        if (tmp2 != null) {
+          num5 = tmp2.marginEnd;
+        }
+        if (num5 == null) {
+          let marginRight;
+          if (tmp2 != null) {
+            marginRight = tmp2.marginRight;
+          }
+          num5 = marginRight;
+        }
+        if (num5 == null) {
+          let marginHorizontal1;
+          if (tmp2 != null) {
+            marginHorizontal1 = tmp2.marginHorizontal;
+          }
+          num5 = marginHorizontal1;
+        }
+        if (num5 == null) {
+          let margin1;
+          if (tmp2 != null) {
+            margin1 = tmp2.margin;
+          }
+          num5 = margin1;
+        }
+        if (num5 == null) {
+          num5 = 0;
+        }
+        let num6;
+        if (tmp2 != null) {
+          num6 = tmp2.paddingEnd;
+        }
+        if (num6 == null) {
+          let paddingRight;
+          if (tmp2 != null) {
+            paddingRight = tmp2.paddingRight;
+          }
+          num6 = paddingRight;
+        }
+        if (num6 == null) {
+          let paddingHorizontal1;
+          if (tmp2 != null) {
+            paddingHorizontal1 = tmp2.paddingHorizontal;
+          }
+          num6 = paddingHorizontal1;
+        }
+        if (num6 == null) {
+          let padding1;
+          if (tmp2 != null) {
+            padding1 = tmp2.padding;
+          }
+          num6 = padding1;
+        }
+        if (num6 == null) {
+          num6 = 0;
+        }
+        if (typeof num5 === "number") {
+          if (typeof num6 === "number") {
+            const sum = num5 + num6;
+            const sum1 = num3 + num4;
+            if (cResult[2] === sum) {
+              if (cResult[3] === sum1) {
+                if (cResult[4] === tmp2) {
+                  let tmp20 = cResult[5];
+                }
+                return tmp20;
+              }
+            }
+            const obj4 = { style: tmp2, marginEnd: sum, marginStart: sum1 };
+            cResult[2] = sum;
+            cResult[3] = sum1;
+            cResult[4] = tmp2;
+            cResult[5] = obj4;
+            tmp20 = obj4;
+          }
+        }
+        const _Error = Error;
+        const error = new Error("FastestList: paddingStart and paddingEnd must be numbers.");
+        throw error;
+      }
+    }
+    const _Error2 = Error;
+    const error1 = new Error("FastestList: marginStart and marginEnd must be numbers.");
+    throw error1;
+  }
+}) : ((style) => {
   style = style.style;
   let items = [style];
-  return style.useMemo(() => {
+  return noop.useMemo(() => {
     let obj = style;
     if (null != style) {
       if (obj == null) {
@@ -150,4 +314,4 @@ export default function useFastestListComputedStyles(style) {
     const error1 = new Error("FastestList: marginStart and marginEnd must be numbers.");
     throw error1;
   }, items);
-};
+});

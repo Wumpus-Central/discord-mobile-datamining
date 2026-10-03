@@ -1,15 +1,15 @@
-// === Module 6000: StickersStore ===
+// === Module 5687: StickersStore ===
 
-// Module 6000 (StickersStore)
+// Module 5687 (StickersStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 2073 */;
-import TryLoad from "TryLoad" /* 2093 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 2078 */;
+import TryLoad from "TryLoad" /* 2098 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildMembershipStore from "GuildMembershipStore" /* 2046 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import GuildStickersStore from "GuildStickersStore" /* 6001 */;
-import StickersPackStore from "StickersPackStore" /* 6002 */;
+import GuildMembershipStore from "GuildMembershipStore" /* 2053 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import GuildStickersStore from "GuildStickersStore" /* 5688 */;
+import StickersPackStore from "StickersPackStore" /* 5689 */;
 
 require = fn;
 function loadSavedGuildStickers() {
@@ -33,7 +33,7 @@ let closure_11 = async function _loadSavedGuildStickers() {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -58,7 +58,7 @@ let closure_11 = async function _loadSavedGuildStickers() {
               Loaded = tmp27.Loaded;
               c2 = 1;
               c3 = 1;
-              const obj6 = { value: TryLoad.tryLoadOrResetCacheGatewayAsync("StickerStore.loadSavedGuildStickers", async () => closure_1(10).timeAsync("\u{1F4BE}", "loadSavedGuildStickers", async () => closure_2_1(6003).getAsync(closure_1_0))), done: false };
+              const obj6 = { value: TryLoad.tryLoadOrResetCacheGatewayAsync("StickerStore.loadSavedGuildStickers", async () => closure_1(10).timeAsync("\u{1F4BE}", "loadSavedGuildStickers", async () => closure_2_1(5690).getAsync(closure_1_0))), done: false };
               return obj6;
             }
           }

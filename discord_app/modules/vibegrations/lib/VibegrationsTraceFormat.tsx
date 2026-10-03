@@ -1,8 +1,8 @@
-// === Module 16660: vibegrations/VibegrationsTraceFormat ===
+// === Module 16743: vibegrations/VibegrationsTraceFormat ===
 
-// Module 16660 (vibegrations/VibegrationsTraceFormat)
-import util from "util" /* 1115 */;
-import _modDef3714 from "module_3714" /* 3714 */;
+// Module 16743 (vibegrations/VibegrationsTraceFormat)
+import util from "util" /* 1126 */;
+import _modDef3723 from "module_3723" /* 3723 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsTraceFormat.tsx");
@@ -37,43 +37,43 @@ export const formatTokens = function formatTokens(promptTokens) {
 export const categoryLabel = function categoryLabel(traceCategoryResult) {
   if ("subagent" === traceCategoryResult) {
     const intl5 = util.intl;
-    return intl5.string(_modDef3714["EoY7D+"]);
+    return intl5.string(_modDef3723["EoY7D+"]);
   } else if ("context" === traceCategoryResult) {
     const intl4 = util.intl;
-    return intl4.string(_modDef3714.KVFrD3);
+    return intl4.string(_modDef3723.KVFrD3);
   } else if ("tool" === traceCategoryResult) {
     const intl3 = util.intl;
-    return intl3.string(_modDef3714["/N6ZU9"]);
+    return intl3.string(_modDef3723["/N6ZU9"]);
   } else if ("delegated" === traceCategoryResult) {
     const intl2 = util.intl;
-    return intl2.string(_modDef3714.HcEbf2);
+    return intl2.string(_modDef3723.HcEbf2);
   } else {
     const intl = util.intl;
-    return intl.string(_modDef3714.AhOqQs);
+    return intl.string(_modDef3723.AhOqQs);
   }
 };
 export const statusLabel = function statusLabel(status) {
   if ("started" === status) {
     const intl3 = util.intl;
-    return intl3.string(_modDef3714.HpKDyl);
+    return intl3.string(_modDef3723.HpKDyl);
   } else if ("error" === status) {
     const intl2 = util.intl;
-    return intl2.string(_modDef3714["5T4Dd0"]);
+    return intl2.string(_modDef3723["5T4Dd0"]);
   } else {
     const intl = util.intl;
-    return intl.string(_modDef3714.VbEmf0);
+    return intl.string(_modDef3723.VbEmf0);
   }
 };
 export const omissionLabel = function omissionLabel(content) {
   if ("prose" === content) {
     const intl3 = util.intl;
-    return intl3.string(_modDef3714.xO6bcQ);
+    return intl3.string(_modDef3723.xO6bcQ);
   } else if ("content" === content) {
     const intl2 = util.intl;
-    return intl2.string(_modDef3714.gpBZRr);
+    return intl2.string(_modDef3723.gpBZRr);
   } else {
     const intl = util.intl;
-    return intl.string(_modDef3714.OZvPXt);
+    return intl.string(_modDef3723.OZvPXt);
   }
 };
 export const traceRichStatusLabel = function traceRichStatusLabel(vibegrationsTraceDetail) {
@@ -86,12 +86,12 @@ export const traceRichStatusLabel = function traceRichStatusLabel(vibegrationsTr
         let tmp5 = dependencyMap;
         const intl = util.intl;
         if ("loading" === vibegrationsTraceDetail.status) {
-          tmp5 = _modDef3714;
+          tmp5 = _modDef3723;
           let fj5wM8 = tmp5["vBF/0G"];
         } else if ("unavailable" === vibegrationsTraceDetail.status) {
-          fj5wM8 = _modDef3714.jEQTot;
+          fj5wM8 = _modDef3723.jEQTot;
         } else {
-          fj5wM8 = _modDef3714.fj5wM8;
+          fj5wM8 = _modDef3723.fj5wM8;
         }
         intl.string(fj5wM8);
       }

@@ -1,7 +1,7 @@
-// === Module 12362: GuildPromptsActionCreators ===
+// === Module 12447: GuildPromptsActionCreators ===
 
-// Module 12362 (GuildPromptsActionCreators)
-import DispatcherDefault from "Dispatcher" /* 573 */;
+// Module 12447 (GuildPromptsActionCreators)
+import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
 
 function viewPrompt(REAL_NAME_PROMPT, guildId) {

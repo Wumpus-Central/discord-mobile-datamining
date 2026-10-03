@@ -1,9 +1,9 @@
-// === Module 12307: openVibegrationsProjectInBuilder ===
+// === Module 12264: openVibegrationsProjectInBuilder ===
 
-// Module 12307 (openVibegrationsProjectInBuilder)
-import VibegrationsUtils from "VibegrationsUtils" /* 5554 */;
-import VibegrationsActivity from "VibegrationsActivity" /* 12308 */;
-import openVibegrationsProject from "openVibegrationsProject" /* 12309 */;
+// Module 12264 (openVibegrationsProjectInBuilder)
+import VibegrationsUtils from "VibegrationsUtils" /* 6746 */;
+import VibegrationsActivity from "VibegrationsActivity" /* 12265 */;
+import openVibegrationsProject from "openVibegrationsProject" /* 12266 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/vibegrations/lib/openVibegrationsProjectInBuilder.tsx");

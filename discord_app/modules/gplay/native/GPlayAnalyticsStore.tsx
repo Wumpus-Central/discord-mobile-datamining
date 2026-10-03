@@ -1,13 +1,13 @@
-// === Module 8860: GPlayAnalyticsStore ===
+// === Module 8873: GPlayAnalyticsStore ===
 
-// Module 8860 (GPlayAnalyticsStore)
-import module_560 from "module_560" /* 560 */;
+// Module 8873 (GPlayAnalyticsStore)
+import module_570 from "module_570" /* 570 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
 let closure_2 = Object.freeze({ analyticsByProductId: {} });
-const useGPlayAnalyticsStore = module_560.create(() => closure_2);
+const useGPlayAnalyticsStore = module_570.create(() => closure_2);
 const result = size.fileFinishedImporting("modules/gplay/native/GPlayAnalyticsStore.tsx");
 
 export const setGPlayAnalytics = function setGPlayAnalytics(arg0, arg1) {

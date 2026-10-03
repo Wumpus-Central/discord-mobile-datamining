@@ -1,8 +1,8 @@
-// === Module 17588: ApplicationTriggerFields ===
+// === Module 17676: ApplicationTriggerFields ===
 
-// Module 17588 (ApplicationTriggerFields)
-import asyncRequireImpl from "asyncRequireImpl" /* 1981 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4809 */;
+// Module 17676 (ApplicationTriggerFields)
+import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -54,8 +54,8 @@ export default function ApplicationTriggerFields(rule) {
       const obj2 = {
         applications: tmp,
         selectedApplicationId: applicationId,
-        onSelectApplication(applicationId) {
-            closure_0 = applicationId;
+        onSelectApplication(dependencyMap) {
+            closure_0 = dependencyMap;
             const obj = {};
             const merged = Object.assign(rule);
             const found = guildBotApplications.find((id) => id.id === closure_0);
@@ -67,11 +67,11 @@ export default function ApplicationTriggerFields(rule) {
               name = rule.name;
             }
             obj.name = name;
-            obj.triggerMetadata = { applicationId };
+            obj.triggerMetadata = { applicationId: dependencyMap };
             return onChangeRule(obj);
           }
       };
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17591, dependencyMap.paths), "AutomodSelectApplication", obj2);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17679, dependencyMap.paths), "AutomodSelectApplication", obj2);
     }
   };
   obj3.children = applicationId(rule(guildBotApplications[6]).TableRow, obj4);

@@ -1,12 +1,12 @@
-// === Module 14244: guilds ===
+// === Module 14312: guilds ===
 
-// Module 14244 (guilds)
-import GuildRecord from "GuildRecord" /* 2062 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 7969 */;
-import RPCErrorDefault from "RPCError" /* 8962 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8965 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import Constants from "Constants" /* 1074 */;
+// Module 14312 (guilds)
+import GuildRecord from "GuildRecord" /* 2070 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8015 */;
+import RPCErrorDefault from "RPCError" /* 9026 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9029 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
 const getGuildIconURL = GuildRecord.getGuildIconURL;

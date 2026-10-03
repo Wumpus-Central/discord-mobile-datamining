@@ -1,34 +1,34 @@
-// === Module 7084: CacheStore ===
+// === Module 6985: CacheStore ===
 
-// Module 7084 (CacheStore)
+// Module 6985 (CacheStore)
 import LoggerDefault from "Logger" /* 3 */;
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage4 from "Storage" /* 510 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import TryLoad from "TryLoad" /* 2093 */;
-import modules_MessagesDefault from "modules/Messages" /* 7085 */;
-import timeRequireDefault from "timeRequire" /* 7100 */;
-import NonGuildVersionsDefault from "NonGuildVersions" /* 7242 */;
-import AuthenticationUtils from "AuthenticationUtils" /* 7254 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import TryLoad from "TryLoad" /* 2098 */;
+import modules_MessagesDefault from "modules/Messages" /* 6986 */;
+import timeRequireDefault from "timeRequire" /* 7001 */;
+import NonGuildVersionsDefault from "NonGuildVersions" /* 7140 */;
+import AuthenticationUtils from "AuthenticationUtils" /* 7152 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5775 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5436 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4684 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
 
 require = fn;
 function handleClearCaches(type) {
   closure_13.log("Clearing cache store");
   closure_16 = Date.now();
   const Storage = Storage4.Storage;
-  Storage.remove(closure_1_10);
+  Storage.remove(v65535);
   const Storage2 = Storage4.Storage;
   Storage2.remove(closure_1_11);
   const Storage3 = Storage4.Storage;
-  Storage3.remove(closure_1_12);
+  Storage3.remove(__initData);
   c15 = "no-cache";
   if (tmp5) {
     c14 = true;
@@ -45,7 +45,7 @@ let closure_20 = async function _loadChannelHistory(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -74,12 +74,12 @@ let closure_20 = async function _loadChannelHistory(arg0) {
               const obj5 = modules_MessagesDefault;
               c5 = 1;
               c6 = 1;
-              const obj4 = { value: obj5.startupLoad(closure_0, closure_1, closure_2, React7), done: false };
+              const obj4 = { value: obj5.startupLoad(closure_0, closure_1, closure_2, options), done: false };
               return obj4;
             }
           }
           const _HermesInternal = HermesInternal;
-          map1.verbose("skipped loaded messages (channel: " + closure_2 + ", database: " + closure_0 + ").");
+          __initData2.verbose("skipped loaded messages (channel: " + closure_2 + ", database: " + closure_0 + ").");
           const _performance = performance;
           const items = [performance.now() - nowResult, ];
           const obj6 = { guildId: null, channelId: null, users: [], members: [], messages: [] };
@@ -126,7 +126,7 @@ let closure_21 = async function _loadEarlyCache(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -164,7 +164,7 @@ let closure_21 = async function _loadEarlyCache(arg0) {
           closure_134_19 = undefined;
           closure_134_20 = undefined;
           let guildId2;
-          map1.verbose("loading early cache");
+          __initData2.verbose("loading early cache");
           socket = socket.getSocket();
           closure_134_3 = socket;
           socket.connect();
@@ -207,28 +207,28 @@ let closure_21 = async function _loadEarlyCache(arg0) {
             return applyArgumentsResult;
           })(closure_1_0, dependencyMap));
           if (null != closure_0) {
-            let timeAsyncResult = AppStartPerformanceDefault.timeAsync("\u{1F4BE}", "cache: private_channels", async () => closure_1(2094).getAsync(closure_1_0, null));
+            let timeAsyncResult = AppStartPerformanceDefault.timeAsync("\u{1F4BE}", "cache: private_channels", async () => closure_1(2099).getAsync(closure_1_0, null));
           } else {
             timeAsyncResult = Promise.resolve([]);
           }
           if (null == closure_0) {
             let resolved = Promise.resolve({});
           } else {
-            resolved = AppStartPerformanceDefault.timeAsync("\u{1F4BE}", "cache: user_settings", async () => closure_1(7097).getAll(closure_1_0));
+            resolved = AppStartPerformanceDefault.timeAsync("\u{1F4BE}", "cache: user_settings", async () => closure_1(6998).getAll(closure_1_0));
           }
           if (null == closure_0) {
             let resolved1 = Promise.resolve([]);
           } else {
-            resolved1 = AppStartPerformanceDefault.timeAsync("\u{1F4BE}", "cache: read_states", async () => closure_1(7098).getAll(closure_1_0));
+            resolved1 = AppStartPerformanceDefault.timeAsync("\u{1F4BE}", "cache: read_states", async () => closure_1(6999).getAll(closure_1_0));
           }
           if (null == closure_0) {
             let resolveResult = allResult.Promise.resolve([]);
             const _Promise5 = allResult.Promise;
           } else {
-            resolveResult = AppStartPerformanceDefault.timeAsync("\u{1F4BE}", "cache: user_guild_settings", async () => closure_1(7099).getAll(closure_1_0));
+            resolveResult = AppStartPerformanceDefault.timeAsync("\u{1F4BE}", "cache: user_guild_settings", async () => closure_1(7000).getAll(closure_1_0));
           }
-          timeRequireDefault("AllCacheStores", () => closure_1_0(7101));
-          timeRequireDefault("MobileAppDatabaseManager", () => closure_1_0(7230));
+          timeRequireDefault("AllCacheStores", () => closure_1_0(7002));
+          timeRequireDefault("MobileAppDatabaseManager", () => closure_1_0(7128));
           let items = [
             result,
             measureAsyncResult,
@@ -337,8 +337,8 @@ let closure_21 = async function _loadEarlyCache(arg0) {
                   obj2.userSettings = userSettings;
                   obj2.userGuildSettings = userGuildSettings;
                   obj2.readStates = readStates;
-                  const obj = closure_3_1(573);
-                  return closure_3_1(573).dispatch(obj2).then(closure_1_0, closure_1_1);
+                  const obj = closure_3_1(584);
+                  return closure_3_1(584).dispatch(obj2).then(closure_1_0, closure_1_1);
                 });
                 let obj = closure_1(10);
                 closure_1(10).time("\u{1F4BE}", "socket.processFirstQueuedDispatch()", () => {
@@ -412,7 +412,7 @@ let closure_23 = async function _loadInitialGuilds(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -449,7 +449,7 @@ let closure_23 = async function _loadInitialGuilds(arg0) {
               if (c22) {
                 c6 = 1;
                 c7 = 1;
-                const obj6 = { value: TryLoad.tryLoadAsync(async () => closure_1(10).timeAsync("\u{1F4BE}", "cache: guilds", async () => closure_2_1(7236).getAsync(closure_1_0))), done: false };
+                const obj6 = { value: TryLoad.tryLoadAsync(async () => closure_1(10).timeAsync("\u{1F4BE}", "cache: guilds", async () => closure_2_1(7134).getAsync(closure_1_0))), done: false };
                 return obj6;
               } else {
                 c6 = 2;
@@ -496,7 +496,7 @@ let closure_23 = async function _loadInitialGuilds(arg0) {
             if ("@me" !== closure_132_2) {
               c6 = 3;
               c7 = 1;
-              const obj13 = { value: closure_133_0(closure_133_2[24]).tryLoadAsync(async () => closure_1(7236).getOneAsync(closure_1_0, dependencyMap)), done: false };
+              const obj13 = { value: closure_133_0(closure_133_2[24]).tryLoadAsync(async () => closure_1(7134).getOneAsync(closure_1_0, dependencyMap)), done: false };
               return obj13;
             }
           }
@@ -537,7 +537,7 @@ let closure_24 = async function _loadInitialGuildChannels(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -632,7 +632,7 @@ let closure_25 = async function _loadLateLazyCache(arg0) {
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -659,7 +659,7 @@ let closure_25 = async function _loadLateLazyCache(arg0) {
           closure_132_8 = undefined;
           closure_132_9 = undefined;
           let socket;
-          map1.verbose("loading late lazy cache");
+          __initData2.verbose("loading late lazy cache");
           const fetchLazyCache = TTITrackerDefault.fetchLazyCache;
           c6 = 1;
           c7 = 1;
@@ -668,7 +668,7 @@ let closure_25 = async function _loadLateLazyCache(arg0) {
                       const items = [
                         closure_0(initialGuildId[24]).tryLoadAsync(async () => {
                           if (null != closure_1_0) {
-                            let timeAsyncResult = closure_2_1(initialGuildId[13]).timeAsync("\u{1F4BE}", "cache: cache_version", async () => closure_2_1(7240).okAsync(closure_1_0));
+                            let timeAsyncResult = closure_2_1(initialGuildId[13]).timeAsync("\u{1F4BE}", "cache: cache_version", async () => closure_2_1(7138).okAsync(closure_1_0));
                             const obj = closure_2_1(initialGuildId[13]);
                           } else {
                             timeAsyncResult = Promise.resolve(true);
@@ -682,7 +682,7 @@ let closure_25 = async function _loadLateLazyCache(arg0) {
                       items[1] = closure_0(initialGuildId[24]).tryLoadAsync(async () => {
                         if (null != closure_1_0) {
                           if (!closure_2_22) {
-                            let timeAsyncResult = closure_2_1(initialGuildId[13]).timeAsync("\u{1F4BE}", "cache: lazy guilds", async () => closure_2_1(7236).getAsync(closure_1_0));
+                            let timeAsyncResult = closure_2_1(initialGuildId[13]).timeAsync("\u{1F4BE}", "cache: lazy guilds", async () => closure_2_1(7134).getAsync(closure_1_0));
                             const obj = closure_2_1(initialGuildId[13]);
                           }
                           return timeAsyncResult;
@@ -692,7 +692,7 @@ let closure_25 = async function _loadLateLazyCache(arg0) {
                       let obj2 = closure_0(initialGuildId[24]);
                       items[2] = closure_0(initialGuildId[24]).tryLoadAsync(async () => {
                         if (null != closure_1_0) {
-                          let timeAsyncResult = closure_2_1(initialGuildId[13]).timeAsync("\u{1F4BE}", "cache: basic_channels", async () => closure_2_1(7234).getAsync(closure_1_0));
+                          let timeAsyncResult = closure_2_1(initialGuildId[13]).timeAsync("\u{1F4BE}", "cache: basic_channels", async () => closure_2_1(7132).getAsync(closure_1_0));
                           const obj2 = closure_2_1(initialGuildId[13]);
                         } else {
                           const obj = { all: [], stale: [], channels: [] };
@@ -884,7 +884,7 @@ let closure_25 = async function _loadLateLazyCache(arg0) {
           }
         });
         c7 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp20) {
       c7 = tmp;
@@ -899,7 +899,7 @@ function resumeFluxAndSocket(arg0) {
   const Emitter = initializeDefault.Emitter;
   Emitter.batched(() => {
     try {
-      f128111();
+      f154159();
       dispatcher = dispatcher.dispatcher;
       if (dispatcher.hasStuffToDispatchNow()) {
         c2 = true;
@@ -926,8 +926,8 @@ function resumeFluxAndSocket(arg0) {
       const obj2 = { type: "RESET_SOCKET", args: null };
       const obj3 = { error: tmp19, action: "LazyCache" };
       obj2.args = obj3;
-      closure_2_1(573).dispatch(obj2);
-      const obj = closure_2_1(573);
+      closure_2_1(584).dispatch(obj2);
+      const obj = closure_2_1(584);
     }
   });
   if (!dependencyMap) {
@@ -935,7 +935,7 @@ function resumeFluxAndSocket(arg0) {
     loadLazyCache.recordEnd();
   }
 }
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ MAX_MESSAGES_PER_CHANNEL: closure_9, CACHE_STORE_KEY: c10, CACHE_STORE_LAZY_KEY: closure_11, CACHE_STORE_CHANNELS_LAZY_KEY: closure_12 } = Constants);
 let closure_13 = new LoggerDefault("CacheStore");
 let c14 = false;
@@ -1000,7 +1000,7 @@ prototype["loadCacheAsync"] = function loadCacheAsync(arg0, arg1) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -1130,13 +1130,13 @@ prototype["loadCacheAsync"] = function loadCacheAsync(arg0, arg1) {
                 c5 = 1;
                 const obj11 = {
                   value: (function dontLoadLateLazyCache() {
-                                const f128111 = () => closure_1(_true[23]).dispatch({ type: "CACHE_LOADED_LAZY_NO_CACHE" });
+                                const f154159 = () => closure_1(_true[23]).dispatch({ type: "CACHE_LOADED_LAZY_NO_CACHE" });
                                 const socket = closure_5.getSocket();
                                 dependencyMap = false;
                                 const Emitter = socket(504).Emitter;
                                 Emitter.batched(() => {
                                   try {
-                                    f128111();
+                                    f154159();
                                     dispatcher = dispatcher.dispatcher;
                                     if (dispatcher.hasStuffToDispatchNow()) {
                                       c2 = true;
@@ -1163,8 +1163,8 @@ prototype["loadCacheAsync"] = function loadCacheAsync(arg0, arg1) {
                                     const obj2 = { type: "RESET_SOCKET", args: null };
                                     const obj3 = { error: tmp19, action: "LazyCache" };
                                     obj2.args = obj3;
-                                    closure_2_1(573).dispatch(obj2);
-                                    const obj = closure_2_1(573);
+                                    closure_2_1(584).dispatch(obj2);
+                                    const obj = closure_2_1(584);
                                   }
                                 });
                                 if (!dependencyMap) {
@@ -1240,9 +1240,9 @@ const cacheStoreClass = new CacheStoreClass(DispatcherDefault, {
     closure_16 = Date.now();
     c17 = true;
     const Storage = Storage4.Storage;
-    Storage.remove(closure_1_10);
+    Storage.remove(v65535);
     const Storage2 = Storage4.Storage;
-    Storage2.remove(closure_1_12);
+    Storage2.remove(__initData);
     const Storage3 = Storage4.Storage;
     Storage3.remove(closure_1_11);
   }

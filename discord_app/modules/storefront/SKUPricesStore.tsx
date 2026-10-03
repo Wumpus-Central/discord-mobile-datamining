@@ -1,10 +1,10 @@
-// === Module 6840: SKUPricesStore ===
+// === Module 6733: SKUPricesStore ===
 
-// Module 6840 (SKUPricesStore)
+// Module 6733 (SKUPricesStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import GlobalUtils from "GlobalUtils" /* 1370 */;
-import LocaleStore from "LocaleStore" /* 2111 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import GlobalUtils from "GlobalUtils" /* 1375 */;
+import LocaleStore from "LocaleStore" /* 2116 */;
 
 require = fn;
 function resetStoreState() {

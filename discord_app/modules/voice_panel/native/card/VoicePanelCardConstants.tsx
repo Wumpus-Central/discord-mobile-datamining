@@ -1,7 +1,7 @@
-// === Module 11968: VoicePanelCardConstants ===
+// === Module 11905: VoicePanelCardConstants ===
 
-// Module 11968 (VoicePanelCardConstants)
-import nativeDefault from "native" /* 576 */;
+// Module 11905 (VoicePanelCardConstants)
+import nativeDefault from "native" /* 587 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/voice_panel/native/card/VoicePanelCardConstants.tsx");

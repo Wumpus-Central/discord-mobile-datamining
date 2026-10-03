@@ -1,6 +1,6 @@
-// === Module 4866: CallConstants ===
+// === Module 4911: CallConstants ===
 
-// Module 4866 (CallConstants)
+// Module 4911 (CallConstants)
 import size from "module_2" /* 2 */;
 
 const ParticipantTypes = { STREAM: 0, [0]: "STREAM", HIDDEN_STREAM: 1, [1]: "HIDDEN_STREAM", USER: 2, [2]: "USER", ACTIVITY: 3, [3]: "ACTIVITY" };
@@ -12,16 +12,16 @@ export const ContextMenuTileTypes = { STREAM: "STREAM", USER: "USER", ACTIVITY: 
 export const ParticipantSelectionTypes = { NONE: "NONE", AUTO: "AUTO" };
 export const VoicePlatforms = { DESKTOP: 0, [0]: "DESKTOP", MOBILE: 1, [1]: "MOBILE", XBOX: 2, [2]: "XBOX", PLAYSTATION: 3, [3]: "PLAYSTATION", QUEST: 4, [4]: "QUEST" };
 export const CallMenuEntrypoint = { CONTEXT_MENU: "Context Menu", THREE_DOT: "Three-Dot", CARET: "Caret", OTHER_BUTTON: "Other Button" };
-export const isStreamParticipant = function isStreamParticipant(selectedParticipant) {
+export const isStreamParticipant = function isStreamParticipant(stateFromStores) {
   let type;
-  if (selectedParticipant != null) {
-    type = selectedParticipant.type;
+  if (stateFromStores != null) {
+    type = stateFromStores.type;
   }
   let tmp3 = type === obj.STREAM;
   if (!tmp3) {
     let type1;
-    if (selectedParticipant != null) {
-      type1 = selectedParticipant.type;
+    if (stateFromStores != null) {
+      type1 = stateFromStores.type;
     }
     tmp3 = type1 === tmp2.HIDDEN_STREAM;
   }

@@ -1,7 +1,7 @@
-// === Module 12988: getHeaderTextForInvite ===
+// === Module 13047: getHeaderTextForInvite ===
 
-// Module 12988 (getHeaderTextForInvite)
-import util from "util" /* 1115 */;
+// Module 13047 (getHeaderTextForInvite)
+import util from "util" /* 1126 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/getHeaderTextForInvite.tsx");

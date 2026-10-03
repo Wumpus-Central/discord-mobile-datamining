@@ -1,21 +1,53 @@
-// === Module 16695: useSmartSearchStatus ===
+// === Module 16783: useSmartSearchStatus ===
 
-// Module 16695 (useSmartSearchStatus)
-import SmartSearchResultsStoreDefault from "SmartSearchResultsStore" /* 12057 */;
-import SmartSearchTypes from "SmartSearchTypes" /* 12059 */;
-import SmartSearchUtils from "SmartSearchUtils" /* 12060 */;
+// Module 16783 (useSmartSearchStatus)
+import SmartSearchResultsStoreDefault from "SmartSearchResultsStore" /* 11987 */;
+import SmartSearchTypes from "SmartSearchTypes" /* 11989 */;
+import SmartSearchUtils from "SmartSearchUtils" /* 11997 */;
 
 const require = globalThis.__r;
 
 require = fn;
 SmartSearchResultsStoreDefault;
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/intelligence_layer/search/native/useSmartSearchStatus.tsx");
 
-export const useSmartSearchStatus = function useSmartSearchStatus(memo) {
-  _require = memo;
+export const useSmartSearchStatus = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  _require = arg0;
+  const cResult = require("c").c(4);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [SmartSearchResultsStore];
+    cResult[0] = items;
+    let first = items;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] !== arg0) {
+    const fn = function u() {
+      if (null == closure_0) {
+        let NOT_QUALIFIED = SmartSearchTypes.SmartSearchStatus.NOT_QUALIFIED;
+      } else {
+        NOT_QUALIFIED = SmartSearchUtils.getSmartSearchStatus(tmp, SmartSearchResultsStore);
+      }
+      return NOT_QUALIFIED;
+    };
+    const items1 = [arg0];
+    cResult[1] = arg0;
+    cResult[2] = fn;
+    cResult[3] = items1;
+    let tmp7 = items1;
+    let tmp6 = fn;
+  } else {
+    tmp6 = cResult[2];
+    tmp7 = cResult[3];
+  }
+  let obj = require("c");
+  return require("initialize").useStateFromStoresObject(first, tmp6, tmp7);
+}) : ((arg0) => {
+  _require = arg0;
   const items = [SmartSearchResultsStore];
-  const items1 = [memo];
+  const items1 = [arg0];
   return require("initialize").useStateFromStoresObject(items, () => {
     if (null == closure_0) {
       let NOT_QUALIFIED = SmartSearchTypes.SmartSearchStatus.NOT_QUALIFIED;
@@ -24,4 +56,4 @@ export const useSmartSearchStatus = function useSmartSearchStatus(memo) {
     }
     return NOT_QUALIFIED;
   }, items1);
-};
+});

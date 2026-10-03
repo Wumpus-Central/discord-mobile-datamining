@@ -1,19 +1,70 @@
-// === Module 16815: usePostableChannelCount ===
+// === Module 16903: usePostableChannelCount ===
 
-// Module 16815 (usePostableChannelCount)
-import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
-import GuildChannelStore from "GuildChannelStore" /* 4496 */;
-import PermissionStore from "PermissionStore" /* 4498 */;
+// Module 16903 (usePostableChannelCount)
+import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
+import GuildChannelStore from "GuildChannelStore" /* 4507 */;
+import PermissionStore from "PermissionStore" /* 4509 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-let closure_4 = fn(4496).GUILD_SELECTABLE_CHANNELS_KEY;
-const Permissions = fn(1074).Permissions;
+let closure_4 = fn(4507).GUILD_SELECTABLE_CHANNELS_KEY;
+const Permissions = fn(1085).Permissions;
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild/usePostableChannelCount.tsx");
 
-export default function useSendMessageChannelCount(arg0) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  _require = arg0;
+  const cResult = require("c").c(7);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    let items = [GuildChannelStore];
+    cResult[0] = items;
+    let first = items;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] !== arg0) {
+    const fn = function u() {
+      let items = GuildChannelStore.getChannels(closure_0)[closure_4];
+      if (items == null) {
+        items = [];
+      }
+      return items;
+    };
+    const items1 = [arg0];
+    cResult[1] = arg0;
+    cResult[2] = fn;
+    cResult[3] = items1;
+    let tmp7 = items1;
+    let tmp6 = fn;
+  } else {
+    tmp6 = cResult[2];
+    tmp7 = cResult[3];
+  }
+  const obj = require("c");
+  const stateFromStores = require("initialize").useStateFromStores(first, tmp6, tmp7);
+  if (0 === stateFromStores.length) {
+    return 0;
+  } else if (cResult[4] !== stateFromStores) {
+    const _Symbol = Symbol;
+    if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
+      const fn2 = function h(channel) {
+        return PermissionStore.can(BigFlagUtilsAll.combine(constants.SEND_MESSAGES, constants.VIEW_CHANNEL), channel.channel);
+      };
+      cResult[6] = fn2;
+      let tmp8 = fn2;
+    } else {
+      tmp8 = cResult[6];
+    }
+    const found = stateFromStores.filter(tmp8);
+    cResult[4] = stateFromStores;
+    cResult[5] = found;
+  } else {
+    return cResult[5].length;
+  }
+  const tmpResult = require("initialize");
+}) : ((arg0) => {
   _require = arg0;
   let items = [GuildChannelStore];
   const items1 = [arg0];
@@ -29,4 +80,4 @@ export default function useSendMessageChannelCount(arg0) {
     num = stateFromStores.filter((channel) => PermissionStore.can(BigFlagUtilsAll.combine(constants.SEND_MESSAGES, constants.VIEW_CHANNEL), channel.channel)).length;
   }
   return num;
-};
+});

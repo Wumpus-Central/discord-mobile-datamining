@@ -1,15 +1,15 @@
-// === Module 8501: collectibles/CollectiblesUtils ===
+// === Module 8506: collectibles/CollectiblesUtils ===
 
-// Module 8501 (collectibles/CollectiblesUtils)
-import Constants from "Constants" /* 1074 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4517 */;
-import BillingPlatformUtils from "BillingPlatformUtils" /* 4530 */;
-import PriceUtils from "PriceUtils" /* 6842 */;
-import IAPStoreDefault from "IAPStore" /* 6845 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7161 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7162 */;
-import types from "types" /* 7823 */;
-import _modDef8502 from "module_8502" /* 8502 */;
+// Module 8506 (collectibles/CollectiblesUtils)
+import Constants from "Constants" /* 1085 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4528 */;
+import BillingPlatformUtils from "BillingPlatformUtils" /* 4541 */;
+import PriceUtils from "PriceUtils" /* 6736 */;
+import IAPStoreDefault from "IAPStore" /* 6739 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7064 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7065 */;
+import types from "types" /* 7867 */;
+import _modDef8507 from "module_8507" /* 8507 */;
 import size from "module_2" /* 2 */;
 
 function hasAtLeastOneGPlaySynced(nextResult) {
@@ -150,17 +150,17 @@ export const getFormattedPriceForCollectiblesProduct = function getFormattedPric
     obj = BillingPlatformUtils;
   }
 };
-export const extractPriceByPurchaseTypes = function extractPriceByPurchaseTypes(googleSkuIds, DEFAULT) {
+export const extractPriceByPurchaseTypes = function extractPriceByPurchaseTypes(googleSkuIds, defaultPriceSetAssignmentPurchaseType) {
   if (obj.isGooglePlayBillingSupported()) {
-    if (DEFAULT !== closure_3.MOBILE) {
-      if (DEFAULT !== closure_3.MOBILE_PREMIUM_TIER_2) {
+    if (defaultPriceSetAssignmentPurchaseType !== closure_3.MOBILE) {
+      if (defaultPriceSetAssignmentPurchaseType !== closure_3.MOBILE_PREMIUM_TIER_2) {
         return null;
       }
     }
     googleSkuIds = googleSkuIds.googleSkuIds;
     let tmp5;
     if (googleSkuIds != null) {
-      tmp5 = googleSkuIds[DEFAULT];
+      tmp5 = googleSkuIds[defaultPriceSetAssignmentPurchaseType];
     }
     const product = IAPStoreDefault.getProduct(tmp5);
     let tmp7;
@@ -171,16 +171,16 @@ export const extractPriceByPurchaseTypes = function extractPriceByPurchaseTypes(
     }
     return tmp7;
   } else {
-    return CollectiblesUtils.extractPriceByPurchaseTypes(googleSkuIds, DEFAULT);
+    return CollectiblesUtils.extractPriceByPurchaseTypes(googleSkuIds, defaultPriceSetAssignmentPurchaseType);
   }
   obj = BillingPlatformUtils;
 };
-export const getCollectibleGoogleSkuId = function getCollectibleGoogleSkuId(product, stateFromStores) {
+export const getCollectibleGoogleSkuId = function getCollectibleGoogleSkuId(cResult, stateFromStores) {
   if (null == stateFromStores) {
     return null;
   } else {
     const obj = PremiumUtilsDefault;
-    const googleSkuIds = product.googleSkuIds;
+    const googleSkuIds = cResult.googleSkuIds;
     let tmp5;
     if (googleSkuIds != null) {
       tmp5 = googleSkuIds[obj.canUseShopDiscounts(obj, stateFromStores) ? closure_3.MOBILE_PREMIUM_TIER_2 : closure_3.MOBILE];
@@ -329,5 +329,5 @@ export const filterHiddenCategories = function filterHiddenCategories(arr) {
   });
 };
 export const createOrbProfileBadge = function createOrbProfileBadge() {
-  return { id: types.OrbBadges.ORB_PROFILE_BADGE, icon: types.OrbBadges.ORB_PROFILE_BADGE, iconSrc: _modDef8502, description: "", isPreviewMode: true };
+  return { id: types.OrbBadges.ORB_PROFILE_BADGE, icon: types.OrbBadges.ORB_PROFILE_BADGE, iconSrc: _modDef8507, description: "", isPreviewMode: true };
 };

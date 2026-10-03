@@ -1,13 +1,13 @@
-// === Module 16403: NavTTISurfaceContext ===
+// === Module 16477: NavTTISurfaceContext ===
 
-// Module 16403 (NavTTISurfaceContext)
+// Module 16477 (NavTTISurfaceContext)
 import noop from "module_19" /* 19 */;
 
 const context = noop.createContext(null);
+let ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/tti_analytics/native/navigation/NavTTISurfaceContext.tsx");
+const result1 = size.fileFinishedImporting("modules/tti_analytics/native/navigation/NavTTISurfaceContext.tsx");
 
 export const NavTTISurfaceContext = context;
-export const useNavTTISurface = function useNavTTISurface() {
-  return noop.useContext(context);
-};
+export const useNavTTISurface = () => noop.useContext(context);

@@ -1,14 +1,14 @@
-// === Module 5632: FileUtils ===
+// === Module 7270: FileUtils ===
 
-// Module 5632 (FileUtils)
+// Module 7270 (FileUtils)
 import _modDef12 from "module_12" /* 12 */;
-import util from "util" /* 1115 */;
-import PremiumUtils from "PremiumUtils" /* 4517 */;
-import FileSizeUtils from "FileSizeUtils" /* 5271 */;
-import UploadUtils from "UploadUtils" /* 5627 */;
-import noConflictDefault from "noConflict" /* 5633 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import UserStore from "UserStore" /* 1372 */;
+import util from "util" /* 1126 */;
+import PremiumUtils from "PremiumUtils" /* 4528 */;
+import FileSizeUtils from "FileSizeUtils" /* 5317 */;
+import UploadUtils from "UploadUtils" /* 7243 */;
+import noConflictDefault from "noConflict" /* 7271 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import UserStore from "UserStore" /* 1377 */;
 
 const PremiumUtilsDefault = PremiumUtils;
 
@@ -21,9 +21,9 @@ function getUploadFileSizeSum(arg0) {
   }
   return num;
 }
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ GuildFeatures, MAX_ATTACHMENT_SIZE: hasOwnProperty } = Constants);
-const PremiumConstants = fn(1374);
+const PremiumConstants = fn(1379);
 const PremiumTypes = PremiumConstants.PremiumTypes;
 let items = [{ reType: /^image\/vnd.adobe.photoshop/, klass: "photoshop" }, { reType: /^image\/svg\+xml/, klass: "webcode" }, { reType: /^image\//, klass: "image" }, { reType: /^video\//, klass: "video" }, { reName: /\.pdf$/, klass: "acrobat" }, { reName: /\.ae/, klass: "ae" }, { reName: /\.sketch$/, klass: "sketch" }, { reName: /\.ai$/, klass: "ai" }, { reName: /\.(?:rar|zip|7z|tar|tar\.gz)$/, klass: "archive" }, { reName: /\.(?:c\+\+|cpp|cc|c|h|hpp|mm|m|json|js|ts|rb|rake|py|asm|fs|pyc|dtd|cgi|bat|rss|java|graphml|idb|lua|o|gml|prl|sls|conf|cmake|make|sln|vbe|cxx|wbf|vbs|r|wml|php|bash|applescript|fcgi|yaml|ex|exs|sh|ml|actionscript)$/, klass: "code" }, { reName: /\.(?:txt|rtf|doc|docx|md|pages|ppt|pptx|pptm|key|log)$/, klass: "document" }, { reName: /\.(?:xls|xlsx|numbers|csv)$/, klass: "spreadsheet" }, { reName: /\.(?:html|xhtml|htm|xml|xsd|css|styl)$/, klass: "webcode" }, { reName: /\.(?:mp3|ogg|opus|wav|aiff|flac)$/, klass: "audio" }];
 const items1 = [GuildFeatures.MAX_FILE_SIZE_100_MB, PremiumConstants.MAX_GUILD_FILE_SIZE_100_MB];
@@ -48,9 +48,9 @@ export const transformNativeFile = function transformNativeFile(filename, arg1) 
   }
   return file;
 };
-export const makeFile = function makeFile(arg0, arg1, type) {
+export const makeFile = function makeFile(arg0, filename, type) {
   items = [arg0];
-  const file = new File(items, arg1, { type });
+  const file = new File(items, filename, { type });
   return file;
 };
 export const classifyFile = function classifyFile(file) {
@@ -85,11 +85,11 @@ export const classifyFile = function classifyFile(file) {
   }
   return str3;
 };
-export const classifyFileName = function classifyFileName(str, arg1) {
+export const classifyFileName = function classifyFileName(fileName, arg1) {
   closure_1 = arg1;
-  str = undefined;
-  if (str != null) {
-    str = str.toLowerCase();
+  let str;
+  if (fileName != null) {
+    str = fileName.toLowerCase();
   }
   if (str == null) {
     str = "";
@@ -117,8 +117,8 @@ export const classifyFileName = function classifyFileName(str, arg1) {
   }
   return str2;
 };
-export const sizeString = function sizeString(currentSize) {
-  return noConflictDefault.filesize(currentSize);
+export const sizeString = function sizeString(size) {
+  return noConflictDefault.filesize(size);
 };
 export const maxFileSize = function maxFileSize(guildId) {
   const currentUser = UserStore.getCurrentUser();
@@ -126,7 +126,7 @@ export const maxFileSize = function maxFileSize(guildId) {
   if (null == guildId) {
     return userMaxFileSize;
   } else {
-    const guild = GuildStore.getGuild(guildId);
+    guild = GuildStore.getGuild(guildId);
     if (null != guild) {
       let reduced = items2.reduce((acc, item) => {
         [tmp, tmp2] = item;

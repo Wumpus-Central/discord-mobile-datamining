@@ -1,10 +1,10 @@
-// === Module 7318: SidebarVisibilityMethodStore ===
+// === Module 7216: SidebarVisibilityMethodStore ===
 
-// Module 7318 (SidebarVisibilityMethodStore)
-import module_560 from "module_560" /* 560 */;
+// Module 7216 (SidebarVisibilityMethodStore)
+import module_570 from "module_570" /* 570 */;
 import size from "module_2" /* 2 */;
 
-const SidebarVisibilityMethodStore = module_560.create(() => ({}));
+const SidebarVisibilityMethodStore = module_570.create(() => ({}));
 const result = size.fileFinishedImporting("modules/guild_sidebar/SidebarVisibilityMethodStore.tsx");
 
 export { SidebarVisibilityMethodStore };

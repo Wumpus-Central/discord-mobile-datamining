@@ -1,10 +1,10 @@
-// === Module 5634: uploader/UploadUtils ===
+// === Module 7272: uploader/UploadUtils ===
 
-// Module 5634 (uploader/UploadUtils)
-import HTTPUtils from "HTTPUtils" /* 1271 */;
-import js_shim_shim from "js_shim/shim" /* 1350 */;
-import Upload from "Upload" /* 5626 */;
-import AttachmentFile from "AttachmentFile" /* 5635 */;
+// Module 7272 (uploader/UploadUtils)
+import js_shim_shim from "js_shim/shim" /* 562 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import UploadPlatform from "UploadPlatform" /* 7247 */;
+import AttachmentFile from "AttachmentFile" /* 7273 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("lib/uploader/UploadUtils.tsx");
@@ -80,7 +80,7 @@ LibdiscoreHttpClient.prototype["doUpload"] = function doUpload(body, arg1) {
 
 export const doesImageMatchUpload = function doesImageMatchUpload(image, id) {
   if (id.id !== image.uri) {
-    if (id.item.platform === Upload.UploadPlatform.REACT_NATIVE) {
+    if (id.item.platform === UploadPlatform.UploadPlatform.REACT_NATIVE) {
       const item = id.item;
       const filename = image.filename;
       let tmp3 = item.originalUri === image.uri;
@@ -114,7 +114,7 @@ export const calculateProgress = function calculateProgress(loaded, currentSize)
 };
 export { DefaultHttpClient };
 export const canUploadNatively = function canUploadNatively(platform) {
-  let fileIsInAppDirResult = platform.platform === Upload.UploadPlatform.REACT_NATIVE;
+  let fileIsInAppDirResult = platform.platform === UploadPlatform.UploadPlatform.REACT_NATIVE;
   if (fileIsInAppDirResult) {
     fileIsInAppDirResult = null != platform.uri;
   }

@@ -1,13 +1,13 @@
-// === Module 17404: InteractionModalManager ===
+// === Module 17494: InteractionModalManager ===
 
-// Module 17404 (InteractionModalManager)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import openInteractionIframeModalDefault from "openInteractionIframeModal" /* 17416 */;
-import closeIFrameModalDefault from "closeIFrameModal" /* 17419 */;
+// Module 17494 (InteractionModalManager)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import openInteractionIframeModalDefault from "openInteractionIframeModal" /* 17506 */;
+import closeIFrameModalDefault from "closeIFrameModal" /* 17509 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 5072 */;
-import InteractionStore from "InteractionStore" /* 7556 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6725 */;
+import ApplicationStore from "ApplicationStore" /* 5118 */;
+import InteractionStore from "InteractionStore" /* 7600 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
 
 let require = fn;
 let closure_8 = async function _handleInteractionModalCreate(arg0) {
@@ -21,7 +21,7 @@ let closure_8 = async function _handleInteractionModalCreate(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -106,7 +106,7 @@ let closure_8 = async function _handleInteractionModalCreate(arg0) {
           let obj = closure_130_1(closure_130_2[9]);
         }
         c4 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp19) {
       c4 = tmp;
@@ -114,7 +114,7 @@ let closure_8 = async function _handleInteractionModalCreate(arg0) {
     }
   }
 };
-const AnalyticEvents = fn(1074).AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 const interaction_iframe_modal = "interaction_iframe_modal";
 const prototype = function InteractionModalManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

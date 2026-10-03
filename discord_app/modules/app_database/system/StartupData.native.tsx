@@ -1,7 +1,7 @@
-// === Module 2091: StartupData ===
+// === Module 2096: StartupData ===
 
-// Module 2091 (StartupData)
-import NativeAppDatabaseModuleDefault from "NativeAppDatabaseModule" /* 2092 */;
+// Module 2096 (StartupData)
+import NativeAppDatabaseModuleDefault from "NativeAppDatabaseModule" /* 2097 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/app_database/system/StartupData.native.tsx");

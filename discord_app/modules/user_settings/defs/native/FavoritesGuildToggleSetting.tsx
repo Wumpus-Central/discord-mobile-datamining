@@ -1,19 +1,19 @@
-// === Module 15083: FavoritesGuildToggleSetting ===
+// === Module 15140: FavoritesGuildToggleSetting ===
 
-// Module 15083 (FavoritesGuildToggleSetting)
-import util from "util" /* 1115 */;
-import _modDef3360 from "module_3360" /* 3360 */;
-import SettingsConstants from "SettingsConstants" /* 7590 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 9877 */;
-import FavoritesHooks from "FavoritesHooks" /* 9878 */;
-import useIsFavoritesGuildVisibleDefault from "useIsFavoritesGuildVisible" /* 15084 */;
-import SettingBuilders from "SettingBuilders" /* 11215 */;
+// Module 15140 (FavoritesGuildToggleSetting)
+import util from "util" /* 1126 */;
+import _modDef3367 from "module_3367" /* 3367 */;
+import SettingsConstants from "SettingsConstants" /* 7634 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10035 */;
+import FavoritesHooks from "FavoritesHooks" /* 10036 */;
+import useIsFavoritesGuildVisibleDefault from "useIsFavoritesGuildVisible" /* 15141 */;
+import SettingBuilders from "SettingBuilders" /* 11129 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef3360.OT1NK5);
+    return intl.string(_modDef3367.OT1NK5);
   },
   parent: SettingsConstants.MobileUserSettings.APPEARANCE,
   usePredicate() {

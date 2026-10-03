@@ -1,7 +1,7 @@
-// === Module 15896: MessagesListImplExperiment ===
+// === Module 15970: MessagesListImplExperiment ===
 
-// Module 15896 (MessagesListImplExperiment)
-import ApexExperiment from "ApexExperiment" /* 1435 */;
+// Module 15970 (MessagesListImplExperiment)
+import ApexExperiment from "ApexExperiment" /* 1440 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", name: "2026-06-messages-list-impl", defaultConfig: { list: "fastest", recycleItems: false }, variations: null };

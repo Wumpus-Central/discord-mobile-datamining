@@ -1,8 +1,8 @@
-// === Module 7141: ChannelListVoiceCategoryStore ===
+// === Module 7044: ChannelListVoiceCategoryStore ===
 
-// Module 7141 (ChannelListVoiceCategoryStore)
+// Module 7044 (ChannelListVoiceCategoryStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
 
 function handleChange(expand) {
   if (expand.expand) {

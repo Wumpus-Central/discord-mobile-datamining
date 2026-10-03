@@ -1,6 +1,6 @@
-// === Module 11819: ApplicationCollectionFlags ===
+// === Module 11750: ApplicationCollectionFlags ===
 
-// Module 11819 (ApplicationCollectionFlags)
+// Module 11750 (ApplicationCollectionFlags)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ApplicationCollectionFlags.tsx");

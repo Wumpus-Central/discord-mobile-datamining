@@ -1,15 +1,82 @@
-// === Module 11396: ForwardStaffToNonStaffWarningModal ===
+// === Module 11313: ForwardStaffToNonStaffWarningModal ===
 
-// Module 11396 (ForwardStaffToNonStaffWarningModal)
-import util from "util" /* 1115 */;
-import AlertModal from "AlertModal" /* 5393 */;
+// Module 11313 (ForwardStaffToNonStaffWarningModal)
+import c from "c" /* 576 */;
+import util from "util" /* 1126 */;
+import AlertModal from "AlertModal" /* 5713 */;
 import jsxProd from "jsxProd" /* 21 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 ({ jsx: c2, Fragment: c3, jsxs: closure_4 } = jsxProd);
 const result = size.fileFinishedImporting("modules/forwarding/native/ForwardStaffToNonStaffWarningModal.tsx");
 
-export default function ForwardStaffToNonStaffWarningModal(arg0) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(11);
+  ({ onConfirm, onBack } = arg0);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const intl = util.intl;
+    const stringResult = intl.string(util.t.YrV3I9);
+    const intl2 = util.intl;
+    const stringResult1 = intl2.string(util.t.MXSMtl);
+    cResult[0] = stringResult;
+    cResult[1] = stringResult1;
+    tmp4 = stringResult;
+    tmp5 = stringResult1;
+  } else {
+    [tmp4, tmp5] = cResult;
+  }
+  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+    const intl3 = util.intl;
+    const stringResult2 = intl3.string(util.t.X7eUJq);
+    cResult[2] = stringResult2;
+    let tmp8 = stringResult2;
+  } else {
+    tmp8 = cResult[2];
+  }
+  if (cResult[3] !== onConfirm) {
+    const obj2 = { text: tmp8, onPress: onConfirm };
+    const tmp12 = React2(AlertModal.AlertActionButton, obj2, "confirm");
+    cResult[3] = onConfirm;
+    cResult[4] = tmp12;
+    let tmp10 = tmp12;
+  } else {
+    tmp10 = cResult[4];
+  }
+  if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
+    const intl4 = util.intl;
+    const stringResult3 = intl4.string(util.t["13/7kX"]);
+    cResult[5] = stringResult3;
+    let tmp13 = stringResult3;
+  } else {
+    tmp13 = cResult[5];
+  }
+  if (cResult[6] !== onBack) {
+    const obj3 = { variant: "secondary", text: tmp13, onPress: onBack };
+    const tmp17 = React2(AlertModal.AlertActionButton, obj3, "back");
+    cResult[6] = onBack;
+    cResult[7] = tmp17;
+    let tmp15 = tmp17;
+  } else {
+    tmp15 = cResult[7];
+  }
+  if (cResult[8] === tmp10) {
+    if (cResult[9] === tmp15) {
+      let tmp18 = cResult[10];
+    }
+    return tmp18;
+  }
+  const obj4 = { title: tmp4, content: tmp5, actions: null };
+  const obj5 = { children: null };
+  const items = [tmp10, tmp15];
+  obj5.children = items;
+  obj4.actions = React4(React3, obj5);
+  const tmp19 = React2(AlertModal.AlertModal, obj4);
+  cResult[8] = tmp10;
+  cResult[9] = tmp15;
+  cResult[10] = tmp19;
+  tmp18 = tmp19;
+}) : ((arg0) => {
   ({ onConfirm, onBack } = arg0);
   const obj = { title: null, content: null, actions: null };
   const intl = util.intl;
@@ -30,4 +97,4 @@ export default function ForwardStaffToNonStaffWarningModal(arg0) {
   obj2.children = items;
   obj.actions = React4(React3, obj2);
   return React2(AlertModal.AlertModal, obj);
-};
+});

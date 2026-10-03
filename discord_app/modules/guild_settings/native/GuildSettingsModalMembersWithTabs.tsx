@@ -1,33 +1,464 @@
-// === Module 16447: GuildSettingsModalMembersWithTabs ===
+// === Module 16521: GuildSettingsModalMembersWithTabs ===
 
-// Module 16447 (GuildSettingsModalMembersWithTabs)
-import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1115 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4687 */;
-import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 6870 */;
-import ContextMenu from "ContextMenu" /* 7531 */;
-import MemberSafetyPageTypes from "MemberSafetyPageTypes" /* 16448 */;
-import GuildSettingsModalMembersDefault from "GuildSettingsModalMembers" /* 16449 */;
-import showMembersManagementActionSheet from "showMembersManagementActionSheet" /* 16450 */;
-import GuildSettingsModalMemberApplicationsDefault from "GuildSettingsModalMemberApplications" /* 16455 */;
+// Module 16521 (GuildSettingsModalMembersWithTabs)
+import nativeDefault from "native" /* 587 */;
+import util from "util" /* 1126 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4702 */;
+import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 6768 */;
+import ContextMenu from "ContextMenu" /* 7579 */;
+import MemberSafetyPageTypes from "MemberSafetyPageTypes" /* 16522 */;
+import GuildSettingsModalMembersDefault from "GuildSettingsModalMembers" /* 16523 */;
+import showMembersManagementActionSheet from "showMembersManagementActionSheet" /* 16525 */;
+import GuildSettingsModalMemberApplicationsDefault from "GuildSettingsModalMemberApplications" /* 16530 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import PermissionStore from "PermissionStore" /* 4498 */;
-import UserStore from "UserStore" /* 1372 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import PermissionStore from "PermissionStore" /* 4509 */;
+import UserStore from "UserStore" /* 1377 */;
+
+const require = globalThis.__r;
 
 require = fn;
+let closure_3 = ["ref"];
 const View = fn(17).View;
 const jsxProd = fn(21);
-({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4845);
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+const createStyles = fn(4890);
 let obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, content: { flex: 1 }, tabContainer: { marginTop: 12, minHeight: 32 } };
-let closure_11 = createStyles.createStyles(obj);
+let closure_13 = createStyles.createStyles(obj);
+const ReactCompilerGating = fn(558);
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalMembersWithTabs.tsx");
 
-export default noop.memo((guildId) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+  const cResult = guildId(stateFromStores[11]).c(59);
+  guildId = guildId.guildId;
+  let obj = guildId(stateFromStores[11]);
+  [r10017, importDefault] = noop.useState(0);
+  const tmp4 = _slicedToArray(noop.useState(0), 2);
+  let num = guildId(stateFromStores[12]).useSubmittedGuildJoinRequestTotal({ guildId });
+  if (num == null) {
+    num = 0;
+  }
+  closure_13();
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [GuildStore];
+    cResult[0] = items;
+    let first = items;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] !== guildId) {
+    const fn = function y() {
+      return GuildStore.getGuild(guildId);
+    };
+    const items1 = [guildId];
+    cResult[1] = guildId;
+    cResult[2] = fn;
+    cResult[3] = items1;
+    let tmp9 = items1;
+    let tmp8 = fn;
+  } else {
+    tmp8 = cResult[2];
+    tmp9 = cResult[3];
+  }
+  const obj2 = guildId(stateFromStores[12]);
+  stateFromStores = guildId(stateFromStores[13]).useStateFromStores(first, tmp8, tmp9);
+  if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+    const items2 = [PermissionStore, UserStore];
+    cResult[4] = items2;
+    let tmp11 = items2;
+  } else {
+    tmp11 = cResult[4];
+  }
+  if (cResult[5] !== stateFromStores) {
+    class G {
+      constructor() {
+        canPruneGuildMembersResult = null != closure_2;
+        if (canPruneGuildMembersResult) {
+          tmp3 = closure_0;
+          tmp4 = closure_2;
+          obj = closure_0(closure_2[14]);
+          tmp5 = closure_10;
+          tmp6 = closure_9;
+          canPruneGuildMembersResult = obj.canPruneGuildMembers(tmp, closure_10.getCurrentUser(), closure_9);
+        }
+        return canPruneGuildMembersResult;
+      }
+    }
+    const items3 = [stateFromStores];
+    cResult[5] = stateFromStores;
+    cResult[6] = G;
+    cResult[7] = items3;
+    let tmp15 = items3;
+  } else {
+    class G {
+      constructor() {
+        canPruneGuildMembersResult = null != closure_2;
+        if (canPruneGuildMembersResult) {
+          tmp3 = closure_0;
+          tmp4 = closure_2;
+          obj = closure_0(closure_2[14]);
+          tmp5 = closure_10;
+          tmp6 = closure_9;
+          canPruneGuildMembersResult = obj.canPruneGuildMembers(tmp, closure_10.getCurrentUser(), closure_9);
+        }
+        return canPruneGuildMembersResult;
+      }
+    }
+    tmp15 = cResult[7];
+  }
+  const tmpResult = guildId(stateFromStores[13]);
+  const stateFromStores1 = guildId(stateFromStores[13]).useStateFromStores(tmp11, G, tmp15);
+  if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
+    class G {
+      constructor() {
+        canPruneGuildMembersResult = null != closure_2;
+        if (canPruneGuildMembersResult) {
+          tmp3 = closure_0;
+          tmp4 = closure_2;
+          obj = closure_0(closure_2[14]);
+          tmp5 = closure_10;
+          tmp6 = closure_9;
+          canPruneGuildMembersResult = obj.canPruneGuildMembers(tmp, closure_10.getCurrentUser(), closure_9);
+        }
+        return canPruneGuildMembersResult;
+      }
+    }
+    const stringResult = obj5.string(tmp(tmp2[15]).t.NOOm1Z);
+    cResult[8] = stringResult;
+    const tmp17 = stringResult;
+  } else {
+    class G {
+      constructor() {
+        canPruneGuildMembersResult = null != closure_2;
+        if (canPruneGuildMembersResult) {
+          tmp3 = closure_0;
+          tmp4 = closure_2;
+          obj = closure_0(closure_2[14]);
+          tmp5 = closure_10;
+          tmp6 = closure_9;
+          canPruneGuildMembersResult = obj.canPruneGuildMembers(tmp, closure_10.getCurrentUser(), closure_9);
+        }
+        return canPruneGuildMembersResult;
+      }
+    }
+  }
+  if (cResult[9] !== guildId) {
+    class G {
+      constructor() {
+        canPruneGuildMembersResult = null != closure_2;
+        if (canPruneGuildMembersResult) {
+          tmp3 = closure_0;
+          tmp4 = closure_2;
+          obj = closure_0(closure_2[14]);
+          tmp5 = closure_10;
+          tmp6 = closure_9;
+          canPruneGuildMembersResult = obj.canPruneGuildMembers(tmp, closure_10.getCurrentUser(), closure_9);
+        }
+        return canPruneGuildMembersResult;
+      }
+    }
+    tmp20[0] = tmp17;
+    tmp20[1] = tmp(tmp2[16]).MemberSafetyPageTab.ALL_MEMBERS;
+    const obj3 = { guildId };
+    tmp20[2] = closure_11(require("GuildSettingsModalMembers"), obj3);
+    cResult[9] = guildId;
+    cResult[10] = tmp20;
+  } else {
+    class G {
+      constructor() {
+        canPruneGuildMembersResult = null != closure_2;
+        if (canPruneGuildMembersResult) {
+          tmp3 = closure_0;
+          tmp4 = closure_2;
+          obj = closure_0(closure_2[14]);
+          tmp5 = closure_10;
+          tmp6 = closure_9;
+          canPruneGuildMembersResult = obj.canPruneGuildMembers(tmp, closure_10.getCurrentUser(), closure_9);
+        }
+        return canPruneGuildMembersResult;
+      }
+    }
+  }
+  if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
+    class G {
+      constructor() {
+        canPruneGuildMembersResult = null != closure_2;
+        if (canPruneGuildMembersResult) {
+          tmp3 = closure_0;
+          tmp4 = closure_2;
+          obj = closure_0(closure_2[14]);
+          tmp5 = closure_10;
+          tmp6 = closure_9;
+          canPruneGuildMembersResult = obj.canPruneGuildMembers(tmp, closure_10.getCurrentUser(), closure_9);
+        }
+        return canPruneGuildMembersResult;
+      }
+    }
+    const stringResult1 = obj7.string(tmp(tmp2[15]).t["4eQVBO"]);
+    cResult[11] = stringResult1;
+    const tmp23 = stringResult1;
+  } else {
+    class G {
+      constructor() {
+        canPruneGuildMembersResult = null != closure_2;
+        if (canPruneGuildMembersResult) {
+          tmp3 = closure_0;
+          tmp4 = closure_2;
+          obj = closure_0(closure_2[14]);
+          tmp5 = closure_10;
+          tmp6 = closure_9;
+          canPruneGuildMembersResult = obj.canPruneGuildMembers(tmp, closure_10.getCurrentUser(), closure_9);
+        }
+        return canPruneGuildMembersResult;
+      }
+    }
+  }
+  if (num > 0) {
+    class G {
+      constructor() {
+        canPruneGuildMembersResult = null != closure_2;
+        if (canPruneGuildMembersResult) {
+          tmp3 = closure_0;
+          tmp4 = closure_2;
+          obj = closure_0(closure_2[14]);
+          tmp5 = closure_10;
+          tmp6 = closure_9;
+          canPruneGuildMembersResult = obj.canPruneGuildMembers(tmp, closure_10.getCurrentUser(), closure_9);
+        }
+        return canPruneGuildMembersResult;
+      }
+    }
+  }
+  if (cResult[12] !== guildId) {
+    class G {
+      constructor() {
+        canPruneGuildMembersResult = null != closure_2;
+        if (canPruneGuildMembersResult) {
+          tmp3 = closure_0;
+          tmp4 = closure_2;
+          obj = closure_0(closure_2[14]);
+          tmp5 = closure_10;
+          tmp6 = closure_9;
+          canPruneGuildMembersResult = obj.canPruneGuildMembers(tmp, closure_10.getCurrentUser(), closure_9);
+        }
+        return canPruneGuildMembersResult;
+      }
+    }
+    const obj4 = { guildId, applicationStatus: tmp(tmp2[19]).GuildJoinRequestApplicationStatuses.SUBMITTED };
+    const tmp29 = closure_11(require("GuildSettingsModalMemberApplications"), obj4);
+    cResult[12] = guildId;
+    cResult[13] = tmp29;
+    const tmp28 = require("GuildSettingsModalMemberApplications");
+  } else {
+    class G {
+      constructor() {
+        canPruneGuildMembersResult = null != closure_2;
+        if (canPruneGuildMembersResult) {
+          tmp3 = closure_0;
+          tmp4 = closure_2;
+          obj = closure_0(closure_2[14]);
+          tmp5 = closure_10;
+          tmp6 = closure_9;
+          canPruneGuildMembersResult = obj.canPruneGuildMembers(tmp, closure_10.getCurrentUser(), closure_9);
+        }
+        return canPruneGuildMembersResult;
+      }
+    }
+  }
+  if (cResult[14] === undefined) {
+    class G {
+      constructor() {
+        canPruneGuildMembersResult = null != closure_2;
+        if (canPruneGuildMembersResult) {
+          tmp3 = closure_0;
+          tmp4 = closure_2;
+          obj = closure_0(closure_2[14]);
+          tmp5 = closure_10;
+          tmp6 = closure_9;
+          canPruneGuildMembersResult = obj.canPruneGuildMembers(tmp, closure_10.getCurrentUser(), closure_9);
+        }
+        return canPruneGuildMembersResult;
+      }
+    }
+    const _Symbol = Symbol;
+    if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
+      class G {
+        constructor() {
+          canPruneGuildMembersResult = null != closure_2;
+          if (canPruneGuildMembersResult) {
+            tmp3 = closure_0;
+            tmp4 = closure_2;
+            obj = closure_0(closure_2[14]);
+            tmp5 = closure_10;
+            tmp6 = closure_9;
+            canPruneGuildMembersResult = obj.canPruneGuildMembers(tmp, closure_10.getCurrentUser(), closure_9);
+          }
+          return canPruneGuildMembersResult;
+        }
+      }
+      const stringResult2 = obj10.string(tmp(tmp2[15]).t.bSZkla);
+      cResult[17] = stringResult2;
+      const tmp31 = stringResult2;
+    } else {
+      class G {
+        constructor() {
+          canPruneGuildMembersResult = null != closure_2;
+          if (canPruneGuildMembersResult) {
+            tmp3 = closure_0;
+            tmp4 = closure_2;
+            obj = closure_0(closure_2[14]);
+            tmp5 = closure_10;
+            tmp6 = closure_9;
+            canPruneGuildMembersResult = obj.canPruneGuildMembers(tmp, closure_10.getCurrentUser(), closure_9);
+          }
+          return canPruneGuildMembersResult;
+        }
+      }
+    }
+    if (cResult[18] !== guildId) {
+      class G {
+        constructor() {
+          canPruneGuildMembersResult = null != closure_2;
+          if (canPruneGuildMembersResult) {
+            tmp3 = closure_0;
+            tmp4 = closure_2;
+            obj = closure_0(closure_2[14]);
+            tmp5 = closure_10;
+            tmp6 = closure_9;
+            canPruneGuildMembersResult = obj.canPruneGuildMembers(tmp, closure_10.getCurrentUser(), closure_9);
+          }
+          return canPruneGuildMembersResult;
+        }
+      }
+      tmp34[0] = tmp31;
+      tmp34[1] = tmp(tmp2[16]).MemberSafetyPageTab.REJECTED;
+      const obj6 = { guildId, applicationStatus: tmp(tmp2[19]).GuildJoinRequestApplicationStatuses.REJECTED };
+      tmp34[2] = closure_11(require("GuildSettingsModalMemberApplications"), obj6);
+      cResult[18] = guildId;
+      cResult[19] = tmp34;
+      const tmp37 = require("GuildSettingsModalMemberApplications");
+    } else {
+      class G {
+        constructor() {
+          canPruneGuildMembersResult = null != closure_2;
+          if (canPruneGuildMembersResult) {
+            tmp3 = closure_0;
+            tmp4 = closure_2;
+            obj = closure_0(closure_2[14]);
+            tmp5 = closure_10;
+            tmp6 = closure_9;
+            canPruneGuildMembersResult = obj.canPruneGuildMembers(tmp, closure_10.getCurrentUser(), closure_9);
+          }
+          return canPruneGuildMembersResult;
+        }
+      }
+    }
+    const _Symbol2 = Symbol;
+    if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
+      class G {
+        constructor() {
+          canPruneGuildMembersResult = null != closure_2;
+          if (canPruneGuildMembersResult) {
+            tmp3 = closure_0;
+            tmp4 = closure_2;
+            obj = closure_0(closure_2[14]);
+            tmp5 = closure_10;
+            tmp6 = closure_9;
+            canPruneGuildMembersResult = obj.canPruneGuildMembers(tmp, closure_10.getCurrentUser(), closure_9);
+          }
+          return canPruneGuildMembersResult;
+        }
+      }
+      const stringResult3 = obj12.string(tmp(tmp2[15]).t.aURgY2);
+      cResult[20] = stringResult3;
+      const tmp38 = stringResult3;
+    } else {
+      class G {
+        constructor() {
+          canPruneGuildMembersResult = null != closure_2;
+          if (canPruneGuildMembersResult) {
+            tmp3 = closure_0;
+            tmp4 = closure_2;
+            obj = closure_0(closure_2[14]);
+            tmp5 = closure_10;
+            tmp6 = closure_9;
+            canPruneGuildMembersResult = obj.canPruneGuildMembers(tmp, closure_10.getCurrentUser(), closure_9);
+          }
+          return canPruneGuildMembersResult;
+        }
+      }
+    }
+    if (cResult[21] !== guildId) {
+      class G {
+        constructor() {
+          canPruneGuildMembersResult = null != closure_2;
+          if (canPruneGuildMembersResult) {
+            tmp3 = closure_0;
+            tmp4 = closure_2;
+            obj = closure_0(closure_2[14]);
+            tmp5 = closure_10;
+            tmp6 = closure_9;
+            canPruneGuildMembersResult = obj.canPruneGuildMembers(tmp, closure_10.getCurrentUser(), closure_9);
+          }
+          return canPruneGuildMembersResult;
+        }
+      }
+      tmp41[0] = tmp38;
+      tmp41[1] = tmp(tmp2[16]).MemberSafetyPageTab.APPROVED;
+      const obj8 = { guildId, applicationStatus: tmp(tmp2[19]).GuildJoinRequestApplicationStatuses.APPROVED };
+      tmp41[2] = closure_11(require("GuildSettingsModalMemberApplications"), obj8);
+      cResult[21] = guildId;
+      cResult[22] = tmp41;
+      const tmp44 = require("GuildSettingsModalMemberApplications");
+    } else {
+      class G {
+        constructor() {
+          canPruneGuildMembersResult = null != closure_2;
+          if (canPruneGuildMembersResult) {
+            tmp3 = closure_0;
+            tmp4 = closure_2;
+            obj = closure_0(closure_2[14]);
+            tmp5 = closure_10;
+            tmp6 = closure_9;
+            canPruneGuildMembersResult = obj.canPruneGuildMembers(tmp, closure_10.getCurrentUser(), closure_9);
+          }
+          return canPruneGuildMembersResult;
+        }
+      }
+    }
+    if (cResult[23] === tmp30) {
+      class G {
+        constructor() {
+          canPruneGuildMembersResult = null != closure_2;
+          if (canPruneGuildMembersResult) {
+            tmp3 = closure_0;
+            tmp4 = closure_2;
+            obj = closure_0(closure_2[14]);
+            tmp5 = closure_10;
+            tmp6 = closure_9;
+            canPruneGuildMembersResult = obj.canPruneGuildMembers(tmp, closure_10.getCurrentUser(), closure_9);
+          }
+          return canPruneGuildMembersResult;
+        }
+      }
+    }
+    const items4 = [tmp20, tmp30, tmp34, tmp41];
+    cResult[23] = tmp30;
+    cResult[24] = tmp34;
+    cResult[25] = tmp41;
+    cResult[26] = tmp20;
+    cResult[27] = items4;
+  }
+  const obj9 = { label: tmp23, id: guildId(stateFromStores[16]).MemberSafetyPageTab.PENDING, count: undefined, page: tmp26 };
+  cResult[14] = undefined;
+  cResult[15] = tmp26;
+  cResult[16] = obj9;
+  const tmpResult2 = guildId(stateFromStores[13]);
+}) : ((guildId) => {
   guildId = guildId.guildId;
   let num;
   let stateFromStores;
@@ -36,21 +467,21 @@ export default noop.memo((guildId) => {
   let callback;
   let callback1;
   let segmentedControlState;
-  let tmp = stateFromStores(stateFromStores1.useState(0), 2);
+  let tmp = navigation(callback.useState(0), 2);
   closure_1 = tmp[1];
-  num = guildId(num[9]).useSubmittedGuildJoinRequestTotal({ guildId });
+  num = guildId(num[12]).useSubmittedGuildJoinRequestTotal({ guildId });
   if (num == null) {
     num = 0;
   }
-  const tmp4 = closure_11();
-  let obj2 = guildId(num[9]);
-  let items = [callback];
+  const tmp4 = closure_13();
+  let obj2 = guildId(num[12]);
+  let items = [segmentedControlState];
   const items1 = [guildId];
-  stateFromStores = guildId(num[10]).useStateFromStores(items, () => GuildStore.getGuild(guildId), items1);
-  let tmp2Result = guildId(num[10]);
-  const items2 = [callback1, segmentedControlState];
+  stateFromStores = guildId(num[13]).useStateFromStores(items, () => GuildStore.getGuild(guildId), items1);
+  let tmp2Result = guildId(num[13]);
+  const items2 = [PermissionStore, UserStore];
   const items3 = [stateFromStores];
-  stateFromStores1 = guildId(num[10]).useStateFromStores(items2, () => {
+  stateFromStores1 = guildId(num[13]).useStateFromStores(items2, () => {
     let canPruneGuildMembersResult = null != stateFromStores;
     if (canPruneGuildMembersResult) {
       canPruneGuildMembersResult = MemberSafetyPermissionsUtils.canPruneGuildMembers(tmp, UserStore.getCurrentUser(), PermissionStore);
@@ -63,7 +494,7 @@ export default noop.memo((guildId) => {
     const intl = util.intl;
     obj.label = intl.string(util.t.NOOm1Z);
     obj.id = MemberSafetyPageTypes.MemberSafetyPageTab.ALL_MEMBERS;
-    obj.page = React7(GuildSettingsModalMembersDefault, { guildId });
+    obj.page = closure_2_11(GuildSettingsModalMembersDefault, { guildId });
     const items = [obj, , , ];
     const obj3 = { label: null, id: null, count: null, page: null };
     const intl2 = util.intl;
@@ -75,7 +506,7 @@ export default noop.memo((guildId) => {
     }
     obj3.count = tmp6;
     const obj4 = { guildId, applicationStatus: MemberVerificationTypes.GuildJoinRequestApplicationStatuses.SUBMITTED };
-    obj3.page = React7(GuildSettingsModalMemberApplicationsDefault, obj4);
+    obj3.page = closure_2_11(GuildSettingsModalMemberApplicationsDefault, obj4);
     items[1] = obj3;
     const obj5 = { label: null, id: null, page: null };
     const intl3 = util.intl;
@@ -85,7 +516,7 @@ export default noop.memo((guildId) => {
     const obj2 = { guildId };
     const tmp4Result = GuildSettingsModalMemberApplicationsDefault;
     obj6.applicationStatus = MemberVerificationTypes.GuildJoinRequestApplicationStatuses.REJECTED;
-    obj5.page = React7(GuildSettingsModalMemberApplicationsDefault, obj6);
+    obj5.page = closure_2_11(GuildSettingsModalMemberApplicationsDefault, obj6);
     items[2] = obj5;
     const obj7 = { label: null, id: null, page: null };
     const intl4 = util.intl;
@@ -94,12 +525,12 @@ export default noop.memo((guildId) => {
     const obj8 = { guildId, applicationStatus: null };
     const tmp4Result3 = GuildSettingsModalMemberApplicationsDefault;
     obj8.applicationStatus = MemberVerificationTypes.GuildJoinRequestApplicationStatuses.APPROVED;
-    obj7.page = React7(GuildSettingsModalMemberApplicationsDefault, obj8);
+    obj7.page = closure_2_11(GuildSettingsModalMemberApplicationsDefault, obj8);
     items[3] = obj7;
     return items;
   }, items4);
-  const tmp2Result4 = guildId(num[10]);
-  navigation = guildId(num[17]).useNavigation();
+  const tmp2Result4 = guildId(num[13]);
+  navigation = guildId(num[20]).useNavigation();
   const items5 = [stateFromStores1, stateFromStores];
   callback = obj.useCallback(() => {
     if (null != stateFromStores) {
@@ -109,16 +540,16 @@ export default noop.memo((guildId) => {
     } else {
       membersManagementActions = [];
     }
-    return React7(ContextMenu.ContextMenu, {
+    return closure_2_11(ContextMenu.ContextMenu, {
       items: membersManagementActions,
       children(ref) {
         const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-        const obj = { source: closure_1_1(9284), accessibilityLabel: null, ref: null };
-        const intl = guildId(1115).intl;
-        obj.accessibilityLabel = intl.string(guildId(1115).t.ogxXGq);
+        const obj = { source: closure_1_1(9290), accessibilityLabel: null, ref: null };
+        const intl = guildId(1126).intl;
+        obj.accessibilityLabel = intl.string(guildId(1126).t.ogxXGq);
         obj.ref = ref.ref;
         const merged1 = Object.assign(merged);
-        return closure_1_9(guildId(6982).HeaderActionButton, obj);
+        return closure_1_11(guildId(6880).HeaderActionButton, obj);
       }
     });
   }, items5);
@@ -138,7 +569,7 @@ export default noop.memo((guildId) => {
   const callback2 = obj.useCallback((nativeEvent) => {
     closure_1(nativeEvent.nativeEvent.layout.width);
   }, []);
-  const tmp2Result5 = guildId(num[17]);
+  const tmp2Result5 = guildId(num[20]);
   let obj3 = { pageWidth: tmp[0], items: memo, defaultIndex: null, onSetActiveIndex: null };
   let num2 = 0;
   if (num > 0) {
@@ -146,7 +577,7 @@ export default noop.memo((guildId) => {
   }
   obj3.defaultIndex = num2;
   obj3.onSetActiveIndex = callback1;
-  segmentedControlState = guildId(num[22]).useSegmentedControlState(obj3);
+  segmentedControlState = guildId(num[25]).useSegmentedControlState(obj3);
   const items7 = [segmentedControlState.activeIndex, callback1];
   const effect = obj.useEffect(() => {
     const activeIndex = segmentedControlState.activeIndex;
@@ -154,11 +585,11 @@ export default noop.memo((guildId) => {
   }, items7);
   let obj4 = { style: tmp4.container, children: null };
   let obj5 = { style: tmp4.tabContainer, children: null };
-  const callback3 = obj.useCallback((toLocaleString) => "(" + guildId(num[23]).defaultCountFormatter(toLocaleString) + ")", []);
-  obj5.children = closure_9(guildId(num[23]).Tabs, { state: segmentedControlState, grow: true, formatCount: callback3 });
-  const items8 = [closure_9(navigation, obj5), ];
-  const tmp2Result6 = guildId(num[22]);
-  items8[1] = closure_9(navigation, { style: tmp4.content, onLayout: callback2, children: closure_9(guildId(num[24]).SegmentedControlPages, { state: segmentedControlState }) });
+  const callback3 = obj.useCallback((toLocaleString) => "(" + guildId(num[26]).defaultCountFormatter(toLocaleString) + ")", []);
+  obj5.children = closure_11(guildId(num[26]).Tabs, { state: segmentedControlState, grow: true, formatCount: callback3 });
+  const items8 = [closure_11(callback1, obj5), ];
+  const tmp2Result6 = guildId(num[25]);
+  items8[1] = closure_11(callback1, { style: tmp4.content, onLayout: callback2, children: closure_11(guildId(num[27]).SegmentedControlPages, { state: segmentedControlState }) });
   obj4.children = items8;
-  return closure_10(navigation, obj4);
-});
+  return closure_12(callback1, obj4);
+}));

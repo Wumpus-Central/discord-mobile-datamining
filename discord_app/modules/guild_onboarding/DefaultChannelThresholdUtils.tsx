@@ -1,11 +1,11 @@
-// === Module 9211: DefaultChannelThresholdUtils ===
+// === Module 9217: DefaultChannelThresholdUtils ===
 
-// Module 9211 (DefaultChannelThresholdUtils)
-import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
-import GuildOnboardingPromptsActionCreators from "GuildOnboardingPromptsActionCreators" /* 6706 */;
+// Module 9217 (DefaultChannelThresholdUtils)
+import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
+import GuildOnboardingPromptsActionCreators from "GuildOnboardingPromptsActionCreators" /* 6594 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 6707 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 6595 */;
 
 require = fn;
 let closure_10 = async function _isDefaultChannelThresholdMetAfterDelete(arg0) {
@@ -19,7 +19,7 @@ let closure_10 = async function _isDefaultChannelThresholdMetAfterDelete(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -82,7 +82,7 @@ let closure_12 = async function _isChattableChannelThresholdMetAfterChannelChang
       const obj4 = { value, done: true };
       return obj4;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -145,7 +145,7 @@ let closure_12 = async function _isChattableChannelThresholdMetAfterChannelChang
           const nextResult = iter.next();
           while (iter !== undefined) {
             if (nextResult.required) {
-              let options = tmp8.options;
+              options = tmp8.options;
               for (const item10025 of options) {
                 if (null != item10025.channelIds) {
                   let push = items.push;
@@ -220,7 +220,7 @@ let closure_13 = async function _checkChattableChannelThresholdMetAfterChannelPe
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -256,28 +256,28 @@ let closure_13 = async function _checkChattableChannelThresholdMetAfterChannelPe
                 const deserializer = BigFlagUtilsAll;
                 found1 = deserializer.deserialize(0);
               }
-              const hasItem = tmp27(1086).has(found, constants.VIEW_CHANNEL);
+              const hasItem = tmp27(1097).has(found, constants.VIEW_CHANNEL);
               let tmp37 = hasItem;
               if (hasItem) {
-                tmp37 = !tmp27(1086).has(found1, constants.VIEW_CHANNEL);
-                const tmp27Result5 = tmp27(1086);
+                tmp37 = !tmp27(1097).has(found1, constants.VIEW_CHANNEL);
+                const tmp27Result5 = tmp27(1097);
               }
               const obj4 = { removingView: tmp37, removingChat: false };
-              const tmp27Result = tmp27(1086);
+              const tmp27Result = tmp27(1097);
               const isForumLikeChannelResult = obj16.isForumLikeChannel();
-              const has = tmp27(1086).has;
+              const has = tmp27(1097).has;
               if (isForumLikeChannelResult) {
                 let hasItem1 = has(found, constants.SEND_MESSAGES_IN_THREADS);
                 if (hasItem1) {
-                  hasItem1 = !tmp27(1086).has(found1, constants.SEND_MESSAGES_IN_THREADS);
-                  const tmp27Result7 = tmp27(1086);
+                  hasItem1 = !tmp27(1097).has(found1, constants.SEND_MESSAGES_IN_THREADS);
+                  const tmp27Result7 = tmp27(1097);
                 }
                 obj4.removingChat = hasItem1;
               } else {
                 let hasItem2 = has(found, constants.SEND_MESSAGES);
                 if (hasItem2) {
-                  hasItem2 = !tmp27(1086).has(found1, constants.SEND_MESSAGES);
-                  const tmp27Result8 = tmp27(1086);
+                  hasItem2 = !tmp27(1097).has(found1, constants.SEND_MESSAGES);
+                  const tmp27Result8 = tmp27(1097);
                 }
                 obj4.removingChat = hasItem2;
               }
@@ -329,8 +329,8 @@ let closure_13 = async function _checkChattableChannelThresholdMetAfterChannelPe
     }
   })();
 };
-let closure_7 = fn(6708).NUM_DEFAULT_CHATTABLE_CHANNELS_MIN;
-const Constants = fn(1074);
+let closure_7 = fn(6596).NUM_DEFAULT_CHATTABLE_CHANNELS_MIN;
+const Constants = fn(1085);
 ({ GuildFeatures: closure_8, GuildSettingsSections, Permissions: closure_9 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding/DefaultChannelThresholdUtils.tsx");

@@ -1,6 +1,6 @@
-// === Module 12194: GameServerStatus ===
+// === Module 12144: GameServerStatus ===
 
-// Module 12194 (GameServerStatus)
+// Module 12144 (GameServerStatus)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/GameServerStatus.tsx");

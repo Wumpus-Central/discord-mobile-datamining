@@ -1,15 +1,71 @@
-// === Module 12243: useGuildPowerupOnToggle ===
+// === Module 12195: useGuildPowerupOnToggle ===
 
-// Module 12243 (useGuildPowerupOnToggle)
-import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 12197 */;
+// Module 12195 (useGuildPowerupOnToggle)
+import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 12147 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
+const require = globalThis.__r;
+
 require = fn;
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupOnToggle.tsx");
 
-export default function useGuildPowerupOnToggle(arg0, arg1) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+  _require = arg0;
+  dependencyMap = arg1;
+  const cResult = require("c").c(7);
+  const obj = require("c");
+  [tmp3, _slicedToArray] = noop.useState(false);
+  const tmp2 = _slicedToArray(noop.useState(false), 2);
+  [tmp5, noop] = noop.useState(undefined);
+  if (cResult[0] === arg0) {
+    if (cResult[1] === arg1) {
+      let tmp6 = cResult[2];
+    }
+    if (cResult[3] === tmp5) {
+      if (cResult[4] === tmp3) {
+        if (cResult[5] === tmp6) {
+          let tmp7 = cResult[6];
+        }
+        return tmp7;
+      }
+    }
+    const obj2 = { isLoading: tmp3, error: tmp5, onToggle: tmp6 };
+    cResult[3] = tmp5;
+    cResult[4] = tmp3;
+    cResult[5] = tmp6;
+    cResult[6] = obj2;
+    tmp7 = obj2;
+  }
+  const fn = function s(arg0) {
+    if (null == closure_1) {
+      return Promise.resolve();
+    } else {
+      const tmp5 = GuildPowerupsActionCreators;
+      _slicedToArray(true);
+      noop(undefined);
+      const tmp6 = arg0 ? tmp5.enablePowerupForGuild : tmp5.disablePowerupForGuild;
+      const tmp6Result = arg0 ? tmp5.enablePowerupForGuild : tmp5.disablePowerupForGuild(closure_0, tmp.skuId);
+      return arg0 ? tmp5.enablePowerupForGuild : tmp5.disablePowerupForGuild(closure_0, tmp.skuId).catch((error) => {
+        const body = error.body;
+        let message;
+        if (body != null) {
+          message = body.message;
+        }
+        closure_1_3(message);
+        throw error;
+      }).finally(() => {
+        closure_1_2(false);
+      });
+    }
+  };
+  cResult[0] = arg0;
+  cResult[1] = arg1;
+  cResult[2] = fn;
+  tmp6 = fn;
+}) : ((arg0, arg1) => {
   closure_0 = arg0;
   closure_1 = arg1;
   [tmp2, _slicedToArray] = noop.useState(false);
@@ -40,4 +96,4 @@ export default function useGuildPowerupOnToggle(arg0, arg1) {
     }
   }, items);
   return obj;
-};
+});

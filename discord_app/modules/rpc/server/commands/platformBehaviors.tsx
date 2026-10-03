@@ -1,7 +1,7 @@
-// === Module 14277: platformBehaviors ===
+// === Module 14345: platformBehaviors ===
 
-// Module 14277 (platformBehaviors)
-import Constants from "Constants" /* 1085 */;
+// Module 14345 (platformBehaviors)
+import Constants from "Constants" /* 1096 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/rpc/server/commands/platformBehaviors.tsx");

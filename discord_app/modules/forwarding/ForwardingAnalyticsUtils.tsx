@@ -1,14 +1,50 @@
-// === Module 11390: ForwardingAnalyticsUtils ===
+// === Module 11307: ForwardingAnalyticsUtils ===
 
-// Module 11390 (ForwardingAnalyticsUtils)
+// Module 11307 (ForwardingAnalyticsUtils)
 import _mod12 from "module_12" /* 12 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5025 */;
+import c from "c" /* 576 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5070 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
 
 require = fn;
-const AnalyticEvents = fn(1074).AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
+fn(558);
+let ReactCompilerGating = fn(558);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(1);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const onceResult = _mod12.once((channel_id, message_id, has_query) => {
+      AnalyticsUtilsDefault.track(constants.FORWARD_ADD_RECIPIENT, { channel_id, message_id, has_query });
+    });
+    cResult[0] = onceResult;
+    let first = onceResult;
+    const tmpResult = _mod12;
+  } else {
+    first = cResult[0];
+  }
+  return first;
+}) : (() => noop.useMemo(() => _mod12.once((channel_id, message_id, has_query) => {
+  closure_1_1(closure_1_2[3]).track(constants.FORWARD_ADD_RECIPIENT, { channel_id, message_id, has_query });
+}), []));
+ReactCompilerGating = fn(558);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(1);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const onceResult = _mod12.once((channel_id, message_id) => {
+      AnalyticsUtilsDefault.track(constants.FORWARD_EDIT_SEARCH, { channel_id, message_id });
+    });
+    cResult[0] = onceResult;
+    let first = onceResult;
+    const tmpResult = _mod12;
+  } else {
+    first = cResult[0];
+  }
+  return first;
+}) : (() => noop.useMemo(() => _mod12.once((channel_id, message_id) => {
+  closure_1_1(closure_1_2[3]).track(constants.FORWARD_EDIT_SEARCH, { channel_id, message_id });
+}), []));
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forwarding/ForwardingAnalyticsUtils.tsx");
 
@@ -40,18 +76,21 @@ export const trackForwardSent = function trackForwardSent(arg0) {
 export const trackForwardCopyLink = function trackForwardCopyLink(channel_id, id) {
   AnalyticsUtilsDefault.track(AnalyticEvents.FORWARD_COPY_LINK, { channel_id, message_id: id });
 };
-export const useTrackForwardAddRecipientOnce = function useTrackForwardAddRecipientOnce() {
-  return noop.useMemo(() => _mod12.once((channel_id, message_id, has_query) => {
-    closure_1_1(closure_1_2[3]).track(constants.FORWARD_ADD_RECIPIENT, { channel_id, message_id, has_query });
-  }), []);
-};
-export const useTrackForwardEditSearchOnce = function useTrackForwardEditSearchOnce() {
-  return noop.useMemo(() => _mod12.once((channel_id, message_id) => {
-    closure_1_1(closure_1_2[3]).track(constants.FORWARD_EDIT_SEARCH, { channel_id, message_id });
-  }), []);
-};
-export const useTrackForwardEditContextMessageOnce = function useTrackForwardEditContextMessageOnce() {
-  return noop.useMemo(() => _mod12.once((channel_id, message_id) => {
-    closure_1_1(closure_1_2[3]).track(constants.FORWARD_EDIT_CONTEXT_MESSAGE, { channel_id, message_id });
-  }), []);
-};
+export const useTrackForwardAddRecipientOnce = tmp2;
+export const useTrackForwardEditSearchOnce = tmp3;
+export const useTrackForwardEditContextMessageOnce = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(1);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const onceResult = _mod12.once((channel_id, message_id) => {
+      AnalyticsUtilsDefault.track(constants.FORWARD_EDIT_CONTEXT_MESSAGE, { channel_id, message_id });
+    });
+    cResult[0] = onceResult;
+    let first = onceResult;
+    const tmpResult = _mod12;
+  } else {
+    first = cResult[0];
+  }
+  return first;
+}) : (() => noop.useMemo(() => _mod12.once((channel_id, message_id) => {
+  closure_1_1(closure_1_2[3]).track(constants.FORWARD_EDIT_CONTEXT_MESSAGE, { channel_id, message_id });
+}), []));

@@ -1,15 +1,15 @@
-// === Module 7332: ClipAnalyticsUtils ===
+// === Module 7230: ClipAnalyticsUtils ===
 
-// Module 7332 (ClipAnalyticsUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 4897 */;
-import _modDef4964 from "module_4964" /* 4964 */;
-import VideoQualityStats from "VideoQualityStats" /* 7333 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4891 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4867 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4868 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4884 */;
-import ClipsStore from "ClipsStore" /* 1999 */;
+// Module 7230 (ClipAnalyticsUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 4942 */;
+import _modDef5010 from "module_5010" /* 5010 */;
+import VideoQualityStats from "VideoQualityStats" /* 7232 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4936 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4912 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4929 */;
+import ClipsStore from "ClipsStore" /* 2005 */;
 
 require = fn;
 function getClipSignalTypes(arg0) {
@@ -139,9 +139,9 @@ function getPostSaveClipAnalytics(arg0, framesEncodedByEncoder) {
   ({ audioTrackCount: obj2.audio_track_count, savedAt: obj2.saved_at } = framesEncodedByEncoder);
   return obj;
 }
-const ClipsConstants = fn(5630);
+const ClipsConstants = fn(7231);
 ({ ClipSignalTypes: closure_8, CLIP_RUNTIME: closure_9 } = ClipsConstants);
-const AnalyticEvents = fn(1074).AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/clips/ClipAnalyticsUtils.tsx");
 
@@ -274,7 +274,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   isFavorite = isFavorite.isFavorite;
   let tmp2;
   if (null != isFavorite) {
-    if (!_modDef4964(isFavorite, tmp)) {
+    if (!_modDef5010(isFavorite, tmp)) {
       tmp2 = isFavorite;
     }
   }
@@ -282,7 +282,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   const name = isFavorite.name;
   let tmp6;
   if (null != name) {
-    if (!_modDef4964(name, tmp5)) {
+    if (!_modDef5010(name, tmp5)) {
       tmp6 = name;
     }
   }
@@ -302,7 +302,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp11;
   if (null != start1) {
-    if (!_modDef4964(start1, start)) {
+    if (!_modDef5010(start1, start)) {
       tmp11 = start1;
     }
   }
@@ -318,7 +318,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp15;
   if (null != end1) {
-    if (!_modDef4964(end1, end)) {
+    if (!_modDef5010(end1, end)) {
       tmp15 = end1;
     }
   }
@@ -334,7 +334,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp19;
   if (null != applicationAudio1) {
-    if (!_modDef4964(applicationAudio1, applicationAudio)) {
+    if (!_modDef5010(applicationAudio1, applicationAudio)) {
       tmp19 = applicationAudio1;
     }
   }
@@ -350,7 +350,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp23;
   if (null != voiceAudio1) {
-    if (!_modDef4964(voiceAudio1, voiceAudio)) {
+    if (!_modDef5010(voiceAudio1, voiceAudio)) {
       tmp23 = voiceAudio1;
     }
   }
@@ -366,7 +366,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp27;
   if (null != soundboardAudio1) {
-    if (!_modDef4964(soundboardAudio1, soundboardAudio)) {
+    if (!_modDef5010(soundboardAudio1, soundboardAudio)) {
       tmp27 = soundboardAudio1;
     }
   }
@@ -388,7 +388,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp31;
   if (null != preset1) {
-    if (!_modDef4964(preset1, preset)) {
+    if (!_modDef5010(preset1, preset)) {
       tmp31 = preset1;
     }
   }

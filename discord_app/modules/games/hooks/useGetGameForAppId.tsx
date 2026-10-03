@@ -1,20 +1,58 @@
-// === Module 9386: useGetGameForAppId ===
+// === Module 9394: useGetGameForAppId ===
 
-// Module 9386 (useGetGameForAppId)
-import GlobalUtils from "GlobalUtils" /* 1370 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6775 */;
-import useGame from "useGame" /* 6914 */;
+// Module 9394 (useGetGameForAppId)
+import c from "c" /* 576 */;
+import GlobalUtils from "GlobalUtils" /* 1375 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6663 */;
+import useGame from "useGame" /* 6812 */;
 import noop from "module_19" /* 19 */;
-import GameStore from "GameStore" /* 2001 */;
+import GameStore from "GameStore" /* 2007 */;
 
 const require = globalThis.__r;
+const useGetOrFetchApplicationsDefault = useGetOrFetchApplications;
 
 require = fn;
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/games/hooks/useGetGameForAppId.tsx");
-
-export default function useGetGameForAppId(applicationId) {
-  const getOrFetchApplication = useGetOrFetchApplications.useGetOrFetchApplication(applicationId);
+fn(558);
+const ReactCompilerGating = fn(558);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(6);
+  const getOrFetchApplication = useGetOrFetchApplications.useGetOrFetchApplication(arg0);
+  if (cResult[0] !== getOrFetchApplication) {
+    let canonicalGameId;
+    if (getOrFetchApplication != null) {
+      canonicalGameId = getOrFetchApplication.getCanonicalGameId();
+    }
+    if (canonicalGameId == null) {
+      canonicalGameId = null;
+    }
+    cResult[0] = getOrFetchApplication;
+    cResult[1] = canonicalGameId;
+    let tmp4 = canonicalGameId;
+  } else {
+    tmp4 = cResult[1];
+  }
+  const game = useGame.useGame(tmp4);
+  let data = game.data;
+  if (data == null) {
+    data = null;
+  }
+  if (cResult[2] === tmp4) {
+    if (cResult[3] === data) {
+      if (cResult[4] === tmp9) {
+        let tmp10 = cResult[5];
+      }
+      return tmp10;
+    }
+  }
+  const obj3 = { gameId: tmp4, gameRecord: data, isLoading: null != arg0 && null == getOrFetchApplication || game.isLoading };
+  cResult[2] = tmp4;
+  cResult[3] = data;
+  cResult[4] = null != arg0 && null == getOrFetchApplication || game.isLoading;
+  cResult[5] = obj3;
+  tmp10 = obj3;
+  const tmpResult = useGame;
+}) : ((arg0) => {
+  const getOrFetchApplication = useGetOrFetchApplications.useGetOrFetchApplication(arg0);
   let canonicalGameId;
   if (getOrFetchApplication != null) {
     canonicalGameId = getOrFetchApplication.getCanonicalGameId();
@@ -29,11 +67,60 @@ export default function useGetGameForAppId(applicationId) {
     data = null;
   }
   obj2.gameRecord = data;
-  obj2.isLoading = null != applicationId && null == getOrFetchApplication || game.isLoading;
+  obj2.isLoading = null != arg0 && null == getOrFetchApplication || game.isLoading;
   return obj2;
-};
-export const useGetGamesForAppIds = function useGetGamesForAppIds(stateFromStoresArray) {
-  const tmp = memo(6775)(stateFromStoresArray);
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/games/hooks/useGetGameForAppId.tsx");
+
+export default tmp2;
+export const useGetGamesForAppIds = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = require("c").c(6);
+  const arr = useGetOrFetchApplicationsDefault(arg0);
+  if (cResult[0] !== arr) {
+    const _Symbol = Symbol;
+    if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+      const fn = function s(getCanonicalGameId) {
+        return getCanonicalGameId.getCanonicalGameId();
+      };
+      cResult[2] = fn;
+      let tmp6 = fn;
+    } else {
+      tmp6 = cResult[2];
+    }
+    const found = arr.filter(tmp(1375).isNotNullish);
+    let mapped = found.map(tmp6);
+    const found1 = mapped.filter(tmp(1375).isNotNullish);
+    cResult[0] = arr;
+    cResult[1] = found1;
+  } else {
+    _require = tmp4;
+    const games = tmp(6812).useGames(tmp4);
+    const _Symbol2 = Symbol;
+    if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+      const items = [GameStore];
+      cResult[3] = items;
+      let tmp11 = items;
+    } else {
+      tmp11 = cResult[3];
+    }
+    if (cResult[4] !== cResult[1]) {
+      const fn2 = function f() {
+        const mapped = closure_0.map((item) => game.getGame(item));
+        return mapped.filter(GlobalUtils.isNotNullish);
+      };
+      cResult[4] = tmp4;
+      cResult[5] = fn2;
+      let tmp13 = fn2;
+    } else {
+      tmp13 = cResult[5];
+    }
+    const tmpResult = tmp(6812);
+    return tmp(504).useStateFromStoresArray(tmp11, tmp13);
+  }
+  const obj = require("c");
+}) : ((arg0) => {
+  const tmp = memo(6663)(arg0);
   _require = tmp;
   const items = [tmp];
   memo = noop.useMemo(() => {
@@ -48,4 +135,4 @@ export const useGetGamesForAppIds = function useGetGamesForAppIds(stateFromStore
     const mapped = memo.map((item) => game.getGame(item));
     return mapped.filter(GlobalUtils.isNotNullish);
   });
-};
+});

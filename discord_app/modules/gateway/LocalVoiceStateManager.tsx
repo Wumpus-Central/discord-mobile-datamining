@@ -1,16 +1,16 @@
-// === Module 13422: LocalVoiceStateManager ===
+// === Module 13482: LocalVoiceStateManager ===
 
-// Module 13422 (LocalVoiceStateManager)
-import FlagUtils from "FlagUtils" /* 1385 */;
-import UserSettings from "UserSettings" /* 2021 */;
-import isClipsEnabled from "isClipsEnabled" /* 13423 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import MediaEngineStore from "MediaEngineStore" /* 1993 */;
-import RTCRegionStore from "RTCRegionStore" /* 4895 */;
-import StateManager from "StateManager" /* 13420 */;
+// Module 13482 (LocalVoiceStateManager)
+import FlagUtils from "FlagUtils" /* 1390 */;
+import UserSettings from "UserSettings" /* 2028 */;
+import isClipsEnabled from "isClipsEnabled" /* 13483 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import MediaEngineStore from "MediaEngineStore" /* 1999 */;
+import RTCRegionStore from "RTCRegionStore" /* 4940 */;
+import StateManager from "StateManager" /* 13480 */;
 
 require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ ChannelTypes: hasOwnProperty, VoiceFlags: metroRequire } = Constants);
 class LocalVoiceStateManager extends tmp3 {
   constructor(arg0) {

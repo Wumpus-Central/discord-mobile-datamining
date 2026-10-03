@@ -1,20 +1,155 @@
-// === Module 12491: ForumDisplaySettingsActionSheet ===
+// === Module 12433: ForumDisplaySettingsActionSheet ===
 
-// Module 12491 (ForumDisplaySettingsActionSheet)
-import tracking_Tracking from "tracking/Tracking" /* 7359 */;
+// Module 12433 (ForumDisplaySettingsActionSheet)
+import tracking_Tracking from "tracking/Tracking" /* 7263 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
 
 require = fn;
-const ForumChannelStore = fn(11694);
+const ForumChannelStore = fn(11615);
 ({ useForumChannelStoreApi: metroRequire, useForumChannelStore: closure_7 } = ForumChannelStore);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/forums/native/ForumDisplaySettingsActionSheet.tsx");
 
-export default function ForumDisplaySettingsActionSheet(channelId) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+  const cResult = channelId(sortOrder[10]).c(40);
+  channelId = channelId.channelId;
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [first1];
+    cResult[0] = items;
+    let first = items;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] !== channelId) {
+    const fn = function b() {
+      return ChannelStore.getChannel(channelId);
+    };
+    cResult[1] = channelId;
+    cResult[2] = fn;
+    let tmp6 = fn;
+  } else {
+    tmp6 = cResult[2];
+  }
+  let obj = channelId(sortOrder[10]);
+  const stateFromStores = channelId(sortOrder[11]).useStateFromStores(first, tmp6);
+  const tmp8 = first2(channelId);
+  sortOrder = tmp8.sortOrder;
+  const layoutType = tmp8.layoutType;
+  const tmp9 = closure_6();
+  noop = tmp9;
+  const tmp10 = layoutType(noop.useState(sortOrder), 2);
+  first1 = tmp10[0];
+  closure_6 = tmp10[1];
+  const tmp12 = layoutType(noop.useState(layoutType), 2);
+  first2 = tmp12[0];
+  closure_8 = tmp12[1];
+  const tmp14 = layoutType(noop.useState(tmp8.tagSetting), 2);
+  const first3 = tmp14[0];
+  closure_10 = tmp14[1];
+  noop.useRef(null);
+  noop.useRef(null);
+  noop.useRef(null);
+  if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+    const fn2 = function p(arg0) {
+      closure_6(arg0);
+    };
+    cResult[3] = fn2;
+  }
+  if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+    class B {
+      constructor(arg0) {
+        tmp = closure_8(channelId);
+        return;
+      }
+    }
+    cResult[4] = B;
+  } else {
+    class B {
+      constructor(arg0) {
+        tmp = closure_8(channelId);
+        return;
+      }
+    }
+  }
+  if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
+    class B {
+      constructor(arg0) {
+        tmp = closure_8(channelId);
+        return;
+      }
+    }
+    cResult[5] = tmp22;
+  } else {
+    class B {
+      constructor(arg0) {
+        tmp = closure_8(channelId);
+        return;
+      }
+    }
+  }
+  if (cResult[6] === stateFromStores) {
+    class B {
+      constructor(arg0) {
+        tmp = closure_8(channelId);
+        return;
+      }
+    }
+  }
+  class X {
+    constructor() {
+      tmp = closure_1;
+      if (null != closure_1) {
+        tmp16 = sortOrder;
+        tmp17 = closure_5;
+        if (sortOrder !== closure_5) {
+          tmp2 = closure_0;
+          tmp3 = closure_2;
+          obj = closure_0(closure_2[12]);
+          obj1 = { guildId: null, channelId: null, sortOrder: null };
+          ({ guild_id: obj2.guildId, id: obj2.channelId } = tmp);
+          obj1.sortOrder = tmp17;
+          result = obj.trackForumSortOrderUpdated(obj1);
+        }
+        tmp5 = layoutType;
+        tmp6 = closure_7;
+        if (layoutType !== closure_7) {
+          tmp7 = closure_0;
+          tmp8 = closure_2;
+          obj3 = closure_0(closure_2[12]);
+          obj8 = { guildId: null, channelId: null, forumLayout: null };
+          ({ guild_id: obj4.guildId, id: obj4.channelId } = tmp);
+          obj8.forumLayout = tmp6;
+          result1 = obj3.trackForumLayoutUpdated(obj8);
+        }
+        tmp10 = closure_4;
+        state = closure_4.getState();
+        tmp11 = channelId;
+        setLayoutTypeResult = state.setLayoutType(channelId, tmp6);
+        state1 = closure_4.getState();
+        setSortOrderResult = state1.setSortOrder(channelId, tmp17);
+        state2 = closure_4.getState();
+        tmp14 = closure_9;
+        setTagSettingResult = state2.setTagSetting(channelId, closure_9);
+      }
+      return;
+    }
+  }
+  cResult[6] = stateFromStores;
+  cResult[7] = channelId;
+  cResult[8] = layoutType;
+  cResult[9] = first2;
+  cResult[10] = first1;
+  cResult[11] = first3;
+  cResult[12] = sortOrder;
+  cResult[13] = tmp9;
+  cResult[14] = X;
+  const tmpResult = channelId(sortOrder[11]);
+}) : ((channelId) => {
   channelId = channelId.channelId;
   let sortOrder;
   c5 = undefined;
@@ -24,13 +159,13 @@ export default function ForumDisplaySettingsActionSheet(channelId) {
   c9 = undefined;
   c10 = undefined;
   const items = [c5];
-  const stateFromStores = channelId(sortOrder[9]).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
+  const stateFromStores = channelId(sortOrder[11]).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   const tmp3 = c7(channelId);
   sortOrder = tmp3.sortOrder;
   const layoutType = tmp3.layoutType;
   const tagSetting = tmp3.tagSetting;
   noop = c6();
-  let obj = channelId(sortOrder[9]);
+  let obj = channelId(sortOrder[11]);
   [c5, c6] = layoutType(noop.useState(sortOrder), 2);
   const tmp4 = layoutType(noop.useState(sortOrder), 2);
   [c7, c8] = layoutType(noop.useState(layoutType), 2);
@@ -40,7 +175,7 @@ export default function ForumDisplaySettingsActionSheet(channelId) {
   const ref1 = noop.useRef(null);
   const ref2 = noop.useRef(null);
   const tmp6 = layoutType(noop.useState(tagSetting), 2);
-  const unmountEffect = channelId(sortOrder[10]).useUnmountEffect(() => {
+  const unmountEffect = channelId(sortOrder[13]).useUnmountEffect(() => {
     if (null != stateFromStores) {
       if (sortOrder !== sortOrder) {
         const obj5 = { guildId: null, channelId: null, sortOrder: null };
@@ -54,7 +189,7 @@ export default function ForumDisplaySettingsActionSheet(channelId) {
         obj6.forumLayout = forumLayout;
         const result1 = tracking_Tracking.trackForumLayoutUpdated(obj6);
       }
-      const state = closure_4.getState();
+      state = closure_4.getState();
       state.setLayoutType(channelId, forumLayout);
       const state1 = closure_4.getState();
       state1.setSortOrder(channelId, sortOrder);
@@ -77,9 +212,9 @@ export default function ForumDisplaySettingsActionSheet(channelId) {
     let obj5 = { onPress: tmp11, label: null };
     const intl2 = tmp(tmp2[5]).intl;
     obj5.label = intl2.string(tmp(tmp2[5]).t.yBZMsQ);
-    obj4.leading = c8(tmp(tmp2[14]).ActionSheetHeaderPressableText, obj5);
-    obj2.header = c8(tmp(tmp2[13]).BottomSheetTitleHeader, obj4);
-    let obj6 = { direction: "vertical", spacing: stateFromStores(tmp2[17]).space.PX_16, children: null };
+    obj4.leading = c8(tmp(tmp2[15]).ActionSheetHeaderPressableText, obj5);
+    obj2.header = c8(tmp(tmp2[14]).BottomSheetTitleHeader, obj4);
+    let obj6 = { direction: "vertical", spacing: stateFromStores(tmp2[20]).space.PX_16, children: null };
     const obj7 = {
       groupRef: ref,
       hasIcons: false,
@@ -107,9 +242,9 @@ export default function ForumDisplaySettingsActionSheet(channelId) {
     items1[1] = obj9;
     obj7.children = items1.map((label) => {
       value = label.value;
-      return _undefined2(channelId(sortOrder[19]).TableRadioRow, { label: label.label, value }, value);
+      return _undefined2(channelId(sortOrder[16]).TableRadioRow, { label: label.label, value }, value);
     });
-    const items2 = [c8(tmp(tmp2[18]).TableRadioGroup, obj7), , ];
+    const items2 = [c8(tmp(tmp2[17]).TableRadioGroup, obj7), , ];
     let tmp13Result = null;
     if (stateFromStores.isForumChannel()) {
       tmp13Result = null;
@@ -141,9 +276,9 @@ export default function ForumDisplaySettingsActionSheet(channelId) {
         items3[1] = obj12;
         obj10.children = items3.map((label) => {
           value = label.value;
-          return _undefined2(channelId(sortOrder[19]).TableRadioRow, { label: label.label, value }, value);
+          return _undefined2(channelId(sortOrder[16]).TableRadioRow, { label: label.label, value }, value);
         });
-        tmp13Result = tmp13(tmp(tmp2[18]).TableRadioGroup, obj10);
+        tmp13Result = tmp13(tmp(tmp2[17]).TableRadioGroup, obj10);
       }
     }
     items2[1] = tmp13Result;
@@ -176,16 +311,16 @@ export default function ForumDisplaySettingsActionSheet(channelId) {
       items4[1] = obj15;
       obj13.children = items4.map((label) => {
         value = label.value;
-        return _undefined2(channelId(sortOrder[19]).TableRadioRow, { label: label.label, value }, value);
+        return _undefined2(channelId(sortOrder[16]).TableRadioRow, { label: label.label, value }, value);
       });
-      tmp13Result2 = tmp13(tmp(tmp2[18]).TableRadioGroup, obj13);
+      tmp13Result2 = tmp13(tmp(tmp2[17]).TableRadioGroup, obj13);
     }
     const obj16 = { children: null };
     items2[2] = tmp13Result2;
     obj6.children = items2;
-    obj16.children = c9(tmp(tmp2[16]).Stack, obj6);
-    obj2.children = c8(tmp(tmp2[15]).BottomSheetScrollView, obj16);
-    return c8(tmp(tmp2[12]).ActionSheet, obj2);
+    obj16.children = c9(tmp(tmp2[19]).Stack, obj6);
+    obj2.children = c8(tmp(tmp2[18]).BottomSheetScrollView, obj16);
+    return c8(tmp(tmp2[21]).ActionSheet, obj2);
   }
-  let obj3 = channelId(sortOrder[10]);
-};
+  let obj3 = channelId(sortOrder[13]);
+});

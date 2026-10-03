@@ -1,14 +1,14 @@
-// === Module 4885: PresenceStore ===
+// === Module 4930: PresenceStore ===
 
-// Module 4885 (PresenceStore)
+// Module 4930 (PresenceStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import _modDef1331 from "module_1331" /* 1331 */;
-import hasRichActivityDefault from "hasRichActivity" /* 4886 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import _modDef1342 from "module_1342" /* 1342 */;
+import hasRichActivityDefault from "hasRichActivity" /* 4931 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import UserStore from "UserStore" /* 1372 */;
+import UserStore from "UserStore" /* 1377 */;
 
 function sortActivity(type, type2) {
   type = type2.type;
@@ -184,7 +184,7 @@ function flattenPresence(id) {
       HermesBuiltin.arraySpread(flatMapResult1, 0);
       const reversed1 = items2.reverse();
       const _Map2 = Map;
-      map1 = new Map(reversed1.map((party) => {
+      const map1 = new Map(reversed1.map((party) => {
         party = party.party;
         let id;
         if (party != null) {
@@ -288,7 +288,7 @@ function updatePresence(arg0) {
       let activities2 = sorted;
       if (null != tmp7[guildId]) {
         activities2 = sorted;
-        if (_modDef1331(tmp25.activities, sorted)) {
+        if (_modDef1342(tmp25.activities, sorted)) {
           activities2 = tmp25.activities;
         }
       }
@@ -381,7 +381,7 @@ function clearPresences(id) {
   }
   tmp2 = keys[Symbol.iterator]();
 }
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ StatusTypes: closure_4, ActivityTypes: hasOwnProperty, ClientTypes: metroRequire, ME: closure_7, UserFlags: closure_8 } = Constants);
 let closure_9 = Object.freeze([]);
 const presencesForGuilds = {};
@@ -552,7 +552,7 @@ prototype["getApplicationActivity"] = function getApplicationActivity(arg0, arg1
   }
   return this.findActivity(arg0, (application_id) => application_id.application_id === closure_0, tmp, true);
 };
-prototype["findActivity"] = function findActivity(arg0, _messages) {
+prototype["findActivity"] = function findActivity(arg0, cResult) {
   let tmp = arg2;
   if (arg2 === undefined) {
     tmp = null;
@@ -570,7 +570,7 @@ prototype["findActivity"] = function findActivity(arg0, _messages) {
   if (flag) {
     combined = activities.concat(self.getHiddenActivities(arg0, tmp));
   }
-  return combined.find(_messages);
+  return combined.find(cResult);
 };
 prototype["getActivityMetadata"] = function getActivityMetadata(arg0) {
   return activityMetadata[arg0];

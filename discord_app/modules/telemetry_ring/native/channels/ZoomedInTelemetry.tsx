@@ -1,10 +1,10 @@
-// === Module 1984: ZoomedInTelemetry ===
+// === Module 1990: ZoomedInTelemetry ===
 
-// Module 1984 (ZoomedInTelemetry)
-import ZoomedInAnalyticsExperiment from "ZoomedInAnalyticsExperiment" /* 1985 */;
-import TelemetryRingNative2 from "TelemetryRingNative" /* 1988 */;
+// Module 1990 (ZoomedInTelemetry)
+import ZoomedInAnalyticsExperiment from "ZoomedInAnalyticsExperiment" /* 1991 */;
+import TelemetryRingNative2 from "TelemetryRingNative" /* 1994 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import BaseTelemetryExportChannel from "BaseTelemetryExportChannel" /* 1986 */;
+import BaseTelemetryExportChannel from "BaseTelemetryExportChannel" /* 1992 */;
 
 const TelemetryRingNative = TelemetryRingNative2;
 
@@ -47,7 +47,7 @@ prototype["exportEntries"] = function exportEntries(arg0, arg1) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       while (true) {
@@ -125,7 +125,7 @@ prototype["exportEntries"] = function exportEntries(arg0, arg1) {
     }
   })();
 };
-let items = [fn(1988).TelemetryChannel.ZOOMED];
+let items = [fn(1994).TelemetryChannel.ZOOMED];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/telemetry_ring/native/channels/ZoomedInTelemetry.tsx");
 

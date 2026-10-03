@@ -1,13 +1,13 @@
-// === Module 9291: AudioRouteStore ===
+// === Module 9300: AudioRouteStore ===
 
-// Module 9291 (AudioRouteStore)
+// Module 9300 (AudioRouteStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import PlatformUtils from "PlatformUtils" /* 1364 */;
-import VoiceCallTypes from "VoiceCallTypes" /* 9292 */;
-import NativeAudioRouteEmitterModuleDefault from "NativeAudioRouteEmitterModule" /* 9293 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import PlatformUtils from "PlatformUtils" /* 1369 */;
+import VoiceCallTypes from "VoiceCallTypes" /* 9301 */;
+import NativeAudioRouteEmitterModuleDefault from "NativeAudioRouteEmitterModule" /* 9302 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4868 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
 import size from "module_2" /* 2 */;
 
 function handleAudioRouteChanged(arr) {

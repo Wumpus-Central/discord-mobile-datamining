@@ -1,8 +1,8 @@
-// === Module 17953: SafetyFlowsActionCreators ===
+// === Module 18039: SafetyFlowsActionCreators ===
 
-// Module 17953 (SafetyFlowsActionCreators)
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1249 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5038 */;
+// Module 18039 (SafetyFlowsActionCreators)
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5083 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -40,7 +40,7 @@ let closure_7 = async function _resendVerificationCode() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -98,7 +98,7 @@ let closure_7 = async function _resendVerificationCode() {
     }
   })();
 };
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_flows/SafetyFlowsActionCreators.tsx");
 

@@ -1,7 +1,7 @@
-// === Module 11508: GiftIntentMessagePlaceholder ===
+// === Module 11427: GiftIntentMessagePlaceholder ===
 
-// Module 11508 (GiftIntentMessagePlaceholder)
-import util from "util" /* 1115 */;
+// Module 11427 (GiftIntentMessagePlaceholder)
+import util from "util" /* 1126 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/gifting/native/GiftIntentMessagePlaceholder.tsx");

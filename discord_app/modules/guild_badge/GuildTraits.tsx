@@ -1,8 +1,8 @@
-// === Module 8393: GuildTraits ===
+// === Module 8397: GuildTraits ===
 
-// Module 8393 (GuildTraits)
-import GuildRecordUtils from "GuildRecordUtils" /* 2058 */;
-import Constants from "Constants" /* 1074 */;
+// Module 8397 (GuildTraits)
+import GuildRecordUtils from "GuildRecordUtils" /* 2066 */;
+import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
 ({ GuildFeatures: c2, BoostedGuildTiers: c3 } = Constants);

@@ -1,12 +1,12 @@
-// === Module 8954: _launchFrame ===
+// === Module 8988: _launchFrame ===
 
-// Module 8954 (_launchFrame)
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import leaveCurrentEmbeddedActivity from "leaveCurrentEmbeddedActivity" /* 8955 */;
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 8974 */;
-import getFramesManagerDefault from "getFramesManager" /* 9005 */;
+// Module 8988 (_launchFrame)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import leaveCurrentEmbeddedActivity from "leaveCurrentEmbeddedActivity" /* 8989 */;
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 8993 */;
+import getFramesManagerDefault from "getFramesManager" /* 9040 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import FramesStore from "FramesStore" /* 8690 */;
+import FramesStore from "FramesStore" /* 8703 */;
 
 require = fn;
 let closure_11 = async function _launchFrame(arg0) {
@@ -20,7 +20,7 @@ let closure_11 = async function _launchFrame(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -50,7 +50,7 @@ let closure_11 = async function _launchFrame(arg0) {
           closure_129_10 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "flex", done: null };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -215,7 +215,7 @@ let closure_16 = async function _refreshProxyTicket() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -320,9 +320,9 @@ let closure_16 = async function _refreshProxyTicket() {
     }
   })();
 };
-const FramesConstants = fn(8691);
+const FramesConstants = fn(8704);
 ({ FrameIntent: hasOwnProperty, FrameLayoutModes: metroRequire, getChannelIdForSurface: closure_7, getFrameIntentForSurface: closure_8, makeFrameId: closure_9 } = FramesConstants);
-const ActivityPanelModes = fn(8693).ActivityPanelModes;
+const ActivityPanelModes = fn(8705).ActivityPanelModes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/frames/FramesActionCreators.shared.tsx");
 
@@ -355,8 +355,8 @@ export const resetFrameLayoutModes = function resetFrameLayoutModes(frameId) {
   DispatcherDefault.dispatch({ type: "FRAME_SET_PANEL_MODE", frameId, activityPanelMode: ActivityPanelModes.PANEL });
   const obj4 = { type: "FRAME_SET_PANEL_MODE", frameId, activityPanelMode: ActivityPanelModes.PANEL };
 };
-export const attachFrameIframe = function attachFrameIframe(frameId, iframeId) {
-  DispatcherDefault.dispatch({ type: "FRAME_IFRAME_MOUNT", frameId, iframeId });
+export const attachFrameIframe = function attachFrameIframe(id, first1) {
+  DispatcherDefault.dispatch({ type: "FRAME_IFRAME_MOUNT", frameId: id, iframeId: first1 });
 };
 export const detachFrameIframe = function detachFrameIframe(frameId, iframeId) {
   DispatcherDefault.dispatch({ type: "FRAME_IFRAME_UNMOUNT", frameId, iframeId });

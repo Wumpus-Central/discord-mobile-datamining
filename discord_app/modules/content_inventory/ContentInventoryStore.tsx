@@ -1,9 +1,9 @@
-// === Module 7966: ContentInventoryStore ===
+// === Module 8012: ContentInventoryStore ===
 
-// Module 7966 (ContentInventoryStore)
+// Module 8012 (ContentInventoryStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import matchUtils from "matchUtils" /* 7967 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import matchUtils from "matchUtils" /* 8013 */;
 
 require = fn;
 let map = new Map();

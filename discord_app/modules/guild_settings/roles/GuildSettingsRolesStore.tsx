@@ -1,23 +1,23 @@
-// === Module 17669: GuildSettingsRolesStore ===
+// === Module 17757: GuildSettingsRolesStore ===
 
-// Module 17669 (GuildSettingsRolesStore)
+// Module 17757 (GuildSettingsRolesStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
-import utils_ColorUtils from "utils/ColorUtils" /* 1092 */;
-import GlobalUtils from "GlobalUtils" /* 1370 */;
-import PlainRecord from "PlainRecord" /* 2059 */;
-import GuildRoleRecord from "GuildRoleRecord" /* 2102 */;
-import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 2104 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4503 */;
-import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 5494 */;
-import DragAndDropUtilsDefault from "DragAndDropUtils" /* 10661 */;
-import GuildSettingsConstants from "GuildSettingsConstants" /* 17664 */;
-import GuildRoleConnectionsConfigurationStore from "GuildRoleConnectionsConfigurationStore" /* 17670 */;
-import GuildRoleStore from "GuildRoleStore" /* 2101 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9242 */;
-import Constants from "Constants" /* 1074 */;
-import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 17671 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
+import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
+import GlobalUtils from "GlobalUtils" /* 1375 */;
+import PlainRecord from "PlainRecord" /* 2067 */;
+import GuildRoleRecord from "GuildRoleRecord" /* 2107 */;
+import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 2109 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4514 */;
+import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 5793 */;
+import DragAndDropUtilsDefault from "DragAndDropUtils" /* 10735 */;
+import GuildSettingsConstants from "GuildSettingsConstants" /* 17752 */;
+import GuildRoleConnectionsConfigurationStore from "GuildRoleConnectionsConfigurationStore" /* 17758 */;
+import GuildRoleStore from "GuildRoleStore" /* 2106 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9248 */;
+import Constants from "Constants" /* 1085 */;
+import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 17759 */;
 import apply from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
 
@@ -34,7 +34,7 @@ function handleInit() {
   if (arg0 === undefined) {
     flag = true;
   }
-  const guild = GuildSettingsStore.getProps().guild;
+  guild = GuildSettingsStore.getProps().guild;
   c23 = false;
   c24 = false;
   c6 = undefined;
@@ -60,7 +60,7 @@ function handleInit() {
       const obj2 = {};
       const obj3 = { primary_color, secondary_color: null, tertiary_color: null };
       obj2[tmp.SOLID] = obj3;
-      ({ primary_color: obj4.primary_color, secondary_color: obj4.secondary_color } = closure_2_17);
+      ({ primary_color: obj4.primary_color, secondary_color: obj4.secondary_color } = constants);
       obj2[tmp.GRADIENT] = { primary_color: null, secondary_color: null, tertiary_color: null };
       ({ primary_color: obj5.primary_color, secondary_color: obj5.secondary_color, tertiary_color: obj5.tertiary_color } = collapsedCategories);
       obj2[tmp.HOLOGRAPHIC] = { primary_color: null, secondary_color: null, tertiary_color: null };
@@ -106,7 +106,7 @@ function syncGuildChanges(guildId) {
   guildId = guildId.guildId;
   items = undefined;
   map = undefined;
-  const guild = GuildSettingsStore.getProps().guild;
+  guild = GuildSettingsStore.getProps().guild;
   if (null != guild) {
     if (guildId === guild.id) {
       if (OPEN !== FormStates.SUBMITTING) {
@@ -148,7 +148,7 @@ function syncGuildChanges(guildId) {
             const obj2 = {};
             const obj3 = { primary_color, secondary_color: null, tertiary_color: null };
             obj2[tmp.SOLID] = obj3;
-            ({ primary_color: obj4.primary_color, secondary_color: obj4.secondary_color } = closure_2_17);
+            ({ primary_color: obj4.primary_color, secondary_color: obj4.secondary_color } = constants);
             obj2[tmp.GRADIENT] = { primary_color: null, secondary_color: null, tertiary_color: null };
             ({ primary_color: obj5.primary_color, secondary_color: obj5.secondary_color, tertiary_color: obj5.tertiary_color } = collapsedCategories);
             obj2[tmp.HOLOGRAPHIC] = { primary_color: null, secondary_color: null, tertiary_color: null };
@@ -711,7 +711,7 @@ const guildSettingsRolesStore = new GuildSettingsRolesStore(DispatcherDefault, {
             const obj2 = {};
             const obj3 = { primary_color, secondary_color: null, tertiary_color: null };
             obj2[tmp.SOLID] = obj3;
-            ({ primary_color: obj4.primary_color, secondary_color: obj4.secondary_color } = closure_2_17);
+            ({ primary_color: obj4.primary_color, secondary_color: obj4.secondary_color } = constants);
             obj2[tmp.GRADIENT] = { primary_color: null, secondary_color: null, tertiary_color: null };
             ({ primary_color: obj5.primary_color, secondary_color: obj5.secondary_color, tertiary_color: obj5.tertiary_color } = collapsedCategories);
             obj2[tmp.HOLOGRAPHIC] = { primary_color: null, secondary_color: null, tertiary_color: null };
@@ -886,7 +886,7 @@ const guildSettingsRolesStore = new GuildSettingsRolesStore(DispatcherDefault, {
         const obj2 = {};
         const obj3 = { primary_color, secondary_color: null, tertiary_color: null };
         obj2[tmp.SOLID] = obj3;
-        ({ primary_color: obj4.primary_color, secondary_color: obj4.secondary_color } = closure_2_17);
+        ({ primary_color: obj4.primary_color, secondary_color: obj4.secondary_color } = constants);
         obj2[tmp.GRADIENT] = { primary_color: null, secondary_color: null, tertiary_color: null };
         ({ primary_color: obj5.primary_color, secondary_color: obj5.secondary_color, tertiary_color: obj5.tertiary_color } = collapsedCategories);
         obj2[tmp.HOLOGRAPHIC] = { primary_color: null, secondary_color: null, tertiary_color: null };

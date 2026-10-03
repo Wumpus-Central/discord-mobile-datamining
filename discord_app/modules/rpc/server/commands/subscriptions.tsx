@@ -1,8 +1,8 @@
-// === Module 14272: subscriptions ===
+// === Module 14340: subscriptions ===
 
-// Module 14272 (subscriptions)
+// Module 14340 (subscriptions)
 import _modDef12 from "module_12" /* 12 */;
-import RPCErrorDefault from "RPCError" /* 8962 */;
+import RPCErrorDefault from "RPCError" /* 9026 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -18,7 +18,7 @@ function removePendingSubscription(arg0, arg1) {
     }
   }
 }
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AnalyticEvents: closure_4, RPCCommands, RPCErrors: hasOwnProperty } = Constants);
 const weakMap = new WeakMap();
 const size = fn(2);
@@ -39,7 +39,7 @@ export default {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {

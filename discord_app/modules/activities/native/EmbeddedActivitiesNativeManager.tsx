@@ -1,81 +1,30 @@
-// === Module 8957: EmbeddedActivitiesNativeManager ===
+// === Module 8991: EmbeddedActivitiesNativeManager ===
 
-// Module 8957 (EmbeddedActivitiesNativeManager)
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
-import util from "util" /* 1115 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import v1 from "v1" /* 1255 */;
-import GlobalUtils from "GlobalUtils" /* 1370 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4557 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5388 */;
-import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 8944 */;
-import getPostMessageJavaScriptDefault from "getPostMessageJavaScript" /* 8945 */;
-import ThermalUtilsDefault from "ThermalUtils" /* 8950 */;
-import WebViewPostMessageTransportDefault from "WebViewPostMessageTransport" /* 8958 */;
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 8974 */;
-import _modDef9002 from "module_9002" /* 9002 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4868 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2043 */;
-import EmbeddedActivitiesManager from "EmbeddedActivitiesManager" /* 8947 */;
+// Module 8991 (EmbeddedActivitiesNativeManager)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import util from "util" /* 1126 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import GlobalUtils from "GlobalUtils" /* 1375 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4568 */;
+import _modDef4805 from "module_4805" /* 4805 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5708 */;
+import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 8979 */;
+import ThermalUtilsDefault from "ThermalUtils" /* 8984 */;
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 8993 */;
+import createWebViewControllerDefault from "createWebViewController" /* 9021 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
+import EmbeddedActivitiesManager from "EmbeddedActivitiesManager" /* 8981 */;
 
 require = fn;
-function postMessageToWebView() {
-  const self = this;
-  const apply = closure_14.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-let closure_14 = async function _postMessageToWebView(arg0) {
-  closure_2 = tmp3;
-  await closure_2_11.injectJavaScript(getPostMessageJavaScriptDefault(closure_0));
-  if (1 === tmp7) {
-    c4 = 0;
-    closure_129_0 = closure_3;
-    closure_130_1(closure_130_2[12]).captureException(closure_129_0);
-    c6 = 3;
-    closure_130_1(closure_130_2[12]);
-  } else if (arg0 === 1) {
-    c6 = 3;
-    throw value;
-  } else if (arg0 !== 2) {
-    c4 = 0;
-  }
-  return value;
-};
-let closure_7 = fn(2005).DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY;
-const Constants = fn(1074);
-({ AnalyticEvents: closure_8, ComponentActions: closure_9 } = Constants);
-const TransportTypes = fn(5270).TransportTypes;
-const WebView = fn(7928);
-const webViewProxy = WebView.getWebViewProxy("EMBEDDED_ACTIVITY_WEB_VIEW_KEY");
-const PlatformUtils = fn(1364);
+const AnalyticEvents = fn(1085).AnalyticEvents;
+const PlatformUtils = fn(1369);
 let nativeEventEmitter = null;
 if (PlatformUtils.isAndroid()) {
   nativeEventEmitter = new fn(17).NativeEventEmitter(NativeAppLifecycleModuleDefault);
 }
-class EmbeddedActivitiesNativeManager extends tmp6 {
-  constructor() {
-    applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    closure_0 = applyArgumentsResult;
-    applyArgumentsResult.handleRPCDisconnect = function handleRPCDisconnect(reason) {
-      const application = reason.application;
-      let id;
-      const connectedActivityLocation = EmbeddedActivitiesStore.getConnectedActivityLocation();
-      if (application != null) {
-        id = application.id;
-      }
-      applyArgumentsResult.leaveActivity({ location: connectedActivityLocation, applicationId: id });
-      const result = applyArgumentsResult.superHandleRPCDisconnect({ reason: reason.reason, application });
-    };
-    return applyArgumentsResult;
-  }
+class EmbeddedActivitiesNativeManager extends tmp5 {
   _initialize() {
     self = this;
     self = this;
@@ -84,130 +33,65 @@ class EmbeddedActivitiesNativeManager extends tmp6 {
     if (lifecycleSubscription != null) {
       removeResult = lifecycleSubscription.remove();
     }
-    obj = closure_12;
+    obj = closure_7;
     addListenerResult = undefined;
-    if (closure_12 != null) {
+    if (closure_7 != null) {
       str = "onHostDestroy";
       addListenerResult = obj.addListener("onHostDestroy", () => {
-        connectedActivityLocation = EmbeddedActivitiesStore.getConnectedActivityLocation();
-        let selfEmbeddedActivityForLocation = null;
-        if (null != connectedActivityLocation) {
-          selfEmbeddedActivityForLocation = EmbeddedActivitiesStore.getSelfEmbeddedActivityForLocation(connectedActivityLocation);
+        currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
+        if (null != currentEmbeddedActivity) {
+          const obj = { location: null, applicationId: null };
+          ({ location: obj.location, applicationId: obj.applicationId } = currentEmbeddedActivity);
+          self.leaveActivity(obj);
         }
-        if (tmp3) {
-          const obj2 = { location: connectedActivityLocation, applicationId: selfEmbeddedActivityForLocation.applicationId };
-          self.leaveActivity(obj2);
-        }
-        tmp3 = null != selfEmbeddedActivityForLocation && null != connectedActivityLocation;
       });
     }
     self.lifecycleSubscription = addListenerResult;
-    scriptMessageSubscription = self.scriptMessageSubscription;
-    if (scriptMessageSubscription != null) {
-      removeResult1 = scriptMessageSubscription.remove();
-    }
-    self.scriptMessageSubscription = closure_11.addOnMessageListener((data) => {
-      try {
-        const _JSON = JSON;
-        const parsed = JSON.parse(data.data);
-        connectedActivityLocation = EmbeddedActivitiesStore.getConnectedActivityLocation();
-        let selfEmbeddedActivityForLocation = null;
-        if (null != connectedActivityLocation) {
-          selfEmbeddedActivityForLocation = EmbeddedActivitiesStore.getSelfEmbeddedActivityForLocation(connectedActivityLocation);
-        }
-        if (selfEmbeddedActivityForLocation != null) {
-          const url = selfEmbeddedActivityForLocation.url;
-        }
-        const iframeId = self.iframeId;
-        let tmp14 = typeof parsed === "object";
-        if (typeof parsed === "object") {
-          tmp14 = null != tmp11;
-        }
-        if (tmp14) {
-          tmp14 = null != iframeId;
-        }
-        if (tmp14) {
-          const obj2 = { type: TransportTypes.POST_MESSAGE, origin: url, iframeId };
-          WebViewPostMessageTransportDefault.handleMessage(parsed, obj2, postMessageToWebView);
-        }
-      } catch (tmp22) {
-        const _SyntaxError = SyntaxError;
-        if (tmp22 instanceof SyntaxError) {
-          if (tmp2.data === closure_7) {
-            const connectedActivityLocation1 = EmbeddedActivitiesStore.getConnectedActivityLocation();
-            if (null != connectedActivityLocation1) {
-              const selfEmbeddedActivityForLocation1 = EmbeddedActivitiesStore.getSelfEmbeddedActivityForLocation(connectedActivityLocation1);
-              let applicationId;
-              if (selfEmbeddedActivityForLocation1 != null) {
-                applicationId = selfEmbeddedActivityForLocation1.applicationId;
-              }
-            }
-            let tmp29 = null != connectedActivityLocation1;
-            if (tmp29) {
-              tmp29 = null != tmp28;
-            }
-            if (tmp29) {
-              const obj3 = { location: connectedActivityLocation1, applicationId: tmp28, showFeedback: false };
-              self.leaveActivity(obj3);
-              const obj5 = { body: null, confirmText: null };
-              const intl = util.intl;
-              obj5.body = intl.string(util.t.tYBBWz);
-              const intl2 = util.intl;
-              obj5.confirmText = intl2.string(util.t.BddRzS);
-              actions_AlertActionCreatorsDefault.show(obj5);
-            }
-          }
-        } else {
-          throw tmp22;
-        }
-      }
-    });
     thermalStateSubscription = self.thermalStateSubscription;
     if (thermalStateSubscription != null) {
-      removeResult2 = thermalStateSubscription.remove();
+      removeResult1 = thermalStateSubscription.remove();
     }
-    obj2 = closure_1(closure_2[17]);
+    obj2 = closure_1(closure_2[8]);
     self.thermalStateSubscription = obj2.addListener((rawThermalState) => {
-      connectedActivityLocation = connectedActivityLocation.getConnectedActivityLocation();
-      let selfEmbeddedActivityForLocation = null;
-      if (null != connectedActivityLocation) {
-        selfEmbeddedActivityForLocation = obj.getSelfEmbeddedActivityForLocation(connectedActivityLocation);
+      currentEmbeddedActivity = currentEmbeddedActivity.getCurrentEmbeddedActivity();
+      let _location;
+      if (currentEmbeddedActivity != null) {
+        _location = currentEmbeddedActivity.location;
       }
-      const embeddedActivityLocationChannelId = self(dependencyMap[18]).getEmbeddedActivityLocationChannelId(connectedActivityLocation);
+      const embeddedActivityLocationChannelId = self(dependencyMap[9]).getEmbeddedActivityLocationChannelId(_location);
       basicChannel = basicChannel.getBasicChannel(embeddedActivityLocationChannelId);
       let compositeInstanceId;
-      if (selfEmbeddedActivityForLocation != null) {
-        compositeInstanceId = selfEmbeddedActivityForLocation.compositeInstanceId;
+      if (currentEmbeddedActivity != null) {
+        compositeInstanceId = currentEmbeddedActivity.compositeInstanceId;
       }
       let applicationId;
-      if (selfEmbeddedActivityForLocation != null) {
-        applicationId = selfEmbeddedActivityForLocation.applicationId;
+      if (currentEmbeddedActivity != null) {
+        applicationId = currentEmbeddedActivity.applicationId;
       }
-      obj = connectedActivityLocation;
-      const obj2 = self(dependencyMap[18]);
-      const obj4 = { channel_id: embeddedActivityLocationChannelId, application_id: applicationId, activity_session_id: compositeInstanceId, thermal_state: rawThermalState.rawThermalState, guild_id: null, media_session_id: null };
+      const obj = self(dependencyMap[9]);
+      const obj3 = { channel_id: embeddedActivityLocationChannelId, application_id: applicationId, activity_session_id: compositeInstanceId, thermal_state: rawThermalState.rawThermalState, guild_id: null, media_session_id: null };
       let guild_id;
       if (basicChannel != null) {
         guild_id = basicChannel.guild_id;
       }
-      obj4.guild_id = guild_id;
-      obj4.media_session_id = mediaSessionId.getMediaSessionId();
-      AnalyticsUtilsDefault.track(constants.ACTIVITY_DEVICE_THERMAL_STATE_CHANGED, obj4);
+      obj3.guild_id = guild_id;
+      obj3.media_session_id = mediaSessionId.getMediaSessionId();
+      AnalyticsUtilsDefault.track(constants.ACTIVITY_DEVICE_THERMAL_STATE_CHANGED, obj3);
       DispatcherDefault.dispatch({ type: "THERMAL_STATE_CHANGE", applicationId });
       const tmp9Result = DispatcherDefault;
       let tmp14 = null != compositeInstanceId;
-      const thermalState = self(dependencyMap[21]).getThermalState();
+      const thermalState = self(dependencyMap[12]).getThermalState();
       if (tmp14) {
         tmp14 = null != applicationId;
       }
       if (tmp14) {
-        tmp14 = thermalState >= self(dependencyMap[21]).ThermalStates.SERIOUS;
+        tmp14 = thermalState >= self(dependencyMap[12]).ThermalStates.SERIOUS;
       }
       if (tmp14) {
-        const respondToSeriousThermalState = self(dependencyMap[22]).requestRespondToSeriousThermalState();
-        const tmp3Result2 = self(dependencyMap[22]);
+        const respondToSeriousThermalState = self(dependencyMap[13]).requestRespondToSeriousThermalState();
+        const tmp2Result2 = self(dependencyMap[13]);
       }
-      const tmp3Result = self(dependencyMap[21]);
+      const tmp2Result = self(dependencyMap[12]);
     });
     return;
   }
@@ -218,14 +102,11 @@ class EmbeddedActivitiesNativeManager extends tmp6 {
     if (lifecycleSubscription != null) {
       removeResult = lifecycleSubscription.remove();
     }
-    scriptMessageSubscription = self.scriptMessageSubscription;
-    if (scriptMessageSubscription != null) {
-      removeResult1 = scriptMessageSubscription.remove();
-    }
     thermalStateSubscription = self.thermalStateSubscription;
     if (thermalStateSubscription != null) {
-      removeResult2 = thermalStateSubscription.remove();
+      removeResult1 = thermalStateSubscription.remove();
     }
+    releaseWebViewResult = self.releaseWebView();
     return;
   }
 }
@@ -249,18 +130,8 @@ prototype["showDevShelfOverrideEnabled"] = function showDevShelfOverrideEnabled(
   const obj2 = { key: "EMBEDDED_ACTIVITIES_DEV_SHELF_URL_OVERRIDE_ENABLED", content: null, icon: null, iconColor: "status-positive" };
   const intl = util.intl;
   obj2.content = intl.string(util.t.JfA7IK);
-  obj2.icon = _modDef9002;
+  obj2.icon = _modDef4805;
   ToastActionCreatorsDefault.open(obj2);
-};
-prototype["releaseWebView"] = function releaseWebView() {
-  const releaseIframeIdResult = this.releaseIframeId();
-  if (null != releaseIframeIdResult) {
-    const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
-    const obj = { id: releaseIframeIdResult };
-    ComponentDispatch.dispatch(constants.IFRAME_UNMOUNT, obj);
-    closure_11.releaseWebView();
-  }
-  return releaseIframeIdResult;
 };
 prototype["leaveActivity"] = function leaveActivity(arg0) {
   const self = this;
@@ -288,26 +159,73 @@ prototype["clearEmbeddedActivityState"] = function clearEmbeddedActivityState(_l
   const obj2 = { location: _location, applicationId, showFeedback };
   DispatcherDefault.dispatch({ type: "EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE", applicationId, lockState: null, pictureInPictureLockState: null, gridLockState: null });
 };
-prototype["releaseIframeId"] = function releaseIframeId() {
-  this.iframeId = undefined;
-  return this.iframeId;
-};
-prototype["hasIframeId"] = function hasIframeId() {
-  return null != this.iframeId;
-};
-prototype["getOrCreateIframeId"] = function getOrCreateIframeId() {
-  const iframeId = this.iframeId;
-  if (null != iframeId) {
-    return iframeId;
+prototype["getOrCreateWebViewController"] = function getOrCreateWebViewController() {
+  const self = this;
+  if (null != this.controller) {
+    return self.controller.iframeId;
   } else {
-    const v4Result = v1.v4();
-    tmp.iframeId = v4Result;
+    const v4Result = self(1266).v4();
+    let obj2 = {
+      getOrigin() {
+          connectedActivityLocation = connectedActivityLocation.getConnectedActivityLocation();
+          let tmp2;
+          if (null != connectedActivityLocation) {
+            const selfEmbeddedActivityForLocation = connectedActivityLocation.getSelfEmbeddedActivityForLocation(connectedActivityLocation);
+            let url;
+            if (selfEmbeddedActivityForLocation != null) {
+              url = selfEmbeddedActivityForLocation.url;
+            }
+            tmp2 = url;
+          }
+          return tmp2;
+        },
+      onDisallowedNavigation() {
+          connectedActivityLocation = EmbeddedActivitiesStore.getConnectedActivityLocation();
+          let tmp2;
+          if (null != connectedActivityLocation) {
+            const selfEmbeddedActivityForLocation = EmbeddedActivitiesStore.getSelfEmbeddedActivityForLocation(connectedActivityLocation);
+            let applicationId;
+            if (selfEmbeddedActivityForLocation != null) {
+              applicationId = selfEmbeddedActivityForLocation.applicationId;
+            }
+            tmp2 = applicationId;
+          }
+          if (tmp5) {
+            const obj2 = { location: connectedActivityLocation, applicationId: tmp2, showFeedback: false };
+            self.leaveActivity(obj2);
+            const obj4 = { body: null, confirmText: null };
+            const intl = util.intl;
+            obj4.body = intl.string(util.t.tYBBWz);
+            const intl2 = util.intl;
+            obj4.confirmText = intl2.string(util.t.BddRzS);
+            actions_AlertActionCreatorsDefault.show(obj4);
+          }
+          tmp5 = null != connectedActivityLocation && null != tmp2;
+        }
+    };
+    self.controller = createWebViewControllerDefault(v4Result, obj2);
     return v4Result;
   }
+};
+prototype["hasWebView"] = function hasWebView() {
+  return null != this.controller;
+};
+prototype["releaseWebView"] = function releaseWebView() {
+  const self = this;
+  const controller = this.controller;
+  let iframeId;
+  if (controller != null) {
+    iframeId = controller.iframeId;
+  }
+  const controller2 = self.controller;
+  if (controller2 != null) {
+    controller2.release();
+  }
+  self.controller = undefined;
+  return iframeId;
 };
 const embeddedActivitiesNativeManager = new EmbeddedActivitiesNativeManager();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/native/EmbeddedActivitiesNativeManager.tsx");
 
 export default embeddedActivitiesNativeManager;
-export const EMBEDDED_ACTIVITY_WEB_VIEW_KEY = "EMBEDDED_ACTIVITY_WEB_VIEW_KEY";

@@ -1,8 +1,8 @@
-// === Module 11746: FrecencySectionStore ===
+// === Module 11667: FrecencySectionStore ===
 
-// Module 11746 (FrecencySectionStore)
+// Module 11667 (FrecencySectionStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
 
 let obj = { APPS: "apps", COMMANDS: "commands" };
 obj = { selection: null };

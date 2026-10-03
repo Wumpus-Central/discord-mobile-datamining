@@ -1,13 +1,13 @@
-// === Module 7593: RemoveRecipientSystemMessage ===
+// === Module 7637: RemoveRecipientSystemMessage ===
 
-// Module 7593 (RemoveRecipientSystemMessage)
-import util from "util" /* 1115 */;
-import ChannelRecord from "ChannelRecord" /* 2048 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7575 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7577 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7579 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import UserStore from "UserStore" /* 1372 */;
+// Module 7637 (RemoveRecipientSystemMessage)
+import util from "util" /* 1126 */;
+import ChannelRecord from "ChannelRecord" /* 2055 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7619 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7621 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7623 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import UserStore from "UserStore" /* 1377 */;
 import size from "module_2" /* 2 */;
 
 const THREAD_CHANNEL_TYPES = ChannelRecord.THREAD_CHANNEL_TYPES;

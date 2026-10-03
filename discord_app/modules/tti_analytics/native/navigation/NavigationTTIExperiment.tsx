@@ -1,7 +1,7 @@
-// === Module 16397: NavigationTTIExperiment ===
+// === Module 16471: NavigationTTIExperiment ===
 
-// Module 16397 (NavigationTTIExperiment)
-import ApexExperiment from "ApexExperiment" /* 1435 */;
+// Module 16471 (NavigationTTIExperiment)
+import ApexExperiment from "ApexExperiment" /* 1440 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-09-mobile-interaction-tti", kind: "user", defaultConfig: { enabled: false }, variations: null };

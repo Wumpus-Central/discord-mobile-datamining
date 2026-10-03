@@ -1,6 +1,6 @@
-// === Module 1151: NativeFileModule ===
+// === Module 1162: NativeFileModule ===
 
-// Module 1151 (NativeFileModule)
+// Module 1162 (NativeFileModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

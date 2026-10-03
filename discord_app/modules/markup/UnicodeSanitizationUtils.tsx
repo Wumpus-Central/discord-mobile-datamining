@@ -1,7 +1,7 @@
-// === Module 5492: UnicodeSanitizationUtils ===
+// === Module 5791: UnicodeSanitizationUtils ===
 
-// Module 5492 (UnicodeSanitizationUtils)
-import URLUtilsDefault from "URLUtils" /* 1366 */;
+// Module 5791 (UnicodeSanitizationUtils)
+import URLUtilsDefault from "URLUtils" /* 1371 */;
 import size from "module_2" /* 2 */;
 
 function safelyPartiallyDecodeURIComponent(hash) {

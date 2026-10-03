@@ -1,8 +1,8 @@
-// === Module 11185: actions/GiftCodeActionCreators ===
+// === Module 11091: actions/GiftCodeActionCreators ===
 
-// Module 11185 (actions/GiftCodeActionCreators)
-import asyncRequireImpl from "asyncRequireImpl" /* 1981 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5048 */;
+// Module 11091 (actions/GiftCodeActionCreators)
+import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -27,7 +27,7 @@ let closure_7 = async function _redeemGiftCode(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -61,7 +61,7 @@ let closure_7 = async function _redeemGiftCode(arg0) {
           closure_129_9 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "flex", done: null };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -75,7 +75,7 @@ let closure_7 = async function _redeemGiftCode(arg0) {
           if (obj18.getIsPaymentsBlocked()) {
             closure_130_1(closure_130_2[3])();
             c6 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           } else {
             channelId = closure_129_1.channelId;
             let tmp41 = null;
@@ -156,9 +156,9 @@ let closure_7 = async function _redeemGiftCode(arg0) {
   }
 };
 function openGiftCodeRedeemModal(c0, fromServer) {
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11191, dependencyMap.paths), { code: _require, giftCodeDebugOverride: fromServer }, "GIFT_CODE_REDEEM_MODAL_KEY");
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11097, dependencyMap.paths), { code: _require, giftCodeDebugOverride: fromServer }, "GIFT_CODE_REDEEM_MODAL_KEY");
 }
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ Endpoints: closure_4, AnalyticEvents: hasOwnProperty } = Constants);
 let closure_6 = Object.freeze({});
 const size = fn(2);

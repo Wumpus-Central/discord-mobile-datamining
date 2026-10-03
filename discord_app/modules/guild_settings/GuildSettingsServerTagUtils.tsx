@@ -1,19 +1,19 @@
-// === Module 9244: GuildSettingsServerTagUtils ===
+// === Module 9250: GuildSettingsServerTagUtils ===
 
-// Module 9244 (GuildSettingsServerTagUtils)
-import GuildTagUtils from "GuildTagUtils" /* 7792 */;
-import MobileServerTagExperimentDefault from "MobileServerTagExperiment" /* 9245 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import PermissionStore from "PermissionStore" /* 4498 */;
+// Module 9250 (GuildSettingsServerTagUtils)
+import GuildTagUtils from "GuildTagUtils" /* 7836 */;
+import MobileServerTagExperimentDefault from "MobileServerTagExperiment" /* 9251 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import PermissionStore from "PermissionStore" /* 4509 */;
 
 require = fn;
-const Permissions = fn(1074).Permissions;
+const Permissions = fn(1085).Permissions;
 const GuildSettingsServerTag = "GuildSettingsServerTag";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/GuildSettingsServerTagUtils.tsx");
 
 export const canUseMobileServerTagSettings = function canUseMobileServerTagSettings(guildId) {
-  const guild = GuildStore.getGuild(guildId);
+  guild = GuildStore.getGuild(guildId);
   let enabled = null != guild;
   if (enabled) {
     enabled = PermissionStore.can(Permissions.MANAGE_GUILD, guild);
@@ -25,7 +25,7 @@ export const canUseMobileServerTagSettings = function canUseMobileServerTagSetti
   return enabled;
 };
 export const canViewMobileServerTag = function canViewMobileServerTag(id) {
-  const guild = GuildStore.getGuild(id);
+  guild = GuildStore.getGuild(id);
   let enabled = null != guild;
   if (enabled) {
     enabled = GuildTagUtils.guildSupportsTags(guild);

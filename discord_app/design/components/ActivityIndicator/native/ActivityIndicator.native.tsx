@@ -1,16 +1,68 @@
-// === Module 6075: ActivityIndicator/ActivityIndicator ===
+// === Module 5968: ActivityIndicator/ActivityIndicator ===
 
-// Module 6075 (ActivityIndicator/ActivityIndicator)
-import _mod17 from "module_17" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import nativeDefault from "native" /* 576 */;
-import size from "module_2" /* 2 */;
+// Module 5968 (ActivityIndicator/ActivityIndicator)
+import c from "c" /* 576 */;
+import nativeDefault from "native" /* 587 */;
+import useToken from "useToken" /* 4580 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
-const ActivityIndicator = _mod17.ActivityIndicator;
-const jsx = jsxProd.jsx;
+require = fn;
+let closure_3 = ["size", "animating"];
+const ActivityIndicator = fn(17).ActivityIndicator;
+const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
+const size = fn(2);
 const result = size.fileFinishedImporting("design/components/ActivityIndicator/native/ActivityIndicator.native.tsx");
 
-export const ActivityIndicator = function ActivityIndicator(size) {
+export const ActivityIndicator = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(9);
+  if (cResult[0] !== arg0) {
+    ({ size, animating } = arg0);
+    const tmp9 = _objectWithoutProperties(arg0, closure_3);
+    cResult[0] = arg0;
+    cResult[1] = tmp9;
+    cResult[2] = size;
+    cResult[3] = animating;
+    let tmp6 = animating;
+    let tmp5 = size;
+    let tmp4 = tmp9;
+  } else {
+    tmp4 = cResult[1];
+    tmp5 = cResult[2];
+    tmp6 = cResult[3];
+  }
+  let str = "large";
+  if (undefined !== tmp5) {
+    str = tmp5;
+  }
+  let color = tmp4.color;
+  if (color == null) {
+    color = tmpResult.useToken(nativeDefault.colors.BACKGROUND_BRAND);
+  }
+  if (cResult[4] === (undefined === tmp6 || tmp6)) {
+    if (cResult[5] === color) {
+      if (cResult[6] === tmp4) {
+        if (cResult[7] === str) {
+          let tmp11 = cResult[8];
+        }
+        return tmp11;
+      }
+    }
+  }
+  const obj2 = {};
+  const merged = Object.assign(tmp4);
+  obj2.size = str;
+  obj2.animating = undefined === tmp6 || tmp6;
+  obj2.color = color;
+  const tmp13 = <ActivityIndicator />;
+  cResult[4] = undefined === tmp6 || tmp6;
+  cResult[5] = color;
+  cResult[6] = tmp4;
+  cResult[7] = str;
+  cResult[8] = tmp13;
+  tmp11 = tmp13;
+  tmpResult = useToken;
+}) : ((size) => {
   let str = size.size;
   if (str === undefined) {
     str = "large";
@@ -30,4 +82,4 @@ export const ActivityIndicator = function ActivityIndicator(size) {
   obj2.animating = flag;
   obj2.color = color;
   return <ActivityIndicator />;
-};
+});

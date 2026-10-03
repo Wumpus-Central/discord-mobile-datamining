@@ -1,20 +1,83 @@
-// === Module 12810: AvatarPile ===
+// === Module 12850: AvatarPile ===
 
-// Module 12810 (AvatarPile)
-import ClipView from "ClipView" /* 8464 */;
-import Pile from "Pile" /* 10665 */;
-import PileOverflow from "PileOverflow" /* 10666 */;
-import ListUtils from "ListUtils" /* 12329 */;
-import CutoutableAvatarImage from "CutoutableAvatarImage" /* 12811 */;
+// Module 12850 (AvatarPile)
+import c from "c" /* 576 */;
+import ClipView from "ClipView" /* 8469 */;
+import Pile from "Pile" /* 10739 */;
+import PileOverflow from "PileOverflow" /* 10740 */;
+import ListUtils from "ListUtils" /* 12285 */;
+import CutoutableAvatarImage from "CutoutableAvatarImage" /* 12851 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Pile/native/AvatarPile.native.tsx");
 
-export const AvatarPile = function AvatarPile(arg0) {
+export const AvatarPile = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(13);
+  ({ totalCount, names, children } = arg0);
+  const Children = noop.Children;
+  const countResult = Children.count(children);
+  const tmp5 = CutoutableAvatarImage.AVATAR_SIZE_MAP[arg0.size];
+  if (cResult[0] === names) {
+    if (cResult[1] === totalCount) {
+      let tmp6 = cResult[2];
+    }
+    let num3 = 3;
+    if (tmp5 <= 40) {
+      num3 = 2;
+    }
+    if (cResult[3] === tmp5) {
+      if (cResult[4] === countResult) {
+        if (cResult[5] === totalCount) {
+          let tmp8 = cResult[6];
+        }
+        if (cResult[7] === tmp5) {
+          if (cResult[8] === children) {
+            if (cResult[9] === tmp6) {
+              if (cResult[10] === num3) {
+                if (cResult[11] === tmp8) {
+                  let tmp12 = cResult[12];
+                }
+                return tmp12;
+              }
+            }
+          }
+        }
+        const obj2 = { "aria-label": tmp6, shape: ClipView.CutoutShape.Circle, size: tmp5, gap: num3, depthX: 0.4, children: null };
+        const items = [children, tmp8];
+        obj2.children = items;
+        const tmp14 = React4(Pile.Pile, obj2);
+        cResult[7] = tmp5;
+        cResult[8] = children;
+        cResult[9] = tmp6;
+        cResult[10] = num3;
+        cResult[11] = tmp8;
+        cResult[12] = tmp14;
+        tmp12 = tmp14;
+      }
+    }
+    let tmp10 = null != totalCount && countResult < totalCount;
+    if (tmp10) {
+      const obj3 = { size: tmp5, borderRadius: tmp5 / 2, value: totalCount - countResult };
+      tmp10 = React3(PileOverflow.PileOverflow, obj3);
+    }
+    cResult[3] = tmp5;
+    cResult[4] = countResult;
+    cResult[5] = totalCount;
+    cResult[6] = tmp10;
+    tmp8 = tmp10;
+  }
+  const listSummaryLabel = ListUtils.getListSummaryLabel(names, totalCount);
+  cResult[0] = names;
+  cResult[1] = totalCount;
+  cResult[2] = listSummaryLabel;
+  tmp6 = listSummaryLabel;
+  const tmpResult = ListUtils;
+}) : ((arg0) => {
   ({ totalCount, children } = arg0);
   const Children = noop.Children;
   ({ size, names } = arg0);
@@ -35,4 +98,4 @@ export const AvatarPile = function AvatarPile(arg0) {
   items[1] = tmp6;
   obj.children = items;
   return React4(Pile.Pile, obj);
-};
+});

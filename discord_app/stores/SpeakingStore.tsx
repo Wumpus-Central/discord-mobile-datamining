@@ -1,15 +1,15 @@
-// === Module 5917: SpeakingStore ===
+// === Module 5576: SpeakingStore ===
 
-// Module 5917 (SpeakingStore)
+// Module 5576 (SpeakingStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4503 */;
-import ProportionalVadIndicatorExperimentDefault from "ProportionalVadIndicatorExperiment" /* 5918 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4514 */;
+import ProportionalVadIndicatorExperimentDefault from "ProportionalVadIndicatorExperiment" /* 5577 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import MediaEngineStore from "MediaEngineStore" /* 1993 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4868 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import MediaEngineStore from "MediaEngineStore" /* 1999 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
 
 function anyoneHasFlagInContext(DEFAULT, VOICE, arg2) {
   let flag = arg2;
@@ -42,8 +42,8 @@ function handleConnectionOpen(user) {
   sessionId = user.sessionId;
   c14 = null;
 }
-const Permissions = fn(1074).Permissions;
-const Constants = fn(4870);
+const Permissions = fn(1085).Permissions;
+const Constants = fn(4915);
 ({ SpeakingFlags: closure_9, MediaEngineContextTypes: c10 } = Constants);
 let map = new Map();
 let id = null;
@@ -113,7 +113,8 @@ prototype["getSpeakers"] = function getSpeakers() {
   });
 };
 prototype["isSpeaking"] = function isSpeaking(id) {
-  if (DEFAULT === undefined) {
+  let DEFAULT = context;
+  if (context === undefined) {
     DEFAULT = constants2.DEFAULT;
   }
   const VOICE = constants.VOICE;
@@ -174,7 +175,8 @@ prototype["isAnyoneElseSpeaking"] = function isAnyoneElseSpeaking() {
   return anyoneHasFlagInContext(DEFAULT, constants.VOICE, true);
 };
 prototype["isCurrentUserSpeaking"] = function isCurrentUserSpeaking() {
-  if (DEFAULT === undefined) {
+  let DEFAULT = context;
+  if (context === undefined) {
     DEFAULT = constants2.DEFAULT;
   }
   let isSpeakingResult = null != id;
@@ -205,7 +207,8 @@ prototype["isCurrentUserPrioritySpeaker"] = function isCurrentUserPrioritySpeake
   return isPrioritySpeakerResult;
 };
 prototype["isCurrentUserPrioritySpeaking"] = function isCurrentUserPrioritySpeaking() {
-  if (DEFAULT === undefined) {
+  let DEFAULT = context;
+  if (context === undefined) {
     DEFAULT = constants2.DEFAULT;
   }
   const self = this;

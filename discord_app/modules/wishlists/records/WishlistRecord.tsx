@@ -1,14 +1,14 @@
-// === Module 8428: WishlistRecord ===
+// === Module 8432: WishlistRecord ===
 
-// Module 8428 (WishlistRecord)
-import Record from "Record" /* 1387 */;
-import ApplicationRecord from "ApplicationRecord" /* 2003 */;
-import BaseWishlistItemRecord from "BaseWishlistItemRecord" /* 8429 */;
-import CollectiblesWishlistItemRecord from "CollectiblesWishlistItemRecord" /* 8430 */;
-import PremiumWishlistItemRecord from "PremiumWishlistItemRecord" /* 8431 */;
-import SKUWishlistItemRecord from "SKUWishlistItemRecord" /* 8432 */;
+// Module 8432 (WishlistRecord)
+import Record from "Record" /* 1392 */;
+import ApplicationRecord from "ApplicationRecord" /* 2009 */;
+import BaseWishlistItemRecord from "BaseWishlistItemRecord" /* 8433 */;
+import CollectiblesWishlistItemRecord from "CollectiblesWishlistItemRecord" /* 8434 */;
+import PremiumWishlistItemRecord from "PremiumWishlistItemRecord" /* 8435 */;
+import SKUWishlistItemRecord from "SKUWishlistItemRecord" /* 8436 */;
 
-const SKUProductLines = fn(1074).SKUProductLines;
+const SKUProductLines = fn(1085).SKUProductLines;
 const prototype = function WishlistRecord(arg0) {
   const tmp = new prototype(new.target, new.target, arg0);
   ({ id: tmp.id, userId: tmp.userId, items: tmp.items, applications } = arg0);
@@ -56,8 +56,8 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/records/WishlistRecord.tsx");
 
 export default prototype;
-export const getWishlistSkuIds = function getWishlistSkuIds(items) {
-  items = items.items;
+export const getWishlistSkuIds = function getWishlistSkuIds(first1) {
+  const items = first1.items;
   return items.map((skuId) => skuId.skuId);
 };
 export const wishlistHasSkuId = function wishlistHasSkuId(items, arg1) {

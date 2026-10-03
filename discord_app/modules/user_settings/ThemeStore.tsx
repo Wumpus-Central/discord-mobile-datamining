@@ -1,15 +1,15 @@
-// === Module 1182: ThemeStore ===
+// === Module 1193: ThemeStore ===
 
-// Module 1182 (ThemeStore)
+// Module 1193 (ThemeStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import getSystemThemeDefault from "getSystemTheme" /* 1219 */;
-import resolveThemeDefault from "resolveTheme" /* 1226 */;
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 2026 */;
-import updateBackgroundColorDefault from "updateBackgroundColor" /* 13830 */;
-import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1183 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1184 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import getSystemThemeDefault from "getSystemTheme" /* 1230 */;
+import resolveThemeDefault from "resolveTheme" /* 1237 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 2033 */;
+import updateBackgroundColorDefault from "updateBackgroundColor" /* 13896 */;
+import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1194 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1195 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 
 require = fn;
 function handleThemeChange() {
@@ -22,10 +22,10 @@ function handleThemeChange() {
   }
   return flag;
 }
-const ThemeConstants = fn(1185);
+const ThemeConstants = fn(1196);
 ({ SystemTheme: metroRequire, THEME_PREFERENCES_WEB_REFRESH, THEME_PREFERENCES_MOBILE } = ThemeConstants);
-const UserSettingsDelay = fn(1084).UserSettingsDelay;
-const ThemeTypes = fn(1074).ThemeTypes;
+const UserSettingsDelay = fn(1095).UserSettingsDelay;
+const ThemeTypes = fn(1085).ThemeTypes;
 let obj = { UNSET: 0, [0]: "UNSET", SET: 1, [1]: "SET" };
 let SET = obj.UNSET;
 obj = THEME_PREFERENCES_MOBILE;
@@ -72,8 +72,8 @@ Object.defineProperty(prototype, "systemTheme", {
   },
   set: undefined
 });
-prototype["themePreferenceForSystemTheme"] = function themePreferenceForSystemTheme(systemTheme) {
-  return obj[systemTheme];
+prototype["themePreferenceForSystemTheme"] = function themePreferenceForSystemTheme(stateFromStores) {
+  return obj[stateFromStores];
 };
 prototype["getSyncedClientTheme"] = function getSyncedClientTheme(systemTheme) {
   return syncedClientThemes[systemTheme];

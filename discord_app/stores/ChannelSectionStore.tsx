@@ -1,21 +1,21 @@
-// === Module 6885: ChannelSectionStore ===
+// === Module 6783: ChannelSectionStore ===
 
-// Module 6885 (ChannelSectionStore)
+// Module 6783 (ChannelSectionStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
-import ApexExperiment from "ApexExperiment" /* 1435 */;
-import SidebarActionTypes from "SidebarActionTypes" /* 6887 */;
-import FriendsSidebarExperimentDefault from "FriendsSidebarExperiment" /* 6888 */;
-import ExperimentStore from "ExperimentStore" /* 4761 */;
-import SearchMessageStore from "SearchMessageStore" /* 6886 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import PermissionStore from "PermissionStore" /* 4498 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4684 */;
-import UserStore from "UserStore" /* 1372 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
+import ApexExperiment from "ApexExperiment" /* 1440 */;
+import SidebarActionTypes from "SidebarActionTypes" /* 6785 */;
+import FriendsSidebarExperimentDefault from "FriendsSidebarExperiment" /* 6786 */;
+import ExperimentStore from "ExperimentStore" /* 4776 */;
+import SearchMessageStore from "SearchMessageStore" /* 6784 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import PermissionStore from "PermissionStore" /* 4509 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
+import UserStore from "UserStore" /* 1377 */;
 
 require = fn;
 function toggleSection(c17, arg1) {
@@ -32,11 +32,11 @@ function toggleSection(c17, arg1) {
   let tmp4 = null;
   if (null != channelId) {
     tmp4 = channelId;
-    if (closure_1_14(channelId)) {
+    if (state(channelId)) {
       const guildId = SelectedGuildStore.getGuildId();
       let tmp8 = null;
       if (null != guildId) {
-        tmp8 = __initData(channelId, guildId);
+        tmp8 = closure_1_15(channelId, guildId);
       }
       tmp4 = tmp8;
     }
@@ -104,12 +104,12 @@ function handlePermissionsChange() {
   }
   return flag2;
 }
-const isChannelChatInSidebar = fn(2048).isChannelChatInSidebar;
-const Constants = fn(1074);
+const isChannelChatInSidebar = fn(2055).isChannelChatInSidebar;
+const Constants = fn(1085);
 ({ ChannelSections: closure_12, ComponentActions: map1 } = Constants);
-const ChannelConstants = fn(2051);
+const ChannelConstants = fn(2058);
 ({ isStaticChannelRoute: closure_14, buildGuildStaticChannelId: closure_15 } = ChannelConstants);
-const Permissions = fn(1085).Permissions;
+const Permissions = fn(1096).Permissions;
 let c17 = false;
 let c18 = false;
 let c19 = false;
@@ -169,11 +169,11 @@ prototype["getSection"] = function getSection(arg0, arg1) {
     let tmp3 = null;
     if (null != arg0) {
       tmp3 = arg0;
-      if (closure_1_14(arg0)) {
+      if (state(arg0)) {
         const guildId = SelectedGuildStore.getGuildId();
         let tmp7 = null;
         if (null != guildId) {
-          tmp7 = __initData(arg0, guildId);
+          tmp7 = closure_1_15(arg0, guildId);
         }
         tmp3 = tmp7;
       }
@@ -208,11 +208,11 @@ prototype["getSidebarState"] = function getSidebarState(channelId) {
   let tmp = null;
   if (null != channelId) {
     tmp = channelId;
-    if (closure_1_14(channelId)) {
+    if (state(channelId)) {
       const guildId = SelectedGuildStore.getGuildId();
       let tmp5 = null;
       if (null != guildId) {
-        tmp5 = __initData(channelId, guildId);
+        tmp5 = closure_1_15(channelId, guildId);
       }
       tmp = tmp5;
     }
@@ -237,11 +237,11 @@ prototype["getCurrentSidebarChannelId"] = function getCurrentSidebarChannelId(ch
   let tmp = null;
   if (null != channelId) {
     tmp = channelId;
-    if (closure_1_14(channelId)) {
+    if (state(channelId)) {
       const guildId = SelectedGuildStore.getGuildId();
       let tmp5 = null;
       if (null != guildId) {
-        tmp5 = __initData(channelId, guildId);
+        tmp5 = closure_1_15(channelId, guildId);
       }
       tmp = tmp5;
     }
@@ -267,11 +267,11 @@ prototype["getCurrentSidebarMessageId"] = function getCurrentSidebarMessageId(ch
   let tmp = null;
   if (null != channelId) {
     tmp = channelId;
-    if (closure_1_14(channelId)) {
+    if (state(channelId)) {
       const guildId = SelectedGuildStore.getGuildId();
       let tmp5 = null;
       if (null != guildId) {
-        tmp5 = __initData(channelId, guildId);
+        tmp5 = closure_1_15(channelId, guildId);
       }
       tmp = tmp5;
     }
@@ -435,11 +435,11 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
     ({ channelId, details } = arg0);
     if (null != baseChannelId) {
       tmp = baseChannelId;
-      if (closure_1_14(baseChannelId)) {
+      if (state(baseChannelId)) {
         const guildId = SelectedGuildStore.getGuildId();
         let tmp5 = null;
         if (null != guildId) {
-          tmp5 = __initData(baseChannelId, guildId);
+          tmp5 = closure_1_15(baseChannelId, guildId);
         }
         tmp = tmp5;
       }
@@ -466,11 +466,11 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
     ({ sidebarType, details } = arg0);
     if (null != baseChannelId) {
       tmp = baseChannelId;
-      if (closure_1_14(baseChannelId)) {
+      if (state(baseChannelId)) {
         const guildId1 = SelectedGuildStore.getGuildId();
         let tmp5 = null;
         if (null != guildId1) {
-          tmp5 = __initData(baseChannelId, guildId1);
+          tmp5 = closure_1_15(baseChannelId, guildId1);
         }
         tmp = tmp5;
       }
@@ -490,11 +490,11 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
     ({ parentMessageId, location: _location } = parentChannelId);
     if (null != parentChannelId) {
       tmp = parentChannelId;
-      if (closure_1_14(parentChannelId)) {
+      if (state(parentChannelId)) {
         const guildId = SelectedGuildStore.getGuildId();
         let tmp5 = null;
         if (null != guildId) {
-          tmp5 = __initData(parentChannelId, guildId);
+          tmp5 = closure_1_15(parentChannelId, guildId);
         }
         tmp = tmp5;
       }
@@ -509,11 +509,11 @@ const channelSectionStore = new ChannelSectionStore(DispatcherDefault, {
     let tmp3 = null;
     if (null != baseChannelId) {
       tmp3 = baseChannelId;
-      if (closure_1_14(baseChannelId)) {
+      if (state(baseChannelId)) {
         const guildId = SelectedGuildStore.getGuildId();
         let tmp7 = null;
         if (null != guildId) {
-          tmp7 = __initData(baseChannelId, guildId);
+          tmp7 = closure_1_15(baseChannelId, guildId);
         }
         tmp3 = tmp7;
       }

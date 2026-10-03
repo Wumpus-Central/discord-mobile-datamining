@@ -1,9 +1,9 @@
-// === Module 8276: MenuTypes ===
+// === Module 8280: MenuTypes ===
 
-// Module 8276 (MenuTypes)
+// Module 8280 (MenuTypes)
 import size from "module_2" /* 2 */;
 
-const MediaTakedownRegulation = { TIDA: "tida", UK_STOPNCII: "uk_stopncii" };
+const MediaTakedownRegulation = { TIDA: "tida", UK_STOPNCII: "uk_stopncii", BRAZIL_ONLINE_SAFETY_OF_WOMEN: "brazil_online_safety_of_women" };
 const result = size.fileFinishedImporting("modules/in_app_reports/MenuTypes.tsx");
 
 export const ReportNames = { GUILD: "guild", GUILD_DISCOVERY: "guild_discovery", GUILD_DIRECTORY_ENTRY: "guild_directory_entry", MESSAGE: "message", STAGE_CHANNEL: "stage_channel", GUILD_SCHEDULED_EVENT: "guild_scheduled_event", FIRST_DM: "first_dm", USER: "user", APPLICATION: "application", WIDGET: "widget" };

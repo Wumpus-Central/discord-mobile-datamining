@@ -1,10 +1,10 @@
-// === Module 7992: MessagePreviewStore ===
+// === Module 8037: MessagePreviewStore ===
 
-// Module 7992 (MessagePreviewStore)
+// Module 8037 (MessagePreviewStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5067 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5112 */;
 
 require = fn;
 let c3 = null;

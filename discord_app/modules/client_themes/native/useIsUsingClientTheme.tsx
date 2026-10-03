@@ -1,11 +1,12 @@
-// === Module 7472: useIsUsingClientTheme ===
+// === Module 7508: useIsUsingClientTheme ===
 
-// Module 7472 (useIsUsingClientTheme)
-import useActiveTheme from "useActiveTheme" /* 7473 */;
+// Module 7508 (useIsUsingClientTheme)
+import useActiveTheme from "useActiveTheme" /* 7509 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
-const result = size.fileFinishedImporting("modules/client_themes/native/useIsUsingClientTheme.tsx");
+let ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
+const result1 = size.fileFinishedImporting("modules/client_themes/native/useIsUsingClientTheme.tsx");
 
-export default function useIsUsingClientTheme() {
-  return useActiveTheme.useIsClientThemeOrCustomThemeActive();
-};
+export default () => useActiveTheme.useIsClientThemeOrCustomThemeActive();

@@ -1,11 +1,11 @@
-// === Module 9014: ActivityFlagUtils ===
+// === Module 11123: ActivityFlagUtils ===
 
-// Module 9014 (ActivityFlagUtils)
+// Module 11123 (ActivityFlagUtils)
 import Storage2 from "Storage" /* 510 */;
-import FlagUtils from "FlagUtils" /* 1385 */;
-import UserSettings from "UserSettings" /* 2021 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7331 */;
-import Constants from "Constants" /* 1074 */;
+import FlagUtils from "FlagUtils" /* 1390 */;
+import UserSettings from "UserSettings" /* 2028 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7229 */;
+import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
 ({ ActivityFlags: c3, ActivityPartyPrivacy: closure_4 } = Constants);
@@ -19,8 +19,8 @@ export const computeActivityFlags = function computeActivityFlags(activity) {
   if (arg2 === undefined) {
     flag2 = false;
   }
-  let flag3 = canLaunchFrameResult;
-  if (canLaunchFrameResult === undefined) {
+  let flag3 = tmp13Result;
+  if (tmp13Result === undefined) {
     flag3 = false;
   }
   let PRIVATE = privacy;

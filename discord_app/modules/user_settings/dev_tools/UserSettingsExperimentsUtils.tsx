@@ -1,7 +1,7 @@
-// === Module 11504: UserSettingsExperimentsUtils ===
+// === Module 11423: UserSettingsExperimentsUtils ===
 
-// Module 11504 (UserSettingsExperimentsUtils)
-import flattenDefault from "flatten" /* 4954 */;
+// Module 11423 (UserSettingsExperimentsUtils)
+import flattenDefault from "flatten" /* 5000 */;
 import size from "module_2" /* 2 */;
 
 function matchesDeep(item10014, item10021) {
@@ -106,14 +106,14 @@ export const sortEntries = function sortEntries(entries, memo1) {
     return title.localeCompare(id2.experiment.title);
   });
 };
-export const getBestMatches = function getBestMatches(arg0, str) {
+export const getBestMatches = function getBestMatches(tmpResult3, str) {
   const parts = str.split(/\s+/g);
   const found = parts.filter((item) => "" !== item);
   if (0 === found.length) {
-    return arg0;
+    return tmpResult3;
   } else {
     const items = [];
-    const iter = arg0[Symbol.iterator]();
+    const iter = tmpResult3[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp4 = nextResult;

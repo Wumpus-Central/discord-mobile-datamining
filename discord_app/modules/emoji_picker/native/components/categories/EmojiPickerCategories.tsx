@@ -1,26 +1,26 @@
-// === Module 10001: EmojiPickerCategories ===
+// === Module 9954: EmojiPickerCategories ===
 
-// Module 10001 (EmojiPickerCategories)
-import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4595 */;
-import HapticUtils from "HapticUtils" /* 4810 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4811 */;
-import EmojiPickerCategoriesItemDefault from "EmojiPickerCategoriesItem" /* 10002 */;
+// Module 9954 (EmojiPickerCategories)
+import nativeDefault from "native" /* 587 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
+import HapticUtils from "HapticUtils" /* 4855 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4856 */;
+import EmojiPickerCategoriesItemDefault from "EmojiPickerCategoriesItem" /* 9955 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const EmojiCategoryTypes = fn(5961).EmojiCategoryTypes;
-const Constants = fn(1074);
+const EmojiCategoryTypes = fn(5642).EmojiCategoryTypes;
+const Constants = fn(1085);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsPages: metroRequire, CATEGORY_ICON_SIZE, EXPRESSION_FOOTER_HEIGHT } = Constants);
-let ExpressionPickerViewType = fn(1218).ExpressionPickerViewType;
+let ExpressionPickerViewType = fn(1229).ExpressionPickerViewType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj = { list: { flex: 1, height: EXPRESSION_FOOTER_HEIGHT }, listPlaceholder: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED }, item: { height: EXPRESSION_FOOTER_HEIGHT, width: EXPRESSION_FOOTER_HEIGHT, justifyContent: "center", alignItems: "center" }, keyboardItem: { height: CATEGORY_ICON_SIZE, width: CATEGORY_ICON_SIZE } };
 let closure_12 = createStyles.createStyles(obj);
 let closure_13 = { code: "function EmojiPickerCategoriesTsx1(){const{categoryIndexActive}=this.__closure;return categoryIndexActive.get();}" };
-let __initData = { code: "function EmojiPickerCategoriesTsx2(categoryIndex,categoryIndexPrev){const{blockRef,EXPRESSION_FOOTER_HEIGHT,runOnJS,scrollToCategoryIndex}=this.__closure;const ref=blockRef.get();if(categoryIndexPrev==null||categoryIndex===categoryIndexPrev||ref==null){return;}const categoryScrollPos=categoryIndex*EXPRESSION_FOOTER_HEIGHT;if(categoryScrollPos>ref.end||categoryScrollPos<ref.start){runOnJS(scrollToCategoryIndex)(categoryIndex);}}" };
+let __initData = { code: "function EmojiPickerCategoriesTsx2(categoryIndex_0,categoryIndexPrev){const{blockRef,EXPRESSION_FOOTER_HEIGHT,runOnJS,scrollToCategoryIndex}=this.__closure;const ref=blockRef.get();if(categoryIndexPrev==null||categoryIndex_0===categoryIndexPrev||ref==null){return;}const categoryScrollPos=categoryIndex_0*EXPRESSION_FOOTER_HEIGHT;if(categoryScrollPos>ref.end||categoryScrollPos<ref.start){runOnJS(scrollToCategoryIndex)(categoryIndex_0);}}" };
 let __initData2 = { code: "function EmojiPickerCategoriesTsx3(){const{inPortalKeyboard,bottomSheetIndex}=this.__closure;return inPortalKeyboard?bottomSheetIndex.get()===1:bottomSheetIndex.get()===0;}" };
 let closure_16 = { code: "function EmojiPickerCategoriesTsx4(){const{bottomSheetOpen}=this.__closure;return bottomSheetOpen.get();}" };
 let closure_17 = { code: "function EmojiPickerCategoriesTsx5(open){const{runOnJS,handleScrollToCategoryIndex}=this.__closure;if(!open){return;}runOnJS(handleScrollToCategoryIndex)();}" };
@@ -112,7 +112,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
   };
   let obj2 = bottomSheetRef(categories[7]);
   fn2.__closure = { blockRef: sharedValue, EXPRESSION_FOOTER_HEIGHT: onClearSearch, runOnJS: bottomSheetRef(categories[7]).runOnJS, scrollToCategoryIndex };
-  fn2.__workletHash = 7148256102464;
+  fn2.__workletHash = 14214555212704;
   fn2.__initData = __initData;
   const animatedReaction = obj2.useAnimatedReaction(fn, fn2);
   let items1 = [sharedValue];
@@ -218,7 +218,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
   const items4 = [callback2];
   callback3 = categoryIndexActive.useCallback((arg0, type) => {
     if (type.type === EmojiCategoryTypes.GUILD) {
-      const guild = type.guild;
+      guild = type.guild;
       if (null != guild) {
         const obj2 = { location: null, tab: null, guild_id: null };
         const obj3 = { page: constants2.EXPRESSION_PICKER };
@@ -259,7 +259,7 @@ export default noop.memo(function EmojiPickerCategories(bottomSheetRef) {
     obj.end = num2 + ref.current;
     const result = sharedValue.set(obj);
   }, items6);
-  const callback6 = categoryIndexActive.useCallback((arg0, index) => React7(EmojiPickerCategoriesItemDefault, { category: categories[index], categoryIndexActive, index, handlePressCategory: callback3, loadingStyle: closure_8.listPlaceholder, locked: categories[index].isNitroLocked, style: closure_8.item }), items7);
+  const callback6 = categoryIndexActive.useCallback((arg0, index) => options(EmojiPickerCategoriesItemDefault, { category: categories[index], categoryIndexActive, index, handlePressCategory: callback3, loadingStyle: closure_8.listPlaceholder, locked: categories[index].isNitroLocked, style: closure_8.item }), items7);
   const obj6 = { runOnJS: bottomSheetRef(categories[7]).runOnJS, handleScrollToCategoryIndex: callback2 };
   const memo1 = categoryIndexActive.useMemo(() => {
     const Gesture = bottomSheetRef(categories[13]).Gesture;

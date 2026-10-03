@@ -1,8 +1,8 @@
-// === Module 11380: ChannelFollowerStatsStore ===
+// === Module 11295: ChannelFollowerStatsStore ===
 
-// Module 11380 (ChannelFollowerStatsStore)
+// Module 11295 (ChannelFollowerStatsStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
 
 const constants = { FAILED: "failed", SUCCEEDED: "succeeded" };
 let closure_1 = {};

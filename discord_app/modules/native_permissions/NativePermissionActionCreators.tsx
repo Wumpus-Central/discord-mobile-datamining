@@ -1,7 +1,7 @@
-// === Module 5643: NativePermissionActionCreators ===
+// === Module 7280: NativePermissionActionCreators ===
 
-// Module 5643 (NativePermissionActionCreators)
-import DispatcherDefault from "Dispatcher" /* 573 */;
+// Module 7280 (NativePermissionActionCreators)
+import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
 
 const prototype = function NativePermissionActionCreators() {

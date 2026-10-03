@@ -1,8 +1,8 @@
-// === Module 7201: ConversationVisibilityStore ===
+// === Module 7104: ConversationVisibilityStore ===
 
-// Module 7201 (ConversationVisibilityStore)
+// Module 7104 (ConversationVisibilityStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
 
 const highlightingEnabled = true;
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;

@@ -1,13 +1,13 @@
-// === Module 11227: ApexActionCreators ===
+// === Module 11141: ApexActionCreators ===
 
-// Module 11227 (ApexActionCreators)
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import HTTPUtils from "HTTPUtils" /* 1271 */;
-import apex_ApexTypes from "apex/ApexTypes" /* 1438 */;
-import experiment from "experiment" /* 7493 */;
+// Module 11141 (ApexActionCreators)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import apex_ApexTypes from "apex/ApexTypes" /* 1443 */;
+import experiment from "experiment" /* 7537 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApexExperimentStore from "ApexExperimentStore" /* 1235 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
 
 require = fn;
 let closure_8 = async function _fetchApexExperimentsMetadata() {
@@ -57,7 +57,7 @@ let closure_9 = async function _fetchUserExperimentAssignments() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -143,7 +143,7 @@ let closure_10 = async function _fetchInstallationExperiments(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -236,7 +236,7 @@ let closure_10 = async function _fetchInstallationExperiments(arg0) {
   }
 };
 let closure_3 = ["installation"];
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/experiments/apex/ApexActionCreators.tsx");
 

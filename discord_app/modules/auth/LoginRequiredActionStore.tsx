@@ -1,8 +1,8 @@
-// === Module 2036: LoginRequiredActionStore ===
+// === Module 2043: LoginRequiredActionStore ===
 
-// Module 2036 (LoginRequiredActionStore)
+// Module 2043 (LoginRequiredActionStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
 
 function handleUpdateUser(user) {
   id = user.user.id;

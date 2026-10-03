@@ -1,9 +1,9 @@
-// === Module 5267: APIError ===
+// === Module 5313: APIError ===
 
-// Module 5267 (APIError)
-import Constants from "Constants" /* 1074 */;
-import util from "util" /* 1115 */;
-import HTTPUtils from "HTTPUtils" /* 1271 */;
+// Module 5313 (APIError)
+import Constants from "Constants" /* 1085 */;
+import util from "util" /* 1126 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
 import size from "module_2" /* 2 */;
 
 const Links = Constants.Links;

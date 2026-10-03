@@ -1,17 +1,75 @@
-// === Module 12334: UserProfileConfirmVideoUnstableConnection ===
+// === Module 12290: UserProfileConfirmVideoUnstableConnection ===
 
-// Module 12334 (UserProfileConfirmVideoUnstableConnection)
-import util from "util" /* 1115 */;
-import AlertModal from "AlertModal" /* 5393 */;
+// Module 12290 (UserProfileConfirmVideoUnstableConnection)
+import c from "c" /* 576 */;
+import util from "util" /* 1126 */;
+import AlertModal from "AlertModal" /* 5713 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c2, jsxs: c3 } = jsxProd);
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileConfirmVideoUnstableConnection.tsx");
 
-export default function UserProfileConfirmVideoUnstableConnection(onConfirm) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((onConfirm) => {
+  const cResult = c.c(8);
+  onConfirm = onConfirm.onConfirm;
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const intl = util.intl;
+    const stringResult = intl.string(util.t.m2Hyj0);
+    const intl2 = util.intl;
+    const stringResult1 = intl2.string(util.t.EhaK6B);
+    cResult[0] = stringResult;
+    cResult[1] = stringResult1;
+    tmp4 = stringResult;
+    tmp5 = stringResult1;
+  } else {
+    [tmp4, tmp5] = cResult;
+  }
+  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+    const intl3 = util.intl;
+    const stringResult2 = intl3.string(util.t.ND1my3);
+    cResult[2] = stringResult2;
+    let tmp8 = stringResult2;
+  } else {
+    tmp8 = cResult[2];
+  }
+  if (cResult[3] !== onConfirm) {
+    const obj2 = { text: tmp8, onPress: onConfirm };
+    const tmp12 = React2(AlertModal.AlertActionButton, obj2, "confirm");
+    cResult[3] = onConfirm;
+    cResult[4] = tmp12;
+    let tmp10 = tmp12;
+  } else {
+    tmp10 = cResult[4];
+  }
+  if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
+    const obj3 = { variant: "secondary", text: null };
+    const intl4 = util.intl;
+    obj3.text = intl4.string(util.t.jEqEhy);
+    const tmp15 = React2(AlertModal.AlertActionButton, obj3, "cancel");
+    cResult[5] = tmp15;
+    let tmp13 = tmp15;
+  } else {
+    tmp13 = cResult[5];
+  }
+  if (cResult[6] !== tmp10) {
+    const obj4 = { title: tmp4, content: tmp5, actions: null };
+    const obj5 = { children: null };
+    const items = [tmp10, tmp13];
+    obj5.children = items;
+    obj4.actions = React3(AlertModal.AlertActions, obj5);
+    const tmp19 = React2(AlertModal.AlertModal, obj4);
+    cResult[6] = tmp10;
+    cResult[7] = tmp19;
+    let tmp16 = tmp19;
+  } else {
+    tmp16 = cResult[7];
+  }
+  return tmp16;
+}) : ((onConfirm) => {
   const obj = { title: null, content: null, actions: null };
   const intl = util.intl;
   obj.title = intl.string(util.t.m2Hyj0);
@@ -30,4 +88,4 @@ export default function UserProfileConfirmVideoUnstableConnection(onConfirm) {
   obj2.children = items;
   obj.actions = React3(AlertModal.AlertActions, obj2);
   return React2(AlertModal.AlertModal, obj);
-};
+});

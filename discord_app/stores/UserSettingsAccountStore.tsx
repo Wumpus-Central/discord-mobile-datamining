@@ -1,15 +1,15 @@
-// === Module 6988: UserSettingsAccountStore ===
+// === Module 6886: UserSettingsAccountStore ===
 
-// Module 6988 (UserSettingsAccountStore)
+// Module 6886 (UserSettingsAccountStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import UserStore from "UserStore" /* 1372 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import UserStore from "UserStore" /* 1377 */;
 
 function handleFormClose() {
   OPEN = FormStates.CLOSED;
   closure_3 = {};
 }
-const FormStates = fn(1074).FormStates;
+const FormStates = fn(1085).FormStates;
 let OPEN = FormStates.CLOSED;
 let closure_3 = {};
 let obj = null;

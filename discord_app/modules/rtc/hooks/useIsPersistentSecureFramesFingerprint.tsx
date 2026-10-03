@@ -1,12 +1,12 @@
-// === Module 9365: useIsPersistentSecureFramesFingerprint ===
+// === Module 9373: useIsPersistentSecureFramesFingerprint ===
 
-// Module 9365 (useIsPersistentSecureFramesFingerprint)
+// Module 9373 (useIsPersistentSecureFramesFingerprint)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-let closure_5 = fn(9358).SECURE_FRAMES_PUBLIC_KEY_VERSION;
+let closure_5 = fn(9366).SECURE_FRAMES_PUBLIC_KEY_VERSION;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/hooks/useIsPersistentSecureFramesFingerprint.tsx");
 
@@ -31,7 +31,7 @@ export const useIsPersistentSecureFramesFingerprint = function useIsPersistentSe
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {

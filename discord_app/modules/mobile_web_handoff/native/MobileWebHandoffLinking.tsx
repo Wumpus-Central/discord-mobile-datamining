@@ -1,9 +1,9 @@
-// === Module 6922: MobileWebHandoffLinking ===
+// === Module 6820: MobileWebHandoffLinking ===
 
-// Module 6922 (MobileWebHandoffLinking)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import FingerprintUtils from "FingerprintUtils" /* 1254 */;
-import MobileWebHandoffUtilsDefault from "MobileWebHandoffUtils" /* 6925 */;
+// Module 6820 (MobileWebHandoffLinking)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import FingerprintUtils from "FingerprintUtils" /* 1265 */;
+import MobileWebHandoffUtilsDefault from "MobileWebHandoffUtils" /* 6823 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -53,7 +53,7 @@ let closure_10 = async function _redirectWithHandoffToken(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -87,7 +87,7 @@ let closure_10 = async function _redirectWithHandoffToken(arg0) {
           closure_131_5 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "flex", done: null };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp5) {
         if (arg0 === 1) {
@@ -172,7 +172,7 @@ let closure_11 = async function _redirectDeveloperPortalWithHandoffToken(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -216,7 +216,7 @@ let closure_11 = async function _redirectDeveloperPortalWithHandoffToken(arg0) {
           closure_130_3 = uRL;
           closure_131_1(closure_131_2[10]).performURLNavigation(closure_130_3.href);
           c5 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp7) {
         c5 = tmp;
@@ -225,7 +225,7 @@ let closure_11 = async function _redirectDeveloperPortalWithHandoffToken(arg0) {
     }
   })();
 };
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AnalyticEvents: hasOwnProperty, MarketingURLs: metroRequire, Routes: closure_7 } = Constants);
 let c8 = "mweb-handoff";
 const size = fn(2);

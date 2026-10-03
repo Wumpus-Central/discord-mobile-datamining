@@ -1,9 +1,9 @@
-// === Module 17442: GameOrganizationInviteStore ===
+// === Module 11083: GameOrganizationInviteStore ===
 
-// Module 17442 (GameOrganizationInviteStore)
+// Module 11083 (GameOrganizationInviteStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import GameOrganizationInviteConstants from "GameOrganizationInviteConstants" /* 17443 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import GameOrganizationInviteConstants from "GameOrganizationInviteConstants" /* 11084 */;
 import size from "module_2" /* 2 */;
 
 const constants = GameOrganizationInviteConstants.GameOrganizationInviteStates;
@@ -27,7 +27,7 @@ const gameOrganizationInviteStore = new GameOrganizationInviteStore(DispatcherDe
   GAME_ORGANIZATION_INVITE_RESOLVE: function handleResolve(code) {
     code = code.code;
     value = map.get(code);
-    let state;
+    state = undefined;
     if (value != null) {
       state = value.state;
     }
@@ -58,7 +58,7 @@ const gameOrganizationInviteStore = new GameOrganizationInviteStore(DispatcherDe
   GAME_ORGANIZATION_INVITE_RESOLVE_FAILURE: function handleResolveFailure(code) {
     code = code.code;
     value = map.get(code);
-    let state;
+    state = undefined;
     if (value != null) {
       state = value.state;
     }

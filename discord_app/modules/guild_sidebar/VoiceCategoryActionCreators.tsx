@@ -1,7 +1,7 @@
-// === Module 16043: VoiceCategoryActionCreators ===
+// === Module 16117: VoiceCategoryActionCreators ===
 
-// Module 16043 (VoiceCategoryActionCreators)
-import DispatcherDefault from "Dispatcher" /* 573 */;
+// Module 16117 (VoiceCategoryActionCreators)
+import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_sidebar/VoiceCategoryActionCreators.tsx");

@@ -1,9 +1,9 @@
-// === Module 13663: GuildTagActionCreators ===
+// === Module 13725: GuildTagActionCreators ===
 
-// Module 13663 (GuildTagActionCreators)
-import HTTPUtils from "HTTPUtils" /* 1271 */;
+// Module 13725 (GuildTagActionCreators)
+import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserStore from "UserStore" /* 1372 */;
+import UserStore from "UserStore" /* 1377 */;
 
 require = fn;
 let closure_6 = async function _adoptGuildIdentity() {
@@ -21,7 +21,7 @@ let closure_6 = async function _adoptGuildIdentity() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -86,7 +86,7 @@ let closure_6 = async function _adoptGuildIdentity() {
     }
   })();
 };
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_tag/GuildTagActionCreators.tsx");
 

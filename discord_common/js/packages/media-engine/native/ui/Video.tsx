@@ -1,7 +1,7 @@
-// === Module 4904: Video ===
+// === Module 4949: Video ===
 
-// Module 4904 (Video)
-import DirectVideoDefault from "DirectVideo" /* 4905 */;
+// Module 4949 (Video)
+import DirectVideoDefault from "DirectVideo" /* 4950 */;
 import size from "module_2" /* 2 */;
 
 class Video {

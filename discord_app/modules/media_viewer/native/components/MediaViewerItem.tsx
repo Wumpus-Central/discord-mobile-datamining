@@ -1,17 +1,17 @@
-// === Module 12747: MediaViewerItem ===
+// === Module 12783: MediaViewerItem ===
 
-// Module 12747 (MediaViewerItem)
-import PlatformUtils2 from "PlatformUtils" /* 1364 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6259 */;
-import useMediaViewerSources from "useMediaViewerSources" /* 7890 */;
-import useEntranceAnimation from "useEntranceAnimation" /* 12749 */;
+// Module 12783 (MediaViewerItem)
+import PlatformUtils2 from "PlatformUtils" /* 1369 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6140 */;
+import useMediaViewerSources from "useMediaViewerSources" /* 7934 */;
+import useEntranceAnimation from "useEntranceAnimation" /* 12785 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsx = fn(21).jsx;
-const PlatformUtils = fn(1364);
+const PlatformUtils = fn(1369);
 let closure_7 = PlatformUtils.isAndroid();
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/components/MediaViewerItem.tsx");

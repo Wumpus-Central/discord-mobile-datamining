@@ -1,6 +1,6 @@
-// === Module 16661: VibegrationsTraceUtils ===
+// === Module 16744: VibegrationsTraceUtils ===
 
-// Module 16661 (VibegrationsTraceUtils)
+// Module 16744 (VibegrationsTraceUtils)
 import size from "module_2" /* 2 */;
 
 function traceCategory(entry) {
@@ -161,9 +161,8 @@ export const groupTraceByTurn = function groupTraceByTurn(stateFromStoresArray) 
   });
 };
 export { traceSearchText };
-export const filterTrace = function filterTrace(entries, str) {
-  str = str.trim();
-  const formatted = str.toLowerCase();
+export const filterTrace = function filterTrace(entries, first1) {
+  const formatted = first1.trim().toLowerCase();
   let found = entries;
   if ("" !== formatted) {
     found = entries.filter((item) => traceSearchText(item).includes(formatted));

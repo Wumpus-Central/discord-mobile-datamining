@@ -1,19 +1,19 @@
-// === Module 9544: InstantInviteSendStateStore ===
+// === Module 9554: InstantInviteSendStateStore ===
 
-// Module 9544 (InstantInviteSendStateStore)
-import module_560 from "module_560" /* 560 */;
+// Module 9554 (InstantInviteSendStateStore)
+import module_570 from "module_570" /* 570 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
-let useInstantInviteSendStates = module_560.create(() => ({}));
+let useInstantInviteSendStates = module_570.create(() => ({}));
 const result = size.fileFinishedImporting("modules/instant_invite/InstantInviteSendStateStore.tsx");
 
 export const setSendState = function setSendState(arg0, arg1, arg2) {
   _require = arg0;
   dependencyMap = arg1;
   useInstantInviteSendStates = arg2;
-  const state = useInstantInviteSendStates.getState();
+  state = useInstantInviteSendStates.getState();
   require("ReactBatchUpdates").batchUpdates(() => {
     const obj = {};
     const merged = Object.assign(closure_3);

@@ -1,15 +1,15 @@
-// === Module 8466: shared/colors ===
+// === Module 8471: shared/colors ===
 
-// Module 8466 (shared/colors)
-import _modDef672 from "module_672" /* 672 */;
+// Module 8471 (shared/colors)
+import _modDef683 from "module_683" /* 683 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("design/utils/shared/colors.tsx");
 
-export const flattenColorOverOpaqueBackground = function flattenColorOverOpaqueBackground(token, context) {
-  const obj = _modDef672(token);
+export const flattenColorOverOpaqueBackground = function flattenColorOverOpaqueBackground(arg0, context) {
+  const obj = _modDef683(arg0);
   const rgbaResult = obj.rgba();
-  const rgbaResult1 = _modDef672(context).rgba();
+  const rgbaResult1 = _modDef683(context).rgba();
   if (1 !== rgbaResult1[3]) {
     const _Error = Error;
     const error = new Error("Expected solid cutout background color to be opaque");
@@ -22,8 +22,8 @@ export const flattenColorOverOpaqueBackground = function flattenColorOverOpaqueB
     const _Math3 = Math;
     const rounded1 = Math.round(rgbaResult[1] * tmp10 + rgbaResult1[1] * diff);
     const rounded2 = Math.round(rgbaResult[2] * tmp10 + rgbaResult1[2] * diff);
-    const tmpResult = _modDef672;
-    return _modDef672.rgb(rounded, rounded1, rounded2).hex();
+    const tmpResult = _modDef683;
+    return _modDef683.rgb(rounded, rounded1, rounded2).hex();
   }
-  const obj2 = _modDef672(context);
+  const obj2 = _modDef683(context);
 };

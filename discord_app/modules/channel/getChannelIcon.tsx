@@ -1,13 +1,13 @@
-// === Module 12813: getChannelIcon ===
+// === Module 12853: getChannelIcon ===
 
-// Module 12813 (getChannelIcon)
-import GlobalUtils from "GlobalUtils" /* 1370 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
+// Module 12853 (getChannelIcon)
+import GlobalUtils from "GlobalUtils" /* 1375 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
 import _slicedToArray from "module_32" /* 32 */;
-import UserStore from "UserStore" /* 1372 */;
+import UserStore from "UserStore" /* 1377 */;
 
 require = fn;
-const ChannelTypes = fn(1074).ChannelTypes;
+const ChannelTypes = fn(1085).ChannelTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/getChannelIcon.tsx");
 

@@ -1,11 +1,12 @@
-// === Module 7850: useProfileFrameLayerAsset ===
+// === Module 7894: useProfileFrameLayerAsset ===
 
-// Module 7850 (useProfileFrameLayerAsset)
+// Module 7894 (useProfileFrameLayerAsset)
+import CollectiblesAssetUtils from "CollectiblesAssetUtils" /* 1974 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
-const require = fn;
+require = fn;
 function measureProfileFrameLayer(arg0) {
   closure_0 = arg0;
   value = map.get(arg0);
@@ -41,7 +42,17 @@ function getProfileFrameLayerAssetUrl(arg0, arg1, arg2) {
   const rounded = Math.round(arg2 * React5.get());
   return "" + arg0 + "?width=" + rounded + "&height=" + Math.round(rounded * arg1);
 }
-let closure_15 = async function _preloadLayer(arg0) {
+function preloadLayer() {
+  const self = this;
+  const apply = closure_16.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+let closure_16 = async function _preloadLayer(arg0) {
   closure_2 = tmp2;
   closure_130_0 = closure_0;
   closure_130_1 = closure_1;
@@ -59,7 +70,7 @@ let closure_15 = async function _preloadLayer(arg0) {
         closure_130_3 = closure_131_14(closure_130_0, closure_130_2, closure_130_1);
         c4 = 2;
         c5 = 1;
-        return { value: closure_131_1(closure_131_2[6]).preload(closure_130_3, 30000), done: false };
+        return { value: closure_131_1(closure_131_2[8]).preload({ uri: closure_130_3, timeoutMs: 30000 }), done: false };
       } else {
         c5 = 3;
       }
@@ -74,20 +85,184 @@ let closure_15 = async function _preloadLayer(arg0) {
 };
 get_ActivityIndicator = fn(17);
 ({ Image: metroRequire, PixelRatio: closure_7 } = get_ActivityIndicator);
-const UserProfileThemeTypes = fn(6815).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(6707).UserProfileThemeTypes;
 const map = new Map();
 const map1 = new Map();
 const set = new Set();
 const set1 = new Set();
-let size = fn(2);
-let result = size.fileFinishedImporting("modules/collectibles/profile_frames/native/useProfileFrameLayerAsset.tsx");
-
-export default function useProfileFrameLayerAsset(width) {
+fn(558);
+const ReactCompilerGating = fn(558);
+let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = require("c").c(16);
+  ({ skuId, layer, width } = arg0);
+  if (cResult[0] === layer) {
+    if (cResult[1] === skuId) {
+      let tmp4 = cResult[2];
+    }
+    _require = tmp4;
+    const _Symbol = Symbol;
+    if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+      class P {
+        constructor(arg0) {
+          return arg0 + 1;
+        }
+      }
+      cResult[3] = P;
+    } else {
+      class P {
+        constructor(arg0) {
+          return arg0 + 1;
+        }
+      }
+    }
+    const tmp9 = _slicedToArray(noop.useReducer(P, 0), 2)[1];
+    closure_1 = tmp9;
+    if (cResult[4] === tmp4) {
+      class P {
+        constructor(arg0) {
+          return arg0 + 1;
+        }
+      }
+      if (cResult[7] !== tmp4) {
+        class P {
+          constructor(arg0) {
+            return arg0 + 1;
+          }
+        }
+        tmp12[0] = tmp4;
+        cResult[7] = tmp4;
+        cResult[8] = tmp12;
+      } else {
+        class P {
+          constructor(arg0) {
+            return arg0 + 1;
+          }
+        }
+      }
+      const effect = noop.useEffect(tmp10, tmp12);
+      if (cResult[9] === tmp4) {
+        class P {
+          constructor(arg0) {
+            return arg0 + 1;
+          }
+        }
+        if (cResult[13] === tmp15) {
+          class P {
+            constructor(arg0) {
+              return arg0 + 1;
+            }
+          }
+          return tmp23;
+        }
+        const obj2 = { assetUrl: tmp15, imageHeight: tmp14 };
+        cResult[13] = tmp15;
+        cResult[14] = tmp14;
+        cResult[15] = obj2;
+        tmp23 = obj2;
+      }
+      value = undefined;
+      if (null != tmp4) {
+        class P {
+          constructor(arg0) {
+            return arg0 + 1;
+          }
+        }
+        value = map.get(tmp4);
+      }
+      if (null != value) {
+        class P {
+          constructor(arg0) {
+            return arg0 + 1;
+          }
+        }
+      }
+      let combined = null;
+      if (null != tmp4) {
+        class P {
+          constructor(arg0) {
+            return arg0 + 1;
+          }
+        }
+        if (null != value) {
+          class P {
+            constructor(arg0) {
+              return arg0 + 1;
+            }
+          }
+          const rounded = Math.round(width * closure_7.get());
+          const _Math = Math;
+          const _HermesInternal = HermesInternal;
+          combined = "" + tmp4 + "?width=" + rounded + "&height=" + Math.round(rounded * value);
+        }
+      }
+      cResult[9] = tmp4;
+      cResult[10] = width;
+      cResult[11] = 0;
+      cResult[12] = combined;
+    }
+    const fn = function h() {
+      let hasItem = null == closure_0;
+      if (!hasItem) {
+        hasItem = "" === tmp;
+      }
+      if (!hasItem) {
+        hasItem = map.has(tmp);
+      }
+      if (!hasItem) {
+        closure_0 = tmp;
+        value = map.get(tmp);
+        if (null != value) {
+          let resolved = Promise.resolve(value);
+        } else {
+          resolved = map1.get(tmp);
+          if (null == resolved) {
+            const promise = new Promise((arg0) => {
+              closure_0 = arg0;
+              size = size.getSize(closure_0, (arg0, arg1) => {
+                if (arg0 > 0) {
+                  const result = map.set(closure_0, arg1 / arg0);
+                  set2.delete(closure_0);
+                  closure_0(arg1 / arg0);
+                } else {
+                  set2.add(closure_0);
+                  closure_0(null);
+                }
+              }, () => {
+                set2.add(closure_0);
+                closure_0(null);
+              });
+            });
+            const cleanupPromise = promise.finally(() => set.delete(closure_0));
+            const result = map1.set(tmp, cleanupPromise);
+            resolved = cleanupPromise;
+          }
+        }
+        resolved.then((result) => {
+          if (null != result) {
+            closure_1_1();
+          }
+        });
+      }
+    };
+    cResult[4] = tmp4;
+    cResult[5] = tmp9;
+    cResult[6] = fn;
+    tmp10 = fn;
+  }
+  const obj = require("c");
+  const tmpResult = require("CollectiblesAssetUtils");
+  const collectiblesItemAssetUrl = tmpResult.getCollectiblesItemAssetUrl({ skuId, assetFormat: require("CollectiblesAssetUtils").CollectiblesItemAssetFormat.STATIC, assetId: layer.id });
+  cResult[0] = layer;
+  cResult[1] = skuId;
+  cResult[2] = collectiblesItemAssetUrl;
+  tmp4 = collectiblesItemAssetUrl;
+  const obj3 = { skuId, assetFormat: require("CollectiblesAssetUtils").CollectiblesItemAssetFormat.STATIC, assetId: layer.id };
+}) : ((width) => {
   width = width.width;
   let collectiblesItemAssetUrl;
   ({ skuId, layer } = width);
-  const obj = collectiblesItemAssetUrl(1968);
-  collectiblesItemAssetUrl = obj.getCollectiblesItemAssetUrl({ skuId, assetFormat: collectiblesItemAssetUrl(1968).CollectiblesItemAssetFormat.STATIC, assetId: layer.id });
+  const obj = collectiblesItemAssetUrl(1974);
+  collectiblesItemAssetUrl = obj.getCollectiblesItemAssetUrl({ skuId, assetFormat: collectiblesItemAssetUrl(1974).CollectiblesItemAssetFormat.STATIC, assetId: layer.id });
   closure_1 = _slicedToArray(noop.useReducer((arg0) => arg0 + 1, 0), 2)[1];
   const items = [collectiblesItemAssetUrl];
   const effect = noop.useEffect(() => {
@@ -154,11 +329,11 @@ export default function useProfileFrameLayerAsset(width) {
     }
   }
   return { assetUrl, imageHeight };
-};
-export const isProfileFrameLayerShown = function isProfileFrameLayerShown(anchor, profileThemeType, fn) {
-  let tmp = null != fn;
+});
+function isProfileFrameLayerShown(anchor, profileThemeType, layers) {
+  let tmp = null != layers;
   if (tmp) {
-    tmp = !fn(anchor);
+    tmp = !layers(anchor);
   }
   let tmp2 = !tmp;
   if (!tmp) {
@@ -173,8 +348,280 @@ export const isProfileFrameLayerShown = function isProfileFrameLayerShown(anchor
     tmp2 = tmp5;
   }
   return tmp2;
-};
-export const usePreloadLayerImages = function usePreloadLayerImages(frame) {
+}
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/collectibles/profile_frames/native/useProfileFrameLayerAsset.tsx");
+
+export default tmp7;
+export { isProfileFrameLayerShown };
+export const usePreloadLayerImages = ReactCompilerGating.isReactCompilerEnabled() ? ((frame) => {
+  const cResult = frame(skuId[7]).c(27);
+  frame = frame.frame;
+  ({ containerWidth, profileThemeType } = frame);
+  skuId = frame.filterLayer;
+  let obj = frame(skuId[7]);
+  let tmp = skuId;
+  const isProfileFrameLayerPreloadEnabled = frame(skuId[9]).useIsProfileFrameLayerPreloadEnabled("usePreloadLayerImages");
+  if (null != frame) {
+    if (cResult[6] === skuId) {
+      if (cResult[7] === profileThemeType) {
+        let tmp5 = cResult[8];
+      }
+      if (cResult[9] !== frame.skuId) {
+        const fn2 = function v(assetId) {
+          const obj = CollectiblesAssetUtils;
+          return obj.getCollectiblesItemAssetUrl({ skuId: frame.skuId, assetFormat: CollectiblesAssetUtils.CollectiblesItemAssetFormat.STATIC, assetId: assetId.id });
+        };
+        cResult[9] = frame.skuId;
+        cResult[10] = fn2;
+        let tmp6 = fn2;
+      } else {
+        tmp6 = cResult[10];
+      }
+      const _Symbol2 = Symbol;
+      if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
+        const fn3 = function p(arg0) {
+          let tmp = null != arg0;
+          if (tmp) {
+            tmp = "" !== arg0;
+          }
+          return tmp;
+        };
+        cResult[11] = fn3;
+        let tmp8 = fn3;
+      } else {
+        tmp8 = cResult[11];
+      }
+      const layers = frame.layers;
+      const found = layers.filter(tmp5);
+      const mapped = found.map(tmp6);
+      const found1 = mapped.filter(tmp8);
+      cResult[1] = skuId;
+      ({ layers: tmp2[2], skuId } = frame);
+      cResult[3] = skuId;
+      cResult[4] = profileThemeType;
+      cResult[5] = found1;
+    }
+    const fn = function h(anchor) {
+      let tmp3 = null != skuId;
+      if (tmp3) {
+        tmp3 = !tmp2(anchor);
+      }
+      let tmp4 = !tmp3;
+      if (!tmp3) {
+        let tmp6 = profileThemeType === UserProfileThemeTypes.PREVIEW;
+        if (!tmp6) {
+          let tmp7 = "top" === anchor.anchor;
+          if (tmp7) {
+            tmp7 = "staple" === anchor.type;
+          }
+          tmp6 = tmp7;
+        }
+        tmp4 = tmp6;
+      }
+      return tmp4;
+    };
+    cResult[6] = skuId;
+    cResult[7] = profileThemeType;
+    cResult[8] = fn;
+    tmp5 = fn;
+  } else {
+    const _Symbol = Symbol;
+    if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+      const items = [];
+      cResult[0] = items;
+      let first = items;
+    } else {
+      first = cResult[0];
+    }
+    if (cResult[12] === containerWidth) {
+      if (cResult[13] === frame) {
+        let tmp12 = cResult[14];
+      }
+      noop = tmp12;
+      let skuId1;
+      if (frame != null) {
+        skuId1 = frame.skuId;
+      }
+      let _HermesInternal = HermesInternal;
+      const combined = "" + skuId1 + ":" + tmp12;
+      closure_7 = first(noop.useState(null), 2)[1];
+      if (cResult[15] === first) {
+        if (cResult[16] === tmp12) {
+          let tmp20 = cResult[17];
+        }
+        closure_8 = tmp20;
+        if (cResult[18] === first) {
+          if (cResult[19] === isProfileFrameLayerPreloadEnabled) {
+            if (cResult[20] === tmp20) {
+              if (cResult[21] === combined) {
+                if (cResult[22] === tmp12) {
+                  let tmp22 = cResult[23];
+                  let tmp23 = cResult[24];
+                }
+                const effect = obj4.useEffect(tmp22, tmp23);
+                let tmp25 = !isProfileFrameLayerPreloadEnabled;
+                class E {
+                  constructor() {
+                    if (closure_3) {
+                      tmp = closure_5;
+                      num = 0;
+                      if (closure_5 > 0) {
+                        tmp2 = closure_8;
+                        if (!closure_8) {
+                          flag = false;
+                          c0 = false;
+                          markSettled = function markSettled() {
+                            if (!c0) {
+                              closure_7(combined);
+                            }
+                          };
+                          tmp3 = globalThis;
+                          _setTimeout = setTimeout;
+                          num2 = 3000;
+                          closure_1 = setTimeout(markSettled, 3000);
+                          _Promise = Promise;
+                          tmp4 = closure_4;
+                          allPromises = Promise.all(closure_4.map((item) => preloadLayer(item, closure_1_5)));
+                          nextPromise = allPromises.then(markSettled);
+                          return () => {
+                            c0 = true;
+                            clearTimeout(closure_1);
+                          };
+                        }
+                      }
+                    }
+                    return;
+                  }
+                }
+                if (!tmp25) {
+                  tmp25 = tmp19 === combined;
+                }
+                if (cResult[25] !== tmp25) {
+                  const obj3 = { settled: tmp25 };
+                  class E {
+                    constructor() {
+                      if (closure_3) {
+                        tmp = closure_5;
+                        num = 0;
+                        if (closure_5 > 0) {
+                          tmp2 = closure_8;
+                          if (!closure_8) {
+                            flag = false;
+                            c0 = false;
+                            markSettled = function markSettled() {
+                              if (!c0) {
+                                closure_7(combined);
+                              }
+                            };
+                            tmp3 = globalThis;
+                            _setTimeout = setTimeout;
+                            num2 = 3000;
+                            closure_1 = setTimeout(markSettled, 3000);
+                            _Promise = Promise;
+                            tmp4 = closure_4;
+                            allPromises = Promise.all(closure_4.map((item) => preloadLayer(item, closure_1_5)));
+                            nextPromise = allPromises.then(markSettled);
+                            return () => {
+                              c0 = true;
+                              clearTimeout(closure_1);
+                            };
+                          }
+                        }
+                      }
+                      return;
+                    }
+                  }
+                  cResult[26] = obj3;
+                  let tmp26 = obj3;
+                } else {
+                  tmp26 = cResult[26];
+                }
+                return tmp26;
+              }
+            }
+          }
+        }
+        class E {
+          constructor() {
+            if (closure_3) {
+              tmp = closure_5;
+              num = 0;
+              if (closure_5 > 0) {
+                tmp2 = closure_8;
+                if (!closure_8) {
+                  flag = false;
+                  c0 = false;
+                  markSettled = function markSettled() {
+                    if (!c0) {
+                      closure_7(combined);
+                    }
+                  };
+                  tmp3 = globalThis;
+                  _setTimeout = setTimeout;
+                  num2 = 3000;
+                  closure_1 = setTimeout(markSettled, 3000);
+                  _Promise = Promise;
+                  tmp4 = closure_4;
+                  allPromises = Promise.all(closure_4.map((item) => preloadLayer(item, closure_1_5)));
+                  nextPromise = allPromises.then(markSettled);
+                  return () => {
+                    c0 = true;
+                    clearTimeout(closure_1);
+                  };
+                }
+              }
+            }
+            return;
+          }
+        }
+        const items1 = [isProfileFrameLayerPreloadEnabled, first, tmp12, combined, tmp20];
+        cResult[18] = first;
+        cResult[19] = isProfileFrameLayerPreloadEnabled;
+        cResult[20] = tmp20;
+        cResult[21] = combined;
+        cResult[22] = tmp12;
+        cResult[23] = E;
+        cResult[24] = items1;
+        tmp23 = items1;
+        tmp22 = E;
+      }
+      const tmp21 = tmp12 > 0 && first.every((item) => {
+        let flag = true;
+        if (!set1.has(item)) {
+          value = map.get(item);
+          let hasItem = null != value;
+          if (hasItem) {
+            const _Math = Math;
+            const rounded = Math.round(closure_5 * React5.get());
+            const _Math2 = Math;
+            const _HermesInternal = HermesInternal;
+            hasItem = set.has("" + item + "?width=" + rounded + "&height=" + Math.round(rounded * value));
+          }
+          flag = hasItem;
+        }
+        return flag;
+      });
+      cResult[15] = first;
+      cResult[16] = tmp12;
+      cResult[17] = tmp21;
+      tmp20 = tmp21;
+      obj4 = noop;
+      const tmp18 = first(noop.useState(null), 2);
+    }
+    let num14 = 0;
+    if (null != frame) {
+      num14 = 0;
+      if (containerWidth > 0) {
+        num14 = containerWidth + 2 * profileThemeType(tmp[10])(frame, containerWidth).overflowHorizontal;
+      }
+    }
+    cResult[12] = containerWidth;
+    cResult[13] = frame;
+    cResult[14] = num14;
+    tmp12 = num14;
+  }
+}) : ((frame) => {
   frame = frame.frame;
   ({ containerWidth, profileThemeType } = frame);
   const filterLayer = frame.filterLayer;
@@ -182,7 +629,7 @@ export const usePreloadLayerImages = function usePreloadLayerImages(frame) {
   let combined;
   closure_7 = undefined;
   c8 = undefined;
-  const isProfileFrameLayerPreloadEnabled = frame(filterLayer[7]).useIsProfileFrameLayerPreloadEnabled("usePreloadLayerImages");
+  const isProfileFrameLayerPreloadEnabled = frame(filterLayer[9]).useIsProfileFrameLayerPreloadEnabled("usePreloadLayerImages");
   let items = [frame, profileThemeType, filterLayer];
   const memo = num.useMemo(() => {
     if (null == frame) {
@@ -226,7 +673,7 @@ export const usePreloadLayerImages = function usePreloadLayerImages(frame) {
   if (null != frame) {
     num = 0;
     if (containerWidth > 0) {
-      num = containerWidth + 2 * profileThemeType(filterLayer[8])(frame, containerWidth).overflowHorizontal;
+      num = containerWidth + 2 * profileThemeType(filterLayer[10])(frame, containerWidth).overflowHorizontal;
     }
   }
   let skuId;
@@ -269,16 +716,7 @@ export const usePreloadLayerImages = function usePreloadLayerImages(frame) {
           c0 = false;
           const _setTimeout = setTimeout;
           const timeout = setTimeout(markSettled, 3000);
-          Promise.all(memo.map((item) => (function preloadLayer() {
-            const self = this;
-            const apply = closure_1_15.apply;
-            if (typeof apply === "unknown") {
-              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-            } else {
-              applyArgumentsResult = apply(self, arguments);
-            }
-            return applyArgumentsResult;
-          })(item, num))).then(markSettled);
+          Promise.all(memo.map((item) => preloadLayer(item, num))).then(markSettled);
           return () => {
             c0 = true;
             clearTimeout(closure_1);
@@ -295,4 +733,4 @@ export const usePreloadLayerImages = function usePreloadLayerImages(frame) {
     settled = tmp6[0] === combined;
   }
   return { settled };
-};
+});

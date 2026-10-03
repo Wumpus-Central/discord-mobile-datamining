@@ -1,6 +1,6 @@
-// === Module 1348: AccessibilityConstants ===
+// === Module 1359: AccessibilityConstants ===
 
-// Module 1348 (AccessibilityConstants)
+// Module 1359 (AccessibilityConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/a11y/AccessibilityConstants.tsx");

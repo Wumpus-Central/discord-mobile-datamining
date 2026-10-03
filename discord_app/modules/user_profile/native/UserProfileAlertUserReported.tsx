@@ -1,16 +1,47 @@
-// === Module 12335: UserProfileAlertUserReported ===
+// === Module 12291: UserProfileAlertUserReported ===
 
-// Module 12335 (UserProfileAlertUserReported)
-import util from "util" /* 1115 */;
-import AlertModal from "AlertModal" /* 5393 */;
+// Module 12291 (UserProfileAlertUserReported)
+import c from "c" /* 576 */;
+import util from "util" /* 1126 */;
+import AlertModal from "AlertModal" /* 5713 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileAlertUserReported.tsx");
 
-export default function UserProfileAlertUserReported() {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(3);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const intl = util.intl;
+    const stringResult = intl.string(util.t.IwHU3R);
+    const intl2 = util.intl;
+    const stringResult1 = intl2.string(util.t.qxyRaq);
+    cResult[0] = stringResult;
+    cResult[1] = stringResult1;
+    tmp4 = stringResult;
+    tmp5 = stringResult1;
+  } else {
+    [tmp4, tmp5] = cResult;
+  }
+  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+    const obj2 = { title: tmp4, content: tmp5, actions: null };
+    const obj3 = { children: null };
+    const obj4 = { text: null };
+    const intl3 = util.intl;
+    obj4.text = intl3.string(util.t.BddRzS);
+    obj3.children = jsx(AlertModal.AlertActionButton, { text: null }, "okay");
+    obj2.actions = jsx(AlertModal.AlertActions, { children: null });
+    const tmp10 = jsx(AlertModal.AlertModal, { title: tmp4, content: tmp5, actions: null });
+    cResult[2] = tmp10;
+    let tmp8 = tmp10;
+  } else {
+    tmp8 = cResult[2];
+  }
+  return tmp8;
+}) : (() => {
   const obj = { title: null, content: null, actions: null };
   const intl = util.intl;
   obj.title = intl.string(util.t.IwHU3R);
@@ -23,4 +54,4 @@ export default function UserProfileAlertUserReported() {
   obj2.children = jsx(AlertModal.AlertActionButton, { text: null }, "okay");
   obj.actions = jsx(AlertModal.AlertActions, { children: null });
   return jsx(AlertModal.AlertModal, { title: null, content: null, actions: null });
-};
+});

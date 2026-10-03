@@ -1,9 +1,9 @@
-// === Module 4863: SessionsStore ===
+// === Module 4908: SessionsStore ===
 
-// Module 4863 (SessionsStore)
+// Module 4908 (SessionsStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 function handleUpdate(sessions) {

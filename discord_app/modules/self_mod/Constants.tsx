@@ -1,7 +1,7 @@
-// === Module 11114: Constants ===
+// === Module 9784: Constants ===
 
-// Module 11114 (Constants)
-import util from "util" /* 1115 */;
+// Module 9784 (Constants)
+import util from "util" /* 1126 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/self_mod/Constants.tsx");

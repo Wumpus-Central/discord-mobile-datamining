@@ -1,28 +1,203 @@
-// === Module 10394: useMaybeFetchCollectiblesCategoriesShared ===
+// === Module 10468: useMaybeFetchCollectiblesCategoriesShared ===
 
-// Module 10394 (useMaybeFetchCollectiblesCategoriesShared)
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7149 */;
-import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7195 */;
+// Module 10468 (useMaybeFetchCollectiblesCategoriesShared)
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7052 */;
+import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7098 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ExperimentStore from "ExperimentStore" /* 4761 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7150 */;
+import ExperimentStore from "ExperimentStore" /* 4776 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7053 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const noop = fn(19);
 ({ useEffect: c3, useCallback: closure_4 } = noop);
-const CollectiblesShopConstants = fn(1076);
+const CollectiblesShopConstants = fn(1087);
 ({ COLLECTIBLES_SHOP_CACHE_DURATION_MS: closure_7, COLLECTIBLES_SHOP_FETCH_ERROR_RETRY_THRESHOLD_MS: closure_8 } = CollectiblesShopConstants);
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/hooks/useMaybeFetchCollectiblesCategoriesShared.tsx");
 
-export const useMaybeFetchCollectiblesCategoriesShared = function useMaybeFetchCollectiblesCategoriesShared(arg0, noOp, arg2) {
+export const useMaybeFetchCollectiblesCategoriesShared = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2, arg3) => {
   _require = arg0;
-  dependencyMap = noOp;
+  dependencyMap = arg1;
   _slicedToArray = arg2;
-  let flag = skipFetch;
-  if (skipFetch === undefined) {
+  const cResult = require("c").c(25);
+  closure_3 = tmp4;
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    let items = [ExperimentStore];
+    const fn = function f() {
+      return tmp13.hasLoadedExperiments;
+    };
+    cResult[0] = items;
+    cResult[1] = fn;
+    tmp5 = items;
+    tmp6 = fn;
+  } else {
+    [tmp5, tmp6] = cResult;
+  }
+  let obj = require("c");
+  const stateFromStores = require("initialize").useStateFromStores(tmp5, tmp6);
+  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+    const items1 = [CollectiblesCategoryStore];
+    class E {
+      constructor() {
+        tmp = closure_6;
+        items = [, , , , , , ];
+        ({ isFetchingCategories: arr[0], lastFetchOptions: arr[1], error: arr[2], lastErrorTimestamp } = closure_6);
+        if (lastErrorTimestamp == null) {
+          lastErrorTimestamp = 0;
+        }
+        items[3] = lastErrorTimestamp;
+        num = tmp.lastSuccessfulFetch;
+        if (num == null) {
+          num = 0;
+        }
+        items[4] = num;
+        ({ categories: arr[5], skipNumCategories: arr[6] } = tmp);
+        return items;
+      }
+    }
+    cResult[2] = items1;
+    cResult[3] = E;
+    let tmp10 = E;
+    let tmp9 = items1;
+  } else {
+    tmp9 = cResult[2];
+    tmp10 = cResult[3];
+  }
+  const tmpResult = require("initialize");
+  const tmp12 = _slicedToArray(require("initialize").useStateFromStoresArray(tmp9, tmp10), 7);
+  [r10048, tmp13] = tmp12;
+  ExperimentStore = tmp13;
+  CollectiblesCategoryStore = tmp14;
+  closure_7 = tmp15;
+  closure_8 = tmp16;
+  skipNumCategories = tmp17;
+  if (cResult[4] === tmp12[2]) {
+    if (cResult[5] === stateFromStores) {
+      if (cResult[6] === tmp15) {
+        if (cResult[7] === tmp13) {
+          if (cResult[8] === tmp16) {
+            if (cResult[9] === arg1) {
+              if (cResult[10] === arg0) {
+                if (cResult[11] === arg2) {
+                  if (cResult[12] === tmp4) {
+                    if (cResult[13] === tmp17) {
+                      let tmp18 = cResult[14];
+                      let tmp19 = cResult[15];
+                    }
+                    closure_3(tmp18, tmp19);
+                    class E {
+                      constructor() {
+                        tmp = closure_6;
+                        items = [, , , , , , ];
+                        ({ isFetchingCategories: arr[0], lastFetchOptions: arr[1], error: arr[2], lastErrorTimestamp } = closure_6);
+                        if (lastErrorTimestamp == null) {
+                          lastErrorTimestamp = 0;
+                        }
+                        items[3] = lastErrorTimestamp;
+                        num = tmp.lastSuccessfulFetch;
+                        if (num == null) {
+                          num = 0;
+                        }
+                        items[4] = num;
+                        ({ categories: arr[5], skipNumCategories: arr[6] } = tmp);
+                        return items;
+                      }
+                    }
+                    const fn2 = function b() {
+                      const obj = {};
+                      const merged = Object.assign(closure_0);
+                      obj.variantsReturnStyle = ShopVariantsReturnStyle.ShopVariantsReturnStyle.VARIANTS_GROUP;
+                      obj.includeBundles = true;
+                      obj.skipNumCategories = skipNumCategories;
+                      const collectiblesCategories = CollectiblesActionCreators.fetchCollectiblesCategories(obj, undefined, closure_2);
+                    };
+                    cResult[16] = arg0;
+                    cResult[17] = arg2;
+                    cResult[18] = tmp17;
+                    cResult[19] = fn2;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  class O {
+    constructor() {
+      if (!closure_3) {
+        tmp = closure_4;
+        if (closure_4) {
+          tmp2 = closure_6;
+          if (!closure_6.isFetchingCategories) {
+            tmp3 = globalThis;
+            _Date = Date;
+            tmp4 = closure_7;
+            tmp5 = closure_8;
+            _Boolean = Boolean;
+            tmp7 = closure_6;
+            tmp6 = Date.now() - closure_7 < closure_8;
+            if (!Boolean(closure_6)) {
+              obj = {};
+              tmp8 = closure_0;
+              tmp9 = obj;
+              merged = Object.assign(closure_0);
+              tmp11 = closure_0;
+              tmp12 = closure_1;
+              obj.variantsReturnStyle = closure_0(closure_1[8]).ShopVariantsReturnStyle.VARIANTS_GROUP;
+              flag = true;
+              obj.includeBundles = true;
+              tmp13 = closure_9;
+              obj.skipNumCategories = closure_9;
+              obj2 = closure_0(closure_1[9]);
+              tmp14 = closure_5;
+              result = obj2.areRequestOptionsEqual(closure_5, obj);
+              _Date2 = Date;
+              tmp16 = !result;
+              tmp17 = closure_8;
+              tmp18 = closure_7;
+              tmp19 = !tmp16;
+              if (result) {
+                tmp19 = Date.now() - closure_8 < closure_7;
+              }
+              if (!tmp19) {
+                tmp11Result = tmp11(tmp12[9]);
+                tmp20 = closure_1;
+                tmp21 = closure_2;
+                collectiblesCategories = tmp11Result.fetchCollectiblesCategories(obj, closure_1, closure_2);
+              }
+            }
+          }
+        }
+      }
+      return;
+    }
+  }
+  const items2 = [undefined !== arg3 && arg3, stateFromStores, tmp13, tmp12[4], arg0, tmp12[2], tmp12[3], arg1, arg2, tmp12[6]];
+  cResult[4] = tmp12[2];
+  cResult[5] = stateFromStores;
+  cResult[6] = tmp12[3];
+  cResult[7] = tmp13;
+  cResult[8] = tmp12[4];
+  cResult[9] = arg1;
+  cResult[10] = arg0;
+  cResult[11] = arg2;
+  cResult[12] = undefined !== arg3 && arg3;
+  cResult[13] = tmp12[6];
+  cResult[14] = O;
+  cResult[15] = items2;
+  tmp19 = items2;
+  tmp18 = O;
+}) : ((arg0, arg1, arg2) => {
+  _require = arg0;
+  dependencyMap = arg1;
+  _slicedToArray = arg2;
+  let flag = arg3;
+  if (arg3 === undefined) {
     flag = false;
   }
   let hasLoadedExperiments;
@@ -50,15 +225,15 @@ export const useMaybeFetchCollectiblesCategoriesShared = function useMaybeFetchC
   lastSuccessfulFetch = tmp4;
   closure_7 = tmp5;
   closure_8 = tmp6;
-  const skipNumCategories = tmp7;
-  const items2 = [flag, stateFromStores, tmp2[1], tmp2[4], arg0, tmp2[2], tmp2[3], noOp, arg2, tmp2[6]];
+  skipNumCategories = tmp7;
+  const items2 = [flag, stateFromStores, tmp2[1], tmp2[4], arg0, tmp2[2], tmp2[3], arg1, arg2, tmp2[6]];
   flag(() => {
     if (!flag) {
       if (stateFromStores) {
         if (!CollectiblesCategoryStore.isFetchingCategories) {
           const _Date = Date;
           const _Boolean = Boolean;
-          Date.now() - closure_7 < React6;
+          Date.now() - closure_7 < closure_2_8;
           if (!Boolean(closure_6)) {
             const obj = {};
             const merged = Object.assign(closure_0);
@@ -96,4 +271,4 @@ export const useMaybeFetchCollectiblesCategoriesShared = function useMaybeFetchC
       const collectiblesCategories = CollectiblesActionCreators.fetchCollectiblesCategories(obj, undefined, closure_2);
     }, items3)
   };
-};
+});

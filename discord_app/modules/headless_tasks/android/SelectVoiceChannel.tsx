@@ -1,12 +1,12 @@
-// === Module 18024: SelectVoiceChannel ===
+// === Module 18110: SelectVoiceChannel ===
 
-// Module 18024 (SelectVoiceChannel)
-import transitionToChannel from "transitionToChannel" /* 4856 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 5052 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5909 */;
-import HeadlessTaskUtilsDefault from "HeadlessTaskUtils" /* 18017 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4868 */;
+// Module 18110 (SelectVoiceChannel)
+import transitionToChannel from "transitionToChannel" /* 4901 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 5097 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5568 */;
+import HeadlessTaskUtilsDefault from "HeadlessTaskUtils" /* 18103 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
 
 require = fn;
 const size = fn(2);

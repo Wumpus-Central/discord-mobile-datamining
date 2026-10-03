@@ -1,22 +1,34 @@
-// === Module 17027: useNitroFileUploadMarketingEligible ===
+// === Module 17114: useNitroFileUploadMarketingEligible ===
 
-// Module 17027 (useNitroFileUploadMarketingEligible)
-import PremiumConstants from "PremiumConstants" /* 1374 */;
-import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 5628 */;
-import useIsPremiumSubscriber from "useIsPremiumSubscriber" /* 10818 */;
+// Module 17114 (useNitroFileUploadMarketingEligible)
+import PremiumConstants from "PremiumConstants" /* 1379 */;
+import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 7244 */;
+import useIsPremiumSubscriber from "useIsPremiumSubscriber" /* 10847 */;
+import "ReactCompilerGating";
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const PremiumTypes = PremiumConstants.PremiumTypes;
-const result = size.fileFinishedImporting("modules/premium/file_upload/useNitroFileUploadMarketingEligible.tsx");
-
-export const useNitroFileUploadAnnouncementEligible = function useNitroFileUploadAnnouncementEligible(MainViewTooltipActionSheets) {
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   let isPremiumSubscriber = useIsPremiumSubscriber.useIsPremiumSubscriber(PremiumTypes.TIER_2);
   if (isPremiumSubscriber) {
-    isPremiumSubscriber = obj2.useNitroFileUploadRolloutEnabled(MainViewTooltipActionSheets);
+    isPremiumSubscriber = obj2.useNitroFileUploadRolloutEnabled(arg0);
   }
   return isPremiumSubscriber;
-};
-export const useNitroFileUploadUpsellEligible = function useNitroFileUploadUpsellEligible(MainViewTooltipActionSheets) {
+}) : ((arg0) => {
+  let isPremiumSubscriber = useIsPremiumSubscriber.useIsPremiumSubscriber(PremiumTypes.TIER_2);
+  if (isPremiumSubscriber) {
+    isPremiumSubscriber = obj2.useNitroFileUploadRolloutEnabled(arg0);
+  }
+  return isPremiumSubscriber;
+});
+const result = size.fileFinishedImporting("modules/premium/file_upload/useNitroFileUploadMarketingEligible.tsx");
+
+export const useNitroFileUploadAnnouncementEligible = tmp2;
+export const useNitroFileUploadUpsellEligible = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const isPremiumSubscriber = useIsPremiumSubscriber.useIsPremiumSubscriber(PremiumTypes.TIER_2);
-  return NitroFileUploadExperiments.useNonNitroFileUploadMarketingEnabled(MainViewTooltipActionSheets) && !isPremiumSubscriber;
-};
+  return NitroFileUploadExperiments.useNonNitroFileUploadMarketingEnabled(arg0) && !isPremiumSubscriber;
+}) : ((arg0) => {
+  const isPremiumSubscriber = useIsPremiumSubscriber.useIsPremiumSubscriber(PremiumTypes.TIER_2);
+  return NitroFileUploadExperiments.useNonNitroFileUploadMarketingEnabled(arg0) && !isPremiumSubscriber;
+});

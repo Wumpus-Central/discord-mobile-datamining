@@ -1,10 +1,10 @@
-// === Module 1615: SafeAreaConstants ===
+// === Module 1620: SafeAreaConstants ===
 
-// Module 1615 (SafeAreaConstants)
-import _mod1616 from "module_1616" /* 1616 */;
+// Module 1620 (SafeAreaConstants)
+import _mod1621 from "module_1621" /* 1621 */;
 import size from "module_2" /* 2 */;
 
-const initialWindowMetrics = _mod1616.initialWindowMetrics;
+const initialWindowMetrics = _mod1621.initialWindowMetrics;
 let insets;
 if (initialWindowMetrics != null) {
   insets = initialWindowMetrics.insets;

@@ -1,7 +1,7 @@
-// === Module 1876: KeyboardManagerUtils ===
+// === Module 1881: KeyboardManagerUtils ===
 
-// Module 1876 (KeyboardManagerUtils)
-import NativeKeyboardModuleDefault from "NativeKeyboardModule" /* 1877 */;
+// Module 1881 (KeyboardManagerUtils)
+import NativeKeyboardModuleDefault from "NativeKeyboardModule" /* 1882 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("utils/native/KeyboardManagerUtils.tsx");

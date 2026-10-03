@@ -1,6 +1,6 @@
-// === Module 7535: FWOMeasureUtils ===
+// === Module 7583: FWOMeasureUtils ===
 
-// Module 7535 (FWOMeasureUtils)
+// Module 7583 (FWOMeasureUtils)
 import size from "module_2" /* 2 */;
 
 function measureInWindowForFWO() {

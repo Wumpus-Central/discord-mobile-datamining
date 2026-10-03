@@ -1,8 +1,8 @@
-// === Module 2093: TryLoad ===
+// === Module 2098: TryLoad ===
 
-// Module 2093 (TryLoad)
+// Module 2098 (TryLoad)
 import LoggerDefault from "Logger" /* 3 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 let closure_4 = async function _tryLoadAsync(arg0) {
@@ -16,7 +16,7 @@ let closure_4 = async function _tryLoadAsync(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -80,7 +80,7 @@ let closure_5 = async function _tryLoadOrResetCacheGatewayAsync(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {

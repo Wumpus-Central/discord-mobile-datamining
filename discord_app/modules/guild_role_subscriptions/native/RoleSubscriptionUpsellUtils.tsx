@@ -1,8 +1,8 @@
-// === Module 9951: RoleSubscriptionUpsellUtils ===
+// === Module 9900: RoleSubscriptionUpsellUtils ===
 
-// Module 9951 (RoleSubscriptionUpsellUtils)
-import asyncRequireImpl from "asyncRequireImpl" /* 1981 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5388 */;
+// Module 9900 (RoleSubscriptionUpsellUtils)
+import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5708 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ export default {
     guildId = guildId.guildId;
     actions_AlertActionCreatorsDefault.openLazy({
       importer() {
-        return asyncRequireImpl(9952, dependencyMap.paths).then((result) => {
+        return asyncRequireImpl(9901, dependencyMap.paths).then((result) => {
           closure_0 = result.default;
           return (arg0) => {
             const obj = {};

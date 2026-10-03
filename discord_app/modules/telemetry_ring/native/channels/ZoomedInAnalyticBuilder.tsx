@@ -1,10 +1,10 @@
-// === Module 1990: ZoomedInAnalyticBuilder ===
+// === Module 1996: ZoomedInAnalyticBuilder ===
 
-// Module 1990 (ZoomedInAnalyticBuilder)
-import Constants from "Constants" /* 1074 */;
-import ProcessUtilsDefault from "ProcessUtils" /* 1358 */;
-import GatewaySocketOpcode from "GatewaySocketOpcode" /* 1991 */;
-import RTCControlSocket from "RTCControlSocket" /* 1992 */;
+// Module 1996 (ZoomedInAnalyticBuilder)
+import Constants from "Constants" /* 1085 */;
+import ProcessUtilsDefault from "ProcessUtils" /* 1363 */;
+import GatewaySocketOpcode from "GatewaySocketOpcode" /* 1997 */;
+import RTCControlSocket from "RTCControlSocket" /* 1998 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;
@@ -203,7 +203,7 @@ const dependencyMap = {
     data = data.data;
     let tmp = null;
     if (null != data) {
-      const state = data.state;
+      state = data.state;
       let tmp2 = null;
       if (typeof state === "string") {
         tmp2 = state;
@@ -257,7 +257,7 @@ const dependencyMap = {
         tmp4 = stage;
       }
       if (tmp4 == null) {
-        const state = data.state;
+        state = data.state;
         let tmp5 = null;
         if (typeof state === "string") {
           tmp5 = state;
@@ -522,7 +522,7 @@ const dependencyMap2 = {
   [AnalyticEvents.WEBSOCKET_MESSAGE_RECEIVED]: (data) => {
     data = data.data;
     if (null == data) {
-      let obj = { message_identity: "unknown", socket_kind: "paddingHorizontal" };
+      let obj = { message_identity: "unknown", socket_kind: "application" };
     } else {
       const url = data.url;
       let tmp61 = null;

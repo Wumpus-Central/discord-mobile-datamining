@@ -1,7 +1,7 @@
-// === Module 4960: VideoCodecUtils ===
+// === Module 5006: VideoCodecUtils ===
 
-// Module 4960 (VideoCodecUtils)
-import Constants from "Constants" /* 4870 */;
+// Module 5006 (VideoCodecUtils)
+import Constants from "Constants" /* 4915 */;
 import size from "module_2" /* 2 */;
 
 const ExperimentFlags = Constants.ExperimentFlags;
@@ -56,19 +56,8 @@ export const getExperimentCodecs = function getExperimentCodecs(experimentFlags)
     const obj = { name: "AV1", encode: hasItem, decode: hasItem1 };
     items.push(obj);
   }
-  let hasItem2;
-  if (experimentFlags != null) {
-    hasItem2 = experimentFlags.has(ExperimentFlags.H265_HARDWARE_ONLY);
-  }
-  let tmp8 = !hasItem2;
-  if (hasItem2) {
-    let hasItem3;
-    if (experimentFlags != null) {
-      hasItem3 = experimentFlags.has(ExperimentFlags.H265_HARDWARE_DECODE_AVAILABLE);
-    }
-    tmp8 = hasItem3;
-  }
-  items.push({ name: "H265", encode: !experimentFlags.has(ExperimentFlags.H265_DISABLE_ENCODE), decode: tmp8 });
+  const tmp6 = !experimentFlags.has(ExperimentFlags.H265_DISABLE_ENCODE);
+  items.push({ name: "H265", encode: !experimentFlags.has(ExperimentFlags.H265_DISABLE_ENCODE), decode: experimentFlags.has(ExperimentFlags.H265_HARDWARE_DECODE_AVAILABLE) });
   return items;
 };
 export const filterVideoCodecs = function filterVideoCodecs(arg0, arr) {

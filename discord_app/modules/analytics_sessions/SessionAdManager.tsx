@@ -1,18 +1,18 @@
-// === Module 14317: SessionAdManager ===
+// === Module 14385: SessionAdManager ===
 
-// Module 14317 (SessionAdManager)
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import DurationsDefault from "Durations" /* 1091 */;
-import SentryUtilsDefault from "SentryUtils" /* 1231 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import Timers from "Timers" /* 2039 */;
-import SessionForegroundUtils from "SessionForegroundUtils" /* 7070 */;
-import SessionAdGenerator from "SessionAdGenerator" /* 7307 */;
+// Module 14385 (SessionAdManager)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import DurationsDefault from "Durations" /* 1102 */;
+import SentryUtilsDefault from "SentryUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import Timers from "Timers" /* 2046 */;
+import SessionForegroundUtils from "SessionForegroundUtils" /* 6971 */;
+import SessionAdGenerator from "SessionAdGenerator" /* 7205 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import LifecycleManager from "LifecycleManager" /* 1983 */;
+import LifecycleManager from "LifecycleManager" /* 1989 */;
 
 require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AnalyticEvents: closure_4, AppStates: hasOwnProperty } = Constants);
 const ad = "ad";
 let token = AuthenticationStore.getToken();

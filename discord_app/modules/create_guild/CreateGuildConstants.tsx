@@ -1,10 +1,10 @@
-// === Module 12417: create_guild/CreateGuildConstants ===
+// === Module 12356: create_guild/CreateGuildConstants ===
 
-// Module 12417 (create_guild/CreateGuildConstants)
-import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
-import util from "util" /* 1115 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4503 */;
-import Constants from "Constants" /* 1074 */;
+// Module 12356 (create_guild/CreateGuildConstants)
+import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
+import util from "util" /* 1126 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4514 */;
+import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
 ({ ChannelTypes: c3, Permissions: closure_4 } = Constants);

@@ -1,18 +1,18 @@
-// === Module 10680: UnifiedGiftModalSuccessScreen ===
+// === Module 10751: UnifiedGiftModalSuccessScreen ===
 
-// Module 10680 (UnifiedGiftModalSuccessScreen)
-import nativeDefault from "native" /* 576 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1981 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5048 */;
-import openUserSettings from "openUserSettings" /* 6987 */;
+// Module 10751 (UnifiedGiftModalSuccessScreen)
+import nativeDefault from "native" /* 587 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
+import openUserSettings from "openUserSettings" /* 6885 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Image = fn(17).Image;
-const UserSettingsSections = fn(1074).UserSettingsSections;
+const UserSettingsSections = fn(1085).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = { alertContainer: { paddingHorizontal: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_24, alignItems: "center" }, image: { position: "relative", top: -50 }, title: null, description: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_24, alignItems: "center" };
 obj2.title = { marginTop: -nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_8 };
@@ -38,7 +38,7 @@ export default function UnifiedGiftModalSuccessScreen(giftBadgeProgress) {
     }
     if (tmp2) {
       const obj2 = { giftBadgeProgress };
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10692, dependencyMap.paths), obj2, "collectibles_shop_gift_badge_modal");
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10763, dependencyMap.paths), obj2, "collectibles_shop_gift_badge_modal");
     }
   }, items);
   const items1 = [onClose];
@@ -47,14 +47,14 @@ export default function UnifiedGiftModalSuccessScreen(giftBadgeProgress) {
     openUserSettings.openUserSettings({ screen: UserSettingsSections.PREMIUM_GIFTING, params: {} });
   }, items1);
   let obj = { onClose: callback, noDefaultButtons: true, style: tmp.alertContainer, children: null };
-  let obj2 = { source: giftBadgeProgress(enabled[6]).GIFT_STYLE_IMG[giftBadgeProgress.giftStyle], style: tmp.image };
-  const items2 = [closure_6(Image, obj2), , , ];
+  const tmp4 = giftBadgeProgress(enabled[6]).GIFT_STYLE_IMG[giftBadgeProgress.giftStyle];
+  const items2 = [closure_6(Image, { source: tmp4, style: tmp.image }), , , ];
   const obj3 = { variant: "heading-lg/bold", style: tmp.title, children: null };
-  const intl = giftBadgeProgress(enabled[14]).intl;
+  const intl = tmp2(tmp3[14]).intl;
   obj3.children = intl.string(giftBadgeProgress(enabled[14]).t.MqZXbv);
   items2[1] = closure_6(giftBadgeProgress(enabled[13]).Text, obj3);
   const obj4 = { variant: "text-md/medium", style: tmp.description, children: null };
-  const intl2 = giftBadgeProgress(enabled[14]).intl;
+  const intl2 = tmp2(tmp3[14]).intl;
   obj4.children = intl2.format(giftBadgeProgress(enabled[14]).t.YS2J4S, { onClick: callback1 });
   items2[2] = closure_6(giftBadgeProgress(enabled[13]).Text, obj4);
   const obj5 = { onPress: callback, text: null, textVariant: "text-md/semibold", grow: true };
@@ -62,11 +62,12 @@ export default function UnifiedGiftModalSuccessScreen(giftBadgeProgress) {
     if (null != giftBadgeProgress) {
       let cpT0Cq = tmp2(tmp3[14]).t.PDTjLN;
     }
-    obj5.text = tmp9(cpT0Cq);
-    items2[3] = closure_6(giftBadgeProgress(enabled[15]).BaseTextButton, obj5);
+    obj5.text = tmp11(cpT0Cq);
+    items2[3] = closure_6(tmp2(tmp3[15]).BaseTextButton, obj5);
     obj.children = items2;
-    return closure_7(tmp7, obj);
+    return closure_7(tmp8, obj);
   }
   cpT0Cq = tmp2(tmp3[14]).t.cpT0Cq;
-  tmp7 = onClose(enabled[12]);
+  let obj2 = { source: tmp4, style: tmp.image };
+  tmp8 = onClose(enabled[12]);
 };

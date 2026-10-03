@@ -1,19 +1,19 @@
-// === Module 7659: GuildAlertModeSystemMessage ===
+// === Module 7703: GuildAlertModeSystemMessage ===
 
-// Module 7659 (GuildAlertModeSystemMessage)
-import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1115 */;
-import AvatarUtils from "AvatarUtils" /* 1397 */;
-import utils_AvatarUtils from "utils/AvatarUtils" /* 1400 */;
-import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 7568 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7575 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7577 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7579 */;
-import getTagPropertiesDefault from "getTagProperties" /* 7660 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
+// Module 7703 (GuildAlertModeSystemMessage)
+import nativeDefault from "native" /* 587 */;
+import util from "util" /* 1126 */;
+import AvatarUtils from "AvatarUtils" /* 1402 */;
+import utils_AvatarUtils from "utils/AvatarUtils" /* 1405 */;
+import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 7612 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7619 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7621 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7623 */;
+import getTagPropertiesDefault from "getTagProperties" /* 7704 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
 
 require = fn;
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 const nativeStyleProperties = createStyles.createNativeStyleProperties({ automodUsernameColor: nativeDefault.colors.TEXT_BRAND });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/GuildAlertModeSystemMessage.tsx");
@@ -55,7 +55,7 @@ export const createGuildAlertModeDisabledSystemMessage = function createGuildAle
   let automodUsernameColor = nativeStyleProperties(theme).automodUsernameColor;
   const tmp2 = resolveMessageContentColorsDefault(theme);
   const messageAuthorWithProcessedColor = useAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
-  const obj3 = { message, channel: "HermesInternal", isSystemDM: null, colors: tmp2 };
+  const obj3 = { message, channel: "IconComponent", isSystemDM: null, colors: tmp2 };
   const obj2 = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }) };
   const obj4 = {};
   const merged = Object.assign(createCommonMessageDefault(roleStyle));

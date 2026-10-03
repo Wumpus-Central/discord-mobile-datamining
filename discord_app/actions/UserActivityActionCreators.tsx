@@ -1,9 +1,9 @@
-// === Module 11465: UserActivityActionCreators ===
+// === Module 11384: UserActivityActionCreators ===
 
-// Module 11465 (UserActivityActionCreators)
-import DispatcherDefault from "Dispatcher" /* 573 */;
+// Module 11384 (UserActivityActionCreators)
+import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import PresenceStore from "PresenceStore" /* 4885 */;
+import PresenceStore from "PresenceStore" /* 4930 */;
 
 const require = globalThis.__r;
 
@@ -41,7 +41,7 @@ let closure_6 = async function _getMetadata(arg0, arg1) {
     return body;
   })();
 };
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/UserActivityActionCreators.tsx");
 

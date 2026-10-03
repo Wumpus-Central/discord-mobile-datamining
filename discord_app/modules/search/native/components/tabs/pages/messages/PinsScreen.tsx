@@ -1,13 +1,13 @@
-// === Module 16790: messages/PinsScreen ===
+// === Module 16878: messages/PinsScreen ===
 
-// Module 16790 (messages/PinsScreen)
-import ChannelPinActionCreatorsDefault from "ChannelPinActionCreators" /* 11382 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12052 */;
-import MessagesScreenDefault from "MessagesScreen" /* 16788 */;
+// Module 16878 (messages/PinsScreen)
+import ChannelPinActionCreatorsDefault from "ChannelPinActionCreators" /* 11298 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 11982 */;
+import MessagesScreenDefault from "MessagesScreen" /* 16876 */;
 import noop from "module_19" /* 19 */;
-import ChannelPinsStore from "ChannelPinsStore" /* 11383 */;
-import SearchMessageStore from "SearchMessageStore" /* 6886 */;
-import SearchQueryStore from "SearchQueryStore" /* 12032 */;
+import ChannelPinsStore from "ChannelPinsStore" /* 11299 */;
+import SearchMessageStore from "SearchMessageStore" /* 6784 */;
+import SearchQueryStore from "SearchQueryStore" /* 11967 */;
 
 const require = fn;
 function InitialPinsScreen(searchContext) {
@@ -137,16 +137,71 @@ function InitialPinsScreen(searchContext) {
     ItemSeparatorComponent: null
   });
 }
-const FetchState = fn(11383).FetchState;
-const SearchConstants = fn(7477);
+const FetchState = fn(11299).FetchState;
+const SearchConstants = fn(7513);
 ({ MESSAGE_PLACEHOLDER_ITEM_SIZE: closure_8, SearchListItemTypes: closure_9, SEARCH_PINNED_MESSAGES_LINE_CLAMP: c10 } = SearchConstants);
-let closure_11 = fn(7476).SearchResultContentEntityTypes;
-const SearchTypes = fn(1074).SearchTypes;
+let closure_11 = fn(7512).SearchResultContentEntityTypes;
+const SearchTypes = fn(1085).SearchTypes;
 const jsx = fn(21).jsx;
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/messages/PinsScreen.tsx");
 
-export default noop.memo(function PinsScreen(searchContext) {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => {
+  let tmp2 = dependencyMap;
+  const cResult = searchContext(576).c(12);
+  searchContext = searchContext.searchContext;
+  ({ tab, isFocused } = searchContext);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [SearchQueryStore];
+    cResult[0] = items;
+    let first = items;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] !== searchContext) {
+    const fn = function n() {
+      return SearchQueryStore.isInitialSearchQuery(searchContext);
+    };
+    const items1 = [searchContext];
+    cResult[1] = searchContext;
+    cResult[2] = fn;
+    cResult[3] = items1;
+    let tmp7 = items1;
+    let tmp6 = fn;
+  } else {
+    tmp6 = cResult[2];
+    tmp7 = cResult[3];
+  }
+  const obj = searchContext(576);
+  if (tmpResult.useStateFromStores(first, tmp6, tmp7)) {
+    if (cResult[4] === isFocused) {
+      if (cResult[5] === searchContext) {
+        if (cResult[6] === tab) {
+          let tmp9 = cResult[7];
+        }
+        return tmp9;
+      }
+    }
+    const obj2 = { searchContext, tab, isFocused };
+    const tmp12 = <InitialPinsScreen searchContext={searchContext} tab={tab} isFocused={isFocused} />;
+    cResult[4] = isFocused;
+    cResult[5] = searchContext;
+    cResult[6] = tab;
+    cResult[7] = tmp12;
+    tmp9 = tmp12;
+  }
+  if (cResult[8] === isFocused) {
+    if (cResult[9] === searchContext) {
+    }
+  }
+  tmp2 = jsx(MessagesScreenDefault, { searchContext, tab, isFocused });
+  cResult[8] = isFocused;
+  cResult[9] = searchContext;
+  cResult[10] = tab;
+  cResult[11] = tmp2;
+  tmpResult = searchContext(504);
+}) : ((searchContext) => {
   searchContext = searchContext.searchContext;
   ({ tab, isFocused } = searchContext);
   const items = [SearchQueryStore];
@@ -159,4 +214,4 @@ export default noop.memo(function PinsScreen(searchContext) {
     tmp5 = <InitialPinsScreen searchContext={searchContext} tab={tab} isFocused={isFocused} />;
   }
   return tmp5;
-});
+}));

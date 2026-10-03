@@ -1,6 +1,6 @@
-// === Module 8732: ? ===
+// === Module 8745: ? ===
 
-// Module 8732
+// Module 8745
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/connections/xbox_discord_link.png.js");

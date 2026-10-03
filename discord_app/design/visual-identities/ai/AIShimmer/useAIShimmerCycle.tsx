@@ -1,25 +1,318 @@
-// === Module 14146: useAIShimmerCycle ===
+// === Module 14215: useAIShimmerCycle ===
 
-// Module 14146 (useAIShimmerCycle)
-import waveTransition from "waveTransition" /* 14145 */;
+// Module 14215 (useAIShimmerCycle)
+import waveTransition from "waveTransition" /* 14213 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const size = fn(2);
-const result = size.fileFinishedImporting("design/visual-identities/ai/AIShimmer/useAIShimmerCycle.tsx");
-
-export const linesKeyFor = function linesKeyFor(join) {
+const ReactCompilerGating = fn(558);
+function linesKeyFor(join) {
   let joined = join;
   if (Array.isArray(join)) {
     joined = join.join("\0");
   }
   return joined;
-};
-export const linesFromKey = function linesFromKey(str) {
+}
+function linesFromKey(str) {
   return str.split("\0");
-};
-export const useAIShimmerCycle = function useAIShimmerCycle(initialDelay) {
+}
+const size = fn(2);
+const result = size.fileFinishedImporting("design/visual-identities/ai/AIShimmer/useAIShimmerCycle.tsx");
+
+export { linesKeyFor };
+export { linesFromKey };
+export const useAIShimmerCycle = ReactCompilerGating.isReactCompilerEnabled() ? ((initialDelay) => {
+  const cResult = delay(initialDelay[3]).c(43);
+  ({ text, delay } = initialDelay);
+  initialDelay = initialDelay.initialDelay;
+  const duration = initialDelay.duration;
+  const reducedMotion = initialDelay.reducedMotion;
+  const trailingWidth = initialDelay.trailingWidth;
+  const onComplete = initialDelay.onComplete;
+  const onStart = initialDelay.onStart;
+  const createController = initialDelay.createController;
+  reducedMotion.useRef(null);
+  if (cResult[0] !== text) {
+    const _Array = Array;
+    let joined = text;
+    if (Array.isArray(text)) {
+      joined = text.join("\0");
+    }
+    cResult[0] = text;
+    cResult[1] = joined;
+    let str = joined;
+  } else {
+    str = cResult[1];
+  }
+  if (cResult[2] !== str) {
+    const parts = str.split("\0");
+    cResult[2] = str;
+    cResult[3] = parts;
+    current = parts;
+  } else {
+    current = cResult[3];
+  }
+  const tmp6 = duration(reducedMotion.useState(0), 2);
+  const first = tmp6[0];
+  closure_12 = tmp8;
+  reducedMotion.useRef(0);
+  reducedMotion.useRef(null);
+  reducedMotion.useRef(null);
+  reducedMotion.useRef(true);
+  closure_17 = obj2.useRef(onComplete);
+  closure_18 = obj2.useRef(onStart);
+  reducedMotion.useRef(current);
+  reducedMotion.useRef(createController);
+  reducedMotion.useRef(trailingWidth);
+  reducedMotion.useRef(duration);
+  reducedMotion.useRef(reducedMotion);
+  if (cResult[4] === createController) {
+    if (cResult[5] === duration) {
+      if (cResult[6] === current) {
+        if (cResult[7] === onComplete) {
+          if (cResult[8] === onStart) {
+            if (cResult[9] === reducedMotion) {
+              if (cResult[10] === trailingWidth) {
+                let tmp9 = cResult[11];
+              }
+              const effect = obj2.useEffect(tmp9);
+              const tmp5Result = tmp5(obj2.useState(str), 2);
+              if (tmp5Result[0] !== str) {
+                tmp5Result[1](str);
+                tmp8(0);
+              }
+              let num5 = 0;
+              if (current.length > 0) {
+                num5 = first % current.length;
+              }
+              let str4 = current[num5];
+              if (str4 == null) {
+                str4 = "";
+              }
+              const _Symbol = Symbol;
+              if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
+                class G {
+                  constructor() {
+                    tmp = closure_12((arg0) => arg0 + 1);
+                    return;
+                  }
+                }
+                cResult[12] = G;
+              } else {
+                class G {
+                  constructor() {
+                    tmp = closure_12((arg0) => arg0 + 1);
+                    return;
+                  }
+                }
+              }
+              play = G;
+              const _Symbol2 = Symbol;
+              if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
+                class Q {
+                  constructor() {
+                    obj = {
+                      play: closure_25,
+                      stop() {
+                                          current = ref.current;
+                                          let stopResult;
+                                          if (current != null) {
+                                            stopResult = current.stop();
+                                          }
+                                          return stopResult;
+                                        }
+                    };
+                    return obj;
+                  }
+                }
+                const items = [G];
+                cResult[13] = Q;
+                cResult[14] = items;
+                let tmp17 = items;
+              } else {
+                class Q {
+                  constructor() {
+                    obj = {
+                      play: closure_25,
+                      stop() {
+                                          current = ref.current;
+                                          let stopResult;
+                                          if (current != null) {
+                                            stopResult = current.stop();
+                                          }
+                                          return stopResult;
+                                        }
+                    };
+                    return obj;
+                  }
+                }
+                tmp17 = cResult[14];
+              }
+              const imperativeHandle = obj2.useImperativeHandle(initialDelay.ref, Q, tmp17);
+              const _Symbol3 = Symbol;
+              if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
+                class X {
+                  constructor() {
+                    str = closure_19.current[0];
+                    tmp = closure_20;
+                    if (str == null) {
+                      str = "";
+                    }
+                    obj = {
+                      to: str,
+                      trailingWidth: closure_21.current,
+                      onStart() {
+                                          current = ref2.current;
+                                          currentResult = undefined;
+                                          if (current != null) {
+                                            currentResult = current();
+                                          }
+                                          return currentResult;
+                                        },
+                      onComplete() {
+                                          current = ref.current;
+                                          currentResult = undefined;
+                                          if (current != null) {
+                                            currentResult = current();
+                                          }
+                                          return currentResult;
+                                        }
+                    };
+                    currentResult = closure_20.current(obj);
+                    closure_0 = currentResult;
+                    closure_8.current = currentResult;
+                    return () => {
+                      currentResult.destroy();
+                      closure_8.current = null;
+                    };
+                  }
+                }
+                const items1 = [];
+                cResult[15] = X;
+                cResult[16] = items1;
+                let tmp20 = items1;
+              } else {
+                class X {
+                  constructor() {
+                    str = closure_19.current[0];
+                    tmp = closure_20;
+                    if (str == null) {
+                      str = "";
+                    }
+                    obj = {
+                      to: str,
+                      trailingWidth: closure_21.current,
+                      onStart() {
+                                          current = ref2.current;
+                                          currentResult = undefined;
+                                          if (current != null) {
+                                            currentResult = current();
+                                          }
+                                          return currentResult;
+                                        },
+                      onComplete() {
+                                          current = ref.current;
+                                          currentResult = undefined;
+                                          if (current != null) {
+                                            currentResult = current();
+                                          }
+                                          return currentResult;
+                                        }
+                    };
+                    currentResult = closure_20.current(obj);
+                    closure_0 = currentResult;
+                    closure_8.current = currentResult;
+                    return () => {
+                      currentResult.destroy();
+                      closure_8.current = null;
+                    };
+                  }
+                }
+                tmp20 = cResult[16];
+              }
+              const effect1 = obj2.useEffect(X, tmp20);
+              if (cResult[17] === duration) {
+                class X {
+                  constructor() {
+                    str = closure_19.current[0];
+                    tmp = closure_20;
+                    if (str == null) {
+                      str = "";
+                    }
+                    obj = {
+                      to: str,
+                      trailingWidth: closure_21.current,
+                      onStart() {
+                                          current = ref2.current;
+                                          currentResult = undefined;
+                                          if (current != null) {
+                                            currentResult = current();
+                                          }
+                                          return currentResult;
+                                        },
+                      onComplete() {
+                                          current = ref.current;
+                                          currentResult = undefined;
+                                          if (current != null) {
+                                            currentResult = current();
+                                          }
+                                          return currentResult;
+                                        }
+                    };
+                    currentResult = closure_20.current(obj);
+                    closure_0 = currentResult;
+                    closure_8.current = currentResult;
+                    return () => {
+                      currentResult.destroy();
+                      closure_8.current = null;
+                    };
+                  }
+                }
+              }
+              function ee() {
+                current = ref.current;
+                if (current != null) {
+                  const obj = { duration, reducedMotion, trailingWidth };
+                  current.setOptions(obj);
+                }
+              }
+              const items2 = [duration, reducedMotion, trailingWidth];
+              cResult[17] = duration;
+              cResult[18] = reducedMotion;
+              cResult[19] = trailingWidth;
+              cResult[20] = items2;
+              cResult[21] = ee;
+            }
+          }
+        }
+      }
+    }
+  }
+  class K {
+    constructor() {
+      closure_17.current = onComplete;
+      closure_18.current = onStart;
+      closure_19.current = closure_10;
+      closure_20.current = createController;
+      closure_21.current = trailingWidth;
+      closure_22.current = duration;
+      closure_23.current = reducedMotion;
+      return;
+    }
+  }
+  cResult[4] = createController;
+  cResult[5] = duration;
+  cResult[6] = current;
+  cResult[7] = onComplete;
+  cResult[8] = onStart;
+  cResult[9] = reducedMotion;
+  cResult[10] = trailingWidth;
+  cResult[11] = K;
+  tmp9 = K;
+  let obj = delay(initialDelay[3]);
+  tmp5 = duration;
+}) : ((initialDelay) => {
   ({ text, delay } = initialDelay);
   initialDelay = initialDelay.initialDelay;
   const duration = initialDelay.duration;
@@ -33,8 +326,8 @@ export const useAIShimmerCycle = function useAIShimmerCycle(initialDelay) {
   closure_12 = undefined;
   closure_17 = undefined;
   closure_18 = undefined;
-  let current;
-  let play;
+  current = undefined;
+  play = undefined;
   reducedMotion.useRef(null);
   let joined = text;
   if (Array.isArray(text)) {
@@ -175,4 +468,4 @@ export const useAIShimmerCycle = function useAIShimmerCycle(initialDelay) {
     }
   }, items4);
   return { current, lines };
-};
+});

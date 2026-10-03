@@ -1,14 +1,14 @@
-// === Module 14136: MenuGroup ===
+// === Module 14204: MenuGroup ===
 
-// Module 14136 (MenuGroup)
-import nativeDefault from "native" /* 576 */;
+// Module 14204 (MenuGroup)
+import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
 
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_1 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c2, jsxs: c3 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj = { divider: { marginLeft: 0, height: StyleSheet.hairlineWidth, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginTop: -1 * StyleSheet.hairlineWidth } };
 let closure_4 = createStyles.createStyles(obj);
 const obj3 = { marginLeft: 0, height: StyleSheet.hairlineWidth, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginTop: -1 * StyleSheet.hairlineWidth };
@@ -26,13 +26,13 @@ export const MenuGroup = noop.forwardRef((arg0, ref) => {
   }
   const items = [tmp4, ];
   const Children = noop.Children;
-  items[1] = Children.map(children, (icon, arg1) => {
-    let cloneElementResult = icon;
+  items[1] = Children.map(children, (label, arg1) => {
+    let cloneElementResult = label;
     if (0 === arg1) {
-      cloneElementResult = icon;
-      if (noop.isValidElement(icon)) {
+      cloneElementResult = label;
+      if (noop.isValidElement(label)) {
         const obj2 = { ref };
-        cloneElementResult = noop.cloneElement(icon, obj2);
+        cloneElementResult = noop.cloneElement(label, obj2);
       }
     }
     return cloneElementResult;

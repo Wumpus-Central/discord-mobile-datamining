@@ -1,23 +1,26 @@
-// === Module 14598: ProfilePrivacySetting ===
+// === Module 14654: ProfilePrivacySetting ===
 
-// Module 14598 (ProfilePrivacySetting)
-import util from "util" /* 1115 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1981 */;
-import UserSettings from "UserSettings" /* 2021 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4809 */;
-import SettingsConstants from "SettingsConstants" /* 7590 */;
-import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 14599 */;
-import SettingBuilders from "SettingBuilders" /* 11215 */;
+// Module 14654 (ProfilePrivacySetting)
+import util from "util" /* 1126 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
+import UserSettings from "UserSettings" /* 2028 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
+import SettingsConstants from "SettingsConstants" /* 7634 */;
+import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 14655 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import SettingBuilders from "SettingBuilders" /* 11129 */;
 import size from "module_2" /* 2 */;
 
+let ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.Qnf32C);
   },
   parent: SettingsConstants.MobileUserSettings.DATA_AND_PRIVACY,
-  useValue() {
+  useValue: () => {
     const ProfileVisibility = UserSettings.ProfileVisibility;
     return ProfileVisibility.useSetting();
   },
@@ -30,7 +33,7 @@ const radio = SettingBuilders.createRadio({
     const profileToActivityUpsell = ActivityPrivacyUpsellUtils.computeProfileToActivityUpsell(setting, NumberResult);
     if (null != profileToActivityUpsell) {
       ({ direction: obj3.direction, affectedGuildIds: obj3.affectedGuildIds, settingName: obj3.settingName, mappedActivityValue: obj3.mappedActivityValue } = profileToActivityUpsell);
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14600, dependencyMap.paths), "ProfileToActivityPrivacyUpsellActionSheet", { direction: null, affectedGuildIds: null, settingName: null, mappedActivityValue: null });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14656, dependencyMap.paths), "ProfileToActivityPrivacyUpsellActionSheet", { direction: null, affectedGuildIds: null, settingName: null, mappedActivityValue: null });
       const obj4 = { direction: null, affectedGuildIds: null, settingName: null, mappedActivityValue: null };
     }
   },
@@ -59,6 +62,6 @@ const radio = SettingBuilders.createRadio({
     return items;
   }
 });
-const result = size.fileFinishedImporting("modules/user_settings/defs/native/ProfilePrivacySetting.tsx");
+const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/ProfilePrivacySetting.tsx");
 
 export default radio;

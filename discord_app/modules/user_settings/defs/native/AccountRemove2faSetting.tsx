@@ -1,15 +1,18 @@
-// === Module 14539: AccountRemove2faSetting ===
+// === Module 14575: AccountRemove2faSetting ===
 
-// Module 14539 (AccountRemove2faSetting)
-import util from "util" /* 1115 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5387 */;
-import SettingsConstants from "SettingsConstants" /* 7590 */;
-import MFAActionCreatorsDefault from "MFAActionCreators" /* 14454 */;
-import SettingsAccountUtils from "SettingsAccountUtils" /* 14455 */;
-import account_MFAUtils from "account/MFAUtils" /* 14540 */;
-import SettingBuilders from "SettingBuilders" /* 11215 */;
+// Module 14575 (AccountRemove2faSetting)
+import util from "util" /* 1126 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5707 */;
+import SettingsConstants from "SettingsConstants" /* 7634 */;
+import SettingsAccountUtils from "SettingsAccountUtils" /* 14490 */;
+import MFAActionCreatorsDefault from "MFAActionCreators" /* 14571 */;
+import account_MFAUtils from "account/MFAUtils" /* 14576 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import SettingBuilders from "SettingBuilders" /* 11129 */;
 import size from "module_2" /* 2 */;
 
+let ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
@@ -29,12 +32,10 @@ const pressable = SettingBuilders.createPressable({
     };
     AlertActionCreatorsDefault.show(obj2);
   },
-  useIsDisabled() {
-    return null !== account_MFAUtils.use2FARemoveDisableReason();
-  },
+  useIsDisabled: () => null !== account_MFAUtils.use2FARemoveDisableReason(),
   useDescription: account_MFAUtils.use2FARemoveDisableReason,
   usePredicate: SettingsAccountUtils.useIsTOTPEnabled
 });
-const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountRemove2faSetting.tsx");
+const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/AccountRemove2faSetting.tsx");
 
 export default pressable;

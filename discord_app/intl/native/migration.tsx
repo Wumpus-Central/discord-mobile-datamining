@@ -1,14 +1,14 @@
-// === Module 13879: migration ===
+// === Module 13946: migration ===
 
-// Module 13879 (migration)
-import nativeDefault from "native" /* 576 */;
-import _modDef1930 from "module_1930" /* 1930 */;
-import LinkingDefault from "Linking" /* 4554 */;
+// Module 13946 (migration)
+import nativeDefault from "native" /* 587 */;
+import _modDef1936 from "module_1936" /* 1936 */;
+import LinkingDefault from "Linking" /* 4565 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let closure_5 = createStyles.createStyles((arg0) => {
   const link = { color: nativeDefault.colors.TEXT_LINK, textDecorationLine: null };
   let str = "none";
@@ -18,15 +18,66 @@ let closure_5 = createStyles.createStyles((arg0) => {
   link.textDecorationLine = str;
   return { link };
 });
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("intl/native/migration.tsx");
 
-export const IntlLink = function IntlLink(children) {
+export const IntlLink = ReactCompilerGating.isReactCompilerEnabled() ? ((target) => {
+  const cResult = target(576).c(7);
+  target = target.target;
+  const children = target.children;
+  const tmp4 = closure_5(noop.useContext(target(4596).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
+  if (typeof target === "string") {
+    if (cResult[0] !== target) {
+      const fn = function s() {
+        const obj = LinkingDefault;
+        return obj.openURL(_modDef1936.sanitizeUrl(target));
+      };
+      cResult[0] = target;
+      cResult[1] = fn;
+    }
+  } else {
+    let str = "link";
+    let tmp5 = target;
+    if (typeof target === "object") {
+      str = "link";
+      tmp5 = target;
+      if (null != target.onClick) {
+        ({ accessibilityRole, onClick } = target);
+        if (accessibilityRole == null) {
+          accessibilityRole = "link";
+        }
+        str = accessibilityRole;
+        tmp5 = onClick;
+      }
+    }
+    if (cResult[2] === str) {
+      if (cResult[3] === children) {
+        if (cResult[4] === tmp5) {
+          if (cResult[5] === tmp4.link) {
+            let tmp8 = cResult[6];
+          }
+          return tmp8;
+        }
+      }
+    }
+    const obj2 = { accessible: true, accessibilityRole: str, onPress: tmp5, style: tmp4.link, children };
+    const tmp10 = jsx(tmp(1188).LegacyText, { accessible: true, accessibilityRole: str, onPress: tmp5, style: tmp4.link, children });
+    cResult[2] = str;
+    cResult[3] = children;
+    cResult[4] = tmp5;
+    cResult[5] = tmp4.link;
+    cResult[6] = tmp10;
+    tmp8 = tmp10;
+  }
+  let obj = target(576);
+  tmp = target;
+}) : ((children) => {
   const target = children.target;
   if (typeof target === "string") {
     let fn = function k() {
       const obj = LinkingDefault;
-      return obj.openURL(_modDef1930.sanitizeUrl(target));
+      return obj.openURL(_modDef1936.sanitizeUrl(target));
     };
     let str = "link";
   } else {
@@ -46,6 +97,6 @@ export const IntlLink = function IntlLink(children) {
     }
   }
   const tmp = target;
-  const tmp3 = closure_5(noop.useContext(target(4579).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
-  return jsx(tmp(1177).LegacyText, { accessible: true, accessibilityRole: str, onPress: fn, style: closure_5(noop.useContext(target(4579).AccessibilityPreferencesContext).alwaysShowLinkDecorations).link, children: children.children });
-};
+  const tmp3 = closure_5(noop.useContext(target(4596).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
+  return jsx(tmp(1188).LegacyText, { accessible: true, accessibilityRole: str, onPress: fn, style: closure_5(noop.useContext(target(4596).AccessibilityPreferencesContext).alwaysShowLinkDecorations).link, children: children.children });
+});

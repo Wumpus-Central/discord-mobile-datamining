@@ -1,652 +1,39 @@
-// === Module 9162: FocusedControlsBottomControls ===
+// === Module 9615: FocusedControlsBottomControls ===
 
-// Module 9162 (FocusedControlsBottomControls)
-import nativeDefault from "native" /* 576 */;
-import ConstantsIOS from "ConstantsIOS" /* 1094 */;
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4595 */;
-import timing from "timing" /* 4846 */;
-import TooltipActionCreatorsDefault from "TooltipActionCreators" /* 9165 */;
-import CallPTTButton from "CallPTTButton" /* 9166 */;
+// Module 9615 (FocusedControlsBottomControls)
+import c from "c" /* 576 */;
+import nativeDefault from "native" /* 587 */;
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
+import timing from "timing" /* 4891 */;
+import CallPTTButton from "CallPTTButton" /* 9619 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 6022 */;
+import TextStyles from "TextStyles" /* 5915 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 const CallPTTButtonDefault = CallPTTButton;
 
 require = fn;
-function FocusedControlsExpanded(availableHeight) {
-  availableHeight = availableHeight.availableHeight;
-  const positionY = availableHeight.positionY;
-  let bottom;
-  let scrollEnabled;
-  noop = undefined;
-  bottom = positionY(bottom[12])().bottom;
-  const tmp2 = scrollEnabled(noop.useState(false), 2);
-  scrollEnabled = tmp2[0];
-  noop = tmp2[1];
-  const items = [availableHeight, bottom, scrollEnabled];
-  const callback = noop.useCallback((nativeEvent) => {
-    if (nativeEvent.nativeEvent.layout.height > availableHeight - bottom !== first) {
-      closure_4(tmp);
-    }
-  }, items);
-  const tmp = closure_18();
-  const fn = function _() {
-    const bound = Math.min(-1 * positionY.get() / c15, 1);
-    const obj = { opacity: bound, pointerEvents: null };
-    let str = "auto";
-    if (0 === bound) {
-      str = "none";
-    }
-    obj.pointerEvents = str;
-    return obj;
-  };
-  fn.__closure = { positionY, EXPANDED_DRAWER_SHOW_POSITION };
-  fn.__workletHash = 10567472250823;
-  fn.__initData = __initData;
-  const obj3 = { style: { height: availableHeight }, children: null };
-  const obj4 = { scrollEnabled, children: null };
-  const animatedStyle = availableHeight(bottom[13]).useAnimatedStyle(fn);
-  obj5 = { style: null, onLayout: callback, children: availableHeight.expandedControls };
-  const items1 = [tmp.expandedControlsContainer, animatedStyle];
-  obj5.style = items1;
-  obj4.children = closure_13(positionY(bottom[13]).View, obj5);
-  obj3.children = closure_13(closure_7, obj4);
-  return closure_13(closure_5, obj3);
-}
-function FocusedControlsBottomDrawerTooltip(positionY) {
-  positionY = positionY.positionY;
-  const tmp = closure_18();
-  const canShowTooltip = positionY(9163).useCanShowTooltip(positionY(1094).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS, true);
-  positionY(4595);
-  const fn = function o() {
-    return { opacity: 1 - Math.min(-1 * positionY.get() / c15, 1) };
-  };
-  fn.__closure = { positionY, EXPANDED_DRAWER_SHOW_POSITION };
-  fn.__workletHash = 4429631762525;
-  fn.__initData = __initData2;
-  let tmp7 = null;
-  if (canShowTooltip) {
-    const obj3 = { style: tmp6, children: null };
-    const obj7 = { style: tmp.tooltipStyle, arrowPosition: tmp2(1177).TooltipArrowPositions.CENTER, arrowDirection: tmp2(1177).TooltipArrowDirections.DOWN, arrowWidth: 8, arrowHeight: 4, containerStyle: null, labelStyle: null, label: null };
-    ({ containerStyle: obj4.containerStyle, labelStyle: obj4.labelStyle } = tmp);
-    const intl = tmp2(1115).intl;
-    obj7.label = intl.string(tmp2(1115).t.zYzy2i);
-    obj3.children = closure_13(tmp2(1177).Tooltip, obj7);
-    tmp7 = closure_13(ReanimatedRexportDefault.View, obj3);
-  }
-  return tmp7;
-}
-function FocusedControlsAboveActionBarView(positionY) {
-  positionY = positionY.positionY;
-  const offsetY = positionY.offsetY;
-  const aboveActionBar = positionY.aboveActionBar;
-  ({ onPressHeader, isExpanded } = positionY);
-  const tmp = closure_18();
-  const fn = function _() {
-    return { opacity: 2 - Math.max(Math.abs(positionY.get()) / (offsetY / 3 - c15), 0) };
-  };
-  fn.__closure = { offsetY, EXPANDED_DRAWER_SHOW_POSITION, positionY };
-  fn.__workletHash = 5042367101380;
-  fn.__initData = __initData3;
-  const obj3 = { accessible: true, onPress: onPressHeader, accessibilityRole: "button", accessibilityLabel: "Group DM", accessibilityHint: "Press to start a new conversation", accessibilityState: { expanded: isExpanded }, children: null };
-  const obj4 = { style: tmp.aboveActionBarContainer, children: null };
-  const animatedStyle = positionY(4595).useAnimatedStyle(fn);
-  const items = [closure_13(FocusedControlsBottomDrawerTooltip, { positionY }), closure_13(positionY(6761).ActionSheetHeaderBar, {}), ];
-  let tmp4Result = null != aboveActionBar;
-  if (tmp4Result) {
-    obj5 = { style: null, children: null };
-    const items1 = [tmp.aboveActionBarChildrenContainer, animatedStyle];
-    obj5.style = items1;
-    obj5.children = aboveActionBar;
-    tmp4Result = closure_13(offsetY(4595).View, obj5);
-  }
-  items[2] = tmp4Result;
-  obj4.children = items;
-  obj3.children = closure_14(closure_5, obj4);
-  return closure_13(closure_6, obj3);
-}
-class FocusedControlsBottomDrawer {
-  constructor(arg0) {
-    ({ actionBarControlsHeight, reveal } = global);
-    closure_0 = reveal;
-    closure_1 = global.onDrawerClose;
-    closure_2 = undefined;
-    closure_3 = undefined;
-    onClose = undefined;
-    onDrawerOpen = undefined;
-    closure_6 = undefined;
-    closure_7 = undefined;
-    closure_8 = undefined;
-    closure_9 = undefined;
-    ({ children, expandedControls, aboveActionBar, onDrawerOpen } = global);
-    tmp = closure_18();
-    tmp2 = closure_1;
-    tmp3 = closure_2;
-    tmp4 = closure_1(closure_2[12])();
-    ({ bottom, right } = tmp4);
-    closure_2 = right;
-    top = tmp4.top;
-    size = closure_1(closure_2[21])();
-    height = size.height;
-    tmp5 = size.width > closure_10;
-    closure_3 = tmp5;
-    tmp6 = closure_1(closure_2[22])();
-    onClose = tmp6;
-    bound = height;
-    if (tmp5) {
-      tmp8 = globalThis;
-      _Math = Math;
-      tmp9 = closure_11;
-      bound = Math.min(closure_11, height);
-    }
-    onDrawerOpen = bound;
-    sum = actionBarControlsHeight;
-    if (!tmp5) {
-      sum = actionBarControlsHeight + bottom;
-    }
-    closure_6 = sum;
-    diff = bound - sum;
-    closure_7 = diff;
-    diff1 = bound - sum;
-    if (tmp5) {
-      tmp17 = EXTENDED_CONTROLS_LANDSCAPE_OFFSET_Y;
-      if (typeof EXTENDED_CONTROLS_LANDSCAPE_OFFSET_Y === "function") {
-        num3 = 54;
-        num4 = 12;
-        diff2 = diff1 - (top + 54 + 12);
-      } else {
-        str2 = "Trying to call a non-function";
-        throw new TypeError("Trying to call a non-function");
-      }
-    } else {
-      tmp13 = EXTENDED_CONTROLS_OFFSET_Y;
-      if (typeof EXTENDED_CONTROLS_OFFSET_Y === "function") {
-        num = 54;
-        tmp15 = closure_0;
-        sum1 = top + 54;
-        obj = closure_0(tmp3[7]);
-        num2 = 16;
-        if (obj.isIOS()) {
-          num2 = 48;
-        }
-        diff2 = diff1 - (sum1 + num2);
-      } else {
-        str = "Trying to call a non-function";
-        throw new TypeError("Trying to call a non-function");
-      }
-    }
-    if (typeof EXTENDED_CONTROLS_OFFSET_Y === "function") {
-      num5 = 54;
-      tmp19 = closure_0;
-      sum2 = top + 54;
-      obj2 = closure_0(tmp3[7]);
-      num6 = 16;
-      if (obj2.isIOS()) {
-        num6 = 48;
-      }
-      sum3 = sum2 + num6 + bottom;
-      tmp21 = EXTENDED_CONTROLS_LANDSCAPE_OFFSET_Y;
-      if (typeof EXTENDED_CONTROLS_LANDSCAPE_OFFSET_Y === "function") {
-        num7 = 12;
-        sum4 = top + 54 + 12;
-        closure_0 = diff;
-        closure_1 = tmp5;
-        closure_2 = sum3;
-        closure_3 = sum4;
-        onClose = function onClose() {
-          let tmp;
-          if (closure_1 != null) {
-            tmp = closure_1();
-          }
-          return tmp;
-        };
-        closure_6 = undefined;
-        closure_7 = undefined;
-        closure_8 = undefined;
-        closure_9 = undefined;
-        closure_10 = undefined;
-        closure_11 = undefined;
-        closure_12 = undefined;
-        handleOpen = function handleOpen() {
-          if (!first) {
-            if (onDrawerOpen != null) {
-              tmp();
-            }
-            closure_7(true);
-          }
-        };
-        handleClose = function handleClose() {
-          if (first) {
-            if (importDefault != null) {
-              tmp();
-            }
-            closure_7(false);
-          }
-        };
-        tmp23 = onClose;
-        flag = false;
-        tmp24 = closure_3;
-        num8 = 2;
-        tmp25 = closure_3(onClose.useState(false), 2);
-        first = tmp25[0];
-        closure_6 = first;
-        closure_7 = tmp25[1];
-        tmp19Result = tmp19(tmp3[13]);
-        num9 = 0;
-        sharedValue = tmp19Result.useSharedValue(0);
-        closure_8 = sharedValue;
-        tmp19Result1 = tmp19(tmp3[13]);
-        class O {
-          constructor() {
-            tmp = closure_0;
-            if (closure_1) {
-              tmp4 = closure_3;
-              diff = tmp - closure_3;
-            } else {
-              tmp2 = closure_2;
-              diff = tmp - closure_2;
-            }
-            return diff;
-          }
-        }
-        obj1 = { isLandscapeMode: null, controlMaxHeight: null, landscapeOffsetY: null, portraitOffsetY: null };
-        obj1.isLandscapeMode = tmp5;
-        obj1.controlMaxHeight = diff;
-        obj1.landscapeOffsetY = sum4;
-        obj1.portraitOffsetY = sum3;
-        O.__closure = obj1;
-        num10 = 13346503100323;
-        O.__workletHash = 13346503100323;
-        tmp28 = closure_27;
-        O.__initData = closure_27;
-        derivedValue = tmp19Result1.useDerivedValue(O);
-        closure_9 = derivedValue;
-        tmp19Result2 = tmp19(tmp3[13]);
-        sharedValue1 = tmp19Result2.useSharedValue(0);
-        closure_10 = sharedValue1;
-        tmp19Result3 = tmp19(tmp3[13]);
-        sharedValue2 = tmp19Result3.useSharedValue(false);
-        closure_11 = sharedValue2;
-        tmp19Result4 = tmp19(tmp3[13]);
-        sharedValue3 = tmp19Result4.useSharedValue(0);
-        closure_12 = sharedValue3;
-        items = [, ];
-        items[0] = sharedValue;
-        items[1] = derivedValue;
-        callback = onClose.useCallback(() => {
-          let num = 0;
-          const tmp = 0 !== first1.get();
-          if (!tmp) {
-            num = -closure_9.get();
-          }
-          const result = first1.set(closure_0(sum3[18]).withTiming(num, closure_3_19));
-          if (tmp) {
-            closure_9();
-          } else {
-            closure_8();
-          }
-          closure_7(!tmp);
-          const obj2 = closure_0(sum3[18]);
-        }, items);
-        Gesture = tmp19(tmp3[19]).Gesture;
-        PanResult = Gesture.Pan();
-        class N {
-          constructor() {
-            obj = closure_0(c2[13]);
-            tmp = obj.runOnJS(closure_8)();
-            obj2 = closure_11;
-            result = closure_11.set(0 !== closure_8.get());
-            result1 = closure_12.set(0);
-            tmp4 = null != closure_8.get() && obj2.get();
-            if (!tmp4) {
-              tmp5 = closure_10;
-              result2 = closure_10.set(0);
-            }
-            return;
-          }
-        }
-        obj27 = { runOnJS: null, clearFocusTimer: null, drawerOpen: null, positionY: null, CLOSE_DRAWER_POSITION: 0, velocity: null, startY: null };
-        obj27.runOnJS = tmp19(tmp3[13]).runOnJS;
-        tmp34 = closure_8;
-        obj27.clearFocusTimer = closure_8;
-        obj27.drawerOpen = sharedValue2;
-        obj27.positionY = sharedValue;
-        obj27.velocity = sharedValue3;
-        obj27.startY = sharedValue1;
-        N.__closure = obj27;
-        num11 = 9674965708496;
-        N.__workletHash = 9674965708496;
-        tmp35 = closure_30;
-        N.__initData = closure_30;
-        onStartResult = PanResult.onStart(N);
-        class H {
-          constructor(arg0) {
-            result = closure_12.set(global.velocityY);
-            obj = closure_8;
-            result1 = -1 * closure_8.get();
-            if (result1 <= closure_9.get() + 16) {
-              tmp3 = closure_10;
-              num = closure_10.get();
-              tmp4 = null;
-              if (num == null) {
-                num = 0;
-              }
-              result2 = obj.set(num + global.translationY);
-            }
-            return;
-          }
-        }
-        obj28 = { velocity: null, positionY: null, maxHeight: null, startY: null };
-        obj28.velocity = sharedValue3;
-        obj28.positionY = sharedValue;
-        obj28.maxHeight = derivedValue;
-        obj28.startY = sharedValue1;
-        H.__closure = obj28;
-        num12 = 16755118181071;
-        H.__workletHash = 16755118181071;
-        tmp36 = closure_29;
-        H.__initData = closure_29;
-        onUpdateResult = onStartResult.onUpdate(H);
-        class R {
-          constructor() {
-            obj = closure_11;
-            value = closure_11.get();
-            obj2 = closure_8;
-            result = -1 * closure_8.get();
-            result1 = closure_9.get() / 2;
-            obj3 = closure_12;
-            num = closure_12.get();
-            if (num == null) {
-              num = 0;
-            }
-            result2 = -1 * num;
-            num2 = obj3.get();
-            if (num2 == null) {
-              num2 = 0;
-            }
-            openDrawer = function openDrawer() {
-              ReanimatedRexport.runOnJS(handleOpen)();
-              const result = sharedValue1.set(-closure_1_9.get());
-              const result1 = first1.set(timing.withTiming(sharedValue1.get(), obj5));
-              const result2 = sharedValue2.set(true);
-              ReanimatedRexport.runOnJS(TooltipActionCreatorsDefault.acknowledgeTooltip)(ConstantsIOS.TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS);
-            };
-            tmp5 = num2 >= 500;
-            if (500 > result2) {
-              if (result1 <= result) {
-                return;
-              }
-              if (!tmp6) {
-                if (tmp5) {
-                }
-                if (result1 <= result) {
-                  openDrawerResult = openDrawer();
-                } else {
-                  tmp24 = closure_10;
-                  result3 = closure_10.set(0);
-                  tmp26 = closure_0;
-                  tmp27 = c2;
-                  obj7 = closure_0(c2[18]);
-                  tmp28 = closure_3_20;
-                  result4 = obj2.set(obj7.withTiming(0, closure_3_20));
-                  flag2 = false;
-                  result5 = obj.set(false);
-                  tmp31 = closure_0;
-                  tmp32 = c2;
-                  obj8 = closure_0(c2[13]);
-                  tmp33 = closure_9;
-                  tmp34 = obj8.runOnJS(closure_9)();
-                  tmp35 = closure_0;
-                  tmp36 = c2;
-                  obj9 = closure_0(c2[13]);
-                  tmp37 = handleClose;
-                  tmp38 = obj9.runOnJS(handleClose)();
-                }
-              }
-              tmp9 = closure_10;
-              result6 = closure_10.set(0);
-              tmp11 = closure_0;
-              tmp12 = c2;
-              obj4 = closure_0(c2[18]);
-              tmp13 = closure_3_20;
-              result7 = obj2.set(obj4.withTiming(0, closure_3_20));
-              flag = false;
-              result8 = obj.set(false);
-              tmp16 = closure_0;
-              tmp17 = c2;
-              obj5 = closure_0(c2[13]);
-              tmp18 = closure_9;
-              tmp19 = obj5.runOnJS(closure_9)();
-              tmp20 = closure_0;
-              tmp21 = c2;
-              obj6 = closure_0(c2[13]);
-              tmp22 = handleClose;
-              tmp23 = obj6.runOnJS(handleClose)();
-            }
-            openDrawerResult1 = openDrawer();
-            return;
-          }
-        }
-        obj29 = { drawerOpen: null, positionY: null, maxHeight: null, velocity: null, MIN_GESTURE_TRIGGER_VELOCITY: 500, CLOSE_DRAWER_POSITION: 0, runOnJS: null, handleOpen: null, startY: null, withTiming: null, TIMING_CONFIG: null, TooltipActionCreators: null, TooltipNames: null, TIMING_CONFIG_EXIT: null, resetFocusTimer: null, handleClose: null };
-        obj29.drawerOpen = sharedValue2;
-        obj29.positionY = sharedValue;
-        obj29.maxHeight = derivedValue;
-        obj29.velocity = sharedValue3;
-        obj29.runOnJS = tmp19(tmp3[13]).runOnJS;
-        obj29.handleOpen = handleOpen;
-        obj29.startY = sharedValue1;
-        obj29.withTiming = tmp19(tmp3[18]).withTiming;
-        tmp37 = closure_19;
-        obj29.TIMING_CONFIG = closure_19;
-        obj29.TooltipActionCreators = tmp2(tmp3[20]);
-        obj29.TooltipNames = tmp19(tmp3[15]).TooltipNames;
-        tmp38 = closure_20;
-        obj29.TIMING_CONFIG_EXIT = closure_20;
-        tmp39 = closure_9;
-        obj29.resetFocusTimer = closure_9;
-        obj29.handleClose = handleClose;
-        R.__closure = obj29;
-        num13 = 6790759206787;
-        R.__workletHash = 6790759206787;
-        tmp40 = closure_28;
-        R.__initData = closure_28;
-        items1 = [, , , ];
-        items1[0] = sharedValue;
-        items1[1] = onUpdateResult.onEnd(R);
-        items1[2] = callback;
-        items1[3] = first;
-        num14 = 4;
-        tmp41 = closure_3(items1, 4);
-        first1 = tmp41[0];
-        closure_8 = first1;
-        tmp43 = tmp41[2];
-        closure_9 = tmp43;
-        tmp19Result5 = tmp19(tmp3[13]);
-        class C {
-          constructor() {
-            num = 0;
-            if (!closure_0) {
-              num = closure_6;
-            }
-            size = { position: "absolute", height: onDrawerOpen, overflow: "hidden", bottom: null, right: null, borderRadius: null, width: null, transform: null };
-            tmp = closure_3;
-            num2 = 0;
-            if (closure_3) {
-              num2 = 16;
-            }
-            size.bottom = num2;
-            num3 = 0;
-            if (tmp) {
-              tmp2 = closure_2;
-              num4 = 16;
-              num3 = 16 + closure_2;
-            }
-            size.right = num3;
-            num5 = 0;
-            if (tmp) {
-              num5 = 8;
-            }
-            size.borderRadius = num5;
-            size.width = onClose;
-            obj1 = { translateY: null };
-            obj3 = closure_0(closure_2[18]);
-            obj1.translateY = obj3.withTiming(num, closure_19);
-            items = [];
-            items[0] = obj1;
-            size.transform = items;
-            return size;
-          }
-        }
-        obj30 = { reveal: null, controlHeightWithOffset: null, sheetHeight: null, isLandscapeMode: null, safeAreaRight: null, sheetWidth: null, withTiming: null, TIMING_CONFIG: null };
-        obj30.reveal = reveal;
-        obj30.controlHeightWithOffset = sum;
-        obj30.sheetHeight = bound;
-        obj30.isLandscapeMode = tmp5;
-        obj30.safeAreaRight = right;
-        obj30.sheetWidth = tmp6;
-        obj30.withTiming = tmp19(tmp3[18]).withTiming;
-        obj30.TIMING_CONFIG = closure_19;
-        C.__closure = obj30;
-        num15 = 608185354082;
-        C.__workletHash = 608185354082;
-        tmp44 = closure_31;
-        C.__initData = closure_31;
-        items2 = [, ];
-        items2[0] = tmp5;
-        items2[1] = first1;
-        animatedStyle = tmp19Result5.useAnimatedStyle(C);
-        effect = onClose.useEffect(() => {
-          const result = first1.set(timing.withTiming(0, obj6));
-        }, items2);
-        items3 = [, ];
-        items3[0] = reveal;
-        items3[1] = first1;
-        effect1 = onClose.useEffect(() => {
-          if (reveal) {
-            const result = first1.set(0);
-          }
-        }, items3);
-        items4 = [];
-        items4[0] = first1;
-        effect2 = onClose.useEffect(() => {
-          function handleSelectActivity() {
-            const result = first1.set(reveal(sum3[18]).withTiming(0, obj6));
-          }
-          let ComponentDispatch = reveal(sum3[23]).ComponentDispatch;
-          const subscription = ComponentDispatch.subscribe(sharedValue3.SELECT_ACTIVITY, handleSelectActivity);
-          return () => {
-            const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
-            ComponentDispatch.unsubscribe(closure_3_12.SELECT_ACTIVITY, handleSelectActivity);
-          };
-        }, items4);
-        tmp19Result6 = tmp19(tmp3[13]);
-        class Z {
-          constructor() {
-            obj = { height: onDrawerOpen, transform: null };
-            obj1 = { translateY: closure_7 + closure_8.get() };
-            items = [];
-            items[0] = obj1;
-            obj.transform = items;
-            return obj;
-          }
-        }
-        obj31 = { sheetHeight: null, offsetY: null, positionY: null };
-        obj31.sheetHeight = bound;
-        obj31.offsetY = diff;
-        obj31.positionY = first1;
-        Z.__closure = obj31;
-        num16 = 4471821639301;
-        Z.__workletHash = 4471821639301;
-        tmp49 = closure_32;
-        Z.__initData = closure_32;
-        items5 = [];
-        items5[0] = tmp43;
-        animatedStyle1 = tmp19Result6.useAnimatedStyle(Z);
-        effect3 = onClose.useEffect(() => {
-          let ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
-          const subscription = ComponentDispatch.subscribe(closure_2_12.TOGGLE_CALL_CONTROL_DRAWER, closure_9);
-          return () => {
-            const ComponentDispatch = reveal(sum3[23]).ComponentDispatch;
-            ComponentDispatch.unsubscribe(sharedValue3.TOGGLE_CALL_CONTROL_DRAWER, closure_1_9);
-          };
-        }, items5);
-        tmp19Result7 = tmp19(tmp3[24]);
-        theme = tmp19Result7.useThemeContext().theme;
-        tmp52 = handleOpen;
-        obj32 = { style: null, pointerEvents: "box-none", children: null };
-        obj32.style = animatedStyle;
-        obj33 = { gesture: null, children: null };
-        obj33.gesture = tmp41[1];
-        tmp53 = handleClose;
-        obj34 = { style: null, children: null };
-        items6 = [, ];
-        items6[0] = tmp.bottomDrawerContainer;
-        items6[1] = animatedStyle1;
-        obj34.style = items6;
-        obj35 = { blurTheme: null, style: null };
-        obj35.blurTheme = theme;
-        items7 = [, ];
-        items7[0] = tmp.visualEffectView;
-        tmp2Result = tmp2(tmp3[25]);
-        tmp19Result8 = tmp19(tmp3[26]);
-        prop = null;
-        if (tmp19Result8.isThemeLight(theme)) {
-          prop = tmp.visualEffectViewBackground;
-        }
-        items7[1] = prop;
-        obj35.style = items7;
-        items8 = [, , , ];
-        items8[0] = tmp52(tmp2Result, obj35);
-        tmp56 = FocusedControlsAboveActionBarView;
-        obj36 = { onPressHeader: null, aboveActionBar: null, positionY: null, offsetY: null, isExpanded: null };
-        obj36.onPressHeader = tmp43;
-        obj36.aboveActionBar = aboveActionBar;
-        obj36.positionY = first1;
-        obj36.offsetY = diff;
-        obj36.isExpanded = tmp41[3];
-        items8[1] = tmp52(FocusedControlsAboveActionBarView, obj36);
-        items8[2] = children;
-        tmp57 = FocusedControlsExpanded;
-        obj37 = { expandedControls: null, availableHeight: null, positionY: null };
-        obj37.expandedControls = expandedControls;
-        obj37.availableHeight = diff2;
-        obj37.positionY = first1;
-        items8[3] = tmp52(FocusedControlsExpanded, obj37);
-        obj34.children = items8;
-        obj33.children = tmp53(tmp2(tmp3[13]).View, obj34);
-        obj32.children = tmp52(tmp19(tmp3[19]).GestureDetector, obj33);
-        return tmp52(tmp2(tmp3[13]).View, obj32);
-      } else {
-        str4 = "Trying to call a non-function";
-        throw new TypeError("Trying to call a non-function");
-      }
-    } else {
-      str3 = "Trying to call a non-function";
-      throw new TypeError("Trying to call a non-function");
-    }
-  }
-}
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, TouchableWithoutFeedback: metroRequire, ScrollView: closure_7, StyleSheet } = get_ActivityIndicator);
-const ChannelCallStore = fn(9022);
+const ChannelCallStore = fn(9050);
 ({ clearFocusTimer: closure_8, resetFocusTimer: closure_9 } = ChannelCallStore);
-const ChannelCallConstants = fn(9023);
+const ChannelCallConstants = fn(9051);
 ({ BOX_MODE_THRESHOLD_WIDTH: c10, BOX_MODE_ACTIONSHEET_HEIGHT: closure_11 } = ChannelCallConstants);
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ ComponentActions: closure_12, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-let c15 = 20;
+let c15 = 500;
+let c16 = 20;
 function EXTENDED_CONTROLS_OFFSET_Y(arg0) {
 
 }
 function EXTENDED_CONTROLS_LANDSCAPE_OFFSET_Y(arg0) {
 
 }
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = { bottomDrawerContainer: null, visualEffectView: null, visualEffectViewBackground: null, expandedControlsContainer: null, aboveActionBarContainer: null, aboveActionBarChildrenContainer: null, ptbButton: null, tooltipStyle: null, containerStyle: null, labelStyle: null };
 const rect = { position: "absolute", left: 0, right: 0, bottom: 0, borderRadius: nativeDefault.radii.sm };
 obj2.bottomDrawerContainer = rect;
@@ -664,29 +51,1713 @@ obj2.tooltipStyle = { alignSelf: "center", position: "absolute", top: -28 };
 obj2.containerStyle = { paddingHorizontal: 8, paddingVertical: 4 };
 const merged1 = Object.assign(TextStyles(Fonts.DISPLAY_EXTRABOLD, nativeDefault.unsafe_rawColors.WHITE, 12, { uppercase: true }));
 obj2.labelStyle = {};
-const collapsedCategories = createStyles.createStyles(obj2);
-let obj5 = { easing: fn(1177).STANDARD_EASING, duration: 250 };
-let obj6 = { easing: fn(1177).STANDARD_EASING, duration: 400 };
-const __initData = { code: "function FocusedControlsBottomControlsTsx1(){const{positionY,EXPANDED_DRAWER_SHOW_POSITION}=this.__closure;const opacity=Math.min(positionY.get()*-1/EXPANDED_DRAWER_SHOW_POSITION,1);return{opacity:opacity,pointerEvents:opacity===0?'none':'auto'};}" };
-const __initData2 = { code: "function FocusedControlsBottomControlsTsx2(){const{positionY,EXPANDED_DRAWER_SHOW_POSITION}=this.__closure;return{opacity:1-Math.min(positionY.get()*-1/EXPANDED_DRAWER_SHOW_POSITION,1)};}" };
-const __initData3 = { code: "function FocusedControlsBottomControlsTsx3(){const{offsetY,EXPANDED_DRAWER_SHOW_POSITION,positionY}=this.__closure;const maxHeightRange=offsetY/3-EXPANDED_DRAWER_SHOW_POSITION;const opacity=2-Math.max(Math.abs(positionY.get())/maxHeightRange,0);return{opacity:opacity};}" };
-const __initData5 = { code: "function FocusedControlsBottomControlsTsx4(){const{isLandscapeMode,controlMaxHeight,landscapeOffsetY,portraitOffsetY}=this.__closure;return isLandscapeMode?controlMaxHeight-landscapeOffsetY:controlMaxHeight-portraitOffsetY;}" };
-const __initData6 = { code: "function FocusedControlsBottomControlsTsx5(){const{drawerOpen,positionY,maxHeight,velocity,MIN_GESTURE_TRIGGER_VELOCITY,CLOSE_DRAWER_POSITION,runOnJS,handleOpen,startY,withTiming,TIMING_CONFIG,TooltipActionCreators,TooltipNames,TIMING_CONFIG_EXIT,resetFocusTimer,handleClose}=this.__closure;var _velocity$get,_velocity$get2;const isDrawerAlreadyOpen=drawerOpen.get();const isPassedTriggerThreshold=positionY.get()*-1>=maxHeight.get()/2;const isHighOpenVelocity=((_velocity$get=velocity.get())!==null&&_velocity$get!==void 0?_velocity$get:0)*-1>=MIN_GESTURE_TRIGGER_VELOCITY;const isHighCloseVelocity=((_velocity$get2=velocity.get())!==null&&_velocity$get2!==void 0?_velocity$get2:0)>=MIN_GESTURE_TRIGGER_VELOCITY;const isLowerThanMinHeight=positionY.get()>CLOSE_DRAWER_POSITION;function openDrawer(){runOnJS(handleOpen)();startY.set(-maxHeight.get());positionY.set(withTiming(startY.get(),TIMING_CONFIG));drawerOpen.set(true);runOnJS(TooltipActionCreators.acknowledgeTooltip)(TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS);}function closeDrawer(){startY.set(0);positionY.set(withTiming(CLOSE_DRAWER_POSITION,TIMING_CONFIG_EXIT));drawerOpen.set(false);runOnJS(resetFocusTimer)();runOnJS(handleClose)();}if(isHighOpenVelocity&&!isDrawerAlreadyOpen||isPassedTriggerThreshold&&!isDrawerAlreadyOpen){openDrawer();}else if(isLowerThanMinHeight||isHighCloseVelocity&&isDrawerAlreadyOpen){closeDrawer();}else if(isPassedTriggerThreshold){openDrawer();}else{closeDrawer();}}" };
-const __initData7 = { code: "function FocusedControlsBottomControlsTsx6(event){const{velocity,positionY,maxHeight,startY}=this.__closure;var _startY$get;velocity.set(event.velocityY);if(positionY.get()*-1>maxHeight.get()+16){return;}positionY.set(((_startY$get=startY.get())!==null&&_startY$get!==void 0?_startY$get:0)+event.translationY);}" };
-const __initData8 = { code: "function FocusedControlsBottomControlsTsx7(){const{runOnJS,clearFocusTimer,drawerOpen,positionY,CLOSE_DRAWER_POSITION,velocity,startY}=this.__closure;runOnJS(clearFocusTimer)();drawerOpen.set(positionY.get()!==CLOSE_DRAWER_POSITION);velocity.set(0);if(positionY.get()==null||!drawerOpen.get()){startY.set(0);}}" };
-const __initData9 = { code: "function FocusedControlsBottomControlsTsx8(){const{reveal,controlHeightWithOffset,sheetHeight,isLandscapeMode,safeAreaRight,sheetWidth,withTiming,TIMING_CONFIG}=this.__closure;const revealOffset=reveal?0:controlHeightWithOffset;return{position:'absolute',height:sheetHeight,overflow:'hidden',bottom:isLandscapeMode?16:0,right:isLandscapeMode?16+safeAreaRight:0,borderRadius:isLandscapeMode?8:0,width:sheetWidth,transform:[{translateY:withTiming(revealOffset,TIMING_CONFIG)}]};}" };
-const __initData10 = { code: "function FocusedControlsBottomControlsTsx9(){const{sheetHeight,offsetY,positionY}=this.__closure;return{height:sheetHeight,transform:[{translateY:offsetY+positionY.get()}]};}" };
+let closure_19 = createStyles.createStyles(obj2);
+let obj5 = { easing: fn(1188).STANDARD_EASING, duration: 250 };
+let obj6 = { easing: fn(1188).STANDARD_EASING, duration: 400 };
+const __initData = { code: "function FocusedControlsBottomControlsTsx1(){const{positionY,EXPANDED_DRAWER_SHOW_POSITION}=this.__closure;const opacity=Math.min(positionY.get()*-1/EXPANDED_DRAWER_SHOW_POSITION,1);return{opacity:opacity,pointerEvents:opacity===0?\"none\":\"auto\"};}" };
+const __initData2 = { code: "function FocusedControlsBottomControlsTsx2(){const{positionY,EXPANDED_DRAWER_SHOW_POSITION}=this.__closure;const opacity=Math.min(positionY.get()*-1/EXPANDED_DRAWER_SHOW_POSITION,1);return{opacity:opacity,pointerEvents:opacity===0?'none':'auto'};}" };
+let ReactCompilerGating = fn(558);
+let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((positionY) => {
+  const cResult = availableHeight(bottom[13]).c(19);
+  ({ expandedControls, availableHeight } = positionY);
+  positionY = positionY.positionY;
+  const tmp4 = closure_19();
+  bottom = positionY(bottom[14])().bottom;
+  const tmp6 = scrollEnabled(width.useState(false), 2);
+  scrollEnabled = tmp6[0];
+  width = tmp6[1];
+  if (cResult[0] === availableHeight) {
+    if (cResult[1] === bottom) {
+      if (cResult[2] === scrollEnabled) {
+        let tmp8 = cResult[3];
+      }
+      class I {
+        constructor() {
+          bound = Math.min(-1 * positionY.get() / c16, 1);
+          obj = { opacity: bound, pointerEvents: null };
+          str = "auto";
+          if (0 === bound) {
+            str = "none";
+          }
+          obj.pointerEvents = str;
+          return obj;
+        }
+      }
+      const obj2 = { positionY, EXPANDED_DRAWER_SHOW_POSITION };
+      I.__closure = obj2;
+      I.__workletHash = 5181322553799;
+      I.__initData = __initData;
+      const animatedStyle = availableHeight(tmp2[15]).useAnimatedStyle(I);
+      if (cResult[4] !== availableHeight) {
+        const obj3 = { height: availableHeight };
+        class I {
+          constructor() {
+            bound = Math.min(-1 * positionY.get() / c16, 1);
+            obj = { opacity: bound, pointerEvents: null };
+            str = "auto";
+            if (0 === bound) {
+              str = "none";
+            }
+            obj.pointerEvents = str;
+            return obj;
+          }
+        }
+        cResult[4] = availableHeight;
+        cResult[5] = obj3;
+        let tmp12 = obj3;
+      } else {
+        tmp12 = cResult[5];
+      }
+      if (cResult[6] === animatedStyle) {
+        if (cResult[7] === tmp4.expandedControlsContainer) {
+          let tmp13 = cResult[8];
+        }
+        if (cResult[9] === expandedControls) {
+          if (cResult[10] === tmp8) {
+            if (cResult[11] === tmp13) {
+              let tmp14 = cResult[12];
+            }
+            if (cResult[13] === scrollEnabled) {
+              if (cResult[14] === tmp14) {
+                let tmp16 = cResult[15];
+              }
+              if (cResult[16] === tmp12) {
+                if (cResult[17] === tmp16) {
+                  let tmp19 = cResult[18];
+                }
+                return tmp19;
+              }
+              class I {
+                constructor() {
+                  bound = Math.min(-1 * positionY.get() / c16, 1);
+                  obj = { opacity: bound, pointerEvents: null };
+                  str = "auto";
+                  if (0 === bound) {
+                    str = "none";
+                  }
+                  obj.pointerEvents = str;
+                  return obj;
+                }
+              }
+              const obj4 = { style: tmp12, children: tmp16 };
+              const tmp21 = closure_13(closure_5, obj4);
+              cResult[16] = tmp12;
+              cResult[17] = tmp16;
+              cResult[18] = tmp21;
+              tmp19 = tmp21;
+            }
+            class I {
+              constructor() {
+                bound = Math.min(-1 * positionY.get() / c16, 1);
+                obj = { opacity: bound, pointerEvents: null };
+                str = "auto";
+                if (0 === bound) {
+                  str = "none";
+                }
+                obj.pointerEvents = str;
+                return obj;
+              }
+            }
+            obj5 = { scrollEnabled, children: tmp14 };
+            const tmp18 = closure_13(closure_7, obj5);
+            cResult[13] = scrollEnabled;
+            cResult[14] = tmp14;
+            cResult[15] = tmp18;
+            tmp16 = tmp18;
+          }
+        }
+        class I {
+          constructor() {
+            bound = Math.min(-1 * positionY.get() / c16, 1);
+            obj = { opacity: bound, pointerEvents: null };
+            str = "auto";
+            if (0 === bound) {
+              str = "none";
+            }
+            obj.pointerEvents = str;
+            return obj;
+          }
+        }
+        obj6 = { style: tmp13, onLayout: tmp8, children: expandedControls };
+        const tmp15 = closure_13(tmp5(tmp2[15]).View, obj6);
+        cResult[9] = expandedControls;
+        cResult[10] = tmp8;
+        cResult[11] = tmp13;
+        cResult[12] = tmp15;
+        tmp14 = tmp15;
+      }
+      const items = [tmp4.expandedControlsContainer, animatedStyle];
+      cResult[6] = animatedStyle;
+      cResult[7] = tmp4.expandedControlsContainer;
+      cResult[8] = items;
+      tmp13 = items;
+      const tmpResult = availableHeight(tmp2[15]);
+    }
+  }
+  const fn = function l(nativeEvent) {
+    if (nativeEvent.nativeEvent.layout.height > availableHeight - bottom !== first) {
+      closure_4(tmp);
+    }
+  };
+  cResult[0] = availableHeight;
+  cResult[1] = bottom;
+  cResult[2] = scrollEnabled;
+  cResult[3] = fn;
+  tmp8 = fn;
+  let obj = availableHeight(bottom[13]);
+  tmp5 = positionY;
+}) : ((availableHeight) => {
+  availableHeight = availableHeight.availableHeight;
+  const positionY = availableHeight.positionY;
+  let bottom;
+  let scrollEnabled;
+  width = undefined;
+  bottom = positionY(bottom[14])().bottom;
+  const tmp2 = scrollEnabled(width.useState(false), 2);
+  scrollEnabled = tmp2[0];
+  width = tmp2[1];
+  const items = [availableHeight, bottom, scrollEnabled];
+  const callback = width.useCallback((nativeEvent) => {
+    if (nativeEvent.nativeEvent.layout.height > availableHeight - bottom !== first) {
+      closure_4(tmp);
+    }
+  }, items);
+  const tmp = closure_19();
+  const fn = function u() {
+    const bound = Math.min(-1 * positionY.get() / c16, 1);
+    const obj = { opacity: bound, pointerEvents: null };
+    let str = "auto";
+    if (0 === bound) {
+      str = "none";
+    }
+    obj.pointerEvents = str;
+    return obj;
+  };
+  fn.__closure = { positionY, EXPANDED_DRAWER_SHOW_POSITION };
+  fn.__workletHash = 7351861170276;
+  fn.__initData = __initData2;
+  const obj3 = { style: { height: availableHeight }, children: null };
+  const obj4 = { scrollEnabled, children: null };
+  const animatedStyle = availableHeight(bottom[15]).useAnimatedStyle(fn);
+  obj5 = { style: null, onLayout: callback, children: availableHeight.expandedControls };
+  const items1 = [tmp.expandedControlsContainer, animatedStyle];
+  obj5.style = items1;
+  obj4.children = closure_13(positionY(bottom[15]).View, obj5);
+  obj3.children = closure_13(closure_7, obj4);
+  return closure_13(closure_5, obj3);
+});
+const __initData3 = { code: "function FocusedControlsBottomControlsTsx3(){const{positionY,EXPANDED_DRAWER_SHOW_POSITION}=this.__closure;return{opacity:1-Math.min(positionY.get()*-1/EXPANDED_DRAWER_SHOW_POSITION,1)};}" };
+const __initData4 = { code: "function FocusedControlsBottomControlsTsx4(){const{positionY,EXPANDED_DRAWER_SHOW_POSITION}=this.__closure;return{opacity:1-Math.min(positionY.get()*-1/EXPANDED_DRAWER_SHOW_POSITION,1)};}" };
+ReactCompilerGating = fn(558);
+let closure_27 = ReactCompilerGating.isReactCompilerEnabled() ? ((positionY) => {
+  const cResult = positionY(576).c(8);
+  positionY = positionY.positionY;
+  const tmp4 = closure_19();
+  const obj = positionY(576);
+  const canShowTooltip = positionY(9616).useCanShowTooltip(positionY(1105).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS, true);
+  const obj2 = positionY(9616);
+  const fn = function o() {
+    return { opacity: 1 - Math.min(-1 * positionY.get() / c16, 1) };
+  };
+  fn.__closure = { positionY, EXPANDED_DRAWER_SHOW_POSITION };
+  fn.__workletHash = 15386908151356;
+  fn.__initData = __initData3;
+  const animatedStyle = positionY(4612).useAnimatedStyle(fn);
+  if (canShowTooltip) {
+    const _Symbol = Symbol;
+    ({ tooltipStyle, containerStyle, labelStyle } = tmp4);
+    if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+      const intl = tmp(1126).intl;
+      const stringResult = intl.string(tmp(1126).t.zYzy2i);
+      cResult[0] = stringResult;
+      let first = stringResult;
+    } else {
+      first = cResult[0];
+    }
+    if (cResult[1] === tmp4.containerStyle) {
+      if (cResult[2] === tmp4.labelStyle) {
+        if (cResult[3] === tmp4.tooltipStyle) {
+          let tmp11 = cResult[4];
+        }
+        if (cResult[5] === animatedStyle) {
+          if (cResult[6] === tmp11) {
+            let tmp14 = cResult[7];
+          }
+          return tmp14;
+        }
+        obj5 = { style: animatedStyle, children: tmp11 };
+        const tmp17 = closure_13(ReanimatedRexportDefault.View, obj5);
+        cResult[5] = animatedStyle;
+        cResult[6] = tmp11;
+        cResult[7] = tmp17;
+        tmp14 = tmp17;
+      }
+    }
+    obj6 = { style: tooltipStyle, arrowPosition: tmp(1188).TooltipArrowPositions.CENTER, arrowDirection: tmp(1188).TooltipArrowDirections.DOWN, arrowWidth: 8, arrowHeight: 4, containerStyle, labelStyle, label: first };
+    const tmp13 = closure_13(tmp(1188).Tooltip, obj6);
+    cResult[1] = tmp4.containerStyle;
+    cResult[2] = tmp4.labelStyle;
+    cResult[3] = tmp4.tooltipStyle;
+    cResult[4] = tmp13;
+    tmp11 = tmp13;
+  } else {
+    return null;
+  }
+  const obj3 = positionY(4612);
+  const obj4 = { positionY, EXPANDED_DRAWER_SHOW_POSITION };
+}) : ((positionY) => {
+  positionY = positionY.positionY;
+  const tmp = closure_19();
+  const canShowTooltip = positionY(9616).useCanShowTooltip(positionY(1105).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS, true);
+  positionY(4612);
+  const fn = function o() {
+    return { opacity: 1 - Math.min(-1 * positionY.get() / c16, 1) };
+  };
+  fn.__closure = { positionY, EXPANDED_DRAWER_SHOW_POSITION };
+  fn.__workletHash = 13795512875803;
+  fn.__initData = __initData4;
+  let tmp7 = null;
+  if (canShowTooltip) {
+    const obj3 = { style: tmp6, children: null };
+    const obj7 = { style: tmp.tooltipStyle, arrowPosition: tmp2(1188).TooltipArrowPositions.CENTER, arrowDirection: tmp2(1188).TooltipArrowDirections.DOWN, arrowWidth: 8, arrowHeight: 4, containerStyle: null, labelStyle: null, label: null };
+    ({ containerStyle: obj4.containerStyle, labelStyle: obj4.labelStyle } = tmp);
+    const intl = tmp2(1126).intl;
+    obj7.label = intl.string(tmp2(1126).t.zYzy2i);
+    obj3.children = closure_13(tmp2(1188).Tooltip, obj7);
+    tmp7 = closure_13(ReanimatedRexportDefault.View, obj3);
+  }
+  return tmp7;
+});
+const __initData5 = { code: "function FocusedControlsBottomControlsTsx5(){const{offsetY,EXPANDED_DRAWER_SHOW_POSITION,positionY}=this.__closure;const maxHeightRange=offsetY/3-EXPANDED_DRAWER_SHOW_POSITION;const opacity=2-Math.max(Math.abs(positionY.get())/maxHeightRange,0);return{opacity:opacity};}" };
+const __initData6 = { code: "function FocusedControlsBottomControlsTsx6(){const{offsetY,EXPANDED_DRAWER_SHOW_POSITION,positionY}=this.__closure;const maxHeightRange=offsetY/3-EXPANDED_DRAWER_SHOW_POSITION;const opacity=2-Math.max(Math.abs(positionY.get())/maxHeightRange,0);return{opacity:opacity};}" };
+ReactCompilerGating = fn(558);
+let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? ((positionY) => {
+  const cResult = positionY(576).c(17);
+  positionY = positionY.positionY;
+  const offsetY = positionY.offsetY;
+  ({ aboveActionBar, onPressHeader, isExpanded } = positionY);
+  const tmp4 = closure_19();
+  const obj = positionY(576);
+  const tmp = positionY;
+  const fn = function o() {
+    return { opacity: 2 - Math.max(Math.abs(positionY.get()) / (offsetY / 3 - c16), 0) };
+  };
+  fn.__closure = { offsetY, EXPANDED_DRAWER_SHOW_POSITION, positionY };
+  fn.__workletHash = 16821998405506;
+  fn.__initData = __initData5;
+  const animatedStyle = positionY(4612).useAnimatedStyle(fn);
+  if (cResult[0] !== isExpanded) {
+    const obj4 = { expanded: isExpanded };
+    cResult[0] = isExpanded;
+    cResult[1] = obj4;
+    let tmp6 = obj4;
+  } else {
+    tmp6 = cResult[1];
+  }
+  if (cResult[2] !== positionY) {
+    obj5 = { positionY };
+    const tmp10 = closure_13(closure_27, obj5);
+    cResult[2] = positionY;
+    cResult[3] = tmp10;
+    let tmp7 = tmp10;
+  } else {
+    tmp7 = cResult[3];
+  }
+  if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+    const tmp13 = closure_13(tmp(6649).ActionSheetHeaderBar, {});
+    cResult[4] = tmp13;
+    let tmp11 = tmp13;
+  } else {
+    tmp11 = cResult[4];
+  }
+  if (cResult[5] === aboveActionBar) {
+    if (cResult[6] === animatedStyle) {
+      if (cResult[7] === tmp4.aboveActionBarChildrenContainer) {
+        let tmp14 = cResult[8];
+      }
+      if (cResult[9] === tmp4.aboveActionBarContainer) {
+        if (cResult[10] === tmp7) {
+          if (cResult[11] === tmp14) {
+            let tmp18 = cResult[12];
+          }
+          if (cResult[13] === onPressHeader) {
+            if (cResult[14] === tmp6) {
+              if (cResult[15] === tmp18) {
+                let tmp22 = cResult[16];
+              }
+              return tmp22;
+            }
+          }
+          obj6 = { accessible: true, onPress: onPressHeader, accessibilityRole: "button", accessibilityLabel: "Group DM", accessibilityHint: "Press to start a new conversation", accessibilityState: tmp6, children: tmp18 };
+          const tmp25 = closure_13(closure_6, obj6);
+          cResult[13] = onPressHeader;
+          cResult[14] = tmp6;
+          cResult[15] = tmp18;
+          cResult[16] = tmp25;
+          tmp22 = tmp25;
+        }
+      }
+      const obj7 = { style: tmp4.aboveActionBarContainer, children: null };
+      const items = [tmp7, tmp11, tmp14];
+      obj7.children = items;
+      const tmp21 = closure_14(closure_5, obj7);
+      cResult[9] = tmp4.aboveActionBarContainer;
+      cResult[10] = tmp7;
+      cResult[11] = tmp14;
+      cResult[12] = tmp21;
+      tmp18 = tmp21;
+    }
+  }
+  let tmp15 = null != aboveActionBar;
+  if (tmp15) {
+    const obj8 = { style: null, children: null };
+    const items1 = [tmp4.aboveActionBarChildrenContainer, animatedStyle];
+    obj8.style = items1;
+    obj8.children = aboveActionBar;
+    tmp15 = closure_13(offsetY(4612).View, obj8);
+  }
+  cResult[5] = aboveActionBar;
+  cResult[6] = animatedStyle;
+  cResult[7] = tmp4.aboveActionBarChildrenContainer;
+  cResult[8] = tmp15;
+  tmp14 = tmp15;
+  const obj2 = positionY(4612);
+  const obj3 = { offsetY, EXPANDED_DRAWER_SHOW_POSITION, positionY };
+}) : ((positionY) => {
+  positionY = positionY.positionY;
+  const offsetY = positionY.offsetY;
+  const aboveActionBar = positionY.aboveActionBar;
+  ({ onPressHeader, isExpanded } = positionY);
+  const tmp = closure_19();
+  const fn = function u() {
+    return { opacity: 2 - Math.max(Math.abs(positionY.get()) / (offsetY / 3 - c16), 0) };
+  };
+  fn.__closure = { offsetY, EXPANDED_DRAWER_SHOW_POSITION, positionY };
+  fn.__workletHash = 15125248924641;
+  fn.__initData = __initData6;
+  const obj3 = { accessible: true, onPress: onPressHeader, accessibilityRole: "button", accessibilityLabel: "Group DM", accessibilityHint: "Press to start a new conversation", accessibilityState: { expanded: isExpanded }, children: null };
+  const obj4 = { style: tmp.aboveActionBarContainer, children: null };
+  const animatedStyle = positionY(4612).useAnimatedStyle(fn);
+  const items = [closure_13(closure_27, { positionY }), closure_13(positionY(6649).ActionSheetHeaderBar, {}), ];
+  let tmp4Result = null != aboveActionBar;
+  if (tmp4Result) {
+    obj5 = { style: null, children: null };
+    const items1 = [tmp.aboveActionBarChildrenContainer, animatedStyle];
+    obj5.style = items1;
+    obj5.children = aboveActionBar;
+    tmp4Result = closure_13(offsetY(4612).View, obj5);
+  }
+  items[2] = tmp4Result;
+  obj4.children = items;
+  obj3.children = closure_14(closure_5, obj4);
+  return closure_13(closure_6, obj3);
+});
+const __initData7 = { code: "function FocusedControlsBottomControlsTsx7(){const{isLandscapeMode,controlMaxHeight,landscapeOffsetY,portraitOffsetY}=this.__closure;return isLandscapeMode?controlMaxHeight-landscapeOffsetY:controlMaxHeight-portraitOffsetY;}" };
+let closure_32 = { code: "function FocusedControlsBottomControlsTsx8(){const{drawerOpen,positionY,maxHeight,velocity,MIN_GESTURE_TRIGGER_VELOCITY,CLOSE_DRAWER_POSITION,runOnJS,handleOpen,startY,withTiming,TIMING_CONFIG,TooltipActionCreators,TooltipNames,TIMING_CONFIG_EXIT,resetFocusTimer,handleClose}=this.__closure;var _velocity$get,_velocity$get2;const isDrawerAlreadyOpen=drawerOpen.get();const isPassedTriggerThreshold=positionY.get()*-1>=maxHeight.get()/2;const isHighOpenVelocity=((_velocity$get=velocity.get())!==null&&_velocity$get!==void 0?_velocity$get:0)*-1>=MIN_GESTURE_TRIGGER_VELOCITY;const isHighCloseVelocity=((_velocity$get2=velocity.get())!==null&&_velocity$get2!==void 0?_velocity$get2:0)>=MIN_GESTURE_TRIGGER_VELOCITY;const isLowerThanMinHeight=positionY.get()>CLOSE_DRAWER_POSITION;const openDrawer=function openDrawer(){runOnJS(handleOpen)();startY.set(-maxHeight.get());positionY.set(withTiming(startY.get(),TIMING_CONFIG));drawerOpen.set(true);runOnJS(TooltipActionCreators.acknowledgeTooltip)(TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS);};const closeDrawer=function closeDrawer(){startY.set(0);positionY.set(withTiming(CLOSE_DRAWER_POSITION,TIMING_CONFIG_EXIT));drawerOpen.set(false);runOnJS(resetFocusTimer)();runOnJS(handleClose)();};if(isHighOpenVelocity&&!isDrawerAlreadyOpen||isPassedTriggerThreshold&&!isDrawerAlreadyOpen){openDrawer();}else{if(isLowerThanMinHeight||isHighCloseVelocity&&isDrawerAlreadyOpen){closeDrawer();}else{if(isPassedTriggerThreshold){openDrawer();}else{closeDrawer();}}}}" };
+let closure_33 = { code: "function FocusedControlsBottomControlsTsx9(event){const{velocity,positionY,maxHeight,startY}=this.__closure;var _startY$get;velocity.set(event.velocityY);if(positionY.get()*-1>maxHeight.get()+16){return;}positionY.set(((_startY$get=startY.get())!==null&&_startY$get!==void 0?_startY$get:0)+event.translationY);}" };
+let closure_34 = { code: "function FocusedControlsBottomControlsTsx10(){const{runOnJS,clearFocusTimer,drawerOpen,positionY,CLOSE_DRAWER_POSITION,velocity,startY}=this.__closure;runOnJS(clearFocusTimer)();drawerOpen.set(positionY.get()!==CLOSE_DRAWER_POSITION);velocity.set(0);if(positionY.get()==null||!drawerOpen.get()){startY.set(0);}}" };
+const __initData8 = { code: "function FocusedControlsBottomControlsTsx11(){const{isLandscapeMode,controlMaxHeight,landscapeOffsetY,portraitOffsetY}=this.__closure;return isLandscapeMode?controlMaxHeight-landscapeOffsetY:controlMaxHeight-portraitOffsetY;}" };
+const __initData9 = { code: "function FocusedControlsBottomControlsTsx12(){const{drawerOpen,positionY,maxHeight,velocity,MIN_GESTURE_TRIGGER_VELOCITY,CLOSE_DRAWER_POSITION,runOnJS,handleOpen,startY,withTiming,TIMING_CONFIG,TooltipActionCreators,TooltipNames,TIMING_CONFIG_EXIT,resetFocusTimer,handleClose}=this.__closure;var _velocity$get,_velocity$get2;const isDrawerAlreadyOpen=drawerOpen.get();const isPassedTriggerThreshold=positionY.get()*-1>=maxHeight.get()/2;const isHighOpenVelocity=((_velocity$get=velocity.get())!==null&&_velocity$get!==void 0?_velocity$get:0)*-1>=MIN_GESTURE_TRIGGER_VELOCITY;const isHighCloseVelocity=((_velocity$get2=velocity.get())!==null&&_velocity$get2!==void 0?_velocity$get2:0)>=MIN_GESTURE_TRIGGER_VELOCITY;const isLowerThanMinHeight=positionY.get()>CLOSE_DRAWER_POSITION;function openDrawer(){runOnJS(handleOpen)();startY.set(-maxHeight.get());positionY.set(withTiming(startY.get(),TIMING_CONFIG));drawerOpen.set(true);runOnJS(TooltipActionCreators.acknowledgeTooltip)(TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS);}function closeDrawer(){startY.set(0);positionY.set(withTiming(CLOSE_DRAWER_POSITION,TIMING_CONFIG_EXIT));drawerOpen.set(false);runOnJS(resetFocusTimer)();runOnJS(handleClose)();}if(isHighOpenVelocity&&!isDrawerAlreadyOpen||isPassedTriggerThreshold&&!isDrawerAlreadyOpen){openDrawer();}else if(isLowerThanMinHeight||isHighCloseVelocity&&isDrawerAlreadyOpen){closeDrawer();}else if(isPassedTriggerThreshold){openDrawer();}else{closeDrawer();}}" };
+const __initData10 = { code: "function FocusedControlsBottomControlsTsx13(event){const{velocity,positionY,maxHeight,startY}=this.__closure;var _startY$get;velocity.set(event.velocityY);if(positionY.get()*-1>maxHeight.get()+16){return;}positionY.set(((_startY$get=startY.get())!==null&&_startY$get!==void 0?_startY$get:0)+event.translationY);}" };
+const __initData11 = { code: "function FocusedControlsBottomControlsTsx14(){const{runOnJS,clearFocusTimer,drawerOpen,positionY,CLOSE_DRAWER_POSITION,velocity,startY}=this.__closure;runOnJS(clearFocusTimer)();drawerOpen.set(positionY.get()!==CLOSE_DRAWER_POSITION);velocity.set(0);if(positionY.get()==null||!drawerOpen.get()){startY.set(0);}}" };
+ReactCompilerGating = fn(558);
+let closure_39 = ReactCompilerGating.isReactCompilerEnabled() ? ((controlMaxHeight) => {
+  const cResult = controlMaxHeight(portraitOffsetY[13]).c(14);
+  controlMaxHeight = controlMaxHeight.controlMaxHeight;
+  const isLandscapeMode = controlMaxHeight.isLandscapeMode;
+  portraitOffsetY = controlMaxHeight.portraitOffsetY;
+  const landscapeOffsetY = controlMaxHeight.landscapeOffsetY;
+  const onClose = controlMaxHeight.onClose;
+  const onOpen = controlMaxHeight.onOpen;
+  const tmp2 = landscapeOffsetY(onClose.useState(false), 2);
+  const first = tmp2[0];
+  closure_7 = tmp2[1];
+  let obj = controlMaxHeight(portraitOffsetY[13]);
+  const sharedValue = controlMaxHeight(portraitOffsetY[15]).useSharedValue(0);
+  let obj2 = controlMaxHeight(portraitOffsetY[15]);
+  const fn = function s() {
+    if (isLandscapeMode) {
+      let diff = controlMaxHeight - landscapeOffsetY;
+    } else {
+      diff = controlMaxHeight - portraitOffsetY;
+    }
+    return diff;
+  };
+  fn.__closure = { isLandscapeMode, controlMaxHeight, landscapeOffsetY, portraitOffsetY };
+  fn.__workletHash = 16220091635392;
+  fn.__initData = __initData7;
+  const derivedValue = controlMaxHeight(portraitOffsetY[15]).useDerivedValue(fn);
+  let obj3 = controlMaxHeight(portraitOffsetY[15]);
+  const sharedValue1 = controlMaxHeight(portraitOffsetY[15]).useSharedValue(0);
+  let obj4 = controlMaxHeight(portraitOffsetY[15]);
+  const sharedValue2 = controlMaxHeight(portraitOffsetY[15]).useSharedValue(false);
+  obj5 = controlMaxHeight(portraitOffsetY[15]);
+  const sharedValue3 = controlMaxHeight(portraitOffsetY[15]).useSharedValue(0);
+  if (cResult[0] === derivedValue) {
+    if (cResult[3] === first) {
+      if (cResult[4] === onOpen) {
+        let tmp10 = cResult[5];
+      }
+      closure_13 = tmp10;
+      class N {
+        constructor() {
+          if (!closure_6) {
+            tmp2 = null;
+            if (onOpen != null) {
+              tmpResult = tmp();
+            }
+            tmp4 = closure_7;
+            flag = true;
+            tmp5 = closure_7(true);
+          }
+          return;
+        }
+      }
+      class L {
+        constructor() {
+          if (closure_6) {
+            tmp2 = null;
+            if (onClose != null) {
+              tmpResult = tmp();
+            }
+            tmp4 = closure_7;
+            flag = false;
+            tmp5 = closure_7(false);
+          }
+          return;
+        }
+      }
+      cResult[6] = first;
+      cResult[7] = onClose;
+      cResult[8] = L;
+    }
+    class N {
+      constructor() {
+        if (!closure_6) {
+          tmp2 = null;
+          if (onOpen != null) {
+            tmpResult = tmp();
+          }
+          tmp4 = closure_7;
+          flag = true;
+          tmp5 = closure_7(true);
+        }
+        return;
+      }
+    }
+    cResult[3] = first;
+    cResult[4] = onOpen;
+    cResult[5] = N;
+    tmp10 = N;
+  }
+  const fn2 = function l() {
+    let num = 0;
+    const tmp = 0 !== sharedValue.get();
+    if (!tmp) {
+      num = -derivedValue.get();
+    }
+    const result = sharedValue.set(timing.withTiming(num, obj5));
+    if (tmp) {
+      stopCallback();
+    } else {
+      sendCallback();
+    }
+    closure_7(!tmp);
+  };
+  cResult[0] = derivedValue;
+  cResult[1] = sharedValue;
+  cResult[2] = fn2;
+  obj6 = controlMaxHeight(portraitOffsetY[15]);
+}) : ((controlMaxHeight) => {
+  controlMaxHeight = controlMaxHeight.controlMaxHeight;
+  const isLandscapeMode = controlMaxHeight.isLandscapeMode;
+  const portraitOffsetY = controlMaxHeight.portraitOffsetY;
+  const landscapeOffsetY = controlMaxHeight.landscapeOffsetY;
+  ({ onClose: noop, onOpen: closure_5 } = controlMaxHeight);
+  let derivedValue;
+  let sharedValue1;
+  let sharedValue2;
+  let sharedValue3;
+  function handleOpen() {
+    if (!first) {
+      if (height != null) {
+        tmp();
+      }
+      closure_7(true);
+    }
+  }
+  function handleClose() {
+    if (first) {
+      if (width != null) {
+        tmp();
+      }
+      closure_7(false);
+    }
+  }
+  let tmp = landscapeOffsetY(noop.useState(false), 2);
+  const first = tmp[0];
+  closure_7 = tmp[1];
+  const sharedValue = controlMaxHeight(portraitOffsetY[15]).useSharedValue(0);
+  let obj = controlMaxHeight(portraitOffsetY[15]);
+  class O {
+    constructor() {
+      tmp = controlMaxHeight;
+      if (isLandscapeMode) {
+        tmp4 = landscapeOffsetY;
+        diff = tmp - landscapeOffsetY;
+      } else {
+        tmp2 = portraitOffsetY;
+        diff = tmp - portraitOffsetY;
+      }
+      return diff;
+    }
+  }
+  O.__closure = { isLandscapeMode, controlMaxHeight, landscapeOffsetY, portraitOffsetY };
+  O.__workletHash = 9835520937079;
+  O.__initData = __initData8;
+  derivedValue = controlMaxHeight(portraitOffsetY[15]).useDerivedValue(O);
+  let obj2 = controlMaxHeight(portraitOffsetY[15]);
+  sharedValue1 = controlMaxHeight(portraitOffsetY[15]).useSharedValue(0);
+  let obj3 = controlMaxHeight(portraitOffsetY[15]);
+  sharedValue2 = controlMaxHeight(portraitOffsetY[15]).useSharedValue(false);
+  obj5 = controlMaxHeight(portraitOffsetY[15]);
+  sharedValue3 = obj5.useSharedValue(0);
+  const items = [sharedValue, derivedValue];
+  const callback = noop.useCallback(() => {
+    let num = 0;
+    const tmp = 0 !== sharedValue.get();
+    if (!tmp) {
+      num = -derivedValue.get();
+    }
+    const result = sharedValue.set(timing.withTiming(num, obj5));
+    if (tmp) {
+      stopCallback();
+    } else {
+      sendCallback();
+    }
+    closure_7(!tmp);
+  }, items);
+  const Gesture = controlMaxHeight(portraitOffsetY[21]).Gesture;
+  let obj4 = controlMaxHeight(portraitOffsetY[15]);
+  class N {
+    constructor() {
+      obj = closure_0(closure_2[15]);
+      tmp = obj.runOnJS(clearFocusTimer)();
+      obj2 = closure_11;
+      result = closure_11.set(0 !== closure_8.get());
+      result1 = closure_12.set(0);
+      tmp4 = null != closure_8.get() && obj2.get();
+      if (!tmp4) {
+        tmp5 = closure_10;
+        result2 = closure_10.set(0);
+      }
+      return;
+    }
+  }
+  obj6 = { runOnJS: controlMaxHeight(portraitOffsetY[15]).runOnJS, clearFocusTimer: sharedValue, drawerOpen: sharedValue2, positionY: sharedValue, CLOSE_DRAWER_POSITION: 0, velocity: sharedValue3, startY: sharedValue1 };
+  N.__closure = obj6;
+  N.__workletHash = 535397777506;
+  N.__initData = __initData11;
+  const PanResult = Gesture.Pan();
+  class H {
+    constructor(arg0) {
+      result = closure_12.set(controlMaxHeight.velocityY);
+      obj = closure_8;
+      result1 = -1 * closure_8.get();
+      if (result1 <= closure_9.get() + 16) {
+        tmp3 = closure_10;
+        num = closure_10.get();
+        tmp4 = null;
+        if (num == null) {
+          num = 0;
+        }
+        result2 = obj.set(num + controlMaxHeight.translationY);
+      }
+      return;
+    }
+  }
+  H.__closure = { velocity: sharedValue3, positionY: sharedValue, maxHeight: derivedValue, startY: sharedValue1 };
+  H.__workletHash = 2475240610523;
+  H.__initData = __initData10;
+  const onStartResult = Gesture.Pan().onStart(N);
+  const fn = function b() {
+    value = sharedValue2.get();
+    let result = -1 * sharedValue.get();
+    let result1 = derivedValue.get() / 2;
+    let num = sharedValue3.get();
+    if (num == null) {
+      num = 0;
+    }
+    let result2 = -1 * num;
+    let num2 = sharedValue3.get();
+    if (num2 == null) {
+      num2 = 0;
+    }
+    function openDrawer() {
+      controlMaxHeight(portraitOffsetY[15]).runOnJS(handleOpen)();
+      const result = sharedValue1.set(-derivedValue.get());
+      const obj = controlMaxHeight(portraitOffsetY[15]);
+      const result1 = sharedValue.set(controlMaxHeight(portraitOffsetY[20]).withTiming(sharedValue1.get(), obj5));
+      const result2 = sharedValue2.set(true);
+      const obj2 = controlMaxHeight(portraitOffsetY[20]);
+      const obj3 = controlMaxHeight(portraitOffsetY[15]);
+      controlMaxHeight(portraitOffsetY[15]).runOnJS(isLandscapeMode(portraitOffsetY[22]).acknowledgeTooltip)(controlMaxHeight(portraitOffsetY[17]).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS);
+    }
+    if (result2 < c15) {
+      if (!tmp7) {
+        if (result1 <= result) {
+          openDrawer();
+        } else {
+          const result3 = sharedValue1.set(0);
+          const result4 = sharedValue.set(timing.withTiming(0, obj6));
+          const result5 = sharedValue2.set(false);
+          ReanimatedRexport.runOnJS(stopCallback)();
+          ReanimatedRexport.runOnJS(handleClose)();
+        }
+      }
+      const result6 = sharedValue1.set(0);
+      const result7 = sharedValue.set(timing.withTiming(0, obj6));
+      const result8 = sharedValue2.set(false);
+      ReanimatedRexport.runOnJS(stopCallback)();
+      obj6 = ReanimatedRexport;
+      obj6.runOnJS(handleClose)();
+    }
+    openDrawer();
+  };
+  const onUpdateResult = Gesture.Pan().onStart(N).onUpdate(H);
+  fn.__closure = { drawerOpen: sharedValue2, positionY: sharedValue, maxHeight: derivedValue, velocity: sharedValue3, MIN_GESTURE_TRIGGER_VELOCITY, CLOSE_DRAWER_POSITION: 0, runOnJS: controlMaxHeight(portraitOffsetY[15]).runOnJS, handleOpen, startY: sharedValue1, withTiming: controlMaxHeight(portraitOffsetY[20]).withTiming, TIMING_CONFIG: obj5, TooltipActionCreators: isLandscapeMode(portraitOffsetY[22]), TooltipNames: controlMaxHeight(portraitOffsetY[17]).TooltipNames, TIMING_CONFIG_EXIT: obj6, resetFocusTimer: derivedValue, handleClose };
+  fn.__workletHash = 14860505928213;
+  fn.__initData = __initData9;
+  const items1 = [sharedValue, onUpdateResult.onEnd(fn), callback, first];
+  return items1;
+});
+const __initData12 = { code: "function FocusedControlsBottomControlsTsx15(){const{reveal,controlHeightWithOffset,sheetHeight,isLandscapeMode,safeAreaRight,sheetWidth,withTiming,TIMING_CONFIG}=this.__closure;const revealOffset=reveal?0:controlHeightWithOffset;return{position:\"absolute\",height:sheetHeight,overflow:\"hidden\",bottom:isLandscapeMode?16:0,right:isLandscapeMode?16+safeAreaRight:0,borderRadius:isLandscapeMode?8:0,width:sheetWidth,transform:[{translateY:withTiming(revealOffset,TIMING_CONFIG)}]};}" };
+const __initData13 = { code: "function FocusedControlsBottomControlsTsx16(){const{sheetHeight,offsetY,positionY}=this.__closure;return{height:sheetHeight,transform:[{translateY:offsetY+positionY.get()}]};}" };
+const __initData14 = { code: "function FocusedControlsBottomControlsTsx17(){const{reveal,controlHeightWithOffset,sheetHeight,isLandscapeMode,safeAreaRight,sheetWidth,withTiming,TIMING_CONFIG}=this.__closure;const revealOffset=reveal?0:controlHeightWithOffset;return{position:'absolute',height:sheetHeight,overflow:'hidden',bottom:isLandscapeMode?16:0,right:isLandscapeMode?16+safeAreaRight:0,borderRadius:isLandscapeMode?8:0,width:sheetWidth,transform:[{translateY:withTiming(revealOffset,TIMING_CONFIG)}]};}" };
+const __initData15 = { code: "function FocusedControlsBottomControlsTsx18(){const{sheetHeight,offsetY,positionY}=this.__closure;return{height:sheetHeight,transform:[{translateY:offsetY+positionY.get()}]};}" };
+ReactCompilerGating = fn(558);
+let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? ((onDrawerOpen) => {
+  const cResult = reveal(right[13]).c(60);
+  ({ children, expandedControls, actionBarControlsHeight, reveal } = onDrawerOpen);
+  ({ aboveActionBar, onDrawerClose } = onDrawerOpen);
+  onDrawerOpen = onDrawerOpen.onDrawerOpen;
+  const tmp4 = closure_19();
+  const tmp6 = onDrawerClose(right[14])();
+  ({ bottom, right } = tmp6);
+  const top = tmp6.top;
+  let size = onDrawerClose(right[23])();
+  height = size.height;
+  _slicedToArray = tmp7;
+  const tmp8 = onDrawerClose(right[24])();
+  width = tmp8;
+  let bound = height;
+  if (size.width > closure_10) {
+    const _Math = Math;
+    bound = Math.min(closure_11, height);
+  }
+  let sum = actionBarControlsHeight;
+  if (size.width <= closure_10) {
+    sum = actionBarControlsHeight + bottom;
+  }
+  closure_6 = sum;
+  const diff = bound - sum;
+  const diff1 = bound - sum;
+  if (size.width > closure_10) {
+    if (typeof EXTENDED_CONTROLS_LANDSCAPE_OFFSET_Y === "function") {
+      let diff2 = diff1 - (top + 54 + 12);
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  } else if (typeof EXTENDED_CONTROLS_OFFSET_Y === "function") {
+    const sum1 = top + 54;
+    let num2 = 16;
+    if (tmpResult.isIOS()) {
+      num2 = 48;
+    }
+    diff2 = diff1 - (sum1 + num2);
+    tmpResult = reveal(right[7]);
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+  if (typeof EXTENDED_CONTROLS_OFFSET_Y === "function") {
+    const sum2 = top + 54;
+    let num7 = 16;
+    if (tmpResult5.isIOS()) {
+      num7 = 48;
+    }
+    const sum3 = sum2 + num7 + bottom;
+    if (cResult[0] !== top) {
+      if (typeof EXTENDED_CONTROLS_LANDSCAPE_OFFSET_Y === "function") {
+        const sum4 = top + 54 + 12;
+        cResult[0] = top;
+        cResult[1] = sum4;
+        let tmp21 = sum4;
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    } else {
+      tmp21 = cResult[1];
+    }
+    if (cResult[2] !== onDrawerClose) {
+      const fn = function l() {
+        let tmp;
+        if (onDrawerClose != null) {
+          tmp = onDrawerClose();
+        }
+        return tmp;
+      };
+      cResult[2] = onDrawerClose;
+      cResult[3] = fn;
+      let tmp24 = fn;
+    } else {
+      tmp24 = cResult[3];
+    }
+    if (cResult[4] === tmp7) {
+      if (cResult[5] === diff) {
+        if (cResult[6] === onDrawerOpen) {
+          if (cResult[7] === sum3) {
+            if (cResult[8] === tmp21) {
+              if (cResult[9] === tmp24) {
+                let tmp25 = cResult[10];
+              }
+              [positionY] = closure_39(tmp25);
+              closure_9 = tmp31;
+              class X {
+                constructor() {
+                  num = 0;
+                  if (!reveal) {
+                    num = closure_6;
+                  }
+                  size = { position: "absolute", height: closure_5, overflow: "hidden", bottom: null, right: null, borderRadius: null, width: null, transform: null };
+                  tmp = closure_3;
+                  num2 = 0;
+                  if (closure_3) {
+                    num2 = 16;
+                  }
+                  size.bottom = num2;
+                  num3 = 0;
+                  if (tmp) {
+                    tmp2 = right;
+                    num4 = 16;
+                    num3 = 16 + right;
+                  }
+                  size.right = num3;
+                  num5 = 0;
+                  if (tmp) {
+                    num5 = 8;
+                  }
+                  size.borderRadius = num5;
+                  size.width = closure_4;
+                  obj1 = { translateY: null };
+                  obj3 = closure_0(closure_2[20]);
+                  obj1.translateY = obj3.withTiming(num, closure_20);
+                  items = [];
+                  items[0] = obj1;
+                  size.transform = items;
+                  return size;
+                }
+              }
+              const obj2 = { reveal, controlHeightWithOffset: sum, sheetHeight: bound, isLandscapeMode: tmp7, safeAreaRight: right, sheetWidth: tmp8, withTiming: reveal(right[20]).withTiming, TIMING_CONFIG: obj5 };
+              X.__closure = obj2;
+              X.__workletHash = 1100882862174;
+              X.__initData = __initData12;
+              const animatedStyle = reveal(right[15]).useAnimatedStyle(X);
+              if (cResult[11] !== positionY) {
+                const fn2 = function $() {
+                  const result = first.set(timing.withTiming(0, obj6));
+                };
+                cResult[11] = positionY;
+                cResult[12] = fn2;
+                let tmp36 = fn2;
+              } else {
+                tmp36 = cResult[12];
+              }
+              if (cResult[13] === tmp7) {
+                if (cResult[14] === positionY) {
+                  let tmp37 = cResult[15];
+                }
+                const effect = width.useEffect(tmp36, tmp37);
+                if (cResult[16] === positionY) {
+                  if (cResult[17] === reveal) {
+                    let tmp39 = cResult[18];
+                    let tmp40 = cResult[19];
+                  }
+                  const effect1 = obj7.useEffect(tmp39, tmp40);
+                  if (cResult[20] !== positionY) {
+                    function ee() {
+                      function handleSelectActivity() {
+                        const result = positionY.set(reveal(right[20]).withTiming(0, obj6));
+                      }
+                      let ComponentDispatch = reveal(right[25]).ComponentDispatch;
+                      const subscription = ComponentDispatch.subscribe(constants.SELECT_ACTIVITY, handleSelectActivity);
+                      return () => {
+                        const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
+                        ComponentDispatch.unsubscribe(__initData.SELECT_ACTIVITY, handleSelectActivity);
+                      };
+                    }
+                    let items = [positionY];
+                    class K {
+                      constructor() {
+                        if (reveal) {
+                          tmp = closure_8;
+                          num = 0;
+                          result = closure_8.set(0);
+                        }
+                        return;
+                      }
+                    }
+                    cResult[21] = items;
+                    cResult[22] = ee;
+                    let tmp43 = ee;
+                    let tmp42 = items;
+                  } else {
+                    tmp42 = cResult[21];
+                    tmp43 = cResult[22];
+                  }
+                  const effect2 = obj7.useEffect(tmp43, tmp42);
+                  class K {
+                    constructor() {
+                      if (reveal) {
+                        tmp = closure_8;
+                        num = 0;
+                        result = closure_8.set(0);
+                      }
+                      return;
+                    }
+                  }
+                  function le() {
+                    const obj = { height: bound, transform: null };
+                    const items = [{ translateY: diff + first.get() }];
+                    obj.transform = items;
+                    return obj;
+                  }
+                  const obj3 = { sheetHeight: bound, offsetY: diff, positionY };
+                  le.__closure = obj3;
+                  class X {
+                    constructor() {
+                      num = 0;
+                      if (!reveal) {
+                        num = closure_6;
+                      }
+                      size = { position: "absolute", height: closure_5, overflow: "hidden", bottom: null, right: null, borderRadius: null, width: null, transform: null };
+                      tmp = closure_3;
+                      num2 = 0;
+                      if (closure_3) {
+                        num2 = 16;
+                      }
+                      size.bottom = num2;
+                      num3 = 0;
+                      if (tmp) {
+                        tmp2 = right;
+                        num4 = 16;
+                        num3 = 16 + right;
+                      }
+                      size.right = num3;
+                      num5 = 0;
+                      if (tmp) {
+                        num5 = 8;
+                      }
+                      size.borderRadius = num5;
+                      size.width = closure_4;
+                      obj1 = { translateY: null };
+                      obj3 = closure_0(closure_2[20]);
+                      obj1.translateY = obj3.withTiming(num, closure_20);
+                      items = [];
+                      items[0] = obj1;
+                      size.transform = items;
+                      return size;
+                    }
+                  }
+                  le.__initData = __initData13;
+                  const animatedStyle1 = obj8.useAnimatedStyle(le);
+                  if (cResult[23] !== tmp31) {
+                    function ce() {
+                      let ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
+                      const subscription = ComponentDispatch.subscribe(__initData.TOGGLE_CALL_CONTROL_DRAWER, closure_9);
+                      return () => {
+                        const ComponentDispatch = reveal(right[25]).ComponentDispatch;
+                        ComponentDispatch.unsubscribe(constants.TOGGLE_CALL_CONTROL_DRAWER, closure_1_9);
+                      };
+                    }
+                    const items1 = [tmp31];
+                    class K {
+                      constructor() {
+                        if (reveal) {
+                          tmp = closure_8;
+                          num = 0;
+                          result = closure_8.set(0);
+                        }
+                        return;
+                      }
+                    }
+                    cResult[24] = ce;
+                    cResult[25] = items1;
+                    let tmp48 = items1;
+                    let tmp47 = ce;
+                  } else {
+                    tmp47 = cResult[24];
+                    tmp48 = cResult[25];
+                  }
+                  const effect3 = obj7.useEffect(tmp47, tmp48);
+                  const theme = reveal(right[26]).useThemeContext().theme;
+                  if (cResult[26] === animatedStyle1) {
+                    if (cResult[27] === tmp4.bottomDrawerContainer) {
+                      let tmp50 = cResult[28];
+                    }
+                    if (cResult[29] === tmp4.visualEffectViewBackground) {
+                      if (cResult[30] === theme) {
+                        let tmp51 = cResult[31];
+                      }
+                      if (cResult[32] === tmp4.visualEffectView) {
+                        if (cResult[33] === tmp51) {
+                          let tmp54 = cResult[34];
+                        }
+                        if (cResult[35] === tmp54) {
+                          if (cResult[36] === theme) {
+                            let tmp55 = cResult[37];
+                          }
+                          if (cResult[38] === aboveActionBar) {
+                            if (cResult[39] === tmp32) {
+                              if (cResult[40] === diff) {
+                                if (cResult[41] === positionY) {
+                                  if (cResult[42] === tmp31) {
+                                    let tmp58 = cResult[43];
+                                  }
+                                  if (cResult[44] === diff2) {
+                                    if (cResult[45] === expandedControls) {
+                                      if (cResult[46] === positionY) {
+                                        let tmp63 = cResult[47];
+                                      }
+                                      if (cResult[48] === children) {
+                                        if (cResult[49] === tmp50) {
+                                          if (cResult[50] === tmp55) {
+                                            if (cResult[51] === tmp58) {
+                                              if (cResult[52] === tmp63) {
+                                                let tmp68 = cResult[53];
+                                              }
+                                              if (cResult[54] === tmp30) {
+                                                if (cResult[57] === animatedStyle) {
+                                                  if (cResult[58] === tmp71) {
+                                                    let tmp74 = cResult[59];
+                                                  }
+                                                  return tmp74;
+                                                }
+                                                const obj4 = { style: null, pointerEvents: "box-none", children: null };
+                                                class K {
+                                                  constructor() {
+                                                    if (reveal) {
+                                                      tmp = closure_8;
+                                                      num = 0;
+                                                      result = closure_8.set(0);
+                                                    }
+                                                    return;
+                                                  }
+                                                }
+                                                obj4.children = tmp71;
+                                                cResult[57] = animatedStyle;
+                                                cResult[58] = tmp71;
+                                                class X {
+                                                  constructor() {
+                                                    num = 0;
+                                                    if (!reveal) {
+                                                      num = closure_6;
+                                                    }
+                                                    size = { position: "absolute", height: closure_5, overflow: "hidden", bottom: null, right: null, borderRadius: null, width: null, transform: null };
+                                                    tmp = closure_3;
+                                                    num2 = 0;
+                                                    if (closure_3) {
+                                                      num2 = 16;
+                                                    }
+                                                    size.bottom = num2;
+                                                    num3 = 0;
+                                                    if (tmp) {
+                                                      tmp2 = right;
+                                                      num4 = 16;
+                                                      num3 = 16 + right;
+                                                    }
+                                                    size.right = num3;
+                                                    num5 = 0;
+                                                    if (tmp) {
+                                                      num5 = 8;
+                                                    }
+                                                    size.borderRadius = num5;
+                                                    size.width = closure_4;
+                                                    obj1 = { translateY: null };
+                                                    obj3 = closure_0(closure_2[20]);
+                                                    obj1.translateY = obj3.withTiming(num, closure_20);
+                                                    items = [];
+                                                    items[0] = obj1;
+                                                    size.transform = items;
+                                                    return size;
+                                                  }
+                                                }
+                                                tmp74 = closure_13(onDrawerClose(right[15]).View, obj4);
+                                                const tmp76 = closure_13(onDrawerClose(right[15]).View, obj4);
+                                              }
+                                              obj5 = { gesture: null, children: null };
+                                              class K {
+                                                constructor() {
+                                                  if (reveal) {
+                                                    tmp = closure_8;
+                                                    num = 0;
+                                                    result = closure_8.set(0);
+                                                  }
+                                                  return;
+                                                }
+                                              }
+                                              obj5.children = tmp68;
+                                              cResult[54] = tmp30;
+                                              cResult[55] = tmp68;
+                                              cResult[56] = closure_13(reveal(right[21]).GestureDetector, obj5);
+                                              class X {
+                                                constructor() {
+                                                  num = 0;
+                                                  if (!reveal) {
+                                                    num = closure_6;
+                                                  }
+                                                  size = { position: "absolute", height: closure_5, overflow: "hidden", bottom: null, right: null, borderRadius: null, width: null, transform: null };
+                                                  tmp = closure_3;
+                                                  num2 = 0;
+                                                  if (closure_3) {
+                                                    num2 = 16;
+                                                  }
+                                                  size.bottom = num2;
+                                                  num3 = 0;
+                                                  if (tmp) {
+                                                    tmp2 = right;
+                                                    num4 = 16;
+                                                    num3 = 16 + right;
+                                                  }
+                                                  size.right = num3;
+                                                  num5 = 0;
+                                                  if (tmp) {
+                                                    num5 = 8;
+                                                  }
+                                                  size.borderRadius = num5;
+                                                  size.width = closure_4;
+                                                  obj1 = { translateY: null };
+                                                  obj3 = closure_0(closure_2[20]);
+                                                  obj1.translateY = obj3.withTiming(num, closure_20);
+                                                  items = [];
+                                                  items[0] = obj1;
+                                                  size.transform = items;
+                                                  return size;
+                                                }
+                                              }
+                                              const tmp73 = closure_13(reveal(right[21]).GestureDetector, obj5);
+                                            }
+                                          }
+                                        }
+                                      }
+                                      obj6 = { style: null, children: null };
+                                      class K {
+                                        constructor() {
+                                          if (reveal) {
+                                            tmp = closure_8;
+                                            num = 0;
+                                            result = closure_8.set(0);
+                                          }
+                                          return;
+                                        }
+                                      }
+                                      const items2 = [tmp55, tmp58, children, tmp63];
+                                      obj6.children = items2;
+                                      const tmp70 = closure_14(onDrawerClose(right[15]).View, obj6);
+                                      class X {
+                                        constructor() {
+                                          num = 0;
+                                          if (!reveal) {
+                                            num = closure_6;
+                                          }
+                                          size = { position: "absolute", height: closure_5, overflow: "hidden", bottom: null, right: null, borderRadius: null, width: null, transform: null };
+                                          tmp = closure_3;
+                                          num2 = 0;
+                                          if (closure_3) {
+                                            num2 = 16;
+                                          }
+                                          size.bottom = num2;
+                                          num3 = 0;
+                                          if (tmp) {
+                                            tmp2 = right;
+                                            num4 = 16;
+                                            num3 = 16 + right;
+                                          }
+                                          size.right = num3;
+                                          num5 = 0;
+                                          if (tmp) {
+                                            num5 = 8;
+                                          }
+                                          size.borderRadius = num5;
+                                          size.width = closure_4;
+                                          obj1 = { translateY: null };
+                                          obj3 = closure_0(closure_2[20]);
+                                          obj1.translateY = obj3.withTiming(num, closure_20);
+                                          items = [];
+                                          items[0] = obj1;
+                                          size.transform = items;
+                                          return size;
+                                        }
+                                      }
+                                      cResult[48] = children;
+                                      cResult[49] = tmp50;
+                                      cResult[50] = tmp55;
+                                      cResult[51] = tmp58;
+                                      cResult[52] = tmp63;
+                                      cResult[53] = tmp70;
+                                      tmp68 = tmp70;
+                                    }
+                                  }
+                                  class K {
+                                    constructor() {
+                                      if (reveal) {
+                                        tmp = closure_8;
+                                        num = 0;
+                                        result = closure_8.set(0);
+                                      }
+                                      return;
+                                    }
+                                  }
+                                  tmp66[0] = expandedControls;
+                                  tmp66[1] = diff2;
+                                  tmp66[2] = positionY;
+                                  const tmp67 = closure_13(closure_24, tmp66);
+                                  cResult[44] = diff2;
+                                  class X {
+                                    constructor() {
+                                      num = 0;
+                                      if (!reveal) {
+                                        num = closure_6;
+                                      }
+                                      size = { position: "absolute", height: closure_5, overflow: "hidden", bottom: null, right: null, borderRadius: null, width: null, transform: null };
+                                      tmp = closure_3;
+                                      num2 = 0;
+                                      if (closure_3) {
+                                        num2 = 16;
+                                      }
+                                      size.bottom = num2;
+                                      num3 = 0;
+                                      if (tmp) {
+                                        tmp2 = right;
+                                        num4 = 16;
+                                        num3 = 16 + right;
+                                      }
+                                      size.right = num3;
+                                      num5 = 0;
+                                      if (tmp) {
+                                        num5 = 8;
+                                      }
+                                      size.borderRadius = num5;
+                                      size.width = closure_4;
+                                      obj1 = { translateY: null };
+                                      obj3 = closure_0(closure_2[20]);
+                                      obj1.translateY = obj3.withTiming(num, closure_20);
+                                      items = [];
+                                      items[0] = obj1;
+                                      size.transform = items;
+                                      return size;
+                                    }
+                                  }
+                                  cResult[46] = positionY;
+                                  cResult[47] = tmp67;
+                                  tmp63 = tmp67;
+                                }
+                              }
+                            }
+                          }
+                          class K {
+                            constructor() {
+                              if (reveal) {
+                                tmp = closure_8;
+                                num = 0;
+                                result = closure_8.set(0);
+                              }
+                              return;
+                            }
+                          }
+                          tmp61[0] = tmp31;
+                          tmp61[1] = aboveActionBar;
+                          tmp61[2] = positionY;
+                          tmp61[3] = diff;
+                          tmp61[4] = tmp32;
+                          const tmp62 = closure_13(closure_30, tmp61);
+                          class X {
+                            constructor() {
+                              num = 0;
+                              if (!reveal) {
+                                num = closure_6;
+                              }
+                              size = { position: "absolute", height: closure_5, overflow: "hidden", bottom: null, right: null, borderRadius: null, width: null, transform: null };
+                              tmp = closure_3;
+                              num2 = 0;
+                              if (closure_3) {
+                                num2 = 16;
+                              }
+                              size.bottom = num2;
+                              num3 = 0;
+                              if (tmp) {
+                                tmp2 = right;
+                                num4 = 16;
+                                num3 = 16 + right;
+                              }
+                              size.right = num3;
+                              num5 = 0;
+                              if (tmp) {
+                                num5 = 8;
+                              }
+                              size.borderRadius = num5;
+                              size.width = closure_4;
+                              obj1 = { translateY: null };
+                              obj3 = closure_0(closure_2[20]);
+                              obj1.translateY = obj3.withTiming(num, closure_20);
+                              items = [];
+                              items[0] = obj1;
+                              size.transform = items;
+                              return size;
+                            }
+                          }
+                          cResult[39] = tmp32;
+                          cResult[40] = diff;
+                          cResult[41] = positionY;
+                          cResult[42] = tmp31;
+                          cResult[43] = tmp62;
+                          tmp58 = tmp62;
+                        }
+                        const obj9 = { blurTheme: null, style: null };
+                        class K {
+                          constructor() {
+                            if (reveal) {
+                              tmp = closure_8;
+                              num = 0;
+                              result = closure_8.set(0);
+                            }
+                            return;
+                          }
+                        }
+                        obj9.style = tmp54;
+                        cResult[35] = tmp54;
+                        cResult[36] = theme;
+                        class X {
+                          constructor() {
+                            num = 0;
+                            if (!reveal) {
+                              num = closure_6;
+                            }
+                            size = { position: "absolute", height: closure_5, overflow: "hidden", bottom: null, right: null, borderRadius: null, width: null, transform: null };
+                            tmp = closure_3;
+                            num2 = 0;
+                            if (closure_3) {
+                              num2 = 16;
+                            }
+                            size.bottom = num2;
+                            num3 = 0;
+                            if (tmp) {
+                              tmp2 = right;
+                              num4 = 16;
+                              num3 = 16 + right;
+                            }
+                            size.right = num3;
+                            num5 = 0;
+                            if (tmp) {
+                              num5 = 8;
+                            }
+                            size.borderRadius = num5;
+                            size.width = closure_4;
+                            obj1 = { translateY: null };
+                            obj3 = closure_0(closure_2[20]);
+                            obj1.translateY = obj3.withTiming(num, closure_20);
+                            items = [];
+                            items[0] = obj1;
+                            size.transform = items;
+                            return size;
+                          }
+                        }
+                        tmp55 = closure_13(onDrawerClose(right[28]), obj9);
+                        const tmp57 = closure_13(onDrawerClose(right[28]), obj9);
+                      }
+                      const items3 = [tmp4.visualEffectView, ];
+                      class K {
+                        constructor() {
+                          if (reveal) {
+                            tmp = closure_8;
+                            num = 0;
+                            result = closure_8.set(0);
+                          }
+                          return;
+                        }
+                      }
+                      cResult[32] = tmp4.visualEffectView;
+                      cResult[33] = tmp51;
+                      cResult[34] = items3;
+                      tmp54 = items3;
+                    }
+                    reveal(right[27]);
+                    class K {
+                      constructor() {
+                        if (reveal) {
+                          tmp = closure_8;
+                          num = 0;
+                          result = closure_8.set(0);
+                        }
+                        return;
+                      }
+                    }
+                    cResult[29] = tmp4.visualEffectViewBackground;
+                    cResult[30] = theme;
+                    cResult[31] = null;
+                    tmp51 = tmp53;
+                  }
+                  const items4 = [tmp4.bottomDrawerContainer, animatedStyle1];
+                  cResult[26] = animatedStyle1;
+                  cResult[27] = tmp4.bottomDrawerContainer;
+                  cResult[28] = items4;
+                  tmp50 = items4;
+                  const tmpResult7 = reveal(right[26]);
+                }
+                class K {
+                  constructor() {
+                    if (reveal) {
+                      tmp = closure_8;
+                      num = 0;
+                      result = closure_8.set(0);
+                    }
+                    return;
+                  }
+                }
+                const items5 = [reveal, positionY];
+                cResult[16] = positionY;
+                cResult[17] = reveal;
+                class X {
+                  constructor() {
+                    num = 0;
+                    if (!reveal) {
+                      num = closure_6;
+                    }
+                    size = { position: "absolute", height: closure_5, overflow: "hidden", bottom: null, right: null, borderRadius: null, width: null, transform: null };
+                    tmp = closure_3;
+                    num2 = 0;
+                    if (closure_3) {
+                      num2 = 16;
+                    }
+                    size.bottom = num2;
+                    num3 = 0;
+                    if (tmp) {
+                      tmp2 = right;
+                      num4 = 16;
+                      num3 = 16 + right;
+                    }
+                    size.right = num3;
+                    num5 = 0;
+                    if (tmp) {
+                      num5 = 8;
+                    }
+                    size.borderRadius = num5;
+                    size.width = closure_4;
+                    obj1 = { translateY: null };
+                    obj3 = closure_0(closure_2[20]);
+                    obj1.translateY = obj3.withTiming(num, closure_20);
+                    items = [];
+                    items[0] = obj1;
+                    size.transform = items;
+                    return size;
+                  }
+                }
+                cResult[19] = items5;
+                tmp40 = items5;
+                tmp39 = K;
+              }
+              const items6 = [tmp7, positionY];
+              cResult[13] = tmp7;
+              cResult[14] = positionY;
+              cResult[15] = items6;
+              tmp37 = items6;
+              const tmpResult6 = reveal(right[15]);
+            }
+          }
+        }
+      }
+    }
+    const obj10 = { controlMaxHeight: diff, isLandscapeMode: null, portraitOffsetY: sum3, landscapeOffsetY: tmp21, onClose: tmp24, onOpen: onDrawerOpen };
+    cResult[4] = tmp7;
+    cResult[5] = diff;
+    cResult[6] = onDrawerOpen;
+    cResult[7] = sum3;
+    cResult[8] = tmp21;
+    cResult[9] = tmp24;
+    cResult[10] = obj10;
+    tmp25 = obj10;
+    tmpResult5 = reveal(right[7]);
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+  let obj = reveal(right[13]);
+}) : ((onDrawerClose) => {
+  ({ actionBarControlsHeight, reveal } = onDrawerClose);
+  onDrawerClose = onDrawerClose.onDrawerClose;
+  right = undefined;
+  c6 = undefined;
+  c7 = undefined;
+  let positionY;
+  closure_9 = undefined;
+  ({ children, expandedControls, aboveActionBar, onDrawerOpen } = onDrawerClose);
+  let tmp = closure_19();
+  const tmp4 = onDrawerClose(right[14])();
+  ({ bottom, right } = tmp4);
+  const top = tmp4.top;
+  let size = onDrawerClose(right[23])();
+  height = size.height;
+  _slicedToArray = tmp5;
+  const tmp6 = onDrawerClose(right[24])();
+  width = tmp6;
+  let bound = height;
+  if (size.width > closure_10) {
+    const _Math = Math;
+    bound = Math.min(closure_11, height);
+  }
+  let sum = actionBarControlsHeight;
+  if (size.width <= closure_10) {
+    sum = actionBarControlsHeight + bottom;
+  }
+  c6 = sum;
+  const diff = bound - sum;
+  c7 = diff;
+  const diff1 = bound - sum;
+  if (size.width > closure_10) {
+    if (typeof EXTENDED_CONTROLS_LANDSCAPE_OFFSET_Y === "function") {
+      let diff2 = diff1 - (top + 54 + 12);
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  } else if (typeof EXTENDED_CONTROLS_OFFSET_Y === "function") {
+    const sum1 = top + 54;
+    let num2 = 16;
+    if (obj.isIOS()) {
+      num2 = 48;
+    }
+    diff2 = diff1 - (sum1 + num2);
+    obj = reveal(tmp3[7]);
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+  const obj2 = { controlMaxHeight: diff, isLandscapeMode: size.width > closure_10, portraitOffsetY: null, landscapeOffsetY: null, onClose: null, onOpen: null };
+  if (typeof EXTENDED_CONTROLS_OFFSET_Y === "function") {
+    const sum2 = top + 54;
+    let num6 = 16;
+    if (obj3.isIOS()) {
+      num6 = 48;
+    }
+    obj2.portraitOffsetY = sum2 + num6 + bottom;
+    if (typeof EXTENDED_CONTROLS_LANDSCAPE_OFFSET_Y === "function") {
+      obj2.landscapeOffsetY = top + 54 + 12;
+      obj2.onClose = function onClose() {
+        let tmp;
+        if (onDrawerClose != null) {
+          tmp = onDrawerClose();
+        }
+        return tmp;
+      };
+      obj2.onOpen = onDrawerOpen;
+      const tmp23 = _slicedToArray(tmp18(obj2), 4);
+      positionY = tmp23[0];
+      closure_9 = tmp25;
+      const fn = function p() {
+        let num = 0;
+        if (!reveal) {
+          num = c6;
+        }
+        const size = { position: "absolute", height: bound, overflow: "hidden", bottom: null, right: null, borderRadius: null, width: null, transform: null };
+        let num2 = 0;
+        if (closure_3) {
+          num2 = 16;
+        }
+        size.bottom = num2;
+        let num3 = 0;
+        if (closure_3) {
+          num3 = 16 + right;
+        }
+        size.right = num3;
+        let num5 = 0;
+        if (closure_3) {
+          num5 = 8;
+        }
+        size.borderRadius = num5;
+        size.width = width;
+        const obj = { translateY: timing.withTiming(num, obj5) };
+        const items = [obj];
+        size.transform = items;
+        return size;
+      };
+      const obj4 = { reveal, controlHeightWithOffset: sum, sheetHeight: bound, isLandscapeMode: tmp5, safeAreaRight: right, sheetWidth: tmp6, withTiming: reveal(tmp3[20]).withTiming, TIMING_CONFIG: obj5 };
+      fn.__closure = obj4;
+      fn.__workletHash = 15679717820444;
+      fn.__initData = __initData14;
+      let items = [tmp5, positionY];
+      const animatedStyle = reveal(tmp3[15]).useAnimatedStyle(fn);
+      const effect = width.useEffect(() => {
+        const result = first.set(timing.withTiming(0, obj6));
+      }, items);
+      const items1 = [reveal, positionY];
+      const effect1 = width.useEffect(() => {
+        if (reveal) {
+          const result = first.set(0);
+        }
+      }, items1);
+      const items2 = [positionY];
+      const effect2 = width.useEffect(() => {
+        function handleSelectActivity() {
+          const result = positionY.set(reveal(right[20]).withTiming(0, obj6));
+        }
+        let ComponentDispatch = reveal(right[25]).ComponentDispatch;
+        const subscription = ComponentDispatch.subscribe(constants.SELECT_ACTIVITY, handleSelectActivity);
+        return () => {
+          const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
+          ComponentDispatch.unsubscribe(__initData.SELECT_ACTIVITY, handleSelectActivity);
+        };
+      }, items2);
+      const tmp20Result = reveal(tmp3[15]);
+      class U {
+        constructor() {
+          obj = { height: closure_5, transform: null };
+          obj1 = { translateY: closure_7 + closure_8.get() };
+          items = [];
+          items[0] = obj1;
+          obj.transform = items;
+          return obj;
+        }
+      }
+      obj5 = { sheetHeight: bound, offsetY: diff, positionY };
+      U.__closure = obj5;
+      U.__workletHash = 12567422561237;
+      U.__initData = __initData15;
+      const items3 = [tmp23[2]];
+      const animatedStyle1 = reveal(tmp3[15]).useAnimatedStyle(U);
+      const effect3 = width.useEffect(() => {
+        let ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
+        const subscription = ComponentDispatch.subscribe(__initData.TOGGLE_CALL_CONTROL_DRAWER, closure_9);
+        return () => {
+          const ComponentDispatch = reveal(right[25]).ComponentDispatch;
+          ComponentDispatch.unsubscribe(constants.TOGGLE_CALL_CONTROL_DRAWER, closure_1_9);
+        };
+      }, items3);
+      const tmp20Result4 = reveal(tmp3[15]);
+      const theme = reveal(tmp3[26]).useThemeContext().theme;
+      obj6 = { style: animatedStyle, pointerEvents: "box-none", children: null };
+      const obj7 = { gesture: tmp23[1], children: null };
+      const obj8 = { style: null, children: null };
+      const items4 = [tmp.bottomDrawerContainer, animatedStyle1];
+      obj8.style = items4;
+      const obj9 = { blurTheme: theme, style: null };
+      const items5 = [tmp.visualEffectView, ];
+      const tmp20Result5 = reveal(tmp3[26]);
+      const tmp2Result = tmp2(tmp3[28]);
+      let prop = null;
+      if (tmp20Result6.isThemeLight(theme)) {
+        prop = tmp.visualEffectViewBackground;
+      }
+      items5[1] = prop;
+      obj9.style = items5;
+      const items6 = [closure_13(tmp2Result, obj9), , , ];
+      const obj10 = { onPressHeader: tmp23[2], aboveActionBar, positionY, offsetY: diff, isExpanded: tmp23[3] };
+      items6[1] = closure_13(closure_30, obj10);
+      items6[2] = children;
+      const obj11 = { expandedControls, availableHeight: diff2, positionY };
+      items6[3] = closure_13(closure_24, obj11);
+      obj8.children = items6;
+      obj7.children = closure_14(tmp2(tmp3[15]).View, obj8);
+      obj6.children = closure_13(reveal(tmp3[21]).GestureDetector, obj7);
+      return closure_13(tmp2(tmp3[15]).View, obj6);
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+    obj3 = reveal(tmp3[7]);
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+});
+let closure_44 = tmp10;
+ReactCompilerGating = fn(558);
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/video_calls/native/components/FocusedControlsBottomControls.tsx");
 
-export default function FocusedControlsBottomControls(omitPTT) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(16);
+  ({ children, actionBar, expandedControls, reveal, header, onDrawerClose, omitPTT, onDrawerOpen } = arg0);
+  const tmp5 = closure_19();
+  [tmp7, require] = noop.useState(0);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const fn = function l(nativeEvent) {
+      _require(nativeEvent.nativeEvent.layout.height);
+    };
+    cResult[0] = fn;
+    let first = fn;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] === (undefined !== omitPTT && omitPTT)) {
+    if (cResult[2] === tmp5) {
+      let tmp9 = cResult[3];
+    }
+    if (cResult[4] === actionBar) {
+      if (cResult[5] === header) {
+        if (cResult[6] === tmp9) {
+          let tmp16 = cResult[7];
+        }
+        if (cResult[8] === tmp7) {
+          if (cResult[9] === children) {
+            if (cResult[10] === expandedControls) {
+              if (cResult[11] === onDrawerClose) {
+                if (cResult[12] === onDrawerOpen) {
+                  if (cResult[13] === reveal) {
+                    if (cResult[14] === tmp16) {
+                      let tmp20 = cResult[15];
+                    }
+                    return tmp20;
+                  }
+                }
+              }
+            }
+          }
+        }
+        const obj2 = { aboveActionBar: children, actionBarControlsHeight: tmp7, expandedControls, reveal, onDrawerClose, onDrawerOpen, children: tmp16 };
+        const tmp23 = __initData2(closure_44, obj2);
+        cResult[8] = tmp7;
+        cResult[9] = children;
+        cResult[10] = expandedControls;
+        cResult[11] = onDrawerClose;
+        cResult[12] = onDrawerOpen;
+        cResult[13] = reveal;
+        cResult[14] = tmp16;
+        cResult[15] = tmp23;
+        tmp20 = tmp23;
+      }
+    }
+    const obj3 = { onLayout: first, children: null };
+    const items = [header, actionBar, tmp9];
+    obj3.children = items;
+    const tmp19 = state(height, obj3);
+    cResult[4] = actionBar;
+    cResult[5] = header;
+    cResult[6] = tmp9;
+    cResult[7] = tmp19;
+    tmp16 = tmp19;
+  }
+  let tmp10 = null;
+  if (!(undefined !== omitPTT && omitPTT)) {
+    const obj4 = { look: CallPTTButton.CallPTTButtonLooks.BLUR, style: tmp5.ptbButton, sendCallback, stopCallback };
+    tmp10 = __initData2(CallPTTButtonDefault, obj4);
+  }
+  cResult[1] = undefined !== omitPTT && omitPTT;
+  cResult[2] = tmp5;
+  cResult[3] = tmp10;
+  tmp9 = tmp10;
+  const tmp6 = _slicedToArray(noop.useState(0), 2);
+}) : ((omitPTT) => {
   let flag = omitPTT.omitPTT;
   ({ children, actionBar, expandedControls, reveal, header, onDrawerClose } = omitPTT);
   if (flag === undefined) {
     flag = false;
   }
   c0 = undefined;
-  const tmp = closure_18();
+  const tmp = closure_19();
   [tmp3, c0] = noop.useState(0);
   const obj = { aboveActionBar: children, actionBarControlsHeight: tmp3, expandedControls, reveal, onDrawerClose, onDrawerOpen: omitPTT.onDrawerOpen, children: null };
   const obj2 = {
@@ -699,12 +1770,12 @@ export default function FocusedControlsBottomControls(omitPTT) {
   let tmp4Result = null;
   if (!flag) {
     const obj3 = { look: CallPTTButton.CallPTTButtonLooks.BLUR, style: tmp.ptbButton, sendCallback, stopCallback };
-    tmp4Result = map1(CallPTTButtonDefault, obj3);
+    tmp4Result = __initData2(CallPTTButtonDefault, obj3);
   }
   items[2] = tmp4Result;
   obj2.children = items;
-  obj.children = closure_1_14(hasOwnProperty, obj2);
-  return map1(FocusedControlsBottomDrawer, obj);
-};
+  obj.children = state(height, obj2);
+  return __initData2(closure_44, obj);
+});
 export const FOCUSED_CONTROLS_HEADER_HEIGHT = 54;
-export { FocusedControlsBottomDrawer };
+export const FocusedControlsBottomDrawer = tmp10;

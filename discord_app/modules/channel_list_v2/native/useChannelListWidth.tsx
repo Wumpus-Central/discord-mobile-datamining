@@ -1,16 +1,17 @@
-// === Module 15868: useChannelListWidth ===
+// === Module 15943: useChannelListWidth ===
 
-// Module 15868 (useChannelListWidth)
-import nativeDefault from "native" /* 576 */;
-import ConstantsIOS from "ConstantsIOS" /* 1094 */;
-import useToken from "useToken" /* 4560 */;
-import useChatLayoutDefault from "useChatLayout" /* 4724 */;
-import useDrawerWidth from "useDrawerWidth" /* 11230 */;
+// Module 15943 (useChannelListWidth)
+import nativeDefault from "native" /* 587 */;
+import ConstantsIOS from "ConstantsIOS" /* 1105 */;
+import useToken from "useToken" /* 4580 */;
+import useChatLayoutDefault from "useChatLayout" /* 4739 */;
+import useDrawerWidth from "useDrawerWidth" /* 11144 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/channel_list_v2/native/useChannelListWidth.tsx");
 
-export default function useChannelListWidth() {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const drawerWidth = useDrawerWidth.useDrawerWidth();
   const token = useToken.useToken(nativeDefault.modules.mobile.CHANNEL_DRAWER_SPACING);
   let num = 0;
@@ -19,4 +20,13 @@ export default function useChannelListWidth() {
     num = token;
   }
   return diff - num;
-};
+}) : (() => {
+  const drawerWidth = useDrawerWidth.useDrawerWidth();
+  const token = useToken.useToken(nativeDefault.modules.mobile.CHANNEL_DRAWER_SPACING);
+  let num = 0;
+  const diff = drawerWidth - ConstantsIOS.DM_WIDTH;
+  if (useChatLayoutDefault().isChatBesideChannelList) {
+    num = token;
+  }
+  return diff - num;
+});

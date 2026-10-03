@@ -1,20 +1,20 @@
-// === Module 14274: subscriptionHelpers ===
+// === Module 14342: subscriptionHelpers ===
 
-// Module 14274 (subscriptionHelpers)
-import useIsScreenLandscape from "useIsScreenLandscape" /* 5624 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7310 */;
-import useThermalState from "useThermalState" /* 8973 */;
-import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 14234 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2043 */;
-import FramesStore from "FramesStore" /* 8690 */;
-import QuestStore from "QuestStore" /* 7289 */;
+// Module 14342 (subscriptionHelpers)
+import useIsScreenLandscape from "useIsScreenLandscape" /* 5912 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7208 */;
+import useThermalState from "useThermalState" /* 8992 */;
+import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 14302 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
+import FramesStore from "FramesStore" /* 8703 */;
+import QuestStore from "QuestStore" /* 7187 */;
 
 require = fn;
-const TransportTypes = fn(5270).TransportTypes;
-const RPCEvents = fn(1074).RPCEvents;
-const Constants = fn(2005);
+const TransportTypes = fn(5316).TransportTypes;
+const RPCEvents = fn(1085).RPCEvents;
+const Constants = fn(2011);
 ({ ActivityLayoutMode: closure_7, ActivityScreenOrientation: closure_8 } = Constants);
-const asLaunched = fn(8691).asLaunched;
+const asLaunched = fn(8704).asLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/server/events/subscriptionHelpers.tsx");
 
@@ -72,7 +72,7 @@ export const getInitialSubscriptionPayload = function getInitialSubscriptionPayl
     }
     return tmp23;
   } else if (RPCEvents.ORIENTATION_UPDATE === arg1) {
-    const obj9 = { screen_orientation: useIsScreenLandscape.getIsScreenLandscape() ? React6.LANDSCAPE : React6.PORTRAIT };
+    const obj9 = { screen_orientation: useIsScreenLandscape.getIsScreenLandscape() ? constants.LANDSCAPE : constants.PORTRAIT };
     return obj9;
   } else if (RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE === arg1) {
     return activityInstanceConnectedParticipants.activityInstanceConnectedParticipants();

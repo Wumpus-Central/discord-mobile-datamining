@@ -1,16 +1,16 @@
-// === Module 12817: getActivityJoinability ===
+// === Module 12857: getActivityJoinability ===
 
-// Module 12817 (getActivityJoinability)
-import PlatformUtils from "PlatformUtils" /* 1364 */;
-import hasFlagDefault from "hasFlag" /* 6918 */;
-import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 8993 */;
-import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 9018 */;
-import getPartySize from "getPartySize" /* 11468 */;
-import isPartyFull from "isPartyFull" /* 11470 */;
-import getIsInParty from "getIsInParty" /* 11471 */;
-import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11474 */;
-import isActivityJoinableOnCurrentPlatformDefault from "isActivityJoinableOnCurrentPlatform" /* 12818 */;
-import Constants from "Constants" /* 1074 */;
+// Module 12857 (getActivityJoinability)
+import PlatformUtils from "PlatformUtils" /* 1369 */;
+import hasFlagDefault from "hasFlag" /* 6816 */;
+import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 9012 */;
+import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 9046 */;
+import getPartySize from "getPartySize" /* 11387 */;
+import isPartyFull from "isPartyFull" /* 11389 */;
+import getIsInParty from "getIsInParty" /* 11390 */;
+import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11393 */;
+import isActivityJoinableOnCurrentPlatformDefault from "isActivityJoinableOnCurrentPlatform" /* 12858 */;
+import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
 ({ ActivityFlags: c3, ChannelTypes: closure_4, GuildFeatures: hasOwnProperty } = Constants);
@@ -78,7 +78,7 @@ export default function getActivityJoinability(arg0) {
                 const type = channel.type;
                 if (constants2.DM !== type) {
                   if (constants2.GROUP_DM !== type) {
-                    const guild = GuildStore.getGuild(channel.getGuildId());
+                    guild = GuildStore.getGuild(channel.getGuildId());
                     if (null != guild) {
                       const features = guild.features;
                       if (!features.has(constants3.COMMUNITY)) {

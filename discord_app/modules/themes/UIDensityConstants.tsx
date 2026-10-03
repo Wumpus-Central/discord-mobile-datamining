@@ -1,7 +1,7 @@
-// === Module 9111: UIDensityConstants ===
+// === Module 9137: UIDensityConstants ===
 
-// Module 9111 (UIDensityConstants)
-import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
+// Module 9137 (UIDensityConstants)
+import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/themes/UIDensityConstants.tsx");

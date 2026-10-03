@@ -1,9 +1,9 @@
-// === Module 9080: WindowVisibilityUtils ===
+// === Module 9111: WindowVisibilityUtils ===
 
-// Module 9080 (WindowVisibilityUtils)
-import AppStateStore from "AppStateStore" /* 1980 */;
+// Module 9111 (WindowVisibilityUtils)
+import AppStateStore from "AppStateStore" /* 1986 */;
 
-const AppStates = fn(1074).AppStates;
+const AppStates = fn(1085).AppStates;
 const size = fn(2);
 const result = size.fileFinishedImporting("lib/WindowVisibilityUtils.native.tsx");
 

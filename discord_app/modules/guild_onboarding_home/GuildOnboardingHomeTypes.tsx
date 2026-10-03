@@ -1,9 +1,9 @@
-// === Module 11978: GuildOnboardingHomeTypes ===
+// === Module 7522: GuildOnboardingHomeTypes ===
 
-// Module 11978 (GuildOnboardingHomeTypes)
-import GlobalUtils from "GlobalUtils" /* 1370 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4503 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
+// Module 7522 (GuildOnboardingHomeTypes)
+import GlobalUtils from "GlobalUtils" /* 1375 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4514 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
 
 require = fn;
 function newMemberActionFromServer(channelId) {
@@ -81,7 +81,7 @@ function isSettingsEmpty(welcomeMessage) {
   }
   return tmp;
 }
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ ChannelTypes: closure_4, Permissions: hasOwnProperty } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/GuildOnboardingHomeTypes.tsx");

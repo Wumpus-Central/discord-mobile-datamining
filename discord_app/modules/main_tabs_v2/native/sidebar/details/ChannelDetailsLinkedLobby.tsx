@@ -1,27 +1,112 @@
-// === Module 16805: ChannelDetailsLinkedLobby ===
+// === Module 16893: ChannelDetailsLinkedLobby ===
 
-// Module 16805 (ChannelDetailsLinkedLobby)
-import nativeDefault from "native" /* 576 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2110 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6775 */;
+// Module 16893 (ChannelDetailsLinkedLobby)
+import c from "c" /* 576 */;
+import nativeDefault from "native" /* 587 */;
+import util from "util" /* 1126 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
+import Text_Text from "Text/Text" /* 4886 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6663 */;
 import noop from "module_19" /* 19 */;
 
-const util = BPDKoA(1115);
-const Text_Text = BPDKoA(4841);
 require = fn;
 const View = fn(17).View;
-const HelpdeskArticles = fn(1074).HelpdeskArticles;
+const HelpdeskArticles = fn(1085).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ Fragment: hasOwnProperty, jsxs: metroRequire, jsx: closure_7 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = { container: { alignItems: "center" }, divider: null };
 let size = { height: 1, width: 48, marginTop: 12, backgroundColor: nativeDefault.colors.BORDER_STRONG };
 obj2.divider = size;
 let closure_8 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsLinkedLobby.tsx");
 
-export default function ChannelDetailsLinkedLobby(channel) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(15);
+  ({ channel, containerStyle } = arg0);
+  const tmp4 = closure_8();
+  const linkedLobby = channel.linkedLobby;
+  let application_id;
+  if (linkedLobby != null) {
+    application_id = linkedLobby.application_id;
+  }
+  const getOrFetchApplication = useGetOrFetchApplications.useGetOrFetchApplication(application_id);
+  if (null == channel.linkedLobby) {
+    return null;
+  } else {
+    if (cResult[0] === containerStyle) {
+      if (cResult[1] === tmp4.container) {
+        let tmp7 = cResult[2];
+      }
+      if (cResult[3] !== getOrFetchApplication) {
+        if (null != getOrFetchApplication) {
+          const intl2 = util.intl;
+          const obj3 = { applicationName: getOrFetchApplication.name };
+          let formatResult = intl2.format(util.t.SgxMJs, obj3);
+        } else {
+          const intl = util.intl;
+          formatResult = intl.string(util.t.yQqVss);
+        }
+        cResult[3] = getOrFetchApplication;
+        cResult[4] = formatResult;
+      } else {
+        const _Symbol = Symbol;
+        if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
+          const intl3 = util.intl;
+          const obj4 = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.LINKED_LOBBIES) };
+          const formatResult1 = intl3.format(util.t.BPDKoA, obj4);
+          cResult[5] = formatResult1;
+          let tmp12 = formatResult1;
+        } else {
+          tmp12 = cResult[5];
+        }
+        if (cResult[6] === cResult[4]) {
+          if (cResult[7] === tmp12) {
+            let tmp16 = cResult[8];
+          }
+          if (cResult[9] !== tmp4.divider) {
+            const obj6 = { style: tmp4.divider };
+            const tmp24 = React5(View, obj6);
+            cResult[9] = tmp4.divider;
+            cResult[10] = tmp24;
+            let tmp21 = tmp24;
+          } else {
+            tmp21 = cResult[10];
+          }
+          if (cResult[11] === tmp7) {
+            if (cResult[12] === tmp16) {
+            }
+          }
+          const obj7 = { style: tmp7, children: null };
+          const items = [tmp16, tmp21];
+          obj7.children = items;
+          const tmp28 = timestampProducer(View, obj7);
+          cResult[11] = tmp7;
+          cResult[12] = tmp16;
+          cResult[13] = tmp21;
+          cResult[14] = tmp28;
+        }
+        const obj8 = { variant: "text-sm/normal", color: "text-default", children: null };
+        const obj9 = { children: null };
+        const items1 = [cResult[4], "  \u2022  ", tmp12];
+        obj9.children = items1;
+        obj8.children = timestampProducer(hasOwnProperty, obj9);
+        const tmp20 = React5(Text_Text.Text, obj8);
+        cResult[6] = cResult[4];
+        cResult[7] = tmp12;
+        cResult[8] = tmp20;
+        tmp16 = tmp20;
+      }
+    }
+    const items2 = [tmp4.container, containerStyle];
+    cResult[0] = containerStyle;
+    cResult[1] = tmp4.container;
+    cResult[2] = items2;
+    tmp7 = items2;
+  }
+}) : ((channel) => {
   channel = channel.channel;
   let divider = closure_8();
   let BPDKoA = require;
@@ -67,4 +152,4 @@ export default function ChannelDetailsLinkedLobby(channel) {
     obj2.children = items2;
     timestampProducer(View, obj2);
   }
-};
+});

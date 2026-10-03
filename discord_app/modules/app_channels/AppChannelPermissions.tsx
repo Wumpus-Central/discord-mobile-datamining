@@ -1,9 +1,9 @@
-// === Module 4505: AppChannelPermissions ===
+// === Module 4516: AppChannelPermissions ===
 
-// Module 4505 (AppChannelPermissions)
-import Constants from "Constants" /* 1074 */;
+// Module 4516 (AppChannelPermissions)
+import Constants from "Constants" /* 1085 */;
 import "BigFlagUtils";
-import BigFlagUtils from "BigFlagUtils" /* 1086 */;
+import BigFlagUtils from "BigFlagUtils" /* 1097 */;
 import size from "module_2" /* 2 */;
 
 const Permissions = Constants.Permissions;

@@ -1,20 +1,20 @@
-// === Module 3648: ? ===
+// === Module 3657: ? ===
 
-// Module 3648
-import AssetJsonUtils from "AssetJsonUtils" /* 1119 */;
-import _mod3649 from "module_3649" /* 3649 */;
-import module_1154_mod from "module_1154" /* 1154 */;
+// Module 3657
+import AssetJsonUtils from "AssetJsonUtils" /* 1130 */;
+import _mod3658 from "module_3658" /* 3658 */;
+import module_1165_mod from "module_1165" /* 1165 */;
 import size from "module_2" /* 2 */;
 
-let module_1154 = module_1154_mod;
-const loader = module_1154.createLoader({
+let module_1165 = module_1165_mod;
+const loader = module_1165.createLoader({
   () => {
-    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3649);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3658);
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");
-let module_1154 = module_1154_mod;
-const messagesProxy = module_1154.makeMessagesProxy(loader);
+let module_1165 = module_1165_mod;
+const messagesProxy = module_1165.makeMessagesProxy(loader);
 const result = size.fileFinishedImporting("modules/spatial_audio/SpatialAudio.messages.js");
 
 export default messagesProxy;

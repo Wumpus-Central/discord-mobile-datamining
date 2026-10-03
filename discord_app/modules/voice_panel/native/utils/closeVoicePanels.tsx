@@ -1,8 +1,8 @@
-// === Module 8953: closeVoicePanels ===
+// === Module 8987: closeVoicePanels ===
 
-// Module 8953 (closeVoicePanels)
-import Constants from "Constants" /* 1074 */;
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
+// Module 8987 (closeVoicePanels)
+import Constants from "Constants" /* 1085 */;
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
 import size from "module_2" /* 2 */;
 
 const ComponentActions = Constants.ComponentActions;

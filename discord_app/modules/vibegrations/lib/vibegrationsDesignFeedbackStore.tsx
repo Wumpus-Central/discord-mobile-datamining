@@ -1,8 +1,10 @@
-// === Module 16464: vibegrationsDesignFeedbackStore ===
+// === Module 16539: vibegrationsDesignFeedbackStore ===
 
-// Module 16464 (vibegrationsDesignFeedbackStore)
-import VibegrationsDesignFeedback from "VibegrationsDesignFeedback" /* 16465 */;
+// Module 16539 (vibegrationsDesignFeedbackStore)
+import VibegrationsDesignFeedback from "VibegrationsDesignFeedback" /* 16540 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 function subscribeVibegrationsDesignFeedback(arg0) {
@@ -16,16 +18,26 @@ let active = Object.freeze({ active: false, annotations: Object.freeze([]), cont
 const map = new Map();
 const set = new Set();
 let c6 = 0;
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/vibegrations/lib/vibegrationsDesignFeedbackStore.tsx");
-
-export const getVibegrationsDesignFeedback = function getVibegrationsDesignFeedback(arg0) {
+const ReactCompilerGating = fn(558);
+let obj = { active: false, annotations: Object.freeze([]), context: null };
+function getVibegrationsDesignFeedback(arg0) {
   value = map.get(arg0);
   if (value == null) {
     value = closure_3;
   }
   return value;
-};
+}
+function canEditVibegrationsDesignAnnotation(authorId, arg1) {
+  let tmp = null != arg1;
+  if (tmp) {
+    tmp = authorId.authorId === arg1;
+  }
+  return tmp;
+}
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/vibegrations/lib/vibegrationsDesignFeedbackStore.tsx");
+
+export { getVibegrationsDesignFeedback };
 export const enterVibegrationsDesignFeedback = function enterVibegrationsDesignFeedback(arg0) {
   value = map.get(arg0);
   if (value == null) {
@@ -177,13 +189,7 @@ export const relocateVibegrationsDesignAnnotations = function relocateVibegratio
     const result = map.set(arg0, obj2);
   }
 };
-export const canEditVibegrationsDesignAnnotation = function canEditVibegrationsDesignAnnotation(authorId, arg1) {
-  let tmp = null != arg1;
-  if (tmp) {
-    tmp = authorId.authorId === arg1;
-  }
-  return tmp;
-};
+export { canEditVibegrationsDesignAnnotation };
 export const updateVibegrationsDesignAnnotation = function updateVibegrationsDesignAnnotation(arg0, arg1, arg2, comment) {
   closure_0 = arg2;
   value = map.get(arg0);
@@ -266,7 +272,29 @@ export const removeVibegrationsDesignAnnotation = function removeVibegrationsDes
   }
 };
 export { subscribeVibegrationsDesignFeedback };
-export const useVibegrationsDesignFeedback = function useVibegrationsDesignFeedback(arg0) {
+export const useVibegrationsDesignFeedback = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  _require = arg0;
+  const cResult = require("c").c(2);
+  if (cResult[0] !== arg0) {
+    const fn = function s() {
+      if (null == closure_0) {
+        value = closure_3;
+      } else {
+        value = map.get(tmp);
+        if (value == null) {
+          value = closure_3;
+        }
+      }
+      return value;
+    };
+    cResult[0] = arg0;
+    cResult[1] = fn;
+    let tmp2 = fn;
+  } else {
+    tmp2 = cResult[1];
+  }
+  return noop.useSyncExternalStore(subscribeVibegrationsDesignFeedback, tmp2, tmp2);
+}) : ((arg0) => {
   closure_0 = arg0;
   const items = [arg0];
   const callback = noop.useCallback(() => {
@@ -281,4 +309,4 @@ export const useVibegrationsDesignFeedback = function useVibegrationsDesignFeedb
     return value;
   }, items);
   return noop.useSyncExternalStore(subscribeVibegrationsDesignFeedback, callback, callback);
-};
+});

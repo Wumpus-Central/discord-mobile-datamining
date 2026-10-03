@@ -1,14 +1,15 @@
-// === Module 17266: VoicePanelSoundboardButton ===
+// === Module 17317: VoicePanelSoundboardButton ===
 
-// Module 17266 (VoicePanelSoundboardButton)
-import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1115 */;
-import NativeViewDefault from "NativeView" /* 6087 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11964 */;
-import SoundboardIcon from "SoundboardIcon" /* 12235 */;
-import VoicePanelStyles from "VoicePanelStyles" /* 17252 */;
-import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 17253 */;
-import useSoundboardConfig from "useSoundboardConfig" /* 17267 */;
+// Module 17317 (VoicePanelSoundboardButton)
+import c from "c" /* 576 */;
+import nativeDefault from "native" /* 587 */;
+import util from "util" /* 1126 */;
+import NativeViewDefault from "NativeView" /* 5976 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11901 */;
+import SoundboardIcon from "SoundboardIcon" /* 12185 */;
+import VoicePanelStyles from "VoicePanelStyles" /* 17303 */;
+import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 17304 */;
+import useSoundboardConfig from "useSoundboardConfig" /* 17318 */;
 import noop from "module_19" /* 19 */;
 
 const useSoundboardConfigDefault = useSoundboardConfig;
@@ -16,16 +17,79 @@ const useSoundboardConfigDefault = useSoundboardConfig;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = { circle: null, iconContainer: null };
 let size = { width: "100%", height: "100%", borderRadius: nativeDefault.radii.round };
 obj2.circle = size;
 obj2.iconContainer = { position: "absolute", justifyContent: "center", alignItems: "center", width: "100%", height: "100%" };
 let closure_6 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelSoundboardButton.tsx");
 
-export default function SoundboardButton(arg0) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((props) => {
+  const cResult = c.c(9);
+  props = props.props;
+  const tmp5 = closure_6();
+  const voicePanelButtonStyles = VoicePanelStyles.useVoicePanelButtonStyles(props.wrapperSpecs);
+  const backgroundColor = voicePanelButtonStyles.iconBg.backgroundColor;
+  ({ handlePress, disabled, disabledAccessibilityHint, visible } = useSoundboardConfigDefault(noop.useContext(VoicePanelStateContextDefault).channelId, useSoundboardConfig.SoundboardButtonLocation.VOICE_PANEL_CONTROLS));
+  if (disabled) {
+    let color = nativeDefault.colors.ICON_MUTED;
+  } else {
+    color = voicePanelButtonStyles.iconFill.color;
+  }
+  if (cResult[0] === disabled) {
+    if (cResult[1] === disabledAccessibilityHint) {
+      if (cResult[2] === backgroundColor) {
+        if (cResult[3] === handlePress) {
+          if (cResult[4] === color) {
+            if (cResult[5] === props) {
+              if (cResult[6] === tmp5) {
+                if (cResult[7] === visible) {
+                  let tmp9 = cResult[8];
+                }
+                return tmp9;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  let tmp10 = null;
+  if (visible) {
+    const element = { onPress: handlePress, disabled, props, accessibilityLabel: null, accessibilityHint: null, children: null };
+    const intl = util.intl;
+    element.accessibilityLabel = intl.string(util.t["6EJvHt"]);
+    element.accessibilityHint = disabledAccessibilityHint;
+    const obj3 = { style: null };
+    const items = [tmp5.circle, ];
+    const obj4 = { backgroundColor };
+    items[1] = obj4;
+    obj3.style = items;
+    const items1 = [React4(NativeViewDefault, obj3), ];
+    const obj5 = { style: tmp5.iconContainer, children: null };
+    const tmp4Result = VoicePanelAnimatedButtonWrapperDefault;
+    const obj6 = { color };
+    obj5.children = React4(SoundboardIcon.SoundboardIcon, obj6);
+    items1[1] = React4(NativeViewDefault, obj5);
+    element.children = items1;
+    tmp10 = hasOwnProperty(tmp4Result, element);
+    const tmp4Result2 = NativeViewDefault;
+  }
+  cResult[0] = disabled;
+  cResult[1] = disabledAccessibilityHint;
+  cResult[2] = backgroundColor;
+  cResult[3] = handlePress;
+  cResult[4] = color;
+  cResult[5] = props;
+  cResult[6] = tmp5;
+  cResult[7] = visible;
+  cResult[8] = tmp10;
+  tmp9 = tmp10;
+  const tmp7Result = useSoundboardConfigDefault(noop.useContext(VoicePanelStateContextDefault).channelId, useSoundboardConfig.SoundboardButtonLocation.VOICE_PANEL_CONTROLS);
+}) : ((arg0) => {
   ({ props, wrapperSpecs } = arg0);
   const tmp3 = closure_6();
   const voicePanelButtonStyles = VoicePanelStyles.useVoicePanelButtonStyles(wrapperSpecs);
@@ -57,4 +121,4 @@ export default function SoundboardButton(arg0) {
     const tmpResult2 = NativeViewDefault;
   }
   return tmp8;
-};
+});

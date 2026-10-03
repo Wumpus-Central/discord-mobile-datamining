@@ -1,16 +1,16 @@
-// === Module 7152: CollectiblesProductRecord ===
+// === Module 7055: CollectiblesProductRecord ===
 
-// Module 7152 (CollectiblesProductRecord)
-import getPricesFromServerDefault from "getPricesFromServer" /* 6011 */;
+// Module 7055 (CollectiblesProductRecord)
+import getPricesFromServerDefault from "getPricesFromServer" /* 5698 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7153 */;
-import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7159 */;
+import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7056 */;
+import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7062 */;
 
 const require = fn;
-const CollectiblesItemRecord = fn(7154);
+const CollectiblesItemRecord = fn(7057);
 ({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: metroRequire } = CollectiblesItemRecord);
-let closure_7 = fn(1076).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
-const Constants = fn(1074);
+let closure_7 = fn(1087).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
+const Constants = fn(1085);
 ({ PREMIUM_TYPE_NONE: closure_8, PriceSetAssignmentPurchaseTypes: closure_9 } = Constants);
 let CollectiblesProductRecord;
 class CollectiblesProductRecord extends tmp3 {
@@ -30,7 +30,7 @@ CollectiblesProductRecord["fromServer"] = function fromServer(arg0) {
   const merged2 = Object.assign(fromServerResult);
   obj.type = type;
   let tmp8 = null;
-  if (premium_type !== React6) {
+  if (premium_type !== closure_1_8) {
     tmp8 = premium_type;
   }
   obj.premiumType = tmp8;
@@ -60,7 +60,7 @@ CollectiblesProductRecord["fromServer"] = function fromServer(arg0) {
   obj.hideBadge = hide_badge;
   obj.isFirstParty = is_first_party;
   if (typeof CollectiblesProductRecord === "function") {
-    const tmp42 = new CollectiblesProductRecord(obj, fromServerResult, merged, this, React6);
+    const tmp42 = new CollectiblesProductRecord(obj, fromServerResult, merged, this, closure_1_8);
     ({ summary: tmp17.summary, type: tmp17.type, premiumType: tmp17.premiumType, items: tmp17.items, categorySkuId: tmp17.categorySkuId, isCategoryReward: tmp17.isCategoryReward, prices: tmp17.prices, bundledProducts: tmp17.bundledProducts, previewAssets: tmp17.previewAssets, googleSkuIds: tmp17.googleSkuIds, variants: tmp17.variants, eligibleOffers: tmp17.eligibleOffers, badgeOverride: tmp17.badgeOverride, hideBadge: tmp17.hideBadge, isFirstParty: tmp17.isFirstParty, baseVariantName: tmp17.baseVariantName, variantLabel: tmp17.variantLabel } = obj);
     return tmp42;
   } else {
@@ -171,7 +171,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               }
               ({ items, item } = obj);
               first = _slicedToArray(tenantMetadata.selectedOptions, 1)[0];
-              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "Button", type: "Array", premiumType: "channelId", items: "<string:2622597628>", categorySkuId: "<string:2307740297>", isCategoryReward: "<string:858884494>", prices: "<string:858993459>", previewAssets: "<string:3007336859>", googleSkuIds: "<string:1387366993>", eligibleOffers: "<string:2371727446>", variants: "<string:1370586193>", bundledProducts: "<string:3746669366>", isFirstParty: "<string:2984596075>" };
+              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "Button", type: "Array", premiumType: "backgroundColor", items: 7339204664731474000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, categorySkuId: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000017258022911958075, isCategoryReward: 1488570029868394700000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, prices: 4541388865156000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, previewAssets: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001704477535690114, googleSkuIds: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000029854995388483, eligibleOffers: -72333163933804930000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, variants: -0.000000000000000000000000000000000000000000000000000004893986250143671, bundledProducts: 110675415711008840000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, isFirstParty: 375064928386129700000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 };
               let str;
               if (first != null) {
                 str = first.optionValue;
@@ -187,9 +187,9 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               obj3.variantValue = str2;
               ({ id: obj2.storeListingId, id: obj2.skuId, name: obj2.name, summary: obj2.summary } = tenantMetadata);
               ({ type: obj2.type, premiumType } = collectibles);
-              let items1 = React6;
+              let items1 = closure_2_8;
               let premiumType1 = null;
-              if (premiumType !== React6) {
+              if (premiumType !== closure_2_8) {
                 premiumType1 = collectibles.premiumType;
               }
               obj3.premiumType = premiumType1;
@@ -214,8 +214,8 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               if (googleSkuIds == null) {
                 const obj5 = {};
                 item = "";
-                obj5[React7.MOBILE] = "";
-                obj5[React7.MOBILE_PREMIUM_TIER_2] = "";
+                obj5[options.MOBILE] = "";
+                obj5[options.MOBILE_PREMIUM_TIER_2] = "";
                 googleSkuIds = obj5;
               }
               obj3.googleSkuIds = googleSkuIds;

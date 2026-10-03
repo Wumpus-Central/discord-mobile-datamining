@@ -1,6 +1,6 @@
-// === Module 7822: LegacyBadgeIdMap ===
+// === Module 7866: LegacyBadgeIdMap ===
 
-// Module 7822 (LegacyBadgeIdMap)
+// Module 7866 (LegacyBadgeIdMap)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/LegacyBadgeIdMap.tsx");

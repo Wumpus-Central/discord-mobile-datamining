@@ -1,17 +1,79 @@
-// === Module 5460: useBackPressHandler ===
+// === Module 5780: useBackPressHandler ===
 
-// Module 5460 (useBackPressHandler)
-import PlatformUtils from "PlatformUtils" /* 1364 */;
-import KeyCommands from "KeyCommands" /* 5461 */;
+// Module 5780 (useBackPressHandler)
+import PlatformUtils from "PlatformUtils" /* 1369 */;
+import KeyCommands from "KeyCommands" /* 5781 */;
 import noop from "module_19" /* 19 */;
+
+const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ BackHandler: c3, NativeModules: closure_4 } = get_ActivityIndicator);
+const ReactCompilerGating = fn(558);
+function subscribeToBackPress(onKeyCommand) {
+  const obj = KeyCommands;
+  const subscribeKeyCommandResult = obj.subscribeKeyCommand({ input: KeyCommands.KeyInputs.ESCAPE, eventName: "keyCommandBackPress", onKeyCommand });
+  const require = subscribeKeyCommandResult;
+  const obj2 = { input: KeyCommands.KeyInputs.ESCAPE, eventName: "keyCommandBackPress", onKeyCommand };
+  if (obj3.isIOS()) {
+    return subscribeKeyCommandResult;
+  } else {
+    closure_1 = React3.addEventListener("hardwareBackPress", onKeyCommand);
+    return () => {
+      closure_1.remove();
+      fn2();
+    };
+  }
+  obj3 = PlatformUtils;
+}
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/routing/native/useBackPressHandler.tsx");
 
-export default function useBackPressHandler(current) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((current, arg1) => {
+  _require = current;
+  const cResult = require("c").c(5);
+  dependencyMap = tmp2;
+  noop = noop.useRef(current);
+  if (cResult[0] !== current) {
+    let fn = function t() {
+      closure_2.current = current;
+    };
+    cResult[0] = current;
+    cResult[1] = fn;
+    let tmp3 = fn;
+  } else {
+    tmp3 = cResult[1];
+  }
+  const layoutEffect = obj2.useLayoutEffect(tmp3);
+  if (cResult[2] !== (undefined === arg1 || arg1)) {
+    let fn2 = function c() {
+      if (closure_1) {
+        const fn = () => ref.current();
+        const obj2 = { input: KeyCommands.KeyInputs.ESCAPE, eventName: "keyCommandBackPress", onKeyCommand: fn };
+        let fn2 = KeyCommands.subscribeKeyCommand(obj2);
+        if (!obj3.isIOS()) {
+          closure_1 = React3.addEventListener("hardwareBackPress", fn);
+          fn2 = () => {
+            closure_1.remove();
+            fn2();
+          };
+        }
+        return fn2;
+      }
+    };
+    const items = [tmp2];
+    cResult[2] = tmp2;
+    cResult[3] = fn2;
+    cResult[4] = items;
+    let tmp6 = items;
+    let tmp5 = fn2;
+  } else {
+    tmp5 = cResult[3];
+    tmp6 = cResult[4];
+  }
+  const effect = obj2.useEffect(tmp5, tmp6);
+}) : ((current) => {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = true;
@@ -37,23 +99,8 @@ export default function useBackPressHandler(current) {
       return fn2;
     }
   }, items);
-};
-export const subscribeToBackPress = function subscribeToBackPress(onKeyCommand) {
-  const obj = KeyCommands;
-  const subscribeKeyCommandResult = obj.subscribeKeyCommand({ input: KeyCommands.KeyInputs.ESCAPE, eventName: "keyCommandBackPress", onKeyCommand });
-  require = subscribeKeyCommandResult;
-  const obj2 = { input: KeyCommands.KeyInputs.ESCAPE, eventName: "keyCommandBackPress", onKeyCommand };
-  if (obj3.isIOS()) {
-    return subscribeKeyCommandResult;
-  } else {
-    closure_1 = React3.addEventListener("hardwareBackPress", onKeyCommand);
-    return () => {
-      closure_1.remove();
-      fn2();
-    };
-  }
-  obj3 = PlatformUtils;
-};
+});
+export { subscribeToBackPress };
 export const BackPressHandler = {
   minimize() {
     MinimizeApp = MinimizeApp.MinimizeApp;

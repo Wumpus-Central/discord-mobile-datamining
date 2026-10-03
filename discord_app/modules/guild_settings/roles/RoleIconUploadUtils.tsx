@@ -1,7 +1,7 @@
-// === Module 17687: RoleIconUploadUtils ===
+// === Module 17773: RoleIconUploadUtils ===
 
-// Module 17687 (RoleIconUploadUtils)
-import AvatarUtils from "AvatarUtils" /* 1397 */;
+// Module 17773 (RoleIconUploadUtils)
+import AvatarUtils from "AvatarUtils" /* 1402 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -22,8 +22,8 @@ let closure_5 = async function _fetchCustomEmojiAsPngDataUri() {
     return closure_131_3 + closure_132_1.slice(closure_132_1.indexOf(",") + 1);
   })();
 };
-const Base64PNGPrefix = fn(1074).Base64PNGPrefix;
-const EMOJI_URL_BASE_SIZE = fn(1375).EMOJI_URL_BASE_SIZE;
+const Base64PNGPrefix = fn(1085).Base64PNGPrefix;
+const EMOJI_URL_BASE_SIZE = fn(1380).EMOJI_URL_BASE_SIZE;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/roles/RoleIconUploadUtils.tsx");
 

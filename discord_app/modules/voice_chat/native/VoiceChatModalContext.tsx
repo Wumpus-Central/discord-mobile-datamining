@@ -1,13 +1,13 @@
-// === Module 9060: VoiceChatModalContext ===
+// === Module 9087: VoiceChatModalContext ===
 
-// Module 9060 (VoiceChatModalContext)
+// Module 9087 (VoiceChatModalContext)
 import noop from "module_19" /* 19 */;
 
 const context = noop.createContext(null);
+let ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const size = fn(2);
-const result = size.fileFinishedImporting("modules/voice_chat/native/VoiceChatModalContext.tsx");
+const result1 = size.fileFinishedImporting("modules/voice_chat/native/VoiceChatModalContext.tsx");
 
 export const VoiceChatNavigationContext = context;
-export const useVoiceChatNavigationContext = function useVoiceChatNavigationContext() {
-  return noop.useContext(context);
-};
+export const useVoiceChatNavigationContext = () => noop.useContext(context);

@@ -1,13 +1,17 @@
-// === Module 15278: SummaryReminderNotificationSetting ===
+// === Module 15334: SummaryReminderNotificationSetting ===
 
-// Module 15278 (SummaryReminderNotificationSetting)
-import util from "util" /* 1115 */;
-import UserSettings from "UserSettings" /* 2021 */;
-import SettingsConstants from "SettingsConstants" /* 7590 */;
-import SummaryReminderNotificationUtils from "SummaryReminderNotificationUtils" /* 15279 */;
-import SettingBuilders from "SettingBuilders" /* 11215 */;
+// Module 15334 (SummaryReminderNotificationSetting)
+import util from "util" /* 1126 */;
+import UserSettings from "UserSettings" /* 2028 */;
+import SettingsConstants from "SettingsConstants" /* 7634 */;
+import SummaryReminderNotificationExperiment from "SummaryReminderNotificationExperiment" /* 15335 */;
+import SummaryReminderNotificationUtils from "SummaryReminderNotificationUtils" /* 15336 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import SettingBuilders from "SettingBuilders" /* 11129 */;
 import size from "module_2" /* 2 */;
 
+let ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -20,10 +24,8 @@ const toggle = SettingBuilders.createToggle({
   parent: SettingsConstants.MobileUserSettings.NOTIFICATIONS,
   useValue: UserSettings.EnableSummaryReminderNotifications.useSetting,
   onValueChange: SummaryReminderNotificationUtils.onSummaryReminderNotificationSettingsChanged,
-  usePredicate() {
-    return false;
-  }
+  usePredicate: () => SummaryReminderNotificationExperiment.useSummaryReminderNotificationExperiment("tabsV2Settings").showSettingsToggle
 });
-const result = size.fileFinishedImporting("modules/user_settings/defs/native/SummaryReminderNotificationSetting.tsx");
+const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/SummaryReminderNotificationSetting.tsx");
 
 export default toggle;

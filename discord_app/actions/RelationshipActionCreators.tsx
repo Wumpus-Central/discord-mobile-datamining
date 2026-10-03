@@ -1,21 +1,21 @@
-// === Module 9388: RelationshipActionCreators ===
+// === Module 9434: RelationshipActionCreators ===
 
-// Module 9388 (RelationshipActionCreators)
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import util from "util" /* 1115 */;
-import HTTPUtils from "HTTPUtils" /* 1271 */;
-import UserUtilsDefault from "UserUtils" /* 4707 */;
-import shared from "shared" /* 4714 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5387 */;
-import openQuarantineModeInfoModalDefault from "openQuarantineModeInfoModal" /* 6020 */;
-import ContextMenuActionCreators from "ContextMenuActionCreators" /* 6050 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 8036 */;
-import ClaimAccountModalActionCreatorsAll from "ClaimAccountModalActionCreators" /* 9390 */;
-import UserLimitedAccessUtils from "UserLimitedAccessUtils" /* 9391 */;
-import FriendsUtils from "FriendsUtils" /* 9392 */;
-import ClearAllIncomingRequestsConfirmationModalDefault from "ClearAllIncomingRequestsConfirmationModal" /* 9393 */;
+// Module 9434 (RelationshipActionCreators)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import util from "util" /* 1126 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import UserUtilsDefault from "UserUtils" /* 4722 */;
+import shared from "shared" /* 4729 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5707 */;
+import openQuarantineModeInfoModalDefault from "openQuarantineModeInfoModal" /* 5913 */;
+import ContextMenuActionCreators from "ContextMenuActionCreators" /* 5943 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 8080 */;
+import ClaimAccountModalActionCreatorsAll from "ClaimAccountModalActionCreators" /* 9436 */;
+import UserLimitedAccessUtils from "UserLimitedAccessUtils" /* 9437 */;
+import FriendsUtils from "FriendsUtils" /* 9438 */;
+import ClearAllIncomingRequestsConfirmationModalDefault from "ClearAllIncomingRequestsConfirmationModal" /* 9439 */;
 import _slicedToArray from "module_32" /* 32 */;
-import UserStore from "UserStore" /* 1372 */;
+import UserStore from "UserStore" /* 1377 */;
 
 require = fn;
 function handleRelationshipAddError(error, SHOW_ALWAYS, userTag) {
@@ -87,9 +87,9 @@ function handleRelationshipAddError(error, SHOW_ALWAYS, userTag) {
   }
   throw error;
 }
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ Endpoints: metroRequire, AbortCodes: closure_7, RelationshipTypes: closure_8 } = Constants);
-const ClearFriendRequestFilters = fn(9389).ClearFriendRequestFilters;
+const ClearFriendRequestFilters = fn(9435).ClearFriendRequestFilters;
 const RelationshipErrorUXConfig = { SHOW_ALWAYS: 0, [0]: "SHOW_ALWAYS", SHOW_ONLY_IF_ACTION_NEEDED: 1, [1]: "SHOW_ONLY_IF_ACTION_NEEDED" };
 let obj2 = {
   sendRequest(discordTag) {
@@ -100,15 +100,15 @@ let obj2 = {
       errorUxConfig = body.SHOW_ALWAYS;
     }
     [tmp3, tmp4] = str.split("#");
-    const HTTP = str(1271).HTTP;
+    const HTTP = str(1282).HTTP;
     const request = { url: closure_6.USER_RELATIONSHIPS(), body: null, context: null, oldFormErrors: true, rejectWithError: null };
     body = { username: tmp3, discriminator: parseInt(tmp4), note };
     const merged = Object.assign(captchaPayload);
     request.body = body;
     request.context = context;
     const tmp2 = _slicedToArray(str.split("#"), 2);
-    request.rejectWithError = str(1271).rejectWithMigratedError();
-    const obj3 = str(1271);
+    request.rejectWithError = str(1282).rejectWithMigratedError();
+    const obj3 = str(1282);
     return HTTP.post(request).catch((error) => {
       handleRelationshipAddError(error, errorUxConfig, str);
     });
@@ -185,9 +185,9 @@ let obj2 = {
         tmp();
       }
     }).catch(() => {
-      const AccessibilityAnnouncer = closure_0(4714).AccessibilityAnnouncer;
-      const intl = closure_0(1115).intl;
-      AccessibilityAnnouncer.announce(intl.string(closure_0(1115).t.n6Jo3E));
+      const AccessibilityAnnouncer = closure_0(4729).AccessibilityAnnouncer;
+      const intl = closure_0(1126).intl;
+      AccessibilityAnnouncer.announce(intl.string(closure_0(1126).t.n6Jo3E));
     });
   },
   updateRelationship(userId, c0) {
@@ -238,11 +238,11 @@ let obj2 = {
       AccessibilityAnnouncer.announce(intl.string(require("util").t.n6Jo3E));
     });
   },
-  ignoreUser(id, IGNORE_CONFIRMATION_ACTION_SHEET, channelId) {
+  ignoreUser(id, mobile_iar_ignore_user_element, channelId) {
     const _require = id;
     const HTTP = require("HTTPUtils").HTTP;
-    obj = { url: closure_6.IGNORE_USER(id), context: { location: IGNORE_CONFIRMATION_ACTION_SHEET }, rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
-    obj2 = { location: IGNORE_CONFIRMATION_ACTION_SHEET };
+    obj = { url: closure_6.IGNORE_USER(id), context: { location: mobile_iar_ignore_user_element }, rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
+    obj2 = { location: mobile_iar_ignore_user_element };
     const obj3 = require("HTTPUtils");
     const putResult = HTTP.put(obj);
     return HTTP.put(obj).then(() => {
@@ -253,10 +253,10 @@ let obj2 = {
       obj2 = DispatcherDefault;
       obj2.dispatch({ type: "RELATIONSHIP_IGNORE_USER_SUCCESS", userId, timestamp: Date.now() });
     }).catch(() => {
-      channelId(8036).showFailedToast();
-      const AccessibilityAnnouncer = userId(4714).AccessibilityAnnouncer;
-      const intl = userId(1115).intl;
-      AccessibilityAnnouncer.announce(intl.string(userId(1115).t.n6Jo3E));
+      channelId(8080).showFailedToast();
+      const AccessibilityAnnouncer = userId(4729).AccessibilityAnnouncer;
+      const intl = userId(1126).intl;
+      AccessibilityAnnouncer.announce(intl.string(userId(1126).t.n6Jo3E));
     });
   },
   unignoreUser(id, UserProfileRemediatedNotice, channelId) {
@@ -272,10 +272,10 @@ let obj2 = {
       const intl = util.intl;
       AccessibilityAnnouncer.announce(intl.string(util.t.QlH5w6));
     }).catch(() => {
-      channelId(8036).showFailedToast();
-      const AccessibilityAnnouncer = id(4714).AccessibilityAnnouncer;
-      const intl = id(1115).intl;
-      AccessibilityAnnouncer.announce(intl.string(id(1115).t.n6Jo3E));
+      channelId(8080).showFailedToast();
+      const AccessibilityAnnouncer = id(4729).AccessibilityAnnouncer;
+      const intl = id(1126).intl;
+      AccessibilityAnnouncer.announce(intl.string(id(1126).t.n6Jo3E));
     });
   }
 };

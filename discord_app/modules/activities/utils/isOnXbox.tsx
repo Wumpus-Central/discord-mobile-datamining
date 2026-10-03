@@ -1,8 +1,8 @@
-// === Module 12785: isOnXbox ===
+// === Module 12825: isOnXbox ===
 
-// Module 12785 (isOnXbox)
-import Constants from "Constants" /* 1074 */;
-import Constants2 from "Constants" /* 2005 */;
+// Module 12825 (isOnXbox)
+import Constants from "Constants" /* 1085 */;
+import Constants2 from "Constants" /* 2011 */;
 import size from "module_2" /* 2 */;
 
 let closure_0 = Constants2.XBOX_ACTIVITY_APPLICATION_ID;

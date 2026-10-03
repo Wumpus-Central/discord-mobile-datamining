@@ -1,10 +1,10 @@
-// === Module 9576: ChannelCallNavigatorIcon ===
+// === Module 9587: ChannelCallNavigatorIcon ===
 
-// Module 9576 (ChannelCallNavigatorIcon)
-import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1177 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5453 */;
-import Pressables from "Pressables" /* 5621 */;
+// Module 9587 (ChannelCallNavigatorIcon)
+import nativeDefault from "native" /* 587 */;
+import native from "native" /* 1188 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5773 */;
+import Pressables from "Pressables" /* 5909 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,12 +12,12 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet: closure_4 } = get_ActivityIndicator);
-const resetFocusTimer = fn(9022).resetFocusTimer;
-const Constants = fn(1074);
+const resetFocusTimer = fn(9050).resetFocusTimer;
+const Constants = fn(1085);
 ({ ThemeTypes: metroRequire, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = { pressableContainer: { marginHorizontal: 4 }, pressable: { borderRadius: nativeDefault.radii.lg }, container: null, text: null, disabled: null, iconColor: null };
 let size = { flexDirection: "row", height: 32, width: 32, borderRadius: nativeDefault.radii.lg, alignItems: "center", justifyContent: "center", overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.container = size;
@@ -27,10 +27,160 @@ obj2.disabled = { opacity: 0.5 };
 let obj4 = { marginLeft: 4, fontSize: 14, fontFamily: Fonts.PRIMARY_SEMIBOLD, color: nativeDefault.colors.WHITE };
 obj2.iconColor = { color: nativeDefault.colors.ICON_SUBTLE };
 let closure_9 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj5 = { color: nativeDefault.colors.ICON_SUBTLE };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/native/components/ChannelCallNavigatorIcon.tsx");
 
-export default function ChannelCallNavigatorIcon(disableBackground) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
+  const cResult = onPress(576).c(31);
+  onPress = onPress.onPress;
+  ({ source, accessibilityLabel, children, membersCount, disabled, theme, disableBackground, containerStyle, IconComponent } = onPress);
+  if (undefined === theme) {
+    theme = constants.ASH;
+  }
+  const tmp6 = closure_9();
+  if (cResult[0] !== onPress) {
+    const fn = function t() {
+      if (null != resetFocusTimer) {
+        tmp();
+      }
+      onPress();
+    };
+    cResult[0] = onPress;
+    cResult[1] = fn;
+    let tmp7 = fn;
+  } else {
+    tmp7 = cResult[1];
+  }
+  let disabled2 = disabled;
+  if (disabled) {
+    disabled2 = tmp6.disabled;
+  }
+  if (cResult[2] === containerStyle) {
+    if (cResult[3] === tmp6.container) {
+      if (cResult[4] === disabled2) {
+        let tmp8 = cResult[5];
+      }
+      if (cResult[6] === tmp5) {
+        if (cResult[7] === theme) {
+          let tmp9 = cResult[8];
+        }
+        if (cResult[9] === IconComponent) {
+          if (cResult[10] === source) {
+            if (cResult[11] === tmp6.iconColor.color) {
+              if (cResult[13] === membersCount) {
+                if (cResult[14] === tmp6.text) {
+                  let tmp20 = cResult[15];
+                }
+                if (cResult[16] === tmp8) {
+                  if (cResult[17] === tmp9) {
+                    if (cResult[18] === tmp14) {
+                      if (cResult[19] === tmp20) {
+                        let tmp24 = cResult[20];
+                      }
+                      if (cResult[21] === accessibilityLabel) {
+                        if (cResult[22] === children) {
+                          if (cResult[23] === disabled) {
+                            if (cResult[24] === tmp6.pressable) {
+                              if (cResult[25] === tmp7) {
+                                if (cResult[26] === tmp24) {
+                                  let tmp28 = cResult[27];
+                                }
+                                if (cResult[28] === tmp6.pressableContainer) {
+                                  if (cResult[29] === tmp28) {
+                                    let tmp31 = cResult[30];
+                                  }
+                                  return tmp31;
+                                }
+                                const obj2 = { style: tmp6.pressableContainer, children: tmp28 };
+                                const tmp34 = closure_7(closure_3, obj2);
+                                cResult[28] = tmp6.pressableContainer;
+                                cResult[29] = tmp28;
+                                cResult[30] = tmp34;
+                                tmp31 = tmp34;
+                              }
+                            }
+                          }
+                        }
+                      }
+                      const obj3 = { accessibilityRole: "button", accessibilityLabel, disabled, style: tmp6.pressable, onPress: tmp7, children: null };
+                      const items = [tmp24, children];
+                      obj3.children = items;
+                      const tmp30 = closure_8(tmp(5909).PressableOpacity, obj3);
+                      cResult[21] = accessibilityLabel;
+                      cResult[22] = children;
+                      cResult[23] = disabled;
+                      cResult[24] = tmp6.pressable;
+                      cResult[25] = tmp7;
+                      cResult[26] = tmp24;
+                      cResult[27] = tmp30;
+                      tmp28 = tmp30;
+                    }
+                  }
+                }
+                const obj4 = { style: tmp8, children: null };
+                const items1 = [tmp9, tmp14, tmp20];
+                obj4.children = items1;
+                const tmp27 = closure_8(closure_3, obj4);
+                cResult[16] = tmp8;
+                cResult[17] = tmp9;
+                cResult[18] = tmp14;
+                cResult[19] = tmp20;
+                cResult[20] = tmp27;
+                tmp24 = tmp27;
+              }
+              let tmp22 = null != membersCount;
+              if (tmp22) {
+                tmp22 = membersCount > 0;
+              }
+              if (tmp22) {
+                const obj5 = { style: tmp6.text, children: membersCount };
+                tmp22 = closure_7(tmp(1188).LegacyText, obj5);
+              }
+              cResult[13] = membersCount;
+              cResult[14] = tmp6.text;
+              cResult[15] = tmp22;
+              tmp20 = tmp22;
+            }
+          }
+        }
+        if (null != IconComponent) {
+          const obj6 = { color: tmp6.iconColor.color, size: "sm" };
+          let tmp17 = closure_7(IconComponent, obj6);
+        } else {
+          const obj7 = { source, color: tmp6.iconColor.color, size: tmp(1188).Icon.Sizes.SMALL_20 };
+          tmp17 = closure_7(tmp(1188).Icon, obj7);
+        }
+        cResult[9] = IconComponent;
+        cResult[10] = source;
+        source = tmp6.iconColor.color;
+        cResult[11] = source;
+        cResult[12] = tmp17;
+      }
+      let tmp10 = null;
+      if (tmpResult.isThemeDark(theme)) {
+        tmp10 = null;
+        if (!tmp5) {
+          const obj8 = { blurTheme: "dark", style: closure_4.absoluteFill };
+          tmp10 = closure_7(VisualEffectViewDefault, obj8);
+        }
+      }
+      cResult[6] = tmp5;
+      cResult[7] = theme;
+      cResult[8] = tmp10;
+      tmp9 = tmp10;
+      tmpResult = tmp(4729);
+    }
+  }
+  const items2 = [tmp6.container, containerStyle, disabled2];
+  cResult[2] = containerStyle;
+  cResult[3] = tmp6.container;
+  cResult[4] = disabled2;
+  cResult[5] = items2;
+  tmp8 = items2;
+  const obj = onPress(576);
+}) : ((disableBackground) => {
   ({ onPress: require, membersCount, disabled, theme } = disableBackground);
   ({ source, accessibilityLabel, children } = disableBackground);
   if (theme === undefined) {
@@ -66,7 +216,7 @@ export default function ChannelCallNavigatorIcon(disableBackground) {
   if (tmp6Result.isThemeDark(theme)) {
     tmp3Result = null;
     if (!flag) {
-      const obj4 = { blurTheme: "dark", style: absoluteFill.absoluteFill };
+      const obj4 = { blurTheme: "dark", style: closure_4.absoluteFill };
       tmp3Result = closure_7(VisualEffectViewDefault, obj4);
     }
   }
@@ -93,4 +243,4 @@ export default function ChannelCallNavigatorIcon(disableBackground) {
   obj2.children = items2;
   obj.children = closure_8(Pressables.PressableOpacity, obj2);
   return closure_7(closure_3, obj);
-};
+});

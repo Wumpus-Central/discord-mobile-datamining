@@ -1,9 +1,9 @@
-// === Module 8491: useProductPurchaseState ===
+// === Module 8496: useProductPurchaseState ===
 
-// Module 8491 (useProductPurchaseState)
-import CollectiblesItemType from "CollectiblesItemType" /* 1974 */;
-import compactDefault from "compact" /* 8492 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7165 */;
+// Module 8496 (useProductPurchaseState)
+import CollectiblesItemType from "CollectiblesItemType" /* 1980 */;
+import compactDefault from "compact" /* 8497 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7068 */;
 
 const require = globalThis.__r;
 
@@ -55,12 +55,35 @@ function getProductPurchaseState(CollectiblesPurchaseStore, skuId) {
     return obj;
   }
 }
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useProductPurchaseState.tsx");
 
 export { getProductPurchaseState };
-export const useProductPurchaseState = function useProductPurchaseState(product) {
-  _require = product;
+export const useProductPurchaseState = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  _require = arg0;
+  const cResult = require("c").c(3);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [CollectiblesPurchaseStore];
+    cResult[0] = items;
+    let first = items;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] !== arg0) {
+    const fn = function l() {
+      return getProductPurchaseState(CollectiblesPurchaseStore, closure_0);
+    };
+    cResult[1] = arg0;
+    cResult[2] = fn;
+    let tmp6 = fn;
+  } else {
+    tmp6 = cResult[2];
+  }
+  const obj = require("c");
+  return require("initialize").useStateFromStoresObject(first, tmp6);
+}) : ((arg0) => {
+  _require = arg0;
   const items = [CollectiblesPurchaseStore];
   return require("initialize").useStateFromStoresObject(items, () => getProductPurchaseState(CollectiblesPurchaseStore, closure_0));
-};
+});

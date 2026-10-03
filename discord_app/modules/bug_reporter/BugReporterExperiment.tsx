@@ -1,7 +1,7 @@
-// === Module 9869: BugReporterExperiment ===
+// === Module 12539: BugReporterExperiment ===
 
-// Module 9869 (BugReporterExperiment)
-import ApexExperiment from "ApexExperiment" /* 1435 */;
+// Module 12539 (BugReporterExperiment)
+import ApexExperiment from "ApexExperiment" /* 1440 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-01-bug-reporter", kind: "user", defaultConfig: { hasBugReporterAccess: false }, variations: null };

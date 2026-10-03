@@ -1,8 +1,8 @@
-// === Module 9092: participantHasVideo ===
+// === Module 9119: participantHasVideo ===
 
-// Module 9092 (participantHasVideo)
+// Module 9119 (participantHasVideo)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 1993 */;
+import MediaEngineStore from "MediaEngineStore" /* 1999 */;
 
 const require = globalThis.__r;
 
@@ -53,13 +53,11 @@ function canRenderParticipantVideo(participant) {
   }
   return tmp;
 }
-const CallConstants = fn(4866);
+const CallConstants = fn(4911);
 ({ ParticipantTypes: closure_4, isStreamParticipant: hasOwnProperty, isUserParticipant: metroRequire } = CallConstants);
-const Features = fn(4870).Features;
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/video_calls/participantHasVideo.tsx");
-
-export default function participantHasVideo(type) {
+const Features = fn(4915).Features;
+const ReactCompilerGating = fn(558);
+function participantHasVideo(type) {
   let streamId = type;
   let tmp = type.type !== constants.ACTIVITY;
   if (tmp) {
@@ -81,10 +79,36 @@ export default function participantHasVideo(type) {
     }
   }
   return tmp;
-};
+}
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/participantHasVideo.tsx");
+
+export default participantHasVideo;
 export { canRenderParticipantVideo };
-export const useCanRenderParticipantVideo = function useCanRenderParticipantVideo(stateFromStores) {
-  _require = stateFromStores;
+export const useCanRenderParticipantVideo = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  _require = arg0;
+  const cResult = require("c").c(3);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [MediaEngineStore];
+    cResult[0] = items;
+    let first = items;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] !== arg0) {
+    const fn = function o() {
+      return canRenderParticipantVideo(closure_0, MediaEngineStore);
+    };
+    cResult[1] = arg0;
+    cResult[2] = fn;
+    let tmp6 = fn;
+  } else {
+    tmp6 = cResult[2];
+  }
+  const obj = require("c");
+  return require("initialize").useStateFromStores(first, tmp6);
+}) : ((arg0) => {
+  _require = arg0;
   const items = [MediaEngineStore];
   return require("initialize").useStateFromStores(items, () => canRenderParticipantVideo(closure_0, MediaEngineStore));
-};
+});

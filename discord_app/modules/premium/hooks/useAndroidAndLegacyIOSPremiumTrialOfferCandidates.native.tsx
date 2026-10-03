@@ -1,62 +1,91 @@
-// === Module 7056: useAndroidAndLegacyIOSPremiumTrialOfferCandidates ===
+// === Module 6957: useAndroidAndLegacyIOSPremiumTrialOfferCandidates ===
 
-// Module 7056 (useAndroidAndLegacyIOSPremiumTrialOfferCandidates)
-import useStateFromStores from "useStateFromStores" /* 563 */;
-import ProductIds from "ProductIds" /* 6848 */;
-import useTrialOffer from "useTrialOffer" /* 7057 */;
-import IAPStore from "IAPStore" /* 6845 */;
+// Module 6957 (useAndroidAndLegacyIOSPremiumTrialOfferCandidates)
+import useStateFromStores from "useStateFromStores" /* 573 */;
+import c from "c" /* 576 */;
+import ProductIds from "ProductIds" /* 6742 */;
+import useTrialOffer from "useTrialOffer" /* 6958 */;
+import IAPStore from "IAPStore" /* 6739 */;
 
 require = fn;
-const PremiumConstants = fn(1374);
+const PremiumConstants = fn(1379);
 ({ PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID: c3, PREMIUM_TIER_2_REACTIVATION_TRIAL_ID: closure_4, PREMIUM_TIER_0_LIKELIHOOD_TRIAL_ID: hasOwnProperty, PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID: metroRequire, PREMIUM_TIER_2_REFERRAL_TRIAL_ID: closure_7, PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID: closure_8 } = PremiumConstants);
+let ReactCompilerGating = fn(558);
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+  const trialOffer = useTrialOffer.useTrialOffer(arg0);
+  const values = Object.values(ProductIds.TrialIdToProductOfferId[arg0]);
+  let tmp2 = null;
+  if (values.every((item) => set.has(item))) {
+    tmp2 = trialOffer;
+  }
+  return tmp2;
+}) : ((arg0, arg1) => {
+  const trialOffer = useTrialOffer.useTrialOffer(arg0);
+  const values = Object.values(ProductIds.TrialIdToProductOfferId[arg0]);
+  let tmp2 = null;
+  if (values.every((item) => set.has(item))) {
+    tmp2 = trialOffer;
+  }
+  return tmp2;
+});
+ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/hooks/useAndroidAndLegacyIOSPremiumTrialOfferCandidates.native.tsx");
 
-export const useAndroidAndLegacyIOSPremiumTrialOfferCandidates = function useAndroidAndLegacyIOSPremiumTrialOfferCandidates() {
+export const useAndroidAndLegacyIOSPremiumTrialOfferCandidates = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(9);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [IAPStore];
+    class R {
+      constructor() {
+        obj = { isFetchingProducts: closure_1_2.isFetchingProducts(), offerIds: closure_1_2.getOfferIds() };
+        return obj;
+      }
+    }
+    cResult[0] = items;
+    cResult[1] = R;
+    tmp4 = items;
+  } else {
+    [tmp4, tmp5] = cResult;
+  }
+  const offerIds = useStateFromStores.useStateFromStoresObject(tmp4, R).offerIds;
+  const tmp7 = closure_9(timestampProducer, offerIds);
+  const tmp8 = closure_9(React3, offerIds);
+  const tmp9 = closure_9(React4, offerIds);
+  const tmp10 = closure_9(hasOwnProperty, offerIds);
+  const tmp11 = closure_9(React5, offerIds);
+  const tmp12 = closure_9(closure_1_8, offerIds);
+  if (cResult[2] === tmp9) {
+    if (cResult[3] === tmp10) {
+      if (cResult[4] === tmp12) {
+        if (cResult[5] === tmp8) {
+          if (cResult[6] === tmp11) {
+            if (cResult[7] === tmp7) {
+              let tmp13 = cResult[8];
+            }
+            return tmp13;
+          }
+        }
+      }
+    }
+  }
+  const items1 = [tmp11, tmp7, tmp8, tmp9, tmp12, tmp10];
+  const found = items1.find((item) => null != item);
+  cResult[2] = tmp9;
+  cResult[3] = tmp10;
+  cResult[4] = tmp12;
+  cResult[5] = tmp8;
+  cResult[6] = tmp11;
+  cResult[7] = tmp7;
+  cResult[8] = found;
+  tmp13 = found;
+  const tmpResult = useStateFromStores;
+}) : (() => {
   const items = [IAPStore];
   const offerIds = useStateFromStores.useStateFromStoresObject(items, () => ({ isFetchingProducts: IAPStore.isFetchingProducts(), offerIds: IAPStore.getOfferIds() })).offerIds;
-  const trialOffer = useTrialOffer.useTrialOffer(timestampProducer);
-  const values = Object.values(ProductIds.TrialIdToProductOfferId[timestampProducer]);
-  let tmp4 = null;
-  if (values.every((item) => offerIds.has(item))) {
-    tmp4 = trialOffer;
-  }
-  const trialOffer1 = useTrialOffer.useTrialOffer(React3);
-  const values6 = Object.values(ProductIds.TrialIdToProductOfferId[React3]);
-  let tmp6 = null;
-  if (values6.every((item) => offerIds.has(item))) {
-    tmp6 = trialOffer1;
-  }
-  const tmpResult = useTrialOffer;
-  const trialOffer2 = useTrialOffer.useTrialOffer(React4);
-  const values7 = Object.values(ProductIds.TrialIdToProductOfferId[React4]);
-  let tmp8 = null;
-  if (values7.every((item) => offerIds.has(item))) {
-    tmp8 = trialOffer2;
-  }
-  const tmpResult5 = useTrialOffer;
-  const trialOffer3 = useTrialOffer.useTrialOffer(hasOwnProperty);
-  const values8 = Object.values(ProductIds.TrialIdToProductOfferId[hasOwnProperty]);
-  let tmp10 = null;
-  if (values8.every((item) => offerIds.has(item))) {
-    tmp10 = trialOffer3;
-  }
-  const tmpResult6 = useTrialOffer;
-  const trialOffer4 = useTrialOffer.useTrialOffer(React5);
-  const values9 = Object.values(ProductIds.TrialIdToProductOfferId[React5]);
-  let tmp12 = null;
-  if (values9.every((item) => offerIds.has(item))) {
-    tmp12 = trialOffer4;
-  }
-  const items1 = [tmp12, tmp4, tmp6, tmp8, , ];
-  const tmpResult7 = useTrialOffer;
-  const trialOffer5 = useTrialOffer.useTrialOffer(React6);
-  const values10 = Object.values(ProductIds.TrialIdToProductOfferId[React6]);
-  let tmp14 = null;
-  if (values10.every((item) => offerIds.has(item))) {
-    tmp14 = trialOffer5;
-  }
-  items1[4] = tmp14;
-  items1[5] = tmp10;
+  const tmp = closure_9(timestampProducer, offerIds);
+  const tmp2 = closure_9(React3, offerIds);
+  const tmp3 = closure_9(React4, offerIds);
+  const items1 = [closure_9(React5, offerIds), tmp, tmp2, tmp3, closure_9(closure_1_8, offerIds), closure_9(hasOwnProperty, offerIds)];
   return items1.find((item) => null != item);
-};
+});

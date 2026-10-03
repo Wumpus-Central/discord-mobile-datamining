@@ -1,8 +1,8 @@
-// === Module 8678: UserApplicationIdentityStore ===
+// === Module 8691: UserApplicationIdentityStore ===
 
-// Module 8678 (UserApplicationIdentityStore)
+// Module 8691 (UserApplicationIdentityStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
 
 const FetchState = { NOT_FETCHED: "NOT_FETCHED", FETCHING: "FETCHING", FETCHED: "FETCHED" };
 let map = new Map();

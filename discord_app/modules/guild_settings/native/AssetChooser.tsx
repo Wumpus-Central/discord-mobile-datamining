@@ -1,22 +1,22 @@
-// === Module 17558: AssetChooser ===
+// === Module 17646: AssetChooser ===
 
-// Module 17558 (AssetChooser)
-import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1115 */;
-import native from "native" /* 1177 */;
-import Pressables from "Pressables" /* 5621 */;
-import _modDef17559 from "module_17559" /* 17559 */;
-import _modDef17560 from "module_17560" /* 17560 */;
+// Module 17646 (AssetChooser)
+import nativeDefault from "native" /* 587 */;
+import util from "util" /* 1126 */;
+import native from "native" /* 1188 */;
+import Pressables from "Pressables" /* 5909 */;
+import _modDef17647 from "module_17647" /* 17647 */;
+import _modDef17648 from "module_17648" /* 17648 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty, ImageBackground: metroRequire, TouchableWithoutFeedback: closure_7 } = get_ActivityIndicator);
-const UPLOAD_MEDIUM_SIZE = fn(1074).UPLOAD_MEDIUM_SIZE;
+const UPLOAD_MEDIUM_SIZE = fn(1085).UPLOAD_MEDIUM_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = { assetWrapper: { width: "100%", alignItems: "center" }, asset: null, uploadIconWrapper: null, uploadIcon: null, remove: null };
 let size = { width: "100%", height: 192, borderRadius: nativeDefault.radii.xs, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.asset = size;
@@ -42,7 +42,7 @@ class AssetChooser extends PureComponent {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -89,7 +89,7 @@ class AssetChooser extends PureComponent {
               }
             }
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp17) {
           c3 = tmp;
@@ -130,19 +130,19 @@ prototype["render"] = function render() {
   obj.disabled = disabled;
   let tmp9 = source;
   if (null == source) {
-    tmp9 = _modDef17559;
+    tmp9 = _modDef17647;
   }
   const obj2 = { source: tmp9, style: tmp.asset, children: null };
   let tmp5Result = null;
   if (!disabled) {
     const obj3 = { style: tmp.uploadIconWrapper, children: null };
-    const obj4 = { style: tmp.uploadIcon, source: _modDef17560 };
-    obj3.children = React7(hasOwnProperty, obj4);
-    tmp5Result = React7(React4, obj3);
+    const obj4 = { style: tmp.uploadIcon, source: _modDef17648 };
+    obj3.children = options(hasOwnProperty, obj4);
+    tmp5Result = options(React4, obj3);
   }
   obj2.children = tmp5Result;
-  obj.children = React7(timestampProducer, obj2);
-  const children = [React7(Pressables.PressableOpacity, obj), ];
+  obj.children = options(timestampProducer, obj2);
+  const children = [options(Pressables.PressableOpacity, obj), ];
   let tmp5Result2 = null;
   if (null != source) {
     tmp5Result2 = null;
@@ -151,14 +151,14 @@ prototype["render"] = function render() {
       const obj6 = { style: tmp.remove, children: null };
       const intl2 = util.intl;
       obj6.children = intl2.string(util.t.N86XcP);
-      obj5.children = React7(native.LegacyText, obj6);
-      tmp5Result2 = React7(React5, obj5);
+      obj5.children = options(native.LegacyText, obj6);
+      tmp5Result2 = options(React5, obj5);
     }
   }
   children[1] = tmp5Result2;
-  return closure_1_11(closure_1_10, { children });
+  return closure_1_11(v65535, { children });
 };
-AssetChooser.contextType = fn(4569).ThemeContext;
+AssetChooser.contextType = fn(4589).ThemeContext;
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/native/AssetChooser.tsx");
 

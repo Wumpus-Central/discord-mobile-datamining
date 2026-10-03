@@ -1,8 +1,8 @@
-// === Module 12039: SearchTokenStreamerModeUtils ===
+// === Module 11974: SearchTokenStreamerModeUtils ===
 
-// Module 12039 (SearchTokenStreamerModeUtils)
-import isGuildLikeSearchContext from "isGuildLikeSearchContext" /* 12036 */;
-import StreamerModeStore from "StreamerModeStore" /* 4708 */;
+// Module 11974 (SearchTokenStreamerModeUtils)
+import isGuildLikeSearchContext from "isGuildLikeSearchContext" /* 11971 */;
+import StreamerModeStore from "StreamerModeStore" /* 4723 */;
 
 require = fn;
 function getValidOrderedFilterTokens(type, items) {
@@ -35,7 +35,7 @@ function getValidOrderedFilterTokens(type, items) {
   items1.push(constants.FILTER_AUTHOR_TYPE);
   return items1;
 }
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ SearchTokenTypes: c3, SearchTypes: closure_4 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/tokens/SearchTokenStreamerModeUtils.tsx");

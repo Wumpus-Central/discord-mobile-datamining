@@ -1,10 +1,10 @@
-// === Module 16472: VibegrationsArchivePicker ===
+// === Module 16550: VibegrationsArchivePicker ===
 
-// Module 16472 (VibegrationsArchivePicker)
-import util from "util" /* 1115 */;
-import _modDef3714 from "module_3714" /* 3714 */;
-import VibegrationsTypes from "VibegrationsTypes" /* 5555 */;
-import FilePickerUtils from "FilePickerUtils" /* 11002 */;
+// Module 16550 (VibegrationsArchivePicker)
+import util from "util" /* 1126 */;
+import _modDef3723 from "module_3723" /* 3723 */;
+import VibegrationsTypes from "VibegrationsTypes" /* 6747 */;
+import FilePickerUtils from "FilePickerUtils" /* 11020 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -50,7 +50,7 @@ let closure_9 = async function _sendVibegrationsArchiveImport(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -87,7 +87,7 @@ let closure_9 = async function _sendVibegrationsArchiveImport(arg0) {
         const items = [closure_131_2];
         closure_132_5(closure_131_0, closure_131_1, items);
         c6 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp21) {
       c6 = tmp;
@@ -95,7 +95,7 @@ let closure_9 = async function _sendVibegrationsArchiveImport(arg0) {
     }
   }
 };
-const VibegrationsConnectionStore = fn(12851);
+const VibegrationsConnectionStore = fn(12904);
 ({ ensureConnection: closure_4, sendUserMessage: hasOwnProperty, uploadAttachmentBytes: metroRequire } = VibegrationsConnectionStore);
 let closure_7 = ["zip", "tar", "gz", "tgz", "bz2", "xz"];
 const size = fn(2);
@@ -118,7 +118,7 @@ export const describeVibegrationsArchiveRejection = function describeVibegration
     const obj2 = { size: null };
     const tmpResult = VibegrationsTypes;
     obj2.size = tmpResult.formatVibegrationsAttachmentLimit(VibegrationsTypes.vibegrationsAttachmentLimit(bytes.contentType));
-    formatToPlainStringResult = intl.formatToPlainString(_modDef3714.AzziHF, obj2);
+    formatToPlainStringResult = intl.formatToPlainString(_modDef3723.AzziHF, obj2);
     const tmpResult2 = VibegrationsTypes;
   }
   return formatToPlainStringResult;

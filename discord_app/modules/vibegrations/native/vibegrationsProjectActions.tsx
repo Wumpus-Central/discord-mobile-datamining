@@ -1,16 +1,19 @@
-// === Module 16485: vibegrationsProjectActions ===
+// === Module 16563: vibegrationsProjectActions ===
 
-// Module 16485 (vibegrationsProjectActions)
-import util from "util" /* 1115 */;
-import _modDef3714 from "module_3714" /* 3714 */;
-import ToastUtils from "ToastUtils" /* 4556 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4557 */;
-import CopyIcon from "CopyIcon" /* 4788 */;
-import ChannelUtils from "ChannelUtils" /* 4990 */;
-import AlertModal from "AlertModal" /* 5393 */;
-import ClipboardUtils from "ClipboardUtils" /* 6796 */;
-import VibegrationsArchivePicker from "VibegrationsArchivePicker" /* 16472 */;
+// Module 16563 (vibegrationsProjectActions)
+import util from "util" /* 1126 */;
+import _modDef3723 from "module_3723" /* 3723 */;
+import ToastUtils from "ToastUtils" /* 4567 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4568 */;
+import CopyIcon from "CopyIcon" /* 4843 */;
+import ChannelUtils from "ChannelUtils" /* 5035 */;
+import AlertModal from "AlertModal" /* 5713 */;
+import ClipboardUtils from "ClipboardUtils" /* 6688 */;
+import vibegrationsProjectMute from "vibegrationsProjectMute" /* 12906 */;
+import VibegrationsArchivePicker from "VibegrationsArchivePicker" /* 16550 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+
+const require = globalThis.__r;
 
 require = fn;
 let closure_9 = async function _importIntoProject(arg0) {
@@ -24,7 +27,7 @@ let closure_9 = async function _importIntoProject(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -81,14 +84,14 @@ let closure_9 = async function _importIntoProject(arg0) {
           if (closure_2_1 != null) {
             closure_2_1();
           }
-          const intl2 = tmp3(1115).intl;
-          await tmp3(16472).sendVibegrationsArchiveImport(id.id, closure_2_2, intl2.string(v2(3714).C7GU2r));
+          const intl2 = tmp3(1126).intl;
+          await tmp3(16550).sendVibegrationsArchiveImport(id.id, closure_2_2, intl2.string(v2(3723).C7GU2r));
           if (1 === tmp7) {
             dependencyMap = 0;
-            const intl = tmp3(1115).intl;
-            tmp3(4556).presentError(intl.string(v2(3714)["02GpNr"]));
+            const intl = tmp3(1126).intl;
+            tmp3(4567).presentError(intl.string(v2(3723)["02GpNr"]));
             c3 = 3;
-            tmp3(4556);
+            tmp3(4567);
           } else if (arg0 === 1) {
             c3 = 3;
             throw value;
@@ -116,32 +119,33 @@ let closure_9 = async function _importIntoProject(arg0) {
     }
   }
 };
-const VibegrationsConnectionStore = fn(12851);
+const VibegrationsConnectionStore = fn(12904);
 ({ ensureConnection: closure_4, sendUserMessage: hasOwnProperty } = VibegrationsConnectionStore);
-const VibegrationsProjectStore = fn(8686);
+const VibegrationsProjectStore = fn(8699);
 ({ canRemixProject: metroRequire, isProjectOwner: closure_7 } = VibegrationsProjectStore);
-const StaticChannelRoute = fn(2051).StaticChannelRoute;
+const StaticChannelRoute = fn(2058).StaticChannelRoute;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/vibegrations/native/vibegrationsProjectActions.tsx");
 
 export const vibegrationsProjectActions = function vibegrationsProjectActions(project) {
   project = project.project;
-  ({ guildId: importDefault, openChat: dependencyMap, onOpenSettings, onConnectTool, onVersionHistory, onRestorePoints, onRefresh, onClose, preview } = project);
+  ({ guildId: importDefault, muted } = project);
+  ({ openChat: asyncGeneratorStep, onOpenSettings, onConnectTool, onVersionHistory, onRestorePoints, onRefresh, onClose, preview } = project);
   const tmp = closure_7(project);
   const items1 = [];
   if (null != onRefresh) {
     let obj = { label: null, IconComponent: null, action: null };
-    let intl = project(1115).intl;
-    obj.label = intl.string(_modDef3714.xKexN1);
-    obj.IconComponent = project(14718).RefreshIcon;
+    let intl = project(muted[7]).intl;
+    obj.label = intl.string(require("module_3723").xKexN1);
+    obj.IconComponent = project(muted[9]).RefreshIcon;
     obj.action = onRefresh;
     items1.push(obj);
   }
   if (null != onClose) {
     let obj2 = { label: null, IconComponent: null, action: null };
-    let intl2 = project(1115).intl;
-    obj2.label = intl2.string(_modDef3714.Ea0Wrr);
-    obj2.IconComponent = project(9564).DoorExitIcon;
+    let intl2 = project(muted[7]).intl;
+    obj2.label = intl2.string(require("module_3723").Ea0Wrr);
+    obj2.IconComponent = project(muted[10]).DoorExitIcon;
     obj2.action = onClose;
     items1.push(obj2);
   }
@@ -151,9 +155,9 @@ export const vibegrationsProjectActions = function vibegrationsProjectActions(pr
       closure_0 = iter;
       const obj = { label: iter.label, IconComponent: null, action: null };
       if ("refresh" === iter.kind) {
-        let KeyIcon = project(9833).RetryIcon;
+        let KeyIcon = project(muted[11]).RetryIcon;
       } else {
-        KeyIcon = project(6563).KeyIcon;
+        KeyIcon = project(muted[12]).KeyIcon;
       }
       obj.IconComponent = KeyIcon;
       obj.action = function action() {
@@ -167,33 +171,53 @@ export const vibegrationsProjectActions = function vibegrationsProjectActions(pr
       continue;
     }
   }
-  if (closure_6(project)) {
-    let obj3 = { label: null, IconComponent: null, action: null };
-    let intl3 = project(1115).intl;
-    obj3.label = intl3.string(_modDef3714.vPI794);
-    obj3.IconComponent = project(16486).RemixIcon;
-    obj3.action = project.onRemix;
-    items1.push(obj3);
+  let intl3 = project(muted[7]).intl;
+  const tmp17 = require("module_3723");
+  if (muted) {
+    let fwSfWU = tmp17.ZTkrp3;
+    let tmp18 = importDefault;
+  } else {
+    fwSfWU = tmp17.fwSfWU;
+    tmp18 = importDefault;
   }
-  const obj4 = { label: null, IconComponent: null, action: null };
-  const intl4 = project(1115).intl;
-  obj4.label = intl4.string(_modDef3714["7iamDC"]);
-  obj4.IconComponent = project(4790).DownloadIcon;
-  obj4.action = function action() {
-    if (dependencyMap != null) {
+  let obj3 = { label: intl3.string(fwSfWU), IconComponent: null, action: null };
+  if (muted) {
+    let BellSlashIcon = tmp14(muted[13]).BellIcon;
+  } else {
+    BellSlashIcon = tmp14(muted[14]).BellSlashIcon;
+  }
+  obj3.IconComponent = BellSlashIcon;
+  obj3.action = function action() {
+    return vibegrationsProjectMute.setVibegrationsProjectMuted(project.id, !muted);
+  };
+  items1.push(obj3);
+  if (closure_6(project)) {
+    const obj4 = { label: null, IconComponent: null, action: null };
+    const intl4 = tmp14(muted[7]).intl;
+    obj4.label = intl4.string(tmp18(muted[8]).vPI794);
+    obj4.IconComponent = tmp14(muted[16]).RemixIcon;
+    obj4.action = project.onRemix;
+    items1.push(obj4);
+  }
+  const obj5 = { label: null, IconComponent: null, action: null };
+  const intl5 = tmp14(muted[7]).intl;
+  obj5.label = intl5.string(tmp18(muted[8])["7iamDC"]);
+  obj5.IconComponent = project(muted[17]).DownloadIcon;
+  obj5.action = function action() {
+    if (asyncGeneratorStep != null) {
       tmp();
     }
     React4(project.id);
     const intl = util.intl;
-    hasOwnProperty(project.id, intl.string(_modDef3714["2ejwtJ"]));
+    hasOwnProperty(project.id, intl.string(_modDef3723["2ejwtJ"]));
   };
-  items1.push(obj4);
+  items1.push(obj5);
   if (tmp) {
-    const obj5 = { label: null, IconComponent: null, action: null };
-    const intl5 = tmp18(1115).intl;
-    obj5.label = intl5.string(_modDef3714.lf8HqE);
-    obj5.IconComponent = tmp18(15304).FileUpIcon;
-    obj5.action = function action() {
+    const obj6 = { label: null, IconComponent: null, action: null };
+    const intl6 = tmp14(muted[7]).intl;
+    obj6.label = intl6.string(tmp18(muted[8]).lf8HqE);
+    obj6.IconComponent = tmp14(muted[18]).FileUpIcon;
+    obj6.action = function action() {
       (function importIntoProject() {
         const self = this;
         const apply = closure_1_9.apply;
@@ -203,94 +227,94 @@ export const vibegrationsProjectActions = function vibegrationsProjectActions(pr
           applyArgumentsResult = apply(self, arguments);
         }
         return applyArgumentsResult;
-      })(project, dependencyMap).catch(() => {
-        const intl = project(1115).intl;
-        project(4556).presentError(intl.string(closure_1_1(3714)["02GpNr"]));
+      })(project, asyncGeneratorStep).catch(() => {
+        const intl = project(1126).intl;
+        project(4567).presentError(intl.string(closure_1_1(3723)["02GpNr"]));
       });
     };
-    items1.push(obj5);
-  }
-  if (null != onConnectTool) {
-    const obj6 = { label: null, IconComponent: null, action: null };
-    const intl6 = tmp18(1115).intl;
-    obj6.label = intl6.string(_modDef3714["3qelzD"]);
-    obj6.IconComponent = tmp18(16488).LinkPlusIcon;
-    obj6.action = onConnectTool;
     items1.push(obj6);
   }
-  if (null != onVersionHistory) {
+  if (null != onConnectTool) {
     const obj7 = { label: null, IconComponent: null, action: null };
-    const intl7 = tmp18(1115).intl;
-    obj7.label = intl7.string(_modDef3714.jAWwzi);
-    obj7.IconComponent = tmp18(14850).UndoIcon;
-    obj7.action = onVersionHistory;
+    const intl7 = tmp14(muted[7]).intl;
+    obj7.label = intl7.string(tmp18(muted[8])["3qelzD"]);
+    obj7.IconComponent = tmp14(muted[19]).LinkPlusIcon;
+    obj7.action = onConnectTool;
     items1.push(obj7);
   }
-  if (null != onRestorePoints) {
+  if (null != onVersionHistory) {
     const obj8 = { label: null, IconComponent: null, action: null };
-    const intl8 = tmp18(1115).intl;
-    obj8.label = intl8.string(_modDef3714.FRjicO);
-    obj8.IconComponent = tmp18(8778).ServerIcon;
-    obj8.action = onRestorePoints;
+    const intl8 = tmp14(muted[7]).intl;
+    obj8.label = intl8.string(tmp18(muted[8]).jAWwzi);
+    obj8.IconComponent = tmp14(muted[20]).UndoIcon;
+    obj8.action = onVersionHistory;
     items1.push(obj8);
   }
-  const obj9 = { label: null, IconComponent: null, action: null };
-  const intl9 = tmp18(1115).intl;
-  obj9.label = intl9.string(project(1115).t.WqhZss);
-  obj9.IconComponent = project(4784).LinkIcon;
-  obj9.action = function action() {
+  if (null != onRestorePoints) {
+    const obj9 = { label: null, IconComponent: null, action: null };
+    const intl9 = tmp14(muted[7]).intl;
+    obj9.label = intl9.string(tmp18(muted[8]).FRjicO);
+    obj9.IconComponent = tmp14(muted[21]).ServerIcon;
+    obj9.action = onRestorePoints;
+    items1.push(obj9);
+  }
+  const obj10 = { label: null, IconComponent: null, action: null };
+  const intl10 = tmp14(muted[7]).intl;
+  obj10.label = intl10.string(project(muted[7]).t.WqhZss);
+  obj10.IconComponent = project(muted[22]).LinkIcon;
+  obj10.action = function action() {
     const obj = ClipboardUtils;
     obj.copy(ChannelUtils.getChannelPermalink(importDefault, StaticChannelRoute.VIBEGRATIONS, project.id));
     ToastUtils.presentLinkCopied();
   };
-  items1.push(obj9);
-  const obj10 = { label: null, IconComponent: null, action: null };
-  const intl10 = tmp18(1115).intl;
-  obj10.label = intl10.string(_modDef3714.b4TqpT);
-  obj10.IconComponent = project(10285).IdIcon;
-  obj10.action = function action() {
+  items1.push(obj10);
+  const obj11 = { label: null, IconComponent: null, action: null };
+  const intl11 = tmp14(muted[7]).intl;
+  obj11.label = intl11.string(tmp18(muted[8]).b4TqpT);
+  obj11.IconComponent = project(muted[25]).IdIcon;
+  obj11.action = function action() {
     ClipboardUtils.copy(project.id);
     const obj3 = { key: "VIBEGRATIONS_PROJECT_ID_COPIED", content: null, IconComponent: null };
     const intl = util.intl;
-    obj3.content = intl.string(_modDef3714.WOKsTg);
+    obj3.content = intl.string(_modDef3723.WOKsTg);
     obj3.IconComponent = CopyIcon.CopyIcon;
     ToastActionCreatorsDefault.open(obj3);
   };
-  items1.push(obj10);
+  items1.push(obj11);
   let tmp28 = tmp;
   if (tmp) {
     tmp28 = null != onOpenSettings;
   }
   if (tmp28) {
-    const obj11 = { label: null, IconComponent: null, action: null };
-    const intl11 = tmp18(1115).intl;
-    obj11.label = intl11.string(_modDef3714["xhcY+n"]);
-    obj11.IconComponent = tmp18(6985).SettingsIcon;
-    obj11.action = onOpenSettings;
-    items1.push(obj11);
+    const obj12 = { label: null, IconComponent: null, action: null };
+    const intl12 = tmp14(muted[7]).intl;
+    obj12.label = intl12.string(tmp18(muted[8])["xhcY+n"]);
+    obj12.IconComponent = tmp14(muted[28]).SettingsIcon;
+    obj12.action = onOpenSettings;
+    items1.push(obj12);
   }
   if (tmp) {
-    const obj12 = { label: null, IconComponent: null, destructive: true, action: null };
-    const intl12 = tmp18(1115).intl;
-    obj12.label = intl12.string(tmp18(1115).t.oyYWHE);
-    obj12.IconComponent = tmp18(4799).TrashIcon;
-    obj12.action = function action() {
+    const obj13 = { label: null, IconComponent: null, destructive: true, action: null };
+    const intl13 = tmp14(muted[7]).intl;
+    obj13.label = intl13.string(tmp14(muted[7]).t.oyYWHE);
+    obj13.IconComponent = tmp14(muted[29]).TrashIcon;
+    obj13.action = function action() {
       const obj2 = { key: "VibegrationsProjectDelete", title: null, content: null, confirmText: null, onConfirm: null };
       let intl = util.intl;
-      obj2.title = intl.formatToPlainString(_modDef3714.ZokHVz, { name: project.name });
+      obj2.title = intl.formatToPlainString(_modDef3723.ZokHVz, { name: project.name });
       const intl2 = util.intl;
-      obj2.content = intl2.string(_modDef3714.NmF939);
+      obj2.content = intl2.string(_modDef3723.NmF939);
       const intl3 = util.intl;
       obj2.confirmText = intl3.string(util.t.oyYWHE);
       obj2.onConfirm = function onConfirm() {
-        const result = project(8687).deleteProjectInBackground(id.id, () => {
-          const intl = id(1115).intl;
-          return id(4556).presentError(intl.string(closure_1_1(3714).tqKZCi));
+        const result = project(muted[30]).deleteProjectInBackground(id.id, () => {
+          const intl = id(1126).intl;
+          return id(4567).presentError(intl.string(closure_1_1(3723).tqKZCi));
         });
       };
       AlertModal.showConfirmModal(obj2);
     };
-    items1.push(obj12);
+    items1.push(obj13);
   }
   return items1;
 };

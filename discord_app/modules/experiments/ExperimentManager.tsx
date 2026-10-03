@@ -1,11 +1,11 @@
-// === Module 4766: ExperimentManager ===
+// === Module 4781: ExperimentManager ===
 
-// Module 4766 (ExperimentManager)
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import ExperimentStore from "ExperimentStore" /* 4761 */;
+// Module 4781 (ExperimentManager)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import ExperimentStore from "ExperimentStore" /* 4776 */;
 
-const registerExperiment = fn(4761).registerExperiment;
-const ExperimentConstants = fn(4762);
+const registerExperiment = fn(4776).registerExperiment;
+const ExperimentConstants = fn(4777);
 ({ ExperimentTypes: closure_4, ExposureTypes } = ExperimentConstants);
 const ExperimentSystem = { LEGACY: "legacy", APEX: "apex" };
 const size = fn(2);

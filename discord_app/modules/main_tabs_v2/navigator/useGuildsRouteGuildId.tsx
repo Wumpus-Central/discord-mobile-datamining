@@ -1,12 +1,15 @@
-// === Module 15867: useGuildsRouteGuildId ===
+// === Module 15942: useGuildsRouteGuildId ===
 
-// Module 15867 (useGuildsRouteGuildId)
-import Link from "Link" /* 1486 */;
+// Module 15942 (useGuildsRouteGuildId)
+import c from "c" /* 576 */;
+import Link from "Link" /* 1491 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
-const result = size.fileFinishedImporting("modules/main_tabs_v2/navigator/useGuildsRouteGuildId.tsx");
-
-export default function useGuildsRouteGuildId() {
+let ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating.isReactCompilerEnabled();
+let ReactCompilerGating = ReactCompilerGating_mod;
+const fn = () => {
   const params = Link.useRoute().params;
   let guildId;
   if (params != null) {
@@ -14,7 +17,38 @@ export default function useGuildsRouteGuildId() {
   }
   return guildId;
 };
-export const useGuildsRouteGuildAndChannelId = function useGuildsRouteGuildAndChannelId() {
+const result1 = size.fileFinishedImporting("modules/main_tabs_v2/navigator/useGuildsRouteGuildId.tsx");
+
+export default fn;
+export const useGuildsRouteGuildAndChannelId = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(3);
+  const route = Link.useRoute();
+  let guildId;
+  if (route != null) {
+    const params = route.params;
+    if (params != null) {
+      guildId = params.guildId;
+    }
+  }
+  let channelId;
+  if (route != null) {
+    const params2 = route.params;
+    if (params2 != null) {
+      channelId = params2.channelId;
+    }
+  }
+  if (cResult[0] === guildId) {
+    if (cResult[1] === channelId) {
+      let tmp5 = cResult[2];
+    }
+    return tmp5;
+  }
+  const items = [guildId, channelId];
+  cResult[0] = guildId;
+  cResult[1] = channelId;
+  cResult[2] = items;
+  tmp5 = items;
+}) : (() => {
   const route = Link.useRoute();
   let guildId;
   if (route != null) {
@@ -33,4 +67,4 @@ export const useGuildsRouteGuildAndChannelId = function useGuildsRouteGuildAndCh
   }
   items[1] = channelId;
   return items;
-};
+});

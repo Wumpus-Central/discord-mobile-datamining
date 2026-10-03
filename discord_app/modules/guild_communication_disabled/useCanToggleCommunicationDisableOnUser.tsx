@@ -1,25 +1,26 @@
-// === Module 8898: useCanToggleCommunicationDisableOnUser ===
+// === Module 8926: useCanToggleCommunicationDisableOnUser ===
 
-// Module 8898 (useCanToggleCommunicationDisableOnUser)
-import Constants from "Constants" /* 1074 */;
-import GuildRecord from "GuildRecord" /* 2062 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4503 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import PermissionStore from "PermissionStore" /* 4498 */;
-import UserStore from "UserStore" /* 1372 */;
+// Module 8926 (useCanToggleCommunicationDisableOnUser)
+import Constants from "Constants" /* 1085 */;
+import GuildRecord from "GuildRecord" /* 2070 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4514 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import PermissionStore from "PermissionStore" /* 4509 */;
+import UserStore from "UserStore" /* 1377 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
-function canToggleCommunicationDisableOnUser(id, id2) {
+function canToggleCommunicationDisableOnUser(id, id1) {
   let tmp = items;
   if (items === undefined) {
     items = [UserStore, GuildStore, PermissionStore];
     tmp = items;
   }
   [obj, obj2, obj3] = tmp;
-  const guild = obj2.getGuild(id);
-  const user = obj.getUser(id2);
+  guild = obj2.getGuild(id);
+  const user = obj.getUser(id1);
   let tmp6 = null != guild && null != user;
   if (tmp6) {
     const isNonUserBotResult = user.isNonUserBot();
@@ -44,7 +45,38 @@ const isGuildOwner = GuildRecord.isGuildOwner;
 const Permissions = Constants.Permissions;
 const result = size.fileFinishedImporting("modules/guild_communication_disabled/useCanToggleCommunicationDisableOnUser.tsx");
 
-export default function useCanToggleCommunicationDisableOnUser(arg0, arg1) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+  _require = arg0;
+  closure_1 = arg1;
+  const cResult = require("c").c(5);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    let items = [UserStore, GuildStore, PermissionStore];
+    cResult[0] = items;
+    let first = items;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] === arg0) {
+    if (cResult[2] === arg1) {
+      let tmp8 = cResult[3];
+      let tmp9 = cResult[4];
+    }
+    return tmp(504).useStateFromStores(first, tmp8, tmp9);
+  }
+  const fn = function c() {
+    const items = [UserStore, GuildStore, PermissionStore];
+    return canToggleCommunicationDisableOnUser(closure_0, closure_1, items);
+  };
+  const items1 = [arg0, arg1];
+  cResult[1] = arg0;
+  cResult[2] = arg1;
+  cResult[3] = fn;
+  cResult[4] = items1;
+  tmp9 = items1;
+  tmp8 = fn;
+  const obj = require("c");
+  tmp = _require;
+}) : ((arg0, arg1) => {
   _require = arg0;
   closure_1 = arg1;
   let items = [UserStore, GuildStore, PermissionStore];
@@ -53,5 +85,5 @@ export default function useCanToggleCommunicationDisableOnUser(arg0, arg1) {
     const items = [UserStore, GuildStore, PermissionStore];
     return canToggleCommunicationDisableOnUser(closure_0, closure_1, items);
   }, items1);
-};
+});
 export { canToggleCommunicationDisableOnUser };

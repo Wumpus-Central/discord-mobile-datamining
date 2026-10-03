@@ -1,13 +1,13 @@
-// === Module 17188: ConsoleVoiceUpsellStore ===
+// === Module 17235: ConsoleVoiceUpsellStore ===
 
-// Module 17188 (ConsoleVoiceUpsellStore)
-import module_560 from "module_560" /* 560 */;
+// Module 17235 (ConsoleVoiceUpsellStore)
+import module_570 from "module_570" /* 570 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
 let closure_2 = Object.freeze({ voiceUpsellDismissed: false, showSparkles: false });
-const useConsoleVoiceUpsellStore = module_560.create(() => closure_2);
+const useConsoleVoiceUpsellStore = module_570.create(() => closure_2);
 const result = size.fileFinishedImporting("modules/game_console/ConsoleVoiceUpsellStore.tsx");
 
 export { useConsoleVoiceUpsellStore };

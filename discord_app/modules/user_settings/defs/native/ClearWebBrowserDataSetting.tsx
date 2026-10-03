@@ -1,20 +1,20 @@
-// === Module 15242: ClearWebBrowserDataSetting ===
+// === Module 15298: ClearWebBrowserDataSetting ===
 
-// Module 15242 (ClearWebBrowserDataSetting)
-import ConstantsIOS from "ConstantsIOS" /* 1094 */;
-import util from "util" /* 1115 */;
-import PlatformUtils from "PlatformUtils" /* 1364 */;
-import BrowserManager from "BrowserManager" /* 4806 */;
+// Module 15298 (ClearWebBrowserDataSetting)
+import ConstantsIOS from "ConstantsIOS" /* 1105 */;
+import util from "util" /* 1126 */;
+import PlatformUtils from "PlatformUtils" /* 1369 */;
+import BrowserManager from "BrowserManager" /* 4851 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-const SettingBuilders = fn(11215);
+const SettingBuilders = fn(11129);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.HNqvOh);
   },
-  parent: fn(7590).MobileUserSettings.WEB_BROWSER,
+  parent: fn(7634).MobileUserSettings.WEB_BROWSER,
   variant: "danger",
   onPress: function showClearWebBrowserDataAlert() {
     const obj2 = { key: "clear-web-browser-data", title: null, content: null, confirmText: null, onConfirm: null };
@@ -35,7 +35,7 @@ const pressable = SettingBuilders.createPressable({
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -51,7 +51,7 @@ const pressable = SettingBuilders.createPressable({
             } else {
               v1 = 1;
               dependencyMap = 1;
-              const obj5 = { value: tmp4(4806).browserManagerClearWebsiteData(), done: false };
+              const obj5 = { value: tmp4(4851).browserManagerClearWebsiteData(), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -63,11 +63,11 @@ const pressable = SettingBuilders.createPressable({
             return obj;
           } else {
             const obj7 = { key: "web-browser-data-cleared", content: null };
-            const intl = tmp4(1115).intl;
-            obj7.content = intl.string(tmp4(1115).t["zaEQz+"]);
-            v1(4557).open(obj7);
+            const intl = tmp4(1126).intl;
+            obj7.content = intl.string(tmp4(1126).t["zaEQz+"]);
+            v1(4568).open(obj7);
             dependencyMap = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp7) {
           dependencyMap = tmp;

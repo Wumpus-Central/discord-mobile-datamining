@@ -1,11 +1,11 @@
-// === Module 7740: transformNativeMarkupMention ===
+// === Module 7784: transformNativeMarkupMention ===
 
-// Module 7740 (transformNativeMarkupMention)
-import MarkupTypes from "MarkupTypes" /* 5486 */;
-import MarkupRules from "MarkupRules" /* 5488 */;
-import MarkupChannelMentionRule from "MarkupChannelMentionRule" /* 5497 */;
-import PlatformMarkupRules from "PlatformMarkupRules" /* 5518 */;
-import StaticMentionRoutes from "StaticMentionRoutes" /* 7741 */;
+// Module 7784 (transformNativeMarkupMention)
+import MarkupTypes from "MarkupTypes" /* 5785 */;
+import MarkupRules from "MarkupRules" /* 5787 */;
+import MarkupChannelMentionRule from "MarkupChannelMentionRule" /* 5796 */;
+import PlatformMarkupRules from "PlatformMarkupRules" /* 5811 */;
+import StaticMentionRoutes from "StaticMentionRoutes" /* 7785 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/markup_v2/native/transformNativeMarkupMention.tsx");
@@ -27,9 +27,9 @@ export const transformNativeMention = function transformNativeMention(value, all
     obj5.id = str1;
     return MarkupRules.hydrateUserMention(obj5, allowGameMentions);
   } else if ("everyone" === type) {
-    return MarkupRules.hydrateUserMention({ fullMatch: "@everyone", id: "paddingHorizontal", everyoneOrHere: "Array" }, allowGameMentions);
+    return MarkupRules.hydrateUserMention({ fullMatch: "@everyone", id: "application", everyoneOrHere: null }, allowGameMentions);
   } else if ("here" === type) {
-    return MarkupRules.hydrateUserMention({ fullMatch: "@here", id: "paddingHorizontal", everyoneOrHere: "Array" }, allowGameMentions);
+    return MarkupRules.hydrateUserMention({ fullMatch: "@here", id: "application", everyoneOrHere: null }, allowGameMentions);
   } else if ("role" === type) {
     return MarkupRules.hydrateRoleMention(value.value.toString(), allowGameMentions);
   } else if ("game" === type) {

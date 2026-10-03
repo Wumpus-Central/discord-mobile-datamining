@@ -1,29 +1,29 @@
-// === Module 6018: GuildActionCreators ===
+// === Module 5705: GuildActionCreators ===
 
-// Module 6018 (GuildActionCreators)
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import router_utils from "router_utils" /* 1101 */;
-import util from "util" /* 1115 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1249 */;
-import HTTPUtils from "HTTPUtils" /* 1271 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5038 */;
-import AgeGateUtils from "AgeGateUtils" /* 5055 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5387 */;
-import LurkerActionCreators from "LurkerActionCreators" /* 6927 */;
-import GuildTemplateTooltipActionCreatorsDefault from "GuildTemplateTooltipActionCreators" /* 6928 */;
-import getPreviousSafeRouteForNsfwReturnDefault from "getPreviousSafeRouteForNsfwReturn" /* 6932 */;
-import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6934 */;
+// Module 5705 (GuildActionCreators)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import router_utils from "router_utils" /* 1112 */;
+import util from "util" /* 1126 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5083 */;
+import AgeGateUtils from "AgeGateUtils" /* 5100 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5707 */;
+import LurkerActionCreators from "LurkerActionCreators" /* 6825 */;
+import GuildTemplateTooltipActionCreatorsDefault from "GuildTemplateTooltipActionCreators" /* 6826 */;
+import getPreviousSafeRouteForNsfwReturnDefault from "getPreviousSafeRouteForNsfwReturn" /* 6830 */;
+import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6832 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import BulkBanStore from "BulkBanStore" /* 6019 */;
+import BulkBanStore from "BulkBanStore" /* 5706 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ExpandedGuildFolderStore from "ExpandedGuildFolderStore" /* 5937 */;
-import GuildChannelStore from "GuildChannelStore" /* 4496 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4684 */;
-import UserStore from "UserStore" /* 1372 */;
+import ExpandedGuildFolderStore from "ExpandedGuildFolderStore" /* 5617 */;
+import GuildChannelStore from "GuildChannelStore" /* 4507 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
+import UserStore from "UserStore" /* 1377 */;
 
 const require = globalThis.__r;
 
@@ -51,7 +51,7 @@ let closure_26 = async function _joinGuild(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -87,7 +87,7 @@ let closure_26 = async function _joinGuild(arg0) {
           closure_131_12 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "flex", done: null };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -321,7 +321,7 @@ function waitForGuild(id) {
   return new Promise((arg0) => {
     closure_0 = arg0;
     return GuildStore.addConditionalChangeListener(() => {
-      const guild = GuildStore.getGuild(closure_0);
+      guild = GuildStore.getGuild(closure_0);
       let flag = null == guild;
       if (!flag) {
         closure_0(guild);
@@ -332,9 +332,9 @@ function waitForGuild(id) {
   });
 }
 let closure_4 = ["icon", "unicodeEmoji"];
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AbortCodes: closure_15, Endpoints: closure_16, JoinGuildSources: closure_17, UserFlags: closure_18, MAX_USER_GUILDS: closure_19, MAX_USER_GUILDS_PREMIUM: closure_20, Routes: closure_21, AnalyticEvents: closure_22 } = Constants);
-const AgeGateSource = fn(1099).AgeGateSource;
+const AgeGateSource = fn(1110).AgeGateSource;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/GuildActionCreators.tsx");
 
@@ -350,8 +350,8 @@ export default {
     return applyArgumentsResult;
   },
   waitForGuild,
-  transitionToGuildSync(id, arg1, ROLE_SUBSCRIPTIONS, messageId) {
-    closure_0 = id;
+  transitionToGuildSync(guildId, arg1, ROLE_SUBSCRIPTIONS, messageId) {
+    closure_0 = guildId;
     closure_1 = arg1;
     closure_2 = ROLE_SUBSCRIPTIONS;
     closure_3 = messageId;
@@ -366,7 +366,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -441,7 +441,7 @@ export default {
             return obj;
           } else {
             c5 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp36) {
           c5 = tmp;
@@ -477,12 +477,12 @@ export default {
     const request = { url: value2.GUILD_MEMBER(id, id2), body: { flags }, oldFormErrors: true, rejectWithError: true };
     HTTP.patch(request);
   },
-  kickUser(id, id1, c0, moderator_report_id) {
-    const _require = id;
+  kickUser(id, id1, current, moderator_report_id) {
+    _require = id;
     const userId = id1;
     const HTTP = require("HTTPUtils").HTTP;
-    const request = { url: closure_16.GUILD_MEMBER(id, id1), query: { reason, moderator_report_id }, oldFormErrors: true, rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
-    const obj = { reason, moderator_report_id };
+    const request = { url: closure_16.GUILD_MEMBER(id, id1), query: { reason: current, moderator_report_id }, oldFormErrors: true, rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
+    const obj = { reason: current, moderator_report_id };
     const obj3 = require("HTTPUtils");
     return HTTP.del(request).then(() => {
       DispatcherDefault.dispatch({ type: "GUILD_MEMBER_REMOVE_LOCAL", guildId, userId });
@@ -515,9 +515,9 @@ export default {
     request.rejectWithError = HTTPUtils.rejectWithMigratedError();
     return obj.patch(request);
   },
-  banUser(id, id2, value, c1, moderator_report_id) {
+  banUser(id, id2, value, current, moderator_report_id) {
     const HTTP = HTTPUtils.HTTP;
-    const request = { url: value2.GUILD_BAN(id, id2), reason: importDefault, body: { delete_message_seconds: value, moderator_report_id }, oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const request = { url: value2.GUILD_BAN(id, id2), reason: current, body: { delete_message_seconds: value, moderator_report_id }, oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
     return HTTP.put(request);
   },
   unbanUser(id, id2) {
@@ -547,7 +547,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -572,9 +572,9 @@ export default {
             if (1 === tmp7) {
               dependencyMap = 0;
               const obj6 = { type: "GUILD_BULK_BAN_FAILED", guildId: closure_128_0 };
-              v2(573).dispatch(obj6);
+              v2(584).dispatch(obj6);
               c4 = 3;
-              const obj4 = v2(573);
+              const obj4 = v2(584);
             } else if (arg0 === 1) {
               c4 = 3;
               throw value;
@@ -585,13 +585,13 @@ export default {
               return obj7;
             } else if (!BulkBanStore.consumeCompletedBeforeStarted(closure_128_0, id.getId())) {
               const obj8 = { type: "GUILD_BULK_BAN_STARTED", guildId: closure_128_0 };
-              v2(573).dispatch(obj8);
+              v2(584).dispatch(obj8);
               dependencyMap = 0;
-              const obj = v2(573);
+              const obj = v2(584);
             }
             dependencyMap = 0;
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp25) {
           closure_2 = tmp25;
@@ -629,7 +629,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -649,8 +649,8 @@ export default {
               let body;
               let stringResult = closure_1;
               if (null == closure_1) {
-                const intl = color(1115).intl;
-                stringResult = intl.string(color(1115).t.QBMHvB);
+                const intl = color(1126).intl;
+                stringResult = intl.string(color(1126).t.QBMHvB);
               }
               const obj5 = { name: stringResult, color: null, colors: null, permissions: null };
               color = closure_2;
@@ -667,10 +667,10 @@ export default {
                 obj6 = { primary_color, secondary_color: null, tertiary_color: null };
               }
               obj5.colors = obj6;
-              obj5.permissions = primary_color(4503).NONE;
+              obj5.permissions = primary_color(4514).NONE;
               c6 = 1;
-              const HTTP = color(1271).HTTP;
-              const request = { url: closure_1_16.GUILD_ROLES(closure_0), oldFormErrors: true, body: obj5, rejectWithError: color(1271).rejectWithMigratedError() };
+              const HTTP = color(1282).HTTP;
+              const request = { url: closure_1_16.GUILD_ROLES(closure_0), oldFormErrors: true, body: obj5, rejectWithError: color(1282).rejectWithMigratedError() };
               c7 = 2;
               c8 = 1;
               const obj7 = { value: HTTP.post(request), done: false };
@@ -679,7 +679,7 @@ export default {
           } else if (1 === tmp7) {
             c6 = 0;
             closure_131_2 = closure_5;
-            const tmp30 = new obj6(4540)(closure_131_2);
+            const tmp30 = new obj6(4551)(closure_131_2);
             throw tmp30;
           } else if (arg0 === 1) {
             c8 = 3;
@@ -692,14 +692,14 @@ export default {
           } else {
             closure_131_0 = value;
             body = closure_131_0.body;
-            const deserializer = primary_color(1086);
+            const deserializer = primary_color(1097);
             body.permissions = deserializer.deserialize(body.permissions);
             if (!closure_132_4) {
               const obj10 = { type: "GUILD_SETTINGS_ROLE_SELECT", roleId: closure_131_0.body.id, role: body };
-              obj6(573).dispatch(obj10);
-              const obj = obj6(573);
+              obj6(584).dispatch(obj10);
+              const obj = obj6(584);
             }
-            const result = obj6(6928).checkGuildTemplateDirty(closure_132_0);
+            const result = obj6(6826).checkGuildTemplateDirty(closure_132_0);
             c6 = 0;
             c8 = 3;
             const obj11 = { value: body, done: true };
@@ -728,17 +728,17 @@ export default {
       } else if (icon != null) {
         icon.startsWith("data:");
       }
-      const HTTP = tmp5(1271).HTTP;
+      const HTTP = tmp5(1282).HTTP;
       const request = { url: closure_1_16.GUILD_ROLE(tmp5, tmp2), body: null, oldFormErrors: true, rejectWithError: null };
       const obj4 = {};
       const merged = Object.assign(_objectWithoutProperties(closure_2, closure_1_4));
       obj4.icon = tmp13;
       obj4.unicode_emoji = closure_2.unicodeEmoji;
       request.body = obj4;
-      request.rejectWithError = tmp5(1271).rejectWithMigratedError();
+      request.rejectWithError = tmp5(1282).rejectWithMigratedError();
       await HTTP.patch(request);
       closure_128_0 = value;
-      const result = tmp2(6928).checkGuildTemplateDirty(closure_129_0);
+      const result = tmp2(6826).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
     })();
   },
@@ -748,7 +748,7 @@ export default {
     return HTTP.patch(request);
   },
   deleteRole(id, id2) {
-    const _require = id;
+    _require = id;
     const HTTP = require("HTTPUtils").HTTP;
     const obj = { url: closure_16.GUILD_ROLE(id, id2), oldFormErrors: true, rejectWithError: true };
     HTTP.del({ url: closure_16.GUILD_ROLE(id, id2), oldFormErrors: true, rejectWithError: true }).then(() => {
@@ -760,11 +760,11 @@ export default {
     closure_1 = arg1;
     return (async () => {
       const body = tmp2;
-      const HTTP = tmp5(1271).HTTP;
-      const request = { url: closure_1_16.GUILD_CHANNELS(tmp5), body, oldFormErrors: true, rejectWithError: tmp5(1271).rejectWithMigratedError() };
+      const HTTP = tmp5(1282).HTTP;
+      const request = { url: closure_1_16.GUILD_CHANNELS(tmp5), body, oldFormErrors: true, rejectWithError: tmp5(1282).rejectWithMigratedError() };
       await HTTP.patch(request);
       closure_128_0 = value;
-      const result = body(6928).checkGuildTemplateDirty(closure_129_0);
+      const result = body(6826).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
     })();
   },
@@ -773,11 +773,11 @@ export default {
     closure_1 = arg1;
     return (async () => {
       const body = tmp2;
-      const HTTP = tmp5(1271).HTTP;
-      const request = { url: closure_1_16.GUILD_ROLES(tmp5), body, oldFormErrors: true, rejectWithError: tmp5(1271).rejectWithMigratedError() };
+      const HTTP = tmp5(1282).HTTP;
+      const request = { url: closure_1_16.GUILD_ROLES(tmp5), body, oldFormErrors: true, rejectWithError: tmp5(1282).rejectWithMigratedError() };
       await HTTP.patch(request);
       closure_128_0 = value;
-      const result = body(6928).checkGuildTemplateDirty(closure_129_0);
+      const result = body(6826).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
     })();
   },
@@ -888,19 +888,19 @@ export default {
         if (null != defaultChannel) {
           if (!obj3.isChannelContentGated(defaultChannel)) {
             if (!tmp11Result.isChannelSpoilerGated(defaultChannel)) {
-              router_utils.transitionTo(__initData.CHANNEL(guildId, defaultChannel.id));
+              router_utils.transitionTo(guild.CHANNEL(guildId, defaultChannel.id));
               const tmp11Result2 = router_utils;
             }
             tmp11Result = SpoilerChannelUtils;
           }
           obj3 = AgeGateUtils;
         }
-        router_utils.transitionTo(__initData.FRIENDS, { navigationReplace: false, openChannel: true });
+        router_utils.transitionTo(guild.FRIENDS, { navigationReplace: false, openChannel: true });
       } else {
-        router_utils.transitionTo(__initData.FRIENDS, { navigationReplace: false, openChannel: true });
+        router_utils.transitionTo(guild.FRIENDS, { navigationReplace: false, openChannel: true });
       }
     } else {
-      router_utils.transitionTo(__initData.CHANNEL(tmp2.guildId, tmp2.channelId));
+      router_utils.transitionTo(guild.CHANNEL(tmp2.guildId, tmp2.channelId));
     }
   },
   spoilerAgree(channelId) {
@@ -912,9 +912,9 @@ export default {
   escapeToDefaultChannel(guildId) {
     const defaultChannel = GuildChannelStore.getDefaultChannel(guildId);
     if (null != defaultChannel) {
-      router_utils.transitionTo(__initData.CHANNEL(guildId, defaultChannel.id));
+      router_utils.transitionTo(guild.CHANNEL(guildId, defaultChannel.id));
     } else {
-      router_utils.transitionTo(__initData.FRIENDS);
+      router_utils.transitionTo(guild.FRIENDS);
     }
   },
   fetchApplications(arg0, arg1) {
@@ -931,7 +931,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -946,12 +946,12 @@ export default {
               return obj3;
             } else {
               let body;
-              const obj4 = { url: closure_1_16.GUILD_APPLICATIONS(tmp5), oldFormErrors: true, rejectWithError: tmp5(1271).rejectWithMigratedError() };
+              const obj4 = { url: closure_1_16.GUILD_APPLICATIONS(tmp5), oldFormErrors: true, rejectWithError: tmp5(1282).rejectWithMigratedError() };
               if (null != tmp2) {
                 const obj5 = { channel_id: tmp23 };
                 obj4.query = obj5;
               }
-              const HTTP = tmp5(1271).HTTP;
+              const HTTP = tmp5(1282).HTTP;
               c2 = 1;
               dependencyMap = 1;
               const obj6 = { value: HTTP.get(obj4), done: false };
@@ -967,9 +967,9 @@ export default {
           } else {
             body = value.body;
             const obj8 = { type: "GUILD_APPLICATIONS_FETCH_SUCCESS", guildId: closure_129_0, applications: body };
-            tmp2(573).dispatch(obj8);
+            tmp2(584).dispatch(obj8);
             dependencyMap = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp14) {
           dependencyMap = tmp;
@@ -996,7 +996,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -1014,14 +1014,14 @@ export default {
               if (null != after) {
                 obj5.after = after;
               }
-              const HTTP = v3(1271).HTTP;
-              const request = { url: closure_1_16.GUILD_BANS(guildId), oldFormErrors: true, query: obj5, rejectWithError: v3(1271).rejectWithMigratedError() };
+              const HTTP = v3(1282).HTTP;
+              const request = { url: closure_1_16.GUILD_BANS(guildId), oldFormErrors: true, query: obj5, rejectWithError: v3(1282).rejectWithMigratedError() };
               value = HTTP.get(request);
               c1 = 1;
               v3 = 1;
               const obj6 = {
                 value: value.then((bans) => {
-                          c1(573).dispatch({ type: "GUILD_SETTINGS_LOADED_BANS_BATCH", bans: bans.body, guildId });
+                          c1(584).dispatch({ type: "GUILD_SETTINGS_LOADED_BANS_BATCH", bans: bans.body, guildId });
                         }),
                 done: false
               };
@@ -1036,7 +1036,7 @@ export default {
             return obj;
           } else {
             v3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp9) {
           v3 = tmp;
@@ -1060,7 +1060,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -1089,14 +1089,14 @@ export default {
               if (tmp6) {
                 obj5.query = query;
               }
-              const HTTP = v3(1271).HTTP;
-              const request = { url: closure_1_16.GUILD_BANS_SEARCH(guildId), oldFormErrors: true, query: obj5, rejectWithError: v3(1271).rejectWithMigratedError() };
+              const HTTP = v3(1282).HTTP;
+              const request = { url: closure_1_16.GUILD_BANS_SEARCH(guildId), oldFormErrors: true, query: obj5, rejectWithError: v3(1282).rejectWithMigratedError() };
               value = HTTP.get(request);
               c1 = 1;
               v3 = 1;
               const obj6 = {
                 value: value.then((bans) => {
-                          c1(573).dispatch({ type: "GUILD_SETTINGS_LOADED_BANS_BATCH", bans: bans.body, userIds, guildId });
+                          c1(584).dispatch({ type: "GUILD_SETTINGS_LOADED_BANS_BATCH", bans: bans.body, userIds, guildId });
                         }),
                 done: false
               };
@@ -1111,7 +1111,7 @@ export default {
             return obj;
           } else {
             v3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp11) {
           v3 = tmp;
@@ -1133,7 +1133,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -1147,8 +1147,8 @@ export default {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              const HTTP = v3(1271).HTTP;
-              const obj4 = { url: closure_1_16.GUILD_BANS(closure_0), oldFormErrors: true, rejectWithError: v3(1271).rejectWithMigratedError() };
+              const HTTP = v3(1282).HTTP;
+              const obj4 = { url: closure_1_16.GUILD_BANS(closure_0), oldFormErrors: true, rejectWithError: v3(1282).rejectWithMigratedError() };
               value = HTTP.get(obj4);
               c1 = 1;
               v3 = 1;
@@ -1169,7 +1169,7 @@ export default {
             return obj;
           } else {
             v3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp5) {
           v3 = tmp;
@@ -1178,10 +1178,10 @@ export default {
       }
     })();
   },
-  fetchGuildRoleConnectionsEligibility(guildId, id) {
-    const _require = id;
+  fetchGuildRoleConnectionsEligibility(guildId, roleId) {
+    _require = roleId;
     const HTTP = require("HTTPUtils").HTTP;
-    const obj = { url: closure_16.GUILD_ROLE_CONNECTIONS_ELIGIBILITY(guildId, id), oldFormErrors: true, rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
+    const obj = { url: closure_16.GUILD_ROLE_CONNECTIONS_ELIGIBILITY(guildId, roleId), oldFormErrors: true, rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
     value = HTTP.get(obj);
     return value.then((body) => {
       body = body.body;
@@ -1203,7 +1203,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -1217,8 +1217,8 @@ export default {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              const HTTP = v3(1271).HTTP;
-              const obj4 = { url: closure_1_16.GUILD_ROLE_CONNECTIONS_ASSIGN(closure_0, closure_1), oldFormErrors: true, rejectWithError: v3(1271).rejectWithMigratedError() };
+              const HTTP = v3(1282).HTTP;
+              const obj4 = { url: closure_1_16.GUILD_ROLE_CONNECTIONS_ASSIGN(closure_0, closure_1), oldFormErrors: true, rejectWithError: v3(1282).rejectWithMigratedError() };
               c1 = 1;
               v3 = 1;
               const obj5 = { value: HTTP.post(obj4), done: false };
@@ -1233,7 +1233,7 @@ export default {
             return obj;
           } else {
             v3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp5) {
           v3 = tmp;
@@ -1256,7 +1256,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -1270,8 +1270,8 @@ export default {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              const HTTP = v3(1271).HTTP;
-              const obj4 = { url: closure_1_16.GUILD_ROLE_CONNECTIONS_UNASSIGN(closure_0, closure_1), oldFormErrors: true, rejectWithError: v3(1271).rejectWithMigratedError() };
+              const HTTP = v3(1282).HTTP;
+              const obj4 = { url: closure_1_16.GUILD_ROLE_CONNECTIONS_UNASSIGN(closure_0, closure_1), oldFormErrors: true, rejectWithError: v3(1282).rejectWithMigratedError() };
               c1 = 1;
               v3 = 1;
               const obj5 = { value: HTTP.post(obj4), done: false };
@@ -1286,7 +1286,7 @@ export default {
             return obj;
           } else {
             v3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp5) {
           v3 = tmp;
@@ -1298,8 +1298,8 @@ export default {
   getGuildRoleConnectionsConfigurations(guildId) {
     closure_0 = guildId;
     return (async () => {
-      const HTTP = v3(1271).HTTP;
-      await HTTP.get({ url: closure_1_16.GUILD_ROLE_CONNECTIONS_CONFIGURATIONS(closure_0), oldFormErrors: true, rejectWithError: v3(1271).rejectWithMigratedError() });
+      const HTTP = v3(1282).HTTP;
+      await HTTP.get({ url: closure_1_16.GUILD_ROLE_CONNECTIONS_CONFIGURATIONS(closure_0), oldFormErrors: true, rejectWithError: v3(1282).rejectWithMigratedError() });
       return value.body;
     })();
   }

@@ -1,8 +1,8 @@
-// === Module 16673: CallChatToastsStore ===
+// === Module 16759: CallChatToastsStore ===
 
-// Module 16673 (CallChatToastsStore)
+// Module 16759 (CallChatToastsStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
 
 const obj = { toastsEnabledForChannel: {} };
 let closure_1 = obj;

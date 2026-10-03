@@ -1,16 +1,16 @@
-// === Module 5911: GuildVerificationStore ===
+// === Module 5570: GuildVerificationStore ===
 
-// Module 5911 (GuildVerificationStore)
+// Module 5570 (GuildVerificationStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import GuildRecord from "GuildRecord" /* 2062 */;
-import GuildMemberConstants from "GuildMemberConstants" /* 4484 */;
-import GuildMemberStore from "GuildMemberStore" /* 2107 */;
-import GuildRoleStore from "GuildRoleStore" /* 2101 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import UserStore from "UserStore" /* 1372 */;
-import Constants from "Constants" /* 1074 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import GuildRecord from "GuildRecord" /* 2070 */;
+import GuildMemberConstants from "GuildMemberConstants" /* 4495 */;
+import GuildMemberStore from "GuildMemberStore" /* 2112 */;
+import GuildRoleStore from "GuildRoleStore" /* 2106 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import UserStore from "UserStore" /* 1377 */;
+import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -19,7 +19,7 @@ function recomputeGuild(guildId) {
   _require = guildId;
   clearGuild(guildId);
   set.add(guildId);
-  const guild = GuildStore.getGuild(guildId);
+  guild = GuildStore.getGuild(guildId);
   const currentUser = UserStore.getCurrentUser();
   let tmp4 = null != guild;
   if (tmp4) {

@@ -1,6 +1,6 @@
-// === Module 1218: ExpressionPickerConstants ===
+// === Module 1229: ExpressionPickerConstants ===
 
-// Module 1218 (ExpressionPickerConstants)
+// Module 1229 (ExpressionPickerConstants)
 import size from "module_2" /* 2 */;
 
 const obj = { EMOJI: "emoji", GIF: "gif", STICKER: "sticker", SOUNDBOARD: "soundboard" };

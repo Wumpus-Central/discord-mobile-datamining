@@ -1,7 +1,7 @@
-// === Module 11326: GuildAutomodMessageActionCreators ===
+// === Module 11241: GuildAutomodMessageActionCreators ===
 
-// Module 11326 (GuildAutomodMessageActionCreators)
-import DispatcherDefault from "Dispatcher" /* 573 */;
+// Module 11241 (GuildAutomodMessageActionCreators)
+import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_automod/GuildAutomodMessageActionCreators.tsx");

@@ -1,8 +1,9 @@
-// === Module 15726: ReactCompilerSetting ===
+// === Module 15789: ReactCompilerSetting ===
 
-// Module 15726 (ReactCompilerSetting)
-import WrenchIcon from "WrenchIcon" /* 15328 */;
-import SettingBuilders from "SettingBuilders" /* 11215 */;
+// Module 15789 (ReactCompilerSetting)
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import WrenchIcon from "WrenchIcon" /* 15385 */;
+import SettingBuilders from "SettingBuilders" /* 11129 */;
 import size from "module_2" /* 2 */;
 
 const obj = {
@@ -12,10 +13,14 @@ const obj = {
   parent: null,
   IconComponent: WrenchIcon.WrenchIcon,
   useTrailing() {
-    return "Enabled";
+    let str = "Disabled";
+    if (obj.isReactCompilerEnabled()) {
+      str = "Enabled";
+    }
+    return str;
   },
   usePredicate() {
-    return false;
+    return ReactCompilerGating.isReactCompilerBuild();
   }
 };
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/ReactCompilerSetting.tsx");
@@ -27,9 +32,13 @@ export default SettingBuilders.createStatic({
   parent: null,
   IconComponent: WrenchIcon.WrenchIcon,
   useTrailing() {
-    return "Enabled";
+    let str = "Disabled";
+    if (obj.isReactCompilerEnabled()) {
+      str = "Enabled";
+    }
+    return str;
   },
   usePredicate() {
-    return false;
+    return ReactCompilerGating.isReactCompilerBuild();
   }
 });

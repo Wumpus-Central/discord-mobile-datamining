@@ -1,18 +1,19 @@
-// === Module 15323: CopyClientInfoSetting ===
+// === Module 15380: CopyClientInfoSetting ===
 
-// Module 15323 (CopyClientInfoSetting)
-import util from "util" /* 1115 */;
-import ToastUtils from "ToastUtils" /* 4556 */;
-import CopyIcon from "CopyIcon" /* 4788 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4809 */;
-import DeviceUtils from "DeviceUtils" /* 4821 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6756 */;
-import ClipboardUtils from "ClipboardUtils" /* 6796 */;
-import ActionSheet from "ActionSheet" /* 6804 */;
-import ActionSheetRow from "ActionSheetRow" /* 6806 */;
-import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11480 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 11178 */;
-import ClientInfoUtils from "ClientInfoUtils" /* 1363 */;
+// Module 15380 (CopyClientInfoSetting)
+import c from "c" /* 576 */;
+import util from "util" /* 1126 */;
+import ToastUtils from "ToastUtils" /* 4567 */;
+import CopyIcon from "CopyIcon" /* 4843 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
+import DeviceUtils from "DeviceUtils" /* 4866 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6644 */;
+import ClipboardUtils from "ClipboardUtils" /* 6688 */;
+import ActionSheetRow from "ActionSheetRow" /* 6697 */;
+import ActionSheet from "ActionSheet" /* 6701 */;
+import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11399 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11082 */;
+import ClientInfoUtils from "ClientInfoUtils" /* 1368 */;
 
 require = fn;
 function getClientInfo() {
@@ -64,7 +65,188 @@ function getClientInfo() {
   obj.releaseChannel = str10;
   return obj;
 }
-function ClientClientInfoActionSheet() {
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const Manifest = ClientInfoUtils.getConstants();
+const ReactCompilerGating = fn(558);
+let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(17);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    let obj2 = { title: null };
+    const intl = util.intl;
+    obj2.title = intl.string(util.t.Na2lF9);
+    const tmp6 = React4(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2);
+    cResult[0] = tmp6;
+    let first = tmp6;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
+    const intl2 = util.intl;
+    const stringResult = intl2.string(util.t.H66MEk);
+    const tmp11 = getClientInfo();
+    cResult[1] = stringResult;
+    cResult[2] = tmp11;
+    let tmp8 = tmp11;
+    let tmp7 = stringResult;
+  } else {
+    tmp7 = cResult[1];
+    tmp8 = cResult[2];
+  }
+  if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+    let obj3 = {
+      label: tmp7,
+      subLabel: tmp8.appVersion,
+      onPress() {
+          ClipboardUtils.copy(getClientInfo().appVersion);
+          const result = ToastUtils.presentCopiedToClipboard();
+        }
+    };
+    const tmp14 = React4(ActionSheetRow.ActionSheetRow, obj3);
+    cResult[3] = tmp14;
+    let tmp12 = tmp14;
+  } else {
+    tmp12 = cResult[3];
+  }
+  if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+    const intl3 = util.intl;
+    const stringResult1 = intl3.string(util.t.zuaWIt);
+    const tmp19 = getClientInfo();
+    cResult[4] = stringResult1;
+    cResult[5] = tmp19;
+    let tmp16 = tmp19;
+    let tmp15 = stringResult1;
+  } else {
+    tmp15 = cResult[4];
+    tmp16 = cResult[5];
+  }
+  if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
+    const obj4 = {
+      label: tmp15,
+      subLabel: tmp16.buildNumber,
+      onPress() {
+          ClipboardUtils.copy(getClientInfo().buildNumber);
+          const result = ToastUtils.presentCopiedToClipboard();
+        }
+    };
+    const tmp22 = React4(ActionSheetRow.ActionSheetRow, obj4);
+    cResult[6] = tmp22;
+    let tmp20 = tmp22;
+  } else {
+    tmp20 = cResult[6];
+  }
+  if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
+    const intl4 = util.intl;
+    const stringResult2 = intl4.string(util.t["YD/2+H"]);
+    const tmp27 = getClientInfo();
+    cResult[7] = stringResult2;
+    cResult[8] = tmp27;
+    let tmp24 = tmp27;
+    let tmp23 = stringResult2;
+  } else {
+    tmp23 = cResult[7];
+    tmp24 = cResult[8];
+  }
+  if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
+    const obj5 = {
+      label: tmp23,
+      subLabel: tmp24.releaseChannel,
+      onPress() {
+          ClipboardUtils.copy(getClientInfo().releaseChannel);
+          const result = ToastUtils.presentCopiedToClipboard();
+        }
+    };
+    const tmp30 = React4(ActionSheetRow.ActionSheetRow, obj5);
+    cResult[9] = tmp30;
+    let tmp28 = tmp30;
+  } else {
+    tmp28 = cResult[9];
+  }
+  if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
+    const intl5 = util.intl;
+    const stringResult3 = intl5.string(util.t["4bhpIV"]);
+    const tmp35 = getClientInfo();
+    cResult[10] = stringResult3;
+    cResult[11] = tmp35;
+    let tmp32 = tmp35;
+    let tmp31 = stringResult3;
+  } else {
+    tmp31 = cResult[10];
+    tmp32 = cResult[11];
+  }
+  if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
+    const obj6 = {
+      label: tmp31,
+      subLabel: tmp32.manifest,
+      onPress() {
+          ClipboardUtils.copy(getClientInfo().manifest);
+          const result = ToastUtils.presentCopiedToClipboard();
+        }
+    };
+    const tmp38 = React4(ActionSheetRow.ActionSheetRow, obj6);
+    cResult[12] = tmp38;
+    let tmp36 = tmp38;
+  } else {
+    tmp36 = cResult[12];
+  }
+  if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
+    const intl6 = util.intl;
+    const stringResult4 = intl6.string(util.t.Wj3LW4);
+    const tmp43 = getClientInfo();
+    cResult[13] = stringResult4;
+    cResult[14] = tmp43;
+    let tmp40 = tmp43;
+    let tmp39 = stringResult4;
+  } else {
+    tmp39 = cResult[13];
+    tmp40 = cResult[14];
+  }
+  if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
+    const obj7 = { hasIcons: false, children: null };
+    const items = [tmp12, tmp20, tmp28, tmp36, ];
+    const obj8 = {
+      label: tmp39,
+      subLabel: tmp40.buildOverride,
+      onPress() {
+          ClipboardUtils.copy(getClientInfo().buildOverride);
+          const result = ToastUtils.presentCopiedToClipboard();
+        }
+    };
+    items[4] = React4(ActionSheetRow.ActionSheetRow, obj8);
+    obj7.children = items;
+    const tmp47 = hasOwnProperty(ActionSheetRow.ActionSheetRow.Group, obj7);
+    cResult[15] = tmp47;
+    let tmp44 = tmp47;
+  } else {
+    tmp44 = cResult[15];
+  }
+  if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
+    const obj9 = { header: first, startExpanded: true, children: null };
+    const items1 = [tmp44, ];
+    const obj10 = { hasIcons: true, children: null };
+    const obj11 = { icon: React4(CopyIcon.CopyIcon, {}), label: null, onPress: null };
+    const intl7 = util.intl;
+    obj11.label = intl7.string(util.t["7dqZ6H"]);
+    obj11.onPress = function onPress() {
+      const tmp = getClientInfo();
+      ({ appVersion, buildNumber } = tmp);
+      ({ releaseChannel, buildOverride, manifest } = tmp);
+      const deviceInfo = DeviceUtils.getDeviceInfo();
+      const combined = "App: " + appVersion + " (" + buildNumber + ") " + releaseChannel + "; Manifest: " + manifest + "; Build Override: " + buildOverride + "; " + "Device: " + deviceInfo + " OS " + DeviceUtils.getSystemVersion() + ";";
+      ClipboardUtils.copy(combined);
+      const result = ToastUtils.presentCopiedToClipboard();
+    };
+    obj10.children = React4(ActionSheetRow.ActionSheetRow, obj11);
+    items1[1] = React4(ActionSheetRow.ActionSheetRow.Group, obj10);
+    obj9.children = items1;
+    const tmp51 = hasOwnProperty(ActionSheet.ActionSheet, obj9);
+    cResult[16] = tmp51;
+    let tmp48 = tmp51;
+  } else {
+    tmp48 = cResult[16];
+  }
+  return tmp48;
+}) : (() => {
   let obj = { header: null, startExpanded: true, children: null };
   let obj2 = { title: null };
   const intl = util.intl;
@@ -135,29 +317,8 @@ function ClientClientInfoActionSheet() {
   items1[1] = React4(ActionSheetRow.ActionSheetRow.Group, obj9);
   obj.children = items1;
   return hasOwnProperty(ActionSheet.ActionSheet, obj);
-}
-const jsxProd = fn(21);
-({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const Manifest = ClientInfoUtils.getConstants();
-const SettingBuilders = fn(11215);
-const pressable = SettingBuilders.createPressable({
-  useTitle() {
-    const intl = util.intl;
-    return intl.string(util.t.Na2lF9);
-  },
-  parent: null,
-  IconComponent: fn(6035).ClipboardListIcon,
-  onPress: function handleClientInfoPress() {
-    ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: ClientClientInfoActionSheet }), "ClientClientInfoActionSheet");
-  },
-  usePredicate: fn(2021).DeveloperMode.useSetting,
-  withArrow: true
 });
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/user_settings/defs/native/CopyClientInfoSetting.tsx");
-
-export default pressable;
-export const getClientInfoString = function getClientInfoString(ReleaseChannel) {
+function getClientInfoString(ReleaseChannel) {
   let str = "N/A";
   if (null != ReleaseChannel) {
     str = "N/A";
@@ -166,4 +327,23 @@ export const getClientInfoString = function getClientInfoString(ReleaseChannel) 
     }
   }
   return str;
-};
+}
+const SettingBuilders = fn(11129);
+const pressable = SettingBuilders.createPressable({
+  useTitle() {
+    const intl = util.intl;
+    return intl.string(util.t.Na2lF9);
+  },
+  parent: null,
+  IconComponent: fn(5928).ClipboardListIcon,
+  onPress: function handleClientInfoPress() {
+    ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: closure_8 }), "ClientClientInfoActionSheet");
+  },
+  usePredicate: fn(2028).DeveloperMode.useSetting,
+  withArrow: true
+});
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/CopyClientInfoSetting.tsx");
+
+export default pressable;
+export { getClientInfoString };

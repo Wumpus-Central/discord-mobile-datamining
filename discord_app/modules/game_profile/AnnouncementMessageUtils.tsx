@@ -1,10 +1,10 @@
-// === Module 8402: AnnouncementMessageUtils ===
+// === Module 8406: AnnouncementMessageUtils ===
 
-// Module 8402 (AnnouncementMessageUtils)
-import util from "util" /* 1115 */;
-import URLUtilsDefault from "URLUtils" /* 1366 */;
-import MessageRecord from "MessageRecord" /* 4509 */;
-import useFormattedExpirationLabel from "useFormattedExpirationLabel" /* 8404 */;
+// Module 8406 (AnnouncementMessageUtils)
+import util from "util" /* 1126 */;
+import URLUtilsDefault from "URLUtils" /* 1371 */;
+import MessageRecord from "MessageRecord" /* 4520 */;
+import useFormattedExpirationLabel from "useFormattedExpirationLabel" /* 8408 */;
 import size from "module_2" /* 2 */;
 
 const isMessageComponentsV2 = MessageRecord.isMessageComponentsV2;
@@ -229,19 +229,19 @@ export const getPollExpiryLabel = function getPollExpiryLabel(poll) {
   }
   return result;
 };
-export const getPosterUrl = function getPosterUrl(proxyUrl, arg1, arg2) {
+export const getPosterUrl = function getPosterUrl(proxyUrl, c12, c11) {
   const str = URLUtilsDefault.toURLSafe(proxyUrl);
   let str1 = null;
   if (null != str) {
     const searchParams = str.searchParams;
     searchParams.append("format", "webp");
-    if (null != arg1) {
+    if (null != c12) {
       const searchParams2 = str.searchParams;
-      searchParams2.append("width", arg1.toString());
+      searchParams2.append("width", c12.toString());
     }
-    if (null != arg2) {
+    if (null != c11) {
       const searchParams3 = str.searchParams;
-      searchParams3.append("height", arg2.toString());
+      searchParams3.append("height", c11.toString());
     }
     str1 = str.toString();
   }

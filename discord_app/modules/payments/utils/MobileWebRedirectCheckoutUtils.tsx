@@ -1,12 +1,14 @@
-// === Module 7014: MobileWebRedirectCheckoutUtils ===
+// === Module 6912: MobileWebRedirectCheckoutUtils ===
 
-// Module 7014 (MobileWebRedirectCheckoutUtils)
-import SentryUtilsDefault from "SentryUtils" /* 1231 */;
-import MetaQuestUtils from "MetaQuestUtils" /* 1610 */;
-import _mod4690 from "module_4690" /* 4690 */;
-import PaymentConstants from "PaymentConstants" /* 4824 */;
-import keysSorter from "keysSorter" /* 5954 */;
-import Constants from "Constants" /* 1074 */;
+// Module 6912 (MobileWebRedirectCheckoutUtils)
+import c from "c" /* 576 */;
+import SentryUtilsDefault from "SentryUtils" /* 1242 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1615 */;
+import _mod4705 from "module_4705" /* 4705 */;
+import PaymentConstants from "PaymentConstants" /* 4869 */;
+import keysSorter from "keysSorter" /* 5635 */;
+import Constants from "Constants" /* 1085 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const CustomCheckoutFlow = PaymentConstants.CustomCheckoutFlow;
@@ -28,8 +30,30 @@ export const isMobileWebRedirectCheckoutEnabled = function isMobileWebRedirectCh
 export const getCustomCheckoutFlowForAnalytics = function getCustomCheckoutFlowForAnalytics() {
   return MetaQuestUtils.isMetaQuest() ? CustomCheckoutFlow.META_QUEST_WEB_REDIRECT_CHECKOUT : CustomCheckoutFlow.MOBILE_WEB_REDIRECT_CHECKOUT;
 };
-export const useGetCustomCheckoutFlow = function useGetCustomCheckoutFlow() {
-  const _location = _mod4690.useLocation();
+export const useGetCustomCheckoutFlow = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(3);
+  const _location = _mod4705.useLocation();
+  ({ search, pathname } = _location);
+  if (cResult[0] === search) {
+    if (cResult[1] === pathname) {
+      const tmp5 = cResult[2];
+    }
+    return tmp5;
+  }
+  const parsed = keysSorter.parse(search);
+  ({ deep_link_type, flow_type } = parsed);
+  if (pathname.startsWith(constants.BILLING_MANAGE_SUBSCRIPTION)) {
+    cResult[0] = search;
+    cResult[1] = pathname;
+    cResult[2] = undefined;
+  } else if (deep_link_type === constants2.MOBILE_WEB_REDIRECT_CHECKOUT) {
+    let META_QUEST_WEB_REDIRECT_CHECKOUT = CustomCheckoutFlow.MOBILE_WEB_REDIRECT_CHECKOUT;
+  } else if (flow_type === CustomCheckoutFlow.META_QUEST_WEB_REDIRECT_CHECKOUT) {
+    META_QUEST_WEB_REDIRECT_CHECKOUT = CustomCheckoutFlow.META_QUEST_WEB_REDIRECT_CHECKOUT;
+  }
+  const tmpResult = keysSorter;
+}) : (() => {
+  const _location = _mod4705.useLocation();
   ({ pathname, search } = _location);
   const parsed = keysSorter.parse(search);
   ({ deep_link_type, flow_type } = parsed);
@@ -40,7 +64,7 @@ export const useGetCustomCheckoutFlow = function useGetCustomCheckoutFlow() {
       META_QUEST_WEB_REDIRECT_CHECKOUT = CustomCheckoutFlow.META_QUEST_WEB_REDIRECT_CHECKOUT;
     }
   }
-};
+});
 export const getCustomCheckoutFlow = function getCustomCheckoutFlow() {
   const parsed = keysSorter.parse(window.location.search);
   ({ deep_link_type, flow_type } = parsed);

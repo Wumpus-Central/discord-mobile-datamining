@@ -1,9 +1,9 @@
-// === Module 5927: useGuildMemberDisplayRole ===
+// === Module 5586: useGuildMemberDisplayRole ===
 
-// Module 5927 (useGuildMemberDisplayRole)
-import PermissionUtilsAll from "PermissionUtils" /* 4503 */;
-import GuildMemberStore from "GuildMemberStore" /* 2107 */;
-import GuildStore from "GuildStore" /* 2066 */;
+// Module 5586 (useGuildMemberDisplayRole)
+import PermissionUtilsAll from "PermissionUtils" /* 4514 */;
+import GuildMemberStore from "GuildMemberStore" /* 2112 */;
+import GuildStore from "GuildStore" /* 2074 */;
 
 const require = globalThis.__r;
 
@@ -17,7 +17,7 @@ function getHighestHoistedRole(arg0, arg1) {
   [obj, obj2] = tmp;
   if (null != arg0) {
     if (null != arg1) {
-      const guild = obj.getGuild(arg0);
+      guild = obj.getGuild(arg0);
       if (null == guild) {
         return null;
       } else {
@@ -32,10 +32,42 @@ function getHighestHoistedRole(arg0, arg1) {
   }
   return null;
 }
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/useGuildMemberDisplayRole.tsx");
 
-export default function useGuildMemberDisplayRole(arg0, arg1) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+  _require = arg0;
+  closure_1 = arg1;
+  const cResult = require("c").c(5);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    let items = [GuildStore, GuildMemberStore];
+    cResult[0] = items;
+    let first = items;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] === arg0) {
+    if (cResult[2] === arg1) {
+      let tmp7 = cResult[3];
+      let tmp8 = cResult[4];
+    }
+    return tmp(504).useStateFromStores(first, tmp7, tmp8);
+  }
+  const fn = function u() {
+    const items = [GuildStore, GuildMemberStore];
+    return getHighestHoistedRole(closure_0, closure_1, items);
+  };
+  const items1 = [arg0, arg1];
+  cResult[1] = arg0;
+  cResult[2] = arg1;
+  cResult[3] = fn;
+  cResult[4] = items1;
+  tmp8 = items1;
+  tmp7 = fn;
+  const obj = require("c");
+  tmp = _require;
+}) : ((arg0, arg1) => {
   _require = arg0;
   closure_1 = arg1;
   let items = [GuildStore, GuildMemberStore];
@@ -44,5 +76,5 @@ export default function useGuildMemberDisplayRole(arg0, arg1) {
     const items = [GuildStore, GuildMemberStore];
     return getHighestHoistedRole(closure_0, closure_1, items);
   }, items1);
-};
+});
 export { getHighestHoistedRole };

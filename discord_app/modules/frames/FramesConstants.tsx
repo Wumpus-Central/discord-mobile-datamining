@@ -1,8 +1,8 @@
-// === Module 8691: FramesConstants ===
+// === Module 8704: FramesConstants ===
 
-// Module 8691 (FramesConstants)
-import Constants from "Constants" /* 1074 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8692 */;
+// Module 8704 (FramesConstants)
+import Constants from "Constants" /* 1085 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8514 */;
 import size from "module_2" /* 2 */;
 
 const ChannelTypes = Constants.ChannelTypes;
@@ -56,14 +56,14 @@ export const getChannelIdForSurface = function getChannelIdForSurface(type) {
   }
 };
 export const isLaunched = function isLaunched(mainFrame) {
-  let state;
+  state = undefined;
   if (mainFrame != null) {
     state = mainFrame.state;
   }
   return "launched" === state;
 };
 export const asLaunched = function asLaunched(frameByIframeId) {
-  let state;
+  state = undefined;
   if (frameByIframeId != null) {
     state = frameByIframeId.state;
   }

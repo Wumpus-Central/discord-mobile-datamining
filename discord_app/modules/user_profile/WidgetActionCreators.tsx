@@ -1,13 +1,13 @@
-// === Module 7215: WidgetActionCreators ===
+// === Module 8590: WidgetActionCreators ===
 
-// Module 7215 (WidgetActionCreators)
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import HTTPUtils from "HTTPUtils" /* 1271 */;
+// Module 8590 (WidgetActionCreators)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserStore from "UserStore" /* 1372 */;
+import UserStore from "UserStore" /* 1377 */;
 
 require = fn;
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/WidgetActionCreators.tsx");
 
@@ -28,7 +28,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -64,7 +64,7 @@ export default {
                 return obj7;
               } else {
                 constants = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             }
           } else if (1 === tmp8) {
@@ -116,7 +116,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -205,17 +205,17 @@ export default {
     ({ onProgress: importDefault, signal: dependencyMap } = obj);
     return (async () => {
       closure_1 = tmp2;
-      const HTTP2 = closure_0(1271).HTTP;
+      const HTTP2 = closure_0(1282).HTTP;
       const request = { url: constants.USER_PROFILE_WIDGET_CLIP_UPLOAD, body: { file_size: closure_0.size }, rejectWithError: true };
       await HTTP2.post(request);
       const body = value.body;
       const upload_url = body.upload_url;
       const upload_filename = body.upload_filename;
-      const HTTP = closure_0(1271).HTTP;
+      const HTTP = closure_0(1282).HTTP;
       const request1 = {
         url: upload_url,
         body: closure_129_0,
-        headers: { "Content-Type": closure_0(7216).WIDGET_CLIP_CONTENT_TYPE },
+        headers: { "Content-Type": closure_0(7118).WIDGET_CLIP_CONTENT_TYPE },
         onRequestProgress(direction) {
           let tmp = "upload" === direction.direction;
           if (tmp) {
@@ -246,7 +246,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -330,7 +330,7 @@ export default {
             closure_131_1(closure_131_2[3]).dispatch(obj11);
             c5 = 0;
             c7 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp41) {
           closure_4 = tmp41;

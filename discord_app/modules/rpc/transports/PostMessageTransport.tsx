@@ -1,16 +1,16 @@
-// === Module 8960: PostMessageTransport ===
+// === Module 9024: PostMessageTransport ===
 
-// Module 8960 (PostMessageTransport)
-import DurationsDefault from "Durations" /* 1091 */;
-import RPCOpcodesDefault from "RPCOpcodes" /* 8961 */;
-import RPCErrorDefault from "RPCError" /* 8962 */;
+// Module 9024 (PostMessageTransport)
+import DurationsDefault from "Durations" /* 1102 */;
+import RPCOpcodesDefault from "RPCOpcodes" /* 9025 */;
+import RPCErrorDefault from "RPCError" /* 9026 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2043 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
 
 const require = fn;
-const RPC_EMBEDDED_APP_SCOPE = fn(5270).RPC_EMBEDDED_APP_SCOPE;
-const Constants = fn(1074);
+const RPC_EMBEDDED_APP_SCOPE = fn(5316).RPC_EMBEDDED_APP_SCOPE;
+const Constants = fn(1085);
 ({ AnalyticEvents: closure_7, ComponentActions: closure_8, RPCCloseCodes: closure_9, RPCErrors: c10 } = Constants);
 let closure_11 = 10 * DurationsDefault.Millis.SECOND;
 const map = new Map();
@@ -19,13 +19,12 @@ function postClose(source, arg1, postMessageToRPCClient) {
   const items = [RPCOpcodesDefault.CLOSE, arg1];
   postMessageToRPCClient(items, source.origin);
 }
-const EventEmitter = fn(568).EventEmitter;
+const EventEmitter = fn(580).EventEmitter;
 class PostMessageTransport extends EventEmitter {
   constructor(arg0, arg1, arg2, arg3) {
     tmp4 = new PostMessageTransport(tmp3, tmp2, tmp);
     closure_0 = tmp4;
-    tmp4.disconnectSocket = function disconnectSocket(close, message, arg2) {
-      closure_0 = close;
+    tmp4.disconnectSocket = function disconnectSocket(value, message, arg2) {
       let flag = arg2;
       if (arg2 === undefined) {
         flag = false;
@@ -34,24 +33,15 @@ class PostMessageTransport extends EventEmitter {
       if (!flag) {
         tmp2 = message;
       }
-      closure_0.emit("disconnect", close, tmp2);
-      let str = message.message;
-      if (str == null) {
-        str = "Unknown";
+      closure_0.emit("disconnect", value, tmp2);
+      if (!flag) {
+        let str = message.message;
+        if (str == null) {
+          str = "Unknown";
+        }
+        value.close(message.code, str);
       }
-      close.close(message.code, str);
-      let found = Array.from(map.entries()).find((item) => {
-        [, tmp] = item;
-        return tmp === closure_0;
-      });
-      if (found == null) {
-        found = [null, null];
-      }
-      const first = _slicedToArray(found, 1)[0];
-      if (null != first) {
-        map.delete(first);
-      }
-      const arr = Array.from(map.entries());
+      map.delete(value.source.iframeId);
     };
     tmp4.handleIFrameMount = function handleIFrameMount(id) {
       set.add(id.id);
@@ -60,10 +50,10 @@ class PostMessageTransport extends EventEmitter {
         const item = Array.from(selfEmbeddedActivities.entries()).forEach((item) => {
           [tmp, tmp2] = item;
           const obj2 = { application_id: tmp, channel_id: null, guild_id: null, timeout_ms: null };
-          const obj = closure_1_1(1241);
-          obj2.channel_id = closure_1_0(4487).getEmbeddedActivityLocationChannelId(tmp2.location);
-          const obj3 = closure_1_0(4487);
-          obj2.guild_id = closure_1_0(4487).getEmbeddedActivityLocationGuildId(tmp2.location);
+          const obj = closure_1_1(1252);
+          obj2.channel_id = closure_1_0(4498).getEmbeddedActivityLocationChannelId(tmp2.location);
+          const obj3 = closure_1_0(4498);
+          obj2.guild_id = closure_1_0(4498).getEmbeddedActivityLocationGuildId(tmp2.location);
           obj2.timeout_ms = timeout_ms;
           obj.track(constants.ACTIVITY_HANDSHAKE_TIMED_OUT, obj2);
         });
@@ -72,22 +62,11 @@ class PostMessageTransport extends EventEmitter {
     tmp4.handleIFrameUnmount = function handleIFrameUnmount(id) {
       id = id.id;
       set.delete(id);
-      let found = Array.from(map.entries()).find((item) => {
-        [, tmp] = item;
-        return tmp.source.iframeId === id;
-      });
-      if (found == null) {
-        found = [null, null];
+      value = map.get(id);
+      if (null != value) {
+        const obj = { code: constants2.CLOSE_NORMAL, message: "iFrame gone" };
+        closure_0.disconnectSocket(value, obj, true);
       }
-      const arr = Array.from(map.entries());
-      [tmp3, tmp4] = found;
-      if (tmp5) {
-        const obj2 = { code: constants2.CLOSE_NORMAL, message: "iFrame gone" };
-        closure_0.disconnectSocket(tmp4, obj2, true);
-        map.delete(tmp3);
-      }
-      const tmp2 = _slicedToArray(found, 2);
-      tmp5 = null != tmp4 && null != tmp3;
     };
     tmp4.handleMessage = function handleMessage(arg0, iframeId, arg2) {
       value = map.get(iframeId.iframeId);
@@ -154,7 +133,7 @@ class PostMessageTransport extends EventEmitter {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -295,7 +274,7 @@ class PostMessageTransport extends EventEmitter {
               logger2.info("Socket Validated: " + closure_132_4.id);
               constants = 0;
               constants2 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             } else {
               const logger = closure_133_1.logger;
               const _HermesInternal = HermesInternal;
@@ -344,7 +323,7 @@ class PostMessageTransport extends EventEmitter {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -391,7 +370,7 @@ class PostMessageTransport extends EventEmitter {
               c5 = 0;
               closure_131_1.disconnectSocket(closure_130_0, closure_130_1);
               c7 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else {
             c5 = 0;

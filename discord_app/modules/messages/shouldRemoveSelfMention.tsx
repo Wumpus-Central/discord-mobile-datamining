@@ -1,7 +1,7 @@
-// === Module 7225: shouldRemoveSelfMention ===
+// === Module 7123: shouldRemoveSelfMention ===
 
-// Module 7225 (shouldRemoveSelfMention)
-import Constants from "Constants" /* 1074 */;
+// Module 7123 (shouldRemoveSelfMention)
+import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
 const MessageTypesSets = Constants.MessageTypesSets;

@@ -1,18 +1,18 @@
-// === Module 13377: GatewaySocketSingleton ===
+// === Module 13437: GatewaySocketSingleton ===
 
-// Module 13377 (GatewaySocketSingleton)
+// Module 13437 (GatewaySocketSingleton)
 import LoggerDefault from "Logger" /* 3 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import DiscordNativeDefault from "DiscordNative" /* 4479 */;
-import RequestGatewaySocketAll from "RequestGatewaySocket" /* 7349 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 10909 */;
-import GatewaySocketDefault from "GatewaySocket" /* 13379 */;
-import LocalPresenceStateManagerDefault from "LocalPresenceStateManager" /* 13419 */;
-import LocalVoiceStateManagerDefault from "LocalVoiceStateManager" /* 13422 */;
-import MultiAccountSwitchStore from "MultiAccountSwitchStore" /* 13378 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import DiscordNativeDefault from "DiscordNative" /* 4490 */;
+import RequestGatewaySocketAll from "RequestGatewaySocket" /* 7253 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 10015 */;
+import GatewaySocketDefault from "GatewaySocket" /* 13439 */;
+import LocalPresenceStateManagerDefault from "LocalPresenceStateManager" /* 13479 */;
+import LocalVoiceStateManagerDefault from "LocalVoiceStateManager" /* 13482 */;
+import MultiAccountSwitchStore from "MultiAccountSwitchStore" /* 13438 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import NetworkUtils_mod from "NetworkUtils" /* 1463 */;
+import NetworkUtils_mod from "NetworkUtils" /* 1468 */;
 
 let closure_5 = new LoggerDefault("ConnectionStore");
 const socket = new GatewaySocketDefault();
@@ -25,7 +25,7 @@ socket.handleIdentify = () => {
   if (null == token) {
     return null;
   } else {
-    const state = DiscordAppStateDefault.getState();
+    state = DiscordAppStateDefault.getState();
     const installationForTracking = AuthenticationStore.getInstallationForTracking();
     const obj3 = { token, userId: null, properties: null, presence: null };
     let id = AuthenticationStore.getId();
@@ -52,7 +52,7 @@ socket.handleIdentify = () => {
   }
   const obj2 = { hasToken: null != token };
 };
-const PlatformUtils = fn(1364);
+const PlatformUtils = fn(1369);
 if (PlatformUtils.isDesktop()) {
   const powerMonitor = DiscordNativeDefault.powerMonitor;
   powerMonitor.on("resume", () => {

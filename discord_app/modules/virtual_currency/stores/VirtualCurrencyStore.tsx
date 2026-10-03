@@ -1,8 +1,8 @@
-// === Module 8505: VirtualCurrencyStore ===
+// === Module 8510: VirtualCurrencyStore ===
 
-// Module 8505 (VirtualCurrencyStore)
+// Module 8510 (VirtualCurrencyStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
 
 const Store = initializeDefault.Store;
 class VirtualCurrencyStore extends Store {

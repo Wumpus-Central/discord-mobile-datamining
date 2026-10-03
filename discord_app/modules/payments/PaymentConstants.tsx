@@ -1,6 +1,6 @@
-// === Module 4824: PaymentConstants ===
+// === Module 4869: PaymentConstants ===
 
-// Module 4824 (PaymentConstants)
+// Module 4869 (PaymentConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/payments/PaymentConstants.tsx");
@@ -11,4 +11,4 @@ export const MobileWebRedirectCheckoutDeepLinkQueryKeys = { FLOW_TYPE: "flow_typ
 export const EUR_TO_HRK_CONVERSION_RATE = 7.5345;
 export const OrderStatus = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", DRAFT: 1, [1]: "DRAFT", SIGNED: 2, [2]: "SIGNED", DISCARDED: 3, [3]: "DISCARDED", SIGNING_IN_PROGRESS: 4, [4]: "SIGNING_IN_PROGRESS", SIGNING_FAILED: 5, [5]: "SIGNING_FAILED" };
 export const ItemPurchaseType = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", ONE_TIME: 1, [1]: "ONE_TIME", SUBSCRIPTION: 2, [2]: "SUBSCRIPTION" };
-export const OrderClientErrorCode = { SMITE_TOKEN_AUTHORIZATION_REQUIRED: 1003, [1003]: "SMITE_TOKEN_AUTHORIZATION_REQUIRED" };
+export const OrderClientErrorCode = { SMITE_TOKEN_AUTHORIZATION_REQUIRED: 1003, [1003]: "SMITE_TOKEN_AUTHORIZATION_REQUIRED", UNKNOWN_ERROR_CODE: 9999, [9999]: "UNKNOWN_ERROR_CODE" };

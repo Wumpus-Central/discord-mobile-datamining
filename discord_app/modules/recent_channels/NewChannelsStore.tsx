@@ -1,24 +1,24 @@
-// === Module 7140: NewChannelsStore ===
+// === Module 7043: NewChannelsStore ===
 
-// Module 7140 (NewChannelsStore)
+// Module 7043 (NewChannelsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import DurationsDefault from "Durations" /* 1091 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 6717 */;
-import SidebarActionTypes from "SidebarActionTypes" /* 6887 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import DurationsDefault from "Durations" /* 1102 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 6605 */;
+import SidebarActionTypes from "SidebarActionTypes" /* 6785 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildChannelStore from "GuildChannelStore" /* 4496 */;
-import GuildMemberStore from "GuildMemberStore" /* 2107 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import ReadStateStore from "ReadStateStore" /* 4860 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5026 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import GuildChannelStore from "GuildChannelStore" /* 4507 */;
+import GuildMemberStore from "GuildMemberStore" /* 2112 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import ReadStateStore from "ReadStateStore" /* 4905 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5071 */;
 
 require = fn;
 function guildHasCommunity(nextResult) {
-  const guild = GuildStore.getGuild(nextResult);
+  guild = GuildStore.getGuild(nextResult);
   let hasItem;
   if (guild != null) {
     const features = guild.features;
@@ -44,7 +44,7 @@ function maybeAckViewedChannel(guildId, channelId) {
   closure_0 = channelId;
   let tmp = null != obj && null != channelId && obj.has(channelId);
   if (tmp) {
-    const guild = GuildStore.getGuild(guildId);
+    guild = GuildStore.getGuild(guildId);
     let hasItem;
     if (guild != null) {
       const features = guild.features;
@@ -127,8 +127,8 @@ function pruneNewChannels() {
     closure_16[item] = new Set(items.filter((item) => !channelOrParentOptedIn.isChannelOrParentOptedIn(closure_0, item)));
   });
 }
-let closure_7 = fn(4496).GUILD_SELECTABLE_CHANNELS_KEY;
-const Constants = fn(1074);
+let closure_7 = fn(4507).GUILD_SELECTABLE_CHANNELS_KEY;
+const Constants = fn(1085);
 ({ AnalyticsObjects: closure_12, AnalyticsObjectTypes: map1, GuildFeatures: closure_14 } = Constants);
 let set = new Set();
 const dependencyMap = {};
@@ -166,7 +166,7 @@ prototype["shouldIndicateNewChannel"] = function shouldIndicateNewChannel(guild_
   if (null == guild_id) {
     return false;
   } else {
-    const guild = GuildStore.getGuild(guild_id);
+    guild = GuildStore.getGuild(guild_id);
     let tmp2 = null == guild;
     if (!tmp2) {
       const features = guild.features;

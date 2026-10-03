@@ -1,13 +1,13 @@
-// === Module 18013: executeHeadlessTask ===
+// === Module 18099: executeHeadlessTask ===
 
-// Module 18013 (executeHeadlessTask)
+// Module 18099 (executeHeadlessTask)
 import LoggerDefault from "Logger" /* 3 */;
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import fast_connect from "fast_connect" /* 15 */;
-import SentryUtilsDefault from "SentryUtils" /* 1231 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import RequestGatewaySocketAll from "RequestGatewaySocket" /* 7349 */;
-import PauseGatewaySocketAll from "PauseGatewaySocket" /* 13415 */;
+import SentryUtilsDefault from "SentryUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import RequestGatewaySocketAll from "RequestGatewaySocket" /* 7253 */;
+import PauseGatewaySocketAll from "PauseGatewaySocket" /* 13475 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -29,7 +29,7 @@ let closure_10 = async function _executeHeadlessTask() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -367,9 +367,9 @@ let closure_10 = async function _executeHeadlessTask() {
   })();
 };
 const AppState = fn(17).AppState;
-const NativeAppStartup = fn(17298);
+const NativeAppStartup = fn(17391);
 ({ initHeadlessTask: closure_7, applicationReady: closure_8 } = NativeAppStartup);
-const AnalyticEvents = fn(1074).AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_startup/native/executeHeadlessTask.tsx");
 

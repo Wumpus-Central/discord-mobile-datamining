@@ -1,15 +1,15 @@
-// === Module 6724: CategoryCollapseStore ===
+// === Module 6612: CategoryCollapseStore ===
 
-// Module 6724 (CategoryCollapseStore)
+// Module 6612 (CategoryCollapseStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
-import GlobalUtils from "GlobalUtils" /* 1370 */;
-import FavoritesUtils from "FavoritesUtils" /* 2069 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5385 */;
-import GuildChannelStore from "GuildChannelStore" /* 4496 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
+import GlobalUtils from "GlobalUtils" /* 1375 */;
+import FavoritesUtils from "FavoritesUtils" /* 2077 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5618 */;
+import GuildChannelStore from "GuildChannelStore" /* 4507 */;
 
 require = fn;
 function incrementVersion() {
@@ -59,7 +59,7 @@ function syncFavoriteCategoryCollapse() {
     return flag2;
   }
 }
-const ChannelTypes = fn(1074).ChannelTypes;
+const ChannelTypes = fn(1085).ChannelTypes;
 const dependencyMap = {};
 let closure_8 = 0;
 const PersistedStore = initializeDefault.PersistedStore;

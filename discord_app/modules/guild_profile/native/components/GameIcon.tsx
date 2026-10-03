@@ -1,18 +1,19 @@
-// === Module 9408: components/GameIcon ===
+// === Module 9405: components/GameIcon ===
 
-// Module 9408 (components/GameIcon)
-import nativeDefault from "native" /* 576 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
+// Module 9405 (components/GameIcon)
+import c from "c" /* 576 */;
+import nativeDefault from "native" /* 587 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
 import noop from "module_19" /* 19 */;
 
-const Pressables = FireIcon(5621);
-const FireIcon2 = FireIcon(9410);
-const require = fn;
+const Pressables = PressableHighlight(5909);
+const FireIcon2 = PressableHighlight(9407);
+require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = { gameIcon: { width: 32, height: 32 }, gameIconImage: null, gameIconMask: null, fireIcon: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.xs, borderWidth: 1, borderStyle: "solid", borderColor: nativeDefault.colors.BORDER_STRONG };
 obj2.gameIconImage = size;
@@ -20,10 +21,161 @@ const size1 = { position: "absolute", top: -4, right: -4, display: "flex", justi
 obj2.gameIconMask = size1;
 obj2.fireIcon = { marginTop: -1, width: 14, height: 14 };
 const styles = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_profile/native/components/GameIcon.tsx");
 
-export default function GameIcon(arg0) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let PressableHighlight = require;
+  let tmp = dependencyMap;
+  const cResult = c.c(34);
+  ({ style, game } = arg0);
+  ({ activityLevel, onPress } = arg0);
+  const tmp3 = styles();
+  if (cResult[0] !== game) {
+    const iconURL = game.getIconURL(24);
+    let source = null;
+    if (null != iconURL) {
+      source = AvatarUtilsDefault.makeSource(iconURL);
+    }
+    cResult[0] = game;
+    cResult[1] = source;
+    let tmp4 = source;
+  } else {
+    tmp4 = cResult[1];
+  }
+  if (cResult[2] === game) {
+    if (cResult[3] === onPress) {
+      let tmp8 = cResult[4];
+    }
+    if (activityLevel != null) {
+      const level = activityLevel.level;
+    }
+    if (null == tmp4) {
+      return null;
+    } else {
+      if (null == onPress) {
+        if (cResult[20] === style) {
+          if (cResult[21] === tmp3.gameIcon) {
+            let tmp13 = cResult[22];
+          }
+          if (cResult[23] === tmp4) {
+            if (cResult[24] === tmp3.gameIconImage) {
+              let tmp14 = cResult[25];
+            }
+            if (cResult[26] === tmp12) {
+              if (cResult[27] === tmp3.fireIcon) {
+                if (cResult[28] === tmp3.gameIconMask) {
+                  let tmp18 = cResult[29];
+                }
+                if (cResult[30] === tmp13) {
+                  if (cResult[31] === tmp14) {
+                  }
+                }
+                const obj3 = { style: tmp13, children: null };
+                const items = [tmp14, tmp18];
+                obj3.children = items;
+                const tmp26 = React5(React4, obj3);
+                cResult[30] = tmp13;
+                cResult[31] = tmp14;
+                cResult[32] = tmp18;
+                cResult[33] = tmp26;
+              }
+            }
+            let tmp19 = tmp12;
+            if (tmp12) {
+              const obj4 = { style: tmp3.gameIconMask, children: null };
+              const obj5 = { style: tmp3.fireIcon, color: nativeDefault.unsafe_rawColors.ORANGE_330 };
+              obj4.children = timestampProducer(FireIcon2.FireIcon, obj5);
+              tmp19 = timestampProducer(React4, obj4);
+            }
+            cResult[26] = tmp12;
+            cResult[27] = tmp3.fireIcon;
+            cResult[28] = tmp3.gameIconMask;
+            cResult[29] = tmp19;
+            tmp18 = tmp19;
+          }
+          const obj6 = { style: tmp3.gameIconImage, source: tmp4 };
+          const tmp17 = timestampProducer(hasOwnProperty, obj6);
+          cResult[23] = tmp4;
+          cResult[24] = tmp3.gameIconImage;
+          cResult[25] = tmp17;
+          tmp14 = tmp17;
+        }
+        const items1 = [style, tmp3.gameIcon];
+        cResult[20] = style;
+        cResult[21] = tmp3.gameIcon;
+        cResult[22] = items1;
+        tmp13 = items1;
+      }
+      if (cResult[5] === style) {
+        if (cResult[6] === tmp3.gameIcon) {
+          let tmp27 = cResult[7];
+        }
+        if (cResult[8] === tmp4) {
+          if (cResult[9] === tmp3.gameIconImage) {
+            let tmp28 = cResult[10];
+          }
+          if (cResult[11] === tmp12) {
+            if (cResult[12] === tmp3.fireIcon) {
+              if (cResult[13] === tmp3.gameIconMask) {
+                let tmp32 = cResult[14];
+              }
+              if (cResult[15] === tmp8) {
+                if (cResult[16] === tmp27) {
+                  if (cResult[17] === tmp28) {
+                  }
+                }
+              }
+              PressableHighlight = Pressables.PressableHighlight;
+              const obj7 = { style: tmp27, onPress: tmp8, children: null };
+              const items2 = [tmp28, tmp32];
+              obj7.children = items2;
+              tmp = React5(PressableHighlight, obj7);
+              cResult[15] = tmp8;
+              cResult[16] = tmp27;
+              cResult[17] = tmp28;
+              cResult[18] = tmp32;
+              cResult[19] = tmp;
+            }
+          }
+          let tmp33 = tmp12;
+          if (tmp12) {
+            const obj8 = { style: tmp3.gameIconMask, children: null };
+            const obj9 = { style: tmp3.fireIcon, color: nativeDefault.unsafe_rawColors.ORANGE_260 };
+            obj8.children = timestampProducer(FireIcon2.FireIcon, obj9);
+            tmp33 = timestampProducer(React4, obj8);
+          }
+          cResult[11] = tmp12;
+          cResult[12] = tmp3.fireIcon;
+          cResult[13] = tmp3.gameIconMask;
+          cResult[14] = tmp33;
+          tmp32 = tmp33;
+        }
+        const obj10 = { style: tmp3.gameIconImage, source: tmp4 };
+        const tmp31 = timestampProducer(hasOwnProperty, obj10);
+        cResult[8] = tmp4;
+        cResult[9] = tmp3.gameIconImage;
+        cResult[10] = tmp31;
+        tmp28 = tmp31;
+      }
+      const items3 = [style, tmp3.gameIcon];
+      cResult[5] = style;
+      cResult[6] = tmp3.gameIcon;
+      cResult[7] = items3;
+      tmp27 = items3;
+    }
+  }
+  const fn = function k() {
+    if (onPress != null) {
+      tmp(game);
+    }
+  };
+  cResult[2] = game;
+  cResult[3] = onPress;
+  cResult[4] = fn;
+  tmp8 = fn;
+}) : ((arg0) => {
   ({ style, game } = arg0);
   ({ activityLevel, onPress } = arg0);
   let fireIcon = styles();
@@ -88,5 +240,5 @@ export default function GameIcon(arg0) {
       tmp14Result = React5(React4, obj6);
     }
   }
-};
+});
 export const useStyles = styles;

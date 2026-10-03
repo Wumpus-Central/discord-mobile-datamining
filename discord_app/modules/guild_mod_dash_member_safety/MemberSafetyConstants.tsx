@@ -1,8 +1,8 @@
-// === Module 4502: MemberSafetyConstants ===
+// === Module 4513: MemberSafetyConstants ===
 
-// Module 4502 (MemberSafetyConstants)
-import Constants from "Constants" /* 1074 */;
-import BigFlagUtils from "BigFlagUtils" /* 1086 */;
+// Module 4513 (MemberSafetyConstants)
+import Constants from "Constants" /* 1085 */;
+import BigFlagUtils from "BigFlagUtils" /* 1097 */;
 import size from "module_2" /* 2 */;
 
 const Permissions = Constants.Permissions;

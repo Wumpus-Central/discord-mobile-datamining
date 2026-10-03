@@ -1,17 +1,17 @@
-// === Module 12124: NotificationUtils ===
+// === Module 12060: NotificationUtils ===
 
-// Module 12124 (NotificationUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import PushNotificationDefault from "PushNotification" /* 8938 */;
-import SoundUtils from "SoundUtils" /* 9552 */;
+// Module 12060 (NotificationUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7282 */;
+import PushNotificationDefault from "PushNotification" /* 8966 */;
+import SoundUtils from "SoundUtils" /* 9562 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const NativeModules = fn(17).NativeModules;
-const PermissionStateType = fn(12116).PermissionStateType;
-const AnalyticEvents = fn(1074).AnalyticEvents;
+const PermissionStateType = fn(12052).PermissionStateType;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("utils/native/NotificationUtils.tsx");
 
@@ -47,12 +47,11 @@ export default {
         str = "accepted";
       }
       AnalyticsUtilsDefault.track(AnalyticEvents.PERMISSIONS_ACKED, { type: "notification", action: str });
-      const NativePermissionManager = NativeModules.NativePermissionManager;
-      const notificationAuthorizationStatus = NativePermissionManager.getNotificationAuthorizationStatus();
+      const notificationAuthorizationStatus = NativePermissionManagerModuleDefault.getNotificationAuthorizationStatus();
       notificationAuthorizationStatus.then((result) => {
         if (null != result) {
-          result = closure_1_0(dependencyMap[4]).updateNotificationAuthorizationStatus(result);
-          const obj = closure_1_0(dependencyMap[4]);
+          result = closure_1_0(dependencyMap[3]).updateNotificationAuthorizationStatus(result);
+          const obj = closure_1_0(dependencyMap[3]);
         }
       });
       if (null != _alert) {
@@ -60,6 +59,7 @@ export default {
           closure_0(_alert);
         }
       }
+      const tmpResult = NativePermissionManagerModuleDefault;
     });
   },
   showNotification() {
@@ -74,7 +74,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -88,7 +88,7 @@ export default {
             return obj;
           } else {
             c0 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp4) {
           c0 = tmp;

@@ -1,9 +1,10 @@
-// === Module 12687: InAppReportsMultiSelect ===
+// === Module 12721: InAppReportsMultiSelect ===
 
-// Module 12687 (InAppReportsMultiSelect)
-import nativeDefault from "native" /* 576 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 6102 */;
-import TableRowGroup from "TableRowGroup" /* 6185 */;
+// Module 12721 (InAppReportsMultiSelect)
+import nativeDefault from "native" /* 587 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 5990 */;
+import TableRowGroup from "TableRowGroup" /* 6074 */;
+import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -11,13 +12,80 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_16 } };
-let closure_4 = createStyles.createStyles(obj2);
+let closure_5 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_16 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsMultiSelect.tsx");
 
-export default function MultiSelect(arg0) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((state) => {
+  const cResult = onPress(state[7]).c(12);
+  ({ element, onPress } = state);
+  state = state.state;
+  const tmp4 = closure_5();
+  if (null != element) {
+    if ("checkbox" === element.type) {
+      const data = element.data;
+      if (cResult[0] === data) {
+        if (cResult[1] === onPress) {
+          if (cResult[2] === state) {
+            if (cResult[7] !== cResult[3]) {
+              const obj2 = { hasIcons: false, children: tmp5 };
+              const tmp11 = jsx(onPress(state[9]).TableRowGroup, { hasIcons: false, children: tmp5 });
+              cResult[7] = tmp5;
+              cResult[8] = tmp11;
+              let tmp9 = tmp11;
+            } else {
+              tmp9 = cResult[8];
+            }
+            if (cResult[9] === tmp4.container) {
+              if (cResult[10] === tmp9) {
+                let tmp12 = cResult[11];
+              }
+              return tmp12;
+            }
+            const obj3 = { style: tmp16, children: tmp9 };
+            const tmp15 = <View style={tmp16}>{tmp9}</View>;
+            cResult[9] = tmp4.container;
+            cResult[10] = tmp9;
+            cResult[11] = tmp15;
+            tmp12 = tmp15;
+          }
+        }
+      }
+      if (cResult[4] === onPress) {
+        if (cResult[5] === state) {
+          let tmp6 = cResult[6];
+        }
+        const mapped = data.map(tmp6);
+        cResult[0] = data;
+        cResult[1] = onPress;
+        cResult[2] = state;
+        cResult[3] = mapped;
+      }
+      const fn = function v(arg0) {
+        const tmp = _slicedToArray(arg0, 3);
+        const first = tmp[0];
+        closure_1 = tmp3;
+        return jsx(onPress(state[8]).TableCheckboxRow, {
+          label: tmp[1],
+          subLabel: tmp[2],
+          onPress() {
+            return onPress(first, closure_1);
+          },
+          checked: first in closure_1
+        }, first);
+      };
+      cResult[4] = onPress;
+      cResult[5] = state;
+      cResult[6] = fn;
+      tmp6 = fn;
+    }
+  }
+  return null;
+}) : ((arg0) => {
   ({ element, onPress: require, state: dependencyMap } = arg0);
   if (null != element) {
     if ("checkbox" === element.type) {
@@ -55,4 +123,4 @@ export default function MultiSelect(arg0) {
     }
   }
   return null;
-};
+});

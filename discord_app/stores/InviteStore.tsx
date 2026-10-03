@@ -1,10 +1,10 @@
-// === Module 4826: InviteStore ===
+// === Module 4871: InviteStore ===
 
-// Module 4826 (InviteStore)
+// Module 4871 (InviteStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import Constants from "Constants" /* 1074 */;
-import InviteCodeUtils from "InviteCodeUtils" /* 4827 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import Constants from "Constants" /* 1085 */;
+import InviteCodeUtils from "InviteCodeUtils" /* 4872 */;
 import size from "module_2" /* 2 */;
 
 function updateInvite(code, fn) {
@@ -24,7 +24,7 @@ function updateInvite(code, fn) {
   fn(obj3);
   map = new Map(map);
   const result1 = map.set(str, obj3);
-  const guild = obj3.guild;
+  guild = obj3.guild;
   let id;
   if (guild != null) {
     id = guild.id;

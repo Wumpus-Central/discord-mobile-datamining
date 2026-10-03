@@ -1,8 +1,8 @@
-// === Module 2094: ChannelReader ===
+// === Module 2099: ChannelReader ===
 
-// Module 2094 (ChannelReader)
+// Module 2099 (ChannelReader)
 import LoggerDefault from "Logger" /* 3 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 2073 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 2078 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const logger = new LoggerDefault("ChannelReader");
@@ -47,7 +47,7 @@ prototype["getGuildIds"] = function getGuildIds() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {

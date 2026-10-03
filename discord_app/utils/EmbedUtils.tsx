@@ -1,14 +1,14 @@
-// === Module 5380: EmbedUtils ===
+// === Module 5426: EmbedUtils ===
 
-// Module 5380 (EmbedUtils)
+// Module 5426 (EmbedUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
-import utils_ColorUtils from "utils/ColorUtils" /* 1092 */;
-import FlagUtils from "FlagUtils" /* 1385 */;
-import _modDef4450 from "module_4450" /* 4450 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 5069 */;
-import EmbedConstants from "EmbedConstants" /* 5381 */;
-import Constants from "Constants" /* 1074 */;
+import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
+import FlagUtils from "FlagUtils" /* 1390 */;
+import _modDef4461 from "module_4461" /* 4461 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 5114 */;
+import EmbedConstants from "EmbedConstants" /* 5427 */;
+import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
 function getEffectiveVideoProvider(name, url) {
@@ -66,8 +66,8 @@ export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
   if (null != footer.timestamp) {
     const _Date = Date;
     const date = new Date(footer.timestamp);
-    obj.timestamp = _modDef4450(date);
-    const tmpResult = _modDef4450;
+    obj.timestamp = _modDef4461(date);
+    const tmpResult = _modDef4461;
   }
   if (null != footer.color) {
     obj.color = utils_ColorUtils.int2hsl(footer.color, false);

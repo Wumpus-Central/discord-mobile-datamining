@@ -1,22 +1,46 @@
-// === Module 9943: SoundmojiSendingExperiment ===
+// === Module 9876: SoundmojiSendingExperiment ===
 
-// Module 9943 (SoundmojiSendingExperiment)
-import ApexExperiment from "ApexExperiment" /* 1435 */;
+// Module 9876 (SoundmojiSendingExperiment)
+import c from "c" /* 576 */;
+import ApexExperiment from "ApexExperiment" /* 1440 */;
+import "ReactCompilerGating";
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-03-soundmoji-sending", kind: "user", defaultConfig: { enabled: false, showSoundmojiInEmojiPicker: false }, variations: null };
-const obj2 = { 1: null, 2: { enabled: true, showSoundmojiInEmojiPicker: false } };
+let obj2 = { 1: null, 2: { enabled: true, showSoundmojiInEmojiPicker: false } };
 obj2[2] = { enabled: true, showSoundmojiInEmojiPicker: true };
 obj.variations = obj2;
-let closure_0 = ApexExperiment.createApexExperiment(obj);
+let closure_2 = ApexExperiment.createApexExperiment(obj);
+let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+  const cResult = c.c(2);
+  const _location = location.location;
+  if (cResult[0] !== _location) {
+    const obj2 = { location: _location };
+    cResult[0] = _location;
+    cResult[1] = obj2;
+    let tmp2 = obj2;
+  } else {
+    tmp2 = cResult[1];
+  }
+  return closure_2.useConfig(tmp2).enabled;
+}) : ((location) => closure_2.useConfig({ location: location.location }).enabled);
 const result = size.fileFinishedImporting("modules/premium/sounds/soundmoji/SoundmojiSendingExperiment.tsx");
 
 export const getSoundmojiSendExperiment = function getSoundmojiSendExperiment(location) {
-  return closure_0.getConfig({ location: location.location }).enabled;
+  return closure_2.getConfig({ location: location.location }).enabled;
 };
-export const useSoundmojiSendExperiment = function useSoundmojiSendExperiment(location) {
-  return closure_0.useConfig({ location: location.location }).enabled;
-};
-export const useSoundmojiEmojiPickerSectionExperiment = function useSoundmojiEmojiPickerSectionExperiment(location) {
-  return closure_0.useConfig({ location: location.location }).showSoundmojiInEmojiPicker;
-};
+export const useSoundmojiSendExperiment = tmp2;
+export const useSoundmojiEmojiPickerSectionExperiment = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+  const cResult = c.c(2);
+  const _location = location.location;
+  if (cResult[0] !== _location) {
+    const obj2 = { location: _location };
+    cResult[0] = _location;
+    cResult[1] = obj2;
+    let tmp2 = obj2;
+  } else {
+    tmp2 = cResult[1];
+  }
+  return closure_2.useConfig(tmp2).showSoundmojiInEmojiPicker;
+}) : ((location) => closure_2.useConfig({ location: location.location }).showSoundmojiInEmojiPicker);

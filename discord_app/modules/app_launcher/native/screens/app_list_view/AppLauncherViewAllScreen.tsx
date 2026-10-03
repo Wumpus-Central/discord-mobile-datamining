@@ -1,39 +1,148 @@
-// === Module 11888: AppLauncherViewAllScreen ===
+// === Module 11821: AppLauncherViewAllScreen ===
 
-// Module 11888 (AppLauncherViewAllScreen)
-import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1115 */;
-import native from "native" /* 1177 */;
-import Text_Text from "Text/Text" /* 4841 */;
-import Pressables from "Pressables" /* 5621 */;
-import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 6126 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7131 */;
+// Module 11821 (AppLauncherViewAllScreen)
+import nativeDefault from "native" /* 587 */;
+import util from "util" /* 1126 */;
+import native from "native" /* 1188 */;
+import Text_Text from "Text/Text" /* 4886 */;
+import Pressables from "Pressables" /* 5909 */;
+import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 6014 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7034 */;
 import AppLauncherContext from "AppLauncherContext" /* 10994 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11744 */;
-import AppLauncherBackButton from "AppLauncherBackButton" /* 11824 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11665 */;
+import AppLauncherBackButton from "AppLauncherBackButton" /* 11755 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const AppLauncherNativeConstants = fn(1484);
+const AppLauncherNativeConstants = fn(1489);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 let closure_6 = AppLauncherNativeConstants.FLASH_LIST_ITEM_IMPRESSION_VIEWABILITY_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let closure_9 = { bottom: 4 };
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = { container: { height: "100%", backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, flex: 1, flexDirection: "column", paddingBottom: 12 }, header: null, list: null, backButton: null };
 let obj3 = { height: "100%", backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, flex: 1, flexDirection: "column", paddingBottom: 12 };
 obj2.header = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", height: 24, backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, paddingHorizontal: DEFAULT_CONTENT_PADDING, marginBottom: 12 };
 let obj4 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", height: 24, backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, paddingHorizontal: DEFAULT_CONTENT_PADDING, marginBottom: 12 };
 obj2.list = { paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingBottom: nativeDefault.space.PX_4 };
-let size = { width: fn(11824).BACK_BUTTON_SIZE, height: fn(11824).BACK_BUTTON_SIZE, alignItems: "center", justifyContent: "center" };
+let size = { width: fn(11755).BACK_BUTTON_SIZE, height: fn(11755).BACK_BUTTON_SIZE, alignItems: "center", justifyContent: "center" };
 obj2.backButton = size;
 let closure_10 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+const obj5 = { paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingBottom: nativeDefault.space.PX_4 };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/native/screens/app_list_view/AppLauncherViewAllScreen.tsx");
 
-export default function AppLauncherViewAllScreen(route) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((navigation) => {
+  const cResult = navigation(analyticsLocation[8]).c(73);
+  navigation = navigation.navigation;
+  const params = navigation.route.params;
+  const context = params.context;
+  analyticsLocation = params.analyticsLocation;
+  ({ sectionItemType, sectionName, sectionOverallPosition } = params);
+  const applications = params.applications;
+  const commands = params.commands;
+  const sectionDescriptors = params.sectionDescriptors;
+  ({ title, promotedApplicationIds } = params);
+  if (sectionName == null) {
+    sectionName = "frecency_view_all";
+  }
+  keyboardCloseReasonRef();
+  const sum = context(tmp2[9])().bottom + commands;
+  let obj = navigation(analyticsLocation[8]);
+  const requiredAppLauncherContext = navigation(analyticsLocation[10]).useRequiredAppLauncherContext();
+  const chatInputRef = requiredAppLauncherContext.chatInputRef;
+  keyboardCloseReasonRef = requiredAppLauncherContext.keyboardCloseReasonRef;
+  const entrypoint = requiredAppLauncherContext.entrypoint;
+  if (cResult[0] === chatInputRef) {
+    if (cResult[1] === keyboardCloseReasonRef) {
+      if (cResult[4] === analyticsLocation) {
+        if (cResult[5] === context) {
+          if (cResult[6] === entrypoint) {
+            if (cResult[7] === navigation) {
+              let tmp8 = cResult[8];
+            }
+            closure_12 = tmp8;
+            class F {
+              constructor(arg0) {
+                ({ application, sectionName } = navigation);
+                tmp = closure_0;
+                tmp2 = closure_2;
+                obj = closure_0(closure_2[11]);
+                APP_LAUNCHER_APPLICATION_VIEW_FRECENCT = analyticsLocation;
+                if (analyticsLocation == null) {
+                  APP_LAUNCHER_APPLICATION_VIEW_FRECENCT = tmp(tmp2[12]).ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW_FRECENCT;
+                }
+                obj1 = { location: APP_LAUNCHER_APPLICATION_VIEW_FRECENCT, application, navigation, context, sectionName, entrypoint };
+                result = obj.handleApplicationSelected(obj1);
+                return;
+              }
+            }
+            class D {
+              constructor(arg0, arg1, arg2) {
+                tmp = closure_0;
+                tmp2 = closure_2;
+                obj = closure_0(closure_2[11]);
+                APP_LAUNCHER_APPLICATION_VIEW_FRECENCT = analyticsLocation;
+                if (analyticsLocation == null) {
+                  APP_LAUNCHER_APPLICATION_VIEW_FRECENCT = tmp(tmp2[12]).ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW_FRECENCT;
+                }
+                obj1 = { location: APP_LAUNCHER_APPLICATION_VIEW_FRECENCT, context, command: navigation, section: arg1, sectionDescriptors, query: "", navigation, sectionName: arg2, entrypoint };
+                result = obj.handleApplicationCommandSelected(obj1);
+                return;
+              }
+            }
+            cResult[9] = analyticsLocation;
+            cResult[10] = context;
+            cResult[11] = entrypoint;
+            cResult[12] = navigation;
+            cResult[13] = sectionDescriptors;
+            cResult[14] = D;
+          }
+        }
+      }
+      class F {
+        constructor(arg0) {
+          ({ application, sectionName } = navigation);
+          tmp = closure_0;
+          tmp2 = closure_2;
+          obj = closure_0(closure_2[11]);
+          APP_LAUNCHER_APPLICATION_VIEW_FRECENCT = analyticsLocation;
+          if (analyticsLocation == null) {
+            APP_LAUNCHER_APPLICATION_VIEW_FRECENCT = tmp(tmp2[12]).ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW_FRECENCT;
+          }
+          obj1 = { location: APP_LAUNCHER_APPLICATION_VIEW_FRECENCT, application, navigation, context, sectionName, entrypoint };
+          result = obj.handleApplicationSelected(obj1);
+          return;
+        }
+      }
+      cResult[4] = analyticsLocation;
+      cResult[5] = context;
+      cResult[6] = entrypoint;
+      cResult[7] = navigation;
+      cResult[8] = F;
+      tmp8 = F;
+    }
+  }
+  const fn = function n() {
+    if (navigation.canGoBack()) {
+      navigation.pop();
+    } else {
+      keyboardCloseReasonRef.current = AppLauncherContext.AppLauncherKeyboardCloseReason.BACK;
+      const current = chatInputRef.current;
+      if (current != null) {
+        current.closeCustomKeyboard();
+      }
+    }
+  };
+  cResult[0] = chatInputRef;
+  cResult[1] = keyboardCloseReasonRef;
+  cResult[2] = navigation;
+  cResult[3] = fn;
+  const tmpResult = navigation(analyticsLocation[10]);
+}) : ((route) => {
   const params = route.route.params;
   const context = params.context;
   const analyticsLocation = params.analyticsLocation;
@@ -60,9 +169,9 @@ export default function AppLauncherViewAllScreen(route) {
   }
   let tmp = closure_10();
   closure_10 = tmp;
-  const sum = analyticsLocation(sectionOverallPosition[7])().bottom + sectionDescriptors;
+  const sum = analyticsLocation(sectionOverallPosition[9])().bottom + sectionDescriptors;
   c11 = sum;
-  const requiredAppLauncherContext = context(sectionOverallPosition[8]).useRequiredAppLauncherContext();
+  const requiredAppLauncherContext = context(sectionOverallPosition[10]).useRequiredAppLauncherContext();
   chatInputRef = requiredAppLauncherContext.chatInputRef;
   keyboardCloseReasonRef = requiredAppLauncherContext.keyboardCloseReasonRef;
   entrypoint = requiredAppLauncherContext.entrypoint;
@@ -113,7 +222,7 @@ export default function AppLauncherViewAllScreen(route) {
     const obj4 = { accessibilityRole: "header", lineClamp: 1, variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: title };
     items[2] = React5(native.Spacer, { size: AppLauncherBackButton.BACK_BUTTON_SIZE });
     obj.children = items;
-    return React6(View, obj);
+    return closure_2_8(View, obj);
   }, items3);
   const items5 = [chatInputRef, keyboardCloseReasonRef];
   const callback3 = applications.useCallback((item) => {
@@ -137,7 +246,7 @@ export default function AppLauncherViewAllScreen(route) {
       hasItem = promotedApplicationIds.has(item.id);
     }
     obj.showsPromoted = hasItem;
-    return promotedApplicationIds(analyticsLocation(sectionOverallPosition[16]), obj, item.id);
+    return promotedApplicationIds(analyticsLocation(sectionOverallPosition[18]), obj, item.id);
   }, items4);
   callback4 = applications.useCallback(() => {
     const current = chatInputRef.current;
@@ -158,14 +267,14 @@ export default function AppLauncherViewAllScreen(route) {
     if (found != null) {
       application = found.application;
     }
-    const appLauncherIconSource = context(sectionOverallPosition[9]).getAppLauncherIconSource(application);
+    const appLauncherIconSource = context(sectionOverallPosition[11]).getAppLauncherIconSource(application);
     if (null == found) {
       return null;
     } else {
       let tmp9 = null != appLauncherIconSource;
       if (tmp9) {
         const obj2 = { iconSource: appLauncherIconSource, iconSize: 36 };
-        tmp9 = promotedApplicationIds(analyticsLocation(sectionOverallPosition[17]), obj2);
+        tmp9 = promotedApplicationIds(analyticsLocation(sectionOverallPosition[19]), obj2);
       }
       const obj3 = {
         command: item,
@@ -177,21 +286,21 @@ export default function AppLauncherViewAllScreen(route) {
         isLastRow: index === tmp6,
         context: item,
         section: found,
-        location: context(sectionOverallPosition[10]).ApplicationCommandTriggerLocations.APP_LAUNCHER_FRECENTS_VIEW_ALL,
+        location: context(sectionOverallPosition[12]).ApplicationCommandTriggerLocations.APP_LAUNCHER_FRECENTS_VIEW_ALL,
         sectionName,
         icon: tmp9
       };
-      return promotedApplicationIds(context(sectionOverallPosition[18]).CommandRow, obj3);
+      return promotedApplicationIds(context(sectionOverallPosition[20]).CommandRow, obj3);
     }
-    const obj = context(sectionOverallPosition[9]);
+    const obj = context(sectionOverallPosition[11]);
   }, items6);
-  let obj = context(sectionOverallPosition[8]);
-  const bottomSheetFlashListBottomViewabilityInset = context(sectionOverallPosition[19]).useBottomSheetFlashListBottomViewabilityInset();
+  let obj = context(sectionOverallPosition[10]);
+  const bottomSheetFlashListBottomViewabilityInset = context(sectionOverallPosition[21]).useBottomSheetFlashListBottomViewabilityInset();
   ({ flashListRef, bottomVisibilityInsetRef } = bottomSheetFlashListBottomViewabilityInset);
-  let obj2 = context(sectionOverallPosition[19]);
-  trackAppLauncherItemImpressionOnFirstView = context(sectionOverallPosition[20]).useTrackAppLauncherItemImpressionOnFirstView().trackAppLauncherItemImpressionOnFirstView;
-  let obj3 = context(sectionOverallPosition[20]);
-  const appLauncherFlashListProps = context(sectionOverallPosition[21]).useAppLauncherFlashListProps();
+  let obj2 = context(sectionOverallPosition[21]);
+  trackAppLauncherItemImpressionOnFirstView = context(sectionOverallPosition[22]).useTrackAppLauncherItemImpressionOnFirstView().trackAppLauncherItemImpressionOnFirstView;
+  let obj3 = context(sectionOverallPosition[22]);
+  const appLauncherFlashListProps = context(sectionOverallPosition[23]).useAppLauncherFlashListProps();
   const items7 = [sum, tmp.list];
   const memo1 = applications.useMemo(() => {
     const obj = {};
@@ -231,7 +340,7 @@ export default function AppLauncherViewAllScreen(route) {
     ];
     return items;
   }, items9);
-  if (params.sectionItemType === context(sectionOverallPosition[22]).SectionItemType.APPS) {
+  if (params.sectionItemType === context(sectionOverallPosition[24]).SectionItemType.APPS) {
     const obj6 = {
       preserveScrollMomentum: true,
       contentContainerStyle: memo1,
@@ -249,15 +358,15 @@ export default function AppLauncherViewAllScreen(route) {
       simultaneousHandlers: null,
       animatedProps: null
     };
-    if (entrypoint === tmp5(tmp3[23]).AppLauncherEntrypoint.VOICE) {
+    if (entrypoint === tmp5(tmp3[25]).AppLauncherEntrypoint.VOICE) {
       flashListRef = appLauncherFlashListProps.scrollerRef;
     }
     obj6.ref = flashListRef;
     obj6.bottomViewabilityInsetRef = bottomVisibilityInsetRef;
     obj6.viewabilityConfigCallbackPairs = memo2;
     ({ onScroll: obj5.animatedOnScroll, gestureRef: obj5.simultaneousHandlers, animatedProps: obj5.animatedProps } = appLauncherFlashListProps);
-    let tmp23Result = promotedApplicationIds(tmp2(tmp3[21]), obj6);
-    const tmp2Result = tmp2(tmp3[21]);
+    let tmp23Result = promotedApplicationIds(tmp2(tmp3[23]), obj6);
+    const tmp2Result = tmp2(tmp3[23]);
   } else {
     const obj10 = {
       preserveScrollMomentum: true,
@@ -277,18 +386,18 @@ export default function AppLauncherViewAllScreen(route) {
       animatedProps: null
     };
     let scrollerRef = flashListRef;
-    if (entrypoint === tmp5(tmp3[23]).AppLauncherEntrypoint.VOICE) {
+    if (entrypoint === tmp5(tmp3[25]).AppLauncherEntrypoint.VOICE) {
       scrollerRef = appLauncherFlashListProps.scrollerRef;
     }
     obj10.ref = scrollerRef;
     obj10.bottomViewabilityInsetRef = bottomVisibilityInsetRef;
     obj10.viewabilityConfigCallbackPairs = memo3;
     ({ onScroll: obj7.animatedOnScroll, gestureRef: obj7.simultaneousHandlers, animatedProps: obj7.animatedProps } = appLauncherFlashListProps);
-    tmp23Result = promotedApplicationIds(tmp2(tmp3[21]), obj10);
-    const tmp2Result2 = tmp2(tmp3[21]);
+    tmp23Result = promotedApplicationIds(tmp2(tmp3[23]), obj10);
+    const tmp2Result2 = tmp2(tmp3[23]);
   }
   const obj11 = { style: tmp.container, children: null };
   const items10 = [memo, tmp23Result];
   obj11.children = items10;
   return navigation(commands, obj11);
-};
+});

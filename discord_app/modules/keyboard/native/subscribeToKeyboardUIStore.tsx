@@ -1,8 +1,8 @@
-// === Module 1481: subscribeToKeyboardUIStore ===
+// === Module 1486: subscribeToKeyboardUIStore ===
 
-// Module 1481 (subscribeToKeyboardUIStore)
-import AppEntryKeyContext from "AppEntryKeyContext" /* 1482 */;
-import KeyboardUIStoreDefault from "KeyboardUIStore" /* 1483 */;
+// Module 1486 (subscribeToKeyboardUIStore)
+import AppEntryKeyContext from "AppEntryKeyContext" /* 1487 */;
+import KeyboardUIStoreDefault from "KeyboardUIStore" /* 1488 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/keyboard/native/subscribeToKeyboardUIStore.tsx");

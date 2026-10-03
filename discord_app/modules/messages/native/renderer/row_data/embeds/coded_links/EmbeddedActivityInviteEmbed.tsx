@@ -1,28 +1,28 @@
-// === Module 12993: EmbeddedActivityInviteEmbed ===
+// === Module 13052: EmbeddedActivityInviteEmbed ===
 
-// Module 12993 (EmbeddedActivityInviteEmbed)
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import util from "util" /* 1115 */;
-import useChannelName from "useChannelName" /* 4998 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5519 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7560 */;
-import ApplicationAssetUtils from "ApplicationAssetUtils" /* 7777 */;
-import useEmbeddedActivityParticipantAvatarUris from "useEmbeddedActivityParticipantAvatarUris" /* 12994 */;
+// Module 13052 (EmbeddedActivityInviteEmbed)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import util from "util" /* 1126 */;
+import useChannelName from "useChannelName" /* 5043 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5812 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7604 */;
+import ApplicationAssetUtils from "ApplicationAssetUtils" /* 7821 */;
+import useEmbeddedActivityParticipantAvatarUris from "useEmbeddedActivityParticipantAvatarUris" /* 13053 */;
 import _slicedToArray from "module_32" /* 32 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2043 */;
-import ApplicationAssetsStore from "ApplicationAssetsStore" /* 7778 */;
-import ApplicationStore from "ApplicationStore" /* 5072 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
+import ApplicationAssetsStore from "ApplicationAssetsStore" /* 7822 */;
+import ApplicationStore from "ApplicationStore" /* 5118 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import InviteStore from "InviteStore" /* 4826 */;
-import RelationshipStore from "RelationshipStore" /* 4508 */;
-import UserStore from "UserStore" /* 1372 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import InviteStore from "InviteStore" /* 4871 */;
+import RelationshipStore from "RelationshipStore" /* 4519 */;
+import UserStore from "UserStore" /* 1377 */;
 
 require = fn;
 const Image = fn(17).Image;
-const FetchState = fn(7778).FetchState;
-const CodedLinkExtendedType = fn(11060).CodedLinkExtendedType;
-const InviteTargetTypes = fn(7328).InviteTargetTypes;
+const FetchState = fn(7822).FetchState;
+const CodedLinkExtendedType = fn(10024).CodedLinkExtendedType;
+const InviteTargetTypes = fn(7226).InviteTargetTypes;
 let closure_16 = ["embedded_cover"];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/EmbeddedActivityInviteEmbed.tsx");
@@ -46,7 +46,7 @@ export const createEmbeddedActivityInviteEmbed = function createEmbeddedActivity
         }
         const tmp13 = getEmbedThemeColorsDefault(inviteCode.theme);
         const baseColors = tmp13.baseColors;
-        const guild = invite.guild;
+        guild = invite.guild;
         let name;
         if (guild != null) {
           name = guild.name;

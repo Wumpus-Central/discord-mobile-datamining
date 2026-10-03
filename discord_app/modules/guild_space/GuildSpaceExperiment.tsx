@@ -1,8 +1,10 @@
-// === Module 6833: GuildSpaceExperiment ===
+// === Module 6726: GuildSpaceExperiment ===
 
-// Module 6833 (GuildSpaceExperiment)
-import Constants from "Constants" /* 1074 */;
-import ApexExperiment from "ApexExperiment" /* 1435 */;
+// Module 6726 (GuildSpaceExperiment)
+import c from "c" /* 576 */;
+import Constants from "Constants" /* 1085 */;
+import ApexExperiment from "ApexExperiment" /* 1440 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const EMPTY_STRING_SNOWFLAKE_ID = Constants.EMPTY_STRING_SNOWFLAKE_ID;
@@ -18,10 +20,27 @@ export const getGuildSpaceExperimentEnabled = function getGuildSpaceExperimentEn
   }
   return enabled;
 };
-export const useGuildSpaceExperimentEnabled = function useGuildSpaceExperimentEnabled(id, location) {
-  let tmp = id;
-  if (id == null) {
+export const useGuildSpaceExperimentEnabled = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, location) => {
+  let tmp = arg0;
+  const cResult = c.c(3);
+  if (arg0 == null) {
+    tmp = EMPTY_STRING_SNOWFLAKE_ID;
+  }
+  if (cResult[0] === location) {
+    if (cResult[1] === tmp) {
+      let tmp3 = cResult[2];
+    }
+    return apexExperiment.useConfig(tmp3).enabled;
+  }
+  const obj2 = { guildId: tmp, location };
+  cResult[0] = location;
+  cResult[1] = tmp;
+  cResult[2] = obj2;
+  tmp3 = obj2;
+}) : ((arg0, location) => {
+  let tmp = arg0;
+  if (arg0 == null) {
     tmp = EMPTY_STRING_SNOWFLAKE_ID;
   }
   return apexExperiment.useConfig({ guildId: tmp, location }).enabled;
-};
+});

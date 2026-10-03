@@ -1,14 +1,14 @@
-// === Module 6707: GuildOnboardingPromptsStore ===
+// === Module 6595: GuildOnboardingPromptsStore ===
 
-// Module 6707 (GuildOnboardingPromptsStore)
+// Module 6595 (GuildOnboardingPromptsStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import DurationsDefault from "Durations" /* 1091 */;
-import DefaultChannelUtils from "DefaultChannelUtils" /* 6709 */;
-import ImpersonateStore from "ImpersonateStore" /* 2100 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildOnboardingStore from "GuildOnboardingStore" /* 6703 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import DurationsDefault from "Durations" /* 1102 */;
+import DefaultChannelUtils from "DefaultChannelUtils" /* 6597 */;
+import ImpersonateStore from "ImpersonateStore" /* 2105 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import GuildOnboardingStore from "GuildOnboardingStore" /* 6591 */;
 
 require = fn;
 function handleUpdate(arg0) {
@@ -81,8 +81,8 @@ function handleUpdate(arg0) {
   obj.prompts = mapped;
   dependencyMap[guildId] = obj;
 }
-const GuildOnboardingStatus = fn(6703).GuildOnboardingStatus;
-const GuildOnboardingMode = fn(6708).GuildOnboardingMode;
+const GuildOnboardingStatus = fn(6591).GuildOnboardingStatus;
+const GuildOnboardingMode = fn(6596).GuildOnboardingMode;
 const dependencyMap = {};
 const dependencyMap2 = {};
 const dependencyMap3 = {};
@@ -153,7 +153,7 @@ prototype["getOnboardingResponsesForPrompt"] = function getOnboardingResponsesFo
       let intersectionResult = closure_13;
     } else {
       const self = this;
-      const options = found.options;
+      options = found.options;
       const mapped = options.map((id) => id.id);
       intersectionResult = _modDef12.intersection(mapped, this.getOnboardingResponses(guildId));
     }
@@ -184,9 +184,9 @@ prototype["getEnabledOnboardingPrompts"] = function getEnabledOnboardingPrompts(
   }
   return tmp2;
 };
-prototype["getDefaultChannelIds"] = function getDefaultChannelIds(id) {
+prototype["getDefaultChannelIds"] = function getDefaultChannelIds(guildId) {
   let defaultChannelIds;
-  if (dependencyMap[id] != null) {
+  if (dependencyMap[guildId] != null) {
     defaultChannelIds = tmp.defaultChannelIds;
   }
   if (defaultChannelIds == null) {
@@ -208,8 +208,8 @@ prototype["getEnabled"] = function getEnabled(id) {
   }
   return flag;
 };
-prototype["getOnboardingPrompt"] = function getOnboardingPrompt(targetId13) {
-  closure_0 = targetId13;
+prototype["getOnboardingPrompt"] = function getOnboardingPrompt(promptId) {
+  closure_0 = promptId;
   const values = Object.values(closure_8);
   const mapped = values.map((prompts) => prompts.prompts);
   return mapped.flat().find((id) => id.id === closure_0);

@@ -1,20 +1,41 @@
-// === Module 18015: TTITestAction ===
+// === Module 18101: TTITestAction ===
 
-// Module 18015 (TTITestAction)
+// Module 18101 (TTITestAction)
 import LoggerDefault from "Logger" /* 3 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import ProcessUtilsDefault from "ProcessUtils" /* 1358 */;
-import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 4728 */;
-import NativeJankStatsModuleDefault from "NativeJankStatsModule" /* 15858 */;
+import ProcessUtilsDefault from "ProcessUtils" /* 1363 */;
+import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 4743 */;
+import NativeJankStatsModuleDefault from "NativeJankStatsModule" /* 15934 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ExperimentStore from "ExperimentStore" /* 4761 */;
+import ExperimentStore from "ExperimentStore" /* 4776 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import DefaultRouteStore from "DefaultRouteStore" /* 4688 */;
-import GuildStore from "GuildStore" /* 2066 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import DefaultRouteStore from "DefaultRouteStore" /* 4703 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import Dispatcher from "Dispatcher" /* 584 */;
 
 const require = globalThis.__r;
 
+function releaseDelayedMessageLoad(arg0) {
+  let tmp = arg0;
+  if (arg0 === undefined) {
+    tmp = c14;
+  }
+  if (null != tmp) {
+    if (c14 === tmp) {
+      if (null != tmp.timer) {
+        const _clearTimeout = clearTimeout;
+        clearTimeout(tmp.timer);
+      }
+      c14 = null;
+      const actions = tmp.actions;
+      for (const item10013 of actions) {
+        obj = Dispatcher;
+        let dispatchResult = obj.dispatch(item10013);
+        continue;
+      }
+    }
+  }
+}
 function sendReply(status, message, arg2) {
   const merged = Object.assign(arg2);
   const json = JSON.stringify({ type: "response", status, message });
@@ -25,92 +46,156 @@ function sendStatus(message) {
   const json = JSON.stringify({ type: "status", message });
   NativeTTIManagerModuleDefault.logToDevice(json);
 }
-let closure_18 = async function _captureNavigationTTI(arg0) {
-  closure_2 = tmp2;
-  closure_130_0 = closure_0;
-  sendStatus("Waiting for socket connection");
-  await new Promise((arg0) => closure_1_7(arg0));
-  if (1 === tmp5) {
+let closure_20 = async function _captureNavigationTTI(arg0) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
     if (arg0 === 1) {
-      c5 = 3;
       throw value;
     } else if (arg0 === 2) {
-      c5 = 3;
-      return { value, done: true };
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
-      const channel = closure_131_9.getChannel(closure_130_0.toChannelId);
-      if (null != channel) {
-        closure_131_17("Resetting navigation to DMs");
-        if (closure_131_19()) {
-          c4 = 2;
-          c5 = 1;
-          new Promise((arg0) => setTimeout(arg0, 1000));
-          return { value: new Promise((arg0) => setTimeout(arg0, 1000)), done: false };
+      return { value: "IconComponent", done: "IconComponent" };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
         } else {
-          closure_131_16("error", "Unable to reset navigation to DMs");
+          closure_4 = tmp5;
+          closure_3 = tmp2;
+          closure_131_0 = closure_0;
+          let channel;
+          closure_131_2 = undefined;
+          releaseDelayedMessageLoad();
+          sendStatus("Waiting for socket connection");
+          const promise = new Promise((arg0) => closure_1_6(arg0));
+          c5 = 1;
+          c6 = 1;
+          const obj7 = { value: promise, done: false };
+          return obj7;
         }
       } else {
-        const _HermesInternal4 = HermesInternal;
-        closure_131_16("error", "Unable to switch to channel " + closure_130_0.toChannelId + " because it does not exist on the client");
+        if (1 === tmp5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj8 = { value, done: true };
+            return obj8;
+          } else {
+            channel = closure_132_8.getChannel(closure_131_0.toChannelId);
+            if (null != channel) {
+              closure_132_19("Resetting navigation to DMs");
+              if (closure_132_21()) {
+                const promise3 = new Promise((arg0) => setTimeout(arg0, 1000));
+                c5 = 2;
+                c6 = 1;
+                const obj9 = { value: promise3, done: false };
+                return obj9;
+              } else {
+                closure_132_18("error", "Unable to reset navigation to DMs");
+              }
+            } else {
+              const _HermesInternal4 = HermesInternal;
+              closure_132_18("error", "Unable to switch to channel " + closure_131_0.toChannelId + " because it does not exist on the client");
+            }
+          }
+        } else {
+          if (2 === tmp5) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              const obj10 = { value, done: true };
+              return obj10;
+            } else {
+              const _HermesInternal5 = HermesInternal;
+              closure_132_19("Opening the channel list for " + closure_131_0.toChannelId);
+              guildId = channel.getGuildId();
+              if (guildId == null) {
+                guildId = closure_132_11;
+              }
+              const obj11 = { screen: "guilds", guildId, resetRoot: true, forceNavigate: true, drawerOpen: true };
+              if (obj17.navigateToRootTab(obj11)) {
+                const promise4 = new Promise((arg0) => setTimeout(arg0, 1000));
+                c5 = 3;
+                c6 = 1;
+                const obj12 = { value: promise4, done: false };
+                return obj12;
+              } else {
+                const _HermesInternal3 = HermesInternal;
+                closure_132_18("error", "Unable to open the channel list for " + closure_131_0.toChannelId);
+              }
+              obj17 = closure_132_0(closure_132_2[17]);
+            }
+          } else if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj13 = { value, done: true };
+            return obj13;
+          } else {
+            if (true === closure_131_0.coldMessageCache) {
+              const _HermesInternal = HermesInternal;
+              closure_132_19("Clearing the in-memory message cache for " + closure_131_0.toChannelId);
+              closure_132_1(closure_132_2[18]).clearChannel(closure_131_0.toChannelId);
+              obj = closure_132_1(closure_132_2[18]);
+            }
+            const artificialContentDelayMs = closure_131_0.artificialContentDelayMs;
+            c2 = artificialContentDelayMs;
+            if (artificialContentDelayMs == null) {
+              c2 = 0;
+            }
+            closure_131_2 = c2;
+            if (closure_131_2 <= 0) {
+              const obj14 = { destinationKey: closure_131_0.toChannelId };
+              const result = closure_132_0(closure_132_2[19]).armNavigationTTIDebugFreeze(closure_131_0.freeze, obj14);
+              if (true === closure_131_0.coldMessageCache) {
+                const obj15 = { guildId: channel.getGuildId(), channelId: channel.id, forceFetch: true, skipLocalFetch: true };
+                const messages = closure_132_1(closure_132_2[20]).fetchMessages(obj15);
+                const obj4 = closure_132_1(closure_132_2[20]);
+              }
+              closure_132_18("success", "Navigation TTI freeze armed");
+              const _HermesInternal2 = HermesInternal;
+              closure_132_19("Selecting capture channel " + closure_131_0.toChannelId + " from the channel list");
+              const obj2 = closure_132_0(closure_132_2[19]);
+              closure_132_0(closure_132_2[21]).transitionToChannel(closure_131_0.toChannelId, { navigationReplace: false });
+              const obj6 = closure_132_0(closure_132_2[21]);
+            } else if (true === closure_131_0.coldMessageCache) {
+              const obj16 = { channelId: closure_131_0.toChannelId, delayMs: closure_131_2, actions: [], timer: null };
+              closure_132_14 = obj16;
+            }
+          }
+          closure_132_18("error", "Artificial content delay requires a cold message cache");
+          c6 = 3;
+          return { value: "IconComponent", done: "IconComponent" };
+        }
+        c6 = 3;
       }
-      c5 = 3;
+    } catch (tmp94) {
+      c6 = tmp;
+      throw tmp94;
     }
-  } else if (2 === tmp5) {
-    if (arg0 === 1) {
-      c5 = 3;
-      throw value;
-    } else if (arg0 === 2) {
-      c5 = 3;
-      return { value, done: true };
-    } else {
-      const _HermesInternal5 = HermesInternal;
-      closure_131_17("Opening the channel list for " + closure_130_0.toChannelId);
-      guildId = channel.getGuildId();
-      if (guildId == null) {
-        guildId = closure_131_12;
-      }
-      if (obj16.navigateToRootTab(obj11)) {
-        c4 = 3;
-        c5 = 1;
-        new Promise((arg0) => setTimeout(arg0, 1000));
-        return { value: new Promise((arg0) => setTimeout(arg0, 1000)), done: false };
-      } else {
-        const _HermesInternal3 = HermesInternal;
-        closure_131_16("error", "Unable to open the channel list for " + closure_130_0.toChannelId);
-      }
-      obj11 = { screen: "guilds", guildId, resetRoot: true, forceNavigate: true, drawerOpen: true };
-      obj16 = closure_131_0(closure_131_2[17]);
-    }
-  } else if (arg0 === 1) {
-    c5 = 3;
-    throw value;
-  } else if (arg0 !== 2) {
-    if (true === closure_130_0.coldMessageCache) {
-      const _HermesInternal = HermesInternal;
-      closure_131_17("Clearing the in-memory message cache for " + closure_130_0.toChannelId);
-      closure_131_1(closure_131_2[18]).clearChannel(closure_130_0.toChannelId);
-      closure_131_1(closure_131_2[18]);
-    }
-    const result = closure_131_0(closure_131_2[19]).armNavigationTTIDebugFreeze(closure_130_0.freeze, { destinationKey: closure_130_0.toChannelId });
-    if (true === closure_130_0.coldMessageCache) {
-      const messages = closure_131_1(closure_131_2[20]).fetchMessages({ guildId: channel.getGuildId(), channelId: channel.id, forceFetch: true, skipLocalFetch: true });
-      closure_131_1(closure_131_2[20]);
-      { guildId: channel.getGuildId(), channelId: channel.id, forceFetch: true, skipLocalFetch: true };
-    }
-    closure_131_16("success", "Navigation TTI freeze armed");
-    const _HermesInternal2 = HermesInternal;
-    closure_131_17("Selecting capture channel " + closure_130_0.toChannelId + " from the channel list");
-    closure_131_0(closure_131_2[19]);
-    closure_131_0(closure_131_2[21]).transitionToChannel(closure_130_0.toChannelId, { navigationReplace: false });
-    closure_131_0(closure_131_2[21]);
   }
-  return value;
 };
 function resetNavigationToDMs() {
-  return closure_0(4721).navigateToRootTab({ screen: "guilds", guildId, resetRoot: true, forceNavigate: true, drawerOpen: false });
+  return closure_0(4736).navigateToRootTab({ screen: "guilds", guildId, resetRoot: true, forceNavigate: true, drawerOpen: false });
 }
-let closure_20 = async function _navigateToDMs() {
-  await new Promise((arg0) => closure_1_7(arg0));
+let closure_22 = async function _navigateToDMs() {
+  await new Promise((arg0) => closure_1_6(arg0));
   if (1 === tmp4) {
     if (arg0 === 1) {
       c3 = 3;
@@ -118,20 +203,20 @@ let closure_20 = async function _navigateToDMs() {
     } else if (arg0 === 2) {
       c3 = 3;
       return { value, done: true };
-    } else if (closure_129_19()) {
+    } else if (closure_129_21()) {
       c2 = 2;
       c3 = 1;
       new Promise((arg0) => setTimeout(arg0, 1000));
       return { value: new Promise((arg0) => setTimeout(arg0, 1000)), done: false };
     } else {
-      closure_129_16("error", "Unable to reset navigation to DMs");
+      closure_129_18("error", "Unable to reset navigation to DMs");
       c3 = 3;
     }
   } else if (arg0 === 1) {
     c3 = 3;
     throw value;
   } else if (arg0 !== 2) {
-    closure_129_16("success", "Navigation reset to DMs");
+    closure_129_18("success", "Navigation reset to DMs");
   }
   return value;
 };
@@ -166,7 +251,7 @@ function getErrorDetails(headers) {
 }
 function setupTTITest() {
   const self = this;
-  const apply = closure_23.apply;
+  const apply = closure_25.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -174,7 +259,7 @@ function setupTTITest() {
   }
   return applyArgumentsResult;
 }
-let closure_23 = async function _setupTTITest(arg0) {
+let closure_25 = async function _setupTTITest(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -185,7 +270,7 @@ let closure_23 = async function _setupTTITest(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -223,7 +308,7 @@ let closure_23 = async function _setupTTITest(arg0) {
             closure_130_13 = undefined;
             c6 = 1;
             c7 = 1;
-            return { value: "flex", done: null };
+            return { value: "Reflect", done: true };
           }
         break;
         case 1:
@@ -240,18 +325,18 @@ let closure_23 = async function _setupTTITest(arg0) {
               password = closure_130_0.user.password;
               expectedId = closure_130_0.user.expectedId;
               c5 = 1;
-              let tmp153 = null != closure_131_8.getId();
+              let tmp153 = null != closure_131_7.getId();
               if (tmp153) {
-                tmp153 = closure_131_8.getId() !== expectedId;
+                tmp153 = closure_131_7.getId() !== expectedId;
               }
               if (tmp153) {
-                closure_131_17("Logging out old user");
+                closure_131_19("Logging out old user");
                 c6 = 5;
                 c7 = 1;
                 const obj6 = { value: closure_131_1(closure_131_2[22]).logout("TTI_test"), done: false };
                 return obj6;
-              } else if (closure_131_8.getId() !== expectedId) {
-                closure_131_17("Logging in new user");
+              } else if (closure_131_7.getId() !== expectedId) {
+                closure_131_19("Logging in new user");
                 const promise = new Promise((arg0, arg1) => {
                   closure_0 = arg0;
                   closure_1 = arg1;
@@ -260,9 +345,9 @@ let closure_23 = async function _setupTTITest(arg0) {
                     closure_1 = arg1;
                     function handler() {
                       closure_1(closure_0);
-                      closure_1(closure_2_2[13]).unsubscribe(closure_0, handler);
+                      closure_1(closure_2_2[10]).unsubscribe(closure_0, handler);
                     }
-                    const subscription = closure_1(handler[13]).subscribe(LOGIN_SUCCESS, handler);
+                    const subscription = closure_1(handler[10]).subscribe(LOGIN_SUCCESS, handler);
                   };
                   const items = ["LOGIN_MFA_STEP", "LOGIN_SUSPENDED_USER", "LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION", "LOGIN_ACCOUNT_DISABLED", "LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED", "LOGIN_FAILURE"];
                   while (tmp !== undefined) {
@@ -284,8 +369,8 @@ let closure_23 = async function _setupTTITest(arg0) {
                 c5 = 0;
               }
             }
-            closure_131_17("Waiting for socket connection");
-            const promise6 = new Promise((arg0) => closure_1_7(arg0));
+            closure_131_19("Waiting for socket connection");
+            const promise6 = new Promise((arg0) => closure_1_6(arg0));
             c6 = 3;
             c7 = 1;
             const obj9 = { value: promise6, done: false };
@@ -298,9 +383,9 @@ let closure_23 = async function _setupTTITest(arg0) {
           if (closure_130_1) {
             throw tmp143;
           } else {
-            closure_131_16("error", tmp143.message);
+            closure_131_18("error", tmp143.message);
             c7 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         break;
         case 3:
@@ -356,8 +441,8 @@ let closure_23 = async function _setupTTITest(arg0) {
             const obj19 = { value, done: true };
             return obj19;
           } else {
-            closure_131_17("Waiting for socket connection");
-            const promise8 = new Promise((arg0) => closure_1_7(arg0));
+            closure_131_19("Waiting for socket connection");
+            const promise8 = new Promise((arg0) => closure_1_6(arg0));
             c6 = 7;
             c7 = 1;
             const obj20 = { value: promise8, done: false };
@@ -374,7 +459,7 @@ let closure_23 = async function _setupTTITest(arg0) {
             const obj21 = { value, done: true };
             return obj21;
           } else {
-            id = closure_131_8.getId();
+            id = closure_131_7.getId();
             if (id !== expectedId) {
               const _Error4 = Error;
               const _HermesInternal3 = HermesInternal;
@@ -394,11 +479,11 @@ let closure_23 = async function _setupTTITest(arg0) {
           } else {
             let tmp56 = null != closure_130_0.invite;
             if (tmp56) {
-              tmp56 = null == closure_131_11.getGuild(closure_130_0.invite.expectedGuildId);
+              tmp56 = null == closure_131_10.getGuild(closure_130_0.invite.expectedGuildId);
             }
             if (tmp56) {
               if (!closure_130_1) {
-                closure_131_17("Inviting to target guild");
+                closure_131_19("Inviting to target guild");
               }
               const obj23 = { inviteKey: closure_130_0.invite.code, context: { location: "tti_tests" }, skipOnboarding: true };
               c6 = 9;
@@ -406,7 +491,7 @@ let closure_23 = async function _setupTTITest(arg0) {
               const obj24 = { value: closure_131_1(closure_131_2[23]).acceptInvite(obj23), done: false };
               return obj24;
             } else if (null != closure_130_0.channelId) {
-              channel = closure_131_9.getChannel(closure_130_0.channelId);
+              channel = closure_131_8.getChannel(closure_130_0.channelId);
               if (null == channel) {
                 const _Error3 = Error;
                 const _HermesInternal2 = HermesInternal;
@@ -415,41 +500,41 @@ let closure_23 = async function _setupTTITest(arg0) {
                 if (closure_130_1) {
                   throw closure_130_8;
                 } else {
-                  closure_131_16("error", closure_130_8.message);
+                  closure_131_18("error", closure_130_8.message);
                   c7 = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 }
               } else {
                 if (!closure_130_1) {
-                  closure_131_17("Switching to desired channel");
+                  closure_131_19("Switching to desired channel");
                 }
                 closure_131_0(closure_131_2[21]).transitionToChannel(closure_130_0.channelId);
                 const obj12 = closure_131_0(closure_131_2[21]);
-                closure_130_9 = closure_131_13.CHANNEL(closure_131_0(closure_131_2[24]).getGuildIdForGenericRedirect(channel), channel.id);
+                closure_130_9 = closure_131_12.CHANNEL(closure_131_0(closure_131_2[24]).getGuildIdForGenericRedirect(channel), channel.id);
                 c6 = 11;
                 c7 = 1;
                 const obj25 = {
                   value: (function waitForStartupRoute(arg0, arg1) {
                                   closure_0 = arg0;
                                   c1 = 20000;
-                                  if (closure_10.lastNonVoiceRoute === arg0) {
+                                  if (closure_9.lastNonVoiceRoute === arg0) {
                                     let resolved = Promise.resolve(true);
                                   } else {
                                     resolved = new Promise((arg0) => {
                                       closure_0 = arg0;
                                       function onChange() {
-                                        if (closure_3_10.lastNonVoiceRoute === closure_0) {
+                                        if (closure_3_9.lastNonVoiceRoute === closure_0) {
                                           const _clearTimeout = clearTimeout;
                                           clearTimeout(closure_2);
-                                          closure_3_10.removeChangeListener(onChange);
+                                          closure_3_9.removeChangeListener(onChange);
                                           closure_0(true);
                                         }
                                       }
                                       const timeout = setTimeout(() => {
-                                        closure_3_10.removeChangeListener(onChange);
+                                        closure_3_9.removeChangeListener(onChange);
                                         closure_0(false);
                                       }, onChange);
-                                      closure_1_10.addChangeListener(onChange);
+                                      closure_1_9.addChangeListener(onChange);
                                     });
                                   }
                                   return resolved;
@@ -458,20 +543,20 @@ let closure_23 = async function _setupTTITest(arg0) {
                 };
                 return obj25;
               }
-            } else if (null == closure_131_8.getToken()) {
+            } else if (null == closure_131_7.getToken()) {
               const _Error2 = Error;
               const error2 = new Error("Setup finished with no stored auth token, so measured launches would cold start on the login screen regardless of the startup route.");
               closure_130_13 = error2;
               if (closure_130_1) {
                 throw closure_130_13;
               } else {
-                closure_131_16("error", closure_130_13.message);
+                closure_131_18("error", closure_130_13.message);
                 c7 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             } else {
               if (!closure_130_1) {
-                closure_131_17("Writing caches");
+                closure_131_19("Writing caches");
               }
               c6 = 13;
               c7 = 1;
@@ -490,7 +575,7 @@ let closure_23 = async function _setupTTITest(arg0) {
             return obj27;
           } else {
             if (!closure_130_1) {
-              closure_131_17("Invite API call finished");
+              closure_131_19("Invite API call finished");
             }
             const promise9 = new Promise((arg0, arg1) => {
               closure_0 = arg0;
@@ -501,8 +586,8 @@ let closure_23 = async function _setupTTITest(arg0) {
                     logger.log("Invited guild available in the store");
                     const _JSON = JSON;
                     const json = JSON.stringify({ type: "status", message: "Invited guild available in the store" });
-                    closure_1(dependencyMap[10]).logToDevice(json);
-                    obj = closure_1(dependencyMap[10]);
+                    closure_1(dependencyMap[11]).logToDevice(json);
+                    obj = closure_1(dependencyMap[11]);
                   }
                   const _clearTimeout = clearTimeout;
                   clearTimeout(closure_1);
@@ -543,7 +628,7 @@ let closure_23 = async function _setupTTITest(arg0) {
             }
             c6 = 12;
             c7 = 1;
-            const obj33 = { value: closure_131_10.asyncPersist(), done: false };
+            const obj33 = { value: closure_131_9.asyncPersist(), done: false };
             return obj33;
           }
         break;
@@ -561,14 +646,14 @@ let closure_23 = async function _setupTTITest(arg0) {
             const channelId = closure_130_0.channelId;
             const _String = String;
             const _HermesInternal = HermesInternal;
-            const error3 = new Error("Setup could not establish the startup route for channel " + channelId + ": expected " + closure_130_9 + " but DefaultRouteStore holds " + closure_131_10.lastNonVoiceRoute + " (persisted=" + String(false !== closure_130_11) + "). Measured launches would cold start somewhere other than the scenario channel.");
+            const error3 = new Error("Setup could not establish the startup route for channel " + channelId + ": expected " + closure_130_9 + " but DefaultRouteStore holds " + closure_131_9.lastNonVoiceRoute + " (persisted=" + String(false !== closure_130_11) + "). Measured launches would cold start somewhere other than the scenario channel.");
             closure_130_12 = error3;
             if (closure_130_1) {
               throw closure_130_12;
             } else {
-              closure_131_16("error", closure_130_12.message);
+              closure_131_18("error", closure_130_12.message);
               c7 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           }
         break;
@@ -598,11 +683,11 @@ let closure_23 = async function _setupTTITest(arg0) {
             return obj36;
           } else {
             if (!closure_130_1) {
-              closure_131_17("Sending reply");
-              closure_131_16("success", "Setup Complete");
+              closure_131_19("Sending reply");
+              closure_131_18("success", "Setup Complete");
             }
             c7 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
       }
     } catch (tmp191) {
@@ -618,7 +703,7 @@ let closure_23 = async function _setupTTITest(arg0) {
 };
 function apiLogin() {
   const self = this;
-  const apply = closure_25.apply;
+  const apply = closure_27.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -626,7 +711,7 @@ function apiLogin() {
   }
   return applyArgumentsResult;
 }
-let closure_25 = async function _apiLogin(arg0) {
+let closure_27 = async function _apiLogin(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -637,7 +722,7 @@ let closure_25 = async function _apiLogin(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -698,7 +783,7 @@ let closure_25 = async function _apiLogin(arg0) {
           return obj11;
         } else {
           closure_132_2 = value;
-          const promise = new Promise((arg0) => closure_1_7(arg0));
+          const promise = new Promise((arg0) => closure_1_6(arg0));
           c6 = 6;
           c7 = 1;
           const obj12 = { value: promise, done: false };
@@ -736,7 +821,7 @@ let closure_25 = async function _apiLogin(arg0) {
           const obj16 = { value, done: true };
           return obj16;
         } else {
-          const promise3 = new Promise((arg0) => closure_1_7(arg0));
+          const promise3 = new Promise((arg0) => closure_1_6(arg0));
           c6 = 5;
           c7 = 1;
           const obj18 = { value: promise3, done: false };
@@ -750,7 +835,7 @@ let closure_25 = async function _apiLogin(arg0) {
           c7 = 3;
           const obj19 = { value, done: true };
           return obj19;
-        } else if (closure_133_8.getId() === closure_132_3) {
+        } else if (closure_133_7.getId() === closure_132_3) {
           c7 = 3;
           const obj20 = { value: closure_132_2, done: true };
           return obj20;
@@ -763,7 +848,7 @@ let closure_25 = async function _apiLogin(arg0) {
         const obj21 = { value, done: true };
         return obj21;
       } else {
-        id = closure_133_8.getId();
+        id = closure_133_7.getId();
         if (id !== closure_132_3) {
           const _Error = Error;
           const _HermesInternal = HermesInternal;
@@ -780,14 +865,14 @@ let closure_25 = async function _apiLogin(arg0) {
         password = arg1;
         const items = ["LOGIN_FAILURE", "PASSWORDLESS_FAILURE", "LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION", "LOGIN_ACCOUNT_DISABLED", "LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED"];
         function _loop(iter) {
-          obj = password(573);
-          const f129178 = () => {
+          obj = password(584);
+          const f155283 = () => {
             const error = new Error("Unable to login " + login + ". Login failed with action '" + obj + "'");
             iter(error);
           };
           function handler(arg0) {
             obj.unsubscribe(closure_1, handler);
-            return f129178(arg0);
+            return f155283(arg0);
           }
           const subscription = obj.subscribe(iter, handler);
         }
@@ -796,8 +881,8 @@ let closure_25 = async function _apiLogin(arg0) {
           let _loopResult = _loop(iter.next());
           continue;
         }
-        closure_1_26(password(573), "LOGIN_SUCCESS", (token) => closure_0(token.token));
-        password(6196).login({ login, password });
+        closure_1_28(password(584), "LOGIN_SUCCESS", (token) => closure_0(token.token));
+        password(6082).login({ login, password });
       });
       c6 = 1;
       c7 = 1;
@@ -815,20 +900,51 @@ function subscribeOnce(subscribe, arg1, arg2) {
   closure_2 = arg2;
   function handler(arg0) {
     obj.unsubscribe(closure_1, handler);
-    return f129178(arg0);
+    return f155283(arg0);
   }
   return subscribe.subscribe("LOGIN_SUCCESS", handler);
 }
-const applicationReady = fn(17298).applicationReady;
-fn(6055).addPostConnectionCallback;
-const Constants = fn(1074);
-({ ME: closure_12, Routes: map1 } = Constants);
+const applicationReady = fn(17391).applicationReady;
+fn(5948).addPostConnectionCallback;
+const Constants = fn(1085);
+({ ME: closure_11, Routes: closure_12 } = Constants);
 const logger = new LoggerDefault("TTITestAction");
+let c14 = null;
+Dispatcher.addInterceptor((type) => {
+  closure_0 = _null;
+  let flag = null != _null;
+  if (flag) {
+    flag = "LOAD_MESSAGES_SUCCESS" === type.type;
+  }
+  if (flag) {
+    flag = type.channelId === _null.channelId;
+  }
+  if (flag) {
+    const actions = _null.actions;
+    actions.push(type);
+    flag = true;
+    if (1 === _null.actions.length) {
+      const _HermesInternal = HermesInternal;
+      const combined = "Holding message content for " + _null.delayMs + "ms";
+      logger.log(combined);
+      const _JSON = JSON;
+      obj = { type: "status", message: combined };
+      const json = JSON.stringify(obj);
+      NativeTTIManagerModuleDefault.logToDevice(json);
+      const _setTimeout = setTimeout;
+      _null.timer = setTimeout(() => {
+        releaseDelayedMessageLoad(closure_0);
+      }, _null.delayMs);
+      flag = true;
+    }
+  }
+  return flag;
+});
 let obj = {
   "setup-test": setupTTITest,
   "capture-navigation-tti": function captureNavigationTTI() {
     const self = this;
-    const apply = closure_18.apply;
+    const apply = closure_20.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -838,7 +954,7 @@ let obj = {
   },
   "navigate-to-dms": function navigateToDMs() {
     const self = this;
-    const apply = closure_20.apply;
+    const apply = closure_22.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -851,34 +967,34 @@ let obj = {
     NativeTTIManagerModuleDefault.logToDevice(json);
   },
   () => {
-    const result = closure_0(9847).resetComponentProfiler();
+    const result = closure_0(12534).resetComponentProfiler();
     const merged = Object.assign(undefined);
     const json = JSON.stringify({ type: "response", status: "success", message: "reset-component-profiler" });
-    obj = closure_0(9847);
+    obj = closure_0(12534);
     const obj2 = { type: "response", status: "success", message: "reset-component-profiler" };
     NativeTTIManagerModuleDefault.logToDevice(json);
   },
   () => {
-    const result = closure_0(9847).pauseComponentProfiler();
+    const result = closure_0(12534).pauseComponentProfiler();
     const merged = Object.assign(undefined);
     const json = JSON.stringify({ type: "response", status: "success", message: "pause-component-profiler" });
-    obj = closure_0(9847);
+    obj = closure_0(12534);
     const obj2 = { type: "response", status: "success", message: "pause-component-profiler" };
     NativeTTIManagerModuleDefault.logToDevice(json);
   },
   () => {
-    const result = closure_0(9847).resumeComponentProfiler();
+    const result = closure_0(12534).resumeComponentProfiler();
     const merged = Object.assign(undefined);
     const json = JSON.stringify({ type: "response", status: "success", message: "resume-component-profiler" });
-    obj = closure_0(9847);
+    obj = closure_0(12534);
     const obj2 = { type: "response", status: "success", message: "resume-component-profiler" };
     NativeTTIManagerModuleDefault.logToDevice(json);
   },
   () => {
-    obj = { stats: closure_0(9847).dumpStats() };
+    obj = { stats: closure_0(12534).dumpStats() };
     const merged = Object.assign(obj);
     const json = JSON.stringify({ type: "response", status: "success", message: "dump-component-profiler-stats" });
-    const obj2 = closure_0(9847);
+    const obj2 = closure_0(12534);
     const obj3 = { type: "response", status: "success", message: "dump-component-profiler-stats" };
     NativeTTIManagerModuleDefault.logToDevice(json);
   },
@@ -918,7 +1034,7 @@ let obj = {
     const tmpResult = NativeTTIManagerModuleDefault;
   },
   (action) => {
-    DispatcherDefault.dispatch(action.action);
+    Dispatcher.dispatch(action.action);
     const merged = Object.assign(undefined);
     const json = JSON.stringify({ type: "response", status: "success", message: "flux-dispatch" });
     const obj2 = { type: "response", status: "success", message: "flux-dispatch" };
@@ -941,7 +1057,7 @@ let obj = {
   },
   backchannel: null
 };
-let closure_3 = asyncGeneratorStep(async (arg0) => {
+let closure_16 = asyncGeneratorStep(async (arg0) => {
   if (c12 === 2) {
     c12 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -952,7 +1068,7 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -973,15 +1089,15 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
           closure_135_2 = undefined;
           ({ reply: closure_135_0, args } = closure_0);
           const obj4 = { ClientInfoUtils: null, ComponentProfiler: null, Dispatcher: null, ExperimentStore: null, NativeJankStats: null, ProcessUtils: null, AnalyticsUtils: null, TTITestAction: null };
-          const obj5 = { getConstants: closure_0(1363).getConstants };
+          const obj5 = { getConstants: closure_0(1368).getConstants };
           obj4.ClientInfoUtils = obj5;
-          const obj6 = { resetComponentProfiler: closure_0(9847).resetComponentProfiler, resumeComponentProfiler: closure_0(9847).resumeComponentProfiler, pauseComponentProfiler: closure_0(9847).pauseComponentProfiler, dumpStats: closure_0(9847).dumpStats };
+          const obj6 = { resetComponentProfiler: closure_0(12534).resetComponentProfiler, resumeComponentProfiler: closure_0(12534).resumeComponentProfiler, pauseComponentProfiler: closure_0(12534).pauseComponentProfiler, dumpStats: closure_0(12534).dumpStats };
           obj4.ComponentProfiler = obj6;
-          obj4.Dispatcher = DispatcherDefault;
+          obj4.Dispatcher = Dispatcher;
           obj4.ExperimentStore = ExperimentStore;
           obj4.NativeJankStats = NativeJankStatsModuleDefault;
           obj4.ProcessUtils = ProcessUtilsDefault;
-          const obj7 = { startRecordingAnalyticsEvents: closure_0(1241).startRecordingAnalyticsEvents, stopRecordingAnalyticsEvents: closure_0(1241).stopRecordingAnalyticsEvents, getAnalyticsEventsRecording: closure_0(1241).getAnalyticsEventsRecording, clearAnalyticsEventsRecording: closure_0(1241).clearAnalyticsEventsRecording };
+          const obj7 = { startRecordingAnalyticsEvents: closure_0(1252).startRecordingAnalyticsEvents, stopRecordingAnalyticsEvents: closure_0(1252).stopRecordingAnalyticsEvents, getAnalyticsEventsRecording: closure_0(1252).getAnalyticsEventsRecording, clearAnalyticsEventsRecording: closure_0(1252).clearAnalyticsEventsRecording };
           obj4.AnalyticsUtils = obj7;
           const obj8 = { apiLogin, setupTTITest };
           obj4.TTITestAction = obj8;
@@ -996,7 +1112,7 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "HermesInternal", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             } else {
               try {
@@ -1010,7 +1126,7 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
                   return obj;
                 } else {
                   c0 = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 }
               } catch (tmp4) {
                 c0 = tmp;
@@ -1076,7 +1192,7 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
           if (2 === tmp9) {
             c9 = 1;
             closure_135_3 = closure_10;
-            const obj12 = { details: closure_136_21(closure_10), string: null };
+            const obj12 = { details: closure_136_23(closure_10), string: null };
             const _String = String;
             obj12.string = String(closure_135_3);
             closure_135_1.error = obj12;
@@ -1119,7 +1235,7 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
                 closure_135_2 = value;
                 if (!closure_135_2.ok) {
                   const obj15 = { status: closure_135_2.status };
-                  closure_136_16("error", "Failed to send backchannel reply", obj15);
+                  closure_136_18("error", "Failed to send backchannel reply", obj15);
                 }
               }
             } else if (5 === tmp9) {
@@ -1133,10 +1249,10 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
               } else {
                 closure_135_2 = value;
                 if (closure_135_2.ok) {
-                  closure_136_16("success", "Backchannel reply sent");
+                  closure_136_18("success", "Backchannel reply sent");
                 } else {
                   const obj17 = { status: closure_135_2.status };
-                  closure_136_16("error", "Failed to send backchannel reply", obj17);
+                  closure_136_18("error", "Failed to send backchannel reply", obj17);
                 }
                 c12 = 3;
               }
@@ -1150,13 +1266,13 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
             } else {
               closure_135_2 = value;
               if (closure_135_2.ok) {
-                closure_136_16("success", "Backchannel reply sent");
+                closure_136_18("success", "Backchannel reply sent");
               } else {
                 obj = { status: closure_135_2.status };
-                closure_136_16("error", "Failed to send backchannel reply", obj);
+                closure_136_18("error", "Failed to send backchannel reply", obj);
               }
             }
-            closure_136_16("success", "Backchannel reply sent");
+            closure_136_18("success", "Backchannel reply sent");
           }
           c9 = 0;
           if (typeof closure_135_0 === "string") {
@@ -1188,7 +1304,7 @@ let closure_3 = asyncGeneratorStep(async (arg0) => {
 });
 obj.backchannel = function() {
   const self = this;
-  const apply = closure_3.apply;
+  const apply = closure_16.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

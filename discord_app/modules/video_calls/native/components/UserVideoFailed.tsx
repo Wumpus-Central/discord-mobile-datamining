@@ -1,32 +1,278 @@
-// === Module 17209: UserVideoFailed ===
+// === Module 17257: UserVideoFailed ===
 
-// Module 17209 (UserVideoFailed)
-import _mod17 from "module_17" /* 17 */;
-import nativeDefault from "native" /* 576 */;
-import Constants from "Constants" /* 1074 */;
-import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4841 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4900 */;
-import components_Button_Button from "components/Button/Button" /* 5465 */;
-import AVError from "AVError" /* 9068 */;
-import VideoStreamReadyActionCreators from "VideoStreamReadyActionCreators" /* 9081 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 9297 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4845 */;
-import size from "module_2" /* 2 */;
+// Module 17257 (UserVideoFailed)
+import nativeDefault from "native" /* 587 */;
+import util from "util" /* 1126 */;
+import Text_Text from "Text/Text" /* 4886 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4945 */;
+import components_Button_Button from "components/Button/Button" /* 5594 */;
+import AVError from "AVError" /* 9095 */;
+import VideoStreamReadyActionCreators from "VideoStreamReadyActionCreators" /* 9112 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9306 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
-const View = _mod17.View;
-const VideoToggleState = Constants.VideoToggleState;
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let obj = { container: { alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_700, padding: 8 }, text: { textAlign: "center" }, button: { marginTop: 16, alignSelf: "center" } };
-let closure_7 = createStyles.createStyles(obj);
+const require = globalThis.__r;
+
+require = fn;
+let closure_3 = ["userId", "style", "avError", "removeRetryButton"];
+const View = fn(17).View;
+const VideoToggleState = fn(1085).VideoToggleState;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4890);
+let obj2 = { container: { alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_700, padding: 8 }, text: { textAlign: "center" }, button: { marginTop: 16, alignSelf: "center" } };
+let closure_9 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj3 = { alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_700, padding: 8 };
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/video_calls/native/components/UserVideoFailed.tsx");
 
-export default function UserVideoFailed(arg0) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
+  const cResult = require("c").c(51);
+  if (cResult[0] !== userId) {
+    userId = userId.userId;
+    _require = userId;
+    ({ style, avError, removeRetryButton } = userId);
+    const tmp9 = _objectWithoutProperties(userId, closure_3);
+    cResult[0] = userId;
+    cResult[1] = avError;
+    cResult[2] = tmp9;
+    cResult[3] = removeRetryButton;
+    cResult[4] = style;
+    cResult[5] = userId;
+    let str2 = userId;
+    let str = style;
+    let tmp6 = removeRetryButton;
+    let tmp5 = tmp9;
+    let tmp4 = avError;
+  } else {
+    tmp4 = cResult[1];
+    tmp5 = cResult[2];
+    tmp6 = cResult[3];
+    str = cResult[4];
+    _require = cResult[5];
+  }
+  const tmp10 = closure_9();
+  if (cResult[6] === tmp4) {
+    if (cResult[7] === tmp5) {
+      if (cResult[8] === str) {
+        if (cResult[9] === tmp10.container) {
+          if (cResult[10] === tmp10.text) {
+            if (cResult[11] === str2) {
+              if (cResult[31] === cResult[12]) {
+                if (cResult[32] === tmp14) {
+                  if (cResult[33] === tmp15) {
+                    if (cResult[34] === tmp16) {
+                      if (cResult[35] === tmp17) {
+                        if (cResult[36] === tmp18) {
+                          let tmp38 = cResult[37];
+                        }
+                        if (cResult[38] === tmp13) {
+                          if (cResult[39] === tmp6) {
+                            let tmp41 = cResult[40];
+                          }
+                          if (cResult[41] === tmp10.button) {
+                            if (cResult[42] === tmp41) {
+                              let tmp44 = cResult[43];
+                            }
+                            if (cResult[44] === tmp12) {
+                              if (cResult[45] === tmp44) {
+                                if (cResult[46] === tmp19) {
+                                  if (cResult[47] === tmp20) {
+                                    if (cResult[48] === tmp21) {
+                                      if (cResult[49] === tmp38) {
+                                        let tmp48 = cResult[50];
+                                      }
+                                      return tmp48;
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                            const obj2 = {};
+                            const merged = Object.assign(tmp19);
+                            obj2.style = tmp20;
+                            const items = [tmp21, tmp38, tmp44];
+                            obj2.children = items;
+                            const tmp53 = closure_8(tmp12, obj2);
+                            cResult[44] = tmp12;
+                            cResult[45] = tmp44;
+                            cResult[46] = tmp19;
+                            cResult[47] = tmp20;
+                            cResult[48] = tmp21;
+                            cResult[49] = tmp38;
+                            cResult[50] = tmp53;
+                            tmp48 = tmp53;
+                          }
+                          const obj4 = { style: tmp10.button, children: tmp41 };
+                          const tmp47 = closure_7(View, obj4);
+                          cResult[41] = tmp10.button;
+                          cResult[42] = tmp41;
+                          cResult[43] = tmp47;
+                          tmp44 = tmp47;
+                        }
+                        let tmp42 = !tmp6;
+                        if (!tmp6) {
+                          const obj5 = { variant: "secondary", size: "md", text: null, onPress: null };
+                          const intl2 = tmp(1126).intl;
+                          obj5.text = intl2.string(tmp(1126).t["hxmQ/e"]);
+                          obj5.onPress = tmp13;
+                          tmp42 = closure_7(tmp(5594).Button, obj5);
+                        }
+                        cResult[38] = tmp13;
+                        cResult[39] = tmp6;
+                        cResult[40] = tmp42;
+                        tmp41 = tmp42;
+                      }
+                    }
+                  }
+                }
+              }
+              const obj6 = { variant: cResult[15], color: cResult[16], style: cResult[17], selectable: cResult[18], children: cResult[19] };
+              const tmp40 = closure_7(cResult[12], obj6);
+              cResult[31] = cResult[12];
+              cResult[32] = cResult[15];
+              cResult[33] = cResult[16];
+              cResult[34] = cResult[17];
+              cResult[35] = cResult[18];
+              cResult[36] = cResult[19];
+              cResult[37] = tmp40;
+              tmp38 = tmp40;
+            }
+          }
+        }
+      }
+    }
+  }
+  let obj = require("c");
+  if (cResult[23] !== str2) {
+    class R {
+      constructor() {
+        obj = closure_0(closure_2[9]);
+        result = obj.clearVideoStreamTimeout(closure_0(closure_2[10]).MediaEngineContextTypes.DEFAULT, closure_0);
+        obj2 = closure_1(closure_2[11]);
+        setDisableLocalVideoResult = obj2.setDisableLocalVideo(closure_0, VideoToggleState.DISABLED, closure_0(closure_2[10]).MediaEngineContextTypes.DEFAULT, false);
+        timerId = setTimeout(() => { ... }, 1000);
+        return;
+      }
+    }
+    cResult[23] = str2;
+    cResult[24] = R;
+  } else {
+    class R {
+      constructor() {
+        obj = closure_0(closure_2[9]);
+        result = obj.clearVideoStreamTimeout(closure_0(closure_2[10]).MediaEngineContextTypes.DEFAULT, closure_0);
+        obj2 = closure_1(closure_2[11]);
+        setDisableLocalVideoResult = obj2.setDisableLocalVideo(closure_0, VideoToggleState.DISABLED, closure_0(closure_2[10]).MediaEngineContextTypes.DEFAULT, false);
+        timerId = setTimeout(() => { ... }, 1000);
+        return;
+      }
+    }
+  }
+  if (cResult[25] === str) {
+    class R {
+      constructor() {
+        obj = closure_0(closure_2[9]);
+        result = obj.clearVideoStreamTimeout(closure_0(closure_2[10]).MediaEngineContextTypes.DEFAULT, closure_0);
+        obj2 = closure_1(closure_2[11]);
+        setDisableLocalVideoResult = obj2.setDisableLocalVideo(closure_0, VideoToggleState.DISABLED, closure_0(closure_2[10]).MediaEngineContextTypes.DEFAULT, false);
+        timerId = setTimeout(() => { ... }, 1000);
+        return;
+      }
+    }
+    let formatToPlainString = tmp10.text;
+    const _Symbol = Symbol;
+    if (cResult[28] === Symbol.for("react.memo_cache_sentinel")) {
+      class R {
+        constructor() {
+          obj = closure_0(closure_2[9]);
+          result = obj.clearVideoStreamTimeout(closure_0(closure_2[10]).MediaEngineContextTypes.DEFAULT, closure_0);
+          obj2 = closure_1(closure_2[11]);
+          setDisableLocalVideoResult = obj2.setDisableLocalVideo(closure_0, VideoToggleState.DISABLED, closure_0(closure_2[10]).MediaEngineContextTypes.DEFAULT, false);
+          timerId = setTimeout(() => { ... }, 1000);
+          return;
+        }
+      }
+      const stringResult = obj3.string(tmp(1126).t["z+mxvo"]);
+      cResult[28] = stringResult;
+      let ejOT95 = stringResult;
+    } else {
+      class R {
+        constructor() {
+          obj = closure_0(closure_2[9]);
+          result = obj.clearVideoStreamTimeout(closure_0(closure_2[10]).MediaEngineContextTypes.DEFAULT, closure_0);
+          obj2 = closure_1(closure_2[11]);
+          setDisableLocalVideoResult = obj2.setDisableLocalVideo(closure_0, VideoToggleState.DISABLED, closure_0(closure_2[10]).MediaEngineContextTypes.DEFAULT, false);
+          timerId = setTimeout(() => { ... }, 1000);
+          return;
+        }
+      }
+    }
+    if (cResult[29] !== tmp10.text) {
+      class R {
+        constructor() {
+          obj = closure_0(closure_2[9]);
+          result = obj.clearVideoStreamTimeout(closure_0(closure_2[10]).MediaEngineContextTypes.DEFAULT, closure_0);
+          obj2 = closure_1(closure_2[11]);
+          setDisableLocalVideoResult = obj2.setDisableLocalVideo(closure_0, VideoToggleState.DISABLED, closure_0(closure_2[10]).MediaEngineContextTypes.DEFAULT, false);
+          timerId = setTimeout(() => { ... }, 1000);
+          return;
+        }
+      }
+      const obj7 = { variant: "text-md/semibold", color: "text-strong", style: formatToPlainString, children: ejOT95 };
+      const tmp28 = closure_7(tmp(4886).Text, obj7);
+      cResult[29] = tmp10.text;
+      cResult[30] = tmp28;
+    } else {
+      class R {
+        constructor() {
+          obj = closure_0(closure_2[9]);
+          result = obj.clearVideoStreamTimeout(closure_0(closure_2[10]).MediaEngineContextTypes.DEFAULT, closure_0);
+          obj2 = closure_1(closure_2[11]);
+          setDisableLocalVideoResult = obj2.setDisableLocalVideo(closure_0, VideoToggleState.DISABLED, closure_0(closure_2[10]).MediaEngineContextTypes.DEFAULT, false);
+          timerId = setTimeout(() => { ... }, 1000);
+          return;
+        }
+      }
+    }
+    const Text = tmp(4886).Text;
+    const text = tmp10.text;
+    const intl = tmp(1126).intl;
+    formatToPlainString = intl.formatToPlainString;
+    ejOT95 = tmp(1126).t.ejOT95;
+    const obj8 = { errorCode: tmpResult.getErrorInfo(tmp4).errorCode };
+    const formatToPlainStringResult = formatToPlainString(ejOT95, obj8);
+    cResult[6] = tmp4;
+    cResult[7] = tmp5;
+    cResult[8] = str;
+    cResult[9] = tmp10.container;
+    cResult[10] = tmp10.text;
+    cResult[11] = str2;
+    cResult[12] = Text;
+    cResult[13] = View;
+    cResult[14] = R;
+    str2 = "text-sm/semibold";
+    cResult[15] = "text-sm/semibold";
+    str = "text-muted";
+    cResult[16] = "text-muted";
+    cResult[17] = text;
+    cResult[18] = true;
+    cResult[19] = formatToPlainStringResult;
+    cResult[20] = tmp5;
+    cResult[21] = tmp24;
+    cResult[22] = tmp27;
+  }
+  const items1 = [tmp10.container, str];
+  cResult[25] = str;
+  cResult[26] = tmp10.container;
+  cResult[27] = items1;
+  tmpResult = require("AVError");
+}) : ((arg0) => {
   ({ userId: require, removeRetryButton } = arg0);
   ({ style, avError } = arg0);
   const merged = Object.assign(arg0, Object.assign({ userId: 0, style: 0, avError: 0, removeRetryButton: 0 }));
-  const tmp2 = closure_7();
+  const tmp2 = closure_9();
   const obj2 = {};
   const merged1 = Object.assign(merged);
   const items = [tmp2.container, style];
@@ -34,11 +280,11 @@ export default function UserVideoFailed(arg0) {
   const obj3 = { variant: "text-md/semibold", color: "text-strong", style: tmp2.text, children: null };
   const intl = util.intl;
   obj3.children = intl.string(util.t["z+mxvo"]);
-  const items1 = [closure_5(Text_Text.Text, obj3), , ];
+  const items1 = [closure_7(Text_Text.Text, obj3), , ];
   const obj4 = { variant: "text-sm/semibold", color: "text-muted", style: tmp2.text, selectable: true, children: null };
   const intl2 = util.intl;
   obj4.children = intl2.formatToPlainString(util.t.ejOT95, { errorCode: AVError.getErrorInfo(avError).errorCode });
-  items1[1] = closure_5(Text_Text.Text, obj4);
+  items1[1] = closure_7(Text_Text.Text, obj4);
   const obj5 = { style: tmp2.button, children: null };
   let tmp8Result = !removeRetryButton;
   if (!removeRetryButton) {
@@ -46,16 +292,16 @@ export default function UserVideoFailed(arg0) {
     const intl3 = util.intl;
     obj6.text = intl3.string(util.t["hxmQ/e"]);
     obj6.onPress = function onPress() {
-      const result = VideoStreamReadyActionCreators.clearVideoStreamTimeout(BaseConnectionEvent.MediaEngineContextTypes.DEFAULT, closure_1_0);
-      AudioActionCreatorsDefault.setDisableLocalVideo(closure_1_0, VideoToggleState.DISABLED, BaseConnectionEvent.MediaEngineContextTypes.DEFAULT, false);
+      const result = VideoStreamReadyActionCreators.clearVideoStreamTimeout(BaseConnectionEvent.MediaEngineContextTypes.DEFAULT, _require);
+      AudioActionCreatorsDefault.setDisableLocalVideo(_require, VideoToggleState.DISABLED, BaseConnectionEvent.MediaEngineContextTypes.DEFAULT, false);
       const timerId = setTimeout(() => {
-        AudioActionCreatorsDefault.setDisableLocalVideo(closure_1_0, constants.MANUAL_ENABLED, BaseConnectionEvent.MediaEngineContextTypes.DEFAULT, false);
+        AudioActionCreatorsDefault.setDisableLocalVideo(closure_1_0, constants.MANUAL_ENABLED, require("BaseConnectionEvent").MediaEngineContextTypes.DEFAULT, false);
       }, 1000);
     };
-    tmp8Result = closure_5(components_Button_Button.Button, obj6);
+    tmp8Result = closure_7(components_Button_Button.Button, obj6);
   }
   obj5.children = tmp8Result;
-  items1[2] = closure_5(View, obj5);
+  items1[2] = closure_7(View, obj5);
   obj2.children = items1;
-  return closure_6(View, obj2);
-};
+  return closure_8(View, obj2);
+});

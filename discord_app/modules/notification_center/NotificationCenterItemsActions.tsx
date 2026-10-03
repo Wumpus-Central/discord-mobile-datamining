@@ -1,14 +1,14 @@
-// === Module 16276: NotificationCenterItemsActions ===
+// === Module 16352: NotificationCenterItemsActions ===
 
-// Module 16276 (NotificationCenterItemsActions)
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1249 */;
-import HTTPUtils from "HTTPUtils" /* 1271 */;
-import UserSettings from "UserSettings" /* 2021 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5038 */;
-import NotificationCenterUtils from "NotificationCenterUtils" /* 7228 */;
+// Module 16352 (NotificationCenterItemsActions)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import UserSettings from "UserSettings" /* 2028 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5083 */;
+import NotificationCenterUtils from "NotificationCenterUtils" /* 7126 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 7226 */;
+import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 7124 */;
 
 require = fn;
 let closure_6 = async function _fetchNotificationCenterItems(arg0) {
@@ -22,7 +22,7 @@ let closure_6 = async function _fetchNotificationCenterItems(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -228,7 +228,7 @@ let closure_10 = async function _deleteNotificationCenterItem(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -287,7 +287,7 @@ let closure_10 = async function _deleteNotificationCenterItem(arg0) {
         } else {
           c4 = 0;
           c6 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp19) {
         closure_3 = tmp19;
@@ -301,7 +301,7 @@ let closure_10 = async function _deleteNotificationCenterItem(arg0) {
     }
   })();
 };
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notification_center/NotificationCenterItemsActions.tsx");
 

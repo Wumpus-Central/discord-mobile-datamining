@@ -1,12 +1,12 @@
-// === Module 7094: withFallbacks ===
+// === Module 6995: withFallbacks ===
 
-// Module 7094 (withFallbacks)
-import ExtendedMemoryLru from "ExtendedMemoryLru" /* 7088 */;
-import isReadableChannel from "isReadableChannel" /* 7092 */;
-import isLimitedChannel from "isLimitedChannel" /* 7093 */;
+// Module 6995 (withFallbacks)
+import ExtendedMemoryLru from "ExtendedMemoryLru" /* 6989 */;
+import isReadableChannel from "isReadableChannel" /* 6993 */;
+import isLimitedChannel from "isLimitedChannel" /* 6994 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import SortedGuildStore from "SortedGuildStore" /* 5936 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import SortedGuildStore from "SortedGuildStore" /* 5616 */;
 
 require = fn;
 function isSaveableChannel(item10025) {
@@ -28,7 +28,7 @@ function mergeInto(extendedMemoryLru, allEntries) {
   }
   return extendedMemoryLru;
 }
-const ChannelTypes = fn(1074).ChannelTypes;
+const ChannelTypes = fn(1085).ChannelTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_database/modules/messages/withFallbacks.tsx");
 

@@ -1,7 +1,7 @@
-// === Module 7222: parseUserProfileCollectibles ===
+// === Module 7120: parseUserProfileCollectibles ===
 
-// Module 7222 (parseUserProfileCollectibles)
-import CollectiblesItemType from "CollectiblesItemType" /* 1974 */;
+// Module 7120 (parseUserProfileCollectibles)
+import CollectiblesItemType from "CollectiblesItemType" /* 1980 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_profile/utils/parseUserProfileCollectibles.tsx");
@@ -14,7 +14,7 @@ export default function parseUserProfileCollectibles(collectibles) {
     collectibles1 = collectibles.collectibles;
   }
   if (null == collectibles1) {
-    return { collectibles: "Array", profileEffect: "add", profileFrame: "ip" };
+    return { collectibles: "done", profileEffect: "toCharArray$esjava$1", profileFrame: "toCharArray$esjava$1" };
   } else {
     const items = [];
     collectibles = collectibles.collectibles;

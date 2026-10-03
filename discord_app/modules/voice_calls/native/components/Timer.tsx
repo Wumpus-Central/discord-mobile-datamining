@@ -1,8 +1,8 @@
-// === Module 13546: Timer ===
+// === Module 13607: Timer ===
 
-// Module 13546 (Timer)
+// Module 13607 (Timer)
 import _modDef12 from "module_12" /* 12 */;
-import native from "native" /* 1177 */;
+import native from "native" /* 1188 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ class Timer extends PureComponent {
     tmp6 = new Timer(global, tmp5, tmp4, tmp3, tmp2, tmp);
     closure_0 = tmp6;
     tmp6._incrementSecond = function _incrementSecond() {
-      const state = closure_0.state;
+      state = closure_0.state;
       ({ minutes, hours } = state);
       let num = state.seconds + 1;
       let tmp = hours;
@@ -32,7 +32,7 @@ class Timer extends PureComponent {
       closure_0.setState({ seconds: num, minutes: tmp2, hours: tmp });
     };
     tmp6._decrementSecond = function _decrementSecond() {
-      const state = closure_0.state;
+      state = closure_0.state;
       ({ minutes, hours } = state);
       let num = state.seconds - 1;
       if (num >= 1) {

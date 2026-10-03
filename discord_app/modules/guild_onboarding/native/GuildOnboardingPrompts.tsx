@@ -1,34 +1,46 @@
-// === Module 6729: GuildOnboardingPrompts ===
+// === Module 6617: GuildOnboardingPrompts ===
 
-// Module 6729 (GuildOnboardingPrompts)
-import nativeDefault from "native" /* 576 */;
-import ConstantsIOS from "ConstantsIOS" /* 1094 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import ImageUtils from "ImageUtils" /* 1476 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4595 */;
-import ColorUtils from "ColorUtils" /* 4712 */;
-import timing from "timing" /* 4846 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5025 */;
-import LinearGradientDefault from "LinearGradient" /* 5477 */;
-import FastImageDefault from "FastImage" /* 6085 */;
-import NavigatorHeader from "NavigatorHeader" /* 6122 */;
-import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 6712 */;
-import GuildOnboardingUtils from "GuildOnboardingUtils" /* 6713 */;
+// Module 6617 (GuildOnboardingPrompts)
+import c from "c" /* 576 */;
+import nativeDefault from "native" /* 587 */;
+import ConstantsIOS from "ConstantsIOS" /* 1105 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import GlobalUtils from "GlobalUtils" /* 1375 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
+import ColorUtils from "ColorUtils" /* 4727 */;
+import timing from "timing" /* 4891 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5070 */;
+import LinearGradientDefault from "LinearGradient" /* 5605 */;
+import FastImageDefault from "FastImage" /* 5974 */;
+import NavigatorHeader from "NavigatorHeader" /* 6010 */;
+import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 6600 */;
+import GuildOnboardingUtils from "GuildOnboardingUtils" /* 6601 */;
+import GuildOnboardingPrompt from "GuildOnboardingPrompt" /* 6618 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4834 */;
-import MemberVerificationFormStore from "MemberVerificationFormStore" /* 6070 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 6707 */;
+import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 5963 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 6595 */;
 
 require = fn;
-let closure_23 = async function _getBackgroundGradientColor() {
+function getBackgroundGradientColor() {
+  const self = this;
+  const apply = closure_24.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+let closure_24 = async function _getBackgroundGradientColor() {
   closure_2 = tmp5;
   closure_1 = tmp2;
-  await ImageUtils.getPaletteForAvatar(closure_0);
+  await require("ImageUtils").getPaletteForAvatar(closure_0);
   closure_129_0 = value;
   closure_129_1 = closure_130_3(closure_129_0[0], 3);
   closure_129_2 = closure_129_1[0];
@@ -36,33 +48,17 @@ let closure_23 = async function _getBackgroundGradientColor() {
   closure_129_4 = closure_129_1[2];
   return closure_130_0(closure_130_2[19]).rgbToHex(closure_129_2, closure_129_3, closure_129_4);
 };
-function BackgroundImageGradient(uri) {
-  const color = uri.color;
-  const tmp = closure_22();
-  const obj = { children: null };
-  const obj2 = { source: { uri: uri.splashUrl }, style: null, resizeMode: "cover" };
-  const items = [tmp.backgroundImage];
-  obj2.style = items;
-  const items1 = [closure_1_19(FastImageDefault, obj2), ];
-  const obj3 = { style: tmp.backgroundColorGradient, start: ConstantsIOS.VerticalGradient.START, end: ConstantsIOS.VerticalGradient.END, colors: null };
-  const tmp2 = LinearGradientDefault;
-  const items2 = [ColorUtils.hexWithOpacity(color, 0.16), color];
-  obj3.colors = items2;
-  items1[1] = closure_1_19(tmp2, obj3);
-  obj.children = items1;
-  return __initData(closure_1_20, obj);
-}
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const OnboardingPromptType = fn(6708).OnboardingPromptType;
-let closure_15 = fn(6704).GuildOnboardingModalStates;
-const Constants = fn(1074);
+const OnboardingPromptType = fn(6596).OnboardingPromptType;
+const constants = fn(6592).GuildOnboardingModalStates;
+const Constants = fn(1085);
 ({ AnalyticEvents: closure_16, MarketingURLs: closure_17, Routes: closure_18 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_19, Fragment: closure_20, jsxs: closure_21 } = jsxProd);
-const createStyles = fn(4845);
-let obj2 = { flex: { flex: 1 }, container: { display: "flex", flex: 1, flexGrow: 1, marginTop: fn(6180).NAV_BAR_HEIGHT, marginBottom: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, subtitle: null, onboardingTitle: null, onboardingPolicy: null, onboardingPolicyText: null, landingOverlay: null, artWrapper: null, landingBody: null, backgroundImage: null, backgroundColorGradient: null, darkColorGradient: null };
-let obj3 = { display: "flex", flex: 1, flexGrow: 1, marginTop: fn(6180).NAV_BAR_HEIGHT, marginBottom: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+const createStyles = fn(4890);
+let obj2 = { flex: { flex: 1 }, container: { display: "flex", flex: 1, flexGrow: 1, marginTop: fn(6068).NAV_BAR_HEIGHT, marginBottom: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, subtitle: null, onboardingTitle: null, onboardingPolicy: null, onboardingPolicyText: null, landingOverlay: null, artWrapper: null, landingBody: null, backgroundImage: null, backgroundColorGradient: null, darkColorGradient: null };
+let obj3 = { display: "flex", flex: 1, flexGrow: 1, marginTop: fn(6068).NAV_BAR_HEIGHT, marginBottom: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.subtitle = { marginBottom: nativeDefault.space.PX_16, opacity: 0.8 };
 obj2.onboardingTitle = { textAlign: "center" };
 let obj4 = { marginBottom: nativeDefault.space.PX_16, opacity: 0.8 };
@@ -76,15 +72,3623 @@ obj2.backgroundImage = { position: "absolute", height: "50%", width: "100%", top
 obj2.backgroundColorGradient = { position: "absolute", height: "100%", width: "100%", top: 0 };
 obj2.darkColorGradient = { position: "absolute", height: "100%", width: "100%", top: 0 };
 let closure_22 = createStyles.createStyles(obj2);
-const __initData = { code: "function GuildOnboardingPromptsTsx1(){const{showPrompts,withTiming,Easing,useReducedMotion}=this.__closure;const rawOpacity=showPrompts.get()?0:1;const opacity=withTiming(rawOpacity,{duration:300,easing:Easing.out(Easing.ease)});const rawTranslateY=!useReducedMotion&&showPrompts.get()?-80:0;const translateY=withTiming(rawTranslateY,{duration:300,easing:Easing.out(Easing.ease)});return{opacity:opacity,transform:[{translateY:translateY}]};}" };
-const __initData2 = { code: "function GuildOnboardingPromptsTsx2(){const{showPrompts,withDelay,withTiming,Easing,useReducedMotion}=this.__closure;const rawOpacity=showPrompts.get()?0:1;const opacity=withDelay(200,withTiming(rawOpacity,{duration:300,easing:Easing.out(Easing.ease)}));const rawTranslateY=!useReducedMotion&&showPrompts.get()?-80:0;const translateY=withDelay(200,withTiming(rawTranslateY,{duration:300,easing:Easing.out(Easing.ease)}));return{opacity:opacity,transform:[{translateY:translateY}]};}" };
-const __initData3 = { code: "function GuildOnboardingPromptsTsx3(){const{showPrompts,withDelay,withTiming,Easing}=this.__closure;const rawOpacity=showPrompts.get()?0:1;const opacity=withDelay(200,withTiming(rawOpacity,{duration:300,easing:Easing.out(Easing.ease)}));return{opacity:opacity};}" };
-const __initData4 = { code: "function GuildOnboardingPromptsTsx4(){const{showPrompts,withDelay,withTiming,Easing}=this.__closure;const rawOpacity=showPrompts.get()?0:1;const opacity=withDelay(200,withTiming(rawOpacity,{duration:300,easing:Easing.out(Easing.ease)}));return{opacity:opacity};}" };
-const __initData5 = { code: "function GuildOnboardingPromptsTsx5(){const{showPrompts,withDelay,withTiming,Easing,useReducedMotion}=this.__closure;const rawOpacity=showPrompts.get()?1:0;const opacity=withDelay(600,withTiming(rawOpacity,{duration:300,easing:Easing.out(Easing.ease)}));const rawTranslateY=!useReducedMotion&&!showPrompts.get()?80:0;const translateY=withDelay(600,withTiming(rawTranslateY,{duration:300,easing:Easing.out(Easing.ease)}));return{opacity:opacity,transform:[{translateY:translateY}]};}" };
+let ReactCompilerGating = fn(558);
+let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(18);
+  ({ splashUrl, color } = arg0);
+  const tmp4 = closure_22();
+  if (cResult[0] !== splashUrl) {
+    const obj2 = { uri: splashUrl };
+    cResult[0] = splashUrl;
+    cResult[1] = obj2;
+    let tmp5 = obj2;
+  } else {
+    tmp5 = cResult[1];
+  }
+  if (cResult[2] !== tmp4.backgroundImage) {
+    const items = [tmp4.backgroundImage];
+    cResult[2] = tmp4.backgroundImage;
+    cResult[3] = items;
+    let tmp6 = items;
+  } else {
+    tmp6 = cResult[3];
+  }
+  if (cResult[4] === tmp5) {
+    if (cResult[5] === tmp6) {
+      let tmp7 = cResult[6];
+    }
+    if (cResult[7] !== color) {
+      const hexWithOpacityResult = ColorUtils.hexWithOpacity(color, 0.16);
+      cResult[7] = color;
+      cResult[8] = hexWithOpacityResult;
+      let tmp9 = hexWithOpacityResult;
+      const tmpResult = ColorUtils;
+    } else {
+      tmp9 = cResult[8];
+    }
+    if (cResult[9] === color) {
+      if (cResult[10] === tmp9) {
+        let tmp11 = cResult[11];
+      }
+      if (cResult[12] === tmp4.backgroundColorGradient) {
+        if (cResult[13] === tmp11) {
+          let tmp12 = cResult[14];
+        }
+        if (cResult[15] === tmp7) {
+          if (cResult[16] === tmp12) {
+            let tmp17 = cResult[17];
+          }
+          return tmp17;
+        }
+        const obj3 = { children: null };
+        const items1 = [tmp7, tmp12];
+        obj3.children = items1;
+        const tmp20 = guild(closure_1_20, obj3);
+        cResult[15] = tmp7;
+        cResult[16] = tmp12;
+        cResult[17] = tmp20;
+        tmp17 = tmp20;
+      }
+      const obj4 = { style: tmp4.backgroundColorGradient, start: ConstantsIOS.VerticalGradient.START, end: ConstantsIOS.VerticalGradient.END, colors: tmp11 };
+      const tmp16 = closure_1_19(LinearGradientDefault, obj4);
+      cResult[12] = tmp4.backgroundColorGradient;
+      cResult[13] = tmp11;
+      cResult[14] = tmp16;
+      tmp12 = tmp16;
+    }
+    const items2 = [tmp9, color];
+    cResult[9] = color;
+    cResult[10] = tmp9;
+    cResult[11] = items2;
+    tmp11 = items2;
+  }
+  const tmp8 = closure_1_19(FastImageDefault, { source: tmp5, style: tmp6, resizeMode: "cover" });
+  cResult[4] = tmp5;
+  cResult[5] = tmp6;
+  cResult[6] = tmp8;
+  tmp7 = tmp8;
+}) : ((uri) => {
+  const color = uri.color;
+  const tmp = closure_22();
+  const obj = { children: null };
+  const obj2 = { source: { uri: uri.splashUrl }, style: null, resizeMode: "cover" };
+  const items = [tmp.backgroundImage];
+  obj2.style = items;
+  const items1 = [closure_1_19(FastImageDefault, obj2), ];
+  const obj3 = { style: tmp.backgroundColorGradient, start: ConstantsIOS.VerticalGradient.START, end: ConstantsIOS.VerticalGradient.END, colors: null };
+  const tmp2 = LinearGradientDefault;
+  const items2 = [ColorUtils.hexWithOpacity(color, 0.16), color];
+  obj3.colors = items2;
+  items1[1] = closure_1_19(tmp2, obj3);
+  obj.children = items1;
+  return guild(closure_1_20, obj);
+});
+let closure_26 = { code: "function GuildOnboardingPromptsTsx1(){const{showPrompts,withTiming,Easing,useReducedMotion}=this.__closure;const rawOpacity=showPrompts.get()?0:1;const opacity=withTiming(rawOpacity,{duration:300,easing:Easing.out(Easing.ease)});const rawTranslateY=!useReducedMotion&&showPrompts.get()?-80:0;const translateY=withTiming(rawTranslateY,{duration:300,easing:Easing.out(Easing.ease)});return{opacity:opacity,transform:[{translateY:translateY}]};}" };
+const __initData = { code: "function GuildOnboardingPromptsTsx2(){const{showPrompts,withDelay,withTiming,Easing,useReducedMotion}=this.__closure;const rawOpacity_0=showPrompts.get()?0:1;const opacity_0=withDelay(200,withTiming(rawOpacity_0,{duration:300,easing:Easing.out(Easing.ease)}));const rawTranslateY_0=!useReducedMotion&&showPrompts.get()?-80:0;const translateY_0=withDelay(200,withTiming(rawTranslateY_0,{duration:300,easing:Easing.out(Easing.ease)}));return{opacity:opacity_0,transform:[{translateY:translateY_0}]};}" };
+const __initData2 = { code: "function GuildOnboardingPromptsTsx3(){const{showPrompts,withDelay,withTiming,Easing}=this.__closure;const rawOpacity_1=showPrompts.get()?0:1;const opacity_1=withDelay(200,withTiming(rawOpacity_1,{duration:300,easing:Easing.out(Easing.ease)}));return{opacity:opacity_1};}" };
+const __initData3 = { code: "function GuildOnboardingPromptsTsx4(){const{showPrompts,withDelay,withTiming,Easing}=this.__closure;const rawOpacity_2=showPrompts.get()?0:1;const opacity_2=withDelay(200,withTiming(rawOpacity_2,{duration:300,easing:Easing.out(Easing.ease)}));return{opacity:opacity_2};}" };
+const __initData4 = { code: "function GuildOnboardingPromptsTsx5(){const{showPrompts,withDelay,withTiming,Easing,useReducedMotion}=this.__closure;const rawOpacity_3=showPrompts.get()?1:0;const opacity_3=withDelay(600,withTiming(rawOpacity_3,{duration:300,easing:Easing.out(Easing.ease)}));const rawTranslateY_1=!useReducedMotion&&!showPrompts.get()?80:0;const translateY_1=withDelay(600,withTiming(rawTranslateY_1,{duration:300,easing:Easing.out(Easing.ease)}));return{opacity:opacity_3,transform:[{translateY:translateY_1}]};}" };
+const __initData5 = { code: "function GuildOnboardingPromptsTsx6(){const{showPrompts,withTiming,Easing,useReducedMotion}=this.__closure;const rawOpacity=showPrompts.get()?0:1;const opacity=withTiming(rawOpacity,{duration:300,easing:Easing.out(Easing.ease)});const rawTranslateY=!useReducedMotion&&showPrompts.get()?-80:0;const translateY=withTiming(rawTranslateY,{duration:300,easing:Easing.out(Easing.ease)});return{opacity:opacity,transform:[{translateY:translateY}]};}" };
+const __initData6 = { code: "function GuildOnboardingPromptsTsx7(){const{showPrompts,withDelay,withTiming,Easing,useReducedMotion}=this.__closure;const rawOpacity_0=showPrompts.get()?0:1;const opacity_0=withDelay(200,withTiming(rawOpacity_0,{duration:300,easing:Easing.out(Easing.ease)}));const rawTranslateY_0=!useReducedMotion&&showPrompts.get()?-80:0;const translateY_0=withDelay(200,withTiming(rawTranslateY_0,{duration:300,easing:Easing.out(Easing.ease)}));return{opacity:opacity_0,transform:[{translateY:translateY_0}]};}" };
+const __initData7 = { code: "function GuildOnboardingPromptsTsx8(){const{showPrompts,withDelay,withTiming,Easing}=this.__closure;const rawOpacity_1=showPrompts.get()?0:1;const opacity_1=withDelay(200,withTiming(rawOpacity_1,{duration:300,easing:Easing.out(Easing.ease)}));return{opacity:opacity_1};}" };
+const __initData8 = { code: "function GuildOnboardingPromptsTsx9(){const{showPrompts,withDelay,withTiming,Easing}=this.__closure;const rawOpacity_2=showPrompts.get()?0:1;const opacity_2=withDelay(200,withTiming(rawOpacity_2,{duration:300,easing:Easing.out(Easing.ease)}));return{opacity:opacity_2};}" };
+const __initData9 = { code: "function GuildOnboardingPromptsTsx10(){const{showPrompts,withDelay,withTiming,Easing,useReducedMotion}=this.__closure;const rawOpacity_3=showPrompts.get()?1:0;const opacity_3=withDelay(600,withTiming(rawOpacity_3,{duration:300,easing:Easing.out(Easing.ease)}));const rawTranslateY_1=!useReducedMotion&&!showPrompts.get()?80:0;const translateY_1=withDelay(600,withTiming(rawTranslateY_1,{duration:300,easing:Easing.out(Easing.ease)}));return{opacity:opacity_3,transform:[{translateY:translateY_1}]};}" };
+ReactCompilerGating = fn(558);
+let obj6 = { alignItems: "center", marginTop: -24, paddingHorizontal: nativeDefault.space.PX_16 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_onboarding/native/GuildOnboardingPrompts.tsx");
 
-export default function GuildOnboardingPrompt(guildId) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+  const cResult = guildId(prompts[21]).c(181);
+  guildId = guildId.guildId;
+  const currentPromptIdx = guildId.currentPromptIdx;
+  prompts = guildId.prompts;
+  const selectOption = guildId.selectOption;
+  const onClose = guildId.onClose;
+  ({ landingAnimation, isFirstOpen, backShouldLeaveGuild } = guildId);
+  const tmp4 = closure_22();
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    let items = [isFirstOpen];
+    cResult[0] = items;
+    let first = items;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] !== guildId) {
+    const fn = function p() {
+      return MemberVerificationFormStore.getRulesPrompt(guildId);
+    };
+    cResult[1] = guildId;
+    cResult[2] = fn;
+    let tmp7 = fn;
+  } else {
+    tmp7 = cResult[2];
+  }
+  let obj = guildId(prompts[21]);
+  const stateFromStores = guildId(prompts[25]).useStateFromStores(first, tmp7);
+  if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+    const items1 = [AccessibilityStore];
+    class H {
+      constructor() {
+        return closure_8.useReducedMotion;
+      }
+    }
+    cResult[3] = items1;
+    cResult[4] = H;
+    let tmp10 = H;
+    let tmp9 = items1;
+  } else {
+    tmp9 = cResult[3];
+    tmp10 = cResult[4];
+  }
+  let tmpResult = guildId(prompts[25]);
+  const stateFromStores1 = guildId(prompts[25]).useStateFromStores(tmp9, tmp10);
+  const bottom = currentPromptIdx(tmp2[26])().bottom;
+  if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
+    const items2 = [sharedValue];
+    class H {
+      constructor() {
+        return closure_8.useReducedMotion;
+      }
+    }
+    cResult[5] = items2;
+    let tmp14 = items2;
+  } else {
+    tmp14 = cResult[5];
+  }
+  if (cResult[6] !== guildId) {
+    const fn2 = function q() {
+      return GuildOnboardingPromptsStore.getOnboardingConnections(guildId);
+    };
+    cResult[6] = guildId;
+    class H {
+      constructor() {
+        return closure_8.useReducedMotion;
+      }
+    }
+    cResult[7] = fn2;
+    let tmp16 = fn2;
+  } else {
+    tmp16 = cResult[7];
+  }
+  const tmpResult13 = guildId(prompts[25]);
+  const tmp17 = guildId(prompts[25]).useStateFromStores(tmp14, tmp16).length > 0;
+  AccessibilityStore = tmp17;
+  if (isFirstOpen) {
+    isFirstOpen = 0 === currentPromptIdx;
+  }
+  if (isFirstOpen) {
+    isFirstOpen = !tmp17;
+  }
+  const tmpResult14 = guildId(prompts[25]);
+  const navigation = guildId(prompts[27]).useNavigation();
+  skipped = tmp19;
+  const currentPrompt = tmp20;
+  const tmpResult15 = guildId(prompts[27]);
+  sharedValue = guildId(prompts[28]).useSharedValue(!isFirstOpen);
+  if (cResult[8] === guildId) {
+    if (cResult[9] === prompts) {
+      let tmp22 = cResult[10];
+    }
+    closure_14 = tmp22;
+    const _Symbol = Symbol;
+    class H {
+      constructor() {
+        return closure_8.useReducedMotion;
+      }
+    }
+    if (tmp23 === Symbol.for("react.memo_cache_sentinel")) {
+      const items3 = [skipped];
+      class H {
+        constructor() {
+          return closure_8.useReducedMotion;
+        }
+      }
+      cResult[11] = items3;
+      let tmp24 = items3;
+    } else {
+      tmp24 = cResult[11];
+    }
+    if (cResult[12] !== guildId) {
+      function it() {
+        return GuildStore.getGuild(guildId);
+      }
+      cResult[12] = guildId;
+      class H {
+        constructor() {
+          return closure_8.useReducedMotion;
+        }
+      }
+      cResult[13] = it;
+      let tmp26 = it;
+    } else {
+      tmp26 = cResult[13];
+    }
+    const stateFromStores2 = tmp(tmp2[25]).useStateFromStores(tmp24, tmp26);
+    const _Symbol2 = Symbol;
+    if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
+      const items4 = [sharedValue];
+      class H {
+        constructor() {
+          return closure_8.useReducedMotion;
+        }
+      }
+      cResult[14] = items4;
+      let tmp28 = items4;
+    } else {
+      tmp28 = cResult[14];
+    }
+    if (cResult[15] === tmp20) {
+      if (cResult[16] === guildId) {
+        let tmp30 = cResult[17];
+        let tmp31 = cResult[18];
+      }
+      const stateFromStoresArray = tmp(tmp2[25]).useStateFromStoresArray(tmp28, tmp30, tmp31);
+      class H {
+        constructor() {
+          return closure_8.useReducedMotion;
+        }
+      }
+      if (0 === stateFromStoresArray.length) {
+        if (tmp20 != null) {
+          let required = tmp20.required;
+        }
+        class H {
+          constructor() {
+            return closure_8.useReducedMotion;
+          }
+        }
+      }
+      closure_17 = tmp33;
+      if (cResult[19] === currentPromptIdx) {
+        if (cResult[20] === stateFromStores2) {
+          if (cResult[21] === prompts.length) {
+            if (cResult[22] === stateFromStores) {
+              let tmp35 = cResult[23];
+            }
+            lastPrompt = tmp35;
+            class H {
+              constructor() {
+                return closure_8.useReducedMotion;
+              }
+            }
+            [tmp40, closure_19] = selectOption(tmp37(tmp13(tmp2[17]).unsafe_rawColors.PRIMARY_800), 2);
+            if (cResult[24] !== stateFromStores2) {
+              let guildSplashURL = null;
+              if (null != stateFromStores2) {
+                let obj2 = { id: stateFromStores2.id, splash: null, size: null };
+                class H {
+                  constructor() {
+                    return closure_8.useReducedMotion;
+                  }
+                }
+                obj2.size = 400 * tmp13(tmp2[32])();
+                guildSplashURL = tmp13(tmp2[31]).getGuildSplashURL(obj2);
+                const tmp13Result = tmp13(tmp2[31]);
+              }
+              class H {
+                constructor() {
+                  return closure_8.useReducedMotion;
+                }
+              }
+              cResult[25] = guildSplashURL;
+              let tmp41 = guildSplashURL;
+            } else {
+              tmp41 = cResult[25];
+            }
+            closure_20 = tmp41;
+            if (cResult[26] !== tmp41) {
+              function yt() {
+                if (null != closure_20) {
+                  getBackgroundGradientColor(tmp).then((result) => {
+                    closure_1_19(result);
+                  });
+                  const promise = getBackgroundGradientColor(tmp);
+                }
+              }
+              const items5 = [tmp41];
+              class H {
+                constructor() {
+                  return closure_8.useReducedMotion;
+                }
+              }
+              cResult[26] = tmp41;
+              cResult[27] = yt;
+              cResult[28] = items5;
+              let tmp44 = items5;
+              let tmp43 = yt;
+            } else {
+              tmp43 = cResult[27];
+              tmp44 = cResult[28];
+            }
+            const effect = backShouldLeaveGuild.useEffect(tmp43, tmp44);
+            if (cResult[29] === guildId) {
+              if (cResult[30] === tmp19) {
+                if (cResult[31] === isFirstOpen) {
+                  let tmp46 = cResult[32];
+                }
+                if (cResult[33] === guildId) {
+                  if (cResult[34] === tmp19) {
+                    if (cResult[35] === stateFromStores) {
+                      if (cResult[36] === isFirstOpen) {
+                        const tmp47 = cResult[37];
+                      }
+                      const effect1 = backShouldLeaveGuild.useEffect(tmp46, tmp47);
+                      if (cResult[38] === tmp22) {
+                        if (cResult[39] === tmp19) {
+                          if (cResult[40] === onClose) {
+                            if (cResult[41] === isFirstOpen) {
+                              if (cResult[42] === sharedValue) {
+                                let tmp49 = cResult[43];
+                              }
+                              if (cResult[44] === tmp22) {
+                                if (cResult[45] === guildId) {
+                                  if (cResult[46] === tmp17) {
+                                    if (cResult[47] === tmp19) {
+                                      if (cResult[48] === onClose) {
+                                        if (cResult[49] === isFirstOpen) {
+                                          if (cResult[50] === sharedValue) {
+                                            let tmp51 = cResult[51];
+                                          }
+                                          const effect2 = backShouldLeaveGuild.useEffect(tmp49, tmp51);
+                                          if (cResult[52] === tmp19) {
+                                            if (cResult[53] === onClose) {
+                                              if (cResult[54] === isFirstOpen) {
+                                                let tmp53 = cResult[55];
+                                                let tmp54 = cResult[56];
+                                              }
+                                              const effect3 = backShouldLeaveGuild.useEffect(tmp53, tmp54);
+                                              class Ot {
+                                                constructor() {
+                                                  tmp = closure_9;
+                                                  if (!closure_9) {
+                                                    tmp = closure_11;
+                                                  }
+                                                  if (!tmp) {
+                                                    tmp2 = onClose;
+                                                    tmp3 = onClose();
+                                                  }
+                                                  return;
+                                                }
+                                              }
+                                              required = tmp56;
+                                              if (cResult[57] === currentPromptIdx) {
+                                                if (cResult[58] === tmp56) {
+                                                  if (cResult[59] === guildId) {
+                                                    let tmp57 = cResult[60];
+                                                    let tmp58 = cResult[61];
+                                                  }
+                                                  const effect4 = backShouldLeaveGuild.useEffect(tmp57, tmp58);
+                                                  tmp(tmp2[28]);
+                                                  class Ot {
+                                                    constructor() {
+                                                      tmp = closure_9;
+                                                      if (!closure_9) {
+                                                        tmp = closure_11;
+                                                      }
+                                                      if (!tmp) {
+                                                        tmp2 = onClose;
+                                                        tmp3 = onClose();
+                                                      }
+                                                      return;
+                                                    }
+                                                  }
+                                                  let obj3 = { showPrompts: sharedValue, withTiming: null, Easing: null, useReducedMotion: null };
+                                                  class Gt {
+                                                    constructor() {
+                                                      if (0 === currentPromptIdx) {
+                                                        tmp = closure_1;
+                                                        tmp2 = closure_2;
+                                                        obj = closure_1(closure_2[33]);
+                                                        tmp3 = AnalyticEvents;
+                                                        obj1 = {};
+                                                        tmp4 = closure_0;
+                                                        obj3 = closure_0(closure_2[34]);
+                                                        tmp5 = guildId;
+                                                        tmp6 = obj1;
+                                                        merged = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
+                                                        obj1.step = 0;
+                                                        tmp8 = required;
+                                                        obj1.required = required;
+                                                        trackResult = obj.track(AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, obj1);
+                                                      }
+                                                      return;
+                                                    }
+                                                  }
+                                                  obj3.withTiming = tmp(tmp2[35]).withTiming;
+                                                  obj3.Easing = tmp(tmp2[28]).Easing;
+                                                  obj3.useReducedMotion = stateFromStores1;
+                                                  tmp62.__closure = obj3;
+                                                  tmp62.__workletHash = 6820086589932;
+                                                  class Et {
+                                                    constructor() {
+                                                      if (closure_9) {
+                                                        tmp = closure_1;
+                                                        tmp2 = closure_2;
+                                                        obj = closure_1(closure_2[33]);
+                                                        tmp3 = AnalyticEvents;
+                                                        obj1 = {};
+                                                        tmp4 = closure_0;
+                                                        obj3 = closure_0(closure_2[34]);
+                                                        tmp5 = guildId;
+                                                        tmp6 = obj1;
+                                                        merged = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
+                                                        num = -1;
+                                                        obj1.step = -1;
+                                                        flag = true;
+                                                        obj1.required = true;
+                                                        trackResult = obj.track(AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, obj1);
+                                                        obj4 = closure_1(closure_2[33]);
+                                                        obj7 = {};
+                                                        obj6 = closure_0(closure_2[34]);
+                                                        tmp9 = obj7;
+                                                        merged1 = Object.assign(obj6.collectGuildAnalyticsMetadata(guildId));
+                                                        obj7.step = -1;
+                                                        tmp11 = closure_11;
+                                                        obj7.skipped = closure_11;
+                                                        flag2 = false;
+                                                        obj7.is_final_step = false;
+                                                        obj7.in_onboarding = true;
+                                                        trackResult1 = obj4.track(AnalyticEvents.GUILD_ONBOARDING_STEP_COMPLETED, obj7);
+                                                      }
+                                                      return;
+                                                    }
+                                                  }
+                                                  const tmp61Result = tmp61(tmp62);
+                                                  class Rt {
+                                                    constructor() {
+                                                      obj = closure_13;
+                                                      num = 1;
+                                                      if (closure_13.get()) {
+                                                        num = 0;
+                                                      }
+                                                      tmp = closure_0;
+                                                      tmp2 = closure_2;
+                                                      obj2 = closure_0(closure_2[28]);
+                                                      obj3 = closure_0(closure_2[35]);
+                                                      obj1 = { duration: 300, easing: null };
+                                                      Easing = closure_0(closure_2[28]).Easing;
+                                                      obj1.easing = Easing.out(closure_0(closure_2[28]).Easing.ease);
+                                                      num2 = 0;
+                                                      withDelayResult = obj2.withDelay(200, obj3.withTiming(num, obj1));
+                                                      if (!closure_7) {
+                                                        num2 = 0;
+                                                        if (obj.get()) {
+                                                          num2 = -80;
+                                                        }
+                                                      }
+                                                      obj10 = { opacity: withDelayResult, transform: null };
+                                                      obj11 = { translateY: null };
+                                                      tmpResult = tmp(tmp2[28]);
+                                                      tmpResult1 = tmp(tmp2[35]);
+                                                      obj12 = { duration: 300, easing: null };
+                                                      Easing2 = tmp(tmp2[28]).Easing;
+                                                      obj12.easing = Easing2.out(tmp(tmp2[28]).Easing.ease);
+                                                      obj11.translateY = tmpResult.withDelay(200, tmpResult1.withTiming(num2, obj12));
+                                                      items = [];
+                                                      items[0] = obj11;
+                                                      obj10.transform = items;
+                                                      return obj10;
+                                                    }
+                                                  }
+                                                  let obj4 = { showPrompts: sharedValue, withDelay: tmp(tmp2[28]).withDelay, withTiming: tmp(tmp2[35]).withTiming, Easing: tmp(tmp2[28]).Easing, useReducedMotion: stateFromStores1 };
+                                                  Rt.__closure = obj4;
+                                                  Rt.__workletHash = 5791914703412;
+                                                  Rt.__initData = __initData;
+                                                  const animatedStyle = tmp(tmp2[28]).useAnimatedStyle(Rt);
+                                                  const tmpResult20 = tmp(tmp2[28]);
+                                                  class St {
+                                                    constructor() {
+                                                      num = 1;
+                                                      if (closure_13.get()) {
+                                                        num = 0;
+                                                      }
+                                                      obj = { opacity: null };
+                                                      obj2 = closure_0(closure_2[28]);
+                                                      obj3 = closure_0(closure_2[35]);
+                                                      obj1 = { duration: 300, easing: null };
+                                                      Easing = closure_0(closure_2[28]).Easing;
+                                                      obj1.easing = Easing.out(closure_0(closure_2[28]).Easing.ease);
+                                                      obj.opacity = obj2.withDelay(200, obj3.withTiming(num, obj1));
+                                                      return obj;
+                                                    }
+                                                  }
+                                                  let obj5 = { showPrompts: sharedValue, withDelay: tmp(tmp2[28]).withDelay, withTiming: tmp(tmp2[35]).withTiming, Easing: tmp(tmp2[28]).Easing };
+                                                  St.__closure = obj5;
+                                                  St.__workletHash = 8303227561504;
+                                                  St.__initData = __initData2;
+                                                  const animatedStyle1 = tmp(tmp2[28]).useAnimatedStyle(St);
+                                                  const tmpResult21 = tmp(tmp2[28]);
+                                                  function xt() {
+                                                    let num = 1;
+                                                    if (sharedValue.get()) {
+                                                      num = 0;
+                                                    }
+                                                    const obj = { opacity: null };
+                                                    const obj2 = ReanimatedRexport;
+                                                    const obj4 = { duration: 300, easing: null };
+                                                    const Easing = ReanimatedRexport.Easing;
+                                                    obj4.easing = Easing.out(ReanimatedRexport.Easing.ease);
+                                                    obj.opacity = obj2.withDelay(200, timing.withTiming(num, obj4));
+                                                    return obj;
+                                                  }
+                                                  let obj6 = { showPrompts: sharedValue, withDelay: tmp(tmp2[28]).withDelay, withTiming: tmp(tmp2[35]).withTiming, Easing: tmp(tmp2[28]).Easing };
+                                                  xt.__closure = obj6;
+                                                  xt.__workletHash = 8981159003655;
+                                                  xt.__initData = __initData3;
+                                                  const animatedStyle2 = tmp(tmp2[28]).useAnimatedStyle(xt);
+                                                  const tmpResult22 = tmp(tmp2[28]);
+                                                  class At {
+                                                    constructor() {
+                                                      obj = closure_13;
+                                                      num = 0;
+                                                      if (closure_13.get()) {
+                                                        num = 1;
+                                                      }
+                                                      tmp = closure_0;
+                                                      tmp2 = closure_2;
+                                                      obj2 = closure_0(closure_2[28]);
+                                                      obj3 = closure_0(closure_2[35]);
+                                                      obj1 = { duration: 300, easing: null };
+                                                      Easing = closure_0(closure_2[28]).Easing;
+                                                      obj1.easing = Easing.out(closure_0(closure_2[28]).Easing.ease);
+                                                      withDelayResult = obj2.withDelay(600, obj3.withTiming(num, obj1));
+                                                      if (closure_7) {
+                                                        num2 = 0;
+                                                      } else {
+                                                        num2 = 80;
+                                                      }
+                                                      obj10 = { opacity: withDelayResult, transform: null };
+                                                      obj11 = { translateY: null };
+                                                      tmpResult = tmp(tmp2[28]);
+                                                      tmpResult1 = tmp(tmp2[35]);
+                                                      obj12 = { duration: 300, easing: null };
+                                                      Easing2 = tmp(tmp2[28]).Easing;
+                                                      obj12.easing = Easing2.out(tmp(tmp2[28]).Easing.ease);
+                                                      obj11.translateY = tmpResult.withDelay(600, tmpResult1.withTiming(num2, obj12));
+                                                      items = [];
+                                                      items[0] = obj11;
+                                                      obj10.transform = items;
+                                                      return obj10;
+                                                    }
+                                                  }
+                                                  let obj7 = { showPrompts: null, withDelay: null, withTiming: null, Easing: null, useReducedMotion: null };
+                                                  class X {
+                                                    constructor() {
+                                                      obj = closure_1(closure_2[29]);
+                                                      completeOnboardingResult = obj.completeOnboarding(guildId, prompts);
+                                                      return;
+                                                    }
+                                                  }
+                                                  obj7.withDelay = tmp(tmp2[28]).withDelay;
+                                                  obj7.withTiming = tmp(tmp2[35]).withTiming;
+                                                  obj7.Easing = tmp(tmp2[28]).Easing;
+                                                  obj7.useReducedMotion = stateFromStores1;
+                                                  At.__closure = obj7;
+                                                  At.__workletHash = 8253165020063;
+                                                  At.__initData = __initData4;
+                                                  const animatedStyle3 = tmp(tmp2[28]).useAnimatedStyle(At);
+                                                  if (cResult[62] === currentPromptIdx) {
+                                                    if (cResult[63] === stateFromStores2) {
+                                                      if (cResult[64] === guildId) {
+                                                        if (cResult[65] === navigation) {
+                                                          if (cResult[66] === prompts) {
+                                                            if (cResult[67] === stateFromStores) {
+                                                              if (cResult[68] === stateFromStoresArray.length) {
+                                                                let tmp73 = cResult[69];
+                                                              }
+                                                              closure_22 = tmp73;
+                                                              if (cResult[70] === tmp33) {
+                                                                if (cResult[71] === tmp73) {
+                                                                  if (cResult[72] === tmp35) {
+                                                                    handleOnPress = tmp74;
+                                                                    if (cResult[75] === backShouldLeaveGuild) {
+                                                                      if (cResult[76] === currentPromptIdx) {
+                                                                        if (cResult[77] === guildId) {
+                                                                          if (cResult[78] === tmp17) {
+                                                                            if (cResult[79] === navigation) {
+                                                                              if (cResult[80] === onClose) {
+                                                                                if (cResult[81] === prompts) {
+                                                                                  if (cResult[82] === stateFromStoresArray.length) {
+                                                                                    let tmp75 = cResult[83];
+                                                                                  }
+                                                                                  if (cResult[84] === backShouldLeaveGuild) {
+                                                                                    if (cResult[85] === currentPromptIdx) {
+                                                                                      if (cResult[86] === guildId) {
+                                                                                        if (cResult[87] === tmp17) {
+                                                                                          if (cResult[88] === navigation) {
+                                                                                            if (cResult[89] === onClose) {
+                                                                                              if (cResult[90] === prompts) {
+                                                                                                if (cResult[91] === stateFromStoresArray) {
+                                                                                                  let tmp76 = cResult[92];
+                                                                                                }
+                                                                                                const layoutEffect = backShouldLeaveGuild.useLayoutEffect(tmp75, tmp76);
+                                                                                                if (cResult[93] === tmp20) {
+                                                                                                  if (cResult[94] === currentPromptIdx) {
+                                                                                                    if (cResult[95] === guildId) {
+                                                                                                      if (cResult[96] === tmp74) {
+                                                                                                        if (cResult[97] === tmp19) {
+                                                                                                          if (cResult[98] === tmp35) {
+                                                                                                            if (cResult[99] === prompts.length) {
+                                                                                                              if (cResult[100] === selectOption) {
+                                                                                                                let tmp78 = cResult[101];
+                                                                                                              }
+                                                                                                              if (cResult[102] === tmp4.container) {
+                                                                                                                if (cResult[103] === tmp4.flex) {
+                                                                                                                  let tmp79 = cResult[104];
+                                                                                                                }
+                                                                                                                if (cResult[105] === animatedStyle3) {
+                                                                                                                  if (cResult[106] === tmp4.flex) {
+                                                                                                                    let tmp80 = cResult[107];
+                                                                                                                  }
+                                                                                                                  if (cResult[108] !== tmp78) {
+                                                                                                                    const tmp78Result = tmp78();
+                                                                                                                    cResult[108] = tmp78;
+                                                                                                                    class Ft {
+                                                                                                                      constructor() {
+                                                                                                                        if (closure_11) {
+                                                                                                                          tmp = closure_12;
+                                                                                                                          tmp2 = null;
+                                                                                                                          if (null != closure_12) {
+                                                                                                                            type = tmp.type;
+                                                                                                                            if (OnboardingPromptType.MULTIPLE_CHOICE === type) {
+                                                                                                                              tmp15 = jsx;
+                                                                                                                              tmp16 = closure_0;
+                                                                                                                              tmp17 = closure_2;
+                                                                                                                              obj1 = { guildId: null, currentPrompt: null, lastPrompt: null, currentPromptIndex: null, numberOfPrompts: null, selectOption: null, handleOnPress: null };
+                                                                                                                              tmp18 = guildId;
+                                                                                                                              obj1.guildId = guildId;
+                                                                                                                              obj1.currentPrompt = tmp;
+                                                                                                                              tmp19 = closure_18;
+                                                                                                                              obj1.lastPrompt = closure_18;
+                                                                                                                              tmp20 = currentPromptIdx;
+                                                                                                                              obj1.currentPromptIndex = currentPromptIdx;
+                                                                                                                              tmp21 = prompts;
+                                                                                                                              obj1.numberOfPrompts = prompts.length;
+                                                                                                                              tmp22 = selectOption;
+                                                                                                                              obj1.selectOption = selectOption;
+                                                                                                                              tmp23 = closure_23;
+                                                                                                                              obj1.handleOnPress = closure_23;
+                                                                                                                              return jsx(closure_0(closure_2[37]).MultipleChoicePrompt, obj1);
+                                                                                                                            } else if (tmp24.DROPDOWN === type) {
+                                                                                                                              tmp6 = jsx;
+                                                                                                                              tmp7 = closure_0;
+                                                                                                                              tmp8 = closure_2;
+                                                                                                                              obj4 = { guildId: null, currentPrompt: null, lastPrompt: null, currentPromptIndex: null, numberOfPrompts: null, selectOption: null, handleOnPress: null };
+                                                                                                                              tmp9 = guildId;
+                                                                                                                              obj4.guildId = guildId;
+                                                                                                                              obj4.currentPrompt = tmp;
+                                                                                                                              tmp10 = closure_18;
+                                                                                                                              obj4.lastPrompt = closure_18;
+                                                                                                                              tmp11 = currentPromptIdx;
+                                                                                                                              obj4.currentPromptIndex = currentPromptIdx;
+                                                                                                                              tmp12 = prompts;
+                                                                                                                              obj4.numberOfPrompts = prompts.length;
+                                                                                                                              tmp13 = selectOption;
+                                                                                                                              obj4.selectOption = selectOption;
+                                                                                                                              tmp14 = closure_23;
+                                                                                                                              obj4.handleOnPress = closure_23;
+                                                                                                                              return jsx(closure_0(closure_2[37]).DropdownPrompt, obj4);
+                                                                                                                            } else {
+                                                                                                                              tmp3 = closure_0;
+                                                                                                                              tmp4 = closure_2;
+                                                                                                                              obj = closure_0(closure_2[38]);
+                                                                                                                              assertNeverResult = obj.assertNever(tmp.type);
+                                                                                                                              return;
+                                                                                                                            }
+                                                                                                                          }
+                                                                                                                        }
+                                                                                                                        return null;
+                                                                                                                      }
+                                                                                                                    }
+                                                                                                                    cResult[109] = tmp78Result;
+                                                                                                                    let tmp81 = tmp78Result;
+                                                                                                                  } else {
+                                                                                                                    tmp81 = cResult[109];
+                                                                                                                  }
+                                                                                                                  if (cResult[110] === tmp80) {
+                                                                                                                    if (cResult[113] === tmp79) {
+                                                                                                                      if (cResult[116] === tmp4.flex) {
+                                                                                                                        if (cResult[119] === animatedStyle2) {
+                                                                                                                          if (cResult[120] === tmp4.landingOverlay) {
+                                                                                                                            let tmp90 = cResult[121];
+                                                                                                                          }
+                                                                                                                          if (cResult[122] === tmp40) {
+                                                                                                                            if (cResult[123] === tmp41) {
+                                                                                                                              let tmp91 = cResult[124];
+                                                                                                                            }
+                                                                                                                            const _Symbol3 = Symbol;
+                                                                                                                            class Ft {
+                                                                                                                              constructor() {
+                                                                                                                                if (closure_11) {
+                                                                                                                                  tmp = closure_12;
+                                                                                                                                  tmp2 = null;
+                                                                                                                                  if (null != closure_12) {
+                                                                                                                                    type = tmp.type;
+                                                                                                                                    if (OnboardingPromptType.MULTIPLE_CHOICE === type) {
+                                                                                                                                      tmp15 = jsx;
+                                                                                                                                      tmp16 = closure_0;
+                                                                                                                                      tmp17 = closure_2;
+                                                                                                                                      obj1 = { guildId: null, currentPrompt: null, lastPrompt: null, currentPromptIndex: null, numberOfPrompts: null, selectOption: null, handleOnPress: null };
+                                                                                                                                      tmp18 = guildId;
+                                                                                                                                      obj1.guildId = guildId;
+                                                                                                                                      obj1.currentPrompt = tmp;
+                                                                                                                                      tmp19 = closure_18;
+                                                                                                                                      obj1.lastPrompt = closure_18;
+                                                                                                                                      tmp20 = currentPromptIdx;
+                                                                                                                                      obj1.currentPromptIndex = currentPromptIdx;
+                                                                                                                                      tmp21 = prompts;
+                                                                                                                                      obj1.numberOfPrompts = prompts.length;
+                                                                                                                                      tmp22 = selectOption;
+                                                                                                                                      obj1.selectOption = selectOption;
+                                                                                                                                      tmp23 = closure_23;
+                                                                                                                                      obj1.handleOnPress = closure_23;
+                                                                                                                                      return jsx(closure_0(closure_2[37]).MultipleChoicePrompt, obj1);
+                                                                                                                                    } else if (tmp24.DROPDOWN === type) {
+                                                                                                                                      tmp6 = jsx;
+                                                                                                                                      tmp7 = closure_0;
+                                                                                                                                      tmp8 = closure_2;
+                                                                                                                                      obj4 = { guildId: null, currentPrompt: null, lastPrompt: null, currentPromptIndex: null, numberOfPrompts: null, selectOption: null, handleOnPress: null };
+                                                                                                                                      tmp9 = guildId;
+                                                                                                                                      obj4.guildId = guildId;
+                                                                                                                                      obj4.currentPrompt = tmp;
+                                                                                                                                      tmp10 = closure_18;
+                                                                                                                                      obj4.lastPrompt = closure_18;
+                                                                                                                                      tmp11 = currentPromptIdx;
+                                                                                                                                      obj4.currentPromptIndex = currentPromptIdx;
+                                                                                                                                      tmp12 = prompts;
+                                                                                                                                      obj4.numberOfPrompts = prompts.length;
+                                                                                                                                      tmp13 = selectOption;
+                                                                                                                                      obj4.selectOption = selectOption;
+                                                                                                                                      tmp14 = closure_23;
+                                                                                                                                      obj4.handleOnPress = closure_23;
+                                                                                                                                      return jsx(closure_0(closure_2[37]).DropdownPrompt, obj4);
+                                                                                                                                    } else {
+                                                                                                                                      tmp3 = closure_0;
+                                                                                                                                      tmp4 = closure_2;
+                                                                                                                                      obj = closure_0(closure_2[38]);
+                                                                                                                                      assertNeverResult = obj.assertNever(tmp.type);
+                                                                                                                                      return;
+                                                                                                                                    }
+                                                                                                                                  }
+                                                                                                                                }
+                                                                                                                                return null;
+                                                                                                                              }
+                                                                                                                            }
+                                                                                                                            if (cResult[126] !== tmp4.darkColorGradient) {
+                                                                                                                              const obj8 = { style: tmp4.darkColorGradient, start: null, end: null, colors: null };
+                                                                                                                              class Ft {
+                                                                                                                                constructor() {
+                                                                                                                                  if (closure_11) {
+                                                                                                                                    tmp = closure_12;
+                                                                                                                                    tmp2 = null;
+                                                                                                                                    if (null != closure_12) {
+                                                                                                                                      type = tmp.type;
+                                                                                                                                      if (OnboardingPromptType.MULTIPLE_CHOICE === type) {
+                                                                                                                                        tmp15 = jsx;
+                                                                                                                                        tmp16 = closure_0;
+                                                                                                                                        tmp17 = closure_2;
+                                                                                                                                        obj1 = { guildId: null, currentPrompt: null, lastPrompt: null, currentPromptIndex: null, numberOfPrompts: null, selectOption: null, handleOnPress: null };
+                                                                                                                                        tmp18 = guildId;
+                                                                                                                                        obj1.guildId = guildId;
+                                                                                                                                        obj1.currentPrompt = tmp;
+                                                                                                                                        tmp19 = closure_18;
+                                                                                                                                        obj1.lastPrompt = closure_18;
+                                                                                                                                        tmp20 = currentPromptIdx;
+                                                                                                                                        obj1.currentPromptIndex = currentPromptIdx;
+                                                                                                                                        tmp21 = prompts;
+                                                                                                                                        obj1.numberOfPrompts = prompts.length;
+                                                                                                                                        tmp22 = selectOption;
+                                                                                                                                        obj1.selectOption = selectOption;
+                                                                                                                                        tmp23 = closure_23;
+                                                                                                                                        obj1.handleOnPress = closure_23;
+                                                                                                                                        return jsx(closure_0(closure_2[37]).MultipleChoicePrompt, obj1);
+                                                                                                                                      } else if (tmp24.DROPDOWN === type) {
+                                                                                                                                        tmp6 = jsx;
+                                                                                                                                        tmp7 = closure_0;
+                                                                                                                                        tmp8 = closure_2;
+                                                                                                                                        obj4 = { guildId: null, currentPrompt: null, lastPrompt: null, currentPromptIndex: null, numberOfPrompts: null, selectOption: null, handleOnPress: null };
+                                                                                                                                        tmp9 = guildId;
+                                                                                                                                        obj4.guildId = guildId;
+                                                                                                                                        obj4.currentPrompt = tmp;
+                                                                                                                                        tmp10 = closure_18;
+                                                                                                                                        obj4.lastPrompt = closure_18;
+                                                                                                                                        tmp11 = currentPromptIdx;
+                                                                                                                                        obj4.currentPromptIndex = currentPromptIdx;
+                                                                                                                                        tmp12 = prompts;
+                                                                                                                                        obj4.numberOfPrompts = prompts.length;
+                                                                                                                                        tmp13 = selectOption;
+                                                                                                                                        obj4.selectOption = selectOption;
+                                                                                                                                        tmp14 = closure_23;
+                                                                                                                                        obj4.handleOnPress = closure_23;
+                                                                                                                                        return jsx(closure_0(closure_2[37]).DropdownPrompt, obj4);
+                                                                                                                                      } else {
+                                                                                                                                        tmp3 = closure_0;
+                                                                                                                                        tmp4 = closure_2;
+                                                                                                                                        obj = closure_0(closure_2[38]);
+                                                                                                                                        assertNeverResult = obj.assertNever(tmp.type);
+                                                                                                                                        return;
+                                                                                                                                      }
+                                                                                                                                    }
+                                                                                                                                  }
+                                                                                                                                  return null;
+                                                                                                                                }
+                                                                                                                              }
+                                                                                                                              obj8.start = tmp(tmp2[24]).VerticalGradient.START;
+                                                                                                                              obj8.end = tmp(tmp2[24]).VerticalGradient.END;
+                                                                                                                              class Gt {
+                                                                                                                                constructor() {
+                                                                                                                                  if (0 === currentPromptIdx) {
+                                                                                                                                    tmp = closure_1;
+                                                                                                                                    tmp2 = closure_2;
+                                                                                                                                    obj = closure_1(closure_2[33]);
+                                                                                                                                    tmp3 = AnalyticEvents;
+                                                                                                                                    obj1 = {};
+                                                                                                                                    tmp4 = closure_0;
+                                                                                                                                    obj3 = closure_0(closure_2[34]);
+                                                                                                                                    tmp5 = guildId;
+                                                                                                                                    tmp6 = obj1;
+                                                                                                                                    merged = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
+                                                                                                                                    obj1.step = 0;
+                                                                                                                                    tmp8 = required;
+                                                                                                                                    obj1.required = required;
+                                                                                                                                    trackResult = obj.track(AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, obj1);
+                                                                                                                                  }
+                                                                                                                                  return;
+                                                                                                                                }
+                                                                                                                              }
+                                                                                                                              const tmp97 = closure_19(tmp96, obj8);
+                                                                                                                              cResult[126] = tmp4.darkColorGradient;
+                                                                                                                              cResult[127] = tmp97;
+                                                                                                                              let tmp94 = tmp97;
+                                                                                                                            } else {
+                                                                                                                              tmp94 = cResult[127];
+                                                                                                                            }
+                                                                                                                            if (cResult[128] === tmp90) {
+                                                                                                                              if (cResult[129] === tmp91) {
+                                                                                                                                if (cResult[132] === tmp61Result) {
+                                                                                                                                  if (cResult[133] === tmp4.artWrapper) {
+                                                                                                                                    let tmp100 = cResult[134];
+                                                                                                                                  }
+                                                                                                                                  const _Symbol4 = Symbol;
+                                                                                                                                  class Ft {
+                                                                                                                                    constructor() {
+                                                                                                                                      if (closure_11) {
+                                                                                                                                        tmp = closure_12;
+                                                                                                                                        tmp2 = null;
+                                                                                                                                        if (null != closure_12) {
+                                                                                                                                          type = tmp.type;
+                                                                                                                                          if (OnboardingPromptType.MULTIPLE_CHOICE === type) {
+                                                                                                                                            tmp15 = jsx;
+                                                                                                                                            tmp16 = closure_0;
+                                                                                                                                            tmp17 = closure_2;
+                                                                                                                                            obj1 = { guildId: null, currentPrompt: null, lastPrompt: null, currentPromptIndex: null, numberOfPrompts: null, selectOption: null, handleOnPress: null };
+                                                                                                                                            tmp18 = guildId;
+                                                                                                                                            obj1.guildId = guildId;
+                                                                                                                                            obj1.currentPrompt = tmp;
+                                                                                                                                            tmp19 = closure_18;
+                                                                                                                                            obj1.lastPrompt = closure_18;
+                                                                                                                                            tmp20 = currentPromptIdx;
+                                                                                                                                            obj1.currentPromptIndex = currentPromptIdx;
+                                                                                                                                            tmp21 = prompts;
+                                                                                                                                            obj1.numberOfPrompts = prompts.length;
+                                                                                                                                            tmp22 = selectOption;
+                                                                                                                                            obj1.selectOption = selectOption;
+                                                                                                                                            tmp23 = closure_23;
+                                                                                                                                            obj1.handleOnPress = closure_23;
+                                                                                                                                            return jsx(closure_0(closure_2[37]).MultipleChoicePrompt, obj1);
+                                                                                                                                          } else if (tmp24.DROPDOWN === type) {
+                                                                                                                                            tmp6 = jsx;
+                                                                                                                                            tmp7 = closure_0;
+                                                                                                                                            tmp8 = closure_2;
+                                                                                                                                            obj4 = { guildId: null, currentPrompt: null, lastPrompt: null, currentPromptIndex: null, numberOfPrompts: null, selectOption: null, handleOnPress: null };
+                                                                                                                                            tmp9 = guildId;
+                                                                                                                                            obj4.guildId = guildId;
+                                                                                                                                            obj4.currentPrompt = tmp;
+                                                                                                                                            tmp10 = closure_18;
+                                                                                                                                            obj4.lastPrompt = closure_18;
+                                                                                                                                            tmp11 = currentPromptIdx;
+                                                                                                                                            obj4.currentPromptIndex = currentPromptIdx;
+                                                                                                                                            tmp12 = prompts;
+                                                                                                                                            obj4.numberOfPrompts = prompts.length;
+                                                                                                                                            tmp13 = selectOption;
+                                                                                                                                            obj4.selectOption = selectOption;
+                                                                                                                                            tmp14 = closure_23;
+                                                                                                                                            obj4.handleOnPress = closure_23;
+                                                                                                                                            return jsx(closure_0(closure_2[37]).DropdownPrompt, obj4);
+                                                                                                                                          } else {
+                                                                                                                                            tmp3 = closure_0;
+                                                                                                                                            tmp4 = closure_2;
+                                                                                                                                            obj = closure_0(closure_2[38]);
+                                                                                                                                            assertNeverResult = obj.assertNever(tmp.type);
+                                                                                                                                            return;
+                                                                                                                                          }
+                                                                                                                                        }
+                                                                                                                                      }
+                                                                                                                                      return null;
+                                                                                                                                    }
+                                                                                                                                  }
+                                                                                                                                  if (tmp102 === Symbol.for("react.memo_cache_sentinel")) {
+                                                                                                                                    cResult[135] = { width: "100%" };
+                                                                                                                                    class Ft {
+                                                                                                                                      constructor() {
+                                                                                                                                        if (closure_11) {
+                                                                                                                                          tmp = closure_12;
+                                                                                                                                          tmp2 = null;
+                                                                                                                                          if (null != closure_12) {
+                                                                                                                                            type = tmp.type;
+                                                                                                                                            if (OnboardingPromptType.MULTIPLE_CHOICE === type) {
+                                                                                                                                              tmp15 = jsx;
+                                                                                                                                              tmp16 = closure_0;
+                                                                                                                                              tmp17 = closure_2;
+                                                                                                                                              obj1 = { guildId: null, currentPrompt: null, lastPrompt: null, currentPromptIndex: null, numberOfPrompts: null, selectOption: null, handleOnPress: null };
+                                                                                                                                              tmp18 = guildId;
+                                                                                                                                              obj1.guildId = guildId;
+                                                                                                                                              obj1.currentPrompt = tmp;
+                                                                                                                                              tmp19 = closure_18;
+                                                                                                                                              obj1.lastPrompt = closure_18;
+                                                                                                                                              tmp20 = currentPromptIdx;
+                                                                                                                                              obj1.currentPromptIndex = currentPromptIdx;
+                                                                                                                                              tmp21 = prompts;
+                                                                                                                                              obj1.numberOfPrompts = prompts.length;
+                                                                                                                                              tmp22 = selectOption;
+                                                                                                                                              obj1.selectOption = selectOption;
+                                                                                                                                              tmp23 = closure_23;
+                                                                                                                                              obj1.handleOnPress = closure_23;
+                                                                                                                                              return jsx(closure_0(closure_2[37]).MultipleChoicePrompt, obj1);
+                                                                                                                                            } else if (tmp24.DROPDOWN === type) {
+                                                                                                                                              tmp6 = jsx;
+                                                                                                                                              tmp7 = closure_0;
+                                                                                                                                              tmp8 = closure_2;
+                                                                                                                                              obj4 = { guildId: null, currentPrompt: null, lastPrompt: null, currentPromptIndex: null, numberOfPrompts: null, selectOption: null, handleOnPress: null };
+                                                                                                                                              tmp9 = guildId;
+                                                                                                                                              obj4.guildId = guildId;
+                                                                                                                                              obj4.currentPrompt = tmp;
+                                                                                                                                              tmp10 = closure_18;
+                                                                                                                                              obj4.lastPrompt = closure_18;
+                                                                                                                                              tmp11 = currentPromptIdx;
+                                                                                                                                              obj4.currentPromptIndex = currentPromptIdx;
+                                                                                                                                              tmp12 = prompts;
+                                                                                                                                              obj4.numberOfPrompts = prompts.length;
+                                                                                                                                              tmp13 = selectOption;
+                                                                                                                                              obj4.selectOption = selectOption;
+                                                                                                                                              tmp14 = closure_23;
+                                                                                                                                              obj4.handleOnPress = closure_23;
+                                                                                                                                              return jsx(closure_0(closure_2[37]).DropdownPrompt, obj4);
+                                                                                                                                            } else {
+                                                                                                                                              tmp3 = closure_0;
+                                                                                                                                              tmp4 = closure_2;
+                                                                                                                                              obj = closure_0(closure_2[38]);
+                                                                                                                                              assertNeverResult = obj.assertNever(tmp.type);
+                                                                                                                                              return;
+                                                                                                                                            }
+                                                                                                                                          }
+                                                                                                                                        }
+                                                                                                                                        return null;
+                                                                                                                                      }
+                                                                                                                                    }
+                                                                                                                                    const obj9 = { width: "100%" };
+                                                                                                                                  } else {
+                                                                                                                                    const tmp103 = cResult[135];
+                                                                                                                                  }
+                                                                                                                                  if (cResult[136] === landingAnimation) {
+                                                                                                                                    if (cResult[137] === tmp101) {
+                                                                                                                                      let tmp104 = cResult[138];
+                                                                                                                                    }
+                                                                                                                                    if (cResult[139] === tmp100) {
+                                                                                                                                      if (cResult[142] === animatedStyle) {
+                                                                                                                                        if (cResult[143] === tmp4.landingBody) {
+                                                                                                                                          let tmp110 = cResult[144];
+                                                                                                                                        }
+                                                                                                                                        class Ft {
+                                                                                                                                          constructor() {
+                                                                                                                                            if (closure_11) {
+                                                                                                                                              tmp = closure_12;
+                                                                                                                                              tmp2 = null;
+                                                                                                                                              if (null != closure_12) {
+                                                                                                                                                type = tmp.type;
+                                                                                                                                                if (OnboardingPromptType.MULTIPLE_CHOICE === type) {
+                                                                                                                                                  tmp15 = jsx;
+                                                                                                                                                  tmp16 = closure_0;
+                                                                                                                                                  tmp17 = closure_2;
+                                                                                                                                                  obj1 = { guildId: null, currentPrompt: null, lastPrompt: null, currentPromptIndex: null, numberOfPrompts: null, selectOption: null, handleOnPress: null };
+                                                                                                                                                  tmp18 = guildId;
+                                                                                                                                                  obj1.guildId = guildId;
+                                                                                                                                                  obj1.currentPrompt = tmp;
+                                                                                                                                                  tmp19 = closure_18;
+                                                                                                                                                  obj1.lastPrompt = closure_18;
+                                                                                                                                                  tmp20 = currentPromptIdx;
+                                                                                                                                                  obj1.currentPromptIndex = currentPromptIdx;
+                                                                                                                                                  tmp21 = prompts;
+                                                                                                                                                  obj1.numberOfPrompts = prompts.length;
+                                                                                                                                                  tmp22 = selectOption;
+                                                                                                                                                  obj1.selectOption = selectOption;
+                                                                                                                                                  tmp23 = closure_23;
+                                                                                                                                                  obj1.handleOnPress = closure_23;
+                                                                                                                                                  return jsx(closure_0(closure_2[37]).MultipleChoicePrompt, obj1);
+                                                                                                                                                } else if (tmp24.DROPDOWN === type) {
+                                                                                                                                                  tmp6 = jsx;
+                                                                                                                                                  tmp7 = closure_0;
+                                                                                                                                                  tmp8 = closure_2;
+                                                                                                                                                  obj4 = { guildId: null, currentPrompt: null, lastPrompt: null, currentPromptIndex: null, numberOfPrompts: null, selectOption: null, handleOnPress: null };
+                                                                                                                                                  tmp9 = guildId;
+                                                                                                                                                  obj4.guildId = guildId;
+                                                                                                                                                  obj4.currentPrompt = tmp;
+                                                                                                                                                  tmp10 = closure_18;
+                                                                                                                                                  obj4.lastPrompt = closure_18;
+                                                                                                                                                  tmp11 = currentPromptIdx;
+                                                                                                                                                  obj4.currentPromptIndex = currentPromptIdx;
+                                                                                                                                                  tmp12 = prompts;
+                                                                                                                                                  obj4.numberOfPrompts = prompts.length;
+                                                                                                                                                  tmp13 = selectOption;
+                                                                                                                                                  obj4.selectOption = selectOption;
+                                                                                                                                                  tmp14 = closure_23;
+                                                                                                                                                  obj4.handleOnPress = closure_23;
+                                                                                                                                                  return jsx(closure_0(closure_2[37]).DropdownPrompt, obj4);
+                                                                                                                                                } else {
+                                                                                                                                                  tmp3 = closure_0;
+                                                                                                                                                  tmp4 = closure_2;
+                                                                                                                                                  obj = closure_0(closure_2[38]);
+                                                                                                                                                  assertNeverResult = obj.assertNever(tmp.type);
+                                                                                                                                                  return;
+                                                                                                                                                }
+                                                                                                                                              }
+                                                                                                                                            }
+                                                                                                                                            return null;
+                                                                                                                                          }
+                                                                                                                                        }
+                                                                                                                                        if (stateFromStores2 != null) {
+                                                                                                                                          const name = stateFromStores2.name;
+                                                                                                                                        }
+                                                                                                                                        class Gt {
+                                                                                                                                          constructor() {
+                                                                                                                                            if (0 === currentPromptIdx) {
+                                                                                                                                              tmp = closure_1;
+                                                                                                                                              tmp2 = closure_2;
+                                                                                                                                              obj = closure_1(closure_2[33]);
+                                                                                                                                              tmp3 = AnalyticEvents;
+                                                                                                                                              obj1 = {};
+                                                                                                                                              tmp4 = closure_0;
+                                                                                                                                              obj3 = closure_0(closure_2[34]);
+                                                                                                                                              tmp5 = guildId;
+                                                                                                                                              tmp6 = obj1;
+                                                                                                                                              merged = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
+                                                                                                                                              obj1.step = 0;
+                                                                                                                                              tmp8 = required;
+                                                                                                                                              obj1.required = required;
+                                                                                                                                              trackResult = obj.track(AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, obj1);
+                                                                                                                                            }
+                                                                                                                                            return;
+                                                                                                                                          }
+                                                                                                                                        }
+                                                                                                                                        if (cResult[147] === tmp4.subtitle) {
+                                                                                                                                          if (cResult[148] === tmp114) {
+                                                                                                                                            let tmp115 = cResult[149];
+                                                                                                                                          }
+                                                                                                                                          const _Symbol5 = Symbol;
+                                                                                                                                          class Ft {
+                                                                                                                                            constructor() {
+                                                                                                                                              if (closure_11) {
+                                                                                                                                                tmp = closure_12;
+                                                                                                                                                tmp2 = null;
+                                                                                                                                                if (null != closure_12) {
+                                                                                                                                                  type = tmp.type;
+                                                                                                                                                  if (OnboardingPromptType.MULTIPLE_CHOICE === type) {
+                                                                                                                                                    tmp15 = jsx;
+                                                                                                                                                    tmp16 = closure_0;
+                                                                                                                                                    tmp17 = closure_2;
+                                                                                                                                                    obj1 = { guildId: null, currentPrompt: null, lastPrompt: null, currentPromptIndex: null, numberOfPrompts: null, selectOption: null, handleOnPress: null };
+                                                                                                                                                    tmp18 = guildId;
+                                                                                                                                                    obj1.guildId = guildId;
+                                                                                                                                                    obj1.currentPrompt = tmp;
+                                                                                                                                                    tmp19 = closure_18;
+                                                                                                                                                    obj1.lastPrompt = closure_18;
+                                                                                                                                                    tmp20 = currentPromptIdx;
+                                                                                                                                                    obj1.currentPromptIndex = currentPromptIdx;
+                                                                                                                                                    tmp21 = prompts;
+                                                                                                                                                    obj1.numberOfPrompts = prompts.length;
+                                                                                                                                                    tmp22 = selectOption;
+                                                                                                                                                    obj1.selectOption = selectOption;
+                                                                                                                                                    tmp23 = closure_23;
+                                                                                                                                                    obj1.handleOnPress = closure_23;
+                                                                                                                                                    return jsx(closure_0(closure_2[37]).MultipleChoicePrompt, obj1);
+                                                                                                                                                  } else if (tmp24.DROPDOWN === type) {
+                                                                                                                                                    tmp6 = jsx;
+                                                                                                                                                    tmp7 = closure_0;
+                                                                                                                                                    tmp8 = closure_2;
+                                                                                                                                                    obj4 = { guildId: null, currentPrompt: null, lastPrompt: null, currentPromptIndex: null, numberOfPrompts: null, selectOption: null, handleOnPress: null };
+                                                                                                                                                    tmp9 = guildId;
+                                                                                                                                                    obj4.guildId = guildId;
+                                                                                                                                                    obj4.currentPrompt = tmp;
+                                                                                                                                                    tmp10 = closure_18;
+                                                                                                                                                    obj4.lastPrompt = closure_18;
+                                                                                                                                                    tmp11 = currentPromptIdx;
+                                                                                                                                                    obj4.currentPromptIndex = currentPromptIdx;
+                                                                                                                                                    tmp12 = prompts;
+                                                                                                                                                    obj4.numberOfPrompts = prompts.length;
+                                                                                                                                                    tmp13 = selectOption;
+                                                                                                                                                    obj4.selectOption = selectOption;
+                                                                                                                                                    tmp14 = closure_23;
+                                                                                                                                                    obj4.handleOnPress = closure_23;
+                                                                                                                                                    return jsx(closure_0(closure_2[37]).DropdownPrompt, obj4);
+                                                                                                                                                  } else {
+                                                                                                                                                    tmp3 = closure_0;
+                                                                                                                                                    tmp4 = closure_2;
+                                                                                                                                                    obj = closure_0(closure_2[38]);
+                                                                                                                                                    assertNeverResult = obj.assertNever(tmp.type);
+                                                                                                                                                    return;
+                                                                                                                                                  }
+                                                                                                                                                }
+                                                                                                                                              }
+                                                                                                                                              return null;
+                                                                                                                                            }
+                                                                                                                                          }
+                                                                                                                                          if (tmp118 === Symbol.for("react.memo_cache_sentinel")) {
+                                                                                                                                            const intl = tmp(tmp2[41]).intl;
+                                                                                                                                            const stringResult = intl.string(tmp(tmp2[41]).t["Alcl/e"]);
+                                                                                                                                            class Ft {
+                                                                                                                                              constructor() {
+                                                                                                                                                if (closure_11) {
+                                                                                                                                                  tmp = closure_12;
+                                                                                                                                                  tmp2 = null;
+                                                                                                                                                  if (null != closure_12) {
+                                                                                                                                                    type = tmp.type;
+                                                                                                                                                    if (OnboardingPromptType.MULTIPLE_CHOICE === type) {
+                                                                                                                                                      tmp15 = jsx;
+                                                                                                                                                      tmp16 = closure_0;
+                                                                                                                                                      tmp17 = closure_2;
+                                                                                                                                                      obj1 = { guildId: null, currentPrompt: null, lastPrompt: null, currentPromptIndex: null, numberOfPrompts: null, selectOption: null, handleOnPress: null };
+                                                                                                                                                      tmp18 = guildId;
+                                                                                                                                                      obj1.guildId = guildId;
+                                                                                                                                                      obj1.currentPrompt = tmp;
+                                                                                                                                                      tmp19 = closure_18;
+                                                                                                                                                      obj1.lastPrompt = closure_18;
+                                                                                                                                                      tmp20 = currentPromptIdx;
+                                                                                                                                                      obj1.currentPromptIndex = currentPromptIdx;
+                                                                                                                                                      tmp21 = prompts;
+                                                                                                                                                      obj1.numberOfPrompts = prompts.length;
+                                                                                                                                                      tmp22 = selectOption;
+                                                                                                                                                      obj1.selectOption = selectOption;
+                                                                                                                                                      tmp23 = closure_23;
+                                                                                                                                                      obj1.handleOnPress = closure_23;
+                                                                                                                                                      return jsx(closure_0(closure_2[37]).MultipleChoicePrompt, obj1);
+                                                                                                                                                    } else if (tmp24.DROPDOWN === type) {
+                                                                                                                                                      tmp6 = jsx;
+                                                                                                                                                      tmp7 = closure_0;
+                                                                                                                                                      tmp8 = closure_2;
+                                                                                                                                                      obj4 = { guildId: null, currentPrompt: null, lastPrompt: null, currentPromptIndex: null, numberOfPrompts: null, selectOption: null, handleOnPress: null };
+                                                                                                                                                      tmp9 = guildId;
+                                                                                                                                                      obj4.guildId = guildId;
+                                                                                                                                                      obj4.currentPrompt = tmp;
+                                                                                                                                                      tmp10 = closure_18;
+                                                                                                                                                      obj4.lastPrompt = closure_18;
+                                                                                                                                                      tmp11 = currentPromptIdx;
+                                                                                                                                                      obj4.currentPromptIndex = currentPromptIdx;
+                                                                                                                                                      tmp12 = prompts;
+                                                                                                                                                      obj4.numberOfPrompts = prompts.length;
+                                                                                                                                                      tmp13 = selectOption;
+                                                                                                                                                      obj4.selectOption = selectOption;
+                                                                                                                                                      tmp14 = closure_23;
+                                                                                                                                                      obj4.handleOnPress = closure_23;
+                                                                                                                                                      return jsx(closure_0(closure_2[37]).DropdownPrompt, obj4);
+                                                                                                                                                    } else {
+                                                                                                                                                      tmp3 = closure_0;
+                                                                                                                                                      tmp4 = closure_2;
+                                                                                                                                                      obj = closure_0(closure_2[38]);
+                                                                                                                                                      assertNeverResult = obj.assertNever(tmp.type);
+                                                                                                                                                      return;
+                                                                                                                                                    }
+                                                                                                                                                  }
+                                                                                                                                                }
+                                                                                                                                                return null;
+                                                                                                                                              }
+                                                                                                                                            }
+                                                                                                                                            cResult[150] = stringResult;
+                                                                                                                                          }
+                                                                                                                                          if (cResult[151] !== tmp4.onboardingTitle) {
+                                                                                                                                            const obj11 = { style: tmp4.onboardingTitle, accessibilityRole: "header", variant: "heading-xl/semibold", color: "text-overlay-light", children: null };
+                                                                                                                                            class Ft {
+                                                                                                                                              constructor() {
+                                                                                                                                                if (closure_11) {
+                                                                                                                                                  tmp = closure_12;
+                                                                                                                                                  tmp2 = null;
+                                                                                                                                                  if (null != closure_12) {
+                                                                                                                                                    type = tmp.type;
+                                                                                                                                                    if (OnboardingPromptType.MULTIPLE_CHOICE === type) {
+                                                                                                                                                      tmp15 = jsx;
+                                                                                                                                                      tmp16 = closure_0;
+                                                                                                                                                      tmp17 = closure_2;
+                                                                                                                                                      obj1 = { guildId: null, currentPrompt: null, lastPrompt: null, currentPromptIndex: null, numberOfPrompts: null, selectOption: null, handleOnPress: null };
+                                                                                                                                                      tmp18 = guildId;
+                                                                                                                                                      obj1.guildId = guildId;
+                                                                                                                                                      obj1.currentPrompt = tmp;
+                                                                                                                                                      tmp19 = closure_18;
+                                                                                                                                                      obj1.lastPrompt = closure_18;
+                                                                                                                                                      tmp20 = currentPromptIdx;
+                                                                                                                                                      obj1.currentPromptIndex = currentPromptIdx;
+                                                                                                                                                      tmp21 = prompts;
+                                                                                                                                                      obj1.numberOfPrompts = prompts.length;
+                                                                                                                                                      tmp22 = selectOption;
+                                                                                                                                                      obj1.selectOption = selectOption;
+                                                                                                                                                      tmp23 = closure_23;
+                                                                                                                                                      obj1.handleOnPress = closure_23;
+                                                                                                                                                      return jsx(closure_0(closure_2[37]).MultipleChoicePrompt, obj1);
+                                                                                                                                                    } else if (tmp24.DROPDOWN === type) {
+                                                                                                                                                      tmp6 = jsx;
+                                                                                                                                                      tmp7 = closure_0;
+                                                                                                                                                      tmp8 = closure_2;
+                                                                                                                                                      obj4 = { guildId: null, currentPrompt: null, lastPrompt: null, currentPromptIndex: null, numberOfPrompts: null, selectOption: null, handleOnPress: null };
+                                                                                                                                                      tmp9 = guildId;
+                                                                                                                                                      obj4.guildId = guildId;
+                                                                                                                                                      obj4.currentPrompt = tmp;
+                                                                                                                                                      tmp10 = closure_18;
+                                                                                                                                                      obj4.lastPrompt = closure_18;
+                                                                                                                                                      tmp11 = currentPromptIdx;
+                                                                                                                                                      obj4.currentPromptIndex = currentPromptIdx;
+                                                                                                                                                      tmp12 = prompts;
+                                                                                                                                                      obj4.numberOfPrompts = prompts.length;
+                                                                                                                                                      tmp13 = selectOption;
+                                                                                                                                                      obj4.selectOption = selectOption;
+                                                                                                                                                      tmp14 = closure_23;
+                                                                                                                                                      obj4.handleOnPress = closure_23;
+                                                                                                                                                      return jsx(closure_0(closure_2[37]).DropdownPrompt, obj4);
+                                                                                                                                                    } else {
+                                                                                                                                                      tmp3 = closure_0;
+                                                                                                                                                      tmp4 = closure_2;
+                                                                                                                                                      obj = closure_0(closure_2[38]);
+                                                                                                                                                      assertNeverResult = obj.assertNever(tmp.type);
+                                                                                                                                                      return;
+                                                                                                                                                    }
+                                                                                                                                                  }
+                                                                                                                                                }
+                                                                                                                                                return null;
+                                                                                                                                              }
+                                                                                                                                            }
+                                                                                                                                            const tmp123 = closure_19(tmp(tmp2[42]).Text, obj11);
+                                                                                                                                            class Gt {
+                                                                                                                                              constructor() {
+                                                                                                                                                if (0 === currentPromptIdx) {
+                                                                                                                                                  tmp = closure_1;
+                                                                                                                                                  tmp2 = closure_2;
+                                                                                                                                                  obj = closure_1(closure_2[33]);
+                                                                                                                                                  tmp3 = AnalyticEvents;
+                                                                                                                                                  obj1 = {};
+                                                                                                                                                  tmp4 = closure_0;
+                                                                                                                                                  obj3 = closure_0(closure_2[34]);
+                                                                                                                                                  tmp5 = guildId;
+                                                                                                                                                  tmp6 = obj1;
+                                                                                                                                                  merged = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
+                                                                                                                                                  obj1.step = 0;
+                                                                                                                                                  tmp8 = required;
+                                                                                                                                                  obj1.required = required;
+                                                                                                                                                  trackResult = obj.track(AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, obj1);
+                                                                                                                                                }
+                                                                                                                                                return;
+                                                                                                                                              }
+                                                                                                                                            }
+                                                                                                                                            cResult[152] = tmp123;
+                                                                                                                                            let tmp121 = tmp123;
+                                                                                                                                          } else {
+                                                                                                                                            tmp121 = cResult[152];
+                                                                                                                                          }
+                                                                                                                                          class Gt {
+                                                                                                                                            constructor() {
+                                                                                                                                              if (0 === currentPromptIdx) {
+                                                                                                                                                tmp = closure_1;
+                                                                                                                                                tmp2 = closure_2;
+                                                                                                                                                obj = closure_1(closure_2[33]);
+                                                                                                                                                tmp3 = AnalyticEvents;
+                                                                                                                                                obj1 = {};
+                                                                                                                                                tmp4 = closure_0;
+                                                                                                                                                obj3 = closure_0(closure_2[34]);
+                                                                                                                                                tmp5 = guildId;
+                                                                                                                                                tmp6 = obj1;
+                                                                                                                                                merged = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
+                                                                                                                                                obj1.step = 0;
+                                                                                                                                                tmp8 = required;
+                                                                                                                                                obj1.required = required;
+                                                                                                                                                trackResult = obj.track(AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, obj1);
+                                                                                                                                              }
+                                                                                                                                              return;
+                                                                                                                                            }
+                                                                                                                                          }
+                                                                                                                                          const obj12 = { style: tmp110, children: null };
+                                                                                                                                          const items6 = [tmp115, tmp121];
+                                                                                                                                          obj12.children = items6;
+                                                                                                                                          class Et {
+                                                                                                                                            constructor() {
+                                                                                                                                              if (closure_9) {
+                                                                                                                                                tmp = closure_1;
+                                                                                                                                                tmp2 = closure_2;
+                                                                                                                                                obj = closure_1(closure_2[33]);
+                                                                                                                                                tmp3 = AnalyticEvents;
+                                                                                                                                                obj1 = {};
+                                                                                                                                                tmp4 = closure_0;
+                                                                                                                                                obj3 = closure_0(closure_2[34]);
+                                                                                                                                                tmp5 = guildId;
+                                                                                                                                                tmp6 = obj1;
+                                                                                                                                                merged = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
+                                                                                                                                                num = -1;
+                                                                                                                                                obj1.step = -1;
+                                                                                                                                                flag = true;
+                                                                                                                                                obj1.required = true;
+                                                                                                                                                trackResult = obj.track(AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, obj1);
+                                                                                                                                                obj4 = closure_1(closure_2[33]);
+                                                                                                                                                obj7 = {};
+                                                                                                                                                obj6 = closure_0(closure_2[34]);
+                                                                                                                                                tmp9 = obj7;
+                                                                                                                                                merged1 = Object.assign(obj6.collectGuildAnalyticsMetadata(guildId));
+                                                                                                                                                obj7.step = -1;
+                                                                                                                                                tmp11 = closure_11;
+                                                                                                                                                obj7.skipped = closure_11;
+                                                                                                                                                flag2 = false;
+                                                                                                                                                obj7.is_final_step = false;
+                                                                                                                                                obj7.in_onboarding = true;
+                                                                                                                                                trackResult1 = obj4.track(AnalyticEvents.GUILD_ONBOARDING_STEP_COMPLETED, obj7);
+                                                                                                                                              }
+                                                                                                                                              return;
+                                                                                                                                            }
+                                                                                                                                          }
+                                                                                                                                          cResult[153] = tmp110;
+                                                                                                                                          class Rt {
+                                                                                                                                            constructor() {
+                                                                                                                                              obj = closure_13;
+                                                                                                                                              num = 1;
+                                                                                                                                              if (closure_13.get()) {
+                                                                                                                                                num = 0;
+                                                                                                                                              }
+                                                                                                                                              tmp = closure_0;
+                                                                                                                                              tmp2 = closure_2;
+                                                                                                                                              obj2 = closure_0(closure_2[28]);
+                                                                                                                                              obj3 = closure_0(closure_2[35]);
+                                                                                                                                              obj1 = { duration: 300, easing: null };
+                                                                                                                                              Easing = closure_0(closure_2[28]).Easing;
+                                                                                                                                              obj1.easing = Easing.out(closure_0(closure_2[28]).Easing.ease);
+                                                                                                                                              num2 = 0;
+                                                                                                                                              withDelayResult = obj2.withDelay(200, obj3.withTiming(num, obj1));
+                                                                                                                                              if (!closure_7) {
+                                                                                                                                                num2 = 0;
+                                                                                                                                                if (obj.get()) {
+                                                                                                                                                  num2 = -80;
+                                                                                                                                                }
+                                                                                                                                              }
+                                                                                                                                              obj10 = { opacity: withDelayResult, transform: null };
+                                                                                                                                              obj11 = { translateY: null };
+                                                                                                                                              tmpResult = tmp(tmp2[28]);
+                                                                                                                                              tmpResult1 = tmp(tmp2[35]);
+                                                                                                                                              obj12 = { duration: 300, easing: null };
+                                                                                                                                              Easing2 = tmp(tmp2[28]).Easing;
+                                                                                                                                              obj12.easing = Easing2.out(tmp(tmp2[28]).Easing.ease);
+                                                                                                                                              obj11.translateY = tmpResult.withDelay(200, tmpResult1.withTiming(num2, obj12));
+                                                                                                                                              items = [];
+                                                                                                                                              items[0] = obj11;
+                                                                                                                                              obj10.transform = items;
+                                                                                                                                              return obj10;
+                                                                                                                                            }
+                                                                                                                                          }
+                                                                                                                                          cResult[154] = tmp115;
+                                                                                                                                          cResult[155] = tmp121;
+                                                                                                                                          cResult[156] = tmp126;
+                                                                                                                                        }
+                                                                                                                                        const obj13 = { style: tmp111, variant: "text-md/semibold", color: "text-overlay-light", children: tmp114 };
+                                                                                                                                        const tmp117 = closure_19(tmp(tmp2[42]).Text, obj13);
+                                                                                                                                        class Et {
+                                                                                                                                          constructor() {
+                                                                                                                                            if (closure_9) {
+                                                                                                                                              tmp = closure_1;
+                                                                                                                                              tmp2 = closure_2;
+                                                                                                                                              obj = closure_1(closure_2[33]);
+                                                                                                                                              tmp3 = AnalyticEvents;
+                                                                                                                                              obj1 = {};
+                                                                                                                                              tmp4 = closure_0;
+                                                                                                                                              obj3 = closure_0(closure_2[34]);
+                                                                                                                                              tmp5 = guildId;
+                                                                                                                                              tmp6 = obj1;
+                                                                                                                                              merged = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
+                                                                                                                                              num = -1;
+                                                                                                                                              obj1.step = -1;
+                                                                                                                                              flag = true;
+                                                                                                                                              obj1.required = true;
+                                                                                                                                              trackResult = obj.track(AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, obj1);
+                                                                                                                                              obj4 = closure_1(closure_2[33]);
+                                                                                                                                              obj7 = {};
+                                                                                                                                              obj6 = closure_0(closure_2[34]);
+                                                                                                                                              tmp9 = obj7;
+                                                                                                                                              merged1 = Object.assign(obj6.collectGuildAnalyticsMetadata(guildId));
+                                                                                                                                              obj7.step = -1;
+                                                                                                                                              tmp11 = closure_11;
+                                                                                                                                              obj7.skipped = closure_11;
+                                                                                                                                              flag2 = false;
+                                                                                                                                              obj7.is_final_step = false;
+                                                                                                                                              obj7.in_onboarding = true;
+                                                                                                                                              trackResult1 = obj4.track(AnalyticEvents.GUILD_ONBOARDING_STEP_COMPLETED, obj7);
+                                                                                                                                            }
+                                                                                                                                            return;
+                                                                                                                                          }
+                                                                                                                                        }
+                                                                                                                                        cResult[148] = tmp114;
+                                                                                                                                        class Rt {
+                                                                                                                                          constructor() {
+                                                                                                                                            obj = closure_13;
+                                                                                                                                            num = 1;
+                                                                                                                                            if (closure_13.get()) {
+                                                                                                                                              num = 0;
+                                                                                                                                            }
+                                                                                                                                            tmp = closure_0;
+                                                                                                                                            tmp2 = closure_2;
+                                                                                                                                            obj2 = closure_0(closure_2[28]);
+                                                                                                                                            obj3 = closure_0(closure_2[35]);
+                                                                                                                                            obj1 = { duration: 300, easing: null };
+                                                                                                                                            Easing = closure_0(closure_2[28]).Easing;
+                                                                                                                                            obj1.easing = Easing.out(closure_0(closure_2[28]).Easing.ease);
+                                                                                                                                            num2 = 0;
+                                                                                                                                            withDelayResult = obj2.withDelay(200, obj3.withTiming(num, obj1));
+                                                                                                                                            if (!closure_7) {
+                                                                                                                                              num2 = 0;
+                                                                                                                                              if (obj.get()) {
+                                                                                                                                                num2 = -80;
+                                                                                                                                              }
+                                                                                                                                            }
+                                                                                                                                            obj10 = { opacity: withDelayResult, transform: null };
+                                                                                                                                            obj11 = { translateY: null };
+                                                                                                                                            tmpResult = tmp(tmp2[28]);
+                                                                                                                                            tmpResult1 = tmp(tmp2[35]);
+                                                                                                                                            obj12 = { duration: 300, easing: null };
+                                                                                                                                            Easing2 = tmp(tmp2[28]).Easing;
+                                                                                                                                            obj12.easing = Easing2.out(tmp(tmp2[28]).Easing.ease);
+                                                                                                                                            obj11.translateY = tmpResult.withDelay(200, tmpResult1.withTiming(num2, obj12));
+                                                                                                                                            items = [];
+                                                                                                                                            items[0] = obj11;
+                                                                                                                                            obj10.transform = items;
+                                                                                                                                            return obj10;
+                                                                                                                                          }
+                                                                                                                                        }
+                                                                                                                                        cResult[149] = tmp117;
+                                                                                                                                        tmp115 = tmp117;
+                                                                                                                                      }
+                                                                                                                                      const items7 = [, ];
+                                                                                                                                      class Ft {
+                                                                                                                                        constructor() {
+                                                                                                                                          if (closure_11) {
+                                                                                                                                            tmp = closure_12;
+                                                                                                                                            tmp2 = null;
+                                                                                                                                            if (null != closure_12) {
+                                                                                                                                              type = tmp.type;
+                                                                                                                                              if (OnboardingPromptType.MULTIPLE_CHOICE === type) {
+                                                                                                                                                tmp15 = jsx;
+                                                                                                                                                tmp16 = closure_0;
+                                                                                                                                                tmp17 = closure_2;
+                                                                                                                                                obj1 = { guildId: null, currentPrompt: null, lastPrompt: null, currentPromptIndex: null, numberOfPrompts: null, selectOption: null, handleOnPress: null };
+                                                                                                                                                tmp18 = guildId;
+                                                                                                                                                obj1.guildId = guildId;
+                                                                                                                                                obj1.currentPrompt = tmp;
+                                                                                                                                                tmp19 = closure_18;
+                                                                                                                                                obj1.lastPrompt = closure_18;
+                                                                                                                                                tmp20 = currentPromptIdx;
+                                                                                                                                                obj1.currentPromptIndex = currentPromptIdx;
+                                                                                                                                                tmp21 = prompts;
+                                                                                                                                                obj1.numberOfPrompts = prompts.length;
+                                                                                                                                                tmp22 = selectOption;
+                                                                                                                                                obj1.selectOption = selectOption;
+                                                                                                                                                tmp23 = closure_23;
+                                                                                                                                                obj1.handleOnPress = closure_23;
+                                                                                                                                                return jsx(closure_0(closure_2[37]).MultipleChoicePrompt, obj1);
+                                                                                                                                              } else if (tmp24.DROPDOWN === type) {
+                                                                                                                                                tmp6 = jsx;
+                                                                                                                                                tmp7 = closure_0;
+                                                                                                                                                tmp8 = closure_2;
+                                                                                                                                                obj4 = { guildId: null, currentPrompt: null, lastPrompt: null, currentPromptIndex: null, numberOfPrompts: null, selectOption: null, handleOnPress: null };
+                                                                                                                                                tmp9 = guildId;
+                                                                                                                                                obj4.guildId = guildId;
+                                                                                                                                                obj4.currentPrompt = tmp;
+                                                                                                                                                tmp10 = closure_18;
+                                                                                                                                                obj4.lastPrompt = closure_18;
+                                                                                                                                                tmp11 = currentPromptIdx;
+                                                                                                                                                obj4.currentPromptIndex = currentPromptIdx;
+                                                                                                                                                tmp12 = prompts;
+                                                                                                                                                obj4.numberOfPrompts = prompts.length;
+                                                                                                                                                tmp13 = selectOption;
+                                                                                                                                                obj4.selectOption = selectOption;
+                                                                                                                                                tmp14 = closure_23;
+                                                                                                                                                obj4.handleOnPress = closure_23;
+                                                                                                                                                return jsx(closure_0(closure_2[37]).DropdownPrompt, obj4);
+                                                                                                                                              } else {
+                                                                                                                                                tmp3 = closure_0;
+                                                                                                                                                tmp4 = closure_2;
+                                                                                                                                                obj = closure_0(closure_2[38]);
+                                                                                                                                                assertNeverResult = obj.assertNever(tmp.type);
+                                                                                                                                                return;
+                                                                                                                                              }
+                                                                                                                                            }
+                                                                                                                                          }
+                                                                                                                                          return null;
+                                                                                                                                        }
+                                                                                                                                      }
+                                                                                                                                      items7[1] = animatedStyle;
+                                                                                                                                      class Gt {
+                                                                                                                                        constructor() {
+                                                                                                                                          if (0 === currentPromptIdx) {
+                                                                                                                                            tmp = closure_1;
+                                                                                                                                            tmp2 = closure_2;
+                                                                                                                                            obj = closure_1(closure_2[33]);
+                                                                                                                                            tmp3 = AnalyticEvents;
+                                                                                                                                            obj1 = {};
+                                                                                                                                            tmp4 = closure_0;
+                                                                                                                                            obj3 = closure_0(closure_2[34]);
+                                                                                                                                            tmp5 = guildId;
+                                                                                                                                            tmp6 = obj1;
+                                                                                                                                            merged = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
+                                                                                                                                            obj1.step = 0;
+                                                                                                                                            tmp8 = required;
+                                                                                                                                            obj1.required = required;
+                                                                                                                                            trackResult = obj.track(AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, obj1);
+                                                                                                                                          }
+                                                                                                                                          return;
+                                                                                                                                        }
+                                                                                                                                      }
+                                                                                                                                      cResult[143] = tmp4.landingBody;
+                                                                                                                                      cResult[144] = items7;
+                                                                                                                                      tmp110 = items7;
+                                                                                                                                    }
+                                                                                                                                    class Ft {
+                                                                                                                                      constructor() {
+                                                                                                                                        if (closure_11) {
+                                                                                                                                          tmp = closure_12;
+                                                                                                                                          tmp2 = null;
+                                                                                                                                          if (null != closure_12) {
+                                                                                                                                            type = tmp.type;
+                                                                                                                                            if (OnboardingPromptType.MULTIPLE_CHOICE === type) {
+                                                                                                                                              tmp15 = jsx;
+                                                                                                                                              tmp16 = closure_0;
+                                                                                                                                              tmp17 = closure_2;
+                                                                                                                                              obj1 = { guildId: null, currentPrompt: null, lastPrompt: null, currentPromptIndex: null, numberOfPrompts: null, selectOption: null, handleOnPress: null };
+                                                                                                                                              tmp18 = guildId;
+                                                                                                                                              obj1.guildId = guildId;
+                                                                                                                                              obj1.currentPrompt = tmp;
+                                                                                                                                              tmp19 = closure_18;
+                                                                                                                                              obj1.lastPrompt = closure_18;
+                                                                                                                                              tmp20 = currentPromptIdx;
+                                                                                                                                              obj1.currentPromptIndex = currentPromptIdx;
+                                                                                                                                              tmp21 = prompts;
+                                                                                                                                              obj1.numberOfPrompts = prompts.length;
+                                                                                                                                              tmp22 = selectOption;
+                                                                                                                                              obj1.selectOption = selectOption;
+                                                                                                                                              tmp23 = closure_23;
+                                                                                                                                              obj1.handleOnPress = closure_23;
+                                                                                                                                              return jsx(closure_0(closure_2[37]).MultipleChoicePrompt, obj1);
+                                                                                                                                            } else if (tmp24.DROPDOWN === type) {
+                                                                                                                                              tmp6 = jsx;
+                                                                                                                                              tmp7 = closure_0;
+                                                                                                                                              tmp8 = closure_2;
+                                                                                                                                              obj4 = { guildId: null, currentPrompt: null, lastPrompt: null, currentPromptIndex: null, numberOfPrompts: null, selectOption: null, handleOnPress: null };
+                                                                                                                                              tmp9 = guildId;
+                                                                                                                                              obj4.guildId = guildId;
+                                                                                                                                              obj4.currentPrompt = tmp;
+                                                                                                                                              tmp10 = closure_18;
+                                                                                                                                              obj4.lastPrompt = closure_18;
+                                                                                                                                              tmp11 = currentPromptIdx;
+                                                                                                                                              obj4.currentPromptIndex = currentPromptIdx;
+                                                                                                                                              tmp12 = prompts;
+                                                                                                                                              obj4.numberOfPrompts = prompts.length;
+                                                                                                                                              tmp13 = selectOption;
+                                                                                                                                              obj4.selectOption = selectOption;
+                                                                                                                                              tmp14 = closure_23;
+                                                                                                                                              obj4.handleOnPress = closure_23;
+                                                                                                                                              return jsx(closure_0(closure_2[37]).DropdownPrompt, obj4);
+                                                                                                                                            } else {
+                                                                                                                                              tmp3 = closure_0;
+                                                                                                                                              tmp4 = closure_2;
+                                                                                                                                              obj = closure_0(closure_2[38]);
+                                                                                                                                              assertNeverResult = obj.assertNever(tmp.type);
+                                                                                                                                              return;
+                                                                                                                                            }
+                                                                                                                                          }
+                                                                                                                                        }
+                                                                                                                                        return null;
+                                                                                                                                      }
+                                                                                                                                    }
+                                                                                                                                    tmp108[0] = tmp100;
+                                                                                                                                    tmp108[1] = tmp104;
+                                                                                                                                    class Gt {
+                                                                                                                                      constructor() {
+                                                                                                                                        if (0 === currentPromptIdx) {
+                                                                                                                                          tmp = closure_1;
+                                                                                                                                          tmp2 = closure_2;
+                                                                                                                                          obj = closure_1(closure_2[33]);
+                                                                                                                                          tmp3 = AnalyticEvents;
+                                                                                                                                          obj1 = {};
+                                                                                                                                          tmp4 = closure_0;
+                                                                                                                                          obj3 = closure_0(closure_2[34]);
+                                                                                                                                          tmp5 = guildId;
+                                                                                                                                          tmp6 = obj1;
+                                                                                                                                          merged = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
+                                                                                                                                          obj1.step = 0;
+                                                                                                                                          tmp8 = required;
+                                                                                                                                          obj1.required = required;
+                                                                                                                                          trackResult = obj.track(AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, obj1);
+                                                                                                                                        }
+                                                                                                                                        return;
+                                                                                                                                      }
+                                                                                                                                    }
+                                                                                                                                    cResult[139] = tmp100;
+                                                                                                                                    cResult[140] = tmp104;
+                                                                                                                                    cResult[141] = tmp109;
+                                                                                                                                  }
+                                                                                                                                  class Gt {
+                                                                                                                                    constructor() {
+                                                                                                                                      if (0 === currentPromptIdx) {
+                                                                                                                                        tmp = closure_1;
+                                                                                                                                        tmp2 = closure_2;
+                                                                                                                                        obj = closure_1(closure_2[33]);
+                                                                                                                                        tmp3 = AnalyticEvents;
+                                                                                                                                        obj1 = {};
+                                                                                                                                        tmp4 = closure_0;
+                                                                                                                                        obj3 = closure_0(closure_2[34]);
+                                                                                                                                        tmp5 = guildId;
+                                                                                                                                        tmp6 = obj1;
+                                                                                                                                        merged = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
+                                                                                                                                        obj1.step = 0;
+                                                                                                                                        tmp8 = required;
+                                                                                                                                        obj1.required = required;
+                                                                                                                                        trackResult = obj.track(AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, obj1);
+                                                                                                                                      }
+                                                                                                                                      return;
+                                                                                                                                    }
+                                                                                                                                  }
+                                                                                                                                  const obj14 = { source: landingAnimation, autoPlay: !stateFromStores1, style: tmp103 };
+                                                                                                                                  cResult[136] = landingAnimation;
+                                                                                                                                  class Et {
+                                                                                                                                    constructor() {
+                                                                                                                                      if (closure_9) {
+                                                                                                                                        tmp = closure_1;
+                                                                                                                                        tmp2 = closure_2;
+                                                                                                                                        obj = closure_1(closure_2[33]);
+                                                                                                                                        tmp3 = AnalyticEvents;
+                                                                                                                                        obj1 = {};
+                                                                                                                                        tmp4 = closure_0;
+                                                                                                                                        obj3 = closure_0(closure_2[34]);
+                                                                                                                                        tmp5 = guildId;
+                                                                                                                                        tmp6 = obj1;
+                                                                                                                                        merged = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
+                                                                                                                                        num = -1;
+                                                                                                                                        obj1.step = -1;
+                                                                                                                                        flag = true;
+                                                                                                                                        obj1.required = true;
+                                                                                                                                        trackResult = obj.track(AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, obj1);
+                                                                                                                                        obj4 = closure_1(closure_2[33]);
+                                                                                                                                        obj7 = {};
+                                                                                                                                        obj6 = closure_0(closure_2[34]);
+                                                                                                                                        tmp9 = obj7;
+                                                                                                                                        merged1 = Object.assign(obj6.collectGuildAnalyticsMetadata(guildId));
+                                                                                                                                        obj7.step = -1;
+                                                                                                                                        tmp11 = closure_11;
+                                                                                                                                        obj7.skipped = closure_11;
+                                                                                                                                        flag2 = false;
+                                                                                                                                        obj7.is_final_step = false;
+                                                                                                                                        obj7.in_onboarding = true;
+                                                                                                                                        trackResult1 = obj4.track(AnalyticEvents.GUILD_ONBOARDING_STEP_COMPLETED, obj7);
+                                                                                                                                      }
+                                                                                                                                      return;
+                                                                                                                                    }
+                                                                                                                                  }
+                                                                                                                                  cResult[137] = !stateFromStores1;
+                                                                                                                                  class Rt {
+                                                                                                                                    constructor() {
+                                                                                                                                      obj = closure_13;
+                                                                                                                                      num = 1;
+                                                                                                                                      if (closure_13.get()) {
+                                                                                                                                        num = 0;
+                                                                                                                                      }
+                                                                                                                                      tmp = closure_0;
+                                                                                                                                      tmp2 = closure_2;
+                                                                                                                                      obj2 = closure_0(closure_2[28]);
+                                                                                                                                      obj3 = closure_0(closure_2[35]);
+                                                                                                                                      obj1 = { duration: 300, easing: null };
+                                                                                                                                      Easing = closure_0(closure_2[28]).Easing;
+                                                                                                                                      obj1.easing = Easing.out(closure_0(closure_2[28]).Easing.ease);
+                                                                                                                                      num2 = 0;
+                                                                                                                                      withDelayResult = obj2.withDelay(200, obj3.withTiming(num, obj1));
+                                                                                                                                      if (!closure_7) {
+                                                                                                                                        num2 = 0;
+                                                                                                                                        if (obj.get()) {
+                                                                                                                                          num2 = -80;
+                                                                                                                                        }
+                                                                                                                                      }
+                                                                                                                                      obj10 = { opacity: withDelayResult, transform: null };
+                                                                                                                                      obj11 = { translateY: null };
+                                                                                                                                      tmpResult = tmp(tmp2[28]);
+                                                                                                                                      tmpResult1 = tmp(tmp2[35]);
+                                                                                                                                      obj12 = { duration: 300, easing: null };
+                                                                                                                                      Easing2 = tmp(tmp2[28]).Easing;
+                                                                                                                                      obj12.easing = Easing2.out(tmp(tmp2[28]).Easing.ease);
+                                                                                                                                      obj11.translateY = tmpResult.withDelay(200, tmpResult1.withTiming(num2, obj12));
+                                                                                                                                      items = [];
+                                                                                                                                      items[0] = obj11;
+                                                                                                                                      obj10.transform = items;
+                                                                                                                                      return obj10;
+                                                                                                                                    }
+                                                                                                                                  }
+                                                                                                                                  tmp104 = closure_19(tmp13(tmp2[40]), obj14);
+                                                                                                                                  const tmp105 = closure_19(tmp13(tmp2[40]), obj14);
+                                                                                                                                }
+                                                                                                                                const items8 = [, ];
+                                                                                                                                class Ft {
+                                                                                                                                  constructor() {
+                                                                                                                                    if (closure_11) {
+                                                                                                                                      tmp = closure_12;
+                                                                                                                                      tmp2 = null;
+                                                                                                                                      if (null != closure_12) {
+                                                                                                                                        type = tmp.type;
+                                                                                                                                        if (OnboardingPromptType.MULTIPLE_CHOICE === type) {
+                                                                                                                                          tmp15 = jsx;
+                                                                                                                                          tmp16 = closure_0;
+                                                                                                                                          tmp17 = closure_2;
+                                                                                                                                          obj1 = { guildId: null, currentPrompt: null, lastPrompt: null, currentPromptIndex: null, numberOfPrompts: null, selectOption: null, handleOnPress: null };
+                                                                                                                                          tmp18 = guildId;
+                                                                                                                                          obj1.guildId = guildId;
+                                                                                                                                          obj1.currentPrompt = tmp;
+                                                                                                                                          tmp19 = closure_18;
+                                                                                                                                          obj1.lastPrompt = closure_18;
+                                                                                                                                          tmp20 = currentPromptIdx;
+                                                                                                                                          obj1.currentPromptIndex = currentPromptIdx;
+                                                                                                                                          tmp21 = prompts;
+                                                                                                                                          obj1.numberOfPrompts = prompts.length;
+                                                                                                                                          tmp22 = selectOption;
+                                                                                                                                          obj1.selectOption = selectOption;
+                                                                                                                                          tmp23 = closure_23;
+                                                                                                                                          obj1.handleOnPress = closure_23;
+                                                                                                                                          return jsx(closure_0(closure_2[37]).MultipleChoicePrompt, obj1);
+                                                                                                                                        } else if (tmp24.DROPDOWN === type) {
+                                                                                                                                          tmp6 = jsx;
+                                                                                                                                          tmp7 = closure_0;
+                                                                                                                                          tmp8 = closure_2;
+                                                                                                                                          obj4 = { guildId: null, currentPrompt: null, lastPrompt: null, currentPromptIndex: null, numberOfPrompts: null, selectOption: null, handleOnPress: null };
+                                                                                                                                          tmp9 = guildId;
+                                                                                                                                          obj4.guildId = guildId;
+                                                                                                                                          obj4.currentPrompt = tmp;
+                                                                                                                                          tmp10 = closure_18;
+                                                                                                                                          obj4.lastPrompt = closure_18;
+                                                                                                                                          tmp11 = currentPromptIdx;
+                                                                                                                                          obj4.currentPromptIndex = currentPromptIdx;
+                                                                                                                                          tmp12 = prompts;
+                                                                                                                                          obj4.numberOfPrompts = prompts.length;
+                                                                                                                                          tmp13 = selectOption;
+                                                                                                                                          obj4.selectOption = selectOption;
+                                                                                                                                          tmp14 = closure_23;
+                                                                                                                                          obj4.handleOnPress = closure_23;
+                                                                                                                                          return jsx(closure_0(closure_2[37]).DropdownPrompt, obj4);
+                                                                                                                                        } else {
+                                                                                                                                          tmp3 = closure_0;
+                                                                                                                                          tmp4 = closure_2;
+                                                                                                                                          obj = closure_0(closure_2[38]);
+                                                                                                                                          assertNeverResult = obj.assertNever(tmp.type);
+                                                                                                                                          return;
+                                                                                                                                        }
+                                                                                                                                      }
+                                                                                                                                    }
+                                                                                                                                    return null;
+                                                                                                                                  }
+                                                                                                                                }
+                                                                                                                                items8[1] = tmp61Result;
+                                                                                                                                class Gt {
+                                                                                                                                  constructor() {
+                                                                                                                                    if (0 === currentPromptIdx) {
+                                                                                                                                      tmp = closure_1;
+                                                                                                                                      tmp2 = closure_2;
+                                                                                                                                      obj = closure_1(closure_2[33]);
+                                                                                                                                      tmp3 = AnalyticEvents;
+                                                                                                                                      obj1 = {};
+                                                                                                                                      tmp4 = closure_0;
+                                                                                                                                      obj3 = closure_0(closure_2[34]);
+                                                                                                                                      tmp5 = guildId;
+                                                                                                                                      tmp6 = obj1;
+                                                                                                                                      merged = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
+                                                                                                                                      obj1.step = 0;
+                                                                                                                                      tmp8 = required;
+                                                                                                                                      obj1.required = required;
+                                                                                                                                      trackResult = obj.track(AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, obj1);
+                                                                                                                                    }
+                                                                                                                                    return;
+                                                                                                                                  }
+                                                                                                                                }
+                                                                                                                                cResult[133] = tmp4.artWrapper;
+                                                                                                                                cResult[134] = items8;
+                                                                                                                                tmp100 = items8;
+                                                                                                                              }
+                                                                                                                            }
+                                                                                                                            class Gt {
+                                                                                                                              constructor() {
+                                                                                                                                if (0 === currentPromptIdx) {
+                                                                                                                                  tmp = closure_1;
+                                                                                                                                  tmp2 = closure_2;
+                                                                                                                                  obj = closure_1(closure_2[33]);
+                                                                                                                                  tmp3 = AnalyticEvents;
+                                                                                                                                  obj1 = {};
+                                                                                                                                  tmp4 = closure_0;
+                                                                                                                                  obj3 = closure_0(closure_2[34]);
+                                                                                                                                  tmp5 = guildId;
+                                                                                                                                  tmp6 = obj1;
+                                                                                                                                  merged = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
+                                                                                                                                  obj1.step = 0;
+                                                                                                                                  tmp8 = required;
+                                                                                                                                  obj1.required = required;
+                                                                                                                                  trackResult = obj.track(AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, obj1);
+                                                                                                                                }
+                                                                                                                                return;
+                                                                                                                              }
+                                                                                                                            }
+                                                                                                                            const obj15 = { style: tmp90, children: null };
+                                                                                                                            const items9 = [tmp91, tmp94];
+                                                                                                                            obj15.children = items9;
+                                                                                                                            const tmp99 = required(tmp13(tmp2[28]).View, obj15);
+                                                                                                                            class Et {
+                                                                                                                              constructor() {
+                                                                                                                                if (closure_9) {
+                                                                                                                                  tmp = closure_1;
+                                                                                                                                  tmp2 = closure_2;
+                                                                                                                                  obj = closure_1(closure_2[33]);
+                                                                                                                                  tmp3 = AnalyticEvents;
+                                                                                                                                  obj1 = {};
+                                                                                                                                  tmp4 = closure_0;
+                                                                                                                                  obj3 = closure_0(closure_2[34]);
+                                                                                                                                  tmp5 = guildId;
+                                                                                                                                  tmp6 = obj1;
+                                                                                                                                  merged = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
+                                                                                                                                  num = -1;
+                                                                                                                                  obj1.step = -1;
+                                                                                                                                  flag = true;
+                                                                                                                                  obj1.required = true;
+                                                                                                                                  trackResult = obj.track(AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, obj1);
+                                                                                                                                  obj4 = closure_1(closure_2[33]);
+                                                                                                                                  obj7 = {};
+                                                                                                                                  obj6 = closure_0(closure_2[34]);
+                                                                                                                                  tmp9 = obj7;
+                                                                                                                                  merged1 = Object.assign(obj6.collectGuildAnalyticsMetadata(guildId));
+                                                                                                                                  obj7.step = -1;
+                                                                                                                                  tmp11 = closure_11;
+                                                                                                                                  obj7.skipped = closure_11;
+                                                                                                                                  flag2 = false;
+                                                                                                                                  obj7.is_final_step = false;
+                                                                                                                                  obj7.in_onboarding = true;
+                                                                                                                                  trackResult1 = obj4.track(AnalyticEvents.GUILD_ONBOARDING_STEP_COMPLETED, obj7);
+                                                                                                                                }
+                                                                                                                                return;
+                                                                                                                              }
+                                                                                                                            }
+                                                                                                                            cResult[128] = tmp90;
+                                                                                                                            class Rt {
+                                                                                                                              constructor() {
+                                                                                                                                obj = closure_13;
+                                                                                                                                num = 1;
+                                                                                                                                if (closure_13.get()) {
+                                                                                                                                  num = 0;
+                                                                                                                                }
+                                                                                                                                tmp = closure_0;
+                                                                                                                                tmp2 = closure_2;
+                                                                                                                                obj2 = closure_0(closure_2[28]);
+                                                                                                                                obj3 = closure_0(closure_2[35]);
+                                                                                                                                obj1 = { duration: 300, easing: null };
+                                                                                                                                Easing = closure_0(closure_2[28]).Easing;
+                                                                                                                                obj1.easing = Easing.out(closure_0(closure_2[28]).Easing.ease);
+                                                                                                                                num2 = 0;
+                                                                                                                                withDelayResult = obj2.withDelay(200, obj3.withTiming(num, obj1));
+                                                                                                                                if (!closure_7) {
+                                                                                                                                  num2 = 0;
+                                                                                                                                  if (obj.get()) {
+                                                                                                                                    num2 = -80;
+                                                                                                                                  }
+                                                                                                                                }
+                                                                                                                                obj10 = { opacity: withDelayResult, transform: null };
+                                                                                                                                obj11 = { translateY: null };
+                                                                                                                                tmpResult = tmp(tmp2[28]);
+                                                                                                                                tmpResult1 = tmp(tmp2[35]);
+                                                                                                                                obj12 = { duration: 300, easing: null };
+                                                                                                                                Easing2 = tmp(tmp2[28]).Easing;
+                                                                                                                                obj12.easing = Easing2.out(tmp(tmp2[28]).Easing.ease);
+                                                                                                                                obj11.translateY = tmpResult.withDelay(200, tmpResult1.withTiming(num2, obj12));
+                                                                                                                                items = [];
+                                                                                                                                items[0] = obj11;
+                                                                                                                                obj10.transform = items;
+                                                                                                                                return obj10;
+                                                                                                                              }
+                                                                                                                            }
+                                                                                                                            cResult[130] = tmp94;
+                                                                                                                            cResult[131] = tmp99;
+                                                                                                                          }
+                                                                                                                          class Ft {
+                                                                                                                            constructor() {
+                                                                                                                              if (closure_11) {
+                                                                                                                                tmp = closure_12;
+                                                                                                                                tmp2 = null;
+                                                                                                                                if (null != closure_12) {
+                                                                                                                                  type = tmp.type;
+                                                                                                                                  if (OnboardingPromptType.MULTIPLE_CHOICE === type) {
+                                                                                                                                    tmp15 = jsx;
+                                                                                                                                    tmp16 = closure_0;
+                                                                                                                                    tmp17 = closure_2;
+                                                                                                                                    obj1 = { guildId: null, currentPrompt: null, lastPrompt: null, currentPromptIndex: null, numberOfPrompts: null, selectOption: null, handleOnPress: null };
+                                                                                                                                    tmp18 = guildId;
+                                                                                                                                    obj1.guildId = guildId;
+                                                                                                                                    obj1.currentPrompt = tmp;
+                                                                                                                                    tmp19 = closure_18;
+                                                                                                                                    obj1.lastPrompt = closure_18;
+                                                                                                                                    tmp20 = currentPromptIdx;
+                                                                                                                                    obj1.currentPromptIndex = currentPromptIdx;
+                                                                                                                                    tmp21 = prompts;
+                                                                                                                                    obj1.numberOfPrompts = prompts.length;
+                                                                                                                                    tmp22 = selectOption;
+                                                                                                                                    obj1.selectOption = selectOption;
+                                                                                                                                    tmp23 = closure_23;
+                                                                                                                                    obj1.handleOnPress = closure_23;
+                                                                                                                                    return jsx(closure_0(closure_2[37]).MultipleChoicePrompt, obj1);
+                                                                                                                                  } else if (tmp24.DROPDOWN === type) {
+                                                                                                                                    tmp6 = jsx;
+                                                                                                                                    tmp7 = closure_0;
+                                                                                                                                    tmp8 = closure_2;
+                                                                                                                                    obj4 = { guildId: null, currentPrompt: null, lastPrompt: null, currentPromptIndex: null, numberOfPrompts: null, selectOption: null, handleOnPress: null };
+                                                                                                                                    tmp9 = guildId;
+                                                                                                                                    obj4.guildId = guildId;
+                                                                                                                                    obj4.currentPrompt = tmp;
+                                                                                                                                    tmp10 = closure_18;
+                                                                                                                                    obj4.lastPrompt = closure_18;
+                                                                                                                                    tmp11 = currentPromptIdx;
+                                                                                                                                    obj4.currentPromptIndex = currentPromptIdx;
+                                                                                                                                    tmp12 = prompts;
+                                                                                                                                    obj4.numberOfPrompts = prompts.length;
+                                                                                                                                    tmp13 = selectOption;
+                                                                                                                                    obj4.selectOption = selectOption;
+                                                                                                                                    tmp14 = closure_23;
+                                                                                                                                    obj4.handleOnPress = closure_23;
+                                                                                                                                    return jsx(closure_0(closure_2[37]).DropdownPrompt, obj4);
+                                                                                                                                  } else {
+                                                                                                                                    tmp3 = closure_0;
+                                                                                                                                    tmp4 = closure_2;
+                                                                                                                                    obj = closure_0(closure_2[38]);
+                                                                                                                                    assertNeverResult = obj.assertNever(tmp.type);
+                                                                                                                                    return;
+                                                                                                                                  }
+                                                                                                                                }
+                                                                                                                              }
+                                                                                                                              return null;
+                                                                                                                            }
+                                                                                                                          }
+                                                                                                                          cResult[122] = tmp40;
+                                                                                                                          class Gt {
+                                                                                                                            constructor() {
+                                                                                                                              if (0 === currentPromptIdx) {
+                                                                                                                                tmp = closure_1;
+                                                                                                                                tmp2 = closure_2;
+                                                                                                                                obj = closure_1(closure_2[33]);
+                                                                                                                                tmp3 = AnalyticEvents;
+                                                                                                                                obj1 = {};
+                                                                                                                                tmp4 = closure_0;
+                                                                                                                                obj3 = closure_0(closure_2[34]);
+                                                                                                                                tmp5 = guildId;
+                                                                                                                                tmp6 = obj1;
+                                                                                                                                merged = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
+                                                                                                                                obj1.step = 0;
+                                                                                                                                tmp8 = required;
+                                                                                                                                obj1.required = required;
+                                                                                                                                trackResult = obj.track(AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, obj1);
+                                                                                                                              }
+                                                                                                                              return;
+                                                                                                                            }
+                                                                                                                          }
+                                                                                                                          cResult[123] = tmp41;
+                                                                                                                          cResult[124] = null;
+                                                                                                                          tmp91 = tmp92;
+                                                                                                                        }
+                                                                                                                        const items10 = [, ];
+                                                                                                                        class Ft {
+                                                                                                                          constructor() {
+                                                                                                                            if (closure_11) {
+                                                                                                                              tmp = closure_12;
+                                                                                                                              tmp2 = null;
+                                                                                                                              if (null != closure_12) {
+                                                                                                                                type = tmp.type;
+                                                                                                                                if (OnboardingPromptType.MULTIPLE_CHOICE === type) {
+                                                                                                                                  tmp15 = jsx;
+                                                                                                                                  tmp16 = closure_0;
+                                                                                                                                  tmp17 = closure_2;
+                                                                                                                                  obj1 = { guildId: null, currentPrompt: null, lastPrompt: null, currentPromptIndex: null, numberOfPrompts: null, selectOption: null, handleOnPress: null };
+                                                                                                                                  tmp18 = guildId;
+                                                                                                                                  obj1.guildId = guildId;
+                                                                                                                                  obj1.currentPrompt = tmp;
+                                                                                                                                  tmp19 = closure_18;
+                                                                                                                                  obj1.lastPrompt = closure_18;
+                                                                                                                                  tmp20 = currentPromptIdx;
+                                                                                                                                  obj1.currentPromptIndex = currentPromptIdx;
+                                                                                                                                  tmp21 = prompts;
+                                                                                                                                  obj1.numberOfPrompts = prompts.length;
+                                                                                                                                  tmp22 = selectOption;
+                                                                                                                                  obj1.selectOption = selectOption;
+                                                                                                                                  tmp23 = closure_23;
+                                                                                                                                  obj1.handleOnPress = closure_23;
+                                                                                                                                  return jsx(closure_0(closure_2[37]).MultipleChoicePrompt, obj1);
+                                                                                                                                } else if (tmp24.DROPDOWN === type) {
+                                                                                                                                  tmp6 = jsx;
+                                                                                                                                  tmp7 = closure_0;
+                                                                                                                                  tmp8 = closure_2;
+                                                                                                                                  obj4 = { guildId: null, currentPrompt: null, lastPrompt: null, currentPromptIndex: null, numberOfPrompts: null, selectOption: null, handleOnPress: null };
+                                                                                                                                  tmp9 = guildId;
+                                                                                                                                  obj4.guildId = guildId;
+                                                                                                                                  obj4.currentPrompt = tmp;
+                                                                                                                                  tmp10 = closure_18;
+                                                                                                                                  obj4.lastPrompt = closure_18;
+                                                                                                                                  tmp11 = currentPromptIdx;
+                                                                                                                                  obj4.currentPromptIndex = currentPromptIdx;
+                                                                                                                                  tmp12 = prompts;
+                                                                                                                                  obj4.numberOfPrompts = prompts.length;
+                                                                                                                                  tmp13 = selectOption;
+                                                                                                                                  obj4.selectOption = selectOption;
+                                                                                                                                  tmp14 = closure_23;
+                                                                                                                                  obj4.handleOnPress = closure_23;
+                                                                                                                                  return jsx(closure_0(closure_2[37]).DropdownPrompt, obj4);
+                                                                                                                                } else {
+                                                                                                                                  tmp3 = closure_0;
+                                                                                                                                  tmp4 = closure_2;
+                                                                                                                                  obj = closure_0(closure_2[38]);
+                                                                                                                                  assertNeverResult = obj.assertNever(tmp.type);
+                                                                                                                                  return;
+                                                                                                                                }
+                                                                                                                              }
+                                                                                                                            }
+                                                                                                                            return null;
+                                                                                                                          }
+                                                                                                                        }
+                                                                                                                        items10[1] = animatedStyle2;
+                                                                                                                        class Gt {
+                                                                                                                          constructor() {
+                                                                                                                            if (0 === currentPromptIdx) {
+                                                                                                                              tmp = closure_1;
+                                                                                                                              tmp2 = closure_2;
+                                                                                                                              obj = closure_1(closure_2[33]);
+                                                                                                                              tmp3 = AnalyticEvents;
+                                                                                                                              obj1 = {};
+                                                                                                                              tmp4 = closure_0;
+                                                                                                                              obj3 = closure_0(closure_2[34]);
+                                                                                                                              tmp5 = guildId;
+                                                                                                                              tmp6 = obj1;
+                                                                                                                              merged = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
+                                                                                                                              obj1.step = 0;
+                                                                                                                              tmp8 = required;
+                                                                                                                              obj1.required = required;
+                                                                                                                              trackResult = obj.track(AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, obj1);
+                                                                                                                            }
+                                                                                                                            return;
+                                                                                                                          }
+                                                                                                                        }
+                                                                                                                        cResult[120] = tmp4.landingOverlay;
+                                                                                                                        cResult[121] = items10;
+                                                                                                                        tmp90 = items10;
+                                                                                                                      }
+                                                                                                                      const items11 = [, ];
+                                                                                                                      class Ft {
+                                                                                                                        constructor() {
+                                                                                                                          if (closure_11) {
+                                                                                                                            tmp = closure_12;
+                                                                                                                            tmp2 = null;
+                                                                                                                            if (null != closure_12) {
+                                                                                                                              type = tmp.type;
+                                                                                                                              if (OnboardingPromptType.MULTIPLE_CHOICE === type) {
+                                                                                                                                tmp15 = jsx;
+                                                                                                                                tmp16 = closure_0;
+                                                                                                                                tmp17 = closure_2;
+                                                                                                                                obj1 = { guildId: null, currentPrompt: null, lastPrompt: null, currentPromptIndex: null, numberOfPrompts: null, selectOption: null, handleOnPress: null };
+                                                                                                                                tmp18 = guildId;
+                                                                                                                                obj1.guildId = guildId;
+                                                                                                                                obj1.currentPrompt = tmp;
+                                                                                                                                tmp19 = closure_18;
+                                                                                                                                obj1.lastPrompt = closure_18;
+                                                                                                                                tmp20 = currentPromptIdx;
+                                                                                                                                obj1.currentPromptIndex = currentPromptIdx;
+                                                                                                                                tmp21 = prompts;
+                                                                                                                                obj1.numberOfPrompts = prompts.length;
+                                                                                                                                tmp22 = selectOption;
+                                                                                                                                obj1.selectOption = selectOption;
+                                                                                                                                tmp23 = closure_23;
+                                                                                                                                obj1.handleOnPress = closure_23;
+                                                                                                                                return jsx(closure_0(closure_2[37]).MultipleChoicePrompt, obj1);
+                                                                                                                              } else if (tmp24.DROPDOWN === type) {
+                                                                                                                                tmp6 = jsx;
+                                                                                                                                tmp7 = closure_0;
+                                                                                                                                tmp8 = closure_2;
+                                                                                                                                obj4 = { guildId: null, currentPrompt: null, lastPrompt: null, currentPromptIndex: null, numberOfPrompts: null, selectOption: null, handleOnPress: null };
+                                                                                                                                tmp9 = guildId;
+                                                                                                                                obj4.guildId = guildId;
+                                                                                                                                obj4.currentPrompt = tmp;
+                                                                                                                                tmp10 = closure_18;
+                                                                                                                                obj4.lastPrompt = closure_18;
+                                                                                                                                tmp11 = currentPromptIdx;
+                                                                                                                                obj4.currentPromptIndex = currentPromptIdx;
+                                                                                                                                tmp12 = prompts;
+                                                                                                                                obj4.numberOfPrompts = prompts.length;
+                                                                                                                                tmp13 = selectOption;
+                                                                                                                                obj4.selectOption = selectOption;
+                                                                                                                                tmp14 = closure_23;
+                                                                                                                                obj4.handleOnPress = closure_23;
+                                                                                                                                return jsx(closure_0(closure_2[37]).DropdownPrompt, obj4);
+                                                                                                                              } else {
+                                                                                                                                tmp3 = closure_0;
+                                                                                                                                tmp4 = closure_2;
+                                                                                                                                obj = closure_0(closure_2[38]);
+                                                                                                                                assertNeverResult = obj.assertNever(tmp.type);
+                                                                                                                                return;
+                                                                                                                              }
+                                                                                                                            }
+                                                                                                                          }
+                                                                                                                          return null;
+                                                                                                                        }
+                                                                                                                      }
+                                                                                                                      items11[1] = tmp4.landingOverlay;
+                                                                                                                      class Gt {
+                                                                                                                        constructor() {
+                                                                                                                          if (0 === currentPromptIdx) {
+                                                                                                                            tmp = closure_1;
+                                                                                                                            tmp2 = closure_2;
+                                                                                                                            obj = closure_1(closure_2[33]);
+                                                                                                                            tmp3 = AnalyticEvents;
+                                                                                                                            obj1 = {};
+                                                                                                                            tmp4 = closure_0;
+                                                                                                                            obj3 = closure_0(closure_2[34]);
+                                                                                                                            tmp5 = guildId;
+                                                                                                                            tmp6 = obj1;
+                                                                                                                            merged = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
+                                                                                                                            obj1.step = 0;
+                                                                                                                            tmp8 = required;
+                                                                                                                            obj1.required = required;
+                                                                                                                            trackResult = obj.track(AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, obj1);
+                                                                                                                          }
+                                                                                                                          return;
+                                                                                                                        }
+                                                                                                                      }
+                                                                                                                      cResult[117] = tmp4.landingOverlay;
+                                                                                                                      cResult[118] = items11;
+                                                                                                                    }
+                                                                                                                    class Ft {
+                                                                                                                      constructor() {
+                                                                                                                        if (closure_11) {
+                                                                                                                          tmp = closure_12;
+                                                                                                                          tmp2 = null;
+                                                                                                                          if (null != closure_12) {
+                                                                                                                            type = tmp.type;
+                                                                                                                            if (OnboardingPromptType.MULTIPLE_CHOICE === type) {
+                                                                                                                              tmp15 = jsx;
+                                                                                                                              tmp16 = closure_0;
+                                                                                                                              tmp17 = closure_2;
+                                                                                                                              obj1 = { guildId: null, currentPrompt: null, lastPrompt: null, currentPromptIndex: null, numberOfPrompts: null, selectOption: null, handleOnPress: null };
+                                                                                                                              tmp18 = guildId;
+                                                                                                                              obj1.guildId = guildId;
+                                                                                                                              obj1.currentPrompt = tmp;
+                                                                                                                              tmp19 = closure_18;
+                                                                                                                              obj1.lastPrompt = closure_18;
+                                                                                                                              tmp20 = currentPromptIdx;
+                                                                                                                              obj1.currentPromptIndex = currentPromptIdx;
+                                                                                                                              tmp21 = prompts;
+                                                                                                                              obj1.numberOfPrompts = prompts.length;
+                                                                                                                              tmp22 = selectOption;
+                                                                                                                              obj1.selectOption = selectOption;
+                                                                                                                              tmp23 = closure_23;
+                                                                                                                              obj1.handleOnPress = closure_23;
+                                                                                                                              return jsx(closure_0(closure_2[37]).MultipleChoicePrompt, obj1);
+                                                                                                                            } else if (tmp24.DROPDOWN === type) {
+                                                                                                                              tmp6 = jsx;
+                                                                                                                              tmp7 = closure_0;
+                                                                                                                              tmp8 = closure_2;
+                                                                                                                              obj4 = { guildId: null, currentPrompt: null, lastPrompt: null, currentPromptIndex: null, numberOfPrompts: null, selectOption: null, handleOnPress: null };
+                                                                                                                              tmp9 = guildId;
+                                                                                                                              obj4.guildId = guildId;
+                                                                                                                              obj4.currentPrompt = tmp;
+                                                                                                                              tmp10 = closure_18;
+                                                                                                                              obj4.lastPrompt = closure_18;
+                                                                                                                              tmp11 = currentPromptIdx;
+                                                                                                                              obj4.currentPromptIndex = currentPromptIdx;
+                                                                                                                              tmp12 = prompts;
+                                                                                                                              obj4.numberOfPrompts = prompts.length;
+                                                                                                                              tmp13 = selectOption;
+                                                                                                                              obj4.selectOption = selectOption;
+                                                                                                                              tmp14 = closure_23;
+                                                                                                                              obj4.handleOnPress = closure_23;
+                                                                                                                              return jsx(closure_0(closure_2[37]).DropdownPrompt, obj4);
+                                                                                                                            } else {
+                                                                                                                              tmp3 = closure_0;
+                                                                                                                              tmp4 = closure_2;
+                                                                                                                              obj = closure_0(closure_2[38]);
+                                                                                                                              assertNeverResult = obj.assertNever(tmp.type);
+                                                                                                                              return;
+                                                                                                                            }
+                                                                                                                          }
+                                                                                                                        }
+                                                                                                                        return null;
+                                                                                                                      }
+                                                                                                                    }
+                                                                                                                    tmp87[2] = tmp79;
+                                                                                                                    tmp87[3] = tmp83;
+                                                                                                                    class Gt {
+                                                                                                                      constructor() {
+                                                                                                                        if (0 === currentPromptIdx) {
+                                                                                                                          tmp = closure_1;
+                                                                                                                          tmp2 = closure_2;
+                                                                                                                          obj = closure_1(closure_2[33]);
+                                                                                                                          tmp3 = AnalyticEvents;
+                                                                                                                          obj1 = {};
+                                                                                                                          tmp4 = closure_0;
+                                                                                                                          obj3 = closure_0(closure_2[34]);
+                                                                                                                          tmp5 = guildId;
+                                                                                                                          tmp6 = obj1;
+                                                                                                                          merged = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
+                                                                                                                          obj1.step = 0;
+                                                                                                                          tmp8 = required;
+                                                                                                                          obj1.required = required;
+                                                                                                                          trackResult = obj.track(AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, obj1);
+                                                                                                                        }
+                                                                                                                        return;
+                                                                                                                      }
+                                                                                                                    }
+                                                                                                                    cResult[113] = tmp79;
+                                                                                                                    cResult[114] = tmp83;
+                                                                                                                    cResult[115] = tmp88;
+                                                                                                                  }
+                                                                                                                  class Ft {
+                                                                                                                    constructor() {
+                                                                                                                      if (closure_11) {
+                                                                                                                        tmp = closure_12;
+                                                                                                                        tmp2 = null;
+                                                                                                                        if (null != closure_12) {
+                                                                                                                          type = tmp.type;
+                                                                                                                          if (OnboardingPromptType.MULTIPLE_CHOICE === type) {
+                                                                                                                            tmp15 = jsx;
+                                                                                                                            tmp16 = closure_0;
+                                                                                                                            tmp17 = closure_2;
+                                                                                                                            obj1 = { guildId: null, currentPrompt: null, lastPrompt: null, currentPromptIndex: null, numberOfPrompts: null, selectOption: null, handleOnPress: null };
+                                                                                                                            tmp18 = guildId;
+                                                                                                                            obj1.guildId = guildId;
+                                                                                                                            obj1.currentPrompt = tmp;
+                                                                                                                            tmp19 = closure_18;
+                                                                                                                            obj1.lastPrompt = closure_18;
+                                                                                                                            tmp20 = currentPromptIdx;
+                                                                                                                            obj1.currentPromptIndex = currentPromptIdx;
+                                                                                                                            tmp21 = prompts;
+                                                                                                                            obj1.numberOfPrompts = prompts.length;
+                                                                                                                            tmp22 = selectOption;
+                                                                                                                            obj1.selectOption = selectOption;
+                                                                                                                            tmp23 = closure_23;
+                                                                                                                            obj1.handleOnPress = closure_23;
+                                                                                                                            return jsx(closure_0(closure_2[37]).MultipleChoicePrompt, obj1);
+                                                                                                                          } else if (tmp24.DROPDOWN === type) {
+                                                                                                                            tmp6 = jsx;
+                                                                                                                            tmp7 = closure_0;
+                                                                                                                            tmp8 = closure_2;
+                                                                                                                            obj4 = { guildId: null, currentPrompt: null, lastPrompt: null, currentPromptIndex: null, numberOfPrompts: null, selectOption: null, handleOnPress: null };
+                                                                                                                            tmp9 = guildId;
+                                                                                                                            obj4.guildId = guildId;
+                                                                                                                            obj4.currentPrompt = tmp;
+                                                                                                                            tmp10 = closure_18;
+                                                                                                                            obj4.lastPrompt = closure_18;
+                                                                                                                            tmp11 = currentPromptIdx;
+                                                                                                                            obj4.currentPromptIndex = currentPromptIdx;
+                                                                                                                            tmp12 = prompts;
+                                                                                                                            obj4.numberOfPrompts = prompts.length;
+                                                                                                                            tmp13 = selectOption;
+                                                                                                                            obj4.selectOption = selectOption;
+                                                                                                                            tmp14 = closure_23;
+                                                                                                                            obj4.handleOnPress = closure_23;
+                                                                                                                            return jsx(closure_0(closure_2[37]).DropdownPrompt, obj4);
+                                                                                                                          } else {
+                                                                                                                            tmp3 = closure_0;
+                                                                                                                            tmp4 = closure_2;
+                                                                                                                            obj = closure_0(closure_2[38]);
+                                                                                                                            assertNeverResult = obj.assertNever(tmp.type);
+                                                                                                                            return;
+                                                                                                                          }
+                                                                                                                        }
+                                                                                                                      }
+                                                                                                                      return null;
+                                                                                                                    }
+                                                                                                                  }
+                                                                                                                  const obj16 = { style: tmp80, children: null };
+                                                                                                                  class Gt {
+                                                                                                                    constructor() {
+                                                                                                                      if (0 === currentPromptIdx) {
+                                                                                                                        tmp = closure_1;
+                                                                                                                        tmp2 = closure_2;
+                                                                                                                        obj = closure_1(closure_2[33]);
+                                                                                                                        tmp3 = AnalyticEvents;
+                                                                                                                        obj1 = {};
+                                                                                                                        tmp4 = closure_0;
+                                                                                                                        obj3 = closure_0(closure_2[34]);
+                                                                                                                        tmp5 = guildId;
+                                                                                                                        tmp6 = obj1;
+                                                                                                                        merged = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
+                                                                                                                        obj1.step = 0;
+                                                                                                                        tmp8 = required;
+                                                                                                                        obj1.required = required;
+                                                                                                                        trackResult = obj.track(AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, obj1);
+                                                                                                                      }
+                                                                                                                      return;
+                                                                                                                    }
+                                                                                                                  }
+                                                                                                                  cResult[110] = tmp80;
+                                                                                                                  cResult[111] = tmp81;
+                                                                                                                  cResult[112] = closure_19(tmp13(tmp2[28]).View, obj16);
+                                                                                                                  class Et {
+                                                                                                                    constructor() {
+                                                                                                                      if (closure_9) {
+                                                                                                                        tmp = closure_1;
+                                                                                                                        tmp2 = closure_2;
+                                                                                                                        obj = closure_1(closure_2[33]);
+                                                                                                                        tmp3 = AnalyticEvents;
+                                                                                                                        obj1 = {};
+                                                                                                                        tmp4 = closure_0;
+                                                                                                                        obj3 = closure_0(closure_2[34]);
+                                                                                                                        tmp5 = guildId;
+                                                                                                                        tmp6 = obj1;
+                                                                                                                        merged = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
+                                                                                                                        num = -1;
+                                                                                                                        obj1.step = -1;
+                                                                                                                        flag = true;
+                                                                                                                        obj1.required = true;
+                                                                                                                        trackResult = obj.track(AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, obj1);
+                                                                                                                        obj4 = closure_1(closure_2[33]);
+                                                                                                                        obj7 = {};
+                                                                                                                        obj6 = closure_0(closure_2[34]);
+                                                                                                                        tmp9 = obj7;
+                                                                                                                        merged1 = Object.assign(obj6.collectGuildAnalyticsMetadata(guildId));
+                                                                                                                        obj7.step = -1;
+                                                                                                                        tmp11 = closure_11;
+                                                                                                                        obj7.skipped = closure_11;
+                                                                                                                        flag2 = false;
+                                                                                                                        obj7.is_final_step = false;
+                                                                                                                        obj7.in_onboarding = true;
+                                                                                                                        trackResult1 = obj4.track(AnalyticEvents.GUILD_ONBOARDING_STEP_COMPLETED, obj7);
+                                                                                                                      }
+                                                                                                                      return;
+                                                                                                                    }
+                                                                                                                  }
+                                                                                                                  const tmp84 = closure_19(tmp13(tmp2[28]).View, obj16);
+                                                                                                                }
+                                                                                                                const items12 = [, ];
+                                                                                                                class Ft {
+                                                                                                                  constructor() {
+                                                                                                                    if (closure_11) {
+                                                                                                                      tmp = closure_12;
+                                                                                                                      tmp2 = null;
+                                                                                                                      if (null != closure_12) {
+                                                                                                                        type = tmp.type;
+                                                                                                                        if (OnboardingPromptType.MULTIPLE_CHOICE === type) {
+                                                                                                                          tmp15 = jsx;
+                                                                                                                          tmp16 = closure_0;
+                                                                                                                          tmp17 = closure_2;
+                                                                                                                          obj1 = { guildId: null, currentPrompt: null, lastPrompt: null, currentPromptIndex: null, numberOfPrompts: null, selectOption: null, handleOnPress: null };
+                                                                                                                          tmp18 = guildId;
+                                                                                                                          obj1.guildId = guildId;
+                                                                                                                          obj1.currentPrompt = tmp;
+                                                                                                                          tmp19 = closure_18;
+                                                                                                                          obj1.lastPrompt = closure_18;
+                                                                                                                          tmp20 = currentPromptIdx;
+                                                                                                                          obj1.currentPromptIndex = currentPromptIdx;
+                                                                                                                          tmp21 = prompts;
+                                                                                                                          obj1.numberOfPrompts = prompts.length;
+                                                                                                                          tmp22 = selectOption;
+                                                                                                                          obj1.selectOption = selectOption;
+                                                                                                                          tmp23 = closure_23;
+                                                                                                                          obj1.handleOnPress = closure_23;
+                                                                                                                          return jsx(closure_0(closure_2[37]).MultipleChoicePrompt, obj1);
+                                                                                                                        } else if (tmp24.DROPDOWN === type) {
+                                                                                                                          tmp6 = jsx;
+                                                                                                                          tmp7 = closure_0;
+                                                                                                                          tmp8 = closure_2;
+                                                                                                                          obj4 = { guildId: null, currentPrompt: null, lastPrompt: null, currentPromptIndex: null, numberOfPrompts: null, selectOption: null, handleOnPress: null };
+                                                                                                                          tmp9 = guildId;
+                                                                                                                          obj4.guildId = guildId;
+                                                                                                                          obj4.currentPrompt = tmp;
+                                                                                                                          tmp10 = closure_18;
+                                                                                                                          obj4.lastPrompt = closure_18;
+                                                                                                                          tmp11 = currentPromptIdx;
+                                                                                                                          obj4.currentPromptIndex = currentPromptIdx;
+                                                                                                                          tmp12 = prompts;
+                                                                                                                          obj4.numberOfPrompts = prompts.length;
+                                                                                                                          tmp13 = selectOption;
+                                                                                                                          obj4.selectOption = selectOption;
+                                                                                                                          tmp14 = closure_23;
+                                                                                                                          obj4.handleOnPress = closure_23;
+                                                                                                                          return jsx(closure_0(closure_2[37]).DropdownPrompt, obj4);
+                                                                                                                        } else {
+                                                                                                                          tmp3 = closure_0;
+                                                                                                                          tmp4 = closure_2;
+                                                                                                                          obj = closure_0(closure_2[38]);
+                                                                                                                          assertNeverResult = obj.assertNever(tmp.type);
+                                                                                                                          return;
+                                                                                                                        }
+                                                                                                                      }
+                                                                                                                    }
+                                                                                                                    return null;
+                                                                                                                  }
+                                                                                                                }
+                                                                                                                items12[1] = animatedStyle3;
+                                                                                                                class Gt {
+                                                                                                                  constructor() {
+                                                                                                                    if (0 === currentPromptIdx) {
+                                                                                                                      tmp = closure_1;
+                                                                                                                      tmp2 = closure_2;
+                                                                                                                      obj = closure_1(closure_2[33]);
+                                                                                                                      tmp3 = AnalyticEvents;
+                                                                                                                      obj1 = {};
+                                                                                                                      tmp4 = closure_0;
+                                                                                                                      obj3 = closure_0(closure_2[34]);
+                                                                                                                      tmp5 = guildId;
+                                                                                                                      tmp6 = obj1;
+                                                                                                                      merged = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
+                                                                                                                      obj1.step = 0;
+                                                                                                                      tmp8 = required;
+                                                                                                                      obj1.required = required;
+                                                                                                                      trackResult = obj.track(AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, obj1);
+                                                                                                                    }
+                                                                                                                    return;
+                                                                                                                  }
+                                                                                                                }
+                                                                                                                cResult[106] = tmp4.flex;
+                                                                                                                cResult[107] = items12;
+                                                                                                                tmp80 = items12;
+                                                                                                              }
+                                                                                                              const items13 = [, ];
+                                                                                                              class Ft {
+                                                                                                                constructor() {
+                                                                                                                  if (closure_11) {
+                                                                                                                    tmp = closure_12;
+                                                                                                                    tmp2 = null;
+                                                                                                                    if (null != closure_12) {
+                                                                                                                      type = tmp.type;
+                                                                                                                      if (OnboardingPromptType.MULTIPLE_CHOICE === type) {
+                                                                                                                        tmp15 = jsx;
+                                                                                                                        tmp16 = closure_0;
+                                                                                                                        tmp17 = closure_2;
+                                                                                                                        obj1 = { guildId: null, currentPrompt: null, lastPrompt: null, currentPromptIndex: null, numberOfPrompts: null, selectOption: null, handleOnPress: null };
+                                                                                                                        tmp18 = guildId;
+                                                                                                                        obj1.guildId = guildId;
+                                                                                                                        obj1.currentPrompt = tmp;
+                                                                                                                        tmp19 = closure_18;
+                                                                                                                        obj1.lastPrompt = closure_18;
+                                                                                                                        tmp20 = currentPromptIdx;
+                                                                                                                        obj1.currentPromptIndex = currentPromptIdx;
+                                                                                                                        tmp21 = prompts;
+                                                                                                                        obj1.numberOfPrompts = prompts.length;
+                                                                                                                        tmp22 = selectOption;
+                                                                                                                        obj1.selectOption = selectOption;
+                                                                                                                        tmp23 = closure_23;
+                                                                                                                        obj1.handleOnPress = closure_23;
+                                                                                                                        return jsx(closure_0(closure_2[37]).MultipleChoicePrompt, obj1);
+                                                                                                                      } else if (tmp24.DROPDOWN === type) {
+                                                                                                                        tmp6 = jsx;
+                                                                                                                        tmp7 = closure_0;
+                                                                                                                        tmp8 = closure_2;
+                                                                                                                        obj4 = { guildId: null, currentPrompt: null, lastPrompt: null, currentPromptIndex: null, numberOfPrompts: null, selectOption: null, handleOnPress: null };
+                                                                                                                        tmp9 = guildId;
+                                                                                                                        obj4.guildId = guildId;
+                                                                                                                        obj4.currentPrompt = tmp;
+                                                                                                                        tmp10 = closure_18;
+                                                                                                                        obj4.lastPrompt = closure_18;
+                                                                                                                        tmp11 = currentPromptIdx;
+                                                                                                                        obj4.currentPromptIndex = currentPromptIdx;
+                                                                                                                        tmp12 = prompts;
+                                                                                                                        obj4.numberOfPrompts = prompts.length;
+                                                                                                                        tmp13 = selectOption;
+                                                                                                                        obj4.selectOption = selectOption;
+                                                                                                                        tmp14 = closure_23;
+                                                                                                                        obj4.handleOnPress = closure_23;
+                                                                                                                        return jsx(closure_0(closure_2[37]).DropdownPrompt, obj4);
+                                                                                                                      } else {
+                                                                                                                        tmp3 = closure_0;
+                                                                                                                        tmp4 = closure_2;
+                                                                                                                        obj = closure_0(closure_2[38]);
+                                                                                                                        assertNeverResult = obj.assertNever(tmp.type);
+                                                                                                                        return;
+                                                                                                                      }
+                                                                                                                    }
+                                                                                                                  }
+                                                                                                                  return null;
+                                                                                                                }
+                                                                                                              }
+                                                                                                              items13[1] = tmp4.container;
+                                                                                                              class Gt {
+                                                                                                                constructor() {
+                                                                                                                  if (0 === currentPromptIdx) {
+                                                                                                                    tmp = closure_1;
+                                                                                                                    tmp2 = closure_2;
+                                                                                                                    obj = closure_1(closure_2[33]);
+                                                                                                                    tmp3 = AnalyticEvents;
+                                                                                                                    obj1 = {};
+                                                                                                                    tmp4 = closure_0;
+                                                                                                                    obj3 = closure_0(closure_2[34]);
+                                                                                                                    tmp5 = guildId;
+                                                                                                                    tmp6 = obj1;
+                                                                                                                    merged = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
+                                                                                                                    obj1.step = 0;
+                                                                                                                    tmp8 = required;
+                                                                                                                    obj1.required = required;
+                                                                                                                    trackResult = obj.track(AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, obj1);
+                                                                                                                  }
+                                                                                                                  return;
+                                                                                                                }
+                                                                                                              }
+                                                                                                              cResult[103] = tmp4.flex;
+                                                                                                              cResult[104] = items13;
+                                                                                                              tmp79 = items13;
+                                                                                                            }
+                                                                                                          }
+                                                                                                        }
+                                                                                                      }
+                                                                                                    }
+                                                                                                  }
+                                                                                                }
+                                                                                                class Ft {
+                                                                                                  constructor() {
+                                                                                                    if (closure_11) {
+                                                                                                      tmp = closure_12;
+                                                                                                      tmp2 = null;
+                                                                                                      if (null != closure_12) {
+                                                                                                        type = tmp.type;
+                                                                                                        if (OnboardingPromptType.MULTIPLE_CHOICE === type) {
+                                                                                                          tmp15 = jsx;
+                                                                                                          tmp16 = closure_0;
+                                                                                                          tmp17 = closure_2;
+                                                                                                          obj1 = { guildId: null, currentPrompt: null, lastPrompt: null, currentPromptIndex: null, numberOfPrompts: null, selectOption: null, handleOnPress: null };
+                                                                                                          tmp18 = guildId;
+                                                                                                          obj1.guildId = guildId;
+                                                                                                          obj1.currentPrompt = tmp;
+                                                                                                          tmp19 = closure_18;
+                                                                                                          obj1.lastPrompt = closure_18;
+                                                                                                          tmp20 = currentPromptIdx;
+                                                                                                          obj1.currentPromptIndex = currentPromptIdx;
+                                                                                                          tmp21 = prompts;
+                                                                                                          obj1.numberOfPrompts = prompts.length;
+                                                                                                          tmp22 = selectOption;
+                                                                                                          obj1.selectOption = selectOption;
+                                                                                                          tmp23 = closure_23;
+                                                                                                          obj1.handleOnPress = closure_23;
+                                                                                                          return jsx(closure_0(closure_2[37]).MultipleChoicePrompt, obj1);
+                                                                                                        } else if (tmp24.DROPDOWN === type) {
+                                                                                                          tmp6 = jsx;
+                                                                                                          tmp7 = closure_0;
+                                                                                                          tmp8 = closure_2;
+                                                                                                          obj4 = { guildId: null, currentPrompt: null, lastPrompt: null, currentPromptIndex: null, numberOfPrompts: null, selectOption: null, handleOnPress: null };
+                                                                                                          tmp9 = guildId;
+                                                                                                          obj4.guildId = guildId;
+                                                                                                          obj4.currentPrompt = tmp;
+                                                                                                          tmp10 = closure_18;
+                                                                                                          obj4.lastPrompt = closure_18;
+                                                                                                          tmp11 = currentPromptIdx;
+                                                                                                          obj4.currentPromptIndex = currentPromptIdx;
+                                                                                                          tmp12 = prompts;
+                                                                                                          obj4.numberOfPrompts = prompts.length;
+                                                                                                          tmp13 = selectOption;
+                                                                                                          obj4.selectOption = selectOption;
+                                                                                                          tmp14 = closure_23;
+                                                                                                          obj4.handleOnPress = closure_23;
+                                                                                                          return jsx(closure_0(closure_2[37]).DropdownPrompt, obj4);
+                                                                                                        } else {
+                                                                                                          tmp3 = closure_0;
+                                                                                                          tmp4 = closure_2;
+                                                                                                          obj = closure_0(closure_2[38]);
+                                                                                                          assertNeverResult = obj.assertNever(tmp.type);
+                                                                                                          return;
+                                                                                                        }
+                                                                                                      }
+                                                                                                    }
+                                                                                                    return null;
+                                                                                                  }
+                                                                                                }
+                                                                                                cResult[93] = tmp20;
+                                                                                                class Gt {
+                                                                                                  constructor() {
+                                                                                                    if (0 === currentPromptIdx) {
+                                                                                                      tmp = closure_1;
+                                                                                                      tmp2 = closure_2;
+                                                                                                      obj = closure_1(closure_2[33]);
+                                                                                                      tmp3 = AnalyticEvents;
+                                                                                                      obj1 = {};
+                                                                                                      tmp4 = closure_0;
+                                                                                                      obj3 = closure_0(closure_2[34]);
+                                                                                                      tmp5 = guildId;
+                                                                                                      tmp6 = obj1;
+                                                                                                      merged = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
+                                                                                                      obj1.step = 0;
+                                                                                                      tmp8 = required;
+                                                                                                      obj1.required = required;
+                                                                                                      trackResult = obj.track(AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, obj1);
+                                                                                                    }
+                                                                                                    return;
+                                                                                                  }
+                                                                                                }
+                                                                                                cResult[94] = currentPromptIdx;
+                                                                                                cResult[95] = guildId;
+                                                                                                cResult[96] = tmp74;
+                                                                                                cResult[97] = tmp19;
+                                                                                                class Et {
+                                                                                                  constructor() {
+                                                                                                    if (closure_9) {
+                                                                                                      tmp = closure_1;
+                                                                                                      tmp2 = closure_2;
+                                                                                                      obj = closure_1(closure_2[33]);
+                                                                                                      tmp3 = AnalyticEvents;
+                                                                                                      obj1 = {};
+                                                                                                      tmp4 = closure_0;
+                                                                                                      obj3 = closure_0(closure_2[34]);
+                                                                                                      tmp5 = guildId;
+                                                                                                      tmp6 = obj1;
+                                                                                                      merged = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
+                                                                                                      num = -1;
+                                                                                                      obj1.step = -1;
+                                                                                                      flag = true;
+                                                                                                      obj1.required = true;
+                                                                                                      trackResult = obj.track(AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, obj1);
+                                                                                                      obj4 = closure_1(closure_2[33]);
+                                                                                                      obj7 = {};
+                                                                                                      obj6 = closure_0(closure_2[34]);
+                                                                                                      tmp9 = obj7;
+                                                                                                      merged1 = Object.assign(obj6.collectGuildAnalyticsMetadata(guildId));
+                                                                                                      obj7.step = -1;
+                                                                                                      tmp11 = closure_11;
+                                                                                                      obj7.skipped = closure_11;
+                                                                                                      flag2 = false;
+                                                                                                      obj7.is_final_step = false;
+                                                                                                      obj7.in_onboarding = true;
+                                                                                                      trackResult1 = obj4.track(AnalyticEvents.GUILD_ONBOARDING_STEP_COMPLETED, obj7);
+                                                                                                    }
+                                                                                                    return;
+                                                                                                  }
+                                                                                                }
+                                                                                                cResult[98] = tmp35;
+                                                                                                class Rt {
+                                                                                                  constructor() {
+                                                                                                    obj = closure_13;
+                                                                                                    num = 1;
+                                                                                                    if (closure_13.get()) {
+                                                                                                      num = 0;
+                                                                                                    }
+                                                                                                    tmp = closure_0;
+                                                                                                    tmp2 = closure_2;
+                                                                                                    obj2 = closure_0(closure_2[28]);
+                                                                                                    obj3 = closure_0(closure_2[35]);
+                                                                                                    obj1 = { duration: 300, easing: null };
+                                                                                                    Easing = closure_0(closure_2[28]).Easing;
+                                                                                                    obj1.easing = Easing.out(closure_0(closure_2[28]).Easing.ease);
+                                                                                                    num2 = 0;
+                                                                                                    withDelayResult = obj2.withDelay(200, obj3.withTiming(num, obj1));
+                                                                                                    if (!closure_7) {
+                                                                                                      num2 = 0;
+                                                                                                      if (obj.get()) {
+                                                                                                        num2 = -80;
+                                                                                                      }
+                                                                                                    }
+                                                                                                    obj10 = { opacity: withDelayResult, transform: null };
+                                                                                                    obj11 = { translateY: null };
+                                                                                                    tmpResult = tmp(tmp2[28]);
+                                                                                                    tmpResult1 = tmp(tmp2[35]);
+                                                                                                    obj12 = { duration: 300, easing: null };
+                                                                                                    Easing2 = tmp(tmp2[28]).Easing;
+                                                                                                    obj12.easing = Easing2.out(tmp(tmp2[28]).Easing.ease);
+                                                                                                    obj11.translateY = tmpResult.withDelay(200, tmpResult1.withTiming(num2, obj12));
+                                                                                                    items = [];
+                                                                                                    items[0] = obj11;
+                                                                                                    obj10.transform = items;
+                                                                                                    return obj10;
+                                                                                                  }
+                                                                                                }
+                                                                                                cResult[100] = selectOption;
+                                                                                                cResult[101] = Ft;
+                                                                                                tmp78 = Ft;
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                  const items14 = [, , , , , , , ];
+                                                                                  class Ht {
+                                                                                    constructor() {
+                                                                                      tmp = currentPromptIdx;
+                                                                                      if (0 === currentPromptIdx) {
+                                                                                        tmp2 = closure_8;
+                                                                                        if (!closure_8) {
+                                                                                          tmp3 = closure_0;
+                                                                                          tmp4 = closure_2;
+                                                                                          obj = closure_0(closure_2[36]);
+                                                                                          tmp10 = closure_10;
+                                                                                          obj1 = { headerLeft: null };
+                                                                                          obj1.headerLeft = obj.getHeaderCloseButton(() => {
+                                                                                            let transitionTo = prompts;
+                                                                                            const obj2 = {};
+                                                                                            let tmp = guildId;
+                                                                                            const obj = currentPromptIdx(prompts[33]);
+                                                                                            const merged = Object.assign(guildId(prompts[34]).collectGuildAnalyticsMetadata(closure_1_0));
+                                                                                            obj2.step = 0;
+                                                                                            obj2.skipped = true;
+                                                                                            obj2.back = false;
+                                                                                            obj2.options_selected = 0;
+                                                                                            obj2.in_onboarding = true;
+                                                                                            obj2.is_final_step = false;
+                                                                                            obj.track(closure_2_16.GUILD_ONBOARDING_STEP_COMPLETED, obj2);
+                                                                                            let tmp5 = onClose;
+                                                                                            if (backShouldLeaveGuild) {
+                                                                                              let channel = navigation.getChannel(lastSelectedChannelId.getLastSelectedChannelId());
+                                                                                              if (null == channel) {
+                                                                                                tmp(transitionTo[14]).transitionTo(closure_18.ME, { navigationReplace: true });
+                                                                                                tmp5 = tmp5();
+                                                                                                const tmpResult = tmp(transitionTo[14]);
+                                                                                              }
+                                                                                              tmp = tmp(transitionTo[14]);
+                                                                                              transitionTo = tmp.transitionTo;
+                                                                                              channel = transitionTo(closure_18.CHANNEL(channel.guild_id, channel.id));
+                                                                                            } else {
+                                                                                              tmp5();
+                                                                                            }
+                                                                                            const obj3 = guildId(prompts[34]);
+                                                                                          });
+                                                                                          setOptionsResult = closure_10.setOptions(obj1);
+                                                                                          return;
+                                                                                        }
+                                                                                      }
+                                                                                      if (0 !== tmp) {
+                                                                                        tmp6 = closure_0;
+                                                                                        tmp7 = closure_2;
+                                                                                        obj2 = closure_0(closure_2[36]);
+                                                                                        flag = true;
+                                                                                        headerBackButton = obj2.getHeaderBackButton(() => {
+                                                                                          const obj2 = {};
+                                                                                          const obj = currentPromptIdx(prompts[33]);
+                                                                                          const merged = Object.assign(guildId(prompts[34]).collectGuildAnalyticsMetadata(closure_1_0));
+                                                                                          obj2.step = step;
+                                                                                          obj2.skipped = false;
+                                                                                          obj2.back = true;
+                                                                                          obj2.options_selected = closure_1_16.length;
+                                                                                          obj2.in_onboarding = true;
+                                                                                          obj2.is_final_step = false;
+                                                                                          obj.track(closure_2_16.GUILD_ONBOARDING_STEP_COMPLETED, obj2);
+                                                                                          const obj3 = guildId(prompts[34]);
+                                                                                          const obj5 = {};
+                                                                                          const obj4 = currentPromptIdx(prompts[33]);
+                                                                                          const merged1 = Object.assign(guildId(prompts[34]).collectGuildAnalyticsMetadata(closure_1_0));
+                                                                                          obj5.step = step - 1;
+                                                                                          obj5.required = closure_1_2[step - 1].required;
+                                                                                          obj4.track(closure_2_16.GUILD_ONBOARDING_STEP_VIEWED, obj5);
+                                                                                          navigation.pop();
+                                                                                        }, true);
+                                                                                        tmp9 = headerBackButton;
+                                                                                      } else {
+                                                                                        tmp5 = closure_8;
+                                                                                      }
+                                                                                      obj3 = closure_0(closure_2[36]);
+                                                                                      headerBackButton = obj3.getHeaderBackButton(() => {
+                                                                                        const obj2 = {};
+                                                                                        const obj = currentPromptIdx(prompts[33]);
+                                                                                        const merged = Object.assign(guildId(prompts[34]).collectGuildAnalyticsMetadata(closure_1_0));
+                                                                                        obj2.step = 0;
+                                                                                        obj2.skipped = false;
+                                                                                        obj2.back = true;
+                                                                                        obj2.options_selected = closure_1_16.length;
+                                                                                        obj2.in_onboarding = true;
+                                                                                        obj2.is_final_step = false;
+                                                                                        obj.track(closure_2_16.GUILD_ONBOARDING_STEP_COMPLETED, obj2);
+                                                                                        navigation.pop();
+                                                                                      }, true);
+                                                                                      return;
+                                                                                    }
+                                                                                  }
+                                                                                  items14[1] = currentPromptIdx;
+                                                                                  items14[2] = stateFromStoresArray;
+                                                                                  class Gt {
+                                                                                    constructor() {
+                                                                                      if (0 === currentPromptIdx) {
+                                                                                        tmp = closure_1;
+                                                                                        tmp2 = closure_2;
+                                                                                        obj = closure_1(closure_2[33]);
+                                                                                        tmp3 = AnalyticEvents;
+                                                                                        obj1 = {};
+                                                                                        tmp4 = closure_0;
+                                                                                        obj3 = closure_0(closure_2[34]);
+                                                                                        tmp5 = guildId;
+                                                                                        tmp6 = obj1;
+                                                                                        merged = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
+                                                                                        obj1.step = 0;
+                                                                                        tmp8 = required;
+                                                                                        obj1.required = required;
+                                                                                        trackResult = obj.track(AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, obj1);
+                                                                                      }
+                                                                                      return;
+                                                                                    }
+                                                                                  }
+                                                                                  items14[4] = prompts;
+                                                                                  items14[5] = onClose;
+                                                                                  items14[6] = backShouldLeaveGuild;
+                                                                                  items14[7] = tmp17;
+                                                                                  cResult[84] = backShouldLeaveGuild;
+                                                                                  class Et {
+                                                                                    constructor() {
+                                                                                      if (closure_9) {
+                                                                                        tmp = closure_1;
+                                                                                        tmp2 = closure_2;
+                                                                                        obj = closure_1(closure_2[33]);
+                                                                                        tmp3 = AnalyticEvents;
+                                                                                        obj1 = {};
+                                                                                        tmp4 = closure_0;
+                                                                                        obj3 = closure_0(closure_2[34]);
+                                                                                        tmp5 = guildId;
+                                                                                        tmp6 = obj1;
+                                                                                        merged = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
+                                                                                        num = -1;
+                                                                                        obj1.step = -1;
+                                                                                        flag = true;
+                                                                                        obj1.required = true;
+                                                                                        trackResult = obj.track(AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, obj1);
+                                                                                        obj4 = closure_1(closure_2[33]);
+                                                                                        obj7 = {};
+                                                                                        obj6 = closure_0(closure_2[34]);
+                                                                                        tmp9 = obj7;
+                                                                                        merged1 = Object.assign(obj6.collectGuildAnalyticsMetadata(guildId));
+                                                                                        obj7.step = -1;
+                                                                                        tmp11 = closure_11;
+                                                                                        obj7.skipped = closure_11;
+                                                                                        flag2 = false;
+                                                                                        obj7.is_final_step = false;
+                                                                                        obj7.in_onboarding = true;
+                                                                                        trackResult1 = obj4.track(AnalyticEvents.GUILD_ONBOARDING_STEP_COMPLETED, obj7);
+                                                                                      }
+                                                                                      return;
+                                                                                    }
+                                                                                  }
+                                                                                  cResult[86] = guildId;
+                                                                                  class Rt {
+                                                                                    constructor() {
+                                                                                      obj = closure_13;
+                                                                                      num = 1;
+                                                                                      if (closure_13.get()) {
+                                                                                        num = 0;
+                                                                                      }
+                                                                                      tmp = closure_0;
+                                                                                      tmp2 = closure_2;
+                                                                                      obj2 = closure_0(closure_2[28]);
+                                                                                      obj3 = closure_0(closure_2[35]);
+                                                                                      obj1 = { duration: 300, easing: null };
+                                                                                      Easing = closure_0(closure_2[28]).Easing;
+                                                                                      obj1.easing = Easing.out(closure_0(closure_2[28]).Easing.ease);
+                                                                                      num2 = 0;
+                                                                                      withDelayResult = obj2.withDelay(200, obj3.withTiming(num, obj1));
+                                                                                      if (!closure_7) {
+                                                                                        num2 = 0;
+                                                                                        if (obj.get()) {
+                                                                                          num2 = -80;
+                                                                                        }
+                                                                                      }
+                                                                                      obj10 = { opacity: withDelayResult, transform: null };
+                                                                                      obj11 = { translateY: null };
+                                                                                      tmpResult = tmp(tmp2[28]);
+                                                                                      tmpResult1 = tmp(tmp2[35]);
+                                                                                      obj12 = { duration: 300, easing: null };
+                                                                                      Easing2 = tmp(tmp2[28]).Easing;
+                                                                                      obj12.easing = Easing2.out(tmp(tmp2[28]).Easing.ease);
+                                                                                      obj11.translateY = tmpResult.withDelay(200, tmpResult1.withTiming(num2, obj12));
+                                                                                      items = [];
+                                                                                      items[0] = obj11;
+                                                                                      obj10.transform = items;
+                                                                                      return obj10;
+                                                                                    }
+                                                                                  }
+                                                                                  cResult[87] = tmp17;
+                                                                                  cResult[88] = navigation;
+                                                                                  cResult[89] = onClose;
+                                                                                  cResult[90] = prompts;
+                                                                                  cResult[91] = stateFromStoresArray;
+                                                                                  cResult[92] = items14;
+                                                                                  tmp76 = items14;
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                    class Ht {
+                                                                      constructor() {
+                                                                        tmp = currentPromptIdx;
+                                                                        if (0 === currentPromptIdx) {
+                                                                          tmp2 = closure_8;
+                                                                          if (!closure_8) {
+                                                                            tmp3 = closure_0;
+                                                                            tmp4 = closure_2;
+                                                                            obj = closure_0(closure_2[36]);
+                                                                            tmp10 = closure_10;
+                                                                            obj1 = { headerLeft: null };
+                                                                            obj1.headerLeft = obj.getHeaderCloseButton(() => {
+                                                                              let transitionTo = prompts;
+                                                                              const obj2 = {};
+                                                                              let tmp = guildId;
+                                                                              const obj = currentPromptIdx(prompts[33]);
+                                                                              const merged = Object.assign(guildId(prompts[34]).collectGuildAnalyticsMetadata(closure_1_0));
+                                                                              obj2.step = 0;
+                                                                              obj2.skipped = true;
+                                                                              obj2.back = false;
+                                                                              obj2.options_selected = 0;
+                                                                              obj2.in_onboarding = true;
+                                                                              obj2.is_final_step = false;
+                                                                              obj.track(closure_2_16.GUILD_ONBOARDING_STEP_COMPLETED, obj2);
+                                                                              let tmp5 = onClose;
+                                                                              if (backShouldLeaveGuild) {
+                                                                                let channel = navigation.getChannel(lastSelectedChannelId.getLastSelectedChannelId());
+                                                                                if (null == channel) {
+                                                                                  tmp(transitionTo[14]).transitionTo(closure_18.ME, { navigationReplace: true });
+                                                                                  tmp5 = tmp5();
+                                                                                  const tmpResult = tmp(transitionTo[14]);
+                                                                                }
+                                                                                tmp = tmp(transitionTo[14]);
+                                                                                transitionTo = tmp.transitionTo;
+                                                                                channel = transitionTo(closure_18.CHANNEL(channel.guild_id, channel.id));
+                                                                              } else {
+                                                                                tmp5();
+                                                                              }
+                                                                              const obj3 = guildId(prompts[34]);
+                                                                            });
+                                                                            setOptionsResult = closure_10.setOptions(obj1);
+                                                                            return;
+                                                                          }
+                                                                        }
+                                                                        if (0 !== tmp) {
+                                                                          tmp6 = closure_0;
+                                                                          tmp7 = closure_2;
+                                                                          obj2 = closure_0(closure_2[36]);
+                                                                          flag = true;
+                                                                          headerBackButton = obj2.getHeaderBackButton(() => {
+                                                                            const obj2 = {};
+                                                                            const obj = currentPromptIdx(prompts[33]);
+                                                                            const merged = Object.assign(guildId(prompts[34]).collectGuildAnalyticsMetadata(closure_1_0));
+                                                                            obj2.step = step;
+                                                                            obj2.skipped = false;
+                                                                            obj2.back = true;
+                                                                            obj2.options_selected = closure_1_16.length;
+                                                                            obj2.in_onboarding = true;
+                                                                            obj2.is_final_step = false;
+                                                                            obj.track(closure_2_16.GUILD_ONBOARDING_STEP_COMPLETED, obj2);
+                                                                            const obj3 = guildId(prompts[34]);
+                                                                            const obj5 = {};
+                                                                            const obj4 = currentPromptIdx(prompts[33]);
+                                                                            const merged1 = Object.assign(guildId(prompts[34]).collectGuildAnalyticsMetadata(closure_1_0));
+                                                                            obj5.step = step - 1;
+                                                                            obj5.required = closure_1_2[step - 1].required;
+                                                                            obj4.track(closure_2_16.GUILD_ONBOARDING_STEP_VIEWED, obj5);
+                                                                            navigation.pop();
+                                                                          }, true);
+                                                                          tmp9 = headerBackButton;
+                                                                        } else {
+                                                                          tmp5 = closure_8;
+                                                                        }
+                                                                        obj3 = closure_0(closure_2[36]);
+                                                                        headerBackButton = obj3.getHeaderBackButton(() => {
+                                                                          const obj2 = {};
+                                                                          const obj = currentPromptIdx(prompts[33]);
+                                                                          const merged = Object.assign(guildId(prompts[34]).collectGuildAnalyticsMetadata(closure_1_0));
+                                                                          obj2.step = 0;
+                                                                          obj2.skipped = false;
+                                                                          obj2.back = true;
+                                                                          obj2.options_selected = closure_1_16.length;
+                                                                          obj2.in_onboarding = true;
+                                                                          obj2.is_final_step = false;
+                                                                          obj.track(closure_2_16.GUILD_ONBOARDING_STEP_COMPLETED, obj2);
+                                                                          navigation.pop();
+                                                                        }, true);
+                                                                        return;
+                                                                      }
+                                                                    }
+                                                                    cResult[75] = backShouldLeaveGuild;
+                                                                    class Gt {
+                                                                      constructor() {
+                                                                        if (0 === currentPromptIdx) {
+                                                                          tmp = closure_1;
+                                                                          tmp2 = closure_2;
+                                                                          obj = closure_1(closure_2[33]);
+                                                                          tmp3 = AnalyticEvents;
+                                                                          obj1 = {};
+                                                                          tmp4 = closure_0;
+                                                                          obj3 = closure_0(closure_2[34]);
+                                                                          tmp5 = guildId;
+                                                                          tmp6 = obj1;
+                                                                          merged = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
+                                                                          obj1.step = 0;
+                                                                          tmp8 = required;
+                                                                          obj1.required = required;
+                                                                          trackResult = obj.track(AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, obj1);
+                                                                        }
+                                                                        return;
+                                                                      }
+                                                                    }
+                                                                    cResult[76] = currentPromptIdx;
+                                                                    cResult[77] = guildId;
+                                                                    cResult[78] = tmp17;
+                                                                    cResult[79] = navigation;
+                                                                    class Et {
+                                                                      constructor() {
+                                                                        if (closure_9) {
+                                                                          tmp = closure_1;
+                                                                          tmp2 = closure_2;
+                                                                          obj = closure_1(closure_2[33]);
+                                                                          tmp3 = AnalyticEvents;
+                                                                          obj1 = {};
+                                                                          tmp4 = closure_0;
+                                                                          obj3 = closure_0(closure_2[34]);
+                                                                          tmp5 = guildId;
+                                                                          tmp6 = obj1;
+                                                                          merged = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
+                                                                          num = -1;
+                                                                          obj1.step = -1;
+                                                                          flag = true;
+                                                                          obj1.required = true;
+                                                                          trackResult = obj.track(AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, obj1);
+                                                                          obj4 = closure_1(closure_2[33]);
+                                                                          obj7 = {};
+                                                                          obj6 = closure_0(closure_2[34]);
+                                                                          tmp9 = obj7;
+                                                                          merged1 = Object.assign(obj6.collectGuildAnalyticsMetadata(guildId));
+                                                                          obj7.step = -1;
+                                                                          tmp11 = closure_11;
+                                                                          obj7.skipped = closure_11;
+                                                                          flag2 = false;
+                                                                          obj7.is_final_step = false;
+                                                                          obj7.in_onboarding = true;
+                                                                          trackResult1 = obj4.track(AnalyticEvents.GUILD_ONBOARDING_STEP_COMPLETED, obj7);
+                                                                        }
+                                                                        return;
+                                                                      }
+                                                                    }
+                                                                    cResult[80] = onClose;
+                                                                    class Rt {
+                                                                      constructor() {
+                                                                        obj = closure_13;
+                                                                        num = 1;
+                                                                        if (closure_13.get()) {
+                                                                          num = 0;
+                                                                        }
+                                                                        tmp = closure_0;
+                                                                        tmp2 = closure_2;
+                                                                        obj2 = closure_0(closure_2[28]);
+                                                                        obj3 = closure_0(closure_2[35]);
+                                                                        obj1 = { duration: 300, easing: null };
+                                                                        Easing = closure_0(closure_2[28]).Easing;
+                                                                        obj1.easing = Easing.out(closure_0(closure_2[28]).Easing.ease);
+                                                                        num2 = 0;
+                                                                        withDelayResult = obj2.withDelay(200, obj3.withTiming(num, obj1));
+                                                                        if (!closure_7) {
+                                                                          num2 = 0;
+                                                                          if (obj.get()) {
+                                                                            num2 = -80;
+                                                                          }
+                                                                        }
+                                                                        obj10 = { opacity: withDelayResult, transform: null };
+                                                                        obj11 = { translateY: null };
+                                                                        tmpResult = tmp(tmp2[28]);
+                                                                        tmpResult1 = tmp(tmp2[35]);
+                                                                        obj12 = { duration: 300, easing: null };
+                                                                        Easing2 = tmp(tmp2[28]).Easing;
+                                                                        obj12.easing = Easing2.out(tmp(tmp2[28]).Easing.ease);
+                                                                        obj11.translateY = tmpResult.withDelay(200, tmpResult1.withTiming(num2, obj12));
+                                                                        items = [];
+                                                                        items[0] = obj11;
+                                                                        obj10.transform = items;
+                                                                        return obj10;
+                                                                      }
+                                                                    }
+                                                                    cResult[82] = stateFromStoresArray.length;
+                                                                    cResult[83] = Ht;
+                                                                    tmp75 = Ht;
+                                                                  }
+                                                                }
+                                                              }
+                                                              class Vt {
+                                                                constructor() {
+                                                                  if (!required) {
+                                                                    tmp = closure_18;
+                                                                    if (closure_18) {
+                                                                      tmp4 = closure_10;
+                                                                      tmp5 = closure_15;
+                                                                      arr = closure_10.push(closure_15.COMPLETED);
+                                                                    } else {
+                                                                      tmp2 = closure_22;
+                                                                      tmp3 = closure_22();
+                                                                    }
+                                                                  }
+                                                                  return;
+                                                                }
+                                                              }
+                                                              cResult[70] = tmp33;
+                                                              class Gt {
+                                                                constructor() {
+                                                                  if (0 === currentPromptIdx) {
+                                                                    tmp = closure_1;
+                                                                    tmp2 = closure_2;
+                                                                    obj = closure_1(closure_2[33]);
+                                                                    tmp3 = AnalyticEvents;
+                                                                    obj1 = {};
+                                                                    tmp4 = closure_0;
+                                                                    obj3 = closure_0(closure_2[34]);
+                                                                    tmp5 = guildId;
+                                                                    tmp6 = obj1;
+                                                                    merged = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
+                                                                    obj1.step = 0;
+                                                                    tmp8 = required;
+                                                                    obj1.required = required;
+                                                                    trackResult = obj.track(AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, obj1);
+                                                                  }
+                                                                  return;
+                                                                }
+                                                              }
+                                                              cResult[71] = tmp73;
+                                                              cResult[72] = tmp35;
+                                                              cResult[73] = navigation;
+                                                              cResult[74] = Vt;
+                                                              class Et {
+                                                                constructor() {
+                                                                  if (closure_9) {
+                                                                    tmp = closure_1;
+                                                                    tmp2 = closure_2;
+                                                                    obj = closure_1(closure_2[33]);
+                                                                    tmp3 = AnalyticEvents;
+                                                                    obj1 = {};
+                                                                    tmp4 = closure_0;
+                                                                    obj3 = closure_0(closure_2[34]);
+                                                                    tmp5 = guildId;
+                                                                    tmp6 = obj1;
+                                                                    merged = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
+                                                                    num = -1;
+                                                                    obj1.step = -1;
+                                                                    flag = true;
+                                                                    obj1.required = true;
+                                                                    trackResult = obj.track(AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, obj1);
+                                                                    obj4 = closure_1(closure_2[33]);
+                                                                    obj7 = {};
+                                                                    obj6 = closure_0(closure_2[34]);
+                                                                    tmp9 = obj7;
+                                                                    merged1 = Object.assign(obj6.collectGuildAnalyticsMetadata(guildId));
+                                                                    obj7.step = -1;
+                                                                    tmp11 = closure_11;
+                                                                    obj7.skipped = closure_11;
+                                                                    flag2 = false;
+                                                                    obj7.is_final_step = false;
+                                                                    obj7.in_onboarding = true;
+                                                                    trackResult1 = obj4.track(AnalyticEvents.GUILD_ONBOARDING_STEP_COMPLETED, obj7);
+                                                                  }
+                                                                  return;
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                  class Mt {
+                                                    constructor() {
+                                                      tmp2 = closure_2;
+                                                      tmp = closure_1;
+                                                      obj = closure_1(closure_2[33]);
+                                                      obj1 = {};
+                                                      tmp4 = closure_0;
+                                                      tmp3 = AnalyticEvents;
+                                                      obj3 = closure_0(closure_2[34]);
+                                                      tmp5 = guildId;
+                                                      merged = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
+                                                      tmp7 = currentPromptIdx;
+                                                      obj1.step = currentPromptIdx;
+                                                      obj1.options_selected = closure_16.length;
+                                                      obj1.skipped = 0 === closure_16.length;
+                                                      obj1.back = false;
+                                                      obj1.in_onboarding = true;
+                                                      obj1.is_final_step = false;
+                                                      trackResult = obj.track(AnalyticEvents.GUILD_ONBOARDING_STEP_COMPLETED, obj1);
+                                                      arr = prompts;
+                                                      if (currentPromptIdx < prompts.length - 1) {
+                                                        tmpResult = tmp(tmp2[33]);
+                                                        obj9 = {};
+                                                        tmp4Result = tmp4(tmp2[34]);
+                                                        tmp9 = obj9;
+                                                        merged1 = Object.assign(tmp4Result.collectGuildAnalyticsMetadata(tmp5));
+                                                        obj9.step = tmp7 + 1;
+                                                        obj9.required = arr[tmp7 + 1].required;
+                                                        trackResult1 = tmpResult.track(tmp3.GUILD_ONBOARDING_STEP_VIEWED, obj9);
+                                                      }
+                                                      if (tmp7 + 1 < arr.length) {
+                                                        tmp17 = closure_10;
+                                                        tmp18 = closure_15;
+                                                        obj10 = { currentPrompt: null };
+                                                        obj10.currentPrompt = tmp7 + 1;
+                                                        arr1 = closure_10.push(closure_15.PROMPT, obj10);
+                                                      } else {
+                                                        tmp4Result1 = tmp4(tmp2[30]);
+                                                        tmp12 = closure_15;
+                                                        tmp13 = closure_6;
+                                                        if (tmp4Result1.showRulesInOnboarding(closure_15, closure_6)) {
+                                                          tmp14 = closure_10;
+                                                          tmp15 = closure_15;
+                                                          arr2 = closure_10.push(closure_15.RULES);
+                                                        }
+                                                      }
+                                                      return;
+                                                    }
+                                                  }
+                                                  cResult[62] = currentPromptIdx;
+                                                  cResult[63] = stateFromStores2;
+                                                  cResult[64] = guildId;
+                                                  cResult[65] = navigation;
+                                                  cResult[66] = prompts;
+                                                  cResult[67] = stateFromStores;
+                                                  cResult[68] = stateFromStoresArray.length;
+                                                  cResult[69] = Mt;
+                                                  tmp73 = Mt;
+                                                  const tmpResult23 = tmp(tmp2[28]);
+                                                }
+                                              }
+                                              class Gt {
+                                                constructor() {
+                                                  if (0 === currentPromptIdx) {
+                                                    tmp = closure_1;
+                                                    tmp2 = closure_2;
+                                                    obj = closure_1(closure_2[33]);
+                                                    tmp3 = AnalyticEvents;
+                                                    obj1 = {};
+                                                    tmp4 = closure_0;
+                                                    obj3 = closure_0(closure_2[34]);
+                                                    tmp5 = guildId;
+                                                    tmp6 = obj1;
+                                                    merged = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
+                                                    obj1.step = 0;
+                                                    tmp8 = required;
+                                                    obj1.required = required;
+                                                    trackResult = obj.track(AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, obj1);
+                                                  }
+                                                  return;
+                                                }
+                                              }
+                                              const items15 = [guildId, tmp19, currentPromptIdx];
+                                              cResult[57] = currentPromptIdx;
+                                              class Et {
+                                                constructor() {
+                                                  if (closure_9) {
+                                                    tmp = closure_1;
+                                                    tmp2 = closure_2;
+                                                    obj = closure_1(closure_2[33]);
+                                                    tmp3 = AnalyticEvents;
+                                                    obj1 = {};
+                                                    tmp4 = closure_0;
+                                                    obj3 = closure_0(closure_2[34]);
+                                                    tmp5 = guildId;
+                                                    tmp6 = obj1;
+                                                    merged = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
+                                                    num = -1;
+                                                    obj1.step = -1;
+                                                    flag = true;
+                                                    obj1.required = true;
+                                                    trackResult = obj.track(AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, obj1);
+                                                    obj4 = closure_1(closure_2[33]);
+                                                    obj7 = {};
+                                                    obj6 = closure_0(closure_2[34]);
+                                                    tmp9 = obj7;
+                                                    merged1 = Object.assign(obj6.collectGuildAnalyticsMetadata(guildId));
+                                                    obj7.step = -1;
+                                                    tmp11 = closure_11;
+                                                    obj7.skipped = closure_11;
+                                                    flag2 = false;
+                                                    obj7.is_final_step = false;
+                                                    obj7.in_onboarding = true;
+                                                    trackResult1 = obj4.track(AnalyticEvents.GUILD_ONBOARDING_STEP_COMPLETED, obj7);
+                                                  }
+                                                  return;
+                                                }
+                                              }
+                                              cResult[59] = guildId;
+                                              cResult[60] = Gt;
+                                              cResult[61] = items15;
+                                              tmp58 = items15;
+                                              tmp57 = Gt;
+                                            }
+                                          }
+                                          class Ot {
+                                            constructor() {
+                                              tmp = closure_9;
+                                              if (!closure_9) {
+                                                tmp = closure_11;
+                                              }
+                                              if (!tmp) {
+                                                tmp2 = onClose;
+                                                tmp3 = onClose();
+                                              }
+                                              return;
+                                            }
+                                          }
+                                          const items16 = [isFirstOpen, , onClose];
+                                          cResult[52] = tmp19;
+                                          cResult[53] = onClose;
+                                          cResult[54] = isFirstOpen;
+                                          class Et {
+                                            constructor() {
+                                              if (closure_9) {
+                                                tmp = closure_1;
+                                                tmp2 = closure_2;
+                                                obj = closure_1(closure_2[33]);
+                                                tmp3 = AnalyticEvents;
+                                                obj1 = {};
+                                                tmp4 = closure_0;
+                                                obj3 = closure_0(closure_2[34]);
+                                                tmp5 = guildId;
+                                                tmp6 = obj1;
+                                                merged = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
+                                                num = -1;
+                                                obj1.step = -1;
+                                                flag = true;
+                                                obj1.required = true;
+                                                trackResult = obj.track(AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, obj1);
+                                                obj4 = closure_1(closure_2[33]);
+                                                obj7 = {};
+                                                obj6 = closure_0(closure_2[34]);
+                                                tmp9 = obj7;
+                                                merged1 = Object.assign(obj6.collectGuildAnalyticsMetadata(guildId));
+                                                obj7.step = -1;
+                                                tmp11 = closure_11;
+                                                obj7.skipped = closure_11;
+                                                flag2 = false;
+                                                obj7.is_final_step = false;
+                                                obj7.in_onboarding = true;
+                                                trackResult1 = obj4.track(AnalyticEvents.GUILD_ONBOARDING_STEP_COMPLETED, obj7);
+                                              }
+                                              return;
+                                            }
+                                          }
+                                          cResult[55] = Ot;
+                                          tmp54 = items16;
+                                          tmp53 = Ot;
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                              const items17 = [, , , , , , ];
+                              class H {
+                                constructor() {
+                                  return closure_8.useReducedMotion;
+                                }
+                              }
+                              items17[1] = isFirstOpen;
+                              items17[2] = tmp19;
+                              items17[4] = onClose;
+                              items17[5] = tmp22;
+                              items17[6] = guildId;
+                              cResult[44] = tmp22;
+                              cResult[45] = guildId;
+                              class Et {
+                                constructor() {
+                                  if (closure_9) {
+                                    tmp = closure_1;
+                                    tmp2 = closure_2;
+                                    obj = closure_1(closure_2[33]);
+                                    tmp3 = AnalyticEvents;
+                                    obj1 = {};
+                                    tmp4 = closure_0;
+                                    obj3 = closure_0(closure_2[34]);
+                                    tmp5 = guildId;
+                                    tmp6 = obj1;
+                                    merged = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
+                                    num = -1;
+                                    obj1.step = -1;
+                                    flag = true;
+                                    obj1.required = true;
+                                    trackResult = obj.track(AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, obj1);
+                                    obj4 = closure_1(closure_2[33]);
+                                    obj7 = {};
+                                    obj6 = closure_0(closure_2[34]);
+                                    tmp9 = obj7;
+                                    merged1 = Object.assign(obj6.collectGuildAnalyticsMetadata(guildId));
+                                    obj7.step = -1;
+                                    tmp11 = closure_11;
+                                    obj7.skipped = closure_11;
+                                    flag2 = false;
+                                    obj7.is_final_step = false;
+                                    obj7.in_onboarding = true;
+                                    trackResult1 = obj4.track(AnalyticEvents.GUILD_ONBOARDING_STEP_COMPLETED, obj7);
+                                  }
+                                  return;
+                                }
+                              }
+                              cResult[46] = tmp17;
+                              cResult[48] = onClose;
+                              cResult[49] = isFirstOpen;
+                              cResult[50] = sharedValue;
+                              cResult[51] = items17;
+                              tmp51 = items17;
+                            }
+                          }
+                        }
+                      }
+                      class H {
+                        constructor() {
+                          return closure_8.useReducedMotion;
+                        }
+                      }
+                      cResult[38] = tmp22;
+                      cResult[39] = tmp19;
+                      cResult[40] = onClose;
+                      cResult[41] = isFirstOpen;
+                      cResult[42] = sharedValue;
+                      class Et {
+                        constructor() {
+                          if (closure_9) {
+                            tmp = closure_1;
+                            tmp2 = closure_2;
+                            obj = closure_1(closure_2[33]);
+                            tmp3 = AnalyticEvents;
+                            obj1 = {};
+                            tmp4 = closure_0;
+                            obj3 = closure_0(closure_2[34]);
+                            tmp5 = guildId;
+                            tmp6 = obj1;
+                            merged = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
+                            num = -1;
+                            obj1.step = -1;
+                            flag = true;
+                            obj1.required = true;
+                            trackResult = obj.track(AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, obj1);
+                            obj4 = closure_1(closure_2[33]);
+                            obj7 = {};
+                            obj6 = closure_0(closure_2[34]);
+                            tmp9 = obj7;
+                            merged1 = Object.assign(obj6.collectGuildAnalyticsMetadata(guildId));
+                            obj7.step = -1;
+                            tmp11 = closure_11;
+                            obj7.skipped = closure_11;
+                            flag2 = false;
+                            obj7.is_final_step = false;
+                            obj7.in_onboarding = true;
+                            trackResult1 = obj4.track(AnalyticEvents.GUILD_ONBOARDING_STEP_COMPLETED, obj7);
+                          }
+                          return;
+                        }
+                      }
+                      cResult[43] = tmp50;
+                      tmp49 = tmp50;
+                    }
+                  }
+                }
+                const items18 = [, , , ];
+                class H {
+                  constructor() {
+                    return closure_8.useReducedMotion;
+                  }
+                }
+                items18[1] = tmp19;
+                items18[2] = stateFromStores;
+                cResult[33] = guildId;
+                cResult[34] = tmp19;
+                cResult[35] = stateFromStores;
+                class Et {
+                  constructor() {
+                    if (closure_9) {
+                      tmp = closure_1;
+                      tmp2 = closure_2;
+                      obj = closure_1(closure_2[33]);
+                      tmp3 = AnalyticEvents;
+                      obj1 = {};
+                      tmp4 = closure_0;
+                      obj3 = closure_0(closure_2[34]);
+                      tmp5 = guildId;
+                      tmp6 = obj1;
+                      merged = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
+                      num = -1;
+                      obj1.step = -1;
+                      flag = true;
+                      obj1.required = true;
+                      trackResult = obj.track(AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, obj1);
+                      obj4 = closure_1(closure_2[33]);
+                      obj7 = {};
+                      obj6 = closure_0(closure_2[34]);
+                      tmp9 = obj7;
+                      merged1 = Object.assign(obj6.collectGuildAnalyticsMetadata(guildId));
+                      obj7.step = -1;
+                      tmp11 = closure_11;
+                      obj7.skipped = closure_11;
+                      flag2 = false;
+                      obj7.is_final_step = false;
+                      obj7.in_onboarding = true;
+                      trackResult1 = obj4.track(AnalyticEvents.GUILD_ONBOARDING_STEP_COMPLETED, obj7);
+                    }
+                    return;
+                  }
+                }
+                cResult[37] = items18;
+              }
+            }
+            class Et {
+              constructor() {
+                if (closure_9) {
+                  tmp = closure_1;
+                  tmp2 = closure_2;
+                  obj = closure_1(closure_2[33]);
+                  tmp3 = AnalyticEvents;
+                  obj1 = {};
+                  tmp4 = closure_0;
+                  obj3 = closure_0(closure_2[34]);
+                  tmp5 = guildId;
+                  tmp6 = obj1;
+                  merged = Object.assign(obj3.collectGuildAnalyticsMetadata(guildId));
+                  num = -1;
+                  obj1.step = -1;
+                  flag = true;
+                  obj1.required = true;
+                  trackResult = obj.track(AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, obj1);
+                  obj4 = closure_1(closure_2[33]);
+                  obj7 = {};
+                  obj6 = closure_0(closure_2[34]);
+                  tmp9 = obj7;
+                  merged1 = Object.assign(obj6.collectGuildAnalyticsMetadata(guildId));
+                  obj7.step = -1;
+                  tmp11 = closure_11;
+                  obj7.skipped = closure_11;
+                  flag2 = false;
+                  obj7.is_final_step = false;
+                  obj7.in_onboarding = true;
+                  trackResult1 = obj4.track(AnalyticEvents.GUILD_ONBOARDING_STEP_COMPLETED, obj7);
+                }
+                return;
+              }
+            }
+            cResult[29] = guildId;
+            cResult[30] = tmp19;
+            cResult[31] = isFirstOpen;
+            cResult[32] = Et;
+            tmp46 = Et;
+            const tmp39 = selectOption(tmp37(tmp13(tmp2[17]).unsafe_rawColors.PRIMARY_800), 2);
+          }
+        }
+      }
+      let tmp36 = currentPromptIdx + 1 >= prompts.length;
+      if (tmp36) {
+        tmp36 = !tmp(tmp2[30]).showRulesInOnboarding(stateFromStores2, stateFromStores);
+        const tmpResult24 = tmp(tmp2[30]);
+      }
+      cResult[19] = currentPromptIdx;
+      cResult[21] = prompts.length;
+      cResult[22] = stateFromStores;
+      cResult[23] = tmp36;
+      tmp35 = tmp36;
+      const tmpResult18 = tmp(tmp2[25]);
+    }
+    function ot() {
+      if (null != closure_12) {
+        let onboardingResponsesForPrompt = GuildOnboardingPromptsStore.getOnboardingResponsesForPrompt(guildId, tmp.id);
+      } else {
+        onboardingResponsesForPrompt = [];
+      }
+      return onboardingResponsesForPrompt;
+    }
+    tmp32[0] = guildId;
+    tmp32[1] = tmp20;
+    cResult[15] = tmp20;
+    cResult[16] = guildId;
+    cResult[17] = ot;
+    cResult[18] = tmp32;
+    tmp31 = tmp32;
+    tmp30 = ot;
+    const tmpResult17 = tmp(tmp2[25]);
+  }
+  class X {
+    constructor() {
+      obj = closure_1(closure_2[29]);
+      completeOnboardingResult = obj.completeOnboarding(guildId, prompts);
+      return;
+    }
+  }
+  cResult[8] = guildId;
+  cResult[9] = prompts;
+  cResult[10] = X;
+  tmp22 = X;
+  const tmpResult16 = guildId(prompts[28]);
+}) : ((guildId) => {
   guildId = guildId.guildId;
   const currentPromptIdx = guildId.currentPromptIdx;
   const prompts = guildId.prompts;
@@ -92,7 +3696,7 @@ export default function GuildOnboardingPrompt(guildId) {
   ({ isFirstOpen, backShouldLeaveGuild } = guildId);
   isFirstOpen = undefined;
   let navigation;
-  let skipped;
+  skipped = undefined;
   closure_11 = undefined;
   let sharedValue;
   let callback;
@@ -106,13 +3710,13 @@ export default function GuildOnboardingPrompt(guildId) {
   let tmp = closure_22();
   const tmp3 = prompts;
   let items = [navigation];
-  const stateFromStores = guildId(prompts[23]).useStateFromStores(items, () => MemberVerificationFormStore.getRulesPrompt(guildId));
-  let obj = guildId(prompts[23]);
+  const stateFromStores = guildId(prompts[25]).useStateFromStores(items, () => MemberVerificationFormStore.getRulesPrompt(guildId));
+  let obj = guildId(prompts[25]);
   const items1 = [isFirstOpen];
-  const stateFromStores1 = guildId(prompts[23]).useStateFromStores(items1, () => isFirstOpen.useReducedMotion);
-  let obj2 = guildId(prompts[23]);
+  const stateFromStores1 = guildId(prompts[25]).useStateFromStores(items1, () => isFirstOpen.useReducedMotion);
+  let obj2 = guildId(prompts[25]);
   const items2 = [callback];
-  const tmp8 = guildId(prompts[23]).useStateFromStores(items2, () => GuildOnboardingPromptsStore.getOnboardingConnections(guildId)).length > 0;
+  const tmp8 = guildId(prompts[25]).useStateFromStores(items2, () => GuildOnboardingPromptsStore.getOnboardingConnections(guildId)).length > 0;
   closure_7 = tmp8;
   if (isFirstOpen) {
     isFirstOpen = 0 === currentPromptIdx;
@@ -120,24 +3724,24 @@ export default function GuildOnboardingPrompt(guildId) {
   if (isFirstOpen) {
     isFirstOpen = !tmp8;
   }
-  let obj3 = guildId(prompts[23]);
+  let obj3 = guildId(prompts[25]);
   const tmp7 = callback;
-  navigation = guildId(tmp3[25]).useNavigation();
+  navigation = guildId(tmp3[27]).useNavigation();
   skipped = tmp10;
   closure_11 = tmp11;
-  let tmp2Result = guildId(tmp3[25]);
-  sharedValue = guildId(tmp3[26]).useSharedValue(!isFirstOpen);
+  let tmp2Result = guildId(tmp3[27]);
+  sharedValue = guildId(tmp3[28]).useSharedValue(!isFirstOpen);
   const items3 = [guildId, prompts];
   callback = stateFromStores.useCallback(() => {
     GuildOnboardingActionCreatorsDefault.completeOnboarding(guildId, prompts);
   }, items3);
-  const tmp2Result12 = guildId(tmp3[26]);
+  const tmp2Result12 = guildId(tmp3[28]);
   const items4 = [closure_11];
-  stateFromStores2 = guildId(tmp3[23]).useStateFromStores(items4, () => GuildStore.getGuild(guildId));
-  const tmp2Result13 = guildId(tmp3[23]);
+  stateFromStores2 = guildId(tmp3[25]).useStateFromStores(items4, () => GuildStore.getGuild(guildId));
+  const tmp2Result13 = guildId(tmp3[25]);
   const items5 = [tmp7];
   const items6 = [guildId, prompts[currentPromptIdx]];
-  stateFromStoresArray = guildId(tmp3[23]).useStateFromStoresArray(items5, () => {
+  stateFromStoresArray = guildId(tmp3[25]).useStateFromStoresArray(items5, () => {
     if (null != closure_11) {
       let onboardingResponsesForPrompt = GuildOnboardingPromptsStore.getOnboardingResponsesForPrompt(guildId, tmp.id);
     } else {
@@ -156,8 +3760,8 @@ export default function GuildOnboardingPrompt(guildId) {
   required1 = tmp15;
   let tmp18 = currentPromptIdx + 1 >= prompts.length;
   if (tmp18) {
-    tmp18 = !tmp2(tmp3[28]).showRulesInOnboarding(stateFromStores2, stateFromStores);
-    const tmp2Result15 = tmp2(tmp3[28]);
+    tmp18 = !tmp2(tmp3[30]).showRulesInOnboarding(stateFromStores2, stateFromStores);
+    const tmp2Result15 = tmp2(tmp3[30]);
   }
   constants2 = tmp18;
   const tmp19 = onClose(stateFromStores.useState(currentPromptIdx(tmp3[17]).unsafe_rawColors.PRIMARY_800), 2);
@@ -166,35 +3770,17 @@ export default function GuildOnboardingPrompt(guildId) {
   if (null != stateFromStores2) {
     let obj4 = { id: null, splash: null, size: null };
     ({ id: obj11.id, splash: obj11.splash } = stateFromStores2);
-    obj4.size = 400 * tmp6(tmp3[30])();
-    guildSplashURL = tmp6(tmp3[29]).getGuildSplashURL(obj4);
-    const tmp6Result = tmp6(tmp3[29]);
+    obj4.size = 400 * tmp6(tmp3[32])();
+    guildSplashURL = tmp6(tmp3[31]).getGuildSplashURL(obj4);
+    const tmp6Result = tmp6(tmp3[31]);
   }
   const items7 = [guildSplashURL];
   const effect = obj6.useEffect(() => {
     if (null != guildSplashURL) {
-      (function getBackgroundGradientColor() {
-        const self = this;
-        const apply = closure_1_23.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
-      })(tmp).then((result) => {
+      getBackgroundGradientColor(tmp).then((result) => {
         closure_1_18(result);
       });
-      const promise = (function getBackgroundGradientColor() {
-        const self = this;
-        const apply = closure_1_23.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
-      })(tmp);
+      const promise = getBackgroundGradientColor(tmp);
     }
   }, items7);
   const items8 = [guildId, prompts.length > 0, stateFromStores, isFirstOpen];
@@ -205,7 +3791,7 @@ export default function GuildOnboardingPrompt(guildId) {
       const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guildId));
       obj2.step = -1;
       obj2.required = true;
-      obj.track(constants.GUILD_ONBOARDING_STEP_VIEWED, obj2);
+      obj.track(value2.GUILD_ONBOARDING_STEP_VIEWED, obj2);
       const obj5 = {};
       const obj4 = AnalyticsUtilsDefault;
       const merged1 = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guildId));
@@ -213,7 +3799,7 @@ export default function GuildOnboardingPrompt(guildId) {
       obj5.skipped = skipped;
       obj5.is_final_step = false;
       obj5.in_onboarding = true;
-      obj4.track(constants.GUILD_ONBOARDING_STEP_COMPLETED, obj5);
+      obj4.track(value2.GUILD_ONBOARDING_STEP_COMPLETED, obj5);
     }
   }, items8);
   const items9 = [sharedValue, isFirstOpen, prompts.length > 0, tmp8, onClose, callback, guildId];
@@ -252,11 +3838,11 @@ export default function GuildOnboardingPrompt(guildId) {
       const merged = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guildId));
       obj2.step = 0;
       obj2.required = required;
-      obj.track(constants.GUILD_ONBOARDING_STEP_VIEWED, obj2);
+      obj.track(value2.GUILD_ONBOARDING_STEP_VIEWED, obj2);
     }
   }, items11);
-  const tmp2Result14 = guildId(tmp3[23]);
-  function ot() {
+  const tmp2Result14 = guildId(tmp3[25]);
+  function at() {
     let num = 1;
     if (sharedValue.get()) {
       num = 0;
@@ -282,13 +3868,13 @@ export default function GuildOnboardingPrompt(guildId) {
     obj4.transform = items;
     return obj4;
   }
-  const tmp2Result16 = guildId(tmp3[26]);
-  ot.__closure = { showPrompts: sharedValue, withTiming: guildId(tmp3[33]).withTiming, Easing: guildId(tmp3[26]).Easing, useReducedMotion: stateFromStores1 };
-  ot.__workletHash = 6820086589932;
-  ot.__initData = __initData;
-  const animatedStyle = tmp2Result16.useAnimatedStyle(ot);
-  let obj5 = { showPrompts: sharedValue, withTiming: guildId(tmp3[33]).withTiming, Easing: guildId(tmp3[26]).Easing, useReducedMotion: stateFromStores1 };
-  function st() {
+  const tmp2Result16 = guildId(tmp3[28]);
+  at.__closure = { showPrompts: sharedValue, withTiming: guildId(tmp3[35]).withTiming, Easing: guildId(tmp3[28]).Easing, useReducedMotion: stateFromStores1 };
+  at.__workletHash = 5060659572395;
+  at.__initData = __initData5;
+  const animatedStyle = tmp2Result16.useAnimatedStyle(at);
+  let obj5 = { showPrompts: sharedValue, withTiming: guildId(tmp3[35]).withTiming, Easing: guildId(tmp3[28]).Easing, useReducedMotion: stateFromStores1 };
+  function nt() {
     let num = 1;
     if (sharedValue.get()) {
       num = 0;
@@ -316,12 +3902,31 @@ export default function GuildOnboardingPrompt(guildId) {
     obj5.transform = items;
     return obj5;
   }
-  const tmp2Result17 = guildId(tmp3[26]);
-  st.__closure = { showPrompts: sharedValue, withDelay: guildId(tmp3[26]).withDelay, withTiming: guildId(tmp3[33]).withTiming, Easing: guildId(tmp3[26]).Easing, useReducedMotion: stateFromStores1 };
-  st.__workletHash = 3034833873876;
-  st.__initData = __initData2;
-  const animatedStyle1 = tmp2Result17.useAnimatedStyle(st);
-  let obj7 = { showPrompts: sharedValue, withDelay: guildId(tmp3[26]).withDelay, withTiming: guildId(tmp3[33]).withTiming, Easing: guildId(tmp3[26]).Easing, useReducedMotion: stateFromStores1 };
+  const tmp2Result17 = guildId(tmp3[28]);
+  nt.__closure = { showPrompts: sharedValue, withDelay: guildId(tmp3[28]).withDelay, withTiming: guildId(tmp3[35]).withTiming, Easing: guildId(tmp3[28]).Easing, useReducedMotion: stateFromStores1 };
+  nt.__workletHash = 10952952791537;
+  nt.__initData = __initData6;
+  const animatedStyle1 = tmp2Result17.useAnimatedStyle(nt);
+  let obj7 = { showPrompts: sharedValue, withDelay: guildId(tmp3[28]).withDelay, withTiming: guildId(tmp3[35]).withTiming, Easing: guildId(tmp3[28]).Easing, useReducedMotion: stateFromStores1 };
+  function ot() {
+    let num = 1;
+    if (sharedValue.get()) {
+      num = 0;
+    }
+    const obj = { opacity: null };
+    const obj2 = ReanimatedRexport;
+    const obj4 = { duration: 300, easing: null };
+    const Easing = ReanimatedRexport.Easing;
+    obj4.easing = Easing.out(ReanimatedRexport.Easing.ease);
+    obj.opacity = obj2.withDelay(200, timing.withTiming(num, obj4));
+    return obj;
+  }
+  const tmp2Result18 = guildId(tmp3[28]);
+  ot.__closure = { showPrompts: sharedValue, withDelay: guildId(tmp3[28]).withDelay, withTiming: guildId(tmp3[35]).withTiming, Easing: guildId(tmp3[28]).Easing };
+  ot.__workletHash = 10114471325675;
+  ot.__initData = __initData7;
+  const animatedStyle2 = tmp2Result18.useAnimatedStyle(ot);
+  const obj8 = { showPrompts: sharedValue, withDelay: guildId(tmp3[28]).withDelay, withTiming: guildId(tmp3[35]).withTiming, Easing: guildId(tmp3[28]).Easing };
   function rt() {
     let num = 1;
     if (sharedValue.get()) {
@@ -335,32 +3940,13 @@ export default function GuildOnboardingPrompt(guildId) {
     obj.opacity = obj2.withDelay(200, timing.withTiming(num, obj4));
     return obj;
   }
-  const tmp2Result18 = guildId(tmp3[26]);
-  rt.__closure = { showPrompts: sharedValue, withDelay: guildId(tmp3[26]).withDelay, withTiming: guildId(tmp3[33]).withTiming, Easing: guildId(tmp3[26]).Easing };
-  rt.__workletHash = 2795589385440;
-  rt.__initData = __initData3;
-  const animatedStyle2 = tmp2Result18.useAnimatedStyle(rt);
-  const obj8 = { showPrompts: sharedValue, withDelay: guildId(tmp3[26]).withDelay, withTiming: guildId(tmp3[33]).withTiming, Easing: guildId(tmp3[26]).Easing };
-  function lt() {
-    let num = 1;
-    if (sharedValue.get()) {
-      num = 0;
-    }
-    const obj = { opacity: null };
-    const obj2 = ReanimatedRexport;
-    const obj4 = { duration: 300, easing: null };
-    const Easing = ReanimatedRexport.Easing;
-    obj4.easing = Easing.out(ReanimatedRexport.Easing.ease);
-    obj.opacity = obj2.withDelay(200, timing.withTiming(num, obj4));
-    return obj;
-  }
-  const tmp2Result19 = guildId(tmp3[26]);
-  lt.__closure = { showPrompts: sharedValue, withDelay: guildId(tmp3[26]).withDelay, withTiming: guildId(tmp3[33]).withTiming, Easing: guildId(tmp3[26]).Easing };
-  lt.__workletHash = 13481450530727;
-  lt.__initData = __initData4;
-  const animatedStyle3 = tmp2Result19.useAnimatedStyle(lt);
-  const obj9 = { showPrompts: sharedValue, withDelay: guildId(tmp3[26]).withDelay, withTiming: guildId(tmp3[33]).withTiming, Easing: guildId(tmp3[26]).Easing };
-  function ct() {
+  const tmp2Result19 = guildId(tmp3[28]);
+  rt.__closure = { showPrompts: sharedValue, withDelay: guildId(tmp3[28]).withDelay, withTiming: guildId(tmp3[35]).withTiming, Easing: guildId(tmp3[28]).Easing };
+  rt.__workletHash = 4072878142282;
+  rt.__initData = __initData8;
+  const animatedStyle3 = tmp2Result19.useAnimatedStyle(rt);
+  const obj9 = { showPrompts: sharedValue, withDelay: guildId(tmp3[28]).withDelay, withTiming: guildId(tmp3[35]).withTiming, Easing: guildId(tmp3[28]).Easing };
+  function st() {
     let num = 0;
     if (sharedValue.get()) {
       num = 1;
@@ -386,12 +3972,12 @@ export default function GuildOnboardingPrompt(guildId) {
     obj5.transform = items;
     return obj5;
   }
-  const tmp2Result20 = guildId(tmp3[26]);
-  ct.__closure = { showPrompts: sharedValue, withDelay: guildId(tmp3[26]).withDelay, withTiming: guildId(tmp3[33]).withTiming, Easing: guildId(tmp3[26]).Easing, useReducedMotion: stateFromStores1 };
-  ct.__workletHash = 14018549800735;
-  ct.__initData = __initData5;
+  const tmp2Result20 = guildId(tmp3[28]);
+  st.__closure = { showPrompts: sharedValue, withDelay: guildId(tmp3[28]).withDelay, withTiming: guildId(tmp3[35]).withTiming, Easing: guildId(tmp3[28]).Easing, useReducedMotion: stateFromStores1 };
+  st.__workletHash = 6988420878955;
+  st.__initData = __initData9;
   const items12 = [navigation, currentPromptIdx, stateFromStoresArray, guildId, prompts, onClose, backShouldLeaveGuild, tmp8];
-  const animatedStyle4 = tmp2Result20.useAnimatedStyle(ct);
+  const animatedStyle4 = tmp2Result20.useAnimatedStyle(st);
   const layoutEffect = obj6.useLayoutEffect(() => {
     if (0 === currentPromptIdx) {
       if (!closure_7) {
@@ -400,8 +3986,8 @@ export default function GuildOnboardingPrompt(guildId) {
                 let transitionTo = prompts;
                 const obj2 = {};
                 let tmp = guildId;
-                const obj = currentPromptIdx(prompts[31]);
-                const merged = Object.assign(guildId(prompts[32]).collectGuildAnalyticsMetadata(closure_1_0));
+                const obj = currentPromptIdx(prompts[33]);
+                const merged = Object.assign(guildId(prompts[34]).collectGuildAnalyticsMetadata(closure_1_0));
                 obj2.step = 0;
                 obj2.skipped = true;
                 obj2.back = false;
@@ -423,7 +4009,7 @@ export default function GuildOnboardingPrompt(guildId) {
                 } else {
                   tmp5();
                 }
-                const obj3 = guildId(prompts[32]);
+                const obj3 = guildId(prompts[34]);
               })
         };
         navigation.setOptions(obj4);
@@ -432,8 +4018,8 @@ export default function GuildOnboardingPrompt(guildId) {
     if (0 !== currentPromptIdx) {
       let headerBackButton = NavigatorHeader.getHeaderBackButton(() => {
         const obj2 = {};
-        const obj = currentPromptIdx(prompts[31]);
-        const merged = Object.assign(guildId(prompts[32]).collectGuildAnalyticsMetadata(closure_1_0));
+        const obj = currentPromptIdx(prompts[33]);
+        const merged = Object.assign(guildId(prompts[34]).collectGuildAnalyticsMetadata(closure_1_0));
         obj2.step = step;
         obj2.skipped = false;
         obj2.back = true;
@@ -441,10 +4027,10 @@ export default function GuildOnboardingPrompt(guildId) {
         obj2.in_onboarding = true;
         obj2.is_final_step = false;
         obj.track(required1.GUILD_ONBOARDING_STEP_COMPLETED, obj2);
-        const obj3 = guildId(prompts[32]);
+        const obj3 = guildId(prompts[34]);
         const obj5 = {};
-        const obj4 = currentPromptIdx(prompts[31]);
-        const merged1 = Object.assign(guildId(prompts[32]).collectGuildAnalyticsMetadata(closure_1_0));
+        const obj4 = currentPromptIdx(prompts[33]);
+        const merged1 = Object.assign(guildId(prompts[34]).collectGuildAnalyticsMetadata(closure_1_0));
         obj5.step = step - 1;
         obj5.required = closure_1_2[step - 1].required;
         obj4.track(required1.GUILD_ONBOARDING_STEP_VIEWED, obj5);
@@ -453,8 +4039,8 @@ export default function GuildOnboardingPrompt(guildId) {
     }
     headerBackButton = NavigatorHeader.getHeaderBackButton(() => {
       const obj2 = {};
-      const obj = currentPromptIdx(prompts[31]);
-      const merged = Object.assign(guildId(prompts[32]).collectGuildAnalyticsMetadata(closure_1_0));
+      const obj = currentPromptIdx(prompts[33]);
+      const merged = Object.assign(guildId(prompts[34]).collectGuildAnalyticsMetadata(closure_1_0));
       obj2.step = 0;
       obj2.skipped = false;
       obj2.back = true;
@@ -477,7 +4063,7 @@ export default function GuildOnboardingPrompt(guildId) {
   if (prompts.length > 0) {
     tmp34Result = null;
     if (null != tmp11) {
-      function handleOnPress() {
+      handleOnPress = function handleOnPress() {
         if (!required1) {
           if (closure_17) {
             navigation.push(stateFromStoresArray.COMPLETED);
@@ -491,14 +4077,14 @@ export default function GuildOnboardingPrompt(guildId) {
             obj2.back = false;
             obj2.in_onboarding = true;
             obj2.is_final_step = false;
-            obj.track(constants.GUILD_ONBOARDING_STEP_COMPLETED, obj2);
+            obj.track(value2.GUILD_ONBOARDING_STEP_COMPLETED, obj2);
             if (currentPromptIdx < prompts.length - 1) {
               const obj4 = {};
               const tmp2Result = AnalyticsUtilsDefault;
               const merged1 = Object.assign(AppAnalyticsUtils.collectGuildAnalyticsMetadata(guildId));
               obj4.step = currentPromptIdx + 1;
               obj4.required = prompts[currentPromptIdx + 1].required;
-              tmp2Result.track(constants.GUILD_ONBOARDING_STEP_VIEWED, obj4);
+              tmp2Result.track(value2.GUILD_ONBOARDING_STEP_VIEWED, obj4);
               const tmp5Result = AppAnalyticsUtils;
             }
             if (currentPromptIdx + 1 < prompts.length) {
@@ -512,23 +4098,23 @@ export default function GuildOnboardingPrompt(guildId) {
             }
           }
         }
-      }
+      };
       const type = tmp11.type;
       if (stateFromStores2.MULTIPLE_CHOICE === type) {
         const obj14 = { guildId, currentPrompt: tmp11, lastPrompt: tmp18, currentPromptIndex: currentPromptIdx, numberOfPrompts: prompts.length, selectOption, handleOnPress };
-        tmp34Result = tmp34(tmp2(tmp3[36]).MultipleChoicePrompt, obj14);
+        tmp34Result = tmp34(tmp2(tmp3[37]).MultipleChoicePrompt, obj14);
       } else if (tmp36.DROPDOWN === type) {
         const obj15 = { guildId, currentPrompt: tmp11, lastPrompt: tmp18, currentPromptIndex: currentPromptIdx, numberOfPrompts: prompts.length, selectOption, handleOnPress };
-        tmp34Result = tmp34(tmp2(tmp3[36]).DropdownPrompt, obj15);
+        tmp34Result = tmp34(tmp2(tmp3[37]).DropdownPrompt, obj15);
       } else {
-        tmp2(tmp3[37]).assertNever(tmp11.type);
-        const tmp2Result21 = tmp2(tmp3[37]);
+        tmp2(tmp3[38]).assertNever(tmp11.type);
+        const tmp2Result21 = tmp2(tmp3[38]);
       }
     }
   }
   obj13.children = tmp34Result;
-  rect.children = guildSplashURL(currentPromptIdx(tmp3[26]).View, obj13);
-  const items15 = [guildSplashURL(guildId(tmp3[35]).SafeAreaPaddingView, rect), ];
+  rect.children = guildSplashURL(currentPromptIdx(tmp3[28]).View, obj13);
+  const items15 = [guildSplashURL(guildId(tmp3[39]).SafeAreaPaddingView, rect), ];
   const obj16 = { style: stateFromStores1.absoluteFill, pointerEvents: "none", children: null };
   const obj17 = { style: null, pointerEvents: "none", children: null };
   const items16 = [, ];
@@ -540,28 +4126,28 @@ export default function GuildOnboardingPrompt(guildId) {
   let tmp34Result2 = null;
   if (null != guildSplashURL) {
     const obj19 = { splashUrl: guildSplashURL, color: tmp19[0] };
-    tmp34Result2 = tmp34(BackgroundImageGradient, obj19);
+    tmp34Result2 = tmp34(closure_25, obj19);
   }
   const items18 = [tmp34Result2, ];
   const obj20 = { style: tmp.darkColorGradient, start: null, end: null, colors: null };
-  const obj10 = { showPrompts: sharedValue, withDelay: guildId(tmp3[26]).withDelay, withTiming: guildId(tmp3[33]).withTiming, Easing: guildId(tmp3[26]).Easing, useReducedMotion: stateFromStores1 };
-  obj20.start = guildId(tmp3[22]).VerticalGradient.START;
-  obj20.end = guildId(tmp3[22]).VerticalGradient.END;
-  const tmp6Result2 = currentPromptIdx(tmp3[21]);
+  const obj10 = { showPrompts: sharedValue, withDelay: guildId(tmp3[28]).withDelay, withTiming: guildId(tmp3[35]).withTiming, Easing: guildId(tmp3[28]).Easing, useReducedMotion: stateFromStores1 };
+  obj20.start = guildId(tmp3[24]).VerticalGradient.START;
+  obj20.end = guildId(tmp3[24]).VerticalGradient.END;
+  const tmp6Result2 = currentPromptIdx(tmp3[23]);
   const items19 = [guildId(tmp3[19]).hexWithOpacity(currentPromptIdx(tmp3[17]).unsafe_rawColors.PRIMARY_800, 0.5), currentPromptIdx(tmp3[17]).unsafe_rawColors.PRIMARY_800];
   obj20.colors = items19;
   items18[1] = guildSplashURL(tmp6Result2, obj20);
   obj18.children = items18;
-  const items20 = [closure_21(currentPromptIdx(tmp3[26]).View, obj18), , ];
-  const obj21 = { style: null, children: guildSplashURL(currentPromptIdx(tmp3[38]), { source: guildId.landingAnimation, autoPlay: !stateFromStores1, style: { width: "100%" } }) };
+  const items20 = [closure_21(currentPromptIdx(tmp3[28]).View, obj18), , ];
+  const obj21 = { style: null, children: guildSplashURL(currentPromptIdx(tmp3[40]), { source: guildId.landingAnimation, autoPlay: !stateFromStores1, style: { width: "100%" } }) };
   const items21 = [tmp.artWrapper, animatedStyle];
   obj21.style = items21;
-  items20[1] = guildSplashURL(currentPromptIdx(tmp3[26]).View, obj21);
+  items20[1] = guildSplashURL(currentPromptIdx(tmp3[28]).View, obj21);
   const obj23 = { style: null, children: null };
   const items22 = [tmp.landingBody, animatedStyle1];
   obj23.style = items22;
   const obj24 = { style: tmp.subtitle, variant: "text-md/semibold", color: "text-overlay-light", children: null };
-  const intl = tmp2(tmp3[40]).intl;
+  const intl = tmp2(tmp3[41]).intl;
   let str;
   if (stateFromStores2 != null) {
     str = stateFromStores2.name;
@@ -569,26 +4155,26 @@ export default function GuildOnboardingPrompt(guildId) {
   if (str == null) {
     str = "";
   }
-  obj24.children = intl.format(guildId(tmp3[40]).t.O2bQlD, { guildName: str });
-  const items23 = [guildSplashURL(guildId(tmp3[39]).Text, obj24), ];
+  obj24.children = intl.format(guildId(tmp3[41]).t.O2bQlD, { guildName: str });
+  const items23 = [guildSplashURL(guildId(tmp3[42]).Text, obj24), ];
   const obj25 = { style: tmp.onboardingTitle, accessibilityRole: "header", variant: "heading-xl/semibold", color: "text-overlay-light", children: null };
-  const intl2 = tmp2(tmp3[40]).intl;
-  obj25.children = intl2.string(guildId(tmp3[40]).t["Alcl/e"]);
-  items23[1] = guildSplashURL(guildId(tmp3[39]).Text, obj25);
+  const intl2 = tmp2(tmp3[41]).intl;
+  obj25.children = intl2.string(guildId(tmp3[41]).t["Alcl/e"]);
+  items23[1] = guildSplashURL(guildId(tmp3[42]).Text, obj25);
   obj23.children = items23;
-  items20[2] = closure_21(currentPromptIdx(tmp3[26]).View, obj23);
+  items20[2] = closure_21(currentPromptIdx(tmp3[28]).View, obj23);
   obj17.children = items20;
-  const items24 = [closure_21(currentPromptIdx(tmp3[26]).View, obj17), ];
+  const items24 = [closure_21(closure_7, obj17), ];
   const obj26 = { style: null, pointerEvents: "auto", children: null };
-  const items25 = [tmp.onboardingPolicy, animatedStyle2, { bottom: currentPromptIdx(prompts[24])().bottom }];
+  const items25 = [tmp.onboardingPolicy, animatedStyle2, { bottom: currentPromptIdx(prompts[26])().bottom }];
   obj26.style = items25;
   const obj27 = { style: tmp.onboardingPolicyText, variant: "heading-sm/normal", color: "text-default", children: null };
-  const intl3 = tmp2(tmp3[40]).intl;
-  obj27.children = intl3.format(guildId(tmp3[40]).t.kI6UoD, { privacyLink: constants2.PRIVACY });
-  obj26.children = guildSplashURL(guildId(tmp3[39]).Text, obj27);
-  items24[1] = guildSplashURL(currentPromptIdx(tmp3[26]).View, obj26);
+  const intl3 = tmp2(tmp3[41]).intl;
+  obj27.children = intl3.format(guildId(tmp3[41]).t.kI6UoD, { privacyLink: constants2.PRIVACY });
+  obj26.children = guildSplashURL(guildId(tmp3[42]).Text, obj27);
+  items24[1] = guildSplashURL(currentPromptIdx(tmp3[28]).View, obj26);
   obj16.children = items24;
   items15[1] = closure_21(closure_7, obj16);
   obj12.children = items15;
   return closure_21(closure_7, obj12);
-};
+});

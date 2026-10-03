@@ -1,9 +1,9 @@
-// === Module 7333: VideoQualityStats ===
+// === Module 7232: VideoQualityStats ===
 
-// Module 7333 (VideoQualityStats)
-import TimeUtils from "TimeUtils" /* 4874 */;
-import Histogram from "Histogram" /* 7334 */;
-import SystemResourcesDefault from "SystemResources" /* 7340 */;
+// Module 7232 (VideoQualityStats)
+import TimeUtils from "TimeUtils" /* 4919 */;
+import Histogram from "Histogram" /* 7233 */;
+import SystemResourcesDefault from "SystemResources" /* 7239 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

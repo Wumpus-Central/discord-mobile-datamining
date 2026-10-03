@@ -1,9 +1,9 @@
-// === Module 5937: ExpandedGuildFolderStore ===
+// === Module 5617: ExpandedGuildFolderStore ===
 
-// Module 5937 (ExpandedGuildFolderStore)
+// Module 5617 (ExpandedGuildFolderStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 
 let set = new Set();
 const PersistedStore = initializeDefault.PersistedStore;
@@ -23,8 +23,8 @@ prototype["getState"] = function getState() {
 prototype["getExpandedFolders"] = function getExpandedFolders() {
   return set;
 };
-prototype["isFolderExpanded"] = function isFolderExpanded(folderId) {
-  return set.has(folderId);
+prototype["isFolderExpanded"] = function isFolderExpanded(PENDING_JOIN_REQUESTS_FOLDER) {
+  return set.has(PENDING_JOIN_REQUESTS_FOLDER);
 };
 ExpandedGuildFolderStore.displayName = "ExpandedGuildFolderStore";
 ExpandedGuildFolderStore.persistKey = "ExpandedGuildFolderStore";

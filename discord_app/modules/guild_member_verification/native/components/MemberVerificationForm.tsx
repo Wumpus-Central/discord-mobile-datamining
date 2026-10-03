@@ -1,34 +1,358 @@
-// === Module 6094: MemberVerificationForm ===
+// === Module 5983: MemberVerificationForm ===
 
-// Module 6094 (MemberVerificationForm)
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4687 */;
+// Module 5983 (MemberVerificationForm)
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4702 */;
+import useInitialValueDefault from "useInitialValue" /* 5984 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MemberVerificationFormStore from "MemberVerificationFormStore" /* 6070 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 5963 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const View = fn(17).View;
-let closure_8 = fn(6070).NO_MEMBER_VERIFICATION_FORM;
-const VerificationLevels = fn(1074).VerificationLevels;
+let View = fn(17).View;
+let closure_8 = fn(5963).NO_MEMBER_VERIFICATION_FORM;
+const VerificationLevels = fn(1085).VerificationLevels;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let closure_12 = createStyles.createStyles({ container: { flex: 1, flexDirection: "column", alignItems: "stretch", paddingHorizontal: 16, paddingVertical: 0 }, submitButton: { marginTop: 12, marginBottom: 12 }, error: { alignSelf: "center", paddingVertical: 16, fontSize: 16 } });
+let ReactCompilerGating = fn(558);
+let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
+  _require = id;
+  const cResult = require("c").c(3);
+  let obj = require("c");
+  const initialVerification = require("MemberVerificationModalHooks").useInitialVerification(id.id);
+  if (cResult[0] === id.verificationLevel) {
+    let phone;
+    if (initialVerification != null) {
+      phone = initialVerification.phone;
+    }
+    if (cResult[1] === phone) {
+      let tmp6 = cResult[2];
+    }
+    return initialVerification(5984)(tmp6);
+  }
+  cResult[0] = id.verificationLevel;
+  let phone1;
+  if (initialVerification != null) {
+    phone1 = initialVerification.phone;
+  }
+  const fn = function t() {
+    if (verificationLevel.verificationLevel === VerificationLevels.VERY_HIGH) {
+      let phone;
+      if (initialVerification != null) {
+        phone = initialVerification.phone;
+      }
+      let tmp5 = null;
+      if (!phone) {
+        const obj2 = { field_type: MemberVerificationTypes.VerificationFormFieldTypes.VERIFICATION, platform: MemberVerificationTypes.UserVerificationFieldPlatforms.PHONE };
+        tmp5 = obj2;
+      }
+      let obj = tmp5;
+    } else {
+      obj = { field_type: MemberVerificationTypes.VerificationFormFieldTypes.VERIFICATION, platform: MemberVerificationTypes.UserVerificationFieldPlatforms.EMAIL };
+    }
+    return obj;
+  };
+  cResult[1] = phone1;
+  cResult[2] = fn;
+  tmp6 = fn;
+  let obj2 = require("MemberVerificationModalHooks");
+}) : ((id) => {
+  _require = id;
+  importDefault = require("MemberVerificationModalHooks").useInitialVerification(id.id);
+  return useInitialValueDefault(() => {
+    if (verificationLevel.verificationLevel === VerificationLevels.VERY_HIGH) {
+      phone = undefined;
+      if (phone != null) {
+        phone = phone.phone;
+      }
+      let tmp5 = null;
+      if (!phone) {
+        const obj2 = { field_type: MemberVerificationTypes.VerificationFormFieldTypes.VERIFICATION, platform: MemberVerificationTypes.UserVerificationFieldPlatforms.PHONE };
+        tmp5 = obj2;
+      }
+      let obj = tmp5;
+    } else {
+      obj = { field_type: MemberVerificationTypes.VerificationFormFieldTypes.VERIFICATION, platform: MemberVerificationTypes.UserVerificationFieldPlatforms.EMAIL };
+    }
+    return obj;
+  });
+});
+ReactCompilerGating = fn(558);
+let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
+  const cResult = id(stateFromStores[12]).c(21);
+  id = id.id;
+  const tmp4 = closure_13(id);
+  closure_1 = tmp4;
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    let items = [MemberVerificationFormStore];
+    cResult[0] = items;
+    let first = items;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] !== id) {
+    const fn = function s() {
+      return MemberVerificationFormStore.get(id);
+    };
+    const items1 = [id];
+    cResult[1] = id;
+    cResult[2] = fn;
+    cResult[3] = items1;
+    let tmp8 = items1;
+    let tmp7 = fn;
+  } else {
+    tmp7 = cResult[2];
+    tmp8 = cResult[3];
+  }
+  const obj = id(stateFromStores[12]);
+  stateFromStores = id(stateFromStores[16]).useStateFromStores(first, tmp7, tmp8);
+  let formFields1;
+  if (stateFromStores != null) {
+    formFields1 = stateFromStores.formFields;
+  }
+  if (cResult[4] !== formFields1) {
+    let someResult;
+    if (stateFromStores != null) {
+      let formFields = stateFromStores.formFields;
+      if (formFields != null) {
+        someResult = formFields.some((field_type) => field_type.field_type !== id(stateFromStores[14]).VerificationFormFieldTypes.TERMS);
+      }
+    }
+    let formFields2;
+    if (stateFromStores != null) {
+      formFields2 = stateFromStores.formFields;
+    }
+    cResult[4] = formFields2;
+    cResult[5] = someResult;
+    let tmp11 = someResult;
+  } else {
+    tmp11 = cResult[5];
+  }
+  closure_3 = tmp11;
+  if (cResult[6] === tmp11) {
+    if (cResult[7] === tmp4) {
+      let formFields3;
+      if (stateFromStores != null) {
+        formFields3 = stateFromStores.formFields;
+      }
+      if (cResult[8] === formFields3) {
+        let tmp15 = cResult[9];
+      }
+      _slicedToArray = tmp15;
+      noop = noop.useRef(tmp15);
+      if (cResult[10] !== tmp15) {
+        const fn2 = function _() {
+          closure_5.current = current;
+        };
+        cResult[10] = tmp15;
+        cResult[11] = fn2;
+        let tmp17 = fn2;
+      } else {
+        tmp17 = cResult[11];
+      }
+      const effect = obj3.useEffect(tmp17);
+      if (cResult[12] !== tmp15) {
+        const tmp15Result = tmp15();
+        cResult[12] = tmp15;
+        cResult[13] = tmp15Result;
+        let tmp19 = tmp15Result;
+      } else {
+        tmp19 = cResult[13];
+      }
+      [tmp23, tmp24] = noop.useState(tmp19);
+      View = tmp24;
+      if (cResult[14] !== stateFromStores) {
+        class R {
+          constructor() {
+            if (null != closure_2) {
+              tmp = closure_6;
+              tmp2 = closure_5;
+              tmp3 = closure_6(closure_5.current());
+            }
+            return;
+          }
+        }
+        const items2 = [stateFromStores];
+        cResult[14] = stateFromStores;
+        cResult[15] = R;
+        cResult[16] = items2;
+        let tmp26 = items2;
+      } else {
+        class R {
+          constructor() {
+            if (null != closure_2) {
+              tmp = closure_6;
+              tmp2 = closure_5;
+              tmp3 = closure_6(closure_5.current());
+            }
+            return;
+          }
+        }
+        tmp26 = cResult[16];
+      }
+      const effect1 = obj3.useEffect(R, tmp26);
+      if (cResult[17] === tmp11) {
+        class R {
+          constructor() {
+            if (null != closure_2) {
+              tmp = closure_6;
+              tmp2 = closure_5;
+              tmp3 = closure_6(closure_5.current());
+            }
+            return;
+          }
+        }
+      }
+      const items3 = [tmp23, tmp24, stateFromStores, tmp11];
+      cResult[17] = tmp11;
+      cResult[18] = tmp23;
+      cResult[19] = stateFromStores;
+      cResult[20] = items3;
+      const tmp22 = _slicedToArray(noop.useState(tmp19), 2);
+    }
+  }
+  cResult[6] = tmp11;
+  cResult[7] = tmp4;
+  if (stateFromStores != null) {
+    class R {
+      constructor() {
+        if (null != closure_2) {
+          tmp = closure_6;
+          tmp2 = closure_5;
+          tmp3 = closure_6(closure_5.current());
+        }
+        return;
+      }
+    }
+  }
+  class E {
+    constructor() {
+      if (!closure_3) {
+        tmp2 = null;
+        if (null != closure_1) {
+          items = [];
+          items[0] = tmp;
+          formFields = undefined;
+          if (closure_2 != null) {
+            formFields = closure_2.formFields;
+          }
+          if (formFields == null) {
+            formFields = [];
+          }
+          num = 1;
+          tmp3 = items;
+          tmp4 = formFields;
+          arraySpreadResult = HermesBuiltin.arraySpread(formFields, 1);
+        }
+        return items;
+      }
+      formFields1 = undefined;
+      if (closure_2 != null) {
+        formFields1 = closure_2.formFields;
+      }
+      if (formFields1 == null) {
+        formFields1 = [];
+      }
+      return;
+    }
+  }
+  cResult[8] = undefined;
+  cResult[9] = E;
+  tmp15 = E;
+  const tmpResult = id(stateFromStores[16]);
+}) : ((id) => {
+  function getFormFields() {
+    if (!memo) {
+      if (null != closure_1) {
+        const items = [tmp];
+        let formFields;
+        if (stateFromStores != null) {
+          formFields = stateFromStores.formFields;
+        }
+        if (formFields == null) {
+          formFields = [];
+        }
+        HermesBuiltin.arraySpread(formFields, 1);
+      }
+      return items;
+    }
+    let formFields1;
+    if (stateFromStores != null) {
+      formFields1 = stateFromStores.formFields;
+    }
+    if (formFields1 == null) {
+      formFields1 = [];
+    }
+  }
+  id = id.id;
+  const tmp = closure_13(id);
+  closure_1 = tmp;
+  let items = [MemberVerificationFormStore];
+  const items1 = [id];
+  stateFromStores = id(stateFromStores[16]).useStateFromStores(items, () => MemberVerificationFormStore.get(id), items1);
+  let formFields;
+  if (stateFromStores != null) {
+    formFields = stateFromStores.formFields;
+  }
+  const items2 = [formFields];
+  const memo = noop.useMemo(() => {
+    let someResult;
+    if (stateFromStores != null) {
+      const formFields = stateFromStores.formFields;
+      if (formFields != null) {
+        someResult = formFields.some((field_type) => field_type.field_type !== id(stateFromStores[14]).VerificationFormFieldTypes.TERMS);
+      }
+    }
+    return someResult;
+  }, items2);
+  noop = obj2.useRef(getFormFields);
+  const effect = obj2.useEffect(() => {
+    closure_5.current = getFormFields;
+  });
+  if (!memo) {
+    if (null != tmp) {
+      const items3 = [tmp];
+      let formFields1;
+      if (stateFromStores != null) {
+        formFields1 = stateFromStores.formFields;
+      }
+      if (formFields1 == null) {
+        formFields1 = [];
+      }
+      HermesBuiltin.arraySpread(formFields1, 1);
+    }
+    const tmp11 = getFormFields(tmp6(items3), 2);
+    closure_6 = tmp12;
+    const items4 = [stateFromStores];
+    const effect1 = obj2.useEffect(() => {
+      if (null != stateFromStores) {
+        closure_6(ref.current());
+      }
+    }, items4);
+    const items5 = [tmp11[0], tmp11[1], stateFromStores, memo];
+    return items5;
+  }
+  let formFields2;
+  if (stateFromStores != null) {
+    formFields2 = stateFromStores.formFields;
+  }
+  if (formFields2 == null) {
+    formFields2 = [];
+  }
+});
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/native/components/MemberVerificationForm.tsx");
 
 export default function MemberVerificationForm(guild) {
   guild = guild.guild;
   ({ onSuccess: importDefault, onClose } = guild);
-  noop = undefined;
-  closure_6 = undefined;
-  closure_7 = undefined;
+  let formFields;
   c8 = undefined;
   c9 = undefined;
-  let memo1;
   closure_11 = async function _handleSubmit() {
     if (c6 === 2) {
       c6 = 3;
@@ -40,7 +364,7 @@ export default function MemberVerificationForm(guild) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -54,20 +378,20 @@ export default function MemberVerificationForm(guild) {
             const obj5 = { value, done: true };
             return obj5;
           } else {
-            phone = tmp7;
+            closure_1 = tmp7;
             closure_129_0 = undefined;
             closure_129_1 = undefined;
-            if (null != first) {
-              if (memo1) {
+            if (null != formFields) {
+              if (memo) {
                 (function showIncompleteToast() {
                   const obj2 = { key: "MEMBER_VERIFICATION_FORM_INCOMPLETE", content: null, icon: null };
-                  const intl = closure_1_0(1115).intl;
-                  obj2.content = intl.string(closure_1_0(1115).t.StC497);
-                  obj2.icon = closure_1_1(6095);
-                  closure_1_1(4557).open(obj2);
+                  const intl = closure_1_0(1126).intl;
+                  obj2.content = intl.string(closure_1_0(1126).t.StC497);
+                  obj2.icon = closure_1_1(4807);
+                  closure_1_1(4568).open(obj2);
                 })();
                 c6 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               } else {
                 VerificationLevels(null);
                 closure_2_8(true);
@@ -77,12 +401,12 @@ export default function MemberVerificationForm(guild) {
                 }
                 const obj6 = {};
                 const merged = Object.assign(guild);
-                obj6.formFields = guild(tmp3[15]).removeInternalFields(tmp60);
+                obj6.formFields = guild(tmp3[17]).removeInternalFields(tmp60);
                 c4 = 1;
-                const obj3 = guild(tmp3[15]);
+                const obj3 = guild(tmp3[17]);
                 c5 = 2;
                 c6 = 1;
-                const obj7 = { value: phone(tmp3[16]).submitVerificationForm(id.id, obj6), done: false };
+                const obj7 = { value: closure_1(tmp3[18]).submitVerificationForm(id.id, obj6), done: false };
                 return obj7;
               }
             } else {
@@ -150,208 +474,104 @@ export default function MemberVerificationForm(guild) {
     }
   };
   const tmp = closure_12();
-  const userVerificationState = guild(onClose[11]).useUserVerificationState();
-  closure_129_3 = undefined;
-  closure_129_5 = undefined;
-  closure_129_6 = undefined;
-  function getFormFields() {
-    if (!userVerificationState) {
-      if (null != phone) {
-        const items = [tmp];
-        let formFields;
-        if (onClose != null) {
-          formFields = onClose.formFields;
-        }
-        if (formFields == null) {
-          formFields = [];
-        }
-        HermesBuiltin.arraySpread(formFields, 1);
+  const userVerificationState = guild(onClose[13]).useUserVerificationState();
+  const tmp5 = formFields(closure_14(guild), 4);
+  formFields = tmp5[0];
+  noop = tmp5[1];
+  closure_6 = tmp7;
+  closure_7 = tmp8;
+  let obj = guild(onClose[13]);
+  [tmp10, c8] = formFields(noop.useState(false), 2);
+  let tmp9 = formFields(noop.useState(false), 2);
+  [tmp12, c9] = formFields(noop.useState(null), 2);
+  let items = [onClose, tmp5[2]];
+  const effect = noop.useEffect(() => {
+    if (closure_6 === closure_8) {
+      if (onClose != null) {
+        tmp(false);
       }
-      return items;
     }
-    let formFields1;
-    if (onClose != null) {
-      formFields1 = onClose.formFields;
-    }
-    if (formFields1 == null) {
-      formFields1 = [];
-    }
-  }
-  closure_129_4 = getFormFields;
-  const id = guild.id;
-  closure_129_0 = id;
-  closure_130_0 = guild;
-  let obj = guild(onClose[11]);
-  closure_130_1 = guild(onClose[11]).useInitialVerification(guild.id);
-  const tmp6 = require("useInitialValue")(() => {
-    if (guild.verificationLevel === VerificationLevels.VERY_HIGH) {
-      phone = undefined;
-      if (phone != null) {
-        phone = phone.phone;
-      }
-      let tmp5 = null;
-      if (!phone) {
-        const obj2 = { field_type: MemberVerificationTypes.VerificationFormFieldTypes.VERIFICATION, platform: MemberVerificationTypes.UserVerificationFieldPlatforms.PHONE };
-        tmp5 = obj2;
-      }
-      let obj = tmp5;
-    } else {
-      obj = { field_type: MemberVerificationTypes.VerificationFormFieldTypes.VERIFICATION, platform: MemberVerificationTypes.UserVerificationFieldPlatforms.EMAIL };
-    }
-    return obj;
-  });
-  closure_129_1 = tmp6;
-  let obj2 = guild(onClose[11]);
-  let items = [closure_7];
-  const items1 = [id];
-  const stateFromStores = guild(onClose[14]).useStateFromStores(items, () => MemberVerificationFormStore.get(guild), items1);
-  closure_129_2 = stateFromStores;
-  let formFields;
-  if (stateFromStores != null) {
-    formFields = stateFromStores.formFields;
-  }
-  const items2 = [formFields];
+  }, items);
+  const items1 = [guild.verificationLevel, tmp5[3], userVerificationState, formFields];
   const memo = noop.useMemo(() => {
     let someResult;
-    if (onClose != null) {
-      const formFields = onClose.formFields;
-      if (formFields != null) {
-        someResult = formFields.some((field_type) => field_type.field_type !== guild(onClose[13]).VerificationFormFieldTypes.TERMS);
-      }
+    if (first != null) {
+      someResult = first.some((item) => !guild(onClose[17]).isValidFormResponse(item));
     }
-    return someResult;
-  }, items2);
-  closure_129_3 = memo;
-  closure_129_5 = obj4.useRef(getFormFields);
-  const effect = obj4.useEffect(() => {
-    closure_5.current = current;
-  });
-  if (!memo) {
-    if (null != tmp6) {
-      const items3 = [tmp6];
-      let formFields1;
-      if (stateFromStores != null) {
-        formFields1 = stateFromStores.formFields;
-      }
-      if (formFields1 == null) {
-        formFields1 = [];
-      }
-      HermesBuiltin.arraySpread(formFields1, 1);
-    }
-    const tmp16 = formFields(tmp11(items3), 2);
-    closure_129_6 = tmp17;
-    const items4 = [stateFromStores];
-    const effect1 = obj4.useEffect(() => {
-      if (null != onClose) {
-        closure_6(ref.current());
-      }
-    }, items4);
-    const items5 = [tmp16[0], tmp16[1], stateFromStores, memo];
-    const tmp19 = formFields(items5, 4);
-    formFields = tmp19[0];
-    noop = tmp19[1];
-    closure_6 = tmp21;
-    closure_7 = tmp22;
-    [tmp24, c8] = formFields(obj4.useState(false), 2);
-    const tmp23 = formFields(obj4.useState(false), 2);
-    [tmp26, c9] = formFields(obj4.useState(null), 2);
-    const items6 = [onClose, tmp19[2]];
-    const effect2 = obj4.useEffect(() => {
-      if (closure_6 === closure_8) {
-        if (onClose != null) {
-          tmp(false);
-        }
-      }
-    }, items6);
-    const items7 = [guild.verificationLevel, tmp19[3], userVerificationState, formFields];
-    memo1 = obj4.useMemo(() => {
-      let someResult;
-      if (first != null) {
-        someResult = first.some((item) => !guild(onClose[15]).isValidFormResponse(item));
-      }
-      if (someResult) {
-        return true;
-      } else if (closure_7) {
-        return false;
+    if (someResult) {
+      return true;
+    } else if (closure_7) {
+      return false;
+    } else {
+      const verificationLevel = guild.verificationLevel;
+      if (VerificationLevels.VERY_HIGH === verificationLevel) {
+        return !userVerificationState[MemberVerificationTypes.UserVerificationFieldPlatforms.PHONE];
       } else {
-        const verificationLevel = guild.verificationLevel;
-        if (VerificationLevels.VERY_HIGH === verificationLevel) {
-          return !userVerificationState[MemberVerificationTypes.UserVerificationFieldPlatforms.PHONE];
-        } else {
-          if (VerificationLevels.HIGH !== verificationLevel) {
-            if (VerificationLevels.MEDIUM !== verificationLevel) {
-              if (VerificationLevels.LOW !== verificationLevel) {
-                const NONE = VerificationLevels.NONE;
-                return false;
-              }
+        if (VerificationLevels.HIGH !== verificationLevel) {
+          if (VerificationLevels.MEDIUM !== verificationLevel) {
+            if (VerificationLevels.LOW !== verificationLevel) {
+              const NONE = VerificationLevels.NONE;
+              return false;
             }
           }
-          const tmp8 = userVerificationState[MemberVerificationTypes.UserVerificationFieldPlatforms.EMAIL];
-          let tmp9 = !tmp8;
-          if (!tmp8) {
-            tmp9 = !userVerificationState[MemberVerificationTypes.UserVerificationFieldPlatforms.PHONE];
-          }
-          return tmp9;
         }
-      }
-    }, items7);
-    if (null == formFields) {
-      return null;
-    } else {
-      let obj5 = { style: tmp.container, children: null };
-      let obj6 = {
-        rulesChannelId: guild.rulesChannelId,
-        formFields,
-        onChange: function handleFormChange(arg0, response) {
-              if (null != first) {
-                const items = [];
-                const arraySpreadResult = HermesBuiltin.arraySpread(first.slice(0, arg0), 0);
-                const obj = {};
-                const merged = Object.assign(tmp3);
-                obj.response = response;
-                items[arraySpreadResult] = obj;
-                HermesBuiltin.arraySpread(first.slice(arg0 + 1), arraySpreadResult + 1);
-                ref(items);
-              }
-            },
-        verification: userVerificationState
-      };
-      const items8 = [memo1(require("MemberVerificationFormRenderer"), obj6), , ];
-      let tmp32Result = null;
-      if (null != tmp26) {
-        let obj7 = { style: tmp.error, children: tmp26 };
-        tmp32Result = tmp32(require("FreeFormErrorLabel"), obj7);
-      }
-      items8[1] = tmp32Result;
-      const obj8 = { style: tmp.submitButton, children: null };
-      const obj9 = { variant: "primary", size: "md", grow: true, text: null, loading: null, disabled: null, onPress: null };
-      let intl = tmp2(onClose[9]).intl;
-      obj9.text = intl.string(tmp2(onClose[9]).t["r8/DT+"]);
-      obj9.loading = tmp24;
-      obj9.disabled = tmp24;
-      obj9.onPress = function handleSubmit() {
-        const self = this;
-        const apply = closure_11.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
+        const tmp8 = userVerificationState[MemberVerificationTypes.UserVerificationFieldPlatforms.EMAIL];
+        let tmp9 = !tmp8;
+        if (!tmp8) {
+          tmp9 = !userVerificationState[MemberVerificationTypes.UserVerificationFieldPlatforms.PHONE];
         }
-        return applyArgumentsResult;
-      };
-      obj8.children = memo1(tmp2(onClose[19]).Button, obj9);
-      items8[2] = memo1(closure_6, obj8);
-      obj5.children = items8;
-      return closure_11(closure_6, obj5);
+        return tmp9;
+      }
     }
-    const tmp25 = formFields(obj4.useState(null), 2);
+  }, items1);
+  if (null == formFields) {
+    return null;
+  } else {
+    let obj2 = { style: tmp.container, children: null };
+    let obj3 = {
+      rulesChannelId: guild.rulesChannelId,
+      formFields,
+      onChange: function handleFormChange(arg0, response) {
+          if (null != first) {
+            const items = [];
+            const arraySpreadResult = HermesBuiltin.arraySpread(first.slice(0, arg0), 0);
+            const obj = {};
+            const merged = Object.assign(tmp3);
+            obj.response = response;
+            items[arraySpreadResult] = obj;
+            HermesBuiltin.arraySpread(first.slice(arg0 + 1), arraySpreadResult + 1);
+            closure_5(items);
+          }
+        },
+      verification: userVerificationState
+    };
+    const items2 = [memo(require("MemberVerificationFormRenderer"), obj3), , ];
+    let tmp18Result = null;
+    if (null != tmp12) {
+      const obj4 = { style: tmp.error, children: tmp12 };
+      tmp18Result = tmp18(require("FreeFormErrorLabel"), obj4);
+    }
+    items2[1] = tmp18Result;
+    let obj5 = { style: tmp.submitButton, children: null };
+    let obj6 = { variant: "primary", size: "md", grow: true, text: null, loading: null, disabled: null, onPress: null };
+    let intl = tmp2(onClose[9]).intl;
+    obj6.text = intl.string(tmp2(onClose[9]).t["r8/DT+"]);
+    obj6.loading = tmp10;
+    obj6.disabled = tmp10;
+    obj6.onPress = function handleSubmit() {
+      const self = this;
+      const apply = closure_11.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+      return applyArgumentsResult;
+    };
+    obj5.children = memo(tmp2(onClose[21]).Button, obj6);
+    items2[2] = memo(closure_6, obj5);
+    obj2.children = items2;
+    return closure_11(closure_6, obj2);
   }
-  let formFields2;
-  if (stateFromStores != null) {
-    formFields2 = stateFromStores.formFields;
-  }
-  if (formFields2 == null) {
-    formFields2 = [];
-  }
-  let obj3 = guild(onClose[14]);
+  const tmp11 = formFields(noop.useState(null), 2);
 };

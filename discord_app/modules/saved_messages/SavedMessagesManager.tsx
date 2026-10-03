@@ -1,10 +1,10 @@
-// === Module 17505: SavedMessagesManager ===
+// === Module 17594: SavedMessagesManager ===
 
-// Module 17505 (SavedMessagesManager)
-import ForLaterExperiment from "ForLaterExperiment" /* 7449 */;
-import SavedMessagesActions from "SavedMessagesActions" /* 11418 */;
+// Module 17594 (SavedMessagesManager)
+import ForLaterExperiment from "ForLaterExperiment" /* 7485 */;
+import SavedMessagesActions from "SavedMessagesActions" /* 11335 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6725 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
 
 require = fn;
 let closure_3 = async function _refreshSavedMessages() {
@@ -18,7 +18,7 @@ let closure_3 = async function _refreshSavedMessages() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {

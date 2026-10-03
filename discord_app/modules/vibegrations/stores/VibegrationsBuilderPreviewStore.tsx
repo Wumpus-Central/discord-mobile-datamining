@@ -1,8 +1,8 @@
-// === Module 14233: VibegrationsBuilderPreviewStore ===
+// === Module 14301: VibegrationsBuilderPreviewStore ===
 
-// Module 14233 (VibegrationsBuilderPreviewStore)
+// Module 14301 (VibegrationsBuilderPreviewStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
 
 let applicationId = null;
 let enabled = false;

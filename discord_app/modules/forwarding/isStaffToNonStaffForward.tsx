@@ -1,11 +1,11 @@
-// === Module 11395: isStaffToNonStaffForward ===
+// === Module 11312: isStaffToNonStaffForward ===
 
-// Module 11395 (isStaffToNonStaffForward)
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import UserStore from "UserStore" /* 1372 */;
+// Module 11312 (isStaffToNonStaffForward)
+import ChannelStore from "ChannelStore" /* 2051 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import UserStore from "UserStore" /* 1377 */;
 
-const GuildFeatures = fn(1074).GuildFeatures;
+const GuildFeatures = fn(1085).GuildFeatures;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forwarding/isStaffToNonStaffForward.tsx");
 
@@ -26,7 +26,7 @@ export default function isStaffToNonStaffForward(channel_id, arr) {
           return null != user && user.isStaff();
         });
       } else {
-        let guild = GuildStore.getGuild(channel.guild_id);
+        guild = GuildStore.getGuild(channel.guild_id);
         everyResult = null != guild;
         if (everyResult) {
           let features = guild.features;

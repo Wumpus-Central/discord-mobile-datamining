@@ -1,11 +1,11 @@
-// === Module 10658: getChannelMoveBlocker ===
+// === Module 10732: getChannelMoveBlocker ===
 
-// Module 10658 (getChannelMoveBlocker)
-import FavoritesUtils from "FavoritesUtils" /* 2069 */;
-import isOptInEnabled from "isOptInEnabled" /* 7143 */;
-import canManageChannelList from "canManageChannelList" /* 10659 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5026 */;
+// Module 10732 (getChannelMoveBlocker)
+import FavoritesUtils from "FavoritesUtils" /* 2077 */;
+import isOptInEnabled from "isOptInEnabled" /* 7046 */;
+import canManageChannelList from "canManageChannelList" /* 10733 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5071 */;
 
 const canManageChannelListDefault = canManageChannelList;
 
@@ -17,7 +17,7 @@ export default function getChannelMoveBlocker(getGuildId, guildId) {
   if (obj.isFavoritesGuildId(guildId)) {
     return null;
   } else {
-    const guild = GuildStore.getGuild(getGuildId.getGuildId());
+    guild = GuildStore.getGuild(getGuildId.getGuildId());
     if (null != guild) {
       const tmp8 = canManageChannelListDefault;
       if (tmp8(tmpResult.getContainingCategory(getGuildId), guild)) {

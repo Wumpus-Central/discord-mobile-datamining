@@ -1,6 +1,6 @@
-// === Module 6087: NativeView ===
+// === Module 5976: NativeView ===
 
-// Module 6087 (NativeView)
+// Module 5976 (NativeView)
 import CommandsDefault from "Commands" /* 112 */;
 import size from "module_2" /* 2 */;
 

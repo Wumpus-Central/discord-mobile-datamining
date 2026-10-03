@@ -1,7 +1,7 @@
-// === Module 16138: ChannelAffinitiesV2Constants ===
+// === Module 16212: ChannelAffinitiesV2Constants ===
 
-// Module 16138 (ChannelAffinitiesV2Constants)
-import DurationsDefault from "Durations" /* 1091 */;
+// Module 16212 (ChannelAffinitiesV2Constants)
+import DurationsDefault from "Durations" /* 1102 */;
 
 const result = 12 * DurationsDefault.Millis.HOUR;
 const size = fn(2);

@@ -1,10 +1,10 @@
-// === Module 1073: MobileCacheSnapshotStore ===
+// === Module 1084: MobileCacheSnapshotStore ===
 
-// Module 1073 (MobileCacheSnapshotStore)
+// Module 1084 (MobileCacheSnapshotStore)
 import _modDef38 from "module_38" /* 38 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
 
 require = fn;
 let MobileCacheSnapshotStore;

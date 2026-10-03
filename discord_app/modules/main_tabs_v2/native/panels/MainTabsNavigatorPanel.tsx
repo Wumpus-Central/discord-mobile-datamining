@@ -1,45 +1,506 @@
-// === Module 15844: MainTabsNavigatorPanel ===
+// === Module 15921: MainTabsNavigatorPanel ===
 
-// Module 15844 (MainTabsNavigatorPanel)
+// Module 15921 (MainTabsNavigatorPanel)
 import LoggerDefault from "Logger" /* 3 */;
-import nativeDefault from "native" /* 576 */;
-import RootNavigationRef from "RootNavigationRef" /* 4722 */;
-import ChatInputUtils from "ChatInputUtils" /* 4730 */;
-import transitionToChannel from "transitionToChannel" /* 4856 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4858 */;
-import PanelsNavigationUtils from "PanelsNavigationUtils" /* 15845 */;
-import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 15846 */;
-import ChannelScreenAnimatedFrameDefault from "ChannelScreenAnimatedFrame" /* 15850 */;
+import nativeDefault from "native" /* 587 */;
+import RootNavigationRef from "RootNavigationRef" /* 4737 */;
+import ChatInputUtils from "ChatInputUtils" /* 4745 */;
+import transitionToChannel from "transitionToChannel" /* 4901 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4903 */;
+import PanelsNavigationUtils from "PanelsNavigationUtils" /* 15922 */;
+import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 15923 */;
+import ChannelScreenAnimatedFrameDefault from "ChannelScreenAnimatedFrame" /* 15927 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire, Pressable: closure_7 } = get_ActivityIndicator);
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ ComponentActions: closure_8, ME: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let closure_12 = new LoggerDefault("MainTabsNavigatorPanel");
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj = { container: { flex: 1 }, containerBackground: null, tabsContainer: null };
 const tmp5 = new LoggerDefault("MainTabsNavigatorPanel");
 obj.containerBackground = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj.tabsContainer = { flex: 1 };
 let closure_13 = createStyles.createStyles(obj);
 let closure_14 = { code: "function MainTabsNavigatorPanelTsx1(){const{translateX,highestFullyRenderedScreenIndex}=this.__closure;return{opacity:translateX.get()>0&&highestFullyRenderedScreenIndex.get()<1?1:0};}" };
+let __initData = { code: "function MainTabsNavigatorPanelTsx2(){const{translateX,highestFullyRenderedScreenIndex}=this.__closure;return{opacity:translateX.get()>0&&highestFullyRenderedScreenIndex.get()<1?1:0};}" };
+const ReactCompilerGating = fn(558);
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/MainTabsNavigatorPanel.tsx");
 
-export default noop.memo(function MainTabsNavigatorPanel() {
-  let tmp = closure_13();
-  navigation = navigation(drawerWidth[8]).useNavigation();
-  let tmp6 = isChatLockedOpen(drawerWidth[9])();
-  isChatLockedOpen = tmp6.isChatLockedOpen;
-  let obj = navigation(drawerWidth[8]);
-  drawerWidth = navigation(drawerWidth[10]).useDrawerWidth();
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = navigation(drawerWidth[9]).c(113);
+  isNavigatorPanelsBesideChannelList();
+  let obj = navigation(drawerWidth[9]);
+  navigation = navigation(drawerWidth[10]).useNavigation();
   let obj2 = navigation(drawerWidth[10]);
+  let tmp6 = isChatLockedOpen;
+  isChatLockedOpen = isChatLockedOpen(drawerWidth[11])().isChatLockedOpen;
+  let tmp7 = isChatLockedOpen(drawerWidth[11])();
+  drawerWidth = navigation(drawerWidth[12]).useDrawerWidth();
+  isChatLockedOpen(drawerWidth[13])();
+  _slicedToArray = noop.useRef(isChatLockedOpen);
+  noop = noop.useRef(false);
+  if (cResult[0] !== isChatLockedOpen) {
+    const fn = function n() {
+      if (ref.current !== isChatLockedOpen) {
+        tmp.current = isChatLockedOpen;
+        let obj = require;
+        let result = dependencyMap;
+        if (isChatLockedOpen) {
+          obj = obj(15922);
+          result = obj.convertPortraitToLandscapeScreens();
+        } else {
+          obj(4745).dismissKeyboard();
+          const objResult = obj(4745);
+          const result1 = PanelsNavigationUtils.convertLandscapeToPortraitScreens();
+        }
+        closure_4.current = true;
+      }
+    };
+    const items = [isChatLockedOpen];
+    cResult[0] = isChatLockedOpen;
+    cResult[1] = fn;
+    cResult[2] = items;
+    let tmp11 = items;
+    let tmp10 = fn;
+  } else {
+    tmp10 = cResult[1];
+    tmp11 = cResult[2];
+  }
+  const layoutEffect = obj4.useLayoutEffect(tmp10, tmp11);
+  const tmp13 = tmp6(drawerWidth[16])(navigation);
+  const first = tmp13[0];
+  let type;
+  if (first != null) {
+    type = first.type;
+  }
+  const tmp16 = type === navigation(drawerWidth[16]).ChannelScreenType.DEFAULT;
+  let obj3 = navigation(drawerWidth[12]);
+  [r10060, closure_5] = noop.useState(tmp16);
+  const tmp18 = _slicedToArray(noop.useState(tmp16), 2);
+  closure_6 = _slicedToArray(noop.useState(tmp16), 2)[1];
+  const first1 = tmp13[0];
+  noop.useRef(first1);
+  if (cResult[3] !== first1) {
+    class I {
+      constructor() {
+        closure_8.current = closure_7;
+        return;
+      }
+    }
+    const items1 = [first1];
+    cResult[3] = first1;
+    cResult[4] = I;
+    cResult[5] = items1;
+    let tmp22 = items1;
+  } else {
+    class I {
+      constructor() {
+        closure_8.current = closure_7;
+        return;
+      }
+    }
+    tmp22 = cResult[5];
+  }
+  const effect = obj4.useEffect(I, tmp22);
+  if (cResult[6] !== navigation) {
+    class F {
+      constructor() {
+        tmp = closure_5(false);
+        state = closure_0.getState();
+        index = state.index;
+        tmp3 = state.routes[index];
+        name = undefined;
+        if (tmp3 != null) {
+          name = tmp3.name;
+        }
+        num = 0;
+        num2 = 0;
+        if ("channel" === name) {
+          do {
+            diff = index - 1;
+            tmp6 = state.routes[diff];
+            tmp7 = num;
+            name1 = undefined;
+            if (tmp6 != null) {
+              name1 = tmp6.name;
+            }
+            num = num + 1;
+            index = diff;
+            num2 = num;
+          } while ("channel" === name1);
+        }
+        if (0 < num2) {
+          tmp9 = closure_0;
+          arr = closure_0.pop(num2);
+        }
+        return;
+      }
+    }
+    cResult[6] = navigation;
+    cResult[7] = F;
+  } else {
+    class F {
+      constructor() {
+        tmp = closure_5(false);
+        state = closure_0.getState();
+        index = state.index;
+        tmp3 = state.routes[index];
+        name = undefined;
+        if (tmp3 != null) {
+          name = tmp3.name;
+        }
+        num = 0;
+        num2 = 0;
+        if ("channel" === name) {
+          do {
+            diff = index - 1;
+            tmp6 = state.routes[diff];
+            tmp7 = num;
+            name1 = undefined;
+            if (tmp6 != null) {
+              name1 = tmp6.name;
+            }
+            num = num + 1;
+            index = diff;
+            num2 = num;
+          } while ("channel" === name1);
+        }
+        if (0 < num2) {
+          tmp9 = closure_0;
+          arr = closure_0.pop(num2);
+        }
+        return;
+      }
+    }
+  }
+  F = tmp24;
+  if (cResult[8] !== navigation) {
+    class H {
+      constructor() {
+        obj = closure_0(closure_2[16]);
+        return obj.isActiveTabsGuilds(closure_0.getState());
+      }
+    }
+    cResult[8] = navigation;
+    cResult[9] = H;
+  } else {
+    class H {
+      constructor() {
+        obj = closure_0(closure_2[16]);
+        return obj.isActiveTabsGuilds(closure_0.getState());
+      }
+    }
+  }
+  [first2, closure_11] = noop.useState(H);
+  if (cResult[10] !== first2) {
+    class H {
+      constructor() {
+        obj = closure_0(closure_2[16]);
+        return obj.isActiveTabsGuilds(closure_0.getState());
+      }
+    }
+    cResult[10] = first2;
+    cResult[11] = tmp29;
+  } else {
+    class H {
+      constructor() {
+        obj = closure_0(closure_2[16]);
+        return obj.isActiveTabsGuilds(closure_0.getState());
+      }
+    }
+  }
+  const tmp19 = _slicedToArray(noop.useState(tmp16), 2);
+  [tmp31, closure_12] = noop.useState(tmp29);
+  if (cResult[12] !== navigation) {
+    class Z {
+      constructor() {
+        handleStateChange = function handleStateChange(data) {
+          closure_1_11(navigation(drawerWidth[16]).isActiveTabsGuilds(data.data.state));
+        };
+        addListenerResult = handleStateChange.addListener("state", handleStateChange);
+        return () => {
+          navigation.removeListener("state", handleStateChange);
+        };
+      }
+    }
+    const items2 = [navigation];
+    cResult[12] = navigation;
+    cResult[13] = Z;
+    cResult[14] = items2;
+    let tmp33 = items2;
+  } else {
+    class Z {
+      constructor() {
+        handleStateChange = function handleStateChange(data) {
+          closure_1_11(navigation(drawerWidth[16]).isActiveTabsGuilds(data.data.state));
+        };
+        addListenerResult = handleStateChange.addListener("state", handleStateChange);
+        return () => {
+          navigation.removeListener("state", handleStateChange);
+        };
+      }
+    }
+    tmp33 = cResult[14];
+  }
+  const effect1 = obj4.useEffect(Z, tmp33);
+  if (cResult[15] !== first2) {
+    class Z {
+      constructor() {
+        handleStateChange = function handleStateChange(data) {
+          closure_1_11(navigation(drawerWidth[16]).isActiveTabsGuilds(data.data.state));
+        };
+        addListenerResult = handleStateChange.addListener("state", handleStateChange);
+        return () => {
+          navigation.removeListener("state", handleStateChange);
+        };
+      }
+    }
+    const items3 = [first2];
+    cResult[15] = first2;
+    cResult[16] = items3;
+    cResult[17] = tmp37;
+    let tmp36 = tmp37;
+    const tmp35 = items3;
+  } else {
+    class Z {
+      constructor() {
+        handleStateChange = function handleStateChange(data) {
+          closure_1_11(navigation(drawerWidth[16]).isActiveTabsGuilds(data.data.state));
+        };
+        addListenerResult = handleStateChange.addListener("state", handleStateChange);
+        return () => {
+          navigation.removeListener("state", handleStateChange);
+        };
+      }
+    }
+    tmp36 = cResult[17];
+  }
+  const effect2 = obj4.useEffect(tmp36, tmp35);
+  if (tmp31) {
+    class Z {
+      constructor() {
+        handleStateChange = function handleStateChange(data) {
+          closure_1_11(navigation(drawerWidth[16]).isActiveTabsGuilds(data.data.state));
+        };
+        addListenerResult = handleStateChange.addListener("state", handleStateChange);
+        return () => {
+          navigation.removeListener("state", handleStateChange);
+        };
+      }
+    }
+  }
+  isNavigatorPanelsBesideChannelList = tmp31;
+  noop.useRef(false);
+  if (cResult[18] === tmp24) {
+    class Z {
+      constructor() {
+        handleStateChange = function handleStateChange(data) {
+          closure_1_11(navigation(drawerWidth[16]).isActiveTabsGuilds(data.data.state));
+        };
+        addListenerResult = handleStateChange.addListener("state", handleStateChange);
+        return () => {
+          navigation.removeListener("state", handleStateChange);
+        };
+      }
+    }
+    const _Symbol = Symbol;
+    if (cResult[21] === Symbol.for("react.memo_cache_sentinel")) {
+      class Z {
+        constructor() {
+          handleStateChange = function handleStateChange(data) {
+            closure_1_11(navigation(drawerWidth[16]).isActiveTabsGuilds(data.data.state));
+          };
+          addListenerResult = handleStateChange.addListener("state", handleStateChange);
+          return () => {
+            navigation.removeListener("state", handleStateChange);
+          };
+        }
+      }
+      cResult[21] = tmp42;
+    } else {
+      class Z {
+        constructor() {
+          handleStateChange = function handleStateChange(data) {
+            closure_1_11(navigation(drawerWidth[16]).isActiveTabsGuilds(data.data.state));
+          };
+          addListenerResult = handleStateChange.addListener("state", handleStateChange);
+          return () => {
+            navigation.removeListener("state", handleStateChange);
+          };
+        }
+      }
+    }
+    const _Symbol2 = Symbol;
+    if (cResult[22] === Symbol.for("react.memo_cache_sentinel")) {
+      class Z {
+        constructor() {
+          handleStateChange = function handleStateChange(data) {
+            closure_1_11(navigation(drawerWidth[16]).isActiveTabsGuilds(data.data.state));
+          };
+          addListenerResult = handleStateChange.addListener("state", handleStateChange);
+          return () => {
+            navigation.removeListener("state", handleStateChange);
+          };
+        }
+      }
+      cResult[22] = tmp44;
+    } else {
+      class Z {
+        constructor() {
+          handleStateChange = function handleStateChange(data) {
+            closure_1_11(navigation(drawerWidth[16]).isActiveTabsGuilds(data.data.state));
+          };
+          addListenerResult = handleStateChange.addListener("state", handleStateChange);
+          return () => {
+            navigation.removeListener("state", handleStateChange);
+          };
+        }
+      }
+    }
+    let tmp45 = null != first1;
+    if (tmp45) {
+      class Z {
+        constructor() {
+          handleStateChange = function handleStateChange(data) {
+            closure_1_11(navigation(drawerWidth[16]).isActiveTabsGuilds(data.data.state));
+          };
+          addListenerResult = handleStateChange.addListener("state", handleStateChange);
+          return () => {
+            navigation.removeListener("state", handleStateChange);
+          };
+        }
+      }
+      tmp45 = tmp46 !== tmp(tmp2[16]).ChannelScreenType.FALLBACK_RENDERED;
+    }
+    closure_15 = tmp45;
+    if (tmp31) {
+      class Z {
+        constructor() {
+          handleStateChange = function handleStateChange(data) {
+            closure_1_11(navigation(drawerWidth[16]).isActiveTabsGuilds(data.data.state));
+          };
+          addListenerResult = handleStateChange.addListener("state", handleStateChange);
+          return () => {
+            navigation.removeListener("state", handleStateChange);
+          };
+        }
+      }
+    }
+    if (!tmp31) {
+      class Z {
+        constructor() {
+          handleStateChange = function handleStateChange(data) {
+            closure_1_11(navigation(drawerWidth[16]).isActiveTabsGuilds(data.data.state));
+          };
+          addListenerResult = handleStateChange.addListener("state", handleStateChange);
+          return () => {
+            navigation.removeListener("state", handleStateChange);
+          };
+        }
+      }
+    }
+    if (tmp13[0] != null) {
+      class Z {
+        constructor() {
+          handleStateChange = function handleStateChange(data) {
+            closure_1_11(navigation(drawerWidth[16]).isActiveTabsGuilds(data.data.state));
+          };
+          addListenerResult = handleStateChange.addListener("state", handleStateChange);
+          return () => {
+            navigation.removeListener("state", handleStateChange);
+          };
+        }
+      }
+    }
+    if (tmp31) {
+      class Z {
+        constructor() {
+          handleStateChange = function handleStateChange(data) {
+            closure_1_11(navigation(drawerWidth[16]).isActiveTabsGuilds(data.data.state));
+          };
+          addListenerResult = handleStateChange.addListener("state", handleStateChange);
+          return () => {
+            navigation.removeListener("state", handleStateChange);
+          };
+        }
+      }
+    }
+    const tmp51 = undefined === tmp(tmp2[16]).ChannelScreenType.DEFAULT;
+    if (cResult[23] === tmp39) {
+      class Z {
+        constructor() {
+          handleStateChange = function handleStateChange(data) {
+            closure_1_11(navigation(drawerWidth[16]).isActiveTabsGuilds(data.data.state));
+          };
+          addListenerResult = handleStateChange.addListener("state", handleStateChange);
+          return () => {
+            navigation.removeListener("state", handleStateChange);
+          };
+        }
+      }
+    }
+    const obj5 = { canDrag: !tmp31, onVisibilityChange: tmp39, onPreMovement: tmp42, onDragStart: tmp44, startShown: tmp51, openWidth: undefined };
+    cResult[23] = tmp39;
+    cResult[24] = !tmp31;
+    cResult[25] = tmp51;
+    cResult[26] = undefined;
+    cResult[27] = obj5;
+  }
+  function ie(arg0) {
+    closure_1_5(arg0);
+    closure_6(arg0);
+    closure_14.current = false;
+    if (arg0) {
+      if (null != ref2.current) {
+        if ("channel" !== navigation.getState().routes[navigation.getState(navigation).index].name) {
+          const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
+          let name;
+          if (rootNavigationRef != null) {
+            state = rootNavigationRef.getState();
+            if (state != null) {
+              let index;
+              if (rootNavigationRef != null) {
+                const state1 = rootNavigationRef.getState();
+                if (state1 != null) {
+                  index = state1.index;
+                }
+              }
+              if (state.routes[index] != null) {
+                name = tmp12.name;
+              }
+            }
+          }
+          if ("modal" !== name) {
+            tmp3.current = true;
+            transitionToChannel.transitionToChannel(tmp6.current.channelId);
+            const tmp15Result = transitionToChannel;
+          }
+        }
+      }
+    } else {
+      F();
+    }
+  }
+  cResult[18] = tmp24;
+  cResult[19] = navigation;
+  cResult[20] = ie;
+  const tmp17Result2 = _slicedToArray(noop.useState(tmp29), 2);
+}) : (() => {
+  let tmp = closure_13();
+  navigation = navigation(drawerWidth[10]).useNavigation();
+  let tmp6 = isChatLockedOpen(drawerWidth[11])();
+  isChatLockedOpen = tmp6.isChatLockedOpen;
+  let obj = navigation(drawerWidth[10]);
+  drawerWidth = navigation(drawerWidth[12]).useDrawerWidth();
+  let obj2 = navigation(drawerWidth[12]);
   _slicedToArray = noop.useRef(isChatLockedOpen);
   noop = noop.useRef(false);
   const items = [isChatLockedOpen];
@@ -49,23 +510,23 @@ export default noop.memo(function MainTabsNavigatorPanel() {
       let obj = require;
       let result = dependencyMap;
       if (isChatLockedOpen) {
-        obj = obj(15845);
+        obj = obj(15922);
         result = obj.convertPortraitToLandscapeScreens();
       } else {
-        obj(4730).dismissKeyboard();
-        const objResult = obj(4730);
+        obj(4745).dismissKeyboard();
+        const objResult = obj(4745);
         const result1 = PanelsNavigationUtils.convertLandscapeToPortraitScreens();
       }
       closure_4.current = true;
     }
   }, items);
-  const arr2 = isChatLockedOpen(drawerWidth[14])(navigation);
+  const arr2 = isChatLockedOpen(drawerWidth[16])(navigation);
   const first = arr2[0];
   let type;
   if (first != null) {
     type = first.type;
   }
-  const tmp12 = type === navigation(drawerWidth[14]).ChannelScreenType.DEFAULT;
+  const tmp12 = type === navigation(drawerWidth[16]).ChannelScreenType.DEFAULT;
   [first1, closure_6] = noop.useState(tmp12);
   const tmp15 = _slicedToArray(noop.useState(tmp12), 2);
   closure_7 = tmp15[1];
@@ -79,7 +540,7 @@ export default noop.memo(function MainTabsNavigatorPanel() {
   const handleExit = obj3.useCallback(() => {
     let name1;
     closure_6(false);
-    const state = navigation.getState();
+    state = navigation.getState();
     let index = state.index;
     let name;
     if (state.routes[index] != null) {
@@ -105,12 +566,12 @@ export default noop.memo(function MainTabsNavigatorPanel() {
     }
   }, items2);
   [first3, logger] = noop.useState(() => useChannelScreensFromNavigation.isActiveTabsGuilds(navigation.getState()));
-  const tmp8 = isChatLockedOpen(drawerWidth[11])();
+  const tmp8 = isChatLockedOpen(drawerWidth[13])();
   [isChatBesideChannelList, closure_13] = noop.useState(() => first3);
   const items3 = [navigation];
   const effect1 = obj3.useEffect(() => {
     function handleStateChange(data) {
-      logger(navigation(drawerWidth[14]).isActiveTabsGuilds(data.data.state));
+      logger(navigation(drawerWidth[16]).isActiveTabsGuilds(data.data.state));
     }
     handleStateChange.addListener("state", handleStateChange);
     return () => {
@@ -124,7 +585,7 @@ export default noop.memo(function MainTabsNavigatorPanel() {
   if (isChatBesideChannelList) {
     isChatBesideChannelList = tmp6.isChatBesideChannelList;
   }
-  noop.useRef(false);
+  __initData = obj3.useRef(false);
   const items5 = [navigation, handleExit];
   const callback1 = obj3.useCallback((arg0) => {
     closure_6(arg0);
@@ -136,7 +597,7 @@ export default noop.memo(function MainTabsNavigatorPanel() {
           const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
           let name;
           if (rootNavigationRef != null) {
-            const state = rootNavigationRef.getState();
+            state = rootNavigationRef.getState();
             if (state != null) {
               let index;
               if (rootNavigationRef != null) {
@@ -168,12 +629,12 @@ export default noop.memo(function MainTabsNavigatorPanel() {
   }, []);
   let tmp27 = null != first2;
   const callback3 = obj3.useCallback(() => {
-    const ComponentDispatch = navigation(drawerWidth[17]).ComponentDispatch;
+    const ComponentDispatch = navigation(drawerWidth[19]).ComponentDispatch;
     ComponentDispatch.dispatch(first2.BOTTOM_CHANNEL_SCREEN_DRAG_START);
-    navigation(drawerWidth[13]).dismissKeyboard();
+    navigation(drawerWidth[15]).dismissKeyboard();
   }, []);
   if (tmp27) {
-    tmp27 = first2.type !== tmp2(tmp3[14]).ChannelScreenType.FALLBACK_RENDERED;
+    tmp27 = first2.type !== tmp2(tmp3[16]).ChannelScreenType.FALLBACK_RENDERED;
   }
   closure_16 = tmp27;
   let tmp29 = isChatBesideChannelList;
@@ -191,13 +652,13 @@ export default noop.memo(function MainTabsNavigatorPanel() {
   if (first4 != null) {
     type1 = first4.type;
   }
-  obj4.startShown = type1 === navigation(drawerWidth[14]).ChannelScreenType.DEFAULT;
+  obj4.startShown = type1 === navigation(drawerWidth[16]).ChannelScreenType.DEFAULT;
   let tmp33;
   if (isChatBesideChannelList) {
     tmp33 = drawerWidth;
   }
   obj4.openWidth = tmp33;
-  const tmp5ResultResult = isChatLockedOpen(drawerWidth[18])(obj4);
+  const tmp5ResultResult = isChatLockedOpen(drawerWidth[20])(obj4);
   const translateX = tmp5ResultResult.translateX;
   const movePanel = tmp5ResultResult.movePanel;
   const maxWidth = tmp5ResultResult.maxWidth;
@@ -219,7 +680,7 @@ export default noop.memo(function MainTabsNavigatorPanel() {
   const items7 = [type2, translateX, isDraggingRef];
   const effect5 = obj3.useEffect(() => {
     if (!isDraggingRef.current) {
-      const current = ref4.current;
+      current = ref4.current;
       ({ maxWidth, movePanel } = current);
       let type;
       ({ handleExit, screens } = current);
@@ -264,7 +725,7 @@ export default noop.memo(function MainTabsNavigatorPanel() {
     if (type === useChannelScreensFromNavigation.ChannelScreenType.BACKGROUND_SAVED) {
       let guildId = firstScreen.guildId;
       if (guildId == null) {
-        guildId = React7;
+        guildId = options;
       }
       ChannelActionCreatorsDefault.preload(guildId, firstScreen.channelId);
     }
@@ -292,7 +753,7 @@ export default noop.memo(function MainTabsNavigatorPanel() {
       let tmp = null;
       if (isChatBesideChannelList) {
         const obj = { translateX, maxWidth, isChatLockedOpen };
-        tmp = closure_2_10(ChannelScreenAnimatedFrameDefault, obj);
+        tmp = v65535(ChannelScreenAnimatedFrameDefault, obj);
       }
       return tmp;
     }, items11);
@@ -300,8 +761,8 @@ export default noop.memo(function MainTabsNavigatorPanel() {
     if (translateX.get() > 0) {
       num3 = -1;
     }
-    const sharedValue = tmp2(tmp3[21]).useSharedValue(num3);
-    const tmp2Result = tmp2(tmp3[21]);
+    const sharedValue = tmp2(tmp3[23]).useSharedValue(num3);
+    const tmp2Result = tmp2(tmp3[23]);
     function de() {
       let opacity = 0;
       if (translateX.get() > 0) {
@@ -314,14 +775,14 @@ export default noop.memo(function MainTabsNavigatorPanel() {
     }
     const obj6 = { translateX, highestFullyRenderedScreenIndex: sharedValue };
     de.__closure = obj6;
-    de.__workletHash = 10839500061449;
-    de.__initData = isChatBesideChannelList;
-    const animatedStyle = tmp2(tmp3[21]).useAnimatedStyle(de);
-    const tmp2Result4 = tmp2(tmp3[21]);
-    const tmp49 = tmp5(tmp3[22])("channel_list_scrim");
-    const isCustomThemeActive = tmp2(tmp3[23]).useIsCustomThemeActive();
+    de.__workletHash = 10074964118666;
+    de.__initData = __initData;
+    const animatedStyle = tmp2(tmp3[23]).useAnimatedStyle(de);
+    const tmp2Result4 = tmp2(tmp3[23]);
+    const tmp49 = tmp5(tmp3[24])("channel_list_scrim");
+    const isCustomThemeActive = tmp2(tmp3[25]).useIsCustomThemeActive();
     const obj7 = { value: panelGestureContext, children: null };
-    const tmp2Result5 = tmp2(tmp3[23]);
+    const tmp2Result5 = tmp2(tmp3[25]);
     let tmp53Result = null;
     if (tmp2Result6.isJankScreenReportingEnabled()) {
       const obj8 = { translateX, maxWidth, channelId: null, showCreateThread: null };
@@ -338,8 +799,8 @@ export default noop.memo(function MainTabsNavigatorPanel() {
         flag = false;
       }
       obj8.showCreateThread = flag;
-      tmp53Result = handleExit(tmp5(tmp3[26]), obj8);
-      const tmp5Result3 = tmp5(tmp3[26]);
+      tmp53Result = handleExit(tmp5(tmp3[27]), obj8);
+      const tmp5Result3 = tmp5(tmp3[27]);
     }
     const items12 = [tmp53Result, ];
     const obj9 = { gesture, children: null };
@@ -357,15 +818,15 @@ export default noop.memo(function MainTabsNavigatorPanel() {
     obj12.style = items14;
     obj12.accessibilityElementsHidden = !tmp43;
     obj12.importantForAccessibility = "no-hide-descendants";
-    const items15 = [handleExit(tmp5(tmp3[29]), {}), ];
+    const items15 = [handleExit(tmp5(tmp3[28]), {}), ];
     let tmp56Result;
     if (tmp49) {
       const obj13 = { translateX, maxWidth };
-      tmp56Result = tmp56(tmp2(tmp3[30]).MainTabsContentScrim, obj13);
+      tmp56Result = tmp56(tmp2(tmp3[29]).MainTabsContentScrim, obj13);
     }
     items15[1] = tmp56Result;
     obj12.children = items15;
-    const items16 = [first3(tmp5(tmp3[21]).View, obj12), handleExit(tmp5(tmp3[31]), {}), ];
+    const items16 = [first3(tmp5(tmp3[23]).View, obj12), handleExit(tmp5(tmp3[30]), {}), ];
     if (arr2.length > 0) {
       const obj14 = { screens: arr2, screenStackActive: first1, navigationTTIStackVisible: null, translateX: null, isDragging: null, maxWidth: null, highestFullyRenderedScreenIndex: null, shouldFreeze: null, focusChatPressableComponent: null, firstScreenWidth: null, firstScreenFrame: null };
       if (!first1) {
@@ -386,24 +847,24 @@ export default noop.memo(function MainTabsNavigatorPanel() {
       }
       obj14.firstScreenWidth = tmp62;
       obj14.firstScreenFrame = memo;
-      let tmp56Result2 = tmp56(tmp5(tmp3[32]), obj14);
-      const tmp5Result4 = tmp5(tmp3[32]);
+      let tmp56Result2 = tmp56(tmp5(tmp3[31]), obj14);
+      const tmp5Result4 = tmp5(tmp3[31]);
     } else {
       tmp56Result2 = null;
       if (isChatBesideChannelList) {
         tmp56Result2 = null;
         if (isChatLockedOpen) {
-          tmp56Result2 = tmp56(tmp5(tmp3[33]), {});
+          tmp56Result2 = tmp56(tmp5(tmp3[32]), {});
         }
       }
     }
     items16[2] = tmp56Result2;
     obj11.children = items16;
-    obj10.children = first3(tmp2(tmp3[28]).SidebarCoachmarkOverlay, obj11);
+    obj10.children = first3(tmp2(tmp3[33]).SidebarCoachmarkOverlay, obj11);
     obj9.children = handleExit(first1, obj10);
-    items12[1] = handleExit(tmp2(tmp3[27]).GestureDetector, obj9);
+    items12[1] = handleExit(tmp2(tmp3[34]).GestureDetector, obj9);
     obj7.children = items12;
-    return first3(tmp5(tmp3[24]).Provider, obj7);
+    return first3(tmp5(tmp3[35]).Provider, obj7);
   }
   tmp43 = !first1;
-});
+}));

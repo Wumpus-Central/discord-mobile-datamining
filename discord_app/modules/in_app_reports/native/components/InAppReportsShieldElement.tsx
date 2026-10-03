@@ -1,18 +1,46 @@
-// === Module 8295: InAppReportsShieldElement ===
+// === Module 8299: InAppReportsShieldElement ===
 
-// Module 8295 (InAppReportsShieldElement)
-import ShieldSpotIllustration from "ShieldSpotIllustration" /* 8056 */;
+// Module 8299 (InAppReportsShieldElement)
+import c from "c" /* 576 */;
+import ShieldSpotIllustration from "ShieldSpotIllustration" /* 8097 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let closure_4 = createStyles.createStyles({ container: { flex: 0, alignSelf: "center", marginBottom: 16 } });
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsShieldElement.tsx");
 
-export default function ShieldElement(element) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((element) => {
+  const cResult = c.c(3);
+  element = element.element;
+  let container = closure_4();
+  let tmp4 = null;
+  if (null != element) {
+    tmp4 = null;
+    if ("success" === element.type) {
+      const _Symbol = Symbol;
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const tmp7 = jsx(ShieldSpotIllustration.ShieldSpotIllustration, { width: 100, height: 100 });
+        cResult[0] = tmp7;
+        let first = tmp7;
+      } else {
+        first = cResult[0];
+      }
+      if (cResult[1] !== container.container) {
+        const obj2 = { style: container.container, children: first };
+        const tmp11 = <View style={container.container}>{first}</View>;
+        container = container.container;
+        cResult[1] = container;
+        cResult[2] = tmp11;
+      }
+    }
+  }
+  return tmp4;
+}) : ((element) => {
   element = element.element;
   let tmp2 = null;
   if (null != element) {
@@ -23,4 +51,4 @@ export default function ShieldElement(element) {
     }
   }
   return tmp2;
-};
+});

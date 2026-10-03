@@ -1,19 +1,19 @@
-// === Module 14897: VideoQuestTranscriptActionSheet ===
+// === Module 14954: VideoQuestTranscriptActionSheet ===
 
-// Module 14897 (VideoQuestTranscriptActionSheet)
-import nativeDefault from "native" /* 576 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
-import QuestActionCreators from "QuestActionCreators" /* 10888 */;
-import AssetUtils from "AssetUtils" /* 10894 */;
+// Module 14954 (VideoQuestTranscriptActionSheet)
+import nativeDefault from "native" /* 587 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
+import QuestActionCreators from "QuestActionCreators" /* 9994 */;
+import AssetUtils from "AssetUtils" /* 10000 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
-const VideoQuestUIStore = fn(7291);
+const VideoQuestUIStore = fn(7189);
 ({ FetchStatus: hasOwnProperty, useVideoQuestUIStore: metroRequire } = VideoQuestUIStore);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = { content: { paddingBottom: nativeDefault.space.PX_8 }, loadingSpinner: { height: 100 } };
 let closure_9 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -68,9 +68,9 @@ export default function VideoQuestTranscriptActionSheet(quest) {
   }, items1);
   let obj = { scrollable: true, header: null, children: null };
   const obj2 = { title: null };
-  const intl = quest(1115).intl;
-  obj2.title = intl.string(quest(1115).t["1YS80z"]);
-  obj.header = closure_7(quest(6756).BottomSheetTitleHeader, obj2);
+  const intl = quest(1126).intl;
+  obj2.title = intl.string(quest(1126).t["1YS80z"]);
+  obj.header = closure_7(quest(6644).BottomSheetTitleHeader, obj2);
   const obj3 = { contentContainerStyle: { paddingBottom: useSafeAreaInsetsDefault().bottom }, children: null };
   const obj4 = { spacing: 16, style: tmp.content, children: null };
   let fetchStatus;
@@ -84,7 +84,7 @@ export default function VideoQuestTranscriptActionSheet(quest) {
   }
   const items2 = [tmp7Result, memo.length > 0 && memo.map((children, index) => closure_1_7(quest(dependencyMap[14]).Text, { variant: "heading-md/normal", color: "text-muted", children }, index))];
   obj4.children = items2;
-  obj3.children = closure_8(quest(5463).Stack, obj4);
-  obj.children = closure_7(quest(6231).BottomSheetScrollView, obj3);
-  return closure_7(quest(6804).ActionSheet, obj);
+  obj3.children = closure_8(quest(5593).Stack, obj4);
+  obj.children = closure_7(quest(6112).BottomSheetScrollView, obj3);
+  return closure_7(quest(6701).ActionSheet, obj);
 };

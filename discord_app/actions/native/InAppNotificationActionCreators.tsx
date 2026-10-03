@@ -1,7 +1,7 @@
-// === Module 9751: InAppNotificationActionCreators ===
+// === Module 12479: InAppNotificationActionCreators ===
 
-// Module 9751 (InAppNotificationActionCreators)
-import DispatcherDefault from "Dispatcher" /* 573 */;
+// Module 12479 (InAppNotificationActionCreators)
+import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("actions/native/InAppNotificationActionCreators.tsx");

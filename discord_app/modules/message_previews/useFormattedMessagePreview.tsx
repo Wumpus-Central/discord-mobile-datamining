@@ -1,17 +1,17 @@
-// === Module 9748: useFormattedMessagePreview ===
+// === Module 12476: useFormattedMessagePreview ===
 
-// Module 9748 (useFormattedMessagePreview)
+// Module 12476 (useFormattedMessagePreview)
 import _mod12 from "module_12" /* 12 */;
-import MessageTypes from "MessageTypes" /* 1090 */;
-import util from "util" /* 1115 */;
-import useMessageAuthorDefault from "useMessageAuthor" /* 5258 */;
-import isForwardMessageDefault from "isForwardMessage" /* 6907 */;
-import useIsCallActiveDefault from "useIsCallActive" /* 7596 */;
-import SystemMessageUtilsDefault from "SystemMessageUtils" /* 7601 */;
-import VoiceSessionUtils from "VoiceSessionUtils" /* 7697 */;
+import MessageTypes from "MessageTypes" /* 1101 */;
+import util from "util" /* 1126 */;
+import useMessageAuthorDefault from "useMessageAuthor" /* 5304 */;
+import isForwardMessageDefault from "isForwardMessage" /* 6805 */;
+import useIsCallActiveDefault from "useIsCallActive" /* 7640 */;
+import SystemMessageUtilsDefault from "SystemMessageUtils" /* 7645 */;
+import VoiceSessionUtils from "VoiceSessionUtils" /* 7741 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RelationshipStore from "RelationshipStore" /* 4508 */;
-import UserStore from "UserStore" /* 1372 */;
+import RelationshipStore from "RelationshipStore" /* 4519 */;
+import UserStore from "UserStore" /* 1377 */;
 
 const require = globalThis.__r;
 
@@ -335,12 +335,10 @@ function formatMessagePreview(type, isBlocked) {
     flag = true;
   }
 }
-const MessageFlags = fn(1074).MessageFlags;
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/message_previews/useFormattedMessagePreview.tsx");
-
-export const isMessageContentPreviewable = function isMessageContentPreviewable(messageRecord) {
-  const type = messageRecord.type;
+const MessageFlags = fn(1085).MessageFlags;
+const ReactCompilerGating = fn(558);
+function isMessageContentPreviewable(message) {
+  const type = message.type;
   if (MessageTypes.MessageTypes.DEFAULT !== type) {
     if (MessageTypes.MessageTypes.CHANGELOG !== type) {
       if (MessageTypes.MessageTypes.REPLY !== type) {
@@ -357,37 +355,124 @@ export const isMessageContentPreviewable = function isMessageContentPreviewable(
     }
   }
   return true;
-};
-export const useFormattedMessagePreview = function useFormattedMessagePreview(message, channel) {
-  _require = message;
+}
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/message_previews/useFormattedMessagePreview.tsx");
+
+export { isMessageContentPreviewable };
+export const useFormattedMessagePreview = ReactCompilerGating.isReactCompilerEnabled() ? ((author, id) => {
+  const _require = author;
+  const cResult = require("c").c(10);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [RelationshipStore];
+    cResult[0] = items;
+    let first = items;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] !== author.author.id) {
+    const fn = function c() {
+      return { isBlocked: RelationshipStore.isBlocked(author.author.id), isIgnored: RelationshipStore.isIgnored(author.author.id) };
+    };
+    const items1 = [author.author.id];
+    cResult[1] = author.author.id;
+    cResult[2] = fn;
+    cResult[3] = items1;
+    let tmp7 = items1;
+    let tmp6 = fn;
+  } else {
+    tmp6 = cResult[2];
+    tmp7 = cResult[3];
+  }
+  const obj = require("c");
+  const stateFromStoresObject = require("initialize").useStateFromStoresObject(first, tmp6, tmp7);
+  ({ isBlocked, isIgnored } = stateFromStoresObject);
+  const tmpResult = require("initialize");
+  if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+    const items2 = [AuthenticationStore];
+    const fn2 = function h() {
+      return id.getId();
+    };
+    cResult[4] = items2;
+    cResult[5] = fn2;
+    let tmp12 = fn2;
+    let tmp11 = items2;
+  } else {
+    tmp11 = cResult[4];
+    tmp12 = cResult[5];
+  }
+  const tmp10 = useIsCallActiveDefault(id.id, author.id);
+  const stateFromStores = require("initialize").useStateFromStores(tmp11, tmp12);
+  const nick = useMessageAuthorDefault(author).nick;
+  let stringResult = nick;
+  if (author.type !== require("MessageTypes").MessageTypes.USER_JOIN) {
+    stringResult = nick;
+    if (author.author.id === stateFromStores) {
+      const intl = tmp(1126).intl;
+      stringResult = intl.string(tmp(1126).t.LuZzxn);
+    }
+  }
+  if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
+    const items3 = [UserStore];
+    cResult[6] = items3;
+    let tmp16 = items3;
+  } else {
+    tmp16 = cResult[6];
+  }
+  if (cResult[7] === author.mentions[0]) {
+    if (cResult[8] === author.mentions.length) {
+      let tmp18 = cResult[9];
+    }
+    const stateFromStores1 = tmp(504).useStateFromStores(tmp16, tmp18);
+    const tmpResult5 = tmp(504);
+    const obj2 = { message: author, channel: id, currentUserId: stateFromStores, authorNick: stringResult, otherUser: stateFromStores1, otherUserNick: tmp(5304).useNullableUserAuthor(stateFromStores1, id).nick, isBlocked, isIgnored, isCallActive: tmp10 };
+    return formatMessagePreview(author, obj2);
+  }
+  class I {
+    constructor() {
+      user = undefined;
+      if (closure_0.mentions.length > 0) {
+        tmp3 = closure_5;
+        user = closure_5.getUser(tmp.mentions[0]);
+      }
+      return user;
+    }
+  }
+  cResult[7] = author.mentions[0];
+  cResult[8] = author.mentions.length;
+  cResult[9] = I;
+  tmp18 = I;
+  const tmpResult4 = require("initialize");
+}) : ((author, channel) => {
+  const _require = author;
   const items = [RelationshipStore];
-  const items1 = [message.author.id];
-  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => ({ isBlocked: RelationshipStore.isBlocked(message.author.id), isIgnored: RelationshipStore.isIgnored(message.author.id) }), items1);
+  const items1 = [author.author.id];
+  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => ({ isBlocked: RelationshipStore.isBlocked(author.author.id), isIgnored: RelationshipStore.isIgnored(author.author.id) }), items1);
   ({ isBlocked, isIgnored } = stateFromStoresObject);
   const obj = require("initialize");
-  const tmp4 = useIsCallActiveDefault(channel.id, message.id);
+  const tmp4 = useIsCallActiveDefault(channel.id, author.id);
   const items2 = [AuthenticationStore];
   const stateFromStores = require("initialize").useStateFromStores(items2, () => id.getId());
-  const nick = useMessageAuthorDefault(message).nick;
+  const nick = useMessageAuthorDefault(author).nick;
   let stringResult = nick;
-  if (message.type !== require("MessageTypes").MessageTypes.USER_JOIN) {
+  if (author.type !== require("MessageTypes").MessageTypes.USER_JOIN) {
     stringResult = nick;
-    if (message.author.id === stateFromStores) {
-      const intl = tmp(1115).intl;
-      stringResult = intl.string(tmp(1115).t.LuZzxn);
+    if (author.author.id === stateFromStores) {
+      const intl = tmp(1126).intl;
+      stringResult = intl.string(tmp(1126).t.LuZzxn);
     }
   }
   const obj2 = require("initialize");
   const items3 = [UserStore];
   const stateFromStores1 = require("initialize").useStateFromStores(items3, () => {
     let user;
-    if (message.mentions.length > 0) {
+    if (author.mentions.length > 0) {
       user = UserStore.getUser(tmp.mentions[0]);
     }
     return user;
   });
   const tmpResult = require("initialize");
   const tmpResult2 = require("useMessageAuthor");
-  return formatMessagePreview(message, { message, channel, currentUserId: stateFromStores, authorNick: stringResult, otherUser: stateFromStores1, otherUserNick: require("useMessageAuthor").useNullableUserAuthor(stateFromStores1, channel).nick, isBlocked, isIgnored, isCallActive: tmp4 });
-};
+  return formatMessagePreview(author, { message: author, channel, currentUserId: stateFromStores, authorNick: stringResult, otherUser: stateFromStores1, otherUserNick: require("useMessageAuthor").useNullableUserAuthor(stateFromStores1, channel).nick, isBlocked, isIgnored, isCallActive: tmp4 });
+});
 export { formatMessagePreview };

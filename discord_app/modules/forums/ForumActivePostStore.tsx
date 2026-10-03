@@ -1,19 +1,19 @@
-// === Module 6910: ForumActivePostStore ===
+// === Module 6808: ForumActivePostStore ===
 
-// Module 6910 (ForumActivePostStore)
+// Module 6808 (ForumActivePostStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import ThreadSortOrder from "ThreadSortOrder" /* 2053 */;
-import ThreadSearchTagSetting from "ThreadSearchTagSetting" /* 2055 */;
-import SetUtils from "SetUtils" /* 2061 */;
-import ForumUtils from "ForumUtils" /* 6912 */;
-import ActiveThreadsStore from "ActiveThreadsStore" /* 6005 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 6911 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import ThreadSortOrder from "ThreadSortOrder" /* 2061 */;
+import ThreadSearchTagSetting from "ThreadSearchTagSetting" /* 2063 */;
+import SetUtils from "SetUtils" /* 2069 */;
+import ForumUtils from "ForumUtils" /* 6810 */;
+import ActiveThreadsStore from "ActiveThreadsStore" /* 5692 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 6809 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import ReadStateStore from "ReadStateStore" /* 4860 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import ReadStateStore from "ReadStateStore" /* 4905 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
 import apply_mod from "module_12" /* 12 */;
 
 require = fn;
@@ -82,7 +82,7 @@ function rebuildState(refreshThreadIds) {
       refreshThreadIds1 = sortThreadIds;
     }
     if (refreshThreadIds1) {
-      LATEST_ACTIVITY = LATEST_ACTIVITY(2053).ThreadSortOrder.LATEST_ACTIVITY;
+      LATEST_ACTIVITY = LATEST_ACTIVITY(2061).ThreadSortOrder.LATEST_ACTIVITY;
       closure_21 = apply.chain(closure_19).sort((id, id) => {
         let compare = dependencyMap;
         let num = -1;
@@ -109,7 +109,7 @@ function rebuildState(refreshThreadIds) {
         return num;
       });
       const chainResult = apply.chain(closure_19);
-      const CREATION_DATE = LATEST_ACTIVITY(2053).ThreadSortOrder.CREATION_DATE;
+      const CREATION_DATE = LATEST_ACTIVITY(2061).ThreadSortOrder.CREATION_DATE;
       closure_20 = apply.chain(closure_19).sort((id, id) => {
         let compare = dependencyMap;
         let num = -1;
@@ -137,7 +137,7 @@ function rebuildState(refreshThreadIds) {
       });
       const chainResult1 = apply.chain(closure_19);
     }
-    const valueResult = LATEST_ACTIVITY === LATEST_ACTIVITY(2053).ThreadSortOrder.LATEST_ACTIVITY ? closure_21 : closure_20.value();
+    const valueResult = LATEST_ACTIVITY === LATEST_ACTIVITY(2061).ThreadSortOrder.LATEST_ACTIVITY ? closure_21 : closure_20.value();
     let found = valueResult;
     if (0 !== set.size) {
       closure_130_0 = set;
@@ -183,15 +183,15 @@ function rebuildState(refreshThreadIds) {
       tmp33 = found1;
     }
     found1 = tmp33;
-    const iter = LATEST_ACTIVITY === LATEST_ACTIVITY(2053).ThreadSortOrder.LATEST_ACTIVITY ? closure_21 : closure_20;
+    const iter = LATEST_ACTIVITY === LATEST_ACTIVITY(2061).ThreadSortOrder.LATEST_ACTIVITY ? closure_21 : closure_20;
   }
 }
 let items = [];
 let id = null;
 let c12 = null;
 let set = new Set();
-let LATEST_ACTIVITY = fn(2053).ThreadSortOrder.LATEST_ACTIVITY;
-let MATCH_SOME = fn(2055).ThreadSearchTagSetting.MATCH_SOME;
+let LATEST_ACTIVITY = fn(2061).ThreadSortOrder.LATEST_ACTIVITY;
+let MATCH_SOME = fn(2063).ThreadSearchTagSetting.MATCH_SOME;
 let closure_16 = 0;
 let closure_17 = [];
 let c18 = false;
@@ -215,19 +215,19 @@ prototype["getNewThreadCount"] = function getNewThreadCount() {
 prototype["getCanAckThreads"] = function getCanAckThreads() {
   return c18;
 };
-prototype["getThreadIds"] = function getThreadIds(id, importDefault, set, asyncGeneratorStep) {
-  const areSetsEqualResult = SetUtils.areSetsEqual(set, set);
+prototype["getThreadIds"] = function getThreadIds(id, sortOrder, tagFilter, tagSetting) {
+  const areSetsEqualResult = SetUtils.areSetsEqual(tagFilter, tagFilter);
   let tmp2 = !areSetsEqualResult;
   c12 = id;
-  LATEST_ACTIVITY = importDefault;
-  MATCH_SOME = asyncGeneratorStep;
+  LATEST_ACTIVITY = sortOrder;
+  MATCH_SOME = tagSetting;
   if (id !== c12) {
     rebuildState({ refreshThreadIds: true });
-  } else if (importDefault !== tmp3) {
+  } else if (sortOrder !== tmp3) {
     rebuildState({ sortThreadIds: true });
   } else {
     if (areSetsEqualResult) {
-      tmp2 = asyncGeneratorStep !== tmp4;
+      tmp2 = tagSetting !== tmp4;
     }
     if (tmp2) {
       rebuildState();

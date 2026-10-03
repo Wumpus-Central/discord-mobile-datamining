@@ -1,8 +1,8 @@
-// === Module 16618: VibegrationsTodoState ===
+// === Module 16703: VibegrationsTodoState ===
 
-// Module 16618 (VibegrationsTodoState)
-import VibegrationsChatStore from "VibegrationsChatStore" /* 12852 */;
-import VibegrationsTimelineTree from "VibegrationsTimelineTree" /* 16581 */;
+// Module 16703 (VibegrationsTodoState)
+import VibegrationsChatStore from "VibegrationsChatStore" /* 12905 */;
+import VibegrationsTimelineTree from "VibegrationsTimelineTree" /* 16661 */;
 import size from "module_2" /* 2 */;
 
 const turnSettled = VibegrationsChatStore.turnSettled;
@@ -97,8 +97,8 @@ export const supersededChecklists = function supersededChecklists(memo) {
   }
   return set;
 };
-export const checklistExpanded = function checklistExpanded(c13, render_id, set) {
-  value = c13.get(render_id);
+export const checklistExpanded = function checklistExpanded(c15, render_id, set) {
+  value = c15.get(render_id);
   if (value == null) {
     value = !set;
   }

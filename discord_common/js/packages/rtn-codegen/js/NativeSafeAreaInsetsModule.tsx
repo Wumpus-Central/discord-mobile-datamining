@@ -1,6 +1,6 @@
-// === Module 1625: NativeSafeAreaInsetsModule ===
+// === Module 1630: NativeSafeAreaInsetsModule ===
 
-// Module 1625 (NativeSafeAreaInsetsModule)
+// Module 1630 (NativeSafeAreaInsetsModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

@@ -1,7 +1,7 @@
-// === Module 6853: DiceRollActionCreators ===
+// === Module 6751: DiceRollActionCreators ===
 
-// Module 6853 (DiceRollActionCreators)
-import DispatcherDefault from "Dispatcher" /* 573 */;
+// Module 6751 (DiceRollActionCreators)
+import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/dice_roll/DiceRollActionCreators.tsx");

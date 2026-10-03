@@ -1,9 +1,9 @@
-// === Module 13132: ApplePurchasesActionCreators ===
+// === Module 13191: ApplePurchasesActionCreators ===
 
-// Module 13132 (ApplePurchasesActionCreators)
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import BillingUtils from "BillingUtils" /* 4532 */;
-import _mod10714 from "module_10714" /* 10714 */;
+// Module 13191 (ApplePurchasesActionCreators)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import BillingUtils from "BillingUtils" /* 4543 */;
+import _mod10785 from "module_10785" /* 10785 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/billing/native/ApplePurchasesActionCreators.tsx");
@@ -11,7 +11,7 @@ let result = size.fileFinishedImporting("modules/billing/native/ApplePurchasesAc
 export const fetchApplePurchases = function fetchApplePurchases() {
   if (null == cleanupPromise) {
     DispatcherDefault.dispatch({ type: "APPLE_PURCHASES_FETCH_START" });
-    const availablePurchases = _mod10714.getAvailablePurchases({ onlyIncludeActiveItems: false });
+    const availablePurchases = _mod10785.getAvailablePurchases({ onlyIncludeActiveItems: false });
     const nextPromise = availablePurchases.then((purchases) => {
       DispatcherDefault.dispatch({ type: "APPLE_PURCHASES_FETCH_SUCCESS", purchases });
       return true;

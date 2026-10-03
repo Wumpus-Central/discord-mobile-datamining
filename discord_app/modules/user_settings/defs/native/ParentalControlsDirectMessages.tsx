@@ -1,13 +1,15 @@
-// === Module 15736: ParentalControlsDirectMessages ===
+// === Module 15799: ParentalControlsDirectMessages ===
 
-// Module 15736 (ParentalControlsDirectMessages)
-import util from "util" /* 1115 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14565 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14566 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7145 */;
+// Module 15799 (ParentalControlsDirectMessages)
+import util from "util" /* 1126 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14621 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14622 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7048 */;
 
 require = fn;
-const SettingBuilders = fn(11215);
+let ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
+const SettingBuilders = fn(11129);
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -17,10 +19,8 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.wbYDfT);
   },
-  parent: fn(7590).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
-  useValue() {
-    return !useParentalControlSettings.useDefaultGuildsRestricted();
-  },
+  parent: fn(7634).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  useValue: () => !useParentalControlSettings.useDefaultGuildsRestricted(),
   onValueChange: function onAllowDirectMessagesFromServerMembersValueChange(arg0) {
     const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
     if (null != selectedTeenId) {
@@ -31,7 +31,7 @@ const toggle = SettingBuilders.createToggle({
   unsearchable: true
 });
 const size = fn(2);
-let result = size.fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsDirectMessages.tsx");
+const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsDirectMessages.tsx");
 
 export default toggle;
 export const ParentalControlsDirectMessages = toggle;

@@ -1,7 +1,7 @@
-// === Module 1337: getSystemLocale ===
+// === Module 1348: getSystemLocale ===
 
-// Module 1337 (getSystemLocale)
-import NativeDeviceLocaleModule from "NativeDeviceLocaleModule" /* 1116 */;
+// Module 1348 (getSystemLocale)
+import NativeDeviceLocaleModule from "NativeDeviceLocaleModule" /* 1127 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/i18n/getSystemLocale.tsx");

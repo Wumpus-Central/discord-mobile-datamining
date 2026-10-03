@@ -1,7 +1,7 @@
-// === Module 10893: BountyTypes ===
+// === Module 9999: BountyTypes ===
 
-// Module 10893 (BountyTypes)
-import AssetUtils from "AssetUtils" /* 10894 */;
+// Module 9999 (BountyTypes)
+import AssetUtils from "AssetUtils" /* 10000 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

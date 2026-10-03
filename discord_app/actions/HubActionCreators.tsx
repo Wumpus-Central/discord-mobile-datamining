@@ -1,14 +1,14 @@
-// === Module 12459: HubActionCreators ===
+// === Module 12399: HubActionCreators ===
 
-// Module 12459 (HubActionCreators)
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1249 */;
-import HTTPUtils from "HTTPUtils" /* 1271 */;
-import TypeUtils from "TypeUtils" /* 2056 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5038 */;
+// Module 12399 (HubActionCreators)
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import TypeUtils from "TypeUtils" /* 2064 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5083 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/HubActionCreators.tsx");
 
@@ -110,7 +110,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -154,7 +154,7 @@ export default {
               throw value;
             } else if (arg0 !== 2) {
               closure_128_0 = value;
-              const guild = closure_128_0.body.guild;
+              guild = closure_128_0.body.guild;
               let id;
               if (guild != null) {
                 id = guild.id;
@@ -197,7 +197,7 @@ export default {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -230,7 +230,7 @@ export default {
                 return obj8;
               } else {
                 c5 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             }
           } else if (1 === tmp7) {
@@ -249,7 +249,7 @@ export default {
             return obj10;
           } else {
             closure_128_0 = value;
-            const guild = closure_128_0.body.guild;
+            guild = closure_128_0.body.guild;
             let id;
             if (guild != null) {
               id = guild.id;

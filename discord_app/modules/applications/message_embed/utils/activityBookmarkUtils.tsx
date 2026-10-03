@@ -1,7 +1,7 @@
-// === Module 7278: activityBookmarkUtils ===
+// === Module 7176: activityBookmarkUtils ===
 
-// Module 7278 (activityBookmarkUtils)
-import URLUtilsDefault from "URLUtils" /* 1366 */;
+// Module 7176 (activityBookmarkUtils)
+import URLUtilsDefault from "URLUtils" /* 1371 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/applications/message_embed/utils/activityBookmarkUtils.tsx");
@@ -14,7 +14,7 @@ export const extractActivityBookmarkParams = function extractActivityBookmarkPar
     value = searchParams.get("referrer_id");
   }
   const obj2 = { referrerId: value, customId: null, linkId: null };
-  let value3;
+  value3 = undefined;
   if (toURLSafeResult != null) {
     const searchParams2 = toURLSafeResult.searchParams;
     value3 = searchParams2.get("custom_id");

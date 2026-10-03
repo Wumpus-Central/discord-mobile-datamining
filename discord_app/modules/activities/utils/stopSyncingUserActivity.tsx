@@ -1,7 +1,7 @@
-// === Module 13376: stopSyncingUserActivity ===
+// === Module 13436: stopSyncingUserActivity ===
 
-// Module 13376 (stopSyncingUserActivity)
-import DispatcherDefault from "Dispatcher" /* 573 */;
+// Module 13436 (stopSyncingUserActivity)
+import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activities/utils/stopSyncingUserActivity.tsx");

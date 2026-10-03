@@ -1,13 +1,13 @@
-// === Module 6714: AuthorizedAppsStore ===
+// === Module 6602: AuthorizedAppsStore ===
 
-// Module 6714 (AuthorizedAppsStore)
+// Module 6602 (AuthorizedAppsStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import GlobalUtils from "GlobalUtils" /* 1370 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import GlobalUtils from "GlobalUtils" /* 1375 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import ConnectedAppsStore from "ConnectedAppsStore" /* 6715 */;
-import MessageStore from "MessageStore" /* 5065 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import ConnectedAppsStore from "ConnectedAppsStore" /* 6603 */;
+import MessageStore from "MessageStore" /* 5110 */;
 
 require = fn;
 function recomputeFromAppTokens() {
@@ -43,10 +43,10 @@ const prototype = AuthorizedAppsStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(ChannelStore, ConnectedAppsStore, MessageStore);
 };
-prototype["getNewestTokenForApplication"] = function getNewestTokenForApplication(applicationId) {
+prototype["getNewestTokenForApplication"] = function getNewestTokenForApplication(application_id) {
   let tmp = null;
-  if (null != applicationId) {
-    value = map.get(applicationId);
+  if (null != application_id) {
+    value = map.get(application_id);
     if (value == null) {
       value = null;
     }

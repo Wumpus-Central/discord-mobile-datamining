@@ -1,14 +1,17 @@
-// === Module 15275: UpcomingServerEventNotificationSetting ===
+// === Module 15331: UpcomingServerEventNotificationSetting ===
 
-// Module 15275 (UpcomingServerEventNotificationSetting)
-import util from "util" /* 1115 */;
-import UserSettings from "UserSettings" /* 2021 */;
-import SettingsConstants from "SettingsConstants" /* 7590 */;
-import UpcomingServerEventExperiment from "UpcomingServerEventExperiment" /* 15276 */;
-import UpcomingServerEventNotificationUtils from "UpcomingServerEventNotificationUtils" /* 15277 */;
-import SettingBuilders from "SettingBuilders" /* 11215 */;
+// Module 15331 (UpcomingServerEventNotificationSetting)
+import util from "util" /* 1126 */;
+import UserSettings from "UserSettings" /* 2028 */;
+import SettingsConstants from "SettingsConstants" /* 7634 */;
+import UpcomingServerEventExperiment from "UpcomingServerEventExperiment" /* 15332 */;
+import UpcomingServerEventNotificationUtils from "UpcomingServerEventNotificationUtils" /* 15333 */;
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
+import SettingBuilders from "SettingBuilders" /* 11129 */;
 import size from "module_2" /* 2 */;
 
+let ReactCompilerGating = ReactCompilerGating_mod;
+ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -21,10 +24,8 @@ const toggle = SettingBuilders.createToggle({
   parent: SettingsConstants.MobileUserSettings.NOTIFICATIONS,
   useValue: UserSettings.EnableUpcomingServerEventNotifications.useSetting,
   onValueChange: UpcomingServerEventNotificationUtils.onUpcomingServerEventNotificationSettingsChanged,
-  usePredicate: function useExperiment() {
-    return UpcomingServerEventExperiment.useUpcomingServerEventExperiment("tabsV2Settings").showSettingsToggle;
-  }
+  usePredicate: () => UpcomingServerEventExperiment.useUpcomingServerEventExperiment("tabsV2Settings").showSettingsToggle
 });
-const result = size.fileFinishedImporting("modules/user_settings/defs/native/UpcomingServerEventNotificationSetting.tsx");
+const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/UpcomingServerEventNotificationSetting.tsx");
 
 export default toggle;

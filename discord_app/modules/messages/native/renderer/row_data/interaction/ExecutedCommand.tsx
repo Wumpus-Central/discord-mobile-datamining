@@ -1,23 +1,23 @@
-// === Module 12966: ExecutedCommand ===
+// === Module 13025: ExecutedCommand ===
 
-// Module 12966 (ExecutedCommand)
+// Module 13025 (ExecutedCommand)
 import _mod17 from "module_17" /* 17 */;
-import nativeDefault from "native" /* 576 */;
-import Constants from "Constants" /* 1074 */;
-import util from "util" /* 1115 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import utils_AvatarUtils from "utils/AvatarUtils" /* 1400 */;
-import Server from "Server" /* 1979 */;
-import useMessageAuthor from "useMessageAuthor" /* 5258 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7129 */;
-import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 7576 */;
-import createDisplayNameStylesMobile from "createDisplayNameStylesMobile" /* 7578 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 8781 */;
-import ActivitiesInTextUtils from "ActivitiesInTextUtils" /* 8981 */;
-import ApplicationInteractionInfoUtils from "ApplicationInteractionInfoUtils" /* 11327 */;
-import UserRecord from "UserRecord" /* 1386 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import UserStore from "UserStore" /* 1372 */;
+import nativeDefault from "native" /* 587 */;
+import Constants from "Constants" /* 1085 */;
+import util from "util" /* 1126 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
+import utils_AvatarUtils from "utils/AvatarUtils" /* 1405 */;
+import Server from "Server" /* 1985 */;
+import useMessageAuthor from "useMessageAuthor" /* 5304 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7030 */;
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 7620 */;
+import createDisplayNameStylesMobile from "createDisplayNameStylesMobile" /* 7622 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 8794 */;
+import ActivitiesInTextUtils from "ActivitiesInTextUtils" /* 9000 */;
+import ApplicationInteractionInfoUtils from "ApplicationInteractionInfoUtils" /* 11242 */;
+import UserRecord from "UserRecord" /* 1391 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import UserStore from "UserStore" /* 1377 */;
 import size from "module_2" /* 2 */;
 
 const processColor = _mod17.processColor;

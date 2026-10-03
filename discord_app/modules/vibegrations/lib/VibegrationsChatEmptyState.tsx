@@ -1,6 +1,6 @@
-// === Module 16627: VibegrationsChatEmptyState ===
+// === Module 16712: VibegrationsChatEmptyState ===
 
-// Module 16627 (VibegrationsChatEmptyState)
+// Module 16712 (VibegrationsChatEmptyState)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsChatEmptyState.tsx");

@@ -1,8 +1,8 @@
-// === Module 10624: hideLaunchPad ===
+// === Module 10702: hideLaunchPad ===
 
-// Module 10624 (hideLaunchPad)
-import Constants from "Constants" /* 1074 */;
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
+// Module 10702 (hideLaunchPad)
+import Constants from "Constants" /* 1085 */;
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
 import size from "module_2" /* 2 */;
 
 const ComponentActions = Constants.ComponentActions;

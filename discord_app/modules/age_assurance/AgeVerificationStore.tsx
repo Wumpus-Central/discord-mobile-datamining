@@ -1,10 +1,10 @@
-// === Module 8090: AgeVerificationStore ===
+// === Module 8131: AgeVerificationStore ===
 
-// Module 8090 (AgeVerificationStore)
+// Module 8131 (AgeVerificationStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import UserStore from "UserStore" /* 1372 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import UserStore from "UserStore" /* 1377 */;
 
 require = fn;
 function invalidateAgeVerificationMethodsV2() {

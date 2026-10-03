@@ -1,19 +1,19 @@
-// === Module 10398: PremiumGiftingIntentActionCreators ===
+// === Module 10472: PremiumGiftingIntentActionCreators ===
 
-// Module 10398 (PremiumGiftingIntentActionCreators)
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import SentryUtilsDefault from "SentryUtils" /* 1231 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import HTTPUtils from "HTTPUtils" /* 1271 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7245 */;
+// Module 10472 (PremiumGiftingIntentActionCreators)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import SentryUtilsDefault from "SentryUtils" /* 1242 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7143 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MessageStore from "MessageStore" /* 5065 */;
+import MessageStore from "MessageStore" /* 5110 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GiftIntentType = fn(1374).GiftIntentType;
-const Constants = fn(1074);
+const GiftIntentType = fn(1379).GiftIntentType;
+const Constants = fn(1085);
 ({ AnalyticEvents: closure_7, Endpoints: closure_8 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/gifting/PremiumGiftingIntentActionCreators.tsx");
@@ -35,9 +35,9 @@ export const fetchAndReconcileGiftIntentDismissals = function fetchAndReconcileG
       DispatcherDefault.dispatch({ type: "GIFT_INTENT_DISMISSALS_FETCH_FAILURE" });
     }
   }, (arg0) => {
-    closure_1(1231).captureException(arg0, { tags: { feature: "gift_intent" } });
-    const obj = closure_1(1231);
-    closure_1(573).dispatch({ type: "GIFT_INTENT_DISMISSALS_FETCH_FAILURE" });
+    closure_1(1242).captureException(arg0, { tags: { feature: "gift_intent" } });
+    const obj = closure_1(1242);
+    closure_1(584).dispatch({ type: "GIFT_INTENT_DISMISSALS_FETCH_FAILURE" });
   });
 };
 export const logFriendsListGiftIntentsShown = function logFriendsListGiftIntentsShown() {

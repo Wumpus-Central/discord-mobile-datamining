@@ -1,13 +1,13 @@
-// === Module 11705: MessageAttachmentUtils ===
+// === Module 11626: MessageAttachmentUtils ===
 
-// Module 11705 (MessageAttachmentUtils)
-import util from "util" /* 1115 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 6897 */;
-import ObscureMediaModels from "ObscureMediaModels" /* 6901 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 6902 */;
-import ForumPostMediaUtils from "ForumPostMediaUtils" /* 7496 */;
-import computeGlobalSpoilerDisplayDefault from "computeGlobalSpoilerDisplay" /* 7901 */;
-import PermissionStore from "PermissionStore" /* 4498 */;
+// Module 11626 (MessageAttachmentUtils)
+import util from "util" /* 1126 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 6795 */;
+import ObscureMediaModels from "ObscureMediaModels" /* 6799 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 6800 */;
+import ForumPostMediaUtils from "ForumPostMediaUtils" /* 7540 */;
+import computeGlobalSpoilerDisplayDefault from "computeGlobalSpoilerDisplay" /* 7945 */;
+import PermissionStore from "PermissionStore" /* 4509 */;
 
 require = fn;
 function getForumPostShouldObscure(media, arg1, enabledHarmTypesBitmaskForChannelType) {
@@ -58,7 +58,8 @@ function getForumPostShouldObscure(media, arg1, enabledHarmTypesBitmaskForChanne
     }
   }
 }
-const Permissions = fn(1074).Permissions;
+const Permissions = fn(1085).Permissions;
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/MessageAttachmentUtils.tsx");
 
@@ -83,14 +84,14 @@ export const getObscureReasonForAttachment = function getObscureReasonForAttachm
   }
   return first;
 };
-export const getObscureReasonForEmbed = function getObscureReasonForEmbed(embed, message, flag2, enabledContentHarmTypeFlags) {
+export const getObscureReasonForEmbed = function getObscureReasonForEmbed(embed, message, flag2, enabledHarmTypesBitmaskForChannelAndAuthorId) {
   const obj = ObscuredMediaUtils;
-  const mediaObscuredReasonFromBitmask = obj.getMediaObscuredReasonFromBitmask({ type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Embed, media: embed }, enabledContentHarmTypeFlags);
+  const mediaObscuredReasonFromBitmask = obj.getMediaObscuredReasonFromBitmask({ type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Embed, media: embed }, enabledHarmTypesBitmaskForChannelAndAuthorId);
   const bot = message.author.bot;
   let isMediaScanPendingResult = !bot;
   if (!bot) {
     const obj3 = { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Embed, media: embed };
-    isMediaScanPendingResult = ObscuredMediaUtils.isMediaScanPending(obj3, enabledContentHarmTypeFlags);
+    isMediaScanPendingResult = ObscuredMediaUtils.isMediaScanPending(obj3, enabledHarmTypesBitmaskForChannelAndAuthorId);
     const tmpResult = ObscuredMediaUtils;
   }
   if (mediaObscuredReasonFromBitmask.length > 0) {
@@ -105,20 +106,20 @@ export const getObscureReasonForEmbed = function getObscureReasonForEmbed(embed,
   }
   return first;
 };
-export const getObscureReasonForUnfurledMediaItem = function getObscureReasonForUnfurledMediaItem(unfurledMediaItem, enabledHarmTypesBitmaskForChannelAndAuthorId, arg2) {
+export const getObscureReasonForUnfurledMediaItem = function getObscureReasonForUnfurledMediaItem(size, enabledHarmTypesBitmaskForChannelAndAuthorId, arg2) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = false;
   }
-  let flag2 = isBot;
-  if (isBot === undefined) {
+  let flag2 = cResult;
+  if (cResult === undefined) {
     flag2 = false;
   }
   const obj = ObscuredMediaUtils;
-  const mediaObscuredReasonFromBitmask = obj.getMediaObscuredReasonFromBitmask({ type: ExplicitMediaRedactionModels.ObscuredMediaTypes.GenericMedia, media: unfurledMediaItem }, enabledHarmTypesBitmaskForChannelAndAuthorId);
+  const mediaObscuredReasonFromBitmask = obj.getMediaObscuredReasonFromBitmask({ type: ExplicitMediaRedactionModels.ObscuredMediaTypes.GenericMedia, media: size }, enabledHarmTypesBitmaskForChannelAndAuthorId);
   let isMediaScanPendingResult = !flag2;
   if (!flag2) {
-    const obj3 = { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.GenericMedia, media: unfurledMediaItem };
+    const obj3 = { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.GenericMedia, media: size };
     isMediaScanPendingResult = ObscuredMediaUtils.isMediaScanPending(obj3, enabledHarmTypesBitmaskForChannelAndAuthorId);
     const tmpResult = ObscuredMediaUtils;
   }
@@ -139,22 +140,76 @@ export const getObscureReasonForUnfurledMediaItem = function getObscureReasonFor
   return EXPLICIT_CONTENT;
 };
 export { getForumPostShouldObscure };
-export const useShouldObscure = function useShouldObscure(channel) {
+export const useShouldObscure = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+  let tmp2 = dependencyMap;
+  const cResult = channel(576).c(10);
+  channel = channel.channel;
+  const media = channel.media;
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [PermissionStore];
+    cResult[0] = items;
+    let first = items;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] !== channel) {
+    const fn = function o() {
+      let canResult = null != channel;
+      if (canResult) {
+        canResult = PermissionStore.can(Permissions.MANAGE_MESSAGES, tmp);
+      }
+      return canResult;
+    };
+    cResult[1] = channel;
+    cResult[2] = fn;
+    let tmp6 = fn;
+  } else {
+    tmp6 = cResult[2];
+  }
+  const obj = channel(576);
+  const stateFromStores = channel(573).useStateFromStores(first, tmp6);
+  const RenderSpoilers = tmp(2028).RenderSpoilers;
+  const setting = RenderSpoilers.useSetting();
+  if (cResult[3] === stateFromStores) {
+    if (cResult[4] === media) {
+      if (cResult[5] === setting) {
+        return cResult[6];
+      }
+    }
+  }
+  channel(6795);
+  if (cResult[7] === stateFromStores) {
+    if (cResult[8] === setting) {
+      let tmp11 = cResult[9];
+    }
+    const tmp13 = getForumPostShouldObscure(media, !tmp11, tmp10);
+    cResult[3] = stateFromStores;
+    cResult[4] = media;
+    cResult[5] = setting;
+    cResult[6] = tmp13;
+  }
+  tmp2 = computeGlobalSpoilerDisplayDefault(setting, stateFromStores);
+  cResult[7] = stateFromStores;
+  cResult[8] = setting;
+  cResult[9] = tmp2;
+  tmp11 = tmp2;
+  const tmpResult = channel(573);
+}) : ((channel) => {
   channel = channel.channel;
   const items = [PermissionStore];
-  const stateFromStores = channel(563).useStateFromStores(items, () => {
+  const stateFromStores = channel(573).useStateFromStores(items, () => {
     let canResult = null != channel;
     if (canResult) {
       canResult = PermissionStore.can(Permissions.MANAGE_MESSAGES, tmp);
     }
     return canResult;
   });
-  const RenderSpoilers = channel(2021).RenderSpoilers;
+  const RenderSpoilers = channel(2028).RenderSpoilers;
   const setting = RenderSpoilers.useSetting();
-  const obj = channel(563);
-  const enabledHarmTypesBitmaskForChannelType = channel(6897).getEnabledHarmTypesBitmaskForChannelType(channel(6902).ContentHarmTypeChannel.GUILD);
+  const obj = channel(573);
+  const enabledHarmTypesBitmaskForChannelType = channel(6795).getEnabledHarmTypesBitmaskForChannelType(channel(6800).ContentHarmTypeChannel.GUILD);
   return getForumPostShouldObscure(channel.media, !computeGlobalSpoilerDisplayDefault(setting, stateFromStores), enabledHarmTypesBitmaskForChannelType);
-};
+});
 export const getObscuredAlt = function getObscuredAlt(arg0) {
   if (ObscureMediaModels.ObscureReason.EXPLICIT_CONTENT !== arg0) {
     if (ObscureMediaModels.ObscureReason.GORE_CONTENT !== arg0) {

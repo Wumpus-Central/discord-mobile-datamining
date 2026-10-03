@@ -1,6 +1,6 @@
-// === Module 8582: createCompactNumberFormat ===
+// === Module 8595: createCompactNumberFormat ===
 
-// Module 8582 (createCompactNumberFormat)
+// Module 8595 (createCompactNumberFormat)
 import size from "module_2" /* 2 */;
 
 function toAsciiDigits(arg0, get) {
@@ -30,7 +30,7 @@ export const createCompactNumberFormat = function createCompactNumberFormat(stat
     num = num + 1;
   } while (num <= 9);
   const numberFormat1 = new Intl.NumberFormat(stateFromStores, { notation: "compact", compactDisplay: "short" });
-  map1 = new Map();
+  const map1 = new Map();
   return {
     format(arg0) {
       let tmp10;

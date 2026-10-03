@@ -1,17 +1,17 @@
-// === Module 14297: RPCServer ===
+// === Module 14365: RPCServer ===
 
-// Module 14297 (RPCServer)
+// Module 14365 (RPCServer)
 import _modDef12 from "module_12" /* 12 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import RPCErrorDefault from "RPCError" /* 8962 */;
-import transformUserDefault from "transformUser" /* 8968 */;
-import RpcCommandInterception from "RpcCommandInterception" /* 12660 */;
-import validateScopeDefault from "validateScope" /* 14273 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import RpcCommandInterception from "RpcCommandInterception" /* 8975 */;
+import RPCErrorDefault from "RPCError" /* 9026 */;
+import transformUserDefault from "transformUser" /* 9032 */;
+import validateScopeDefault from "validateScope" /* 14341 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-const TransportTypes = fn(5270).TransportTypes;
-const Constants = fn(1074);
+const TransportTypes = fn(5316).TransportTypes;
+const Constants = fn(1085);
 ({ AnalyticEvents: hasOwnProperty, RPCCloseCodes: metroRequire, RPCCommands: closure_7, RPCErrors: closure_8, RPCEvents: closure_9 } = Constants);
 const RPC_STORE_WAIT = "RPC_STORE_WAIT";
 let closure_11 = [];
@@ -150,7 +150,7 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -258,7 +258,7 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -391,7 +391,7 @@ prototype["handleRequest"] = function handleRequest(socket, arg1) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {

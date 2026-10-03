@@ -1,30 +1,77 @@
-// === Module 14578: ExplicitMediaFiltersGuildsSetting ===
+// === Module 14634: ExplicitMediaFiltersGuildsSetting ===
 
-// Module 14578 (ExplicitMediaFiltersGuildsSetting)
-import util from "util" /* 1115 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
-import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 6903 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7206 */;
-import SettingsConstants from "SettingsConstants" /* 7590 */;
-import useUserIsTeen from "useUserIsTeen" /* 8290 */;
-import useExplicitContentSettingsOrDefault from "useExplicitContentSettingsOrDefault" /* 14573 */;
-import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 14574 */;
-import SettingBuilders from "SettingBuilders" /* 11215 */;
+// Module 14634 (ExplicitMediaFiltersGuildsSetting)
+import c from "c" /* 576 */;
+import util from "util" /* 1126 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
+import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 6801 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7109 */;
+import SettingsConstants from "SettingsConstants" /* 7634 */;
+import useUserIsTeen from "useUserIsTeen" /* 8294 */;
+import useExplicitContentSettingsOrDefault from "useExplicitContentSettingsOrDefault" /* 14629 */;
+import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 14630 */;
+import "ReactCompilerGating";
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
+import SettingBuilders from "SettingBuilders" /* 11129 */;
 import size from "module_2" /* 2 */;
 
 const MobileUserSettings = SettingsConstants.MobileUserSettings;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let userIsTeen = useUserIsTeen.useUserIsTeen();
+  if (!userIsTeen) {
+    userIsTeen = obj2.useIsParentallyControlled();
+  }
+  return userIsTeen;
+}) : (() => {
+  let userIsTeen = useUserIsTeen.useUserIsTeen();
+  if (!userIsTeen) {
+    userIsTeen = obj2.useIsParentallyControlled();
+  }
+  return userIsTeen;
+});
+function getTitle() {
+  const intl = util.intl;
+  return intl.string(util.t["FP+a42"]);
+}
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(2);
+  const explicitContentGuilds = useExplicitContentSettingsOrDefault.useExplicitContentSettingOrDefault().explicitContentGuilds;
+  if (cResult[0] !== explicitContentGuilds) {
+    const tmp5 = ExplicitMediaRedactionUtils.redactionSettingToRenderedString(explicitContentGuilds)();
+    cResult[0] = explicitContentGuilds;
+    cResult[1] = tmp5;
+    let tmp4 = tmp5;
+    const tmpResult = ExplicitMediaRedactionUtils;
+  } else {
+    tmp4 = cResult[1];
+  }
+  return tmp4;
+}) : (() => {
+  const obj = useExplicitContentSettingsOrDefault;
+  return ExplicitMediaRedactionUtils.redactionSettingToRenderedString(obj.useExplicitContentSettingOrDefault().explicitContentGuilds)();
+});
 const pressable = SettingBuilders.createPressable({
-  useTitle: function getTitle() {
-    const intl = util.intl;
-    return intl.string(util.t["FP+a42"]);
-  },
+  useTitle: getTitle,
   parent() {
     return MobileUserSettings.SENSITIVE_CONTENT_FILTERS;
   },
-  useTrailing: function useObscuredContentGuildsSettingValue() {
+  useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+    const cResult = c.c(2);
+    const explicitContentGuilds = useExplicitContentSettingsOrDefault.useExplicitContentSettingOrDefault().explicitContentGuilds;
+    if (cResult[0] !== explicitContentGuilds) {
+      const tmp5 = ExplicitMediaRedactionUtils.redactionSettingToRenderedString(explicitContentGuilds)();
+      cResult[0] = explicitContentGuilds;
+      cResult[1] = tmp5;
+      let tmp4 = tmp5;
+      const tmpResult = ExplicitMediaRedactionUtils;
+    } else {
+      tmp4 = cResult[1];
+    }
+    return tmp4;
+  }) : (() => {
     const obj = useExplicitContentSettingsOrDefault;
     return ExplicitMediaRedactionUtils.redactionSettingToRenderedString(obj.useExplicitContentSettingOrDefault().explicitContentGuilds)();
-  },
+  }),
   onPress: function onObscuredContentGuildsOnPress() {
     const intl = util.intl;
     const obj = SensitiveMediaExplicitRedactionSettingsUtils;
@@ -49,13 +96,7 @@ const pressable = SettingBuilders.createPressable({
     items[2] = intl3.string(util.t["5mnTa7"]);
     return items;
   },
-  useIsDisabled() {
-    let userIsTeen = useUserIsTeen.useUserIsTeen();
-    if (!userIsTeen) {
-      userIsTeen = obj2.useIsParentallyControlled();
-    }
-    return userIsTeen;
-  }
+  useIsDisabled: tmp2
 });
 let result = size.fileFinishedImporting("modules/user_settings/defs/native/ExplicitMediaFiltersGuildsSetting.tsx");
 

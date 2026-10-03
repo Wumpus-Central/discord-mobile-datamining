@@ -1,11 +1,11 @@
-// === Module 5939: LegacyTokens ===
+// === Module 5620: LegacyTokens ===
 
-// Module 5939 (LegacyTokens)
+// Module 5620 (LegacyTokens)
 import _mod17 from "module_17" /* 17 */;
-import nativeDefault from "native" /* 576 */;
-import ColorUtils from "ColorUtils" /* 4712 */;
-import shared from "shared" /* 4714 */;
-import createStyles_mod from "createStyles" /* 4845 */;
+import nativeDefault from "native" /* 587 */;
+import ColorUtils from "ColorUtils" /* 4727 */;
+import shared from "shared" /* 4729 */;
+import createStyles_mod from "createStyles" /* 4890 */;
 import size from "module_2" /* 2 */;
 
 const Platform = _mod17.Platform;

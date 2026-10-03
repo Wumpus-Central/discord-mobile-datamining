@@ -1,6 +1,6 @@
-// === Module 5250: ? ===
+// === Module 5296: ? ===
 
-// Module 5250
+// Module 5296
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/aura/spooky.png.js");

@@ -1,15 +1,15 @@
-// === Module 17903: MessageSendFailureNotificationManager ===
+// === Module 17989: MessageSendFailureNotificationManager ===
 
-// Module 17903 (MessageSendFailureNotificationManager)
-import util from "util" /* 1115 */;
-import PushNotificationDefault from "PushNotification" /* 8938 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 9749 */;
-import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 9751 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4684 */;
-import UserStore from "UserStore" /* 1372 */;
-import AppStateStore from "AppStateStore" /* 1980 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6725 */;
+// Module 17989 (MessageSendFailureNotificationManager)
+import util from "util" /* 1126 */;
+import PushNotificationDefault from "PushNotification" /* 8966 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 12477 */;
+import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 12479 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
+import UserStore from "UserStore" /* 1377 */;
+import AppStateStore from "AppStateStore" /* 1986 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
 
 require = fn;
 function handleMessageSendFailure(shouldNotify) {
@@ -74,9 +74,9 @@ function handleMessageCreate(message) {
     }, 3000);
   }
 }
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ InAppNotificationTypes: closure_7, MessageStates: closure_8 } = Constants);
-const LocalNotificationTypes = fn(8695).LocalNotificationTypes;
+const LocalNotificationTypes = fn(8707).LocalNotificationTypes;
 const prototype = function MessageSendFailureNotificationManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { MESSAGE_CREATE: handleMessageCreate, MESSAGE_SEND_FAILED: handleMessageSendFailure };

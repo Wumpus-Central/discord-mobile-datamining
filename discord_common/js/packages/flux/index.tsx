@@ -3,10 +3,10 @@
 // Module 504 (initialize)
 import Store2 from "Store" /* 506 */;
 import flux_EmitterDefault from "flux/Emitter" /* 508 */;
-import useStateFromStores from "useStateFromStores" /* 563 */;
-import BatchedStoreListener from "BatchedStoreListener" /* 564 */;
-import connectStoresDefault from "connectStores" /* 565 */;
-import flux_Dispatcher from "flux/Dispatcher" /* 566 */;
+import useStateFromStores from "useStateFromStores" /* 573 */;
+import BatchedStoreListener from "BatchedStoreListener" /* 574 */;
+import connectStoresDefault from "connectStores" /* 575 */;
+import flux_Dispatcher from "flux/Dispatcher" /* 578 */;
 import PersistedStore_mod from "PersistedStore" /* 505 */;
 import createFetchStore_mod from "createFetchStore" /* 557 */;
 import size from "module_2" /* 2 */;
@@ -28,6 +28,7 @@ export default obj;
 export { NO_DATA };
 export { Store };
 export const Dispatcher = flux_Dispatcher.Dispatcher;
+export const DispatchBand = flux_Dispatcher.DispatchBand;
 export const BatchedStoreListener = BatchedStoreListener.BatchedStoreListener;
 export { createFetchStore };
 export const statesWillNeverBeEqual = useStateFromStores.statesWillNeverBeEqual;

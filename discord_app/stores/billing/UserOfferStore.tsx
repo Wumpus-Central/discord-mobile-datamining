@@ -1,18 +1,18 @@
-// === Module 7058: UserOfferStore ===
+// === Module 6959: UserOfferStore ===
 
-// Module 7058 (UserOfferStore)
+// Module 6959 (UserOfferStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import PremiumUtils from "PremiumUtils" /* 4517 */;
-import PremiumOfferReminderExperiment from "PremiumOfferReminderExperiment" /* 13080 */;
-import DiscountRecord from "DiscountRecord" /* 7059 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 7060 */;
-import UserDiscountOfferRecord from "UserDiscountOfferRecord" /* 7690 */;
-import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7062 */;
-import UserStore from "UserStore" /* 1372 */;
-import EntitlementStore from "EntitlementStore" /* 7001 */;
-import SubscriptionStore from "SubscriptionStore" /* 4523 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import PremiumUtils from "PremiumUtils" /* 4528 */;
+import PremiumOfferReminderExperiment from "PremiumOfferReminderExperiment" /* 13139 */;
+import DiscountRecord from "DiscountRecord" /* 6960 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 6961 */;
+import UserDiscountOfferRecord from "UserDiscountOfferRecord" /* 7734 */;
+import UserTrialOfferRecord from "UserTrialOfferRecord" /* 6963 */;
+import UserStore from "UserStore" /* 1377 */;
+import EntitlementStore from "EntitlementStore" /* 6899 */;
+import SubscriptionStore from "SubscriptionStore" /* 4534 */;
 
 require = fn;
 function emitChanges() {
@@ -73,11 +73,11 @@ function handlePaymentSourceChange() {
 function handleReferralTrialStoreUpdate() {
   return false;
 }
-const PremiumConstants = fn(1374);
+const PremiumConstants = fn(1379);
 ({ ANNUAL_DISCOUNT_IDS: c10, CHURN_DISCOUNT_IDS: closure_11, DISCOUNT_OFFERS_REQUIRES_REMINDER_ROLLOUT: closure_12, SubscriptionPlanInfo: map1, SubscriptionTrials: closure_14, TRIAL_OFFERS_REQUIRES_REMINDER_ROLLOUT: closure_15 } = PremiumConstants);
-const OfferTriggerTypes = fn(1085).OfferTriggerTypes;
+const OfferTriggerTypes = fn(1096).OfferTriggerTypes;
 let closure_17 = performance.now();
-let cooldownExpirationTimestamps = { userOffersLastFetchedAtDate: "r", userTrialOffers: {}, userDiscountOffers: {}, userDiscounts: "\u{1F471}\u{1F3FE}\u200D\u2640\uFE0F", isFetching: true, lastFetchSuccessful: null, shouldTriggerOffer: 8, cooldownExpirationTimestamps: { [OfferTriggerTypes.CHANNEL_OPENED]: 0, [OfferTriggerTypes.JOIN_VOICE_CHANNEL]: 0, [OfferTriggerTypes.PREMIUM_UPSELL_VIEWED]: 0, [OfferTriggerTypes.USER_PROFILE_ACTION]: 0, [OfferTriggerTypes.VIDEO_STREAM_ENDED]: 0 } };
+let cooldownExpirationTimestamps = { userOffersLastFetchedAtDate: "r", userTrialOffers: {}, userDiscountOffers: {}, userDiscounts: "\u270A\u{1F3FB}", isFetching: true, lastFetchSuccessful: null, shouldTriggerOffer: 8, cooldownExpirationTimestamps: { [OfferTriggerTypes.CHANNEL_OPENED]: 0, [OfferTriggerTypes.JOIN_VOICE_CHANNEL]: 0, [OfferTriggerTypes.PREMIUM_UPSELL_VIEWED]: 0, [OfferTriggerTypes.USER_PROFILE_ACTION]: 0, [OfferTriggerTypes.VIDEO_STREAM_ENDED]: 0 } };
 let closure_19 = cooldownExpirationTimestamps;
 const PersistedStore = initializeDefault.PersistedStore;
 class UserOfferStore extends PersistedStore {
@@ -198,7 +198,7 @@ prototype["shouldFetchReferralOffer"] = function shouldFetchReferralOffer(tmp9Re
   }
 };
 prototype["shouldShowTrialOfferReminder"] = function shouldShowTrialOfferReminder(trialId) {
-  const hasItem = __initData.includes(trialId.trialId);
+  const hasItem = closure_1_15.includes(trialId.trialId);
   let result = !hasItem;
   if (hasItem) {
     result = PremiumOfferReminderExperiment.isPremiumOfferReminderExperimentEnabled({ location: "user_offer_store" });
@@ -242,7 +242,7 @@ prototype["getAlmostExpiringTrialOffersForReminder"] = function getAlmostExpirin
   });
 };
 prototype["shouldShowDiscountOfferReminder"] = function shouldShowDiscountOfferReminder(discountId) {
-  const hasItem = closure_1_12.includes(discountId.discountId);
+  const hasItem = __initData.includes(discountId.discountId);
   let result = !hasItem;
   if (hasItem) {
     result = PremiumOfferReminderExperiment.isPremiumOfferReminderExperimentEnabled({ location: "user_offer_store" });

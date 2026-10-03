@@ -1,8 +1,8 @@
-// === Module 2012: utils/StringUtils ===
+// === Module 2019: utils/StringUtils ===
 
-// Module 2012 (utils/StringUtils)
-import _mod2013 from "module_2013" /* 2013 */;
-import DOMUtils from "DOMUtils" /* 2014 */;
+// Module 2019 (utils/StringUtils)
+import _mod2020 from "module_2020" /* 2020 */;
+import DOMUtils from "DOMUtils" /* 2021 */;
 import size from "module_2" /* 2 */;
 
 const re2 = /[\u0300-\u036f]/g;
@@ -20,7 +20,7 @@ if (null == String.prototype.normalize) {
   let fullNormalize = (arg0) => arg0;
 } else {
   fullNormalize = function fullNormalize(str) {
-    closure_0 = _mod2013;
+    closure_0 = _mod2020;
     dependencyMap = "";
     const items = [...str.normalize("NFD")];
     const item = items.forEach((item) => {
@@ -46,7 +46,7 @@ export const upperCaseFirstChar = function upperCaseFirstChar(item) {
   }
   return str;
 };
-export const truncateText = (name, React6) => {
+export const truncateText = (name, arg1) => {
   let str = arg2;
   if (arg2 === undefined) {
     str = "\u2026";
@@ -55,17 +55,17 @@ export const truncateText = (name, React6) => {
   let str2 = "";
   if (null != name) {
     str2 = "";
-    if (null != React6) {
-      if (concat.length <= React6) {
+    if (null != arg1) {
+      if (concat.length <= arg1) {
         str2 = concat;
       } else {
         if (re3.test(concat)) {
           const items = [];
           HermesBuiltin.arraySpread(concat, 0);
-          const substr = items.slice(0, React6 - str.length);
+          const substr = items.slice(0, arg1 - str.length);
           let str3 = substr.join("");
         } else {
-          str3 = concat.substring(0, React6 - str.length);
+          str3 = concat.substring(0, arg1 - str.length);
         }
         const _HermesInternal = HermesInternal;
         concat = HermesInternal.concat;

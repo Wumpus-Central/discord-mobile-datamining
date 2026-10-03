@@ -1,15 +1,15 @@
-// === Module 5370: BillingPaymentGatewayActionCreators ===
+// === Module 5416: BillingPaymentGatewayActionCreators ===
 
-// Module 5370 (BillingPaymentGatewayActionCreators)
+// Module 5416 (BillingPaymentGatewayActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import util from "util" /* 1115 */;
-import HTTPUtils from "HTTPUtils" /* 1271 */;
-import BillingSharedActionCreators from "BillingSharedActionCreators" /* 5359 */;
-import _mod5371 from "module_5371" /* 5371 */;
-import StripeActionCreators from "StripeActionCreators" /* 5372 */;
-import StripeUtilsAll from "StripeUtils" /* 5373 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import util from "util" /* 1126 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import BillingSharedActionCreators from "BillingSharedActionCreators" /* 5405 */;
+import _mod5417 from "module_5417" /* 5417 */;
+import StripeActionCreators from "StripeActionCreators" /* 5418 */;
+import StripeUtilsAll from "StripeUtils" /* 5419 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -44,7 +44,7 @@ let closure_14 = async function _createCardToken(arg0, arg1) {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -65,7 +65,7 @@ let closure_14 = async function _createCardToken(arg0, arg1) {
             let error;
             if (null != closure_0) {
               if (null != element) {
-                element = element.getElement(_mod5371.CardNumberElement);
+                element = element.getElement(_mod5417.CardNumberElement);
                 if (null == element) {
                   throw BillingSharedActionCreators.dispatchConfirmationError("Unable to load card elements from Stripe");
                 } else {
@@ -265,13 +265,76 @@ let closure_23 = async function _submitElementsAndCreateStripePaymentMethod() {
   closure_130_2 = value;
   return { paymentMethod: closure_130_2.paymentMethod, error: closure_130_2.error };
 };
-let closure_24 = async function _createExpressCheckoutPaymentMethod() {
-  closure_1 = tmp2;
-  ({ stripePaymentMethodId: closure_129_0, billingAddress: closure_129_1, analyticsLocation: closure_129_2 } = closure_0);
-  await "flex";
-  await closure_130_0(closure_130_3[6]).validatePaymentSourceBillingAddress(closure_129_1);
-  closure_129_3 = value;
-  return closure_130_0(closure_130_3[6]).createPaymentSource(closure_130_6.STRIPE, closure_129_0, closure_129_1, { billingAddressToken: closure_129_3, analyticsLocation: closure_129_2 });
+let closure_24 = async function _createExpressCheckoutPaymentMethod(arg0) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      const obj2 = { value, done: true };
+      return obj2;
+    } else {
+      return { value: "IconComponent", done: "IconComponent" };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_2 = tmp5;
+          closure_1 = tmp2;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          ({ stripePaymentMethodId: closure_129_0, billingAddress: closure_129_1, analyticsLocation: closure_129_2 } = closure_0);
+          closure_129_3 = undefined;
+          c3 = 1;
+          c4 = 1;
+          return { value: "Reflect", done: true };
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          c3 = 2;
+          c4 = 1;
+          const obj6 = { value: closure_130_0(closure_130_3[6]).validatePaymentSourceBillingAddress(closure_129_1), done: false };
+          return obj6;
+        }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        const obj7 = { value, done: true };
+        return obj7;
+      } else {
+        closure_129_3 = value;
+        const obj = closure_130_0(closure_130_3[6]);
+        const obj8 = { billingAddressToken: closure_129_3, analyticsLocation: closure_129_2 };
+        c4 = 3;
+        const obj9 = { value: obj.createPaymentSource(closure_130_6.STRIPE, closure_129_0, closure_129_1, obj8), done: true };
+        return obj9;
+      }
+    } catch (tmp23) {
+      c4 = tmp;
+      throw tmp23;
+    }
+  }
 };
 let closure_26 = async function _confirmPaymentElementSource() {
   dependencyMap = [...arguments];
@@ -289,7 +352,7 @@ let closure_26 = async function _confirmPaymentElementSource() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -377,7 +440,7 @@ let closure_26 = async function _confirmPaymentElementSource() {
               let billing_details;
               c12 = 3;
               c13 = 1;
-              return { value: "flex", done: null };
+              return { value: "Reflect", done: true };
             }
           break;
           case 1:
@@ -442,7 +505,7 @@ let closure_26 = async function _confirmPaymentElementSource() {
                       if (closure_136_11 == null) {
                         setupIntent = undefined;
                       }
-                      const obj8 = { setupIntent, error: "Array" };
+                      const obj8 = { setupIntent, error: "a" };
                       closure_136_10 = obj8;
                       if ((function shouldRecreateSetupIntentForPaymentElement(error) {
                         let tmp = null != error;
@@ -469,9 +532,9 @@ let closure_26 = async function _confirmPaymentElementSource() {
                         }
                       }
                       setupIntent2 = closure_137_17(closure_136_10.setupIntent, closure_136_10.error, (type) => {
-                        const intl = dependencyMap(1115).intl;
-                        const stringResult = intl.string(dependencyMap(1115).t.khEaRI);
-                        return dependencyMap(5359).dispatchConfirmationError(type, true, stringResult, { tags: { source: "payment_elements" } });
+                        const intl = dependencyMap(1126).intl;
+                        const stringResult = intl.string(dependencyMap(1126).t.khEaRI);
+                        return dependencyMap(5405).dispatchConfirmationError(type, true, stringResult, { tags: { source: "payment_elements" } });
                       }).setupIntent;
                       closure_136_4.current = setupIntent2;
                       payment_method = setupIntent2.payment_method;
@@ -636,7 +699,7 @@ let closure_27 = async function _confirmCardPaymentSource(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -759,7 +822,7 @@ let closure_28 = async function _createStripePaymentSource() {
   const line1 = closure_132_1.line1;
   const line2 = closure_132_1.line2;
   const city = closure_132_1.city;
-  const state = closure_132_1.state;
+  state = closure_132_1.state;
   const postalCode = closure_132_1.postalCode;
   const country = closure_132_1.country;
   closure_132_12 = closure_133_9.get(closure_132_2);
@@ -802,7 +865,7 @@ let closure_30 = async function _createAdyenVaultablePaymentSource(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -835,7 +898,7 @@ let closure_30 = async function _createAdyenVaultablePaymentSource(arg0) {
           let adyen_redirect_url;
           c12 = 1;
           c13 = 1;
-          return { value: "flex", done: null };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -988,7 +1051,7 @@ let closure_32 = async function _createStripePaymentSourceToken(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -1012,7 +1075,7 @@ let closure_32 = async function _createStripePaymentSourceToken(arg0) {
             let line1;
             let line2;
             let city;
-            let state;
+            state = undefined;
             let postalCode;
             let country2;
             closure_130_11 = undefined;
@@ -1193,9 +1256,9 @@ let closure_33 = async function _paymentIntentSucceeded() {
   }
   return true;
 };
-let Constants = fn(1074);
+let Constants = fn(1085);
 ({ Endpoints: hasOwnProperty, PaymentGateways: metroRequire, VAULTABLE_PAYMENT_SOURCES: closure_7 } = Constants);
-Constants = fn(1085);
+Constants = fn(1096);
 ({ ADYEN_PAYMENT_SOURCES: closure_8, STRIPE_PAYMENT_SOURCES: closure_9, PaymentSourceTypes } = Constants);
 let closure_11 = new LoggerDefault("BillingPaymentGatewayActionCreators.tsx");
 let closure_20 = { hasCreatedPaymentMethod: false };

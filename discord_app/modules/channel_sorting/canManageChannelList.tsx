@@ -1,10 +1,10 @@
-// === Module 10659: canManageChannelList ===
+// === Module 10733: canManageChannelList ===
 
-// Module 10659 (canManageChannelList)
-import ChannelStore from "ChannelStore" /* 2044 */;
-import PermissionStore from "PermissionStore" /* 4498 */;
+// Module 10733 (canManageChannelList)
+import ChannelStore from "ChannelStore" /* 2051 */;
+import PermissionStore from "PermissionStore" /* 4509 */;
 
-const Permissions = fn(1074).Permissions;
+const Permissions = fn(1085).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel_sorting/canManageChannelList.tsx");
 

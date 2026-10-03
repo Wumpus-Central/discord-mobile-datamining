@@ -1,14 +1,14 @@
-// === Module 7002: EntitlementRecord ===
+// === Module 6900: EntitlementRecord ===
 
-// Module 7002 (EntitlementRecord)
-import PremiumUtilsDefault from "PremiumUtils" /* 4517 */;
-import EntitlementTenantFulfillmentStatus from "EntitlementTenantFulfillmentStatus" /* 7003 */;
-import Record from "Record" /* 1387 */;
-import SKURecord from "SKURecord" /* 6009 */;
-import UserRecord from "UserRecord" /* 1386 */;
+// Module 6900 (EntitlementRecord)
+import PremiumUtilsDefault from "PremiumUtils" /* 4528 */;
+import EntitlementTenantFulfillmentStatus from "EntitlementTenantFulfillmentStatus" /* 6901 */;
+import Record from "Record" /* 1392 */;
+import SKURecord from "SKURecord" /* 5696 */;
+import UserRecord from "UserRecord" /* 1391 */;
 
 require = fn;
-const EntitlementTypes = fn(1074).EntitlementTypes;
+const EntitlementTypes = fn(1085).EntitlementTypes;
 let EntitlementRecord;
 class EntitlementRecord extends tmp2 {
   constructor(arg0) {

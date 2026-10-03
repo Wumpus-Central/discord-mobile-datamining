@@ -1,16 +1,16 @@
-// === Module 17567: AutomodTriggerConfigs ===
+// === Module 17655: AutomodTriggerConfigs ===
 
-// Module 17567 (AutomodTriggerConfigs)
-import util from "util" /* 1115 */;
-import guild_automod_PermissionUtils from "guild_automod/PermissionUtils" /* 16899 */;
+// Module 17655 (AutomodTriggerConfigs)
+import util from "util" /* 1126 */;
+import guild_automod_PermissionUtils from "guild_automod/PermissionUtils" /* 16988 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const Constants = fn(11554);
+const Constants = fn(11474);
 ({ AutomodActionType, AutomodEventType, AutomodTriggerType } = Constants);
 const mentionTotalLimit = Constants.MENTION_SPAM_LIMIT_DEFAULT;
 let obj = { NEW: "new", RECOMMENDED: "recommended", BETA: "beta", ALPHA: "alpha" };
-const obj2 = {};
+let obj2 = {};
 let obj3 = {
   getDefaultRuleName() {
     const intl = util.intl;
@@ -182,6 +182,8 @@ const obj11 = { MEMBERS: "members", CONTENT: "content" };
 const obj12 = { [obj11.MEMBERS]: items12, [obj11.CONTENT]: items13 };
 items12 = [obj2[AutomodTriggerType.USER_PROFILE]];
 items13 = [obj2[AutomodTriggerType.SERVER_POLICY], obj2[AutomodTriggerType.MENTION_SPAM], obj2[AutomodTriggerType.ML_SPAM], obj2[AutomodTriggerType.DEFAULT_KEYWORD_LIST], obj2[AutomodTriggerType.KEYWORD], obj2[AutomodTriggerType.APPLICATION]];
+const ReactCompilerGating = fn(558);
+const set23 = new Set();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_automod/AutomodTriggerConfigs.tsx");
 
@@ -224,10 +226,54 @@ export const validateRuleByTriggerConfigOrThrow = function validateRuleByTrigger
     throw error2;
   }
 };
-export const useAvailableTriggerTypes = function useAvailableTriggerTypes(guildId) {
-  isUserProfileRuleEnabled = isUserProfileRuleEnabled(isApplicationRuleEnabled[3]).useIsUserProfileRuleEnabled(guildId);
-  const obj = isUserProfileRuleEnabled(isApplicationRuleEnabled[3]);
-  isApplicationRuleEnabled = isUserProfileRuleEnabled(isApplicationRuleEnabled[4]).useIsApplicationRuleEnabled(guildId);
+export const useAvailableTriggerTypes = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = isUserProfileRuleEnabled(isApplicationRuleEnabled[4]).c(3);
+  const obj = isUserProfileRuleEnabled(isApplicationRuleEnabled[4]);
+  isUserProfileRuleEnabled = isUserProfileRuleEnabled(isApplicationRuleEnabled[5]).useIsUserProfileRuleEnabled(arg0);
+  obj2 = isUserProfileRuleEnabled(isApplicationRuleEnabled[5]);
+  isApplicationRuleEnabled = isUserProfileRuleEnabled(isApplicationRuleEnabled[6]).useIsApplicationRuleEnabled(arg0);
+  if (cResult[0] === isApplicationRuleEnabled) {
+    if (cResult[1] === isUserProfileRuleEnabled) {
+      let tmp4 = cResult[2];
+    }
+    return tmp4;
+  }
+  const keys = Object.keys(obj12);
+  const reduced = keys.reduce((acc, item) => {
+    const found = obj12[item].filter((type) => {
+      let tmp2 = type.type !== constants.SERVER_POLICY;
+      if (tmp2) {
+        let tmp3 = type.type === constants.USER_PROFILE;
+        if (tmp3) {
+          tmp3 = !isUserProfileRuleEnabled;
+        }
+        let tmp5 = !tmp3;
+        if (!tmp3) {
+          let tmp6 = type.type === constants.APPLICATION;
+          if (tmp6) {
+            tmp6 = !isApplicationRuleEnabled;
+          }
+          let tmp8 = !tmp6;
+          if (!tmp6) {
+            tmp8 = type.perGuildMaxCount > 0;
+          }
+          tmp5 = tmp8;
+        }
+        tmp2 = tmp5;
+      }
+      return tmp2;
+    });
+    acc[item] = found.map((type) => type.type);
+    return acc;
+  }, { [closure_6.MEMBERS]: [], [closure_6.CONTENT]: [] });
+  cResult[0] = isApplicationRuleEnabled;
+  cResult[1] = isUserProfileRuleEnabled;
+  cResult[2] = reduced;
+  tmp4 = reduced;
+}) : ((arg0) => {
+  isUserProfileRuleEnabled = isUserProfileRuleEnabled(isApplicationRuleEnabled[5]).useIsUserProfileRuleEnabled(arg0);
+  const obj = isUserProfileRuleEnabled(isApplicationRuleEnabled[5]);
+  isApplicationRuleEnabled = isUserProfileRuleEnabled(isApplicationRuleEnabled[6]).useIsApplicationRuleEnabled(arg0);
   const items = [isUserProfileRuleEnabled, isApplicationRuleEnabled];
   return noop.useMemo(() => {
     const keys = Object.keys(obj12);
@@ -259,7 +305,7 @@ export const useAvailableTriggerTypes = function useAvailableTriggerTypes(guildI
       return acc;
     }, { [closure_2_6.MEMBERS]: [], [closure_2_6.CONTENT]: [] });
   }, items);
-};
+});
 export const getDefaultTriggerMetadataForTriggerType = function getDefaultTriggerMetadataForTriggerType(triggerType, guildId) {
   if (AutomodTriggerType.DEFAULT_KEYWORD_LIST === triggerType) {
     const obj3 = { allowList: [], presets: [] };

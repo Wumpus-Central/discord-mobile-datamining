@@ -1,27 +1,27 @@
-// === Module 13489: BlockedUserInVoiceChannelActionSheet ===
+// === Module 13549: BlockedUserInVoiceChannelActionSheet ===
 
-// Module 13489 (BlockedUserInVoiceChannelActionSheet)
-import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4809 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5909 */;
+// Module 13549 (BlockedUserInVoiceChannelActionSheet)
+import nativeDefault from "native" /* 587 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5568 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import RelationshipStore from "RelationshipStore" /* 4508 */;
-import UserStore from "UserStore" /* 1372 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import RelationshipStore from "RelationshipStore" /* 4519 */;
+import UserStore from "UserStore" /* 1377 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
-const setDismissalTimeForUser = fn(13483).setDismissalTimeForUser;
-const SharedSpaceWarningConstants = fn(13486);
+const setDismissalTimeForUser = fn(13543).setDismissalTimeForUser;
+const SharedSpaceWarningConstants = fn(13546);
 ({ BlockWarningEngagements: closure_9, VoiceChannelWarningSurfaces: c10 } = SharedSpaceWarningConstants);
-const AnalyticEvents = fn(1074).AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 const jsxProd = fn(21);
 ({ Fragment: closure_12, jsxs: map1, jsx: closure_14 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = { container: { paddingTop: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8 }, headerImage: { alignSelf: "center", width: 73, height: 86 }, headerText: null, centerText: null, buttonGroup: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8 };
 obj2.headerText = { gap: nativeDefault.space.PX_4, marginBottom: nativeDefault.space.PX_16 };
@@ -29,10 +29,130 @@ obj2.centerText = { textAlign: "center", alignSelf: "center" };
 let obj4 = { gap: nativeDefault.space.PX_4, marginBottom: nativeDefault.space.PX_16 };
 obj2.buttonGroup = { paddingVertical: nativeDefault.space.PX_16, gap: 8 };
 let closure_15 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+const obj5 = { paddingVertical: nativeDefault.space.PX_16, gap: 8 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/shared_space_warnings/native/BlockedUserInVoiceChannelActionSheet.tsx");
 
-export default function BlockedUserInVoiceChannelActionSheet(arg0) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
+  const cResult = channelId(stateFromStores[12]).c(79);
+  channelId = channelId.channelId;
+  const blockedUserId = channelId.blockedUserId;
+  closure_15();
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    let items = [RelationshipStore];
+    cResult[0] = items;
+    let first = items;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] !== blockedUserId) {
+    class E {
+      constructor() {
+        return closure_6.isBlocked(blockedUserId);
+      }
+    }
+    cResult[1] = blockedUserId;
+    cResult[2] = E;
+  } else {
+    class E {
+      constructor() {
+        return closure_6.isBlocked(blockedUserId);
+      }
+    }
+  }
+  let obj = channelId(stateFromStores[12]);
+  stateFromStores = channelId(stateFromStores[13]).useStateFromStores(first, E);
+  if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+    class E {
+      constructor() {
+        return closure_6.isBlocked(blockedUserId);
+      }
+    }
+    let items1 = [ChannelStore];
+    cResult[3] = items1;
+    const tmp9 = items1;
+  } else {
+    class E {
+      constructor() {
+        return closure_6.isBlocked(blockedUserId);
+      }
+    }
+  }
+  if (cResult[4] !== channelId) {
+    class E {
+      constructor() {
+        return closure_6.isBlocked(blockedUserId);
+      }
+    }
+    cResult[4] = channelId;
+    cResult[5] = tmp11;
+  } else {
+    class E {
+      constructor() {
+        return closure_6.isBlocked(blockedUserId);
+      }
+    }
+  }
+  const tmpResult = channelId(stateFromStores[13]);
+  const stateFromStores1 = channelId(stateFromStores[13]).useStateFromStores(tmp9, tmp11);
+  if (stateFromStores1 != null) {
+    class E {
+      constructor() {
+        return closure_6.isBlocked(blockedUserId);
+      }
+    }
+  }
+  if (cResult[6] === undefined) {
+    class E {
+      constructor() {
+        return closure_6.isBlocked(blockedUserId);
+      }
+    }
+  }
+  const user = UserStore.getUser(blockedUserId);
+  if (cResult[27] === channelId) {
+    class E {
+      constructor() {
+        return closure_6.isBlocked(blockedUserId);
+      }
+    }
+  }
+  class J {
+    constructor() {
+      obj = closure_1(closure_2[14]);
+      hideActionSheetResult = obj.hideActionSheet();
+      tmp2 = blockedUserId;
+      tmp3 = setDismissalTimeForUser(blockedUserId);
+      obj2 = closure_1(closure_2[15]);
+      obj1 = { action: BlockWarningEngagements.CLICK_TO_STAY, channel_id: channelId, blocked_user_ids: null, ignored_user_ids: null, warning_surface: null };
+      tmp4 = closure_2;
+      if (closure_2) {
+        items = [];
+        items[0] = tmp2;
+        items1 = items;
+      } else {
+        items1 = [];
+      }
+      obj1.blocked_user_ids = items1;
+      if (tmp4) {
+        items2 = [];
+      } else {
+        items2 = [];
+        items2[0] = tmp2;
+      }
+      obj1.ignored_user_ids = items2;
+      obj1.warning_surface = closure_10.POST_JOIN_SHEET;
+      trackResult = obj2.track(AnalyticEvents.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, obj1);
+      return;
+    }
+  }
+  cResult[27] = channelId;
+  cResult[28] = stateFromStores;
+  cResult[29] = blockedUserId;
+  cResult[30] = J;
+  const tmpResult2 = channelId(stateFromStores[13]);
+}) : ((arg0) => {
   ({ channelId: require, blockedUserId } = arg0);
   let stateFromStores;
   const tmp = closure_15();
@@ -62,7 +182,7 @@ export default function BlockedUserInVoiceChannelActionSheet(arg0) {
   let obj2 = require("initialize");
   let obj4 = { style: tmp.container, children: null };
   const tmp7Result = closure_13(closure_12, tmp9);
-  const items4 = [closure_14(closure_3, { source: blockedUserId(stateFromStores[14]), style: tmp.headerImage }), , , ];
+  const items4 = [closure_14(closure_3, { source: blockedUserId(stateFromStores[19]), style: tmp.headerImage }), , , ];
   const obj6 = { style: tmp.headerText, children: null };
   const obj7 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.centerText, children: null };
   const intl4 = require("util").intl;
@@ -158,4 +278,4 @@ export default function BlockedUserInVoiceChannelActionSheet(arg0) {
   obj4.children = items4;
   obj11.children = closure_13(closure_4, obj4);
   return closure_14(require("ActionSheet").ActionSheet, obj11);
-};
+});

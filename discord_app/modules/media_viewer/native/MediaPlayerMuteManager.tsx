@@ -1,12 +1,12 @@
-// === Module 7893: MediaPlayerMuteManager ===
+// === Module 7937: MediaPlayerMuteManager ===
 
-// Module 7893 (MediaPlayerMuteManager)
+// Module 7937 (MediaPlayerMuteManager)
 import get_ActivityIndicator from "module_17" /* 17 */;
-import module_560 from "module_560" /* 560 */;
+import module_570 from "module_570" /* 570 */;
 import size from "module_2" /* 2 */;
 
 ({ NativeEventEmitter, NativeModules } = get_ActivityIndicator);
-const useMediaPlayerMutedStore = module_560.create(() => ({ isMuted: false }));
+const useMediaPlayerMutedStore = module_570.create(() => ({ isMuted: false }));
 const nativeEventEmitter = new NativeEventEmitter(NativeModules.MediaPlayerManager);
 class MediaPlayerMuteManager {
   constructor() {

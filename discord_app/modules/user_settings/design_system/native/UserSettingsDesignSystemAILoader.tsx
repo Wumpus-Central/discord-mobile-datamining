@@ -1,32 +1,120 @@
-// === Module 15625: UserSettingsDesignSystemAILoader ===
+// === Module 15688: UserSettingsDesignSystemAILoader ===
 
-// Module 15625 (UserSettingsDesignSystemAILoader)
-import Text_Text from "Text/Text" /* 4841 */;
-import Stack_Stack from "Stack/Stack" /* 5463 */;
-import Card from "Card" /* 6105 */;
-import AILoader from "AILoader" /* 14139 */;
+// Module 15688 (UserSettingsDesignSystemAILoader)
+import c from "c" /* 576 */;
+import Text_Text from "Text/Text" /* 4886 */;
+import Stack_Stack from "Stack/Stack" /* 5593 */;
+import Card from "Card" /* 5995 */;
+import AILoader from "AILoader" /* 14207 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-function DemoRow(arg0) {
+get_ActivityIndicator = fn(17);
+({ ScrollView: c2, View: c3 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4890);
+let closure_6 = createStyles.createStyles({ container: { padding: 16 }, row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between" } });
+let closure_7 = [12, 16, 24];
+let items = [{ color: "text-default", label: "text-default" }, { color: "text-subtle", label: "text-subtle" }];
+let ReactCompilerGating = fn(558);
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(6);
+  ({ label, children } = arg0);
+  const tmp4 = closure_6();
+  if (cResult[0] !== label) {
+    const obj2 = { variant: "text-sm/medium", color: "text-subtle", children: label };
+    const tmp7 = React4(Text_Text.Text, obj2);
+    cResult[0] = label;
+    cResult[1] = tmp7;
+    let tmp5 = tmp7;
+  } else {
+    tmp5 = cResult[1];
+  }
+  if (cResult[2] === children) {
+    if (cResult[3] === tmp4.row) {
+      if (cResult[4] === tmp5) {
+        let tmp8 = cResult[5];
+      }
+      return tmp8;
+    }
+  }
+  const obj3 = { style: tmp4.row, children: null };
+  items = [tmp5, children];
+  obj3.children = items;
+  const tmp9 = hasOwnProperty(React3, obj3);
+  cResult[2] = children;
+  cResult[3] = tmp4.row;
+  cResult[4] = tmp5;
+  cResult[5] = tmp9;
+  tmp8 = tmp9;
+}) : ((arg0) => {
   ({ label, children } = arg0);
   const obj = { style: closure_6().row, children: null };
   items = [React4(Text_Text.Text, { variant: "text-sm/medium", color: "text-subtle", children: label }), children];
   obj.children = items;
   return hasOwnProperty(React3, obj);
-}
-get_ActivityIndicator = fn(17);
-({ ScrollView: c2, View: c3 } = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4845);
-let closure_6 = createStyles.createStyles({ container: { padding: 16 }, row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between" } });
-let closure_7 = [12, 16, 24];
-let items = [{ color: "text-default", label: "text-default" }, { color: "text-subtle", label: "text-subtle" }];
+});
+ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemAILoader.tsx");
 
-export default function UserSettingsDesignSystemAILoader() {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(4);
+  const tmp4 = closure_6();
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const obj2 = { children: null };
+    const obj3 = { children: null };
+    items = [
+      React4(Text_Text.Text, { variant: "text-lg/bold", children: "Sizes" }),
+      React4(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "`size` is the glyph size in pixels; the gap between slots scales with it. Default 16." }),
+      closure_7.map((size) => {
+          const obj = { label: "" + size + "px", children: closure_1_4(AILoader.AILoader, { size }) };
+          return closure_1_4(closure_1_9, obj, size);
+        })
+    ];
+    obj3.children = items;
+    obj2.children = hasOwnProperty(Stack_Stack.Stack, obj3);
+    const tmp9 = React4(Card.Card, obj2);
+    cResult[0] = tmp9;
+    let first = tmp9;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
+    const obj4 = { spacing: 24, children: null };
+    const items1 = [first, ];
+    const obj5 = { children: null };
+    const obj6 = { children: null };
+    const items2 = [
+      React4(Text_Text.Text, { variant: "text-lg/bold", children: "Colors" }),
+      React4(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "Any semantic text token. Defaults to `text-default`." }),
+      items.map((color) => {
+          const label = color.label;
+          return closure_1_4(closure_1_9, { label, children: closure_1_4(AILoader.AILoader, { color: color.color }) }, label);
+        })
+    ];
+    obj6.children = items2;
+    obj5.children = hasOwnProperty(Stack_Stack.Stack, obj6);
+    items1[1] = React4(Card.Card, obj5);
+    obj4.children = items1;
+    const tmp14 = hasOwnProperty(Stack_Stack.Stack, obj4);
+    cResult[1] = tmp14;
+    let tmp10 = tmp14;
+  } else {
+    tmp10 = cResult[1];
+  }
+  if (cResult[2] !== tmp4.container) {
+    const obj7 = { contentContainerStyle: tmp4.container, children: tmp10 };
+    const tmp18 = React4(React2, obj7);
+    cResult[2] = tmp4.container;
+    cResult[3] = tmp18;
+    let tmp15 = tmp18;
+  } else {
+    tmp15 = cResult[3];
+  }
+  return tmp15;
+}) : (() => {
   let obj = { contentContainerStyle: closure_6().container, children: null };
   const obj2 = { spacing: 24, children: null };
   const obj3 = { children: null };
@@ -36,7 +124,7 @@ export default function UserSettingsDesignSystemAILoader() {
     React4(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "`size` is the glyph size in pixels; the gap between slots scales with it. Default 16." }),
     closure_7.map((size) => {
       const obj = { label: "" + size + "px", children: closure_1_4(AILoader.AILoader, { size }) };
-      return closure_1_4(DemoRow, obj, size);
+      return closure_1_4(closure_1_9, obj, size);
     })
   ];
   obj4.children = items;
@@ -49,7 +137,7 @@ export default function UserSettingsDesignSystemAILoader() {
     React4(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "Any semantic text token. Defaults to `text-default`." }),
     items.map((color) => {
       const label = color.label;
-      return closure_1_4(DemoRow, { label, children: closure_1_4(AILoader.AILoader, { color: color.color }) }, label);
+      return closure_1_4(closure_1_9, { label, children: closure_1_4(AILoader.AILoader, { color: color.color }) }, label);
     })
   ];
   obj6.children = items2;
@@ -58,4 +146,4 @@ export default function UserSettingsDesignSystemAILoader() {
   obj2.children = items1;
   obj.children = hasOwnProperty(Stack_Stack.Stack, obj2);
   return React4(React2, obj);
-};
+});

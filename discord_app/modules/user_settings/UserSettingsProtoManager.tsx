@@ -1,13 +1,13 @@
-// === Module 14224: UserSettingsProtoManager ===
+// === Module 14292: UserSettingsProtoManager ===
 
-// Module 14224 (UserSettingsProtoManager)
+// Module 14292 (UserSettingsProtoManager)
 import _modDef12 from "module_12" /* 12 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import UserSettingsMigrationsByTypeDefault from "UserSettingsMigrationsByType" /* 1224 */;
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 2026 */;
-import PreloadedUserSettingsMigrationsDefault from "PreloadedUserSettingsMigrations" /* 14225 */;
-import FrecencySettingsMigrationsDefault from "FrecencySettingsMigrations" /* 14226 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import UserSettingsMigrationsByTypeDefault from "UserSettingsMigrationsByType" /* 1235 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 2033 */;
+import PreloadedUserSettingsMigrationsDefault from "PreloadedUserSettingsMigrations" /* 14293 */;
+import FrecencySettingsMigrationsDefault from "FrecencySettingsMigrations" /* 14294 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 
 require = fn;
 function handleConnectionOpen() {
@@ -46,7 +46,7 @@ function handleAppStateUpdate(state) {
     });
   }
 }
-const UserSettingsTypes = fn(1084).UserSettingsTypes;
+const UserSettingsTypes = fn(1095).UserSettingsTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/UserSettingsProtoManager.tsx");
 

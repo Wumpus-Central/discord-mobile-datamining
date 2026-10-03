@@ -1,10 +1,10 @@
-// === Module 9594: AttachmentUrlUtils ===
+// === Module 7518: AttachmentUrlUtils ===
 
-// Module 9594 (AttachmentUrlUtils)
-import DurationsDefault from "Durations" /* 1091 */;
-import HTTPUtils from "HTTPUtils" /* 1271 */;
-import URLUtilsDefault from "URLUtils" /* 1366 */;
-import ImageProxyUtils from "ImageProxyUtils" /* 2015 */;
+// Module 7518 (AttachmentUrlUtils)
+import DurationsDefault from "Durations" /* 1102 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import URLUtilsDefault from "URLUtils" /* 1371 */;
+import ImageProxyUtils from "ImageProxyUtils" /* 2022 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -233,7 +233,7 @@ let closure_14 = async function _maybeRefreshAttachmentUrl() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -302,8 +302,8 @@ let closure_14 = async function _maybeRefreshAttachmentUrl() {
     }
   })();
 };
-const ATTACHMENT_PATH_PREFIXES = fn(5501).ATTACHMENT_PATH_PREFIXES;
-const Endpoints = fn(1074).Endpoints;
+const ATTACHMENT_PATH_PREFIXES = fn(5800).ATTACHMENT_PATH_PREFIXES;
+const Endpoints = fn(1085).Endpoints;
 const HOUR = DurationsDefault.Millis.HOUR;
 let items = [window.GLOBAL_ENV.CDN_HOST, ];
 let substr;
@@ -363,7 +363,7 @@ function getSignedAttachmentExpiration(searchParams) {
   }
   return result;
 }
-const mapped = items.map(fn(2016).getHostWithoutPort);
+const mapped = items.map(fn(2023).getHostWithoutPort);
 let closure_7 = mapped.filter((item) => {
   let tmp = null != item;
   if (tmp) {

@@ -1,25 +1,25 @@
-// === Module 17966: ParentalConsentConnectionScreen ===
+// === Module 18052: ParentalConsentConnectionScreen ===
 
-// Module 17966 (ParentalConsentConnectionScreen)
-import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1115 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1981 */;
-import _modDef2780 from "module_2780" /* 2780 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4809 */;
-import shareGuardianConnectLink from "shareGuardianConnectLink" /* 14626 */;
+// Module 18052 (ParentalConsentConnectionScreen)
+import nativeDefault from "native" /* 587 */;
+import util from "util" /* 1126 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
+import _modDef2787 from "module_2787" /* 2787 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
+import shareGuardianConnectLink from "shareGuardianConnectLink" /* 14682 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7145 */;
-import UserStore from "UserStore" /* 1372 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7048 */;
+import UserStore from "UserStore" /* 1377 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_9 = fn(7146).CONNECT_GUARDIAN_BOTTOM_SHEET_KEY;
+let closure_9 = fn(7049).CONNECT_GUARDIAN_BOTTOM_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let c12 = "https://support.discord.com/hc/articles/14155060633623";
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = { body: { marginTop: nativeDefault.space.PX_24 }, cardSection: { alignItems: "center" }, cardTitle: null };
 let obj3 = { marginTop: nativeDefault.space.PX_24 };
 obj2.cardTitle = { marginTop: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_24, textAlign: "center" };
@@ -126,7 +126,7 @@ export default function ParentalConsentConnectionScreen() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -191,10 +191,10 @@ export default function ParentalConsentConnectionScreen() {
     const obj2 = { linkCode: str2, expiresAt: parsed, onRefresh: getLinkCode, title: null, body: null };
     const obj = ActionSheetActionCreatorsDefault;
     const intl = util.intl;
-    obj2.title = intl.string(_modDef2780.dMMSA0);
+    obj2.title = intl.string(_modDef2787.dMMSA0);
     const intl2 = util.intl;
-    obj2.body = intl2.format(_modDef2780["6GaRTu"], { link });
-    obj.openLazy(asyncRequireImpl(14627, dependencyMap.paths), closure_9, obj2);
+    obj2.body = intl2.format(_modDef2787["6GaRTu"], { link });
+    obj.openLazy(asyncRequireImpl(14683, dependencyMap.paths), closure_9, obj2);
   }, items7);
   let obj4 = { title: null, subtitle: null, subtitleColor: "text-muted", submitting: null, footer: null, children: null };
   const tmp14Result = tmp14(noop.useState(false), 2);

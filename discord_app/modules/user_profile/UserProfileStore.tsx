@@ -1,25 +1,25 @@
-// === Module 7208: UserProfileStore ===
+// === Module 7111: UserProfileStore ===
 
-// Module 7208 (UserProfileStore)
+// Module 7111 (UserProfileStore)
 import _modDef12 from "module_12" /* 12 */;
-import util from "util" /* 1115 */;
-import GlobalUtils from "GlobalUtils" /* 1370 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1974 */;
-import Timers from "Timers" /* 2039 */;
-import WidgetType from "WidgetType" /* 7209 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7210 */;
-import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7216 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7217 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7220 */;
-import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7221 */;
-import parseUserProfileCollectiblesDefault from "parseUserProfileCollectibles" /* 7222 */;
-import LocaleStore from "LocaleStore" /* 2111 */;
-import UserRecord from "UserRecord" /* 1386 */;
+import util from "util" /* 1126 */;
+import GlobalUtils from "GlobalUtils" /* 1375 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1980 */;
+import Timers from "Timers" /* 2046 */;
+import WidgetType from "WidgetType" /* 7112 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7113 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7115 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7116 */;
+import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7118 */;
+import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7119 */;
+import parseUserProfileCollectiblesDefault from "parseUserProfileCollectibles" /* 7120 */;
+import LocaleStore from "LocaleStore" /* 2116 */;
+import UserRecord from "UserRecord" /* 1391 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1073 */;
-import PresenceStore from "PresenceStore" /* 4885 */;
-import SortedGuildStore from "SortedGuildStore" /* 5936 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1084 */;
+import PresenceStore from "PresenceStore" /* 4930 */;
+import SortedGuildStore from "SortedGuildStore" /* 5616 */;
 
 require = fn;
 function createUserWidgetFromServer(data) {
@@ -267,7 +267,7 @@ function handleProfileFetch(arg0) {
     const mutual_guilds = userProfile.mutual_guilds;
     const item = mutual_guilds.forEach((id) => {
       id = id.id;
-      const guild = GuildStore.getGuild(id);
+      guild = GuildStore.getGuild(id);
       if (null != guild) {
         obj = { guild, nick: id.nick };
         set[id] = obj;
@@ -438,9 +438,9 @@ function handleProfileFetch(arg0) {
   obj.legacyUsername = userProfile.legacy_username;
   let tmp42 = null;
   if (null != application) {
-    ({ id: obj3.id, primary_sku_id: obj3.primarySkuId, custom_install_url: obj3.customInstallUrl, install_params: obj3.installParams, integration_types_config: obj3.integrationTypesConfig, flags: obj3.flags, popular_application_command_ids: obj3.popularApplicationCommandIds, storefront_available: obj3.storefront_available, name: obj3.name, terms_of_service_url: obj3.termsOfServiceUrl, privacy_policy_url: obj3.privacyPolicyUrl } = application);
-    tmp42 = { id: null, primarySkuId: null, customInstallUrl: null, installParams: null, integrationTypesConfig: null, flags: null, popularApplicationCommandIds: null, storefront_available: null, name: null, termsOfServiceUrl: null, privacyPolicyUrl: null };
-    let obj5 = { id: null, primarySkuId: null, customInstallUrl: null, installParams: null, integrationTypesConfig: null, flags: null, popularApplicationCommandIds: null, storefront_available: null, name: null, termsOfServiceUrl: null, privacyPolicyUrl: null };
+    ({ id: obj3.id, primary_sku_id: obj3.primarySkuId, custom_install_url: obj3.customInstallUrl, install_params: obj3.installParams, integration_types_config: obj3.integrationTypesConfig, flags: obj3.flags, embedded_surfaces: obj3.embeddedSurfaces, popular_application_command_ids: obj3.popularApplicationCommandIds, storefront_available: obj3.storefront_available, name: obj3.name, terms_of_service_url: obj3.termsOfServiceUrl, privacy_policy_url: obj3.privacyPolicyUrl } = application);
+    tmp42 = { id: null, primarySkuId: null, customInstallUrl: null, installParams: null, integrationTypesConfig: null, flags: null, embeddedSurfaces: null, popularApplicationCommandIds: null, storefront_available: null, name: null, termsOfServiceUrl: null, privacyPolicyUrl: null };
+    let obj5 = { id: null, primarySkuId: null, customInstallUrl: null, installParams: null, integrationTypesConfig: null, flags: null, embeddedSurfaces: null, popularApplicationCommandIds: null, storefront_available: null, name: null, termsOfServiceUrl: null, privacyPolicyUrl: null };
   }
   obj.application = tmp42;
   obj.badges = mapped1;
@@ -523,7 +523,7 @@ function handleProfileFetchFailure(arg0) {
   set.delete(userId);
   let value4 = map1.get(userId);
   if (value4 == null) {
-    obj = { connectedAccounts: [], applicationRoleConnections: [], premiumSince: null, premiumGuildSince: null, application: null, legacyUsername: null, userId, banner: null, accentColor: null, bio: "", pronouns: "", premiumType: null, fetchStartedAt: 0, fetchEndedAt: 0, fetchError: "channelId" };
+    obj = { connectedAccounts: [], applicationRoleConnections: [], premiumSince: null, premiumGuildSince: null, application: null, legacyUsername: null, userId, banner: null, accentColor: null, bio: "", pronouns: "", premiumType: null, fetchStartedAt: 0, fetchEndedAt: 0, fetchError: "unicodeVersion" };
     value4 = obj;
   }
   const timestamp = Date.now();
@@ -564,7 +564,7 @@ function handleProfileUpdateSuccess(guild_id) {
     value = map2.get(userId);
     if (null != guild_id) {
       if (null != value) {
-        const value3 = value.get(guild_id);
+        value3 = value.get(guild_id);
         if (null != value3) {
           obj = {};
           const merged = Object.assign(value3);
@@ -703,7 +703,7 @@ function resetProfileFetch(id) {
     }
   }
 }
-const MAX_TIMEOUT_MS = fn(1074).MAX_TIMEOUT_MS;
+const MAX_TIMEOUT_MS = fn(1085).MAX_TIMEOUT_MS;
 let closure_10 = Symbol("NO GUILD ID");
 let map = new Map();
 let set = new Set();

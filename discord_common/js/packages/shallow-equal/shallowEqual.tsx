@@ -1,6 +1,6 @@
-// === Module 558: discord_common/shallowEqual ===
+// === Module 568: discord_common/shallowEqual ===
 
-// Module 558 (discord_common/shallowEqual)
+// Module 568 (discord_common/shallowEqual)
 import size from "module_2" /* 2 */;
 
 let closure_0 = {};
@@ -45,12 +45,12 @@ export default function shallowEqual(activeMediaPlayerSource, _require, arr) {
     return tmp2;
   }
 };
-export const areArraysShallowEqual = function areArraysShallowEqual(items1, current) {
+export const areArraysShallowEqual = function areArraysShallowEqual(colors, current) {
   closure_0 = current;
   let tmp = arg2;
   if (arg2 === undefined) {
     tmp = closure_0;
   }
   ({ logCallback, shouldWarnLargeObjects } = tmp);
-  return null != current && items1.length === current.length && items1.every((item, index) => closure_0[index] === item);
+  return null != current && colors.length === current.length && colors.every((item, index) => closure_0[index] === item);
 };

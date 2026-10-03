@@ -1,9 +1,9 @@
-// === Module 8719: authorizeConnection ===
+// === Module 8732: authorizeConnection ===
 
-// Module 8719 (authorizeConnection)
-import Constants from "Constants" /* 1074 */;
-import LinkingDefault from "Linking" /* 4554 */;
-import Constants2 from "Constants" /* 5906 */;
+// Module 8732 (authorizeConnection)
+import Constants from "Constants" /* 1085 */;
+import LinkingDefault from "Linking" /* 4565 */;
+import Constants2 from "Constants" /* 6679 */;
 import size from "module_2" /* 2 */;
 
 let closure_3 = Constants2.GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE;
@@ -22,87 +22,87 @@ export default function authorizeConnection(overrideUrl) {
     _location = "mobile";
   }
   if (platformType === PlatformTypes.XBOX) {
-    overrideUrl(4809).hideActionSheet();
-    const obj15 = overrideUrl(4809);
+    overrideUrl(4854).hideActionSheet();
+    const obj15 = overrideUrl(4854);
     const tmp23 = overrideUrl;
     const items = [_location];
-    overrideUrl(8720).showModal(items);
+    overrideUrl(8733).showModal(items);
     if (null != onClose) {
       function handleModalClose() {
         if (require != null) {
           tmp();
         }
-        overrideUrl(573).unsubscribe("MODAL_POP", handleModalClose5);
+        overrideUrl(584).unsubscribe("MODAL_POP", handleModalClose5);
       }
       handleModalClose5 = handleModalClose;
-      const subscription = tmp23(573).subscribe("MODAL_POP", handleModalClose);
-      const tmp23Result = tmp23(573);
+      const subscription = tmp23(584).subscribe("MODAL_POP", handleModalClose);
+      const tmp23Result = tmp23(584);
     }
-    const obj16 = overrideUrl(8720);
+    const obj16 = overrideUrl(8733);
   } else {
     if (platformType !== PlatformTypes.PLAYSTATION) {
       if (platformType !== PlatformTypes.PLAYSTATION_STAGING) {
         if (platformType === PlatformTypes.CRUNCHYROLL) {
-          overrideUrl(4809).hideActionSheet();
-          const obj11 = overrideUrl(4809);
+          overrideUrl(4854).hideActionSheet();
+          const obj11 = overrideUrl(4854);
           const tmp15 = overrideUrl;
           const items1 = [_location];
-          overrideUrl(8762).showModal(items1);
+          overrideUrl(8775).showModal(items1);
           if (null != onClose) {
             const handleModalClose4 = function handleModalClose() {
               if (require != null) {
                 tmp();
               }
-              overrideUrl(573).unsubscribe("MODAL_POP", handleModalClose5);
+              overrideUrl(584).unsubscribe("MODAL_POP", handleModalClose5);
             };
             handleModalClose5 = handleModalClose4;
-            const subscription1 = tmp15(573).subscribe("MODAL_POP", handleModalClose4);
-            const tmp15Result = tmp15(573);
+            const subscription1 = tmp15(584).subscribe("MODAL_POP", handleModalClose4);
+            const tmp15Result = tmp15(584);
           }
-          const obj12 = overrideUrl(8762);
+          const obj12 = overrideUrl(8775);
         } else if (platformType === PlatformTypes.DOMAIN) {
-          overrideUrl(4809).hideActionSheet();
-          const obj8 = overrideUrl(4809);
+          overrideUrl(4854).hideActionSheet();
+          const obj8 = overrideUrl(4854);
           const tmp10 = overrideUrl;
           let obj = { locationStack: null };
           const items2 = [_location];
           obj.locationStack = items2;
-          overrideUrl(5048).pushLazy(handleModalClose5(1981)(8773, dependencyMap.paths), obj);
+          overrideUrl(5093).pushLazy(handleModalClose5(1987)(8786, dependencyMap.paths), obj);
           if (null != onClose) {
             const handleModalClose3 = function handleModalClose() {
               if (require != null) {
                 tmp();
               }
-              overrideUrl(573).unsubscribe("MODAL_POP", handleModalClose5);
+              overrideUrl(584).unsubscribe("MODAL_POP", handleModalClose5);
             };
             handleModalClose5 = handleModalClose3;
-            const subscription2 = tmp10(573).subscribe("MODAL_POP", handleModalClose3);
-            const tmp10Result = tmp10(573);
+            const subscription2 = tmp10(584).subscribe("MODAL_POP", handleModalClose3);
+            const tmp10Result = tmp10(584);
           }
-          const obj9 = overrideUrl(5048);
+          const obj9 = overrideUrl(5093);
         } else {
-          value = overrideUrl(5781).get(platformType);
+          value = overrideUrl(5442).get(platformType);
           let isFederated;
           if (value != null) {
             isFederated = value.isFederated;
           }
           if (true === isFederated) {
-            tmp28(4809).hideActionSheet();
-            const tmp28Result = tmp28(4809);
+            tmp28(4854).hideActionSheet();
+            const tmp28Result = tmp28(4854);
             const obj2 = { platformType, location: _location, successRedirect };
-            tmp28(5048).pushLazy(handleModalClose5(1981)(8775, dependencyMap.paths), obj2);
+            tmp28(5093).pushLazy(handleModalClose5(1987)(8788, dependencyMap.paths), obj2);
             if (null != onClose) {
               const handleModalClose2 = function handleModalClose() {
                 if (require != null) {
                   tmp();
                 }
-                overrideUrl(573).unsubscribe("MODAL_POP", handleModalClose5);
+                overrideUrl(584).unsubscribe("MODAL_POP", handleModalClose5);
               };
               handleModalClose5 = handleModalClose2;
-              const subscription3 = tmp28(573).subscribe("MODAL_POP", handleModalClose2);
-              const tmp28Result5 = tmp28(573);
+              const subscription3 = tmp28(584).subscribe("MODAL_POP", handleModalClose2);
+              const tmp28Result5 = tmp28(584);
             }
-            const tmp28Result4 = tmp28(5048);
+            const tmp28Result4 = tmp28(5093);
           } else {
             if (null != overrideUrl) {
               if (platformType === closure_3) {
@@ -113,40 +113,40 @@ export default function authorizeConnection(overrideUrl) {
                                   LinkingDefault.openURL(overrideUrl);
                                 }
                 };
-                handleModalClose5(8002).handleClick(obj4);
-                const obj3 = handleModalClose5(8002);
+                handleModalClose5(8047).handleClick(obj4);
+                const obj3 = handleModalClose5(8047);
               }
             }
             const obj5 = { location: _location, successRedirect };
-            const tmp28Result6 = tmp28(5904);
-            tmp28(5904).authorize(platformType, obj5).then((body) => {
+            const tmp28Result6 = tmp28(6677);
+            tmp28(6677).authorize(platformType, obj5).then((body) => {
               const url = body.body.url;
               if (null != url) {
-                overrideUrl(4554).openURL(url);
-                const obj = overrideUrl(4554);
+                overrideUrl(4565).openURL(url);
+                const obj = overrideUrl(4565);
               }
             });
-            const authorizeResult = tmp28(5904).authorize(platformType, obj5);
+            const authorizeResult = tmp28(6677).authorize(platformType, obj5);
           }
-          const obj18 = overrideUrl(5781);
+          const obj18 = overrideUrl(5442);
         }
       }
     }
-    overrideUrl(4809).hideActionSheet();
-    const obj13 = overrideUrl(4809);
+    overrideUrl(4854).hideActionSheet();
+    const obj13 = overrideUrl(4854);
     const tmp19 = overrideUrl;
     const items3 = [_location];
-    overrideUrl(8751).showModal(items3, platformType);
+    overrideUrl(8764).showModal(items3, platformType);
     if (null != onClose) {
       handleModalClose5 = function handleModalClose() {
         if (require != null) {
           tmp();
         }
-        overrideUrl(573).unsubscribe("MODAL_POP", handleModalClose5);
+        overrideUrl(584).unsubscribe("MODAL_POP", handleModalClose5);
       };
-      const subscription4 = tmp19(573).subscribe("MODAL_POP", handleModalClose5);
-      const tmp19Result = tmp19(573);
+      const subscription4 = tmp19(584).subscribe("MODAL_POP", handleModalClose5);
+      const tmp19Result = tmp19(584);
     }
-    const obj14 = overrideUrl(8751);
+    const obj14 = overrideUrl(8764);
   }
 };

@@ -1,18 +1,18 @@
-// === Module 10470: useMobilePurchaseSKU ===
+// === Module 10544: useMobilePurchaseSKU ===
 
-// Module 10470 (useMobilePurchaseSKU)
+// Module 10544 (useMobilePurchaseSKU)
 import LoggerDefault from "Logger" /* 3 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1372 */;
+import UserStore from "UserStore" /* 1377 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-let closure_5 = fn(7032).useNativeCheckoutStoreOrNull;
-const CurrencyCodes = fn(1074).CurrencyCodes;
-fn(6846).GPlayBillingResult;
+let closure_5 = fn(6930).useNativeCheckoutStoreOrNull;
+const CurrencyCodes = fn(1085).CurrencyCodes;
+fn(6740).GPlayBillingResult;
 let closure_9 = new LoggerDefault("useMobilePurchaseSKU.android");
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/billing/native/hooks/useMobilePurchaseSKU.android.tsx");
@@ -108,7 +108,7 @@ export default function useMobilePurchaseSKU(skuId) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -222,7 +222,7 @@ export default function useMobilePurchaseSKU(skuId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -357,10 +357,10 @@ export default function useMobilePurchaseSKU(skuId) {
           }
           c4 = 0;
           c6 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
         const obj15 = { productId: closure_130_1, skuId: closure_130_0, isOneTimePurchase: true, analyticsLoadId: closure_130_3, analyticsLocations: closure_130_2, analyticsData: closure_130_4, isGift: closure_130_18, giftInfoOptions: null, onPurchaseError: null };
-        let options;
+        options = undefined;
         if (closure_130_9 != null) {
           options = closure_130_9.options;
         }

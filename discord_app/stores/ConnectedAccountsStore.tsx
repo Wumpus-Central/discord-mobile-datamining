@@ -1,14 +1,15 @@
-// === Module 5779: ConnectedAccountsStore ===
+// === Module 5440: ConnectedAccountsStore ===
 
-// Module 5779 (ConnectedAccountsStore)
+// Module 5440 (ConnectedAccountsStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import PlatformsDefault from "Platforms" /* 5781 */;
-import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 5904 */;
-import ConnectedAccountRecord from "ConnectedAccountRecord" /* 5780 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import PlatformsDefault from "Platforms" /* 5442 */;
+import fetchConnectedAccounts from "fetchConnectedAccounts" /* 5565 */;
+import postConnectionCallback from "postConnectionCallback" /* 5566 */;
+import ConnectedAccountRecord from "ConnectedAccountRecord" /* 5441 */;
 
-const require = fn;
-const items = [fn(1074).PlatformTypes.CONTACTS];
+require = fn;
+const items = [fn(1085).PlatformTypes.CONTACTS];
 const set = new Set(items);
 let c5 = true;
 let closure_6 = [];
@@ -36,9 +37,9 @@ prototype["getAccounts"] = function getAccounts() {
 prototype["getLocalAccounts"] = function getLocalAccounts() {
   return closure_7;
 };
-prototype["getAccount"] = function getAccount(accountId, SPOTIFY) {
+prototype["getAccount"] = function getAccount(accountId, provider_id) {
   closure_0 = accountId;
-  closure_1 = SPOTIFY;
+  closure_1 = provider_id;
   return closure_6.find((id) => {
     let tmp2 = null == closure_0 || id.id === tmp;
     if (tmp2) {
@@ -110,13 +111,13 @@ const connectedAccountsStore = new ConnectedAccountsStore(DispatcherDefault, {
         c5 = false;
       }
     }
-    const response = ConnectedAccountsActionCreatorsDefault.fetch();
+    const connectedAccounts = fetchConnectedAccounts.fetchConnectedAccounts();
   },
   USER_CONNECTIONS_INTEGRATION_JOINING: function handleJoining(integrationId) {
     closure_8[integrationId.integrationId] = integrationId.joining;
   },
   USER_CONNECTION_UPDATE: function handleUserConnectionUpdate(arg0) {
-    ({ platformType: require, id: importDefault, revoked, accessToken } = arg0);
+    ({ platformType: require, id: importDefault, revoked, accessToken, showActivity } = arg0);
     const found = closure_6.find((id) => {
       let tmp = id.id === importDefault;
       if (tmp) {
@@ -133,6 +134,9 @@ const connectedAccountsStore = new ConnectedAccountsStore(DispatcherDefault, {
       if (null != accessToken) {
         found.accessToken = accessToken;
       }
+      if (null != showActivity) {
+        found.showActivity = showActivity;
+      }
     }
   },
   USER_CONNECTIONS_INTEGRATION_JOINING_ERROR: function handleJoiningError(error) {
@@ -144,10 +148,10 @@ const connectedAccountsStore = new ConnectedAccountsStore(DispatcherDefault, {
   },
   USER_CONNECTIONS_CALLBACK: function handleUserConnectionsCallback(arg0) {
     ({ code, state, openid_params, provider } = arg0);
-    ConnectedAccountsActionCreatorsDefault.callback(provider, { code, state, openid_params });
+    const result = postConnectionCallback.postConnectionCallback(provider, { code, state, openid_params });
   }
 });
 const size = fn(2);
-const result = size.fileFinishedImporting("stores/ConnectedAccountsStore.tsx");
+let result = size.fileFinishedImporting("stores/ConnectedAccountsStore.tsx");
 
 export default connectedAccountsStore;

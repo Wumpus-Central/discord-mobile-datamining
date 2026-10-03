@@ -1,25 +1,261 @@
-// === Module 17146: SoundboardSoundPickerCategories ===
+// === Module 17222: SoundboardSoundPickerCategories ===
 
-// Module 17146 (SoundboardSoundPickerCategories)
-import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1115 */;
-import native from "native" /* 1177 */;
-import ClockIcon from "ClockIcon" /* 4804 */;
-import HapticUtils from "HapticUtils" /* 4810 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4811 */;
-import SoundboardTypes from "SoundboardTypes" /* 5512 */;
-import LockIcon from "LockIcon" /* 5593 */;
-import Pressables from "Pressables" /* 5621 */;
-import GuildIconDefault from "GuildIcon" /* 6082 */;
-import TrophyIcon from "TrophyIcon" /* 8360 */;
-import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 9616 */;
-import _modDef10046 from "module_10046" /* 10046 */;
-import _modDef17144 from "module_17144" /* 17144 */;
+// Module 17222 (SoundboardSoundPickerCategories)
+import c from "c" /* 576 */;
+import nativeDefault from "native" /* 587 */;
+import util from "util" /* 1126 */;
+import native from "native" /* 1188 */;
+import ClockIcon from "ClockIcon" /* 4849 */;
+import HapticUtils from "HapticUtils" /* 4855 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4856 */;
+import SoundboardTypes from "SoundboardTypes" /* 5805 */;
+import LockIcon from "LockIcon" /* 5879 */;
+import Pressables from "Pressables" /* 5909 */;
+import GuildIconDefault from "GuildIcon" /* 5971 */;
+import TrophyIcon from "TrophyIcon" /* 8364 */;
+import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 9644 */;
+import _modDef10116 from "module_10116" /* 10116 */;
+import _modDef17220 from "module_17220" /* 17220 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1372 */;
+import UserStore from "UserStore" /* 1377 */;
 
 require = fn;
-function SoundCategoryItem(style) {
+function getItemLayout(arg0, index) {
+  return { length: options, offset: options * index, index };
+}
+get_ActivityIndicator = fn(17);
+const StyleSheet = get_ActivityIndicator.StyleSheet;
+({ View: hasOwnProperty, FlatList: metroRequire } = get_ActivityIndicator);
+const setSearchQuery = fn(17204).setSearchQuery;
+const Constants = fn(1085);
+({ CATEGORY_ICON_SIZE, EXPRESSION_FOOTER_HEIGHT: closure_9, NODE_SIZE, NODE_MARGIN } = Constants);
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+const createStyles = fn(4890);
+let obj = { container: { borderTopWidth: StyleSheet.hairlineWidth, paddingHorizontal: 8, flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderTopColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, item: null, fadedItem: { opacity: 0.5 }, activeItem: null, guildItem: null, keyboardItem: null, lockContainer: null, lock: null };
+let size = { margin: NODE_MARGIN, height: NODE_SIZE, width: NODE_SIZE, borderRadius: NODE_SIZE / 2, alignItems: "center", justifyContent: "center" };
+obj.item = size;
+let obj3 = { borderTopWidth: StyleSheet.hairlineWidth, paddingHorizontal: 8, flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderTopColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
+obj.activeItem = { opacity: 1, backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
+obj.guildItem = { height: CATEGORY_ICON_SIZE, width: CATEGORY_ICON_SIZE, borderRadius: CATEGORY_ICON_SIZE / 2 };
+obj.keyboardItem = { height: CATEGORY_ICON_SIZE, width: CATEGORY_ICON_SIZE };
+const size1 = { width: 12, height: 12, position: "absolute", bottom: 0, end: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center" };
+obj.lockContainer = size1;
+const size2 = { width: 7.5, height: 7.5, tintColor: nativeDefault.colors.TEXT_DEFAULT };
+obj.lock = size2;
+let closure_12 = createStyles.createStyles(obj);
+let ReactCompilerGating = fn(558);
+let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((index) => {
+  const cResult = c.c(36);
+  ({ category, handlePressCategory } = index);
+  index = index.index;
+  ({ style, locked } = index);
+  const tmp5 = closure_12();
+  const type = category.categoryInfo.type;
+  if (SoundboardTypes.SoundboardSoundGridSectionType.GUILD === type) {
+    let guildItem = category.categoryInfo.guild;
+    if (cResult[0] === guildItem) {
+    }
+    const obj2 = { guild: guildItem, style: tmp5.guildItem };
+    const tmp37 = v65535(GuildIconDefault, obj2);
+    cResult[0] = guildItem;
+    guildItem = tmp5.guildItem;
+    cResult[1] = guildItem;
+    cResult[2] = tmp37;
+  } else {
+    if (SoundboardTypes.SoundboardSoundGridSectionType.FAVORITES === type) {
+      const _Symbol4 = Symbol;
+      if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+        const intl5 = util.intl;
+        const stringResult = intl5.string(util.t.y3LQCG);
+        cResult[3] = stringResult;
+        let tmp30 = stringResult;
+      } else {
+        tmp30 = cResult[3];
+      }
+      let tmp12 = _modDef10116;
+      let tmp11 = null;
+      let tmp14 = tmp30;
+      let tmp13 = null;
+    } else if (SoundboardTypes.SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
+      const _Symbol3 = Symbol;
+      if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+        const intl4 = util.intl;
+        const stringResult1 = intl4.string(util.t["+cGVV6"]);
+        cResult[4] = stringResult1;
+        let tmp24 = stringResult1;
+      } else {
+        tmp24 = cResult[4];
+      }
+      if (cResult[5] !== tmp5.keyboardItem) {
+        const obj3 = { style: tmp5.keyboardItem };
+        const tmp28 = v65535(ClockIcon.ClockIcon, obj3);
+        cResult[5] = tmp5.keyboardItem;
+        cResult[6] = tmp28;
+        let tmp26 = tmp28;
+      } else {
+        tmp26 = cResult[6];
+      }
+      tmp12 = null;
+      tmp11 = tmp26;
+      tmp13 = null;
+      tmp14 = tmp24;
+    } else if (SoundboardTypes.SoundboardSoundGridSectionType.DEFAULTS === type) {
+      const _Symbol2 = Symbol;
+      if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
+        const intl3 = util.intl;
+        const stringResult2 = intl3.string(util.t.Rtvk9X);
+        cResult[7] = stringResult2;
+        let tmp20 = stringResult2;
+      } else {
+        tmp20 = cResult[7];
+      }
+      tmp12 = _modDef17220;
+      tmp11 = null;
+      tmp14 = tmp20;
+      tmp13 = null;
+    } else if (SoundboardTypes.SoundboardSoundGridSectionType.SEARCH === type) {
+      const _Symbol = Symbol;
+      if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
+        const intl2 = util.intl;
+        const stringResult3 = intl2.string(util.t.sKt3xS);
+        cResult[8] = stringResult3;
+        let tmp16 = stringResult3;
+      } else {
+        tmp16 = cResult[8];
+      }
+      tmp12 = _modDef17220;
+      tmp11 = null;
+      tmp14 = tmp16;
+      tmp13 = null;
+    } else {
+      tmp12 = null;
+      tmp11 = null;
+      tmp13 = null;
+      tmp14 = null;
+      if (SoundboardTypes.SoundboardSoundGridSectionType.TOP_SOUNDS === type) {
+        if (cResult[9] !== category.categoryInfo.guild.name) {
+          const intl = util.intl;
+          const obj4 = { guildName: category.categoryInfo.guild.name };
+          const formatToPlainStringResult = intl.formatToPlainString(util.t.GXs41w, obj4);
+          cResult[9] = category.categoryInfo.guild.name;
+          cResult[10] = formatToPlainStringResult;
+          let tmp6 = formatToPlainStringResult;
+        } else {
+          tmp6 = cResult[10];
+        }
+        if (cResult[11] !== tmp5.keyboardItem) {
+          const obj5 = { style: tmp5.keyboardItem };
+          const tmp10 = v65535(TrophyIcon.TrophyIcon, obj5);
+          cResult[11] = tmp5.keyboardItem;
+          cResult[12] = tmp10;
+          let tmp8 = tmp10;
+        } else {
+          tmp8 = cResult[12];
+        }
+        tmp11 = tmp8;
+        tmp12 = null;
+        tmp13 = null;
+        tmp14 = tmp6;
+      }
+    }
+    if (cResult[13] === handlePressCategory) {
+      if (cResult[14] === index) {
+        let tmp42 = cResult[15];
+      }
+      if (cResult[16] === style) {
+        if (cResult[17] === tmp5.item) {
+          let tmp43 = cResult[18];
+        }
+        if (cResult[19] === tmp11) {
+          if (cResult[20] === tmp13) {
+            if (cResult[21] === tmp12) {
+              if (cResult[22] === tmp5.keyboardItem) {
+                let tmp44 = cResult[23];
+              }
+              if (cResult[24] === tmp4) {
+                if (cResult[25] === tmp5.lock) {
+                  if (cResult[26] === tmp5.lockContainer) {
+                    let tmp48 = cResult[27];
+                  }
+                  if (cResult[28] === tmp43) {
+                    if (cResult[29] === tmp44) {
+                      if (cResult[30] === tmp48) {
+                        let tmp52 = cResult[31];
+                      }
+                      if (cResult[32] === tmp14) {
+                        if (cResult[33] === tmp42) {
+                          if (cResult[34] === tmp52) {
+                            let tmp56 = cResult[35];
+                          }
+                          return tmp56;
+                        }
+                      }
+                      const obj6 = { onPress: tmp42, accessibilityRole: "button", accessibilityLabel: tmp14, children: tmp52 };
+                      const tmp58 = v65535(Pressables.PressableOpacity, obj6, tmp14);
+                      cResult[32] = tmp14;
+                      cResult[33] = tmp42;
+                      cResult[34] = tmp52;
+                      cResult[35] = tmp58;
+                      tmp56 = tmp58;
+                    }
+                  }
+                  const obj7 = { style: tmp43, children: null };
+                  const items = [tmp44, tmp48];
+                  obj7.children = items;
+                  const tmp55 = closure_1_11(hasOwnProperty, obj7);
+                  cResult[28] = tmp43;
+                  cResult[29] = tmp44;
+                  cResult[30] = tmp48;
+                  cResult[31] = tmp55;
+                  tmp52 = tmp55;
+                }
+              }
+              let tmp49 = tmp4;
+              if (tmp4) {
+                const obj8 = { style: tmp5.lockContainer, children: null };
+                const obj9 = { style: tmp5.lock };
+                obj8.children = v65535(LockIcon.LockIcon, obj9);
+                tmp49 = v65535(hasOwnProperty, obj8);
+              }
+              cResult[24] = tmp4;
+              cResult[25] = tmp5.lock;
+              cResult[26] = tmp5.lockContainer;
+              cResult[27] = tmp49;
+              tmp48 = tmp49;
+            }
+          }
+        }
+        let tmp46 = tmp13;
+        if (tmp13 == null) {
+          tmp46 = tmp11;
+        }
+        if (tmp46 == null) {
+          const obj10 = { style: tmp5.keyboardItem, source: tmp12 };
+          tmp46 = v65535(native.Icon, obj10);
+        }
+        cResult[19] = tmp11;
+        cResult[20] = tmp13;
+        cResult[21] = tmp12;
+        cResult[22] = tmp5.keyboardItem;
+        cResult[23] = tmp46;
+        tmp44 = tmp46;
+      }
+      const items1 = [tmp5.item, style];
+      cResult[16] = style;
+      cResult[17] = tmp5.item;
+      cResult[18] = items1;
+      tmp43 = items1;
+    }
+    const fn = function o() {
+      return handlePressCategory(index);
+    };
+    cResult[13] = handlePressCategory;
+    cResult[14] = index;
+    cResult[15] = fn;
+    tmp42 = fn;
+  }
+}) : ((style) => {
   ({ category, handlePressCategory: require, index: importDefault, locked } = style);
   if (locked === undefined) {
     locked = false;
@@ -27,35 +263,35 @@ function SoundCategoryItem(style) {
   const tmp = closure_12();
   const type = category.categoryInfo.type;
   if (SoundboardTypes.SoundboardSoundGridSectionType.GUILD === type) {
-    const guild = category.categoryInfo.guild;
+    guild = category.categoryInfo.guild;
     let name = guild.name;
     const obj2 = { guild, style: tmp.guildItem };
-    let tmp14Result = closure_1_10(GuildIconDefault, obj2);
+    let tmp14Result = v65535(GuildIconDefault, obj2);
     let tmp6 = null;
     let tmp7 = null;
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.FAVORITES === type) {
     const intl4 = util.intl;
     name = intl4.string(util.t.y3LQCG);
-    tmp6 = _modDef10046;
+    tmp6 = _modDef10116;
     tmp7 = null;
     tmp14Result = null;
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
     const intl3 = util.intl;
     name = intl3.string(util.t["+cGVV6"]);
     const obj = { style: tmp.keyboardItem };
-    tmp7 = closure_1_10(ClockIcon.ClockIcon, obj);
+    tmp7 = v65535(ClockIcon.ClockIcon, obj);
     tmp6 = null;
     tmp14Result = null;
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.DEFAULTS === type) {
     const intl2 = util.intl;
     name = intl2.string(util.t.Rtvk9X);
-    tmp6 = _modDef17144;
+    tmp6 = _modDef17220;
     tmp7 = null;
     tmp14Result = null;
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.SEARCH === type) {
     const intl = util.intl;
     name = intl.string(util.t.sKt3xS);
-    tmp6 = _modDef17144;
+    tmp6 = _modDef17220;
     tmp7 = null;
     tmp14Result = null;
   } else {
@@ -68,14 +304,14 @@ function SoundCategoryItem(style) {
       const obj3 = { guildName: category.categoryInfo.guild.name };
       name = intl5.formatToPlainString(util.t.GXs41w, obj3);
       const obj4 = { style: tmp.keyboardItem };
-      tmp7 = closure_1_10(TrophyIcon.TrophyIcon, obj4);
+      tmp7 = v65535(TrophyIcon.TrophyIcon, obj4);
       tmp6 = null;
       tmp14Result = null;
     }
   }
   const obj5 = {
     onPress() {
-      return require(importDefault);
+      return _require(importDefault);
     },
     accessibilityRole: "button",
     accessibilityLabel: name,
@@ -89,55 +325,282 @@ function SoundCategoryItem(style) {
   }
   if (tmp14Result == null) {
     const obj7 = { style: tmp.keyboardItem, source: tmp6 };
-    tmp14Result = closure_1_10(native.Icon, obj7);
+    tmp14Result = v65535(native.Icon, obj7);
   }
   const items1 = [tmp14Result, ];
   if (locked) {
     const obj8 = { style: tmp.lockContainer, children: null };
     const obj9 = { style: tmp.lock };
-    obj8.children = closure_1_10(LockIcon.LockIcon, obj9);
-    locked = closure_1_10(hasOwnProperty, obj8);
+    obj8.children = v65535(LockIcon.LockIcon, obj9);
+    locked = v65535(hasOwnProperty, obj8);
   }
   items1[1] = locked;
   obj6.children = items1;
   obj5.children = closure_1_11(hasOwnProperty, obj6);
-  return closure_1_10(Pressables.PressableOpacity, obj5, name);
-}
-function getItemLayout(arg0, index) {
-  return { length: React7, offset: React7 * index, index };
-}
-get_ActivityIndicator = fn(17);
-const StyleSheet = get_ActivityIndicator.StyleSheet;
-({ View: hasOwnProperty, FlatList: metroRequire } = get_ActivityIndicator);
-const setSearchQuery = fn(17128).setSearchQuery;
-const Constants = fn(1074);
-({ CATEGORY_ICON_SIZE, EXPRESSION_FOOTER_HEIGHT: closure_9, NODE_SIZE, NODE_MARGIN } = Constants);
-const jsxProd = fn(21);
-({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4845);
-let obj = { container: { borderTopWidth: StyleSheet.hairlineWidth, paddingHorizontal: 8, flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderTopColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, item: null, fadedItem: { opacity: 0.5 }, activeItem: null, guildItem: null, keyboardItem: null, lockContainer: null, lock: null };
-let size = { margin: NODE_MARGIN, height: NODE_SIZE, width: NODE_SIZE, borderRadius: NODE_SIZE / 2, alignItems: "center", justifyContent: "center" };
-obj.item = size;
-let obj3 = { borderTopWidth: StyleSheet.hairlineWidth, paddingHorizontal: 8, flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderTopColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
-obj.activeItem = { opacity: 1, backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
-obj.guildItem = { height: CATEGORY_ICON_SIZE, width: CATEGORY_ICON_SIZE, borderRadius: CATEGORY_ICON_SIZE / 2 };
-obj.keyboardItem = { height: CATEGORY_ICON_SIZE, width: CATEGORY_ICON_SIZE };
-const size1 = { width: 12, height: 12, position: "absolute", bottom: 0, end: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center" };
-obj.lockContainer = size1;
-const size2 = { width: 7.5, height: 7.5, tintColor: nativeDefault.colors.TEXT_DEFAULT };
-obj.lock = size2;
-let closure_12 = createStyles.createStyles(obj);
-let closure_14 = noop.memo(noop.forwardRef((arg0, ref) => {
+  return v65535(Pressables.PressableOpacity, obj5, name);
+});
+({ memo, forwardRef } = noop);
+ReactCompilerGating = fn(558);
+let closure_14 = memo(forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, ref) => {
+  const cResult = c.c(3);
+  if (cResult[0] === arg0) {
+    if (cResult[1] === ref) {
+      let tmp2 = cResult[2];
+    }
+    return tmp2;
+  }
+  const obj2 = {};
+  const merged = Object.assign(arg0);
+  obj2.ref = ref;
+  const tmp4 = v65535(timestampProducer, obj2);
+  cResult[0] = arg0;
+  cResult[1] = ref;
+  cResult[2] = tmp4;
+  tmp2 = tmp4;
+}) : ((arg0, ref) => {
   const obj = {};
   const merged = Object.assign(arg0);
   obj.ref = ref;
-  return closure_1_10(timestampProducer, obj);
-}));
+  return v65535(timestampProducer, obj);
+})));
+ReactCompilerGating = fn(558);
 let obj4 = { opacity: 1, backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/soundboard/native/SoundboardSoundPickerCategories.tsx");
 
-export default noop.memo(function SoundboardSoundPickerCategories(guildId) {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
+  const cResult = guildId(listRef[9]).c(31);
+  guildId = guildId.guildId;
+  ({ categories, categoryIndex } = guildId);
+  ({ style, listRef } = guildId);
+  const tmp4 = closure_12();
+  noop = tmp4;
+  noop.useRef(null);
+  noop.useRef(null);
+  noop.useRef(null);
+  if (cResult[0] !== categoryIndex) {
+    const fn = function c() {
+      if (null != ref.current) {
+        if (null != ref2.current) {
+          if (null != ref.current) {
+            const result = categoryIndex * options;
+            if (tmp7) {
+              const current = tmp3.current;
+              const obj = { offset: result };
+              current.scrollToOffset(obj);
+            }
+            tmp7 = result > tmp2.current || result < tmp.current;
+          }
+        }
+      }
+    };
+    const items = [categoryIndex];
+    cResult[0] = categoryIndex;
+    cResult[1] = fn;
+    cResult[2] = items;
+    let tmp7 = items;
+    let tmp6 = fn;
+  } else {
+    tmp6 = cResult[1];
+    tmp7 = cResult[2];
+  }
+  const effect = noop.useEffect(tmp6, tmp7);
+  if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+    class S {
+      constructor(arg0) {
+        closure_5.current = 0;
+        closure_6.current = guildId.nativeEvent.layout.width;
+        return;
+      }
+    }
+    cResult[3] = S;
+  } else {
+    class S {
+      constructor(arg0) {
+        closure_5.current = 0;
+        closure_6.current = guildId.nativeEvent.layout.width;
+        return;
+      }
+    }
+  }
+  if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+    class N {
+      constructor(arg0) {
+        nativeEvent = guildId.nativeEvent;
+        contentOffset = nativeEvent.contentOffset;
+        closure_5.current = contentOffset.x;
+        closure_6.current = contentOffset.x + nativeEvent.layoutMeasurement.width;
+        return;
+      }
+    }
+    cResult[4] = N;
+  } else {
+    class N {
+      constructor(arg0) {
+        nativeEvent = guildId.nativeEvent;
+        contentOffset = nativeEvent.contentOffset;
+        closure_5.current = contentOffset.x;
+        closure_6.current = contentOffset.x + nativeEvent.layoutMeasurement.width;
+        return;
+      }
+    }
+  }
+  if (cResult[5] !== listRef) {
+    class P {
+      constructor(arg0) {
+        closure_0 = guildId;
+        tmp = closure_7("");
+        setImmediateResult = setImmediate(() => {
+          let current1;
+          if (listRef != null) {
+            current1 = listRef.current;
+          }
+          if (null != current1) {
+            const current = listRef.current;
+            const obj = { section, item: 0 };
+            current.scrollToLocation(obj);
+            const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
+          }
+        });
+        return;
+      }
+    }
+    cResult[5] = listRef;
+    cResult[6] = P;
+  } else {
+    class P {
+      constructor(arg0) {
+        closure_0 = guildId;
+        tmp = closure_7("");
+        setImmediateResult = setImmediate(() => {
+          let current1;
+          if (listRef != null) {
+            current1 = listRef.current;
+          }
+          if (null != current1) {
+            const current = listRef.current;
+            const obj = { section, item: 0 };
+            current.scrollToLocation(obj);
+            const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
+          }
+        });
+        return;
+      }
+    }
+  }
+  handlePressCategory = P;
+  if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
+    class P {
+      constructor(arg0) {
+        closure_0 = guildId;
+        tmp = closure_7("");
+        setImmediateResult = setImmediate(() => {
+          let current1;
+          if (listRef != null) {
+            current1 = listRef.current;
+          }
+          if (null != current1) {
+            const current = listRef.current;
+            const obj = { section, item: 0 };
+            current.scrollToLocation(obj);
+            const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
+          }
+        });
+        return;
+      }
+    }
+    const items1 = [stateFromStores];
+    class D {
+      constructor() {
+        obj = categoryIndex(listRef[22]);
+        return obj.canUseSoundboardEverywhere(closure_8.getCurrentUser());
+      }
+    }
+    cResult[7] = items1;
+    cResult[8] = D;
+    let tmp13 = D;
+    const tmp12 = items1;
+  } else {
+    class P {
+      constructor(arg0) {
+        closure_0 = guildId;
+        tmp = closure_7("");
+        setImmediateResult = setImmediate(() => {
+          let current1;
+          if (listRef != null) {
+            current1 = listRef.current;
+          }
+          if (null != current1) {
+            const current = listRef.current;
+            const obj = { section, item: 0 };
+            current.scrollToLocation(obj);
+            const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
+          }
+        });
+        return;
+      }
+    }
+    tmp13 = cResult[8];
+  }
+  let obj = guildId(listRef[9]);
+  stateFromStores = guildId(listRef[23]).useStateFromStores(tmp12, tmp13);
+  if (cResult[9] === stateFromStores) {
+    class P {
+      constructor(arg0) {
+        closure_0 = guildId;
+        tmp = closure_7("");
+        setImmediateResult = setImmediate(() => {
+          let current1;
+          if (listRef != null) {
+            current1 = listRef.current;
+          }
+          if (null != current1) {
+            const current = listRef.current;
+            const obj = { section, item: 0 };
+            current.scrollToLocation(obj);
+            const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
+          }
+        });
+        return;
+      }
+    }
+  }
+  class H {
+    constructor(arg0) {
+      ({ item, index } = guildId);
+      result = !closure_8;
+      if (!closure_8) {
+        tmp2 = closure_0;
+        tmp3 = closure_2;
+        obj = closure_0(closure_2[24]);
+        tmp4 = guildId;
+        result = obj.isSoundboardSectionNitroLocked(guildId, item.categoryInfo);
+      }
+      obj1 = { category: item, index, style: null, handlePressCategory: null, locked: null };
+      if (null != categoryIndex) {
+        if (index === categoryIndex) {
+          tmp7 = closure_3;
+          fadedItem = closure_3.activeItem;
+        }
+        obj1.style = fadedItem;
+        tmp8 = closure_7;
+        obj1.handlePressCategory = closure_7;
+        obj1.locked = result;
+        return tmp5(tmp6, obj1);
+      }
+      fadedItem = closure_3.fadedItem;
+      return;
+    }
+  }
+  cResult[9] = stateFromStores;
+  cResult[10] = categoryIndex;
+  cResult[11] = guildId;
+  cResult[12] = P;
+  cResult[13] = tmp4.activeItem;
+  cResult[14] = tmp4.fadedItem;
+  cResult[15] = H;
+  const tmpResult = guildId(listRef[23]);
+}) : ((guildId) => {
   guildId = guildId.guildId;
   const categoryIndex = guildId.categoryIndex;
   const listRef = guildId.listRef;
@@ -153,7 +616,7 @@ export default noop.memo(function SoundboardSoundPickerCategories(guildId) {
     if (null != ref.current) {
       if (null != ref2.current) {
         if (null != ref.current) {
-          const result = categoryIndex * React7;
+          const result = categoryIndex * options;
           if (tmp7) {
             const current = tmp3.current;
             const obj = { offset: result };
@@ -191,7 +654,7 @@ export default noop.memo(function SoundboardSoundPickerCategories(guildId) {
     });
   }, items1);
   const items2 = [stateFromStores];
-  stateFromStores = guildId(listRef[20]).useStateFromStores(items2, () => categoryIndex(listRef[21]).canUseSoundboardEverywhere(stateFromStores.getCurrentUser()));
+  stateFromStores = guildId(listRef[23]).useStateFromStores(items2, () => categoryIndex(listRef[22]).canUseSoundboardEverywhere(stateFromStores.getCurrentUser()));
   const items3 = [stateFromStores, guildId, callback2, categoryIndex, , ];
   ({ activeItem: arr4[4], fadedItem: arr4[5] } = tmp);
   const callback3 = noop.useCallback((arg0) => {
@@ -213,14 +676,14 @@ export default noop.memo(function SoundboardSoundPickerCategories(guildId) {
     fadedItem = closure_3.fadedItem;
   }, items3);
   const memo = noop.useMemo(() => {
-    const Gesture = guildId(listRef[24]).Gesture;
+    const Gesture = guildId(listRef[26]).Gesture;
     return Gesture.Native().disallowInterruption(true);
   }, []);
   let obj2 = { hostName: "soundboard-footer", children: null };
   const obj3 = { style: null, children: null };
-  const items4 = [tmp.container, { paddingBottom: categoryIndex(listRef[23])().bottom }, style];
+  const items4 = [tmp.container, { paddingBottom: categoryIndex(listRef[25])().bottom }, style];
   obj3.style = items4;
-  const items5 = [closure_10(categoryIndex(listRef[26]), { style: ref.absoluteFill }), ];
+  const items5 = [closure_10(categoryIndex(listRef[27]), { style: ref.absoluteFill }), ];
   const obj5 = {
     gesture: memo,
     children: closure_10(closure_14, {
@@ -238,8 +701,8 @@ export default noop.memo(function SoundboardSoundPickerCategories(guildId) {
       showsHorizontalScrollIndicator: false
     })
   };
-  items5[1] = closure_10(guildId(listRef[24]).GestureDetector, obj5);
+  items5[1] = closure_10(guildId(listRef[26]).GestureDetector, obj5);
   obj3.children = items5;
   obj2.children = closure_11(ref, obj3);
-  return closure_10(guildId(listRef[25]).Portal, obj2);
-});
+  return closure_10(guildId(listRef[28]).Portal, obj2);
+}));

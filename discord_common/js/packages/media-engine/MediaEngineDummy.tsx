@@ -1,9 +1,9 @@
-// === Module 4972: MediaEngineDummy ===
+// === Module 5018: MediaEngineDummy ===
 
-// Module 4972 (MediaEngineDummy)
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4900 */;
-import Constants from "Constants" /* 4870 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 4903 */;
+// Module 5018 (MediaEngineDummy)
+import MediaEngineEvent from "MediaEngineEvent" /* 4954 */;
+import Constants from "Constants" /* 4915 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 4948 */;
 import size from "module_2" /* 2 */;
 
 function Video() {
@@ -23,7 +23,7 @@ class MediaEngineDummy extends tmp3 {
 }
 const prototype = MediaEngineDummy.prototype;
 prototype["destroy"] = function destroy() {
-  this.emit(BaseConnectionEvent.MediaEngineEvent.Destroy);
+  this.emit(MediaEngineEvent.MediaEngineEvent.Destroy);
   this.removeAllListeners();
 };
 prototype["interact"] = function interact() {

@@ -1,7 +1,7 @@
-// === Module 1355: timers ===
+// === Module 567: timers ===
 
-// Module 1355 (timers)
-import global_types from "global_types" /* 1352 */;
+// Module 567 (timers)
+import global_types from "global_types" /* 564 */;
 import size from "module_2" /* 2 */;
 
 function setTimeout(arg0, arg1) {

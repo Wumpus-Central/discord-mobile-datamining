@@ -1,8 +1,8 @@
-// === Module 7437: logMessageSendFailure ===
+// === Module 7473: logMessageSendFailure ===
 
-// Module 7437 (logMessageSendFailure)
-import Constants from "Constants" /* 1074 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5025 */;
+// Module 7473 (logMessageSendFailure)
+import Constants from "Constants" /* 1085 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5070 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

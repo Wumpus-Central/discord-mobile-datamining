@@ -1,10 +1,10 @@
-// === Module 17526: FavoriteManager ===
+// === Module 17615: FavoriteManager ===
 
-// Module 17526 (FavoriteManager)
-import FavoritesUtils from "FavoritesUtils" /* 2069 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 9877 */;
+// Module 17615 (FavoriteManager)
+import FavoritesUtils from "FavoritesUtils" /* 2077 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10035 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6725 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
 
 require = fn;
 function handleChannelDelete(channel) {
@@ -86,9 +86,9 @@ function handleThreadMemberUpdate(joinTimestamp) {
     result.catch(NOOP);
   }
 }
-const FavoritesGuildSuggestionsStore = fn(16049);
+const FavoritesGuildSuggestionsStore = fn(16123);
 ({ NO_SUGGESTIONS: c3, setFavoritesGuildSuggestions: closure_4 } = FavoritesGuildSuggestionsStore);
-const NOOP = fn(1074).NOOP;
+const NOOP = fn(1085).NOOP;
 const prototype = function FavoriteManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { CHANNEL_DELETE: handleChannelDelete, CATEGORY_COLLAPSE: handleCategoryCollapse, CATEGORY_EXPAND: handleCategoryExpand, CATEGORY_COLLAPSE_ALL: handleCategoryCollapseAll, CATEGORY_EXPAND_ALL: handleCategoryExpandAll, LOGOUT: handleLogout, THREAD_CREATE: handleThreadCreate, THREAD_MEMBERS_UPDATE: handleThreadMembersUpdate, THREAD_MEMBER_UPDATE: handleThreadMemberUpdate };

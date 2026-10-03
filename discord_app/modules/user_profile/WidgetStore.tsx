@@ -1,13 +1,13 @@
-// === Module 7212: WidgetStore ===
+// === Module 8588: WidgetStore ===
 
-// Module 7212 (WidgetStore)
+// Module 8588 (WidgetStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import GlobalUtils from "GlobalUtils" /* 1370 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import GlobalUtils from "GlobalUtils" /* 1375 */;
 import _slicedToArray from "module_32" /* 32 */;
-import UserStore from "UserStore" /* 1372 */;
-import UserProfileStore from "UserProfileStore" /* 7208 */;
+import UserStore from "UserStore" /* 1377 */;
+import UserProfileStore from "UserProfileStore" /* 7111 */;
 
 require = fn;
 let c6 = null;
@@ -70,7 +70,7 @@ prototype["getWidgetUpdates"] = function getWidgetUpdates() {
         return items;
       }));
       const _Map2 = Map;
-      map1 = new Map(changedWidgets.map((id) => {
+      const map1 = new Map(changedWidgets.map((id) => {
         const items = [id.id, id];
         return items;
       }));

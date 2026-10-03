@@ -1,7 +1,7 @@
-// === Module 16244: DiscordVariantTypes ===
+// === Module 16319: DiscordVariantTypes ===
 
-// Module 16244 (DiscordVariantTypes)
-import nativeDefault from "native" /* 576 */;
+// Module 16319 (DiscordVariantTypes)
+import nativeDefault from "native" /* 587 */;
 import size from "module_2" /* 2 */;
 
 const obj = { production: { scheme: "discord-prod", label: "Discord", color: nativeDefault.unsafe_rawColors.BRAND_500 }, ci: null, main: null, beta: null, dev: null };

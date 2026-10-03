@@ -1,8 +1,8 @@
-// === Module 8681: ApplicationWidgetConfigStore ===
+// === Module 8694: ApplicationWidgetConfigStore ===
 
-// Module 8681 (ApplicationWidgetConfigStore)
+// Module 8694 (ApplicationWidgetConfigStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 function updateApplicationConfigs(configs) {

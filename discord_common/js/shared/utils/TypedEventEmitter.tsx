@@ -1,7 +1,7 @@
-// === Module 4903: TypedEventEmitter ===
+// === Module 4948: TypedEventEmitter ===
 
-// Module 4903 (TypedEventEmitter)
-import _mod568 from "module_568" /* 568 */;
+// Module 4948 (TypedEventEmitter)
+import _mod580 from "module_580" /* 580 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/utils/TypedEventEmitter.tsx");

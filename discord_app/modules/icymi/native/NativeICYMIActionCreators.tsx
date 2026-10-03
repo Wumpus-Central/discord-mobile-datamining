@@ -1,10 +1,10 @@
-// === Module 16327: NativeICYMIActionCreators ===
+// === Module 16403: NativeICYMIActionCreators ===
 
-// Module 16327 (NativeICYMIActionCreators)
+// Module 16403 (NativeICYMIActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/icymi/native/NativeICYMIActionCreators.tsx");
 
@@ -22,7 +22,7 @@ export default {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {

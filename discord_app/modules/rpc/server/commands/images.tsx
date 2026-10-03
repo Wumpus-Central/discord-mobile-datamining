@@ -1,21 +1,21 @@
-// === Module 14245: images ===
+// === Module 14313: images ===
 
-// Module 14245 (images)
-import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import ImageUtils from "ImageUtils" /* 1476 */;
-import RPCErrorDefault from "RPCError" /* 8962 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8965 */;
-import UserStore from "UserStore" /* 1372 */;
+// Module 14313 (images)
+import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
+import ImageUtils from "ImageUtils" /* 1481 */;
+import RPCErrorDefault from "RPCError" /* 9026 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9029 */;
+import UserStore from "UserStore" /* 1377 */;
 
 require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 const RPCErrors = Constants.RPCErrors;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/server/commands/images.tsx");
 
 export default {
   [Constants.RPCCommands.GET_IMAGE]: {
-    scope: fn(5270).RPC_LOCAL_SCOPE,
+    scope: fn(5316).RPC_LOCAL_SCOPE,
     validation(string) {
       const obj = createRpcJoiSchemaObjectDefault(string);
       const obj2 = { type: null, id: null, format: null, size: null };

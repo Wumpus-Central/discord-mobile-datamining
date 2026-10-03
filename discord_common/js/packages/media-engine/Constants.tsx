@@ -1,7 +1,7 @@
-// === Module 4870: Constants ===
+// === Module 4915: Constants ===
 
-// Module 4870 (Constants)
-import discord_common_DiscordNative from "discord_common/DiscordNative" /* 4871 */;
+// Module 4915 (Constants)
+import discord_common_DiscordNative from "discord_common/DiscordNative" /* 4916 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/media-engine/Constants.tsx");
@@ -66,7 +66,7 @@ export const MediaTypes = { AUDIO: "audio", VIDEO: "video", SCREEN: "screen", TE
 export const VideoStates = { PLAYING: "playing", PAUSED: "paused" };
 export const ResolutionTypes = { FIXED: "fixed", SOURCE: "source" };
 export const RTCPMessageTypes = { REMB: "remb" };
-export const ExperimentFlags = { VIDEOTOOLBOX_RATE_CONTROL: "videotoolbox_rate_control", SIGNAL_AV1_ENCODE: "signal_av1_encode", SIGNAL_AV1_DECODE: "signal_av1_decode", SIGNAL_AV1_HARDWARE_DECODE: "signal_av1_hardware_decode", RESET_DECODER_ON_ERRORS: "reset_decoder_on_errors", SOFTWARE_FALLBACK_ON_ERRORS: "software_fallback_on_errors", SOFTWARE_FALLBACK_ON_CONSECUTIVE_ERRORS: "software_fallback_on_consecutive_errors", BROWSER_HEVC: "browser_hevc", LOW_LATENCY_RATE_CONTROL: "low_latency_rate_control", H265_DISABLE_ENCODE: "h265_disable_encode", H265_HARDWARE_ONLY: "h265_hardware_only", H265_HARDWARE_DECODE_AVAILABLE: "h265_hardware_decode_available", WMF_GPU_ENCODE: "wmf_gpu_encode", USE_LIBOPENH264_DECODER: "use_libopenh264_decoder", SWALLOW_VOLUME_ONLY_SPEAKING_EVENTS: "swallow_volume_only_speaking_events", BROWSER_TRANSCEIVER_PADDING_REMOVAL: "browser_transceiver_padding_removal", INTEL_GPU_DISABLE: "intel_gpu_disable" };
+export const ExperimentFlags = { VIDEOTOOLBOX_RATE_CONTROL: "videotoolbox_rate_control", SIGNAL_AV1_ENCODE: "signal_av1_encode", SIGNAL_AV1_DECODE: "signal_av1_decode", SIGNAL_AV1_HARDWARE_DECODE: "signal_av1_hardware_decode", RESET_DECODER_ON_ERRORS: "reset_decoder_on_errors", SOFTWARE_FALLBACK_ON_ERRORS: "software_fallback_on_errors", SOFTWARE_FALLBACK_ON_CONSECUTIVE_ERRORS: "software_fallback_on_consecutive_errors", BROWSER_HEVC: "browser_hevc", LOW_LATENCY_RATE_CONTROL: "low_latency_rate_control", H265_DISABLE_ENCODE: "h265_disable_encode", H265_HARDWARE_DECODE_AVAILABLE: "h265_hardware_decode_available", WMF_GPU_ENCODE: "wmf_gpu_encode", USE_LIBOPENH264_DECODER: "use_libopenh264_decoder", SWALLOW_VOLUME_ONLY_SPEAKING_EVENTS: "swallow_volume_only_speaking_events", BROWSER_TRANSCEIVER_PADDING_REMOVAL: "browser_transceiver_padding_removal", INTEL_GPU_DISABLE: "intel_gpu_disable" };
 export const VideoQualityMode = { AUTO: 1, [1]: "AUTO", FULL: 2, [2]: "FULL" };
 export const NoiseCancellerError = { KRISP_CPU_OVERUSE: 1, [1]: "KRISP_CPU_OVERUSE", KRISP_FAILED: 2, [2]: "KRISP_FAILED", KRISP_VAD_CPU_OVERUSE: 3, [3]: "KRISP_VAD_CPU_OVERUSE", KRISP_INIT_ERROR: 4, [4]: "KRISP_INIT_ERROR", KRISP_INIT_ERROR_NATIVE: 5, [5]: "KRISP_INIT_ERROR_NATIVE", KRISP_INIT_ERROR_SSE4_NOT_SUPPORTED: -1, [-1]: "KRISP_INIT_ERROR_SSE4_NOT_SUPPORTED", KRISP_INIT_ERROR_AVX2_NOT_SUPPORTED: -2, [-2]: "KRISP_INIT_ERROR_AVX2_NOT_SUPPORTED", KRISP_INIT_ERROR_UNSIGNED: -3, [-3]: "KRISP_INIT_ERROR_UNSIGNED", KRISP_INIT_ERROR_GLOBAL_INIT: -4, [-4]: "KRISP_INIT_ERROR_GLOBAL_INIT", KRISP_INIT_ERROR_WEIGHT_8K: -5, [-5]: "KRISP_INIT_ERROR_WEIGHT_8K", KRISP_INIT_ERROR_WEIGHT_16K: -6, [-6]: "KRISP_INIT_ERROR_WEIGHT_16K", KRISP_INIT_ERROR_WEIGHT_32K: -7, [-7]: "KRISP_INIT_ERROR_WEIGHT_32K", KRISP_INIT_ERROR_WEIGHT_VAD: -8, [-8]: "KRISP_INIT_ERROR_WEIGHT_VAD" };
 export const VideoFilterError = { INIT_FAILED: 1, [1]: "INIT_FAILED", UNSUPPORTED: 2, [2]: "UNSUPPORTED" };

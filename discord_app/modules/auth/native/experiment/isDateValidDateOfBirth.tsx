@@ -1,7 +1,7 @@
-// === Module 15822: isDateValidDateOfBirth ===
+// === Module 15899: isDateValidDateOfBirth ===
 
-// Module 15822 (isDateValidDateOfBirth)
-import _modDef4450 from "module_4450" /* 4450 */;
+// Module 15899 (isDateValidDateOfBirth)
+import _modDef4461 from "module_4461" /* 4461 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/auth/native/experiment/isDateValidDateOfBirth.tsx");
@@ -9,8 +9,8 @@ const result = size.fileFinishedImporting("modules/auth/native/experiment/isDate
 export default function isDateValidDateOfBirth(arg0) {
   let tmp = null != arg0;
   if (tmp) {
-    tmp = _modDef4450().diff(arg0, "days") >= 1;
-    const obj = _modDef4450();
+    tmp = _modDef4461().diff(arg0, "days") >= 1;
+    const obj = _modDef4461();
   }
   return tmp;
 };

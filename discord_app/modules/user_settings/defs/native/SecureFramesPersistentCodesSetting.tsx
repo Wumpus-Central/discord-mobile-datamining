@@ -1,13 +1,34 @@
-// === Module 15694: SecureFramesPersistentCodesSetting ===
+// === Module 15757: SecureFramesPersistentCodesSetting ===
 
-// Module 15694 (SecureFramesPersistentCodesSetting)
+// Module 15757 (SecureFramesPersistentCodesSetting)
 import initialize from "initialize" /* 504 */;
-import util from "util" /* 1115 */;
-import SecureFramesActionCreatorsDefault from "SecureFramesActionCreators" /* 9359 */;
-import SecureFramesPersistedStore from "SecureFramesPersistedStore" /* 9357 */;
+import c from "c" /* 576 */;
+import util from "util" /* 1126 */;
+import SecureFramesActionCreatorsDefault from "SecureFramesActionCreators" /* 9367 */;
+import SecureFramesPersistedStore from "SecureFramesPersistedStore" /* 9365 */;
 
 require = fn;
-const SettingBuilders = fn(11215);
+const ReactCompilerGating = fn(558);
+const SettingBuilders = fn(11129);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(2);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [SecureFramesPersistedStore];
+    const fn = function n() {
+      return persistentCodesEnabled.getPersistentCodesEnabled();
+    };
+    cResult[0] = items;
+    cResult[1] = fn;
+    tmp4 = items;
+    tmp5 = fn;
+  } else {
+    [tmp4, tmp5] = cResult;
+  }
+  return initialize.useStateFromStores(tmp4, tmp5);
+}) : (() => {
+  const items = [SecureFramesPersistedStore];
+  return initialize.useStateFromStores(items, () => persistentCodesEnabled.getPersistentCodesEnabled());
+});
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -17,11 +38,26 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.opw5ls);
   },
-  parent: fn(7590).MobileUserSettings.DATA_AND_PRIVACY,
-  useValue: function useSecureFramesPersistentCodesValue() {
+  parent: fn(7634).MobileUserSettings.DATA_AND_PRIVACY,
+  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+    const cResult = c.c(2);
+    if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+      const items = [SecureFramesPersistedStore];
+      const fn = function n() {
+        return persistentCodesEnabled.getPersistentCodesEnabled();
+      };
+      cResult[0] = items;
+      cResult[1] = fn;
+      tmp4 = items;
+      tmp5 = fn;
+    } else {
+      [tmp4, tmp5] = cResult;
+    }
+    return initialize.useStateFromStores(tmp4, tmp5);
+  }) : (() => {
     const items = [SecureFramesPersistedStore];
     return initialize.useStateFromStores(items, () => persistentCodesEnabled.getPersistentCodesEnabled());
-  },
+  }),
   onValueChange: function handleSecureFramesPersistentCodesToggle(arg0) {
     const result = SecureFramesActionCreatorsDefault.updatePersistentCodesEnabled(arg0);
   }

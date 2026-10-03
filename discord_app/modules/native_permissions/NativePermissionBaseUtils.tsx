@@ -1,14 +1,14 @@
-// === Module 5641: NativePermissionBaseUtils ===
+// === Module 7278: NativePermissionBaseUtils ===
 
-// Module 5641 (NativePermissionBaseUtils)
-import util from "util" /* 1115 */;
+// Module 7278 (NativePermissionBaseUtils)
+import util from "util" /* 1126 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import NativePermissionStore from "NativePermissionStore" /* 5642 */;
+import NativePermissionStore from "NativePermissionStore" /* 7279 */;
 
 require = fn;
-const NativePermissionConstants = fn(5054);
+const NativePermissionConstants = fn(5099);
 ({ NativePermissionTypes: hasOwnProperty, NativePermissionStates: metroRequire, NativePermissionStatus: closure_7 } = NativePermissionConstants);
-const AnalyticEvents = fn(1074).AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 let NativePermissionBaseUtils;
 class NativePermissionBaseUtils {
   constructor() {
@@ -32,7 +32,7 @@ prototype["requestAuthorization"] = function requestAuthorization(arg0, hasPermi
       const error = new Error("requestAuthorization: Was provided with not a function for " + type + ".");
       throw error;
     }
-    tmp5(1241).track(constants2.PERMISSIONS_REQUESTED, { type });
+    tmp5(1252).track(constants2.PERMISSIONS_REQUESTED, { type });
     yield tmp45();
     closure_128_0 = value;
     let tmp10 = closure_128_0 === constants.AUTHORIZED;
@@ -46,7 +46,7 @@ prototype["requestAuthorization"] = function requestAuthorization(arg0, hasPermi
       DENIED = constants.DENIED;
     }
     closure_128_2 = DENIED;
-    tmp5(5643).setPermission(closure_129_0, closure_128_2);
+    tmp5(7280).setPermission(closure_129_0, closure_128_2);
     let showAuthorizationError = !closure_128_1;
     if (!closure_128_1) {
       showAuthorizationError = closure_129_2.showAuthorizationError;

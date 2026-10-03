@@ -1,10 +1,10 @@
-// === Module 2022: UserSettingsOverridesStore ===
+// === Module 2029: UserSettingsOverridesStore ===
 
-// Module 2022 (UserSettingsOverridesStore)
+// Module 2029 (UserSettingsOverridesStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage3 from "Storage" /* 510 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 
 require = fn;
 function updateExistingSettings() {
@@ -18,7 +18,7 @@ function updateExistingSettings() {
   }
   obj = { gifAutoPlay: value, animateEmoji: null, animateStickers: null };
   const textAndImages2 = settings.textAndImages;
-  let value3;
+  value3 = undefined;
   if (textAndImages2 != null) {
     if (textAndImages2.animateEmoji != null) {
       value3 = iter2.value;
@@ -90,7 +90,7 @@ obj = {
     }
     obj = { gifAutoPlay: value, animateEmoji: null, animateStickers: null };
     const textAndImages2 = settings.textAndImages;
-    let value3;
+    value3 = undefined;
     if (textAndImages2 != null) {
       if (textAndImages2.animateEmoji != null) {
         value3 = iter2.value;

@@ -1,23 +1,23 @@
-// === Module 5910: SelectedChannelActionCreatorsAdditional ===
+// === Module 5569: SelectedChannelActionCreatorsAdditional ===
 
-// Module 5910 (SelectedChannelActionCreatorsAdditional)
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import v1 from "v1" /* 1255 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 5911 */;
-import PermissionStore from "PermissionStore" /* 4498 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4684 */;
-import UserStore from "UserStore" /* 1372 */;
-import VoiceStateStore from "VoiceStateStore" /* 4864 */;
+// Module 5569 (SelectedChannelActionCreatorsAdditional)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import v1 from "v1" /* 1266 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 5570 */;
+import PermissionStore from "PermissionStore" /* 4509 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
+import UserStore from "UserStore" /* 1377 */;
+import VoiceStateStore from "VoiceStateStore" /* 4909 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const STAGE_BOOSTING_SHEET_KEY = fn(5912).STAGE_BOOSTING_SHEET_KEY;
+const STAGE_BOOSTING_SHEET_KEY = fn(5571).STAGE_BOOSTING_SHEET_KEY;
 const size = fn(2);
-const result = size.fileFinishedImporting("actions/SelectedChannelActionCreatorsAdditional.native.tsx");
+let result = size.fileFinishedImporting("actions/SelectedChannelActionCreatorsAdditional.native.tsx");
 
 export const getChannelSelectionOrigin = function getChannelSelectionOrigin() {
   let guildId = SelectedGuildStore.getGuildId();
@@ -57,27 +57,31 @@ export const selectVoiceChannelAdditional = function selectVoiceChannelAdditiona
   const currentUser = UserStore.getCurrentUser();
   if (null != currentUser) {
     if (null != channel) {
-      const obj8 = require("ChannelUtils");
+      const obj9 = require("ChannelUtils");
       const check = flag4.getCheck(channel.guild_id);
       if (!check.canChat) {
-        if (!tmp14Result.canLurkerListen(channel)) {
-          return tmp14(tmp15[11]).unverifiedVoiceGate(check);
+        if (!tmp17Result.canLurkerListen(channel)) {
+          return tmp17(tmp18[11]).unverifiedVoiceGate(check);
         }
-        tmp14Result = tmp14(tmp15[10]);
+        tmp17Result = tmp17(tmp18[10]);
       }
       const isChannelFullResult = require("ChannelUtils").isChannelFull(channel, VoiceStateStore, flag3);
       const tmp2 = importDefault;
       if (isChannelFullResult) {
         if (channel.isGuildStageVoice()) {
-          if (tmp14Result4.getStageHasMedia(channel.id)) {
+          if (tmp17Result4.getStageHasMedia(channel.id)) {
             let obj2 = { channel };
-            tmp2(tmp15[14]).openLazy(tmp14(tmp15[16])(tmp15[15], tmp15.paths), STAGE_BOOSTING_SHEET_KEY, obj2);
-            const tmp2Result = tmp2(tmp15[14]);
+            tmp2(tmp18[14]).openLazy(tmp17(tmp18[16])(tmp18[15], tmp18.paths), STAGE_BOOSTING_SHEET_KEY, obj2);
+            const tmp2Result = tmp2(tmp18[14]);
           }
-          tmp14Result4 = tmp14(tmp15[13]);
+          tmp17Result4 = tmp17(tmp18[13]);
         }
       }
       const tmp4 = require("canJoinVoiceChannel")(channel, PermissionStore);
+    }
+    if (flag) {
+      const result = require("applyBackgroundOption").applyInitialVideoBackgroundOption();
+      const obj6 = require("applyBackgroundOption");
     }
     require("collectCallFeedback")(() => {
       const v4Result = v1.v4();

@@ -1,27 +1,27 @@
-// === Module 7601: SystemMessageUtils ===
+// === Module 7645: SystemMessageUtils ===
 
-// Module 7601 (SystemMessageUtils)
+// Module 7645 (SystemMessageUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import util from "util" /* 1115 */;
-import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4486 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4997 */;
-import useChannelName from "useChannelName" /* 4998 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5067 */;
-import useMessageAuthor from "useMessageAuthor" /* 5258 */;
-import MarkupParser from "MarkupParser" /* 7602 */;
-import AutomodNotificationEmbedTypeKeys from "AutomodNotificationEmbedTypeKeys" /* 7606 */;
-import GuildRoleSubscriptionSystemMessageUtils from "GuildRoleSubscriptionSystemMessageUtils" /* 7607 */;
-import GuildProductSystemMessageUtils from "GuildProductSystemMessageUtils" /* 7609 */;
-import ApplicationSubscriptionSystemMessageUtils from "ApplicationSubscriptionSystemMessageUtils" /* 7610 */;
-import PrivateChannelIntegrationSystemMessageUtils from "PrivateChannelIntegrationSystemMessageUtils" /* 7611 */;
-import GuildLeaderboardSystemMessageCopy from "GuildLeaderboardSystemMessageCopy" /* 7612 */;
+import util from "util" /* 1126 */;
+import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4497 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5042 */;
+import useChannelName from "useChannelName" /* 5043 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5112 */;
+import useMessageAuthor from "useMessageAuthor" /* 5304 */;
+import MarkupParser from "MarkupParser" /* 7646 */;
+import AutomodNotificationEmbedTypeKeys from "AutomodNotificationEmbedTypeKeys" /* 7650 */;
+import GuildRoleSubscriptionSystemMessageUtils from "GuildRoleSubscriptionSystemMessageUtils" /* 7651 */;
+import GuildProductSystemMessageUtils from "GuildProductSystemMessageUtils" /* 7653 */;
+import ApplicationSubscriptionSystemMessageUtils from "ApplicationSubscriptionSystemMessageUtils" /* 7654 */;
+import PrivateChannelIntegrationSystemMessageUtils from "PrivateChannelIntegrationSystemMessageUtils" /* 7655 */;
+import GuildLeaderboardSystemMessageCopy from "GuildLeaderboardSystemMessageCopy" /* 7656 */;
 import _slicedToArray from "module_32" /* 32 */;
-import MessageRecord from "MessageRecord" /* 4509 */;
+import MessageRecord from "MessageRecord" /* 4520 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import RelationshipStore from "RelationshipStore" /* 4508 */;
-import UserStore from "UserStore" /* 1372 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import RelationshipStore from "RelationshipStore" /* 4519 */;
+import UserStore from "UserStore" /* 1377 */;
 
 const require = globalThis.__r;
 
@@ -31,7 +31,7 @@ function getSystemMessageUserJoinMobile(id) {
   const obj = SnowflakeUtilsDefault;
   return items[obj.extractTimestamp(obj, id) % items.length];
 }
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ MessageEmbedTypes: c10, MessageTypes: closure_11, NOOP: closure_12 } = Constants);
 let closure_13 = { "234395307759108106": "https://groovy.bot/commands", "365975655608745985": "https://www.pokecord.com/getting-started", "512412940897484800": "http://jameslantz.net/smilebot" };
 const size = fn(2);
@@ -210,7 +210,7 @@ export default {
                   const channel = ChannelStore.getChannel(channel_id);
                   let astToStringResult6 = null;
                   if (null != channel) {
-                    const guild = GuildStore.getGuild(channel.getGuildId());
+                    guild = GuildStore.getGuild(channel.getGuildId());
                     astToStringResult6 = null;
                     if (null != guild) {
                       if (AutomodNotificationEmbedTypeKeys.AutomodNotificationEmbedTypeKeys.ACTIVITY_ALERTS_ENABLED === value) {
@@ -290,12 +290,12 @@ export default {
                 if (result != null) {
                   userId = result.userId;
                 }
-                let previousUserId;
+                let secondaryUserId;
                 const user = UserStore.getUser(userId);
                 if (result != null) {
-                  previousUserId = result.previousUserId;
+                  secondaryUserId = result.secondaryUserId;
                 }
-                const guildSpaceLeaderboardMessage = GuildLeaderboardSystemMessageCopy.resolveGuildSpaceLeaderboardMessage(result, user, UserStore.getUser(previousUserId));
+                const guildSpaceLeaderboardMessage = GuildLeaderboardSystemMessageCopy.resolveGuildSpaceLeaderboardMessage(result, user, UserStore.getUser(secondaryUserId));
                 if (null == guildSpaceLeaderboardMessage) {
                   return mentions.content;
                 } else {

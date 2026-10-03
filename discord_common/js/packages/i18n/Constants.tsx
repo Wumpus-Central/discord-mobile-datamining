@@ -1,6 +1,6 @@
-// === Module 1929: Constants ===
+// === Module 1935: Constants ===
 
-// Module 1929 (Constants)
+// Module 1935 (Constants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/i18n/Constants.tsx");

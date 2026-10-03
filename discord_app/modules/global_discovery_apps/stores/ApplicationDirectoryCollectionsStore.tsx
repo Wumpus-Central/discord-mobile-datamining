@@ -1,9 +1,9 @@
-// === Module 11766: ApplicationDirectoryCollectionsStore ===
+// === Module 11687: ApplicationDirectoryCollectionsStore ===
 
-// Module 11766 (ApplicationDirectoryCollectionsStore)
+// Module 11687 (ApplicationDirectoryCollectionsStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
 
 let obj = { FETCHING: 0, [0]: "FETCHING", FETCHED: 1, [1]: "FETCHED", ERROR: 2, [2]: "ERROR" };
 let closure_3 = [];

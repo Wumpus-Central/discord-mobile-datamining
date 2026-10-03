@@ -1,14 +1,14 @@
-// === Module 14312: VoiceMessagesPlaybackManager ===
+// === Module 14380: VoiceMessagesPlaybackManager ===
 
-// Module 14312 (VoiceMessagesPlaybackManager)
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import PlatformUtils from "PlatformUtils" /* 1364 */;
-import NativeDeviceAccessibilityModuleDefault from "NativeDeviceAccessibilityModule" /* 5391 */;
-import NativeAudioPlayerModuleDefault from "NativeAudioPlayerModule" /* 14313 */;
+// Module 14380 (VoiceMessagesPlaybackManager)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import PlatformUtils from "PlatformUtils" /* 1369 */;
+import NativeDeviceAccessibilityModuleDefault from "NativeDeviceAccessibilityModule" /* 5711 */;
+import NativeAudioPlayerModuleDefault from "NativeAudioPlayerModule" /* 14381 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import AccessibilityStore from "AccessibilityStore" /* 4834 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
-import LifecycleManager from "LifecycleManager" /* 1983 */;
+import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
+import LifecycleManager from "LifecycleManager" /* 1989 */;
 import size from "module_2" /* 2 */;
 
 ({ AppState: c3, NativeModules: closure_4 } = get_ActivityIndicator);
@@ -31,7 +31,7 @@ class VoiceMessagesPlaybackManager extends tmp3 {
             const result1 = DCDAudioPlayerManager.handleVoiceMessageDeleted(id);
           }
         }
-        obj = applyArgumentsResult(1364);
+        obj = applyArgumentsResult(1369);
       }
     };
     applyArgumentsResult.handleLogout = function handleLogout() {
@@ -43,7 +43,7 @@ class VoiceMessagesPlaybackManager extends tmp3 {
           DCDAudioPlayerManager.pauseCurrentPlayer(false);
         }
       }
-      obj = applyArgumentsResult(1364);
+      obj = applyArgumentsResult(1369);
     };
     applyArgumentsResult.handleAppStateChanged = function handleAppStateChanged(state) {
       state = state.state;

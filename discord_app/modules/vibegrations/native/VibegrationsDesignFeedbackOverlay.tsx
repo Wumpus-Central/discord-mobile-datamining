@@ -1,9 +1,9 @@
-// === Module 16516: VibegrationsDesignFeedbackOverlay ===
+// === Module 16593: VibegrationsDesignFeedbackOverlay ===
 
-// Module 16516 (VibegrationsDesignFeedbackOverlay)
-import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4809 */;
-import VibegrationsDesignRemarkSheet from "VibegrationsDesignRemarkSheet" /* 16517 */;
+// Module 16593 (VibegrationsDesignFeedbackOverlay)
+import nativeDefault from "native" /* 587 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4854 */;
+import VibegrationsDesignRemarkSheet from "VibegrationsDesignRemarkSheet" /* 16594 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let c10 = 24;
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = { surface: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 }, highlight: { position: "absolute", borderWidth: 2, borderColor: nativeDefault.colors.TEXT_BRAND, borderRadius: nativeDefault.radii.xs }, marker: null, pending: null, hint: null, hintText: null };
 let size = { position: "absolute", width: 24, height: 24, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.TEXT_BRAND, borderWidth: 2, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.marker = size;
@@ -25,10 +25,226 @@ obj2.hint = rect;
 let obj3 = { position: "absolute", borderWidth: 2, borderColor: nativeDefault.colors.TEXT_BRAND, borderRadius: nativeDefault.radii.xs };
 obj2.hintText = { textAlign: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm, padding: nativeDefault.space.PX_8 };
 let closure_11 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+const obj4 = { textAlign: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm, padding: nativeDefault.space.PX_8 };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/vibegrations/native/VibegrationsDesignFeedbackOverlay.tsx");
 
-export default function VibegrationsDesignFeedbackOverlay(projectId) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
+  const cResult = projectId(576).c(44);
+  projectId = projectId.projectId;
+  closure_11();
+  const tmp3 = first1(noop.useState(null), 2);
+  const first = tmp3[0];
+  dependencyMap = tmp3[1];
+  let tmp5 = first1(noop.useState(null), 2);
+  first1 = tmp5[0];
+  noop = tmp5[1];
+  let tmp7 = first1(noop.useState(null), 2);
+  const first2 = tmp7[0];
+  closure_6 = tmp7[1];
+  const tmp9 = first1(noop.useState(false), 2);
+  const first3 = tmp9[0];
+  closure_8 = tmp9[1];
+  closure_9 = noop.useRef(true);
+  closure_10 = noop.useRef(false);
+  if (cResult[0] !== first2) {
+    const fn = function c() {
+      closure_10.current = null != first2;
+    };
+    const items = [first2];
+    cResult[0] = first2;
+    cResult[1] = fn;
+    cResult[2] = items;
+    let tmp12 = items;
+    let tmp11 = fn;
+  } else {
+    tmp11 = cResult[1];
+    tmp12 = cResult[2];
+  }
+  const effect = obj2.useEffect(tmp11, tmp12);
+  if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+    class E {
+      constructor() {
+        closure_9.current = true;
+        return () => {
+          closure_1_9.current = false;
+          if (ref.current) {
+            first(4854).hideActionSheet(projectId(16594).VIBEGRATIONS_DESIGN_REMARK_SHEET_KEY);
+            const obj = first(4854);
+          }
+        };
+      }
+    }
+    const items1 = [];
+    cResult[3] = E;
+    cResult[4] = items1;
+    let tmp15 = items1;
+  } else {
+    class E {
+      constructor() {
+        closure_9.current = true;
+        return () => {
+          closure_1_9.current = false;
+          if (ref.current) {
+            first(4854).hideActionSheet(projectId(16594).VIBEGRATIONS_DESIGN_REMARK_SHEET_KEY);
+            const obj = first(4854);
+          }
+        };
+      }
+    }
+    tmp15 = cResult[4];
+  }
+  const effect1 = obj2.useEffect(E, tmp15);
+  if (cResult[5] !== first3) {
+    class E {
+      constructor() {
+        closure_9.current = true;
+        return () => {
+          closure_1_9.current = false;
+          if (ref.current) {
+            first(4854).hideActionSheet(projectId(16594).VIBEGRATIONS_DESIGN_REMARK_SHEET_KEY);
+            const obj = first(4854);
+          }
+        };
+      }
+    }
+    const items2 = [first3];
+    cResult[5] = first3;
+    cResult[6] = tmp19;
+    cResult[7] = items2;
+    let tmp18 = items2;
+  } else {
+    class E {
+      constructor() {
+        closure_9.current = true;
+        return () => {
+          closure_1_9.current = false;
+          if (ref.current) {
+            first(4854).hideActionSheet(projectId(16594).VIBEGRATIONS_DESIGN_REMARK_SHEET_KEY);
+            const obj = first(4854);
+          }
+        };
+      }
+    }
+    tmp18 = cResult[7];
+  }
+  const effect2 = obj2.useEffect(tmp19, tmp18);
+  if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
+    class R {
+      constructor(arg0) {
+        layout = projectId.nativeEvent.layout;
+        size = { width: layout.width, height: layout.height };
+        tmp = closure_2(size);
+        return;
+      }
+    }
+    cResult[8] = R;
+  } else {
+    class R {
+      constructor(arg0) {
+        layout = projectId.nativeEvent.layout;
+        size = { width: layout.width, height: layout.height };
+        tmp = closure_2(size);
+        return;
+      }
+    }
+  }
+  if (cResult[9] !== projectId) {
+    class R {
+      constructor(arg0) {
+        layout = projectId.nativeEvent.layout;
+        size = { width: layout.width, height: layout.height };
+        tmp = closure_2(size);
+        return;
+      }
+    }
+    cResult[9] = projectId;
+    cResult[10] = tmp23;
+  } else {
+    class R {
+      constructor(arg0) {
+        layout = projectId.nativeEvent.layout;
+        size = { width: layout.width, height: layout.height };
+        tmp = closure_2(size);
+        return;
+      }
+    }
+  }
+  closure_11 = tmp23;
+  if (cResult[11] === tmp23) {
+    class R {
+      constructor(arg0) {
+        layout = projectId.nativeEvent.layout;
+        size = { width: layout.width, height: layout.height };
+        tmp = closure_2(size);
+        return;
+      }
+    }
+  }
+  class H {
+    constructor(arg0) {
+      if (null == closure_3) {
+        tmp = closure_5;
+        if (null == closure_5) {
+          tmp2 = projectId;
+          point = { x: null, y: null };
+          tmp3 = globalThis;
+          _Math = Math;
+          point.x = Math.round(projectId.nativeEvent.locationX);
+          _Math2 = Math;
+          point.y = Math.round(projectId.nativeEvent.locationY);
+          closure_0 = point;
+          tmp4 = closure_4;
+          tmp5 = closure_4(point);
+          tmp6 = closure_8;
+          flag = false;
+          tmp7 = closure_8(false);
+          tmp8 = projectId;
+          tmp9 = closure_2;
+          obj2 = projectId(closure_2[10]);
+          tmp10 = closure_0;
+          result = obj2.inspectVibegrationsPreviewPoint(closure_0, point);
+          nextPromise = result.then((status) => {
+            if (ref.current) {
+              closure_4(null);
+              if ("picked" === status.status) {
+                const target = status.target;
+                const size = first;
+                let tmp5 = null == first;
+                if (!tmp5) {
+                  tmp5 = size.width < 1;
+                }
+                if (!tmp5) {
+                  tmp5 = size.height < 1;
+                }
+                let tmp6 = !tmp5;
+                if (!tmp5) {
+                  tmp6 = target.rect.width >= 0.98 * size.width && target.rect.height >= 0.98 * size.height;
+                  const tmp7 = target.rect.width >= 0.98 * size.width && target.rect.height >= 0.98 * size.height;
+                }
+                if (!tmp6) {
+                  const obj = { target: status.target, at: point };
+                  closure_6(obj);
+                  closure_11(status.target);
+                }
+              }
+              closure_8(true);
+            }
+          });
+        }
+      }
+      return;
+    }
+  }
+  cResult[11] = tmp23;
+  cResult[12] = first1;
+  cResult[13] = first2;
+  cResult[14] = projectId;
+  cResult[15] = first;
+  cResult[16] = H;
+  let obj = projectId(576);
+}) : ((projectId) => {
   projectId = projectId.projectId;
   let first;
   noop = undefined;
@@ -43,7 +259,7 @@ export default function VibegrationsDesignFeedbackOverlay(projectId) {
   let tmp5 = first(noop.useState(null), 2);
   const first1 = tmp5[0];
   closure_6 = tmp5[1];
-  const tmp7 = first(noop.useState(false), 2);
+  let tmp7 = first(noop.useState(false), 2);
   const first2 = tmp7[0];
   closure_8 = tmp7[1];
   closure_9 = noop.useRef(true);
@@ -57,8 +273,8 @@ export default function VibegrationsDesignFeedbackOverlay(projectId) {
     return () => {
       closure_1_9.current = false;
       if (ref.current) {
-        size(4809).hideActionSheet(projectId(16517).VIBEGRATIONS_DESIGN_REMARK_SHEET_KEY);
-        const obj = size(4809);
+        size(4854).hideActionSheet(projectId(16594).VIBEGRATIONS_DESIGN_REMARK_SHEET_KEY);
+        const obj = size(4854);
       }
     };
   }, []);
@@ -79,7 +295,7 @@ export default function VibegrationsDesignFeedbackOverlay(projectId) {
   callback1 = noop.useCallback((target) => {
     const obj2 = {
       key: VibegrationsDesignRemarkSheet.VIBEGRATIONS_DESIGN_REMARK_SHEET_KEY,
-      content: React6(VibegrationsDesignRemarkSheetDefault, {
+      content: closure_2_8(VibegrationsDesignRemarkSheetDefault, {
         projectId,
         target,
         onClose() {
@@ -102,7 +318,7 @@ export default function VibegrationsDesignFeedbackOverlay(projectId) {
         point.y = Math.round(nativeEvent.nativeEvent.locationY);
         closure_4(point);
         closure_8(false);
-        const result = projectId(8689).inspectVibegrationsPreviewPoint(point, point);
+        const result = projectId(8702).inspectVibegrationsPreviewPoint(point, point);
         result.then((status) => {
           if (ref.current) {
             closure_4(null);
@@ -117,10 +333,8 @@ export default function VibegrationsDesignFeedbackOverlay(projectId) {
               }
               let tmp6 = !tmp5;
               if (!tmp5) {
-                tmp6 = target.rect.width >= 0.98 * size.width;
-              }
-              if (tmp6) {
-                tmp6 = target.rect.height >= 0.98 * size.height;
+                tmp6 = target.rect.width >= 0.98 * size.width && target.rect.height >= 0.98 * size.height;
+                const tmp7 = target.rect.width >= 0.98 * size.width && target.rect.height >= 0.98 * size.height;
               }
               if (!tmp6) {
                 const obj = { target: status.target, at: point };
@@ -131,12 +345,12 @@ export default function VibegrationsDesignFeedbackOverlay(projectId) {
             closure_8(true);
           }
         });
-        const obj2 = projectId(8689);
+        const obj2 = projectId(8702);
       }
     }
   }, items3);
-  const intl = projectId(1115).intl;
-  const tmp18 = size(3714);
+  const intl = projectId(1126).intl;
+  const tmp18 = size(3723);
   if (first2) {
     let sSnnY4 = tmp18.sSnnY4;
     let tmp20 = tmp17;
@@ -152,8 +366,8 @@ export default function VibegrationsDesignFeedbackOverlay(projectId) {
     at = first;
   }
   let obj = { style: tmp.surface, onLayout: callback, onPress: callback2, accessibilityRole: "button", accessibilityLabel: null, testID: "vibegrations-design-surface", children: null };
-  const intl2 = tmp15(1115).intl;
-  obj.accessibilityLabel = intl2.string(tmp20(3714)["84RzOi"]);
+  const intl2 = tmp15(1126).intl;
+  obj.accessibilityLabel = intl2.string(tmp20(3723)["84RzOi"]);
   let obj2 = { style: tmp.surface, pointerEvents: "none", children: null };
   let tmp23Result = null;
   if (null != first1) {
@@ -175,7 +389,7 @@ export default function VibegrationsDesignFeedbackOverlay(projectId) {
     items5[1] = null;
     const obj5 = { style: tmp.hint, accessibilityLiveRegion: "polite", children: null };
     const obj6 = { variant: "text-sm/medium", color: "text-default", style: tmp.hintText, children: stringResult };
-    obj5.children = tmp23(tmp15(4841).Text, obj6);
+    obj5.children = tmp23(tmp15(4886).Text, obj6);
     items5[2] = tmp23(tmp26, obj5);
     obj2.children = items5;
     obj.children = closure_9(tmp26, obj2);
@@ -222,4 +436,4 @@ export default function VibegrationsDesignFeedbackOverlay(projectId) {
     items7[1] = rect4;
     obj8.style = items7;
   }
-};
+});

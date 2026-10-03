@@ -1,12 +1,12 @@
-// === Module 11476: getShouldShowAppAuthPrompt ===
+// === Module 11395: getShouldShowAppAuthPrompt ===
 
-// Module 11476 (getShouldShowAppAuthPrompt)
-import useAuthorizationApp from "useAuthorizationApp" /* 6774 */;
-import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 6777 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6714 */;
+// Module 11395 (getShouldShowAppAuthPrompt)
+import useAuthorizationApp from "useAuthorizationApp" /* 6662 */;
+import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 6665 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6602 */;
 
 require = fn;
-const FetchState = fn(6714).FetchState;
+const FetchState = fn(6602).FetchState;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_account_linking/native/getShouldShowAppAuthPrompt.tsx");
 

@@ -1,21 +1,21 @@
-// === Module 5958: SubscriptionRoleStore ===
+// === Module 5639: SubscriptionRoleStore ===
 
-// Module 5958 (SubscriptionRoleStore)
+// Module 5639 (SubscriptionRoleStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import GuildRecord from "GuildRecord" /* 2062 */;
-import GuildRoleRecord from "GuildRoleRecord" /* 2102 */;
-import PremiumRoleUtils from "PremiumRoleUtils" /* 4488 */;
-import GuildMemberStore from "GuildMemberStore" /* 2107 */;
-import GuildRoleStore from "GuildRoleStore" /* 2101 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import UserStore from "UserStore" /* 1372 */;
-import Constants from "Constants" /* 1074 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import GuildRecord from "GuildRecord" /* 2070 */;
+import GuildRoleRecord from "GuildRoleRecord" /* 2107 */;
+import PremiumRoleUtils from "PremiumRoleUtils" /* 4499 */;
+import GuildMemberStore from "GuildMemberStore" /* 2112 */;
+import GuildRoleStore from "GuildRoleStore" /* 2106 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import UserStore from "UserStore" /* 1377 */;
+import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
 function computeRolesForGuild(guildId) {
   const currentUser = UserStore.getCurrentUser();
-  const guild = GuildStore.getGuild(guildId);
+  guild = GuildStore.getGuild(guildId);
   if (null != guild) {
     if (null != currentUser) {
       const _Set = Set;

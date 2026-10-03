@@ -1,14 +1,14 @@
-// === Module 9359: SecureFramesActionCreators ===
+// === Module 9367: SecureFramesActionCreators ===
 
-// Module 9359 (SecureFramesActionCreators)
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import util from "util" /* 1115 */;
-import SecureFramesUtils from "SecureFramesUtils" /* 9356 */;
-import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9360 */;
+// Module 9367 (SecureFramesActionCreators)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import util from "util" /* 1126 */;
+import SecureFramesUtils from "SecureFramesUtils" /* 9364 */;
+import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9368 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import VoiceStateStore from "VoiceStateStore" /* 4864 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import VoiceStateStore from "VoiceStateStore" /* 4909 */;
 
 require = fn;
 function savePersistentCodesEnabled() {
@@ -37,7 +37,7 @@ let closure_10 = async function _savePersistentCodesEnabled() {
         const obj4 = { value, done: true };
         return obj4;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -125,7 +125,7 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -176,17 +176,17 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
               tmp10 = require;
             }
             let obj5 = { title: stringResult, subtitle: null, confirmText: null, onConfirm: null };
-            const intl2 = tmp10(1115).intl;
+            const intl2 = tmp10(1126).intl;
             const string2 = intl2.string;
-            let intl3 = tmp10(1115).t;
+            let intl3 = tmp10(1126).t;
             if (closure_0) {
               let string2Result = string2(intl3.y015ZY);
             } else {
               string2Result = string2(intl3.E66FQn);
             }
             obj5.subtitle = string2Result;
-            intl3 = tmp10(1115).intl;
-            obj5.confirmText = intl3.string(tmp10(1115).t.aTuFYT);
+            intl3 = tmp10(1126).intl;
+            obj5.confirmText = intl3.string(tmp10(1126).t.aTuFYT);
             closure_1 = asyncGeneratorStep(async () => {
               if (c0 === 2) {
                 c0 = 3;
@@ -198,7 +198,7 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "HermesInternal", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 }
               } else {
                 try {
@@ -216,9 +216,9 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
                       c0 = 1;
                       const obj4 = {
                         value: closure_1_9(closure_0, () => {
-                                  c1(5909).disconnect();
-                                  const obj = c1(5909);
-                                  const voiceChannel = c1(5909).selectVoiceChannel(dependencyMap);
+                                  c1(5568).disconnect();
+                                  const obj = c1(5568);
+                                  const voiceChannel = c1(5568).selectVoiceChannel(dependencyMap);
                                 }),
                         done: false
                       };
@@ -233,7 +233,7 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
                     return obj;
                   } else {
                     c0 = 3;
-                    return { value: "HermesInternal", done: null };
+                    return { value: "IconComponent", done: "IconComponent" };
                   }
                 } catch (tmp7) {
                   c0 = tmp;
@@ -264,7 +264,7 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
         throw value;
       } else if (arg0 !== 2) {
         c1 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       } else {
         c1 = 3;
         let obj = { value, done: true };
@@ -276,8 +276,8 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
     }
   }
 };
-let closure_7 = fn(9358).SECURE_FRAMES_PUBLIC_KEY_VERSION;
-const ChannelTypes = fn(1074).ChannelTypes;
+let closure_7 = fn(9366).SECURE_FRAMES_PUBLIC_KEY_VERSION;
+const ChannelTypes = fn(1085).ChannelTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/SecureFramesActionCreators.tsx");
 

@@ -1,8 +1,8 @@
-// === Module 7887: isStreaming ===
+// === Module 7931: isStreaming ===
 
-// Module 7887 (isStreaming)
-import Constants from "Constants" /* 1074 */;
-import Constants2 from "Constants" /* 2005 */;
+// Module 7931 (isStreaming)
+import Constants from "Constants" /* 1085 */;
+import Constants2 from "Constants" /* 2011 */;
 import size from "module_2" /* 2 */;
 
 function _isStreaming(type) {
@@ -20,19 +20,19 @@ const validStreamURL = Constants2.validStreamURL;
 const ActivityTypes = Constants.ActivityTypes;
 const result = size.fileFinishedImporting("modules/activities/utils/isStreaming.tsx");
 
-export default function isStreaming(activeSourceId) {
-  if (null == activeSourceId) {
+export default function isStreaming(noop) {
+  if (null == noop) {
     return tmp;
   } else {
     const _Array = Array;
-    if (Array.isArray(activeSourceId)) {
-      let someResult = activeSourceId.some(_isStreaming);
+    if (Array.isArray(noop)) {
+      let someResult = noop.some(_isStreaming);
     } else {
-      someResult = activeSourceId.type === ActivityTypes.STREAMING;
+      someResult = noop.type === ActivityTypes.STREAMING;
       if (someResult) {
-        let isMatch = null != activeSourceId.url;
+        let isMatch = null != noop.url;
         if (isMatch) {
-          isMatch = validStreamURL.test(activeSourceId.url);
+          isMatch = validStreamURL.test(noop.url);
         }
         someResult = isMatch;
       }

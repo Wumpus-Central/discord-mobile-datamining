@@ -1,19 +1,19 @@
-// === Module 7129: ApplicationCommandUtils ===
+// === Module 7030: ApplicationCommandUtils ===
 
-// Module 7129 (ApplicationCommandUtils)
+// Module 7030 (ApplicationCommandUtils)
 import _modDef12 from "module_12" /* 12 */;
 import IntegerDefault from "Integer" /* 14 */;
 import _modDef38 from "module_38" /* 38 */;
-import Constants2 from "Constants" /* 1085 */;
-import Server from "Server" /* 1979 */;
-import ChannelRecord from "ChannelRecord" /* 2048 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5025 */;
-import DraftStore from "DraftStore" /* 5384 */;
-import IntegrationPermissionUtils from "IntegrationPermissionUtils" /* 7130 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7131 */;
-import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5489 */;
-import Constants from "Constants" /* 1074 */;
-import BigFlagUtils from "BigFlagUtils" /* 1086 */;
+import Constants2 from "Constants" /* 1096 */;
+import Server from "Server" /* 1985 */;
+import ChannelRecord from "ChannelRecord" /* 2055 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5070 */;
+import DraftStore from "DraftStore" /* 7031 */;
+import IntegrationPermissionUtils from "IntegrationPermissionUtils" /* 7033 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7034 */;
+import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5788 */;
+import Constants from "Constants" /* 1085 */;
+import BigFlagUtils from "BigFlagUtils" /* 1097 */;
 import size from "module_2" /* 2 */;
 
 function buildCommand(arg0) {
@@ -342,7 +342,7 @@ function buildSubCommands(arg0) {
   if (null == command.options) {
     return items2;
   } else {
-    const options = command.options;
+    options = command.options;
     const found = options.filter((type) => type.type === Server.ApplicationCommandOptionType.SUB_COMMAND_GROUP);
     for (let num3 = 0; num3 < found.length; num3 = num3 + 1) {
       let push = items2.push;
@@ -476,16 +476,16 @@ export const getMatchingGroupCommands = function getMatchingGroupCommands(contex
   });
   return items.slice(0, arg3);
 };
-export const getApplicationCommandOptionQueryOptions = function getApplicationCommandOptionQueryOptions(activeOption) {
-  let tmp3 = activeOption.type === Server.ApplicationCommandOptionType.USER;
+export const getApplicationCommandOptionQueryOptions = function getApplicationCommandOptionQueryOptions(option) {
+  let tmp3 = option.type === Server.ApplicationCommandOptionType.USER;
   if (!tmp3) {
-    tmp3 = activeOption.type === Server.ApplicationCommandOptionType.MENTIONABLE;
+    tmp3 = option.type === Server.ApplicationCommandOptionType.MENTIONABLE;
   }
-  let tmp4 = activeOption.type === Server.ApplicationCommandOptionType.ROLE;
+  let tmp4 = option.type === Server.ApplicationCommandOptionType.ROLE;
   if (!tmp4) {
-    tmp4 = activeOption.type === Server.ApplicationCommandOptionType.MENTIONABLE;
+    tmp4 = option.type === Server.ApplicationCommandOptionType.MENTIONABLE;
   }
-  const tmp5 = activeOption.type === Server.ApplicationCommandOptionType.STRING;
+  const tmp5 = option.type === Server.ApplicationCommandOptionType.STRING;
   let tmp6 = tmp5;
   if (!tmp5) {
     tmp6 = tmp4;
@@ -493,7 +493,7 @@ export const getApplicationCommandOptionQueryOptions = function getApplicationCo
   const obj = { canMentionEveryone: tmp6, canMentionHere: tmp5, canMentionChannels: null, canMentionUsers: null, canMentionRoles: null, canMentionAnyGuildUser: null, canMentionNonMentionableRoles: null, canMentionOtherGlobals: null };
   let tmp7 = tmp5;
   if (!tmp5) {
-    tmp7 = activeOption.type === Server.ApplicationCommandOptionType.CHANNEL;
+    tmp7 = option.type === Server.ApplicationCommandOptionType.CHANNEL;
   }
   obj.canMentionChannels = tmp7;
   let tmp8 = tmp5;

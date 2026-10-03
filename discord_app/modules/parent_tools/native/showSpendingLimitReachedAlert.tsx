@@ -1,11 +1,11 @@
-// === Module 10362: showSpendingLimitReachedAlert ===
+// === Module 10437: showSpendingLimitReachedAlert ===
 
-// Module 10362 (showSpendingLimitReachedAlert)
-import BillingError from "BillingError" /* 4539 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4858 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 5266 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5388 */;
-import LayerActionCreators from "LayerActionCreators" /* 7193 */;
+// Module 10437 (showSpendingLimitReachedAlert)
+import BillingError from "BillingError" /* 4550 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4903 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 5312 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5708 */;
+import LayerActionCreators from "LayerActionCreators" /* 7096 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/parent_tools/native/showSpendingLimitReachedAlert.tsx");
@@ -22,23 +22,23 @@ export const isSpendingLimitError = function isSpendingLimitError(billingError) 
   return tmp3;
 };
 export const showSpendingLimitReachedAlert = function showSpendingLimitReachedAlert() {
-  activeLinkUserIds = activeLinkUserIds(8291).getActiveLinkUserIds();
-  let obj = activeLinkUserIds(8291);
+  activeLinkUserIds = activeLinkUserIds(8295).getActiveLinkUserIds();
+  let obj = activeLinkUserIds(8295);
   const obj3 = { title: null, body: null, isDismissable: true };
-  const intl = activeLinkUserIds(1115).intl;
-  obj3.title = intl.string(activeLinkUserIds(1115).t.QJKKrT);
-  const intl2 = activeLinkUserIds(1115).intl;
-  obj3.body = intl2.string(activeLinkUserIds(1115).t["73Islf"]);
+  const intl = activeLinkUserIds(1126).intl;
+  obj3.title = intl.string(activeLinkUserIds(1126).t.QJKKrT);
+  const intl2 = activeLinkUserIds(1126).intl;
+  obj3.body = intl2.string(activeLinkUserIds(1126).t["73Islf"]);
   if (activeLinkUserIds.length > 0) {
     const obj4 = { confirmText: null, onConfirm: null, cancelText: null };
-    const intl3 = tmp(1115).intl;
-    obj4.confirmText = intl3.string(tmp(1115).t.GF9RCX);
+    const intl3 = tmp(1126).intl;
+    obj4.confirmText = intl3.string(tmp(1126).t.GF9RCX);
     obj4.onConfirm = function onConfirm() {
       LayerActionCreators.popLayer();
       ChannelActionCreatorsDefault.openPrivateChannel({ recipientIds: activeLinkUserIds });
     };
-    const intl4 = tmp(1115).intl;
-    obj4.cancelText = intl4.string(tmp(1115).t.L5eIZ2);
+    const intl4 = tmp(1126).intl;
+    obj4.cancelText = intl4.string(tmp(1126).t.L5eIZ2);
     let obj5 = obj4;
   } else {
     obj5 = {};

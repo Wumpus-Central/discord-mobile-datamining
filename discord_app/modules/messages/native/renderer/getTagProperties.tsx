@@ -1,12 +1,12 @@
-// === Module 7660: getTagProperties ===
+// === Module 7704: getTagProperties ===
 
-// Module 7660 (getTagProperties)
+// Module 7704 (getTagProperties)
 import _mod17 from "module_17" /* 17 */;
-import util from "util" /* 1115 */;
-import MessageConstants from "MessageConstants" /* 4838 */;
-import PublicGuildsUtils from "PublicGuildsUtils" /* 7661 */;
-import isCrosspostDefault from "isCrosspost" /* 7663 */;
-import _modDef7665 from "module_7665" /* 7665 */;
+import util from "util" /* 1126 */;
+import MessageConstants from "MessageConstants" /* 4883 */;
+import PublicGuildsUtils from "PublicGuildsUtils" /* 7705 */;
+import isCrosspostDefault from "isCrosspost" /* 7707 */;
+import _modDef7709 from "module_7709" /* 7709 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -35,7 +35,7 @@ export default function getTagProperties(arg0) {
           const intl = util.intl;
           let uri;
           if (isVerifiedBotResult) {
-            uri = Image.resolveAssetSource(_modDef7665).uri;
+            uri = Image.resolveAssetSource(_modDef7709).uri;
           }
           flag = isVerifiedBotResult;
           stringResult = intl.string(util.t["9RNkeF"]);
@@ -62,7 +62,7 @@ export default function getTagProperties(arg0) {
         const intl6 = util.intl;
         stringResult2 = intl6.string(util.t.fyE8sH);
       }
-      const obj2 = { tagText: stringResult, tagAccessibilityLabel: null, tagVerified: flag, tagTextColor: "Boolean", tagBackgroundColor: "add", tagType: SYSTEM_DM_TAG_SYSTEM_TYPE, tagIconUrl: tmp5, opTagText: stringResult2, opTagTextColor: "space", opTagBackgroundColor: "Array" };
+      const obj2 = { tagText: stringResult, tagAccessibilityLabel: null, tagVerified: flag, tagTextColor: "Boolean", tagBackgroundColor: "ix", tagType: SYSTEM_DM_TAG_SYSTEM_TYPE, tagIconUrl: tmp5, opTagText: stringResult2, opTagTextColor: null, opTagBackgroundColor: null };
       ({ opTagTextColor: obj3.opTagTextColor, opTagBackgroundColor: obj3.opTagBackgroundColor } = colors);
       return obj2;
     } else {

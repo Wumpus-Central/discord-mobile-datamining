@@ -1,11 +1,11 @@
-// === Module 4685: UserGuildJoinRequestStore ===
+// === Module 4700: UserGuildJoinRequestStore ===
 
-// Module 4685 (UserGuildJoinRequestStore)
+// Module 4700 (UserGuildJoinRequestStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 2058 */;
-import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 4686 */;
-import UserStore from "UserStore" /* 1372 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 2066 */;
+import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 4701 */;
+import UserStore from "UserStore" /* 1377 */;
 
 require = fn;
 function handleGatewayJoinRequestUpdate(arg0) {
@@ -137,7 +137,7 @@ const userGuildJoinRequestStore = new UserGuildJoinRequestStore(DispatcherDefaul
       guild1 = form.guild;
     }
     if (null != guild1) {
-      const guild = form.guild;
+      guild = form.guild;
       let features = guild.features;
       const obj = { id: null, name: null, icon: null, features: null, splash: null };
       ({ id: obj.id, name: obj.name, icon: obj.icon, splash } = guild);

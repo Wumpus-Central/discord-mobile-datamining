@@ -1,25 +1,123 @@
-// === Module 8885: PremiumFeatureList ===
+// === Module 8894: PremiumFeatureList ===
 
-// Module 8885 (PremiumFeatureList)
-import nativeDefault from "native" /* 576 */;
-import Form from "Form" /* 8239 */;
+// Module 8894 (PremiumFeatureList)
+import nativeDefault from "native" /* 587 */;
+import Form from "Form" /* 8895 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 6022 */;
+import TextStyles from "TextStyles" /* 5915 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = { item: { backgroundColor: "transparent", paddingHorizontal: 0, paddingVertical: 8, flexDirection: "row", alignItems: "center" }, label: null, iconMargin: null };
-const merged = Object.assign(TextStyles(fn(1074).Fonts.PRIMARY_NORMAL, nativeDefault.colors.TEXT_DEFAULT, 14));
+const merged = Object.assign(TextStyles(fn(1085).Fonts.PRIMARY_NORMAL, nativeDefault.colors.TEXT_DEFAULT, 14));
 obj2.label = {};
 obj2.iconMargin = { marginEnd: nativeDefault.space.PX_16 };
 let closure_6 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj3 = {};
+let obj4 = { marginEnd: nativeDefault.space.PX_16 };
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/premium/PremiumFeatureList.tsx");
 
-export default function PremiumFeatureList(style) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((iconStyle) => {
+  const cResult = separator(iconStyle[8]).c(21);
+  ({ features, style, separator } = iconStyle);
+  iconStyle = iconStyle.iconStyle;
+  const labelStyle = iconStyle.labelStyle;
+  const rowStyle = iconStyle.rowStyle;
+  const tmp2 = closure_6();
+  closure_4 = tmp2;
+  if (cResult[0] === features) {
+    if (cResult[1] === iconStyle) {
+      if (cResult[2] === labelStyle) {
+        if (cResult[3] === rowStyle) {
+          if (cResult[4] === separator) {
+            if (cResult[5] === style) {
+              if (cResult[6] === tmp2) {
+                if (cResult[17] === cResult[7]) {
+                  if (cResult[18] === tmp4) {
+                    if (cResult[19] === tmp5) {
+                      let tmp8 = cResult[20];
+                    }
+                    return tmp8;
+                  }
+                }
+                let obj2 = { style: cResult[8], children: cResult[9] };
+                const tmp10 = closure_4(cResult[7], obj2);
+                cResult[17] = cResult[7];
+                cResult[18] = cResult[8];
+                cResult[19] = cResult[9];
+                cResult[20] = tmp10;
+                tmp8 = tmp10;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
+    class L {
+      constructor(arg0) {
+        return !iconStyle.hidden;
+      }
+    }
+    cResult[10] = L;
+  } else {
+    class L {
+      constructor(arg0) {
+        return !iconStyle.hidden;
+      }
+    }
+  }
+  const found = features.filter(L);
+  if (cResult[11] === iconStyle) {
+    class L {
+      constructor(arg0) {
+        return !iconStyle.hidden;
+      }
+    }
+  }
+  const fn = function x(color, id) {
+    const obj = { style: null, children: null };
+    const items = [closure_4.item, rowStyle];
+    obj.style = items;
+    const obj2 = { accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
+    const obj3 = { size: "md", color: color.color, style: null };
+    const items1 = [closure_4.iconMargin, iconStyle];
+    obj3.style = items1;
+    obj2.children = React4(color.IconComponent, obj3);
+    const items2 = [React4(View, obj2), ];
+    const obj4 = { numberOfLines: 2, style: null, text: color.label };
+    const items3 = [closure_4.label, labelStyle];
+    obj4.style = items3;
+    items2[1] = React4(Form.FormRow.Label, obj4);
+    obj.children = items2;
+    const children = [hasOwnProperty(View, obj, id), ];
+    let tmp3 = null;
+    if (null != separator) {
+      tmp3 = null;
+      if ("" !== separator) {
+        tmp3 = null;
+        if (color.renderSeparatorBelow) {
+          tmp3 = separator;
+        }
+      }
+    }
+    children[1] = tmp3;
+    return hasOwnProperty(noop.Fragment, { children }, id);
+  };
+  cResult[11] = iconStyle;
+  cResult[12] = labelStyle;
+  cResult[13] = rowStyle;
+  cResult[14] = separator;
+  cResult[15] = tmp2;
+  cResult[16] = fn;
+  let obj = separator(iconStyle[8]);
+}) : ((style) => {
   ({ features, separator: require, iconStyle: dependencyMap, labelStyle: noop, rowStyle: View } = style);
   closure_4 = closure_6();
   const found = features.filter((hidden) => !hidden.hidden);
@@ -55,4 +153,4 @@ export default function PremiumFeatureList(style) {
       return hasOwnProperty(noop.Fragment, { children }, index);
     })
   });
-};
+});

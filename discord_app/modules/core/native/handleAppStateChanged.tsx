@@ -1,20 +1,20 @@
-// === Module 17986: handleAppStateChanged ===
+// === Module 18072: handleAppStateChanged ===
 
-// Module 17986 (handleAppStateChanged)
+// Module 18072 (handleAppStateChanged)
 import LoggerDefault from "Logger" /* 3 */;
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import ThemeActionCreators from "ThemeActionCreators" /* 4711 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4868 */;
-import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7083 */;
-import BundleUpdaterActionCreatorsDefault from "BundleUpdaterActionCreators" /* 17985 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import ThemeActionCreators from "ThemeActionCreators" /* 4726 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
+import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 6984 */;
+import BundleUpdaterActionCreatorsDefault from "BundleUpdaterActionCreators" /* 18071 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import AppStateStore from "AppStateStore" /* 1980 */;
+import AppStateStore from "AppStateStore" /* 1986 */;
 
 require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AnalyticEvents: hasOwnProperty, AppStates: metroRequire } = Constants);
 let closure_7 = new LoggerDefault("index.native.tsx");
 const size = fn(2);

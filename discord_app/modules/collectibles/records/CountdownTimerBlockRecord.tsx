@@ -1,7 +1,7 @@
-// === Module 7179: CountdownTimerBlockRecord ===
+// === Module 7082: CountdownTimerBlockRecord ===
 
-// Module 7179 (CountdownTimerBlockRecord)
-import ShopBlockType from "ShopBlockType" /* 7180 */;
+// Module 7082 (CountdownTimerBlockRecord)
+import ShopBlockType from "ShopBlockType" /* 7083 */;
 import size from "module_2" /* 2 */;
 
 const prototype = function CountdownTimerBlockRecord(end_time) {

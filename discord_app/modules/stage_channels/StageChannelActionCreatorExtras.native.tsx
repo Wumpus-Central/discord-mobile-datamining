@@ -1,48 +1,45 @@
-// === Module 8026: StageChannelActionCreatorExtras ===
+// === Module 8070: StageChannelActionCreatorExtras ===
 
-// Module 8026 (StageChannelActionCreatorExtras)
-import asyncRequireImpl from "asyncRequireImpl" /* 1981 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4721 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4809 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5048 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 5052 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7806 */;
-import useStageBlockedUsersCount from "useStageBlockedUsersCount" /* 8266 */;
-import VoicePanelStore from "VoicePanelStore" /* 5053 */;
+// Module 8070 (StageChannelActionCreatorExtras)
+import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4736 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 5097 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7850 */;
+import useStageBlockedUsersCount from "useStageBlockedUsersCount" /* 8277 */;
+import VoicePanelStore from "VoicePanelStore" /* 5098 */;
 
 require = fn;
-const setIsOnStartStageScreen = fn(8027).setIsOnStartStageScreen;
-const StageChannelsConstants = fn(5912);
-({ STAGE_AUDIENCE_NOTICE_SHEET_KEY: hasOwnProperty, START_STAGE_CHANNEL_EVENT_SHEET_KEY: metroRequire, STAGE_BLOCKED_USERS_SHEET_KEY: closure_7, STAGE_SETTINGS_SHEET_KEY: closure_8, EXPLICIT_END_STAGE_SHEET_KEY: closure_9 } = StageChannelsConstants);
+const setIsOnStartStageScreen = fn(8071).setIsOnStartStageScreen;
+const StageChannelsConstants = fn(5571);
+({ START_STAGE_CHANNEL_EVENT_SHEET_KEY: hasOwnProperty, STAGE_BLOCKED_USERS_SHEET_KEY: metroRequire, STAGE_SETTINGS_SHEET_KEY: closure_7, EXPLICIT_END_STAGE_SHEET_KEY: closure_8 } = StageChannelsConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/StageChannelActionCreatorExtras.native.tsx");
 
 export const openStageChannelSettings = function openStageChannelSettings(channel) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8029, dependencyMap.paths), timestampProducer, { channel });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8073, dependencyMap.paths), hasOwnProperty, { channel });
 };
 export function openEndGuildEventConfirmationModal() {
 
 }
-export const openStageChannelAudienceNoticeModal = function openStageChannelAudienceNoticeModal(channelId) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8236, dependencyMap.paths), hasOwnProperty, { channelId });
-};
 export const openStageBlockedUsersSheet = function openStageBlockedUsersSheet(channel, onAccept) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8264, dependencyMap.paths), React5, { channel, onAccept });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8275, dependencyMap.paths), timestampProducer, { channel, onAccept });
 };
 export const openStageSettingsSheet = function openStageSettingsSheet(channelId, onOpenRTCDebugOverlay) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8267, dependencyMap.paths), React6, { channelId, onOpenRTCDebugOverlay });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8278, dependencyMap.paths), React5, { channelId, onOpenRTCDebugOverlay });
 };
 export const openEndStageModal = function openEndStageModal(channel) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12692, dependencyMap.paths), React7, { channel });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12730, dependencyMap.paths), closure_1_8, { channel });
 };
 export const openStageChannel = function openStageChannel(isGuildStageVoice) {
   if (isGuildStageVoice.isGuildStageVoice()) {
-    const state = VoicePanelStore.getState();
+    state = VoicePanelStore.getState();
     state.closeChannel(isGuildStageVoice.id);
     const voiceChannelKey = PrivateChannelCallUtils.getVoiceChannelKey(isGuildStageVoice.id);
     if (!obj3.isModalOpen(voiceChannelKey)) {
       const obj = { channel: isGuildStageVoice };
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9028, dependencyMap.paths), obj, voiceChannelKey);
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9056, dependencyMap.paths), obj, voiceChannelKey);
     }
     obj3 = NavigationRouteUtils;
   }
@@ -62,12 +59,12 @@ export const navigateToStage = function navigateToStage(id, arg1) {
     setIsOnStartStageScreen(true);
   }
   if (id.isGuildStageVoice()) {
-    const state = VoicePanelStore.getState();
+    state = VoicePanelStore.getState();
     state.closeChannel(id.id);
     const voiceChannelKey = PrivateChannelCallUtils.getVoiceChannelKey(id.id);
     if (!obj3.isModalOpen(voiceChannelKey)) {
       const obj = { channel: id };
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9028, dependencyMap.paths), obj, voiceChannelKey);
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9056, dependencyMap.paths), obj, voiceChannelKey);
     }
     obj3 = NavigationRouteUtils;
   }

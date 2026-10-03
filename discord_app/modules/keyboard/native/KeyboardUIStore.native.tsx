@@ -1,21 +1,21 @@
-// === Module 1483: KeyboardUIStore ===
+// === Module 1488: KeyboardUIStore ===
 
-// Module 1483 (KeyboardUIStore)
+// Module 1488 (KeyboardUIStore)
 import Storage5 from "Storage" /* 510 */;
-import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
-import ExpressionPickerConstants from "ExpressionPickerConstants" /* 1218 */;
-import AppEntryKeyContext from "AppEntryKeyContext" /* 1482 */;
-import AppLauncherNativeConstants from "AppLauncherNativeConstants" /* 1484 */;
-import MediaKeyboardConstants from "MediaKeyboardConstants" /* 1609 */;
-import KeyboardTypes from "KeyboardTypes" /* 1611 */;
-import ChatInputFocused from "ChatInputFocused" /* 1612 */;
-import useSafeAreaInsets from "useSafeAreaInsets" /* 1613 */;
-import NativeSafeAreaInsetsModuleDefault from "NativeSafeAreaInsetsModule" /* 1625 */;
-import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1627 */;
-import KeyboardStateDebuggingDefault from "KeyboardStateDebugging" /* 1875 */;
-import PlatformUtils_mod from "PlatformUtils" /* 1364 */;
-import module_560 from "module_560" /* 560 */;
-import SafeAreaStore from "SafeAreaStore" /* 1614 */;
+import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
+import ExpressionPickerConstants from "ExpressionPickerConstants" /* 1229 */;
+import AppEntryKeyContext from "AppEntryKeyContext" /* 1487 */;
+import AppLauncherNativeConstants from "AppLauncherNativeConstants" /* 1489 */;
+import MediaKeyboardConstants from "MediaKeyboardConstants" /* 1614 */;
+import KeyboardTypes from "KeyboardTypes" /* 1616 */;
+import ChatInputFocused from "ChatInputFocused" /* 1617 */;
+import useSafeAreaInsets from "useSafeAreaInsets" /* 1618 */;
+import NativeSafeAreaInsetsModuleDefault from "NativeSafeAreaInsetsModule" /* 1630 */;
+import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1632 */;
+import KeyboardStateDebuggingDefault from "KeyboardStateDebugging" /* 1880 */;
+import PlatformUtils_mod from "PlatformUtils" /* 1369 */;
+import module_570 from "module_570" /* 570 */;
+import SafeAreaStore from "SafeAreaStore" /* 1619 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -182,9 +182,11 @@ function createInitialEntryState(main) {
   }
   const SYSTEM4 = KeyboardTypes.KeyboardTypes.SYSTEM;
   obj.customKeyboardHeightExcludingSafeAreaInsets = num2 - useSafeAreaInsets.getSafeAreaInsets(main).bottom;
+  obj.keyboardContexts = { [KeyboardTypes.KeyboardTypes.SYSTEM]: { keyboardWillOpen: false }, [KeyboardTypes.KeyboardTypes.EXPRESSION]: { type: ExpressionPickerViewType.EMOJI }, [KeyboardTypes.KeyboardTypes.MEDIA]: { target: MediaKeyboardTarget.CHAT }, [KeyboardTypes.KeyboardTypes.APP_LAUNCHER]: { initialRouteName: AppLauncherRouteName.HOME } };
+  const obj2 = { type: ExpressionPickerViewType.EMOJI };
+  const obj3 = { target: MediaKeyboardTarget.CHAT };
+  const obj4 = { initialRouteName: AppLauncherRouteName.HOME };
   const tmpResult = useSafeAreaInsets;
-  obj.keyboardContexts = { [KeyboardTypes.KeyboardTypes.SYSTEM]: { keyboardWillOpen: false }, [KeyboardTypes.KeyboardTypes.EXPRESSION]: ExpressionPickerViewType.EMOJI, [KeyboardTypes.KeyboardTypes.MEDIA]: obj3, [KeyboardTypes.KeyboardTypes.APP_LAUNCHER]: obj4 };
-  const obj2 = { [KeyboardTypes.KeyboardTypes.SYSTEM]: { keyboardWillOpen: false }, [KeyboardTypes.KeyboardTypes.EXPRESSION]: ExpressionPickerViewType.EMOJI, [KeyboardTypes.KeyboardTypes.MEDIA]: obj3, [KeyboardTypes.KeyboardTypes.APP_LAUNCHER]: obj4 };
   let num3 = 0;
   if (tmpResult3.isAndroid()) {
     num3 = NativeSafeAreaInsetsModuleDefault.getImeInsets(false, main);
@@ -217,7 +219,7 @@ let str2 = "keyboardWillHide";
 if (PlatformUtils.isAndroid()) {
   str2 = "keyboardDidHide";
 }
-let keyboardContexts = module_560.create(() => {
+let keyboardContexts = module_570.create(() => {
   const obj = { byAppEntry: { main: createInitialEntryState("main"), share: createInitialEntryState("share") } };
   return obj;
 });

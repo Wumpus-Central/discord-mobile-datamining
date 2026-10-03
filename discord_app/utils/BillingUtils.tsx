@@ -1,10 +1,10 @@
-// === Module 4532: BillingUtils ===
+// === Module 4543: BillingUtils ===
 
-// Module 4532 (BillingUtils)
-import SentryUtilsDefault from "SentryUtils" /* 1231 */;
-import HTTPUtils from "HTTPUtils" /* 1271 */;
-import BraintreeUtils from "BraintreeUtils" /* 4533 */;
-import BillingErrorDefault from "BillingError" /* 4539 */;
+// Module 4543 (BillingUtils)
+import SentryUtilsDefault from "SentryUtils" /* 1242 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import BraintreeUtils from "BraintreeUtils" /* 4544 */;
+import BillingErrorDefault from "BillingError" /* 4550 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -23,7 +23,7 @@ let closure_5 = async function _createGatewayCheckoutContext(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -70,7 +70,7 @@ let closure_5 = async function _createGatewayCheckoutContext(arg0) {
     }
   })();
 };
-const PaymentGateways = fn(1085).PaymentGateways;
+const PaymentGateways = fn(1096).PaymentGateways;
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/BillingUtils.tsx");
 

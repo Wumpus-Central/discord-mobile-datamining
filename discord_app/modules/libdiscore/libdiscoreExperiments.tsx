@@ -1,10 +1,10 @@
-// === Module 2070: libdiscoreExperiments ===
+// === Module 559: libdiscoreExperiments ===
 
-// Module 2070 (libdiscoreExperiments)
+// Module 559 (libdiscoreExperiments)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
-import js_shim_shim from "js_shim/shim" /* 1350 */;
-import BridgedStore from "BridgedStore" /* 2071 */;
+import BridgedStore from "BridgedStore" /* 560 */;
+import js_shim_shim from "js_shim/shim" /* 562 */;
 import size from "module_2" /* 2 */;
 
 const ensureValidMode = BridgedStore.ensureValidMode;
@@ -50,15 +50,36 @@ prototype["getCachedConfig"] = function getCachedConfig() {
 prototype["setExperiment"] = function setExperiment(apexExperiment) {
   this.inner = apexExperiment;
 };
-prototype["getCurrentConfig"] = function getCurrentConfig() {
-  _modDef38(null != this.inner, "experiment must be set before calling getCurrentConfig");
-  const inner = this.inner;
-  if ("getCurrentConfig" in this.inner) {
-    let currentConfig = inner.getCurrentConfig({ location: "default" });
+prototype["getCurrentConfig"] = function getCurrentConfig(autoTrackExposure) {
+  const self = this;
+  _modDef38(null != this.inner, "experiment must be set before reading the current config");
+  let flag;
+  if (autoTrackExposure != null) {
+    flag = autoTrackExposure.autoTrackExposure;
+  }
+  if (flag == null) {
+    flag = true;
+  }
+  const inner = self.inner;
+  if ("getCurrentConfig" in self.inner) {
+    const obj2 = { autoTrackExposure: flag };
+    let currentConfig = inner.getCurrentConfig({ location: "default" }, obj2);
   } else {
-    currentConfig = inner.getConfig({ location: "default" });
+    const obj = { autoTrackExposure: flag };
+    currentConfig = inner.getConfig({ location: "default" }, obj);
   }
   return currentConfig;
+};
+prototype["trackExposureIfCachedConfigMatches"] = function trackExposureIfCachedConfigMatches(currentConfig) {
+  const self = this;
+  const cachedConfig = this.getCachedConfig();
+  let treatmentId;
+  if (cachedConfig != null) {
+    treatmentId = cachedConfig.treatmentId;
+  }
+  if (treatmentId === currentConfig.treatmentId) {
+    currentConfig = self.getCurrentConfig();
+  }
 };
 class LibdiscoreWrapperSimpleExperiment extends LibdiscoreCachedExperiment {
   constructor(arg0, arg1) {
@@ -133,8 +154,8 @@ prototype3["getTreatments"] = function getTreatments() {
   items = [{ treatmentId: 0 }, { treatmentId: 1 }, { treatmentId: 2 }];
   return items;
 };
-const tmp8 = new "getEnabledFeatureName"("2026-01-libdiscore-batch-store-refactor", undefined, tmp5, tmp4, tmp3, tmp2, tmp, require, dependencyMap);
-tmp8.storeName = "batch-store-refactor";
+const tmp9 = new "getEnabledFeatureName"("2026-01-libdiscore-batch-store-refactor", undefined, tmp6, tmp5, tmp4, tmp3, tmp2, require, dependencyMap);
+tmp9.storeName = "batch-store-refactor";
 class LibdiscoreTelemetryExperiment extends LibdiscoreCachedExperiment {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -189,9 +210,12 @@ prototype4["shouldCollectMetrics"] = function shouldCollectMetrics() {
   return tmp2;
 };
 const libdiscoreTelemetryExperiment = new LibdiscoreTelemetryExperiment("2025-09-libdiscore-telemetry");
-const tmp10 = new "shouldCollectMetrics"("2025-11-defer-load-late-lazy-cache", undefined, tmp5, tmp4, tmp3, tmp2, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp8, libdiscoreTelemetryExperiment);
-tmp10.label = "Allow react to render before lazy cache is loaded";
-tmp10.defaultValue = false;
+const tmp11 = new "shouldCollectMetrics"("2025-11-defer-load-late-lazy-cache", undefined, tmp6, tmp5, tmp4, tmp3, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp9, libdiscoreTelemetryExperiment, tmp);
+tmp11.label = "Allow react to render before lazy cache is loaded";
+tmp11.defaultValue = false;
+const tmp12 = new "shouldCollectMetrics"("2026-09-react-compiler-mobile", undefined, tmp6, tmp5, tmp4, tmp3, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp9, libdiscoreTelemetryExperiment, tmp11);
+tmp12.label = "React Compiler for mobile";
+tmp12.defaultValue = false;
 class LibdiscoreCustomTreatmentsExperiment extends LibdiscoreCachedExperiment {
   constructor(arg0, arg1, arg2) {
     tmp1 = new tmp(global, new.target);
@@ -208,43 +232,44 @@ function getTreatments() {
   return Array.from({ length: this.treatmentCount }, (arg0, treatmentId) => ({ treatmentId }));
 }
 prototype5["getTreatments"] = getTreatments;
-const tmp11 = new "getTreatments"("2026-01-android-rmle", undefined, tmp5, LibdiscoreCustomTreatmentsExperiment, tmp3, tmp2, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp8, libdiscoreTelemetryExperiment, tmp10, "getCachedBridgedStoreMode", prototype4, "shouldCollectMetrics", "getLabel", "getTreatments", new.target, getTreatments);
-tmp11.label = "Android Pull Mode Rendering";
-tmp11.treatmentCount = 4;
-const tmp12 = new "getTreatments"("2026-02-android-fresco-cache", undefined, tmp5, LibdiscoreCustomTreatmentsExperiment, tmp3, tmp2, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp8, libdiscoreTelemetryExperiment, tmp10, tmp11, prototype4, "shouldCollectMetrics", "getLabel", "getTreatments", new.target, "Android Pull Mode Rendering");
-tmp12.label = "Android Fresco Cache";
-tmp12.treatmentCount = 3;
-const tmp13 = new "getTreatments"("2026-02-android-chat-mosaic-shared-pool", undefined, tmp5, LibdiscoreCustomTreatmentsExperiment, tmp3, tmp2, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp8, libdiscoreTelemetryExperiment);
-tmp13.label = "Android Chat Mosaic Shared Pool";
-tmp13.defaultValue = false;
-const tmp14 = new "getTreatments"("2026-03-mobile-hermes-occupancy-target", undefined, tmp5, LibdiscoreCustomTreatmentsExperiment, tmp3, tmp2, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp8, libdiscoreTelemetryExperiment);
-tmp14.label = "Android Hermes Occupancy Target";
-tmp14.defaultValue = false;
-const tmp15 = new "getTreatments"("2026-08-android-jank-per-screen", undefined, tmp5, LibdiscoreCustomTreatmentsExperiment, tmp3, tmp2, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp8, libdiscoreTelemetryExperiment);
-tmp15.label = "Android Per-Screen Jank Aggregation";
+const tmp13 = new "getTreatments"("2026-01-android-rmle", undefined, tmp6, LibdiscoreCustomTreatmentsExperiment, tmp4, tmp3, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp9, libdiscoreTelemetryExperiment, tmp11, tmp12, "getCachedBridgedStoreMode", prototype4, "shouldCollectMetrics", "getLabel", "getTreatments", new.target, getTreatments);
+tmp13.label = "Android Pull Mode Rendering";
+tmp13.treatmentCount = 4;
+const tmp14 = new "getTreatments"("2026-02-android-fresco-cache", undefined, tmp6, LibdiscoreCustomTreatmentsExperiment, tmp4, tmp3, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp9, libdiscoreTelemetryExperiment, tmp11, tmp12, tmp13, prototype4, "shouldCollectMetrics", "getLabel", "getTreatments", new.target, "Android Pull Mode Rendering");
+tmp14.label = "Android Fresco Cache";
+tmp14.treatmentCount = 3;
+const tmp15 = new "getTreatments"("2026-02-android-chat-mosaic-shared-pool", undefined, tmp6, LibdiscoreCustomTreatmentsExperiment, tmp4, tmp3, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp9, libdiscoreTelemetryExperiment, tmp11);
+tmp15.label = "Android Chat Mosaic Shared Pool";
 tmp15.defaultValue = false;
-const tmp22 = new tmp2("2026-08-android-rn-reparenting-flag", undefined, tmp5, LibdiscoreCustomTreatmentsExperiment, tmp3, tmp2, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp8, libdiscoreTelemetryExperiment);
-tmp22.label = "RN Flag, was false on RN 0.81 and true in RN 0.86, suspect of causing RMLE regressions";
-tmp22.defaultValue = false;
-const tmp32 = new tmp3("2026-08-ios-objc-composed-image-cache", undefined, tmp5, LibdiscoreCustomTreatmentsExperiment, tmp3, new.target, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp8, libdiscoreTelemetryExperiment, tmp10, tmp11, tmp12, tmp13, tmp14, tmp15, tmp22, "RN Flag, was false on RN 0.81 and true in RN 0.86, suspect of causing RMLE regressions");
-tmp32.label = "iOS ObjC Composed Image Cache";
-tmp32.treatmentCount = 3;
+const tmp16 = new "getTreatments"("2026-03-mobile-hermes-occupancy-target", undefined, tmp6, LibdiscoreCustomTreatmentsExperiment, tmp4, tmp3, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp9, libdiscoreTelemetryExperiment, tmp11);
+tmp16.label = "Android Hermes Occupancy Target";
+tmp16.defaultValue = false;
+const tmp17 = new "getTreatments"("2026-08-android-jank-per-screen", undefined, tmp6, LibdiscoreCustomTreatmentsExperiment, tmp4, tmp3, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp9, libdiscoreTelemetryExperiment, tmp11);
+tmp17.label = "Android Per-Screen Jank Aggregation";
+tmp17.defaultValue = false;
+const tmp32 = new tmp3("2026-08-android-rn-reparenting-flag", undefined, tmp6, LibdiscoreCustomTreatmentsExperiment, tmp4, tmp3, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp9, libdiscoreTelemetryExperiment, tmp11);
+tmp32.label = "RN Flag, was false on RN 0.81 and true in RN 0.86, suspect of causing RMLE regressions";
+tmp32.defaultValue = false;
+const tmp42 = new tmp4("2026-08-ios-objc-composed-image-cache", undefined, tmp6, LibdiscoreCustomTreatmentsExperiment, tmp4, new.target, undefined, require, dependencyMap, items, LibdiscoreCachedExperiment, LibdiscoreWrapperSimpleExperiment, tmp9, libdiscoreTelemetryExperiment, tmp11, tmp12, tmp13, tmp14, tmp15, tmp16, tmp17, tmp32, "RN Flag, was false on RN 0.81 and true in RN 0.86, suspect of causing RMLE regressions");
+tmp42.label = "iOS ObjC Composed Image Cache";
+tmp42.treatmentCount = 3;
 let c7 = false;
 const result = size.fileFinishedImporting("modules/libdiscore/libdiscoreExperiments.tsx");
 
 export const ALL_LIBDISCORE_EXPERIMENTS = items;
 export { LibdiscoreCachedExperiment };
 export { LibdiscoreWrapperSimpleExperiment };
-export const LibdiscoreBatchStoreRefactorExperiment = tmp8;
+export const LibdiscoreBatchStoreRefactorExperiment = tmp9;
 export const TelemetryExperiment = libdiscoreTelemetryExperiment;
-export const DelayLoadLateLazyCacheHoldoutExperiment = tmp10;
-export const AndroidPullModeRenderingExperiment = tmp11;
-export const AndroidFrescoCacheExperiment = tmp12;
-export const AndroidChatMosaicSharedPoolExperiment = tmp13;
-export const AndroidHermesOccupancyTargetExperiment = tmp14;
-export const AndroidJankPerScreenExperiment = tmp15;
-export const AndroidRNFlagReparenting = tmp22;
-export const IOSObjcComposedImageCacheExperiment = tmp32;
+export const DelayLoadLateLazyCacheHoldoutExperiment = tmp11;
+export const ReactCompilerExperiment = tmp12;
+export const AndroidPullModeRenderingExperiment = tmp13;
+export const AndroidFrescoCacheExperiment = tmp14;
+export const AndroidChatMosaicSharedPoolExperiment = tmp15;
+export const AndroidHermesOccupancyTargetExperiment = tmp16;
+export const AndroidJankPerScreenExperiment = tmp17;
+export const AndroidRNFlagReparenting = tmp32;
+export const IOSObjcComposedImageCacheExperiment = tmp42;
 export function isExperimentSyncDisabled() {
   return c7;
 }

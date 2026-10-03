@@ -1,9 +1,9 @@
-// === Module 8520: getProductName ===
+// === Module 8526: getProductName ===
 
-// Module 8520 (getProductName)
-import util from "util" /* 1115 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1974 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7161 */;
+// Module 8526 (getProductName)
+import util from "util" /* 1126 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1980 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7064 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/collectibles/utils/getProductName.tsx");
@@ -28,8 +28,8 @@ export const getCardProductName = function getCardProductName(product) {
     let obj = dependencyMap;
     const string = util.intl.string;
     if ("baseVariantName" in product) {
-      const intl = BZN5k2(1115).intl;
-      BZN5k2 = BZN5k2(1115).t.BZN5k2;
+      const intl = BZN5k2(1126).intl;
+      BZN5k2 = BZN5k2(1126).t.BZN5k2;
       obj = { baseVariantName: null, variantLabel: null };
       ({ baseVariantName: obj.baseVariantName, variantLabel: obj.variantLabel } = product);
       let name = intl.formatToPlainString(BZN5k2, obj);
@@ -100,8 +100,8 @@ export const getProductNameAndTypeLabel = function getProductNameAndTypeLabel(pr
     let obj = dependencyMap;
     const string = util.intl.string;
     if ("baseVariantName" in product) {
-      const intl = BZN5k2(1115).intl;
-      BZN5k2 = BZN5k2(1115).t.BZN5k2;
+      const intl = BZN5k2(1126).intl;
+      BZN5k2 = BZN5k2(1126).t.BZN5k2;
       obj = { baseVariantName: null, variantLabel: null };
       ({ baseVariantName: obj.baseVariantName, variantLabel: obj.variantLabel } = product);
       let name = intl.formatToPlainString(BZN5k2, obj);

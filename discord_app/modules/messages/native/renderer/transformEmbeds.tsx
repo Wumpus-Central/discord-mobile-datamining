@@ -1,21 +1,21 @@
-// === Module 7745: transformEmbeds ===
+// === Module 7789: transformEmbeds ===
 
-// Module 7745 (transformEmbeds)
+// Module 7789 (transformEmbeds)
 import _mod17 from "module_17" /* 17 */;
-import Constants from "Constants" /* 1074 */;
-import util from "util" /* 1115 */;
-import PlatformUtils from "PlatformUtils" /* 1364 */;
-import DateUtils from "DateUtils" /* 4541 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 4995 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 5057 */;
-import EmbedUtils from "EmbedUtils" /* 5380 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 6897 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 6902 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7561 */;
-import MarkupParsers from "MarkupParsers" /* 7717 */;
-import sanitizeMediaDimension from "sanitizeMediaDimension" /* 7746 */;
-import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 7747 */;
-import utils from "utils" /* 7748 */;
+import Constants from "Constants" /* 1085 */;
+import util from "util" /* 1126 */;
+import PlatformUtils from "PlatformUtils" /* 1369 */;
+import DateUtils from "DateUtils" /* 4552 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 5040 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 5102 */;
+import EmbedUtils from "EmbedUtils" /* 5426 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 6795 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 6800 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7605 */;
+import MarkupParsers from "MarkupParsers" /* 7761 */;
+import sanitizeMediaDimension from "sanitizeMediaDimension" /* 7790 */;
+import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 7791 */;
+import utils from "utils" /* 7792 */;
 import size from "module_2" /* 2 */;
 
 const processColor = _mod17.processColor;
@@ -179,12 +179,22 @@ export default function transformEmbeds(arg0) {
                         tmp34 = obj8;
                       }
                     }
-                    embedBorderLeftColor = embedBorderLeftColor.embedBorderLeftColor;
-                    let tmp55 = null != type.color;
-                    if (tmp55) {
-                      tmp55 = "" !== type.color;
+                    let tmp55 = tmp31;
+                    if (tmp54) {
+                      const obj9 = {};
+                      const merged5 = Object.assign(tmp31);
+                      const intl = util.intl;
+                      obj9.role = intl.string(util.t.OBp3V3);
+                      const intl2 = util.intl;
+                      obj9.hint = intl2.string(util.t.IPzNKE);
+                      tmp55 = obj9;
                     }
-                    if (tmp55) {
+                    embedBorderLeftColor = embedBorderLeftColor.embedBorderLeftColor;
+                    let tmp60 = null != type.color;
+                    if (tmp60) {
+                      tmp60 = "" !== type.color;
+                    }
+                    if (tmp60) {
                       embedBorderLeftColor = processColor(type.color);
                     }
                     if (null != type.url) {
@@ -201,8 +211,8 @@ export default function transformEmbeds(arg0) {
                             if (MessageEmbedTypes.GIFV !== type) {
                               if (MessageEmbedTypes.RICH === type) {
                                 if (null != type.rawDescription) {
-                                  const obj9 = { description: type.rawDescription, channelId, isField: false, ignoreCache, showListsAndHeaders, showMaskedLinks };
-                                  let rawDescription = MarkupParsers.parseEmbedDescriptionMarkup(obj9);
+                                  const obj10 = { description: type.rawDescription, channelId, isField: false, ignoreCache, showListsAndHeaders, showMaskedLinks };
+                                  let rawDescription = MarkupParsers.parseEmbedDescriptionMarkup(obj10);
                                   const tmp3Result19 = MarkupParsers;
                                 }
                               } else {
@@ -218,14 +228,14 @@ export default function transformEmbeds(arg0) {
                         const mapped1 = fields.map((rawName) => {
                           let result = null;
                           if (null != rawName.rawName) {
-                            result = channelId(7717).parseEmbedTitleMarkup(rawName.rawName, channelId);
-                            const obj = channelId(7717);
+                            result = channelId(7761).parseEmbedTitleMarkup(rawName.rawName, channelId);
+                            const obj = channelId(7761);
                           }
                           let result1 = null;
                           if (null != rawName.rawValue) {
                             const obj3 = { description: rawName.rawValue, channelId, isField: true, ignoreCache, replaceMap: { "\t": "" }, showListsAndHeaders, showMaskedLinks };
-                            result1 = channelId(7717).parseEmbedDescriptionMarkup(obj3);
-                            const obj2 = channelId(7717);
+                            result1 = channelId(7761).parseEmbedDescriptionMarkup(obj3);
+                            const obj2 = channelId(7761);
                           }
                           const obj4 = {};
                           const merged = Object.assign(rawName);
@@ -245,36 +255,36 @@ export default function transformEmbeds(arg0) {
                             const _HermesInternal = HermesInternal;
                             combined = "" + text + " | " + calendarFormatResult;
                           }
-                          const obj10 = {};
-                          const merged5 = Object.assign(type.footer);
-                          obj10.content = combined;
+                          const obj11 = {};
+                          const merged6 = Object.assign(type.footer);
+                          obj11.content = combined;
                           if (null != type.footer.iconProxyURL) {
                             if ("" !== type.footer.iconProxyURL) {
                               let iconURL = type.footer.iconProxyURL;
                             }
-                            let tmp64 = obj10;
+                            let tmp69 = obj11;
                             if (null != iconURL) {
-                              const obj20 = RowGeneratorUtilsDefault;
-                              obj10.iconURL = obj20.getImageSrc(iconURL, 16, 16, !closure_1_1);
-                              tmp64 = obj10;
+                              const obj21 = RowGeneratorUtilsDefault;
+                              obj11.iconURL = obj21.getImageSrc(iconURL, 16, 16, !closure_1_1);
+                              tmp69 = obj11;
                             }
                           }
                           iconURL = type.footer.iconURL;
                         } else if (null != calendarFormatResult) {
-                          const obj11 = { content: calendarFormatResult, text: "" };
-                          tmp64 = obj11;
+                          const obj12 = { content: calendarFormatResult, text: "" };
+                          tmp69 = obj12;
                         }
                         if (null == type.author) {
                           if (type.type !== MessageEmbedTypes.COMPONENTS) {
-                            const obj12 = { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Embed, media: type };
+                            const obj13 = { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Embed, media: type };
                             let isMediaScanPendingResult = !closure_1_10;
-                            const mediaObscuredReasonFromBitmask = ObscuredMediaUtils.getMediaObscuredReasonFromBitmask(obj12, closure_1_9);
+                            const mediaObscuredReasonFromBitmask = ObscuredMediaUtils.getMediaObscuredReasonFromBitmask(obj13, closure_1_9);
                             if (!closure_1_10) {
-                              const obj13 = { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Embed, media: type };
-                              isMediaScanPendingResult = ObscuredMediaUtils.isMediaScanPending(obj13, closure_1_9);
+                              const obj14 = { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Embed, media: type };
+                              isMediaScanPendingResult = ObscuredMediaUtils.isMediaScanPending(obj14, closure_1_9);
                               const tmp3Result22 = ObscuredMediaUtils;
                             }
-                            let isVerifiedTeenResult = tmp88;
+                            let isVerifiedTeenResult = tmp93;
                             if (mediaObscuredReasonFromBitmask.length > 0) {
                               isVerifiedTeenResult = AgeVerificationUtils.isVerifiedTeen();
                               const tmp3Result23 = AgeVerificationUtils;
@@ -283,58 +293,58 @@ export default function transformEmbeds(arg0) {
                             if (str10 == null) {
                               str10 = "";
                             }
-                            const obj14 = { id: str10, type: null, spoiler: null, obscure: null, obscureAwaitingScan: null, verifyAge: null, obscureHideControls: null, obscureIsOpaque: null, provider: null, author: null, rawTitle: null, title: null, url: null, rawDescription: null, description: null, thumbnail: null, image: null, images: null, fields: null, components: null, footer: null, video: null, borderLeftColor: null, providerColor: null, headerTextColor: null, bodyTextColor: null, referenceId: null, backgroundColor: null };
+                            const obj15 = { id: str10, type: null, spoiler: null, obscure: null, obscureAwaitingScan: null, verifyAge: null, obscureHideControls: null, obscureIsOpaque: null, provider: null, author: null, rawTitle: null, title: null, url: null, rawDescription: null, description: null, thumbnail: null, image: null, images: null, fields: null, components: null, footer: null, video: null, borderLeftColor: null, providerColor: null, headerTextColor: null, bodyTextColor: null, referenceId: null, backgroundColor: null };
                             const type2 = type.type;
-                            obj14.type = type2;
+                            obj15.type = type2;
                             let str11 = "";
                             let str12 = "";
                             if (dependencyMap) {
-                              const intl = util.intl;
-                              str12 = intl.string(util.t["F+x38C"]).toUpperCase();
-                              const str13 = intl.string(util.t["F+x38C"]);
+                              const intl3 = util.intl;
+                              str12 = intl3.string(util.t["F+x38C"]).toUpperCase();
+                              const str13 = intl3.string(util.t["F+x38C"]);
                             }
-                            obj14.spoiler = str12;
+                            obj15.spoiler = str12;
                             let stringResult = str11;
                             if (mediaObscuredReasonFromBitmask.length > 0) {
-                              const intl2 = util.intl;
-                              stringResult = intl2.string(util.t.SpxcUR);
+                              const intl4 = util.intl;
+                              stringResult = intl4.string(util.t.SpxcUR);
                             }
-                            obj14.obscure = stringResult;
+                            obj15.obscure = stringResult;
                             if (isMediaScanPendingResult) {
-                              const intl3 = util.intl;
-                              str11 = intl3.string(util.t.MRdR7z);
+                              const intl5 = util.intl;
+                              str11 = intl5.string(util.t.MRdR7z);
                             }
-                            obj14.obscureAwaitingScan = str11;
-                            let tmp92 = tmp88;
+                            obj15.obscureAwaitingScan = str11;
+                            let tmp97 = tmp93;
                             if (mediaObscuredReasonFromBitmask.length > 0) {
-                              tmp92 = closure_1_12;
+                              tmp97 = closure_1_12;
                             }
-                            obj14.verifyAge = tmp92;
-                            obj14.obscureHideControls = isVerifiedTeenResult;
-                            obj14.obscureIsOpaque = mediaObscuredReasonFromBitmask.length > 0;
+                            obj15.verifyAge = tmp97;
+                            obj15.obscureHideControls = isVerifiedTeenResult;
+                            obj15.obscureIsOpaque = mediaObscuredReasonFromBitmask.length > 0;
                             const provider = type.provider;
-                            obj14.provider = provider;
-                            obj14.author = undefined;
-                            obj14.rawTitle = type.rawTitle;
-                            obj14.title = rawTitle;
+                            obj15.provider = provider;
+                            obj15.author = undefined;
+                            obj15.rawTitle = type.rawTitle;
+                            obj15.title = rawTitle;
                             const url4 = type.url;
-                            obj14.url = url4;
-                            obj14.rawDescription = type.rawDescription;
-                            obj14.description = rawDescription;
-                            obj14.thumbnail = tmp31;
-                            obj14.image = tmp25;
-                            obj14.images = mapped;
-                            obj14.fields = mapped1;
-                            obj14.components = tmp80;
-                            obj14.footer = tmp64;
+                            obj15.url = url4;
+                            obj15.rawDescription = type.rawDescription;
+                            obj15.description = rawDescription;
+                            obj15.thumbnail = tmp55;
+                            obj15.image = tmp25;
+                            obj15.images = mapped;
+                            obj15.fields = mapped1;
+                            obj15.components = tmp85;
+                            obj15.footer = tmp69;
                             const video = type.video;
-                            obj14.video = video;
-                            obj14.borderLeftColor = embedBorderLeftColor;
-                            ({ embedProviderColor: obj28.providerColor, embedHeaderTextColor: obj28.headerTextColor, embedBodyTextColor: obj28.bodyTextColor } = tmp54);
+                            obj15.video = video;
+                            obj15.borderLeftColor = embedBorderLeftColor;
+                            ({ embedProviderColor: obj29.providerColor, embedHeaderTextColor: obj29.headerTextColor, embedBodyTextColor: obj29.bodyTextColor } = tmp59);
                             const referenceId = type.referenceId;
-                            obj14.referenceId = referenceId;
-                            obj14.backgroundColor = backgroundColor;
-                            return obj14;
+                            obj15.referenceId = referenceId;
+                            obj15.backgroundColor = backgroundColor;
+                            return obj15;
                           } else {
                             const components = type.components;
                             if (dependencyMap) {
@@ -355,11 +365,11 @@ export default function transformEmbeds(arg0) {
                               let iconURL2 = type.author.iconProxyURL;
                             }
                             if (null != iconURL2) {
-                              const obj15 = {};
-                              const merged6 = Object.assign(type.author);
-                              const obj22 = RowGeneratorUtilsDefault;
-                              obj15.iconURL = obj22.getImageSrc(iconURL2, 16, 16, !closure_1_1);
-                              let author = obj15;
+                              const obj16 = {};
+                              const merged7 = Object.assign(type.author);
+                              const obj23 = RowGeneratorUtilsDefault;
+                              obj16.iconURL = obj23.getImageSrc(iconURL2, 16, 16, !closure_1_1);
+                              let author = obj16;
                             } else {
                               author = type.author;
                             }
@@ -370,7 +380,8 @@ export default function transformEmbeds(arg0) {
                       rawTitle = type.rawTitle;
                     }
                     parseEmbedTitleMarkup = MarkupParsers.parseEmbedTitleMarkup;
-                    tmp54 = embedBorderLeftColor;
+                    tmp54 = null != tmp31 && type.type === MessageEmbedTypes.GIFV;
+                    tmp59 = embedBorderLeftColor;
                   }
                   let tmp27 = null == tmp25;
                   if (!tmp27) {

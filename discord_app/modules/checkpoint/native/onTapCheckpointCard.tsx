@@ -1,12 +1,12 @@
-// === Module 11630: onTapCheckpointCard ===
+// === Module 11550: onTapCheckpointCard ===
 
-// Module 11630 (onTapCheckpointCard)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5025 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
+// Module 11550 (onTapCheckpointCard)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5070 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
 
 require = fn;
-const AnalyticEvents = fn(1074).AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/onTapCheckpointCard.tsx");
 

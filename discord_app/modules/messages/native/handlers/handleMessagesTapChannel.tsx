@@ -1,13 +1,13 @@
-// === Module 11251: handleMessagesTapChannel ===
+// === Module 11165: handleMessagesTapChannel ===
 
-// Module 11251 (handleMessagesTapChannel)
-import GuildDiscoveryUtilsAll from "GuildDiscoveryUtils" /* 6946 */;
+// Module 11165 (handleMessagesTapChannel)
+import GuildDiscoveryUtilsAll from "GuildDiscoveryUtils" /* 6844 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildMemberStore from "GuildMemberStore" /* 2107 */;
-import GuildRoleStore from "GuildRoleStore" /* 2101 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import PermissionStore from "PermissionStore" /* 4498 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import GuildMemberStore from "GuildMemberStore" /* 2112 */;
+import GuildRoleStore from "GuildRoleStore" /* 2106 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import PermissionStore from "PermissionStore" /* 4509 */;
 
 const require = fn;
 function maybeStartLurking() {
@@ -37,7 +37,7 @@ let closure_20 = async function _maybeStartLurking(arg0, arg1) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -96,7 +96,7 @@ let closure_21 = async function _handleMessagesTapChannel(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -126,13 +126,13 @@ let closure_21 = async function _handleMessagesTapChannel(arg0) {
           let guildId;
           let messageId;
           closure_129_7 = undefined;
-          let guild;
+          guild = undefined;
           closure_129_9 = undefined;
           let selfMember;
           let role;
           c3 = 1;
           c4 = 1;
-          return { value: "flex", done: null };
+          return { value: "Reflect", done: true };
         }
       } else {
         if (1 === tmp5) {
@@ -160,7 +160,7 @@ let closure_21 = async function _handleMessagesTapChannel(arg0) {
                 if (obj7.isStaticRouteIconType(channelId)) {
                   if (null == guild) {
                     c4 = 3;
-                    return { value: "HermesInternal", done: null };
+                    return { value: "IconComponent", done: "IconComponent" };
                   } else if ("browse" === channelId) {
                     const features3 = guild.features;
                     if (features3.has(closure_130_13.COMMUNITY)) {
@@ -169,7 +169,7 @@ let closure_21 = async function _handleMessagesTapChannel(arg0) {
                       const obj27 = closure_130_1(closure_130_3[15]);
                     } else {
                       c4 = 3;
-                      return { value: "HermesInternal", done: null };
+                      return { value: "IconComponent", done: "IconComponent" };
                     }
                   } else if ("customize" === tmp273) {
                     const features2 = guild.features;
@@ -179,7 +179,7 @@ let closure_21 = async function _handleMessagesTapChannel(arg0) {
                       const obj25 = closure_130_1(closure_130_3[15]);
                     } else {
                       c4 = 3;
-                      return { value: "HermesInternal", done: null };
+                      return { value: "IconComponent", done: "IconComponent" };
                     }
                   } else {
                     if ("home" !== tmp273) {
@@ -190,7 +190,7 @@ let closure_21 = async function _handleMessagesTapChannel(arg0) {
                             selfMember = closure_130_8.getSelfMember(guildId);
                             if (null == selfMember) {
                               c4 = 3;
-                              return { value: "HermesInternal", done: null };
+                              return { value: "IconComponent", done: "IconComponent" };
                             } else {
                               role = closure_130_9.getRole(guildId, closure_129_9);
                               if (null != role) {
@@ -225,13 +225,13 @@ let closure_21 = async function _handleMessagesTapChannel(arg0) {
                       const tmp225 = closure_130_1(closure_130_3[18]);
                     } else {
                       c4 = 3;
-                      return { value: "HermesInternal", done: null };
+                      return { value: "IconComponent", done: "IconComponent" };
                     }
                   }
                 }
                 c4 = 3;
                 c4 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             }
             if (null != messageId) {
@@ -252,7 +252,7 @@ let closure_21 = async function _handleMessagesTapChannel(arg0) {
                       if (closure_129_7.type === closure_130_12.GUILD_STAGE_VOICE) {
                         if (!closure_130_11.can(closure_130_14.CONNECT, closure_129_7)) {
                           c4 = 3;
-                          return { value: "HermesInternal", done: null };
+                          return { value: "IconComponent", done: "IconComponent" };
                         }
                       }
                       if (closure_129_3 != null) {
@@ -324,7 +324,7 @@ let closure_21 = async function _handleMessagesTapChannel(arg0) {
             return obj28;
           } else if (value) {
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else if (3 === tmp5) {
           if (arg0 === 1) {
@@ -336,7 +336,7 @@ let closure_21 = async function _handleMessagesTapChannel(arg0) {
             return obj29;
           } else if (value) {
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else if (arg0 === 1) {
           c4 = 3;
@@ -366,13 +366,13 @@ let closure_21 = async function _handleMessagesTapChannel(arg0) {
     }
   }
 };
-const isGuildVocalChannelType = fn(2048).isGuildVocalChannelType;
-const isGuildLurker = fn(2062).isGuildLurker;
-const Constants = fn(1074);
+const isGuildVocalChannelType = fn(2055).isGuildVocalChannelType;
+const isGuildLurker = fn(2070).isGuildLurker;
+const Constants = fn(1085);
 ({ ChannelTypes: closure_12, GuildFeatures: map1, Permissions: closure_14, Routes: closure_15 } = Constants);
-const StaticChannelRoute = fn(2051).StaticChannelRoute;
-const GuildOnboardingTab = fn(6708).GuildOnboardingTab;
-let closure_18 = fn(6704).CHANNELS_AND_ROLES_MODAL_KEY;
+const StaticChannelRoute = fn(2058).StaticChannelRoute;
+const GuildOnboardingTab = fn(6596).GuildOnboardingTab;
+let closure_18 = fn(6592).CHANNELS_AND_ROLES_MODAL_KEY;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/handlers/handleMessagesTapChannel.tsx");
 

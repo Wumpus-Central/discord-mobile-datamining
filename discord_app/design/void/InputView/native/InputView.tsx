@@ -1,14 +1,14 @@
-// === Module 13876: InputView ===
+// === Module 13943: InputView ===
 
-// Module 13876 (InputView)
-import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1115 */;
-import native from "native" /* 1177 */;
-import PlatformUtils from "PlatformUtils" /* 1364 */;
-import shared from "shared" /* 4714 */;
-import Text_Text from "Text/Text" /* 4841 */;
-import CircleXIcon from "CircleXIcon" /* 6220 */;
-import components_BottomSheetTextInputDefault from "components/BottomSheetTextInput" /* 11866 */;
+// Module 13943 (InputView)
+import nativeDefault from "native" /* 587 */;
+import util from "util" /* 1126 */;
+import native from "native" /* 1188 */;
+import PlatformUtils from "PlatformUtils" /* 1369 */;
+import shared from "shared" /* 4729 */;
+import CircleXIcon from "CircleXIcon" /* 4797 */;
+import Text_Text from "Text/Text" /* 4886 */;
+import components_BottomSheetTextInputDefault from "components/BottomSheetTextInput" /* 11797 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,23 +16,23 @@ require = fn;
 let closure_3 = ["numberOfLines", "disableConstantNumberOfLines", "inputTextColor", "placeholder", "placeholderTextColor", "editable", "large", "accessibilityHint", "maxLength", "inActionSheet", "trailingButton", "clearButtonVisibility", "disabled", "style", "inputTextStyle", "onChangeText", "onFocus", "value"];
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire, TouchableWithoutFeedback: closure_7, Platform } = get_ActivityIndicator);
-const Fonts = fn(1074).Fonts;
+const Fonts = fn(1085).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = { disabled: { opacity: 0.5 }, topContainer: { minHeight: 16, alignItems: "center", flexDirection: "row", marginBottom: 5, flexWrap: "wrap" }, inputViewTitle: { marginRight: 5 }, inputViewError: { fontSize: 10, color: nativeDefault.unsafe_rawColors.RED_400 }, inputBorder: null, inputView: null, inputViewBorder: null, inputViewBorderActive: null, inputContainer: null, bottomContainer: null, charactersLength: null, closeIcon: null, clearButton: null, required: null };
 let obj3 = { fontSize: 10, color: nativeDefault.unsafe_rawColors.RED_400 };
 obj2.inputBorder = { backgroundColor: nativeDefault.colors.TEXT_MUTED };
 let obj4 = { backgroundColor: nativeDefault.colors.TEXT_MUTED };
-obj2.inputView = { fontSize: 16, paddingBottom: 0, paddingTop: 0, textAlignVertical: "top", flex: 1, color: fn(5939).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
+obj2.inputView = { fontSize: 16, paddingBottom: 0, paddingTop: 0, textAlignVertical: "top", flex: 1, color: fn(5620).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
 obj2.inputViewBorder = { marginTop: 8, height: 2 };
-let obj5 = { fontSize: 16, paddingBottom: 0, paddingTop: 0, textAlignVertical: "top", flex: 1, color: fn(5939).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
+let obj5 = { fontSize: 16, paddingBottom: 0, paddingTop: 0, textAlignVertical: "top", flex: 1, color: fn(5620).DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
 obj2.inputViewBorderActive = { backgroundColor: nativeDefault.unsafe_rawColors.TRANSPARENT };
 obj2.inputContainer = { flexDirection: "row", alignItems: "center", position: "relative" };
 obj2.bottomContainer = { marginTop: 5 };
 let obj6 = { backgroundColor: nativeDefault.unsafe_rawColors.TRANSPARENT };
-obj2.charactersLength = { alignSelf: "flex-end", fontFamily: Fonts.CODE_BOLD, color: fn(5939).DARK_PRIMARY_400_LIGHT_PRIMARY_300 };
-let obj7 = { alignSelf: "flex-end", fontFamily: Fonts.CODE_BOLD, color: fn(5939).DARK_PRIMARY_400_LIGHT_PRIMARY_300 };
+obj2.charactersLength = { alignSelf: "flex-end", fontFamily: Fonts.CODE_BOLD, color: fn(5620).DARK_PRIMARY_400_LIGHT_PRIMARY_300 };
+let obj7 = { alignSelf: "flex-end", fontFamily: Fonts.CODE_BOLD, color: fn(5620).DARK_PRIMARY_400_LIGHT_PRIMARY_300 };
 obj2.closeIcon = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj2.clearButton = { position: "absolute", right: 6 };
 let obj8 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
@@ -164,7 +164,7 @@ prototype["renderBorder"] = function renderBorder() {
     const obj2 = { style: null };
     items[2] = inputViewBorderActive;
     obj2.style = items;
-    return React7(hasOwnProperty, obj2);
+    return options(hasOwnProperty, obj2);
   } else {
     return null;
   }
@@ -186,7 +186,7 @@ prototype["renderTopContainer"] = function renderTopContainer() {
     obj.style = items;
     const items1 = ["(", error, ")"];
     obj.children = items1;
-    tmp3 = closure_1_10(native.LegacyText, obj);
+    tmp3 = v65535(native.LegacyText, obj);
   }
   let tmp10 = null != title;
   if (tmp10) {
@@ -205,7 +205,7 @@ prototype["renderTopContainer"] = function renderTopContainer() {
     const items2 = [tmp.inputViewTitle];
     obj2.style = items2;
     obj2.children = title;
-    tmp12Result = React7(Text_Text.Text, obj2);
+    tmp12Result = options(Text_Text.Text, obj2);
   }
   let tmp15 = null != helpText;
   if (tmp15) {
@@ -214,7 +214,7 @@ prototype["renderTopContainer"] = function renderTopContainer() {
   let tmp16;
   if (tmp15) {
     const obj3 = { variant: "text-xs/medium", children: helpText };
-    tmp16 = React7(Text_Text.Text, obj3);
+    tmp16 = options(Text_Text.Text, obj3);
   }
   const obj4 = { style: tmp.topContainer, children: null };
   const items3 = [tmp12Result, tmp16, , ];
@@ -224,12 +224,12 @@ prototype["renderTopContainer"] = function renderTopContainer() {
   }
   if (tmp22) {
     const obj5 = { style: tmp.required, children: "*" };
-    tmp22 = React7(native.LegacyText, obj5);
+    tmp22 = options(native.LegacyText, obj5);
   }
   items3[2] = tmp22;
   items3[3] = tmp3;
   obj4.children = items3;
-  return closure_1_10(hasOwnProperty, obj4);
+  return v65535(hasOwnProperty, obj4);
 };
 prototype["renderBottomContainer"] = function renderBottomContainer() {
   const self = this;
@@ -246,8 +246,8 @@ prototype["renderBottomContainer"] = function renderBottomContainer() {
       const obj3 = { remainingCharacters: maxLength - self.getText().length };
       obj2.accessibilityLabel = intl.formatToPlainString(util.t.fR1cof, obj3);
       obj2.children = maxLength - self.getText().length;
-      obj.children = React7(native.LegacyText, obj2);
-      tmp2 = React7(hasOwnProperty, obj);
+      obj.children = options(native.LegacyText, obj2);
+      tmp2 = options(hasOwnProperty, obj);
     }
   }
   return tmp2;
@@ -263,8 +263,8 @@ prototype["renderTrailingButton"] = function renderTrailingButton() {
         clearButtonAccessibilityLabel = intl.string(util.t.VkKicb);
       }
       obj.accessibilityLabel = clearButtonAccessibilityLabel;
-      obj.children = React7(CircleXIcon.CircleXIcon, { size: "sm" });
-      let tmp3Result = React7(timestampProducer, obj);
+      obj.children = options(CircleXIcon.CircleXIcon, { size: "sm" });
+      let tmp3Result = options(timestampProducer, obj);
     } else {
       tmp3Result = null;
       if (clearButtonVisibility === tmp9.WITH_CONTENT) {
@@ -340,7 +340,7 @@ prototype["renderTextView"] = function renderTextView() {
     obj9.maxLength = maxLength;
     obj9.accessibilityHint = joined;
     const merged = Object.assign(tmp2);
-    return React7(TextInput, obj9);
+    return options(TextInput, obj9);
   } else {
     const unsafe_rawColors = nativeDefault.unsafe_rawColors;
     const isThemeDarkResult = shared.isThemeDark(self.context.theme);
@@ -371,7 +371,7 @@ prototype["render"] = function render() {
   obj3.style = items2;
   const items3 = [self.renderTextView(), self.renderTrailingButton()];
   obj3.children = items3;
-  items1[1] = closure_1_10(hasOwnProperty, obj3);
+  items1[1] = v65535(hasOwnProperty, obj3);
   items1[2] = PlatformUtils.isAndroid() && self.renderBorder();
   items1[3] = self.renderBottomContainer();
   const tmp8 = PlatformUtils.isAndroid() && self.renderBorder();
@@ -382,10 +382,10 @@ prototype["render"] = function render() {
   }
   items1[4] = renderBorderResult;
   obj2.children = items1;
-  obj.children = closure_1_10(hasOwnProperty, obj2);
-  return React7(React5, obj);
+  obj.children = v65535(hasOwnProperty, obj2);
+  return options(React5, obj);
 };
-InputView.contextType = fn(4569).ThemeContext;
+InputView.contextType = fn(4589).ThemeContext;
 InputView.defaultProps = { showBorder: true, value: "", returnKeyType: "next", disabled: false, autoFocus: false, multiline: false, numberOfLines: 1, showTopContainer: true, showCharactersRemaining: false, clearButtonVisibility: "never", inActionSheet: false };
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/InputView/native/InputView.tsx");

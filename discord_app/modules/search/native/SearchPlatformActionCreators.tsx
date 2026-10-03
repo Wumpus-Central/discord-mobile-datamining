@@ -1,11 +1,11 @@
-// === Module 12055: SearchPlatformActionCreators ===
+// === Module 11985: SearchPlatformActionCreators ===
 
-// Module 12055 (SearchPlatformActionCreators)
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import Constants from "Constants" /* 1074 */;
-import SearchUtils from "SearchUtils" /* 12033 */;
-import SearchTabsLayoutStore from "SearchTabsLayoutStore" /* 12056 */;
-import SearchQueryStore from "SearchQueryStore" /* 12032 */;
+// Module 11985 (SearchPlatformActionCreators)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import Constants from "Constants" /* 1085 */;
+import SearchUtils from "SearchUtils" /* 11968 */;
+import SearchTabsLayoutStore from "SearchTabsLayoutStore" /* 11986 */;
+import SearchQueryStore from "SearchQueryStore" /* 11967 */;
 import size from "module_2" /* 2 */;
 
 const SearchTypes = Constants.SearchTypes;
@@ -38,10 +38,10 @@ export default {
     const searchContextId = SearchUtils.getSearchContextId(searchContext);
     DispatcherDefault.dispatch({ type: "SEARCH_GUILD_CHANNEL_TAB_CLEANUP", id: searchContextId });
   },
-  addSearchHistoryItem(type, item) {
+  addSearchHistoryItem(type, channel) {
     if (type.type === SearchTypes.DMS) {
       const searchContextId = SearchUtils.getSearchContextId(type);
-      const obj3 = { type: "SEARCH_HISTORY_NATIVE_ADD_ITEM", id: searchContextId, item };
+      const obj3 = { type: "SEARCH_HISTORY_NATIVE_ADD_ITEM", id: searchContextId, item: channel };
       DispatcherDefault.dispatch(obj3);
     }
   },

@@ -1,10 +1,10 @@
-// === Module 13464: LocalAppDetectionUtils ===
+// === Module 13524: LocalAppDetectionUtils ===
 
-// Module 13464 (LocalAppDetectionUtils)
-import LocalAppDetectionTypes from "LocalAppDetectionTypes" /* 13463 */;
-import GameCommunityUpsellExperiment from "GameCommunityUpsellExperiment" /* 13465 */;
+// Module 13524 (LocalAppDetectionUtils)
+import LocalAppDetectionTypes from "LocalAppDetectionTypes" /* 13523 */;
+import GameCommunityUpsellExperiment from "GameCommunityUpsellExperiment" /* 13525 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConsentStore from "ConsentStore" /* 6198 */;
+import ConsentStore from "ConsentStore" /* 6084 */;
 
 require = fn;
 function isGameCommunityAddServerEntryEnabled() {
@@ -80,7 +80,7 @@ let closure_9 = async function _detectLocalApps(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       while (true) {
@@ -133,7 +133,7 @@ let closure_9 = async function _detectLocalApps(arg0) {
             obj7.result = closure_131_0;
             let dispatchResult = obj6.dispatch(obj7);
             c8 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else if (1 === tmp5) {
           c6 = 0;
@@ -162,7 +162,7 @@ let closure_9 = async function _detectLocalApps(arg0) {
     }
   })();
 };
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AnalyticEvents: hasOwnProperty, Consents: metroRequire } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/local_app_detection/native/LocalAppDetectionUtils.tsx");

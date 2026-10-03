@@ -1,6 +1,6 @@
-// === Module 5274: UploadVoiceDebugLogsError ===
+// === Module 5320: UploadVoiceDebugLogsError ===
 
-// Module 5274 (UploadVoiceDebugLogsError)
+// Module 5320 (UploadVoiceDebugLogsError)
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

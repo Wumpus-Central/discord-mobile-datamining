@@ -1,22 +1,22 @@
-// === Module 9177: GuildEventRsvpUtils ===
+// === Module 9181: GuildEventRsvpUtils ===
 
-// Module 9177 (GuildEventRsvpUtils)
-import util from "util" /* 1115 */;
-import ScheduleUtils from "ScheduleUtils" /* 9139 */;
-import useEventSchedule from "useEventSchedule" /* 9142 */;
-import useEventException from "useEventException" /* 9143 */;
+// Module 9181 (GuildEventRsvpUtils)
+import util from "util" /* 1126 */;
+import ScheduleUtils from "ScheduleUtils" /* 9163 */;
+import useEventSchedule from "useEventSchedule" /* 9166 */;
+import useEventException from "useEventException" /* 9167 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7134 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7037 */;
 
 require = fn;
-const GuildScheduledEventsConstants = fn(2050);
+const GuildScheduledEventsConstants = fn(2057);
 ({ GuildScheduledEventUserResponses: closure_4, GuildScheduledEventStatusDone: hasOwnProperty } = GuildScheduledEventsConstants);
 const ResponseOptions = { SERIES: 0, [0]: "SERIES", RECURRENCE: 1, [1]: "RECURRENCE" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/utils/GuildEventRsvpUtils.tsx");
 
-export const getExistingRsvp = function getExistingRsvp(id, c1) {
-  return GuildScheduledEventStore.getRsvp(id, c1, AuthenticationStore.getId());
+export const getExistingRsvp = function getExistingRsvp(id, nextRecurrenceIdInEvent) {
+  return GuildScheduledEventStore.getRsvp(id, nextRecurrenceIdInEvent, AuthenticationStore.getId());
 };
 export { ResponseOptions };
 export const getResponseOptions = function getResponseOptions() {

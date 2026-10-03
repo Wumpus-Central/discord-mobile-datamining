@@ -1,6 +1,6 @@
-// === Module 9154: ConnectivityConstants ===
+// === Module 9608: ConnectivityConstants ===
 
-// Module 9154 (ConnectivityConstants)
+// Module 9608 (ConnectivityConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/connectivity/native/ConnectivityConstants.tsx");

@@ -1,7 +1,7 @@
-// === Module 12094: GamePlatformAvailabilityUtils ===
+// === Module 12030: GamePlatformAvailabilityUtils ===
 
-// Module 12094 (GamePlatformAvailabilityUtils)
-import GamePlatformAvailability from "GamePlatformAvailability" /* 12092 */;
+// Module 12030 (GamePlatformAvailabilityUtils)
+import GamePlatformAvailability from "GamePlatformAvailability" /* 12028 */;
 import size from "module_2" /* 2 */;
 
 const items = [GamePlatformAvailability.GamePlatformAvailability.DESKTOP, GamePlatformAvailability.GamePlatformAvailability.MOBILE, GamePlatformAvailability.GamePlatformAvailability.CONSOLE];

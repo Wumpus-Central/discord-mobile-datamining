@@ -1,11 +1,12 @@
-// === Module 5451: Backdrop ===
+// === Module 5771: Backdrop ===
 
-// Module 5451 (Backdrop)
-import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1115 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
-import native from "native" /* 4569 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4595 */;
+// Module 5771 (Backdrop)
+import c from "c" /* 576 */;
+import nativeDefault from "native" /* 587 */;
+import util from "util" /* 1126 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
+import native from "native" /* 4589 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4612 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,16 +15,161 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let closure_6 = {};
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = { fill: StyleSheet.absoluteFillObject, backdrop: { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM }, backdropOpaque: null, accessibilityDismiss: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM };
 obj2.backdropOpaque = { backgroundColor: nativeDefault.colors.MOBILE_BACKGROUND_SCRIM_OPAQUE };
 obj2.accessibilityDismiss = { position: "absolute", top: 0, left: 0, right: 0, height: 16 };
 let closure_7 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj4 = { backgroundColor: nativeDefault.colors.MOBILE_BACKGROUND_SCRIM_OPAQUE };
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Backdrop/native/Backdrop.native.tsx");
 
-export const Backdrop = function Backdrop(animatedProps) {
+export const Backdrop = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(28);
+  ({ style, accessibleDismissStyle, animatedProps, opaque, blur, onDismiss, accessibilityLabel, aria-hidden: tmp4 } = arg0);
+  if (undefined === animatedProps) {
+    animatedProps = closure_6;
+  }
+  let str = "none";
+  if (undefined !== blur) {
+    str = blur;
+  }
+  if (cResult[0] !== accessibilityLabel) {
+    let stringResult = accessibilityLabel;
+    if (undefined === accessibilityLabel) {
+      const intl = util.intl;
+      stringResult = intl.string(util.t.WAI6xu);
+    }
+    cResult[0] = accessibilityLabel;
+    cResult[1] = stringResult;
+    let tmp6 = stringResult;
+  } else {
+    tmp6 = cResult[1];
+  }
+  let fill = closure_7();
+  const theme = native.useThemeContext().theme;
+  const top = useSafeAreaInsetsDefault().top;
+  const backgroundColor = fill.backdrop.backgroundColor;
+  if (cResult[2] !== onDismiss) {
+    const obj2 = { onPress: onDismiss, "aria-hidden": true };
+    cResult[2] = onDismiss;
+    cResult[3] = obj2;
+    backdropOpaque = obj2;
+  } else {
+    backdropOpaque = cResult[3];
+  }
+  if (cResult[4] === style) {
+    if (cResult[5] === fill.fill) {
+      let tmp9 = cResult[6];
+    }
+    if (cResult[7] === tmp6) {
+      if (cResult[8] === accessibleDismissStyle) {
+        if (cResult[9] === tmp4) {
+          if (cResult[10] === onDismiss) {
+            if (cResult[11] === top) {
+              if (cResult[12] === fill.accessibilityDismiss) {
+                let tmp10 = cResult[13];
+              }
+              if (cResult[14] === backgroundColor) {
+                if (cResult[15] === str) {
+                  if (cResult[16] === tmp5) {
+                    if (cResult[17] === backdropOpaque) {
+                      if (cResult[18] === fill.backdrop) {
+                        if (cResult[19] === fill.backdropOpaque) {
+                          if (cResult[20] === fill.fill) {
+                            if (cResult[21] === theme) {
+                              if (cResult[23] === animatedProps) {
+                                if (cResult[24] === tmp9) {
+                                  if (cResult[25] === tmp10) {
+                                    if (cResult[26] === tmp15) {
+                                      let tmp28 = cResult[27];
+                                    }
+                                    return tmp28;
+                                  }
+                                }
+                              }
+                              const obj3 = { style: tmp9, pointerEvents: "box-none", animatedProps, children: null };
+                              const items = [tmp10, cResult[22]];
+                              obj3.children = items;
+                              const tmp30 = hasOwnProperty(ReanimatedRexportDefault.View, obj3);
+                              cResult[23] = animatedProps;
+                              cResult[24] = tmp9;
+                              cResult[25] = tmp10;
+                              cResult[26] = cResult[22];
+                              cResult[27] = tmp30;
+                              tmp28 = tmp30;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              if ("none" === str) {
+                const obj4 = {};
+                const merged = Object.assign(backdropOpaque);
+                const items1 = [fill.fill, tmp5 ? fill.backdropOpaque : fill.backdrop];
+                obj4.style = items1;
+                const tmp16Result = React4(tmp17, obj4);
+                cResult[14] = backgroundColor;
+                cResult[15] = str;
+                cResult[16] = tmp5;
+                cResult[17] = backdropOpaque;
+                ({ backdrop: tmp3[18], backdropOpaque } = fill);
+                cResult[19] = backdropOpaque;
+                fill = fill.fill;
+                cResult[20] = fill;
+                cResult[21] = theme;
+                cResult[22] = tmp16Result;
+              }
+              const obj5 = {};
+              const merged1 = Object.assign(backdropOpaque);
+              obj5.style = fill.fill;
+              if ("none" === str) {
+                let num12 = 0;
+                const obj6 = { blurAmount: num12, style: fill.fill, blurTheme: theme, tintColor: backgroundColor, android_fallbackColor: fill.backdrop.backgroundColor };
+                obj5.children = React4(tmp24, obj6);
+              } else if ("subtle" !== str) {
+                num12 = 0.25;
+              }
+              num12 = 0.05;
+            }
+          }
+        }
+      }
+    }
+    let tmp12 = null != onDismiss;
+    if (tmp12) {
+      const obj7 = { style: null, onPress: null, accessibilityRole: "button", accessibilityLabel: null, "aria-hidden": null };
+      const items2 = [fill.accessibilityDismiss, , ];
+      const obj8 = { top };
+      items2[1] = obj8;
+      items2[2] = accessibleDismissStyle;
+      obj7.style = items2;
+      obj7.onPress = onDismiss;
+      obj7.accessibilityLabel = tmp6;
+      obj7["aria-hidden"] = tmp4;
+      tmp12 = React4(React3, obj7);
+    }
+    cResult[7] = tmp6;
+    cResult[8] = accessibleDismissStyle;
+    cResult[9] = tmp4;
+    cResult[10] = onDismiss;
+    cResult[11] = top;
+    cResult[12] = fill.accessibilityDismiss;
+    cResult[13] = tmp12;
+    tmp10 = tmp12;
+  }
+  const items3 = [fill.fill, style];
+  cResult[4] = style;
+  cResult[5] = fill.fill;
+  cResult[6] = items3;
+  tmp9 = items3;
+  const tmpResult = native;
+}) : ((animatedProps) => {
   animatedProps = animatedProps.animatedProps;
   ({ style, accessibleDismissStyle } = animatedProps);
   if (animatedProps === undefined) {
@@ -85,4 +231,4 @@ export const Backdrop = function Backdrop(animatedProps) {
     return hasOwnProperty(ReanimatedRexportDefault.View, obj3);
   }
   obj = native;
-};
+});

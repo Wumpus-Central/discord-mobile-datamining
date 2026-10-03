@@ -1,10 +1,10 @@
-// === Module 1075: RouteConstants ===
+// === Module 1086: RouteConstants ===
 
-// Module 1075 (RouteConstants)
-import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1076 */;
-import ConferenceModeConstants from "ConferenceModeConstants" /* 1081 */;
-import GlobalDiscoveryAppsConstants from "GlobalDiscoveryAppsConstants" /* 1082 */;
-import PathUtils from "utils/PathUtils" /* 1083 */;
+// Module 1086 (RouteConstants)
+import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1087 */;
+import ConferenceModeConstants from "ConferenceModeConstants" /* 1092 */;
+import GlobalDiscoveryAppsConstants from "GlobalDiscoveryAppsConstants" /* 1093 */;
+import PathUtils from "utils/PathUtils" /* 1094 */;
 import size from "module_2" /* 2 */;
 
 const CollectibleShopTab = CollectiblesShopConstants.CollectibleShopTab;

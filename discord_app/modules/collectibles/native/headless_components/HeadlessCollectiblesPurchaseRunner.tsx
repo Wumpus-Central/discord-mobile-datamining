@@ -1,14 +1,69 @@
-// === Module 12943: HeadlessCollectiblesPurchaseRunner ===
+// === Module 12998: HeadlessCollectiblesPurchaseRunner ===
 
-// Module 12943 (HeadlessCollectiblesPurchaseRunner)
-import useHandleBuyNowDefault from "useHandleBuyNow" /* 12944 */;
+// Module 12998 (HeadlessCollectiblesPurchaseRunner)
+import c from "c" /* 576 */;
+import useHandleBuyNowDefault from "useHandleBuyNow" /* 12999 */;
 import noop from "module_19" /* 19 */;
 
-const useNativeCheckoutStore = fn(7032).useNativeCheckoutStore;
+require = fn;
+const useNativeCheckoutStore = fn(6930).useNativeCheckoutStore;
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/headless_components/HeadlessCollectiblesPurchaseRunner.tsx");
 
-export const HeadlessCollectiblesPurchaseRunner = function HeadlessCollectiblesPurchaseRunner(attempt) {
+export const HeadlessCollectiblesPurchaseRunner = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(14);
+  ({ product, attempt } = arg0);
+  ({ analyticsLocations, onBuySettled, stageCollectibleChangeForEditProfile } = arg0);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const fn = function n(orderRecord) {
+      return orderRecord.orderRecord;
+    };
+    cResult[0] = fn;
+    let first = fn;
+  } else {
+    first = cResult[0];
+  }
+  const tmp4 = useNativeCheckoutStore(first);
+  closure_1 = tmp4;
+  if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
+    class C {
+      constructor(arg0) {
+        return arg0.orderRequired;
+      }
+    }
+    cResult[1] = C;
+  } else {
+    class C {
+      constructor(arg0) {
+        return arg0.orderRequired;
+      }
+    }
+  }
+  closure_2 = useNativeCheckoutStore(C);
+  if (tmp4 != null) {
+    class C {
+      constructor(arg0) {
+        return arg0.orderRequired;
+      }
+    }
+  }
+  if (cResult[2] === analyticsLocations) {
+    class C {
+      constructor(arg0) {
+        return arg0.orderRequired;
+      }
+    }
+  }
+  cResult[2] = analyticsLocations;
+  cResult[3] = onBuySettled;
+  cResult[4] = product;
+  cResult[5] = stageCollectibleChangeForEditProfile;
+  cResult[6] = undefined;
+  cResult[7] = { product, analyticsLocations, orderId: undefined, onBuySettled, stageCollectibleChangeForEditProfile };
+  const obj2 = { product, analyticsLocations, orderId: undefined, onBuySettled, stageCollectibleChangeForEditProfile };
+  const tmp3Result = useNativeCheckoutStore(C);
+}) : ((attempt) => {
   attempt = attempt.attempt;
   let handleBuyNow;
   ({ product, analyticsLocations, onBuySettled, stageCollectibleChangeForEditProfile } = attempt);
@@ -40,4 +95,4 @@ export const HeadlessCollectiblesPurchaseRunner = function HeadlessCollectiblesP
     }
   }, items);
   return null;
-};
+});

@@ -1,29 +1,29 @@
-// === Module 7965: ICYMIStore ===
+// === Module 8011: ICYMIStore ===
 
-// Module 7965 (ICYMIStore)
+// Module 8011 (ICYMIStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import DurationsDefault from "Durations" /* 1091 */;
-import utils from "utils" /* 7774 */;
-import ContentInventoryTypes from "ContentInventoryTypes" /* 7971 */;
-import ICYMITypes from "ICYMITypes" /* 7978 */;
-import isItemUnreadInChannel from "isItemUnreadInChannel" /* 7980 */;
-import ICYMIUtils from "ICYMIUtils" /* 7982 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import DurationsDefault from "Durations" /* 1102 */;
+import utils from "utils" /* 7818 */;
+import ContentInventoryTypes from "ContentInventoryTypes" /* 8017 */;
+import ICYMITypes from "ICYMITypes" /* 8024 */;
+import isItemUnreadInChannel from "isItemUnreadInChannel" /* 8026 */;
+import ICYMIUtils from "ICYMIUtils" /* 8028 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ContentInventoryStore from "ContentInventoryStore" /* 7966 */;
-import ExperimentStore from "ExperimentStore" /* 4761 */;
-import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 7134 */;
+import ContentInventoryStore from "ContentInventoryStore" /* 8012 */;
+import ExperimentStore from "ExperimentStore" /* 4776 */;
+import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 7037 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildAffinitiesStore from "GuildAffinitiesStore" /* 7975 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import MessageStore from "MessageStore" /* 5065 */;
-import PermissionStore from "PermissionStore" /* 4498 */;
-import ReadStateStore from "ReadStateStore" /* 4860 */;
-import RelationshipStore from "RelationshipStore" /* 4508 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5026 */;
-import ICYMIFiltersStore from "ICYMIFiltersStore" /* 7977 */;
-import ICYMIUnreadStateStore from "ICYMIUnreadStateStore" /* 7979 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import GuildAffinitiesStore from "GuildAffinitiesStore" /* 8021 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import MessageStore from "MessageStore" /* 5110 */;
+import PermissionStore from "PermissionStore" /* 4509 */;
+import ReadStateStore from "ReadStateStore" /* 4905 */;
+import RelationshipStore from "RelationshipStore" /* 4519 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5071 */;
+import ICYMIFiltersStore from "ICYMIFiltersStore" /* 8023 */;
+import ICYMIUnreadStateStore from "ICYMIUnreadStateStore" /* 8025 */;
 
 require = fn;
 function filterStaffGuild(data) {
@@ -32,7 +32,7 @@ function filterStaffGuild(data) {
       if (data.data.guild_id === ICYMITypes.GAME_CONTENT_GUILD_ID) {
         return true;
       } else {
-        const guild = GuildStore.getGuild(data.data.guild_id);
+        guild = GuildStore.getGuild(data.data.guild_id);
         if (null != guild) {
           const features = guild.features;
         }
@@ -334,14 +334,14 @@ function reload(arg0) {
     tmp14 = load_id !== newTrackingProps.load_id;
   }
   if (tmp14) {
-    const ICYMIAnalytics = tmp7(tmp8[23]).ICYMIAnalytics;
     obj = { newTrackingProps, hasNewContent, unreadFeedItems: found, readFeedItems: found1, homeSessionId: "gravity" };
-    ICYMIAnalytics.trackFeedLoaded(obj);
+    tmp7(tmp8[23]).trackFeedLoaded(obj);
     load_id = newTrackingProps.load_id;
     if (load_id == null) {
       load_id = null;
     }
     newTrackingProps = {};
+    const tmp7Result = tmp7(tmp8[23]);
   }
   c47 = 0;
   if (found.length + found1.length === 0) {
@@ -349,9 +349,9 @@ function reload(arg0) {
   }
   set = new Set();
   const items7 = [...found1];
-  ACTIVITY(found1[18]).hydrateItems(items7, 0, ACTIVITY(found1[19]).ICYMI_PAGE_SIZE);
+  ACTIVITY(found1[18]).hydrateItems(items7, 0, ACTIVITY(found1[19]).ICYMI_PAGE_SIZE, dependencyMap);
   c51 = false;
-  const tmp7Result = ACTIVITY(found1[18]);
+  const tmp7Result2 = ACTIVITY(found1[18]);
 }
 function getNewUnreadItems(arr9, channelId) {
   items = [];
@@ -590,12 +590,12 @@ function handleAck(channelId) {
   }
   arr8 = getNewUnreadItems(_slicedToArray(items6, 2)[0], channelId);
 }
-let GuildScheduledEventStore = fn(7134);
+let GuildScheduledEventStore = fn(7037);
 ({ eventScheduledToStartWithin: metroRequire, isGuildEventEnded: closure_7, isGuildScheduledEventActive: closure_8 } = GuildScheduledEventStore);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ ChannelTypes: closure_21, GuildFeatures: closure_22, Permissions: closure_23 } = Constants);
-const ContentInventoryFeedKey = fn(7981).ContentInventoryFeedKey;
+const ContentInventoryFeedKey = fn(8027).ContentInventoryFeedKey;
 const DAY = DurationsDefault.Millis.DAY;
 let closure_26 = 3 * DurationsDefault.Millis.DAY;
 let dehydratedItems = [];
@@ -723,21 +723,21 @@ prototype["getNextIndexToHydrate"] = function getNextIndexToHydrate() {
 prototype["getMissingItems"] = function getMissingItems() {
   return closure_35;
 };
-prototype["customMuted"] = function customMuted(id, id) {
+prototype["customMuted"] = function customMuted(id, id2) {
   const self = this;
   const customGuildScore = this.getCustomGuildScore(id);
   let tmp4 = customGuildScore === ICYMIUtils.ICYMICustomScore.MUTED;
   if (!tmp4) {
-    const customChannelScore = self.getCustomChannelScore(id, id);
+    const customChannelScore = self.getCustomChannelScore(id, id2);
     tmp4 = customChannelScore === ICYMIUtils.ICYMICustomScore.MUTED;
   }
   return tmp4;
 };
-prototype["getCustomChannelScore"] = function getCustomChannelScore(guild_id, id) {
-  if (null != obj[guild_id]) {
-    if (null != obj[guild_id][id]) {
+prototype["getCustomChannelScore"] = function getCustomChannelScore(id, id2) {
+  if (null != obj[id]) {
+    if (null != obj[id][id2]) {
       obj = ICYMIUtils;
-      let UNKNOWN = obj.numberToCustomScore(obj[guild_id][id]);
+      let UNKNOWN = obj.numberToCustomScore(obj[id][id2]);
     }
     return UNKNOWN;
   }
@@ -927,7 +927,7 @@ obj = {
     items = items.items;
     let set1;
     ({ loadId, startTime, isInitialLoad, isReloading } = items);
-    set1 = new Set(set1(7978).SUPPORTED_ITEM_TYPES);
+    set1 = new Set(set1(8024).SUPPORTED_ITEM_TYPES);
     const found = items.filter((type) => set1.has(type.type));
     const found1 = found.filter(filterStaffGuild);
     closure_30 = found1.map((type) => {
@@ -1020,7 +1020,7 @@ obj = {
     });
     const items4 = [...items2];
     const items5 = [items4, items1.sort((id, id2) => set1(dependencyMap[18]).compareGravityUnreadIds(id.id, id2.id))];
-    set = new Set(set1(7978).SUPPORTED_ITEM_TYPES);
+    set = new Set(set1(8024).SUPPORTED_ITEM_TYPES);
     [arr9, arr10] = items5;
     let tmp6 = _slicedToArray(items5, 2);
     if (c41) {
@@ -1029,27 +1029,27 @@ obj = {
           if (c38 > 0) {
             c43 = null;
           }
-          const tmp8 = arr11.length > tmp(7978).MIN_ITEMS_FOR_NEW_PILL;
+          const tmp8 = arr11.length > tmp(8024).MIN_ITEMS_FOR_NEW_PILL;
           if (!isReloading) {
             hasNewContent = tmp8;
           }
           if (tmp8) {
+            const tmpResult = tmp(8028);
             const items6 = [];
             HermesBuiltin.arraySpread(arr10, HermesBuiltin.arraySpread(arr9, 0));
-            tmp(7982).hydrateItems(items6, 0, tmp(7978).ICYMI_PAGE_SIZE);
+            tmpResult.hydrateItems(items6, 0, tmp(8024).ICYMI_PAGE_SIZE, closure_34);
             if (arr9.length + arr10.length === 0) {
               c54 = true;
             }
-            const tmpResult = tmp(7982);
           }
-          const ICYMIAnalytics = tmp(7991).ICYMIAnalytics;
           const obj2 = { newTrackingProps, hasNewContent, unreadFeedItems: arr9, readFeedItems: arr10, homeSessionId: null };
           let str = "background_load";
           if (focused) {
             str = "foreground_load";
           }
           obj2.homeSessionId = str;
-          ICYMIAnalytics.trackFeedLoaded(obj2);
+          tmp(8036).trackFeedLoaded(obj2);
+          const tmpResult2 = tmp(8036);
         }
       }
     }

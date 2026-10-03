@@ -1,118 +1,37 @@
-// === Module 14463: SettingRenderer ===
+// === Module 14498: SettingRenderer ===
 
-// Module 14463 (SettingRenderer)
-import nativeDefault from "native" /* 576 */;
-import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1876 */;
-import ToastUtils from "ToastUtils" /* 4556 */;
-import useToken from "useToken" /* 4560 */;
-import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 4579 */;
-import HapticUtils from "HapticUtils" /* 4810 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4811 */;
-import Text_Text from "Text/Text" /* 4841 */;
-import GuildIcon from "GuildIcon" /* 6082 */;
-import TableRow from "TableRow" /* 6103 */;
-import TableRadioGroup from "TableRadioGroup" /* 6183 */;
-import TableRadioRow from "TableRadioRow" /* 6186 */;
-import Tracking from "Tracking" /* 6604 */;
-import ClipboardUtils from "ClipboardUtils" /* 6796 */;
-import TableSwitchRow from "TableSwitchRow" /* 6807 */;
-import FormSwitch from "FormSwitch" /* 6808 */;
-import VolumeSliderDefault from "VolumeSlider" /* 9637 */;
-import ClydeIcon from "ClydeIcon" /* 10473 */;
-import SettingRendererUtils from "SettingRendererUtils" /* 14464 */;
-import useHighlightSettingItem from "useHighlightSettingItem" /* 14466 */;
-import SettingListItemHighlightDefault from "SettingListItemHighlight" /* 14467 */;
+// Module 14498 (SettingRenderer)
+import c from "c" /* 576 */;
+import nativeDefault from "native" /* 587 */;
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1881 */;
+import ToastUtils from "ToastUtils" /* 4567 */;
+import useToken from "useToken" /* 4580 */;
+import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 4596 */;
+import HapticUtils from "HapticUtils" /* 4855 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4856 */;
+import Text_Text from "Text/Text" /* 4886 */;
+import GuildIcon from "GuildIcon" /* 5971 */;
+import TableRow from "TableRow" /* 5993 */;
+import TableRadioGroup from "TableRadioGroup" /* 6072 */;
+import Tracking from "Tracking" /* 6493 */;
+import ClipboardUtils from "ClipboardUtils" /* 6688 */;
+import TableSwitchRow from "TableSwitchRow" /* 6698 */;
+import FormSwitch from "FormSwitch" /* 6699 */;
+import VolumeSliderDefault from "VolumeSlider" /* 9666 */;
+import ClydeIcon from "ClydeIcon" /* 10547 */;
+import SettingRendererUtils from "SettingRendererUtils" /* 14499 */;
+import useHighlightSettingItem from "useHighlightSettingItem" /* 14501 */;
+import SettingListItemHighlightDefault from "SettingListItemHighlight" /* 14502 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2111 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 14462 */;
-import GuildStore from "GuildStore" /* 2066 */;
+import LocaleStore from "LocaleStore" /* 2116 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 14497 */;
+import GuildStore from "GuildStore" /* 2074 */;
 
 const GuildIconDefault = GuildIcon;
 
 require = fn;
-class GuildSelectDefaultIcon {
-  constructor(arg0) {
-    str = global.size;
-    if (str === undefined) {
-      str = "sm";
-    }
-    num = 32;
-    tmp = closure_17();
-    if ("xs" === str) {
-      num = 24;
-    }
-    obj = { style: null, children: null };
-    obj1 = {};
-    merged = Object.assign(tmp.defaultIcon);
-    obj1.width = num;
-    obj1.height = num;
-    obj1.borderRadius = num / 3;
-    obj.style = obj1;
-    obj.children = jsx(closure_0(closure_2[17]).ClydeIcon, { color: "white", size: str });
-    return jsx(View, obj);
-  }
-}
-function DisabledActionDescriptionWithLink(children) {
-  ({ description, descriptionVariant, descriptionColor } = children);
-  const tmp4 = closure_1_14(Text_Text.Text, { variant: "text-xs/medium", color: "text-link", children: children.disabledActionLabel });
-  if (null == description) {
-    return tmp4;
-  } else {
-    let tmpResult = description;
-    if (!noop.isValidElement(description)) {
-      if (descriptionVariant == null) {
-        descriptionVariant = "text-xs/medium";
-      }
-      const obj = { variant: descriptionVariant, color: null, children: null };
-      if (descriptionColor == null) {
-        descriptionColor = "text-subtle";
-      }
-      obj.color = descriptionColor;
-      obj.children = description;
-      tmpResult = closure_1_14(Text_Text.Text, obj);
-    }
-    const obj2 = { children: null };
-    const items = [tmp4, tmpResult];
-    obj2.children = items;
-    return value2(View, obj2);
-  }
-}
-function ForceSwitchIcons(children) {
-  const context = noop.useContext(AccessibilityPreferencesContext.AccessibilityPreferencesContext);
-  const items = [context];
-  value = noop.useMemo(() => {
-    const obj = {};
-    const merged = Object.assign(context);
-    obj.switchIconsEnabled = true;
-    return obj;
-  }, items);
-  return closure_1_14(AccessibilityPreferencesContext.AccessibilityPreferencesContext.Provider, { value, children: children.children });
-}
-function SettingSearchResultBreadcrumbs(breadcrumbs) {
-  breadcrumbs = breadcrumbs.breadcrumbs;
-  let tmp = null;
-  if (0 !== breadcrumbs.length) {
-    const obj = { variant: "text-xs/medium", color: "text-muted", children: breadcrumbs.join(" \u2192 ") };
-    tmp = closure_1_14(Text_Text.Text, obj);
-  }
-  return tmp;
-}
-function SettingSearchResultIcon(IconComponent) {
-  IconComponent = IconComponent.IconComponent;
-  useToken;
-  if (null == IconComponent) {
-    const obj2 = { style: null };
-    const obj3 = { width: tmp4 };
-    obj2.style = obj3;
-    let tmp6 = closure_1_14(View, obj2);
-  } else {
-    const obj = { IconComponent };
-    tmp6 = closure_1_14(TableRow.TableRow.Icon, obj);
-  }
-  return tmp6;
-}
 function RouteSettingSearchResult(setting) {
   ({ settingData, title } = setting);
   setting = setting.setting;
@@ -137,23 +56,7 @@ function RouteSettingSearchResult(setting) {
   let obj = title(index[13]);
   const tmp = title;
   const tmp2 = index;
-  return closure_14(tmp(tmp2[12]).TableRow, { label: title, onPress: callback, arrow: true, icon: closure_14(SettingSearchResultIcon, { IconComponent }), subLabel: closure_14(SettingSearchResultBreadcrumbs, { breadcrumbs }), start: 0 === index, end: index === total - 1 });
-}
-function PressableSettingSearchResult(setting) {
-  ({ settingData, title } = setting);
-  setting = setting.setting;
-  const index = setting.index;
-  const total = setting.total;
-  const onPress = settingData.onPress;
-  const items = [setting, title, index, total, onPress];
-  ({ IconComponent, breadcrumbs } = setting);
-  const callback = noop.useCallback(() => {
-    const result = Tracking.trackSettingSearchResultPress({ setting, title, searchResultPosition: index, numSearchResults: total });
-    const obj2 = { setting, title, searchResultPosition: index, numSearchResults: total };
-    const result1 = KeyboardManagerUtils.dismissGlobalKeyboard();
-    onPress();
-  }, items);
-  return closure_14(title(index[12]).TableRow, { label: title, onPress: callback, icon: closure_14(SettingSearchResultIcon, { IconComponent }), subLabel: closure_14(SettingSearchResultBreadcrumbs, { breadcrumbs }), start: 0 === index, end: index === total - 1, arrow: settingData.withArrow });
+  return closure_14(tmp(tmp2[12]).TableRow, { label: title, onPress: callback, arrow: true, icon: closure_14(closure_31, { IconComponent }), subLabel: closure_14(closure_30, { breadcrumbs }), start: 0 === index, end: index === total - 1 });
 }
 function StaticSettingSearchResult(title) {
   title = title.title;
@@ -181,8 +84,8 @@ function StaticSettingSearchResult(title) {
     tmp6 = callback;
   }
   obj.onPress = tmp6;
-  obj.icon = closure_14(SettingSearchResultIcon, { IconComponent });
-  obj.subLabel = closure_14(SettingSearchResultBreadcrumbs, { breadcrumbs });
+  obj.icon = closure_14(closure_31, { IconComponent });
+  obj.subLabel = closure_14(closure_30, { breadcrumbs });
   let tmp3Result = null;
   if (null != trailing) {
     let obj2 = { text: trailing };
@@ -193,29 +96,18 @@ function StaticSettingSearchResult(title) {
   obj.end = index === total - 1;
   return closure_14(title(index[12]).TableRow, obj);
 }
-function SettingSearchResultPlaceholder(arg0) {
-  ({ start, end } = arg0);
-  const tmp = closure_17();
-  const obj = { start, end, label: null, icon: null };
-  const obj2 = { style: null };
-  const items = [tmp.placeholderUsername, _slicedToArray(noop.useState(() => ({ width: `${10 + 80 * Math.random() | 0}%` })), 1)[0]];
-  obj2.style = items;
-  obj.label = closure_1_14(View, obj2);
-  obj.icon = closure_1_14(View, { style: tmp.placeholderAvatar });
-  return closure_1_14(TableRow.TableRow, obj);
-}
 let closure_3 = ["onSlidingComplete", "step", "startIcon", "endIcon", "minimumValue", "maximumValue", "valueLabel", "defaultValue", "onValueChange"];
 let closure_4 = ["settingData"];
 const View = fn(17).View;
-const SettingRendererConstants = fn(11216);
+const SettingRendererConstants = fn(11130);
 ({ GUILD_SELECT_ALL_SERVERS_OPTION_ID: closure_12, NodeType: map1 } = SettingRendererConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj = { slider: { marginTop: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_8 }, sliderTitle: { flexDirection: "row", justifyContent: "space-between" }, radioSettingHighlight: { top: 26 }, defaultIcon: null, placeholderAvatar: null, placeholderUsername: null };
 let obj3 = { marginTop: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_8 };
 obj.defaultIcon = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, justifyContent: "center", alignItems: "center" };
-let size = { width: fn(1177).AVATAR_SIZE_MAP[fn(undefined, 1177).AvatarSizes.REFRESH_MEDIUM_32], height: fn(1177).AVATAR_SIZE_MAP[fn(undefined, 1177).AvatarSizes.REFRESH_MEDIUM_32], borderRadius: nativeDefault.radii.xl, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
+let size = { width: fn(1188).AVATAR_SIZE_MAP[fn(undefined, 1188).AvatarSizes.REFRESH_MEDIUM_32], height: fn(1188).AVATAR_SIZE_MAP[fn(undefined, 1188).AvatarSizes.REFRESH_MEDIUM_32], borderRadius: nativeDefault.radii.xl, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 obj.placeholderAvatar = size;
 let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, justifyContent: "center", alignItems: "center" };
 obj.placeholderUsername = { height: 20, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
@@ -254,7 +146,7 @@ let closure_18 = noop.memo((arg0) => {
   let tmp11 = description;
   if (null != tmp10) {
     const obj2 = { disabledActionLabel: tmp10.label, description };
-    tmp11 = closure_14(DisabledActionDescriptionWithLink, obj2);
+    tmp11 = closure_14(closure_23, obj2);
   }
   const obj3 = { label: title, subLabel: tmp11, disabled: true === isDisabled, arrow: true, variant, icon: null, trailing: null, onPress: null, accessibilityHint: null, start: null, end: null };
   let tmp14Result = null;
@@ -294,50 +186,182 @@ let closure_18 = noop.memo((arg0) => {
   obj3.end = end;
   return closure_14(screen(preNavigationAction[12]).TableRow, obj3);
 });
-let closure_20 = noop.memo((useSelectedGuildId) => {
-  const merged = Object.assign(useSelectedGuildId, Object.assign({ useSelectedGuildId: 0 }));
-  dependencyMap = undefined;
-  const selectedGuildId = useSelectedGuildId.useSelectedGuildId();
+let ReactCompilerGating = fn(558);
+let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  _require = arg0;
+  let stringResult = dependencyMap;
+  const cResult = require("c").c(6);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [GuildStore];
+    cResult[0] = items;
+    let first = items;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] !== arg0) {
+    const fn = function l() {
+      return GuildStore.getGuild(closure_0);
+    };
+    cResult[1] = arg0;
+    cResult[2] = fn;
+    let tmp6 = fn;
+  } else {
+    tmp6 = cResult[2];
+  }
+  const obj = require("c");
+  const stateFromStores = require("initialize").useStateFromStores(first, tmp6);
+  if (arg0 === closure_12) {
+    const _Symbol = Symbol;
+    if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+      const intl2 = tmp(1126).intl;
+      stringResult = intl2.string(tmp(1126).t["32u1Dx"]);
+      cResult[3] = stringResult;
+    }
+  } else {
+    let name;
+    if (stateFromStores != null) {
+      name = stateFromStores.name;
+    }
+    if (cResult[4] !== name) {
+      let name1;
+      if (stateFromStores != null) {
+        name1 = stateFromStores.name;
+      }
+      if (name1 == null) {
+        const intl = tmp(1126).intl;
+        name1 = intl.string(tmp(1126).t["XBwns+"]);
+      }
+      let name2;
+      if (stateFromStores != null) {
+        name2 = stateFromStores.name;
+      }
+      cResult[4] = name2;
+      cResult[5] = name1;
+      let tmp9 = name1;
+    } else {
+      tmp9 = cResult[5];
+    }
+    return tmp9;
+  }
+  const tmpResult = require("initialize");
+}) : ((arg0) => {
+  _require = arg0;
   const items = [GuildStore];
-  closure_1 = selectedGuildId(504).useStateFromStores(items, () => GuildStore.getGuild(selectedGuildId));
-  closure_129_0 = selectedGuildId;
-  let obj = selectedGuildId(504);
-  const items1 = [GuildStore];
-  const stateFromStores = selectedGuildId(504).useStateFromStores(items1, () => GuildStore.getGuild(selectedGuildId));
-  if (selectedGuildId === closure_12) {
-    const intl2 = tmp3(1115).intl;
-    let stringResult = intl2.string(tmp3(1115).t["32u1Dx"]);
+  const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0));
+  if (arg0 === closure_12) {
+    const intl2 = tmp(1126).intl;
+    let stringResult = intl2.string(tmp(1126).t["32u1Dx"]);
   } else {
     stringResult = undefined;
     if (stateFromStores != null) {
       stringResult = stateFromStores.name;
     }
     if (stringResult == null) {
-      const intl = tmp3(1115).intl;
-      stringResult = intl.string(tmp3(1115).t["XBwns+"]);
+      const intl = tmp(1126).intl;
+      stringResult = intl.string(tmp(1126).t["XBwns+"]);
     }
   }
-  dependencyMap = stringResult;
-  const items2 = [stringResult];
-  const obj2 = selectedGuildId(504);
-  const obj3 = {};
-  const callback = noop.useCallback(() => c2, items2);
+  return stringResult;
+});
+ReactCompilerGating = fn(558);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((size) => {
+  const cResult = c.c(9);
+  size = size.size;
+  let str = "sm";
+  if (undefined !== size) {
+    str = size;
+  }
+  const tmp4 = closure_17();
+  let num = 32;
+  if ("xs" === str) {
+    num = 24;
+  }
+  const result = num / 3;
+  if (cResult[0] === result) {
+    if (cResult[1] === num) {
+      if (cResult[2] === tmp4.defaultIcon) {
+        let tmp6 = cResult[3];
+      }
+      if (cResult[4] !== str) {
+        const obj2 = { color: "white", size: str };
+        const tmp10 = state(ClydeIcon.ClydeIcon, obj2);
+        cResult[4] = str;
+        cResult[5] = tmp10;
+        let tmp8 = tmp10;
+      } else {
+        tmp8 = cResult[5];
+      }
+      if (cResult[6] === tmp6) {
+        if (cResult[7] === tmp8) {
+          let tmp11 = cResult[8];
+        }
+        return tmp11;
+      }
+      const obj3 = { style: tmp6, children: tmp8 };
+      const tmp14 = state(View, obj3);
+      cResult[6] = tmp6;
+      cResult[7] = tmp8;
+      cResult[8] = tmp14;
+      tmp11 = tmp14;
+    }
+  }
+  const obj4 = {};
+  const merged = Object.assign(tmp4.defaultIcon);
+  obj4.width = num;
+  obj4.height = num;
+  obj4.borderRadius = result;
+  cResult[0] = result;
+  cResult[1] = num;
+  cResult[2] = tmp4.defaultIcon;
+  cResult[3] = obj4;
+  tmp6 = obj4;
+}) : ((size) => {
+  let str = size.size;
+  if (str === undefined) {
+    str = "sm";
+  }
+  let num = 32;
+  if ("xs" === str) {
+    num = 24;
+  }
+  const obj = { style: null, children: null };
+  const obj2 = {};
+  const merged = Object.assign(closure_17().defaultIcon);
+  obj2.width = num;
+  obj2.height = num;
+  obj2.borderRadius = num / 3;
+  obj.style = obj2;
+  obj.children = state(ClydeIcon.ClydeIcon, { color: "white", size: str });
+  return state(View, obj);
+});
+let closure_20 = tmp4;
+let closure_21 = noop.memo((useSelectedGuildId) => {
+  const merged = Object.assign(useSelectedGuildId, Object.assign({ useSelectedGuildId: 0 }));
+  const selectedGuildId = useSelectedGuildId.useSelectedGuildId();
+  const items = [GuildStore];
+  closure_1 = selectedGuildId(504).useStateFromStores(items, () => GuildStore.getGuild(selectedGuildId));
+  const tmp3 = closure_19(selectedGuildId);
+  dependencyMap = tmp3;
+  const items1 = [tmp3];
+  let obj = selectedGuildId(504);
+  const obj2 = {};
+  const callback = noop.useCallback(() => closure_2, items1);
   const merged1 = Object.assign(merged);
-  obj3.type = constants.PRESSABLE;
-  obj3.useTitle = callback;
-  obj3.withArrow = true;
-  obj3.IconComponent = noop.memo(() => {
+  obj2.type = constants.PRESSABLE;
+  obj2.useTitle = callback;
+  obj2.withArrow = true;
+  obj2.IconComponent = noop.memo(() => {
     if (null == closure_1) {
-      let tmp7 = closure_2_14(GuildSelectDefaultIcon, {});
+      let tmp7 = state(closure_20, {});
     } else {
       const obj = { size: GuildIcon.GuildIconSizes.SMALL_32, guild: tmp };
-      tmp7 = closure_2_14(GuildIconDefault, obj);
+      tmp7 = state(GuildIconDefault, obj);
     }
     return tmp7;
   });
-  return closure_14(closure_21, obj3);
+  return closure_14(closure_22, obj2);
 });
-let closure_21 = noop.memo((arg0) => {
+let closure_22 = noop.memo((arg0) => {
   ({ useDescription, useIsDisabled, useTrailing, variant, start, end, IconComponent } = arg0);
   ({ setting, onPress, useTitle, withArrow } = arg0);
   let highlightSettingItem = useHighlightSettingItem.useHighlightSettingItem(setting);
@@ -358,7 +382,7 @@ let closure_21 = noop.memo((arg0) => {
   let tmp10Result = null;
   if (null != IconComponent) {
     const obj3 = { IconComponent, variant };
-    tmp10Result = closure_1_14(TableRow.TableRow.Icon, obj3);
+    tmp10Result = state(TableRow.TableRow.Icon, obj3);
   }
   obj2.icon = tmp10Result;
   obj2.onPress = onPress;
@@ -368,22 +392,105 @@ let closure_21 = noop.memo((arg0) => {
     let tmp10Result2 = trailing;
     if (typeof trailing === "string") {
       const obj4 = { text: trailing };
-      tmp10Result2 = closure_1_14(TableRow.TableRow.TrailingText, obj4);
+      tmp10Result2 = state(TableRow.TableRow.TrailingText, obj4);
     }
     tmp12 = tmp10Result2;
   }
   obj2.trailing = tmp12;
   obj2.start = start;
   obj2.end = end;
-  const children = [closure_1_14(TableRow.TableRow, obj2), ];
+  const children = [state(TableRow.TableRow, obj2), ];
   if (highlightSettingItem) {
     const obj5 = { start, end };
-    highlightSettingItem = closure_1_14(SettingListItemHighlightDefault, obj5);
+    highlightSettingItem = state(SettingListItemHighlightDefault, obj5);
   }
   children[1] = highlightSettingItem;
-  return value2(__initData, { children });
+  return value2(closure_1_15, { children });
 });
-let closure_23 = noop.memo((arg0) => {
+ReactCompilerGating = fn(558);
+let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(9);
+  ({ disabledActionLabel, description, descriptionVariant, descriptionColor } = arg0);
+  if (cResult[0] !== disabledActionLabel) {
+    const obj2 = { variant: "text-xs/medium", color: "text-link", children: disabledActionLabel };
+    const tmp6 = state(Text_Text.Text, obj2);
+    cResult[0] = disabledActionLabel;
+    cResult[1] = tmp6;
+    let tmp4 = tmp6;
+  } else {
+    tmp4 = cResult[1];
+  }
+  if (null == description) {
+    return tmp4;
+  } else {
+    if (cResult[2] === description) {
+      if (cResult[3] === descriptionColor) {
+        if (cResult[4] === descriptionVariant) {
+          let tmp7 = cResult[5];
+        }
+        if (cResult[6] === tmp7) {
+          if (cResult[7] === tmp4) {
+            let tmp11 = cResult[8];
+          }
+          return tmp11;
+        }
+        const obj3 = { children: null };
+        const items = [tmp4, tmp7];
+        obj3.children = items;
+        const tmp14 = value2(View, obj3);
+        cResult[6] = tmp7;
+        cResult[7] = tmp4;
+        cResult[8] = tmp14;
+        tmp11 = tmp14;
+      }
+    }
+    let tmp10Result = description;
+    if (!noop.isValidElement(description)) {
+      let str = descriptionVariant;
+      if (descriptionVariant == null) {
+        str = "text-xs/medium";
+      }
+      const obj4 = { variant: str, color: null, children: null };
+      let str2 = descriptionColor;
+      if (descriptionColor == null) {
+        str2 = "text-subtle";
+      }
+      obj4.color = str2;
+      obj4.children = description;
+      tmp10Result = state(Text_Text.Text, obj4);
+    }
+    cResult[2] = description;
+    cResult[3] = descriptionColor;
+    cResult[4] = descriptionVariant;
+    cResult[5] = tmp10Result;
+    tmp7 = tmp10Result;
+  }
+}) : ((children) => {
+  ({ description, descriptionVariant, descriptionColor } = children);
+  const tmp4 = state(Text_Text.Text, { variant: "text-xs/medium", color: "text-link", children: children.disabledActionLabel });
+  if (null == description) {
+    return tmp4;
+  } else {
+    let tmpResult = description;
+    if (!noop.isValidElement(description)) {
+      if (descriptionVariant == null) {
+        descriptionVariant = "text-xs/medium";
+      }
+      const obj = { variant: descriptionVariant, color: null, children: null };
+      if (descriptionColor == null) {
+        descriptionColor = "text-subtle";
+      }
+      obj.color = descriptionColor;
+      obj.children = description;
+      tmpResult = state(Text_Text.Text, obj);
+    }
+    const obj2 = { children: null };
+    const items = [tmp4, tmpResult];
+    obj2.children = items;
+    return value2(View, obj2);
+  }
+});
+let closure_24 = noop.memo((arg0) => {
   ({ useDescription, useIsDisabled, variant, start, end, IconComponent } = arg0);
   ({ setting, onValueChange, useTitle, useValue, hasIcon } = arg0);
   let highlightSettingItem = useHighlightSettingItem.useHighlightSettingItem(setting);
@@ -401,7 +508,7 @@ let closure_23 = noop.memo((arg0) => {
   let tmp8 = null;
   if (null != IconComponent) {
     const obj3 = { IconComponent, variant };
-    tmp8 = closure_1_14(TableRow.TableRow.Icon, obj3);
+    tmp8 = state(TableRow.TableRow.Icon, obj3);
   }
   obj2.icon = tmp8;
   obj2.variant = variant;
@@ -411,28 +518,28 @@ let closure_23 = noop.memo((arg0) => {
     const obj5 = {};
     const merged = Object.assign(obj2);
     const obj6 = { disabledActionLabel: isDisabled.label, description, descriptionVariant: "text-md/semibold", descriptionColor: "mobile-text-heading-primary" };
-    obj5.subLabel = closure_1_14(DisabledActionDescriptionWithLink, obj6);
+    obj5.subLabel = state(closure_23, obj6);
     obj5.accessible = true;
     ({ accessibilityHint: obj4.accessibilityHint, onPress: obj4.onPress } = isDisabled);
     const obj7 = { style: { opacity: 0.5 }, children: null };
     const obj8 = { "aria-hidden": true, value, disabled: true };
-    obj7.children = closure_1_14(FormSwitch.FormSwitch, obj8);
-    obj5.trailing = closure_1_14(View, obj7);
-    let tmp16 = closure_1_14(TableRow.TableRow, obj5);
-    let tmp17 = closure_1_14;
+    obj7.children = state(FormSwitch.FormSwitch, obj8);
+    obj5.trailing = state(View, obj7);
+    let tmp16 = state(TableRow.TableRow, obj5);
+    let tmp17 = state;
   } else {
     const obj9 = {};
     const merged1 = Object.assign(obj2);
     obj9.disabled = isDisabled;
     obj9.onValueChange = onValueChange;
     obj9.value = value;
-    tmp16 = closure_1_14(TableSwitchRow.TableSwitchRow, obj9);
-    tmp17 = closure_1_14;
+    tmp16 = state(TableSwitchRow.TableSwitchRow, obj9);
+    tmp17 = state;
   }
   let tmp17Result = tmp16;
   if (true === hasIcon) {
     const obj10 = { children: tmp16 };
-    tmp17Result = tmp17(ForceSwitchIcons, obj10);
+    tmp17Result = tmp17(closure_25, obj10);
   }
   const children = [tmp17Result, ];
   if (highlightSettingItem) {
@@ -440,15 +547,52 @@ let closure_23 = noop.memo((arg0) => {
     highlightSettingItem = tmp17(SettingListItemHighlightDefault, obj19);
   }
   children[1] = highlightSettingItem;
-  return value2(__initData, { children });
+  return value2(closure_1_15, { children });
 });
-let closure_25 = noop.memo((arg0) => {
+ReactCompilerGating = fn(558);
+let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
+  const cResult = c.c(5);
+  children = children.children;
+  const context = noop.useContext(AccessibilityPreferencesContext.AccessibilityPreferencesContext);
+  if (cResult[0] !== context) {
+    const obj2 = {};
+    const merged = Object.assign(context);
+    obj2.switchIconsEnabled = true;
+    cResult[0] = context;
+    cResult[1] = obj2;
+    let tmp5 = obj2;
+  } else {
+    tmp5 = cResult[1];
+  }
+  if (cResult[2] === children) {
+    if (cResult[3] === tmp5) {
+      let tmp9 = cResult[4];
+    }
+    return tmp9;
+  }
+  const tmp10 = state(AccessibilityPreferencesContext.AccessibilityPreferencesContext.Provider, { value: tmp5, children });
+  cResult[2] = children;
+  cResult[3] = tmp5;
+  cResult[4] = tmp10;
+  tmp9 = tmp10;
+}) : ((children) => {
+  const context = noop.useContext(AccessibilityPreferencesContext.AccessibilityPreferencesContext);
+  const items = [context];
+  value = noop.useMemo(() => {
+    const obj = {};
+    const merged = Object.assign(context);
+    obj.switchIconsEnabled = true;
+    return obj;
+  }, items);
+  return state(AccessibilityPreferencesContext.AccessibilityPreferencesContext.Provider, { value, children: children.children });
+});
+let closure_26 = noop.memo((arg0) => {
   ({ setting, useTitle, useValue, useOptions, onValueChange } = arg0);
   const tmp = closure_17();
   let highlightSettingItem = useHighlightSettingItem.useHighlightSettingItem(setting);
   const title = useTitle();
   value = useValue();
-  const options = useOptions();
+  options = useOptions();
   let combined = value;
   if (typeof value === "number") {
     let _HermesInternal = HermesInternal;
@@ -456,7 +600,7 @@ let closure_25 = noop.memo((arg0) => {
   }
   const someResult = options.some((icon) => null != icon.icon);
   const children = [
-    closure_1_14(TableRadioGroup.TableRadioGroup, {
+    state(TableRadioGroup.TableRadioGroup, {
       title,
       defaultValue: combined,
       onChange: onValueChange,
@@ -468,23 +612,23 @@ let closure_25 = noop.memo((arg0) => {
         } else {
           combined = label.value;
         }
-        return closure_1_14(TableRadioRow.TableRadioRow, { value: combined, label: label.label, subLabel: label.subLabel, disabled: label.disabled, icon: label.icon }, label.value);
+        return closure_1_14(require("TableRadioRow").TableRadioRow, { value: combined, label: label.label, subLabel: label.subLabel, disabled: label.disabled, icon: label.icon }, label.value);
       })
     }, combined),
 
   ];
   if (highlightSettingItem) {
     const obj3 = { start: true, end: true, style: tmp.radioSettingHighlight };
-    highlightSettingItem = closure_1_14(SettingListItemHighlightDefault, obj3);
+    highlightSettingItem = state(SettingListItemHighlightDefault, obj3);
   }
   children[1] = highlightSettingItem;
-  return value2(__initData, { children });
+  return value2(closure_1_15, { children });
 });
-let closure_26 = noop.memo((arg0) => {
+let closure_27 = noop.memo((arg0) => {
   ({ variant, useTrailing, useIsDisabled, useDescription, start, end, IconComponent } = arg0);
   let trailing;
   ({ setting, useTitle } = arg0);
-  let highlightSettingItem = trailing(14466).useHighlightSettingItem(setting);
+  let highlightSettingItem = trailing(14501).useHighlightSettingItem(setting);
   trailing = undefined;
   const title = useTitle();
   if (useTrailing != null) {
@@ -516,18 +660,18 @@ let closure_26 = noop.memo((arg0) => {
   let tmp11Result = null;
   if (null != IconComponent) {
     const obj3 = { IconComponent, variant };
-    tmp11Result = closure_14(tmp(6103).TableRow.Icon, obj3);
+    tmp11Result = closure_14(tmp(5993).TableRow.Icon, obj3);
   }
   obj2.icon = tmp11Result;
   let tmp11Result2 = null;
   if (null != trailing) {
     const obj4 = { text: trailing };
-    tmp11Result2 = closure_14(tmp(6103).TableRow.TrailingText, obj4);
+    tmp11Result2 = closure_14(tmp(5993).TableRow.TrailingText, obj4);
   }
   obj2.trailing = tmp11Result2;
   obj2.start = start;
   obj2.end = end;
-  const children = [closure_14(trailing(6103).TableRow, obj2), ];
+  const children = [closure_14(trailing(5993).TableRow, obj2), ];
   if (highlightSettingItem) {
     const obj5 = { start, end };
     highlightSettingItem = closure_14(SettingListItemHighlightDefault, obj5);
@@ -535,7 +679,7 @@ let closure_26 = noop.memo((arg0) => {
   children[1] = highlightSettingItem;
   return closure_16(closure_15, { children });
 });
-let closure_27 = noop.memo((arg0) => {
+let closure_28 = noop.memo((arg0) => {
   ({ useValue, start, end } = arg0);
   ({ setting, useTitle, onValueChange, maximum } = arg0);
   let highlightSettingItem = useHighlightSettingItem.useHighlightSettingItem(setting);
@@ -546,16 +690,16 @@ let closure_27 = noop.memo((arg0) => {
   }
   const obj2 = { label: title, start, end, subLabel: null };
   const tmp4 = closure_17();
-  obj2.subLabel = closure_1_14(View, { style: closure_17().slider, children: closure_1_14(VolumeSliderDefault, { value, maxVolume: maximum, onValueChange, accessibilityLabel: title }) });
-  const children = [closure_1_14(TableRow.TableRow, obj2), ];
+  obj2.subLabel = state(View, { style: closure_17().slider, children: state(VolumeSliderDefault, { value, maxVolume: maximum, onValueChange, accessibilityLabel: title }) });
+  const children = [state(TableRow.TableRow, obj2), ];
   if (highlightSettingItem) {
     const obj4 = { start, end };
-    highlightSettingItem = closure_1_14(SettingListItemHighlightDefault, obj4);
+    highlightSettingItem = state(SettingListItemHighlightDefault, obj4);
   }
   children[1] = highlightSettingItem;
-  return value2(__initData, { children });
+  return value2(closure_1_15, { children });
 });
-let closure_28 = noop.memo((useTrailing) => {
+let closure_29 = noop.memo((useTrailing) => {
   useTrailing = useTrailing.useTrailing;
   let num2;
   let num4;
@@ -597,7 +741,7 @@ let closure_28 = noop.memo((useTrailing) => {
   _objectWithoutProperties = tmp3;
   const tmp4 = closure_17();
   const items = [c9];
-  const stateFromStores = onSlidingComplete(num2[15]).useStateFromStores(items, () => _undefined.locale);
+  const stateFromStores = onSlidingComplete(num2[17]).useStateFromStores(items, () => _undefined.locale);
   const tmp8 = onValueChange(value.useState(() => {
     value = value.value;
     if (value == null) {
@@ -607,7 +751,7 @@ let closure_28 = noop.memo((useTrailing) => {
   }), 2);
   value = tmp8[0];
   closure_8 = tmp8[1];
-  const obj = onSlidingComplete(num2[15]);
+  const obj = onSlidingComplete(num2[17]);
   [tmp11, c9] = onValueChange(value.useState(false), 2);
   const items1 = [onValueChange];
   const callback = value.useCallback(() => {
@@ -651,20 +795,20 @@ let closure_28 = noop.memo((useTrailing) => {
   }
   const obj2 = { start, end, shadow: "none", border: "none", children: null };
   const obj3 = { style: tmp4.sliderTitle, children: null };
-  const items7 = [closure_14(onSlidingComplete(num2[21]).Text, { variant: "text-md/semibold", children: title }), trailing];
+  const items7 = [closure_14(onSlidingComplete(num2[23]).Text, { variant: "text-md/semibold", children: title }), trailing];
   obj3.children = items7;
   const items8 = [closure_16(closure_8, obj3), ];
   let tmp20Result = null != value;
   if (tmp20Result) {
     if (formatPercentResult == null) {
-      formatPercentResult = tmp5(tmp6[34]).formatPercent(stateFromStores, value);
-      const tmp5Result = tmp5(tmp6[34]);
+      formatPercentResult = tmp5(tmp6[36]).formatPercent(stateFromStores, value);
+      const tmp5Result = tmp5(tmp6[36]);
     }
     const obj4 = { variant: "text-sm/medium", color: "text-muted", children: formatPercentResult };
-    tmp20Result = closure_14(tmp5(tmp6[21]).Text, obj4);
+    tmp20Result = closure_14(tmp5(tmp6[23]).Text, obj4);
   }
   items8[1] = tmp20Result;
-  const items9 = [closure_16(onSlidingComplete(num2[33]).Stack, { direction: "horizontal", justify: "space-between", children: items8 }), , ];
+  const items9 = [closure_16(onSlidingComplete(num2[35]).Stack, { direction: "horizontal", justify: "space-between", children: items8 }), , ];
   const tmp10 = onValueChange(value.useState(false), 2);
   const tmp22 = closure_8;
   let slider;
@@ -682,9 +826,9 @@ let closure_28 = noop.memo((useTrailing) => {
   obj6.maximumValue = num4;
   obj6.onSlidingStart = callback;
   obj6.onSlidingComplete = callback2;
-  obj6.startIcon = closure_14(onSlidingComplete(num2[37]).PressableOpacity, { accessible: false, onPress: callback6, children: startIcon });
-  obj6.endIcon = closure_14(onSlidingComplete(num2[37]).PressableOpacity, { accessible: false, onPress: callback5, children: endIcon });
-  obj5.children = closure_14(onSlidingComplete(num2[36]).Slider, obj6);
+  obj6.startIcon = closure_14(onSlidingComplete(num2[39]).PressableOpacity, { accessible: false, onPress: callback6, children: startIcon });
+  obj6.endIcon = closure_14(onSlidingComplete(num2[39]).PressableOpacity, { accessible: false, onPress: callback5, children: endIcon });
+  obj5.children = closure_14(onSlidingComplete(num2[38]).Slider, obj6);
   items9[1] = closure_14(tmp22, obj5);
   let tmp26 = !tmp11;
   if (!tmp11) {
@@ -692,18 +836,254 @@ let closure_28 = noop.memo((useTrailing) => {
   }
   const obj7 = { children: null };
   const obj8 = { disabled: tmp26, variant: "secondary", text: null, onPress: null };
-  const intl = tmp5(tmp6[16]).intl;
-  obj8.text = intl.string(onSlidingComplete(num2[16]).t["3b//lO"]);
+  const intl = tmp5(tmp6[18]).intl;
+  obj8.text = intl.string(onSlidingComplete(num2[18]).t["3b//lO"]);
   obj8.onPress = callback4;
-  items9[2] = closure_14(onSlidingComplete(num2[38]).Button, obj8);
+  items9[2] = closure_14(onSlidingComplete(num2[40]).Button, obj8);
   obj7.children = items9;
-  obj2.children = closure_16(onSlidingComplete(num2[33]).Stack, obj7);
-  return closure_14(onSlidingComplete(num2[32]).Card, obj2);
+  obj2.children = closure_16(onSlidingComplete(num2[35]).Stack, obj7);
+  return closure_14(onSlidingComplete(num2[34]).Card, obj2);
+});
+ReactCompilerGating = fn(558);
+let closure_30 = ReactCompilerGating.isReactCompilerEnabled() ? ((breadcrumbs) => {
+  let Text = require;
+  let tmp = dependencyMap;
+  const cResult = c.c(4);
+  breadcrumbs = breadcrumbs.breadcrumbs;
+  if (0 === breadcrumbs.length) {
+    return null;
+  } else {
+    if (cResult[0] !== breadcrumbs) {
+      const joined = breadcrumbs.join(" \u2192 ");
+      cResult[0] = breadcrumbs;
+      cResult[1] = joined;
+      let tmp3 = joined;
+    } else {
+      tmp3 = cResult[1];
+    }
+    if (cResult[2] !== tmp3) {
+      Text = Text_Text.Text;
+      const obj2 = { variant: "text-xs/medium", color: "text-muted", children: tmp3 };
+      tmp = state(Text, obj2);
+      cResult[2] = tmp3;
+      cResult[3] = tmp;
+    }
+  }
+}) : ((breadcrumbs) => {
+  breadcrumbs = breadcrumbs.breadcrumbs;
+  let tmp = null;
+  if (0 !== breadcrumbs.length) {
+    const obj = { variant: "text-xs/medium", color: "text-muted", children: breadcrumbs.join(" \u2192 ") };
+    tmp = state(Text_Text.Text, obj);
+  }
+  return tmp;
+});
+ReactCompilerGating = fn(558);
+let closure_31 = ReactCompilerGating.isReactCompilerEnabled() ? ((IconComponent) => {
+  const cResult = c.c(4);
+  IconComponent = IconComponent.IconComponent;
+  const token = useToken.useToken(nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE);
+  if (null == IconComponent) {
+    if (cResult[0] !== token) {
+      const obj3 = { style: null };
+      const obj4 = { width: token };
+      obj3.style = obj4;
+      const tmp11 = state(View, obj3);
+      cResult[0] = token;
+      cResult[1] = tmp11;
+    }
+  } else {
+    if (cResult[2] !== IconComponent) {
+      const obj5 = { IconComponent };
+      const tmp7 = state(TableRow.TableRow.Icon, obj5);
+      cResult[2] = IconComponent;
+      cResult[3] = tmp7;
+      let tmp5 = tmp7;
+    } else {
+      tmp5 = cResult[3];
+    }
+    return tmp5;
+  }
+}) : ((IconComponent) => {
+  IconComponent = IconComponent.IconComponent;
+  useToken;
+  if (null == IconComponent) {
+    const obj2 = { style: null };
+    const obj3 = { width: tmp4 };
+    obj2.style = obj3;
+    let tmp6 = state(View, obj2);
+  } else {
+    const obj = { IconComponent };
+    tmp6 = state(TableRow.TableRow.Icon, obj);
+  }
+  return tmp6;
+});
+ReactCompilerGating = fn(558);
+let closure_33 = ReactCompilerGating.isReactCompilerEnabled() ? ((index) => {
+  const cResult = title(index[16]).c(18);
+  ({ settingData, IconComponent, title } = index);
+  ({ breadcrumbs, setting } = index);
+  index = index.index;
+  const total = index.total;
+  const onPress = settingData.onPress;
+  const withArrow = settingData.withArrow;
+  if (cResult[0] === index) {
+    if (cResult[1] === onPress) {
+      if (cResult[2] === setting) {
+        if (cResult[3] === title) {
+          if (cResult[4] === total) {
+            let tmp4 = cResult[5];
+          }
+          if (cResult[6] !== IconComponent) {
+            let obj2 = { IconComponent };
+            const tmp8 = closure_14(closure_31, obj2);
+            cResult[6] = IconComponent;
+            cResult[7] = tmp8;
+            let tmp5 = tmp8;
+          } else {
+            tmp5 = cResult[7];
+          }
+          if (cResult[8] !== breadcrumbs) {
+            const obj3 = { breadcrumbs };
+            const tmp12 = closure_14(closure_30, obj3);
+            cResult[8] = breadcrumbs;
+            cResult[9] = tmp12;
+            let tmp9 = tmp12;
+          } else {
+            tmp9 = cResult[9];
+          }
+          if (cResult[10] === tmp4) {
+            if (cResult[11] === tmp5) {
+              if (cResult[12] === tmp9) {
+                if (cResult[13] === tmp13) {
+                  if (cResult[14] === tmp14) {
+                    if (cResult[15] === title) {
+                      if (cResult[16] === withArrow) {
+                        let tmp15 = cResult[17];
+                      }
+                      return tmp15;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          const obj4 = { label: title, onPress: tmp4, icon: tmp5, subLabel: tmp9, start: 0 === index, end: index === total - 1, arrow: withArrow };
+          const tmp17 = closure_14(title(tmp2[12]).TableRow, obj4);
+          cResult[10] = tmp4;
+          cResult[11] = tmp5;
+          cResult[12] = tmp9;
+          cResult[13] = 0 === index;
+          cResult[14] = index === total - 1;
+          cResult[15] = title;
+          cResult[16] = withArrow;
+          cResult[17] = tmp17;
+          tmp15 = tmp17;
+        }
+      }
+    }
+  }
+  const fn = function n() {
+    const result = Tracking.trackSettingSearchResultPress({ setting, title, searchResultPosition: index, numSearchResults: total });
+    const obj2 = { setting, title, searchResultPosition: index, numSearchResults: total };
+    const result1 = KeyboardManagerUtils.dismissGlobalKeyboard();
+    onPress();
+  };
+  cResult[0] = index;
+  cResult[1] = onPress;
+  cResult[2] = setting;
+  cResult[3] = title;
+  cResult[4] = total;
+  cResult[5] = fn;
+  tmp4 = fn;
+  let obj = title(index[16]);
+  tmp2 = index;
+}) : ((setting) => {
+  ({ settingData, title } = setting);
+  setting = setting.setting;
+  const index = setting.index;
+  const total = setting.total;
+  const onPress = settingData.onPress;
+  const items = [setting, title, index, total, onPress];
+  ({ IconComponent, breadcrumbs } = setting);
+  const callback = noop.useCallback(() => {
+    const result = Tracking.trackSettingSearchResultPress({ setting, title, searchResultPosition: index, numSearchResults: total });
+    const obj2 = { setting, title, searchResultPosition: index, numSearchResults: total };
+    const result1 = KeyboardManagerUtils.dismissGlobalKeyboard();
+    onPress();
+  }, items);
+  return closure_14(title(index[12]).TableRow, { label: title, onPress: callback, icon: closure_14(closure_31, { IconComponent }), subLabel: closure_14(closure_30, { breadcrumbs }), start: 0 === index, end: index === total - 1, arrow: settingData.withArrow });
+});
+ReactCompilerGating = fn(558);
+let closure_35 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(11);
+  ({ start, end } = arg0);
+  const tmp4 = closure_17();
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const fn = function n() {
+      return { width: `${10 + 80 * Math.random() | 0}%` };
+    };
+    cResult[0] = fn;
+    let first = fn;
+  } else {
+    first = cResult[0];
+  }
+  const first1 = _slicedToArray(noop.useState(first), 1)[0];
+  if (cResult[1] === tmp4.placeholderUsername) {
+    if (cResult[2] === first1) {
+      let tmp7 = cResult[3];
+    }
+    if (cResult[4] !== tmp4.placeholderAvatar) {
+      const obj2 = { style: tmp4.placeholderAvatar };
+      const tmp12 = state(View, obj2);
+      cResult[4] = tmp4.placeholderAvatar;
+      cResult[5] = tmp12;
+      let tmp9 = tmp12;
+    } else {
+      tmp9 = cResult[5];
+    }
+    if (cResult[6] === end) {
+      if (cResult[7] === start) {
+        if (cResult[8] === tmp7) {
+          if (cResult[9] === tmp9) {
+            let tmp13 = cResult[10];
+          }
+          return tmp13;
+        }
+      }
+    }
+    const obj3 = { start, end, label: tmp7, icon: tmp9 };
+    const tmp15 = state(TableRow.TableRow, obj3);
+    cResult[6] = end;
+    cResult[7] = start;
+    cResult[8] = tmp7;
+    cResult[9] = tmp9;
+    cResult[10] = tmp15;
+    tmp13 = tmp15;
+  }
+  const obj4 = { style: null };
+  const items = [tmp4.placeholderUsername, first1];
+  obj4.style = items;
+  const tmp8 = state(View, obj4);
+  cResult[1] = tmp4.placeholderUsername;
+  cResult[2] = first1;
+  cResult[3] = tmp8;
+  tmp7 = tmp8;
+}) : ((arg0) => {
+  ({ start, end } = arg0);
+  const tmp = closure_17();
+  const obj = { start, end, label: null, icon: null };
+  const obj2 = { style: null };
+  const items = [tmp.placeholderUsername, _slicedToArray(noop.useState(() => ({ width: `${10 + 80 * Math.random() | 0}%` })), 1)[0]];
+  obj2.style = items;
+  obj.label = state(View, obj2);
+  obj.icon = state(View, { style: tmp.placeholderAvatar });
+  return state(TableRow.TableRow, obj);
 });
 size = fn(2);
 let result = size.fileFinishedImporting("modules/settings/native/renderer/SettingRenderer.tsx");
 
-export { GuildSelectDefaultIcon };
+export const GuildSelectDefaultIcon = tmp4;
 export const renderSettingItem = function renderSettingItem(item) {
   ({ setting, settingData, start, end } = item);
   const type = settingData.type;
@@ -713,53 +1093,53 @@ export const renderSettingItem = function renderSettingItem(item) {
     obj2.setting = setting;
     obj2.start = start;
     obj2.end = end;
-    return closure_1_14(closure_20, obj2);
+    return state(closure_21, obj2);
   } else if (constants.ROUTE === type) {
     const obj3 = {};
     const merged1 = Object.assign(settingData);
     obj3.start = start;
     obj3.end = end;
-    return closure_1_14(closure_18, obj3);
+    return state(closure_18, obj3);
   } else if (constants.PRESSABLE === type) {
     const obj4 = {};
     const merged2 = Object.assign(settingData);
     obj4.start = start;
     obj4.end = end;
     obj4.setting = setting;
-    return closure_1_14(closure_21, obj4);
+    return state(closure_22, obj4);
   } else if (constants.TOGGLE === type) {
     const obj5 = {};
     const merged3 = Object.assign(settingData);
     obj5.start = start;
     obj5.end = end;
     obj5.setting = setting;
-    return closure_1_14(closure_23, obj5);
+    return state(closure_24, obj5);
   } else if (constants.STATIC === type) {
     const obj6 = {};
     const merged4 = Object.assign(settingData);
     obj6.start = start;
     obj6.end = end;
     obj6.setting = setting;
-    return closure_1_14(closure_26, obj6);
+    return state(closure_27, obj6);
   } else if (constants.VOLUME_SLIDER === type) {
     const obj7 = {};
     const merged5 = Object.assign(settingData);
     obj7.start = start;
     obj7.end = end;
     obj7.setting = setting;
-    return closure_1_14(closure_27, obj7);
+    return state(closure_28, obj7);
   } else if (constants.RADIO === type) {
     const obj8 = {};
     const merged6 = Object.assign(settingData);
     obj8.setting = setting;
-    return closure_1_14(closure_25, obj8);
+    return state(closure_26, obj8);
   } else if (constants.SLIDER === type) {
     const obj = {};
     const merged7 = Object.assign(settingData);
     obj.start = start;
     obj.end = end;
     obj.setting = setting;
-    return closure_1_14(closure_28, obj);
+    return state(closure_29, obj);
   }
 };
 export const renderSettingSearchResultItem = function renderSettingSearchResultItem(settingData) {
@@ -769,15 +1149,15 @@ export const renderSettingSearchResultItem = function renderSettingSearchResultI
   if (constants.ROUTE === type) {
     const obj2 = { settingData };
     const merged = Object.assign(tmp);
-    return closure_1_14(RouteSettingSearchResult, obj2);
+    return state(RouteSettingSearchResult, obj2);
   } else if (constants.PRESSABLE === type) {
     const obj3 = { settingData };
     const merged1 = Object.assign(tmp);
-    return closure_1_14(PressableSettingSearchResult, obj3);
+    return state(closure_33, obj3);
   } else if (constants.STATIC === type) {
     const obj = { settingData };
     const merged2 = Object.assign(tmp);
-    return closure_1_14(StaticSettingSearchResult, obj);
+    return state(StaticSettingSearchResult, obj);
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
@@ -786,5 +1166,5 @@ export const renderSettingSearchResultItem = function renderSettingSearchResultI
   }
 };
 export const renderSettingSearchResultPlaceholderItem = function renderSettingSearchResultPlaceholderItem(start) {
-  return closure_1_14(SettingSearchResultPlaceholder, { start: start.start, end: start.end });
+  return state(closure_35, { start: start.start, end: start.end });
 };

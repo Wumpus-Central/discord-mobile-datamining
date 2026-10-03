@@ -1,15 +1,15 @@
-// === Module 13427: ReadyPayloadUtils ===
+// === Module 13487: ReadyPayloadUtils ===
 
-// Module 13427 (ReadyPayloadUtils)
+// Module 13487 (ReadyPayloadUtils)
 import _modDef12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
-import ChannelRecord from "ChannelRecord" /* 2048 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 2073 */;
-import DatabaseManagerDefault from "DatabaseManager" /* 2090 */;
-import ChannelReaderDefault from "ChannelReader" /* 2094 */;
-import isCacheEnabled from "isCacheEnabled" /* 7235 */;
-import GuildVersionsDefault from "GuildVersions" /* 7239 */;
-import KvCacheVersionDefault from "KvCacheVersion" /* 7240 */;
+import ChannelRecord from "ChannelRecord" /* 2055 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 2078 */;
+import DatabaseManagerDefault from "DatabaseManager" /* 2095 */;
+import ChannelReaderDefault from "ChannelReader" /* 2099 */;
+import isCacheEnabled from "isCacheEnabled" /* 7133 */;
+import GuildVersionsDefault from "GuildVersions" /* 7137 */;
+import KvCacheVersionDefault from "KvCacheVersion" /* 7138 */;
 import size from "module_2" /* 2 */;
 
 function hydrateGuild(guild) {
@@ -369,9 +369,9 @@ export const preloadReadyPayloadData = function preloadReadyPayloadData() {
     return { guildVersions, guildChannels, databaseOk };
   });
 };
-export const hydrateReadyPayloadPrioritized = function hydrateReadyPayloadPrioritized(arg0, identifyStartTime, databaseOk) {
-  ({ users, private_channels, merged_members: require, guilds } = arg0);
-  const merged = Object.assign(arg0, Object.assign({ users: 0, private_channels: 0, merged_members: 0, guilds: 0 }));
+export const hydrateReadyPayloadPrioritized = function hydrateReadyPayloadPrioritized(pinotReadyAction, identifyStartTime, databaseOk) {
+  ({ users, private_channels, merged_members: require, guilds } = pinotReadyAction);
+  const merged = Object.assign(pinotReadyAction, Object.assign({ users: 0, private_channels: 0, merged_members: 0, guilds: 0 }));
   const obj = DatabaseDaosDefault;
   let tmp4 = null != obj.database();
   if (tmp4) {

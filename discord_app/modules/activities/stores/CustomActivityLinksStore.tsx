@@ -1,9 +1,9 @@
-// === Module 12708: CustomActivityLinksStore ===
+// === Module 12744: CustomActivityLinksStore ===
 
-// Module 12708 (CustomActivityLinksStore)
+// Module 12744 (CustomActivityLinksStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import CustomActivityLinkRecord from "CustomActivityLinkRecord" /* 12709 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import CustomActivityLinkRecord from "CustomActivityLinkRecord" /* 12745 */;
 
 const dependencyMap = {};
 const Store = initializeDefault.Store;

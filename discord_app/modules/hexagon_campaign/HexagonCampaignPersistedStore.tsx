@@ -1,8 +1,8 @@
-// === Module 14090: HexagonCampaignPersistedStore ===
+// === Module 14157: HexagonCampaignPersistedStore ===
 
-// Module 14090 (HexagonCampaignPersistedStore)
+// Module 14157 (HexagonCampaignPersistedStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
 
 function handleAppliedPerksCleared() {
 

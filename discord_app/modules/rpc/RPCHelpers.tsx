@@ -1,33 +1,33 @@
-// === Module 8967: RPCHelpers ===
+// === Module 9031: RPCHelpers ===
 
-// Module 8967 (RPCHelpers)
+// Module 9031 (RPCHelpers)
 import _modDef12 from "module_12" /* 12 */;
-import DurationsDefault from "Durations" /* 1091 */;
-import HTTPUtils from "HTTPUtils" /* 1271 */;
-import UrlDefault from "Url" /* 1368 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 4832 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4997 */;
-import useMessageAuthor from "useMessageAuthor" /* 5258 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7064 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 7969 */;
-import getURLForApplicationDefault from "getURLForApplication" /* 8694 */;
-import RPCErrorDefault from "RPCError" /* 8962 */;
-import transformUserDefault from "transformUser" /* 8968 */;
-import LeakyBucketDefault from "LeakyBucket" /* 8969 */;
+import DurationsDefault from "Durations" /* 1102 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import UrlDefault from "Url" /* 1373 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 4877 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5042 */;
+import useMessageAuthor from "useMessageAuthor" /* 5304 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 6965 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8015 */;
+import getURLForApplicationDefault from "getURLForApplication" /* 8706 */;
+import RPCErrorDefault from "RPCError" /* 9026 */;
+import transformUserDefault from "transformUser" /* 9032 */;
+import LeakyBucketDefault from "LeakyBucket" /* 9033 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 5072 */;
-import ApplicationRecord from "ApplicationRecord" /* 2003 */;
-import UserRecord from "UserRecord" /* 1386 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import MediaEngineStore from "MediaEngineStore" /* 1993 */;
-import MessageStore from "MessageStore" /* 5065 */;
-import PresenceStore from "PresenceStore" /* 4885 */;
-import UserStore from "UserStore" /* 1372 */;
-import VoiceStateStore from "VoiceStateStore" /* 4864 */;
-import URLUtils from "URLUtils" /* 1366 */;
+import ApplicationStore from "ApplicationStore" /* 5118 */;
+import ApplicationRecord from "ApplicationRecord" /* 2009 */;
+import UserRecord from "UserRecord" /* 1391 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import MediaEngineStore from "MediaEngineStore" /* 1999 */;
+import MessageStore from "MessageStore" /* 5110 */;
+import PresenceStore from "PresenceStore" /* 4930 */;
+import UserStore from "UserStore" /* 1377 */;
+import VoiceStateStore from "VoiceStateStore" /* 4909 */;
+import URLUtils from "URLUtils" /* 1371 */;
 import "RegexUtils";
-import RegexUtils from "RegexUtils" /* 4829 */;
+import RegexUtils from "RegexUtils" /* 4874 */;
 
 require = fn;
 function recurseReplaceContentTree(type) {
@@ -127,7 +127,7 @@ let closure_31 = async function _validateSocketApplication(arg0, arg1, arg2) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -155,6 +155,7 @@ let closure_31 = async function _validateSocketApplication(arg0, arg1, arg2) {
             let coverImage;
             let flags;
             let parentId;
+            let embeddedSurfaces;
             application2 = application.getApplication(closure_1);
             if (typeof closure_2 === "string") {
               if (transport.transport === constants.POST_MESSAGE) {
@@ -163,8 +164,8 @@ let closure_31 = async function _validateSocketApplication(arg0, arg1, arg2) {
                   const items = [tmp21];
                 }
                 const obj4 = { closeCode: constants2.INVALID_ORIGIN };
-                const tmp52 = new RPCErrorDefault(obj4, "Invalid Origin");
-                throw tmp52;
+                const tmp54 = new RPCErrorDefault(obj4, "Invalid Origin");
+                throw tmp54;
               } else {
                 c7 = 1;
                 c8 = 1;
@@ -187,7 +188,8 @@ let closure_31 = async function _validateSocketApplication(arg0, arg1, arg2) {
               coverImage = closure_134_5.coverImage;
               flags = closure_134_5.flags;
               parentId = closure_134_5.parentId;
-              const obj7 = { id, parentId, name, icon, coverImage, flags };
+              embeddedSurfaces = closure_134_5.embeddedSurfaces;
+              const obj7 = { id, parentId, name, icon, coverImage, flags, embeddedSurfaces };
               closure_134_0.application = obj7;
               c8 = 3;
             }
@@ -218,9 +220,9 @@ let closure_31 = async function _validateSocketApplication(arg0, arg1, arg2) {
         c8 = 3;
         const obj = { value, done: true };
         return obj;
-      } catch (tmp54) {
+      } catch (tmp56) {
         c8 = tmp;
-        throw tmp54;
+        throw tmp56;
       }
     }
   })();
@@ -236,7 +238,7 @@ let closure_32 = async function _processSocketThrottlers(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -283,7 +285,7 @@ let closure_32 = async function _processSocketThrottlers(arg0) {
       } else {
         c6 = 0;
         c7 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp26) {
       closure_5 = tmp26;
@@ -296,10 +298,10 @@ let closure_32 = async function _processSocketThrottlers(arg0) {
     }
   }
 };
-const GUILD_VOCAL_CHANNEL_TYPES = fn(2048).GUILD_VOCAL_CHANNEL_TYPES;
-let Constants = fn(5270);
+const GUILD_VOCAL_CHANNEL_TYPES = fn(2055).GUILD_VOCAL_CHANNEL_TYPES;
+let Constants = fn(5316);
 ({ RPC_LOCAL_SCOPE: closure_15, TransportTypes: closure_16 } = Constants);
-Constants = fn(1074);
+Constants = fn(1085);
 ({ ActivityActionTypes: closure_17, ChannelTypes: closure_18, Endpoints: closure_19, MAX_MESSAGES_PER_CHANNEL: closure_20, RPCCloseCodes: closure_21, RPCErrors: closure_22, RTCConnectionStates: closure_23 } = Constants);
 const toURLSafeResult = URLUtils.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT);
 let str;
@@ -405,10 +407,10 @@ export const transformChannel = function transformChannel(channel, arg1) {
           const error = new Error("Invalid user id: " + userId);
           throw error;
         } else {
-          const obj = { nick: closure_1(4997).getName(dependencyMap, id.id, user), mute: MediaEngineStore.isLocalMute(user.id), volume: MediaEngineStore.getLocalVolume(user.id), pan: MediaEngineStore.getLocalPan(user.id), voice_state: null, user: null };
+          const obj = { nick: closure_1(5042).getName(dependencyMap, id.id, user), mute: MediaEngineStore.isLocalMute(user.id), volume: MediaEngineStore.getLocalVolume(user.id), pan: MediaEngineStore.getLocalPan(user.id), voice_state: null, user: null };
           const obj3 = { mute, deaf, self_mute: selfMute, self_deaf: selfDeaf, suppress };
           obj.voice_state = obj3;
-          obj.user = closure_1(8968)(user);
+          obj.user = closure_1(9032)(user);
           return obj;
         }
       });
@@ -480,7 +482,7 @@ export const isMatchingOrigin = function isMatchingOrigin(str) {
   }
 };
 export const hasMessageReadPermission = function hasMessageReadPermission(channel, id, scopes) {
-  const guild = GuildStore.getGuild(channel.getGuildId());
+  guild = GuildStore.getGuild(channel.getGuildId());
   if (null != guild) {
     let application_id = guild.application_id;
   } else {
@@ -535,7 +537,7 @@ export const processSocketThrottlers = function processSocketThrottlers() {
 };
 export const validateOriginAndUpdateSocket = function validateOriginAndUpdateSocket(authorization, arg1) {
   if (null == arg1) {
-    const items = [__initData];
+    const items = [closure_1_15];
     authorization.authorization.scopes = items;
   }
 };

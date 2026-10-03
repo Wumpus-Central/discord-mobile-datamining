@@ -1,36 +1,24 @@
-// === Module 13035: IconActionButton ===
+// === Module 13095: IconActionButton ===
 
-// Module 13035 (IconActionButton)
-import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1177 */;
-import PlatformUtils from "PlatformUtils" /* 1364 */;
-import Text_Text from "Text/Text" /* 4841 */;
-import useFontScale from "useFontScale" /* 5472 */;
-import Pressables from "Pressables" /* 5621 */;
-import Badge from "Badge" /* 7468 */;
+// Module 13095 (IconActionButton)
+import c from "c" /* 576 */;
+import nativeDefault from "native" /* 587 */;
+import native from "native" /* 1188 */;
+import PlatformUtils from "PlatformUtils" /* 1369 */;
+import Text_Text from "Text/Text" /* 4886 */;
+import useFontScale from "useFontScale" /* 5602 */;
+import Pressables from "Pressables" /* 5909 */;
+import Badge from "Badge" /* 7503 */;
+import _readOnlyError from "_readOnlyError" /* 377 */;
 import noop from "module_19" /* 19 */;
 
+const BadgeDefault = Badge;
+
 require = fn;
-class ButtonBadge {
-  constructor(arg0) {
-    str = global.badgePosition;
-    if (str === undefined) {
-      str = "left";
-    }
-    tmp = closure_6();
-    tmp2 = jsx;
-    obj = { size: null, maskSize: 2, style: null, maskColor: null };
-    tmp3 = closure_1(closure_2[9]);
-    obj.size = closure_0(closure_2[9]).CHANNEL_BADGE_SIZE;
-    obj.style = "left" === str ? tmp.unreadBadgeLeft : tmp.unreadBadgeRight;
-    obj.maskColor = tmp.unreadBadgeMask.color;
-    return tmp2(tmp3, obj);
-  }
-}
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4845);
-const timestampProducer = createStyles.createStyles(() => {
+const createStyles = fn(4890);
+let closure_6 = createStyles.createStyles(() => {
   const obj = { actionIconButtonPressable: { minWidth: 32, minHeight: 32, borderRadius: 20, marginEnd: 12, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "row", paddingRight: 12, paddingLeft: 12 }, withoutMargin: { marginEnd: 0 }, filled: {}, outlined: null, roundButton: null, actionIcon: null, actionText: null, unreadBadgeLeft: null, unreadBadgeRight: null, unreadBadgeMask: null, countStyle: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
   obj.outlined = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderWidth: 1, borderColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT };
@@ -51,24 +39,259 @@ const timestampProducer = createStyles.createStyles(() => {
   obj.countStyle = { position: "relative", marginLeft: nativeDefault.space.PX_8 };
   return obj;
 });
-let closure_7 = noop.memo((color) => {
+let ReactCompilerGating = fn(558);
+let closure_7 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function IconComponent(color) {
+  let ICON_SUBTLE = dependencyMap;
+  const cResult = source(576).c(7);
+  ({ IconComponent, source } = color);
+  color = color.color;
+  const tmp2 = closure_6();
+  dependencyMap = tmp2;
+  if (cResult[0] === color) {
+    if (cResult[1] === source) {
+      if (cResult[2] === tmp2) {
+        let tmp3 = cResult[3];
+      }
+      if (cResult[4] === IconComponent) {
+        if (cResult[5] === tmp3) {
+          return cResult[6];
+        }
+      }
+      if (null != IconComponent) {
+        const obj2 = { size: "sm", color: null };
+        ICON_SUBTLE = color(587).colors.ICON_SUBTLE;
+        obj2.color = ICON_SUBTLE;
+        let tmp3Result = closure_4(IconComponent, obj2);
+      } else {
+        tmp3Result = tmp3();
+      }
+      cResult[4] = IconComponent;
+      cResult[5] = tmp3;
+      cResult[6] = tmp3Result;
+    }
+  }
+  const fn = function n() {
+    let tmp3Result = null;
+    if (null != source) {
+      const obj = { size: native.Icon.Sizes.SMALL, source: tmp, color: null };
+      let tintColor = color;
+      if (color == null) {
+        tintColor = actionIcon.actionIcon.tintColor;
+      }
+      obj.color = tintColor;
+      tmp3Result = React4(native.Icon, obj);
+    }
+    return tmp3Result;
+  };
+  cResult[0] = color;
+  cResult[1] = source;
+  cResult[2] = tmp2;
+  cResult[3] = fn;
+  tmp3 = fn;
+  let obj = source(576);
+}) : ((color) => {
   ({ IconComponent, source } = color);
   color = color.color;
   const tmp = closure_6();
   dependencyMap = tmp;
   const items = [tmp, color, source];
   if (null != IconComponent) {
-    let obj = { size: "sm", color: color(576).colors.ICON_SUBTLE };
+    let obj = { size: "sm", color: color(587).colors.ICON_SUBTLE };
     let tmp2Result = closure_4(IconComponent, obj);
   } else {
     tmp2Result = tmp2();
   }
   return tmp2Result;
+}));
+fn(558);
+ReactCompilerGating = fn(558);
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((badgePosition) => {
+  const cResult = c.c(3);
+  badgePosition = badgePosition.badgePosition;
+  let str = "left";
+  if (undefined !== badgePosition) {
+    str = badgePosition;
+  }
+  const tmp4 = closure_6();
+  const tmp5 = "left" === str ? tmp4.unreadBadgeLeft : tmp4.unreadBadgeRight;
+  if (cResult[0] === tmp4.unreadBadgeMask.color) {
+    if (cResult[1] === tmp5) {
+      let tmp6 = cResult[2];
+    }
+    return tmp6;
+  }
+  const obj2 = { size: null, maskSize: 2, style: null, maskColor: null };
+  obj2.size = Badge.CHANNEL_BADGE_SIZE;
+  obj2.style = tmp5;
+  obj2.maskColor = tmp4.unreadBadgeMask.color;
+  const tmp8 = React4(BadgeDefault, obj2);
+  cResult[0] = tmp4.unreadBadgeMask.color;
+  cResult[1] = tmp5;
+  cResult[2] = tmp8;
+  tmp6 = tmp8;
+}) : ((badgePosition) => {
+  let str = badgePosition.badgePosition;
+  if (str === undefined) {
+    str = "left";
+  }
+  const tmp = closure_6();
+  const obj = { size: Badge.CHANNEL_BADGE_SIZE, maskSize: 2, style: "left" === str ? tmp.unreadBadgeLeft : tmp.unreadBadgeRight, maskColor: tmp.unreadBadgeMask.color };
+  return React4(BadgeDefault, obj);
 });
+let closure_8 = tmp5;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/IconActionButton.tsx");
 
-export default function IconActionButton(variant) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((noMargin) => {
+  const cResult = c.c(32);
+  ({ source, IconComponent, variant, color, buttonText, buttonTextColor, accessibilityLabel, style, badge, badgePosition, count, hitSlop, disabled, onPress, onLongPress } = noMargin);
+  let str = "filled";
+  if (undefined !== variant) {
+    str = variant;
+  }
+  let str2 = "left";
+  if (undefined !== badgePosition) {
+    str2 = badgePosition;
+  }
+  let num = 0;
+  if (undefined !== count) {
+    num = count;
+  }
+  const tmp4 = closure_6();
+  useFontScale;
+  let tmp7 = null != buttonText;
+  if (tmp7) {
+    tmp7 = tmp6 <= 1.2;
+  }
+  const tmp8 = "outlined" === str ? tmp4.outlined : tmp4.filled;
+  let roundButton;
+  if (!tmp7) {
+    roundButton = tmp4.roundButton;
+  }
+  let withoutMargin;
+  if (noMargin.noMargin) {
+    withoutMargin = tmp4.withoutMargin;
+  }
+  if (cResult[0] === style) {
+    if (cResult[1] === tmp4.actionIconButtonPressable) {
+      if (cResult[2] === tmp8) {
+        if (cResult[3] === roundButton) {
+          if (cResult[4] === withoutMargin) {
+            let tmp11 = cResult[5];
+          }
+          if (cResult[6] === IconComponent) {
+            if (cResult[7] === color) {
+              if (cResult[8] === source) {
+                let tmp12 = cResult[9];
+              }
+              if (cResult[10] === buttonText) {
+                if (cResult[11] === buttonTextColor) {
+                  if (cResult[12] === tmp7) {
+                    if (cResult[13] === tmp4.actionText) {
+                      let tmp16 = cResult[14];
+                    }
+                    if (cResult[15] === num) {
+                      if (cResult[16] === tmp4.countStyle) {
+                        let tmp19 = cResult[17];
+                      }
+                      if (cResult[18] === badge) {
+                        if (cResult[19] === str2) {
+                          let tmp22 = cResult[20];
+                        }
+                        if (cResult[21] === accessibilityLabel) {
+                          if (cResult[22] === disabled) {
+                            if (cResult[23] === hitSlop) {
+                              if (cResult[24] === onLongPress) {
+                                if (cResult[25] === onPress) {
+                                  if (cResult[26] === tmp19) {
+                                    if (cResult[27] === tmp22) {
+                                      if (cResult[28] === tmp11) {
+                                        if (cResult[29] === tmp12) {
+                                          if (cResult[30] === tmp16) {
+                                            let tmp26 = cResult[31];
+                                          }
+                                          return tmp26;
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                        const obj2 = { hitSlop, onPress, onLongPress, disabled, accessibilityRole: "button", accessibilityLabel, style: tmp11, children: null };
+                        const items = [tmp12, tmp16, tmp19, tmp22];
+                        obj2.children = items;
+                        const tmp28 = hasOwnProperty(Pressables.PressableOpacity, obj2);
+                        cResult[21] = accessibilityLabel;
+                        cResult[22] = disabled;
+                        cResult[23] = hitSlop;
+                        cResult[24] = onLongPress;
+                        cResult[25] = onPress;
+                        cResult[26] = tmp19;
+                        cResult[27] = tmp22;
+                        cResult[28] = tmp11;
+                        cResult[29] = tmp12;
+                        cResult[30] = tmp16;
+                        cResult[31] = tmp28;
+                        tmp26 = tmp28;
+                      }
+                      let tmp23 = badge;
+                      if (badge) {
+                        const obj3 = { badgePosition: str2 };
+                        tmp23 = React4(closure_8, obj3);
+                      }
+                      cResult[18] = badge;
+                      cResult[19] = str2;
+                      cResult[20] = tmp23;
+                      tmp22 = tmp23;
+                    }
+                    let tmp20 = null;
+                    if (num > 0) {
+                      const obj4 = { style: tmp4.countStyle, value: num };
+                      tmp20 = React4(native.Badge, obj4);
+                    }
+                    cResult[15] = num;
+                    cResult[16] = tmp4.countStyle;
+                    cResult[17] = tmp20;
+                    tmp19 = tmp20;
+                  }
+                }
+              }
+              let tmp17 = tmp7;
+              if (tmp7) {
+                const obj5 = { variant: "text-sm/bold", color: buttonTextColor, style: tmp4.actionText, children: buttonText };
+                tmp17 = React4(Text_Text.Text, obj5);
+              }
+              cResult[10] = buttonText;
+              cResult[11] = buttonTextColor;
+              cResult[12] = tmp7;
+              cResult[13] = tmp4.actionText;
+              cResult[14] = tmp17;
+              tmp16 = tmp17;
+            }
+          }
+          const obj6 = { IconComponent, color, source };
+          const tmp15 = React4(closure_7, obj6);
+          cResult[6] = IconComponent;
+          cResult[7] = color;
+          cResult[8] = source;
+          cResult[9] = tmp15;
+          tmp12 = tmp15;
+        }
+      }
+    }
+  }
+  const items1 = [tmp4.actionIconButtonPressable, tmp8, roundButton, withoutMargin, style];
+  cResult[0] = style;
+  cResult[1] = tmp4.actionIconButtonPressable;
+  cResult[2] = tmp8;
+  cResult[3] = roundButton;
+  cResult[4] = withoutMargin;
+  cResult[5] = items1;
+  tmp11 = items1;
+}) : ((variant) => {
   let str = variant.variant;
   ({ source, IconComponent } = variant);
   if (str === undefined) {
@@ -117,11 +340,11 @@ export default function IconActionButton(variant) {
   items1[2] = tmp10Result2;
   if (badge) {
     const obj4 = { badgePosition };
-    badge = React4(ButtonBadge, obj4);
+    badge = React4(closure_8, obj4);
   }
   items1[3] = badge;
   obj.children = items1;
   return hasOwnProperty(Pressables.PressableOpacity, obj);
-};
+});
 export const ICON_ACTION_BUTTON_SIZE = 32;
-export { ButtonBadge };
+export const ButtonBadge = tmp5;

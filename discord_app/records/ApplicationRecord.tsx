@@ -1,13 +1,13 @@
-// === Module 2003: ApplicationRecord ===
+// === Module 2009: ApplicationRecord ===
 
-// Module 2003 (ApplicationRecord)
+// Module 2009 (ApplicationRecord)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import ApplicationOverlayMethodFlags from "ApplicationOverlayMethodFlags" /* 2009 */;
-import Record from "Record" /* 1387 */;
-import CompanyRecord from "CompanyRecord" /* 2004 */;
-import UserRecord from "UserRecord" /* 1386 */;
+import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
+import ApplicationOverlayMethodFlags from "ApplicationOverlayMethodFlags" /* 2015 */;
+import Record from "Record" /* 1392 */;
+import CompanyRecord from "CompanyRecord" /* 2010 */;
+import UserRecord from "UserRecord" /* 1391 */;
 
 require = fn;
 function createExecutable(os) {
@@ -24,9 +24,9 @@ function createExecutable(os) {
   }
   return obj;
 }
-const Constants = fn(2005);
+const Constants = fn(2011);
 ({ END_GAME_APPLICATION_ID, POKER_NIGHT_APPLICATION_ID } = Constants);
-const ApplicationTypes = fn(1349).ApplicationTypes;
+const ApplicationTypes = fn(1360).ApplicationTypes;
 let closure_7 = { [POKER_NIGHT_APPLICATION_ID]: 7, [END_GAME_APPLICATION_ID]: 12 };
 let BasicApplicationRecord;
 class BasicApplicationRecord extends tmp2 {
@@ -224,6 +224,11 @@ class ApplicationRecord extends BasicApplicationRecord {
       embedded_activity_config = global.embeddedActivityConfig;
     }
     tmp2.embeddedActivityConfig = embedded_activity_config;
+    embeddedSurfaces = global.embedded_surfaces;
+    if (embeddedSurfaces == null) {
+      embeddedSurfaces = global.embeddedSurfaces;
+    }
+    tmp2.embeddedSurfaces = embeddedSurfaces;
     ({ team: tmp2.team, integrationTypesConfig: tmp2.integrationTypesConfig, storefront_available: tmp2.storefront_available, termsOfServiceUrl: tmp2.termsOfServiceUrl, privacyPolicyUrl: tmp2.privacyPolicyUrl, is_discoverable } = global);
     if (is_discoverable == null) {
       is_discoverable = global.isDiscoverable;
@@ -325,7 +330,7 @@ ApplicationRecord["createFromServer"] = function createFromServer(bot) {
     num = 0;
   }
   obj.flags = deserializer.deserialize(num);
-  ({ max_participants: obj.maxParticipants, tags: obj.tags, embedded_activity_config: obj.embeddedActivityConfig } = bot);
+  ({ max_participants: obj.maxParticipants, tags: obj.tags, embedded_activity_config: obj.embeddedActivityConfig, embedded_surfaces: obj.embeddedSurfaces } = bot);
   let fromEntriesResult;
   if (null != bot.integration_types_config) {
     const _Object = Object;
@@ -392,7 +397,7 @@ prototype2["mergeFromApplicationUpdate"] = function mergeFromApplicationUpdate(i
   if (id == null) {
     id = self.id;
   }
-  let obj = { id, name: null, icon: null, splash: null, overlay: null, overlayWarn: null, overlayCompatibilityHook: null, overlayMethods: null, hook: null, aliases: null, publishers: null, developers: null, primarySkuId: null, storeListingSkuId: null, thirdPartySkus: null, guildId: null, guild: null, executables: null, hashes: null, description: null, eulaId: null, slug: null, coverImage: null, bot: null, flags: null, maxParticipants: null, tags: null, embeddedActivityConfig: null, type: null, team: null, roleConnectionsVerificationUrl: null, _connectionEntrypointUrl: null, integrationTypesConfig: null, isMonetized: null, storefront_available: null, termsOfServiceUrl: null, privacyPolicyUrl: null, isVerified: null, customInstallUrl: null, installParams: null, isDiscoverable: null, directoryEntry: null, categories: null, linkedGames: null, deepLinkUri: null, applicationAccountLinkBenefitConfig: null, vibegrationsProjectId: null, contentClassification: null, parentId: null };
+  let obj = { id, name: null, icon: null, splash: null, overlay: null, overlayWarn: null, overlayCompatibilityHook: null, overlayMethods: null, hook: null, aliases: null, publishers: null, developers: null, primarySkuId: null, storeListingSkuId: null, thirdPartySkus: null, guildId: null, guild: null, executables: null, hashes: null, description: null, eulaId: null, slug: null, coverImage: null, bot: null, flags: null, maxParticipants: null, tags: null, embeddedActivityConfig: null, embeddedSurfaces: null, type: null, team: null, roleConnectionsVerificationUrl: null, _connectionEntrypointUrl: null, integrationTypesConfig: null, isMonetized: null, storefront_available: null, termsOfServiceUrl: null, privacyPolicyUrl: null, isVerified: null, customInstallUrl: null, installParams: null, isDiscoverable: null, directoryEntry: null, categories: null, linkedGames: null, deepLinkUri: null, applicationAccountLinkBenefitConfig: null, vibegrationsProjectId: null, contentClassification: null, parentId: null };
   let name = id.name;
   if (name == null) {
     name = self.name;
@@ -468,7 +473,7 @@ prototype2["mergeFromApplicationUpdate"] = function mergeFromApplicationUpdate(i
     guildId = self.guildId;
   }
   obj.guildId = guildId;
-  let guild = id.guild;
+  guild = id.guild;
   if (guild == null) {
     guild = self.guild;
   }
@@ -534,6 +539,11 @@ prototype2["mergeFromApplicationUpdate"] = function mergeFromApplicationUpdate(i
     embeddedActivityConfig = tmp2;
   }
   obj.embeddedActivityConfig = embeddedActivityConfig;
+  let embeddedSurfaces = id.embeddedSurfaces;
+  if (embeddedSurfaces == null) {
+    embeddedSurfaces = self.embeddedSurfaces;
+  }
+  obj.embeddedSurfaces = embeddedSurfaces;
   let type = id.type;
   if (type == null) {
     type = self.type;
@@ -674,6 +684,15 @@ prototype2["getMaxParticipants"] = function getMaxParticipants() {
     num = 0;
   }
   return num;
+};
+Object.defineProperty(prototype2, "isEmbedded", {
+  get: function isEmbedded() {
+    return require("EmbeddedSurfaceUtils").isEmbeddedApplication(this);
+  },
+  set: undefined
+});
+prototype2["supportsEmbeddedSurface"] = function supportsEmbeddedSurface(MAIN) {
+  return require("EmbeddedSurfaceUtils").supportsEmbeddedSurface(this, MAIN);
 };
 prototype2["supportsIntegrationTypes"] = function supportsIntegrationTypes() {
   const items = [...arguments];

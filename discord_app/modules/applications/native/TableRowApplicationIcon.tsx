@@ -1,25 +1,55 @@
-// === Module 9216: TableRowApplicationIcon ===
+// === Module 9222: TableRowApplicationIcon ===
 
-// Module 9216 (TableRowApplicationIcon)
-import nativeDefault from "native" /* 576 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import FastImageDefault from "FastImage" /* 6085 */;
+// Module 9222 (TableRowApplicationIcon)
+import c from "c" /* 576 */;
+import nativeDefault from "native" /* 587 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
+import FastImageDefault from "FastImage" /* 5974 */;
 import noop from "module_19" /* 19 */;
 
+require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4845);
-const obj2 = { icon: null };
+const createStyles = fn(4890);
+let obj2 = { icon: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.sm };
 obj2.icon = size;
-let closure_3 = createStyles.createStyles(obj2);
+let closure_4 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/native/TableRowApplicationIcon.tsx");
 
-export default function TableRowApplicationIcon(application) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((application) => {
+  const cResult = c.c(6);
+  application = application.application;
+  const tmp3 = closure_4();
+  if (cResult[0] === application.icon) {
+    if (cResult[1] === application.id) {
+      let tmp4 = cResult[2];
+    }
+    if (cResult[3] === tmp3.icon) {
+      if (cResult[4] === tmp4) {
+        let tmp6 = cResult[5];
+      }
+      return tmp6;
+    }
+    const obj3 = { source: tmp4, style: tmp3.icon };
+    const tmp9 = jsx(FastImageDefault, { source: tmp4, style: tmp3.icon });
+    cResult[3] = tmp3.icon;
+    cResult[4] = tmp4;
+    cResult[5] = tmp9;
+    tmp6 = tmp9;
+  }
+  const applicationIconSource = AvatarUtilsDefault.getApplicationIconSource({ id: application.id, icon: application.icon, size: 32 });
+  cResult[0] = application.icon;
+  cResult[1] = application.id;
+  cResult[2] = applicationIconSource;
+  tmp4 = applicationIconSource;
+  const obj4 = { id: application.id, icon: application.icon, size: 32 };
+}) : ((application) => {
   application = application.application;
   const obj = { source: null, style: null };
-  const tmp = closure_3();
+  const tmp = closure_4();
   obj.source = AvatarUtilsDefault.getApplicationIconSource({ id: application.id, icon: application.icon, size: 32 });
   obj.style = tmp.icon;
   return <tmp2 source={null} style={null} />;
-};
+});

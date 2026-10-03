@@ -1,7 +1,7 @@
-// === Module 17803: useCreatorMonetizationOnboardingMarketing ===
+// === Module 17889: useCreatorMonetizationOnboardingMarketing ===
 
-// Module 17803 (useCreatorMonetizationOnboardingMarketing)
-import CreatorMonetizationEligibilityActionCreatorsAll from "CreatorMonetizationEligibilityActionCreators" /* 17772 */;
+// Module 17889 (useCreatorMonetizationOnboardingMarketing)
+import CreatorMonetizationEligibilityActionCreatorsAll from "CreatorMonetizationEligibilityActionCreators" /* 17858 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -27,7 +27,7 @@ export default function useCreatorMonetizationOnboardingMarketing(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -59,7 +59,7 @@ export default function useCreatorMonetizationOnboardingMarketing(arg0) {
           if (2 === tmp8) {
             c4 = 1;
             closure_129_1 = tmp45;
-            const aPIError = new closure_0(5266).APIError(closure_129_1);
+            const aPIError = new closure_0(5312).APIError(closure_129_1);
             tmp4(aPIError);
             c4 = 0;
             closure_1(false);

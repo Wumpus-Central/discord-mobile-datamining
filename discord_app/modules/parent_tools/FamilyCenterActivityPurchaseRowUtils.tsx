@@ -1,31 +1,31 @@
-// === Module 14650: FamilyCenterActivityPurchaseRowUtils ===
+// === Module 14706: FamilyCenterActivityPurchaseRowUtils ===
 
-// Module 14650 (FamilyCenterActivityPurchaseRowUtils)
-import util from "util" /* 1115 */;
-import AvatarUtils from "AvatarUtils" /* 1397 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1974 */;
-import _modDef2486 from "module_2486" /* 2486 */;
-import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7155 */;
-import ProfileEffectRecord from "ProfileEffectRecord" /* 7156 */;
-import PremiumConstants from "PremiumConstants" /* 1374 */;
+// Module 14706 (FamilyCenterActivityPurchaseRowUtils)
+import util from "util" /* 1126 */;
+import AvatarUtils from "AvatarUtils" /* 1402 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1980 */;
+import _modDef2493 from "module_2493" /* 2493 */;
+import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7058 */;
+import ProfileEffectRecord from "ProfileEffectRecord" /* 7059 */;
+import PremiumConstants from "PremiumConstants" /* 1379 */;
 import size from "module_2" /* 2 */;
 
 function getCollectibleTypeName(type) {
   if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
     const intl5 = util.intl;
-    return intl5.string(_modDef2486.obi47v);
+    return intl5.string(_modDef2493.obi47v);
   } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT === type) {
     const intl4 = util.intl;
-    return intl4.string(_modDef2486.RX8BMR);
+    return intl4.string(_modDef2493.RX8BMR);
   } else if (CollectiblesItemType.CollectiblesItemType.NAMEPLATE === type) {
     const intl3 = util.intl;
-    return intl3.string(_modDef2486.nNGEHk);
+    return intl3.string(_modDef2493.nNGEHk);
   } else if (CollectiblesItemType.CollectiblesItemType.BUNDLE === type) {
     const intl2 = util.intl;
-    return intl2.string(_modDef2486.VS1fKo);
+    return intl2.string(_modDef2493.VS1fKo);
   } else if (CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME === type) {
     const intl = util.intl;
-    return intl.string(_modDef2486.JiIY1l);
+    return intl.string(_modDef2493.JiIY1l);
   } else {
     return "";
   }

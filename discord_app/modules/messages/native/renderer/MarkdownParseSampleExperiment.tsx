@@ -1,7 +1,7 @@
-// === Module 7732: MarkdownParseSampleExperiment ===
+// === Module 7776: MarkdownParseSampleExperiment ===
 
-// Module 7732 (MarkdownParseSampleExperiment)
-import ApexExperiment from "ApexExperiment" /* 1435 */;
+// Module 7776 (MarkdownParseSampleExperiment)
+import ApexExperiment from "ApexExperiment" /* 1440 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-09-markdown-parse-sample", defaultConfig: { sampleRate: 0 }, variations: { 0: { sampleRate: 0.001 }, 1: { sampleRate: 0.0001 }, 2: { sampleRate: 0.01 } } });

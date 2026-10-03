@@ -1,12 +1,12 @@
-// === Module 8004: MaskedLinkStore ===
+// === Module 8049: MaskedLinkStore ===
 
-// Module 8004 (MaskedLinkStore)
+// Module 8049 (MaskedLinkStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import URLUtilsDefault from "URLUtils" /* 1366 */;
-import SpotifyConstants from "SpotifyConstants" /* 7970 */;
-import MaskedLinkStoreMethodsAdditional from "MaskedLinkStoreMethodsAdditional" /* 8005 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import URLUtilsDefault from "URLUtils" /* 1371 */;
+import SpotifyConstants from "SpotifyConstants" /* 8016 */;
+import MaskedLinkStoreMethodsAdditional from "MaskedLinkStoreMethodsAdditional" /* 8050 */;
 import size from "module_2" /* 2 */;
 
 const SPOTIFY_HOSTNAMES = SpotifyConstants.SPOTIFY_HOSTNAMES;

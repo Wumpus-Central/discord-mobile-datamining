@@ -1,11 +1,13 @@
-// === Module 7194: utils/CollectiblesUtils ===
+// === Module 7097: utils/CollectiblesUtils ===
 
-// Module 7194 (utils/CollectiblesUtils)
-import DateUtils from "DateUtils" /* 4541 */;
-import StreamSettingsConstants from "StreamSettingsConstants" /* 4892 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4900 */;
-import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7000 */;
-import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7195 */;
+// Module 7097 (utils/CollectiblesUtils)
+import c from "c" /* 576 */;
+import DateUtils from "DateUtils" /* 4552 */;
+import StreamSettingsConstants from "StreamSettingsConstants" /* 4937 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4945 */;
+import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 6898 */;
+import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7098 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const ApplicationStreamPresets = StreamSettingsConstants.ApplicationStreamPresets;
@@ -71,7 +73,40 @@ export const getOptimizedProfileEffectThumbnailUrl = function getOptimizedProfil
     return "" + arg0 + "?width=100&height=195";
   }
 };
-export const useFetchFractionalPremiumInfo = function useFetchFractionalPremiumInfo() {
+export const useFetchFractionalPremiumInfo = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(7);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const obj2 = { forceFetch: true };
+    cResult[0] = obj2;
+    let first = obj2;
+  } else {
+    first = cResult[0];
+  }
+  const tmp5 = useFractionalPremiumInfoDefault(first);
+  if (cResult[1] !== tmp5.endsAt) {
+    const dateFormatResult = DateUtils.dateFormat(tmp5.endsAt, "L");
+    cResult[1] = tmp5.endsAt;
+    cResult[2] = dateFormatResult;
+    let tmp6 = dateFormatResult;
+    const tmpResult = DateUtils;
+  } else {
+    tmp6 = cResult[2];
+  }
+  if (cResult[3] === tmp6) {
+    if (cResult[4] === tmp5.isFractionalPremiumActive) {
+      if (cResult[5] === tmp8) {
+        let tmp9 = cResult[6];
+      }
+      return tmp9;
+    }
+  }
+  const obj3 = { isLoading: !tmp5.fetched, isFractionalPremiumActive: tmp5.isFractionalPremiumActive, expiresAt: tmp6 };
+  cResult[3] = tmp6;
+  cResult[4] = tmp5.isFractionalPremiumActive;
+  cResult[5] = !tmp5.fetched;
+  cResult[6] = obj3;
+  tmp9 = obj3;
+}) : (() => {
   const tmp = useFractionalPremiumInfoDefault({ forceFetch: true });
   return { isLoading: !tmp.fetched, isFractionalPremiumActive: tmp.isFractionalPremiumActive, expiresAt: DateUtils.dateFormat(tmp.endsAt, "L") };
-};
+});

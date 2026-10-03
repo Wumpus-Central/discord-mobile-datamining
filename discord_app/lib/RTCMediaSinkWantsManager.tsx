@@ -1,16 +1,16 @@
-// === Module 13553: RTCMediaSinkWantsManager ===
+// === Module 13615: RTCMediaSinkWantsManager ===
 
-// Module 13553 (RTCMediaSinkWantsManager)
+// Module 13615 (RTCMediaSinkWantsManager)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
-import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
-import DurationsDefault from "Durations" /* 1091 */;
-import PlatformUtils from "PlatformUtils" /* 1364 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4900 */;
-import WindowVisibilityVideoManager2 from "WindowVisibilityVideoManager" /* 9078 */;
+import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
+import DurationsDefault from "Durations" /* 1102 */;
+import PlatformUtils from "PlatformUtils" /* 1369 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4945 */;
+import WindowVisibilityVideoManager2 from "WindowVisibilityVideoManager" /* 9109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 4903 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 4948 */;
 
 require = fn;
 function getDefaultWants(wantsLevel) {
@@ -24,13 +24,13 @@ function getDefaultWants(wantsLevel) {
   }
   return obj3;
 }
-const VideoToggleState = fn(1074).VideoToggleState;
-const SimulcastOverrideQuality = fn(4870).SimulcastOverrideQuality;
+const VideoToggleState = fn(1085).VideoToggleState;
+const SimulcastOverrideQuality = fn(4915).SimulcastOverrideQuality;
 let c7 = 100;
 const DEFAULT_WANTS_DISABLED = { any: 0 };
 let closure_9 = 30 * DurationsDefault.Millis.SECOND;
 let closure_10 = 120 * DurationsDefault.Millis.SECOND;
-const BrowserUtils = fn(5356);
+const BrowserUtils = fn(5402);
 let closure_11 = -1 !== BrowserUtils.getFirefoxVersion();
 let obj3 = { UserSSRCUpdate: "user-ssrc-update", Update: "update" };
 class RTCMediaSinkWantsManager extends tmp2 {

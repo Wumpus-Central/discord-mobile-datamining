@@ -1,11 +1,11 @@
-// === Module 5604: GameAutocompleteStore ===
+// === Module 5892: GameAutocompleteStore ===
 
-// Module 5604 (GameAutocompleteStore)
+// Module 5892 (GameAutocompleteStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import privDefault from "priv" /* 1439 */;
-import GameAutocompleteTypes from "GameAutocompleteTypes" /* 5605 */;
-import GameAutocompleteUtils from "GameAutocompleteUtils" /* 5606 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import privDefault from "priv" /* 1444 */;
+import GameAutocompleteTypes from "GameAutocompleteTypes" /* 5893 */;
+import GameAutocompleteUtils from "GameAutocompleteUtils" /* 5894 */;
 
 require = fn;
 function getCacheKey(arg0, arg1) {
@@ -53,9 +53,9 @@ prototype["getClosestResults"] = function getClosestResults(result) {
 prototype["shouldSuppressFetch"] = function shouldSuppressFetch(query, arg1) {
   let DEFAULT = arg1;
   if (arg1 === undefined) {
-    DEFAULT = DEFAULT(5605).GameAutocompleteProfile.DEFAULT;
+    DEFAULT = DEFAULT(5893).GameAutocompleteProfile.DEFAULT;
   }
-  const result = DEFAULT(5606).normalizeGameAutocompleteQuery(query);
+  const result = DEFAULT(5894).normalizeGameAutocompleteQuery(query);
   if (null == result) {
     return false;
   } else {
@@ -67,12 +67,12 @@ prototype["shouldSuppressFetch"] = function shouldSuppressFetch(query, arg1) {
       result1 = !set.has(combined);
     }
     if (result1) {
-      result1 = tmp3(5606).shouldSuppressAutocompleteFetch(result, (arg0) => closure_3.peek("" + DEFAULT + ":" + arg0));
-      const tmp3Result = tmp3(5606);
+      result1 = tmp3(5894).shouldSuppressAutocompleteFetch(result, (arg0) => closure_3.peek("" + DEFAULT + ":" + arg0));
+      const tmp3Result = tmp3(5894);
     }
     return result1;
   }
-  const obj = DEFAULT(5606);
+  const obj = DEFAULT(5894);
   tmp3 = DEFAULT;
 };
 prototype["isFetching"] = function isFetching(query) {

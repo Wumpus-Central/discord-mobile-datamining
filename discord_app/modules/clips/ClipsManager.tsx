@@ -1,33 +1,34 @@
-// === Module 17891: clips/ClipsManager ===
+// === Module 17977: clips/ClipsManager ===
 
-// Module 17891 (clips/ClipsManager)
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import PlatformUtils from "PlatformUtils" /* 1364 */;
-import UserSettings from "UserSettings" /* 2021 */;
-import DiscordNativeDefault from "DiscordNative" /* 4479 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 4897 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4900 */;
-import isClipsEnabled from "isClipsEnabled" /* 13423 */;
-import ClipsExperiment from "ClipsExperiment" /* 13424 */;
-import isClientClipsCapableDefault from "isClientClipsCapable" /* 13425 */;
+// Module 17977 (clips/ClipsManager)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import PlatformUtils from "PlatformUtils" /* 1369 */;
+import UserSettings from "UserSettings" /* 2028 */;
+import DiscordNativeDefault from "DiscordNative" /* 4490 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 4942 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4945 */;
+import isClipsEnabled from "isClipsEnabled" /* 13483 */;
+import ClipsExperiment from "ClipsExperiment" /* 13484 */;
+import isClientClipsCapableDefault from "isClientClipsCapable" /* 13485 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 1993 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4868 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4884 */;
-import ClipsStore from "ClipsStore" /* 1999 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6725 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import MediaEngineStore from "MediaEngineStore" /* 1999 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4929 */;
+import ClipsStore from "ClipsStore" /* 2005 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
 
 const StreamKeyUtilsAll = StreamKeyUtils;
 
 require = fn;
-const getSystemAnalyticsInfo = fn(4890).getSystemAnalyticsInfo;
-const ClipsConstants = fn(5630);
-({ WINDOWS_HARDWARE_AUTO_ENABLE_GPU_REGEX: closure_11, WINDOWS_HARDWARE_MINIMUM_GPU_REGEX: closure_12, CLIPS_HARDWARE_CLASSIFICATION_VERSION: map1, ClipsHardwareClassification: closure_14, CLIP_RUNTIME: closure_15 } = ClipsConstants);
-const Constants = fn(1074);
-({ AnalyticEvents: closure_16, RTCConnectionStates: closure_17 } = Constants);
-const StreamTypes = fn(4887).StreamTypes;
+const getSystemAnalyticsInfo = fn(4935).getSystemAnalyticsInfo;
+const ClipsConstants = fn(7231);
+({ WINDOWS_HARDWARE_AUTO_ENABLE_GPU_REGEX: closure_12, WINDOWS_HARDWARE_MINIMUM_GPU_REGEX: map1, CLIPS_HARDWARE_CLASSIFICATION_VERSION: closure_14, ClipsHardwareClassification: closure_15, CLIP_RUNTIME: closure_16 } = ClipsConstants);
+const Constants = fn(1085);
+({ AnalyticEvents: closure_17, RTCConnectionStates: closure_18 } = Constants);
+const StreamTypes = fn(4932).StreamTypes;
 class ClipsManager extends tmp4 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -168,7 +169,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
       self.maybeStartNtpClock();
       let tmp7 = null != ClipsStore.getHardwareClassification() && null != ClipsStore.getHardwareClassificationForDecoupled();
       if (tmp7) {
-        tmp7 = ClipsStore.getHardwareClassificationVersion() === map1;
+        tmp7 = ClipsStore.getHardwareClassificationVersion() === state;
       }
       if (!tmp7) {
         const result1 = self.classifyHardwareAndTrack();
@@ -215,7 +216,7 @@ prototype["classifyHardwareAndTrack"] = function classifyHardwareAndTrack() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -255,7 +256,7 @@ prototype["classifyHardwareAndTrack"] = function classifyHardwareAndTrack() {
                           });
                           return { gpuModels: closure_128_1, classification: tmp2.classifyHardware(closure_128_1) };
                         }
-                        const processUtils = tmp3(closure_2_3[18]).processUtils;
+                        const processUtils = tmp3(closure_2_3[19]).processUtils;
                         await processUtils.getSystemInfo();
                         const gpus2 = value.gpus;
                         closure_128_2 = gpus2.map((model) => model.model);
@@ -283,7 +284,7 @@ prototype["classifyHardwareAndTrack"] = function classifyHardwareAndTrack() {
           gpuModels = closure_128_0.gpuModels;
           classification = closure_128_0.classification;
           const obj8 = { classification, version, gpu_models: gpuModels, clip_runtime };
-          tmp3(c3[14]).track(constants2.CLIPS_HARDWARE_CLASSIFICATION, obj8);
+          tmp3(c3[15]).track(constants2.CLIPS_HARDWARE_CLASSIFICATION, obj8);
           c3 = 0;
           c5 = 3;
           const obj = { value: classification, done: true };
@@ -328,7 +329,14 @@ prototype["applyUserVoiceRecording"] = function applyUserVoiceRecording(id) {
   if (isClientClipsCapableDefault(MediaEngineStore)) {
     const rTCConnection = RTCConnectionStore.getRTCConnection();
     if (null != rTCConnection) {
-      if (id !== AuthenticationStore.getId()) {
+      const channel = ChannelStore.getChannel(RTCConnectionStore.getChannelId());
+      let isGuildStageVoiceResult;
+      if (channel != null) {
+        isGuildStageVoiceResult = channel.isGuildStageVoice();
+      }
+      if (isGuildStageVoiceResult) {
+        rTCConnection.setClipRecordUser(id, "audio", false);
+      } else if (id !== AuthenticationStore.getId()) {
         rTCConnection.setClipRecordUser(id, "audio", ClipsStore.isVoiceRecordingAllowedForUser(id));
       } else {
         rTCConnection.setClipRecordUser(id, "audio", isClipsEnabled.isClipsEnabled());

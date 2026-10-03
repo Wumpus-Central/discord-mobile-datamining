@@ -1,30 +1,31 @@
-// === Module 12084: SelectDoubleTapEmojiRow ===
+// === Module 12020: SelectDoubleTapEmojiRow ===
 
-// Module 12084 (SelectDoubleTapEmojiRow)
-import nativeDefault from "native" /* 576 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import EmojiDefault from "Emoji" /* 6737 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 7355 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 10783 */;
+// Module 12020 (SelectDoubleTapEmojiRow)
+import nativeDefault from "native" /* 587 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
+import EmojiDefault from "Emoji" /* 6625 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7259 */;
+import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 7627 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9866 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4834 */;
+import AccessibilityStore from "AccessibilityStore" /* 4879 */;
 
 require = fn;
 const View = fn(17).View;
-const ACTION_SHEET_MAX_WIDTH = fn(6758).ACTION_SHEET_MAX_WIDTH;
-const EmojiConstants = fn(1375);
+const ACTION_SHEET_MAX_WIDTH = fn(6646).ACTION_SHEET_MAX_WIDTH;
+const EmojiConstants = fn(1380);
 ({ EMOJI_URL_BASE_SIZE: closure_7, EmojiIntention: closure_8 } = EmojiConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj = { emoji: { width: 24, height: 24 }, customEmoji: { width: 24, height: 24 }, textEmoji: null, emojiRow: null, emojiPressable: null, selectedEmojiPressable: null, emojiWrapper: null, selectedEmojiWrapper: null, chooseEmojiButton: null, customReactionOverlay: null, selectedCustomReactionIcon: null };
-let PlatformUtils = fn(1364);
+let PlatformUtils = fn(1369);
 let num = 20;
 if (PlatformUtils.isIOS()) {
   num = 24;
 }
 let obj3 = { fontSize: num, lineHeight: null, textAlign: "center", color: null };
-PlatformUtils = fn(1364);
+PlatformUtils = fn(1369);
 let num2;
 if (PlatformUtils.isIOS()) {
   num2 = 28;
@@ -48,7 +49,151 @@ obj.customReactionOverlay = size;
 const size1 = { height: 12, width: 12, color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT };
 obj.selectedCustomReactionIcon = size1;
 let closure_12 = createStyles.createStyles(obj);
-let closure_13 = noop.memo((emoji) => {
+let ReactCompilerGating = fn(558);
+let closure_13 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((emoji) => {
+  const cResult = url(576).c(30);
+  url = emoji.emoji;
+  const onPress = emoji.onPress;
+  const selected = emoji.selected;
+  const tmp4 = closure_12();
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [AccessibilityStore];
+    const fn = function n() {
+      return useReducedMotion.useReducedMotion;
+    };
+    cResult[0] = items;
+    cResult[1] = fn;
+    tmp5 = items;
+    tmp6 = fn;
+  } else {
+    [tmp5, tmp6] = cResult;
+  }
+  const obj = url(576);
+  const stateFromStores = url(504).useStateFromStores(tmp5, tmp6);
+  if (cResult[2] === url) {
+    if (cResult[3] === onPress) {
+      let tmp10 = cResult[4];
+    }
+    let prop;
+    if (selected) {
+      prop = tmp4.selectedEmojiPressable;
+    }
+    if (cResult[5] === tmp4.emojiPressable) {
+      if (cResult[6] === prop) {
+        let tmp12 = cResult[7];
+      }
+      let selectedEmojiWrapper;
+      if (selected) {
+        selectedEmojiWrapper = tmp4.selectedEmojiWrapper;
+      }
+      if (cResult[8] === tmp4.emojiWrapper) {
+        if (cResult[9] === selectedEmojiWrapper) {
+          let tmp14 = cResult[10];
+        }
+        let str = "";
+        if (null == url.id) {
+          str = url.surrogates;
+        }
+        if (cResult[11] === url.animated) {
+          if (cResult[12] === url.id) {
+            if (cResult[13] === url.url) {
+              if (cResult[14] === stateFromStores) {
+                if (cResult[16] === tmp4.customEmoji) {
+                  if (cResult[17] === tmp4.emoji) {
+                    if (cResult[18] === tmp4.textEmoji) {
+                      if (cResult[19] === tmp15) {
+                        if (cResult[20] === str) {
+                          let tmp19 = cResult[21];
+                        }
+                        if (cResult[22] === tmp19) {
+                          if (cResult[23] === tmp14) {
+                            let tmp23 = cResult[24];
+                          }
+                          if (cResult[25] === tmp23) {
+                            if (cResult[26] === tmp9) {
+                              if (cResult[27] === tmp10) {
+                                if (cResult[28] === tmp12) {
+                                  let tmp27 = cResult[29];
+                                }
+                                return tmp27;
+                              }
+                            }
+                          }
+                          const obj2 = { accessibilityRole: "button", disabled: tmp9, onPress: tmp10, style: tmp12, children: tmp23 };
+                          const tmp29 = closure_9(tmp(5909).PressableOpacity, obj2);
+                          cResult[25] = tmp23;
+                          cResult[26] = tmp9;
+                          cResult[27] = tmp10;
+                          cResult[28] = tmp12;
+                          cResult[29] = tmp29;
+                          tmp27 = tmp29;
+                        }
+                        const obj4 = { style: tmp14, children: tmp19 };
+                        const tmp26 = closure_9(View, obj4);
+                        cResult[22] = tmp19;
+                        cResult[23] = tmp14;
+                        cResult[24] = tmp26;
+                        tmp23 = tmp26;
+                      }
+                    }
+                  }
+                }
+                const obj6 = { style: null, fastImageStyle: null, textEmojiStyle: null, name: null, src: null };
+                ({ emoji: obj5.style, customEmoji: obj5.fastImageStyle, textEmoji: obj5.textEmojiStyle } = tmp4);
+                obj6.name = str;
+                obj6.src = cResult[15];
+                const tmp22 = closure_9(onPress(6625), obj6);
+                cResult[16] = tmp4.customEmoji;
+                cResult[17] = tmp4.emoji;
+                cResult[18] = tmp4.textEmoji;
+                cResult[19] = cResult[15];
+                cResult[20] = str;
+                cResult[21] = tmp22;
+                tmp19 = tmp22;
+              }
+            }
+          }
+        }
+        if (null != url.id) {
+          const obj7 = { id: url.id, animated: null, size: null };
+          let animated = !stateFromStores;
+          if (!stateFromStores) {
+            animated = url.animated;
+          }
+          obj7.animated = animated;
+          obj7.size = size;
+          let url2 = onPress(1402).getEmojiURL(obj7);
+          const obj3 = onPress(1402);
+        } else {
+          url2 = url.url;
+        }
+        cResult[11] = url.animated;
+        ({ id: tmp3[12], url } = url);
+        cResult[13] = url;
+        cResult[14] = stateFromStores;
+        cResult[15] = url2;
+      }
+      const items1 = [tmp4.emojiWrapper, selectedEmojiWrapper];
+      cResult[8] = tmp4.emojiWrapper;
+      cResult[9] = selectedEmojiWrapper;
+      cResult[10] = items1;
+      tmp14 = items1;
+    }
+    const items2 = [tmp4.emojiPressable, prop];
+    cResult[5] = tmp4.emojiPressable;
+    cResult[6] = prop;
+    cResult[7] = items2;
+    tmp12 = items2;
+  }
+  const fn2 = function h() {
+    return onPress(url);
+  };
+  cResult[2] = url;
+  cResult[3] = onPress;
+  cResult[4] = fn2;
+  tmp10 = fn2;
+  const tmpResult = url(504);
+}) : ((emoji) => {
   emoji = emoji.emoji;
   ({ onPress: importDefault, selected } = emoji);
   const tmp = closure_12();
@@ -100,13 +245,171 @@ let closure_13 = noop.memo((emoji) => {
   obj4.src = url;
   obj3.children = closure_9(EmojiDefault, obj4);
   obj2.children = closure_9(View, obj3);
-  return closure_9(emoji(5621).PressableOpacity, obj2);
-});
+  return closure_9(emoji(5909).PressableOpacity, obj2);
+}));
+ReactCompilerGating = fn(558);
 const obj11 = { color: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_TEXT };
 size = fn(2);
 let result = size.fileFinishedImporting("modules/double_tap_to_react/native/SelectDoubleTapEmojiRow.tsx");
 
-export default noop.memo((selectedEmoji) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((selectedEmoji) => {
+  const cResult = selectedEmoji(576).c(54);
+  selectedEmoji = selectedEmoji.selectedEmoji;
+  let onPressEmoji = selectedEmoji.onPressEmoji;
+  const style = selectedEmoji.style;
+  const tmp4 = closure_12();
+  let obj = selectedEmoji(576);
+  let tmp = selectedEmoji;
+  const frequentlyUsedReactionEmojis = selectedEmoji(9870).useFrequentlyUsedReactionEmojis(undefined);
+  const rounded = Math.floor(Math.min(onPressEmoji(1484)().width, ACTION_SHEET_MAX_WIDTH) / 60);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [AccessibilityStore];
+    const fn = function u() {
+      return useReducedMotion.useReducedMotion;
+    };
+    cResult[0] = items;
+    cResult[1] = fn;
+    tmp6 = items;
+    tmp7 = fn;
+  } else {
+    [tmp6, tmp7] = cResult;
+  }
+  let obj2 = selectedEmoji(9870);
+  const stateFromStores = tmp(504).useStateFromStores(tmp6, tmp7);
+  if (cResult[2] === frequentlyUsedReactionEmojis) {
+    if (cResult[3] === rounded) {
+      if (cResult[6] === cResult[4]) {
+        if (cResult[7] === selectedEmoji) {
+          dependencyMap = tmp13;
+          if (cResult[11] !== onPressEmoji) {
+            class L {
+              constructor(arg0) {
+                tmp = onPressEmoji(selectedEmoji, true);
+                return;
+              }
+            }
+            cResult[11] = onPressEmoji;
+            cResult[12] = L;
+          } else {
+            class L {
+              constructor(arg0) {
+                tmp = onPressEmoji(selectedEmoji, true);
+                return;
+              }
+            }
+          }
+          const onPress = L;
+          if (cResult[13] !== onPressEmoji) {
+            class F {
+              constructor(arg0) {
+                tmp = onPressEmoji(selectedEmoji, false);
+                return;
+              }
+            }
+            cResult[13] = onPressEmoji;
+            cResult[14] = F;
+          } else {
+            class F {
+              constructor(arg0) {
+                tmp = onPressEmoji(selectedEmoji, false);
+                return;
+              }
+            }
+          }
+          onPressEmoji = F;
+          if (cResult[15] === style) {
+            class F {
+              constructor(arg0) {
+                tmp = onPressEmoji(selectedEmoji, false);
+                return;
+              }
+            }
+            if (cResult[18] === arr3) {
+              class F {
+                constructor(arg0) {
+                  tmp = onPressEmoji(selectedEmoji, false);
+                  return;
+                }
+              }
+            }
+            if (cResult[22] === L) {
+              class F {
+                constructor(arg0) {
+                  tmp = onPressEmoji(selectedEmoji, false);
+                  return;
+                }
+              }
+              const mapped = arr3.map(tmp20);
+              cResult[18] = arr3;
+              cResult[19] = L;
+              cResult[20] = tmp13;
+              cResult[21] = mapped;
+            }
+            const fn2 = function k(emoji, arg1) {
+              let tmp = null;
+              if (null != emoji) {
+                const obj = { emoji, selected: arg1 === closure_2, onPress };
+                tmp = options(closure_13, obj, arg1);
+              }
+              return tmp;
+            };
+            cResult[22] = L;
+            cResult[23] = tmp13;
+            cResult[24] = fn2;
+            tmp20 = fn2;
+          }
+          const items1 = [style, tmp4.emojiRow];
+          cResult[15] = style;
+          cResult[16] = tmp4.emojiRow;
+          cResult[17] = items1;
+        }
+      }
+      if (cResult[9] !== selectedEmoji) {
+        class F {
+          constructor(arg0) {
+            tmp = onPressEmoji(selectedEmoji, false);
+            return;
+          }
+        }
+        cResult[9] = selectedEmoji;
+        cResult[10] = U;
+      } else {
+        class F {
+          constructor(arg0) {
+            tmp = onPressEmoji(selectedEmoji, false);
+            return;
+          }
+        }
+      }
+      const findIndexResult = cResult[4].findIndex(U);
+      cResult[6] = cResult[4];
+      cResult[7] = selectedEmoji;
+      cResult[8] = findIndexResult;
+    }
+  }
+  if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
+    class F {
+      constructor(arg0) {
+        tmp = onPressEmoji(selectedEmoji, false);
+        return;
+      }
+    }
+    cResult[5] = tmp11;
+  } else {
+    class F {
+      constructor(arg0) {
+        tmp = onPressEmoji(selectedEmoji, false);
+        return;
+      }
+    }
+  }
+  const found = frequentlyUsedReactionEmojis.filter(tmp11);
+  const substr = found.slice(0, rounded - 1);
+  cResult[2] = frequentlyUsedReactionEmojis;
+  cResult[3] = rounded;
+  cResult[4] = substr;
+  const tmpResult = tmp(504);
+}) : ((selectedEmoji) => {
   selectedEmoji = selectedEmoji.selectedEmoji;
   let substr;
   let memo;
@@ -114,19 +417,19 @@ export default noop.memo((selectedEmoji) => {
   let selectedCustomReactionIcon = closure_12();
   let ReactionIcon = selectedEmoji;
   let tmp = substr;
-  const frequentlyUsedReactionEmojis = selectedEmoji(substr[13]).useFrequentlyUsedReactionEmojis(undefined);
+  const frequentlyUsedReactionEmojis = selectedEmoji(substr[15]).useFrequentlyUsedReactionEmojis(undefined);
   let getEmojiURL = onPressEmoji;
-  const rounded = Math.floor(Math.min(onPressEmoji(substr[14])().width, ACTION_SHEET_MAX_WIDTH) / 60);
-  let obj = selectedEmoji(substr[13]);
+  const rounded = Math.floor(Math.min(onPressEmoji(substr[16])().width, ACTION_SHEET_MAX_WIDTH) / 60);
+  let obj = selectedEmoji(substr[15]);
   const items = [onPressEmoji];
-  const stateFromStores = selectedEmoji(substr[9]).useStateFromStores(items, () => onPressEmoji.useReducedMotion);
+  const stateFromStores = selectedEmoji(substr[11]).useStateFromStores(items, () => onPressEmoji.useReducedMotion);
   const found = frequentlyUsedReactionEmojis.filter((emoji) => {
     const obj2 = { emoji, channel: "Array", intention: constants.DEFAULT_REACT_EMOJI };
-    return !onPressEmoji(substr[15]).isEmojiFilteredOrLocked(obj2);
+    return !onPressEmoji(substr[17]).isEmojiFilteredOrLocked(obj2);
   });
   substr = found.slice(0, rounded - 1);
   const items1 = [substr, selectedEmoji];
-  memo = memo.useMemo(() => substr.findIndex((item) => selectedEmoji(substr[16]).areEmojisEqual(closure_1_0, item)), items1);
+  memo = memo.useMemo(() => substr.findIndex((item) => selectedEmoji(substr[18]).areEmojisEqual(closure_1_0, item)), items1);
   const items2 = [onPressEmoji];
   const onPress = memo.useCallback((arg0) => {
     onPressEmoji(arg0, true);
@@ -143,7 +446,7 @@ export default noop.memo((selectedEmoji) => {
       let tmp = null;
       if (null != emoji) {
         const obj = { emoji, selected: index === memo, onPress };
-        tmp = React7(closure_13, obj, index);
+        tmp = options(closure_13, obj, index);
       }
       return tmp;
     }),
@@ -173,7 +476,7 @@ export default noop.memo((selectedEmoji) => {
   const obj5 = { style: items7, children: null };
   items7[1] = selectedEmojiWrapper;
   if (-1 === memo) {
-    let emojiURL = getEmojiURL(tmp[11]);
+    let emojiURL = getEmojiURL(tmp[13]);
     let obj6 = { style: null, fastImageStyle: null, textEmojiStyle: null, name: null, src: null };
     ({ emoji: arr12.style, customEmoji: arr12.fastImageStyle, textEmoji: arr12.textEmojiStyle } = selectedCustomReactionIcon);
     let str = "";
@@ -200,7 +503,7 @@ export default noop.memo((selectedEmoji) => {
     obj6 = [, ];
     obj6[0] = closure_9(emojiURL, obj6);
     const obj9 = { style: selectedCustomReactionIcon.customReactionOverlay, children: null };
-    ReactionIcon = ReactionIcon(tmp[19]).ReactionIcon;
+    ReactionIcon = ReactionIcon(tmp[21]).ReactionIcon;
     const obj10 = { color: selectedCustomReactionIcon.selectedCustomReactionIcon.color, style: null };
     selectedCustomReactionIcon = selectedCustomReactionIcon.selectedCustomReactionIcon;
     obj10.style = selectedCustomReactionIcon;
@@ -213,11 +516,11 @@ export default noop.memo((selectedEmoji) => {
     const tmp7Result = closure_9(emojiURL, obj6);
   } else {
     const obj19 = { color: selectedCustomReactionIcon.chooseEmojiButton.color };
-    obj5.children = closure_9(ReactionIcon(tmp[19]).ReactionIcon, obj19);
+    obj5.children = closure_9(ReactionIcon(tmp[21]).ReactionIcon, obj19);
     obj4.children = closure_9(tmp6, obj5);
-    items5[1] = closure_9(selectedEmoji(substr[10]).PressableOpacity, obj4);
+    items5[1] = closure_9(selectedEmoji(substr[14]).PressableOpacity, obj4);
     obj3.children = items5;
     return closure_11(tmp6, obj3);
   }
-  let obj2 = selectedEmoji(substr[9]);
-});
+  let obj2 = selectedEmoji(substr[11]);
+}));

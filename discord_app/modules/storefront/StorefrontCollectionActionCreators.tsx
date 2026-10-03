@@ -1,13 +1,13 @@
-// === Module 8533: StorefrontCollectionActionCreators ===
+// === Module 8539: StorefrontCollectionActionCreators ===
 
-// Module 8533 (StorefrontCollectionActionCreators)
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import StoreUtils from "StoreUtils" /* 5276 */;
-import StorefrontCacheUtils from "StorefrontCacheUtils" /* 7847 */;
+// Module 8539 (StorefrontCollectionActionCreators)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import StoreUtils from "StoreUtils" /* 5322 */;
+import StorefrontCacheUtils from "StorefrontCacheUtils" /* 7891 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LocaleStore from "LocaleStore" /* 2111 */;
-import StorefrontCollectionStore from "StorefrontCollectionStore" /* 8531 */;
-import StorefrontCollectionRecord from "StorefrontCollectionRecord" /* 7168 */;
+import LocaleStore from "LocaleStore" /* 2116 */;
+import StorefrontCollectionStore from "StorefrontCollectionStore" /* 8537 */;
+import StorefrontCollectionRecord from "StorefrontCollectionRecord" /* 7071 */;
 
 require = fn;
 let closure_8 = async function _maybeFetchCollectionsWithProducts(arg0) {
@@ -21,7 +21,7 @@ let closure_8 = async function _maybeFetchCollectionsWithProducts(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -66,7 +66,7 @@ let closure_8 = async function _maybeFetchCollectionsWithProducts(arg0) {
           closure_129_6 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "flex", done: null };
+          return { value: "Reflect", done: true };
         }
       } else {
         if (1 === tmp7) {
@@ -182,7 +182,7 @@ let closure_11 = async function _maybeFetchCollectionsForApplicationPage(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -243,7 +243,7 @@ let closure_11 = async function _maybeFetchCollectionsForApplicationPage(arg0) {
                   const _Date = Date;
                   if (Date.now() - collectionPageFetchedAt <= TWELVE_HOURS_MS) {
                     c6 = 3;
-                    return { value: "HermesInternal", done: null };
+                    return { value: "IconComponent", done: "IconComponent" };
                   }
                 }
               }
@@ -327,7 +327,7 @@ let closure_13 = async function _maybeFetchCollectionsAfter(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -379,7 +379,7 @@ let closure_13 = async function _maybeFetchCollectionsAfter(arg0) {
                       const _Date = Date;
                       if (Date.now() - collectionsAfterFetchedAt <= TWELVE_HOURS_MS) {
                         c6 = 3;
-                        return { value: "HermesInternal", done: null };
+                        return { value: "IconComponent", done: "IconComponent" };
                       }
                     }
                   }
@@ -448,7 +448,7 @@ let closure_14 = async function _maybeFetchCollectionsForApplication(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -497,7 +497,7 @@ let closure_14 = async function _maybeFetchCollectionsForApplication(arg0) {
           closure_129_10 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "flex", done: null };
+          return { value: "Reflect", done: true };
         }
       } else {
         if (1 === tmp7) {
@@ -530,7 +530,7 @@ let closure_14 = async function _maybeFetchCollectionsForApplication(arg0) {
                       }
                     }
                     c6 = 3;
-                    return { value: "HermesInternal", done: null };
+                    return { value: "IconComponent", done: "IconComponent" };
                   }
                 }
                 c4 = 1;
@@ -602,7 +602,7 @@ let closure_14 = async function _maybeFetchCollectionsForApplication(arg0) {
     }
   }
 };
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/storefront/StorefrontCollectionActionCreators.tsx");
 

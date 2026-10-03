@@ -1,29 +1,67 @@
-// === Module 10789: useCoachmark ===
+// === Module 9882: useCoachmark ===
 
-// Module 10789 (useCoachmark)
-import AnimatedCoachmark from "AnimatedCoachmark" /* 10796 */;
+// Module 9882 (useCoachmark)
+import c from "c" /* 576 */;
+import v1 from "v1" /* 1266 */;
+import useTooltip from "useTooltip" /* 9883 */;
+import AnimatedCoachmark from "AnimatedCoachmark" /* 9889 */;
 import noop from "module_19" /* 19 */;
-
-const require = globalThis.__r;
 
 require = fn;
 const jsx = fn(21).jsx;
-const size = fn(2);
-const result = size.fileFinishedImporting("design/components/Coachmark/native/useCoachmark.native.tsx");
-
-export const useCoachmark = function useCoachmark(targetRef, memo) {
-  _require = memo;
-  let context;
-  let obj = require("v1");
+fn(558);
+const ReactCompilerGating = fn(558);
+let closure_4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  _require = arg0;
+  const cResult = require("c").c(3);
   context = noop.useContext(require("LayerContext").LayerContext);
-  const items = [context, memo];
-  const callback = noop.useCallback((arg0, targetMeasurements, surfaceMeasurements) => {
+  if (cResult[0] === arg0) {
+    if (cResult[1] === context) {
+      let tmp3 = cResult[2];
+    }
+    return tmp3;
+  }
+  const fn = function o(arg0, targetMeasurements, surfaceMeasurements) {
+    const obj = {};
+    const merged = Object.assign(closure_0);
+    obj.targetMeasurements = targetMeasurements;
+    obj.surfaceMeasurements = surfaceMeasurements;
+    context.add(arg0, jsx(AnimatedCoachmark.AnimatedCoachmark, {}));
+  };
+  cResult[0] = arg0;
+  cResult[1] = context;
+  cResult[2] = fn;
+  tmp3 = fn;
+}) : ((arg0) => {
+  _require = arg0;
+  context = noop.useContext(require("LayerContext").LayerContext);
+  const items = [context, arg0];
+  return noop.useCallback((arg0, targetMeasurements, surfaceMeasurements) => {
     const obj = {};
     const merged = Object.assign(closure_0);
     obj.targetMeasurements = targetMeasurements;
     obj.surfaceMeasurements = surfaceMeasurements;
     context.add(arg0, jsx(AnimatedCoachmark.AnimatedCoachmark, {}));
   }, items);
-  const ref = noop.useRef(require("v1").v4());
-  return require("useTooltip").useTooltipHelper(ref, targetRef, callback);
-};
+});
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Coachmark/native/useCoachmark.native.tsx");
+
+export const useCoachmark = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+  const cResult = c.c(1);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const v4Result = v1.v4();
+    cResult[0] = v4Result;
+    let first = v4Result;
+    const tmpResult = v1;
+  } else {
+    first = cResult[0];
+  }
+  const ref = noop.useRef(first);
+  const tmp7 = closure_4(arg1);
+  return useTooltip.useTooltipHelper(ref, arg0, tmp7);
+}) : ((arg0, arg1) => {
+  const ref = noop.useRef(v1.v4());
+  const tmp2 = closure_4(arg1);
+  return useTooltip.useTooltipHelper(ref, arg0, tmp2);
+});

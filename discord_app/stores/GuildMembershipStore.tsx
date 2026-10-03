@@ -1,8 +1,8 @@
-// === Module 2046: GuildMembershipStore ===
+// === Module 2053: GuildMembershipStore ===
 
-// Module 2046 (GuildMembershipStore)
+// Module 2053 (GuildMembershipStore)
 import initializeDefault from "initialize" /* 504 */;
-import Dispatcher2 from "Dispatcher" /* 573 */;
+import Dispatcher2 from "Dispatcher" /* 584 */;
 
 const Dispatcher = Dispatcher2;
 
@@ -92,7 +92,7 @@ let obj = {
     return closure_0.handleGuildDelete(arg0);
   }
 };
-let tmp2 = new tmp(Dispatcher, obj, fn(573).DispatchBand.Early, GuildMembershipStore, tmp, Dispatcher, obj, new.target, undefined, handleGuildDelete, globalThis);
+let tmp2 = new tmp(Dispatcher, obj, fn(584).DispatchBand.Early, GuildMembershipStore, tmp, Dispatcher, obj, new.target, undefined, handleGuildDelete, globalThis);
 let closure_129_0 = tmp2;
 tmp2.guildIds = new Set();
 const size = fn(2);

@@ -1,7 +1,7 @@
-// === Module 13556: VideoStabilizationExperiment ===
+// === Module 13618: VideoStabilizationExperiment ===
 
-// Module 13556 (VideoStabilizationExperiment)
-import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1436 */;
+// Module 13618 (VideoStabilizationExperiment)
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1441 */;
 
 const obj = { kind: "user", name: "2026-05-ios-video-stabilization", defaultConfig: { mode: "off" }, variations: null };
 const obj2 = { 1: null, 2: { mode: "standard" } };

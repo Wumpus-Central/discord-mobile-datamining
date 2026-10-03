@@ -1,12 +1,12 @@
-// === Module 12755: GuildInviteSendStateStore ===
+// === Module 12791: GuildInviteSendStateStore ===
 
-// Module 12755 (GuildInviteSendStateStore)
-import module_560 from "module_560" /* 560 */;
+// Module 12791 (GuildInviteSendStateStore)
+import module_570 from "module_570" /* 570 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
-const useGuildInviteSendStates = module_560.create(() => ({}));
+const useGuildInviteSendStates = module_570.create(() => ({}));
 const result = size.fileFinishedImporting("modules/instant_invite/GuildInviteSendStateStore.tsx");
 
 export const setSendState = function setSendState(arg0, arg1, arg2) {

@@ -1,12 +1,12 @@
-// === Module 17892: MidjourneyOnboardingManager ===
+// === Module 17978: MidjourneyOnboardingManager ===
 
-// Module 17892 (MidjourneyOnboardingManager)
+// Module 17978 (MidjourneyOnboardingManager)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6725 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
 
 const require = fn;
-const MIDJOURNEY_GUILD_ID = fn(13609).MIDJOURNEY_GUILD_ID;
-const Routes = fn(1074).Routes;
+const MIDJOURNEY_GUILD_ID = fn(13671).MIDJOURNEY_GUILD_ID;
+const Routes = fn(1085).Routes;
 class MidjourneyOnboardingManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -27,7 +27,7 @@ MidjourneyOnboardingManager.prototype["handleChannelCreate"] = function handleCh
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -44,19 +44,19 @@ MidjourneyOnboardingManager.prototype["handleChannelCreate"] = function handleCh
             if (obj6.isEligibleForMidjourneyRedirect(channel)) {
               v1 = 1;
               dependencyMap = 1;
-              const obj4 = { value: tmp2(13608).hasRedirectedToGuild(MIDJOURNEY_GUILD_ID), done: false };
+              const obj4 = { value: tmp2(13670).hasRedirectedToGuild(MIDJOURNEY_GUILD_ID), done: false };
               return obj4;
             } else {
               dependencyMap = 3;
             }
-            obj6 = tmp2(13608);
+            obj6 = tmp2(13670);
           }
         } else if (arg0 === 1) {
           dependencyMap = 3;
           throw value;
         } else if (arg0 !== 2) {
-          v1(6852)(Routes.CHANNEL(null, closure_128_0.id));
-          const tmp9 = v1(6852);
+          v1(6750)(Routes.CHANNEL(null, closure_128_0.id));
+          const tmp9 = v1(6750);
         }
         dependencyMap = 3;
         const obj = { value, done: true };

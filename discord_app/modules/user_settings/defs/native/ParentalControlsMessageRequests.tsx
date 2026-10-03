@@ -1,18 +1,49 @@
-// === Module 15737: ParentalControlsMessageRequests ===
+// === Module 15800: ParentalControlsMessageRequests ===
 
-// Module 15737 (ParentalControlsMessageRequests)
-import util from "util" /* 1115 */;
-import _modDef2486 from "module_2486" /* 2486 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8043 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8045 */;
-import useSelectedTeen from "useSelectedTeen" /* 8293 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14565 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14566 */;
-import DefaultDMSettingsExperiment from "DefaultDMSettingsExperiment" /* 15723 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7145 */;
+// Module 15800 (ParentalControlsMessageRequests)
+import util from "util" /* 1126 */;
+import _modDef2493 from "module_2493" /* 2493 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8084 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8086 */;
+import useSelectedTeen from "useSelectedTeen" /* 8297 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14621 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14622 */;
+import DefaultDMSettingsExperiment from "DefaultDMSettingsExperiment" /* 15786 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7048 */;
 
 require = fn;
-const SettingBuilders = fn(11215);
+fn(558);
+let ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
+const useIsDisabled = () => useParentalControlSettings.useDefaultGuildsRestricted();
+const SettingBuilders = fn(11129);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  if (typeof fn === "function") {
+    const defaultGuildsRestricted = useParentalControlSettings.useDefaultGuildsRestricted();
+    const selectedTeenId = useSelectedTeen.useSelectedTeenId();
+    const ParentalControlledDefaultMessageRequestRestricted = ParentalControlledUserSettings.ParentalControlledDefaultMessageRequestRestricted;
+    let tmp6 = !defaultGuildsRestricted;
+    if (!defaultGuildsRestricted) {
+      tmp6 = !ParentalControlledDefaultMessageRequestRestricted.useControlledSetting(selectedTeenId);
+    }
+    return tmp6;
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+}) : (() => {
+  if (typeof fn === "function") {
+    const defaultGuildsRestricted = useParentalControlSettings.useDefaultGuildsRestricted();
+    const selectedTeenId = useSelectedTeen.useSelectedTeenId();
+    const ParentalControlledDefaultMessageRequestRestricted = ParentalControlledUserSettings.ParentalControlledDefaultMessageRequestRestricted;
+    let tmp6 = !defaultGuildsRestricted;
+    if (!defaultGuildsRestricted) {
+      tmp6 = !ParentalControlledDefaultMessageRequestRestricted.useControlledSetting(selectedTeenId);
+    }
+    return tmp6;
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+});
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
@@ -20,22 +51,37 @@ const toggle = SettingBuilders.createToggle({
   },
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2486["7aYkh1"]);
+    return intl.string(_modDef2493["7aYkh1"]);
   },
-  parent: fn(7590).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
-  useValue() {
-    const defaultGuildsRestricted = useParentalControlSettings.useDefaultGuildsRestricted();
-    const selectedTeenId = useSelectedTeen.useSelectedTeenId();
-    const ParentalControlledDefaultMessageRequestRestricted = ParentalControlledUserSettings.ParentalControlledDefaultMessageRequestRestricted;
-    let tmp3 = !defaultGuildsRestricted;
-    if (!defaultGuildsRestricted) {
-      tmp3 = !ParentalControlledDefaultMessageRequestRestricted.useControlledSetting(selectedTeenId);
+  parent: fn(7634).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+    if (typeof fn === "function") {
+      const defaultGuildsRestricted = useParentalControlSettings.useDefaultGuildsRestricted();
+      const selectedTeenId = useSelectedTeen.useSelectedTeenId();
+      const ParentalControlledDefaultMessageRequestRestricted = ParentalControlledUserSettings.ParentalControlledDefaultMessageRequestRestricted;
+      let tmp6 = !defaultGuildsRestricted;
+      if (!defaultGuildsRestricted) {
+        tmp6 = !ParentalControlledDefaultMessageRequestRestricted.useControlledSetting(selectedTeenId);
+      }
+      return tmp6;
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    return tmp3;
-  },
-  useIsDisabled() {
-    return useParentalControlSettings.useDefaultGuildsRestricted();
-  },
+  }) : (() => {
+    if (typeof fn === "function") {
+      const defaultGuildsRestricted = useParentalControlSettings.useDefaultGuildsRestricted();
+      const selectedTeenId = useSelectedTeen.useSelectedTeenId();
+      const ParentalControlledDefaultMessageRequestRestricted = ParentalControlledUserSettings.ParentalControlledDefaultMessageRequestRestricted;
+      let tmp6 = !defaultGuildsRestricted;
+      if (!defaultGuildsRestricted) {
+        tmp6 = !ParentalControlledDefaultMessageRequestRestricted.useControlledSetting(selectedTeenId);
+      }
+      return tmp6;
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  }),
+  useIsDisabled,
   onValueChange: function onAllowMessageRequestsFromServerMembersValueChange(arg0) {
     const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
     if (null != selectedTeenId) {
@@ -53,6 +99,6 @@ const toggle = SettingBuilders.createToggle({
   unsearchable: true
 });
 const size = fn(2);
-let result = size.fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsMessageRequests.tsx");
+let result1 = size.fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsMessageRequests.tsx");
 
 export default toggle;

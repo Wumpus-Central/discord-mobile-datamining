@@ -1,15 +1,15 @@
-// === Module 8950: ThermalUtils ===
+// === Module 8984: ThermalUtils ===
 
-// Module 8950 (ThermalUtils)
+// Module 8984 (ThermalUtils)
 import _mod17 from "module_17" /* 17 */;
-import NativeDeviceThermalStateModuleDefault from "NativeDeviceThermalStateModule" /* 8951 */;
-import module_560 from "module_560" /* 560 */;
+import NativeDeviceThermalStateModuleDefault from "NativeDeviceThermalStateModule" /* 8985 */;
+import module_570 from "module_570" /* 570 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
 const nativeEventEmitter = new _mod17.NativeEventEmitter(NativeDeviceThermalStateModuleDefault);
-let closure_4 = module_560.create((arg0) => {
+let closure_4 = module_570.create((arg0) => {
   _require = arg0;
   nativeEventEmitter.addListener("DeviceThermalStateDidChange", (state) => {
     state = state.state;

@@ -1,11 +1,11 @@
-// === Module 12271: MarketingCardsScroller ===
+// === Module 12227: MarketingCardsScroller ===
 
-// Module 12271 (MarketingCardsScroller)
-import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1115 */;
+// Module 12227 (MarketingCardsScroller)
+import nativeDefault from "native" /* 587 */;
+import util from "util" /* 1126 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4834 */;
+import AccessibilityStore from "AccessibilityStore" /* 4879 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -14,10 +14,10 @@ const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const previous = "previous";
 const next = "next";
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj = { wrapper: { position: "relative" }, navigationButton: null, navigationButtonPrevious: null, navigationButtonNext: null };
 let size = { alignItems: "center", backgroundColor: null, borderRadius: null, height: 44, justifyContent: "center", position: "absolute", top: "50%", transform: null, width: 44, zIndex: 1 };
-const ColorUtils = fn(4712);
+const ColorUtils = fn(4727);
 size.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.56);
 size.borderRadius = nativeDefault.radii.round;
 let items = [{ translateY: -22 }];
@@ -26,10 +26,400 @@ obj.navigationButton = size;
 obj.navigationButtonPrevious = { left: 16 };
 obj.navigationButtonNext = { right: 16 };
 let closure_12 = createStyles.createStyles(obj);
+const ReactCompilerGating = fn(558);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/MarketingCardsScroller.tsx");
 
-export const MarketingCardsScroller = noop.forwardRef((initialIndex, arg1) => {
+export const MarketingCardsScroller = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((onScrollingChange, arg1) => {
+  const cResult = itemCount(num2[9]).c(86);
+  ({ children, contentContainerStyle, initialIndex, itemCount } = onScrollingChange);
+  onScrollingChange = onScrollingChange.onScrollingChange;
+  let num = 0;
+  num2 = 0;
+  ({ cardMarginRight, cardWidth } = onScrollingChange);
+  if (undefined !== initialIndex) {
+    num2 = initialIndex;
+  }
+  closure_12();
+  noop.useRef(null);
+  const sum = cardWidth + cardMarginRight;
+  noop = sum;
+  const ref = noop.useRef(Math.max(num, Math.min(itemCount - 1, num2)) * sum);
+  if (cResult[0] === num2) {
+    if (cResult[1] === itemCount) {
+      let tmp7 = cResult[2];
+    }
+    const tmp9 = ref(obj2.useState(tmp7), 2);
+    const first = tmp9[0];
+    AccessibilityStore = tmp9[1];
+    [tmp12, closure_8] = ref(obj2.useState(num), 2);
+    const tmp11 = ref(obj2.useState(num), 2);
+    [tmp14, closure_9] = ref(obj2.useState(num), 2);
+    const _Symbol = Symbol;
+    if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+      const items = [AccessibilityStore];
+      class L {
+        constructor() {
+          return closure_7.useReducedMotion;
+        }
+      }
+      cResult[3] = items;
+      cResult[4] = L;
+      let tmp16 = L;
+      let tmp15 = items;
+    } else {
+      tmp15 = cResult[3];
+      tmp16 = cResult[4];
+    }
+    const tmp13 = ref(obj2.useState(num), 2);
+    const stateFromStores = itemCount(tmp2[10]).useStateFromStores(tmp15, tmp16);
+    obj2.useRef(stateFromStores);
+    itemCount(tmp2[11]);
+    if (cResult[5] === tmp12) {
+      if (cResult[6] === tmp14) {
+        let tmp20 = cResult[7];
+      }
+      closure_12 = tmp20;
+      class L {
+        constructor() {
+          return closure_7.useReducedMotion;
+        }
+      }
+      closure_13 = tmp23;
+      let tmp24 = tmp20;
+      if (tmp20) {
+        tmp24 = first < itemCount - 1;
+      }
+      closure_14 = tmp24;
+      if (cResult[8] === itemCount) {
+        if (cResult[9] === sum) {
+          if (cResult[13] !== stateFromStores) {
+            function ie() {
+              closure_11.current = stateFromStores;
+            }
+            const items1 = [stateFromStores];
+            class L {
+              constructor() {
+                return closure_7.useReducedMotion;
+              }
+            }
+            cResult[13] = stateFromStores;
+            cResult[14] = ie;
+            cResult[15] = items1;
+            let tmp34 = items1;
+            let tmp33 = ie;
+          } else {
+            tmp33 = cResult[14];
+            tmp34 = cResult[15];
+          }
+          const effect = obj2.useEffect(tmp33, tmp34);
+          class L {
+            constructor() {
+              return closure_7.useReducedMotion;
+            }
+          }
+          if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
+            function oe() {
+              const current = ref.current;
+              if (0 !== current) {
+                const current2 = ref.current;
+                if (current2 != null) {
+                  const obj = { x: current, animated: false };
+                  current2.scrollTo(obj);
+                }
+              }
+            }
+            const items2 = [];
+            class L {
+              constructor() {
+                return closure_7.useReducedMotion;
+              }
+            }
+            cResult[17] = items2;
+            let tmp37 = items2;
+            let tmp36 = oe;
+          } else {
+            tmp36 = cResult[16];
+            tmp37 = cResult[17];
+          }
+          const effect1 = obj2.useEffect(tmp36, tmp37);
+          if (cResult[18] === itemCount) {
+            if (cResult[19] === sum) {
+              let tmp39 = cResult[20];
+            }
+            const scrollToIndex = tmp39;
+            if (cResult[21] !== tmp39) {
+              function ce() {
+                return { scrollToIndex };
+              }
+              const items3 = [tmp39];
+              class L {
+                constructor() {
+                  return closure_7.useReducedMotion;
+                }
+              }
+              cResult[21] = tmp39;
+              cResult[22] = ce;
+              cResult[23] = items3;
+              let tmp41 = items3;
+              let tmp40 = ce;
+            } else {
+              tmp40 = cResult[22];
+              tmp41 = cResult[23];
+            }
+            class L {
+              constructor() {
+                return closure_7.useReducedMotion;
+              }
+            }
+            const imperativeHandle = obj2.useImperativeHandle(arg1, tmp40, tmp41);
+            if (cResult[24] === tmp24) {
+              if (cResult[29] === first) {
+                if (cResult[30] === tmp23) {
+                  if (cResult[31] === tmp39) {
+                    let tmp47 = cResult[32];
+                  }
+                  closure_16 = tmp47;
+                  if (cResult[33] === first) {
+                    if (cResult[34] === tmp24) {
+                      if (cResult[35] === tmp39) {
+                        let tmp48 = cResult[36];
+                      }
+                      closure_17 = tmp48;
+                      if (cResult[37] === tmp48) {
+                        if (cResult[40] !== onScrollingChange) {
+                          function xe() {
+                            if (onScrollingChange != null) {
+                              tmp(true);
+                            }
+                          }
+                          cResult[40] = onScrollingChange;
+                          class L {
+                            constructor() {
+                              return closure_7.useReducedMotion;
+                            }
+                          }
+                          cResult[41] = xe;
+                        }
+                        const _Symbol2 = Symbol;
+                        class L {
+                          constructor() {
+                            return closure_7.useReducedMotion;
+                          }
+                        }
+                        if (tmp53 === Symbol.for("react.memo_cache_sentinel")) {
+                          class Ie {
+                            constructor(arg0) {
+                              tmp = closure_9(onScrollingChange.nativeEvent.layout.width);
+                              return;
+                            }
+                          }
+                          cResult[42] = Ie;
+                          class L {
+                            constructor() {
+                              return closure_7.useReducedMotion;
+                            }
+                          }
+                        } else {
+                          class Ie {
+                            constructor(arg0) {
+                              tmp = closure_9(onScrollingChange.nativeEvent.layout.width);
+                              return;
+                            }
+                          }
+                        }
+                        const _Symbol3 = Symbol;
+                        if (cResult[43] === Symbol.for("react.memo_cache_sentinel")) {
+                          class Re {
+                            constructor(arg0) {
+                              tmp = closure_8(onScrollingChange);
+                              return;
+                            }
+                          }
+                          cResult[43] = Re;
+                          class L {
+                            constructor() {
+                              return closure_7.useReducedMotion;
+                            }
+                          }
+                        } else {
+                          class Re {
+                            constructor(arg0) {
+                              tmp = closure_8(onScrollingChange);
+                              return;
+                            }
+                          }
+                        }
+                        if (cResult[44] === itemCount) {
+                          class Re {
+                            constructor(arg0) {
+                              tmp = closure_8(onScrollingChange);
+                              return;
+                            }
+                          }
+                        }
+                        class Pe {
+                          constructor(arg0) {
+                            tmp = closure_7(Math.max(0, Math.min(itemCount - 1, Math.round(onScrollingChange.nativeEvent.contentOffset.x / closure_4))));
+                            obj = closure_0(closure_2[13]);
+                            if (obj.isIOS()) {
+                              velocity = onScrollingChange.nativeEvent.velocity;
+                              tmp2 = null;
+                              tmp3 = null == velocity;
+                              if (!tmp3) {
+                                tmp4 = 0 === velocity.x && 0 === velocity.y;
+                                tmp3 = tmp4;
+                              }
+                              if (tmp3) {
+                                if (onScrollingChange != null) {
+                                  flag = false;
+                                  tmp5Result = tmp5(false);
+                                }
+                              }
+                            }
+                            return;
+                          }
+                        }
+                        cResult[44] = itemCount;
+                        cResult[45] = sum;
+                        cResult[46] = onScrollingChange;
+                        cResult[47] = Pe;
+                      }
+                      class L {
+                        constructor() {
+                          return closure_7.useReducedMotion;
+                        }
+                      }
+                      cResult[37] = tmp48;
+                      cResult[38] = tmp47;
+                    }
+                  }
+                  class L {
+                    constructor() {
+                      return closure_7.useReducedMotion;
+                    }
+                  }
+                  cResult[33] = first;
+                  cResult[34] = tmp24;
+                  cResult[36] = tmp49;
+                  tmp48 = tmp49;
+                }
+              }
+              function me() {
+                if (closure_13) {
+                  scrollToIndex(first - 1);
+                }
+              }
+              class L {
+                constructor() {
+                  return closure_7.useReducedMotion;
+                }
+              }
+              cResult[29] = first;
+              cResult[30] = tmp23;
+              cResult[31] = tmp39;
+              cResult[32] = me;
+              tmp47 = me;
+            }
+            const items4 = [];
+            if (!tmp23) {
+              class Re {
+                constructor(arg0) {
+                  tmp = closure_8(onScrollingChange);
+                  return;
+                }
+              }
+            } else {
+              class Re {
+                constructor(arg0) {
+                  tmp = closure_8(onScrollingChange);
+                  return;
+                }
+              }
+              if (cResult[27] === Symbol.for("react.memo_cache_sentinel")) {
+                class Re {
+                  constructor(arg0) {
+                    tmp = closure_8(onScrollingChange);
+                    return;
+                  }
+                }
+                tmp45[0] = stateFromStores;
+                class L {
+                  constructor() {
+                    return closure_7.useReducedMotion;
+                  }
+                }
+                tmp45[1] = obj5.string(itemCount(tmp2[12]).t.vgfxaA);
+                cResult[27] = tmp45;
+              } else {
+                class Re {
+                  constructor(arg0) {
+                    tmp = closure_8(onScrollingChange);
+                    return;
+                  }
+                }
+              }
+              class L {
+                constructor() {
+                  return closure_7.useReducedMotion;
+                }
+              }
+            }
+          }
+          function le(arg0) {
+            const bound = Math.max(0, Math.min(itemCount - 1, arg0));
+            closure_7(bound);
+            const current = ref.current;
+            if (current != null) {
+              const obj = { x: bound * sum, animated: !ref2.current };
+              current.scrollTo(obj);
+            }
+          }
+          cResult[18] = itemCount;
+          cResult[19] = sum;
+          cResult[20] = le;
+          tmp39 = le;
+        }
+      }
+      const _Array = Array;
+      const array = new Array(itemCount);
+      const mapped = array.fill(num).map(tmp26);
+      cResult[8] = itemCount;
+      cResult[9] = sum;
+      num = 10;
+      cResult[10] = mapped;
+      const fillResult = array.fill(num);
+    }
+    if (tmp14 > num) {
+      class Re {
+        constructor(arg0) {
+          tmp = closure_8(onScrollingChange);
+          return;
+        }
+      }
+      const _Math = Math;
+      const rounded = Math.round(tmp12);
+      class L {
+        constructor() {
+          return closure_7.useReducedMotion;
+        }
+      }
+    }
+    cResult[5] = tmp12;
+    cResult[6] = tmp14;
+    cResult[7] = tmp14 > num;
+    tmp20 = tmp21;
+    const tmpResult = itemCount(tmp2[10]);
+  }
+  const fn = function p() {
+    return Math.max(0, Math.min(itemCount - 1, num2));
+  };
+  cResult[num] = num2;
+  cResult[1] = itemCount;
+  cResult[2] = fn;
+  tmp7 = fn;
+  let obj = itemCount(num2[9]);
+}) : ((initialIndex, arg1) => {
   function handleScrollEnd(nativeEvent) {
     closure_7(Math.max(0, Math.min(itemCount - 1, Math.round(nativeEvent.nativeEvent.contentOffset.x / sum))));
     if (obj.isIOS()) {
@@ -67,11 +457,11 @@ export const MarketingCardsScroller = noop.forwardRef((initialIndex, arg1) => {
   [tmp9, closure_9] = ref(noop.useState(0), 2);
   const tmp8 = ref(noop.useState(0), 2);
   let items = [closure_7];
-  const stateFromStores = num(onScrollingChange[8]).useStateFromStores(items, () => closure_7.useReducedMotion);
+  const stateFromStores = num(onScrollingChange[10]).useStateFromStores(items, () => closure_7.useReducedMotion);
   noop.useRef(stateFromStores);
-  let obj2 = num(onScrollingChange[8]);
+  let obj2 = num(onScrollingChange[10]);
   let tmp14 = tmp9 > 0;
-  const isScreenReaderEnabled = num(onScrollingChange[9]).useIsScreenReaderEnabled();
+  const isScreenReaderEnabled = num(onScrollingChange[11]).useIsScreenReaderEnabled();
   if (tmp14) {
     const _Math = Math;
     const _Math2 = Math;
@@ -200,7 +590,7 @@ export const MarketingCardsScroller = noop.forwardRef((initialIndex, arg1) => {
     }
     obj.importantForAccessibility = str;
     obj.children = children;
-    return React6(timestampProducer, obj);
+    return closure_2_8(timestampProducer, obj);
   });
   const items7 = [closure_8(ref, obj5), , ];
   if (tmp25Result) {
@@ -210,15 +600,15 @@ export const MarketingCardsScroller = noop.forwardRef((initialIndex, arg1) => {
       }
     }
     const obj6 = { accessibilityLabel: null, accessibilityRole: "button", onPress: null, style: null, children: null };
-    let intl = tmp10(tmp11[10]).intl;
-    obj6.accessibilityLabel = intl.string(tmp10(tmp11[10]).t.vgfxaA);
+    let intl = tmp10(tmp11[12]).intl;
+    obj6.accessibilityLabel = intl.string(tmp10(tmp11[12]).t.vgfxaA);
     obj6.onPress = handleNavigatePrevious;
     const items8 = [, ];
     ({ navigationButton: arr10[0], navigationButtonPrevious: arr10[1] } = tmp);
     obj6.style = items8;
     const obj7 = { color: itemCount(tmp11[7]).colors.WHITE, size: "sm" };
-    obj6.children = closure_8(tmp10(tmp11[13]).ChevronLargeLeftIcon, obj7);
-    tmp25Result = closure_8(tmp10(tmp11[12]).PressableOpacity, obj6);
+    obj6.children = closure_8(tmp10(tmp11[15]).ChevronLargeLeftIcon, obj7);
+    tmp25Result = closure_8(tmp10(tmp11[14]).PressableOpacity, obj6);
   }
   items7[1] = tmp25Result;
   if (tmp25Result2) {
@@ -228,17 +618,17 @@ export const MarketingCardsScroller = noop.forwardRef((initialIndex, arg1) => {
       }
     }
     const obj8 = { accessibilityLabel: null, accessibilityRole: "button", onPress: null, style: null, children: null };
-    let intl2 = tmp10(tmp11[10]).intl;
-    obj8.accessibilityLabel = intl2.string(tmp10(tmp11[10]).t.XiOHRX);
+    let intl2 = tmp10(tmp11[12]).intl;
+    obj8.accessibilityLabel = intl2.string(tmp10(tmp11[12]).t.XiOHRX);
     obj8.onPress = handleNavigateNext;
     const items9 = [, ];
     ({ navigationButton: arr11[0], navigationButtonNext: arr11[1] } = tmp);
     obj8.style = items9;
     const obj9 = { color: itemCount(tmp11[7]).colors.WHITE, size: "sm" };
-    obj8.children = closure_8(tmp10(tmp11[14]).ChevronLargeRightIcon, obj9);
-    tmp25Result2 = closure_8(tmp10(tmp11[12]).PressableOpacity, obj8);
+    obj8.children = closure_8(tmp10(tmp11[16]).ChevronLargeRightIcon, obj9);
+    tmp25Result2 = closure_8(tmp10(tmp11[14]).PressableOpacity, obj8);
   }
   items7[2] = tmp25Result2;
   obj4.children = items7;
   return closure_9(first, obj4);
-});
+}));

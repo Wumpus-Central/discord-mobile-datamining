@@ -1,7 +1,8 @@
-// === Module 7798: useShopProductItems ===
+// === Module 7842: useShopProductItems ===
 
-// Module 7798 (useShopProductItems)
-import util from "util" /* 1115 */;
+// Module 7842 (useShopProductItems)
+import c from "c" /* 576 */;
+import util from "util" /* 1126 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -58,11 +59,8 @@ prototype["sortByTypes"] = function sortByTypes(arr) {
     return get;
   }, new Map());
 };
-const size = fn(2);
-let result = size.fileFinishedImporting("modules/collectibles/hooks/useShopProductItems.tsx");
-
-export { ItemsSortingHat };
-export const getProductItems = function getProductItems(selectedProduct) {
+const ReactCompilerGating = fn(558);
+function getProductItems(items) {
   if (typeof ItemsSortingHat === "function") {
     const obj = Object.create(ItemsSortingHat.prototype);
     obj.itemsByTypes = obj.sortByTypes(tmp);
@@ -71,7 +69,12 @@ export const getProductItems = function getProductItems(selectedProduct) {
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-};
+}
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/collectibles/hooks/useShopProductItems.tsx");
+
+export { ItemsSortingHat };
+export { getProductItems };
 export const getPurchasedItem = function getPurchasedItem(arg0, firstAvatarDecoration) {
   let tmp;
   if (null != arg0) {
@@ -87,9 +90,27 @@ export const getPurchasedItem = function getPurchasedItem(arg0, firstAvatarDecor
   }
   return tmp;
 };
-export const useShopProductItems = function useShopProductItems(product) {
-  closure_0 = product;
-  const items = [product];
+export const useShopProductItems = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(2);
+  if (cResult[0] !== arg0) {
+    if (typeof ItemsSortingHat === "function") {
+      const obj2 = Object.create(ItemsSortingHat.prototype);
+      obj2.itemsByTypes = obj2.sortByTypes(tmp3);
+      const obj5 = { firstProfileEffect: null, firstAvatarDecoration: null, firstNameplate: null, firstProfileFrame: null };
+      ({ firstProfileEffect: obj3.firstProfileEffect, firstAvatarDecoration: obj3.firstAvatarDecoration, firstNameplate: obj3.firstNameplate, firstProfileFrame: obj3.firstProfileFrame } = obj2);
+      cResult[0] = arg0;
+      cResult[1] = obj5;
+      let tmp2 = obj5;
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  } else {
+    tmp2 = cResult[1];
+  }
+  return tmp2;
+}) : ((arg0) => {
+  closure_0 = arg0;
+  const items = [arg0];
   return noop.useMemo(() => {
     if (typeof ItemsSortingHat === "function") {
       const obj = Object.create(ItemsSortingHat.prototype);
@@ -100,7 +121,7 @@ export const useShopProductItems = function useShopProductItems(product) {
       throw new TypeError("Trying to call a non-function");
     }
   }, items);
-};
+});
 export const getBundleItemNames = function getBundleItemNames(bundledProducts) {
   const intl = util.intl;
   let stringResult = intl.string(util.t["7v0T9P"]);

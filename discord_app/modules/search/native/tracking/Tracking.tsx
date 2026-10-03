@@ -1,17 +1,17 @@
-// === Module 12052: search/tracking/Tracking ===
+// === Module 11982: search/tracking/Tracking ===
 
-// Module 12052 (search/tracking/Tracking)
-import v1 from "v1" /* 1255 */;
-import UserSettings from "UserSettings" /* 2021 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5025 */;
-import SearchUtils from "SearchUtils" /* 12033 */;
-import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 12053 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import SearchQueryStore from "SearchQueryStore" /* 12032 */;
+// Module 11982 (search/tracking/Tracking)
+import v1 from "v1" /* 1266 */;
+import UserSettings from "UserSettings" /* 2028 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5070 */;
+import SearchUtils from "SearchUtils" /* 11968 */;
+import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 11983 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import SearchQueryStore from "SearchQueryStore" /* 11967 */;
 
 require = fn;
-let closure_5 = fn(7476).SEARCH_HISTORY_TO_ANALYTICS_SEARCH_HISTORY;
-const Constants = fn(1074);
+let closure_5 = fn(7512).SEARCH_HISTORY_TO_ANALYTICS_SEARCH_HISTORY;
+const Constants = fn(1085);
 ({ SearchTokenTypes: metroRequire, AnalyticEvents: closure_7 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/tracking/Tracking.tsx");

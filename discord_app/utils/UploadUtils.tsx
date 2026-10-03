@@ -1,9 +1,9 @@
-// === Module 5627: UploadUtils ===
+// === Module 7243: UploadUtils ===
 
-// Module 5627 (UploadUtils)
-import Upload from "Upload" /* 5626 */;
-import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 5628 */;
-import clipPayloadUtils from "clipPayloadUtils" /* 5629 */;
+// Module 7243 (UploadUtils)
+import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 7244 */;
+import clipPayloadUtils from "clipPayloadUtils" /* 7245 */;
+import UploadPlatform from "UploadPlatform" /* 7247 */;
 import size from "module_2" /* 2 */;
 
 const items = [
@@ -166,7 +166,7 @@ export const getAttachmentPayload = function getAttachmentPayload(id) {
   }
   let tmp9 = "item" in id && null != id.item;
   if (tmp9) {
-    tmp9 = id.item.platform === Upload.UploadPlatform.WEB;
+    tmp9 = id.item.platform === UploadPlatform.UploadPlatform.WEB;
   }
   if (tmp9) {
     tmp9 = "mimeType" in id;

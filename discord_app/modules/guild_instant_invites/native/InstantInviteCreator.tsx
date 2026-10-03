@@ -1,22 +1,85 @@
-// === Module 10598: InstantInviteCreator ===
+// === Module 10679: InstantInviteCreator ===
 
-// Module 10598 (InstantInviteCreator)
-import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1177 */;
-import Stack_Stack from "Stack/Stack" /* 5463 */;
-import DetailedGuildIdentityUserRow from "DetailedGuildIdentityUserRow" /* 10599 */;
+// Module 10679 (InstantInviteCreator)
+import c from "c" /* 576 */;
+import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
 
+const native = Stack(1188);
+const Stack_Stack = Stack(5593);
+const DetailedGuildIdentityUserRow = Stack(10680);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let closure_6 = createStyles.createStyles({ identity: { flex: 1 } });
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_instant_invites/native/InstantInviteCreator.tsx");
 
-export default noop.memo((arg0) => {
+export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  let Stack = require;
+  let items = dependencyMap;
+  const cResult = c.c(14);
+  ({ guildId, user } = arg0);
+  const tmp2 = closure_6();
+  if (null == user) {
+    return null;
+  } else {
+    if (cResult[0] === guildId) {
+      if (cResult[1] === user) {
+        let tmp3 = cResult[2];
+      }
+      if (cResult[3] !== tmp3) {
+        const obj2 = { source: tmp3, size: native.AvatarSizes.SMALL };
+        const tmp7 = React4(native.Avatar, obj2);
+        cResult[3] = tmp3;
+        cResult[4] = tmp7;
+        let tmp5 = tmp7;
+      } else {
+        tmp5 = cResult[4];
+      }
+      if (cResult[5] === guildId) {
+        if (cResult[6] === user) {
+          let tmp8 = cResult[7];
+        }
+        if (cResult[8] === tmp2.identity) {
+          if (cResult[9] === tmp8) {
+            let tmp11 = cResult[10];
+          }
+          if (cResult[11] === tmp5) {
+          }
+          Stack = Stack_Stack.Stack;
+          const obj3 = { direction: "horizontal", align: "center", spacing: nativeDefault.space.PX_8, children: null };
+          items = [tmp5, tmp11];
+          obj3.children = items;
+          const tmp18 = hasOwnProperty(Stack, obj3);
+          cResult[11] = tmp5;
+          cResult[12] = tmp11;
+          cResult[13] = tmp18;
+        }
+        const obj4 = { style: tmp2.identity, children: tmp8 };
+        const tmp14 = React4(View, obj4);
+        cResult[8] = tmp2.identity;
+        cResult[9] = tmp8;
+        cResult[10] = tmp14;
+        tmp11 = tmp14;
+      }
+      const obj5 = { user, guildId };
+      const tmp10 = React4(DetailedGuildIdentityUserRow.DetailedGuildIdentityUser, obj5);
+      cResult[5] = guildId;
+      cResult[6] = user;
+      cResult[7] = tmp10;
+      tmp8 = tmp10;
+    }
+    const avatarSource = user.getAvatarSource(guildId);
+    cResult[0] = guildId;
+    cResult[1] = user;
+    cResult[2] = avatarSource;
+    tmp3 = avatarSource;
+  }
+}) : ((arg0) => {
   ({ guildId, user } = arg0);
   let tmp2 = null;
   if (null != user) {
@@ -31,4 +94,4 @@ export default noop.memo((arg0) => {
     tmp2 = hasOwnProperty(Stack_Stack.Stack, obj);
   }
   return tmp2;
-});
+}));

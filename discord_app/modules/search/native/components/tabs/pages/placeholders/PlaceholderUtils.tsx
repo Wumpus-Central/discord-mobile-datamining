@@ -1,6 +1,6 @@
-// === Module 16778: PlaceholderUtils ===
+// === Module 16866: PlaceholderUtils ===
 
-// Module 16778 (PlaceholderUtils)
+// Module 16866 (PlaceholderUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/placeholders/PlaceholderUtils.tsx");

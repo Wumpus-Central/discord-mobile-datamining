@@ -1,8 +1,8 @@
-// === Module 5361: SharedCaptchaUtils ===
+// === Module 5407: SharedCaptchaUtils ===
 
-// Module 5361 (SharedCaptchaUtils)
-import CaptchaConstants from "CaptchaConstants" /* 5369 */;
-import CaptchaStore from "CaptchaStore" /* 5362 */;
+// Module 5407 (SharedCaptchaUtils)
+import CaptchaConstants from "CaptchaConstants" /* 5415 */;
+import CaptchaStore from "CaptchaStore" /* 5408 */;
 import size from "module_2" /* 2 */;
 
 ({ incrementCaptchaServeVolume: closure_0, flushCaptchaServeVolume: closure_1, isCaptchaStoreVolumeEmpty: c2 } = CaptchaStore);
@@ -27,11 +27,11 @@ export const extractCaptchaPropsFromResponse = function extractCaptchaPropsFromR
   obj.options = obj2;
   return obj;
 };
-export const emitCaptchaDistributionMetric = function emitCaptchaDistributionMetric(constants) {
+export const emitCaptchaDistributionMetric = function emitCaptchaDistributionMetric(userflow) {
   if (React2()) {
     const _setTimeout = setTimeout;
     const timerId = setTimeout(() => closure_1_1(), closure_3);
   }
-  React(constants);
+  React(userflow);
 };
 export const CaptchaCancelError = prototype;

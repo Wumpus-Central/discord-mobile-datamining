@@ -1,19 +1,19 @@
-// === Module 17512: StageBoostUpsellManager ===
+// === Module 17601: StageBoostUpsellManager ===
 
-// Module 17512 (StageBoostUpsellManager)
-import asyncRequireImpl from "asyncRequireImpl" /* 1981 */;
-import StageChannelPermissions from "StageChannelPermissions" /* 2052 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4809 */;
-import StageMediaHooks from "StageMediaHooks" /* 5915 */;
-import useChannelVideoLimit from "useChannelVideoLimit" /* 9296 */;
-import ActionSheetStore from "ActionSheetStore" /* 4550 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import PermissionStore from "PermissionStore" /* 4498 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6725 */;
+// Module 17601 (StageBoostUpsellManager)
+import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
+import StageChannelPermissions from "StageChannelPermissions" /* 2060 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
+import StageMediaHooks from "StageMediaHooks" /* 5574 */;
+import useChannelVideoLimit from "useChannelVideoLimit" /* 9305 */;
+import ActionSheetStore from "ActionSheetStore" /* 4561 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import PermissionStore from "PermissionStore" /* 4509 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
 
 require = fn;
-const STAGE_BOOSTING_SHEET_KEY = fn(5912).STAGE_BOOSTING_SHEET_KEY;
+const STAGE_BOOSTING_SHEET_KEY = fn(5571).STAGE_BOOSTING_SHEET_KEY;
 let c8 = false;
 class StageBoostUpsellManager extends tmp2 {
   constructor() {
@@ -47,7 +47,7 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates() {
             if (tmp5Result.getChannelVideoLimit(channel).reachedLimit) {
               if (PermissionStore.can(StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS, channel)) {
                 const obj2 = { channel };
-                ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(5928, dependencyMap.paths), STAGE_BOOSTING_SHEET_KEY, obj2);
+                ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(5587, dependencyMap.paths), STAGE_BOOSTING_SHEET_KEY, obj2);
                 c8 = true;
               }
             }

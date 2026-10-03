@@ -1,174 +1,387 @@
-// === Module 12327: TabItem ===
+// === Module 12283: TabItem ===
 
-// Module 12327 (TabItem)
-import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4595 */;
-import spring from "spring" /* 5464 */;
+// Module 12283 (TabItem)
+import nativeDefault from "native" /* 587 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4612 */;
+import spring from "spring" /* 5597 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
+const require = globalThis.__r;
 const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
-function TabItemCount(arg0) {
-  ({ index, activeIndex, pressed } = arg0);
+let closure_3 = ["label", "count", "index", "itemCount", "state", "pressed", "grow", "variant"];
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+let closure_8 = ReanimatedRexport.createAnimatedComponent(fn(17).Pressable);
+const TEXT_SPRING_CONFIG = { mass: 0.3, damping: 13, stiffness: 250, overshootClamping: true };
+const COUNT_SPRING_CONFIG = { mass: 2, damping: 30, stiffness: 300, overshootClamping: true };
+let createStyles = fn(4890);
+let obj = { item: { flexShrink: 0, flexBasis: 0, paddingBottom: 14, flexDirection: "row", justifyContent: "center" }, count: { marginLeft: nativeDefault.space.PX_8 } };
+let closure_11 = createStyles.createStyles(obj);
+createStyles = fn(4890);
+let obj3 = { marginLeft: nativeDefault.space.PX_8 };
+let closure_12 = createStyles.createStyleProperties({ inactive: nativeDefault.colors.TEXT_MUTED, active: nativeDefault.colors.TEXT_BRAND, pressed: nativeDefault.colors.TEXT_BRAND });
+createStyles = fn(4890);
+let obj4 = { inactive: nativeDefault.colors.TEXT_MUTED, active: nativeDefault.colors.TEXT_BRAND, pressed: nativeDefault.colors.TEXT_BRAND };
+let closure_13 = createStyles.createStyleProperties({ inactive: nativeDefault.colors.TEXT_MUTED, active: nativeDefault.colors.TEXT_STRONG, pressed: nativeDefault.colors.TEXT_STRONG });
+const __initData = { code: "function TabItemNativeTsx1(){const{colors,pressed,index,activeIndex,withSpring,TEXT_SPRING_CONFIG}=this.__closure;let color=colors.inactive;const isPressActive=pressed.get()>=0;const isPressed=pressed.get()===index;const isActive=Math.round(activeIndex.get())===index;if(isPressed){color=colors.pressed;}else{if(isPressActive){color=colors.inactive;}else{if(isActive){color=colors.active;}}}return{color:withSpring(color,TEXT_SPRING_CONFIG,\"animate-always\")};}" };
+const __initData2 = { code: "function TabItemNativeTsx2(){const{colors,pressed,index,activeIndex,withSpring,TEXT_SPRING_CONFIG}=this.__closure;let color=colors.inactive;const isPressActive=pressed.get()>=0;const isPressed=pressed.get()===index;const isActive=Math.round(activeIndex.get())===index;if(isPressed){color=colors.pressed;}else if(isPressActive){color=colors.inactive;}else if(isActive){color=colors.active;}return{color:withSpring(color,TEXT_SPRING_CONFIG,'animate-always')};}" };
+let ReactCompilerGating = fn(558);
+let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((index) => {
+  index = index.index;
+  const activeIndex = index.activeIndex;
+  const pressed = index.pressed;
+  let tmp = closure_12();
+  if ("overlay" === index.variant) {
+    tmp = closure_13();
+  }
+  const inactive = tmp;
+  const fn = function n() {
+    let active = inactive.inactive;
+    value = pressed.get();
+    if (value === index) {
+      active = inactive.pressed;
+    } else if (tmp2) {
+      active = inactive.inactive;
+    } else if (tmp5 === index) {
+      active = inactive.active;
+    }
+    const obj = { color: null };
+    tmp2 = pressed.get() >= 0;
+    obj.color = spring.withSpring(active, closure_9, "animate-always");
+    return obj;
+  };
+  let obj = index(pressed[4]);
+  fn.__closure = { colors: tmp, pressed, index, activeIndex, withSpring: index(pressed[8]).withSpring, TEXT_SPRING_CONFIG };
+  fn.__workletHash = 3501288786345;
+  fn.__initData = __initData;
+  return obj.useAnimatedStyle(fn);
+}) : ((index) => {
+  index = index.index;
+  const activeIndex = index.activeIndex;
+  const pressed = index.pressed;
+  let inactive;
+  let tmp = closure_12();
+  if ("overlay" === index.variant) {
+    tmp = closure_13();
+  }
+  inactive = tmp;
+  const fn = function c() {
+    let active = inactive.inactive;
+    value = pressed.get();
+    if (value === index) {
+      active = inactive.pressed;
+    } else if (tmp2) {
+      active = inactive.inactive;
+    } else if (tmp5 === index) {
+      active = inactive.active;
+    }
+    const obj = { color: null };
+    tmp2 = pressed.get() >= 0;
+    obj.color = spring.withSpring(active, closure_9, "animate-always");
+    return obj;
+  };
+  let obj = index(pressed[4]);
+  fn.__closure = { colors: tmp, pressed, index, activeIndex, withSpring: index(pressed[8]).withSpring, TEXT_SPRING_CONFIG };
+  fn.__workletHash = 376048369930;
+  fn.__initData = __initData2;
+  return obj.useAnimatedStyle(fn);
+});
+const __initData3 = { code: "function TabItemNativeTsx3(){const{withSpring,countAnimationState,COUNT_SPRING_CONFIG,interpolate}=this.__closure;return{opacity:withSpring(countAnimationState.get(),COUNT_SPRING_CONFIG),transform:[{translateX:withSpring(interpolate(countAnimationState.get(),[0,1],[-10,0]),COUNT_SPRING_CONFIG)}]};}" };
+const __initData4 = { code: "function TabItemNativeTsx4(){const{withSpring,countAnimationState,COUNT_SPRING_CONFIG,interpolate}=this.__closure;return{opacity:withSpring(countAnimationState.get(),COUNT_SPRING_CONFIG),transform:[{translateX:withSpring(interpolate(countAnimationState.get(),[0,1],[-10,0]),COUNT_SPRING_CONFIG)}]};}" };
+ReactCompilerGating = fn(558);
+let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = sharedValue(576).c(17);
+  ({ count, index, activeIndex, pressed, variant } = arg0);
+  const tmp4 = closure_11();
+  let obj = sharedValue(576);
+  sharedValue = sharedValue(4612).useSharedValue(0);
+  if (cResult[0] !== sharedValue) {
+    const fn = function n() {
+      const result = sharedValue.set(1);
+    };
+    let items = [sharedValue];
+    cResult[0] = sharedValue;
+    cResult[1] = fn;
+    cResult[2] = items;
+    let tmp7 = items;
+    let tmp6 = fn;
+  } else {
+    tmp6 = cResult[1];
+    tmp7 = cResult[2];
+  }
+  const layoutEffect = noop.useLayoutEffect(tmp6, tmp7);
+  let obj2 = sharedValue(4612);
+  const fn2 = function w() {
+    const obj = { opacity: spring.withSpring(sharedValue.get(), closure_10), transform: null };
+    const obj3 = { translateX: null };
+    const obj4 = spring;
+    obj3.translateX = obj4.withSpring(ReanimatedRexport2.interpolate(sharedValue.get(), [0, 1], [-10, 0]), closure_10);
+    const items = [obj3];
+    obj.transform = items;
+    return obj;
+  };
+  const tmpResult = sharedValue(4612);
+  fn2.__closure = { withSpring: sharedValue(5597).withSpring, countAnimationState: sharedValue, COUNT_SPRING_CONFIG, interpolate: sharedValue(4612).interpolate };
+  fn2.__workletHash = 5074862072194;
+  fn2.__initData = __initData3;
+  const animatedStyle = tmpResult.useAnimatedStyle(fn2);
+  if (cResult[3] === activeIndex) {
+    if (cResult[4] === index) {
+      if (cResult[5] === pressed) {
+        if (cResult[6] === variant) {
+          let tmp10 = cResult[7];
+        }
+        const tmp12 = closure_16(tmp10);
+        if (cResult[8] === animatedStyle) {
+          if (cResult[9] === tmp4.count) {
+            let tmp13 = cResult[10];
+          }
+          if (cResult[11] === tmp12) {
+            if (cResult[12] === count) {
+              let tmp14 = cResult[13];
+            }
+            if (cResult[14] === tmp13) {
+              if (cResult[15] === tmp14) {
+                let tmp17 = cResult[16];
+              }
+              return tmp17;
+            }
+            let obj4 = { style: tmp13, children: tmp14 };
+            const tmp20 = closure_6(ReanimatedRexport.View, obj4);
+            cResult[14] = tmp13;
+            cResult[15] = tmp14;
+            cResult[16] = tmp20;
+            tmp17 = tmp20;
+          }
+          const obj5 = { animated: true, variant: "text-sm/medium", style: tmp12, lineClamp: 1, children: count };
+          const tmp16 = closure_6(tmp(4886).Text, obj5);
+          cResult[11] = tmp12;
+          cResult[12] = count;
+          cResult[13] = tmp16;
+          tmp14 = tmp16;
+        }
+        const items1 = [tmp4.count, animatedStyle];
+        cResult[8] = animatedStyle;
+        cResult[9] = tmp4.count;
+        cResult[10] = items1;
+        tmp13 = items1;
+      }
+    }
+  }
+  const obj6 = { index, activeIndex, pressed, variant };
+  cResult[3] = activeIndex;
+  cResult[4] = index;
+  cResult[5] = pressed;
+  cResult[6] = variant;
+  cResult[7] = obj6;
+  tmp10 = obj6;
+  let obj3 = { withSpring: sharedValue(5597).withSpring, countAnimationState: sharedValue, COUNT_SPRING_CONFIG, interpolate: sharedValue(4612).interpolate };
+}) : ((arg0) => {
   let sharedValue;
-  ({ count, variant } = arg0);
-  const tmp = closure_9();
-  sharedValue = sharedValue(4595).useSharedValue(0);
+  ({ count, index, activeIndex, pressed, variant } = arg0);
+  const tmp = closure_11();
+  sharedValue = sharedValue(4612).useSharedValue(0);
   let items = [sharedValue];
   const layoutEffect = noop.useLayoutEffect(() => {
     const result = sharedValue.set(1);
   }, items);
-  let obj = sharedValue(4595);
-  class T {
+  let obj = sharedValue(4612);
+  class I {
     constructor() {
       obj = { opacity: null, transform: null };
-      obj2 = closure_0(closure_2[6]);
-      obj.opacity = obj2.withSpring(closure_0.get(), closure_8);
+      obj2 = closure_0(closure_2[8]);
+      obj.opacity = obj2.withSpring(closure_0.get(), closure_10);
       obj1 = { translateX: null };
-      obj4 = closure_0(closure_2[6]);
-      obj5 = closure_0(closure_2[3]);
-      obj1.translateX = obj4.withSpring(obj5.interpolate(closure_0.get(), [0, 1], [-10, 0]), closure_8);
+      obj4 = closure_0(closure_2[8]);
+      obj5 = closure_0(closure_2[4]);
+      obj1.translateX = obj4.withSpring(obj5.interpolate(closure_0.get(), [0, 1], [-10, 0]), closure_10);
       items = [];
       items[0] = obj1;
       obj.transform = items;
       return obj;
     }
   }
-  let obj2 = sharedValue(4595);
-  T.__closure = { withSpring: sharedValue(5464).withSpring, countAnimationState: sharedValue, COUNT_SPRING_CONFIG, interpolate: sharedValue(4595).interpolate };
-  T.__workletHash = 16666672974627;
-  T.__initData = __initData2;
-  closure_129_0 = index;
-  closure_129_1 = activeIndex;
-  closure_129_2 = pressed;
-  closure_129_3 = undefined;
-  const animatedStyle = obj2.useAnimatedStyle(T);
-  let tmp7 = closure_10();
-  if ("overlay" === variant) {
-    tmp7 = closure_11();
-  }
-  closure_129_3 = tmp7;
-  let obj3 = { withSpring: sharedValue(5464).withSpring, countAnimationState: sharedValue, COUNT_SPRING_CONFIG, interpolate: sharedValue(4595).interpolate };
-  const fn = function c() {
-    let active = inactive.inactive;
-    value = setItemDimensions.get();
-    if (value === index) {
-      active = inactive.pressed;
-    } else if (tmp2) {
-      active = inactive.inactive;
-    } else if (tmp5 === index) {
-      active = inactive.active;
-    }
-    const obj = { color: null };
-    tmp2 = setItemDimensions.get() >= 0;
-    obj.color = spring.withSpring(active, closure_7, "animate-always");
-    return obj;
-  };
-  const tmp2Result = sharedValue(4595);
-  fn.__closure = { colors: tmp7, pressed, index, activeIndex, withSpring: sharedValue(5464).withSpring, TEXT_SPRING_CONFIG };
-  fn.__workletHash = 11643476765161;
-  fn.__initData = __initData;
-  const animatedStyle1 = tmp2Result.useAnimatedStyle(fn);
-  const obj5 = { style: null, children: closure_4(sharedValue(4841).Text, { animated: true, variant: "text-sm/medium", style: animatedStyle1, lineClamp: 1, children: count }) };
+  let obj2 = sharedValue(4612);
+  I.__closure = { withSpring: sharedValue(5597).withSpring, countAnimationState: sharedValue, COUNT_SPRING_CONFIG, interpolate: sharedValue(4612).interpolate };
+  I.__workletHash = 8384757524453;
+  I.__initData = __initData4;
+  const animatedStyle = obj2.useAnimatedStyle(I);
+  let obj3 = { withSpring: sharedValue(5597).withSpring, countAnimationState: sharedValue, COUNT_SPRING_CONFIG, interpolate: sharedValue(4612).interpolate };
+  let obj4 = { style: null, children: closure_6(sharedValue(4886).Text, { animated: true, variant: "text-sm/medium", style: closure_16({ index, activeIndex, pressed, variant }), lineClamp: 1, children: count }) };
   const items1 = [tmp.count, animatedStyle];
-  obj5.style = items1;
-  return closure_4(ReanimatedRexport.View, obj5);
-}
-const jsxProd = fn(21);
-({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let closure_6 = ReanimatedRexport.createAnimatedComponent(fn(17).Pressable);
-const TEXT_SPRING_CONFIG = { mass: 0.3, damping: 13, stiffness: 250, overshootClamping: true };
-const COUNT_SPRING_CONFIG = { mass: 2, damping: 30, stiffness: 300, overshootClamping: true };
-let createStyles = fn(4845);
-let obj = { item: { flexShrink: 0, flexBasis: 0, paddingBottom: 14, flexDirection: "row", justifyContent: "center" }, count: { marginLeft: nativeDefault.space.PX_8 } };
-let closure_9 = createStyles.createStyles(obj);
-createStyles = fn(4845);
-let obj3 = { marginLeft: nativeDefault.space.PX_8 };
-let closure_10 = createStyles.createStyleProperties({ inactive: nativeDefault.colors.TEXT_MUTED, active: nativeDefault.colors.TEXT_BRAND, pressed: nativeDefault.colors.TEXT_BRAND });
-createStyles = fn(4845);
-let obj4 = { inactive: nativeDefault.colors.TEXT_MUTED, active: nativeDefault.colors.TEXT_BRAND, pressed: nativeDefault.colors.TEXT_BRAND };
-let closure_11 = createStyles.createStyleProperties({ inactive: nativeDefault.colors.TEXT_MUTED, active: nativeDefault.colors.TEXT_STRONG, pressed: nativeDefault.colors.TEXT_STRONG });
-const __initData = { code: "function TabItemNativeTsx1(){const{colors,pressed,index,activeIndex,withSpring,TEXT_SPRING_CONFIG}=this.__closure;let color=colors.inactive;const isPressActive=pressed.get()>=0;const isPressed=pressed.get()===index;const isActive=Math.round(activeIndex.get())===index;if(isPressed){color=colors.pressed;}else if(isPressActive){color=colors.inactive;}else if(isActive){color=colors.active;}return{color:withSpring(color,TEXT_SPRING_CONFIG,'animate-always')};}" };
-const __initData2 = { code: "function TabItemNativeTsx2(){const{withSpring,countAnimationState,COUNT_SPRING_CONFIG,interpolate}=this.__closure;return{opacity:withSpring(countAnimationState.get(),COUNT_SPRING_CONFIG),transform:[{translateX:withSpring(interpolate(countAnimationState.get(),[0,1],[-10,0]),COUNT_SPRING_CONFIG)}]};}" };
-const __initData3 = { code: "function TabItemNativeTsx3(){const{activeIndex,index}=this.__closure;return{accessibilityState:{selected:activeIndex.get()===index}};}" };
+  obj4.style = items1;
+  return closure_6(ReanimatedRexport.View, obj4);
+});
+const __initData5 = { code: "function TabItemNativeTsx5(){const{activeIndex,index}=this.__closure;return{accessibilityState:{selected:activeIndex.get()===index}};}" };
+const __initData6 = { code: "function TabItemNativeTsx6(){const{activeIndex,index}=this.__closure;return{accessibilityState:{selected:activeIndex.get()===index}};}" };
+ReactCompilerGating = fn(558);
+let obj6 = { inactive: nativeDefault.colors.TEXT_MUTED, active: nativeDefault.colors.TEXT_STRONG, pressed: nativeDefault.colors.TEXT_STRONG };
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/Tabs/native/TabItem.native.tsx");
 
-export const TabItem = function TabItem(arg0) {
+export const TabItem = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = require("c").c(43);
+  if (cResult[0] !== arg0) {
+    ({ label, count, index } = arg0);
+    _require = index;
+    ({ itemCount, state, pressed, grow, variant } = arg0);
+    const tmp15 = _objectWithoutProperties(arg0, closure_3);
+    cResult[0] = arg0;
+    class P {
+      constructor() {
+        obj = { accessibilityState: null };
+        obj1 = { selected: activeIndex.get() === closure_0 };
+        obj.accessibilityState = obj1;
+        return obj;
+      }
+    }
+    cResult[2] = grow;
+    cResult[3] = index;
+    cResult[4] = itemCount;
+    cResult[5] = label;
+    cResult[6] = pressed;
+    cResult[7] = tmp15;
+    cResult[8] = state;
+    cResult[9] = variant;
+    let tmp12 = variant;
+    let tmp11 = state;
+    let tmp9 = pressed;
+    let tmp5 = grow;
+  } else {
+    tmp5 = cResult[2];
+    _require = cResult[3];
+    tmp9 = cResult[6];
+    tmp11 = cResult[8];
+    tmp12 = cResult[9];
+  }
+  const activeIndex = tmp11.activeIndex;
+  setItemDimensions = tmp11.setItemDimensions;
+  const tmp16 = closure_11();
+  let obj = require("c");
+  class P {
+    constructor() {
+      obj = { accessibilityState: null };
+      obj1 = { selected: activeIndex.get() === closure_0 };
+      obj.accessibilityState = obj1;
+      return obj;
+    }
+  }
+  P.__closure = { activeIndex, index };
+  P.__workletHash = 4443106768702;
+  P.__initData = __initData5;
+  const animatedProps = require("ReanimatedRexport").useAnimatedProps(P);
+  if (cResult[10] === activeIndex) {
+    if (cResult[11] === index) {
+      if (cResult[12] === tmp9) {
+        if (cResult[13] === tmp12) {
+          let tmp18 = cResult[14];
+        }
+        closure_16(tmp18);
+        if (cResult[15] === index) {
+          let num14 = 0;
+          if (tmp5) {
+            num14 = 1;
+          }
+          if (cResult[18] !== num14) {
+            const obj2 = { flexGrow: num14 };
+            cResult[18] = num14;
+            class X {
+              constructor(arg0) {
+                obj = closure_0(closure_2[4]);
+                tmp = obj.runOnUI(setItemDimensions)(closure_0, arg0.nativeEvent.layout);
+                return;
+              }
+            }
+            cResult[19] = obj2;
+            let tmp22 = obj2;
+          } else {
+            tmp22 = cResult[19];
+          }
+          class X {
+            constructor(arg0) {
+              obj = closure_0(closure_2[4]);
+              tmp = obj.runOnUI(setItemDimensions)(closure_0, arg0.nativeEvent.layout);
+              return;
+            }
+          }
+          const items = [tmp16.item, tmp22];
+          cResult[20] = tmp16.item;
+          cResult[21] = tmp22;
+          cResult[22] = items;
+        }
+        class X {
+          constructor(arg0) {
+            obj = closure_0(closure_2[4]);
+            tmp = obj.runOnUI(setItemDimensions)(closure_0, arg0.nativeEvent.layout);
+            return;
+          }
+        }
+        cResult[15] = index;
+        cResult[16] = setItemDimensions;
+        cResult[17] = X;
+      }
+    }
+  }
+  const obj3 = { index, activeIndex, pressed: tmp9, variant: tmp12 };
+  cResult[10] = activeIndex;
+  cResult[11] = index;
+  cResult[12] = tmp9;
+  cResult[13] = tmp12;
+  cResult[14] = obj3;
+  tmp18 = obj3;
+  const tmpResult = require("ReanimatedRexport");
+}) : ((arg0) => {
   ({ count, index } = arg0);
   ({ state, pressed, variant } = arg0);
   ({ label, itemCount, grow } = arg0);
   const merged = Object.assign(arg0, Object.assign({ label: 0, count: 0, index: 0, itemCount: 0, state: 0, pressed: 0, grow: 0, variant: 0 }));
   const activeIndex = state.activeIndex;
   const setItemDimensions = state.setItemDimensions;
-  let tmp2 = closure_9();
-  const fn = function f() {
-    const obj = { accessibilityState: { selected: activeIndex.get() === index } };
-    return obj;
-  };
-  fn.__closure = { activeIndex, index };
-  fn.__workletHash = 11618929630200;
-  fn.__initData = __initData3;
-  closure_129_0 = index;
-  closure_129_1 = activeIndex;
-  closure_129_2 = pressed;
-  closure_129_3 = undefined;
-  const animatedProps = index(setItemDimensions[3]).useAnimatedProps(fn);
-  let tmp6 = closure_10();
-  if ("overlay" === variant) {
-    tmp6 = closure_11();
-  }
-  closure_129_3 = tmp6;
-  let obj = index(setItemDimensions[3]);
-  const fn2 = function c() {
-    let active = inactive.inactive;
-    value = setItemDimensions.get();
-    if (value === index) {
-      active = inactive.pressed;
-    } else if (tmp2) {
-      active = inactive.inactive;
-    } else if (tmp5 === index) {
-      active = inactive.active;
+  const tmp2 = closure_11();
+  class T {
+    constructor() {
+      obj = { accessibilityState: null };
+      obj1 = { selected: activeIndex.get() === index };
+      obj.accessibilityState = obj1;
+      return obj;
     }
-    const obj = { color: null };
-    tmp2 = setItemDimensions.get() >= 0;
-    obj.color = spring.withSpring(active, closure_7, "animate-always");
-    return obj;
-  };
-  const tmp3Result = index(setItemDimensions[3]);
-  fn2.__closure = { colors: tmp6, pressed, index, activeIndex, withSpring: index(setItemDimensions[6]).withSpring, TEXT_SPRING_CONFIG };
-  fn2.__workletHash = 11643476765161;
-  fn2.__initData = __initData;
+  }
+  T.__closure = { activeIndex, index };
+  T.__workletHash = 16424800592413;
+  T.__initData = __initData6;
+  const animatedProps = index(setItemDimensions[4]).useAnimatedProps(T);
   const items = [tmp2.item, ];
   let num = 0;
-  const animatedStyle = tmp3Result.useAnimatedStyle(fn2);
+  let obj = index(setItemDimensions[4]);
   if (grow) {
     num = 1;
   }
-  const obj3 = { style: items };
+  const obj2 = { style: items };
   items[1] = { flexGrow: num };
   const merged1 = Object.assign(merged);
-  obj3.onLayout = function onLayout(nativeEvent) {
+  obj2.onLayout = function onLayout(nativeEvent) {
     ReanimatedRexport2.runOnUI(setItemDimensions)(index, nativeEvent.nativeEvent.layout);
   };
-  obj3.accessibilityRole = "tab";
-  const obj2 = { colors: tmp6, pressed, index, activeIndex, withSpring: index(setItemDimensions[6]).withSpring, TEXT_SPRING_CONFIG };
+  obj2.accessibilityRole = "tab";
+  const tmp6 = closure_16({ index, activeIndex, pressed, variant });
   let formatToPlainStringResult;
-  if (tmp3Result2.isAndroid()) {
-    const intl = index(tmp4[9]).intl;
-    const obj4 = { position: index + 1, tabCount: itemCount };
-    formatToPlainStringResult = intl.formatToPlainString(index(tmp4[9]).t["4EsQA1"], obj4);
+  if (tmp3Result.isAndroid()) {
+    const intl = index(tmp4[12]).intl;
+    const obj3 = { position: index + 1, tabCount: itemCount };
+    formatToPlainStringResult = intl.formatToPlainString(index(tmp4[12]).t["4EsQA1"], obj3);
   }
-  obj3.accessibilityHint = formatToPlainStringResult;
-  obj3.animatedProps = animatedProps;
-  const items1 = [closure_4(index(setItemDimensions[7]).Text, { animated: true, variant: "text-sm/semibold", style: animatedStyle, lineClamp: 1, children: label }), ];
-  let tmp12Result = null;
+  obj2.accessibilityHint = formatToPlainStringResult;
+  obj2.animatedProps = animatedProps;
+  const items1 = [closure_6(index(setItemDimensions[10]).Text, { animated: true, variant: "text-sm/semibold", style: tmp6, lineClamp: 1, children: label }), ];
+  let tmp11Result = null;
   if (null != count) {
-    const obj5 = { count, index, activeIndex, pressed, variant };
-    tmp12Result = closure_4(TabItemCount, obj5);
+    const obj4 = { count, index, activeIndex, pressed, variant };
+    tmp11Result = closure_6(closure_19, obj4);
   }
-  items1[1] = tmp12Result;
-  obj3.children = items1;
-  return closure_5(closure_6, obj3);
-};
+  items1[1] = tmp11Result;
+  obj2.children = items1;
+  return closure_7(closure_8, obj2);
+});

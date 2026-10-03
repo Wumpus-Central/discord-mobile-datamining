@@ -1,10 +1,10 @@
-// === Module 12350: getChatPlaceholderRowHeight ===
+// === Module 12306: getChatPlaceholderRowHeight ===
 
-// Module 12350 (getChatPlaceholderRowHeight)
-import nativeDefault from "native" /* 576 */;
+// Module 12306 (getChatPlaceholderRowHeight)
+import nativeDefault from "native" /* 587 */;
 
 const PX_24 = nativeDefault.space.PX_24;
-const tmp2 = fn(1177).AVATAR_SIZE_MAP[fn(undefined, 1177).AvatarSizes.NORMAL];
+const tmp2 = fn(1188).AVATAR_SIZE_MAP[fn(undefined, 1188).AvatarSizes.NORMAL];
 let closure_1 = tmp2;
 const PX_16 = nativeDefault.space.PX_16;
 const PX_12 = nativeDefault.space.PX_12;

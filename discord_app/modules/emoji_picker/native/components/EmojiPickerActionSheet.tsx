@@ -1,28 +1,28 @@
-// === Module 10784: EmojiPickerActionSheet ===
+// === Module 9868: EmojiPickerActionSheet ===
 
-// Module 10784 (EmojiPickerActionSheet)
-import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1115 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4809 */;
-import Text_Text from "Text/Text" /* 4841 */;
-import SearchField from "SearchField" /* 6657 */;
-import EmojiPickerUtils from "EmojiPickerUtils" /* 9941 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 10783 */;
-import DoubleTapReminderToast from "DoubleTapReminderToast" /* 10785 */;
-import BurstReactionToggleDefault from "BurstReactionToggle" /* 10787 */;
+// Module 9868 (EmojiPickerActionSheet)
+import nativeDefault from "native" /* 587 */;
+import util from "util" /* 1126 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
+import Text_Text from "Text/Text" /* 4886 */;
+import SearchField from "SearchField" /* 6547 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9866 */;
+import EmojiPickerUtils from "EmojiPickerUtils" /* 9870 */;
+import DoubleTapReminderToast from "DoubleTapReminderToast" /* 9878 */;
+import BurstReactionToggleDefault from "BurstReactionToggle" /* 9880 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1372 */;
+import UserStore from "UserStore" /* 1377 */;
 
 require = fn;
 const View = fn(17).View;
-const EmojiPickerSource = fn(9946).EmojiPickerSource;
-const EXPRESSION_FOOTER_HEIGHT = fn(1074).EXPRESSION_FOOTER_HEIGHT;
-let EmojiIntention = fn(1375).EmojiIntention;
+const EmojiPickerSource = fn(9869).EmojiPickerSource;
+const EXPRESSION_FOOTER_HEIGHT = fn(1085).EXPRESSION_FOOTER_HEIGHT;
+let EmojiIntention = fn(1380).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const EmojiPickerActionSheet = "EmojiPickerActionSheet";
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = { header: { flexDirection: "column" }, searchContainer: { display: "flex", flexDirection: "row", marginBottom: -nativeDefault.space.PX_16 }, content: null, background: null, headerText: null, headerSpacer: null, burstReaction: null };
 let obj3 = { display: "flex", flexDirection: "row", marginBottom: -nativeDefault.space.PX_16 };
 obj2.content = { paddingHorizontal: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT };
@@ -67,7 +67,7 @@ export default function EmojiPickerActionSheet(onClose) {
   const tmp4 = source(noop.useState(onClose(pickerIntention[10]).ReactionTypes.NORMAL), 2);
   const sharedValue = onClose(pickerIntention[11]).useSharedValue(0);
   let obj2 = onClose(pickerIntention[11]);
-  const emojiCategories = onClose(pickerIntention[12]).useEmojiCategories(pickerIntention, channel, guildId, false, bypassPremiumEmojiEntitlement);
+  const emojiCategories = onClose(pickerIntention[12]).useEmojiCategories(pickerIntention, channel, { guildId, bypassPremiumEmojiEntitlement });
   let bottom = onPressEmoji(pickerIntention[13])().insets.bottom;
   const bottom2 = onPressEmoji(pickerIntention[14])().bottom;
   let obj3 = onClose(pickerIntention[12]);
@@ -87,9 +87,9 @@ export default function EmojiPickerActionSheet(onClose) {
     }
   }, items);
   let items2 = [tmp6, bottom2];
-  const callback1 = obj.useCallback((emoji) => {
+  const callback1 = obj.useCallback((name) => {
     if (onPressEmoji != null) {
-      tmp(emoji, closure_6);
+      tmp(name, closure_6);
     }
     ActionSheetActionCreatorsDefault.hideActionSheet(openEmojiPickerActionSheet.EMOJI_PICKER_ACTION_SHEET_KEY);
     let tmp7 = pickerIntention !== EmojiIntention.REACTION;
@@ -100,7 +100,7 @@ export default function EmojiPickerActionSheet(onClose) {
       tmp7 = closure_6;
     }
     if (!tmp7) {
-      const result = DoubleTapReminderToast.maybeShowDoubleTapReminderToast(emoji);
+      const result = DoubleTapReminderToast.maybeShowDoubleTapReminderToast(name);
       const tmp5Result = DoubleTapReminderToast;
     }
   }, items1);
@@ -153,11 +153,11 @@ export default function EmojiPickerActionSheet(onClose) {
       const obj2 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: null };
       const intl = util.intl;
       obj2.children = intl.string(util.t.wHTk2C);
-      const items = [closure_2_10(Text_Text.Text, obj2), ];
+      const items = [v65535(Text_Text.Text, obj2), ];
       const obj3 = { variant: "text-sm/medium", color: "text-muted", children: null };
       const intl2 = util.intl;
       obj3.children = intl2.string(util.t.VrWSNn);
-      items[1] = closure_2_10(Text_Text.Text, obj3);
+      items[1] = v65535(Text_Text.Text, obj3);
       obj.children = items;
       tmp = closure_2_11(View, obj);
     }
@@ -175,7 +175,7 @@ export default function EmojiPickerActionSheet(onClose) {
     const obj2 = { style: items1, children: null };
     items1[1] = headerSpacer;
     const obj3 = { ref, size: "md", round: true, onChange: handleTextChange, placeholder: EmojiPickerUtils.getSearchPlaceholder(pickerIntention, currentUser) };
-    const items2 = [closure_2_10(SearchField.SearchField, obj3), ];
+    const items2 = [v65535(SearchField.SearchField, obj3), ];
     let tmp4Result = pickerIntention === EmojiIntention.REACTION;
     if (tmp4Result) {
       tmp4Result = source !== EmojiPickerSource.NOTIFICATION;
@@ -195,7 +195,7 @@ export default function EmojiPickerActionSheet(onClose) {
           },
         isActive: currentUser
       };
-      tmp4Result = closure_2_10(BurstReactionToggleDefault, obj5);
+      tmp4Result = v65535(BurstReactionToggleDefault, obj5);
     }
     items2[1] = tmp4Result;
     obj2.children = items2;

@@ -1,28 +1,29 @@
-// === Module 6600: UserSettingsConfirmPassword ===
+// === Module 6489: UserSettingsConfirmPassword ===
 
-// Module 6600 (UserSettingsConfirmPassword)
+// Module 6489 (UserSettingsConfirmPassword)
 import initialize from "initialize" /* 504 */;
-import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4841 */;
-import components_Button_Button from "components/Button/Button" /* 5465 */;
-import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 6209 */;
-import FreeFormErrorLabelDefault from "FreeFormErrorLabel" /* 6546 */;
-import useSettingNavigationRoute from "useSettingNavigationRoute" /* 6601 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 6602 */;
-import UserSettingsAccountUnverifiedHeaderDefault from "UserSettingsAccountUnverifiedHeader" /* 6605 */;
+import c from "c" /* 576 */;
+import nativeDefault from "native" /* 587 */;
+import util from "util" /* 1126 */;
+import Text_Text from "Text/Text" /* 4886 */;
+import components_Button_Button from "components/Button/Button" /* 5594 */;
+import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 6097 */;
+import FreeFormErrorLabelDefault from "FreeFormErrorLabel" /* 6428 */;
+import useSettingNavigationRoute from "useSettingNavigationRoute" /* 6490 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 6491 */;
+import UserSettingsAccountUnverifiedHeaderDefault from "UserSettingsAccountUnverifiedHeader" /* 6494 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1372 */;
+import UserStore from "UserStore" /* 1377 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const UserSettingsSections = fn(1074).UserSettingsSections;
+const UserSettingsSections = fn(1085).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj = { background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: { paddingVertical: 12, paddingHorizontal: 16 }, title: { textAlign: "center" }, prompt: { marginTop: 8, lineHeight: 18, textAlign: "center" }, input: { marginTop: 24 }, redesignInput: null, button: null, hint: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.redesignInput = { borderRadius: nativeDefault.radii.lg };
@@ -30,6 +31,8 @@ obj.button = { marginTop: 16 };
 let obj4 = { borderRadius: nativeDefault.radii.lg };
 obj.hint = { color: nativeDefault.unsafe_rawColors.RED_400 };
 let closure_12 = createStyles.createStyles(obj);
+const ReactCompilerGating = fn(558);
+let obj5 = { color: nativeDefault.unsafe_rawColors.RED_400 };
 const forwardRefResult = noop.forwardRef((arg0, arg1) => {
   ({ onSubmit: require, onSuccess: importDefault, onError: dependencyMap, parentLoading } = arg0);
   if (parentLoading === undefined) {
@@ -53,7 +56,7 @@ const forwardRefResult = noop.forwardRef((arg0, arg1) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -84,16 +87,16 @@ const forwardRefResult = noop.forwardRef((arg0, arg1) => {
           if (2 === tmp8) {
             c3 = 1;
             closure_128_1 = tmp75;
-            tmp4(tmp75[13]).captureException(closure_128_1);
-            const intl = closure_0(tmp75[14]).intl;
-            if (closure_128_1.message !== intl.string(closure_0(tmp75[14]).t.N2yb9a)) {
-              const v6OrEarlierAPIError = new closure_0(tmp75[12]).V6OrEarlierAPIError(closure_128_1);
+            tmp4(tmp75[15]).captureException(closure_128_1);
+            const intl = closure_0(tmp75[16]).intl;
+            if (closure_128_1.message !== intl.string(closure_0(tmp75[16]).t.N2yb9a)) {
+              const v6OrEarlierAPIError = new closure_0(tmp75[14]).V6OrEarlierAPIError(closure_128_1);
               closure_129_5(v6OrEarlierAPIError);
             }
             if (closure_129_2 != null) {
               closure_129_2();
             }
-            const obj4 = tmp4(tmp75[13]);
+            const obj4 = tmp4(tmp75[15]);
           } else if (arg0 === 1) {
             c5 = 3;
             throw value;
@@ -119,7 +122,7 @@ const forwardRefResult = noop.forwardRef((arg0, arg1) => {
                 closure_129_1();
                 c3 = 1;
               }
-              const v6OrEarlierAPIError1 = new closure_0(tmp75[12]).V6OrEarlierAPIError(closure_128_0);
+              const v6OrEarlierAPIError1 = new closure_0(tmp75[14]).V6OrEarlierAPIError(closure_128_0);
               closure_129_5(v6OrEarlierAPIError1);
               if (closure_129_2 != null) {
                 closure_129_2();
@@ -229,7 +232,21 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/account/native/UserSettingsConfirmPassword.tsx");
 
 export default forwardRefResult;
-export const UserSettingsConfirmPasswordWrapped = function UserSettingsConfirmPasswordWrapped() {
+export const UserSettingsConfirmPasswordWrapped = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(2);
+  const settingNavigationRoute = useSettingNavigationRoute.useSettingNavigationRoute();
+  if (cResult[0] !== settingNavigationRoute.params) {
+    const obj3 = {};
+    const merged = Object.assign(settingNavigationRoute.params);
+    const tmp8 = v65535(forwardRefResult, obj3);
+    cResult[0] = settingNavigationRoute.params;
+    cResult[1] = tmp8;
+    let tmp3 = tmp8;
+  } else {
+    tmp3 = cResult[1];
+  }
+  return tmp3;
+}) : (() => {
   const merged = Object.assign(useSettingNavigationRoute.useSettingNavigationRoute().params);
-  return closure_1_10(forwardRefResult, {});
-};
+  return v65535(forwardRefResult, {});
+});

@@ -1,17 +1,17 @@
-// === Module 8913: ApplicationInstallUtils ===
+// === Module 8941: ApplicationInstallUtils ===
 
-// Module 8913 (ApplicationInstallUtils)
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 8696 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 8782 */;
+// Module 8941 (ApplicationInstallUtils)
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 8708 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 8795 */;
 
 require = fn;
-const BuiltInSectionId = fn(5489).BuiltInSectionId;
+const BuiltInSectionId = fn(5788).BuiltInSectionId;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/applications/utils/ApplicationInstallUtils.tsx");
 
-export const canInstallApplication = function canInstallApplication(application) {
-  const integrationTypesConfig = application.integrationTypesConfig;
-  let tmp = null != application.customInstallUrl || null != application.installParams;
+export const canInstallApplication = function canInstallApplication(installAppProps) {
+  const integrationTypesConfig = installAppProps.integrationTypesConfig;
+  let tmp = null != installAppProps.customInstallUrl || null != installAppProps.installParams;
   if (!tmp) {
     let someResult = null != integrationTypesConfig;
     if (someResult) {

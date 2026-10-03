@@ -1,14 +1,14 @@
-// === Module 2066: GuildStore ===
+// === Module 2074: GuildStore ===
 
-// Module 2066 (GuildStore)
+// Module 2074 (GuildStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import FavoritesConstants from "FavoritesConstants" /* 2057 */;
-import GuildRecordUtilsAll from "GuildRecordUtils" /* 2058 */;
-import SetUtils from "SetUtils" /* 2061 */;
-import LibdiscoreStore2 from "LibdiscoreStore" /* 2067 */;
-import libdiscoreExperiments from "libdiscoreExperiments" /* 2070 */;
-import PlainRecord from "PlainRecord" /* 2059 */;
-import GuildRecord from "GuildRecord" /* 2062 */;
+import libdiscoreExperiments from "libdiscoreExperiments" /* 559 */;
+import FavoritesConstants from "FavoritesConstants" /* 2065 */;
+import GuildRecordUtilsAll from "GuildRecordUtils" /* 2066 */;
+import SetUtils from "SetUtils" /* 2069 */;
+import LibdiscoreStore2 from "LibdiscoreStore" /* 2075 */;
+import PlainRecord from "PlainRecord" /* 2067 */;
+import GuildRecord from "GuildRecord" /* 2070 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import size from "module_2" /* 2 */;
 
@@ -230,7 +230,7 @@ const guildStore = new GuildStore({
     guildId = guildId.guildId;
     value = get.get(guildId);
     if (null != value) {
-      const result = get.set(guildId, React6(value, guildId.gameApplicationIds));
+      const result = get.set(guildId, closure_1_8(value, guildId.gameApplicationIds));
     }
   }
 }, LibdiscoreBatchStoreRefactorExperiment.getCachedBridgedStoreMode());

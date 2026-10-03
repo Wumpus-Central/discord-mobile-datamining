@@ -1,13 +1,13 @@
-// === Module 11462: SpotifyUtils ===
+// === Module 11381: SpotifyUtils ===
 
-// Module 11462 (SpotifyUtils)
-import DurationsDefault from "Durations" /* 1091 */;
-import SpotifyActionCreators from "SpotifyActionCreators" /* 11464 */;
-import UserActivityActionCreators from "UserActivityActionCreators" /* 11465 */;
+// Module 11381 (SpotifyUtils)
+import DurationsDefault from "Durations" /* 1102 */;
+import SpotifyActionCreators from "SpotifyActionCreators" /* 11383 */;
+import UserActivityActionCreators from "UserActivityActionCreators" /* 11384 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import RunningGameStore from "RunningGameStore" /* 2000 */;
-import SpotifyProtocolStore from "SpotifyProtocolStore" /* 11463 */;
-import SpotifyStore from "SpotifyStore" /* 5778 */;
+import RunningGameStore from "RunningGameStore" /* 2006 */;
+import SpotifyProtocolStore from "SpotifyProtocolStore" /* 11382 */;
+import SpotifyStore from "SpotifyStore" /* 5439 */;
 
 require = fn;
 function asString(str) {
@@ -30,7 +30,7 @@ let closure_13 = async function _getSpotifyMetadataFromActivity(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -109,9 +109,9 @@ let closure_13 = async function _getSpotifyMetadataFromActivity(arg0) {
     }
   }
 };
-const SpotifyConstants = fn(7970);
+const SpotifyConstants = fn(8016);
 ({ SPOTIFY_APP_PROTOCOL: closure_7, SpotifyResourceTypes: closure_8, getSpotifyResourceType: closure_9 } = SpotifyConstants);
-const PlatformTypes = fn(1074).PlatformTypes;
+const PlatformTypes = fn(1085).PlatformTypes;
 let closure_11 = 30 * DurationsDefault.Millis.SECOND;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/spotify/SpotifyUtils.tsx");
@@ -132,7 +132,7 @@ export const ensureSpotifyPlayable = function ensureSpotifyPlayable() {
     if (RunningGameStore.isObservedAppRunning(obj2.get(PlatformTypes.SPOTIFY).name)) {
       if (playableComputerDevices.length > 0) {
         ({ socket, device } = playableComputerDevices[0]);
-        playableComputerDevices(11464).setActiveDevice(socket.accountId, device.id);
+        playableComputerDevices(11383).setActiveDevice(socket.accountId, device.id);
         const obj4 = { socket, device };
         return Promise.resolve(obj4);
       }

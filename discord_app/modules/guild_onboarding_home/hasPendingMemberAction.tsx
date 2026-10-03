@@ -1,21 +1,21 @@
-// === Module 5031: hasPendingMemberAction ===
+// === Module 5076: hasPendingMemberAction ===
 
-// Module 5031 (hasPendingMemberAction)
-import FlagUtilsAll from "FlagUtils" /* 1385 */;
-import guildHasOnboardingHomeDefault from "guildHasOnboardingHome" /* 5034 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildMemberStore from "GuildMemberStore" /* 2107 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 5032 */;
-import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 5033 */;
+// Module 5076 (hasPendingMemberAction)
+import FlagUtilsAll from "FlagUtils" /* 1390 */;
+import guildHasOnboardingHomeDefault from "guildHasOnboardingHome" /* 5079 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import GuildMemberStore from "GuildMemberStore" /* 2112 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 5077 */;
+import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 5078 */;
 
-const GuildFeatures = fn(1074).GuildFeatures;
-const GuildMemberFlags = fn(4484).GuildMemberFlags;
+const GuildFeatures = fn(1085).GuildFeatures;
+const GuildMemberFlags = fn(4495).GuildMemberFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/hasPendingMemberAction.tsx");
 
 export const hasPendingMemberAction = function hasPendingMemberAction(guild_id, selectedChannelId) {
-  const guild = GuildStore.getGuild(guild_id);
+  guild = GuildStore.getGuild(guild_id);
   const channel = ChannelStore.getChannel(selectedChannelId);
   let hasItem = null != guild && null != channel;
   if (hasItem) {

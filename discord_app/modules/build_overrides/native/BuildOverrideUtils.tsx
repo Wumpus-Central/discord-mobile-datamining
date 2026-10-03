@@ -1,11 +1,11 @@
-// === Module 11480: build_overrides/BuildOverrideUtils ===
+// === Module 11399: build_overrides/BuildOverrideUtils ===
 
-// Module 11480 (build_overrides/BuildOverrideUtils)
-import BuildOverrideUtils from "BuildOverrideUtils" /* 1361 */;
-import ApplyBuildOverrideUtils from "ApplyBuildOverrideUtils" /* 11481 */;
-import BundleUpdaterDefault from "BundleUpdater" /* 11482 */;
+// Module 11399 (build_overrides/BuildOverrideUtils)
+import BuildOverrideUtils from "BuildOverrideUtils" /* 1366 */;
+import ApplyBuildOverrideUtils from "ApplyBuildOverrideUtils" /* 11400 */;
+import BundleUpdaterDefault from "BundleUpdater" /* 11401 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 11178 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11082 */;
 
 require = fn;
 function setBuildOverrideForBranch(id) {
@@ -32,7 +32,7 @@ let closure_8 = async function _setBuildOverride(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -102,7 +102,7 @@ let closure_10 = async function _clearBuildOverride() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -160,7 +160,7 @@ let closure_11 = async function _toggleOverride(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -202,7 +202,7 @@ let closure_11 = async function _toggleOverride(arg0) {
               if (null != id1) {
                 setBuildOverrideForBranch(id1);
                 c4 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             }
             obj10 = BuildOverrideUtils;
@@ -247,7 +247,7 @@ let closure_12 = async function _setBuildOverrideFromLink(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -315,7 +315,7 @@ let closure_12 = async function _setBuildOverrideFromLink(arg0) {
     }
   }
 };
-const PlatformUtils = fn(1364);
+const PlatformUtils = fn(1369);
 let str = "discord_ios";
 if (PlatformUtils.isAndroid()) {
   str = "discord_android";

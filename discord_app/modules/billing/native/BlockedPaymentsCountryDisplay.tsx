@@ -1,28 +1,100 @@
-// === Module 11188: BlockedPaymentsCountryDisplay ===
+// === Module 11094: BlockedPaymentsCountryDisplay ===
 
-// Module 11188 (BlockedPaymentsCountryDisplay)
-import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1115 */;
-import native from "native" /* 1177 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2110 */;
-import useThemeDefault from "useTheme" /* 4776 */;
-import _modDef11189 from "module_11189" /* 11189 */;
-import _modDef11190 from "module_11190" /* 11190 */;
+// Module 11094 (BlockedPaymentsCountryDisplay)
+import c from "c" /* 576 */;
+import nativeDefault from "native" /* 587 */;
+import util from "util" /* 1126 */;
+import native from "native" /* 1188 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
+import shared from "shared" /* 4729 */;
+import useThemeDefault from "useTheme" /* 4791 */;
+import _modDef11095 from "module_11095" /* 11095 */;
+import _modDef11096 from "module_11096" /* 11096 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
-const HelpdeskArticles = fn(1074).HelpdeskArticles;
+const HelpdeskArticles = fn(1085).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = { container: { alignItems: "center" }, header: { fontSize: 20, fontWeight: "700", color: nativeDefault.colors.TEXT_SUBTLE, marginBottom: 16 }, image: { marginTop: 38 } };
 let closure_8 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj3 = { fontSize: 20, fontWeight: "700", color: nativeDefault.colors.TEXT_SUBTLE, marginBottom: 16 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/billing/native/BlockedPaymentsCountryDisplay.tsx");
 
-export default function BlockedPaymentsCountryDisplay() {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(11);
+  const tmp4 = closure_8();
+  ({ container, header } = tmp4);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const intl = util.intl;
+    const stringResult = intl.string(util.t.vwMEHS);
+    cResult[0] = stringResult;
+    let first = stringResult;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] !== tmp4.header) {
+    const obj2 = { style: header, children: first };
+    const tmp11 = timestampProducer(native.LegacyText, obj2);
+    cResult[1] = tmp4.header;
+    cResult[2] = tmp11;
+    let tmp9 = tmp11;
+  } else {
+    tmp9 = cResult[2];
+  }
+  if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+    const obj3 = { children: null };
+    const intl2 = util.intl;
+    const obj4 = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.BLOCKED_PAYMENTS) };
+    obj3.children = intl2.format(util.t.IHxEJU, obj4);
+    const tmp15 = timestampProducer(native.LegacyText, obj3);
+    cResult[3] = tmp15;
+    let tmp12 = tmp15;
+    const tmp5Result = HelpdeskUtilsDefault;
+  } else {
+    tmp12 = cResult[3];
+  }
+  const tmp6 = useThemeDefault();
+  if (tmpResult.isThemeDark(tmp6)) {
+    let tmp5Result2 = _modDef11095;
+  } else {
+    tmp5Result2 = _modDef11096;
+  }
+  if (cResult[4] === tmp4.image) {
+    if (cResult[5] === tmp5Result2) {
+      let tmp17 = cResult[6];
+    }
+    if (cResult[7] === tmp4.container) {
+      if (cResult[8] === tmp9) {
+        if (cResult[9] === tmp17) {
+          let tmp19 = cResult[10];
+        }
+        return tmp19;
+      }
+    }
+    const obj5 = { style: container, children: null };
+    const items = [tmp9, tmp12, tmp17];
+    obj5.children = items;
+    const tmp22 = React5(React3, obj5);
+    cResult[7] = tmp4.container;
+    cResult[8] = tmp9;
+    cResult[9] = tmp17;
+    cResult[10] = tmp22;
+    tmp19 = tmp22;
+  }
+  const tmp18 = timestampProducer(React4, { style: tmp4.image, source: tmp5Result2 });
+  cResult[4] = tmp4.image;
+  cResult[5] = tmp5Result2;
+  cResult[6] = tmp18;
+  tmp17 = tmp18;
+  const obj6 = { style: tmp4.image, source: tmp5Result2 };
+  tmpResult = shared;
+}) : (() => {
   const tmp = closure_8();
   const obj = { style: tmp.container, children: null };
   const obj2 = { style: tmp.header, children: null };
@@ -38,12 +110,12 @@ export default function BlockedPaymentsCountryDisplay() {
   items[1] = timestampProducer(native.LegacyText, obj3);
   const obj6 = { style: tmp.image, source: null };
   if (obj7.isThemeDark(tmp4)) {
-    let tmp2Result = _modDef11189;
+    let tmp2Result = _modDef11095;
   } else {
-    tmp2Result = _modDef11190;
+    tmp2Result = _modDef11096;
   }
   obj6.source = tmp2Result;
   items[2] = timestampProducer(React4, obj6);
   obj.children = items;
   return React5(React3, obj);
-};
+});

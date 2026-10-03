@@ -1,18 +1,26 @@
-// === Module 11210: SwipeToReplyExperiment ===
+// === Module 11124: SwipeToReplyExperiment ===
 
-// Module 11210 (SwipeToReplyExperiment)
-import LaunchPadConstants from "LaunchPadConstants" /* 11211 */;
-import useLaunchPadTypeDefault from "useLaunchPadType" /* 11212 */;
+// Module 11124 (SwipeToReplyExperiment)
+import LaunchPadConstants from "LaunchPadConstants" /* 11125 */;
+import useLaunchPadTypeDefault from "useLaunchPadType" /* 11126 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const LaunchPadTypes = LaunchPadConstants.LaunchPadTypes;
 const result = size.fileFinishedImporting("experiments/SwipeToReplyExperiment.tsx");
 
-export const useIsMessageSwipeActionsEnabled = function useIsMessageSwipeActionsEnabled() {
+export const useIsMessageSwipeActionsEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const tmp = useLaunchPadTypeDefault() === LaunchPadTypes.GESTURE_FULL;
   let tmp2 = !tmp;
   if (!tmp) {
     tmp2 = !obj.useIsSwipeToMemberListEnabled();
   }
   return tmp2;
-};
+}) : (() => {
+  const tmp = useLaunchPadTypeDefault() === LaunchPadTypes.GESTURE_FULL;
+  let tmp2 = !tmp;
+  if (!tmp) {
+    tmp2 = !obj.useIsSwipeToMemberListEnabled();
+  }
+  return tmp2;
+});

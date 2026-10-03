@@ -1,20 +1,21 @@
-// === Module 5383: UploadAttachmentStore ===
+// === Module 7267: UploadAttachmentStore ===
 
-// Module 5383 (UploadAttachmentStore)
+// Module 7267 (UploadAttachmentStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import Constants from "Constants" /* 1074 */;
-import DraftStore from "DraftStore" /* 5384 */;
-import CloudUpload from "CloudUpload" /* 5625 */;
-import uploader_UploadUtils from "uploader/UploadUtils" /* 5634 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import DraftStore from "DraftStore" /* 7031 */;
+import CloudUpload from "CloudUpload" /* 7268 */;
+import uploader_UploadUtils from "uploader/UploadUtils" /* 7272 */;
+import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
 const DraftType = DraftStore.DraftType;
-const MAX_UPLOAD_COUNT = Constants.MAX_UPLOAD_COUNT;
+({ AnalyticEvents: closure_4, MAX_UPLOAD_COUNT: hasOwnProperty } = Constants);
 let map = new Map();
-let closure_6 = [];
+let closure_7 = [];
 const Store = initializeDefault.Store;
 class UploadAttachmentStore extends Store {
 }
@@ -30,7 +31,7 @@ prototype["getFirstUpload"] = function getFirstUpload(arg0, arg1) {
     value2 = map.get(arg1);
   }
   if (value2 == null) {
-    value2 = closure_6;
+    value2 = closure_7;
   }
   let first = null;
   if (value2.length > 0) {
@@ -49,7 +50,7 @@ prototype["hasAdditionalUploads"] = function hasAdditionalUploads(arg0, arg1) {
     value2 = map.get(arg1);
   }
   if (value2 == null) {
-    value2 = closure_6;
+    value2 = closure_7;
   }
   let num = value2.length;
   if (num == null) {
@@ -68,22 +69,22 @@ prototype["getUploads"] = function getUploads(id, ChannelMessage) {
     value2 = map.get(ChannelMessage);
   }
   if (value2 == null) {
-    value2 = closure_6;
+    value2 = closure_7;
   }
   return value2;
 };
-prototype["getUploadCount"] = function getUploadCount(c1, ChannelMessage) {
-  map = map.get(c1);
+prototype["getUploadCount"] = function getUploadCount(channelId, draftType) {
+  map = map.get(channelId);
   if (map == null) {
     const _Map = Map;
     map = new Map();
   }
   value2 = undefined;
   if (map != null) {
-    value2 = map.get(ChannelMessage);
+    value2 = map.get(draftType);
   }
   if (value2 == null) {
-    value2 = closure_6;
+    value2 = closure_7;
   }
   let num = value2.length;
   if (num == null) {
@@ -103,12 +104,12 @@ prototype["getUpload"] = function getUpload(channelId, id, ChannelMessage) {
     value2 = map.get(ChannelMessage);
   }
   if (value2 == null) {
-    value2 = closure_6;
+    value2 = closure_7;
   }
   return value2.find((id) => id.id === closure_0);
 };
-prototype["findUpload"] = function findUpload(id, ChannelMessage, _messages) {
-  map = map.get(id);
+prototype["findUpload"] = function findUpload(channelId, ChannelMessage, cResult) {
+  map = map.get(channelId);
   if (map == null) {
     const _Map = Map;
     map = new Map();
@@ -118,9 +119,9 @@ prototype["findUpload"] = function findUpload(id, ChannelMessage, _messages) {
     value2 = map.get(ChannelMessage);
   }
   if (value2 == null) {
-    value2 = closure_6;
+    value2 = closure_7;
   }
-  return value2.find(_messages);
+  return value2.find(cResult);
 };
 UploadAttachmentStore.displayName = "UploadAttachmentStore";
 const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
@@ -131,12 +132,12 @@ const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
       const _Map = Map;
       map = new Map();
     }
-    let value3;
+    value3 = undefined;
     if (map != null) {
       value3 = map.get(DraftType.ChannelMessage);
     }
     if (value3 == null) {
-      value3 = closure_6;
+      value3 = closure_7;
     }
     const items = [...value3];
     items.shift();
@@ -157,15 +158,15 @@ const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
       const _Map = Map;
       map = new Map();
     }
-    let value3;
+    value3 = undefined;
     if (map != null) {
       value3 = map.get(draftType);
     }
     if (value3 == null) {
-      value3 = closure_6;
+      value3 = closure_7;
     }
     items = [...value3];
-    if (items.length + files.length > MAX_UPLOAD_COUNT) {
+    if (items.length + files.length > closure_5) {
       if (draftType !== DraftType.SlashCommand) {
         if (draftType !== DraftType.ApplicationLauncherCommand) {
           const obj2 = { title: null, body: null };
@@ -193,36 +194,54 @@ const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
     const arr2 = require("module_12");
   },
   UPLOAD_ATTACHMENT_UPDATE_FILE: function handleUpdateFile(arg0) {
-    ({ channelId, id: require, filename: importDefault, description: dependencyMap, spoiler: DraftType, thumbnail: MAX_UPLOAD_COUNT, draftType } = arg0);
+    ({ channelId, id: require, filename: importDefault, description: dependencyMap, spoiler: DraftType, thumbnail: closure_4, draftType } = arg0);
     map = map.get(channelId);
     if (map == null) {
       const _Map = Map;
       map = new Map();
     }
-    let value3;
+    value3 = undefined;
     if (map != null) {
       value3 = map.get(draftType);
     }
     if (value3 == null) {
-      value3 = closure_6;
+      value3 = closure_7;
     }
-    const items = [...value3];
-    const mapped = items.map((id) => {
+    const mapped = value3.map((id) => {
       if (id.id === require) {
-        if (undefined !== filename) {
+        let tmp3;
+        if (null != DraftType) {
+          if (DraftType !== id.spoiler) {
+            tmp3 = DraftType;
+          }
+        }
+        const obj = { spoilered: tmp3, has_alt_text: null };
+        let tmp4;
+        if (null != description) {
+          if (description !== id.description) {
+            tmp4 = description.trim().length > 0;
+          }
+        }
+        obj.has_alt_text = tmp4;
+        if (!tmp5) {
+          AnalyticsUtilsDefault.track(constants.MEDIA_DRAFT_EDITED, obj);
+        }
+        if (null != filename) {
           id.filename = filename;
         }
-        if (undefined !== spoiler) {
-          id.spoiler = spoiler;
+        if (null != DraftType) {
+          id.spoiler = DraftType;
         }
-        if (undefined !== description) {
+        if (null != description) {
           id.description = description;
         }
-        if (undefined !== isThumbnail) {
+        if (null != isThumbnail) {
           id.isThumbnail = isThumbnail;
         }
+        return id;
+      } else {
+        return id;
       }
-      return id;
     });
     let value4 = obj.get(channelId);
     if (value4 == null) {
@@ -239,12 +258,12 @@ const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
       const _Map = Map;
       map = new Map();
     }
-    let value3;
+    value3 = undefined;
     if (map != null) {
       value3 = map.get(draftType);
     }
     if (value3 == null) {
-      value3 = closure_6;
+      value3 = closure_7;
     }
     const items = [...value3];
     const findIndexResult = items.findIndex((item) => uploader_UploadUtils.doesImageMatchUpload({ uri: filename, filename }, item));
@@ -268,12 +287,12 @@ const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
       const _Map = Map;
       map = new Map();
     }
-    let value3;
+    value3 = undefined;
     if (map != null) {
       value3 = map.get(draftType);
     }
     if (value3 == null) {
-      value3 = closure_6;
+      value3 = closure_7;
     }
     items = [...value3];
     const item = attachmentIds.forEach((item) => {
@@ -320,12 +339,12 @@ const uploadAttachmentStore = new UploadAttachmentStore(DispatcherDefault, {
       const _Map = Map;
       map = new Map();
     }
-    let value3;
+    value3 = undefined;
     if (map != null) {
       value3 = map.get(draftType);
     }
     if (value3 == null) {
-      value3 = closure_6;
+      value3 = closure_7;
     }
     const items = [...value3];
     const found = items.filter((id) => id.id !== require);

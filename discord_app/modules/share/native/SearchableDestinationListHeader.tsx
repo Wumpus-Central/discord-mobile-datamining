@@ -1,27 +1,106 @@
-// === Module 10641: SearchableDestinationListHeader ===
+// === Module 10713: SearchableDestinationListHeader ===
 
-// Module 10641 (SearchableDestinationListHeader)
-import nativeDefault from "native" /* 576 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1613 */;
-import NavigatorHeader from "NavigatorHeader" /* 6122 */;
-import _mod6129 from "module_6129" /* 6129 */;
-import useIsWindowLarge from "useIsWindowLarge" /* 6550 */;
-import HeaderShared from "HeaderShared" /* 7462 */;
+// Module 10713 (SearchableDestinationListHeader)
+import nativeDefault from "native" /* 587 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
+import NavigatorHeader from "NavigatorHeader" /* 6010 */;
+import _mod6019 from "module_6019" /* 6019 */;
+import useIsWindowLarge from "useIsWindowLarge" /* 6433 */;
+import HeaderShared from "HeaderShared" /* 7498 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = { headerLeftContainer: { paddingLeft: nativeDefault.space.PX_16 }, headerRightContainer: null, header: null };
 const obj3 = { paddingLeft: nativeDefault.space.PX_16 };
 obj2.headerRightContainer = { paddingRight: nativeDefault.space.PX_16 };
 const obj4 = { paddingRight: nativeDefault.space.PX_16 };
 obj2.header = { borderBottomWidth: 0, shadowColor: "transparent", backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 let closure_4 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+const obj5 = { borderBottomWidth: 0, shadowColor: "transparent", backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/share/native/SearchableDestinationListHeader.tsx");
 
-export default function SearchableDestinationListHeader(arg0) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((subtitleColor) => {
+  const cResult = subtitle(576).c(16);
+  ({ title, subtitle } = subtitleColor);
+  subtitleColor = subtitleColor.subtitleColor;
+  ({ headerRight, onClose } = subtitleColor);
+  const tmp4 = closure_4();
+  const top = subtitleColor(1618)().top;
+  if (cResult[0] === subtitle) {
+    if (cResult[1] === subtitleColor) {
+      let tmp7 = cResult[2];
+    }
+    if (cResult[3] !== onClose) {
+      const headerCloseButton = subtitle(6010).getHeaderCloseButton(onClose);
+      cResult[3] = onClose;
+      cResult[4] = headerCloseButton;
+      let tmp8 = headerCloseButton;
+      const tmpResult = subtitle(6010);
+    } else {
+      tmp8 = cResult[4];
+    }
+    if (cResult[5] !== top) {
+      if (!tmpResult3.isIOS()) {
+        let num3 = top;
+      } else {
+        subtitle(6433);
+        num3 = 0;
+      }
+      cResult[5] = top;
+      cResult[6] = num3;
+      let tmp10 = num3;
+      tmpResult3 = subtitle(1369);
+    } else {
+      tmp10 = cResult[6];
+    }
+    const sum = tmp10 + tmp5(587).space.PX_8;
+    if (cResult[7] === headerRight) {
+      if (cResult[8] === tmp4.header) {
+        if (cResult[9] === tmp4.headerLeftContainer) {
+          if (cResult[10] === tmp4.headerRightContainer) {
+            if (cResult[11] === tmp7) {
+              if (cResult[12] === tmp8) {
+                if (cResult[13] === sum) {
+                  if (cResult[14] === title) {
+                    let tmp12 = cResult[15];
+                  }
+                  return tmp12;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    const obj2 = { headerStyle: tmp6, title, headerTitle: tmp7, headerTitleAlign: "center", headerLeft: tmp8, headerRight, headerLeftContainerStyle: null, headerRightContainerStyle: null, headerStatusBarHeight: null };
+    ({ headerLeftContainer: obj5.headerLeftContainerStyle, headerRightContainer: obj5.headerRightContainerStyle } = tmp4);
+    obj2.headerStatusBarHeight = sum;
+    const tmp14 = jsx(subtitle(6019).Header, { headerStyle: tmp6, title, headerTitle: tmp7, headerTitleAlign: "center", headerLeft: tmp8, headerRight, headerLeftContainerStyle: null, headerRightContainerStyle: null, headerStatusBarHeight: null });
+    cResult[7] = headerRight;
+    cResult[8] = tmp4.header;
+    cResult[9] = tmp4.headerLeftContainer;
+    cResult[10] = tmp4.headerRightContainer;
+    cResult[11] = tmp7;
+    cResult[12] = tmp8;
+    cResult[13] = sum;
+    cResult[14] = title;
+    cResult[15] = tmp14;
+    tmp12 = tmp14;
+  }
+  const fn = function o(children) {
+    return jsx(HeaderShared.GenericHeaderTitle, { title: children.children, subtitle, subtitleColor, variant: "redesign/heading-18/bold" });
+  };
+  cResult[0] = subtitle;
+  cResult[1] = subtitleColor;
+  cResult[2] = fn;
+  tmp7 = fn;
+  const obj = subtitle(576);
+  tmp5 = subtitleColor;
+}) : ((arg0) => {
   ({ subtitle: require, subtitleColor: importDefault } = arg0);
   ({ title, headerRight, onClose } = arg0);
   const tmp = closure_4();
@@ -46,7 +125,7 @@ export default function SearchableDestinationListHeader(arg0) {
     num = 0;
   }
   obj.headerStatusBarHeight = num + nativeDefault.space.PX_8;
-  return jsx(_mod6129.Header, {
+  return jsx(_mod6019.Header, {
     headerStyle: tmp.header,
     title,
     headerTitle(children) {
@@ -59,4 +138,4 @@ export default function SearchableDestinationListHeader(arg0) {
     headerRightContainerStyle: null,
     headerStatusBarHeight: null
   });
-};
+});

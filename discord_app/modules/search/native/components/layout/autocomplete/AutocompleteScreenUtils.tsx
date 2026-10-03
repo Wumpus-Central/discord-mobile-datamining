@@ -1,29 +1,29 @@
-// === Module 16799: AutocompleteScreenUtils ===
+// === Module 16887: AutocompleteScreenUtils ===
 
-// Module 16799 (AutocompleteScreenUtils)
-import util from "util" /* 1115 */;
-import UserUtilsDefault from "UserUtils" /* 4707 */;
-import LinkIcon from "LinkIcon" /* 4784 */;
-import ImageIcon from "ImageIcon" /* 5585 */;
-import EmbedIcon from "EmbedIcon" /* 8926 */;
-import RobotIcon from "RobotIcon" /* 8930 */;
-import VideoIcon from "VideoIcon" /* 9762 */;
-import AttachmentIcon from "AttachmentIcon" /* 9764 */;
-import StickerIcon from "StickerIcon" /* 9766 */;
-import PollsIcon from "PollsIcon" /* 10294 */;
-import ForwardingIconDefault from "ForwardingIcon" /* 11398 */;
-import UserIcon from "UserIcon" /* 11516 */;
-import SearchUtils from "SearchUtils" /* 12033 */;
-import SoundboardIcon from "SoundboardIcon" /* 12235 */;
-import WebhookIcon from "WebhookIcon" /* 16800 */;
-import GuildMemberStore from "GuildMemberStore" /* 2107 */;
-import RelationshipStore from "RelationshipStore" /* 4508 */;
-import UserStore from "UserStore" /* 1372 */;
-import SearchQueryStore from "SearchQueryStore" /* 12032 */;
+// Module 16887 (AutocompleteScreenUtils)
+import util from "util" /* 1126 */;
+import UserUtilsDefault from "UserUtils" /* 4722 */;
+import LinkIcon from "LinkIcon" /* 4839 */;
+import ImageIcon from "ImageIcon" /* 5871 */;
+import EmbedIcon from "EmbedIcon" /* 8954 */;
+import RobotIcon from "RobotIcon" /* 8958 */;
+import PollsIcon from "PollsIcon" /* 10367 */;
+import AttachmentIcon from "AttachmentIcon" /* 10369 */;
+import VideoIcon from "VideoIcon" /* 11234 */;
+import ForwardingIconDefault from "ForwardingIcon" /* 11315 */;
+import UserIcon from "UserIcon" /* 11435 */;
+import SearchUtils from "SearchUtils" /* 11968 */;
+import SoundboardIcon from "SoundboardIcon" /* 12185 */;
+import StickerIcon from "StickerIcon" /* 12190 */;
+import WebhookIcon from "WebhookIcon" /* 16888 */;
+import GuildMemberStore from "GuildMemberStore" /* 2112 */;
+import RelationshipStore from "RelationshipStore" /* 4519 */;
+import UserStore from "UserStore" /* 1377 */;
+import SearchQueryStore from "SearchQueryStore" /* 11967 */;
 
 require = fn;
-const SearchListItemTypes = fn(7477).SearchListItemTypes;
-const RelationshipTypes = fn(1074).RelationshipTypes;
+const SearchListItemTypes = fn(7513).SearchListItemTypes;
+const RelationshipTypes = fn(1085).RelationshipTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/layout/autocomplete/AutocompleteScreenUtils.tsx");
 
@@ -104,8 +104,8 @@ export const getSearchFilterAuthorTypeIcon = function getSearchFilterAuthorTypeI
     }
   }
 };
-export const toSearchListUserItem = function toSearchListUserItem(items, user, callback2) {
-  const guildIdFromSearchContext = SearchUtils.getGuildIdFromSearchContext(items);
+export const toSearchListUserItem = function toSearchListUserItem(searchContext, user, callback2) {
+  const guildIdFromSearchContext = SearchUtils.getGuildIdFromSearchContext(searchContext);
   if (null == user) {
     return null;
   } else {

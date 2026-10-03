@@ -1,9 +1,9 @@
-// === Module 17606: AuditLogActionCreators ===
+// === Module 17694: AuditLogActionCreators ===
 
-// Module 17606 (AuditLogActionCreators)
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import HTTPUtils from "HTTPUtils" /* 1271 */;
-import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 17601 */;
+// Module 17694 (AuditLogActionCreators)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 17689 */;
 
 require = fn;
 function makeRequest(arg0, arg1) {
@@ -34,7 +34,7 @@ function makeRequest(arg0, arg1) {
   const request = { url: React4.GUILD_AUDIT_LOG(arg0), query: obj, oldFormErrors: true, rejectWithError: true };
   return HTTP.get(request);
 }
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ Endpoints: closure_4, AUDIT_LOG_PAGE_LIMIT: hasOwnProperty } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/AuditLogActionCreators.tsx");
@@ -109,7 +109,7 @@ export const filterByUserId = function filterByUserId(id, guildId) {
       if (!tmp5) {
         if (null != guildId) {
           DispatcherDefault.dispatch({ type: "AUDIT_LOG_FETCH_START" });
-          const obj2 = { userId: id, action: "Array", targetId: "isArray" };
+          const obj2 = { userId: id, action: "Array", targetId: "cursor" };
           const tmp10Result = DispatcherDefault;
           nextPromise = makeRequest(guildId, obj2).then((body) => {
             ({ audit_log_entries, integrations, users, webhooks, guild_scheduled_events, auto_moderation_rules, threads, application_commands } = body.body);

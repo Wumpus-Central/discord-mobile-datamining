@@ -1,18 +1,18 @@
-// === Module 7721: ChangeLogActionCreators ===
+// === Module 7765: ChangeLogActionCreators ===
 
-// Module 7721 (ChangeLogActionCreators)
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import HTTPUtils from "HTTPUtils" /* 1271 */;
-import UserSettings from "UserSettings" /* 2021 */;
+// Module 7765 (ChangeLogActionCreators)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import UserSettings from "UserSettings" /* 2028 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChangelogStore from "ChangelogStore" /* 4859 */;
+import ChangelogStore from "ChangelogStore" /* 4904 */;
 
 require = fn;
 function cacheBustParam() {
   return "x=" + Math.floor(new Date().getMinutes() / 5);
 }
-const Endpoints = fn(1074).Endpoints;
-const ChangelogPlatforms = fn(2097).ChangelogPlatforms;
+const Endpoints = fn(1085).Endpoints;
+const ChangelogPlatforms = fn(2102).ChangelogPlatforms;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/ChangeLogActionCreators.tsx");
 
@@ -45,9 +45,9 @@ export default {
     const obj = { url: "https://cdn.discordapp.com/changelogs/config_" + ChangelogPlatforms.MOBILE + ".json?" + "x=" + Math.floor(new Date().getMinutes() / 5), rejectWithError: true };
     return HTTP.get(obj);
   },
-  fetchChangelog(arg0, locale, arg2) {
+  fetchChangelog(arg0, stateFromStores, arg2) {
     closure_0 = arg0;
-    closure_1 = locale;
+    closure_1 = stateFromStores;
     let flag = arg2;
     if (arg2 === undefined) {
       flag = false;
@@ -71,19 +71,19 @@ export default {
         const _HermesInternal = HermesInternal;
         str = "?" + cacheBustParam();
       }
-      const HTTP = closure_0(1271).HTTP;
+      const HTTP = closure_0(1282).HTTP;
       const _HermesInternal2 = HermesInternal;
       yield HTTP.get({ url: "https://cdn.discordapp.com/changelogs/" + MOBILE + "/" + closure_0 + "/" + tmp3 + ".json" + str, rejectWithError: true });
       if (1 === tmp7) {
         dependencyMap = 0;
-        tmp3(573).dispatch({ type: "CHANGE_LOG_FETCH_FAILED", id: closure_129_0, locale: closure_129_1 });
+        tmp3(584).dispatch({ type: "CHANGE_LOG_FETCH_FAILED", id: closure_129_0, locale: closure_129_1 });
         let tmp8 = null;
         if ("en-US" !== closure_129_1) {
           c3 = 3;
           changelog = 1;
           return { value: closure_129_4.fetchChangelog(closure_129_0, "en-US"), done: false };
         }
-        tmp3(573);
+        tmp3(584);
       } else if (2 === tmp7) {
         if (arg0 === 1) {
           changelog = 3;
@@ -94,7 +94,7 @@ export default {
           return { value, done: true };
         } else {
           closure_128_0 = value;
-          tmp3(573).dispatch({ type: "CHANGE_LOG_FETCH_SUCCESS", id: closure_129_0, changelog: closure_128_0.body });
+          tmp3(584).dispatch({ type: "CHANGE_LOG_FETCH_SUCCESS", id: closure_129_0, changelog: closure_128_0.body });
           dependencyMap = 0;
           changelog = 3;
           return { value: closure_128_0.body, done: true };

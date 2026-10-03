@@ -1,10 +1,10 @@
-// === Module 7641: GuildAntiRaidUtils ===
+// === Module 7685: GuildAntiRaidUtils ===
 
-// Module 7641 (GuildAntiRaidUtils)
-import util from "util" /* 1115 */;
-import _modDef4450 from "module_4450" /* 4450 */;
-import GuildAntiRaidTypes from "GuildAntiRaidTypes" /* 7643 */;
-import GuildAntiRaidConstants from "GuildAntiRaidConstants" /* 7642 */;
+// Module 7685 (GuildAntiRaidUtils)
+import util from "util" /* 1126 */;
+import _modDef4461 from "module_4461" /* 4461 */;
+import GuildAntiRaidTypes from "GuildAntiRaidTypes" /* 7687 */;
+import GuildAntiRaidConstants from "GuildAntiRaidConstants" /* 7686 */;
 import size from "module_2" /* 2 */;
 
 ({ NAGBAR_DISPLAY_MAX_HOURS: c3, DEFAULT_LOCKDOWN_DURATION: closure_4, getTimeframes: hasOwnProperty } = GuildAntiRaidConstants);
@@ -15,16 +15,16 @@ export const DATE_CONFIG = date;
 export const hasDetectedActivity = function hasDetectedActivity(incidentsData) {
   let tmp = null != incidentsData.dmSpamDetectedAt;
   if (tmp) {
-    const obj = _modDef4450(incidentsData.dmSpamDetectedAt);
-    tmp = _modDef4450(incidentsData.dmSpamDetectedAt).add(React3, "hours") > _modDef4450();
-    const addResult = _modDef4450(incidentsData.dmSpamDetectedAt).add(React3, "hours");
+    const obj = _modDef4461(incidentsData.dmSpamDetectedAt);
+    tmp = _modDef4461(incidentsData.dmSpamDetectedAt).add(React3, "hours") > _modDef4461();
+    const addResult = _modDef4461(incidentsData.dmSpamDetectedAt).add(React3, "hours");
   }
   if (!tmp) {
     let tmp6 = null != incidentsData.raidDetectedAt;
     if (tmp6) {
-      const obj2 = _modDef4450(incidentsData.raidDetectedAt);
-      tmp6 = _modDef4450(incidentsData.raidDetectedAt).add(React3, "hours") > _modDef4450();
-      const addResult1 = _modDef4450(incidentsData.raidDetectedAt).add(React3, "hours");
+      const obj2 = _modDef4461(incidentsData.raidDetectedAt);
+      tmp6 = _modDef4461(incidentsData.raidDetectedAt).add(React3, "hours") > _modDef4461();
+      const addResult1 = _modDef4461(incidentsData.raidDetectedAt).add(React3, "hours");
     }
     tmp = tmp6;
   }
@@ -33,18 +33,18 @@ export const hasDetectedActivity = function hasDetectedActivity(incidentsData) {
 export const hasDetectedRaid = function hasDetectedRaid(raidDetectedAt) {
   let tmp = null != raidDetectedAt.raidDetectedAt;
   if (tmp) {
-    const obj = _modDef4450(raidDetectedAt.raidDetectedAt);
-    tmp = _modDef4450(raidDetectedAt.raidDetectedAt).add(React3, "hours") > _modDef4450();
-    const addResult = _modDef4450(raidDetectedAt.raidDetectedAt).add(React3, "hours");
+    const obj = _modDef4461(raidDetectedAt.raidDetectedAt);
+    tmp = _modDef4461(raidDetectedAt.raidDetectedAt).add(React3, "hours") > _modDef4461();
+    const addResult = _modDef4461(raidDetectedAt.raidDetectedAt).add(React3, "hours");
   }
   return tmp;
 };
 export const hasDetectedDMRaid = function hasDetectedDMRaid(dmSpamDetectedAt) {
   let tmp = null != dmSpamDetectedAt.dmSpamDetectedAt;
   if (tmp) {
-    const obj = _modDef4450(dmSpamDetectedAt.dmSpamDetectedAt);
-    tmp = _modDef4450(dmSpamDetectedAt.dmSpamDetectedAt).add(React3, "hours") > _modDef4450();
-    const addResult = _modDef4450(dmSpamDetectedAt.dmSpamDetectedAt).add(React3, "hours");
+    const obj = _modDef4461(dmSpamDetectedAt.dmSpamDetectedAt);
+    tmp = _modDef4461(dmSpamDetectedAt.dmSpamDetectedAt).add(React3, "hours") > _modDef4461();
+    const addResult = _modDef4461(dmSpamDetectedAt.dmSpamDetectedAt).add(React3, "hours");
   }
   return tmp;
 };
@@ -52,9 +52,9 @@ export const getIncidentAlertType = function getIncidentAlertType(guildIncident)
   if (null != guildIncident) {
     let tmp = null != guildIncident.raidDetectedAt;
     if (tmp) {
-      const obj = _modDef4450(guildIncident.raidDetectedAt);
-      tmp = _modDef4450(guildIncident.raidDetectedAt).add(React3, "hours") > _modDef4450();
-      const addResult = _modDef4450(guildIncident.raidDetectedAt).add(React3, "hours");
+      const obj = _modDef4461(guildIncident.raidDetectedAt);
+      tmp = _modDef4461(guildIncident.raidDetectedAt).add(React3, "hours") > _modDef4461();
+      const addResult = _modDef4461(guildIncident.raidDetectedAt).add(React3, "hours");
     }
     const GuildIncidentAlertTypes = GuildAntiRaidTypes.GuildIncidentAlertTypes;
   }

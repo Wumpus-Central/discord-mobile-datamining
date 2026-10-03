@@ -5,9 +5,9 @@ import LoggerDefault from "Logger" /* 3 */;
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
 import KvCacheVersionConstants from "KvCacheVersionConstants" /* 499 */;
-import discord_common_AnalyticsUtilsAll from "discord_common/AnalyticsUtils" /* 1249 */;
-import RequestGatewaySocketAll from "RequestGatewaySocket" /* 7349 */;
-import NativeFastConnectModuleDefault from "NativeFastConnectModule" /* 13386 */;
+import discord_common_AnalyticsUtilsAll from "discord_common/AnalyticsUtils" /* 1260 */;
+import RequestGatewaySocketAll from "RequestGatewaySocket" /* 7253 */;
+import NativeFastConnectModuleDefault from "NativeFastConnectModule" /* 13446 */;
 import checkEnv from "checkEnv" /* 16 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
@@ -18,8 +18,8 @@ function createFastConnectSocket() {
   if (null != window.WebSocket) {
     let obj = require("PlatformUtils");
     if (obj.isAndroid()) {
-      let supportsZstd = obj4(13398).getConstants().supportsZstd;
-      const obj2 = obj4(13398);
+      let supportsZstd = obj4(13458).getConstants().supportsZstd;
+      const obj2 = obj4(13458);
     } else {
       supportsZstd = closure_4.DCDCompressionManager.supportsZstd;
     }
@@ -29,7 +29,7 @@ function createFastConnectSocket() {
     }
     const _window = window;
     let GATEWAY_ENDPOINT = window.GLOBAL_ENV.GATEWAY_ALT_ENDPOINT;
-    if (!obj4(13385)()) {
+    if (!obj4(13445)()) {
       const _window2 = window;
       GATEWAY_ENDPOINT = window.GLOBAL_ENV.GATEWAY_ENDPOINT;
     }
@@ -39,25 +39,25 @@ function createFastConnectSocket() {
     obj.log(`[FAST CONNECT] ${tmp10}`);
     const _Date = Date;
     _require = Date.now();
-    const tmp12 = obj4(13382)(combined);
+    const tmp12 = obj4(13442)(combined);
     const _parseFloat = parseFloat;
     const parsed = parseFloat(tmp12._socketId);
     const _isNaN = isNaN;
     if (isNaN(parsed)) {
       obj3.log("[FAST CONNECT] Unable to create socketId from NaN value ", tmp12._socketId);
     } else {
-      const isAndroidResult = tmp3(1364).isAndroid();
+      const isAndroidResult = tmp3(1369).isAndroid();
       if (supportsZstd) {
         if (isAndroidResult) {
-          const result = tmp7(13398).enableZstdStreamSupport(parsed);
-          const tmp7Result = tmp7(13398);
+          const result = tmp7(13458).enableZstdStreamSupport(parsed);
+          const tmp7Result = tmp7(13458);
         } else {
           const DCDCompressionManager2 = closure_4.DCDCompressionManager;
           const result1 = DCDCompressionManager2.enableZstdStreamSupport(parsed, 0);
         }
       } else if (isAndroidResult) {
-        const result2 = tmp7(13398).enableZlibStreamSupport(parsed);
-        const tmp7Result3 = tmp7(13398);
+        const result2 = tmp7(13458).enableZlibStreamSupport(parsed);
+        const tmp7Result3 = tmp7(13458);
       } else {
         const DCDCompressionManager = closure_4.DCDCompressionManager;
         const result3 = DCDCompressionManager.enableZlibStreamSupport(parsed);
@@ -83,7 +83,7 @@ function createFastConnectSocket() {
       const _window4 = window;
       const obj5 = { ws: tmp12, state: obj4 };
       window._ws = obj5;
-      const tmp3Result = tmp3(1364);
+      const tmp3Result = tmp3(1369);
       tmp7(10).mark("\u{1F310}", "Fastconnect socket created");
       const tmp7Result4 = tmp7(10);
     }
@@ -127,7 +127,7 @@ export const identifyWebSocket = function identifyWebSocket() {
       if (null != token) {
         if ("" !== token) {
           const _window = window;
-          const state = _ws.state;
+          state = _ws.state;
           let tmp7 = str2;
           if (measureResult.userId == null) {
             tmp7 = null;

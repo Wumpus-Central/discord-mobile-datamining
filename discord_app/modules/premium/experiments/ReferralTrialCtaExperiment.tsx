@@ -1,7 +1,7 @@
-// === Module 8863: ReferralTrialCtaExperiment ===
+// === Module 8876: ReferralTrialCtaExperiment ===
 
-// Module 8863 (ReferralTrialCtaExperiment)
-import ApexExperiment from "ApexExperiment" /* 1435 */;
+// Module 8876 (ReferralTrialCtaExperiment)
+import ApexExperiment from "ApexExperiment" /* 1440 */;
 import size from "module_2" /* 2 */;
 
 const config = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-09-referral-trial-cta", defaultConfig: false, variations: { 0: false, 1: true } });

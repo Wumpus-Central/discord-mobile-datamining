@@ -1,19 +1,19 @@
-// === Module 13460: BlockedUserUtils ===
+// === Module 13520: BlockedUserUtils ===
 
-// Module 13460 (BlockedUserUtils)
+// Module 13520 (BlockedUserUtils)
 import _modDef12 from "module_12" /* 12 */;
-import RelationshipStore from "RelationshipStore" /* 4508 */;
+import RelationshipStore from "RelationshipStore" /* 4519 */;
 
 const require = fn;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/blocking/BlockedUserUtils.tsx");
 
-export const filterOutBlockedOrIgnoredUsers = function filterOutBlockedOrIgnoredUsers(mapped, stateFromStores1) {
-  const found = mapped.filter((item) => stateFromStores1(dependencyMap[1]).isNotNullish(item));
+export const filterOutBlockedOrIgnoredUsers = function filterOutBlockedOrIgnoredUsers(mapped, afkChannelId) {
+  const found = mapped.filter((item) => afkChannelId(dependencyMap[1]).isNotNullish(item));
   return found.filter((id) => {
     id = id.id;
-    if (null != stateFromStores1) {
-      let hasItem = stateFromStores1.has(id);
+    if (null != afkChannelId) {
+      let hasItem = afkChannelId.has(id);
     } else {
       hasItem = RelationshipStore.isBlockedOrIgnored(id);
     }

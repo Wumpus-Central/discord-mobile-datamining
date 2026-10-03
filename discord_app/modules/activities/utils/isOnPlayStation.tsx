@@ -1,7 +1,7 @@
-// === Module 12786: isOnPlayStation ===
+// === Module 12826: isOnPlayStation ===
 
-// Module 12786 (isOnPlayStation)
-import Constants from "Constants" /* 1074 */;
+// Module 12826 (isOnPlayStation)
+import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
 const ActivityGamePlatforms = Constants.ActivityGamePlatforms;

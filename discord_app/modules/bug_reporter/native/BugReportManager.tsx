@@ -1,9 +1,10 @@
-// === Module 9868: BugReportManager ===
+// === Module 12538: BugReportManager ===
 
-// Module 9868 (BugReportManager)
+// Module 12538 (BugReportManager)
+import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1346 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6725 */;
+import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1357 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
 
 const require = fn;
 function showNotification(uri) {
@@ -18,7 +19,7 @@ function showNotification(uri) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -61,7 +62,7 @@ function showNotification(uri) {
             }
           }
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp14) {
         c3 = tmp;
@@ -84,7 +85,7 @@ function showNotification(uri) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -123,15 +124,15 @@ function showNotification(uri) {
                 };
                 return obj10;
               }
-              obj2 = tmp2(1364);
+              obj2 = tmp2(1369);
             }
             closure_128_0 = tmp7;
             BUG_REPORTER = constants.BUG_REPORTER;
-            notificationDuration = tmp2(9749).getNotificationDuration(BUG_REPORTER);
-            const obj5 = tmp2(9749);
+            notificationDuration = tmp2(12477).getNotificationDuration(BUG_REPORTER);
+            const obj5 = tmp2(12477);
             const obj11 = { type: BUG_REPORTER, duration: notificationDuration, key: null, image: null, imageUri: null, onDismiss: null, inAppNotificationId: null };
-            const obj6 = tmp3(9751);
-            obj11.key = tmp2(1255).v4();
+            const obj6 = tmp3(12479);
+            obj11.key = tmp2(1266).v4();
             obj11.image = closure_128_0;
             uri = undefined;
             if (closure_128_0 != null) {
@@ -141,11 +142,11 @@ function showNotification(uri) {
             obj11.onDismiss = function onDismiss() {
               closure_1_1(dependencyMap[7]).clearNotification();
             };
-            const obj8 = tmp2(1255);
-            obj11.inAppNotificationId = tmp2(1255).v4();
+            const obj8 = tmp2(1266);
+            obj11.inAppNotificationId = tmp2(1266).v4();
             obj6.enqueueNotification(obj11);
             c3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else if (arg0 === 1) {
           c3 = 3;
@@ -167,8 +168,8 @@ function showNotification(uri) {
 }
 get_ActivityIndicator = fn(17);
 const NativeModules = get_ActivityIndicator.NativeModules;
-const InAppNotificationTypes = fn(1074).InAppNotificationTypes;
-const NativePermissionStatus = fn(5054).NativePermissionStatus;
+const InAppNotificationTypes = fn(1085).InAppNotificationTypes;
+const NativePermissionStatus = fn(5099).NativePermissionStatus;
 const nativeEventEmitter = new get_ActivityIndicator.NativeEventEmitter(NativeModules.ScreenshotHelper);
 class BugReportManager extends tmp4 {
 }
@@ -191,10 +192,10 @@ prototype["initBugReporter"] = function initBugReporter() {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -205,8 +206,8 @@ prototype["initBugReporter"] = function initBugReporter() {
             throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
+            const obj4 = { value, done: true };
+            return obj4;
           } else {
             c1 = 0;
             closure_0 = tmp2;
@@ -214,11 +215,10 @@ prototype["initBugReporter"] = function initBugReporter() {
             let isBugReporterEnabled;
             let hasBugReporterAccess;
             closure_128_3 = undefined;
-            const NativePermissionManager = NativeModules.NativePermissionManager;
             c2 = 1;
             c3 = 1;
-            const obj4 = { value: NativePermissionManager.hasPhotoAuthorization(), done: false };
-            return obj4;
+            const obj5 = { value: NativePermissionManagerModuleDefault.hasPhotoAuthorization(), done: false };
+            return obj5;
           }
         } else if (arg0 === 1) {
           c3 = 3;
@@ -230,8 +230,8 @@ prototype["initBugReporter"] = function initBugReporter() {
         } else {
           closure_128_0 = value === closure_129_8.AUTHORIZED;
           isBugReporterEnabled = closure_129_6.isBugReporterEnabled;
-          hasBugReporterAccess = closure_129_1(closure_129_2[10]).getConfig({ location: "native-BugReportManager" }).hasBugReporterAccess;
-          const obj5 = closure_129_1(closure_129_2[10]);
+          hasBugReporterAccess = closure_129_1(closure_129_2[11]).getConfig({ location: "native-BugReportManager" }).hasBugReporterAccess;
+          const obj6 = closure_129_1(closure_129_2[11]);
           let isIOSResult = closure_129_0(closure_129_2[5]).isIOS();
           if (!isIOSResult) {
             isIOSResult = closure_128_0;
@@ -252,11 +252,11 @@ prototype["initBugReporter"] = function initBugReporter() {
             })();
           }
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
-      } catch (tmp12) {
+      } catch (tmp13) {
         c3 = tmp;
-        throw tmp12;
+        throw tmp13;
       }
     }
   })();

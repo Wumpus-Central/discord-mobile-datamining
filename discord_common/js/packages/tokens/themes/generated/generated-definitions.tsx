@@ -1,6 +1,6 @@
-// === Module 577: ThemeTypes ===
+// === Module 588: ThemeTypes ===
 
-// Module 577 (ThemeTypes)
+// Module 588 (ThemeTypes)
 import size from "module_2" /* 2 */;
 
 const obj = { ASH: "dark", LIGHT: "light", ONYX: "midnight", DARK: "darker" };

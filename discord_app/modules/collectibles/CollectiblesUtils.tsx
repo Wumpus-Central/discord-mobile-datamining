@@ -1,23 +1,23 @@
-// === Module 7162: CollectiblesUtils ===
+// === Module 7065: CollectiblesUtils ===
 
-// Module 7162 (CollectiblesUtils)
+// Module 7065 (CollectiblesUtils)
 import _mod12 from "module_12" /* 12 */;
-import Constants2 from "Constants" /* 1085 */;
-import util from "util" /* 1115 */;
-import PlatformUtils from "PlatformUtils" /* 1364 */;
-import PerksStateUtils from "PerksStateUtils" /* 1378 */;
-import user from "user" /* 1380 */;
-import NameplateRecord from "NameplateRecord" /* 1972 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1974 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4517 */;
-import PriceUtils from "PriceUtils" /* 6842 */;
-import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7155 */;
-import ProfileEffectRecord from "ProfileEffectRecord" /* 7156 */;
-import ProfileFrameRecord from "ProfileFrameRecord" /* 7157 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7161 */;
-import ShopAssetConfigRecord from "ShopAssetConfigRecord" /* 7163 */;
-import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1076 */;
-import Constants from "Constants" /* 1074 */;
+import Constants2 from "Constants" /* 1096 */;
+import util from "util" /* 1126 */;
+import PlatformUtils from "PlatformUtils" /* 1369 */;
+import PerksStateUtils from "PerksStateUtils" /* 1383 */;
+import user from "user" /* 1385 */;
+import NameplateRecord from "NameplateRecord" /* 1978 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1980 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4528 */;
+import PriceUtils from "PriceUtils" /* 6736 */;
+import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7058 */;
+import ProfileEffectRecord from "ProfileEffectRecord" /* 7059 */;
+import ProfileFrameRecord from "ProfileFrameRecord" /* 7060 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7064 */;
+import ShopAssetConfigRecord from "ShopAssetConfigRecord" /* 7066 */;
+import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1087 */;
+import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -283,17 +283,17 @@ export const getBundleItemsPriceSum = function getBundleItemsPriceSum(bundledPro
         return acc + num;
       }, 0);
     } else {
-      tmp(1364);
+      tmp(1369);
     }
     DEFAULT = constants3.DEFAULT;
     obj = require("PlatformUtils");
     tmp = _require;
   }
 };
-export const extractPriceByPurchaseTypes = function extractPriceByPurchaseTypes(product, DEFAULT, arg2) {
+export const extractPriceByPurchaseTypes = function extractPriceByPurchaseTypes(type, defaultPriceSetAssignmentPurchaseType, arg2) {
   closure_0 = arg2;
   let prices;
-  if (product.prices[DEFAULT] != null) {
+  if (type.prices[defaultPriceSetAssignmentPurchaseType] != null) {
     const countryPrices = tmp.countryPrices;
     if (countryPrices != null) {
       prices = countryPrices.prices;
@@ -392,7 +392,7 @@ export const getProductDiscount = function getProductDiscount(product, hasShopDi
           return acc + num;
         }, 0);
       } else {
-        tmp(1364);
+        tmp(1369);
       }
       DEFAULT = constants3.DEFAULT;
       obj = require("PlatformUtils");
@@ -643,12 +643,12 @@ export const shouldShowLimitedTimeBadge = function shouldShowLimitedTimeBadge(da
     const fullYear1 = date.getFullYear();
     const month1 = date.getMonth();
     const _Math = Math;
-    tmp = Math.floor((Date.UTC(fullYear1, month1, date.getDate()) - Date.UTC(fullYear, month, date.getDate())) / 86400000) <= React7;
+    tmp = Math.floor((Date.UTC(fullYear1, month1, date.getDate()) - Date.UTC(fullYear, month, date.getDate())) / 86400000) <= options;
     const UTCResult = Date.UTC(fullYear, month, date.getDate());
   }
   return tmp;
 };
-export const isProductNew = function isProductNew(skuId) {
+export const isProductNew = function isProductNew(cResult) {
   let tmp2 = null != tmp;
   if (tmp2) {
     const _Date = Date;

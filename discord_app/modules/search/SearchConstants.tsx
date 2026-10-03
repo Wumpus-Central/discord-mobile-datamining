@@ -1,8 +1,8 @@
-// === Module 7477: SearchConstants ===
+// === Module 7513: SearchConstants ===
 
-// Module 7477 (SearchConstants)
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7478 */;
-import Constants from "Constants" /* 1074 */;
+// Module 7513 (SearchConstants)
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7514 */;
+import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
 ({ MessageEmbedTypes, SearchTypes } = Constants);

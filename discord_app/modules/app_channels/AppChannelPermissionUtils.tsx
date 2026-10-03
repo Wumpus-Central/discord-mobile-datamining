@@ -1,17 +1,16 @@
-// === Module 11318: AppChannelPermissionUtils ===
+// === Module 11232: AppChannelPermissionUtils ===
 
-// Module 11318 (AppChannelPermissionUtils)
-import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
-import AppChannelPermissions from "AppChannelPermissions" /* 4505 */;
-import useAppChannelApplication from "useAppChannelApplication" /* 11319 */;
-import ApplicationStore from "ApplicationStore" /* 5072 */;
+// Module 11232 (AppChannelPermissionUtils)
+import c from "c" /* 576 */;
+import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
+import AppChannelPermissions from "AppChannelPermissions" /* 4516 */;
+import useAppChannelApplication from "useAppChannelApplication" /* 6749 */;
+import ApplicationStore from "ApplicationStore" /* 5118 */;
 
 require = fn;
-const ChannelTypes = fn(1074).ChannelTypes;
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/app_channels/AppChannelPermissionUtils.tsx");
-
-export const getAppChannelBotUserIdFromApplication = function getAppChannelBotUserIdFromApplication(type, bot) {
+const ChannelTypes = fn(1085).ChannelTypes;
+const ReactCompilerGating = fn(558);
+function getAppChannelBotUserIdFromApplication(type, bot) {
   if (type.type === ChannelTypes.GUILD_APP) {
     if (null != type.application_id) {
       let id;
@@ -27,7 +26,11 @@ export const getAppChannelBotUserIdFromApplication = function getAppChannelBotUs
       return id;
     }
   }
-};
+}
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_channels/AppChannelPermissionUtils.tsx");
+
+export { getAppChannelBotUserIdFromApplication };
 export const getAppChannelBotUserId = function getAppChannelBotUserId(c18) {
   const application = ApplicationStore.getApplication(c18.application_id);
   let tmp2;
@@ -48,13 +51,20 @@ export const getAppChannelBotUserId = function getAppChannelBotUserId(c18) {
   }
   return tmp2;
 };
-export const useAppChannelBotUserId = function useAppChannelBotUserId(channel) {
-  const appChannelApplication = useAppChannelApplication.useAppChannelApplication(channel);
-  let tmp2;
-  if (null != channel) {
-    let tmp4;
-    if (channel.type === ChannelTypes.GUILD_APP) {
-      if (null != channel.application_id) {
+export const useAppChannelBotUserId = ReactCompilerGating.isReactCompilerEnabled() ? ((type) => {
+  const cResult = c.c(3);
+  const appChannelApplication = useAppChannelApplication.useAppChannelApplication(type);
+  if (cResult[0] === appChannelApplication) {
+    if (cResult[1] === type) {
+      let tmp3 = cResult[2];
+    }
+    return tmp3;
+  }
+  let tmp4;
+  if (null != type) {
+    let tmp6;
+    if (type.type === ChannelTypes.GUILD_APP) {
+      if (null != type.application_id) {
         let id;
         if (appChannelApplication != null) {
           const bot = appChannelApplication.bot;
@@ -63,7 +73,33 @@ export const useAppChannelBotUserId = function useAppChannelBotUserId(channel) {
           }
         }
         if (id == null) {
-          id = channel.application_id;
+          id = type.application_id;
+        }
+        tmp6 = id;
+      }
+    }
+    tmp4 = tmp6;
+  }
+  cResult[0] = appChannelApplication;
+  cResult[1] = type;
+  cResult[2] = tmp4;
+  tmp3 = tmp4;
+}) : ((type) => {
+  const appChannelApplication = useAppChannelApplication.useAppChannelApplication(type);
+  let tmp2;
+  if (null != type) {
+    let tmp4;
+    if (type.type === ChannelTypes.GUILD_APP) {
+      if (null != type.application_id) {
+        let id;
+        if (appChannelApplication != null) {
+          const bot = appChannelApplication.bot;
+          if (bot != null) {
+            id = bot.id;
+          }
+        }
+        if (id == null) {
+          id = type.application_id;
         }
         tmp4 = id;
       }
@@ -71,7 +107,7 @@ export const useAppChannelBotUserId = function useAppChannelBotUserId(channel) {
     tmp2 = tmp4;
   }
   return tmp2;
-};
+});
 export const isAppChannelFloorPermission = function isAppChannelFloorPermission(appChannelBotUserId, id, VIEW_CHANNEL) {
   let hasItem = appChannelBotUserId === id;
   if (hasItem) {

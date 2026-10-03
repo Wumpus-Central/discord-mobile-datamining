@@ -1,6 +1,6 @@
-// === Module 7342: device/DeviceState ===
+// === Module 7241: device/DeviceState ===
 
-// Module 7342 (device/DeviceState)
+// Module 7241 (device/DeviceState)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -16,7 +16,7 @@ let closure_5 = async function _getDeviceState() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -40,7 +40,7 @@ let closure_5 = async function _getDeviceState() {
           fallback = obj5.fallback;
           c5 = 1;
           c6 = 1;
-          return { value: "flex", done: null };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp8) {
         if (arg0 === 1) {

@@ -1,24 +1,25 @@
-// === Module 4556: ToastUtils ===
+// === Module 4567: ToastUtils ===
 
-// Module 4556 (ToastUtils)
-import Constants from "Constants" /* 1074 */;
-import util from "util" /* 1115 */;
-import v1 from "v1" /* 1255 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4557 */;
-import FriendsIcon from "FriendsIcon" /* 4558 */;
-import UserPlatformIcon from "UserPlatformIcon" /* 4780 */;
-import UserMinusIcon from "UserMinusIcon" /* 4782 */;
-import LinkIcon from "LinkIcon" /* 4784 */;
-import SendMessageIcon from "SendMessageIcon" /* 4786 */;
-import CopyIcon from "CopyIcon" /* 4788 */;
-import DownloadIcon from "DownloadIcon" /* 4790 */;
-import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4792 */;
-import XLargeIcon2 from "XLargeIcon" /* 4794 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4796 */;
-import TrashIcon from "TrashIcon" /* 4799 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 4801 */;
-import ClockIcon from "ClockIcon" /* 4804 */;
+// Module 4567 (ToastUtils)
+import Constants from "Constants" /* 1085 */;
+import util from "util" /* 1126 */;
+import v1 from "v1" /* 1266 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4568 */;
+import DesignSystemsNotificationComponentsExperiment from "DesignSystemsNotificationComponentsExperiment" /* 4574 */;
+import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4577 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 4792 */;
+import XLargeIcon2 from "XLargeIcon" /* 4795 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 4812 */;
+import FriendsIcon from "FriendsIcon" /* 4831 */;
+import UserPlatformIcon from "UserPlatformIcon" /* 4835 */;
+import UserMinusIcon from "UserMinusIcon" /* 4837 */;
+import LinkIcon from "LinkIcon" /* 4839 */;
+import SendMessageIcon from "SendMessageIcon" /* 4841 */;
+import CopyIcon from "CopyIcon" /* 4843 */;
+import DownloadIcon from "DownloadIcon" /* 4845 */;
+import TrashIcon from "TrashIcon" /* 4847 */;
+import ClockIcon from "ClockIcon" /* 4849 */;
 import size from "module_2" /* 2 */;
 
 const VerificationCriteria = Constants.VerificationCriteria;
@@ -31,20 +32,20 @@ export const presentAddedFriendToast = function presentAddedFriendToast() {
   obj2.IconComponent = FriendsIcon.FriendsIcon;
   ToastActionCreatorsDefault.open(obj2);
 };
-export const presentFriendRequestAcceptedToast = function presentFriendRequestAcceptedToast(dependencyMap) {
-  if (null == dependencyMap) {
+export const presentFriendRequestAcceptedToast = function presentFriendRequestAcceptedToast(username) {
+  if (null == username) {
     const intl2 = util.intl;
     let stringResult = intl2.string(util.t.UhJna5);
     let tmp2 = require;
   } else {
     tmp2 = require;
     const intl = util.intl;
-    const obj2 = { username: dependencyMap.username };
+    const obj2 = { username: username.username };
     stringResult = intl.formatToPlainString(util.t.b3eoD4, obj2);
   }
   const obj = ToastActionCreatorsDefault;
-  obj.open({ key: "TOAST_FRIEND_REQUEST_ACCEPTED", content: stringResult, IconComponent: tmp2(4778).UserPlusIcon, iconColor: "status-positive" });
-  const obj3 = { key: "TOAST_FRIEND_REQUEST_ACCEPTED", content: stringResult, IconComponent: tmp2(4778).UserPlusIcon, iconColor: "status-positive" };
+  obj.open({ key: "TOAST_FRIEND_REQUEST_ACCEPTED", content: stringResult, IconComponent: tmp2(4833).UserPlusIcon, iconColor: "status-positive" });
+  const obj3 = { key: "TOAST_FRIEND_REQUEST_ACCEPTED", content: stringResult, IconComponent: tmp2(4833).UserPlusIcon, iconColor: "status-positive" };
 };
 export const presentGameFriendRequestAcceptedToast = function presentGameFriendRequestAcceptedToast() {
   const obj2 = { key: "TOAST_GAME_FRIEND_REQUEST_ACCEPTED", content: null, IconComponent: null, iconColor: "status-positive" };
@@ -147,8 +148,27 @@ export const presentFeedbackSent = function presentFeedbackSent() {
 export const presentEmoji = function presentEmoji(id) {
   const emojiURL = AvatarUtilsDefault.getEmojiURL({ id: id.id, animated: id.animated, size: 48 });
   const obj2 = { id: id.id, animated: id.animated, size: 48 };
-  const obj3 = ToastActionCreatorsDefault;
-  obj3.open({ key: "PRESENT_EMOJI-" + id.id, content: ":" + id.name + ":", icon: { uri: emojiURL } });
+  const designSystemsNotificationComponents = DesignSystemsNotificationComponentsExperiment.getDesignSystemsNotificationComponents("presentEmoji");
+  const obj4 = ToastActionCreatorsDefault;
+  if (designSystemsNotificationComponents) {
+    const _HermesInternal3 = HermesInternal;
+    const obj5 = { text: null, icon: null };
+    const _HermesInternal4 = HermesInternal;
+    const combined = "PRESENT_EMOJI-" + id.id;
+    obj5.text = ":" + id.name + ":";
+    const obj6 = { type: "emoji", src: emojiURL, alt: id.name };
+    obj5.icon = obj6;
+    obj4.openMana(combined, obj5);
+  } else {
+    const obj7 = { key: null, content: null, icon: null };
+    const _HermesInternal = HermesInternal;
+    obj7.key = "PRESENT_EMOJI-" + id.id;
+    const _HermesInternal2 = HermesInternal;
+    obj7.content = ":" + id.name + ":";
+    const obj8 = { uri: emojiURL };
+    obj7.icon = obj8;
+    obj4.open(obj7);
+  }
 };
 export const presentNoiseCancellation = function presentNoiseCancellation(arg0) {
   const intl = util.intl;
@@ -163,9 +183,9 @@ export const presentNoiseCancellation = function presentNoiseCancellation(arg0) 
   }
   const obj2 = { key: "NOISE_CANCELLATION_TOGGLE", content: stringResult, IconComponent: null, iconColor: null };
   if (arg0) {
-    let XLargeIcon = tmp4(4792).CheckmarkLargeIcon;
+    let XLargeIcon = tmp4(4577).CheckmarkLargeIcon;
   } else {
-    XLargeIcon = tmp4(4794).XLargeIcon;
+    XLargeIcon = tmp4(4795).XLargeIcon;
   }
   obj2.IconComponent = XLargeIcon;
   let str = "icon-feedback-critical";
@@ -381,9 +401,9 @@ export const showTransferOwnershipSuccess = function showTransferOwnershipSucces
   obj2.IconComponent = CheckmarkLargeIcon.CheckmarkLargeIcon;
   ToastActionCreatorsDefault.open(obj2);
 };
-export const showSafetySuccess = function showSafetySuccess(BLOCK_SUCCESS, safetyToastTypeContent) {
+export const showSafetySuccess = function showSafetySuccess(IAR_SHARE_WITH_PARENT_SUCCESS, safetyToastTypeContent) {
   const obj = ToastActionCreatorsDefault;
-  obj.open({ key: BLOCK_SUCCESS, content: safetyToastTypeContent, IconComponent: CircleCheckIcon.CircleCheckIcon, iconColor: "status-positive" });
+  obj.open({ key: IAR_SHARE_WITH_PARENT_SUCCESS, content: safetyToastTypeContent, IconComponent: CircleCheckIcon.CircleCheckIcon, iconColor: "status-positive" });
 };
 export const showVerificationSent = function showVerificationSent() {
   const obj2 = { key: "VERIFICATION_RESENT", content: null, IconComponent: null, iconColor: "status-positive" };

@@ -1,9 +1,9 @@
-// === Module 8717: permissions ===
+// === Module 8730: permissions ===
 
-// Module 8717 (permissions)
-import Constants from "Constants" /* 1074 */;
-import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
-import util from "util" /* 1115 */;
+// Module 8730 (permissions)
+import Constants from "Constants" /* 1085 */;
+import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
+import util from "util" /* 1126 */;
 import size from "module_2" /* 2 */;
 
 const Permissions = Constants.Permissions;

@@ -1,15 +1,15 @@
-// === Module 17900: QuestFetchManager ===
+// === Module 17986: QuestFetchManager ===
 
-// Module 17900 (QuestFetchManager)
-import DurationsDefault from "Durations" /* 1091 */;
-import SentryUtilsDefault from "SentryUtils" /* 1231 */;
-import PlatformUtils from "PlatformUtils" /* 1364 */;
-import QuestsEligibility from "QuestsEligibility" /* 10887 */;
-import QuestActionCreators from "QuestActionCreators" /* 10888 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 10909 */;
-import QuestFetchReconnectJitterExperiment from "QuestFetchReconnectJitterExperiment" /* 17901 */;
-import QuestStore from "QuestStore" /* 7289 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6725 */;
+// Module 17986 (QuestFetchManager)
+import DurationsDefault from "Durations" /* 1102 */;
+import SentryUtilsDefault from "SentryUtils" /* 1242 */;
+import PlatformUtils from "PlatformUtils" /* 1369 */;
+import QuestActionCreators from "QuestActionCreators" /* 9994 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 10015 */;
+import QuestsEligibility from "QuestsEligibility" /* 10912 */;
+import QuestFetchReconnectJitterExperiment from "QuestFetchReconnectJitterExperiment" /* 17987 */;
+import QuestStore from "QuestStore" /* 7187 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
 
 require = fn;
 const DAY = DurationsDefault.Millis.DAY;
@@ -108,14 +108,14 @@ class QuestFetchManager extends tmp2 {
     return applyArgumentsResult;
   }
 }
-QuestFetchManager.prototype["_fetch"] = function _fetch(callerSource) {
+QuestFetchManager.prototype["_fetch"] = function _fetch(post_connect_initial) {
   let isEligibleForQuests = QuestsEligibility.getIsEligibleForQuests();
   if (isEligibleForQuests) {
     isEligibleForQuests = !QuestStore.isFetchingCurrentQuests;
   }
   if (isEligibleForQuests) {
     const obj3 = { category: "quests.fetch", message: "QuestFetchManager._fetch triggered", data: null };
-    const obj4 = { callerSource, storeSize: QuestStore.quests.size, lastFetchedCurrentQuests: QuestStore.lastFetchedCurrentQuests, msSinceLastFetch: null, isFetchingCurrentQuests: null };
+    const obj4 = { callerSource: post_connect_initial, storeSize: QuestStore.quests.size, lastFetchedCurrentQuests: QuestStore.lastFetchedCurrentQuests, msSinceLastFetch: null, isFetchingCurrentQuests: null };
     const _Date = Date;
     obj4.msSinceLastFetch = Date.now() - QuestStore.lastFetchedCurrentQuests;
     obj4.isFetchingCurrentQuests = QuestStore.isFetchingCurrentQuests;
@@ -124,7 +124,7 @@ QuestFetchManager.prototype["_fetch"] = function _fetch(callerSource) {
     const currentQuests = QuestActionCreators.fetchCurrentQuests();
     const tmpResult = QuestActionCreators;
     if (tmpResult2.isMac()) {
-      const state = DiscordAppStateDefault.getState();
+      state = DiscordAppStateDefault.getState();
       const tmp6Result = DiscordAppStateDefault;
     }
     tmpResult2 = PlatformUtils;

@@ -1,10 +1,10 @@
-// === Module 7060: ReferralTrialStore ===
+// === Module 6961: ReferralTrialStore ===
 
-// Module 7060 (ReferralTrialStore)
+// Module 6961 (ReferralTrialStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import ReferralTrialActionCreators from "ReferralTrialActionCreators" /* 7061 */;
-import UserStore from "UserStore" /* 1372 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import ReferralTrialActionCreators from "ReferralTrialActionCreators" /* 6962 */;
+import UserStore from "UserStore" /* 1377 */;
 
 require = fn;
 function emitChanges() {
@@ -14,7 +14,7 @@ function handleLoadMessages(messages) {
   messages = messages.messages;
   const item = messages.forEach((type) => {
     let content = null;
-    if (type.type === content(1090).MessageTypes.PREMIUM_REFERRAL) {
+    if (type.type === content(1101).MessageTypes.PREMIUM_REFERRAL) {
       content = type.content;
     }
     if (null != content) {
@@ -24,17 +24,17 @@ function handleLoadMessages(messages) {
       }
       if (!hasItem) {
         set.add(content);
-        closure_1(573).wait(() => {
+        closure_1(584).wait(() => {
           const referralTrialOffer = ReferralTrialActionCreators.resolveReferralTrialOffer(content);
           return referralTrialOffer.catch(NOOP_NULL);
         });
-        const obj = closure_1(573);
+        const obj = closure_1(584);
       }
     }
     return false;
   });
 }
-const NOOP_NULL = fn(1074).NOOP_NULL;
+const NOOP_NULL = fn(1085).NOOP_NULL;
 let c5 = null;
 let set = new Set();
 let map = new Map();
@@ -141,8 +141,8 @@ const referralTrialStore = new ReferralTrialStore(DispatcherDefault, {
   BILLING_REFERRAL_TRIAL_OFFER_UPDATE: function handleReferralTrialOfferUpdate(userTrialOfferId) {
     userTrialOfferId = userTrialOfferId.userTrialOfferId;
     if (!c8) {
-      const referralsRemaining = userTrialOfferId(7061).fetchReferralsRemaining();
-      const obj = userTrialOfferId(7061);
+      const referralsRemaining = userTrialOfferId(6962).fetchReferralsRemaining();
+      const obj = userTrialOfferId(6962);
     }
     if (!set1.has(userTrialOfferId)) {
       set1.add(userTrialOfferId);
@@ -236,7 +236,7 @@ const referralTrialStore = new ReferralTrialStore(DispatcherDefault, {
   MESSAGE_CREATE: function handleMessage(message) {
     message = message.message;
     let content = null;
-    if (message.type === content(1090).MessageTypes.PREMIUM_REFERRAL) {
+    if (message.type === content(1101).MessageTypes.PREMIUM_REFERRAL) {
       content = message.content;
     }
     if (null != content) {

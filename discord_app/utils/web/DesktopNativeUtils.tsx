@@ -1,14 +1,14 @@
-// === Module 6062: DesktopNativeUtils ===
+// === Module 5955: DesktopNativeUtils ===
 
-// Module 6062 (DesktopNativeUtils)
+// Module 5955 (DesktopNativeUtils)
 import logger_Logger from "logger/Logger" /* 4 */;
 import Storage3 from "Storage" /* 510 */;
-import Client from "Client" /* 4772 */;
-import discord_common_DiscordNative from "discord_common/DiscordNative" /* 4871 */;
-import DomainMigrationUtils from "DomainMigrationUtils" /* 6063 */;
-import GameDetectionDebugLevel from "GameDetectionDebugLevel" /* 6064 */;
-import IPCEvents from "IPCEvents" /* 6065 */;
-import FileExtensionUtils from "FileExtensionUtils" /* 6066 */;
+import Client from "Client" /* 4787 */;
+import discord_common_DiscordNative from "discord_common/DiscordNative" /* 4916 */;
+import DomainMigrationUtils from "DomainMigrationUtils" /* 5956 */;
+import GameDetectionDebugLevel from "GameDetectionDebugLevel" /* 5957 */;
+import IPCEvents from "IPCEvents" /* 5958 */;
+import FileExtensionUtils from "FileExtensionUtils" /* 5959 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -65,7 +65,7 @@ let closure_28 = async function _transcodeImageToPng(arg0) {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -230,7 +230,7 @@ function backwardCompatSend(APP_ASYNC_INDEX_TSX_LOADED) {
   }
   obj = require("PlatformUtils");
 }
-const NativeFeatures = fn(1074).NativeFeatures;
+const NativeFeatures = fn(1085).NativeFeatures;
 const set = new Set(["jpg", "jpeg", "jfif", "png"]);
 const set1 = new Set(["webp", "avif"]);
 const set2 = new Set(["jpg", "jpeg", "jfif", "png", "webp", "gif", "tiff", "bmp", "avif"]);
@@ -645,7 +645,7 @@ obj2.bounceDock = function bounceDock(arg0) {
             obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -679,7 +679,7 @@ obj2.bounceDock = function bounceDock(arg0) {
               const dock = closure_129_0.dock;
               dock.cancelBounce(closure_128_0);
               c3 = 3;
-              return { value: "HermesInternal", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } catch (tmp11) {
             c3 = tmp;
@@ -742,10 +742,54 @@ Object.defineProperty(obj2, "parsedOSRelease", {
   set: undefined
 });
 obj2.copy = function copy(arg0) {
-  if (require("PlatformUtils").isPlatformEmbedded) {
-    const clipboard = DiscordNative.clipboard;
-    clipboard.copy(arg0);
-  }
+  closure_0 = arg0;
+  return (async () => {
+    if (v3 === 2) {
+      v3 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "IconComponent", done: "IconComponent" };
+      }
+    } else {
+      try {
+        v3 = 2;
+        if (0 === c1) {
+          if (arg0 === 1) {
+            v3 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            v3 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else if (v3(dependencyMap[5]).isPlatformEmbedded) {
+            clipboard = clipboard.clipboard;
+            c1 = 1;
+            v3 = 1;
+            const obj4 = { value: clipboard.copy(closure_0), done: false };
+            return obj4;
+          }
+        } else if (arg0 === 1) {
+          v3 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          v3 = 3;
+          const obj = { value, done: true };
+          return obj;
+        }
+        v3 = 3;
+        return { value: "IconComponent", done: "IconComponent" };
+      } catch (tmp9) {
+        v3 = tmp;
+        throw tmp9;
+      }
+    }
+  })();
 };
 obj2.copyImage = function copyImage(arg0, arg1) {
   closure_0 = arg0;
@@ -761,7 +805,7 @@ obj2.copyImage = function copyImage(arg0, arg1) {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -779,7 +823,7 @@ obj2.copyImage = function copyImage(arg0, arg1) {
             closure_129_0 = undefined;
             closure_129_1 = undefined;
             closure_129_2 = undefined;
-            tmp2(38)(closure_0(1364).isPlatformEmbedded, "Copy image method called outside native app");
+            tmp2(38)(closure_0(1369).isPlatformEmbedded, "Copy image method called outside native app");
             tmp2(38)(typeof DiscordNative.clipboard.copyImage === "function", "Copy image not supported");
             c3 = 1;
             c4 = 1;
@@ -796,7 +840,7 @@ obj2.copyImage = function copyImage(arg0, arg1) {
             return obj5;
           } else {
             closure_129_0 = value;
-            closure_129_1 = closure_0(6066).decideFileExtension(closure_130_0, closure_130_1);
+            closure_129_1 = closure_0(5959).decideFileExtension(closure_130_0, closure_130_1);
             if (null != closure_129_1) {
               if (set2.has(closure_129_1)) {
                 closure_0 = closure_130_1;
@@ -828,31 +872,57 @@ obj2.copyImage = function copyImage(arg0, arg1) {
               const clipboard2 = DiscordNative.clipboard;
               const _Buffer2 = Buffer;
               clipboard2.copyImage(Buffer.from(closure_129_0), closure_129_2);
-              c4 = 3;
+              c3 = 4;
+              c4 = 1;
             }
             const _HermesInternal = HermesInternal;
             combined = "image." + closure_129_1;
-            const obj8 = closure_0(6066);
+            const obj11 = closure_0(5959);
+          }
+        } else if (2 === tmp5) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj7 = { value, done: true };
+            return obj7;
+          } else {
+            closure_129_0 = value;
+            const clipboard = DiscordNative.clipboard;
+            const _Buffer = Buffer;
+            c3 = 3;
+            c4 = 1;
+            const obj8 = { value: clipboard.copyImage(Buffer.from(closure_129_0), "image.png"), done: false };
+            return obj8;
+          }
+        } else if (3 === tmp5) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj9 = { value, done: true };
+            return obj9;
+          } else {
+            c4 = 3;
+            const obj10 = { value: undefined, done: true };
+            return obj10;
           }
         } else if (arg0 === 1) {
           c4 = 3;
           throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          const obj7 = { value, done: true };
-          return obj7;
-        } else {
-          closure_129_0 = value;
-          const clipboard = DiscordNative.clipboard;
-          const _Buffer = Buffer;
-          clipboard.copyImage(Buffer.from(closure_129_0), "image.png");
-          c4 = 3;
-          const obj = { value: undefined, done: true };
+          const obj = { value, done: true };
           return obj;
+        } else {
+          c4 = 3;
+          return { value: "IconComponent", done: "IconComponent" };
         }
-      } catch (tmp42) {
+      } catch (tmp41) {
         c4 = tmp;
-        throw tmp42;
+        throw tmp41;
       }
     }
   })();
@@ -871,7 +941,7 @@ obj2.copyImageBlob = function copyImageBlob(arg0, arg1) {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -892,6 +962,23 @@ obj2.copyImageBlob = function copyImageBlob(arg0, arg1) {
             const obj4 = { value: tmp2.arrayBuffer(), done: false };
             return obj4;
           }
+        } else if (1 === tmp5) {
+          if (arg0 === 1) {
+            c3 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            const obj5 = { value, done: true };
+            return obj5;
+          } else {
+            closure_128_0 = value;
+            clipboard = clipboard.clipboard;
+            const _Buffer = Buffer;
+            c2 = 2;
+            c3 = 1;
+            const obj6 = { value: clipboard.copyImage(Buffer.from(closure_128_0), closure_129_1), done: false };
+            return obj6;
+          }
         } else if (arg0 === 1) {
           c3 = 3;
           throw value;
@@ -900,16 +987,12 @@ obj2.copyImageBlob = function copyImageBlob(arg0, arg1) {
           const obj = { value, done: true };
           return obj;
         } else {
-          closure_128_0 = value;
-          clipboard = clipboard.clipboard;
-          const _Buffer = Buffer;
-          clipboard.copyImage(Buffer.from(closure_128_0), closure_129_1);
           c3 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
-      } catch (tmp14) {
+      } catch (tmp13) {
         c3 = tmp;
-        throw tmp14;
+        throw tmp13;
       }
     }
   })();
@@ -942,7 +1025,7 @@ obj2.saveImage = function saveImage(arg0, arg1, arg2) {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -963,10 +1046,10 @@ obj2.saveImage = function saveImage(arg0, arg1, arg2) {
             closure_133_3 = undefined;
             closure_133_4 = undefined;
             closure_133_5 = undefined;
-            png(38)(unknown(1364).isPlatformEmbedded, "Save image method called outside native app");
+            png(38)(unknown(1369).isPlatformEmbedded, "Save image method called outside native app");
             const tmp84 = png(38);
             let tmp54 = closure_0;
-            const toURLSafeResult = png(1366).toURLSafe(closure_0);
+            const toURLSafeResult = png(1371).toURLSafe(closure_0);
             if (null == toURLSafeResult) {
               c10 = 3;
               const obj4 = { value: constants.ERRORED, done: true };
@@ -991,7 +1074,7 @@ obj2.saveImage = function saveImage(arg0, arg1, arg2) {
                 }
                 const str3 = str2.replace(closure_1_21, "");
               } else if (!str.includes(".")) {
-                const decideFileExtensionResult = unknown(6066).decideFileExtension(tmp54, closure_1);
+                const decideFileExtensionResult = unknown(5959).decideFileExtension(tmp54, closure_1);
                 dependencyMap = decideFileExtensionResult;
                 png = dependencyMap;
                 if (dependencyMap == null) {
@@ -999,13 +1082,13 @@ obj2.saveImage = function saveImage(arg0, arg1, arg2) {
                 }
                 const _HermesInternal = HermesInternal;
                 closure_133_0 = "" + str + "." + png;
-                const obj9 = unknown(6066);
+                const obj9 = unknown(5959);
               }
               tmp54 = getImageData(tmp54);
               c9 = 1;
               c10 = 1;
             }
-            const obj13 = png(1366);
+            const obj13 = png(1371);
           }
         } else if (1 === tmp8) {
           if (arg0 === 1) {
@@ -1123,7 +1206,7 @@ obj2.saveFile = function saveFile(arg0, arg1) {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -1215,8 +1298,8 @@ obj2.downloadMLModelFile = function downloadMLModelFile(arg0, arg1, arg2) {
   closure_1 = arg1;
   closure_2 = arg2;
   return (async () => {
-    v1(38)(v3(1364).isPlatformEmbedded, "Download ML model file method called outside native app");
-    v1(38)(null != v1(1366).toURLSafe(closure_0), "Could not download ML model, fileSrc was not a valid path");
+    v1(38)(v3(1369).isPlatformEmbedded, "Download ML model file method called outside native app");
+    v1(38)(null != v1(1371).toURLSafe(closure_0), "Could not download ML model, fileSrc was not a valid path");
     fileManager = fileManager.fileManager;
     await fileManager.maybeDownloadMLModelFile(closure_0, closure_1, closure_2);
     return value;
@@ -1250,8 +1333,8 @@ obj2.downloadClipsFile = function downloadClipsFile(arg0, arg1, arg2) {
   closure_1 = arg1;
   closure_2 = arg2;
   return (async () => {
-    v1(38)(v3(1364).isPlatformEmbedded, "Download clips file method called outside native app");
-    v1(38)(null != v1(1366).toURLSafe(closure_0), "Could not download clips file, fileSrc was not a valid path");
+    v1(38)(v3(1369).isPlatformEmbedded, "Download clips file method called outside native app");
+    v1(38)(null != v1(1371).toURLSafe(closure_0), "Could not download clips file, fileSrc was not a valid path");
     fileManager = fileManager.fileManager;
     await fileManager.maybeDownloadClipsFile(closure_0, closure_1, closure_2);
     return value;
@@ -1292,8 +1375,8 @@ obj2.downloadOpenH264 = function downloadOpenH264(arg0, arg1, arg2, arg3) {
   closure_2 = arg2;
   closure_3 = arg3;
   return (async () => {
-    v1(38)(v3(1364).isPlatformEmbedded, "Download OpenH264 file method called outside native app");
-    v1(38)(null != v1(1366).toURLSafe(closure_0), "Could not download OpenH264, fileSrc was not a valid path");
+    v1(38)(v3(1369).isPlatformEmbedded, "Download OpenH264 file method called outside native app");
+    v1(38)(null != v1(1371).toURLSafe(closure_0), "Could not download OpenH264, fileSrc was not a valid path");
     fileManager = fileManager.fileManager;
     await fileManager.maybeDownloadOpenH264(closure_0, closure_1, closure_2, closure_3);
     return value;
@@ -1440,7 +1523,7 @@ obj2.waitForIPCReady = function waitForIPCReady() {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -1466,7 +1549,7 @@ obj2.waitForIPCReady = function waitForIPCReady() {
                 c3 = 3;
                 return { value: true, done: true };
               } else {
-                const promise = new Promise((scrollAnimation) => closure_1_1.requestAnimationFrame(scrollAnimation));
+                const promise = new Promise((step) => closure_1_1.requestAnimationFrame(step));
                 c2 = 1;
                 c3 = 1;
                 const obj4 = { value: promise, done: false };
@@ -1584,7 +1667,7 @@ obj2.isAlwaysOnTop = function isAlwaysOnTop(arg0) {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -2007,7 +2090,7 @@ obj2.stopCPUProfiling = function stopCPUProfiling() {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -2722,7 +2805,7 @@ obj2.GetSystemGpuStats = function GetSystemGpuStats(arg0) {
         obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {

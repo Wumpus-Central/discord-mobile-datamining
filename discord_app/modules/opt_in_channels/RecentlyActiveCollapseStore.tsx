@@ -1,8 +1,8 @@
-// === Module 7139: RecentlyActiveCollapseStore ===
+// === Module 7042: RecentlyActiveCollapseStore ===
 
-// Module 7139 (RecentlyActiveCollapseStore)
+// Module 7042 (RecentlyActiveCollapseStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
 
 const set = new Set();
 const PersistedStore = initializeDefault.PersistedStore;

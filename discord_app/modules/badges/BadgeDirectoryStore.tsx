@@ -1,14 +1,14 @@
-// === Module 7819: BadgeDirectoryStore ===
+// === Module 7863: BadgeDirectoryStore ===
 
-// Module 7819 (BadgeDirectoryStore)
+// Module 7863 (BadgeDirectoryStore)
 import initializeDefault from "initialize" /* 504 */;
-import BackoffDefault from "Backoff" /* 559 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import DurationsDefault from "Durations" /* 1091 */;
-import privDefault from "priv" /* 1439 */;
-import BadgeIdResolution from "BadgeIdResolution" /* 7820 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 7824 */;
-import UserStore from "UserStore" /* 1372 */;
+import BackoffDefault from "Backoff" /* 569 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import DurationsDefault from "Durations" /* 1102 */;
+import privDefault from "priv" /* 1444 */;
+import BadgeIdResolution from "BadgeIdResolution" /* 7864 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 7868 */;
+import UserStore from "UserStore" /* 1377 */;
 
 require = fn;
 const HOUR = DurationsDefault.Millis.HOUR;
@@ -68,9 +68,9 @@ prototype["isCatalogStaleFor"] = function isCatalogStaleFor(id) {
   }
   return tmp3;
 };
-prototype["hasCatalogFetchErrorFor"] = function hasCatalogFetchErrorFor(stateFromStores) {
-  let tmp = stateFromStores;
-  if (stateFromStores == null) {
+prototype["hasCatalogFetchErrorFor"] = function hasCatalogFetchErrorFor(targetUserId) {
+  let tmp = targetUserId;
+  if (targetUserId == null) {
     const currentUser = UserStore.getCurrentUser();
     let id;
     if (currentUser != null) {
@@ -207,7 +207,7 @@ const badgeDirectoryStore = new BadgeDirectoryStore(DispatcherDefault, {
     peekResult.fetchError = false;
     peekResult.fetchedAt = Date.now();
     const result = closure_5.set(userId, peekResult);
-    map1 = new Map(badges.map((badge_id) => {
+    const map1 = new Map(badges.map((badge_id) => {
       const items = [badge_id.badge_id, badge_id];
       return items;
     }));

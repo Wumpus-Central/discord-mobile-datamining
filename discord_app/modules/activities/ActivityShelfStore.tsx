@@ -1,8 +1,8 @@
-// === Module 8948: ActivityShelfStore ===
+// === Module 8982: ActivityShelfStore ===
 
-// Module 8948 (ActivityShelfStore)
+// Module 8982 (ActivityShelfStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
 
 let closure_0 = { usageByApplicationId: {}, shelfOrder: [] };
 const PersistedStore = initializeDefault.PersistedStore;

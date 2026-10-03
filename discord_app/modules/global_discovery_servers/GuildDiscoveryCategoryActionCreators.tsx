@@ -1,10 +1,10 @@
-// === Module 16333: GuildDiscoveryCategoryActionCreators ===
+// === Module 16409: GuildDiscoveryCategoryActionCreators ===
 
-// Module 16333 (GuildDiscoveryCategoryActionCreators)
-import DispatcherDefault from "Dispatcher" /* 573 */;
+// Module 16409 (GuildDiscoveryCategoryActionCreators)
+import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LocaleStore from "LocaleStore" /* 2111 */;
-import GuildDiscoveryCategoryStore from "GuildDiscoveryCategoryStore" /* 16334 */;
+import LocaleStore from "LocaleStore" /* 2116 */;
+import GuildDiscoveryCategoryStore from "GuildDiscoveryCategoryStore" /* 16410 */;
 
 const require = globalThis.__r;
 
@@ -20,7 +20,7 @@ let closure_7 = async function _maybeFetchGuildDiscoveryCategories() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -78,7 +78,7 @@ let closure_8 = async function _fetchMetadataForGuild() {
   const HTTP = require("HTTPUtils").HTTP;
   await HTTP.get({ url: Endpoints.GUILD_DISCOVERY_METADATA(closure_0), oldFormErrors: true, rejectWithError: true });
   closure_130_1(closure_130_2[5]).dispatch({ type: "GUILD_DISCOVERY_METADATA_FETCH_FAIL" });
-  await "HermesInternal";
+  await "IconComponent";
   const body = value.body;
   closure_129_2 = { primaryCategoryId: body.primary_category_id, secondaryCategoryIds: body.category_ids, keywords: body.keywords, emojiDiscoverabilityEnabled: body.emoji_discoverability_enabled, partnerActionedTimestamp: body.partner_actioned_timestamp, partnerApplicationTimestamp: body.partner_application_timestamp, isPublished: body.is_published, reasonsToJoin: body.reasons_to_join, socialLinks: body.social_links, about: body.about };
   closure_130_1(closure_130_2[5]).dispatch({ type: "GUILD_UPDATE_DISCOVERY_METADATA_FROM_SERVER", guildId: closure_129_0, metadata: closure_129_2 });
@@ -116,7 +116,7 @@ let closure_10 = async function _saveGuildMetadata(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -156,7 +156,7 @@ let closure_10 = async function _saveGuildMetadata(arg0) {
           let about;
           c5 = 1;
           c6 = 1;
-          return { value: "flex", done: null };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {
@@ -210,7 +210,7 @@ let closure_10 = async function _saveGuildMetadata(arg0) {
         closure_130_1(closure_130_2[5]).dispatch(obj10);
         c4 = 0;
         c6 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } catch (tmp18) {
       closure_3 = tmp18;
@@ -223,7 +223,7 @@ let closure_10 = async function _saveGuildMetadata(arg0) {
     }
   }
 };
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/global_discovery_servers/GuildDiscoveryCategoryActionCreators.tsx");
 

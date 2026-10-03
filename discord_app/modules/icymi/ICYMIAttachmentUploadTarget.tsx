@@ -1,8 +1,8 @@
-// === Module 5677: ICYMIAttachmentUploadTarget ===
+// === Module 7310: ICYMIAttachmentUploadTarget ===
 
-// Module 5677 (ICYMIAttachmentUploadTarget)
-import UploadUtils from "UploadUtils" /* 5627 */;
-import Constants from "Constants" /* 1074 */;
+// Module 7310 (ICYMIAttachmentUploadTarget)
+import UploadUtils from "UploadUtils" /* 7243 */;
+import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
 ({ Endpoints: c2, MAX_ATTACHMENT_SIZE: c3, MAX_UPLOAD_COUNT: closure_4 } = Constants);

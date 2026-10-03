@@ -1,17 +1,147 @@
-// === Module 11634: getPlayInContext ===
+// === Module 11554: getPlayInContext ===
 
-// Module 11634 (getPlayInContext)
-import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 8992 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2043 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
+// Module 11554 (getPlayInContext)
+import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 9011 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
 
 const require = globalThis.__r;
 
 require = fn;
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/message_embed/utils/getPlayInContext.tsx");
 
-export const usePlayInContext = function usePlayInContext(arg0) {
+export const usePlayInContext = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  _require = arg0;
+  const cResult = require("c").c(14);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [SelectedChannelStore];
+    const fn = function o() {
+      return channelId.getChannelId();
+    };
+    cResult[0] = items;
+    cResult[1] = fn;
+    tmp4 = items;
+    tmp5 = fn;
+  } else {
+    [tmp4, tmp5] = cResult;
+  }
+  const obj = require("c");
+  stateFromStores = require("initialize").useStateFromStores(tmp4, tmp5);
+  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+    const items1 = [EmbeddedActivitiesStore];
+    cResult[2] = items1;
+    let tmp8 = items1;
+  } else {
+    tmp8 = cResult[2];
+  }
+  if (cResult[3] === arg0) {
+    if (cResult[4] === stateFromStores) {
+      let tmp10 = cResult[5];
+    }
+    const stateFromStores1 = tmp(tmp2[4]).useStateFromStores(tmp8, tmp10);
+    let compositeInstanceId;
+    if (stateFromStores1 != null) {
+      compositeInstanceId = stateFromStores1.compositeInstanceId;
+    }
+    let _location;
+    if (stateFromStores1 != null) {
+      _location = stateFromStores1.location;
+    }
+    const _Symbol = Symbol;
+    if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
+      const items2 = [EmbeddedActivitiesStore];
+      const fn2 = function y() {
+        return currentEmbeddedActivity.getCurrentEmbeddedActivity();
+      };
+      cResult[6] = items2;
+      cResult[7] = fn2;
+      let tmp16 = fn2;
+      let tmp15 = items2;
+    } else {
+      tmp15 = cResult[6];
+      tmp16 = cResult[7];
+    }
+    const tmpResult4 = tmp(tmp2[4]);
+    const stateFromStores2 = tmp(tmp2[4]).useStateFromStores(tmp15, tmp16);
+    const tmpResult5 = tmp(tmp2[4]);
+    const embeddedActivityLaunchability = tmp(tmp2[5]).useEmbeddedActivityLaunchability(stateFromStores);
+    let tmp20 = null != compositeInstanceId;
+    if (tmp20) {
+      let compositeInstanceId1;
+      if (stateFromStores2 != null) {
+        compositeInstanceId1 = stateFromStores2.compositeInstanceId;
+      }
+      tmp20 = compositeInstanceId1 === compositeInstanceId;
+    }
+    const tmp22 = embeddedActivityLaunchability === tmp(tmp2[5]).EmbeddedActivityLaunchability.CAN_LAUNCH;
+    if (cResult[8] === tmp22) {
+      if (cResult[9] === compositeInstanceId) {
+        if (cResult[10] === _location) {
+          if (cResult[11] === stateFromStores) {
+            if (cResult[12] === tmp20) {
+              let tmp23 = cResult[13];
+            }
+            return tmp23;
+          }
+        }
+      }
+    }
+    class I {
+      constructor() {
+        if (null == closure_1) {
+          return null;
+        } else {
+          tmp2 = closure_2;
+          embeddedActivitiesForChannel = closure_2.getEmbeddedActivitiesForChannel(tmp);
+          found = embeddedActivitiesForChannel.filter((applicationId) => applicationId.applicationId === closure_1_0);
+          num = 0;
+          first = undefined;
+          if (found.length > 0) {
+            first = found[0];
+          }
+          return first;
+        }
+      }
+    }
+    tmp24[0] = stateFromStores;
+    tmp24[1] = compositeInstanceId;
+    tmp24[2] = _location;
+    tmp24[3] = tmp20;
+    tmp24[4] = tmp22;
+    cResult[8] = tmp22;
+    cResult[9] = compositeInstanceId;
+    cResult[10] = _location;
+    cResult[11] = stateFromStores;
+    cResult[12] = tmp20;
+    cResult[13] = tmp24;
+    tmp23 = tmp24;
+    const tmpResult6 = tmp(tmp2[5]);
+  }
+  class I {
+    constructor() {
+      if (null == closure_1) {
+        return null;
+      } else {
+        tmp2 = closure_2;
+        embeddedActivitiesForChannel = closure_2.getEmbeddedActivitiesForChannel(tmp);
+        found = embeddedActivitiesForChannel.filter((applicationId) => applicationId.applicationId === closure_1_0);
+        num = 0;
+        first = undefined;
+        if (found.length > 0) {
+          first = found[0];
+        }
+        return first;
+      }
+    }
+  }
+  cResult[3] = arg0;
+  cResult[4] = stateFromStores;
+  cResult[5] = I;
+  tmp10 = I;
+  const tmpResult = require("initialize");
+}) : ((arg0) => {
   _require = arg0;
   const items = [SelectedChannelStore];
   stateFromStores = require("initialize").useStateFromStores(items, () => channelId.getChannelId());
@@ -55,7 +185,7 @@ export const usePlayInContext = function usePlayInContext(arg0) {
   obj3.isCurrentlyInInstance = tmp10;
   obj3.canLaunchInChannel = embeddedActivityLaunchability === require("getEmbeddedActivityLaunchability").EmbeddedActivityLaunchability.CAN_LAUNCH;
   return obj3;
-};
+});
 export const getPlayInContext = function getPlayInContext(id, channel_id) {
   closure_0 = id;
   let channelId = channel_id;
@@ -97,7 +227,7 @@ export const getPlayInContext = function getPlayInContext(id, channel_id) {
       tmp11 = compositeInstanceId1 === compositeInstanceId;
     }
     obj3.isCurrentlyInInstance = tmp11;
-    obj3.canLaunchInChannel = NO_CHANNEL === tmp3(8992).EmbeddedActivityLaunchability.CAN_LAUNCH;
+    obj3.canLaunchInChannel = NO_CHANNEL === tmp3(9011).EmbeddedActivityLaunchability.CAN_LAUNCH;
     return obj3;
   }
 };

@@ -1,10 +1,10 @@
-// === Module 16998: GooglePlayPriceChangeStore ===
+// === Module 17087: GooglePlayPriceChangeStore ===
 
-// Module 16998 (GooglePlayPriceChangeStore)
+// Module 17087 (GooglePlayPriceChangeStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import PlatformUtils from "PlatformUtils" /* 1364 */;
-import SubscriptionStore from "SubscriptionStore" /* 4523 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import PlatformUtils from "PlatformUtils" /* 1369 */;
+import SubscriptionStore from "SubscriptionStore" /* 4534 */;
 
 require = fn;
 function onInitializeSync() {
@@ -35,7 +35,7 @@ function onInitializeSync() {
   obj = PlatformUtils;
 }
 let items = [, , ];
-({ ACTIVE: arr[0], PAST_DUE: arr[1], UNPAID: arr[2] } = fn(1074).SubscriptionStatusTypes);
+({ ACTIVE: arr[0], PAST_DUE: arr[1], UNPAID: arr[2] } = fn(1085).SubscriptionStatusTypes);
 const set = new Set(items);
 let c4 = false;
 let priceChange = null;

@@ -1,9 +1,10 @@
-// === Module 8479: CollectiblesShopVariantsUIStore ===
+// === Module 8484: CollectiblesShopVariantsUIStore ===
 
-// Module 8479 (CollectiblesShopVariantsUIStore)
-import _mod4481 from "module_4481" /* 4481 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7161 */;
-import identity from "module_1243" /* 1243 */;
+// Module 8484 (CollectiblesShopVariantsUIStore)
+import _mod4492 from "module_4492" /* 4492 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7064 */;
+import identity from "module_1254" /* 1254 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -11,19 +12,54 @@ const require = globalThis.__r;
 const state = identity.createWithEqualityFn(() => {
   const obj = { selectionStates: new Map() };
   return obj;
-}, _mod4481.shallow);
+}, _mod4492.shallow);
 const result = size.fileFinishedImporting("modules/collectibles/CollectiblesShopVariantsUIStore.tsx");
 
-export const useSelectedVariantIndex = function useSelectedVariantIndex(product) {
-  _require = product;
-  let defaultVariantIndex = require("useDefaultVariantIndex").useDefaultVariantIndex(product);
+export const useSelectedVariantIndex = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  _require = arg0;
+  const cResult = require("c").c(2);
+  let obj = require("c");
+  let defaultVariantIndex = require("useDefaultVariantIndex").useDefaultVariantIndex(arg0);
+  if (cResult[0] !== arg0) {
+    const fn = function s(selectionStates) {
+      let tmp2 = null;
+      if (null != storeListingId) {
+        tmp2 = null;
+        if (obj.getIsVariantProduct(storeListingId)) {
+          selectionStates = selectionStates.selectionStates;
+          value = selectionStates.get(storeListingId.storeListingId);
+          let selectedVariantIndex;
+          if (value != null) {
+            selectedVariantIndex = value.selectedVariantIndex;
+          }
+          tmp2 = selectedVariantIndex;
+        }
+        obj = CollectiblesProductUtils;
+      }
+      return tmp2;
+    };
+    cResult[0] = arg0;
+    cResult[1] = fn;
+    let tmp3 = fn;
+  } else {
+    tmp3 = cResult[1];
+  }
+  const tmp4 = state(tmp3);
+  if (null != tmp4) {
+    const _Math = Math;
+    defaultVariantIndex = Math.max(0, tmp4);
+  }
+  return defaultVariantIndex;
+}) : ((arg0) => {
+  _require = arg0;
+  let defaultVariantIndex = require("useDefaultVariantIndex").useDefaultVariantIndex(arg0);
   let tmp2 = state((selectionStates) => {
     let tmp2 = null;
-    if (null != product) {
+    if (null != storeListingId) {
       tmp2 = null;
-      if (obj.getIsVariantProduct(product)) {
+      if (obj.getIsVariantProduct(storeListingId)) {
         selectionStates = selectionStates.selectionStates;
-        value = selectionStates.get(product.storeListingId);
+        value = selectionStates.get(storeListingId.storeListingId);
         let selectedVariantIndex;
         if (value != null) {
           selectedVariantIndex = value.selectedVariantIndex;
@@ -39,7 +75,7 @@ export const useSelectedVariantIndex = function useSelectedVariantIndex(product)
     defaultVariantIndex = Math.max(0, tmp2);
   }
   return defaultVariantIndex;
-};
+});
 export const setSelectedVariantIndex = function setSelectedVariantIndex(arg0, arg1) {
   const storeListingId = arg0;
   closure_1 = arg1;

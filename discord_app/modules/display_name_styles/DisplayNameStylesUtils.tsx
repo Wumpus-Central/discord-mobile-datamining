@@ -1,26 +1,53 @@
-// === Module 1389: DisplayNameStylesUtils ===
+// === Module 1394: DisplayNameStylesUtils ===
 
-// Module 1389 (DisplayNameStylesUtils)
-import _modDef672 from "module_672" /* 672 */;
-import utils_ColorUtils from "utils/ColorUtils" /* 1092 */;
-import DisplayNameEffect from "DisplayNameEffect" /* 1391 */;
-import DisplayNameFont from "DisplayNameFont" /* 1392 */;
+// Module 1394 (DisplayNameStylesUtils)
+import discord_common_shallowEqual from "discord_common/shallowEqual" /* 568 */;
+import _modDef683 from "module_683" /* 683 */;
+import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
+import DisplayNameEffect from "DisplayNameEffect" /* 1396 */;
+import DisplayNameFont from "DisplayNameFont" /* 1397 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const DisplayNameStylesConstants = fn(1390);
+const DisplayNameStylesConstants = fn(1395);
 ({ DISPLAY_NAME_STYLES_GUMMY_HUE_LIGHTNESS: closure_4, DISPLAY_NAME_STYLES_GUMMY_HUE_SATURATION: hasOwnProperty, FLYWHEEL_EFFECTS: metroRequire, FLYWHEEL_FONTS: closure_7, getColorPresetsForEffect: closure_8 } = DisplayNameStylesConstants);
-let items = [fn(1391).DisplayNameEffect.NEON, fn(1391).DisplayNameEffect.TOON, fn(1391).DisplayNameEffect.POP, fn(1391).DisplayNameEffect.GUMMY];
+let items = [fn(1396).DisplayNameEffect.NEON, fn(1396).DisplayNameEffect.TOON, fn(1396).DisplayNameEffect.POP, fn(1396).DisplayNameEffect.GUMMY];
 const set = new Set(items);
 const items1 = [{ hueShift: -18, saturation: 0.54, lightness: 0.72 }, { hueShift: -5, saturation: 0.66, lightness: 0.6 }, { hueShift: 9, saturation: 0.56, lightness: 0.68 }, { hueShift: 22, saturation: 0.6, lightness: 0.63 }];
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/display_name_styles/DisplayNameStylesUtils.tsx");
 
+export const toEditorDisplayNameStyles = function toEditorDisplayNameStyles(fontId, arg1) {
+  if (null == fontId) {
+    return null;
+  } else {
+    ({ effectId, colors } = fontId);
+    const obj = { fontId: fontId.fontId, effectId, colors: null };
+    if (colors.length <= 0) {
+      colors = arg1[effectId];
+    }
+    obj.colors = colors;
+    return obj;
+  }
+};
+export const areDisplayNameStylesEqual = function areDisplayNameStylesEqual(fontId, fontId2) {
+  if (null != fontId) {
+    if (null != fontId2) {
+      let result = fontId.fontId === fontId2.fontId && fontId.effectId === fontId2.effectId;
+      if (result) {
+        result = discord_common_shallowEqual.areArraysShallowEqual(fontId.colors, fontId2.colors);
+      }
+    }
+    return result;
+  }
+  result = null == fontId && null == fontId2;
+  const tmp4 = null == fontId && null == fontId2;
+};
 export const isSolidPresetColor = function isSolidPresetColor(arg0, arg1) {
   closure_0 = arg0;
-  return React6(arg1).some((item) => item[0] === closure_0);
+  return closure_1_8(arg1).some((item) => item[0] === closure_0);
 };
 export const resolveSolidColor = function resolveSolidColor(arg0, arg1, arg2) {
   let tmp = arg1;
@@ -28,7 +55,7 @@ export const resolveSolidColor = function resolveSolidColor(arg0, arg1, arg2) {
     tmp = arg0;
   } else {
     closure_0 = arg0;
-    React6(arg2);
+    closure_1_8(arg2);
   }
   return tmp;
 };
@@ -36,16 +63,16 @@ export const resolveSolidPresetSeed = function resolveSolidPresetSeed(selectedCo
   let first = selectedColor;
   closure_0 = selectedColor;
   if (!obj.some((item) => item[0] === closure_0)) {
-    first = React6(selectedEffectId)[0][0];
+    first = closure_1_8(selectedEffectId)[0][0];
   }
   return first;
 };
-export const getEffectColorCount = function getEffectColorCount(effectId) {
-  if (DisplayNameEffect.DisplayNameEffect.GRADIENT === effectId) {
+export const getEffectColorCount = function getEffectColorCount(selectedEffectId) {
+  if (DisplayNameEffect.DisplayNameEffect.GRADIENT === selectedEffectId) {
     return 2;
-  } else if (DisplayNameEffect.DisplayNameEffect.GUMMY === effectId) {
+  } else if (DisplayNameEffect.DisplayNameEffect.GUMMY === selectedEffectId) {
     return 4;
-  } else if (DisplayNameEffect.DisplayNameEffect.PRISM === effectId) {
+  } else if (DisplayNameEffect.DisplayNameEffect.PRISM === selectedEffectId) {
     return 5;
   } else {
     return 1;
@@ -55,7 +82,7 @@ export const doesEffectImpactLayout = function doesEffectImpactLayout(effectId) 
   return set.has(effectId);
 };
 export const generateColorVariants = function generateColorVariants(displayNameStylesAccessibleColors) {
-  const alphaResult = _modDef672(displayNameStylesAccessibleColors).alpha(1);
+  const alphaResult = _modDef683(displayNameStylesAccessibleColors).alpha(1);
   value = alphaResult.get("hsl.l");
   const bound = Math.min(1, 1.2 * alphaResult.get("hsl.s"));
   const obj2 = { main: displayNameStylesAccessibleColors, light1: null, light2: null, dark1: null, dark2: null, toonStroke: null, neonStroke: null };
@@ -80,7 +107,7 @@ export const wrapHue = function wrapHue(h) {
 };
 export const GUMMY_STRIPES = items1;
 export const buildGummyColors = function buildGummyColors(color) {
-  const tmp = _modDef672;
+  const tmp = _modDef683;
   let obj = require("utils/ColorUtils");
   const tmp3 = _slicedToArray(tmp(require("utils/ColorUtils").int2hex(color)).hsl(), 3);
   const first = tmp3[0];
@@ -92,15 +119,15 @@ export const buildGummyColors = function buildGummyColors(color) {
   _require = _slicedToArray(items, 1)[0];
   return items1.map((item) => {
     ({ hueShift, saturation, lightness } = item);
-    return _modDef672.hsl(((closure_0 + hueShift) % 360 + 360) % 360, saturation, lightness).num();
+    return _modDef683.hsl(((closure_0 + hueShift) % 360 + 360) % 360, saturation, lightness).num();
   });
 };
 export const rebuildGummySourceColor = function rebuildGummySourceColor(selectedColors) {
   const first = selectedColors[0];
   if (null == first) {
-    return _modDef672.hsl(0, hasOwnProperty, React4).num();
+    return _modDef683.hsl(0, hasOwnProperty, React4).num();
   } else {
-    const tmp12 = _modDef672;
+    const tmp12 = _modDef683;
     const tmp15 = _slicedToArray(tmp12(utils_ColorUtils.int2hex(first)).hsl(), 3);
     const first1 = tmp15[0];
     const _Number = Number;
@@ -111,12 +138,12 @@ export const rebuildGummySourceColor = function rebuildGummySourceColor(selected
     const items = [num, tmp15[1], tmp15[2]];
     const result = (_slicedToArray(items, 1)[0] - items1[0].hueShift) % 360;
     const tmp12Result = tmp12(utils_ColorUtils.int2hex(first));
-    const tmp10Result = _modDef672;
-    return _modDef672.hsl((result + 360) % 360, hasOwnProperty, React4).num();
+    const tmp10Result = _modDef683;
+    return _modDef683.hsl((result + 360) % 360, hasOwnProperty, React4).num();
   }
 };
 export const hueToGummyColor = function hueToGummyColor(sharedValue) {
-  return _modDef672.hsl(sharedValue, hasOwnProperty, React4).num();
+  return _modDef683.hsl(sharedValue, hasOwnProperty, React4).num();
 };
 export const parseServerDisplayNameStyles = function parseServerDisplayNameStyles(display_name_styles) {
   let tmp = null;
@@ -129,7 +156,7 @@ export const parseServerDisplayNameStyles = function parseServerDisplayNameStyle
 };
 export const generateRandomDisplayNameStyles = function generateRandomDisplayNameStyles(visibleFontOrder, visibleEffectOrder) {
   const tmp = visibleEffectOrder[Math.floor(Math, Math.random(Math) * visibleEffectOrder.length)];
-  const arr = React6(tmp);
+  const arr = closure_1_8(tmp);
   const obj = { fontId: visibleFontOrder[Math.floor(Math, Math.random(Math) * visibleFontOrder.length)], effectId: tmp, colors: null };
   const items = [...arr[Math.floor(Math, Math.random(Math) * arr.length)]];
   obj.colors = items;

@@ -1,26 +1,27 @@
-// === Module 5625: CloudUpload ===
+// === Module 7268: CloudUpload ===
 
-// Module 5625 (CloudUpload)
+// Module 7268 (CloudUpload)
 import LoggerDefault from "Logger" /* 3 */;
-import BackoffDefault from "Backoff" /* 559 */;
-import DurationsDefault from "Durations" /* 1091 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import HTTPUtils from "HTTPUtils" /* 1271 */;
-import Upload2 from "Upload" /* 5626 */;
-import uploader_UploadUtils from "uploader/UploadUtils" /* 5634 */;
-import InlineUploaderDefault from "InlineUploader" /* 5668 */;
+import BackoffDefault from "Backoff" /* 569 */;
+import DurationsDefault from "Durations" /* 1102 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import InlineUploaderDefault from "InlineUploader" /* 6478 */;
+import UploadPlatform from "UploadPlatform" /* 7247 */;
+import Upload2 from "Upload" /* 7269 */;
+import uploader_UploadUtils from "uploader/UploadUtils" /* 7272 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import DevSettingsStore from "DevSettingsStore" /* 4844 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1184 */;
-import NetworkStore from "NetworkStore" /* 4894 */;
+import DevSettingsStore from "DevSettingsStore" /* 4889 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1195 */;
+import NetworkStore from "NetworkStore" /* 4939 */;
 
 const Upload = Upload2;
 
 require = fn;
 let closure_3 = ["Content-Range"];
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AbortCodes: c10, AnalyticEvents: closure_11 } = Constants);
 const logger = new LoggerDefault("CloudUpload.tsx");
 const set = new Set([429]);
@@ -220,12 +221,12 @@ class CloudUpload extends tmp5 {
       }
       tmp11 = closure_0;
       tmp12 = closure_2;
-      tmp13 = global.platform === closure_0(closure_2[9]).UploadPlatform.WEB && null != global.compressionMetadata;
+      tmp13 = global.platform === closure_0(closure_2[10]).UploadPlatform.WEB && null != global.compressionMetadata;
       if (tmp13) {
         obj.mimeType = global.compressionMetadata.originalContentType;
         obj.preCompressionSize = global.compressionMetadata.preCompressionSize;
       }
-      tmp14 = global.platform === tmp11(tmp12[9]).UploadPlatform.WEB && null != global.originalMd5;
+      tmp14 = global.platform === tmp11(tmp12[10]).UploadPlatform.WEB && null != global.originalMd5;
       if (tmp14) {
         obj._originalMd5 = global.originalMd5;
       }
@@ -240,7 +241,7 @@ class CloudUpload extends tmp5 {
       if (null == obj.origin) {
         tmp21 = new.target;
         tmp22 = new.target;
-        defaultHttpClient = new tmp11(tmp12[10]).DefaultHttpClient();
+        defaultHttpClient = new tmp11(tmp12[11]).DefaultHttpClient();
         tmp24 = defaultHttpClient;
         obj._uploadHttpClient = defaultHttpClient;
         obj._libdiscoreEnabled = false;
@@ -321,7 +322,7 @@ prototype["parseRangeHeader"] = function parseRangeHeader(str) {
   return tmp2;
 };
 prototype["retryOpts"] = function retryOpts() {
-  if (this.item.platform === Upload2.UploadPlatform.REACT_NATIVE) {
+  if (this.item.platform === UploadPlatform.UploadPlatform.REACT_NATIVE) {
     const obj2 = { timeout: DurationsDefault.Millis.HOUR, backoff: null, retries: 12 };
     const result = 0.5 * DurationsDefault.Millis.SECOND;
     const tmp82 = new BackoffDefault(result, 30 * DurationsDefault.Millis.MINUTE);
@@ -336,7 +337,7 @@ prototype["retryOpts"] = function retryOpts() {
 };
 prototype["createAttachmentUrlRetryOpts"] = function createAttachmentUrlRetryOpts() {
   const self = this;
-  if (this.item.platform === Upload2.UploadPlatform.REACT_NATIVE) {
+  if (this.item.platform === UploadPlatform.UploadPlatform.REACT_NATIVE) {
     const obj = { timeout: null, backoff: null, retries: 8 };
     const obj2 = { response: 30 * DurationsDefault.Millis.SECOND, deadline: 30 * DurationsDefault.Millis.MINUTE };
     obj.timeout = obj2;
@@ -355,7 +356,7 @@ prototype["buildOriginalMd5Headers"] = function buildOriginalMd5Headers() {
 prototype["supportsResume"] = function supportsResume() {
   let _libdiscoreEnabled = this._libdiscoreEnabled;
   if (!_libdiscoreEnabled) {
-    _libdiscoreEnabled = this.item.platform !== Upload2.UploadPlatform.REACT_NATIVE;
+    _libdiscoreEnabled = this.item.platform !== UploadPlatform.UploadPlatform.REACT_NATIVE;
   }
   return _libdiscoreEnabled;
 };
@@ -369,7 +370,7 @@ prototype["uploadFileToCloud"] = function uploadFileToCloud() {
     }
     const _HermesInternal3 = HermesInternal;
     const combined = "Uploading " + self.id;
-    if (self.item.platform === v3(dependencyMap[9]).UploadPlatform.REACT_NATIVE) {
+    if (self.item.platform === v3(dependencyMap[10]).UploadPlatform.REACT_NATIVE) {
       const _HermesInternal2 = HermesInternal;
       let combined1 = "filename=" + self.item.filename + ", uri=" + self.item.uri;
     } else {
@@ -377,7 +378,7 @@ prototype["uploadFileToCloud"] = function uploadFileToCloud() {
       combined1 = "filename=" + self.item.file.name;
     }
     logger.log(combined, combined1);
-    if (self.item.platform === v3(dependencyMap[9]).UploadPlatform.REACT_NATIVE) {
+    if (self.item.platform === v3(dependencyMap[10]).UploadPlatform.REACT_NATIVE) {
       const obj4 = { type: self.item.mimeType, uri: self.item.uri, name: self.item.filename };
       let str6 = "application/octet-stream";
       if (null != obj4.type) {
@@ -393,7 +394,7 @@ prototype["uploadFileToCloud"] = function uploadFileToCloud() {
       str4 = "application/octet-stream";
     }
     if (tmp25Result.canUploadNatively(self.item)) {
-      const libdiscoreHttpClient = new tmp25(dependencyMap[10]).LibdiscoreHttpClient();
+      const libdiscoreHttpClient = new tmp25(dependencyMap[11]).LibdiscoreHttpClient();
       self._uploadHttpClient = libdiscoreHttpClient;
       self._libdiscoreEnabled = true;
       logger.log("Using libdiscore client for file upload");
@@ -406,7 +407,7 @@ prototype["getResumePosition"] = function getResumePosition(responseUrl) {
   closure_0 = responseUrl;
   const self = this;
   return (async () => {
-    const obj4 = { url, headers: { "Content-Range": "bytes */*" }, rejectWithError: true, retries: 0, timeout: { deadline: 30 * v1(1091).Millis.SECOND }, signal: self._abortController.signal };
+    const obj4 = { url, headers: { "Content-Range": "bytes */*" }, rejectWithError: true, retries: 0, timeout: { deadline: 30 * v1(1102).Millis.SECOND }, signal: self._abortController.signal };
     const _uploadHttpClient = self._uploadHttpClient;
     _uploadHttpClient.doUpload(obj4);
     await _uploadHttpClient.doUpload(obj4).then((status) => {
@@ -418,7 +419,7 @@ prototype["getResumePosition"] = function getResumePosition(responseUrl) {
       }
       currentSize = v1.currentSize;
     }).catch((error) => {
-      if (error instanceof c0(1271).HTTPResponseError) {
+      if (error instanceof c0(1282).HTTPResponseError) {
         if (308 === error.status) {
           let str = error.headers.range;
           if (str == null) {
@@ -451,7 +452,7 @@ prototype["startOrResumeUpload"] = function startOrResumeUpload(arg0, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -493,7 +494,7 @@ prototype["startOrResumeUpload"] = function startOrResumeUpload(arg0, arg1) {
                 tmp18 = tmp16;
               }
             }
-            obj5 = tmp2(tmp3[14]);
+            obj5 = tmp2(tmp3[15]);
             tmp18.onRequestProgress = obj5.throttle(_catch.createResumeAwareProgressFn(num), 50);
             const _uploadHttpClient = _catch._uploadHttpClient;
             const obj6 = { fileByteRange: null };
@@ -547,7 +548,7 @@ prototype["uploadFileWithResumption"] = function uploadFileWithResumption(respon
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -575,7 +576,7 @@ prototype["uploadFileWithResumption"] = function uploadFileWithResumption(respon
             let obj4 = { "Content-Type": next };
             request.headers = obj4;
             request.signal = self._abortController.signal;
-            request.onRequestProgress = iter4(next[14]).throttle(self.createResumeAwareProgressFn(0), 50);
+            request.onRequestProgress = iter4(next[15]).throttle(self.createResumeAwareProgressFn(0), 50);
             request.timeout = retryOptsResult.timeout;
             closure_132_3 = request;
             closure_132_4 = 0;
@@ -590,7 +591,7 @@ prototype["uploadFileWithResumption"] = function uploadFileWithResumption(respon
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "HermesInternal", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 }
               } else {
                 try {
@@ -628,7 +629,7 @@ prototype["uploadFileWithResumption"] = function uploadFileWithResumption(respon
                         c3.uploadAnalytics.uploadResumptionReason = closure_129_3.messageShort;
                         c5 = 5;
                         c6 = 1;
-                        const obj5 = { value: body(next[15]).awaitOnline(), done: false };
+                        const obj5 = { value: body(next[16]).awaitOnline(), done: false };
                         return obj5;
                       }
                     }
@@ -724,7 +725,7 @@ prototype["uploadFileWithResumption"] = function uploadFileWithResumption(respon
                       return obj;
                     } else {
                       c6 = 3;
-                      return { value: "HermesInternal", done: null };
+                      return { value: "IconComponent", done: "IconComponent" };
                     }
                     c3 = 0;
                     c6 = 3;
@@ -842,7 +843,7 @@ prototype["uploadFileWithResumption"] = function uploadFileWithResumption(respon
 prototype["getSize"] = function getSize() {
   const self = this;
   return (async () => {
-    const getFileSize = value(c2[16]).getFileSize;
+    const getFileSize = value(c2[17]).getFileSize;
     if (getFileSize != null) {
       const fileSize = getFileSize(self.item.uri);
     }
@@ -868,7 +869,7 @@ prototype["trackTime"] = function trackTime(compressTimeMs, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -940,7 +941,7 @@ prototype["upload"] = function upload() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -985,7 +986,7 @@ prototype["upload"] = function upload() {
                   let tmp151 = null;
                   if (closure_133_0.allowOptimization) {
                     tmp151 = null;
-                    if (closure_133_0.item.platform === v0(5626).UploadPlatform.WEB) {
+                    if (closure_133_0.item.platform === v0(7247).UploadPlatform.WEB) {
                       tmp151 = null;
                       if (true !== closure_133_0.item.imageConversionEvaluated) {
                         tmp151 = null;
@@ -997,17 +998,17 @@ prototype["upload"] = function upload() {
                               str2 = "jxr";
                             }
                             str = str2;
-                            obj16 = v0(5670);
+                            obj16 = v0(7303);
                           }
                           tmp151 = str;
-                          obj15 = v0(5670);
+                          obj15 = v0(7303);
                         }
                       }
                     }
                   }
                   closure_132_1 = tmp151;
                   if (null != closure_132_1) {
-                    if (closure_133_0.item.platform === v0(5626).UploadPlatform.WEB) {
+                    if (closure_133_0.item.platform === v0(7247).UploadPlatform.WEB) {
                       if (null != closure_133_0.item.file) {
                         let tmp168 = null != closure_133_0.mimeType;
                         if (tmp168) {
@@ -1015,10 +1016,10 @@ prototype["upload"] = function upload() {
                         }
                         if (tmp168) {
                           if ("heic" === closure_132_1) {
-                            const HeicUploadConversionExperiment = v0(5671).HeicUploadConversionExperiment;
+                            const HeicUploadConversionExperiment = v0(7304).HeicUploadConversionExperiment;
                             let config = HeicUploadConversionExperiment.getConfig({ location: "CloudUpload.tryConvertToJpeg.heic" });
                           } else {
-                            const JxrUploadConversionExperiment = v0(5672).JxrUploadConversionExperiment;
+                            const JxrUploadConversionExperiment = v0(7305).JxrUploadConversionExperiment;
                             config = JxrUploadConversionExperiment.getConfig({ location: "CloudUpload.tryConvertToJpeg.jxr" });
                           }
                           closure_132_2 = config;
@@ -1041,11 +1042,11 @@ prototype["upload"] = function upload() {
                           }
                         } else {
                           if ("heic" === closure_132_1) {
-                            let heicMimeTypeResult = v0(5670).heicMimeType(closure_133_0.item.file);
-                            const obj18 = v0(5670);
+                            let heicMimeTypeResult = v0(7303).heicMimeType(closure_133_0.item.file);
+                            const obj18 = v0(7303);
                           } else {
-                            heicMimeTypeResult = v0(5670).jxrMimeType(closure_133_0.item.file);
-                            const obj17 = v0(5670);
+                            heicMimeTypeResult = v0(7303).jxrMimeType(closure_133_0.item.file);
+                            const obj17 = v0(7303);
                           }
                           closure_133_0.mimeType = heicMimeTypeResult;
                         }
@@ -1056,7 +1057,7 @@ prototype["upload"] = function upload() {
                     closure_133_0.handleComplete(closure_133_0.id);
                   } else {
                     if (closure_133_0.allowOptimization) {
-                      if (closure_133_0.item.platform === v0(5626).UploadPlatform.WEB) {
+                      if (closure_133_0.item.platform === v0(7247).UploadPlatform.WEB) {
                         if (!closure_132_0) {
                           if (true !== closure_133_0.item.imageConversionEvaluated) {
                             c8 = 5;
@@ -1067,7 +1068,7 @@ prototype["upload"] = function upload() {
                         }
                       }
                     }
-                    const uploadPayload = v0(5673).default.getUploadPayload(closure_133_0);
+                    const uploadPayload = v0(7306).default.getUploadPayload(closure_133_0);
                     c8 = 6;
                     c9 = 1;
                     c9 = 3;
@@ -1123,10 +1124,10 @@ prototype["upload"] = function upload() {
                   }
                   if (tmp119) {
                     closure_3 = closure_133_0;
-                    const obj10 = status(5655);
+                    const obj10 = status(6479);
                     c8 = 4;
                     c9 = 1;
-                    const obj14 = { value: status(5655).fromBlob(file).catch(() => null), done: false };
+                    const obj14 = { value: status(6479).fromBlob(file).catch(() => null), done: false };
                     return obj14;
                   } else {
                     closure_133_0.item.file = closure_132_4.convertedFile;
@@ -1182,7 +1183,7 @@ prototype["upload"] = function upload() {
               return obj21;
             } else {
               closure_132_6 = value;
-              uploadTarget = v0(5674).getUploadTarget(closure_133_0.item.target);
+              uploadTarget = v0(7307).getUploadTarget(closure_133_0.item.target);
               if (null != closure_132_6.filename) {
                 if ("" !== closure_132_6.filename) {
                   const currentSize2 = closure_133_0.currentSize;
@@ -1264,8 +1265,8 @@ prototype["upload"] = function upload() {
               }
               const _HermesInternal2 = HermesInternal;
               logger.error("Requesting upload url failed with code " + dependencyMap + " for " + closure_133_0.id);
-              status(1231).captureException(closure_132_11);
-              const obj3 = status(1231);
+              status(1242).captureException(closure_132_11);
+              const obj3 = status(1242);
             }
             closure_133_0.handleError(closure_132_10);
             c9 = 3;
@@ -1349,7 +1350,7 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -1391,7 +1392,7 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
                                 if (reactNativeFileIndex == null) {
                                   reactNativeFileIndex = 0;
                                 }
-                                await size(dependencyMap[25]).getAttachmentFile(reactNativeFileIndex, reactNativeFileIndex);
+                                await size(dependencyMap[26]).getAttachmentFile(reactNativeFileIndex, reactNativeFileIndex);
                                 return value;
                               })),
                   done: false
@@ -1405,7 +1406,7 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
               const obj7 = { value: self, done: true };
               return obj7;
             }
-            obj16 = size(5674);
+            obj16 = size(7307);
           }
         } else {
           if (1 === tmp5) {
@@ -1482,7 +1483,7 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
                         if (fileSize == null) {
                           c3 = 2;
                           c4 = 1;
-                          const obj9 = { value: size(5627).getFileData(uri), done: false };
+                          const obj9 = { value: size(7243).getFileData(uri), done: false };
                           return obj9;
                         }
                       }
@@ -1561,7 +1562,7 @@ CloudUpload["tryConvertToWebP"] = function tryConvertToWebP(file, arg1, id) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -1584,7 +1585,7 @@ CloudUpload["tryConvertToWebP"] = function tryConvertToWebP(file, arg1, id) {
             closure_132_4 = undefined;
             closure_132_5 = undefined;
             closure_132_6 = undefined;
-            const imageAttachmentMezzanineV2Config = unknown_error(hashTimeMs[27]).getImageAttachmentMezzanineV2Config({ location: "CloudUpload.maybeConvertToWebP" });
+            const imageAttachmentMezzanineV2Config = unknown_error(hashTimeMs[28]).getImageAttachmentMezzanineV2Config({ location: "CloudUpload.maybeConvertToWebP" });
             if (imageAttachmentMezzanineV2Config.enabled) {
               if (null == size) {
                 const _HermesInternal6 = HermesInternal;
@@ -1610,7 +1611,7 @@ CloudUpload["tryConvertToWebP"] = function tryConvertToWebP(file, arg1, id) {
                   c7 = 1;
                   c8 = 2;
                   c9 = 1;
-                  const obj4 = { value: tmp97(tmp98[29])(tmp98[28], tmp98.paths), done: false };
+                  const obj4 = { value: tmp97(tmp98[30])(tmp98[29], tmp98.paths), done: false };
                   return obj4;
                 }
               }
@@ -1620,7 +1621,7 @@ CloudUpload["tryConvertToWebP"] = function tryConvertToWebP(file, arg1, id) {
               c9 = 3;
               return { value: null, done: true };
             }
-            const obj9 = unknown_error(hashTimeMs[27]);
+            const obj9 = unknown_error(hashTimeMs[28]);
             tmp97 = unknown_error;
           }
         } else {
@@ -1741,7 +1742,7 @@ CloudUpload["tryConvertToJpeg"] = function tryConvertToJpeg(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -1764,7 +1765,7 @@ CloudUpload["tryConvertToJpeg"] = function tryConvertToJpeg(arg0) {
                 c3 = 1;
                 c4 = 2;
                 c5 = 1;
-                const obj4 = { value: closure_0(tmp32[29])(tmp32[30], tmp32.paths), done: false };
+                const obj4 = { value: closure_0(tmp32[30])(tmp32[31], tmp32.paths), done: false };
                 return obj4;
               }
             }
@@ -1886,7 +1887,7 @@ prototype["applyConversionAnalytics"] = function applyConversionAnalytics(analyt
 prototype["applyItemConversionAnalytics"] = function applyItemConversionAnalytics() {
   const self = this;
   const item = this.item;
-  let tmp = item.platform === Upload2.UploadPlatform.WEB;
+  let tmp = item.platform === UploadPlatform.UploadPlatform.WEB;
   if (tmp) {
     tmp = null != item.imageConversionAnalytics;
   }
@@ -1907,7 +1908,7 @@ prototype["delete"] = function delete() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -1921,10 +1922,10 @@ prototype["delete"] = function delete() {
             const obj4 = { value, done: true };
             return obj4;
           } else if (null != self.uploadedFilename) {
-            const uploadTarget = v3(5674).getUploadTarget(self.item.target);
+            const uploadTarget = v3(7307).getUploadTarget(self.item.target);
             dependencyMap = 1;
             const deleteUploadURL = uploadTarget.getDeleteUploadURL(self.uploadedFilename);
-            const HTTP = v3(1271).HTTP;
+            const HTTP = v3(1282).HTTP;
             c1 = 2;
             v3 = 1;
             const obj5 = { value: HTTP.del(deleteUploadURL), done: false };
@@ -1982,7 +1983,7 @@ prototype["ensureFreshResponseUrl"] = function ensureFreshResponseUrl() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -2004,7 +2005,7 @@ prototype["ensureFreshResponseUrl"] = function ensureFreshResponseUrl() {
             if (responseUrlStale.isResponseUrlStale(self.responseUrlSetAt)) {
               c4 = 1;
               c5 = 1;
-              const obj4 = { value: _self(tmp40[21]).default.getUploadPayload(self), done: false };
+              const obj4 = { value: _self(tmp40[22]).default.getUploadPayload(self), done: false };
               return obj4;
             } else {
               c5 = 3;
@@ -2020,7 +2021,7 @@ prototype["ensureFreshResponseUrl"] = function ensureFreshResponseUrl() {
             return obj5;
           } else {
             closure_128_1 = value;
-            const uploadTarget = _self(tmp40[22]).getUploadTarget(closure_129_0.item.target);
+            const uploadTarget = _self(tmp40[23]).getUploadTarget(closure_129_0.item.target);
             createAttachmentURL = uploadTarget.getCreateAttachmentURL(closure_129_0.channelId);
             c3 = 1;
             const HTTP = _self(tmp40[8]).HTTP;

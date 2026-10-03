@@ -1,21 +1,21 @@
-// === Module 13488: showVoiceChannelBlockedUserWarning ===
+// === Module 13548: showVoiceChannelBlockedUserWarning ===
 
-// Module 13488 (showVoiceChannelBlockedUserWarning)
-import ConstantsIOS from "ConstantsIOS" /* 1094 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1249 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1981 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4809 */;
-import AppStateStore from "AppStateStore" /* 1980 */;
+// Module 13548 (showVoiceChannelBlockedUserWarning)
+import ConstantsIOS from "ConstantsIOS" /* 1105 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
+import AppStateStore from "AppStateStore" /* 1986 */;
 
 require = fn;
-const SharedSpacesWarningStore = fn(13483);
+const SharedSpacesWarningStore = fn(13543);
 ({ queueBlockWarning: closure_4, dequeueBlockWarning: hasOwnProperty } = SharedSpacesWarningStore);
-const constants = fn(13486).VoiceChannelWarningSurfaces;
+const constants = fn(13546).VoiceChannelWarningSurfaces;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/shared_space_warnings/show_voice_channel_warning/showVoiceChannelBlockedUserWarning.native.tsx");
 
 export const showVoiceChannelBlockedUserWarning = function showVoiceChannelBlockedUserWarning(channelId, items1) {
-  const state = AppStateStore.getState();
+  state = AppStateStore.getState();
   if (state === ConstantsIOS.AppStates.ACTIVE) {
     hasOwnProperty();
     const obj2 = { channelId, blockedUserId: items1, impressionName: null, impressionProperties: null };
@@ -26,8 +26,8 @@ export const showVoiceChannelBlockedUserWarning = function showVoiceChannelBlock
     obj3.blocked_user_ids = items;
     obj3.warning_surface = constants.POST_JOIN_SHEET;
     obj2.impressionProperties = obj3;
-    obj.openLazy(asyncRequireImpl(13489, dependencyMap.paths), "gdm_blocked_user_action_sheet", obj2);
-    const tmp11 = asyncRequireImpl(13489, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(13549, dependencyMap.paths), "gdm_blocked_user_action_sheet", obj2);
+    const tmp11 = asyncRequireImpl(13549, dependencyMap.paths);
   } else {
     React4();
   }

@@ -1,11 +1,11 @@
-// === Module 12519: convertRouteToNavigation ===
+// === Module 12559: convertRouteToNavigation ===
 
-// Module 12519 (convertRouteToNavigation)
-import Constants from "Constants" /* 1074 */;
-import matchPathCompat from "matchPathCompat" /* 4689 */;
-import RouteUtils from "RouteUtils" /* 4702 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4721 */;
-import RootNavigationRef from "RootNavigationRef" /* 4722 */;
+// Module 12559 (convertRouteToNavigation)
+import Constants from "Constants" /* 1085 */;
+import matchPathCompat from "matchPathCompat" /* 4704 */;
+import RouteUtils from "RouteUtils" /* 4717 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4736 */;
+import RootNavigationRef from "RootNavigationRef" /* 4737 */;
 import size from "module_2" /* 2 */;
 
 const Routes = Constants.Routes;

@@ -1,7 +1,7 @@
-// === Module 13575: SpatialAudioForVoiceExperiment ===
+// === Module 13637: SpatialAudioForVoiceExperiment ===
 
-// Module 13575 (SpatialAudioForVoiceExperiment)
-import ApexExperiment from "ApexExperiment" /* 1435 */;
+// Module 13637 (SpatialAudioForVoiceExperiment)
+import ApexExperiment from "ApexExperiment" /* 1440 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-05-spatial-audio-for-voice", kind: "user", defaultConfig: { enabled: false }, variations: null };

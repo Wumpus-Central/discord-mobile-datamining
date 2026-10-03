@@ -1,15 +1,15 @@
-// === Module 5674: UploadTargets ===
+// === Module 7307: UploadTargets ===
 
-// Module 5674 (UploadTargets)
-import UploadUtils from "UploadUtils" /* 5627 */;
-import FileUtilsAll from "FileUtils" /* 5632 */;
-import UploadLimits from "UploadLimits" /* 5660 */;
-import GuildProductAttachmentUploadTargetDefault from "GuildProductAttachmentUploadTarget" /* 5675 */;
-import ICYMIAttachmentUploadTargetDefault from "ICYMIAttachmentUploadTarget" /* 5677 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
+// Module 7307 (UploadTargets)
+import UploadUtils from "UploadUtils" /* 7243 */;
+import FileUtilsAll from "FileUtils" /* 7270 */;
+import UploadLimits from "UploadLimits" /* 7295 */;
+import GuildProductAttachmentUploadTargetDefault from "GuildProductAttachmentUploadTarget" /* 7308 */;
+import ICYMIAttachmentUploadTargetDefault from "ICYMIAttachmentUploadTarget" /* 7310 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
 
 require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ Endpoints: hasOwnProperty, MAX_UPLOAD_COUNT: metroRequire } = Constants);
 class MessageAttachmentUploadTarget {
 }

@@ -1,11 +1,13 @@
-// === Module 11909: ForLaterCardStatusHeader ===
+// === Module 11847: ForLaterCardStatusHeader ===
 
-// Module 11909 (ForLaterCardStatusHeader)
+// Module 11847 (ForLaterCardStatusHeader)
 import _mod17 from "module_17" /* 17 */;
-import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4841 */;
+import c from "c" /* 576 */;
+import nativeDefault from "native" /* 587 */;
+import Text_Text from "Text/Text" /* 4886 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4845 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;
@@ -16,9 +18,89 @@ obj.icon = { padding: 6, borderRadius: nativeDefault.radii.sm, backgroundColor: 
 obj.label = { flexShrink: 1 };
 obj.actionsContainer = { marginVertical: -4, marginLeft: "auto" };
 let closure_6 = createStyles.createStyles(obj);
+let obj3 = { padding: 6, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT };
 const result = size.fileFinishedImporting("modules/saved_messages/native/ForLaterCardStatusHeader.tsx");
 
-export const ForLaterCardStatusHeader = function ForLaterCardStatusHeader(isCritical) {
+export const ForLaterCardStatusHeader = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(19);
+  ({ IconComponent, label, isCritical, lineClamp, actions } = arg0);
+  const tmp5 = closure_6();
+  const colors = nativeDefault.colors;
+  const tmp6 = undefined !== isCritical && isCritical ? colors.TEXT_FEEDBACK_CRITICAL : colors.INTERACTIVE_TEXT_DEFAULT;
+  if (cResult[0] === IconComponent) {
+    if (cResult[1] === tmp6) {
+      let tmp7 = cResult[2];
+    }
+    if (cResult[3] === tmp5.icon) {
+      if (cResult[4] === tmp7) {
+        let tmp9 = cResult[5];
+      }
+      let str = "mobile-text-heading-primary";
+      if (tmp4) {
+        str = "text-feedback-critical";
+      }
+      if (cResult[6] === label) {
+        if (cResult[7] === lineClamp) {
+          if (cResult[8] === tmp5.label) {
+            if (cResult[9] === str) {
+              let tmp13 = cResult[10];
+            }
+            if (cResult[11] === actions) {
+              if (cResult[12] === tmp5.actionsContainer) {
+                let tmp16 = cResult[13];
+              }
+              if (cResult[14] === tmp5.container) {
+                if (cResult[15] === tmp9) {
+                  if (cResult[16] === tmp13) {
+                    if (cResult[17] === tmp16) {
+                      let tmp20 = cResult[18];
+                    }
+                    return tmp20;
+                  }
+                }
+              }
+              const obj2 = { style: tmp5.container, children: null };
+              const items = [tmp9, tmp13, tmp16];
+              obj2.children = items;
+              const tmp23 = hasOwnProperty(View, obj2);
+              cResult[14] = tmp5.container;
+              cResult[15] = tmp9;
+              cResult[16] = tmp13;
+              cResult[17] = tmp16;
+              cResult[18] = tmp23;
+              tmp20 = tmp23;
+            }
+            const obj3 = { style: tmp5.actionsContainer, children: actions };
+            const tmp19 = React4(View, obj3);
+            cResult[11] = actions;
+            cResult[12] = tmp5.actionsContainer;
+            cResult[13] = tmp19;
+            tmp16 = tmp19;
+          }
+        }
+      }
+      const obj4 = { variant: "text-md/semibold", color: str, style: tmp5.label, lineClamp, children: label };
+      const tmp15 = React4(Text_Text.Text, obj4);
+      cResult[6] = label;
+      cResult[7] = lineClamp;
+      cResult[8] = tmp5.label;
+      cResult[9] = str;
+      cResult[10] = tmp15;
+      tmp13 = tmp15;
+    }
+    const obj5 = { style: tmp5.icon, children: tmp7 };
+    const tmp12 = React4(View, obj5);
+    cResult[3] = tmp5.icon;
+    cResult[4] = tmp7;
+    cResult[5] = tmp12;
+    tmp9 = tmp12;
+  }
+  const tmp8 = React4(IconComponent, { size: "xxs", color: tmp6 });
+  cResult[0] = IconComponent;
+  cResult[1] = tmp6;
+  cResult[2] = tmp8;
+  tmp7 = tmp8;
+}) : ((isCritical) => {
   let flag = isCritical.isCritical;
   ({ IconComponent, label } = isCritical);
   if (flag === undefined) {
@@ -44,4 +126,4 @@ export const ForLaterCardStatusHeader = function ForLaterCardStatusHeader(isCrit
   items[2] = React4(View, { style: tmp.actionsContainer, children: actions });
   obj.children = items;
   return hasOwnProperty(View, obj);
-};
+});

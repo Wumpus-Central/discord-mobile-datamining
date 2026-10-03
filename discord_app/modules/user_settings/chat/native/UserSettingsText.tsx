@@ -1,35 +1,215 @@
-// === Module 15225: UserSettingsText ===
+// === Module 15281: UserSettingsText ===
 
-// Module 15225 (UserSettingsText)
-import nativeDefault from "native" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import UserSettings from "UserSettings" /* 2021 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6597 */;
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 8850 */;
+// Module 15281 (UserSettingsText)
+import nativeDefault from "native" /* 587 */;
+import util from "util" /* 1126 */;
+import native from "native" /* 1188 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import UserSettings from "UserSettings" /* 2028 */;
+import Text_Text from "Text/Text" /* 4886 */;
+import TableRadioRow from "TableRadioRow" /* 6071 */;
+import TableRadioGroup from "TableRadioGroup" /* 6072 */;
+import TableRowGroup from "TableRowGroup" /* 6074 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6487 */;
+import TableSwitchRow from "TableSwitchRow" /* 6698 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 8863 */;
+import _modDef10124 from "module_10124" /* 10124 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1372 */;
-import SubscriptionStore from "SubscriptionStore" /* 4523 */;
-import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1183 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1184 */;
+import UserStore from "UserStore" /* 1377 */;
+import SubscriptionStore from "SubscriptionStore" /* 4534 */;
+import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1194 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1195 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const VideoQualitySettings = fn(1184).VideoQualitySettings;
-const Constants = fn(1074);
+const VideoQualitySettings = fn(1195).VideoQualitySettings;
+const Constants = fn(1085);
 ({ AnalyticEvents: closure_9, AnalyticsSections: c10, UserSettingsSections: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = { flex: { flex: 1 }, nitroUpsell: { flexDirection: "row", alignItems: "center" }, nitroIcon: null };
 let size = { width: 16, height: 16, tintColor: nativeDefault.unsafe_rawColors.PRIMARY_400 };
 obj2.nitroIcon = size;
 let closure_15 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+function setDataSavingMode(dataSavingMode) {
+  dataSavingMode = dataSavingMode.dataSavingMode;
+  ({ videoUploadQuality, viewImageDescriptions, lowQualityImageMode } = dataSavingMode);
+  AnalyticsUtilsDefault.track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, { video_upload_quality: videoUploadQuality, image_descriptions: viewImageDescriptions, low_quality_image_mode: lowQualityImageMode, data_saving_mode: dataSavingMode, updated_setting: "data_saving_mode" });
+  const result = UserSettingsActionCreatorsDefault.updatedUnsyncedSettings({ dataSavingMode });
+}
+function setVideoUploadQuality(videoUploadQuality) {
+  videoUploadQuality = videoUploadQuality.videoUploadQuality;
+  ({ viewImageDescriptions, lowQualityImageMode, dataSavingMode } = videoUploadQuality);
+  AnalyticsUtilsDefault.track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, { video_upload_quality: videoUploadQuality, image_descriptions: viewImageDescriptions, low_quality_image_mode: lowQualityImageMode, data_saving_mode: dataSavingMode, updated_setting: "video_upload_quality" });
+  const result = UserSettingsActionCreatorsDefault.updatedUnsyncedSettings({ videoUploadQuality });
+}
+function setImageDescriptions(viewImageDescriptions) {
+  viewImageDescriptions = viewImageDescriptions.viewImageDescriptions;
+  ({ videoUploadQuality, lowQualityImageMode, dataSavingMode } = viewImageDescriptions);
+  AnalyticsUtilsDefault.track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, { video_upload_quality: videoUploadQuality, image_descriptions: viewImageDescriptions, low_quality_image_mode: lowQualityImageMode, data_saving_mode: dataSavingMode, updated_setting: "image_descriptions" });
+  const ViewImageDescriptions = UserSettings.ViewImageDescriptions;
+  ViewImageDescriptions.updateSetting(viewImageDescriptions);
+}
 size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/chat/native/UserSettingsText.tsx");
 
-export default function UserSettingsText() {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = require("c").c(74);
+  let obj = require("c");
+  const token = require("useToken").useToken(setting(setting1[9]).modules.mobile.TABLE_ROW_PADDING);
+  let obj2 = require("useToken");
+  _require = closure_15();
+  const InlineAttachmentMedia = require("UserSettings").InlineAttachmentMedia;
+  setting = InlineAttachmentMedia.useSetting();
+  const InlineEmbedMedia = require("UserSettings").InlineEmbedMedia;
+  setting1 = InlineEmbedMedia.useSetting();
+  const RenderEmbeds = require("UserSettings").RenderEmbeds;
+  const setting2 = RenderEmbeds.useSetting();
+  const RenderReactions = require("UserSettings").RenderReactions;
+  const setting3 = RenderReactions.useSetting();
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    let items = [dataSavingMode];
+    const fn = function p() {
+      return { lowQualityImageMode: dataSavingMode.dataSavingMode, videoUploadQuality: dataSavingMode.videoUploadQuality, dataSavingMode: dataSavingMode.dataSavingMode };
+    };
+    cResult[0] = items;
+    cResult[1] = fn;
+    tmp10 = items;
+    tmp11 = fn;
+  } else {
+    [tmp10, tmp11] = cResult;
+  }
+  const tmp5 = closure_15();
+  const stateFromStoresObject = require("initialize").useStateFromStoresObject(tmp10, tmp11);
+  const lowQualityImageMode = stateFromStoresObject.lowQualityImageMode;
+  const videoUploadQuality = stateFromStoresObject.videoUploadQuality;
+  dataSavingMode = stateFromStoresObject.dataSavingMode;
+  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+    let items1 = [lowQualityImageMode];
+    class D {
+      constructor() {
+        return lowQualityImageMode.getPremiumTypeSubscription();
+      }
+    }
+    cResult[2] = items1;
+    cResult[3] = D;
+    let tmp15 = D;
+    let tmp14 = items1;
+  } else {
+    tmp14 = cResult[2];
+    tmp15 = cResult[3];
+  }
+  const tmpResult = require("initialize");
+  const stateFromStores = require("initialize").useStateFromStores(tmp14, tmp15);
+  if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+    const items2 = [setting3];
+    class D {
+      constructor() {
+        return lowQualityImageMode.getPremiumTypeSubscription();
+      }
+    }
+    cResult[4] = items2;
+    cResult[5] = tmp21;
+    let tmp19 = tmp21;
+    let tmp18 = items2;
+  } else {
+    tmp18 = cResult[4];
+    tmp19 = cResult[5];
+  }
+  const tmpResult5 = require("initialize");
+  const stateFromStores1 = require("initialize").useStateFromStores(tmp18, tmp19);
+  if (cResult[6] === stateFromStores) {
+    if (cResult[7] === stateFromStores1) {
+      let tmp23 = cResult[8];
+    }
+    closure_8 = tmp23;
+    const _Symbol = Symbol;
+    class D {
+      constructor() {
+        return lowQualityImageMode.getPremiumTypeSubscription();
+      }
+    }
+    if (tmp25 === Symbol.for("react.memo_cache_sentinel")) {
+      const items3 = [videoUploadQuality];
+      class N {
+        constructor() {
+          return videoUploadQuality.shouldSync("text");
+        }
+      }
+      cResult[9] = items3;
+      cResult[10] = N;
+      let tmp27 = N;
+      let tmp26 = items3;
+    } else {
+      tmp26 = cResult[9];
+      tmp27 = cResult[10];
+    }
+    const stateFromStores2 = tmp(tmp2[16]).useStateFromStores(tmp26, tmp27);
+    let ViewImageDescriptions = tmp(tmp2[11]).ViewImageDescriptions;
+    const setting4 = ViewImageDescriptions.useSetting();
+    const _Symbol2 = Symbol;
+    if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
+      class L {
+        constructor(arg0) {
+          obj = closure_1(closure_2[12]);
+          result = obj.setShouldSyncTextSettings(arg0);
+          return;
+        }
+      }
+      cResult[11] = L;
+      class N {
+        constructor() {
+          return videoUploadQuality.shouldSync("text");
+        }
+      }
+    } else {
+      class L {
+        constructor(arg0) {
+          obj = closure_1(closure_2[12]);
+          result = obj.setShouldSyncTextSettings(arg0);
+          return;
+        }
+      }
+    }
+    const onValueChange = tmp31;
+    if (cResult[12] === lowQualityImageMode) {
+      class L {
+        constructor(arg0) {
+          obj = closure_1(closure_2[12]);
+          result = obj.setShouldSyncTextSettings(arg0);
+          return;
+        }
+      }
+    }
+    class W {
+      constructor(arg0) {
+        obj = closure_1(closure_2[10]);
+        obj1 = { video_upload_quality: videoUploadQuality, image_descriptions: closure_10, low_quality_image_mode: lowQualityImageMode, data_saving_mode: arg0, updated_setting: "data_saving_mode" };
+        trackResult = obj.track(AnalyticEvents.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, obj1);
+        obj3 = closure_1(closure_2[12]);
+        obj5 = { dataSavingMode: arg0 };
+        result = obj3.updatedUnsyncedSettings(obj5);
+        return;
+      }
+    }
+    cResult[12] = lowQualityImageMode;
+    cResult[13] = videoUploadQuality;
+    cResult[14] = setting4;
+    cResult[15] = W;
+    const tmpResult7 = tmp(tmp2[16]);
+  }
+  const tmpResult6 = require("initialize");
+  let result = require("PremiumUtils").hasPremiumSubscriptionToDisplay(stateFromStores1, stateFromStores);
+  cResult[6] = stateFromStores;
+  cResult[7] = stateFromStores1;
+  cResult[8] = result;
+  tmp23 = result;
+  const tmpResult8 = require("PremiumUtils");
+}) : (() => {
   const token = require("useToken").useToken(videoUploadQuality(dataSavingMode[9]).modules.mobile.TABLE_ROW_PADDING);
   const tmp5 = closure_15();
   const InlineAttachmentMedia = require("UserSettings").InlineAttachmentMedia;
@@ -130,14 +310,14 @@ export default function UserSettingsText() {
   let tmp18Result = !result;
   if (!result) {
     const obj20 = { style: tmp5.nitroUpsell, children: null };
-    const obj21 = { source: videoUploadQuality(tmp2[19]), size: require("native").Icon.Sizes.SMALL, style: tmp5.nitroIcon };
+    const obj21 = { source: videoUploadQuality(tmp2[24]), size: require("native").Icon.Sizes.SMALL, style: tmp5.nitroIcon };
     const items9 = [closure_12(require("native").Icon, obj21), ];
     const obj22 = { variant: "text-sm/medium", color: "text-muted", style: { marginLeft: 4 }, children: null };
     const intl12 = require("util").intl;
     const obj23 = {
       onClick() {
-          UserSettingsModalActionCreatorsDefault.setSection(constants3.PREMIUM);
-          closure_4.push(constants3.PREMIUM, { isFromTextSection: true });
+          UserSettingsModalActionCreatorsDefault.setSection(constants2.PREMIUM);
+          closure_4.push(constants2.PREMIUM, { isFromTextSection: true });
         }
     };
     obj22.children = intl12.format(require("util").t.uW1zul, obj23);
@@ -204,9 +384,9 @@ export default function UserSettingsText() {
   obj24.children = closure_13(require("Stack/Stack").Stack, obj9);
   obj8.children = closure_12(require("Form").Form, obj24);
   return closure_12(setting4, obj8);
-};
+});
 export const setStickerAutocomplete = function setStickerAutocomplete(enabled) {
-  const obj2 = { enabled, location: { section: constants2.SETTINGS_TEXT_AND_IMAGES } };
+  const obj2 = { enabled, location: { section: image_descriptions.SETTINGS_TEXT_AND_IMAGES } };
   AnalyticsUtilsDefault.track(constants.STICKERS_IN_AUTOCOMPLETE_TOGGLED, obj2);
   const IncludeStickersInAutocomplete = UserSettings.IncludeStickersInAutocomplete;
   IncludeStickersInAutocomplete.updateSetting(enabled);
@@ -217,22 +397,6 @@ export const setLowQualityImageMode = function setLowQualityImageMode(lowQuality
   AnalyticsUtilsDefault.track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, { video_upload_quality: videoUploadQuality, image_descriptions: viewImageDescriptions, low_quality_image_mode: lowQualityImageMode, data_saving_mode: dataSavingMode, updated_setting: "low_quality_image_mode" });
   const result = UserSettingsActionCreatorsDefault.updatedUnsyncedSettings({ lowQualityImageMode });
 };
-export const setDataSavingMode = function setDataSavingMode(dataSavingMode) {
-  dataSavingMode = dataSavingMode.dataSavingMode;
-  ({ videoUploadQuality, viewImageDescriptions, lowQualityImageMode } = dataSavingMode);
-  AnalyticsUtilsDefault.track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, { video_upload_quality: videoUploadQuality, image_descriptions: viewImageDescriptions, low_quality_image_mode: lowQualityImageMode, data_saving_mode: dataSavingMode, updated_setting: "data_saving_mode" });
-  const result = UserSettingsActionCreatorsDefault.updatedUnsyncedSettings({ dataSavingMode });
-};
-export const setVideoUploadQuality = function setVideoUploadQuality(videoUploadQuality) {
-  videoUploadQuality = videoUploadQuality.videoUploadQuality;
-  ({ viewImageDescriptions, lowQualityImageMode, dataSavingMode } = videoUploadQuality);
-  AnalyticsUtilsDefault.track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, { video_upload_quality: videoUploadQuality, image_descriptions: viewImageDescriptions, low_quality_image_mode: lowQualityImageMode, data_saving_mode: dataSavingMode, updated_setting: "video_upload_quality" });
-  const result = UserSettingsActionCreatorsDefault.updatedUnsyncedSettings({ videoUploadQuality });
-};
-export const setImageDescriptions = function setImageDescriptions(viewImageDescriptions) {
-  viewImageDescriptions = viewImageDescriptions.viewImageDescriptions;
-  ({ videoUploadQuality, lowQualityImageMode, dataSavingMode } = viewImageDescriptions);
-  AnalyticsUtilsDefault.track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, { video_upload_quality: videoUploadQuality, image_descriptions: viewImageDescriptions, low_quality_image_mode: lowQualityImageMode, data_saving_mode: dataSavingMode, updated_setting: "image_descriptions" });
-  const ViewImageDescriptions = UserSettings.ViewImageDescriptions;
-  ViewImageDescriptions.updateSetting(viewImageDescriptions);
-};
+export { setDataSavingMode };
+export { setVideoUploadQuality };
+export { setImageDescriptions };

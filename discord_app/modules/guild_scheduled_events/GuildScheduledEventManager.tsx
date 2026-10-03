@@ -1,11 +1,11 @@
-// === Module 9265: GuildScheduledEventManager ===
+// === Module 9271: GuildScheduledEventManager ===
 
-// Module 9265 (GuildScheduledEventManager)
-import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 9174 */;
+// Module 9271 (GuildScheduledEventManager)
+import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 9178 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4684 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7134 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6725 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7037 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
 
 function getGuildEventsForCurrentUser() {
   const self = this;
@@ -28,7 +28,7 @@ let closure_10 = async function _getGuildEventsForCurrentUser(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -174,7 +174,7 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       while (true) {
@@ -201,7 +201,7 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen() {
               _self = guildScheduledEventsForGuild[Symbol.iterator]();
             }
             c7 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else if (1 === tmp4) {
           c5 = 0;
@@ -265,7 +265,7 @@ prototype["handleGuildDelete"] = function handleGuildDelete(guild) {
 };
 prototype["handleInviteResolveSuccess"] = function handleInviteResolveSuccess(invite) {
   invite = invite.invite;
-  const guild = invite.guild;
+  guild = invite.guild;
   let id;
   if (guild != null) {
     id = guild.id;
@@ -289,7 +289,7 @@ prototype["handleChannelSelect"] = function handleChannelSelect(guildId) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       while (true) {
@@ -312,7 +312,7 @@ prototype["handleChannelSelect"] = function handleChannelSelect(guildId) {
               guildId = guildScheduledEventsForGuild[Symbol.iterator]();
             }
             c9 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else if (1 === tmp4) {
           c6 = 0;

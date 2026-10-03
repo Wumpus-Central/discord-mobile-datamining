@@ -1,10 +1,10 @@
-// === Module 14279: vibegrationsVoice ===
+// === Module 14347: vibegrationsVoice ===
 
-// Module 14279 (vibegrationsVoice)
-import Constants2 from "Constants" /* 1074 */;
-import VibegrationsVoiceSessionCoordinatorDefault from "VibegrationsVoiceSessionCoordinator" /* 14229 */;
-import Constants from "Constants" /* 5270 */;
-import CONTEXT_MENU_ICON_NAMES_mod from "CONTEXT_MENU_ICON_NAMES" /* 14247 */;
+// Module 14347 (vibegrationsVoice)
+import Constants2 from "Constants" /* 1085 */;
+import VibegrationsVoiceSessionCoordinatorDefault from "VibegrationsVoiceSessionCoordinator" /* 14297 */;
+import Constants from "Constants" /* 5316 */;
+import CONTEXT_MENU_ICON_NAMES_mod from "CONTEXT_MENU_ICON_NAMES" /* 14315 */;
 import size from "module_2" /* 2 */;
 
 ({ RPC_AUTHENTICATED_SCOPE, RPC_EMBEDDED_APP_SCOPE, RPC_SCOPE_CONFIG } = Constants);

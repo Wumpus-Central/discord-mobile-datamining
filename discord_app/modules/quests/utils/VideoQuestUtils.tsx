@@ -1,18 +1,18 @@
 // === Module 10940: VideoQuestUtils ===
 
 // Module 10940 (VideoQuestUtils)
-import util from "util" /* 1115 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4721 */;
-import QuestDataUtils from "QuestDataUtils" /* 7285 */;
-import AnalyticsActions from "AnalyticsActions" /* 7304 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7310 */;
-import QuestActionCreators from "QuestActionCreators" /* 10888 */;
-import NetworkStore from "NetworkStore" /* 4894 */;
-import QuestStore from "QuestStore" /* 7289 */;
-import VideoQuestUIStore from "VideoQuestUIStore" /* 7291 */;
+import util from "util" /* 1126 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4736 */;
+import QuestDataUtils from "QuestDataUtils" /* 7183 */;
+import AnalyticsActions from "AnalyticsActions" /* 7202 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7208 */;
+import QuestActionCreators from "QuestActionCreators" /* 9994 */;
+import NetworkStore from "NetworkStore" /* 4939 */;
+import QuestStore from "QuestStore" /* 7187 */;
+import VideoQuestUIStore from "VideoQuestUIStore" /* 7189 */;
 
 require = fn;
-const AnalyticEvents = fn(1074).AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 const portrait = "portrait";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/utils/VideoQuestUtils.tsx");
@@ -111,7 +111,7 @@ export const getVideoQuestEndCardCtaText = function getVideoQuestEndCardCtaText(
 };
 export const handleVideoQuestModalClose = function handleVideoQuestModalClose(arg0) {
   ({ questId, sourceQuestContent, videoSessionId } = arg0);
-  const state = VideoQuestUIStore.getState();
+  state = VideoQuestUIStore.getState();
   state.setTranscriptEnabled(false);
   const state1 = VideoQuestUIStore.getState();
   const videoProgress = state1.getVideoProgress(questId);

@@ -1,8 +1,8 @@
-// === Module 12269: AppliedGuildBoostStore ===
+// === Module 12221: AppliedGuildBoostStore ===
 
-// Module 12269 (AppliedGuildBoostStore)
+// Module 12221 (AppliedGuildBoostStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
 
 function handleModifyingAppliedBoostStart() {
   c4 = true;

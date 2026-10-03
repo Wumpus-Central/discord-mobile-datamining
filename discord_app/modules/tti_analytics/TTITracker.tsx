@@ -689,8 +689,8 @@ prototype5["setEarlyCacheInfo"] = function setEarlyCacheInfo(earlyCacheInfo) {
 prototype5["setLazyCacheInfo"] = function setLazyCacheInfo(lazyCacheInfo) {
   this.lazyCacheInfo = lazyCacheInfo;
 };
-prototype5["setInterstitial"] = function setInterstitial(ChannelSpoiler) {
-  this.interstitial = ChannelSpoiler;
+prototype5["setInterstitial"] = function setInterstitial(setInterstitialResult2) {
+  this.interstitial = setInterstitialResult2;
   loggerCallback();
 };
 prototype5["addLocalMessages"] = function addLocalMessages(arg0, length) {

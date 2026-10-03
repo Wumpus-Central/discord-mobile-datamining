@@ -1,12 +1,12 @@
-// === Module 9132: SafeAreaDisabledStore ===
+// === Module 9156: SafeAreaDisabledStore ===
 
-// Module 9132 (SafeAreaDisabledStore)
-import module_560 from "module_560" /* 560 */;
+// Module 9156 (SafeAreaDisabledStore)
+import module_570 from "module_570" /* 570 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/panels/morphable/native/SafeAreaDisabledStore.tsx");
 
-export default module_560.create((arg0, arg1) => {
+export default module_570.create((arg0, arg1) => {
   closure_0 = arg0;
   dependencyMap = arg1;
   let obj = {
@@ -16,7 +16,7 @@ export default module_560.create((arg0, arg1) => {
     },
     requestSafeAreaDisableLock(arg0) {
       ({ key: closure_0, lockEnabled: closure_1 } = arg0);
-      closure_0(1248).batchUpdates(() => {
+      closure_0(1259).batchUpdates(() => {
         closure_0((lockKeys) => {
           lockKeys = lockKeys.lockKeys;
           const hasItem = lockKeys.has(closure_1_0);

@@ -1,7 +1,7 @@
-// === Module 6670: useFastestListSections ===
+// === Module 6560: useFastestListSections ===
 
-// Module 6670 (useFastestListSections)
-import FastestListItemTypeDefault from "FastestListItemType" /* 6671 */;
+// Module 6560 (useFastestListSections)
+import FastestListItemTypeDefault from "FastestListItemType" /* 6561 */;
 import noop from "module_19" /* 19 */;
 
 const size = fn(2);

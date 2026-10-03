@@ -1,15 +1,53 @@
-// === Module 9989: useMaybeAddPollsMarketingEasterEggNote ===
+// === Module 9938: useMaybeAddPollsMarketingEasterEggNote ===
 
-// Module 9989 (useMaybeAddPollsMarketingEasterEggNote)
+// Module 9938 (useMaybeAddPollsMarketingEasterEggNote)
 import initialize from "initialize" /* 504 */;
-import util from "util" /* 1115 */;
-import LocaleStore from "LocaleStore" /* 2111 */;
+import c from "c" /* 576 */;
+import util from "util" /* 1126 */;
+import LocaleStore from "LocaleStore" /* 2116 */;
 
 require = fn;
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/polls/useMaybeAddPollsMarketingEasterEggNote.tsx");
 
-export default function useMaybeAddPollsMarketingEasterEggNote(emojiName) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((emojiName) => {
+  const cResult = c.c(5);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [LocaleStore];
+    const fn = function l() {
+      locale = locale.locale;
+      return locale.startsWith("en-");
+    };
+    cResult[0] = items;
+    cResult[1] = fn;
+    tmp4 = items;
+    tmp5 = fn;
+  } else {
+    [tmp4, tmp5] = cResult;
+  }
+  const stateFromStores = initialize.useStateFromStores(tmp4, tmp5);
+  if (cResult[2] === emojiName) {
+    if (cResult[3] === stateFromStores) {
+      let tmp8 = cResult[4];
+    }
+    return tmp8;
+  }
+  let formatToPlainStringResult = emojiName;
+  if (":pizza:" === emojiName) {
+    formatToPlainStringResult = emojiName;
+    if (stateFromStores) {
+      const intl = util.intl;
+      const obj2 = { emojiName };
+      formatToPlainStringResult = intl.formatToPlainString(util.t["1knDPI"], obj2);
+    }
+  }
+  cResult[2] = emojiName;
+  cResult[3] = stateFromStores;
+  cResult[4] = formatToPlainStringResult;
+  tmp8 = formatToPlainStringResult;
+  const tmpResult = initialize;
+}) : ((emojiName) => {
   initialize;
   [][0] = LocaleStore;
   let formatToPlainStringResult = emojiName;
@@ -22,4 +60,4 @@ export default function useMaybeAddPollsMarketingEasterEggNote(emojiName) {
     }
   }
   return formatToPlainStringResult;
-};
+});

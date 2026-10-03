@@ -1,27 +1,27 @@
-// === Module 12153: SpamMessageHamActionSheet ===
+// === Module 12089: SpamMessageHamActionSheet ===
 
-// Module 12153 (SpamMessageHamActionSheet)
+// Module 12089 (SpamMessageHamActionSheet)
 import initialize from "initialize" /* 504 */;
-import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1115 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4557 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4809 */;
-import components_Button_Button from "components/Button/Button" /* 5465 */;
-import _modDef6095 from "module_6095" /* 6095 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6756 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6757 */;
-import ActionSheetCloseButton from "ActionSheetCloseButton" /* 6805 */;
-import Form from "Form" /* 8239 */;
-import useMessageRequestActions from "useMessageRequestActions" /* 12148 */;
+import nativeDefault from "native" /* 587 */;
+import util from "util" /* 1126 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4568 */;
+import _modDef4807 from "module_4807" /* 4807 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
+import components_Button_Button from "components/Button/Button" /* 5594 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 6644 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6645 */;
+import ActionSheetCloseButton from "ActionSheetCloseButton" /* 6696 */;
+import Form from "Form" /* 8895 */;
+import useMessageRequestActions from "useMessageRequestActions" /* 12084 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1372 */;
+import UserStore from "UserStore" /* 1377 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = { header: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, container: null, buttonContainer: null, switch: null };
 const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.container = { marginTop: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_16 };
@@ -29,10 +29,160 @@ let obj4 = { marginTop: nativeDefault.space.PX_24, paddingHorizontal: nativeDefa
 obj2.buttonContainer = { marginTop: nativeDefault.space.PX_24 };
 obj2.switch = { paddingHorizontal: 0 };
 let closure_9 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj5 = { marginTop: nativeDefault.space.PX_24 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_request/native/spam/SpamMessageHamActionSheet.tsx");
 
-export default function SpamMessageRequestHamActionSheet(arg0) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
+  const cResult = channel(onCancel[8]).c(44);
+  channel = channel.channel;
+  const onConfirm = channel.onConfirm;
+  onCancel = channel.onCancel;
+  closure_9();
+  const tmp5 = first(noop.useState(false), 2);
+  first = tmp5[0];
+  noop = tmp5[1];
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    class S {
+      constructor() {
+        obj = onConfirm(onCancel[9]);
+        obj1 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
+        intl = channel(onCancel[10]).intl;
+        obj1.content = intl.string(channel(onCancel[10]).t["EDYbS+"]);
+        obj1.icon = onConfirm(onCancel[11]);
+        openResult = obj.open(obj1);
+        return;
+      }
+    }
+    cResult[0] = S;
+  } else {
+    class S {
+      constructor() {
+        obj = onConfirm(onCancel[9]);
+        obj1 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
+        intl = channel(onCancel[10]).intl;
+        obj1.content = intl.string(channel(onCancel[10]).t["EDYbS+"]);
+        obj1.icon = onConfirm(onCancel[11]);
+        openResult = obj.open(obj1);
+        return;
+      }
+    }
+  }
+  if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
+    class S {
+      constructor() {
+        obj = onConfirm(onCancel[9]);
+        obj1 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
+        intl = channel(onCancel[10]).intl;
+        obj1.content = intl.string(channel(onCancel[10]).t["EDYbS+"]);
+        obj1.icon = onConfirm(onCancel[11]);
+        openResult = obj.open(obj1);
+        return;
+      }
+    }
+    cResult[1] = tmp9;
+  } else {
+    class S {
+      constructor() {
+        obj = onConfirm(onCancel[9]);
+        obj1 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
+        intl = channel(onCancel[10]).intl;
+        obj1.content = intl.string(channel(onCancel[10]).t["EDYbS+"]);
+        obj1.icon = onConfirm(onCancel[11]);
+        openResult = obj.open(obj1);
+        return;
+      }
+    }
+  }
+  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+    class S {
+      constructor() {
+        obj = onConfirm(onCancel[9]);
+        obj1 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
+        intl = channel(onCancel[10]).intl;
+        obj1.content = intl.string(channel(onCancel[10]).t["EDYbS+"]);
+        obj1.icon = onConfirm(onCancel[11]);
+        openResult = obj.open(obj1);
+        return;
+      }
+    }
+    const items = [UserStore];
+    cResult[2] = items;
+    const tmp10 = items;
+  } else {
+    class S {
+      constructor() {
+        obj = onConfirm(onCancel[9]);
+        obj1 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
+        intl = channel(onCancel[10]).intl;
+        obj1.content = intl.string(channel(onCancel[10]).t["EDYbS+"]);
+        obj1.icon = onConfirm(onCancel[11]);
+        openResult = obj.open(obj1);
+        return;
+      }
+    }
+  }
+  if (cResult[3] !== channel) {
+    class P {
+      constructor() {
+        return closure_6.getUser(channel.getRecipientId());
+      }
+    }
+    cResult[3] = channel;
+    cResult[4] = P;
+  } else {
+    class P {
+      constructor() {
+        return closure_6.getUser(channel.getRecipientId());
+      }
+    }
+  }
+  const obj = channel(onCancel[8]);
+  const stateFromStores = channel(onCancel[13]).useStateFromStores(tmp10, P);
+  if (cResult[5] !== stateFromStores) {
+    class P {
+      constructor() {
+        return closure_6.getUser(channel.getRecipientId());
+      }
+    }
+    tmp14[0] = stateFromStores;
+    tmp14[1] = S;
+    tmp14[2] = tmp9;
+    cResult[5] = stateFromStores;
+    cResult[6] = tmp14;
+  } else {
+    class P {
+      constructor() {
+        return closure_6.getUser(channel.getRecipientId());
+      }
+    }
+  }
+  const tmpResult = channel(onCancel[13]);
+  const messageRequestActions = channel(onCancel[14]).useMessageRequestActions(tmp14);
+  const acceptMessageRequest = messageRequestActions.acceptMessageRequest;
+  ({ isAcceptLoading, isOptimisticAccepted } = messageRequestActions);
+  if (cResult[7] === acceptMessageRequest) {
+    class P {
+      constructor() {
+        return closure_6.getUser(channel.getRecipientId());
+      }
+    }
+  }
+  class L {
+    constructor() {
+      tmp = onConfirm(closure_3);
+      tmp2 = acceptMessageRequest(channel.id);
+      return;
+    }
+  }
+  cResult[7] = acceptMessageRequest;
+  cResult[8] = channel.id;
+  cResult[9] = first;
+  cResult[10] = onConfirm;
+  cResult[11] = L;
+  const tmpResult2 = channel(onCancel[14]);
+}) : ((arg0) => {
   ({ channel: require, onConfirm: importDefault, onCancel: dependencyMap } = arg0);
   value = undefined;
   noop = undefined;
@@ -47,9 +197,9 @@ export default function SpamMessageRequestHamActionSheet(arg0) {
     user: stateFromStores,
     onError() {
       const obj2 = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
-      const intl = recipientId(1115).intl;
-      obj2.content = intl.string(recipientId(1115).t["EDYbS+"]);
-      obj2.icon = _modDef6095;
+      const intl = recipientId(1126).intl;
+      obj2.content = intl.string(recipientId(1126).t["EDYbS+"]);
+      obj2.icon = _modDef4807;
       ToastActionCreatorsDefault.open(obj2);
     },
     onAcceptSuccess() {
@@ -115,4 +265,4 @@ export default function SpamMessageRequestHamActionSheet(arg0) {
   items1[1] = closure_8(c5, obj7);
   obj4.children = items1;
   return closure_8(Sheet_BottomSheet.BottomSheet, obj4);
-};
+});

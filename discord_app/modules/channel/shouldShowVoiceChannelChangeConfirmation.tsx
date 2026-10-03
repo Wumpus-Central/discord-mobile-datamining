@@ -1,11 +1,11 @@
-// === Module 12696: shouldShowVoiceChannelChangeConfirmation ===
+// === Module 12732: shouldShowVoiceChannelChangeConfirmation ===
 
-// Module 12696 (shouldShowVoiceChannelChangeConfirmation)
-import GameConsoleStore from "GameConsoleStore" /* 4862 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1184 */;
+// Module 12732 (shouldShowVoiceChannelChangeConfirmation)
+import GameConsoleStore from "GameConsoleStore" /* 4907 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1195 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import VoiceStateStore from "VoiceStateStore" /* 4864 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import VoiceStateStore from "VoiceStateStore" /* 4909 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/shouldShowVoiceChannelChangeConfirmation.tsx");
@@ -21,7 +21,7 @@ export const shouldShowVoiceChannelChangeConfirmation = function shouldShowVoice
       if (VoiceStateStore.isInChannel(id.id)) {
         return false;
       } else {
-        const guild = GuildStore.getGuild(id.getGuildId());
+        guild = GuildStore.getGuild(id.getGuildId());
         let afkChannelId;
         if (guild != null) {
           afkChannelId = guild.afkChannelId;

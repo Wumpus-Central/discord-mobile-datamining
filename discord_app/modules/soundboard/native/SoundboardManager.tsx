@@ -1,16 +1,16 @@
-// === Module 14308: SoundboardManager ===
+// === Module 14376: SoundboardManager ===
 
-// Module 14308 (SoundboardManager)
+// Module 14376 (SoundboardManager)
 import LoggerDefault from "Logger" /* 3 */;
-import SoundboardActionCreators from "SoundboardActionCreators" /* 6943 */;
-import SoundUtils from "SoundUtils" /* 9552 */;
-import getVolumeForSoundDefault from "getVolumeForSound" /* 14310 */;
-import getSoundboardSoundURLDefault from "getSoundboardSoundURL" /* 14311 */;
+import SoundboardActionCreators from "SoundboardActionCreators" /* 6841 */;
+import SoundUtils from "SoundUtils" /* 9562 */;
+import getVolumeForSoundDefault from "getVolumeForSound" /* 14378 */;
+import getSoundboardSoundURLDefault from "getSoundboardSoundURL" /* 14379 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import MediaEngineStore from "MediaEngineStore" /* 1993 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
-import SoundboardStore from "SoundboardStore" /* 5503 */;
-import BaseSoundboardManager from "BaseSoundboardManager" /* 14309 */;
+import MediaEngineStore from "MediaEngineStore" /* 1999 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
+import SoundboardStore from "SoundboardStore" /* 5680 */;
+import BaseSoundboardManager from "BaseSoundboardManager" /* 14377 */;
 
 require = fn;
 let map = new Map();
@@ -51,94 +51,32 @@ const prototype = function SoundboardManager() {
     }
   };
   closure_129_0 = asyncGeneratorStep(async (arg0) => {
-    if (c6 === 2) {
+    closure_129_4 = false;
+    await closure_129_0.playWithListener();
+    if (2 === tmp7) {
+      c4 = 0;
+      closure_129_5 = closure_3;
+      logger.error("Failed to play sound", { error: closure_129_5 });
+      closure_129_4 = true;
+    } else if (arg0 === 1) {
       c6 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
+      throw value;
+    } else if (arg0 === 2) {
+      c4 = 0;
+      c6 = 3;
+      return { value, done: true };
     } else {
-      try {
-        c6 = 2;
-        if (0 === c5) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj4 = { value, done: true };
-            return obj4;
-          } else {
-            closure_1 = tmp7;
-            closure_129_0 = undefined;
-            closure_129_1 = undefined;
-            closure_129_2 = undefined;
-            closure_129_3 = undefined;
-            ({ sound: closure_129_0, soundKey: closure_129_1, soundId: closure_129_2, userId: closure_129_3 } = applyArgumentsResult);
-            closure_129_4 = undefined;
-            c5 = 1;
-            c6 = 1;
-            return { value: "flex", done: null };
-          }
-        } else if (1 === tmp7) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj5 = { value, done: true };
-            return obj5;
-          } else {
-            closure_129_4 = false;
-            c4 = 1;
-            c5 = 3;
-            c6 = 1;
-            const obj6 = { value: closure_129_0.playWithListener(), done: false };
-            return obj6;
-          }
-        } else {
-          if (2 === tmp7) {
-            c4 = 0;
-            closure_129_5 = closure_3;
-            const obj7 = { error: closure_129_5 };
-            logger.error("Failed to play sound", obj7);
-            closure_129_4 = true;
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c4 = 0;
-            c6 = 3;
-            const obj = { value, done: true };
-            return obj;
-          } else {
-            closure_129_4 = value;
-            c4 = 0;
-          }
-          if (closure_129_4) {
-            set.delete(closure_129_1);
-            const result = applyArgumentsResult(tmp3[9]).reportSoundFinishedPlaying(closure_129_2, closure_129_3);
-            const obj3 = applyArgumentsResult(tmp3[9]);
-          }
-          c6 = 3;
-          return { value: "HermesInternal", done: null };
-        }
-      } catch (tmp30) {
-        closure_3 = tmp30;
-        if (tmp4 === c4) {
-          c6 = tmp2;
-          throw tmp30;
-        } else {
-          c5 = tmp;
-        }
-      }
+      closure_129_4 = value;
+      c4 = 0;
     }
+    if (closure_129_4) {
+      set.delete(closure_129_1);
+      const result = applyArgumentsResult(tmp3[9]).reportSoundFinishedPlaying(closure_129_2, closure_129_3);
+      applyArgumentsResult(tmp3[9]);
+    }
+    await "IconComponent";
+    ({ sound: closure_129_0, soundKey: closure_129_1, soundId: closure_129_2, userId: closure_129_3 } = applyArgumentsResult);
+    return "Reflect";
   });
   applyArgumentsResult._playSoundWithListener = function() {
     const self = this;

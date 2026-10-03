@@ -1,9 +1,9 @@
-// === Module 6193: VerificationUtils ===
+// === Module 6081: VerificationUtils ===
 
-// Module 6193 (VerificationUtils)
+// Module 6081 (VerificationUtils)
 import _modDef12 from "module_12" /* 12 */;
-import util from "util" /* 1115 */;
-import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1126 */;
+import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
 const UserRequiredActions = Constants.UserRequiredActions;
@@ -33,11 +33,11 @@ export default {
   isEmailReverification(stateFromStores1) {
     return stateFromStores1 === UserRequiredActions.REQUIRE_REVERIFIED_EMAIL || stateFromStores1 === UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE || stateFromStores1 === UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_VERIFIED_PHONE;
   },
-  isFullScreenVerification(action) {
-    let result = action === UserRequiredActions.REQUIRE_CAPTCHA || action === UserRequiredActions.REQUIRE_VERIFIED_EMAIL || action === UserRequiredActions.REQUIRE_VERIFIED_PHONE || action === UserRequiredActions.REQUIRE_REVERIFIED_PHONE || action === UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE || action === UserRequiredActions.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE;
+  isFullScreenVerification(requiredAction) {
+    let result = requiredAction === UserRequiredActions.REQUIRE_CAPTCHA || requiredAction === UserRequiredActions.REQUIRE_VERIFIED_EMAIL || requiredAction === UserRequiredActions.REQUIRE_VERIFIED_PHONE || requiredAction === UserRequiredActions.REQUIRE_REVERIFIED_PHONE || requiredAction === UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE || requiredAction === UserRequiredActions.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE;
     if (!result) {
       const self = this;
-      result = this.isEmailReverification(action);
+      result = this.isEmailReverification(requiredAction);
     }
     return result;
   },

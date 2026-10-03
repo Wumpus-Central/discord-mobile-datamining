@@ -1,7 +1,7 @@
-// === Module 9899: MarkChannelUnreadExperiment ===
+// === Module 10051: MarkChannelUnreadExperiment ===
 
-// Module 9899 (MarkChannelUnreadExperiment)
-import ApexExperiment from "ApexExperiment" /* 1435 */;
+// Module 10051 (MarkChannelUnreadExperiment)
+import ApexExperiment from "ApexExperiment" /* 1440 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-08-mark-channel-unread", kind: "user", defaultConfig: { enabled: false }, variations: null };

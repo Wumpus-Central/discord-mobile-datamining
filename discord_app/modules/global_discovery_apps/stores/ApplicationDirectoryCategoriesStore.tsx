@@ -1,8 +1,8 @@
-// === Module 11765: ApplicationDirectoryCategoriesStore ===
+// === Module 11686: ApplicationDirectoryCategoriesStore ===
 
-// Module 11765 (ApplicationDirectoryCategoriesStore)
+// Module 11686 (ApplicationDirectoryCategoriesStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
 
 let categories = [];
 let closure_1 = null;

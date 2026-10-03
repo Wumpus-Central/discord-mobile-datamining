@@ -1,18 +1,75 @@
-// === Module 16773: useSearchMessagesLoadingState ===
+// === Module 16861: useSearchMessagesLoadingState ===
 
-// Module 16773 (useSearchMessagesLoadingState)
+// Module 16861 (useSearchMessagesLoadingState)
 import initialize from "initialize" /* 504 */;
-import SearchUtils from "SearchUtils" /* 12033 */;
-import usePlaceholderStyles from "usePlaceholderStyles" /* 16709 */;
-import SearchMessageStore from "SearchMessageStore" /* 6886 */;
-import SearchQueryStore from "SearchQueryStore" /* 12032 */;
+import SearchUtils from "SearchUtils" /* 11968 */;
+import usePlaceholderStyles from "usePlaceholderStyles" /* 16797 */;
+import SearchMessageStore from "SearchMessageStore" /* 6784 */;
+import SearchQueryStore from "SearchQueryStore" /* 11967 */;
 
 require = fn;
-let closure_4 = fn(7477).SEARCH_TABS_TO_SEARCH_QUERY_LIMITS;
+let closure_4 = fn(7513).SEARCH_TABS_TO_SEARCH_QUERY_LIMITS;
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/tabs/hooks/useSearchMessagesLoadingState.tsx");
 
-export const useSearchMessagesLoadingState = function useSearchMessagesLoadingState(arg0) {
+export const useSearchMessagesLoadingState = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) => {
+  const cResult = searchContext(tab[4]).c(8);
+  searchContext = searchContext.searchContext;
+  tab = searchContext.tab;
+  ({ placeholderHeight, numColumns } = searchContext);
+  if (cResult[0] === numColumns) {
+    if (cResult[1] === placeholderHeight) {
+      let tmp4 = cResult[2];
+    }
+    const fullscreenPlaceholderCount = tmp(tmp2[5]).useFullscreenPlaceholderCount(tmp4);
+    const _Symbol = Symbol;
+    if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+      const items = [SearchQueryStore, fullscreenPlaceholderCount];
+      cResult[3] = items;
+      let tmp7 = items;
+    } else {
+      tmp7 = cResult[3];
+    }
+    if (cResult[4] === fullscreenPlaceholderCount) {
+      if (cResult[5] === searchContext) {
+        if (cResult[6] === tab) {
+          let tmp10 = cResult[7];
+        }
+        return tmp(tmp2[7]).useStateFromStoresObject(tmp7, tmp10);
+      }
+    }
+    const fn = function p() {
+      const searchResultsQuery = SearchQueryStore.getSearchResultsQuery(searchContext);
+      const searchTabFetchId = SearchUtils.getSearchTabFetchId(searchContext, tab, searchResultsQuery);
+      const isInitialFetchComplete = SearchMessageStore.getIsInitialFetchComplete(searchTabFetchId);
+      let isFetching = !tmp5;
+      if (isInitialFetchComplete) {
+        isFetching = SearchMessageStore.getIsFetching(searchTabFetchId);
+      }
+      const obj2 = { isFirstPageLoading: !isInitialFetchComplete, isNextPageLoading: isFetching, placeholderCount: null };
+      if (!isInitialFetchComplete) {
+        let num = Math.max(fullscreenPlaceholderCount, closure_4[tab]);
+      } else {
+        num = 0;
+      }
+      obj2.placeholderCount = num;
+      return obj2;
+    };
+    cResult[4] = fullscreenPlaceholderCount;
+    cResult[5] = searchContext;
+    cResult[6] = tab;
+    cResult[7] = fn;
+    tmp10 = fn;
+    const tmpResult = tmp(tmp2[5]);
+  }
+  let obj2 = { placeholderHeight, numColumns };
+  cResult[0] = numColumns;
+  cResult[1] = placeholderHeight;
+  cResult[2] = obj2;
+  tmp4 = obj2;
+  const obj = searchContext(tab[4]);
+}) : ((arg0) => {
   ({ searchContext: require, tab: dependencyMap } = arg0);
   ({ placeholderHeight, numColumns } = arg0);
   closure_2 = usePlaceholderStyles.useFullscreenPlaceholderCount({ placeholderHeight, numColumns });
@@ -34,4 +91,4 @@ export const useSearchMessagesLoadingState = function useSearchMessagesLoadingSt
     obj2.placeholderCount = num;
     return obj2;
   });
-};
+});

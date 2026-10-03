@@ -1,13 +1,13 @@
-// === Module 15261: InAppMessageSoundsSetting ===
+// === Module 15317: InAppMessageSoundsSetting ===
 
-// Module 15261 (InAppMessageSoundsSetting)
-import util from "util" /* 1115 */;
-import MetaQuestUtils from "MetaQuestUtils" /* 1610 */;
-import SettingsConstants from "SettingsConstants" /* 7590 */;
-import notifications_NotificationSettingsUtils from "notifications/NotificationSettingsUtils" /* 14220 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 15251 */;
-import InAppMessageSoundsStore from "InAppMessageSoundsStore" /* 9756 */;
-import SettingBuilders_mod from "SettingBuilders" /* 11215 */;
+// Module 15317 (InAppMessageSoundsSetting)
+import util from "util" /* 1126 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1615 */;
+import SettingsConstants from "SettingsConstants" /* 7634 */;
+import notifications_NotificationSettingsUtils from "notifications/NotificationSettingsUtils" /* 14288 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 15307 */;
+import InAppMessageSoundsStore from "InAppMessageSoundsStore" /* 12483 */;
+import SettingBuilders_mod from "SettingBuilders" /* 11129 */;
 import size from "module_2" /* 2 */;
 
 ({ setInAppMessageSoundsEnabled, useInAppMessageSoundsEnabled } = InAppMessageSoundsStore);

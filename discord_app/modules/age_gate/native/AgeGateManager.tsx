@@ -1,18 +1,18 @@
-// === Module 17327: AgeGateManager ===
+// === Module 17420: AgeGateManager ===
 
-// Module 17327 (AgeGateManager)
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5048 */;
-import AgeGateUtils from "AgeGateUtils" /* 5055 */;
+// Module 17420 (AgeGateManager)
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
+import AgeGateUtils from "AgeGateUtils" /* 5100 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4684 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6725 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
 
 require = fn;
-const AgeGateConstants = fn(1099);
+const AgeGateConstants = fn(1110);
 ({ EXISTING_USER_AGE_GATE_MODAL_KEY: closure_7, AgeGateSource: closure_8 } = AgeGateConstants);
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ ChannelTypes: closure_9, GuildNSFWContentLevel: c10 } = Constants);
 class AgeGateManager extends tmp4 {
   constructor() {

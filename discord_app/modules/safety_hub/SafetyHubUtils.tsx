@@ -1,11 +1,12 @@
-// === Module 8051: SafetyHubUtils ===
+// === Module 8092: SafetyHubUtils ===
 
-// Module 8051 (SafetyHubUtils)
+// Module 8092 (SafetyHubUtils)
 import initialize from "initialize" /* 504 */;
-import util from "util" /* 1115 */;
-import _modDef4450 from "module_4450" /* 4450 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 4995 */;
-import SafetyHubModels from "SafetyHubModels" /* 8053 */;
+import c from "c" /* 576 */;
+import util from "util" /* 1126 */;
+import _modDef4461 from "module_4461" /* 4461 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 5040 */;
+import SafetyHubModels from "SafetyHubModels" /* 8094 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -43,15 +44,16 @@ function parseMessageEmbedForProps(fields) {
     return obj;
   }
 }
-const SafetyHubConstants = fn(8052);
+const SafetyHubConstants = fn(8093);
 ({ AppealIngestionSignal: closure_4, SafetySystemNotificationCtaType: hasOwnProperty, SafetySystemNotificationEmbedKeys: metroRequire } = SafetyHubConstants);
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AbortCodes: closure_7, MessageAttachmentFlags: closure_8 } = Constants);
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/SafetyHubUtils.tsx");
 
 export const getClassificationRelativeIncidentTime = function getClassificationRelativeIncidentTime(timestamp) {
-  return _modDef4450().to(_modDef4450(timestamp));
+  return _modDef4461().to(_modDef4461(timestamp));
 };
 export const getSpoilerFlagsForAttachment = function getSpoilerFlagsForAttachment(filename) {
   if (obj.isImageFile(filename.filename)) {
@@ -150,23 +152,39 @@ export const getClassificationAccountStatusExpiration = function getClassificati
     return null;
   } else {
     const max_expiration_time = classification.max_expiration_time;
-    if (null == max_expiration_time) {
-      return null;
-    } else {
-      try {
-        const _Date = Date;
-        const date = new Date(max_expiration_time);
-        return date;
-      } catch (err) {
-        return tmp;
+    if (null != max_expiration_time) {
+      if (true !== classification.has_indefinite_suspension) {
+        try {
+          const _Date = Date;
+          const date = new Date(max_expiration_time);
+          return date;
+        } catch (err) {
+          return tmp;
+        }
       }
     }
+    return null;
   }
 };
-export const useIsSuspendedUser = function useIsSuspendedUser() {
+export const useIsSuspendedUser = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(2);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [AuthenticationStore];
+    const fn = function s() {
+      return suspendedUserToken.getSuspendedUserToken();
+    };
+    cResult[0] = items;
+    cResult[1] = fn;
+    tmp4 = items;
+    tmp5 = fn;
+  } else {
+    [tmp4, tmp5] = cResult;
+  }
+  return null != initialize.useStateFromStores(tmp4, tmp5);
+}) : (() => {
   const items = [AuthenticationStore];
   return null != initialize.useStateFromStores(items, () => suspendedUserToken.getSuspendedUserToken());
-};
+});
 export const isCurrentUserSuspended = function isCurrentUserSuspended() {
   return null != AuthenticationStore.getSuspendedUserToken();
 };

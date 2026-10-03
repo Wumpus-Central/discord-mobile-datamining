@@ -1,18 +1,18 @@
-// === Module 9423: handleNSFWGuildInvite ===
+// === Module 9420: handleNSFWGuildInvite ===
 
-// Module 9423 (handleNSFWGuildInvite)
-import PlatformUtils from "PlatformUtils" /* 1364 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5921 */;
-import NsfwGateGuildAlert from "NsfwGateGuildAlert" /* 9425 */;
-import TinyBroncoExperiment from "TinyBroncoExperiment" /* 9427 */;
-import NsfwServerInviteWarningAlert from "NsfwServerInviteWarningAlert" /* 9428 */;
-import GuildStore from "GuildStore" /* 2066 */;
+// Module 9420 (handleNSFWGuildInvite)
+import PlatformUtils from "PlatformUtils" /* 1369 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5580 */;
+import NsfwGateGuildAlert from "NsfwGateGuildAlert" /* 9422 */;
+import TinyBroncoExperiment from "TinyBroncoExperiment" /* 9424 */;
+import NsfwServerInviteWarningAlert from "NsfwServerInviteWarningAlert" /* 9425 */;
+import GuildStore from "GuildStore" /* 2074 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GuildNSFWContentLevel = fn(1074).GuildNSFWContentLevel;
-let closure_4 = fn(9424).TINY_BRONCO_NSFW_SERVER_LOCATION;
+const GuildNSFWContentLevel = fn(1085).GuildNSFWContentLevel;
+let closure_4 = fn(9421).TINY_BRONCO_NSFW_SERVER_LOCATION;
 const items = [, ];
 ({ EXPLICIT: arr[0], AGE_RESTRICTED: arr[1] } = GuildNSFWContentLevel);
 const set = new Set(items);
@@ -36,7 +36,7 @@ export const handleNSFWGuildInvite = function handleNSFWGuildInvite(invite, arg1
   ({ onConfirm: require, onCancel } = arg1);
   c2 = undefined;
   if (invite != null) {
-    const guild = invite.guild;
+    guild = invite.guild;
     if (guild != null) {
       const id = guild.id;
     }

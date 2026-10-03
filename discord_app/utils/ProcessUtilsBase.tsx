@@ -1,6 +1,6 @@
-// === Module 1359: ProcessUtilsBase ===
+// === Module 1364: ProcessUtilsBase ===
 
-// Module 1359 (ProcessUtilsBase)
+// Module 1364 (ProcessUtilsBase)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/ProcessUtilsBase.tsx");
@@ -20,5 +20,5 @@ prototype["getCPUCoreCount"] = function getCPUCoreCount() {
   return this.cpuCoreCount;
 };
 
-export const ElectronProcessType = { Unknown: "unknown", Main: "main", Renderer: "renderer", GPU: "gpu", Utility: "utility", Crashpad: "crashpad", Clips: "clips" };
+export const ElectronProcessType = { Unknown: "unknown", Main: "main", Renderer: "renderer", GPU: "gpu", Utility: "utility", Crashpad: "crashpad", Clips: "clips", Ndi: "ndi" };
 export { ProcessUtils };

@@ -1,12 +1,12 @@
-// === Module 6068: guild_member_verification/MemberVerificationModalActionCreators ===
+// === Module 5961: guild_member_verification/MemberVerificationModalActionCreators ===
 
-// Module 6068 (guild_member_verification/MemberVerificationModalActionCreators)
-import Constants from "Constants" /* 1074 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1981 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5048 */;
-import MemberVerificationActionCreatorsDefault from "MemberVerificationActionCreators" /* 6044 */;
-import MemberVerificationConstants from "MemberVerificationConstants" /* 5550 */;
+// Module 5961 (guild_member_verification/MemberVerificationModalActionCreators)
+import Constants from "Constants" /* 1085 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
+import MemberVerificationActionCreatorsDefault from "MemberVerificationActionCreators" /* 5937 */;
+import MemberVerificationConstants from "MemberVerificationConstants" /* 5843 */;
 import size from "module_2" /* 2 */;
 
 ({ MEMBER_VERIFICATION_TYPE: c3, IN_APP_MEMBER_VERIFICATION_MODAL_KEY: closure_4 } = MemberVerificationConstants);
@@ -14,11 +14,11 @@ const AnalyticEvents = Constants.AnalyticEvents;
 const result = size.fileFinishedImporting("modules/guild_member_verification/native/MemberVerificationModalActionCreators.tsx");
 
 export default {
-  openMemberVerificationModal(guildId, connect) {
+  openMemberVerificationModal(guildId, startCreateForumPostFlow) {
     const verificationForm = MemberVerificationActionCreatorsDefault.fetchVerificationForm(guildId);
     AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, { type, guild_id: guildId });
     const obj3 = { type, guild_id: guildId };
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(6069, dependencyMap.paths), { guildId, onClose: connect }, React4);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(5962, dependencyMap.paths), { guildId, onClose: startCreateForumPostFlow }, React4);
   },
   closeMemberVerificationModal() {
     let flag = arg0;

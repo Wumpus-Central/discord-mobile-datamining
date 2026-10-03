@@ -1,10 +1,10 @@
-// === Module 1986: BaseTelemetryExportChannel ===
+// === Module 1992: BaseTelemetryExportChannel ===
 
-// Module 1986 (BaseTelemetryExportChannel)
+// Module 1992 (BaseTelemetryExportChannel)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage2 from "Storage" /* 510 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import BaseTelemetryChannel from "BaseTelemetryChannel" /* 1987 */;
+import BaseTelemetryChannel from "BaseTelemetryChannel" /* 1993 */;
 
 require = fn;
 class BaseTelemetryExportChannel extends tmp2 {
@@ -80,7 +80,7 @@ prototype["flushNow"] = function flushNow() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -108,7 +108,7 @@ prototype["flushNow"] = function flushNow() {
           return obj;
         }
         c0 = 3;
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       } catch (tmp5) {
         c0 = tmp;
         throw tmp5;
@@ -224,7 +224,7 @@ prototype["_collectPages"] = function _collectPages(budget, arg1) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -296,7 +296,7 @@ prototype["_exportPages"] = function _exportPages(arg0, flush) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {

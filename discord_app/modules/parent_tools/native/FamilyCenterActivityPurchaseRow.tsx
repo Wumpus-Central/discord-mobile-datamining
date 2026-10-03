@@ -1,25 +1,147 @@
-// === Module 14649: FamilyCenterActivityPurchaseRow ===
+// === Module 14705: FamilyCenterActivityPurchaseRow ===
 
-// Module 14649 (FamilyCenterActivityPurchaseRow)
-import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4841 */;
-import PriceUtils from "PriceUtils" /* 6842 */;
-import useCollectiblesDataDefault from "useCollectiblesData" /* 7800 */;
-import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 14650 */;
-import FamilyCenterActivityItemPreviewDefault from "FamilyCenterActivityItemPreview" /* 14651 */;
+// Module 14705 (FamilyCenterActivityPurchaseRow)
+import c from "c" /* 576 */;
+import nativeDefault from "native" /* 587 */;
+import Text_Text from "Text/Text" /* 4886 */;
+import PriceUtils from "PriceUtils" /* 6736 */;
+import useCollectiblesDataDefault from "useCollectiblesData" /* 7844 */;
+import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 14706 */;
+import FamilyCenterActivityItemPreviewDefault from "FamilyCenterActivityItemPreview" /* 14707 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = { container: { display: "flex", flexDirection: "row", alignItems: "center", borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 }, textContainer: { display: "flex", flexDirection: "column", flexShrink: 1 } };
 let closure_6 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj3 = { display: "flex", flexDirection: "row", alignItems: "center", borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivityPurchaseRow.tsx");
 
-export default function FamilyCenterActivityPurchaseRow(arg0) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(23);
+  ({ skuId, subscriptionPlanId, total, currency } = arg0);
+  const tmp4 = closure_6();
+  let product = useCollectiblesDataDefault(skuId).product;
+  let tmp7 = product;
+  if (product == null) {
+    tmp7 = null;
+  }
+  if (cResult[0] === subscriptionPlanId) {
+    if (cResult[1] === tmp7) {
+      let tmp8 = cResult[2];
+    }
+    ({ displayName, typeName, isSubscription } = tmp8);
+    if (null != skuId) {
+      if (!isSubscription) {
+        if (null == product) {
+          return null;
+        }
+      }
+    }
+    if (null == displayName) {
+      return null;
+    } else {
+      if (cResult[3] === currency) {
+        if (cResult[4] === total) {
+          let tmp10 = cResult[5];
+        }
+        let combined = displayName;
+        if (null != typeName) {
+          const _HermesInternal = HermesInternal;
+          combined = "" + displayName + " \u2022 " + typeName;
+        }
+        if (product == null) {
+          product = null;
+        }
+        if (cResult[6] === displayName) {
+          if (cResult[7] === isSubscription) {
+            if (cResult[8] === subscriptionPlanId) {
+              if (cResult[9] === product) {
+                let tmp14 = cResult[10];
+              }
+              if (cResult[11] !== combined) {
+                const obj2 = { variant: "text-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: combined };
+                const tmp19 = React4(Text_Text.Text, obj2);
+                cResult[11] = combined;
+                cResult[12] = tmp19;
+                let tmp17 = tmp19;
+              } else {
+                tmp17 = cResult[12];
+              }
+              if (cResult[13] !== tmp10) {
+                const obj3 = { variant: "text-xs/medium", color: "text-muted", children: tmp10 };
+                const tmp22 = React4(Text_Text.Text, obj3);
+                cResult[13] = tmp10;
+                cResult[14] = tmp22;
+                let tmp20 = tmp22;
+              } else {
+                tmp20 = cResult[14];
+              }
+              if (cResult[15] === tmp4.textContainer) {
+                if (cResult[16] === tmp17) {
+                  if (cResult[17] === tmp20) {
+                    let tmp23 = cResult[18];
+                  }
+                  if (cResult[19] === tmp4.container) {
+                    if (cResult[20] === tmp14) {
+                      if (cResult[21] === tmp23) {
+                        let tmp27 = cResult[22];
+                      }
+                      return tmp27;
+                    }
+                  }
+                  const obj4 = { style: tmp4.container, children: null };
+                  const items = [tmp14, tmp23];
+                  obj4.children = items;
+                  const tmp30 = hasOwnProperty(View, obj4);
+                  cResult[19] = tmp4.container;
+                  cResult[20] = tmp14;
+                  cResult[21] = tmp23;
+                  cResult[22] = tmp30;
+                  tmp27 = tmp30;
+                }
+              }
+              const obj5 = { style: tmp4.textContainer, children: null };
+              const items1 = [tmp17, tmp20];
+              obj5.children = items1;
+              const tmp26 = hasOwnProperty(View, obj5);
+              cResult[15] = tmp4.textContainer;
+              cResult[16] = tmp17;
+              cResult[17] = tmp20;
+              cResult[18] = tmp26;
+              tmp23 = tmp26;
+            }
+          }
+        }
+        const obj6 = { displayName, product, isSubscription, subscriptionPlanId };
+        const tmp16 = React4(FamilyCenterActivityItemPreviewDefault, obj6);
+        cResult[6] = displayName;
+        cResult[7] = isSubscription;
+        cResult[8] = subscriptionPlanId;
+        cResult[9] = product;
+        cResult[10] = tmp16;
+        tmp14 = tmp16;
+      }
+      const formatPriceResult = PriceUtils.formatPrice(total, currency);
+      cResult[3] = currency;
+      cResult[4] = total;
+      cResult[5] = formatPriceResult;
+      tmp10 = formatPriceResult;
+      const tmpResult = PriceUtils;
+    }
+  }
+  const purchaseDisplayInfo = FamilyCenterActivityPurchaseRowUtils.getPurchaseDisplayInfo(tmp7, subscriptionPlanId);
+  cResult[0] = subscriptionPlanId;
+  cResult[1] = tmp7;
+  cResult[2] = purchaseDisplayInfo;
+  tmp8 = purchaseDisplayInfo;
+  const tmpResult2 = FamilyCenterActivityPurchaseRowUtils;
+}) : ((arg0) => {
   ({ skuId, subscriptionPlanId } = arg0);
   ({ total, currency } = arg0);
   const tmp = closure_6();
@@ -66,4 +188,4 @@ export default function FamilyCenterActivityPurchaseRow(arg0) {
     obj2.children = items;
     return hasOwnProperty(View, obj2);
   }
-};
+});

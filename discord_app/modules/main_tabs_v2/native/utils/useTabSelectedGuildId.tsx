@@ -1,15 +1,40 @@
-// === Module 14417: useTabSelectedGuildId ===
+// === Module 14476: useTabSelectedGuildId ===
 
-// Module 14417 (useTabSelectedGuildId)
-import useStateFromStores from "useStateFromStores" /* 563 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4684 */;
-import SortedGuildStore from "SortedGuildStore" /* 5936 */;
+// Module 14476 (useTabSelectedGuildId)
+import useStateFromStores from "useStateFromStores" /* 573 */;
+import c from "c" /* 576 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
+import SortedGuildStore from "SortedGuildStore" /* 5616 */;
 
 require = fn;
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/utils/useTabSelectedGuildId.tsx");
 
-export default function useTabSelectedGuildId() {
+export default ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(2);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [SelectedGuildStore, SortedGuildStore];
+    const fn = function n() {
+      let guildId = SelectedGuildStore.getGuildId();
+      const lastSelectedGuildId = SelectedGuildStore.getLastSelectedGuildId();
+      if (guildId == null) {
+        guildId = lastSelectedGuildId;
+      }
+      if (guildId == null) {
+        guildId = flattenedGuildIds.getFlattenedGuildIds()[0];
+      }
+      return guildId;
+    };
+    cResult[0] = items;
+    cResult[1] = fn;
+    tmp4 = items;
+    tmp5 = fn;
+  } else {
+    [tmp4, tmp5] = cResult;
+  }
+  return useStateFromStores.useStateFromStores(tmp4, tmp5);
+}) : (() => {
   const items = [SelectedGuildStore, SortedGuildStore];
   return useStateFromStores.useStateFromStores(items, () => {
     let guildId = SelectedGuildStore.getGuildId();
@@ -22,4 +47,4 @@ export default function useTabSelectedGuildId() {
     }
     return guildId;
   });
-};
+});

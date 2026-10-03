@@ -1,22 +1,22 @@
-// === Module 17349: background_sync/BackgroundSync ===
+// === Module 17441: background_sync/BackgroundSync ===
 
-// Module 17349 (background_sync/BackgroundSync)
+// Module 17441 (background_sync/BackgroundSync)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
 import Storage4 from "Storage" /* 510 */;
-import DurationsDefault from "Durations" /* 1091 */;
-import HTTPUtils from "HTTPUtils" /* 1271 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 2073 */;
-import modules_Messages from "modules/Messages" /* 7085 */;
-import GuildVersionsDefault from "GuildVersions" /* 7239 */;
-import KvCacheVersionDefault from "KvCacheVersion" /* 7240 */;
-import NonGuildVersionsDefault from "NonGuildVersions" /* 7242 */;
+import DurationsDefault from "Durations" /* 1102 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 2078 */;
+import modules_Messages from "modules/Messages" /* 6986 */;
+import GuildVersionsDefault from "GuildVersions" /* 7137 */;
+import KvCacheVersionDefault from "KvCacheVersion" /* 7138 */;
+import NonGuildVersionsDefault from "NonGuildVersions" /* 7140 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import "ChannelStore";
-import ReadStateStore from "ReadStateStore" /* 4860 */;
-import AppStateStore from "AppStateStore" /* 1980 */;
-import FileSystemStore from "FileSystemStore" /* 7087 */;
+import ReadStateStore from "ReadStateStore" /* 4905 */;
+import AppStateStore from "AppStateStore" /* 1986 */;
+import FileSystemStore from "FileSystemStore" /* 6988 */;
 
 require = fn;
 let closure_17 = async function _backgroundSync(arg0) {
@@ -35,7 +35,7 @@ let closure_17 = async function _backgroundSync(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -76,7 +76,7 @@ let closure_17 = async function _backgroundSync(arg0) {
             closure_130_7 = undefined;
             c6 = 1;
             c7 = 1;
-            return { value: "flex", done: null };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === tmp8) {
           if (arg0 === 1) {
@@ -272,7 +272,7 @@ let closure_20 = async function _backgroundSyncPrivateChannels(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -394,7 +394,7 @@ let closure_22 = async function _backgroundSyncGuildData(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -610,7 +610,7 @@ let closure_24 = async function _backgroundSyncGuildChannels(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     while (true) {
@@ -676,7 +676,7 @@ let closure_24 = async function _backgroundSyncGuildChannels(arg0) {
             let iter = sortByResult.slice(0, 25);
             let valueResult = iter.value();
             closure_145_5 = valueResult;
-            let verboseResult = value.verbose("Guild Message Background Syncing for ", valueResult.map((channelId) => channelId.channelId));
+            let verboseResult = state.verbose("Guild Message Background Syncing for ", valueResult.map((channelId) => channelId.channelId));
             if (0 !== valueResult.length) {
               let _Promise = Promise;
               c21 = 1;
@@ -685,7 +685,7 @@ let closure_24 = async function _backgroundSyncGuildChannels(arg0) {
               return obj6;
             }
           } else {
-            let logResult = value.log("Aborting BG sync because there is no database");
+            let logResult = state.log("Aborting BG sync because there is no database");
           }
         }
       } else {
@@ -904,7 +904,7 @@ let closure_26 = async function _processChannelChanges(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     while (true) {
@@ -963,7 +963,7 @@ let closure_26 = async function _processChannelChanges(arg0) {
             }
           }
           c12 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else if (1 === tmp4) {
         if (arg0 === 1) {
@@ -1024,14 +1024,14 @@ function writeMessageChanges(transaction, arg1, arg2, arg3, arg4) {
     }
   }, "Background Sync");
 }
-const ChannelRecord = fn(2048);
+const ChannelRecord = fn(2055);
 ({ isPrivate: hasOwnProperty, isThread: metroRequire } = ChannelRecord);
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AnalyticEvents: closure_11, Endpoints: closure_12, MAX_MESSAGES_PER_CHANNEL: map1 } = Constants);
-const StickersStore = fn(6000);
-const ChannelStore = fn(2044);
-const EmojiStore = fn(5957);
-const GuildStore = fn(2066);
+const StickersStore = fn(5687);
+const ChannelStore = fn(2051);
+const EmojiStore = fn(5638);
+const GuildStore = fn(2074);
 let closure_14 = new LoggerDefault("BackgroundSync");
 let closure_15 = 4 * DurationsDefault.Millis.HOUR;
 const lastSyncTime = "lastSyncTime";

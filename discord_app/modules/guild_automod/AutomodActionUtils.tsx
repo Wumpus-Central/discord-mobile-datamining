@@ -1,9 +1,9 @@
-// === Module 17570: AutomodActionUtils ===
+// === Module 17658: AutomodActionUtils ===
 
-// Module 17570 (AutomodActionUtils)
-import GlobalUtils from "GlobalUtils" /* 1370 */;
-import Constants from "Constants" /* 11554 */;
-import AutomodTriggerConfigs from "AutomodTriggerConfigs" /* 17567 */;
+// Module 17658 (AutomodActionUtils)
+import GlobalUtils from "GlobalUtils" /* 1375 */;
+import Constants from "Constants" /* 11474 */;
+import AutomodTriggerConfigs from "AutomodTriggerConfigs" /* 17655 */;
 import size from "module_2" /* 2 */;
 
 const AutomodActionType = Constants.AutomodActionType;
@@ -23,12 +23,12 @@ export const getRuleActionsInOrder = function getRuleActionsInOrder(rule) {
   });
   return mapped.filter(GlobalUtils.isNotNullish);
 };
-export const setRuleAction = function setRuleAction(actions, BLOCK_MESSAGE, arg2) {
+export const setRuleAction = function setRuleAction(rule, BLOCK_MESSAGE, arg2) {
   closure_0 = BLOCK_MESSAGE;
-  actions = actions.actions;
+  const actions = rule.actions;
   const found = actions.filter((type) => type.type !== closure_0);
   const obj = {};
-  const merged = Object.assign(actions);
+  const merged = Object.assign(rule);
   let tmp3 = found;
   if (null != arg2) {
     const items = [];

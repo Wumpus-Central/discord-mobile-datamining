@@ -1,19 +1,21 @@
-// === Module 7054: MobileTrialUtils ===
+// === Module 6955: MobileTrialUtils ===
 
-// Module 7054 (MobileTrialUtils)
-import util from "util" /* 1115 */;
-import PremiumConstants from "PremiumConstants" /* 1374 */;
-import dismissible_content from "dismissible_content" /* 2029 */;
-import PremiumUtils from "PremiumUtils" /* 4517 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4683 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7055 */;
-import AndroidTwoWeekTrialsExperiment from "AndroidTwoWeekTrialsExperiment" /* 13081 */;
+// Module 6955 (MobileTrialUtils)
+import c from "c" /* 576 */;
+import util from "util" /* 1126 */;
+import PremiumConstants from "PremiumConstants" /* 1379 */;
+import dismissible_content from "dismissible_content" /* 2036 */;
+import PremiumUtils from "PremiumUtils" /* 4528 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4698 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 6956 */;
+import AndroidTwoWeekTrialsExperiment from "AndroidTwoWeekTrialsExperiment" /* 13140 */;
+import "ReactCompilerGating";
+import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
-let closure_2 = PremiumConstants.PremiumSubscriptionSKUToPremiumType;
-let result = size.fileFinishedImporting("modules/premium/native/MobileTrialUtils.tsx");
-
-export const useShouldShowPremiumTrialUserSettingsAvatarBadge = function useShouldShowPremiumTrialUserSettingsAvatarBadge() {
+const dependencyMap = PremiumConstants.PremiumSubscriptionSKUToPremiumType;
+let ReactCompilerGating = ReactCompilerGating_mod;
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();
   let tmp3 = null != premiumTrialOffer;
   const result = DismissibleContentUnsafeUtils.useIsDismissibleContentDismissed_UNSAFE(dismissible_content.DismissibleContent.PREMIUM_MOBILE_TRIAL_USER_SETTINGS_AVATAR_BADGE);
@@ -28,8 +30,24 @@ export const useShouldShowPremiumTrialUserSettingsAvatarBadge = function useShou
     tmp3 = !result;
   }
   return tmp3;
-};
-export const usePremiumTrialOfferPremiumType = function usePremiumTrialOfferPremiumType() {
+}) : (() => {
+  const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();
+  let tmp3 = null != premiumTrialOffer;
+  const result = DismissibleContentUnsafeUtils.useIsDismissibleContentDismissed_UNSAFE(dismissible_content.DismissibleContent.PREMIUM_MOBILE_TRIAL_USER_SETTINGS_AVATAR_BADGE);
+  if (tmp3) {
+    let hasAcknowledged;
+    if (premiumTrialOffer != null) {
+      hasAcknowledged = premiumTrialOffer.hasAcknowledged;
+    }
+    tmp3 = true !== hasAcknowledged;
+  }
+  if (tmp3) {
+    tmp3 = !result;
+  }
+  return tmp3;
+});
+let ReactCompilerGating = ReactCompilerGating_mod;
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();
   let skuId;
   if (premiumTrialOffer != null) {
@@ -38,9 +56,24 @@ export const usePremiumTrialOfferPremiumType = function usePremiumTrialOfferPrem
       skuId = subscriptionTrial.skuId;
     }
   }
-  return closure_2[skuId];
-};
-export const useNitroTrialCtaOverride = function useNitroTrialCtaOverride(user_profile_premium_upsell_card) {
+  return dependencyMap[skuId];
+}) : (() => {
+  const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();
+  let skuId;
+  if (premiumTrialOffer != null) {
+    const subscriptionTrial = premiumTrialOffer.subscriptionTrial;
+    if (subscriptionTrial != null) {
+      skuId = subscriptionTrial.skuId;
+    }
+  }
+  return dependencyMap[skuId];
+});
+let result = size.fileFinishedImporting("modules/premium/native/MobileTrialUtils.tsx");
+
+export const useShouldShowPremiumTrialUserSettingsAvatarBadge = tmp2;
+export const usePremiumTrialOfferPremiumType = tmp3;
+export const useNitroTrialCtaOverride = ReactCompilerGating.isReactCompilerEnabled() ? ((location) => {
+  const cResult = c.c(3);
   const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();
   let subscriptionTrial;
   if (premiumTrialOffer != null) {
@@ -49,7 +82,40 @@ export const useNitroTrialCtaOverride = function useNitroTrialCtaOverride(user_p
   if (null == subscriptionTrial) {
     return null;
   } else {
-    const obj2 = { location: user_profile_premium_upsell_card };
+    const obj3 = { location };
+    if (tmpResult.isAndroidTwoWeekTrialsTrialCTAEnabled(obj3)) {
+      if (cResult[0] === subscriptionTrial.interval) {
+        if (cResult[1] === subscriptionTrial.intervalCount) {
+          let tmp6 = cResult[2];
+        }
+        return tmp6;
+      }
+      ({ interval: obj4.intervalType, intervalCount: obj4.intervalCount } = subscriptionTrial);
+      const result = PremiumUtils.formatIntervalDuration({ intervalType: null, intervalCount: null });
+      const intl = util.intl;
+      const obj6 = { duration: result };
+      const formatToPlainStringResult = intl.formatToPlainString(util.t["6xpY54"], obj6);
+      cResult[0] = subscriptionTrial.interval;
+      cResult[1] = subscriptionTrial.intervalCount;
+      cResult[2] = formatToPlainStringResult;
+      tmp6 = formatToPlainStringResult;
+      const obj5 = { intervalType: null, intervalCount: null };
+      const tmpResult2 = PremiumUtils;
+    } else {
+      return null;
+    }
+    tmpResult = AndroidTwoWeekTrialsExperiment;
+  }
+}) : ((location) => {
+  const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();
+  let subscriptionTrial;
+  if (premiumTrialOffer != null) {
+    subscriptionTrial = premiumTrialOffer.subscriptionTrial;
+  }
+  if (null == subscriptionTrial) {
+    return null;
+  } else {
+    const obj2 = { location };
     if (tmpResult.isAndroidTwoWeekTrialsTrialCTAEnabled(obj2)) {
       ({ interval: obj3.intervalType, intervalCount: obj3.intervalCount } = subscriptionTrial);
       const result = PremiumUtils.formatIntervalDuration({ intervalType: null, intervalCount: null });
@@ -61,4 +127,4 @@ export const useNitroTrialCtaOverride = function useNitroTrialCtaOverride(user_p
     }
     tmpResult = AndroidTwoWeekTrialsExperiment;
   }
-};
+});

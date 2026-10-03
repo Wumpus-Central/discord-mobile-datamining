@@ -1,8 +1,8 @@
-// === Module 11791: useBottomSheetFlashListBottomViewabilityInset ===
+// === Module 11722: useBottomSheetFlashListBottomViewabilityInset ===
 
-// Module 11791 (useBottomSheetFlashListBottomViewabilityInset)
+// Module 11722 (useBottomSheetFlashListBottomViewabilityInset)
 import _modDef12 from "module_12" /* 12 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4595 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ export const useBottomSheetFlashListBottomViewabilityInset = function useBottomS
     bottomSheetPosition = context.bottomSheetPosition;
   }
   const flashListRef = obj.useRef(null);
-  const diff = flashListRef(1479)().height - flashListRef(11107)().maximum;
+  const diff = flashListRef(1484)().height - flashListRef(9776)().maximum;
   dependencyMap = diff;
   bottomVisibilityInsetRef = obj.useRef(9999);
   const memo = obj.useMemo(() => _modDef12.debounce((current) => {
@@ -28,7 +28,7 @@ export const useBottomSheetFlashListBottomViewabilityInset = function useBottomS
       current.updateViewableItems();
     }
   }, 200), []);
-  const tmp3 = flashListRef(1479)();
+  const tmp3 = flashListRef(1484)();
   const fn = function u() {
     let num;
     if (bottomSheetPosition != null) {
@@ -45,8 +45,8 @@ export const useBottomSheetFlashListBottomViewabilityInset = function useBottomS
   const fn2 = function s(arg0) {
     ReanimatedRexport.runOnJS(memo)(arg0 - diff);
   };
-  const tmp4Result = bottomSheetPosition(4595);
-  fn2.__closure = { distanceBetweenExpandedScreenTopAndSheetTop: diff, runOnJS: bottomSheetPosition(4595).runOnJS, handleBottomViewabilityInsetDebounced: memo };
+  const tmp4Result = bottomSheetPosition(4612);
+  fn2.__closure = { distanceBetweenExpandedScreenTopAndSheetTop: diff, runOnJS: bottomSheetPosition(4612).runOnJS, handleBottomViewabilityInsetDebounced: memo };
   fn2.__workletHash = 6025307858098;
   fn2.__initData = __initData;
   const animatedReaction = tmp4Result.useAnimatedReaction(fn, fn2);

@@ -1,8 +1,8 @@
-// === Module 15897: useMessagesScrollToTop ===
+// === Module 15971: useMessagesScrollToTop ===
 
-// Module 15897 (useMessagesScrollToTop)
+// Module 15971 (useMessagesScrollToTop)
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4834 */;
+import AccessibilityStore from "AccessibilityStore" /* 4879 */;
 
 const require = fn;
 const size = fn(2);
@@ -40,5 +40,5 @@ export default function useMessagesScrollToTop(listRef) {
       }
     }
   }), items));
-  const scrollToTop = listRef(1486).useScrollToTop(ref);
+  const scrollToTop = listRef(1491).useScrollToTop(ref);
 };

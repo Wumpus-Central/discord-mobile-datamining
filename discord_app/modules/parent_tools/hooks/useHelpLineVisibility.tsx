@@ -1,26 +1,97 @@
-// === Module 11146: useHelpLineVisibility ===
+// === Module 9827: useHelpLineVisibility ===
 
-// Module 11146 (useHelpLineVisibility)
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8292 */;
-import MessageRequestActionCreators from "MessageRequestActionCreators" /* 10617 */;
+// Module 9827 (useHelpLineVisibility)
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8296 */;
+import MessageRequestActionCreators from "MessageRequestActionCreators" /* 9828 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2111 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7145 */;
+import LocaleStore from "LocaleStore" /* 2116 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7048 */;
 
 require = fn;
 const set = new Set(["US"]);
 const set1 = new Set(["en-US", "es-ES"]);
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/parent_tools/hooks/useHelpLineVisibility.tsx");
-
-export const useShouldShowHelplineLink = function useShouldShowHelplineLink() {
+let ReactCompilerGating = fn(558);
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = stateFromStores(576).c(11);
+  const tmp4 = useIsInAdultAgeGroupDefault();
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [FamilyCenterStore];
+    const fn = function c() {
+      return userCountry.getUserCountry();
+    };
+    cResult[0] = items;
+    cResult[1] = fn;
+    tmp5 = items;
+    tmp6 = fn;
+  } else {
+    [tmp5, tmp6] = cResult;
+  }
+  let obj = stateFromStores(576);
+  stateFromStores = stateFromStores(573).useStateFromStores(tmp5, tmp6);
+  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+    const items1 = [LocaleStore];
+    const fn2 = function p() {
+      return locale.locale;
+    };
+    cResult[2] = items1;
+    cResult[3] = fn2;
+    let tmp10 = fn2;
+    let tmp9 = items1;
+  } else {
+    tmp9 = cResult[2];
+    tmp10 = cResult[3];
+  }
+  const tmpResult = stateFromStores(573);
+  const stateFromStores1 = stateFromStores(573).useStateFromStores(tmp9, tmp10);
+  if (cResult[4] !== stateFromStores) {
+    const fn3 = function v() {
+      if (null == stateFromStores) {
+        const userCountryCode = MessageRequestActionCreators.fetchUserCountryCode();
+      }
+    };
+    const items2 = [stateFromStores];
+    cResult[4] = stateFromStores;
+    cResult[5] = fn3;
+    cResult[6] = items2;
+    let tmp14 = items2;
+    let tmp13 = fn3;
+  } else {
+    tmp13 = cResult[5];
+    tmp14 = cResult[6];
+  }
+  const effect = noop.useEffect(tmp13, tmp14);
+  if (cResult[7] === stateFromStores) {
+    if (cResult[8] === tmp4) {
+      if (cResult[9] === stateFromStores1) {
+        let tmp16 = cResult[10];
+      }
+      return tmp16;
+    }
+  }
+  let hasItem = !tmp4;
+  if (!tmp4) {
+    hasItem = null != stateFromStores;
+  }
+  if (hasItem) {
+    hasItem = set.has(stateFromStores.alpha2);
+  }
+  if (hasItem) {
+    hasItem = set1.has(stateFromStores1);
+  }
+  cResult[7] = stateFromStores;
+  cResult[8] = tmp4;
+  cResult[9] = stateFromStores1;
+  cResult[10] = hasItem;
+  tmp16 = hasItem;
+  const tmpResult2 = stateFromStores(573);
+}) : (() => {
   const tmp = useIsInAdultAgeGroupDefault();
   const items = [FamilyCenterStore];
-  stateFromStores = stateFromStores(563).useStateFromStores(items, () => userCountry.getUserCountry());
-  const obj = stateFromStores(563);
+  stateFromStores = stateFromStores(573).useStateFromStores(items, () => userCountry.getUserCountry());
+  let obj = stateFromStores(573);
   const items1 = [LocaleStore];
   const items2 = [stateFromStores];
-  const stateFromStores1 = stateFromStores(563).useStateFromStores(items1, () => locale.locale);
+  const stateFromStores1 = stateFromStores(573).useStateFromStores(items1, () => locale.locale);
   const effect = noop.useEffect(() => {
     if (null == stateFromStores) {
       const userCountryCode = MessageRequestActionCreators.fetchUserCountryCode();
@@ -37,35 +108,25 @@ export const useShouldShowHelplineLink = function useShouldShowHelplineLink() {
     hasItem = set1.has(stateFromStores1);
   }
   return hasItem;
-};
-export const useShouldShowThroughlineLink = function useShouldShowThroughlineLink() {
+});
+let closure_8 = tmp4;
+ReactCompilerGating = fn(558);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/hooks/useHelpLineVisibility.tsx");
+
+export const useShouldShowHelplineLink = tmp4;
+export const useShouldShowThroughlineLink = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const tmp = useIsInAdultAgeGroupDefault();
-  let stateFromStores;
-  const tmp2 = useIsInAdultAgeGroupDefault();
-  const items = [FamilyCenterStore];
-  stateFromStores = stateFromStores(563).useStateFromStores(items, () => userCountry.getUserCountry());
-  let obj = stateFromStores(563);
-  const items1 = [LocaleStore];
-  const items2 = [stateFromStores];
-  const stateFromStores1 = stateFromStores(563).useStateFromStores(items1, () => locale.locale);
-  const effect = noop.useEffect(() => {
-    if (null == stateFromStores) {
-      const userCountryCode = MessageRequestActionCreators.fetchUserCountryCode();
-    }
-  }, items2);
-  let hasItem = !tmp2;
-  if (!tmp2) {
-    hasItem = null != stateFromStores;
-  }
-  if (hasItem) {
-    hasItem = set.has(stateFromStores.alpha2);
-  }
-  if (hasItem) {
-    hasItem = set1.has(stateFromStores1);
-  }
-  let tmp10 = !tmp;
+  let tmp2 = !tmp;
   if (!tmp) {
-    tmp10 = !hasItem;
+    tmp2 = !closure_8();
   }
-  return tmp10;
-};
+  return tmp2;
+}) : (() => {
+  const tmp = useIsInAdultAgeGroupDefault();
+  let tmp2 = !tmp;
+  if (!tmp) {
+    tmp2 = !closure_8();
+  }
+  return tmp2;
+});

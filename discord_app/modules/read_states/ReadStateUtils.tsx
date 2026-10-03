@@ -1,13 +1,14 @@
-// === Module 9495: ReadStateUtils ===
+// === Module 9506: ReadStateUtils ===
 
-// Module 9495 (ReadStateUtils)
-import ReadStateStore from "ReadStateStore" /* 4860 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5026 */;
+// Module 9506 (ReadStateUtils)
+import ReadStateStore from "ReadStateStore" /* 4905 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5071 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const UnreadSetting = fn(5027).UnreadSetting;
+const UnreadSetting = fn(5072).UnreadSetting;
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/read_states/ReadStateUtils.tsx");
 
@@ -18,7 +19,33 @@ export const getHasImportantUnread = function getHasImportantUnread(channel) {
   }
   return hasUnreadResult;
 };
-export const useHasImportantUnread = function useHasImportantUnread(arg0) {
+export const useHasImportantUnread = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  _require = arg0;
+  const cResult = require("c").c(3);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [ReadStateStore, UserGuildSettingsStore];
+    cResult[0] = items;
+    let first = items;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] !== arg0) {
+    const fn = function u() {
+      let hasUnreadResult = ReadStateStore.hasUnread(id.id);
+      if (hasUnreadResult) {
+        hasUnreadResult = UserGuildSettingsStore.resolveUnreadSetting(id) === UnreadSetting.ALL_MESSAGES;
+      }
+      return hasUnreadResult;
+    };
+    cResult[1] = arg0;
+    cResult[2] = fn;
+    let tmp7 = fn;
+  } else {
+    tmp7 = cResult[2];
+  }
+  const obj = require("c");
+  return require("initialize").useStateFromStores(first, tmp7);
+}) : ((arg0) => {
   _require = arg0;
   const items = [ReadStateStore, UserGuildSettingsStore];
   return require("initialize").useStateFromStores(items, () => {
@@ -28,4 +55,4 @@ export const useHasImportantUnread = function useHasImportantUnread(arg0) {
     }
     return hasUnreadResult;
   });
-};
+});

@@ -1,7 +1,7 @@
-// === Module 9422: GuildIdentityActionCreators ===
+// === Module 9419: GuildIdentityActionCreators ===
 
-// Module 9422 (GuildIdentityActionCreators)
-import DispatcherDefault from "Dispatcher" /* 573 */;
+// Module 9419 (GuildIdentityActionCreators)
+import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -16,7 +16,7 @@ let closure_5 = async function _saveGuildIdentityChanges(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -49,7 +49,7 @@ let closure_5 = async function _saveGuildIdentityChanges(arg0) {
           let body;
           c7 = 1;
           c8 = 1;
-          return { value: "flex", done: null };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp9) {
         if (arg0 === 1) {
@@ -189,7 +189,7 @@ let closure_5 = async function _saveGuildIdentityChanges(arg0) {
     }
   }
 };
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_identity/GuildIdentityActionCreators.tsx");
 

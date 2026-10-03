@@ -1,8 +1,8 @@
-// === Module 9032: StatusBar ===
+// === Module 9060: StatusBar ===
 
-// Module 9032 (StatusBar)
+// Module 9060 (StatusBar)
 import _mod17 from "module_17" /* 17 */;
-import StatusBarManagerDefault from "StatusBarManager" /* 9033 */;
+import StatusBarManagerDefault from "StatusBarManager" /* 9061 */;
 import size from "module_2" /* 2 */;
 
 const StatusBar = _mod17.StatusBar;

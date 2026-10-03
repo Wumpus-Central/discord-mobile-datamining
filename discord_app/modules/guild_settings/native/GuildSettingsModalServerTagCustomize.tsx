@@ -1,24 +1,24 @@
-// === Module 17647: GuildSettingsModalServerTagCustomize ===
+// === Module 17735: GuildSettingsModalServerTagCustomize ===
 
-// Module 17647 (GuildSettingsModalServerTagCustomize)
-import nativeDefault from "native" /* 576 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1981 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4809 */;
-import GuildProfileActionCreators from "GuildProfileActionCreators" /* 9223 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9241 */;
+// Module 17735 (GuildSettingsModalServerTagCustomize)
+import nativeDefault from "native" /* 587 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
+import GuildProfileActionCreators from "GuildProfileActionCreators" /* 9229 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9247 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9242 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9248 */;
 
 require = fn;
 const View = fn(17).View;
-let GuildProfileFetchStatus = fn(9221).GuildProfileFetchStatus;
-const BADGES = fn(7559).BADGES;
+let GuildProfileFetchStatus = fn(9227).GuildProfileFetchStatus;
+const BADGES = fn(7603).BADGES;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
 const PX_16 = nativeDefault.space.PX_16;
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = { container: { flex: 1 }, containerContent: { paddingTop: 16, paddingHorizontal: PX_16 }, warning: { flexDirection: "row", gap: nativeDefault.space.PX_8, alignItems: "flex-start", marginTop: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE }, warningText: { flex: 1 } };
 let closure_13 = createStyles.createStyles(obj2);
 const size = fn(2);

@@ -1,14 +1,14 @@
-// === Module 9471: CreateInviteModalStore ===
+// === Module 9482: CreateInviteModalStore ===
 
-// Module 9471 (CreateInviteModalStore)
+// Module 9482 (CreateInviteModalStore)
 import _modDef38 from "module_38" /* 38 */;
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import InstantInviteUtilsDefault from "InstantInviteUtils" /* 9472 */;
-import DefaultInviteExpirationExperiments from "DefaultInviteExpirationExperiments" /* 9474 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import InstantInviteStore from "InstantInviteStore" /* 8011 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import InstantInviteUtilsDefault from "InstantInviteUtils" /* 9483 */;
+import DefaultInviteExpirationExperiments from "DefaultInviteExpirationExperiments" /* 9485 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import InstantInviteStore from "InstantInviteStore" /* 8055 */;
 
 require = fn;
 function updateWithLatestInvite(channelId, arg1) {
@@ -18,7 +18,7 @@ function updateWithLatestInvite(channelId, arg1) {
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  const guild = GuildStore.getGuild(guild_id);
+  guild = GuildStore.getGuild(guild_id);
   let maxAge = DefaultInviteExpirationExperiments.getDefaultInviteExpiration({ guild });
   const invite = InstantInviteStore.getInvite(channelId, { targetType, targetUserId, targetApplicationId });
   _null = invite;
@@ -60,7 +60,7 @@ function updateWithLatestInvite(channelId, arg1) {
   closure_6 = obj2;
   closure_7 = obj2;
 }
-const FormStates = fn(1074).FormStates;
+const FormStates = fn(1085).FormStates;
 InstantInviteUtilsDefault.INVITE_OPTIONS_UNLIMITED.value;
 let CLOSED = FormStates.CLOSED;
 let c15 = false;

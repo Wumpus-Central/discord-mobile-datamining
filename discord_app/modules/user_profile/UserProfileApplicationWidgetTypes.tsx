@@ -1,7 +1,7 @@
-// === Module 7220: UserProfileApplicationWidgetTypes ===
+// === Module 7115: UserProfileApplicationWidgetTypes ===
 
-// Module 7220 (UserProfileApplicationWidgetTypes)
-import WidgetType from "WidgetType" /* 7209 */;
+// Module 7115 (UserProfileApplicationWidgetTypes)
+import WidgetType from "WidgetType" /* 7112 */;
 import size from "module_2" /* 2 */;
 
 let ApplicationWidget;
@@ -48,13 +48,13 @@ prototype["getProfileEditAnalyticsOptions"] = function getProfileEditAnalyticsOp
 const result = size.fileFinishedImporting("modules/user_profile/UserProfileApplicationWidgetTypes.tsx");
 
 export { ApplicationWidget };
-export const isApplicationWidgetWithId = function isApplicationWidgetWithId(applicationId, applicationId) {
-  let tmp = null != applicationId;
+export const isApplicationWidgetWithId = function isApplicationWidgetWithId(applicationId, arg1) {
+  let tmp = null != arg1;
   if (tmp) {
     tmp = applicationId instanceof ApplicationWidget;
   }
   if (tmp) {
-    tmp = applicationId.applicationId === applicationId;
+    tmp = applicationId.applicationId === arg1;
   }
   return tmp;
 };

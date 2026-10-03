@@ -1,10 +1,10 @@
-// === Module 12518: KeybindRouterStore ===
+// === Module 12558: KeybindRouterStore ===
 
-// Module 12518 (KeybindRouterStore)
-import matchPathCompat from "matchPathCompat" /* 4689 */;
-import RouteUtils from "RouteUtils" /* 4702 */;
-import Constants from "Constants" /* 1074 */;
-import identity from "module_1243" /* 1243 */;
+// Module 12558 (KeybindRouterStore)
+import matchPathCompat from "matchPathCompat" /* 4704 */;
+import RouteUtils from "RouteUtils" /* 4717 */;
+import Constants from "Constants" /* 1085 */;
+import identity from "module_1254" /* 1254 */;
 import size from "module_2" /* 2 */;
 
 function getMatchData(pathname) {
@@ -60,13 +60,13 @@ const withEqualityFn = identity.createWithEqualityFn((arg0) => {
     updatePath(path) {
       ({ guildId: closure_1, channelId: closure_2 } = getMatchData(path));
       const tmp = getMatchData(path);
-      path(1248).batchUpdates(() => path({ path, guildId, channelId }));
+      path(1259).batchUpdates(() => path({ path, guildId, channelId }));
     },
     resetPath(pathname) {
       const basePath = pathname;
       ({ guildId: closure_1, channelId: closure_2 } = getMatchData(pathname));
       const tmp = getMatchData(pathname);
-      basePath(1248).batchUpdates(() => basePath({ path: null, guildId, channelId, basePath }));
+      basePath(1259).batchUpdates(() => basePath({ path: null, guildId, channelId, basePath }));
     }
   };
 });

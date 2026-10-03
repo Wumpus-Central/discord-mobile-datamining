@@ -1,14 +1,16 @@
-// === Module 13261: BoostingCountDownPill ===
+// === Module 13320: BoostingCountDownPill ===
 
-// Module 13261 (BoostingCountDownPill)
-import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1115 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 1981 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4809 */;
-import Text_Text from "Text/Text" /* 4841 */;
+// Module 13320 (BoostingCountDownPill)
+import c from "c" /* 576 */;
+import nativeDefault from "native" /* 587 */;
+import util from "util" /* 1126 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1987 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
+import Text_Text from "Text/Text" /* 4886 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4845 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 function handlePress() {
@@ -16,7 +18,7 @@ function handlePress() {
   const obj = ActionSheetActionCreatorsDefault;
   const intl = util.intl;
   obj2.aboutText = intl.string(util.t["07lzz7"]);
-  obj.openLazy(asyncRequireImpl(13262, dependencyMap.paths), "NitroCreditEducationActionSheet", obj2);
+  obj.openLazy(asyncRequireImpl(13321, dependencyMap.paths), "NitroCreditEducationActionSheet", obj2);
 }
 ({ TouchableOpacity: c3, View: closure_4 } = get_ActivityIndicator);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
@@ -27,9 +29,107 @@ obj.fpDurationText = { textAlign: "center", color: "#FFEAA0" };
 obj.fpUnavailable = { flex: 1, justifyContent: "center" };
 obj.fpUnavailableTextNoCountdown = { textAlign: "center" };
 let closure_7 = createStyles.createStyles(obj);
+let obj3 = { flex: 1, paddingVertical: 12, paddingHorizontal: 27, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: nativeDefault.radii.xxl, justifyContent: "center" };
 const result = size.fileFinishedImporting("modules/premium/fractional/native/BoostingCountDownPill.tsx");
 
-export default function BoostingCountDownPill(style) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(21);
+  ({ fpDurationText, isInReverseTrial, style } = arg0);
+  const tmp4 = closure_7();
+  if (cResult[0] === style) {
+    if (cResult[1] === tmp4.fractionalPremiumBanner) {
+      let tmp6 = cResult[2];
+    }
+    if (cResult[3] === fpDurationText) {
+      if (cResult[4] === isInReverseTrial) {
+        if (cResult[5] === tmp4.fpDurationPill) {
+          if (cResult[6] === tmp4.fpDurationText) {
+            let tmp7 = cResult[7];
+          }
+          let prop;
+          if (isInReverseTrial) {
+            prop = tmp4.fpUnavailableTextNoCountdown;
+          }
+          const _Symbol = Symbol;
+          if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
+            const intl = util.intl;
+            const stringResult = intl.string(util.t["5nrJDO"]);
+            cResult[8] = stringResult;
+            let tmp13 = stringResult;
+          } else {
+            tmp13 = cResult[8];
+          }
+          if (cResult[9] !== prop) {
+            const obj2 = { variant: "text-md/normal", color: "interactive-text-active", style: prop, children: tmp13 };
+            const tmp17 = hasOwnProperty(Text_Text.Text, obj2);
+            cResult[9] = prop;
+            cResult[10] = tmp17;
+            let tmp15 = tmp17;
+          } else {
+            tmp15 = cResult[10];
+          }
+          if (cResult[11] === tmp4.fpUnavailable) {
+            if (cResult[12] === tmp15) {
+              let tmp18 = cResult[13];
+            }
+            if (cResult[14] === tmp6) {
+              if (cResult[15] === tmp7) {
+                if (cResult[16] === tmp18) {
+                  let tmp22 = cResult[17];
+                }
+                if (cResult[18] === handlePress) {
+                  if (cResult[19] === tmp22) {
+                    let tmp26 = cResult[20];
+                  }
+                  return tmp26;
+                }
+                const obj3 = { activeOpacity: 0.7, onPress: handlePress, children: tmp22 };
+                const tmp29 = hasOwnProperty(React3, obj3);
+                cResult[18] = handlePress;
+                cResult[19] = tmp22;
+                cResult[20] = tmp29;
+                tmp26 = tmp29;
+              }
+            }
+            const obj4 = { style: tmp6, children: null };
+            const items = [tmp7, tmp18];
+            obj4.children = items;
+            const tmp25 = timestampProducer(React4, obj4);
+            cResult[14] = tmp6;
+            cResult[15] = tmp7;
+            cResult[16] = tmp18;
+            cResult[17] = tmp25;
+            tmp22 = tmp25;
+          }
+          const obj5 = { style: tmp4.fpUnavailable, children: tmp15 };
+          const tmp21 = hasOwnProperty(React4, obj5);
+          cResult[11] = tmp4.fpUnavailable;
+          cResult[12] = tmp15;
+          cResult[13] = tmp21;
+          tmp18 = tmp21;
+        }
+      }
+    }
+    let tmp8 = !isInReverseTrial;
+    if (!isInReverseTrial) {
+      const obj6 = { style: tmp4.fpDurationPill, children: null };
+      const obj7 = { variant: "text-sm/bold", style: tmp4.fpDurationText, children: fpDurationText.toUpperCase() };
+      obj6.children = hasOwnProperty(Text_Text.Text, obj7);
+      tmp8 = hasOwnProperty(React4, obj6);
+    }
+    cResult[3] = fpDurationText;
+    cResult[4] = isInReverseTrial;
+    cResult[5] = tmp4.fpDurationPill;
+    cResult[6] = tmp4.fpDurationText;
+    cResult[7] = tmp8;
+    tmp7 = tmp8;
+  }
+  const items1 = [tmp4.fractionalPremiumBanner, style];
+  cResult[0] = style;
+  cResult[1] = tmp4.fractionalPremiumBanner;
+  cResult[2] = items1;
+  tmp6 = items1;
+}) : ((style) => {
   ({ fpDurationText, isInReverseTrial } = style);
   const tmp = closure_7();
   let tmp4;
@@ -61,4 +161,4 @@ export default function BoostingCountDownPill(style) {
   obj2.children = items1;
   obj.children = timestampProducer(React4, obj2);
   return hasOwnProperty(React3, obj);
-};
+});

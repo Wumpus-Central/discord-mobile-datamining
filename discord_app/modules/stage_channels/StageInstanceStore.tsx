@@ -1,9 +1,9 @@
-// === Module 2049: StageInstanceStore ===
+// === Module 2056: StageInstanceStore ===
 
-// Module 2049 (StageInstanceStore)
+// Module 2056 (StageInstanceStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 2050 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 2057 */;
 import size from "module_2" /* 2 */;
 
 function handleStageInstanceCreateOrUpdate(instance) {
@@ -35,8 +35,8 @@ prototype["getStageInstanceByChannel"] = function getStageInstanceByChannel(id) 
     return closure_2[id];
   }
 };
-prototype["isLive"] = function isLive(id) {
-  return null != this.getStageInstanceByChannel(id);
+prototype["isLive"] = function isLive(first1) {
+  return null != this.getStageInstanceByChannel(first1);
 };
 prototype["isPublic"] = function isPublic(id) {
   const stageInstanceByChannel = this.getStageInstanceByChannel(id);

@@ -1,9 +1,9 @@
-// === Module 9497: InviteSuggestionsActionCreators ===
+// === Module 9508: InviteSuggestionsActionCreators ===
 
-// Module 9497 (InviteSuggestionsActionCreators)
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import UserAffinitiesActionCreators from "UserAffinitiesActionCreators" /* 9498 */;
-import InviteSuggestionsStore from "InviteSuggestionsStore" /* 9483 */;
+// Module 9508 (InviteSuggestionsActionCreators)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import UserAffinitiesActionCreators from "UserAffinitiesActionCreators" /* 9509 */;
+import InviteSuggestionsStore from "InviteSuggestionsStore" /* 9494 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("actions/InviteSuggestionsActionCreators.tsx");
@@ -20,6 +20,6 @@ export const loadInviteSuggestions = function loadInviteSuggestions(arg0) {
     DispatcherDefault.dispatch({ type: "LOAD_INVITE_SUGGESTIONS", omitUserIds: set, guild, channel, applicationId, inviteTargetType });
   });
 };
-export const searchInviteSuggestions = function searchInviteSuggestions(query) {
-  DispatcherDefault.dispatch({ type: "INVITE_SUGGESTIONS_SEARCH", query });
+export const searchInviteSuggestions = function searchInviteSuggestions(current) {
+  DispatcherDefault.dispatch({ type: "INVITE_SUGGESTIONS_SEARCH", query: current });
 };

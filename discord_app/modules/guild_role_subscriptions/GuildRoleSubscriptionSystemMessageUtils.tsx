@@ -1,12 +1,12 @@
-// === Module 7607: GuildRoleSubscriptionSystemMessageUtils ===
+// === Module 7651: GuildRoleSubscriptionSystemMessageUtils ===
 
-// Module 7607 (GuildRoleSubscriptionSystemMessageUtils)
+// Module 7651 (GuildRoleSubscriptionSystemMessageUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import util from "util" /* 1115 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5025 */;
-import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 6856 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import UserStore from "UserStore" /* 1372 */;
+import util from "util" /* 1126 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5070 */;
+import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 6754 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import UserStore from "UserStore" /* 1377 */;
 
 require = fn;
 function identityHook(arg0) {
@@ -19,10 +19,10 @@ function getRoleSubscriptionPurchaseSystemMessageContent(usernameOnClickHandler)
   }
   let roleSubscriptionOnClickHandler = usernameOnClickHandler.roleSubscriptionOnClickHandler;
   if (roleSubscriptionOnClickHandler === undefined) {
-    roleSubscriptionOnClickHandler = React7;
+    roleSubscriptionOnClickHandler = options;
   }
   const roleSubscriptionData = usernameOnClickHandler.roleSubscriptionData;
-  const guild = GuildStore.getGuild(usernameOnClickHandler.guildId);
+  guild = GuildStore.getGuild(usernameOnClickHandler.guildId);
   let num;
   if (roleSubscriptionData != null) {
     num = roleSubscriptionData.total_months_subscribed;
@@ -57,9 +57,9 @@ function getRoleSubscriptionPurchaseSystemMessageContent(usernameOnClickHandler)
     return obj;
   }
 }
-const GuildRoleSubscriptionSystemMessageConstants = fn(7608);
+const GuildRoleSubscriptionSystemMessageConstants = fn(7652);
 ({ getJoinButtonLabels: hasOwnProperty, getRenewButtonLabels: metroRequire, STICKERS: closure_7 } = GuildRoleSubscriptionSystemMessageConstants);
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AnalyticEvents: closure_8, NOOP: closure_9 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionSystemMessageUtils.tsx");
@@ -103,10 +103,10 @@ export const getRoleSubscriptionPurchaseSystemMessageContentMobile = function ge
   }
   let roleSubscriptionOnClickHandler = usernameOnClickHandler.roleSubscriptionOnClickHandler;
   if (roleSubscriptionOnClickHandler === undefined) {
-    roleSubscriptionOnClickHandler = React7;
+    roleSubscriptionOnClickHandler = options;
   }
   const roleSubscriptionData = usernameOnClickHandler.roleSubscriptionData;
-  const guild = GuildStore.getGuild(usernameOnClickHandler.guildId);
+  guild = GuildStore.getGuild(usernameOnClickHandler.guildId);
   let num;
   if (roleSubscriptionData != null) {
     num = roleSubscriptionData.total_months_subscribed;
@@ -136,7 +136,7 @@ export const getRoleSubscriptionPurchaseSystemMessageContentMobile = function ge
       OxP1NC = t["6Z1E+7"];
       tmp7 = require;
     }
-    const intl = tmp7(1115).intl;
+    const intl = tmp7(1126).intl;
     let name;
     if (guild != null) {
       name = guild.name;

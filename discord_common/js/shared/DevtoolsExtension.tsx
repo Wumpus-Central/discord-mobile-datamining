@@ -1,6 +1,6 @@
-// === Module 1111: DevtoolsExtension ===
+// === Module 1122: DevtoolsExtension ===
 
-// Module 1111 (DevtoolsExtension)
+// Module 1122 (DevtoolsExtension)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/DevtoolsExtension.tsx");

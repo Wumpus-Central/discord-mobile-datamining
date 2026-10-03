@@ -1,21 +1,49 @@
-// === Module 9082: MessageLoadingSpinner ===
+// === Module 9113: MessageLoadingSpinner ===
 
-// Module 9082 (MessageLoadingSpinner)
-import nativeDefault from "native" /* 576 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6075 */;
+// Module 9113 (MessageLoadingSpinner)
+import c from "c" /* 576 */;
+import nativeDefault from "native" /* 587 */;
+import useToken from "useToken" /* 4580 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5968 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const PlatformUtils = fn(1364);
+const PlatformUtils = fn(1369);
 let result = null;
 if (!PlatformUtils.isAndroid()) {
   result = fn(17).requireNativeComponent("DCDMessageLoadingSpinner");
 }
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result1 = size.fileFinishedImporting("components_native/common/MessageLoadingSpinner.tsx");
 
-export default function MessageLoadingSpinner(color) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((color) => {
+  const cResult = c.c(3);
+  color = color.color;
+  if (color == null) {
+    color = obj2.useToken(nativeDefault.colors.BACKGROUND_BRAND);
+  }
+  if (cResult[0] === color) {
+    if (cResult[1] === color) {
+      return cResult[2];
+    }
+  }
+  if (null != result) {
+    const obj3 = {};
+    const merged = Object.assign(color);
+    obj3.color = color;
+    let tmp9 = <tmp4 />;
+  } else {
+    const obj4 = { animating: color.animate };
+    const merged1 = Object.assign(color);
+    tmp9 = jsx(ActivityIndicator_ActivityIndicator.ActivityIndicator, { animating: color.animate });
+  }
+  cResult[0] = color;
+  cResult[1] = color;
+  cResult[2] = tmp9;
+  obj2 = useToken;
+}) : ((color) => {
   color = color.color;
   if (color == null) {
     color = obj.useToken(nativeDefault.colors.BACKGROUND_BRAND);
@@ -31,4 +59,4 @@ export default function MessageLoadingSpinner(color) {
     tmp8 = jsx(ActivityIndicator_ActivityIndicator.ActivityIndicator, { animating: color.animate });
   }
   return tmp8;
-};
+});

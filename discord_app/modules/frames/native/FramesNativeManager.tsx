@@ -1,54 +1,16 @@
-// === Module 8943: FramesNativeManager ===
+// === Module 8978: FramesNativeManager ===
 
-// Module 8943 (FramesNativeManager)
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1110 */;
-import util from "util" /* 1115 */;
-import v1 from "v1" /* 1255 */;
-import GlobalUtils from "GlobalUtils" /* 1370 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5388 */;
-import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 8944 */;
-import getPostMessageJavaScriptDefault from "getPostMessageJavaScript" /* 8945 */;
-import WebViewPostMessageTransportDefault from "WebViewPostMessageTransport" /* 8958 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import FramesStore from "FramesStore" /* 8690 */;
-import FramesManager from "FramesManager" /* 8946 */;
+// Module 8978 (FramesNativeManager)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import util from "util" /* 1126 */;
+import GlobalUtils from "GlobalUtils" /* 1375 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5708 */;
+import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 8979 */;
+import FramesStore from "FramesStore" /* 8703 */;
+import FramesManager from "FramesManager" /* 8980 */;
 
 require = fn;
-function postMessageToWebView() {
-  const self = this;
-  const apply = closure_12.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-let closure_12 = async function _postMessageToWebView(arg0) {
-  closure_2 = tmp3;
-  await closure_2_9.injectJavaScript(getPostMessageJavaScriptDefault(closure_0));
-  if (1 === tmp7) {
-    c4 = 0;
-    closure_129_0 = closure_3;
-    closure_130_1(closure_130_2[11]).captureException(closure_129_0);
-    c6 = 3;
-    closure_130_1(closure_130_2[11]);
-  } else if (arg0 === 1) {
-    c6 = 3;
-    throw value;
-  } else if (arg0 !== 2) {
-    c4 = 0;
-  }
-  return value;
-};
-const isLaunched = fn(8691).isLaunched;
-const ComponentActions = fn(1074).ComponentActions;
-let closure_7 = fn(2005).DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY;
-const TransportTypes = fn(5270).TransportTypes;
-const WebView = fn(7928);
-const React7 = WebView.getWebViewProxy("FRAME_WEB_VIEW_KEY");
-const PlatformUtils = fn(1365);
+const PlatformUtils = fn(1370);
 let nativeEventEmitter = null;
 if (PlatformUtils.isAndroid()) {
   nativeEventEmitter = new fn(17).NativeEventEmitter(NativeAppLifecycleModuleDefault);
@@ -56,65 +18,24 @@ if (PlatformUtils.isAndroid()) {
 class FramesNativeManager extends tmp5 {
   _initialize() {
     self = this;
-    self = this;
     _initializeResult = super._initialize();
     lifecycleSubscription = this.lifecycleSubscription;
     if (lifecycleSubscription != null) {
       removeResult = lifecycleSubscription.remove();
     }
-    obj = closure_10;
+    obj = closure_4;
     addListenerResult = undefined;
-    if (closure_10 != null) {
+    if (closure_4 != null) {
       str = "onHostDestroy";
       addListenerResult = obj.addListener("onHostDestroy", () => {
-        const managedFrame = self.getManagedFrame();
-        if (null != managedFrame) {
-          self.leaveFrame(managedFrame.id);
+        const allFrames = FramesStore.getAllFrames();
+        for (const item10007 of allFrames) {
+          let leaveFrameResult = self.leaveFrame(item10007.id);
+          continue;
         }
       });
     }
-    self.lifecycleSubscription = addListenerResult;
-    scriptMessageSubscription = self.scriptMessageSubscription;
-    if (scriptMessageSubscription != null) {
-      removeResult1 = scriptMessageSubscription.remove();
-    }
-    self.scriptMessageSubscription = closure_9.addOnMessageListener((data) => {
-      try {
-        const _JSON = JSON;
-        const parsed = JSON.parse(data.data);
-        const managedFrame = self.getManagedFrame();
-        let tmp9 = typeof parsed === "object";
-        if (typeof parsed === "object") {
-          tmp9 = isLaunched(managedFrame);
-        }
-        if (tmp9) {
-          tmp9 = null != managedFrame.data.iframeId;
-        }
-        if (tmp9) {
-          const obj2 = { type: TransportTypes.POST_MESSAGE, origin: managedFrame.data.url, iframeId: managedFrame.data.iframeId };
-          WebViewPostMessageTransportDefault.handleMessage(tmp5, obj2, postMessageToWebView);
-        }
-        tmp5 = parsed;
-      } catch (tmp18) {
-        const _SyntaxError = SyntaxError;
-        if (tmp18 instanceof SyntaxError) {
-          if (tmp2.data === closure_7) {
-            const managedFrame1 = self.getManagedFrame();
-            if (null != managedFrame1) {
-              self.leaveFrame(managedFrame1.id);
-              const obj5 = { body: null, confirmText: null };
-              const intl = util.intl;
-              obj5.body = intl.string(util.t.tYBBWz);
-              const intl2 = util.intl;
-              obj5.confirmText = intl2.string(util.t.BddRzS);
-              actions_AlertActionCreatorsDefault.show(obj5);
-            }
-          }
-        } else {
-          throw tmp18;
-        }
-      }
-    });
+    this.lifecycleSubscription = addListenerResult;
     return;
   }
   _terminate() {
@@ -123,19 +44,14 @@ class FramesNativeManager extends tmp5 {
     if (lifecycleSubscription != null) {
       removeResult = lifecycleSubscription.remove();
     }
-    scriptMessageSubscription = this.scriptMessageSubscription;
-    if (scriptMessageSubscription != null) {
-      removeResult1 = scriptMessageSubscription.remove();
-    }
     return;
   }
   leaveFrame(arg0) {
-    releaseWebViewResult = this.releaseWebView();
-    tmp2 = closure_2;
-    obj = closure_0(closure_2[16]);
+    tmp = closure_2;
+    obj = closure_0(closure_2[7]);
     if (obj.isNotNullish(global)) {
-      tmp3 = closure_1;
-      obj2 = closure_1(tmp2[17]);
+      tmp2 = closure_1;
+      obj2 = closure_1(tmp[8]);
       obj1 = { type: "FRAME_SET_ORIENTATION_LOCK_STATE", frameId: null, lockState: null, pictureInPictureLockState: null };
       obj1.frameId = global;
       dispatchResult = obj2.dispatch(obj1);
@@ -153,44 +69,9 @@ prototype["showRPCDisconnectErrorUI"] = function showRPCDisconnectErrorUI(reason
   obj2.body = message;
   actions_AlertActionCreatorsDefault.show(obj2);
 };
-prototype["getManagedFrame"] = function getManagedFrame() {
-  let frameByIframeId;
-  if (null != this.iframeId) {
-    frameByIframeId = FramesStore.getFrameByIframeId(tmp.iframeId);
-  }
-  return frameByIframeId;
-};
-prototype["releaseWebView"] = function releaseWebView() {
-  const releaseIframeIdResult = this.releaseIframeId();
-  if (null != releaseIframeIdResult) {
-    const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
-    const obj = { id: releaseIframeIdResult };
-    ComponentDispatch.dispatch(ComponentActions.IFRAME_UNMOUNT, obj);
-    closure_9.releaseWebView();
-  }
-  return releaseIframeIdResult;
-};
-prototype["releaseIframeId"] = function releaseIframeId() {
-  this.iframeId = undefined;
-  return this.iframeId;
-};
-prototype["hasIframeId"] = function hasIframeId() {
-  return null != this.iframeId;
-};
-prototype["getOrCreateIframeId"] = function getOrCreateIframeId() {
-  const iframeId = this.iframeId;
-  if (null != iframeId) {
-    return iframeId;
-  } else {
-    const v4Result = v1.v4();
-    tmp.iframeId = v4Result;
-    return v4Result;
-  }
-};
 FramesNativeManager.displayName = "FramesNativeManager";
 const framesNativeManager = new FramesNativeManager();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/native/FramesNativeManager.tsx");
 
 export default framesNativeManager;
-export const FRAME_WEB_VIEW_KEY = "FRAME_WEB_VIEW_KEY";

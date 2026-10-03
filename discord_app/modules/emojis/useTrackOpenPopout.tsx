@@ -1,25 +1,25 @@
-// === Module 9986: useTrackOpenPopout ===
+// === Module 9936: useTrackOpenPopout ===
 
-// Module 9986 (useTrackOpenPopout)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5025 */;
-import useMountEffectDefault from "useMountEffect" /* 5482 */;
-import emojis_EmojiActionCreators from "emojis/EmojiActionCreators" /* 9987 */;
+// Module 9936 (useTrackOpenPopout)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5070 */;
+import useMountEffectDefault from "useMountEffect" /* 5590 */;
+import emojis_EmojiActionCreators from "emojis/EmojiActionCreators" /* 9867 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
 
 require = fn;
-const EmojiInteractionPoint = fn(1375).EmojiInteractionPoint;
-const AnalyticEvents = fn(1074).AnalyticEvents;
+const EmojiInteractionPoint = fn(1380).EmojiInteractionPoint;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/emojis/useTrackOpenPopout.tsx");
 
-export const useTrackOpenPopout = (emojiId) => {
-  ({ currentGuildId, popoutData: require, nonce: importDefault, demoMode: dependencyMap } = emojiId);
+export const useTrackOpenPopout = (cResult) => {
+  ({ currentGuildId, popoutData: require, nonce: importDefault, demoMode: dependencyMap } = cResult);
   let current;
   let merged = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadata(ChannelStore.getChannel(SelectedChannelStore.getChannelId(currentGuildId))));
-  current = current.useRef({ guild_id: currentGuildId, emoji_id: emojiId.emojiId }).current;
+  current = current.useRef({ guild_id: currentGuildId, emoji_id: cResult.emojiId }).current;
   useMountEffectDefault(() => {
     const result = emojis_EmojiActionCreators.initiateEmojiInteraction(EmojiInteractionPoint.TrackOpenPopoutUsed);
     if (!dependencyMap) {

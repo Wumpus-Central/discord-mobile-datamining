@@ -1,21 +1,97 @@
-// === Module 15003: VoiceSetting ===
+// === Module 15060: VoiceSetting ===
 
-// Module 15003 (VoiceSetting)
-import util from "util" /* 1115 */;
-import MediaEngineStore from "MediaEngineStore" /* 1993 */;
+// Module 15060 (VoiceSetting)
+import initialize from "initialize" /* 504 */;
+import c from "c" /* 576 */;
+import util from "util" /* 1126 */;
+import MediaEngineStore from "MediaEngineStore" /* 1999 */;
 
 require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ InputModes: c3, UserSettingsSections } = Constants);
-const SettingBuilders = fn(11215);
+const ReactCompilerGating = fn(558);
+const SettingBuilders = fn(11129);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let Q8gkVL = dependencyMap;
+  const cResult = c.c(4);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [MediaEngineStore];
+    const fn = function o() {
+      return mode.getMode();
+    };
+    cResult[0] = items;
+    cResult[1] = fn;
+    tmp3 = items;
+    tmp4 = fn;
+  } else {
+    [tmp3, tmp4] = cResult;
+  }
+  const stateFromStores = initialize.useStateFromStores(tmp3, tmp4);
+  if (cResult[2] !== stateFromStores) {
+    if (stateFromStores === constants.PUSH_TO_TALK) {
+      const intl2 = util.intl;
+      Q8gkVL = util.t.Q8gkVL;
+      let stringResult = intl2.string(Q8gkVL);
+    } else {
+      const intl = util.intl;
+      stringResult = intl.string(util.t.cHCEOJ);
+    }
+    cResult[2] = stateFromStores;
+    cResult[3] = stringResult;
+  } else {
+    return cResult[3];
+  }
+  const tmpResult = initialize;
+}) : (() => {
+  const items = [MediaEngineStore];
+  if (obj.useStateFromStores(items, () => mode.getMode()) === constants.PUSH_TO_TALK) {
+    const intl2 = util.intl;
+    let stringResult = intl2.string(util.t.Q8gkVL);
+  } else {
+    const intl = util.intl;
+    stringResult = intl.string(util.t.cHCEOJ);
+  }
+  return stringResult;
+});
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.B1fFpf);
   },
   parent: null,
-  IconComponent: fn(9660).MicrophoneIcon,
-  useTrailing: function useVoiceSettingTrailing() {
+  IconComponent: fn(9689).MicrophoneIcon,
+  useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+    let Q8gkVL = dependencyMap;
+    const cResult = c.c(4);
+    if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+      const items = [MediaEngineStore];
+      const fn = function o() {
+        return mode.getMode();
+      };
+      cResult[0] = items;
+      cResult[1] = fn;
+      tmp3 = items;
+      tmp4 = fn;
+    } else {
+      [tmp3, tmp4] = cResult;
+    }
+    const stateFromStores = initialize.useStateFromStores(tmp3, tmp4);
+    if (cResult[2] !== stateFromStores) {
+      if (stateFromStores === constants.PUSH_TO_TALK) {
+        const intl2 = util.intl;
+        Q8gkVL = util.t.Q8gkVL;
+        let stringResult = intl2.string(Q8gkVL);
+      } else {
+        const intl = util.intl;
+        stringResult = intl.string(util.t.cHCEOJ);
+      }
+      cResult[2] = stateFromStores;
+      cResult[3] = stringResult;
+    } else {
+      return cResult[3];
+    }
+    const tmpResult = initialize;
+  }) : (() => {
     const items = [MediaEngineStore];
     if (obj.useStateFromStores(items, () => mode.getMode()) === constants.PUSH_TO_TALK) {
       const intl2 = util.intl;
@@ -25,7 +101,7 @@ const route = SettingBuilders.createRoute({
       stringResult = intl.string(util.t.cHCEOJ);
     }
     return stringResult;
-  },
+  }),
   screen: {
     route: UserSettingsSections.VOICE,
     getComponent() {

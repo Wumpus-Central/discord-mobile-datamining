@@ -1,11 +1,11 @@
-// === Module 7323: AdUserActionCreators ===
+// === Module 7221: AdUserActionCreators ===
 
-// Module 7323 (AdUserActionCreators)
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import NativeAdsModuleDefault from "NativeAdsModule" /* 7324 */;
+// Module 7221 (AdUserActionCreators)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import NativeAdsModuleDefault from "NativeAdsModule" /* 7222 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AdUserStore from "AdUserStore" /* 7321 */;
+import AdUserStore from "AdUserStore" /* 7219 */;
 
 let closure_6 = async function _fetchAdUser(arg0) {
   if (c6 === 2) {
@@ -18,7 +18,7 @@ let closure_6 = async function _fetchAdUser(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -115,7 +115,7 @@ let closure_6 = async function _fetchAdUser(arg0) {
     }
   }
 };
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ AnalyticEvents: closure_4, Platforms: hasOwnProperty } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/ads/native/AdUserActionCreators.android.tsx");

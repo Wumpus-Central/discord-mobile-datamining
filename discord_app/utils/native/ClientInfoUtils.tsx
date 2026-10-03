@@ -1,7 +1,7 @@
-// === Module 1363: ClientInfoUtils ===
+// === Module 1368: ClientInfoUtils ===
 
-// Module 1363 (ClientInfoUtils)
-import NativeClientInfoModuleDefault from "NativeClientInfoModule" /* 1343 */;
+// Module 1368 (ClientInfoUtils)
+import NativeClientInfoModuleDefault from "NativeClientInfoModule" /* 1354 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/native/ClientInfoUtils.tsx");
@@ -11,10 +11,10 @@ export const getConstants = function getConstants() {
 };
 export const getBuildNumberLabel = function getBuildNumberLabel() {
   const items = ["0", "123456", "1234567890"];
-  let str = "6547";
-  if (items.includes("6547")) {
+  let str = "34920500000000";
+  if (items.includes("34920500000000")) {
     const _HermesInternal = HermesInternal;
-    str = "dev (" + "6547" + ")";
+    str = "dev (" + "34920500000000" + ")";
   }
   return str;
 };

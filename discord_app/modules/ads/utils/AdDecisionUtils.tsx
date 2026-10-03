@@ -1,8 +1,8 @@
-// === Module 7287: AdDecisionUtils ===
+// === Module 7185: AdDecisionUtils ===
 
-// Module 7287 (AdDecisionUtils)
-import DurationsDefault from "Durations" /* 1091 */;
-import AdCreativeType from "AdCreativeType" /* 5949 */;
+// Module 7185 (AdDecisionUtils)
+import DurationsDefault from "Durations" /* 1102 */;
+import AdCreativeType from "AdCreativeType" /* 5630 */;
 
 require = fn;
 let result = 6 * DurationsDefault.Millis.HOUR;
@@ -11,17 +11,17 @@ const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/ads/utils/AdDecisionUtils.tsx");
 
 export const MAX_RESPONSE_TTL_MS = result;
-export const getDeliveredAdCreativeId = function getDeliveredAdCreativeId(type) {
-  if (null == type) {
+export const getDeliveredAdCreativeId = function getDeliveredAdCreativeId(creative) {
+  if (null == creative) {
     return null;
   } else {
-    type = type.type;
+    const type = creative.type;
     if (AdCreativeType.AdCreativeType.QUEST === type) {
-      return type.questId;
+      return creative.questId;
     } else if (AdCreativeType.AdCreativeType.BOUNTY === type) {
-      return type.bounty.id;
+      return creative.bounty.id;
     } else if (AdCreativeType.AdCreativeType.QUEST_HOME_HERO === type) {
-      return type.questHomeHero.id;
+      return creative.questHomeHero.id;
     }
   }
 };

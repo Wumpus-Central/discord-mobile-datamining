@@ -1,13 +1,13 @@
-// === Module 10548: ActivityEmoji ===
+// === Module 10629: ActivityEmoji ===
 
-// Module 10548 (ActivityEmoji)
-import AvatarUtilsDefault from "AvatarUtils" /* 1397 */;
-import EmojiDefault from "Emoji" /* 6737 */;
+// Module 10629 (ActivityEmoji)
+import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
+import EmojiDefault from "Emoji" /* 6625 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let closure_5 = createStyles.createStyles({ emoji: { flexShrink: 0, width: "100%", height: "100%" }, text: { textAlign: "center", fontFamily: "System" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activity_status/native/ActivityEmoji.tsx");
@@ -25,7 +25,7 @@ export default function ActivityEmoji(emoji) {
   importDefault = undefined;
   const tmp = closure_5();
   let ReactionIcon = emoji;
-  const AnimateEmoji = emoji(2021).AnimateEmoji;
+  const AnimateEmoji = emoji(2028).AnimateEmoji;
   let animated;
   const setting = AnimateEmoji.useSetting();
   if (emoji != null) {
@@ -60,7 +60,7 @@ export default function ActivityEmoji(emoji) {
     }
   }
   if (null == emoji) {
-    ReactionIcon = ReactionIcon(8407).ReactionIcon;
+    ReactionIcon = ReactionIcon(8411).ReactionIcon;
     const obj = { style, size: "sm" };
     <ReactionIcon style={style} size="sm" />;
   } else {

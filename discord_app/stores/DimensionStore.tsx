@@ -1,9 +1,9 @@
-// === Module 5769: DimensionStore ===
+// === Module 5430: DimensionStore ===
 
-// Module 5769 (DimensionStore)
+// Module 5430 (DimensionStore)
 import initializeDefault from "initialize" /* 504 */;
-import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
+import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
 
 const dependencyMap = {};
 const dependencyMap2 = {};

@@ -1,18 +1,42 @@
-// === Module 10757: SpendEarnOrbsLightThemeLottie ===
+// === Module 11004: SpendEarnOrbsLightThemeLottie ===
 
-// Module 10757 (SpendEarnOrbsLightThemeLottie)
-import LottieIcon from "LottieIcon" /* 9600 */;
-import _mod10758 from "module_10758" /* 10758 */;
+// Module 11004 (SpendEarnOrbsLightThemeLottie)
+import c from "c" /* 576 */;
+import LottieIcon from "LottieIcon" /* 9629 */;
+import _mod11005 from "module_11005" /* 11005 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 const layers = ["Orbs-Spend_LightTheme", "Orbs-Earn_LightTheme"];
 const items = [{ name: "earn", start: 0, duration: 180 }, { name: "spend", start: 240, duration: 180 }];
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/LottieIcon/native/generated/SpendEarnOrbsLightThemeLottie.tsx");
 
-export const SpendEarnOrbsLightThemeLottie = noop.forwardRef((arg0, ref) => {
+export const SpendEarnOrbsLightThemeLottie = noop.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, ref) => {
+  const cResult = c.c(4);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const tmpResult = _mod11005;
+    cResult[0] = tmpResult;
+    let first = tmpResult;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] === arg0) {
+    if (cResult[2] === ref) {
+      let tmp6 = cResult[3];
+    }
+    return tmp6;
+  }
   const merged = Object.assign(arg0);
-  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod10758, ref, layers, markers: items });
-});
+  const tmp8 = jsx(LottieIcon.LottieIcon, { dotLottie: first, ref, layers, markers: items });
+  cResult[1] = arg0;
+  cResult[2] = ref;
+  cResult[3] = tmp8;
+  tmp6 = tmp8;
+  const obj2 = { dotLottie: first, ref, layers, markers: items };
+}) : ((arg0, ref) => {
+  const merged = Object.assign(arg0);
+  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod11005, ref, layers, markers: items });
+}));

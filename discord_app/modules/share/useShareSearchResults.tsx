@@ -1,16 +1,16 @@
-// === Module 10643: useShareSearchResults ===
+// === Module 10715: useShareSearchResults ===
 
-// Module 10643 (useShareSearchResults)
-import formatResultsDefault from "formatResults" /* 10639 */;
-import QuickSwitcherActionCreators from "QuickSwitcherActionCreators" /* 10644 */;
+// Module 10715 (useShareSearchResults)
+import formatResultsDefault from "formatResults" /* 10711 */;
+import QuickSwitcherActionCreators from "QuickSwitcherActionCreators" /* 10716 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5775 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5436 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import FrecencyStore from "FrecencyStore" /* 6007 */;
+import FrecencyStore from "FrecencyStore" /* 5694 */;
 
 require = fn;
-const ALLOWED_TYPES = fn(10640).ALLOWED_TYPES;
+const ALLOWED_TYPES = fn(10712).ALLOWED_TYPES;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/share/useShareSearchResults.tsx");
 

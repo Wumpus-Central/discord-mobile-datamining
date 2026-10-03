@@ -1,10 +1,10 @@
-// === Module 9300: AudioSettingsUtils ===
+// === Module 9309: AudioSettingsUtils ===
 
-// Module 9300 (AudioSettingsUtils)
-import UserSettingsConstants from "UserSettingsConstants" /* 1084 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4900 */;
-import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5506 */;
-import AudioSettingsDefaultVolumes from "AudioSettingsDefaultVolumes" /* 9301 */;
+// Module 9309 (AudioSettingsUtils)
+import UserSettingsConstants from "UserSettingsConstants" /* 1095 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4945 */;
+import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5683 */;
+import AudioSettingsDefaultVolumes from "AudioSettingsDefaultVolumes" /* 9310 */;
 import size from "module_2" /* 2 */;
 
 const constants = UserSettingsConstants.ProtoAudioSettingsContextTypes;

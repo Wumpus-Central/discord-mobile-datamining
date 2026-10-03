@@ -1,13 +1,10 @@
-// === Module 13753: Hook ===
+// === Module 13819: Hook ===
 
-// Module 13753 (Hook)
+// Module 13819 (Hook)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("lib/hook/Hook.native.tsx");
 
-export function isHookModuleTooOld() {
-  return true;
-}
 export const attachToProcess = function attachToProcess() {
   return Promise.resolve();
 };

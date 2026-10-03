@@ -1,60 +1,93 @@
-// === Module 14548: Blocked ===
+// === Module 14603: Blocked ===
 
-// Module 14548 (Blocked)
-import shared from "shared" /* 4714 */;
-import _mod7861 from "module_7861" /* 7861 */;
+// Module 14603 (Blocked)
+import c from "c" /* 576 */;
+import shared from "shared" /* 4729 */;
+import _mod7905 from "module_7905" /* 7905 */;
 import noop from "module_19" /* 19 */;
-
-const require = globalThis.__r;
 
 require = fn;
 const Image = fn(17).Image;
 const jsx = fn(21).jsx;
+let ReactCompilerGating = fn(558);
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(2);
+  const theme = shared.useThemeContext().theme;
+  if (cResult[0] !== theme) {
+    const obj3 = {
+      dark() {
+          return require("module_14604");
+        },
+      darker() {
+          return require("module_14605");
+        },
+      light() {
+          return require("module_14606");
+        }
+    };
+    const illustrationSource = _mod7905.getIllustrationSource(theme, obj3);
+    cResult[0] = theme;
+    cResult[1] = illustrationSource;
+    let tmp4 = illustrationSource;
+    const tmpResult = _mod7905;
+  } else {
+    tmp4 = cResult[1];
+  }
+  return tmp4;
+}) : (() => {
+  const obj = shared;
+  return _mod7905.getIllustrationSource(obj.useThemeContext().theme, {
+    dark() {
+      return require("module_14604");
+    },
+    darker() {
+      return require("module_14605");
+    },
+    light() {
+      return require("module_14606");
+    }
+  });
+});
+let closure_4 = tmp3;
+ReactCompilerGating = fn(558);
+function getBlockedSource(theme) {
+  return _mod7905.getIllustrationSource(theme, {
+    dark() {
+      return require("module_14604");
+    },
+    darker() {
+      return require("module_14605");
+    },
+    light() {
+      return require("module_14606");
+    }
+  });
+}
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/Blocked.tsx");
 
-export const getBlockedSource = function getBlockedSource(theme) {
-  return _mod7861.getIllustrationSource(theme, {
-    dark() {
-      return require("module_14549");
-    },
-    darker() {
-      return require("module_14550");
-    },
-    light() {
-      return require("module_14551");
+export { getBlockedSource };
+export const useBlockedSource = tmp3;
+export const Blocked = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(3);
+  const tmp2 = closure_4();
+  if (cResult[0] === arg0) {
+    if (cResult[1] === tmp2) {
+      let tmp3 = cResult[2];
     }
-  });
-};
-export const useBlockedSource = function useBlockedSource() {
-  const obj = shared;
-  return _mod7861.getIllustrationSource(obj.useThemeContext().theme, {
-    dark() {
-      return require("module_14549");
-    },
-    darker() {
-      return require("module_14550");
-    },
-    light() {
-      return require("module_14551");
-    }
-  });
-};
-export const Blocked = function Blocked(arg0) {
-  const obj = shared;
-  const obj4 = {};
-  const illustrationSource = _mod7861.getIllustrationSource(obj.useThemeContext().theme, {
-    dark() {
-      return require("module_14549");
-    },
-    darker() {
-      return require("module_14550");
-    },
-    light() {
-      return require("module_14551");
-    }
-  });
+    return tmp3;
+  }
+  const obj2 = {};
   const merged = Object.assign(arg0);
-  obj4.source = illustrationSource;
+  obj2.source = tmp2;
+  const tmp5 = <Image />;
+  cResult[0] = arg0;
+  cResult[1] = tmp2;
+  cResult[2] = tmp5;
+  tmp3 = tmp5;
+}) : ((arg0) => {
+  const obj = {};
+  const merged = Object.assign(arg0);
+  obj.source = closure_4();
   return <Image />;
-};
+});

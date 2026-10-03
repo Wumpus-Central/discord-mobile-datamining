@@ -1,20 +1,30 @@
-// === Module 11691: AddMediaToOriginalForumPostActionSheet ===
+// === Module 11612: AddMediaToOriginalForumPostActionSheet ===
 
-// Module 11691 (AddMediaToOriginalForumPostActionSheet)
+// Module 11612 (AddMediaToOriginalForumPostActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4809 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 5636 */;
-import tracking_Tracking from "tracking/Tracking" /* 7359 */;
+import nativeDefault from "native" /* 587 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
+import tracking_Tracking from "tracking/Tracking" /* 7263 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 7274 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import MessageStore from "MessageStore" /* 5065 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import MessageStore from "MessageStore" /* 5110 */;
 
 require = fn;
-let closure_16 = async function _upload2(arg0) {
+function _upload() {
+  const self = this;
+  const apply = closure_17.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+let closure_17 = async function _upload2(arg0) {
   if (c9 === 2) {
     c9 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -25,7 +35,7 @@ let closure_16 = async function _upload2(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -55,7 +65,7 @@ let closure_16 = async function _upload2(arg0) {
           closure_132_10 = undefined;
           c8 = 1;
           c9 = 1;
-          return { value: "flex", done: null };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === tmp9) {
         if (arg0 === 1) {
@@ -72,28 +82,28 @@ let closure_16 = async function _upload2(arg0) {
             dependencyMap(true);
           });
           closure_132_5.on("progress", (currentSize) => {
-            const maxFileSizeResult = closure_0(5632).maxFileSize(id.id);
-            const obj = closure_0(5632);
-            const effectiveUploadLimit = closure_0(5660).getEffectiveUploadLimit(maxFileSizeResult);
+            const maxFileSizeResult = closure_0(7270).maxFileSize(id.id);
+            const obj = closure_0(7270);
+            const effectiveUploadLimit = closure_0(7295).getEffectiveUploadLimit(maxFileSizeResult);
             if (currentSize.currentSize > effectiveUploadLimit) {
               closure_1_5.cancel();
               dependencyMap(false);
-              closure_1(4809).hideActionSheet();
+              closure_1(4854).hideActionSheet();
               const obj4 = { file: currentSize, maxSize: effectiveUploadLimit, baseMaxSize: maxFileSizeResult, guildId: id.id, analyticsLocations };
-              closure_1(8802)(obj4);
-              const obj3 = closure_1(4809);
+              closure_1(8815)(obj4);
+              const obj3 = closure_1(4854);
             }
-            const obj2 = closure_0(5660);
+            const obj2 = closure_0(7295);
           });
           closure_132_5.on("error", () => {
             dependencyMap(false);
-            closure_1(4809).hideActionSheet();
+            closure_1(4854).hideActionSheet();
           });
           closure_132_5.on("complete", () => {
             dependencyMap(false);
-            closure_1(8799).clearAll(closure_1_0, ChannelMessage.ChannelMessage);
-            const obj = closure_1(8799);
-            closure_1(4809).hideActionSheet();
+            closure_1(8812).clearAll(closure_1_0, ChannelMessage.ChannelMessage);
+            const obj = closure_1(8812);
+            closure_1(4854).hideActionSheet();
           });
           const messages = closure_133_10.getMessages(closure_132_0);
           closure_132_7 = messages.get(closure_133_1(closure_133_2[18]).castChannelIdAsMessageId(closure_132_0));
@@ -141,7 +151,7 @@ let closure_16 = async function _upload2(arg0) {
           closure_1 = 0;
           const items = [];
           closure_1 = HermesBuiltin.arraySpread(closure_132_8, 0);
-          const mapped = closure_132_9.map((item, index) => closure_1_0(5627).getAttachmentPayload(item, index));
+          const mapped = closure_132_9.map((item, index) => closure_1_0(7243).getAttachmentPayload(item, index));
           dependencyMap = mapped;
           if (mapped == null) {
             dependencyMap = [];
@@ -227,49 +237,221 @@ let closure_16 = async function _upload2(arg0) {
   }
 };
 const View = fn(17).View;
-const DraftType = fn(5384).DraftType;
-const Constants = fn(1074);
+const DraftType = fn(7031).DraftType;
+const Constants = fn(1085);
 ({ AbortCodes: closure_11, Endpoints: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = { container: { paddingHorizontal: 16, paddingTop: 24 }, post: { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, marginBottom: 32, shadowColor: nativeDefault.colors.BLACK, shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.25, shadowRadius: 4, elevation: 4 }, postContent: { marginBottom: 0, padding: 8 }, title: { textAlign: "center", marginBottom: 8 }, description: { textAlign: "center", marginBottom: 32 }, button: null, buttonMargin: null };
 let obj3 = { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.md, marginBottom: 32, shadowColor: nativeDefault.colors.BLACK, shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.25, shadowRadius: 4, elevation: 4 };
 obj2.button = { borderRadius: nativeDefault.radii.sm };
 obj2.buttonMargin = { marginBottom: 10 };
 let closure_15 = createStyles.createStyles(obj2);
+const ReactCompilerGating = fn(558);
+let obj4 = { borderRadius: nativeDefault.radii.sm };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/forums/native/AddMediaToOriginalForumPostActionSheet.tsx");
 
-export default function AddMediaToOriginalForumPostActionSheet(threadId) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((threadId) => {
+  const cResult = threadId(sendMessage[29]).c(71);
+  threadId = threadId.threadId;
+  const attachments = threadId.attachments;
+  sendMessage = threadId.sendMessage;
+  closure_15();
+  let obj = threadId(sendMessage[29]);
+  [r10021, _slicedToArray] = stateFromStores1.useState(false);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [analyticsLocations];
+    cResult[0] = items;
+    let first = items;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] !== threadId) {
+    const fn = function u() {
+      return ChannelStore.getChannel(threadId);
+    };
+    const items1 = [threadId];
+    cResult[1] = threadId;
+    cResult[2] = fn;
+    cResult[3] = items1;
+    let tmp9 = items1;
+    let tmp8 = fn;
+  } else {
+    tmp8 = cResult[2];
+    tmp9 = cResult[3];
+  }
+  const tmp5 = _slicedToArray(stateFromStores1.useState(false), 2);
+  const stateFromStores = threadId(sendMessage[30]).useStateFromStores(first, tmp8, tmp9);
+  if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+    const items2 = [GuildStore];
+    cResult[4] = items2;
+    let tmp11 = items2;
+  } else {
+    tmp11 = cResult[4];
+  }
+  if (cResult[5] !== stateFromStores) {
+    class B {
+      constructor() {
+        obj = closure_4;
+        guildId = undefined;
+        tmp = closure_9;
+        if (closure_4 != null) {
+          guildId = obj.getGuildId();
+        }
+        return closure_9.getGuild(guildId);
+      }
+    }
+    const items3 = [stateFromStores];
+    cResult[5] = stateFromStores;
+    cResult[6] = B;
+    cResult[7] = items3;
+    let tmp14 = items3;
+  } else {
+    class B {
+      constructor() {
+        obj = closure_4;
+        guildId = undefined;
+        tmp = closure_9;
+        if (closure_4 != null) {
+          guildId = obj.getGuildId();
+        }
+        return closure_9.getGuild(guildId);
+      }
+    }
+    tmp14 = cResult[7];
+  }
+  const tmpResult = threadId(sendMessage[30]);
+  stateFromStores1 = threadId(sendMessage[30]).useStateFromStores(tmp11, B, tmp14);
+  if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
+    class B {
+      constructor() {
+        obj = closure_4;
+        guildId = undefined;
+        tmp = closure_9;
+        if (closure_4 != null) {
+          guildId = obj.getGuildId();
+        }
+        return closure_9.getGuild(guildId);
+      }
+    }
+    const items4 = [MessageStore];
+    cResult[8] = items4;
+    const tmp16 = items4;
+  } else {
+    class B {
+      constructor() {
+        obj = closure_4;
+        guildId = undefined;
+        tmp = closure_9;
+        if (closure_4 != null) {
+          guildId = obj.getGuildId();
+        }
+        return closure_9.getGuild(guildId);
+      }
+    }
+  }
+  if (cResult[9] !== threadId) {
+    class L {
+      constructor() {
+        obj = closure_1(closure_2[18]);
+        return closure_10.getMessage(threadId, obj.castChannelIdAsMessageId(threadId));
+      }
+    }
+    const items5 = [threadId];
+    cResult[9] = threadId;
+    cResult[10] = L;
+    cResult[11] = items5;
+    let tmp18 = items5;
+  } else {
+    class L {
+      constructor() {
+        obj = closure_1(closure_2[18]);
+        return closure_10.getMessage(threadId, obj.castChannelIdAsMessageId(threadId));
+      }
+    }
+    tmp18 = cResult[11];
+  }
+  const tmpResult3 = threadId(sendMessage[30]);
+  const stateFromStores2 = threadId(sendMessage[30]).useStateFromStores(tmp16, L, tmp18);
+  analyticsLocations = attachments(tmp2[31])().analyticsLocations;
+  if (cResult[12] === analyticsLocations) {
+    class L {
+      constructor() {
+        obj = closure_1(closure_2[18]);
+        return closure_10.getMessage(threadId, obj.castChannelIdAsMessageId(threadId));
+      }
+    }
+  }
+  class D {
+    constructor() {
+      if (null != closure_4) {
+        tmp = closure_6;
+        if (null != closure_6) {
+          if (null != closure_5) {
+            tmp4 = closure_0;
+            tmp5 = closure_2;
+            obj2 = closure_0(closure_2[32]);
+            result = obj2.trackForumAddMediaToOriginalPostClicked({ added: true });
+            tmp7 = _upload;
+            obj1 = { threadId: null, attachments: null, setIsUploading: null, guild: null, analyticsLocations: null };
+            tmp8 = threadId;
+            obj1.threadId = threadId;
+            tmp9 = attachments;
+            obj1.attachments = attachments;
+            tmp10 = closure_3;
+            obj1.setIsUploading = closure_3;
+            obj1.guild = tmp2;
+            tmp11 = analyticsLocations;
+            obj1.analyticsLocations = analyticsLocations;
+            tmp12 = _upload(obj1);
+          }
+          return;
+        }
+      }
+      obj = closure_1(closure_2[15]);
+      hideActionSheetResult = obj.hideActionSheet();
+      return;
+    }
+  }
+  cResult[12] = analyticsLocations;
+  cResult[13] = attachments;
+  cResult[14] = stateFromStores2;
+  cResult[15] = stateFromStores1;
+  cResult[16] = stateFromStores;
+  cResult[17] = threadId;
+  cResult[18] = D;
+  const tmpResult4 = threadId(sendMessage[30]);
+}) : ((threadId) => {
   threadId = threadId.threadId;
   const attachments = threadId.attachments;
   const sendMessage = threadId.sendMessage;
-  _slicedToArray = undefined;
+  setIsUploading = undefined;
   let stateFromStores1;
   let analyticsLocations;
   c8 = undefined;
   const tmp = closure_15();
-  [tmp3, c3] = stateFromStores1.useState(false);
-  const tmp2 = _slicedToArray(stateFromStores1.useState(false), 2);
+  [tmp3, c3] = setIsUploading(stateFromStores1.useState(false), 2);
+  const tmp2 = setIsUploading(stateFromStores1.useState(false), 2);
   const items = [analyticsLocations];
   const items1 = [threadId];
-  const stateFromStores = threadId(sendMessage[28]).useStateFromStores(items, () => ChannelStore.getChannel(threadId), items1);
-  let obj = threadId(sendMessage[28]);
+  const stateFromStores = threadId(sendMessage[30]).useStateFromStores(items, () => ChannelStore.getChannel(threadId), items1);
+  let obj = threadId(sendMessage[30]);
   const items2 = [GuildStore];
   const items3 = [stateFromStores];
-  stateFromStores1 = threadId(sendMessage[28]).useStateFromStores(items2, () => {
+  stateFromStores1 = threadId(sendMessage[30]).useStateFromStores(items2, () => {
     let guildId;
     if (stateFromStores != null) {
       guildId = stateFromStores.getGuildId();
     }
     return GuildStore.getGuild(guildId);
   }, items3);
-  let obj2 = threadId(sendMessage[28]);
+  let obj2 = threadId(sendMessage[30]);
   const items4 = [MessageStore];
   const items5 = [threadId];
-  const stateFromStores2 = threadId(sendMessage[28]).useStateFromStores(items4, () => MessageStore.getMessage(threadId, SnowflakeUtilsDefault.castChannelIdAsMessageId(threadId)), items5);
-  analyticsLocations = attachments(sendMessage[29])().analyticsLocations;
+  const stateFromStores2 = threadId(sendMessage[30]).useStateFromStores(items4, () => MessageStore.getMessage(threadId, SnowflakeUtilsDefault.castChannelIdAsMessageId(threadId)), items5);
+  analyticsLocations = attachments(sendMessage[31])().analyticsLocations;
   const items6 = [stateFromStores, stateFromStores1, stateFromStores2, threadId, attachments, analyticsLocations];
   const items7 = [sendMessage];
   const callback = stateFromStores1.useCallback(() => {
@@ -278,16 +460,7 @@ export default function AddMediaToOriginalForumPostActionSheet(threadId) {
         if (null != stateFromStores1) {
           const result = tracking_Tracking.trackForumAddMediaToOriginalPostClicked({ added: true });
           const obj3 = { threadId, attachments, setIsUploading, guild: tmp2, analyticsLocations };
-          (function _upload() {
-            const self = this;
-            const apply = closure_1_16.apply;
-            if (typeof apply === "unknown") {
-              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-            } else {
-              applyArgumentsResult = apply(self, arguments);
-            }
-            return applyArgumentsResult;
-          })(obj3);
+          _upload(obj3);
         }
       }
     }
@@ -298,8 +471,8 @@ export default function AddMediaToOriginalForumPostActionSheet(threadId) {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     sendMessage();
   }, items7);
-  let obj3 = threadId(sendMessage[28]);
-  [tmp12, c8] = stateFromStores1.useState(null);
+  let obj3 = threadId(sendMessage[30]);
+  [tmp12, c8] = setIsUploading(stateFromStores1.useState(null), 2);
   const items8 = [attachments];
   const effect = stateFromStores1.useEffect(() => {
     if (null != attachments[0]) {
@@ -324,16 +497,16 @@ export default function AddMediaToOriginalForumPostActionSheet(threadId) {
   }
   const obj5 = { startExpanded: true, children: null };
   const obj6 = { style: tmp.container, children: null };
-  const obj7 = { pointerEvents: "none", style: tmp.post, children: closure_13(threadId(sendMessage[33]).ForumPostListDisabled, { threadId, localDeviceMedia: tmp16, style: tmp.postContent }) };
+  const obj7 = { pointerEvents: "none", style: tmp.post, children: closure_13(threadId(sendMessage[34]).ForumPostListDisabled, { threadId, localDeviceMedia: tmp16, style: tmp.postContent }) };
   const items9 = [closure_13(stateFromStores2, obj7), , , , , ];
   const obj9 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = tmp4(tmp5[27]).intl;
   obj9.children = intl.string(threadId(sendMessage[27]).t["+SZF6S"]);
-  items9[1] = closure_13(threadId(sendMessage[34]).Text, obj9);
+  items9[1] = closure_13(threadId(sendMessage[35]).Text, obj9);
   const obj10 = { style: tmp.description, variant: "text-md/medium", color: "text-default", children: null };
   const intl2 = tmp4(tmp5[27]).intl;
   obj10.children = intl2.string(threadId(sendMessage[27]).t["0Ycgw5"]);
-  items9[2] = closure_13(threadId(sendMessage[34]).Text, obj10);
+  items9[2] = closure_13(threadId(sendMessage[35]).Text, obj10);
   const obj11 = { style: tmp.buttonMargin, children: null };
   const obj12 = { grow: true, variant: "primary", text: null, pillStyle: null, onPress: null, loading: null, disabled: null };
   const intl3 = tmp4(tmp5[27]).intl;
@@ -342,7 +515,7 @@ export default function AddMediaToOriginalForumPostActionSheet(threadId) {
   obj12.onPress = callback;
   obj12.loading = tmp3;
   obj12.disabled = tmp3;
-  obj11.children = closure_13(threadId(sendMessage[35]).BaseTextButton, obj12);
+  obj11.children = closure_13(threadId(sendMessage[36]).BaseTextButton, obj12);
   items9[3] = closure_13(stateFromStores2, obj11);
   const obj13 = { style: tmp.buttonMargin, children: null };
   const obj14 = { grow: true, variant: "secondary", text: null, pillStyle: null, onPress: null, disabled: null };
@@ -351,7 +524,7 @@ export default function AddMediaToOriginalForumPostActionSheet(threadId) {
   obj14.pillStyle = tmp.button;
   obj14.onPress = callback1;
   obj14.disabled = tmp3;
-  obj13.children = closure_13(threadId(sendMessage[35]).BaseTextButton, obj14);
+  obj13.children = closure_13(threadId(sendMessage[36]).BaseTextButton, obj14);
   items9[4] = closure_13(stateFromStores2, obj13);
   const obj15 = { grow: true, variant: "secondary", text: null, pillStyle: null, onPress: null, disabled: null };
   const intl5 = tmp4(tmp5[27]).intl;
@@ -361,8 +534,8 @@ export default function AddMediaToOriginalForumPostActionSheet(threadId) {
     return attachments(sendMessage[15]).hideActionSheet();
   };
   obj15.disabled = tmp3;
-  items9[5] = closure_13(threadId(sendMessage[35]).BaseTextButton, obj15);
+  items9[5] = closure_13(threadId(sendMessage[36]).BaseTextButton, obj15);
   obj6.children = items9;
   obj5.children = closure_14(stateFromStores2, obj6);
-  return closure_13(threadId(sendMessage[32]).BottomSheet, obj5);
-};
+  return closure_13(threadId(sendMessage[37]).BottomSheet, obj5);
+});

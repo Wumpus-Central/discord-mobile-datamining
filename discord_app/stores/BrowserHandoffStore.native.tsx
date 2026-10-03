@@ -2,7 +2,7 @@
 
 // Module 503 (BrowserHandoffStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
 
 const Store = initializeDefault.Store;
 class BrowserHandoffStore extends Store {
@@ -14,12 +14,6 @@ prototype["initialize"] = function initialize() {
 prototype["isHandoffAvailable"] = function isHandoffAvailable() {
   return false;
 };
-Object.defineProperty(prototype, "user", {
-  get: function user() {
-    return null;
-  },
-  set: undefined
-});
 Object.defineProperty(prototype, "key", {
   get: function key() {
     return null;

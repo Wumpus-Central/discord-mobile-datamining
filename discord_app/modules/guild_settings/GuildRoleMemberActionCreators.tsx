@@ -1,11 +1,11 @@
-// === Module 6736: GuildRoleMemberActionCreators ===
+// === Module 6624: GuildRoleMemberActionCreators ===
 
-// Module 6736 (GuildRoleMemberActionCreators)
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import privDefault from "priv" /* 1439 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6018 */;
+// Module 6624 (GuildRoleMemberActionCreators)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import privDefault from "priv" /* 1444 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5705 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 6735 */;
+import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 6623 */;
 
 const require = globalThis.__r;
 
@@ -48,7 +48,7 @@ let closure_7 = async function _fetchMemberCounts(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -88,14 +88,14 @@ let closure_7 = async function _fetchMemberCounts(arg0) {
         return obj;
       }
       c1 = 3;
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     } catch (tmp7) {
       c1 = tmp;
       throw tmp7;
     }
   }
 };
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 let closure_8 = new privDefault({ maxAge: 10000 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_settings/GuildRoleMemberActionCreators.tsx");

@@ -1,18 +1,18 @@
-// === Module 9451: getXboxURIForChannel ===
+// === Module 9461: getXboxURIForChannel ===
 
-// Module 9451 (getXboxURIForChannel)
-import util from "util" /* 1115 */;
-import HTTPUtils from "HTTPUtils" /* 1271 */;
-import useChannelName from "useChannelName" /* 4998 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import MediaEngineStore from "MediaEngineStore" /* 1993 */;
-import RelationshipStore from "RelationshipStore" /* 4508 */;
-import UserStore from "UserStore" /* 1372 */;
+// Module 9461 (getXboxURIForChannel)
+import util from "util" /* 1126 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import useChannelName from "useChannelName" /* 5043 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import MediaEngineStore from "MediaEngineStore" /* 1999 */;
+import RelationshipStore from "RelationshipStore" /* 4519 */;
+import UserStore from "UserStore" /* 1377 */;
 
 require = fn;
-const GameConsoleConstants = fn(8736);
+const GameConsoleConstants = fn(8749);
 ({ XBOX_HANDOFF_SEARCH_PARAMS: metroRequire, XBOX_URL_BASE: closure_7 } = GameConsoleConstants);
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ Endpoints: closure_8, ZERO_STRING_GUILD_ID: closure_9 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_console/getXboxURIForChannel.tsx");
@@ -20,10 +20,10 @@ const result = size.fileFinishedImporting("modules/game_console/getXboxURIForCha
 export default function getXboxURIForChannel(channelId, arg1) {
   ({ nonce, forQRCode } = arg1);
   const guildId = channelId.getGuildId();
-  const guild = GuildStore.getGuild(guildId);
+  guild = GuildStore.getGuild(guildId);
   let tmp4 = guildId;
   if (guildId == null) {
-    tmp4 = React7;
+    tmp4 = options;
   }
   const obj = { guildId: tmp4, channelId: channelId.id, channelName: useChannelName.computeChannelName(channelId, UserStore, RelationshipStore), guildName: null, muted: null, deafened: null, nonce: null };
   let name;

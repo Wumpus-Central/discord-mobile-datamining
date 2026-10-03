@@ -1,15 +1,15 @@
-// === Module 9338: SecureFramesVerifiedStore ===
+// === Module 9346: SecureFramesVerifiedStore ===
 
-// Module 9338 (SecureFramesVerifiedStore)
+// Module 9346 (SecureFramesVerifiedStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4900 */;
-import SecureFramesUtils from "SecureFramesUtils" /* 9356 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4945 */;
+import SecureFramesUtils from "SecureFramesUtils" /* 9364 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4868 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4884 */;
-import TransientKeyStore from "TransientKeyStore" /* 9339 */;
-import VerifiedKeyStore from "VerifiedKeyStore" /* 9340 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4929 */;
+import TransientKeyStore from "TransientKeyStore" /* 9347 */;
+import VerifiedKeyStore from "VerifiedKeyStore" /* 9348 */;
 
 require = fn;
 function computeCallVerification() {
@@ -70,7 +70,7 @@ function handleUserUpdate(userId) {
     return flag;
   }
 }
-const RTCConnectionStates = fn(1074).RTCConnectionStates;
+const RTCConnectionStates = fn(1085).RTCConnectionStates;
 const map = new Map();
 const map1 = new Map();
 let c10 = false;

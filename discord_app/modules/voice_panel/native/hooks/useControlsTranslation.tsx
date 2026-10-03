@@ -1,53 +1,70 @@
-// === Module 17248: useControlsTranslation ===
+// === Module 17299: useControlsTranslation ===
 
-// Module 17248 (useControlsTranslation)
-import spring from "spring" /* 5464 */;
+// Module 17299 (useControlsTranslation)
+import spring from "spring" /* 5597 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const MODE_CHANGE_PHYSICS = fn(11965).MODE_CHANGE_PHYSICS;
-const CALL_TILE_GUTTER = fn(11968).CALL_TILE_GUTTER;
+const MODE_CHANGE_PHYSICS = fn(11902).MODE_CHANGE_PHYSICS;
+const CALL_TILE_GUTTER = fn(11905).CALL_TILE_GUTTER;
 const __initData = { code: "function useControlsTranslationTsx1(){const{withSpring,wrapperSpecs,MODE_CHANGE_PHYSICS,useReducedMotion,CALL_TILE_GUTTER,viewHeight}=this.__closure;return{transform:[{translateX:withSpring(wrapperSpecs.get().x,MODE_CHANGE_PHYSICS)},{translateY:withSpring(!useReducedMotion.get()&&wrapperSpecs.get().hidden?wrapperSpecs.get().height+CALL_TILE_GUTTER+viewHeight.get():wrapperSpecs.get().y,MODE_CHANGE_PHYSICS)}]};}" };
+const __initData2 = { code: "function useControlsTranslationTsx2(){const{withSpring,wrapperSpecs,MODE_CHANGE_PHYSICS,useReducedMotion,CALL_TILE_GUTTER,viewHeight}=this.__closure;return{transform:[{translateX:withSpring(wrapperSpecs.get().x,MODE_CHANGE_PHYSICS)},{translateY:withSpring(!useReducedMotion.get()&&wrapperSpecs.get().hidden?wrapperSpecs.get().height+CALL_TILE_GUTTER+viewHeight.get():wrapperSpecs.get().y,MODE_CHANGE_PHYSICS)}]};}" };
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useControlsTranslation.tsx");
 
-export default function useControlsTranslation(arg0, wrapperSpecs, viewHeight) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, wrapperSpecs, viewHeight) => {
   _require = wrapperSpecs;
   importDefault = viewHeight;
   useReducedMotion = noop.useContext(require("VoicePanelStateContext")).useReducedMotion;
-  class S {
-    constructor() {
-      obj = { translateX: null };
-      obj2 = closure_0(closure_2[5]);
-      obj3 = closure_0;
-      tmp = MODE_CHANGE_PHYSICS;
-      obj.translateX = obj2.withSpring(closure_0.get().x, MODE_CHANGE_PHYSICS);
-      items = [, ];
-      items[0] = obj;
-      obj4 = closure_0(closure_2[5]);
-      if (!useReducedMotion.get()) {
-        if (obj3.get().hidden) {
-          tmp2 = CALL_TILE_GUTTER;
-          tmp4 = closure_1;
-          sum = obj3.get().height + CALL_TILE_GUTTER;
-          y = sum + closure_1.get();
-        }
-        obj1 = { transform: null };
-        obj7 = { translateY: null };
-        obj7.translateY = obj4.withSpring(y, tmp);
-        items[1] = obj7;
-        obj1.transform = items;
-        return obj1;
+  const fn = function u() {
+    const obj = { translateX: spring.withSpring(wrapperSpecs.get().x, MODE_CHANGE_PHYSICS) };
+    const items = [obj, ];
+    if (!useReducedMotion.get()) {
+      if (wrapperSpecs.get().hidden) {
+        const sum = wrapperSpecs.get().height + CALL_TILE_GUTTER;
+        let y = sum + viewHeight.get();
       }
-      y = obj3.get().y;
-      return;
+      const obj5 = { transform: null };
+      const obj6 = { translateY: obj4.withSpring(y, MODE_CHANGE_PHYSICS) };
+      items[1] = obj6;
+      obj5.transform = items;
+      return obj5;
     }
-  }
+    y = wrapperSpecs.get().y;
+    obj4 = spring;
+  };
   let obj = require("ReanimatedRexport");
-  S.__closure = { withSpring: require("spring").withSpring, wrapperSpecs, MODE_CHANGE_PHYSICS, useReducedMotion, CALL_TILE_GUTTER, viewHeight };
-  S.__workletHash = 11281989557090;
-  S.__initData = __initData;
-  return obj.useAnimatedStyle(S);
-};
+  fn.__closure = { withSpring: require("spring").withSpring, wrapperSpecs, MODE_CHANGE_PHYSICS, useReducedMotion, CALL_TILE_GUTTER, viewHeight };
+  fn.__workletHash = 11281989557090;
+  fn.__initData = __initData;
+  return obj.useAnimatedStyle(fn);
+}) : ((arg0, wrapperSpecs, viewHeight) => {
+  _require = wrapperSpecs;
+  importDefault = viewHeight;
+  useReducedMotion = noop.useContext(require("VoicePanelStateContext")).useReducedMotion;
+  const fn = function u() {
+    const obj = { translateX: spring.withSpring(wrapperSpecs.get().x, MODE_CHANGE_PHYSICS) };
+    const items = [obj, ];
+    if (!useReducedMotion.get()) {
+      if (wrapperSpecs.get().hidden) {
+        const sum = wrapperSpecs.get().height + CALL_TILE_GUTTER;
+        let y = sum + viewHeight.get();
+      }
+      const obj5 = { transform: null };
+      const obj6 = { translateY: obj4.withSpring(y, MODE_CHANGE_PHYSICS) };
+      items[1] = obj6;
+      obj5.transform = items;
+      return obj5;
+    }
+    y = wrapperSpecs.get().y;
+    obj4 = spring;
+  };
+  let obj = require("ReanimatedRexport");
+  fn.__closure = { withSpring: require("spring").withSpring, wrapperSpecs, MODE_CHANGE_PHYSICS, useReducedMotion, CALL_TILE_GUTTER, viewHeight };
+  fn.__workletHash = 14781416319841;
+  fn.__initData = __initData2;
+  return obj.useAnimatedStyle(fn);
+});

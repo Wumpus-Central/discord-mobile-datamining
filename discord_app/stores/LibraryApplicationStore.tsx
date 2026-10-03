@@ -1,12 +1,12 @@
-// === Module 7004: LibraryApplicationStore ===
+// === Module 6902: LibraryApplicationStore ===
 
-// Module 7004 (LibraryApplicationStore)
+// Module 6902 (LibraryApplicationStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage6 from "Storage" /* 510 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import FlagUtilsAll from "FlagUtils" /* 1385 */;
-import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7006 */;
-import LibraryApplicationRecord from "LibraryApplicationRecord" /* 7005 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import FlagUtilsAll from "FlagUtils" /* 1390 */;
+import LibraryApplicationUtils from "LibraryApplicationUtils" /* 6904 */;
+import LibraryApplicationRecord from "LibraryApplicationRecord" /* 6903 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -25,7 +25,7 @@ function handleLibraryApplicationUpdate(libraryApplication) {
   closure_9[comboId] = fromServer;
   set.delete(comboId);
 }
-const LibraryApplicationFlags = fn(1074).LibraryApplicationFlags;
+const LibraryApplicationFlags = fn(1085).LibraryApplicationFlags;
 const LibraryApplicationStore = "LibraryApplicationStore";
 let c8 = false;
 const dependencyMap = {};
@@ -46,7 +46,7 @@ prototype["initialize"] = function initialize() {
     if (null == value.activeLaunchOptionIds) {
       const Storage2 = Storage6.Storage;
       const Storage3 = Storage6.Storage;
-      let value3 = Storage3.get(LibraryApplicationStore);
+      value3 = Storage3.get(LibraryApplicationStore);
       if (value3 == null) {
         value3 = {};
       }

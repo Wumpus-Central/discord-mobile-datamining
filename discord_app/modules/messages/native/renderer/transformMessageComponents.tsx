@@ -1,21 +1,21 @@
-// === Module 7749: transformMessageComponents ===
+// === Module 7793: transformMessageComponents ===
 
-// Module 7749 (transformMessageComponents)
-import DurationsDefault from "Durations" /* 1091 */;
-import URLUtilsDefault from "URLUtils" /* 1366 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 4995 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 5069 */;
-import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 7747 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 7765 */;
+// Module 7793 (transformMessageComponents)
+import DurationsDefault from "Durations" /* 1102 */;
+import URLUtilsDefault from "URLUtils" /* 1371 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 5040 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 5114 */;
+import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 7791 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 7809 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import priv from "priv" /* 1439 */;
+import priv from "priv" /* 1444 */;
 
-const util = tmp4(1115);
-const FlagUtils = tmp4(1385);
-const AgeVerificationUtils = tmp4(5057);
-const MediaTypes = tmp4(5075);
-const sanitizeMediaDimension = tmp4(7746);
-const ExplicitMediaUtils = tmp4(7764);
+const util = tmp4(1126);
+const FlagUtils = tmp4(1390);
+const AgeVerificationUtils = tmp4(5102);
+const MediaTypes = tmp4(5121);
+const sanitizeMediaDimension = tmp4(7790);
+const ExplicitMediaUtils = tmp4(7808);
 require = fn;
 function transformToRowGeneratedComponent(message, accessory) {
   _require = message;
@@ -60,7 +60,7 @@ function transformToRowGeneratedComponent(message, accessory) {
     const initialStringSelectOptions = tmp(tmp2[10]).getInitialStringSelectOptions(accessory, message.id);
     const mapped1 = initialStringSelectOptions.map((item) => {
       closure_0 = item;
-      const options = accessory.options;
+      options = accessory.options;
       return options.findIndex((value) => value.value === closure_0);
     });
     const found1 = mapped1.filter((item) => -1 !== item);
@@ -529,8 +529,8 @@ function transformUnfurledMediaItem(media, shouldShowMedia) {
 }
 let closure_3 = ["checkpointData"];
 const processColor = fn(17).processColor;
-const CheckpointVersions = fn(5070).CheckpointVersions;
-let closure_7 = fn(7750).TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS;
+const CheckpointVersions = fn(5115).CheckpointVersions;
+let closure_7 = fn(7794).TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS;
 let obj = { max: Infinity, maxAge: null, updateAgeOnGet: true };
 obj.maxAge = 15 * DurationsDefault.Millis.MINUTE;
 const importDefaultResult1 = new priv(obj);
@@ -538,12 +538,12 @@ let size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/renderer/transformMessageComponents.tsx");
 
 export default function transformMessageComponents(message, arr) {
-  const obj = { type: "textDisplayComponent", parserState: obj3(7487).getInitialParserStateFromMessage(message.message, closure_7) };
+  const obj = { type: "textDisplayComponent", parserState: obj3(7531).getInitialParserStateFromMessage(message.message, closure_7) };
   obj3 = {};
   const merged = Object.assign(message);
   obj3.markdownConfigs = { textDisplayComponent: obj };
   const mapped = arr.map((item) => transformToRowGeneratedComponent(obj3, item));
-  return mapped.filter(obj3(1370).isNotNullish);
+  return mapped.filter(obj3(1375).isNotNullish);
 };
 export const getUnfurledMediaItemType = function getUnfurledMediaItemType(media) {
   ({ width, height, contentType } = media);

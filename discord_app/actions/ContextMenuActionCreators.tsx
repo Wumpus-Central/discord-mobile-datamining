@@ -1,8 +1,8 @@
-// === Module 6050: ContextMenuActionCreators ===
+// === Module 5943: ContextMenuActionCreators ===
 
-// Module 6050 (ContextMenuActionCreators)
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import Constants from "Constants" /* 1074 */;
+// Module 5943 (ContextMenuActionCreators)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
 function openContextMenu(stopPropagation, render, enableSpellCheck, renderLazy) {
@@ -99,7 +99,7 @@ function openContextMenu(stopPropagation, render, enableSpellCheck, renderLazy) 
     const _DOMRect = DOMRect;
     const dOMRect = new DOMRect(tmp3, sum1, 0, 0);
     contextMenu.rect = dOMRect;
-    let APP = contextMenu(6051).getCurrentlyInteractingAppContext();
+    let APP = contextMenu(5944).getCurrentlyInteractingAppContext();
     if (APP == null) {
       APP = AppContext.APP;
     }
@@ -117,18 +117,18 @@ function openContextMenu(stopPropagation, render, enableSpellCheck, renderLazy) 
     if (enableSpellCheck) {
       if (tmp16Result.isDesktop()) {
         if (nativeEvent.isTrusted) {
-          importDefault = tmp16(6054).addResultListener(() => {
+          importDefault = tmp16(5947).addResultListener(() => {
             closure_1();
             contextMenu = DispatcherDefault;
             contextMenu.dispatch({ type: "CONTEXT_MENU_OPEN", contextMenu });
           });
-          const tmp16Result2 = tmp16(6054);
+          const tmp16Result2 = tmp16(5947);
         }
       }
-      tmp16Result = tmp16(1364);
+      tmp16Result = tmp16(1369);
     }
     stopPropagation.preventDefault();
-    const obj3 = contextMenu(6051);
+    const obj3 = contextMenu(5944);
     const obj4 = { type: "CONTEXT_MENU_OPEN", contextMenu };
     DispatcherDefault.dispatch(obj4);
   } else {

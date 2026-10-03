@@ -1,6 +1,6 @@
-// === Module 1978: isActivityParticipantValidGuildMember ===
+// === Module 1984: isActivityParticipantValidGuildMember ===
 
-// Module 1978 (isActivityParticipantValidGuildMember)
+// Module 1984 (isActivityParticipantValidGuildMember)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activities/isActivityParticipantValidGuildMember.tsx");

@@ -1,8 +1,8 @@
-// === Module 5504: TopSoundboardSoundStore ===
+// === Module 5681: TopSoundboardSoundStore ===
 
-// Module 5504 (TopSoundboardSoundStore)
+// Module 5681 (TopSoundboardSoundStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
 
 const obj = { topSoundboardSoundsByGuildId: {} };
 let closure_1 = obj;

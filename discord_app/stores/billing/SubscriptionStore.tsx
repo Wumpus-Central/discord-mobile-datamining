@@ -1,9 +1,9 @@
-// === Module 4523: SubscriptionStore ===
+// === Module 4534: SubscriptionStore ===
 
-// Module 4523 (SubscriptionStore)
+// Module 4534 (SubscriptionStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import OverridePremiumTypeStore from "OverridePremiumTypeStore" /* 1373 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import OverridePremiumTypeStore from "OverridePremiumTypeStore" /* 1378 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 function reset() {
@@ -17,9 +17,9 @@ function reset() {
   c16 = false;
   c17 = null;
 }
-const isNoneSubscription = fn(4518).isNoneSubscription;
-const SubscriptionRecord = fn(4524).SubscriptionRecord;
-const Constants = fn(1074);
+const isNoneSubscription = fn(4529).isNoneSubscription;
+const SubscriptionRecord = fn(4535).SubscriptionRecord;
+const Constants = fn(1085);
 ({ SubscriptionStatusTypes: closure_4, SubscriptionTypes: hasOwnProperty } = Constants);
 let obj = null;
 let closure_8 = null;

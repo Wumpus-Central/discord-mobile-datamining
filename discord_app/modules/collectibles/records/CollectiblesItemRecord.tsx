@@ -1,15 +1,15 @@
-// === Module 7154: CollectiblesItemRecord ===
+// === Module 7057: CollectiblesItemRecord ===
 
-// Module 7154 (CollectiblesItemRecord)
-import CollectiblesItemType from "CollectiblesItemType" /* 1974 */;
-import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7155 */;
-import NameplateRecord from "NameplateRecord" /* 1972 */;
-import ProfileEffectRecord from "ProfileEffectRecord" /* 7156 */;
-import ProfileFrameRecord from "ProfileFrameRecord" /* 7157 */;
-import UnknownCollectiblesItemRecord from "UnknownCollectiblesItemRecord" /* 7158 */;
+// Module 7057 (CollectiblesItemRecord)
+import CollectiblesItemType from "CollectiblesItemType" /* 1980 */;
+import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7058 */;
+import NameplateRecord from "NameplateRecord" /* 1978 */;
+import ProfileEffectRecord from "ProfileEffectRecord" /* 7059 */;
+import ProfileFrameRecord from "ProfileFrameRecord" /* 7060 */;
+import UnknownCollectiblesItemRecord from "UnknownCollectiblesItemRecord" /* 7061 */;
 
 require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ SKUProductLines: closure_7, SKUTypes: closure_8 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/records/CollectiblesItemRecord.tsx");

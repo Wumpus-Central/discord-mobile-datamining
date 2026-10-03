@@ -1,7 +1,7 @@
-// === Module 8038: StageInstanceActionCreators ===
+// === Module 8082: StageInstanceActionCreators ===
 
-// Module 8038 (StageInstanceActionCreators)
-import HTTPUtils from "HTTPUtils" /* 1271 */;
+// Module 8082 (StageInstanceActionCreators)
+import HTTPUtils from "HTTPUtils" /* 1282 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -26,7 +26,7 @@ let closure_5 = async function _updateStageInstance(arg0) {
     return value.body;
   })();
 };
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/StageInstanceActionCreators.tsx");
 

@@ -1,7 +1,7 @@
-// === Module 17346: setAudioInputEnabled ===
+// === Module 17438: setAudioInputEnabled ===
 
-// Module 17346 (setAudioInputEnabled)
-import NativeMediaEngineModuleDefault from "NativeMediaEngineModule" /* 1998 */;
+// Module 17438 (setAudioInputEnabled)
+import NativeMediaEngineModuleDefault from "NativeMediaEngineModule" /* 2004 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/voice_calls/utils/setAudioInputEnabled.android.tsx");

@@ -1,37 +1,37 @@
-// === Module 14280: activities ===
+// === Module 14348: activities ===
 
-// Module 14280 (activities)
-import RPCHelpers from "RPCHelpers" /* 8967 */;
-import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 14234 */;
+// Module 14348 (activities)
+import RPCHelpers from "RPCHelpers" /* 9031 */;
+import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 14302 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-const Constants = fn(1074);
-({ RPCCommands, RPCErrors: closure_4, ApplicationFlags: hasOwnProperty } = Constants);
+const Constants = fn(1085);
+({ RPCCommands, RPCErrors: closure_4 } = Constants);
 let obj = {};
-let CONTEXT_MENU_ICON_NAMES = fn(14247);
+let CONTEXT_MENU_ICON_NAMES = fn(14315);
 obj[RPCCommands.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS, {
-  scope: fn(14234).activityInstanceConnectedParticipantsScope,
+  scope: fn(14302).activityInstanceConnectedParticipantsScope,
   handler(socket) {
     const result = RPCHelpers.validatePostMessageTransport(socket.socket.transport);
     return activityInstanceConnectedParticipants.activityInstanceConnectedParticipants();
   }
 });
-CONTEXT_MENU_ICON_NAMES = fn(14247);
+CONTEXT_MENU_ICON_NAMES = fn(14315);
 let obj3 = {
-  scope: fn(14234).activityInstanceConnectedParticipantsScope,
+  scope: fn(14302).activityInstanceConnectedParticipantsScope,
   handler(socket) {
     const result = RPCHelpers.validatePostMessageTransport(socket.socket.transport);
     return activityInstanceConnectedParticipants.activityInstanceConnectedParticipants();
   }
 };
 obj[RPCCommands.REQUEST_PROXY_TICKET_REFRESH] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.REQUEST_PROXY_TICKET_REFRESH, {
-  scope: fn(14234).activityInstanceConnectedParticipantsScope,
+  scope: fn(14302).activityInstanceConnectedParticipantsScope,
   handler(socket) {
     socket = socket.socket;
     return (async () => {
-      if (constants2 === 2) {
-        constants2 = 3;
+      if (c5 === 2) {
+        c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp6 === 3) {
         if (arg0 === 1) {
@@ -40,17 +40,17 @@ obj[RPCCommands.REQUEST_PROXY_TICKET_REFRESH] = CONTEXT_MENU_ICON_NAMES.createRP
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
-          constants2 = 2;
+          c5 = 2;
           if (0 === constants) {
             if (arg0 === 1) {
-              constants2 = 3;
+              c5 = 3;
               throw value;
             } else if (arg0 === 2) {
-              constants2 = 3;
+              c5 = 3;
               const obj3 = { value, done: true };
               return obj3;
             } else {
@@ -59,7 +59,7 @@ obj[RPCCommands.REQUEST_PROXY_TICKET_REFRESH] = CONTEXT_MENU_ICON_NAMES.createRP
               const tmp37 = value;
               const obj10 = value(tmp29[4]);
               const validateApplicationResult = value(tmp29[4]).validateApplication(socket.application);
-              if (obj11.hasApplicationFlag(socket.application, constants2.EMBEDDED)) {
+              if (obj11.isEmbeddedApplication(socket.application)) {
                 const tmp26 = tmp3(tmp29[7])(socket);
                 c3 = 1;
                 value = {};
@@ -68,7 +68,7 @@ obj[RPCCommands.REQUEST_PROXY_TICKET_REFRESH] = CONTEXT_MENU_ICON_NAMES.createRP
                   id = tmp26.id;
                 }
                 constants = 2;
-                constants2 = 1;
+                c5 = 1;
                 const obj4 = { value: tmp37(tmp29[8]).createProxyTicket(validateApplicationResult, id), done: false };
                 return obj4;
               } else {
@@ -84,23 +84,23 @@ obj[RPCCommands.REQUEST_PROXY_TICKET_REFRESH] = CONTEXT_MENU_ICON_NAMES.createRP
             const tmp18 = new tmp3(tmp29[6])(obj6, "Failed to create proxy ticket");
             throw tmp18;
           } else if (arg0 === 1) {
-            constants2 = 3;
+            c5 = 3;
             throw value;
           } else if (arg0 === 2) {
             c3 = 0;
-            constants2 = 3;
+            c5 = 3;
             const obj7 = { value, done: true };
             return obj7;
           } else {
             value.ticket = value;
             c3 = 0;
-            constants2 = 3;
+            c5 = 3;
             const obj = { value, done: true };
             return obj;
           }
         } catch (tmp29) {
           if (tmp4 === c3) {
-            constants2 = tmp2;
+            c5 = tmp2;
             throw tmp29;
           } else {
             constants = tmp;

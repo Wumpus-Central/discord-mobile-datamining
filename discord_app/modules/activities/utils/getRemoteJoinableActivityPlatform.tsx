@@ -1,14 +1,14 @@
-// === Module 11473: getRemoteJoinableActivityPlatform ===
+// === Module 11392: getRemoteJoinableActivityPlatform ===
 
-// Module 11473 (getRemoteJoinableActivityPlatform)
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1365 */;
-import FlagUtils from "FlagUtils" /* 1385 */;
-import ActivityFlagUtils from "ActivityFlagUtils" /* 9014 */;
-import ConnectedAppsStore from "ConnectedAppsStore" /* 6715 */;
-import SessionsStore from "SessionsStore" /* 4863 */;
+// Module 11392 (getRemoteJoinableActivityPlatform)
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1370 */;
+import FlagUtils from "FlagUtils" /* 1390 */;
+import ActivityFlagUtils from "ActivityFlagUtils" /* 11123 */;
+import ConnectedAppsStore from "ConnectedAppsStore" /* 6603 */;
+import SessionsStore from "SessionsStore" /* 4908 */;
 
 require = fn;
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ ActivityFlags: closure_4, ActivityGamePlatforms: hasOwnProperty } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/getRemoteJoinableActivityPlatform.tsx");

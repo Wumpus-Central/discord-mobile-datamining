@@ -1,8 +1,8 @@
-// === Module 18018: MarkAsRead ===
+// === Module 18104: MarkAsRead ===
 
-// Module 18018 (MarkAsRead)
-import ReadStateActionCreators from "ReadStateActionCreators" /* 6717 */;
-import Constants from "Constants" /* 1074 */;
+// Module 18104 (MarkAsRead)
+import ReadStateActionCreators from "ReadStateActionCreators" /* 6605 */;
+import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
 ({ AnalyticsObjectTypes: c2, AnalyticsObjects: c3 } = Constants);

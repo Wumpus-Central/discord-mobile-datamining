@@ -1,10 +1,10 @@
-// === Module 15845: PanelsNavigationUtils ===
+// === Module 15922: PanelsNavigationUtils ===
 
-// Module 15845 (PanelsNavigationUtils)
-import v1 from "v1" /* 1255 */;
-import CommonActions2 from "CommonActions" /* 1490 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4721 */;
-import RootNavigationRef from "RootNavigationRef" /* 4722 */;
+// Module 15922 (PanelsNavigationUtils)
+import v1 from "v1" /* 1266 */;
+import CommonActions2 from "CommonActions" /* 1495 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4736 */;
+import RootNavigationRef from "RootNavigationRef" /* 4737 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/PanelsNavigationUtils.tsx");
@@ -25,7 +25,7 @@ export const convertPortraitToLandscapeScreens = function convertPortraitToLands
                 const state3 = coerceTabsRouteResult.state;
                 let tmp4;
                 if (state3 != null) {
-                  const state = coerceTabsRouteResult.state;
+                  state = coerceTabsRouteResult.state;
                   let index;
                   if (state != null) {
                     index = state.index;
@@ -85,7 +85,7 @@ export const convertLandscapeToPortraitScreens = function convertLandscapeToPort
             const state3 = coerceTabsRouteResult.state;
             let tmp5;
             if (state3 != null) {
-              const state = coerceTabsRouteResult.state;
+              state = coerceTabsRouteResult.state;
               let index;
               if (state != null) {
                 index = state.index;

@@ -1,7 +1,7 @@
-// === Module 12790: shouldShowActivityTimeBar ===
+// === Module 12830: shouldShowActivityTimeBar ===
 
-// Module 12790 (shouldShowActivityTimeBar)
-import Constants from "Constants" /* 1074 */;
+// Module 12830 (shouldShowActivityTimeBar)
+import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
 const ActivityTypes = Constants.ActivityTypes;

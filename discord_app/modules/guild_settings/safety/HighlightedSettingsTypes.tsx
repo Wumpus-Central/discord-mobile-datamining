@@ -1,6 +1,6 @@
-// === Module 14586: HighlightedSettingsTypes ===
+// === Module 14642: HighlightedSettingsTypes ===
 
-// Module 14586 (HighlightedSettingsTypes)
+// Module 14642 (HighlightedSettingsTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_settings/safety/HighlightedSettingsTypes.tsx");

@@ -1,11 +1,11 @@
-// === Module 5924: GuildMemberRequesterStore ===
+// === Module 5583: GuildMemberRequesterStore ===
 
-// Module 5924 (GuildMemberRequesterStore)
+// Module 5583 (GuildMemberRequesterStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import GuildMemberRequesterDefault from "GuildMemberRequester" /* 5925 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildMemberStore from "GuildMemberStore" /* 2107 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import GuildMemberRequesterDefault from "GuildMemberRequester" /* 5584 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 
 function handleConnectionReset() {
   navigation.reset();
@@ -76,8 +76,8 @@ const prototype = GuildMemberRequesterStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(ChannelStore, GuildMemberStore);
 };
-prototype["requestMember"] = function requestMember(guildId, id) {
-  navigation.request(guildId, id);
+prototype["requestMember"] = function requestMember(guild_id, id) {
+  navigation.request(guild_id, id);
 };
 prototype["getDebugState"] = function getDebugState(arg0) {
   return navigation.getDebugState(arg0);

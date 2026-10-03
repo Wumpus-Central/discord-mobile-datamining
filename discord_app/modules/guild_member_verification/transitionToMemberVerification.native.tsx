@@ -1,12 +1,12 @@
-// === Module 6023: transitionToMemberVerification ===
+// === Module 5916: transitionToMemberVerification ===
 
-// Module 6023 (transitionToMemberVerification)
-import router_utils from "router_utils" /* 1101 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4687 */;
-import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 6024 */;
-import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 6067 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4685 */;
+// Module 5916 (transitionToMemberVerification)
+import router_utils from "router_utils" /* 1112 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4702 */;
+import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 5917 */;
+import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 5960 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4700 */;
 
 require = fn;
 const size = fn(2);

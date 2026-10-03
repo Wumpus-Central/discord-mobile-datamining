@@ -1,18 +1,18 @@
-// === Module 1115: util ===
+// === Module 1126: util ===
 
-// Module 1115 (util)
-import NativeDeviceLocaleModule from "NativeDeviceLocaleModule" /* 1116 */;
-import intl_util from "intl/util" /* 1117 */;
-import native from "native" /* 1177 */;
-import migration from "migration" /* 13879 */;
-import _modDef13883 from "module_13883" /* 13883 */;
+// Module 1126 (util)
+import NativeDeviceLocaleModule from "NativeDeviceLocaleModule" /* 1127 */;
+import intl_util from "intl/util" /* 1128 */;
+import native from "native" /* 1188 */;
+import migration from "migration" /* 13946 */;
+import _modDef13950 from "module_13950" /* 13950 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const Fonts = fn(1074).Fonts;
+const Fonts = fn(1085).Fonts;
 const jsx = fn(21).jsx;
 let obj = { strong: { fontFamily: Fonts.PRIMARY_SEMIBOLD }, italic: { fontStyle: "italic" }, code: { fontFamily: Fonts.CODE_NORMAL }, del: { textDecorationLine: "line-through", textDecorationStyle: "solid" } };
-let _default = fn(1116).default;
+let _default = fn(1127).default;
 let str = "en-US";
 if (null != _default) {
   str = _default.getConstants().Language;
@@ -25,10 +25,10 @@ function getSystemLocale(arg0) {
   }
   return Language;
 }
-const util = fn(1117);
+const util = fn(1128);
 const normalizedLocale = util.getNormalizedLocale(str, "en-US");
-const module_1154 = fn(1154);
-const reactFormatter = module_1154.makeReactFormatter({
+const module_1165 = fn(1165);
+const reactFormatter = module_1165.makeReactFormatter({
   $i(children, key) {
     obj = { style: obj.italic, children };
     return jsx(native.LegacyText, { style: obj.italic, children }, key);
@@ -53,19 +53,19 @@ const reactFormatter = module_1154.makeReactFormatter({
     return jsx(migration.IntlLink, { target: tmp, children }, key);
   }
 });
-const intlManager = new fn(1154).IntlManager({ initialLocale: normalizedLocale, defaultLocale: "en-US" });
-const withFormattersResult = intlManager.withFormatters({ format: reactFormatter, formatToPlainString: fn(1154).stringFormatter, formatToMarkdownString: fn(1154).markdownFormatter, formatToParts: fn(1154).astFormatter });
+const intlManager = new fn(1165).IntlManager({ initialLocale: normalizedLocale, defaultLocale: "en-US" });
+const withFormattersResult = intlManager.withFormatters({ format: reactFormatter, formatToPlainString: fn(1165).stringFormatter, formatToMarkdownString: fn(1165).markdownFormatter, formatToParts: fn(1165).astFormatter });
+let ReactCompilerGating = fn(558);
+ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const size = fn(2);
-const result = size.fileFinishedImporting("intl/index.native.tsx");
+const result1 = size.fileFinishedImporting("intl/index.native.tsx");
 
 export const intl = withFormattersResult;
 export { getSystemLocale };
-export const getAvailableLocales = fn(1117).getAvailableLocales;
-export const getLanguages = fn(1117).getLanguages;
-export const useSyncMessages = function useSyncMessages(arg0) {
-  return intl_util.useSyncMessages(arg0, withFormattersResult);
-};
-export const t = fn(13880)._defaultMessages;
-export const international = _modDef13883;
+export const getAvailableLocales = fn(1128).getAvailableLocales;
+export const getLanguages = fn(1128).getLanguages;
+export const useSyncMessages = (messagesLoader) => intl_util.useSyncMessages(messagesLoader, withFormattersResult);
+export const t = fn(13947)._defaultMessages;
+export const international = _modDef13950;
 export const systemLocale = str;
 export const initialLocale = normalizedLocale;

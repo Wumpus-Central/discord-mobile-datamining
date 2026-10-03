@@ -1,18 +1,18 @@
-// === Module 5036: SurveyStore ===
+// === Module 5081: SurveyStore ===
 
-// Module 5036 (SurveyStore)
+// Module 5081 (SurveyStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
-import DurationsDefault from "Durations" /* 1091 */;
-import _modDef4450 from "module_4450" /* 4450 */;
-import SurveyActionCreators from "SurveyActionCreators" /* 5037 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 4765 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import PermissionStore from "PermissionStore" /* 4498 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4684 */;
-import UserStore from "UserStore" /* 1372 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
+import DurationsDefault from "Durations" /* 1102 */;
+import _modDef4461 from "module_4461" /* 4461 */;
+import surveyFetch from "surveyFetch" /* 5082 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4780 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import PermissionStore from "PermissionStore" /* 4509 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
+import UserStore from "UserStore" /* 1377 */;
 
 require = fn;
 function fetchSurveyIfNeeded() {
@@ -31,7 +31,7 @@ function fetchSurveyIfNeeded() {
   }
   if (!tmp) {
     c18 = true;
-    SurveyActionCreators.surveyFetch(closure_13.surveyOverride, true);
+    surveyFetch.surveyFetch(closure_13.surveyOverride, true);
   }
 }
 function setSurvey(survey) {
@@ -176,8 +176,8 @@ function setSurvey(survey) {
   value = Storage.get(closure_1_11);
   let tmp9 = null == value;
   if (!tmp9) {
-    tmp9 = _modDef4450().diff(value, "day") < 7;
-    obj = _modDef4450();
+    tmp9 = _modDef4461().diff(value, "day") < 7;
+    obj = _modDef4461();
   }
   let tmp11 = null;
   if (tmp4) {
@@ -449,7 +449,7 @@ function handleSelectedGuildChange() {
     c17 = null;
   }
 }
-const Constants = fn(1074);
+const Constants = fn(1085);
 ({ GuildFeatures: closure_9, Permissions: c10, FIRST_RUN_DATE_KEY: closure_11 } = Constants);
 let obj = { hiddenSurveys: {}, surveyOverride: null, lastFetched: null, lastSeen: null, lastActionTriggered: null };
 let closure_13 = obj;
@@ -571,7 +571,7 @@ const surveyStore = new SurveyStore(DispatcherDefault, {
         const hiddenSurveys = closure_13.hiddenSurveys;
         delete tmp3[tmp2];
       }
-      SurveyActionCreators.surveyFetch(closure_13.surveyOverride, true);
+      surveyFetch.surveyFetch(closure_13.surveyOverride, true);
     }
   },
   PUSH_NOTIFICATION_CLICK: function handlePushNotificationClick() {

@@ -1,21 +1,21 @@
-// === Module 16827: NewGroupDMScreen ===
+// === Module 16915: NewGroupDMScreen ===
 
-// Module 16827 (NewGroupDMScreen)
-import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1115 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import ToastUtils from "ToastUtils" /* 4556 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4858 */;
-import HeaderShared from "HeaderShared" /* 7462 */;
-import openGroupDMNitroCapLimitSheetDefault from "openGroupDMNitroCapLimitSheet" /* 11303 */;
-import GroupDMRecipientLimitTitleDefault from "GroupDMRecipientLimitTitle" /* 16826 */;
+// Module 16915 (NewGroupDMScreen)
+import nativeDefault from "native" /* 587 */;
+import util from "util" /* 1126 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import ToastUtils from "ToastUtils" /* 4567 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4903 */;
+import HeaderShared from "HeaderShared" /* 7498 */;
+import openGroupDMNitroCapLimitSheetDefault from "openGroupDMNitroCapLimitSheet" /* 11217 */;
+import GroupDMRecipientLimitTitleDefault from "GroupDMRecipientLimitTitle" /* 16914 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import PrivateChannelRecipientsInviteStore from "PrivateChannelRecipientsInviteStore" /* 13503 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4868 */;
-import UserStore from "UserStore" /* 1372 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import PrivateChannelRecipientsInviteStore from "PrivateChannelRecipientsInviteStore" /* 13563 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
+import UserStore from "UserStore" /* 1377 */;
 
 const require = globalThis.__r;
 
@@ -55,7 +55,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -84,7 +84,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
           closure_131_3 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "flex", done: null };
+          return { value: "Reflect", done: true };
         }
       } else {
         if (1 === tmp5) {
@@ -127,7 +127,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
                         const obj2 = { value, done: true };
                         return obj2;
                       } else {
-                        return { value: "HermesInternal", done: null };
+                        return { value: "IconComponent", done: "IconComponent" };
                       }
                     } else {
                       try {
@@ -148,7 +148,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
                               const obj5 = { value: closure_1_20(length, closure_2_2), done: false };
                               return obj5;
                             } else {
-                              const obj6 = v3(4858);
+                              const obj6 = v3(4903);
                               v3 = 1;
                               dependencyMap = 1;
                               const obj7 = { value: obj6.addRecipients(id.id, length, undefined, closure_2_2), done: false };
@@ -182,21 +182,21 @@ let closure_22 = async function _handleInviteUsers(arg0) {
                             const obj = { value, done: true };
                             return obj;
                           } else {
-                            const tmp8 = v3(9387);
+                            const tmp8 = v3(9433);
                             const call = tmp8.call;
                             if (typeof call === "unknown") {
                               tmp8(false, true);
                             } else {
                               call(tmp9, false, true);
                             }
-                            v3(12655)(closure_128_3);
+                            v3(12695)(closure_128_3);
                             dependencyMap = 3;
                             tmp9 = closure_128_3;
                           }
                           closure_128_3 = value;
                           v3 = 3;
                           dependencyMap = 1;
-                          const obj10 = { value: id(5052).monkeyPatchCall(), done: false };
+                          const obj10 = { value: id(5097).monkeyPatchCall(), done: false };
                           return obj10;
                         }
                       } catch (tmp26) {
@@ -278,12 +278,12 @@ let closure_22 = async function _handleInviteUsers(arg0) {
 };
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const UserRowModes = fn(10515).UserRowModes;
-const Constants = fn(1074);
+const UserRowModes = fn(10592).UserRowModes;
+const Constants = fn(1085);
 ({ InstantInviteSources: map1, AnalyticEvents: closure_14, AnalyticsSections: closure_15, NEW_GROUP_DM_POPOUT_ID: closure_16 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = { button: { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE }, container: { height: "100%", display: "flex" }, instantInviteView: null, nameInputContainer: null, nameInput: null };
 let obj3 = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 obj2.instantInviteView = { flexShrink: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
@@ -385,7 +385,7 @@ export default function NewGroupDMScreen(navigation) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -516,7 +516,7 @@ export default function NewGroupDMScreen(navigation) {
     closure_2 = c20 ? closure_21 : disabled;
     options.setOptions({
       title: "" + stringResult + " (" + formatToPlainStringResult + ")",
-      headerTitle: c20 ? (() => closure_3_17(GroupDMRecipientLimitTitleDefault, { title: stringResult, memberCount, recipientLimit })) : ((arg0) => {
+      headerTitle: c20 ? (() => constants(GroupDMRecipientLimitTitleDefault, { title: stringResult, memberCount, recipientLimit })) : ((arg0) => {
         if (arg0 == null) {
           throw new TypeError("Cannot destructure 'undefined' or 'null'.");
         } else {
@@ -530,13 +530,13 @@ export default function NewGroupDMScreen(navigation) {
             str = "text-feedback-critical";
           }
           obj.color = str;
-          return closure_3_17(HeaderShared.GenericHeaderTitle, obj);
+          return constants(HeaderShared.GenericHeaderTitle, obj);
         }
       }),
       headerRight(arg0) {
         if (first1) {
           const obj2 = { color: button.button.color, size: "small" };
-          let result = closure_3_17(timestampProducer, obj2);
+          let result = constants(timestampProducer, obj2);
         } else {
           let isGroupDMResult;
           if (stateFromStores != null) {
@@ -585,7 +585,7 @@ export default function NewGroupDMScreen(navigation) {
     let obj2 = { numMembers, maxMemberLimit };
     let obj4 = {
       title: "" + stringResult + " (" + formatToPlainStringResult + ")",
-      headerTitle: c20 ? (() => closure_3_17(GroupDMRecipientLimitTitleDefault, { title: stringResult, memberCount, recipientLimit })) : ((arg0) => {
+      headerTitle: c20 ? (() => constants(GroupDMRecipientLimitTitleDefault, { title: stringResult, memberCount, recipientLimit })) : ((arg0) => {
         if (arg0 == null) {
           throw new TypeError("Cannot destructure 'undefined' or 'null'.");
         } else {
@@ -599,13 +599,13 @@ export default function NewGroupDMScreen(navigation) {
             str = "text-feedback-critical";
           }
           obj.color = str;
-          return closure_3_17(HeaderShared.GenericHeaderTitle, obj);
+          return constants(HeaderShared.GenericHeaderTitle, obj);
         }
       }),
       headerRight(arg0) {
         if (first1) {
           const obj2 = { color: button.button.color, size: "small" };
-          let result = closure_3_17(timestampProducer, obj2);
+          let result = constants(timestampProducer, obj2);
         } else {
           let isGroupDMResult;
           if (stateFromStores != null) {
@@ -740,7 +740,7 @@ export default function NewGroupDMScreen(navigation) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {

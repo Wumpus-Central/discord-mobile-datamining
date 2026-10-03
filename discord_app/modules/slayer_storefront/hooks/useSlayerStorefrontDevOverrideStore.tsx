@@ -1,12 +1,12 @@
-// === Module 8444: useSlayerStorefrontDevOverrideStore ===
+// === Module 8449: useSlayerStorefrontDevOverrideStore ===
 
-// Module 8444 (useSlayerStorefrontDevOverrideStore)
-import module_560 from "module_560" /* 560 */;
+// Module 8449 (useSlayerStorefrontDevOverrideStore)
+import module_570 from "module_570" /* 570 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/slayer_storefront/hooks/useSlayerStorefrontDevOverrideStore.tsx");
 
-export const useSlayerStorefrontDevOverrideStore = module_560.create()((arg0) => {
+export const useSlayerStorefrontDevOverrideStore = module_570.create()((arg0) => {
   closure_0 = arg0;
   return {
     overrideApplicationId: null,

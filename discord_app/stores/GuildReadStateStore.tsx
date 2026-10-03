@@ -1,24 +1,24 @@
-// === Module 7223: GuildReadStateStore ===
+// === Module 7121: GuildReadStateStore ===
 
-// Module 7223 (GuildReadStateStore)
+// Module 7121 (GuildReadStateStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
-import FavoritesUtils from "FavoritesUtils" /* 2069 */;
-import ThreadActionUtils from "ThreadActionUtils" /* 4506 */;
-import isOptInEnabled from "isOptInEnabled" /* 7143 */;
-import RecentMentionsStore from "RecentMentionsStore" /* 7224 */;
-import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 7226 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6004 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4500 */;
+import FavoritesUtils from "FavoritesUtils" /* 2077 */;
+import ThreadActionUtils from "ThreadActionUtils" /* 4517 */;
+import isOptInEnabled from "isOptInEnabled" /* 7046 */;
+import RecentMentionsStore from "RecentMentionsStore" /* 7122 */;
+import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 7124 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5691 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4511 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1073 */;
-import PermissionStore from "PermissionStore" /* 4498 */;
-import ReadStateStore from "ReadStateStore" /* 4860 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5026 */;
-import UserStore from "UserStore" /* 1372 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1084 */;
+import PermissionStore from "PermissionStore" /* 4509 */;
+import ReadStateStore from "ReadStateStore" /* 4905 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5071 */;
+import UserStore from "UserStore" /* 1377 */;
 
 require = fn;
 function updateGuildUnreadSentinel(NULL_STRING_GUILD_ID) {
@@ -86,7 +86,7 @@ function isCountableChannel(channel) {
         let tmp11 = null != channel.guild_id;
         if (tmp11) {
           if (result1) {
-            let result2 = React7(channel.type);
+            let result2 = options(channel.type);
             if (!result2) {
               result2 = UserGuildSettingsStore.isChannelRecordOrParentOptedIn(channel);
             }
@@ -450,7 +450,7 @@ function recountGuild(guildId, hasItem) {
             tmp32 = tmp29;
           }
           if (tmp32) {
-            let tmp35 = React6(obj12.type);
+            let tmp35 = closure_1_8(obj12.type);
             let tmp36 = !tmp35;
             if (tmp35) {
               tmp36 = 0 !== mentionCount;
@@ -462,7 +462,7 @@ function recountGuild(guildId, hasItem) {
                 if (tmp40) {
                   let tmp41 = result;
                   if (result) {
-                    let result1 = React7(obj12.type);
+                    let result1 = options(obj12.type);
                     if (!result1) {
                       result1 = UserGuildSettingsStore.isChannelRecordOrParentOptedIn(obj12);
                     }
@@ -924,12 +924,12 @@ function handleRecentMentionsSuccess(messages) {
     }
   });
 }
-const ChannelRecord = fn(2048);
+const ChannelRecord = fn(2055);
 ({ getBasicAccessPermissions: closure_7, isGuildVocalChannelType: closure_8, isThread: closure_9 } = ChannelRecord);
-const ChannelFlags = fn(2051).ChannelFlags;
-const ReadStateConstants = fn(5027);
+const ChannelFlags = fn(2058).ChannelFlags;
+const ReadStateConstants = fn(5072);
 ({ ReadStateTypes: closure_19, UnreadSetting: closure_20 } = ReadStateConstants);
-const NULL_STRING_GUILD_ID = fn(1074).NULL_STRING_GUILD_ID;
+const NULL_STRING_GUILD_ID = fn(1085).NULL_STRING_GUILD_ID;
 let guilds = {};
 let set = new Set();
 let closure_24 = 0;

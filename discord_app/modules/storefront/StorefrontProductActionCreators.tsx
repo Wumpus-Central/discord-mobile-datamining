@@ -1,11 +1,11 @@
-// === Module 7845: StorefrontProductActionCreators ===
+// === Module 7889: StorefrontProductActionCreators ===
 
-// Module 7845 (StorefrontProductActionCreators)
-import StorefrontCacheUtils from "StorefrontCacheUtils" /* 7847 */;
+// Module 7889 (StorefrontProductActionCreators)
+import StorefrontCacheUtils from "StorefrontCacheUtils" /* 7891 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LocaleStore from "LocaleStore" /* 2111 */;
-import StorefrontProductStore from "StorefrontProductStore" /* 7846 */;
-import StorefrontProductRecord from "StorefrontProductRecord" /* 7170 */;
+import LocaleStore from "LocaleStore" /* 2116 */;
+import StorefrontProductStore from "StorefrontProductStore" /* 7890 */;
+import StorefrontProductRecord from "StorefrontProductRecord" /* 7073 */;
 
 require = fn;
 let closure_8 = async function _maybeFetchProductsWithSkus(arg0) {
@@ -19,7 +19,7 @@ let closure_8 = async function _maybeFetchProductsWithSkus(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -46,7 +46,7 @@ let closure_8 = async function _maybeFetchProductsWithSkus(arg0) {
           closure_129_3 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "flex", done: null };
+          return { value: "Reflect", done: true };
         }
       } else {
         if (1 === tmp7) {
@@ -154,7 +154,7 @@ let closure_10 = async function _maybeFetchProductsBySkuIds(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "HermesInternal", done: null };
+      return { value: "IconComponent", done: "IconComponent" };
     }
   } else {
     try {
@@ -181,7 +181,7 @@ let closure_10 = async function _maybeFetchProductsBySkuIds(arg0) {
           closure_129_3 = undefined;
           c5 = 1;
           c6 = 1;
-          return { value: "flex", done: null };
+          return { value: "Reflect", done: true };
         }
       } else {
         if (1 === tmp7) {
@@ -247,7 +247,7 @@ let closure_10 = async function _maybeFetchProductsBySkuIds(arg0) {
     }
   }
 };
-const Endpoints = fn(1074).Endpoints;
+const Endpoints = fn(1085).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/storefront/StorefrontProductActionCreators.tsx");
 

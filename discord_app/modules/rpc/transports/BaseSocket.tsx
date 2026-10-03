@@ -1,9 +1,9 @@
-// === Module 8972: BaseSocket ===
+// === Module 9036: BaseSocket ===
 
-// Module 8972 (BaseSocket)
+// Module 9036 (BaseSocket)
 import _modDef12 from "module_12" /* 12 */;
-import RPCErrorDefault from "RPCError" /* 8962 */;
-import Constants from "Constants" /* 1074 */;
+import RPCErrorDefault from "RPCError" /* 9026 */;
+import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
 ({ RPC_VERSION: c2, RPCCloseCodes: c3 } = Constants);

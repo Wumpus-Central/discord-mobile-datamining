@@ -1,18 +1,179 @@
-// === Module 8999: useIsSpeaking ===
+// === Module 9018: useIsSpeaking ===
 
-// Module 8999 (useIsSpeaking)
-import SoundboardStore from "SoundboardStore" /* 5503 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
-import SpeakingStore from "SpeakingStore" /* 5917 */;
-import VoiceStateStore from "VoiceStateStore" /* 4864 */;
+// Module 9018 (useIsSpeaking)
+import SoundboardStore from "SoundboardStore" /* 5680 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
+import SpeakingStore from "SpeakingStore" /* 5576 */;
+import VoiceStateStore from "VoiceStateStore" /* 4909 */;
 
 const require = globalThis.__r;
 
 const require = fn;
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("hooks/useIsSpeaking.tsx");
 
-export default function useIsSpeaking(checkSoundboardSounds) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
+  const cResult = userId(context[5]).c(20);
+  userId = userId.userId;
+  ({ checkSoundSharing, checkSoundboardSounds, checkIsMuted, context } = userId);
+  closure_2 = undefined !== checkSoundSharing && checkSoundSharing;
+  SelectedChannelStore = undefined === checkSoundboardSounds || checkSoundboardSounds;
+  let tmp4 = undefined !== checkIsMuted && checkIsMuted;
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [VoiceStateStore, SelectedChannelStore];
+    cResult[0] = items;
+    let first = items;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] !== userId) {
+    class S {
+      constructor() {
+        voiceChannelId = closure_3.getVoiceChannelId();
+        voiceStateForChannel = null;
+        if (null != voiceChannelId) {
+          tmp3 = closure_5;
+          tmp4 = userId;
+          voiceStateForChannel = closure_5.getVoiceStateForChannel(voiceChannelId, userId);
+        }
+        return voiceStateForChannel;
+      }
+    }
+    cResult[1] = userId;
+    cResult[2] = S;
+  } else {
+    class S {
+      constructor() {
+        voiceChannelId = closure_3.getVoiceChannelId();
+        voiceStateForChannel = null;
+        if (null != voiceChannelId) {
+          tmp3 = closure_5;
+          tmp4 = userId;
+          voiceStateForChannel = closure_5.getVoiceStateForChannel(voiceChannelId, userId);
+        }
+        return voiceStateForChannel;
+      }
+    }
+  }
+  const obj = userId(context[5]);
+  const stateFromStores = userId(context[6]).useStateFromStores(first, S);
+  if (tmp4) {
+    class S {
+      constructor() {
+        voiceChannelId = closure_3.getVoiceChannelId();
+        voiceStateForChannel = null;
+        if (null != voiceChannelId) {
+          tmp3 = closure_5;
+          tmp4 = userId;
+          voiceStateForChannel = closure_5.getVoiceStateForChannel(voiceChannelId, userId);
+        }
+        return voiceStateForChannel;
+      }
+    }
+    let tmp10;
+    if (stateFromStores != null) {
+      class S {
+        constructor() {
+          voiceChannelId = closure_3.getVoiceChannelId();
+          voiceStateForChannel = null;
+          if (null != voiceChannelId) {
+            tmp3 = closure_5;
+            tmp4 = userId;
+            voiceStateForChannel = closure_5.getVoiceStateForChannel(voiceChannelId, userId);
+          }
+          return voiceStateForChannel;
+        }
+      }
+    }
+    if (!tmp10) {
+      class S {
+        constructor() {
+          voiceChannelId = closure_3.getVoiceChannelId();
+          voiceStateForChannel = null;
+          if (null != voiceChannelId) {
+            tmp3 = closure_5;
+            tmp4 = userId;
+            voiceStateForChannel = closure_5.getVoiceStateForChannel(voiceChannelId, userId);
+          }
+          return voiceStateForChannel;
+        }
+      }
+      if (stateFromStores != null) {
+        class S {
+          constructor() {
+            voiceChannelId = closure_3.getVoiceChannelId();
+            voiceStateForChannel = null;
+            if (null != voiceChannelId) {
+              tmp3 = closure_5;
+              tmp4 = userId;
+              voiceStateForChannel = closure_5.getVoiceStateForChannel(voiceChannelId, userId);
+            }
+            return voiceStateForChannel;
+          }
+        }
+      }
+      tmp10 = tmp11;
+    }
+    tmp4 = tmp10;
+  }
+  SpeakingStore = tmp4;
+  if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+    class S {
+      constructor() {
+        voiceChannelId = closure_3.getVoiceChannelId();
+        voiceStateForChannel = null;
+        if (null != voiceChannelId) {
+          tmp3 = closure_5;
+          tmp4 = userId;
+          voiceStateForChannel = closure_5.getVoiceStateForChannel(voiceChannelId, userId);
+        }
+        return voiceStateForChannel;
+      }
+    }
+    const items1 = [SpeakingStore];
+    cResult[3] = items1;
+  } else {
+    class S {
+      constructor() {
+        voiceChannelId = closure_3.getVoiceChannelId();
+        voiceStateForChannel = null;
+        if (null != voiceChannelId) {
+          tmp3 = closure_5;
+          tmp4 = userId;
+          voiceStateForChannel = closure_5.getVoiceStateForChannel(voiceChannelId, userId);
+        }
+        return voiceStateForChannel;
+      }
+    }
+  }
+  if (cResult[4] === context) {
+    class S {
+      constructor() {
+        voiceChannelId = closure_3.getVoiceChannelId();
+        voiceStateForChannel = null;
+        if (null != voiceChannelId) {
+          tmp3 = closure_5;
+          tmp4 = userId;
+          voiceStateForChannel = closure_5.getVoiceStateForChannel(voiceChannelId, userId);
+        }
+        return voiceStateForChannel;
+      }
+    }
+  }
+  const fn = function y() {
+    let isSpeakingResult = SpeakingStore.isSpeaking(userId, context);
+    if (isSpeakingResult) {
+      isSpeakingResult = !closure_4;
+    }
+    return isSpeakingResult;
+  };
+  cResult[4] = context;
+  cResult[5] = tmp4;
+  cResult[6] = userId;
+  cResult[7] = fn;
+  const tmpResult = userId(context[6]);
+}) : ((checkSoundboardSounds) => {
   ({ userId: require, checkSoundSharing } = checkSoundboardSounds);
   if (checkSoundSharing === undefined) {
     checkSoundSharing = false;
@@ -71,7 +232,7 @@ export default function useIsSpeaking(checkSoundboardSounds) {
     stateFromStores1 = stateFromStores2;
   }
   return stateFromStores1;
-};
+});
 export const getIsSpeaking = function getIsSpeaking(checkSoundboardSounds) {
   ({ userId, checkSoundSharing } = checkSoundboardSounds);
   if (checkSoundSharing === undefined) {

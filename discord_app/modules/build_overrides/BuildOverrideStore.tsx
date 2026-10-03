@@ -1,9 +1,9 @@
-// === Module 11178: BuildOverrideStore ===
+// === Module 11082: BuildOverrideStore ===
 
-// Module 11178 (BuildOverrideStore)
+// Module 11082 (BuildOverrideStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import BuildOverrideUtils from "BuildOverrideUtils" /* 1361 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import BuildOverrideUtils from "BuildOverrideUtils" /* 1366 */;
 
 require = fn;
 let obj = { NotResolved: 0, [0]: "NotResolved", Resolving: 1, [1]: "Resolving", Resolved: 2, [2]: "Resolved", Invalid: 3, [3]: "Invalid" };
@@ -39,11 +39,11 @@ prototype["getBuildOverride"] = function getBuildOverride(url) {
       obj3.state = obj.Resolving;
       obj2[url] = obj3;
       obj4 = obj2;
-      const buildOverrideMeta = tmp(1361).getBuildOverrideMeta(validateURLResult.url);
+      const buildOverrideMeta = tmp(1366).getBuildOverrideMeta(validateURLResult.url);
       buildOverrideMeta.then((override) => {
         DispatcherDefault.dispatch({ type: "BUILD_OVERRIDE_RESOLVED", url, override });
       });
-      const tmpResult = tmp(1361);
+      const tmpResult = tmp(1366);
     } else {
       obj4 = {};
       const merged1 = Object.assign(obj4);

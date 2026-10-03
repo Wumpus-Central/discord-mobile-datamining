@@ -1,17 +1,15 @@
-// === Module 17531: DeprecatedModalManager ===
+// === Module 17620: DeprecatedModalManager ===
 
-// Module 17531 (DeprecatedModalManager)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4721 */;
-import RootNavigationRef from "RootNavigationRef" /* 4722 */;
-import getDeprecatedModalDataDefault from "getDeprecatedModalData" /* 5050 */;
-import VerificationUtilsDefault from "VerificationUtils" /* 6193 */;
-import SafetyFlowsExperiment from "SafetyFlowsExperiment" /* 17533 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9242 */;
-import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 9471 */;
-import NotificationSettingsModalStore from "NotificationSettingsModalStore" /* 17532 */;
-import UserRequiredActionStore from "UserRequiredActionStore" /* 2037 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6725 */;
+// Module 17620 (DeprecatedModalManager)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4736 */;
+import RootNavigationRef from "RootNavigationRef" /* 4737 */;
+import getDeprecatedModalDataDefault from "getDeprecatedModalData" /* 5095 */;
+import isFullScreenVerificationModalRequiredDefault from "isFullScreenVerificationModalRequired" /* 17558 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9248 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 9482 */;
+import NotificationSettingsModalStore from "NotificationSettingsModalStore" /* 17621 */;
+import UserRequiredActionStore from "UserRequiredActionStore" /* 2044 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
 
 require = fn;
 function handlePushedModal(modal) {
@@ -60,11 +58,11 @@ function createPushModalHandler() {
     pushFirstOpenModal(closure_0);
   };
 }
-const Constants = fn(1074);
+const Constants = fn(1085);
 const UserRequiredActions = Constants.UserRequiredActions;
 const APP = Constants.AppContext.APP;
 const EMAIL_VERIFICATION_MODAL_OPEN = "EMAIL_VERIFICATION_MODAL_OPEN";
-let closure_15 = {
+let closure_14 = {
   key: "EMAIL_VERIFICATION_MODAL_OPEN",
   store: UserRequiredActionStore,
   closable: false,
@@ -73,21 +71,14 @@ let closure_15 = {
     if (action == null) {
       action = UserRequiredActionStore.getAction();
     }
-    let result = VerificationUtilsDefault.isFullScreenVerification(action);
-    if (result) {
-      result = null != AuthenticationStore.getToken();
-    }
-    if (result) {
-      result = !SafetyFlowsExperiment.isEligibleForSafetyFlowsExperiment({ location: "modal-manager-verification" });
-    }
-    return result;
+    return isFullScreenVerificationModalRequiredDefault(action, "modal-manager-verification");
   },
   getComponent() {
     return require("VerificationModal").default;
   }
 };
 const USER_REQUIRED_ACTION_UPDATE = "USER_REQUIRED_ACTION_UPDATE";
-let closure_17 = {
+let closure_16 = {
   key: "USER_REQUIRED_ACTION_UPDATE",
   store: UserRequiredActionStore,
   center: true,
@@ -105,8 +96,8 @@ let closure_17 = {
 const prototype = function DeprecatedModalManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   let obj = {
-    CONNECTION_OPEN_SUPPLEMENTAL: createPushModalHandler(closure_17, closure_15),
-    EMAIL_VERIFICATION_MODAL_OPEN: createPushModalHandler(closure_15),
+    CONNECTION_OPEN_SUPPLEMENTAL: createPushModalHandler(closure_16, closure_14),
+    EMAIL_VERIFICATION_MODAL_OPEN: createPushModalHandler(closure_14),
     USER_REQUIRED_ACTION_UPDATE(requiredAction) {
       if (null == requiredAction.requiredAction) {
         if (obj.isModalOpen(USER_REQUIRED_ACTION_UPDATE)) {
@@ -120,7 +111,7 @@ const prototype = function DeprecatedModalManager() {
         }
         tmp5Result3 = NavigationRouteUtils;
       } else {
-        const items = [closure_1_17, closure_1_15];
+        const items = [closure_1_16, closure_1_14];
         pushFirstOpenModal(items, requiredAction.requiredAction);
       }
     },
@@ -163,6 +154,6 @@ class prototype extends tmp4 {
 }
 const prototype1 = new prototype();
 const size = fn(2);
-let result = size.fileFinishedImporting("modules/main_tabs_v2/native/modal/DeprecatedModalManager.tsx");
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/modal/DeprecatedModalManager.tsx");
 
 export default prototype1;

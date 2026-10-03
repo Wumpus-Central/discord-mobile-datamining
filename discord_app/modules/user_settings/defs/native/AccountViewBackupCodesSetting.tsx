@@ -1,53 +1,55 @@
-// === Module 14541: AccountViewBackupCodesSetting ===
+// === Module 14577: AccountViewBackupCodesSetting ===
 
-// Module 14541 (AccountViewBackupCodesSetting)
-import util from "util" /* 1115 */;
-import MFAActionCreatorsDefault from "MFAActionCreators" /* 14454 */;
+// Module 14577 (AccountViewBackupCodesSetting)
+import c from "c" /* 576 */;
+import util from "util" /* 1126 */;
+import native from "native" /* 1188 */;
+import MFAActionCreatorsDefault from "MFAActionCreators" /* 14571 */;
+import showUserSettingsInputAlertDefault from "showUserSettingsInputAlert" /* 14578 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const Constants = fn(1074);
+function onConfirmBackups(onSuccess) {
+  const obj = {
+    onSubmit(verificationKey) {
+      return MFAActionCreatorsDefault.confirmViewBackupCodes(verificationKey, false);
+    },
+    title: null,
+    helpText: null,
+    inputLabel: null,
+    closeOnSuccess: true,
+    onSuccess: null,
+    secureTextEntry: false,
+    actionText: null,
+    confirmColor: null,
+    useKeyboardAwareWrapper: true
+  };
+  const intl = util.intl;
+  obj.title = intl.string(util.t["mGppp/"]);
+  const intl2 = util.intl;
+  obj.helpText = intl2.string(util.t["37S9yU"]);
+  const intl3 = util.intl;
+  obj.inputLabel = intl3.string(util.t.TjGb4Q);
+  obj.onSuccess = onSuccess;
+  const intl4 = util.intl;
+  obj.actionText = intl4.string(util.t.geKm7t);
+  obj.confirmColor = native.ButtonColors.BRAND;
+  showUserSettingsInputAlertDefault(obj);
+}
+const Constants = fn(1085);
 ({ NOOP_NULL: closure_4, UserSettingsSections } = Constants);
-const SettingBuilders = fn(11215);
-const route = SettingBuilders.createRoute({
-  useTitle() {
-    const intl = util.intl;
-    return intl.string(util.t.xZEzbu);
-  },
-  parent: fn(7590).MobileUserSettings.ACCOUNT,
-  usePredicate: fn(14455).useIs2FAEnabled,
-  usePreNavigationAction: function useOnViewBackups() {
-    return noop.useCallback((arg0) => {
+const ReactCompilerGating = fn(558);
+const SettingBuilders = fn(11129);
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(1);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const fn = function t(arg0) {
       closure_0 = arg0;
-      let obj = {
+      const obj = {
         onSubmit(password) {
           const result = MFAActionCreatorsDefault.sendMFABackupCodesVerificationKeyEmail(password);
           return result.then(() => {
-            const obj = {
-              onSubmit(verificationKey) {
-                return closure_1_1(closure_1_2[3]).confirmViewBackupCodes(verificationKey, false);
-              },
-              title: null,
-              helpText: null,
-              inputLabel: null,
-              closeOnSuccess: true,
-              onSuccess: null,
-              secureTextEntry: false,
-              actionText: null,
-              confirmColor: null,
-              useKeyboardAwareWrapper: true
-            };
-            const intl = onSuccess(1115).intl;
-            obj.title = intl.string(onSuccess(1115).t["mGppp/"]);
-            const intl2 = onSuccess(1115).intl;
-            obj.helpText = intl2.string(onSuccess(1115).t["37S9yU"]);
-            const intl3 = onSuccess(1115).intl;
-            obj.inputLabel = intl3.string(onSuccess(1115).t.TjGb4Q);
-            obj.onSuccess = onSuccess;
-            const intl4 = onSuccess(1115).intl;
-            obj.actionText = intl4.string(onSuccess(1115).t.geKm7t);
-            obj.confirmColor = onSuccess(1177).ButtonColors.BRAND;
-            closure_2_1(14542)(obj);
+            closure_2_5(closure_1_0);
           });
         },
         onSuccess,
@@ -58,17 +60,119 @@ const route = SettingBuilders.createRoute({
         confirmColor: null,
         useKeyboardAwareWrapper: true
       };
-      let intl = closure_0(1115).intl;
-      obj.title = intl.string(closure_0(1115).t.PsQmzU);
-      let intl2 = closure_0(1115).intl;
-      obj.inputLabel = intl2.string(closure_0(1115).t["CIGa+7"]);
-      let intl3 = closure_0(1115).intl;
-      obj.actionText = intl3.string(closure_0(1115).t.PDTjLN);
-      obj.confirmColor = closure_0(1177).ButtonColors.BRAND;
-      closure_1(14542)(obj);
+      const intl = closure_0(1126).intl;
+      obj.title = intl.string(closure_0(1126).t.PsQmzU);
+      const intl2 = closure_0(1126).intl;
+      obj.inputLabel = intl2.string(closure_0(1126).t["CIGa+7"]);
+      const intl3 = closure_0(1126).intl;
+      obj.actionText = intl3.string(closure_0(1126).t.PDTjLN);
+      obj.confirmColor = closure_0(1188).ButtonColors.BRAND;
+      closure_1(14578)(obj);
       return false;
-    }, []);
+    };
+    cResult[0] = fn;
+    let first = fn;
+  } else {
+    first = cResult[0];
+  }
+  return first;
+}) : (() => noop.useCallback((arg0) => {
+  closure_0 = arg0;
+  const obj = {
+    onSubmit(password) {
+      const result = MFAActionCreatorsDefault.sendMFABackupCodesVerificationKeyEmail(password);
+      return result.then(() => {
+        closure_2_5(closure_1_0);
+      });
+    },
+    onSuccess,
+    title: null,
+    inputLabel: null,
+    closeOnSuccess: false,
+    actionText: null,
+    confirmColor: null,
+    useKeyboardAwareWrapper: true
+  };
+  const intl = closure_0(1126).intl;
+  obj.title = intl.string(closure_0(1126).t.PsQmzU);
+  const intl2 = closure_0(1126).intl;
+  obj.inputLabel = intl2.string(closure_0(1126).t["CIGa+7"]);
+  const intl3 = closure_0(1126).intl;
+  obj.actionText = intl3.string(closure_0(1126).t.PDTjLN);
+  obj.confirmColor = closure_0(1188).ButtonColors.BRAND;
+  closure_1(14578)(obj);
+  return false;
+}, []));
+const route = SettingBuilders.createRoute({
+  useTitle() {
+    const intl = util.intl;
+    return intl.string(util.t.xZEzbu);
   },
+  parent: fn(7634).MobileUserSettings.ACCOUNT,
+  usePredicate: fn(14490).useIs2FAEnabled,
+  usePreNavigationAction: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+    const cResult = c.c(1);
+    if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+      const fn = function t(arg0) {
+        closure_0 = arg0;
+        const obj = {
+          onSubmit(password) {
+            const result = MFAActionCreatorsDefault.sendMFABackupCodesVerificationKeyEmail(password);
+            return result.then(() => {
+              closure_2_5(closure_1_0);
+            });
+          },
+          onSuccess,
+          title: null,
+          inputLabel: null,
+          closeOnSuccess: false,
+          actionText: null,
+          confirmColor: null,
+          useKeyboardAwareWrapper: true
+        };
+        const intl = closure_0(1126).intl;
+        obj.title = intl.string(closure_0(1126).t.PsQmzU);
+        const intl2 = closure_0(1126).intl;
+        obj.inputLabel = intl2.string(closure_0(1126).t["CIGa+7"]);
+        const intl3 = closure_0(1126).intl;
+        obj.actionText = intl3.string(closure_0(1126).t.PDTjLN);
+        obj.confirmColor = closure_0(1188).ButtonColors.BRAND;
+        closure_1(14578)(obj);
+        return false;
+      };
+      cResult[0] = fn;
+      let first = fn;
+    } else {
+      first = cResult[0];
+    }
+    return first;
+  }) : (() => noop.useCallback((arg0) => {
+    closure_0 = arg0;
+    const obj = {
+      onSubmit(password) {
+        const result = MFAActionCreatorsDefault.sendMFABackupCodesVerificationKeyEmail(password);
+        return result.then(() => {
+          closure_2_5(closure_1_0);
+        });
+      },
+      onSuccess,
+      title: null,
+      inputLabel: null,
+      closeOnSuccess: false,
+      actionText: null,
+      confirmColor: null,
+      useKeyboardAwareWrapper: true
+    };
+    const intl = closure_0(1126).intl;
+    obj.title = intl.string(closure_0(1126).t.PsQmzU);
+    const intl2 = closure_0(1126).intl;
+    obj.inputLabel = intl2.string(closure_0(1126).t["CIGa+7"]);
+    const intl3 = closure_0(1126).intl;
+    obj.actionText = intl3.string(closure_0(1126).t.PDTjLN);
+    obj.confirmColor = closure_0(1188).ButtonColors.BRAND;
+    closure_1(14578)(obj);
+    return false;
+  }, [])),
   screen: {
     route: UserSettingsSections.ACCOUNT_CONFIRM_VIEW_BACKUP_CODES,
     getComponent() {

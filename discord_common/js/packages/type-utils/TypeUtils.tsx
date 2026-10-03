@@ -1,6 +1,6 @@
-// === Module 2056: TypeUtils ===
+// === Module 2064: TypeUtils ===
 
-// Module 2056 (TypeUtils)
+// Module 2064 (TypeUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/type-utils/TypeUtils.tsx");
@@ -11,8 +11,8 @@ export function exact(arg0) {
 export const hasOwnProperty = function hasOwnProperty(key10009, Shape) {
   return key10009.hasOwnProperty(Shape);
 };
-export const dangerouslyCast = function dangerouslyCast(type, UnknownChannelRecord) {
-  return Object.setPrototypeOf(type, UnknownChannelRecord.prototype);
+export const dangerouslyCast = function dangerouslyCast(result, UnknownChannelRecord) {
+  return Object.setPrototypeOf(result, UnknownChannelRecord.prototype);
 };
 export const assertUnreachable = function assertUnreachable(id, arg1) {
   let obj = arg1;

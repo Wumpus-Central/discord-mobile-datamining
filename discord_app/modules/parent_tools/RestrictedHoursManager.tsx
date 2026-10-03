@@ -1,16 +1,16 @@
-// === Module 17976: RestrictedHoursManager ===
+// === Module 18062: RestrictedHoursManager ===
 
-// Module 17976 (RestrictedHoursManager)
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import util from "util" /* 1115 */;
-import FamilyCenterModels from "FamilyCenterModels" /* 1395 */;
-import _modDef2486 from "module_2486" /* 2486 */;
-import FamilyCenterRestrictedHoursUtils from "FamilyCenterRestrictedHoursUtils" /* 9738 */;
-import RestrictedHoursActionCreators from "RestrictedHoursActionCreators" /* 17317 */;
-import NotificationSettingsStore from "NotificationSettingsStore" /* 9736 */;
-import UserStore from "UserStore" /* 1372 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7145 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6725 */;
+// Module 18062 (RestrictedHoursManager)
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import util from "util" /* 1126 */;
+import FamilyCenterModels from "FamilyCenterModels" /* 1400 */;
+import _modDef2493 from "module_2493" /* 2493 */;
+import FamilyCenterRestrictedHoursUtils from "FamilyCenterRestrictedHoursUtils" /* 12468 */;
+import RestrictedHoursActionCreators from "RestrictedHoursActionCreators" /* 17410 */;
+import NotificationSettingsStore from "NotificationSettingsStore" /* 12466 */;
+import UserStore from "UserStore" /* 1377 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7048 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
 
 require = fn;
 function scheduleUpcomingWarning() {
@@ -52,7 +52,7 @@ function scheduleUpcomingWarning() {
         const intl = util.intl;
         const _Date2 = Date;
         const date2 = new Date(startAtMs);
-        const stringResult = intl.string(_modDef2486["0JlDg0"]);
+        const stringResult = intl.string(_modDef2493["0JlDg0"]);
         const items = [FamilyCenterModels.JS_DAY_TO_DAY_OF_WEEK[date2.getDay(date2)]];
         const formatDaysResult = FamilyCenterRestrictedHoursUtils.formatDays(items);
         const _HermesInternal2 = HermesInternal;

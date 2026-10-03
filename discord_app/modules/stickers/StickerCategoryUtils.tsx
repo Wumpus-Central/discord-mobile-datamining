@@ -1,16 +1,16 @@
-// === Module 10045: StickerCategoryUtils ===
+// === Module 10115: StickerCategoryUtils ===
 
-// Module 10045 (StickerCategoryUtils)
-import StickerSendability from "StickerSendability" /* 6942 */;
+// Module 10115 (StickerCategoryUtils)
+import StickerSendability from "StickerSendability" /* 6840 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
 const result = size.fileFinishedImporting("modules/stickers/StickerCategoryUtils.tsx");
 
-export const isStickerCategoryNitroLocked = function isStickerCategoryNitroLocked(type, nsfwAllowed, channel) {
-  _require = nsfwAllowed;
-  dependencyMap = channel;
+export const isStickerCategoryNitroLocked = function isStickerCategoryNitroLocked(type, stateFromStores, arg2) {
+  _require = stateFromStores;
+  dependencyMap = arg2;
   let everyResult = type.type === require("StickersTypes").StickerCategoryTypes.GUILD;
   if (everyResult) {
     everyResult = 0 !== type.stickers.length;

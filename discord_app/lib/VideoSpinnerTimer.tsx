@@ -1,17 +1,17 @@
-// === Module 9076: VideoSpinnerTimer ===
+// === Module 9104: VideoSpinnerTimer ===
 
-// Module 9076 (VideoSpinnerTimer)
+// Module 9104 (VideoSpinnerTimer)
 import LoggerDefault from "Logger" /* 3 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1241 */;
-import TimeUtils from "TimeUtils" /* 4874 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
+import TimeUtils from "TimeUtils" /* 4919 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import NetworkStore from "NetworkStore" /* 4894 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4868 */;
-import VoiceStateStore from "VoiceStateStore" /* 4864 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import NetworkStore from "NetworkStore" /* 4939 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
+import VoiceStateStore from "VoiceStateStore" /* 4909 */;
 
 require = fn;
-const AnalyticEvents = fn(1074).AnalyticEvents;
+const AnalyticEvents = fn(1085).AnalyticEvents;
 const map = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("lib/VideoSpinnerTimer.tsx");

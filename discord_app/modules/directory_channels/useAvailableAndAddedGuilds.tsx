@@ -1,22 +1,146 @@
-// === Module 12011: useAvailableAndAddedGuilds ===
+// === Module 11946: useAvailableAndAddedGuilds ===
 
-// Module 12011 (useAvailableAndAddedGuilds)
+// Module 11946 (useAvailableAndAddedGuilds)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import PermissionStore from "PermissionStore" /* 4498 */;
-import SortedGuildStore from "SortedGuildStore" /* 5936 */;
-import GuildDirectoryStore from "GuildDirectoryStore" /* 12005 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import PermissionStore from "PermissionStore" /* 4509 */;
+import SortedGuildStore from "SortedGuildStore" /* 5616 */;
+import GuildDirectoryStore from "GuildDirectoryStore" /* 11940 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const Permissions = fn(1074).Permissions;
+const Permissions = fn(1085).Permissions;
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/directory_channels/useAvailableAndAddedGuilds.tsx");
 
-export default function useAvailableAndAddedGuilds(arg0, arg1) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
+  _require = arg0;
+  importDefault = arg1;
+  const cResult = require("c").c(24);
+  let obj = require("c");
+  [r10017, importAll] = noop.useState(false);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    let items = [GuildDirectoryStore];
+    cResult[0] = items;
+    let first = items;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] !== arg1) {
+    class G {
+      constructor() {
+        return closure_10.getAdminGuildEntryIds(closure_1);
+      }
+    }
+    cResult[1] = arg1;
+    cResult[2] = G;
+  } else {
+    class G {
+      constructor() {
+        return closure_10.getAdminGuildEntryIds(closure_1);
+      }
+    }
+  }
+  const tmp4 = _slicedToArray(noop.useState(false), 2);
+  stateFromStores = require("initialize").useStateFromStores(first, G);
+  if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+    class G {
+      constructor() {
+        return closure_10.getAdminGuildEntryIds(closure_1);
+      }
+    }
+    const items1 = [SortedGuildStore, GuildStore, PermissionStore];
+    cResult[3] = items1;
+    const tmp9 = items1;
+  } else {
+    class G {
+      constructor() {
+        return closure_10.getAdminGuildEntryIds(closure_1);
+      }
+    }
+  }
+  if (cResult[4] !== arg0) {
+    class G {
+      constructor() {
+        return closure_10.getAdminGuildEntryIds(closure_1);
+      }
+    }
+    const items2 = [arg0];
+    cResult[4] = arg0;
+    cResult[5] = tmp14;
+    cResult[6] = items2;
+    let tmp13 = items2;
+  } else {
+    class G {
+      constructor() {
+        return closure_10.getAdminGuildEntryIds(closure_1);
+      }
+    }
+    tmp13 = cResult[6];
+  }
+  const tmpResult = require("initialize");
+  const stateFromStoresArray = require("initialize").useStateFromStoresArray(tmp9, tmp14, tmp13);
+  if (cResult[7] === stateFromStoresArray) {
+    class G {
+      constructor() {
+        return closure_10.getAdminGuildEntryIds(closure_1);
+      }
+    }
+    require("useMountEffect")(R);
+    if (cResult[10] === stateFromStores) {
+      class G {
+        constructor() {
+          return closure_10.getAdminGuildEntryIds(closure_1);
+        }
+      }
+    }
+    if (cResult[13] !== stateFromStores) {
+      class O {
+        constructor(arg0) {
+          obj = closure_3;
+          hasItem = undefined;
+          if (closure_3 != null) {
+            tmp2 = arg0;
+            hasItem = obj.has(arg0.id);
+          }
+          return !hasItem;
+        }
+      }
+      cResult[13] = stateFromStores;
+      cResult[14] = O;
+    } else {
+      class O {
+        constructor(arg0) {
+          obj = closure_3;
+          hasItem = undefined;
+          if (closure_3 != null) {
+            tmp2 = arg0;
+            hasItem = obj.has(arg0.id);
+          }
+          return !hasItem;
+        }
+      }
+    }
+    const found = stateFromStoresArray.filter(O);
+    cResult[10] = stateFromStores;
+    cResult[11] = stateFromStoresArray;
+    cResult[12] = found;
+  }
+  class R {
+    constructor() {
+      tmp = closure_4(/* F141756 */ function() { ... })();
+      return;
+    }
+  }
+  cResult[7] = stateFromStoresArray;
+  cResult[8] = arg1;
+  cResult[9] = R;
+  const tmpResult2 = require("initialize");
+}) : ((arg0, arg1) => {
   _require = arg0;
   importDefault = arg1;
   const tmp = _slicedToArray(noop.useState(false), 2);
@@ -30,7 +154,7 @@ export default function useAvailableAndAddedGuilds(arg0, arg1) {
     flattenedGuildIds = flattenedGuildIds.getFlattenedGuildIds();
     const items = [];
     const item = flattenedGuildIds.forEach((item) => {
-      const guild = GuildStore.getGuild(item);
+      guild = GuildStore.getGuild(item);
       let canResult = null != guild;
       if (canResult) {
         canResult = PermissionStore.can(Permissions.ADMINISTRATOR, guild);
@@ -56,7 +180,7 @@ export default function useAvailableAndAddedGuilds(arg0, arg1) {
           const obj3 = { value, done: true };
           return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } else {
         try {
@@ -74,7 +198,7 @@ export default function useAvailableAndAddedGuilds(arg0, arg1) {
               closure_2_2(true);
               c1 = 1;
               v3 = 1;
-              const obj5 = { value: v3(stateFromStores[10]).fetchGuildEntriesForIds(closure_2_1, stateFromStoresArray.map((id) => id.id)), done: false };
+              const obj5 = { value: v3(stateFromStores[11]).fetchGuildEntriesForIds(closure_2_1, stateFromStoresArray.map((id) => id.id)), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
@@ -87,7 +211,7 @@ export default function useAvailableAndAddedGuilds(arg0, arg1) {
           } else {
             closure_128_2(false);
             v3 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } catch (tmp15) {
           v3 = tmp;
@@ -114,4 +238,4 @@ export default function useAvailableAndAddedGuilds(arg0, arg1) {
     return hasItem;
   }), items4);
   return obj3;
-};
+});

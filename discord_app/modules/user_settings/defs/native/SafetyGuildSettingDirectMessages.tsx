@@ -1,22 +1,172 @@
-// === Module 15719: SafetyGuildSettingDirectMessages ===
+// === Module 15782: SafetyGuildSettingDirectMessages ===
 
-// Module 15719 (SafetyGuildSettingDirectMessages)
-import util from "util" /* 1115 */;
-import UserSettings from "UserSettings" /* 2021 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5387 */;
-import common_AlertDefault from "common/Alert" /* 5484 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14565 */;
-import DefultGuildsRestrictedSetting from "DefultGuildsRestrictedSetting" /* 15714 */;
-import useAllowFriendsFromMutualGuildsOnly from "useAllowFriendsFromMutualGuildsOnly" /* 15720 */;
-import GuildStore from "GuildStore" /* 2066 */;
+// Module 15782 (SafetyGuildSettingDirectMessages)
+import c from "c" /* 576 */;
+import util from "util" /* 1126 */;
+import UserSettings from "UserSettings" /* 2028 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5707 */;
+import common_AlertDefault from "common/Alert" /* 5783 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14621 */;
+import DefultGuildsRestrictedSetting from "DefultGuildsRestrictedSetting" /* 15777 */;
+import useAllowFriendsFromMutualGuildsOnly from "useAllowFriendsFromMutualGuildsOnly" /* 15783 */;
+import GuildStore from "GuildStore" /* 2074 */;
 
 require = fn;
-const UserSettingsSafetySelectedGuildStore = fn(15711);
+const UserSettingsSafetySelectedGuildStore = fn(15774);
 ({ getSelectedGuildId: closure_4, useUserSafetySettingsSelectedGuildStore: hasOwnProperty } = UserSettingsSafetySelectedGuildStore);
-let closure_6 = fn(11216).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
-const SettingBuilders = fn(11215);
+let closure_6 = fn(11130).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
+fn(558);
+let ReactCompilerGating = fn(558);
+let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  let isParentallyControlled = useParentalControlSettings.useIsParentallyControlled();
+  if (isParentallyControlled) {
+    isParentallyControlled = tmp2 === closure_6;
+  }
+  return isParentallyControlled;
+}) : (() => {
+  let isParentallyControlled = useParentalControlSettings.useIsParentallyControlled();
+  if (isParentallyControlled) {
+    isParentallyControlled = tmp2 === closure_6;
+  }
+  return isParentallyControlled;
+});
+ReactCompilerGating = fn(558);
+const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(3);
+  const selectedGuildId = hasOwnProperty().selectedGuildId;
+  let tmp2 = !DefultGuildsRestrictedSetting.useDefaultGuildsRestricted();
+  const RestrictedGuildIds = UserSettings.RestrictedGuildIds;
+  const setting = RestrictedGuildIds.useSetting();
+  if (cResult[0] === selectedGuildId) {
+    if (cResult[1] === setting) {
+      let tmp3 = cResult[2];
+    }
+    if (selectedGuildId !== closure_6) {
+      tmp2 = !tmp3;
+    }
+    return tmp2;
+  }
+  const hasItem = setting.includes(selectedGuildId);
+  cResult[0] = selectedGuildId;
+  cResult[1] = setting;
+  cResult[2] = hasItem;
+  tmp3 = hasItem;
+}) : (() => {
+  const selectedGuildId = hasOwnProperty().selectedGuildId;
+  const RestrictedGuildIds = UserSettings.RestrictedGuildIds;
+  const setting = RestrictedGuildIds.useSetting();
+  let tmp2 = !setting.includes(selectedGuildId);
+  if (selectedGuildId === closure_6) {
+    tmp2 = tmp;
+  }
+  return tmp2;
+});
+ReactCompilerGating = fn(558);
+const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(4);
+  const allowFriendsFromMutualGuildsOnly = useAllowFriendsFromMutualGuildsOnly.useAllowFriendsFromMutualGuildsOnly();
+  if (hasOwnProperty().selectedGuildId === closure_6) {
+    const intl2 = util.intl;
+    const string2 = intl2.string;
+    let XXGmuB = util.t;
+    if (allowFriendsFromMutualGuildsOnly) {
+      XXGmuB = XXGmuB.XXGmuB;
+      let string2Result = string2(XXGmuB);
+    } else {
+      string2Result = string2(XXGmuB.wbYDfT);
+    }
+    cResult[0] = allowFriendsFromMutualGuildsOnly;
+    cResult[1] = string2Result;
+  } else if (cResult[2] !== allowFriendsFromMutualGuildsOnly) {
+    const intl = util.intl;
+    const string = intl.string;
+    let F9WY3f = util.t;
+    if (allowFriendsFromMutualGuildsOnly) {
+      F9WY3f = F9WY3f.F9WY3f;
+      let stringResult = string(F9WY3f);
+    } else {
+      stringResult = string(F9WY3f.G7c3Xo);
+    }
+    cResult[2] = allowFriendsFromMutualGuildsOnly;
+    cResult[3] = stringResult;
+  } else {
+    return cResult[3];
+  }
+}) : (() => {
+  const allowFriendsFromMutualGuildsOnly = useAllowFriendsFromMutualGuildsOnly.useAllowFriendsFromMutualGuildsOnly();
+  if (hasOwnProperty().selectedGuildId === closure_6) {
+    const intl2 = util.intl;
+    const string2 = intl2.string;
+    let XXGmuB = util.t;
+    if (allowFriendsFromMutualGuildsOnly) {
+      XXGmuB = XXGmuB.XXGmuB;
+      let string2Result = string2(XXGmuB);
+    } else {
+      string2Result = string2(XXGmuB.wbYDfT);
+    }
+  } else {
+    const intl = util.intl;
+    const string = intl.string;
+    const t = util.t;
+    if (allowFriendsFromMutualGuildsOnly) {
+      let stringResult = string(t.F9WY3f);
+    } else {
+      stringResult = string(t.G7c3Xo);
+    }
+    return stringResult;
+  }
+});
+const SettingBuilders = fn(11129);
+const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(2);
+  const allowFriendsFromMutualGuildsOnly = useAllowFriendsFromMutualGuildsOnly.useAllowFriendsFromMutualGuildsOnly();
+  if (cResult[0] !== allowFriendsFromMutualGuildsOnly) {
+    const intl = util.intl;
+    const string = intl.string;
+    let PMsfcH = util.t;
+    if (allowFriendsFromMutualGuildsOnly) {
+      PMsfcH = PMsfcH.PMsfcH;
+      let stringResult = string(PMsfcH);
+    } else {
+      stringResult = string(PMsfcH.RAQUSN);
+    }
+    cResult[0] = allowFriendsFromMutualGuildsOnly;
+    cResult[1] = stringResult;
+  } else {
+    return cResult[1];
+  }
+}) : (() => {
+  const allowFriendsFromMutualGuildsOnly = useAllowFriendsFromMutualGuildsOnly.useAllowFriendsFromMutualGuildsOnly();
+  const intl = util.intl;
+  const string = intl.string;
+  const t = util.t;
+  if (allowFriendsFromMutualGuildsOnly) {
+    let stringResult = string(t.PMsfcH);
+  } else {
+    stringResult = string(t.RAQUSN);
+  }
+  return stringResult;
+});
 const toggle = SettingBuilders.createToggle({
-  useTitle() {
+  useTitle: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+    const cResult = c.c(2);
+    const allowFriendsFromMutualGuildsOnly = useAllowFriendsFromMutualGuildsOnly.useAllowFriendsFromMutualGuildsOnly();
+    if (cResult[0] !== allowFriendsFromMutualGuildsOnly) {
+      const intl = util.intl;
+      const string = intl.string;
+      let PMsfcH = util.t;
+      if (allowFriendsFromMutualGuildsOnly) {
+        PMsfcH = PMsfcH.PMsfcH;
+        let stringResult = string(PMsfcH);
+      } else {
+        stringResult = string(PMsfcH.RAQUSN);
+      }
+      cResult[0] = allowFriendsFromMutualGuildsOnly;
+      cResult[1] = stringResult;
+    } else {
+      return cResult[1];
+    }
+  }) : (() => {
     const allowFriendsFromMutualGuildsOnly = useAllowFriendsFromMutualGuildsOnly.useAllowFriendsFromMutualGuildsOnly();
     const intl = util.intl;
     const string = intl.string;
@@ -27,42 +177,10 @@ const toggle = SettingBuilders.createToggle({
       stringResult = string(t.RAQUSN);
     }
     return stringResult;
-  },
-  useDescription() {
-    const allowFriendsFromMutualGuildsOnly = useAllowFriendsFromMutualGuildsOnly.useAllowFriendsFromMutualGuildsOnly();
-    if (hasOwnProperty().selectedGuildId === closure_6) {
-      const intl2 = util.intl;
-      const string2 = intl2.string;
-      let XXGmuB = util.t;
-      if (allowFriendsFromMutualGuildsOnly) {
-        XXGmuB = XXGmuB.XXGmuB;
-        let string2Result = string2(XXGmuB);
-      } else {
-        string2Result = string2(XXGmuB.wbYDfT);
-      }
-    } else {
-      const intl = util.intl;
-      const string = intl.string;
-      const t = util.t;
-      if (allowFriendsFromMutualGuildsOnly) {
-        let stringResult = string(t.F9WY3f);
-      } else {
-        stringResult = string(t.G7c3Xo);
-      }
-      return stringResult;
-    }
-  },
-  parent: fn(7590).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
-  useValue() {
-    const selectedGuildId = hasOwnProperty().selectedGuildId;
-    const RestrictedGuildIds = UserSettings.RestrictedGuildIds;
-    const setting = RestrictedGuildIds.useSetting();
-    let tmp2 = !setting.includes(selectedGuildId);
-    if (selectedGuildId === closure_6) {
-      tmp2 = tmp;
-    }
-    return tmp2;
-  },
+  }),
+  useDescription: tmp5,
+  parent: fn(7634).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  useValue: tmp4,
   onValueChange: function onAllowDirectMessagesFromServerMembersValueChange(arg0) {
     const tmp = closure_4();
     if (tmp === closure_6) {
@@ -106,13 +224,7 @@ const toggle = SettingBuilders.createToggle({
       const obj = require("UserSettingsUtils");
     }
   },
-  useIsDisabled() {
-    let isParentallyControlled = useParentalControlSettings.useIsParentallyControlled();
-    if (isParentallyControlled) {
-      isParentallyControlled = tmp2 === closure_6;
-    }
-    return isParentallyControlled;
-  }
+  useIsDisabled: tmp3
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/defs/native/SafetyGuildSettingDirectMessages.tsx");

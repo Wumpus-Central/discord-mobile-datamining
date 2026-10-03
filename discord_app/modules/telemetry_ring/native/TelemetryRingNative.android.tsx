@@ -1,7 +1,7 @@
-// === Module 1988: TelemetryRingNative ===
+// === Module 1994: TelemetryRingNative ===
 
-// Module 1988 (TelemetryRingNative)
-import NativeTelemetryRingModuleDefault from "NativeTelemetryRingModule" /* 1989 */;
+// Module 1994 (TelemetryRingNative)
+import NativeTelemetryRingModuleDefault from "NativeTelemetryRingModule" /* 1995 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/telemetry_ring/native/TelemetryRingNative.android.tsx");

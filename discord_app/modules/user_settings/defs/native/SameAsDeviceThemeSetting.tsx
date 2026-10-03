@@ -1,23 +1,59 @@
-// === Module 15061: SameAsDeviceThemeSetting ===
+// === Module 15118: SameAsDeviceThemeSetting ===
 
-// Module 15061 (SameAsDeviceThemeSetting)
+// Module 15118 (SameAsDeviceThemeSetting)
 import initialize from "initialize" /* 504 */;
-import util from "util" /* 1115 */;
-import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 14918 */;
-import ThemeStore from "ThemeStore" /* 1182 */;
+import c from "c" /* 576 */;
+import util from "util" /* 1126 */;
+import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 14975 */;
+import ThemeStore from "ThemeStore" /* 1193 */;
 
 require = fn;
-const SettingBuilders = fn(11215);
+const ReactCompilerGating = fn(558);
+const SettingBuilders = fn(11129);
+const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+  const cResult = c.c(2);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [ThemeStore];
+    const fn = function n() {
+      return sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled();
+    };
+    cResult[0] = items;
+    cResult[1] = fn;
+    tmp4 = items;
+    tmp5 = fn;
+  } else {
+    [tmp4, tmp5] = cResult;
+  }
+  return initialize.useStateFromStores(tmp4, tmp5);
+}) : (() => {
+  const items = [ThemeStore];
+  return initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
+});
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.c445ix);
   },
-  parent: fn(7590).MobileUserSettings.APPEARANCE,
-  useValue: function useSameAsDeviceThemeValue() {
+  parent: fn(7634).MobileUserSettings.APPEARANCE,
+  useValue: ReactCompilerGating.isReactCompilerEnabled() ? (() => {
+    const cResult = c.c(2);
+    if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+      const items = [ThemeStore];
+      const fn = function n() {
+        return sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled();
+      };
+      cResult[0] = items;
+      cResult[1] = fn;
+      tmp4 = items;
+      tmp5 = fn;
+    } else {
+      [tmp4, tmp5] = cResult;
+    }
+    return initialize.useStateFromStores(tmp4, tmp5);
+  }) : (() => {
     const items = [ThemeStore];
     return initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
-  },
+  }),
   onValueChange: function onSameAsDeviceThemeValueChange(arg0) {
     const obj = UserSettingsAppearanceThemeUtils;
     if (arg0) {

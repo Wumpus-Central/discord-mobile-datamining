@@ -1,12 +1,12 @@
-// === Module 6197: PromoEmailConsentStore ===
+// === Module 6083: PromoEmailConsentStore ===
 
-// Module 6197 (PromoEmailConsentStore)
-import module_560 from "module_560" /* 560 */;
+// Module 6083 (PromoEmailConsentStore)
+import module_570 from "module_570" /* 570 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
-const usePromoEmailConsentStore = module_560.create(() => ({ required: false, checked: false, preChecked: false }));
+const usePromoEmailConsentStore = module_570.create(() => ({ required: false, checked: false, preChecked: false }));
 const result = size.fileFinishedImporting("modules/auth/PromoEmailConsentStore.tsx");
 
 export const setPromoEmailConsentState = function setPromoEmailConsentState(arg0) {

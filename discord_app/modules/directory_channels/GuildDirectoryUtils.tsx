@@ -1,9 +1,9 @@
-// === Module 11997: GuildDirectoryUtils ===
+// === Module 11932: GuildDirectoryUtils ===
 
-// Module 11997 (GuildDirectoryUtils)
+// Module 11932 (GuildDirectoryUtils)
 import _modDef12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
-import GuildDirectoryConstants from "GuildDirectoryConstants" /* 11998 */;
+import GuildDirectoryConstants from "GuildDirectoryConstants" /* 11933 */;
 import size from "module_2" /* 2 */;
 
 const DirectoryEntryTypes = GuildDirectoryConstants.DirectoryEntryTypes;
@@ -66,9 +66,9 @@ export const orderByTotalMemberCount = function orderByTotalMemberCount(found) {
   const items = [(approximateMemberCount) => approximateMemberCount.approximateMemberCount];
   return _modDef12.orderBy(found, items, ["desc"]);
 };
-export const orderByDateAdded = function orderByDateAdded(reactions) {
-  const items = [(createdAt) => createdAt.createdAt];
-  return _modDef12.orderBy(reactions, items, ["desc"]);
+export const orderByDateAdded = function orderByDateAdded(items) {
+  items = [(createdAt) => createdAt.createdAt];
+  return _modDef12.orderBy(items, items, ["desc"]);
 };
 export const rankByDateAdded = function rankByDateAdded(arr) {
   const found = arr.filter((featurableInDirectory) => featurableInDirectory.featurableInDirectory);

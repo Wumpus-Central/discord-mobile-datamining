@@ -1,6 +1,6 @@
-// === Module 7986: LabFeatures ===
+// === Module 8032: LabFeatures ===
 
-// Module 7986 (LabFeatures)
+// Module 8032 (LabFeatures)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/labs/LabFeatures.tsx");

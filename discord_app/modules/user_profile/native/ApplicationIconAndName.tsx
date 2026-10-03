@@ -1,11 +1,13 @@
-// === Module 12338: ApplicationIconAndName ===
+// === Module 12294: ApplicationIconAndName ===
 
-// Module 12338 (ApplicationIconAndName)
-import nativeDefault from "native" /* 576 */;
-import native from "native" /* 1177 */;
-import Text_Text from "Text/Text" /* 4841 */;
+// Module 12294 (ApplicationIconAndName)
+import c from "c" /* 576 */;
+import nativeDefault from "native" /* 587 */;
+import native from "native" /* 1188 */;
+import Text_Text from "Text/Text" /* 4886 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4845 */;
+import createStyles from "createStyles" /* 4890 */;
+import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 ({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
@@ -17,7 +19,78 @@ let closure_6 = createStyles.createStyles((width) => {
 });
 const result = size.fileFinishedImporting("modules/user_profile/native/ApplicationIconAndName.tsx");
 
-export default function ApplicationIconAndName(textVariant) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = c.c(15);
+  ({ application, textVariant, iconSize, useComma } = arg0);
+  const tmp5 = closure_6(iconSize);
+  if (cResult[0] === application) {
+    if (cResult[1] === iconSize) {
+      let tmp6 = cResult[2];
+    }
+    if (cResult[3] !== tmp6) {
+      const obj2 = { uri: tmp6 };
+      cResult[3] = tmp6;
+      cResult[4] = obj2;
+      let tmp7 = obj2;
+    } else {
+      tmp7 = cResult[4];
+    }
+    if (cResult[5] === application.id) {
+      if (cResult[6] === tmp5.gameIcon) {
+        if (cResult[7] === tmp7) {
+          let tmp8 = cResult[8];
+        }
+        let str3 = "";
+        if (tmp4) {
+          str3 = ", ";
+        }
+        const _HermesInternal = HermesInternal;
+        const combined = "" + application.name + str3;
+        if (cResult[9] === combined) {
+          if (cResult[10] === textVariant) {
+            let tmp13 = cResult[11];
+          }
+          if (cResult[12] === tmp8) {
+            if (cResult[13] === tmp13) {
+              let tmp16 = cResult[14];
+            }
+            return tmp16;
+          }
+          const obj3 = { children: null };
+          const items = [tmp8, tmp13];
+          obj3.children = items;
+          const tmp19 = hasOwnProperty(React4, obj3);
+          cResult[12] = tmp8;
+          cResult[13] = tmp13;
+          cResult[14] = tmp19;
+          tmp16 = tmp19;
+        }
+        const obj4 = { variant: textVariant, children: combined };
+        const tmp15 = React3(Text_Text.Text, obj4);
+        cResult[9] = combined;
+        cResult[10] = textVariant;
+        cResult[11] = tmp15;
+        tmp13 = tmp15;
+      }
+    }
+    const obj5 = { style: tmp5.gameIcon, resizeMode: "contain", source: tmp7, disableColor: true };
+    const tmp10 = React3(native.Icon, obj5, application.id);
+    cResult[5] = application.id;
+    cResult[6] = tmp5.gameIcon;
+    cResult[7] = tmp7;
+    cResult[8] = tmp10;
+    tmp8 = tmp10;
+  }
+  let str = application.getIconURL(iconSize);
+  if (str == null) {
+    str = "";
+  }
+  cResult[0] = application;
+  cResult[1] = iconSize;
+  cResult[2] = str;
+  tmp6 = str;
+  tmp4 = undefined !== useComma && useComma;
+}) : ((textVariant) => {
   ({ application, iconSize, useComma } = textVariant);
   if (useComma === undefined) {
     useComma = false;
@@ -39,4 +112,4 @@ export default function ApplicationIconAndName(textVariant) {
   items[1] = React3(Text_Text.Text, obj2);
   obj3.children = items;
   return hasOwnProperty(React4, obj3);
-};
+});

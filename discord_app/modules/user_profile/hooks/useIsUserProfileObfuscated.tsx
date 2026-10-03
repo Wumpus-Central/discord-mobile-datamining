@@ -1,15 +1,86 @@
-// === Module 12778: useIsUserProfileObfuscated ===
+// === Module 12814: useIsUserProfileObfuscated ===
 
-// Module 12778 (useIsUserProfileObfuscated)
-import UserProfileStore from "UserProfileStore" /* 7208 */;
+// Module 12814 (useIsUserProfileObfuscated)
+import UserProfileStore from "UserProfileStore" /* 7111 */;
 
 const require = globalThis.__r;
 
 const require = fn;
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useIsUserProfileObfuscated.tsx");
 
-export default function useIsUserProfileObfuscated(flags) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
+  _require = id;
+  const cResult = require("c").c(3);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const items = [UserProfileStore];
+    cResult[0] = items;
+    let first = items;
+  } else {
+    first = cResult[0];
+  }
+  if (cResult[1] !== id.id) {
+    const fn = function t() {
+      return UserProfileStore.getUserProfile(id.id);
+    };
+    cResult[1] = id.id;
+    cResult[2] = fn;
+    let tmp6 = fn;
+  } else {
+    tmp6 = cResult[2];
+  }
+  const obj = require("c");
+  const stateFromStores = require("initialize").useStateFromStores(first, tmp6);
+  let bio;
+  if (stateFromStores != null) {
+    bio = stateFromStores.bio;
+  }
+  let tmp9 = "" === bio;
+  if (tmp9) {
+    let pronouns;
+    if (stateFromStores != null) {
+      pronouns = stateFromStores.pronouns;
+    }
+    tmp9 = "" === pronouns;
+  }
+  if (tmp9) {
+    let banner;
+    if (stateFromStores != null) {
+      banner = stateFromStores.banner;
+    }
+    tmp9 = undefined === banner;
+  }
+  if (tmp9) {
+    let accentColor;
+    if (stateFromStores != null) {
+      accentColor = stateFromStores.accentColor;
+    }
+    tmp9 = undefined === accentColor;
+  }
+  if (tmp9) {
+    tmp9 = id.flags === id.publicFlags;
+  }
+  if (tmp9) {
+    let badges;
+    if (stateFromStores != null) {
+      badges = stateFromStores.badges;
+    }
+    let tmp14 = null == badges;
+    if (!tmp14) {
+      let length;
+      if (stateFromStores != null) {
+        const badges1 = stateFromStores.badges;
+        if (badges1 != null) {
+          length = badges1.length;
+        }
+      }
+      tmp14 = 0 === length;
+    }
+    tmp9 = tmp14;
+  }
+  return tmp9;
+}) : ((flags) => {
   _require = flags;
   const items = [UserProfileStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => UserProfileStore.getUserProfile(id.id));
@@ -61,4 +132,4 @@ export default function useIsUserProfileObfuscated(flags) {
     tmp3 = tmp8;
   }
   return tmp3;
-};
+});

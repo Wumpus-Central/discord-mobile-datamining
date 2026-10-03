@@ -1,12 +1,12 @@
-// === Module 8976: tryLaunchAsFrame ===
+// === Module 8995: tryLaunchAsFrame ===
 
-// Module 8976 (tryLaunchAsFrame)
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 8952 */;
-import canLaunchFrame from "canLaunchFrame" /* 8975 */;
-import ApplicationStore from "ApplicationStore" /* 5072 */;
+// Module 8995 (tryLaunchAsFrame)
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 8986 */;
+import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 8994 */;
+import ApplicationStore from "ApplicationStore" /* 5118 */;
 
 require = fn;
-const MAIN_SURFACE = fn(8691).MAIN_SURFACE;
+const MAIN_SURFACE = fn(8704).MAIN_SURFACE;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/tryLaunchAsFrame.tsx");
 
@@ -16,7 +16,7 @@ export const tryLaunchAsFrame = function tryLaunchAsFrame(applicationId) {
   const application = ApplicationStore.getApplication(applicationId);
   let tmp2 = null == application;
   if (!tmp2) {
-    tmp2 = !canLaunchFrame.canLaunchFrame(application);
+    tmp2 = !canLaunchContextlessFrame.canLaunchContextlessFrame(application);
   }
   let flag = !tmp2;
   if (!tmp2) {

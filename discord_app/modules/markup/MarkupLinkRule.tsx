@@ -1,15 +1,15 @@
-// === Module 5491: MarkupLinkRule ===
+// === Module 5790: MarkupLinkRule ===
 
-// Module 5491 (MarkupLinkRule)
+// Module 5790 (MarkupLinkRule)
 import _modDef12 from "module_12" /* 12 */;
-import URLUtilsDefault from "URLUtils" /* 1366 */;
-import GlobalUtils from "GlobalUtils" /* 1370 */;
-import privDefault from "priv" /* 1439 */;
-import _modDef1930 from "module_1930" /* 1930 */;
-import findCodedLinks from "findCodedLinks" /* 4825 */;
-import MarkupTypes from "MarkupTypes" /* 5486 */;
-import UnicodeSanitizationUtils from "UnicodeSanitizationUtils" /* 5492 */;
-import errorDefault from "error" /* 5493 */;
+import URLUtilsDefault from "URLUtils" /* 1371 */;
+import GlobalUtils from "GlobalUtils" /* 1375 */;
+import privDefault from "priv" /* 1444 */;
+import _modDef1936 from "module_1936" /* 1936 */;
+import findCodedLinks from "findCodedLinks" /* 4870 */;
+import MarkupTypes from "MarkupTypes" /* 5785 */;
+import UnicodeSanitizationUtils from "UnicodeSanitizationUtils" /* 5791 */;
+import errorDefault from "error" /* 5792 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const findCodedLinksDefault = findCodedLinks;
@@ -186,13 +186,13 @@ function punycodeLink(url) {
 }
 let closure_4 = new privDefault({ max: 50 });
 let items = ["http:", "https:", "discord:", "tel:", "sms:", "mailto:"];
-let items1 = [fn(5486).AST_KEY.TEXT, fn(5486).AST_KEY.UNDERLINE, fn(5486).AST_KEY.STRONG, fn(5486).AST_KEY.ITALICS, fn(5486).AST_KEY.STRIKETHROUGH, fn(5486).AST_KEY.INLINE_CODE, fn(5486).AST_KEY.SPOILER, fn(5486).AST_KEY.LINE_BREAK, fn(5486).AST_KEY.TIMESTAMP];
-let items2 = [...items1, fn(5486).AST_KEY.EMOJI, fn(5486).AST_KEY.CUSTOM_EMOJI];
-let items3 = [fn(5486).AST_KEY.LIST, fn(5486).AST_KEY.HEADING, fn(5486).AST_KEY.BLOCK_QUOTE, fn(5486).AST_KEY.SUBTEXT];
-const items4 = [fn(5486).AST_KEY.TEXT];
-const items5 = [fn(5486).AST_KEY.UNDERLINE, fn(5486).AST_KEY.STRONG, fn(5486).AST_KEY.ITALICS, fn(5486).AST_KEY.STRIKETHROUGH, fn(5486).AST_KEY.INLINE_CODE, fn(5486).AST_KEY.SPOILER, fn(5486).AST_KEY.LINE_BREAK, fn(5486).AST_KEY.TIMESTAMP, fn(5486).AST_KEY.EMOJI, fn(5486).AST_KEY.CUSTOM_EMOJI, fn(5486).AST_KEY.LIST, fn(5486).AST_KEY.HEADING, fn(5486).AST_KEY.BLOCK_QUOTE, fn(5486).AST_KEY.SUBTEXT];
+let items1 = [fn(5785).AST_KEY.TEXT, fn(5785).AST_KEY.UNDERLINE, fn(5785).AST_KEY.STRONG, fn(5785).AST_KEY.ITALICS, fn(5785).AST_KEY.STRIKETHROUGH, fn(5785).AST_KEY.INLINE_CODE, fn(5785).AST_KEY.SPOILER, fn(5785).AST_KEY.LINE_BREAK, fn(5785).AST_KEY.TIMESTAMP];
+let items2 = [...items1, fn(5785).AST_KEY.EMOJI, fn(5785).AST_KEY.CUSTOM_EMOJI];
+let items3 = [fn(5785).AST_KEY.LIST, fn(5785).AST_KEY.HEADING, fn(5785).AST_KEY.BLOCK_QUOTE, fn(5785).AST_KEY.SUBTEXT];
+const items4 = [fn(5785).AST_KEY.TEXT];
+const items5 = [fn(5785).AST_KEY.UNDERLINE, fn(5785).AST_KEY.STRONG, fn(5785).AST_KEY.ITALICS, fn(5785).AST_KEY.STRIKETHROUGH, fn(5785).AST_KEY.INLINE_CODE, fn(5785).AST_KEY.SPOILER, fn(5785).AST_KEY.LINE_BREAK, fn(5785).AST_KEY.TIMESTAMP, fn(5785).AST_KEY.EMOJI, fn(5785).AST_KEY.CUSTOM_EMOJI, fn(5785).AST_KEY.LIST, fn(5785).AST_KEY.HEADING, fn(5785).AST_KEY.BLOCK_QUOTE, fn(5785).AST_KEY.SUBTEXT];
 let obj = {};
-let merged = Object.assign(_modDef1930.defaultRules.link);
+let merged = Object.assign(_modDef1936.defaultRules.link);
 obj.match = function match(arr, allowLinks, arg2) {
   if (allowLinks.allowLinks) {
     if (-1 === arr.indexOf("](")) {
@@ -243,7 +243,7 @@ obj.match = function match(arr, allowLinks, arg2) {
         }
         return null;
       }
-      return _modDef1930.defaultRules.link.match(arr, allowLinks, arg2);
+      return _modDef1936.defaultRules.link.match(arr, allowLinks, arg2);
     }
   } else {
     return null;
@@ -263,7 +263,7 @@ obj.parse = function parse(arg0, rules, allowEmojiLinks) {
       const result = closure_4.set(tmp4, obj6);
       value = obj6;
     }
-    let value3 = closure_4.get(tmp3);
+    value3 = closure_4.get(tmp3);
     if (null == value3) {
       const sanitizeWhitespaceResult1 = UnicodeSanitizationUtils.sanitizeWhitespace(tmp3);
       const obj9 = { whitespaceSanitized: sanitizeWhitespaceResult1, fullySanitized: null };
@@ -286,7 +286,7 @@ obj.parse = function parse(arg0, rules, allowEmojiLinks) {
     const trimmed = str3.trim();
     if (0 !== str2.trim().length) {
       if (0 !== trimmed.length) {
-        const tmp51 = punycodeLink(_modDef1930.unescapeUrl(tmp4));
+        const tmp51 = punycodeLink(_modDef1936.unescapeUrl(tmp4));
         if (null != tmp51) {
           if (!obj24.containsCodedLink(tmp5)) {
             const obj12 = {};
@@ -327,7 +327,7 @@ obj.parse = function parse(arg0, rules, allowEmojiLinks) {
                   }
                   const tmp49Result = _modDef12;
                   const pickResult = _modDef12.pick(rules.rules, tmp27);
-                  const obj17 = { content: _modDef1930.parserFor(pickResult)(value3.whitespaceSanitized, obj12), target: tmp51.target, title: value4.whitespaceSanitized };
+                  const obj17 = { content: _modDef1936.parserFor(pickResult)(value3.whitespaceSanitized, obj12), target: tmp51.target, title: value4.whitespaceSanitized };
                   return obj17;
                 }
               }

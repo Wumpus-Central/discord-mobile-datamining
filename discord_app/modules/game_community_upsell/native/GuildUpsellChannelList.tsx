@@ -1,25 +1,27 @@
-// === Module 16122: GuildUpsellChannelList ===
+// === Module 16196: GuildUpsellChannelList ===
 
-// Module 16122 (GuildUpsellChannelList)
-import nativeDefault from "native" /* 576 */;
-import util from "util" /* 1115 */;
-import Text_Text from "Text/Text" /* 4841 */;
-import components_Button_Button from "components/Button/Button" /* 5465 */;
+// Module 16196 (GuildUpsellChannelList)
+import nativeDefault from "native" /* 587 */;
+import util from "util" /* 1126 */;
+import Text_Text from "Text/Text" /* 4886 */;
+import components_Button_Button from "components/Button/Button" /* 5594 */;
+import Card from "Card" /* 5995 */;
+import MobileGameCommunitiesActionCreatorsAll from "MobileGameCommunitiesActionCreators" /* 16202 */;
 import noop from "module_19" /* 19 */;
-import LocalAppDetectionStore from "LocalAppDetectionStore" /* 13462 */;
-import ConsentStore from "ConsentStore" /* 6198 */;
+import LocalAppDetectionStore from "LocalAppDetectionStore" /* 13522 */;
+import ConsentStore from "ConsentStore" /* 6084 */;
 
 const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-let closure_9 = fn(16123).MAX_DISPLAYED_UPSELL_GUILDS;
-const Constants = fn(1074);
+let closure_9 = fn(16197).MAX_DISPLAYED_UPSELL_GUILDS;
+const Constants = fn(1085);
 ({ AnalyticEvents: c10, Consents: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4845);
+const createStyles = fn(4890);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.PANEL_BG }, header: null, headerTitle: null, listContainer: null, subheaderWrapper: null, createDescription: null, templateScroll: null, templateRow: null, templateCard: null, templateIconWrapper: null, templateTitle: null, buttonGroup: null, descriptionSpacing: null, joinSection: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.PANEL_BG };
 obj2.header = { height: 56, flexDirection: "row", alignItems: "center", marginHorizontal: nativeDefault.space.PX_16 };
@@ -46,15 +48,307 @@ const obj12 = { marginBottom: nativeDefault.space.PX_8 };
 obj2.joinSection = { gap: nativeDefault.space.PX_4 };
 let closure_14 = createStyles.createStyles(obj2);
 const obj13 = { gap: nativeDefault.space.PX_4 };
-let items = [{ id: "hangout", title: fn(1115).t.ScXySs, description: fn(1115).t.DSCqxM, Icon: fn(12774).BumpingFistsSpotIllustration }, , ];
-const obj14 = { id: "hangout", title: fn(1115).t.ScXySs, description: fn(1115).t.DSCqxM, Icon: fn(12774).BumpingFistsSpotIllustration };
-items[1] = { id: "gaming", title: fn(1115).t["F+MTAZ"], description: fn(1115).t.srNlJw, Icon: fn(16124).ChatControllersSpotIllustration };
-const obj15 = { id: "gaming", title: fn(1115).t["F+MTAZ"], description: fn(1115).t.srNlJw, Icon: fn(16124).ChatControllersSpotIllustration };
-items[2] = { id: "hobbies", title: fn(1115).t["0Ka6B5"], description: fn(1115).t["5oGAp/"], Icon: fn(16126).MiniaturesSpotIllustration };
+let items = [{ id: "hangout", title: fn(1126).t.ScXySs, description: fn(1126).t.DSCqxM, Icon: fn(12810).BumpingFistsSpotIllustration }, , ];
+const obj14 = { id: "hangout", title: fn(1126).t.ScXySs, description: fn(1126).t.DSCqxM, Icon: fn(12810).BumpingFistsSpotIllustration };
+items[1] = { id: "gaming", title: fn(1126).t["F+MTAZ"], description: fn(1126).t.srNlJw, Icon: fn(16198).ChatControllersSpotIllustration };
+const obj15 = { id: "gaming", title: fn(1126).t["F+MTAZ"], description: fn(1126).t.srNlJw, Icon: fn(16198).ChatControllersSpotIllustration };
+items[2] = { id: "hobbies", title: fn(1126).t["0Ka6B5"], description: fn(1126).t["5oGAp/"], Icon: fn(16200).MiniaturesSpotIllustration };
+const ReactCompilerGating = fn(558);
+const obj16 = { id: "hobbies", title: fn(1126).t["0Ka6B5"], description: fn(1126).t["5oGAp/"], Icon: fn(16200).MiniaturesSpotIllustration };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_community_upsell/native/GuildUpsellChannelList.tsx");
 
-export default function GuildUpsellChannelList(style) {
+export default ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
+  const cResult = require("c").c(59);
+  const tmp4 = closure_14();
+  _require = tmp4;
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const obj2 = { location: "GuildUpsellChannelList" };
+    cResult[0] = obj2;
+    let first = obj2;
+  } else {
+    first = cResult[0];
+  }
+  const GameCommunityAddServerEntryExperiment = tmp(13525).GameCommunityAddServerEntryExperiment;
+  const cardAction = GameCommunityAddServerEntryExperiment.useConfig(first).cardAction;
+  if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
+    items = [ConsentStore, LocalAppDetectionStore];
+    class I {
+      constructor() {
+        hasConsentedResult = closure_1_8.hasConsented(closure_1_11.PERSONALIZATION);
+        someResult = !hasConsentedResult;
+        if (hasConsentedResult) {
+          tmp3 = globalThis;
+          _Object = Object;
+          tmp4 = closure_1_7;
+          values = Object.values(closure_1_7.getUserAgnosticState().apps);
+          someResult = values.some((lastScannedAt) => {
+            lastScannedAt = undefined;
+            if (lastScannedAt != null) {
+              lastScannedAt = lastScannedAt.lastScannedAt;
+            }
+            return null != lastScannedAt;
+          });
+        }
+        return someResult;
+      }
+    }
+    cResult[1] = items;
+    cResult[2] = I;
+    let tmp7 = I;
+    let tmp6 = items;
+  } else {
+    tmp6 = cResult[1];
+    tmp7 = cResult[2];
+  }
+  let obj = require("c");
+  const stateFromStores = require("initialize").useStateFromStores(tmp6, tmp7);
+  const tmpResult = require("initialize");
+  const data = require("MobileGameCommunitiesActionCreators").useMobileGameCommunities(stateFromStores).data;
+  if (cResult[3] !== data) {
+    let items1 = data;
+    if (data == null) {
+      items1 = [];
+    }
+    cResult[3] = data;
+    class I {
+      constructor() {
+        hasConsentedResult = closure_1_8.hasConsented(closure_1_11.PERSONALIZATION);
+        someResult = !hasConsentedResult;
+        if (hasConsentedResult) {
+          tmp3 = globalThis;
+          _Object = Object;
+          tmp4 = closure_1_7;
+          values = Object.values(closure_1_7.getUserAgnosticState().apps);
+          someResult = values.some((lastScannedAt) => {
+            lastScannedAt = undefined;
+            if (lastScannedAt != null) {
+              lastScannedAt = lastScannedAt.lastScannedAt;
+            }
+            return null != lastScannedAt;
+          });
+        }
+        return someResult;
+      }
+    }
+    cResult[4] = items1;
+    let arr2 = items1;
+  } else {
+    arr2 = cResult[4];
+  }
+  if (cResult[5] !== arr2) {
+    const substr = arr2.slice(0, closure_9);
+    cResult[5] = arr2;
+    class I {
+      constructor() {
+        hasConsentedResult = closure_1_8.hasConsented(closure_1_11.PERSONALIZATION);
+        someResult = !hasConsentedResult;
+        if (hasConsentedResult) {
+          tmp3 = globalThis;
+          _Object = Object;
+          tmp4 = closure_1_7;
+          values = Object.values(closure_1_7.getUserAgnosticState().apps);
+          someResult = values.some((lastScannedAt) => {
+            lastScannedAt = undefined;
+            if (lastScannedAt != null) {
+              lastScannedAt = lastScannedAt.lastScannedAt;
+            }
+            return null != lastScannedAt;
+          });
+        }
+        return someResult;
+      }
+    }
+    cResult[6] = substr;
+  }
+  if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
+    const fn = function f(guild_id, game_id) {
+      MobileGameCommunitiesActionCreatorsAll.dismissGuild(guild_id);
+      onPress(1252).track(constants.GAME_COMMUNITY_MULTI_GUILD_UPSELL_CARD_DISMISSED, { game_id, guild_id });
+    };
+    cResult[7] = fn;
+  }
+  if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
+    const fn2 = function w() {
+      onPress(12357).openCreateGuildModal();
+    };
+    cResult[8] = fn2;
+    let tmp16 = fn2;
+  } else {
+    tmp16 = cResult[8];
+  }
+  importDefault = tmp16;
+  if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
+    class X {
+      constructor() {
+        obj = closure_1(closure_1_3[19]);
+        result = obj.openGuildJoinServerScreen();
+        return;
+      }
+    }
+    cResult[9] = X;
+  } else {
+    class X {
+      constructor() {
+        obj = closure_1(closure_1_3[19]);
+        result = obj.openGuildJoinServerScreen();
+        return;
+      }
+    }
+  }
+  if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
+    class X {
+      constructor() {
+        obj = closure_1(closure_1_3[19]);
+        result = obj.openGuildJoinServerScreen();
+        return;
+      }
+    }
+    const string = tmp(1126).intl.string;
+    class I {
+      constructor() {
+        hasConsentedResult = closure_1_8.hasConsented(closure_1_11.PERSONALIZATION);
+        someResult = !hasConsentedResult;
+        if (hasConsentedResult) {
+          tmp3 = globalThis;
+          _Object = Object;
+          tmp4 = closure_1_7;
+          values = Object.values(closure_1_7.getUserAgnosticState().apps);
+          someResult = values.some((lastScannedAt) => {
+            lastScannedAt = undefined;
+            if (lastScannedAt != null) {
+              lastScannedAt = lastScannedAt.lastScannedAt;
+            }
+            return null != lastScannedAt;
+          });
+        }
+        return someResult;
+      }
+    }
+    const tmp19 = closure_12(tmp(4886).Text, { variant: "heading-md/bold", color: "mobile-text-heading-primary", children: null });
+    cResult[10] = tmp19;
+    let obj3 = { variant: "heading-md/bold", color: "mobile-text-heading-primary", children: null };
+  } else {
+    class X {
+      constructor() {
+        obj = closure_1(closure_1_3[19]);
+        result = obj.openGuildJoinServerScreen();
+        return;
+      }
+    }
+  }
+  if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
+    class X {
+      constructor() {
+        obj = closure_1(closure_1_3[19]);
+        result = obj.openGuildJoinServerScreen();
+        return;
+      }
+    }
+    cResult[11] = obj6.string(tmp(1126).t.raDC7V);
+    class I {
+      constructor() {
+        hasConsentedResult = closure_1_8.hasConsented(closure_1_11.PERSONALIZATION);
+        someResult = !hasConsentedResult;
+        if (hasConsentedResult) {
+          tmp3 = globalThis;
+          _Object = Object;
+          tmp4 = closure_1_7;
+          values = Object.values(closure_1_7.getUserAgnosticState().apps);
+          someResult = values.some((lastScannedAt) => {
+            lastScannedAt = undefined;
+            if (lastScannedAt != null) {
+              lastScannedAt = lastScannedAt.lastScannedAt;
+            }
+            return null != lastScannedAt;
+          });
+        }
+        return someResult;
+      }
+    }
+    const stringResult = obj6.string(tmp(1126).t.raDC7V);
+  } else {
+    class X {
+      constructor() {
+        obj = closure_1(closure_1_3[19]);
+        result = obj.openGuildJoinServerScreen();
+        return;
+      }
+    }
+  }
+  if (cResult[12] !== tmp4.createDescription) {
+    class X {
+      constructor() {
+        obj = closure_1(closure_1_3[19]);
+        result = obj.openGuildJoinServerScreen();
+        return;
+      }
+    }
+    let obj4 = { variant: "text-sm/medium", color: "text-subtle", style: tmp4.createDescription, children: tmp20 };
+    const tmp23 = closure_12(tmp(4886).Text, obj4);
+    class I {
+      constructor() {
+        hasConsentedResult = closure_1_8.hasConsented(closure_1_11.PERSONALIZATION);
+        someResult = !hasConsentedResult;
+        if (hasConsentedResult) {
+          tmp3 = globalThis;
+          _Object = Object;
+          tmp4 = closure_1_7;
+          values = Object.values(closure_1_7.getUserAgnosticState().apps);
+          someResult = values.some((lastScannedAt) => {
+            lastScannedAt = undefined;
+            if (lastScannedAt != null) {
+              lastScannedAt = lastScannedAt.lastScannedAt;
+            }
+            return null != lastScannedAt;
+          });
+        }
+        return someResult;
+      }
+    }
+    cResult[12] = tmp4.createDescription;
+    cResult[13] = tmp23;
+  } else {
+    class X {
+      constructor() {
+        obj = closure_1(closure_1_3[19]);
+        result = obj.openGuildJoinServerScreen();
+        return;
+      }
+    }
+  }
+  if (cResult[14] === tmp4.templateCard) {
+    class X {
+      constructor() {
+        obj = closure_1(closure_1_3[19]);
+        result = obj.openGuildJoinServerScreen();
+        return;
+      }
+    }
+  }
+  const mapped = items.map((Icon) => {
+    const obj = { onPress, radius: 16, style: closure_0.templateCard, children: null };
+    items = [__initData(timestampProducer, { style: closure_0.templateIconWrapper, children: __initData(Icon.Icon, { width: 114, height: 64 }) }), ];
+    const obj3 = { children: null };
+    const obj4 = { variant: "text-md/bold", color: "mobile-text-heading-primary", style: closure_0.templateTitle, children: null };
+    const intl = util.intl;
+    obj4.children = intl.string(Icon.title);
+    const items1 = [__initData(Text_Text.Text, obj4), ];
+    const obj5 = { variant: "text-sm/medium", color: "text-subtle", children: null };
+    const intl2 = util.intl;
+    obj5.children = intl2.string(Icon.description);
+    items1[1] = __initData(Text_Text.Text, obj5);
+    obj3.children = items1;
+    items[1] = __initData2(timestampProducer, obj3);
+    obj.children = items;
+    return __initData2(Card.Card, obj, Icon.id);
+  });
+  cResult[14] = tmp4.templateCard;
+  cResult[15] = tmp4.templateIconWrapper;
+  cResult[16] = tmp4.templateTitle;
+  cResult[17] = mapped;
+  const tmpResult2 = require("MobileGameCommunitiesActionCreators");
+}) : ((style) => {
   let callback1;
   let callback2;
   const tmp = closure_14();
@@ -88,15 +382,15 @@ export default function GuildUpsellChannelList(style) {
     return items.slice(0, closure_9);
   }, items1);
   const callback = callback2.useCallback((guild_id, game_id) => {
-    memo(callback1[15]).dismissGuild(guild_id);
-    const obj = memo(callback1[15]);
-    data(callback1[16]).track(constants.GAME_COMMUNITY_MULTI_GUILD_UPSELL_CARD_DISMISSED, { game_id, guild_id });
+    memo(callback1[17]).dismissGuild(guild_id);
+    const obj = memo(callback1[17]);
+    data(callback1[18]).track(constants.GAME_COMMUNITY_MULTI_GUILD_UPSELL_CARD_DISMISSED, { game_id, guild_id });
   }, []);
   callback1 = callback2.useCallback(() => {
-    data(callback1[17]).openCreateGuildModal();
+    data(callback1[19]).openCreateGuildModal();
   }, []);
   callback2 = callback2.useCallback(() => {
-    const result = data(callback1[17]).openGuildJoinServerScreen();
+    const result = data(callback1[19]).openGuildJoinServerScreen();
   }, []);
   let items2 = [callback1, callback2, memo.length, tmp];
   const memo1 = callback2.useMemo(() => {
@@ -104,12 +398,12 @@ export default function GuildUpsellChannelList(style) {
     const obj2 = { variant: "heading-md/bold", color: "mobile-text-heading-primary", children: null };
     let intl = util.intl;
     obj2.children = intl.string(util.t["abaDI+"]);
-    items = [closure_2_12(Text_Text.Text, obj2), , , , ];
+    items = [__initData(Text_Text.Text, obj2), , , , ];
     let obj3 = { variant: "text-sm/medium", color: "text-subtle", style: closure_0.createDescription, children: null };
     let intl2 = util.intl;
     obj3.children = intl2.string(util.t.raDC7V);
-    items[1] = closure_2_12(Text_Text.Text, obj3);
-    items[2] = closure_2_12(hasOwnProperty, {
+    items[1] = __initData(Text_Text.Text, obj3);
+    items[2] = __initData(hasOwnProperty, {
       horizontal: true,
       showsHorizontalScrollIndicator: false,
       style: closure_0.templateScroll,
@@ -121,15 +415,15 @@ export default function GuildUpsellChannelList(style) {
         const obj4 = { variant: "text-md/bold", color: "mobile-text-heading-primary", style: closure_1_0.templateTitle, children: null };
         const intl = closure_0(callback1[9]).intl;
         obj4.children = intl.string(Icon.title);
-        const items1 = [closure_2_12(closure_0(callback1[18]).Text, obj4), ];
+        const items1 = [closure_2_12(closure_0(callback1[20]).Text, obj4), ];
         const obj5 = { variant: "text-sm/medium", color: "text-subtle", children: null };
         const intl2 = closure_0(callback1[9]).intl;
         obj5.children = intl2.string(Icon.description);
-        items1[1] = closure_2_12(closure_0(callback1[18]).Text, obj5);
+        items1[1] = closure_2_12(closure_0(callback1[20]).Text, obj5);
         obj3.children = items1;
         items[1] = closure_2_13(closure_2_6, obj3);
         obj.children = items;
-        return closure_2_13(closure_0(callback1[19]).Card, obj, Icon.id);
+        return closure_2_13(closure_0(callback1[21]).Card, obj, Icon.id);
       })
     });
     let obj5 = { style: closure_0.buttonGroup, children: null };
@@ -137,31 +431,31 @@ export default function GuildUpsellChannelList(style) {
     const intl3 = util.intl;
     obj6.text = intl3.string(util.t.B44MTm);
     obj6.onPress = callback1;
-    let items1 = [closure_2_12(components_Button_Button.Button, obj6), ];
+    let items1 = [__initData(components_Button_Button.Button, obj6), ];
     const obj7 = { variant: "secondary", size: "md", text: null, onPress: null, grow: true };
     const intl4 = util.intl;
     obj7.text = intl4.string(util.t.wKy7MA);
     obj7.onPress = callback2;
-    items1[1] = closure_2_12(components_Button_Button.Button, obj7);
+    items1[1] = __initData(components_Button_Button.Button, obj7);
     obj5.children = items1;
-    items[3] = map1(timestampProducer, obj5);
+    items[3] = __initData2(timestampProducer, obj5);
     let tmpResult = memo.length > 0;
     if (tmpResult) {
       const obj8 = { style: closure_0.joinSection, children: null };
       const obj9 = { variant: "heading-md/bold", color: "mobile-text-heading-primary", children: null };
       const intl5 = util.intl;
       obj9.children = intl5.string(util.t.rJRote);
-      const items2 = [closure_2_12(Text_Text.Text, obj9), ];
+      const items2 = [__initData(Text_Text.Text, obj9), ];
       const obj10 = { variant: "text-sm/medium", color: "text-subtle", style: closure_0.descriptionSpacing, children: null };
       const intl6 = util.intl;
       obj10.children = intl6.string(util.t.pJT2DK);
-      items2[1] = closure_2_12(Text_Text.Text, obj10);
+      items2[1] = __initData(Text_Text.Text, obj10);
       obj8.children = items2;
-      tmpResult = map1(timestampProducer, obj8);
+      tmpResult = __initData2(timestampProducer, obj8);
     }
     items[4] = tmpResult;
     obj.children = items;
-    return map1(timestampProducer, obj);
+    return __initData2(timestampProducer, obj);
   }, items2);
   let obj2 = require("MobileGameCommunitiesActionCreators");
   const youBarTotalHeight = require("useYouBarTotalHeight").useYouBarTotalHeight();
@@ -180,4 +474,4 @@ export default function GuildUpsellChannelList(style) {
   items5[1] = closure_12(closure_6, { style: tmp.listContainer, children: closure_12(require("OneColumnGuildUpsellList").OneColumnGuildUpsellList, { suggestedGuilds: memo, contentContainerStyle: memo2, cardAction: GameCommunityAddServerEntryExperiment.useConfig({ location: "GuildUpsellChannelList" }).cardAction, onDismiss: callback, subheader: memo1 }) });
   obj4.children = items5;
   return closure_13(closure_6, obj4);
-};
+});

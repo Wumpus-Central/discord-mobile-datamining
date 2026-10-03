@@ -1,6 +1,6 @@
-// === Module 564: BatchedStoreListener ===
+// === Module 574: BatchedStoreListener ===
 
-// Module 564 (BatchedStoreListener)
+// Module 574 (BatchedStoreListener)
 import flux_EmitterDefault from "flux/Emitter" /* 508 */;
 import size from "module_2" /* 2 */;
 

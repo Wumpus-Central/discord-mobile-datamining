@@ -1,8 +1,8 @@
-// === Module 12360: GuildPromptsStore ===
+// === Module 12445: GuildPromptsStore ===
 
-// Module 12360 (GuildPromptsStore)
+// Module 12445 (GuildPromptsStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
 
 const dependencyMap = {};
 const PersistedStore = initializeDefault.PersistedStore;

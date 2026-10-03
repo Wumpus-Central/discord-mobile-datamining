@@ -1,18 +1,18 @@
-// === Module 2100: ImpersonateStore ===
+// === Module 2105: ImpersonateStore ===
 
-// Module 2100 (ImpersonateStore)
+// Module 2105 (ImpersonateStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import FlagUtilsAll from "FlagUtils" /* 1385 */;
-import FunctionUtils from "FunctionUtils" /* 2019 */;
-import ImpersonateTypes from "ImpersonateTypes" /* 2106 */;
-import GuildRoleStore from "GuildRoleStore" /* 2101 */;
-import GuildStore from "GuildStore" /* 2066 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import FlagUtilsAll from "FlagUtils" /* 1390 */;
+import FunctionUtils from "FunctionUtils" /* 2026 */;
+import ImpersonateTypes from "ImpersonateTypes" /* 2111 */;
+import GuildRoleStore from "GuildRoleStore" /* 2106 */;
+import GuildStore from "GuildStore" /* 2074 */;
 
 require = fn;
-const GuildSettingsSections = fn(1074).GuildSettingsSections;
-let closure_7 = fn(1084).ChannelNotificationSettingsFlags;
+const GuildSettingsSections = fn(1085).GuildSettingsSections;
+let closure_7 = fn(1095).ChannelNotificationSettingsFlags;
 const dependencyMap = {};
 const Store = initializeDefault.Store;
 class ImpersonateStore extends Store {
@@ -191,7 +191,7 @@ const impersonateStore = new ImpersonateStore(DispatcherDefault, {
     if (null != guildId) {
       if (null != dependencyMap[guildId]) {
         if (null != dependencyMap[guildId]) {
-          if (tmp6.type === overrides(2106).ImpersonateType.NEW_MEMBER) {
+          if (tmp6.type === overrides(2111).ImpersonateType.NEW_MEMBER) {
             optInChannels = tmp6.optInChannels;
             if (optInChannels == null) {
               const _Set = Set;
@@ -271,7 +271,7 @@ const impersonateStore = new ImpersonateStore(DispatcherDefault, {
         }
         let tmp3 = null != flags;
         if (tmp3) {
-          tmp3 = tmp2.type === guildId(2106).ImpersonateType.NEW_MEMBER;
+          tmp3 = tmp2.type === guildId(2111).ImpersonateType.NEW_MEMBER;
         }
         flag = true;
         if (tmp3) {

@@ -1,6 +1,6 @@
-// === Module 4680: GraphicTypes ===
+// === Module 4695: GraphicTypes ===
 
-// Module 4680 (GraphicTypes)
+// Module 4695 (GraphicTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/Graphic/GraphicTypes.native.tsx");
@@ -8,6 +8,6 @@ const result = size.fileFinishedImporting("../discord_common/js/packages/design/
 export const isImage = function isImage(type) {
   return "image" === type.type;
 };
-export const isRive = function isRive(merged) {
-  return "rive" === merged.type;
+export const isRive = function isRive(cResult) {
+  return "rive" === cResult.type;
 };

@@ -1,16 +1,16 @@
-// === Module 5362: CaptchaStore ===
+// === Module 5408: CaptchaStore ===
 
-// Module 5362 (CaptchaStore)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1248 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 5363 */;
-import MetricEvents from "MetricEvents" /* 5368 */;
+// Module 5408 (CaptchaStore)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1259 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 5409 */;
+import MetricEvents from "MetricEvents" /* 5414 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const module_560 = fn(560);
-let obj3 = module_560.create(() => ({ captchaServeVolume: {} }));
+const module_570 = fn(570);
+let obj3 = module_570.create(() => ({ captchaServeVolume: {} }));
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/captcha/CaptchaStore.tsx");
 

@@ -1,21 +1,21 @@
-// === Module 9304: VideoBackgroundStore ===
+// === Module 9313: VideoBackgroundStore ===
 
-// Module 9304 (VideoBackgroundStore)
+// Module 9313 (VideoBackgroundStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4900 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1184 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1220 */;
-import MediaEngineStore from "MediaEngineStore" /* 1993 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
-import UserStore from "UserStore" /* 1372 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4945 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1195 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
+import MediaEngineStore from "MediaEngineStore" /* 1999 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
+import UserStore from "UserStore" /* 1377 */;
 
 require = fn;
 function handleSyncedStoresUpdate() {
   if (voiceChannelId !== SelectedChannelStore.getVoiceChannelId()) {
     c9 = false;
-    c11 = false;
     c12 = false;
+    c13 = false;
   }
   let flag2 = false;
   if (null != UserStore.getCurrentUser()) {
@@ -36,9 +36,10 @@ function handleSyncedStoresUpdate() {
 let c7 = false;
 let c8 = null;
 let c9 = false;
-let closure_10 = {};
-let c11 = false;
+let c10 = false;
+let closure_11 = {};
 let c12 = false;
+let c13 = false;
 const Store = initializeDefault.Store;
 class VideoBackgroundStore extends Store {
 }
@@ -50,7 +51,7 @@ prototype["initialize"] = function initialize() {
 };
 Object.defineProperty(prototype, "videoFilterAssets", {
   get: function videoFilterAssets() {
-    return closure_10;
+    return closure_11;
   },
   set: undefined
 });
@@ -66,15 +67,21 @@ Object.defineProperty(prototype, "hasUsedBackgroundInCall", {
   },
   set: undefined
 });
+Object.defineProperty(prototype, "liveBackgroundEnabled", {
+  get: function liveBackgroundEnabled() {
+    return c10;
+  },
+  set: undefined
+});
 Object.defineProperty(prototype, "videoBackgroundUnavailable", {
   get: function videoBackgroundUnavailable() {
-    return c11;
+    return c12;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "videoBackgroundPreviewUnavailable", {
   get: function videoBackgroundPreviewUnavailable() {
-    return c12;
+    return c13;
   },
   set: undefined
 });
@@ -87,19 +94,19 @@ const videoBackgroundStore = new VideoBackgroundStore(DispatcherDefault, {
       obj[id.id] = id;
       return id;
     });
-    closure_10 = obj;
+    closure_11 = obj;
   },
   VIDEO_FILTER_ASSET_UPLOAD_SUCCESS: function handleAddBackground(videoFilterAsset) {
     videoFilterAsset = videoFilterAsset.videoFilterAsset;
     const obj = {};
-    const merged = Object.assign(closure_10);
+    const merged = Object.assign(closure_11);
     obj[videoFilterAsset.id] = videoFilterAsset;
-    closure_10 = obj;
+    closure_11 = obj;
   },
   VIDEO_FILTER_ASSET_DELETE_SUCCESS: function handleRemoveBackground(videoFilterAsset) {
     videoFilterAsset = videoFilterAsset.videoFilterAsset;
-    const merged = Object.assign(closure_10);
-    closure_10 = {};
+    const merged = Object.assign(closure_11);
+    closure_11 = {};
     delete tmp2[tmp];
   },
   VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION: function handleSaveLastUsedBackgroundOption(backgroundOption) {
@@ -126,26 +133,34 @@ const videoBackgroundStore = new VideoBackgroundStore(DispatcherDefault, {
     settings = settings.settings;
     if (BaseConnectionEvent.FilterSettingsKey.CAMERA_BACKGROUND_LIVE in settings) {
       c7 = true;
-      c11 = false;
+      c12 = false;
+      const tmp3 = settings[BaseConnectionEvent.FilterSettingsKey.CAMERA_BACKGROUND_LIVE];
+      let graph;
+      if (tmp3 != null) {
+        graph = tmp3.graph;
+      }
+      c10 = graph !== BaseConnectionEvent.FilterSettingsGraph.NONE;
     }
     if (BaseConnectionEvent.FilterSettingsKey.CAMERA_BACKGROUND_PREVIEW in settings) {
-      c12 = false;
+      c13 = false;
     }
   },
   MEDIA_ENGINE_VIDEO_FILTER_ERROR: function handleVideoFilterError(target) {
     if ("live" === target.target) {
-      c11 = true;
-    } else {
       c12 = true;
+      c10 = false;
+    } else {
+      c13 = true;
     }
   },
   LOGOUT: function handleLogout() {
     c7 = false;
     c9 = false;
     c8 = null;
-    closure_10 = {};
-    c11 = false;
+    closure_11 = {};
     c12 = false;
+    c13 = false;
+    c10 = false;
   }
 });
 const size = fn(2);

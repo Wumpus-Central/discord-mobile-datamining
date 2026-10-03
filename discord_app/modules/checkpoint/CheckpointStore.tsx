@@ -1,8 +1,8 @@
-// === Module 15459: CheckpointStore ===
+// === Module 15520: CheckpointStore ===
 
-// Module 15459 (CheckpointStore)
+// Module 15520 (CheckpointStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
 
 let obj = { INIT: 0, [0]: "INIT", FETCHING: 1, [1]: "FETCHING", SUCCESS: 2, [2]: "SUCCESS", ERROR: 3, [3]: "ERROR" };
 const obj2 = { isMuted: false };

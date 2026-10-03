@@ -1,15 +1,15 @@
-// === Module 9011: ExternalStreamingStore ===
+// === Module 11120: ExternalStreamingStore ===
 
-// Module 9011 (ExternalStreamingStore)
+// Module 11120 (ExternalStreamingStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
-import DurationsDefault from "Durations" /* 1091 */;
-import HTTPUtils from "HTTPUtils" /* 1271 */;
-import _modDef1331 from "module_1331" /* 1331 */;
-import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 5904 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
+import DurationsDefault from "Durations" /* 1102 */;
+import HTTPUtils from "HTTPUtils" /* 1282 */;
+import _modDef1342 from "module_1342" /* 1342 */;
+import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 6677 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5779 */;
-import StreamerModeStore from "StreamerModeStore" /* 4708 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5440 */;
+import StreamerModeStore from "StreamerModeStore" /* 4723 */;
 
 require = fn;
 function makeTwitchRequest(arg0, query, arg2) {
@@ -21,7 +21,7 @@ let closure_16 = async function _getTwitchGame() {
   closure_3 = tmp2;
   closure_2 = tmp3;
   closure_130_0 = closure_0;
-  if (null != value[closure_0]) {
+  if (null != state[closure_0]) {
     return tmp26;
   }
   await makeTwitchRequest("/games", { id: tmp23 }, tmp24);
@@ -41,7 +41,7 @@ function streamerModeUpdate() {
     obj3.stop();
   }
 }
-const PlatformTypes = fn(1074).PlatformTypes;
+const PlatformTypes = fn(1085).PlatformTypes;
 const MINUTE = DurationsDefault.Millis.MINUTE;
 let closure_8 = 5 * DurationsDefault.Millis.MINUTE;
 const re9 = /live_user_(.*)-\{width\}/;
@@ -98,7 +98,7 @@ prototype["_checkTwitch"] = function _checkTwitch(type) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -291,7 +291,7 @@ prototype["_checkYouTube"] = function _checkYouTube(type) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -499,7 +499,7 @@ prototype2["getStream"] = function getStream() {
 ExternalStreamingStore.displayName = "ExternalStreamingStore";
 const externalStreamingStore = new ExternalStreamingStore(DispatcherDefault, {
   STREAMING_UPDATE: function streamUpdate(stream) {
-    if (_modDef1331(stream.stream, stream)) {
+    if (_modDef1342(stream.stream, stream)) {
       return false;
     } else {
       stream = stream.stream;

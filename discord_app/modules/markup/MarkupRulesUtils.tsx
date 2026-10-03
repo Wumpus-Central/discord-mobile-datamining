@@ -1,6 +1,6 @@
-// === Module 7724: MarkupRulesUtils ===
+// === Module 7768: MarkupRulesUtils ===
 
-// Module 7724 (MarkupRulesUtils)
+// Module 7768 (MarkupRulesUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/markup/MarkupRulesUtils.tsx");

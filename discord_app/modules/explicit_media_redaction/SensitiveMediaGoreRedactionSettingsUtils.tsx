@@ -1,12 +1,12 @@
-// === Module 6906: SensitiveMediaGoreRedactionSettingsUtils ===
+// === Module 6804: SensitiveMediaGoreRedactionSettingsUtils ===
 
-// Module 6906 (SensitiveMediaGoreRedactionSettingsUtils)
-import preloaded_user_settings from "preloaded_user_settings" /* 1186 */;
-import UserSettings from "UserSettings" /* 2021 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5921 */;
-import SettingsDefaultFeature from "SettingsDefaultFeature" /* 6904 */;
+// Module 6804 (SensitiveMediaGoreRedactionSettingsUtils)
+import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
+import UserSettings from "UserSettings" /* 2028 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5580 */;
+import SettingsDefaultFeature from "SettingsDefaultFeature" /* 6802 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1372 */;
+import UserStore from "UserStore" /* 1377 */;
 
 require = fn;
 function resolveGoreSettingWithDefaults(isFriend) {
@@ -75,12 +75,9 @@ function resolveGoreSettingWithDefaults(isFriend) {
   }
   obj = RegionalFeatureConfigUtils;
 }
-const HelpdeskArticles = fn(1074).HelpdeskArticles;
-const size = fn(2);
-const result = size.fileFinishedImporting("modules/explicit_media_redaction/SensitiveMediaGoreRedactionSettingsUtils.tsx");
-
-export { resolveGoreSettingWithDefaults };
-export const resolveGoreSettingWithDefaultsForTeen = function resolveGoreSettingWithDefaultsForTeen(isDm) {
+const HelpdeskArticles = fn(1085).HelpdeskArticles;
+const ReactCompilerGating = fn(558);
+function resolveGoreSettingWithDefaultsForTeen(isDm) {
   let flag = isDm.isDm;
   if (flag === undefined) {
     flag = false;
@@ -97,8 +94,8 @@ export const resolveGoreSettingWithDefaultsForTeen = function resolveGoreSetting
   }
   const ExplicitContentRedaction = preloaded_user_settings.ExplicitContentRedaction;
   BLUR = flag ? ExplicitContentRedaction.BLOCK : ExplicitContentRedaction.BLUR;
-};
-export const getGoreContentSettingOrDefault = function getGoreContentSettingOrDefault(arg0) {
+}
+function getGoreContentSettingOrDefault(arg0) {
   let setting = arg0;
   if (arg0 == null) {
     const GoreContentSettings = UserSettings.GoreContentSettings;
@@ -120,7 +117,13 @@ export const getGoreContentSettingOrDefault = function getGoreContentSettingOrDe
   }
   obj.goreContentFriendDm = resolveGoreSettingWithDefaults({ setting: goreContentFriendDm, isDm: true, isFriend: true });
   return obj;
-};
+}
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/explicit_media_redaction/SensitiveMediaGoreRedactionSettingsUtils.tsx");
+
+export { resolveGoreSettingWithDefaults };
+export { resolveGoreSettingWithDefaultsForTeen };
+export { getGoreContentSettingOrDefault };
 export const updateGoreContentSetting = function updateGoreContentSetting(arg0) {
   const GoreContentSettings = UserSettings.GoreContentSettings;
   const setting = GoreContentSettings.getSetting();
@@ -145,6 +148,4 @@ export const updateGoreContentSetting = function updateGoreContentSetting(arg0) 
   GoreContentSettings2.updateSetting({});
   const obj2 = {};
 };
-export const useSensitiveContentFilterHelpArticle = function useSensitiveContentFilterHelpArticle() {
-  return noop.useMemo(() => constants.EXPLICIT_MEDIA_REDACTION, []);
-};
+export const useSensitiveContentFilterHelpArticle = ReactCompilerGating.isReactCompilerEnabled() ? (() => HelpdeskArticles.EXPLICIT_MEDIA_REDACTION) : (() => noop.useMemo(() => constants.EXPLICIT_MEDIA_REDACTION, []));

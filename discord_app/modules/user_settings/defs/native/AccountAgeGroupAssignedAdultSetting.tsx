@@ -1,12 +1,12 @@
-// === Module 14500: AccountAgeGroupAssignedAdultSetting ===
+// === Module 14535: AccountAgeGroupAssignedAdultSetting ===
 
-// Module 14500 (AccountAgeGroupAssignedAdultSetting)
-import Constants from "Constants" /* 1074 */;
-import util from "util" /* 1115 */;
-import _modDef3038 from "module_3038" /* 3038 */;
-import SettingsConstants from "SettingsConstants" /* 7590 */;
-import AgeGroupScreenRowProps from "AgeGroupScreenRowProps" /* 14501 */;
-import SettingBuilders from "SettingBuilders" /* 11215 */;
+// Module 14535 (AccountAgeGroupAssignedAdultSetting)
+import Constants from "Constants" /* 1085 */;
+import util from "util" /* 1126 */;
+import _modDef3045 from "module_3045" /* 3045 */;
+import SettingsConstants from "SettingsConstants" /* 7634 */;
+import AgeGroupScreenRowProps from "AgeGroupScreenRowProps" /* 14536 */;
+import SettingBuilders from "SettingBuilders" /* 11129 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -20,7 +20,7 @@ const route = SettingBuilders.createRoute({
   useTrailing() {
     const intl = util.intl;
     const intl2 = util.intl;
-    return "" + intl.string(util.t.XxRj7f) + " \u2022 " + intl2.string(_modDef3038.FTawSP);
+    return "" + intl.string(util.t.XxRj7f) + " \u2022 " + intl2.string(_modDef3045.FTawSP);
   },
   usePredicate: AgeGroupScreenRowProps.useShowAssignedAdultAgeGroupRow,
   screen: {

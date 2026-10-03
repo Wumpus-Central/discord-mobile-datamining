@@ -1,8 +1,8 @@
-// === Module 5032: GuildOnboardingHomeSettingsStore ===
+// === Module 5077: GuildOnboardingHomeSettingsStore ===
 
-// Module 5032 (GuildOnboardingHomeSettingsStore)
+// Module 5077 (GuildOnboardingHomeSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
-import DispatcherDefault from "Dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 584 */;
 
 function handleSettingsLoadSuccess(arg0) {
   ({ homeSettings, guildId } = arg0);
@@ -41,27 +41,27 @@ prototype["getSettings"] = function getSettings(arg0) {
   }
   return tmp;
 };
-prototype["getNewMemberActions"] = function getNewMemberActions(guildId) {
+prototype["getNewMemberActions"] = function getNewMemberActions(id) {
   let tmp = null;
   let tmp2 = null;
-  if (null != guildId) {
+  if (null != id) {
     const self = this;
-    const settings = this.getSettings(guildId);
+    const settings = this.getSettings(id);
     let newMemberActions;
     if (settings != tmp) {
       newMemberActions = settings.newMemberActions;
     }
     tmp2 = null;
     if (tmp != newMemberActions) {
-      if (tmp == dependencyMap2[guildId]) {
+      if (tmp == dependencyMap2[id]) {
         let newMemberActions1;
-        if (dependencyMap[guildId] != tmp) {
+        if (dependencyMap[id] != tmp) {
           newMemberActions1 = tmp8.newMemberActions;
         }
         tmp = null;
         if (!tmp10) {
-          dependencyMap2[guildId] = newMemberActions1;
-          tmp = dependencyMap2[guildId];
+          dependencyMap2[id] = newMemberActions1;
+          tmp = dependencyMap2[id];
         }
         tmp10 = tmp == newMemberActions1;
       }

@@ -1,16 +1,16 @@
-// === Module 7329: GuildProfileUtils ===
+// === Module 7227: GuildProfileUtils ===
 
-// Module 7329 (GuildProfileUtils)
-import Constants from "Constants" /* 1074 */;
-import ChannelRecord from "ChannelRecord" /* 2048 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 2058 */;
+// Module 7227 (GuildProfileUtils)
+import Constants from "Constants" /* 1085 */;
+import ChannelRecord from "ChannelRecord" /* 2055 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 2066 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = ChannelRecord.createChannelRecordFromInvite;
 const GuildFeatures = Constants.GuildFeatures;
 const result = size.fileFinishedImporting("modules/guild_profile/GuildProfileUtils.tsx");
 
-export const getEstablishedDate = function getEstablishedDate(tmpResult4, locale) {
+export const getEstablishedDate = function getEstablishedDate(tmpResult4, stateFromStores) {
   if (null != tmpResult4) {
     if ("" !== tmpResult4) {
       const _Date = Date;
@@ -21,7 +21,7 @@ export const getEstablishedDate = function getEstablishedDate(tmpResult4, locale
         const _isNaN = isNaN;
         toLocaleDateStringResult = null;
         if (!isNaN(date.getTime())) {
-          toLocaleDateStringResult = date.toLocaleDateString(locale, { year: "numeric", month: "short" });
+          toLocaleDateStringResult = date.toLocaleDateString(stateFromStores, { year: "numeric", month: "short" });
         }
       }
       return toLocaleDateStringResult;

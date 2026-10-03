@@ -1,29 +1,29 @@
-// === Module 6824: getGuildTransitionRoute ===
+// === Module 6717: getGuildTransitionRoute ===
 
-// Module 6824 (getGuildTransitionRoute)
-import FavoritesUtils from "FavoritesUtils" /* 2069 */;
-import VibegrationsUtils from "VibegrationsUtils" /* 5554 */;
-import OnboardingHomeUtils from "OnboardingHomeUtils" /* 6830 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 6834 */;
-import FavoriteStore from "FavoriteStore" /* 2047 */;
-import GuildOnboardingStore from "GuildOnboardingStore" /* 6703 */;
-import VibegrationsBuilderRouteStore from "VibegrationsBuilderRouteStore" /* 6825 */;
-import ChannelStore from "ChannelStore" /* 2044 */;
-import GuildChannelStore from "GuildChannelStore" /* 4496 */;
-import GuildStore from "GuildStore" /* 2066 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 2098 */;
-import PrivateChannelSortStore from "PrivateChannelSortStore" /* 6826 */;
+// Module 6717 (getGuildTransitionRoute)
+import FavoritesUtils from "FavoritesUtils" /* 2077 */;
+import OnboardingHomeUtils from "OnboardingHomeUtils" /* 6723 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 6727 */;
+import VibegrationsUtils from "VibegrationsUtils" /* 6746 */;
+import FavoriteStore from "FavoriteStore" /* 2054 */;
+import GuildOnboardingStore from "GuildOnboardingStore" /* 6591 */;
+import VibegrationsBuilderRouteStore from "VibegrationsBuilderRouteStore" /* 6718 */;
+import ChannelStore from "ChannelStore" /* 2051 */;
+import GuildChannelStore from "GuildChannelStore" /* 4507 */;
+import GuildStore from "GuildStore" /* 2074 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
+import PrivateChannelSortStore from "PrivateChannelSortStore" /* 6719 */;
 
 require = fn;
-const ME = fn(1074).ME;
-const StaticChannelRoute = fn(2051).StaticChannelRoute;
+const ME = fn(1085).ME;
+const StaticChannelRoute = fn(2058).StaticChannelRoute;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/routing/getGuildTransitionRoute.tsx");
 
 export const getGuildTransitionRoute = function getGuildTransitionRoute(guildId) {
   const lastProjectId = VibegrationsBuilderRouteStore.getLastProjectId(guildId);
   if (null != lastProjectId) {
-    const guild = GuildStore.getGuild(guildId);
+    guild = GuildStore.getGuild(guildId);
     let result = null != guild;
     if (result) {
       result = VibegrationsUtils.canAccessVibegrations(guild, "getChannelIdForGuildTransition");
