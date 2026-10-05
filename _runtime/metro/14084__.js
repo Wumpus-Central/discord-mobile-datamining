@@ -1,14 +1,11 @@
 // === Module 14084: ? ===
 
 // Module 14084
+import _mod14068 from "module_14068" /* 14068 */;
 import _mod14085 from "module_14085" /* 14085 */;
 
+let closure_2 = _mod14068({}.hasOwnProperty);
 
-export default (obj) => {
-  if (typeof obj === "object") {
-    let tmp2 = null !== obj;
-  } else {
-    tmp2 = _mod14085(obj);
-  }
-  return tmp2;
-};
+export default Object.hasOwn || (function hasOwn(arg0, arg1) {
+  return closure_2(_mod14085(arg0), arg1);
+});

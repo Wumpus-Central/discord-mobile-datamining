@@ -1,14 +1,23 @@
 // === Module 14089: ? ===
 
 // Module 14089
-import _mod14070 from "module_14070" /* 14070 */;
-import _mod14090 from "module_14090" /* 14090 */;
+import _mod14061 from "module_14061" /* 14061 */;
+import _mod14087 from "module_14087" /* 14087 */;
 
 
 export default (arg0, arg1) => {
-  let tmp4;
-  if (!_mod14070(arg0[arg1])) {
-    tmp4 = _mod14090(tmp);
+  if (arguments.length < 2) {
+    const tmp7 = _mod14061[arg0];
+    let tmp8;
+    if (_mod14087(tmp7)) {
+      tmp8 = tmp7;
+    }
+    let tmp3 = tmp8;
+  } else {
+    tmp3 = _mod14061[arg0];
+    if (tmp3) {
+      tmp3 = _mod14061[arg0][arg1];
+    }
   }
-  return tmp4;
+  return tmp3;
 };

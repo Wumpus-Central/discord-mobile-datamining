@@ -1,17 +1,20 @@
 // === Module 14094: ? ===
 
 // Module 14094
-import _mod14063 from "module_14063" /* 14063 */;
-import element from "element" /* 14095 */;
-import getOwnPropertyDescriptor from "module_14062" /* 14062 */;
+import _mod14069 from "module_14069" /* 14069 */;
 
-let tmp2 = !getOwnPropertyDescriptor;
-if (!getOwnPropertyDescriptor) {
-  tmp2 = !_mod14063(() => 7 !== Object.defineProperty(element("div"), "a", {
-    get() {
-      return 7;
+if (_mod14069) {
+  let fn = call.bind(call);
+} else {
+  fn = () => {
+    const apply = call.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(call);
+    } else {
+      applyArgumentsResult = apply(call, arguments);
     }
-  }).a);
+    return applyArgumentsResult;
+  };
 }
 
-export default tmp2;
+export default fn;

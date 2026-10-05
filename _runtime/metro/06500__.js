@@ -59,7 +59,7 @@ class StackView {
     }
     tmp3Result = tmp3(self, constructResult);
     closure_0 = tmp3Result;
-    obj1 = { routes: [], previousState: "y", openingRouteKeys: 0.4, closingRouteKeys: null, replacingRouteKeys: "HOSTED_FIELDS_TOKENIZATION_FAIL_ON_DUPLICATE", descriptors: "This credit card already exists in the merchant's vault." };
+    obj1 = { routes: [], previousState: "y", openingRouteKeys: "button", closingRouteKeys: null, replacingRouteKeys: false, descriptors: null };
     obj1.openingRouteKeys = [];
     obj1.closingRouteKeys = [];
     obj1.replacingRouteKeys = [];

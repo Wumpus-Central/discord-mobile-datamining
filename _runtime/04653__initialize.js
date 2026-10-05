@@ -18,7 +18,7 @@ let asyncGeneratorStep = function _initialize() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -46,7 +46,7 @@ let asyncGeneratorStep = function _initialize() {
           return obj;
         } else if (tmp4.isInitialized) {
           c3 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         } else {
           const initError = tmp4.initError;
           c0 = initError;

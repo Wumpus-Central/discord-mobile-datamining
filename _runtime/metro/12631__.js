@@ -38,7 +38,7 @@ export function makeOfflineTransport(arg0) {
             const obj = { value, done: true };
             return obj;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -80,7 +80,7 @@ export function makeOfflineTransport(arg0) {
                 const promise = closure_129_7(closure_128_0, true);
               }
               c3 = 3;
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } catch (tmp18) {
             c3 = tmp;
@@ -114,7 +114,7 @@ export function makeOfflineTransport(arg0) {
               const obj = { value, done: true };
               return obj;
             } else {
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -156,7 +156,7 @@ export function makeOfflineTransport(arg0) {
                   const promise = closure_129_7(closure_128_0, true);
                 }
                 c3 = 3;
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp18) {
               c3 = tmp;
@@ -196,7 +196,7 @@ export function makeOfflineTransport(arg0) {
           let obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -223,7 +223,7 @@ export function makeOfflineTransport(arg0) {
               closure_130_3 = undefined;
               c6 = 1;
               c7 = 1;
-              return { value: "Reflect", done: true };
+              return { value: "Set", done: true };
             }
           } else if (1 === tmp6) {
             if (arg0 === 1) {
@@ -403,7 +403,7 @@ export function makeOfflineTransport(arg0) {
                 const obj = { value, done: true };
                 return obj;
               } else {
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -445,7 +445,7 @@ export function makeOfflineTransport(arg0) {
                     const promise = closure_129_7(closure_128_0, true);
                   }
                   c3 = 3;
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 }
               } catch (tmp18) {
                 c3 = tmp;
@@ -485,7 +485,7 @@ export function makeOfflineTransport(arg0) {
                     const obj = { value, done: true };
                     return obj;
                   } else {
-                    return { value: "IconComponent", done: "IconComponent" };
+                    return { value: "IconComponent", done: null };
                   }
                 } else {
                   try {
@@ -527,7 +527,7 @@ export function makeOfflineTransport(arg0) {
                         const promise = closure_129_7(closure_128_0, true);
                       }
                       c3 = 3;
-                      return { value: "IconComponent", done: "IconComponent" };
+                      return { value: "IconComponent", done: null };
                     }
                   } catch (tmp18) {
                     c3 = tmp;

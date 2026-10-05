@@ -1,7 +1,7 @@
 // === Module 13851: ? ===
 
 // Module 13851
-import _mod13843 from "module_13843" /* 13843 */;
+import _mod13845 from "module_13845" /* 13845 */;
 
 
-export default (arg0, arg1, arg2) => 0 === _mod13843(arg0, arg1, arg2);
+export default (arg0, arg1, arg2) => _mod13845(arg0, arg1, arg2) > 0;

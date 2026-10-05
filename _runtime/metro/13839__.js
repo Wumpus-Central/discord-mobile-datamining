@@ -1,7 +1,23 @@
 // === Module 13839: ? ===
 
 // Module 13839
-import _mod13829 from "module_13829" /* 13829 */;
+import _mod13831 from "module_13831" /* 13831 */;
 
 
-export default (arg0, arg1) => new _mod13829(arg0, arg1).major;
+export default (version, pre, major2, major2, major22) => {
+  let tmp = major22;
+  let tmp2 = major2;
+  if (typeof major2 === "string") {
+    tmp = major2;
+    tmp2 = major2;
+  }
+  try {
+    if (version instanceof _mod13831) {
+      version = version.version;
+    }
+    const tmp72 = new _mod13831(version, tmp3);
+    return tmp72.inc(pre, tmp2, tmp).version;
+  } catch (err) {
+    return null;
+  }
+};

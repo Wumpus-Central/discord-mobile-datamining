@@ -99,7 +99,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                   let obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 try {
@@ -121,7 +121,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                       closure_129_4 = undefined;
                       c3 = 1;
                       c4 = 1;
-                      return { value: "Reflect", done: true };
+                      return { value: "Set", done: true };
                     }
                   } else if (arg0 === 1) {
                     c4 = 3;
@@ -150,7 +150,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                       obj9.op = str(tmp2[2]).getSpanOperation(tmp2);
                       obj9.attributes = closure_129_1;
                       obj5.startSpanManual(obj9, (() => {
-                        closure_0 = closure_2(/* F154918 */ function() { ... });
+                        closure_0 = closure_2(/* F155223 */ function() { ... });
                         return () => { ... };
                       })());
                       let obj7 = str(tmp2[2]);
@@ -163,7 +163,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                     obj10.op = str(tmp2[2]).getSpanOperation(tmp2);
                     obj10.attributes = closure_129_1;
                     obj2.startSpan(obj10, (() => {
-                      closure_0 = closure_2(/* F154920 */ function() { ... });
+                      closure_0 = closure_2(/* F155225 */ function() { ... });
                       return () => { ... };
                     })());
                     let obj4 = str(tmp2[2]);
@@ -222,7 +222,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                                   let obj3 = { value, done: true };
                                   return obj3;
                                 } else {
-                                  return { value: "IconComponent", done: "IconComponent" };
+                                  return { value: "IconComponent", done: null };
                                 }
                               } else {
                                 try {
@@ -244,7 +244,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                                       closure_129_4 = undefined;
                                       c3 = 1;
                                       c4 = 1;
-                                      return { value: "Reflect", done: true };
+                                      return { value: "Set", done: true };
                                     }
                                   } else if (arg0 === 1) {
                                     c4 = 3;
@@ -328,7 +328,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                                             closure_0 = [...arguments];
                                             c3 = 0;
                                             c4 = 0;
-                                            const iter = (/* F149527 */ function*() { ... })();
+                                            const iter = (/* F149811 */ function*() { ... })();
                                             iter.next();
                                             return iter;
                                           });

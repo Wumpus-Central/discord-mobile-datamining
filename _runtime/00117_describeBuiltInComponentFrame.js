@@ -5903,7 +5903,7 @@ function updateSuspenseListComponent(child, pendingProps, current) {
           if ("together" === revealOrder) {
             memoizedState = pendingProps.memoizedState;
             if (null === memoizedState) {
-              pendingProps.memoizedState = { isBackwards: false, rendering: null, renderingStartTime: 0, last: null, tail: null, tailMode: "done", treeForkCount: false };
+              pendingProps.memoizedState = { isBackwards: false, rendering: null, renderingStartTime: 0, last: null, tail: null, tailMode: "duration", treeForkCount: false };
             } else {
               memoizedState.isBackwards = false;
               memoizedState.rendering = null;
@@ -16541,10 +16541,10 @@ __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.S = (arg0, obj) 
         tmp5 = tmp6;
       }
       c124 = tmp5;
-      { status: "pending", value: "Array", then: true }.then = function then(arg0) {
+      { status: "pending", value: "Array", then: "a" }.then = function then(arg0) {
         items.push(arg0);
       };
-      obj2 = { status: "pending", value: "Array", then: true };
+      obj2 = { status: "pending", value: "Array", then: "a" };
     }
     closure_123 = closure_123 + 1;
     obj.then(pingEngtangledActionScope, pingEngtangledActionScope);

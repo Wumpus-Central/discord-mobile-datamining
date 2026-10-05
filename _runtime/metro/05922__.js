@@ -34,7 +34,7 @@ let closure_3 = ["style", "source", "autoPlay", "duration", "textFiltersAndroid"
 get_ActivityIndicator = fn(17);
 ({ View: closure_8, processColor: closure_9 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-let obj = { source: "duration", progress: null, speed: true, loop: false, autoPlay: false, enableMergePathsAndroidForKitKatAndAbove: false, enableSafeModeAndroid: true, cacheComposition: false, useNativeLooping: "contain", resizeMode: null, colorFilters: [], textFiltersAndroid: [], textFiltersIOS: [] };
+let obj = { source: "emoji", progress: null, speed: true, loop: false, autoPlay: false, enableMergePathsAndroidForKitKatAndAbove: false, enableSafeModeAndroid: true, cacheComposition: false, useNativeLooping: "contain", resizeMode: null, colorFilters: [], textFiltersAndroid: [], textFiltersIOS: [] };
 class LottieView {
   constructor(arg0) {
     self = this;

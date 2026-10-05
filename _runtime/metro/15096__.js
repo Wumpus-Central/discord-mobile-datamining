@@ -4,4 +4,4 @@
 import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/avatars", width: 161, height: 160, scales: [1], hash: "539778d237b9fff9f8baff59e260a9fa", name: "breaddog_1", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/main_tabs_v2/native/images", width: 16, height: 16, scales: [1, 2, 3], hash: "feb0699dba8bf9a96f37b026eba6ef56", name: "arrow-sm-down", type: "png" });

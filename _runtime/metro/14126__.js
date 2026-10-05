@@ -1,9 +1,10 @@
 // === Module 14126: ? ===
 
 // Module 14126
-import _mod17 from "module_17" /* 17 */;
-import setupURLPolyfill_mod from "setupURLPolyfill" /* 14127 */;
+import _mod14104 from "module_14104" /* 14104 */;
+import _mod14105 from "module_14105" /* 14105 */;
 
-const Platform = _mod17.Platform;
-let setupURLPolyfill = setupURLPolyfill_mod;
-setupURLPolyfill = setupURLPolyfill.setupURLPolyfill();
+
+export default Object.keys || (function keys(arg0) {
+  return _mod14105(arg0, _mod14104);
+});

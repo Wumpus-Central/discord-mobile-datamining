@@ -1,14 +1,17 @@
 // === Module 14069: ? ===
 
 // Module 14069
-import _mod14070 from "module_14070" /* 14070 */;
+import _mod14065 from "module_14065" /* 14065 */;
 
 
-export default (arg0) => {
-  if (_mod14070(arg0)) {
-    const tmp4 = new TypeError("Can't call method on " + arg0);
-    throw tmp4;
-  } else {
-    return arg0;
+export default !_mod14065(() => {
+  const fn = () => {
+
+  };
+  const bindResult = fn.bind();
+  let hasOwnPropertyResult = typeof bindResult !== "function";
+  if (typeof bindResult === "function") {
+    hasOwnPropertyResult = bindResult.hasOwnProperty("prototype");
   }
-};
+  return hasOwnPropertyResult;
+});

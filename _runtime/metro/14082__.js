@@ -1,11 +1,13 @@
 // === Module 14082: ? ===
 
 // Module 14082
-import _mod14066 from "module_14066" /* 14066 */;
-import _mod14083 from "module_14083" /* 14083 */;
+import _mod14061 from "module_14061" /* 14061 */;
 
-let closure_2 = _mod14066({}.hasOwnProperty);
+const tmp = _mod14061.navigator && _mod14061.navigator.userAgent;
+let str = "";
+if (tmp) {
+  const _String = String;
+  str = String(tmp);
+}
 
-export default Object.hasOwn || (function hasOwn(arg0, arg1) {
-  return closure_2(_mod14083(arg0), arg1);
-});
+export default str;

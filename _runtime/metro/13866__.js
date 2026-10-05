@@ -1,95 +1,84 @@
 // === Module 13866: ? ===
 
 // Module 13866
-const require = globalThis.__r;
+import _mod13831 from "module_13831" /* 13831 */;
+import _mod13851 from "module_13851" /* 13851 */;
 
 
-export default (arg0, arg1, arg2, arg3) => {
-  let obj;
-  _require = arg3;
-  let tmp3 = new require("module_13829")(arg0, arg3);
-  const tmp4 = new require("module_13858")(arg1, arg3);
-  if (">" === arg2) {
-    dependencyMap = tmp(13849);
-    let tmpResult = tmp(13854);
-    const tmpResult3 = tmp(13850);
-    closure_2 = tmpResult3;
-    let str3 = ">=";
-    let str = ">";
-    let tmpResult4 = tmpResult3;
+export default (arg0, arg1) => {
+  obj = new obj(13860)(arg0, arg1);
+  const tmp3 = new obj(13831)("0.0.0");
+  if (obj.test(tmp3)) {
+    return tmp3;
   } else {
-    str = "<";
-    if ("<" === arg2) {
-      dependencyMap = tmp(13850);
-      tmpResult = tmp(13853);
-      tmpResult4 = tmp(13849);
-      closure_2 = tmpResult4;
-      str3 = "<=";
+    const tmp6 = new tmp(13831)("0.0.0-0");
+    if (obj.test(tmp6)) {
+      return tmp6;
     } else {
-      const _TypeError = TypeError;
-      const typeError = new TypeError("Must provide a hilo val of \"<\" or \">\"");
-      throw typeError;
-    }
-  }
-  if (require("module_13860")(tmp3, tmp4, arg3)) {
-    return false;
-  } else {
-    let num = 0;
-    let num3 = 0;
-    if (0 < tmp4.set.length) {
-      while (true) {
-        let arr = tmp4.set[num3];
-        _require = null;
-        dependencyMap = null;
-        let item = arr.forEach((semver) => {
-          let tmp = semver;
-          if (semver.semver === closure_0(semver[7]).ANY) {
-            tmp = new tmp2(tmp3[7])(">=0.0.0");
-          }
-          let tmp6 = closure_0;
-          if (!closure_0) {
-            tmp6 = tmp;
-          }
-          closure_0 = tmp6;
-          let tmp7 = semver;
-          if (!semver) {
-            tmp7 = tmp;
-          }
-          semver = tmp7;
-          if (dependencyMap(tmp.semver, closure_0.semver, require)) {
-            closure_0 = tmp;
-          } else if (React2(tmp.semver, semver.semver, require)) {
-            semver = tmp;
-          }
-          tmp2 = closure_0;
-          tmp3 = semver;
-        });
-        if (_require.operator !== str) {
-          if (_require.operator !== str3) {
-            if (!dependencyMap.operator) {
-              if (tmpResult(tmp3, dependencyMap.semver)) {
-                obj = { v: false };
+      let num = 0;
+      let num3 = 0;
+      let tmp9 = null;
+      let tmp10 = null;
+      if (0 < obj.set.length) {
+        do {
+          let arr = obj.set[num3];
+          obj = null;
+          let item = arr.forEach((semver) => {
+            obj = new _mod13831(semver.semver.version);
+            const operator = semver.operator;
+            if (">" === operator) {
+              if (0 === obj.prerelease.length) {
+                obj.patch = obj.patch + 1;
+              } else {
+                const prerelease = obj.prerelease;
+                prerelease.push(0);
+              }
+              obj.raw = obj.format();
+            } else {
+              if ("" !== operator) {
+                if (">=" !== operator) {
+                  if ("<" !== operator) {
+                    if ("<=" !== operator) {
+                      const _Error = Error;
+                      const _HermesInternal = HermesInternal;
+                      const error = new Error("Unexpected operation: " + semver.operator);
+                      throw error;
+                    }
+                  }
+                }
+              }
+              if (obj) {
+                !_mod13851(obj, obj);
               }
             }
-            let obj2;
-            if (dependencyMap.operator === str3) {
-              if (tmpResult4(tmp3, dependencyMap.semver)) {
-                obj2 = { v: false };
-              }
-            }
-            obj = obj2;
-          }
+          });
+          let tmp13 = !obj;
+          let tmp14 = tmp9;
           if (obj) {
-            break;
-          } else {
-            num3 = num + 1;
-            num = num3;
+            let tmp16 = tmp14;
+            if (tmp14) {
+              tmp16 = !obj(13851)(tmp14, obj);
+            }
+            tmp13 = tmp16;
           }
-        }
-        obj = { v: false };
+          if (!tmp13) {
+            tmp14 = obj;
+          }
+          num3 = num + 1;
+          tmp9 = tmp14;
+          tmp10 = tmp14;
+          num = num3;
+        } while (num3 < obj.set.length);
       }
-      return obj.v;
+      let tmp20 = null;
+      if (tmp10) {
+        tmp20 = null;
+        if (obj.test(tmp10)) {
+          tmp20 = tmp10;
+        }
+      }
+      return tmp20;
     }
-    return true;
   }
+  tmp = obj;
 };

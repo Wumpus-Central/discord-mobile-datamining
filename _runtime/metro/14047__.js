@@ -1,30 +1,56 @@
 // === Module 14047: ? ===
 
 // Module 14047
-const require = globalThis.__r;
+import _mod13964 from "module_13964" /* 13964 */;
+import currencies2 from "currencies" /* 14048 */;
 
-const require = arg1;
+require = arg1;
 const dependencyMap = arg6;
-
-export const getSupportedNumberingSystems = function getSupportedNumberingSystems(locale) {
-  _require = locale;
-  const numberingSystemNames = require("numberingSystemNames").numberingSystemNames;
-  return numberingSystemNames.filter((item) => (function isSupportedNumberingSystem(item, arg1) {
-    let str = arg1;
-    if (undefined === arg1) {
-      str = "en";
+function isSupportedCurrency(arr3, locale) {
+  let str = locale;
+  if (undefined === locale) {
+    str = "en";
+  }
+  try {
+    const obj = { style: "currency", currencyDisplay: "name", currency: arr3 };
+    const memoizedNumberFormat = _mod13964.createMemoizedNumberFormat(str, obj);
+    const str2 = memoizedNumberFormat.format(123);
+    if (str2.substring(0, 3) !== arr3) {
+      if (str3.substring(str3.length - 3) !== arr3) {
+        return true;
+      }
     }
-    try {
-      const concat = "".concat;
-      const combined = "".concat(str, "-u-nu-");
-      const memoizedNumberFormat = locale(closure_1_1[0]).createMemoizedNumberFormat(combined.concat(item));
-      if (memoizedNumberFormat.resolvedOptions().numberingSystem !== item) {
-        if ("123" === memoizedNumberFormat.format(123)) {
-          return false;
+    return false;
+  } catch (err) {
+  }
+}
+
+export const getSupportedCurrencies = function getSupportedCurrencies(locale) {
+  const items = [];
+  const currencies = currencies2.currencies;
+  for (let num = 0; num < currencies.length; num = num + 1) {
+    let arr3 = currencies[num];
+    if (3 === arr3.length) {
+      if (isSupportedCurrency(arr3, locale)) {
+        let arr = items.push(arr3);
+      }
+    } else if (5 === arr3.length) {
+      if ("~" === arr3[3]) {
+        let indexOf = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf;
+        let index = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf(arr3[2]);
+        let indexOf2 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf;
+        let index1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf(arr3[4]);
+        if (index <= index1) {
+          do {
+            let sum = arr3.substring(0, 2) + "ABCDEFGHIJKLMNOPQRSTUVWXYZ"[index];
+            if (isSupportedCurrency(sum, locale)) {
+              let arr2 = items.push(sum);
+            }
+            index = index + 1;
+          } while (index <= index1);
         }
       }
-      return true;
-    } catch (err) {
     }
-  })(item, closure_0));
+  }
+  return items;
 };

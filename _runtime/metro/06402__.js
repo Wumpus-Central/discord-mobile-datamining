@@ -53,7 +53,7 @@ let closure_10 = async function _runScrollBenchmark(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -130,7 +130,7 @@ let closure_10 = async function _runScrollBenchmark(arg0) {
         return obj;
       }
       c6 = 3;
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     } catch (tmp26) {
       c6 = tmp;
       throw tmp26;
@@ -185,7 +185,7 @@ export const useBenchmark = function useBenchmark(arg0, arg1) {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -234,7 +234,7 @@ export const useBenchmark = function useBenchmark(arg0, arg1) {
                   tmp5(closure_128_3);
                   closure_2_4(false);
                   c3 = 3;
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 }
                 tmp54 = closure_128_1;
               }

@@ -1,413 +1,47 @@
 // === Module 13829: ? ===
 
 // Module 13829
-import _createClass from "_createClass" /* 42 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _mod13830 from "module_13830" /* 13830 */;
+import _mod13831 from "module_13831" /* 13831 */;
+import _mod13833 from "module_13833" /* 13833 */;
+import _mod13835 from "module_13835" /* 13835 */;
+import _mod13836 from "module_13836" /* 13836 */;
+import _mod13837 from "module_13837" /* 13837 */;
+import _mod13838 from "module_13838" /* 13838 */;
+import _mod13839 from "module_13839" /* 13839 */;
+import _mod13840 from "module_13840" /* 13840 */;
+import _mod13841 from "module_13841" /* 13841 */;
+import _mod13842 from "module_13842" /* 13842 */;
+import _mod13843 from "module_13843" /* 13843 */;
+import prerelease from "prerelease" /* 13844 */;
+import _mod13845 from "module_13845" /* 13845 */;
+import _mod13846 from "module_13846" /* 13846 */;
+import _mod13847 from "module_13847" /* 13847 */;
+import _mod13848 from "module_13848" /* 13848 */;
+import _mod13849 from "module_13849" /* 13849 */;
+import _mod13850 from "module_13850" /* 13850 */;
+import _mod13851 from "module_13851" /* 13851 */;
+import _mod13852 from "module_13852" /* 13852 */;
+import _mod13853 from "module_13853" /* 13853 */;
+import _mod13854 from "module_13854" /* 13854 */;
+import _mod13855 from "module_13855" /* 13855 */;
+import _mod13856 from "module_13856" /* 13856 */;
+import _mod13857 from "module_13857" /* 13857 */;
+import _mod13858 from "module_13858" /* 13858 */;
+import Comparator from "Comparator" /* 13859 */;
+import _mod13860 from "module_13860" /* 13860 */;
+import _mod13862 from "module_13862" /* 13862 */;
+import _mod13863 from "module_13863" /* 13863 */;
+import _mod13864 from "module_13864" /* 13864 */;
+import _mod13865 from "module_13865" /* 13865 */;
+import _mod13866 from "module_13866" /* 13866 */;
+import _mod13867 from "module_13867" /* 13867 */;
+import _mod13868 from "module_13868" /* 13868 */;
+import _mod13869 from "module_13869" /* 13869 */;
+import _mod13870 from "module_13870" /* 13870 */;
+import _mod13871 from "module_13871" /* 13871 */;
+import _mod13872 from "module_13872" /* 13872 */;
+import simpleSubset from "simpleSubset" /* 13873 */;
 
-const SemVer = require;
-class SemVer {
-  constructor(arg0, arg1) {
-    self = this;
-    tmp = c2(this, SemVer);
-    tmp2 = closure_0;
-    tmp3 = closure_1;
-    tmp4 = closure_0(closure_1[2])(require);
-    if (global instanceof SemVer) {
-      if (global.loose === tmp4.loose) {
-        if (global.includePrerelease === tmp4.includePrerelease) {
-          return global;
-        }
-      }
-      version = global.version;
-    } else {
-      version = global;
-      if (typeof global !== "string") {
-        tmp33 = globalThis;
-        _TypeError6 = TypeError;
-        _HermesInternal3 = HermesInternal;
-        str11 = "\".";
-        str12 = "Invalid version. Must be a string. Got type \"";
-        tmp34 = new.target;
-        tmp35 = new.target;
-        typeError = new TypeError("Invalid version. Must be a string. Got type \"" + typeof global + "\".");
-        tmp37 = typeError;
-        throw typeError;
-      }
-    }
-    if (version.length > tmp2(tmp3[3]).MAX_LENGTH) {
-      tmp28 = globalThis;
-      _TypeError5 = TypeError;
-      _HermesInternal2 = HermesInternal;
-      str9 = " characters";
-      str10 = "version is longer than ";
-      tmp29 = new.target;
-      tmp30 = new.target;
-      typeError1 = new TypeError("version is longer than " + tmp2(tmp3[3]).MAX_LENGTH + " characters");
-      tmp32 = typeError1;
-      throw typeError1;
-    } else {
-      str13 = "SemVer";
-      tmp38 = tmp2(tmp3[4])("SemVer", version, tmp4);
-      self.options = tmp4;
-      self.loose = tmp4.loose;
-      self.includePrerelease = tmp4.includePrerelease;
-      str14 = version.trim();
-      safeRe = tmp2(tmp3[5]).safeRe;
-      t = tmp2(tmp3[5]).t;
-      if (tmp4.loose) {
-        tmp5 = safeRe[t.LOOSE];
-      } else {
-        tmp5 = safeRe[t.FULL];
-      }
-      match = str14.match(tmp5);
-      if (match) {
-        self.raw = version;
-        self.major = +match[1];
-        self.minor = +match[2];
-        self.patch = +match[3];
-        if (self.major <= tmp2(tmp3[3]).MAX_SAFE_INTEGER) {
-          num = 0;
-          if (self.major >= 0) {
-            if (self.minor <= tmp2(tmp3[3]).MAX_SAFE_INTEGER) {
-              if (self.minor >= 0) {
-                if (self.patch <= tmp2(tmp3[3]).MAX_SAFE_INTEGER) {
-                  if (self.patch >= 0) {
-                    if (match[4]) {
-                      str2 = match[4];
-                      str3 = ".";
-                      parts = str2.split(".");
-                      self.prerelease = parts.map((item) => {
-                        if (obj.test(item)) {
-                          if (0 <= +item) {
-                            if (tmp < SemVer(dependencyMap[3]).MAX_SAFE_INTEGER) {
-                              return tmp;
-                            }
-                          }
-                        }
-                        return item;
-                      });
-                    } else {
-                      self.prerelease = [];
-                    }
-                    if (match[5]) {
-                      str4 = match[5];
-                      str5 = ".";
-                      parts1 = str4.split(".");
-                    } else {
-                      parts1 = [];
-                    }
-                    self.build = parts1;
-                    formatResult = self.format();
-                    return;
-                  }
-                }
-                tmp13 = globalThis;
-                _TypeError2 = TypeError;
-                tmp14 = new.target;
-                str6 = "Invalid patch version";
-                tmp15 = new.target;
-                typeError2 = new TypeError("Invalid patch version");
-                tmp17 = typeError2;
-                throw typeError2;
-              }
-            }
-            tmp18 = globalThis;
-            _TypeError3 = TypeError;
-            tmp19 = new.target;
-            str7 = "Invalid minor version";
-            tmp20 = new.target;
-            typeError3 = new TypeError("Invalid minor version");
-            tmp22 = typeError3;
-            throw typeError3;
-          }
-        }
-        tmp23 = globalThis;
-        _TypeError4 = TypeError;
-        tmp24 = new.target;
-        str8 = "Invalid major version";
-        tmp25 = new.target;
-        typeError4 = new TypeError("Invalid major version");
-        tmp27 = typeError4;
-        throw typeError4;
-      } else {
-        tmp7 = globalThis;
-        _TypeError = TypeError;
-        _HermesInternal = HermesInternal;
-        str = "Invalid Version: ";
-        tmp8 = new.target;
-        tmp9 = new.target;
-        typeError5 = new TypeError("Invalid Version: " + version);
-        tmp11 = typeError5;
-        throw typeError5;
-      }
-    }
-  }
-}
-const entry = {
-  key: "format",
-  value: function format() {
-    const self = this;
-    this.version = "" + this.major + "." + this.minor + "." + this.patch;
-    if (this.prerelease.length) {
-      ({ prerelease, version } = self);
-      const _HermesInternal = HermesInternal;
-      self.version = version + "-" + prerelease.join(".");
-    }
-    return self.version;
-  }
-};
-let items = [
-  entry,
-  {
-    key: "toString",
-    value: function toString() {
-      return this.version;
-    }
-  },
-  {
-    key: "compare",
-    value: function compare(tmp2Result) {
-      const self = this;
-      SemVer(13832)("SemVer.compare", this.version, this.options, tmp2Result);
-      if (!(tmp2Result instanceof SemVer)) {
-        if (typeof tmp2Result === "string") {
-          if (tmp2Result === self.version) {
-            return 0;
-          }
-        }
-        tmp2Result = SemVer(tmp2Result, self.options);
-      }
-      let num2 = 0;
-      if (tmp2Result.version !== self.version) {
-        num2 = self.compareMain(tmp2Result) || self.comparePre(tmp2Result);
-        const tmp4 = self.compareMain(tmp2Result) || self.comparePre(tmp2Result);
-      }
-      return num2;
-    }
-  },
-  {
-    key: "compareMain",
-    value: function compareMain(tmp2Result) {
-      const self = this;
-      let tmpResult = tmp2Result;
-      if (!(tmp2Result instanceof SemVer)) {
-        tmpResult = SemVer(tmp2Result, self.options);
-      }
-      let compareIdentifiersResult = SemVer(13834).compareIdentifiers(self.major, tmpResult.major);
-      if (!compareIdentifiersResult) {
-        compareIdentifiersResult = SemVer(13834).compareIdentifiers(self.minor, tmpResult.minor);
-        const tmp3Result = SemVer(13834);
-      }
-      if (!compareIdentifiersResult) {
-        compareIdentifiersResult = SemVer(13834).compareIdentifiers(self.patch, tmpResult.patch);
-        const tmp3Result2 = SemVer(13834);
-      }
-      return compareIdentifiersResult;
-    }
-  },
-  {
-    key: "comparePre",
-    value: function comparePre(tmp2Result) {
-      const self = this;
-      let tmpResult = tmp2Result;
-      if (!(tmp2Result instanceof SemVer)) {
-        tmpResult = SemVer(tmp2Result, self.options);
-      }
-      if (self.prerelease.length) {
-        if (!tmpResult.prerelease.length) {
-          return -1;
-        }
-      }
-      if (!self.prerelease.length) {
-        if (tmpResult.prerelease.length) {
-          return 1;
-        }
-      }
-      let num3 = 0;
-      if (!self.prerelease.length) {
-        num3 = 0;
-        if (!tmpResult.prerelease.length) {
-          return 0;
-        }
-      }
-      while (true) {
-        let tmp3 = self.prerelease[num3];
-        let tmp4 = tmpResult.prerelease[num3];
-        let str = "prerelease compare";
-        let tmp10 = SemVer(13832)("prerelease compare", num3, tmp3, tmp4);
-        let tmp11 = undefined === tmp3;
-        if (tmp11) {
-          if (undefined === tmp4) {
-            break;
-          }
-        }
-        if (undefined === tmp4) {
-          return 1;
-        } else if (tmp11) {
-          return -1;
-        } else if (tmp3 !== tmp4) {
-          let tmp5Result = SemVer(13834);
-          return tmp5Result.compareIdentifiers(tmp3, tmp4);
-        } else {
-          num3 = num3 + 1;
-        }
-      }
-      return 0;
-    }
-  },
-  {
-    key: "compareBuild",
-    value: function compareBuild(dependencyMap) {
-      const self = this;
-      let tmpResult = dependencyMap;
-      if (!(dependencyMap instanceof SemVer)) {
-        tmpResult = SemVer(dependencyMap, self.options);
-      }
-      let num = 0;
-      while (true) {
-        let tmp3 = self.build[num];
-        let tmp4 = tmpResult.build[num];
-        let str = "build compare";
-        let tmp10 = SemVer(13832)("build compare", num, tmp3, tmp4);
-        let tmp11 = undefined === tmp3;
-        if (tmp11) {
-          if (undefined === tmp4) {
-            break;
-          }
-        }
-        if (undefined === tmp4) {
-          return 1;
-        } else if (tmp11) {
-          return -1;
-        } else if (tmp3 !== tmp4) {
-          let tmp5Result = SemVer(13834);
-          return tmp5Result.compareIdentifiers(tmp3, tmp4);
-        } else {
-          num = num + 1;
-        }
-      }
-      return 0;
-    }
-  },
-  {
-    key: "inc",
-    value: function inc(pre, major2, major2) {
-      const self = this;
-      if ("premajor" === pre) {
-        self.prerelease.length = 0;
-        self.patch = 0;
-        self.minor = 0;
-        self.major = self.major + 1;
-        self.inc("pre", major2, major2);
-      } else if ("preminor" === pre) {
-        self.prerelease.length = 0;
-        self.patch = 0;
-        self.minor = self.minor + 1;
-        self.inc("pre", major2, major2);
-      } else if ("prepatch" === pre) {
-        self.prerelease.length = 0;
-        self.inc("patch", major2, major2);
-        self.inc("pre", major2, major2);
-      } else if ("prerelease" === pre) {
-        if (0 === self.prerelease.length) {
-          self.inc("patch", major2, major2);
-        }
-        self.inc("pre", major2, major2);
-      } else if ("major" === pre) {
-        if (!tmp22) {
-          self.major = self.major + 1;
-        }
-        self.minor = 0;
-        self.patch = 0;
-        self.prerelease = [];
-        tmp22 = 0 === self.minor && 0 === self.patch && 0 !== self.prerelease.length;
-      } else if ("minor" === pre) {
-        if (!tmp21) {
-          self.minor = self.minor + 1;
-        }
-        self.patch = 0;
-        self.prerelease = [];
-        tmp21 = 0 === self.patch && 0 !== self.prerelease.length;
-      } else if ("patch" === pre) {
-        if (0 === self.prerelease.length) {
-          self.patch = self.patch + 1;
-        }
-        self.prerelease = [];
-      } else if ("pre" === pre) {
-        const _Number = Number;
-        let num2 = 0;
-        if (Number(major2)) {
-          num2 = 1;
-        }
-        if (!major2) {
-          if (false === major2) {
-            const _Error2 = Error;
-            const error = new Error("invalid increment argument: identifier is empty");
-            throw error;
-          }
-        }
-        if (0 === self.prerelease.length) {
-          const items = [num2];
-          self.prerelease = items;
-        } else {
-          let diff = self.prerelease.length - 1;
-          let tmp13 = diff;
-          if (diff >= 0) {
-            do {
-              let num3 = diff;
-              if (typeof self.prerelease[diff] === "number") {
-                let prerelease2 = self.prerelease;
-                prerelease2[diff] = prerelease2[diff] + 1;
-                num3 = -2;
-              }
-              diff = num3 - 1;
-              tmp13 = diff;
-            } while (diff >= 0);
-          }
-          if (-1 === tmp13) {
-            const prerelease = self.prerelease;
-            if (major2 === prerelease.join(".")) {
-              if (false === major2) {
-                const _Error3 = Error;
-                const error1 = new Error("invalid increment argument: identifier already exists");
-                throw error1;
-              }
-            }
-            const prerelease1 = self.prerelease;
-            prerelease1.push(num2);
-          }
-        }
-        if (major2) {
-          let items1 = [major2, num2];
-          if (false === major2) {
-            const items2 = [major2];
-            items1 = items2;
-          }
-          if (0 === obj.compareIdentifiers(self.prerelease[0], major2)) {
-            const _isNaN = isNaN;
-            if (isNaN(self.prerelease[1])) {
-              self.prerelease = items1;
-            }
-          } else {
-            self.prerelease = items1;
-          }
-          obj = SemVer(13834);
-        }
-      } else {
-        const _Error = Error;
-        const _HermesInternal = HermesInternal;
-        const error2 = new Error("invalid increment argument: " + pre);
-        throw error2;
-      }
-      self.raw = self.format();
-      if (self.build.length) {
-        const build = self.build;
-        const _HermesInternal2 = HermesInternal;
-        self.raw = self.raw + "+" + build.join(".");
-      }
-      return self;
-    }
-  }
-];
 
-export default _createClass(SemVer, items);
+export default { parse: _mod13830, valid: _mod13837, clean: _mod13838, inc: _mod13839, diff: _mod13840, major: _mod13841, minor: _mod13842, patch: _mod13843, prerelease, compare: _mod13845, rcompare: _mod13846, compareLoose: _mod13847, compareBuild: _mod13848, sort: _mod13849, rsort: _mod13850, gt: _mod13851, lt: _mod13852, eq: _mod13853, neq: _mod13854, gte: _mod13855, lte: _mod13856, cmp: _mod13857, coerce: _mod13858, Comparator, Range: _mod13860, satisfies: _mod13862, toComparators: _mod13863, maxSatisfying: _mod13864, minSatisfying: _mod13865, minVersion: _mod13866, validRange: _mod13867, outside: _mod13868, gtr: _mod13869, ltr: _mod13870, intersects: _mod13871, simplifyRange: _mod13872, subset: simpleSubset, SemVer: _mod13831, re: _mod13835.re, src: _mod13835.src, tokens: _mod13835.t, SEMVER_SPEC_VERSION: _mod13833.SEMVER_SPEC_VERSION, RELEASE_TYPES: _mod13833.RELEASE_TYPES, compareIdentifiers: _mod13836.compareIdentifiers, rcompareIdentifiers: _mod13836.rcompareIdentifiers };

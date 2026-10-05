@@ -1,8 +1,7 @@
 // === Module 17834: ? ===
 
 // Module 17834
-const re0 = /[a-z][A-Z]|[A-Z]{2}[a-z]|[0-9][a-zA-Z]|[a-zA-Z][0-9]|[^a-zA-Z0-9 ]/;
+import registerAsset from "module_1132" /* 1132 */;
 
-export default function hasUnicodeWord(arg0) {
-  return re0.test(arg0);
-};
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/guild_settings/community_settings", width: 375, height: 212, scales: [2, 3], hash: "032d875e012f721658a4a3ff0300b2d2", name: "intro_header_light", type: "png" });

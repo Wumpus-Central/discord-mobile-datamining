@@ -10,10 +10,10 @@ const require = globalThis.__r;
 ({ useEffect: c2, useLayoutEffect: c3 } = noop);
 function useResizeMode() {
   React2(() => {
-    let KeyboardController = cResult(keyboardHandlers[1]).KeyboardController;
-    KeyboardController.setInputMode(cResult(keyboardHandlers[2]).AndroidSoftInputModes.SOFT_INPUT_ADJUST_RESIZE);
+    let KeyboardController = handler(keyboardHandlers[1]).KeyboardController;
+    KeyboardController.setInputMode(handler(keyboardHandlers[2]).AndroidSoftInputModes.SOFT_INPUT_ADJUST_RESIZE);
     return () => {
-      const KeyboardController = closure_1_0(keyboardHandlers[1]).KeyboardController;
+      const KeyboardController = handler(keyboardHandlers[1]).KeyboardController;
       return KeyboardController.setDefaultMode();
     };
   }, []);
@@ -33,10 +33,10 @@ export { useResizeMode };
 export const useKeyboardAnimation = () => {
   if (typeof useResizeMode === "function") {
     React2(() => {
-      let KeyboardController = cResult(keyboardHandlers[1]).KeyboardController;
-      KeyboardController.setInputMode(cResult(keyboardHandlers[2]).AndroidSoftInputModes.SOFT_INPUT_ADJUST_RESIZE);
+      let KeyboardController = handler(keyboardHandlers[1]).KeyboardController;
+      KeyboardController.setInputMode(handler(keyboardHandlers[2]).AndroidSoftInputModes.SOFT_INPUT_ADJUST_RESIZE);
       return () => {
-        const KeyboardController = closure_1_0(keyboardHandlers[1]).KeyboardController;
+        const KeyboardController = handler(keyboardHandlers[1]).KeyboardController;
         return KeyboardController.setDefaultMode();
       };
     }, []);
@@ -48,10 +48,10 @@ export const useKeyboardAnimation = () => {
 export const useReanimatedKeyboardAnimation = () => {
   if (typeof useResizeMode === "function") {
     React2(() => {
-      let KeyboardController = cResult(keyboardHandlers[1]).KeyboardController;
-      KeyboardController.setInputMode(cResult(keyboardHandlers[2]).AndroidSoftInputModes.SOFT_INPUT_ADJUST_RESIZE);
+      let KeyboardController = handler(keyboardHandlers[1]).KeyboardController;
+      KeyboardController.setInputMode(handler(keyboardHandlers[2]).AndroidSoftInputModes.SOFT_INPUT_ADJUST_RESIZE);
       return () => {
-        const KeyboardController = closure_1_0(keyboardHandlers[1]).KeyboardController;
+        const KeyboardController = handler(keyboardHandlers[1]).KeyboardController;
         return KeyboardController.setDefaultMode();
       };
     }, []);
@@ -67,28 +67,28 @@ export const useGenericKeyboardHandler = function useGenericKeyboardHandler(hand
   const fn = function u(eventName) {
     eventName = eventName.eventName;
     if (eventName.endsWith("onKeyboardMoveStart")) {
-      const onStart = cResult.onStart;
+      const onStart = handler.onStart;
       if (onStart != null) {
         onStart(eventName);
       }
     }
     const eventName2 = eventName.eventName;
     if (eventName2.endsWith("onKeyboardMove")) {
-      const onMove = cResult.onMove;
+      const onMove = handler.onMove;
       if (onMove != null) {
         onMove(eventName);
       }
     }
     const eventName3 = eventName.eventName;
     if (eventName3.endsWith("onKeyboardMoveEnd")) {
-      const onEnd = cResult.onEnd;
+      const onEnd = handler.onEnd;
       if (onEnd != null) {
         onEnd(eventName);
       }
     }
     const eventName4 = eventName.eventName;
     if (eventName4.endsWith("onKeyboardMoveInteractive")) {
-      const onInteractive = cResult.onInteractive;
+      const onInteractive = handler.onInteractive;
       if (onInteractive != null) {
         onInteractive(eventName);
       }
@@ -103,13 +103,13 @@ export const useGenericKeyboardHandler = function useGenericKeyboardHandler(hand
     return () => closure_0();
   }, items10);
 };
-export const useKeyboardHandler = function useKeyboardHandler(cResult, items) {
+export const useKeyboardHandler = function useKeyboardHandler(handler, items) {
   if (typeof useResizeMode === "function") {
     React2(() => {
-      let KeyboardController = cResult(keyboardHandlers[1]).KeyboardController;
-      KeyboardController.setInputMode(cResult(keyboardHandlers[2]).AndroidSoftInputModes.SOFT_INPUT_ADJUST_RESIZE);
+      let KeyboardController = handler(keyboardHandlers[1]).KeyboardController;
+      KeyboardController.setInputMode(handler(keyboardHandlers[2]).AndroidSoftInputModes.SOFT_INPUT_ADJUST_RESIZE);
       return () => {
-        const KeyboardController = closure_1_0(keyboardHandlers[1]).KeyboardController;
+        const KeyboardController = handler(keyboardHandlers[1]).KeyboardController;
         return KeyboardController.setDefaultMode();
       };
     }, []);
@@ -118,38 +118,38 @@ export const useKeyboardHandler = function useKeyboardHandler(cResult, items) {
     const fn = function u(eventName) {
       eventName = eventName.eventName;
       if (eventName.endsWith("onKeyboardMoveStart")) {
-        const onStart = cResult.onStart;
+        const onStart = handler.onStart;
         if (onStart != null) {
           onStart(eventName);
         }
       }
       const eventName2 = eventName.eventName;
       if (eventName2.endsWith("onKeyboardMove")) {
-        const onMove = cResult.onMove;
+        const onMove = handler.onMove;
         if (onMove != null) {
           onMove(eventName);
         }
       }
       const eventName3 = eventName.eventName;
       if (eventName3.endsWith("onKeyboardMoveEnd")) {
-        const onEnd = cResult.onEnd;
+        const onEnd = handler.onEnd;
         if (onEnd != null) {
           onEnd(eventName);
         }
       }
       const eventName4 = eventName.eventName;
       if (eventName4.endsWith("onKeyboardMoveInteractive")) {
-        const onInteractive = cResult.onInteractive;
+        const onInteractive = handler.onInteractive;
         if (onInteractive != null) {
           onInteractive(eventName);
         }
       }
     };
-    const obj4 = { handler: cResult };
+    const obj4 = { handler };
     fn.__closure = obj4;
     fn.__workletHash = 7080794218426;
     fn.__initData = __initData;
-    closure_2 = cancelAnimation.useEvent(fn, ["onKeyboardMoveStart", "onKeyboardMove", "onKeyboardMoveEnd", "onKeyboardMoveInteractive"], obj2.useHandler(cResult, items).doDependenciesDiffer);
+    closure_2 = cancelAnimation.useEvent(fn, ["onKeyboardMoveStart", "onKeyboardMove", "onKeyboardMoveEnd", "onKeyboardMoveInteractive"], obj2.useHandler(handler, items).doDependenciesDiffer);
     React3(() => {
       keyboardHandlers.setKeyboardHandlers(closure_2);
       return () => closure_0();

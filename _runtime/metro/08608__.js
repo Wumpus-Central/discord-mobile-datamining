@@ -760,7 +760,7 @@ if (self2) {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 try {
@@ -793,7 +793,7 @@ if (self2) {
                       }
                     }
                     c2 = 3;
-                    return { value: "IconComponent", done: "IconComponent" };
+                    return { value: "IconComponent", done: null };
                   }
                 } catch (tmp13) {
                   c2 = tmp;
@@ -2701,7 +2701,7 @@ if (self2) {
               if (issues.issues.length) {
                 tmp2 = issues;
                 if (undefined === tmp) {
-                  const obj = { issues: [], value: "a" };
+                  const obj = { issues: [], value: "r" };
                   tmp2 = obj;
                 }
               }
@@ -2712,7 +2712,7 @@ if (self2) {
             if (runResult.issues.length) {
               nextPromise = runResult;
               if (undefined === tmp4) {
-                let obj = { issues: [], value: "a" };
+                let obj = { issues: [], value: "r" };
                 nextPromise = obj;
               }
             }
@@ -3302,7 +3302,7 @@ if (self2) {
               closure_3 = self;
               closure_2 = tmp2;
               closure_130_0 = closure_1;
-              return "Reflect";
+              return "Set";
             })();
             iter.next();
             return iter;

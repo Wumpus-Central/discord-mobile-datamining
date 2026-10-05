@@ -4,4 +4,4 @@
 import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 23, height: 29, scales: [1, 2], hash: "9b2d7ede4e6a66812c53739302a187c3", name: "ic_update_profile", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "9418ce18a45ac2ccf91c54293677973d", name: "ic_friend_wave_24px", type: "png" });

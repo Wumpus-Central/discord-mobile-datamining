@@ -2,25 +2,40 @@
 
 // Module 14185
 
-export default () => (arg0) => {
-  closure_0 = arg0;
+export default () => (startTimer) => {
+  closure_0 = startTimer;
+  startTimer = startTimer.startTimer;
   return {
     features: {
-      apiResponse(request, response, tmp4Result) {
-        let status = response;
-        if (response) {
-          status = response.status;
+      benchmark(title) {
+        const items = [];
+        closure_2 = items();
+        function step(title) {
+          let num = 0;
+          if (0 !== items.length) {
+            num = items[items.length - 1].time;
+          }
+          const tmp = closure_2();
+          items.push({ title, time: tmp, delta: tmp - num });
+          const obj = { title, time: tmp, delta: tmp - num };
         }
-        if (status) {
-          status = typeof response.status === "number";
+        items.push({ title, time: 0, delta: 0 });
+        function stop(title) {
+          if (typeof step === "function") {
+            let num = 0;
+            if (0 !== items.length) {
+              num = items[items.length - 1].time;
+            }
+            const tmp3 = closure_2();
+            const obj = { title, time: tmp3, delta: tmp3 - num };
+            items.push(obj);
+            const obj2 = { title, steps: items };
+            title.send("benchmark.report", obj2);
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
         }
-        if (status) {
-          status = response.status >= 200;
-        }
-        if (status) {
-          status = response.status <= 299;
-        }
-        closure_0.send("api.response", { request, response, duration: tmp4Result }, !status);
+        return { step, stop, last: stop };
       }
     }
   };

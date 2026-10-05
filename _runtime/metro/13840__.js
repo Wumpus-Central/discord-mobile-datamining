@@ -1,7 +1,56 @@
 // === Module 13840: ? ===
 
 // Module 13840
-import _mod13829 from "module_13829" /* 13829 */;
+import _mod13830 from "module_13830" /* 13830 */;
 
 
-export default (arg0, arg1) => new _mod13829(arg0, arg1).minor;
+export default (arg0, arg1) => {
+  const obj = _mod13830(arg0, null, true);
+  const tmp = _mod13830(arg1, null, true);
+  const compareResult = obj.compare(tmp);
+  if (0 === compareResult) {
+    return null;
+  } else {
+    let tmp3 = tmp;
+    if (compareResult > 0) {
+      tmp3 = obj;
+    }
+    let tmp4 = obj;
+    if (compareResult > 0) {
+      tmp4 = tmp;
+    }
+    if (tmp4.prerelease.length) {
+      if (!length) {
+        if (tmp4.patch) {
+          let str2 = "patch";
+          if (!tmp3.patch) {
+            let str3 = "major";
+            if (tmp3.minor) {
+              str3 = "minor";
+            }
+            str2 = str3;
+          }
+          let str = str2;
+        } else {
+          str = "major";
+        }
+        return str;
+      }
+    }
+    let str4 = "";
+    if (tmp3.prerelease.length) {
+      str4 = "pre";
+    }
+    if (obj.major !== tmp.major) {
+      let str5 = `${str4}major`;
+    } else if (obj.minor !== tmp.minor) {
+      str5 = `${str4}minor`;
+    } else {
+      str5 = "prerelease";
+      if (obj.patch !== tmp.patch) {
+        str5 = `${str4}patch`;
+      }
+    }
+    return str5;
+  }
+};

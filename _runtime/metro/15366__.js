@@ -1,13 +1,7 @@
 // === Module 15366: ? ===
 
 // Module 15366
-import _mod15371 from "module_15371" /* 15371 */;
-import module_7953 from "module_7953" /* 7953 */;
-
-const require = globalThis.__r;
+import registerAsset from "module_1132" /* 1132 */;
 
 
-export const getYoutubeMeta = require("module_15367").getYoutubeMeta;
-export const PLAYER_STATES = require("PLAY_MODE").PLAYER_STATES_NAMES;
-export const PLAYER_ERRORS = require("PLAY_MODE").PLAYER_ERROR_NAMES;
-export default module_7953(_mod15371).default;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "0182b31d51043571e01025e7bba542aa", name: "FileUpIcon", type: "png" });

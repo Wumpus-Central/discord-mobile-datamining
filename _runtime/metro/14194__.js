@@ -1,71 +1,52 @@
 // === Module 14194: ? ===
 
 // Module 14194
-import get_ActivityIndicator from "module_17" /* 17 */;
+import noop from "module_19" /* 19 */;
+import module_14176_mod from "module_14176" /* 14176 */;
+import _isNativeReflectConstruct_mod from "module_14195" /* 14195 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-function getDevMenu() {
-
+if (noop) {
+  const __esModule = noop.__esModule;
 }
+let module_14176 = module_14176_mod;
+if (!module_14176) {
+  let obj = { default: module_14176 };
+  let tmp4 = obj;
+} else {
+  tmp4 = module_14176;
+}
+module_14176 = tmp4;
+let _isNativeReflectConstruct = _isNativeReflectConstruct_mod;
+if (!_isNativeReflectConstruct) {
+  const obj2 = { default: _isNativeReflectConstruct };
+  let tmp6 = obj2;
+} else {
+  tmp6 = _isNativeReflectConstruct;
+}
+_isNativeReflectConstruct = tmp6;
 
-export default () => () => ({
-  onCommand(type) {
-    if ("devtools.open" === type.type) {
-      if ("devtools.open" === type.type) {
-        if (typeof closure_1_1 === "function") {
-          const obj = {
-            reload() {
-                    console.warn("DevMenu." + "reload" + "() not available in this environment");
-                  },
-            show() {
-                    console.warn("DevMenu." + "show" + "() not available in this environment");
-                  },
-            getConstants() {
-                    return {};
-                  },
-            debugRemotely() {
-                    console.warn("DevMenu." + "debugRemotely" + "() not available in this environment");
-                  },
-            setHotLoadingEnabled() {
-                    console.warn("DevMenu." + "setHotLoadingEnabled" + "() not available in this environment");
-                  },
-            setProfilingEnabled() {
-                    console.warn("DevMenu." + "setProfilingEnabled" + "() not available in this environment");
-                  }
-          };
-          const OS = Platform.Platform.OS;
-          obj.show();
-        } else {
-          throw new TypeError("Trying to call a non-function");
-        }
+export default () => () => {
+  closure_0 = closure_0.default();
+  return {
+    onCommand(type) {
+      if ("storybook" === type.type) {
+        closure_0.emit("storybook", type.payload);
       }
-      if ("devtools.reload" === type.type) {
-        if (typeof closure_1_1 === "function") {
-          const obj2 = {
-            reload() {
-                    console.warn("DevMenu." + "reload" + "() not available in this environment");
-                  },
-            show() {
-                    console.warn("DevMenu." + "show" + "() not available in this environment");
-                  },
-            getConstants() {
-                    return {};
-                  },
-            debugRemotely() {
-                    console.warn("DevMenu." + "debugRemotely" + "() not available in this environment");
-                  },
-            setHotLoadingEnabled() {
-                    console.warn("DevMenu." + "setHotLoadingEnabled" + "() not available in this environment");
-                  },
-            setProfilingEnabled() {
-                    console.warn("DevMenu." + "setProfilingEnabled" + "() not available in this environment");
-                  }
+    },
+    features: {
+      storybookSwitcher(arg0) {
+        closure_0 = arg0;
+        return (arg0) => {
+          closure_0 = arg0;
+          return function StorybookSwitcherContainer(arg0) {
+            const obj = { storybookUi: emitter, emitter, children: null };
+            const merged = Object.assign(arg0);
+            obj.children = <emitter />;
+            return <_isNativeReflectConstruct.default storybookUi={emitter} emitter={emitter}>{null}</_isNativeReflectConstruct.default>;
           };
-          const OS2 = Platform.Platform.OS;
-          obj2.reload();
-        } else {
-          throw new TypeError("Trying to call a non-function");
-        }
+        };
       }
     }
-  }
-});
+  };
+};

@@ -4,4 +4,4 @@
 import registerAsset from "module_1132" /* 1132 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "f5391dfd0b449071e14dba1ee723d353", name: "ChatCheckIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/parent_tools/images", width: 244, height: 119, scales: [1, 2, 3], hash: "fef47f26495822d9e37d120cd2650e58", name: "family_center_activity_banner_image_teen", type: "png" });

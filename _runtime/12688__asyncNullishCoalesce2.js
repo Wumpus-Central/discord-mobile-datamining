@@ -15,7 +15,7 @@ let closure_3 = async function _asyncNullishCoalesce2(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

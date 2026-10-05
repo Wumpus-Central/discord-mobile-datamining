@@ -18,7 +18,7 @@ let closure_0 = async function _fromURL(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -43,7 +43,7 @@ let closure_0 = async function _fromURL(arg0) {
           closure_131_2 = flag;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (arg0 === 1) {
         c6 = 3;
@@ -81,7 +81,7 @@ let asyncGeneratorStep = function _fromFileURL() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -107,7 +107,7 @@ let asyncGeneratorStep = function _fromFileURL() {
             closure_131_2 = flag;
             c5 = 1;
             c6 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Set", done: true };
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -152,7 +152,7 @@ const Image = async function _fromResource(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -177,7 +177,7 @@ const Image = async function _fromResource(arg0) {
           closure_131_2 = flag;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (arg0 === 1) {
         c6 = 3;
@@ -213,7 +213,7 @@ let closure_3 = async function _fromBytes(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -238,7 +238,7 @@ let closure_3 = async function _fromBytes(arg0) {
           closure_131_2 = flag;
           c5 = 1;
           c6 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (arg0 === 1) {
         c6 = 3;
@@ -274,7 +274,7 @@ let closure_4 = async function _fromSource(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -304,7 +304,7 @@ let closure_4 = async function _fromSource(arg0) {
           closure_131_6 = undefined;
           c7 = 1;
           c8 = 1;
-          return { value: "Reflect", done: true };
+          return { value: "Set", done: true };
         }
       } else if (1 === tmp7) {
         if (arg0 === 1) {

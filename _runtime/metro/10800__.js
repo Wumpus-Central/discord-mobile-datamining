@@ -27,7 +27,7 @@ export const useIAP = () => {
     await "IconComponent";
     closure_2 = tmp2;
     skus = closure_0.skus;
-    return "Reflect";
+    return "Set";
   });
   const items = [setProducts];
   _require = undefined;
@@ -39,7 +39,7 @@ export const useIAP = () => {
     await "IconComponent";
     closure_2 = tmp2;
     skus = closure_0.skus;
-    return "Reflect";
+    return "Set";
   });
   const items1 = [setSubscriptions];
   const tmp5 = setProducts(function(arg0) {
@@ -75,7 +75,7 @@ export const useIAP = () => {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -105,7 +105,7 @@ export const useIAP = () => {
         } else {
           closure_0(value);
           c2 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp10) {
         c2 = tmp;
@@ -124,7 +124,7 @@ export const useIAP = () => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -145,7 +145,7 @@ export const useIAP = () => {
             ({ purchase: closure_129_0, isConsumable: closure_129_1, developerPayloadAndroid: closure_129_2 } = closure_0);
             c5 = 1;
             c6 = 1;
-            return { value: "Reflect", done: true };
+            return { value: "Set", done: true };
           }
         } else if (1 === tmp9) {
           if (arg0 === 1) {
@@ -261,7 +261,7 @@ export const useIAP = () => {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -291,7 +291,7 @@ export const useIAP = () => {
         } else {
           closure_0(value);
           c2 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp10) {
         c2 = tmp;

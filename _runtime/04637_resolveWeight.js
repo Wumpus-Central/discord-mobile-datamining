@@ -40,7 +40,7 @@ let _slicedToArray = function _loadFont() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -136,7 +136,7 @@ let asyncGeneratorStep = function _setFallbackFonts() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       while (true) {
@@ -181,7 +181,7 @@ let asyncGeneratorStep = function _setFallbackFonts() {
           return obj;
         } else {
           c3 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       }
     }
@@ -206,7 +206,7 @@ const Image = async function _clearFallbackFonts() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {

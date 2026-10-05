@@ -1,0 +1,7 @@
+// === Module 14809: ? ===
+
+// Module 14809
+import registerAsset from "module_1132" /* 1132 */;
+
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "a223df53550492950018c2a994e89fed", name: "FiltersHorizontalIcon", type: "png" });
