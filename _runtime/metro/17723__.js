@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "c3befb4dec1b6486d35bd86d8fd2910e",
-  name: "BoostGemOutlineIcon",
+  hash: "93179a968b4cfa174507b1708e979f98",
+  name: "HomeIcon",
   type: "png",
 });

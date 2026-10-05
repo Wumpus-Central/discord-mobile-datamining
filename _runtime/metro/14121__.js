@@ -1,12 +1,26 @@
 // _runtime/metro/14121__.js
-import _mod14059 from "14059__.js";
-import all from "14085__.js";
+import _mod14084 from "14084__.js";
+import getOwnPropertyDescriptor_mod from "14064__.js";
 
-let _moduleResult = all(_mod14059.WeakMap);
-if (_moduleResult) {
-  const _String = String;
-  _moduleResult = /native code/.test(String(_mod14059.WeakMap));
-  const obj = /native code/;
+let getOwnPropertyDescriptor = getOwnPropertyDescriptor_mod;
+if (getOwnPropertyDescriptor) {
+  const _Object = Object;
+  getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
+}
+const tmp = _mod14084(prototype, "name");
+let tmp2 = tmp;
+if (tmp) {
+  tmp2 = "something" === function something() {}.name;
+}
+let tmp3 = tmp;
+if (tmp) {
+  const _module = getOwnPropertyDescriptor;
+  let tmp5 = !_module;
+  if (_module) {
+    tmp5 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
+    const tmp6 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
+  }
+  tmp3 = tmp5;
 }
 
-export default _moduleResult;
+export default { EXISTS: tmp, PROPER: tmp2, CONFIGURABLE: tmp3 };

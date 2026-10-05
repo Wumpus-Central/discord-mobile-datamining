@@ -169,7 +169,7 @@ export default forwardRef((bottomOffset, arg1) => {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -851,7 +851,7 @@ export default forwardRef((bottomOffset, arg1) => {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -890,7 +890,7 @@ export default forwardRef((bottomOffset, arg1) => {
             closure_128_0.__initData = __initData;
             tmp2(c2[3]).runOnUI(closure_128_0)();
             c3 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp7) {
           c3 = tmp;

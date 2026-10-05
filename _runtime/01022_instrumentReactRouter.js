@@ -6,8 +6,8 @@ import noop from "metro/00019__.js";
 
 const require = globalThis.__r;
 
-function instrumentReactRouter(f134399, arg1, arg2, location, reactrouter_v4) {
-  _require = f134399;
+function instrumentReactRouter(f134637, arg1, arg2, location, reactrouter_v4) {
+  _require = f134637;
   dependencyMap = reactrouter_v4;
   let items = _slicedToArray;
   if (_slicedToArray === undefined) {
@@ -53,7 +53,7 @@ function instrumentReactRouter(f134399, arg1, arg2, location, reactrouter_v4) {
       obj3[require("metro/00693__.js").SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.pageload.react." + reactrouter_v4;
       obj3[require("metro/00693__.js").SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = tmp6;
       obj2.attributes = obj3;
-      let result = require("feedbackAsyncIntegration").startBrowserTracingPageLoadSpan(f134399, obj2);
+      let result = require("feedbackAsyncIntegration").startBrowserTracingPageLoadSpan(f134637, obj2);
       let obj = require("feedbackAsyncIntegration");
     }
   }
@@ -201,9 +201,9 @@ export const reactRouterV4BrowserTracingIntegration = function reactRouterV4Brow
   closure_5 = undefined === instrumentNavigation || instrumentNavigation;
   const obj3 = {};
   const merged1 = Object.assign(result);
-  obj3.afterAllSetup = function afterAllSetup(f134399) {
-    result.afterAllSetup(f134399);
-    instrumentReactRouter(f134399, closure_4, closure_5, dependencyMap, "reactrouter_v4", _slicedToArray, noop);
+  obj3.afterAllSetup = function afterAllSetup(f134637) {
+    result.afterAllSetup(f134637);
+    instrumentReactRouter(f134637, closure_4, closure_5, dependencyMap, "reactrouter_v4", _slicedToArray, noop);
   };
   return obj3;
 };
@@ -220,9 +220,9 @@ export const reactRouterV5BrowserTracingIntegration = function reactRouterV5Brow
   closure_5 = undefined === instrumentNavigation || instrumentNavigation;
   const obj3 = {};
   const merged1 = Object.assign(result);
-  obj3.afterAllSetup = function afterAllSetup(f134399) {
-    result.afterAllSetup(f134399);
-    instrumentReactRouter(f134399, closure_4, closure_5, dependencyMap, "reactrouter_v5", _slicedToArray, noop);
+  obj3.afterAllSetup = function afterAllSetup(f134637) {
+    result.afterAllSetup(f134637);
+    instrumentReactRouter(f134637, closure_4, closure_5, dependencyMap, "reactrouter_v5", _slicedToArray, noop);
   };
   return obj3;
 };

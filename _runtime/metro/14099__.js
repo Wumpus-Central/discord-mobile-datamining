@@ -1,21 +1,19 @@
 // _runtime/metro/14099__.js
-import _mod14082 from "14082__.js";
-import _mod14100 from "14100__.js";
-
-export default (arg0, arg1, arg2) => {
-  const arr = _mod14100(arg1);
-  for (let num = 0; num < arr.length; num = num + 1) {
-    let tmp3 = arr[num];
-    let tmp6 = _mod14082(arg0, tmp3);
-    if (!tmp6) {
-      let tmp8 = arg2;
-      if (arg2) {
-        tmp8 = _mod14082(arg2, tmp3);
-      }
-      tmp6 = tmp8;
-    }
-    if (!tmp6) {
-      let tmpResult = tmp(arg0, tmp3, tmp2(arg1, tmp3));
-    }
+let propertyIsEnumerable = {}.propertyIsEnumerable;
+if (!getOwnPropertyDescriptor) {
+  if (getOwnPropertyDescriptor) {
+    propertyIsEnumerable = function propertyIsEnumerable(ownPropertySymbols) {
+      const tmp = getOwnPropertyDescriptor(this, ownPropertySymbols);
+      return tmp && tmp.enumerable;
+    };
   }
-};
+  arg5.f = propertyIsEnumerable;
+} else {
+  const call = propertyIsEnumerable.call;
+  if (typeof call === "unknown") {
+    let propertyIsEnumerableResult = propertyIsEnumerable(1);
+  } else {
+    propertyIsEnumerableResult = call(obj, 1);
+  }
+  obj = { 1: 2 };
+}

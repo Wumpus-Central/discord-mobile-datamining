@@ -1,18 +1,12 @@
 // _runtime/metro/14092__.js
-import _mod14067 from "14067__.js";
+import _mod14087 from "14087__.js";
+import _mod14093 from "14093__.js";
 
-if (_mod14067) {
-  let fn = call.bind(call);
-} else {
-  fn = () => {
-    const apply = call.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(call);
-    } else {
-      applyArgumentsResult = apply(call, arguments);
-    }
-    return applyArgumentsResult;
-  };
-}
-
-export default fn;
+export default (arg0) => {
+  if (_mod14087(arg0)) {
+    return arg0;
+  } else {
+    const tmp6 = new TypeError(_mod14093(arg0) + " is not a function");
+    throw tmp6;
+  }
+};

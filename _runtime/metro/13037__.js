@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 144,
   height: 150,
   scales: [1],
-  hash: "9326b8f858addb08d8cfb2f4710ba77a",
-  name: "coffee_idle",
+  hash: "2428d071b75d8fac57234ccab81c5c37",
+  name: "cake_idle",
   type: "png",
 });

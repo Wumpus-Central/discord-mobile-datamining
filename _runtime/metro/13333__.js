@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "3301eac470d1db4f813dc4b19265d85e",
-  name: "audio",
+  hash: "6ce9cfa41f5b080fb1f9fac04190337a",
+  name: "emoji",
   type: "png",
 });

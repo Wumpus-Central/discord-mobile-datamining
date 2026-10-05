@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/consoles",
+  width: 84,
+  height: 46,
   scales: [2, 3],
-  hash: "17f53f43d68e8a19fbcd8776cb4d1537",
-  name: "RefreshIcon",
+  hash: "1dc3d638940bcdf9b267c8229f603041",
+  name: "xbox_upsell",
   type: "png",
 });

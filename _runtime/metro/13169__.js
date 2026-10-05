@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 51,
   height: 36,
   scales: [2, 3],
-  hash: "010602d585dcc3b10c042380413a7a26",
-  name: "img_boost_error_mobile",
+  hash: "d8a20104f4217083a13e0ca284c4bad2",
+  name: "img_premium_resubscribe_mobile",
   type: "png",
 });

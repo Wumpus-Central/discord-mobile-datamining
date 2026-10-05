@@ -1,19 +1,18 @@
 // _runtime/metro/14094__.js
-import _mod14063 from "14063__.js";
-import element from "../14095_element.js";
-import getOwnPropertyDescriptor from "14062__.js";
+import _mod14069 from "14069__.js";
 
-let tmp2 = !getOwnPropertyDescriptor;
-if (!getOwnPropertyDescriptor) {
-  tmp2 = !_mod14063(
-    () =>
-      7 !==
-      Object.defineProperty(element("div"), "a", {
-        get() {
-          return 7;
-        },
-      }).a,
-  );
+if (_mod14069) {
+  let fn = call.bind(call);
+} else {
+  fn = () => {
+    const apply = call.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(call);
+    } else {
+      applyArgumentsResult = apply(call, arguments);
+    }
+    return applyArgumentsResult;
+  };
 }
 
-export default tmp2;
+export default fn;

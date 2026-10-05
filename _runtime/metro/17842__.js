@@ -1,28 +1,13 @@
 // _runtime/metro/17842__.js
-import _mod637 from "00637__.js";
-import _mod17843 from "17843__.js";
-import stringToArray from "../17844_stringToArray.js";
-import castSlice from "../17847_castSlice.js";
+import registerAsset from "01132__.js";
 
-export default function createCaseFirst(arg0) {
-  closure_0 = arg0;
-  return (arg0) => {
-    const str = _mod637(arg0);
-    let tmp3;
-    if (_mod17843(str)) {
-      tmp3 = stringToArray(str);
-    }
-    if (tmp3) {
-      let first = tmp3[0];
-    } else {
-      first = str.charAt(0);
-    }
-    if (tmp3) {
-      let joined = castSlice(tmp3, 1).join("");
-      const obj = castSlice(tmp3, 1);
-    } else {
-      joined = str.slice(1);
-    }
-    return first[closure_0]() + joined;
-  };
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/guild_settings/community_settings",
+  width: 88,
+  height: 80,
+  scales: [2, 3],
+  hash: "1c24dd3dd196a8ef2977a4e0d877d187",
+  name: "safety_check",
+  type: "png",
+});

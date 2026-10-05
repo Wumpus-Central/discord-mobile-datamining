@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 300,
   height: 175,
   scales: [2, 3],
-  hash: "7d09a15a2a5682035199dcfee2a26d08",
-  name: "badge",
+  hash: "7e68c2960201e89a20761843ca26d40b",
+  name: "super_reaction",
   type: "png",
 });

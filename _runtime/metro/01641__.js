@@ -85,7 +85,7 @@ export const KeyboardProvider = (enabled) => {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         try {
@@ -122,7 +122,7 @@ export const KeyboardProvider = (enabled) => {
             return obj;
           } else {
             v3 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } catch (tmp14) {
           v3 = tmp;
@@ -290,11 +290,11 @@ export const KeyboardProvider = (enabled) => {
     style: null,
     onKeyboardMoveReanimated: null,
     onKeyboardMoveStart: "Boolean",
-    onKeyboardMove: "nl-BQ",
-    onKeyboardMoveInteractive: "nl",
-    onKeyboardMoveEnd: false,
-    onFocusedInputLayoutChangedReanimated: false,
-    children: null,
+    onKeyboardMove: "image/png",
+    onKeyboardMoveInteractive: "mobile",
+    onKeyboardMoveEnd: null,
+    onFocusedInputLayoutChangedReanimated: "nl-BQ",
+    children: "nl",
   };
   let tmp18 = updateSharedValues;
   let tmp19 = updateSharedValues;

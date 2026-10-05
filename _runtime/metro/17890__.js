@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/guild_settings/welcome/images",
-  width: 375,
-  height: 187,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 16,
+  height: 16,
   scales: [2, 3],
-  hash: "a089de21c15f6e03808f87d787c28c08",
-  name: "role_subscription_settings_hero",
+  hash: "0ddefd9d8828364a18e4207ffcdf1e76",
+  name: "ic_close_circle",
   type: "png",
 });

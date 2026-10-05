@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "3cb1cd2fa7a6da13fc0880992d84830f",
-  name: "ChevronLargeDownIcon",
+  hash: "b0762f0f9ef3f22f62e92b1be981b656",
+  name: "ChevronLargeUpIcon",
   type: "png",
 });

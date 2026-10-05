@@ -106,7 +106,7 @@ class MessageLoader {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 }
               } else {
                 try {
@@ -136,7 +136,7 @@ class MessageLoader {
                   } else {
                     closure_1._parseCache = {};
                     c3 = 3;
-                    return { value: "IconComponent", done: "IconComponent" };
+                    return { value: "IconComponent", done: null };
                   }
                 } catch (tmp8) {
                   c3 = tmp;
@@ -302,7 +302,7 @@ let items = [
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -514,7 +514,7 @@ let items = [
             flag = false;
           }
           closure_131_1 = flag;
-          return "Reflect";
+          return "Set";
         })();
         iter.next();
         return iter;
@@ -540,7 +540,7 @@ let items = [
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -564,7 +564,7 @@ let items = [
                   closure_130_0 = flag;
                   c4 = 1;
                   c5 = 1;
-                  return { value: "Reflect", done: true };
+                  return { value: "Set", done: true };
                 }
               } else if (arg0 === 1) {
                 c5 = 3;
@@ -610,7 +610,7 @@ export const loadAllMessagesInLocale = function loadAllMessagesInLocale(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -641,7 +641,7 @@ export const loadAllMessagesInLocale = function loadAllMessagesInLocale(arg0) {
           return obj;
         } else {
           c0 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp7) {
         c0 = tmp;
@@ -662,7 +662,7 @@ export const waitForAllDefaultIntlMessagesLoaded = function waitForAllDefaultInt
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } else {
       try {
@@ -695,7 +695,7 @@ export const waitForAllDefaultIntlMessagesLoaded = function waitForAllDefaultInt
           return obj;
         } else {
           c0 = 3;
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } catch (tmp7) {
         c0 = tmp;

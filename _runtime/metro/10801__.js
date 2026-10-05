@@ -90,7 +90,7 @@ export function withIAPContext(arg0) {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -106,7 +106,7 @@ export function withIAPContext(arg0) {
                 setCurrentPurchaseError(undefined);
                 setCurrentPurchase(closure_0);
                 c1 = 3;
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp9) {
               c1 = tmp;
@@ -136,7 +136,7 @@ export function withIAPContext(arg0) {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             try {
@@ -160,7 +160,7 @@ export function withIAPContext(arg0) {
                 }
                 closure_1_15(transaction);
                 c1 = 3;
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } catch (tmp12) {
               c1 = tmp;
@@ -196,7 +196,7 @@ export function withIAPContext(arg0) {
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -238,7 +238,7 @@ export function withIAPContext(arg0) {
                     return items;
                   });
                   c3 = 3;
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 }
               } catch (tmp12) {
                 c3 = tmp;

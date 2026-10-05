@@ -28,7 +28,7 @@ if (!RNScreensTurboModule) {
     );
     return c0;
   };
-  const obj5 = { logger: _mod1647.logger, defaultReturnValue: "a" };
+  const obj5 = { logger: _mod1647.logger, defaultReturnValue: "r" };
   fn2.__closure = obj5;
   fn2.__workletHash = 6450550757460;
   fn2.__initData = obj;
@@ -41,7 +41,7 @@ if (!RNScreensTurboModule) {
     );
     return c0;
   };
-  const obj6 = { logger: _mod1647.logger, defaultReturnValue: "a" };
+  const obj6 = { logger: _mod1647.logger, defaultReturnValue: "r" };
   fn3.__closure = obj6;
   fn3.__workletHash = 6450550757460;
   fn3.__initData = obj;

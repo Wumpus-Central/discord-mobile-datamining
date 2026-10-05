@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "e2f2314b317d679f7a97eb76ebf6b124",
-  name: "UnsendIcon",
+  hash: "3ba857c31c01ecf1567374bfd4da8171",
+  name: "RedoIcon",
   type: "png",
 });

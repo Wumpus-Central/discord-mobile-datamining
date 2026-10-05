@@ -3,11 +3,11 @@ import registerAsset from "01132__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "6a6fd385acb30b91a0de470ed746ba76",
-  name: "MenuIcon",
+  httpServerLocation: "/assets/modules/collectibles/native/images",
+  width: 375,
+  height: 162,
+  scales: [1],
+  hash: "bda37cc0de8c36fb8217439574ac2fe2",
+  name: "featured_page_footer_light",
   type: "png",
 });

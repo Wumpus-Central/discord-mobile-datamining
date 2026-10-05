@@ -234,7 +234,7 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
           obj4 = {};
         }
         animated = obj4.animated;
-        return "Reflect";
+        return "Set";
       })();
       iter.next();
       return iter;

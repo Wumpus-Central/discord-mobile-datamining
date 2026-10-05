@@ -4,10 +4,10 @@ import registerAsset from "01132__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/premium/guild_boosting/perks",
-  width: 26,
-  height: 23,
+  width: 34,
+  height: 34,
   scales: [2, 3],
-  hash: "003a42f0642dbbdd7138be5c1629ced9",
-  name: "support",
+  hash: "36d299b9a20b89def78675ec02a95049",
+  name: "badge_2",
   type: "png",
 });

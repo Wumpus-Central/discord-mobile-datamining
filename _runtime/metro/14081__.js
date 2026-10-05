@@ -1,16 +1,46 @@
 // _runtime/metro/14081__.js
-import _mod14066 from "14066__.js";
+import _mod14061 from "14061__.js";
+import _mod14082 from "14082__.js";
 
-let c0 = 0;
-let closure_1 = Math.random();
-let closure_2 = _mod14066(1.toString);
-
-export default (arg0) => {
-  let str = "";
-  if (undefined !== arg0) {
-    str = arg0;
+let tmp = _mod14061.process && _mod14061.process.versions;
+if (!tmp) {
+  tmp = _mod14061.Deno && _mod14061.Deno.version;
+  const tmp2 = _mod14061.Deno && _mod14061.Deno.version;
+}
+let str = tmp;
+if (tmp) {
+  str = tmp.v8;
+}
+let tmp3;
+if (str) {
+  const parts = str.split(".");
+  if (parts[0] <= 0) {
+    let num3 = +parts[0] + parts[1];
+  } else {
+    num3 = 1;
   }
-  const sum = c0 + 1;
-  c0 = sum;
-  return `Symbol(${str}` + ")_" + closure_2(sum + closure_1, 36);
-};
+  tmp3 = num3;
+  let tmp4 = parts;
+}
+let _module = !tmp3;
+if (!tmp3) {
+  _module = _mod14082;
+}
+if (_module) {
+  const match = _mod14082.match(/Edge\/(\d+)/);
+  let tmp8 = !match;
+  if (match) {
+    tmp8 = match[1] >= 74;
+  }
+  _module = tmp8;
+  tmp4 = match;
+}
+if (_module) {
+  _module = _mod14082.match(/Chrome\/(\d+)/);
+  tmp4 = _module;
+}
+if (_module) {
+  tmp3 = +tmp4[1];
+}
+
+export default tmp3;

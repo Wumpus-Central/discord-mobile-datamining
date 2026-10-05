@@ -4,10 +4,10 @@ import registerAsset from "01132__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/status",
-  width: 16,
-  height: 16,
+  width: 36,
+  height: 24,
   scales: [2, 3],
-  hash: "b452f17f7046013be582dffe125561c0",
-  name: "StatusIdle",
+  hash: "48a492306912f6e40271e3f606596ed0",
+  name: "StatusVROnline",
   type: "png",
 });

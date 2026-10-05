@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 20,
   height: 20,
   scales: [2, 3],
-  hash: "4f7f3933dfbb31e71ae1545e9b3d82b6",
-  name: "sticker",
+  hash: "fb3286cfe401333b68936fe15653c8b9",
+  name: "role",
   type: "png",
 });

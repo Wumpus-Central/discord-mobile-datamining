@@ -1,46 +1,14 @@
 // _runtime/metro/14079__.js
-import _mod14059 from "14059__.js";
-import _mod14080 from "14080__.js";
+import prop_mod from "14080__.js";
 
-let tmp = _mod14059.process && _mod14059.process.versions;
-if (!tmp) {
-  tmp = _mod14059.Deno && _mod14059.Deno.version;
-  const tmp2 = _mod14059.Deno && _mod14059.Deno.version;
+let prop = prop_mod;
+if (prop) {
+  const _Symbol = Symbol;
+  prop = !Symbol.sham;
 }
-let str = tmp;
-if (tmp) {
-  str = tmp.v8;
-}
-let tmp3;
-if (str) {
-  const parts = str.split(".");
-  if (parts[0] <= 0) {
-    let num3 = +parts[0] + parts[1];
-  } else {
-    num3 = 1;
-  }
-  tmp3 = num3;
-  let tmp4 = parts;
-}
-let _module = !tmp3;
-if (!tmp3) {
-  _module = _mod14080;
-}
-if (_module) {
-  const match = _mod14080.match(/Edge\/(\d+)/);
-  let tmp8 = !match;
-  if (match) {
-    tmp8 = match[1] >= 74;
-  }
-  _module = tmp8;
-  tmp4 = match;
-}
-if (_module) {
-  _module = _mod14080.match(/Chrome\/(\d+)/);
-  tmp4 = _module;
-}
-if (_module) {
-  tmp3 = +tmp4[1];
+if (prop) {
+  const _Symbol2 = Symbol;
+  prop = typeof Symbol.iterator === "symbol";
 }
 
-export default tmp3;
+export default prop;

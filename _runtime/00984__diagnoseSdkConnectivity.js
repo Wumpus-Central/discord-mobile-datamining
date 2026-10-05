@@ -13,7 +13,7 @@ let closure_3 = async function _diagnoseSdkConnectivity() {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -69,7 +69,7 @@ let closure_3 = async function _diagnoseSdkConnectivity() {
       } else {
         c2 = 0;
         c0 = 3;
-        return { value: "IconComponent", done: "IconComponent" };
+        return { value: "IconComponent", done: null };
       }
     } catch (tmp7) {
       if (tmp3 === c2) {

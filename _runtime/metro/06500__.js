@@ -57,10 +57,10 @@ class StackView {
     obj1 = {
       routes: [],
       previousState: "y",
-      openingRouteKeys: 0.4,
+      openingRouteKeys: "button",
       closingRouteKeys: null,
-      replacingRouteKeys: "HOSTED_FIELDS_TOKENIZATION_FAIL_ON_DUPLICATE",
-      descriptors: "This credit card already exists in the merchant's vault.",
+      replacingRouteKeys: false,
+      descriptors: null,
     };
     obj1.openingRouteKeys = [];
     obj1.closingRouteKeys = [];

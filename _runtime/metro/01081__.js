@@ -199,7 +199,7 @@ class FeedbackWidget {
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -232,7 +232,7 @@ class FeedbackWidget {
                 closure_129_12 = undefined;
                 closure_129_0 = undefined;
                 if (self._hasScreenshot()) {
-                  debug.setState({ filename: "done", attachment: "toCharArray$esjava$1", attachmentUri: "toCharArray$esjava$1" });
+                  debug.setState({ filename: "marginBottom", attachment: "unicodeVersion", attachmentUri: "Reflect" });
                 } else {
                   num2 = debug.props.imagePicker;
                   closure_129_6 = num2;
@@ -462,7 +462,7 @@ class FeedbackWidget {
       FeedbackWidget._savedState = Object.assign({}, state.state);
     };
     tmp4Result._clearFormState = () => {
-      closure_0._savedState = { name: "", email: "", description: "", filename: "ix", attachment: "for", attachmentUri: "fill" };
+      closure_0._savedState = { name: "", email: "", description: "", filename: "unicodeVersion", attachment: "surrogates", attachmentUri: "for" };
     };
     tmp4Result._hasScreenshot = () => undefined !== state.state.filename && undefined !== state.state.attachment && undefined !== state.state.attachmentUri;
     tmp4Result._getUser = () => {
@@ -608,7 +608,7 @@ let items = [
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -623,7 +623,7 @@ let items = [
                 } else {
                   v3(closure_1_2[7]).feedbackAlertDialog(props2.errorTitle, props2.captureScreenshotError);
                   v3 = 3;
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 }
               } catch (tmp8) {
                 v3 = tmp;
@@ -788,12 +788,12 @@ let items = [
 const entry1 = {
   key: "reset",
   value: function reset() {
-    FeedbackWidget._savedState = { name: "", email: "", description: "", filename: "ix", attachment: "for", attachmentUri: "fill" };
+    FeedbackWidget._savedState = { name: "", email: "", description: "", filename: "unicodeVersion", attachment: "surrogates", attachmentUri: "for" };
   }
 };
 const items1 = [entry1];
 const importDefaultResultResult = _createClass(FeedbackWidget, items, items1);
 importDefaultResultResult.defaultProps = fn(1077).defaultConfiguration;
-importDefaultResultResult._savedState = { name: "", email: "", description: "", filename: "ix", attachment: "for", attachmentUri: "fill" };
+importDefaultResultResult._savedState = { name: "", email: "", description: "", filename: "unicodeVersion", attachment: "surrogates", attachmentUri: "for" };
 
 export const FeedbackWidget = importDefaultResultResult;

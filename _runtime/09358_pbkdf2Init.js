@@ -46,7 +46,7 @@ let closure_5 = async function _pbkdf2Async(arg0) {
       let obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -99,7 +99,7 @@ let closure_5 = async function _pbkdf2Async(arg0) {
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: "IconComponent" };
+                return { value: "IconComponent", done: null };
               }
             } else {
               try {
@@ -149,7 +149,7 @@ let closure_5 = async function _pbkdf2Async(arg0) {
                   return obj;
                 } else {
                   v3 = 3;
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 }
               } catch (tmp5) {
                 v3 = tmp;

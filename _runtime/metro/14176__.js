@@ -1,32 +1,49 @@
 // _runtime/metro/14176__.js
-let closure_0 = { url: "http://localhost:8081" };
 
-export default () => {
-  if (arg0 === undefined) {
-    let obj = {};
+export default (arg0) => {
+  let map = arg0;
+  if (!arg0) {
+    const _Map = Map;
+    map = new Map();
   }
-  return () => {
-    url = Object.assign({}, url, obj);
-    obj = {
-      onCommand(type) {
-        if ("editor.open" === type.type) {
-          const payload = type.payload;
-          let num = payload.lineNumber;
-          const _HermesInternal = HermesInternal;
-          obj = { file: payload.file, lineNumber: null };
-          const combined = "" + url.url + "/open-stack-frame";
-          if (!num) {
-            num = 1;
-          }
-          obj.lineNumber = num;
-          const _fetch = fetch;
-          const request = { method: "POST", body: null };
-          const _JSON = JSON;
-          request.body = JSON.stringify(obj);
-          const response = fetch(combined, request);
+  return {
+    all: map,
+    on(arg0, arg1) {
+      value = map.get(arg0);
+      if (value) {
+        value.push(arg1);
+      } else {
+        const items = [arg1];
+        const result = map.set(arg0, items);
+      }
+    },
+    off(arg0, arg1) {
+      value = map.get(arg0);
+      if (value) {
+        if (arg1) {
+          value.splice(value.indexOf(arg1) >>> 0, 1);
+        } else {
+          const result = map.set(arg0, []);
         }
-      },
-    };
-    return obj;
+      }
+    },
+    emit(arg0, arg1) {
+      closure_0 = arg0;
+      closure_1 = arg1;
+      value = map.get(arg0);
+      if (value) {
+        const substr = value.slice();
+        const mapped = substr.map((fn) => {
+          fn(closure_1);
+        });
+      }
+      value2 = map.get("*");
+      if (value2) {
+        const substr1 = value2.slice();
+        const mapped1 = substr1.map((fn) => {
+          fn(closure_0, closure_1);
+        });
+      }
+    },
   };
 };

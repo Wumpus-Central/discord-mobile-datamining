@@ -1,19 +1,42 @@
 // _runtime/metro/14100__.js
-import _mod14066 from "14066__.js";
+import _mod14065 from "14065__.js";
 import _mod14087 from "14087__.js";
-import f2 from "../14101_f.js";
-import _mod14111 from "14111__.js";
-import _mod14112 from "14112__.js";
 
-let closure_2 = _mod14066([].concat);
-
-export default _mod14087("Reflect", "ownKeys") ||
-  function ownKeys(arg0) {
-    const fResult = f2.f(_mod14111(arg0));
-    const f = _mod14112.f;
-    let tmp2 = fResult;
-    if (f) {
-      tmp2 = closure_2(fResult, f(arg0));
+const re2 = /#|\.prototype\./;
+function isForced(arg0, arg1) {
+  if (typeof fn === "function") {
+    const _String = String;
+    const str3 = String(arg0).replace(re2, ".");
+    const tmp5 = tmp[str3.toLowerCase(str3)];
+    let tmp7 = tmp5 === P;
+    if (!tmp7) {
+      if (tmp5 === N) {
+        tmp7 = tmp9;
+      } else {
+        let tmp11Result = dependencyMap;
+        if (_mod14087(arg1)) {
+          tmp11Result = _mod14065;
+          let tmp11ResultResult = tmp11Result(arg1);
+        } else {
+          tmp11ResultResult = arg1;
+        }
+      }
     }
-    return tmp2;
-  };
+    return tmp7;
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
+}
+const normalize = (arg0) => {
+  const str = String(arg0);
+  return String(arg0).replace(re2, ".").toLowerCase();
+};
+isForced.normalize = normalize;
+const data = {};
+isForced.data = data;
+isForced.NATIVE = "N";
+const N = "N";
+isForced.POLYFILL = "P";
+const P = "P";
+
+export default isForced;

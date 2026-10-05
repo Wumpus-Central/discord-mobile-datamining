@@ -1494,7 +1494,7 @@ class Context {
   }
 }
 function doneResult() {
-  return { value: "IconComponent", done: "IconComponent" };
+  return { value: "IconComponent", done: null };
 }
 const hasOwnProperty = prototype.hasOwnProperty;
 let items2 = hasOwnProperty;
@@ -1538,7 +1538,7 @@ if (regeneratorRuntime) {
         if ("throw" === method) {
           throw arg;
         } else {
-          return { value: "IconComponent", done: "IconComponent" };
+          return { value: "IconComponent", done: null };
         }
       } else {
         obj.method = method;
@@ -4536,7 +4536,7 @@ if (regeneratorRuntime) {
             if ("throw" === method) {
               throw arg;
             } else {
-              return { value: "IconComponent", done: "IconComponent" };
+              return { value: "IconComponent", done: null };
             }
           } else {
             obj.method = method;

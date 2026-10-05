@@ -25,7 +25,7 @@ let closure_9 = async function _runScrollBenchmark(arg0) {
       const obj3 = { value, done: true };
       return obj3;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -112,7 +112,7 @@ let closure_9 = async function _runScrollBenchmark(arg0) {
         return obj;
       }
       c7 = 3;
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     } catch (tmp28) {
       c7 = tmp;
       throw tmp28;
@@ -162,7 +162,7 @@ export const useFlatListBenchmark = function useFlatListBenchmark(arg0, arg1, ar
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           }
         } else {
           try {
@@ -197,7 +197,7 @@ export const useFlatListBenchmark = function useFlatListBenchmark(arg0, arg1, ar
                   dependencyMap(closure_128_2);
                   closure_2_4(false);
                   c3 = 3;
-                  return { value: "IconComponent", done: "IconComponent" };
+                  return { value: "IconComponent", done: null };
                 }
                 tmp50 = closure_128_1;
               }

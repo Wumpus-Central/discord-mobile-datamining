@@ -21,7 +21,7 @@ let closure_4 = async function _resolveResponse(arg0) {
       const obj2 = { value, done: true };
       return obj2;
     } else {
-      return { value: "IconComponent", done: "IconComponent" };
+      return { value: "IconComponent", done: null };
     }
   } else {
     try {
@@ -49,7 +49,7 @@ let closure_4 = async function _resolveResponse(arg0) {
           }
           if (!body1) {
             c6 = 3;
-            return { value: "IconComponent", done: "IconComponent" };
+            return { value: "IconComponent", done: null };
           } else {
             const body = _require.body;
             closure_130_1 = body;
@@ -266,7 +266,7 @@ export const addFetchEndInstrumentationHandler = function addFetchEndInstrumenta
           let obj2 = stack(dependencyMap[6]);
           stack = asyncGeneratorStep(async (response) => {
             c1 = 0;
-            return (/* F154925 */ function*() { ... })();
+            return (/* F155230 */ function*() { ... })();
           });
           return stack.apply(stack(dependencyMap[5]).GLOBAL_OBJ, items).then(function(result) {
             const self = this;
@@ -357,7 +357,7 @@ export const addFetchInstrumentationHandler = function addFetchInstrumentationHa
           let obj2 = stack(dependencyMap[6]);
           stack = asyncGeneratorStep(async (response) => {
             c1 = 0;
-            return (/* F154925 */ function*() { ... })();
+            return (/* F155230 */ function*() { ... })();
           });
           return stack.apply(stack(dependencyMap[5]).GLOBAL_OBJ, items).then(function(result) {
             const self = this;

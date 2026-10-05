@@ -1,54 +1,139 @@
 // _runtime/metro/14192__.js
-import noop from "00019__.js";
-import module_14174_mod from "14174__.js";
-import _isNativeReflectConstruct_mod from "14193__.js";
-import jsxProd from "../react/00021_jsxProd.js";
+import _slicedToArray from "00032__.js";
 
-if (noop) {
-  const __esModule = noop.__esModule;
-}
-let module_14174 = module_14174_mod;
-if (!module_14174) {
-  let obj = { default: module_14174 };
-  let tmp4 = obj;
-} else {
-  tmp4 = module_14174;
-}
-module_14174 = tmp4;
-let _isNativeReflectConstruct = _isNativeReflectConstruct_mod;
-if (!_isNativeReflectConstruct) {
-  const obj2 = { default: _isNativeReflectConstruct };
-  let tmp6 = obj2;
-} else {
-  tmp6 = _isNativeReflectConstruct;
-}
-_isNativeReflectConstruct = tmp6;
+const re3 = /^(image)\/.*$/i;
+let closure_4 = {};
 
-export default () => () => {
-  closure_0 = closure_0.default();
-  return {
-    onCommand(type) {
-      if ("storybook" === type.type) {
-        closure_0.emit("storybook", type.payload);
+export default () => {
+  if (arg0 === undefined) {
+    let obj = {};
+  }
+  return (arg0) => {
+    closure_0 = arg0;
+    function onSend(data, _url) {
+      if (merged.ignoreUrls) {
+        const ignoreUrls = merged.ignoreUrls;
+        if (ignoreUrls.test(_url._url)) {
+          _url._skipReactotron = true;
+        }
       }
-    },
-    features: {
-      storybookSwitcher(arg0) {
-        closure_0 = arg0;
-        return (arg0) => {
-          closure_0 = arg0;
-          return function StorybookSwitcherContainer(arg0) {
-            const obj = { storybookUi: emitter, emitter, children: null };
-            const merged = Object.assign(arg0);
-            obj.children = <emitter />;
-            return (
-              <_isNativeReflectConstruct.default storybookUi={emitter} emitter={emitter}>
-                {null}
-              </_isNativeReflectConstruct.default>
-            );
-          };
+      const sum = c3 + 1;
+      c3 = sum;
+      _url._trackingName = sum;
+      closure_4[c3] = { data, xhr: _url, stopTimer: closure_0.startTimer() };
+    }
+    function onResponse(status, arg1, _bodyBlob, arg3, arg4, _skipReactotron) {
+      closure_1 = _bodyBlob;
+      regex = _skipReactotron;
+      if (!_skipReactotron._skipReactotron) {
+        let _url = arg3;
+        obj = null;
+        let num2 = -1;
+        if (arg3) {
+          num2 = _url.indexOf("?");
+        }
+        let tmp2 = null;
+        if (num2 > -1) {
+          obj = {};
+          const parts = _url.substr(num2 + 1).split("&");
+          const item = parts.forEach((item) => {
+            [tmp2, str] = item.split("=");
+            let tmp3 = tmp2;
+            if (tmp2) {
+              tmp3 = undefined !== str;
+            }
+            if (tmp3) {
+              const _decodeURIComponent = decodeURIComponent;
+              obj[tmp2] = decodeURIComponent(str.replace(/\+/g, " "));
+            }
+            const tmp = _slicedToArray(item.split("="), 2);
+          });
+          tmp2 = obj;
+          const str2 = _url.substr(num2 + 1);
+        }
+        const _trackingName = _skipReactotron._trackingName;
+        let tmp5 = closure_4[_trackingName];
+        if (!tmp5) {
+          const obj2 = { xhr: _skipReactotron };
+          tmp5 = obj2;
+        }
+        closure_4[_trackingName] = null;
+        ({ stopTimer: closure_4, data } = tmp5);
+        if (!_url) {
+          _url = tmp5.xhr._url;
+        }
+        const request = {
+          url: _url,
+          method: _skipReactotron._method || null,
+          data,
+          headers: _skipReactotron._headers || null,
+          params: tmp2,
         };
+        let str4 = _skipReactotron.responseHeaders && _skipReactotron.responseHeaders["content-type"];
+        if (!str4) {
+          str4 = _skipReactotron.responseHeaders && _skipReactotron.responseHeaders["Content-Type"];
+          const tmp6 = _skipReactotron.responseHeaders && _skipReactotron.responseHeaders["Content-Type"];
+        }
+        if (!str4) {
+          str4 = "";
+        }
+        function sendResponse(result) {
+          let str = "~~~ skipped ~~~";
+          if (result) {
+            try {
+              const _JSON = JSON;
+              str = JSON.parse(result);
+            } catch (err) {
+              str = closure_1;
+            }
+          }
+          const response = { body: str, status, headers: responseHeaders.responseHeaders || null };
+          let tmp4Result = null;
+          if (closure_1_4) {
+            tmp4Result = tmp4();
+          }
+          status.apiResponse(request, response, tmp4Result);
+        }
+        if (typeof _bodyBlob === "string") {
+          if (!str4) {
+            str4 = "";
+          }
+          if (!regex.test(str4)) {
+            if ("blob" === arg4) {
+              const _FileReader = FileReader;
+              if (typeof FileReader !== "undefined") {
+                if (_bodyBlob) {
+                  const _FileReader2 = FileReader;
+                  const fileReader = new FileReader();
+                  function brListener() {
+                    sendResponse(fileReader.result);
+                    const removed = fileReader.removeEventListener("loadend", brListener);
+                  }
+                  const listener = fileReader.addEventListener("loadend", brListener);
+                  const asText = fileReader.readAsText(_bodyBlob);
+                }
+              }
+            }
+            sendResponse(_bodyBlob);
+          }
+        }
+        sendResponse("");
+      }
+    }
+    const merged = Object.assign({}, closure_4, obj);
+    let regex = merged.ignoreContentTypes || re3;
+    c3 = 1000;
+    closure_4 = {};
+    obj = {
+      onConnect() {
+        const XHRInterceptor = obj(14193).XHRInterceptor;
+        XHRInterceptor.setSendCallback(onSend);
+        const XHRInterceptor2 = obj(14193).XHRInterceptor;
+        XHRInterceptor2.setResponseCallback(onResponse);
+        const XHRInterceptor3 = obj(14193).XHRInterceptor;
+        XHRInterceptor3.enableInterception();
       },
-    },
+    };
+    return obj;
   };
 };

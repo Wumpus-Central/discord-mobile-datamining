@@ -1,20 +1,16 @@
 // _runtime/metro/13832__.js
-if (typeof process === "object") {
-  const _process3 = process;
-  if (process.env) {
-    const _process = process;
-    if (process.env.NODE_DEBUG) {
-      const _process2 = process;
-      if (obj.test(process.env.NODE_DEBUG)) {
-        let fn = () => {
-          const items = ["SEMVER"];
-          HermesBuiltin.arraySpread(HermesBuiltin.copyRestArgs(), 1);
-          return console.error.apply(items);
-        };
-      }
-      module.exports = fn;
-      obj = /\bsemver\b/i;
+let closure_0 = Object.freeze({ loose: true });
+let closure_1 = Object.freeze({});
+
+export default (arg0) => {
+  let tmp = arg0;
+  if (arg0) {
+    if (typeof tmp !== "object") {
+      tmp = closure_0;
     }
+    let tmp2 = tmp;
+  } else {
+    tmp2 = closure_1;
   }
-}
-fn = () => {};
+  return tmp2;
+};

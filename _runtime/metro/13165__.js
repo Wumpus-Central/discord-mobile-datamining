@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 51,
   height: 36,
   scales: [2, 3],
-  hash: "24a795d24a7018dbf13e204b38f24588",
-  name: "img_classic_resubscribe_mobile",
+  hash: "6a44051f0a6b82f14b7f681cb1af8576",
+  name: "img_classic_mobile",
   type: "png",
 });

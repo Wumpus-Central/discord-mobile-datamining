@@ -1,4 +1,4 @@
 // _runtime/metro/13841__.js
-import _mod13829 from "13829__.js";
+import _mod13831 from "13831__.js";
 
-export default (arg0, arg1) => new _mod13829(arg0, arg1).patch;
+export default (arg0, arg1) => new _mod13831(arg0, arg1).major;

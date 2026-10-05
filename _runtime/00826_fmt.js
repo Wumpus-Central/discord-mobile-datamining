@@ -11,7 +11,7 @@ export const debug = function debug(message, attributes) {
     obj = {};
   }
   _INTERNAL_captureSerializedLog._INTERNAL_captureLog(
-    { level: "debug", message, attributes, severityNumber: "application" },
+    { level: "debug", message, attributes, severityNumber: "applicationId" },
     obj.scope,
   );
 };
@@ -41,7 +41,7 @@ export const info = function info(message, attributes) {
     obj = {};
   }
   _INTERNAL_captureSerializedLog._INTERNAL_captureLog(
-    { level: "info", message, attributes, severityNumber: "application" },
+    { level: "info", message, attributes, severityNumber: "applicationId" },
     obj.scope,
   );
 };
@@ -51,7 +51,7 @@ export const trace = function trace(message, attributes) {
     obj = {};
   }
   _INTERNAL_captureSerializedLog._INTERNAL_captureLog(
-    { level: "trace", message, attributes, severityNumber: "application" },
+    { level: "trace", message, attributes, severityNumber: "applicationId" },
     obj.scope,
   );
 };
@@ -61,7 +61,7 @@ export const warn = function warn(message, attributes) {
     obj = {};
   }
   _INTERNAL_captureSerializedLog._INTERNAL_captureLog(
-    { level: "warn", message, attributes, severityNumber: "color" },
+    { level: "warn", message, attributes, severityNumber: "duration" },
     obj.scope,
   );
 };

@@ -1,26 +1,105 @@
 // _runtime/metro/14119__.js
-import _mod14082 from "14082__.js";
-import getOwnPropertyDescriptor_mod from "14062__.js";
+import _mod14064 from "14064__.js";
+import _mod14065 from "14065__.js";
+import _mod14068 from "14068__.js";
+import _mod14084 from "14084__.js";
+import _mod14087 from "14087__.js";
+import _mod14121 from "14121__.js";
+import state from "../14122_state.js";
+import prop from "14120__.js";
 
-let getOwnPropertyDescriptor = getOwnPropertyDescriptor_mod;
-if (getOwnPropertyDescriptor) {
-  const _Object = Object;
-  getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
-}
-const tmp = _mod14082(prototype, "name");
-let tmp2 = tmp;
-if (tmp) {
-  tmp2 = "something" === function something() {}.name;
-}
-let tmp3 = tmp;
-if (tmp) {
-  const _module = getOwnPropertyDescriptor;
-  let tmp5 = !_module;
-  if (_module) {
-    tmp5 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
-    const tmp6 = getOwnPropertyDescriptor && getOwnPropertyDescriptor(prototype, "name").configurable;
+let closure_5 = _mod14068("".slice);
+let closure_6 = _mod14068("".replace);
+let closure_7 = _mod14068([].join);
+let closure_8 = _mod14064 && !_mod14065(() => 8 !== defineProperty(() => {}, "length", { value: 8 }).length);
+const tmp = _mod14064 && !_mod14065(() => 8 !== defineProperty(() => {}, "length", { value: 8 }).length);
+let closure_9 = String(String).split("String");
+const fn = (toString, toString2, arg2) => {
+  let text = toString2;
+  if ("Symbol(" === closure_5(String(toString2), 0, 7)) {
+    text = `${"[" + closure_6(tmp(toString2), /^Symbol\(([^)]*)\).*$/, "$1")}]`;
   }
-  tmp3 = tmp5;
+  let getter = arg2;
+  if (arg2) {
+    getter = arg2.getter;
+  }
+  let text1 = text;
+  if (getter) {
+    text1 = `get ${tmp2}`;
+  }
+  let setter = arg2;
+  if (arg2) {
+    setter = arg2.setter;
+  }
+  let text2 = text1;
+  if (setter) {
+    text2 = `set ${tmp4}`;
+  }
+  const tmp8 = _mod14084(toString, "name");
+  let tmp9 = !tmp8;
+  if (tmp8) {
+    tmp9 = _mod14121.CONFIGURABLE && toString.name !== text2;
+    const tmp10 = _mod14121.CONFIGURABLE && toString.name !== text2;
+  }
+  if (tmp9) {
+    if (_mod14064) {
+      const obj = { value: text2, configurable: true };
+      defineProperty(toString, "name", obj);
+    } else {
+      toString.name = text2;
+    }
+  }
+  let tmp13 = closure_8;
+  if (closure_8) {
+    tmp13 = arg2;
+  }
+  if (tmp13) {
+    tmp13 = _mod14084(arg2, "arity");
+  }
+  if (tmp13) {
+    tmp13 = toString.length !== arg2.arity;
+  }
+  if (tmp13) {
+    const obj2 = { value: arg2.arity };
+    defineProperty(toString, "length", obj2);
+  }
+  try {
+    if (arg2) {
+      if (_mod14084(arg2, "constructor")) {
+        if (arg2.constructor) {
+          if (_mod14064) {
+            defineProperty(toString, "prototype", { writable: false });
+          }
+        }
+        const enforceResult = state.enforce(toString);
+        if (!_mod14084(enforceResult, "source")) {
+          let str11 = "";
+          if (typeof text2 === "string") {
+            str11 = text2;
+          }
+          enforceResult.source = closure_7(closure_9, str11);
+        }
+        return toString;
+      }
+    }
+    if (toString.prototype) {
+      toString.prototype = undefined;
+    }
+  } catch (err) {}
+};
+function toString() {
+  const self = this;
+  let source = _mod14087(this);
+  if (source) {
+    source = state.get(self).source;
+    const tmpResult = state;
+  }
+  if (!source) {
+    source = prop(self);
+  }
+  return source;
 }
+fn(toString, "toString");
+Function.prototype.toString = toString;
 
-export default { EXISTS: tmp, PROPER: tmp2, CONFIGURABLE: tmp3 };
+export default fn;

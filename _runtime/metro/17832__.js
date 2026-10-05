@@ -1,15 +1,13 @@
 // _runtime/metro/17832__.js
-import arrayReduce from "../05013_arrayReduce.js";
-import words from "../17833_words.js";
-import deburr from "../17837_deburr.js";
+import registerAsset from "01132__.js";
 
-let closure_2 = RegExp("['\u2019]", "g");
-
-export default function createCompounder(arg0) {
-  closure_0 = arg0;
-  return (arg0) => {
-    const tmp = arrayReduce;
-    const tmp2 = words;
-    return tmp(tmp2(deburr(arg0).replace(closure_2, "")), closure_0, "");
-  };
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/guild_settings/community_settings",
+  width: 375,
+  height: 212,
+  scales: [2, 3],
+  hash: "94dc9b38f111b503d8ad130993060a96",
+  name: "intro_header_dark",
+  type: "png",
+});

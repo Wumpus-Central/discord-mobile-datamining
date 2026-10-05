@@ -33,10 +33,10 @@ export const usePanGestureProxy = (onConfigurePanGesture) => {
     const withTestIdResult = Gesture.Pan().withTestId("rnrc-gesture-handler");
     onConfigurePanGesture = withTestIdResult;
     const userDefinedConflictGestures = {
-      onBegin: "toCharArray$esjava$1",
-      onStart: "Symbol",
-      onUpdate: "a",
-      onEnd: "done",
+      onBegin: "add",
+      onStart: "enabled",
+      onUpdate: "Icon",
+      onEnd: "toCharArray$esjava$1",
       onFinalize: "toCharArray$esjava$1",
     };
     withTestIdResult.onBegin = (onBegin) => {
