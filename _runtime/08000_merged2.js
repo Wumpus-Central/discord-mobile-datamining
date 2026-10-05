@@ -1,62 +1,12 @@
 // === Module 8000: merged2 ===
 
 // Module 8000 (merged2)
-import "module_4707";
-import emptyFunction_mod from "module_4707" /* 4707 */;
+import module_4707_mod from "module_4707" /* 4707 */;
 
-const obj = { transform: null, transformMatrix: null, decomposedMatrix: null, scaleX: null, scaleY: null, rotation: null, translateX: null, translateY: null };
-let emptyFunction = emptyFunction_mod;
-const items = [emptyFunction.shape({ perspective: emptyFunction.number }), , , , , , , , , , , ];
-let emptyFunction = emptyFunction_mod;
-const obj2 = { perspective: emptyFunction.number };
-items[1] = emptyFunction.shape({ rotate: emptyFunction.string });
-let emptyFunction = emptyFunction_mod;
-const obj3 = { rotate: emptyFunction.string };
-items[2] = emptyFunction.shape({ rotateX: emptyFunction.string });
-let emptyFunction = emptyFunction_mod;
-const obj4 = { rotateX: emptyFunction.string };
-items[3] = emptyFunction.shape({ rotateY: emptyFunction.string });
-let emptyFunction = emptyFunction_mod;
-const obj5 = { rotateY: emptyFunction.string };
-items[4] = emptyFunction.shape({ rotateZ: emptyFunction.string });
-let emptyFunction = emptyFunction_mod;
-const obj6 = { rotateZ: emptyFunction.string };
-items[5] = emptyFunction.shape({ scale: emptyFunction.number });
-let emptyFunction = emptyFunction_mod;
-const obj7 = { scale: emptyFunction.number };
-items[6] = emptyFunction.shape({ scaleX: emptyFunction.number });
-let emptyFunction = emptyFunction_mod;
-const obj8 = { scaleX: emptyFunction.number };
-items[7] = emptyFunction.shape({ scaleY: emptyFunction.number });
-let emptyFunction = emptyFunction_mod;
-const obj9 = { scaleY: emptyFunction.number };
-items[8] = emptyFunction.shape({ translateX: emptyFunction.number });
-let emptyFunction = emptyFunction_mod;
-const obj10 = { translateX: emptyFunction.number };
-items[9] = emptyFunction.shape({ translateY: emptyFunction.number });
-let emptyFunction = emptyFunction_mod;
-const obj11 = { translateY: emptyFunction.number };
-items[10] = emptyFunction.shape({ skewX: emptyFunction.string });
-let emptyFunction = emptyFunction_mod;
-const obj12 = { skewX: emptyFunction.string };
-items[11] = emptyFunction.shape({ skewY: emptyFunction.string });
-obj.transform = emptyFunction.arrayOf(emptyFunction.oneOfType(items));
-obj.transformMatrix = function transformMatrix(arg0, arg1, arg2) {
-  if (arg0[arg1]) {
-    const _Error = Error;
-    const error = new Error("The transformMatrix style property is deprecated. Use `transform: [{ matrix: ... }]` instead.");
-    return error;
-  }
-};
-obj.decomposedMatrix = function decomposedMatrix(arg0, arg1, arg2) {
-  if (arg0[arg1]) {
-    const _Error = Error;
-    const error = new Error("The decomposedMatrix style property is deprecated. Use `transform: [...]` instead.");
-    return error;
-  }
-};
-const number = emptyFunction.number;
-obj.scaleX = function validate(arg0, arg1, arg2) {
+let arrayOf;
+let items;
+let oneOfType;
+function validate(arg0, arg1, arg2) {
   const substr = [...arguments].slice();
   if (undefined !== arg0[arg1]) {
     const _console = console;
@@ -64,46 +14,74 @@ obj.scaleX = function validate(arg0, arg1, arg2) {
     console.warn("`" + arg1 + "` supplied to `" + arg2 + "` has been deprecated. " + "Use the transform prop instead.");
   }
   return number(arg1, arg2, ...substr);
+}
+const obj = {
+  transform: arrayOf(oneOfType(items)),
+  transformMatrix(arg0, arg1, arg2) {
+    if (arg0[arg1]) {
+      const _Error = Error;
+      const self = this;
+      const self2 = this;
+      const error = new Error("The transformMatrix style property is deprecated. Use `transform: [{ matrix: ... }]` instead.");
+      return error;
+    }
+  },
+  decomposedMatrix(arg0, arg1, arg2) {
+    if (arg0[arg1]) {
+      const _Error = Error;
+      const self = this;
+      const self2 = this;
+      const error = new Error("The decomposedMatrix style property is deprecated. Use `transform: [...]` instead.");
+      return error;
+    }
+  },
+  scaleX: validate,
+  scaleY: validate,
+  rotation: validate,
+  translateX: validate,
+  translateY: validate
 };
-const number2 = emptyFunction.number;
-obj.scaleY = function validate(arg0, arg1, arg2) {
-  const substr = [...arguments].slice();
-  if (undefined !== arg0[arg1]) {
-    const _console = console;
-    const _HermesInternal = HermesInternal;
-    console.warn("`" + arg1 + "` supplied to `" + arg2 + "` has been deprecated. " + "Use the transform prop instead.");
-  }
-  return number(arg1, arg2, ...substr);
-};
-const number3 = emptyFunction.number;
-obj.rotation = function validate(arg0, arg1, arg2) {
-  const substr = [...arguments].slice();
-  if (undefined !== arg0[arg1]) {
-    const _console = console;
-    const _HermesInternal = HermesInternal;
-    console.warn("`" + arg1 + "` supplied to `" + arg2 + "` has been deprecated. " + "Use the transform prop instead.");
-  }
-  return number(arg1, arg2, ...substr);
-};
-const number4 = emptyFunction.number;
-obj.translateX = function validate(arg0, arg1, arg2) {
-  const substr = [...arguments].slice();
-  if (undefined !== arg0[arg1]) {
-    const _console = console;
-    const _HermesInternal = HermesInternal;
-    console.warn("`" + arg1 + "` supplied to `" + arg2 + "` has been deprecated. " + "Use the transform prop instead.");
-  }
-  return number(arg1, arg2, ...substr);
-};
-const number5 = emptyFunction.number;
-obj.translateY = function validate(arg0, arg1, arg2) {
-  const substr = [...arguments].slice();
-  if (undefined !== arg0[arg1]) {
-    const _console = console;
-    const _HermesInternal = HermesInternal;
-    console.warn("`" + arg1 + "` supplied to `" + arg2 + "` has been deprecated. " + "Use the transform prop instead.");
-  }
-  return number(arg1, arg2, ...substr);
-};
+let module_4707 = module_4707_mod;
+arrayOf = module_4707.arrayOf;
+module_4707 = module_4707_mod;
+oneOfType = module_4707.oneOfType;
+module_4707 = module_4707_mod;
+items = [, , , , , , , , , , , ];
+const obj2 = { perspective: module_4707.number };
+items[0] = module_4707.shape(obj2);
+module_4707 = module_4707_mod;
+const obj3 = { rotate: module_4707.string };
+items[1] = module_4707.shape(obj3);
+module_4707 = module_4707_mod;
+const obj4 = { rotateX: module_4707.string };
+items[2] = module_4707.shape(obj4);
+module_4707 = module_4707_mod;
+const obj5 = { rotateY: module_4707.string };
+items[3] = module_4707.shape(obj5);
+module_4707 = module_4707_mod;
+const obj6 = { rotateZ: module_4707.string };
+items[4] = module_4707.shape(obj6);
+module_4707 = module_4707_mod;
+const obj7 = { scale: module_4707.number };
+items[5] = module_4707.shape(obj7);
+module_4707 = module_4707_mod;
+const obj8 = { scaleX: module_4707.number };
+items[6] = module_4707.shape(obj8);
+module_4707 = module_4707_mod;
+const obj9 = { scaleY: module_4707.number };
+items[7] = module_4707.shape(obj9);
+module_4707 = module_4707_mod;
+const obj10 = { translateX: module_4707.number };
+items[8] = module_4707.shape(obj10);
+module_4707 = module_4707_mod;
+const obj11 = { translateY: module_4707.number };
+items[9] = module_4707.shape(obj11);
+module_4707 = module_4707_mod;
+const obj12 = { skewX: module_4707.string };
+items[10] = module_4707.shape(obj12);
+module_4707 = module_4707_mod;
+const obj13 = { skewY: module_4707.string };
+items[11] = module_4707.shape(obj13);
+const number = module_4707.number;
 
 export default obj;

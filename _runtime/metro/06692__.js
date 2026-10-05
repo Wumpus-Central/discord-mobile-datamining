@@ -1,15 +1,15 @@
 // === Module 6692: ? ===
 
 // Module 6692
-import get_ActivityIndicator from "module_17" /* 17 */;
+import react_native from "react-native" /* 17 */;
 
-const TurboModuleRegistry = get_ActivityIndicator.TurboModuleRegistry;
+const TurboModuleRegistry = react_native.TurboModuleRegistry;
 const enforcing = TurboModuleRegistry.getEnforcing("RNCClipboard");
 const RNCClipboard_TEXT_CHANGED = "RNCClipboard_TEXT_CHANGED";
-const nativeEventEmitter = new get_ActivityIndicator.NativeEventEmitter(enforcing);
+const nativeEventEmitter = new react_native.NativeEventEmitter(enforcing);
 const listenerCount = nativeEventEmitter.listenerCount;
 let fn = listenerCount;
-if (listenerCount) {
+if (fn) {
   const listenerCount2 = nativeEventEmitter.listenerCount;
   fn = listenerCount2.bind(nativeEventEmitter);
 } else {

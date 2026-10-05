@@ -1,26 +1,24 @@
 // === Module 4208: assign ===
 
 // Module 4208 (assign)
+let hasOwnProperty;
+
 
 export default function assign(arg0, obj) {
   if (null == arg0) {
     const _TypeError = TypeError;
+    const self = this;
+    const self2 = this;
     const typeError = new TypeError("assign requires that input parameter not be null or undefined");
     throw typeError;
   } else {
-    for (const key10006 in arg1) {
+    for (const key10006 in obj) {
       let _Object = Object;
       hasOwnProperty = Object.prototype.hasOwnProperty;
-      let call = hasOwnProperty.call;
-      if (typeof call === "unknown") {
-        let hasOwnPropertyResult = hasOwnProperty(key10006);
-      } else {
-        hasOwnPropertyResult = call(arg1, key10006);
-      }
-      if (!hasOwnPropertyResult) {
+      if (!hasOwnProperty.call(obj, key10006)) {
         continue;
       } else {
-        arg0[key10006] = arg1[key10006];
+        arg0[key10006] = obj[key10006];
         continue;
       }
       continue;
@@ -28,4 +26,3 @@ export default function assign(arg0, obj) {
     return arg0;
   }
 };
-export default exports.default;

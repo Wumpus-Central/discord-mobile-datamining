@@ -1,12 +1,12 @@
 // === Module 421: ? ===
 
 // Module 421
-import _modDef422 from "module_422" /* 422 */;
+import _mod422 from "module_422" /* 422 */;
 
-const require = globalThis.__r;
+const _modDef422 = _mod422;
 
-for (const key10013 in require("module_422")) {
-  arg5[key10013] = require("module_422")[key10013];
+for (const key10013 in _mod422) {
+  exports[key10013] = _mod422[key10013];
   continue;
 }
 

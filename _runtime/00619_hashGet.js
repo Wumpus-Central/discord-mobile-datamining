@@ -1,23 +1,22 @@
 // === Module 619: hashGet ===
 
 // Module 619 (hashGet)
-import _mod611 from "module_611" /* 611 */;
+import getNative from "getNative" /* 611 */;
 
 
-export default function hashGet(View) {
+export default function hashGet(arg0) {
   const __data__ = this.__data__;
-  if (_mod611) {
-    let tmp4;
-    if ("__lodash_hash_undefined__" !== __data__[View]) {
-      tmp4 = tmp3;
+  if (getNative) {
+    let tmp3;
+    if ("__lodash_hash_undefined__" !== __data__[arg0]) {
+      tmp3 = tmp2;
     }
-    return tmp4;
+    return tmp3;
   } else {
-    const call = hasOwnProperty.call;
-    let tmp2;
-    if (typeof call === "unknown" ? hasOwnProperty(View) : call(__data__, View)) {
-      tmp2 = __data__[View];
+    let tmp;
+    if (hasOwnProperty.call(__data__, arg0)) {
+      tmp = __data__[arg0];
     }
-    return tmp2;
+    return tmp;
   }
 };

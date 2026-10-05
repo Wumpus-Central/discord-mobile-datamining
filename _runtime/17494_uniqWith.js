@@ -5,10 +5,12 @@ import baseUniq from "baseUniq" /* 15720 */;
 
 
 export default function uniqWith(arg0, fn) {
+  let tmp;
   if (typeof fn === "function") {
-    const tmp = fn;
+    tmp = fn;
   }
-  if (arg0) {
+  const tmp2 = arg0;
+  if (tmp2) {
     if (arg0.length) {
       baseUniq(arg0, undefined, tmp);
     }

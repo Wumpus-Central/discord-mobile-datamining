@@ -3,38 +3,35 @@
 // Module 237
 import _mod38 from "module_38" /* 38 */;
 
-require = arg1;
-const dependencyMap = { log: "log", info: "info", warn: "warn", error: "error", fatal: "error" };
-let global = null;
+let closure_3 = { log: "log", info: "info", warn: "warn", error: "error", fatal: "error" };
+let c4 = null;
 const obj = {
   logIfNoNativeHook(arg0) {
     const substr = [...arguments].slice();
     if (undefined === global.nativeLoggingHook) {
       const logToConsole = obj.logToConsole;
       const items = [arg0];
-      HermesBuiltin.arraySpread(substr, 1);
-      HermesBuiltin.apply(items, obj);
+      HermesBuiltin.arraySpread(items, substr, 1);
+      HermesBuiltin.apply(logToConsole, items, obj);
     } else {
-      let tmp3 = global;
-      if (global) {
-        tmp3 = "warn" === arg0;
-      }
-      if (tmp3) {
+      const tmp4 = c4 && "warn" === arg0;
+      if (tmp4) {
         const items1 = [];
-        HermesBuiltin.arraySpread(substr, 0);
-        HermesBuiltin.apply(items1, undefined);
+        HermesBuiltin.arraySpread(items1, substr, 0);
+        HermesBuiltin.apply(c4, items1, undefined);
       }
     }
   },
   logToConsole(arg0) {
     const substr = [...arguments].slice();
     const tmp3 = _mod38;
-    tmp3(dependencyMap[arg0], `${`Level "${arg0}`}" not one of ${Object.keys(closure_3).toString()}`);
+    const str = Object.keys(closure_3);
+    tmp3(closure_3[arg0], `${`Level "${arg0}`}" not one of ${str.toString()}`);
     const items = [...substr];
-    console[dependencyMap[arg0]].apply(items);
+    console[closure_3[arg0]].apply(items);
   },
   setWarningHandler(arg0) {
-    global = arg0;
+    c4 = arg0;
   }
 };
 

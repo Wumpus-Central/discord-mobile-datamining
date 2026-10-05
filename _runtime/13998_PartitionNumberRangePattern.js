@@ -1,26 +1,23 @@
 // === Module 13998: PartitionNumberRangePattern ===
 
 // Module 13998 (PartitionNumberRangePattern)
-import _mod13970 from "module_13970" /* 13970 */;
+import UNICODE_EXTENSION_SEQUENCE_REGEX from "UNICODE_EXTENSION_SEQUENCE_REGEX" /* 13970 */;
 import CollapseNumberRange from "CollapseNumberRange" /* 13983 */;
 import FormatApproximately from "FormatApproximately" /* 13994 */;
 import FormatNumeric from "FormatNumeric" /* 13995 */;
 import PartitionNumberPattern from "PartitionNumberPattern" /* 13996 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
 export const PartitionNumberRangePattern = function PartitionNumberRangePattern(arg0, isNaN, isNaN2, getInternalSlots) {
   getInternalSlots = getInternalSlots.getInternalSlots;
+  const invariant = UNICODE_EXTENSION_SEQUENCE_REGEX.invariant;
   const isNaNResult = isNaN.isNaN();
-  let tmp4 = !isNaNResult;
-  if (!isNaNResult) {
-    tmp4 = !isNaN2.isNaN();
-  }
-  _mod13970.invariant(tmp4, "Input must be a number", RangeError);
+  const tmp4 = !isNaNResult && !isNaN2.isNaN();
+  invariant(tmp4, "Input must be a number", RangeError);
   const internalSlots = getInternalSlots(arg0);
   const result = PartitionNumberPattern.PartitionNumberPattern(internalSlots, isNaN);
   const result1 = PartitionNumberPattern.PartitionNumberPattern(internalSlots, isNaN2);
+  const FormatNumericResult = FormatNumeric.FormatNumeric(internalSlots, isNaN);
   if (FormatNumericResult === FormatNumeric.FormatNumeric(internalSlots, isNaN2)) {
     const FormatApproximatelyResult = FormatApproximately.FormatApproximately(internalSlots, result);
     const item = FormatApproximatelyResult.forEach((item) => {
@@ -42,5 +39,4 @@ export const PartitionNumberRangePattern = function PartitionNumberRangePattern(
     const obj2 = { getInternalSlots };
     return CollapseNumberRange.CollapseNumberRange(arg0, items, obj2);
   }
-  FormatNumericResult = FormatNumeric.FormatNumeric(internalSlots, isNaN);
 };

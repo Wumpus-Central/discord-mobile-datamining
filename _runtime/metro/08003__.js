@@ -1,8 +1,8 @@
 // === Module 8003: ? ===
 
 // Module 8003
-import emptyFunction from "module_4707" /* 4707 */;
+import module_4707 from "module_4707" /* 4707 */;
 
-const point = { x: emptyFunction.number, y: emptyFunction.number };
+const point = { x: module_4707.number, y: module_4707.number };
 
-export default emptyFunction.shape(point);
+export default module_4707.shape(point);

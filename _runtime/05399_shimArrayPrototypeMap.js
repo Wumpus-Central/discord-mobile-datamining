@@ -1,17 +1,18 @@
 // === Module 5399: shimArrayPrototypeMap ===
 
 // Module 5399 (shimArrayPrototypeMap)
-import properlyBoxed from "properlyBoxed" /* 5334 */;
-import _mod5353 from "module_5353" /* 5353 */;
+import getPolyfill from "getPolyfill" /* 5334 */;
+import defineProperties from "defineProperties" /* 5353 */;
 
 
 export default function shimArrayPrototypeMap() {
-  const tmp = properlyBoxed();
-  closure_0 = tmp;
-  _mod5353(Array.prototype, { map: tmp }, {
+  const tmp = getPolyfill();
+  let closure_0 = tmp;
+  const obj = {
     map() {
       return Array.prototype.map !== closure_0;
     }
-  });
+  };
+  defineProperties(Array.prototype, { map: tmp }, obj);
   return tmp;
 };

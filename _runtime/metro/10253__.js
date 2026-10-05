@@ -1,6 +1,8 @@
 // === Module 10253: ? ===
 
 // Module 10253
+import Meridiem from "Meridiem" /* 10166 */;
+import assignSimilarDate from "assignSimilarDate" /* 10167 */;
 import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10168 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
@@ -8,19 +10,14 @@ import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const NLCasualTimeParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
-    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
+
+    }));
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -30,22 +27,17 @@ function _isNativeReflectConstruct() {
 }
 class NLCasualTimeParser {
   constructor() {
-    self = this;
-    tmp = c2(this, NLCasualTimeParser);
-    tmp2 = closure_4;
-    obj = closure_4(NLCasualTimeParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    let constructResult;
+    const self = this;
+    _classCallCheck(this, NLCasualTimeParser);
+    const obj = _getPrototypeOf(NLCasualTimeParser);
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
       constructResult = obj(...arguments);
     }
-    return tmp3(self, constructResult);
+    return c3(self, constructResult);
   }
 }
 _inherits(NLCasualTimeParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
@@ -70,17 +62,20 @@ const items = [
         const refDate4 = refDate.refDate;
         parsingComponents.assign("year", refDate4.getFullYear());
       }
-      const formatted = arg1[2].toLowerCase();
+      const str4 = arg1[2];
+      const formatted = str4.toLowerCase();
       if ("namiddag" !== formatted) {
         if ("'s namiddags" !== formatted) {
           if ("avond" !== formatted) {
             if ("'s avonds'" !== formatted) {
               if ("middernacht" === formatted) {
                 const _Date = Date;
+                const self = this;
+                const self2 = this;
                 const date = new Date(refDate.getTime());
                 date.setDate(date.getDate() + 1);
-                NLCasualTimeParser(10167).assignSimilarDate(parsingComponents, date);
-                NLCasualTimeParser(10167).implySimilarTime(parsingComponents, date);
+                assignSimilarDate.assignSimilarDate(parsingComponents, date);
+                assignSimilarDate.implySimilarTime(parsingComponents, date);
                 parsingComponents.imply("hour", 0);
                 parsingComponents.imply("minute", 0);
                 parsingComponents.imply("second", 0);
@@ -88,22 +83,22 @@ const items = [
                 if ("ochtend" !== formatted) {
                   if ("'s ochtends" !== formatted) {
                     if ("middag" === formatted) {
-                      parsingComponents.imply("meridiem", NLCasualTimeParser(10166).Meridiem.AM);
+                      parsingComponents.imply("meridiem", Meridiem.Meridiem.AM);
                       parsingComponents.imply("hour", 12);
                     }
                   }
                 }
-                parsingComponents.imply("meridiem", NLCasualTimeParser(10166).Meridiem.AM);
+                parsingComponents.imply("meridiem", Meridiem.Meridiem.AM);
                 parsingComponents.imply("hour", 6);
               }
             }
           }
-          parsingComponents.imply("meridiem", NLCasualTimeParser(10166).Meridiem.PM);
+          parsingComponents.imply("meridiem", Meridiem.Meridiem.PM);
           parsingComponents.imply("hour", 20);
         }
         return parsingComponents;
       }
-      parsingComponents.imply("meridiem", NLCasualTimeParser(10166).Meridiem.PM);
+      parsingComponents.imply("meridiem", Meridiem.Meridiem.PM);
       parsingComponents.imply("hour", 15);
     }
   }

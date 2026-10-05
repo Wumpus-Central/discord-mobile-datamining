@@ -1,42 +1,39 @@
 // === Module 732: SentryNonRecordingSpan ===
 
 // Module 732 (SentryNonRecordingSpan)
+import TRACE_FLAG_NONE from "TRACE_FLAG_NONE" /* 695 */;
+import generateSpanId from "generateSpanId" /* 705 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
-const SentryNonRecordingSpan = require;
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 class SentryNonRecordingSpan {
   constructor() {
-    obj = global;
-    if (global === undefined) {
+    let obj = arg0;
+    if (arg0 === undefined) {
       obj = {};
     }
-    self = this;
-    tmp = c2(this, SentryNonRecordingSpan);
-    traceId = obj.traceId;
+    const self = this;
+    _classCallCheck(this, SentryNonRecordingSpan);
+    let traceId = obj.traceId;
     if (!traceId) {
-      tmp2 = closure_0;
-      tmp3 = closure_1;
-      obj2 = closure_0(closure_1[2]);
+      const obj2 = generateSpanId;
       traceId = obj2.generateTraceId();
     }
     self._traceId = traceId;
-    spanId = obj.spanId;
+    let spanId = obj.spanId;
     if (!spanId) {
-      tmp4 = closure_0;
-      tmp5 = closure_1;
-      obj3 = closure_0(closure_1[2]);
+      const obj3 = generateSpanId;
       spanId = obj3.generateSpanId();
     }
     self._spanId = spanId;
-    return;
   }
 }
 const entry = {
   key: "spanContext",
   value: function spanContext() {
-    return { spanId: this._spanId, traceId: this._traceId, traceFlags: SentryNonRecordingSpan(695).TRACE_FLAG_NONE };
+    const obj = { spanId: this._spanId, traceId: this._traceId, traceFlags: TRACE_FLAG_NONE.TRACE_FLAG_NONE };
+    return obj;
   }
 };
 const items = [
@@ -102,5 +99,6 @@ const items = [
     }
   }
 ];
+const SentryNonRecordingSpan_export = _createClass(SentryNonRecordingSpan, items);
 
-export const SentryNonRecordingSpan = _createClass(SentryNonRecordingSpan, items);
+export { SentryNonRecordingSpan_export as SentryNonRecordingSpan };

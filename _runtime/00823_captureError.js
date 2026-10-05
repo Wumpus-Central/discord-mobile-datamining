@@ -1,43 +1,43 @@
 // === Module 823: captureError ===
 
 // Module 823 (captureError)
-import spanToJSON from "spanToJSON" /* 695 */;
+import TRACE_FLAG_NONE from "TRACE_FLAG_NONE" /* 695 */;
 import SPAN_STATUS_ERROR from "SPAN_STATUS_ERROR" /* 716 */;
 import _mod724 from "module_724" /* 724 */;
-import captureCheckIn from "captureCheckIn" /* 745 */;
+import _mod745 from "module_745" /* 745 */;
 
-require = arg1;
-const dependencyMap = arg6;
-Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const captureError = function captureError(error, prompt_execution, arg2) {
+  let obj4;
+  let obj5;
   try {
+    const obj = _mod724;
     if (obj.getClient()) {
-      const activeSpan = spanToJSON.getActiveSpan();
+      const tmpResult = TRACE_FLAG_NONE;
+      const activeSpan = tmpResult.getActiveSpan();
       let isRecordingResult;
+      const tmp3 = activeSpan;
       if (activeSpan != null) {
         isRecordingResult = activeSpan.isRecording();
       }
       if (isRecordingResult) {
+        const setStatus = tmp3.setStatus;
         const obj2 = { code: SPAN_STATUS_ERROR.SPAN_STATUS_ERROR, message: "internal_error" };
-        obj4.setStatus(obj2);
+        setStatus(obj2);
       }
       let str = prompt_execution;
-      obj4 = activeSpan;
-      const tmpResult = spanToJSON;
+      const captureException = _mod745.captureException;
+      _mod745;
       if (!prompt_execution) {
         str = "handler_execution";
       }
-      const obj3 = { mechanism: null };
-      const obj5 = { type: "auto.ai.mcp_server", handled: false, data: null };
-      const obj6 = { error_type: str };
+      const obj3 = { mechanism: obj4 };
+      obj4 = { type: "auto.ai.mcp_server", handled: false, data: obj5 };
+      obj5 = { error_type: str };
       const merged = Object.assign(arg2);
-      obj5.data = obj6;
-      obj3.mechanism = obj5;
-      captureCheckIn.captureException(error, obj3);
-      const tmpResult2 = captureCheckIn;
+      captureException(error, obj3);
     }
-    obj = _mod724;
   } catch (err) {
   }
 };

@@ -2,11 +2,9 @@
 
 // Module 812 (validateMcpServerInstance)
 import _mod699 from "module_699" /* 699 */;
-import consoleSandbox from "consoleSandbox" /* 700 */;
+import CONSOLE_LEVELS from "CONSOLE_LEVELS" /* 700 */;
 
-require = arg1;
-const dependencyMap = arg6;
-Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const isJsonRpcNotification = function isJsonRpcNotification(jsonrpc) {
   let tmp = typeof jsonrpc === "object";
@@ -61,11 +59,8 @@ export const isJsonRpcResponse = function isJsonRpcResponse(jsonrpc) {
     tmp = "id" in jsonrpc;
   }
   if (tmp) {
-    let tmp2 = "result" in jsonrpc;
-    if (!tmp2) {
-      tmp2 = "error" in jsonrpc;
-    }
-    tmp = tmp2;
+    tmp = "result" in jsonrpc || "error" in jsonrpc;
+    const tmp2 = "result" in jsonrpc || "error" in jsonrpc;
   }
   return tmp;
 };
@@ -92,7 +87,7 @@ export const validateMcpServerInstance = function validateMcpServerInstance(obj)
   if (!flag) {
     flag = false;
     if (_mod699.DEBUG_BUILD) {
-      const debug = consoleSandbox.debug;
+      const debug = CONSOLE_LEVELS.debug;
       debug.warn("Did not patch MCP server. Interface is incompatible.");
       flag = false;
     }

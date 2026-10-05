@@ -1,26 +1,24 @@
 // === Module 1202: UnknownFieldHandler ===
 
 // Module 1202 (UnknownFieldHandler)
-UnknownFieldHandler.UnknownFieldHandler = undefined;
-UnknownFieldHandler.mergeBinaryOptions = undefined;
-UnknownFieldHandler.WireType = undefined;
-UnknownFieldHandler = UnknownFieldHandler.UnknownFieldHandler;
+let UnknownFieldHandler = exports.UnknownFieldHandler;
 if (!UnknownFieldHandler) {
   let obj = {};
-  UnknownFieldHandler.UnknownFieldHandler = obj;
+  exports.UnknownFieldHandler = obj;
   UnknownFieldHandler = obj;
 }
 UnknownFieldHandler.symbol = Symbol.for("protobuf-ts/unknown");
 UnknownFieldHandler.onRead = (arg0, arg1, no, wireType, data) => {
   if (typeof is === "function") {
+    let items;
     let isArray = arg1;
-    if (arg1) {
+    if (isArray) {
       const _Array = Array;
       isArray = Array.isArray(arg1[UnknownFieldHandler.symbol]);
     }
     const symbol = UnknownFieldHandler.symbol;
     if (isArray) {
-      let items = arg1[symbol];
+      items = arg1[symbol];
     } else {
       items = [];
       arg1[symbol] = items;
@@ -32,17 +30,19 @@ UnknownFieldHandler.onRead = (arg0, arg1, no, wireType, data) => {
   }
 };
 UnknownFieldHandler.onWrite = (arg0, arg1, tag) => {
+  const listResult = UnknownFieldHandler.list(arg1);
   for (const item10009 of listResult) {
-    let tagResult = arg2.tag(item10009.no, item10009.wireType);
-    let rawResult = tagResult.raw(item10009.data);
+    let data = item10009.data;
+    let tagResult = tag.tag(item10009.no, item10009.wireType);
+    let rawResult = tagResult.raw(data);
     continue;
   }
 };
 UnknownFieldHandler.list = (arg0, arg1) => {
-  closure_0 = arg1;
+  let closure_0 = arg1;
   if (typeof is === "function") {
     let isArray = arg0;
-    if (arg0) {
+    if (isArray) {
       const _Array = Array;
       isArray = Array.isArray(arg0[UnknownFieldHandler.symbol]);
     }
@@ -59,17 +59,17 @@ UnknownFieldHandler.list = (arg0, arg1) => {
     throw new TypeError("Trying to call a non-function");
   }
 };
-UnknownFieldHandler.last = (arg0, arg1) => UnknownFieldHandler.list(arg0, arg1).slice(-1)[0];
+UnknownFieldHandler.last = (arg0, arg1) => {
+  const listResult = UnknownFieldHandler.list(arg0, arg1);
+  return listResult.slice(-1)[0];
+};
 function is(arg0) {
 
 }
-UnknownFieldHandler.mergeBinaryOptions = function mergeBinaryOptions(arg0, arg1) {
-  return Object.assign(Object.assign({}, arg0), arg1);
-};
-let WireType = UnknownFieldHandler.WireType;
+let WireType = exports.WireType;
 if (!WireType) {
   const obj2 = {};
-  UnknownFieldHandler.WireType = obj2;
+  exports.WireType = obj2;
   WireType = obj2;
 }
 WireType.Varint = 0;
@@ -84,3 +84,7 @@ WireType.EndGroup = 4;
 WireType[4] = "EndGroup";
 WireType.Bit32 = 5;
 WireType[5] = "Bit32";
+
+export const mergeBinaryOptions = function mergeBinaryOptions(arg0, arg1) {
+  return Object.assign(Object.assign({}, arg0), arg1);
+};

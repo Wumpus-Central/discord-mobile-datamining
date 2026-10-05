@@ -5,11 +5,10 @@ import _mod14014 from "module_14014" /* 14014 */;
 
 const require = globalThis.__r;
 
-require = arg1;
-const dependencyMap = arg6;
 
 export const match = function match(arg0, arg1, arg2, algorithm) {
-  closure_0 = arg2;
+  let closure_0 = arg2;
+  const ResolveLocale = require("ResolveLocale").ResolveLocale;
   const result = _mod14014.CanonicalizeLocaleList(arg0);
   let str;
   if (null != algorithm) {
@@ -18,7 +17,8 @@ export const match = function match(arg0, arg1, arg2, algorithm) {
   if (!str) {
     str = "best fit";
   }
-  return require("ResolveLocale").ResolveLocale(arg1, result, { localeMatcher: str }, [], {}, () => closure_0).locale;
+  const obj = { localeMatcher: str };
+  return ResolveLocale(arg1, result, obj, [], {}, () => closure_0).locale;
 };
 export const LookupSupportedLocales = require("module_14015").LookupSupportedLocales;
 export const ResolveLocale = require("ResolveLocale").ResolveLocale;

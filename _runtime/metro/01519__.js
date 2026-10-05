@@ -1,22 +1,24 @@
 // === Module 1519: ? ===
 
 // Module 1519
-import get_getKey from "get getKey" /* 1507 */;
-import NavigationBuilderContext from "NavigationBuilderContext" /* 1520 */;
-import noop from "module_19" /* 19 */;
+import react2 from "react" /* 1507 */;
+import react3 from "react" /* 1520 */;
+import react from "react" /* 19 */;
 
-require = arg1;
+let navigation;
+
 
 export const useOptionsGetters = function useOptionsGetters(key) {
+  let items5;
   key = key.key;
-  options = key.options;
-  const navigation = key.navigation;
-  noop.useRef(options);
-  closure_4 = noop.useRef({});
-  const onOptionsChange = noop.useContext(NavigationBuilderContext.NavigationBuilderContext).onOptionsChange;
-  const addOptionsGetter = noop.useContext(get_getKey.NavigationStateContext).addOptionsGetter;
+  const options = key.options;
+  navigation = key.navigation;
+  let closure_3 = react.useRef(options);
+  let closure_4 = react.useRef({});
+  const onOptionsChange = react.useContext(react3.NavigationBuilderContext).onOptionsChange;
+  const addOptionsGetter = react.useContext(react2.NavigationStateContext).addOptionsGetter;
   const items = [navigation, onOptionsChange];
-  const callback = noop.useCallback(() => {
+  const callback = react.useCallback(() => {
     let flag;
     if (navigation != null) {
       flag = navigation.isFocused();
@@ -36,11 +38,11 @@ export const useOptionsGetters = function useOptionsGetters(key) {
     }
   }, items);
   const items1 = [options];
-  const insertionEffect = noop.useInsertionEffect(() => {
-    closure_3.current = options;
+  const insertionEffect = react.useInsertionEffect(() => {
+    ref.current = options;
   }, items1);
   const items2 = [navigation, options, callback];
-  const effect = noop.useEffect(() => {
+  const effect = react.useEffect(() => {
     callback();
     let addListenerResult;
     if (navigation != null) {
@@ -48,7 +50,7 @@ export const useOptionsGetters = function useOptionsGetters(key) {
     }
     return addListenerResult;
   }, items2);
-  const callback1 = noop.useCallback(() => {
+  const callback1 = react.useCallback(() => {
     for (const key10004 in closure_4.current) {
       if (!(key10004 in closure_4.current)) {
         continue;
@@ -70,7 +72,7 @@ export const useOptionsGetters = function useOptionsGetters(key) {
     return null;
   }, []);
   const items3 = [navigation, callback1];
-  const callback2 = noop.useCallback(() => {
+  const callback2 = react.useCallback(() => {
     let isFocusedResult;
     if (navigation != null) {
       isFocusedResult = navigation.isFocused();
@@ -87,23 +89,25 @@ export const useOptionsGetters = function useOptionsGetters(key) {
     return current;
   }, items3);
   const items4 = [callback2, addOptionsGetter, key];
-  const effect1 = noop.useEffect(() => {
+  const effect1 = react.useEffect(() => {
     let tmpResult;
     if (addOptionsGetter != null) {
       tmpResult = tmp(key, callback2);
     }
     return tmpResult;
   }, items4);
-  const obj = { addOptionsGetter: null, getCurrentOptions: callback2 };
-  const items5 = [callback];
-  obj.addOptionsGetter = noop.useCallback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_4.current[arg0] = arg1;
-    callback();
-    return () => {
-      delete tmp2[tmp];
+  const obj = {
+    addOptionsGetter: react.useCallback((arg0, arg1) => {
+      let closure_0 = arg0;
+      closure_4.current[arg0] = arg1;
       callback();
-    };
-  }, items5);
+      return () => {
+        delete closure_4.current[closure_0];
+        callback();
+      };
+    }, items5),
+    getCurrentOptions: callback2
+  };
+  items5 = [callback];
   return obj;
 };

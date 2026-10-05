@@ -2,38 +2,42 @@
 
 // Module 4172 (eachWeekendOfInterval)
 import eachDayOfInterval_mod from "eachDayOfInterval" /* 4164 */;
-import module_4110_mod from "module_4110" /* 4110 */;
-import module_4109_mod from "module_4109" /* 4109 */;
+import isSunday_mod from "isSunday" /* 4110 */;
+import isWeekend_mod from "isWeekend" /* 4109 */;
 import requiredArgs_mod from "requiredArgs" /* 3959 */;
 
+let tmp3;
+let tmp5;
+let tmp7;
+let tmp9;
 let eachDayOfInterval = eachDayOfInterval_mod;
 if (!eachDayOfInterval) {
+  tmp3 = { default: eachDayOfInterval };
   const obj = { default: eachDayOfInterval };
-  let tmp3 = obj;
 } else {
   tmp3 = eachDayOfInterval;
 }
 eachDayOfInterval = tmp3;
-let module_4110 = module_4110_mod;
-if (!module_4110) {
-  const obj2 = { default: module_4110 };
-  let tmp5 = obj2;
+let isSunday = isSunday_mod;
+if (!isSunday) {
+  tmp5 = { default: isSunday };
+  const obj2 = { default: isSunday };
 } else {
-  tmp5 = module_4110;
+  tmp5 = isSunday;
 }
-module_4110 = tmp5;
-let module_4109 = module_4109_mod;
-if (!module_4109) {
-  const obj3 = { default: module_4109 };
-  let tmp7 = obj3;
+isSunday = tmp5;
+let isWeekend = isWeekend_mod;
+if (!isWeekend) {
+  tmp7 = { default: isWeekend };
+  const obj3 = { default: isWeekend };
 } else {
-  tmp7 = module_4109;
+  tmp7 = isWeekend;
 }
-module_4109 = tmp7;
+isWeekend = tmp7;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
+  tmp9 = { default: requiredArgs };
   const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
 } else {
   tmp9 = requiredArgs;
 }
@@ -50,10 +54,10 @@ export default function eachWeekendOfInterval(arg0) {
       let sum = num + 1;
       let tmp3 = defaultResult1[num];
       tmp5 = sum;
-      if (module_4109.default(tmp3)) {
+      if (isWeekend.default(tmp3)) {
         let arr = items.push(tmp3);
         let sum1 = sum;
-        if (module_4110.default(tmp3)) {
+        if (isSunday.default(tmp3)) {
           sum1 = sum + 5;
         }
         tmp5 = sum1;
@@ -63,4 +67,3 @@ export default function eachWeekendOfInterval(arg0) {
   }
   return items;
 };
-export default exports.default;

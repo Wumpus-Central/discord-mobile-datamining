@@ -13,13 +13,17 @@ import _mod14126 from "module_14126" /* 14126 */;
 let closure_4 = _mod14068([].concat);
 if (!assign) {
   assign = function assign(arg0, arg1) {
+    let num;
     const tmp = _mod14085(arg0);
+    const length = arguments.length;
     const f = _mod14114.f;
     for (let num = 1; length > num; num = num + 1) {
+      let arr;
+      let num2;
       let tmp5 = _mod14067(arguments[num]);
       if (f) {
         let tmp8 = _mod14126(tmp5);
-        let arr = closure_4(tmp8, f(tmp5));
+        arr = closure_4(tmp8, f(tmp5));
       } else {
         arr = _mod14126(tmp5);
       }

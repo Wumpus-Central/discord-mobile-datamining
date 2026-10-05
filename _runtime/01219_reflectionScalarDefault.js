@@ -1,12 +1,10 @@
 // === Module 1219: reflectionScalarDefault ===
 
 // Module 1219 (reflectionScalarDefault)
-import _mod1205 from "module_1205" /* 1205 */;
+import PbULong from "PbULong" /* 1205 */;
 import ScalarType from "ScalarType" /* 1211 */;
 import reflectionLongConvert from "reflectionLongConvert" /* 1216 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
 export const reflectionScalarDefault = function reflectionScalarDefault(T) {
   let STRING = L;
@@ -25,6 +23,8 @@ export const reflectionScalarDefault = function reflectionScalarDefault(T) {
                 if (ScalarType.ScalarType.FLOAT !== T) {
                   if (ScalarType.ScalarType.BYTES === T) {
                     const _Uint8Array = Uint8Array;
+                    const self = this;
+                    const self2 = this;
                     const uint8Array = new Uint8Array(0);
                     return uint8Array;
                   } else if (ScalarType.ScalarType.STRING === T) {
@@ -38,9 +38,11 @@ export const reflectionScalarDefault = function reflectionScalarDefault(T) {
             }
           }
         }
-        return reflectionLongConvert.reflectionLongConvert(_mod1205.PbLong.ZERO, STRING);
+        const tmp3Result = reflectionLongConvert;
+        return tmp3Result.reflectionLongConvert(PbULong.PbLong.ZERO, STRING);
       }
     }
-    return reflectionLongConvert.reflectionLongConvert(_mod1205.PbULong.ZERO, STRING);
+    const tmp3Result2 = reflectionLongConvert;
+    return tmp3Result2.reflectionLongConvert(PbULong.PbULong.ZERO, STRING);
   }
 };

@@ -1,16 +1,15 @@
 // === Module 7369: ? ===
 
 // Module 7369
+import _modDef7368 from "module_7368" /* 7368 */;
 import _mod7370 from "module_7370" /* 7370 */;
 
-require = fn;
-const dependencyMap = arg6;
-const obj = { 33434: null, 33437: null, 34850: null, 34852: "SpectralSensitivity", 34855: "ISOSpeedRatings", 34856: null, 34858: "TimeZoneOffset", 34859: "SelfTimerMode", 34864: null, 34865: "StandardOutputSensitivity", 34866: "RecommendedExposureIndex", 34867: "ISOSpeed", 34868: "ISOSpeedLatitudeyyy", 34869: "ISOSpeedLatitudezzz", 36864: null, 36867: "DateTimeOriginal", 36868: "DateTimeDigitized", 36873: "GooglePlusUploadCode", 36880: "OffsetTime", 36881: "OffsetTimeOriginal", 36882: "OffsetTimeDigitized", 37121: null, 37122: "CompressedBitsPerPixel", 37377: null, 37378: null, 37379: "BrightnessValue", 37380: "ExposureBiasValue", 37381: null, 37382: null, 37383: null, 37384: null, 37385: null, 37386: null, 37393: "ImageNumber", 37394: null, 37395: "ImageHistory", 37396: null, 37500: null, 37510: null, 37520: "SubSecTime", 37521: "SubSecTimeOriginal", 37522: "SubSecTimeDigitized", 37724: "ImageSourceData", 37888: null, 37889: null, 37890: null, 37891: null, 37892: null, 37893: null, 40960: null, 40961: null, 40962: "PixelXDimension", 40963: "PixelYDimension", 40964: "RelatedSoundFile", 40965: "Interoperability IFD Pointer", 41483: "FlashEnergy", 41484: null, 41486: "FocalPlaneXResolution", 41487: "FocalPlaneYResolution", 41488: null, 41492: null, 41493: "ExposureIndex", 41495: null, 41728: null, 41729: null, 41730: null, 41985: null, 41986: null, 41987: null, 41988: null, 41989: null, 41990: null, 41991: null, 41992: null, 41993: null, 41994: null, 41995: null, 41996: null, 42016: "ImageUniqueID", 42032: "CameraOwnerName", 42033: "BodySerialNumber", 42034: null, 42035: "LensMake", 42036: "LensModel", 42037: "LensSerialNumber", 42080: null, 42081: "SourceImageNumberOfCompositeImage", 42082: "SourceExposureTimesOfCompositeImage", 42240: "Gamma", 59932: "Padding", 59933: "OffsetSchema", 65000: "OwnerName", 65001: "SerialNumber", 65002: "Lens", 65100: "RawFile", 65101: "Converter", 65102: "WhiteBalance", 65105: "Exposure", 65106: "Shadows", 65107: "Brightness", 65108: "Contrast", 65109: "Saturation", 65110: "Sharpness", 65111: "Smoothness", 65112: "MoireFilter" };
-obj[33434] = { name: "ExposureTime", description: fn2(7368).ExposureTime };
-const obj2 = { name: "ExposureTime", description: fn2(7368).ExposureTime };
-obj[33437] = { name: "FNumber", description: fn2(7368).FNumber };
-const obj3 = { name: "FNumber", description: fn2(7368).FNumber };
-obj[34850] = { name: "ExposureProgram", description: fn2(7368).ExposureProgram };
+let obj = { 33434: null, 33437: null, 34850: null, 34852: "SpectralSensitivity", 34855: "ISOSpeedRatings", 34856: null, 34858: "TimeZoneOffset", 34859: "SelfTimerMode", 34864: null, 34865: "StandardOutputSensitivity", 34866: "RecommendedExposureIndex", 34867: "ISOSpeed", 34868: "ISOSpeedLatitudeyyy", 34869: "ISOSpeedLatitudezzz", 36864: null, 36867: "DateTimeOriginal", 36868: "DateTimeDigitized", 36873: "GooglePlusUploadCode", 36880: "OffsetTime", 36881: "OffsetTimeOriginal", 36882: "OffsetTimeDigitized", 37121: null, 37122: "CompressedBitsPerPixel", 37377: null, 37378: null, 37379: "BrightnessValue", 37380: "ExposureBiasValue", 37381: null, 37382: null, 37383: null, 37384: null, 37385: null, 37386: null, 37393: "ImageNumber", 37394: null, 37395: "ImageHistory", 37396: null, 37500: null, 37510: null, 37520: "SubSecTime", 37521: "SubSecTimeOriginal", 37522: "SubSecTimeDigitized", 37724: "ImageSourceData", 37888: null, 37889: null, 37890: null, 37891: null, 37892: null, 37893: null, 40960: null, 40961: null, 40962: "PixelXDimension", 40963: "PixelYDimension", 40964: "RelatedSoundFile", 40965: "Interoperability IFD Pointer", 41483: "FlashEnergy", 41484: null, 41486: "FocalPlaneXResolution", 41487: "FocalPlaneYResolution", 41488: null, 41492: null, 41493: "ExposureIndex", 41495: null, 41728: null, 41729: null, 41730: null, 41985: null, 41986: null, 41987: null, 41988: null, 41989: null, 41990: null, 41991: null, 41992: null, 41993: null, 41994: null, 41995: null, 41996: null, 42016: "ImageUniqueID", 42032: "CameraOwnerName", 42033: "BodySerialNumber", 42034: null, 42035: "LensMake", 42036: "LensModel", 42037: "LensSerialNumber", 42080: null, 42081: "SourceImageNumberOfCompositeImage", 42082: "SourceExposureTimesOfCompositeImage", 42240: "Gamma", 59932: "Padding", 59933: "OffsetSchema", 65000: "OwnerName", 65001: "SerialNumber", 65002: "Lens", 65100: "RawFile", 65101: "Converter", 65102: "WhiteBalance", 65105: "Exposure", 65106: "Shadows", 65107: "Brightness", 65108: "Contrast", 65109: "Saturation", 65110: "Sharpness", 65111: "Smoothness", 65112: "MoireFilter" };
+obj[33434] = { name: "ExposureTime", description: _modDef7368.ExposureTime };
+({ name: "ExposureTime", description: _modDef7368.ExposureTime });
+obj[33437] = { name: "FNumber", description: _modDef7368.FNumber };
+({ name: "FNumber", description: _modDef7368.FNumber });
+obj[34850] = { name: "ExposureProgram", description: _modDef7368.ExposureProgram };
 obj[34856] = {
   name: "OECF",
   description() {
@@ -26,19 +25,21 @@ obj[34864] = {
 obj[36864] = {
   name: "ExifVersion",
   description(value) {
-    return _mod7370.getStringValue(value);
+    const obj = _mod7370;
+    return obj.getStringValue(value);
   }
 };
-const obj4 = { name: "ExposureProgram", description: fn2(7368).ExposureProgram };
-obj[37121] = { name: "ComponentsConfiguration", description: fn2(7368).ComponentsConfiguration };
-const obj5 = { name: "ComponentsConfiguration", description: fn2(7368).ComponentsConfiguration };
-obj[37377] = { name: "ShutterSpeedValue", description: fn2(7368).ShutterSpeedValue };
-const obj6 = { name: "ShutterSpeedValue", description: fn2(7368).ShutterSpeedValue };
-obj[37378] = { name: "ApertureValue", description: fn2(7368).ApertureValue };
+({ name: "ExposureProgram", description: _modDef7368.ExposureProgram });
+obj[37121] = { name: "ComponentsConfiguration", description: _modDef7368.ComponentsConfiguration };
+({ name: "ComponentsConfiguration", description: _modDef7368.ComponentsConfiguration });
+obj[37377] = { name: "ShutterSpeedValue", description: _modDef7368.ShutterSpeedValue };
+({ name: "ShutterSpeedValue", description: _modDef7368.ShutterSpeedValue });
+obj[37378] = { name: "ApertureValue", description: _modDef7368.ApertureValue };
 obj[37381] = {
   name: "MaxApertureValue",
   description(arg0) {
-    return Math.pow(Math.sqrt(2), arg0[0] / arg0[1]).toFixed(2);
+    const powResult = Math.pow(Math.sqrt(2), arg0[0] / arg0[1]);
+    return powResult.toFixed(2);
   }
 };
 obj[37382] = {
@@ -47,10 +48,10 @@ obj[37382] = {
     return arg0[0] / arg0[1] + " m";
   }
 };
-const obj7 = { name: "ApertureValue", description: fn2(7368).ApertureValue };
-obj[37383] = { name: "MeteringMode", description: fn2(7368).MeteringMode };
-const obj8 = { name: "MeteringMode", description: fn2(7368).MeteringMode };
-obj[37384] = { name: "LightSource", description: fn2(7368).LightSource };
+({ name: "ApertureValue", description: _modDef7368.ApertureValue });
+obj[37383] = { name: "MeteringMode", description: _modDef7368.MeteringMode };
+({ name: "MeteringMode", description: _modDef7368.MeteringMode });
+obj[37384] = { name: "LightSource", description: _modDef7368.LightSource };
 obj[37385] = {
   name: "Flash",
   description(arg0) {
@@ -145,8 +146,8 @@ obj[37385] = {
     return str;
   }
 };
-const obj9 = { name: "LightSource", description: fn2(7368).LightSource };
-obj[37386] = { name: "FocalLength", description: fn2(7368).FocalLength };
+({ name: "LightSource", description: _modDef7368.LightSource });
+obj[37386] = { name: "FocalLength", description: _modDef7368.FocalLength };
 obj[37394] = {
   name: "SecurityClassification",
   description(arg0) {
@@ -156,9 +157,10 @@ obj[37394] = {
 obj[37396] = {
   name: "SubjectArea",
   description(arg0) {
+    let str;
     if (2 === arg0.length) {
       const _HermesInternal3 = HermesInternal;
-      let str = "Location; X: " + arg0[0] + ", Y: " + arg0[1];
+      str = "Location; X: " + arg0[0] + ", Y: " + arg0[1];
     } else if (3 === arg0.length) {
       const _HermesInternal2 = HermesInternal;
       str = "Circle; X: " + arg0[0] + ", Y: " + arg0[1] + ", diameter: " + arg0[2];
@@ -178,8 +180,8 @@ obj[37500] = {
     return "[Raw maker note data]";
   }
 };
-const obj10 = { name: "FocalLength", description: fn2(7368).FocalLength };
-obj[37510] = { name: "UserComment", description: fn(7370).getEncodedString };
+({ name: "FocalLength", description: _modDef7368.FocalLength });
+obj[37510] = { name: "UserComment", description: _mod7370.getEncodedString };
 obj[37888] = {
   name: "AmbientTemperature",
   description(arg0) {
@@ -223,19 +225,21 @@ obj[40960] = {
     return mapped.join("");
   }
 };
-const obj11 = { name: "UserComment", description: fn(7370).getEncodedString };
-obj[40961] = { name: "ColorSpace", description: fn2(7368).ColorSpace };
+({ name: "UserComment", description: _mod7370.getEncodedString });
+obj[40961] = { name: "ColorSpace", description: _modDef7368.ColorSpace };
 obj[41484] = {
   name: "SpatialFrequencyResponse",
   description() {
     return "[Raw SFR table data]";
   }
 };
-const obj12 = { name: "ColorSpace", description: fn2(7368).ColorSpace };
-obj[41488] = { name: "FocalPlaneResolutionUnit", description: fn2(7368).FocalPlaneResolutionUnit };
+({ name: "ColorSpace", description: _modDef7368.ColorSpace });
+obj[41488] = { name: "FocalPlaneResolutionUnit", description: _modDef7368.FocalPlaneResolutionUnit };
 obj[41492] = {
   name: "SubjectLocation",
   description(arg0) {
+    let tmp;
+    let tmp2;
     [tmp, tmp2] = arg0;
     return "X: " + tmp + ", Y: " + tmp2;
   }
@@ -300,12 +304,12 @@ obj[41730] = {
     return "[Raw CFA pattern table data]";
   }
 };
-const obj13 = { name: "FocalPlaneResolutionUnit", description: fn2(7368).FocalPlaneResolutionUnit };
-obj[41985] = { name: "CustomRendered", description: fn2(7368).CustomRendered };
-const obj14 = { name: "CustomRendered", description: fn2(7368).CustomRendered };
-obj[41986] = { name: "ExposureMode", description: fn2(7368).ExposureMode };
-const obj15 = { name: "ExposureMode", description: fn2(7368).ExposureMode };
-obj[41987] = { name: "WhiteBalance", description: fn2(7368).WhiteBalance };
+({ name: "FocalPlaneResolutionUnit", description: _modDef7368.FocalPlaneResolutionUnit });
+obj[41985] = { name: "CustomRendered", description: _modDef7368.CustomRendered };
+({ name: "CustomRendered", description: _modDef7368.CustomRendered });
+obj[41986] = { name: "ExposureMode", description: _modDef7368.ExposureMode };
+({ name: "ExposureMode", description: _modDef7368.ExposureMode });
+obj[41987] = { name: "WhiteBalance", description: _modDef7368.WhiteBalance };
 obj[41988] = {
   name: "DigitalZoomRatio",
   description(arg0) {
@@ -316,10 +320,10 @@ obj[41988] = {
     return str;
   }
 };
-const obj16 = { name: "WhiteBalance", description: fn2(7368).WhiteBalance };
-obj[41989] = { name: "FocalLengthIn35mmFilm", description: fn2(7368).FocalLengthIn35mmFilm };
-const obj17 = { name: "FocalLengthIn35mmFilm", description: fn2(7368).FocalLengthIn35mmFilm };
-obj[41990] = { name: "SceneCaptureType", description: fn2(7368).SceneCaptureType };
+({ name: "WhiteBalance", description: _modDef7368.WhiteBalance });
+obj[41989] = { name: "FocalLengthIn35mmFilm", description: _modDef7368.FocalLengthIn35mmFilm };
+({ name: "FocalLengthIn35mmFilm", description: _modDef7368.FocalLengthIn35mmFilm });
+obj[41990] = { name: "SceneCaptureType", description: _modDef7368.SceneCaptureType };
 obj[41991] = {
   name: "GainControl",
   description(arg0) {
@@ -346,12 +350,12 @@ obj[41991] = {
     return str;
   }
 };
-const obj18 = { name: "SceneCaptureType", description: fn2(7368).SceneCaptureType };
-obj[41992] = { name: "Contrast", description: fn2(7368).Contrast };
-const obj19 = { name: "Contrast", description: fn2(7368).Contrast };
-obj[41993] = { name: "Saturation", description: fn2(7368).Saturation };
-const obj20 = { name: "Saturation", description: fn2(7368).Saturation };
-obj[41994] = { name: "Sharpness", description: fn2(7368).Sharpness };
+({ name: "SceneCaptureType", description: _modDef7368.SceneCaptureType });
+obj[41992] = { name: "Contrast", description: _modDef7368.Contrast };
+({ name: "Contrast", description: _modDef7368.Contrast });
+obj[41993] = { name: "Saturation", description: _modDef7368.Saturation };
+({ name: "Saturation", description: _modDef7368.Saturation });
+obj[41994] = { name: "Sharpness", description: _modDef7368.Sharpness };
 obj[41995] = {
   name: "DeviceSettingDescription",
   description() {
@@ -400,5 +404,6 @@ obj[42080] = {
     return { 1: "Not a Composite Image", 2: "General Composite Image", 3: "Composite Image Captured While Shooting" }[arg0] || "Unknown";
   }
 };
+({ name: "Sharpness", description: _modDef7368.Sharpness });
 
 export default obj;

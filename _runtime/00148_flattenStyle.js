@@ -6,19 +6,16 @@ function flattenStyle(obj) {
     if (typeof obj === "object") {
       const _Array = Array;
       if (Array.isArray(obj)) {
+        let num;
         obj = {};
-        let num = 0;
-        if (0 < obj.length) {
-          do {
-            let tmp3 = flattenStyle(obj[num]);
-            if (tmp3) {
-              for (const key10019 in tmp3) {
-                obj[key10019] = tmp3[key10019];
-                continue;
-              }
+        for (let num = 0; num < obj.length; num = num + 1) {
+          let tmp3 = flattenStyle(obj[num]);
+          if (tmp3) {
+            for (const key10019 in tmp3) {
+              obj[key10019] = tmp3[key10019];
+              continue;
             }
-            num = num + 1;
-          } while (num < length);
+          }
         }
         return obj;
       } else {

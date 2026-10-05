@@ -3,12 +3,17 @@
 // Module 12659
 import _mod12572 from "module_12572" /* 12572 */;
 import _mod12574 from "module_12574" /* 12574 */;
-import setupIntegration from "module_12621" /* 12621 */;
+import module_12621 from "module_12621" /* 12621 */;
+
+let set;
 
 function flattenIssue(path) {
-  const obj = {};
-  const merged = Object.assign(path);
   let joined;
+  let json;
+  let json1;
+  const obj = { path: joined, keys: json, unionErrors: json1 };
+  const merged = Object.assign(path);
+  joined = undefined;
   if ("path" in path) {
     const _Array = Array;
     if (Array.isArray(path.path)) {
@@ -16,19 +21,16 @@ function flattenIssue(path) {
       joined = path.join(".");
     }
   }
-  obj.path = joined;
-  let json;
+  json = undefined;
   if ("keys" in path) {
     const _JSON = JSON;
     json = JSON.stringify(path.keys);
   }
-  obj.keys = json;
-  let json1;
+  json1 = undefined;
   if ("unionErrors" in path) {
     const _JSON2 = JSON;
     json1 = JSON.stringify(path.unionErrors);
   }
-  obj.unionErrors = json1;
   return obj;
 }
 function flattenIssuePath(arr) {
@@ -42,7 +44,8 @@ function flattenIssuePath(arr) {
   return mapped.join(".");
 }
 function formatIssueMessage(issues) {
-  const set = new Set();
+  set = new Set();
+  const tmp = issues.issues[Symbol.iterator]();
   while (tmp !== undefined) {
     let arr = flattenIssuePath(tmp2.path);
     if (arr.length > 0) {
@@ -55,14 +58,8 @@ function formatIssueMessage(issues) {
     let str4 = "variable";
     if (issues.issues.length > 0) {
       const first = issues.issues[0];
-      let tmp10 = undefined !== first;
-      if (tmp10) {
-        tmp10 = "expected" in first;
-      }
-      if (tmp10) {
-        tmp10 = typeof first.expected === "string";
-      }
       str4 = "variable";
+      const tmp10 = undefined !== first && "expected" in first && typeof first.expected === "string";
       if (tmp10) {
         str4 = first.expected;
       }
@@ -71,35 +68,41 @@ function formatIssueMessage(issues) {
     return "Failed to validate " + str4;
   } else {
     const _HermesInternal = HermesInternal;
-    return "Failed to validate keys: " + _mod12574.truncate(arr2.join(", "), 100);
+    const obj2 = _mod12574;
+    return "Failed to validate keys: " + obj2.truncate(arr2.join(", "), 100);
   }
-  tmp = issues.issues[Symbol.iterator]();
 }
 function applyZodErrorsToEvent(arg0, arg1) {
+  let items;
+  let obj2;
+  let obj4;
+  let obj6;
+  let obj8;
+  function originalExceptionIsZodError(originalException) {
+    const obj = _mod12572;
+    let isErrorResult = obj.isError(originalException) && "ZodError" === originalException.name;
+    if (isErrorResult) {
+      const _Array = Array;
+      isErrorResult = Array.isArray(originalException.issues);
+    }
+    return isErrorResult;
+  }
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
   }
   if (exception.exception) {
     if (exception.exception.values) {
-      if (originalException) {
+      const tmp2 = originalException;
+      if (tmp2) {
         if (originalException.originalException) {
-          if ((function originalExceptionIsZodError(originalException) {
-            let isErrorResult = _mod12572.isError(originalException);
-            if (isErrorResult) {
-              isErrorResult = "ZodError" === originalException.name;
-            }
-            if (isErrorResult) {
-              const _Array = Array;
-              isErrorResult = Array.isArray(originalException.issues);
-            }
-            return isErrorResult;
-          })(originalException.originalException)) {
+          if (originalExceptionIsZodError(originalException.originalException)) {
             if (0 !== originalException.originalException.issues.length) {
               try {
+                let substr;
                 const issues = originalException.originalException.issues;
                 if (flag) {
-                  let substr = issues;
+                  substr = issues;
                 } else {
                   substr = issues.slice(0, arg0);
                 }
@@ -110,43 +113,35 @@ function applyZodErrorsToEvent(arg0, arg1) {
                     originalException.attachments = [];
                   }
                   const attachments = originalException.attachments;
-                  const obj = { filename: "zod_issues.json", data: null };
+                  let obj = { filename: "zod_issues.json", data: JSON.stringify(obj2) };
                   const _JSON = JSON;
-                  const obj2 = { issues: mapped };
-                  obj.data = JSON.stringify(obj2);
-                  attachments.push(obj);
+                  const push = attachments.push;
+                  obj2 = { issues: mapped };
+                  push(obj);
                 }
-                const obj3 = {};
+                const obj3 = { exception: obj4, extra: obj6 };
                 const merged = Object.assign(exception);
-                const obj4 = {};
+                obj4 = { values: items };
                 const merged1 = Object.assign(exception.exception);
-                const obj5 = {};
+                const obj5 = { value: formatIssueMessage(originalException.originalException) };
                 const merged2 = Object.assign(exception.exception.values[0]);
-                obj5.value = formatIssueMessage(originalException.originalException);
-                const items = [obj5];
+                items = [obj5];
                 const values = exception.exception.values;
-                HermesBuiltin.arraySpread(values.slice(1), 1);
-                obj4.values = items;
-                obj3.exception = obj4;
-                const obj6 = {};
+                HermesBuiltin.arraySpread(items, values.slice(1), 1);
+                obj6 = { "zoderror.issues": mapped.slice(0, arg0) };
                 const merged3 = Object.assign(exception.extra);
-                obj6["zoderror.issues"] = mapped.slice(0, arg0);
-                obj3.extra = obj6;
                 return obj3;
               } catch (error) {
-                const obj7 = {};
-                const merged4 = Object.assign(tmp);
-                const obj8 = {};
-                const merged5 = Object.assign(tmp.extra);
+                const obj7 = { extra: obj8 };
+                const merged4 = Object.assign(exception);
+                obj8 = { "zoderrors sentry integration parse error": obj9 };
+                const merged5 = Object.assign(exception.extra);
                 const _Error = Error;
                 let str = "unknown";
                 if (error instanceof Error) {
                   const _HermesInternal = HermesInternal;
                   str = "" + error.name + ": " + error.message + "\n" + error.stack;
                 }
-                const obj9 = { message: "an exception was thrown while processing ZodError within applyZodErrorsToEvent()", error: str };
-                obj8["zoderrors sentry integration parse error"] = obj9;
-                obj7.extra = obj8;
                 return obj7;
               }
             }
@@ -162,10 +157,14 @@ export { applyZodErrorsToEvent };
 export { flattenIssue };
 export { flattenIssuePath };
 export { formatIssueMessage };
-export const zodErrorsIntegration = setupIntegration.defineIntegration(() => {
+export const zodErrorsIntegration = module_12621.defineIntegration(() => {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
+  }
+  let num = 10;
+  if (undefined !== obj.limit) {
+    num = obj.limit;
   }
   return {
     name: "ZodErrors",

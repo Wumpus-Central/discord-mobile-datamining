@@ -1,30 +1,33 @@
 // === Module 4391: subMonths ===
 
 // Module 4391 (subMonths)
-import module_3962_mod from "module_3962" /* 3962 */;
-import module_4107_mod from "module_4107" /* 4107 */;
+import toInteger_mod from "toInteger" /* 3962 */;
+import addMonths_mod from "addMonths" /* 4107 */;
 import requiredArgs_mod from "requiredArgs" /* 3959 */;
 
-let module_3962 = module_3962_mod;
-if (!module_3962) {
-  const obj = { default: module_3962 };
-  let tmp3 = obj;
+let tmp3;
+let tmp5;
+let tmp7;
+let toInteger = toInteger_mod;
+if (!toInteger) {
+  tmp3 = { default: toInteger };
+  const obj = { default: toInteger };
 } else {
-  tmp3 = module_3962;
+  tmp3 = toInteger;
 }
-module_3962 = tmp3;
-let module_4107 = module_4107_mod;
-if (!module_4107) {
-  const obj2 = { default: module_4107 };
-  let tmp5 = obj2;
+toInteger = tmp3;
+let addMonths = addMonths_mod;
+if (!addMonths) {
+  tmp5 = { default: addMonths };
+  const obj2 = { default: addMonths };
 } else {
-  tmp5 = module_4107;
+  tmp5 = addMonths;
 }
-module_4107 = tmp5;
+addMonths = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
+  tmp7 = { default: requiredArgs };
   const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
 } else {
   tmp7 = requiredArgs;
 }
@@ -32,6 +35,5 @@ requiredArgs = tmp7;
 
 export default function subMonths(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  return module_4107.default(arg0, -module_3962.default(arg1));
+  return addMonths.default(arg0, -toInteger.default(arg1));
 };
-export default exports.default;

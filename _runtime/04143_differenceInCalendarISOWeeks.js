@@ -1,30 +1,33 @@
 // === Module 4143: differenceInCalendarISOWeeks ===
 
 // Module 4143 (differenceInCalendarISOWeeks)
-import module_4121_mod from "module_4121" /* 4121 */;
+import getTimezoneOffsetInMilliseconds_mod from "getTimezoneOffsetInMilliseconds" /* 4121 */;
 import startOfISOWeek_mod from "startOfISOWeek" /* 4116 */;
 import requiredArgs_mod from "requiredArgs" /* 3959 */;
 
-let module_4121 = module_4121_mod;
-if (!module_4121) {
-  const obj = { default: module_4121 };
-  let tmp3 = obj;
+let tmp3;
+let tmp5;
+let tmp7;
+let getTimezoneOffsetInMilliseconds = getTimezoneOffsetInMilliseconds_mod;
+if (!getTimezoneOffsetInMilliseconds) {
+  tmp3 = { default: getTimezoneOffsetInMilliseconds };
+  const obj = { default: getTimezoneOffsetInMilliseconds };
 } else {
-  tmp3 = module_4121;
+  tmp3 = getTimezoneOffsetInMilliseconds;
 }
-module_4121 = tmp3;
+getTimezoneOffsetInMilliseconds = tmp3;
 let startOfISOWeek = startOfISOWeek_mod;
 if (!startOfISOWeek) {
+  tmp5 = { default: startOfISOWeek };
   const obj2 = { default: startOfISOWeek };
-  let tmp5 = obj2;
 } else {
   tmp5 = startOfISOWeek;
 }
 startOfISOWeek = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
+  tmp7 = { default: requiredArgs };
   const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
 } else {
   tmp7 = requiredArgs;
 }
@@ -36,8 +39,7 @@ export default function differenceInCalendarISOWeeks(arg0, arg1) {
   const defaultResult1 = startOfISOWeek.default(arg0);
   const defaultResult2 = startOfISOWeek.default(arg1);
   const time = defaultResult1.getTime();
-  const diff = time - module_4121.default(defaultResult1);
+  const diff = time - getTimezoneOffsetInMilliseconds.default(defaultResult1);
   const time1 = defaultResult2.getTime();
-  return Math.round((diff - (time1 - module_4121.default(defaultResult2))) / c3);
+  return Math.round((diff - (time1 - getTimezoneOffsetInMilliseconds.default(defaultResult2))) / c3);
 };
-export default exports.default;

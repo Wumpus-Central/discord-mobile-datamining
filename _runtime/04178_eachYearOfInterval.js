@@ -1,21 +1,23 @@
 // === Module 4178: eachYearOfInterval ===
 
 // Module 4178 (eachYearOfInterval)
-import _typeof_mod from "module_3958" /* 3958 */;
+import toDate_mod from "toDate" /* 3958 */;
 import requiredArgs_mod from "requiredArgs" /* 3959 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  let obj = { default: _typeof };
-  let tmp3 = obj;
+let tmp3;
+let tmp5;
+let toDate = toDate_mod;
+if (!toDate) {
+  let obj = { default: toDate };
+  tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = toDate;
 }
-_typeof = tmp3;
+toDate = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
+  tmp5 = { default: requiredArgs };
   const obj2 = { default: requiredArgs };
-  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }
@@ -28,15 +30,16 @@ export default function eachYearOfInterval(arg0) {
   if (!arg0) {
     obj = {};
   }
-  const defaultResult1 = _typeof.default(obj.start);
-  const time = _typeof.default(obj.end).getTime();
+  const defaultResult1 = toDate.default(obj.start);
+  const defaultResult2 = toDate.default(obj.end);
+  const time = defaultResult2.getTime();
   if (defaultResult1.getTime() <= time) {
     const items = [];
     defaultResult1.setHours(0, 0, 0, 0);
     defaultResult1.setMonth(0, 1);
     if (defaultResult1.getTime() <= time) {
       do {
-        let arr = items.push(_typeof.default(defaultResult1));
+        let arr = items.push(toDate.default(defaultResult1));
         let setFullYearResult = defaultResult1.setFullYear(defaultResult1.getFullYear() + 1);
         time1 = defaultResult1.getTime();
       } while (time1 <= time);
@@ -44,9 +47,9 @@ export default function eachYearOfInterval(arg0) {
     return items;
   } else {
     const _RangeError = RangeError;
+    const self = this;
+    const self2 = this;
     const rangeError = new RangeError("Invalid interval");
     throw rangeError;
   }
-  const defaultResult2 = _typeof.default(obj.end);
 };
-export default exports.default;

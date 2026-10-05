@@ -2,17 +2,15 @@
 
 // Module 774 (_INTERNAL_clearAiProviderSkips)
 import _mod699 from "module_699" /* 699 */;
-import consoleSandbox from "consoleSandbox" /* 700 */;
+import CONSOLE_LEVELS from "CONSOLE_LEVELS" /* 700 */;
 
-require = arg1;
-const dependencyMap = arg6;
-Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const set = new Set();
 
 export const _INTERNAL_clearAiProviderSkips = function _INTERNAL_clearAiProviderSkips() {
   set.clear();
   if (_mod699.DEBUG_BUILD) {
-    const debug = consoleSandbox.debug;
+    const debug = CONSOLE_LEVELS.debug;
     debug.log("Cleared AI provider skip registrations");
   }
 };
@@ -23,7 +21,7 @@ export const _INTERNAL_skipAiProviderWrapping = function _INTERNAL_skipAiProvide
   const item = arr.forEach((item) => {
     set.add(item);
     if (_mod699.DEBUG_BUILD) {
-      const debug = consoleSandbox.debug;
+      const debug = CONSOLE_LEVELS.debug;
       const _HermesInternal = HermesInternal;
       debug.log("AI provider \"" + item + "\" wrapping will be skipped");
     }

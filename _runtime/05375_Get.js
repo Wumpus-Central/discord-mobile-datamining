@@ -2,21 +2,26 @@
 
 // Module 5375 (Get)
 import _mod1293 from "module_1293" /* 1293 */;
-import _mod1327 from "module_1327" /* 1327 */;
-import _mod5329 from "module_5329" /* 5329 */;
-import _mod5376 from "module_5376" /* 5376 */;
+import inspect_ from "inspect_" /* 1327 */;
+import isObject from "isObject" /* 5329 */;
+import isPropertyKey from "isPropertyKey" /* 5376 */;
 
 
 export default function Get(arg0, arg1) {
-  if (_mod5329(arg0)) {
-    if (_mod5376(arg1)) {
+  if (isObject(arg0)) {
+    if (isPropertyKey(arg1)) {
       return arg0[arg1];
     } else {
-      const tmpResult1 = new _mod1293("Assertion failed: P is not a Property Key, got " + _mod1327(arg1));
+      const self3 = this;
+      const self4 = this;
+      const tmpResult = _mod1293;
+      const tmpResult1 = new tmpResult("Assertion failed: P is not a Property Key, got " + inspect_(arg1));
       throw tmpResult1;
     }
   } else {
-    const tmp5 = new _mod1293("Assertion failed: Type(O) is not Object");
-    throw tmp5;
+    const self = this;
+    const self2 = this;
+    const tmp3 = new _mod1293("Assertion failed: Type(O) is not Object");
+    throw tmp3;
   }
 };

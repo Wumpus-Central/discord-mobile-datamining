@@ -1,10 +1,10 @@
 // === Module 7014: ? ===
 
 // Module 7014
-Key = Key.Key;
+let Key = exports.Key;
 if (!Key) {
   const obj = {};
-  Key.Key = obj;
+  exports.Key = obj;
   Key = obj;
 }
 Key.Unidentified = "Unidentified";

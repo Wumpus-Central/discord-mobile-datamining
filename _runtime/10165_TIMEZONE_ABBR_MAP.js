@@ -3,95 +3,7 @@
 // Module 10165 (TIMEZONE_ABBR_MAP)
 import Meridiem from "Meridiem" /* 10166 */;
 
-require = arg1;
-const exports = arg5;
-const dependencyMap = arg6;
-
-export const getNthWeekdayOfMonth = function getNthWeekdayOfMonth(arg0, arg1, arg2, arg3) {
-  let sum1;
-  let num = arg4;
-  if (arg4 === undefined) {
-    num = 0;
-  }
-  let num2 = 0;
-  let num3 = 0;
-  let num4 = 0;
-  if (0 < arg3) {
-    do {
-      let sum = num4 + 1;
-      let _Date = Date;
-      let tmp2 = new.target;
-      let tmp3 = new.target;
-      let date = new Date(arg0, arg1 - 1, sum);
-      sum1 = num3;
-      if (date.getDay() === arg2) {
-        sum1 = num3 + 1;
-      }
-      num3 = sum1;
-      num4 = sum;
-      num2 = sum;
-    } while (sum1 < arg3);
-  }
-  return new Date(arg0, arg1 - 1, num2, num);
-};
-export const getLastWeekdayOfMonth = function getLastWeekdayOfMonth(arg0, arg1, arg2) {
-  let num = arg3;
-  if (arg3 === undefined) {
-    num = 0;
-  }
-  let num2 = 7;
-  if (0 !== arg2) {
-    num2 = arg2;
-  }
-  const date = new Date(arg0, arg1 - 1 + 1, 1, 12);
-  let num3 = 7;
-  if (0 !== date.getDay()) {
-    num3 = date.getDay();
-  }
-  if (num3 === num2) {
-    date.setDate(date.getDate() - 7);
-    const _Date = Date;
-    const diff = arg1 - 1;
-    const date1 = new Date(arg0, diff, date.getDate(), num);
-    return date1;
-  } else if (num3 < num2) {
-    num3 = 7 + num3;
-    let diff1 = num3 - num2;
-  } else {
-    diff1 = num3 - num2;
-  }
-};
-export const toTimezoneOffset = function toTimezoneOffset(formatted, instant) {
-  let obj = merged;
-  if (merged === undefined) {
-    obj = {};
-  }
-  if (null == formatted) {
-    return null;
-  } else if (typeof formatted === "number") {
-    return formatted;
-  } else {
-    let obj2 = obj[formatted];
-    if (null === obj2) {
-      obj2 = exports.TIMEZONE_ABBR_MAP[formatted];
-    }
-    if (null == obj2) {
-      return null;
-    } else if (typeof obj2 === "number") {
-      return obj2;
-    } else if (null == instant) {
-      return null;
-    } else {
-      if (instant > obj2.dstStart(instant.getFullYear())) {
-        if (instant <= obj2.dstEnd(instant.getFullYear())) {
-          return obj2.timezoneOffsetDuringDst;
-        }
-      }
-      return obj2.timezoneOffsetNonDst;
-    }
-  }
-};
-export const TIMEZONE_ABBR_MAP = {
+let obj = {
   ACDT: 630,
   ACST: 570,
   ADT: -180,
@@ -140,18 +52,20 @@ export const TIMEZONE_ABBR_MAP = {
       if (0 !== date.getDay()) {
         num2 = date.getDay();
       }
-      if (num2 === num) {
-        date.setDate(date.getDate() - 7);
-        const _Date = Date;
-        const diff = MARCH - 1;
-        const date1 = new Date(arg0, diff, date.getDate(), 2);
-        return date1;
-      } else if (num2 < num) {
-        num2 = 7 + num2;
-        let diff1 = num2 - num;
-      } else {
-        diff1 = num2 - num;
+      let num3 = 7;
+      if (num2 !== num) {
+        let diff;
+        if (num2 < num) {
+          diff = 7 + num2 - num;
+        } else {
+          diff = num2 - num;
+        }
+        num3 = diff;
       }
+      date.setDate(date.getDate() - num3);
+      const diff1 = MARCH - 1;
+      const date1 = new Date(arg0, diff1, date.getDate(), 2);
+      return date1;
     },
     dstEnd(arg0) {
       const OCTOBER = Meridiem.Month.OCTOBER;
@@ -165,18 +79,20 @@ export const TIMEZONE_ABBR_MAP = {
       if (0 !== date.getDay()) {
         num2 = date.getDay();
       }
-      if (num2 === num) {
-        date.setDate(date.getDate() - 7);
-        const _Date = Date;
-        const diff = OCTOBER - 1;
-        const date1 = new Date(arg0, diff, date.getDate(), 3);
-        return date1;
-      } else if (num2 < num) {
-        num2 = 7 + num2;
-        let diff1 = num2 - num;
-      } else {
-        diff1 = num2 - num;
+      let num3 = 7;
+      if (num2 !== num) {
+        let diff;
+        if (num2 < num) {
+          diff = 7 + num2 - num;
+        } else {
+          diff = num2 - num;
+        }
+        num3 = diff;
       }
+      date.setDate(date.getDate() - num3);
+      const diff1 = OCTOBER - 1;
+      const date1 = new Date(arg0, diff1, date.getDate(), 3);
+      return date1;
     }
   },
   CHADT: 825,
@@ -198,8 +114,8 @@ export const TIMEZONE_ABBR_MAP = {
       do {
         sum = num2 + 1;
         let _Date = Date;
-        let tmp3 = new.target;
-        let tmp4 = new.target;
+        let self = this;
+        let self2 = this;
         let date = new Date(arg0, MARCH - 1, sum);
         sum1 = num;
         if (date.getDay() === tmp) {
@@ -208,7 +124,8 @@ export const TIMEZONE_ABBR_MAP = {
         num = sum1;
         num2 = sum;
       } while (sum1 < 2);
-      return new Date(arg0, MARCH - 1, sum, 2);
+      const date1 = new Date(arg0, MARCH - 1, sum, 2);
+      return date1;
     },
     dstEnd(arg0) {
       let sum;
@@ -219,8 +136,8 @@ export const TIMEZONE_ABBR_MAP = {
       do {
         sum = num2 + 1;
         let _Date = Date;
-        let tmp3 = new.target;
-        let tmp4 = new.target;
+        let self = this;
+        let self2 = this;
         let date = new Date(arg0, NOVEMBER - 1, sum);
         sum1 = num;
         if (date.getDay() === tmp) {
@@ -229,7 +146,8 @@ export const TIMEZONE_ABBR_MAP = {
         num = sum1;
         num2 = sum;
       } while (sum1 < 1);
-      return new Date(arg0, NOVEMBER - 1, sum, 2);
+      const date1 = new Date(arg0, NOVEMBER - 1, sum, 2);
+      return date1;
     }
   },
   CVT: -60,
@@ -258,8 +176,8 @@ export const TIMEZONE_ABBR_MAP = {
       do {
         sum = num2 + 1;
         let _Date = Date;
-        let tmp3 = new.target;
-        let tmp4 = new.target;
+        let self = this;
+        let self2 = this;
         let date = new Date(arg0, MARCH - 1, sum);
         sum1 = num;
         if (date.getDay() === tmp) {
@@ -268,7 +186,8 @@ export const TIMEZONE_ABBR_MAP = {
         num = sum1;
         num2 = sum;
       } while (sum1 < 2);
-      return new Date(arg0, MARCH - 1, sum, 2);
+      const date1 = new Date(arg0, MARCH - 1, sum, 2);
+      return date1;
     },
     dstEnd(arg0) {
       let sum;
@@ -279,8 +198,8 @@ export const TIMEZONE_ABBR_MAP = {
       do {
         sum = num2 + 1;
         let _Date = Date;
-        let tmp3 = new.target;
-        let tmp4 = new.target;
+        let self = this;
+        let self2 = this;
         let date = new Date(arg0, NOVEMBER - 1, sum);
         sum1 = num;
         if (date.getDay() === tmp) {
@@ -289,7 +208,8 @@ export const TIMEZONE_ABBR_MAP = {
         num = sum1;
         num2 = sum;
       } while (sum1 < 1);
-      return new Date(arg0, NOVEMBER - 1, sum, 2);
+      const date1 = new Date(arg0, NOVEMBER - 1, sum, 2);
+      return date1;
     }
   },
   FJST: 780,
@@ -365,8 +285,8 @@ export const TIMEZONE_ABBR_MAP = {
       do {
         sum = num2 + 1;
         let _Date = Date;
-        let tmp3 = new.target;
-        let tmp4 = new.target;
+        let self = this;
+        let self2 = this;
         let date = new Date(arg0, MARCH - 1, sum);
         sum1 = num;
         if (date.getDay() === tmp) {
@@ -375,7 +295,8 @@ export const TIMEZONE_ABBR_MAP = {
         num = sum1;
         num2 = sum;
       } while (sum1 < 2);
-      return new Date(arg0, MARCH - 1, sum, 2);
+      const date1 = new Date(arg0, MARCH - 1, sum, 2);
+      return date1;
     },
     dstEnd(arg0) {
       let sum;
@@ -386,8 +307,8 @@ export const TIMEZONE_ABBR_MAP = {
       do {
         sum = num2 + 1;
         let _Date = Date;
-        let tmp3 = new.target;
-        let tmp4 = new.target;
+        let self = this;
+        let self2 = this;
         let date = new Date(arg0, NOVEMBER - 1, sum);
         sum1 = num;
         if (date.getDay() === tmp) {
@@ -396,7 +317,8 @@ export const TIMEZONE_ABBR_MAP = {
         num = sum1;
         num2 = sum;
       } while (sum1 < 1);
-      return new Date(arg0, NOVEMBER - 1, sum, 2);
+      const date1 = new Date(arg0, NOVEMBER - 1, sum, 2);
+      return date1;
     }
   },
   MUT: 240,
@@ -438,8 +360,8 @@ export const TIMEZONE_ABBR_MAP = {
       do {
         sum = num2 + 1;
         let _Date = Date;
-        let tmp3 = new.target;
-        let tmp4 = new.target;
+        let self = this;
+        let self2 = this;
         let date = new Date(arg0, MARCH - 1, sum);
         sum1 = num;
         if (date.getDay() === tmp) {
@@ -448,7 +370,8 @@ export const TIMEZONE_ABBR_MAP = {
         num = sum1;
         num2 = sum;
       } while (sum1 < 2);
-      return new Date(arg0, MARCH - 1, sum, 2);
+      const date1 = new Date(arg0, MARCH - 1, sum, 2);
+      return date1;
     },
     dstEnd(arg0) {
       let sum;
@@ -459,8 +382,8 @@ export const TIMEZONE_ABBR_MAP = {
       do {
         sum = num2 + 1;
         let _Date = Date;
-        let tmp3 = new.target;
-        let tmp4 = new.target;
+        let self = this;
+        let self2 = this;
         let date = new Date(arg0, NOVEMBER - 1, sum);
         sum1 = num;
         if (date.getDay() === tmp) {
@@ -469,7 +392,8 @@ export const TIMEZONE_ABBR_MAP = {
         num = sum1;
         num2 = sum;
       } while (sum1 < 1);
-      return new Date(arg0, NOVEMBER - 1, sum, 2);
+      const date1 = new Date(arg0, NOVEMBER - 1, sum, 2);
+      return date1;
     }
   },
   PWT: 540,
@@ -519,3 +443,86 @@ export const TIMEZONE_ABBR_MAP = {
   YEKST: 360,
   YEKT: 360
 };
+
+export const getNthWeekdayOfMonth = function getNthWeekdayOfMonth(arg0, arg1, arg2, arg3) {
+  let sum1;
+  let num = arg4;
+  if (arg4 === undefined) {
+    num = 0;
+  }
+  let num2 = 0;
+  let num3 = 0;
+  let num4 = 0;
+  if (0 < arg3) {
+    do {
+      let sum = num4 + 1;
+      let _Date = Date;
+      let self = this;
+      let self2 = this;
+      let date = new Date(arg0, arg1 - 1, sum);
+      sum1 = num3;
+      if (date.getDay() === arg2) {
+        sum1 = num3 + 1;
+      }
+      num3 = sum1;
+      num4 = sum;
+      num2 = sum;
+    } while (sum1 < arg3);
+  }
+  const date1 = new Date(arg0, arg1 - 1, num2, num);
+  return date1;
+};
+export const getLastWeekdayOfMonth = function getLastWeekdayOfMonth(arg0, arg1, arg2) {
+  let num = arg3;
+  if (arg3 === undefined) {
+    num = 0;
+  }
+  let num2 = 7;
+  if (0 !== arg2) {
+    num2 = arg2;
+  }
+  const date = new Date(arg0, arg1 - 1 + 1, 1, 12);
+  let num3 = 7;
+  if (0 !== date.getDay()) {
+    num3 = date.getDay();
+  }
+  let num4 = 7;
+  if (num3 !== num2) {
+    let diff;
+    if (num3 < num2) {
+      diff = 7 + num3 - num2;
+    } else {
+      diff = num3 - num2;
+    }
+    num4 = diff;
+  }
+  date.setDate(date.getDate() - num4);
+  const diff1 = arg1 - 1;
+  const date1 = new Date(arg0, diff1, date.getDate(), num);
+  return date1;
+};
+export const toTimezoneOffset = function toTimezoneOffset(formatted, instant) {
+  let obj = merged;
+  if (merged === undefined) {
+    obj = {};
+  }
+  if (null == formatted) {
+    return null;
+  } else if (typeof formatted === "number") {
+    return formatted;
+  } else if (null == (obj[formatted] ?? exports.TIMEZONE_ABBR_MAP[formatted])) {
+    return null;
+  } else if (typeof obj[formatted] ?? exports.TIMEZONE_ABBR_MAP[formatted] === "number") {
+    return obj[formatted] ?? exports.TIMEZONE_ABBR_MAP[formatted];
+  } else if (null == instant) {
+    return null;
+  } else {
+    if (instant > (obj[formatted] ?? exports.TIMEZONE_ABBR_MAP[formatted]).dstStart(instant.getFullYear())) {
+      if (instant <= (obj[formatted] ?? exports.TIMEZONE_ABBR_MAP[formatted]).dstEnd(instant.getFullYear())) {
+        return (obj[formatted] ?? exports.TIMEZONE_ABBR_MAP[formatted]).timezoneOffsetDuringDst;
+      }
+    }
+    return (obj[formatted] ?? exports.TIMEZONE_ABBR_MAP[formatted]).timezoneOffsetNonDst;
+  }
+};
+export const TIMEZONE_ABBR_MAP = obj;

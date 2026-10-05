@@ -1,29 +1,33 @@
 // === Module 6360: ? ===
 
 // Module 6360
-import _mod6361 from "module_6361" /* 6361 */;
-import _slicedToArray from "module_6342" /* 6342 */;
+import react2 from "react" /* 6361 */;
+import _slicedToArray from "_slicedToArray" /* 6342 */;
+import react from "react" /* 19 */;
 
-require = fn;
-const noop = fn(19);
-({ useState: c3, useCallback: closure_4 } = noop);
+let c3;
+let closure_4;
+({ useState: c3, useCallback: closure_4 } = react);
 
 export const useLayoutState = function useLayoutState(arg0) {
-  const tmp = _slicedToArray(React3(arg0), 2);
-  closure_0 = tmp[1];
-  const recyclerViewContext = _mod6361.useRecyclerViewContext();
-  const items = [tmp[0], ];
+  let closure_0;
+  let first;
+  [first, closure_0] = _false(arg0);
+  const obj = react2;
+  const recyclerViewContext = obj.useRecyclerViewContext();
+  const items = [first, ];
   const items1 = [recyclerViewContext];
-  items[1] = React4((arg0, arg1) => {
+  items[1] = React3((arg0, arg1) => {
     closure_0 = arg0;
-    closure_0((arg0) => {
+    const tmp = closure_0((arg0) => {
       let tmpResult = closure_0;
       if (typeof closure_0 === "function") {
         tmpResult = tmp(arg0);
       }
       return tmpResult;
     });
-    if (!arg1) {
+    const tmp2 = arg1;
+    if (!tmp2) {
       if (recyclerViewContext != null) {
         recyclerViewContext.layout();
       }

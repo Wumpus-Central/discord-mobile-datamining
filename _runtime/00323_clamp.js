@@ -2,12 +2,12 @@
 
 // Module 323 (clamp)
 
-export default function clamp(arg0, arg1, arg2) {
-  let tmp = arg0;
+export default function clamp(diff, arg1, highestMeasuredCellIndex) {
+  let tmp = diff;
   let tmp2 = arg1;
-  if (arg1 >= arg0) {
-    if (tmp2 > arg2) {
-      tmp2 = arg2;
+  if (arg1 >= diff) {
+    if (tmp2 > highestMeasuredCellIndex) {
+      tmp2 = highestMeasuredCellIndex;
     }
     tmp = tmp2;
   }

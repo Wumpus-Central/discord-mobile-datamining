@@ -1,17 +1,37 @@
 // === Module 6396: ViewHolder ===
 
 // Module 6396 (ViewHolder)
-import noop_mod from "module_19" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
+import react_mod from "react" /* 19 */;
+import Fragment from "Fragment" /* 21 */;
 
 const require = globalThis.__r;
+let _require, size;
 
-let noop = noop_mod;
-({ useCallback: c2, useLayoutEffect: c3, useMemo: closure_4, useRef: hasOwnProperty } = noop);
-let noop = noop_mod;
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+let c2;
+let c3;
+let closure_4;
+let hasOwnProperty;
+let metroImportDefault;
+let metroRequire;
+let react = react_mod;
+({ useCallback: c2, useLayoutEffect: c3, useMemo: closure_4, useRef: hasOwnProperty } = react);
+react = react_mod;
+({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
 
-export const ViewHolder = noop.memo((index) => {
+export const ViewHolder = react.memo((index) => {
+  let CellRendererComponent;
+  let ItemSeparatorComponent;
+  let closure_0;
+  let extraData;
+  let height;
+  let hidden;
+  let inverted;
+  let items4;
+  let layout;
+  let num;
+  let onSizeChanged;
+  let str2;
+  let width;
   const tmp = extraData(null);
   _require = tmp;
   index = index.index;
@@ -26,7 +46,7 @@ export const ViewHolder = noop.memo((index) => {
   const horizontal = index.horizontal;
   const items = [index, refHolder];
   ({ hidden, inverted } = index);
-  onSizeChanged(() => {
+  let tmp2 = onSizeChanged(() => {
     const result = refHolder.set(index, closure_0);
     return () => {
       if (refHolder.get(index) === closure_1_0) {
@@ -36,12 +56,12 @@ export const ViewHolder = noop.memo((index) => {
   }, items);
   const items1 = [index, onSizeChanged];
   const items2 = [ItemSeparatorComponent, item, trailingItem];
-  const items3 = [item, extraData, target, renderItem];
   const tmp3 = refHolder((nativeEvent) => {
     if (onSizeChanged != null) {
       tmp(index, nativeEvent.nativeEvent.layout);
     }
   }, items1);
+  const items3 = [item, extraData, target, renderItem];
   let invertedTransformStyle;
   const tmp4 = renderItem(() => {
     let tmp2 = null;
@@ -49,61 +69,54 @@ export const ViewHolder = noop.memo((index) => {
       tmp2 = null;
       if (undefined !== trailingItem) {
         const obj = { leadingItem: item, trailingItem: tmp3 };
-        tmp2 = timestampProducer(tmp, obj);
+        tmp2 = metroRequire(tmp, obj);
       }
     }
     return tmp2;
   }, items2);
+  const tmp5 = renderItem(() => {
+    let tmpResult;
+    if (renderItem != null) {
+      const obj = { item, index, extraData, target };
+      tmpResult = tmp(obj);
+    }
+    if (tmpResult == null) {
+      tmpResult = null;
+    }
+    return tmpResult;
+  }, items3);
   if (inverted) {
-    invertedTransformStyle = require("module_6359").getInvertedTransformStyle(horizontal);
     let obj = require("module_6359");
+    invertedTransformStyle = obj.getInvertedTransformStyle(horizontal);
   }
   let str = "column";
   if (horizontal) {
     str = "row";
   }
-  const size = { flexDirection: str, position: null, width: null, height: null, minHeight: null, minWidth: null, maxHeight: null, maxWidth: null, left: null, top: null, opacity: null };
-  let str2 = "absolute";
+  size = { flexDirection: str, position: str2, width, height, minHeight: null, minWidth: null, maxHeight: null, maxWidth: null, left: null, top: null, opacity: num };
+  str2 = "absolute";
   if ("StickyHeader" === target) {
     str2 = "relative";
   }
-  size.position = str2;
-  let width;
+  width = undefined;
   if (layout.enforcedWidth) {
     width = layout.width;
   }
-  size.width = width;
-  let height;
+  height = undefined;
   if (layout.enforcedHeight) {
     height = layout.height;
   }
-  size.height = height;
   ({ minHeight: obj2.minHeight, minWidth: obj2.minWidth, maxHeight: obj2.maxHeight, maxWidth: obj2.maxWidth, x: obj2.left, y: obj2.top } = layout);
-  let num = 1;
+  num = 1;
   if (hidden) {
     num = 0;
   }
-  size.opacity = num;
   const merged = Object.assign(invertedTransformStyle);
   if (CellRendererComponent == null) {
-    CellRendererComponent = require("CompatView").CompatView;
+    CellRendererComponent = require("react-native").CompatView;
   }
-  const obj3 = { ref: tmp, onLayout: tmp3, style: size, index, children: null };
-  const items4 = [
-    renderItem(() => {
-      let tmpResult;
-      if (renderItem != null) {
-        const obj = { item, index, extraData, target };
-        tmpResult = tmp(obj);
-      }
-      if (tmpResult == null) {
-        tmpResult = null;
-      }
-      return tmpResult;
-    }, items3),
-    tmp4
-  ];
-  obj3.children = items4;
+  const obj3 = { ref: tmp, onLayout: tmp3, style: size, index, children: items4 };
+  items4 = [tmp5, tmp4];
   return target(CellRendererComponent, obj3);
 }, (index, index2) => {
   let tmp = index.index === index2.index;
@@ -111,7 +124,6 @@ export const ViewHolder = noop.memo((index) => {
     const layout = index.layout;
     const layout2 = index2.layout;
     tmp = layout.x === layout2.x && layout.y === layout2.y && layout.width === layout2.width && layout.height === layout2.height && layout.enforcedWidth === layout2.enforcedWidth && layout.enforcedHeight === layout2.enforcedHeight && layout.minWidth === layout2.minWidth && layout.minHeight === layout2.minHeight && layout.maxWidth === layout2.maxWidth && layout.maxHeight === layout2.maxHeight;
-    const tmp2 = layout.x === layout2.x && layout.y === layout2.y && layout.width === layout2.width && layout.height === layout2.height && layout.enforcedWidth === layout2.enforcedWidth && layout.enforcedHeight === layout2.enforcedHeight && layout.minWidth === layout2.minWidth && layout.minHeight === layout2.minHeight && layout.maxWidth === layout2.maxWidth && layout.maxHeight === layout2.maxHeight;
   }
   if (tmp) {
     tmp = index.refHolder === index2.refHolder;

@@ -1,39 +1,43 @@
 // === Module 4166: eachMinuteOfInterval ===
 
 // Module 4166 (eachMinuteOfInterval)
-import module_4123_mod from "module_4123" /* 4123 */;
-import _typeof_mod from "module_3958" /* 3958 */;
+import addMinutes_mod from "addMinutes" /* 4123 */;
+import toDate_mod from "toDate" /* 3958 */;
 import startOfMinute_mod from "startOfMinute" /* 4167 */;
 import requiredArgs_mod from "requiredArgs" /* 3959 */;
 
-let module_4123 = module_4123_mod;
-if (!module_4123) {
-  const obj = { default: module_4123 };
-  let tmp3 = obj;
+let tmp3;
+let tmp5;
+let tmp7;
+let tmp9;
+let addMinutes = addMinutes_mod;
+if (!addMinutes) {
+  tmp3 = { default: addMinutes };
+  const obj = { default: addMinutes };
 } else {
-  tmp3 = module_4123;
+  tmp3 = addMinutes;
 }
-module_4123 = tmp3;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj2 = { default: _typeof };
-  let tmp5 = obj2;
+addMinutes = tmp3;
+let toDate = toDate_mod;
+if (!toDate) {
+  tmp5 = { default: toDate };
+  const obj2 = { default: toDate };
 } else {
-  tmp5 = _typeof;
+  tmp5 = toDate;
 }
-_typeof = tmp5;
+toDate = tmp5;
 let startOfMinute = startOfMinute_mod;
 if (!startOfMinute) {
+  tmp7 = { default: startOfMinute };
   const obj3 = { default: startOfMinute };
-  let tmp7 = obj3;
 } else {
   tmp7 = startOfMinute;
 }
 startOfMinute = tmp7;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
+  tmp9 = { default: requiredArgs };
   const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
 } else {
   tmp9 = requiredArgs;
 }
@@ -42,15 +46,19 @@ requiredArgs = tmp9;
 export default function eachMinuteOfInterval(start, step) {
   let time2;
   requiredArgs.default(1, arguments);
-  let defaultResult1 = startOfMinute.default(_typeof.default(start.start));
+  let defaultResult1 = startOfMinute.default(toDate.default(start.start));
+  const defaultResult2 = toDate.default(start.end);
   const time = defaultResult1.getTime();
-  const time1 = _typeof.default(start.end).getTime();
+  const time1 = defaultResult2.getTime();
   if (time >= time1) {
     const _RangeError2 = RangeError;
+    const self3 = this;
+    const self4 = this;
     const rangeError = new RangeError("Invalid interval");
     throw rangeError;
   } else {
     step = undefined;
+    const _Number = Number;
     if (null != step) {
       step = step.step;
     }
@@ -61,15 +69,15 @@ export default function eachMinuteOfInterval(start, step) {
         num = step;
       }
     }
-    const NumberResult = Number(num);
-    if (NumberResult >= 1) {
+    const _NumberResult = _Number(num);
+    if (_NumberResult >= 1) {
       const _isNaN = isNaN;
-      if (!isNaN(NumberResult)) {
+      if (!isNaN(_NumberResult)) {
         const items = [];
         if (defaultResult1.getTime() <= time1) {
           do {
-            let arr = items.push(_typeof.default(defaultResult1));
-            let defaultResult3 = module_4123.default(defaultResult1, NumberResult);
+            let arr = items.push(toDate.default(defaultResult1));
+            let defaultResult3 = addMinutes.default(defaultResult1, _NumberResult);
             defaultResult1 = defaultResult3;
             time2 = defaultResult3.getTime();
           } while (time2 <= time1);
@@ -78,9 +86,9 @@ export default function eachMinuteOfInterval(start, step) {
       }
     }
     const _RangeError = RangeError;
+    const self = this;
+    const self2 = this;
     const rangeError1 = new RangeError("`options.step` must be a number equal to or greater than 1");
     throw rangeError1;
   }
-  const defaultResult2 = _typeof.default(start.end);
 };
-export default exports.default;

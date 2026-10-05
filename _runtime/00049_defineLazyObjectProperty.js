@@ -1,32 +1,38 @@
 // === Module 49: defineLazyObjectProperty ===
 
 // Module 49 (defineLazyObjectProperty)
+let closure_2;
+
 
 export default function defineLazyObjectProperty(global, item, get) {
-  closure_0 = global;
-  closure_1 = item;
+  let closure_0 = global;
+  let closure_1 = item;
   get = get.get;
+  let tmp = false !== get.enumerable;
   const enumerable = tmp;
   const writable = false !== get.writable;
-  c6 = false;
-  Object.defineProperty(global, item, {
+  let c6 = false;
+  let obj = {
     get: function getValue() {
-      if (!c6) {
-        const tmp2 = get();
-        closure_2 = tmp2;
+      const tmp = c6;
+      if (!tmp) {
+        const tmp3 = get();
+        closure_2 = tmp3;
         c6 = true;
         const _Object = Object;
-        const obj = { value: tmp2, configurable: true, enumerable, writable };
-        Object.defineProperty(closure_0, closure_1, obj);
+        const obj = { value: tmp3, configurable: true, enumerable, writable };
+        Object.defineProperty(global, item, obj);
       }
       return closure_2;
     },
     set: function setValue(value) {
       closure_2 = value;
       c6 = true;
-      Object.defineProperty(closure_0, closure_1, { value, configurable: true, enumerable, writable });
+      const obj = { value, configurable: true, enumerable, writable };
+      Object.defineProperty(global, item, obj);
     },
     configurable: true,
-    enumerable: false !== get.enumerable
-  });
+    enumerable: tmp
+  };
+  Object.defineProperty(global, item, obj);
 };

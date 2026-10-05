@@ -4,8 +4,15 @@
 import GLOBAL_OBJ from "module_12566" /* 12566 */;
 
 const require = globalThis.__r;
+let _require, c0, dependencyMap;
 
 function consoleSandbox(fn) {
+  let closure_1;
+  let console;
+  const f112292 = (item) => {
+    console[item] = closure_1[item];
+  };
+  const tmp = console;
   if ("console" in console(12566).GLOBAL_OBJ) {
     console = tmp(12566).GLOBAL_OBJ.console;
     dependencyMap = {};
@@ -16,20 +23,16 @@ function consoleSandbox(fn) {
       console[item] = obj[item];
     });
     try {
-      const item1 = keys.forEach((item) => {
-        console[item] = closure_1[item];
-      });
-      return fn();
+      const tmp6 = fn();
+      const item1 = keys.forEach(f112292);
+      return tmp6;
     } catch (tmp8) {
-      const item2 = arr.forEach((item) => {
-        console[item] = closure_1[item];
-      });
+      const item2 = keys.forEach(f112292);
       throw tmp8;
     }
   } else {
     return fn();
   }
-  tmp = console;
 }
 let items = ["debug", "info", "warn", "error", "log", "assert", "trace"];
 const originalConsoleMethods = {};
@@ -38,7 +41,7 @@ export const CONSOLE_LEVELS = items;
 export { consoleSandbox };
 export const logger = GLOBAL_OBJ.getGlobalSingleton("logger", function makeLogger() {
   _require = false;
-  const obj = {
+  let obj = {
     enable() {
       c0 = true;
     },
@@ -52,14 +55,16 @@ export const logger = GLOBAL_OBJ.getGlobalSingleton("logger", function makeLogge
   const forEach = items.forEach;
   if (require("module_12564").DEBUG_BUILD) {
     const item = forEach((arg0) => {
-      closure_0 = arg0;
+      let closure_0 = arg0;
       obj[arg0] = () => {
         const args = [...arguments];
-        if (args) {
+        const tmp = args;
+        if (tmp) {
           consoleSandbox(() => {
             const _console = GLOBAL_OBJ.GLOBAL_OBJ.console;
+            obj = _console[args];
             items = ["Sentry Logger [" + args + "]:", ...closure_0];
-            _console[args].apply(items);
+            obj.apply(items);
           });
         }
       };

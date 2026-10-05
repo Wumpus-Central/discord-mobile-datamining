@@ -1,16 +1,31 @@
 // === Module 10522: PaginationItem ===
 
 // Module 10522 (PaginationItem)
-import cancelAnimation from "cancelAnimation" /* 1643 */;
-import noop from "module_19" /* 19 */;
+import Fragment from "Fragment" /* 21 */;
+import _mod1643 from "module_1643" /* 1643 */;
+import react from "react" /* 19 */;
+import react_native from "react-native" /* 17 */;
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
-const jsx = fn(21).jsx;
+let c3;
+let closure_4;
+({ Pressable: c3, View: closure_4 } = react_native);
+const jsx = Fragment.jsx;
 const __initData = { code: "function pnpm_PaginationItemTsx1(){const{horizontal,height,width,index,animValue,count,interpolate,Extrapolation}=this.__closure;var _animValue,_animValue2;const size=horizontal?height:width;let inputRange=[index-1,index,index+1];let outputRange=[-size,0,size];if(index===0&&((_animValue=animValue)===null||_animValue===void 0?void 0:_animValue.value)>count-1){inputRange=[count-1,count,count+1];outputRange=[-size,0,size];}return{transform:[{translateX:interpolate((_animValue2=animValue)===null||_animValue2===void 0?void 0:_animValue2.value,inputRange,outputRange,Extrapolation.CLAMP)}]};}" };
 
 export const PaginationItem = (animValue) => {
+  let activeDotStyle;
+  let children;
+  let dotStyle;
+  let horizontal;
+  let index;
+  let items1;
+  let items2;
+  let items3;
+  let obj3;
+  let obj4;
+  let onPress;
+  let str;
+  let tmp10;
   const iter = animValue.animValue;
   ({ dotStyle, index } = animValue);
   const count = animValue.count;
@@ -19,6 +34,7 @@ export const PaginationItem = (animValue) => {
   let num = size;
   ({ activeDotStyle, children, onPress } = animValue);
   if (!size) {
+    let tmp = null;
     let width;
     if (dotStyle != null) {
       width = dotStyle.width;
@@ -38,13 +54,15 @@ export const PaginationItem = (animValue) => {
   if (!size) {
     size = 10;
   }
+  let obj = iter(count[3]);
   const fn = function s() {
+    let items4;
     const tmp = horizontal ? size : num;
     let items = [index - 1, index, index + 1];
     let items1 = [-tmp, 0, tmp];
     let tmp2 = 0 === index;
     if (tmp2) {
-      value = undefined;
+      let value;
       if (iter != null) {
         value = iter.value;
       }
@@ -56,43 +74,42 @@ export const PaginationItem = (animValue) => {
       items1 = items3;
       items = items2;
     }
-    value2 = undefined;
+    let value2;
+    const interpolate = _mod1643.interpolate;
+    _mod1643;
     if (iter != null) {
       value2 = iter.value;
     }
-    const obj2 = { transform: null };
-    const items4 = [{ translateX: cancelAnimation.interpolate(value2, items, items1, cancelAnimation.Extrapolation.CLAMP) }];
-    obj2.transform = items4;
-    return obj2;
+    const obj = { transform: items4 };
+    items4 = [{ translateX: interpolate(value2, items, items1, _mod1643.Extrapolation.CLAMP) }];
+    ({ translateX: interpolate(value2, items, items1, _mod1643.Extrapolation.CLAMP) });
+    return obj;
   };
   const size1 = { horizontal, height: size, width: num, index, animValue: iter, count, interpolate: iter(count[3]).interpolate, Extrapolation: iter(count[3]).Extrapolation };
   fn.__closure = size1;
   fn.__workletHash = 1536479533103;
   fn.__initData = __initData;
   let items = [iter, index, count, horizontal];
-  let obj2 = { onPress, accessibilityLabel, accessibilityRole: "button", accessibilityHint: null, accessibilityState: null, children: null };
-  let str = "";
-  const animatedStyle = iter(count[3]).useAnimatedStyle(fn, items);
+  const obj2 = { onPress, accessibilityLabel, accessibilityRole: "button", accessibilityHint: str, accessibilityState: { selected: iter.value === index }, children: size(tmp10, obj3) };
+  str = "";
+  const animatedStyle = obj.useAnimatedStyle(fn, items);
+  const tmp5 = count;
+  const tmp8 = horizontal;
   if (iter.value !== index) {
+    const tmp9 = globalThis;
     const _HermesInternal = HermesInternal;
     str = "Go to " + accessibilityLabel;
   }
-  obj2.accessibilityHint = str;
-  obj2.accessibilityState = { selected: iter.value === index };
-  const size2 = { width: num, height: size, overflow: "hidden", transform: null };
+  const size2 = { width: num, height: size, overflow: "hidden", transform: items1 };
   let str3 = "0deg";
+  tmp10 = num;
   if (horizontal) {
     str3 = "90deg";
   }
-  const obj3 = { style: null, children: null };
-  let items1 = [{ rotateZ: str3 }];
-  size2.transform = items1;
-  let items2 = [size2, dotStyle];
-  obj3.style = items2;
-  const obj4 = { style: null, children };
-  let items3 = [{ backgroundColor: "black", flex: 1 }, animatedStyle, activeDotStyle];
-  obj4.style = items3;
-  obj3.children = size(index(count[3]).View, obj4);
-  obj2.children = size(num, obj3);
-  return size(horizontal, obj2);
+  items1 = [{ rotateZ: str3 }];
+  obj3 = { style: items2, children: size(index(tmp5[3]).View, obj4) };
+  items2 = [size2, dotStyle];
+  obj4 = { style: items3, children };
+  items3 = [{ backgroundColor: "black", flex: 1 }, animatedStyle, activeDotStyle];
+  return size(tmp8, obj2);
 };

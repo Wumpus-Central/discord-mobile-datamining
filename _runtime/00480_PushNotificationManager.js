@@ -1,12 +1,12 @@
 // === Module 480: PushNotificationManager ===
 
 // Module 480 (PushNotificationManager)
-import _modDef481 from "module_481" /* 481 */;
+import _mod481 from "module_481" /* 481 */;
 
-const require = globalThis.__r;
+const _modDef481 = _mod481;
 
-for (const key10016 in require("module_481")) {
-  arg5[key10016] = require("module_481")[key10016];
+for (const key10016 in _mod481) {
+  exports[key10016] = _mod481[key10016];
   continue;
 }
 

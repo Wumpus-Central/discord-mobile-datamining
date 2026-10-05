@@ -9,9 +9,10 @@ const regExp = new RegExp(combined, "i");
 const combined1 = "(" + exports.NUMBER_PATTERN + ")\\s{0,3}(" + repeatedTimeunitPattern.matchAnyPattern(exports.TIME_UNIT_DICTIONARY_NO_ABBR) + ")";
 
 export const parseNumberPattern = function parseNumberPattern(str) {
+  let num5;
   str = str.toLowerCase();
   if (undefined !== exports.INTEGER_WORD_DICTIONARY[str]) {
-    let num5 = exports.INTEGER_WORD_DICTIONARY[str];
+    num5 = exports.INTEGER_WORD_DICTIONARY[str];
   } else {
     num5 = 1;
     if ("a" !== str) {
@@ -53,14 +54,17 @@ export const parseOrdinalNumberPattern = function parseOrdinalNumberPattern(str)
   }
 };
 export const parseYear = function parseYear(match) {
+  const obj = /BE/i;
   if (obj.test(match)) {
     const _parseInt4 = parseInt;
     return parseInt(match.replace(/BE/i, "")) - 543;
   } else {
+    const obj2 = /BCE?/i;
     if (obj2.test(match)) {
       const _parseInt3 = parseInt;
       return -parseInt(match.replace(/BCE?/i, ""));
     } else {
+      const obj3 = /(AD|CE)/i;
       if (obj3.test(match)) {
         const _parseInt2 = parseInt;
         return parseInt(match.replace(/(AD|CE)/i, ""));
@@ -69,60 +73,57 @@ export const parseYear = function parseYear(match) {
         const parsed = parseInt(match);
         return findMostLikelyADYear.findMostLikelyADYear(parsed);
       }
-      obj3 = /(AD|CE)/i;
     }
-    obj2 = /BCE?/i;
   }
-  obj = /BE/i;
 };
 export const parseDuration = function parseDuration(arg0) {
   let str = arg0;
   const obj = {};
   let match = regExp.exec(arg0);
-  if (match) {
-    while (str2.match(/^[a-zA-Z]+$/)) {
-      let str5 = str.substring(match[0].length);
-      let trimmed = str5.trim();
-      match = regExp.exec(trimmed);
-      str = trimmed;
-    }
-    let str4 = match[1].toLowerCase();
-    let tmp4 = exports;
-    if (undefined !== exports.INTEGER_WORD_DICTIONARY[str4]) {
-      let num5 = tmp4.INTEGER_WORD_DICTIONARY[str4];
-    } else {
-      num5 = 1;
-      if ("a" !== str4) {
+  while (match) {
+    let str2 = match[0];
+    if (!str2.match(/^[a-zA-Z]+$/)) {
+      let num5;
+      let str3 = match[1];
+      let str4 = str3.toLowerCase();
+      if (undefined !== exports.INTEGER_WORD_DICTIONARY[str4]) {
+        num5 = exports.INTEGER_WORD_DICTIONARY[str4];
+      } else {
         num5 = 1;
-        if ("an" !== str4) {
+        if ("a" !== str4) {
           num5 = 1;
-          if ("the" != str4) {
-            let num = 3;
-            if (!str4.match(/few/)) {
-              let num2 = 0.5;
-              if (!str4.match(/half/)) {
-                let num3 = 2;
-                if (!str4.match(/couple/)) {
-                  let num4 = 7;
-                  if (!str4.match(/several/)) {
-                    const _parseFloat = parseFloat;
-                    num4 = parseFloat(str4);
+          if ("an" !== str4) {
+            num5 = 1;
+            if ("the" != str4) {
+              let num = 3;
+              if (!str4.match(/few/)) {
+                let num2 = 0.5;
+                if (!str4.match(/half/)) {
+                  let num3 = 2;
+                  if (!str4.match(/couple/)) {
+                    let num4 = 7;
+                    if (!str4.match(/several/)) {
+                      let _parseFloat = parseFloat;
+                      num4 = parseFloat(str4);
+                    }
+                    num3 = num4;
                   }
-                  num3 = num4;
+                  num2 = num3;
                 }
-                num2 = num3;
+                num = num2;
               }
-              num = num2;
+              num5 = num;
             }
-            num5 = num;
           }
         }
       }
+      let str5 = match[2];
+      obj[exports.TIME_UNIT_DICTIONARY[str5.toLowerCase(str5)]] = num5;
     }
-    str4 = match[2];
-    tmp4 = tmp4.TIME_UNIT_DICTIONARY[str4.toLowerCase(str4)];
-    obj[tmp4] = num5;
-    str2 = match[0];
+    let str6 = str.substring(match[0].length);
+    let trimmed = str6.trim();
+    match = regExp.exec(trimmed);
+    str = trimmed;
   }
   if (0 == Object.keys(obj).length) {
     return null;

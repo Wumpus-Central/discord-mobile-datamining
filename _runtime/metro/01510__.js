@@ -1,74 +1,76 @@
 // === Module 1510: ? ===
 
 // Module 1510
-import deepFreeze from "deepFreeze" /* 1511 */;
-import _modDef1512 from "module_1512" /* 1512 */;
-import noop from "module_19" /* 19 */;
+import useLatestCallbackDefault from "useLatestCallback" /* 1512 */;
+import react from "react" /* 19 */;
 
-require = arg1;
+let closure_1, importDefault;
+
 
 export const useSyncState = function useSyncState(arg0) {
-  closure_129_0 = arg0;
-  closure_129_1 = undefined;
-  closure_129_2 = [];
-  closure_129_3 = false;
-  closure_129_4 = false;
-  closure_129_5 = false;
+  let ref;
+  let closure_0 = arg0;
+  let closure_2 = [];
+  let c3 = false;
+  let c4 = false;
+  let c5 = false;
   const store = {
     getState() {
-      if (c3) {
-        let deepFreezeResult = closure_1;
+      let deepFreezeResult;
+      const tmp = c3;
+      if (tmp) {
+        deepFreezeResult = closure_1;
       } else {
         c3 = true;
-        deepFreezeResult = deepFreeze.deepFreeze(current());
+        const obj = current(dependencyMap[1]);
+        deepFreezeResult = obj.deepFreeze(closure_0());
         closure_1 = deepFreezeResult;
       }
       return deepFreezeResult;
     },
     setState(arg0) {
-      closure_1 = deepFreeze.deepFreeze(arg0);
+      const obj = current(dependencyMap[1]);
+      closure_1 = obj.deepFreeze(arg0);
       if (c4) {
         c5 = true;
       } else {
-        const item = dependencyMap.forEach((fn) => fn());
+        const item = closure_2.forEach((fn) => fn());
       }
     },
     batchUpdates(fn) {
       fn();
       c4 = false;
-      if (c5) {
+      const tmp2 = c5;
+      if (tmp2) {
         c5 = false;
-        const item = dependencyMap.forEach((fn) => fn());
+        const item = closure_2.forEach((fn) => fn());
       }
     },
     subscribe(arg0) {
       closure_0 = arg0;
       closure_2.push(arg0);
       return () => {
-        const index = dependencyMap.indexOf(closure_0);
+        const index = closure_2.indexOf(closure_0);
         if (index > -1) {
-          dependencyMap.splice(index, 1);
+          closure_2.splice(index, 1);
         }
       };
     }
   };
-  let current = noop.useRef(store).current;
-  const syncExternalStore = noop.useSyncExternalStore(current.subscribe, current.getState, current.getState);
-  const debugValue = noop.useDebugValue(syncExternalStore);
-  importDefault = noop.useRef([]);
-  const tmp3 = _modDef1512((arg0) => {
+  let current = react.useRef(store).current;
+  const syncExternalStore = react.useSyncExternalStore(current.subscribe, current.getState, current.getState);
+  const debugValue = react.useDebugValue(syncExternalStore);
+  importDefault = react.useRef([]);
+  const tmp3 = useLatestCallbackDefault((arg0) => {
     current = ref.current;
     current.push(arg0);
   });
-  return {
+  let obj = {
     state: syncExternalStore,
     getState: current.getState,
     setState: current.setState,
-    scheduleUpdate: _modDef1512((arg0) => {
-      current = ref.current;
-      current.push(arg0);
-    }),
-    flushUpdates: _modDef1512(() => {
+    scheduleUpdate: tmp3,
+    flushUpdates: useLatestCallbackDefault(() => {
       current = ref.current;
       ref.current = [];
       if (0 !== current.length) {
@@ -82,4 +84,5 @@ export const useSyncState = function useSyncState(arg0) {
       }
     })
   };
+  return obj;
 };

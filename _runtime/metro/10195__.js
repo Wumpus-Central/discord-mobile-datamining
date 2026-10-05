@@ -5,12 +5,12 @@ import _mod10160 from "module_10160" /* 10160 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
-const ENExtractYearSuffixRefiner = require;
+let start;
+
 const regExp = new RegExp("^\\s*(" + _mod10160.YEAR_PATTERN + ")", "i");
 class ENExtractYearSuffixRefiner {
   constructor() {
-    tmp = c2(this, ENExtractYearSuffixRefiner);
-    return;
+    _classCallCheck(this, ENExtractYearSuffixRefiner);
   }
 }
 const entry = {
@@ -21,13 +21,16 @@ const entry = {
       text = start;
       start = start.start;
       if (start.isDateWithUnknownYear()) {
-        const match = regExp.exec(text.text.substring(start.index + start.text.length));
+        const str = text.text;
+        const match = regExp.exec(str.substring(start.index + start.text.length));
+        const obj = text;
         if (match) {
+          const str2 = match[0];
           if (str2.trim().length > 3) {
             obj.debug(() => {
               console.log("Extracting year: '" + match[0] + "' into : " + closure_0);
             });
-            const parseYearResult = ENExtractYearSuffixRefiner(10160).parseYear(match[1]);
+            const parseYearResult = _mod10160.parseYear(match[1]);
             if (null != start.end) {
               const end = start.end;
               end.assign("year", parseYearResult);
@@ -36,9 +39,7 @@ const entry = {
             start2.assign("year", parseYearResult);
             start.text = start.text + match[0];
           }
-          str2 = match[0];
         }
-        obj = text;
       }
     });
     return arr;

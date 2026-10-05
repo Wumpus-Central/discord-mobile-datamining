@@ -1,16 +1,34 @@
 // === Module 1007: enrichXhrBreadcrumbsForMobileReplay ===
 
 // Module 1007 (enrichXhrBreadcrumbsForMobileReplay)
+import _mod693 from "module_693" /* 693 */;
 import _mod1008 from "module_1008" /* 1008 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
 export const enrichXhrBreadcrumbsForMobileReplay = function enrichXhrBreadcrumbsForMobileReplay(category, xhr) {
+  function _getBodySize(response, responseType) {
+    try {
+      let json = response;
+      if ("json" === responseType) {
+        json = response;
+        if (json) {
+          json = response;
+          if (typeof response === "object") {
+            const _JSON = JSON;
+            json = JSON.stringify(response);
+          }
+        }
+      }
+      const obj = _mod1008;
+      return obj.getBodySize(json);
+    } catch (err) {
+    }
+  }
   if ("xhr" === category.category) {
-    if (xhr) {
+    const tmp7 = xhr;
+    if (tmp7) {
       if (xhr.xhr) {
-        let obj = globalThis;
+        let result;
         const _Date = Date;
         const timestamp = Date.now();
         let startTimestamp = xhr.startTimestamp;
@@ -22,36 +40,19 @@ export const enrichXhrBreadcrumbsForMobileReplay = function enrichXhrBreadcrumbs
           endTimestamp = timestamp;
         }
         xhr = xhr.xhr;
-        let tmp2 = require;
-        let dropUndefinedKeys = dependencyMap;
-        const bodySize = _mod1008.getBodySize(xhr.input);
+        const input = xhr.input;
+        let obj = _mod1008;
+        const bodySize = obj.getBodySize(input);
         if (xhr.getResponseHeader("content-length")) {
-          let result = tmp2(1008).parseContentLengthHeader(xhr.getResponseHeader("content-length"));
-          const tmp2Result = tmp2(1008);
+          const tmp3Result = _mod1008;
+          result = tmp3Result.parseContentLengthHeader(xhr.getResponseHeader("content-length"));
         } else {
-          result = (function _getBodySize(response, responseType) {
-            try {
-              let json = response;
-              if ("json" === responseType) {
-                json = response;
-                if (response) {
-                  json = response;
-                  if (typeof response === "object") {
-                    const _JSON = JSON;
-                    json = JSON.stringify(response);
-                  }
-                }
-              }
-              return _mod1008.getBodySize(json);
-            } catch (err) {
-            }
-          })(xhr.response, xhr.responseType);
+          result = _getBodySize(xhr.response, xhr.responseType);
         }
-        tmp2 = tmp2(693);
-        dropUndefinedKeys = tmp2.dropUndefinedKeys;
-        const _Object = obj.Object;
-        obj = { start_timestamp: startTimestamp, end_timestamp: endTimestamp, request_body_size: bodySize, response_body_size: result };
-        category.data = dropUndefinedKeys(_Object.assign(obj, category.data));
+        const _Object = Object;
+        const obj2 = { start_timestamp: startTimestamp, end_timestamp: endTimestamp, request_body_size: bodySize, response_body_size: result };
+        const tmp3Result2 = _mod693;
+        category.data = tmp3Result2.dropUndefinedKeys(Object.assign(obj2, category.data));
       }
     }
   }

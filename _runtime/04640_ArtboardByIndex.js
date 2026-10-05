@@ -2,14 +2,15 @@
 
 // Module 4640 (ArtboardByIndex)
 
-export const ArtboardByIndex = (index) => {
+export const ArtboardByIndex = function(index) {
   if (Number.isInteger(index)) {
-    const obj = { type: "index", index };
-    return obj;
+    return { type: "index", index };
   } else {
     const _Error = Error;
+    const self = this;
+    const self2 = this;
     const error = new Error("Artboard index must be an integer");
     throw error;
   }
 };
-export (artboardName) => ({ type: "name", name: artboardName })
+export const ArtboardByName = (artboardName) => ({ type: "name", name: artboardName });

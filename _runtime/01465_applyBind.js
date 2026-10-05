@@ -8,5 +8,6 @@ import _mod1309 from "module_1309" /* 1309 */;
 
 export default function applyBind() {
   const tmp = _mod1304;
-  return tmp(bind, _mod1309, arguments);
+  const tmp2 = bind;
+  return tmp(tmp2, _mod1309, arguments);
 };

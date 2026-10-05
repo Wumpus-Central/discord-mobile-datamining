@@ -1,6 +1,8 @@
 // === Module 373: ? ===
 
 // Module 373
+import _modDef38 from "module_38" /* 38 */;
+import flushValueDefault from "flushValue" /* 356 */;
 import _modDef366 from "module_366" /* 366 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
@@ -9,19 +11,14 @@ import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _get from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
 
-const AnimatedValueXY = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
-    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
+
+    }));
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -31,61 +28,45 @@ function _isNativeReflectConstruct() {
 }
 let closure_7 = 1;
 class AnimatedValueXY {
-  constructor(arg0, arg1) {
-    self = this;
-    tmp = c2(this, AnimatedValueXY);
-    items = [];
-    items[0] = arg1;
-    tmp2 = closure_4;
-    obj = closure_4(AnimatedValueXY);
-    tmp3 = closure_3;
-    if (metroRequire()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+  constructor(arg0, useNativeDriver) {
+    let constructResult;
+    const self = this;
+    _classCallCheck(this, AnimatedValueXY);
+    const items = [useNativeDriver];
+    const obj = _getPrototypeOf(AnimatedValueXY);
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, _getPrototypeOf(self).constructor);
     } else {
       constructResult = obj.apply(self, items);
     }
-    point = global;
-    tmp3Result = tmp3(self, constructResult);
-    if (!global) {
+    let point = arg0;
+    const tmp3Result = c3(self, constructResult);
+    if (!arg0) {
       point = { x: 0, y: 0 };
     }
     if (typeof point.x === "number") {
       if (typeof point.y === "number") {
-        tmp11 = closure_0;
-        tmp12 = closure_1;
-        tmp13 = new.target;
-        tmp14 = new.target;
-        tmp15 = new closure_0(closure_1[6])(point.x);
-        tmp16 = tmp15;
-        tmp3Result.x = tmp15;
-        tmp17 = new.target;
-        tmp18 = new.target;
-        tmp19 = new closure_0(closure_1[6])(point.y);
-        tmp20 = tmp19;
-        tmp3Result.y = tmp19;
+        const self2 = this;
+        const self3 = this;
+        tmp3Result.x = new flushValueDefault(point.x);
+        const self4 = this;
+        const self5 = this;
+        const tmp13 = new flushValueDefault(point.x);
+        tmp3Result.y = new flushValueDefault(point.y);
+        const tmp15 = new flushValueDefault(point.y);
       }
       tmp3Result._listeners = {};
-      useNativeDriver = arg1;
-      if (arg1) {
-        useNativeDriver = arg1.useNativeDriver;
-      }
-      if (useNativeDriver) {
-        __makeNativeResult = tmp3Result.__makeNative();
+      const tmp17 = useNativeDriver && useNativeDriver.useNativeDriver;
+      if (tmp17) {
+        tmp3Result.__makeNative();
       }
       return tmp3Result;
     }
-    tmp6 = closure_0;
-    tmp7 = closure_1;
-    tmp8 = closure_0(closure_1[7]);
-    tmp9 = point.x instanceof closure_0(closure_1[6]);
-    if (tmp9) {
-      tmp9 = point.y instanceof tmp6(tmp7[6]);
-    }
-    tmp8Result = tmp8(tmp9, "AnimatedValueXY must be initialized with an object of numbers or AnimatedValues.");
+    const tmp8 = _modDef38;
+    const tmp9 = point.x instanceof flushValueDefault && point.y instanceof flushValueDefault;
+    tmp8(tmp9, "AnimatedValueXY must be initialized with an object of numbers or AnimatedValues.");
     ({ x: obj2.x, y: obj2.y } = point);
-    return;
   }
 }
 _inherits(AnimatedValueXY, _modDef366);
@@ -130,11 +111,11 @@ let items = [
   {
     key: "__getValue",
     value: function __getValue() {
-      const point = { x: null, y: null };
-      const x = this.x;
-      point.x = x.__getValue();
-      const y = this.y;
-      point.y = y.__getValue();
+      let x;
+      let y;
+      const point = { x: x.__getValue(), y: y.__getValue() };
+      x = this.x;
+      y = this.y;
       return point;
     }
   },
@@ -167,17 +148,19 @@ let items = [
   {
     key: "addListener",
     value: function addListener(arg0) {
+      let _listeners;
+      let x;
+      let y;
       const self = this;
-      closure_0 = arg0;
+      let closure_0 = arg0;
       closure_7 = tmp + 1;
       const StringResult = String(+closure_7);
       function jointCallback(arg0) {
         closure_0(self.__getValue());
       }
-      const point = { x: x.addListener(jointCallback), y: null };
+      const point = { x: x.addListener(jointCallback), y: y.addListener(jointCallback) };
       ({ x, _listeners } = this);
-      const y = this.y;
-      point.y = y.addListener(jointCallback);
+      y = this.y;
       _listeners[StringResult] = point;
       return StringResult;
     }
@@ -189,7 +172,7 @@ let items = [
       x.removeListener(this._listeners[arg0].x);
       const y = this.y;
       y.removeListener(this._listeners[arg0].y);
-      delete tmp[tmp2];
+      delete this._listeners[arg0];
     }
   },
   {
@@ -212,7 +195,10 @@ let items = [
   {
     key: "getTranslateTransform",
     value: function getTranslateTransform() {
-      const items = [{ translateX: this.x }, { translateY: this.y }];
+      const items = [, ];
+      const obj = { translateX: this.x };
+      items[0] = obj;
+      items[1] = { translateY: this.y };
       return items;
     }
   },
@@ -224,7 +210,7 @@ let items = [
       const y = this.y;
       y.__addChild(this);
       const self = this;
-      let fn = hasOwnProperty(_getPrototypeOf(AnimatedValueXY.prototype), "__attach", this);
+      let fn = _get(_getPrototypeOf(AnimatedValueXY.prototype), "__attach", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -239,7 +225,7 @@ let items = [
       const y = this.y;
       y.__removeChild(this);
       const self = this;
-      let fn = hasOwnProperty(_getPrototypeOf(AnimatedValueXY.prototype), "__detach", this);
+      let fn = _get(_getPrototypeOf(AnimatedValueXY.prototype), "__detach", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -254,7 +240,7 @@ let items = [
       const y = this.y;
       y.__makeNative(arg0);
       const self = this;
-      let fn = hasOwnProperty(_getPrototypeOf(AnimatedValueXY.prototype), "__makeNative", this);
+      let fn = _get(_getPrototypeOf(AnimatedValueXY.prototype), "__makeNative", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }

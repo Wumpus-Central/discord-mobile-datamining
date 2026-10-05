@@ -1,42 +1,20 @@
 // === Module 8006: ? ===
 
 // Module 8006
-import colorPropType from "colorPropType" /* 7990 */;
+import normalizeColor from "normalizeColor" /* 7990 */;
 import _mod7997 from "module_7997" /* 7997 */;
-import emptyFunction_mod from "module_4707" /* 4707 */;
 import "module_4707";
+import module_4707_mod from "module_4707" /* 4707 */;
 
-const obj = {};
+let arrayOf;
+let module_4707;
+let size;
+const obj = { color: normalizeColor, fontFamily: module_4707.string, fontSize: module_4707.number, fontStyle: module_4707.oneOf(["normal", "italic"]), fontWeight: module_4707.oneOf(["normal", "bold", "100", "200", "300", "400", "500", "600", "700", "800", "900"]), fontVariant: arrayOf(module_4707.oneOf(["small-caps", "oldstyle-nums", "lining-nums", "tabular-nums", "proportional-nums"])), textShadowOffset: module_4707.shape(size), textShadowRadius: module_4707.number, textShadowColor: normalizeColor, letterSpacing: module_4707.number, lineHeight: module_4707.number, textAlign: module_4707.oneOf(["auto", "left", "right", "center", "justify"]), textAlignVertical: module_4707.oneOf(["auto", "top", "bottom", "center"]), includeFontPadding: module_4707.bool, textDecorationLine: module_4707.oneOf(["none", "underline", "line-through", "underline line-through"]), textDecorationStyle: module_4707.oneOf(["solid", "double", "dotted", "dashed"]), textDecorationColor: normalizeColor, textTransform: module_4707.oneOf(["none", "capitalize", "uppercase", "lowercase"]), writingDirection: module_4707.oneOf(["auto", "ltr", "rtl"]) };
 const module_7997 = Object.assign(_mod7997);
-obj.color = colorPropType;
-obj.fontFamily = emptyFunction.string;
-obj.fontSize = emptyFunction.number;
-let emptyFunction = emptyFunction_mod;
-obj.fontStyle = emptyFunction.oneOf(["normal", "italic"]);
-let emptyFunction = emptyFunction_mod;
-obj.fontWeight = emptyFunction.oneOf(["normal", "bold", "100", "200", "300", "400", "500", "600", "700", "800", "900"]);
-let emptyFunction = emptyFunction_mod;
-obj.fontVariant = emptyFunction.arrayOf(emptyFunction.oneOf(["small-caps", "oldstyle-nums", "lining-nums", "tabular-nums", "proportional-nums"]));
-let emptyFunction = emptyFunction_mod;
-const size = { width: emptyFunction.number, height: emptyFunction.number };
-obj.textShadowOffset = emptyFunction.shape(size);
-obj.textShadowRadius = emptyFunction.number;
-obj.textShadowColor = colorPropType;
-obj.letterSpacing = emptyFunction.number;
-obj.lineHeight = emptyFunction.number;
-let emptyFunction = emptyFunction_mod;
-obj.textAlign = emptyFunction.oneOf(["auto", "left", "right", "center", "justify"]);
-let emptyFunction = emptyFunction_mod;
-obj.textAlignVertical = emptyFunction.oneOf(["auto", "top", "bottom", "center"]);
-obj.includeFontPadding = emptyFunction.bool;
-let emptyFunction = emptyFunction_mod;
-obj.textDecorationLine = emptyFunction.oneOf(["none", "underline", "line-through", "underline line-through"]);
-let emptyFunction = emptyFunction_mod;
-obj.textDecorationStyle = emptyFunction.oneOf(["solid", "double", "dotted", "dashed"]);
-obj.textDecorationColor = colorPropType;
-let emptyFunction = emptyFunction_mod;
-obj.textTransform = emptyFunction.oneOf(["none", "capitalize", "uppercase", "lowercase"]);
-let emptyFunction = emptyFunction_mod;
-obj.writingDirection = emptyFunction.oneOf(["auto", "ltr", "rtl"]);
+module_4707 = module_4707_mod;
+arrayOf = module_4707.arrayOf;
+module_4707 = module_4707_mod;
+size = { width: module_4707.number, height: module_4707.number };
+module_4707 = module_4707_mod;
 
 export default obj;

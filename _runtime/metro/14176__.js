@@ -1,17 +1,21 @@
 // === Module 14176: ? ===
 
 // Module 14176
+let map;
 
-export default (arg0) => {
-  let map = arg0;
-  if (!arg0) {
+
+export default function(arg0) {
+  map = arg0;
+  if (!map) {
     const _Map = Map;
+    const self = this;
+    const self2 = this;
     map = new Map();
   }
   return {
     all: map,
     on(arg0, arg1) {
-      value = map.get(arg0);
+      const value = map.get(arg0);
       if (value) {
         value.push(arg1);
       } else {
@@ -20,9 +24,10 @@ export default (arg0) => {
       }
     },
     off(arg0, arg1) {
-      value = map.get(arg0);
+      const value = map.get(arg0);
       if (value) {
-        if (arg1) {
+        const tmp = arg1;
+        if (tmp) {
           value.splice(value.indexOf(arg1) >>> 0, 1);
         } else {
           const result = map.set(arg0, []);
@@ -30,16 +35,16 @@ export default (arg0) => {
       }
     },
     emit(arg0, arg1) {
-      closure_0 = arg0;
-      closure_1 = arg1;
-      value = map.get(arg0);
+      let closure_0 = arg0;
+      let closure_1 = arg1;
+      const value = map.get(arg0);
       if (value) {
         const substr = value.slice();
         const mapped = substr.map((fn) => {
           fn(closure_1);
         });
       }
-      value2 = map.get("*");
+      const value2 = map.get("*");
       if (value2) {
         const substr1 = value2.slice();
         const mapped1 = substr1.map((fn) => {

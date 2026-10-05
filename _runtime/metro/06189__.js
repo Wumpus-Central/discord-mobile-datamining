@@ -2,40 +2,43 @@
 
 // Module 6189
 import handlerIDToTag from "handlerIDToTag" /* 6144 */;
-import convertToHandlerTag from "convertToHandlerTag" /* 6164 */;
-import RNGestureHandlerModuleDefault from "RNGestureHandlerModule" /* 6169 */;
-import transformIntoHandlerTags from "transformIntoHandlerTags" /* 6171 */;
+import ALLOWED_PROPS from "ALLOWED_PROPS" /* 6164 */;
+import react_nativeDefault from "react-native" /* 6169 */;
+import selectProperties from "selectProperties" /* 6171 */;
 
 const require = globalThis.__r;
+let _require;
 
-require = arg1;
-importDefault = arg2;
-const dependencyMap = arg6;
 
 export const updateHandlers = function updateHandlers(attachedGestures, prepare, gesturesToAttach) {
+  let num;
   _require = attachedGestures;
   prepare.prepare();
   for (let num = 0; num < gesturesToAttach.length; num = num + 1) {
     let tmp2 = attachedGestures.attachedGestures[num];
-    let obj = require("convertToHandlerTag");
+    let tmp3 = _require;
+    let tmp4 = attachedGestures;
+    let obj = require("ALLOWED_PROPS");
     let result = obj.checkGestureCallbacksForWorklets(tmp2);
+    let tmp6 = num;
     if (gesturesToAttach[num].handlerTag !== tmp2.handlerTag) {
       ({ handlerTag: gesturesToAttach[num].handlerTag, handlerTag: gesturesToAttach[num].handlers.handlerTag } = tmp2);
     }
   }
   attachedGestures = attachedGestures.attachedGestures;
-  require("ghQueueMicrotask").ghQueueMicrotask(() => {
+  let obj2 = require("ghQueueMicrotask");
+  obj2.ghQueueMicrotask(() => {
     if (attachedGestures.isMounted) {
       let arr = attachedGestures;
       if (attachedGestures === tmp.attachedGestures) {
-        let tmp21 = arr.length !== gesturesToAttach.length;
+        let tmp23 = arr.length !== gesturesToAttach.length;
         let num = 0;
-        let tmp22 = tmp21;
+        let tmp24 = tmp23;
         if (0 < gesturesToAttach.length) {
           do {
             let tmp3 = attachedGestures[num];
             let tmp4 = tmp3.handlers.gestureId !== gesturesToAttach[num].handlers.gestureId;
-            let flag = tmp21;
+            let flag = tmp23;
             if (tmp4) {
               let tmp6 = gesturesToAttach[num].shouldUseReanimated || tmp3.shouldUseReanimated;
               tmp4 = tmp6;
@@ -45,27 +48,32 @@ export const updateHandlers = function updateHandlers(attachedGestures, prepare,
             }
             tmp3.config = gesturesToAttach[num].config;
             tmp3.handlers = gesturesToAttach[num].handlers;
-            let obj = RNGestureHandlerModuleDefault;
-            let obj2 = transformIntoHandlerTags;
-            let result = obj.setGestureHandlerConfig(tmp3.handlerTag, obj2.filterConfig(tmp3.config, convertToHandlerTag.ALLOWED_PROPS));
-            let obj3 = RNGestureHandlerModuleDefault;
-            let obj4 = convertToHandlerTag;
-            let configureRelationsResult = obj3.configureRelations(tmp3.handlerTag, obj4.extractGestureRelations(tmp3));
-            let obj5 = handlerIDToTag;
-            let registerHandlerResult = obj5.registerHandler(tmp3.handlerTag, tmp3, tmp3.config.testId);
+            let tmp9 = react_nativeDefault;
+            let setGestureHandlerConfig = tmp9.setGestureHandlerConfig;
+            let handlerTag = tmp3.handlerTag;
+            let obj = selectProperties;
+            let result = setGestureHandlerConfig(handlerTag, obj.filterConfig(tmp3.config, ALLOWED_PROPS.ALLOWED_PROPS));
+            let tmp16 = react_nativeDefault;
+            let configureRelations = tmp16.configureRelations;
+            let handlerTag2 = tmp3.handlerTag;
+            let obj2 = ALLOWED_PROPS;
+            let configureRelationsResult = configureRelations(handlerTag2, obj2.extractGestureRelations(tmp3));
+            let obj3 = handlerIDToTag;
+            let registerHandlerResult = obj3.registerHandler(tmp3.handlerTag, tmp3, tmp3.config.testId);
             num = num + 1;
-            tmp21 = flag;
-            tmp22 = flag;
+            tmp23 = flag;
+            tmp24 = flag;
             arr = attachedGestures;
           } while (num < gesturesToAttach.length);
         }
         if (attachedGestures.animatedHandlers) {
-          if (tmp22) {
+          if (tmp24) {
             const found = arr.filter((shouldUseReanimated) => shouldUseReanimated.shouldUseReanimated);
-            tmp23.animatedHandlers.value = found.map((handlers) => handlers.handlers);
+            tmp25.animatedHandlers.value = found.map((handlers) => handlers.handlers);
           }
         }
-        const result1 = transformIntoHandlerTags.scheduleFlushOperations();
+        const obj4 = selectProperties;
+        const result1 = obj4.scheduleFlushOperations();
       }
     }
   });

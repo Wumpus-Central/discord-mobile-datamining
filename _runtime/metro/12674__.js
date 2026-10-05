@@ -3,31 +3,14 @@
 // Module 12674
 
 export const flatten = function flatten(arr) {
-  const items = [];
-  const item = arr.forEach((arr) => {
+  const f142780 = (arr) => {
     if (Array.isArray(arr)) {
-      let item = arr.forEach((arr) => {
-        if (Array.isArray(arr)) {
-          let item = arr.forEach((arr) => {
-            if (Array.isArray(arr)) {
-              let item = arr.forEach((arr) => {
-                if (Array.isArray(arr)) {
-                  let item = arr.forEach(() => { ... });
-                } else {
-                  arr = closure_1_0.push(arr);
-                }
-              });
-            } else {
-              arr = closure_1_0.push(arr);
-            }
-          });
-        } else {
-          arr = closure_1_0.push(arr);
-        }
-      });
+      const item = arr.forEach(f142780);
     } else {
-      arr = closure_1_0.push(arr);
+      arr = items.push(arr);
     }
-  });
+  };
+  const items = [];
+  let item = arr.forEach(f142780);
   return items;
 };

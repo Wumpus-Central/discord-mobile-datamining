@@ -1,19 +1,21 @@
 // === Module 550: throttle ===
 
 // Module 550 (throttle)
-import _mod521 from "module_521" /* 521 */;
+import isObject from "isObject" /* 521 */;
 import debounce from "debounce" /* 551 */;
 
 
 export default function throttle(fn, maxWait, leading) {
   if (typeof fn !== "function") {
     const _TypeError = TypeError;
+    const self = this;
+    const self2 = this;
     const typeError = new TypeError("Expected a function");
     throw typeError;
   } else {
     let flag3 = true;
     let flag4 = true;
-    if (_mod521(leading)) {
+    if (isObject(leading)) {
       let flag = true;
       if ("leading" in leading) {
         flag = leading.leading;

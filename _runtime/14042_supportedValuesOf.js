@@ -8,8 +8,6 @@ import _mod14049 from "module_14049" /* 14049 */;
 import _mod14051 from "module_14051" /* 14051 */;
 import _mod14053 from "module_14053" /* 14053 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
 export const supportedValuesOf = function supportedValuesOf(collation, locale) {
   if ("calendar" === collation) {

@@ -1,19 +1,22 @@
 // === Module 12660: ? ===
 
 // Module 12660
-import stackParserFromStackParserOptions from "stackParserFromStackParserOptions" /* 12568 */;
-import setupIntegration from "module_12621" /* 12621 */;
+import _mod12568 from "module_12568" /* 12568 */;
+import module_12621 from "module_12621" /* 12621 */;
+
+let filterKeys;
 
 let c2 = "_sentryBundlerPluginAppKey:";
 
-export const thirdPartyErrorFilterIntegration = setupIntegration.defineIntegration((arg0) => {
+export const thirdPartyErrorFilterIntegration = module_12621.defineIntegration((arg0) => {
   const behaviour = arg0;
-  return {
+  let obj = {
     name: "ThirdPartyErrorsFilter",
     setup(on) {
-      options = on;
+      const options = on;
       on.on("beforeEnvelope", (arg0) => {
-        options(closure_1_1[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
+        let obj = options(closure_1_1[1]);
+        obj.forEachEnvelopeItem(arg0, (arg0, arg1) => {
           if ("event" === arg1) {
             const _Array = Array;
             let tmp3;
@@ -21,31 +24,35 @@ export const thirdPartyErrorFilterIntegration = setupIntegration.defineIntegrati
               tmp3 = arg0[1];
             }
             if (tmp3) {
-              const result = options(dependencyMap[2]).stripMetadataFromStackFrames(tmp3);
+              const obj = options(closure_1_1[2]);
+              const result = obj.stripMetadataFromStackFrames(tmp3);
               arg0[1] = tmp3;
-              const obj = options(dependencyMap[2]);
             }
           }
         });
       });
       on.on("applyFrameMetadata", (type) => {
         if (!type.type) {
-          const result = options(dependencyMap[2]).addMetadataToStackFrames(options.getOptions().stackParser, type);
+          const stackParser = options.getOptions().stackParser;
           const obj = options(dependencyMap[2]);
+          const result = obj.addMetadataToStackFrames(stackParser, type);
         }
       });
     },
     processEvent(tags) {
-      const framesFromEvent = stackParserFromStackParserOptions.getFramesFromEvent(tags);
+      const obj = _mod12568;
+      const framesFromEvent = obj.getFramesFromEvent(tags);
       let mapped;
       if (framesFromEvent) {
         let found = framesFromEvent.filter((filename) => filename.filename);
         mapped = found.map((module_metadata) => {
+          let length;
+          let mapped;
           if (module_metadata.module_metadata) {
             const _Object = Object;
             const keys = Object.keys(module_metadata.module_metadata);
             const found = keys.filter((item) => item.startsWith(length));
-            let mapped = found.map((arr) => arr.slice(length.length));
+            mapped = found.map((arr) => arr.slice(length.length));
           } else {
             mapped = [];
           }
@@ -53,8 +60,9 @@ export const thirdPartyErrorFilterIntegration = setupIntegration.defineIntegrati
         });
       }
       if (mapped) {
+        let str2;
         if ("drop-error-if-contains-third-party-frames" === behaviour.behaviour) {
-          let str2 = "some";
+          str2 = "some";
         } else {
           str2 = "every";
         }
@@ -64,9 +72,8 @@ export const thirdPartyErrorFilterIntegration = setupIntegration.defineIntegrati
         }))) {
           if ("drop-error-if-contains-third-party-frames" !== behaviour.behaviour) {
             if ("drop-error-if-exclusively-contains-third-party-frames" !== behaviour.behaviour) {
-              const obj2 = {};
+              const obj2 = { third_party_code: true };
               const merged = Object.assign(tags.tags);
-              obj2.third_party_code = true;
               tags.tags = obj2;
             }
           }
@@ -76,4 +83,5 @@ export const thirdPartyErrorFilterIntegration = setupIntegration.defineIntegrati
       return tags;
     }
   };
+  return obj;
 });

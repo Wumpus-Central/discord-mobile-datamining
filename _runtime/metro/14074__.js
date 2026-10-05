@@ -1,16 +1,16 @@
 // === Module 14074: ? ===
 
 // Module 14074
-import withoutSetter from "withoutSetter" /* 14075 */;
+import _mod14075 from "module_14075" /* 14075 */;
 import _mod14086 from "module_14086" /* 14086 */;
 import _mod14088 from "module_14088" /* 14088 */;
 import _mod14091 from "module_14091" /* 14091 */;
 import _mod14094 from "module_14094" /* 14094 */;
 import _mod14095 from "module_14095" /* 14095 */;
 
-let closure_3 = withoutSetter("toPrimitive");
+let closure_3 = _mod14075("toPrimitive");
 
-export default (arg0, arg1) => {
+export default function(arg0, arg1) {
   if (_mod14086(arg0)) {
     if (!_mod14088(arg0)) {
       let str = arg1;
@@ -22,8 +22,10 @@ export default (arg0, arg1) => {
         const tmp5 = _mod14094(tmp4, arg0, str);
         if (_mod14086(tmp5)) {
           if (!_mod14088(tmp5)) {
-            const tmp9 = new TypeError("Can't convert object to primitive value");
-            throw tmp9;
+            const self = this;
+            const self2 = this;
+            const tmp7 = new TypeError("Can't convert object to primitive value");
+            throw tmp7;
           }
         }
         return tmp5;

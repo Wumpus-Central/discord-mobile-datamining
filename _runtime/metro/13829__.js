@@ -13,7 +13,7 @@ import _mod13840 from "module_13840" /* 13840 */;
 import _mod13841 from "module_13841" /* 13841 */;
 import _mod13842 from "module_13842" /* 13842 */;
 import _mod13843 from "module_13843" /* 13843 */;
-import prerelease from "prerelease" /* 13844 */;
+import _mod13844 from "module_13844" /* 13844 */;
 import _mod13845 from "module_13845" /* 13845 */;
 import _mod13846 from "module_13846" /* 13846 */;
 import _mod13847 from "module_13847" /* 13847 */;
@@ -28,7 +28,7 @@ import _mod13855 from "module_13855" /* 13855 */;
 import _mod13856 from "module_13856" /* 13856 */;
 import _mod13857 from "module_13857" /* 13857 */;
 import _mod13858 from "module_13858" /* 13858 */;
-import Comparator from "Comparator" /* 13859 */;
+import _mod13859 from "module_13859" /* 13859 */;
 import _mod13860 from "module_13860" /* 13860 */;
 import _mod13862 from "module_13862" /* 13862 */;
 import _mod13863 from "module_13863" /* 13863 */;
@@ -41,7 +41,8 @@ import _mod13869 from "module_13869" /* 13869 */;
 import _mod13870 from "module_13870" /* 13870 */;
 import _mod13871 from "module_13871" /* 13871 */;
 import _mod13872 from "module_13872" /* 13872 */;
-import simpleSubset from "simpleSubset" /* 13873 */;
+import _mod13873 from "module_13873" /* 13873 */;
 
+({ parse: _mod13830, valid: _mod13837, clean: _mod13838, inc: _mod13839, diff: _mod13840, major: _mod13841, minor: _mod13842, patch: _mod13843, prerelease: _mod13844, compare: _mod13845, rcompare: _mod13846, compareLoose: _mod13847, compareBuild: _mod13848, sort: _mod13849, rsort: _mod13850, gt: _mod13851, lt: _mod13852, eq: _mod13853, neq: _mod13854, gte: _mod13855, lte: _mod13856, cmp: _mod13857, coerce: _mod13858, Comparator: _mod13859, Range: _mod13860, satisfies: _mod13862, toComparators: _mod13863, maxSatisfying: _mod13864, minSatisfying: _mod13865, minVersion: _mod13866, validRange: _mod13867, outside: _mod13868, gtr: _mod13869, ltr: _mod13870, intersects: _mod13871, simplifyRange: _mod13872, subset: _mod13873, SemVer: _mod13831, re: _mod13835.re, src: _mod13835.src, tokens: _mod13835.t, SEMVER_SPEC_VERSION: _mod13833.SEMVER_SPEC_VERSION, RELEASE_TYPES: _mod13833.RELEASE_TYPES, compareIdentifiers: _mod13836.compareIdentifiers, rcompareIdentifiers: _mod13836.rcompareIdentifiers });
 
-export default { parse: _mod13830, valid: _mod13837, clean: _mod13838, inc: _mod13839, diff: _mod13840, major: _mod13841, minor: _mod13842, patch: _mod13843, prerelease, compare: _mod13845, rcompare: _mod13846, compareLoose: _mod13847, compareBuild: _mod13848, sort: _mod13849, rsort: _mod13850, gt: _mod13851, lt: _mod13852, eq: _mod13853, neq: _mod13854, gte: _mod13855, lte: _mod13856, cmp: _mod13857, coerce: _mod13858, Comparator, Range: _mod13860, satisfies: _mod13862, toComparators: _mod13863, maxSatisfying: _mod13864, minSatisfying: _mod13865, minVersion: _mod13866, validRange: _mod13867, outside: _mod13868, gtr: _mod13869, ltr: _mod13870, intersects: _mod13871, simplifyRange: _mod13872, subset: simpleSubset, SemVer: _mod13831, re: _mod13835.re, src: _mod13835.src, tokens: _mod13835.t, SEMVER_SPEC_VERSION: _mod13833.SEMVER_SPEC_VERSION, RELEASE_TYPES: _mod13833.RELEASE_TYPES, compareIdentifiers: _mod13836.compareIdentifiers, rcompareIdentifiers: _mod13836.rcompareIdentifiers };
+export default { parse: _mod13830, valid: _mod13837, clean: _mod13838, inc: _mod13839, diff: _mod13840, major: _mod13841, minor: _mod13842, patch: _mod13843, prerelease: _mod13844, compare: _mod13845, rcompare: _mod13846, compareLoose: _mod13847, compareBuild: _mod13848, sort: _mod13849, rsort: _mod13850, gt: _mod13851, lt: _mod13852, eq: _mod13853, neq: _mod13854, gte: _mod13855, lte: _mod13856, cmp: _mod13857, coerce: _mod13858, Comparator: _mod13859, Range: _mod13860, satisfies: _mod13862, toComparators: _mod13863, maxSatisfying: _mod13864, minSatisfying: _mod13865, minVersion: _mod13866, validRange: _mod13867, outside: _mod13868, gtr: _mod13869, ltr: _mod13870, intersects: _mod13871, simplifyRange: _mod13872, subset: _mod13873, SemVer: _mod13831, re: _mod13835.re, src: _mod13835.src, tokens: _mod13835.t, SEMVER_SPEC_VERSION: _mod13833.SEMVER_SPEC_VERSION, RELEASE_TYPES: _mod13833.RELEASE_TYPES, compareIdentifiers: _mod13836.compareIdentifiers, rcompareIdentifiers: _mod13836.rcompareIdentifiers };

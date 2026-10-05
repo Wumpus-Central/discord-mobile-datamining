@@ -1,12 +1,12 @@
 // === Module 201: BlobModule ===
 
 // Module 201 (BlobModule)
-import _modDef202 from "module_202" /* 202 */;
+import _mod202 from "module_202" /* 202 */;
 
-const require = globalThis.__r;
+const _modDef202 = _mod202;
 
-for (const key10016 in require("module_202")) {
-  arg5[key10016] = require("module_202")[key10016];
+for (const key10016 in _mod202) {
+  exports[key10016] = _mod202[key10016];
   continue;
 }
 

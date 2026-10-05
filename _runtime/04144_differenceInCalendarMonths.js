@@ -1,21 +1,23 @@
 // === Module 4144: differenceInCalendarMonths ===
 
 // Module 4144 (differenceInCalendarMonths)
-import _typeof_mod from "module_3958" /* 3958 */;
+import toDate_mod from "toDate" /* 3958 */;
 import requiredArgs_mod from "requiredArgs" /* 3959 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
-  let tmp3 = obj;
+let tmp3;
+let tmp5;
+let toDate = toDate_mod;
+if (!toDate) {
+  tmp3 = { default: toDate };
+  const obj = { default: toDate };
 } else {
-  tmp3 = _typeof;
+  tmp3 = toDate;
 }
-_typeof = tmp3;
+toDate = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
+  tmp5 = { default: requiredArgs };
   const obj2 = { default: requiredArgs };
-  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }
@@ -23,11 +25,10 @@ requiredArgs = tmp5;
 
 export default function differenceInCalendarMonths(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const defaultResult2 = _typeof.default(arg1);
+  const defaultResult1 = toDate.default(arg0);
+  const defaultResult2 = toDate.default(arg1);
   const fullYear = defaultResult1.getFullYear();
   const diff = fullYear - defaultResult2.getFullYear();
   const month = defaultResult1.getMonth();
   return 12 * diff + (month - defaultResult2.getMonth());
 };
-export default exports.default;

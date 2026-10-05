@@ -1,12 +1,12 @@
 // === Module 5605: LinearGradient ===
 
 // Module 5605 (LinearGradient)
-import _mod17 from "module_17" /* 17 */;
+import react_native from "react-native" /* 17 */;
 import _modDef5607 from "module_5607" /* 5607 */;
-import _isNativeReflectConstruct from "module_5606" /* 5606 */;
+import module_5606 from "module_5606" /* 5606 */;
 
-const Platform = _mod17.Platform;
+const Platform = react_native.Platform;
 
-export default _isNativeReflectConstruct;
-export const LinearGradient = _isNativeReflectConstruct;
+export default module_5606;
+export const LinearGradient = module_5606;
 export const LinearGradientNativeComponent = _modDef5607;

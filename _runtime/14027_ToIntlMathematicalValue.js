@@ -2,34 +2,48 @@
 
 // Module 14027 (ToIntlMathematicalValue)
 import _mod13968 from "module_13968" /* 13968 */;
-import digitsToString2 from "digitsToString" /* 13969 */;
-import e from "e" /* 1172 */;
+import _mod13969 from "module_13969" /* 13969 */;
+import module_1172 from "module_1172" /* 1172 */;
 
-const digitsToString = e.__importDefault(digitsToString2);
+const module_13969 = module_1172.__importDefault(_mod13969);
 
 export const ToIntlMathematicalValue = function ToIntlMathematicalValue(arg0) {
   const ToPrimitiveResult = _mod13968.ToPrimitive(arg0, "number");
   if (typeof ToPrimitiveResult === "bigint") {
-    const _default = new digitsToString.default(ToPrimitiveResult);
+    const self13 = this;
+    const self14 = this;
+    const _default = new module_13969.default(ToPrimitiveResult);
     return _default;
   } else if (undefined === ToPrimitiveResult) {
-    const _default1 = new digitsToString.default(NaN);
+    const self11 = this;
+    const self12 = this;
+    const _default1 = new module_13969.default(NaN);
     return _default1;
   } else if (true === ToPrimitiveResult) {
-    const _default2 = new digitsToString.default(1);
+    const self9 = this;
+    const self10 = this;
+    const _default2 = new module_13969.default(1);
     return _default2;
   } else if (false === ToPrimitiveResult) {
-    const _default3 = new digitsToString.default(0);
+    const self7 = this;
+    const self8 = this;
+    const _default3 = new module_13969.default(0);
     return _default3;
   } else if (null === ToPrimitiveResult) {
-    const _default4 = new digitsToString.default(0);
+    const self5 = this;
+    const self6 = this;
+    const _default4 = new module_13969.default(0);
     return _default4;
   } else {
     try {
-      const _default5 = new digitsToString.default(ToPrimitiveResult);
+      const self = this;
+      const self2 = this;
+      const _default5 = new module_13969.default(ToPrimitiveResult);
       return _default5;
     } catch (err) {
-      const _default6 = new digitsToString.default(NaN);
+      const self3 = this;
+      const self4 = this;
+      const _default6 = new module_13969.default(NaN);
       return _default6;
     }
   }

@@ -8,7 +8,6 @@ export const isPublicInstance = function isPublicInstance(nativeScrollRef) {
     let tmp2 = null != nativeScrollRef.__nativeTag;
     if (!tmp2) {
       tmp2 = null != nativeScrollRef && null != nativeScrollRef._internalInstanceHandle && null != nativeScrollRef._internalInstanceHandle.stateNode && null != nativeScrollRef._internalInstanceHandle.stateNode.canonical;
-      const tmp3 = null != nativeScrollRef && null != nativeScrollRef._internalInstanceHandle && null != nativeScrollRef._internalInstanceHandle.stateNode && null != nativeScrollRef._internalInstanceHandle.stateNode.canonical;
     }
     tmp = tmp2;
   }

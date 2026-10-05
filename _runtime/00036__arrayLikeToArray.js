@@ -3,7 +3,9 @@
 // Module 36 (_arrayLikeToArray)
 
 export default function _arrayLikeToArray(arg0, arg1) {
+  let num;
   let length = arg1;
+  const tmp = null == arg1 || length > arg0.length;
   if (tmp) {
     length = arg0.length;
   }

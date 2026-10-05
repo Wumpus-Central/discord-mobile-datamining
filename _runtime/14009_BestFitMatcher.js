@@ -3,10 +3,9 @@
 // Module 14009 (BestFitMatcher)
 import _mod14005 from "module_14005" /* 14005 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
 export const BestFitMatcher = function BestFitMatcher(arg0, arr, fn) {
+  let tmp4;
   const items = [];
   const reduced = arr.reduce((acc, item) => {
     const replaced = item.replace(_mod14005.UNICODE_EXTENSION_SEQUENCE_REGEX, "");
@@ -15,18 +14,18 @@ export const BestFitMatcher = function BestFitMatcher(arg0, arr, fn) {
     return acc;
   }, {});
   const findBestMatchResult = items(14005).findBestMatch(items, arg0);
-  let prop;
+  let tmp5;
+  const tmp3 = findBestMatchResult.matchedSupportedLocale && findBestMatchResult.matchedDesiredLocale;
   if (tmp3) {
-    const tmp6 = reduced[findBestMatchResult.matchedDesiredLocale].slice(findBestMatchResult.matchedDesiredLocale.length) || undefined;
-    prop = findBestMatchResult.matchedSupportedLocale;
-    const tmp4 = reduced[findBestMatchResult.matchedDesiredLocale].slice(findBestMatchResult.matchedDesiredLocale.length) || undefined;
+    const matchedSupportedLocale = findBestMatchResult.matchedSupportedLocale;
+    tmp5 = matchedSupportedLocale;
+    const arr2 = reduced[findBestMatchResult.matchedDesiredLocale];
+    tmp4 = arr2.slice(findBestMatchResult.matchedDesiredLocale.length) || undefined;
   }
-  if (prop) {
-    const obj2 = { locale: prop, extension: tmp4 };
-    return obj2;
+  if (tmp5) {
+    return { locale: tmp5, extension: tmp4 };
   } else {
     const obj = { locale: fn() };
     return obj;
   }
-  tmp3 = findBestMatchResult.matchedSupportedLocale && findBestMatchResult.matchedDesiredLocale;
 };

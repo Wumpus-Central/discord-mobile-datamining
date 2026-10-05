@@ -3,39 +3,44 @@
 // Module 1222 (reflectionMergePartial)
 
 export const reflectionMergePartial = function reflectionMergePartial(arg0, reflectionCreateResult, arr) {
+  let length;
+  let length2;
+  let sum;
+  let sum1;
   const iter = arg0.fields[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
+    let tmp2;
     let obj = nextResult;
     let localName = nextResult.localName;
     if (nextResult.oneof) {
-      let tmp8 = arr[obj.oneof];
-      let tmp9 = tmp8;
+      let tmp6 = arr[obj.oneof];
+      let tmp7 = tmp6;
       let oneofKind;
-      if (null != tmp8) {
-        oneofKind = tmp9.oneofKind;
+      if (null != tmp6) {
+        oneofKind = tmp7.oneofKind;
       }
       if (null == oneofKind) {
         continue;
       } else {
-        let tmp59 = tmp9[localName];
-        arr = tmp59;
-        let tmp61 = reflectionCreateResult[obj.oneof];
-        let tmp4 = tmp61;
-        tmp61.oneofKind = tmp9.oneofKind;
-        if (null == tmp59) {
-          delete tmp2[tmp];
+        let tmp55 = tmp7[localName];
+        arr = tmp55;
+        let tmp57 = reflectionCreateResult[obj.oneof];
+        tmp2 = tmp57;
+        tmp57.oneofKind = tmp7.oneofKind;
+        if (null == tmp55) {
+          delete tmp2[localName];
           continue;
         }
       }
     } else {
-      tmp4 = reflectionCreateResult;
-      let tmp6 = arr[localName];
-      arr = tmp6;
+      tmp2 = reflectionCreateResult;
+      let tmp4 = arr[localName];
+      arr = tmp4;
       continue;
     }
     if (obj.repeat) {
-      tmp4[localName].length = arr.length;
+      tmp2[localName].length = arr.length;
     }
     let kind = obj.kind;
     if ("scalar" !== kind) {
@@ -46,16 +51,16 @@ export const reflectionMergePartial = function reflectionMergePartial(arg0, refl
             let num = 0;
             if (0 < arr.length) {
               do {
-                tmp4[localName][num] = TResult.create(arr[num]);
+                tmp2[localName][num] = TResult.create(arr[num]);
                 sum = num + 1;
                 num = sum;
                 length = arr.length;
               } while (sum < length);
             }
-          } else if (undefined === tmp4[localName]) {
-            tmp4[localName] = TResult.create(arr);
+          } else if (undefined === tmp2[localName]) {
+            tmp2[localName] = TResult.create(arr);
           } else {
-            let mergePartialResult = TResult.mergePartial(tmp4[localName], arr);
+            let mergePartialResult = TResult.mergePartial(tmp2[localName], arr);
           }
         } else if ("map" === kind) {
           let kind2 = obj.V.kind;
@@ -67,14 +72,14 @@ export const reflectionMergePartial = function reflectionMergePartial(arg0, refl
                 let _Object2 = Object;
                 let keys = Object.keys(arr);
                 for (const item10050 of keys) {
-                  tmp4[localName][item10050] = TResult1.create(arr[item10050]);
+                  tmp2[localName][item10050] = TResult1.create(arr[item10050]);
                   continue;
                 }
               }
             }
           }
           let _Object = Object;
-          let merged = Object.assign(tmp4[localName], arr);
+          let merged = Object.assign(tmp2[localName], arr);
         }
       }
       continue;
@@ -83,14 +88,14 @@ export const reflectionMergePartial = function reflectionMergePartial(arg0, refl
       let num2 = 0;
       if (0 < arr.length) {
         do {
-          tmp4[localName][num2] = arr[num2];
+          tmp2[localName][num2] = arr[num2];
           sum1 = num2 + 1;
           num2 = sum1;
           length2 = arr.length;
         } while (sum1 < length2);
       }
     } else {
-      tmp4[localName] = arr;
+      tmp2[localName] = arr;
     }
   }
 };

@@ -1,101 +1,51 @@
 // === Module 14107: ? ===
 
 // Module 14107
-let c0 = false;
+import _mod14066 from "module_14066" /* 14066 */;
+import _mod14108 from "module_14108" /* 14108 */;
+import _mod14112 from "module_14112" /* 14112 */;
 
-export default {
-  includes: (arg0, arg1, arg2) => {
-    const tmp3 = closure_0(14066)(arg0);
-    const tmp4 = closure_0(14108)(tmp3);
-    if (0 === tmp4) {
-      let num3 = !c0;
-      if (!c0) {
-        num3 = -1;
-      }
-      return num3;
-    } else {
-      let sum = closure_0(14112)(arg2, tmp4);
-      if (c0) {
-        if (arg1 != arg1) {
-          if (tmp4 > sum) {
-            while (tmp3[+sum] == tmp3[+sum]) {
-              sum = tmp7 + 1;
-            }
-            return true;
+const f115902 = (arg0, arg1, arg2) => {
+  const tmp3 = _mod14066(arg0);
+  const tmp4 = _mod14108(tmp3);
+  if (0 === tmp4) {
+    return !c0 && -1;
+  } else {
+    let sum = _mod14112(arg2, tmp4);
+    if (c0) {
+      if (arg1 != arg1) {
+        if (tmp4 > sum) {
+          while (tmp3[+sum] == tmp3[+sum]) {
+            sum = tmp7 + 1;
           }
+          return true;
         }
-        let num2 = !c0;
-        if (!c0) {
-          num2 = -1;
-        }
-        return num2;
       }
-      let sum1 = sum;
-      if (tmp4 > sum) {
-        while (true) {
-          let num = c0;
-          if (c0) {
-            if (tmp3[sum1] === arg1) {
-              break;
-            }
-          }
-          sum1 = sum1 + 1;
-        }
-        if (!num) {
-          num = sum1;
-        }
-        if (!num) {
-          num = 0;
-        }
-        return num;
-      }
+      return !c0 && -1;
     }
-  },
-  indexOf: (arg0, arg1, arg2) => {
-    const tmp3 = closure_0(14066)(arg0);
-    const tmp4 = closure_0(14108)(tmp3);
-    if (0 === tmp4) {
-      let num3 = !c0;
-      if (!c0) {
-        num3 = -1;
-      }
-      return num3;
-    } else {
-      let sum = closure_0(14112)(arg2, tmp4);
-      if (c0) {
-        if (arg1 != arg1) {
-          if (tmp4 > sum) {
-            while (tmp3[+sum] == tmp3[+sum]) {
-              sum = tmp7 + 1;
-            }
-            return true;
+    let sum1 = sum;
+    if (tmp4 > sum) {
+      let num;
+      while (true) {
+        num = c0;
+        if (c0) {
+          if (tmp3[sum1] === arg1) {
+            break;
           }
         }
-        let num2 = !c0;
-        if (!c0) {
-          num2 = -1;
-        }
-        return num2;
+        sum1 = sum1 + 1;
       }
-      let sum1 = sum;
-      if (tmp4 > sum) {
-        while (true) {
-          let num = c0;
-          if (c0) {
-            if (tmp3[sum1] === arg1) {
-              break;
-            }
-          }
-          sum1 = sum1 + 1;
-        }
-        if (!num) {
-          num = sum1;
-        }
-        if (!num) {
-          num = 0;
-        }
-        return num;
+      if (!num) {
+        num = sum1;
       }
+      if (!num) {
+        num = 0;
+      }
+      return num;
     }
   }
 };
+let c0 = false;
+const obj = { includes: f115902, indexOf: f115902 };
+
+export default obj;

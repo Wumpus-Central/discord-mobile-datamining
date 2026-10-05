@@ -1,9 +1,12 @@
 // === Module 143: ? ===
 
 // Module 143
-import _modAll27 from "module_27" /* 27 */;
-import _modDef141 from "module_141" /* 141 */;
+import javaScriptFlagGetterAll from "javaScriptFlagGetter" /* 27 */;
+import Commands2 from "Commands" /* 112 */;
+import EVENT_TARGET_GET_THE_PARENT_KEY from "EVENT_TARGET_GET_THE_PARENT_KEY" /* 135 */;
 import _modDef144 from "module_144" /* 144 */;
+import create from "create" /* 146 */;
+import topLevelTypeToEventType from "topLevelTypeToEventType" /* 149 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import hasOwnProperty from "_possibleConstructorReturn" /* 93 */;
@@ -12,19 +15,14 @@ import _inherits from "_inherits" /* 98 */;
 
 const require = globalThis.__r;
 
-const ReactNativeElement = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
-    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
+
+    }));
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -36,60 +34,62 @@ function noop() {
 
 }
 class ReactNativeElement {
-  constructor(arg0, arg1, arg2, arg3) {
-    self = this;
-    tmp = closure_4(this, ReactNativeElement);
-    items = [, ];
-    items[0] = importDefault;
-    items[1] = importAll;
-    tmp2 = metroRequire;
-    obj = metroRequire(ReactNativeElement);
-    tmp3 = hasOwnProperty;
-    if (closure_7()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+  constructor(__nativeTag, __viewConfig, __internalInstanceHandle, arg3) {
+    let constructResult;
+    const self = this;
+    _classCallCheck(this, ReactNativeElement);
+    const items = [__internalInstanceHandle, arg3];
+    const obj = _getPrototypeOf(ReactNativeElement);
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, _getPrototypeOf(self).constructor);
     } else {
       constructResult = obj.apply(self, items);
     }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.__nativeTag = global;
-    tmp3Result.__internalInstanceHandle = importDefault;
-    tmp3Result.__viewConfig = fn;
+    const tmp3Result = hasOwnProperty(self, constructResult);
+    tmp3Result.__nativeTag = __nativeTag;
+    tmp3Result.__internalInstanceHandle = __internalInstanceHandle;
+    tmp3Result.__viewConfig = __viewConfig;
     return tmp3Result;
   }
 }
-_inherits(ReactNativeElement, _modDef141);
+_inherits(ReactNativeElement, require("_getBoundingClientRect"));
+let obj = {
+  key: "offsetHeight",
+  get() {
+    const obj = require("_getBoundingClientRect");
+    return round(obj.getBoundingClientRect(this, { includeTransform: false }).height);
+  }
+};
 let items = [
-  {
-    key: "offsetHeight",
-    get() {
-      return Math.round(ReactNativeElement(141).getBoundingClientRect(this, { includeTransform: false }).height);
-    }
-  },
+  obj,
   {
     key: "offsetLeft",
     get() {
-      const nativeElementReference = ReactNativeElement(136).getNativeElementReference(this);
+      const obj = require("module_136");
+      const nativeElementReference = obj.getNativeElementReference(this);
       if (null != nativeElementReference) {
         const _Math = Math;
-        return Math.round(require("NativeDOMCxx").getOffset(nativeElementReference)[2]);
+        const obj2 = require("NativeDOMCxx");
+        return Math.round(obj2.getOffset(nativeElementReference)[2]);
       } else {
         return 0;
       }
-      const obj = ReactNativeElement(136);
     }
   },
   {
     key: "offsetParent",
     get() {
-      const nativeElementReference = ReactNativeElement(136).getNativeElementReference(this);
+      const obj = require("module_136");
+      const nativeElementReference = obj.getNativeElementReference(this);
       if (null != nativeElementReference) {
-        const offset = require("NativeDOMCxx").getOffset(nativeElementReference);
-        if (null != offset[0]) {
-          return ReactNativeElement(136).getPublicInstanceFromInstanceHandle(offset[0]);
-        }
         const obj2 = require("NativeDOMCxx");
+        const offset = obj2.getOffset(nativeElementReference);
+        if (null != offset[0]) {
+          const first = offset[0];
+          const tmpResult = require("module_136");
+          return tmpResult.getPublicInstanceFromInstanceHandle(first);
+        }
       }
       return null;
     }
@@ -97,87 +97,89 @@ let items = [
   {
     key: "offsetTop",
     get() {
-      const nativeElementReference = ReactNativeElement(136).getNativeElementReference(this);
+      const obj = require("module_136");
+      const nativeElementReference = obj.getNativeElementReference(this);
       if (null != nativeElementReference) {
         const _Math = Math;
-        return Math.round(require("NativeDOMCxx").getOffset(nativeElementReference)[1]);
+        const obj2 = require("NativeDOMCxx");
+        return Math.round(obj2.getOffset(nativeElementReference)[1]);
       } else {
         return 0;
       }
-      const obj = ReactNativeElement(136);
     }
   },
   {
     key: "offsetWidth",
     get() {
-      return Math.round(ReactNativeElement(141).getBoundingClientRect(this, { includeTransform: false }).width);
+      const obj = require("_getBoundingClientRect");
+      return round(obj.getBoundingClientRect(this, { includeTransform: false }).width);
     }
   },
   {
     key: "blur",
     value: function blur() {
       const self = this;
+      const obj = _modDef144;
       if (obj.isTextInput(this)) {
-        _modDef144.blurTextInput(self);
         const tmpResult = _modDef144;
+        tmpResult.blurTextInput(self);
       } else {
+        const obj2 = javaScriptFlagGetterAll;
         if (obj2.enableImperativeFocus()) {
-          const Commands = ReactNativeElement(112).Commands;
+          const Commands = Commands2.Commands;
           Commands.blur(self);
         }
-        obj2 = _modAll27;
       }
-      obj = _modDef144;
     }
   },
   {
     key: "focus",
     value: function focus() {
       const self = this;
+      const obj = _modDef144;
       if (obj.isTextInput(this)) {
-        _modDef144.focusTextInput(self);
         const tmpResult = _modDef144;
+        tmpResult.focusTextInput(self);
       } else {
+        const obj2 = javaScriptFlagGetterAll;
         if (obj2.enableImperativeFocus()) {
-          const Commands = ReactNativeElement(112).Commands;
+          const Commands = Commands2.Commands;
           Commands.focus(self);
         }
-        obj2 = _modAll27;
       }
-      obj = _modDef144;
     }
   },
   {
     key: "measure",
     value: function measure(arg0) {
-      const nativeElementReference = ReactNativeElement(136).getNativeElementReference(this);
+      const obj = require("module_136");
+      const nativeElementReference = obj.getNativeElementReference(this);
       if (null != nativeElementReference) {
-        require("NativeDOMCxx").measure(nativeElementReference, arg0);
         const obj2 = require("NativeDOMCxx");
+        obj2.measure(nativeElementReference, arg0);
       }
-      const obj = ReactNativeElement(136);
     }
   },
   {
     key: "measureAsyncOnUI",
     value: function measureAsyncOnUI(_measureCallback) {
-      const nativeElementReference = ReactNativeElement(136).getNativeElementReference(this);
+      const obj = require("module_136");
+      const nativeElementReference = obj.getNativeElementReference(this);
       if (null != nativeElementReference) {
-        require("NativeDOMCxx").measureAsyncOnUI(nativeElementReference, _measureCallback);
         const obj2 = require("NativeDOMCxx");
+        obj2.measureAsyncOnUI(nativeElementReference, _measureCallback);
       }
-      const obj = ReactNativeElement(136);
     }
   },
   {
     key: "measureInWindow",
     value: function measureInWindow(arg0) {
-      const nativeElementReference = ReactNativeElement(136).getNativeElementReference(this);
+      const obj = require("module_136");
+      const nativeElementReference = obj.getNativeElementReference(this);
       if (null != nativeElementReference) {
-        require("NativeDOMCxx").measureInWindow(nativeElementReference, arg0);
         const obj2 = require("NativeDOMCxx");
+        obj2.measureInWindow(nativeElementReference, arg0);
       }
-      const obj = ReactNativeElement(136);
     }
   },
   {
@@ -185,50 +187,53 @@ let items = [
     value: function measureLayout(c5, arg1, arg2) {
       if (c5 instanceof ReactNativeElement) {
         const self = this;
-        const nativeElementReference = ReactNativeElement(136).getNativeElementReference(this);
-        const obj = ReactNativeElement(136);
-        const nativeElementReference1 = ReactNativeElement(136).getNativeElementReference(c5);
+        const obj = require("module_136");
+        const nativeElementReference = obj.getNativeElementReference(this);
+        const obj2 = require("module_136");
+        const nativeElementReference1 = obj2.getNativeElementReference(c5);
+        const tmp6 = null != nativeElementReference && null != nativeElementReference1;
         if (tmp6) {
           let tmp7 = arg2;
-          const obj3 = require("NativeDOMCxx");
+          const measureLayout = require("NativeDOMCxx").measureLayout;
+          const tmp9 = require("NativeDOMCxx");
           if (null == arg2) {
-            tmp7 = closure_8;
+            tmp7 = noop;
           }
-          let tmp9 = arg1;
+          let tmp10 = arg1;
           if (null == arg1) {
-            tmp9 = closure_8;
+            tmp10 = noop;
           }
-          obj3.measureLayout(nativeElementReference, nativeElementReference1, tmp7, tmp9);
+          measureLayout(nativeElementReference, nativeElementReference1, tmp7, tmp10);
         }
-        const obj2 = ReactNativeElement(136);
-        tmp6 = null != nativeElementReference && null != nativeElementReference1;
       }
     }
   },
   {
     key: "setNativeProps",
     value: function setNativeProps(arg0) {
-      const obj4 = ReactNativeElement(146).create(arg0, this.__viewConfig.validAttributes);
-      const obj = ReactNativeElement(146);
-      const nativeElementReference = ReactNativeElement(136).getNativeElementReference(this);
+      const obj = create;
+      const obj4 = obj.create(arg0, this.__viewConfig.validAttributes);
+      const obj2 = require("module_136");
+      const nativeElementReference = obj2.getNativeElementReference(this);
+      const tmp4 = null != nativeElementReference && null != obj4;
       if (tmp4) {
-        require("NativeDOMCxx").setNativeProps(nativeElementReference, obj4);
         const obj3 = require("NativeDOMCxx");
+        obj3.setNativeProps(nativeElementReference, obj4);
       }
-      const obj2 = ReactNativeElement(136);
-      tmp4 = null != nativeElementReference && null != obj4;
     }
   },
 
 ];
 const entry = {
-  key: fn(135).EVENT_TARGET_GET_DECLARATIVE_LISTENER_KEY,
+  key: EVENT_TARGET_GET_THE_PARENT_KEY.EVENT_TARGET_GET_DECLARATIVE_LISTENER_KEY,
   value(arg0, arg1) {
-    const currentProps = ReactNativeElement(136).getCurrentProps(this);
+    const obj = require("module_136");
+    const currentProps = obj.getCurrentProps(this);
     if (null == currentProps) {
       return null;
     } else {
-      const eventTypePropName = ReactNativeElement(149).getEventTypePropName(arg0, arg1);
+      const tmpResult = topLevelTypeToEventType;
+      const eventTypePropName = tmpResult.getEventTypePropName(arg0, arg1);
       if (null == eventTypePropName) {
         return null;
       } else {
@@ -238,24 +243,10 @@ const entry = {
         }
         return tmp8;
       }
-      const tmpResult = ReactNativeElement(149);
     }
-    const obj = ReactNativeElement(136);
   }
 };
 items[12] = entry;
-class ReactNativeElement {
-  constructor(arg0, arg1, arg2, arg3) {
-    obj = ReactNativeElement(closure_3[6]);
-    setOwnerDocumentResult = obj.setOwnerDocument(this, importAll);
-    obj2 = ReactNativeElement(closure_3[6]);
-    setInstanceHandleResult = obj2.setInstanceHandle(this, importDefault);
-    this.__nativeTag = global;
-    this.__internalInstanceHandle = importDefault;
-    this.__viewConfig = fn;
-    return;
-  }
-}
-ReactNativeElement.prototype = _createClass(ReactNativeElement, items).prototype;
+tmp5.prototype = _createClass(ReactNativeElement, items).prototype;
 
-export default ReactNativeElement;
+export default tmp5;

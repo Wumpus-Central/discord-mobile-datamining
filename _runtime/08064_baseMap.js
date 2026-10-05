@@ -1,23 +1,22 @@
 // === Module 8064: baseMap ===
 
 // Module 8064 (baseMap)
-import baseForOwn from "baseForOwn" /* 516 */;
-import _mod518 from "module_518" /* 518 */;
+import createBaseEach from "createBaseEach" /* 516 */;
+import isArrayLike from "isArrayLike" /* 518 */;
 
 
 export default function baseMap(arg0, arg1) {
-  closure_0 = arg1;
-  c1 = -1;
-  if (_mod518(arg0)) {
+  let ArrayResult;
+  let closure_0 = arg1;
+  let sum = -1;
+  if (isArrayLike(arg0)) {
     const _Array = Array;
-    let ArrayResult = Array(arg0.length);
+    ArrayResult = Array(arg0.length);
   } else {
     ArrayResult = [];
   }
-  closure_2 = ArrayResult;
-  baseForOwn(arg0, (arg0, arg1, arg2) => {
-    const sum = c1 + 1;
-    c1 = sum;
+  createBaseEach(arg0, (arg0, arg1, arg2) => {
+    sum = sum + 1;
     ArrayResult[sum] = closure_0(arg0, arg1, arg2);
   });
   return ArrayResult;

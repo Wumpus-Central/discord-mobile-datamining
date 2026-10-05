@@ -4,11 +4,11 @@
 import _mod12564 from "module_12564" /* 12564 */;
 import _mod12565 from "module_12565" /* 12565 */;
 import _mod12572 from "module_12572" /* 12572 */;
-import _mod12573 from "module_12573" /* 12573 */;
+import htmlTreeAsString from "htmlTreeAsString" /* 12573 */;
 import _mod12574 from "module_12574" /* 12574 */;
 
-require = arg1;
-const dependencyMap = arg6;
+let hasOwnProperty;
+
 function addNonEnumerableProperty(arg0, arg1, value) {
   try {
     const _Object = Object;
@@ -18,16 +18,13 @@ function addNonEnumerableProperty(arg0, arg1, value) {
     if (_mod12564.DEBUG_BUILD) {
       const logger = _mod12565.logger;
       const _HermesInternal = HermesInternal;
-      logger.log("Failed to add non-enumerable property \"" + tmp2 + "\" to object", tmp);
+      logger.log("Failed to add non-enumerable property \"" + arg1 + "\" to object", arg0);
     }
   }
 }
 function markFunctionWrapped(arg0, arg1) {
   try {
-    let prototype = arg1.prototype;
-    if (!prototype) {
-      prototype = {};
-    }
+    const prototype = arg1.prototype || {};
     arg1.prototype = prototype;
     arg0.prototype = prototype;
     addNonEnumerableProperty(arg0, "__sentry_original__", arg1);
@@ -35,20 +32,22 @@ function markFunctionWrapped(arg0, arg1) {
   }
 }
 function convertToPlainObject(type) {
+  const obj = _mod12572;
   if (obj.isError(type)) {
     const error = { message: null, name: null, stack: null };
     ({ message: obj6.message, name: obj6.name, stack: obj6.stack } = type);
     if (typeof type === "object") {
+      let obj3;
       if (null !== type) {
         const obj2 = {};
-        let obj3 = obj2;
+        obj3 = obj2;
         const keys = Object.keys();
         if (keys !== undefined) {
           obj3 = obj2;
           while (keys[tmp] !== undefined) {
             let _Object2 = Object;
-            let call2 = hasOwnProperty2.call;
-            if (!(typeof call2 === "unknown" ? hasOwnProperty2(tmp17) : call2(type, tmp17))) {
+            let hasOwnProperty2 = Object.prototype.hasOwnProperty;
+            if (!hasOwnProperty2.call(type, tmp17)) {
               continue;
             } else {
               obj2[tmp17] = type[tmp17];
@@ -63,20 +62,21 @@ function convertToPlainObject(type) {
     }
     obj3 = {};
   } else {
+    const tmp2Result = _mod12572;
     if (tmp2Result.isEvent(type)) {
       const obj4 = { type: type.type, target: serializeEventTarget(type.target), currentTarget: serializeEventTarget(type.currentTarget) };
       if (typeof type === "object") {
+        let obj7;
         if (null !== type) {
           const obj5 = {};
-          let obj7 = obj5;
+          obj7 = obj5;
           const keys1 = Object.keys();
           if (keys1 !== undefined) {
             obj7 = obj5;
             while (keys1[tmp] !== undefined) {
               let _Object = Object;
               hasOwnProperty = Object.prototype.hasOwnProperty;
-              let call = hasOwnProperty.call;
-              if (!(typeof call === "unknown" ? hasOwnProperty(tmp8) : call(type, tmp8))) {
+              if (!hasOwnProperty.call(type, tmp8)) {
                 continue;
               } else {
                 obj5[tmp8] = type[tmp8];
@@ -89,8 +89,9 @@ function convertToPlainObject(type) {
         const merged1 = Object.assign(obj7);
         let isInstanceOfResult = typeof globalThis.CustomEvent !== "undefined";
         if (typeof globalThis.CustomEvent !== "undefined") {
-          isInstanceOfResult = _mod12572.isInstanceOf(type, globalThis.CustomEvent);
+          const CustomEvent2 = globalThis.CustomEvent;
           const tmp2Result2 = _mod12572;
+          isInstanceOfResult = tmp2Result2.isInstanceOf(type, globalThis.CustomEvent);
         }
         if (isInstanceOfResult) {
           obj4.detail = type.detail;
@@ -101,23 +102,18 @@ function convertToPlainObject(type) {
     } else {
       return type;
     }
-    tmp2Result = _mod12572;
   }
-  obj = _mod12572;
 }
 function serializeEventTarget(arg0) {
   try {
+    let htmlTreeAsStringResult;
+    const obj = _mod12572;
     if (obj.isElement(arg0)) {
-      let htmlTreeAsStringResult = _mod12573.htmlTreeAsString(arg0);
-      const tmp2Result = _mod12573;
+      const tmp2Result = htmlTreeAsString;
+      htmlTreeAsStringResult = tmp2Result.htmlTreeAsString(arg0);
     } else {
       const _Object = Object;
-      const call = toString.call;
-      if (typeof call === "unknown") {
-        htmlTreeAsStringResult = toString();
-      } else {
-        htmlTreeAsStringResult = call(arg0);
-      }
+      htmlTreeAsStringResult = toString.call(arg0);
     }
     return htmlTreeAsStringResult;
   } catch (err) {
@@ -125,34 +121,32 @@ function serializeEventTarget(arg0) {
   }
 }
 function _dropUndefinedKeys(arr, map) {
-  if ((function isPojo(arr) {
+  function isPojo(arr) {
+    const obj = map(items[2]);
     if (obj.isPlainObject(arr)) {
       try {
         const _Object = Object;
         const name = Object.getPrototypeOf(arr).constructor.name;
-        let tmp3 = !name;
-        if (name) {
-          tmp3 = "Object" === tmp2;
-        }
-        return tmp3;
+        return !name || "Object" === tmp2;
       } catch (err) {
         return true;
       }
     } else {
       return false;
     }
-  })(arr)) {
-    value = map.get(arr);
+  }
+  if (isPojo(arr)) {
+    const value = map.get(arr);
     if (undefined !== value) {
       return value;
     } else {
-      const obj = {};
+      let obj = {};
       const result = map.set(arr, obj);
       let _Object = Object;
       const ownPropertyNames = Object.getOwnPropertyNames(arr);
       for (const item10030 of ownPropertyNames) {
-        if (undefined !== arg0[item10030]) {
-          obj[item10030] = _dropUndefinedKeys(arg0[item10030], arg1);
+        if (undefined !== arr[item10030]) {
+          obj[item10030] = _dropUndefinedKeys(arr[item10030], map);
         }
         continue;
       }
@@ -161,14 +155,14 @@ function _dropUndefinedKeys(arr, map) {
   } else {
     const _Array = Array;
     if (Array.isArray(arr)) {
-      value2 = map.get(arr);
+      const value2 = map.get(arr);
       if (undefined !== value2) {
         return value2;
       } else {
         const items = [];
         const result1 = map.set(arr, items);
         const item = arr.forEach((item) => {
-          items.push(_dropUndefinedKeys(item, closure_0));
+          items.push(_dropUndefinedKeys(item, map));
         });
         return items;
       }
@@ -181,7 +175,8 @@ function _dropUndefinedKeys(arr, map) {
 export { addNonEnumerableProperty };
 export { convertToPlainObject };
 export const dropUndefinedKeys = function dropUndefinedKeys(arr) {
-  return _dropUndefinedKeys(arr, new Map());
+  map = new Map();
+  return _dropUndefinedKeys(arr, map);
 };
 export const extractExceptionKeysForMessage = function extractExceptionKeysForMessage(name) {
   let num = maxValueLength;
@@ -193,7 +188,8 @@ export const extractExceptionKeysForMessage = function extractExceptionKeysForMe
   const first = keys[0];
   if (first) {
     if (first.length >= num) {
-      return _mod12574.truncate(first, num);
+      const obj3 = _mod12574;
+      return obj3.truncate(first, num);
     } else {
       let length = keys.length;
       if (length > 0) {
@@ -204,7 +200,8 @@ export const extractExceptionKeysForMessage = function extractExceptionKeysForMe
         }
         let truncateResult = joined;
         if (length !== keys.length) {
-          truncateResult = _mod12574.truncate(joined, num);
+          const obj2 = _mod12574;
+          truncateResult = obj2.truncate(joined, num);
         }
         return truncateResult;
       }
@@ -216,17 +213,17 @@ export const extractExceptionKeysForMessage = function extractExceptionKeysForMe
 };
 export const fill = function fill(GLOBAL_OBJ, fetch, fn) {
   if (fetch in GLOBAL_OBJ) {
-    const tmp6 = fn(GLOBAL_OBJ[fetch]);
-    if (typeof tmp6 === "function") {
-      markFunctionWrapped(tmp6, tmp5);
+    const tmp3 = fn(GLOBAL_OBJ[fetch]);
+    if (typeof tmp3 === "function") {
+      markFunctionWrapped(tmp3, GLOBAL_OBJ[fetch]);
     }
     try {
-      GLOBAL_OBJ[fetch] = tmp6;
+      GLOBAL_OBJ[fetch] = tmp3;
     } catch (err) {
       if (_mod12564.DEBUG_BUILD) {
         const logger = _mod12565.logger;
         const _HermesInternal = HermesInternal;
-        logger.log("Failed to replace method \"" + tmp3 + "\" in object", tmp2);
+        logger.log("Failed to replace method \"" + fetch + "\" in object", GLOBAL_OBJ);
       }
     }
   }
@@ -235,24 +232,26 @@ export const getOriginalFunction = function getOriginalFunction(__sentry_origina
   return __sentry_original__.__sentry_original__;
 };
 export { markFunctionWrapped };
-export const objectify = function objectify(arg0) {
-  if (null == arg0 === true) {
+export const objectify = function objectify(value) {
+  let string;
+  if (null == value === true) {
     const _String = String;
-    let string = new String(arg0);
+    const self3 = this;
+    const self4 = this;
+    string = new String(value);
   } else {
-    let tmp = typeof arg0 === "symbol";
-    if (typeof arg0 !== "symbol") {
-      tmp = typeof arg0 === "bigint";
-    }
+    const tmp = typeof value === "symbol" || typeof value === "bigint";
     if (tmp === true) {
       const _Object = Object;
-      string = Object(arg0);
+      string = Object(value);
     } else {
-      string = arg0;
-      if (obj.isPrimitive(arg0) === true) {
-        string = new arg0.constructor(arg0);
+      string = value;
+      const obj = _mod12572;
+      if (obj.isPrimitive(value) === true) {
+        const self = this;
+        const self2 = this;
+        string = new value.constructor(value);
       }
-      obj = _mod12572;
     }
   }
   return string;
@@ -260,8 +259,11 @@ export const objectify = function objectify(arg0) {
 export const urlEncode = function urlEncode(arg0) {
   const entries = Object.entries(arg0);
   const mapped = entries.map((item) => {
+    let tmp;
+    let tmp2;
     [tmp, tmp2] = item;
-    return "" + encodeURIComponent(tmp) + "=" + encodeURIComponent(tmp2);
+    const encodeURIComponentResult = encodeURIComponent(tmp);
+    return "" + encodeURIComponentResult + "=" + encodeURIComponent(tmp2);
   });
   return mapped.join("&");
 };

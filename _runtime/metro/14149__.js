@@ -5,19 +5,40 @@ import _mod14150 from "module_14150" /* 14150 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
-require = arg1;
+function getMultiInternalSlots(__INTERNAL_SLOT_MAP__, self) {
+  let _undefined;
+  const substr = [...arguments].slice();
+  value = __INTERNAL_SLOT_MAP__.get(self);
+  let c0 = value;
+  if (c0) {
+    const _Object = Object;
+    return substr.reduce((acc, item) => {
+      acc[item] = c0[item];
+      return acc;
+    }, Object.create(null));
+  } else {
+    const _TypeError = TypeError;
+    const _HermesInternal = HermesInternal;
+    self = this;
+    const self2 = this;
+    const typeError = new TypeError("" + self + " InternalSlot has not been initialized");
+    throw typeError;
+  }
+}
 function GetOption(obj, arg1, arg2, join, arg4) {
   if (typeof obj !== "object") {
     const _TypeError2 = TypeError;
+    const self3 = this;
+    const self4 = this;
     const typeError = new TypeError("Options must be an object");
     throw typeError;
   } else {
-    let require = tmp19;
+    let require = tmp15;
     if (undefined !== obj[arg1]) {
-      let tmp2 = tmp19;
+      let tmp2 = tmp15;
       if ("boolean" === "string") {
         const _Boolean = Boolean;
-        const BooleanResult = Boolean(tmp19);
+        const BooleanResult = Boolean(obj[arg1]);
         require = BooleanResult;
         tmp2 = BooleanResult;
       }
@@ -31,11 +52,13 @@ function GetOption(obj, arg1, arg2, join, arg4) {
         require = StringResult;
         tmp5 = StringResult;
       }
-      if (join.filter((item) => item == StringResult).length) {
+      if (join.filter((item) => item == require).length) {
         return tmp5;
       } else {
         const _RangeError = RangeError;
         const _HermesInternal = HermesInternal;
+        const self = this;
+        const self2 = this;
         const rangeError = new RangeError("" + tmp5 + " is not within " + join.join(", "));
         throw rangeError;
       }
@@ -45,53 +68,52 @@ function GetOption(obj, arg1, arg2, join, arg4) {
   }
 }
 function memoize(arg0, cache) {
-  return cache.strategy ? cache.strategy : strategyDefault(arg0, { cache: cache.cache || closure_10, serializer: cache.serializer || serializerDefault });
+  const obj = { cache: cache.cache || closure_10, serializer: cache.serializer || serializerDefault };
+  return cache.strategy ? cache.strategy : strategyDefault(arg0, obj);
 }
-function monadic(call, get, fn, compareResult) {
-  let tmp2 = compareResult;
+function monadic(call, get, fn, num) {
+  let tmp2 = num;
+  const tmp = null == num || typeof num === "number" || typeof num === "boolean";
   if (!tmp) {
-    tmp2 = fn(compareResult);
+    tmp2 = fn(num);
   }
   value = get.get(tmp2);
-  if (undefined !== value) {
-    return value;
-  } else {
-    const self = this;
-    let result = call;
-    call = call.call;
-    const tmp6 = typeof call === "unknown" ? result(compareResult) : call(self, compareResult);
-    result = get.set(tmp2, tmp6);
+  if (undefined === value) {
+    const callResult = call.call(this, num);
+    const result = get.set(tmp2, callResult);
+    value = callResult;
   }
+  return value;
 }
 function variadic(apply, get, fn) {
-  const call = slice.call;
-  if (typeof call === "unknown") {
-    let substr = slice(3);
-  } else {
-    substr = call(arguments, 3);
-  }
-  const tmp3 = fn(substr);
-  value = get.get(tmp3);
+  const callResult = slice.call(arguments, 3);
+  const tmp2 = fn(callResult);
+  value = get.get(tmp2);
   if (undefined === value) {
     const self = this;
-    const applyResult = apply.apply(this, substr);
-    const result = get.set(tmp3, applyResult);
+    const applyResult = apply.apply(this, callResult);
+    const result = get.set(tmp2, applyResult);
     value = applyResult;
   }
   return value;
 }
 function strategyDefault(c165, cache) {
   cache = cache.cache;
-  return 1 === length.length ? monadic : variadic.bind(this, length, cache.create(), cache.serializer);
+  const obj = 1 === length.length ? monadic : variadic;
+  return obj.bind(this, length, cache.create(), cache.serializer);
 }
 function isLiteralPart(type) {
   return "literal" === type.type;
 }
 function invariant(arg0, arg1) {
+  let _Error;
   {
-    const _Error = Error;
+    _Error = Error;
   }
-  if (!arg0) {
+  const tmp2 = arg0;
+  if (!tmp2) {
+    const self = this;
+    const self2 = this;
     const _Error1 = new _Error(arg1);
     throw _Error1;
   }
@@ -101,6 +123,8 @@ function validateInstance(arg0, format) {
     const _TypeError = TypeError;
     const _String = String;
     const _HermesInternal = HermesInternal;
+    const self = this;
+    const self2 = this;
     const typeError = new TypeError("Method Intl.ListFormat.prototype." + "format" + " called on incompatible receiver " + String(arg0));
     throw typeError;
   }
@@ -122,6 +146,8 @@ function stringListFromIterable(obj) {
       }
       const _TypeError = TypeError;
       const _HermesInternal = HermesInternal;
+      const self = this;
+      const self2 = this;
       const typeError = new TypeError("Iterable yielded " + iter3.value + " which is not a string");
       throw typeError;
     }
@@ -131,31 +157,15 @@ function stringListFromIterable(obj) {
 function createPartsFromList(__INTERNAL_SLOT_MAP__, self, arg2) {
   if (0 === arg2.length) {
     return [];
-  } else if (2 === length) {
+  } else if (2 === arg2.length) {
     const obj2 = { 0: null, 1: null };
     const obj3 = { type: "element", value: arg2[0] };
     obj2[0] = obj3;
     const obj4 = { type: "element", value: arg2[1] };
     obj2[1] = obj4;
-    return deconstructPattern((function getMultiInternalSlots(__INTERNAL_SLOT_MAP__, self) {
-      const substr = [...arguments].slice();
-      value = __INTERNAL_SLOT_MAP__.get(self);
-      c0 = value;
-      if (value) {
-        const _Object = Object;
-        return substr.reduce((acc, item) => {
-          acc[item] = _undefined[item];
-          return acc;
-        }, Object.create(null));
-      } else {
-        const _TypeError = TypeError;
-        const _HermesInternal = HermesInternal;
-        const typeError = new TypeError("" + self + " InternalSlot has not been initialized");
-        throw typeError;
-      }
-    })(__INTERNAL_SLOT_MAP__, self, "templatePair").templatePair, obj2);
+    return deconstructPattern(getMultiInternalSlots(__INTERNAL_SLOT_MAP__, self, "templatePair").templatePair, obj2);
   } else {
-    const obj5 = { type: "element", value: arg2[length - 1] };
+    const obj5 = { type: "element", value: arg2[arg2.length - 1] };
     let diff = length - 2;
     let tmpResult = obj5;
     let tmp6 = obj5;
@@ -173,23 +183,7 @@ function createPartsFromList(__INTERNAL_SLOT_MAP__, self, arg2) {
         let obj6 = { type: "element", value: arg2[diff] };
         obj[0] = obj6;
         obj[1] = tmpResult;
-        tmpResult = deconstructPattern((function getMultiInternalSlots(__INTERNAL_SLOT_MAP__, self) {
-          const substr = [...arguments].slice();
-          value = __INTERNAL_SLOT_MAP__.get(self);
-          c0 = value;
-          if (value) {
-            const _Object = Object;
-            return substr.reduce((acc, item) => {
-              acc[item] = _undefined[item];
-              return acc;
-            }, Object.create(null));
-          } else {
-            const _TypeError = TypeError;
-            const _HermesInternal = HermesInternal;
-            const typeError = new TypeError("" + self + " InternalSlot has not been initialized");
-            throw typeError;
-          }
-        })(__INTERNAL_SLOT_MAP__, self, str)[str], obj);
+        tmpResult = deconstructPattern(getMultiInternalSlots(__INTERNAL_SLOT_MAP__, self, str)[str], obj);
         diff = diff - 1;
         tmp6 = tmpResult;
       } while (0 <= diff);
@@ -198,8 +192,7 @@ function createPartsFromList(__INTERNAL_SLOT_MAP__, self, arg2) {
   }
 }
 function deconstructPattern(templatePair, arg1) {
-  let items = [];
-  const iter = (function PartitionPattern(arr) {
+  function PartitionPattern(arr) {
     const items = [];
     let index = arr.indexOf("{");
     let num = 0;
@@ -209,14 +202,18 @@ function deconstructPattern(templatePair, arg1) {
       if (index > -1) {
         const index1 = arr.indexOf("}", index);
         const _HermesInternal = HermesInternal;
+        const tmp4 = index1 > index;
         const combined = "Invalid pattern " + arr;
+        const _Error = Error;
         while (tmp4) {
           if (index > num4) {
             let obj = { type: "literal", value: arr.substring(num4, index) };
-            arr = items.push(obj);
+            let push = items.push;
+            arr = push(obj);
           }
           let obj2 = { type: arr.substring(index + 1, index1), value: "r" };
-          let arr4 = items.push(obj2);
+          let push2 = items.push;
+          let push2Result = push2(obj2);
           let sum = index1 + 1;
           let index2 = arr.indexOf("{", sum);
           num = sum;
@@ -226,38 +223,44 @@ function deconstructPattern(templatePair, arg1) {
             index = index2;
           }
         }
-        const error = new Error(combined);
-        throw error;
+        const self = this;
+        const self2 = this;
+        const _Error1 = new _Error(combined);
+        throw _Error1;
       }
     }
     if (num < arr.length) {
-      const obj3 = { type: "literal", value: arr.substring(num, length) };
-      items.push(obj3);
+      const push3 = items.push;
+      const obj3 = { type: "literal", value: arr.substring(num, arr.length) };
+      push3(obj3);
     }
     return items;
-  })(templatePair)[Symbol.iterator]();
+  }
+  let items = [];
+  const tmp2 = PartitionPattern(templatePair);
+  const iter = tmp2[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let type = nextResult.type;
     let iter2 = nextResult;
     if (isLiteralPart(nextResult)) {
-      let obj = { type: "literal", value: null };
-      obj.value = iter2.value;
+      let obj = { type: "literal", value: iter2.value };
       let arr = items.push(obj);
     } else {
       let _HermesInternal = HermesInternal;
-      let tmp6 = type in arg1;
-      let tmp7 = invariant(tmp6, "" + type + " is missing from placables");
-      let tmp8 = arg1[type];
-      let tmp9 = tmp8;
+      let tmp7 = type in arg1;
+      let tmp8 = invariant(tmp7, "" + type + " is missing from placables");
+      let tmp9 = arg1[type];
+      let tmp10 = tmp9;
       let _Array = Array;
       let push = items.push;
-      if (Array.isArray(tmp8)) {
+      if (Array.isArray(tmp9)) {
         let items1 = [];
-        let arraySpreadResult = HermesBuiltin.arraySpread(tmp10, 0);
-        let applyResult = HermesBuiltin.apply(items1, items);
+        let num = 0;
+        let arraySpreadResult = HermesBuiltin.arraySpread(items1, tmp11, 0);
+        let applyResult = HermesBuiltin.apply(push, items1, items);
       } else {
-        let arr2 = push(tmp9);
+        let arr2 = push(tmp10);
       }
     }
     continue;
@@ -270,9 +273,8 @@ function serializerDefault() {
 let closure_9 = (() => {
   class ObjectWithoutPrototypeCache {
     constructor() {
-      tmp = closure_2(this, ObjectWithoutPrototypeCache);
+      _classCallCheck(this, ObjectWithoutPrototypeCache);
       this.cache = Object.create(null);
-      return;
     }
   }
   const entry = {
@@ -294,7 +296,8 @@ let closure_9 = (() => {
 })();
 let closure_10 = {
   create() {
-    return new closure_9();
+    const tmp = new closure_9();
+    return tmp;
   }
 };
 function strategyVariadic(c165, cache) {
@@ -307,143 +310,106 @@ memoize(() => Intl.Locale(...HermesBuiltin.copyRestArgs()), { strategy: strategy
 memoize(() => Intl.ListFormat(...HermesBuiltin.copyRestArgs()), { strategy: strategyVariadic });
 let value = (() => {
   class ListFormat {
-    constructor(arg0, arg1) {
-      self = this;
-      tmp = ListFormat;
-      tmp2 = closure_2(this, ListFormat);
-      constructor = undefined;
+    constructor(locale, arg1) {
+      const self = this;
+      _classCallCheck(this, ListFormat);
+      let constructor;
       if (this) {
-        if (self instanceof tmp) {
+        if (self instanceof ListFormat) {
           constructor = self.constructor;
         }
       }
       if (constructor) {
-        __INTERNAL_SLOT_MAP__ = tmp.__INTERNAL_SLOT_MAP__;
+        const __INTERNAL_SLOT_MAP__ = ListFormat.__INTERNAL_SLOT_MAP__;
         if (!__INTERNAL_SLOT_MAP__.get(self)) {
-          tmp9 = globalThis;
-          _Object = Object;
-          tmp10 = null;
-          result = __INTERNAL_SLOT_MAP__.set(self, Object.create(null));
+          const _Object = Object;
+          const result = __INTERNAL_SLOT_MAP__.set(self, Object.create(null));
         }
-        tmp12 = arg0;
-        obj2 = arg1;
-        flag = true;
+        let obj4 = arg1;
         __INTERNAL_SLOT_MAP__.get(self).initializedListFormat = true;
-        tmp14 = globalThis;
-        _Intl = Intl;
-        canonicalLocales = Intl.getCanonicalLocales(arg0);
-        _Object2 = Object;
-        tmp16 = null;
-        obj1 = Object.create(null);
+        const _Intl = Intl;
+        const canonicalLocales = Intl.getCanonicalLocales(locale);
+        const _Object2 = Object;
+        const obj3 = Object.create(null);
         if (undefined === arg1) {
-          _Object3 = Object;
-          obj2 = Object.create(null);
-        } else if (typeof obj2 !== "object") {
-          _TypeError2 = TypeError;
-          tmp49 = new.target;
-          str13 = "Options must be an object";
-          tmp50 = new.target;
-          typeError = new TypeError("Options must be an object");
-          tmp52 = typeError;
+          const _Object3 = Object;
+          obj4 = Object.create(null);
+        } else if (typeof obj4 !== "object") {
+          const _TypeError2 = TypeError;
+          const self6 = this;
+          const self7 = this;
+          const typeError = new TypeError("Options must be an object");
           throw typeError;
         }
-        tmp18 = GetOption;
-        str2 = "best fit";
-        str3 = "string";
-        str4 = "localeMatcher";
-        num = 0;
-        tmp19 = obj2;
-        str5 = "string";
-        obj1.localeMatcher = GetOption(obj2, "localeMatcher", "string", ["best fit", "lookup"], "best fit");
-        localeData = tmp.localeData;
-        tmp20 = closure_0;
-        tmp21 = closure_1;
-        obj = closure_0(closure_1[2]);
-        tmp22 = obj;
-        tmp23 = canonicalLocales;
-        tmp24 = obj1;
-        tmp25 = localeData;
-        ResolveLocaleResult = obj.ResolveLocale(tmp.availableLocales, canonicalLocales, obj1, tmp.relevantExtensionKeys, localeData, tmp.getDefaultLocale);
-        __INTERNAL_SLOT_MAP__2 = tmp.__INTERNAL_SLOT_MAP__;
-        tmp27 = obj2;
+        obj3.localeMatcher = GetOption(obj4, "localeMatcher", "string", ["best fit", "lookup"], "best fit");
+        const localeData = ListFormat.localeData;
+        const obj = _mod14150;
+        const ResolveLocaleResult = obj.ResolveLocale(ListFormat.availableLocales, canonicalLocales, obj3, ListFormat.relevantExtensionKeys, localeData, ListFormat.getDefaultLocale);
+        const __INTERNAL_SLOT_MAP__2 = ListFormat.__INTERNAL_SLOT_MAP__;
+        locale = ResolveLocaleResult.locale;
         if (!__INTERNAL_SLOT_MAP__2.get(self)) {
-          _Object4 = Object;
-          result1 = __INTERNAL_SLOT_MAP__2.set(self, Object.create(null));
+          const _Object4 = Object;
+          const result1 = __INTERNAL_SLOT_MAP__2.set(self, Object.create(null));
         }
-        __INTERNAL_SLOT_MAP__2.get(self).locale = ResolveLocaleResult.locale;
-        str6 = "conjunction";
-        str7 = "type";
-        num2 = 0;
-        tmp29 = obj2;
-        str8 = "string";
-        tmp18Result = tmp18(tmp27, "type", "string", ["conjunction", "disjunction", "unit"], "conjunction");
-        __INTERNAL_SLOT_MAP__3 = tmp.__INTERNAL_SLOT_MAP__;
+        __INTERNAL_SLOT_MAP__2.get(self).locale = locale;
+        const __INTERNAL_SLOT_MAP__3 = ListFormat.__INTERNAL_SLOT_MAP__;
+        const tmp16Result = GetOption(obj4, "type", "string", ["conjunction", "disjunction", "unit"], "conjunction");
         if (!__INTERNAL_SLOT_MAP__3.get(self)) {
-          _Object5 = Object;
-          result2 = __INTERNAL_SLOT_MAP__3.set(self, Object.create(null));
+          const _Object5 = Object;
+          const result2 = __INTERNAL_SLOT_MAP__3.set(self, Object.create(null));
         }
-        __INTERNAL_SLOT_MAP__3.get(self).type = tmp18Result;
-        str9 = "long";
-        str10 = "style";
-        num3 = 0;
-        tmp32 = obj2;
-        str11 = "string";
-        tmp18Result1 = tmp18(tmp27, "style", "string", ["long", "short", "narrow"], "long");
-        __INTERNAL_SLOT_MAP__4 = tmp.__INTERNAL_SLOT_MAP__;
+        __INTERNAL_SLOT_MAP__3.get(self).type = tmp16Result;
+        const __INTERNAL_SLOT_MAP__4 = ListFormat.__INTERNAL_SLOT_MAP__;
+        const tmp16Result2 = GetOption(obj4, "style", "string", ["long", "short", "narrow"], "long");
         if (!__INTERNAL_SLOT_MAP__4.get(self)) {
-          _Object6 = Object;
-          result3 = __INTERNAL_SLOT_MAP__4.set(self, Object.create(null));
+          const _Object6 = Object;
+          const result3 = __INTERNAL_SLOT_MAP__4.set(self, Object.create(null));
         }
-        __INTERNAL_SLOT_MAP__4.get(self).style = tmp18Result1;
-        dataLocale = ResolveLocaleResult.dataLocale;
-        tmp35 = localeData[dataLocale];
-        _HermesInternal = HermesInternal;
-        str12 = "Missing locale data for ";
-        tmp36 = !tmp35;
-        combined = "Missing locale data for " + dataLocale;
-        if (!tmp36) {
-          tmp44 = tmp35[tmp18Result][tmp18Result1];
-          __INTERNAL_SLOT_MAP__5 = tmp.__INTERNAL_SLOT_MAP__;
+        __INTERNAL_SLOT_MAP__4.get(self).style = tmp16Result2;
+        const dataLocale = ResolveLocaleResult.dataLocale;
+        const _HermesInternal = HermesInternal;
+        const tmp34 = !localeData[dataLocale];
+        const combined = "Missing locale data for " + dataLocale;
+        if (!tmp34) {
+          const __INTERNAL_SLOT_MAP__5 = ListFormat.__INTERNAL_SLOT_MAP__;
+          const pair = tmp40.pair;
           if (!__INTERNAL_SLOT_MAP__5.get(self)) {
-            _Object7 = Object;
-            result4 = __INTERNAL_SLOT_MAP__5.set(self, Object.create(null));
+            const _Object7 = Object;
+            const result4 = __INTERNAL_SLOT_MAP__5.set(self, Object.create(null));
           }
-          __INTERNAL_SLOT_MAP__5.get(self).templatePair = tmp44.pair;
-          __INTERNAL_SLOT_MAP__6 = tmp.__INTERNAL_SLOT_MAP__;
+          __INTERNAL_SLOT_MAP__5.get(self).templatePair = pair;
+          const __INTERNAL_SLOT_MAP__6 = ListFormat.__INTERNAL_SLOT_MAP__;
+          const start = tmp40.start;
           if (!__INTERNAL_SLOT_MAP__6.get(self)) {
-            _Object8 = Object;
-            result5 = __INTERNAL_SLOT_MAP__6.set(self, Object.create(null));
+            const _Object8 = Object;
+            const result5 = __INTERNAL_SLOT_MAP__6.set(self, Object.create(null));
           }
-          __INTERNAL_SLOT_MAP__6.get(self).templateStart = tmp44.start;
-          __INTERNAL_SLOT_MAP__7 = tmp.__INTERNAL_SLOT_MAP__;
+          __INTERNAL_SLOT_MAP__6.get(self).templateStart = start;
+          const __INTERNAL_SLOT_MAP__7 = ListFormat.__INTERNAL_SLOT_MAP__;
+          const middle = tmp40.middle;
           if (!__INTERNAL_SLOT_MAP__7.get(self)) {
-            _Object9 = Object;
-            result6 = __INTERNAL_SLOT_MAP__7.set(self, Object.create(null));
+            const _Object9 = Object;
+            const result6 = __INTERNAL_SLOT_MAP__7.set(self, Object.create(null));
           }
-          __INTERNAL_SLOT_MAP__7.get(self).templateMiddle = tmp44.middle;
-          __INTERNAL_SLOT_MAP__8 = tmp.__INTERNAL_SLOT_MAP__;
+          __INTERNAL_SLOT_MAP__7.get(self).templateMiddle = middle;
+          const __INTERNAL_SLOT_MAP__8 = ListFormat.__INTERNAL_SLOT_MAP__;
+          const end = tmp40.end;
           if (!__INTERNAL_SLOT_MAP__8.get(self)) {
-            _Object10 = Object;
-            result7 = __INTERNAL_SLOT_MAP__8.set(self, Object.create(null));
+            const _Object10 = Object;
+            const result7 = __INTERNAL_SLOT_MAP__8.set(self, Object.create(null));
           }
-          __INTERNAL_SLOT_MAP__8.get(self).templateEnd = tmp44.end;
-          return;
+          __INTERNAL_SLOT_MAP__8.get(self).templateEnd = end;
         } else {
-          tmp39 = new.target;
-          tmp40 = new.target;
-          tmp41 = combined;
-          tmp381 = new tmp38(combined);
-          tmp43 = tmp381;
-          throw tmp381;
+          const self4 = this;
+          const self5 = this;
+          const tmp362 = new tmp36(combined);
+          throw tmp362;
         }
       } else {
-        tmp4 = globalThis;
-        _TypeError = TypeError;
-        tmp5 = new.target;
-        str = "Intl.ListFormat must be called with 'new'";
-        tmp6 = new.target;
-        typeError1 = new TypeError("Intl.ListFormat must be called with 'new'");
-        tmp8 = typeError1;
+        const _TypeError = TypeError;
+        const self2 = this;
+        const self3 = this;
+        const typeError1 = new TypeError("Intl.ListFormat must be called with 'new'");
         throw typeError1;
       }
     }
@@ -476,8 +442,9 @@ let value = (() => {
           const items = [];
           for (const item10022 of tmp2) {
             let obj = {};
+            let push = items.push;
             let merged = Object.assign(item10022);
-            let arr = items.push(obj);
+            let arr = push(obj);
             continue;
           }
           return items;
@@ -490,66 +457,17 @@ let value = (() => {
     {
       key: "resolvedOptions",
       value: function resolvedOptions() {
-        const self = this;
+        let obj;
+        let self = this;
         if (this instanceof obj) {
-          obj = {
-            locale: (function getMultiInternalSlots(__INTERNAL_SLOT_MAP__, self) {
-                const substr = [...arguments].slice();
-                value = __INTERNAL_SLOT_MAP__.get(self);
-                c0 = value;
-                if (value) {
-                  const _Object = Object;
-                  return substr.reduce((acc, item) => {
-                    acc[item] = _undefined[item];
-                    return acc;
-                  }, Object.create(null));
-                } else {
-                  const _TypeError = TypeError;
-                  const _HermesInternal = HermesInternal;
-                  const typeError = new TypeError("" + self + " InternalSlot has not been initialized");
-                  throw typeError;
-                }
-              })(ListFormat.__INTERNAL_SLOT_MAP__, self, "locale").locale,
-            type: (function getMultiInternalSlots(__INTERNAL_SLOT_MAP__, self) {
-                const substr = [...arguments].slice();
-                value = __INTERNAL_SLOT_MAP__.get(self);
-                c0 = value;
-                if (value) {
-                  const _Object = Object;
-                  return substr.reduce((acc, item) => {
-                    acc[item] = _undefined[item];
-                    return acc;
-                  }, Object.create(null));
-                } else {
-                  const _TypeError = TypeError;
-                  const _HermesInternal = HermesInternal;
-                  const typeError = new TypeError("" + self + " InternalSlot has not been initialized");
-                  throw typeError;
-                }
-              })(ListFormat.__INTERNAL_SLOT_MAP__, self, "type").type,
-            style: (function getMultiInternalSlots(__INTERNAL_SLOT_MAP__, self) {
-                const substr = [...arguments].slice();
-                value = __INTERNAL_SLOT_MAP__.get(self);
-                c0 = value;
-                if (value) {
-                  const _Object = Object;
-                  return substr.reduce((acc, item) => {
-                    acc[item] = _undefined[item];
-                    return acc;
-                  }, Object.create(null));
-                } else {
-                  const _TypeError = TypeError;
-                  const _HermesInternal = HermesInternal;
-                  const typeError = new TypeError("" + self + " InternalSlot has not been initialized");
-                  throw typeError;
-                }
-              })(ListFormat.__INTERNAL_SLOT_MAP__, self, "style").style
-          };
+          obj = { locale: getMultiInternalSlots(ListFormat.__INTERNAL_SLOT_MAP__, self, "locale").locale, type: getMultiInternalSlots(ListFormat.__INTERNAL_SLOT_MAP__, self, "type").type, style: getMultiInternalSlots(ListFormat.__INTERNAL_SLOT_MAP__, self, "style").style };
           return obj;
         } else {
           let _TypeError = TypeError;
           const _String = String;
           let _HermesInternal = HermesInternal;
+          let self2 = this;
+          const self3 = this;
           let typeError = new TypeError("Method Intl.ListFormat.prototype." + "resolvedOptions" + " called on incompatible receiver " + String(self));
           throw typeError;
         }
@@ -559,10 +477,13 @@ let value = (() => {
   const entry1 = {
     key: "supportedLocalesOf",
     value: function supportedLocalesOf(items, arg1) {
+      const availableLocales = ListFormat.availableLocales;
       const canonicalLocales = Intl.getCanonicalLocales(items);
       if (undefined !== arg1) {
         if (null == arg1) {
           const _TypeError = TypeError;
+          const self = this;
+          const self2 = this;
           const typeError = new TypeError("undefined/null cannot be converted to object");
           throw typeError;
         } else {
@@ -570,7 +491,8 @@ let value = (() => {
           tmp2(Object(arg1), "localeMatcher", "string", ["lookup", "best fit"], "best fit");
         }
       }
-      return _mod14150.LookupSupportedLocales(Array.from(ListFormat.availableLocales), canonicalLocales);
+      const obj = _mod14150;
+      return obj.LookupSupportedLocales(Array.from(availableLocales), canonicalLocales);
     }
   };
   let items1 = [
@@ -578,29 +500,31 @@ let value = (() => {
     {
       key: "__addLocaleData",
       value: function __addLocaleData() {
+        let data;
+        let locale;
         const items = [...arguments];
         const iter = items[Symbol.iterator]();
+        const nextResult = iter.next();
         while (iter !== undefined) {
           ({ data, locale } = nextResult);
           let _Intl = Intl;
-          let tmp2 = new.target;
-          let tmp3 = new.target;
+          let self = this;
+          let self2 = this;
           let locale1 = new Intl.Locale(locale);
           let str = locale1.minimize();
           let str1 = str.toString();
           ListFormat.localeData[str1] = data;
           ListFormat.localeData[locale] = data;
           let availableLocales = ListFormat.availableLocales;
-          let tmp7 = str1;
+          let tmp5 = str1;
           let addResult = availableLocales.add(str1);
           let availableLocales2 = ListFormat.availableLocales;
           let addResult1 = availableLocales2.add(locale);
           if (!ListFormat.__defaultLocale) {
-            ListFormat.__defaultLocale = tmp7;
+            ListFormat.__defaultLocale = tmp5;
           }
           continue;
         }
-        nextResult = iter.next();
       }
     },
     {
@@ -617,6 +541,7 @@ value.availableLocales = new Set();
 value.__defaultLocale = "";
 value.relevantExtensionKeys = [];
 value.polyfilled = true;
+new Set();
 const weakMap = new WeakMap();
 value.__INTERNAL_SLOT_MAP__ = weakMap;
 value.__ = undefined;
@@ -628,21 +553,24 @@ try {
     Object.defineProperty(value.prototype, Symbol.toStringTag, { value: "Intl.ListFormat", writable: false, enumerable: false, configurable: true });
   }
   let _Object = Object;
+  let str = "length";
   Object.defineProperty(value.prototype.constructor, "length", { value: 0, writable: false, enumerable: false, configurable: true });
   let _Object2 = Object;
   Object.defineProperty(value.supportedLocalesOf, "length", { value: 1, writable: false, enumerable: false, configurable: true });
   let _Object3 = Object;
   let _Intl = Intl;
   let obj2 = { value, writable: true, enumerable: false, configurable: true };
+  let str2 = "ListFormat";
   Object.defineProperty(Intl, "ListFormat", obj2);
   const _globalThis = globalThis;
   if (__FORMATJS_LISTFORMAT_DATA__) {
+    let tmp10 = __FORMATJS_LISTFORMAT_DATA__;
+    const tmp11 = __FORMATJS_LISTFORMAT_DATA__;
     for (const item10081 of __FORMATJS_LISTFORMAT_DATA__) {
       let __addLocaleDataResult = value.__addLocaleData(item10081);
       continue;
     }
-    const _globalThis2 = globalThis;
-    delete tmp2[tmp];
+    delete globalThis["__FORMATJS_LISTFORMAT_DATA__"];
   }
 } catch (err) {
 }

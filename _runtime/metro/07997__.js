@@ -1,43 +1,18 @@
 // === Module 7997: ? ===
 
 // Module 7997
-import colorPropType from "colorPropType" /* 7990 */;
+import normalizeColor2 from "normalizeColor" /* 7990 */;
 import _mod7998 from "module_7998" /* 7998 */;
-import merged12 from "merged1" /* 7999 */;
+import normalizeColor3 from "normalizeColor" /* 7999 */;
 import merged22 from "merged2" /* 8000 */;
-import emptyFunction_mod from "module_4707" /* 4707 */;
+import "module_4707";
+import module_4707_mod from "module_4707" /* 4707 */;
 
-const obj = {};
+let module_4707;
+const obj = { backfaceVisibility: module_4707.oneOf(["visible", "hidden"]), backgroundColor: normalizeColor2, borderColor: normalizeColor2, borderTopColor: normalizeColor2, borderRightColor: normalizeColor2, borderBottomColor: normalizeColor2, borderLeftColor: normalizeColor2, borderStartColor: normalizeColor2, borderEndColor: normalizeColor2, borderRadius: module_4707.number, borderTopLeftRadius: module_4707.number, borderTopRightRadius: module_4707.number, borderTopStartRadius: module_4707.number, borderTopEndRadius: module_4707.number, borderBottomLeftRadius: module_4707.number, borderBottomRightRadius: module_4707.number, borderBottomStartRadius: module_4707.number, borderBottomEndRadius: module_4707.number, borderStyle: module_4707.oneOf(["solid", "dotted", "dashed"]), borderWidth: module_4707.number, borderTopWidth: module_4707.number, borderRightWidth: module_4707.number, borderBottomWidth: module_4707.number, borderLeftWidth: module_4707.number, opacity: module_4707.number, elevation: module_4707.number };
 const size = Object.assign(_mod7998);
-const merged1 = Object.assign(merged12);
+const normalizeColor = Object.assign(normalizeColor3);
 const merged2 = Object.assign(merged22);
-let emptyFunction = emptyFunction_mod;
-obj.backfaceVisibility = emptyFunction.oneOf(["visible", "hidden"]);
-obj.backgroundColor = colorPropType;
-obj.borderColor = colorPropType;
-obj.borderTopColor = colorPropType;
-obj.borderRightColor = colorPropType;
-obj.borderBottomColor = colorPropType;
-obj.borderLeftColor = colorPropType;
-obj.borderStartColor = colorPropType;
-obj.borderEndColor = colorPropType;
-obj.borderRadius = emptyFunction.number;
-obj.borderTopLeftRadius = emptyFunction.number;
-obj.borderTopRightRadius = emptyFunction.number;
-obj.borderTopStartRadius = emptyFunction.number;
-obj.borderTopEndRadius = emptyFunction.number;
-obj.borderBottomLeftRadius = emptyFunction.number;
-obj.borderBottomRightRadius = emptyFunction.number;
-obj.borderBottomStartRadius = emptyFunction.number;
-obj.borderBottomEndRadius = emptyFunction.number;
-let emptyFunction = emptyFunction_mod;
-obj.borderStyle = emptyFunction.oneOf(["solid", "dotted", "dashed"]);
-obj.borderWidth = emptyFunction.number;
-obj.borderTopWidth = emptyFunction.number;
-obj.borderRightWidth = emptyFunction.number;
-obj.borderBottomWidth = emptyFunction.number;
-obj.borderLeftWidth = emptyFunction.number;
-obj.opacity = emptyFunction.number;
-obj.elevation = emptyFunction.number;
+module_4707 = module_4707_mod;
 
 export default obj;

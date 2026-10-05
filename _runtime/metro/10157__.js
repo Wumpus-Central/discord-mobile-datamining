@@ -1,56 +1,51 @@
 // === Module 10157: ? ===
 
 // Module 10157
-import ENDefaultConfiguration2 from "ENDefaultConfiguration" /* 10158 */;
+import _mod10158 from "module_10158" /* 10158 */;
+import ReferenceWithTimezone2 from "ReferenceWithTimezone" /* 10164 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
-let ParsingContext = require;
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
-    } else {
-      tmp = __esModule;
-    }
-    return tmp;
-  };
-}
-const ENDefaultConfiguration = fn(ENDefaultConfiguration2);
+let tmp2 = this && this.__importDefault || ((__esModule) => {
+  let tmp2;
+  const tmp = __esModule;
+  if (!tmp) {
+    tmp2 = { default: __esModule };
+    const obj = { default: __esModule };
+  } else {
+    tmp2 = __esModule;
+  }
+  return tmp2;
+});
+const module_10158 = tmp2(_mod10158);
 class Chrono {
-  constructor(arg0) {
-    self = this;
-    casualConfiguration = global;
-    tmp2 = c2(this, ParsingContext);
-    _default = new closure_3.default();
-    this.defaultConfig = _default;
-    if (!global) {
-      defaultConfig = self.defaultConfig;
+  constructor(configuration) {
+    const self = this;
+    let casualConfiguration = configuration;
+    _classCallCheck(this, Chrono);
+    this.defaultConfig = new module_10158.default();
+    new module_10158.default();
+    if (!configuration) {
+      const defaultConfig = self.defaultConfig;
       casualConfiguration = defaultConfig.createCasualConfiguration();
     }
-    items = [...casualConfiguration.parsers];
+    const items = [...casualConfiguration.parsers];
     self.parsers = items;
     self.refiners = [...casualConfiguration.refiners];
-    return;
   }
 }
-ParsingContext = Chrono;
 const entry = {
   key: "clone",
   value: function clone() {
-    const obj = { parsers: null, refiners: [...this.refiners] };
-    const items = [...this.parsers];
-    obj.parsers = items;
-    const obj2 = Object.create(ParsingContext.prototype);
-    _classCallCheck(obj2, ParsingContext);
-    obj2.defaultConfig = new ENDefaultConfiguration.default();
+    let items;
+    const obj = { parsers: items, refiners: [...this.refiners] };
+    items = [...this.parsers];
+    const obj2 = Object.create(Chrono.prototype);
+    _classCallCheck(obj2, Chrono);
+    obj2.defaultConfig = new module_10158.default();
     obj2.parsers = [...obj.parsers];
     obj2.refiners = [...obj.refiners];
+    new module_10158.default();
     return obj2;
   }
 };
@@ -71,80 +66,95 @@ let items = [
   {
     key: "parse",
     value: function parse(arg0, arg1, arg2) {
-      closure_0 = new _moduleResult(arg0, arg1, arg2);
-      dependencyMap = [];
+      let closure_0 = new closure_1_4(arg0, arg1, arg2);
+      let closure_1 = [];
       const parsers = this.parsers;
+      new closure_1_4(arg0, arg1, arg2);
       const item = parsers.forEach((item) => {
-        closure_1 = closure_1.concat(ParsingContext.executeParser(closure_0, item));
+        closure_1 = closure_1.concat(Chrono.executeParser(closure_0, item));
       });
-      const sorted = dependencyMap.sort((index, index2) => index.index - index2.index);
+      const sorted = closure_1.sort((index, index2) => index.index - index2.index);
       const refiners = this.refiners;
       const item1 = refiners.forEach((refine) => {
         closure_1 = refine.refine(closure_0, closure_1);
       });
-      return dependencyMap;
+      return closure_1;
     }
   }
 ];
 const entry1 = {
   key: "executeParser",
-  value: function executeParser(debug, pattern) {
-    let index = pattern;
+  value: function executeParser(createParsingResult, pattern) {
+    let match1;
+    let text;
+    let text2;
+    const constructor = pattern;
     const items = [];
-    const patternResult = pattern.pattern(debug);
-    ({ text, text: text2 } = debug);
+    const patternResult = pattern.pattern(createParsingResult);
+    ({ text, text: text2 } = createParsingResult);
     let match = patternResult.exec(text2);
     if (match) {
-      match.index = match.index + text.length - text2.length;
-      const extractResult = pattern.extract(debug, match);
-      while (!extractResult) {
-        let substr = text.substring(match.index + 1);
-        let match1 = patternResult.exec(substr);
+      do {
+        let substr1;
+        match.index = match.index + text.length - text2.length;
+        let extractResult = pattern.extract(createParsingResult, match);
+        if (extractResult) {
+          let parsingResult1 = extractResult;
+          if (!(extractResult instanceof ReferenceWithTimezone2.ParsingResult)) {
+            createParsingResult = createParsingResult.createParsingResult;
+            let index = match.index;
+            let first = match[0];
+            if (extractResult instanceof ReferenceWithTimezone2.ParsingComponents) {
+              let parsingResult = createParsingResult(index, first);
+              parsingResult.start = extractResult;
+              parsingResult1 = parsingResult;
+            } else {
+              parsingResult1 = createParsingResult(index, first, extractResult);
+            }
+          }
+          let index2 = parsingResult1.index;
+          let text1 = parsingResult1.text;
+          let debugResult = createParsingResult.debug(() => console.log("" + constructor.constructor.name + " extracted (at index=" + index2 + ") '" + text1 + "'"));
+          let arr = items.push(parsingResult1);
+          let substr = text.substring(index2 + text1.length);
+          match1 = patternResult.exec(substr);
+          substr1 = substr;
+        } else {
+          substr1 = text.substring(match.index + 1);
+          match1 = patternResult.exec(substr1);
+        }
         match = match1;
-        text2 = substr;
-      }
-      let parsingResult = extractResult;
-      if (extractResult instanceof ParsingContext(10164).ParsingResult) {
-        index = parsingResult.index;
-        const text1 = parsingResult.text;
-        debug.debug(() => console.log("" + ParsingContext.constructor.name + " extracted (at index=" + index + ") '" + text1 + "'"));
-        items.push(parsingResult);
-        const substr1 = text.substring(index + text1.length);
-        const match2 = patternResult.exec(substr1);
-      } else if (!(extractResult instanceof ParsingContext(10164).ParsingComponents)) {
-        parsingResult = debug.createParsingResult(match.index, match[0], extractResult);
-      }
-      const tmp9Result = tmp9(index, substr1);
-      tmp9Result.start = extractResult;
-      parsingResult = tmp9Result;
+        text2 = substr1;
+      } while (match1);
     }
     return items;
   }
 };
 const items1 = [entry1];
 class ParsingContext {
-  constructor(arg0, arg1, arg2) {
-    self = this;
-    obj = importDefault;
-    tmp = c2(this, ParsingContext);
-    this.text = global;
-    if (null == importDefault) {
+  constructor(text, instant, arg2) {
+    const self = this;
+    let obj = arg2;
+    _classCallCheck(this, ParsingContext);
+    this.text = text;
+    if (null == arg2) {
       obj = {};
     }
     self.option = obj;
-    ReferenceWithTimezone = closure_0(closure_1[3]).ReferenceWithTimezone;
-    self.reference = ReferenceWithTimezone.fromInput(require, self.option.timezones);
+    const ReferenceWithTimezone = ReferenceWithTimezone2.ReferenceWithTimezone;
+    self.reference = ReferenceWithTimezone.fromInput(instant, self.option.timezones);
     self.refDate = self.reference.instant;
-    return;
   }
 }
 const entry2 = {
   key: "createParsingComponents",
   value: function createParsingComponents(date) {
     let parsingComponents = date;
-    if (!(date instanceof ParsingContext(10164).ParsingComponents)) {
+    if (!(date instanceof ReferenceWithTimezone2.ParsingComponents)) {
       const self = this;
-      parsingComponents = new ParsingContext(10164).ParsingComponents(this.reference, date);
+      const self2 = this;
+      const self3 = this;
+      parsingComponents = new ReferenceWithTimezone2.ParsingComponents(this.reference, date);
     }
     return parsingComponents;
   }
@@ -153,11 +163,12 @@ const items2 = [
   entry2,
   {
     key: "createParsingResult",
-    value: function createParsingResult(sum, match, extractResult, date) {
+    value: function createParsingResult(sum, length2, extractResult, date) {
       const self = this;
-      let substr = match;
-      if (typeof match !== "string") {
-        substr = self.text.substring(sum, match);
+      let substr = length2;
+      if (typeof length2 !== "string") {
+        const str = self.text;
+        substr = str.substring(sum, length2);
       }
       let parsingComponents = null;
       if (extractResult) {
@@ -167,7 +178,8 @@ const items2 = [
       if (date) {
         parsingComponents1 = self.createParsingComponents(date);
       }
-      return new ParsingContext(10164).ParsingResult(self.reference, sum, substr, parsingComponents, parsingComponents1);
+      const parsingResult = new ReferenceWithTimezone2.ParsingResult(self.reference, sum, substr, parsingComponents, parsingComponents1);
+      return parsingResult;
     }
   },
   {
@@ -188,6 +200,8 @@ const items2 = [
   }
 ];
 const _moduleResult = _createClass(ParsingContext, items2);
+const Chrono_export = _createClass(Chrono, items, items1);
+const ParsingContext_export = _createClass(ParsingContext, items2);
 
-export const Chrono = _createClass(Chrono, items, items1);
-export const ParsingContext = _moduleResult;
+export { Chrono_export as Chrono };
+export { ParsingContext_export as ParsingContext };

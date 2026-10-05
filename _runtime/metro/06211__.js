@@ -1,50 +1,50 @@
 // === Module 6211: ? ===
 
 // Module 6211
-import _mod19 from "module_19" /* 19 */;
+import react from "react" /* 19 */;
 import TouchEventType from "TouchEventType" /* 6148 */;
-import _mod6161 from "module_6161" /* 6161 */;
+import CALLBACK_TYPE from "CALLBACK_TYPE" /* 6161 */;
 
-const useMemo = _mod19.useMemo;
+const useMemo = react.useMemo;
 function getHandler(arg0, onBegin) {
-  if (_mod6161.CALLBACK_TYPE.BEGAN === arg0) {
+  if (CALLBACK_TYPE.CALLBACK_TYPE.BEGAN === arg0) {
     return onBegin.onBegin;
-  } else if (_mod6161.CALLBACK_TYPE.START === arg0) {
+  } else if (CALLBACK_TYPE.CALLBACK_TYPE.START === arg0) {
     return onBegin.onActivate;
-  } else if (_mod6161.CALLBACK_TYPE.UPDATE === arg0) {
+  } else if (CALLBACK_TYPE.CALLBACK_TYPE.UPDATE === arg0) {
     return onBegin.onUpdate;
-  } else if (_mod6161.CALLBACK_TYPE.END === arg0) {
+  } else if (CALLBACK_TYPE.CALLBACK_TYPE.END === arg0) {
     return onBegin.onDeactivate;
-  } else if (_mod6161.CALLBACK_TYPE.FINALIZE === arg0) {
+  } else if (CALLBACK_TYPE.CALLBACK_TYPE.FINALIZE === arg0) {
     return onBegin.onFinalize;
-  } else if (_mod6161.CALLBACK_TYPE.TOUCHES_DOWN === arg0) {
+  } else if (CALLBACK_TYPE.CALLBACK_TYPE.TOUCHES_DOWN === arg0) {
     return onBegin.onTouchesDown;
-  } else if (_mod6161.CALLBACK_TYPE.TOUCHES_MOVE === arg0) {
+  } else if (CALLBACK_TYPE.CALLBACK_TYPE.TOUCHES_MOVE === arg0) {
     return onBegin.onTouchesMove;
-  } else if (_mod6161.CALLBACK_TYPE.TOUCHES_UP === arg0) {
+  } else if (CALLBACK_TYPE.CALLBACK_TYPE.TOUCHES_UP === arg0) {
     return onBegin.onTouchesUp;
-  } else if (_mod6161.CALLBACK_TYPE.TOUCHES_CANCEL === arg0) {
+  } else if (CALLBACK_TYPE.CALLBACK_TYPE.TOUCHES_CANCEL === arg0) {
     return onBegin.onTouchesCancel;
   }
 }
-getHandler.__closure = { CALLBACK_TYPE: _mod6161.CALLBACK_TYPE };
+let obj = { CALLBACK_TYPE: CALLBACK_TYPE.CALLBACK_TYPE };
+getHandler.__closure = obj;
 getHandler.__workletHash = 8647314057396;
 getHandler.__initData = { code: "function getHandler_Pnpm_eventHandlersUtilsTs1(type,callbacks){const{CALLBACK_TYPE}=this.__closure;switch(type){case CALLBACK_TYPE.BEGAN:return callbacks.onBegin;case CALLBACK_TYPE.START:return callbacks.onActivate;case CALLBACK_TYPE.UPDATE:return callbacks.onUpdate;case CALLBACK_TYPE.END:return callbacks.onDeactivate;case CALLBACK_TYPE.FINALIZE:return callbacks.onFinalize;case CALLBACK_TYPE.TOUCHES_DOWN:return callbacks.onTouchesDown;case CALLBACK_TYPE.TOUCHES_MOVE:return callbacks.onTouchesMove;case CALLBACK_TYPE.TOUCHES_UP:return callbacks.onTouchesUp;case CALLBACK_TYPE.TOUCHES_CANCEL:return callbacks.onTouchesCancel;}}" };
 function touchEventTypeToCallbackType(arg0) {
   if (TouchEventType.TouchEventType.TOUCHES_DOWN === arg0) {
-    return _mod6161.CALLBACK_TYPE.TOUCHES_DOWN;
+    return CALLBACK_TYPE.CALLBACK_TYPE.TOUCHES_DOWN;
   } else if (TouchEventType.TouchEventType.TOUCHES_MOVE === arg0) {
-    return _mod6161.CALLBACK_TYPE.TOUCHES_MOVE;
+    return CALLBACK_TYPE.CALLBACK_TYPE.TOUCHES_MOVE;
   } else if (TouchEventType.TouchEventType.TOUCHES_UP === arg0) {
-    return _mod6161.CALLBACK_TYPE.TOUCHES_UP;
+    return CALLBACK_TYPE.CALLBACK_TYPE.TOUCHES_UP;
   } else if (TouchEventType.TouchEventType.TOUCHES_CANCEL === arg0) {
-    return _mod6161.CALLBACK_TYPE.TOUCHES_CANCEL;
+    return CALLBACK_TYPE.CALLBACK_TYPE.TOUCHES_CANCEL;
   } else {
-    return _mod6161.CALLBACK_TYPE.UNDEFINED;
+    return CALLBACK_TYPE.CALLBACK_TYPE.UNDEFINED;
   }
 }
-let obj = { CALLBACK_TYPE: _mod6161.CALLBACK_TYPE };
-touchEventTypeToCallbackType.__closure = { TouchEventType: TouchEventType.TouchEventType, CALLBACK_TYPE: _mod6161.CALLBACK_TYPE };
+touchEventTypeToCallbackType.__closure = { TouchEventType: TouchEventType.TouchEventType, CALLBACK_TYPE: CALLBACK_TYPE.CALLBACK_TYPE };
 touchEventTypeToCallbackType.__workletHash = 2066229974382;
 touchEventTypeToCallbackType.__initData = { code: "function touchEventTypeToCallbackType_Pnpm_eventHandlersUtilsTs2(eventType){const{TouchEventType,CALLBACK_TYPE}=this.__closure;switch(eventType){case TouchEventType.TOUCHES_DOWN:return CALLBACK_TYPE.TOUCHES_DOWN;case TouchEventType.TOUCHES_MOVE:return CALLBACK_TYPE.TOUCHES_MOVE;case TouchEventType.TOUCHES_UP:return CALLBACK_TYPE.TOUCHES_UP;case TouchEventType.TOUCHES_CANCEL:return CALLBACK_TYPE.TOUCHES_CANCEL;}return CALLBACK_TYPE.UNDEFINED;}" };
 function runCallback(arg0, arg1, arg2) {
@@ -56,38 +56,40 @@ function runCallback(arg0, arg1, arg2) {
 runCallback.__closure = { getHandler };
 runCallback.__workletHash = 9892811129293;
 runCallback.__initData = { code: "function runCallback_Pnpm_eventHandlersUtilsTs3(type,callbacks,event){const{getHandler}=this.__closure;const handler=getHandler(type,callbacks);if(!handler){return;}handler(event);}" };
+({ TouchEventType: TouchEventType.TouchEventType, CALLBACK_TYPE: CALLBACK_TYPE.CALLBACK_TYPE });
 
 export const useMemoizedGestureCallbacks = function useMemoizedGestureCallbacks(disableReanimated) {
+  let closure_0 = disableReanimated;
   const items = [, , , , , , , , ];
   ({ onActivate: arr[0], onBegin: arr[1], onDeactivate: arr[2], onFinalize: arr[3], onTouchesCancel: arr[4], onTouchesDown: arr[5], onTouchesMove: arr[6], onTouchesUp: arr[7], onUpdate: arr[8] } = disableReanimated);
   return useMemo(() => {
     const obj = {};
-    if (disableReanimated.onBegin) {
-      obj.onBegin = disableReanimated.onBegin;
+    if (onBegin.onBegin) {
+      obj.onBegin = onBegin.onBegin;
     }
-    if (disableReanimated.onActivate) {
-      obj.onActivate = disableReanimated.onActivate;
+    if (onBegin.onActivate) {
+      obj.onActivate = onBegin.onActivate;
     }
-    if (disableReanimated.onDeactivate) {
-      obj.onDeactivate = disableReanimated.onDeactivate;
+    if (onBegin.onDeactivate) {
+      obj.onDeactivate = onBegin.onDeactivate;
     }
-    if (disableReanimated.onFinalize) {
-      obj.onFinalize = disableReanimated.onFinalize;
+    if (onBegin.onFinalize) {
+      obj.onFinalize = onBegin.onFinalize;
     }
-    if (disableReanimated.onUpdate) {
-      obj.onUpdate = disableReanimated.onUpdate;
+    if (onBegin.onUpdate) {
+      obj.onUpdate = onBegin.onUpdate;
     }
-    if (disableReanimated.onTouchesDown) {
-      obj.onTouchesDown = disableReanimated.onTouchesDown;
+    if (onBegin.onTouchesDown) {
+      obj.onTouchesDown = onBegin.onTouchesDown;
     }
-    if (disableReanimated.onTouchesMove) {
-      obj.onTouchesMove = disableReanimated.onTouchesMove;
+    if (onBegin.onTouchesMove) {
+      obj.onTouchesMove = onBegin.onTouchesMove;
     }
-    if (disableReanimated.onTouchesUp) {
-      obj.onTouchesUp = disableReanimated.onTouchesUp;
+    if (onBegin.onTouchesUp) {
+      obj.onTouchesUp = onBegin.onTouchesUp;
     }
-    if (disableReanimated.onTouchesCancel) {
-      obj.onTouchesCancel = disableReanimated.onTouchesCancel;
+    if (onBegin.onTouchesCancel) {
+      obj.onTouchesCancel = onBegin.onTouchesCancel;
     }
     return obj;
   }, items);

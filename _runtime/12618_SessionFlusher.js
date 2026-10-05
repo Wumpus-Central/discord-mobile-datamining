@@ -1,27 +1,28 @@
 // === Module 12618: SessionFlusher ===
 
 // Module 12618 (SessionFlusher)
+import _mod12571 from "module_12571" /* 12571 */;
+import _mod12592 from "module_12592" /* 12592 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
-const SessionFlusher = require;
+let map;
+
 class SessionFlusher {
-  constructor(arg0, arg1) {
+  constructor(self, _sessionAttrs) {
     self = this;
-    self = this;
-    tmp = c2(this, SessionFlusher);
-    this._client = global;
+    _classCallCheck(this, SessionFlusher);
+    this._client = self;
     this.flushTimeout = 60;
-    map = new Map();
-    this._pendingAggregates = map;
+    this._pendingAggregates = new Map();
     this._isEnabled = true;
+    new Map();
     this._intervalId = setInterval(() => self.flush(), 1000 * this.flushTimeout);
     if (this._intervalId.unref) {
-      _intervalId = self._intervalId;
-      unrefResult = _intervalId.unref();
+      const _intervalId = self._intervalId;
+      _intervalId.unref();
     }
-    self._sessionAttrs = require;
-    return;
+    self._sessionAttrs = _sessionAttrs;
   }
 }
 const entry = {
@@ -31,9 +32,11 @@ const entry = {
     const sessionAggregates = this.getSessionAggregates();
     if (0 !== sessionAggregates.aggregates.length) {
       const _Map = Map;
-      const map = new Map();
-      self._pendingAggregates = map;
+      const self2 = this;
+      const self3 = this;
+      self._pendingAggregates = new Map();
       const _client = self._client;
+      map = new Map();
       _client.sendSession(sessionAggregates);
     }
   }
@@ -45,7 +48,8 @@ const items = [
     value: function getSessionAggregates() {
       const _pendingAggregates = this._pendingAggregates;
       const obj = { attrs: this._sessionAttrs, aggregates: Array.from(_pendingAggregates.values()) };
-      return SessionFlusher(12571).dropUndefinedKeys(obj);
+      const obj2 = _mod12571;
+      return obj2.dropUndefinedKeys(obj);
     }
   },
   {
@@ -61,50 +65,57 @@ const items = [
     value: function incrementSessionStatusCount() {
       const self = this;
       if (this._isEnabled) {
-        const isolationScope = SessionFlusher(12592).getIsolationScope();
+        const obj = _mod12592;
+        const isolationScope = obj.getIsolationScope();
         const requestSession = isolationScope.getRequestSession();
-        let status = requestSession;
-        if (requestSession) {
-          status = requestSession.status;
-        }
-        if (status) {
+        const tmp4 = requestSession && requestSession.status;
+        if (tmp4) {
           const _Date = Date;
+          const self2 = this;
+          const self3 = this;
+          const _incrementSessionStatusCount = self._incrementSessionStatusCount;
+          const status = requestSession.status;
           const date = new Date();
-          const result = self._incrementSessionStatusCount(requestSession.status, date);
+          const result = _incrementSessionStatusCount(status, date);
           isolationScope.setRequestSession(undefined);
         }
-        const obj = SessionFlusher(12592);
       }
     }
   },
   {
     key: "_incrementSessionStatusCount",
     value: function _incrementSessionStatusCount(status, date) {
+      let date1;
       date = new Date(date);
       const setSecondsResult = date.setSeconds(0, 0);
       const _pendingAggregates = this._pendingAggregates;
-      value = _pendingAggregates.get(setSecondsResult);
+      let value = _pendingAggregates.get(setSecondsResult);
       if (!value) {
-        const obj = { started: null };
+        const obj = { started: date1.toISOString() };
         const _Date = Date;
-        const date1 = new Date(setSecondsResult);
-        obj.started = date1.toISOString();
+        const self = this;
+        const self2 = this;
         const _pendingAggregates2 = this._pendingAggregates;
+        date1 = new Date(setSecondsResult);
         const result = _pendingAggregates2.set(setSecondsResult, obj);
         value = obj;
       }
       if ("errored" === status) {
-        value.errored = (value.errored || 0) + 1;
+        const tmp8 = value.errored || 0;
+        value.errored = tmp8 + 1;
         return value.errored;
       } else if ("ok" === status) {
-        value.exited = (value.exited || 0) + 1;
+        const tmp7 = value.exited || 0;
+        value.exited = tmp7 + 1;
         return value.exited;
       } else {
-        value.crashed = (value.crashed || 0) + 1;
+        const tmp6 = value.crashed || 0;
+        value.crashed = tmp6 + 1;
         return value.crashed;
       }
     }
   }
 ];
+const SessionFlusher_export = _createClass(SessionFlusher, items);
 
-export const SessionFlusher = _createClass(SessionFlusher, items);
+export { SessionFlusher_export as SessionFlusher };

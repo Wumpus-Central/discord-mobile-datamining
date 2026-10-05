@@ -2,17 +2,15 @@
 
 // Module 836
 import ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE from "ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE" /* 834 */;
-import truncateTextByBytes from "truncateTextByBytes" /* 837 */;
+import DEFAULT_GEN_AI_MESSAGES_BYTE_LIMIT from "DEFAULT_GEN_AI_MESSAGES_BYTE_LIMIT" /* 837 */;
 
-require = arg1;
-const dependencyMap = arg6;
-Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
-export const buildMethodPath = function buildMethodPath(arg0, arg1) {
+export const buildMethodPath = function buildMethodPath(c0, arg1) {
   let combined = arg1;
-  if (arg0) {
+  if (c0) {
     const _HermesInternal = HermesInternal;
-    combined = "" + arg0 + "." + arg1;
+    combined = "" + c0 + "." + arg1;
   }
   return combined;
 };
@@ -27,7 +25,7 @@ export const getFinalOperationName = function getFinalOperationName(arr) {
         if (!arr.includes("chat")) {
           const parts = arr.split(".");
           str4 = parts.pop() || "unknown";
-          const tmp = parts.pop() || "unknown";
+          parts.pop() || "unknown";
         }
         str3 = str4;
       }
@@ -48,7 +46,7 @@ export const getSpanOperation = function getSpanOperation(arr) {
         if (!arr.includes("chat")) {
           const parts = arr.split(".");
           str4 = parts.pop() || "unknown";
-          const tmp = parts.pop() || "unknown";
+          parts.pop() || "unknown";
         }
         str3 = str4;
       }
@@ -60,12 +58,14 @@ export const getSpanOperation = function getSpanOperation(arr) {
 };
 export const getTruncatedJsonString = function getTruncatedJsonString(arr) {
   if (typeof arr === "string") {
-    return truncateTextByBytes.truncateGenAiStringInput(arr);
+    const obj2 = DEFAULT_GEN_AI_MESSAGES_BYTE_LIMIT;
+    return obj2.truncateGenAiStringInput(arr);
   } else {
     const _Array = Array;
     if (Array.isArray(arr)) {
       const _JSON2 = JSON;
-      return JSON.stringify(truncateTextByBytes.truncateGenAiMessages(arr));
+      const obj = DEFAULT_GEN_AI_MESSAGES_BYTE_LIMIT;
+      return JSON.stringify(obj.truncateGenAiMessages(arr));
     } else {
       const _JSON = JSON;
       return JSON.stringify(arr);
@@ -74,12 +74,14 @@ export const getTruncatedJsonString = function getTruncatedJsonString(arr) {
 };
 export const setTokenUsageAttributes = function setTokenUsageAttributes(setAttributes, promptTokens, completionTokens, cacheCreationInputTokens, cacheReadInputTokens) {
   let num = promptTokens;
+  const tmp = undefined !== promptTokens;
   if (tmp) {
     const obj = {};
     obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = num;
     setAttributes.setAttributes(obj);
   }
   let num2 = completionTokens;
+  const tmp5 = undefined !== completionTokens;
   if (tmp5) {
     const obj2 = {};
     obj2[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = num2;
@@ -103,6 +105,4 @@ export const setTokenUsageAttributes = function setTokenUsageAttributes(setAttri
   }
   const sum2 = sum1 + num4;
   setAttributes.setAttributes({ [closure_1_0(closure_1_1[0]).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE]: sum2 });
-  tmp = undefined !== promptTokens;
-  tmp5 = undefined !== completionTokens;
 };

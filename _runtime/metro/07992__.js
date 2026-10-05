@@ -1,8 +1,8 @@
 // === Module 7992: ? ===
 
 // Module 7992
-import emptyFunction from "module_4707" /* 4707 */;
+import module_4707 from "module_4707" /* 4707 */;
 
-const rect = { top: emptyFunction.number, left: emptyFunction.number, bottom: emptyFunction.number, right: emptyFunction.number };
+const rect = { top: module_4707.number, left: module_4707.number, bottom: module_4707.number, right: module_4707.number };
 
-export default emptyFunction.shape(rect);
+export default module_4707.shape(rect);

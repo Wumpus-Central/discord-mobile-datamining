@@ -2,19 +2,12 @@
 
 // Module 159 (_isNativeFunction)
 
-export default function _isNativeFunction(arg0) {
+export default function _isNativeFunction(fn) {
   try {
     const _Function = Function;
-    let str = Function.toString;
-    const call = str.call;
-    if (typeof call === "unknown") {
-      let strResult = str();
-    } else {
-      strResult = call(arg0);
-    }
-    str = "[native code]";
-    const index = strResult.indexOf("[native code]");
+    const callResult = toString.call(fn);
+    return -1 !== callResult.indexOf("[native code]");
   } catch (err) {
-    return typeof tmp === "function";
+    return typeof fn === "function";
   }
 };

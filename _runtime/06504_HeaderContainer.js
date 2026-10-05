@@ -1,56 +1,73 @@
 // === Module 6504: HeaderContainer ===
 
 // Module 6504 (HeaderContainer)
+import Fragment from "Fragment" /* 21 */;
 import Link from "Link" /* 1491 */;
 import _mod6019 from "module_6019" /* 6019 */;
-import noop from "module_19" /* 19 */;
+import react_native from "react-native" /* 6505 */;
+import _mod6506 from "module_6506" /* 6506 */;
+import react from "react" /* 19 */;
+import react_native2 from "react-native" /* 17 */;
 
-const require = globalThis.__r;
+let descriptor;
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ StyleSheet, View: c3 } = get_ActivityIndicator);
-const jsx = fn(21).jsx;
+let StyleSheet;
+let c3;
+({ StyleSheet, View: c3 } = react_native2);
+const jsx = Fragment.jsx;
 const styles = StyleSheet.create({ absolute: { position: "absolute", top: 0, start: 0, end: 0 } });
 
-export const HeaderContainer = function HeaderContainer(getFocusedRoute) {
-  ({ mode: require, scenes, layout: dependencyMap, getPreviousScene: noop, contentHeight: closure_3, onContentHeightChange: jsx } = getFocusedRoute);
-  const focusedRoute = getFocusedRoute.getFocusedRoute();
-  closure_6 = noop.useContext(_mod6019.HeaderBackContext);
-  const buildHref = Link.useLinkBuilder().buildHref;
-  let obj2 = { pointerEvents: "box-none", style: getFocusedRoute.style, children: null };
+export const HeaderContainer = function HeaderContainer(style) {
+  let closure_3;
+  let layout;
+  let minHeight;
+  let scenes;
+  ({ mode: require, scenes, layout: dependencyMap, getPreviousScene: react, contentHeight: closure_3, onContentHeightChange: jsx } = style);
+  style = style.style;
+  const focusedRoute = style.getFocusedRoute();
+  let closure_6 = react.useContext(_mod6019.HeaderBackContext);
+  let obj = Link;
+  const buildHref = obj.useLinkBuilder().buildHref;
   let substr = scenes.slice(-2);
-  obj2.children = substr.map((descriptor, index, arr) => {
-    if ("screen" !== descriptor) {
+  return <minHeight pointerEvents="box-none" style={style}>{substr.map((descriptor, index, arr) => {
+    let forNoAnimation;
+    let header;
+    let headerShown;
+    let obj3;
+    const tmp = descriptor;
+    const tmp2 = "screen" === descriptor;
+    if (!tmp2) {
       if (descriptor) {
-        options = descriptor.descriptor.options;
+        let options = descriptor.descriptor.options;
         ({ header, headerShown } = options);
         let tmp3 = undefined === headerShown;
+        const headerMode = options.headerMode;
         if (!tmp3) {
           tmp3 = headerShown;
         }
-        if (options.headerMode === tmp) {
+        let headerStyleInterpolator = options.headerStyleInterpolator;
+        if (headerMode === tmp) {
           if (tmp3) {
             const obj = { route: descriptor.descriptor.route };
-            const tmp8 = closure_2(obj);
+            const tmp7 = closure_2(obj);
+            let tmp8 = closure_6;
             let tmp9 = closure_6;
-            let tmp10 = closure_6;
-            if (tmp8) {
-              const route = tmp8.descriptor.route;
-              if (tmp8) {
-                const obj2 = { title: require("module_6019").getHeaderTitle(tmp11, route.name), href: buildHref(route.name, route.params) };
-                tmp9 = obj2;
-                const obj3 = require("module_6019");
+            if (tmp7) {
+              const route = tmp7.descriptor.route;
+              if (tmp7) {
+                const obj2 = { title: obj3.getHeaderTitle(tmp10, route.name), href: buildHref(route.name, route.params) };
+                tmp8 = obj2;
+                obj3 = _mod6019;
               }
-              tmp10 = tmp9;
+              tmp9 = tmp8;
             }
             descriptor = undefined;
             if (arr[index - 1] != null) {
-              descriptor = tmp15.descriptor;
+              descriptor = tmp14.descriptor;
             }
             let descriptor1;
             if (arr[index + 1] != null) {
-              descriptor1 = tmp18.descriptor;
+              descriptor1 = tmp17.descriptor;
             }
             let options1;
             if (descriptor != null) {
@@ -60,9 +77,11 @@ export const HeaderContainer = function HeaderContainer(getFocusedRoute) {
               options1 = {};
             }
             const headerShown2 = options1.headerShown;
+            const headerMode2 = options1.headerMode;
+            const tmp19 = undefined === headerShown2 || headerShown2;
             const substr = arr.slice(index + 1);
             const found = substr.find((descriptor) => {
-              options = undefined;
+              let options;
               if (descriptor != null) {
                 options = descriptor.descriptor.options;
               }
@@ -84,70 +103,68 @@ export const HeaderContainer = function HeaderContainer(getFocusedRoute) {
               options2 = {};
             }
             const gestureDirection = options2.gestureDirection;
-            const obj4 = { layout, back: tmp10, progress: descriptor.progress, options: descriptor.descriptor.options, route: descriptor.descriptor.route, navigation: descriptor.descriptor.navigation, styleInterpolator: null };
+            const obj4 = { layout: dependencyMap, back: tmp9, progress: descriptor.progress, options: descriptor.descriptor.options, route: descriptor.descriptor.route, navigation: descriptor.descriptor.navigation, styleInterpolator: forNoAnimation };
+            const tmp21 = (false === tmp19 || "screen" === headerMode2) && !descriptor1 || found;
             if ("float" === tmp) {
-              if (!tmp22) {
-                let forNoAnimation = tmp5;
-              } else {
+              if (tmp21) {
                 if ("vertical" !== gestureDirection) {
+                  let forSlideUp;
                   if ("vertical-inverted" !== gestureDirection) {
                     if ("horizontal-inverted" === gestureDirection) {
-                      let forSlideUp = require("module_6505").forSlideRight;
+                      forSlideUp = react_native.forSlideRight;
                     } else {
-                      forSlideUp = require("module_6505").forSlideLeft;
+                      forSlideUp = react_native.forSlideLeft;
                     }
                   }
+                  headerStyleInterpolator = forSlideUp;
                 }
-                forSlideUp = require("module_6505").forSlideUp;
+                forSlideUp = react_native.forSlideUp;
               }
+              forNoAnimation = headerStyleInterpolator;
             } else {
-              forNoAnimation = require("module_6505").forNoAnimation;
+              forNoAnimation = react_native.forNoAnimation;
             }
-            obj4.styleInterpolator = forNoAnimation;
             const obj5 = { route: descriptor.descriptor.route, navigation: descriptor.descriptor.navigation, children: null };
             let str5 = "none";
+            const NavigationProvider = Link.NavigationProvider;
             if (closure_5.key === descriptor.descriptor.route.key) {
               str5 = "box-none";
             }
             const obj6 = { pointerEvents: str5, "aria-hidden": closure_5.key !== descriptor.descriptor.route.key, style: null, children: null };
             if ("float" !== tmp) {
-              let tmp39 = null;
-              obj6.style = tmp39;
+              let headerResult;
+              let tmp37 = null;
+              obj6.style = tmp37;
               let fn;
-              if (closure_4) {
+              if (jsx) {
                 fn = (height) => {
-                  jsx({ route: descriptor.descriptor.route, height: height.nativeEvent.layout.height });
+                  <obj />;
                 };
               }
-              const obj7 = { pointerEvents: "box-none", onLayout: fn, children: null };
               if (undefined !== header) {
-                let headerResult = header(obj4);
+                headerResult = header(obj4);
               } else {
-                const obj8 = {};
+                const Header = _mod6506.Header;
                 const merged = Object.assign(obj4);
-                headerResult = jsx(require("Header").Header, {});
+                headerResult = <Header />;
               }
-              obj7.children = headerResult;
-              obj6.children = <closure_1_3 pointerEvents="box-none" onLayout={fn}>{null}</closure_1_3>;
-              obj5.children = <closure_1_3 {...obj6} />;
-              return jsx(require("Link").NavigationProvider, obj5, descriptor.descriptor.route.key);
+              obj6.children = <closure_3 pointerEvents="box-none" onLayout={fn}>{headerResult}</closure_3>;
+              obj5.children = <closure_3 {...obj6} />;
+              return <NavigationProvider key={descriptor.descriptor.route.key} {...obj5} />;
             }
             const items = [closure_5.absolute, ];
-            let tmp41 = null;
+            let tmp39 = null;
             if (tmp2) {
+              tmp39 = { minHeight };
               const obj9 = { minHeight };
-              tmp41 = obj9;
             }
-            items[1] = tmp41;
-            tmp39 = items;
-            const tmp20 = undefined === headerShown2 || headerShown2;
-            tmp22 = (false === (undefined === headerShown2 || headerShown2) || "screen" === options1.headerMode) && !descriptor1 || found;
+            items[1] = tmp39;
+            tmp37 = items;
           }
         }
         return null;
       }
     }
     return null;
-  });
-  return <minHeight pointerEvents="box-none" style={getFocusedRoute.style}>{null}</minHeight>;
+  })}</minHeight>;
 };

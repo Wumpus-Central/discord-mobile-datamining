@@ -3,12 +3,13 @@
 // Module 1186 (chainMessagesObjects)
 
 export const chainMessagesObjects = function chainMessagesObjects(messagesProxy, $$loader2) {
+  let merged;
   let tmp2 = "IntlMessagesProxy" === $$loader2[Symbol.toStringTag];
   if ("IntlMessagesProxy" === messagesProxy[Symbol.toStringTag]) {
     if (tmp2) {
       const $$loader = messagesProxy.$$loader;
       $$loader.fallbackWith($$loader2.$$loader);
-      let merged = messagesProxy;
+      merged = messagesProxy;
     }
     return merged;
   }
@@ -35,16 +36,17 @@ export const chainMessagesObjects = function chainMessagesObjects(messagesProxy,
   }
 };
 export const makeMessagesProxy = function makeMessagesProxy(loader) {
-  closure_0 = loader;
+  const f134830 = (arg0) => loader.get(loader, arg0);
+  let closure_0 = loader;
   const obj = {};
-  const proxy = new Proxy(obj, {
+  const obj2 = {
     ownKeys(arg0) {
       return Reflect.ownKeys(arg0);
     },
     getOwnPropertyDescriptor(arg0, arg1) {
       if (!arg0[arg1]) {
-        closure_0 = arg1;
-        arg0[arg1] = (arg0) => closure_0.get(closure_0, arg0);
+        let closure_0 = arg1;
+        arg0[arg1] = f134830;
       }
       return Reflect.getOwnPropertyDescriptor(arg0, arg1);
     },
@@ -55,8 +57,8 @@ export const makeMessagesProxy = function makeMessagesProxy(loader) {
         let str2 = "IntlMessagesProxy";
         if (arg1 !== Symbol.toStringTag) {
           if (!arg0[arg1]) {
-            closure_0 = arg1;
-            arg0[arg1] = (arg0) => closure_0.get(closure_0, arg0);
+            let closure_0 = arg1;
+            arg0[arg1] = f134830;
           }
           str2 = arg0[arg1];
         }
@@ -64,8 +66,10 @@ export const makeMessagesProxy = function makeMessagesProxy(loader) {
       }
       return str;
     }
-  });
+  };
+  const proxy = new Proxy(obj, obj2);
   Object.defineProperty(proxy, "$$baseObject", { value: obj, enumerable: false, configurable: false, writable: false });
-  Object.defineProperty(proxy, "$$loader", { value: loader, enumerable: false, configurable: false, writable: false });
+  const obj3 = { value: loader, enumerable: false, configurable: false, writable: false };
+  Object.defineProperty(proxy, "$$loader", obj3);
   return proxy;
 };

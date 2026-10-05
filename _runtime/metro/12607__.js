@@ -2,20 +2,21 @@
 
 // Module 12607
 import _mod12565 from "module_12565" /* 12565 */;
-import spanTimeInputToSeconds from "spanTimeInputToSeconds" /* 12570 */;
+import _mod12570 from "module_12570" /* 12570 */;
 import _mod12580 from "module_12580" /* 12580 */;
 import _mod12593 from "module_12593" /* 12593 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
 export const setMeasurement = function setMeasurement(arg0, arg1, arg2) {
+  let activeSpan;
   if (activeSpan === undefined) {
-    activeSpan = spanTimeInputToSeconds.getActiveSpan();
+    const obj = _mod12570;
+    activeSpan = obj.getActiveSpan();
   }
   let rootSpan = activeSpan;
-  if (activeSpan) {
-    rootSpan = spanTimeInputToSeconds.getRootSpan(activeSpan);
+  if (rootSpan) {
+    const obj3 = _mod12570;
+    rootSpan = obj3.getRootSpan(activeSpan);
   }
   if (rootSpan) {
     if (_mod12593.DEBUG_BUILD) {
@@ -30,7 +31,8 @@ export const setMeasurement = function setMeasurement(arg0, arg1, arg2) {
   }
 };
 export const timedEventsToMeasurements = function timedEventsToMeasurements(arr) {
-  if (arr) {
+  let tmp = arr;
+  if (tmp) {
     if (0 !== arr.length) {
       let obj = {};
       const item = arr.forEach((attributes) => {

@@ -1,19 +1,22 @@
 // === Module 7345: ? ===
 
 // Module 7345
-import DataViewDefault from "DataView" /* 7346 */;
+import _modDef7346 from "module_7346" /* 7346 */;
 
-importDefault = arg2;
-const dependencyMap = arg6;
+const f94720 = (item) => String.fromCharCode(item);
 
 export const getDataView = function getDataView(buffer, sum3, longAt) {
   try {
     const _DataView = DataView;
+    const self = this;
+    const self2 = this;
     const dataView = new DataView(buffer, sum3, longAt);
     return dataView;
   } catch (err) {
-    const tmp19 = new DataViewDefault(tmp3, tmp2, tmp);
-    return tmp19;
+    const self3 = this;
+    const self4 = this;
+    const tmp12 = new _modDef7346(buffer, sum3, longAt);
+    return tmp12;
   }
 };
 export const getStringFromDataView = function getStringFromDataView(dataView, sum, length) {
@@ -31,7 +34,7 @@ export const getStringFromDataView = function getStringFromDataView(dataView, su
       }
     }
   }
-  const mapped = items.map((item) => String.fromCharCode(item));
+  const mapped = items.map(f94720);
   return mapped.join("");
 };
 export const getNullTerminatedStringFromDataView = function getNullTerminatedStringFromDataView(byteLength, sum13) {
@@ -48,7 +51,7 @@ export const getNullTerminatedStringFromDataView = function getNullTerminatedStr
       }
     }
   }
-  const mapped = items.map((item) => String.fromCharCode(item));
+  const mapped = items.map(f94720);
   return mapped.join("");
 };
 export const getUnicodeStringFromDataView = function getUnicodeStringFromDataView(byteLength, arg1, uint325) {
@@ -69,7 +72,7 @@ export const getUnicodeStringFromDataView = function getUnicodeStringFromDataVie
   if (0 === items[items.length - 1]) {
     items.pop();
   }
-  const mapped = items.map((item) => String.fromCharCode(item));
+  const mapped = items.map(f94720);
   return mapped.join("");
 };
 export const getPascalStringFromDataView = function getPascalStringFromDataView(getUint8, sum1) {
@@ -90,12 +93,12 @@ export const getPascalStringFromDataView = function getPascalStringFromDataView(
       }
     }
   }
-  const mapped = items1.map((item) => String.fromCharCode(item));
+  const mapped = items1.map(f94720);
   items[1] = mapped.join("");
   return items;
 };
 export const getStringValueFromArray = function getStringValueFromArray(value) {
-  const mapped = value.map((item) => String.fromCharCode(item));
+  const mapped = value.map(f94720);
   return mapped.join("");
 };
 export const getCharacterArray = function getCharacterArray(str) {
@@ -103,6 +106,7 @@ export const getCharacterArray = function getCharacterArray(str) {
   return parts.map((item) => item.charCodeAt(0));
 };
 export const objectAssign = function objectAssign() {
+  let num;
   for (let num = 1; num < arguments.length; num = num + 1) {
     for (const key10010 in arguments[num]) {
       arguments[0][key10010] = arguments[num][key10010];
@@ -112,61 +116,67 @@ export const objectAssign = function objectAssign() {
   return arguments[0];
 };
 export const deferInit = function deferInit(items, base64, arg2) {
-  closure_1 = base64;
-  closure_2 = arg2;
-  c3 = false;
-  Object.defineProperty(items, base64, {
+  let closure_1 = base64;
+  let closure_2 = arg2;
+  let c3 = false;
+  let obj = {
     get() {
-      if (!c3) {
+      const tmp = c3;
+      if (!tmp) {
         c3 = true;
         const _Object = Object;
         const obj = { configurable: true, enumerable: true, value: closure_2.apply(items), writable: true };
-        Object.defineProperty(items, closure_1, obj);
+        defineProperty(items, base64, obj);
       }
-      return items[closure_1];
+      return items[base64];
     },
     configurable: true,
     enumerable: true
-  });
+  };
+  Object.defineProperty(items, base64, obj);
 };
 export const getBase64Image = function getBase64Image(image) {
-  let _btoa = globalThis;
+  let tmp4;
   if (typeof btoa !== "undefined") {
+    let btoaResult;
     if (typeof image === "string") {
-      _btoa = _btoa.btoa;
-      let _btoaResult = _btoa(image);
+      const _btoa = btoa;
+      btoaResult = btoa(image);
     } else {
       const _Array = Array;
-      const call = reduce.call;
       const _Uint8Array = Uint8Array;
+      const self3 = this;
+      const self4 = this;
+      const _btoa2 = btoa;
+      const call = reduce.call;
       const uint8Array = new Uint8Array(image);
-      const fn = (arg0, arg1) => arg0 + String.fromCharCode(arg1);
-      if (typeof call === "unknown") {
-        let reduced = reduce(fn, "");
-      } else {
-        reduced = call(uint8Array, fn, "");
-      }
-      _btoaResult = btoa(reduced);
+      btoaResult = _btoa2(call(uint8Array, (arg0, arg1) => arg0 + String.fromCharCode(arg1), ""));
     }
+    tmp4 = btoaResult;
   } else {
     const _Buffer3 = Buffer;
     if (typeof Buffer !== "undefined") {
+      let str1;
       const _Buffer4 = Buffer;
       if (undefined !== Buffer.from) {
         const _Buffer2 = Buffer;
-        let str1 = Buffer.from(image).toString("base64");
         const str3 = Buffer.from(image);
+        str1 = str3.toString("base64");
       } else {
         const _Buffer = Buffer;
+        const self = this;
+        const self2 = this;
         const str = new Buffer(image);
         str1 = str.toString("base64");
       }
+      tmp4 = str1;
     }
   }
+  return tmp4;
 };
-export const dataUriToBuffer = function dataUriToBuffer(response) {
-  const substr = response.substring(response.indexOf(",") + 1);
-  if (-1 !== response.indexOf(";base64")) {
+export const dataUriToBuffer = function dataUriToBuffer(result) {
+  const substr = result.substring(result.indexOf(",") + 1);
+  if (-1 !== result.indexOf(";base64")) {
     const _atob = atob;
     if (typeof atob !== "undefined") {
       const _Uint8Array = Uint8Array;
@@ -175,36 +185,44 @@ export const dataUriToBuffer = function dataUriToBuffer(response) {
     } else {
       const _Buffer7 = Buffer;
       if (typeof Buffer !== "undefined") {
+        let fromResult;
         const _Buffer8 = Buffer;
         if (undefined !== Buffer.from) {
           const _Buffer5 = Buffer;
-          let fromResult = Buffer.from(substr, "base64");
+          fromResult = Buffer.from(substr, "base64");
         } else {
           const _Buffer4 = Buffer;
+          const self3 = this;
+          const str = "base64";
+          const self4 = this;
           fromResult = new Buffer(substr, "base64");
         }
         return fromResult;
       }
     }
   } else {
-    let from = globalThis;
+    let buffer;
     const _decodeURIComponent = decodeURIComponent;
     const decodeURIComponentResult = decodeURIComponent(substr);
     const _Buffer6 = Buffer;
     if (typeof Buffer !== "undefined") {
+      let fromResult1;
       const _Buffer = Buffer;
       if (undefined !== Buffer.from) {
-        const _Buffer3 = from.Buffer;
-        from = _Buffer3.from;
-        let fromResult1 = from(decodeURIComponentResult);
+        const _Buffer3 = Buffer;
+        fromResult1 = Buffer.from(decodeURIComponentResult);
       } else {
         const _Buffer2 = Buffer;
+        const self = this;
+        const self2 = this;
         fromResult1 = new Buffer(decodeURIComponentResult);
       }
+      buffer = fromResult1;
     } else {
       const _Uint8Array2 = Uint8Array;
-      return Uint8Array.from(decodeURIComponentResult, (str) => str.charCodeAt(0)).buffer;
+      buffer = Uint8Array.from(decodeURIComponentResult, (str) => str.charCodeAt(0)).buffer;
     }
+    return buffer;
   }
 };
 export const padStart = function padStart(arg0, arg1, _0) {
@@ -213,7 +231,9 @@ export const padStart = function padStart(arg0, arg1, _0) {
 };
 export const parseFloatRadix = function parseFloatRadix(str, sum) {
   const parsed = parseInt(str.replace(".", ""), sum);
-  return parsed / Math.pow(sum, str.split(".")[1] || "".length);
+  const _Math = Math;
+  const arr = str.split(".")[1] || "";
+  return parsed / pow(sum, arr.length);
 };
 export const strRepeat = function strRepeat(_1, arg1) {
   const array = new Array(arg1 + 1);
@@ -221,34 +241,45 @@ export const strRepeat = function strRepeat(_1, arg1) {
 };
 export const COMPRESSION_METHOD_DEFLATE = 0;
 export const decompress = function decompress(dataView, compressionMethod, arg2) {
-  closure_0 = arg2;
+  let closure_0 = arg2;
   let str = dataview;
   if (dataview === undefined) {
     str = "string";
   }
   if (0 === compressionMethod) {
     if (typeof globalThis.DecompressionStream === "function") {
+      let nextPromise;
+      const DecompressionStream2 = globalThis.DecompressionStream;
+      const self = this;
+      const self2 = this;
       const decompressionStream = new globalThis.DecompressionStream("deflate");
       const _Blob = Blob;
       const items = [dataView];
+      const self3 = this;
+      const self4 = this;
       const blob = new Blob(items);
-      const pipeThroughResult = blob.stream().pipeThrough(decompressionStream);
+      const streamResult = blob.stream();
+      const pipeThroughResult = streamResult.pipeThrough(decompressionStream);
       if ("dataview" === str) {
         const _Response2 = Response;
+        const self7 = this;
+        const self8 = this;
         const response = new Response(pipeThroughResult);
-        let nextPromise = response.arrayBuffer().then((result) => {
+        const arrayBufferResult = response.arrayBuffer();
+        nextPromise = arrayBufferResult.then((result) => {
           const dataView = new DataView(result);
           return dataView;
         });
-        const arrayBufferResult = response.arrayBuffer();
       } else {
         const _Response = Response;
+        const self5 = this;
+        const self6 = this;
         const response1 = new Response(pipeThroughResult);
-        nextPromise = response1.arrayBuffer().then((result) => {
+        const arrayBufferResult2 = response1.arrayBuffer();
+        nextPromise = arrayBufferResult2.then((result) => {
           const decoder = new TextDecoder(closure_0);
           return decoder.decode(result);
         });
-        const arrayBufferResult2 = response1.arrayBuffer();
       }
       return nextPromise;
     }

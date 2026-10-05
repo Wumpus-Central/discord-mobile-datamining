@@ -1,16 +1,16 @@
 // === Module 4719: escapeRegExp ===
 
 // Module 4719 (escapeRegExp)
-import _mod637 from "module_637" /* 637 */;
+import toString from "toString" /* 637 */;
 
 const tmp = /[\\^$.*+?()[\]{}|]/g;
 const re2 = tmp;
 const regex = RegExp(tmp.source);
 
 export default function escapeRegExp(arg0) {
-  const str = _mod637(arg0);
+  const str = toString(arg0);
   let replaced = str;
-  if (str) {
+  if (replaced) {
     replaced = str;
     if (regex.test(str)) {
       replaced = str.replace(re2, "\\$&");

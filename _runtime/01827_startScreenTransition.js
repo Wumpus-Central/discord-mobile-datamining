@@ -1,20 +1,22 @@
 // === Module 1827: startScreenTransition ===
 
 // Module 1827 (startScreenTransition)
-import applyStyle from "applyStyle" /* 1828 */;
-import computeEasingProgress from "computeEasingProgress" /* 1829 */;
+import applyStyleForBelowTopScreen from "applyStyleForBelowTopScreen" /* 1828 */;
+import _mod1829 from "module_1829" /* 1829 */;
 import configureProps_mod from "configureProps" /* 1742 */;
 
 let configureProps = configureProps_mod;
 configureProps = configureProps.configureProps();
 function startScreenTransition(sharedEvent) {
-  closure_0 = sharedEvent;
+  let closure_0 = sharedEvent;
   sharedEvent = sharedEvent.sharedEvent;
   sharedEvent.addListener(sharedEvent.stackTag, () => {
-    applyStyle.applyStyle(closure_0, sharedEvent.value);
+    const obj = applyStyleForBelowTopScreen;
+    obj.applyStyle(closure_0, sharedEvent.value);
   });
 }
-startScreenTransition.__closure = { applyStyle: applyStyle.applyStyle };
+let obj = { applyStyle: applyStyleForBelowTopScreen.applyStyle };
+startScreenTransition.__closure = obj;
 startScreenTransition.__workletHash = 9428952089760;
 startScreenTransition.__initData = { code: "function startScreenTransition_Pnpm_animationManagerTs1(screenTransitionConfig){const{applyStyle}=this.__closure;const{stackTag:stackTag,sharedEvent:sharedEvent}=screenTransitionConfig;sharedEvent.addListener(stackTag,function(){applyStyle(screenTransitionConfig,sharedEvent.value);});}" };
 function getLockAxis(arg0) {
@@ -34,6 +36,8 @@ getLockAxis.__closure = {};
 getLockAxis.__workletHash = 16916946798878;
 getLockAxis.__initData = { code: "function getLockAxis_Pnpm_animationManagerTs2(goBackGesture){if(['swipeRight','swipeLeft','horizontalSwipe'].includes(goBackGesture)){return'x';}else if(['swipeUp','swipeDown','verticalSwipe'].includes(goBackGesture)){return'y';}return undefined;}" };
 function finishScreenTransition(stackTag) {
+  let goBackGesture;
+  let sharedEvent;
   ({ sharedEvent, goBackGesture } = stackTag);
   sharedEvent.removeListener(stackTag.stackTag);
   if (typeof getLockAxis === "function") {
@@ -47,15 +51,16 @@ function finishScreenTransition(stackTag) {
       }
       str = str2;
     }
-    computeEasingProgress.getSwipeSimulator(sharedEvent.value, stackTag, str)();
+    const obj = _mod1829;
+    obj.getSwipeSimulator(sharedEvent.value, stackTag, str)();
   } else {
     throw new TypeError("Trying to call a non-function");
   }
 }
-let obj = { applyStyle: applyStyle.applyStyle };
-finishScreenTransition.__closure = { getLockAxis, getSwipeSimulator: computeEasingProgress.getSwipeSimulator };
+finishScreenTransition.__closure = { getLockAxis, getSwipeSimulator: _mod1829.getSwipeSimulator };
 finishScreenTransition.__workletHash = 6937010294861;
 finishScreenTransition.__initData = { code: "function finishScreenTransition_Pnpm_animationManagerTs3(screenTransitionConfig){const{getLockAxis,getSwipeSimulator}=this.__closure;const{stackTag:stackTag,sharedEvent:sharedEvent,goBackGesture:goBackGesture}=screenTransitionConfig;sharedEvent.removeListener(stackTag);const lockAxis=getLockAxis(goBackGesture);const step=getSwipeSimulator(sharedEvent.value,screenTransitionConfig,lockAxis);step();}" };
+({ getLockAxis, getSwipeSimulator: _mod1829.getSwipeSimulator });
 
 export { startScreenTransition };
 export { finishScreenTransition };

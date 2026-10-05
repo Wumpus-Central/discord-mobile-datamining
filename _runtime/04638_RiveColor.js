@@ -2,20 +2,17 @@
 
 // Module 4638 (RiveColor)
 import _createClassDefault from "_createClass" /* 42 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 
-let _classCallCheck = _classCallCheck_mod;
 class RiveColor {
-  constructor(arg0, arg1, arg2, arg3) {
-    tmp = closure_0(this, RiveColor);
-    this.r = global;
-    this.g = arg1;
-    this.b = importDefault;
-    this.a = importAll;
-    return;
+  constructor(r, g, b, a) {
+    _classCallCheck(this, RiveColor);
+    this.r = r;
+    this.g = g;
+    this.b = b;
+    this.a = a;
   }
 }
-_classCallCheck = RiveColor;
 const entry = {
   key: "equals",
   value: function equals(arg0) {
@@ -23,7 +20,6 @@ const entry = {
     if (tmp) {
       const self = this;
       tmp = this.r === arg0.r && self.g === arg0.g && self.b === arg0.b && self.a === arg0.a;
-      const tmp2 = this.r === arg0.r && self.g === arg0.g && self.b === arg0.b && self.a === arg0.a;
     }
     return tmp;
   }
@@ -41,6 +37,7 @@ const entry1 = {
   key: "fromHexString",
   value: function fromHexString(str) {
     const replaced = str.replace(/^#/, "");
+    const obj = /^[0-9A-Fa-f]{6}([0-9A-Fa-f]{2})?$/;
     if (obj.test(replaced)) {
       const _parseInt = parseInt;
       const _parseInt2 = parseInt;
@@ -53,8 +50,8 @@ const entry1 = {
         const _parseInt4 = parseInt;
         num8 = parseInt(replaced.slice(6, 8), 16);
       }
-      const obj3 = Object.create(_classCallCheck.prototype);
-      _classCallCheck(obj3, _classCallCheck);
+      const obj3 = Object.create(RiveColor.prototype);
+      _classCallCheck(obj3, RiveColor);
       obj3.r = parsed;
       obj3.g = parsed1;
       obj3.b = parsed2;
@@ -64,15 +61,14 @@ const entry1 = {
       const _console = console;
       const _HermesInternal = HermesInternal;
       console.warn("Rive invalid hex color: " + "Rive invalid hex color: ");
-      const obj4 = Object.create(_classCallCheck.prototype);
-      _classCallCheck(obj4, _classCallCheck);
+      const obj4 = Object.create(RiveColor.prototype);
+      _classCallCheck(obj4, RiveColor);
       obj4.r = 0;
       obj4.g = 0;
       obj4.b = 0;
       obj4.a = 255;
       return obj4;
     }
-    obj = /^[0-9A-Fa-f]{6}([0-9A-Fa-f]{2})?$/;
   }
 };
 const items1 = [
@@ -80,15 +76,20 @@ const items1 = [
   {
     key: "fromInt",
     value: function fromInt(arg0) {
-      const obj = Object.create(_classCallCheck.prototype);
-      _classCallCheck(obj, _classCallCheck);
-      obj.r = arg0 >> 16 & 255;
-      obj.g = arg0 >> 8 & 255;
-      obj.b = 255 & arg0;
-      obj.a = arg0 >> 24 & 255;
+      const tmp = arg0 >> 16;
+      const tmp2 = arg0 >> 8;
+      const tmp3 = 255 & arg0;
+      const tmp4 = arg0 >> 24;
+      const obj = Object.create(RiveColor.prototype);
+      _classCallCheck(obj, RiveColor);
+      obj.r = tmp & 255;
+      obj.g = tmp2 & 255;
+      obj.b = tmp3;
+      obj.a = tmp4 & 255;
       return obj;
     }
   }
 ];
+const RiveColor_export = _createClassDefault(RiveColor, items, items1);
 
-export const RiveColor = _createClassDefault(RiveColor, items, items1);
+export { RiveColor_export as RiveColor };

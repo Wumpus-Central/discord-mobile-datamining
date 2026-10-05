@@ -2,69 +2,97 @@
 
 // Module 6223
 import handlerIDToTag from "handlerIDToTag" /* 6144 */;
-import transformIntoHandlerTags from "transformIntoHandlerTags" /* 6171 */;
-import _mod6184 from "module_6184" /* 6184 */;
-import DEFAULT_PROPS_TRANSFORMER from "DEFAULT_PROPS_TRANSFORMER" /* 6208 */;
-import noop from "module_19" /* 19 */;
+import selectProperties from "selectProperties" /* 6171 */;
+import NativeProxy2 from "NativeProxy" /* 6184 */;
+import maybeExtractNativeEvent from "maybeExtractNativeEvent" /* 6208 */;
+import react from "react" /* 19 */;
 
 const require = globalThis.__r;
+let _require, dependencyMap;
 
-({ useEffect: c2, useMemo: c3 } = noop);
+let c2;
+let c3;
+({ useEffect: c2, useMemo: c3 } = react);
 
 export const useGesture = function useGesture(Fling, clonedAndRemappedConfig) {
+  let config;
+  let jsEventHandler;
+  let type;
   _require = Fling;
   dependencyMap = clonedAndRemappedConfig;
-  const tmp2 = jsEventHandler(() => type(config[1]).getNextHandlerTag(), []);
+  const tmp2 = jsEventHandler(() => {
+    const obj = type(config[1]);
+    return obj.getNextHandlerTag();
+  }, []);
   const handlerTag = tmp2;
   if (clonedAndRemappedConfig.disableReanimated !== jsEventHandler(() => config.disableReanimated, [])) {
     const _Error2 = Error;
-    const error = new Error(require("tagMessage").tagMessage("The \"disableReanimated\" property must not be changed after the handler is created."));
+    let obj2 = require("tagMessage");
+    const self3 = this;
+    const self4 = this;
+    const error = new Error(obj2.tagMessage("The \"disableReanimated\" property must not be changed after the handler is created."));
     throw error;
   } else {
-    const gestureCallbacks = require("module_6224").useGestureCallbacks(tmp2, clonedAndRemappedConfig);
+    let obj3 = require("module_6224");
+    const gestureCallbacks = obj3.useGestureCallbacks(tmp2, clonedAndRemappedConfig);
     jsEventHandler = gestureCallbacks.jsEventHandler;
     const reanimatedEventHandler = gestureCallbacks.reanimatedEventHandler;
     const animatedEventHandler = gestureCallbacks.animatedEventHandler;
+    const tmp16 = _require;
     if (clonedAndRemappedConfig.shouldUseReanimatedDetector) {
       if (!reanimatedEventHandler) {
         const _Error = Error;
-        const error1 = new Error(require("tagMessage").tagMessage("Failed to create reanimated event handlers."));
+        const self = this;
+        const self2 = this;
+        const tmp16Result = tmp16(6145);
+        const error1 = new Error(tmp16Result.tagMessage("Failed to create reanimated event handlers."));
         throw error1;
       }
     }
     const items = [tmp2, , , ];
     ({ simultaneousWith: arr[1], requireToFail: arr[2], block: arr[3] } = clonedAndRemappedConfig);
-    const tmpResult = tmp(() => DEFAULT_PROPS_TRANSFORMER.prepareRelations({ simultaneousWith: config.simultaneousWith, requireToFail: config.requireToFail, block: config.block }, closure_2), items);
+    const tmpResult = jsEventHandler(() => {
+      const obj = maybeExtractNativeEvent;
+      const obj2 = { simultaneousWith: config.simultaneousWith, requireToFail: config.requireToFail, block: config.block };
+      return obj.prepareRelations(obj2, handlerTag);
+    }, items);
     const gestureRelations = tmpResult;
     const items1 = [tmp2, Fling, clonedAndRemappedConfig, jsEventHandler, reanimatedEventHandler, animatedEventHandler, tmpResult];
-    const tmpResult2 = tmp(() => {
-      const obj = { handlerTag, type, config, detectorCallbacks: { jsEventHandler, animatedEventHandler, reanimatedEventHandler }, gestureRelations };
+    const tmpResult2 = jsEventHandler(() => {
+      const obj = { handlerTag, type, config, detectorCallbacks: obj2, gestureRelations };
       return obj;
     }, items1);
-    closure_7 = tmpResult2;
+    let closure_7 = tmpResult2;
     const items2 = [Fling, tmp2];
     handlerTag(() => {
-      let NativeProxy = _mod6184.NativeProxy;
-      NativeProxy.createGestureHandler(closure_0, closure_2, {});
-      let result = transformIntoHandlerTags.scheduleFlushOperations();
+      let NativeProxy = NativeProxy2.NativeProxy;
+      NativeProxy.createGestureHandler(type, handlerTag, {});
+      let obj = selectProperties;
+      let result = obj.scheduleFlushOperations();
       return () => {
-        const NativeProxy = closure_0(6184).NativeProxy;
+        const NativeProxy = type(config[5]).NativeProxy;
         NativeProxy.dropGestureHandler(handlerTag);
-        const result = closure_0(6171).scheduleFlushOperations();
+        const obj = type(config[6]);
+        const result = obj.scheduleFlushOperations();
       };
     }, items2);
     const items3 = [tmp2, clonedAndRemappedConfig, Fling, tmpResult2];
     handlerTag(() => {
-      const result = DEFAULT_PROPS_TRANSFORMER.prepareConfigForNativeSide(closure_0, dependencyMap);
-      const NativeProxy = _mod6184.NativeProxy;
-      const result1 = NativeProxy.setGestureHandlerConfig(closure_2, result);
-      const result2 = transformIntoHandlerTags.scheduleFlushOperations();
-      DEFAULT_PROPS_TRANSFORMER.bindSharedValues(dependencyMap, closure_2);
-      handlerIDToTag.registerGesture(closure_2, closure_7);
+      let obj = maybeExtractNativeEvent;
+      const result = obj.prepareConfigForNativeSide(type, config);
+      const NativeProxy = NativeProxy2.NativeProxy;
+      const result1 = NativeProxy.setGestureHandlerConfig(handlerTag, result);
+      let obj2 = selectProperties;
+      const result2 = obj2.scheduleFlushOperations();
+      const obj3 = maybeExtractNativeEvent;
+      obj3.bindSharedValues(config, handlerTag);
+      const obj4 = handlerIDToTag;
+      obj4.registerGesture(handlerTag, closure_7);
       return () => {
-        closure_0(6208).unbindSharedValues(dependencyMap, handlerTag);
-        const obj = closure_0(6208);
-        closure_0(6144).unregisterGesture(handlerTag);
+        const obj = type(closure_1[4]);
+        obj.unbindSharedValues(closure_1_1, handlerTag);
+        const obj2 = type(closure_1[7]);
+        obj2.unregisterGesture(handlerTag);
       };
     }, items3);
     return tmpResult2;

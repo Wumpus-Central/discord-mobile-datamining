@@ -1,9 +1,9 @@
 // === Module 541: baseIsTypedArray ===
 
 // Module 541 (baseIsTypedArray)
-import _mod519 from "module_519" /* 519 */;
-import _mod522 from "module_522" /* 522 */;
-import _mod535 from "module_535" /* 535 */;
+import isLength from "isLength" /* 519 */;
+import baseGetTag from "baseGetTag" /* 522 */;
+import isObjectLike from "isObjectLike" /* 535 */;
 
 const obj = {};
 obj["[object Uint32Array]"] = true;
@@ -32,9 +32,6 @@ obj["[object Array]"] = false;
 obj["[object Arguments]"] = false;
 
 export default function baseIsTypedArray(arg0) {
-  let tmp3 = _mod535(arg0) && _mod519(arg0.length);
-  if (tmp3) {
-    tmp3 = obj[_mod522(undefined, arg0)];
-  }
+  const tmp3 = isObjectLike(arg0) && isLength(arg0.length) && obj[baseGetTag(undefined, arg0)];
   return tmp3;
 };

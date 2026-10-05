@@ -6,7 +6,7 @@ export default function baseSlice(arg0, arg1, arg2) {
   let tmp = arg1;
   if (arg1 < 0) {
     let num = 0;
-    if (-arg1 <= length) {
+    if (-arg1 <= arg0.length) {
       num = length + arg1;
     }
     tmp = num;
@@ -23,6 +23,7 @@ export default function baseSlice(arg0, arg1, arg2) {
   if (tmp <= sum) {
     num2 = sum - tmp >>> 0;
   }
+  const tmp4 = tmp >>> 0;
   const ArrayResult = Array(num2);
   let num3 = 0;
   if (0 < num2) {

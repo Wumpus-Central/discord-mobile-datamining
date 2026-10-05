@@ -10,11 +10,12 @@ export default function processAspectRatio(num) {
     const mapped = parts.map((item) => item.trim());
     if (!mapped.includes("auto")) {
       if (!mapped.some((item) => Number.isNaN(Number(item)))) {
+        let result;
         if (2 === mapped.length) {
           const _Number2 = Number;
           const _Number3 = Number;
-          let result = Number(mapped[0]) / Number(mapped[1]);
           const NumberResult = Number(mapped[0]);
+          result = NumberResult / Number(mapped[1]);
         } else {
           const _Number = Number;
           result = Number(mapped[0]);

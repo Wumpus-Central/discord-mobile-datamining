@@ -1,126 +1,41 @@
 // === Module 5722: get synchronousScreenUpdatesEnabled ===
 
 // Module 5722 (get synchronousScreenUpdatesEnabled)
+let obj2;
+let obj3;
+function get() {
+  return closure_2.experiment[iosOrientationInheritanceFixEnabled];
+}
+function set(arg0) {
+  const tmp3 = arg0 !== closure_2.experiment[iosOrientationInheritanceFixEnabled] && closure_2.experiment[iosOrientationInheritanceFixEnabled] !== c1;
+  if (tmp3) {
+    const _console = console;
+    const _HermesInternal = HermesInternal;
+    console.error("[RNScreens] " + iosOrientationInheritanceFixEnabled + " feature flag modified for a second time; this might lead to unexpected effects");
+  }
+  closure_2.experiment[iosOrientationInheritanceFixEnabled] = arg0;
+}
 let closure_2 = { experiment: { synchronousScreenUpdatesEnabled: true, synchronousHeaderConfigUpdatesEnabled: true, synchronousHeaderSubviewUpdatesEnabled: true, androidLegacyTopInsetBehavior: false, androidResetScreenShadowStateOnOrientationChangeEnabled: true, iosOrientationInheritanceFixEnabled: true }, stable: { debugLogging: false } };
-let debugLogging = "synchronousScreenUpdatesEnabled";
-let closure_3 = {
-  get() {
-    return c2.experiment[debugLogging];
-  },
-  set(arg0) {
-    let tmp3 = arg0 !== c2.experiment[debugLogging];
-    if (tmp3) {
-      tmp3 = c2.experiment[debugLogging] !== c1;
-    }
-    if (tmp3) {
-      const _console = console;
-      const _HermesInternal = HermesInternal;
-      console.error("[RNScreens] " + debugLogging + " feature flag modified for a second time; this might lead to unexpected effects");
-    }
-    c2.experiment[debugLogging] = arg0;
-  }
-};
-debugLogging = "synchronousHeaderConfigUpdatesEnabled";
-let closure_4 = {
-  get() {
-    return c2.experiment[debugLogging];
-  },
-  set(arg0) {
-    let tmp3 = arg0 !== c2.experiment[debugLogging];
-    if (tmp3) {
-      tmp3 = c2.experiment[debugLogging] !== c1;
-    }
-    if (tmp3) {
-      const _console = console;
-      const _HermesInternal = HermesInternal;
-      console.error("[RNScreens] " + debugLogging + " feature flag modified for a second time; this might lead to unexpected effects");
-    }
-    c2.experiment[debugLogging] = arg0;
-  }
-};
-debugLogging = "synchronousHeaderSubviewUpdatesEnabled";
-let closure_5 = {
-  get() {
-    return c2.experiment[debugLogging];
-  },
-  set(arg0) {
-    let tmp3 = arg0 !== c2.experiment[debugLogging];
-    if (tmp3) {
-      tmp3 = c2.experiment[debugLogging] !== c1;
-    }
-    if (tmp3) {
-      const _console = console;
-      const _HermesInternal = HermesInternal;
-      console.error("[RNScreens] " + debugLogging + " feature flag modified for a second time; this might lead to unexpected effects");
-    }
-    c2.experiment[debugLogging] = arg0;
-  }
-};
-debugLogging = "androidLegacyTopInsetBehavior";
-let closure_6 = {
-  get() {
-    return c2.experiment[debugLogging];
-  },
-  set(arg0) {
-    let tmp3 = arg0 !== c2.experiment[debugLogging];
-    if (tmp3) {
-      tmp3 = c2.experiment[debugLogging] !== c1;
-    }
-    if (tmp3) {
-      const _console = console;
-      const _HermesInternal = HermesInternal;
-      console.error("[RNScreens] " + debugLogging + " feature flag modified for a second time; this might lead to unexpected effects");
-    }
-    c2.experiment[debugLogging] = arg0;
-  }
-};
-debugLogging = "androidResetScreenShadowStateOnOrientationChangeEnabled";
-let closure_7 = {
-  get() {
-    return c2.experiment[debugLogging];
-  },
-  set(arg0) {
-    let tmp3 = arg0 !== c2.experiment[debugLogging];
-    if (tmp3) {
-      tmp3 = c2.experiment[debugLogging] !== c1;
-    }
-    if (tmp3) {
-      const _console = console;
-      const _HermesInternal = HermesInternal;
-      console.error("[RNScreens] " + debugLogging + " feature flag modified for a second time; this might lead to unexpected effects");
-    }
-    c2.experiment[debugLogging] = arg0;
-  }
-};
-debugLogging = "iosOrientationInheritanceFixEnabled";
-let closure_8 = {
-  get() {
-    return c2.experiment[debugLogging];
-  },
-  set(arg0) {
-    let tmp3 = arg0 !== c2.experiment[debugLogging];
-    if (tmp3) {
-      tmp3 = c2.experiment[debugLogging] !== c1;
-    }
-    if (tmp3) {
-      const _console = console;
-      const _HermesInternal = HermesInternal;
-      console.error("[RNScreens] " + debugLogging + " feature flag modified for a second time; this might lead to unexpected effects");
-    }
-    c2.experiment[debugLogging] = arg0;
-  }
-};
-debugLogging = "debugLogging";
+const synchronousScreenUpdatesEnabled = "synchronousScreenUpdatesEnabled";
+let closure_3 = { get, set };
+const synchronousHeaderConfigUpdatesEnabled = "synchronousHeaderConfigUpdatesEnabled";
+let closure_4 = { get, set };
+const synchronousHeaderSubviewUpdatesEnabled = "synchronousHeaderSubviewUpdatesEnabled";
+let closure_5 = { get, set };
+const androidLegacyTopInsetBehavior = "androidLegacyTopInsetBehavior";
+let closure_6 = { get, set };
+const androidResetScreenShadowStateOnOrientationChangeEnabled = "androidResetScreenShadowStateOnOrientationChangeEnabled";
+let closure_7 = { get, set };
+const iosOrientationInheritanceFixEnabled = "iosOrientationInheritanceFixEnabled";
+let closure_8 = { get, set };
+const debugLogging = "debugLogging";
 let c1 = false;
 let closure_9 = {
   get() {
     return closure_2.stable[debugLogging];
   },
   set(arg0) {
-    let tmp3 = arg0 !== closure_2.stable[debugLogging];
-    if (tmp3) {
-      tmp3 = closure_2.stable[debugLogging] !== c1;
-    }
+    const tmp3 = arg0 !== closure_2.stable[debugLogging] && closure_2.stable[debugLogging] !== c1;
     if (tmp3) {
       const _console = console;
       const _HermesInternal = HermesInternal;
@@ -129,8 +44,8 @@ let closure_9 = {
     closure_2.stable[debugLogging] = arg0;
   }
 };
-const obj = { experiment: null, stable: null };
-const obj2 = {};
+const obj = { experiment: obj2, stable: obj3 };
+obj2 = {};
 Object.defineProperty(obj2, "synchronousScreenUpdatesEnabled", {
   get: () => closure_3.get(),
   set: (arg0) => {
@@ -185,15 +100,13 @@ Object.defineProperty(obj2, "ios26AllowInteractionsDuringTransition", {
 
   }
 });
-obj.experiment = obj2;
-const obj3 = {};
+obj3 = {};
 Object.defineProperty(obj3, "debugLogging", {
   get: () => closure_9.get(),
   set: (arg0) => {
     const result = closure_9.set(arg0);
   }
 });
-obj.stable = obj3;
 
 export default obj;
 export const compatibilityFlags = { isNewBackTitleImplementation: true, usesHeaderFlexboxImplementation: true, usesNewAndroidHeaderHeightImplementation: true, usesStableTabsApi: true };

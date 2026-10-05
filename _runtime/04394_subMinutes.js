@@ -1,37 +1,39 @@
 // === Module 4394: subMinutes ===
 
 // Module 4394 (subMinutes)
-import module_4123_mod from "module_4123" /* 4123 */;
+import addMinutes_mod from "addMinutes" /* 4123 */;
 import requiredArgs_mod from "requiredArgs" /* 3959 */;
-import module_3962_mod from "module_3962" /* 3962 */;
+import toInteger_mod from "toInteger" /* 3962 */;
 
-let module_4123 = module_4123_mod;
-if (!module_4123) {
-  const obj = { default: module_4123 };
-  let tmp3 = obj;
+let tmp3;
+let tmp5;
+let tmp7;
+let addMinutes = addMinutes_mod;
+if (!addMinutes) {
+  tmp3 = { default: addMinutes };
+  const obj = { default: addMinutes };
 } else {
-  tmp3 = module_4123;
+  tmp3 = addMinutes;
 }
-module_4123 = tmp3;
+addMinutes = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
+  tmp5 = { default: requiredArgs };
   const obj2 = { default: requiredArgs };
-  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }
 requiredArgs = tmp5;
-let module_3962 = module_3962_mod;
-if (!module_3962) {
-  const obj3 = { default: module_3962 };
-  let tmp7 = obj3;
+let toInteger = toInteger_mod;
+if (!toInteger) {
+  tmp7 = { default: toInteger };
+  const obj3 = { default: toInteger };
 } else {
-  tmp7 = module_3962;
+  tmp7 = toInteger;
 }
-module_3962 = tmp7;
+toInteger = tmp7;
 
 export default function subMinutes(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  return module_4123.default(arg0, -module_3962.default(arg1));
+  return addMinutes.default(arg0, -toInteger.default(arg1));
 };
-export default exports.default;

@@ -1,23 +1,29 @@
 // === Module 6301: ? ===
 
 // Module 6301
-import _mod17 from "module_17" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import _mod6302 from "module_6302" /* 6302 */;
-import noop_mod from "module_19" /* 19 */;
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
+import react_native2 from "react-native" /* 6302 */;
+import react_mod from "react" /* 19 */;
 
-let noop = noop_mod;
-const useMemo = noop.useMemo;
-let noop = noop_mod;
-const StyleSheet = _mod17.StyleSheet;
-const jsx = jsxProd.jsx;
-const memoResult = noop.memo((arg0) => {
+let react = react_mod;
+const useMemo = react.useMemo;
+const memo = react.memo;
+react = react_mod;
+const StyleSheet = react_native.StyleSheet;
+const jsx = Fragment.jsx;
+const memoResult = memo((arg0) => {
+  let animatedIndex;
+  let animatedPosition;
+  let backgroundComponent;
+  let backgroundStyle;
   ({ backgroundComponent, backgroundStyle } = arg0);
   let items = [backgroundStyle];
   ({ animatedIndex, animatedPosition } = arg0);
   const style = useMemo(() => {
-    const items = [_mod6302.styles.container, backgroundStyle];
-    return StyleSheet.flatten(items);
+    const flatten = StyleSheet.flatten;
+    const items = [react_native2.styles.container, backgroundStyle];
+    return flatten(items);
   }, items);
   if (backgroundComponent == null) {
     backgroundComponent = backgroundStyle(6303).BottomSheetBackground;

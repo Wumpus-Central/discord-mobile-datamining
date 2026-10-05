@@ -1,16 +1,17 @@
 // === Module 1721: rigidDecay ===
 
 // Module 1721 (rigidDecay)
-import _mod1719 from "module_1719" /* 1719 */;
+import VELOCITY_EPS from "VELOCITY_EPS" /* 1719 */;
 
-require = fn;
-const dependencyMap = arg6;
 function rigidDecay(initialVelocity, lastTimestamp, deceleration) {
+  let current;
+  let startTimestamp;
+  let velocity;
   initialVelocity = initialVelocity.initialVelocity;
   ({ startTimestamp, current, velocity } = initialVelocity);
   const bound = Math.min(Math.max(lastTimestamp - initialVelocity.lastTimestamp, 0), 64);
   const result = -1 - deceleration.deceleration * (lastTimestamp - startTimestamp);
-  const result1 = velocity * Math.exp(result * _mod1719.SLOPE_FACTOR);
+  const result1 = velocity * Math.exp(result * VELOCITY_EPS.SLOPE_FACTOR);
   initialVelocity.current = current + result1 * deceleration.velocityFactor * bound / 1000;
   initialVelocity.velocity = result1;
   initialVelocity.lastTimestamp = lastTimestamp;
@@ -29,10 +30,11 @@ function rigidDecay(initialVelocity, lastTimestamp, deceleration) {
     }
   }
   const absolute = Math.abs(result1);
-  return absolute < _mod1719.VELOCITY_EPS;
+  return absolute < VELOCITY_EPS.VELOCITY_EPS;
 }
-rigidDecay.__closure = { SLOPE_FACTOR: fn(1719).SLOPE_FACTOR, VELOCITY_EPS: fn(1719).VELOCITY_EPS };
+rigidDecay.__closure = { SLOPE_FACTOR: VELOCITY_EPS.SLOPE_FACTOR, VELOCITY_EPS: VELOCITY_EPS.VELOCITY_EPS };
 rigidDecay.__workletHash = 6356485112123;
 rigidDecay.__initData = { code: "function rigidDecay_Pnpm_rigidDecayTs1(animation,now,config){const{SLOPE_FACTOR,VELOCITY_EPS}=this.__closure;const{lastTimestamp:lastTimestamp,startTimestamp:startTimestamp,initialVelocity:initialVelocity,current:current,velocity:velocity}=animation;const deltaTime=Math.min(Math.max(now-lastTimestamp,0),64);const v=velocity*Math.exp(-(1-config.deceleration)*(now-startTimestamp)*SLOPE_FACTOR);animation.current=current+v*config.velocityFactor*deltaTime/1000;animation.velocity=v;animation.lastTimestamp=now;if(config.clamp){if(initialVelocity<0&&animation.current<=config.clamp[0]){animation.current=config.clamp[0];return true;}else if(initialVelocity>0&&animation.current>=config.clamp[1]){animation.current=config.clamp[1];return true;}}return Math.abs(v)<VELOCITY_EPS;}" };
+({ SLOPE_FACTOR: VELOCITY_EPS.SLOPE_FACTOR, VELOCITY_EPS: VELOCITY_EPS.VELOCITY_EPS });
 
 export { rigidDecay };

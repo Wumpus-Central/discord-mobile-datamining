@@ -3,12 +3,10 @@
 // Module 12619
 import _mod12612 from "module_12612" /* 12612 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
 export const getEnvelopeEndpointWithUrlEncodedAuth = function getEnvelopeEndpointWithUrlEncodedAuth(protocol, tunnel, name) {
   let combined1 = tunnel;
-  if (!tunnel) {
+  if (!combined1) {
     let str2 = "";
     if (protocol.protocol) {
       const _HermesInternal = HermesInternal;
@@ -32,19 +30,23 @@ export const getEnvelopeEndpointWithUrlEncodedAuth = function getEnvelopeEndpoin
     if (protocol.publicKey) {
       obj.sentry_key = protocol.publicKey;
     }
-    if (name) {
+    const tmp12 = name;
+    if (tmp12) {
       const _HermesInternal6 = HermesInternal;
       obj.sentry_client = "" + name.name + "/" + name.version;
     }
     const _URLSearchParams = URLSearchParams;
-    const str13 = new URLSearchParams(obj);
+    const self = this;
+    const self2 = this;
     const _HermesInternal7 = HermesInternal;
+    const str13 = new URLSearchParams(obj);
     combined1 = "" + combined + "?" + str13.toString();
   }
   return combined1;
 };
-export const getReportDialogEndpoint = function getReportDialogEndpoint(protocol, user) {
-  const url = _mod12612.makeDsn(protocol);
+export const getReportDialogEndpoint = function getReportDialogEndpoint(dsn, user) {
+  const obj = _mod12612;
+  const url = obj.makeDsn(dsn);
   if (url) {
     let str = "";
     if (url.protocol) {
@@ -66,7 +68,8 @@ export const getReportDialogEndpoint = function getReportDialogEndpoint(protocol
     const _HermesInternal5 = HermesInternal;
     const combined = "" + "" + str + "//" + host + str3 + str5 + "/api/" + "embed/error-page/";
     const _HermesInternal6 = HermesInternal;
-    let combined1 = "dsn=" + _mod12612.dsnToString(url);
+    const tmp2Result = _mod12612;
+    let combined1 = "dsn=" + tmp2Result.dsnToString(url);
     let tmp16 = combined1;
     const keys = Object.keys();
     if (keys !== undefined) {

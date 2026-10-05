@@ -1,16 +1,19 @@
 // === Module 1849: ? ===
 
 // Module 1849
-import _mod17 from "module_17" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import cancelAnimation from "cancelAnimation" /* 1643 */;
-import noop_mod from "module_19" /* 19 */;
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
+import _mod1643 from "module_1643" /* 1643 */;
+import react_mod from "react" /* 19 */;
 
-let noop = noop_mod;
-({ useCallback: c3, useMemo: closure_4, forwardRef } = noop);
-let noop = noop_mod;
-const View = _mod17.View;
-const jsx = jsxProd.jsx;
+let c3;
+let closure_4;
+let forwardRef;
+let react = react_mod;
+({ useCallback: c3, useMemo: closure_4, forwardRef } = react);
+react = react_mod;
+let View = react_native.View;
+const jsx = Fragment.jsx;
 let closure_8 = { x: 0, y: 0, width: 0, height: 0 };
 let closure_9 = { code: "function pnpm_indexTsx1(){const{initialFrame,defaultLayout}=this.__closure;return initialFrame.value||defaultLayout;}" };
 let closure_10 = { code: "function pnpm_indexTsx2(){const{screenHeight,keyboard,keyboardVerticalOffset,frame}=this.__closure;const keyboardY=screenHeight-keyboard.heightWhenOpened.value-keyboardVerticalOffset;return Math.max(frame.value.y+frame.value.height-keyboardY,0);}" };
@@ -19,8 +22,16 @@ let __initData = { code: "function pnpm_indexTsx4(layout){const{keyboard,initial
 let __initData2 = { code: "function pnpm_indexTsx5(){const{enabled,interpolateToRelativeKeyboardHeight,keyboard,translate,padding,frame,behavior}=this.__closure;if(!enabled){return{};}const bottom=interpolateToRelativeKeyboardHeight(keyboard.progress.value);const translateY=interpolateToRelativeKeyboardHeight(translate.value);const paddingBottom=interpolateToRelativeKeyboardHeight(padding.value);const height=frame.value.height-bottom;switch(behavior){case\"height\":if(!keyboard.isClosed.value&&height>0){return{height:height,flex:0};}return{};case\"position\":return{bottom:bottom};case\"padding\":return{paddingBottom:bottom};case\"translate-with-padding\":return{paddingTop:paddingBottom,transform:[{translateY:-translateY}]};default:return{};}}" };
 
 export default forwardRef((behavior, arg1) => {
+  let children;
+  let closure_13;
+  let enabled;
+  let obj10;
+  let onLayout;
+  let style;
+  let tmp17Result;
   behavior = behavior.behavior;
   ({ children, enabled } = behavior);
+  let contentContainerStyle = behavior.contentContainerStyle;
   if (enabled === undefined) {
     enabled = true;
   }
@@ -41,34 +52,34 @@ export default forwardRef((behavior, arg1) => {
   let height;
   __initData = undefined;
   __initData2 = undefined;
-  closure_14 = undefined;
+  let closure_14;
   let animatedStyle;
-  let contentContainerStyle;
-  const sharedValue = behavior(num[3]).useSharedValue(null);
-  const ref = sharedValue.useRef(null);
+  contentContainerStyle = undefined;
   let obj = behavior(num[3]);
+  const sharedValue = obj.useSharedValue(null);
+  const ref = sharedValue.useRef(null);
+  let obj2 = behavior(num[3]);
   class K {
     constructor() {
-      tmp = closure_5.value || closure_8;
-      return tmp;
+      return sharedValue.value || closure_8;
     }
   }
-  K.__closure = { initialFrame: sharedValue, defaultLayout: translate };
+  let obj3 = { initialFrame: sharedValue, defaultLayout: translate };
+  K.__closure = obj3;
   K.__workletHash = 4703969179658;
   K.__initData = padding;
-  derivedValue = behavior(num[3]).useDerivedValue(K);
-  let obj2 = behavior(num[3]);
-  let obj3 = { initialFrame: sharedValue, defaultLayout: translate };
-  const translateAnimation = behavior(num[4]).useTranslateAnimation();
+  derivedValue = obj2.useDerivedValue(K);
+  const obj4 = behavior(num[4]);
+  const translateAnimation = obj4.useTranslateAnimation();
   translate = translateAnimation.translate;
   padding = translateAnimation.padding;
-  let obj4 = behavior(num[4]);
-  keyboardAnimation = behavior(num[4]).useKeyboardAnimation();
-  let obj5 = behavior(num[4]);
-  height = behavior(num[5]).useWindowDimensions().height;
+  const obj5 = behavior(num[4]);
+  keyboardAnimation = obj5.useKeyboardAnimation();
+  const obj6 = behavior(num[5]);
+  height = obj6.useWindowDimensions().height;
   class V {
     constructor() {
-      return Math.max(closure_7.value.y + closure_7.value.height - (height - closure_10.heightWhenOpened.value - c2), 0);
+      return Math.max(derivedValue.value.y + derivedValue.value.height - (height - keyboardAnimation.heightWhenOpened.value - num), 0);
     }
   }
   V.__closure = { screenHeight: height, keyboard: keyboardAnimation, keyboardVerticalOffset: num, frame: derivedValue };
@@ -79,38 +90,26 @@ export default forwardRef((behavior, arg1) => {
   __initData = tmp8;
   class C {
     constructor(arg0) {
-      obj = closure_0(closure_2[3]);
-      items = [0];
+      const interpolate = _mod1643.interpolate;
+      const items = [0];
+      _mod1643;
       items[1] = closure_12();
-      return obj.interpolate(behavior, [0, 1], items);
+      return interpolate(arg0, [0, 1], items);
     }
   }
-  const obj6 = behavior(num[5]);
   C.__closure = { interpolate: behavior(num[3]).interpolate, relativeKeyboardHeight: tmp8 };
   C.__workletHash = 11482114301276;
   C.__initData = height;
   const items1 = [tmp8];
+  ({ interpolate: behavior(num[3]).interpolate, relativeKeyboardHeight: tmp8 });
   const tmp9 = flag(C, items1);
   __initData2 = tmp9;
   class D {
-    constructor(arg0) {
-      value = closure_10.isClosed.value;
-      if (!value) {
-        tmp = closure_5;
-        tmp2 = null;
-        value = null === closure_5.value;
-      }
-      if (!value) {
-        tmp3 = behavior;
-        str = "height";
-        value = "height" !== behavior;
-      }
+    constructor(value) {
+      value = keyboardAnimation.isClosed.value || null === sharedValue.value || "height" !== behavior;
       if (value) {
-        tmp4 = behavior;
-        tmp5 = closure_5;
-        closure_5.value = behavior;
+        sharedValue.value = value;
       }
-      return;
     }
   }
   D.__closure = { keyboard: keyboardAnimation, initialFrame: sharedValue, behavior };
@@ -125,108 +124,87 @@ export default forwardRef((behavior, arg1) => {
     }
     const layout = nativeEvent.nativeEvent.layout;
     if (flag) {
-      const findNodeHandleResult = behavior(num[6]).findNodeHandle(ref.current);
+      let obj = behavior(num[6]);
+      const findNodeHandleResult = obj.findNodeHandle(ref.current);
       if (null !== findNodeHandleResult) {
         const KeyboardControllerNative = behavior(num[7]).KeyboardControllerNative;
         const viewPositionInWindowResult = KeyboardControllerNative.viewPositionInWindow(findNodeHandleResult);
-        return KeyboardControllerNative.viewPositionInWindow(findNodeHandleResult).then((result) => {
+        const nextPromise = viewPositionInWindowResult.then((result) => {
+          const obj = _mod1643;
           const obj3 = {};
+          const runOnUIResult = obj.runOnUI(closure_14);
           const merged = Object.assign(layout);
           ({ x: obj2.x, y: obj2.y } = result);
-          cancelAnimation.runOnUI(closure_14)(obj3);
-        }).catch(() => {
-          cancelAnimation.runOnUI(closure_14)(layout);
+          runOnUIResult(obj3);
+        });
+        return nextPromise.catch(() => {
+          const obj = _mod1643;
+          obj.runOnUI(closure_14)(layout);
         });
       }
-      let obj = behavior(num[6]);
     }
-    return behavior(num[3]).runOnUI(closure_14)(layout);
+    const obj2 = behavior(num[3]);
+    return obj2.runOnUI(closure_14)(layout);
   }, items3);
-  const obj7 = { interpolate: behavior(num[3]).interpolate, relativeKeyboardHeight: tmp8 };
+  const obj8 = behavior(num[3]);
   class F {
     constructor() {
-      if (c1) {
-        tmp = closure_13;
-        tmp2 = closure_10;
-        tmp3 = closure_13(closure_10.progress.value);
-        tmp4 = translate;
-        tmp6 = padding;
-        tmp5 = closure_13(translate.value);
-        tmp8 = closure_7;
-        diff = closure_7.value.height - tmp3;
-        tmp10 = behavior;
-        str = "height";
+      let items;
+      if (enabled) {
+        const tmp4 = closure_13(keyboardAnimation.progress.value);
+        const diff = derivedValue.value.height - tmp4;
+        const tmp6 = closure_13(translate.value);
         if ("height" === behavior) {
-          if (!tmp2.isClosed.value) {
-            num = 0;
+          if (!keyboardAnimation.isClosed.value) {
+            let obj2;
             if (diff > 0) {
-              obj1 = { height: null, flex: 0 };
-              obj1.height = diff;
+              obj2 = { height: diff, flex: 0 };
             }
-            return obj1;
+            return obj2;
           }
-          obj1 = {};
+          obj2 = {};
+        } else if ("position" === behavior) {
+          return { bottom: tmp4 };
+        } else if ("padding" === behavior) {
+          return { paddingBottom: tmp4 };
+        } else if ("translate-with-padding" === behavior) {
+          const obj = { paddingTop: tmp8, transform: items };
+          items = [{ translateY: -tmp6 }];
+          return obj;
         } else {
-          str2 = "position";
-          if ("position" === tmp10) {
-            obj6 = { bottom: null };
-            obj6.bottom = tmp3;
-            return obj6;
-          } else {
-            str3 = "padding";
-            if ("padding" === tmp10) {
-              obj7 = { paddingBottom: null };
-              obj7.paddingBottom = tmp3;
-              return obj7;
-            } else {
-              str4 = "translate-with-padding";
-              if ("translate-with-padding" === tmp10) {
-                obj = { paddingTop: null, transform: null };
-                obj.paddingTop = tmp7;
-                obj8 = { translateY: null };
-                obj8.translateY = -tmp5;
-                items = [];
-                items[0] = obj8;
-                obj.transform = items;
-                return obj;
-              } else {
-                return {};
-              }
-            }
-          }
+          return {};
         }
       } else {
         return {};
       }
-      return;
     }
   }
   F.__closure = { enabled, interpolateToRelativeKeyboardHeight: tmp9, keyboard: keyboardAnimation, translate, padding, frame: derivedValue, behavior };
   F.__workletHash = 6440002265153;
   F.__initData = __initData2;
   const items4 = [behavior, enabled, tmp9];
-  animatedStyle = behavior(num[3]).useAnimatedStyle(F, items4);
+  animatedStyle = obj8.useAnimatedStyle(F, items4);
   const tmp13 = enabled(num[8])(ref, arg1);
-  contentContainerStyle = style;
+  let tmp15 = style;
   if ("position" === behavior) {
-    contentContainerStyle = behavior.contentContainerStyle;
+    tmp15 = contentContainerStyle;
   }
-  const items5 = [contentContainerStyle, animatedStyle];
-  const tmp15 = onLayout(() => {
+  contentContainerStyle = tmp15;
+  const items5 = [tmp15, animatedStyle];
+  const tmp16 = onLayout(() => {
     const items = [contentContainerStyle, animatedStyle];
     return items;
   }, items5);
   if ("position" === behavior) {
-    const obj9 = { ref: tmp13, style, onLayout: tmp10 };
+    const obj9 = { ref: tmp13, style, onLayout: tmp10, children: derivedValue(enabled(num[3]).View, obj10) };
     const merged1 = Object.assign(merged);
-    const obj10 = { style: tmp15, children };
-    obj9.children = tmp16(tmp12(tmp2[3]).View, obj10);
-    let tmp16Result = tmp16(ref, obj9);
+    obj10 = { style: tmp16, children };
+    tmp17Result = tmp17(ref, obj9);
   } else {
-    const obj11 = { ref: tmp13, style: tmp15, onLayout: tmp10 };
+    const obj11 = { ref: tmp13, style: tmp16, onLayout: tmp10, children };
+    View = tmp12(tmp2[3]).View;
     const merged2 = Object.assign(merged);
-    obj11.children = children;
-    tmp16Result = tmp16(tmp12(tmp2[3]).View, obj11);
+    tmp17Result = tmp17(View, obj11);
   }
-  return tmp16Result;
+  return tmp17Result;
 });

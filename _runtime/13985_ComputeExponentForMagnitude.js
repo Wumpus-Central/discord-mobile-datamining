@@ -1,32 +1,40 @@
 // === Module 13985: ComputeExponentForMagnitude ===
 
 // Module 13985 (ComputeExponentForMagnitude)
-import digitsToString2 from "digitsToString" /* 13969 */;
-import _mod13970 from "module_13970" /* 13970 */;
-import e from "e" /* 1172 */;
+import _mod13969 from "module_13969" /* 13969 */;
+import UNICODE_EXTENSION_SEQUENCE_REGEX from "UNICODE_EXTENSION_SEQUENCE_REGEX" /* 13970 */;
+import module_1172 from "module_1172" /* 1172 */;
 
-const digitsToString = e.__importDefault(digitsToString2);
-const result = digitsToString.default.set({ toExpPos: 100 });
+const module_13969 = module_1172.__importDefault(_mod13969);
+let _default = module_13969.default;
+const result = _default.set({ toExpPos: 100 });
 
-export const ComputeExponentForMagnitude = function ComputeExponentForMagnitude(style, floorResult) {
-  ({ notation, dataLocaleData, numberingSystem } = style);
+export const ComputeExponentForMagnitude = function ComputeExponentForMagnitude(compactDisplay, floorResult) {
+  let dataLocaleData;
+  let notation;
+  let numberingSystem;
+  ({ notation, dataLocaleData, numberingSystem } = compactDisplay);
   if ("standard" === notation) {
     return 0;
   } else if ("scientific" === notation) {
     return floorResult.toNumber();
   } else if ("engineering" === notation) {
-    floorResult = floorResult.div(3).floor();
     const divResult = floorResult.div(3);
-    return floorResult.times(3).toNumber();
+    floorResult = divResult.floor();
+    const timesResult = floorResult.times(3);
+    return timesResult.toNumber();
   } else {
-    _mod13970.invariant("compact" === notation, "Invalid notation");
-    if ("currency" === style.style) {
+    UNICODE_EXTENSION_SEQUENCE_REGEX.invariant("compact" === notation, "Invalid notation");
+    compactDisplay = compactDisplay.compactDisplay;
+    if ("currency" === compactDisplay.style) {
+      let short;
       if ("name" !== tmp11) {
-        let short = dataLocaleData.numbers.currency[numberingSystem] || dataLocaleData.numbers.currency[dataLocaleData.numbers.nu[0]].short;
-        const tmp2 = dataLocaleData.numbers.currency[numberingSystem] || dataLocaleData.numbers.currency[dataLocaleData.numbers.nu[0]];
+        short = (dataLocaleData.numbers.currency[numberingSystem] || dataLocaleData.numbers.currency[dataLocaleData.numbers.nu[0]]).short;
       }
       if (short) {
-        const str1 = digitsToString.default.pow(10, floorResult).toString();
+        const _default = module_13969.default;
+        const str3 = _default.pow(10, floorResult);
+        const str1 = str3.toString();
         const _Object = Object;
         const keys = Object.keys(short);
         if (str1 < keys[0]) {
@@ -40,18 +48,17 @@ export const ComputeExponentForMagnitude = function ComputeExponentForMagnitude(
           } else {
             let num4 = 0;
             if ("0" !== short[keys[index]].other) {
-              num4 = arr2.length - short[arr2].other.match(/0+/)[0].length;
+              const str5 = short[keys[index]].other;
+              num4 = arr2.length - str5.match(/0+/)[0].length;
             }
             return num4;
           }
         }
-        const _default = digitsToString.default;
-        const str3 = digitsToString.default.pow(10, floorResult);
       } else {
         return 0;
       }
     }
     const tmp = dataLocaleData.numbers.decimal[numberingSystem] || dataLocaleData.numbers.decimal[dataLocaleData.numbers.nu[0]];
-    short = "long" === style.compactDisplay ? tmp.long : tmp.short;
+    short = "long" === compactDisplay ? tmp.long : tmp.short;
   }
 };

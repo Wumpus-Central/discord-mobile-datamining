@@ -5,8 +5,8 @@
 export const isNativeFunction = function isNativeFunction(fn) {
   let tmp = typeof fn === "function";
   if (typeof fn === "function") {
-    tmp = fn.toString().indexOf("[native code]") > -1;
     const str1 = fn.toString();
+    tmp = str1.indexOf("[native code]") > -1;
   }
   return tmp;
 };
@@ -16,8 +16,8 @@ export const hasNativeConstructor = function hasNativeConstructor(arg0, Generato
   if (tmp) {
     let tmp2 = typeof str === "function";
     if (typeof str === "function") {
-      tmp2 = str.toString().indexOf("[native code]") > -1;
       const str1 = str.toString();
+      tmp2 = str1.indexOf("[native code]") > -1;
     }
     tmp = tmp2;
   }

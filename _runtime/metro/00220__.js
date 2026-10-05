@@ -1,25 +1,21 @@
 // === Module 220: ? ===
 
 // Module 220
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import EventDefault from "Event" /* 133 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import _modDef133 from "module_133" /* 133 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import map from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
-    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
+
+    }));
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -27,59 +23,55 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturnDefault;
 class MessageEvent {
-  constructor(arg0, arg1) {
-    self = this;
-    tmp = closure_0(this, MessageEvent);
-    items = [, ];
-    items[0] = global;
-    items[1] = arg1;
-    tmp2 = c2;
-    obj = c2(MessageEvent);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+  constructor(arg0, data) {
+    let constructResult;
+    const self = this;
+    _classCallCheck(this, MessageEvent);
+    const items = [arg0, data];
+    const obj = _getPrototypeOf(MessageEvent);
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, _getPrototypeOf(self).constructor);
     } else {
       constructResult = obj.apply(self, items);
     }
-    tmp3Result = tmp3(self, constructResult);
+    const tmp3Result = map(self, constructResult);
     data = undefined;
-    if (arg1 != null) {
-      data = arg1.data;
+    if (data != null) {
+      data = data.data;
     }
     tmp3Result._data = data;
-    str = undefined;
-    if (arg1 != null) {
-      str = arg1.origin;
+    let str;
+    const _String = String;
+    if (data != null) {
+      str = data.origin;
     }
     if (str == null) {
       str = "";
     }
-    tmp3Result._origin = String(str);
-    str2 = undefined;
-    if (arg1 != null) {
-      str2 = arg1.lastEventId;
+    tmp3Result._origin = _String(str);
+    let str2;
+    const _String2 = String;
+    if (data != null) {
+      str2 = data.lastEventId;
     }
     if (str2 == null) {
       str2 = "";
     }
-    tmp3Result._lastEventId = String(str2);
+    tmp3Result._lastEventId = _String2(str2);
     return tmp3Result;
   }
 }
-_classCallCheck = MessageEvent;
-_inherits(MessageEvent, EventDefault);
+_inherits(MessageEvent, _modDef133);
+let obj = {
+  key: "data",
+  get() {
+    return this._data;
+  }
+};
 let items = [
-  {
-    key: "data",
-    get() {
-      return this._data;
-    }
-  },
+  obj,
   {
     key: "origin",
     get() {

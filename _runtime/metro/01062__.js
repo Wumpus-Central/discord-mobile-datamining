@@ -6,165 +6,165 @@ import _mod878 from "module_878" /* 878 */;
 import feedbackAsyncIntegration from "feedbackAsyncIntegration" /* 900 */;
 import reactNativeTracingIntegration from "reactNativeTracingIntegration" /* 1063 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
 export const getDefaultIntegrations = function getDefaultIntegrations(patchGlobalPromise) {
   const items = [];
   const push = items.push;
+  const obj = _mod878;
+  const notWebResult = obj.notWeb();
   const obj2 = debugSymbolicatorIntegration;
   if (notWebResult) {
     const obj3 = { patchGlobalPromise: patchGlobalPromise.patchGlobalPromise };
     push(obj2.reactNativeErrorHandlersIntegration(obj3));
-    items.push(debugSymbolicatorIntegration.nativeLinkedErrorsIntegration());
+    const push5 = items.push;
     const tmpResult = debugSymbolicatorIntegration;
+    push5(tmpResult.nativeLinkedErrorsIntegration());
   } else {
     push(obj2.browserApiErrorsIntegration());
-    items.push(debugSymbolicatorIntegration.browserGlobalHandlersIntegration());
+    const push2 = items.push;
     const tmpResult34 = debugSymbolicatorIntegration;
-    items.push(debugSymbolicatorIntegration.browserLinkedErrorsIntegration());
-    if (patchGlobalPromise.enableAutoSessionTracking) {
-      items.push(feedbackAsyncIntegration.browserSessionIntegration());
-      const tmpResult36 = feedbackAsyncIntegration;
-    }
+    push2(tmpResult34.browserGlobalHandlersIntegration());
+    const push3 = items.push;
     const tmpResult35 = debugSymbolicatorIntegration;
-  }
-  notWebResult = _mod878.notWeb();
-  items.push(debugSymbolicatorIntegration.inboundFiltersIntegration());
-  const tmpResult37 = debugSymbolicatorIntegration;
-  items.push(debugSymbolicatorIntegration.functionToStringIntegration());
-  const tmpResult38 = debugSymbolicatorIntegration;
-  items.push(debugSymbolicatorIntegration.breadcrumbsIntegration());
-  const tmpResult39 = debugSymbolicatorIntegration;
-  items.push(debugSymbolicatorIntegration.dedupeIntegration());
-  const tmpResult40 = debugSymbolicatorIntegration;
-  items.push(debugSymbolicatorIntegration.httpContextIntegration());
-  const tmpResult41 = debugSymbolicatorIntegration;
-  items.push(debugSymbolicatorIntegration.nativeReleaseIntegration());
-  const tmpResult42 = debugSymbolicatorIntegration;
-  items.push(debugSymbolicatorIntegration.eventOriginIntegration());
-  const tmpResult43 = debugSymbolicatorIntegration;
-  items.push(debugSymbolicatorIntegration.sdkInfoIntegration());
-  const tmpResult44 = debugSymbolicatorIntegration;
-  items.push(debugSymbolicatorIntegration.reactNativeInfoIntegration());
-  const tmpResult45 = debugSymbolicatorIntegration;
-  items.push(debugSymbolicatorIntegration.createReactNativeRewriteFrames());
-  if (patchGlobalPromise.enableNative) {
-    items.push(debugSymbolicatorIntegration.deviceContextIntegration());
-    const tmpResult47 = debugSymbolicatorIntegration;
-    items.push(debugSymbolicatorIntegration.modulesLoaderIntegration());
-    let enableLogs = patchGlobalPromise.enableLogs;
-    if (enableLogs) {
-      enableLogs = "native" !== patchGlobalPromise.logsOrigin;
+    push3(tmpResult35.browserLinkedErrorsIntegration());
+    if (patchGlobalPromise.enableAutoSessionTracking) {
+      const push4 = items.push;
+      const tmpResult36 = feedbackAsyncIntegration;
+      push4(tmpResult36.browserSessionIntegration());
     }
+  }
+  const push6 = items.push;
+  const tmpResult37 = debugSymbolicatorIntegration;
+  push6(tmpResult37.inboundFiltersIntegration());
+  const push7 = items.push;
+  const tmpResult38 = debugSymbolicatorIntegration;
+  push7(tmpResult38.functionToStringIntegration());
+  const push8 = items.push;
+  const tmpResult39 = debugSymbolicatorIntegration;
+  push8(tmpResult39.breadcrumbsIntegration());
+  const push9 = items.push;
+  const tmpResult40 = debugSymbolicatorIntegration;
+  push9(tmpResult40.dedupeIntegration());
+  const push10 = items.push;
+  const tmpResult41 = debugSymbolicatorIntegration;
+  push10(tmpResult41.httpContextIntegration());
+  const push11 = items.push;
+  const tmpResult42 = debugSymbolicatorIntegration;
+  push11(tmpResult42.nativeReleaseIntegration());
+  const push12 = items.push;
+  const tmpResult43 = debugSymbolicatorIntegration;
+  push12(tmpResult43.eventOriginIntegration());
+  const push13 = items.push;
+  const tmpResult44 = debugSymbolicatorIntegration;
+  push13(tmpResult44.sdkInfoIntegration());
+  const push14 = items.push;
+  const tmpResult45 = debugSymbolicatorIntegration;
+  push14(tmpResult45.reactNativeInfoIntegration());
+  const push15 = items.push;
+  const tmpResult46 = debugSymbolicatorIntegration;
+  push15(tmpResult46.createReactNativeRewriteFrames());
+  if (patchGlobalPromise.enableNative) {
+    const push16 = items.push;
+    const tmpResult47 = debugSymbolicatorIntegration;
+    push16(tmpResult47.deviceContextIntegration());
+    const push17 = items.push;
+    const tmpResult48 = debugSymbolicatorIntegration;
+    push17(tmpResult48.modulesLoaderIntegration());
+    const enableLogs = patchGlobalPromise.enableLogs && "native" !== patchGlobalPromise.logsOrigin;
     if (enableLogs) {
-      items.push(debugSymbolicatorIntegration.logEnricherIntegration());
+      const push18 = items.push;
       const tmpResult49 = debugSymbolicatorIntegration;
-      items.push(feedbackAsyncIntegration.consoleLoggingIntegration());
+      push18(tmpResult49.logEnricherIntegration());
+      const push19 = items.push;
       const tmpResult50 = feedbackAsyncIntegration;
+      push19(tmpResult50.consoleLoggingIntegration());
     }
     if (patchGlobalPromise.attachScreenshot) {
-      items.push(debugSymbolicatorIntegration.screenshotIntegration());
+      const push20 = items.push;
       const tmpResult51 = debugSymbolicatorIntegration;
+      push20(tmpResult51.screenshotIntegration());
     }
     if (patchGlobalPromise.attachViewHierarchy) {
-      items.push(debugSymbolicatorIntegration.viewHierarchyIntegration());
+      const push21 = items.push;
       const tmpResult52 = debugSymbolicatorIntegration;
+      push21(tmpResult52.viewHierarchyIntegration());
     }
     if (typeof patchGlobalPromise.profilesSampleRate === "number") {
-      items.push(debugSymbolicatorIntegration.hermesProfilingIntegration());
+      const push33 = items.push;
       const tmpResult53 = debugSymbolicatorIntegration;
+      push33(tmpResult53.hermesProfilingIntegration());
     }
-    const tmpResult48 = debugSymbolicatorIntegration;
   }
-  const tracesSampleRate = patchGlobalPromise.tracesSampleRate;
-  let tmp26 = typeof tracesSampleRate === "number";
-  if (typeof tracesSampleRate !== "number") {
-    tmp26 = typeof patchGlobalPromise.tracesSampler === "function";
+  const tmp27 = (typeof patchGlobalPromise.tracesSampleRate === "number" || typeof patchGlobalPromise.tracesSampler === "function") && patchGlobalPromise.enableAppStartTracking && patchGlobalPromise.enableNative;
+  if (tmp27) {
+    const push22 = items.push;
+    const tmpResult54 = debugSymbolicatorIntegration;
+    push22(tmpResult54.appStartIntegration());
   }
   let enableNative = tmp26;
-  if (tmp26) {
-    enableNative = patchGlobalPromise.enableAppStartTracking;
+  const createNativeFramesIntegrations = debugSymbolicatorIntegration.createNativeFramesIntegrations;
+  debugSymbolicatorIntegration;
+  if (typeof patchGlobalPromise.tracesSampleRate === "number" || typeof patchGlobalPromise.tracesSampler === "function") {
+    enableNative = patchGlobalPromise.enableNativeFramesTracking;
   }
   if (enableNative) {
     enableNative = patchGlobalPromise.enableNative;
   }
-  if (enableNative) {
-    items.push(debugSymbolicatorIntegration.appStartIntegration());
-    const tmpResult54 = debugSymbolicatorIntegration;
-  }
-  const tmpResult46 = debugSymbolicatorIntegration;
-  let enableNative2 = tmp26;
-  if (tmp26) {
-    enableNative2 = patchGlobalPromise.enableNativeFramesTracking;
-  }
-  if (enableNative2) {
-    enableNative2 = patchGlobalPromise.enableNative;
-  }
-  const nativeFramesIntegrations = debugSymbolicatorIntegration.createNativeFramesIntegrations(enableNative2);
+  const nativeFramesIntegrations = createNativeFramesIntegrations(enableNative);
   if (nativeFramesIntegrations) {
     items.push(nativeFramesIntegrations);
   }
-  let enableStallTracking = tmp26;
-  if (tmp26) {
-    enableStallTracking = patchGlobalPromise.enableStallTracking;
-  }
-  if (enableStallTracking) {
-    items.push(debugSymbolicatorIntegration.stallTrackingIntegration());
+  const tmp32 = (typeof patchGlobalPromise.tracesSampleRate === "number" || typeof patchGlobalPromise.tracesSampler === "function") && patchGlobalPromise.enableStallTracking;
+  if (tmp32) {
+    const push23 = items.push;
     const tmpResult56 = debugSymbolicatorIntegration;
+    push23(tmpResult56.stallTrackingIntegration());
   }
-  let enableUserInteractionTracing = tmp26;
-  if (tmp26) {
-    enableUserInteractionTracing = patchGlobalPromise.enableUserInteractionTracing;
-  }
-  if (enableUserInteractionTracing) {
-    items.push(debugSymbolicatorIntegration.userInteractionIntegration());
+  const tmp34 = (typeof patchGlobalPromise.tracesSampleRate === "number" || typeof patchGlobalPromise.tracesSampler === "function") && patchGlobalPromise.enableUserInteractionTracing;
+  if (tmp34) {
+    const push24 = items.push;
     const tmpResult57 = debugSymbolicatorIntegration;
+    push24(tmpResult57.userInteractionIntegration());
   }
-  let enableAutoPerformanceTracing = tmp26;
-  if (tmp26) {
-    enableAutoPerformanceTracing = patchGlobalPromise.enableAutoPerformanceTracing;
-  }
-  if (enableAutoPerformanceTracing) {
-    items.push(debugSymbolicatorIntegration.appRegistryIntegration());
+  const tmp36 = (typeof patchGlobalPromise.tracesSampleRate === "number" || typeof patchGlobalPromise.tracesSampler === "function") && patchGlobalPromise.enableAutoPerformanceTracing;
+  if (tmp36) {
+    const push25 = items.push;
     const tmpResult58 = debugSymbolicatorIntegration;
-    items.push(reactNativeTracingIntegration.reactNativeTracingIntegration());
+    push25(tmpResult58.appRegistryIntegration());
+    const push26 = items.push;
     const tmpResult59 = reactNativeTracingIntegration;
+    push26(tmpResult59.reactNativeTracingIntegration());
   }
-  if (tmp26) {
-    items.push(debugSymbolicatorIntegration.timeToDisplayIntegration());
+  if (typeof patchGlobalPromise.tracesSampleRate === "number" || typeof patchGlobalPromise.tracesSampler === "function") {
+    const push27 = items.push;
     const tmpResult60 = debugSymbolicatorIntegration;
+    push27(tmpResult60.timeToDisplayIntegration());
   }
   if (patchGlobalPromise.enableCaptureFailedRequests) {
-    items.push(debugSymbolicatorIntegration.httpClientIntegration());
+    const push28 = items.push;
     const tmpResult61 = debugSymbolicatorIntegration;
+    push28(tmpResult61.httpClientIntegration());
   }
-  const tmpResult55 = debugSymbolicatorIntegration;
-  items.push(debugSymbolicatorIntegration.expoContextIntegration());
+  const push29 = items.push;
+  const tmpResult62 = debugSymbolicatorIntegration;
+  push29(tmpResult62.expoContextIntegration());
   if (patchGlobalPromise.spotlight) {
     let spotlight;
     if (typeof patchGlobalPromise.spotlight === "string") {
       spotlight = patchGlobalPromise.spotlight;
     }
+    const push30 = items.push;
     const obj4 = { sidecarUrl: spotlight };
-    items.push(debugSymbolicatorIntegration.spotlightIntegration(obj4));
     const tmpResult63 = debugSymbolicatorIntegration;
+    push30(tmpResult63.spotlightIntegration(obj4));
   }
-  const replaysOnErrorSampleRate = patchGlobalPromise.replaysOnErrorSampleRate;
-  let notWebResult1 = typeof replaysOnErrorSampleRate === "number";
-  if (typeof replaysOnErrorSampleRate !== "number") {
-    notWebResult1 = typeof patchGlobalPromise.replaysSessionSampleRate === "number";
+  let notWebResult1 = typeof patchGlobalPromise.replaysOnErrorSampleRate === "number" || typeof patchGlobalPromise.replaysSessionSampleRate === "number";
+  let tmp45 = patchGlobalPromise._experiments && typeof patchGlobalPromise._experiments.replaysOnErrorSampleRate === "number";
+  if (!tmp45) {
+    tmp45 = patchGlobalPromise._experiments && typeof patchGlobalPromise._experiments.replaysSessionSampleRate === "number";
   }
-  let tmp40 = patchGlobalPromise._experiments && typeof patchGlobalPromise._experiments.replaysOnErrorSampleRate === "number";
-  if (!tmp40) {
-    tmp40 = patchGlobalPromise._experiments && typeof patchGlobalPromise._experiments.replaysSessionSampleRate === "number";
-    const tmp41 = patchGlobalPromise._experiments && typeof patchGlobalPromise._experiments.replaysSessionSampleRate === "number";
-  }
-  let tmp42 = !notWebResult1;
-  if (!notWebResult1) {
-    tmp42 = tmp40;
-  }
-  if (tmp42) {
+  const tmp47 = !notWebResult1 && tmp45;
+  if (tmp47) {
     const _experiments = patchGlobalPromise._experiments;
     let prop;
     if (null !== _experiments) {
@@ -183,17 +183,19 @@ export const getDefaultIntegrations = function getDefaultIntegrations(patchGloba
     patchGlobalPromise.replaysSessionSampleRate = prop1;
   }
   if (!notWebResult1) {
-    notWebResult1 = tmp40;
+    notWebResult1 = tmp45;
   }
   if (notWebResult1) {
-    notWebResult1 = _mod878.notWeb();
     const tmpResult64 = _mod878;
+    notWebResult1 = tmpResult64.notWeb();
   }
   if (notWebResult1) {
-    items.push(debugSymbolicatorIntegration.mobileReplayIntegration());
+    const push31 = items.push;
     const tmpResult65 = debugSymbolicatorIntegration;
+    push31(tmpResult65.mobileReplayIntegration());
   }
-  const tmpResult62 = debugSymbolicatorIntegration;
-  items.push(debugSymbolicatorIntegration.primitiveTagIntegration());
+  const push32 = items.push;
+  const tmpResult66 = debugSymbolicatorIntegration;
+  push32(tmpResult66.primitiveTagIntegration());
   return items;
 };

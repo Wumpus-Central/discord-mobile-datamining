@@ -3,8 +3,6 @@
 // Module 891 (DEFAULT_BREADCRUMB_LEVEL)
 import _mod693 from "module_693" /* 693 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
 export const DEFAULT_BREADCRUMB_LEVEL = "info";
 export const breadcrumbFromObject = function breadcrumbFromObject(type) {
@@ -13,7 +11,8 @@ export const breadcrumbFromObject = function breadcrumbFromObject(type) {
     obj.type = type.type;
   }
   if (typeof type.level === "string") {
-    obj.level = _mod693.severityLevelFromString(type.level);
+    const obj2 = _mod693;
+    obj.level = obj2.severityLevelFromString(type.level);
   }
   if (typeof type.event_id === "string") {
     obj.event_id = type.event_id;

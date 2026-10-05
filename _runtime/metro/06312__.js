@@ -1,17 +1,23 @@
 // === Module 6312: ? ===
 
 // Module 6312
-import _mod6314 from "module_6314" /* 6314 */;
-import noop_mod from "module_19" /* 19 */;
-import get_ActivityIndicator from "module_17" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+import react_native from "react-native" /* 6314 */;
+import react_mod from "react" /* 19 */;
+import react_native2 from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
 
-let noop = noop_mod;
-const useMemo = noop.useMemo;
-let noop = noop_mod;
-({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const memoResult = noop.memo(function BottomSheetHandleComponent(style) {
+let c3;
+let closure_4;
+let hasOwnProperty;
+let metroRequire;
+let react = react_mod;
+const useMemo = react.useMemo;
+const memo = react.memo;
+react = react_mod;
+({ StyleSheet: c3, View: closure_4 } = react_native2);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);
+const memoResult = memo(function BottomSheetHandleComponent(style) {
+  let items2;
   style = style.style;
   const indicatorStyle = style.indicatorStyle;
   let DEFAULT_ACCESSIBLE = style.accessible;
@@ -31,37 +37,27 @@ const memoResult = noop.memo(function BottomSheetHandleComponent(style) {
     DEFAULT_ACCESSIBILITY_HINT = style(indicatorStyle[3]).DEFAULT_ACCESSIBILITY_HINT;
   }
   let items = [style];
+  const children = style.children;
   const items1 = [indicatorStyle];
   const obj = {
     style: useMemo(() => {
-      const items = [_mod6314.styles.container, React3.flatten(style)];
+      const items = [react_native.styles.container, _false.flatten(style)];
       return items;
     }, items),
-    accessible: null,
-    accessibilityRole: null,
-    accessibilityLabel: null,
-    accessibilityHint: null,
+    accessible: DEFAULT_ACCESSIBLE,
+    accessibilityRole: DEFAULT_ACCESSIBILITY_ROLE,
+    accessibilityLabel: DEFAULT_ACCESSIBILITY_LABEL,
+    accessibilityHint: DEFAULT_ACCESSIBILITY_HINT,
     collapsable: true,
-    children: null
+    children: items2
   };
-  const tmp9 = useMemo(() => {
-    const items = [_mod6314.styles.container, React3.flatten(style)];
+  items2 = [, ];
+  const tmp10 = useMemo(() => {
+    const items = [react_native.styles.indicator, _false.flatten(indicatorStyle)];
     return items;
-  }, items);
-  obj.accessible = DEFAULT_ACCESSIBLE;
-  obj.accessibilityRole = DEFAULT_ACCESSIBILITY_ROLE;
-  obj.accessibilityLabel = DEFAULT_ACCESSIBILITY_LABEL;
-  obj.accessibilityHint = DEFAULT_ACCESSIBILITY_HINT;
-  const items2 = [
-    closure_5(closure_4, {
-      style: useMemo(() => {
-        const items = [_mod6314.styles.indicator, React3.flatten(indicatorStyle)];
-        return items;
-      }, items1)
-    }),
-    style.children
-  ];
-  obj.children = items2;
+  }, items1);
+  items2[0] = closure_5(closure_4, { style: tmp10 });
+  items2[1] = children;
   return closure_6(closure_4, obj);
 });
 memoResult.displayName = "BottomSheetHandle";

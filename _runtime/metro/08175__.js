@@ -1,24 +1,21 @@
 // === Module 8175: ? ===
 
 // Module 8175
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import react from "react" /* 19 */;
 import _createClass from "_createClass" /* 42 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import map from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
-    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
+
+    }));
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -26,30 +23,26 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturnDefault;
 class FilterPrimitive {
   constructor() {
-    self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_0(this, FilterPrimitive);
-    items1 = [...items];
-    tmp2 = c2;
-    obj = c2(FilterPrimitive);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    let constructResult;
+    const self = this;
+    const items = [...arguments];
+    let closure_0;
+    _classCallCheck(this, FilterPrimitive);
+    const items1 = [...items];
+    const obj = _getPrototypeOf(FilterPrimitive);
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, _getPrototypeOf(self).constructor);
     } else {
       constructResult = obj.apply(self, items1);
     }
-    tmp3Result = tmp3(self, constructResult);
+    const tmp3Result = map(self, constructResult);
     closure_0 = tmp3Result;
     tmp3Result.root = null;
     tmp3Result.refMethod = (root) => {
-      closure_0.root = root;
+      root.root = root;
     };
     tmp3Result.setNativeProps = (arg0) => {
       root = root.root;
@@ -60,8 +53,7 @@ class FilterPrimitive {
     return tmp3Result;
   }
 }
-_classCallCheck = FilterPrimitive;
-_inherits(FilterPrimitive, fn(19).Component);
+_inherits(FilterPrimitive, react.Component);
 const importDefaultResultResult = _createClass(FilterPrimitive);
 importDefaultResultResult.defaultPrimitiveProps = {};
 

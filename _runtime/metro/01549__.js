@@ -6,15 +6,16 @@ export default (str, str2) => {
   if (typeof str === "string") {
     if (typeof str2 === "string") {
       if ("" === str2) {
-        const items = [str];
+        const items = [""];
         return items;
       } else {
+        let items2;
         const index = str.indexOf(str2);
         if (-1 === index) {
-          const items1 = [str];
-          let items2 = items1;
+          const items1 = [""];
+          items2 = items1;
         } else {
-          items2 = [str.slice(0, index), str.slice(index + str2.length)];
+          items2 = ["".slice(0, index), "".slice(index + str2.length)];
         }
         return items2;
       }

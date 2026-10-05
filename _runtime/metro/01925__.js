@@ -1,14 +1,19 @@
 // === Module 1925: ? ===
 
 // Module 1925
-globalThis.IntlMessageFormat.__addLocaleData({
+const obj = {
   locale: "uk",
   pluralRuleFunction(arg0, arg1) {
-    const parts = String(arg0).split(".");
+    let arr;
+    let str2;
+    let str6;
+    let tmp2;
+    const str = String(arg0);
+    const parts = str.split(".");
     [arr, tmp2] = parts;
     let substr1 = Number(parts[0]) == arg0;
     let substr = substr1;
-    if (substr1) {
+    if (substr) {
       const first = parts[0];
       substr = first.slice(-1);
     }
@@ -26,8 +31,9 @@ globalThis.IntlMessageFormat.__addLocaleData({
           str8 = "few";
         }
       }
-      let str2 = str8;
+      str2 = str8;
     } else {
+      let str4;
       if (!tmp2) {
         if (1 == substr2) {
           str2 = "one";
@@ -36,7 +42,7 @@ globalThis.IntlMessageFormat.__addLocaleData({
       if (!tmp2) {
         if (substr2 >= 2) {
           if (substr2 <= 4) {
-            let str4 = "few";
+            str4 = "few";
             if (substr3 >= 12) {
               str4 = "few";
             }
@@ -62,4 +68,5 @@ globalThis.IntlMessageFormat.__addLocaleData({
     }
     return str2;
   }
-});
+};
+globalThis.IntlMessageFormat.__addLocaleData(obj);

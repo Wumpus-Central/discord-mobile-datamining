@@ -4,10 +4,10 @@
 import _mod12565 from "module_12565" /* 12565 */;
 import _mod12592 from "module_12592" /* 12592 */;
 import _mod12593 from "module_12593" /* 12593 */;
-import _slicedToArray from "module_32" /* 32 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 
 function setupIntegration(on, name, arg2) {
-  closure_0 = on;
+  let closure_0 = on;
   if (arg2[name.name]) {
     if (_mod12593.DEBUG_BUILD) {
       const logger2 = _mod12565.logger;
@@ -16,21 +16,23 @@ function setupIntegration(on, name, arg2) {
     }
   } else {
     arg2[name.name] = name;
+    const tmp = -1 === items.indexOf(name.name) && typeof name.setupOnce === "function";
     if (tmp) {
       name.setupOnce();
       items.push(name.name);
     }
+    const tmp4 = name.setup && typeof name.setup === "function";
     if (tmp4) {
       name.setup(on);
     }
     if (typeof name.preprocessEvent === "function") {
       const preprocessEvent = name.preprocessEvent;
-      closure_1 = preprocessEvent.bind(name);
+      let closure_1 = preprocessEvent.bind(name);
       on.on("preprocessEvent", (arg0, arg1) => closure_1(arg0, arg1, closure_0));
     }
     if (typeof name.processEvent === "function") {
       const processEvent = name.processEvent;
-      closure_2 = processEvent.bind(name);
+      let closure_2 = processEvent.bind(name);
       const _Object = Object;
       const obj = { id: name.name };
       on.addEventProcessor(Object.assign((arg0, arg1) => closure_2(arg0, arg1, closure_0), obj));
@@ -40,14 +42,13 @@ function setupIntegration(on, name, arg2) {
       const _HermesInternal = HermesInternal;
       logger.log("Integration installed: " + name.name);
     }
-    tmp = -1 === items.indexOf(name.name) && typeof name.setupOnce === "function";
-    tmp4 = name.setup && typeof name.setup === "function";
   }
 }
 let items = [];
 
 export const addIntegration = function addIntegration(name) {
-  const client = _mod12592.getClient();
+  const obj = _mod12592;
+  const client = obj.getClient();
   if (client) {
     client.addIntegration(name);
   } else if (_mod12593.DEBUG_BUILD) {
@@ -56,15 +57,15 @@ export const addIntegration = function addIntegration(name) {
     logger.warn("Cannot add integration \"" + name.name + "\" because no SDK Client is available.");
   }
 };
-export const afterSetupIntegrations = function afterSetupIntegrations(arg0, arg1) {
-  const iter = arg1[Symbol.iterator]();
-  const nextResult = iter.next();
+export const afterSetupIntegrations = function afterSetupIntegrations(arg0, integrations) {
+  const iter = integrations[Symbol.iterator]();
+  let afterAllSetup = iter.next();
   while (iter !== undefined) {
-    let obj = nextResult;
-    if (nextResult) {
-      let afterAllSetup = obj.afterAllSetup;
+    let obj = afterAllSetup;
+    if (obj) {
+      afterAllSetup = obj.afterAllSetup;
     }
-    if (nextResult) {
+    if (afterAllSetup) {
       let afterAllSetupResult = obj.afterAllSetup(arg0);
     }
     continue;
@@ -74,28 +75,30 @@ export function defineIntegration(arg0) {
   return arg0;
 }
 export const getIntegrationsToSetup = function getIntegrationsToSetup(defaultIntegrations) {
+  let arr2;
   const arr = defaultIntegrations.defaultIntegrations || [];
-  const integrations = defaultIntegrations.integrations;
+  integrations = defaultIntegrations.integrations;
   const item = arr.forEach((item) => {
     item.isDefaultInstance = true;
   });
   if (Array.isArray(integrations)) {
     items = [];
-    HermesBuiltin.arraySpread(integrations, HermesBuiltin.arraySpread(arr, 0));
-    let arr2 = items;
+    HermesBuiltin.arraySpread(items, integrations, HermesBuiltin.arraySpread(items, arr, 0));
+    arr2 = items;
   } else {
     arr2 = arr;
     if (typeof integrations === "function") {
       const integrationsResult = integrations(arr);
       const _Array = Array;
-      let tmp2 = integrationsResult;
+      let tmp3 = integrationsResult;
       if (!Array.isArray(integrationsResult)) {
         const items1 = [integrationsResult];
-        tmp2 = items1;
+        tmp3 = items1;
       }
-      arr2 = tmp2;
+      arr2 = tmp3;
     }
   }
+  const obj = {};
   const item1 = arr2.forEach((name) => {
     name = name.name;
     let isDefaultInstance = tmp2;
@@ -109,7 +112,7 @@ export const getIntegrationsToSetup = function getIntegrationsToSetup(defaultInt
       obj[name] = name;
     }
   });
-  const values = Object.values({});
+  const values = Object.values(obj);
   const findIndexResult = values.findIndex((name) => "Debug" === name.name);
   if (findIndexResult > -1) {
     values.push(_slicedToArray(values.splice(findIndexResult, 1), 1)[0]);
@@ -119,10 +122,11 @@ export const getIntegrationsToSetup = function getIntegrationsToSetup(defaultInt
 export const installedIntegrations = items;
 export { setupIntegration };
 export const setupIntegrations = function setupIntegrations(arg0, arr) {
-  closure_0 = arg0;
+  let closure_0 = arg0;
   const obj = {};
   const item = arr.forEach((item) => {
-    if (item) {
+    const tmp = item;
+    if (tmp) {
       setupIntegration(closure_0, item, obj);
     }
   });

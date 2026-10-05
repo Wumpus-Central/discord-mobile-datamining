@@ -1,0 +1,72 @@
+// === Module 8209: Line ===
+
+// Module 8209 (Line)
+import Fragment from "Fragment" /* 21 */;
+import extractProps from "extractProps" /* 8151 */;
+import multiplyMatricesDefault from "multiplyMatrices" /* 8160 */;
+import _modDef8210 from "module_8210" /* 8210 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import react from "react" /* 19 */;
+
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
+
+    }));
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+const jsx = Fragment.jsx;
+class Line {
+  constructor() {
+    let constructResult;
+    const self = this;
+    _classCallCheck(this, Line);
+    const obj = _getPrototypeOf(Line);
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
+    } else {
+      constructResult = obj(...arguments);
+    }
+    return _possibleConstructorReturn(self, constructResult);
+  }
+}
+_inherits(Line, multiplyMatricesDefault);
+const entry = {
+  key: "render",
+  value: function render() {
+    let x1;
+    let x2;
+    let y1;
+    let y2;
+    const self = this;
+    const props = this.props;
+    const obj = { x1, y1, x2, y2 };
+    ({ x1, y1, x2, y2 } = props);
+    const obj2 = extractProps;
+    const merged = Object.assign(obj2.extract(this, props));
+    _modDef8210;
+    const merged1 = Object.assign(obj);
+    return <tmp2 ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
+  }
+};
+const items = [entry];
+const importDefaultResultResult = _createClass(Line, items);
+importDefaultResultResult.displayName = "Line";
+importDefaultResultResult.defaultProps = { x1: 0, y1: 0, x2: 0, y2: 0 };
+
+export default importDefaultResultResult;

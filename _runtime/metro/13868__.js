@@ -1,22 +1,31 @@
 // === Module 13868: ? ===
 
 // Module 13868
+import _mod13859 from "module_13859" /* 13859 */;
+
 const require = globalThis.__r;
+let _require, closure_1, dependencyMap;
 
 
-export default (arg0, arg1, arg2, arg3) => {
+export default function(arg0, arg1, arg2, arg3) {
+  let closure_0;
   let obj;
+  let str;
+  let str3;
+  let tmpResult;
+  let tmpResult4;
   _require = arg3;
-  let tmp3 = new require("module_13831")(arg0, arg3);
-  const tmp4 = new require("module_13860")(arg1, arg3);
+  let tmp = _require;
+  const tmp3 = new require("module_13831")(arg0, arg3);
+  let tmp4 = new require("module_13860")(arg1, arg3);
   if (">" === arg2) {
     dependencyMap = tmp(13851);
-    let tmpResult = tmp(13856);
+    tmpResult = tmp(13856);
     const tmpResult3 = tmp(13852);
-    closure_2 = tmpResult3;
-    let str3 = ">=";
-    let str = ">";
-    let tmpResult4 = tmpResult3;
+    let closure_2 = tmpResult3;
+    str3 = ">=";
+    str = ">";
+    tmpResult4 = tmpResult3;
   } else {
     str = "<";
     if ("<" === arg2) {
@@ -27,11 +36,13 @@ export default (arg0, arg1, arg2, arg3) => {
       str3 = "<=";
     } else {
       const _TypeError = TypeError;
+      let self = this;
+      let self2 = this;
       const typeError = new TypeError("Must provide a hilo val of \"<\" or \">\"");
       throw typeError;
     }
   }
-  if (require("module_13862")(tmp3, tmp4, arg3)) {
+  if (tmp(13862)(tmp3, tmp4, arg3)) {
     return false;
   } else {
     let num = 0;
@@ -41,28 +52,21 @@ export default (arg0, arg1, arg2, arg3) => {
         let arr = tmp4.set[num3];
         _require = null;
         dependencyMap = null;
-        let item = arr.forEach((semver) => {
+        let item = arr.forEach(function(semver) {
           let tmp = semver;
-          if (semver.semver === closure_0(semver[7]).ANY) {
-            tmp = new tmp2(tmp3[7])(">=0.0.0");
+          if (semver.semver === _mod13859.ANY) {
+            const self = this;
+            const self2 = this;
+            tmp = new _mod13859(">=0.0.0");
           }
-          let tmp6 = closure_0;
-          if (!closure_0) {
-            tmp6 = tmp;
-          }
-          closure_0 = tmp6;
-          let tmp7 = semver;
-          if (!semver) {
-            tmp7 = tmp;
-          }
-          semver = tmp7;
-          if (dependencyMap(tmp.semver, closure_0.semver, require)) {
-            closure_0 = tmp;
-          } else if (React2(tmp.semver, semver.semver, require)) {
+          semver = semver || tmp;
+          closure_1 = closure_1 || tmp;
+          const tmp4 = semver;
+          if (closure_1(tmp.semver, semver.semver, semver)) {
             semver = tmp;
+          } else if (closure_2(tmp.semver, closure_1.semver, tmp4)) {
+            closure_1 = tmp;
           }
-          tmp2 = closure_0;
-          tmp3 = semver;
         });
         if (_require.operator !== str) {
           if (_require.operator !== str3) {

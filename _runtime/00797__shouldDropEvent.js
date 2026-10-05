@@ -2,28 +2,34 @@
 
 // Module 797 (_shouldDropEvent)
 import _mod699 from "module_699" /* 699 */;
-import consoleSandbox from "consoleSandbox" /* 700 */;
-import _mod709 from "module_709" /* 709 */;
-import setupIntegration from "setupIntegration" /* 763 */;
+import CONSOLE_LEVELS from "CONSOLE_LEVELS" /* 700 */;
+import UNKNOWN_FUNCTION from "UNKNOWN_FUNCTION" /* 709 */;
+import module_763 from "module_763" /* 763 */;
+
+let closure_1_0;
 
 function _shouldDropEvent(message, message2) {
   let tmp = message2;
   if (tmp) {
+    let flag;
     message = message.message;
     message2 = message2.message;
     if (message) {
       if (!message) {
         if (message) {
-          let flag = false;
+          flag = false;
           if (message === message2) {
             flag = false;
             if (_isSameFingerprint(message, message2)) {
-              const framesFromEvent = _mod709.getFramesFromEvent(message);
-              const framesFromEvent1 = _mod709.getFramesFromEvent(message2);
+              let flag2;
+              const obj = UNKNOWN_FUNCTION;
+              const framesFromEvent = obj.getFramesFromEvent(message);
+              const obj2 = UNKNOWN_FUNCTION;
+              const framesFromEvent1 = obj2.getFramesFromEvent(message2);
               if (framesFromEvent) {
                 if (!framesFromEvent) {
                   if (framesFromEvent) {
-                    let flag2 = false;
+                    flag2 = false;
                     if (framesFromEvent1.length === framesFromEvent.length) {
                       let num = 0;
                       flag2 = true;
@@ -102,12 +108,15 @@ function _shouldDropEvent(message, message2) {
             if (first.value === iter.value) {
               flag3 = false;
               if (_isSameFingerprint(message, message2)) {
-                const framesFromEvent2 = _mod709.getFramesFromEvent(message);
-                const framesFromEvent3 = _mod709.getFramesFromEvent(message2);
+                let flag4;
+                const obj3 = UNKNOWN_FUNCTION;
+                const framesFromEvent2 = obj3.getFramesFromEvent(message);
+                const obj4 = UNKNOWN_FUNCTION;
+                const framesFromEvent3 = obj4.getFramesFromEvent(message2);
                 if (framesFromEvent2) {
                   if (!framesFromEvent2) {
                     if (framesFromEvent2) {
-                      let flag4 = false;
+                      flag4 = false;
                       if (framesFromEvent3.length === framesFromEvent2.length) {
                         let num2 = 0;
                         flag4 = true;
@@ -183,21 +192,21 @@ function _isSameFingerprint(fingerprint, fingerprint2) {
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export { _shouldDropEvent };
-export const dedupeIntegration = setupIntegration.defineIntegration(() => ({
+export const dedupeIntegration = module_763.defineIntegration(() => ({
   name: "Dedupe",
   processEvent(type) {
     if (type.type) {
       return type;
     } else {
       try {
-        if (_shouldDropEvent(type, closure_0)) {
+        if (_shouldDropEvent(type, closure_1_0)) {
           if (_mod699.DEBUG_BUILD) {
-            const debug = consoleSandbox.debug;
+            const debug = CONSOLE_LEVELS.debug;
             debug.warn("Event dropped due to being a duplicate of previously captured event.");
           }
           return null;
         } else {
-          closure_0 = type;
+          closure_1_0 = type;
           return type;
         }
       } catch (err) {

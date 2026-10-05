@@ -1,27 +1,25 @@
 // === Module 14195: ? ===
 
 // Module 14195
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import map from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
-import noop from "module_19" /* 19 */;
-import get_ActivityIndicator from "module_17" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+import react from "react" /* 19 */;
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
 
+let value;
+let weakMap;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
-    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
+
+    }));
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -29,104 +27,100 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
 if (typeof WeakMap === "function") {
   const _WeakMap = WeakMap;
-  const weakMap = new WeakMap();
+  let self = this;
+  const self2 = this;
+  weakMap = new WeakMap();
   const _WeakMap2 = WeakMap;
+  const self3 = this;
   const weakMap1 = new WeakMap();
 }
-if (!noop) {
+if (!react) {
   const merged = Object.assign({ default: null });
-  merged[0] = noop;
-  let value = merged;
-  if (null !== noop) {
-    if (typeof noop === "object") {
+  merged[0] = react;
+  value = merged;
+  if (null !== react) {
+    if (typeof react === "object") {
       if (!weakMap) {
         value = merged;
         const keys = Object.keys();
         if (keys !== undefined) {
           value = merged;
           while (keys[tmp] !== undefined) {
-            let tmp22 = "default" !== tmp12;
-            if (!tmp22) {
-              if (!tmp22) {
+            let callResult = "default" !== tmp12;
+            if (callResult) {
+              let hasOwnProperty = {}.hasOwnProperty;
+              callResult = hasOwnProperty.call(react, tmp12);
+            }
+            if (!callResult) {
+              continue;
+            } else {
+              let _Object = Object;
+              let ownPropertyDescriptor = defineProperty;
+              if (ownPropertyDescriptor) {
+                let _Object2 = Object;
+                ownPropertyDescriptor = Object.getOwnPropertyDescriptor(react, tmp12);
+              }
+              if (!ownPropertyDescriptor) {
+                merged[tmp12] = react[tmp12];
                 continue;
               } else {
-                let _Object = Object;
-                let ownPropertyDescriptor = defineProperty;
-                if (defineProperty) {
-                  let _Object2 = Object;
-                  ownPropertyDescriptor = Object.getOwnPropertyDescriptor(noop, tmp12);
-                }
-                if (!ownPropertyDescriptor) {
-                  merged[tmp12] = noop[tmp12];
-                  continue;
-                } else {
-                  let definePropertyResult1 = defineProperty(merged, tmp12, ownPropertyDescriptor);
-                  continue;
-                }
+                let definePropertyResult1 = defineProperty(merged, tmp12, ownPropertyDescriptor);
                 continue;
               }
               continue;
-            } else {
-              let hasOwnProperty = {}.hasOwnProperty;
-              let call = hasOwnProperty.call;
-              let tmp13 = typeof call === "unknown" ? hasOwnProperty(tmp12) : call(noop, tmp12);
             }
+            continue;
           }
         }
-      } else if (weakMap.has(noop)) {
-        value = weakMap.get(noop);
+      } else if (weakMap.has(react)) {
+        value = weakMap.get(react);
       } else {
-        const result = weakMap.set(noop, merged);
+        const result = weakMap.set(react, merged);
       }
     } else {
       value = merged;
     }
   }
 } else {
-  value = noop;
+  value = react;
 }
 class StorybookSwitcher {
-  constructor(arg0) {
-    self = this;
-    tmp = closure_0(this, StorybookSwitcher);
-    items = [];
-    items[0] = global;
-    tmp2 = c2;
-    obj = c2(StorybookSwitcher);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+  constructor(emitter) {
+    let constructResult;
+    const self = this;
+    _classCallCheck(this, StorybookSwitcher);
+    const items = [emitter];
+    let obj = _getPrototypeOf(StorybookSwitcher);
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, _getPrototypeOf(self).constructor);
     } else {
       constructResult = obj.apply(self, items);
     }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
+    const tmp3Result = map(self, constructResult);
+    let closure_0 = tmp3Result;
     tmp3Result.state = { showStorybook: false };
-    emitter = global.emitter;
-    onResult = emitter.on("storybook", (showStorybook) => {
-      state.setState({ showStorybook });
+    emitter = emitter.emitter;
+    emitter.on("storybook", (showStorybook) => {
+      const obj = { showStorybook };
+      state.setState(obj);
     });
     return tmp3Result;
   }
 }
-_classCallCheck = StorybookSwitcher;
 _inherits(StorybookSwitcher, value.Component);
 const entry = {
   key: "render",
   value: function render() {
     let children = this.props.children;
-    const obj = { style: { flex: 1 }, children: null };
+    const jsx = Fragment.jsx;
+    const View = react_native.View;
     if (this.state.showStorybook) {
       children = <tmp />;
     }
-    obj.children = children;
-    return <get ActivityIndicator.View style={{ flex: 1 }}>{null}</get ActivityIndicator.View>;
+    return <View style={{ flex: 1 }}>{children}</View>;
   }
 };
 let items = [entry];

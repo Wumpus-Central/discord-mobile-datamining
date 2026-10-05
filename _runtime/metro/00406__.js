@@ -1,27 +1,24 @@
 // === Module 406: ? ===
 
 // Module 406
+import Fragment from "Fragment" /* 21 */;
+import get_VirtualizedListDefault from "get VirtualizedList" /* 312 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import hasOwnProperty from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
 
-const SectionList = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
-    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
+
+    }));
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -30,25 +27,23 @@ function _isNativeReflectConstruct() {
   }
 }
 let closure_2 = ["stickySectionHeadersEnabled"];
-const jsx = fn(21).jsx;
+const jsx = Fragment.jsx;
 class SectionList {
   constructor() {
-    self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_4(this, SectionList);
-    items1 = [...items];
-    tmp2 = metroRequire;
-    obj = metroRequire(SectionList);
-    tmp3 = hasOwnProperty;
-    if (closure_8()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    let constructResult;
+    const self = this;
+    const items = [...arguments];
+    let closure_0;
+    _classCallCheck(this, SectionList);
+    const items1 = [...items];
+    const obj = _getPrototypeOf(SectionList);
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, _getPrototypeOf(self).constructor);
     } else {
       constructResult = obj.apply(self, items1);
     }
-    tmp3Result = tmp3(self, constructResult);
+    const tmp3Result = hasOwnProperty(self, constructResult);
     closure_0 = tmp3Result;
     tmp3Result._captureRef = (_wrapperListRef) => {
       closure_0._wrapperListRef = _wrapperListRef;
@@ -56,7 +51,7 @@ class SectionList {
     return tmp3Result;
   }
 }
-_inherits(SectionList, noop.PureComponent);
+_inherits(SectionList, react.PureComponent);
 const entry = {
   key: "scrollToLocation",
   value: function scrollToLocation(arg0) {
@@ -134,20 +129,17 @@ let items = [
     value: function render() {
       const props = this.props;
       let flag = props.stickySectionHeadersEnabled;
+      const tmp = _objectWithoutProperties(props, closure_2);
       if (flag == null) {
         flag = false;
       }
-      const obj = {};
-      const merged = Object.assign(_objectWithoutProperties(props, closure_2));
-      obj.stickySectionHeadersEnabled = flag;
-      obj.ref = this._captureRef;
-      obj.getItemCount = function getItemCount(arg0) {
+      const VirtualizedSectionList = get_VirtualizedListDefault.VirtualizedSectionList;
+      const merged = Object.assign(tmp);
+      return <VirtualizedSectionList stickySectionHeadersEnabled={flag} ref={this._captureRef} getItemCount={function getItemCount(arg0) {
         return arg0.length;
-      };
-      obj.getItem = function getItem(arg0, arg1) {
+      }} getItem={function getItem(arg0, arg1) {
         return arg0[arg1];
-      };
-      return jsx(SectionList(312).VirtualizedSectionList, {});
+      }} />;
     }
   }
 ];

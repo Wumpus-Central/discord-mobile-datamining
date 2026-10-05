@@ -1,7 +1,7 @@
 // === Module 546: overArg ===
 
 // Module 546 (overArg)
-import _mod547 from "module_547" /* 547 */;
+import overArg from "overArg" /* 547 */;
 
 
-export default _mod547(Object.keys, Object);
+export default overArg(Object.keys, Object);

@@ -2,11 +2,14 @@
 
 // Module 6137
 import normalizeSnapPoint from "normalizeSnapPoint" /* 6129 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
 
 const require = globalThis.__r;
+let _require, dependencyMap;
 
-({ useCallback: c2, useEffect: c3 } = noop);
+let c2;
+let c3;
+({ useCallback: c2, useEffect: c3 } = react);
 
 export const useScrollableSetter = (scrollableRef, value, scrollableContentOffsetY, value2) => {
   _require = scrollableRef;
@@ -15,7 +18,8 @@ export const useScrollableSetter = (scrollableRef, value, scrollableContentOffse
   if (focusHook === undefined) {
     tmp = value2;
   }
-  const bottomSheetInternal = require("module_6120").useBottomSheetInternal();
+  let obj = require("react");
+  const bottomSheetInternal = obj.useBottomSheetInternal();
   const animatedScrollableType = bottomSheetInternal.animatedScrollableType;
   const animatedScrollableContentOffsetY = bottomSheetInternal.animatedScrollableContentOffsetY;
   const isContentHeightFixed = bottomSheetInternal.isContentHeightFixed;
@@ -28,7 +32,8 @@ export const useScrollableSetter = (scrollableRef, value, scrollableContentOffse
     animatedScrollableType.value = value;
     isScrollableRefreshable.value = value2;
     isContentHeightFixed.value = false;
-    const findNodeHandleResult = normalizeSnapPoint.findNodeHandle(scrollableRef.current);
+    const obj = normalizeSnapPoint;
+    const findNodeHandleResult = obj.findNodeHandle(scrollableRef.current);
     if (findNodeHandleResult) {
       const obj2 = { id: findNodeHandleResult, node: scrollableRef };
       setScrollableRef(obj2);

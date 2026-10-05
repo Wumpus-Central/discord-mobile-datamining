@@ -14,6 +14,6 @@ function _setPrototypeOf(arg0, arg1) {
   module.exports = exports;
   return exports(arg0, arg1);
 }
-let exports = _setPrototypeOf;
+exports = _setPrototypeOf;
 
 export default _setPrototypeOf;

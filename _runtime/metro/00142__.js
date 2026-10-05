@@ -2,17 +2,18 @@
 
 // Module 142
 import _mod131 from "module_131" /* 131 */;
-import _mod141 from "module_141" /* 141 */;
+import _getBoundingClientRect from "_getBoundingClientRect" /* 141 */;
 
-require = arg1;
-const dependencyMap = arg6;
+let closure_2;
+
 
 export const getElementSibling = function getElementSibling(parentNode, next) {
   parentNode = parentNode.parentNode;
   if (null == parentNode) {
     return null;
   } else {
-    const childNodes = _mod131.getChildNodes(parentNode);
+    const obj = _mod131;
+    const childNodes = obj.getChildNodes(parentNode);
     const index = childNodes.indexOf(parentNode);
     let num = -1;
     if (-1 === index) {
@@ -23,7 +24,7 @@ export const getElementSibling = function getElementSibling(parentNode, next) {
       }
       const sum = index + num;
       if (null == closure_2) {
-        closure_2 = _mod141.default;
+        closure_2 = _getBoundingClientRect.default;
       }
       let tmp3 = sum;
       if (null != childNodes[sum]) {

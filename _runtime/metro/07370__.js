@@ -1,19 +1,20 @@
 // === Module 7370: ? ===
 
 // Module 7370
+const f94751 = (item) => String.fromCharCode(item);
 
 export const getStringValue = function getStringValue(value) {
-  const mapped = value.map((item) => String.fromCharCode(item));
+  const mapped = value.map(f94751);
   return mapped.join("");
 };
 export const getEncodedString = function getEncodedString(arr) {
   if (arr.length >= 8) {
     const substr = arr.slice(0, 8);
-    const mapped = substr.map((item) => String.fromCharCode(item));
+    const mapped = substr.map(f94751);
     const joined = mapped.join("");
     if ("ASCII\0\0\0" === joined) {
       const substr1 = arr.slice(8);
-      const mapped1 = substr1.map((item) => String.fromCharCode(item));
+      const mapped1 = substr1.map(f94751);
       return mapped1.join("");
     } else if ("JIS\0\0\0\0\0" === joined) {
       return "[JIS encoded text]";

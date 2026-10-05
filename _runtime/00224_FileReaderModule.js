@@ -1,12 +1,12 @@
 // === Module 224: FileReaderModule ===
 
 // Module 224 (FileReaderModule)
-import _modDef225 from "module_225" /* 225 */;
+import _mod225 from "module_225" /* 225 */;
 
-const require = globalThis.__r;
+const _modDef225 = _mod225;
 
-for (const key10016 in require("module_225")) {
-  arg5[key10016] = require("module_225")[key10016];
+for (const key10016 in _mod225) {
+  exports[key10016] = _mod225[key10016];
   continue;
 }
 

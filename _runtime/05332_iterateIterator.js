@@ -3,26 +3,26 @@
 // Module 5332 (iterateIterator)
 
 export default function iterateIterator(next) {
-  if (next) {
+  const tmp = next;
+  if (tmp) {
     if (typeof next.next === "function") {
       if (arguments.length > 1) {
         if (typeof arguments[1] !== "function") {
-          const tmp8 = new TypeError("`callback`, if provided, must be a function");
-          throw tmp8;
+          const self = this;
+          const self2 = this;
+          const tmp7 = new TypeError("`callback`, if provided, must be a function");
+          throw tmp7;
         }
       }
-      let items = tmp;
-      if (!undefined) {
-        items = [];
-      }
+      const arr = undefined || [];
       let iter = next.next();
       if (iter) {
         if (!iter.done) {
           while (true) {
-            if (tmp) {
-              let tmpResult = tmp(iter.value);
+            if (tmp2) {
+              let tmp2Result = tmp2(iter.value);
             } else {
-              let arr = items.push(iter.value);
+              let arr2 = arr.push(iter.value);
             }
             let iter2 = next.next();
             if (!iter2) {
@@ -36,8 +36,9 @@ export default function iterateIterator(next) {
           }
         }
       }
-      return undefined ? undefined : items;
+      return undefined ? undefined : arr;
     }
   }
-  throw new TypeError("iterator must be an object with a `next` method");
+  const tmp9 = new TypeError("iterator must be an object with a `next` method");
+  throw tmp9;
 };

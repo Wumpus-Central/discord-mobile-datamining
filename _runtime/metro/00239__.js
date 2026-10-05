@@ -5,42 +5,48 @@ let c0 = false;
 
 export default {
   addTimespan() {
-    if (!c0) {
+    const tmp = c0;
+    if (!tmp) {
       c0 = true;
       const _console = console;
       console.warn("The default `IPerformanceLogger` provided by `react-native` (the `'GlobalPerformanceLogger'` callable native module and the `scopedPerformanceLogger` argument passed to the hook registered with `AppRegistry.setComponentProviderInstrumentationHook`) is deprecated and will be removed in a future release. The instance supplied today is a no-op stub. Embedders that need a per-app performance logger should attach their own implementation.");
     }
   },
   append() {
-    if (!c0) {
+    const tmp = c0;
+    if (!tmp) {
       c0 = true;
       const _console = console;
       console.warn("The default `IPerformanceLogger` provided by `react-native` (the `'GlobalPerformanceLogger'` callable native module and the `scopedPerformanceLogger` argument passed to the hook registered with `AppRegistry.setComponentProviderInstrumentationHook`) is deprecated and will be removed in a future release. The instance supplied today is a no-op stub. Embedders that need a per-app performance logger should attach their own implementation.");
     }
   },
   clear() {
-    if (!c0) {
+    const tmp = c0;
+    if (!tmp) {
       c0 = true;
       const _console = console;
       console.warn("The default `IPerformanceLogger` provided by `react-native` (the `'GlobalPerformanceLogger'` callable native module and the `scopedPerformanceLogger` argument passed to the hook registered with `AppRegistry.setComponentProviderInstrumentationHook`) is deprecated and will be removed in a future release. The instance supplied today is a no-op stub. Embedders that need a per-app performance logger should attach their own implementation.");
     }
   },
   clearCompleted() {
-    if (!c0) {
+    const tmp = c0;
+    if (!tmp) {
       c0 = true;
       const _console = console;
       console.warn("The default `IPerformanceLogger` provided by `react-native` (the `'GlobalPerformanceLogger'` callable native module and the `scopedPerformanceLogger` argument passed to the hook registered with `AppRegistry.setComponentProviderInstrumentationHook`) is deprecated and will be removed in a future release. The instance supplied today is a no-op stub. Embedders that need a per-app performance logger should attach their own implementation.");
     }
   },
   close() {
-    if (!c0) {
+    const tmp = c0;
+    if (!tmp) {
       c0 = true;
       const _console = console;
       console.warn("The default `IPerformanceLogger` provided by `react-native` (the `'GlobalPerformanceLogger'` callable native module and the `scopedPerformanceLogger` argument passed to the hook registered with `AppRegistry.setComponentProviderInstrumentationHook`) is deprecated and will be removed in a future release. The instance supplied today is a no-op stub. Embedders that need a per-app performance logger should attach their own implementation.");
     }
   },
   currentTimestamp() {
-    if (!c0) {
+    const tmp = c0;
+    if (!tmp) {
       c0 = true;
       const _console = console;
       console.warn("The default `IPerformanceLogger` provided by `react-native` (the `'GlobalPerformanceLogger'` callable native module and the `scopedPerformanceLogger` argument passed to the hook registered with `AppRegistry.setComponentProviderInstrumentationHook`) is deprecated and will be removed in a future release. The instance supplied today is a no-op stub. Embedders that need a per-app performance logger should attach their own implementation.");
@@ -48,7 +54,8 @@ export default {
     return 0;
   },
   getExtras() {
-    if (!c0) {
+    const tmp = c0;
+    if (!tmp) {
       c0 = true;
       const _console = console;
       console.warn("The default `IPerformanceLogger` provided by `react-native` (the `'GlobalPerformanceLogger'` callable native module and the `scopedPerformanceLogger` argument passed to the hook registered with `AppRegistry.setComponentProviderInstrumentationHook`) is deprecated and will be removed in a future release. The instance supplied today is a no-op stub. Embedders that need a per-app performance logger should attach their own implementation.");
@@ -56,7 +63,8 @@ export default {
     return {};
   },
   getPoints() {
-    if (!c0) {
+    const tmp = c0;
+    if (!tmp) {
       c0 = true;
       const _console = console;
       console.warn("The default `IPerformanceLogger` provided by `react-native` (the `'GlobalPerformanceLogger'` callable native module and the `scopedPerformanceLogger` argument passed to the hook registered with `AppRegistry.setComponentProviderInstrumentationHook`) is deprecated and will be removed in a future release. The instance supplied today is a no-op stub. Embedders that need a per-app performance logger should attach their own implementation.");
@@ -64,7 +72,8 @@ export default {
     return {};
   },
   getPointExtras() {
-    if (!c0) {
+    const tmp = c0;
+    if (!tmp) {
       c0 = true;
       const _console = console;
       console.warn("The default `IPerformanceLogger` provided by `react-native` (the `'GlobalPerformanceLogger'` callable native module and the `scopedPerformanceLogger` argument passed to the hook registered with `AppRegistry.setComponentProviderInstrumentationHook`) is deprecated and will be removed in a future release. The instance supplied today is a no-op stub. Embedders that need a per-app performance logger should attach their own implementation.");
@@ -72,7 +81,8 @@ export default {
     return {};
   },
   getTimespans() {
-    if (!c0) {
+    const tmp = c0;
+    if (!tmp) {
       c0 = true;
       const _console = console;
       console.warn("The default `IPerformanceLogger` provided by `react-native` (the `'GlobalPerformanceLogger'` callable native module and the `scopedPerformanceLogger` argument passed to the hook registered with `AppRegistry.setComponentProviderInstrumentationHook`) is deprecated and will be removed in a future release. The instance supplied today is a no-op stub. Embedders that need a per-app performance logger should attach their own implementation.");
@@ -80,7 +90,8 @@ export default {
     return {};
   },
   hasTimespan() {
-    if (!c0) {
+    const tmp = c0;
+    if (!tmp) {
       c0 = true;
       const _console = console;
       console.warn("The default `IPerformanceLogger` provided by `react-native` (the `'GlobalPerformanceLogger'` callable native module and the `scopedPerformanceLogger` argument passed to the hook registered with `AppRegistry.setComponentProviderInstrumentationHook`) is deprecated and will be removed in a future release. The instance supplied today is a no-op stub. Embedders that need a per-app performance logger should attach their own implementation.");
@@ -88,7 +99,8 @@ export default {
     return false;
   },
   isClosed() {
-    if (!c0) {
+    const tmp = c0;
+    if (!tmp) {
       c0 = true;
       const _console = console;
       console.warn("The default `IPerformanceLogger` provided by `react-native` (the `'GlobalPerformanceLogger'` callable native module and the `scopedPerformanceLogger` argument passed to the hook registered with `AppRegistry.setComponentProviderInstrumentationHook`) is deprecated and will be removed in a future release. The instance supplied today is a no-op stub. Embedders that need a per-app performance logger should attach their own implementation.");
@@ -96,42 +108,48 @@ export default {
     return false;
   },
   logEverything() {
-    if (!c0) {
+    const tmp = c0;
+    if (!tmp) {
       c0 = true;
       const _console = console;
       console.warn("The default `IPerformanceLogger` provided by `react-native` (the `'GlobalPerformanceLogger'` callable native module and the `scopedPerformanceLogger` argument passed to the hook registered with `AppRegistry.setComponentProviderInstrumentationHook`) is deprecated and will be removed in a future release. The instance supplied today is a no-op stub. Embedders that need a per-app performance logger should attach their own implementation.");
     }
   },
   markPoint() {
-    if (!c0) {
+    const tmp = c0;
+    if (!tmp) {
       c0 = true;
       const _console = console;
       console.warn("The default `IPerformanceLogger` provided by `react-native` (the `'GlobalPerformanceLogger'` callable native module and the `scopedPerformanceLogger` argument passed to the hook registered with `AppRegistry.setComponentProviderInstrumentationHook`) is deprecated and will be removed in a future release. The instance supplied today is a no-op stub. Embedders that need a per-app performance logger should attach their own implementation.");
     }
   },
   removeExtra() {
-    if (!c0) {
+    const tmp = c0;
+    if (!tmp) {
       c0 = true;
       const _console = console;
       console.warn("The default `IPerformanceLogger` provided by `react-native` (the `'GlobalPerformanceLogger'` callable native module and the `scopedPerformanceLogger` argument passed to the hook registered with `AppRegistry.setComponentProviderInstrumentationHook`) is deprecated and will be removed in a future release. The instance supplied today is a no-op stub. Embedders that need a per-app performance logger should attach their own implementation.");
     }
   },
   setExtra() {
-    if (!c0) {
+    const tmp = c0;
+    if (!tmp) {
       c0 = true;
       const _console = console;
       console.warn("The default `IPerformanceLogger` provided by `react-native` (the `'GlobalPerformanceLogger'` callable native module and the `scopedPerformanceLogger` argument passed to the hook registered with `AppRegistry.setComponentProviderInstrumentationHook`) is deprecated and will be removed in a future release. The instance supplied today is a no-op stub. Embedders that need a per-app performance logger should attach their own implementation.");
     }
   },
   startTimespan() {
-    if (!c0) {
+    const tmp = c0;
+    if (!tmp) {
       c0 = true;
       const _console = console;
       console.warn("The default `IPerformanceLogger` provided by `react-native` (the `'GlobalPerformanceLogger'` callable native module and the `scopedPerformanceLogger` argument passed to the hook registered with `AppRegistry.setComponentProviderInstrumentationHook`) is deprecated and will be removed in a future release. The instance supplied today is a no-op stub. Embedders that need a per-app performance logger should attach their own implementation.");
     }
   },
   stopTimespan() {
-    if (!c0) {
+    const tmp = c0;
+    if (!tmp) {
       c0 = true;
       const _console = console;
       console.warn("The default `IPerformanceLogger` provided by `react-native` (the `'GlobalPerformanceLogger'` callable native module and the `scopedPerformanceLogger` argument passed to the hook registered with `AppRegistry.setComponentProviderInstrumentationHook`) is deprecated and will be removed in a future release. The instance supplied today is a no-op stub. Embedders that need a per-app performance logger should attach their own implementation.");

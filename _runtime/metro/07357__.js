@@ -1,17 +1,17 @@
 // === Module 7357: ? ===
 
 // Module 7357
-import findOffsets from "findOffsets" /* 7354 */;
+import _mod7354 from "module_7354" /* 7354 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
 export default {
   isAvifFile(getUint32) {
     if (getUint32) {
       try {
-        let parseBoxResult = findOffsets.parseBox(getUint32, 0);
-        if (parseBoxResult) {
+        const obj = _mod7354;
+        let parseBoxResult = obj.parseBox(getUint32, 0);
+        const tmp4 = parseBoxResult;
+        if (tmp4) {
           parseBoxResult = "avif" === parseBoxResult.majorBrand;
         }
         return parseBoxResult;
@@ -23,6 +23,7 @@ export default {
     }
   },
   findAvifOffsets(byteLength) {
-    return findOffsets.findOffsets(byteLength);
+    const obj = _mod7354;
+    return obj.findOffsets(byteLength);
   }
 };

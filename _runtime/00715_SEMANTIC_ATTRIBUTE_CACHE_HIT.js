@@ -1,7 +1,7 @@
 // === Module 715: SEMANTIC_ATTRIBUTE_CACHE_HIT ===
 
 // Module 715 (SEMANTIC_ATTRIBUTE_CACHE_HIT)
-Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const SEMANTIC_ATTRIBUTE_CACHE_HIT = "cache.hit";
 export const SEMANTIC_ATTRIBUTE_CACHE_ITEM_SIZE = "cache.item_size";

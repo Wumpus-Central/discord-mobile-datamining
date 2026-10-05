@@ -1,12 +1,12 @@
 // === Module 8136: inlineStyles ===
 
 // Module 8136 (inlineStyles)
-import _modDef8137 from "module_8137" /* 8137 */;
+import _mod8137 from "module_8137" /* 8137 */;
 
-const require = globalThis.__r;
+const _modDef8137 = _mod8137;
 
-for (const key10013 in require("module_8137")) {
-  arg5[key10013] = require("module_8137")[key10013];
+for (const key10013 in _mod8137) {
+  exports[key10013] = _mod8137[key10013];
   continue;
 }
 

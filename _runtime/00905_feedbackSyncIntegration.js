@@ -1,15 +1,16 @@
 // === Module 905: feedbackSyncIntegration ===
 
 // Module 905 (feedbackSyncIntegration)
-import mergeOptions from "mergeOptions" /* 902 */;
+import module_902 from "module_902" /* 902 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
-
-export const feedbackSyncIntegration = mergeOptions.buildFeedbackIntegration({
+const obj = {
   getModalIntegration() {
-    return mergeOptions.feedbackModalIntegration;
+    return module_902.feedbackModalIntegration;
   },
   getScreenshotIntegration() {
-    return mergeOptions.feedbackScreenshotIntegration;
+    return module_902.feedbackScreenshotIntegration;
   }
-});
+};
+
+export const feedbackSyncIntegration = module_902.buildFeedbackIntegration(obj);

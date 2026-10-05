@@ -1,18 +1,14 @@
 // === Module 4632: callDispose ===
 
 // Module 4632 (callDispose)
+let hasOwnProperty;
 
-export const callDispose = function callDispose(current) {
-  for (const key10006 in arg0) {
+
+export const callDispose = function callDispose(c0) {
+  for (const key10006 in c0) {
     let _Object3 = Object;
     hasOwnProperty = Object.prototype.hasOwnProperty;
-    let call = hasOwnProperty.call;
-    if (typeof call === "unknown") {
-      let hasOwnPropertyResult = hasOwnProperty(key10006);
-    } else {
-      hasOwnPropertyResult = call(arg0, key10006);
-    }
-    if (hasOwnPropertyResult) {
+    if (hasOwnProperty.call(c0, key10006)) {
       continue;
     } else {
       if ("__type" === key10006) {
@@ -23,7 +19,7 @@ export const callDispose = function callDispose(current) {
         } else {
           try {
             let _Object = Object;
-            let definePropertyResult = Object.defineProperty(arg0, key10006, { value: "Set", enumerable: true, configurable: "/assets/.cache/intl/bW9kdWxlcy9jaGVja291dC9tZXNzYWdlcw==" });
+            let definePropertyResult = Object.defineProperty(c0, key10006, { value: "Set", enumerable: true, configurable: "/assets/.cache/intl/bW9kdWxlcy9jaGVja291dC9tZXNzYWdlcw==" });
             continue;
           } catch (err) {
             continue;
@@ -37,30 +33,33 @@ export const callDispose = function callDispose(current) {
   }
   try {
     const _Object2 = Object;
-    const obj2 = {
+    const obj = {
       value() {
           return "[disposed HybridObject]";
         },
       enumerable: false,
       configurable: true
     };
-    Object.defineProperty(current, "toString", obj2);
-    try {
-      current.dispose();
-    } catch (tmp5) {
-      if (tmp5 instanceof obj.Error) {
-        let message = tmp5.message;
-      } else {
-        let str2 = tmp5;
-        if (tmp5 == null) {
-          str2 = "";
-        }
-        message = obj.String(str2);
-      }
-      if (!message.includes("failed to define internal native state property")) {
-        throw tmp5;
-      }
-    }
+    Object.defineProperty(c0, "toString", obj);
   } catch (err) {
+  }
+  try {
+    c0.dispose();
+  } catch (tmp4) {
+    let message;
+    const _Error = Error;
+    if (tmp4 instanceof Error) {
+      message = tmp4.message;
+    } else {
+      let str2 = tmp4;
+      const _String = String;
+      if (tmp4 == null) {
+        str2 = "";
+      }
+      message = _String(str2);
+    }
+    if (!message.includes("failed to define internal native state property")) {
+      throw tmp4;
+    }
   }
 };

@@ -2,25 +2,24 @@
 
 // Module 12667 (CounterMetric)
 import COUNTER_METRIC_TYPE from "COUNTER_METRIC_TYPE" /* 12662 */;
+import _mod12666 from "module_12666" /* 12666 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
-let SetMetric = require;
 class CounterMetric {
-  constructor(arg0) {
-    tmp = c2(this, SetMetric);
-    this._value = global;
-    return;
+  constructor(_value) {
+    _classCallCheck(this, CounterMetric);
+    this._value = _value;
   }
 }
-SetMetric = CounterMetric;
+let obj = {
+  key: "weight",
+  get() {
+    return 1;
+  }
+};
 let items = [
-  {
-    key: "weight",
-    get() {
-      return 1;
-    }
-  },
+  obj,
   {
     key: "add",
     value: function add(arg0) {
@@ -36,124 +35,122 @@ let items = [
 ];
 const _moduleResult = _createClass(CounterMetric, items);
 class GaugeMetric {
-  constructor(arg0) {
-    tmp = c2(this, SetMetric);
-    this._last = global;
-    this._min = global;
-    this._max = global;
-    this._sum = global;
+  constructor(_last) {
+    _classCallCheck(this, GaugeMetric);
+    this._last = _last;
+    this._min = _last;
+    this._max = _last;
+    this._sum = _last;
     this._count = 1;
-    return;
   }
 }
-SetMetric = GaugeMetric;
-const items1 = [
-  {
-    key: "weight",
-    get() {
-      return 5;
-    }
-  },
-  {
-    key: "add",
-    value: function add(_last) {
-      const self = this;
-      this._last = _last;
-      if (_last < this._min) {
-        self._min = _last;
-      }
-      if (_last > self._max) {
-        self._max = _last;
-      }
-      self._sum = self._sum + _last;
-      self._count = self._count + 1;
-    }
-  },
-  {
-    key: "toString",
-    value: function toString() {
-      return "" + this._last + ":" + this._min + ":" + this._max + ":" + this._sum + ":" + this._count;
-    }
+const items1 = [, , ];
+const obj2 = {
+  key: "weight",
+  get() {
+    return 5;
   }
-];
+};
+items1[0] = obj2;
+items1[1] = {
+  key: "add",
+  value: function add(_last) {
+    const self = this;
+    this._last = _last;
+    if (_last < this._min) {
+      self._min = _last;
+    }
+    if (_last > self._max) {
+      self._max = _last;
+    }
+    self._sum = self._sum + _last;
+    self._count = self._count + 1;
+  }
+};
+items1[2] = {
+  key: "toString",
+  value: function toString() {
+    return "" + this._last + ":" + this._min + ":" + this._max + ":" + this._sum + ":" + this._count;
+  }
+};
 const _moduleResult1 = _createClass(GaugeMetric, items1);
 class DistributionMetric {
   constructor(arg0) {
-    tmp = c2(this, SetMetric);
-    items = [];
-    items[0] = global;
+    _classCallCheck(this, DistributionMetric);
+    const items = [arg0];
     this._value = items;
-    return;
   }
 }
-SetMetric = DistributionMetric;
-const items2 = [
-  {
-    key: "weight",
-    get() {
-      return this._value.length;
-    }
-  },
-  {
-    key: "add",
-    value: function add(arg0) {
-      const _value = this._value;
-      _value.push(arg0);
-    }
-  },
-  {
-    key: "toString",
-    value: function toString() {
-      const _value = this._value;
-      return _value.join(":");
-    }
+const items2 = [, , ];
+const obj3 = {
+  key: "weight",
+  get() {
+    return this._value.length;
   }
-];
+};
+items2[0] = obj3;
+items2[1] = {
+  key: "add",
+  value: function add(arg0) {
+    const _value = this._value;
+    _value.push(arg0);
+  }
+};
+items2[2] = {
+  key: "toString",
+  value: function toString() {
+    const _value = this._value;
+    return _value.join(":");
+  }
+};
 const _moduleResult2 = _createClass(DistributionMetric, items2);
 class SetMetric {
   constructor(arg0) {
-    tmp = c2(this, SetMetric);
-    this.first = global;
-    items = [];
-    items[0] = global;
-    set = new Set(items);
-    this._value = set;
-    return;
+    _classCallCheck(this, SetMetric);
+    this.first = arg0;
+    const items = [arg0];
+    this._value = new Set(items);
+    new Set(items);
   }
 }
-const items3 = [
-  {
-    key: "weight",
-    get() {
-      return this._value.size;
-    }
-  },
-  {
-    key: "add",
-    value: function add(arg0) {
-      const _value = this._value;
-      _value.add(arg0);
-    }
-  },
-  {
-    key: "toString",
-    value: function toString() {
-      const mapped = Array.from(this._value).map((item) => {
-        let simpleHashResult = item;
-        if (typeof item === "string") {
-          simpleHashResult = SetMetric(dependencyMap[2]).simpleHash(item);
-          const obj = SetMetric(dependencyMap[2]);
-        }
-        return simpleHashResult;
-      });
-      return mapped.join(":");
-    }
+const items3 = [, , ];
+const obj4 = {
+  key: "weight",
+  get() {
+    return this._value.size;
   }
-];
+};
+items3[0] = obj4;
+items3[1] = {
+  key: "add",
+  value: function add(arg0) {
+    const _value = this._value;
+    _value.add(arg0);
+  }
+};
+items3[2] = {
+  key: "toString",
+  value: function toString() {
+    const arr = Array.from(this._value);
+    const mapped = arr.map((item) => {
+      let simpleHashResult = item;
+      if (typeof item === "string") {
+        const obj = _mod12666;
+        simpleHashResult = obj.simpleHash(item);
+      }
+      return simpleHashResult;
+    });
+    return mapped.join(":");
+  }
+};
 const _moduleResult3 = _createClass(SetMetric, items3);
+const CounterMetric_export = _moduleResult;
+const DistributionMetric_export = _moduleResult2;
+const GaugeMetric_export = _moduleResult1;
+const SetMetric_export = _moduleResult3;
 
-export const CounterMetric = _moduleResult;
-export const DistributionMetric = _moduleResult2;
-export const GaugeMetric = _moduleResult1;
+export { CounterMetric_export as CounterMetric };
+export { DistributionMetric_export as DistributionMetric };
+export { GaugeMetric_export as GaugeMetric };
 export const METRIC_MAP = { [COUNTER_METRIC_TYPE.COUNTER_METRIC_TYPE]: _moduleResult, [COUNTER_METRIC_TYPE.GAUGE_METRIC_TYPE]: _moduleResult1, [COUNTER_METRIC_TYPE.DISTRIBUTION_METRIC_TYPE]: _moduleResult2, [COUNTER_METRIC_TYPE.SET_METRIC_TYPE]: _moduleResult3 };
-export const SetMetric = _moduleResult3;
+export { SetMetric_export as SetMetric };

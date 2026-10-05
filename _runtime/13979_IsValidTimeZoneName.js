@@ -1,18 +1,24 @@
 // === Module 13979: IsValidTimeZoneName ===
 
 // Module 13979 (IsValidTimeZoneName)
+let set;
+
 
 export const IsValidTimeZoneName = function IsValidTimeZoneName(str, arg1) {
+  let uppercaseLinks;
+  let zoneNamesFromData;
   ({ zoneNamesFromData, uppercaseLinks } = arg1);
   const formatted = str.toUpperCase();
-  const set = new Set();
+  set = new Set();
   const set1 = new Set();
   const mapped = zoneNamesFromData.map((item) => item.toUpperCase());
   const item = mapped.forEach((item) => set.add(item));
   const keys = Object.keys(uppercaseLinks);
   const item1 = keys.forEach((item) => {
     set1.add(item.toUpperCase());
-    set.add(uppercaseLinks[item].toUpperCase());
+    const str = uppercaseLinks[item];
+    set.add(str.toUpperCase());
   });
-  return set.has(formatted) || set1.has(formatted);
+  const tmp4 = set.has(formatted) || set1.has(formatted);
+  return tmp4;
 };

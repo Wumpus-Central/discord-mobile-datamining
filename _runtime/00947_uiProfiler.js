@@ -4,13 +4,12 @@
 import _mod693 from "module_693" /* 693 */;
 import _mod948 from "module_948" /* 948 */;
 
-require = arg1;
-const dependencyMap = arg6;
-Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const uiProfiler = {
   startProfiler() {
-    const client = _mod693.getClient();
+    const obj = _mod693;
+    const client = obj.getClient();
     if (client) {
       if (client.getIntegrationByName("BrowserProfiling")) {
         client.emit("startUIProfiler");
@@ -24,7 +23,8 @@ export const uiProfiler = {
     }
   },
   stopProfiler() {
-    const client = _mod693.getClient();
+    const obj = _mod693;
+    const client = obj.getClient();
     if (client) {
       if (client.getIntegrationByName("BrowserProfiling")) {
         client.emit("stopUIProfiler");

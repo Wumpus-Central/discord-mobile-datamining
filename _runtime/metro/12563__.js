@@ -3,27 +3,27 @@
 // Module 12563
 import _mod12564 from "module_12564" /* 12564 */;
 import _mod12565 from "module_12565" /* 12565 */;
-import stackParserFromStackParserOptions from "stackParserFromStackParserOptions" /* 12568 */;
+import _mod12568 from "module_12568" /* 12568 */;
 
-require = arg1;
-const dependencyMap = {};
+let closure_2 = {};
 let closure_3 = {};
 
 export const addHandler = function addHandler(console, errorCallback) {
-  dependencyMap[console] = dependencyMap[console] || [];
-  dependencyMap[console].push(errorCallback);
-  const tmp2 = dependencyMap[console] || [];
+  const tmp2 = closure_2[console] || [];
+  closure_2[console] = tmp2;
+  const arr = closure_2[console];
+  arr.push(errorCallback);
 };
 export const maybeInstrument = function maybeInstrument(console, fn) {
   if (!closure_3[console]) {
-    tmp2[console] = true;
+    tmp[console] = true;
     try {
       fn();
-    } catch (tmp5) {
+    } catch (tmp4) {
       if (_mod12564.DEBUG_BUILD) {
         const logger = _mod12565.logger;
         const _HermesInternal = HermesInternal;
-        logger.error("Error while instrumenting " + tmp, tmp5);
+        logger.error("Error while instrumenting " + console, tmp4);
       }
     }
   }
@@ -31,27 +31,25 @@ export const maybeInstrument = function maybeInstrument(console, fn) {
 export const resetInstrumentationHandlers = function resetInstrumentationHandlers() {
   const keys = Object.keys(closure_2);
   const item = keys.forEach((item) => {
-    dependencyMap[item] = undefined;
+    closure_1_2[item] = undefined;
   });
 };
 export const triggerHandlers = function triggerHandlers(arg0, arg1) {
-  let tmp8 = arg0;
-  if (arg0) {
-    tmp8 = dependencyMap[arg0];
-  }
-  if (tmp8) {
-    const iter = tmp8[Symbol.iterator]();
+  if (arg0 && closure_2[arg0]) {
+    const iter = (arg0 && closure_2[arg0])[Symbol.iterator]();
+    const nextResult = iter.next();
     if (iter !== undefined) {
       try {
-        tmp15(arg1);
-      } catch (tmp18) {
+        nextResult(arg1);
+      } catch (tmp11) {
         if (_mod12564.DEBUG_BUILD) {
           const logger = _mod12565.logger;
-          logger.error(tmp2 + tmp6 + tmp3 + stackParserFromStackParserOptions.getFunctionName(tmp7) + tmp4, tmp18);
-          const tmp19Result = stackParserFromStackParserOptions;
+          const error = logger.error;
+          const _HermesInternal = HermesInternal;
+          const tmp12Result = _mod12568;
+          error("Error while triggering instrumentation handler.\nType: " + arg0 + "\nName: " + tmp12Result.getFunctionName(nextResult) + "\nError:", tmp11);
         }
       }
     }
-    const nextResult = iter.next();
   }
 };

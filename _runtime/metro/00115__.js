@@ -3,17 +3,17 @@
 // Module 115
 import ReactFabricDefault from "ReactFabric" /* 116 */;
 import _mod289 from "module_289" /* 289 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
 
-require = arg1;
 
-export const renderElement = function renderElement(rootTag) {
-  const obj2 = { onCaughtError: null, onUncaughtError: null, onRecoverableError: null };
-  const obj = ReactFabricDefault;
-  obj2.onCaughtError = _mod289.onCaughtError;
-  obj2.onUncaughtError = _mod289.onUncaughtError;
-  obj2.onRecoverableError = _mod289.onRecoverableError;
-  obj.render(rootTag.element, Number(rootTag.rootTag), null, true, obj2);
+export const renderElement = function renderElement(element) {
+  element = element.element;
+  const rootTag = element.rootTag;
+  const render = ReactFabricDefault.render;
+  const obj = { onCaughtError: _mod289.onCaughtError, onUncaughtError: _mod289.onUncaughtError, onRecoverableError: _mod289.onRecoverableError };
+  ReactFabricDefault;
+  const NumberResult = Number(rootTag);
+  render(element, NumberResult, null, true, obj);
 };
 export const dispatchCommand = ReactFabricDefault.dispatchCommand;
 export const findHostInstance_DEPRECATED = ReactFabricDefault.findHostInstance_DEPRECATED;

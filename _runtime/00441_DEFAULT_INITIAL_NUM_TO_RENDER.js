@@ -5,8 +5,7 @@ import _modDef143 from "module_143" /* 143 */;
 import DEFAULT_INITIAL_NUM_TO_RENDER from "module_442" /* 442 */;
 
 const FALLBACK_ESTIMATED_HEIGHT = DEFAULT_INITIAL_NUM_TO_RENDER.FALLBACK_ESTIMATED_HEIGHT;
-
-export default {
+let obj = {
   initial: {
     itemCount: DEFAULT_INITIAL_NUM_TO_RENDER.INITIAL_NUM_TO_RENDER,
     spacerStyle(arg0) {
@@ -14,9 +13,13 @@ export default {
     }
   },
   next(arg0) {
+    let target;
+    let targetRect;
+    let thresholdRect;
     ({ target, targetRect, thresholdRect } = arg0);
-    c0 = undefined;
+    let c0;
     if (target instanceof _modDef143) {
+      let result;
       const _Math = Math;
       const _Math2 = Math;
       const bound = Math.min(targetRect.y + targetRect.height, thresholdRect.y + thresholdRect.height);
@@ -44,7 +47,7 @@ export default {
               previousElementSibling = previousElementSibling2;
               num5 = sum;
               num2 = sum;
-              obj = tmp9;
+              obj = tmp7;
               if (!nodeName2.startsWith("RN:VirtualView")) {
                 break;
               }
@@ -53,22 +56,25 @@ export default {
         }
       }
       if (0 < num2) {
-        let result = (target.getBoundingClientRect().top - obj.getBoundingClientRect().top) / num2;
+        result = (target.getBoundingClientRect().top - obj.getBoundingClientRect().top) / num2;
       } else {
         result = FALLBACK_ESTIMATED_HEIGHT;
       }
       c0 = result;
-      const obj2 = {
+      return {
         itemCount: diff / result,
         spacerStyle(arg0) {
             return { height: arg0 * c0 };
           }
       };
-      return obj2;
     } else {
       const _Error = Error;
+      const self = this;
+      const self2 = this;
       const error = new Error("Expected target to be a ReactNativeElement. VirtualColumn requires DOM APIs to be enabled in React Native.");
       throw error;
     }
   }
 };
+
+export default obj;

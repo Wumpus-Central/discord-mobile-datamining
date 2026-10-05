@@ -1,25 +1,21 @@
 // === Module 10196: ? ===
 
 // Module 10196
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import Filter from "Filter" /* 10180 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import _mod10180 from "module_10180" /* 10180 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import map from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
-    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
+
+    }));
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -27,61 +23,59 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
 class ENUnlikelyFormatFilter {
   constructor() {
-    self = this;
-    tmp = closure_0(this, ENUnlikelyFormatFilter);
-    tmp2 = c2;
-    obj = c2(ENUnlikelyFormatFilter);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    let constructResult;
+    const self = this;
+    _classCallCheck(this, ENUnlikelyFormatFilter);
+    const obj = _getPrototypeOf(ENUnlikelyFormatFilter);
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], _getPrototypeOf(self).constructor);
     } else {
       constructResult = obj.apply(self, undefined);
     }
-    return tmp3(self, constructResult);
+    return map(self, constructResult);
   }
 }
-_classCallCheck = ENUnlikelyFormatFilter;
-_inherits(ENUnlikelyFormatFilter, Filter.Filter);
+_inherits(ENUnlikelyFormatFilter, _mod10180.Filter);
 const entry = {
   key: "isValid",
   value: function isValid(text, text2) {
-    closure_0 = text2;
-    const str2 = text2.text.trim();
+    let closure_0 = text2;
+    const str = text2.text;
+    const str2 = str.trim();
+    const str3 = text.text;
     if (str2 === str3.trim()) {
       return true;
     } else {
       if ("may" === str2.toLowerCase()) {
-        const str5 = text.text.substring(0, text2.index);
+        const str4 = text.text;
+        const str5 = str4.substring(0, text2.index);
+        const str6 = str5.trim();
         if (!str6.match(/\b(in)$/i)) {
           text.debug(() => {
-            console.log("Removing unlikely result: " + closure_0);
+            console.log("Removing unlikely result: " + text2);
           });
           return false;
         }
-        str6 = text.text.substring(0, text2.index).trim();
       }
       const formatted = str2.toLowerCase();
       const endsWithResult = formatted.endsWith("the second");
       let flag2 = !endsWithResult;
       if (endsWithResult) {
         flag2 = false;
+        const str8 = text.text;
+        const str9 = str8.substring(text2.index + text2.text.length);
         if (str9.trim().length > 0) {
           text.debug(() => {
-            console.log("Removing unlikely result: " + closure_0);
+            console.log("Removing unlikely result: " + text2);
           });
           flag2 = false;
         }
-        str9 = text.text.substring(text2.index + text2.text.length);
       }
       return flag2;
     }
-    str3 = text.text;
   }
 };
 const items = [entry];

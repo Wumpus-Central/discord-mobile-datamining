@@ -1,21 +1,23 @@
 // === Module 4128: areIntervalsOverlapping ===
 
 // Module 4128 (areIntervalsOverlapping)
-import _typeof_mod from "module_3958" /* 3958 */;
+import toDate_mod from "toDate" /* 3958 */;
 import requiredArgs_mod from "requiredArgs" /* 3959 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
-  let tmp3 = obj;
+let tmp3;
+let tmp5;
+let toDate = toDate_mod;
+if (!toDate) {
+  tmp3 = { default: toDate };
+  const obj = { default: toDate };
 } else {
-  tmp3 = _typeof;
+  tmp3 = toDate;
 }
-_typeof = tmp3;
+toDate = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
+  tmp5 = { default: requiredArgs };
   const obj2 = { default: requiredArgs };
-  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }
@@ -24,28 +26,33 @@ requiredArgs = tmp5;
 export default function areIntervalsOverlapping(start, start2, inclusive) {
   requiredArgs.default(2, arguments);
   start = undefined;
+  const _default = toDate.default;
   if (null != start) {
     start = start.start;
   }
-  const time = _typeof.default(start).getTime();
+  const _defaultResult = _default(start);
+  const time = _defaultResult.getTime();
   let end;
+  const _default2 = toDate.default;
   if (null != start) {
     end = start.end;
   }
-  const defaultResult1 = _typeof.default(start);
-  const time1 = _typeof.default(end).getTime();
+  const _default2Result = _default2(end);
+  const time1 = _default2Result.getTime();
   let start1;
+  const _default3 = toDate.default;
   if (null != start2) {
     start1 = start2.start;
   }
-  const defaultResult2 = _typeof.default(end);
-  const time2 = _typeof.default(start1).getTime();
+  const _default3Result = _default3(start1);
+  const time2 = _default3Result.getTime();
   let end1;
+  const _default4 = toDate.default;
   if (null != start2) {
     end1 = start2.end;
   }
-  const defaultResult3 = _typeof.default(start1);
-  const time3 = _typeof.default(end1).getTime();
+  const _default4Result = _default4(end1);
+  const time3 = _default4Result.getTime();
   if (time <= time1) {
     if (time2 <= time3) {
       if (null != inclusive) {
@@ -59,4 +66,3 @@ export default function areIntervalsOverlapping(start, start2, inclusive) {
   const rangeError = new RangeError("Invalid interval");
   throw rangeError;
 };
-export default exports.default;

@@ -3,19 +3,14 @@
 // Module 12566
 import _mod12567 from "module_12567" /* 12567 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
 export const GLOBAL_OBJ = globalThis;
 export const getGlobalSingleton = function getGlobalSingleton(globalMetricsAggregators, fn, arg2) {
-  let tmp = arg2;
-  if (!arg2) {
-    tmp = globalThis;
-  }
-  const tmp2 = tmp.__SENTRY__ || {};
-  tmp.__SENTRY__ = tmp2;
+  const tmp2 = (arg2 || globalThis).__SENTRY__ || {};
+  (arg2 || globalThis).__SENTRY__ = tmp2;
+  const SDK_VERSION = _mod12567.SDK_VERSION;
   const tmp3 = tmp2[_mod12567.SDK_VERSION] || {};
-  tmp2[_mod12567.SDK_VERSION] = tmp3;
+  tmp2[SDK_VERSION] = tmp3;
   let tmp4 = tmp3[globalMetricsAggregators];
   if (!tmp4) {
     const tmp6 = fn();

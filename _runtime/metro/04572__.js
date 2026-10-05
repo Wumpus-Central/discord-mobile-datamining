@@ -1,9 +1,12 @@
 // === Module 4572: ? ===
 
 // Module 4572
+let set;
+
 function createStoreImpl(fn) {
-  const set = new Set();
+  new Set();
   function setState(fn, arg1) {
+    let merged;
     let tmp = fn;
     if (typeof fn === "function") {
       tmp = fn(merged);
@@ -11,11 +14,7 @@ function createStoreImpl(fn) {
     if (!Object.is(tmp, merged)) {
       let tmp2 = arg1;
       if (null == arg1) {
-        let tmp5 = typeof tmp !== "object";
-        if (typeof tmp === "object") {
-          tmp5 = null === tmp;
-        }
-        tmp2 = tmp5;
+        tmp2 = typeof tmp !== "object" || null === tmp;
       }
       merged = tmp;
       if (!tmp2) {
@@ -41,16 +40,21 @@ function createStoreImpl(fn) {
     }
   };
   const tmp2 = fn(setState, getState, store);
-  closure_0 = tmp2;
-  closure_2 = tmp2;
+  let closure_0 = tmp2;
+  let closure_2 = tmp2;
   return store;
 }
 
-export const createStore = (fn) => {
-  if (fn) {
+export const createStore = function(fn) {
+  let tmp2;
+  let tmp = fn;
+  if (tmp) {
     const _Set = Set;
-    const set = new Set();
+    const self = this;
+    const self2 = this;
+    set = new Set();
     function setState(fn, arg1) {
+      let merged;
       let tmp = fn;
       if (typeof fn === "function") {
         tmp = fn(merged);
@@ -58,11 +62,7 @@ export const createStore = (fn) => {
       if (!Object.is(tmp, merged)) {
         let tmp2 = arg1;
         if (null == arg1) {
-          let tmp5 = typeof tmp !== "object";
-          if (typeof tmp === "object") {
-            tmp5 = null === tmp;
-          }
-          tmp2 = tmp5;
+          tmp2 = typeof tmp !== "object" || null === tmp;
         }
         merged = tmp;
         if (!tmp2) {
@@ -87,12 +87,12 @@ export const createStore = (fn) => {
           return () => set.delete(closure_0);
         }
     };
-    const tmp7 = fn(setState, getState, store);
-    closure_0 = tmp7;
-    closure_2 = tmp7;
-    let tmp = store;
+    const tmp6 = fn(setState, getState, store);
+    let closure_0 = tmp6;
+    let closure_2 = tmp6;
+    tmp2 = store;
   } else {
-    tmp = createStoreImpl;
+    tmp2 = createStoreImpl;
   }
-  return tmp;
+  return tmp2;
 };

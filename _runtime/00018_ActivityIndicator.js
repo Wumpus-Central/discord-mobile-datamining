@@ -1,65 +1,58 @@
 // === Module 18: ActivityIndicator ===
 
 // Module 18 (ActivityIndicator)
+import Fragment from "Fragment" /* 21 */;
+import ProgressBarAndroid from "ProgressBarAndroid" /* 23 */;
 import ViewDefault from "View" /* 108 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
 import get_hairlineWidth from "get hairlineWidth" /* 254 */;
 
-const jsx = fn(21).jsx;
-let closure_3 = fn(23).default;
+let size;
+
+const jsx = Fragment.jsx;
+let closure_3 = ProgressBarAndroid.default;
 class ActivityIndicator {
-  constructor(arg0) {
-    flag = global.animating;
+  constructor(animating) {
+    let onLayout;
+    let sizeSmall;
+    let str2;
+    let flag = animating.animating;
+    const ref = animating.ref;
     if (flag === undefined) {
       flag = true;
     }
-    color = global.color;
+    let color = animating.color;
     if (color === undefined) {
       color = null;
     }
-    flag2 = global.hidesWhenStopped;
+    let flag2 = animating.hidesWhenStopped;
     if (flag2 === undefined) {
       flag2 = true;
     }
-    ({ size, onLayout } = global);
+    ({ size, onLayout } = animating);
     if (size === undefined) {
       size = "small";
     }
-    merged = Object.assign(global, Object.assign({ ref: 0, animating: 0, color: 0, hidesWhenStopped: 0, onLayout: 0, size: 0, style: 0 }));
+    const style = animating.style;
+    const merged = Object.assign(animating, Object.assign({ ref: 0, animating: 0, color: 0, hidesWhenStopped: 0, onLayout: 0, size: 0, style: 0 }));
     if ("small" === size) {
-      tmp4 = closure_4;
       sizeSmall = closure_4.sizeSmall;
       str2 = "small";
+    } else if ("large" === size) {
+      sizeSmall = closure_4.sizeLarge;
+      str2 = "large";
     } else {
-      str = "large";
-      if ("large" === size) {
-        tmp3 = closure_4;
-        sizeSmall = closure_4.sizeLarge;
-        str2 = "large";
-      } else {
-        sizeSmall = { height: null, width: null };
-        sizeSmall.height = size;
-        sizeSmall.width = size;
-      }
+      sizeSmall = { height: size, width: size };
     }
-    obj1 = { animating: flag, color, hidesWhenStopped: flag2 };
-    merged1 = Object.assign(merged);
-    obj1.ref = global.ref;
-    obj1.style = sizeSmall;
-    obj1.size = str2;
-    obj6 = { onLayout, style: null, children: null };
-    tmp6 = closure_0(closure_1[3]);
-    obj4 = closure_0(closure_1[4]);
-    obj6.style = obj4.compose(closure_4.container, global.style);
-    obj7 = {};
-    merged2 = Object.assign(obj1);
-    obj7.styleAttr = "Normal";
-    obj7.indeterminate = true;
-    obj6.children = jsx(closure_3, obj7);
-    return jsx(tmp6, obj6);
+    const obj = { animating: flag, color, hidesWhenStopped: flag2, ref, style: sizeSmall, size: str2 };
+    const merged1 = Object.assign(merged);
+    ViewDefault;
+    const obj4 = get_hairlineWidth;
+    const merged2 = Object.assign(obj);
+    return <tmp6 onLayout={onLayout} style={obj4.compose(closure_4.container, style)}>{null}</tmp6>;
   }
 }
 ActivityIndicator.displayName = "ActivityIndicator";
-const React4 = get_hairlineWidth.create({ container: { alignItems: "center", justifyContent: "center" }, sizeSmall: { width: 20, height: 20 }, sizeLarge: { width: 36, height: 36 } });
+const React3 = get_hairlineWidth.create({ container: { alignItems: "center", justifyContent: "center" }, sizeSmall: { width: 20, height: 20 }, sizeLarge: { width: 36, height: 36 } });
 
 export default ActivityIndicator;

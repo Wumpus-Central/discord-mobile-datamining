@@ -1,37 +1,34 @@
 // === Module 923: bindReporter ===
 
 // Module 923 (bindReporter)
-Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+let diff, value2;
 
-export (tmpResult, metric, items, reportAllChanges) => {
-  closure_3 = reportAllChanges;
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+
+export const bindReporter = (tmpResult, metric, items, reportAllChanges) => {
+  let closure_0;
+  let closure_3 = reportAllChanges;
   return (arg0) => {
     let tmp = metric.value >= 0;
     if (tmp) {
-      let tmp2 = arg0;
-      if (!arg0) {
-        tmp2 = closure_3;
-      }
-      tmp = tmp2;
+      tmp = arg0 || reportAllChanges;
     }
     if (tmp) {
-      let num = value;
-      if (value == null) {
+      let num = value2;
+      const value = metric.value;
+      if (value2 == null) {
         num = 0;
       }
-      diff = metric.value - num;
-      if (!diff) {
-        diff = undefined === value;
-      }
+      diff = value - num || undefined === value2;
       tmp = diff;
     }
     if (tmp) {
       metric.delta = diff;
-      value = metric.value;
+      value2 = metric.value;
       let str = "poor";
-      if (value <= items[1]) {
+      if (value2 <= items[1]) {
         let str2 = "good";
-        if (value > items[0]) {
+        if (value2 > items[0]) {
           str2 = "needs-improvement";
         }
         str = str2;
@@ -40,4 +37,4 @@ export (tmpResult, metric, items, reportAllChanges) => {
       tmpResult(metric);
     }
   };
-}
+};

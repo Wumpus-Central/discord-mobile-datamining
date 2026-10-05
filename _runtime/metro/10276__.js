@@ -1,24 +1,30 @@
 // === Module 10276: ? ===
 
 // Module 10276
-const exports = arg5;
 
 export const zhStringToNumber = function zhStringToNumber(arg0) {
   let num = 0;
   let num2 = 0;
   let num3 = 0;
   if (0 < arg0.length) {
-    while ("\u5341" !== arg0[num]) {
-      let sum = num2 + exports.NUMBER[tmp];
+    do {
+      let sum;
+      let tmp = arg0[num];
+      if ("\u5341" === tmp) {
+        let result;
+        if (0 === num2) {
+          result = exports.NUMBER[tmp];
+        } else {
+          result = num2 * exports.NUMBER[tmp];
+        }
+        sum = result;
+      } else {
+        sum = num2 + exports.NUMBER[tmp];
+      }
       num = num + 1;
       num2 = sum;
       num3 = sum;
-    }
-    if (0 === num2) {
-      let result = exports.NUMBER[tmp];
-    } else {
-      result = num2 * exports.NUMBER[tmp];
-    }
+    } while (num < arg0.length);
   }
   return num3;
 };
@@ -37,5 +43,5 @@ export const zhStringToYear = function zhStringToYear(arg0) {
   }
   return parseInt(str2);
 };
-export const NUMBER = { "零": 0, "一": 1, "二": 2, "兩": 2, "三": 3, "四": 4, "五": 5, "六": 6, "七": 7, "八": 8, "九": 9, "十": 10, "廿": 20, "卅": 30 };
-export const WEEKDAY_OFFSET = { "天": 0, "日": 0, "一": 1, "二": 2, "三": 3, "四": 4, "五": 5, "六": 6 };
+export const NUMBER = { "\u96f6": 0, "\u4e00": 1, "\u4e8c": 2, "\u5169": 2, "\u4e09": 3, "\u56db": 4, "\u4e94": 5, "\u516d": 6, "\u4e03": 7, "\u516b": 8, "\u4e5d": 9, "\u5341": 10, "\u5eff": 20, "\u5345": 30 };
+export const WEEKDAY_OFFSET = { "\u5929": 0, "\u65e5": 0, "\u4e00": 1, "\u4e8c": 2, "\u4e09": 3, "\u56db": 4, "\u4e94": 5, "\u516d": 6 };

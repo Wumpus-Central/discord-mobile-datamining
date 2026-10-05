@@ -1,12 +1,14 @@
 // === Module 5757: ScreenContentWrapper ===
 
 // Module 5757 (ScreenContentWrapper)
-import _modDef5758 from "module_5758" /* 5758 */;
-import noop from "module_19" /* 19 */;
+import Fragment from "Fragment" /* 21 */;
+import react_nativeDefault from "react-native" /* 5758 */;
+import react from "react" /* 19 */;
 
-const jsx = fn(21).jsx;
+const jsx = Fragment.jsx;
 
 export default function ScreenContentWrapper(arg0) {
+  react_nativeDefault;
   const merged = Object.assign(arg0);
-  return jsx(_modDef5758, { collapsable: false });
+  return <tmp collapsable={false} />;
 };

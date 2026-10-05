@@ -1,24 +1,24 @@
 // === Module 14035: ? ===
 
 // Module 14035
-import e from "e" /* 1172 */;
-import calendars from "calendars" /* 14036 */;
+import _mod1172 from "module_1172" /* 1172 */;
+import calendars2 from "calendars" /* 14036 */;
 import hourCycles from "hourCycles" /* 14037 */;
 import timezones from "timezones" /* 14038 */;
-import weekData from "weekData" /* 14039 */;
+import weekData2 from "weekData" /* 14039 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
 export const getCalendarPreferenceDataForRegion = function getCalendarPreferenceDataForRegion(region) {
   let str = null;
   if (region) {
     str = region.toUpperCase();
   }
+  const calendars = calendars2.calendars;
   if (!str) {
     str = "";
   }
-  return calendars.calendars[str] || calendars.calendars["001"].map((item) => {
+  const arr = calendars[str] || calendars2.calendars["001"];
+  return arr.map((item) => {
     let str = "gregory";
     if ("gregorian" !== item) {
       let str2 = "islamicc";
@@ -44,13 +44,15 @@ export const getHourCyclesPreferenceDataForLocaleOrRegion = function getHourCycl
   if (!v001) {
     v001 = hourCycles.hourCycles["001"];
   }
-  return e.__spreadArray([], v001, true);
+  const tmp2Result = _mod1172;
+  return tmp2Result.__spreadArray([], v001, true);
 };
 export const getTimeZonePreferenceForRegion = function getTimeZonePreferenceForRegion(region) {
   const formatted = region.toLowerCase();
   const items = [];
   if (timezones.timezones[formatted]) {
-    return e.__spreadArray(items, timezones.timezones[formatted], true);
+    const tmp2Result = _mod1172;
+    return tmp2Result.__spreadArray(items, timezones.timezones[formatted], true);
   } else {
     return items;
   }
@@ -60,8 +62,10 @@ export const getWeekDataForRegion = function getWeekDataForRegion(region) {
   if (region) {
     str = region.toUpperCase();
   }
+  const weekData = weekData2.weekData;
   if (!str) {
     str = "001";
   }
-  return weekData.weekData[str] || weekData.weekData["001"];
+  const tmp3 = weekData[str] || weekData2.weekData["001"];
+  return tmp3;
 };

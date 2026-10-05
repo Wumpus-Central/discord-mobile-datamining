@@ -2,100 +2,84 @@
 
 // Module 1894
 import extend from "extend" /* 1896 */;
-import SyntaxError from "SyntaxError" /* 1897 */;
-import StringFormat from "StringFormat" /* 1899 */;
+import _mod1897 from "module_1897" /* 1897 */;
+import Compiler from "Compiler" /* 1899 */;
 import defineProperty_mod from "defineProperty" /* 1895 */;
-import "defineProperty";
 
+let obj2;
 class MessageFormat {
-  constructor(arg0, arg1, arg2) {
-    __parseResult = global;
-    if (typeof global === "string") {
-      tmp3 = MessageFormat;
-      __parseResult = MessageFormat.__parse(global);
+  constructor(str, arg1, arg2) {
+    let defineProperty;
+    let __parseResult = str;
+    if (typeof str === "string") {
+      __parseResult = MessageFormat.__parse(str);
     }
     if (__parseResult) {
-      str = "messageFormatPattern";
       if ("messageFormatPattern" === __parseResult.type) {
-        self = this;
-        tmp4 = require;
-        tmp5 = importDefault;
-        tmp6 = MessageFormat;
-        _mergeFormatsResult = this._mergeFormats(MessageFormat.formats, importDefault);
-        tmp8 = closure_0;
-        tmp9 = closure_1;
-        obj = closure_0(closure_1[0]);
-        obj1 = { value: null };
-        obj1.value = this._resolveLocale(require);
-        str2 = "_locale";
-        definePropertyResult = obj.defineProperty(this, "_locale", obj1);
-        self2 = this;
-        tmp11 = __parseResult;
-        tmp12 = require;
-        tmp13 = _mergeFormatsResult;
-        closure_0 = this._compilePattern(__parseResult, require, _mergeFormatsResult, this._findPluralRuleFunction(this._locale));
-        self = this;
+        const _mergeFormatsResult = this._mergeFormats(MessageFormat.formats, arg2);
+        const obj = { value: this._resolveLocale(arg1) };
+        defineProperty = defineProperty.defineProperty;
+        defineProperty;
+        defineProperty(this, "_locale", obj);
+        const self2 = this;
+        let closure_0 = this._compilePattern(__parseResult, arg1, _mergeFormatsResult, this._findPluralRuleFunction(this._locale));
+        const self = this;
         this.format = (arg0) => self._format(closure_0, arg0);
-        return;
       }
     }
-    typeError = new TypeError("A message must be provided as a String or AST.");
+    const typeError = new TypeError("A message must be provided as a String or AST.");
     throw typeError;
   }
   resolvedOptions() {
-    obj = { locale: this._locale };
-    return obj;
+    return { locale: this._locale };
   }
   _compilePattern(arg0, arg1, arg2, arg3) {
-    _default = new closure_0(closure_1[2]).default(require, importDefault, importAll);
-    return _default.compile(global);
+    const _default = new Compiler.default(arg1, arg2, arg3);
+    return _default.compile(arg0);
   }
   _findPluralRuleFunction(arg0) {
-    __localeData__ = MessageFormat.__localeData__;
-    tmp = __localeData__[global.toLowerCase(global)];
+    const __localeData__ = MessageFormat.__localeData__;
+    let tmp = __localeData__[arg0.toLowerCase(arg0)];
     if (tmp) {
-      tmp2 = tmp;
       while (!tmp.pluralRuleFunction) {
-        parentLocale = tmp.parentLocale;
+        let parentLocale = tmp.parentLocale;
         if (parentLocale) {
-          str = tmp.parentLocale;
+          let str = tmp.parentLocale;
           parentLocale = __localeData__[str.toLowerCase(str)];
         }
         tmp = parentLocale;
       }
       return tmp.pluralRuleFunction;
     }
-    error = new Error("Locale data added to IntlMessageFormat is missing a `pluralRuleFunction` for :" + global);
+    const error = new Error("Locale data added to IntlMessageFormat is missing a `pluralRuleFunction` for :" + arg0);
     throw error;
   }
   _format(arg0, arg1) {
-    self = this;
-    length = global.length;
-    num = 0;
-    str = "";
-    str2 = "";
+    let id;
+    const self = this;
+    let num = 0;
+    let str = "";
+    let str2 = "";
+    const length = arg0.length;
     if (0 < length) {
       while (true) {
-        obj = global[num];
-        tmp = str;
-        tmp2 = num;
+        let text;
+        let obj = arg0[num];
         if (typeof obj !== "string") {
           id = obj.id;
-          if (!require) {
+          if (!arg1) {
             break;
           } else {
-            tmp3 = closure_0;
-            tmp4 = closure_1;
-            hop = closure_0(closure_1[3]).hop;
-            call = hop.call;
-            if (!(typeof call === "unknown" ? hop(id) : call(require, id))) {
+            let hop = extend.hop;
+            if (!hop.call(arg1, id)) {
               break;
             } else {
-              tmp10 = require[id];
+              let tmp8 = arg1[id];
               if (obj.options) {
-                text = `${tmp12(obj.getOption(tmp10), require)}`;
+                let _format = self._format;
+                text = `${_format(obj.getOption(tmp8), arg1)}`;
               } else {
-                text = `${obj.format(tmp10)}`;
+                text = `${obj.format(tmp8)}`;
               }
             }
           }
@@ -106,84 +90,62 @@ class MessageFormat {
         str = text;
         str2 = text;
       }
-      tmp5 = globalThis;
-      _Error = Error;
-      str3 = "A value must be provided for: ";
-      tmp6 = new.target;
-      tmp7 = new.target;
-      error = new Error("A value must be provided for: " + id);
-      tmp9 = error;
+      const _Error = Error;
+      const self2 = this;
+      const self3 = this;
+      const error = new Error("A value must be provided for: " + id);
       throw error;
     }
     return str2;
   }
-  _mergeFormats(arg0, arg1) {
+  _mergeFormats(obj, arg1) {
     obj = {};
-    for (const key10006 in arg0) {
-      tmp7 = key10006;
-      tmp8 = closure_0;
-      tmp9 = closure_1;
-      hop2 = closure_0(closure_1[3]).hop;
-      call2 = hop2.call;
-      if (typeof call2 === "unknown") {
-        hop2Result = hop2(key10006);
-      } else {
-        hop2Result = call2(arg0, key10006);
-      }
-      if (!hop2Result) {
+    for (const key10006 in obj) {
+      let hop2 = extend.hop;
+      if (!hop2.call(obj, key10006)) {
         continue;
       } else {
-        tmp8Result = tmp8(tmp9[0]);
-        objCreateResult = tmp8Result.objCreate(arg0[key10006]);
+        let tmp5Result = defineProperty;
+        let objCreateResult = tmp5Result.objCreate(obj[key10006]);
         obj[key10006] = objCreateResult;
-        tmp3 = arg1;
-        if (!arg1) {
-          if (!arg1) {
-            continue;
-          } else {
-            tmp8Result1 = tmp8(tmp9[3]);
-            extendResult = tmp8Result1.extend(objCreateResult, arg1[key10006]);
-            continue;
-          }
+        let callResult = arg1;
+        if (callResult) {
+          let hop = extend.hop;
+          callResult = hop.call(arg1, key10006);
+        }
+        if (!callResult) {
           continue;
         } else {
-          hop = tmp8(tmp9[3]).hop;
-          call = hop.call;
-          if (typeof call === "unknown") {
-            hopResult = hop(key10006);
-          } else {
-            hopResult = call(arg1, key10006);
-          }
-          tmp5 = hopResult;
+          let tmp5Result2 = extend;
+          let extendResult = tmp5Result2.extend(objCreateResult, arg1[key10006]);
+          continue;
         }
+        continue;
       }
       continue;
     }
     return obj;
   }
-  _resolveLocale(arg0) {
-    items1 = global;
-    if (typeof global === "string") {
-      items = [];
-      items[0] = global;
+  _resolveLocale(str) {
+    let items1 = str;
+    if (typeof str === "string") {
+      const items = [str];
       items1 = items;
     }
     if (!items1) {
       items1 = [];
     }
-    combined = items1.concat(MessageFormat.defaultLocale);
-    length = combined.length;
-    num = 0;
-    if (0 < length) {
+    const combined = items1.concat(MessageFormat.defaultLocale);
+    let num = 0;
+    if (0 < combined.length) {
       while (true) {
         str = combined[num];
-        str2 = str.toLowerCase();
-        parts = str2.split("-");
-        tmp2 = num;
+        let str2 = str.toLowerCase();
+        let parts = str2.split("-");
         if (parts.length) {
-          tmp3 = tmp[parts.join(parts, "-")];
+          let tmp3 = tmp[parts.join(parts, "-")];
           while (!tmp3) {
-            arr1 = parts.pop();
+            let arr = parts.pop();
             continue;
           }
           return tmp3.locale;
@@ -191,33 +153,38 @@ class MessageFormat {
         num = num + 1;
       }
     }
-    arr5 = combined.pop();
-    error = new Error("No locale data has been added to IntlMessageFormat for: " + combined.join(", ") + ", or the default locale: " + arr5);
+    const arr2 = combined.pop();
+    const error = new Error("No locale data has been added to IntlMessageFormat for: " + combined.join(", ") + ", or the default locale: " + arr2);
     throw error;
   }
 }
 let defineProperty = defineProperty_mod;
-let obj = { enumerable: true, value: { number: { currency: { style: "currency" }, percent: { style: "percent" } }, date: { short: { month: "numeric", day: "numeric", year: "2-digit" }, medium: { month: "short", day: "numeric", year: "numeric" }, long: { month: "long", day: "numeric", year: "numeric" }, full: { weekday: "long", month: "long", day: "numeric", year: "numeric" } }, time: { short: { hour: "numeric", minute: "numeric" }, medium: { hour: "numeric", minute: "numeric", second: "numeric" }, long: { hour: "numeric", minute: "numeric", second: "numeric", timeZoneName: "short" }, full: { hour: "numeric", minute: "numeric", second: "numeric", timeZoneName: "short" } } } };
+let obj = { enumerable: true, value: obj2 };
+obj2 = { number: { currency: { style: "currency" }, percent: { style: "percent" } }, date: { short: { month: "numeric", day: "numeric", year: "2-digit" }, medium: { month: "short", day: "numeric", year: "numeric" }, long: { month: "long", day: "numeric", year: "numeric" }, full: { weekday: "long", month: "long", day: "numeric", year: "numeric" } }, time: { short: { hour: "numeric", minute: "numeric" }, medium: { hour: "numeric", minute: "numeric", second: "numeric" }, long: { hour: "numeric", minute: "numeric", second: "numeric", timeZoneName: "short" }, full: { hour: "numeric", minute: "numeric", second: "numeric", timeZoneName: "short" } } };
 defineProperty.defineProperty(MessageFormat, "formats", obj);
-const obj3 = { value: null };
-let defineProperty = defineProperty_mod;
-obj3.value = defineProperty.objCreate(null);
-defineProperty.defineProperty(MessageFormat, "__localeData__", obj3);
-let defineProperty = defineProperty_mod;
-defineProperty.defineProperty(MessageFormat, "__addLocaleData", {
+defineProperty = defineProperty_mod;
+const obj3 = { value: defineProperty.objCreate(null) };
+defineProperty = defineProperty_mod;
+defineProperty(MessageFormat, "__localeData__", obj3);
+defineProperty = defineProperty_mod;
+const obj4 = {
   value(locale) {
-    if (locale) {
+    const tmp = locale;
+    if (tmp) {
       if (locale.locale) {
-        MessageFormat.__localeData__[locale.locale.toLowerCase()] = locale;
+        const str = locale.locale;
+        MessageFormat.__localeData__[str.toLowerCase()] = locale;
       }
     }
     const error = new Error("Locale data provided to IntlMessageFormat is missing a `locale` property");
     throw error;
   }
-});
-let defineProperty = defineProperty_mod;
-defineProperty.defineProperty(MessageFormat, "__parse", { value: SyntaxError.default.parse });
-let defineProperty = defineProperty_mod;
+};
+defineProperty.defineProperty(MessageFormat, "__addLocaleData", obj4);
+defineProperty = defineProperty_mod;
+const obj5 = { value: _mod1897.default.parse };
+defineProperty.defineProperty(MessageFormat, "__parse", obj5);
+defineProperty = defineProperty_mod;
 defineProperty.defineProperty(MessageFormat, "defaultLocale", { enumerable: true, writable: true, value: "duration" });
 
 export default MessageFormat;

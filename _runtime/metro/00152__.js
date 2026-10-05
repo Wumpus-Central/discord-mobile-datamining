@@ -1,25 +1,21 @@
 // === Module 152: ? ===
 
 // Module 152
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import EventDefault from "Event" /* 133 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import _modDef133 from "module_133" /* 133 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import map from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
-    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
+
+    }));
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -27,43 +23,35 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturnDefault;
 class CustomEvent {
-  constructor(arg0, arg1) {
-    self = this;
-    tmp = closure_0(this, CustomEvent);
-    items = [, ];
-    items[0] = global;
-    items[1] = arg1;
-    tmp2 = c2;
-    obj = c2(CustomEvent);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+  constructor(arg0, detail) {
+    let constructResult;
+    const self = this;
+    _classCallCheck(this, CustomEvent);
+    const items = [arg0, detail];
+    const obj = _getPrototypeOf(CustomEvent);
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, _getPrototypeOf(self).constructor);
     } else {
       constructResult = obj.apply(self, items);
     }
-    tmp3Result = tmp3(self, constructResult);
+    const tmp3Result = map(self, constructResult);
     detail = undefined;
-    if (arg1 != null) {
-      detail = arg1.detail;
+    if (detail != null) {
+      detail = detail.detail;
     }
     tmp3Result._detail = detail;
     return tmp3Result;
   }
 }
-_classCallCheck = CustomEvent;
-_inherits(CustomEvent, EventDefault);
-let items = [
-  {
-    key: "detail",
-    get() {
-      return this._detail;
-    }
+_inherits(CustomEvent, _modDef133);
+let obj = {
+  key: "detail",
+  get() {
+    return this._detail;
   }
-];
+};
+let items = [obj];
 
 export default _createClass(CustomEvent, items);

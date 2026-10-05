@@ -4,8 +4,6 @@
 import _mod14005 from "module_14005" /* 14005 */;
 import CanonicalizeUnicodeLocaleId from "CanonicalizeUnicodeLocaleId" /* 14013 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
 export const InsertUnicodeExtensionAndCanonicalize = function InsertUnicodeExtensionAndCanonicalize(arr, arg1, arg2) {
   let length;
@@ -28,7 +26,7 @@ export const InsertUnicodeExtensionAndCanonicalize = function InsertUnicodeExten
   if (0 < arg2.length) {
     do {
       let iter = arg2[num2];
-      value = iter.value;
+      let value = iter.value;
       let concat2 = "-".concat;
       let sum = tmp2 + "-".concat(iter.key);
       let sum1 = sum;
@@ -44,9 +42,10 @@ export const InsertUnicodeExtensionAndCanonicalize = function InsertUnicodeExten
   if ("-u" === tmp3) {
     return CanonicalizeUnicodeLocaleId.CanonicalizeUnicodeLocaleId(arr);
   } else {
+    let sum2;
     const index = arr.indexOf("-x-");
     if (-1 === index) {
-      let sum2 = arr + tmp3;
+      sum2 = arr + tmp3;
     } else {
       const sum3 = arr.slice(0, index) + tmp3;
       sum2 = sum3 + arr.slice(index);

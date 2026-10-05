@@ -4,12 +4,12 @@
 import _mod915 from "module_915" /* 915 */;
 
 const require = globalThis.__r;
+let _require;
 
-require = arg1;
-const dependencyMap = arg6;
-Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const onHidden = (arg0) => {
+  let closure_0;
   _require = arg0;
   function onHiddenOrPageHide(type) {
     let tmp = "pagehide" !== type.type;
@@ -25,7 +25,8 @@ export const onHidden = (arg0) => {
       closure_0(type);
     }
   }
-  require("module_917").addPageListener("visibilitychange", onHiddenOrPageHide, { capture: true, once: true });
   const obj = require("module_917");
-  require("module_917").addPageListener("pagehide", onHiddenOrPageHide, { capture: true, once: true });
+  obj.addPageListener("visibilitychange", onHiddenOrPageHide, { capture: true, once: true });
+  const obj2 = require("module_917");
+  obj2.addPageListener("pagehide", onHiddenOrPageHide, { capture: true, once: true });
 };

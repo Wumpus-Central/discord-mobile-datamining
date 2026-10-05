@@ -1,10 +1,12 @@
 // === Module 4506: baseSortedIndexBy ===
 
 // Module 4506 (baseSortedIndexBy)
-import _mod553 from "module_553" /* 553 */;
+import isSymbol from "isSymbol" /* 553 */;
 
 
 export default function baseSortedIndexBy(arg0, arg1, fn, arg3) {
+  let sum;
+  let tmp20;
   let num = 0;
   if (null != arg0) {
     num = arg0.length;
@@ -12,87 +14,62 @@ export default function baseSortedIndexBy(arg0, arg1, fn, arg3) {
   if (0 === num) {
     return 0;
   } else {
-    const tmp27 = fn(arg1);
-    let tmp22 = num;
+    const tmp26 = fn(arg1);
+    let tmp21 = num;
     let num2 = 0;
-    let tmp23 = num;
+    let tmp22 = num;
+    const tmp27 = tmp26 != tmp26;
     if (0 < num) {
-      while (true) {
-        let tmp2 = floor((num2 + tmp22) / 2);
+      do {
+        let tmp12;
+        let tmp2 = floor((num2 + tmp21) / 2);
         let tmp3 = fn(arg0[tmp2]);
         let tmp4 = tmp3 == tmp3;
-        let tmp7 = _mod553(tmp3);
-        let sum = num2;
-        if (tmp28) {
-          let tmp20 = arg3;
-          if (!arg3) {
-            tmp20 = tmp4;
-          }
-          let tmp12 = tmp20;
+        let tmp7 = isSymbol(tmp3);
+        sum = num2;
+        if (tmp27) {
+          let tmp19 = arg3 || tmp4;
+          tmp12 = tmp19;
         } else {
           let tmp10 = undefined !== tmp3;
-          if (undefined === tmp27) {
-            let tmp18 = tmp4;
-            if (tmp4) {
-              let tmp19 = arg3;
-              if (!arg3) {
-                tmp19 = tmp10;
-              }
-              tmp18 = tmp19;
+          if (undefined === tmp26) {
+            let tmp17 = tmp4;
+            if (tmp17) {
+              let tmp18 = arg3 || tmp10;
+              tmp17 = tmp18;
             }
-            tmp12 = tmp18;
+            tmp12 = tmp17;
           } else {
             let tmp11 = null === tmp3;
-            if (null === tmp27) {
-              let tmp16 = tmp4;
-              if (tmp4) {
-                tmp16 = tmp10;
+            if (null === tmp26) {
+              let tmp15 = tmp4 && tmp10;
+              if (tmp15) {
+                let tmp16 = arg3 || !tmp11;
+                tmp15 = tmp16;
               }
-              if (tmp16) {
-                let tmp17 = arg3;
-                if (!arg3) {
-                  tmp17 = !tmp11;
-                }
-                tmp16 = tmp17;
+              tmp12 = tmp15;
+            } else if (tmp30) {
+              let tmp13 = tmp4 && tmp10 && !tmp11;
+              if (tmp13) {
+                let tmp14 = arg3 || !tmp7;
+                tmp13 = tmp14;
               }
-              tmp12 = tmp16;
-            } else if (tmp31) {
-              let tmp14 = tmp4;
-              if (tmp4) {
-                tmp14 = tmp10;
-              }
-              if (tmp14) {
-                tmp14 = !tmp11;
-              }
-              if (tmp14) {
-                let tmp15 = arg3;
-                if (!arg3) {
-                  tmp15 = !tmp7;
-                }
-                tmp14 = tmp15;
-              }
-              tmp12 = tmp14;
+              tmp12 = tmp13;
             } else {
-              tmp12 = !tmp11;
-              if (!tmp11) {
-                tmp12 = !tmp7;
-              }
-              if (tmp12) {
-                break;
-              }
+              tmp12 = !tmp11 && !tmp7 && (arg3 ? tmp3 <= tmp26 : tmp3 < tmp26);
             }
           }
         }
-        let tmp21 = tmp2;
+        tmp20 = tmp2;
         if (tmp12) {
           sum = tmp2 + 1;
-          tmp21 = tmp22;
+          tmp20 = tmp21;
         }
-        tmp22 = tmp21;
+        tmp21 = tmp20;
         num2 = sum;
-        tmp23 = tmp21;
-      }
+        tmp22 = tmp20;
+      } while (sum < tmp20);
     }
-    return min(tmp23, 4294967294);
+    return min(tmp22, 4294967294);
   }
 };

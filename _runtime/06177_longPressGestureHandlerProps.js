@@ -1,14 +1,13 @@
 // === Module 6177: longPressGestureHandlerProps ===
 
 // Module 6177 (longPressGestureHandlerProps)
-import _isNativeReflectConstruct from "module_6167" /* 6167 */;
+import createHandler from "createHandler" /* 6167 */;
 
+let items1;
 const items = ["minDurationMs", "maxDist", "numberOfPointers"];
-const obj = { name: "LongPressGestureHandler", allowedProps: null, config: null };
-const items1 = [...items];
-obj.allowedProps = items1;
-obj.config = { shouldCancelWhenOutside: true };
+const obj = { name: "LongPressGestureHandler", allowedProps: items1, config: { shouldCancelWhenOutside: true } };
+items1 = [...items];
 
 export const longPressGestureHandlerProps = items;
 export const longPressHandlerName = "LongPressGestureHandler";
-export const LongPressGestureHandler = _isNativeReflectConstruct(obj);
+export const LongPressGestureHandler = createHandler(obj);

@@ -9,9 +9,6 @@ export default function arrayIncludes(arg0, arg1) {
   if (null != arg0) {
     num = arg0.length;
   }
-  let tmp = num;
-  if (tmp) {
-    tmp = baseIndexOf(arg0, arg1, 0) > -1;
-  }
+  const tmp = num && baseIndexOf(arg0, arg1, 0) > -1;
   return tmp;
 };

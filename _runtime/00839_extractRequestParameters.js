@@ -4,11 +4,12 @@
 import ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE from "ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE" /* 834 */;
 import INSTRUMENTED_METHODS2 from "INSTRUMENTED_METHODS" /* 840 */;
 
-require = arg1;
-const dependencyMap = arg6;
+let message;
+
 function getOperationName(arr) {
+  let CONVERSATIONS;
   if (arr.includes("chat.completions")) {
-    let CONVERSATIONS = ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.OPENAI_OPERATIONS.CHAT;
+    CONVERSATIONS = ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.OPENAI_OPERATIONS.CHAT;
   } else if (arr.includes("responses")) {
     CONVERSATIONS = ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.OPENAI_OPERATIONS.RESPONSES;
   } else if (arr.includes("embeddings")) {
@@ -21,15 +22,21 @@ function getOperationName(arr) {
   }
   return CONVERSATIONS;
 }
-Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const addChatCompletionAttributes = function addChatCompletionAttributes(setAttributes, created, recordOutputs) {
+  let id;
+  let model;
   ({ id, model } = created);
+  created = created.created;
   setAttributes.setAttributes({ [closure_1_0(closure_1_1[0]).OPENAI_RESPONSE_ID_ATTRIBUTE]: id, [closure_1_0(closure_1_1[0]).GEN_AI_RESPONSE_ID_ATTRIBUTE]: id });
   setAttributes.setAttributes({ [closure_1_0(closure_1_1[0]).OPENAI_RESPONSE_MODEL_ATTRIBUTE]: model, [closure_1_0(closure_1_1[0]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE]: model });
   const obj = {};
-  obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.OPENAI_RESPONSE_TIMESTAMP_ATTRIBUTE] = new Date(1000 * created.created).toISOString();
-  setAttributes.setAttributes(obj);
+  setAttributes = setAttributes.setAttributes;
+  const OPENAI_RESPONSE_TIMESTAMP_ATTRIBUTE = ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.OPENAI_RESPONSE_TIMESTAMP_ATTRIBUTE;
+  const date = new Date(1000 * created);
+  obj[OPENAI_RESPONSE_TIMESTAMP_ATTRIBUTE] = date.toISOString();
+  setAttributes(obj);
   if (created.usage) {
     const prompt_tokens = created.usage.prompt_tokens;
     const completion_tokens = created.usage.completion_tokens;
@@ -58,11 +65,13 @@ export const addChatCompletionAttributes = function addChatCompletionAttributes(
     const found = mapped.filter((item) => null !== item);
     if (found.length > 0) {
       const obj5 = {};
+      const setAttributes2 = setAttributes.setAttributes;
       const _JSON = JSON;
       obj5[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(found);
-      setAttributes.setAttributes(obj5);
+      setAttributes2(obj5);
     }
-    if (recordOutputs) {
+    const tmp10 = recordOutputs;
+    if (tmp10) {
       const choices1 = created.choices;
       const mapped1 = choices1.map((message) => {
         message = message.message;
@@ -73,36 +82,40 @@ export const addChatCompletionAttributes = function addChatCompletionAttributes(
         return tool_calls;
       });
       const found1 = mapped1.filter((item) => {
-        let isArray = Array.isArray(item);
-        if (isArray) {
-          isArray = item.length > 0;
-        }
+        const isArray = Array.isArray(item) && item.length > 0;
         return isArray;
       });
       const flatResult = found1.flat();
       if (flatResult.length > 0) {
         const obj6 = {};
+        const setAttributes3 = setAttributes.setAttributes;
         const _JSON2 = JSON;
         obj6[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(flatResult);
-        setAttributes.setAttributes(obj6);
+        setAttributes3(obj6);
       }
     }
   }
-  const date = new Date(1000 * created.created);
 };
 export const addConversationAttributes = function addConversationAttributes(setAttributes, choices) {
+  let created_at;
+  let id;
   ({ id, created_at } = choices);
   setAttributes.setAttributes({ [closure_1_0(closure_1_1[0]).OPENAI_RESPONSE_ID_ATTRIBUTE]: id, [closure_1_0(closure_1_1[0]).GEN_AI_RESPONSE_ID_ATTRIBUTE]: id, [closure_1_0(closure_1_1[0]).GEN_AI_CONVERSATION_ID_ATTRIBUTE]: id });
   if (created_at) {
     const obj = {};
+    setAttributes = setAttributes.setAttributes;
     const _Date = Date;
+    const self = this;
+    const self2 = this;
+    const OPENAI_RESPONSE_TIMESTAMP_ATTRIBUTE = ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.OPENAI_RESPONSE_TIMESTAMP_ATTRIBUTE;
     const date = new Date(1000 * created_at);
-    obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.OPENAI_RESPONSE_TIMESTAMP_ATTRIBUTE] = date.toISOString();
-    setAttributes.setAttributes(obj);
+    obj[OPENAI_RESPONSE_TIMESTAMP_ATTRIBUTE] = date.toISOString();
+    setAttributes(obj);
   }
 };
 export const addEmbeddingsAttributes = function addEmbeddingsAttributes(setAttributes, model) {
-  setAttributes.setAttributes({ [closure_1_0(closure_1_1[0]).OPENAI_RESPONSE_MODEL_ATTRIBUTE]: model.model, [closure_1_0(closure_1_1[0]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE]: model.model });
+  const obj = { [closure_1_0(closure_1_1[0]).OPENAI_RESPONSE_MODEL_ATTRIBUTE]: model.model, [closure_1_0(closure_1_1[0]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE]: model.model };
+  setAttributes.setAttributes(obj);
   if (model.usage) {
     const prompt_tokens = model.usage.prompt_tokens;
     const total_tokens = model.usage.total_tokens;
@@ -118,21 +131,27 @@ export const addEmbeddingsAttributes = function addEmbeddingsAttributes(setAttri
       setAttributes.setAttributes(obj3);
     }
   }
-  const obj = { [closure_1_0(closure_1_1[0]).OPENAI_RESPONSE_MODEL_ATTRIBUTE]: model.model, [closure_1_0(closure_1_1[0]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE]: model.model };
 };
 export const addResponsesApiAttributes = function addResponsesApiAttributes(setAttributes, created_at, recordOutputs) {
+  let id;
+  let model;
   ({ id, model } = created_at);
+  created_at = created_at.created_at;
   setAttributes.setAttributes({ [closure_1_0(closure_1_1[0]).OPENAI_RESPONSE_ID_ATTRIBUTE]: id, [closure_1_0(closure_1_1[0]).GEN_AI_RESPONSE_ID_ATTRIBUTE]: id });
   setAttributes.setAttributes({ [closure_1_0(closure_1_1[0]).OPENAI_RESPONSE_MODEL_ATTRIBUTE]: model, [closure_1_0(closure_1_1[0]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE]: model });
   const obj = {};
-  obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.OPENAI_RESPONSE_TIMESTAMP_ATTRIBUTE] = new Date(1000 * created_at.created_at).toISOString();
-  setAttributes.setAttributes(obj);
+  setAttributes = setAttributes.setAttributes;
+  const OPENAI_RESPONSE_TIMESTAMP_ATTRIBUTE = ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.OPENAI_RESPONSE_TIMESTAMP_ATTRIBUTE;
+  const date = new Date(1000 * created_at);
+  obj[OPENAI_RESPONSE_TIMESTAMP_ATTRIBUTE] = date.toISOString();
+  setAttributes(obj);
   if (created_at.status) {
     const obj2 = {};
+    const setAttributes2 = setAttributes.setAttributes;
     const _JSON = JSON;
     const items = [created_at.status];
     obj2[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(items);
-    setAttributes.setAttributes(obj2);
+    setAttributes2(obj2);
   }
   if (created_at.usage) {
     const input_tokens = created_at.usage.input_tokens;
@@ -156,7 +175,8 @@ export const addResponsesApiAttributes = function addResponsesApiAttributes(setA
       setAttributes.setAttributes(obj5);
     }
   }
-  if (recordOutputs) {
+  const tmp10 = recordOutputs;
+  if (tmp10) {
     const _Array = Array;
     if (Array.isArray(created_at.output)) {
       if (created_at.output.length > 0) {
@@ -173,30 +193,32 @@ export const addResponsesApiAttributes = function addResponsesApiAttributes(setA
         });
         if (found.length > 0) {
           const obj6 = {};
+          const setAttributes3 = setAttributes.setAttributes;
           const _JSON2 = JSON;
           obj6[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(found);
-          setAttributes.setAttributes(obj6);
+          setAttributes3(obj6);
         }
       }
     }
   }
-  const date = new Date(1000 * created_at.created_at);
 };
-export const buildMethodPath = function buildMethodPath(arg0, arg1) {
+export const buildMethodPath = function buildMethodPath(c0, arg1) {
   let combined = arg1;
-  if (arg0) {
+  if (c0) {
     const _HermesInternal = HermesInternal;
-    combined = "" + arg0 + "." + arg1;
+    combined = "" + c0 + "." + arg1;
   }
   return combined;
 };
 export const extractRequestParameters = function extractRequestParameters(model) {
+  let previous_response_id;
   let str = model.model;
+  const GEN_AI_REQUEST_MODEL_ATTRIBUTE = ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_MODEL_ATTRIBUTE;
   if (str == null) {
     str = "unknown";
   }
   const obj = {};
-  obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str;
+  obj[GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str;
   if ("temperature" in model) {
     obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_TEMPERATURE_ATTRIBUTE] = model.temperature;
   }
@@ -220,7 +242,7 @@ export const extractRequestParameters = function extractRequestParameters(model)
   }
   if ("conversation" in model) {
     if (typeof model.conversation === "string") {
-      let previous_response_id = model.conversation;
+      previous_response_id = model.conversation;
     }
     if (previous_response_id) {
       obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_CONVERSATION_ID_ATTRIBUTE] = previous_response_id;
@@ -237,35 +259,14 @@ export { getOperationName };
 export const getSpanOperation = function getSpanOperation(arr) {
   return "gen_ai." + getOperationName(arr);
 };
-export const isChatCompletionChunk = function isChatCompletionChunk(object) {
-  let tmp = null !== object && typeof object === "object";
-  if (tmp) {
-    tmp = "object" in object;
-  }
-  if (tmp) {
-    tmp = "chat.completion.chunk" === object.object;
-  }
-  return tmp;
+export const isChatCompletionChunk = function isChatCompletionChunk(c8) {
+  return null !== c8 && typeof c8 === "object" && "object" in c8 && "chat.completion.chunk" === c8.object;
 };
 export const isChatCompletionResponse = function isChatCompletionResponse(object) {
-  let tmp = null !== object && typeof object === "object";
-  if (tmp) {
-    tmp = "object" in object;
-  }
-  if (tmp) {
-    tmp = "chat.completion" === object.object;
-  }
-  return tmp;
+  return null !== object && typeof object === "object" && "object" in object && "chat.completion" === object.object;
 };
 export const isConversationResponse = function isConversationResponse(object) {
-  let tmp = null !== object && typeof object === "object";
-  if (tmp) {
-    tmp = "object" in object;
-  }
-  if (tmp) {
-    tmp = "conversation" === object.object;
-  }
-  return tmp;
+  return null !== object && typeof object === "object" && "object" in object && "conversation" === object.object;
 };
 export const isEmbeddingsResponse = function isEmbeddingsResponse(object) {
   if (null !== object) {
@@ -273,7 +274,8 @@ export const isEmbeddingsResponse = function isEmbeddingsResponse(object) {
       if ("object" in object) {
         let hasItem = "list" === object.object && typeof object.model === "string";
         if (hasItem) {
-          const formatted = object.model.toLowerCase();
+          const str2 = object.model;
+          const formatted = str2.toLowerCase();
           hasItem = formatted.includes("embedding");
         }
         return hasItem;
@@ -283,37 +285,27 @@ export const isEmbeddingsResponse = function isEmbeddingsResponse(object) {
   return false;
 };
 export const isResponsesApiResponse = function isResponsesApiResponse(object) {
-  let tmp = null !== object && typeof object === "object";
-  if (tmp) {
-    tmp = "object" in object;
-  }
-  if (tmp) {
-    tmp = "response" === object.object;
-  }
-  return tmp;
+  return null !== object && typeof object === "object" && "object" in object && "response" === object.object;
 };
-export const isResponsesApiStreamEvent = function isResponsesApiStreamEvent(type) {
-  let startsWithResult = null !== type && typeof type === "object";
+export const isResponsesApiStreamEvent = function isResponsesApiStreamEvent(c8) {
+  let startsWithResult = null !== c8 && typeof c8 === "object" && "type" in c8 && typeof c8.type === "string";
   if (startsWithResult) {
-    startsWithResult = "type" in type;
-  }
-  if (startsWithResult) {
-    startsWithResult = typeof type.type === "string";
-  }
-  if (startsWithResult) {
-    type = type.type;
+    const type = c8.type;
     startsWithResult = type.startsWith("response.");
   }
   return startsWithResult;
 };
 export const setCommonResponseAttributes = function setCommonResponseAttributes(setAttributes, responseId, responseModel, responseTimestamp) {
-  setAttributes.setAttributes({ [closure_1_0(closure_1_1[0]).OPENAI_RESPONSE_ID_ATTRIBUTE]: responseId, [closure_1_0(closure_1_1[0]).GEN_AI_RESPONSE_ID_ATTRIBUTE]: responseId });
   const obj = { [closure_1_0(closure_1_1[0]).OPENAI_RESPONSE_ID_ATTRIBUTE]: responseId, [closure_1_0(closure_1_1[0]).GEN_AI_RESPONSE_ID_ATTRIBUTE]: responseId };
-  setAttributes.setAttributes({ [closure_1_0(closure_1_1[0]).OPENAI_RESPONSE_MODEL_ATTRIBUTE]: responseModel, [closure_1_0(closure_1_1[0]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE]: responseModel });
-  const obj3 = {};
+  setAttributes.setAttributes(obj);
   const obj2 = { [closure_1_0(closure_1_1[0]).OPENAI_RESPONSE_MODEL_ATTRIBUTE]: responseModel, [closure_1_0(closure_1_1[0]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE]: responseModel };
-  obj3[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.OPENAI_RESPONSE_TIMESTAMP_ATTRIBUTE] = new Date(1000 * responseTimestamp).toISOString();
-  setAttributes.setAttributes(obj3);
+  setAttributes.setAttributes(obj2);
+  const obj3 = {};
+  setAttributes = setAttributes.setAttributes;
+  const OPENAI_RESPONSE_TIMESTAMP_ATTRIBUTE = ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.OPENAI_RESPONSE_TIMESTAMP_ATTRIBUTE;
+  const date = new Date(1000 * responseTimestamp);
+  obj3[OPENAI_RESPONSE_TIMESTAMP_ATTRIBUTE] = date.toISOString();
+  setAttributes(obj3);
 };
 export const setTokenUsageAttributes = function setTokenUsageAttributes(setAttributes, arg1, arg2, arg3) {
   if (undefined !== arg1) {
@@ -334,7 +326,7 @@ export const setTokenUsageAttributes = function setTokenUsageAttributes(setAttri
     setAttributes.setAttributes(obj3);
   }
 };
-export const shouldInstrument = function shouldInstrument(arg0) {
+export const shouldInstrument = function shouldInstrument(methodPath) {
   const INSTRUMENTED_METHODS = INSTRUMENTED_METHODS2.INSTRUMENTED_METHODS;
-  return INSTRUMENTED_METHODS.includes(arg0);
+  return INSTRUMENTED_METHODS.includes(methodPath);
 };

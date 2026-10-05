@@ -1,5 +1,10 @@
 // === Module 10504: Layouts ===
 
 // Module 10504 (Layouts)
+import normalLayout from "normalLayout" /* 10505 */;
+import parallaxLayout from "parallaxLayout" /* 10506 */;
+import horizontalStackLayout from "horizontalStackLayout" /* 10507 */;
 
-export const Layouts = { normal: fn(10505).normalLayout, parallax: fn(10506).parallaxLayout, horizontalStack: fn(10507).horizontalStackLayout, verticalStack: fn(10507).verticalStackLayout };
+({ normal: normalLayout.normalLayout, parallax: parallaxLayout.parallaxLayout, horizontalStack: horizontalStackLayout.horizontalStackLayout, verticalStack: horizontalStackLayout.verticalStackLayout });
+
+export const Layouts = { normal: normalLayout.normalLayout, parallax: parallaxLayout.parallaxLayout, horizontalStack: horizontalStackLayout.horizontalStackLayout, verticalStack: horizontalStackLayout.verticalStackLayout };

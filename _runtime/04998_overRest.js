@@ -1,18 +1,20 @@
 // === Module 4998: overRest ===
 
 // Module 4998 (overRest)
-import _mod4999 from "module_4999" /* 4999 */;
+import apply from "apply" /* 4999 */;
 
 
 export default function overRest(arg0, arg1, arg2) {
-  closure_0 = arg0;
+  let closure_0 = arg0;
   let diff = arg1;
-  closure_1 = arg1;
-  max = arg2;
+  let closure_1 = arg1;
+  let closure_2 = arg2;
+  let tmp2 = closure_2;
   if (undefined === arg1) {
+    let num = 1;
     diff = arg0.length - 1;
   }
-  closure_1 = max(diff, 0);
+  closure_1 = tmp2(diff, 0);
   return function() {
     let tmp = closure_1;
     const tmp2 = max(arguments.length - closure_1, 0);
@@ -35,6 +37,6 @@ export default function overRest(arg0, arg1, arg2) {
       } while (num2 < closure_1);
     }
     ArrayResult1[tmp] = closure_2(ArrayResult);
-    return _mod4999(closure_0, this, ArrayResult1);
+    return apply(closure_0, this, ArrayResult1);
   };
 };

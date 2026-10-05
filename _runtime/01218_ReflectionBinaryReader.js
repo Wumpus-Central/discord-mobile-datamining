@@ -1,33 +1,37 @@
 // === Module 1218: ReflectionBinaryReader ===
 
 // Module 1218 (ReflectionBinaryReader)
-import _slicedToArray from "module_32" /* 32 */;
+import UnknownFieldHandler from "UnknownFieldHandler" /* 1202 */;
+import ScalarType from "ScalarType" /* 1211 */;
+import reflectionLongConvert from "reflectionLongConvert" /* 1216 */;
+import reflectionScalarDefault from "reflectionScalarDefault" /* 1219 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
-const ReflectionBinaryReader = require;
+let map;
+
 class ReflectionBinaryReader {
-  constructor(arg0) {
-    tmp = closure_3(this, ReflectionBinaryReader);
-    this.info = global;
-    return;
+  constructor(self) {
+    _classCallCheck(this, ReflectionBinaryReader);
+    this.info = self;
   }
 }
 const entry = {
   key: "prepare",
   value: function prepare() {
+    const f134839 = (no) => {
+      const items = [no.no, no];
+      return items;
+    };
     const self = this;
     if (!this.fieldNoToField) {
-      let fields = self.info.fields;
-      if (null === fields) {
-        fields = [];
-      }
+      const fields = self.info.fields ?? [];
       const _Map = Map;
-      const map = new Map(fields.map((no) => {
-        const items = [no.no, no];
-        return items;
-      }));
-      self.fieldNoToField = map;
+      const self2 = this;
+      const self3 = this;
+      self.fieldNoToField = new Map(fields.map(f134839));
+      map = new Map(fields.map(f134839));
     }
   }
 };
@@ -36,6 +40,12 @@ let items = [
   {
     key: "read",
     value: function read(len, arg1, readUnknownField, arg3) {
+      let localName;
+      let oneof;
+      let pos;
+      let repeat;
+      let tmp4;
+      let tmp5;
       const self = this;
       this.prepare();
       if (undefined === arg3) {
@@ -48,50 +58,52 @@ let items = [
           let tmp3 = _slicedToArray(len.tag(), 2);
           [tmp4, tmp5] = tmp3;
           let fieldNoToField = self.fieldNoToField;
-          value = fieldNoToField.get(tmp4);
+          let value = fieldNoToField.get(tmp4);
           if (value) {
+            let T;
+            let L;
             ({ repeat, localName, oneof } = value);
-            let tmp21 = arg1;
+            let tmp19 = arg1;
             if (oneof) {
-              let tmp22 = arg1[value.oneof];
-              oneof = tmp22.oneofKind !== localName;
-              tmp21 = tmp22;
+              let tmp20 = arg1[value.oneof];
+              oneof = tmp20.oneofKind !== localName;
+              tmp19 = tmp20;
             }
             if (oneof) {
               let obj = { oneofKind: localName };
               arg1[value.oneof] = obj;
-              tmp21 = obj;
+              tmp19 = obj;
             }
             let kind = value.kind;
             if ("scalar" !== kind) {
               if ("enum" !== kind) {
                 if ("message" === kind) {
                   if (repeat) {
-                    let arr = tmp21[localName];
+                    let arr = tmp19[localName];
                     let TResult = value.T();
                     let arr5 = arr.push(TResult.internalBinaryRead(len, len.uint32(), readUnknownField));
                   } else {
                     let TResult1 = value.T();
-                    tmp21[localName] = TResult1.internalBinaryRead(len, len.uint32(), readUnknownField, tmp21[localName]);
+                    tmp19[localName] = TResult1.internalBinaryRead(len, len.uint32(), readUnknownField, tmp19[localName]);
                   }
                 } else if ("map" === kind) {
-                  [, tmp21[localName][tmp2Result[0]]] = self.mapEntry(value, len, readUnknownField);
+                  [, tmp19[localName][tmp2Result[0]]] = self.mapEntry(value, len, readUnknownField);
                 }
               }
             }
             if ("enum" == value.kind) {
-              let T = ReflectionBinaryReader(1211).ScalarType.INT32;
+              T = ScalarType.ScalarType.INT32;
             } else {
               T = value.T;
             }
             if ("scalar" == value.kind) {
-              let L = value.L;
+              L = value.L;
             }
             if (repeat) {
-              let arr2 = tmp21[localName];
-              if (tmp5 == ReflectionBinaryReader(1202).WireType.LengthDelimited) {
-                if (T != ReflectionBinaryReader(1211).ScalarType.STRING) {
-                  if (T != ReflectionBinaryReader(1211).ScalarType.BYTES) {
+              let arr2 = tmp19[localName];
+              if (tmp5 == UnknownFieldHandler.WireType.LengthDelimited) {
+                if (T != ScalarType.ScalarType.STRING) {
+                  if (T != ScalarType.ScalarType.BYTES) {
                     let sum = len.uint32() + len.pos;
                     if (len.pos < sum) {
                       do {
@@ -104,7 +116,7 @@ let items = [
               }
               let arr7 = arr2.push(self.scalar(len, T, L));
             } else {
-              tmp21[localName] = self.scalar(len, T, L);
+              tmp19[localName] = self.scalar(len, T, L);
             }
           } else {
             let onRead = readUnknownField.readUnknownField;
@@ -114,7 +126,7 @@ let items = [
               let skipResult = len.skip(tmp5);
               if (false !== onRead) {
                 if (true === onRead) {
-                  onRead = ReflectionBinaryReader(1202).UnknownFieldHandler.onRead;
+                  onRead = UnknownFieldHandler.UnknownFieldHandler.onRead;
                 }
                 let onReadResult = onRead(self.info.typeName, arg1, tmp4, tmp5, skipResult);
               }
@@ -123,6 +135,8 @@ let items = [
         }
         const _Error = Error;
         const _HermesInternal = HermesInternal;
+        const self2 = this;
+        const self3 = this;
         const error = new Error("Unknown field " + tmp4 + " (wire type " + tmp5 + ") for " + self.info.typeName);
         throw error;
       }
@@ -130,81 +144,89 @@ let items = [
   },
   {
     key: "mapEntry",
-    value: function mapEntry(V, pos, arg2) {
+    value: function mapEntry(K, pos, arg2) {
+      let tmp2;
+      let tmp3;
+      let tmp8;
+      let tmp9;
       const self = this;
       const sum = pos.pos + pos.uint32();
       let tmp4;
       let tmp5;
-      if (pos.pos < sum) {
-        [tmp8, tmp9] = pos.tag();
-        while (1 !== tmp8) {
-          if (2 === tmp8) {
-            let kind = V.V.kind;
-            if ("scalar" === kind) {
-              let scalarResult = self.scalar(pos, V.V.T, V.V.L);
-              let tmp20 = tmp3;
-            } else if ("enum" === kind) {
-              scalarResult = pos.int32();
-              tmp20 = tmp3;
-            } else {
-              scalarResult = tmp2;
-              tmp20 = tmp3;
-              if ("message" === kind) {
-                let V2 = V.V;
-                let TResult = V2.T();
-                scalarResult = TResult.internalBinaryRead(pos, pos.uint32(), arg2);
-                tmp20 = tmp3;
-              }
-            }
-            tmp2 = scalarResult;
-            tmp3 = tmp20;
-            tmp4 = scalarResult;
-            tmp5 = tmp20;
+      while (pos.pos < sum) {
+        let tmp18;
+        let scalarResult;
+        let tmp7 = _slicedToArray(pos.tag(), 2);
+        [tmp8, tmp9] = tmp7;
+        if (1 === tmp8) {
+          let str1;
+          if (K.K == ScalarType.ScalarType.BOOL) {
+            let str5 = pos.bool();
+            str1 = str5.toString();
           } else {
-            let tmp12 = globalThis;
-            let _Error = Error;
-            let _HermesInternal = HermesInternal;
-            let str = "#";
-            let str2 = ") in map entry for ";
-            let str3 = " (wire type ";
-            let str4 = "Unknown field ";
-            let tmp15 = new.target;
-            let tmp16 = new.target;
-            let error = new Error("Unknown field " + tmp8 + " (wire type " + tmp9 + ") in map entry for " + self.info.typeName + "#" + V.name);
-            throw error;
+            str1 = self.scalar(pos, K.K, ScalarType.LongType.STRING);
           }
-        }
-        if (V.K == ReflectionBinaryReader(1211).ScalarType.BOOL) {
-          let str1 = pos.bool().toString();
-          const str5 = pos.bool();
+          tmp18 = str1;
+          scalarResult = tmp2;
+        } else if (2 === tmp8) {
+          let kind = K.V.kind;
+          if ("scalar" === kind) {
+            scalarResult = self.scalar(pos, K.V.T, K.V.L);
+            tmp18 = tmp3;
+          } else if ("enum" === kind) {
+            scalarResult = pos.int32();
+            tmp18 = tmp3;
+          } else {
+            scalarResult = tmp2;
+            tmp18 = tmp3;
+            if ("message" === kind) {
+              let V2 = K.V;
+              let TResult = V2.T();
+              scalarResult = TResult.internalBinaryRead(pos, pos.uint32(), arg2);
+              tmp18 = tmp3;
+            }
+          }
         } else {
-          str1 = self.scalar(pos, V.K, ReflectionBinaryReader(1211).LongType.STRING);
+          let tmp12 = globalThis;
+          let _Error = Error;
+          let _HermesInternal = HermesInternal;
+          let str = "#";
+          let str2 = ") in map entry for ";
+          let str3 = " (wire type ";
+          let str4 = "Unknown field ";
+          let self2 = this;
+          let self3 = this;
+          let error = new Error("Unknown field " + tmp8 + " (wire type " + tmp9 + ") in map entry for " + self.info.typeName + "#" + K.name);
+          throw error;
         }
-        const tmp7 = _slicedToArray(pos.tag(), 2);
+        tmp2 = scalarResult;
+        tmp3 = tmp18;
+        tmp4 = scalarResult;
+        tmp5 = tmp18;
       }
       if (undefined === tmp5) {
-        const str6 = ReflectionBinaryReader(1219).reflectionScalarDefault(V.K);
+        const obj = reflectionScalarDefault;
+        const str6 = obj.reflectionScalarDefault(K.K);
         let str7 = str6;
-        if (V.K == ReflectionBinaryReader(1211).ScalarType.BOOL) {
+        if (K.K == ScalarType.ScalarType.BOOL) {
           str7 = str6.toString();
         }
         tmp5 = str7;
-        const obj = ReflectionBinaryReader(1219);
       }
       let num = tmp4;
       if (undefined === tmp4) {
-        const kind2 = V.V.kind;
+        const kind2 = K.V.kind;
         if ("scalar" === kind2) {
-          num = ReflectionBinaryReader(1219).reflectionScalarDefault(V.V.T, V.V.L);
-          const obj3 = ReflectionBinaryReader(1219);
+          const obj3 = reflectionScalarDefault;
+          num = obj3.reflectionScalarDefault(K.V.T, K.V.L);
         } else if ("enum" === kind2) {
           num = 0;
         } else {
           num = tmp4;
           if ("message" === kind2) {
-            V = V.V;
-            num = V.T().create();
+            const V = K.V;
             const TResult1 = V.T();
+            num = TResult1.create();
           }
         }
       }
@@ -215,39 +237,45 @@ let items = [
   {
     key: "scalar",
     value: function scalar(int32, arg1, STRING) {
-      if (ReflectionBinaryReader(1211).ScalarType.INT32 === arg1) {
+      if (ScalarType.ScalarType.INT32 === arg1) {
         return int32.int32();
-      } else if (ReflectionBinaryReader(1211).ScalarType.STRING === arg1) {
+      } else if (ScalarType.ScalarType.STRING === arg1) {
         return int32.string();
-      } else if (ReflectionBinaryReader(1211).ScalarType.BOOL === arg1) {
+      } else if (ScalarType.ScalarType.BOOL === arg1) {
         return int32.bool();
-      } else if (ReflectionBinaryReader(1211).ScalarType.DOUBLE === arg1) {
+      } else if (ScalarType.ScalarType.DOUBLE === arg1) {
         return int32.double();
-      } else if (ReflectionBinaryReader(1211).ScalarType.FLOAT === arg1) {
+      } else if (ScalarType.ScalarType.FLOAT === arg1) {
         return int32.float();
-      } else if (ReflectionBinaryReader(1211).ScalarType.INT64 === arg1) {
-        return ReflectionBinaryReader(1216).reflectionLongConvert(int32.int64(), STRING);
-      } else if (ReflectionBinaryReader(1211).ScalarType.UINT64 === arg1) {
-        return ReflectionBinaryReader(1216).reflectionLongConvert(int32.uint64(), STRING);
-      } else if (ReflectionBinaryReader(1211).ScalarType.FIXED64 === arg1) {
-        return ReflectionBinaryReader(1216).reflectionLongConvert(int32.fixed64(), STRING);
-      } else if (ReflectionBinaryReader(1211).ScalarType.FIXED32 === arg1) {
+      } else if (ScalarType.ScalarType.INT64 === arg1) {
+        const tmpResult = reflectionLongConvert;
+        return tmpResult.reflectionLongConvert(int32.int64(), STRING);
+      } else if (ScalarType.ScalarType.UINT64 === arg1) {
+        const tmpResult5 = reflectionLongConvert;
+        return tmpResult5.reflectionLongConvert(int32.uint64(), STRING);
+      } else if (ScalarType.ScalarType.FIXED64 === arg1) {
+        const tmpResult6 = reflectionLongConvert;
+        return tmpResult6.reflectionLongConvert(int32.fixed64(), STRING);
+      } else if (ScalarType.ScalarType.FIXED32 === arg1) {
         return int32.fixed32();
-      } else if (ReflectionBinaryReader(1211).ScalarType.BYTES === arg1) {
+      } else if (ScalarType.ScalarType.BYTES === arg1) {
         return int32.bytes();
-      } else if (ReflectionBinaryReader(1211).ScalarType.UINT32 === arg1) {
+      } else if (ScalarType.ScalarType.UINT32 === arg1) {
         return int32.uint32();
-      } else if (ReflectionBinaryReader(1211).ScalarType.SFIXED32 === arg1) {
+      } else if (ScalarType.ScalarType.SFIXED32 === arg1) {
         return int32.sfixed32();
-      } else if (ReflectionBinaryReader(1211).ScalarType.SFIXED64 === arg1) {
-        return ReflectionBinaryReader(1216).reflectionLongConvert(int32.sfixed64(), STRING);
-      } else if (ReflectionBinaryReader(1211).ScalarType.SINT32 === arg1) {
+      } else if (ScalarType.ScalarType.SFIXED64 === arg1) {
+        const tmpResult7 = reflectionLongConvert;
+        return tmpResult7.reflectionLongConvert(int32.sfixed64(), STRING);
+      } else if (ScalarType.ScalarType.SINT32 === arg1) {
         return int32.sint32();
-      } else if (ReflectionBinaryReader(1211).ScalarType.SINT64 === arg1) {
-        return ReflectionBinaryReader(1216).reflectionLongConvert(int32.sint64(), STRING);
+      } else if (ScalarType.ScalarType.SINT64 === arg1) {
+        const tmpResult8 = reflectionLongConvert;
+        return tmpResult8.reflectionLongConvert(int32.sint64(), STRING);
       }
     }
   }
 ];
+const ReflectionBinaryReader_export = _createClass(ReflectionBinaryReader, items);
 
-export const ReflectionBinaryReader = _createClass(ReflectionBinaryReader, items);
+export { ReflectionBinaryReader_export as ReflectionBinaryReader };

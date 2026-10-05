@@ -1,17 +1,14 @@
 // === Module 14197: ? ===
 
 // Module 14197
-import emptyPromise from "emptyPromise" /* 14180 */;
+import ArgType from "ArgType" /* 14180 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
 export default () => (log) => {
-  const result = emptyPromise.assertHasLoggerPlugin(log);
-  closure_0 = log;
+  const result = ArgType.assertHasLoggerPlugin(log);
+  let closure_0 = log;
   return {
     onConnect() {
-      log = console.log;
       console.log = () => {
         const items = [...arguments];
         log(...items);

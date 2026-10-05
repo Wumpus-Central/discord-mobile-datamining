@@ -3,9 +3,11 @@
 // Module 12611 (memoBuilder)
 
 export const memoBuilder = function memoBuilder() {
-  closure_0 = typeof WeakSet === "function";
-  if (typeof WeakSet === "function") {
+  let closure_0 = typeof WeakSet === "function";
+  if (closure_0) {
     const _WeakSet = WeakSet;
+    const self = this;
+    const self2 = this;
     let weakSet = new WeakSet();
   } else {
     weakSet = [];

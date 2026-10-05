@@ -3,66 +3,76 @@
 // Module 7384
 import _mod7345 from "module_7345" /* 7345 */;
 import _modDef7362 from "module_7362" /* 7362 */;
-import _modDef7385 from "module_7385" /* 7385 */;
-import _slicedToArray from "module_32" /* 32 */;
+import PathRecordTypesDefault from "PathRecordTypes" /* 7385 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 
-require = arg1;
+let length;
+let metroImportDefault;
 function getTagName(dataView, sum1) {
-  const tmp = _slicedToArray(_mod7345.getPascalStringFromDataView(dataView, sum1), 2);
+  let num;
+  let sum;
+  const obj = _mod7345;
+  const tmp = _slicedToArray(obj.getPascalStringFromDataView(dataView, sum1), 2);
   const first = tmp[0];
-  const obj2 = { tagName: tmp[1], tagNameSize: null };
-  let num = 0;
-  const sum = 1 + first;
+  const obj2 = { tagName: tmp[1], tagNameSize: sum + num };
+  num = 0;
+  sum = 1 + first;
   if (first % 2 === 0) {
     num = 1;
   }
-  obj2.tagNameSize = sum + num;
   return obj2;
 }
-let c4 = "8BIM";
-let c5 = 2;
-let c6 = 4;
-({ length, length: closure_7 } = "8BIM");
-
-export default {
+let obj = {
   read(arg0, arg1) {
+    let tmp4Result2;
+    const getDataView = _mod7345.getDataView;
+    _mod7345;
     const uint8Array = new Uint8Array(arg0);
-    const dataView = _mod7345.getDataView(uint8Array.buffer);
-    const obj2 = {};
+    const dataView = getDataView(uint8Array.buffer);
+    const obj = {};
     let num = 0;
     if (0 < arg0.length) {
-      const sum = num + React5;
-      const stringFromDataView = _mod7345.getStringFromDataView(dataView, num, React5);
-      const shortAt = _modDef7362.getShortAt(dataView, sum);
+      const sum = num + metroImportDefault;
+      const obj2 = _mod7345;
+      const stringFromDataView = obj2.getStringFromDataView(dataView, num, metroImportDefault);
+      const obj3 = _modDef7362;
+      const shortAt = obj3.getShortAt(dataView, sum);
       const sum1 = sum + c5;
-      const tmp15 = getTagName(dataView, sum1);
-      let name = tmp15.tagName;
-      const sum2 = sum1 + tmp15.tagNameSize;
-      const longAt = _modDef7362.getLongAt(dataView, sum2);
+      const tmp14 = getTagName(dataView, sum1);
+      let name = tmp14.tagName;
+      const sum2 = sum1 + tmp14.tagNameSize;
+      const obj4 = _modDef7362;
+      const longAt = obj4.getLongAt(dataView, sum2);
       const sum3 = sum2 + c6;
       if (stringFromDataView === c4) {
-        const dataView1 = _mod7345.getDataView(dataView.buffer, sum3, longAt);
-        const obj7 = { id: shortAt, value: null };
-        const tmp5Result = _mod7345;
-        obj7.value = _mod7345.getStringFromDataView(dataView1, 0, longAt);
-        if (_modDef7385[shortAt]) {
+        const tmp4Result = _mod7345;
+        const dataView1 = tmp4Result.getDataView(dataView.buffer, sum3, longAt);
+        const obj6 = { id: shortAt, value: tmp4Result2.getStringFromDataView(dataView1, 0, longAt) };
+        tmp4Result2 = _mod7345;
+        if (PathRecordTypesDefault[shortAt]) {
           try {
-            obj7.description = _modDef7385[shortAt].description(dataView1);
-            if (!name) {
-              name = _modDef7385[shortAt].name;
-            }
-            obj2[name] = obj7;
+            const obj5 = PathRecordTypesDefault[shortAt];
+            obj6.description = obj5.description(dataView1);
           } catch (err) {
-            tmp.description = tmp2;
+            obj6.description = "<no description formatter>";
           }
+          if (!name) {
+            name = PathRecordTypesDefault[shortAt].name;
+          }
+          obj[name] = obj6;
         } else if (arg1) {
           const _HermesInternal = HermesInternal;
-          obj2["undefined-" + shortAt] = obj7;
+          obj["undefined-" + shortAt] = obj6;
         }
-        const tmp5Result2 = _mod7345;
       }
       num = sum3 + (longAt + longAt % 2);
     }
-    return obj2;
+    return obj;
   }
 };
+let c4 = "8BIM";
+let c5 = 2;
+let c6 = 4;
+({ length, length: metroImportDefault } = "8BIM");
+
+export default obj;

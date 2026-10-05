@@ -3,17 +3,19 @@
 // Module 781
 import _mod780 from "module_780" /* 780 */;
 
-require = arg1;
-const dependencyMap = arg6;
-Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const getTraceMetaTags = function getTraceMetaTags(arg0) {
   let traceData = arg0;
+  const _Object = Object;
   if (!arg0) {
-    traceData = _mod780.getTraceData();
+    const obj = _mod780;
+    traceData = obj.getTraceData();
   }
-  const entries = Object.entries(traceData);
-  const mapped = entries.map((item) => {
+  const entries1 = entries(traceData);
+  const mapped = entries1.map((item) => {
+    let tmp;
+    let tmp2;
     [tmp, tmp2] = item;
     return "<meta name=\"" + tmp + "\" content=\"" + tmp2 + "\"/>";
   });

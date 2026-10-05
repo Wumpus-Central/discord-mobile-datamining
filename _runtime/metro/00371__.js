@@ -1,6 +1,7 @@
 // === Module 371: ? ===
 
 // Module 371
+import _modDef363 from "module_363" /* 363 */;
 import _modDef366 from "module_366" /* 366 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
@@ -9,19 +10,14 @@ import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _get from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
 
-const AnimatedModulo = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
-    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
+
+    }));
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -30,24 +26,21 @@ function _isNativeReflectConstruct() {
   }
 }
 class AnimatedModulo {
-  constructor(arg0, arg1, arg2) {
-    self = this;
-    tmp = c2(this, AnimatedModulo);
-    items = [];
-    items[0] = importDefault;
-    tmp2 = closure_4;
-    obj = closure_4(AnimatedModulo);
-    tmp3 = closure_3;
-    if (metroRequire()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+  constructor(_a, _modulus, arg2) {
+    let constructResult;
+    const self = this;
+    _classCallCheck(this, AnimatedModulo);
+    const items = [arg2];
+    const obj = _getPrototypeOf(AnimatedModulo);
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, _getPrototypeOf(self).constructor);
     } else {
       constructResult = obj.apply(self, items);
     }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result._a = global;
-    tmp3Result._modulus = arg1;
+    const tmp3Result = c3(self, constructResult);
+    tmp3Result._a = _a;
+    tmp3Result._modulus = _modulus;
     return tmp3Result;
   }
 }
@@ -58,7 +51,7 @@ const entry = {
     const _a = this._a;
     _a.__makeNative(arg0);
     const self = this;
-    let fn = hasOwnProperty(_getPrototypeOf(AnimatedModulo.prototype), "__makeNative", this);
+    let fn = _get(_getPrototypeOf(AnimatedModulo.prototype), "__makeNative", this);
     if (typeof fn === "function") {
       fn = (items) => fn.apply(self, items);
     }
@@ -78,7 +71,8 @@ let items = [
   {
     key: "interpolate",
     value: function interpolate(arg0) {
-      return new AnimatedModulo(363)(this, arg0);
+      const tmp = new _modDef363(this, arg0);
+      return tmp;
     }
   },
   {
@@ -87,7 +81,7 @@ let items = [
       const _a = this._a;
       _a.__addChild(this);
       const self = this;
-      let fn = hasOwnProperty(_getPrototypeOf(AnimatedModulo.prototype), "__attach", this);
+      let fn = _get(_getPrototypeOf(AnimatedModulo.prototype), "__attach", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -100,7 +94,7 @@ let items = [
       const _a = this._a;
       _a.__removeChild(this);
       const self = this;
-      let fn = hasOwnProperty(_getPrototypeOf(AnimatedModulo.prototype), "__detach", this);
+      let fn = _get(_getPrototypeOf(AnimatedModulo.prototype), "__detach", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -110,9 +104,9 @@ let items = [
   {
     key: "__getNativeConfig",
     value: function __getNativeConfig() {
-      const obj = { type: "modulus", input: null, modulus: this._modulus, debugID: this.__getDebugID() };
-      const _a = this._a;
-      obj.input = _a.__getNativeTag();
+      let _a;
+      const obj = { type: "modulus", input: _a.__getNativeTag(), modulus: this._modulus, debugID: this.__getDebugID() };
+      _a = this._a;
       return obj;
     }
   }

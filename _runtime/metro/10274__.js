@@ -1,25 +1,21 @@
 // === Module 10274: ? ===
 
 // Module 10274
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
 import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10168 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import map from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
-    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
+
+    }));
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -27,29 +23,21 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
 class ZHHantCasualDateParser {
   constructor() {
-    self = this;
-    tmp = closure_0(this, ZHHantCasualDateParser);
-    tmp2 = c2;
-    obj = c2(ZHHantCasualDateParser);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    let constructResult;
+    const self = this;
+    _classCallCheck(this, ZHHantCasualDateParser);
+    const obj = _getPrototypeOf(ZHHantCasualDateParser);
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
       constructResult = obj(...arguments);
     }
-    return tmp3(self, constructResult);
+    return map(self, constructResult);
   }
 }
-_classCallCheck = ZHHantCasualDateParser;
 _inherits(ZHHantCasualDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
@@ -77,17 +65,17 @@ const items = [
         start19.imply("millisecond", refDate.getMilliseconds());
       } else if (index[2]) {
         if ("\u660E" != index[2]) {
-          if ("\u807D" != tmp25) {
-            if ("\u6628" != tmp25) {
-              if ("\u5C0B" != tmp25) {
-                if ("\u7434" != tmp25) {
-                  if ("\u524D" == tmp25) {
+          if ("\u807D" != index[2]) {
+            if ("\u6628" != index[2]) {
+              if ("\u5C0B" != index[2]) {
+                if ("\u7434" != index[2]) {
+                  if ("\u524D" == index[2]) {
                     date.setDate(date.getDate() - 2);
-                  } else if ("\u5927\u524D" == tmp25) {
+                  } else if ("\u5927\u524D" == index[2]) {
                     date.setDate(date.getDate() - 3);
-                  } else if ("\u5F8C" == tmp25) {
+                  } else if ("\u5F8C" == index[2]) {
                     date.setDate(date.getDate() + 2);
-                  } else if ("\u5927\u5F8C" == tmp25) {
+                  } else if ("\u5927\u5F8C" == index[2]) {
                     date.setDate(date.getDate() + 3);
                   }
                 }
@@ -95,9 +83,9 @@ const items = [
             }
             date.setDate(date.getDate() - 1);
           }
-          if ("\u65E9" != tmp26) {
-            if ("\u671D" != tmp26) {
-              if ("\u665A" == tmp26) {
+          if ("\u65E9" != index[3]) {
+            if ("\u671D" != index[3]) {
+              if ("\u665A" == index[3]) {
                 const start25 = parsingResult.start;
                 start25.imply("hour", 22);
                 const start26 = parsingResult.start;
@@ -150,17 +138,17 @@ const items = [
         start14.imply("hour", 6);
       } else if (index[5]) {
         if ("\u660E" != index[5]) {
-          if ("\u807D" != tmp2) {
-            if ("\u6628" != tmp2) {
-              if ("\u5C0B" != tmp2) {
-                if ("\u7434" != tmp2) {
-                  if ("\u524D" == tmp2) {
+          if ("\u807D" != index[5]) {
+            if ("\u6628" != index[5]) {
+              if ("\u5C0B" != index[5]) {
+                if ("\u7434" != index[5]) {
+                  if ("\u524D" == index[5]) {
                     date.setDate(date.getDate() - 2);
-                  } else if ("\u5927\u524D" == tmp2) {
+                  } else if ("\u5927\u524D" == index[5]) {
                     date.setDate(date.getDate() - 3);
-                  } else if ("\u5F8C" == tmp2) {
+                  } else if ("\u5F8C" == index[5]) {
                     date.setDate(date.getDate() + 2);
-                  } else if ("\u5927\u5F8C" == tmp2) {
+                  } else if ("\u5927\u5F8C" == index[5]) {
                     date.setDate(date.getDate() + 3);
                   }
                 }

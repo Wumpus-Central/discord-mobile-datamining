@@ -1,9 +1,10 @@
 // === Module 466: ? ===
 
 // Module 466
-
-export default {
+const obj = {
   show() {
 
   }
 };
+
+export default obj;

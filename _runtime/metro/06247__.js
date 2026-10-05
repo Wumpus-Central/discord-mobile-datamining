@@ -4,11 +4,11 @@
 import ComposedGestureName from "ComposedGestureName" /* 6199 */;
 import _mod6248 from "module_6248" /* 6248 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
 export const useCompetingGestures = function useCompetingGestures() {
   const items = [...arguments];
+  const useComposedGesture = _mod6248.useComposedGesture;
+  _mod6248;
   const items1 = [ComposedGestureName.ComposedGestureName.Race, ...items];
-  return _mod6248.useComposedGesture.apply(items1);
+  return useComposedGesture.apply(items1);
 };

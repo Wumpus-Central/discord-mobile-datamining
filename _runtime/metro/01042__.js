@@ -3,43 +3,48 @@
 // Module 1042
 import _mod693 from "module_693" /* 693 */;
 import feedbackAsyncIntegration from "feedbackAsyncIntegration" /* 900 */;
-import startIdleSpan from "startIdleSpan" /* 1036 */;
-import module_878 from "module_878" /* 878 */;
+import DEFAULT_NAVIGATION_SPAN_NAME from "DEFAULT_NAVIGATION_SPAN_NAME" /* 1036 */;
+import module_878_mod from "module_878" /* 878 */;
 
+let module_878;
 const ReactNativeTracing = "ReactNativeTracing";
-const defaultReactNativeTracingOptions = { traceFetch: null, traceXHR: true, enableHTTPTimings: true };
-defaultReactNativeTracingOptions.traceFetch = module_878.isWeb();
+const defaultReactNativeTracingOptions = { traceFetch: module_878.isWeb(), traceXHR: true, enableHTTPTimings: true };
+module_878 = module_878_mod;
 
 export const INTEGRATION_NAME = "ReactNativeTracing";
 export { defaultReactNativeTracingOptions };
 export const reactNativeTracingIntegration = (arg0) => {
+  let finalTimeout;
+  let idleTimeout;
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
   }
-  let merged1;
+  let obj5;
   let fn2;
   let url;
   let obj2 = { currentRoute: "r" };
+  let _Object = Object;
   let fn = obj.beforeStartSpan;
   const merged = Object.assign(Object.assign({}, url), obj);
   if (null === fn) {
     fn = (arg0) => arg0;
   }
-  let obj3 = { beforeStartSpan: fn, finalTimeoutMs: null, idleTimeoutMs: null };
-  let finalTimeout = obj.finalTimeoutMs;
+  let obj3 = { beforeStartSpan: fn, finalTimeoutMs: finalTimeout, idleTimeoutMs: idleTimeout };
+  finalTimeout = obj.finalTimeoutMs;
   if (null === finalTimeout) {
-    finalTimeout = obj2(merged1[1]).defaultIdleOptions.finalTimeout;
+    let tmp2 = obj2;
+    const tmp3 = obj5;
+    finalTimeout = obj2(obj5[1]).defaultIdleOptions.finalTimeout;
   }
-  obj3.finalTimeoutMs = finalTimeout;
-  let idleTimeout = obj.idleTimeoutMs;
+  idleTimeout = obj.idleTimeoutMs;
   if (null === idleTimeout) {
-    idleTimeout = obj2(merged1[1]).defaultIdleOptions.idleTimeout;
+    idleTimeout = obj2(obj5[1]).defaultIdleOptions.idleTimeout;
   }
-  obj3.idleTimeoutMs = idleTimeout;
-  merged1 = Object.assign(merged, obj3);
-  fn2 = merged1.shouldCreateSpanForRequest;
-  const devServer = obj2(merged1[2]).getDevServer();
+  obj5 = assign(merged, obj3);
+  fn2 = obj5.shouldCreateSpanForRequest;
+  const obj4 = obj2(obj5[2]);
+  const devServer = obj4.getDevServer();
   url = undefined;
   if (null !== devServer) {
     if (undefined !== devServer) {
@@ -48,9 +53,9 @@ export const reactNativeTracingIntegration = (arg0) => {
   }
   if (undefined !== url) {
     fn2 = (str) => {
-      const startsWithResult = str.startsWith(url);
-      let tmp2 = !startsWithResult;
-      if (!startsWithResult) {
+      let tmp2 = !str.startsWith(url);
+      str.startsWith(url);
+      if (tmp2) {
         let tmp3Result = !fn2;
         if (fn2) {
           tmp3Result = tmp3(str);
@@ -60,41 +65,42 @@ export const reactNativeTracingIntegration = (arg0) => {
       return tmp2;
     };
   }
-  merged1.shouldCreateSpanForRequest = fn2;
+  obj5.shouldCreateSpanForRequest = fn2;
   return {
     name: fn2,
     setup(getOptions) {
-      const result = startIdleSpan.addDefaultOpForSpanFrom(getOptions);
-      startIdleSpan.addThreadInfoToSpan(getOptions);
-      const obj4 = { traceFetch: merged1.traceFetch, traceXHR: merged1.traceXHR, shouldCreateSpanForRequest: merged1.shouldCreateSpanForRequest, tracePropagationTargets: null };
-      let tracePropagationTargets = getOptions.getOptions().tracePropagationTargets;
+      let tracePropagationTargets;
+      const obj = DEFAULT_NAVIGATION_SPAN_NAME;
+      const result = obj.addDefaultOpForSpanFrom(getOptions);
+      obj2 = DEFAULT_NAVIGATION_SPAN_NAME;
+      obj2.addThreadInfoToSpan(getOptions);
+      const obj3 = { traceFetch: obj5.traceFetch, traceXHR: obj5.traceXHR, shouldCreateSpanForRequest: obj5.shouldCreateSpanForRequest, tracePropagationTargets };
+      const instrumentOutgoingRequests = feedbackAsyncIntegration.instrumentOutgoingRequests;
+      feedbackAsyncIntegration;
+      tracePropagationTargets = getOptions.getOptions().tracePropagationTargets;
       if (!tracePropagationTargets) {
-        let tmp5;
+        let tmp6;
+        const tmpResult = module_878;
         if (!tmpResult.isWeb()) {
           const items = [/.*/];
-          tmp5 = items;
+          tmp6 = items;
         }
-        tracePropagationTargets = tmp5;
-        tmpResult = module_878;
+        tracePropagationTargets = tmp6;
       }
-      obj4.tracePropagationTargets = tracePropagationTargets;
-      const result1 = feedbackAsyncIntegration.instrumentOutgoingRequests(getOptions, obj4);
+      const result1 = instrumentOutgoingRequests(getOptions, obj3);
     },
     processEvent(contexts) {
-      let currentRoute = contexts.contexts;
-      if (currentRoute) {
-        currentRoute = obj2.currentRoute;
-      }
+      let items;
+      const currentRoute = contexts.contexts && obj2.currentRoute;
       if (currentRoute) {
         const _Object = Object;
-        const obj = { view_names: null };
-        const items = [obj2.currentRoute];
-        obj.view_names = items;
+        const obj = { view_names: items };
+        items = [obj2.currentRoute];
         contexts.contexts.app = Object.assign(obj, contexts.contexts.app);
       }
       return contexts;
     },
-    options: merged1,
+    options: obj5,
     state: obj2,
     setCurrentRoute(componentName) {
       obj2.currentRoute = componentName;
@@ -102,7 +108,8 @@ export const reactNativeTracingIntegration = (arg0) => {
   };
 };
 export const getCurrentReactNativeTracingIntegration = function getCurrentReactNativeTracingIntegration() {
-  const client = _mod693.getClient();
+  const obj = _mod693;
+  const client = obj.getClient();
   if (client) {
     return client.getIntegrationByName(ReactNativeTracing);
   }

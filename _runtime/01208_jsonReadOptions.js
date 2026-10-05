@@ -5,20 +5,24 @@ let closure_0 = { emitDefaultValues: false, enumAsInteger: false, useProtoFieldN
 let closure_1 = { ignoreUnknownFields: false };
 
 export const jsonReadOptions = function jsonReadOptions(arg0) {
-  if (arg0) {
+  let merged;
+  const tmp = arg0;
+  if (tmp) {
     const _Object = Object;
     const _Object2 = Object;
-    let merged = Object.assign(Object.assign({}, closure_1), arg0);
+    merged = Object.assign(Object.assign({}, closure_1), arg0);
   } else {
     merged = closure_1;
   }
   return merged;
 };
 export const jsonWriteOptions = function jsonWriteOptions(prettySpaces) {
-  if (prettySpaces) {
+  let merged;
+  const tmp = prettySpaces;
+  if (tmp) {
     const _Object = Object;
     const _Object2 = Object;
-    let merged = Object.assign(Object.assign({}, closure_0), prettySpaces);
+    merged = Object.assign(Object.assign({}, closure_0), prettySpaces);
   } else {
     merged = closure_0;
   }
@@ -41,7 +45,7 @@ export const mergeJsonOptions = function mergeJsonOptions(typeRegistry, typeRegi
   if (null === typeRegistry1) {
     typeRegistry1 = [];
   }
-  HermesBuiltin.arraySpread(typeRegistry1, tmp2);
+  HermesBuiltin.arraySpread(items, typeRegistry1, tmp3);
   merged.typeRegistry = items;
   return merged;
 };

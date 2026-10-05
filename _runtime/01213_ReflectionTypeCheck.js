@@ -1,19 +1,16 @@
 // === Module 1213: ReflectionTypeCheck ===
 
 // Module 1213 (ReflectionTypeCheck)
+import ScalarType from "ScalarType" /* 1211 */;
+import _mod1214 from "module_1214" /* 1214 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
-const ReflectionTypeCheck = require;
 class ReflectionTypeCheck {
-  constructor(arg0) {
-    tmp = c2(this, ReflectionTypeCheck);
-    fields = global.fields;
-    if (null === fields) {
-      fields = [];
-    }
+  constructor(self) {
+    _classCallCheck(this, ReflectionTypeCheck);
+    const fields = self.fields ?? [];
     this.fields = fields;
-    return;
   }
 }
 const entry = {
@@ -59,10 +56,9 @@ const entry = {
         }
         continue;
       }
-      const obj = { req: items, known: items1, oneofs: null };
       const _Object = Object;
-      obj.oneofs = Object.values(items2);
-      self.data = obj;
+      self.data = { req: items, known: items1, oneofs: Object.values(items2) };
+      const obj = { req: items, known: items1, oneofs: Object.values(items2) };
     }
   }
 };
@@ -71,8 +67,8 @@ let items = [
   {
     key: "is",
     value: function is(obj, arg1) {
-      closure_0 = obj;
-      closure_1 = arg1;
+      let closure_0 = obj;
+      let closure_1 = arg1;
       let flag = arg2;
       if (arg2 === undefined) {
         flag = false;
@@ -105,12 +101,14 @@ let items = [
                   return true;
                 } else {
                   const oneofs = data.oneofs;
+                  const tmp = oneofs;
                   for (const item10014 of oneofs) {
                     let tmp18Result = tmp18();
                     if (0 !== tmp18Result) {
                       if (tmp3) {
+                        let v = tmp18Result.v;
                         obj2.return();
-                        return tmp18Result.v;
+                        return v;
                       }
                     }
                     continue;
@@ -118,7 +116,7 @@ let items = [
                   let fields = self.fields;
                   for (const item10026 of fields) {
                     if (undefined === item10026.oneof) {
-                      if (!self.field(arg0[item10026.localName], item10026, flag, arg1)) {
+                      if (!self.field(obj[item10026.localName], item10026, flag, arg1)) {
                         obj.return();
                         let flag3 = false;
                         return false;
@@ -140,11 +138,14 @@ let items = [
   {
     key: "field",
     value: function field(keys, opt, arg2, arg3) {
+      let kind;
+      let repeat;
       ({ repeat, kind } = opt);
       const self = this;
       if ("scalar" === kind) {
+        let opt2;
         if (undefined === keys) {
-          let opt2 = opt.opt;
+          opt2 = opt.opt;
         } else if (repeat) {
           opt2 = self.scalars(keys, opt.T, arg3, opt.L);
         } else {
@@ -155,19 +156,23 @@ let items = [
         if (undefined === keys) {
           opt = opt.opt;
         } else if (repeat) {
-          opt = self.scalars(keys, ReflectionTypeCheck(1211).ScalarType.INT32, arg3);
+          opt = self.scalars(keys, ScalarType.ScalarType.INT32, arg3);
         } else {
-          opt = self.scalar(keys, ReflectionTypeCheck(1211).ScalarType.INT32);
+          opt = self.scalar(keys, ScalarType.ScalarType.INT32);
         }
         return opt;
       } else if ("message" === kind) {
-        if (undefined === keys) {
-          return tmp13;
-        } else if (repeat) {
-          let messagesResult = self.messages(keys, opt.T(), arg2, arg3);
-        } else {
-          messagesResult = self.message(keys, opt.T(), arg2, arg3);
+        let tmp13 = undefined === keys;
+        if (!tmp13) {
+          let messagesResult;
+          if (repeat) {
+            messagesResult = self.messages(keys, opt.T(), arg2, arg3);
+          } else {
+            messagesResult = self.message(keys, opt.T(), arg2, arg3);
+          }
+          tmp13 = messagesResult;
         }
+        return tmp13;
       } else {
         if ("map" === kind) {
           if (typeof keys === "object") {
@@ -181,13 +186,15 @@ let items = [
                   return self.scalars(Object.values(keys), opt.V.T, arg3, opt.V.L);
                 } else if ("enum" === kind2) {
                   const _Object2 = Object;
+                  const scalars = self.scalars;
                   const values = Object.values(keys);
-                  return self.scalars(values, ReflectionTypeCheck(1211).ScalarType.INT32, arg3);
+                  return scalars(values, ScalarType.ScalarType.INT32, arg3);
                 } else if ("message" === kind2) {
                   const _Object = Object;
+                  const messages = self.messages;
                   const V = opt.V;
                   const values2 = Object.values(keys);
-                  return self.messages(values2, V.T(), arg2, arg3);
+                  return messages(values2, V.T(), arg2, arg3);
                 }
               } else {
                 return false;
@@ -203,8 +210,10 @@ let items = [
   {
     key: "message",
     value: function message(arg0, isAssignable, arg2, arg3) {
-      if (arg2) {
-        let isAssignableResult = isAssignable.isAssignable(arg0, arg3);
+      let isAssignableResult;
+      const tmp = arg2;
+      if (tmp) {
+        isAssignableResult = isAssignable.isAssignable(arg0, arg3);
       } else {
         isAssignableResult = isAssignable.is(arg0, arg3);
       }
@@ -219,7 +228,7 @@ let items = [
           return true;
         } else {
           if (arg2) {
-            if (0 < length) {
+            if (0 < arg0.length) {
               let num4 = 0;
               if (0 < arg3) {
                 while (isAssignable.isAssignable(arg0[num4], arg3 - 1)) {
@@ -231,7 +240,7 @@ let items = [
                 return false;
               }
             }
-          } else if (0 < length) {
+          } else if (0 < arg0.length) {
             let num2 = 0;
             if (0 < arg3) {
               while (isAssignable.is(arg0[num2], arg3 - 1)) {
@@ -253,21 +262,21 @@ let items = [
   {
     key: "scalar",
     value: function scalar(flag, arg1, arg2) {
-      if (ReflectionTypeCheck(1211).ScalarType.UINT64 !== arg1) {
-        if (ReflectionTypeCheck(1211).ScalarType.FIXED64 !== arg1) {
-          if (ReflectionTypeCheck(1211).ScalarType.INT64 !== arg1) {
-            if (ReflectionTypeCheck(1211).ScalarType.SFIXED64 !== arg1) {
-              if (ReflectionTypeCheck(1211).ScalarType.SINT64 !== arg1) {
-                if (ReflectionTypeCheck(1211).ScalarType.BOOL === arg1) {
+      if (ScalarType.ScalarType.UINT64 !== arg1) {
+        if (ScalarType.ScalarType.FIXED64 !== arg1) {
+          if (ScalarType.ScalarType.INT64 !== arg1) {
+            if (ScalarType.ScalarType.SFIXED64 !== arg1) {
+              if (ScalarType.ScalarType.SINT64 !== arg1) {
+                if (ScalarType.ScalarType.BOOL === arg1) {
                   return typeof flag === "boolean";
-                } else if (ReflectionTypeCheck(1211).ScalarType.STRING === arg1) {
+                } else if (ScalarType.ScalarType.STRING === arg1) {
                   return typeof flag === "string";
-                } else if (ReflectionTypeCheck(1211).ScalarType.BYTES === arg1) {
+                } else if (ScalarType.ScalarType.BYTES === arg1) {
                   const _Uint8Array = Uint8Array;
                   return flag instanceof Uint8Array;
                 } else {
-                  if (ReflectionTypeCheck(1211).ScalarType.DOUBLE !== arg1) {
-                    if (ReflectionTypeCheck(1211).ScalarType.FLOAT !== arg1) {
+                  if (ScalarType.ScalarType.DOUBLE !== arg1) {
+                    if (ScalarType.ScalarType.FLOAT !== arg1) {
                       let isIntegerResult = typeof flag === "number";
                       if (typeof flag === "number") {
                         const _Number = Number;
@@ -288,9 +297,9 @@ let items = [
           }
         }
       }
-      if (ReflectionTypeCheck(1211).LongType.BIGINT === arg2) {
+      if (ScalarType.LongType.BIGINT === arg2) {
         return typeof flag === "bigint";
-      } else if (ReflectionTypeCheck(1211).LongType.NUMBER === arg2) {
+      } else if (ScalarType.LongType.NUMBER === arg2) {
         let tmp6 = typeof flag === "number";
         if (typeof flag === "number") {
           const _isNaN2 = isNaN;
@@ -337,33 +346,35 @@ let items = [
     value: function mapKeys(arg0, INT32, arg2) {
       const self = this;
       const keys = Object.keys(arg0);
-      if (ReflectionTypeCheck(1211).ScalarType.INT32 !== INT32) {
-        if (ReflectionTypeCheck(1211).ScalarType.FIXED32 !== INT32) {
-          if (ReflectionTypeCheck(1211).ScalarType.SFIXED32 !== INT32) {
-            if (ReflectionTypeCheck(1211).ScalarType.SINT32 !== INT32) {
-              if (ReflectionTypeCheck(1211).ScalarType.UINT32 !== INT32) {
-                if (ReflectionTypeCheck(1211).ScalarType.BOOL === INT32) {
+      if (ScalarType.ScalarType.INT32 !== INT32) {
+        if (ScalarType.ScalarType.FIXED32 !== INT32) {
+          if (ScalarType.ScalarType.SFIXED32 !== INT32) {
+            if (ScalarType.ScalarType.SINT32 !== INT32) {
+              if (ScalarType.ScalarType.UINT32 !== INT32) {
+                if (ScalarType.ScalarType.BOOL === INT32) {
+                  const scalars = self.scalars;
                   const substr = keys.slice(0, arg2);
-                  return self.scalars(substr.map((item) => {
+                  return scalars(substr.map((item) => {
                     let tmp = "true" == item;
                     if (!tmp) {
                       tmp = "false" != item && item;
-                      const tmp2 = "false" != item && item;
                     }
                     return tmp;
                   }), INT32, arg2);
                 } else {
-                  return self.scalars(keys, INT32, arg2, ReflectionTypeCheck(1211).LongType.STRING);
+                  return self.scalars(keys, INT32, arg2, ScalarType.LongType.STRING);
                 }
               }
             }
           }
         }
       }
+      const scalars2 = self.scalars;
       const substr1 = keys.slice(0, arg2);
-      return self.scalars(substr1.map((item) => parseInt(item)), INT32, arg2);
+      return scalars2(substr1.map((item) => parseInt(item)), INT32, arg2);
     }
   }
 ];
+const ReflectionTypeCheck_export = _createClass(ReflectionTypeCheck, items);
 
-export const ReflectionTypeCheck = _createClass(ReflectionTypeCheck, items);
+export { ReflectionTypeCheck_export as ReflectionTypeCheck };

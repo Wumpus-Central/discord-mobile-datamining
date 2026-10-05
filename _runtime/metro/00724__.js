@@ -6,54 +6,65 @@ import generateSpanId from "generateSpanId" /* 705 */;
 import _mod717 from "module_717" /* 717 */;
 import Scope from "Scope" /* 719 */;
 
-require = arg1;
-const dependencyMap = arg6;
-Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const getClient = function getClient() {
-  const mainCarrier = _mod701.getMainCarrier();
-  const asyncContextStrategy = _mod717.getAsyncContextStrategy(mainCarrier);
+  const obj = _mod701;
+  const mainCarrier = obj.getMainCarrier();
+  const obj2 = _mod717;
+  const asyncContextStrategy = obj2.getAsyncContextStrategy(mainCarrier);
   const currentScope = asyncContextStrategy.getCurrentScope();
   return currentScope.getClient();
 };
 export const getCurrentScope = function getCurrentScope() {
-  const mainCarrier = _mod701.getMainCarrier();
-  const asyncContextStrategy = _mod717.getAsyncContextStrategy(mainCarrier);
+  const obj = _mod701;
+  const mainCarrier = obj.getMainCarrier();
+  const obj2 = _mod717;
+  const asyncContextStrategy = obj2.getAsyncContextStrategy(mainCarrier);
   return asyncContextStrategy.getCurrentScope();
 };
 export const getGlobalScope = function getGlobalScope() {
-  return _mod701.getGlobalSingleton("globalScope", () => {
+  const obj = _mod701;
+  return obj.getGlobalSingleton("globalScope", () => {
     const scope = new Scope.Scope();
     return scope;
   });
 };
 export const getIsolationScope = function getIsolationScope() {
-  const mainCarrier = _mod701.getMainCarrier();
-  const asyncContextStrategy = _mod717.getAsyncContextStrategy(mainCarrier);
+  const obj = _mod701;
+  const mainCarrier = obj.getMainCarrier();
+  const obj2 = _mod717;
+  const asyncContextStrategy = obj2.getAsyncContextStrategy(mainCarrier);
   return asyncContextStrategy.getIsolationScope();
 };
 export const getTraceContextFromScope = function getTraceContextFromScope(getPropagationContext) {
+  let propagationSpanId;
   const propagationContext = getPropagationContext.getPropagationContext();
   const parentSpanId = propagationContext.parentSpanId;
-  const obj = { trace_id: propagationContext.traceId, span_id: null };
-  let propagationSpanId = propagationContext.propagationSpanId;
+  const obj = { trace_id: propagationContext.traceId, span_id: propagationSpanId };
+  propagationSpanId = propagationContext.propagationSpanId;
   if (!propagationSpanId) {
-    propagationSpanId = generateSpanId.generateSpanId();
+    const obj2 = generateSpanId;
+    propagationSpanId = obj2.generateSpanId();
   }
-  obj.span_id = propagationSpanId;
   if (parentSpanId) {
     obj.parent_span_id = parentSpanId;
   }
   return obj;
 };
 export const withIsolationScope = function withIsolationScope() {
+  let tmp2;
+  let tmp3;
   const items = [...arguments];
-  const mainCarrier = _mod701.getMainCarrier();
-  const asyncContextStrategy = _mod717.getAsyncContextStrategy(mainCarrier);
+  const obj = _mod701;
+  const mainCarrier = obj.getMainCarrier();
+  const obj2 = _mod717;
+  const asyncContextStrategy = obj2.getAsyncContextStrategy(mainCarrier);
   if (2 === items.length) {
+    let result;
     [tmp2, tmp3] = items;
     if (tmp2) {
-      let result = asyncContextStrategy.withSetIsolationScope(tmp2, tmp3);
+      result = asyncContextStrategy.withSetIsolationScope(tmp2, tmp3);
     } else {
       result = asyncContextStrategy.withIsolationScope(tmp3);
     }
@@ -63,13 +74,18 @@ export const withIsolationScope = function withIsolationScope() {
   }
 };
 export const withScope = function withScope() {
+  let tmp2;
+  let tmp3;
   const items = [...arguments];
-  const mainCarrier = _mod701.getMainCarrier();
-  const asyncContextStrategy = _mod717.getAsyncContextStrategy(mainCarrier);
+  const obj = _mod701;
+  const mainCarrier = obj.getMainCarrier();
+  const obj2 = _mod717;
+  const asyncContextStrategy = obj2.getAsyncContextStrategy(mainCarrier);
   if (2 === items.length) {
+    let withSetScopeResult;
     [tmp2, tmp3] = items;
     if (tmp2) {
-      let withSetScopeResult = asyncContextStrategy.withSetScope(tmp2, tmp3);
+      withSetScopeResult = asyncContextStrategy.withSetScope(tmp2, tmp3);
     } else {
       withSetScopeResult = asyncContextStrategy.withScope(tmp3);
     }

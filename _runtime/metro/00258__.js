@@ -2,15 +2,15 @@
 
 // Module 258
 let closure_0 = [];
-let global = { name: "default" };
+let closure_1 = { name: "default" };
 
 export default {
   setActiveScene(arg0) {
-    global = arg0;
-    const item = closure_0.forEach((fn) => fn(global));
+    closure_1 = arg0;
+    const item = closure_0.forEach((fn) => fn(closure_1_1));
   },
   getActiveScene() {
-    return global;
+    return closure_1;
   },
   addActiveSceneChangedListener(arg0) {
     closure_0 = arg0;

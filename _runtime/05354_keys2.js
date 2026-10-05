@@ -1,35 +1,33 @@
 // === Module 5354: keys2 ===
 
 // Module 5354 (keys2)
-import _mod5355 from "module_5355" /* 5355 */;
-import _mod5356 from "module_5356" /* 5356 */;
+import isArguments from "isArguments" /* 5355 */;
+import isArguments2 from "isArguments" /* 5356 */;
 
+let keys2;
 if (keys) {
-  let keys2 = function keys(arg0) {
+  keys2 = function keys(arg0) {
     return keys(arg0);
   };
 } else {
-  keys2 = _mod5355;
+  keys2 = isArguments;
 }
-keys = Object.keys;
+keys2 = Object.keys;
 keys2.shim = function shimObjectKeys() {
   if (Object.keys) {
-    if (!(() => {
+    if (!(function() {
       keys = Object.keys(arguments);
-      let tmp = keys;
-      if (keys) {
-        tmp = keys.length === arguments.length;
-      }
-      return tmp;
+      return keys && keys.length === arguments.length;
     })(1, 2)) {
       const _Object2 = Object;
       Object.keys = function keys(arg0) {
-        if (_mod5356(arg0)) {
-          const call = slice.call;
-          keys(typeof call === "unknown" ? slice() : call(arg0));
+        let tmpResult;
+        if (isArguments2(arg0)) {
+          tmpResult = keys2(slice.call(arg0));
         } else {
-          return keys(arg0);
+          tmpResult = keys2(arg0);
         }
+        return tmpResult;
       };
     }
   } else {

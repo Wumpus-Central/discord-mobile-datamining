@@ -2,16 +2,18 @@
 
 // Module 5386 (FromPropertyDescriptor)
 import _mod1293 from "module_1293" /* 1293 */;
-import _mod5380 from "module_5380" /* 5380 */;
-import _mod5387 from "module_5387" /* 5387 */;
+import isPropertyDescriptor from "isPropertyDescriptor" /* 5380 */;
+import fromPropertyDescriptor from "fromPropertyDescriptor" /* 5387 */;
 
 
 export default function FromPropertyDescriptor(arg0) {
   if (undefined !== arg0) {
-    if (!_mod5380(arg0)) {
-      const tmp5 = new _mod1293("Assertion failed: `Desc` must be a Property Descriptor");
-      throw tmp5;
+    if (!isPropertyDescriptor(arg0)) {
+      const self = this;
+      const self2 = this;
+      const tmp3 = new _mod1293("Assertion failed: `Desc` must be a Property Descriptor");
+      throw tmp3;
     }
   }
-  return _mod5387(arg0);
+  return fromPropertyDescriptor(arg0);
 };

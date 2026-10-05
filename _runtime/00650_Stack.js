@@ -10,11 +10,7 @@ import stackSet from "stackSet" /* 655 */;
 
 class Stack {
   constructor(arg0) {
-    obj = {};
-    tmp = new closure_0(closure_1[0])(global);
-    obj.__data__ = tmp;
-    obj.size = tmp.size;
-    return;
+    const tmp = new ListCache(arg0);
   }
 }
 Stack.prototype.clear = stackClear;

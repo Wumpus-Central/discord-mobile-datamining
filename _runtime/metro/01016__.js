@@ -13,23 +13,17 @@ function getStatics($$typeof) {
     return obj;
   } else {
     $$typeof = $$typeof.$$typeof;
-    let tmp3 = $$typeof;
-    if ($$typeof) {
-      tmp3 = obj2[$$typeof];
-    }
-    if (!tmp3) {
-      tmp3 = closure_0;
-    }
-    return tmp3;
+    return $$typeof && obj2[$$typeof] || closure_0;
   }
 }
-Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 let closure_0 = { childContextTypes: true, contextType: true, contextTypes: true, defaultProps: true, displayName: true, getDefaultProps: true, getDerivedStateFromError: true, getDerivedStateFromProps: true, mixins: true, propTypes: true, type: true };
 let closure_1 = { name: true, length: true, prototype: true, caller: true, callee: true, arguments: true, arity: true };
 let obj = { $$typeof: true, compare: true, defaultProps: true, displayName: true, propTypes: true, type: true };
+const forResult = Symbol.for("react.forward_ref");
 const forResult1 = Symbol.for("react.memo");
 const obj2 = {};
-obj2[Symbol.for("react.forward_ref")] = { $$typeof: true, render: true, defaultProps: true, displayName: true, propTypes: true };
+obj2[forResult] = { $$typeof: true, render: true, defaultProps: true, displayName: true, propTypes: true };
 obj2[forResult1] = obj;
 let closure_6 = defineProperty.bind(Object);
 let closure_7 = getOwnPropertyNames.bind(Object);
@@ -38,6 +32,7 @@ if (getOwnPropertySymbols != null) {
   const _Object = Object;
   bindResult = getOwnPropertySymbols.bind(Object);
 }
+const metroImportAll = bindResult;
 let closure_9 = getOwnPropertyDescriptor.bind(Object);
 let closure_10 = getPrototypeOf.bind(Object);
 let closure_11 = Object.prototype;
@@ -45,17 +40,14 @@ function hoistNonReactStatics(arg0, str, arg2) {
   if (typeof str !== "string") {
     if (closure_11) {
       const tmp2 = closure_10(str);
-      let tmp3 = tmp2;
-      if (tmp2) {
-        tmp3 = tmp2 !== tmp35;
-      }
+      const tmp3 = tmp2 && tmp2 !== tmp35;
       if (tmp3) {
         hoistNonReactStatics(arg0, tmp2);
       }
     }
     obj = closure_7(str);
     let combined = obj;
-    if (bindResult) {
+    if (metroImportAll) {
       combined = obj.concat(tmp7(str));
     }
     const tmp10 = getStatics(arg0);
@@ -76,11 +68,11 @@ function hoistNonReactStatics(arg0, str, arg2) {
             tmp24 = tmp10[tmp20];
           }
           if (!tmp24) {
-            if (!closure_9(arg0, tmp18)) {
-              const tmp26Result = closure_9(str, tmp18);
+            if (!closure_9(arg0, nextResult)) {
+              const tmp26Result = closure_9(str, nextResult);
               if (tmp26Result) {
                 try {
-                  closure_6(arg0, tmp18, tmp30);
+                  closure_6(arg0, nextResult, tmp30);
                 } catch (err) {
                 }
               }

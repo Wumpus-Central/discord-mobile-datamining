@@ -1,24 +1,34 @@
 // === Module 6411: LayoutCommitObserver ===
 
 // Module 6411 (LayoutCommitObserver)
+import Fragment from "Fragment" /* 21 */;
 import _mod6360 from "module_6360" /* 6360 */;
-import _mod6361 from "module_6361" /* 6361 */;
-import _slicedToArray from "module_6342" /* 6342 */;
-import noop_mod from "module_19" /* 19 */;
+import react2 from "react" /* 6361 */;
+import _slicedToArray from "_slicedToArray" /* 6342 */;
+import react_mod from "react" /* 19 */;
 
-require = fn;
-let noop = fn(19);
-({ useLayoutEffect: c3, useMemo: closure_4, useRef: hasOwnProperty } = noop);
-let noop = noop_mod;
-const jsx = fn(21).jsx;
-const memoResult = noop.memo((children) => {
-  const onCommitLayoutEffect = children.onCommitLayoutEffect;
-  const recyclerViewContext = _mod6361.useRecyclerViewContext();
-  [r10018, tmp3] = _mod6360.useLayoutState(0);
-  _slicedToArray = tmp3;
-  const tmp2 = _slicedToArray(_mod6360.useLayoutState(0), 2);
-  const current = hasOwnProperty(new Set()).current;
-  React3(() => {
+let onCommitLayoutEffect, set;
+
+let c3;
+let closure_4;
+let hasOwnProperty;
+let react = react_mod;
+({ useLayoutEffect: c3, useMemo: closure_4, useRef: hasOwnProperty } = react);
+react = react_mod;
+const jsx = Fragment.jsx;
+const memoResult = react.memo((onCommitLayoutEffect) => {
+  let tmp3;
+  onCommitLayoutEffect = onCommitLayoutEffect.onCommitLayoutEffect;
+  const children = onCommitLayoutEffect.children;
+  const obj = react2;
+  const recyclerViewContext = obj.useRecyclerViewContext();
+  const obj2 = _mod6360;
+  [r10018, tmp3] = _slicedToArray(obj2.useLayoutState(0), 2);
+  let closure_2 = tmp3;
+  const tmp2 = _slicedToArray(obj2.useLayoutState(0), 2);
+  set = new Set();
+  const current = hasOwnProperty(set).current;
+  _false(() => {
     if (current.size <= 0) {
       if (onCommitLayoutEffect != null) {
         tmp();
@@ -26,7 +36,7 @@ const memoResult = noop.memo((children) => {
     }
   });
   const items = [recyclerViewContext, current, tmp3];
-  value = React4(() => ({
+  const value = React3(() => ({
     layout() {
       closure_1_2((arg0) => arg0 + 1);
     },
@@ -86,7 +96,7 @@ const memoResult = noop.memo((children) => {
       }
     }
   }), items);
-  return jsx(_mod6361.RecyclerViewContextProvider, { value, children: children.children });
+  return jsx(react2.RecyclerViewContextProvider, { value, children });
 });
 memoResult.displayName = "LayoutCommitObserver";
 

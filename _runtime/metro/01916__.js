@@ -1,15 +1,17 @@
 // === Module 1916: ? ===
 
 // Module 1916
-globalThis.IntlMessageFormat.__addLocaleData({
+const obj = {
   locale: "nl",
   pluralRuleFunction(arg0, arg1) {
     let str2 = "other";
+    const str = String(arg0);
+    const tmp = str.split(".")[1];
     if (!arg1) {
       let str3 = "other";
       if (1 == arg0) {
         str3 = "other";
-        if (!str.split(".")[1]) {
+        if (!tmp) {
           str3 = "one";
         }
       }
@@ -17,7 +19,8 @@ globalThis.IntlMessageFormat.__addLocaleData({
     }
     return str2;
   }
-});
+};
+globalThis.IntlMessageFormat.__addLocaleData(obj);
 globalThis.IntlMessageFormat.__addLocaleData({ locale: "nl-AW", parentLocale: "nl" });
 globalThis.IntlMessageFormat.__addLocaleData({ locale: "nl-BE", parentLocale: "nl" });
 globalThis.IntlMessageFormat.__addLocaleData({ locale: "nl-BQ", parentLocale: "nl" });

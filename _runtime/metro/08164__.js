@@ -1,28 +1,25 @@
 // === Module 8164: ? ===
 
 // Module 8164
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef8160 from "module_8160" /* 8160 */;
+import Fragment from "Fragment" /* 21 */;
+import extractProps from "extractProps" /* 8151 */;
+import multiplyMatricesDefault from "multiplyMatrices" /* 8160 */;
 import _modDef8165 from "module_8165" /* 8165 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
 
-const Circle = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
-    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
+
+    }));
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -30,52 +27,40 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-_possibleConstructorReturnDefault;
-const jsx = fn(21).jsx;
+const jsx = Fragment.jsx;
 class Circle {
   constructor() {
-    self = this;
-    tmp = closure_3(this, Circle);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(Circle);
-    tmp3 = closure_4;
-    if (closure_7()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    let constructResult;
+    const self = this;
+    _classCallCheck(this, Circle);
+    const obj = _getPrototypeOf(Circle);
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
       constructResult = obj(...arguments);
     }
-    return tmp3(self, constructResult);
+    return _possibleConstructorReturn(self, constructResult);
   }
 }
-_inherits(Circle, _modDef8160);
+_inherits(Circle, multiplyMatricesDefault);
 const entry = {
   key: "render",
   value: function render() {
+    let cx;
+    let cy;
+    let r;
     const self = this;
     const props = this.props;
-    const obj = {};
+    const obj = { cx, cy, r };
     ({ cx, cy, r } = props);
-    const merged = Object.assign(Circle(8151).extract(this, props));
-    obj.cx = cx;
-    obj.cy = cy;
-    obj.r = r;
-    const obj2 = Circle(8151);
-    const obj3 = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
+    const obj2 = extractProps;
+    const merged = Object.assign(obj2.extract(this, props));
+    _modDef8165;
     const merged1 = Object.assign(obj);
-    return jsx(_modDef8165, {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    });
+    return <tmp2 ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
   }
 };
 const items = [entry];

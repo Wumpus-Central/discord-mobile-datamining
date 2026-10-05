@@ -1,9 +1,9 @@
 // === Module 5736: SHEET_FIT_TO_CONTENTS ===
 
 // Module 5736 (SHEET_FIT_TO_CONTENTS)
-import _mod17 from "module_17" /* 17 */;
+import react_native from "react-native" /* 17 */;
 
-const Platform = _mod17.Platform;
+const Platform = react_native.Platform;
 const items = [-1];
 const items1 = [1];
 const items2 = [0.5];
@@ -21,17 +21,20 @@ export const assertDetentsArrayIsSorted = function assertDetentsArrayIsSorted(ar
       num = num + 1;
     }
     const _Error = Error;
+    const self = this;
+    const self2 = this;
     const error = new Error("[RNScreens] The detent array is not sorted in ascending order!");
     throw error;
   }
 };
 export const resolveSheetAllowedDetents = function resolveSheetAllowedDetents(sheetAllowedDetents) {
+  let tmp;
   if (Array.isArray(sheetAllowedDetents)) {
     let substr = sheetAllowedDetents;
     if (sheetAllowedDetents.length > 3) {
       substr = sheetAllowedDetents.slice(0, 3);
     }
-    let tmp = substr;
+    tmp = substr;
   } else if ("fitToContents" === sheetAllowedDetents) {
     tmp = items;
   } else if ("large" === sheetAllowedDetents) {
@@ -44,20 +47,15 @@ export const resolveSheetAllowedDetents = function resolveSheetAllowedDetents(sh
   return tmp;
 };
 export const resolveSheetLargestUndimmedDetent = function resolveSheetLargestUndimmedDetent(SHEET_DIMMED_ALWAYS, arg1) {
+  let tmp;
   if (typeof SHEET_DIMMED_ALWAYS === "number") {
     const _Number = Number;
-    let isIntegerResult = Number.isInteger(SHEET_DIMMED_ALWAYS);
-    if (isIntegerResult) {
-      isIntegerResult = SHEET_DIMMED_ALWAYS >= -1;
-    }
-    if (isIntegerResult) {
-      isIntegerResult = SHEET_DIMMED_ALWAYS <= arg1;
-    }
     let num5 = -1;
+    const isIntegerResult = Number.isInteger(SHEET_DIMMED_ALWAYS) && SHEET_DIMMED_ALWAYS >= -1 && SHEET_DIMMED_ALWAYS <= arg1;
     if (isIntegerResult) {
       num5 = SHEET_DIMMED_ALWAYS;
     }
-    let tmp = num5;
+    tmp = num5;
   } else {
     tmp = arg1;
     if ("last" !== SHEET_DIMMED_ALWAYS) {
@@ -89,14 +87,8 @@ export const resolveSheetInitialDetentIndex = function resolveSheetInitialDetent
       num = 0;
     }
   }
-  let isIntegerResult = Number.isInteger(num);
-  if (isIntegerResult) {
-    isIntegerResult = num >= 0;
-  }
-  if (isIntegerResult) {
-    isIntegerResult = num <= arg1;
-  }
   let num3 = 0;
+  const isIntegerResult = Number.isInteger(num) && num >= 0 && num <= arg1;
   if (isIntegerResult) {
     num3 = num;
   }

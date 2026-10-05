@@ -33,7 +33,7 @@ function resolve() {
         str = combined;
         str2 = combined;
         flag2 = tmp3;
-        if (tmp3) {
+        if (flag2) {
           break;
         }
       }
@@ -50,16 +50,17 @@ function resolve() {
   let num2 = 0;
   if (0 <= diff2) {
     do {
+      let sum;
       let tmp8 = found[diff2];
       if ("." === tmp8) {
         let spliceResult = found.splice(diff2, 1);
-        let sum = num;
+        sum = num;
       } else if (".." === tmp8) {
         let spliceResult1 = found.splice(diff2, 1);
         sum = num + 1;
       } else {
         sum = num;
-        if (num) {
+        if (sum) {
           let spliceResult2 = found.splice(diff2, 1);
           sum = num - 1;
         }
@@ -79,10 +80,12 @@ function resolve() {
       } while (tmp17);
     }
   }
-  return str4 + found.join("/") || ".";
+  const tmp18 = str4 + found.join("/") || ".";
+  return tmp18;
 }
 function normalizePath(str) {
   let tmp14;
+  const charAtResult = str.charAt(0);
   const substr = str.slice(-1);
   const parts = str.split("/");
   const found = parts.filter((item) => item);
@@ -91,16 +94,17 @@ function normalizePath(str) {
   let num2 = 0;
   if (0 <= diff) {
     do {
+      let sum;
       let tmp4 = found[diff];
       if ("." === tmp4) {
         let spliceResult = found.splice(diff, 1);
-        let sum = num;
+        sum = num;
       } else if (".." === tmp4) {
         let spliceResult1 = found.splice(diff, 1);
         sum = num + 1;
       } else {
         sum = num;
-        if (num) {
+        if (sum) {
           let spliceResult2 = found.splice(diff, 1);
           sum = num - 1;
         }
@@ -110,8 +114,7 @@ function normalizePath(str) {
       num2 = sum;
     } while (0 <= diff);
   }
-  const tmp11 = "/" === str.charAt(0);
-  if (!tmp11) {
+  if ("/" !== charAtResult) {
     let diff1 = num2 - 1;
     if (num2) {
       do {
@@ -122,23 +125,17 @@ function normalizePath(str) {
     }
   }
   str = found.join("/");
-  let tmp15 = str;
-  if (!str) {
-    tmp15 = tmp11;
-  }
+  const tmp15 = str || "/" === charAtResult;
   if (!tmp15) {
     str = ".";
   }
-  let tmp16 = str;
-  if (str) {
-    tmp16 = "/" === substr;
-  }
   let text = str;
+  const tmp16 = str && "/" === substr;
   if (tmp16) {
     text = `${str}/`;
   }
   let str2 = "";
-  if (tmp11) {
+  if ("/" === charAtResult) {
     str2 = "/";
   }
   return str2 + text;
@@ -157,17 +154,16 @@ export const basename = function basename(arr, arg1) {
   } else {
     substr = [];
   }
-  let tmp3 = arg1;
-  if (arg1) {
-    tmp3 = arr3.slice(-1 * arg1.length) === arg1;
-  }
   let substr1 = arr3;
+  const tmp3 = arg1 && arr3.slice(-1 * arg1.length) === arg1;
   if (tmp3) {
     substr1 = arr3.slice(0, arr3.length - arg1.length);
   }
   return substr1;
 };
 export const dirname = function dirname(arr) {
+  let str2;
+  let substr;
   let combined = arr;
   if (arr.length > 1024) {
     const _HermesInternal = HermesInternal;
@@ -175,16 +171,13 @@ export const dirname = function dirname(arr) {
   }
   const match = re0.exec(combined);
   if (match) {
-    let substr = match.slice(1);
+    substr = match.slice(1);
   } else {
     substr = [];
   }
   if (substr[0] || "") {
-    let substr1 = arr3;
-    if (arr3) {
-      substr1 = arr3.slice(0, arr3.length - 1);
-    }
-    let str2 = tmp3 + substr1;
+    const substr1 = arr3 && arr3.slice(0, arr3.length - 1);
+    str2 = tmp3 + substr1;
   } else {
     str2 = ".";
   }
@@ -199,10 +192,13 @@ export const join = function join() {
 };
 export { normalizePath };
 export const relative = function relative(root, replaced) {
+  let items;
+  let items1;
   let length;
   const arr = resolve(root);
-  const str = resolve(root).slice(1);
+  const str = arr.slice(1);
   const arr2 = resolve(replaced);
+  const str2 = arr2.slice(1);
   const parts = str.split("/");
   let num = 0;
   if (0 < parts.length) {
@@ -238,11 +234,11 @@ export const relative = function relative(root, replaced) {
     }
   }
   if (tmp3 < num) {
-    let items = [];
+    items = [];
   } else {
     items = parts.slice(num, tmp3 - num + 1);
   }
-  const parts1 = resolve(replaced).slice(1).split("/");
+  const parts1 = str2.split("/");
   let num3 = 0;
   if (0 < parts1.length) {
     let num4 = 0;
@@ -277,7 +273,7 @@ export const relative = function relative(root, replaced) {
     }
   }
   if (tmp8 < num3) {
-    let items1 = [];
+    items1 = [];
   } else {
     items1 = parts1.slice(num3, tmp8 - num3 + 1);
   }

@@ -1,10 +1,10 @@
 // === Module 286: ? ===
 
 // Module 286
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import EventDefault from "Event" /* 133 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import _modDef133 from "module_133" /* 133 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import map from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _get from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
@@ -12,15 +12,11 @@ import _inherits from "_inherits" /* 98 */;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
-    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
+
+    }));
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -28,45 +24,39 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturnDefault;
 class LegacySyntheticEvent {
-  constructor(arg0, arg1, arg2, arg3) {
-    self = this;
-    tmp = closure_0(this, LegacySyntheticEvent);
-    items = [, ];
-    items[0] = global;
-    items[1] = arg1;
-    tmp2 = c2;
-    obj = c2(LegacySyntheticEvent);
-    tmp3 = closure_1;
-    if (closure_4()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+  constructor(arg0, arg1, _nativeEvent, arg3) {
+    let constructResult;
+    const self = this;
+    _classCallCheck(this, LegacySyntheticEvent);
+    const items = [arg0, arg1];
+    const obj = _getPrototypeOf(LegacySyntheticEvent);
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, _getPrototypeOf(self).constructor);
     } else {
       constructResult = obj.apply(self, items);
     }
-    tmp6 = importAll;
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result._nativeEvent = importDefault;
+    let tmp6 = arg3;
+    const tmp3Result = map(self, constructResult);
+    tmp3Result._nativeEvent = _nativeEvent;
     tmp3Result._propagationStopped = false;
-    if (importAll == null) {
+    if (arg3 == null) {
       tmp6 = null;
     }
     tmp3Result._dispatchConfig = tmp6;
     return tmp3Result;
   }
 }
-_classCallCheck = LegacySyntheticEvent;
-_inherits(LegacySyntheticEvent, EventDefault);
+_inherits(LegacySyntheticEvent, _modDef133);
+let obj = {
+  key: "nativeEvent",
+  get() {
+    return this._nativeEvent;
+  }
+};
 let items = [
-  {
-    key: "nativeEvent",
-    get() {
-      return this._nativeEvent;
-    }
-  },
+  obj,
   {
     key: "dispatchConfig",
     get() {
@@ -77,7 +67,7 @@ let items = [
     key: "stopPropagation",
     value: function stopPropagation() {
       const self = this;
-      let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "stopPropagation", this);
+      let fn = _get(_getPrototypeOf(LegacySyntheticEvent.prototype), "stopPropagation", this);
       if (typeof fn === "function") {
         fn = (arg0) => fn.apply(self, arg0);
       }
@@ -89,7 +79,7 @@ let items = [
     key: "stopImmediatePropagation",
     value: function stopImmediatePropagation() {
       const self = this;
-      let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "stopImmediatePropagation", this);
+      let fn = _get(_getPrototypeOf(LegacySyntheticEvent.prototype), "stopImmediatePropagation", this);
       if (typeof fn === "function") {
         fn = (arg0) => fn.apply(self, arg0);
       }

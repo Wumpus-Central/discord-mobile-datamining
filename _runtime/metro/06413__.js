@@ -1,18 +1,25 @@
 // === Module 6413: ? ===
 
 // Module 6413
-import _mod17 from "module_17" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import value2 from "value2" /* 6113 */;
-import _mod6414 from "module_6414" /* 6414 */;
-import noop_mod from "module_19" /* 19 */;
+import react_native from "react-native" /* 17 */;
+import Fragment from "Fragment" /* 21 */;
+import GESTURE_SOURCE from "GESTURE_SOURCE" /* 6113 */;
+import react_native2 from "react-native" /* 6414 */;
+import react_mod from "react" /* 19 */;
 
-let noop = noop_mod;
-({ useEffect: c2, useCallback: c3, useMemo: closure_4 } = noop);
-let noop = noop_mod;
-const View = _mod17.View;
-const jsx = jsxProd.jsx;
-const memoResult = noop.memo(function BottomSheetViewComponent(focusHook) {
+let c2;
+let c3;
+let closure_4;
+let react = react_mod;
+({ useEffect: c2, useCallback: c3, useMemo: closure_4 } = react);
+const memo = react.memo;
+react = react_mod;
+const View = react_native.View;
+const jsx = Fragment.jsx;
+const memoResult = memo(function BottomSheetViewComponent(focusHook) {
+  let animatedScrollableType;
+  let children;
+  let style;
   focusHook = focusHook.focusHook;
   if (focusHook === undefined) {
     focusHook = animatedScrollableType;
@@ -25,39 +32,36 @@ const memoResult = noop.memo(function BottomSheetViewComponent(focusHook) {
   ({ style, children } = focusHook);
   const merged = Object.assign(focusHook, Object.assign({ focusHook: 0, enableFooterMarginAdjustment: 0, onLayout: 0, style: 0, children: 0 }));
   let animatedScrollableContentOffsetY;
-  const bottomSheetInternal = onLayout(animatedScrollableContentOffsetY[3]).useBottomSheetInternal();
+  const obj = onLayout(animatedScrollableContentOffsetY[3]);
+  const bottomSheetInternal = obj.useBottomSheetInternal();
   animatedScrollableContentOffsetY = bottomSheetInternal.animatedScrollableContentOffsetY;
   animatedScrollableType = bottomSheetInternal.animatedScrollableType;
   const enableDynamicSizing = bottomSheetInternal.enableDynamicSizing;
   const animatedContentHeight = bottomSheetInternal.animatedContentHeight;
-  const obj = onLayout(animatedScrollableContentOffsetY[3]);
-  const bottomSheetContentContainerStyle = onLayout(animatedScrollableContentOffsetY[3]).useBottomSheetContentContainerStyle(flag, style);
+  const obj2 = onLayout(animatedScrollableContentOffsetY[3]);
+  const bottomSheetContentContainerStyle = obj2.useBottomSheetContentContainerStyle(flag, style);
   let items = [bottomSheetContentContainerStyle];
   const items1 = [animatedScrollableContentOffsetY, animatedScrollableType];
-  const obj2 = onLayout(animatedScrollableContentOffsetY[3]);
-  const items2 = [onLayout, animatedContentHeight, enableDynamicSizing];
   const tmp4 = animatedContentHeight(() => {
-    const items = [bottomSheetContentContainerStyle, _mod6414.styles.container];
+    const items = [bottomSheetContentContainerStyle, react_native2.styles.container];
     return items;
   }, items);
+  const items2 = [onLayout, animatedContentHeight, enableDynamicSizing];
   const tmp5 = enableDynamicSizing(() => {
     animatedScrollableContentOffsetY.value = 0;
-    animatedScrollableType.value = value2.SCROLLABLE_TYPE.VIEW;
+    animatedScrollableType.value = GESTURE_SOURCE.SCROLLABLE_TYPE.VIEW;
   }, items1);
-  focusHook(tmp5);
-  const obj3 = {};
-  const merged1 = Object.assign(merged);
-  obj3.onLayout = enableDynamicSizing((nativeEvent) => {
+  const tmp6 = enableDynamicSizing((nativeEvent) => {
     if (enableDynamicSizing) {
       const result = animatedContentHeight.set(nativeEvent.nativeEvent.layout.height);
     }
     if (onLayout) {
-      tmp3(nativeEvent);
+      tmp4(nativeEvent);
     }
   }, items2);
-  obj3.style = tmp4;
-  obj3.children = children;
-  return <bottomSheetContentContainerStyle />;
+  focusHook(tmp5);
+  const merged1 = Object.assign(merged);
+  return <bottomSheetContentContainerStyle onLayout={tmp6} style={tmp4}>{children}</bottomSheetContentContainerStyle>;
 });
 memoResult.displayName = "BottomSheetView";
 

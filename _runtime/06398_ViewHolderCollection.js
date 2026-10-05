@@ -1,35 +1,66 @@
 // === Module 6398: ViewHolderCollection ===
 
 // Module 6398 (ViewHolderCollection)
-import ViewHolder from "ViewHolder" /* 6396 */;
-import _slicedToArray from "module_6342" /* 6342 */;
-import noop_mod from "module_19" /* 19 */;
+import Fragment from "Fragment" /* 21 */;
+import ViewHolder2 from "ViewHolder" /* 6396 */;
+import _slicedToArray from "_slicedToArray" /* 6342 */;
+import react_mod from "react" /* 19 */;
 
-require = fn;
-let noop = fn(19);
-({ useEffect: c3, useImperativeHandle: closure_4, useLayoutEffect: hasOwnProperty } = noop);
-let noop = noop_mod;
-const jsx = fn(21).jsx;
+let size;
+
+let c3;
+let closure_4;
+let hasOwnProperty;
+let react = react_mod;
+({ useEffect: c3, useImperativeHandle: closure_4, useLayoutEffect: hasOwnProperty } = react);
+react = react_mod;
+const jsx = Fragment.jsx;
 
 export const ViewHolderCollection = (data) => {
+  let CellRendererComponent;
+  let ItemSeparatorComponent;
+  let adjustmentMargin;
+  let adjustmentMargin1;
+  let closure_11;
+  let closure_13;
+  let closure_14;
+  let closure_3;
+  let closure_4;
+  let closure_5;
+  let closure_8;
+  let closure_9;
+  let first;
+  let getAdjustmentMargin;
+  let getChildContainerLayout;
+  let height1;
+  let horizontal;
+  let inverted;
+  let num;
+  let refHolder;
+  let renderStack;
+  let tmp3;
+  let viewHolderCollectionRef;
+  let width;
   data = data.data;
-  ({ renderStack, getLayout: dependencyMap, refHolder: _slicedToArray, onSizeChanged: closure_3, renderItem: closure_4, extraData: closure_5, onCommitLayoutEffect: noop, CellRendererComponent: jsx, ItemSeparatorComponent: closure_8, onCommitEffect: closure_9, horizontal } = data);
+  ({ renderStack, getLayout: dependencyMap, refHolder: _slicedToArray, onSizeChanged: closure_3, renderItem: closure_4, extraData: closure_5, onCommitLayoutEffect: react, CellRendererComponent: jsx, ItemSeparatorComponent: closure_8, onCommitEffect: closure_9, horizontal } = data);
   ({ getAdjustmentMargin, currentStickyIndex: closure_11, hideStickyHeaderRelatedCell: closure_12, isInLastRow: closure_13, inverted: closure_14 } = data);
   ({ viewHolderCollectionRef, getChildContainerLayout } = data);
-  const tmp = _slicedToArray(noop.useState(0), 2);
-  const first = tmp[0];
-  closure_16 = tmp3;
-  let size = getChildContainerLayout();
+  [first, tmp3] = react.useState(0);
+  let closure_16 = tmp3;
+  size = getChildContainerLayout();
+  let tmp4 = size == null;
   if (horizontal) {
     let height;
     if (!tmp4) {
       height = size.height;
     }
-    let width = height;
+    width = height;
   } else if (!tmp4) {
     width = size.width;
   }
-  closure_17 = data(6361).useRecyclerViewContext();
+  let tmp6 = data;
+  const obj = data(6361);
+  let closure_17 = obj.useRecyclerViewContext();
   const items = [width];
   extraData(() => {
     if (first > 0) {
@@ -41,7 +72,7 @@ export const ViewHolderCollection = (data) => {
   const items1 = [first];
   extraData(() => {
     if (first > 0) {
-      if (noop != null) {
+      if (react != null) {
         tmp();
       }
     }
@@ -49,21 +80,18 @@ export const ViewHolderCollection = (data) => {
   const items2 = [first];
   onSizeChanged(() => {
     if (first > 0) {
-      if (closure_1_9 != null) {
+      if (closure_9 != null) {
         tmp();
       }
     }
   }, items2);
-  const items3 = [tmp[1]];
+  const items3 = [tmp3];
   renderItem(viewHolderCollectionRef, () => ({
     commitLayout() {
       closure_1_16((arg0) => arg0 + 1);
     }
   }), items3);
-  let tmp12 = data;
-  if (data) {
-    tmp12 = data.length > 0;
-  }
+  const tmp12 = data && data.length > 0;
   let tmp13;
   if (horizontal) {
     let width1;
@@ -72,64 +100,48 @@ export const ViewHolderCollection = (data) => {
     }
     tmp13 = width1;
   }
-  const size1 = { width: tmp13, height: null, marginTop: null, marginLeft: null, opacity: null };
-  let height1;
+  const size1 = { width: tmp13, height: height1, marginTop: adjustmentMargin, marginLeft: adjustmentMargin1, opacity: num };
+  height1 = undefined;
   if (size != null) {
     height1 = size.height;
   }
-  size1.height = height1;
-  let adjustmentMargin;
+  adjustmentMargin = undefined;
   if (!horizontal) {
     adjustmentMargin = getAdjustmentMargin();
   }
-  size1.marginTop = adjustmentMargin;
-  let adjustmentMargin1;
+  adjustmentMargin1 = undefined;
   if (horizontal) {
     adjustmentMargin1 = getAdjustmentMargin();
   }
-  size1.marginLeft = adjustmentMargin1;
-  let num = 0;
+  num = 0;
   if (first > 0) {
     num = 1;
   }
-  size1.opacity = num;
   let tmp19 = tmp12;
+  const CompatView = tmp6(6392).CompatView;
   if (tmp12) {
     tmp19 = size1;
   }
-  const obj2 = { style: tmp19, children: null };
   if (size) {
     size = tmp12;
   }
   if (size) {
     const _Array = Array;
     size = Array.from(renderStack.entries(), (arg0) => {
+      let tmp;
       [tmp, ] = arg0;
-      let tmp5;
+      let tmp6;
+      const tmp4 = data[tmp2];
       if (ItemSeparatorComponent) {
-        if (!closure_1_13(tmp2)) {
-          tmp5 = tmp3[tmp2 + 1];
+        if (!closure_13(tmp2)) {
+          tmp6 = tmp3[tmp2 + 1];
         }
       }
-      const obj = { index: tmp2, item: data[tmp2], trailingItem: tmp5, layout: null, refHolder: null, onSizeChanged: null, target: "Cell", renderItem: null, extraData: null, CellRendererComponent: null, ItemSeparatorComponent: null, horizontal: null, hidden: null, inverted: null };
+      const obj2 = {};
+      const ViewHolder = ViewHolder2.ViewHolder;
       const merged = Object.assign(dependencyMap(tmp2));
-      obj.layout = {};
-      obj.refHolder = refHolder;
-      obj.onSizeChanged = onSizeChanged;
-      obj.renderItem = renderItem;
-      obj.extraData = extraData;
-      obj.CellRendererComponent = CellRendererComponent;
-      obj.ItemSeparatorComponent = ItemSeparatorComponent;
-      obj.horizontal = horizontal;
-      let tmp11 = closure_1_12;
-      if (closure_1_12) {
-        tmp11 = closure_1_11 === tmp2;
-      }
-      obj.hidden = tmp11;
-      obj.inverted = inverted;
-      return jsx(ViewHolder.ViewHolder, { index: tmp2, item: data[tmp2], trailingItem: tmp5, layout: null, refHolder: null, onSizeChanged: null, target: "Cell", renderItem: null, extraData: null, CellRendererComponent: null, ItemSeparatorComponent: null, horizontal: null, hidden: null, inverted: null }, tmp);
+      return <ViewHolder key={tmp} index={tmp2} item={tmp4} trailingItem={tmp6} layout={obj2} refHolder={_slicedToArray} onSizeChanged={onSizeChanged} target="Cell" renderItem={renderItem} extraData={extraData} CellRendererComponent={jsx} ItemSeparatorComponent={ItemSeparatorComponent} horizontal={horizontal} hidden={closure_12 && closure_11 === tmp2} inverted={inverted} />;
     });
   }
-  obj2.children = size;
-  return jsx(data(6392).CompatView, { style: tmp19, children: null });
+  return <CompatView style={tmp19}>{size}</CompatView>;
 };

@@ -3,6 +3,8 @@
 // Module 1503
 
 export const createParamsFromAction = function createParamsFromAction(routeParamList) {
+  let name;
+  let params;
   routeParamList = routeParamList.routeParamList;
   ({ name, params } = routeParamList.action.payload);
   let tmp = params;

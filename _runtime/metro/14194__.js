@@ -1,30 +1,34 @@
 // === Module 14194: ? ===
 
 // Module 14194
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
 import module_14176_mod from "module_14176" /* 14176 */;
-import _isNativeReflectConstruct_mod from "module_14195" /* 14195 */;
-import jsxProd from "jsxProd" /* 21 */;
+import module_14195_mod from "module_14195" /* 14195 */;
+import Fragment from "Fragment" /* 21 */;
 
-if (noop) {
-  const __esModule = noop.__esModule;
+let closure_0;
+
+let tmp4;
+let tmp6;
+if (react) {
+  const __esModule = react.__esModule;
 }
 let module_14176 = module_14176_mod;
 if (!module_14176) {
-  let obj = { default: module_14176 };
-  let tmp4 = obj;
+  const obj = { default: module_14176 };
+  tmp4 = obj;
 } else {
   tmp4 = module_14176;
 }
 module_14176 = tmp4;
-let _isNativeReflectConstruct = _isNativeReflectConstruct_mod;
-if (!_isNativeReflectConstruct) {
-  const obj2 = { default: _isNativeReflectConstruct };
-  let tmp6 = obj2;
+let module_14195 = module_14195_mod;
+if (!module_14195) {
+  let obj2 = { default: module_14195 };
+  tmp6 = obj2;
 } else {
-  tmp6 = _isNativeReflectConstruct;
+  tmp6 = module_14195;
 }
-_isNativeReflectConstruct = tmp6;
+module_14195 = tmp6;
 
 export default () => () => {
   closure_0 = closure_0.default();
@@ -40,10 +44,11 @@ export default () => () => {
         return (arg0) => {
           closure_0 = arg0;
           return function StorybookSwitcherContainer(arg0) {
-            const obj = { storybookUi: emitter, emitter, children: null };
+            const jsx = React.jsx;
+            const jsx2 = React.jsx;
+            const obj2 = {};
             const merged = Object.assign(arg0);
-            obj.children = <emitter />;
-            return <_isNativeReflectConstruct.default storybookUi={emitter} emitter={emitter}>{null}</_isNativeReflectConstruct.default>;
+            return <_default storybookUi={emitter} emitter={emitter}>{jsx2(emitter, obj2)}</_default>;
           };
         };
       }

@@ -1,170 +1,177 @@
 // === Module 975: browserProfilingIntegration ===
 
 // Module 975 (browserProfilingIntegration)
-import _mod977 from "module_977" /* 977 */;
+import MAX_PROFILE_DURATION_MS from "MAX_PROFILE_DURATION_MS" /* 977 */;
 import registerSpanErrorInstrumentation from "module_693" /* 693 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
-export const browserProfilingIntegration = registerSpanErrorInstrumentation.defineIntegration(() => ({
-  name: "BrowserProfiling",
-  setup(getOptions) {
-    options = getOptions.getOptions();
-    uIProfiler = new uIProfiler(976).UIProfiler();
-    const obj2 = uIProfiler(977);
-    if (!tmp4) {
-      options.profileLifecycle = "manual";
-    }
-    tmp4 = uIProfiler(977).hasLegacyProfiling(options) || options.profileLifecycle;
-    if (tmp2Result.hasLegacyProfiling(options)) {
-      if (!options.profilesSampleRate) {
-        if (tmp2(948).DEBUG_BUILD) {
-          let debug = tmp2(693).debug;
-          debug.log("[Profiling] Profiling disabled, no profiling options found.");
+export const browserProfilingIntegration = registerSpanErrorInstrumentation.defineIntegration(() => {
+  let obj = {
+    name: "BrowserProfiling",
+    setup(getOptions) {
+      let uIProfiler;
+      const options = getOptions.getOptions();
+      uIProfiler = new uIProfiler(closure_1[0]).UIProfiler();
+      const obj2 = uIProfiler(closure_1[1]);
+      const tmp4 = obj2.hasLegacyProfiling(options) || options.profileLifecycle;
+      if (!tmp4) {
+        options.profileLifecycle = "manual";
+      }
+      let tmp2Result = tmp2(closure_1[1]);
+      if (tmp2Result.hasLegacyProfiling(options)) {
+        if (!options.profilesSampleRate) {
+          if (uIProfiler(closure_1[2]).DEBUG_BUILD) {
+            let debug = tmp2(closure_1[3]).debug;
+            const str2 = "[Profiling] Profiling disabled, no profiling options found.";
+            let logResult = debug.log("[Profiling] Profiling disabled, no profiling options found.");
+          }
         }
       }
-    }
-    tmp2Result = uIProfiler(977);
-    let activeSpan = uIProfiler(693).getActiveSpan();
-    let rootSpan = activeSpan;
-    if (activeSpan) {
-      rootSpan = tmp2(693).getRootSpan(activeSpan);
-      const tmp2Result10 = tmp2(693);
-    }
-    const tmp2Result9 = uIProfiler(693);
-    const tmp2Result11 = uIProfiler(977);
-    if (tmp8) {
-      let debug2 = tmp2(693).debug;
-      debug2.warn("[Profiling] Both legacy profiling (`profilesSampleRate`) and UI profiling settings are defined. `profileSessionSampleRate` has no effect when legacy profiling is enabled.");
-    }
-    tmp8 = uIProfiler(977).hasLegacyProfiling(options) && undefined !== options.profileSessionSampleRate && uIProfiler(948).DEBUG_BUILD;
-    if (tmp2Result12.hasLegacyProfiling(options)) {
-      let result = rootSpan;
+      const tmp2Result9 = uIProfiler(closure_1[3]);
+      let activeSpan = tmp2Result9.getActiveSpan();
+      let rootSpan = activeSpan;
       if (rootSpan) {
-        result = tmp2(977).isAutomatedPageLoadSpan(rootSpan);
-        const tmp2Result13 = tmp2(977);
+        const tmp2Result10 = uIProfiler(closure_1[3]);
+        rootSpan = tmp2Result10.getRootSpan(activeSpan);
       }
-      if (result) {
-        result = tmp2(977).shouldProfileSpanLegacy(rootSpan);
-        const tmp2Result14 = tmp2(977);
+      const tmp2Result11 = uIProfiler(closure_1[1]);
+      const tmp8 = tmp2Result11.hasLegacyProfiling(options) && undefined !== options.profileSessionSampleRate && tmp2(closure_1[2]).DEBUG_BUILD;
+      if (tmp8) {
+        let debug2 = tmp2(closure_1[3]).debug;
+        debug2.warn("[Profiling] Both legacy profiling (`profilesSampleRate`) and UI profiling settings are defined. `profileSessionSampleRate` has no effect when legacy profiling is enabled.");
       }
-      if (result) {
-        tmp2(978).startProfileForSpan(rootSpan);
-        const tmp2Result15 = tmp2(978);
-      }
-      getOptions.on("spanStart", (rootSpan) => {
-        let result = rootSpan === uIProfiler(693).getRootSpan(rootSpan);
+      const tmp2Result12 = uIProfiler(closure_1[1]);
+      if (tmp2Result12.hasLegacyProfiling(options)) {
+        let result = rootSpan;
         if (result) {
-          result = uIProfiler(977).shouldProfileSpanLegacy(rootSpan);
-          const tmpResult = uIProfiler(977);
+          const tmp2Result13 = uIProfiler(closure_1[1]);
+          result = tmp2Result13.isAutomatedPageLoadSpan(rootSpan);
         }
         if (result) {
-          uIProfiler(978).startProfileForSpan(rootSpan);
-          const tmpResult2 = uIProfiler(978);
+          const tmp2Result14 = uIProfiler(closure_1[1]);
+          result = tmp2Result14.shouldProfileSpanLegacy(rootSpan);
         }
-        const obj = uIProfiler(693);
-      });
-      getOptions.on("beforeEnvelope", (arg0) => {
-        if (obj.getActiveProfilesCount()) {
-          const result = uIProfiler(977).findProfiledTransactionsFromEnvelope(arg0);
-          if (result.length) {
-            const items = [];
-            const iter = result[Symbol.iterator]();
-            const nextResult = iter.next();
-            while (iter !== undefined) {
-              let contexts;
-              let tmp16 = nextResult;
-              if (nextResult != null) {
-                contexts = nextResult.contexts;
-              }
-              let tmp18 = contexts;
-              let profile_id;
-              if (contexts != null) {
-                let profile = contexts.profile;
-                if (profile != null) {
-                  profile_id = profile.profile_id;
+        if (result) {
+          const tmp2Result15 = uIProfiler(closure_1[5]);
+          tmp2Result15.startProfileForSpan(rootSpan);
+        }
+        getOptions.on("spanStart", (rootSpan) => {
+          const obj = uIProfiler(closure_1_1[3]);
+          let result = rootSpan === obj.getRootSpan(rootSpan);
+          if (result) {
+            const tmpResult = uIProfiler(closure_1_1[1]);
+            result = tmpResult.shouldProfileSpanLegacy(rootSpan);
+          }
+          if (result) {
+            const tmpResult2 = uIProfiler(closure_1_1[5]);
+            tmpResult2.startProfileForSpan(rootSpan);
+          }
+        });
+        getOptions.on("beforeEnvelope", (arg0) => {
+          const obj = uIProfiler(closure_1_1[1]);
+          if (obj.getActiveProfilesCount()) {
+            const tmp2Result = uIProfiler(closure_1_1[1]);
+            const result = tmp2Result.findProfiledTransactionsFromEnvelope(arg0);
+            if (result.length) {
+              const items = [];
+              const iter = result[Symbol.iterator]();
+              const nextResult = iter.next();
+              while (iter !== undefined) {
+                let contexts;
+                let tmp14 = nextResult;
+                if (nextResult != null) {
+                  contexts = nextResult.contexts;
                 }
-              }
-              let tmp20 = profile_id;
-              if (tmp18 != null) {
-                let profile2 = tmp18.profile;
-                if (profile2 != null) {
-                  let start_timestamp = profile2.start_timestamp;
+                let tmp16 = contexts;
+                let profile_id;
+                if (contexts != null) {
+                  let profile = contexts.profile;
+                  if (profile != null) {
+                    profile_id = profile.profile_id;
+                  }
                 }
-              }
-              if (typeof tmp20 === "string") {
-                if (tmp20) {
-                  let profile1;
-                  if (tmp18 != null) {
-                    profile1 = tmp18.profile;
+                let tmp18 = profile_id;
+                if (tmp16 != null) {
+                  let profile2 = tmp16.profile;
+                  if (profile2 != null) {
+                    let start_timestamp = profile2.start_timestamp;
                   }
-                  if (profile1) {
-                    delete tmp2[tmp];
-                  }
-                  let obj3 = uIProfiler(977);
-                  let result1 = obj3.takeProfileFromGlobalCache(tmp20);
-                  if (result1) {
-                    let tmp39Result = uIProfiler(977);
-                    let profilingEvent = tmp39Result.createProfilingEvent(tmp20, tmp22, tmp44, tmp16);
-                    if (profilingEvent) {
-                      let arr = items.push(tmp57);
+                }
+                if (typeof tmp18 === "string") {
+                  if (tmp18) {
+                    let profile1;
+                    if (tmp16 != null) {
+                      profile1 = tmp16.profile;
                     }
-                  } else if (uIProfiler(948).DEBUG_BUILD) {
-                    let debug3 = uIProfiler(693).debug;
-                    let _HermesInternal = HermesInternal;
-                    let logResult = debug3.log("[Profiling] Could not retrieve profile for span: " + tmp20);
+                    if (profile1) {
+                      delete tmp15[str2];
+                    }
+                    let obj3 = uIProfiler(closure_1_1[1]);
+                    let result1 = obj3.takeProfileFromGlobalCache(tmp18);
+                    if (result1) {
+                      let tmp36Result = uIProfiler(closure_1_1[1]);
+                      let profilingEvent = tmp36Result.createProfilingEvent(tmp18, tmp20, tmp41, tmp14);
+                      if (profilingEvent) {
+                        let arr = items.push(tmp54);
+                      }
+                    } else if (uIProfiler(closure_1_1[2]).DEBUG_BUILD) {
+                      let debug3 = uIProfiler(closure_1_1[3]).debug;
+                      let _HermesInternal = HermesInternal;
+                      let logResult = debug3.log("[Profiling] Could not retrieve profile for span: " + tmp18);
+                    }
+                  } else if (uIProfiler(closure_1_1[2]).DEBUG_BUILD) {
+                    let debug2 = uIProfiler(closure_1_1[3]).debug;
+                    let logResult1 = debug2.log("[Profiling] cannot find profile for a span without a profile context");
                   }
-                } else if (uIProfiler(948).DEBUG_BUILD) {
-                  let debug2 = uIProfiler(693).debug;
-                  let logResult1 = debug2.log("[Profiling] cannot find profile for a span without a profile context");
+                } else if (uIProfiler(closure_1_1[2]).DEBUG_BUILD) {
+                  let debug = uIProfiler(closure_1_1[3]).debug;
+                  let logResult2 = debug.log("[Profiling] cannot find profile for a span without a profile context");
                 }
-              } else if (uIProfiler(948).DEBUG_BUILD) {
-                let debug = uIProfiler(693).debug;
-                let logResult2 = debug.log("[Profiling] cannot find profile for a span without a profile context");
+                continue;
               }
-              continue;
+              const obj5 = uIProfiler(closure_1_1[1]);
+              const result2 = obj5.addProfilesToEnvelope(arg0, items);
             }
-            const result2 = uIProfiler(977).addProfilesToEnvelope(arg0, items);
-            const obj5 = uIProfiler(977);
           }
-          const tmp4Result = uIProfiler(977);
-        }
-        obj = uIProfiler(977);
-      });
-    } else {
-      const profileLifecycle = options.profileLifecycle;
-      getOptions.on("startUIProfiler", () => uIProfiler.start());
-      getOptions.on("stopUIProfiler", () => uIProfiler.stop());
-      if ("manual" === profileLifecycle) {
-        uIProfiler.initialize(getOptions);
-      } else if ("trace" === profileLifecycle) {
-        if (tmp2Result16.hasSpansEnabled(options)) {
+        });
+      } else {
+        const profileLifecycle = options.profileLifecycle;
+        getOptions.on("startUIProfiler", () => uIProfiler.start());
+        getOptions.on("stopUIProfiler", () => uIProfiler.stop());
+        if ("manual" === profileLifecycle) {
           uIProfiler.initialize(getOptions);
-          if (rootSpan) {
-            uIProfiler.notifyRootSpanActive(rootSpan);
-          }
-          const WINDOW = tmp2(904).WINDOW;
-          const timerId = WINDOW.setTimeout(() => {
-            const activeSpan = registerSpanErrorInstrumentation.getActiveSpan();
-            let rootSpan = activeSpan;
-            if (activeSpan) {
-              rootSpan = registerSpanErrorInstrumentation.getRootSpan(activeSpan);
-              const tmpResult = registerSpanErrorInstrumentation;
-            }
+        } else if ("trace" === profileLifecycle) {
+          const tmp2Result16 = uIProfiler(closure_1[3]);
+          if (tmp2Result16.hasSpansEnabled(options)) {
+            uIProfiler.initialize(getOptions);
             if (rootSpan) {
               uIProfiler.notifyRootSpanActive(rootSpan);
             }
-          }, 0);
-        } else if (tmp2(948).DEBUG_BUILD) {
-          let debug3 = tmp2(693).debug;
-          debug3.warn("[Profiling] `profileLifecycle` is 'trace' but tracing is disabled. Set a `tracesSampleRate` or `tracesSampler` to enable span tracing.");
+            const WINDOW = tmp2(closure_1[4]).WINDOW;
+            const timerId = WINDOW.setTimeout(() => {
+              const obj = registerSpanErrorInstrumentation;
+              const activeSpan = obj.getActiveSpan();
+              let rootSpan = activeSpan;
+              if (rootSpan) {
+                const tmpResult = registerSpanErrorInstrumentation;
+                rootSpan = tmpResult.getRootSpan(activeSpan);
+              }
+              if (rootSpan) {
+                uIProfiler.notifyRootSpanActive(rootSpan);
+              }
+            }, 0);
+          } else if (uIProfiler(closure_1[2]).DEBUG_BUILD) {
+            let debug3 = tmp2(closure_1[3]).debug;
+            debug3.warn("[Profiling] `profileLifecycle` is 'trace' but tracing is disabled. Set a `tracesSampleRate` or `tracesSampler` to enable span tracing.");
+          }
         }
-        tmp2Result16 = tmp2(693);
       }
+    },
+    processEvent(contexts) {
+      const obj = MAX_PROFILE_DURATION_MS;
+      return obj.attachProfiledThreadToEvent(contexts);
     }
-    tmp2Result12 = uIProfiler(977);
-  },
-  processEvent(contexts) {
-    return _mod977.attachProfiledThreadToEvent(contexts);
-  }
-}));
+  };
+  return obj;
+});

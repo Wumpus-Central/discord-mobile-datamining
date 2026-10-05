@@ -6,5 +6,6 @@ import copyObject from "copyObject" /* 4972 */;
 
 
 export default function copySymbols(arg0, arg1) {
-  return copyObject(arg0, stubArray(arg0), arg1);
+  const tmp = copyObject;
+  return tmp(arg0, stubArray(arg0), arg1);
 };

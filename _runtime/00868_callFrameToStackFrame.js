@@ -1,14 +1,16 @@
 // === Module 868: callFrameToStackFrame ===
 
 // Module 868 (callFrameToStackFrame)
-import _mod709 from "module_709" /* 709 */;
+import UNKNOWN_FUNCTION2 from "UNKNOWN_FUNCTION" /* 709 */;
 import filenameIsInApp from "filenameIsInApp" /* 867 */;
 
-require = arg1;
-const dependencyMap = arg6;
-Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+let navigation;
+
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const callFrameToStackFrame = function callFrameToStackFrame(location, str, fn) {
+  let UNKNOWN_FUNCTION;
+  let filenameIsInAppResult;
   let replaced;
   if (str) {
     replaced = str.replace(/^file:\/\//, "");
@@ -21,37 +23,28 @@ export const callFrameToStackFrame = function callFrameToStackFrame(location, st
   if (location.location.lineNumber) {
     sum1 = location.location.lineNumber + 1;
   }
-  const obj = { filename: replaced, module: fn(replaced), function: null, colno: null, lineno: null, in_app: null };
-  let UNKNOWN_FUNCTION = location.functionName;
-  if (!UNKNOWN_FUNCTION) {
-    UNKNOWN_FUNCTION = _mod709.UNKNOWN_FUNCTION;
-  }
-  obj.function = UNKNOWN_FUNCTION;
-  obj.colno = sum;
-  obj.lineno = sum1;
-  let filenameIsInAppResult;
+  const obj = { filename: replaced, module: fn(replaced), function: UNKNOWN_FUNCTION, colno: sum, lineno: sum1, in_app: filenameIsInAppResult };
+  UNKNOWN_FUNCTION = location.functionName || UNKNOWN_FUNCTION2.UNKNOWN_FUNCTION;
+  filenameIsInAppResult = undefined;
   if (replaced) {
-    filenameIsInAppResult = filenameIsInApp.filenameIsInApp(replaced);
+    const obj2 = filenameIsInApp;
+    filenameIsInAppResult = obj2.filenameIsInApp(replaced);
   }
-  obj.in_app = filenameIsInAppResult;
   return obj;
 };
 export const watchdogTimer = function watchdogTimer(fn, arg1, arg2, arg3) {
-  closure_0 = arg1;
-  closure_1 = arg2;
-  closure_2 = arg3;
-  const navigation = fn();
-  c4 = false;
-  closure_5 = true;
+  let closure_0 = arg1;
+  let closure_1 = arg2;
+  let closure_2 = arg3;
+  navigation = fn();
+  let c4 = false;
+  let c5 = true;
   const timerId = setInterval(() => {
     const timeMs = navigation.getTimeMs();
-    let tmp2 = false === c4;
-    if (tmp2) {
-      tmp2 = timeMs > closure_0 + closure_1;
-    }
+    const tmp2 = false === c4 && timeMs > closure_0 + closure_1;
     if (tmp2) {
       c4 = true;
-      if (closure_5) {
+      if (c5) {
         closure_2();
       }
     }
@@ -64,7 +57,7 @@ export const watchdogTimer = function watchdogTimer(fn, arg1, arg2, arg3) {
       navigation.reset();
     },
     enabled(arg0) {
-      closure_5 = arg0;
+      c5 = arg0;
     }
   };
 };

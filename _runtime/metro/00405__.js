@@ -2,8 +2,8 @@
 
 // Module 405
 import _modDef406 from "module_406" /* 406 */;
-import noop from "module_19" /* 19 */;
-import module_387 from "unstable_createAnimatedComponentWithAllowlist" /* 387 */;
+import react from "react" /* 19 */;
+import createAnimatedComponent from "createAnimatedComponent" /* 387 */;
 
 
-export default module_387(_modDef406);
+export default createAnimatedComponent(_modDef406);

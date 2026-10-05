@@ -1,13 +1,15 @@
 // === Module 1526: ThemeProvider ===
 
 // Module 1526 (ThemeProvider)
-import _mod1527 from "module_1527" /* 1527 */;
-import noop from "module_19" /* 19 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 1527 */;
+import react from "react" /* 19 */;
 
-require = fn;
-const jsx = fn(21).jsx;
+const jsx = Fragment.jsx;
 
 export const ThemeProvider = function ThemeProvider(arg0) {
+  let children;
+  let value;
   ({ value, children } = arg0);
-  return jsx(_mod1527.ThemeContext.Provider, { value, children });
+  return jsx(react2.ThemeContext.Provider, { value, children });
 };

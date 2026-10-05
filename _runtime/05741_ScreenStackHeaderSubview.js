@@ -1,22 +1,37 @@
 // === Module 5741: ScreenStackHeaderSubview ===
 
 // Module 5741 (ScreenStackHeaderSubview)
+import Fragment from "Fragment" /* 21 */;
 import get_synchronousScreenUpdatesEnabledDefault from "get synchronousScreenUpdatesEnabled" /* 5722 */;
+import react_native from "react-native" /* 5739 */;
 import _mod5742 from "module_5742" /* 5742 */;
+import react_native2 from "react-native" /* 5743 */;
 import _modDef5744 from "module_5744" /* 5744 */;
-import _modDef5745 from "module_5745" /* 5745 */;
+import react_nativeDefault from "react-native" /* 5745 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
+import react_native3 from "react-native" /* 17 */;
 
-require = fn;
+let Platform;
+let StyleSheet;
+let metroImportDefault;
 let closure_3 = ["style"];
 let closure_4 = ["style"];
 let closure_5 = ["style"];
-get_ActivityIndicator = fn(17);
-({ Image: closure_7, Platform, StyleSheet } = get_ActivityIndicator);
-const jsx = fn(21).jsx;
-const forwardRefResult = noop.forwardRef((hidden, ref) => {
+({ Image: metroImportDefault, Platform, StyleSheet } = react_native3);
+const jsx = Fragment.jsx;
+const forwardRefResult = react.forwardRef((hidden, ref) => {
+  let appliesTopInset;
+  let consumeBottomInset;
+  let consumeLeftInset;
+  let consumeRightInset;
+  let headerLeftBarButtonItems;
+  let headerRightBarButtonItems;
+  let useLegacyBehavior;
+  let tmp3 = _mod5742;
+  let tmp4 = !hidden.hidden;
   let flag = hidden.disableTopInsetApplication;
+  const useEdgeInsetApplication = tmp3.useEdgeInsetApplication;
   if (flag == null) {
     flag = false;
   }
@@ -32,25 +47,25 @@ const forwardRefResult = noop.forwardRef((hidden, ref) => {
   if (flag4 == null) {
     flag4 = false;
   }
-  const edgeInsetApplication = _mod5742.useEdgeInsetApplication(!hidden.hidden, flag, flag2, flag3, flag4);
+  const edgeInsetApplication = useEdgeInsetApplication(tmp4, flag, flag2, flag3, flag4);
   ({ headerLeftBarButtonItems, headerRightBarButtonItems } = hidden);
   let result;
   ({ appliesTopInset, useLegacyBehavior, consumeLeftInset, consumeRightInset, consumeBottomInset } = edgeInsetApplication);
   if (headerLeftBarButtonItems) {
-    if (tmp(5739).isHeaderBarButtonsAvailableForCurrentPlatform) {
-      result = tmp(5743).prepareHeaderBarButtonItems(headerLeftBarButtonItems, "left");
-      const tmpResult = tmp(5743);
+    if (react_native.isHeaderBarButtonsAvailableForCurrentPlatform) {
+      const str = "left";
+      const tmpResult = react_native2;
+      result = tmpResult.prepareHeaderBarButtonItems(headerLeftBarButtonItems, "left");
     }
   }
-  require = result;
   let result1;
   if (headerRightBarButtonItems) {
-    if (tmp(5739).isHeaderBarButtonsAvailableForCurrentPlatform) {
-      result1 = tmp(5743).prepareHeaderBarButtonItems(headerRightBarButtonItems, "right");
-      const tmpResult2 = tmp(5743);
+    if (react_native.isHeaderBarButtonsAvailableForCurrentPlatform) {
+      const tmpResult2 = react_native2;
+      result1 = tmpResult2.prepareHeaderBarButtonItems(headerRightBarButtonItems, "right");
     }
   }
-  let isHeaderBarButtonsAvailableForCurrentPlatform = tmp(5739).isHeaderBarButtonsAvailableForCurrentPlatform;
+  let isHeaderBarButtonsAvailableForCurrentPlatform = react_native.isHeaderBarButtonsAvailableForCurrentPlatform;
   if (isHeaderBarButtonsAvailableForCurrentPlatform) {
     let length;
     if (result != null) {
@@ -68,7 +83,7 @@ const forwardRefResult = noop.forwardRef((hidden, ref) => {
   let fn;
   if (isHeaderBarButtonsAvailableForCurrentPlatform) {
     fn = (arg0) => {
-      const nativeEvent = arg0;
+      let closure_0 = arg0;
       let items = result;
       if (result == null) {
         items = [];
@@ -78,19 +93,10 @@ const forwardRefResult = noop.forwardRef((hidden, ref) => {
       if (result1 == null) {
         items2 = [];
       }
-      HermesBuiltin.arraySpread(items2, tmp);
-      const found = items1.find((buttonId) => {
-        let tmp = buttonId;
-        if (buttonId) {
-          tmp = "buttonId" in buttonId;
-        }
-        if (tmp) {
-          tmp = buttonId.buttonId === nativeEvent.nativeEvent.buttonId;
-        }
-        return tmp;
-      });
+      HermesBuiltin.arraySpread(items1, items2, tmp2);
+      const found = items1.find((buttonId) => buttonId && "buttonId" in buttonId && buttonId.buttonId === nativeEvent.nativeEvent.buttonId);
       let onPress = found;
-      if (found) {
+      if (onPress) {
         onPress = "button" === found.type;
       }
       if (onPress) {
@@ -104,6 +110,7 @@ const forwardRefResult = noop.forwardRef((hidden, ref) => {
   let fn2;
   if (isHeaderBarButtonsAvailableForCurrentPlatform) {
     fn2 = (nativeEvent) => {
+      let tmp2;
       function findInMenu(menu, menuId) {
         const iter = menu.items[Symbol.iterator]();
         const nextResult = iter.next();
@@ -111,7 +118,8 @@ const forwardRefResult = noop.forwardRef((hidden, ref) => {
           let tmp2 = nextResult;
           if ("items" in nextResult) {
             let tmp9 = findInMenu(tmp2, menuId);
-            if (tmp9) {
+            let tmp10 = tmp9;
+            if (tmp10) {
               iter.return();
               return tmp9;
             }
@@ -133,17 +141,20 @@ const forwardRefResult = noop.forwardRef((hidden, ref) => {
       if (result1 == null) {
         items2 = [];
       }
-      HermesBuiltin.arraySpread(items2, tmp);
+      HermesBuiltin.arraySpread(items1, items2, tmp2);
       let iter = items1[Symbol.iterator]();
       let nextResult = iter.next();
       while (iter !== undefined) {
-        let tmp4 = nextResult;
-        if (nextResult) {
-          if ("menu" === tmp4.type) {
-            if (tmp4.menu) {
-              let findInMenuResult = findInMenu(tmp4.menu, nativeEvent.nativeEvent.menuId);
+        let tmp5 = nextResult;
+        if (tmp5) {
+          let tmp6 = nextResult;
+          if ("menu" === tmp5.type) {
+            if (tmp5.menu) {
+              let tmp8 = nextResult;
+              let findInMenuResult = findInMenu(tmp5.menu, nativeEvent.nativeEvent.menuId);
               let obj = findInMenuResult;
-              if (findInMenuResult) {
+              if (obj) {
+                let tmp10 = findInMenuResult;
                 let onPressResult = obj.onPress();
                 iter.return();
               }
@@ -154,71 +165,46 @@ const forwardRefResult = noop.forwardRef((hidden, ref) => {
       }
     };
   }
-  const obj2 = {};
-  let tmp3 = !hidden.hidden;
+  let tmp10 = _modDef5744;
   const merged = Object.assign(hidden);
-  obj2.userInterfaceStyle = hidden.experimental_userInterfaceStyle;
-  obj2.headerLeftBarButtonItems = result;
-  obj2.headerRightBarButtonItems = result1;
-  obj2.onPressHeaderBarButtonItem = fn;
-  obj2.onPressHeaderBarButtonMenuItem = fn2;
-  obj2.ref = ref;
-  obj2.style = closure_9.headerConfig;
-  obj2.pointerEvents = "box-none";
-  obj2.synchronousShadowStateUpdatesEnabled = get_synchronousScreenUpdatesEnabledDefault.experiment.synchronousHeaderConfigUpdatesEnabled;
-  obj2.consumeTopInset = appliesTopInset;
-  obj2.consumeLeftInset = consumeLeftInset;
-  obj2.consumeRightInset = consumeRightInset;
-  obj2.consumeBottomInset = consumeBottomInset;
-  obj2.legacyTopInsetBehavior = useLegacyBehavior;
-  return jsx(_modDef5744, {});
+  return <tmp10 userInterfaceStyle={hidden.experimental_userInterfaceStyle} headerLeftBarButtonItems={result} headerRightBarButtonItems={result1} onPressHeaderBarButtonItem={fn} onPressHeaderBarButtonMenuItem={fn2} ref={ref} style={closure_9.headerConfig} pointerEvents="box-none" synchronousShadowStateUpdatesEnabled={get_synchronousScreenUpdatesEnabledDefault.experiment.synchronousHeaderConfigUpdatesEnabled} consumeTopInset={appliesTopInset} consumeLeftInset={consumeLeftInset} consumeRightInset={consumeRightInset} consumeBottomInset={consumeBottomInset} legacyTopInsetBehavior={useLegacyBehavior} />;
 });
 forwardRefResult.displayName = "ScreenStackHeaderConfig";
 const styles = StyleSheet.create({ headerSubview: { flexDirection: "row", alignItems: "center", justifyContent: "center" }, headerSubviewCenter: { flexDirection: "row", alignItems: "center", justifyContent: "center", flexShrink: 1 }, headerConfig: { position: "absolute", width: "100%", flexDirection: "row", justifyContent: "space-between", alignItems: "applicationId" } });
 
-export const ScreenStackHeaderSubview = _modDef5745;
+export const ScreenStackHeaderSubview = react_nativeDefault;
 export const ScreenStackHeaderConfig = forwardRefResult;
 export const ScreenStackHeaderBackButtonImage = (arg0) => {
-  const element = { type: "back", style: closure_9.headerSubview, synchronousShadowStateUpdatesEnabled: get_synchronousScreenUpdatesEnabledDefault.experiment.synchronousHeaderSubviewUpdatesEnabled, children: null };
+  react_nativeDefault;
   const merged = Object.assign(arg0);
-  element.children = <React5 resizeMode="center" fadeDuration={0} />;
-  return jsx(_modDef5745, { type: "back", style: closure_9.headerSubview, synchronousShadowStateUpdatesEnabled: get_synchronousScreenUpdatesEnabledDefault.experiment.synchronousHeaderSubviewUpdatesEnabled, children: null });
+  return <tmp type="back" style={closure_9.headerSubview} synchronousShadowStateUpdatesEnabled={get_synchronousScreenUpdatesEnabledDefault.experiment.synchronousHeaderSubviewUpdatesEnabled}>{null}</tmp>;
 };
 export const ScreenStackHeaderRightView = (style) => {
-  const obj = {};
+  style = style.style;
   const tmp = _objectWithoutProperties(style, closure_3);
+  react_nativeDefault;
   const merged = Object.assign(tmp);
-  obj.type = "right";
-  obj.synchronousShadowStateUpdatesEnabled = get_synchronousScreenUpdatesEnabledDefault.experiment.synchronousHeaderSubviewUpdatesEnabled;
-  const items = [closure_9.headerSubview, style.style];
-  obj.style = items;
-  return jsx(_modDef5745, {});
+  const items = [closure_9.headerSubview, style];
+  return <tmp2 type="right" synchronousShadowStateUpdatesEnabled={get_synchronousScreenUpdatesEnabledDefault.experiment.synchronousHeaderSubviewUpdatesEnabled} style={items} />;
 };
 export const ScreenStackHeaderLeftView = (style) => {
-  const obj = {};
+  style = style.style;
   const tmp = _objectWithoutProperties(style, closure_4);
+  react_nativeDefault;
   const merged = Object.assign(tmp);
-  obj.type = "left";
-  obj.synchronousShadowStateUpdatesEnabled = get_synchronousScreenUpdatesEnabledDefault.experiment.synchronousHeaderSubviewUpdatesEnabled;
-  const items = [closure_9.headerSubview, style.style];
-  obj.style = items;
-  return jsx(_modDef5745, {});
+  const items = [closure_9.headerSubview, style];
+  return <tmp2 type="left" synchronousShadowStateUpdatesEnabled={get_synchronousScreenUpdatesEnabledDefault.experiment.synchronousHeaderSubviewUpdatesEnabled} style={items} />;
 };
 export const ScreenStackHeaderCenterView = (style) => {
-  const obj = {};
+  style = style.style;
   const tmp = _objectWithoutProperties(style, closure_5);
+  react_nativeDefault;
   const merged = Object.assign(tmp);
-  obj.type = "center";
-  obj.synchronousShadowStateUpdatesEnabled = get_synchronousScreenUpdatesEnabledDefault.experiment.synchronousHeaderSubviewUpdatesEnabled;
-  const items = [closure_9.headerSubviewCenter, style.style];
-  obj.style = items;
-  return jsx(_modDef5745, {});
+  const items = [closure_9.headerSubviewCenter, style];
+  return <tmp2 type="center" synchronousShadowStateUpdatesEnabled={get_synchronousScreenUpdatesEnabledDefault.experiment.synchronousHeaderSubviewUpdatesEnabled} style={items} />;
 };
 export const ScreenStackHeaderSearchBarView = (arg0) => {
-  const obj = {};
+  react_nativeDefault;
   const merged = Object.assign(arg0);
-  obj.type = "searchBar";
-  obj.synchronousShadowStateUpdatesEnabled = get_synchronousScreenUpdatesEnabledDefault.experiment.synchronousHeaderSubviewUpdatesEnabled;
-  obj.style = closure_9.headerSubview;
-  return jsx(_modDef5745, {});
+  return <tmp type="searchBar" synchronousShadowStateUpdatesEnabled={get_synchronousScreenUpdatesEnabledDefault.experiment.synchronousHeaderSubviewUpdatesEnabled} style={closure_9.headerSubview} />;
 };

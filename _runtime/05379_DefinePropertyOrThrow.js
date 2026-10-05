@@ -2,9 +2,9 @@
 
 // Module 5379 (DefinePropertyOrThrow)
 import _mod1293 from "module_1293" /* 1293 */;
-import _mod5329 from "module_5329" /* 5329 */;
-import _mod5376 from "module_5376" /* 5376 */;
-import _mod5380 from "module_5380" /* 5380 */;
+import isObject from "isObject" /* 5329 */;
+import isPropertyKey from "isPropertyKey" /* 5376 */;
+import isPropertyDescriptor from "isPropertyDescriptor" /* 5380 */;
 import ToPropertyDescriptor from "ToPropertyDescriptor" /* 5381 */;
 import DefineOwnProperty from "DefineOwnProperty" /* 5383 */;
 import IsDataDescriptor from "IsDataDescriptor" /* 5384 */;
@@ -13,26 +13,33 @@ import FromPropertyDescriptor from "FromPropertyDescriptor" /* 5386 */;
 
 
 export default function DefinePropertyOrThrow(arg0, arg1, arg2) {
-  if (_mod5329(arg0)) {
-    if (_mod5376(arg1)) {
-      let tmp13 = arg2;
-      if (!_mod5380(arg2)) {
-        tmp13 = ToPropertyDescriptor(arg2);
+  if (isObject(arg0)) {
+    if (isPropertyKey(arg1)) {
+      let tmp9 = arg2;
+      if (!isPropertyDescriptor(arg2)) {
+        tmp9 = ToPropertyDescriptor(arg2);
       }
-      if (_mod5380(tmp13)) {
-        const tmpResult3 = IsDataDescriptor;
+      if (isPropertyDescriptor(tmp9)) {
         const tmpResult = DefineOwnProperty;
-        return tmpResult(tmpResult3, SameValue, FromPropertyDescriptor, arg0, arg1, tmp14);
+        const tmpResult3 = IsDataDescriptor;
+        const tmpResult4 = SameValue;
+        return tmpResult(tmpResult3, tmpResult4, FromPropertyDescriptor, arg0, arg1, tmp10);
       } else {
-        const tmp17 = new _mod1293("Assertion failed: Desc is not a valid Property Descriptor");
-        throw tmp17;
+        const self5 = this;
+        const self6 = this;
+        const tmp11 = new _mod1293("Assertion failed: Desc is not a valid Property Descriptor");
+        throw tmp11;
       }
     } else {
-      const tmp10 = new _mod1293("Assertion failed: P is not a Property Key");
-      throw tmp10;
+      const self3 = this;
+      const self4 = this;
+      const tmp6 = new _mod1293("Assertion failed: P is not a Property Key");
+      throw tmp6;
     }
   } else {
-    const tmp5 = new _mod1293("Assertion failed: Type(O) is not Object");
-    throw tmp5;
+    const self = this;
+    const self2 = this;
+    const tmp3 = new _mod1293("Assertion failed: Type(O) is not Object");
+    throw tmp3;
   }
 };

@@ -1,12 +1,19 @@
 // === Module 9200: ? ===
 
 // Module 9200
-import noop from "module_19" /* 19 */;
-import get_ActivityIndicator from "module_17" /* 17 */;
+import react from "react" /* 19 */;
+import react_native from "react-native" /* 17 */;
 import module_9198 from "module_9198" /* 9198 */;
 
-({ useCallback: closure_0, useEffect: closure_1, useRef: c2 } = noop);
-({ NativeEventEmitter: c3, Platform } = get_ActivityIndicator);
+let closure_4;
+
+let Platform;
+let _window;
+let c2;
+let c3;
+let map;
+({ useCallback: _window, useEffect: map, useRef: c2 } = react);
+({ NativeEventEmitter: c3, Platform } = react_native);
 const nativeModule = module_9198.getNativeModule();
 
 export const useModal = (props) => {
@@ -15,23 +22,26 @@ export const useModal = (props) => {
   props = undefined;
   closure_4 = props(false);
   const tmp = props();
-  closure_3 = tmp;
+  let closure_3 = tmp;
   id(() => {
     closure_3.current = props;
   });
   const current = tmp.current;
   const items = [id, props];
-  const tmp3 = props((id) => {
+  const tmp3 = props(function(id) {
     if (id.id === id) {
       closure_4.current = true;
       if (props.onConfirm) {
         const _Date = Date;
-        const date1 = new Date(date);
-        props.onConfirm(date1);
+        const self = this;
+        const self2 = this;
+        const onConfirm = props.onConfirm;
+        const date1 = new Date(id.date);
+        onConfirm(date1);
       }
     }
   }, items);
-  closure_6 = tmp3;
+  let closure_6 = tmp3;
   const items1 = [id, props];
   const tmp4 = props((id) => {
     id = undefined;
@@ -45,7 +55,7 @@ export const useModal = (props) => {
       }
     }
   }, items1);
-  closure_7 = tmp4;
+  let closure_7 = tmp4;
   const items2 = [tmp4, tmp3, current, props];
   id(() => {
     let flag = false;
@@ -65,7 +75,7 @@ export const useModal = (props) => {
     }
   }, items2);
   const items3 = [current, props];
-  id(() => {
+  const tmp6 = id(() => {
     let flag = false;
     if (props.modal) {
       flag = false;
@@ -75,7 +85,6 @@ export const useModal = (props) => {
           open = current.open;
         }
         flag = open && !tmp3;
-        const tmp6 = open && !tmp3;
       }
     }
     if (flag) {
@@ -85,7 +94,7 @@ export const useModal = (props) => {
   }, items3);
   const items4 = [tmp4, tmp3];
   id(() => {
-    const obj = new React3(closure_4);
+    const obj = new _false(closure_4);
     obj.addListener("onConfirm", closure_6);
     obj.addListener("onCancel", closure_7);
     return () => {

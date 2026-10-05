@@ -3,14 +3,15 @@
 // Module 236
 import _mod39 from "module_39" /* 39 */;
 
+let fn;
 let closure_0;
 if (true === global.RN$Bridgeless) {
-  let fn = (arg0, fn) => {
-    closure_0 = fn;
+  fn = (arg0, fn) => {
+    let closure_0 = fn;
     if (typeof fn !== "function") {
-      const result = closure_0.RN$registerCallableModule(arg0, () => closure_0);
+      const result = global.RN$registerCallableModule(arg0, () => closure_0);
     } else {
-      const result1 = closure_0.RN$registerCallableModule(arg0, fn);
+      const result1 = global.RN$registerCallableModule(arg0, fn);
     }
   };
 } else {

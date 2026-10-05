@@ -3,10 +3,9 @@
 // Module 14010 (UnicodeExtensionComponents)
 import _mod14005 from "module_14005" /* 14005 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
 export const UnicodeExtensionComponents = function UnicodeExtensionComponents(str) {
+  let iter;
   _mod14005.invariant(str === str.toLowerCase(), "Expected extension to be lowercase");
   let num = 3;
   _mod14005.invariant("-u-" === str.slice(0, 3), "Expected extension to be a Unicode locale extension");
@@ -14,13 +13,14 @@ export const UnicodeExtensionComponents = function UnicodeExtensionComponents(st
   const keywords = [];
   if (3 < str.length) {
     while (true) {
+      let tmp13;
       let index = str.indexOf("-", num);
       let tmp6 = -1 === index ? length - num : index - num;
       let substr = str.slice(num, num + tmp6);
       let invariantResult2 = _mod14005.invariant(tmp6 >= 2, "Expected a subtag to have at least 2 characters");
       if (undefined === iter) {
         if (2 !== tmp6) {
-          let tmp13 = iter;
+          tmp13 = iter;
           if (-1 === attributes.indexOf(substr)) {
             let arr = attributes.push(substr);
             tmp13 = iter;
@@ -36,17 +36,17 @@ export const UnicodeExtensionComponents = function UnicodeExtensionComponents(st
         let entry = { key: substr, value: "" };
         tmp13 = entry;
         if (undefined === keywords.find((key) => {
-          key = undefined;
+          let key1;
           if (null != entry) {
-            key = entry.key;
+            key1 = entry.key;
           }
-          return key.key === key;
+          return key.key === key1;
         })) {
           let arr2 = keywords.push(entry);
           tmp13 = entry;
         }
       } else {
-        value = undefined;
+        let value;
         if (null != iter) {
           value = iter.value;
         }

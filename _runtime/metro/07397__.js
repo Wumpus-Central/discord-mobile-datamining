@@ -3,18 +3,13 @@
 // Module 7397
 const require = globalThis.__r;
 
-const require = arg1;
-const dependencyMap = arg6;
 let closure_2 = [6, 7, 99];
 
 export default {
   get(buffer, Compression, arg2) {
     let prop = Compression;
-    if (Compression) {
-      let hasItem = undefined === Compression.Compression;
-      if (!hasItem) {
-        hasItem = closure_2.includes(Compression.Compression.value);
-      }
+    if (prop) {
+      const hasItem = undefined === Compression.Compression || closure_2.includes(Compression.Compression.value);
       prop = hasItem;
     }
     if (prop) {
@@ -34,10 +29,11 @@ export default {
       const sum = arg2 + Compression.JPEGInterchangeFormat.value;
       buffer = buffer.buffer;
       Compression.image = buffer.slice(sum, sum + Compression.JPEGInterchangeFormatLength.value);
-      require("module_7345").deferInit(Compression, "base64", function() {
-        return require("module_7345").getBase64Image(this.image);
+      let obj = require("module_7345");
+      obj.deferInit(Compression, "base64", function() {
+        const obj = require("module_7345");
+        return obj.getBase64Image(this.image);
       });
-      const obj = require("module_7345");
     }
     return Compression;
   }

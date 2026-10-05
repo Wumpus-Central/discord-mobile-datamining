@@ -1,14 +1,16 @@
 // === Module 1782: componentWithRef ===
 
 // Module 1782 (componentWithRef)
-import noop from "module_19" /* 19 */;
+import react2 from "react" /* 19 */;
+import module_1646 from "module_1646" /* 1646 */;
 
-const forwardRef = fn(19).forwardRef;
-const module_1646 = fn(1646);
+const react = react2;
+
+const forwardRef = react2.forwardRef;
 let closure_2 = module_1646.isReact19();
 
 export const isReactRendering = function isReactRendering() {
-  const __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE = noop.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
+  const __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE = react.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
   let owner;
   if (__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE != null) {
     const A = __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.A;
@@ -20,7 +22,7 @@ export const isReactRendering = function isReactRendering() {
     }
   }
   if (!owner) {
-    const __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = noop.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+    const __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = react.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
     let current;
     if (__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED != null) {
       const ReactCurrentOwner = __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner;
@@ -31,7 +33,7 @@ export const isReactRendering = function isReactRendering() {
     owner = current;
   }
   if (!owner) {
-    const __SERVER_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE = noop.__SERVER_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
+    const __SERVER_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE = react.__SERVER_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
     let current1;
     if (__SERVER_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE != null) {
       const ReactCurrentOwner2 = __SERVER_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.ReactCurrentOwner;
@@ -44,7 +46,7 @@ export const isReactRendering = function isReactRendering() {
   return owner;
 };
 export const isFirstReactRender = function isFirstReactRender() {
-  const __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE = noop.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
+  const __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE = react.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
   let owner;
   if (__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE != null) {
     const A = __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.A;
@@ -56,7 +58,7 @@ export const isFirstReactRender = function isFirstReactRender() {
     }
   }
   if (!owner) {
-    const __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = noop.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+    const __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = react.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
     let current;
     if (__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED != null) {
       const ReactCurrentOwner = __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner;
@@ -67,7 +69,7 @@ export const isFirstReactRender = function isFirstReactRender() {
     owner = current;
   }
   if (!owner) {
-    const __SERVER_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE = noop.__SERVER_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
+    const __SERVER_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE = react.__SERVER_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
     let current1;
     if (__SERVER_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE != null) {
       const ReactCurrentOwner2 = __SERVER_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.ReactCurrentOwner;
@@ -78,7 +80,7 @@ export const isFirstReactRender = function isFirstReactRender() {
     owner = current1;
   }
   let tmp5 = owner;
-  if (owner) {
+  if (tmp5) {
     let alternate;
     if (owner != null) {
       alternate = owner.alternate;
@@ -88,9 +90,10 @@ export const isFirstReactRender = function isFirstReactRender() {
   return tmp5;
 };
 export const componentWithRef = function componentWithRef(arg0) {
-  closure_0 = arg0;
+  let fn;
+  let closure_0 = arg0;
   if (closure_2) {
-    let fn = (ref) => closure_0(Object.assign(ref, Object.assign({ ref: 0 })), ref.ref);
+    fn = (ref) => closure_0(Object.assign(ref, Object.assign({ ref: 0 })), ref.ref);
   } else {
     fn = forwardRef(arg0);
   }

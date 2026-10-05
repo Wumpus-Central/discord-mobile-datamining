@@ -3,12 +3,12 @@
 // Module 791 (requestDataIntegration)
 import _mod792 from "module_792" /* 792 */;
 import _mod793 from "module_793" /* 793 */;
-import setupIntegration from "setupIntegration" /* 763 */;
+import module_763 from "module_763" /* 763 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 let closure_2 = { cookies: true, data: true, headers: true, query_string: true, url: true };
 
-export const requestDataIntegration = setupIntegration.defineIntegration(() => {
+export const requestDataIntegration = module_763.defineIntegration(() => {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -16,40 +16,40 @@ export const requestDataIntegration = setupIntegration.defineIntegration(() => {
   let obj2 = {};
   let merged = Object.assign(closure_2);
   let merged1 = Object.assign(obj.include);
-  return {
+  let obj3 = {
     name: "RequestData",
     processEvent(sdkProcessingMetadata, arg1, getOptions) {
+      let sendDefaultPii;
       let prop = sdkProcessingMetadata.sdkProcessingMetadata;
       if (undefined === prop) {
         prop = {};
       }
       const normalizedRequest = prop.normalizedRequest;
-      const obj = {};
+      const obj = { ip: sendDefaultPii };
+      const ipAddress = prop.ipAddress;
       const merged = Object.assign(obj2);
-      let sendDefaultPii = obj2.ip;
+      sendDefaultPii = obj2.ip;
       if (sendDefaultPii == null) {
         sendDefaultPii = getOptions.getOptions().sendDefaultPii;
       }
-      obj.ip = sendDefaultPii;
       if (normalizedRequest) {
         obj2 = {};
         const merged1 = Object.assign(sdkProcessingMetadata.request);
-        const obj3 = {};
+        const obj3 = { method: normalizedRequest.method };
         const obj4 = {};
         const merged2 = Object.assign(normalizedRequest.headers);
         if (obj.headers) {
           obj3.headers = obj4;
           if (!obj.cookies) {
-            delete tmp2[tmp];
+            delete obj5["cookie"];
           }
           if (!obj.ip) {
             const ipHeaderNames = _mod792.ipHeaderNames;
             const item = ipHeaderNames.forEach((item) => {
-              delete tmp2[tmp];
+              delete obj4[item];
             });
           }
         }
-        obj3.method = normalizedRequest.method;
         if (obj.url) {
           obj3.url = normalizedRequest.url;
         }
@@ -58,7 +58,8 @@ export const requestDataIntegration = setupIntegration.defineIntegration(() => {
           if (!cookies) {
             let parseCookieResult;
             if (obj4.cookie) {
-              parseCookieResult = _mod793.parseCookie(obj4.cookie);
+              const obj7 = _mod793;
+              parseCookieResult = obj7.parseCookie(obj4.cookie);
             }
             cookies = parseCookieResult;
           }
@@ -76,22 +77,23 @@ export const requestDataIntegration = setupIntegration.defineIntegration(() => {
         const merged3 = Object.assign(obj3);
         sdkProcessingMetadata.request = obj2;
         if (obj.ip) {
-          let ipAddress = normalizedRequest.headers;
-          if (ipAddress) {
-            ipAddress = _mod792.getClientIPAddress(normalizedRequest.headers);
+          let headers = normalizedRequest.headers;
+          if (headers) {
+            const obj8 = _mod792;
+            headers = obj8.getClientIPAddress(normalizedRequest.headers);
           }
-          if (!ipAddress) {
-            ipAddress = prop.ipAddress;
+          if (!headers) {
+            headers = ipAddress;
           }
-          if (ipAddress) {
-            const obj5 = {};
+          if (headers) {
+            const obj6 = { ip_address: headers };
             const merged4 = Object.assign(sdkProcessingMetadata.user);
-            obj5.ip_address = ipAddress;
-            sdkProcessingMetadata.user = obj5;
+            sdkProcessingMetadata.user = obj6;
           }
         }
       }
       return sdkProcessingMetadata;
     }
   };
+  return obj3;
 });

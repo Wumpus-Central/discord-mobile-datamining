@@ -1,12 +1,12 @@
 // === Module 74: UIManager ===
 
 // Module 74 (UIManager)
-import _modDef75 from "module_75" /* 75 */;
+import _mod75 from "module_75" /* 75 */;
 
-const require = globalThis.__r;
+const _modDef75 = _mod75;
 
-for (const key10016 in require("module_75")) {
-  arg5[key10016] = require("module_75")[key10016];
+for (const key10016 in _mod75) {
+  exports[key10016] = _mod75[key10016];
   continue;
 }
 

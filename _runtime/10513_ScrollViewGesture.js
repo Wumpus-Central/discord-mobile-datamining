@@ -1,14 +1,16 @@
 // === Module 10513: ScrollViewGesture ===
 
 // Module 10513 (ScrollViewGesture)
-import cancelAnimation from "cancelAnimation" /* 1643 */;
+import react2 from "react" /* 19 */;
+import Fragment from "Fragment" /* 21 */;
+import _mod1643 from "module_1643" /* 1643 */;
 import DATA_LENGTH from "DATA_LENGTH" /* 10495 */;
-import dealWithAnimation from "dealWithAnimation" /* 10511 */;
-import noop from "module_19" /* 19 */;
+import dealWithAnimation2 from "dealWithAnimation" /* 10511 */;
 
-require = fn;
-fn(19).useCallback;
-const jsx = fn(21).jsx;
+let closure_0, dealWithAnimationResult, obj1, obj4;
+
+react2.useCallback;
+const jsx = Fragment.jsx;
 let closure_6 = { code: "function pnpm_ScrollViewGestureTsx1(){const{vertical}=this.__closure;return!vertical;}" };
 let closure_7 = { code: "function pnpm_ScrollViewGestureTsx2(){const{loop,overscrollEnabled,measure,containerRef,dataLength,size}=this.__closure;if(!loop&&!overscrollEnabled){const measurement=measure(containerRef);const containerWidth=(measurement===null||measurement===void 0?void 0:measurement.width)||0;if(dataLength*size<containerWidth)return 0;return dataLength*size-containerWidth;}return dataLength*size;}" };
 let closure_8 = { code: "function pnpm_ScrollViewGestureTsx3(toValue,onFinished){const{scrollAnimationDuration,Easing,dealWithAnimation,withAnimation,runOnJS}=this.__closure;var _withAnimation;const defaultWithAnimation={type:\"timing\",config:{duration:scrollAnimationDuration+100,easing:Easing.easeOutQuart}};return dealWithAnimation((_withAnimation=withAnimation)!==null&&_withAnimation!==void 0?_withAnimation:defaultWithAnimation)(toValue,function(isFinished){\"worklet\";if(isFinished)onFinished&&runOnJS(onFinished)();});}" };
@@ -26,8 +28,18 @@ let closure_19 = { code: "function pnpm_ScrollViewGestureTsx14(e){const{panOffse
 let value = { code: "function pnpm_ScrollViewGestureTsx15(e,_success){const{panOffset,isHorizontal,scrollEndVelocity,fixedDirection,scrollEndTranslation,maxScrollDistancePerSwipeIsSet,maxScrollDistancePerSwipe,size,translation,withSpring,withProcessTranslation,onScrollEnd,minScrollDistancePerSwipeIsSet,minScrollDistancePerSwipe,endWithSpring,loop,touching}=this.__closure;if(panOffset.value===undefined){return;}const{velocityX:velocityX,velocityY:velocityY,translationX:translationX,translationY:translationY}=e;const scrollEndVelocityValue=isHorizontal.value?velocityX:velocityY;scrollEndVelocity.value=scrollEndVelocityValue;let panTranslation=isHorizontal.value?translationX:translationY;if(fixedDirection===\"negative\")panTranslation=-Math.abs(panTranslation);else if(fixedDirection===\"positive\")panTranslation=+Math.abs(panTranslation);scrollEndTranslation.value=panTranslation;const totalTranslation=scrollEndVelocityValue+panTranslation;if(maxScrollDistancePerSwipeIsSet&&Math.abs(totalTranslation)>maxScrollDistancePerSwipe){const nextPage=Math.round((panOffset.value+maxScrollDistancePerSwipe*Math.sign(totalTranslation))/size)*size;translation.value=withSpring(withProcessTranslation(nextPage),onScrollEnd);}else if(minScrollDistancePerSwipeIsSet&&Math.abs(totalTranslation)<minScrollDistancePerSwipe){const nextPage=Math.round((panOffset.value+minScrollDistancePerSwipe*Math.sign(totalTranslation))/size)*size;translation.value=withSpring(withProcessTranslation(nextPage),onScrollEnd);}else{endWithSpring(panTranslation,scrollEndVelocityValue,onScrollEnd);}if(!loop)touching.value=false;panOffset.value=undefined;}" };
 let closure_21 = { code: "function pnpm_ScrollViewGestureTsx16(e){const{updateContainerSize}=this.__closure;updateContainerSize({width:e.nativeEvent.layout.width,height:e.nativeEvent.layout.height});}" };
 
-export const ScrollViewGesture = function ScrollViewGesture(testID) {
-  const globalState = vertical(snapEnabled[2]).useGlobalState();
+export const ScrollViewGesture = function ScrollViewGesture(children) {
+  let enabled;
+  let obj11;
+  let onConfigurePanGesture;
+  let onTouchBegin;
+  let onTouchEnd;
+  let snapEnabled;
+  let vertical;
+  let tmp = vertical;
+  const tmp2 = snapEnabled;
+  let obj = vertical(snapEnabled[2]);
+  const globalState = obj.useGlobalState();
   const props = globalState.props;
   vertical = props.vertical;
   const pagingEnabled = props.pagingEnabled;
@@ -40,18 +52,18 @@ export const ScrollViewGesture = function ScrollViewGesture(testID) {
   const maxScrollDistancePerSwipe = props.maxScrollDistancePerSwipe;
   const minScrollDistancePerSwipe = props.minScrollDistancePerSwipe;
   const fixedDirection = props.fixedDirection;
-  let size = globalState.common.size;
+  size = globalState.common.size;
   const updateContainerSize = globalState.layout.updateContainerSize;
-  const translation = testID.translation;
-  let style = testID.style;
+  const translation = children.translation;
+  let style = children.style;
   ({ onConfigurePanGesture, enabled } = props);
+  const testID = children.testID;
   if (undefined === style) {
     style = {};
   }
-  const onScrollStart = testID.onScrollStart;
-  const onScrollEnd = testID.onScrollEnd;
-  ({ onTouchBegin, onTouchEnd } = testID);
-  let obj = vertical(snapEnabled[2]);
+  const onScrollStart = children.onScrollStart;
+  const onScrollEnd = children.onScrollEnd;
+  ({ onTouchBegin, onTouchEnd } = children);
   let fn = function y() {
     return !vertical;
   };
@@ -59,42 +71,40 @@ export const ScrollViewGesture = function ScrollViewGesture(testID) {
   fn.__workletHash = 1538641593051;
   fn.__initData = dataLength;
   const items = [vertical];
-  const derivedValue = vertical(snapEnabled[3]).useDerivedValue(fn, items);
-  const tmpResult = vertical(snapEnabled[3]);
-  const sharedValue = vertical(snapEnabled[3]).useSharedValue(0);
-  const tmpResult10 = vertical(snapEnabled[3]);
-  const sharedValue1 = vertical(snapEnabled[3]).useSharedValue(undefined);
-  const tmpResult11 = vertical(snapEnabled[3]);
-  const sharedValue2 = vertical(snapEnabled[3]).useSharedValue(false);
-  const tmpResult12 = vertical(snapEnabled[3]);
-  const sharedValue3 = vertical(snapEnabled[3]).useSharedValue(false);
-  const tmpResult13 = vertical(snapEnabled[3]);
-  const sharedValue4 = vertical(snapEnabled[3]).useSharedValue(0);
-  const tmpResult14 = vertical(snapEnabled[3]);
-  const sharedValue5 = vertical(snapEnabled[3]).useSharedValue(0);
-  const tmpResult15 = vertical(snapEnabled[3]);
-  const animatedRef = vertical(snapEnabled[3]).useAnimatedRef();
-  closure_25 = tmp12;
-  closure_26 = tmp13;
+  const tmpResult = tmp(tmp2[3]);
+  const derivedValue = tmpResult.useDerivedValue(fn, items);
+  const tmpResult10 = tmp(tmp2[3]);
+  const sharedValue = tmpResult10.useSharedValue(0);
+  const tmpResult11 = tmp(tmp2[3]);
+  const sharedValue1 = tmpResult11.useSharedValue(undefined);
+  const tmpResult12 = tmp(tmp2[3]);
+  const sharedValue2 = tmpResult12.useSharedValue(false);
+  const tmpResult13 = tmp(tmp2[3]);
+  const sharedValue3 = tmpResult13.useSharedValue(false);
+  const tmpResult14 = tmp(tmp2[3]);
+  const sharedValue4 = tmpResult14.useSharedValue(0);
+  const tmpResult15 = tmp(tmp2[3]);
+  const sharedValue5 = tmpResult15.useSharedValue(0);
+  const tmpResult16 = tmp(tmp2[3]);
+  const animatedRef = tmpResult16.useAnimatedRef();
+  const tmp12 = typeof maxScrollDistancePerSwipe === "number";
+  let closure_25 = tmp12;
+  const tmp13 = typeof minScrollDistancePerSwipe === "number";
+  let closure_26 = tmp13;
   class P {
     constructor() {
       if (!loop) {
-        tmp = overscrollEnabled;
         if (!overscrollEnabled) {
-          tmp2 = closure_0;
-          tmp3 = closure_2;
-          obj = closure_0(closure_2[3]);
-          tmp4 = closure_24;
-          measureResult = obj.measure(closure_24);
-          tmp6 = null;
-          num = undefined;
+          const obj = _mod1643;
+          const measureResult = obj.measure(animatedRef);
+          let num;
           if (measureResult != null) {
             num = measureResult.width;
           }
           if (!num) {
             num = 0;
           }
-          num2 = 0;
+          let num2 = 0;
           if (dataLength * size >= num) {
             num2 = dataLength * size - num;
           }
@@ -104,8 +114,8 @@ export const ScrollViewGesture = function ScrollViewGesture(testID) {
       return dataLength * size;
     }
   }
-  const tmpResult16 = vertical(snapEnabled[3]);
-  P.__closure = { loop, overscrollEnabled, measure: vertical(snapEnabled[3]).measure, containerRef: animatedRef, dataLength, size };
+  let obj2 = { loop, overscrollEnabled, measure: tmp(tmp2[3]).measure, containerRef: animatedRef, dataLength, size };
+  P.__closure = obj2;
   P.__workletHash = 14254270315231;
   P.__initData = overscrollEnabled;
   const items1 = [loop, size, dataLength, overscrollEnabled];
@@ -118,192 +128,162 @@ export const ScrollViewGesture = function ScrollViewGesture(testID) {
       tmp = closure_0;
       tmp2 = closure_2;
       obj.config = obj1;
-      obj3 = closure_0(closure_2[5]);
-      tmp3 = withAnimation;
+      tmp3 = closure_0(closure_2[5]);
+      tmp4 = withAnimation;
+      dealWithAnimation = tmp3.dealWithAnimation;
       if (withAnimation == null) {
-        tmp3 = obj;
+        tmp4 = obj;
       }
       fn = function t(arg0) {
-        let tmp = arg0;
-        if (arg0) {
-          tmp = closure_0;
-        }
+        const tmp = arg0 && closure_0;
         if (tmp) {
-          vertical(snapEnabled[3]).runOnJS(closure_0)();
           const obj = vertical(snapEnabled[3]);
+          obj.runOnJS(closure_0)();
         }
       };
-      obj5 = { onFinished: arg1, runOnJS: null };
-      dealWithAnimationResult = obj3.dealWithAnimation(tmp3);
-      obj5.runOnJS = tmp(tmp2[3]).runOnJS;
-      fn.__closure = obj5;
+      obj4 = { onFinished: arg1, runOnJS: null };
+      dealWithAnimationResult = dealWithAnimation(tmp4);
+      obj4.runOnJS = tmp(tmp2[3]).runOnJS;
+      fn.__closure = obj4;
       fn.__workletHash = 7565331159140;
       fn.__initData = closure_9;
-      return dealWithAnimationResult(testID, fn);
+      return dealWithAnimationResult(children, fn);
     }
   }
-  let obj2 = { loop, overscrollEnabled, measure: vertical(snapEnabled[3]).measure, containerRef: animatedRef, dataLength, size };
-  M.__closure = { scrollAnimationDuration, Easing: vertical(snapEnabled[4]).Easing, dealWithAnimation: vertical(snapEnabled[5]).dealWithAnimation, withAnimation, runOnJS: vertical(snapEnabled[3]).runOnJS };
+  let obj3 = { scrollAnimationDuration, Easing: tmp(tmp2[4]).Easing, dealWithAnimation: tmp(tmp2[5]).dealWithAnimation, withAnimation, runOnJS: tmp(tmp2[3]).runOnJS };
+  M.__closure = obj3;
   M.__workletHash = 14905784555207;
   M.__initData = maxScrollDistancePerSwipe;
   const items2 = [scrollAnimationDuration, withAnimation];
   const callback1 = loop.useCallback(M, items2);
   class V {
-    constructor(arg0, arg1, arg2) {
+    constructor(arg0, velocity, arg2) {
+      let tmp39Result;
       value = translation.value;
-      tmp = translation;
-      obj = closure_0(closure_2[3]);
-      obj1 = { velocity: arg1, deceleration: 0.999 };
-      withDecayResult = obj.withDecay(obj1);
+      const obj = _mod1643;
+      const obj2 = { velocity, deceleration: 0.999 };
+      let withDecayResult = obj.withDecay(obj2);
       if (!closure_25) {
-        tmp6 = arg2;
-        tmp7 = globalThis;
-        _Math2 = Math;
-        num = 2;
-        tmp8 = size;
-        tmp9 = -Math.round((value + 2 * arg1) / size);
-        tmp10 = pagingEnabled;
+        const _Math2 = Math;
+        const tmp10 = -Math.round((value + 2 * velocity) / size);
         if (pagingEnabled) {
-          num2 = 0;
-          num3 = -1;
-          if (testID >= 0) {
+          let floor;
+          let num3 = -1;
+          if (arg0 >= 0) {
             num3 = 1;
           }
-          tmp11 = -num3;
-          if (tmp11 < 0) {
-            _Math4 = Math;
+          if (-num3 < 0) {
+            const _Math4 = Math;
             floor = Math.ceil;
           } else {
-            _Math3 = Math;
+            const _Math3 = Math;
             floor = Math.floor;
           }
-          floorResult = floor(-value / tmp8);
-          _Math5 = Math;
-          if (floorResult !== tmp9) {
-            if (-Math.sign(arg1) === tmp11) {
-              tmp46 = loop;
+          const floorResult = floor(-value / size);
+          const _Math5 = Math;
+          if (floorResult !== tmp10) {
+            if (-Math.sign(velocity) === -num3) {
               if (loop) {
-                result = -floorResult + tmp11 * tmp8;
-                result1 = result;
-                tmp22 = closure_28;
-                if (!tmp46) {
-                  tmp25 = overscrollEnabled;
+                const result = -floorResult + tmp12 * size;
+                let result1 = result;
+                if (!loop) {
                   result1 = result;
                   if (!overscrollEnabled) {
-                    tmp26 = closure_27;
-                    _Math12 = Math;
-                    tmp27 = closure_27();
-                    _Math13 = Math;
-                    _Math14 = Math;
-                    _Math15 = Math;
-                    signResult = Math.sign(result);
-                    result1 = signResult * Math.max(0, Math.min(tmp27, Math.abs(result)));
+                    const _Math12 = Math;
+                    const _Math13 = Math;
+                    const _Math14 = Math;
+                    const _Math15 = Math;
+                    const tmp28 = callback();
+                    const signResult = Math.sign(result);
+                    result1 = signResult * Math.max(0, Math.min(tmp28, Math.abs(result)));
                   }
                 }
-                withDecayResult = tmp22(result1, arg2);
+                withDecayResult = callback1(result1, arg2);
               } else {
-                _Math6 = Math;
-                tmp13 = dataLength;
-                num4 = 1;
-                _Math7 = Math;
-                diff = dataLength - 1;
-                result2 = -Math.min(diff, Math.max(0, floorResult + tmp11)) * tmp8;
-                result3 = result2;
-                tmp15 = closure_28;
-                if (!tmp46) {
-                  tmp18 = overscrollEnabled;
+                const _Math6 = Math;
+                const _Math7 = Math;
+                const diff = dataLength - 1;
+                const result2 = -Math.min(diff, Math.max(0, floorResult + tmp12)) * size;
+                let result3 = result2;
+                if (!loop) {
                   result3 = result2;
                   if (!overscrollEnabled) {
-                    tmp19 = closure_27;
-                    _Math8 = Math;
-                    tmp20 = closure_27();
-                    _Math9 = Math;
-                    _Math10 = Math;
-                    _Math11 = Math;
-                    signResult1 = Math.sign(result2);
-                    result3 = signResult1 * Math.max(0, Math.min(tmp20, Math.abs(result2)));
+                    const _Math8 = Math;
+                    const _Math9 = Math;
+                    const _Math10 = Math;
+                    const _Math11 = Math;
+                    const tmp21 = callback();
+                    const signResult1 = Math.sign(result2);
+                    result3 = signResult1 * Math.max(0, Math.min(tmp21, Math.abs(result2)));
                   }
                 }
-                withDecayResult = tmp15(result3, arg2);
+                withDecayResult = callback1(result3, arg2);
               }
             }
           }
-          result4 = -floorResult * tmp8;
-          tmp31 = loop;
-          result5 = result4;
-          tmp29 = closure_28;
+          const result4 = -floorResult * size;
+          let result5 = result4;
           if (!loop) {
-            tmp33 = overscrollEnabled;
             result5 = result4;
             if (!overscrollEnabled) {
-              tmp34 = closure_27;
-              _Math16 = Math;
-              tmp35 = closure_27();
-              _Math17 = Math;
-              _Math18 = Math;
-              _Math19 = Math;
-              signResult2 = Math.sign(result4);
-              result5 = signResult2 * Math.max(0, Math.min(tmp35, Math.abs(result4)));
+              const _Math16 = Math;
+              const _Math17 = Math;
+              const _Math18 = Math;
+              const _Math19 = Math;
+              const tmp36 = callback();
+              const signResult2 = Math.sign(result4);
+              result5 = signResult2 * Math.max(0, Math.min(tmp36, Math.abs(result4)));
             }
           }
-          withDecayResult = tmp29(result5, arg2);
+          withDecayResult = callback1(result5, arg2);
         }
-        tmp37 = !tmp10;
-        if (!tmp10) {
-          tmp37 = snapEnabled;
-        }
-        tmp38Result = withDecayResult;
-        if (tmp37) {
-          result6 = -tmp9 * tmp8;
-          tmp40 = loop;
-          result7 = result6;
-          tmp38 = closure_28;
+        tmp39Result = withDecayResult;
+        const tmp38 = !pagingEnabled && snapEnabled;
+        if (tmp38) {
+          const result6 = -tmp10 * size;
+          let result7 = result6;
           if (!loop) {
-            tmp42 = overscrollEnabled;
             result7 = result6;
             if (!overscrollEnabled) {
-              tmp43 = closure_27;
-              _Math20 = Math;
-              tmp44 = closure_27();
-              _Math21 = Math;
-              _Math22 = Math;
-              _Math23 = Math;
-              signResult3 = Math.sign(result6);
-              num5 = 0;
-              result7 = signResult3 * Math.max(0, Math.min(tmp44, Math.abs(result6)));
+              const _Math20 = Math;
+              const _Math21 = Math;
+              const _Math22 = Math;
+              const _Math23 = Math;
+              const tmp45 = callback();
+              const signResult3 = Math.sign(result6);
+              result7 = signResult3 * Math.max(0, Math.min(tmp45, Math.abs(result6)));
             }
           }
-          tmp38Result = tmp38(result7, arg2);
+          tmp39Result = callback1(result7, arg2);
         }
       } else {
-        tmp3 = globalThis;
-        _Math = Math;
-        tmp4 = maxScrollDistancePerSwipe;
-        tmp38Result = value;
+        const _Math = Math;
+        tmp39Result = value;
       }
-      tmp.value = tmp38Result;
-      return;
+      translation.value = tmp39Result;
     }
   }
-  let obj3 = { scrollAnimationDuration, Easing: vertical(snapEnabled[4]).Easing, dealWithAnimation: vertical(snapEnabled[5]).dealWithAnimation, withAnimation, runOnJS: vertical(snapEnabled[3]).runOnJS };
-  V.__closure = { translation, withDecay: vertical(snapEnabled[3]).withDecay, maxScrollDistancePerSwipeIsSet: typeof maxScrollDistancePerSwipe === "number", maxScrollDistancePerSwipe, size, pagingEnabled, withSpring: callback1, loop, maxPage: dataLength, snapEnabled, overscrollEnabled, getLimit };
+  V.__closure = { translation, withDecay: tmp(tmp2[3]).withDecay, maxScrollDistancePerSwipeIsSet: tmp12, maxScrollDistancePerSwipe, size, pagingEnabled, withSpring: callback1, loop, maxPage: dataLength, snapEnabled, overscrollEnabled, getLimit };
   V.__workletHash = 205523855173;
   V.__initData = fixedDirection;
-  const items3 = [callback1, size, dataLength, loop, snapEnabled, translation, pagingEnabled, maxScrollDistancePerSwipe, typeof maxScrollDistancePerSwipe === "number"];
+  const items3 = [callback1, size, dataLength, loop, snapEnabled, translation, pagingEnabled, maxScrollDistancePerSwipe, tmp12];
+  ({ translation, withDecay: tmp(tmp2[3]).withDecay, maxScrollDistancePerSwipeIsSet: tmp12, maxScrollDistancePerSwipe, size, pagingEnabled, withSpring: callback1, loop, maxPage: dataLength, snapEnabled, overscrollEnabled, getLimit });
   const callback2 = loop.useCallback(V, items3);
   const fn2 = function z(arg0) {
-    if (arg0) {
+    const tmp = arg0;
+    if (tmp) {
       sharedValue2.value = false;
       if (onScrollEnd) {
-        cancelAnimation.runOnJS(tmp2)();
+        const obj = _mod1643;
+        obj.runOnJS(tmp3)();
       }
     }
   };
-  let obj4 = { translation, withDecay: vertical(snapEnabled[3]).withDecay, maxScrollDistancePerSwipeIsSet: typeof maxScrollDistancePerSwipe === "number", maxScrollDistancePerSwipe, size, pagingEnabled, withSpring: callback1, loop, maxPage: dataLength, snapEnabled, overscrollEnabled, getLimit };
-  fn2.__closure = { touching: sharedValue2, onScrollEnd, runOnJS: vertical(snapEnabled[3]).runOnJS };
+  fn2.__closure = { touching: sharedValue2, onScrollEnd, runOnJS: tmp(tmp2[3]).runOnJS };
   fn2.__workletHash = 13381002348098;
   fn2.__initData = size;
   const items4 = [onScrollEnd, sharedValue2];
+  ({ touching: sharedValue2, onScrollEnd, runOnJS: tmp(tmp2[3]).runOnJS });
   const callback3 = loop.useCallback(fn2, items4);
   class O {
     constructor() {
@@ -321,49 +301,30 @@ export const ScrollViewGesture = function ScrollViewGesture(testID) {
       return;
     }
   }
-  const obj5 = { touching: sharedValue2, onScrollEnd, runOnJS: vertical(snapEnabled[3]).runOnJS };
-  O.__closure = { touching: sharedValue2, translation, withDecay: vertical(snapEnabled[3]).withDecay, scrollEndVelocity: sharedValue5, onFinish: callback3 };
+  O.__closure = { touching: sharedValue2, translation, withDecay: tmp(tmp2[3]).withDecay, scrollEndVelocity: sharedValue5, onFinish: callback3 };
   O.__workletHash = 12267307896109;
   O.__initData = updateContainerSize;
   const items5 = [callback3, sharedValue5, sharedValue2, translation];
+  ({ touching: sharedValue2, translation, withDecay: tmp(tmp2[3]).withDecay, scrollEndVelocity: sharedValue5, onFinish: callback3 });
   const callback4 = loop.useCallback(O, items5);
   class F {
     constructor() {
-      if (!closure_20.value) {
-        iter = translation;
-        num = 0;
+      if (!sharedValue2.value) {
         if (translation.value > 0) {
-          tmp = closure_22;
-          if (closure_22.value < 0) {
-            tmp10 = closure_31;
-            tmp11 = closure_31();
-            return;
-          } else {
-            tmp12 = loop;
-            if (!loop) {
-              tmp2 = closure_28;
-              iter.value = closure_28(0);
-              return;
-            }
+          if (sharedValue4.value < 0) {
+            callback4();
+          } else if (!loop) {
+            translation.value = callback1(0);
           }
         }
-        num2 = 1;
-        if (iter.value < -dataLength - 1 * size) {
-          tmp5 = closure_22;
-          if (closure_22.value > 0) {
-            tmp8 = closure_31;
-            tmp9 = closure_31();
-            return;
-          } else {
-            tmp6 = loop;
-            if (!loop) {
-              tmp7 = closure_28;
-              iter.value = closure_28(-tmp3 - 1 * tmp4);
-            }
+        if (translation.value < -dataLength - 1 * size) {
+          if (sharedValue4.value > 0) {
+            callback4();
+          } else if (!loop) {
+            translation.value = callback1(-tmp3 - 1 * tmp4);
           }
         }
       }
-      return;
     }
   }
   F.__closure = { touching: sharedValue2, translation, scrollEndTranslation: sharedValue4, activeDecay: callback4, loop, withSpring: callback1, maxPage: dataLength, size };
@@ -371,27 +332,25 @@ export const ScrollViewGesture = function ScrollViewGesture(testID) {
   F.__initData = onScrollStart;
   const items6 = [sharedValue2, translation, dataLength, size, sharedValue4, loop, callback4, callback1];
   const callback5 = loop.useCallback(F, items6);
-  const obj6 = { touching: sharedValue2, translation, withDecay: vertical(snapEnabled[3]).withDecay, scrollEndVelocity: sharedValue5, onFinish: callback3 };
   const fn3 = function k() {
     return translation.value;
   };
   fn3.__closure = { translation };
   fn3.__workletHash = 10264158907215;
   fn3.__initData = onScrollEnd;
+  const tmpResult17 = tmp(tmp2[3]);
   class A {
     constructor() {
       if (!pagingEnabled) {
-        tmp = closure_32;
-        tmp2 = closure_32();
+        callback5();
       }
-      return;
     }
   }
   A.__closure = { pagingEnabled, resetBoundary: callback5 };
   A.__workletHash = 1428786849795;
   A.__initData = dataLength;
   const items7 = [pagingEnabled, callback5];
-  const animatedReaction = vertical(snapEnabled[3]).useAnimatedReaction(fn3, A, items7);
+  const animatedReaction = tmpResult17.useAnimatedReaction(fn3, A, items7);
   function withProcessTranslation(arg0) {
     if (!loop) {
       if (!overscrollEnabled) {
@@ -399,8 +358,9 @@ export const ScrollViewGesture = function ScrollViewGesture(testID) {
         const _Math2 = Math;
         const _Math3 = Math;
         const _Math4 = Math;
-        const tmp3 = callback();
-        return Math.sign(arg0) * Math.max(0, Math.min(tmp3, Math.abs(arg0)));
+        const tmp4 = callback();
+        const signResult = Math.sign(arg0);
+        return signResult * Math.max(0, Math.min(tmp4, Math.abs(arg0)));
       }
     }
     return arg0;
@@ -410,38 +370,31 @@ export const ScrollViewGesture = function ScrollViewGesture(testID) {
   withProcessTranslation.__initData = derivedValue;
   class En {
     constructor(arg0) {
-      closure_20.value = true;
-      closure_21.value = true;
+      sharedValue2.value = true;
+      sharedValue3.value = true;
       if (onScrollStart) {
-        tmp2 = closure_0;
-        tmp3 = closure_2;
-        obj = closure_0(closure_2[3]);
-        tmp4 = obj.runOnJS(tmp)();
+        const obj = _mod1643;
+        obj.runOnJS(tmp)();
       }
-      closure_18.value = (dataLength - 1) * size;
-      tmp6 = loop;
-      tmp5 = closure_18;
-      if (!loop) {
-        tmp6 = overscrollEnabled;
-      }
+      sharedValue.value = (dataLength - 1) * size;
+      const tmp6 = loop || overscrollEnabled;
       if (!tmp6) {
-        tmp7 = closure_27;
-        tmp5.value = closure_27();
+        sharedValue.value = callback();
       }
-      closure_19.value = translation.value;
-      return;
+      sharedValue1.value = translation.value;
     }
   }
-  const tmpResult17 = vertical(snapEnabled[3]);
-  En.__closure = { touching: sharedValue2, validStart: sharedValue3, onScrollStart, runOnJS: vertical(snapEnabled[3]).runOnJS, max: sharedValue, maxPage: dataLength, size, loop, overscrollEnabled, getLimit, panOffset: sharedValue1, translation };
+  En.__closure = { touching: sharedValue2, validStart: sharedValue3, onScrollStart, runOnJS: tmp(tmp2[3]).runOnJS, max: sharedValue, maxPage: dataLength, size, loop, overscrollEnabled, getLimit, panOffset: sharedValue1, translation };
   En.__workletHash = 11962065871670;
   En.__initData = sharedValue;
   const items8 = [sharedValue, size, dataLength, loop, sharedValue2, sharedValue1, sharedValue3, translation, overscrollEnabled, getLimit, onScrollStart];
   function bn(translationY) {
     if (undefined !== sharedValue1.value) {
+      let tmp9;
       if (sharedValue3.value) {
         tmp16.value = false;
-        cancelAnimation.cancelAnimation(translation);
+        const obj = _mod1643;
+        obj.cancelAnimation(translation);
       }
       sharedValue2.value = true;
       let translationX = translationY.translationY;
@@ -450,7 +403,7 @@ export const ScrollViewGesture = function ScrollViewGesture(testID) {
       }
       if ("negative" === fixedDirection) {
         const _Math2 = Math;
-        let tmp9 = -Math.abs(translationX);
+        tmp9 = -Math.abs(translationX);
       } else {
         tmp9 = translationX;
         if ("positive" === tmp8) {
@@ -468,21 +421,19 @@ export const ScrollViewGesture = function ScrollViewGesture(testID) {
       translation.value = sharedValue1.value + tmp9;
     }
   }
-  const obj8 = { panOffset: sharedValue1, validStart: sharedValue3, cancelAnimation: null, translation: null, touching: null, isHorizontal: null, fixedDirection: null, loop: null, max: null };
-  const obj7 = { touching: sharedValue2, validStart: sharedValue3, onScrollStart, runOnJS: vertical(snapEnabled[3]).runOnJS, max: sharedValue, maxPage: dataLength, size, loop, overscrollEnabled, getLimit, panOffset: sharedValue1, translation };
-  obj8.cancelAnimation = vertical(snapEnabled[3]).cancelAnimation;
-  obj8.translation = translation;
-  obj8.touching = sharedValue2;
-  obj8.isHorizontal = derivedValue;
-  obj8.fixedDirection = fixedDirection;
-  obj8.loop = loop;
-  obj8.max = sharedValue;
+  const obj8 = { panOffset: sharedValue1, validStart: sharedValue3, cancelAnimation: tmp(tmp2[3]).cancelAnimation, translation, touching: sharedValue2, isHorizontal: derivedValue, fixedDirection, loop, max: sharedValue };
+  ({ touching: sharedValue2, validStart: sharedValue3, onScrollStart, runOnJS: tmp(tmp2[3]).runOnJS, max: sharedValue, maxPage: dataLength, size, loop, overscrollEnabled, getLimit, panOffset: sharedValue1, translation });
+  let tmp21 = scrollAnimationDuration(En, items8);
   bn.__closure = obj8;
   bn.__workletHash = 851179073329;
   bn.__initData = sharedValue1;
   const items9 = [derivedValue, sharedValue, sharedValue1, loop, overscrollEnabled, fixedDirection, translation, sharedValue3, sharedValue2];
   function yn(velocityX, arg1) {
+    let translationX;
+    let translationY;
+    let velocityY;
     if (undefined !== sharedValue1.value) {
+      let tmp3;
       ({ velocityY, translationY, translationX } = velocityX);
       if (derivedValue.value) {
         velocityY = velocityX.velocityX;
@@ -493,7 +444,7 @@ export const ScrollViewGesture = function ScrollViewGesture(testID) {
       }
       if ("negative" === fixedDirection) {
         const _Math2 = Math;
-        let tmp3 = -Math.abs(translationY);
+        tmp3 = -Math.abs(translationY);
       } else {
         tmp3 = translationY;
         if ("positive" === tmp2) {
@@ -519,8 +470,8 @@ export const ScrollViewGesture = function ScrollViewGesture(testID) {
                 const _Math15 = Math;
                 const _Math16 = Math;
                 const tmp38 = callback();
-                result1 = Math.sign(result) * Math.max(0, Math.min(tmp38, Math.abs(result)));
                 const signResult = Math.sign(result);
+                result1 = signResult * Math.max(0, Math.min(tmp38, Math.abs(result)));
               }
             }
             tmp31.value = tmp32(result1, onScrollEnd);
@@ -549,8 +500,8 @@ export const ScrollViewGesture = function ScrollViewGesture(testID) {
                 const _Math9 = Math;
                 const _Math10 = Math;
                 const tmp26 = callback();
-                result3 = Math.sign(result2) * Math.max(0, Math.min(tmp26, Math.abs(result2)));
                 const signResult1 = Math.sign(result2);
+                result3 = signResult1 * Math.max(0, Math.min(tmp26, Math.abs(result2)));
               }
             }
             tmp19.value = tmp20(result3, onScrollEnd);
@@ -562,26 +513,27 @@ export const ScrollViewGesture = function ScrollViewGesture(testID) {
       callback2(tmp3, velocityY, onScrollEnd);
     }
   }
-  yn.__closure = { panOffset: sharedValue1, isHorizontal: derivedValue, scrollEndVelocity: sharedValue5, fixedDirection, scrollEndTranslation: sharedValue4, maxScrollDistancePerSwipeIsSet: typeof maxScrollDistancePerSwipe === "number", maxScrollDistancePerSwipe, size, translation, withSpring: callback1, withProcessTranslation, onScrollEnd, minScrollDistancePerSwipeIsSet: typeof minScrollDistancePerSwipe === "number", minScrollDistancePerSwipe, endWithSpring: callback2, loop, touching: sharedValue2 };
+  yn.__closure = { panOffset: sharedValue1, isHorizontal: derivedValue, scrollEndVelocity: sharedValue5, fixedDirection, scrollEndTranslation: sharedValue4, maxScrollDistancePerSwipeIsSet: tmp12, maxScrollDistancePerSwipe, size, translation, withSpring: callback1, withProcessTranslation, onScrollEnd, minScrollDistancePerSwipeIsSet: tmp13, minScrollDistancePerSwipe, endWithSpring: callback2, loop, touching: sharedValue2 };
   yn.__workletHash = 14460845775334;
   yn.__initData = sharedValue2;
-  const items10 = [size, loop, sharedValue2, sharedValue1, translation, derivedValue, sharedValue5, sharedValue4, fixedDirection, typeof maxScrollDistancePerSwipe === "number", maxScrollDistancePerSwipe, typeof maxScrollDistancePerSwipe === "number", minScrollDistancePerSwipe, callback2, callback1, onScrollEnd];
-  const tmp21 = scrollAnimationDuration(En, items8);
+  const items10 = [size, loop, sharedValue2, sharedValue1, translation, derivedValue, sharedValue5, sharedValue4, fixedDirection, tmp12, maxScrollDistancePerSwipe, tmp12, minScrollDistancePerSwipe, callback2, callback1, onScrollEnd];
   const tmp22 = scrollAnimationDuration(bn, items9);
-  const tmp23 = scrollAnimationDuration(yn, items10);
+  const obj9 = { onConfigurePanGesture, onGestureStart: tmp21, onGestureUpdate: tmp22, onGestureEnd: scrollAnimationDuration(yn, items10), options: { enabled } };
+  const tmpResult18 = tmp(tmp2[6]);
   class Pn {
-    constructor(arg0) {
-      size = { width: testID.nativeEvent.layout.width, height: testID.nativeEvent.layout.height };
-      tmp = updateContainerSize(size);
-      return;
+    constructor(nativeEvent) {
+      size = { width: nativeEvent.nativeEvent.layout.width, height: nativeEvent.nativeEvent.layout.height };
+      updateContainerSize(size);
     }
   }
   Pn.__closure = { updateContainerSize };
   Pn.__workletHash = 15591637556712;
   Pn.__initData = sharedValue3;
   const items11 = [updateContainerSize];
-  const panGestureProxy = vertical(snapEnabled[6]).usePanGestureProxy({ onConfigurePanGesture, onGestureStart: tmp21, onGestureUpdate: tmp22, onGestureEnd: tmp23, options: { enabled } });
+  const panGestureProxy = tmpResult18.usePanGestureProxy(obj9);
   const callback6 = loop.useCallback(Pn, items11);
-  const obj10 = { gesture: panGestureProxy, children: withAnimation(pagingEnabled(snapEnabled[3]).View, { ref: animatedRef, testID: testID.testID, style, onTouchStart: onTouchBegin, onTouchEnd, onLayout: callback6, children: testID.children }) };
-  return withAnimation(vertical(snapEnabled[7]).GestureDetector, obj10);
+  const obj10 = { gesture: panGestureProxy, children: withAnimation(pagingEnabled(tmp2[3]).View, obj11) };
+  const GestureDetector = tmp(tmp2[7]).GestureDetector;
+  obj11 = { ref: animatedRef, testID, style, onTouchStart: onTouchBegin, onTouchEnd, onLayout: callback6, children: children.children };
+  return withAnimation(GestureDetector, obj10);
 };

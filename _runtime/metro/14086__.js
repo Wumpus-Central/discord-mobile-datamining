@@ -5,8 +5,9 @@ import _mod14087 from "module_14087" /* 14087 */;
 
 
 export default (obj) => {
+  let tmp2;
   if (typeof obj === "object") {
-    let tmp2 = null !== obj;
+    tmp2 = null !== obj;
   } else {
     tmp2 = _mod14087(obj);
   }

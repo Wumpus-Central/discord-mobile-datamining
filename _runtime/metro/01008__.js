@@ -3,8 +3,6 @@
 // Module 1008
 import encodeUTF8 from "encodeUTF8" /* 880 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
 export const parseContentLengthHeader = function parseContentLengthHeader(responseHeader) {
   if (responseHeader) {
@@ -19,21 +17,27 @@ export const parseContentLengthHeader = function parseContentLengthHeader(respon
   }
 };
 export const getBodySize = function getBodySize(size) {
-  if (size) {
+  function _serializeFormData(size) {
+    const str = new URLSearchParams(size);
+    return str.toString();
+  }
+  const tmp = size;
+  if (tmp) {
     try {
       if (typeof size === "string") {
-        return encodeUTF8.encodeUTF8(size).length;
+        const obj3 = encodeUTF8;
+        return obj3.encodeUTF8(size).length;
       } else {
         const _URLSearchParams = URLSearchParams;
         if (size instanceof URLSearchParams) {
-          return encodeUTF8.encodeUTF8(size.toString()).length;
+          const obj2 = encodeUTF8;
+          return obj2.encodeUTF8(size.toString()).length;
         } else {
           const _FormData = FormData;
           if (size instanceof FormData) {
-            const tmp = (function _serializeFormData(size) {
-              return new URLSearchParams(size).toString();
-            })(size);
-            return encodeUTF8.encodeUTF8(tmp).length;
+            const tmp2 = _serializeFormData(size);
+            const obj = encodeUTF8;
+            return obj.encodeUTF8(tmp2).length;
           } else {
             const _Blob = Blob;
             if (size instanceof Blob) {

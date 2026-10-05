@@ -1,18 +1,19 @@
 // === Module 1533: ? ===
 
 // Module 1533
-import NavigationContainerRefContext from "NavigationContainerRefContext" /* 1521 */;
-import NavigationContext from "NavigationContext" /* 1534 */;
-import noop from "module_19" /* 19 */;
+import react2 from "react" /* 1521 */;
+import react3 from "react" /* 1534 */;
+import react from "react" /* 19 */;
 
-require = arg1;
 
 export const useNavigation = function useNavigation() {
-  const context = noop.useContext(NavigationContainerRefContext.NavigationContainerRefContext);
-  let context1 = noop.useContext(NavigationContext.NavigationContext);
+  const context = react.useContext(react2.NavigationContainerRefContext);
+  let context1 = react.useContext(react3.NavigationContext);
   if (undefined === context1) {
     if (undefined === context) {
       const _Error = Error;
+      const self = this;
+      const self2 = this;
       const error = new Error("Couldn't find a navigation object. Is your component inside NavigationContainer?");
       throw error;
     }

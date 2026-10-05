@@ -2,9 +2,9 @@
 
 // Module 17552 (lowerBound)
 
-export default function lowerBound(arg0, arg1, fn) {
+export default function lowerBound(_queue, arg1, fn) {
   let diff;
-  let length = arg0.length;
+  let length = _queue.length;
   let num = 0;
   let num2 = 0;
   if (length > 0) {
@@ -13,7 +13,7 @@ export default function lowerBound(arg0, arg1, fn) {
       let sum = num + tmp;
       let sum1 = num;
       diff = tmp;
-      if (fn(arg0[sum], arg1) <= 0) {
+      if (fn(_queue[sum], arg1) <= 0) {
         sum1 = sum + 1;
         diff = length - (tmp + 1);
       }

@@ -1,28 +1,37 @@
 // === Module 1694: ? ===
 
 // Module 1694
-const require = fn;
-let dependencyMap = arg6;
+import _mod1683 from "module_1683" /* 1683 */;
+import EasingNameSymbol from "EasingNameSymbol" /* 1695 */;
+
+const require = globalThis.__r;
+let _require, dependencyMap;
+
 let __initData = { code: "function pnpm_timingTs2(){const{Easing,userConfig,toValue,callback,getReduceMotionForAnimation}=this.__closure;var _userConfig;const config={duration:300,easing:Easing.inOut(Easing.quad)};if(userConfig){Object.keys(userConfig).forEach(function(key){return config[key]=userConfig[key];});}function timing(animation,now){const{toValue:toValue,startTime:startTime,startValue:startValue}=animation;const runtime=now-startTime;if(runtime>=config.duration){animation.startTime=0;animation.current=toValue;return true;}const progress=animation.easing(runtime/config.duration);animation.current=startValue+(toValue-startValue)*progress;return false;}function onStart(animation,value,now,previousAnimation){if(previousAnimation&&previousAnimation.type==='timing'&&previousAnimation.toValue===toValue&&previousAnimation.startTime){animation.startTime=previousAnimation.startTime;animation.startValue=previousAnimation.startValue;}else{animation.startTime=now;animation.startValue=value;}animation.current=value;if(typeof config.easing==='object'){animation.easing=config.easing.factory();}else{animation.easing=config.easing;}}return{type:'timing',onFrame:timing,onStart:onStart,progress:0,toValue:toValue,startValue:0,startTime:0,easing:function(){return 0;},current:toValue,callback:callback,reduceMotion:getReduceMotionForAnimation((_userConfig=userConfig)===null||_userConfig===void 0?void 0:_userConfig.reduceMotion)};}" };
-fn = function t(toValue, userConfig, callback) {
+let fn = function t(toValue, userConfig, callback) {
   _require = toValue;
   dependencyMap = userConfig;
   __initData = callback;
+  const obj = require("module_1683");
   const fn = function u() {
-    const current = { duration: 300, easing: null };
-    const Easing = toValue(userConfig[1]).Easing;
-    current.easing = Easing.inOut(toValue(userConfig[1]).Easing.quad);
+    let Easing;
+    let getReduceMotionForAnimation;
+    let obj;
+    let reduceMotion;
+    const current = { duration: 300, easing: Easing.inOut(toValue(userConfig[1]).Easing.quad) };
+    Easing = toValue(userConfig[1]).Easing;
     if (userConfig) {
       const _Object = Object;
       const keys = Object.keys(userConfig);
       const item = keys.forEach((item) => {
-        obj[item] = dependencyMap[item];
-        return dependencyMap[item];
+        obj[item] = userConfig[item];
+        return userConfig[item];
       });
     }
     const obj2 = {
       type: "timing",
       onFrame: function timing(startTime, arg1) {
+        let startValue;
         ({ toValue, startValue } = startTime);
         const diff = arg1 - startTime.startTime;
         if (diff >= obj.duration) {
@@ -35,9 +44,10 @@ fn = function t(toValue, userConfig, callback) {
         }
       },
       onStart(arg0, current, startTime, type) {
-        if (type) {
+        const tmp = type;
+        if (tmp) {
           if ("timing" === type.type) {
-            if (type.toValue === closure_0) {
+            if (type.toValue === toValue) {
               if (type.startTime) {
                 ({ startTime: arg0.startTime, startValue: arg0.startValue } = type);
               }
@@ -63,22 +73,24 @@ fn = function t(toValue, userConfig, callback) {
       },
       current,
       callback,
-      reduceMotion: null
+      reduceMotion: getReduceMotionForAnimation(reduceMotion)
     };
-    let reduceMotion;
+    reduceMotion = undefined;
+    getReduceMotionForAnimation = toValue(userConfig[0]).getReduceMotionForAnimation;
+    toValue(userConfig[0]);
     if (userConfig != null) {
       reduceMotion = userConfig.reduceMotion;
     }
-    obj2.reduceMotion = toValue(userConfig[0]).getReduceMotionForAnimation(reduceMotion);
     return obj2;
   };
-  const obj = require("module_1683");
-  fn.__closure = { Easing: require("linear").Easing, userConfig, toValue, callback, getReduceMotionForAnimation: require("module_1683").getReduceMotionForAnimation };
+  let obj2 = { Easing: require("EasingNameSymbol").Easing, userConfig, toValue, callback, getReduceMotionForAnimation: require("module_1683").getReduceMotionForAnimation };
+  fn.__closure = obj2;
   fn.__workletHash = 16704866504175;
   fn.__initData = __initData;
   return obj.defineAnimation(toValue, fn);
 };
-fn.__closure = { __DEV__: false, assertEasingIsWorklet: fn(1683).assertEasingIsWorklet, defineAnimation: fn(1683).defineAnimation, Easing: fn(1695).Easing, getReduceMotionForAnimation: fn(1683).getReduceMotionForAnimation };
+let obj = { __DEV__: false, assertEasingIsWorklet: _mod1683.assertEasingIsWorklet, defineAnimation: _mod1683.defineAnimation, Easing: EasingNameSymbol.Easing, getReduceMotionForAnimation: _mod1683.getReduceMotionForAnimation };
+fn.__closure = obj;
 fn.__workletHash = 7258055328141;
 fn.__initData = { code: "function pnpm_timingTs1(toValue,userConfig,callback){const{__DEV__,assertEasingIsWorklet,defineAnimation,Easing,getReduceMotionForAnimation}=this.__closure;if(__DEV__&&userConfig!==null&&userConfig!==void 0&&userConfig.easing){assertEasingIsWorklet(userConfig.easing);}return defineAnimation(toValue,function(){'worklet';const config={duration:300,easing:Easing.inOut(Easing.quad)};if(userConfig){Object.keys(userConfig).forEach(function(key){return config[key]=userConfig[key];});}function timing(animation,now){const{toValue:toValue,startTime:startTime,startValue:startValue}=animation;const runtime=now-startTime;if(runtime>=config.duration){animation.startTime=0;animation.current=toValue;return true;}const progress=animation.easing(runtime/config.duration);animation.current=startValue+(toValue-startValue)*progress;return false;}function onStart(animation,value,now,previousAnimation){if(previousAnimation&&previousAnimation.type==='timing'&&previousAnimation.toValue===toValue&&previousAnimation.startTime){animation.startTime=previousAnimation.startTime;animation.startValue=previousAnimation.startValue;}else{animation.startTime=now;animation.startValue=value;}animation.current=value;if(typeof config.easing==='object'){animation.easing=config.easing.factory();}else{animation.easing=config.easing;}}return{type:'timing',onFrame:timing,onStart:onStart,progress:0,toValue:toValue,startValue:0,startTime:0,easing:function(){return 0;},current:toValue,callback:callback,reduceMotion:getReduceMotionForAnimation(userConfig===null||userConfig===void 0?void 0:userConfig.reduceMotion)};});}" };
 

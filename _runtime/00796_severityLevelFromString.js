@@ -1,7 +1,7 @@
 // === Module 796: severityLevelFromString ===
 
 // Module 796 (severityLevelFromString)
-Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const severityLevelFromString = function severityLevelFromString(level) {
   let str = "warning";

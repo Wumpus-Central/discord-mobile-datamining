@@ -1,13 +1,14 @@
 // === Module 1516: NOT_INITIALIZED_ERROR ===
 
 // Module 1516 (NOT_INITIALIZED_ERROR)
-const require = arg1;
-let dependencyMap = arg6;
+let _require, closure_0, dependencyMap;
+
 let c2 = "The 'navigation' object hasn't been initialized yet. This might happen if you don't have a navigator mounted, or if the navigator hasn't finished mounting. See https://reactnavigation.org/docs/navigating-without-navigation-prop#handling-initialization for more details.";
 
 export const NOT_INITIALIZED_ERROR = "The 'navigation' object hasn't been initialized yet. This might happen if you don't have a navigator mounted, or if the navigator hasn't finished mounting. See https://reactnavigation.org/docs/navigating-without-navigation-prop#handling-initialization for more details.";
 export const createNavigationContainerRef = function createNavigationContainerRef() {
-  let items = [...Object.keys(closure_0(closure_1[0]).CommonActions), "addListener", "removeListener", "resetRoot", "dispatch", "isFocused", "canGoBack", "getRootState", "getState", "getParent", "getCurrentRoute", "getCurrentOptions"];
+  let _null;
+  let items = [...keys(closure_0(c1[0]).CommonActions), "addListener", "removeListener", "resetRoot", "dispatch", "isFocused", "canGoBack", "getRootState", "getState", "getParent", "getCurrentRoute", "getCurrentOptions"];
   const sum = tmp + 1;
   const sum1 = sum + 1;
   const sum2 = sum1 + 1;
@@ -21,16 +22,22 @@ export const createNavigationContainerRef = function createNavigationContainerRe
   function removeListener(arg0, arg1) {
 
   }
-  let obj = {};
+  const obj = {
+    isReady() {
+      const isReadyResult = null != _null && _null.isReady();
+      return isReadyResult;
+    }
+  };
   Object.defineProperty(obj, "current", {
-    get: () => closure_1,
+    get: () => c1,
     set: (arg0) => {
       closure_0 = arg0;
-      closure_1 = arg0;
+      let c1 = arg0;
       if (null != arg0) {
         const _Object = Object;
         const entries = Object.entries(closure_0);
         let item = entries.forEach((item) => {
+          let arr;
           [, arr] = item;
           item = arr.forEach((item) => {
             closure_0.addListener(closure_1_0, item);
@@ -39,49 +46,46 @@ export const createNavigationContainerRef = function createNavigationContainerRe
       }
     }
   });
-  obj.isReady = function isReady() {
-    let isReadyResult = null != ready;
-    if (isReadyResult) {
-      isReadyResult = ready.isReady();
-    }
-    return isReadyResult;
-  };
   const merged = Object.assign(items.reduce((acc, item) => {
     acc[item] = () => {
+      let tmp18;
+      let tmp19;
       const items = [...arguments];
       let first;
-      closure_1 = undefined;
+      let closure_1;
       if ("removeListener" === item) {
-        [tmp17, tmp18] = items;
+        [tmp18, tmp19] = items;
         if (typeof removeListener === "function") {
-          first = tmp18;
-          if (item[tmp17]) {
-            item[tmp17] = item[tmp17].filter((item) => item !== closure_0);
+          item = tmp19;
+          if (item[tmp18]) {
+            const arr4 = item[tmp18];
+            item[tmp18] = arr4.filter((item) => item !== closure_0);
           }
-          if (closure_1 != null) {
-            obj.removeListener(tmp17, tmp18);
+          if (c1 != null) {
+            c1.removeListener(tmp18, tmp19);
           }
-          obj = closure_1;
         } else {
           throw new TypeError("Trying to call a non-function");
         }
-      } else if (null != closure_1) {
+      } else if (null != c1) {
         const items1 = [];
-        HermesBuiltin.arraySpread(items, 0);
-        return HermesBuiltin.apply(items1, closure_1);
+        HermesBuiltin.arraySpread(items1, items, 0);
+        return HermesBuiltin.apply(c1[item], items1, c1);
       } else if ("addListener" === item) {
         first = items[0];
-        closure_1 = tmp6;
+        closure_1 = tmp7;
         item[first] = item[first] || [];
-        item[first].push(items[1]);
+        const arr2 = item[first];
+        let arr = arr2.push(tmp7);
         return () => {
-          if (typeof removeListener === "function") {
+          if (typeof closure_2_2 === "function") {
             closure_0 = closure_1;
-            if (closure_0[first]) {
-              tmp3[first] = tmp3[first].filter((item) => item !== closure_0);
+            if (item[first]) {
+              const arr = item[first];
+              item[first] = arr.filter((item) => item !== closure_0);
             }
-            if (ready != null) {
-              ready.removeListener(first, closure_1);
+            if (closure_2_1 != null) {
+              closure_2_1.removeListener(first, closure_1);
             }
           } else {
             throw new TypeError("Trying to call a non-function");

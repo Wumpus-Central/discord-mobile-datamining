@@ -3,6 +3,12 @@
 // Module 1756
 
 export const getViewInfo = function getViewInfo(findHostInstanceResult) {
+  let __nativeTag;
+  let _nativeTag;
+  let _nativeTag1;
+  let obj;
+  let viewConfig1;
+  let viewConfig3;
   if (undefined !== findHostInstanceResult._nativeTag) {
     if (null !== findHostInstanceResult.__nativeTag) {
       let uiViewClassName;
@@ -12,18 +18,16 @@ export const getViewInfo = function getViewInfo(findHostInstanceResult) {
           uiViewClassName = viewConfig2.uiViewClassName;
         }
       }
-      const obj2 = { viewName: uiViewClassName, viewTag: null, viewConfig: null };
-      let _nativeTag;
+      const obj2 = { viewName: uiViewClassName, viewTag: _nativeTag, viewConfig: viewConfig1 };
+      _nativeTag = undefined;
       if (findHostInstanceResult != null) {
         _nativeTag = findHostInstanceResult._nativeTag;
       }
-      obj2.viewTag = _nativeTag;
-      let viewConfig1;
+      viewConfig1 = undefined;
       if (findHostInstanceResult != null) {
         viewConfig1 = findHostInstanceResult.viewConfig;
       }
-      obj2.viewConfig = viewConfig1;
-      let obj = obj2;
+      obj = obj2;
     }
     return obj;
   }
@@ -44,13 +48,11 @@ export const getViewInfo = function getViewInfo(findHostInstanceResult) {
       if (__viewConfig != null) {
         uiViewClassName1 = __viewConfig.uiViewClassName;
       }
-      const obj3 = { viewName: uiViewClassName1, viewTag: null, viewConfig: null };
-      let __nativeTag;
+      const obj3 = { viewName: uiViewClassName1, viewTag: __nativeTag, viewConfig: __viewConfig };
+      __nativeTag = undefined;
       if (findHostInstanceResult != null) {
         __nativeTag = findHostInstanceResult.__nativeTag;
       }
-      obj3.viewTag = __nativeTag;
-      obj3.viewConfig = __viewConfig;
       obj = obj3;
     }
   }
@@ -61,15 +63,13 @@ export const getViewInfo = function getViewInfo(findHostInstanceResult) {
       uiViewClassName2 = viewConfig.uiViewClassName;
     }
   }
-  obj = { viewName: uiViewClassName2, viewTag: null, viewConfig: null };
-  let _nativeTag1;
+  obj = { viewName: uiViewClassName2, viewTag: _nativeTag1, viewConfig: viewConfig3 };
+  _nativeTag1 = undefined;
   if (findHostInstanceResult != null) {
     _nativeTag1 = findHostInstanceResult._nativeTag;
   }
-  obj.viewTag = _nativeTag1;
-  let viewConfig3;
+  viewConfig3 = undefined;
   if (findHostInstanceResult != null) {
     viewConfig3 = findHostInstanceResult.viewConfig;
   }
-  obj.viewConfig = viewConfig3;
 };

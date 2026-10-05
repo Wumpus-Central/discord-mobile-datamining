@@ -1,13 +1,14 @@
 // === Module 666: equalObjects ===
 
 // Module 666 (equalObjects)
-import _mod667 from "module_667" /* 667 */;
+import getAllKeys from "getAllKeys" /* 667 */;
 
 
 export default function equalObjects(arg0, arg1, arg2, fn, fn2, get) {
-  const arr = _mod667(arg0);
-  if (arr.length != _mod667(arg1).length) {
-    if (!tmp) {
+  let tmp14;
+  const arr = getAllKeys(arg0);
+  if (arr.length != getAllKeys(arg1).length) {
+    if (!(1 & arg2)) {
       return false;
     }
   }
@@ -15,25 +16,25 @@ export default function equalObjects(arg0, arg1, arg2, fn, fn2, get) {
   let tmp4 = diff;
   if (+arr.length) {
     while (true) {
+      let callResult;
       let tmp5 = arr[diff];
       if (tmp) {
-        let tmp8 = tmp5 in arg1;
+        callResult = tmp5 in arg1;
       } else {
-        let call = hasOwnProperty.call;
-        tmp8 = typeof call === "unknown" ? hasOwnProperty(tmp5) : call(arg1, tmp5);
+        callResult = hasOwnProperty.call(arg1, tmp5);
       }
-      if (!tmp8) {
+      if (!callResult) {
         break;
       } else {
-        let tmp9 = +diff;
-        diff = tmp9 - 1;
+        let tmp8 = +diff;
+        diff = tmp8 - 1;
         tmp4 = diff;
       }
     }
     return false;
   }
-  value = get.get(arg0);
-  value2 = get.get(arg1);
+  const value = get.get(arg0);
+  const value2 = get.get(arg1);
   if (value) {
     if (value2) {
       return value == arg1 && value2 == arg0;
@@ -42,61 +43,72 @@ export default function equalObjects(arg0, arg1, arg2, fn, fn2, get) {
   const result = get.set(arg0, arg1);
   const result1 = get.set(arg1, arg0);
   let sum = tmp4 + 1;
+  let tmp15 = tmp;
   let tmp16 = tmp;
-  let tmp17 = tmp;
   let flag3 = true;
   if (sum < arr.length) {
-    while (!fn) {
-      let tmp38 = tmp15;
-      if (undefined === tmp15) {
-        let tmp39 = tmp19 === tmp20;
-        if (!tmp39) {
-          tmp39 = fn2(tmp19, tmp20, arg2, fn, get);
+    while (true) {
+      let tmp17 = arr[sum];
+      let tmp18 = arg0[tmp17];
+      let tmp19 = arg1[tmp17];
+      let tmp20 = tmp14;
+      if (fn) {
+        let tmp29;
+        if (tmp) {
+          tmp29 = fn(tmp19, tmp18, tmp17, arg1, arg0, get);
+        } else {
+          tmp29 = fn(tmp18, tmp19, tmp17, arg0, arg1, get);
         }
-        tmp38 = tmp39;
+        tmp20 = tmp29;
       }
-      tmp17 = tmp16;
+      let tmp36 = tmp20;
+      if (undefined === tmp20) {
+        let tmp37 = tmp18 === tmp19;
+        if (!tmp37) {
+          tmp37 = fn2(tmp18, tmp19, arg2, fn, get);
+        }
+        tmp36 = tmp37;
+      }
+      tmp16 = tmp15;
       flag3 = false;
-      if (tmp38) {
-        let tmp45 = tmp16;
-        if (!tmp16) {
-          tmp45 = "constructor" == tmp18;
-        }
+      if (!tmp36) {
+        break;
+      } else {
+        let tmp43 = tmp15 || "constructor" == tmp17;
         let sum1 = sum + 1;
-        tmp16 = tmp45;
+        tmp15 = tmp43;
+        tmp14 = tmp20;
         sum = sum1;
-        tmp17 = tmp45;
+        tmp16 = tmp43;
         flag3 = true;
+        if (sum1 >= length) {
+          break;
+        }
       }
-    }
-    if (tmp) {
-      let tmp30 = fn(tmp20, tmp19, tmp18, arg1, arg0, get);
-    } else {
-      tmp30 = fn(tmp19, tmp20, tmp18, arg0, arg1, get);
     }
   }
   let flag4 = flag3;
-  if (flag3) {
+  if (flag4) {
     flag4 = flag3;
-    if (!tmp17) {
+    if (!tmp16) {
       const constructor = arg0.constructor;
       const constructor2 = arg1.constructor;
-      let tmp47 = constructor == constructor2 || !("constructor" in arg0) || !("constructor" in arg1);
-      if (!tmp47) {
-        let tmp48 = typeof constructor === "function";
+      let tmp45 = constructor == constructor2 || !("constructor" in arg0) || !("constructor" in arg1);
+      if (!tmp45) {
+        let tmp46 = typeof constructor === "function";
         if (typeof constructor === "function") {
-          tmp48 = constructor instanceof constructor;
+          tmp46 = constructor instanceof constructor;
         }
-        if (tmp48) {
-          tmp48 = typeof constructor2 === "function";
+        if (tmp46) {
+          tmp46 = typeof constructor2 === "function";
         }
-        if (tmp48) {
-          tmp48 = constructor2 instanceof constructor2;
+        if (tmp46) {
+          tmp46 = constructor2 instanceof constructor2;
         }
-        tmp47 = tmp48;
+        tmp45 = tmp46;
       }
       flag4 = flag3;
-      if (!tmp47) {
+      if (!tmp45) {
         flag4 = false;
       }
     }

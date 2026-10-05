@@ -15,119 +15,178 @@ export default function splitLayoutProps(arg0) {
     for (const item10015 of keys) {
       switch (item10015) {
         case "margin":
+        {
           obj[item10015] = arg0[item10015];
           continue;
-        break;
+          break;
+        }
         case "marginHorizontal":
+        {
           obj[item10015] = arg0[item10015];
           continue;
-        break;
+          break;
+        }
         case "marginVertical":
+        {
           obj[item10015] = arg0[item10015];
           continue;
-        break;
+          break;
+        }
         case "marginBottom":
+        {
           obj[item10015] = arg0[item10015];
           continue;
-        break;
+          break;
+        }
         case "marginTop":
+        {
           obj[item10015] = arg0[item10015];
           continue;
-        break;
+          break;
+        }
         case "marginLeft":
+        {
           obj[item10015] = arg0[item10015];
           continue;
-        break;
+          break;
+        }
         case "marginRight":
+        {
           obj[item10015] = arg0[item10015];
           continue;
-        break;
+          break;
+        }
         case "flex":
+        {
           obj[item10015] = arg0[item10015];
           continue;
-        break;
+          break;
+        }
         case "flexGrow":
+        {
           obj[item10015] = arg0[item10015];
           continue;
-        break;
+          break;
+        }
         case "flexShrink":
+        {
           obj[item10015] = arg0[item10015];
           continue;
-        break;
+          break;
+        }
         case "flexBasis":
+        {
           obj[item10015] = arg0[item10015];
           continue;
-        break;
+          break;
+        }
         case "alignSelf":
+        {
           obj[item10015] = arg0[item10015];
           continue;
-        break;
+          break;
+        }
         case "height":
+        {
           obj[item10015] = arg0[item10015];
           continue;
-        break;
+          break;
+        }
         case "minHeight":
+        {
           obj[item10015] = arg0[item10015];
           continue;
-        break;
+          break;
+        }
         case "maxHeight":
+        {
           obj[item10015] = arg0[item10015];
           continue;
-        break;
+          break;
+        }
         case "width":
+        {
           obj[item10015] = arg0[item10015];
           continue;
-        break;
+          break;
+        }
         case "minWidth":
+        {
           obj[item10015] = arg0[item10015];
           continue;
-        break;
+          break;
+        }
         case "maxWidth":
+        {
           obj[item10015] = arg0[item10015];
           continue;
-        break;
+          break;
+        }
         case "position":
+        {
           obj[item10015] = arg0[item10015];
           continue;
-        break;
+          break;
+        }
         case "left":
+        {
           obj[item10015] = arg0[item10015];
           continue;
-        break;
+          break;
+        }
         case "right":
+        {
           obj[item10015] = arg0[item10015];
           continue;
-        break;
+          break;
+        }
         case "bottom":
+        {
           obj[item10015] = arg0[item10015];
           continue;
-        break;
+          break;
+        }
         case "top":
+        {
           obj[item10015] = arg0[item10015];
           continue;
-        break;
+          break;
+        }
         case "transform":
+        {
           obj[item10015] = arg0[item10015];
           continue;
-        break;
+          break;
+        }
         case "transformOrigin":
+        {
           obj[item10015] = arg0[item10015];
           continue;
-        break;
+          break;
+        }
         case "rowGap":
+        {
           obj[item10015] = arg0[item10015];
           continue;
-        break;
+          break;
+        }
         case "columnGap":
+        {
           obj[item10015] = arg0[item10015];
           continue;
-        break;
+          break;
+        }
         case "gap":
+        {
           obj[item10015] = arg0[item10015];
           continue;
-        break;
+          break;
+        }
         default:
+        {
           obj2[item10015] = arg0[item10015];
+          break;
+        }
       }
     }
   }

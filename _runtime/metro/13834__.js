@@ -6,16 +6,16 @@ if (typeof process === "object") {
   if (process.env) {
     const _process = process;
     if (process.env.NODE_DEBUG) {
+      let fn;
       const _process2 = process;
+      const obj = /\bsemver\b/i;
       if (obj.test(process.env.NODE_DEBUG)) {
-        let fn = () => {
-          const items = ["SEMVER"];
-          HermesBuiltin.arraySpread(HermesBuiltin.copyRestArgs(), 1);
+        fn = () => {
+          const items = ["SEMVER", ...HermesBuiltin.copyRestArgs()];
           return console.error.apply(items);
         };
       }
       module.exports = fn;
-      obj = /\bsemver\b/i;
     }
   }
 }

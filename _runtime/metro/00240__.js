@@ -1,8 +1,7 @@
 // === Module 240: ? ===
 
 // Module 240
-
-export default {
+const obj = {
   setup() {
 
   },
@@ -19,3 +18,5 @@ export default {
 
   }
 };
+
+export default obj;

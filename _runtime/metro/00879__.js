@@ -3,8 +3,6 @@
 // Module 879
 import RN_GLOBAL_OBJ from "RN_GLOBAL_OBJ" /* 692 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
 export const getExpoConstants = function getExpoConstants() {
   const expo = RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.expo;

@@ -1,23 +1,26 @@
 // === Module 10492: ? ===
 
 // Module 10492
-import _mod10493 from "module_10493" /* 10493 */;
+import Fragment from "Fragment" /* 21 */;
+import react2 from "react" /* 10493 */;
 import _mod10496 from "module_10496" /* 10496 */;
-import _mod10500 from "module_10500" /* 10500 */;
+import react3 from "react" /* 10500 */;
 import _mod10501 from "module_10501" /* 10501 */;
-import CarouselLayout from "CarouselLayout" /* 10502 */;
-import noop from "module_19" /* 19 */;
+import react from "react" /* 19 */;
 
-require = fn;
-const jsx = fn(21).jsx;
+const jsx = Fragment.jsx;
 
-export default noop.forwardRef((defaultIndex, ref) => {
-  const initProps = _mod10493.useInitProps(defaultIndex);
-  const commonVariables = _mod10496.useCommonVariables(initProps);
-  const obj4 = {};
+export default react.forwardRef((defaultIndex, ref) => {
+  const obj = react2;
+  const initProps = obj.useInitProps(defaultIndex);
+  const dataLength = initProps.dataLength;
+  const obj2 = _mod10496;
+  const commonVariables = obj2.useCommonVariables(initProps);
+  const obj3 = { dataLength };
+  const usePropsErrorBoundary = react3.usePropsErrorBoundary;
+  react3;
   const merged = Object.assign(initProps);
-  obj4.dataLength = initProps.dataLength;
-  const propsErrorBoundary = _mod10500.usePropsErrorBoundary(obj4);
-  const obj5 = { value: { props: initProps, common: commonVariables }, children: jsx(CarouselLayout.CarouselLayout, { ref }) };
-  return jsx(_mod10501.GlobalStateProvider, { value: { props: initProps, common: commonVariables }, children: jsx(CarouselLayout.CarouselLayout, { ref }) });
+  const propsErrorBoundary = usePropsErrorBoundary(obj3);
+  const GlobalStateProvider = _mod10501.GlobalStateProvider;
+  return <GlobalStateProvider value={{ props: initProps, common: commonVariables }}>{null}</GlobalStateProvider>;
 });

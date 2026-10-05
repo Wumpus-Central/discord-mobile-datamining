@@ -1,14 +1,14 @@
 // === Module 5357: shimStringTrim ===
 
 // Module 5357 (shimStringTrim)
-import _mod1463 from "module_1463" /* 1463 */;
+import hasPropertyDescriptors from "hasPropertyDescriptors" /* 1463 */;
 import defineDataProperty from "defineDataProperty" /* 1464 */;
-import _mod5350 from "module_5350" /* 5350 */;
+import getPolyfill from "getPolyfill" /* 5350 */;
 
-let closure_2 = _mod1463();
+let closure_2 = hasPropertyDescriptors();
 
 export default function shimStringTrim() {
-  const tmp3 = _mod5350();
+  const tmp3 = getPolyfill();
   if (String.prototype.trim !== tmp3) {
     const tmpResult = defineDataProperty;
     const _String = String;

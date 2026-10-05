@@ -6,30 +6,29 @@ import _mod12609 from "module_12609" /* 12609 */;
 import _mod12612 from "module_12612" /* 12612 */;
 import _mod12666 from "module_12666" /* 12666 */;
 
-require = arg1;
-const dependencyMap = arg6;
-function createMetricEnvelope(arg0, url, sdk, arg3) {
-  const obj = { sent_at: new Date().toISOString() };
-  if (sdk) {
-    sdk = sdk.sdk;
-  }
-  if (sdk) {
+function createMetricEnvelope(arg0, _dsn, sdk, arg3) {
+  let date;
+  const obj = { sent_at: date.toISOString() };
+  date = new Date();
+  const tmp = sdk && sdk.sdk;
+  if (tmp) {
     const obj2 = { name: sdk.sdk.name, version: sdk.sdk.version };
     obj.sdk = obj2;
   }
-  let tmp = arg3;
-  if (arg3) {
-    tmp = url;
+  const tmp2 = arg3 && _dsn;
+  if (tmp2) {
+    const obj4 = _mod12612;
+    obj.dsn = obj4.dsnToString(_dsn);
   }
-  if (tmp) {
-    obj.dsn = _mod12612.dsnToString(url);
-  }
-  const date = new Date();
-  const result = _mod12666.serializeMetricBuckets(arg0);
-  const items = [{ type: "statsd", length: result.length }, result];
+  const obj5 = _mod12666;
+  const result = obj5.serializeMetricBuckets(arg0);
+  const items = [, ];
   const obj3 = { type: "statsd", length: result.length };
+  items[0] = obj3;
+  items[1] = result;
   const items1 = [items];
-  return _mod12609.createEnvelope(obj, items1);
+  const obj7 = _mod12609;
+  return obj7.createEnvelope(obj, items1);
 }
 
 export const captureAggregateMetrics = function captureAggregateMetrics(_client, arr) {

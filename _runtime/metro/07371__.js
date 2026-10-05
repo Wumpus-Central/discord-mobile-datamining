@@ -1,26 +1,10 @@
 // === Module 7371: ? ===
 
 // Module 7371
-const obj = {
-  0: {
-    name: "GPSVersionID",
-    description(arg0) {
-      let str = "Unknown";
-      if (2 === arg0[0]) {
-        str = "Unknown";
-        if (2 === arg0[1]) {
-          str = "Unknown";
-          if (0 === arg0[2]) {
-            str = "Unknown";
-            if (0 === arg0[3]) {
-              str = "Version 2.2";
-            }
-          }
-        }
-      }
-      return str;
-    }
-  },
+import _mod7370 from "module_7370" /* 7370 */;
+
+let obj = {
+  0: null,
   1: {
     name: "GPSLatitudeRef",
     description(join) {
@@ -36,7 +20,7 @@ const obj = {
       return str;
     }
   },
-  2: { name: "GPSLatitude", description: fn(7370).getCalculatedGpsValue },
+  2: { name: "GPSLatitude", description: _mod7370.getCalculatedGpsValue },
   3: {
     name: "GPSLongitudeRef",
     description(join) {
@@ -100,8 +84,9 @@ const obj2 = {
     return str;
   }
 };
-const obj3 = { name: "GPSLatitude", description: fn(7370).getCalculatedGpsValue };
-obj[4] = { name: "GPSLongitude", description: fn(7370).getCalculatedGpsValue };
+obj[0] = obj2;
+({ name: "GPSLatitude", description: _mod7370.getCalculatedGpsValue });
+obj[4] = { name: "GPSLongitude", description: _mod7370.getCalculatedGpsValue };
 obj[5] = {
   name: "GPSAltitudeRef",
   description(arg0) {
@@ -126,9 +111,12 @@ obj[7] = {
   name: "GPSTimeStamp",
   description(arr) {
     const mapped = arr.map((item) => {
+      let tmp;
+      let tmp2;
       [tmp, tmp2] = item;
       const result = tmp / tmp2;
       let combined = result;
+      const obj = /^\d(\.|$)/;
       if (obj.test("" + result)) {
         const _HermesInternal = HermesInternal;
         combined = "0" + result;
@@ -293,10 +281,10 @@ obj[25] = {
     return str;
   }
 };
-const obj4 = { name: "GPSLongitude", description: fn(7370).getCalculatedGpsValue };
-obj[27] = { name: "GPSProcessingMethod", description: fn(7370).getEncodedString };
-const obj5 = { name: "GPSProcessingMethod", description: fn(7370).getEncodedString };
-obj[28] = { name: "GPSAreaInformation", description: fn(7370).getEncodedString };
+({ name: "GPSLongitude", description: _mod7370.getCalculatedGpsValue });
+obj[27] = { name: "GPSProcessingMethod", description: _mod7370.getEncodedString };
+({ name: "GPSProcessingMethod", description: _mod7370.getEncodedString });
+obj[28] = { name: "GPSAreaInformation", description: _mod7370.getEncodedString };
 obj[30] = {
   name: "GPSDifferential",
   description(arg0) {
@@ -311,5 +299,6 @@ obj[30] = {
     return str;
   }
 };
+({ name: "GPSAreaInformation", description: _mod7370.getEncodedString });
 
 export default obj;

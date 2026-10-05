@@ -1,13 +1,11 @@
 // === Module 14016: SetNumberFormatUnitOptions ===
 
 // Module 14016 (SetNumberFormatUnitOptions)
-import _mod13970 from "module_13970" /* 13970 */;
+import UNICODE_EXTENSION_SEQUENCE_REGEX from "UNICODE_EXTENSION_SEQUENCE_REGEX" /* 13970 */;
 import GetOption from "GetOption" /* 13975 */;
 import IsWellFormedCurrencyCode from "IsWellFormedCurrencyCode" /* 13980 */;
 import IsWellFormedUnitIdentifier from "IsWellFormedUnitIdentifier" /* 13981 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
 export const SetNumberFormatUnitOptions = function SetNumberFormatUnitOptions(internalSlots, result1) {
   let obj = result1;
@@ -19,28 +17,33 @@ export const SetNumberFormatUnitOptions = function SetNumberFormatUnitOptions(in
   internalSlots.style = GetOptionResult;
   const str = GetOption.GetOption(obj, "currency", "string", undefined, undefined);
   let result = undefined === str;
+  const invariant = UNICODE_EXTENSION_SEQUENCE_REGEX.invariant;
   if (!result) {
     result = IsWellFormedCurrencyCode.IsWellFormedCurrencyCode(str);
   }
-  _mod13970.invariant(result, "Malformed currency code", RangeError);
+  invariant(result, "Malformed currency code", RangeError);
   let tmp10 = "currency" !== GetOptionResult;
+  const invariant2 = UNICODE_EXTENSION_SEQUENCE_REGEX.invariant;
   if (!tmp10) {
     tmp10 = undefined !== str;
   }
-  _mod13970.invariant(tmp10, "currency cannot be undefined", TypeError);
+  invariant2(tmp10, "currency cannot be undefined", TypeError);
   const GetOptionResult1 = GetOption.GetOption(obj, "currencyDisplay", "string", ["code", "symbol", "narrowSymbol", "name"], "symbol");
+  const GetOptionResult2 = GetOption.GetOption(obj, "currencySign", "string", ["standard", "accounting"], "standard");
   const GetOptionResult3 = GetOption.GetOption(obj, "unit", "string", undefined, undefined);
   result1 = undefined === GetOptionResult3;
+  const invariant3 = UNICODE_EXTENSION_SEQUENCE_REGEX.invariant;
   if (!result1) {
     result1 = IsWellFormedUnitIdentifier.IsWellFormedUnitIdentifier(GetOptionResult3);
   }
-  _mod13970.invariant(result1, "Invalid unit argument for Intl.NumberFormat()", RangeError);
+  invariant3(result1, "Invalid unit argument for Intl.NumberFormat()", RangeError);
   let tmp17 = "unit" !== GetOptionResult;
+  const invariant4 = UNICODE_EXTENSION_SEQUENCE_REGEX.invariant;
   if (!tmp17) {
     tmp17 = undefined !== GetOptionResult3;
   }
-  _mod13970.invariant(tmp17, "unit cannot be undefined", TypeError);
-  const GetOptionResult2 = GetOption.GetOption(obj, "currencySign", "string", ["standard", "accounting"], "standard");
+  invariant4(tmp17, "unit cannot be undefined", TypeError);
+  const GetOptionResult4 = GetOption.GetOption(obj, "unitDisplay", "string", ["short", "narrow", "long"], "short");
   if ("currency" === GetOptionResult) {
     internalSlots.currency = str.toUpperCase();
     internalSlots.currencyDisplay = GetOptionResult1;
@@ -50,5 +53,4 @@ export const SetNumberFormatUnitOptions = function SetNumberFormatUnitOptions(in
     internalSlots.unit = GetOptionResult3;
     internalSlots.unitDisplay = GetOptionResult4;
   }
-  GetOptionResult4 = GetOption.GetOption(obj, "unitDisplay", "string", ["short", "narrow", "long"], "short");
 };

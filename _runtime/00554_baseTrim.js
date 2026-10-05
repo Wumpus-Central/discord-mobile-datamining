@@ -7,9 +7,9 @@ const re2 = /^\s+/;
 
 export default function baseTrim(arr) {
   let replaced = arr;
-  if (arr) {
-    replaced = arr.slice(0, trimmedEndIndex(arr) + 1).replace(re2, "");
+  if (replaced) {
     const str = arr.slice(0, trimmedEndIndex(arr) + 1);
+    replaced = str.replace(re2, "");
   }
   return replaced;
 };
